@@ -1,0 +1,99 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	darkMode: false,
+	content: [
+		'./pages/**/*.{ts,tsx}',
+		'./components/**/*.{ts,tsx}',
+		'./app/**/*.{ts,tsx}',
+		'./src/**/*.{ts,tsx}',
+	],
+	theme: {
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '1400px',
+			},
+		},
+		extend: {
+			colors: {
+				border: 'hsl(var(--border))',
+				input: 'hsl(var(--input))',
+				ring: 'hsl(var(--ring))',
+				background: 'hsl(var(--background))',
+				foreground: 'hsl(var(--foreground))',
+				// Primary - Deep Violet
+				primary: {
+					DEFAULT: '#6750A4',
+					foreground: '#FFFFFF',
+					light: '#E8DEF8',
+				},
+				// Secondary
+				secondary: {
+					DEFAULT: '#E8DEF8',
+					foreground: '#6750A4',
+				},
+				// Tertiary - Rose
+				tertiary: {
+					DEFAULT: '#7D5260',
+					foreground: '#FFFFFF',
+				},
+				// Surfaces - Light theme
+				surface: {
+					DEFAULT: '#F7F2FA',
+					elevated: '#FFFFFF',
+					highlight: '#FEF7FF',
+				},
+				// Text colors
+				'text-primary': '#1C1B1F',
+				'text-secondary': '#49454F',
+				'text-muted': '#79747E',
+				destructive: {
+					DEFAULT: 'hsl(var(--destructive))',
+					foreground: 'hsl(var(--destructive-foreground))',
+				},
+				muted: {
+					DEFAULT: '#F5F5F5',
+					foreground: '#49454F',
+				},
+				popover: {
+					DEFAULT: 'hsl(var(--popover))',
+					foreground: 'hsl(var(--popover-foreground))',
+				},
+				card: {
+					DEFAULT: '#FFFFFF',
+					foreground: '#1C1B1F',
+				},
+			},
+			fontFamily: {
+				sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+				mono: ['JetBrains Mono', 'monospace'],
+			},
+			borderRadius: {
+				lg: 'var(--radius)',
+				md: 'calc(var(--radius) - 2px)',
+				sm: 'calc(var(--radius) - 4px)',
+			},
+			keyframes: {
+				'accordion-down': {
+					from: { height: 0 },
+					to: { height: 'var(--radix-accordion-content-height)' },
+				},
+				'accordion-up': {
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: 0 },
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+			},
+			animation: {
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+			},
+		},
+	},
+	plugins: [require('tailwindcss-animate')],
+}
