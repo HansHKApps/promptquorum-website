@@ -125,7 +125,7 @@ function WaitlistForm({ t }: { t: (key: TranslationKey) => string }) {
   const [error, setError] = useState('')
 
   // Replace with your Formspree form ID after signing up at formspree.io
-  const FORMSPREE_FORM_ID = 'YOUR_FORMSPREE_FORM_ID'
+  const FORMSPREE_FORM_ID = 'mjgabrwj'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
