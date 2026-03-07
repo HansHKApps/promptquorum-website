@@ -125,7 +125,7 @@ function WaitlistForm({ t }: { t: (key: TranslationKey) => string }) {
   const [error, setError] = useState('')
 
   // Replace with your Formspree form ID after signing up at formspree.io
-  const FORMSPREE_FORM_ID = 'YOUR_FORMSPREE_FORM_ID'
+  const FORMSPREE_FORM_ID = 'xjgavzdw'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -135,22 +135,17 @@ function WaitlistForm({ t }: { t: (key: TranslationKey) => string }) {
     setError('')
 
     try {
-      if (FORMSPREE_FORM_ID === 'YOUR_FORMSPREE_FORM_ID') {
-        // Demo mode - just show success (replace with real Formspree integration)
-        await new Promise(resolve => setTimeout(resolve, 1000))
-      } else {
-        // Real Formspree submission
-        const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email }),
-        })
+      // Real Formspree submission
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
 
-        if (!response.ok) {
-          throw new Error('Failed to submit')
-        }
+      if (!response.ok) {
+        throw new Error('Failed to submit')
       }
       setSubmitted(true)
     } catch (err) {
@@ -377,8 +372,8 @@ function App() {
           <p className="mt-4 text-lg text-text-secondary">
             {t('waitlistCtaDesc')}
           </p>
-          <div className="mt-10">
-            <WaitlistForm t={t} />
+          <div className="mt-<WaitlistForm t10">
+            ={t} />
           </div>
         </div>
       </section>
@@ -412,6 +407,12 @@ function App() {
             {t('footerCopyright')}
           </div>
         </div>
+      </footer>
+    </div>
+  )
+}
+
+export default App
       </footer>
     </div>
   )
