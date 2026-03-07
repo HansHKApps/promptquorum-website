@@ -276,7 +276,8 @@ function App() {
             <span className="block text-primary">{t('heroTitleHighlight')}</span>
           </h1>
 
-        <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
+          <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
+            {t('heroDescription')}
           </p>
 
           <div className="mt-10 animate-fade-in" style={{ animationDelay: '300ms' }}>
@@ -371,8 +372,8 @@ function App() {
           <p className="mt-4 text-lg text-text-secondary">
             {t('waitlistCtaDesc')}
           </p>
-         <div className="mt-10">
-            ={t} />
+          <div className="mt-10">
+            <WaitlistForm t={t} />
           </div>
         </div>
       </section>
@@ -406,12 +407,6 @@ function App() {
             {t('footerCopyright')}
           </div>
         </div>
-      </footer>
-    </div>
-  )
-}
-
-export default App
       </footer>
     </div>
   )
