@@ -276,8 +276,7 @@ function App() {
             <span className="block text-primary">{t('heroTitleHighlight')}</span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
-            {t('heroDescription')}
+        <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
           </p>
 
           <div className="mt-10 animate-fade-in" style={{ animationDelay: '300ms' }}>
