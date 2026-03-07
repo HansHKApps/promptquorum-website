@@ -372,7 +372,7 @@ function App() {
           <p className="mt-4 text-lg text-text-secondary">
             {t('waitlistCtaDesc')}
           </p>
-          <div className="mt-<WaitlistForm t10">
+         <div className="mt-10">
             ={t} />
           </div>
         </div>
