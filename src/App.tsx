@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './index.css'
+import logoSvg from './logo.svg'
 import { translations, Language, TranslationKey } from './translations'
 
 // Language switcher component
@@ -248,7 +249,7 @@ function App() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="/logo.svg" alt="PromptQuorum" className="w-8 h-8" />
+            <img src={logoSvg} alt="PromptQuorum" className="w-8 h-8" />
             <span className="font-semibold text-text-primary">PromptQuorum</span>
           </div>
           <div className="flex items-center gap-4">
@@ -383,7 +384,7 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
-              <img src="/logo.svg" alt="PromptQuorum" className="w-8 h-8" />
+              <img src={logoSvg} alt="PromptQuorum" className="w-8 h-8" />
               <span className="font-semibold text-text-primary">PromptQuorum</span>
             </div>
 
