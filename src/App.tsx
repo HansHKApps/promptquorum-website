@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react'
-import ReactGA from 'react-ga4'
 import './index.css'
 import logoSvg from './logo.svg'
 import { translations, Language, TranslationKey } from './translations'
-
-// Initialize Google Analytics
-ReactGA.initialize('G-X0KCB5M9PK')
 
 // Language switcher component
 function LanguageSwitcher({ currentLang, onChange }: { currentLang: Language, onChange: (lang: Language) => void }) {
@@ -152,20 +148,8 @@ function WaitlistForm({ t }: { t: (key: TranslationKey) => string }) {
       if (!response.ok) {
         throw new Error('Failed to submit')
       }
-      // Track waitlist signup event
-      ReactGA.event({
-        category: 'engagement',
-        action: 'waitlist_signup',
-        label: email,
-      })
       setSubmitted(true)
     } catch (err) {
-      // Track failed signup attempt
-      ReactGA.event({
-        category: 'engagement',
-        action: 'waitlist_signup_failed',
-        label: email,
-      })
       setError('Something went wrong. Please try again.')
     } finally {
       setLoading(false)
@@ -235,8 +219,7 @@ function App() {
   const t = (key: TranslationKey) => translations[language][key]
 
   useEffect(() => {
-    // Track pageview on component mount
-    ReactGA.send({ hitType: 'pageview', page: '/', title: 'PromptQuorum' })
+    document.title = 'PromptQuorum'
   }, [])
 
   const features = [
