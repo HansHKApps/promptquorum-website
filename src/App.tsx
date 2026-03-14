@@ -409,13 +409,13 @@ function App() {
               </div>
             </Link>
 
-            {/* Blog Card 2 (Coming Soon) */}
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden opacity-60">
+            {/* Blog Card 2 */}
+            <Link to="/blog/local-ai-vs-cloud" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
               <div className="p-6">
-                <span className="inline-block px-3 py-1 bg-gray-100 text-text-muted text-sm font-semibold rounded-full mb-4">
-                  Coming Soon
+                <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+                  Privacy & Security
                 </span>
-                <h3 className="text-xl font-bold text-text-primary mb-3">
+                <h3 className="text-xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">
                   Local AI vs Cloud Tools
                 </h3>
                 <p className="text-text-secondary text-sm mb-4">
@@ -426,15 +426,15 @@ function App() {
                   <span>→</span>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            {/* Blog Card 3 (Coming Soon) */}
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden opacity-60">
+            {/* Blog Card 3 */}
+            <Link to="/blog/ai-model-comparison" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
               <div className="p-6">
-                <span className="inline-block px-3 py-1 bg-gray-100 text-text-muted text-sm font-semibold rounded-full mb-4">
-                  Coming Soon
+                <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+                  Model Comparison
                 </span>
-                <h3 className="text-xl font-bold text-text-primary mb-3">
+                <h3 className="text-xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">
                   ChatGPT vs Claude vs Gemini
                 </h3>
                 <p className="text-text-secondary text-sm mb-4">
@@ -445,7 +445,7 @@ function App() {
                   <span>→</span>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

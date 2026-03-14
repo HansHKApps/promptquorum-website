@@ -5,6 +5,8 @@ import { ErrorBoundary } from './components/ErrorBoundary.tsx'
 import './index.css'
 import App from './App.tsx'
 import { FrameworksGuide } from './pages/blog/FrameworksGuide.tsx'
+import { LocalAIVsCloud } from './pages/blog/LocalAIVsCloud.tsx'
+import { AIModelComparison } from './pages/blog/AIModelComparison.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,6 +15,8 @@ createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/blog/prompt-frameworks" element={<FrameworksGuide />} />
+          <Route path="/blog/local-ai-vs-cloud" element={<LocalAIVsCloud />} />
+          <Route path="/blog/ai-model-comparison" element={<AIModelComparison />} />
         </Routes>
       </Router>
     </ErrorBoundary>
