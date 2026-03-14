@@ -1,4 +1,5 @@
-import { ArrowLeft } from 'lucide-react'
+import { useState } from 'react'
+import { ArrowLeft, ChevronDown } from 'lucide-react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { blogContent, Language } from './blogContent'
 
@@ -10,6 +11,7 @@ interface BlogPostProps {
 
 export function BlogPost({ postId, backUrl, langUrl }: BlogPostProps) {
   const [searchParams] = useSearchParams()
+  const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const lang = (searchParams.get('lang') || 'en') as Language
 
   const languages: { code: Language; name: string; flag: string }[] = [
@@ -154,24 +156,63 @@ export function BlogPost({ postId, backUrl, langUrl }: BlogPostProps) {
             </div>
           </div>
 
-          {/* Content */}
-          <div className="prose prose-lg max-w-none text-text-primary space-y-4">
-            {Object.entries(post.sections).map(([key, section]) =>
-              renderSection(key, section)
-            )}
+          {/* Content - Accordion Style */}
+          <div className="space-y-4">
+            {Object.entries(post.sections).map(([key, section]) => {
+              const isExpanded = expandedSection === key
+              return (
+                <button
+                  key={key}
+                  onClick={() => setExpandedSection(isExpanded ? null : key)}
+                  className={`w-full text-left px-4 sm:px-6 py-5 sm:py-6 rounded-xl border-2 transition-all ${
+                    isExpanded
+                      ? 'bg-primary/10 border-primary shadow-lg'
+                      : 'bg-white border-gray-200 hover:border-primary/50'
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-base sm:text-lg font-semibold text-text-primary">
+                      {section?.title || key}
+                    </h3>
+                    <ChevronDown
+                      className={`w-5 h-5 text-primary transition-transform flex-shrink-0 ${
+                        isExpanded ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </div>
+                </button>
+              )
+            })}
+          </div>
 
-            {/* CTA */}
-            <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-lg text-center">
-              <p className="text-sm text-text-secondary mb-4">
-                Try {post.category.toLowerCase()} with PromptQuorum
-              </p>
-              <Link
-                to="/#waitlist"
-                className="inline-block px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-              >
-                Join the Waitlist
-              </Link>
+          {/* Expanded Content */}
+          {expandedSection && (
+            <div className="mt-6 bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-xl p-6 sm:p-8 animate-fade-in">
+              <div className="prose prose-lg max-w-none text-text-primary">
+                {renderSection(expandedSection, post.sections[expandedSection])}
+                <div className="mt-6 flex justify-center">
+                  <button
+                    onClick={() => setExpandedSection(null)}
+                    className="px-6 py-2 bg-white border border-gray-200 rounded-lg text-text-secondary hover:border-primary hover:text-primary transition-colors"
+                  >
+                    Close section
+                  </button>
+                </div>
+              </div>
             </div>
+          )}
+
+          {/* CTA */}
+          <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-lg text-center">
+            <p className="text-sm text-text-secondary mb-4">
+              Try {post.category.toLowerCase()} with PromptQuorum
+            </p>
+            <Link
+              to="/#waitlist"
+              className="inline-block px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+            >
+              Join the Waitlist
+            </Link>
           </div>
         </div>
       </article>
