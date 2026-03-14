@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import './index.css'
 import logoSvg from './logo.svg'
 import { translations, Language, TranslationKey } from './translations'
@@ -217,7 +217,11 @@ function FeatureCard({ icon: Icon, title, description, delay }: { icon: React.El
 
 // Main App Component
 function App() {
-  const [language, setLanguage] = useState<Language>('en')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const language = (searchParams.get('lang') || 'en') as Language
+  const setLanguage = (lang: Language) => {
+    setSearchParams({ lang })
+  }
   const t = (key: TranslationKey) => translations[language][key]
 
   const features = [
