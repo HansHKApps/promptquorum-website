@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import './index.css'
 import logoSvg from './logo.svg'
 import { translations, Language, TranslationKey } from './translations'
+import { InteractivePipeline } from './components/InteractivePipeline'
 
 // Language switcher component
 function LanguageSwitcher({ currentLang, onChange }: { currentLang: Language, onChange: (lang: Language) => void }) {
@@ -228,13 +229,6 @@ function App() {
     { icon: Download, title: t('feature6Title'), description: t('feature6Desc') },
   ]
 
-  const howItWorksSteps = [
-    { step: '1', title: t('step1Title'), description: t('step1Desc') },
-    { step: '2', title: t('step2Title'), description: t('step2Desc') },
-    { step: '3', title: t('step3Title'), description: t('step3Desc') },
-    { step: '4', title: t('step4Title'), description: t('step4Desc') },
-  ]
-
   const faqs = [
     { question: t('faq1Question'), answer: t('faq1Answer') },
     { question: t('faq2Question'), answer: t('faq2Answer') },
@@ -342,21 +336,7 @@ function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
-            {howItWorksSteps.map((item, index) => (
-              <div
-                key={item.step}
-                className="text-center p-6 rounded-xl bg-white border border-gray-200 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-12 h-12 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center mx-auto mb-4">
-                  {item.step}
-                </div>
-                <h3 className="text-lg font-semibold text-text-primary mb-2">{item.title}</h3>
-                <p className="text-text-secondary text-sm">{item.description}</p>
-              </div>
-            ))}
-          </div>
+          <InteractivePipeline />
         </div>
       </section>
 
