@@ -8,6 +8,7 @@ import { FrameworksGuide } from './pages/blog/FrameworksGuide.tsx'
 import { LocalAIVsCloud } from './pages/blog/LocalAIVsCloud.tsx'
 import { AIModelComparison } from './pages/blog/AIModelComparison.tsx'
 import { QuorumBlog } from './pages/blog/QuorumBlog.tsx'
+import { OptimizationBlog } from './pages/blog/OptimizationBlog.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/blog/local-ai-vs-cloud" element={<LocalAIVsCloud />} />
           <Route path="/blog/ai-model-comparison" element={<AIModelComparison />} />
           <Route path="/blog/quorum" element={<QuorumBlog />} />
+          <Route path="/blog/prompt-optimization" element={<OptimizationBlog />} />
         </Routes>
       </Router>
     </ErrorBoundary>
