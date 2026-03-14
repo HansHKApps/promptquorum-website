@@ -81,22 +81,22 @@ export function InteractivePipeline() {
   return (
     <div className="space-y-6">
       {/* Pipeline Cards */}
-      <div className="grid md:grid-cols-4 gap-6 mb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
         {stages.map((stage, index) => (
           <button
             key={index}
             onClick={() => setExpandedStage(expandedStage === index ? null : index)}
-            className={`text-center p-6 rounded-xl border-2 transition-all cursor-pointer transform hover:scale-105 ${
+            className={`text-center px-4 py-5 sm:p-6 rounded-xl border-2 transition-all cursor-pointer transform hover:scale-105 ${
               expandedStage === index
                 ? 'bg-primary/10 border-primary shadow-lg'
                 : 'bg-white border-gray-200 hover:border-primary/50'
             }`}
           >
-            <div className="w-12 h-12 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center mx-auto mb-4">
+            <div className="w-14 h-14 rounded-full bg-primary/10 text-primary font-bold text-lg flex items-center justify-center mx-auto mb-4">
               {index + 1}
             </div>
-            <h3 className="text-lg font-semibold text-text-primary mb-2">{stage.title}</h3>
-            <p className="text-text-secondary text-sm mb-3">
+            <h3 className="text-base sm:text-lg font-semibold text-text-primary mb-2">{stage.title}</h3>
+            <p className="text-text-secondary text-xs sm:text-sm mb-3">
               {index === 0 && 'Start with any idea, rough or refined'}
               {index === 1 && 'AI transforms it into a precision prompt'}
               {index === 2 && 'Send to multiple AIs at once'}
