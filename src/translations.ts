@@ -9,14 +9,14 @@ export const translations = {
 
     // Hero
     waitlistNowOpen: "Waitlist Now Open",
-    heroTitle: "From Rough Idea to",
-    heroTitleHighlight: "Precision Prompt",
+    heroTitle: "PromptQuorum: AI Prompt Optimizer for",
+    heroTitleHighlight: "ChatGPT, Claude & Gemini",
     heroDescription: "The AI prompt powertool that optimizes your prompts and sends them to multiple AI providers simultaneously. Compare results, find consensus, get better answers.",
     heroCta: "Join 500+ others waiting for early access",
     heroBuiltFor: "Built for developers, marketers, researchers, and AI power users",
 
     // Features
-    featuresTitle: "Everything You Need for Better Prompts",
+    featuresTitle: "Smart AI Prompt Optimization",
     featuresSubtitle: "PromptQuorum combines optimization, multi-AI dispatch, and intelligent comparison in one powerful powertool.",
     feature1Title: "Smart Optimization",
     feature1Desc: "Transform rough ideas into precision prompts with AI-powered optimization. No prompt engineering experience needed.",
@@ -32,7 +32,7 @@ export const translations = {
     feature6Desc: "Download a powerful prompting tool to 10X your AI results. Be among the first to try it!",
 
     // How It Works
-    howItWorksTitle: "How It Works",
+    howItWorksTitle: "Four-Stage Pipeline: Prompt → Optimize → Dispatch → Quorum",
     howItWorksSubtitle: "Four simple stages to perfect prompts",
     step1Title: "Prompt",
     step1Desc: "Start with any idea, rough or refined",
@@ -44,7 +44,7 @@ export const translations = {
     step4Desc: "Compare results, find the best answer",
 
     // FAQ
-    faqTitle: "Frequently Asked Questions",
+    faqTitle: "Privacy-First Local Workflow—FAQs",
     faq1Question: "Is PromptQuorum free?",
     faq1Answer: "Yes. PromptQuorum is free to use. You can bring your own API key, use a local LLM, or try our limited free backend service for prompt optimization on a test basis.",
     faq2Question: "How does privacy work?",
