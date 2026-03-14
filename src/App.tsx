@@ -500,7 +500,7 @@ function App() {
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
                 <Github />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
+              <a href="https://x.com/HansKuepperAPPs" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
                 <Twitter />
               </a>
               <a href="https://www.linkedin.com/company/promptquorum" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
