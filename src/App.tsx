@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './index.css'
 import logoSvg from './logo.svg'
 import { translations, Language, TranslationKey } from './translations'
@@ -376,6 +377,79 @@ function App() {
         </div>
       </section>
 
+      {/* Blog Section */}
+      <section id="blog" className="py-20 px-4 sm:px-6 bg-surface">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
+              Learn Prompt Engineering
+            </h2>
+            <p className="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
+              Master the techniques and frameworks used by AI experts
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Blog Card 1 */}
+            <Link to="/blog/prompt-frameworks" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
+              <div className="p-6">
+                <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+                  Prompt Engineering
+                </span>
+                <h3 className="text-xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">
+                  8 Prompt Frameworks Explained
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  Master CRAFT, CO-STAR, SPECS, and 5 other frameworks. Learn which one works best for your use case.
+                </p>
+                <div className="flex items-center justify-between text-xs text-text-muted">
+                  <span>8 min read</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Blog Card 2 (Coming Soon) */}
+            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden opacity-60">
+              <div className="p-6">
+                <span className="inline-block px-3 py-1 bg-gray-100 text-text-muted text-sm font-semibold rounded-full mb-4">
+                  Coming Soon
+                </span>
+                <h3 className="text-xl font-bold text-text-primary mb-3">
+                  Local AI vs Cloud Tools
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  Why privacy-first prompt optimization matters and when to use local models.
+                </p>
+                <div className="flex items-center justify-between text-xs text-text-muted">
+                  <span>10 min read</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Blog Card 3 (Coming Soon) */}
+            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden opacity-60">
+              <div className="p-6">
+                <span className="inline-block px-3 py-1 bg-gray-100 text-text-muted text-sm font-semibold rounded-full mb-4">
+                  Coming Soon
+                </span>
+                <h3 className="text-xl font-bold text-text-primary mb-3">
+                  ChatGPT vs Claude vs Gemini
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  Compare AI models side-by-side. How to get the best results from each.
+                </p>
+                <div className="flex items-center justify-between text-xs text-text-muted">
+                  <span>12 min read</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Waitlist CTA Section */}
       <section id="waitlist" className="py-20 px-4 sm:px-6 bg-surface">
         <div className="max-w-3xl mx-auto text-center">
@@ -425,4 +499,5 @@ function App() {
   )
 }
 
+export { App }
 export default App
