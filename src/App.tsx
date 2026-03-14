@@ -514,7 +514,7 @@ function App() {
               <a href="https://www.linkedin.com/company/promptquorum" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
                 <Linkedin />
               </a>
-              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
+              <a href="https://discord.com/channels/1482063293509271724/1482063418113396736" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
                 <Discord />
               </a>
               <a href="https://www.youtube.com/channel/UC5PL_1lU5pdV1d1EC1XeLhA" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
