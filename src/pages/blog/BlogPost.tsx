@@ -12,12 +12,12 @@ export function BlogPost({ postId, backUrl, langUrl }: BlogPostProps) {
   const [searchParams] = useSearchParams()
   const lang = (searchParams.get('lang') || 'en') as Language
 
-  const languages: { code: Language; name: string }[] = [
-    { code: 'en', name: 'English' },
-    { code: 'de', name: 'Deutsch' },
-    { code: 'fr', name: 'Français' },
-    { code: 'ja', name: '日本語' },
-    { code: 'zh', name: '中文' },
+  const languages: { code: Language; name: string; flag: string }[] = [
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'ja', name: '日本語', flag: '🇯🇵' },
+    { code: 'zh', name: '中文', flag: '🇨🇳' },
   ]
 
   const post = blogContent[postId][lang]
@@ -121,13 +121,14 @@ export function BlogPost({ postId, backUrl, langUrl }: BlogPostProps) {
               <Link
                 key={l.code}
                 to={langUrl(l.code)}
-                className={`px-2 py-1 text-xs font-medium transition-colors ${
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg border transition-all ${
                   lang === l.code
-                    ? 'text-primary font-semibold'
-                    : 'text-text-secondary hover:text-primary'
+                    ? 'border-primary bg-primary/5 text-primary font-semibold'
+                    : 'border-gray-200 text-text-secondary hover:border-primary/30'
                 }`}
               >
-                {l.code.toUpperCase()}
+                <span>{l.flag}</span>
+                <span className="text-sm">{l.code.toUpperCase()}</span>
               </Link>
             ))}
           </div>
