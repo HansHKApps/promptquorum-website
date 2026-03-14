@@ -218,10 +218,6 @@ function App() {
   const [language, setLanguage] = useState<Language>('en')
   const t = (key: TranslationKey) => translations[language][key]
 
-  useEffect(() => {
-    document.title = 'PromptQuorum'
-  }, [])
-
   const features = [
     { icon: Sparkles, title: t('feature1Title'), description: t('feature1Desc') },
     { icon: Layers, title: t('feature2Title'), description: t('feature2Desc') },
@@ -246,6 +242,18 @@ function App() {
     { question: t('faq5Question'), answer: t('faq5Answer') },
     { question: t('faq6Question'), answer: t('faq6Answer') },
   ]
+
+  useEffect(() => {
+    document.title = 'PromptQuorum - From Rough Ideas to Precision Prompts'
+    // Update meta description with section summaries for SEO
+    const description = [
+      t('heroDescription'),
+      t('featuresSubtitle'),
+      'FAQ: ' + faqs.slice(0, 2).map(f => f.question).join(', ')
+    ].join(' | ')
+    const metaDesc = document.querySelector('meta[name="description"]')
+    if (metaDesc) metaDesc.setAttribute('content', description.slice(0, 160))
+  }, [t, faqs])
 
   return (
     <div className="min-h-screen bg-white">
