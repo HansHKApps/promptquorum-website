@@ -1,0 +1,2258 @@
+export type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh'
+
+export interface BlogSection {
+  title?: string
+  content?: string | string[]
+  items?: string[]
+  rows?: Array<{ [key: string]: string }>
+  columns?: string[]
+}
+
+export interface BlogPost {
+  category: string
+  title: string
+  intro: string
+  publishDate: string
+  readTime: string
+  sections: Record<string, BlogSection>
+}
+
+export const blogContent: Record<string, Record<Language, BlogPost>> = {
+  frameworks: {
+    en: {
+      category: 'Prompt Engineering',
+      title: '8 Prompt Engineering Frameworks Explained: CRAFT vs CO-STAR vs APE (2026 Guide)',
+      intro: 'Master the top prompt frameworks and learn which one works best for your use case.',
+      publishDate: 'Published March 14, 2026',
+      readTime: '8 min read',
+      sections: {
+        intro: {
+          title: 'What is a Prompt Framework?',
+          content: [
+            'A prompt framework is a structured template that guides you through the essential elements of a good prompt. Instead of writing a rambling paragraph, frameworks break down your request into specific fields—like context, objective, tone, and audience. This makes your prompts clearer, more effective, and gives you predictable results.',
+            'Think of it like a recipe. You could throw random ingredients into a pot and hope for the best, or you could follow a structured recipe with measured ingredients in the right order. Frameworks are recipes for prompts.',
+          ],
+        },
+        craft: {
+          title: '1. CRAFT Framework',
+          content: 'Best for: Marketing, copywriting, creative content',
+        },
+        craftFields: {
+          title: 'The Fields:',
+          items: [
+            'Context: Background information the AI needs to understand',
+            'Role: What role should the AI take (e.g., "expert copywriter")',
+            'Action: What you want the AI to do (e.g., "write email subject lines")',
+            'Format: How you want the output structured (e.g., "bullet list", "paragraph")',
+            'Target: Who this is for (e.g., "B2B SaaS decision-makers")',
+          ],
+        },
+        craftExample: {
+          title: 'Example:',
+          content: [
+            'Context: We\'re launching a productivity app for freelancers',
+            'Role: You are an expert copywriter specializing in SaaS',
+            'Action: Write 5 compelling email subject lines',
+            'Format: Numbered list with a 1-sentence explanation for each',
+            'Target: Busy freelancers aged 25–45 who value time-saving tools',
+          ],
+        },
+        craftWhy: {
+          title: 'Why It Works:',
+          content: 'CRAFT forces you to think about every angle of your request before asking the AI. The role + target combo ensures the AI understands exactly who the content is for and how to speak to them.',
+        },
+        costar: {
+          title: '2. CO-STAR Framework',
+          content: 'Best for: Business communication, professional writing, decision-making',
+        },
+        costarFields: {
+          title: 'The Fields:',
+          items: [
+            'Context: The situation or background',
+            'Objective: What you\'re trying to achieve',
+            'Style: The tone and approach (formal, casual, technical, etc.)',
+            'Tone: The emotional quality (urgent, reassuring, confident, etc.)',
+            'Audience: Who will read/use this',
+            'Response: What format/length/detail level you want',
+          ],
+        },
+        costarExample: {
+          title: 'Example:',
+          content: [
+            'Context: Our startup just got Series A funding',
+            'Objective: Announce this to employees',
+            'Style: Professional but enthusiastic',
+            'Tone: Celebratory and forward-looking',
+            'Audience: Internal team (engineers, designers, marketers)',
+            'Response: 3-paragraph announcement suitable for email',
+          ],
+        },
+        costarWhy: {
+          title: 'Why It Works:',
+          content: 'CO-STAR separates style from tone (style is the presentation, tone is the emotion), which gives you much more control over how the AI writes. It\'s excellent for corporate or professional contexts where precision matters.',
+        },
+        specs: {
+          title: '3. SPECS Framework',
+          content: 'Best for: Complex projects, detailed analysis, technical writing',
+        },
+        specsFields: {
+          title: 'The Fields:',
+          items: [
+            'Situation: The current state or problem',
+            'Purpose: Why you\'re asking (what problem does this solve)',
+            'Expected Output: What the result should look like',
+            'Context: Additional relevant information',
+            'Style: The format and tone',
+          ],
+        },
+        specsExample: {
+          title: 'Example:',
+          content: [
+            'Situation: We have 1000 customer support tickets waiting to be categorized',
+            'Purpose: To route them to the right team (billing, technical, feature request)',
+            'Expected Output: A Python script that reads CSV, categorizes, outputs new CSV',
+            'Context: We use these categories: [list]. Common keywords per category: [list]',
+            'Style: Code only, no explanation, use pandas library',
+          ],
+        },
+        specsWhy: {
+          title: 'Why It Works:',
+          content: 'SPECS is detail-oriented and excellent when you need to convey complex requirements. The expected output field prevents the AI from guessing what you want.',
+        },
+        risen: {
+          title: '4. RISEN Framework',
+          content: 'Best for: Multi-step tasks, workflows, processes, instructions',
+        },
+        risenFields: {
+          title: 'The Fields:',
+          items: [
+            'Role: What role should the AI play',
+            'Instructions: Detailed steps or requirements',
+            'Steps: Numbered breakdown of the process',
+            'End Goal: What success looks like',
+            'Narrowing: Constraints or specific rules to follow',
+          ],
+        },
+        risenExample: {
+          title: 'Example:',
+          content: [
+            'Role: You are an expert teacher creating a course outline',
+            'Instructions: Create a 4-week beginner\'s course on prompt engineering',
+            'Steps: 1) Define learning objectives 2) Outline each week 3) List resources',
+            'End Goal: A student should be able to write professional prompts by week 4',
+            'Narrowing: No code examples, assume no prior AI knowledge, keep lessons under 30 mins each',
+          ],
+        },
+        risenWhy: {
+          title: 'Why It Works:',
+          content: 'RISEN is perfect for sequences and processes. The "narrowing" field prevents the AI from going off-track and ensures the output respects your constraints.',
+        },
+        ape: {
+          title: '5. APE Framework',
+          content: 'Best for: Quick requests, simple tasks, when you don\'t need complexity',
+        },
+        apeFields: {
+          title: 'The Fields:',
+          items: [
+            'Action: What you want the AI to do',
+            'Purpose: Why you\'re asking',
+            'Expectation: What you expect back',
+          ],
+        },
+        apeExample: {
+          title: 'Example:',
+          content: [
+            'Action: Summarize this article',
+            'Purpose: I need a 2-minute overview for a team meeting',
+            'Expectation: 3-4 bullet points covering key findings',
+          ],
+        },
+        apeWhy: {
+          title: 'Why It Works:',
+          content: 'APE is beautifully simple. Most everyday requests fit into these 3 fields. It\'s a great starting point before graduating to more complex frameworks.',
+        },
+        google: {
+          title: '6. Google Prompt Framework',
+          content: 'Best for: General purpose, research, finding information',
+        },
+        googleFields: {
+          title: 'The Fields:',
+          items: [
+            'Task: What you want to accomplish',
+            'Context: Relevant background',
+            'Persona: Who is asking / what perspective to take',
+          ],
+        },
+        googleWhy: {
+          title: 'Why It Works:',
+          content: 'Google\'s framework is lightweight and information-focused. Great for research queries and "what if" scenarios.',
+        },
+        trace: {
+          title: '7. TRACE Framework',
+          content: 'Best for: Few-shot learning, examples-based requests, teaching the AI',
+        },
+        traceFields: {
+          title: 'The Fields:',
+          items: [
+            'Task: What you want',
+            'Request: Your specific ask',
+            'Action: What the AI should do',
+            'Context: Additional info',
+            'Example: Show the AI an example of perfect output',
+          ],
+        },
+        traceWhy: {
+          title: 'Why It Works:',
+          content: 'TRACE is powerful because showing an example teaches the AI exactly what you want. "Do this kind of thing" is often clearer than explaining it.',
+        },
+        rtf: {
+          title: '8. RTF Framework',
+          content: 'Best for: Corporate training, standardized content, teaching materials',
+        },
+        rtfFields: {
+          title: 'The Fields:',
+          items: [
+            'Role: The instructor or expert role',
+            'Task: The teaching objective',
+            'Format: How to present (slides, quiz, lesson, etc.)',
+          ],
+        },
+        rtfWhy: {
+          title: 'Why It Works:',
+          content: 'RTF is purpose-built for training and education. It ensures consistent, pedagogically sound output.',
+        },
+        comparison: {
+          title: 'Which Framework Should You Use?',
+          content: '',
+          rows: [
+            { Framework: 'APE', 'Best For': 'Quick, simple requests', Complexity: '⭐ Low' },
+            { Framework: 'CRAFT', 'Best For': 'Marketing, copywriting', Complexity: '⭐⭐ Medium' },
+            { Framework: 'CO-STAR', 'Best For': 'Business communication', Complexity: '⭐⭐ Medium' },
+            { Framework: 'SPECS', 'Best For': 'Complex, technical tasks', Complexity: '⭐⭐⭐ High' },
+            { Framework: 'RISEN', 'Best For': 'Multi-step processes', Complexity: '⭐⭐⭐ High' },
+            { Framework: 'TRACE', 'Best For': 'Example-based learning', Complexity: '⭐⭐⭐ High' },
+            { Framework: 'Google', 'Best For': 'General research', Complexity: '⭐⭐ Medium' },
+            { Framework: 'RTF', 'Best For': 'Training & education', Complexity: '⭐⭐ Medium' },
+          ],
+          columns: ['Framework', 'Best For', 'Complexity'],
+        },
+        proTip: {
+          title: 'Pro Tip: Test Multiple Frameworks',
+          content: [
+            'Here\'s the secret: the same prompt written in CRAFT vs SPECS might produce different results from the same AI model. Different frameworks trigger different reasoning patterns in the AI.',
+            'That\'s why PromptQuorum lets you switch between frameworks instantly and see how the same idea gets restructured. Try your prompt in CRAFT, then switch to SPECS, then CO-STAR. Compare the results. You\'ll learn which frameworks work best for your specific use case.',
+          ],
+        },
+        nextSteps: {
+          title: 'Next Steps',
+          content: [
+            'Pick one framework that matches your most common task. Master it. Then experiment with others as your skills grow.',
+            'Ready to put these frameworks into practice? Try them out with PromptQuorum, which includes all 8 frameworks plus automatic optimization and multi-AI comparison.',
+          ],
+        },
+      },
+    },
+    de: {
+      category: 'Prompt Engineering',
+      title: '8 Prompt Engineering Frameworks erklärt: CRAFT vs CO-STAR vs APE (2026 Leitfaden)',
+      intro: 'Meistern Sie die Top-Prompt-Frameworks und erfahren Sie, welcher für Ihren Anwendungsfall am besten geeignet ist.',
+      publishDate: 'Veröffentlicht 14. März 2026',
+      readTime: '8 min Lesezeit',
+      sections: {
+        intro: {
+          title: 'Was ist ein Prompt Framework?',
+          content: [
+            'Ein Prompt-Framework ist eine strukturierte Vorlage, die Sie durch die wesentlichen Elemente eines guten Prompts führt. Anstatt einen weitschweifigen Absatz zu schreiben, zerlegen Frameworks Ihre Anfrage in spezifische Felder – wie Kontext, Ziel, Ton und Publikum. Dies macht Ihre Prompts klarer, effektiver und gibt Ihnen vorhersehbare Ergebnisse.',
+            'Denken Sie daran wie an ein Rezept. Sie könnten zufällig Zutaten in einen Topf werfen und hoffen auf das Beste, oder Sie könnten einem strukturierten Rezept mit genau abgemessenen Zutaten in der richtigen Reihenfolge folgen. Frameworks sind Rezepte für Prompts.',
+          ],
+        },
+        craft: {
+          title: '1. CRAFT Framework',
+          content: 'Best für: Marketing, Copywriting, kreative Inhalte',
+        },
+        craftFields: {
+          title: 'Die Felder:',
+          items: [
+            'Context: Hintergrundinformationen, die die KI verstehen muss',
+            'Role: Welche Rolle sollte die KI einnehmen (z.B. „Experten-Copywriter")',
+            'Action: Was Sie die KI tun möchten (z.B. „E-Mail-Betreffzeilen schreiben")',
+            'Format: Wie die Ausgabe strukturiert sein soll (z.B. „Aufzählung", „Absatz")',
+            'Target: Für wen das ist (z.B. „B2B SaaS Entscheidungsträger")',
+          ],
+        },
+        craftExample: {
+          title: 'Beispiel:',
+          content: [
+            'Context: Wir starten eine Produktivitäts-App für Freelancer',
+            'Role: Sie sind ein Experten-Copywriter, spezialisiert auf SaaS',
+            'Action: Schreiben Sie 5 überzeugende E-Mail-Betreffzeilen',
+            'Format: Nummerierte Liste mit 1-Satz-Erklärung für jede',
+            'Target: Beschäftigte Freelancer zwischen 25–45, die zeitersparnde Tools schätzen',
+          ],
+        },
+        craftWhy: {
+          title: 'Warum es funktioniert:',
+          content: 'CRAFT zwingt Sie, alle Aspekte Ihrer Anfrage durchzudenken, bevor Sie die KI fragen. Die Kombination aus Rolle + Zielgruppe stellt sicher, dass die KI genau versteht, für wen der Inhalt ist und wie sie damit spricht.',
+        },
+        costar: {
+          title: '2. CO-STAR Framework',
+          content: 'Best für: Geschäftskommunikation, professionelles Schreiben, Entscheidungsfindung',
+        },
+        costarFields: {
+          title: 'Die Felder:',
+          items: [
+            'Context: Die Situation oder der Hintergrund',
+            'Objective: Was Sie erreichen möchten',
+            'Style: Der Ton und die Herangehensweise (formell, zwanglos, technisch usw.)',
+            'Tone: Die emotionale Qualität (dringend, beruhigend, selbstbewusst usw.)',
+            'Audience: Wer wird dies lesen/nutzen',
+            'Response: Welches Format/Länge/Detailniveau Sie möchten',
+          ],
+        },
+        costarExample: {
+          title: 'Beispiel:',
+          content: [
+            'Context: Unser Startup hat gerade Series-A-Finanzierung erhalten',
+            'Objective: Dies den Mitarbeitern ankündigen',
+            'Style: Professionell aber enthusiastisch',
+            'Tone: Feierlich und zukunftsorientiert',
+            'Audience: Internes Team (Engineers, Designer, Marketer)',
+            'Response: 3-Absatz-Ankündigung geeignet für E-Mail',
+          ],
+        },
+        costarWhy: {
+          title: 'Warum es funktioniert:',
+          content: 'CO-STAR trennt Stil von Ton (Stil ist die Präsentation, Ton ist die Emotion), was Ihnen viel mehr Kontrolle über das Schreiben der KI gibt. Es ist ausgezeichnet für geschäftliche oder professionelle Kontexte, wo Genauigkeit wichtig ist.',
+        },
+        specs: {
+          title: '3. SPECS Framework',
+          content: 'Best für: Komplexe Projekte, detaillierte Analyse, technisches Schreiben',
+        },
+        specsFields: {
+          title: 'Die Felder:',
+          items: [
+            'Situation: Der aktuelle Zustand oder das Problem',
+            'Purpose: Warum Sie fragen (welches Problem wird gelöst)',
+            'Expected Output: Wie das Ergebnis aussehen soll',
+            'Context: Zusätzliche relevante Informationen',
+            'Style: Das Format und der Ton',
+          ],
+        },
+        specsExample: {
+          title: 'Beispiel:',
+          content: [
+            'Situation: Wir haben 1000 Kundenservice-Tickets zu kategorisieren',
+            'Purpose: Um sie an das richtige Team zu leiten (Abrechnung, Technik, Feature-Anfrage)',
+            'Expected Output: Ein Python-Skript, das CSV liest, kategorisiert, gibt neues CSV aus',
+            'Context: Wir verwenden diese Kategorien: [Liste]. Häufige Schlüsselwörter pro Kategorie: [Liste]',
+            'Style: Nur Code, keine Erklärung, verwenden Sie pandas-Bibliothek',
+          ],
+        },
+        specsWhy: {
+          title: 'Warum es funktioniert:',
+          content: 'SPECS ist detailorientiert und ausgezeichnet, wenn Sie komplexe Anforderungen vermitteln müssen. Das "Expected Output"-Feld verhindert, dass die KI raten muss, was Sie wollen.',
+        },
+        risen: {
+          title: '4. RISEN Framework',
+          content: 'Best für: Mehrstufige Aufgaben, Workflows, Prozesse, Anweisungen',
+        },
+        risenFields: {
+          title: 'Die Felder:',
+          items: [
+            'Role: Welche Rolle sollte die KI spielen',
+            'Instructions: Detaillierte Schritte oder Anforderungen',
+            'Steps: Nummerierte Aufschlüsselung des Prozesses',
+            'End Goal: Wie Erfolg aussieht',
+            'Narrowing: Einschränkungen oder spezifische Regeln zum Befolgen',
+          ],
+        },
+        risenExample: {
+          title: 'Beispiel:',
+          content: [
+            'Role: Sie sind ein Experten-Lehrer, der einen Kursüberblick erstellt',
+            'Instructions: Erstellen Sie einen 4-Wochen-Anfängerkurs zu Prompt Engineering',
+            'Steps: 1) Lernziele definieren 2) Jede Woche skizzieren 3) Ressourcen auflisten',
+            'End Goal: Ein Student sollte bis Woche 4 professionelle Prompts schreiben können',
+            'Narrowing: Keine Code-Beispiele, keine vorherige KI-Kenntnisse voraussetzen, Lektionen unter 30 Min halten',
+          ],
+        },
+        risenWhy: {
+          title: 'Warum es funktioniert:',
+          content: 'RISEN ist perfekt für Sequenzen und Prozesse. Das „Narrowing"-Feld verhindert, dass die KI vom Weg abkommt und stellt sicher, dass die Ausgabe Ihre Einschränkungen beachtet.',
+        },
+        ape: {
+          title: '5. APE Framework',
+          content: 'Best für: Schnelle Anfragen, einfache Aufgaben, wenn Sie keine Komplexität benötigen',
+        },
+        apeFields: {
+          title: 'Die Felder:',
+          items: [
+            'Action: Was Sie die KI tun möchten',
+            'Purpose: Warum Sie fragen',
+            'Expectation: Was Sie zurück erwarten',
+          ],
+        },
+        apeExample: {
+          title: 'Beispiel:',
+          content: [
+            'Action: Fassen Sie diesen Artikel zusammen',
+            'Purpose: Ich brauche einen 2-Minuten-Überblick für ein Team-Meeting',
+            'Expectation: 3-4 Aufzählungspunkte mit den wichtigsten Erkenntnissen',
+          ],
+        },
+        apeWhy: {
+          title: 'Warum es funktioniert:',
+          content: 'APE ist wunderschön einfach. Die meisten alltäglichen Anfragen passen in diese 3 Felder. Es ist ein großartiger Ausgangspunkt, bevor Sie sich komplexere Frameworks zuwenden.',
+        },
+        google: {
+          title: '6. Google Prompt Framework',
+          content: 'Best für: Allgemeine Verwendung, Recherche, Informationsbeschaffung',
+        },
+        googleFields: {
+          title: 'Die Felder:',
+          items: [
+            'Task: Was Sie erreichen möchten',
+            'Context: Relevanter Hintergrund',
+            'Persona: Wer fragt / aus welcher Perspektive',
+          ],
+        },
+        googleWhy: {
+          title: 'Warum es funktioniert:',
+          content: 'Googles Framework ist leicht und informationsorientiert. Großartig für Recherche-Fragen und „Was wäre wenn"-Szenarien.',
+        },
+        trace: {
+          title: '7. TRACE Framework',
+          content: 'Best für: Few-shot Learning, beispielbasierte Anfragen, KI unterrichten',
+        },
+        traceFields: {
+          title: 'Die Felder:',
+          items: [
+            'Task: Was Sie wollen',
+            'Request: Ihre spezifische Frage',
+            'Action: Was die KI tun soll',
+            'Context: Zusätzliche Info',
+            'Example: Zeigen Sie der KI ein Beispiel perfekter Ausgabe',
+          ],
+        },
+        traceWhy: {
+          title: 'Warum es funktioniert:',
+          content: 'TRACE ist mächtig, weil ein Beispiel die KI genau lehrt, was Sie wollen. „Machen Sie diese Art von Sache" ist oft klarer als es zu erklären.',
+        },
+        rtf: {
+          title: '8. RTF Framework',
+          content: 'Best für: Unternehmensschulung, standardisierte Inhalte, Schulungsmaterialien',
+        },
+        rtfFields: {
+          title: 'Die Felder:',
+          items: [
+            'Role: Die Ausbildner- oder Expertenrolle',
+            'Task: Das Lehrziel',
+            'Format: Wie präsentieren (Folien, Quiz, Lektion usw.)',
+          ],
+        },
+        rtfWhy: {
+          title: 'Warum es funktioniert:',
+          content: 'RTF wurde speziell für Training und Bildung entwickelt. Es stellt konsistente, pädagogisch fundierte Ausgaben sicher.',
+        },
+        comparison: {
+          title: 'Welches Framework sollten Sie verwenden?',
+          content: '',
+          rows: [
+            { Framework: 'APE', 'Best For': 'Schnelle, einfache Anfragen', Complexity: '⭐ Niedrig' },
+            { Framework: 'CRAFT', 'Best For': 'Marketing, Copywriting', Complexity: '⭐⭐ Mittel' },
+            { Framework: 'CO-STAR', 'Best For': 'Geschäftskommunikation', Complexity: '⭐⭐ Mittel' },
+            { Framework: 'SPECS', 'Best For': 'Komplexe, technische Aufgaben', Complexity: '⭐⭐⭐ Hoch' },
+            { Framework: 'RISEN', 'Best For': 'Mehrstufige Prozesse', Complexity: '⭐⭐⭐ Hoch' },
+            { Framework: 'TRACE', 'Best For': 'Beispielbasiertes Lernen', Complexity: '⭐⭐⭐ Hoch' },
+            { Framework: 'Google', 'Best For': 'Allgemeine Recherche', Complexity: '⭐⭐ Mittel' },
+            { Framework: 'RTF', 'Best For': 'Training & Bildung', Complexity: '⭐⭐ Mittel' },
+          ],
+          columns: ['Framework', 'Best For', 'Complexity'],
+        },
+        proTip: {
+          title: 'Pro-Tipp: Testen Sie mehrere Frameworks',
+          content: [
+            'Hier ist das Geheimnis: Der gleiche Prompt in CRAFT vs SPECS könnte unterschiedliche Ergebnisse vom gleichen KI-Modell erzeugen. Unterschiedliche Frameworks lösen unterschiedliche Denkmuster in der KI aus.',
+            'Deshalb lässt Sie PromptQuorum zwischen Frameworks wechseln und sofort sehen, wie dieselbe Idee umstrukturiert wird. Versuchen Sie Ihren Prompt in CRAFT, dann wechseln Sie zu SPECS, dann CO-STAR. Vergleichen Sie die Ergebnisse. Sie werden lernen, welche Frameworks für Ihren spezifischen Anwendungsfall am besten funktionieren.',
+          ],
+        },
+        nextSteps: {
+          title: 'Nächste Schritte',
+          content: [
+            'Wählen Sie ein Framework, das zu Ihrer häufigsten Aufgabe passt. Meistern Sie es. Dann experimentieren Sie mit anderen, während Ihre Fähigkeiten wachsen.',
+            'Bereit, diese Frameworks in die Praxis umzusetzen? Probieren Sie sie mit PromptQuorum aus, das alle 8 Frameworks plus automatische Optimierung und Multi-KI-Vergleich enthält.',
+          ],
+        },
+      },
+    },
+    fr: {
+      category: 'Prompt Engineering',
+      title: '8 frameworks d\'ingénierie des prompts expliqués : CRAFT vs CO-STAR vs APE (Guide 2026)',
+      intro: 'Maîtrisez les meilleurs frameworks de prompts et apprenez lequel convient le mieux à votre cas d\'utilisation.',
+      publishDate: 'Publié le 14 mars 2026',
+      readTime: '8 min de lecture',
+      sections: {
+        intro: {
+          title: 'Qu\'est-ce qu\'un framework de prompt?',
+          content: [
+            'Un framework de prompt est un modèle structuré qui vous guide à travers les éléments essentiels d\'un bon prompt. Au lieu d\'écrire un paragraphe interminable, les frameworks décomposent votre demande en champs spécifiques – comme le contexte, l\'objectif, le ton et le public. Cela rend vos prompts plus clairs, plus efficaces et vous donne des résultats prévisibles.',
+            'Considérez-le comme une recette. Vous pourriez jeter des ingrédients aléatoires dans un pot et espérer le meilleur, ou vous pouviez suivre une recette structurée avec des ingrédients mesurés dans le bon ordre. Les frameworks sont des recettes pour les prompts.',
+          ],
+        },
+        craft: {
+          title: '1. Framework CRAFT',
+          content: 'Meilleur pour : Marketing, copywriting, contenu créatif',
+        },
+        craftFields: {
+          title: 'Les champs :',
+          items: [
+            'Context : Informations contextuelles que l\'IA doit comprendre',
+            'Role : Quel rôle l\'IA devrait-elle jouer (par exemple, « expert copywriter »)',
+            'Action : Ce que vous voulez que l\'IA fasse (par exemple, « rédiger des lignes d\'objet d\'e-mail »)',
+            'Format : Comment vous voulez que la sortie soit structurée (par exemple, « liste à puces », « paragraphe »)',
+            'Target : Pour qui c\'est (par exemple, « décideurs B2B SaaS »)',
+          ],
+        },
+        craftExample: {
+          title: 'Exemple :',
+          content: [
+            'Context : Nous lançons une application de productivité pour les indépendants',
+            'Role : Vous êtes un expert copywriter spécialisé dans le SaaS',
+            'Action : Écrivez 5 lignes d\'objet d\'e-mail convaincantes',
+            'Format : Liste numérotée avec une explication d\'une phrase pour chaque',
+            'Target : Les indépendants occupés âgés de 25 à 45 ans qui apprécient les outils qui font gagner du temps',
+          ],
+        },
+        craftWhy: {
+          title: 'Pourquoi cela fonctionne :',
+          content: 'CRAFT vous force à réfléchir à chaque aspect de votre demande avant de poser la question à l\'IA. La combinaison rôle + cible garantit que l\'IA comprend exactement pour qui le contenu est destiné et comment lui parler.',
+        },
+        costar: {
+          title: '2. Framework CO-STAR',
+          content: 'Meilleur pour : Communication commerciale, rédaction professionnelle, prise de décision',
+        },
+        costarFields: {
+          title: 'Les champs :',
+          items: [
+            'Context : La situation ou les antécédents',
+            'Objective : Ce que vous essayez d\'atteindre',
+            'Style : Le ton et l\'approche (formel, décontracté, technique, etc.)',
+            'Tone : La qualité émotionnelle (urgent, rassurant, confiant, etc.)',
+            'Audience : Qui lira/utilisera ceci',
+            'Response : Quel format/longueur/niveau de détail vous voulez',
+          ],
+        },
+        costarExample: {
+          title: 'Exemple :',
+          content: [
+            'Context : Notre startup vient d\'obtenir du financement de série A',
+            'Objective : L\'annoncer aux employés',
+            'Style : Professionnel mais enthousiaste',
+            'Tone : Célébratoire et tourné vers l\'avenir',
+            'Audience : Équipe interne (ingénieurs, designers, marketers)',
+            'Response : Annonce de 3 paragraphes appropriée pour un e-mail',
+          ],
+        },
+        costarWhy: {
+          title: 'Pourquoi cela fonctionne :',
+          content: 'CO-STAR sépare le style du ton (le style est la présentation, le ton est l\'émotion), ce qui vous donne beaucoup plus de contrôle sur la façon dont l\'IA écrit. C\'est excellent pour les contextes d\'entreprise ou professionnels où la précision est importante.',
+        },
+        specs: {
+          title: '3. Framework SPECS',
+          content: 'Meilleur pour : Projets complexes, analyse détaillée, rédaction technique',
+        },
+        specsFields: {
+          title: 'Les champs :',
+          items: [
+            'Situation : L\'état actuel ou le problème',
+            'Purpose : Pourquoi vous posez la question (quel problème résout cela)',
+            'Expected Output : À quoi le résultat devrait ressembler',
+            'Context : Informations additionnelles pertinentes',
+            'Style : Le format et le ton',
+          ],
+        },
+        specsExample: {
+          title: 'Exemple :',
+          content: [
+            'Situation : Nous avons 1000 tickets d\'assistance client à catégoriser',
+            'Purpose : Pour les acheminer vers la bonne équipe (facturation, technique, demande de fonctionnalité)',
+            'Expected Output : Un script Python qui lit CSV, catégorise, sort nouveau CSV',
+            'Context : Nous utilisons ces catégories : [liste]. Mots clés courants par catégorie : [liste]',
+            'Style : Code uniquement, pas d\'explication, utilisez la bibliothèque pandas',
+          ],
+        },
+        specsWhy: {
+          title: 'Pourquoi cela fonctionne :',
+          content: 'SPECS est orienté vers les détails et excellent lorsque vous devez communiquer des exigences complexes. Le champ « Expected Output » empêche l\'IA de deviner ce que vous voulez.',
+        },
+        risen: {
+          title: '4. Framework RISEN',
+          content: 'Meilleur pour : Tâches multi-étapes, workflows, processus, instructions',
+        },
+        risenFields: {
+          title: 'Les champs :',
+          items: [
+            'Role : Quel rôle l\'IA devrait-elle jouer',
+            'Instructions : Étapes détaillées ou exigences',
+            'Steps : Décomposition numérotée du processus',
+            'End Goal : À quoi ressemble la réussite',
+            'Narrowing : Contraintes ou règles spécifiques à suivre',
+          ],
+        },
+        risenExample: {
+          title: 'Exemple :',
+          content: [
+            'Role : Vous êtes un enseignant expert créant un plan de cours',
+            'Instructions : Créez un cours d\'introduction de 4 semaines sur l\'ingénierie des prompts',
+            'Steps : 1) Définir les objectifs d\'apprentissage 2) Esquisser chaque semaine 3) Lister les ressources',
+            'End Goal : Un étudiant devrait pouvoir rédiger des prompts professionnels d\'ici la semaine 4',
+            'Narrowing : Aucun exemple de code, n\'assumez aucune connaissance préalable en IA, gardez les leçons sous 30 min chacune',
+          ],
+        },
+        risenWhy: {
+          title: 'Pourquoi cela fonctionne :',
+          content: 'RISEN est parfait pour les séquences et les processus. Le champ « narrowing » empêche l\'IA de dévier et assure que la sortie respecte vos contraintes.',
+        },
+        ape: {
+          title: '5. Framework APE',
+          content: 'Meilleur pour : Demandes rapides, tâches simples, quand vous n\'avez pas besoin de complexité',
+        },
+        apeFields: {
+          title: 'Les champs :',
+          items: [
+            'Action : Ce que vous voulez que l\'IA fasse',
+            'Purpose : Pourquoi vous posez la question',
+            'Expectation : Ce que vous vous attendez à obtenir',
+          ],
+        },
+        apeExample: {
+          title: 'Exemple :',
+          content: [
+            'Action : Résumez cet article',
+            'Purpose : J\'ai besoin d\'un aperçu de 2 minutes pour une réunion d\'équipe',
+            'Expectation : 3-4 points à puces couvrant les principales conclusions',
+          ],
+        },
+        apeWhy: {
+          title: 'Pourquoi cela fonctionne :',
+          content: 'APE est magnifiquement simple. La plupart des demandes quotidiennes rentrent dans ces 3 champs. C\'est un excellent point de départ avant de passer à des frameworks plus complexes.',
+        },
+        google: {
+          title: '6. Framework Google Prompt',
+          content: 'Meilleur pour : Usage général, recherche, recherche d\'informations',
+        },
+        googleFields: {
+          title: 'Les champs :',
+          items: [
+            'Task : Ce que vous voulez accomplir',
+            'Context : Contexte pertinent',
+            'Persona : Qui demande / quelle perspective prendre',
+          ],
+        },
+        googleWhy: {
+          title: 'Pourquoi cela fonctionne :',
+          content: 'Le framework de Google est léger et axé sur l\'information. Excellent pour les requêtes de recherche et les scénarios « et si ».',
+        },
+        trace: {
+          title: '7. Framework TRACE',
+          content: 'Meilleur pour : Apprentissage peu tiro, demandes basées sur des exemples, enseigner l\'IA',
+        },
+        traceFields: {
+          title: 'Les champs :',
+          items: [
+            'Task : Ce que vous voulez',
+            'Request : Votre demande spécifique',
+            'Action : Ce que l\'IA devrait faire',
+            'Context : Informations additionnelles',
+            'Example : Montrer à l\'IA un exemple de sortie parfaite',
+          ],
+        },
+        traceWhy: {
+          title: 'Pourquoi cela fonctionne :',
+          content: 'TRACE est puissant car montrer un exemple enseigne exactement à l\'IA ce que vous voulez. « Faire ce genre de chose » est souvent plus clair que l\'expliquer.',
+        },
+        rtf: {
+          title: '8. Framework RTF',
+          content: 'Meilleur pour : Formation d\'entreprise, contenu standardisé, matériel pédagogique',
+        },
+        rtfFields: {
+          title: 'Les champs :',
+          items: [
+            'Role : Le rôle d\'instructeur ou d\'expert',
+            'Task : L\'objectif pédagogique',
+            'Format : Comment présenter (diapositives, quiz, leçon, etc.)',
+          ],
+        },
+        rtfWhy: {
+          title: 'Pourquoi cela fonctionne :',
+          content: 'RTF est construit exprès pour la formation et l\'éducation. Il assure une sortie cohérente et pédagogiquement saine.',
+        },
+        comparison: {
+          title: 'Quel framework devriez-vous utiliser ?',
+          content: '',
+          rows: [
+            { Framework: 'APE', 'Best For': 'Demandes rapides et simples', Complexity: '⭐ Faible' },
+            { Framework: 'CRAFT', 'Best For': 'Marketing, copywriting', Complexity: '⭐⭐ Moyen' },
+            { Framework: 'CO-STAR', 'Best For': 'Communication commerciale', Complexity: '⭐⭐ Moyen' },
+            { Framework: 'SPECS', 'Best For': 'Tâches complexes et techniques', Complexity: '⭐⭐⭐ Élevé' },
+            { Framework: 'RISEN', 'Best For': 'Processus multi-étapes', Complexity: '⭐⭐⭐ Élevé' },
+            { Framework: 'TRACE', 'Best For': 'Apprentissage basé sur des exemples', Complexity: '⭐⭐⭐ Élevé' },
+            { Framework: 'Google', 'Best For': 'Recherche générale', Complexity: '⭐⭐ Moyen' },
+            { Framework: 'RTF', 'Best For': 'Formation & éducation', Complexity: '⭐⭐ Moyen' },
+          ],
+          columns: ['Framework', 'Best For', 'Complexity'],
+        },
+        proTip: {
+          title: 'Conseil pratique : Testez plusieurs frameworks',
+          content: [
+            'Voici le secret : le même prompt écrit en CRAFT vs SPECS pourrait produire des résultats différents du même modèle IA. Différents frameworks déclenchent différents modèles de raisonnement dans l\'IA.',
+            'C\'est pourquoi PromptQuorum vous permet de basculer entre les frameworks instantanément et de voir comment la même idée est restructurée. Essayez votre prompt dans CRAFT, puis passez à SPECS, puis CO-STAR. Comparez les résultats. Vous apprendrez quels frameworks fonctionnent le mieux pour votre cas d\'utilisation spécifique.',
+          ],
+        },
+        nextSteps: {
+          title: 'Étapes suivantes',
+          content: [
+            'Choisissez un framework qui correspond à votre tâche la plus courante. Maîtrisez-le. Puis expérimentez avec d\'autres au fur et à mesure que vos compétences s\'améliorent.',
+            'Prêt à mettre ces frameworks en pratique ? Essayez-les avec PromptQuorum, qui comprend tous les 8 frameworks plus l\'optimisation automatique et la comparaison multi-IA.',
+          ],
+        },
+      },
+    },
+    ja: {
+      category: 'プロンプトエンジニアリング',
+      title: '8つのプロンプトエンジニアリングフレームワーク解説：CRAFT vs CO-STAR vs APE（2026ガイド）',
+      intro: '主要なプロンプトフレームワークをマスターし、ユースケースに最適なものを学びましょう。',
+      publishDate: '2026年3月14日公開',
+      readTime: '8分で読む',
+      sections: {
+        intro: {
+          title: 'プロンプトフレームワークとは何か？',
+          content: [
+            'プロンプトフレームワークは、優れたプロンプトの本質的な要素を通じてガイドする構造化テンプレートです。 だらだらした段落を書く代わりに、フレームワークはリクエストをコンテキスト、目的、トーン、オーディエンスなどの特定のフィールドに分解します。 これにより、プロンプトがより明確で効果的になり、予測可能な結果が得られます。',
+            'レシピのようなものだと考えてください。 ランダムに材料を鍋に投げ込んで最高の結果を期待することもできますし、正しい順序で測定された材料を使用した構造化されたレシピに従うこともできます。 フレームワークはプロンプトのレシピです。',
+          ],
+        },
+        craft: {
+          title: '1. CRAFTフレームワーク',
+          content: '最適：マーケティング、コピーライティング、クリエイティブコンテンツ',
+        },
+        craftFields: {
+          title: 'フィールド：',
+          items: [
+            'Context：AIが理解する必要な背景情報',
+            'Role：AIが担うべき役割（例：「エキスパートコピーライター」）',
+            'Action：AIにしてもらいたいこと（例：「メール件名を書く」）',
+            'Format：出力を構造化する方法（例：「箇条書き」、「段落」）',
+            'Target：誰のためなのか（例：「B2B SaaS意思決定者」）',
+          ],
+        },
+        craftExample: {
+          title: '例：',
+          content: [
+            'Context：フリーランス向けの生産性アプリを立ち上げています',
+            'Role：あなたはSaaS専門のエキスパートコピーライターです',
+            'Action：5つの説得力のあるメール件名を書く',
+            'Format：それぞれに1文の説明を付けた番号付きリスト',
+            'Target：時間節約ツールを大切にする25～45歳の忙しいフリーランサー',
+          ],
+        },
+        craftWhy: {
+          title: 'なぜうまくいくのか：',
+          content: 'CRAFTは、AIに質問する前にリクエストのすべての側面を考えることを強制します。ロール+ターゲットの組み合わせにより、AIはコンテンツが誰のためのもので、どのように話しかけるべきかを正確に理解します。',
+        },
+        costar: {
+          title: '2. CO-STARフレームワーク',
+          content: '最適：ビジネスコミュニケーション、専門的なライティング、意思決定',
+        },
+        costarFields: {
+          title: 'フィールド：',
+          items: [
+            'Context：状況または背景',
+            'Objective：達成しようとしていることは何か',
+            'Style：トーンとアプローチ（正式、カジュアル、技術的など）',
+            'Tone：感情的な品質（緊急、安心感、自信など）',
+            'Audience：これを読む/使う人は誰か',
+            'Response：どのようなフォーマット/長さ/詳細レベルが必要か',
+          ],
+        },
+        costarExample: {
+          title: '例：',
+          content: [
+            'Context：私たちのスタートアップはシリーズA資金調達を受けました',
+            'Objective：これを従業員に発表する',
+            'Style：プロフェッショナルだが熱心',
+            'Tone：お祝いと前向き',
+            'Audience：内部チーム（エンジニア、デザイナー、マーケター）',
+            'Response：メール向けの3段落の発表',
+          ],
+        },
+        costarWhy: {
+          title: 'なぜうまくいくのか：',
+          content: 'CO-STARはスタイルとトーンを分離します（スタイルはプレゼンテーション、トーンは感情）。これにより、AIがどのように書くかをはるかに多く制御できます。 企業や専門的なコンテキストで精度が重要な場合に優れています。',
+        },
+        specs: {
+          title: '3. SPECSフレームワーク',
+          content: '最適：複雑なプロジェクト、詳細な分析、技術的ライティング',
+        },
+        specsFields: {
+          title: 'フィールド：',
+          items: [
+            'Situation：現在の状態または問題',
+            'Purpose：質問する理由（これが何の問題を解決するのか）',
+            'Expected Output：結果がどのような見た目であるべきか',
+            'Context：追加の関連情報',
+            'Style：フォーマットとトーン',
+          ],
+        },
+        specsExample: {
+          title: '例：',
+          content: [
+            'Situation：1000件のカスタマーサポートチケットを分類する必要があります',
+            'Purpose：適切なチーム（請求、技術、機能リクエスト）にルーティングする',
+            'Expected Output：CSVを読み込み、分類し、新しいCSVを出力するPythonスクリプト',
+            'Context：これらのカテゴリを使用します：[リスト]。 カテゴリごとの一般的なキーワード：[リスト]',
+            'Style：コードのみ、説明なし、pandasライブラリを使用',
+          ],
+        },
+        specsWhy: {
+          title: 'なぜうまくいくのか：',
+          content: 'SPECSは詳細志向で、複雑な要件を伝える必要がある場合に優れています。 「Expected Output」フィールドは、AIがあなたが何を望んでいるかを推測することを防ぎます。',
+        },
+        risen: {
+          title: '4. RISENフレームワーク',
+          content: '最適：多段階タスク、ワークフロー、プロセス、指示',
+        },
+        risenFields: {
+          title: 'フィールド：',
+          items: [
+            'Role：AIが演じるべき役割',
+            'Instructions：詳細なステップまたは要件',
+            'Steps：プロセスの番号付きの内訳',
+            'End Goal：成功がどのような見た目か',
+            'Narrowing：従うべき制約または特定のルール',
+          ],
+        },
+        risenExample: {
+          title: '例：',
+          content: [
+            'Role：あなたはコースアウトラインを作成しているエキスパート教師です',
+            'Instructions：プロンプトエンジニアリングの4週間初心者向けコースを作成する',
+            'Steps：1) 学習目的を定義 2) 毎週スケッチ 3) リソースをリストアップ',
+            'End Goal：学生は4週目までにプロフェッショナルなプロンプトを書くことができるべき',
+            'Narrowing：コード例なし、事前のAI知識を想定しない、各レッスンを30分以下に保つ',
+          ],
+        },
+        risenWhy: {
+          title: 'なぜうまくいくのか：',
+          content: 'RISENはシーケンスとプロセスに最適です。 「narrowing」フィールドはAIが脱線することを防ぎ、出力があなたの制約を尊重することを保証します。',
+        },
+        ape: {
+          title: '5. APEフレームワーク',
+          content: '最適：クイックリクエスト、シンプルなタスク、複雑さが必要ない場合',
+        },
+        apeFields: {
+          title: 'フィールド：',
+          items: [
+            'Action：AIにしてもらいたいこと',
+            'Purpose：質問する理由',
+            'Expectation：何を期待しているか',
+          ],
+        },
+        apeExample: {
+          title: '例：',
+          content: [
+            'Action：この記事を要約する',
+            'Purpose：チームミーティング用に2分間の概要が必要です',
+            'Expectation：主要な知見をカバーする3～4個の箇条書き',
+          ],
+        },
+        apeWhy: {
+          title: 'なぜうまくいくのか：',
+          content: 'APEは美しく単純です。 ほとんどの日常的なリクエストはこれら3つのフィールドに適合します。 より複雑なフレームワークに進む前の優れたスタートポイントです。',
+        },
+        google: {
+          title: '6. Googleプロンプトフレームワーク',
+          content: '最適：一般的な使用、研究、情報検索',
+        },
+        googleFields: {
+          title: 'フィールド：',
+          items: [
+            'Task：達成したいこと',
+            'Context：関連する背景',
+            'Persona：誰が質問しているか/どの視点から',
+          ],
+        },
+        googleWhy: {
+          title: 'なぜうまくいくのか：',
+          content: 'Googleのフレームワークは軽量で情報指向です。 研究クエリと「もし～だったら」のシナリオに最適です。',
+        },
+        trace: {
+          title: '7. TRACEフレームワーク',
+          content: '最適：ショット学習、例ベースのリクエスト、AIの教示',
+        },
+        traceFields: {
+          title: 'フィールド：',
+          items: [
+            'Task：あなたが望むこと',
+            'Request：あなたの具体的な要求',
+            'Action：AIがしるべきこと',
+            'Context：追加情報',
+            'Example：AIに完璧な出力の例を示す',
+          ],
+        },
+        traceWhy: {
+          title: 'なぜうまくいくのか：',
+          content: 'TRACEは強力です。例を示すことはAIにあなたが何を望んでいるかを正確に教えるからです。 「この種のことをやる」は、多くの場合、それを説明するよりも明確です。',
+        },
+        rtf: {
+          title: '8. RTFフレームワーク',
+          content: '最適：企業研修、標準化されたコンテンツ、教材',
+        },
+        rtfFields: {
+          title: 'フィールド：',
+          items: [
+            'Role：インストラクターまたはエキスパートロール',
+            'Task：教育目的',
+            'Format：提示方法（スライド、クイズ、レッスンなど）',
+          ],
+        },
+        rtfWhy: {
+          title: 'なぜうまくいくのか：',
+          content: 'RTFは研修と教育向けに設計されています。 一貫性のある、教育学的に健全な出力を確保します。',
+        },
+        comparison: {
+          title: 'どのフレームワークを使うべき？',
+          content: '',
+          rows: [
+            { Framework: 'APE', 'Best For': 'クイックで簡単なリクエスト', Complexity: '⭐ 低' },
+            { Framework: 'CRAFT', 'Best For': 'マーケティング、コピーライティング', Complexity: '⭐⭐ 中' },
+            { Framework: 'CO-STAR', 'Best For': 'ビジネスコミュニケーション', Complexity: '⭐⭐ 中' },
+            { Framework: 'SPECS', 'Best For': '複雑で技術的なタスク', Complexity: '⭐⭐⭐ 高' },
+            { Framework: 'RISEN', 'Best For': '多段階プロセス', Complexity: '⭐⭐⭐ 高' },
+            { Framework: 'TRACE', 'Best For': '例ベースの学習', Complexity: '⭐⭐⭐ 高' },
+            { Framework: 'Google', 'Best For': '一般的な研究', Complexity: '⭐⭐ 中' },
+            { Framework: 'RTF', 'Best For': '研修＆教育', Complexity: '⭐⭐ 中' },
+          ],
+          columns: ['Framework', 'Best For', 'Complexity'],
+        },
+        proTip: {
+          title: 'プロのコツ：複数のフレームワークをテストする',
+          content: [
+            'ここが秘密です：CRAFT vs SPECSで書かれた同じプロンプトは、同じAIモデルから異なる結果を生み出すかもしれません。異なるフレームワークは、AIで異なる推論パターンをトリガーします。',
+            'だからPromptQuorumでは、フレームワーク間でインスタンティエートに切り替えて、同じアイデアがどのように再構成されるかを見ることができます。CRAFTでプロンプトを試してから、SPECSに切り替えて、CO-STARに切り替えます。結果を比較します。特定のユースケースに最適なフレームワークを学びます。',
+          ],
+        },
+        nextSteps: {
+          title: '次のステップ',
+          content: [
+            'あなたの最も一般的なタスクに合致するフレームワークを1つ選択します。 それをマスターしてください。 その後、スキルが成長するにつれて、他のものと実験します。',
+            'これらのフレームワークを実際に使う準備はできていますか？ PromptQuorumで試してください。PromptQuorumには8つすべてのフレームワーク、自動最適化、マルチAI比較が含まれています。',
+          ],
+        },
+      },
+    },
+    zh: {
+      category: '提示词工程',
+      title: '8个提示词工程框架解释：CRAFT vs CO-STAR vs APE（2026指南）',
+      intro: '掌握顶级提示词框架，学习哪一个最适合您的用例。',
+      publishDate: '发布于2026年3月14日',
+      readTime: '8分钟阅读',
+      sections: {
+        intro: {
+          title: '什么是提示词框架？',
+          content: [
+            '提示词框架是一个结构化模板，可以指导您完成好提示词的基本要素。 与其编写冗长的段落，框架会将您的请求分解为特定字段 - 如上下文、目标、语调和受众。 这使您的提示词更清晰、更有效，并为您提供可预测的结果。',
+            '把它想象成一个食谱。 您可以随意将原料投入锅中并寄希望于最好的结果，或者您可以遵循结构化食谱，按正确的顺序使用测量的原料。 框架是提示词的食谱。',
+          ],
+        },
+        craft: {
+          title: '1. CRAFT框架',
+          content: '最适合：营销、文案写作、创意内容',
+        },
+        craftFields: {
+          title: '字段：',
+          items: [
+            'Context：AI需要理解的背景信息',
+            'Role：AI应该扮演什么角色（例如"专家文案撰写人"）',
+            'Action：您希望AI做什么（例如"编写电子邮件主题行"）',
+            'Format：您希望如何构建输出（例如"项目符号列表"、"段落"）',
+            'Target：这是为谁而写（例如"B2B SaaS决策者"）',
+          ],
+        },
+        craftExample: {
+          title: '例子：',
+          content: [
+            'Context：我们为自由职业者推出生产力应用程序',
+            'Role：您是专门从事SaaS的专家文案撰写人',
+            'Action：撰写5条有说服力的电子邮件主题行',
+            'Format：为每个条目提供1句说明的编号列表',
+            'Target：重视省时工具的25-45岁忙碌自由职业者',
+          ],
+        },
+        craftWhy: {
+          title: '为什么有效：',
+          content: 'CRAFT迫使您在提出AI问题之前思考请求的所有方面。 角色+目标组合确保AI准确了解内容针对的对象以及如何与他们交谈。',
+        },
+        costar: {
+          title: '2. CO-STAR框架',
+          content: '最适合：商业沟通、专业写作、决策',
+        },
+        costarFields: {
+          title: '字段：',
+          items: [
+            'Context：情况或背景',
+            'Objective：您试图实现什么',
+            'Style：语调和方法（正式、随意、技术等）',
+            'Tone：情感品质（紧急、放心、自信等）',
+            'Audience：谁会读/使用这个',
+            'Response：您想要什么格式/长度/详细程度',
+          ],
+        },
+        costarExample: {
+          title: '例子：',
+          content: [
+            'Context：我们的初创公司刚刚获得A轮融资',
+            'Objective：向员工宣布这一点',
+            'Style：专业但热情',
+            'Tone：庆祝和面向未来',
+            'Audience：内部团队（工程师、设计师、营销人员）',
+            'Response：3段落公告适合电子邮件',
+          ],
+        },
+        costarWhy: {
+          title: '为什么有效：',
+          content: 'CO-STAR将风格与语调分开（风格是表现，语调是情感），这给了您对AI写作方式的更多控制。 它对企业或专业环境中精度很重要的情况特别有效。',
+        },
+        specs: {
+          title: '3. SPECS框架',
+          content: '最适合：复杂项目、详细分析、技术写作',
+        },
+        specsFields: {
+          title: '字段：',
+          items: [
+            'Situation：当前状态或问题',
+            'Purpose：您提出问题的原因（这解决了什么问题）',
+            'Expected Output：结果应该是什么样子',
+            'Context：附加相关信息',
+            'Style：格式和语调',
+          ],
+        },
+        specsExample: {
+          title: '例子：',
+          content: [
+            'Situation：我们有1000张客户支持工单需要分类',
+            'Purpose：将它们路由到正确的团队（计费、技术、功能请求）',
+            'Expected Output：一个Python脚本，读取CSV、分类、输出新的CSV',
+            'Context：我们使用这些类别：[列表]。 每个类别的常见关键词：[列表]',
+            'Style：仅代码，无说明，使用pandas库',
+          ],
+        },
+        specsWhy: {
+          title: '为什么有效：',
+          content: 'SPECS注重细节，在您需要传达复杂要求时非常有效。 预期输出字段防止AI猜测您想要什么。',
+        },
+        risen: {
+          title: '4. RISEN框架',
+          content: '最适合：多步骤任务、工作流、流程、说明',
+        },
+        risenFields: {
+          title: '字段：',
+          items: [
+            'Role：AI应该扮演什么角色',
+            'Instructions：详细的步骤或要求',
+            'Steps：流程的编号细分',
+            'End Goal：成功是什么样子',
+            'Narrowing：要遵循的约束或特定规则',
+          ],
+        },
+        risenExample: {
+          title: '例子：',
+          content: [
+            'Role：您是创建课程大纲的专家教师',
+            'Instructions：创建4周初学者提示词工程课程',
+            'Steps：1）定义学习目标 2）概述每一周 3）列出资源',
+            'End Goal：学生应该能够在第4周之前写出专业提示词',
+            'Narrowing：无代码示例，不假设先前的AI知识，保持每节课在30分钟以下',
+          ],
+        },
+        risenWhy: {
+          title: '为什么有效：',
+          content: 'RISEN非常适合序列和流程。 "narrowing"字段防止AI偏离轨道，并确保输出遵守您的约束。',
+        },
+        ape: {
+          title: '5. APE框架',
+          content: '最适合：快速请求、简单任务、当您不需要复杂性时',
+        },
+        apeFields: {
+          title: '字段：',
+          items: [
+            'Action：您希望AI做什么',
+            'Purpose：您提出问题的原因',
+            'Expectation：您期望得到什么',
+          ],
+        },
+        apeExample: {
+          title: '例子：',
+          content: [
+            'Action：总结这篇文章',
+            'Purpose：我需要一个2分钟的概述来参加团队会议',
+            'Expectation：3-4个涵盖关键发现的项目符号',
+          ],
+        },
+        apeWhy: {
+          title: '为什么有效：',
+          content: 'APE非常简洁。 大多数日常请求都适合这3个字段。 这是在升级到更复杂框架之前的一个很好的起点。',
+        },
+        google: {
+          title: '6. Google提示词框架',
+          content: '最适合：通用、研究、查找信息',
+        },
+        googleFields: {
+          title: '字段：',
+          items: [
+            'Task：您想完成什么',
+            'Context：相关背景',
+            'Persona：谁在提问/应该采取什么角度',
+          ],
+        },
+        googleWhy: {
+          title: '为什么有效：',
+          content: 'Google的框架是轻量级的和信息指向的。 非常适合研究查询和"如果...会怎样"的情景。',
+        },
+        trace: {
+          title: '7. TRACE框架',
+          content: '最适合：少次学习、基于示例的请求、教导AI',
+        },
+        traceFields: {
+          title: '字段：',
+          items: [
+            'Task：您想要什么',
+            'Request：您的具体请求',
+            'Action：AI应该做什么',
+            'Context：附加信息',
+            'Example：向AI展示完美输出的示例',
+          ],
+        },
+        traceWhy: {
+          title: '为什么有效：',
+          content: 'TRACE强大，因为展示示例准确地教导AI您想要什么。 "做这种事"通常比解释它更清楚。',
+        },
+        rtf: {
+          title: '8. RTF框架',
+          content: '最适合：公司培训、标准化内容、教材',
+        },
+        rtfFields: {
+          title: '字段：',
+          items: [
+            'Role：讲师或专家角色',
+            'Task：教学目标',
+            'Format：如何呈现（幻灯片、测验、课程等）',
+          ],
+        },
+        rtfWhy: {
+          title: '为什么有效：',
+          content: 'RTF是为培训和教育而设计的。 它确保输出的一致性和教学上的合理性。',
+        },
+        comparison: {
+          title: '您应该使用哪个框架？',
+          content: '',
+          rows: [
+            { Framework: 'APE', 'Best For': '快速、简单的请求', Complexity: '⭐ 低' },
+            { Framework: 'CRAFT', 'Best For': '营销、文案写作', Complexity: '⭐⭐ 中等' },
+            { Framework: 'CO-STAR', 'Best For': '商业沟通', Complexity: '⭐⭐ 中等' },
+            { Framework: 'SPECS', 'Best For': '复杂的技术任务', Complexity: '⭐⭐⭐ 高' },
+            { Framework: 'RISEN', 'Best For': '多步骤流程', Complexity: '⭐⭐⭐ 高' },
+            { Framework: 'TRACE', 'Best For': '基于示例的学习', Complexity: '⭐⭐⭐ 高' },
+            { Framework: 'Google', 'Best For': '一般研究', Complexity: '⭐⭐ 中等' },
+            { Framework: 'RTF', 'Best For': '培训和教育', Complexity: '⭐⭐ 中等' },
+          ],
+          columns: ['Framework', 'Best For', 'Complexity'],
+        },
+        proTip: {
+          title: '专业提示：测试多个框架',
+          content: [
+            '这里是秘密：用CRAFT vs SPECS编写的相同提示词可能会从同一个AI模型产生不同的结果。 不同的框架在AI中触发不同的推理模式。',
+            '这就是为什么PromptQuorum让您即时在框架之间切换，并看到相同的想法如何被重新构造。 在CRAFT中尝试您的提示词，然后切换到SPECS，然后CO-STAR。 比较结果。 您将了解哪些框架最适合您的具体用例。',
+          ],
+        },
+        nextSteps: {
+          title: '接下来的步骤',
+          content: [
+            '选择一个与您最常见任务相匹配的框架。 掌握它。 然后随着您的技能提高而尝试其他的。',
+            '准备好将这些框架投入实践了吗？ 使用PromptQuorum尝试它们，其中包括所有8个框架以及自动优化和多AI比较。',
+          ],
+        },
+      },
+    },
+  },
+  localAI: {
+    en: {
+      category: 'Privacy & Security',
+      title: 'Local AI vs Cloud Tools: Why Privacy-First Prompt Optimization Matters in 2026',
+      intro: 'The complete guide to keeping your AI prompts private. When to use local models, when to trust the cloud, and how to decide.',
+      publishDate: 'Published March 14, 2026',
+      readTime: '10 min read',
+      sections: {
+        problem: {
+          title: 'The Privacy Problem with Cloud AI',
+          content: [
+            'Every time you type a prompt into ChatGPT, Claude, or Gemini, you\'re sending your text to a cloud server owned by a company. That company stores it. Logs it. Trains on it (unless you explicitly disable it). Uses it for their own purposes.',
+            'For most everyday questions, this is fine. But for sensitive work—confidential business strategies, proprietary research, customer data, medical information—sharing with a cloud provider is a privacy risk.',
+          ],
+        },
+        risks: {
+          title: 'The Risks:',
+          items: [
+            'Data Breaches: Even big companies get hacked. Your prompts could be exposed.',
+            'Unauthorized Training: Cloud providers may use your data to improve their models (unless you pay for privacy).',
+            'Regulatory Risk: GDPR, HIPAA, and other regulations limit what data you can send to third parties.',
+            'Competitive Risk: Your business ideas, strategies, and research are visible to your competitors\' employees.',
+            'Long-term Storage: Your prompts may be stored indefinitely. You don\'t control the retention.',
+          ],
+        },
+        whatIsLocalAI: {
+          title: 'What is Local AI?',
+          content: 'Local AI means running an AI model directly on your computer or network, with no data sent to the cloud. You download the model (often open-source), install it, and run it locally. Your prompts never leave your machine.',
+        },
+        howItWorks: {
+          title: 'How It Works:',
+          items: [
+            'Download an open-source model (e.g., Llama 2, Mistral, Phi)',
+            'Install a local LLM runner (Ollama, LM Studio, Jan AI, etc.)',
+            'Run the model on your machine',
+            'Send your prompts to the local model (stays on your computer)',
+            'Get responses instantly, completely private',
+          ],
+        },
+        headToHead: {
+          title: 'Local AI vs Cloud: Head-to-Head',
+          content: '',
+          rows: [
+            { Factor: 'Privacy', 'Local AI': '✅ 100% private, on your machine', 'Cloud AI': '⚠️ Sent to vendor servers' },
+            { Factor: 'Cost', 'Local AI': '✅ Free after hardware cost', 'Cloud AI': '💰 Pay per token/API' },
+            { Factor: 'Speed', 'Local AI': '✅ Instant (no network lag)', 'Cloud AI': '⚠️ Depends on internet' },
+            { Factor: 'Model Quality', 'Local AI': '⚠️ Open-source (good, not best)', 'Cloud AI': '✅ Frontier models (GPT-4o, Claude 3.5)' },
+            { Factor: 'Offline', 'Local AI': '✅ Works without internet', 'Cloud AI': '❌ Requires internet connection' },
+            { Factor: 'Setup', 'Local AI': '⚠️ Technical setup required', 'Cloud AI': '✅ Just log in' },
+            { Factor: 'Compliance', 'Local AI': '✅ GDPR/HIPAA friendly', 'Cloud AI': '⚠️ May violate regulations' },
+            { Factor: 'Maintenance', 'Local AI': '⚠️ You manage updates', 'Cloud AI': '✅ Vendor handles it' },
+          ],
+          columns: ['Factor', 'Local AI', 'Cloud AI'],
+        },
+        popularTools: {
+          title: 'Popular Local AI Tools (2026)',
+        },
+        ollama: {
+          title: 'Ollama (Easiest)',
+          content: [
+            'The most popular local LLM runner. Download, click install, choose a model (Llama 2, Mistral, etc.), and you\'re running. Supports 1000+ models. Runs on Mac, Linux, Windows.',
+            'Best for: Beginners, experimenting with local AI',
+            'Cost: Free',
+            'Models available: Llama 2, Mistral, Phi, Neural Chat, Orca, and many more',
+          ],
+        },
+        lmStudio: {
+          title: 'LM Studio (User-Friendly)',
+          content: [
+            'Beautiful desktop app for running local models. Browse models directly in the app, download with one click, run with a nice UI. Great for non-technical users.',
+            'Best for: Users who want a GUI, not command-line',
+            'Cost: Free',
+            'Supports: GGUF format models, most open-source models',
+          ],
+        },
+        jan: {
+          title: 'Jan (Privacy-Focused)',
+          content: [
+            'A privacy-first desktop app for running local models. Emphasis on zero-knowledge architecture and keeping everything local. Good for highly sensitive work.',
+            'Best for: Privacy-conscious users, sensitive data',
+            'Cost: Free',
+            'Philosophy: Your data, your control',
+          ],
+        },
+        gpt4all: {
+          title: 'GPT4All (Lightweight)',
+          content: [
+            'Minimal resource footprint. Runs on older computers, laptops with limited specs. Models are smaller but still effective.',
+            'Best for: Low-resource machines, portability',
+            'Cost: Free',
+            'Trade-off: Smaller models = simpler tasks',
+          ],
+        },
+        whenToUse: {
+          title: 'When to Use Local AI',
+        },
+        useLocal: {
+          title: '✅ Use Local AI if:',
+          items: [
+            'You\'re handling confidential business information',
+            'You work with healthcare, legal, or regulated data',
+            'You want zero cloud vendor lock-in',
+            'You need to work offline',
+            'Your budget is tight (free after initial setup)',
+            'You\'re optimizing prompts and want instant feedback',
+            'You want complete control over your data',
+          ],
+        },
+        useCloud: {
+          title: '❌ Use Cloud AI if:',
+          items: [
+            'You need cutting-edge model quality (GPT-4o, Claude 3.5 Opus)',
+            'You don\'t have technical setup skills',
+            'You want the latest models without maintenance',
+            'Your prompts aren\'t sensitive',
+            'You need enterprise support and guarantees',
+            'You\'re okay paying per API call',
+          ],
+        },
+        hybrid: {
+          title: 'The Hybrid Approach (Best of Both)',
+          content: [
+            'The smartest teams use both:',
+            'Local AI for drafting & optimization: Develop your prompts in private using a local model',
+            'Cloud AI for final results: Once your prompt is polished, send it to ChatGPT or Claude for best-in-class responses',
+            'This way, your prompt development process is private, but you still get cutting-edge results when needed. Best of both worlds.',
+          ],
+        },
+        realWorldExample: {
+          title: 'Real-World Example',
+          content: [
+            'Scenario: A healthcare consultant writing a paper on patient outcomes.',
+            '1. Draft the paper outline and organize patient case studies (sensitive data)',
+            '2. Use local Mistral model to optimize prompts for analysis',
+            '3. Once prompts are good, send to Claude API (with anonymized data only)',
+            '4. Get high-quality analysis from Claude',
+            '5. Incorporate into the paper',
+            'Result: Sensitive data never left the consultant\'s machine. Prompts were optimized locally. Final analysis leveraged Claude\'s quality. Privacy ✅ Quality ✅',
+          ],
+        },
+        hardware: {
+          title: 'Hardware Requirements for Local AI',
+          content: 'Minimum (Budget): 8GB RAM, Dual-core CPU, 5GB disk space, Runs smaller models (3-7B parameters)',
+        },
+        future: {
+          title: 'The Future: Privacy-First AI',
+          content: [
+            'In 2026, the trend is clear: privacy-first computing is becoming mainstream. GDPR fines are increasing. Data breaches are expensive. Regulations are tightening. Companies are moving sensitive workloads to local, on-device AI.',
+            'Local AI isn\'t a niche anymore. It\'s becoming the standard for any serious AI work involving sensitive data.',
+          ],
+        },
+        nextSteps: {
+          title: 'Next Steps',
+          content: [
+            'If you handle sensitive data or care about privacy:',
+            '1. Download Ollama or LM Studio',
+            '2. Try a small model (Mistral 7B is a good starting point)',
+            '3. Optimize your prompts locally',
+            '4. Use that proven prompt with cloud AI when you need top quality',
+            'Want a tool that makes this easier? PromptQuorum supports both local models (Ollama, LM Studio, Jan AI, GPT4All) and cloud APIs. Write prompts once, test against multiple models, compare results. All while keeping sensitive data local.',
+          ],
+        },
+      },
+    },
+    de: {
+      category: 'Datenschutz & Sicherheit',
+      title: 'Lokale KI vs Cloud-Tools: Warum datenschutzfreundliche Prompt-Optimierung 2026 wichtig ist',
+      intro: 'Der vollständige Leitfaden zum Schutz Ihrer AI-Prompts. Wann lokale Modelle verwendet werden, wann der Cloud vertraut wird und wie man entscheidet.',
+      publishDate: 'Veröffentlicht 14. März 2026',
+      readTime: '10 min Lesezeit',
+      sections: {
+        problem: {
+          title: 'Das Datenschutzproblem mit Cloud-KI',
+          content: [
+            'Jedes Mal, wenn Sie einen Prompt in ChatGPT, Claude oder Gemini eingeben, senden Sie Ihren Text an einen Cloud-Server, der einem Unternehmen gehört. Dieses Unternehmen speichert ihn. Protokolliert ihn. Trainiert darauf (es sei denn, Sie deaktivieren dies ausdrücklich). Verwendet ihn für eigene Zwecke.',
+            'Für die meisten alltäglichen Fragen ist dies in Ordnung. Aber für sensible Arbeiten – vertrauliche Geschäftsstrategien, proprietäre Forschung, Kundendaten, medizinische Informationen – ist das Teilen mit einem Cloud-Provider ein Datenschutzrisiko.',
+          ],
+        },
+        risks: {
+          title: 'Die Risiken:',
+          items: [
+            'Datenverletzungen: Selbst große Unternehmen werden gehackt. Ihre Prompts könnten offengelegt werden.',
+            'Unbefugte Schulung: Cloud-Provider können Ihre Daten verwenden, um ihre Modelle zu verbessern (es sei denn, Sie zahlen für Datenschutz).',
+            'Behördliches Risiko: GDPR, HIPAA und andere Bestimmungen beschränken, welche Daten Sie an Dritte senden können.',
+            'Wettbewerbsrisiko: Ihre Geschäftsideen, Strategien und Forschungen sind für die Mitarbeiter Ihrer Konkurrenten sichtbar.',
+            'Langzeitspeicherung: Ihre Prompts können auf unbestimmte Zeit gespeichert werden. Sie kontrollieren die Aufbewahrung nicht.',
+          ],
+        },
+        whatIsLocalAI: {
+          title: 'Was ist lokale KI?',
+          content: 'Lokale KI bedeutet, ein KI-Modell direkt auf Ihrem Computer oder Netzwerk auszuführen, ohne dass Daten in die Cloud gesendet werden. Sie laden das Modell (oft Open-Source) herunter, installieren es und führen es lokal aus. Ihre Prompts verlassen Ihren Computer nie.',
+        },
+        howItWorks: {
+          title: 'Wie es funktioniert:',
+          items: [
+            'Laden Sie ein Open-Source-Modell herunter (z.B. Llama 2, Mistral, Phi)',
+            'Installieren Sie einen lokalen LLM-Runner (Ollama, LM Studio, Jan AI usw.)',
+            'Führen Sie das Modell auf Ihrem Computer aus',
+            'Senden Sie Ihre Prompts an das lokale Modell (bleibt auf Ihrem Computer)',
+            'Erhalten Sie Antworten sofort, vollständig privat',
+          ],
+        },
+        headToHead: {
+          title: 'Lokale KI vs Cloud: Direkt gegenüber',
+          content: '',
+          rows: [
+            { Factor: 'Datenschutz', 'Local AI': '✅ 100% privat auf Ihrem Computer', 'Cloud AI': '⚠️ An Anbieterserver gesendet' },
+            { Factor: 'Kosten', 'Local AI': '✅ Kostenlos nach Hardwarekosten', 'Cloud AI': '💰 Pro Token/API bezahlen' },
+            { Factor: 'Geschwindigkeit', 'Local AI': '✅ Sofort (kein Netzwerklatenz)', 'Cloud AI': '⚠️ Abhängig vom Internet' },
+            { Factor: 'Modellqualität', 'Local AI': '⚠️ Open-Source (gut, nicht das Beste)', 'Cloud AI': '✅ Frontier-Modelle (GPT-4o, Claude 3.5)' },
+            { Factor: 'Offline', 'Local AI': '✅ Funktioniert ohne Internet', 'Cloud AI': '❌ Erfordert Internetverbindung' },
+            { Factor: 'Einrichtung', 'Local AI': '⚠️ Technische Einrichtung erforderlich', 'Cloud AI': '✅ Einfach anmelden' },
+            { Factor: 'Compliance', 'Local AI': '✅ GDPR/HIPAA-freundlich', 'Cloud AI': '⚠️ Kann Bestimmungen verletzen' },
+            { Factor: 'Wartung', 'Local AI': '⚠️ Sie verwalten Updates', 'Cloud AI': '✅ Anbieter kümmert sich darum' },
+          ],
+          columns: ['Factor', 'Local AI', 'Cloud AI'],
+        },
+        popularTools: {
+          title: 'Beliebte lokale KI-Tools (2026)',
+        },
+        ollama: {
+          title: 'Ollama (Am einfachsten)',
+          content: [
+            'Der beliebteste lokale LLM-Runner. Laden Sie herunter, klicken Sie auf Installieren, wählen Sie ein Modell (Llama 2, Mistral usw.), und Sie können loslegen. Unterstützt 1000+ Modelle. Läuft auf Mac, Linux, Windows.',
+            'Best für: Anfänger, Experimentieren mit lokaler KI',
+            'Kosten: Kostenlos',
+            'Verfügbare Modelle: Llama 2, Mistral, Phi, Neural Chat, Orca und viele mehr',
+          ],
+        },
+        lmStudio: {
+          title: 'LM Studio (Benutzerfreundlich)',
+          content: [
+            'Schöne Desktop-App zum Ausführen lokaler Modelle. Durchsuchen Sie Modelle direkt in der App, laden Sie mit einem Klick herunter, führen Sie mit einer schönen Benutzeroberfläche aus. Großartig für nicht-technische Benutzer.',
+            'Best für: Benutzer, die eine GUI mögen, keine Befehlszeile',
+            'Kosten: Kostenlos',
+            'Unterstützt: GGUF-Format-Modelle, die meisten Open-Source-Modelle',
+          ],
+        },
+        jan: {
+          title: 'Jan (Datenschutzfokussiert)',
+          content: [
+            'Eine datenschutzfreundliche Desktop-App zum Ausführen lokaler Modelle. Betonung auf Zero-Knowledge-Architektur und Keeping alles lokal. Gut für hochsensible Arbeiten.',
+            'Best für: Datenschutzbewusste Benutzer, sensible Daten',
+            'Kosten: Kostenlos',
+            'Philosophie: Ihre Daten, Ihre Kontrolle',
+          ],
+        },
+        gpt4all: {
+          title: 'GPT4All (Leichtgewicht)',
+          content: [
+            'Minimaler Ressourcenverbrauch. Läuft auf älteren Computern, Laptops mit begrenzten Spezifikationen. Modelle sind kleiner, aber immer noch effektiv.',
+            'Best für: Low-Resource-Maschinen, Portabilität',
+            'Kosten: Kostenlos',
+            'Trade-off: Kleinere Modelle = einfachere Aufgaben',
+          ],
+        },
+        whenToUse: {
+          title: 'Wann lokale KI verwenden',
+        },
+        useLocal: {
+          title: '✅ Verwenden Sie lokale KI, wenn:',
+          items: [
+            'Sie mit vertraulichen Geschäftsinformationen umgehen',
+            'Sie mit Gesundheits-, Rechts- oder regulierten Daten arbeiten',
+            'Sie keine Cloud-Anbieter-Lock-in möchten',
+            'Sie offline arbeiten müssen',
+            'Ihr Budget knapp ist (kostenlos nach anfänglicher Einrichtung)',
+            'Sie Prompts optimieren und sofortiges Feedback möchten',
+            'Sie vollständige Kontrolle über Ihre Daten möchten',
+          ],
+        },
+        useCloud: {
+          title: '❌ Verwenden Sie Cloud-KI, wenn:',
+          items: [
+            'Sie neueste Modellqualität benötigen (GPT-4o, Claude 3.5 Opus)',
+            'Sie nicht über technische Einrichtungsfähigkeiten verfügen',
+            'Sie die neuesten Modelle ohne Wartung möchten',
+            'Ihre Prompts nicht sensibel sind',
+            'Sie Enterprise-Support und Garantien benötigen',
+            'Sie bereit sind, pro API-Aufruf zu bezahlen',
+          ],
+        },
+        hybrid: {
+          title: 'Der Hybrid-Ansatz (Das Beste aus beiden)',
+          content: [
+            'Die klügsten Teams verwenden beide:',
+            'Lokale KI für Entwurf & Optimierung: Entwickeln Sie Ihre Prompts privat mit einem lokalen Modell',
+            'Cloud-KI für endgültige Ergebnisse: Wenn Ihr Prompt poliert ist, senden Sie ihn zu ChatGPT oder Claude für erstklassige Ergebnisse',
+            'Auf diese Weise ist Ihr Prompt-Entwicklungsprozess privat, Sie erhalten aber immer noch erstklassige Ergebnisse, wenn nötig. Das Beste aus beiden Welten.',
+          ],
+        },
+        realWorldExample: {
+          title: 'Reales Beispiel',
+          content: [
+            'Szenario: Ein Gesundheitsberater schreibt ein Papier über Patientenergebnisse.',
+            '1. Entwurf des Papierrandes und organisieren Sie Patienten-Fallstudien (sensible Daten)',
+            '2. Verwenden Sie lokales Mistral-Modell zur Optimierung von Prompts für Analyse',
+            '3. Wenn Prompts gut sind, senden Sie an Claude API (nur mit anonymisierten Daten)',
+            '4. Erhalten Sie hochwertige Analyse von Claude',
+            '5. Incorporate ins Papier',
+            'Ergebnis: Sensible Daten verließen den Computer des Beraters nie. Prompts wurden lokal optimiert. Die letzte Analyse nutzte Claudes Qualität. Datenschutz ✅ Qualität ✅',
+          ],
+        },
+        hardware: {
+          title: 'Hardwareanforderungen für lokale KI',
+          content: 'Mindestanforderungen (Budget): 8GB RAM, Dual-Core-CPU, 5GB Speicherplatz, Führt kleinere Modelle aus (3-7B Parameter)',
+        },
+        future: {
+          title: 'Die Zukunft: Datenschutzfreundliche KI',
+          content: [
+            'Im Jahr 2026 ist der Trend klar: Datenschutzfreundliches Computing wird zum Mainstream. GDPR-Bußgelder steigen. Datenverletzungen sind teuer. Bestimmungen werden verschärft. Unternehmen verlagern sensible Arbeitslasten auf lokale, on-Device-KI.',
+            'Lokale KI ist keine Nische mehr. Es wird zum Standard für jede ernsthafte KI-Arbeit mit sensiblen Daten.',
+          ],
+        },
+        nextSteps: {
+          title: 'Nächste Schritte',
+          content: [
+            'Wenn Sie mit sensiblen Daten umgehen oder sich um Datenschutz kümmern:',
+            '1. Laden Sie Ollama oder LM Studio herunter',
+            '2. Versuchen Sie ein kleines Modell (Mistral 7B ist ein guter Ausgangspunkt)',
+            '3. Optimieren Sie Ihre Prompts lokal',
+            '4. Verwenden Sie diesen bewährten Prompt mit Cloud-KI, wenn Sie Top-Qualität benötigen',
+            'Möchten Sie ein Tool, das dies erleichtert? PromptQuorum unterstützt sowohl lokale Modelle (Ollama, LM Studio, Jan AI, GPT4All) als auch Cloud-APIs. Schreiben Sie Prompts einmal, testen Sie gegen mehrere Modelle, vergleichen Sie Ergebnisse. Alles bei Schutz sensibler Daten lokal.',
+          ],
+        },
+      },
+    },
+    fr: {
+      category: 'Confidentialité et sécurité',
+      title: 'IA locale vs outils cloud : Pourquoi l\'optimisation des prompts axée sur la confidentialité est importante en 2026',
+      intro: 'Le guide complet pour garder vos prompts IA privés. Quand utiliser les modèles locaux, quand faire confiance au cloud et comment décider.',
+      publishDate: 'Publié le 14 mars 2026',
+      readTime: '10 min de lecture',
+      sections: {
+        problem: {
+          title: 'Le problème de confidentialité avec l\'IA cloud',
+          content: [
+            'Chaque fois que vous tapez une invite dans ChatGPT, Claude ou Gemini, vous envoyez votre texte à un serveur cloud appartenant à une entreprise. Cette entreprise le stocke. Le journalise. S\'entraîne dessus (sauf si vous le désactivez explicitement). L\'utilise à ses propres fins.',
+            'Pour la plupart des questions quotidiennes, c\'est bien. Mais pour un travail sensible — stratégies commerciales confidentielles, recherche propriétaire, données client, informations médicales — partager avec un fournisseur cloud est un risque de confidentialité.',
+          ],
+        },
+        risks: {
+          title: 'Les risques :',
+          items: [
+            'Violations de données : Même les grandes entreprises se font pirater. Vos messages pourraient être exposés.',
+            'Formation non autorisée : Les fournisseurs cloud peuvent utiliser vos données pour améliorer leurs modèles (à moins que vous ne payiez pour la confidentialité).',
+            'Risque réglementaire : Le RGPD, l\'HIPAA et d\'autres règlements limitent les données que vous pouvez envoyer à des tiers.',
+            'Risque concurrentiel : Vos idées commerciales, stratégies et recherches sont visibles pour les employés de vos concurrents.',
+            'Stockage à long terme : Vos invites peuvent être stockées indéfiniment. Vous ne contrôlez pas la rétention.',
+          ],
+        },
+        whatIsLocalAI: {
+          title: 'Qu\'est-ce que l\'IA locale?',
+          content: 'L\'IA locale signifie exécuter un modèle d\'IA directement sur votre ordinateur ou réseau, sans envoyer de données au cloud. Vous téléchargez le modèle (souvent open-source), l\'installez et l\'exécutez localement. Vos invites ne quittent jamais votre machine.',
+        },
+        howItWorks: {
+          title: 'Comment cela fonctionne :',
+          items: [
+            'Téléchargez un modèle open-source (par exemple, Llama 2, Mistral, Phi)',
+            'Installez un exécuteur LLM local (Ollama, LM Studio, Jan AI, etc.)',
+            'Exécutez le modèle sur votre ordinateur',
+            'Envoyez vos invites au modèle local (reste sur votre ordinateur)',
+            'Obtenez des réponses instantanément, complètement privé',
+          ],
+        },
+        headToHead: {
+          title: 'IA locale vs Cloud : Comparaison directe',
+          content: '',
+          rows: [
+            { Factor: 'Confidentialité', 'Local AI': '✅ 100% privé sur votre machine', 'Cloud AI': '⚠️ Envoyé aux serveurs du fournisseur' },
+            { Factor: 'Coût', 'Local AI': '✅ Gratuit après coût matériel', 'Cloud AI': '💰 Payer par jeton/API' },
+            { Factor: 'Vitesse', 'Local AI': '✅ Instantané (pas de latence réseau)', 'Cloud AI': '⚠️ Dépend de l\'internet' },
+            { Factor: 'Qualité du modèle', 'Local AI': '⚠️ Open-source (bon, pas le meilleur)', 'Cloud AI': '✅ Modèles frontière (GPT-4o, Claude 3.5)' },
+            { Factor: 'Hors ligne', 'Local AI': '✅ Fonctionne sans internet', 'Cloud AI': '❌ Nécessite une connexion Internet' },
+            { Factor: 'Configuration', 'Local AI': '⚠️ Configuration technique requise', 'Cloud AI': '✅ Connectez-vous simplement' },
+            { Factor: 'Conformité', 'Local AI': '✅ Compatible RGPD/HIPAA', 'Cloud AI': '⚠️ Peut violer les réglementations' },
+            { Factor: 'Maintenance', 'Local AI': '⚠️ Vous gérez les mises à jour', 'Cloud AI': '✅ Le fournisseur s\'en charge' },
+          ],
+          columns: ['Factor', 'Local AI', 'Cloud AI'],
+        },
+        popularTools: {
+          title: 'Outils d\'IA locaux populaires (2026)',
+        },
+        ollama: {
+          title: 'Ollama (Le plus facile)',
+          content: [
+            'Le coureur LLM local le plus populaire. Téléchargez, cliquez sur Installer, choisissez un modèle (Llama 2, Mistral, etc.), et vous êtes prêt. Prend en charge 1000+ modèles. S\'exécute sur Mac, Linux, Windows.',
+            'Meilleur pour : Débutants, expérimenter avec l\'IA locale',
+            'Coût : Gratuit',
+            'Modèles disponibles : Llama 2, Mistral, Phi, Neural Chat, Orca, et bien d\'autres',
+          ],
+        },
+        lmStudio: {
+          title: 'LM Studio (Convivial)',
+          content: [
+            'Belle application de bureau pour exécuter des modèles locaux. Parcourez les modèles directement dans l\'application, téléchargez en un clic, exécutez avec une belle interface. Excellent pour les utilisateurs non techniques.',
+            'Meilleur pour : Utilisateurs qui veulent une interface graphique, pas une ligne de commande',
+            'Coût : Gratuit',
+            'Supports : Modèles au format GGUF, la plupart des modèles open-source',
+          ],
+        },
+        jan: {
+          title: 'Jan (Axé sur la confidentialité)',
+          content: [
+            'Application de bureau axée sur la confidentialité pour exécuter les modèles locaux. L\'accent est mis sur l\'architecture à connaissance zéro et le maintien de tout localement. Bon pour les travaux très sensibles.',
+            'Meilleur pour : Utilisateurs soucieux de la confidentialité, données sensibles',
+            'Coût : Gratuit',
+            'Philosophie : Vos données, votre contrôle',
+          ],
+        },
+        gpt4all: {
+          title: 'GPT4All (Léger)',
+          content: [
+            'Empreinte de ressources minimale. S\'exécute sur des ordinateurs plus anciens, des ordinateurs portables avec des spécifications limitées. Les modèles sont plus petits mais toujours efficaces.',
+            'Meilleur pour : Machines à faibles ressources, portabilité',
+            'Coût : Gratuit',
+            'Compromis : Modèles plus petits = tâches plus simples',
+          ],
+        },
+        whenToUse: {
+          title: 'Quand utiliser l\'IA locale',
+        },
+        useLocal: {
+          title: '✅ Utilisez l\'IA locale si :',
+          items: [
+            'Vous travaillez avec des informations commerciales confidentielles',
+            'Vous travaillez avec des données sanitaires, juridiques ou réglementées',
+            'Vous voulez éviter tout verrouillage de fournisseur cloud',
+            'Vous avez besoin de travailler hors ligne',
+            'Votre budget est serré (gratuit après la configuration initiale)',
+            'Vous optimisez les invites et voulez un retour instantané',
+            'Vous voulez un contrôle total sur vos données',
+          ],
+        },
+        useCloud: {
+          title: '❌ Utilisez l\'IA cloud si :',
+          items: [
+            'Vous avez besoin d\'une qualité de modèle de pointe (GPT-4o, Claude 3.5 Opus)',
+            'Vous n\'avez pas de compétences techniques de configuration',
+            'Vous voulez les derniers modèles sans maintenance',
+            'Vos invites ne sont pas sensibles',
+            'Vous avez besoin du support d\'entreprise et des garanties',
+            'Vous êtes d\'accord pour payer par appel API',
+          ],
+        },
+        hybrid: {
+          title: 'L\'approche hybride (Le meilleur des deux)',
+          content: [
+            'Les équipes les plus intelligentes utilisent les deux :',
+            'IA locale pour l\'ébauche et l\'optimisation : Développez vos invites en privé à l\'aide d\'un modèle local',
+            'IA cloud pour les résultats finaux : Une fois votre invite perfectionnée, envoyez-la à ChatGPT ou Claude pour des réponses de premier ordre',
+            'De cette façon, votre processus de développement d\'invite est privé, mais vous obtenez toujours des résultats de pointe quand vous en avez besoin. Le meilleur des deux mondes.',
+          ],
+        },
+        realWorldExample: {
+          title: 'Exemple concret',
+          content: [
+            'Scénario : Un consultant en santé rédige un article sur les résultats des patients.',
+            '1. Rédigez le plan du document et organisez les études de cas des patients (données sensibles)',
+            '2. Utilisez un modèle Mistral local pour optimiser les invites pour l\'analyse',
+            '3. Une fois les invites bonnes, envoyez à l\'API Claude (données anonymisées uniquement)',
+            '4. Obtenez une analyse de haute qualité de Claude',
+            '5. Incorporer dans le document',
+            'Résultat : Les données sensibles n\'ont jamais quitté l\'ordinateur du consultant. Les invites ont été optimisées localement. L\'analyse finale a tiré parti de la qualité de Claude. Confidentialité ✅ Qualité ✅',
+          ],
+        },
+        hardware: {
+          title: 'Configuration requise pour l\'IA locale',
+          content: 'Minimum (Budget) : 8 Go de RAM, CPU double cœur, 5 Go d\'espace disque, Exécute des modèles plus petits (paramètres 3-7B)',
+        },
+        future: {
+          title: 'L\'avenir : IA axée sur la confidentialité',
+          content: [
+            'En 2026, la tendance est claire : l\'informatique axée sur la confidentialité devient grand public. Les amendes du RGPD augmentent. Les violations de données sont coûteuses. Les réglementations se durcissent. Les entreprises transfèrent les charges de travail sensibles vers l\'IA locale et sur appareil.',
+            'L\'IA locale n\'est plus une niche. C\'est devenu la norme pour tous les travaux d\'IA sérieux impliquant des données sensibles.',
+          ],
+        },
+        nextSteps: {
+          title: 'Étapes suivantes',
+          content: [
+            'Si vous travaillez avec des données sensibles ou vous souciez de la confidentialité :',
+            '1. Téléchargez Ollama ou LM Studio',
+            '2. Essayez un petit modèle (Mistral 7B est un bon point de départ)',
+            '3. Optimisez vos invites localement',
+            '4. Utilisez cette invite éprouvée avec l\'IA cloud lorsque vous avez besoin d\'une qualité supérieure',
+            'Voulez-vous un outil qui rend cela plus facile ? PromptQuorum supporte à la fois les modèles locaux (Ollama, LM Studio, Jan AI, GPT4All) et les API cloud. Écrivez les invites une fois, testez contre plusieurs modèles, comparez les résultats. Tout en gardant les données sensibles locales.',
+          ],
+        },
+      },
+    },
+    ja: {
+      category: 'プライバシーとセキュリティ',
+      title: 'ローカルAI対クラウドツール：2026年にプライバシーファーストのプロンプト最適化が重要な理由',
+      intro: 'AIプロンプトをプライベートに保つための完全なガイド。ローカルモデルをいつ使用し、クラウドをいつ信頼し、どのように決定するかを学びます。',
+      publishDate: '2026年3月14日公開',
+      readTime: '10分で読む',
+      sections: {
+        problem: {
+          title: 'クラウドAIとのプライバシーの問題',
+          content: [
+            'ChatGPT、Claude、またはGeminiにプロンプトを入力するたびに、企業が所有するクラウドサーバーにテキストを送信しています。 その企業がそれを保存します。 ログイン。 （明示的に無効にしない限り）それで訓練します。 独自の目的に使用します。',
+            'ほとんどの日常的な質問では、これは問題ありません。 しかし、機密の業務作業—機密のビジネス戦略、独自の研究、顧客データ、医療情報—クラウドプロバイダーとの共有はプライバシーリスクです。',
+          ],
+        },
+        risks: {
+          title: 'リスク：',
+          items: [
+            'データ侵害：大企業さえもハッキングされます。 あなたのプロンプトが公開される可能性があります。',
+            '許可されていないトレーニング：クラウドプロバイダーは、（プライバシーにお金を払わない限り）あなたのデータを使用してモデルを改善する可能性があります。',
+            '規制上のリスク：GDPR、HIPAA、およびその他の規制は、第三者に送信できるデータを制限します。',
+            '競争リスク：ビジネスアイデア、戦略、研究は競合他社の従業員に見えます。',
+            '長期保存：プロンプトは無期限に保存される場合があります。 あなたは保有期間を制御しません。',
+          ],
+        },
+        whatIsLocalAI: {
+          title: 'ローカルAIとは何か？',
+          content: 'ローカルAIとは、クラウドにデータを送信することなく、コンピューターまたはネットワーク上で直接AIモデルを実行することを意味します。 モデル（多くの場合オープンソース）をダウンロードしてインストールし、ローカルで実行します。 プロンプトはマシンを離れません。',
+        },
+        howItWorks: {
+          title: 'その仕組み：',
+          items: [
+            'オープンソースモデルをダウンロード（例：Llama 2、Mistral、Phi）',
+            'ローカルLLMランナーをインストール（Ollama、LM Studio、Jan AIなど）',
+            'モデルをマシンで実行',
+            'プロンプトをローカルモデルに送信（コンピューターに留まります）',
+            'すぐに完全にプライベートに応答を取得',
+          ],
+        },
+        headToHead: {
+          title: 'ローカルAI対クラウド：直接対決',
+          content: '',
+          rows: [
+            { Factor: 'プライバシー', 'Local AI': '✅ マシン上で100%プライベート', 'Cloud AI': '⚠️ ベンダーサーバーに送信' },
+            { Factor: 'コスト', 'Local AI': '✅ ハードウェアコスト後は無料', 'Cloud AI': '💰 トークン/APIごとに支払う' },
+            { Factor: '速度', 'Local AI': '✅ 即座（ネットワークレイテンシーなし）', 'Cloud AI': '⚠️ インターネットに依存' },
+            { Factor: 'モデルの品質', 'Local AI': '⚠️ オープンソース（良い、最高ではない）', 'Cloud AI': '✅ フロンティアモデル（GPT-4o、Claude 3.5）' },
+            { Factor: 'オフライン', 'Local AI': '✅ インターネットなしで動作', 'Cloud AI': '❌ インターネット接続が必要' },
+            { Factor: 'セットアップ', 'Local AI': '⚠️ 技術的なセットアップが必要', 'Cloud AI': '✅ ログインするだけ' },
+            { Factor: 'コンプライアンス', 'Local AI': '✅ GDPR/HIPAA対応', 'Cloud AI': '⚠️ 規制に違反する可能性' },
+            { Factor: 'メンテナンス', 'Local AI': '⚠️ アップデートを管理', 'Cloud AI': '✅ ベンダーが処理' },
+          ],
+          columns: ['Factor', 'Local AI', 'Cloud AI'],
+        },
+        popularTools: {
+          title: '人気のあるローカルAIツール（2026）',
+        },
+        ollama: {
+          title: 'Ollama（最も簡単）',
+          content: [
+            '最も人気のあるローカルLLMランナー。 ダウンロードして、インストールをクリックし、モデル（Llama 2、Mistral等）を選択すると、実行されます。 1000以上のモデルをサポート。 Mac、Linux、Windowsで実行。',
+            '最適：初心者、ローカルAIとの実験',
+            'コスト：無料',
+            '利用可能なモデル：Llama 2、Mistral、Phi、Neural Chat、Orcaなど',
+          ],
+        },
+        lmStudio: {
+          title: 'LM Studio（ユーザーフレンドリー）',
+          content: [
+            'ローカルモデルを実行するための美しいデスクトップアプリ。 アプリケーション内でモデルを直接参照し、ワンクリックでダウンロードし、素敵なUIで実行します。 非技術ユーザーに最適です。',
+            '最適：GUIが必要なユーザー、コマンドラインではなく',
+            'コスト：無料',
+            'サポート：GGUFフォーマットモデル、ほとんどのオープンソースモデル',
+          ],
+        },
+        jan: {
+          title: 'Jan（プライバシーに焦点）',
+          content: [
+            'ローカルモデルを実行するためのプライバシーファーストデスクトップアプリ。 ゼロノレッジアーキテクチャとすべてをローカルに保つことに重点を置いています。 非常に機密性の高い作業に適しています。',
+            '最適：プライバシーに関心のあるユーザー、機密データ',
+            'コスト：無料',
+            '哲学：あなたのデータ、あなたのコントロール',
+          ],
+        },
+        gpt4all: {
+          title: 'GPT4All（軽量）',
+          content: [
+            '最小限のリソースフットプリント。 古いコンピューター、スペックが限られているラップトップで実行。 モデルは小さいですがまだ有効です。',
+            '最適：低リソースマシン、ポータビリティ',
+            'コスト：無料',
+            'トレードオフ：小さいモデル=シンプルなタスク',
+          ],
+        },
+        whenToUse: {
+          title: 'ローカルAIをいつ使用するか',
+        },
+        useLocal: {
+          title: '✅ ローカルAIを使用する場合：',
+          items: [
+            '機密のビジネス情報を処理している',
+            'ヘルスケア、法律、または規制されたデータを扱っている',
+            'クラウドベンダーロックイン ゼロが必要',
+            'オフラインで作業する必要がある',
+            '予算が厳しい（初期セットアップ後は無料）',
+            'プロンプトを最適化し、即座のフィードバックが必要',
+            'データを完全に制御したい',
+          ],
+        },
+        useCloud: {
+          title: '❌ クラウドAIを使用する場合：',
+          items: [
+            '最先端のモデル品質が必要（GPT-4o、Claude 3.5 Opus）',
+            '技術的なセットアップスキルがない',
+            'メンテナンスなしで最新のモデルが必要',
+            'プロンプトは機密ではない',
+            'エンタープライズサポートと保証が必要',
+            'API呼び出しごとに支払うことが問題ない',
+          ],
+        },
+        hybrid: {
+          title: 'ハイブリッドアプローチ（両方の最良）',
+          content: [
+            '最も賢いチームは両方を使用します：',
+            'ドラフト&最適化のためのローカルAI：ローカルモデルを使用して、プライベートでプロンプトを開発',
+            '最終結果のためのクラウドAI：プロンプトが完成したら、ChatGPTまたはClaudeに送信して最高級の応答を得る',
+            'こうすることで、プロンプト開発プロセスはプライベートですが、必要な場合は最先端の結果が得られます。 両方の世界のベスト。',
+          ],
+        },
+        realWorldExample: {
+          title: '実世界の例',
+          content: [
+            'シナリオ：患者の転帰に関する論文を執筆するヘルスケアコンサルタント。',
+            '1. 紙のアウトラインをドラフトし、患者のケーススタディを整理（機密データ）',
+            '2. ローカルMistralモデルを使用して分析のプロンプトを最適化',
+            '3. プロンプトが良好になったら、Claude API に送信（匿名化されたデータのみ）',
+            '4. Claudeから高品質の分析を取得',
+            '5. 紙に組み込む',
+            '結果：機密データはコンサルタントのマシンを離れませんでした。 プロンプトはローカルで最適化されました。 最終的な分析はClaudeの品質を活用しました。 プライバシー ✅ 品質 ✅',
+          ],
+        },
+        hardware: {
+          title: 'ローカルAIのハードウェア要件',
+          content: '最小（予算）：8GB RAM、デュアルコアCPU、5GBディスク領域、小さいモデルを実行（3-7Bパラメーター）',
+        },
+        future: {
+          title: '未来：プライバシーファーストAI',
+          content: [
+            '2026年、トレンドは明確です：プライバシーファーストコンピューティングがメインストリームになりつつあります。 GDPR罰金は増加しています。 データ侵害は高額です。 規制が厳しくなっています。 企業は機密のワークロードをローカルなオンデバイスAIに移動しています。',
+            'ローカルAIはニッチではなくなりました。 機密データを含む深刻なAI作業の標準になりつつあります。',
+          ],
+        },
+        nextSteps: {
+          title: '次のステップ',
+          content: [
+            '機密データを処理するか、プライバシーに関心がある場合：',
+            '1. OllamaまたはLM Studioをダウンロード',
+            '2. 小さいモデルを試す（Mistral 7Bは良い出発点）',
+            '3. プロンプトをローカルで最適化',
+            '4. トップクオリティが必要なときにクラウドAIでその証明されたプロンプトを使用',
+            'これを簡単にするツールが必要ですか? PromptQuorumはローカルモデル（Ollama、LM Studio、Jan AI、GPT4All）とクラウドAPIの両方をサポートしています。 プロンプトを1回書き、複数のモデルに対してテストし、結果を比較します。 すべて機密データをローカルに保ちながら。',
+          ],
+        },
+      },
+    },
+    zh: {
+      category: '隐私和安全',
+      title: '本地AI与云工具：为什么隐私优先的提示词优化在2026年很重要',
+      intro: '保持AI提示词隐私的完整指南。何时使用本地模型、何时信任云以及如何决定。',
+      publishDate: '发布于2026年3月14日',
+      readTime: '10分钟阅读',
+      sections: {
+        problem: {
+          title: '云AI的隐私问题',
+          content: [
+            '每次您在ChatGPT、Claude或Gemini中输入提示词时，您都在向公司拥有的云服务器发送文本。 该公司存储它。 记录它。 对其进行培训（除非您明确禁用）。 将其用于自己的目的。',
+            '对于大多数日常问题，这很好。 但是对于敏感工作——机密的商业策略、专有研究、客户数据、医疗信息——与云提供商共享是一种隐私风险。',
+          ],
+        },
+        risks: {
+          title: '风险：',
+          items: [
+            '数据泄露：即使大公司也会被黑客攻击。 您的提示词可能会被泄露。',
+            '未经授权的培训：云提供商可能会使用您的数据来改进其模型（除非您为隐私付费）。',
+            '监管风险：GDPR、HIPAA和其他法规限制您可以发送给第三方的数据。',
+            '竞争风险：您的商业想法、战略和研究对竞争对手的员工是可见的。',
+            '长期存储：您的提示词可能会被无限期存储。 您无法控制保留。',
+          ],
+        },
+        whatIsLocalAI: {
+          title: '什么是本地AI？',
+          content: '本地AI意味着直接在您的计算机或网络上运行AI模型，无需将数据发送到云。 您下载模型（通常是开源的），安装它，并在本地运行。 您的提示词永远不会离开您的机器。',
+        },
+        howItWorks: {
+          title: '它如何工作：',
+          items: [
+            '下载开源模型（例如Llama 2、Mistral、Phi）',
+            '安装本地LLM运行程序（Ollama、LM Studio、Jan AI等）',
+            '在您的机器上运行模型',
+            '将提示词发送到本地模型（保持在您的计算机上）',
+            '立即获得响应，完全私密',
+          ],
+        },
+        headToHead: {
+          title: '本地AI对云：直接对比',
+          content: '',
+          rows: [
+            { Factor: '隐私', 'Local AI': '✅ 机器上100%隐私', 'Cloud AI': '⚠️ 发送到供应商服务器' },
+            { Factor: '成本', 'Local AI': '✅ 硬件成本后免费', 'Cloud AI': '💰 按令牌/API付费' },
+            { Factor: '速度', 'Local AI': '✅ 立即（无网络延迟）', 'Cloud AI': '⚠️ 取决于互联网' },
+            { Factor: '模型质量', 'Local AI': '⚠️ 开源（好的，不是最好的）', 'Cloud AI': '✅ 前沿模型（GPT-4o、Claude 3.5）' },
+            { Factor: '离线', 'Local AI': '✅ 无互联网工作', 'Cloud AI': '❌ 需要互联网连接' },
+            { Factor: '设置', 'Local AI': '⚠️ 需要技术设置', 'Cloud AI': '✅ 只需登录' },
+            { Factor: '合规性', 'Local AI': '✅ GDPR/HIPAA友好', 'Cloud AI': '⚠️ 可能违反法规' },
+            { Factor: '维护', 'Local AI': '⚠️ 您管理更新', 'Cloud AI': '✅ 供应商处理' },
+          ],
+          columns: ['Factor', 'Local AI', 'Cloud AI'],
+        },
+        popularTools: {
+          title: '流行的本地AI工具（2026）',
+        },
+        ollama: {
+          title: 'Ollama（最简单）',
+          content: [
+            '最受欢迎的本地LLM运行程序。 下载、点击安装、选择模型（Llama 2、Mistral等），您就可以运行。 支持1000多个模型。 在Mac、Linux、Windows上运行。',
+            '最适合：初学者、尝试本地AI',
+            '成本：免费',
+            '可用模型：Llama 2、Mistral、Phi、Neural Chat、Orca等',
+          ],
+        },
+        lmStudio: {
+          title: 'LM Studio（用户友好）',
+          content: [
+            '运行本地模型的漂亮桌面应用。 直接在应用中浏览模型，一键下载，使用漂亮的UI运行。 非常适合非技术用户。',
+            '最适合：想要GUI而不是命令行的用户',
+            '成本：免费',
+            '支持：GGUF格式模型、大多数开源模型',
+          ],
+        },
+        jan: {
+          title: 'Jan（隐私重点）',
+          content: [
+            '运行本地模型的隐私优先桌面应用。 强调零知识架构和保持所有内容本地。 适合高度敏感的工作。',
+            '最适合：隐私意识用户、敏感数据',
+            '成本：免费',
+            '哲学：您的数据、您的控制',
+          ],
+        },
+        gpt4all: {
+          title: 'GPT4All（轻量级）',
+          content: [
+            '最少资源占用量。 在旧计算机、规格有限的笔记本电脑上运行。 模型较小但仍然有效。',
+            '最适合：低资源机器、便携性',
+            '成本：免费',
+            '权衡：较小的模型=更简单的任务',
+          ],
+        },
+        whenToUse: {
+          title: '何时使用本地AI',
+        },
+        useLocal: {
+          title: '✅ 使用本地AI如果：',
+          items: [
+            '您正在处理机密的商业信息',
+            '您使用医疗、法律或受管制的数据',
+            '您想要零云供应商锁定',
+            '您需要离线工作',
+            '您的预算很紧张（初始设置后免费）',
+            '您正在优化提示词并想要即时反馈',
+            '您想要对数据的完全控制',
+          ],
+        },
+        useCloud: {
+          title: '❌ 使用云AI如果：',
+          items: [
+            '您需要尖端的模型质量（GPT-4o、Claude 3.5 Opus）',
+            '您没有技术设置技能',
+            '您想要最新的模型而不需要维护',
+            '您的提示词不敏感',
+            '您需要企业支持和保证',
+            '您愿意按API调用付费',
+          ],
+        },
+        hybrid: {
+          title: '混合方法（两者最好）',
+          content: [
+            '最聪明的团队同时使用两者：',
+            '本地AI用于草稿和优化：使用本地模型私密地开发提示词',
+            '云AI用于最终结果：一旦提示词完善，将其发送到ChatGPT或Claude以获得一流的响应',
+            '这样，您的提示词开发过程是私密的，但您在需要时仍可获得尖端结果。 两个世界的最佳。',
+          ],
+        },
+        realWorldExample: {
+          title: '真实世界的例子',
+          content: [
+            '场景：医疗保健顾问撰写有关患者结果的论文。',
+            '1. 起草论文大纲并组织患者案例研究（敏感数据）',
+            '2. 使用本地Mistral模型优化分析提示词',
+            '3. 一旦提示词良好，发送到Claude API（仅限匿名数据）',
+            '4. 从Claude获得高质量分析',
+            '5. 并入论文',
+            '结果：敏感数据永远不会离开顾问的机器。 提示词在本地优化。 最终分析利用了Claude的质量。 隐私 ✅ 质量 ✅',
+          ],
+        },
+        hardware: {
+          title: '本地AI的硬件要求',
+          content: '最小（预算）：8GB RAM、双核CPU、5GB磁盘空间、运行较小的模型（3-7B参数）',
+        },
+        future: {
+          title: '未来：隐私优先的AI',
+          content: [
+            '到2026年，趋势很明确：隐私优先的计算正成为主流。 GDPR罚款在增加。 数据泄露很昂贵。 法规在收紧。 公司正将敏感工作负载转移到本地、设备上的AI。',
+            '本地AI不再是利基。 它正成为任何涉及敏感数据的严肃AI工作的标准。',
+          ],
+        },
+        nextSteps: {
+          title: '接下来的步骤',
+          content: [
+            '如果您处理敏感数据或关心隐私：',
+            '1. 下载Ollama或LM Studio',
+            '2. 尝试一个小模型（Mistral 7B是一个很好的起点）',
+            '3. 在本地优化您的提示词',
+            '4. 当您需要最高质量时，将该已验证的提示词与云AI一起使用',
+            '想要一个使这变得更容易的工具？ PromptQuorum同时支持本地模型（Ollama、LM Studio、Jan AI、GPT4All）和云API。 一次写提示词，针对多个模型测试，比较结果。 所有这些都在保持敏感数据本地的同时。',
+          ],
+        },
+      },
+    },
+  },
+  comparison: {
+    en: {
+      category: 'AI Model Comparison',
+      title: 'ChatGPT vs Claude vs Gemini: Compare AI Models Side-by-Side in 2026',
+      intro: 'The complete guide to choosing the right AI model. Strengths, weaknesses, costs, and when to use each one.',
+      publishDate: 'Published March 14, 2026',
+      readTime: '12 min read',
+      sections: {
+        why: {
+          title: 'Why Compare AI Models?',
+          content: [
+            'Different AI models are good at different things. ChatGPT excels at creative writing. Claude is better at reasoning through complex problems. Gemini is stronger on multimodal tasks. Knowing which model fits your task means better results and lower costs.',
+            'This guide compares the three most popular AI models: ChatGPT (OpenAI), Claude (Anthropic), and Gemini (Google). We\'ll cover their strengths, pricing, and when to use each.',
+          ],
+        },
+        contenders: {
+          title: 'The Three Heavyweight Contenders',
+        },
+        chatgpt: {
+          title: '1. ChatGPT (OpenAI)',
+          content: 'The most popular AI model. You\'ve probably used it. Released in 2022, it revolutionized public access to AI. Now in its fourth generation (GPT-4o in 2026).',
+        },
+        chatgptStrengths: {
+          title: 'Strengths:',
+          items: [
+            'Versatility: Good at almost everything. Writing, coding, analysis, creative tasks.',
+            'Speed: Fast inference. Responses come quick.',
+            'Knowledge Cutoff: Web browsing mode keeps it current (2024+ info).',
+            'Ecosystem: Integration with thousands of apps and services.',
+            'Accessibility: Free tier available. Easy to get started.',
+          ],
+        },
+        chatgptWeaknesses: {
+          title: 'Weaknesses:',
+          items: [
+            'Reasoning: Can make logical leaps without showing work. Sometimes gets reasoning wrong.',
+            'Consistency: Can "hallucinate" or make up details when uncertain.',
+            'Cost: API costs can add up for high-volume use.',
+            'Context Window: Smaller than Claude (128K tokens vs 200K).',
+          ],
+        },
+        chatgptBest: {
+          title: 'Best For:',
+          content: 'General-purpose tasks, creative writing, brainstorming, quick answers, content generation, most everyday AI use.',
+        },
+        chatgptPricing: {
+          title: 'Pricing (2026):',
+          items: [
+            'Free tier: Limited usage, ideal for learning',
+            'ChatGPT Plus: $20/month for priority access, Advanced Voice Mode',
+            'API: $0.03 per 1K input tokens, $0.06 per 1K output tokens (GPT-4 Turbo)',
+            'Enterprise: Custom pricing for large deployments',
+          ],
+        },
+        claude: {
+          title: '2. Claude (Anthropic)',
+          content: 'The "thinking" AI. Created by Anthropic (founded by former OpenAI team). Known for thoughtful, nuanced responses. In 2026, Claude 3 family is the standard (Opus, Sonnet, Haiku).',
+        },
+        claudeStrengths: {
+          title: 'Strengths:',
+          items: [
+            'Reasoning: Excellent at step-by-step logical analysis. Shows its work.',
+            'Accuracy: Lower hallucination rate. More reliable when uncertain.',
+            'Context Window: Massive 200K token window (up to 500K for enterprise). Good for long documents.',
+            'Safety: Built with Constitutional AI. Transparent about limitations.',
+            'Analysis: Exceptional at analyzing documents, code, and complex text.',
+          ],
+        },
+        claudeWeaknesses: {
+          title: 'Weaknesses:',
+          items: [
+            'Creativity: More conservative. Less likely to generate "outside the box" ideas.',
+            'Speed: Slower than ChatGPT. Takes longer to respond.',
+            'Availability: No free tier. Need a subscription.',
+            'Integration: Fewer third-party integrations compared to ChatGPT.',
+          ],
+        },
+        claudeBest: {
+          title: 'Best For:',
+          content: 'Technical analysis, code review, logical reasoning, document analysis, research, complex problem-solving, situations where accuracy matters more than speed.',
+        },
+        claudePricing: {
+          title: 'Pricing (2026):',
+          items: [
+            'Claude.ai Free: Limited daily usage',
+            'Claude.ai Pro: $20/month for higher usage limits',
+            'API: $3/$15 per million tokens (Claude 3 Haiku), $8/$24 (Sonnet), $20/$60 (Opus)',
+            'Enterprise: Custom pricing with SLA',
+          ],
+        },
+        gemini: {
+          title: '3. Gemini (Google)',
+          content: 'Google\'s answer to ChatGPT. Launched in 2024, heavily integrated with Google services. Strong on multimodal tasks (images, video, documents). In 2026, Gemini 2.0 is the cutting edge.',
+        },
+        geminiStrengths: {
+          title: 'Strengths:',
+          items: [
+            'Multimodal: Excellent at image understanding, video analysis, document processing.',
+            'Google Integration: Direct access to Google Search, Maps, YouTube data.',
+            'Speed: Fast inference. Competitive with ChatGPT.',
+            'Cost: Competitive pricing, free tier available.',
+            'Real-time: Can access current web information for latest news/data.',
+          ],
+        },
+        geminiWeaknesses: {
+          title: 'Weaknesses:',
+          items: [
+            'Reasoning: Not as strong at step-by-step logical reasoning as Claude.',
+            'Consistency: Still working on reducing hallucinations.',
+            'Privacy: Google\'s data practices are more permissive (default data sharing).',
+            'Maturity: Newer to market. Smaller ecosystem of integrations.',
+          ],
+        },
+        geminiBest: {
+          title: 'Best For:',
+          content: 'Image analysis, multimodal understanding, tasks requiring Google integration, real-time information, fast responses, cost-conscious users.',
+        },
+        geminiPricing: {
+          title: 'Pricing (2026):',
+          items: [
+            'Gemini Free: Limited usage, ideal for exploration',
+            'Google One AI Premium: $20/month (includes Gemini Advanced, Google services)',
+            'API: $0.075 per 1M input tokens, $0.3 per 1M output tokens (Gemini 1.5)',
+            'Enterprise: Custom pricing with dedicated support',
+          ],
+        },
+        comparisonTable: {
+          title: 'Head-to-Head Comparison Table',
+          content: '',
+          rows: [
+            { Factor: 'Reasoning', ChatGPT: '⭐⭐⭐⭐', Claude: '⭐⭐⭐⭐⭐', Gemini: '⭐⭐⭐⭐' },
+            { Factor: 'Creativity', ChatGPT: '⭐⭐⭐⭐⭐', Claude: '⭐⭐⭐⭐', Gemini: '⭐⭐⭐⭐' },
+            { Factor: 'Accuracy', ChatGPT: '⭐⭐⭐⭐', Claude: '⭐⭐⭐⭐⭐', Gemini: '⭐⭐⭐⭐' },
+            { Factor: 'Speed', ChatGPT: '⭐⭐⭐⭐⭐', Claude: '⭐⭐⭐', Gemini: '⭐⭐⭐⭐⭐' },
+            { Factor: 'Image Understanding', ChatGPT: '⭐⭐⭐⭐', Claude: '⭐⭐⭐⭐', Gemini: '⭐⭐⭐⭐⭐' },
+            { Factor: 'Context Window', ChatGPT: '128K', Claude: '200K', Gemini: '1M' },
+            { Factor: 'Cost (API)', ChatGPT: '$$$', Claude: '$$', Gemini: '$$' },
+            { Factor: 'Free Tier', ChatGPT: '✅ Yes', Claude: '✅ Limited', Gemini: '✅ Yes' },
+            { Factor: 'Privacy', ChatGPT: '⭐⭐⭐', Claude: '⭐⭐⭐⭐⭐', Gemini: '⭐⭐' },
+          ],
+          columns: ['Factor', 'ChatGPT', 'Claude', 'Gemini'],
+        },
+        tasks: {
+          title: 'Task-by-Task Recommendations',
+        },
+        contentCreation: {
+          title: 'Content Creation',
+          content: 'Winner: ChatGPT - Most creative, fastest, best for brainstorming and generating copy. Use ChatGPT for blog posts, social media, marketing copy.',
+        },
+        codeReview: {
+          title: 'Code Review & Debugging',
+          content: 'Winner: Claude - Best at step-by-step explanation of code, finding bugs, security issues. Shows reasoning clearly.',
+        },
+        dataAnalysis: {
+          title: 'Data Analysis & Research',
+          content: 'Winner: Claude - Excellent accuracy, large context window for analyzing long documents, rigorous reasoning.',
+        },
+        imageAnalysis: {
+          title: 'Image Analysis',
+          content: 'Winner: Gemini - Best multimodal understanding. Describe an image, analyze charts, process visual documents. Gemini wins here.',
+        },
+        generalQA: {
+          title: 'General Q&A',
+          content: 'Winner: Gemini or ChatGPT - Both good. Gemini has real-time web access. ChatGPT has larger user base. Pick your preference.',
+        },
+        summarization: {
+          title: 'Document Summarization',
+          content: 'Winner: Claude - Huge context window (200K tokens). Can summarize entire research papers, books. Other models limit context.',
+        },
+        budgetConscious: {
+          title: 'Budget-Conscious Users',
+          content: 'Winner: Gemini or free tiers - Gemini\'s API is cheapest. Both ChatGPT and Gemini have free tiers. Claude requires paid subscription.',
+        },
+        strategy: {
+          title: 'The Smart Strategy: Use All Three',
+          content: [
+            'Professional AI users don\'t pick one model. They use all three:',
+            '1. Start with ChatGPT: Quick brainstorm and creative exploration',
+            '2. Refine with Claude: Deep analysis, checking reasoning, accuracy validation',
+            '3. Verify with Gemini: Get current information, multimodal understanding',
+            'This approach gives you speed (ChatGPT), accuracy (Claude), and currency (Gemini). Compare results. Pick the best answer. This is what PromptQuorum enables: test the same prompt across all models and see which gives the best result for your use case.',
+          ],
+        },
+        realWorldExample: {
+          title: 'Real-World Example: Marketing Campaign',
+          content: [
+            'Task: Create a marketing campaign for a new fitness app.',
+            '1. ChatGPT: Generate 10 creative taglines and ad copy variations',
+            '2. Claude: Analyze which taglines have the strongest persuasion framework',
+            '3. Gemini: Generate sample ad images based on top taglines',
+            '4. Compare: Pick the best combination',
+            'Result: You got creative options (ChatGPT), analytical depth (Claude), and visual assets (Gemini). Much better than using just one model.',
+          ],
+        },
+        future: {
+          title: 'The Future: Model Consolidation',
+          content: [
+            'By late 2026, expect:',
+            'All three models converge in quality (they\'re already very close)',
+            'Specialization emerges (some models better at specific tasks)',
+            'Pricing wars heat up (margins compress as competition increases)',
+            'Open-source models improve (local AI becomes more competitive)',
+            'Multi-model comparison becomes standard (like this article advocates)',
+          ],
+        },
+        nextSteps: {
+          title: 'Next Steps',
+          content: [
+            'Don\'t pick one model and stick with it. Try all three:',
+            '1. Use ChatGPT free tier for creative tasks',
+            '2. Try Claude for analytical work',
+            '3. Experiment with Gemini for images and web access',
+            '4. Compare their responses to the same prompt',
+            '5. Learn which model works best for your specific use case',
+            'Want to compare results from all three models side-by-side? PromptQuorum lets you send the same optimized prompt to ChatGPT, Claude, Gemini, and other services, then analyze which model gave the best answer for your task.',
+          ],
+        },
+      },
+    },
+    de: {
+      category: 'AI Model Comparison',
+      title: 'ChatGPT vs Claude vs Gemini: Vergleichen Sie AI-Modelle nebeneinander in 2026',
+      intro: 'Der vollständige Leitfaden zur Auswahl des richtigen KI-Modells. Stärken, Schwächen, Kosten und wann man jedes verwendet.',
+      publishDate: 'Veröffentlicht 14. März 2026',
+      readTime: '12 min Lesezeit',
+      sections: {},
+    },
+    fr: {
+      category: 'Comparaison des modèles IA',
+      title: 'ChatGPT vs Claude vs Gemini : Comparez les modèles d\'IA côte à côte en 2026',
+      intro: 'Le guide complet pour choisir le bon modèle d\'IA. Forces, faiblesses, coûts et quand utiliser chacun.',
+      publishDate: 'Publié le 14 mars 2026',
+      readTime: '12 min de lecture',
+      sections: {},
+    },
+    ja: {
+      category: 'AIモデル比較',
+      title: 'ChatGPT vs Claude vs Gemini：2026年にAIモデルを横並びで比較',
+      intro: '適切なAIモデルを選択するための完全なガイド。 長所、短所、コスト、それぞれをいつ使用するかを学びます。',
+      publishDate: '2026年3月14日公開',
+      readTime: '12分で読む',
+      sections: {},
+    },
+    zh: {
+      category: 'AI模型比较',
+      title: 'ChatGPT vs Claude vs Gemini：2026年并排比较AI模型',
+      intro: '选择正确AI模型的完整指南。 优点、缺点、成本以及何时使用每个模型。',
+      publishDate: '发布于2026年3月14日',
+      readTime: '12分钟阅读',
+      sections: {},
+    },
+  },
+}
+
