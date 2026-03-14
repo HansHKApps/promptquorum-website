@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import { ArrowLeft, ChevronDown } from 'lucide-react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { blogContent, Language } from './blogContent'
+import { Helmet } from 'react-helmet-async'
+import { blogContent } from './blogContent'
+import type { Language } from '../../translations'
+import { LanguageSwitcher } from '../../components/LanguageSwitcher'
 
 interface BlogPostProps {
   postId: 'frameworks' | 'localAI' | 'comparison' | 'quorum' | 'optimization'
@@ -10,22 +13,21 @@ interface BlogPostProps {
 }
 
 export function BlogPost({ postId, backUrl, langUrl }: BlogPostProps) {
-  const [searchParams] = useSearchParams()
-  const [expandedSection, setExpandedSection] = useState<string | null>(null)
+  const [searchParams, setSearchParams] = useSearchParams()
   const lang = (searchParams.get('lang') || 'en') as Language
 
-  const languages: { code: Language; name: string; flag: string }[] = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'ja', name: '日本語', flag: '🇯🇵' },
-    { code: 'zh', name: '中文', flag: '🇨🇳' },
-  ]
+  const handleLanguageChange = (newLang: Language) => {
+    setSearchParams({ lang: newLang })
+  }
 
   const post = blogContent[postId][lang]
   if (!post) {
     return <div>Blog post not found</div>
   }
+
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(
+    () => new Set(Object.keys(post.sections))
+  )
 
   const renderContent = (content: string | string[] | undefined) => {
     if (!content) return null
@@ -108,6 +110,55 @@ export function BlogPost({ postId, backUrl, langUrl }: BlogPostProps) {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>{`${post.title} | PromptQuorum`}</title>
+        <meta name="description" content={post.intro.slice(0, 160)} />
+        <link rel="canonical" href={`https://www.promptquorum.com/blog/${postId}`} />
+        <meta property="og:title" content={`${post.title} | PromptQuorum`} />
+        <meta property="og:description" content={post.intro.slice(0, 160)} />
+        <meta property="og:url" content={`https://www.promptquorum.com/blog/${postId}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://www.promptquorum.com/og-image.png" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content={`${post.title} | PromptQuorum`} />
+        <meta property="twitter:description" content={post.intro.slice(0, 160)} />
+        <meta property="twitter:image" content="https://www.promptquorum.com/og-image.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": post.intro,
+          "author": {
+            "@type": "Person",
+            "name": "Hans Kuepper"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "PromptQuorum",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.promptquorum.com/logo.svg"
+            }
+          },
+          "datePublished": post.publishDate,
+          "dateModified": post.publishDate,
+          "mainEntityOfPage": `https://www.promptquorum.com/blog/${postId}`,
+          "image": "https://www.promptquorum.com/og-image.png",
+          "articleSection": post.category,
+          "timeRequired": post.readTime,
+          "inLanguage": lang
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.promptquorum.com" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.promptquorum.com/#blog" },
+            { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://www.promptquorum.com/blog/${postId}` }
+          ]
+        })}</script>
+      </Helmet>
+
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -118,22 +169,7 @@ export function BlogPost({ postId, backUrl, langUrl }: BlogPostProps) {
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Home</span>
           </Link>
-          <div className="flex items-center gap-2">
-            {languages.map((l) => (
-              <Link
-                key={l.code}
-                to={langUrl(l.code)}
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg border transition-all ${
-                  lang === l.code
-                    ? 'border-primary bg-primary/5 text-primary font-semibold'
-                    : 'border-gray-200 text-text-secondary hover:border-primary/30'
-                }`}
-              >
-                <span>{l.flag}</span>
-                <span className="text-sm">{l.code.toUpperCase()}</span>
-              </Link>
-            ))}
-          </div>
+          <LanguageSwitcher currentLang={lang} onChange={handleLanguageChange} />
         </div>
       </header>
 
@@ -156,51 +192,45 @@ export function BlogPost({ postId, backUrl, langUrl }: BlogPostProps) {
             </div>
           </div>
 
-          {/* Content - Accordion Style */}
+          {/* Content - All sections expanded */}
           <div className="space-y-4">
             {Object.entries(post.sections).map(([key, section]) => {
-              const isExpanded = expandedSection === key
+              const isExpanded = expandedSections.has(key)
               return (
-                <button
-                  key={key}
-                  onClick={() => setExpandedSection(isExpanded ? null : key)}
-                  className={`w-full text-left px-4 sm:px-6 py-5 sm:py-6 rounded-xl border-2 transition-all ${
-                    isExpanded
-                      ? 'bg-primary/10 border-primary shadow-lg'
-                      : 'bg-white border-gray-200 hover:border-primary/50'
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-base sm:text-lg font-semibold text-text-primary">
-                      {section?.title || key}
-                    </h3>
-                    <ChevronDown
-                      className={`w-5 h-5 text-primary transition-transform flex-shrink-0 ${
-                        isExpanded ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </div>
-                </button>
+                <div key={key} className="border-2 rounded-xl overflow-hidden transition-all bg-white border-gray-200">
+                  <button
+                    onClick={() => {
+                      const newExpanded = new Set(expandedSections)
+                      if (newExpanded.has(key)) {
+                        newExpanded.delete(key)
+                      } else {
+                        newExpanded.add(key)
+                      }
+                      setExpandedSections(newExpanded)
+                    }}
+                    className="w-full text-left px-4 sm:px-6 py-5 sm:py-6 hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-base sm:text-lg font-semibold text-text-primary">
+                        {section?.title || key}
+                      </h3>
+                      <ChevronDown
+                        className={`w-5 h-5 text-primary transition-transform flex-shrink-0 ${
+                          isExpanded ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </div>
+                  </button>
+
+                  {isExpanded && (
+                    <div className="px-4 sm:px-6 py-5 sm:py-6 bg-gradient-to-br from-primary/5 to-primary/10 border-t-2 border-gray-200 prose prose-lg max-w-none text-text-primary">
+                      {renderSection(key, section)}
+                    </div>
+                  )}
+                </div>
               )
             })}
           </div>
-
-          {/* Expanded Content */}
-          {expandedSection && (
-            <div className="mt-6 bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-xl p-6 sm:p-8 animate-fade-in">
-              <div className="prose prose-lg max-w-none text-text-primary">
-                {renderSection(expandedSection, post.sections[expandedSection])}
-                <div className="mt-6 flex justify-center">
-                  <button
-                    onClick={() => setExpandedSection(null)}
-                    className="px-6 py-2 bg-white border border-gray-200 rounded-lg text-text-secondary hover:border-primary hover:text-primary transition-colors"
-                  >
-                    Close section
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
 
           {/* CTA */}
           <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-lg text-center">

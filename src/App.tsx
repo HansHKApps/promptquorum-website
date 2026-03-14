@@ -4,48 +4,7 @@ import './index.css'
 import logoSvg from './logo.svg'
 import { translations, Language, TranslationKey } from './translations'
 import { InteractivePipeline } from './components/InteractivePipeline'
-
-// Language switcher component
-function LanguageSwitcher({ currentLang, onChange }: { currentLang: Language, onChange: (lang: Language) => void }) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const languages: { code: Language; name: string; flag: string }[] = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'ja', name: '日本語', flag: '🇯🇵' },
-    { code: 'zh', name: '中文', flag: '🇨🇳' },
-  ]
-
-  const current = languages.find(l => l.code === currentLang) || languages[0]
-
-  return (
-    <div className="relative">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-primary/30 transition-colors text-sm"
-      >
-        <span>{current.flag}</span>
-        <span className="text-text-secondary">{current.code.toUpperCase()}</span>
-      </button>
-
-      {isOpen && (
-        <div className="absolute top-full mt-1 right-0 bg-white border border-gray-200 rounded-lg shadow-lg py-1 min-w-[140px] z-50">
-          {languages.map(lang => (
-            <button
-              key={lang.code}
-              onClick={() => { onChange(lang.code); setIsOpen(false) }}
-              className={`w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-2 ${currentLang === lang.code ? 'bg-primary/5 text-primary' : 'text-text-primary'}`}
-            >
-              <span>{lang.flag}</span>
-              <span>{lang.name}</span>
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  )
-}
+import { LanguageSwitcher } from './components/LanguageSwitcher'
 
 // Icons
 const Shield = () => (
@@ -94,10 +53,6 @@ const Discord = () => (
 
 const YouTube = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-)
-
-const Reddit = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.385 4.859-7.181 4.859-3.796 0-7.182-2.165-7.182-4.859a3.5 3.5 0 0 1 .476-1.465 1.754 1.754 0 0 0-2.31-2.369c-.168.075-.327.179-.485.328-.568-.54-1.04-1.266-1.384-2.151.007-.052.031-.12.031-.199 0-.965.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.191-.859 2.846-1.426 4.651-1.513l-.842-3.956c-.003-.022-.022-.033-.04-.033.282.004.543.271.543.556 0 .307-.248.556-.556.556-.308 0-.556-.249-.556-.556 0-.286.249-.52.556-.556l3.889-.823a1.75 1.75 0 1 1 1.754 1.754l-2.784.586a4.969 4.969 0 0 1 1.694 2.207 1.754 1.754 0 0 0 1.754-1.754c0-.968-.786-1.754-1.754-1.754-.248 0-.477.055-.704.15-.497-.304-.957-.549-1.378-.72l.015-.715c.014-.622.522-1.125 1.144-1.125z"/></svg>
 )
 
 const ChevronDown = () => (
@@ -273,9 +228,9 @@ function App() {
           </div>
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex items-center gap-6">
-              <a href="#features" className="text-text-secondary hover:text-primary transition-colors">{t('features')}</a>
-              <a href="#how-it-works" className="text-text-secondary hover:text-primary transition-colors">{t('howItWorks')}</a>
-              <a href="#faq" className="text-text-secondary hover:text-primary transition-colors">{t('faq')}</a>
+              <Link to="/features" className="text-text-secondary hover:text-primary transition-colors">{t('features')}</Link>
+              <Link to="/how-it-works" className="text-text-secondary hover:text-primary transition-colors">{t('howItWorks')}</Link>
+              <Link to="/faq" className="text-text-secondary hover:text-primary transition-colors">{t('faq')}</Link>
               <a href="#waitlist" className="text-text-secondary hover:text-primary transition-colors">{t('waitlist')}</a>
             </nav>
             <LanguageSwitcher currentLang={language} onChange={setLanguage} />
@@ -307,6 +262,21 @@ function App() {
           <p className="mt-8 text-text-muted text-sm animate-fade-in" style={{ animationDelay: '400ms' }}>
             {t('heroBuiltFor')}
           </p>
+
+          {/* YouTube Video */}
+          <div className="mt-16 animate-fade-in" style={{ animationDelay: '500ms' }}>
+            <div className="max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-200">
+              <div className="relative w-full pb-[56.25%]">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/R-bDPhT5EMo"
+                  title="PromptQuorum Demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -374,10 +344,10 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
-              Learn Prompt Engineering
+              {t('blogTitle')}
             </h2>
             <p className="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
-              Master the techniques and frameworks used by AI experts
+              {t('blogSubtitle')}
             </p>
           </div>
 
@@ -520,14 +490,16 @@ function App() {
               <a href="https://www.youtube.com/channel/UC5PL_1lU5pdV1d1EC1XeLhA" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
                 <YouTube />
               </a>
-              <a href="https://www.reddit.com/user/PromptQuorum" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
-                <Reddit />
-              </a>
             </div>
           </div>
 
-          <div className="mt-8 text-center text-text-muted text-sm">
-            {t('footerCopyright')}
+          <div className="mt-8 pt-8 border-t border-gray-200 text-center space-y-3 text-text-muted text-sm">
+            <div>{t('footerCopyright')}</div>
+            <div className="flex items-center justify-center gap-2">
+              <span>🌍 Available worldwide</span>
+              <span>•</span>
+              <span>English, Deutsch, Français, 日本語, 中文</span>
+            </div>
           </div>
         </div>
       </footer>

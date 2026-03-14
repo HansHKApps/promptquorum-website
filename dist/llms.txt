@@ -1,0 +1,25 @@
+# PromptQuorum
+
+> PromptQuorum is a privacy-first AI prompt optimizer and multi-AI comparator. It transforms rough ideas into precision prompts using 8+ frameworks (CO-STAR, CRAFT, RISEN, SPECS, APE, TRACE, TAG, RISEN), dispatches them to 25+ AI providers (ChatGPT, Claude, Gemini, local LLMs), and compares results side-by-side. Runs locally on macOS, Windows, and Linux with zero data tracking.
+
+PromptQuorum is a desktop application (Electron + React) with a 4-stage pipeline: Prompt, Optimize, Dispatch, Quorum. Users can bring their own API keys or use local models via LM Studio or Ollama. The app is free to use.
+
+## Core Pages
+
+- [Home](https://www.promptquorum.com): Main landing page with product overview, waitlist signup, and feature highlights
+- [Features](https://www.promptquorum.com/features): Detailed feature list including prompt optimization, multi-AI dispatch, Quorum comparison, privacy controls, local LLM support, and cross-platform availability
+- [How It Works](https://www.promptquorum.com/how-it-works): Interactive 4-stage pipeline walkthrough (Prompt, Optimize, Dispatch, Quorum)
+- [FAQ](https://www.promptquorum.com/faq): Frequently asked questions about pricing (free), privacy, supported AI providers, platforms, and usage limits
+- [Download](https://www.promptquorum.com/download): Download PromptQuorum for macOS, Windows, and Linux
+
+## Blog
+
+- [8 Prompt Frameworks Explained](https://www.promptquorum.com/blog/prompt-frameworks): Guide to CRAFT, CO-STAR, SPECS, and 5 other prompt engineering frameworks
+- [Local AI vs Cloud Tools](https://www.promptquorum.com/blog/local-ai-vs-cloud): Privacy-first prompt optimization and when to use local models
+- [ChatGPT vs Claude vs Gemini](https://www.promptquorum.com/blog/ai-model-comparison): Side-by-side AI model comparison
+- [Quorum: Multi-Model Analysis](https://www.promptquorum.com/blog/quorum): How multi-model comparison detects hallucinations and finds consensus
+- [Automatic Optimization Tools](https://www.promptquorum.com/blog/prompt-optimization): 8 refinement buttons, smart temperature detection, quality scoring, and teaching mode
+
+## Optional
+
+- [Sitemap](https://www.promptquorum.com/sitemap.xml): XML sitemap with all pages

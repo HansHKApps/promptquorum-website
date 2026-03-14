@@ -5,7 +5,13 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(npm install:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Read(//tmp/**)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -s http://localhost:5173/blog/quorum)",
+      "Read(//Users/hanskuepper/promptquorum-website/**)",
+      "Bash(npx playwright:*)",
+      "Bash(curl -s \"http://localhost:5173/?lang=ja\")"
     ]
   }
 }
