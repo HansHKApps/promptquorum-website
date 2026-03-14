@@ -503,7 +503,7 @@ function App() {
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
                 <Twitter />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/company/promptquorum" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
                 <Linkedin />
               </a>
               <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
