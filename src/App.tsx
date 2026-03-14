@@ -369,7 +369,7 @@ function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             {/* Blog Card 1 */}
             <Link to="/blog/prompt-frameworks" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
               <div className="p-6">
@@ -422,6 +422,25 @@ function App() {
                 </p>
                 <div className="flex items-center justify-between text-xs text-text-muted">
                   <span>12 min read</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Blog Card 4 */}
+            <Link to="/blog/quorum" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
+              <div className="p-6">
+                <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+                  AI Tools & Features
+                </span>
+                <h3 className="text-xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">
+                  Quorum: Multi-Model Analysis
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  Compare responses from 25+ AI models side-by-side to detect hallucinations and find consensus.
+                </p>
+                <div className="flex items-center justify-between text-xs text-text-muted">
+                  <span>11 min read</span>
                   <span>→</span>
                 </div>
               </div>

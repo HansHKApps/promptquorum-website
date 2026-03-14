@@ -3,7 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { blogContent, Language } from './blogContent'
 
 interface BlogPostProps {
-  postId: 'frameworks' | 'localAI' | 'comparison'
+  postId: 'frameworks' | 'localAI' | 'comparison' | 'quorum'
   backUrl: string
   langUrl: (lang: Language) => string
 }

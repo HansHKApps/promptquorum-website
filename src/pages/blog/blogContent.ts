@@ -2254,5 +2254,1457 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       sections: {},
     },
   },
+  quorum: {
+    en: {
+      category: 'AI Tools & Features',
+      title: 'Quorum: The AI Model Comparison Tool That Detects Hallucinations and Finds Consensus',
+      intro: 'Stop trusting a single AI model. Learn why comparing multiple models side-by-side reveals hidden biases, detects hallucinations, and gives you better answers.',
+      publishDate: 'Published March 14, 2026',
+      readTime: '11 min read',
+      sections: {
+        problem: {
+          title: 'The Single Model Problem',
+          content: [
+            'You ask ChatGPT a question. You get an answer. You trust it. But what if that answer is wrong?',
+            'Every AI model has blind spots. ChatGPT excels at creative writing but struggles with math. Claude is analytical but sometimes verbose. Gemini has web access but occasional hallucinations. When you rely on one model, you inherit all of its weaknesses.',
+            'The real danger: you don\'t know what you don\'t know. A hallucination is most convincing when you have no way to verify it.',
+          ],
+        },
+        whatIsQuorum: {
+          title: 'What is Quorum?',
+          content: 'Quorum is PromptQuorum\'s analysis engine that lets you compare responses from multiple AI models side-by-side. Instead of asking one model and accepting its answer, you dispatch the same prompt to ChatGPT, Claude, Gemini, and 25+ other models simultaneously. Then Quorum analyzes all their responses to find consensus, detect contradictions, and identify hallucinations.',
+        },
+        howItWorks: {
+          title: 'The Quorum Workflow',
+          items: [
+            'Dispatch: Send your prompt to multiple AI models at once',
+            'Collect: Receive responses from all selected models',
+            'Analyze: Use Quorum\'s analysis options to extract insights',
+            'Export: Download results in multiple formats (text, JSON, CSV, HTML, PDF)',
+          ],
+        },
+        whyMultipleModels: {
+          title: 'Why Multiple Models Matter',
+          content: [
+            'When all models agree on something, it\'s very likely true. When they disagree, something is suspicious.',
+            'Example: Ask 25 AI models "What year did World War 2 end?" Every single one says 1945. You can be confident this is correct.',
+            'Counter-example: Ask 25 models "Which programming language is best for machine learning?" You\'ll get 8 votes for Python, 5 for R, 4 for Julia, 3 for Scala, 2 for Java, and scattered votes for others. Consensus is weak. This tells you the question is subjective.',
+            'This is the power of Quorum: it transforms individual guesses into evidence.',
+          ],
+        },
+        analysisOptions: {
+          title: 'Quorum Analysis Options',
+          content: 'Quorum provides multiple ways to analyze the collected responses. Choose the analysis method that matches your goal:',
+        },
+        synthesis: {
+          title: '1. Synthesis (The Overview)',
+          content: [
+            'Combines all model responses into a single, coherent answer.',
+            'Use this when: You want the "best possible answer" synthesized from all models',
+            'Output: A unified response incorporating insights from all sources',
+            'Example: Ask about "best practices for software testing" and get a comprehensive answer that incorporates perspectives from all 25+ models',
+          ],
+        },
+        comparison: {
+          title: '2. Comparison (Side-by-Side)',
+          content: [
+            'Shows all model responses in parallel columns so you can read them directly.',
+            'Use this when: You want to see how models differ without any interpretation',
+            'Output: A comparison table showing each model\'s exact response',
+            'Example: Ask "Explain quantum computing" and see 25 different explanations ranging from beginner-friendly to highly technical',
+          ],
+        },
+        qualityScoring: {
+          title: '3. Quality Scoring',
+          content: [
+            'Rates each response on accuracy, clarity, completeness, and relevance.',
+            'Use this when: You need to rank which models gave the best answer',
+            'Output: A scored list showing which models performed best',
+            'Example: Get technical questions answered and see that Claude scored 9.2/10, ChatGPT 8.7/10, Gemini 8.1/10',
+          ],
+        },
+        recommendations: {
+          title: '4. Recommendations (Best Answer)',
+          content: [
+            'Identifies the single best response(s) based on multiple criteria.',
+            'Use this when: You need one answer, but you want AI-powered selection instead of guessing',
+            'Output: The top 1-3 responses marked as "recommended"',
+            'Example: Get product recommendations for "best budget laptop" and see which models gave the most helpful answer',
+          ],
+        },
+        contradictionDetection: {
+          title: '5. Contradiction Detection',
+          content: [
+            'Finds conflicting statements across models and flags them.',
+            'Use this when: You suspect hallucinations or want to identify controversial questions',
+            'Output: A list of contradictions with side-by-side comparisons',
+            'Example: Ask about "historical facts" or "medical symptoms" and get flagged when models disagree',
+          ],
+        },
+        confidenceLevels: {
+          title: '6. Confidence Analysis',
+          content: [
+            'Measures how strongly models agree or disagree.',
+            'Use this when: You need to know how certain the answer is',
+            'Output: A confidence score (high consensus = high confidence, wide disagreement = low confidence)',
+            'Example: Get a confidence score showing "95% of models agree this is true" vs "only 40% agree, this is disputed"',
+          ],
+        },
+        hallucinationDetection: {
+          title: '7. Hallucination Detection',
+          content: [
+            'Identifies responses that contradict fact or consensus.',
+            'Use this when: You\'re working with factual information and need to detect errors',
+            'Output: Flagged responses marked as potential hallucinations',
+            'Example: When models are asked about real companies, real people, or real events, Quorum flags responses that don\'t match consensus reality',
+          ],
+        },
+        ensembleMethods: {
+          title: '8. Ensemble Methods',
+          content: [
+            'Uses statistical techniques to combine model outputs optimally.',
+            'Use this when: You want the mathematically best combined answer',
+            'Output: A synthesized answer using weighted voting or averaging',
+            'Example: For factual questions, ensemble methods weight reliable models higher and create a super-answer',
+          ],
+        },
+        controversyFlags: {
+          title: '9. Controversy Detection',
+          content: [
+            'Identifies topics where models widely disagree.',
+            'Use this when: You need to know if a question is subjective or contested',
+            'Output: A controversy score indicating how much disagreement exists',
+            'Example: Ask about "best programming language" and get flagged as "high controversy" vs "what\'s the capital of France" marked as "consensus"',
+          ],
+        },
+        coherenceCheck: {
+          title: '10. Coherence Analysis',
+          content: [
+            'Checks if responses are internally consistent and logically sound.',
+            'Use this when: You care about the quality of reasoning, not just the answer',
+            'Output: A coherence score showing which responses are well-reasoned',
+            'Example: Compare logic quality in responses about "why should companies invest in AI?"',
+          ],
+        },
+        exportFormats: {
+          title: 'Export Formats',
+          content: 'After analysis, export your results in any format:',
+          items: [
+            'Text: Simple formatted text, easy to read and copy',
+            'Markdown: Formatted with headers and lists, great for blogs',
+            'JSON: Structured data for programmatic use',
+            'CSV: Spreadsheet-compatible, easy to process',
+            'HTML: Standalone web page with styling',
+            'PDF: Professional report format for sharing',
+          ],
+        },
+        realWorldExamples: {
+          title: 'Real-World Use Cases',
+        },
+        useCase1: {
+          title: 'Use Case 1: Fact-Checking',
+          content: [
+            'Scenario: You\'re researching historical facts for a presentation',
+            'Question: "When was the internet publicly released and who invented it?"',
+            'What Quorum does:',
+            '• All 25+ models agree on 1991 and Tim Berners-Lee with 98% consensus',
+            '• Hallucination detection: Clean (no conflicting answers)',
+            '• Confidence: Very high',
+            'Result: You can confidently cite this in your presentation',
+          ],
+        },
+        useCase2: {
+          title: 'Use Case 2: Technical Problem-Solving',
+          content: [
+            'Scenario: You\'re debugging a complex software issue',
+            'Question: "How do I fix a memory leak in this Python code?"',
+            'What Quorum does:',
+            '• Comparison view: See 10 different debugging approaches',
+            '• Quality scoring: Claude and Llama 2 score 9.1/10, ChatGPT 8.5/10',
+            '• Synthesis: Combines best practices from all approaches',
+            'Result: You get multiple solutions ranked by quality',
+          ],
+        },
+        useCase3: {
+          title: 'Use Case 3: Business Strategy',
+          content: [
+            'Scenario: You\'re deciding between cloud providers',
+            'Question: "Should we migrate to AWS, Azure, or GCP?"',
+            'What Quorum does:',
+            '• Controversy detection: Flags as "moderate disagreement" (3-way split)',
+            '• Synthesis: Combines strengths/weaknesses of each',
+            '• Export to PDF: Share recommendation with your team',
+            'Result: You have AI-powered analysis of trade-offs from multiple perspectives',
+          ],
+        },
+        useCase4: {
+          title: 'Use Case 4: Content Creation',
+          content: [
+            'Scenario: You\'re writing an article about "AI trends in 2026"',
+            'Question: "What are the top 5 AI trends businesses should watch?"',
+            'What Quorum does:',
+            '• Compare: See what each model prioritizes',
+            '• Synthesis: Combines all perspectives into one comprehensive list',
+            '• Export to Markdown: Paste directly into your article',
+            'Result: Your article reflects consensus view from 25+ AI models',
+          ],
+        },
+        useCase5: {
+          title: 'Use Case 5: Decision Making Under Uncertainty',
+          content: [
+            'Scenario: You need to make a decision but the answer is subjective',
+            'Question: "What\'s the best way to structure our startup team?"',
+            'What Quorum does:',
+            '• Contradiction detection: Shows where models disagree',
+            '• Confidence analysis: "Low consensus—this is subjective"',
+            '• Recommendations: Shows top 3 approaches ranked',
+            'Result: You understand the trade-offs and see all major perspectives',
+          ],
+        },
+        whyManualCopyPaste: {
+          title: 'Why Manual Copy-Paste? (The Legal Reason)',
+          content: [
+            'You might wonder: "Why can\'t Quorum just connect directly to ChatGPT, Claude, and Gemini APIs?"',
+            'The answer is complex but important. Most AI APIs have strict terms of service that prevent third parties from:',
+            '• Collecting responses from multiple providers and comparing them',
+            '• Using their API responses in competitive analysis tools',
+            '• Bulk-testing their models without special commercial agreements',
+            'OpenAI, Anthropic, and Google have different agreements with enterprise customers, but for standard API access, direct integration of Quorum-style analysis violates their terms.',
+            'That\'s why we use manual copy-paste: it respects each provider\'s terms of service while still giving you the analysis power you need. You own your data. You control what gets compared. You decide what gets analyzed.',
+          ],
+        },
+        whenToUseQuorum: {
+          title: 'When Should You Use Quorum?',
+        },
+        useQuorum: {
+          title: '✅ Use Quorum if:',
+          items: [
+            'You need factual information and want to detect hallucinations',
+            'You\'re facing a decision and want multiple AI perspectives',
+            'You\'re checking if a topic is controversial or consensus-based',
+            'You want the highest quality answer, not just the first answer',
+            'You\'re writing something important and need to verify facts',
+            'You want to understand how different models approach the same problem',
+            'You need to export analysis for a report or presentation',
+            'You\'re doing research and want to synthesize multiple viewpoints',
+          ],
+        },
+        skipQuorum: {
+          title: '⏭️ Skip Quorum if:',
+          items: [
+            'You\'re just chatting casually (one model is fine)',
+            'You\'re working with a task you know one model handles very well',
+            'You need instant answers (multiple models takes longer)',
+            'You only have access to one AI service',
+            'You\'re doing something that doesn\'t require verification',
+          ],
+        },
+        comparisonTable: {
+          title: 'Single Model vs Quorum: Quick Comparison',
+          content: '',
+          rows: [
+            { Factor: 'Speed', 'Single Model': '⚡ Instant', 'Quorum': '⏳ Seconds to minutes' },
+            { Factor: 'Hallucination Risk', 'Single Model': '🎯 Higher (no verification)', 'Quorum': '✅ Lower (consensus-based)' },
+            { Factor: 'Answer Quality', 'Single Model': '✔️ Good', 'Quorum': '✅ Better (multiple perspectives)' },
+            { Factor: 'Effort', 'Single Model': '✔️ Minimal', 'Quorum': '⏱️ Moderate (copy-paste)' },
+            { Factor: 'Cost', 'Single Model': '💰 Varies', 'Quorum': '💰 Same (you pay per model)' },
+            { Factor: 'Best For', 'Single Model': 'Quick answers', 'Quorum': 'Important decisions' },
+          ],
+          columns: ['Factor', 'Single Model', 'Quorum'],
+        },
+        tips: {
+          title: 'Pro Tips for Using Quorum',
+          items: [
+            'Tip 1: More models = better consensus. Try 10+ models, not just 3',
+            'Tip 2: Use contradiction detection first. It tells you if a question is safe to trust',
+            'Tip 3: Combine synthesis + recommendations. Get both the overview and the top answer',
+            'Tip 4: For factual questions, trust high-consensus answers (90%+)',
+            'Tip 5: For subjective questions, read the comparison view to see all perspectives',
+            'Tip 6: Export to PDF for team decisions. Show your working and let others verify',
+            'Tip 7: Use hallucination detection on medical, legal, or financial questions',
+          ],
+        },
+        conclusion: {
+          title: 'The Future of Reliable AI',
+          content: [
+            'We\'re moving into an era where blindly trusting a single AI model is becoming risky. Hallucinations are improving (fewer errors) but still happening. Bias is still present. No single model knows everything.',
+            'Quorum represents a shift in how we should think about AI: not as an oracle that gives you one answer, but as a tool for gathering multiple perspectives, detecting consensus, and identifying when something is suspicious.',
+            'In 2026, the best AI workflows don\'t use one model. They use many. They compare. They verify. They synthesize.',
+          ],
+        },
+        nextSteps: {
+          title: 'Next Steps',
+          content: [
+            '1. Pick a question you\'ve been uncertain about',
+            '2. Ask ChatGPT, Claude, and one more model (Gemini, Llama, etc.)',
+            '3. Copy their responses into PromptQuorum\'s Quorum tool',
+            '4. Run contradiction detection and synthesis',
+            '5. See how different the answers actually are',
+            'Once you experience Quorum, you\'ll never go back to trusting a single model for important questions.',
+          ],
+        },
+      },
+    },
+    de: {
+      category: 'AI-Tools & Features',
+      title: 'Quorum: Das KI-Modell-Vergleichstool, das Halluzinationen erkennt und Konsens findet',
+      intro: 'Vertrauen Sie nicht mehr nur einem KI-Modell. Erfahren Sie, warum das Vergleichen mehrerer Modelle nebeneinander versteckte Vorurteile offenbart, Halluzinationen erkennt und bessere Antworten liefert.',
+      publishDate: 'Veröffentlicht 14. März 2026',
+      readTime: '11 min Lesezeit',
+      sections: {
+        problem: {
+          title: 'Das Problem mit einem einzelnen Modell',
+          content: [
+            'Sie stellen ChatGPT eine Frage. Sie bekommen eine Antwort. Sie vertrauen ihr. Aber was ist, wenn diese Antwort falsch ist?',
+            'Jedes KI-Modell hat blinde Flecken. ChatGPT glänzt beim kreativen Schreiben, hat aber Schwächen bei Mathematik. Claude ist analytisch, aber manchmal zu ausführlich. Gemini hat Webzugriff, aber gelegentliche Halluzinationen. Wenn Sie sich auf ein Modell verlassen, erben Sie alle seine Schwächen.',
+            'Die wirkliche Gefahr: Sie wissen nicht, was Sie nicht wissen. Eine Halluzination ist am überzeugendsten, wenn Sie keine Möglichkeit haben, sie zu überprüfen.',
+          ],
+        },
+        whatIsQuorum: {
+          title: 'Was ist Quorum?',
+          content: 'Quorum ist das Analyse-Engine von PromptQuorum, mit dem Sie Antworten mehrerer KI-Modelle nebeneinander vergleichen können. Anstatt ein Modell zu fragen und seine Antwort zu akzeptieren, senden Sie den gleichen Prompt gleichzeitig an ChatGPT, Claude, Gemini und 25+ andere Modelle. Dann analysiert Quorum alle ihre Antworten, um Konsens zu finden, Widersprüche zu erkennen und Halluzinationen zu identifizieren.',
+        },
+        howItWorks: {
+          title: 'Der Quorum-Workflow',
+          items: [
+            'Verteilen: Senden Sie Ihren Prompt gleichzeitig an mehrere KI-Modelle',
+            'Sammeln: Empfangen Sie Antworten von allen ausgewählten Modellen',
+            'Analysieren: Nutzen Sie Quorums Analysemöglichkeiten, um Erkenntnisse zu gewinnen',
+            'Exportieren: Laden Sie Ergebnisse in mehreren Formaten herunter (Text, JSON, CSV, HTML, PDF)',
+          ],
+        },
+        whyMultipleModels: {
+          title: 'Warum mehrere Modelle wichtig sind',
+          content: [
+            'Wenn alle Modelle einer Aussage zustimmen, ist sie wahrscheinlich wahr. Wenn sie sich uneinig sind, stimmt etwas nicht.',
+            'Beispiel: Fragen Sie 25 KI-Modelle „In welchem Jahr endete der Zweite Weltkrieg?" Alle sagen 1945. Sie können sich sicher sein, dass dies richtig ist.',
+            'Gegenbeispiel: Fragen Sie 25 Modelle „Welche Programmiersprache ist am besten für Machine Learning?" Sie erhalten 8 Stimmen für Python, 5 für R, 4 für Julia, 3 für Scala, 2 für Java und verstreute Stimmen für andere. Konsens ist schwach. Dies zeigt Ihnen, dass die Frage subjektiv ist.',
+            'Dies ist die Kraft von Quorum: Es verwandelt einzelne Vermutungen in Beweise.',
+          ],
+        },
+        analysisOptions: {
+          title: 'Quorum-Analysemöglichkeiten',
+          content: 'Quorum bietet mehrere Möglichkeiten, die gesammelten Antworten zu analysieren. Wählen Sie die Analysemethode, die Ihrem Ziel entspricht:',
+        },
+        synthesis: {
+          title: '1. Synthese (Die Übersicht)',
+          content: [
+            'Kombiniert alle Modellantworten zu einer einzigen, kohärenten Antwort.',
+            'Verwenden Sie dies, wenn: Sie die „beste mögliche Antwort" aus allen Modellen haben möchten',
+            'Ausgabe: Eine einheitliche Antwort, die Erkenntnisse aus allen Quellen einbezieht',
+            'Beispiel: Fragen Sie nach „Best Practices für Software-Tests" und erhalten Sie eine umfassende Antwort, die Perspektiven von 25+ Modellen berücksichtigt',
+          ],
+        },
+        comparison: {
+          title: '2. Vergleich (Nebeneinander)',
+          content: [
+            'Zeigt alle Modellantworten in parallelen Spalten an, damit Sie sie direkt lesen können.',
+            'Verwenden Sie dies, wenn: Sie sehen möchten, wie sich Modelle unterscheiden, ohne Interpretation',
+            'Ausgabe: Eine Vergleichstabelle, die die genaue Antwort jedes Modells zeigt',
+            'Beispiel: Fragen Sie „Erkläre Quantencomputing" und sehen Sie 25 verschiedene Erklärungen von anfängerfreundlich bis hochgradig technisch',
+          ],
+        },
+        qualityScoring: {
+          title: '3. Qualitätsbewertung',
+          content: [
+            'Bewertet jede Antwort auf Genauigkeit, Klarheit, Vollständigkeit und Relevanz.',
+            'Verwenden Sie dies, wenn: Sie feststellen müssen, welche Modelle die beste Antwort gaben',
+            'Ausgabe: Eine bewertete Liste, die zeigt, welche Modelle am besten abschnitten',
+            'Beispiel: Lassen Sie technische Fragen beantworten und sehen Sie, dass Claude 9,2/10, ChatGPT 8,7/10, Gemini 8,1/10 erhielt',
+          ],
+        },
+        recommendations: {
+          title: '4. Empfehlungen (Beste Antwort)',
+          content: [
+            'Identifiziert die beste(n) Antwort(en) basierend auf mehreren Kriterien.',
+            'Verwenden Sie dies, wenn: Sie eine Antwort brauchen, aber statt zu raten lieber KI-gestützte Auswahl',
+            'Ausgabe: Die Top 1-3 Antworten als „empfohlen" gekennzeichnet',
+            'Beispiel: Erhalten Sie Produktempfehlungen für „bester Budget-Laptop" und sehen Sie, welche Modelle die hilfreichste Antwort gaben',
+          ],
+        },
+        contradictionDetection: {
+          title: '5. Widersprucherkennung',
+          content: [
+            'Findet widersprüchliche Aussagen zwischen Modellen und kennzeichnet sie.',
+            'Verwenden Sie dies, wenn: Sie Halluzinationen vermuten oder umstrittene Fragen identifizieren möchten',
+            'Ausgabe: Eine Liste von Widersprüchen mit nebeneinander Vergleichen',
+            'Beispiel: Fragen Sie nach „historischen Fakten" oder „medizinischen Symptomen" und werden gewarnt, wenn Modelle nicht einig sind',
+          ],
+        },
+        confidenceLevels: {
+          title: '6. Konfidenzanalyse',
+          content: [
+            'Misst, wie stark Modelle zustimmen oder nicht zustimmen.',
+            'Verwenden Sie dies, wenn: Sie wissen müssen, wie sicher die Antwort ist',
+            'Ausgabe: Ein Konfidenzwert (hoher Konsens = hohes Vertrauen, breites Uneinigkeit = geringes Vertrauen)',
+            'Beispiel: Erhalten Sie einen Konfidenzwert, der zeigt „95% der Modelle stimmen zu, dass dies wahr ist" vs „nur 40% stimmen zu, dies ist umstritten"',
+          ],
+        },
+        hallucinationDetection: {
+          title: '7. Halluzinationserkennung',
+          content: [
+            'Identifiziert Antworten, die Fakten oder Konsens widersprechen.',
+            'Verwenden Sie dies, wenn: Sie mit Faktenwissen arbeiten und Fehler erkennen möchten',
+            'Ausgabe: Antworten, die als potenzielle Halluzinationen gekennzeichnet sind',
+            'Beispiel: Wenn Modelle zu echten Unternehmen, echten Personen oder echten Ereignissen befragt werden, kennzeichnet Quorum Antworten, die nicht mit konsensbasierter Realität übereinstimmen',
+          ],
+        },
+        ensembleMethods: {
+          title: '8. Ensemble-Methoden',
+          content: [
+            'Nutzt statistische Techniken, um Modellergebnisse optimal zu kombinieren.',
+            'Verwenden Sie dies, wenn: Sie die mathematisch beste kombinierte Antwort möchten',
+            'Ausgabe: Eine synthetisierte Antwort mit gewichteter Abstimmung oder Durchschnittsbildung',
+            'Beispiel: Bei Fragen mit Fakten gewichten Ensemble-Methoden zuverlässige Modelle höher und erstellen eine Super-Antwort',
+          ],
+        },
+        controversyFlags: {
+          title: '9. Kontroverserkkennung',
+          content: [
+            'Identifiziert Themen, bei denen Modelle stark uneinig sind.',
+            'Verwenden Sie dies, wenn: Sie wissen müssen, ob eine Frage subjektiv oder umstritten ist',
+            'Ausgabe: Ein Kontroverwert, der anzeigt, wie viel Uneinigkeit besteht',
+            'Beispiel: Fragen Sie nach „bester Programmiersprache" und werden als „hohe Kontroverse" gekennzeichnet vs „was ist die Hauptstadt von Frankreich" markiert als „Konsens"',
+          ],
+        },
+        coherenceCheck: {
+          title: '10. Kohärenzanalyse',
+          content: [
+            'Prüft, ob Antworten innerlich konsistent und logisch sind.',
+            'Verwenden Sie dies, wenn: Ihnen die Qualität der Argumentation wichtig ist, nicht nur die Antwort',
+            'Ausgabe: Ein Kohärenzwert, der zeigt, welche Antworten gut durchdacht sind',
+            'Beispiel: Vergleichen Sie die Logikqualität in Antworten zu „warum sollten Unternehmen in KI investieren?"',
+          ],
+        },
+        exportFormats: {
+          title: 'Exportformate',
+          content: 'Nach der Analyse exportieren Sie Ihre Ergebnisse in jedem beliebigen Format:',
+          items: [
+            'Text: Einfach formatierter Text, leicht zu lesen und zu kopieren',
+            'Markdown: Mit Kopfzeilen und Listen formatiert, großartig für Blogs',
+            'JSON: Strukturierte Daten für programmgesteuerte Nutzung',
+            'CSV: Tabellenkalkulation-kompatibel, leicht zu verarbeiten',
+            'HTML: Eigenständige Webseite mit Styling',
+            'PDF: Professionelles Berichtsformat zum Teilen',
+          ],
+        },
+        realWorldExamples: {
+          title: 'Praktische Anwendungsfälle',
+        },
+        useCase1: {
+          title: 'Anwendungsfall 1: Faktenchecks',
+          content: [
+            'Szenario: Sie recherchieren historische Fakten für eine Präsentation',
+            'Frage: „Wann wurde das Internet öffentlich veröffentlicht und wer hat es erfunden?"',
+            'Was Quorum tut:',
+            '• Alle 25+ Modelle stimmen mit 98% Konsens 1991 und Tim Berners-Lee zu',
+            '• Halluzinationserkennung: Sauber (keine widersprüchlichen Antworten)',
+            '• Konfidenz: Sehr hoch',
+            'Ergebnis: Sie können dies zuversichtlich in Ihrer Präsentation zitieren',
+          ],
+        },
+        useCase2: {
+          title: 'Anwendungsfall 2: Technische Problemlösung',
+          content: [
+            'Szenario: Sie debuggen ein komplexes Software-Problem',
+            'Frage: „Wie behebe ich ein Speicherleck in diesem Python-Code?"',
+            'Was Quorum tut:',
+            '• Vergleichsansicht: Sehen Sie 10 verschiedene Debugging-Ansätze',
+            '• Qualitätsbewertung: Claude und Llama 2 erhalten 9,1/10, ChatGPT 8,5/10',
+            '• Synthese: Kombiniert Best Practices aus allen Ansätzen',
+            'Ergebnis: Sie erhalten mehrere nach Qualität eingestufte Lösungen',
+          ],
+        },
+        useCase3: {
+          title: 'Anwendungsfall 3: Geschäftsstrategie',
+          content: [
+            'Szenario: Sie entscheiden sich zwischen Cloud-Providern',
+            'Frage: „Sollten wir zu AWS, Azure oder GCP migrieren?"',
+            'Was Quorum tut:',
+            '• Kontroverserkkennung: Kennzeichnet als „moderate Uneinigkeit" (3-Wege-Split)',
+            '• Synthese: Kombiniert Stärken/Schwächen jedes Providers',
+            '• In PDF exportieren: Empfehlung mit Ihrem Team teilen',
+            'Ergebnis: Sie haben KI-gestützte Analyse von Trade-offs aus mehreren Perspektiven',
+          ],
+        },
+        useCase4: {
+          title: 'Anwendungsfall 4: Content-Erstellung',
+          content: [
+            'Szenario: Sie schreiben einen Artikel über „KI-Trends in 2026"',
+            'Frage: „Welche sind die 5 wichtigsten KI-Trends, auf die Unternehmen achten sollten?"',
+            'Was Quorum tut:',
+            '• Vergleichen: Sehen Sie, was jedes Modell priorisiert',
+            '• Synthese: Kombiniert alle Perspektiven zu einer umfassenden Liste',
+            '• In Markdown exportieren: Direkt in Ihren Artikel einfügen',
+            'Ergebnis: Ihr Artikel spiegelt Konsensansicht von 25+ KI-Modellen wider',
+          ],
+        },
+        useCase5: {
+          title: 'Anwendungsfall 5: Entscheidungsfindung unter Unsicherheit',
+          content: [
+            'Szenario: Sie müssen eine Entscheidung treffen, aber die Antwort ist subjektiv',
+            'Frage: „Wie strukturiere ich unser Startup-Team am besten?"',
+            'Was Quorum tut:',
+            '• Widersprucherkennung: Zeigt, wo Modelle nicht einig sind',
+            '• Konfidenzanalyse: „Niedriger Konsens—dies ist subjektiv"',
+            '• Empfehlungen: Zeigt Top 3 Ansätze eingestuft',
+            'Ergebnis: Sie verstehen die Trade-offs und sehen alle Hauptperspektiven',
+          ],
+        },
+        whyManualCopyPaste: {
+          title: 'Warum manuelle Copy-Paste? (Der rechtliche Grund)',
+          content: [
+            'Sie könnten sich fragen: „Warum kann Quorum nicht einfach direkt mit ChatGPT-, Claude- und Gemini-APIs verbunden werden?"',
+            'Die Antwort ist komplex, aber wichtig. Die meisten KI-APIs haben strenge Nutzungsbedingungen, die Dritten verbieten:',
+            '• Antworten mehrerer Provider zu sammeln und zu vergleichen',
+            '• Ihre API-Antworten in Wettbewerbs-Analyse-Tools zu verwenden',
+            '• Ihre Modelle ohne spezielle kommerzielle Vereinbarungen Massentests zu unterziehen',
+            'OpenAI, Anthropic und Google haben unterschiedliche Vereinbarungen mit Unternehmenskunden, aber für standardmäßigen API-Zugriff verstößt direkte Integration von Quorum-ähnlicher Analyse gegen deren Bedingungen.',
+            'Deshalb verwenden wir manuelle Copy-Paste: Sie respektiert die Nutzungsbedingungen jedes Providers, während Sie Ihnen die Analysekraft geben, die Sie benötigen. Sie besitzen Ihre Daten. Sie kontrollieren, was verglichen wird. Sie entscheiden, was analysiert wird.',
+          ],
+        },
+        whenToUseQuorum: {
+          title: 'Wann sollten Sie Quorum verwenden?',
+        },
+        useQuorum: {
+          title: '✅ Verwenden Sie Quorum, wenn:',
+          items: [
+            'Sie benötigen Faktenwissen und möchten Halluzinationen erkennen',
+            'Sie vor einer Entscheidung stehen und mehrere KI-Perspektiven möchten',
+            'Sie überprüfen möchten, ob ein Thema umstritten oder konsensusorientiert ist',
+            'Sie die höchste Qualität einer Antwort möchten, nicht nur die erste Antwort',
+            'Sie etwas Wichtiges schreiben und müssen Fakten überprüfen',
+            'Sie verstehen möchten, wie verschiedene Modelle dasselbe Problem angehen',
+            'Sie Analysen für einen Bericht oder eine Präsentation exportieren müssen',
+            'Sie Forschung betreiben und mehrere Sichtweisen synthetisieren möchten',
+          ],
+        },
+        skipQuorum: {
+          title: '⏭️ Überspringen Sie Quorum, wenn:',
+          items: [
+            'Sie nur zwanglos chatten (ein Modell reicht aus)',
+            'Sie mit einer Aufgabe arbeiten, von der Sie wissen, dass ein Modell sie sehr gut bewältigt',
+            'Sie sofortige Antworten benötigen (mehrere Modelle dauern länger)',
+            'Sie nur Zugriff auf einen KI-Dienst haben',
+            'Sie etwas tun, das keine Überprüfung erfordert',
+          ],
+        },
+        comparisonTable: {
+          title: 'Einzelnes Modell vs. Quorum: Schnellvergleich',
+          content: '',
+          rows: [
+            { Factor: 'Geschwindigkeit', 'Single Model': '⚡ Sofort', 'Quorum': '⏳ Sekunden bis Minuten' },
+            { Factor: 'Halluzinationsrisiko', 'Single Model': '🎯 Höher (keine Überprüfung)', 'Quorum': '✅ Niedriger (konsensbasiert)' },
+            { Factor: 'Antwortqualität', 'Single Model': '✔️ Gut', 'Quorum': '✅ Besser (mehrere Perspektiven)' },
+            { Factor: 'Aufwand', 'Single Model': '✔️ Minimal', 'Quorum': '⏱️ Moderat (Copy-Paste)' },
+            { Factor: 'Kosten', 'Single Model': '💰 Variiert', 'Quorum': '💰 Gleich (Sie zahlen pro Modell)' },
+            { Factor: 'Best geeignet für', 'Single Model': 'Schnelle Antworten', 'Quorum': 'Wichtige Entscheidungen' },
+          ],
+          columns: ['Factor', 'Single Model', 'Quorum'],
+        },
+        tips: {
+          title: 'Pro-Tipps für die Verwendung von Quorum',
+          items: [
+            'Tipp 1: Mehr Modelle = besserer Konsens. Versuchen Sie 10+ Modelle, nicht nur 3',
+            'Tipp 2: Verwenden Sie zuerst Widersprucherkennung. Es zeigt Ihnen, ob eine Frage sicher zu vertrauen ist',
+            'Tipp 3: Kombinieren Sie Synthese + Empfehlungen. Erhalten Sie sowohl die Übersicht als auch die Top-Antwort',
+            'Tipp 4: Bei Fragen mit Fakten vertrauen Sie auf hoch-konsensbasierte Antworten (90%+)',
+            'Tipp 5: Bei subjektiven Fragen lesen Sie die Vergleichsansicht, um alle Perspektiven zu sehen',
+            'Tipp 6: In PDF exportieren für Teamteam-Entscheidungen. Zeigen Sie Ihre Arbeit und lassen Sie andere überprüfen',
+            'Tipp 7: Verwenden Sie Halluzinationserkennung bei medizinischen, rechtlichen oder finanziellen Fragen',
+          ],
+        },
+        conclusion: {
+          title: 'Die Zukunft verlässlicher KI',
+          content: [
+            'Wir gehen in eine Ära über, in der blindes Vertrauen in ein einzelnes KI-Modell riskant wird. Halluzinationen verbessern sich (weniger Fehler), passieren aber immer noch. Bias ist immer noch vorhanden. Kein einzelnes Modell weiß alles.',
+            'Quorum stellt eine Verschiebung dar, wie wir über KI nachdenken sollten: nicht als ein Orakel, das Ihnen eine Antwort gibt, sondern als ein Werkzeug zum Sammeln mehrerer Perspektiven, zum Erkennen von Konsens und zum Identifizieren, wenn etwas verdächtig ist.',
+            'Im Jahr 2026 verwenden die besten KI-Workflows nicht ein Modell. Sie verwenden viele. Sie vergleichen. Sie überprüfen. Sie synthetisieren.',
+          ],
+        },
+        nextSteps: {
+          title: 'Nächste Schritte',
+          content: [
+            '1. Wählen Sie eine Frage, bei der Sie unsicher waren',
+            '2. Fragen Sie ChatGPT, Claude und ein weiteres Modell (Gemini, Llama usw.)',
+            '3. Kopieren Sie ihre Antworten in das Quorum-Tool von PromptQuorum',
+            '4. Führen Sie Widersprucherkennung und Synthese aus',
+            '5. Sehen Sie, wie unterschiedlich die Antworten tatsächlich sind',
+            'Sobald Sie Quorum erleben, werden Sie nie wieder nur einem Modell für wichtige Fragen vertrauen.',
+          ],
+        },
+      },
+    },
+    fr: {
+      category: 'Outils et fonctionnalités IA',
+      title: 'Quorum : L\'outil de comparaison de modèles IA qui détecte les hallucinations et trouve un consensus',
+      intro: 'Arrêtez de faire confiance à un seul modèle IA. Découvrez pourquoi comparer plusieurs modèles côte à côte révèle les biais cachés, détecte les hallucinations et vous donne de meilleures réponses.',
+      publishDate: 'Publié le 14 mars 2026',
+      readTime: '11 min de lecture',
+      sections: {
+        problem: {
+          title: 'Le problème du modèle unique',
+          content: [
+            'Vous posez une question à ChatGPT. Vous obtenez une réponse. Vous lui faites confiance. Mais si cette réponse est fausse?',
+            'Chaque modèle IA a des points faibles. ChatGPT excelle en écriture créative mais a des difficultés en mathématiques. Claude est analytique mais parfois verbeux. Gemini a accès au web mais des hallucinations occasionnelles. Quand vous dépendez d\'un seul modèle, vous héritez de toutes ses faiblesses.',
+            'Le vrai danger: vous ne savez pas ce que vous ne savez pas. Une hallucination est plus convaincante quand vous n\'avez aucun moyen de la vérifier.',
+          ],
+        },
+        whatIsQuorum: {
+          title: 'Qu\'est-ce que Quorum?',
+          content: 'Quorum est le moteur d\'analyse de PromptQuorum qui vous permet de comparer les réponses de plusieurs modèles IA côte à côte. Au lieu de poser une question à un modèle et d\'accepter sa réponse, vous envoyez le même prompt à ChatGPT, Claude, Gemini et 25+ autres modèles simultanément. Ensuite, Quorum analyse toutes leurs réponses pour trouver un consensus, détecter les contradictions et identifier les hallucinations.',
+        },
+        howItWorks: {
+          title: 'Le flux de travail Quorum',
+          items: [
+            'Dispatcher: Envoyez votre prompt à plusieurs modèles IA à la fois',
+            'Collecter: Recevez les réponses de tous les modèles sélectionnés',
+            'Analyser: Utilisez les options d\'analyse de Quorum pour extraire des informations',
+            'Exporter: Téléchargez les résultats dans plusieurs formats (texte, JSON, CSV, HTML, PDF)',
+          ],
+        },
+        whyMultipleModels: {
+          title: 'Pourquoi plusieurs modèles importent',
+          content: [
+            'Quand tous les modèles s\'accordent sur quelque chose, c\'est probablement vrai. Quand ils sont en désaccord, quelque chose est louche.',
+            'Exemple: Posez à 25 modèles IA \"En quelle année la Seconde Guerre mondiale s\'est-elle terminée?\" Tous répondent 1945. Vous pouvez être sûr que c\'est correct.',
+            'Contre-exemple: Posez à 25 modèles \"Quel langage de programmation est le meilleur pour l\'apprentissage automatique?\" Vous obtiendrez 8 votes pour Python, 5 pour R, 4 pour Julia, 3 pour Scala, 2 pour Java, et des votes épars pour d\'autres. Le consensus est faible. Cela vous dit que la question est subjective.',
+            'C\'est la puissance de Quorum: elle transforme les hypothèses individuelles en preuves.',
+          ],
+        },
+        analysisOptions: {
+          title: 'Options d\'analyse Quorum',
+          content: 'Quorum offre plusieurs façons d\'analyser les réponses collectées. Choisissez la méthode d\'analyse qui correspond à votre objectif:',
+        },
+        synthesis: {
+          title: '1. Synthèse (l\'aperçu)',
+          content: [
+            'Combine toutes les réponses des modèles en une seule réponse cohérente.',
+            'Utilisez ceci quand: Vous voulez la \"meilleure réponse possible\" synthétisée à partir de tous les modèles',
+            'Résultat: Une réponse unifiée incorporant les informations de toutes les sources',
+            'Exemple: Posez une question sur les \"meilleures pratiques de test logiciel\" et obtenez une réponse complète qui intègre les perspectives de 25+ modèles',
+          ],
+        },
+        comparison: {
+          title: '2. Comparaison (côte à côte)',
+          content: [
+            'Affiche toutes les réponses des modèles dans des colonnes parallèles pour que vous puissiez les lire directement.',
+            'Utilisez ceci quand: Vous voulez voir comment les modèles différent sans aucune interprétation',
+            'Résultat: Un tableau de comparaison montrant la réponse exacte de chaque modèle',
+            'Exemple: Posez \"Expliquez l\'informatique quantique\" et voyez 25 explications différentes, du débutant au très technique',
+          ],
+        },
+        qualityScoring: {
+          title: '3. Notation de la qualité',
+          content: [
+            'Évalue chaque réponse sur la précision, la clarté, l\'exhaustivité et la pertinence.',
+            'Utilisez ceci quand: Vous devez classer quel modèle a donné la meilleure réponse',
+            'Résultat: Une liste notée montrant quels modèles ont performé le mieux',
+            'Exemple: Obtenez des réponses à des questions techniques et voyez que Claude a obtenu 9,2/10, ChatGPT 8,7/10, Gemini 8,1/10',
+          ],
+        },
+        recommendations: {
+          title: '4. Recommandations (meilleure réponse)',
+          content: [
+            'Identifie la ou les meilleures réponses en fonction de plusieurs critères.',
+            'Utilisez ceci quand: Vous avez besoin d\'une réponse, mais vous préférez une sélection basée sur l\'IA plutôt que de deviner',
+            'Résultat: Les 1-3 meilleures réponses marquées comme \"recommandées\"',
+            'Exemple: Obtenez des recommandations de produits pour \"meilleur ordinateur portable pas cher\" et voyez quel modèle a donné la réponse la plus utile',
+          ],
+        },
+        contradictionDetection: {
+          title: '5. Détection de contradictions',
+          content: [
+            'Trouve les affirmations contradictoires entre modèles et les signale.',
+            'Utilisez ceci quand: Vous soupçonnez des hallucinations ou voulez identifier des questions controversées',
+            'Résultat: Une liste de contradictions avec des comparaisons côte à côte',
+            'Exemple: Posez des questions sur les \"faits historiques\" ou les \"symptômes médicaux\" et soyez averti quand les modèles sont en désaccord',
+          ],
+        },
+        confidenceLevels: {
+          title: '6. Analyse de confiance',
+          content: [
+            'Mesure avec quelle force les modèles s\'accordent ou sont en désaccord.',
+            'Utilisez ceci quand: Vous devez savoir à quel point la réponse est certaine',
+            'Résultat: Un score de confiance (consensus élevé = confiance élevée, désaccord large = confiance faible)',
+            'Exemple: Obtenez un score de confiance montrant \"95% des modèles s\'accordent sur cela\" vs \"seulement 40% s\'accordent, c\'est contesté\"',
+          ],
+        },
+        hallucinationDetection: {
+          title: '7. Détection d\'hallucinations',
+          content: [
+            'Identifie les réponses qui contredisent les faits ou le consensus.',
+            'Utilisez ceci quand: Vous travaillez avec des informations factuelles et avez besoin de détecter les erreurs',
+            'Résultat: Les réponses signalées comme hallucinations potentielles',
+            'Exemple: Quand les modèles répondent sur de vraies entreprises, de vraies personnes ou de vrais événements, Quorum signale les réponses qui ne correspondent pas à la réalité consensuelle',
+          ],
+        },
+        ensembleMethods: {
+          title: '8. Méthodes d\'ensemble',
+          content: [
+            'Utilise des techniques statistiques pour combiner les résultats des modèles de manière optimale.',
+            'Utilisez ceci quand: Vous voulez la meilleure réponse combinée sur le plan mathématique',
+            'Résultat: Une réponse synthétisée utilisant le vote pondéré ou la moyenne',
+            'Exemple: Pour les questions factuelles, les méthodes d\'ensemble pondèrent les modèles fiables plus haut et créent une super-réponse',
+          ],
+        },
+        controversyFlags: {
+          title: '9. Détection de controverse',
+          content: [
+            'Identifie les sujets sur lesquels les modèles sont largement en désaccord.',
+            'Utilisez ceci quand: Vous devez savoir si une question est subjective ou contestée',
+            'Résultat: Un score de controverse indiquant le degré de désaccord',
+            'Exemple: Posez \"meilleur langage de programmation\" et vous verrez \"haute controverse\" vs \"quelle est la capitale de la France\" marqué comme \"consensus\"',
+          ],
+        },
+        coherenceCheck: {
+          title: '10. Analyse de cohérence',
+          content: [
+            'Vérifie si les réponses sont cohérentes et logiquement correctes.',
+            'Utilisez ceci quand: Vous accordez de l\'importance à la qualité du raisonnement, pas seulement à la réponse',
+            'Résultat: Un score de cohérence montrant quelles réponses sont bien argumentées',
+            'Exemple: Comparez la qualité de la logique dans les réponses sur \"pourquoi les entreprises devraient-elles investir en IA?\"',
+          ],
+        },
+        exportFormats: {
+          title: 'Formats d\'export',
+          content: 'Après l\'analyse, exportez vos résultats dans n\'importe quel format:',
+          items: [
+            'Texte: Texte formaté simple, facile à lire et copier',
+            'Markdown: Formaté avec en-têtes et listes, idéal pour les blogs',
+            'JSON: Données structurées pour une utilisation programmatique',
+            'CSV: Compatible avec les feuilles de calcul, facile à traiter',
+            'HTML: Page web autonome avec style',
+            'PDF: Format de rapport professionnel pour partager',
+          ],
+        },
+        realWorldExamples: {
+          title: 'Cas d\'usage dans le monde réel',
+        },
+        useCase1: {
+          title: 'Cas d\'usage 1: Vérification des faits',
+          content: [
+            'Scénario: Vous recherchez des faits historiques pour une présentation',
+            'Question: \"Quand Internet a-t-il été publié et qui l\'a inventé?\"',
+            'Ce que Quorum fait:',
+            '• Les 25+ modèles s\'accordent sur 1991 et Tim Berners-Lee avec 98% de consensus',
+            '• Détection d\'hallucinations: Propre (pas de réponses conflictuelles)',
+            '• Confiance: Très élevée',
+            'Résultat: Vous pouvez citer cela avec confiance dans votre présentation',
+          ],
+        },
+        useCase2: {
+          title: 'Cas d\'usage 2: Résolution technique de problèmes',
+          content: [
+            'Scénario: Vous déboguez un problème logiciel complexe',
+            'Question: \"Comment corriger une fuite mémoire dans ce code Python?\"',
+            'Ce que Quorum fait:',
+            '• Vue de comparaison: Voyez 10 approches de débogage différentes',
+            '• Notation de la qualité: Claude et Llama 2 obtiennent 9,1/10, ChatGPT 8,5/10',
+            '• Synthèse: Combine les meilleures pratiques de toutes les approches',
+            'Résultat: Vous obtenez plusieurs solutions classées par qualité',
+          ],
+        },
+        useCase3: {
+          title: 'Cas d\'usage 3: Stratégie commerciale',
+          content: [
+            'Scénario: Vous décidez entre les fournisseurs cloud',
+            'Question: \"Devons-nous migrer vers AWS, Azure ou GCP?\"',
+            'Ce que Quorum fait:',
+            '• Détection de controverse: Signalé comme \"désaccord modéré\" (division en 3 voies)',
+            '• Synthèse: Combine les forces/faiblesses de chacun',
+            '• Exporter en PDF: Partagez la recommandation avec votre équipe',
+            'Résultat: Vous avez une analyse basée sur l\'IA des compromis de plusieurs perspectives',
+          ],
+        },
+        useCase4: {
+          title: 'Cas d\'usage 4: Création de contenu',
+          content: [
+            'Scénario: Vous écrivez un article sur \"les tendances IA en 2026\"',
+            'Question: \"Quels sont les 5 principales tendances IA que les entreprises devraient surveiller?\"',
+            'Ce que Quorum fait:',
+            '• Comparer: Voyez ce que chaque modèle priorise',
+            '• Synthèse: Combine toutes les perspectives en une liste complète',
+            '• Exporter en Markdown: Collez directement dans votre article',
+            'Résultat: Votre article reflète le point de vue consensuel de 25+ modèles IA',
+          ],
+        },
+        useCase5: {
+          title: 'Cas d\'usage 5: Prise de décision sous incertitude',
+          content: [
+            'Scénario: Vous devez prendre une décision mais la réponse est subjective',
+            'Question: \"Quelle est la meilleure façon de structurer notre équipe de démarrage?\"',
+            'Ce que Quorum fait:',
+            '• Détection de contradictions: Montre où les modèles sont en désaccord',
+            '• Analyse de confiance: \"Consensus faible—c\'est subjectif\"',
+            '• Recommandations: Affiche les 3 meilleures approches classées',
+            'Résultat: Vous comprenez les compromis et voyez toutes les perspectives majeures',
+          ],
+        },
+        whyManualCopyPaste: {
+          title: 'Pourquoi le copier-coller manuel? (La raison juridique)',
+          content: [
+            'Vous pourriez vous demander: \"Pourquoi Quorum ne peut-il pas se connecter directement aux API ChatGPT, Claude et Gemini?\"',
+            'La réponse est complexe mais importante. La plupart des API IA ont des conditions d\'utilisation strictes qui empêchent les tiers de:',
+            '• Collecter les réponses de plusieurs fournisseurs et les comparer',
+            '• Utiliser les réponses de leur API dans des outils d\'analyse concurrentielle',
+            '• Tester leurs modèles en masse sans accords commerciaux spéciaux',
+            'OpenAI, Anthropic et Google ont des accords différents avec les clients d\'entreprise, mais pour l\'accès standard aux API, l\'intégration directe d\'une analyse de style Quorum viole leurs conditions.',
+            'C\'est pourquoi nous utilisons le copier-coller manuel: cela respecte les conditions d\'utilisation de chaque fournisseur tout en vous donnant la puissance d\'analyse dont vous avez besoin. Vous possédez vos données. Vous contrôlez ce qui est comparé. Vous décidez ce qui est analysé.',
+          ],
+        },
+        whenToUseQuorum: {
+          title: 'Quand devriez-vous utiliser Quorum?',
+        },
+        useQuorum: {
+          title: '✅ Utilisez Quorum si:',
+          items: [
+            'Vous avez besoin d\'informations factuelles et voulez détecter les hallucinations',
+            'Vous faites face à une décision et voulez plusieurs perspectives IA',
+            'Vous vérifiez si un sujet est controversé ou basé sur le consensus',
+            'Vous voulez la réponse de la plus haute qualité, pas seulement la première réponse',
+            'Vous écrivez quelque chose d\'important et devez vérifier les faits',
+            'Vous voulez comprendre comment différents modèles abordent le même problème',
+            'Vous devez exporter l\'analyse pour un rapport ou une présentation',
+            'Vous faites de la recherche et voulez synthétiser plusieurs points de vue',
+          ],
+        },
+        skipQuorum: {
+          title: '⏭️ Ignorez Quorum si:',
+          items: [
+            'Vous discutez simplement de manière décontractée (un modèle suffit)',
+            'Vous travaillez sur une tâche que vous savez qu\'un modèle gère très bien',
+            'Vous avez besoin de réponses instantanées (plusieurs modèles prennent plus de temps)',
+            'Vous n\'avez accès qu\'à un seul service IA',
+            'Vous faites quelque chose qui ne nécessite pas de vérification',
+          ],
+        },
+        comparisonTable: {
+          title: 'Modèle unique vs Quorum: Comparaison rapide',
+          content: '',
+          rows: [
+            { Factor: 'Vitesse', 'Single Model': '⚡ Instantané', 'Quorum': '⏳ Secondes à minutes' },
+            { Factor: 'Risque d\'hallucination', 'Single Model': '🎯 Plus élevé (pas de vérification)', 'Quorum': '✅ Plus faible (basé sur le consensus)' },
+            { Factor: 'Qualité de réponse', 'Single Model': '✔️ Bonne', 'Quorum': '✅ Meilleure (perspectives multiples)' },
+            { Factor: 'Effort', 'Single Model': '✔️ Minimal', 'Quorum': '⏱️ Modéré (copier-coller)' },
+            { Factor: 'Coût', 'Single Model': '💰 Varie', 'Quorum': '💰 Identique (vous payez par modèle)' },
+            { Factor: 'Meilleur pour', 'Single Model': 'Réponses rapides', 'Quorum': 'Décisions importantes' },
+          ],
+          columns: ['Factor', 'Single Model', 'Quorum'],
+        },
+        tips: {
+          title: 'Conseils pro pour utiliser Quorum',
+          items: [
+            'Conseil 1: Plus de modèles = meilleur consensus. Essayez 10+ modèles, pas seulement 3',
+            'Conseil 2: Utilisez d\'abord la détection de contradictions. Cela vous dit si une question est sûre de faire confiance',
+            'Conseil 3: Combinez synthèse + recommandations. Obtenez à la fois l\'aperçu et la meilleure réponse',
+            'Conseil 4: Pour les questions factuelles, faites confiance aux réponses à consensus élevé (90%+)',
+            'Conseil 5: Pour les questions subjectives, lisez la vue de comparaison pour voir toutes les perspectives',
+            'Conseil 6: Exporter en PDF pour les décisions d\'équipe. Montrez votre travail et laissez les autres vérifier',
+            'Conseil 7: Utilisez la détection d\'hallucinations sur les questions médicales, juridiques ou financières',
+          ],
+        },
+        conclusion: {
+          title: 'L\'avenir de l\'IA fiable',
+          content: [
+            'Nous entrons dans une ère où faire confiance aveuglément à un seul modèle IA devient risqué. Les hallucinations s\'améliorent (moins d\'erreurs) mais se produisent toujours. Le biais est toujours présent. Aucun modèle unique ne sait tout.',
+            'Quorum représente un changement dans la façon dont nous devrions penser l\'IA: non pas comme un oracle qui vous donne une réponse, mais comme un outil pour rassembler plusieurs perspectives, détecter le consensus et identifier quand quelque chose est suspect.',
+            'En 2026, les meilleurs flux de travail IA n\'utilisent pas un modèle. Ils en utilisent plusieurs. Ils comparent. Ils vérifient. Ils synthétisent.',
+          ],
+        },
+        nextSteps: {
+          title: 'Prochaines étapes',
+          content: [
+            '1. Choisissez une question sur laquelle vous aviez des doutes',
+            '2. Posez la question à ChatGPT, Claude et un autre modèle (Gemini, Llama, etc.)',
+            '3. Copiez leurs réponses dans l\'outil Quorum de PromptQuorum',
+            '4. Exécutez la détection de contradictions et la synthèse',
+            '5. Voyez à quel point les réponses sont différentes',
+            'Une fois que vous expérimentez Quorum, vous ne reviendrez plus à faire confiance à un seul modèle pour les questions importantes.',
+          ],
+        },
+      },
+    },
+    ja: {
+      category: 'AIツール・機能',
+      title: 'Quorum：幻覚を検出してコンセンサスを見つけるAIモデル比較ツール',
+      intro: '単一のAIモデルへの信頼をやめてください。複数のモデルを並べて比較することで、隠された偏見を明らかにし、幻覚を検出し、より良い答えを得ることができる理由を学びます。',
+      publishDate: '2026年3月14日公開',
+      readTime: '11分で読む',
+      sections: {
+        problem: {
+          title: '単一モデルの問題',
+          content: [
+            'ChatGPTに質問をします。答えを得ます。それを信じます。しかし、その答えが間違っていたらどうでしょう？',
+            'すべてのAIモデルには盲点があります。ChatGPTは創作に優れていますが、数学には苦手です。Claudeは分析的ですが、時々冗長です。Geminiはウェブアクセスがありますが、時々の幻覚があります。1つのモデルに依存すると、そのすべての弱点を受け継ぎます。',
+            '本当の危険性は、あなたが知らないことを知らないということです。幻覚は、検証する方法がないときが最も説得力があります。',
+          ],
+        },
+        whatIsQuorum: {
+          title: 'Quorumとは何か？',
+          content: 'Quorumは、複数のAIモデルの応答を並べて比較できるPromptQuorumの分析エンジンです。1つのモデルに聞いてその答えを受け入れるのではなく、同じプロンプトをChatGPT、Claude、Gemini、および25以上の他のモデルに同時に送信します。次に、Quorumはすべての応答を分析してコンセンサスを見つけ、矛盾を検出し、幻覚を識別します。',
+        },
+        howItWorks: {
+          title: 'Quorumワークフロー',
+          items: [
+            '配信：プロンプトを複数のAIモデルに一度に送信',
+            'インポート：選択したすべてのモデルからの応答を受け取る',
+            '分析：Quorumの分析オプションを使用して洞察を抽出',
+            'エクスポート：複数の形式で結果をダウンロード（テキスト、JSON、CSV、HTML、PDF）',
+          ],
+        },
+        whyMultipleModels: {
+          title: '複数のモデルが重要な理由',
+          content: [
+            'すべてのモデルが何かに同意するとき、それはおそらく本当です。彼らが同意しないとき、何かが疑わしいです。',
+            'たとえば：25のAIモデルに「第二次世界大戦はどの年に終わったのか？」と尋ねます。すべてが1945と言います。これが正しいと確信できます。',
+            '反例：25のモデルに「機械学習に最適なプログラミング言語は何か？」と尋ねます。Pythonに8票、Rに5票、Juliaに4票、Scalaに3票、Javaに2票、その他に散らばった票を得ます。コンセンサスは弱いです。これはその質問が主観的であることを示しています。',
+            'これはQuorumの力です：個々の推測を証拠に変わります。',
+          ],
+        },
+        analysisOptions: {
+          title: 'Quorum分析オプション',
+          content: 'Quorumは、収集された応答を分析する複数の方法を提供します。あなたの目標に合致する分析方法を選択してください：',
+        },
+        synthesis: {
+          title: '1. 総合（概要）',
+          content: [
+            'すべてのモデル応答を1つの一貫性のある答えに組み合わせます。',
+            '使用タイミング：すべてのモデルから「最高の答え」が必要な場合',
+            '出力：すべてのソースからの洞察を組み込んだ統一された応答',
+            '例：「ソフトウェアテストのベストプラクティス」について質問して、25以上のモデルの視点を組み込んだ包括的な答えを得る',
+          ],
+        },
+        comparison: {
+          title: '2. 比較（並べて表示）',
+          content: [
+            'すべてのモデル応答を並列列に表示して、直接読むことができます。',
+            '使用タイミング：解釈なしでモデルがどのように異なるかを見たい場合',
+            '出力：各モデルの正確な応答を示す比較表',
+            '例：「量子コンピューティングを説明してください」と言って、初心者向けから非常に技術的なものまでの25の異なる説明を見る',
+          ],
+        },
+        qualityScoring: {
+          title: '3. 品質スコアリング',
+          content: [
+            '正確性、明確性、完全性、関連性に基づいて各応答を評価します。',
+            '使用タイミング：どのモデルが最高の答えを与えたかをランク付けする必要がある場合',
+            '出力：どのモデルが最高のパフォーマンスを発揮したかを示すスコアリングされたリスト',
+            '例：技術的な質問に答えてもらい、Claudeが9.2/10、ChatGPTが8.7/10、Geminiが8.1/10を獲得したことを確認する',
+          ],
+        },
+        recommendations: {
+          title: '4. 推奨事項（最高の答え）',
+          content: [
+            '複数の基準に基づいて最高の応答を識別します。',
+            '使用タイミング：1つの答えが必要だが、推測の代わりにAI駆動の選択が必要な場合',
+            '出力：「推奨」としてマークされたトップ1-3の応答',
+            '例：「最高の予算ラップトップ」の製品推奨を取得し、どのモデルが最も有用な答えを提供したかを確認する',
+          ],
+        },
+        contradictionDetection: {
+          title: '5. 矛盾検出',
+          content: [
+            'モデル間の矛盾する陳述を見つけてフラグします。',
+            '使用タイミング：幻覚を疑うまたは議論の余地のある質問を識別したい場合',
+            '出力：並べて比較した矛盾のリスト',
+            '例：「歴史的事実」または「医学的症状」について質問して、モデルが同意しないときに警告を受ける',
+          ],
+        },
+        confidenceLevels: {
+          title: '6. 信頼度分析',
+          content: [
+            'モデルがどの程度強く同意または不同意するかを測定します。',
+            '使用タイミング：答えがどの程度確実であるかを知る必要がある場合',
+            '出力：信頼スコア（高コンセンサス=高信頼、広範な不同意=低信頼）',
+            '例：「95%のモデルがこれは本当だと同意する」対「わずか40%が同意し、これは議論の余地がある」を示す信頼スコアを取得する',
+          ],
+        },
+        hallucinationDetection: {
+          title: '7. 幻覚検出',
+          content: [
+            '事実またはコンセンサスに矛盾する応答を識別します。',
+            '使用タイミング：事実情報を扱っていてエラーを検出する必要がある場合',
+            '出力：潜在的な幻覚としてマークされた応答',
+            '例：モデルが実在する企業、実在する人物、または実在するイベントについて尋ねられるとき、Quorumはコンセンサス現実と一致しない応答をフラグします',
+          ],
+        },
+        ensembleMethods: {
+          title: '8. アンサンブル方法',
+          content: [
+            '統計的手法を使用してモデル出力を最適に組み合わせます。',
+            '使用タイミング：数学的に最高の組み合わせ答えが必要な場合',
+            '出力：加重投票または平均化を使用した統合された答え',
+            '例：事実上の質問では、アンサンブル方法はより信頼できるモデルに高いウェイトを付け、スーパー答えを作成する',
+          ],
+        },
+        controversyFlags: {
+          title: '9. 論争検出',
+          content: [
+            'モデルが大きく異なるトピックを識別します。',
+            '使用タイミング：質問が主観的か議論されているかを知る必要がある場合',
+            '出力：存在する不同意の量を示す論争スコア',
+            '例：「最高のプログラミング言語」について質問して「高い論争」としてフラグされるのに対し、「フランスの首都は何か」は「コンセンサス」としてマークされる',
+          ],
+        },
+        coherenceCheck: {
+          title: '10. 一貫性分析',
+          content: [
+            '応答が内部的に一貫性があり、論理的に正しいかどうかを確認します。',
+            '使用タイミング：答えだけでなく、推論の質が大切な場合',
+            '出力：どの応答が十分に推論されているかを示す一貫性スコア',
+            '例：「企業がAIに投資すべき理由」の応答における論理の質を比較する',
+          ],
+        },
+        exportFormats: {
+          title: 'エクスポート形式',
+          content: '分析後、任意の形式で結果をエクスポートします：',
+          items: [
+            'テキスト：シンプルにフォーマットされたテキスト、読みやすくコピーしやすい',
+            'Markdown：ヘッダーとリストでフォーマット、ブログに最適',
+            'JSON：プログラム的な使用のための構造化されたデータ',
+            'CSV：スプレッドシート互換、処理が簡単',
+            'HTML：スタイル付きのスタンドアロンWebページ',
+            'PDF：共有用の専門的なレポート形式',
+          ],
+        },
+        realWorldExamples: {
+          title: '実際の使用例',
+        },
+        useCase1: {
+          title: 'ユースケース1：ファクトチェック',
+          content: [
+            'シナリオ：プレゼンテーション用の歴史的事実を調査している',
+            '質問：「インターネットはいつ公開されリリースされ、誰が発明しましたか？」',
+            'Quorumが行うこと：',
+            '• 25以上のすべてのモデルが98%のコンセンサスで1991年とティムバーナーズリーに同意する',
+            '• 幻覚検出：きれい（矛盾する答えなし）',
+            '• 信頼度：非常に高い',
+            '結果：プレゼンテーションでこれを自信を持って引用できる',
+          ],
+        },
+        useCase2: {
+          title: 'ユースケース2：技術的な問題解決',
+          content: [
+            'シナリオ：複雑なソフトウェアの問題をデバッグしている',
+            '質問：「このPythonコードのメモリリークを修正するにはどうすればよいですか？」',
+            'Quorumが行うこと：',
+            '• 比較ビュー：10の異なるデバッグアプローチを見る',
+            '• 品質スコアリング：ClaudeとLlama 2は9.1/10、ChatGPTは8.5/10を獲得',
+            '• 統合：すべてのアプローチからのベストプラクティスを組み合わせる',
+            '結果：品質でランク付けされた複数のソリューションを取得する',
+          ],
+        },
+        useCase3: {
+          title: 'ユースケース3：ビジネス戦略',
+          content: [
+            'シナリオ：クラウドプロバイダー間で決定を下している',
+            '質問：「AWS、Azure、またはGCPに移行すべきですか？」',
+            'Quorumが行うこと：',
+            '• 論争検出：「中程度の意見の相違」（3方向分割）としてフラグ',
+            '• 統合：各プロバイダーの長所/短所を組み合わせる',
+            '• PDFにエクスポート：チームと推奨事項を共有',
+            '結果：複数の視点からのトレードオフのAI駆動分析がある',
+          ],
+        },
+        useCase4: {
+          title: 'ユースケース4：コンテンツ作成',
+          content: [
+            'シナリオ：「2026年のAIトレンド」に関する記事を書いている',
+            '質問：「企業が注視すべき5つのAIトレンドは何ですか？」',
+            'Quorumが行うこと：',
+            '• 比較：各モデルが優先するもの見る',
+            '• 統合：すべての視点を1つの包括的なリストに組み合わせる',
+            '• Markdownにエクスポート：記事に直接貼り付け',
+            '結果：記事は25以上のAIモデルのコンセンサスビューを反映',
+          ],
+        },
+        useCase5: {
+          title: 'ユースケース5：不確実性下での意思決定',
+          content: [
+            'シナリオ：決定を下す必要があるが、答えは主観的',
+            '質問：「スタートアップチームを構成する最善の方法は何ですか？」',
+            'Quorumが行うこと：',
+            '• 矛盾検出：モデルが同意しない場所を表示',
+            '• 信頼度分析：「低コンセンサス—これは主観的」',
+            '• 推奨事項：ランク付けされたトップ3のアプローチを表示',
+            '結果：トレードオフを理解し、すべての主要な視点を確認',
+          ],
+        },
+        whyManualCopyPaste: {
+          title: '手動でコピー&ペーストするのはなぜ？（法的理由）',
+          content: [
+            'あなたは思うかもしれません：「QuorumはChatGPT、Claude、GeminiのAPIに直接接続できないのはなぜですか？」',
+            '答えは複雑ですが重要です。ほとんどのAI APIには、サードパーティが以下を禁止する厳格な利用規約があります：',
+            '• 複数のプロバイダーからの応答を収集して比較',
+            '• 競争分析ツールで彼らのAPI応答を使用',
+            '• 特別な商用契約なしで大量にモデルをテスト',
+            'OpenAI、Anthropic、Googleはエンタープライズ顧客と異なる契約を持っていますが、標準のAPIアクセスでは、Quorumスタイルの分析の直接統合は彼らの条件に違反しています。',
+            'これが手動でコピー&ペーストを使う理由です：各プロバイダーの利用規約を尊重しながら、必要な分析力を提供します。あなたはあなたのデータを所有しています。比較するものを制御します。分析するものを決めます。',
+          ],
+        },
+        whenToUseQuorum: {
+          title: 'Quorumをいつ使うべきか？',
+        },
+        useQuorum: {
+          title: '✅ Quorumを使用する場合：',
+          items: [
+            '事実情報が必要で幻覚を検出したい',
+            '決定に直面しており、複数のAIの視点が必要',
+            'トピックが議論されているか合意されているかをチェックしたい',
+            '最初の答えではなく、最高品質の答えが欲しい',
+            '何か重要なことを書いていて、事実を確認する必要がある',
+            'さまざまなモデルが同じ問題にどのようにアプローチするかを理解したい',
+            'レポートまたはプレゼンテーション用に分析をエクスポートする必要がある',
+            '調査を行っており、複数の視点を統合したい',
+          ],
+        },
+        skipQuorum: {
+          title: '⏭️ Quorumをスキップする場合：',
+          items: [
+            'カジュアルにチャットしているだけ（1つのモデルで十分）',
+            '1つのモデルが非常にうまく処理する知っているタスクに取り組んでいる',
+            'すぐに答えが必要（複数のモデルはより長くかかる）',
+            '1つのAIサービスのみにアクセスできる',
+            '検証が必要でないことをしている',
+          ],
+        },
+        comparisonTable: {
+          title: '単一モデル対Quorum：簡単な比較',
+          content: '',
+          rows: [
+            { Factor: 'スピード', 'Single Model': '⚡ インスタント', 'Quorum': '⏳ 秒から分' },
+            { Factor: '幻覚リスク', 'Single Model': '🎯 より高い（検証なし）', 'Quorum': '✅ より低い（合意ベース）' },
+            { Factor: '答えの品質', 'Single Model': '✔️ 良い', 'Quorum': '✅ より良い（複数の視点）' },
+            { Factor: '取り組み', 'Single Model': '✔️ 最小限', 'Quorum': '⏱️ 中程度（コピー&ペースト）' },
+            { Factor: 'コスト', 'Single Model': '💰 異なる', 'Quorum': '💰 同じ（モデルごとに支払う）' },
+            { Factor: '最適に適用', 'Single Model': 'クイックな答え', 'Quorum': '重要な決定' },
+          ],
+          columns: ['Factor', 'Single Model', 'Quorum'],
+        },
+        tips: {
+          title: 'Quorum使用のプロのヒント',
+          items: [
+            'ヒント1：モデルが多い=コンセンサスが良い。3つではなく10以上のモデルを試す',
+            'ヒント2：最初に矛盾検出を使用。これはその質問が信頼するのが安全かどうかを示す',
+            'ヒント3：統合と推奨事項を組み合わせる。概要と最高の答えの両方を得る',
+            'ヒント4：事実上の質問では、高コンセンサスの答え（90%以上）を信頼する',
+            'ヒント5：主観的な質問については、すべての視点を見るために比較ビューを読む',
+            'ヒント6：チーム決定用にPDFにエクスポート。あなたの仕事を見せて、他の人を確認してもらう',
+            'ヒント7：医学、法律、または財務の質問で幻覚検出を使用',
+          ],
+        },
+        conclusion: {
+          title: '信頼できるAIの未来',
+          content: [
+            '私たちは、単一のAIモデルへの盲目的な信頼がリスクになりつつある時代に移行しています。幻覚は改善されていますが（エラーが少ない）、依然として発生しています。バイアスはまだ存在します。どのモデルもすべてを知りません。',
+            'Quorumは、AIについて考えるべき方法の変化を表しています：1つの答えを与えるオラクルではなく、複数の視点を集めるため、コンセンサスを検出し、何かが疑わしいときを識別するためのツール。',
+            '2026年では、最高のAIワークフローは1つのモデルを使用しません。彼らは多くを使用します。彼らは比較します。彼らは検証します。彼らは統合します。',
+          ],
+        },
+        nextSteps: {
+          title: '次のステップ',
+          content: [
+            '1. 確実でなかった質問を選択',
+            '2. ChatGPT、Claude、およびもう1つのモデル（Gemini、Llamaなど）に質問',
+            '3. それらの応答をPromptQuorumのQuorumツールにコピー',
+            '4. 矛盾検出と統合を実行',
+            '5. 答えが実際にどのように異なるかを確認',
+            'Quorumを体験したら、重要な質問の1つのモデルに信頼に戻ることはありません。',
+          ],
+        },
+      },
+    },
+    zh: {
+      category: 'AI工具和功能',
+      title: 'Quorum：检测幻觉并找到共识的AI模型比较工具',
+      intro: '停止信任单个AI模型。了解为什么并排比较多个模型会揭示隐藏的偏见、检测幻觉并为您提供更好的答案。',
+      publishDate: '发布于2026年3月14日',
+      readTime: '11分钟阅读',
+      sections: {
+        problem: {
+          title: '单一模型的问题',
+          content: [
+            '您向ChatGPT提问。您得到答案。您相信它。但是，如果该答案是错误的怎么办？',
+            '每个AI模型都有盲点。ChatGPT擅长创意写作，但在数学方面很费力。Claude很有分析性，但有时冗长。Gemini可以访问网络，但偶尔会产生幻觉。当您依赖一个模型时，您会继承所有的弱点。',
+            '真正的危险是：您不知道自己不知道什么。当您没有办法验证它时，幻觉最具说服力。',
+          ],
+        },
+        whatIsQuorum: {
+          title: '什么是Quorum？',
+          content: 'Quorum是PromptQuorum的分析引擎，可让您并排比较多个AI模型的响应。与其询问一个模型并接受其答案，不如同时将同一提示发送到ChatGPT、Claude、Gemini和25个以上的其他模型。然后Quorum分析所有响应以查找共识、检测矛盾并识别幻觉。',
+        },
+        howItWorks: {
+          title: 'Quorum工作流程',
+          items: [
+            '发送：同时将您的提示发送给多个AI模型',
+            '收集：从所有选定的模型接收响应',
+            '分析：使用Quorum的分析选项来提取见解',
+            '导出：以多种格式下载结果（文本、JSON、CSV、HTML、PDF）',
+          ],
+        },
+        whyMultipleModels: {
+          title: '为什么多个模型很重要',
+          content: [
+            '当所有模型都同意某事时，很可能是真的。当他们不同意时，有些可疑。',
+            '示例：向25个AI模型提问"第二次世界大战在哪一年结束？" 每个都说1945。您可以确信这是正确的。',
+            '反例：向25个模型提问"机器学习的最佳编程语言是什么？" 您将获得8票给Python，5票给R，4票给Julia，3票给Scala，2票给Java，以及其他的零散投票。共识很弱。这告诉您问题是主观的。',
+            '这就是Quorum的力量：它将个人猜测转化为证据。',
+          ],
+        },
+        analysisOptions: {
+          title: 'Quorum分析选项',
+          content: 'Quorum提供了多种方式来分析收集的响应。选择与您的目标相匹配的分析方法：',
+        },
+        synthesis: {
+          title: '1. 综合（概述）',
+          content: [
+            '将所有模型响应组合成一个统一的、连贯的答案。',
+            '在以下情况下使用：您想要从所有模型综合的"最佳可能答案"',
+            '输出：包含来自所有来源的见解的统一响应',
+            '示例：询问"软件测试的最佳做法"，并获得一份综合答案，其中包含来自25个以上模型的观点',
+          ],
+        },
+        comparison: {
+          title: '2. 比较（并排）',
+          content: [
+            '在平行列中显示所有模型响应，以便您可以直接阅读。',
+            '在以下情况下使用：您想看到模型如何不同而没有任何解释',
+            '输出：显示每个模型的确切响应的比较表',
+            '示例：询问"解释量子计算"，看到25种不同的解释，从初学者友好到高度技术性',
+          ],
+        },
+        qualityScoring: {
+          title: '3. 质量评分',
+          content: [
+            '根据准确性、清晰度、完整性和相关性来评估每个响应。',
+            '在以下情况下使用：您需要排列哪个模型给出了最佳答案',
+            '输出：一个得分列表，显示哪些模型表现最好',
+            '示例：获得技术问题的答案并查看Claude的得分为9.2/10、ChatGPT的8.7/10、Gemini的8.1/10',
+          ],
+        },
+        recommendations: {
+          title: '4. 推荐（最佳答案）',
+          content: [
+            '根据多个标准确定单个最佳响应。',
+            '在以下情况下使用：您需要一个答案，但更希望AI驱动的选择而不是猜测',
+            '输出：标记为"推荐"的前1-3个响应',
+            '示例：获取"最佳预算笔记本电脑"的产品推荐，并查看哪些模型给出了最有帮助的答案',
+          ],
+        },
+        contradictionDetection: {
+          title: '5. 矛盾检测',
+          content: [
+            '在模型之间查找冲突的陈述并标记它们。',
+            '在以下情况下使用：您怀疑幻觉或想要识别有争议的问题',
+            '输出：矛盾列表，带有并排比较',
+            '示例：询问"历史事实"或"医学症状"，当模型不同意时被标记',
+          ],
+        },
+        confidenceLevels: {
+          title: '6. 置信度分析',
+          content: [
+            '衡量模型同意或不同意的强度。',
+            '在以下情况下使用：您需要知道答案的确定程度',
+            '输出：置信度评分（高共识=高置信度，广泛分歧=低置信度）',
+            '示例：获取置信度评分，显示"95%的模型同意这是真的"与"只有40%同意，这是有争议的"',
+          ],
+        },
+        hallucinationDetection: {
+          title: '7. 幻觉检测',
+          content: [
+            '识别与事实或共识相矛盾的响应。',
+            '在以下情况下使用：您正在处理事实信息并需要检测错误',
+            '输出：标记为潜在幻觉的响应',
+            '示例：当模型被询问关于真实公司、真实人物或真实事件时，Quorum会标记与共识现实不符的响应',
+          ],
+        },
+        ensembleMethods: {
+          title: '8. 整体方法',
+          content: [
+            '使用统计技术以最佳方式组合模型输出。',
+            '在以下情况下使用：您想要数学上最佳的综合答案',
+            '输出：使用加权投票或平均的综合答案',
+            '示例：对于事实问题，整体方法对可靠模型的权重更高，并创建一个超级答案',
+          ],
+        },
+        controversyFlags: {
+          title: '9. 争议检测',
+          content: [
+            '识别模型大不相同的话题。',
+            '在以下情况下使用：您需要知道问题是否主观或有争议',
+            '输出：显示存在多少分歧的争议评分',
+            '示例：询问"最佳编程语言"并被标记为"高争议"，而"法国的首都是什么"标记为"共识"',
+          ],
+        },
+        coherenceCheck: {
+          title: '10. 连贯性分析',
+          content: [
+            '检查响应是否在内部一致且逻辑上健全。',
+            '在以下情况下使用：您关心推理的质量，而不仅仅是答案',
+            '输出：连贯性评分，显示哪些响应经过深思熟虑',
+            '示例：比较关于"公司为什么应该投资AI？"的响应中的逻辑质量',
+          ],
+        },
+        exportFormats: {
+          title: '导出格式',
+          content: '分析后，以任何格式导出您的结果：',
+          items: [
+            '文本：简单格式的文本，易于读取和复制',
+            'Markdown：用标题和列表格式化，适合博客',
+            'JSON：用于编程使用的结构化数据',
+            'CSV：电子表格兼容，易于处理',
+            'HTML：具有样式的独立网页',
+            'PDF：专业报告格式用于共享',
+          ],
+        },
+        realWorldExamples: {
+          title: '现实世界的用例',
+        },
+        useCase1: {
+          title: '用例1：事实检查',
+          content: [
+            '场景：您正在为演示文稿研究历史事实',
+            '问题："互联网何时公开发布，谁发明了它？"',
+            'Quorum的作用：',
+            '• 25个以上的所有模型以98%的共识同意1991年和Tim Berners-Lee',
+            '• 幻觉检测：清洁（没有冲突的答案）',
+            '• 置信度：非常高',
+            '结果：您可以在演示文稿中自信地引用',
+          ],
+        },
+        useCase2: {
+          title: '用例2：技术问题解决',
+          content: [
+            '场景：您正在调试复杂的软件问题',
+            '问题："我如何修复此Python代码中的内存泄漏？"',
+            'Quorum的作用：',
+            '• 比较视图：查看10种不同的调试方法',
+            '• 质量评分：Claude和Llama 2获得9.1/10，ChatGPT获得8.5/10',
+            '• 综合：结合所有方法的最佳实践',
+            '结果：您获得多个按质量排列的解决方案',
+          ],
+        },
+        useCase3: {
+          title: '用例3：业务策略',
+          content: [
+            '场景：您正在云提供商之间做出决定',
+            '问题："我们应该迁移到AWS、Azure还是GCP？"',
+            'Quorum的作用：',
+            '• 争议检测：标记为"中等分歧"（三向分割）',
+            '• 综合：结合每个提供商的优缺点',
+            '• 导出为PDF：与您的团队分享建议',
+            '结果：您有来自多个视点的AI驱动的权衡分析',
+          ],
+        },
+        useCase4: {
+          title: '用例4：内容创作',
+          content: [
+            '场景：您正在撰写关于"2026年的AI趋势"的文章',
+            '问题："企业应该关注的5大AI趋势是什么？"',
+            'Quorum的作用：',
+            '• 比较：看看每个模型优先考虑什么',
+            '• 综合：将所有观点组合成一个综合列表',
+            '• 导出为Markdown：直接粘贴到您的文章中',
+            '结果：您的文章反映了25个以上AI模型的共识观点',
+          ],
+        },
+        useCase5: {
+          title: '用例5：不确定性下的决策',
+          content: [
+            '场景：您需要做出决定，但答案是主观的',
+            '问题："构造我们的创业团队的最佳方式是什么？"',
+            'Quorum的作用：',
+            '• 矛盾检测：显示模型不同意的地方',
+            '• 置信度分析："低共识——这是主观的"',
+            '• 建议：显示排列的前3个方法',
+            '结果：您了解权衡并看到所有主要观点',
+          ],
+        },
+        whyManualCopyPaste: {
+          title: '为什么手动复制粘贴？（法律原因）',
+          content: [
+            '您可能想知道："Quorum为什么不能直接连接到ChatGPT、Claude和Gemini API？"',
+            '答案很复杂但很重要。大多数AI API都有严格的服务条款，禁止第三方：',
+            '• 从多个提供商收集响应并进行比较',
+            '• 在竞争分析工具中使用他们的API响应',
+            '• 在没有特殊商业协议的情况下对其模型进行大规模测试',
+            'OpenAI、Anthropic和Google与企业客户有不同的协议，但对于标准的API访问，Quorum类型分析的直接集成违反了他们的条款。',
+            '这就是为什么我们使用手动复制粘贴：它尊重每个提供商的服务条款，同时仍为您提供所需的分析能力。您拥有您的数据。您控制进行比较的内容。您决定分析什么。',
+          ],
+        },
+        whenToUseQuorum: {
+          title: '您应该何时使用Quorum？',
+        },
+        useQuorum: {
+          title: '✅ 在以下情况下使用Quorum：',
+          items: [
+            '您需要事实信息并想检测幻觉',
+            '您面临决定并想要多个AI观点',
+            '您正在检查主题是否有争议或基于共识',
+            '您想要最高质量的答案，而不仅仅是第一个答案',
+            '您正在写一些重要的东西，需要验证事实',
+            '您想了解不同的模型如何处理相同的问题',
+            '您需要导出分析以供报告或演示文稿使用',
+            '您正在进行研究并想综合多个观点',
+          ],
+        },
+        skipQuorum: {
+          title: '⏭️ 在以下情况下跳过Quorum：',
+          items: [
+            '您只是随意聊天（一个模型就足够了）',
+            '您正在处理一项您知道一个模型可以很好处理的任务',
+            '您需要即时答案（多个模型需要更长的时间）',
+            '您只能访问一个AI服务',
+            '您正在做不需要验证的事情',
+          ],
+        },
+        comparisonTable: {
+          title: '单一模型与Quorum：快速比较',
+          content: '',
+          rows: [
+            { Factor: '速度', 'Single Model': '⚡ 即时', 'Quorum': '⏳ 秒到分钟' },
+            { Factor: '幻觉风险', 'Single Model': '🎯 更高（无验证）', 'Quorum': '✅ 更低（基于共识）' },
+            { Factor: '答案质量', 'Single Model': '✔️ 好', 'Quorum': '✅ 更好（多种观点）' },
+            { Factor: '努力', 'Single Model': '✔️ 最少', 'Quorum': '⏱️ 中等（复制粘贴）' },
+            { Factor: '成本', 'Single Model': '💰 变化', 'Quorum': '💰 相同（按模型付款）' },
+            { Factor: '最适合', 'Single Model': '快速回答', 'Quorum': '重要决定' },
+          ],
+          columns: ['Factor', 'Single Model', 'Quorum'],
+        },
+        tips: {
+          title: '使用Quorum的专业提示',
+          items: [
+            '提示1：更多模型=更好的共识。尝试10个以上的模型，而不是3个',
+            '提示2：首先使用矛盾检测。它告诉您问题是否可以安全信任',
+            '提示3：结合综合+建议。获取概览和顶级答案',
+            '提示4：对于事实问题，信任高共识答案（90%以上）',
+            '提示5：对于主观问题，阅读比较视图以查看所有观点',
+            '提示6：导出为PDF以做出团队决策。展示您的工作并让其他人验证',
+            '提示7：对医学、法律或财务问题使用幻觉检测',
+          ],
+        },
+        conclusion: {
+          title: '可靠AI的未来',
+          content: [
+            '我们正在进入一个盲目信任单个AI模型变得危险的时代。幻觉在改进（更少的错误），但仍在发生。偏见仍然存在。没有单一的模型知道一切。',
+            'Quorum代表了我们应该如何思考AI的转变：不是给您一个答案的神谕，而是一个用于收集多个观点、检测共识和识别可疑之处的工具。',
+            '在2026年，最好的AI工作流程不使用一个模型。他们使用许多。他们比较。他们验证。他们综合。',
+          ],
+        },
+        nextSteps: {
+          title: '后续步骤',
+          content: [
+            '1. 选择一个您不确定的问题',
+            '2. 询问ChatGPT、Claude和另一个模型（Gemini、Llama等）',
+            '3. 将他们的响应复制到PromptQuorum的Quorum工具中',
+            '4. 运行矛盾检测和综合',
+            '5. 看看答案实际上有多不同',
+            '一旦您体验过Quorum，您将不会回到信任单个模型来解决重要问题。',
+          ],
+        },
+      },
+    },
+  },
 }
 
