@@ -2,15 +2,34 @@ import { ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export function AIModelComparison() {
+  const languages: { code: string; name: string }[] = [
+    { code: 'en', name: 'English' },
+    { code: 'de', name: 'Deutsch' },
+    { code: 'fr', name: 'Français' },
+    { code: 'ja', name: '日本語' },
+    { code: 'zh', name: '中文' },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Home</span>
           </Link>
+          <div className="flex items-center gap-2">
+            {languages.map(l => (
+              <Link
+                key={l.code}
+                to={`/blog/ai-model-comparison?lang=${l.code}`}
+                className="px-2 py-1 text-xs font-medium text-text-secondary hover:text-primary transition-colors"
+              >
+                {l.code.toUpperCase()}
+              </Link>
+            ))}
+          </div>
         </div>
       </header>
 
