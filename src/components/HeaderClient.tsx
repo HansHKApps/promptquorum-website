@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import { LanguageSwitcherWrapper } from './LanguageSwitcherWrapper'
 import { useWaitlist } from '@/context/WaitlistContext'
-import { useState, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useState } from 'react'
+import { useLang } from '@/hooks/useLang'
 
 const NAV_LABELS: Record<string, Record<string, string>> = {
   compare: {
@@ -58,8 +58,7 @@ function t(key: string, lang: string) {
 function HeaderInner() {
   const { openWaitlist } = useWaitlist()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const searchParams = useSearchParams()
-  const lang = searchParams?.get('lang') || 'en'
+  const lang = useLang()
 
   const handleWaitlistClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
@@ -162,11 +161,5 @@ function HeaderInner() {
 }
 
 export function HeaderClient() {
-  return (
-    <Suspense fallback={
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 h-16" />
-    }>
-      <HeaderInner />
-    </Suspense>
-  )
+  return <HeaderInner />
 }

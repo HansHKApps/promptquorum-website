@@ -1,10 +1,7 @@
 'use client'
 
-import { Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useLang } from '@/hooks/useLang'
 import Link from 'next/link'
-
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
 const T = {
   en: {
@@ -515,8 +512,7 @@ const providers = {
 }
 
 function HowItWorksContent() {
-  const searchParams = useSearchParams()
-  const lang = (searchParams?.get('lang') || 'en') as Lang
+  const lang = useLang()
   const t = T[lang] ?? T.en
 
   return (
@@ -695,9 +691,5 @@ function HowItWorksContent() {
 }
 
 export function HowItWorksPageClient() {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-surface" />}>
-      <HowItWorksContent />
-    </Suspense>
-  )
+  return <HowItWorksContent />
 }

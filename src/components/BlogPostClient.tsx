@@ -1,11 +1,10 @@
 'use client'
 
-import { useSearchParams } from 'next/navigation'
+import { useLang } from '@/hooks/useLang'
 import type { BlogPost, Language } from '@/lib/blog/blogContent'
 import { blogMetadata } from '@/lib/blog/blogTranslations'
 import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
-import { Suspense } from 'react'
 
 interface BlogPostClientProps {
   post: BlogPost
@@ -13,8 +12,7 @@ interface BlogPostClientProps {
 }
 
 function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
-  const searchParams = useSearchParams()
-  const lang = (searchParams?.get('lang') || 'en') as Language
+  const lang = useLang() as Language
 
   // Get translated metadata
   const postId = SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]
@@ -153,9 +151,5 @@ function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
 }
 
 export function BlogPostClient(props: BlogPostClientProps) {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-white" />}>
-      <BlogPostClientContent {...props} />
-    </Suspense>
-  )
+  return <BlogPostClientContent {...props} />
 }

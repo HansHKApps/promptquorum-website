@@ -1,8 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
-import { Suspense } from 'react'
+import { useLang } from '@/hooks/useLang'
 import { blogMetadata } from '@/lib/blog/blogTranslations'
 import { translations } from '@/translations'
 import type { Language } from '@/translations'
@@ -18,8 +17,7 @@ const blogPosts = [
 ]
 
 function BlogSectionInner() {
-  const searchParams = useSearchParams()
-  const lang = (searchParams?.get('lang') || 'en') as Language
+  const lang = useLang() as Language
   const t = translations[lang] || translations.en
 
   return (
@@ -68,23 +66,5 @@ function BlogSectionInner() {
 }
 
 export function BlogSectionClient() {
-  return (
-    <Suspense fallback={
-      <section className="py-20 px-4 sm:px-6 bg-surface">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="h-10 bg-gray-200 rounded w-64 mx-auto mb-4 animate-pulse" />
-            <div className="h-6 bg-gray-100 rounded w-96 mx-auto animate-pulse" />
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="bg-white rounded-lg border border-gray-200 p-6 h-48 animate-pulse" />
-            ))}
-          </div>
-        </div>
-      </section>
-    }>
-      <BlogSectionInner />
-    </Suspense>
-  )
+  return <BlogSectionInner />
 }

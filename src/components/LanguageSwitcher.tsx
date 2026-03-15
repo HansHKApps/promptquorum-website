@@ -1,15 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useLang } from '@/hooks/useLang'
 import type { Language } from '../translations'
 
 export function LanguageSwitcher() {
-  const router = useRouter()
-  const searchParams = useSearchParams()
+  const currentLang = useLang() as Language
   const [isOpen, setIsOpen] = useState(false)
-
-  const currentLang = (searchParams?.get('lang') || 'en') as Language
 
   const languages: { code: Language; name: string; flag: string }[] = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -22,7 +19,10 @@ export function LanguageSwitcher() {
   const current = languages.find(l => l.code === currentLang) || languages[0]
 
   const handleLanguageChange = (lang: Language) => {
-    router.push(`?lang=${lang}`, { scroll: false })
+    const url = new URL(window.location.href)
+    url.searchParams.set('lang', lang)
+    window.history.pushState({}, '', url.toString())
+    window.dispatchEvent(new PopStateEvent('popstate'))
     setIsOpen(false)
   }
 

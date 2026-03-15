@@ -1,11 +1,10 @@
 'use client'
 
 import { Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useLang } from '@/hooks/useLang'
+import type { Lang } from '@/hooks/useLang'
 import { LandingPageClient } from './LandingPageClient'
 import { useWaitlist } from '@/context/WaitlistContext'
-
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
 const T: Record<Lang, { title: string; desc: string }> = {
   en: {
@@ -32,8 +31,7 @@ const T: Record<Lang, { title: string; desc: string }> = {
 
 function WaitlistModalInner() {
   const { isOpen, closeWaitlist } = useWaitlist()
-  const searchParams = useSearchParams()
-  const lang = (searchParams?.get('lang') || 'en') as Lang
+  const lang = useLang()
   const t = T[lang] ?? T.en
 
   if (!isOpen) return null
@@ -88,9 +86,5 @@ function WaitlistModalInner() {
 }
 
 export function WaitlistModal() {
-  return (
-    <Suspense fallback={null}>
-      <WaitlistModalInner />
-    </Suspense>
-  )
+  return <WaitlistModalInner />
 }

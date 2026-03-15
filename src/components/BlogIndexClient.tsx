@@ -1,8 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
-import { Suspense } from 'react'
+import { useLang } from '@/hooks/useLang'
 import { blogMetadata } from '@/lib/blog/blogTranslations'
 import { translations } from '@/translations'
 import type { Language } from '@/translations'
@@ -18,8 +17,7 @@ const blogPosts = [
 ]
 
 function BlogIndexInner() {
-  const searchParams = useSearchParams()
-  const lang = (searchParams?.get('lang') || 'en') as Language
+  const lang = useLang() as Language
   const t = translations[lang] || translations.en
 
   return (
@@ -72,23 +70,5 @@ function BlogIndexInner() {
 }
 
 export function BlogIndexClient() {
-  return (
-    <Suspense fallback={
-      <main className="min-h-screen pt-20 pb-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center py-16">
-            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse" />
-            <div className="h-6 bg-gray-100 rounded w-64 mx-auto animate-pulse" />
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[...Array(7)].map((_, i) => (
-              <div key={i} className="bg-white rounded-xl border border-gray-200 p-6 h-48 animate-pulse" />
-            ))}
-          </div>
-        </div>
-      </main>
-    }>
-      <BlogIndexInner />
-    </Suspense>
-  )
+  return <BlogIndexInner />
 }

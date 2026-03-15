@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useLang } from '@/hooks/useLang'
 import { ChevronDown } from 'lucide-react'
 
 type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh'
@@ -382,8 +382,7 @@ const descriptionText: Record<Language, Record<number, string>> = {
 }
 
 export function InteractivePipeline() {
-  const searchParams = useSearchParams()
-  const lang = (searchParams?.get('lang') || 'en') as Language
+  const lang = useLang() as Language
   const stages = stagesData[lang] || stagesData['en']
   const [expandedStage, setExpandedStage] = useState<number | null>(null)
 

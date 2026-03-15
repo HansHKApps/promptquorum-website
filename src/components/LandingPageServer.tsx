@@ -5,7 +5,7 @@ import { InteractivePipeline } from './InteractivePipeline'
 import { LandingPageClient } from './LandingPageClient'
 import { BlogSectionClient } from './BlogSectionClient'
 import { Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useLang } from '@/hooks/useLang'
 
 // Icons
 const Shield = () => (
@@ -43,7 +43,6 @@ const YouTube = () => (
 )
 
 // ─── Translations ──────────────────────────────────────────────────────────────
-type Lang = 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
 const T = {
   en: {
@@ -208,8 +207,7 @@ const ICONS = [Sparkles, Layers, Brain, Zap, Shield, Download]
 
 // Main Landing Page Server Component
 export function LandingPageServer() {
-  const searchParams = useSearchParams()
-  const lang = (searchParams?.get('lang') || 'en') as Lang
+  const lang = useLang()
   const t = T[lang] ?? T.en
 
   return (
