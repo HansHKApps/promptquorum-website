@@ -11,7 +11,10 @@
       "Bash(curl -s http://localhost:5173/blog/quorum)",
       "Read(//Users/hanskuepper/promptquorum-website/**)",
       "Bash(npx playwright:*)",
-      "Bash(curl -s \"http://localhost:5173/?lang=ja\")"
+      "Bash(curl -s \"http://localhost:5173/?lang=ja\")",
+      "Bash(npx tsc:*)",
+      "Read(//localAI: {/,/^  },/ { if \\(/en: {/\\) { start=1 } if \\(start && /^      },/\\) { exit } if \\(start && /^\\\\s+[a-zA-Z]+:/**)",
+      "Bash(git checkout:*)"
     ]
   }
 }
