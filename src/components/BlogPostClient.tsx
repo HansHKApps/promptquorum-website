@@ -1,6 +1,6 @@
 'use client'
 
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import type { BlogPost, Language } from '@/lib/blog/blogContent'
 import { blogMetadata } from '@/lib/blog/blogTranslations'
 import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
@@ -15,15 +15,10 @@ interface BlogPostClientProps {
 function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
   const searchParams = useSearchParams()
   const lang = (searchParams?.get('lang') || 'en') as Language
-  const router = useRouter()
 
   // Get translated metadata
   const postId = SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]
   const metadata = blogMetadata[postId as keyof typeof blogMetadata]?.[lang] || blogMetadata[postId as keyof typeof blogMetadata]?.['en']
-
-  const handleLangChange = (l: Language) => {
-    router.push(`/blog/${slug}?lang=${l}`, { scroll: false })
-  }
 
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6">
@@ -37,7 +32,7 @@ function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
             <span>/</span>
             <span className="text-text-primary font-medium">{metadata?.title || post.title}</span>
           </div>
-          <LanguageSwitcher currentLang={lang} onChange={handleLangChange} />
+          <LanguageSwitcher />
         </div>
 
         {/* Article Header */}

@@ -1,4 +1,3 @@
-import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { BlogPostClient } from '@/components/BlogPostClient'
@@ -124,9 +123,7 @@ export default async function BlogPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Suspense fallback={<div className="min-h-screen bg-white" />}>
-        <BlogPostClient post={post} slug={slug} />
-      </Suspense>
+      <BlogPostClient post={post} slug={slug} />
     </>
   )
 }

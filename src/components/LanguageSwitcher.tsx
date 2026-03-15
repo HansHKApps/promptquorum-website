@@ -1,15 +1,15 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import type { Language } from '../translations'
 
-interface LanguageSwitcherProps {
-  currentLang: Language
-  onChange: (lang: Language) => void
-}
-
-export function LanguageSwitcher({ currentLang, onChange }: LanguageSwitcherProps) {
+export function LanguageSwitcher() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
   const [isOpen, setIsOpen] = useState(false)
+
+  const currentLang = (searchParams?.get('lang') || 'en') as Language
 
   const languages: { code: Language; name: string; flag: string }[] = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -20,6 +20,11 @@ export function LanguageSwitcher({ currentLang, onChange }: LanguageSwitcherProp
   ]
 
   const current = languages.find(l => l.code === currentLang) || languages[0]
+
+  const handleLanguageChange = (lang: Language) => {
+    router.push(`?lang=${lang}`, { scroll: false })
+    setIsOpen(false)
+  }
 
   return (
     <div className="relative">
@@ -36,7 +41,7 @@ export function LanguageSwitcher({ currentLang, onChange }: LanguageSwitcherProp
           {languages.map(lang => (
             <button
               key={lang.code}
-              onClick={() => { onChange(lang.code); setIsOpen(false) }}
+              onClick={() => handleLanguageChange(lang.code)}
               className={`w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-2 ${currentLang === lang.code ? 'bg-primary/5 text-primary' : 'text-text-primary'}`}
             >
               <span>{lang.flag}</span>
