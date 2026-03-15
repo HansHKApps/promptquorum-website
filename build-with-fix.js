@@ -53,8 +53,8 @@ async function main() {
     // Apply fix AFTER build (Next.js regenerates validator during build)
     fixValidator()
 
-    // Check if build succeeded by looking for out directory (static export output)
-    const outDir = path.join(__dirname, 'out')
+    // Check if build succeeded by looking for .next directory (Next.js build output)
+    const outDir = path.join(__dirname, '.next')
     if (fs.existsSync(outDir)) {
       console.log('\n✓ Build completed successfully!')
       process.exit(0)
