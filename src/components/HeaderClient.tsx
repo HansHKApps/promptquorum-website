@@ -2,17 +2,17 @@
 
 import Link from 'next/link'
 import { LanguageSwitcher } from './LanguageSwitcher'
-import { WaitlistModal } from './WaitlistModal'
+import { useWaitlist } from '@/context/WaitlistContext'
 import { useState } from 'react'
 
 export function HeaderClient() {
+  const { openWaitlist } = useWaitlist()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [waitlistModalOpen, setWaitlistModalOpen] = useState(false)
 
   const handleWaitlistClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     setMobileMenuOpen(false)
-    setWaitlistModalOpen(true)
+    openWaitlist()
   }
 
   return (
@@ -97,9 +97,6 @@ export function HeaderClient() {
           </a>
         </div>
       )}
-
-      {/* Waitlist Modal */}
-      <WaitlistModal isOpen={waitlistModalOpen} onClose={() => setWaitlistModalOpen(false)} />
     </header>
   )
 }

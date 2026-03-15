@@ -235,8 +235,10 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <HeaderClient />
-        <Providers>{children}</Providers>
+        <Providers>
+          <HeaderClient />
+          {children}
+        </Providers>
       </body>
     </html>
   )

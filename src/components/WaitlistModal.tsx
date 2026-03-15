@@ -2,14 +2,14 @@
 
 import { Suspense } from 'react'
 import { LandingPageClient } from './LandingPageClient'
+import { useWaitlist } from '@/context/WaitlistContext'
 
-interface WaitlistModalProps {
-  isOpen: boolean
-  onClose: () => void
-}
+export function WaitlistModal() {
+  const { isOpen, closeWaitlist } = useWaitlist()
 
-export function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
   if (!isOpen) return null
+
+  const onClose = closeWaitlist
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
