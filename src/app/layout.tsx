@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
 import { Providers } from '@/components/Providers'
+import { HeaderClient } from '@/components/HeaderClient'
 
 export const metadata: Metadata = {
   title: 'Compare AI Models on the Same Prompt | PromptQuorum',
@@ -234,6 +235,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <HeaderClient />
         <Providers>{children}</Providers>
       </body>
     </html>
