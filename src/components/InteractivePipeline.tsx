@@ -382,8 +382,8 @@ const descriptionText: Record<Language, Record<number, string>> = {
 }
 
 export function InteractivePipeline() {
-  const [searchParams] = useSearchParams()
-  const lang = (searchParams.get('lang') || 'en') as Language
+  const searchParams = useSearchParams()
+  const lang = (searchParams?.get('lang') || 'en') as Language
   const stages = stagesData[lang] || stagesData['en']
   const [expandedStage, setExpandedStage] = useState<number | null>(null)
 

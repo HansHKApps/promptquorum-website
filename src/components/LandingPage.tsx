@@ -182,7 +182,7 @@ export function LandingPage() {
   const searchParams = useSearchParams()
   const router = useRouter()
 
-  const language = (searchParams.get('lang') || 'en') as Language
+  const language = (searchParams?.get('lang') || 'en') as Language
   const setLanguage = (lang: Language) => {
     router.push(`?lang=${lang}`, { scroll: false })
   }
