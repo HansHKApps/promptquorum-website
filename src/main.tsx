@@ -10,6 +10,8 @@ import { LocalAIVsCloud } from './pages/blog/LocalAIVsCloud.tsx'
 import { AIModelComparison } from './pages/blog/AIModelComparison.tsx'
 import { QuorumBlog } from './pages/blog/QuorumBlog.tsx'
 import { OptimizationBlog } from './pages/blog/OptimizationBlog.tsx'
+import { DataPrivacyBlog } from './pages/blog/DataPrivacyBlog.tsx'
+import { PromptImpactBlog } from './pages/blog/PromptImpactBlog.tsx'
 import { Features } from './pages/Features.tsx'
 import { HowItWorks } from './pages/HowItWorks.tsx'
 import { FAQ } from './pages/FAQ.tsx'
@@ -31,6 +33,8 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/blog/ai-model-comparison" element={<AIModelComparison />} />
             <Route path="/blog/quorum" element={<QuorumBlog />} />
             <Route path="/blog/prompt-optimization" element={<OptimizationBlog />} />
+            <Route path="/blog/enterprise-data-privacy" element={<DataPrivacyBlog />} />
+            <Route path="/blog/research-prompt-optimization-impact" element={<PromptImpactBlog />} />
           </Routes>
         </Router>
       </HelmetProvider>

@@ -446,6 +446,44 @@ function App() {
                 </div>
               </div>
             </Link>
+
+            {/* Blog Card 6 */}
+            <Link to="/blog/enterprise-data-privacy" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
+              <div className="p-6">
+                <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+                  Data Privacy & Security
+                </span>
+                <h3 className="text-xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">
+                  Enterprise Data Privacy
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  Zero registration, zero tracking, complete control. Run AI locally with total data ownership and HIPAA/GDPR compliance.
+                </p>
+                <div className="flex items-center justify-between text-xs text-text-muted">
+                  <span>10 min read</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Blog Card 7 */}
+            <Link to="/blog/research-prompt-optimization-impact" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
+              <div className="p-6">
+                <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+                  Research Study
+                </span>
+                <h3 className="text-xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">
+                  Prompt Optimization Impact
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  2024-2026 research reveals 15%-94% improvements. Chain-of-Thought, multimodal approaches, and frameworks boost AI quality.
+                </p>
+                <div className="flex items-center justify-between text-xs text-text-muted">
+                  <span>12 min read</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
