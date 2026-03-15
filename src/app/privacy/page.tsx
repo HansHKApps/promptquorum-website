@@ -135,10 +135,10 @@ export default function PrivacyPage() {
                     <Td>United States</Td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <Td><strong>[Email Service Provider]</strong></Td>
+                    <Td><strong>IONOS</strong> (1&amp;1 IONOS SE)</Td>
                     <Td>Sends beta launch and product update emails to waitlist subscribers</Td>
                     <Td>Email address</Td>
-                    <Td>[Country — update before publishing]</Td>
+                    <Td>Germany (EU)</Td>
                   </tr>
                   <tr>
                     <Td><strong>Google Analytics 4</strong> (Google LLC)</Td>
@@ -150,9 +150,7 @@ export default function PrivacyPage() {
               </table>
             </div>
 
-            <Note>
-              <strong>Action required before publishing:</strong> Replace "[Email Service Provider]" above with the name and country of the email platform you use to send waitlist notifications (e.g. Mailchimp / US, Resend / US, Brevo / France).
-            </Note>
+
 
             <P>
               We do not sell your data to any third party. We do not share your email address with advertisers.
@@ -163,7 +161,7 @@ export default function PrivacyPage() {
           <section>
             <H2 n="5">International data transfers</H2>
             <P>
-              Formspree and Google LLC are based in the United States. Transfers of personal data from the European Economic Area (EEA) or the United Kingdom (UK) to the United States are subject to appropriate safeguards:
+              Two of our processors are based in the United States. Transfers of personal data from the European Economic Area (EEA) or the United Kingdom (UK) to the United States are subject to appropriate safeguards:
             </P>
             <ul className="list-disc pl-6 space-y-2 text-text-secondary text-[15px] leading-relaxed">
               <li>
@@ -173,7 +171,7 @@ export default function PrivacyPage() {
                 <strong className="text-text-primary">Google Analytics:</strong> Google LLC participates in the EU–US Data Privacy Framework. Transfer is additionally covered by SCCs. Google's data transfer documentation is available at business.safety.google/gdpr.
               </li>
               <li>
-                <strong className="text-text-primary">[Email Service Provider]:</strong> Update this entry with the transfer mechanism used by your email provider before publishing.
+                <strong className="text-text-primary">IONOS (1&amp;1 IONOS SE):</strong> IONOS is headquartered in Karlsruhe, Germany and processes data entirely within the European Union. No international transfer takes place. IONOS's privacy documentation is available at ionos.com/terms-gtc/privacy-policy.
               </li>
             </ul>
             <P>
