@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { PromptOptimizerShowcase } from '@/components/PromptOptimizerShowcase'
 import { OptimizationShowcase } from '@/components/OptimizationShowcase'
+import { QuorumShowcase } from '@/components/QuorumShowcase'
 
 export const metadata: Metadata = {
   title: 'Features | PromptQuorum',
@@ -88,6 +89,19 @@ export default function FeaturesPage() {
             </div>
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 sm:p-12">
               <OptimizationShowcase />
+            </div>
+          </div>
+
+          {/* Quorum Multi-Model Consensus Showcase */}
+          <div className="mb-20">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-text-primary mb-3">Quorum — Multi-Model Consensus</h2>
+              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+                Collect responses from 25+ AI models, analyze consensus patterns, and synthesize insights across different perspectives.
+              </p>
+            </div>
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 sm:p-12">
+              <QuorumShowcase />
             </div>
           </div>
 

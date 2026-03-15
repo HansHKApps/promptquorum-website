@@ -72,6 +72,12 @@
       "namedRegex": "^/features/optimization(?:/)?$"
     },
     {
+      "page": "/features/quorum",
+      "regex": "^/features/quorum(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/quorum(?:/)?$"
+    },
+    {
       "page": "/how-it-works",
       "regex": "^/how\\-it\\-works(?:/)?$",
       "routeKeys": {},

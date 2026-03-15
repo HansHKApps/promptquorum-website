@@ -1,11 +1,12 @@
 {
   "/_not-found/page": "/_not-found",
   "/page": "/",
-  "/faq/page": "/faq",
   "/download/page": "/download",
+  "/faq/page": "/faq",
   "/how-it-works/page": "/how-it-works",
-  "/features/optimization/page": "/features/optimization",
+  "/features/quorum/page": "/features/quorum",
   "/blog/[slug]/page": "/blog/[slug]",
+  "/features/optimization/page": "/features/optimization",
   "/compare/page": "/compare",
   "/features/page": "/features"
 }
