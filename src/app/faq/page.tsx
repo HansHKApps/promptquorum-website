@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import { FAQPageClient } from '@/components/FAQPageClient'
 
 export const metadata: Metadata = {
-  title: 'FAQ | PromptQuorum',
-  description: 'Frequently asked questions about PromptQuorum - pricing, privacy, supported AI providers, and more.',
+  title: 'FAQ | PromptQuorum — Prompt Engineering, Privacy & AI Models',
+  description: 'Answers to 26 questions about PromptQuorum: pricing, privacy, prompt frameworks, hallucination detection, local AI models, multi-model consensus, dispatch, Quorum analysis, and more.',
   alternates: {
     canonical: 'https://www.promptquorum.com/faq',
   },
   openGraph: {
     title: 'FAQ | PromptQuorum',
-    description: 'Frequently asked questions about PromptQuorum - pricing, privacy, supported AI providers, and more.',
+    description: 'Everything you need to know about PromptQuorum — prompt engineering, privacy, AI providers, and getting started.',
   },
 }
 
@@ -18,7 +18,7 @@ export default function FAQPage() {
     <>
       <FAQPageClient />
 
-      {/* FAQ Schema for Google Rich Snippets */}
+      {/* FAQ Schema for Google Rich Snippets — all 26 EN questions */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -27,11 +27,31 @@ export default function FAQPage() {
             '@type': 'FAQPage',
             mainEntity: [
               { '@type': 'Question', name: 'Is PromptQuorum free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. PromptQuorum is free to use. You can bring your own API key, use a local LLM, or try our limited free backend service for prompt optimization on a test basis.' } },
-              { '@type': 'Question', name: 'How does privacy work?', acceptedAnswer: { '@type': 'Answer', text: 'You decide where your data goes. Keep everything local with LM Studio or Ollama, or use your own API keys. PromptQuorum is as private as you set it up.' } },
-              { '@type': 'Question', name: 'Which AI providers are supported?', acceptedAnswer: { '@type': 'Answer', text: 'Over 25 AI providers are included, and you can add your own custom providers. Connect to ChatGPT, Claude, Gemini, and many more.' } },
-              { '@type': 'Question', name: 'What platforms does PromptQuorum run on?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum starts with desktop apps (Mac, Windows), followed by a web application, and eventually mobile solutions.' } },
-              { '@type': 'Question', name: 'What makes PromptQuorum different?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum is highly automated for prompt improvements, can send the same prompt to multiple AIs simultaneously, and analyzes results based on your criteria.' } },
-              { '@type': 'Question', name: 'Are there any limits?', acceptedAnswer: { '@type': 'Answer', text: 'No limits from PromptQuorum side. Your usage is only limited by your API keys or local LLM resources.' } },
+              { '@type': 'Question', name: 'How does privacy work?', acceptedAnswer: { '@type': 'Answer', text: 'Zero telemetry, zero tracking, no data collection. API keys are stored only in your browser localStorage and never transmitted to any PromptQuorum server.' } },
+              { '@type': 'Question', name: 'Which AI providers are supported?', acceptedAnswer: { '@type': 'Answer', text: 'Over 25 AI providers including OpenAI, Anthropic Claude, Google Gemini, Grok, DeepSeek, Mistral, Cohere, Together AI, Groq, OpenRouter, plus all local providers like Ollama, LM Studio, Jan AI, GPT4All, and any OpenAI-compatible endpoint.' } },
+              { '@type': 'Question', name: 'What platforms does PromptQuorum run on?', acceptedAnswer: { '@type': 'Answer', text: 'Desktop apps (Mac, Windows via Electron), web application, and eventually mobile (iOS and Android via Capacitor). Works fully offline with a local LLM.' } },
+              { '@type': 'Question', name: 'What makes PromptQuorum different?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum is the only tool covering the full prompt lifecycle: structured writing with 9 frameworks, AI-powered iterative optimization, one-click dispatch to 25+ AI services, and multi-model consensus analysis — all without any data leaving your device.' } },
+              { '@type': 'Question', name: 'Are there any limits?', acceptedAnswer: { '@type': 'Answer', text: 'No limits from PromptQuorum. Your usage is only limited by your API keys or local LLM resources.' } },
+              { '@type': 'Question', name: 'What is prompt engineering and why does it matter?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt engineering is the practice of designing inputs to AI models so they return more accurate, useful, and reliable outputs. A well-structured prompt can improve AI output quality by 25–45%. PromptQuorum automates this with 9 built-in frameworks.' } },
+              { '@type': 'Question', name: 'How does PromptQuorum optimize my prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Your connected LLM transforms raw framework fields into a precision prompt. You then refine iteratively with 8 one-click refinements. Every step is saved in version history so you can revert anytime.' } },
+              { '@type': 'Question', name: 'What prompt frameworks are built into PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: '9 frameworks: Single Prompt Line, APE, CRAFT, CO-STAR (won the Singapore GPT-4 competition), SPECS, RISEN, TRACE, Google Prompt, and RTF. You can also build 2 fully custom frameworks.' } },
+              { '@type': 'Question', name: 'What is the CO-STAR framework?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response. It won the Singapore GPT-4 prompt engineering competition and is ideal for business communication and marketing.' } },
+              { '@type': 'Question', name: 'What is multi-model consensus and why is it valuable?', acceptedAnswer: { '@type': 'Answer', text: 'Multi-model consensus means sending the same prompt to multiple AI models and finding where they agree. When 5 independent models give the same answer, confidence is far higher than when 1 model answers alone.' } },
+              { '@type': 'Question', name: 'How does PromptQuorum detect AI hallucinations?', acceptedAnswer: { '@type': 'Answer', text: 'After collecting responses from multiple models in the Quorum step, your LLM runs Hallucination Detection analysis — flagging claims that appear in only one model\'s response or that contradict factual consensus.' } },
+              { '@type': 'Question', name: 'Can I use PromptQuorum with local AI models like Ollama or LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. PromptQuorum natively connects to Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, KoboldCpp, vLLM, oobabooga, and any OpenAI-compatible endpoint. No API key needed for local models.' } },
+              { '@type': 'Question', name: 'Can I use PromptQuorum completely offline?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. With a local model like Ollama or LM Studio, PromptQuorum works fully offline. No internet connection required. Your prompts, API keys, and results never leave your device.' } },
+              { '@type': 'Question', name: 'What is BYOM (Bring Your Own Model)?', acceptedAnswer: { '@type': 'Answer', text: 'BYOM means PromptQuorum never calls any LLM using its own API keys. Every call goes directly from your browser to your chosen provider. API keys are stored only in your browser\'s localStorage.' } },
+              { '@type': 'Question', name: 'How does the Dispatch feature work?', acceptedAnswer: { '@type': 'Answer', text: 'Dispatch sends your optimized prompt to multiple AI services in one click. For auto-dispatch services, PromptQuorum pre-loads your prompt into the URL. All tabs open in parallel — collect all responses in under a minute.' } },
+              { '@type': 'Question', name: 'What is the Quorum analysis and what types are available?', acceptedAnswer: { '@type': 'Answer', text: '13 analysis types across 4 categories: Synthesis (Consensus Summary, Weighted Merge, Atomic Facts Extraction), Comparison (Overlap Mapping, Contradiction Detection, Confidence Scoring), Quality (Completeness Check, Hallucination Detection, Redundancy Elimination), and Recommendations (Best Answer Selection, Multi-Model Ensemble, Controversy Flag).' } },
+              { '@type': 'Question', name: 'Can I export my results?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Quorum results export in 6 formats: .txt, .md, .json, .csv, .html, and .pdf. Multiple formats are bundled into a .zip archive.' } },
+              { '@type': 'Question', name: 'How does the Framework Wizard work?', acceptedAnswer: { '@type': 'Answer', text: 'The Framework Wizard asks you questions about your task and recommends the most suitable framework from the 9 built-in options, with a side-by-side comparison of what each would produce.' } },
+              { '@type': 'Question', name: 'What is Smart Temperature Adjustment?', acceptedAnswer: { '@type': 'Answer', text: 'Before each optimization, PromptQuorum suggests the ideal LLM temperature: ~0.2 for factual tasks, ~0.7 for balanced, ~0.85 for creative. After 3 consistent choices for the same intent type, it auto-applies your preference.' } },
+              { '@type': 'Question', name: 'Does PromptQuorum work with ChatGPT, Claude, and Gemini?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You can use ChatGPT (GPT-4, GPT-4o), Anthropic Claude (3, 3.5), and Google Gemini (1.5 Pro, Flash) as your optimization LLM by adding your API key in Settings.' } },
+              { '@type': 'Question', name: 'Is there a version history for my prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every optimization step and refinement is saved automatically in version history with a human-readable label. You can select any version to restore it and branch new refinements from there.' } },
+              { '@type': 'Question', name: 'What output formats and languages does PromptQuorum support?', acceptedAnswer: { '@type': 'Answer', text: 'LLM output language is configurable: English, German, French, Spanish, Italian, Portuguese, Chinese, and Japanese. Response length is adjustable from 100 to 2000 words.' } },
+              { '@type': 'Question', name: 'How does PromptQuorum handle my API keys securely?', acceptedAnswer: { '@type': 'Answer', text: 'API keys are stored only in your browser\'s localStorage. They are never sent to any PromptQuorum server, never logged, and never included in telemetry (there is none).' } },
+              { '@type': 'Question', name: 'What is Teaching Mode?', acceptedAnswer: { '@type': 'Answer', text: 'Teaching Mode adds an explanation box below every optimization result that explains exactly why each change was made — which prompt engineering principles were applied and what effect they have.' } },
+              { '@type': 'Question', name: 'How do I join the waitlist and what do early users get?', acceptedAnswer: { '@type': 'Answer', text: 'Enter your email in the waitlist form on the homepage. Early access members get lifetime premium features, priority support, and direct input into the product roadmap.' } },
             ],
             breadcrumb: {
               '@type': 'BreadcrumbList',
