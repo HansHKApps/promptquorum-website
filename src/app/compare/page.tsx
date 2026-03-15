@@ -23,16 +23,16 @@ export default function ComparePage() {
         <div className="flex items-center gap-2 text-sm text-text-secondary mb-8">
           <Link href="/" className="hover:text-primary">Home</Link>
           <span>/</span>
-          <span className="text-text-primary font-medium">Compare AI Models</span>
+          <span className="text-text-primary font-medium">Compare AI Responses</span>
         </div>
 
         {/* Hero */}
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-text-primary leading-tight mb-6">
-            Compare AI Models on the Same Prompt
+            One Prompt. Compare Every AI Response.
           </h1>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            Run your prompt across ChatGPT, Claude, Gemini, and 25+ other AI models simultaneously. Get side-by-side responses in seconds.
+            Send your prompt once — receive responses from ChatGPT, Claude, Gemini and 25+ models simultaneously. See exactly what each says, side-by-side.
           </p>
         </div>
 
@@ -40,9 +40,9 @@ export default function ComparePage() {
         <div className="prose prose-invert max-w-none space-y-8">
           {/* Why Compare */}
           <section>
-            <h2 className="text-3xl font-bold text-text-primary mb-4">Why Compare Multiple AI Models?</h2>
+            <h2 className="text-3xl font-bold text-text-primary mb-4">Why Compare AI Responses on the Same Prompt?</h2>
             <p className="text-text-secondary mb-4">
-              Different AI models excel at different tasks. ChatGPT dominates creative writing. Claude excels at reasoning and analysis. Gemini shines with multimodal tasks. By comparing all models on the same prompt, you:
+              Different models give different answers to the exact same question. ChatGPT, Claude, Gemini — each has its own reasoning, strengths, and blind spots. By seeing all responses to your prompt at once, you:
             </p>
             <ul className="space-y-2 text-text-secondary">
               <li className="flex gap-3">
@@ -226,9 +226,9 @@ export default function ComparePage() {
 
           {/* CTA */}
           <section className="bg-primary/10 border border-primary/20 rounded-lg p-8 text-center mt-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-4">Ready to Compare AI Models?</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-4">Ready to See Every AI Response?</h2>
             <p className="text-text-secondary mb-6">
-              Join the waitlist and get instant access to run prompts across 25+ AI models side-by-side.
+              Join the waitlist and get instant access — one prompt, 25+ responses, side-by-side.
             </p>
             <Link href="/#waitlist" className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
               Join Waitlist

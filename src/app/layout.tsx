@@ -5,8 +5,8 @@ import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 
 export const metadata: Metadata = {
-  title: 'Compare AI Models on the Same Prompt | PromptQuorum',
-  description: 'Run prompts across 25+ AI models simultaneously. Compare ChatGPT, Claude, Gemini, and more side-by-side. Detect hallucinations, find consensus. Multi-LLM testing tool.',
+  title: 'One Prompt. Every AI Response. | PromptQuorum',
+  description: 'Run your prompt once — get responses from ChatGPT, Claude, Gemini and 25+ AI models side-by-side. Compare results, detect hallucinations, find consensus.',
   metadataBase: new URL('https://www.promptquorum.com'),
   alternates: {
     canonical: 'https://www.promptquorum.com',

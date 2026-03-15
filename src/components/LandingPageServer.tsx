@@ -92,12 +92,12 @@ export function LandingPageServer() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-text-primary leading-tight animate-fade-in" style={{ animationDelay: '100ms' }}>
-            Compare AI Models on the Same Prompt
+            One Prompt. 25+ AI Responses.
             <span className="block text-primary">Get Consensus</span>
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
-            Run your prompt across 25+ AI models simultaneously. Compare responses side-by-side, detect hallucinations, find consensus answers. Multi-LLM testing in seconds.
+            Run your prompt once — get responses from ChatGPT, Claude, Gemini and 25+ models side-by-side. Compare what each says, detect hallucinations, find where they agree.
           </p>
 
           <div className="mt-10 animate-fade-in" style={{ animationDelay: '300ms' }}>
