@@ -1,41 +1,18 @@
 'use client'
 
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import { LanguageSwitcher } from './LanguageSwitcher'
-import { useState, useEffect } from 'react'
+import { WaitlistModal } from './WaitlistModal'
+import { useState } from 'react'
 
 export function HeaderClient() {
-  const router = useRouter()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  // Handle smooth scroll to waitlist when URL has #waitlist
-  useEffect(() => {
-    if (window.location.hash === '#waitlist') {
-      const element = document.getElementById('waitlist')
-      if (element) {
-        setTimeout(() => {
-          const headerHeight = 64
-          const elementPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight
-          window.scrollTo({ top: elementPosition, behavior: 'smooth' })
-        }, 100)
-      }
-    }
-  }, [])
+  const [waitlistModalOpen, setWaitlistModalOpen] = useState(false)
 
   const handleWaitlistClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     setMobileMenuOpen(false)
-    const element = document.getElementById('waitlist')
-    if (element) {
-      // Waitlist section exists on this page, scroll to it
-      const headerHeight = 64 // h-16 = 64px
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' })
-    } else {
-      // Waitlist section doesn't exist on this page, navigate to home
-      router.push('/#waitlist')
-    }
+    setWaitlistModalOpen(true)
   }
 
   return (
@@ -120,6 +97,9 @@ export function HeaderClient() {
           </a>
         </div>
       )}
+
+      {/* Waitlist Modal */}
+      <WaitlistModal isOpen={waitlistModalOpen} onClose={() => setWaitlistModalOpen(false)} />
     </header>
   )
 }
