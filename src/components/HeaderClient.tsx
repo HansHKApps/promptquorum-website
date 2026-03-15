@@ -10,6 +10,7 @@ export function HeaderClient() {
         </div>
         <div className="flex items-center gap-4">
           <nav className="hidden md:flex items-center gap-6">
+            <Link href="/compare" className="text-text-secondary hover:text-primary transition-colors">Compare Models</Link>
             <Link href="/features" className="text-text-secondary hover:text-primary transition-colors">Features</Link>
             <Link href="/how-it-works" className="text-text-secondary hover:text-primary transition-colors">How It Works</Link>
             <Link href="/faq" className="text-text-secondary hover:text-primary transition-colors">FAQ</Link>

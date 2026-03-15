@@ -91,12 +91,12 @@ export function LandingPageServer() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-text-primary leading-tight animate-fade-in" style={{ animationDelay: '100ms' }}>
-            Compare AI Prompts & Models
-            <span className="block text-primary">Instantly</span>
+            Compare AI Models on the Same Prompt
+            <span className="block text-primary">Get Consensus</span>
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
-            PromptQuorum helps you craft better AI prompts and compare responses from 25+ models in seconds. Optimize, compare, and master AI-powered workflows.
+            Run your prompt across 25+ AI models simultaneously. Compare responses side-by-side, detect hallucinations, find consensus answers. Multi-LLM testing in seconds.
           </p>
 
           <div className="mt-10 animate-fade-in" style={{ animationDelay: '300ms' }}>
@@ -123,6 +123,21 @@ export function LandingPageServer() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Multi-Model Comparison Section */}
+      <section className="py-20 px-4 sm:px-6 bg-primary/5 border-t-2 border-primary/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-6">
+            Compare AI Models Side-by-Side
+          </h2>
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
+            Run the same prompt across ChatGPT, Claude, Gemini, and 25+ other AI models simultaneously. See which model performs best for your specific task.
+          </p>
+          <Link href="/compare" className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
+            View AI Model Comparison Guide
+          </Link>
         </div>
       </section>
 

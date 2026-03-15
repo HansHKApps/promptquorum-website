@@ -4,8 +4,8 @@ import './globals.css'
 import { Providers } from '@/components/Providers'
 
 export const metadata: Metadata = {
-  title: 'PromptQuorum: AI Prompt Optimizer & Comparator',
-  description: 'Transform rough ideas into perfect prompts. Compare AI results across ChatGPT, Claude, Gemini & more—100% private, no data tracking.',
+  title: 'Compare AI Models on the Same Prompt | PromptQuorum',
+  description: 'Run prompts across 25+ AI models simultaneously. Compare ChatGPT, Claude, Gemini, and more side-by-side. Detect hallucinations, find consensus. Multi-LLM testing tool.',
   metadataBase: new URL('https://www.promptquorum.com'),
   alternates: {
     canonical: 'https://www.promptquorum.com',

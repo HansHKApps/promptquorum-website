@@ -2,8 +2,9 @@
   "/_not-found/page": "/_not-found",
   "/page": "/",
   "/blog/[slug]/page": "/blog/[slug]",
+  "/download/page": "/download",
+  "/compare/page": "/compare",
   "/features/page": "/features",
-  "/how-it-works/page": "/how-it-works",
   "/faq/page": "/faq",
-  "/download/page": "/download"
+  "/how-it-works/page": "/how-it-works"
 }
