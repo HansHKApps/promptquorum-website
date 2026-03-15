@@ -16,7 +16,8 @@
       "Read(//localAI: {/,/^  },/ { if \\(/en: {/\\) { start=1 } if \\(start && /^      },/\\) { exit } if \\(start && /^\\\\s+[a-zA-Z]+:/**)",
       "Bash(git checkout:*)",
       "Bash(pnpm build:*)",
-      "Bash(/tmp/blog_translations.txt:*)"
+      "Bash(/tmp/blog_translations.txt:*)",
+      "Bash(node check-live.js)"
     ]
   }
 }

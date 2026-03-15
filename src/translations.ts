@@ -68,7 +68,7 @@ export const translations = {
     notifyWhenLaunch: "We will notify you when PromptQuorum launches.",
 
     // Blog
-    blogTitle: "Learn Prompt Engineering",
+    blogTitle: "Blog & Educational Resources",
     blogSubtitle: "Master the techniques and frameworks used by AI experts",
 
     // Footer
@@ -144,7 +144,7 @@ export const translations = {
 
     // Footer
     // Blog
-    blogTitle: "Prompt Engineering lernen",
+    blogTitle: "Blog & Bildungsressourcen",
     blogSubtitle: "Meistern Sie die Techniken und Frameworks der KI-Experten",
 
     footerCopyright: "(c) 2026 PromptQuorum. Mit Sorgfalt entwickelt fuer KI-Power-User.",
@@ -219,7 +219,7 @@ export const translations = {
 
     // Footer
     // Blog
-    blogTitle: "Apprenez le Prompt Engineering",
+    blogTitle: "Blog & Ressources Éducatives",
     blogSubtitle: "Maitrisez les techniques et frameworks utilises par les experts IA",
 
     footerCopyright: "(c) 2026 PromptQuorum. Developpe avec soin pour les experts IA.",
@@ -294,7 +294,7 @@ export const translations = {
 
     // Footer
     // Blog
-    blogTitle: "プロンプトエンジニアリングを学ぶ",
+    blogTitle: "ブログ&教育リソース",
     blogSubtitle: "AIエキスパートが使うテクニックとフレームワークをマスター",
 
     footerCopyright: "(c) 2026 PromptQuorum. AIパワーユーザー向けに丁寧に開発。",
@@ -369,7 +369,7 @@ export const translations = {
 
     // Footer
     // Blog
-    blogTitle: "学习提示词工程",
+    blogTitle: "博客和教育资源",
     blogSubtitle: "掌握AI专家使用的技术和框架",
 
     footerCopyright: "(c) 2026 PromptQuorum. 为AI高级用户精心打造。",
