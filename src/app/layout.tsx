@@ -115,24 +115,23 @@ export default function RootLayout({
               "@type": "SoftwareApplication",
               "name": "PromptQuorum",
               "alternateName": "Prompt Quorum",
-              "description": "PromptQuorum is an AI prompt engineering workspace. Write structured prompts using 9 frameworks (CO-STAR, CRAFT, RISEN, APE, SPECS, TRACE, RTF, Google Prompt, RTF). Optimize with your own LLM, dispatch to ChatGPT, Claude, Gemini and 25+ providers, then analyze consensus across all responses — fully private, no data leaves your device.",
+              "description": "PromptQuorum is a multi-model AI dispatch and consensus tool. Write structured prompts with 9 frameworks (CO-STAR, CRAFT, RISEN, APE, SPECS, TRACE, RTF, Google Prompt, Single Prompt Line), dispatch simultaneously to ChatGPT, Claude, Gemini and 25+ AI providers, then run consensus analysis across all responses. Hallucination detection, contradiction scoring, best-answer extraction. 100% private — no data leaves your device.",
               "url": "https://www.promptquorum.com",
               "downloadUrl": "https://www.promptquorum.com/download",
-              "applicationCategory": "DeveloperApplication",
-              "applicationSubCategory": "AI Tools",
-              "operatingSystem": "Windows, macOS, Web",
+              "applicationCategory": "AI Tools",
+              "operatingSystem": "Windows, macOS, Web Browser",
               "softwareVersion": "1.0",
               "screenshot": "https://www.promptquorum.com/og-image.png",
               "featureList": [
+                "Simultaneous dispatch to 25+ AI models (ChatGPT, Claude, Gemini, Grok, Mistral, Llama, and more)",
+                "Multi-model consensus scoring across all responses",
+                "Hallucination detection and contradiction flagging",
                 "9 prompt engineering frameworks (CO-STAR, CRAFT, RISEN, APE, SPECS, TRACE, RTF, Google Prompt, Single Prompt Line)",
-                "AI-powered iterative prompt optimization",
-                "Dispatch to 25+ AI providers simultaneously",
-                "Multi-model consensus analysis with 13 analysis types",
-                "Hallucination detection across model responses",
-                "Local LLM support (Ollama, LM Studio, Jan AI, GPT4All)",
-                "Fully offline capable — no data leaves your device",
-                "Framework Wizard for automatic framework selection",
-                "Version history for all prompt iterations",
+                "AI-powered iterative prompt optimization with version history",
+                "13 Quorum analysis types: Consensus Summary, Best Answer Selection, Atomic Facts Extraction, Overlap Mapping, and more",
+                "Local LLM support — fully offline with Ollama, LM Studio, Jan AI, GPT4All",
+                "BYOM: API keys stored only in browser localStorage, never transmitted",
+                "Framework Wizard for automatic framework recommendation",
                 "Export results in 6 formats (TXT, MD, JSON, CSV, HTML, PDF)"
               ],
               "author": {
@@ -144,7 +143,7 @@ export default function RootLayout({
                 "price": "0",
                 "priceCurrency": "USD",
                 "availability": "https://schema.org/InStock",
-                "description": "Free to use. Bring your own API key or use a local LLM."
+                "description": "Free. Bring your own API key or connect a local LLM. No account required."
               }
             })
           }}
