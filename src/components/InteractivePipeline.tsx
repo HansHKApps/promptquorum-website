@@ -1,5 +1,7 @@
+'use client'
+
 import { useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'next/navigation'
 import { ChevronDown } from 'lucide-react'
 
 type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh'
