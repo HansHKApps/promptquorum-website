@@ -2,11 +2,11 @@
   "/_not-found/page": "/_not-found",
   "/page": "/",
   "/download/page": "/download",
+  "/blog/[slug]/page": "/blog/[slug]",
+  "/features/optimization/page": "/features/optimization",
   "/faq/page": "/faq",
   "/how-it-works/page": "/how-it-works",
   "/features/quorum/page": "/features/quorum",
-  "/blog/[slug]/page": "/blog/[slug]",
-  "/features/optimization/page": "/features/optimization",
-  "/compare/page": "/compare",
-  "/features/page": "/features"
+  "/features/page": "/features",
+  "/compare/page": "/compare"
 }
