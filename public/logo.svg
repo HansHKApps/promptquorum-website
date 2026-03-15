@@ -1,7 +1,7 @@
-<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <!-- Four purple stripes centered, with varying opacity -->
-  <rect x="14" y="14" width="7" height="36" fill="#6750A4" opacity="1"/>
-  <rect x="25" y="14" width="7" height="36" fill="#6750A4" opacity="0.75"/>
-  <rect x="36" y="14" width="7" height="36" fill="#6750A4" opacity="0.5"/>
-  <rect x="47" y="14" width="7" height="36" fill="#6750A4" opacity="0.3"/>
+<svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Four bars: total width 44px, centered in 64px (10px margin each side) -->
+  <rect x="10" y="14" width="8" height="36" rx="1" fill="#6750A4" opacity="1"/>
+  <rect x="22" y="14" width="8" height="36" rx="1" fill="#6750A4" opacity="0.75"/>
+  <rect x="34" y="14" width="8" height="36" rx="1" fill="#6750A4" opacity="0.5"/>
+  <rect x="46" y="14" width="8" height="36" rx="1" fill="#6750A4" opacity="0.3"/>
 </svg>
