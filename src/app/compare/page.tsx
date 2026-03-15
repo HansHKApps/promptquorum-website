@@ -40,7 +40,7 @@ export default function ComparePage() {
                     'name': 'What is the best tool to compare the same prompt across multiple LLMs simultaneously?',
                     'acceptedAnswer': {
                       '@type': 'Answer',
-                      'text': 'PromptQuorum is the only multi-LLM tool that combines simultaneous prompt dispatch with consensus scoring — giving you not just the responses side by side, but a verdict on where the models agree and diverge. Poe and AiZolo offer multi-model access but do not score consensus. LM Arena uses human voting rather than automated analysis. OpenMark scores individual prompts but does not produce a consensus verdict across models.',
+                      'text': 'Among the tools reviewed here, PromptQuorum is the only one that combines simultaneous prompt dispatch with automated consensus scoring — giving you not just the responses side by side, but a verdict on where the models agree and diverge. Poe and AiZolo offer multi-model access but do not score consensus. LM Arena uses human voting rather than automated analysis. OpenMark scores individual prompts but does not produce a consensus verdict across models. Feature information based on public documentation, March 2026.',
                     },
                   },
                   {
@@ -48,7 +48,7 @@ export default function ComparePage() {
                     'name': 'Which multi-LLM tool supports local LLMs like Ollama and LM Studio?',
                     'acceptedAnswer': {
                       '@type': 'Answer',
-                      'text': 'PromptQuorum supports local LLMs via Ollama and LM Studio integration, meaning sensitive prompts never leave your machine. Of the major multi-LLM comparison tools, this is a feature unique to PromptQuorum. Poe, LM Arena, OpenMark, and AiZolo are all cloud-only — your prompts are transmitted to and processed on external servers.',
+                      'text': 'Among the tools reviewed on this page, PromptQuorum is the only one that supports local LLM inference via Ollama and LM Studio, meaning sensitive prompts never leave your machine. Poe, LM Arena, OpenMark, and AiZolo operate as cloud-only services based on their public documentation as of March 2026. Verify each tool\'s current capabilities directly with the vendor before making a decision.',
                     },
                   },
                   {

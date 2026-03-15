@@ -30,6 +30,11 @@ function CompareContent() {
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
             The best multi-LLM tool for your workflow depends on whether you need simultaneous dispatch, consensus scoring, local LLM privacy, or simple side-by-side comparison. This page breaks down every major option in 2026 so you can choose with confidence.
           </p>
+          {/* Disclaimer */}
+          <div className="mt-6 bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-xs text-amber-800 leading-relaxed">
+            <strong>Accuracy notice:</strong> Feature and pricing information was verified in March 2026 and is provided in good faith based on each product&apos;s public documentation at that time. Products change frequently — verify current capabilities directly with each vendor before making a decision. If you believe any information on this page is inaccurate or outdated, please{' '}
+            <a href="mailto:hello@promptquorum.com" className="underline hover:text-amber-900">contact us</a> and we will correct it promptly. This comparison is produced by PromptQuorum and reflects our perspective as a participant in this market.
+          </div>
           {/* Jump links */}
           <div className="flex flex-wrap gap-2 mt-6">
             {[
@@ -136,7 +141,7 @@ function CompareContent() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs font-mono text-text-secondary mt-3">✓ Yes · ~ Partial · ✗ No · Last verified March 2026. Pricing and features subject to change.</p>
+          <p className="text-xs font-mono text-text-secondary mt-3">✓ Yes · ~ Partial · ✗ No · Based on public documentation, March 2026. Pricing and features change — verify with each vendor. This comparison is produced by PromptQuorum.</p>
         </section>
 
         {/* PromptQuorum */}
@@ -153,7 +158,7 @@ function CompareContent() {
               ))}
             </div>
             <p className="text-text-secondary mb-3">
-              PromptQuorum is the only multi-LLM tool that combines simultaneous prompt dispatch with automated consensus scoring. You write one prompt, select your models, and PromptQuorum dispatches to all of them in parallel. The Quorum Verdict then analyses where the models agree, where they diverge, and what those patterns mean for the reliability of the answer.
+              PromptQuorum is, to our knowledge, the only tool among those reviewed here that combines simultaneous prompt dispatch with automated consensus scoring. You write one prompt, select your models, and PromptQuorum dispatches to all of them in parallel. The Quorum Verdict then analyses where the models agree, where they diverge, and what those patterns mean for the reliability of the answer.
             </p>
             <p className="text-text-secondary mb-3">
               The defining feature is <strong className="text-text-primary">local LLM support</strong>. Via Ollama and LM Studio integration, PromptQuorum can include locally-running models in the dispatch — meaning sensitive prompts never leave your machine. For legal professionals, healthcare workers, financial analysts, and developers working with proprietary code, this is not optional.
@@ -260,7 +265,7 @@ function CompareContent() {
               ))}
             </div>
             <p className="text-text-secondary mb-3">
-              AiZolo is a unified multi-model workspace designed for content creators and marketing teams. It offers simultaneous dispatch to GPT, Claude, Gemini, and Grok with a side-by-side comparison layout, prompt library, and project organisation features. At $9.90/month it is one of the more affordable paid options in the category.
+              AiZolo is a unified multi-model workspace designed for content creators and marketing teams. It offers simultaneous dispatch to GPT, Claude, Gemini, and Grok with a side-by-side comparison layout, prompt library, and project organisation features. As of March 2026, plans started from $9.90/month, making it one of the more affordable paid options in the category — verify current pricing at aizolo.com.
             </p>
             <p className="text-text-secondary">
               AiZolo does not offer consensus scoring — it displays responses side by side but leaves the analysis entirely to the user. It supports only four cloud models (GPT, Claude, Gemini, Grok) with no local LLM option. It is a workflow tool for content production rather than a technical evaluation platform.
@@ -298,11 +303,11 @@ function CompareContent() {
             {[
               {
                 q: 'What is the best tool to compare the same prompt across multiple LLMs simultaneously?',
-                a: 'PromptQuorum is the only multi-LLM tool that combines true simultaneous dispatch with automated consensus scoring. While tools like Poe, AiZolo, and OpenMark offer parallel responses, none produces a Quorum Verdict — an automated analysis of where models agree and diverge. For users who need more than visual comparison, PromptQuorum is the purpose-built option.',
+                a: 'Among the tools reviewed on this page, PromptQuorum is the only one that combines simultaneous dispatch with automated consensus scoring. While Poe, AiZolo, and OpenMark offer parallel responses, none produces a Quorum Verdict — an automated analysis of where models agree and diverge. For users who need more than visual comparison, PromptQuorum is the purpose-built option. Feature information verified March 2026.',
               },
               {
                 q: 'Which multi-LLM tool supports local LLMs like Ollama and LM Studio?',
-                a: 'PromptQuorum supports local LLM inference via Ollama and LM Studio, making it the only tool in this comparison that keeps sensitive prompts entirely on your own machine. All other tools — Poe, LM Arena, OpenMark, and AiZolo — are cloud-only. This makes PromptQuorum the only viable option for legal, healthcare, financial, and enterprise users with data confidentiality requirements.',
+                a: 'Among the tools reviewed on this page, PromptQuorum is the only one that supports local LLM inference via Ollama and LM Studio, keeping sensitive prompts entirely on your own machine. The other tools reviewed — Poe, LM Arena, OpenMark, and AiZolo — operate as cloud-only services based on their public documentation as of March 2026. For users with strict data confidentiality requirements, verify each tool\'s current capabilities directly with the vendor.',
               },
               {
                 q: 'What is consensus scoring in the context of multi-LLM tools?',
