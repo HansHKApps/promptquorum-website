@@ -1,6 +1,6 @@
 # PromptQuorum
 
-> PromptQuorum is a privacy-first AI prompt optimizer and multi-AI comparator. It transforms rough ideas into precision prompts using 8+ frameworks (CO-STAR, CRAFT, RISEN, SPECS, APE, TRACE, TAG, RISEN), dispatches them to 25+ AI providers (ChatGPT, Claude, Gemini, local LLMs), and compares results side-by-side. Runs locally on macOS, Windows, and Linux with zero data tracking.
+> PromptQuorum is a privacy-first AI prompt optimizer and multi-AI comparator. It transforms rough ideas into precision prompts using 8+ frameworks (CO-STAR, CRAFT, RISEN, SPECS, APE, TRACE, TAG, RISEN), dispatches them to 25+ AI providers (ChatGPT, Claude, Gemini, local LLMs), and compares results side-by-side. Runs locally on macOS and Windows with zero data tracking.
 
 PromptQuorum is a desktop application (Electron + React) with a 4-stage pipeline: Prompt, Optimize, Dispatch, Quorum. Users can bring their own API keys or use local models via LM Studio or Ollama. The app is free to use.
 
@@ -10,7 +10,7 @@ PromptQuorum is a desktop application (Electron + React) with a 4-stage pipeline
 - [Features](https://www.promptquorum.com/features): Detailed feature list including prompt optimization, multi-AI dispatch, Quorum comparison, privacy controls, local LLM support, and cross-platform availability
 - [How It Works](https://www.promptquorum.com/how-it-works): Interactive 4-stage pipeline walkthrough (Prompt, Optimize, Dispatch, Quorum)
 - [FAQ](https://www.promptquorum.com/faq): Frequently asked questions about pricing (free), privacy, supported AI providers, platforms, and usage limits
-- [Download](https://www.promptquorum.com/download): Download PromptQuorum for macOS, Windows, and Linux
+- [Download](https://www.promptquorum.com/download): Download PromptQuorum for macOS and Windows
 
 ## Blog
 

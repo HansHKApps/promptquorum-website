@@ -1245,7 +1245,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         ollama: {
           title: 'Ollama (Easiest)',
           content: [
-            'The most popular local LLM runner. Download, click install, choose a model (Llama 2, Mistral, etc.), and you\'re running. Supports 1000+ models. Runs on Mac, Linux, Windows.',
+            'The most popular local LLM runner. Download, click install, choose a model (Llama 2, Mistral, etc.), and you\'re running. Supports 1000+ models. Runs on Mac and Windows.',
             'Best for: Beginners, experimenting with local AI',
             'Cost: Free',
             'Models available: Llama 2, Mistral, Phi, Neural Chat, Orca, and many more',
@@ -1408,7 +1408,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         ollama: {
           title: 'Ollama (Am einfachsten)',
           content: [
-            'Der beliebteste lokale LLM-Runner. Laden Sie herunter, klicken Sie auf Installieren, wählen Sie ein Modell (Llama 2, Mistral usw.), und Sie können loslegen. Unterstützt 1000+ Modelle. Läuft auf Mac, Linux, Windows.',
+            'Der beliebteste lokale LLM-Runner. Laden Sie herunter, klicken Sie auf Installieren, wählen Sie ein Modell (Llama 2, Mistral usw.), und Sie können loslegen. Unterstützt 1000+ Modelle. Läuft auf Mac und Windows.',
             'Best für: Anfänger, Experimentieren mit lokaler KI',
             'Kosten: Kostenlos',
             'Verfügbare Modelle: Llama 2, Mistral, Phi, Neural Chat, Orca und viele mehr',
@@ -1571,7 +1571,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         ollama: {
           title: 'Ollama (Le plus facile)',
           content: [
-            'Le coureur LLM local le plus populaire. Téléchargez, cliquez sur Installer, choisissez un modèle (Llama 2, Mistral, etc.), et vous êtes prêt. Prend en charge 1000+ modèles. S\'exécute sur Mac, Linux, Windows.',
+            'Le coureur LLM local le plus populaire. Téléchargez, cliquez sur Installer, choisissez un modèle (Llama 2, Mistral, etc.), et vous êtes prêt. Prend en charge 1000+ modèles. S\'exécute sur Mac et Windows.',
             'Meilleur pour : Débutants, expérimenter avec l\'IA locale',
             'Coût : Gratuit',
             'Modèles disponibles : Llama 2, Mistral, Phi, Neural Chat, Orca, et bien d\'autres',
@@ -1734,7 +1734,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         ollama: {
           title: 'Ollama（最も簡単）',
           content: [
-            '最も人気のあるローカルLLMランナー。 ダウンロードして、インストールをクリックし、モデル（Llama 2、Mistral等）を選択すると、実行されます。 1000以上のモデルをサポート。 Mac、Linux、Windowsで実行。',
+            '最も人気のあるローカルLLMランナー。 ダウンロードして、インストールをクリックし、モデル（Llama 2、Mistral等）を選択すると、実行されます。 1000以上のモデルをサポート。 MacとWindowsで実行。',
             '最適：初心者、ローカルAIとの実験',
             'コスト：無料',
             '利用可能なモデル：Llama 2、Mistral、Phi、Neural Chat、Orcaなど',
@@ -1897,7 +1897,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         ollama: {
           title: 'Ollama（最简单）',
           content: [
-            '最受欢迎的本地LLM运行程序。 下载、点击安装、选择模型（Llama 2、Mistral等），您就可以运行。 支持1000多个模型。 在Mac、Linux、Windows上运行。',
+            '最受欢迎的本地LLM运行程序。 下载、点击安装、选择模型（Llama 2、Mistral等），您就可以运行。 支持1000多个模型。 在Mac和Windows上运行。',
             '最适合：初学者、尝试本地AI',
             '成本：免费',
             '可用模型：Llama 2、Mistral、Phi、Neural Chat、Orca等',

@@ -19,8 +19,8 @@ export function DownloadPage() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Download PromptQuorum - AI Prompt Optimizer for macOS, Windows, Linux</title>
-        <meta name="description" content="Download PromptQuorum for macOS, Windows, and Linux. Start optimizing your AI prompts locally with zero data tracking." />
+        <title>Download PromptQuorum - macOS & Windows</title>
+        <meta name="description" content="Download PromptQuorum for Mac & Windows. Start optimizing AI prompts locally with zero tracking. Free privacy-first prompt optimization." />
         <link rel="canonical" href="https://www.promptquorum.com/download" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -29,7 +29,7 @@ export function DownloadPage() {
           "description": "AI prompt optimizer and multi-AI comparator. Privacy-first, runs locally.",
           "url": "https://www.promptquorum.com/download",
           "applicationCategory": "UtilityApplication",
-          "operatingSystem": "Windows, macOS, Linux",
+          "operatingSystem": "Windows, macOS",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
           "breadcrumb": {
             "@type": "BreadcrumbList",
@@ -59,7 +59,7 @@ export function DownloadPage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-6 animate-fade-in">
             <Download />
-            <span>Available for Mac, Windows & Linux</span>
+            <span>Available for Mac & Windows</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-text-primary leading-tight animate-fade-in" style={{ animationDelay: '100ms' }}>
@@ -90,7 +90,7 @@ export function DownloadPage() {
           </div>
 
           <p className="mt-8 text-text-muted text-sm animate-fade-in" style={{ animationDelay: '400ms' }}>
-            macOS • Windows • Linux — Coming to web & mobile
+            macOS • Windows — Coming to web & mobile
           </p>
 
           {/* Platform Details */}
@@ -102,7 +102,7 @@ export function DownloadPage() {
               <div className="text-2xl mb-2">🖥️</div>
               <h3 className="text-lg font-semibold text-text-primary mb-2">Desktop Apps</h3>
               <p className="text-sm text-text-secondary">
-                Native apps for Mac, Windows, and Linux with full feature support.
+                Native apps for Mac and Windows with full feature support.
               </p>
             </div>
             <div className="p-6 rounded-lg bg-gray-50 border border-gray-200">

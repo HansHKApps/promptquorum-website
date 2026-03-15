@@ -64,8 +64,8 @@ export function Features() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>PromptQuorum Features & Capabilities | AI Prompt Optimizer</title>
-        <meta name="description" content="Explore PromptQuorum's powerful features: 8+ prompt frameworks, multi-AI dispatch, side-by-side comparison, local privacy, and more." />
+        <title>PromptQuorum Features - Optimization Tools</title>
+        <meta name="description" content="Explore PromptQuorum's powerful features: 8+ prompt frameworks, multi-AI dispatch, side-by-side comparison, local privacy, smart optimization." />
         <link rel="canonical" href="https://www.promptquorum.com/features" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",

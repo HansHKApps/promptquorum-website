@@ -52,9 +52,8 @@ export function FAQ() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>FAQ | PromptQuorum — AI Prompt Optimizer & Multi-AI Comparator</title>
-        <title>Frequently Asked Questions - PromptQuorum | AI Prompt Optimizer</title>
-        <meta name="description" content="Frequently asked questions about PromptQuorum: pricing, privacy, supported AI models, and how to get started with prompt optimization." />
+        <title>PromptQuorum FAQ - Pricing & Getting Started</title>
+        <meta name="description" content="Frequently asked questions about PromptQuorum: pricing, privacy, supported AI models, local hosting options, and free prompt optimization." />
         <link rel="canonical" href="https://www.promptquorum.com/faq" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",

@@ -16,7 +16,7 @@ export function HowItWorks() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>How It Works | PromptQuorum — AI Prompt Optimizer & Multi-AI Comparator</title>
+        <title>How PromptQuorum Works: 4-Stage Pipeline</title>
         <meta name="description" content="Learn how PromptQuorum works: 4-stage pipeline from prompt creation to multi-AI comparison. Optimize, dispatch, and compare AI responses instantly." />
         <link rel="canonical" href="https://www.promptquorum.com/how-it-works" />
         <script type="application/ld+json">{JSON.stringify({
