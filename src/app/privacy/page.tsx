@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const EFFECTIVE_DATE = '15 March 2026'
 const CONTROLLER = 'PromptQuorum'
-const CONTROLLER_EMAIL = 'privacy@promptquorum.com'
+const CONTROLLER_EMAIL = 'promptquorum@gmail.com'
 const SITE_URL = 'https://www.promptquorum.com'
 
 export default function PrivacyPage() {
@@ -361,7 +361,7 @@ export default function PrivacyPage() {
         <div className="mt-16 pt-8 border-t border-gray-100 flex flex-wrap gap-4 text-sm text-text-secondary">
           <a href="/" className="hover:text-primary transition-colors">Home</a>
           <a href="/faq" className="hover:text-primary transition-colors">FAQ</a>
-          <a href={`mailto:${CONTROLLER_EMAIL}`} className="hover:text-primary transition-colors">privacy@promptquorum.com</a>
+          <a href={`mailto:${CONTROLLER_EMAIL}`} className="hover:text-primary transition-colors">promptquorum@gmail.com</a>
         </div>
 
       </div>
