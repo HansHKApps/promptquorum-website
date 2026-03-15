@@ -1,9 +1,9 @@
 {
   "/_not-found/page": "/_not-found",
   "/page": "/",
-  "/faq/page": "/faq",
-  "/download/page": "/download",
-  "/how-it-works/page": "/how-it-works",
+  "/blog/[slug]/page": "/blog/[slug]",
   "/features/page": "/features",
-  "/blog/[slug]/page": "/blog/[slug]"
+  "/how-it-works/page": "/how-it-works",
+  "/faq/page": "/faq",
+  "/download/page": "/download"
 }

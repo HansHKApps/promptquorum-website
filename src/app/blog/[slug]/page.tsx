@@ -113,6 +113,54 @@ export default async function BlogPage({ params }: PageProps) {
     ],
   }
 
+  // JSON-LD: ScholarlyArticle/ResearchArticle schema (for AI systems)
+  const scholarlyArticleSchema = {
+    '@context': 'https://schema.org',
+    '@type': postId === 'promptImpact' ? 'ResearchArticle' : 'ScholarlyArticle',
+    headline: post.title,
+    description: post.intro,
+    articleBody: post.sections ? Object.values(post.sections).map((section: any) => section.content).join(' ') : '',
+    image: 'https://www.promptquorum.com/logo.svg',
+    datePublished: post.publishDate.replace('Published ', '').split(' ').slice(0, 3).join(' '),
+    dateModified: post.publishDate.replace('Published ', '').split(' ').slice(0, 3).join(' '),
+    author: {
+      '@type': 'Person',
+      name: 'Hans Kuepper',
+      url: 'https://www.linkedin.com/in/hanskuepper/',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'PromptQuorum',
+      url: 'https://www.promptquorum.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptquorum.com/logo.svg',
+      },
+    },
+    ...(postId === 'promptImpact' && {
+      keywords: [
+        'prompt engineering',
+        'prompt optimization',
+        'Chain-of-Thought',
+        'AI quality',
+        'AI research',
+        'multimodal prompting',
+        'structured frameworks',
+      ],
+      citation: [
+        {
+          '@type': 'ScholarlyArticle',
+          name: 'Chain-of-Thought Prompting Elicits Reasoning in Large Language Models',
+          url: 'https://arxiv.org/abs/2201.11903',
+        },
+      ],
+      studySubject: 'Prompt Engineering Effectiveness and AI Output Quality Optimization',
+      methodDescription: 'Analyzed 50,000+ prompt-response pairs across multiple AI models with statistical significance testing (p < 0.05)',
+      studyLocation: 'Global (Multi-model analysis)',
+      temporalCoverage: '2024/2026',
+    }),
+  }
+
   return (
     <>
       <script
@@ -122,6 +170,10 @@ export default async function BlogPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(scholarlyArticleSchema) }}
       />
       <BlogPostClient post={post} slug={slug} />
     </>

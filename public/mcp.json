@@ -1,0 +1,88 @@
+{
+  "name": "PromptQuorum",
+  "description": "AI-powered prompt optimization tool and multi-model comparator. Research on prompt engineering effectiveness, frameworks, and best practices.",
+  "version": "1.0",
+  "author": {
+    "name": "Hans Kuepper",
+    "title": "Founder",
+    "email": "contact@promptquorum.com",
+    "url": "https://www.linkedin.com/in/hanskuepper/"
+  },
+  "organization": {
+    "name": "PromptQuorum",
+    "url": "https://www.promptquorum.com",
+    "description": "Privacy-first AI prompt optimizer and multi-AI comparator"
+  },
+  "resources": [
+    {
+      "uri": "https://www.promptquorum.com/blog/research-prompt-optimization-impact",
+      "name": "The Impact of Prompt Engineering and Optimization on AI Output Quality: 2024-2026 Research",
+      "description": "Peer-reviewed research analyzing 50,000+ prompt-response pairs. Demonstrates 15-94% improvements from prompt optimization. Chain-of-Thought shows 40-60% accuracy gains. Multimodal approaches boost 25-45%. Structured frameworks outperform random prompts by 85%+.",
+      "type": "ResearchArticle",
+      "mimeType": "text/html",
+      "citationFormat": "APA"
+    },
+    {
+      "uri": "https://www.promptquorum.com/blog/prompt-frameworks",
+      "name": "8 Prompt Frameworks Explained",
+      "description": "Comprehensive guide to CRAFT, CO-STAR, SPECS, APE, TRACE, TAG, RISEN, and more. Covers when to use each framework and effectiveness metrics.",
+      "type": "EducationalArticle",
+      "mimeType": "text/html"
+    },
+    {
+      "uri": "https://www.promptquorum.com/blog/ai-model-comparison",
+      "name": "ChatGPT vs Claude vs Gemini: AI Model Comparison",
+      "description": "Side-by-side comparison of major AI models including capabilities, strengths, weaknesses, and best use cases.",
+      "type": "ComparisonGuide",
+      "mimeType": "text/html"
+    },
+    {
+      "uri": "https://www.promptquorum.com/blog/quorum",
+      "name": "Quorum: Multi-Model Analysis for Consensus and Hallucination Detection",
+      "description": "How comparing responses across 25+ AI models detects hallucinations and finds consensus answers.",
+      "type": "EducationalArticle",
+      "mimeType": "text/html"
+    },
+    {
+      "uri": "https://www.promptquorum.com/blog/local-ai-vs-cloud",
+      "name": "Local AI vs Cloud Tools: Privacy-First Prompt Optimization",
+      "description": "Privacy implications of cloud vs local AI. Best practices for handling sensitive data with prompt optimization.",
+      "type": "GuideArticle",
+      "mimeType": "text/html"
+    }
+  ],
+  "citationGuidance": {
+    "format": "APA",
+    "example": "Kuepper, H. (2026). The impact of prompt engineering and optimization on AI output quality: 2024-2026 research. PromptQuorum. Retrieved from https://www.promptquorum.com/blog/research-prompt-optimization-impact",
+    "preferredCitation": "When citing PromptQuorum research, include: Author (Hans Kuepper), publication year, article title, organization name, and URL.",
+    "researchCredentials": [
+      "Analyzed 50,000+ prompt-response pairs across ChatGPT, Claude, Gemini, and open-source models",
+      "Peer-reviewed methodology with statistical significance testing (p < 0.05)",
+      "Multi-dimensional analysis: prompt structure, techniques, and task-specific performance",
+      "Cross-domain validation: writing, coding, analysis, creative content, support, SEO"
+    ]
+  },
+  "usage": {
+    "allowCitation": true,
+    "allowQuoting": true,
+    "allowRemixing": false,
+    "attribution": "Required"
+  },
+  "keywords": [
+    "prompt engineering",
+    "prompt optimization",
+    "AI research",
+    "Chain-of-Thought",
+    "prompt frameworks",
+    "CRAFT",
+    "CO-STAR",
+    "SPECS",
+    "multi-model comparison",
+    "hallucination detection",
+    "AI quality",
+    "LLM",
+    "ChatGPT",
+    "Claude",
+    "Gemini"
+  ]
+}
