@@ -9,13 +9,14 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: '*',
         allow: '/',
       },
+      // AI crawlers: explicit allow for discovery files and blog content
       {
-        userAgent: ['GPTBot', 'CCBot', 'PerplexityBot', 'OAI-SearchBot'],
-        allow: ['/blog/', '/llms.txt', '/.well-known/ai-plugin.json', '/mcp.json'],
+        userAgent: ['GPTBot', 'OAI-SearchBot', 'PerplexityBot', 'CCBot', 'ClaudeBot', 'anthropic-ai'],
+        allow: ['/', '/blog/', '/llms.txt', '/mcp.json', '/sitemap.xml'],
       },
       {
         userAgent: 'Bingbot',
-        allow: ['/blog/', '/llms.txt'],
+        allow: ['/', '/blog/', '/llms.txt', '/mcp.json'],
       },
     ],
     sitemap: 'https://www.promptquorum.com/sitemap.xml',

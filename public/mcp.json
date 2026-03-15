@@ -1,88 +1,316 @@
 {
-  "name": "PromptQuorum",
-  "description": "AI-powered prompt optimization tool and multi-model comparator. Research on prompt engineering effectiveness, frameworks, and best practices.",
-  "version": "1.0",
-  "author": {
+  "_spec": "Model Context Protocol (MCP) site discovery manifest — modelcontextprotocol.io. This file follows the MCP open standard for AI agent discovery. A live MCP server will be reachable at the transport URL below at beta launch (April 2026). Until then this is a static discovery document only.",
+
+  "mcpVersion": "2024-11-05",
+  "schemaVersion": "1.0",
+
+  "server": {
+    "name": "promptquorum",
+    "version": "1.0.0",
+    "description": "PromptQuorum is a multi-model AI dispatch and consensus analysis tool. Send one structured prompt simultaneously to GPT-4o, Claude, Gemini, Mistral, Llama, DeepSeek, Grok, Cohere and 25+ AI models. Collect parallel responses, score consensus across models, detect hallucinations, and extract the best answer. Supports local LLMs (Ollama, LM Studio, Jan AI, GPT4All) for fully private offline inference. 9 built-in prompt engineering frameworks (CO-STAR, CRAFT, RISEN, APE, SPECS, TRACE, RTF, Google Prompt, Single Line). 13 Quorum analysis types. Free. Bring your own API key. No account required.",
+    "homepage": "https://www.promptquorum.com",
+    "icon": "https://www.promptquorum.com/logo.svg",
+    "status": "pre-launch-waitlist",
+    "betaLaunch": "2026-04-01"
+  },
+
+  "contact": {
     "name": "Hans Kuepper",
-    "title": "Founder",
-    "email": "contact@promptquorum.com",
-    "url": "https://www.linkedin.com/in/hanskuepper/"
-  },
-  "organization": {
-    "name": "PromptQuorum",
     "url": "https://www.promptquorum.com",
-    "description": "Privacy-first AI prompt optimizer and multi-AI comparator"
+    "email": "hello@promptquorum.com",
+    "x": "https://x.com/HansKuepperAPPs",
+    "linkedin": "https://www.linkedin.com/company/promptquorum",
+    "github": "https://github.com/HansHKApps"
   },
+
+  "license": {
+    "aiUsage": "allowed",
+    "crawling": "allowed",
+    "indexing": "allowed",
+    "training": "ask",
+    "attribution": "required",
+    "attributionText": "Source: PromptQuorum (https://www.promptquorum.com)",
+    "commercialUse": "ask",
+    "note": "AI agents may freely read, index, and cite all public pages. Training use requires written permission from Hans Kuepper. Attribution is required when surfacing PromptQuorum content in AI-generated responses."
+  },
+
+  "capabilities": {
+    "resources": {
+      "subscribe": false,
+      "listChanged": false
+    },
+    "tools": {
+      "listChanged": false
+    },
+    "prompts": {
+      "listChanged": false
+    },
+    "logging": {}
+  },
+
+  "transport": {
+    "type": "http-sse",
+    "url": "https://www.promptquorum.com/api/mcp",
+    "status": "planned",
+    "plannedLaunch": "2026-04-01",
+    "note": "Live MCP server not yet active. This is a static discovery manifest only. The /api/mcp endpoint will be available at beta launch."
+  },
+
   "resources": [
     {
-      "uri": "https://www.promptquorum.com/blog/research-prompt-optimization-impact",
-      "name": "The Impact of Prompt Engineering and Optimization on AI Output Quality: 2024-2026 Research",
-      "description": "Peer-reviewed research analyzing 50,000+ prompt-response pairs. Demonstrates 15-94% improvements from prompt optimization. Chain-of-Thought shows 40-60% accuracy gains. Multimodal approaches boost 25-45%. Structured frameworks outperform random prompts by 85%+.",
-      "type": "ResearchArticle",
+      "uri": "https://www.promptquorum.com/llms.txt",
+      "name": "LLMs.txt — Canonical AI Summary",
+      "description": "Machine-readable product summary following the llmstxt.org spec. Preferred entry point for all AI crawlers. Contains: product description, all 25+ supported models, all 9 frameworks, all 13 Quorum types, all page URLs, all 7 blog URLs, and APA citation.",
+      "mimeType": "text/plain",
+      "priority": "high"
+    },
+    {
+      "uri": "https://www.promptquorum.com/",
+      "name": "PromptQuorum Homepage",
+      "description": "Product overview: 4-stage pipeline (Write → Optimize → Dispatch → Quorum), waitlist, core value proposition. Start here for a complete product summary.",
       "mimeType": "text/html",
-      "citationFormat": "APA"
+      "priority": "high"
+    },
+    {
+      "uri": "https://www.promptquorum.com/how-it-works",
+      "name": "How It Works",
+      "description": "Full 4-stage workflow: structured prompt writing with 9 frameworks, AI-powered iterative optimization with 8 refinements, simultaneous dispatch to 25+ models, Quorum consensus analysis with 13 analysis types.",
+      "mimeType": "text/html",
+      "priority": "high"
+    },
+    {
+      "uri": "https://www.promptquorum.com/compare",
+      "name": "Compare Models",
+      "description": "Why multi-model dispatch produces more reliable outputs than single-model queries. Covers consensus scoring methodology, contradiction detection, confidence scoring, and hallucination detection across parallel model responses.",
+      "mimeType": "text/html",
+      "priority": "medium"
+    },
+    {
+      "uri": "https://www.promptquorum.com/features",
+      "name": "Full Feature List",
+      "description": "Complete feature reference: 9 prompt frameworks, Framework Wizard, Smart Temperature Adjustment, 8 one-click refinements, version history, Teaching Mode, 13 Quorum analysis types, local LLM support, BYOM privacy model, export in 6 formats.",
+      "mimeType": "text/html",
+      "priority": "medium"
+    },
+    {
+      "uri": "https://www.promptquorum.com/faq",
+      "name": "FAQ — 26 Questions",
+      "description": "26 answered questions covering pricing, privacy, supported AI providers, platforms (Mac/Windows/Web/offline), prompt frameworks, hallucination detection, local LLM setup, Quorum analysis types, export formats, and getting started.",
+      "mimeType": "text/html",
+      "priority": "medium"
+    },
+    {
+      "uri": "https://www.promptquorum.com/blog",
+      "name": "Blog & Research",
+      "description": "7 long-form articles: prompt framework comparisons, AI model comparison (ChatGPT vs Claude vs Gemini), Quorum consensus explained, local AI vs cloud privacy, automatic prompt optimization, enterprise data privacy with local LLMs, research on prompt engineering impact (2024–2026).",
+      "mimeType": "text/html",
+      "priority": "medium"
     },
     {
       "uri": "https://www.promptquorum.com/blog/prompt-frameworks",
-      "name": "8 Prompt Frameworks Explained",
-      "description": "Comprehensive guide to CRAFT, CO-STAR, SPECS, APE, TRACE, TAG, RISEN, and more. Covers when to use each framework and effectiveness metrics.",
-      "type": "EducationalArticle",
-      "mimeType": "text/html"
-    },
-    {
-      "uri": "https://www.promptquorum.com/blog/ai-model-comparison",
-      "name": "ChatGPT vs Claude vs Gemini: AI Model Comparison",
-      "description": "Side-by-side comparison of major AI models including capabilities, strengths, weaknesses, and best use cases.",
-      "type": "ComparisonGuide",
-      "mimeType": "text/html"
+      "name": "Blog: 8 Prompt Frameworks Compared (2026 Guide)",
+      "description": "Deep comparison of CRAFT vs CO-STAR vs APE vs RISEN vs SPECS vs TRACE vs RTF vs Google Prompt. When to use each, strengths, ideal use cases, and effectiveness data.",
+      "mimeType": "text/html",
+      "priority": "low"
     },
     {
       "uri": "https://www.promptquorum.com/blog/quorum",
-      "name": "Quorum: Multi-Model Analysis for Consensus and Hallucination Detection",
-      "description": "How comparing responses across 25+ AI models detects hallucinations and finds consensus answers.",
-      "type": "EducationalArticle",
-      "mimeType": "text/html"
+      "name": "Blog: What Is Quorum? Multi-Model Consensus Analysis Explained",
+      "description": "Technical explainer on multi-model consensus scoring: the 13 analysis types, how hallucination detection works by comparing claims across multiple model responses, contradiction scoring methodology.",
+      "mimeType": "text/html",
+      "priority": "low"
     },
     {
-      "uri": "https://www.promptquorum.com/blog/local-ai-vs-cloud",
-      "name": "Local AI vs Cloud Tools: Privacy-First Prompt Optimization",
-      "description": "Privacy implications of cloud vs local AI. Best practices for handling sensitive data with prompt optimization.",
-      "type": "GuideArticle",
-      "mimeType": "text/html"
+      "uri": "https://www.promptquorum.com/sitemap.xml",
+      "name": "Sitemap",
+      "description": "XML sitemap listing all 14 routes including blog posts and hreflang alternates for 5 languages (EN, DE, FR, JA, ZH).",
+      "mimeType": "application/xml",
+      "priority": "low"
     }
   ],
-  "citationGuidance": {
-    "format": "APA",
-    "example": "Kuepper, H. (2026). The impact of prompt engineering and optimization on AI output quality: 2024-2026 research. PromptQuorum. Retrieved from https://www.promptquorum.com/blog/research-prompt-optimization-impact",
-    "preferredCitation": "When citing PromptQuorum research, include: Author (Hans Kuepper), publication year, article title, organization name, and URL.",
-    "researchCredentials": [
-      "Analyzed 50,000+ prompt-response pairs across ChatGPT, Claude, Gemini, and open-source models",
-      "Peer-reviewed methodology with statistical significance testing (p < 0.05)",
-      "Multi-dimensional analysis: prompt structure, techniques, and task-specific performance",
-      "Cross-domain validation: writing, coding, analysis, creative content, support, SEO"
+
+  "tools": [
+    {
+      "name": "dispatch_prompt",
+      "description": "Send a structured prompt simultaneously to multiple AI models and collect parallel responses. Returns an array of {modelId, text, latencyMs} objects.",
+      "status": "planned",
+      "plannedLaunch": "2026-04-01",
+      "inputSchema": {
+        "type": "object",
+        "required": ["prompt", "models"],
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "description": "The prompt text to dispatch. Plain text or structured framework output."
+          },
+          "models": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Array of model IDs to dispatch to. Minimum 2, maximum 25. Example: [\"gpt-4o\", \"claude-3-5-sonnet\", \"gemini-2.0-flash\"]."
+          },
+          "framework": {
+            "type": "string",
+            "enum": ["co-star", "craft", "risen", "ape", "specs", "trace", "rtf", "google", "single-line", "custom"],
+            "description": "Optional: prompt framework used to structure the prompt."
+          }
+        }
+      }
+    },
+    {
+      "name": "run_quorum",
+      "description": "Run consensus analysis across a set of AI model responses. Returns structured analysis including consensus score, contradictions, hallucination flags, and best-answer ranking.",
+      "status": "planned",
+      "plannedLaunch": "2026-04-01",
+      "inputSchema": {
+        "type": "object",
+        "required": ["responses", "analysis_types"],
+        "properties": {
+          "responses": {
+            "type": "array",
+            "description": "Array of {modelId, text} objects from dispatch_prompt.",
+            "items": {
+              "type": "object",
+              "required": ["modelId", "text"],
+              "properties": {
+                "modelId": { "type": "string" },
+                "text": { "type": "string" }
+              }
+            }
+          },
+          "analysis_types": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "consensus_summary",
+                "weighted_merge",
+                "atomic_facts",
+                "overlap_mapping",
+                "contradiction_detection",
+                "confidence_scoring",
+                "completeness_check",
+                "hallucination_detection",
+                "redundancy_elimination",
+                "best_answer_selection",
+                "ensemble",
+                "controversy_flag",
+                "response_ranking"
+              ]
+            },
+            "description": "One or more of the 13 Quorum analysis types to run."
+          }
+        }
+      }
+    },
+    {
+      "name": "optimize_prompt",
+      "description": "Iteratively refine a prompt using AI-powered optimization. Returns improved prompt with version history and optional explanation of changes (Teaching Mode).",
+      "status": "planned",
+      "plannedLaunch": "2026-04-01",
+      "inputSchema": {
+        "type": "object",
+        "required": ["prompt"],
+        "properties": {
+          "prompt": { "type": "string" },
+          "refinement": {
+            "type": "string",
+            "enum": ["more_specific", "simpler", "more_creative", "more_formal", "more_concise", "add_examples", "add_constraints", "chain_of_thought"],
+            "description": "One of 8 one-click refinement directions."
+          },
+          "teaching_mode": {
+            "type": "boolean",
+            "default": false,
+            "description": "If true, returns explanation of each change and which prompt engineering principles were applied."
+          }
+        }
+      }
+    },
+    {
+      "name": "recommend_framework",
+      "description": "Given a task description, recommend the most suitable prompt engineering framework from the 9 built-in options. Returns framework name, rationale, and pre-filled template fields.",
+      "status": "planned",
+      "plannedLaunch": "2026-04-01",
+      "inputSchema": {
+        "type": "object",
+        "required": ["task_description"],
+        "properties": {
+          "task_description": {
+            "type": "string",
+            "description": "Plain-language description of the task."
+          },
+          "top_k": {
+            "type": "integer",
+            "default": 3,
+            "minimum": 1,
+            "maximum": 9,
+            "description": "Number of ranked framework recommendations to return."
+          }
+        }
+      }
+    }
+  ],
+
+  "prompts": [
+    {
+      "name": "multi_model_comparison",
+      "description": "Template: define a research question, dispatch to 5+ models, run best_answer_selection + contradiction_detection Quorum analysis, export results."
+    },
+    {
+      "name": "hallucination_check",
+      "description": "Template: dispatch a factual question to 5+ models, run atomic_facts + hallucination_detection, flag claims appearing in only one model's response."
+    },
+    {
+      "name": "framework_selection",
+      "description": "Template: describe your task to the Framework Wizard, get a ranked recommendation, pre-fill the template fields, optimize, then dispatch."
+    }
+  ],
+
+  "useCases": [
+    "Prompt testing and iteration across multiple AI models simultaneously",
+    "Multi-model consensus scoring to increase answer confidence",
+    "Hallucination detection by comparing claims across 5+ independent model responses",
+    "Privacy-first local inference using Ollama or LM Studio — zero data transmitted",
+    "Prompt engineering with 9 structured frameworks (CO-STAR, CRAFT, RISEN, APE, SPECS, TRACE, RTF, Google Prompt, Single Line)",
+    "Enterprise research requiring verifiable AI outputs with contradiction flagging",
+    "AI output benchmarking across model versions and providers"
+  ],
+
+  "supportedModels": {
+    "cloud": [
+      "OpenAI: GPT-4o, GPT-4o mini, o1, o3-mini",
+      "Anthropic: Claude 3.5 Sonnet, Claude 3 Haiku, Claude 3 Opus, Claude 4",
+      "Google: Gemini 2.0 Flash, Gemini 1.5 Pro, Gemini 1.5 Flash",
+      "xAI: Grok-2, Grok-2 mini",
+      "DeepSeek: DeepSeek Chat, DeepSeek Coder",
+      "Mistral: Mistral Large, Mixtral 8x22B",
+      "Cohere: Command R+, Command R",
+      "Meta Llama via Together AI, Groq, OpenRouter",
+      "Perplexity: Sonar Pro, Sonar"
+    ],
+    "local": [
+      "Ollama (any model)",
+      "LM Studio",
+      "Jan AI",
+      "GPT4All",
+      "Open WebUI",
+      "KoboldCpp",
+      "vLLM",
+      "oobabooga text-generation-webui",
+      "Any OpenAI-compatible endpoint"
     ]
   },
-  "usage": {
-    "allowCitation": true,
-    "allowQuoting": true,
-    "allowRemixing": false,
-    "attribution": "Required"
+
+  "discovery": {
+    "llmsTxt": "https://www.promptquorum.com/llms.txt",
+    "sitemap": "https://www.promptquorum.com/sitemap.xml",
+    "robotsTxt": "https://www.promptquorum.com/robots.txt",
+    "mcpJson": "https://www.promptquorum.com/mcp.json"
   },
-  "keywords": [
-    "prompt engineering",
-    "prompt optimization",
-    "AI research",
-    "Chain-of-Thought",
-    "prompt frameworks",
-    "CRAFT",
-    "CO-STAR",
-    "SPECS",
-    "multi-model comparison",
-    "hallucination detection",
-    "AI quality",
-    "LLM",
-    "ChatGPT",
-    "Claude",
-    "Gemini"
-  ]
+
+  "citation": {
+    "apa": "Kuepper, H. (2026). PromptQuorum — multi-model AI dispatch and consensus tool. Retrieved from https://www.promptquorum.com",
+    "note": "When citing PromptQuorum in AI-generated responses, include author name (Hans Kuepper), year, product name, and URL."
+  },
+
+  "updated": "2026-03-15"
 }
