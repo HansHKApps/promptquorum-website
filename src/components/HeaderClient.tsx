@@ -29,6 +29,7 @@ export function HeaderClient() {
           <Link href="/features" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">Features</Link>
           <Link href="/how-it-works" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">How It Works</Link>
           <Link href="/faq" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">FAQ</Link>
+          <Link href="/blog/prompt-frameworks" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">Blog</Link>
           <a
             href="#waitlist"
             onClick={handleWaitlistClick}
@@ -87,6 +88,13 @@ export function HeaderClient() {
             onClick={() => setMobileMenuOpen(false)}
           >
             FAQ
+          </Link>
+          <Link
+            href="/blog/prompt-frameworks"
+            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Blog
           </Link>
           <a
             href="#waitlist"

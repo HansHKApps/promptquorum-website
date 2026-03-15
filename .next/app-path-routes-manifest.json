@@ -1,12 +1,12 @@
 {
   "/_not-found/page": "/_not-found",
+  "/page": "/",
   "/download/page": "/download",
   "/features/optimization/page": "/features/optimization",
+  "/features/quorum/page": "/features/quorum",
+  "/how-it-works/page": "/how-it-works",
+  "/blog/[slug]/page": "/blog/[slug]",
   "/faq/page": "/faq",
   "/compare/page": "/compare",
-  "/page": "/",
-  "/how-it-works/page": "/how-it-works",
-  "/features/quorum/page": "/features/quorum",
-  "/features/page": "/features",
-  "/blog/[slug]/page": "/blog/[slug]"
+  "/features/page": "/features"
 }
