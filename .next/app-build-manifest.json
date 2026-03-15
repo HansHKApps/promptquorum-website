@@ -12,7 +12,7 @@
       "static/chunks/edae8156-7ea3e19b2d4af36c.js",
       "static/chunks/850-e687753793da152e.js",
       "static/chunks/main-app-559375ac909a5ea1.js",
-      "static/css/ef2590077be53e83.css",
+      "static/css/f9a2a21c6bc92de4.css",
       "static/chunks/632-32fcd1f385182fbf.js",
       "static/chunks/app/layout-97b563d811c8750d.js"
     ],
@@ -34,27 +34,19 @@
       "static/chunks/268-5aa32793d6adbc25.js",
       "static/chunks/app/blog/page-606d262f64bb02bc.js"
     ],
-    "/blog/[slug]/page": [
-      "static/chunks/webpack-29df03d1dbcdee96.js",
-      "static/chunks/edae8156-7ea3e19b2d4af36c.js",
-      "static/chunks/850-e687753793da152e.js",
-      "static/chunks/main-app-559375ac909a5ea1.js",
-      "static/chunks/app/blog/[slug]/page-bff88f193687b09e.js"
-    ],
-    "/faq/page": [
-      "static/chunks/webpack-29df03d1dbcdee96.js",
-      "static/chunks/edae8156-7ea3e19b2d4af36c.js",
-      "static/chunks/850-e687753793da152e.js",
-      "static/chunks/main-app-559375ac909a5ea1.js",
-      "static/chunks/632-32fcd1f385182fbf.js",
-      "static/chunks/app/faq/page-4a679250f00eacf5.js"
-    ],
     "/download/page": [
       "static/chunks/webpack-29df03d1dbcdee96.js",
       "static/chunks/edae8156-7ea3e19b2d4af36c.js",
       "static/chunks/850-e687753793da152e.js",
       "static/chunks/main-app-559375ac909a5ea1.js",
       "static/chunks/app/download/page-f7d9010b11e5f020.js"
+    ],
+    "/blog/[slug]/page": [
+      "static/chunks/webpack-29df03d1dbcdee96.js",
+      "static/chunks/edae8156-7ea3e19b2d4af36c.js",
+      "static/chunks/850-e687753793da152e.js",
+      "static/chunks/main-app-559375ac909a5ea1.js",
+      "static/chunks/app/blog/[slug]/page-bff88f193687b09e.js"
     ],
     "/features/optimization/page": [
       "static/chunks/webpack-29df03d1dbcdee96.js",
@@ -64,6 +56,14 @@
       "static/chunks/632-32fcd1f385182fbf.js",
       "static/chunks/631-64a29dfe1cf744a9.js",
       "static/chunks/app/features/optimization/page-889472fc083e5f5d.js"
+    ],
+    "/faq/page": [
+      "static/chunks/webpack-29df03d1dbcdee96.js",
+      "static/chunks/edae8156-7ea3e19b2d4af36c.js",
+      "static/chunks/850-e687753793da152e.js",
+      "static/chunks/main-app-559375ac909a5ea1.js",
+      "static/chunks/632-32fcd1f385182fbf.js",
+      "static/chunks/app/faq/page-4a679250f00eacf5.js"
     ],
     "/how-it-works/page": [
       "static/chunks/webpack-29df03d1dbcdee96.js",

@@ -34,7 +34,7 @@ const Shield = () => (
 
 function FeatureCard({ icon: Icon, title, description }: { icon: React.ElementType, title: string, description: string }) {
   return (
-    <div className="p-6 rounded-xl bg-white border border-gray-200 hover:border-primary/30 hover:shadow-lg transition-all">
+    <div className="p-6 rounded-xl bg-card border border-primary/20 hover:border-primary/40 hover:shadow-lg transition-all">
       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">
         <Icon />
       </div>
@@ -55,7 +55,7 @@ export default function FeaturesPage() {
 
   return (
     <Suspense fallback={<div className="min-h-screen bg-white" />}>
-      <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6">
+      <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-20">
@@ -74,7 +74,7 @@ export default function FeaturesPage() {
 
           {/* Prompt Optimizer Showcase */}
           <div className="mb-20">
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 sm:p-12">
+            <div className="bg-surface-highlight border border-primary/20 rounded-xl p-8 sm:p-12">
               <PromptOptimizerShowcase />
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function FeaturesPage() {
                 Review quality assessments, version history, and improvement suggestions for your optimized prompts.
               </p>
             </div>
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 sm:p-12">
+            <div className="bg-surface-highlight border border-primary/20 rounded-xl p-8 sm:p-12">
               <OptimizationShowcase />
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function FeaturesPage() {
                 Collect responses from 25+ AI models, analyze consensus patterns, and synthesize insights across different perspectives.
               </p>
             </div>
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 sm:p-12">
+            <div className="bg-surface-highlight border border-primary/20 rounded-xl p-8 sm:p-12">
               <QuorumShowcase />
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function FeaturesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 text-primary font-bold text-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-full bg-secondary text-primary font-bold text-lg flex items-center justify-center mx-auto mb-4">
                   1
                 </div>
                 <h3 className="text-lg font-semibold text-text-primary mb-2">Choose a Framework</h3>
@@ -125,7 +125,7 @@ export default function FeaturesPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 text-primary font-bold text-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-full bg-secondary text-primary font-bold text-lg flex items-center justify-center mx-auto mb-4">
                   2
                 </div>
                 <h3 className="text-lg font-semibold text-text-primary mb-2">Run Your Prompt</h3>
@@ -134,7 +134,7 @@ export default function FeaturesPage() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 text-primary font-bold text-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-full bg-secondary text-primary font-bold text-lg flex items-center justify-center mx-auto mb-4">
                   3
                 </div>
                 <h3 className="text-lg font-semibold text-text-primary mb-2">Compare & Optimize</h3>
