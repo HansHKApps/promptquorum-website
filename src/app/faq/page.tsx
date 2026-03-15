@@ -51,7 +51,7 @@ export default function FAQPage() {
               { '@type': 'Question', name: 'What output formats and languages does PromptQuorum support?', acceptedAnswer: { '@type': 'Answer', text: 'LLM output language is configurable: English, German, French, Spanish, Italian, Portuguese, Chinese, and Japanese. Response length is adjustable from 100 to 2000 words.' } },
               { '@type': 'Question', name: 'How does PromptQuorum handle my API keys securely?', acceptedAnswer: { '@type': 'Answer', text: 'API keys are stored only in your browser\'s localStorage. They are never sent to any PromptQuorum server, never logged, and never included in telemetry (there is none).' } },
               { '@type': 'Question', name: 'What is Teaching Mode?', acceptedAnswer: { '@type': 'Answer', text: 'Teaching Mode adds an explanation box below every optimization result that explains exactly why each change was made — which prompt engineering principles were applied and what effect they have.' } },
-              { '@type': 'Question', name: 'How do I join the waitlist and what do early users get?', acceptedAnswer: { '@type': 'Answer', text: 'Enter your email in the waitlist form on the homepage. Early access members get lifetime premium features, priority support, and direct input into the product roadmap.' } },
+              { '@type': 'Question', name: 'How do I join the waitlist and what do early users get?', acceptedAnswer: { '@type': 'Answer', text: 'Enter your email in the waitlist form on the homepage. Early access users get priority onboarding, direct access to the developer, and a free power tool!' } },
             ],
             breadcrumb: {
               '@type': 'BreadcrumbList',

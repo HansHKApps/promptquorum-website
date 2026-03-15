@@ -333,7 +333,7 @@ function CompareContent() {
         {/* CTA */}
         <div className="mt-14 bg-gradient-to-br from-primary to-primary/70 rounded-2xl p-10 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">Join the PromptQuorum waitlist</h2>
-          <p className="text-white/75 mb-6">Beta launching April 2026. Early access users get priority onboarding and direct input into which models ship at launch.</p>
+          <p className="text-white/75 mb-6">Beta launching April 2026. Early access users get priority onboarding, direct access to the developer, and a free power tool!</p>
           <Link
             href="/#waitlist"
             className="inline-block bg-white text-primary font-bold text-sm px-7 py-3 rounded-lg hover:opacity-90 transition-opacity"

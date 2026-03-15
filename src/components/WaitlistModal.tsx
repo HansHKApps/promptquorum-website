@@ -9,23 +9,23 @@ import { useWaitlist } from '@/context/WaitlistContext'
 const T: Record<Lang, { title: string; desc: string }> = {
   en: {
     title: 'Join the Waitlist',
-    desc: 'Be the first to access our open-source prompt optimization tool. Early access gets lifetime premium features.',
+    desc: 'Early access users get priority onboarding, direct access to the developer, and a free power tool!',
   },
   de: {
     title: 'Warteliste beitreten',
-    desc: 'Seien Sie der Erste, der Zugang zu unserem Open-Source-Prompt-Optimierungstool erhält. Frühzeitige Mitglieder erhalten lebenslange Premium-Funktionen.',
+    desc: 'Early-Access-Nutzer erhalten bevorzugtes Onboarding, direkten Zugang zum Entwickler und ein kostenloses Power-Tool!',
   },
   fr: {
     title: 'Rejoindre la liste d\'attente',
-    desc: 'Soyez le premier à accéder à notre outil d\'optimisation de prompts open-source. Les membres en accès anticipé bénéficient de fonctionnalités premium à vie.',
+    desc: 'Les membres early-access bénéficient d\'un onboarding prioritaire, d\'un accès direct au développeur et d\'un outil puissant offert !',
   },
   ja: {
     title: 'ウェイトリストに参加',
-    desc: 'オープンソースのプロンプト最適化ツールにいち早くアクセスしましょう。早期アクセスメンバーは生涯プレミアム機能を利用できます。',
+    desc: '早期アクセスユーザーには、優先オンボーディング、開発者への直接アクセス、そして無料のパワーツールをご提供します！',
   },
   zh: {
     title: '加入候补名单',
-    desc: '率先使用我们的开源提示词优化工具。早期成员可终身享受高级功能。',
+    desc: '早期访问用户将获得优先入职辅导、与开发者的直接联系，以及一个免费的强大工具！',
   },
 }
 

@@ -10,7 +10,7 @@ const T = {
     h1: 'Privacy-First Local Workflow — FAQs',
     subtitle: 'Everything you need to know about PromptQuorum, pricing, privacy, and getting started.',
     ctaH2: 'Ready to Transform Your Prompts?',
-    ctaDesc: 'Join the waitlist and be the first to know when we launch. Early access members get exclusive features and priority support.',
+    ctaDesc: 'Early access users get priority onboarding, direct access to the developer, and a free power tool!',
     ctaBtn: 'Join Waitlist',
     back: '← Back to Home',
   },

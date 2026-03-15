@@ -60,7 +60,7 @@ export const translations = {
 
     // Waitlist CTA
     waitlistCtaTitle: "Ready to Transform Your Prompts?",
-    waitlistCtaDesc: "Join the waitlist and be the first to know when we launch. Early access members get exclusive features and priority support.",
+    waitlistCtaDesc: "Early access users get priority onboarding, direct access to the developer, and a free power tool!",
     emailPlaceholder: "Enter your email",
     joinWaitlist: "Join Waitlist",
     joining: "Joining...",
@@ -135,7 +135,7 @@ export const translations = {
 
     // Waitlist CTA
     waitlistCtaTitle: "Bereit, Ihre Prompts zu transformieren?",
-    waitlistCtaDesc: "Schliessen Sie sich der Warteliste an und erfahren Sie zuerst, wenn wir starten. Early-Access-Mitglieder erhalten exklusive Funktionen und priorisierten Support.",
+    waitlistCtaDesc: "Early-Access-Nutzer erhalten bevorzugtes Onboarding, direkten Zugang zum Entwickler und ein kostenloses Power-Tool!",
     emailPlaceholder: "Geben Sie Ihre E-Mail ein",
     joinWaitlist: "Warteliste beitreten",
     joining: "Wird hinzugefuegt...",
@@ -210,7 +210,7 @@ export const translations = {
 
     // Waitlist CTA
     waitlistCtaTitle: "Pret a transformer vos prompts?",
-    waitlistCtaDesc: "Rejoignez la liste d'attente pour etre le premier informe lors du lancement. Les membres early-access recoivent des fonctionnalites exclusives et un support prioritaire.",
+    waitlistCtaDesc: "Les membres early-access bénéficient d'un onboarding prioritaire, d'un accès direct au développeur et d'un outil puissant offert !",
     emailPlaceholder: "Entrez votre email",
     joinWaitlist: "Rejoindre la liste",
     joining: "Inscription...",
@@ -285,7 +285,7 @@ export const translations = {
 
     // Waitlist CTA
     waitlistCtaTitle: "プロンプトを変革する準備はできましたか？",
-    waitlistCtaDesc: "ウェイティングリストに参加して、ローンチ時に最先にお知らせを受け取りましょう。早期アクセスメンバーには専用の機能と優先サポートが付与されます。",
+    waitlistCtaDesc: "早期アクセスユーザーには、優先オンボーディング、開発者への直接アクセス、そして無料のパワーツールをご提供します！",
     emailPlaceholder: "メールアドレスを入力",
     joinWaitlist: "ウェイトリストに参加",
     joining: "参加中...",
@@ -360,7 +360,7 @@ export const translations = {
 
     // Waitlist CTA
     waitlistCtaTitle: "准备好改变您的提示词了吗？",
-    waitlistCtaDesc: "加入候补名单，成为第一个知道我们发布的人。早期访问成员可获得独家功能和优先支持。",
+    waitlistCtaDesc: "早期访问用户将获得优先入职辅导、与开发者的直接联系，以及一个免费的强大工具！",
     emailPlaceholder: "输入您的邮箱",
     joinWaitlist: "加入候补名单",
     joining: "加入中...",
