@@ -1,7 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/blog/blogTranslations": "pages/blog/blogTranslations.js",
-  "/_document": "pages/_document.js",
-  "/blog/blogContent": "pages/blog/blogContent.js"
-}
+{}

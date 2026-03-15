@@ -1,1 +1,22 @@
-globalThis.__BUILD_MANIFEST={polyfillFiles:["static/chunks/polyfills-42372ed130431b0a.js"],devFiles:[],ampDevFiles:[],lowPriorityFiles:[],rootMainFiles:["static/chunks/webpack-5cfb1b31a6c7db50.js","static/chunks/edae8156-7ea3e19b2d4af36c.js","static/chunks/850-e687753793da152e.js","static/chunks/main-app-559375ac909a5ea1.js"],rootMainFilesTree:{},pages:{"/_app":["static/chunks/webpack-5cfb1b31a6c7db50.js","static/chunks/framework-82fce76e1725f96c.js","static/chunks/main-726cf6207d2c2de5.js","static/chunks/pages/_app-b38a9a822493678e.js"],"/_error":["static/chunks/webpack-5cfb1b31a6c7db50.js","static/chunks/framework-82fce76e1725f96c.js","static/chunks/main-726cf6207d2c2de5.js","static/chunks/pages/_error-1b189b28d0d9c602.js"],"/blog/blogContent":["static/chunks/webpack-5cfb1b31a6c7db50.js","static/chunks/framework-82fce76e1725f96c.js","static/chunks/main-726cf6207d2c2de5.js","static/chunks/pages/blog/blogContent-3d40c2cc75b91963.js"],"/blog/blogTranslations":["static/chunks/webpack-5cfb1b31a6c7db50.js","static/chunks/framework-82fce76e1725f96c.js","static/chunks/main-726cf6207d2c2de5.js","static/chunks/pages/blog/blogTranslations-9974aa2600cb8db9.js"]},ampFirstPages:[]},globalThis.__BUILD_MANIFEST.lowPriorityFiles=["/static/"+process.env.__NEXT_BUILD_ID+"/_buildManifest.js",,"/static/"+process.env.__NEXT_BUILD_ID+"/_ssgManifest.js"];
+globalThis.__BUILD_MANIFEST = {
+  "polyfillFiles": [
+    "static/chunks/polyfills.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/main-app.js"
+  ],
+  "rootMainFilesTree": {},
+  "pages": {
+    "/_app": []
+  },
+  "ampFirstPages": []
+};
+globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+,"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js",
+
+];

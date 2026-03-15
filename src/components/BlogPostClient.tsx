@@ -2,6 +2,8 @@
 
 import { useRouter, useSearchParams } from 'next/navigation'
 import type { BlogPost, Language } from '@/lib/blog/blogContent'
+import { blogMetadata } from '@/lib/blog/blogTranslations'
+import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { Suspense } from 'react'
 
@@ -14,6 +16,10 @@ function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
   const searchParams = useSearchParams()
   const lang = (searchParams?.get('lang') || 'en') as Language
   const router = useRouter()
+
+  // Get translated metadata
+  const postId = SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]
+  const metadata = blogMetadata[postId as keyof typeof blogMetadata]?.[lang] || blogMetadata[postId as keyof typeof blogMetadata]?.['en']
 
   const handleLangChange = (l: Language) => {
     router.push(`/blog/${slug}?lang=${l}`, { scroll: false })
@@ -29,7 +35,7 @@ function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
             <span>/</span>
             <a href="/#blog" className="hover:text-primary">Blog</a>
             <span>/</span>
-            <span className="text-text-primary font-medium">{post.title}</span>
+            <span className="text-text-primary font-medium">{metadata?.title || post.title}</span>
           </div>
           <LanguageSwitcher currentLang={lang} onChange={handleLangChange} />
         </div>
@@ -38,16 +44,16 @@ function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
         <article className="prose prose-invert max-w-none">
           <div className="mb-8">
             <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              {post.category}
+              {metadata?.category || post.category}
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4">
-              {post.title}
+              {metadata?.title || post.title}
             </h1>
-            <p className="text-lg text-text-secondary mb-4">{post.intro}</p>
+            <p className="text-lg text-text-secondary mb-4">{metadata?.intro || post.intro}</p>
             <div className="flex items-center gap-4 text-sm text-text-secondary">
-              <span>{post.publishDate}</span>
+              <span>{metadata?.publishDate || post.publishDate}</span>
               <span>•</span>
-              <span>{post.readTime}</span>
+              <span>{metadata?.readTime || post.readTime}</span>
             </div>
           </div>
 

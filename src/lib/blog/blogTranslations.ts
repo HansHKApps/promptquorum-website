@@ -1,4 +1,57 @@
-// Blog post translations
+// Blog post metadata translations for all languages
+export const blogMetadata = {
+  frameworks: {
+    en: { category: 'Prompt Engineering', title: '8 Prompt Engineering Frameworks Explained: CRAFT vs CO-STAR vs APE (2026 Guide)', intro: 'Master the top prompt frameworks and learn which one works best for your use case.', publishDate: 'Published March 14, 2026', readTime: '8 min read' },
+    de: { category: 'Prompt-Engineering', title: '8 Prompt-Engineering-Frameworks erklärt: CRAFT vs CO-STAR vs APE (2026-Leitfaden)', intro: 'Beherrschen Sie die Top-Prompt-Frameworks und lernen Sie, welches am besten für Ihren Use-Case geeignet ist.', publishDate: 'Veröffentlicht 14. März 2026', readTime: '8 Min. Lesezeit' },
+    fr: { category: 'Ingénierie des Invites', title: '8 frameworks d\'ingénierie de prompts expliqués : CRAFT vs CO-STAR vs APE (Guide 2026)', intro: 'Maîtrisez les frameworks de prompts principaux et découvrez lequel convient le mieux à votre cas d\'usage.', publishDate: 'Publié 14 mars 2026', readTime: '8 min de lecture' },
+    ja: { category: 'プロンプトエンジニアリング', title: '8つのプロンプトエンジニアリングフレームワーク解説：CRAFT vs CO-STAR vs APE（2026ガイド）', intro: 'トッププロンプトフレームワークを習得し、どのフレームワークがあなたのユースケースに最適かを学びます。', publishDate: '2026年3月14日公開', readTime: '8分の読み物' },
+    zh: { category: '提示工程', title: '8种提示工程框架详解：CRAFT vs CO-STAR vs APE（2026指南）', intro: '掌握顶级提示框架，并了解哪一种最适合您的用例。', publishDate: '发布于 2026年3月14日', readTime: '8分钟阅读' }
+  },
+  localAI: {
+    en: { category: 'Privacy & Security', title: 'Local AI vs Cloud Tools: Why Privacy-First Prompt Optimization Matters', intro: 'Why privacy-first prompt optimization matters and when to use local models.', publishDate: 'Published 2026', readTime: '10 min read' },
+    de: { category: 'Datenschutz & Sicherheit', title: 'Lokale KI vs Cloud-Tools: Warum Datenschutz wichtig ist', intro: 'Verstehen Sie, warum datenschutzorientierte Prompt-Optimierung wichtig ist und wann lokale Modelle verwendet werden sollten.', publishDate: 'Veröffentlicht 2026', readTime: '10 Min. Lesezeit' },
+    fr: { category: 'Confidentialité & Sécurité', title: 'IA Locale vs Outils Cloud: L\'Importance de la Confidentialité', intro: 'Comprenez pourquoi l\'optimisation centrée sur la confidentialité est importante et quand utiliser des modèles locaux.', publishDate: 'Publié 2026', readTime: '10 min de lecture' },
+    ja: { category: 'プライバシーと安全性', title: 'ローカルAI対クラウドツール：プライバシーが重要な理由', intro: 'プライバシーに焦点を当てたプロンプト最適化が重要な理由とローカルモデルをいつ使用すべきかを理解します。', publishDate: '2026年公開', readTime: '10分の読み物' },
+    zh: { category: '隐私与安全', title: '本地AI vs云工具：隐私为什么重要', intro: '了解为什么以隐私为中心的提示优化很重要，以及何时应该使用本地模型。', publishDate: '发布于 2026年', readTime: '10分钟阅读' }
+  },
+  comparison: {
+    en: { category: 'AI Comparison', title: 'AI Model Comparison: ChatGPT, Claude, Gemini, and Local Alternatives', intro: 'Compare the best AI language models and find the best fit for your needs.', publishDate: 'Published 2026', readTime: '12 min read' },
+    de: { category: 'KI-Vergleich', title: 'KI-Modell-Vergleich: ChatGPT, Claude, Gemini und lokale Alternativen', intro: 'Vergleichen Sie die besten KI-Sprachmodelle und finden Sie das beste für Ihre Anforderungen.', publishDate: 'Veröffentlicht 2026', readTime: '12 Min. Lesezeit' },
+    fr: { category: 'Comparaison IA', title: 'Comparaison des Modèles IA: ChatGPT, Claude, Gemini et Alternatives Locales', intro: 'Comparez les meilleurs modèles de langage IA et trouvez le meilleur pour vos besoins.', publishDate: 'Publié 2026', readTime: '12 min de lecture' },
+    ja: { category: 'AIモデル比較', title: 'AIモデル比較：ChatGPT、Claude、Gemini、およびローカルの選択肢', intro: '最高のAI言語モデルを比較し、あなたのニーズに最適なものを見つけます。', publishDate: '2026年公開', readTime: '12分の読み物' },
+    zh: { category: 'AI模型对比', title: 'AI模型比较：ChatGPT、Claude、Gemini和本地替代品', intro: '比较最好的AI语言模型，找到最适合您需求的。', publishDate: '发布于 2026年', readTime: '12分钟阅读' }
+  },
+  quorum: {
+    en: { category: 'PromptQuorum', title: 'PromptQuorum: How Intelligent Prompt Aggregation Works', intro: 'Learn how PromptQuorum aggregates and compares multiple AI models for better results.', publishDate: 'Published 2026', readTime: '7 min read' },
+    de: { category: 'PromptQuorum', title: 'PromptQuorum: Wie intelligente Prompt-Aggregation funktioniert', intro: 'Erfahren Sie, wie PromptQuorum mehrere KI-Modelle aggregiert und vergleicht.', publishDate: 'Veröffentlicht 2026', readTime: '7 Min. Lesezeit' },
+    fr: { category: 'PromptQuorum', title: 'PromptQuorum: Comment fonctionne l\'Agrégation Intelligente des Invites', intro: 'Découvrez comment PromptQuorum agrège et compare plusieurs modèles d\'IA.', publishDate: 'Publié 2026', readTime: '7 min de lecture' },
+    ja: { category: 'PromptQuorum', title: 'PromptQuorum: インテリジェントなプロンプト集約のしくみ', intro: 'PromptQuorumが複数のAIモデルを集約して比較する方法を学びます。', publishDate: '2026年公開', readTime: '7分の読み物' },
+    zh: { category: 'PromptQuorum', title: 'PromptQuorum：智能提示聚合的工作原理', intro: '了解PromptQuorum如何汇总和比较多个AI模型。', publishDate: '发布于 2026年', readTime: '7分钟阅读' }
+  },
+  optimization: {
+    en: { category: 'Optimization', title: 'Prompt Optimization: Advanced Techniques for Better AI Results', intro: 'Learn proven techniques to optimize your prompts for better AI responses.', publishDate: 'Published 2026', readTime: '9 min read' },
+    de: { category: 'Optimierung', title: 'Prompt-Optimierung: Fortgeschrittene Techniken für bessere KI-Ergebnisse', intro: 'Lernen Sie bewährte Techniken zur Optimierung Ihrer Prompts.', publishDate: 'Veröffentlicht 2026', readTime: '9 Min. Lesezeit' },
+    fr: { category: 'Optimisation', title: 'Optimisation des Invites: Techniques Avancées pour de Meilleures Résultats IA', intro: 'Apprenez les techniques éprouvées pour optimiser vos invites.', publishDate: 'Publié 2026', readTime: '9 min de lecture' },
+    ja: { category: '最適化', title: 'プロンプト最適化：より良いAI結果のための高度なテクニック', intro: 'プロンプトを最適化するための実績のある技術を学びます。', publishDate: '2026年公開', readTime: '9分の読み物' },
+    zh: { category: '优化', title: '提示优化：获得更好AI结果的高级技术', intro: '学习经过验证的技术来优化您的提示。', publishDate: '发布于 2026年', readTime: '9分钟阅读' }
+  },
+  dataPrivacy: {
+    en: { category: 'Privacy & Security', title: 'Enterprise Data Privacy: Zero-Registration, Zero-Tracking AI Tools', intro: 'How enterprises can use AI tools with maximum data protection.', publishDate: 'Published 2026', readTime: '11 min read' },
+    de: { category: 'Datenschutz & Sicherheit', title: 'Datenschutz in Unternehmen: KI-Tools ohne Registrierung und Tracking', intro: 'Erfahren Sie, wie Unternehmen KI-Tools mit höchstem Datenschutz einsetzen können.', publishDate: 'Veröffentlicht 2026', readTime: '11 Min. Lesezeit' },
+    fr: { category: 'Confidentialité & Sécurité', title: 'Confidentialité Entreprise: Outils IA sans Enregistrement ni Suivi', intro: 'Découvrez comment les entreprises peuvent utiliser les outils IA avec une protection des données maximale.', publishDate: 'Publié 2026', readTime: '11 min de lecture' },
+    ja: { category: 'プライバシーと安全性', title: 'エンタープライズデータプライバシー：登録なし、追跡なしのAIツール', intro: '企業が最大限のデータ保護を備えたAIツールを使用する方法を学びます。', publishDate: '2026年公開', readTime: '11分の読み物' },
+    zh: { category: '隐私与安全', title: '企业数据隐私：无注册、无跟踪AI工具', intro: '了解企業如何在最大数据保护下使用AI工具。', publishDate: '发布于 2026年', readTime: '11分钟阅读' }
+  },
+  promptImpact: {
+    en: { category: 'Research', title: 'Research: The Impact of Prompt Optimization on AI Performance', intro: 'New research shows how prompt optimization dramatically improves AI performance.', publishDate: 'Published 2026', readTime: '13 min read' },
+    de: { category: 'Forschung', title: 'Forschung: Auswirkungen der Prompt-Optimierung auf die KI-Leistung', intro: 'Neue Forschungsergebnisse zeigen, wie Prompt-Optimierung die KI-Leistung verbessert.', publishDate: 'Veröffentlicht 2026', readTime: '13 Min. Lesezeit' },
+    fr: { category: 'Recherche', title: 'Recherche: L\'Impact de l\'Optimisation des Invites sur les Performances IA', intro: 'Les nouvelles recherches montrent comment l\'optimisation des invites améliore les performances de l\'IA.', publishDate: 'Publié 2026', readTime: '13 min de lecture' },
+    ja: { category: '研究', title: '研究：プロンプト最適化がAI性能に及ぼす影響', intro: '新しい研究は、プロンプト最適化がAI性能を改善する方法を示しています。', publishDate: '2026年公開', readTime: '13分の読み物' },
+    zh: { category: '研究', title: '研究：提示优化对AI性能的影响', intro: '新研究表明提示优化如何改进AI性能。', publishDate: '发布于 2026年', readTime: '13分钟阅读' }
+  }
+}
+
+// Legacy translations object (kept for reference)
 export const blogTranslations = {
   frameworks: {
     en: {
