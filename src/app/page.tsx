@@ -1,8 +1,10 @@
 import { LandingPageServer } from '@/components/LandingPageServer'
+import { ConfirmedToast } from '@/components/ConfirmedToast'
 
 export default function Home() {
   return (
     <>
+      <ConfirmedToast />
       <LandingPageServer />
 
       {/* FAQPage Schema — 8 core questions for homepage rich snippets */}
