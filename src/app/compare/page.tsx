@@ -16,5 +16,37 @@ export const metadata: Metadata = {
 }
 
 export default function ComparePage() {
-  return <ComparePageClient />
+  return (
+    <>
+      <ComparePageClient />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              '@context': 'https://schema.org',
+              '@type': 'WebPage',
+              'name': 'AI Model Comparison Tool — ChatGPT vs Claude vs Gemini',
+              'url': 'https://www.promptquorum.com/compare',
+              'description': 'Compare ChatGPT, Claude, Gemini, and 25+ AI models on the same prompt. See side-by-side responses, detect hallucinations, and find consensus answers with PromptQuorum.',
+              'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
+              'about': {
+                '@type': 'SoftwareApplication',
+                'name': 'PromptQuorum',
+                'url': 'https://www.promptquorum.com',
+              },
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              'itemListElement': [
+                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'Compare AI Models', 'item': 'https://www.promptquorum.com/compare' },
+              ],
+            },
+          ]),
+        }}
+      />
+    </>
+  )
 }

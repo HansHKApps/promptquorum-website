@@ -10,5 +10,32 @@ export const metadata: Metadata = {
 }
 
 export default function HowItWorksPage() {
-  return <HowItWorksPageClient />
+  return (
+    <>
+      <HowItWorksPageClient />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              '@context': 'https://schema.org',
+              '@type': 'WebPage',
+              'name': 'How PromptQuorum Works — Write, Optimize, Dispatch, Quorum',
+              'url': 'https://www.promptquorum.com/how-it-works',
+              'description': 'A complete guide to the PromptQuorum 4-stage workflow: structured prompt writing with 9 frameworks, LLM-powered optimization, one-click dispatch to 25+ AI services, and multi-model Quorum analysis.',
+              'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              'itemListElement': [
+                { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com' },
+                { '@type': 'ListItem', 'position': 2, 'name': 'How It Works', 'item': 'https://www.promptquorum.com/how-it-works' },
+              ],
+            },
+          ]),
+        }}
+      />
+    </>
+  )
 }

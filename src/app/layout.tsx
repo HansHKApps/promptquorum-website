@@ -68,19 +68,40 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "PromptQuorum",
               "url": "https://www.promptquorum.com",
-              "logo": "https://www.promptquorum.com/logo.svg",
-              "description": "PromptQuorum instantly turns rough ideas into precision prompts with 8+ frameworks. Dispatch to ChatGPT, Claude, Gemini + local LLMs in one click, compare results side-by-side. 100% private & runs locally.",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.promptquorum.com/logo.svg"
+              },
+              "description": "PromptQuorum is an AI prompt engineering tool that writes structured prompts using 9 proven frameworks, optimizes them with any LLM, dispatches to 25+ AI services simultaneously, and analyzes multi-model consensus. 100% private — no data leaves your device.",
               "founder": {
                 "@type": "Person",
-                "name": "Hans Kuepper"
+                "name": "Hans Kuepper",
+                "sameAs": "https://x.com/HansKuepperAPPs"
               },
               "sameAs": [
-                "https://github.com",
+                "https://github.com/HansHKApps",
                 "https://x.com/HansKuepperAPPs",
                 "https://www.linkedin.com/company/promptquorum",
-                "https://discord.com/channels/1482063293509271724/1482063418113396736",
                 "https://www.youtube.com/channel/UC5PL_1lU5pdV1d1EC1XeLhA"
               ]
+            })
+          }}
+        />
+
+        {/* WebSite Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "PromptQuorum",
+              "url": "https://www.promptquorum.com",
+              "description": "AI prompt optimization and multi-model comparison tool. Write better prompts with 9 frameworks, dispatch to 25+ AI services, detect hallucinations, find consensus.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "PromptQuorum"
+              }
             })
           }}
         />
@@ -93,125 +114,38 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               "name": "PromptQuorum",
-              "description": "PromptQuorum instantly turns rough ideas into precision prompts with 8+ frameworks (CO-STAR, CRAFT, RISEN). Dispatch to ChatGPT, Claude, Gemini + local LLMs in one click, compare results side-by-side. 100% private & runs locally.",
+              "alternateName": "Prompt Quorum",
+              "description": "PromptQuorum is an AI prompt engineering workspace. Write structured prompts using 9 frameworks (CO-STAR, CRAFT, RISEN, APE, SPECS, TRACE, RTF, Google Prompt, RTF). Optimize with your own LLM, dispatch to ChatGPT, Claude, Gemini and 25+ providers, then analyze consensus across all responses — fully private, no data leaves your device.",
               "url": "https://www.promptquorum.com",
-              "applicationCategory": "UtilityApplication",
-              "operatingSystem": "Windows, macOS",
+              "downloadUrl": "https://www.promptquorum.com/download",
+              "applicationCategory": "DeveloperApplication",
+              "applicationSubCategory": "AI Tools",
+              "operatingSystem": "Windows, macOS, Web",
+              "softwareVersion": "1.0",
+              "screenshot": "https://www.promptquorum.com/og-image.png",
+              "featureList": [
+                "9 prompt engineering frameworks (CO-STAR, CRAFT, RISEN, APE, SPECS, TRACE, RTF, Google Prompt, Single Prompt Line)",
+                "AI-powered iterative prompt optimization",
+                "Dispatch to 25+ AI providers simultaneously",
+                "Multi-model consensus analysis with 13 analysis types",
+                "Hallucination detection across model responses",
+                "Local LLM support (Ollama, LM Studio, Jan AI, GPT4All)",
+                "Fully offline capable — no data leaves your device",
+                "Framework Wizard for automatic framework selection",
+                "Version history for all prompt iterations",
+                "Export results in 6 formats (TXT, MD, JSON, CSV, HTML, PDF)"
+              ],
+              "author": {
+                "@type": "Person",
+                "name": "Hans Kuepper"
+              },
               "offers": {
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock"
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "250"
+                "availability": "https://schema.org/InStock",
+                "description": "Free to use. Bring your own API key or use a local LLM."
               }
-            })
-          }}
-        />
-
-        {/* FAQPage Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "Is PromptQuorum free?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. PromptQuorum is free to use. You can bring your own API key, use a local LLM, or try our limited free backend service for prompt optimization on a test basis."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How does privacy work?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "You decide where your data goes. Keep everything local with LM Studio or Ollama, or use your own API keys. PromptQuorum is as private as you set it up."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Which AI providers are supported?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Over 25 AI providers are included, and you can add your own custom providers. Connect to ChatGPT, Claude, Gemini, and many more."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What platforms does PromptQuorum run on?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "PromptQuorum starts with desktop apps (Mac, Windows), followed by a web application, and eventually mobile solutions."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What makes PromptQuorum different?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "PromptQuorum is highly automated for prompt improvements, can send the same prompt to multiple AIs simultaneously, and analyzes results based on your criteria."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Are there any limits?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No limits from PromptQuorum side. Your usage is only limited by your API keys or local LLM resources."
-                  }
-                }
-              ]
-            })
-          }}
-        />
-
-        {/* HowTo Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "HowTo",
-              "name": "How to Create Perfect Prompts with PromptQuorum",
-              "description": "Four simple stages to transform rough ideas into precision prompts and compare results across multiple AI providers.",
-              "step": [
-                {
-                  "@type": "HowToStep",
-                  "position": "1",
-                  "name": "Prompt",
-                  "text": "Start with any idea, rough or refined. Enter your initial prompt into PromptQuorum.",
-                  "image": "https://www.promptquorum.com/logo.svg"
-                },
-                {
-                  "@type": "HowToStep",
-                  "position": "2",
-                  "name": "Optimize",
-                  "text": "AI transforms it into a precision prompt using proven frameworks like CO-STAR, CRAFT, and RISEN.",
-                  "image": "https://www.promptquorum.com/logo.svg"
-                },
-                {
-                  "@type": "HowToStep",
-                  "position": "3",
-                  "name": "Dispatch",
-                  "text": "Send to multiple AIs at once—ChatGPT, Claude, Gemini, local models, and 25+ other providers.",
-                  "image": "https://www.promptquorum.com/logo.svg"
-                },
-                {
-                  "@type": "HowToStep",
-                  "position": "4",
-                  "name": "Quorum",
-                  "text": "Compare results, let AI analyze responses, find consensus, and surface the best answer across all providers.",
-                  "image": "https://www.promptquorum.com/logo.svg"
-                }
-              ]
             })
           }}
         />
