@@ -1,10 +1,15 @@
 'use client'
 
 import Link from 'next/link'
+import { LanguageSwitcher } from './LanguageSwitcher'
+import { useState } from 'react'
 
 export function HeaderClient() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   const handleWaitlistClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
+    setMobileMenuOpen(false)
     const element = document.getElementById('waitlist')
     if (element) {
       const headerHeight = 64 // h-16 = 64px
@@ -20,20 +25,81 @@ export function HeaderClient() {
           <img src="/logo.svg" alt="PromptQuorum" className="w-8 h-8 flex-shrink-0" />
           <span className="font-semibold text-gray-900 whitespace-nowrap">PromptQuorum</span>
         </Link>
-        <nav className="flex items-center gap-3 sm:gap-6 ml-auto">
-          <Link href="/compare" className="hidden sm:inline text-gray-600 hover:text-purple-600 transition-colors">Compare Models</Link>
-          <Link href="/features" className="hidden sm:inline text-gray-600 hover:text-purple-600 transition-colors">Features</Link>
-          <Link href="/how-it-works" className="hidden md:inline text-gray-600 hover:text-purple-600 transition-colors">How It Works</Link>
-          <Link href="/faq" className="hidden md:inline text-gray-600 hover:text-purple-600 transition-colors">FAQ</Link>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center gap-6 ml-auto mr-6">
+          <Link href="/compare" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">Compare Models</Link>
+          <Link href="/features" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">Features</Link>
+          <Link href="/how-it-works" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">How It Works</Link>
+          <Link href="/faq" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">FAQ</Link>
           <a
             href="#waitlist"
             onClick={handleWaitlistClick}
-            className="text-gray-600 hover:text-purple-600 font-medium transition-colors whitespace-nowrap"
+            className="text-gray-600 hover:text-purple-600 font-medium transition-colors text-sm"
           >
             Waitlist
           </a>
         </nav>
+
+        {/* Language Switcher + Mobile Menu */}
+        <div className="flex items-center gap-3">
+          <LanguageSwitcher />
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 text-gray-600 hover:text-purple-600"
+            aria-label="Toggle menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Navigation */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md px-4 py-3 space-y-2">
+          <Link
+            href="/compare"
+            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Compare Models
+          </Link>
+          <Link
+            href="/features"
+            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Features
+          </Link>
+          <Link
+            href="/how-it-works"
+            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            How It Works
+          </Link>
+          <Link
+            href="/faq"
+            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            FAQ
+          </Link>
+          <a
+            href="#waitlist"
+            onClick={handleWaitlistClick}
+            className="block px-4 py-2 text-purple-600 font-medium hover:bg-purple-50 rounded-lg transition-colors"
+          >
+            Waitlist
+          </a>
+        </div>
+      )}
     </header>
   )
 }
