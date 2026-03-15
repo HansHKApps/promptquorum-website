@@ -27,6 +27,7 @@ const PAGES: Page[] = [
   { path: '/blog/prompt-optimization',             priority: 0.8, changefreq: 'monthly' },
   { path: '/blog/enterprise-data-privacy',         priority: 0.8, changefreq: 'monthly' },
   { path: '/blog/research-prompt-optimization-impact', priority: 0.8, changefreq: 'monthly' },
+  { path: '/privacy',           priority: 0.3, changefreq: 'monthly' },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -384,6 +384,11 @@ export function LandingPageServer() {
               <span>•</span>
               <span>{t.langs}</span>
             </div>
+            <div className="flex items-center justify-center gap-4 text-xs">
+              <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
+              <span>•</span>
+              <a href="mailto:privacy@promptquorum.com" className="hover:text-primary transition-colors">privacy@promptquorum.com</a>
+            </div>
           </div>
         </div>
       </footer>
