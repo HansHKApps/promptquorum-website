@@ -7,7 +7,7 @@ import type { Language } from '../../translations'
 import { LanguageSwitcher } from '../../components/LanguageSwitcher'
 
 interface BlogPostProps {
-  postId: 'frameworks' | 'localAI' | 'comparison' | 'quorum' | 'optimization'
+  postId: 'frameworks' | 'localAI' | 'comparison' | 'quorum' | 'optimization' | 'dataPrivacy'
   backUrl: string
   langUrl: (lang: Language) => string
 }
