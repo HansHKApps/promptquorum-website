@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.promptquorum.com</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com" />
@@ -13,7 +13,7 @@
   </url>
   <url>
     <loc>https://www.promptquorum.com/features</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com/features" />
@@ -24,7 +24,7 @@
   </url>
   <url>
     <loc>https://www.promptquorum.com/how-it-works</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com/how-it-works" />
@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://www.promptquorum.com/faq</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com/faq" />
@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://www.promptquorum.com/download</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com/download" />
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://www.promptquorum.com/blog/prompt-frameworks</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com/blog/prompt-frameworks" />
@@ -68,7 +68,7 @@
   </url>
   <url>
     <loc>https://www.promptquorum.com/blog/local-ai-vs-cloud</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com/blog/local-ai-vs-cloud" />
@@ -79,7 +79,7 @@
   </url>
   <url>
     <loc>https://www.promptquorum.com/blog/ai-model-comparison</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com/blog/ai-model-comparison" />
@@ -90,7 +90,7 @@
   </url>
   <url>
     <loc>https://www.promptquorum.com/blog/quorum</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com/blog/quorum" />
@@ -101,7 +101,7 @@
   </url>
   <url>
     <loc>https://www.promptquorum.com/blog/prompt-optimization</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com/blog/prompt-optimization" />
@@ -109,5 +109,27 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.promptquorum.com/blog/prompt-optimization?lang=fr" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.promptquorum.com/blog/prompt-optimization?lang=ja" />
     <xhtml:link rel="alternate" hreflang="zh" href="https://www.promptquorum.com/blog/prompt-optimization?lang=zh" />
+  </url>
+  <url>
+    <loc>https://www.promptquorum.com/blog/enterprise-data-privacy</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com/blog/enterprise-data-privacy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.promptquorum.com/blog/enterprise-data-privacy?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.promptquorum.com/blog/enterprise-data-privacy?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.promptquorum.com/blog/enterprise-data-privacy?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.promptquorum.com/blog/enterprise-data-privacy?lang=zh" />
+  </url>
+  <url>
+    <loc>https://www.promptquorum.com/blog/research-prompt-optimization-impact</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.promptquorum.com/blog/research-prompt-optimization-impact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.promptquorum.com/blog/research-prompt-optimization-impact?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.promptquorum.com/blog/research-prompt-optimization-impact?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.promptquorum.com/blog/research-prompt-optimization-impact?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.promptquorum.com/blog/research-prompt-optimization-impact?lang=zh" />
   </url>
 </urlset>
