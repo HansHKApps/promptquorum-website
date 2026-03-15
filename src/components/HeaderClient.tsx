@@ -3,11 +3,63 @@
 import Link from 'next/link'
 import { LanguageSwitcherWrapper } from './LanguageSwitcherWrapper'
 import { useWaitlist } from '@/context/WaitlistContext'
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 
-export function HeaderClient() {
+const NAV_LABELS: Record<string, Record<string, string>> = {
+  compare: {
+    en: 'Compare Models',
+    de: 'Modelle vergleichen',
+    fr: 'Comparer les modèles',
+    ja: 'モデル比較',
+    zh: '模型对比',
+  },
+  features: {
+    en: 'Features',
+    de: 'Funktionen',
+    fr: 'Fonctionnalités',
+    ja: '機能',
+    zh: '功能',
+  },
+  howItWorks: {
+    en: 'How It Works',
+    de: 'So funktioniert es',
+    fr: 'Comment ça marche',
+    ja: '使い方',
+    zh: '使用说明',
+  },
+  faq: {
+    en: 'FAQ',
+    de: 'FAQ',
+    fr: 'FAQ',
+    ja: 'よくある質問',
+    zh: '常见问题',
+  },
+  blog: {
+    en: 'Blog',
+    de: 'Blog',
+    fr: 'Blog',
+    ja: 'ブログ',
+    zh: '博客',
+  },
+  waitlist: {
+    en: 'Waitlist',
+    de: 'Warteliste',
+    fr: 'Liste d\'attente',
+    ja: '順番待ちリスト',
+    zh: '候补名单',
+  },
+}
+
+function t(key: string, lang: string) {
+  return NAV_LABELS[key]?.[lang] ?? NAV_LABELS[key]?.['en'] ?? key
+}
+
+function HeaderInner() {
   const { openWaitlist } = useWaitlist()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const searchParams = useSearchParams()
+  const lang = searchParams?.get('lang') || 'en'
 
   const handleWaitlistClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
@@ -25,17 +77,17 @@ export function HeaderClient() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 ml-auto mr-6">
-          <Link href="/compare" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">Compare Models</Link>
-          <Link href="/features" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">Features</Link>
-          <Link href="/how-it-works" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">How It Works</Link>
-          <Link href="/faq" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">FAQ</Link>
-          <Link href="/blog" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">Blog</Link>
+          <Link href="/compare" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('compare', lang)}</Link>
+          <Link href="/features" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('features', lang)}</Link>
+          <Link href="/how-it-works" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('howItWorks', lang)}</Link>
+          <Link href="/faq" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('faq', lang)}</Link>
+          <Link href="/blog" className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('blog', lang)}</Link>
           <a
             href="#waitlist"
             onClick={handleWaitlistClick}
             className="text-gray-600 hover:text-purple-600 font-medium transition-colors text-sm"
           >
-            Waitlist
+            {t('waitlist', lang)}
           </a>
         </nav>
 
@@ -66,45 +118,55 @@ export function HeaderClient() {
             className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Compare Models
+            {t('compare', lang)}
           </Link>
           <Link
             href="/features"
             className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Features
+            {t('features', lang)}
           </Link>
           <Link
             href="/how-it-works"
             className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            How It Works
+            {t('howItWorks', lang)}
           </Link>
           <Link
             href="/faq"
             className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            FAQ
+            {t('faq', lang)}
           </Link>
           <Link
             href="/blog"
             className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Blog
+            {t('blog', lang)}
           </Link>
           <a
             href="#waitlist"
             onClick={handleWaitlistClick}
             className="block px-4 py-2 text-purple-600 font-medium hover:bg-purple-50 rounded-lg transition-colors"
           >
-            Waitlist
+            {t('waitlist', lang)}
           </a>
         </div>
       )}
     </header>
+  )
+}
+
+export function HeaderClient() {
+  return (
+    <Suspense fallback={
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 h-16" />
+    }>
+      <HeaderInner />
+    </Suspense>
   )
 }
