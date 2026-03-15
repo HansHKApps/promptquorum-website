@@ -5,7 +5,7 @@ import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 
 export const metadata: Metadata = {
-  title: 'PromptQuorum — Dispatch One Prompt to 25+ AI Models, Find Consensus',
+  title: 'PromptQuorum — Compare GPT, Claude & Gemini Simultaneously',
   description: 'Write structured prompts with 9 frameworks, dispatch simultaneously to ChatGPT, Claude, Gemini and 25+ AI models, then run consensus analysis across all responses. 100% private — API keys never leave your device.',
   metadataBase: new URL('https://www.promptquorum.com'),
   alternates: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://www.promptquorum.com',
-    title: 'PromptQuorum — Multi-Model AI Dispatch & Consensus Scoring',
+    title: 'PromptQuorum — Compare Any Prompt Across GPT, Claude & Gemini Simultaneously',
     description: 'Dispatch one prompt to ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Find consensus, detect hallucinations, extract the best answer — 100% private, no data tracking.',
     images: [{
       url: 'https://www.promptquorum.com/og-image.png',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PromptQuorum — Multi-Model AI Dispatch & Consensus Scoring',
+    title: 'PromptQuorum — Compare Any Prompt Across GPT, Claude & Gemini Simultaneously',
     description: 'Dispatch one prompt to ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Find consensus, detect hallucinations, extract the best answer — 100% private.',
     images: ['https://www.promptquorum.com/og-image.png'],
   },
