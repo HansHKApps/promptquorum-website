@@ -129,16 +129,10 @@ export default function PrivacyPage() {
                 </thead>
                 <tbody>
                   <tr className="border-b border-gray-100">
-                    <Td><strong>Formspree</strong> (formspree.io)</Td>
-                    <Td>Form submission handler — receives waitlist form data and forwards to us</Td>
+                    <Td><strong>Resend</strong> (Resend Inc.)</Td>
+                    <Td>Waitlist signup handler — stores subscriber email addresses and sends confirmation and launch emails on our behalf</Td>
                     <Td>Email address</Td>
                     <Td>United States</Td>
-                  </tr>
-                  <tr className="border-b border-gray-100">
-                    <Td><strong>IONOS</strong> (1&amp;1 IONOS SE)</Td>
-                    <Td>Sends beta launch and product update emails to waitlist subscribers</Td>
-                    <Td>Email address</Td>
-                    <Td>Germany (EU)</Td>
                   </tr>
                   <tr>
                     <Td><strong>Google Analytics 4</strong> (Google LLC)</Td>
@@ -161,17 +155,14 @@ export default function PrivacyPage() {
           <section>
             <H2 n="5">International data transfers</H2>
             <P>
-              Two of our processors are based in the United States. Transfers of personal data from the European Economic Area (EEA) or the United Kingdom (UK) to the United States are subject to appropriate safeguards:
+              Some of our processors are based in the United States. Transfers of personal data from the European Economic Area (EEA) or the United Kingdom (UK) to the United States are subject to appropriate safeguards:
             </P>
             <ul className="list-disc pl-6 space-y-2 text-text-secondary text-[15px] leading-relaxed">
               <li>
-                <strong className="text-text-primary">Formspree:</strong> Transfer is covered by Standard Contractual Clauses (SCCs) adopted by the European Commission under GDPR Art. 46(2)(c). Formspree's DPA is available at formspree.io/legal.
+                <strong className="text-text-primary">Resend:</strong> Transfer is covered by Standard Contractual Clauses (SCCs) adopted by the European Commission under GDPR Art. 46(2)(c). Resend's Data Processing Agreement is available at resend.com/legal/dpa.
               </li>
               <li>
                 <strong className="text-text-primary">Google Analytics:</strong> Google LLC participates in the EU–US Data Privacy Framework. Transfer is additionally covered by SCCs. Google's data transfer documentation is available at business.safety.google/gdpr.
-              </li>
-              <li>
-                <strong className="text-text-primary">IONOS (1&amp;1 IONOS SE):</strong> IONOS is headquartered in Karlsruhe, Germany and processes data entirely within the European Union. No international transfer takes place. IONOS's privacy documentation is available at ionos.com/terms-gtc/privacy-policy.
               </li>
             </ul>
             <P>
@@ -190,7 +181,7 @@ export default function PrivacyPage() {
               Anonymised Google Analytics data is retained for 14 months (the minimum configurable retention period in GA4). No personal data is retained in GA4.
             </P>
             <P>
-              Formspree may retain form submission data for up to 30 days before deletion from their servers, in accordance with their own retention policy.
+              Resend retains transactional email logs for up to 30 days. Audience contact records (your email address and subscription status) are retained for as long as your subscription is active, or until you request deletion.
             </P>
           </section>
 
