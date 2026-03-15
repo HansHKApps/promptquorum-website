@@ -1,8 +1,8 @@
-// File: /Users/hanskuepper/promptquorum-website/app/faq/page.tsx
-import * as entry from '../../../../app/faq/page.js'
+// File: /Users/hanskuepper/promptquorum-website/src/app/faq/page.tsx
+import * as entry from '../../../../src/app/faq/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../app/faq/page.js')
+type TEntry = typeof import('../../../../src/app/faq/page.js')
 
 type SegmentParams<T extends Object = any> = T extends Record<string, any>
   ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
