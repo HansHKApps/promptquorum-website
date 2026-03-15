@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { LanguageSwitcher } from './LanguageSwitcher'
+import { LanguageSwitcherWrapper } from './LanguageSwitcherWrapper'
 import { useWaitlist } from '@/context/WaitlistContext'
 import { useState } from 'react'
 
@@ -40,7 +40,7 @@ export function HeaderClient() {
 
         {/* Language Switcher + Mobile Menu */}
         <div className="flex items-center gap-3">
-          <LanguageSwitcher />
+          <LanguageSwitcherWrapper />
 
           {/* Mobile Menu Button */}
           <button
