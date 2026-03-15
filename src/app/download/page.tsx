@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Download | PromptQuorum',
-  description: 'Download PromptQuorum - the AI prompt optimization platform. Available for macOS, Windows, and Linux.',
+  title: 'Download PromptQuorum — Multi-Model AI Dispatch for Mac & Windows',
+  description: 'Download PromptQuorum desktop app for macOS and Windows. Dispatch prompts to 25+ AI models simultaneously, run consensus analysis, and work fully offline with local LLMs. Free, no account required.',
   alternates: {
     canonical: 'https://www.promptquorum.com/download',
   },

@@ -5,8 +5,8 @@ import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 
 export const metadata: Metadata = {
-  title: 'One Prompt. Every AI Response. | PromptQuorum',
-  description: 'Run your prompt once — get responses from ChatGPT, Claude, Gemini and 25+ AI models side-by-side. Compare results, detect hallucinations, find consensus.',
+  title: 'PromptQuorum — Dispatch One Prompt to 25+ AI Models, Find Consensus',
+  description: 'Write structured prompts with 9 frameworks, dispatch simultaneously to ChatGPT, Claude, Gemini and 25+ AI models, then run consensus analysis across all responses. 100% private — API keys never leave your device.',
   metadataBase: new URL('https://www.promptquorum.com'),
   alternates: {
     canonical: 'https://www.promptquorum.com',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://www.promptquorum.com',
-    title: 'PromptQuorum: AI Prompt Optimizer & Comparator',
-    description: 'Transform rough ideas into perfect prompts. Compare AI results across ChatGPT, Claude, Gemini & more—100% private, no data tracking.',
+    title: 'PromptQuorum — Multi-Model AI Dispatch & Consensus Scoring',
+    description: 'Dispatch one prompt to ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Find consensus, detect hallucinations, extract the best answer — 100% private, no data tracking.',
     images: [{
       url: 'https://www.promptquorum.com/og-image.png',
       width: 1200,
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PromptQuorum: AI Prompt Optimizer & Comparator',
-    description: 'Transform rough ideas into perfect prompts. Compare AI results across ChatGPT, Claude, Gemini & more—100% private, no data tracking.',
+    title: 'PromptQuorum — Multi-Model AI Dispatch & Consensus Scoring',
+    description: 'Dispatch one prompt to ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Find consensus, detect hallucinations, extract the best answer — 100% private.',
     images: ['https://www.promptquorum.com/og-image.png'],
   },
   verification: {
@@ -97,7 +97,7 @@ export default function RootLayout({
               "@type": "WebSite",
               "name": "PromptQuorum",
               "url": "https://www.promptquorum.com",
-              "description": "AI prompt optimization and multi-model comparison tool. Write better prompts with 9 frameworks, dispatch to 25+ AI services, detect hallucinations, find consensus.",
+              "description": "Dispatch one prompt to ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Write structured prompts with 9 frameworks, run consensus analysis across all responses, detect hallucinations. 100% private.",
               "publisher": {
                 "@type": "Organization",
                 "name": "PromptQuorum"

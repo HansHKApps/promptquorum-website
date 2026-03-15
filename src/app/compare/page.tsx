@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { ComparePageClient } from '@/components/ComparePageClient'
 
 export const metadata: Metadata = {
-  title: 'AI Model Comparison Tool | ChatGPT vs Claude vs Gemini | PromptQuorum',
-  description: 'Compare ChatGPT, Claude, Gemini, and 25+ AI models on the same prompt. See side-by-side responses, detect hallucinations, find consensus answers with PromptQuorum.',
+  title: 'Send One Prompt to ChatGPT, Claude & Gemini Simultaneously | PromptQuorum',
+  description: 'Dispatch any prompt to ChatGPT, Claude, Gemini and 25+ AI models at once. See every response side-by-side, run consensus scoring, detect hallucinations, and extract the best answer — without switching tabs.',
   alternates: {
     canonical: 'https://www.promptquorum.com/compare',
   },

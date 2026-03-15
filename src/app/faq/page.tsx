@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { FAQPageClient } from '@/components/FAQPageClient'
 
 export const metadata: Metadata = {
-  title: 'FAQ | PromptQuorum — Prompt Engineering, Privacy & AI Models',
-  description: 'Answers to 26 questions about PromptQuorum: pricing, privacy, prompt frameworks, hallucination detection, local AI models, multi-model consensus, dispatch, Quorum analysis, and more.',
+  title: 'FAQ — Multi-Model AI Dispatch, Consensus Scoring & Prompt Frameworks | PromptQuorum',
+  description: '26 answers about PromptQuorum: how multi-model dispatch works, consensus scoring, hallucination detection, 9 prompt frameworks (CO-STAR, CRAFT, RISEN), local LLM support, BYOM privacy model, and getting started.',
   alternates: {
     canonical: 'https://www.promptquorum.com/faq',
   },

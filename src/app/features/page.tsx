@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { FeaturesPageClient } from '@/components/FeaturesPageClient'
 
 export const metadata: Metadata = {
-  title: 'Features | PromptQuorum',
-  description: 'Smart AI prompt optimization features including frameworks, multi-AI dispatch, quorum comparison, and local LLM support.',
+  title: '9 Prompt Frameworks, Multi-Model Dispatch & Consensus Analysis | PromptQuorum',
+  description: 'PromptQuorum features: 9 structured prompt frameworks (CO-STAR, CRAFT, RISEN), simultaneous dispatch to 25+ AI providers, 13-type Quorum consensus analysis, hallucination detection, and full offline support with local LLMs.',
   alternates: {
     canonical: 'https://www.promptquorum.com/features',
   },
