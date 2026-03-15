@@ -342,7 +342,7 @@ export function LandingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             {/* Blog Card 1 */}
-            <Link href="/blog/prompt-frameworks" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
+            <Link href={`/blog/prompt-frameworks?lang=${language}`} className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
               <div className="p-6">
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
                   Prompt Engineering
@@ -361,7 +361,7 @@ export function LandingPage() {
             </Link>
 
             {/* Blog Card 2 */}
-            <Link href="/blog/local-ai-vs-cloud" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
+            <Link href={`/blog/local-ai-vs-cloud?lang=${language}`} className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
               <div className="p-6">
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
                   Privacy & Security
@@ -380,7 +380,7 @@ export function LandingPage() {
             </Link>
 
             {/* Blog Card 3 */}
-            <Link href="/blog/ai-model-comparison" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
+            <Link href={`/blog/ai-model-comparison?lang=${language}`} className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
               <div className="p-6">
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
                   Model Comparison
@@ -399,7 +399,7 @@ export function LandingPage() {
             </Link>
 
             {/* Blog Card 4 */}
-            <Link href="/blog/quorum" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
+            <Link href={`/blog/quorum?lang=${language}`} className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
               <div className="p-6">
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
                   AI Tools & Features
@@ -418,7 +418,7 @@ export function LandingPage() {
             </Link>
 
             {/* Blog Card 5 */}
-            <Link href="/blog/prompt-optimization" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
+            <Link href={`/blog/prompt-optimization?lang=${language}`} className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
               <div className="p-6">
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
                   Prompt Optimization
@@ -437,7 +437,7 @@ export function LandingPage() {
             </Link>
 
             {/* Blog Card 6 */}
-            <Link href="/blog/enterprise-data-privacy" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
+            <Link href={`/blog/enterprise-data-privacy?lang=${language}`} className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
               <div className="p-6">
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
                   Data Privacy & Security
@@ -456,7 +456,7 @@ export function LandingPage() {
             </Link>
 
             {/* Blog Card 7 */}
-            <Link href="/blog/research-prompt-optimization-impact" className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
+            <Link href={`/blog/research-prompt-optimization-impact?lang=${language}`} className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all">
               <div className="p-6">
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
                   Research Study
