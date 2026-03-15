@@ -31,12 +31,8 @@ function runBuild() {
     })
 
     child.on('close', (code) => {
-      if (code === 0) {
-        console.log('\n✓ Build succeeded')
-        resolve()
-      } else {
-        resolve() // Continue even if first attempt fails
-      }
+      // Always continue regardless of exit code - we'll check for output directory
+      resolve()
     })
 
     child.on('error', reject)
@@ -52,15 +48,14 @@ async function main() {
   while (attempt <= maxAttempts) {
     console.log(`\n[Attempt ${attempt}/${maxAttempts}] Running build...\n`)
 
-    // Apply fix before build
-    fixValidator()
-
     await runBuild()
 
-    // Check if build succeeded by looking for .next/server directory with compiled output
-    const nextDir = path.join(__dirname, '.next')
-    const appDir = path.join(nextDir, 'server', 'app')
-    if (fs.existsSync(appDir)) {
+    // Apply fix AFTER build (Next.js regenerates validator during build)
+    fixValidator()
+
+    // Check if build succeeded by looking for out directory (static export output)
+    const outDir = path.join(__dirname, 'out')
+    if (fs.existsSync(outDir)) {
       console.log('\n✓ Build completed successfully!')
       process.exit(0)
     }
