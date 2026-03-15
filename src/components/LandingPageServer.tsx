@@ -395,7 +395,7 @@ export function LandingPageServer() {
           </div>
 
           <div className="mt-8 pt-8 border-t border-gray-200 text-center space-y-3 text-text-muted text-sm">
-            <div>© 2024 PromptQuorum. All rights reserved.</div>
+            <div>© 2026 PromptQuorum. All rights reserved.</div>
             <div className="flex items-center justify-center gap-2">
               <span>🌍 Available worldwide</span>
               <span>•</span>
