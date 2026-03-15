@@ -66,6 +66,9 @@ export function HowItWorks() {
             </p>
           </div>
 
+          <h2 className="text-2xl font-bold text-text-primary mb-8 text-center">
+            4-Stage Pipeline: From Rough Ideas to Precision Results
+          </h2>
           <InteractivePipeline />
         </div>
       </section>

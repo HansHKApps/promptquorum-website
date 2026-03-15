@@ -19,7 +19,7 @@ export function DownloadPage() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Download | PromptQuorum — AI Prompt Optimizer & Multi-AI Comparator</title>
+        <title>Download PromptQuorum - AI Prompt Optimizer for macOS, Windows, Linux</title>
         <meta name="description" content="Download PromptQuorum for macOS, Windows, and Linux. Start optimizing your AI prompts locally with zero data tracking." />
         <link rel="canonical" href="https://www.promptquorum.com/download" />
         <script type="application/ld+json">{JSON.stringify({
@@ -63,8 +63,8 @@ export function DownloadPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-text-primary leading-tight animate-fade-in" style={{ animationDelay: '100ms' }}>
-            Ready to optimize your{' '}
-            <span className="block text-primary">AI prompts?</span>
+            Download PromptQuorum{' '}
+            <span className="block text-primary">AI Prompt Optimizer</span>
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
@@ -94,24 +94,27 @@ export function DownloadPage() {
           </p>
 
           {/* Platform Details */}
-          <div className="mt-16 grid sm:grid-cols-3 gap-6">
+          <h2 className="text-2xl font-bold text-text-primary mt-16 mb-8 text-center">
+            Platform Details & Features
+          </h2>
+          <div className="grid sm:grid-cols-3 gap-6">
             <div className="p-6 rounded-lg bg-gray-50 border border-gray-200">
               <div className="text-2xl mb-2">🖥️</div>
-              <h3 className="font-semibold text-text-primary mb-2">Desktop Apps</h3>
+              <h3 className="text-lg font-semibold text-text-primary mb-2">Desktop Apps</h3>
               <p className="text-sm text-text-secondary">
                 Native apps for Mac, Windows, and Linux with full feature support.
               </p>
             </div>
             <div className="p-6 rounded-lg bg-gray-50 border border-gray-200">
               <div className="text-2xl mb-2">🔒</div>
-              <h3 className="font-semibold text-text-primary mb-2">100% Private</h3>
+              <h3 className="text-lg font-semibold text-text-primary mb-2">100% Private</h3>
               <p className="text-sm text-text-secondary">
                 Your data stays on your machine. No tracking, no uploads.
               </p>
             </div>
             <div className="p-6 rounded-lg bg-gray-50 border border-gray-200">
               <div className="text-2xl mb-2">⚡</div>
-              <h3 className="font-semibold text-text-primary mb-2">Local LLMs</h3>
+              <h3 className="text-lg font-semibold text-text-primary mb-2">Local LLMs</h3>
               <p className="text-sm text-text-secondary">
                 Use local models or your own API keys. Total control.
               </p>

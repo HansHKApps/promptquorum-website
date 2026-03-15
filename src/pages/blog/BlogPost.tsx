@@ -184,7 +184,7 @@ export function BlogPost({ postId, backUrl, langUrl }: BlogPostProps) {
             <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4">
               {post.title}
             </h1>
-            <p className="text-lg text-text-secondary mb-4">{post.intro}</p>
+            <h2 className="text-lg text-text-secondary mb-4 font-medium">{post.intro}</h2>
             <div className="flex items-center gap-4 text-sm text-text-muted">
               <span>{post.publishDate}</span>
               <span>•</span>

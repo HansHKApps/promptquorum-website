@@ -285,7 +285,7 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
-              {t('featuresTitle')}
+              Core Features & Capabilities
             </h2>
             <p className="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
               {t('featuresSubtitle')}
@@ -311,7 +311,7 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
-              {t('howItWorksTitle')}
+              How the 4-Stage Pipeline Works
             </h2>
             <p className="mt-4 text-lg text-text-secondary">
               {t('howItWorksSubtitle')}
@@ -327,7 +327,7 @@ function App() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
-              {t('faqTitle')}
+              Frequently Asked Questions
             </h2>
           </div>
 
@@ -344,7 +344,7 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
-              {t('blogTitle')}
+              Blog & Educational Resources
             </h2>
             <p className="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
               {t('blogSubtitle')}
@@ -454,7 +454,7 @@ function App() {
       <section id="waitlist" className="py-20 px-4 sm:px-6 bg-surface">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
-            {t('waitlistCtaTitle')}
+            Join the PromptQuorum Waitlist
           </h2>
           <p className="mt-4 text-lg text-text-secondary">
             {t('waitlistCtaDesc')}

@@ -18,8 +18,8 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors text-left"
       >
-        <span className="font-medium text-text-primary">{question}</span>
-        <span className={`text-text-muted transition-transform ${isOpen ? 'rotate-180' : ''}`}>
+        <h3 className="font-medium text-text-primary text-base">{question}</h3>
+        <span className={`text-text-muted transition-transform flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}>
           <ChevronDown />
         </span>
       </button>
@@ -53,6 +53,7 @@ export function FAQ() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>FAQ | PromptQuorum — AI Prompt Optimizer & Multi-AI Comparator</title>
+        <title>Frequently Asked Questions - PromptQuorum | AI Prompt Optimizer</title>
         <meta name="description" content="Frequently asked questions about PromptQuorum: pricing, privacy, supported AI models, and how to get started with prompt optimization." />
         <link rel="canonical" href="https://www.promptquorum.com/faq" />
         <script type="application/ld+json">{JSON.stringify({
@@ -96,6 +97,9 @@ export function FAQ() {
             <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4">
               {t('faqTitle')}
             </h1>
+            <p className="text-lg text-text-secondary">
+              Everything you need to know about PromptQuorum, pricing, privacy, and getting started
+            </p>
           </div>
 
           <div className="space-y-4">

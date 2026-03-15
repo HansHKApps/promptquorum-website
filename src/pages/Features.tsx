@@ -64,7 +64,7 @@ export function Features() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Features | PromptQuorum — AI Prompt Optimizer & Multi-AI Comparator</title>
+        <title>PromptQuorum Features & Capabilities | AI Prompt Optimizer</title>
         <meta name="description" content="Explore PromptQuorum's powerful features: 8+ prompt frameworks, multi-AI dispatch, side-by-side comparison, local privacy, and more." />
         <link rel="canonical" href="https://www.promptquorum.com/features" />
         <script type="application/ld+json">{JSON.stringify({
@@ -108,6 +108,7 @@ export function Features() {
             </p>
           </div>
 
+          <h2 className="sr-only">PromptQuorum Core Capabilities</h2>
           <div className="grid sm:grid-cols-2 gap-6">
             {features.map((feature, index) => (
               <FeatureCard
