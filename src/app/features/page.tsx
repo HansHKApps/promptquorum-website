@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { PromptOptimizerShowcase } from '@/components/PromptOptimizerShowcase'
+import { OptimizationShowcase } from '@/components/OptimizationShowcase'
 
 export const metadata: Metadata = {
   title: 'Features | PromptQuorum',
@@ -74,6 +75,19 @@ export default function FeaturesPage() {
           <div className="mb-20">
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 sm:p-12">
               <PromptOptimizerShowcase />
+            </div>
+          </div>
+
+          {/* Optimization Results Showcase */}
+          <div className="mb-20">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-text-primary mb-3">Optimization Results</h2>
+              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+                Review quality assessments, version history, and improvement suggestions for your optimized prompts.
+              </p>
+            </div>
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 sm:p-12">
+              <OptimizationShowcase />
             </div>
           </div>
 

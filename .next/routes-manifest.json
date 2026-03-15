@@ -66,6 +66,12 @@
       "namedRegex": "^/features(?:/)?$"
     },
     {
+      "page": "/features/optimization",
+      "regex": "^/features/optimization(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/optimization(?:/)?$"
+    },
+    {
       "page": "/how-it-works",
       "regex": "^/how\\-it\\-works(?:/)?$",
       "routeKeys": {},
