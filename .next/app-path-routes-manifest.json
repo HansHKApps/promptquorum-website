@@ -1,13 +1,13 @@
 {
   "/_not-found/page": "/_not-found",
   "/page": "/",
-  "/faq/page": "/faq",
   "/blog/page": "/blog",
   "/blog/[slug]/page": "/blog/[slug]",
+  "/faq/page": "/faq",
   "/download/page": "/download",
-  "/compare/page": "/compare",
-  "/features/quorum/page": "/features/quorum",
-  "/how-it-works/page": "/how-it-works",
   "/features/optimization/page": "/features/optimization",
-  "/features/page": "/features"
+  "/how-it-works/page": "/how-it-works",
+  "/features/quorum/page": "/features/quorum",
+  "/features/page": "/features",
+  "/compare/page": "/compare"
 }
