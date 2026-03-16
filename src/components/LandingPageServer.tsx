@@ -393,6 +393,8 @@ export function LandingPageServer() {
             <div className="flex items-center justify-center gap-4 text-xs">
               <a href="/about" className="hover:text-primary transition-colors">About</a>
               <span>•</span>
+              <a href="/frameworks" className="hover:text-primary transition-colors">Frameworks</a>
+              <span>•</span>
               <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
               <span>•</span>
               <a href="mailto:promptquorum@gmail.com" className="hover:text-primary transition-colors">promptquorum@gmail.com</a>
