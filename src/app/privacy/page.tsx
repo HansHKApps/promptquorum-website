@@ -7,6 +7,21 @@ export const metadata: Metadata = {
     canonical: 'https://www.promptquorum.com/privacy',
   },
   robots: 'noindex, follow',
+  openGraph: {
+    type: 'website',
+    url: 'https://www.promptquorum.com/privacy',
+    siteName: 'PromptQuorum',
+    title: 'Privacy Policy | PromptQuorum',
+    description: 'Privacy Policy for PromptQuorum. Learn how we collect, use, and protect your data, your rights under GDPR, and how to contact us with data requests.',
+    images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 630, alt: 'PromptQuorum — One Prompt. Every Model. One Verdict.' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@promptquorum',
+    title: 'Privacy Policy | PromptQuorum',
+    description: 'Privacy Policy for PromptQuorum. Learn how we collect, use, and protect your data, your rights under GDPR, and how to contact us with data requests.',
+    images: ['https://www.promptquorum.com/og-image.png'],
+  },
 }
 
 const EFFECTIVE_DATE = '15 March 2026'

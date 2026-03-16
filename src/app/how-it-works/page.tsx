@@ -7,6 +7,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.promptquorum.com/how-it-works',
   },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.promptquorum.com/how-it-works',
+    siteName: 'PromptQuorum',
+    title: 'How Multi-Model AI Dispatch & Consensus Works | PromptQuorum',
+    description: 'Write one prompt, dispatch to 25+ AI models simultaneously, then run Quorum analysis — Hallucination Detection, Contradiction Detection, Best Answer Selection, and 10 more analysis types.',
+    images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 630, alt: 'PromptQuorum — One Prompt. Every Model. One Verdict.' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@promptquorum',
+    title: 'How Multi-Model AI Dispatch & Consensus Works | PromptQuorum',
+    description: 'Write one prompt, dispatch to 25+ AI models simultaneously, then run Quorum analysis — Hallucination Detection, Contradiction Detection, Best Answer Selection, and more.',
+    images: ['https://www.promptquorum.com/og-image.png'],
+  },
 }
 
 export default function HowItWorksPage() {
