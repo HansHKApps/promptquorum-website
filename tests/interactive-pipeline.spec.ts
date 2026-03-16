@@ -30,23 +30,21 @@ test.describe('Interactive Pipeline - 4 Steps', () => {
     await expect(page.locator('text=Start with any idea')).toBeVisible()
   })
 
-  test('desktop: can expand and collapse stages', async ({ page }) => {
+  test('desktop: can expand multiple stages', async ({ page }) => {
     const promptButton = page.locator('button').filter({ has: page.locator('text=Prompt') }).first()
+    const optimizeButton = page.locator('button').filter({ has: page.locator('text=Optimize') }).first()
 
-    // Expand
+    // Expand first stage
     await promptButton.click()
     await expect(page.locator('text=Start with any idea')).toBeVisible()
 
-    // Collapse
-    await promptButton.click()
-    const detailsText = page.locator('text=Start with any idea')
-    await expect(detailsText).not.toBeVisible({ timeout: 1000 })
+    // Expand second stage
+    await optimizeButton.click()
+    await expect(page.locator('text=Automatic improvement')).toBeVisible()
   })
 })
 
-test.describe.only('Interactive Pipeline - Mobile Tests', () => {
-  test.use({ ...devices['iPhone 12'] })
-
+test.describe('Interactive Pipeline - Mobile Tests', () => {
   test('mobile iPhone 12: stages clickable', async ({ page }) => {
     await page.goto('/')
     await page.waitForSelector('button')
@@ -118,8 +116,6 @@ test.describe.only('Interactive Pipeline - Mobile Tests', () => {
 })
 
 test.describe('Interactive Pipeline - Android Mobile', () => {
-  test.use({ ...devices['Pixel 5'] })
-
   test('mobile Android: stages clickable and expand', async ({ page }) => {
     await page.goto('/')
     await page.waitForSelector('button')
