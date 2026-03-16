@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import './globals.css'
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
+import { CookieBanner } from '@/components/CookieBanner'
 
 export const metadata: Metadata = {
   title: 'PromptQuorum — Compare GPT, Claude & Gemini Simultaneously',
@@ -170,28 +170,12 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-8DQ4B3DXBS"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-8DQ4B3DXBS');
-            `,
-          }}
-        />
       </head>
       <body>
         <Providers>
           <HeaderClient />
           {children}
+          <CookieBanner />
         </Providers>
       </body>
     </html>
