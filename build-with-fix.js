@@ -39,6 +39,16 @@ function runBuild() {
   })
 }
 
+async function pingSitemap() {
+  const url = 'https://www.google.com/ping?sitemap=https://www.promptquorum.com/sitemap.xml'
+  try {
+    const res = await fetch(url)
+    console.log(`✓ Sitemap submitted to Google (HTTP ${res.status})`)
+  } catch (err) {
+    console.warn('⚠ Sitemap ping failed (non-fatal):', err.message)
+  }
+}
+
 async function main() {
   console.log('Starting build with validator fix...\n')
 
@@ -57,6 +67,7 @@ async function main() {
     const outDir = path.join(__dirname, '.next')
     if (fs.existsSync(outDir)) {
       console.log('\n✓ Build completed successfully!')
+      await pingSitemap()
       process.exit(0)
     }
 
