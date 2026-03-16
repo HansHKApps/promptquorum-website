@@ -139,7 +139,7 @@ export default function Home() {
             'thumbnailUrl': 'https://img.youtube.com/vi/R-bDPhT5EMo/maxresdefault.jpg',
             'embedUrl': 'https://www.youtube.com/embed/R-bDPhT5EMo',
             'url': 'https://www.youtube.com/watch?v=R-bDPhT5EMo',
-            'uploadDate': '2026-01-01',
+            'uploadDate': '2026-03-13',
             'duration': 'PT2M',
             'publisher': {
               '@type': 'Organization',
