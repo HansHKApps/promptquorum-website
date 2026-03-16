@@ -67,6 +67,8 @@ export default function RootLayout({
         <link rel="mcp" href="/mcp.json" type="application/json" />
         {/* AI crawler discovery hints */}
         <link rel="alternate" type="text/plain" href="/llms.txt" />
+        {/* RSS feed auto-discovery */}
+        <link rel="alternate" type="application/rss+xml" title="PromptQuorum Blog" href="/feed.xml" />
 
         {/* Structured Data — @graph combining Organization, WebSite, SoftwareApplication */}
         <script
