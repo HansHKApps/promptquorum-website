@@ -28,6 +28,7 @@ const PAGES: Page[] = [
   { path: '/blog/prompt-optimization',                 priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-14' },
   { path: '/blog/enterprise-data-privacy',             priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-15' },
   { path: '/blog/research-prompt-optimization-impact', priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-15' },
+  { path: '/blog/ai-consensus-scoring',                priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/frameworks',                         priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/frameworks/co-star',                 priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/frameworks/craft',                   priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },

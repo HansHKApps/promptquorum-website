@@ -14,6 +14,7 @@ const blogPosts = [
   { key: 'optimization' as const, href: '/blog/prompt-optimization' },
   { key: 'dataPrivacy' as const, href: '/blog/enterprise-data-privacy' },
   { key: 'promptImpact' as const, href: '/blog/research-prompt-optimization-impact' },
+  { key: 'consensusScoring' as const, href: '/blog/ai-consensus-scoring' },
 ]
 
 function BlogSectionInner() {

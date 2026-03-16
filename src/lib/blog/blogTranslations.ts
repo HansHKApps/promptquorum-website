@@ -48,6 +48,13 @@ export const blogMetadata = {
     fr: { category: 'Recherche', title: 'Recherche: L\'Impact de l\'Optimisation des Invites sur les Performances IA', intro: 'Les nouvelles recherches montrent comment l\'optimisation des invites améliore les performances de l\'IA.', publishDate: 'Publié mars 2026', readTime: '13 min de lecture' },
     ja: { category: '研究', title: '研究：プロンプト最適化がAI性能に及ぼす影響', intro: '新しい研究は、プロンプト最適化がAI性能を改善する方法を示しています。', publishDate: '2026年3月公開', readTime: '13分の読み物' },
     zh: { category: '研究', title: '研究：提示优化对AI性能的影响', intro: '新研究表明提示优化如何改进AI性能。', publishDate: '发布于 2026年3月', readTime: '13分钟阅读' }
+  },
+  consensusScoring: {
+    en: { category: 'AI Reliability', title: 'AI Consensus Scoring: How to Detect Hallucinations Across Multiple Models', intro: 'When five AI models independently agree on a fact, the answer is far more reliable than when one model answers alone. This is the principle behind AI consensus scoring — and why it is the most effective method for detecting hallucinations at scale.', publishDate: 'Published March 16, 2026', readTime: '11 min read' },
+    de: { category: 'KI-Zuverlässigkeit', title: 'KI-Konsens-Scoring: Halluzinationen über mehrere Modelle erkennen', intro: 'Wenn fünf KI-Modelle unabhängig voneinander einer Aussage zustimmen, ist die Antwort deutlich zuverlässiger als wenn ein einzelnes Modell antwortet. Dies ist das Prinzip hinter KI-Konsens-Scoring.', publishDate: 'Veröffentlicht 16. März 2026', readTime: '11 Min. Lesezeit' },
+    fr: { category: 'Fiabilité IA', title: 'Score de Consensus IA: Comment Détecter les Hallucinations sur Plusieurs Modèles', intro: 'Quand cinq modèles IA s\'accordent indépendamment sur un fait, la réponse est bien plus fiable que si un seul modèle répond. C\'est le principe du consensus IA.', publishDate: 'Publié 16 mars 2026', readTime: '11 min de lecture' },
+    ja: { category: 'AI信頼性', title: 'AIコンセンサススコアリング：複数モデルにわたるハルシネーションの検出方法', intro: '5つのAIモデルが独立してある事実に同意する場合、1つのモデルが単独で答える場合よりも回答の信頼性が大幅に高くなります。これがAIコンセンサススコアリングの原理です。', publishDate: '2026年3月16日公開', readTime: '11分の読み物' },
+    zh: { category: 'AI可靠性', title: 'AI共识评分：如何跨多个模型检测幻觉', intro: '当五个AI模型独立认同某个事实时，答案的可靠性远高于单个模型单独回答。这就是AI共识评分的原理。', publishDate: '发布于 2026年3月16日', readTime: '11分钟阅读' }
   }
 }
 

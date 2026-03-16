@@ -4321,5 +4321,550 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       },
     },
   },
+  consensusScoring: {
+    en: {
+      category: 'AI Reliability',
+      title: 'AI Consensus Scoring: How to Detect Hallucinations Across Multiple Models',
+      intro: 'When five AI models independently agree on a fact, the answer is far more reliable than when one model answers alone. This is the principle behind AI consensus scoring — and why it is the most effective method for detecting hallucinations at scale.',
+      publishDate: 'Published March 16, 2026',
+      readTime: '11 min read',
+      sections: {
+        definition: {
+          title: 'What Is AI Consensus Scoring?',
+          content: [
+            'AI consensus scoring is a method for evaluating the reliability of AI-generated information by measuring agreement across multiple independent language models. When you send the same prompt to five or more AI models and analyse where their responses converge and diverge, you get a statistical signal about which claims are likely accurate and which are potentially hallucinated.',
+            'The underlying principle comes from ensemble methods in statistics: independent sources that arrive at the same conclusion are more likely to be correct than a single source, even if that single source is highly capable. This holds for AI models just as it does for human experts.',
+            'Consensus scoring assigns a confidence level to each claim in a set of AI responses based on how many models independently agreed on it. High consensus = high reliability. Low consensus = investigate further.',
+          ],
+        },
+        problem: {
+          title: 'Why Single-Model Answers Cannot Be Trusted for High-Stakes Decisions',
+          content: [
+            'Every major language model hallucinates. GPT-4o, Claude, Gemini, Grok, Mistral — all of them fabricate facts with confident-sounding language. The difference between models is not whether they hallucinate, but which facts they get wrong, and when.',
+            'This creates a critical problem for anyone relying on AI for research, writing, or decision-making: you cannot tell from a single response whether a specific claim is accurate or invented. The model will present both real facts and fabricated ones in exactly the same way.',
+          ],
+          items: [
+            'Hallucination rates vary from 3–7% for well-documented domains (e.g., major historical events) to 20–30% for niche technical topics, recent events, and specific numerical claims',
+            'Models trained on the same internet data share some hallucination patterns — but each model also has unique failure modes based on its training and fine-tuning',
+            'A claim hallucinated by GPT-4o is unlikely to be independently hallucinated by Claude in exactly the same way — making cross-model comparison a powerful signal',
+            'Chain-of-thought reasoning reduces hallucination rates but does not eliminate them — structured prompting and multi-model verification are complementary, not alternative strategies',
+          ],
+        },
+        mechanism: {
+          title: 'How Consensus Scoring Works: The Methodology',
+          content: [
+            'Consensus scoring operates in four stages. Each stage narrows the uncertainty and surfaces the most reliable information from across all model responses.',
+          ],
+          items: [
+            'Stage 1 — Dispatch: Send an identical, optimised prompt to multiple AI models simultaneously. The prompt must be consistent across all models to ensure the responses are comparable.',
+            'Stage 2 — Collect: Gather all responses without editing or filtering. The raw responses are the input to the consensus analysis.',
+            'Stage 3 — Extract: Decompose each response into discrete, independently verifiable claims. "The Battle of Hastings occurred in 1066 and resulted in the Norman conquest of England" becomes two separate claims.',
+            'Stage 4 — Score: For each extracted claim, count how many models independently stated it. A claim appearing in 5/5 responses scores maximum consensus. A claim appearing in 1/5 is flagged for review.',
+          ],
+        },
+        levels: {
+          title: 'The Consensus Confidence Levels',
+          content: ['PromptQuorum maps consensus scores to five confidence levels, each with a recommended action:'],
+          rows: [
+            { Level: 'Full Consensus', Agreement: '5 of 5 models', Interpretation: 'Near-certain factual claim', Action: 'Accept with high confidence' },
+            { Level: 'Strong Consensus', Agreement: '4 of 5 models', Interpretation: 'Highly reliable, minor variation', Action: 'Accept, note diverging model' },
+            { Level: 'Majority Consensus', Agreement: '3 of 5 models', Interpretation: 'Likely accurate, some uncertainty', Action: 'Accept with verification note' },
+            { Level: 'Weak Consensus', Agreement: '2 of 5 models', Interpretation: 'Contested or ambiguous claim', Action: 'Verify independently before using' },
+            { Level: 'No Consensus', Agreement: '1 of 5 models', Interpretation: 'Potential hallucination or rare fact', Action: 'Flag for manual fact-check' },
+          ],
+          columns: ['Level', 'Agreement', 'Interpretation', 'Action'],
+        },
+        hallucination: {
+          title: 'Hallucination Detection Through Cross-Model Analysis',
+          content: [
+            'Hallucination detection is the most important application of consensus scoring. The logic is straightforward: if only one model states a specific fact, two explanations are possible. Either the fact is so obscure that only one model encountered it in training, or the model fabricated it.',
+            'The key insight is that AI models hallucinate independently. Each model has its own training data distribution, fine-tuning history, and failure modes. A specific false claim — a wrong publication date, a fabricated statistic, a misattributed quote — is unlikely to be independently generated by five different models.',
+            'When five models agree that a historical figure was born in 1847, and one model says 1851, the 1851 is almost certainly the hallucination. When one model claims a study found a 73% improvement rate and no other model references that study, the statistic is flagged as a potential fabrication.',
+          ],
+          items: [
+            'Numerical hallucinations (wrong dates, statistics, percentages) are easiest to detect — models diverge sharply on fabricated numbers',
+            'Proper noun hallucinations (wrong names, institutions, titles) are caught when multiple models disagree on attribution',
+            'Relationship hallucinations (wrong causal claims, incorrect sequences) surface when models contradict each other\'s narrative',
+            'Omission hallucinations (leaving out a critical qualifier or exception) are identified by comparing which caveats appear across models',
+          ],
+        },
+        example: {
+          title: 'A Real Example: Consensus Scoring in Action',
+          content: [
+            'Suppose you ask five models: "What was the market capitalisation of OpenAI in 2024?"',
+            'Model A: "$80 billion (October 2024 funding round)" — Model B: "$86 billion (as of late 2024)" — Model C: "$80 billion, based on the October 2024 raise" — Model D: "$157 billion (October 2024)" — Model E: "$80 billion following the October 2024 investment round"',
+            'Consensus scoring immediately surfaces a discrepancy: four models agree on $80 billion, one states $157 billion. The $157 billion figure was OpenAI\'s valuation in a later (2025) funding round — Model D hallucinated the wrong year\'s valuation. Without consensus analysis, you might have accepted whichever response you read first.',
+            'This is why consensus scoring is most valuable for: recent events (models have less training data), numerical claims (easy to misremember), and domain-specific facts (niche training data coverage varies).',
+          ],
+        },
+        quorumTypes: {
+          title: 'The 13 Quorum Analysis Types in PromptQuorum',
+          content: ['PromptQuorum implements consensus scoring through 13 distinct analysis types, each targeting a different dimension of multi-model response comparison:'],
+          items: [
+            'Consensus Summary — extracts the claims all models agree on into a single authoritative summary',
+            'Weighted Merge — synthesises a best-of-all response, weighted by per-model confidence scores',
+            'Atomic Facts Extraction — decomposes responses into individual verifiable claims for granular scoring',
+            'Overlap Mapping — identifies which sections of content appear across the most model responses',
+            'Contradiction Detection — flags specific points where models directly contradict each other',
+            'Confidence Scoring — assigns a 1–5 confidence score to each claim based on cross-model agreement',
+            'Completeness Check — identifies information present in some models but missing in others',
+            'Hallucination Detection — flags claims appearing in only one or two models for manual verification',
+            'Redundancy Elimination — removes repeated information to surface unique insights per model',
+            'Best Answer Selection — identifies which single model response is most complete and accurate',
+            'Multi-Model Ensemble — creates a hybrid response drawing the strongest elements from each model',
+            'Controversy Flag — marks topics where models consistently disagree, indicating genuine uncertainty',
+            'Response Ranking — orders responses from most to least reliable based on consensus alignment',
+          ],
+        },
+        whenToUse: {
+          title: 'When Consensus Scoring Matters Most',
+          content: ['Consensus scoring adds the most value in high-stakes, verification-sensitive contexts:'],
+          items: [
+            'Research and fact-checking — where a single hallucinated statistic can invalidate an entire argument',
+            'Medical and legal information — where accuracy is non-negotiable and errors have consequences',
+            'Recent events — models have less reliable training data for events close to their knowledge cutoff',
+            'Technical specifications — version numbers, API endpoints, library syntax change frequently and models diverge sharply',
+            'Numerical claims — dates, figures, percentages, and measurements are the most common hallucination vectors',
+            'Attribution and citations — models frequently misattribute quotes and fabricate paper titles or authors',
+          ],
+        },
+        keyTakeaways: {
+          title: 'Key Takeaways',
+          items: [
+            'AI consensus scoring measures reliability by comparing how many independent models agree on a specific claim',
+            'No single AI model — regardless of capability — can eliminate hallucinations; cross-model verification is the only scalable reliability layer',
+            'Claims appearing in 5/5 models are near-certain; claims appearing in 1/5 models are likely hallucinated or extremely obscure',
+            'Hallucination detection works because models hallucinate independently — a shared false claim across five models is statistically near-impossible',
+            'PromptQuorum implements consensus scoring through 13 Quorum analysis types, each targeting a different dimension of multi-model response reliability',
+          ],
+        },
+      },
+    },
+    de: {
+      category: 'KI-Zuverlässigkeit',
+      title: 'KI-Konsens-Scoring: Halluzinationen über mehrere Modelle erkennen',
+      intro: 'Wenn fünf KI-Modelle unabhängig voneinander einer Aussage zustimmen, ist die Antwort deutlich zuverlässiger als wenn ein einzelnes Modell antwortet. Dies ist das Prinzip hinter KI-Konsens-Scoring — und warum es die effektivste Methode zur Erkennung von Halluzinationen ist.',
+      publishDate: 'Veröffentlicht 16. März 2026',
+      readTime: '11 Min. Lesezeit',
+      sections: {
+        definition: {
+          title: 'Was ist KI-Konsens-Scoring?',
+          content: [
+            'KI-Konsens-Scoring ist eine Methode zur Bewertung der Zuverlässigkeit von KI-generierten Informationen, indem die Übereinstimmung mehrerer unabhängiger Sprachmodelle gemessen wird. Wenn Sie denselben Prompt an fünf oder mehr KI-Modelle senden und analysieren, wo ihre Antworten übereinstimmen und divergieren, erhalten Sie ein statistisches Signal darüber, welche Aussagen wahrscheinlich korrekt sind.',
+            'Das zugrunde liegende Prinzip stammt aus Ensemble-Methoden der Statistik: Unabhängige Quellen, die zum gleichen Schluss kommen, sind wahrscheinlicher korrekt als eine einzelne Quelle — selbst wenn diese einzelne Quelle sehr leistungsfähig ist.',
+            'Konsens-Scoring weist jeder Aussage in einem Satz von KI-Antworten ein Konfidenzniveau zu, basierend darauf, wie viele Modelle unabhängig voneinander zugestimmt haben. Hoher Konsens = hohe Zuverlässigkeit. Niedriger Konsens = genauer untersuchen.',
+          ],
+        },
+        problem: {
+          title: 'Warum einzelne Modellantworten für wichtige Entscheidungen nicht vertrauenswürdig sind',
+          content: [
+            'Jedes große Sprachmodell halluziniert. GPT-4o, Claude, Gemini, Grok, Mistral — alle erfinden Fakten mit selbstbewusst klingender Sprache. Der Unterschied zwischen Modellen ist nicht ob sie halluzinieren, sondern welche Fakten sie falsch darstellen.',
+          ],
+          items: [
+            'Halluzinationsraten variieren von 3–7% für gut dokumentierte Bereiche bis zu 20–30% für Nischenthemen und aktuelle Ereignisse',
+            'Modelle, die auf denselben Internetdaten trainiert wurden, teilen einige Halluzinationsmuster — aber jedes Modell hat auch einzigartige Fehlertypen',
+            'Ein von GPT-4o halluzinierter Anspruch wird wahrscheinlich nicht von Claude auf dieselbe Weise unabhängig halluziniert — was den Modellvergleich zu einem starken Signal macht',
+          ],
+        },
+        mechanism: {
+          title: 'Wie Konsens-Scoring funktioniert',
+          content: ['Konsens-Scoring funktioniert in vier Phasen:'],
+          items: [
+            'Phase 1 — Versenden: Senden Sie einen identischen, optimierten Prompt gleichzeitig an mehrere KI-Modelle',
+            'Phase 2 — Sammeln: Alle Antworten ohne Bearbeitung erfassen',
+            'Phase 3 — Extrahieren: Jede Antwort in einzelne, unabhängig überprüfbare Aussagen zerlegen',
+            'Phase 4 — Bewerten: Für jede extrahierte Aussage zählen, wie viele Modelle sie unabhängig genannt haben',
+          ],
+        },
+        levels: {
+          title: 'Die Konsens-Konfidenzstufen',
+          content: ['PromptQuorum ordnet Konsens-Scores fünf Konfidenzstufen zu:'],
+          rows: [
+            { Stufe: 'Voller Konsens', Übereinstimmung: '5 von 5 Modellen', Interpretation: 'Fast sichere Faktenaussage', Aktion: 'Mit hoher Konfidenz akzeptieren' },
+            { Stufe: 'Starker Konsens', Übereinstimmung: '4 von 5 Modellen', Interpretation: 'Sehr zuverlässig, geringe Variation', Aktion: 'Akzeptieren, abweichendes Modell notieren' },
+            { Stufe: 'Mehrheitskonsens', Übereinstimmung: '3 von 5 Modellen', Interpretation: 'Wahrscheinlich korrekt, etwas Unsicherheit', Aktion: 'Mit Verifikationsvermerk akzeptieren' },
+            { Stufe: 'Schwacher Konsens', Übereinstimmung: '2 von 5 Modellen', Interpretation: 'Umstrittene oder mehrdeutige Aussage', Aktion: 'Unabhängig überprüfen' },
+            { Stufe: 'Kein Konsens', Übereinstimmung: '1 von 5 Modellen', Interpretation: 'Mögliche Halluzination', Aktion: 'Für manuelle Überprüfung markieren' },
+          ],
+          columns: ['Stufe', 'Übereinstimmung', 'Interpretation', 'Aktion'],
+        },
+        hallucination: {
+          title: 'Halluzinationserkennung durch modellübergreifende Analyse',
+          content: [
+            'Die Schlüsseleinsicht ist, dass KI-Modelle unabhängig voneinander halluzinieren. Jedes Modell hat seine eigene Trainingsverteilung und einzigartige Fehlertypen. Eine spezifische falsche Aussage — ein falsches Datum, eine erfundene Statistik — ist unwahrscheinlich, von fünf verschiedenen Modellen unabhängig generiert zu werden.',
+          ],
+          items: [
+            'Numerische Halluzinationen (falsche Daten, Statistiken) sind am einfachsten zu erkennen — Modelle divergieren stark bei erfundenen Zahlen',
+            'Eigennamen-Halluzinationen werden erkannt, wenn mehrere Modelle bei der Zuordnung nicht übereinstimmen',
+            'Beziehungs-Halluzinationen (falsche kausale Behauptungen) kommen ans Licht, wenn Modelle sich gegenseitig widersprechen',
+          ],
+        },
+        example: {
+          title: 'Ein reales Beispiel: Konsens-Scoring in der Praxis',
+          content: [
+            'Angenommen, Sie fragen fünf Modelle: "Was war die Marktkapitalisierung von OpenAI im Jahr 2024?"',
+            'Vier Modelle stimmen mit 80 Milliarden Dollar überein (Oktober 2024 Finanzierungsrunde). Ein Modell nennt 157 Milliarden Dollar. Das Konsens-Scoring zeigt sofort die Diskrepanz auf — das abweichende Modell verwechselte die Bewertung einer späteren Finanzierungsrunde.',
+          ],
+        },
+        quorumTypes: {
+          title: 'Die 13 Quorum-Analysetypen in PromptQuorum',
+          content: ['PromptQuorum implementiert Konsens-Scoring durch 13 unterschiedliche Analysetypen:'],
+          items: [
+            'Konsens-Zusammenfassung — extrahiert alle von Modellen vereinbarten Aussagen',
+            'Gewichtete Zusammenführung — synthetisiert eine Best-of-all-Antwort, gewichtet nach Konfidenzscores',
+            'Atomare Faktenextraktion — zerlegt Antworten in einzelne überprüfbare Aussagen',
+            'Überlappungs-Mapping — identifiziert, welche Inhalte in den meisten Antworten erscheinen',
+            'Widerspruchserkennung — markiert Punkte, an denen Modelle sich direkt widersprechen',
+            'Konfidenz-Scoring — weist jeder Aussage einen Konfidenzwert zu',
+            'Vollständigkeitsprüfung — identifiziert Informationen, die in einigen Modellen fehlen',
+            'Halluzinationserkennung — markiert Aussagen, die nur in einem oder zwei Modellen erscheinen',
+            'Redundanzelimination — entfernt wiederholte Informationen',
+            'Beste Antwortauswahl — identifiziert die vollständigste und genaueste Modellantwort',
+            'Multi-Modell-Ensemble — erstellt eine hybride Antwort aus den besten Elementen',
+            'Kontrovers-Markierung — markiert Themen, bei denen Modelle konsistent nicht übereinstimmen',
+            'Antwort-Ranking — ordnet Antworten von zuverlässigsten bis unzuverlässigsten',
+          ],
+        },
+        whenToUse: {
+          title: 'Wann Konsens-Scoring am wichtigsten ist',
+          items: [
+            'Forschung und Faktenprüfung — wo eine einzige halluzinierte Statistik ein Argument entwerten kann',
+            'Medizinische und rechtliche Informationen — wo Genauigkeit unverhandelbar ist',
+            'Aktuelle Ereignisse — Modelle haben weniger zuverlässige Daten für Ereignisse nahe ihrem Wissens-Cutoff',
+            'Technische Spezifikationen — Versionsnummern und API-Endpunkte ändern sich häufig',
+            'Numerische Aussagen — Daten, Zahlen und Prozentsätze sind die häufigsten Halluzinationsvektoren',
+          ],
+        },
+        keyTakeaways: {
+          title: 'Wichtigste Erkenntnisse',
+          items: [
+            'KI-Konsens-Scoring misst Zuverlässigkeit durch Vergleich der Übereinstimmung unabhängiger Modelle',
+            'Kein einzelnes KI-Modell kann Halluzinationen eliminieren — modellübergreifende Verifikation ist die einzige skalierbare Zuverlässigkeitsschicht',
+            'Aussagen in 5/5 Modellen sind fast sicher; Aussagen in 1/5 Modellen sind wahrscheinlich halluziniert',
+            'Halluzinationserkennung funktioniert, weil Modelle unabhängig voneinander halluzinieren',
+            'PromptQuorum implementiert Konsens-Scoring durch 13 Quorum-Analysetypen',
+          ],
+        },
+      },
+    },
+    fr: {
+      category: 'Fiabilité IA',
+      title: 'Score de Consensus IA: Comment Détecter les Hallucinations sur Plusieurs Modèles',
+      intro: 'Quand cinq modèles IA s\'accordent indépendamment sur un fait, la réponse est bien plus fiable que si un seul modèle répond. C\'est le principe du score de consensus IA — et pourquoi c\'est la méthode la plus efficace pour détecter les hallucinations à grande échelle.',
+      publishDate: 'Publié 16 mars 2026',
+      readTime: '11 min de lecture',
+      sections: {
+        definition: {
+          title: 'Qu\'est-ce que le Score de Consensus IA?',
+          content: [
+            'Le score de consensus IA est une méthode d\'évaluation de la fiabilité des informations générées par l\'IA en mesurant l\'accord entre plusieurs modèles de langage indépendants. Lorsque vous envoyez le même prompt à cinq modèles ou plus et analysez où leurs réponses convergent et divergent, vous obtenez un signal statistique sur les affirmations probablement exactes.',
+            'Le principe sous-jacent vient des méthodes d\'ensemble en statistique : des sources indépendantes qui arrivent à la même conclusion ont plus de chances d\'être correctes qu\'une seule source.',
+          ],
+        },
+        problem: {
+          title: 'Pourquoi les Réponses d\'un Seul Modèle Ne Peuvent Pas Être Entièrement Fiables',
+          content: [
+            'Chaque grand modèle de langage hallucine. GPT-4o, Claude, Gemini — tous inventent des faits avec un langage qui sonne confiant. La différence entre les modèles n\'est pas s\'ils hallucinent, mais quels faits ils se trompent et quand.',
+          ],
+          items: [
+            'Les taux d\'hallucination varient de 3–7% pour les domaines bien documentés à 20–30% pour les sujets de niche',
+            'Les modèles entraînés sur les mêmes données partagent certains modèles d\'hallucination — mais chacun a ses propres modes d\'échec uniques',
+            'Une affirmation hallucinée par GPT-4o est peu susceptible d\'être indépendamment hallucinée de la même façon par Claude',
+          ],
+        },
+        mechanism: {
+          title: 'Comment Fonctionne le Score de Consensus',
+          content: ['Le score de consensus fonctionne en quatre étapes :'],
+          items: [
+            'Étape 1 — Envoi : Envoyer un prompt identique et optimisé simultanément à plusieurs modèles IA',
+            'Étape 2 — Collecte : Rassembler toutes les réponses sans filtrage',
+            'Étape 3 — Extraction : Décomposer chaque réponse en affirmations individuelles vérifiables',
+            'Étape 4 — Score : Pour chaque affirmation, compter combien de modèles l\'ont mentionnée indépendamment',
+          ],
+        },
+        levels: {
+          title: 'Les Niveaux de Confiance du Consensus',
+          content: ['PromptQuorum associe les scores de consensus à cinq niveaux de confiance :'],
+          rows: [
+            { Niveau: 'Consensus total', Accord: '5 sur 5 modèles', Interprétation: 'Affirmation factuelle quasi-certaine', Action: 'Accepter avec haute confiance' },
+            { Niveau: 'Consensus fort', Accord: '4 sur 5 modèles', Interprétation: 'Très fiable, variation mineure', Action: 'Accepter, noter le modèle divergent' },
+            { Niveau: 'Consensus majoritaire', Accord: '3 sur 5 modèles', Interprétation: 'Probablement exact, incertitude partielle', Action: 'Accepter avec note de vérification' },
+            { Niveau: 'Consensus faible', Accord: '2 sur 5 modèles', Interprétation: 'Affirmation contestée ou ambiguë', Action: 'Vérifier indépendamment' },
+            { Niveau: 'Pas de consensus', Accord: '1 sur 5 modèles', Interprétation: 'Hallucination potentielle', Action: 'Marquer pour vérification manuelle' },
+          ],
+          columns: ['Niveau', 'Accord', 'Interprétation', 'Action'],
+        },
+        hallucination: {
+          title: 'Détection des Hallucinations par Analyse Inter-Modèles',
+          content: [
+            'L\'idée clé est que les modèles IA hallucinent indépendamment. Chaque modèle a sa propre distribution de données d\'entraînement et ses modes d\'échec uniques. Une fausse affirmation spécifique est peu susceptible d\'être générée indépendamment par cinq modèles différents.',
+          ],
+          items: [
+            'Les hallucinations numériques (mauvaises dates, statistiques) sont les plus faciles à détecter',
+            'Les hallucinations de noms propres sont détectées quand les modèles divergent sur l\'attribution',
+            'Les hallucinations de relations causales apparaissent quand les modèles se contredisent',
+          ],
+        },
+        example: {
+          title: 'Un Exemple Concret: Le Score de Consensus en Action',
+          content: [
+            'Supposons que vous demandez à cinq modèles : "Quelle était la capitalisation boursière d\'OpenAI en 2024 ?"',
+            'Quatre modèles s\'accordent sur 80 milliards de dollars (levée de fonds octobre 2024). Un modèle indique 157 milliards. Le score de consensus révèle immédiatement la divergence — le modèle divergent a confondu la valorisation d\'une levée de fonds ultérieure.',
+          ],
+        },
+        quorumTypes: {
+          title: 'Les 13 Types d\'Analyse Quorum dans PromptQuorum',
+          content: ['PromptQuorum implémente le score de consensus via 13 types d\'analyse distincts :'],
+          items: [
+            'Résumé consensuel — extrait les affirmations sur lesquelles tous les modèles s\'accordent',
+            'Fusion pondérée — synthétise une réponse optimale pondérée par les scores de confiance',
+            'Extraction de faits atomiques — décompose les réponses en affirmations individuelles vérifiables',
+            'Cartographie des chevauchements — identifie les contenus présents dans le plus de réponses',
+            'Détection des contradictions — signale les points où les modèles se contredisent directement',
+            'Score de confiance — attribue un score à chaque affirmation basé sur l\'accord inter-modèles',
+            'Vérification de complétude — identifie les informations présentes dans certains modèles mais absentes dans d\'autres',
+            'Détection des hallucinations — signale les affirmations n\'apparaissant que dans un ou deux modèles',
+            'Élimination des redondances — supprime les informations répétées',
+            'Sélection de la meilleure réponse — identifie la réponse la plus complète et précise',
+            'Ensemble multi-modèles — crée une réponse hybride combinant les meilleurs éléments',
+            'Signalement de controverse — marque les sujets où les modèles divergent systématiquement',
+            'Classement des réponses — ordonne les réponses de la plus à la moins fiable',
+          ],
+        },
+        whenToUse: {
+          title: 'Quand le Score de Consensus Est le Plus Important',
+          items: [
+            'Recherche et vérification des faits — où une statistique hallucinée peut invalider un argument',
+            'Informations médicales et juridiques — où la précision est non négociable',
+            'Événements récents — les modèles ont moins de données fiables pour les événements proches de leur date limite',
+            'Spécifications techniques — les numéros de version et endpoints API changent fréquemment',
+            'Affirmations numériques — dates, chiffres et pourcentages sont les vecteurs d\'hallucination les plus courants',
+          ],
+        },
+        keyTakeaways: {
+          title: 'Points Clés à Retenir',
+          items: [
+            'Le score de consensus IA mesure la fiabilité en comparant l\'accord de modèles indépendants',
+            'Aucun modèle IA unique ne peut éliminer les hallucinations — la vérification inter-modèles est la seule couche de fiabilité scalable',
+            'Les affirmations présentes dans 5/5 modèles sont quasi-certaines ; celles dans 1/5 sont probablement hallucinées',
+            'La détection des hallucinations fonctionne car les modèles hallucinent indépendamment',
+            'PromptQuorum implémente le score de consensus via 13 types d\'analyse Quorum',
+          ],
+        },
+      },
+    },
+    ja: {
+      category: 'AI信頼性',
+      title: 'AIコンセンサススコアリング：複数モデルにわたるハルシネーションの検出方法',
+      intro: '5つのAIモデルが独立してある事実に同意する場合、1つのモデルが単独で答える場合よりも回答の信頼性が大幅に高くなります。これがAIコンセンサススコアリングの原理です。',
+      publishDate: '2026年3月16日公開',
+      readTime: '11分の読み物',
+      sections: {
+        definition: {
+          title: 'AIコンセンサススコアリングとは？',
+          content: [
+            'AIコンセンサススコアリングは、複数の独立した言語モデル間の一致度を測定することで、AIが生成した情報の信頼性を評価する方法です。同じプロンプトを5つ以上のAIモデルに送信し、回答が収束する箇所と分岐する箇所を分析することで、どの主張が正確でどれが潜在的にハルシネートされているかについての統計的シグナルが得られます。',
+            'コンセンサススコアリングは、同意したモデルの数に基づいて各主張に信頼度レベルを割り当てます。高いコンセンサス＝高い信頼性。低いコンセンサス＝さらに調査が必要。',
+          ],
+        },
+        problem: {
+          title: '単一モデルの回答が重要な意思決定に信頼できない理由',
+          content: [
+            'すべての主要な言語モデルはハルシネートします。GPT-4o、Claude、Gemini — どれも自信ありげな言語で事実を捏造します。モデル間の違いは、ハルシネートするかどうかではなく、どの事実を間違えるか、そしていつかです。',
+          ],
+          items: [
+            'ハルシネーション率は、よく文書化された領域で3〜7%から、ニッチなトピックや最近の出来事で20〜30%まで変動します',
+            '同じインターネットデータでトレーニングされたモデルは、一部のハルシネーションパターンを共有しますが、各モデルは独自の失敗パターンも持っています',
+            'GPT-4oがハルシネートした主張が、まったく同じ方法でClaudeによって独立してハルシネートされる可能性は低い',
+          ],
+        },
+        mechanism: {
+          title: 'コンセンサススコアリングの仕組み',
+          content: ['コンセンサススコアリングは4つのステージで機能します：'],
+          items: [
+            'ステージ1 — 送信：同一の最適化されたプロンプトを複数のAIモデルに同時送信',
+            'ステージ2 — 収集：すべての回答をフィルタリングせずに収集',
+            'ステージ3 — 抽出：各回答を個別の検証可能な主張に分解',
+            'ステージ4 — スコアリング：各主張について、独立して述べたモデルの数をカウント',
+          ],
+        },
+        levels: {
+          title: 'コンセンサス信頼度レベル',
+          content: ['PromptQuorumはコンセンサススコアを5つの信頼度レベルにマッピングします：'],
+          rows: [
+            { レベル: '完全なコンセンサス', 合意: '5/5モデル', 解釈: 'ほぼ確実な事実主張', アクション: '高い信頼度で受け入れる' },
+            { レベル: '強いコンセンサス', 合意: '4/5モデル', 解釈: '非常に信頼性が高い', アクション: '受け入れ、divergingモデルを記録' },
+            { レベル: '多数コンセンサス', 合意: '3/5モデル', 解釈: 'おそらく正確、一部不確実', アクション: '検証メモ付きで受け入れ' },
+            { レベル: '弱いコンセンサス', 合意: '2/5モデル', 解釈: '争いのある、または曖昧な主張', アクション: '独立して確認' },
+            { レベル: 'コンセンサスなし', 合意: '1/5モデル', 解釈: '潜在的ハルシネーション', アクション: '手動ファクトチェックのためフラグ' },
+          ],
+          columns: ['レベル', '合意', '解釈', 'アクション'],
+        },
+        hallucination: {
+          title: 'クロスモデル分析によるハルシネーション検出',
+          content: [
+            'AIモデルは独立してハルシネートします。各モデルは独自のトレーニングデータ分布と独自の失敗モードを持っています。特定の誤った主張が5つの異なるモデルによって独立して生成される可能性は統計的にほぼゼロです。',
+          ],
+          items: [
+            '数値ハルシネーション（誤った日付、統計）は最も検出しやすい',
+            '固有名詞ハルシネーションは、モデルが帰属について一致しない場合に検出される',
+            '関係ハルシネーションは、モデルが互いに矛盾する場合に明らかになる',
+          ],
+        },
+        example: {
+          title: '実際の例：コンセンサススコアリングの実践',
+          content: [
+            '5つのモデルに「2024年のOpenAIの時価総額は？」と質問したとします。',
+            '4つのモデルは800億ドル（2024年10月の資金調達ラウンド）で一致。1つのモデルは1,570億ドルと述べます。コンセンサススコアリングは即座に不一致を明らかにします。',
+          ],
+        },
+        quorumTypes: {
+          title: 'PromptQuorumの13のQuorum分析タイプ',
+          content: ['PromptQuorumは13の異なる分析タイプでコンセンサススコアリングを実装します：'],
+          items: [
+            'コンセンサスサマリー — すべてのモデルが同意する主張を抽出',
+            '加重マージ — 信頼スコアで重み付けされたベストオブオール回答を合成',
+            'アトミックファクト抽出 — 回答を個別の検証可能な主張に分解',
+            'オーバーラップマッピング — 最多回答に登場するコンテンツを特定',
+            '矛盾検出 — モデルが直接矛盾するポイントをフラグ',
+            '信頼スコアリング — クロスモデル合意に基づく各主張のスコア',
+            '完全性チェック — 一部のモデルに存在するが他に欠けている情報を特定',
+            'ハルシネーション検出 — 1〜2モデルにのみ登場する主張をフラグ',
+            '冗長性排除 — 繰り返し情報を削除',
+            'ベスト回答選択 — 最も完全で正確なモデル回答を特定',
+            'マルチモデルアンサンブル — 各モデルの最良要素を組み合わせたハイブリッド回答',
+            '論争フラグ — モデルが一貫して意見が分かれるトピックをマーク',
+            '回答ランキング — 最も信頼できるものから最も信頼できないものへの順位付け',
+          ],
+        },
+        whenToUse: {
+          title: 'コンセンサススコアリングが最も重要な場面',
+          items: [
+            'リサーチとファクトチェック — 一つのハルシネートされた統計が議論全体を無効にしうる場合',
+            '医療・法的情報 — 正確さが交渉不可能な場合',
+            '最近の出来事 — モデルの知識カットオフに近いイベントのデータが少ない',
+            '技術仕様 — バージョン番号やAPIエンドポイントは頻繁に変わる',
+            '数値主張 — 日付、数字、パーセンテージは最も一般的なハルシネーションベクター',
+          ],
+        },
+        keyTakeaways: {
+          title: '重要なポイント',
+          items: [
+            'AIコンセンサススコアリングは独立したモデルの合意を比較することで信頼性を測定する',
+            'どの単一AIモデルもハルシネーションを排除できない — クロスモデル検証が唯一のスケーラブルな信頼性レイヤー',
+            '5/5モデルの主張はほぼ確実；1/5モデルの主張はおそらくハルシネート',
+            'ハルシネーション検出はモデルが独立してハルシネートするため機能する',
+            'PromptQuorumは13のQuorum分析タイプでコンセンサススコアリングを実装',
+          ],
+        },
+      },
+    },
+    zh: {
+      category: 'AI可靠性',
+      title: 'AI共识评分：如何跨多个模型检测幻觉',
+      intro: '当五个AI模型独立认同某个事实时，答案的可靠性远高于单个模型单独回答。这就是AI共识评分的原理——也是为什么它是大规模检测幻觉最有效的方法。',
+      publishDate: '发布于 2026年3月16日',
+      readTime: '11分钟阅读',
+      sections: {
+        definition: {
+          title: '什么是AI共识评分？',
+          content: [
+            'AI共识评分是一种通过测量多个独立语言模型之间的一致性来评估AI生成信息可靠性的方法。当您将相同的提示词发送给五个或更多AI模型，并分析它们的回答在哪里收敛和发散时，您会获得关于哪些主张可能准确、哪些可能被幻觉的统计信号。',
+            '共识评分基于每个声明有多少模型独立同意，为每个声明分配一个置信度级别。高共识=高可靠性。低共识=进一步调查。',
+          ],
+        },
+        problem: {
+          title: '为什么单个模型的答案不能用于高风险决策',
+          content: [
+            '每个主要语言模型都会产生幻觉。GPT-4o、Claude、Gemini——它们都用听起来自信的语言捏造事实。模型之间的区别不是是否产生幻觉，而是哪些事实出错，以及何时出错。',
+          ],
+          items: [
+            '幻觉率从有据可查的领域的3-7%变化到利基主题的20-30%',
+            '在相同互联网数据上训练的模型共享一些幻觉模式——但每个模型也有独特的失败模式',
+            'GPT-4o幻觉的声明不太可能以完全相同的方式被Claude独立幻觉',
+          ],
+        },
+        mechanism: {
+          title: '共识评分如何运作',
+          content: ['共识评分分四个阶段运作：'],
+          items: [
+            '阶段1——分发：同时向多个AI模型发送相同的优化提示词',
+            '阶段2——收集：不加过滤地收集所有回答',
+            '阶段3——提取：将每个回答分解为单独的、可独立验证的声明',
+            '阶段4——评分：对于每个提取的声明，计算有多少模型独立陈述了它',
+          ],
+        },
+        levels: {
+          title: '共识置信度级别',
+          content: ['PromptQuorum将共识分数映射到五个置信度级别：'],
+          rows: [
+            { 级别: '完全共识', 一致性: '5/5模型', 解读: '近乎确定的事实声明', 行动: '以高置信度接受' },
+            { 级别: '强共识', 一致性: '4/5模型', 解读: '高度可靠，细微变化', 行动: '接受，记录分歧模型' },
+            { 级别: '多数共识', 一致性: '3/5模型', 解读: '可能准确，存在一些不确定性', 行动: '带验证说明接受' },
+            { 级别: '弱共识', 一致性: '2/5模型', 解读: '有争议或模糊的声明', 行动: '独立验证后使用' },
+            { 级别: '无共识', 一致性: '1/5模型', 解读: '潜在的幻觉', 行动: '标记进行人工核实' },
+          ],
+          columns: ['级别', '一致性', '解读', '行动'],
+        },
+        hallucination: {
+          title: '通过跨模型分析检测幻觉',
+          content: [
+            'AI模型独立产生幻觉。每个模型都有自己的训练数据分布和独特的失败模式。一个特定的错误声明不太可能被五个不同的模型独立生成。',
+          ],
+          items: [
+            '数字幻觉（错误日期、统计数据）最容易检测——模型在捏造数字上差异显著',
+            '专有名词幻觉在多个模型对归属意见不一致时被发现',
+            '关系幻觉（错误的因果声明）在模型相互矛盾时浮现',
+          ],
+        },
+        example: {
+          title: '真实示例：共识评分实战',
+          content: [
+            '假设您问五个模型："2024年OpenAI的市值是多少？"',
+            '四个模型同意800亿美元（2024年10月融资轮）。一个模型表示1570亿美元。共识评分立即发现差异——该模型混淆了后续融资轮的估值。',
+          ],
+        },
+        quorumTypes: {
+          title: 'PromptQuorum中的13种Quorum分析类型',
+          content: ['PromptQuorum通过13种不同的分析类型实现共识评分：'],
+          items: [
+            '共识摘要——提取所有模型同意的声明',
+            '加权合并——综合按置信度分数加权的最优回答',
+            '原子事实提取——将回答分解为单独的可验证声明',
+            '重叠映射——识别出现在最多回答中的内容',
+            '矛盾检测——标记模型直接矛盾的点',
+            '置信度评分——基于跨模型一致性为每个声明分配分数',
+            '完整性检查——识别某些模型中存在但其他模型中缺失的信息',
+            '幻觉检测——标记仅出现在一两个模型中的声明',
+            '冗余消除——删除重复信息',
+            '最佳答案选择——识别最完整、最准确的模型回答',
+            '多模型集成——结合每个模型最强元素的混合回答',
+            '争议标记——标记模型持续不同意的主题',
+            '回答排名——从最可靠到最不可靠排列回答',
+          ],
+        },
+        whenToUse: {
+          title: '共识评分最重要的时机',
+          items: [
+            '研究和事实核查——一个幻觉统计数据可能使整个论点失效',
+            '医疗和法律信息——准确性不可妥协',
+            '近期事件——模型对其知识截止日期附近的事件数据较少',
+            '技术规格——版本号和API端点频繁变化',
+            '数字声明——日期、数字和百分比是最常见的幻觉载体',
+          ],
+        },
+        keyTakeaways: {
+          title: '关键要点',
+          items: [
+            'AI共识评分通过比较独立模型的一致性来衡量可靠性',
+            '没有任何单一AI模型能消除幻觉——跨模型验证是唯一可扩展的可靠性层',
+            '5/5模型的声明几乎可以确定；1/5模型的声明可能是幻觉',
+            '幻觉检测之所以有效，是因为模型独立产生幻觉',
+            'PromptQuorum通过13种Quorum分析类型实现共识评分',
+          ],
+        },
+      },
+    },
+  },
 }
 

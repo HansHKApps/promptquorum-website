@@ -6,6 +6,7 @@ export const SLUG_TO_POST_ID = {
   'prompt-optimization': 'optimization',
   'enterprise-data-privacy': 'dataPrivacy',
   'research-prompt-optimization-impact': 'promptImpact',
+  'ai-consensus-scoring': 'consensusScoring',
 } as const
 
 export type BlogSlug = keyof typeof SLUG_TO_POST_ID

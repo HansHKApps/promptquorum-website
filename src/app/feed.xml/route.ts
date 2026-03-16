@@ -47,6 +47,12 @@ const POSTS = [
     description: 'Structured analysis of how prompt engineering affects AI output quality; effectiveness data across frameworks, refinement techniques, and model families.',
     pubDate: 'Sun, 15 Mar 2026 00:00:00 GMT',
   },
+  {
+    slug: 'ai-consensus-scoring',
+    title: 'AI Consensus Scoring: How to Detect Hallucinations Across Multiple Models',
+    description: 'How consensus scoring works when multiple AI models answer the same question; a practical guide to detecting hallucinations, contradictions, and low-confidence claims by comparing parallel model responses.',
+    pubDate: 'Mon, 16 Mar 2026 00:00:00 GMT',
+  },
 ]
 
 export function GET() {
@@ -69,7 +75,7 @@ export function GET() {
     <language>en</language>
     <managingEditor>promptquorum@gmail.com (Hans Kuepper)</managingEditor>
     <webMaster>promptquorum@gmail.com (Hans Kuepper)</webMaster>
-    <lastBuildDate>Sun, 15 Mar 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="${BASE}/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>${BASE}/og-image.png</url>
