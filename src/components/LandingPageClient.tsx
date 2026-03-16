@@ -251,14 +251,14 @@ function WaitlistForm({ lang }: { lang: Lang }) {
       style={{ background: '#1C1B1F' }}
     >
       {/* Email input */}
-      <div className="flex flex-col sm:flex-row gap-3 mb-4">
+      <div className="flex flex-col gap-3 mb-4">
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={w.emailPlaceholder}
           required
-          className="flex-1 px-4 py-3 rounded-lg text-sm focus:outline-none focus:ring-2"
+          className="w-full px-4 py-3 rounded-lg text-sm focus:outline-none focus:ring-2"
           style={{
             background: '#2B2930',
             border: '1px solid #49454F',
@@ -269,7 +269,7 @@ function WaitlistForm({ lang }: { lang: Lang }) {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="px-5 py-3 rounded-lg text-sm font-semibold whitespace-nowrap disabled:opacity-50 transition-opacity"
+          className="w-full px-5 py-3 rounded-lg text-sm font-semibold disabled:opacity-50 transition-opacity"
           style={{
             background: '#6750A4',
             color: '#FFFFFF',
