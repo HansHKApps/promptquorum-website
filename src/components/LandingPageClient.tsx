@@ -212,7 +212,7 @@ function WaitlistForm({ lang }: { lang: Lang }) {
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, consent: true }),
+        body: JSON.stringify({ email, consent: true, lang }),
       })
       if (!response.ok) throw new Error('Failed to submit')
       setStatus('confirming')
