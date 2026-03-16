@@ -102,6 +102,7 @@ const T = {
     ctaH2: 'Ready to try it?',
     ctaDesc: 'Join the waitlist for early access. First users get lifetime premium features.',
     ctaBtn: 'Join the Waitlist',
+    compareLink: 'See how PromptQuorum compares to other multi-LLM tools →',
     back: '← Back to Home',
   },
   de: {
@@ -202,6 +203,7 @@ const T = {
     ctaH2: 'Bereit zum Ausprobieren?',
     ctaDesc: 'Tragen Sie sich in die Warteliste für frühen Zugang ein. Erste Nutzer erhalten lebenslange Premium-Funktionen.',
     ctaBtn: 'Warteliste beitreten',
+    compareLink: 'PromptQuorum im Vergleich zu anderen Multi-LLM-Tools →',
     back: '← Zurück zur Startseite',
   },
   fr: {
@@ -302,6 +304,7 @@ const T = {
     ctaH2: 'Prêt à l\'essayer ?',
     ctaDesc: 'Rejoignez la liste d\'attente pour un accès anticipé. Les premiers utilisateurs obtiennent des fonctionnalités premium à vie.',
     ctaBtn: 'Rejoindre la liste d\'attente',
+    compareLink: 'Comparer PromptQuorum avec d\'autres outils multi-LLM →',
     back: '← Retour à l\'accueil',
   },
   ja: {
@@ -402,6 +405,7 @@ const T = {
     ctaH2: '試してみる準備はできましたか？',
     ctaDesc: '早期アクセスのためにウェイトリストに参加してください。最初のユーザーはプレミアム機能を生涯利用できます。',
     ctaBtn: 'ウェイトリストに参加',
+    compareLink: '他のマルチLLMツールとPromptQuorumを比較する →',
     back: '← ホームに戻る',
   },
   zh: {
@@ -502,9 +506,33 @@ const T = {
     ctaH2: '准备好尝试了吗？',
     ctaDesc: '加入候补名单以获得早期访问权限。首批用户可终身使用高级功能。',
     ctaBtn: '加入候补名单',
+    compareLink: '查看 PromptQuorum 与其他多 LLM 工具的对比 →',
     back: '← 返回首页',
   },
 }
+
+const DEFS = [
+  {
+    term: 'Multi-Model Dispatch',
+    def: 'Sending one prompt simultaneously to 25+ AI models in a single click. PromptQuorum pre-loads your prompt into each destination via URL — no copy-pasting, all tabs open in parallel.',
+  },
+  {
+    term: 'Quorum Analysis',
+    def: 'Structured comparison of responses from multiple AI models to identify consensus, contradictions, and confidence levels. PromptQuorum offers 13 analysis types including Hallucination Detection and Best Answer Selection.',
+  },
+  {
+    term: 'Consensus Scoring',
+    def: 'A confidence rating derived from the degree of agreement across multiple model responses. Higher consensus = higher reliability. Lower consensus flags areas of uncertainty or potential hallucination.',
+  },
+  {
+    term: 'Hallucination Detection',
+    def: 'Identifying factual claims that appear in only one or a minority of model responses, indicating potential AI fabrication. Cross-referencing 5+ independent models dramatically reduces the rate of undetected hallucinations.',
+  },
+  {
+    term: 'BYOM — Bring Your Own Model',
+    def: 'Connecting your own API keys directly to AI providers. Keys are stored only in your browser\'s localStorage and connect directly to providers — no PromptQuorum server ever receives or transmits your credentials.',
+  },
+]
 
 const providers = {
   cloud: ['OpenAI (GPT-4, GPT-4o)', 'Anthropic (Claude 3.5)', 'Google Gemini 1.5', 'Grok (xAI)', 'DeepSeek', 'Mistral', 'Cohere', 'Together AI', 'Groq', 'OpenRouter (free tier)'],
@@ -623,6 +651,19 @@ function HowItWorksContent() {
         </div>
       </div>
 
+      {/* Key Concept Definitions — GEO semantic anchors */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-20">
+        <h2 className="text-2xl font-bold text-text-primary mb-8">Key Concepts</h2>
+        <dl className="grid sm:grid-cols-2 gap-5">
+          {DEFS.map(({ term, def }) => (
+            <div key={term} className="bg-card border border-primary/20 rounded-xl p-6">
+              <dt className="font-semibold text-primary mb-2">{term}</dt>
+              <dd className="text-text-secondary text-sm leading-relaxed">{def}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
       {/* BYOM */}
       <div className="bg-card border-y border-primary/20 py-20 mb-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -680,6 +721,11 @@ function HowItWorksContent() {
           <Link href="/#waitlist" className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
             {t.ctaBtn}
           </Link>
+          <div className="mt-6">
+            <Link href="/compare" className="text-sm text-primary hover:text-primary/80 font-medium">
+              {t.compareLink}
+            </Link>
+          </div>
         </div>
         <p className="mt-8">
           <Link href="/" className="text-primary hover:text-primary/80 font-medium">{t.back}</Link>

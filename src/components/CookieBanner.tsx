@@ -58,7 +58,8 @@ function loadGA() {
 
 function CookieBannerInner() {
   const searchParams = useSearchParams()
-  const lang = (['en','de','fr','ja','zh'].includes(searchParams.get('lang') ?? '') ? searchParams.get('lang') : 'en') as string
+  const rawLang = searchParams?.get('lang') ?? ''
+  const lang = (['en','de','fr','ja','zh'].includes(rawLang) ? rawLang : 'en') as string
   const c = COPY[lang] ?? COPY.en
   const [visible, setVisible] = useState(false)
 
