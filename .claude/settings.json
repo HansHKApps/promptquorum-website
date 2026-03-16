@@ -17,7 +17,12 @@
       "Bash(git checkout:*)",
       "Bash(pnpm build:*)",
       "Bash(/tmp/blog_translations.txt:*)",
-      "Bash(node check-live.js)"
+      "Bash(node check-live.js)",
+      "Bash(ls src/app/sitemap* src/app/robots*)",
+      "Bash(gh run:*)",
+      "Bash(npx vercel:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm add:*)"
     ]
   }
 }
