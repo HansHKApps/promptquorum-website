@@ -19,6 +19,9 @@ export default function robots(): MetadataRoute.Robots {
         allow: ['/', '/blog/', '/llms.txt', '/mcp.json'],
       },
     ],
-    sitemap: 'https://www.promptquorum.com/sitemap.xml',
+    sitemap: [
+      'https://www.promptquorum.com/sitemap.xml',
+      'https://www.promptquorum.com/video-sitemap.xml',
+    ],
   }
 }

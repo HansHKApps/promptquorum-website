@@ -127,6 +127,32 @@ export default function Home() {
           }),
         }}
       />
+      {/* VideoObject Schema — tells Google how to index the demo video */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'VideoObject',
+            'name': 'PromptQuorum Demo — One Prompt to 25+ AI Models',
+            'description': 'Watch how PromptQuorum works: write a structured prompt using 9 frameworks, optimize it with your own LLM, dispatch to ChatGPT, Claude, Gemini and 25+ AI models simultaneously, then run Quorum consensus analysis across all responses.',
+            'thumbnailUrl': 'https://img.youtube.com/vi/R-bDPhT5EMo/maxresdefault.jpg',
+            'embedUrl': 'https://www.youtube.com/embed/R-bDPhT5EMo',
+            'url': 'https://www.youtube.com/watch?v=R-bDPhT5EMo',
+            'uploadDate': '2026-01-01',
+            'duration': 'PT2M',
+            'publisher': {
+              '@type': 'Organization',
+              'name': 'PromptQuorum',
+              'url': 'https://www.promptquorum.com',
+              'logo': {
+                '@type': 'ImageObject',
+                'url': 'https://www.promptquorum.com/logo.svg',
+              },
+            },
+          }),
+        }}
+      />
     </>
   )
 }
