@@ -37,19 +37,12 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    // Look up the contact to get their Resend contact ID
-    const list = await resend.contacts.list({ audienceId: process.env.RESEND_AUDIENCE_ID! })
-    const contact = list.data?.data?.find(
-      (c: { email: string }) => c.email.toLowerCase() === email
-    )
-
-    if (contact) {
-      await resend.contacts.update({
-        audienceId: process.env.RESEND_AUDIENCE_ID!,
-        id: contact.id,
-        unsubscribed: false,
-      })
-    }
+    // Upsert contact as confirmed (create or update by email)
+    await resend.contacts.create({
+      audienceId: process.env.RESEND_AUDIENCE_ID!,
+      email,
+      unsubscribed: false,
+    })
 
     return NextResponse.redirect(`${BASE}/?confirmed=true`)
   } catch (err) {

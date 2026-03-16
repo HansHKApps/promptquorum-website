@@ -23,11 +23,14 @@ export async function POST(req: NextRequest) {
     }
 
     // Add to Resend Audience — unsubscribed until they confirm (double opt-in)
-    await resend.contacts.create({
+    const contactResult = await resend.contacts.create({
       audienceId: process.env.RESEND_AUDIENCE_ID!,
       email,
       unsubscribed: true,
     })
+    if (contactResult.error) {
+      console.error('[waitlist] contacts.create error:', contactResult.error)
+    }
 
     // Build confirmation link
     const token = makeToken(email)
