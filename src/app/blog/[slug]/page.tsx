@@ -65,6 +65,28 @@ export default async function BlogPage({ params }: PageProps) {
 
   const post = blogContent[postId]['en'] // Server reads English content
 
+  // JSON-LD: Article schema
+  const publishDate = post.publishDate.replace('Published ', '').split(' ').slice(0, 3).join(' ')
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.intro,
+    datePublished: publishDate,
+    dateModified: publishDate,
+    url: `https://www.promptquorum.com/blog/${slug}`,
+    author: {
+      '@type': 'Person',
+      name: 'Hans Kuepper',
+      url: 'https://www.promptquorum.com/about',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'PromptQuorum',
+      url: 'https://www.promptquorum.com',
+    },
+  }
+
   // JSON-LD: BlogPosting schema
   const blogPostingSchema = {
     '@context': 'https://schema.org',
@@ -163,6 +185,10 @@ export default async function BlogPage({ params }: PageProps) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
