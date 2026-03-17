@@ -15,6 +15,7 @@ const blogPosts = [
   { key: 'dataPrivacy' as const, href: '/blog/enterprise-data-privacy' },
   { key: 'promptImpact' as const, href: '/blog/research-prompt-optimization-impact' },
   { key: 'consensusScoring' as const, href: '/blog/ai-consensus-scoring' },
+  { key: 'vsAskQuorum' as const, href: '/blog/promptquorum-vs-askquorum' },
 ]
 
 function BlogSectionInner() {

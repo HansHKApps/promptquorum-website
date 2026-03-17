@@ -53,6 +53,12 @@ const POSTS = [
     description: 'How consensus scoring works when multiple AI models answer the same question; a practical guide to detecting hallucinations, contradictions, and low-confidence claims by comparing parallel model responses.',
     pubDate: 'Mon, 16 Mar 2026 00:00:00 GMT',
   },
+  {
+    slug: 'promptquorum-vs-askquorum',
+    title: 'PromptQuorum vs AskQuorum AI — What\'s the Difference?',
+    description: 'Two tools, similar names, very different products. A factual breakdown of origins, target users, local LLM support, GDPR compliance, pricing, and BYOK approach.',
+    pubDate: 'Mon, 17 Mar 2026 00:00:00 GMT',
+  },
 ]
 
 export function GET() {
@@ -75,7 +81,7 @@ export function GET() {
     <language>en</language>
     <managingEditor>promptquorum@gmail.com (Hans Kuepper)</managingEditor>
     <webMaster>promptquorum@gmail.com (Hans Kuepper)</webMaster>
-    <lastBuildDate>Mon, 16 Mar 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Mar 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="${BASE}/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>${BASE}/og-image.png</url>

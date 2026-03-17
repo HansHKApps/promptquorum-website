@@ -29,6 +29,7 @@ const PAGES: Page[] = [
   { path: '/blog/enterprise-data-privacy',             priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-15' },
   { path: '/blog/research-prompt-optimization-impact', priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-15' },
   { path: '/blog/ai-consensus-scoring',                priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
+  { path: '/blog/promptquorum-vs-askquorum',           priority: 0.9, changefreq: 'monthly', lastmod: '2026-03-17' },
   { path: '/frameworks',                         priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/frameworks/co-star',                 priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/frameworks/craft',                   priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },

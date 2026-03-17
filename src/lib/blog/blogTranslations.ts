@@ -49,6 +49,13 @@ export const blogMetadata = {
     ja: { category: '研究', title: '研究：プロンプト最適化がAI性能に及ぼす影響', intro: '新しい研究は、プロンプト最適化がAI性能を改善する方法を示しています。', publishDate: '2026年3月公開', readTime: '13分の読み物' },
     zh: { category: '研究', title: '研究：提示优化对AI性能的影响', intro: '新研究表明提示优化如何改进AI性能。', publishDate: '发布于 2026年3月', readTime: '13分钟阅读' }
   },
+  vsAskQuorum: {
+    en: { category: 'Comparison', title: 'PromptQuorum vs AskQuorum AI — What\'s the Difference?', intro: 'Two tools, similar names, very different products. Here\'s a clear breakdown of what PromptQuorum and AskQuorum AI each do, who they\'re built for, and why they\'re not the same thing.', publishDate: 'Published March 17, 2026', readTime: '4 min read' },
+    de: { category: 'Vergleich', title: 'PromptQuorum vs AskQuorum AI — Was ist der Unterschied?', intro: 'Zwei Tools, ähnliche Namen, sehr unterschiedliche Produkte. Hier ist ein klarer Überblick über die Unterschiede.', publishDate: 'Veröffentlicht 17. März 2026', readTime: '4 Min. Lesezeit' },
+    fr: { category: 'Comparaison', title: 'PromptQuorum vs AskQuorum AI — Quelle est la différence?', intro: 'Deux outils, des noms similaires, des produits très différents. Voici une présentation claire des différences.', publishDate: 'Publié 17 mars 2026', readTime: '4 min de lecture' },
+    ja: { category: '比較', title: 'PromptQuorum vs AskQuorum AI — 何が違うのか？', intro: '2つのツール、似たような名前、まったく異なる製品。主な違いを明確に説明します。', publishDate: '2026年3月17日公開', readTime: '4分の読み物' },
+    zh: { category: '对比', title: 'PromptQuorum vs AskQuorum AI — 有什么区别？', intro: '两个工具，相似的名称，截然不同的产品。以下是主要区别的清晰说明。', publishDate: '发布于 2026年3月17日', readTime: '4分钟阅读' }
+  },
   consensusScoring: {
     en: { category: 'AI Reliability', title: 'AI Consensus Scoring: How to Detect Hallucinations Across Multiple Models', intro: 'When five AI models independently agree on a fact, the answer is far more reliable than when one model answers alone. This is the principle behind AI consensus scoring — and why it is the most effective method for detecting hallucinations at scale.', publishDate: 'Published March 16, 2026', readTime: '11 min read' },
     de: { category: 'KI-Zuverlässigkeit', title: 'KI-Konsens-Scoring: Halluzinationen über mehrere Modelle erkennen', intro: 'Wenn fünf KI-Modelle unabhängig voneinander einer Aussage zustimmen, ist die Antwort deutlich zuverlässiger als wenn ein einzelnes Modell antwortet. Dies ist das Prinzip hinter KI-Konsens-Scoring.', publishDate: 'Veröffentlicht 16. März 2026', readTime: '11 Min. Lesezeit' },
