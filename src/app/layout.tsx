@@ -5,8 +5,8 @@ import { HeaderClient } from '@/components/HeaderClient'
 import { CookieBanner } from '@/components/CookieBanner'
 
 export const metadata: Metadata = {
-  title: 'PromptQuorum — One Prompt. 25+ AI Models. Quorum Verdict.',
-  description: 'Send one prompt simultaneously to GPT, Claude, Gemini, Mistral, Llama, DeepSeek and more. Compare responses side by side and get a consensus verdict across all models. 100% private — API keys never leave your device.',
+  title: 'PromptQuorum — One Prompt. 25+ AI Models. Consensus Scoring.',
+  description: 'Run one prompt across ChatGPT, Claude, Gemini and 25+ AI models simultaneously. Compare responses, detect hallucinations, and get a Quorum consensus verdict. Free beta — April 2026.',
   metadataBase: new URL('https://www.promptquorum.com'),
   authors: [{ name: 'Hans Kuepper' }],
   alternates: {
