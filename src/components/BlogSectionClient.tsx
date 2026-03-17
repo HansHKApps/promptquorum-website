@@ -16,6 +16,7 @@ const blogPosts = [
   { key: 'promptImpact' as const, href: '/blog/research-prompt-optimization-impact' },
   { key: 'consensusScoring' as const, href: '/blog/ai-consensus-scoring' },
   { key: 'vsAskQuorum' as const, href: '/blog/promptquorum-vs-askquorum' },
+  { key: 'whatIsConsensusScoring' as const, href: '/blog/what-is-ai-consensus-scoring' },
 ]
 
 function BlogSectionInner() {

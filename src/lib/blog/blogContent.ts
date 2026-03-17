@@ -4866,6 +4866,151 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       },
     },
   },
+  whatIsConsensusScoring: {
+    en: {
+      category: 'PromptQuorum',
+      title: 'What Is AI Consensus Scoring? How PromptQuorum Detects Agreement Across Models',
+      intro: 'Consensus scoring analyses responses from multiple AI models and measures where they agree, where they diverge, and what that pattern tells you about the reliability of an answer.',
+      publishDate: 'Published March 17, 2026',
+      readTime: '6 min read',
+      sections: {
+        problem: {
+          title: 'The Problem with Trusting a Single AI Model',
+          content: [
+            'Every large language model produces outputs based on its training data, architecture, and inference parameters. When you ask one model a question and it returns a confident answer, you have no way to know whether that answer reflects broad knowledge consensus or a plausible-sounding fabrication.',
+            'This is not a flaw unique to any one model. All current LLMs hallucinate — producing false statements with the same fluency and confidence as accurate ones. The rate varies by model and task, but no model is immune. Studies from 2024 and 2025 put hallucination rates for knowledge-intensive tasks between 15% and 40% depending on the domain.',
+            'The single-model problem compounds in high-stakes situations: a medical query, a legal question, a financial calculation. If one model is wrong, you have no signal that it is wrong. The answer looks exactly like a correct one.',
+          ],
+        },
+        definition: {
+          title: 'What Is Consensus Scoring?',
+          content: [
+            'Consensus scoring is a reliability measurement technique that sends the same query to multiple independent AI models and analyses the pattern of their responses. The core insight is simple: if multiple models — trained on different data, using different architectures — independently produce the same answer, that answer is more likely to be grounded in real knowledge than an outlier response from a single model.',
+            'Consensus is not majority vote. It is a structured analysis of agreement patterns across claims, not just surface-level similarity. Two responses can say the same thing in different words; two responses can also look similar while containing materially different facts. Consensus scoring extracts and maps claims individually.',
+            'The output is a confidence signal, not a guarantee. High consensus means the answer is more likely reliable. Low consensus means uncertainty exists and the answer warrants verification.',
+          ],
+        },
+        howQuorumWorks: {
+          title: 'How PromptQuorum\'s Quorum Verdict Works',
+          content: 'The Quorum Verdict is PromptQuorum\'s implementation of consensus scoring. It runs in five steps:',
+        },
+        step1: {
+          title: 'Step 1 — Parallel Dispatch',
+          content: 'Your prompt is sent simultaneously to 25+ AI models using your own API keys. Models include GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, Mistral Large, Llama 3, DeepSeek, Phi-3, and others depending on which keys you have configured. All calls are made in parallel — total wait time is the response time of the slowest model, not the sum of all models.',
+        },
+        step2: {
+          title: 'Step 2 — Claim Extraction',
+          content: 'Each response is parsed to extract discrete factual claims. A claim is any atomic statement that can be independently verified or falsified — a date, a name, a number, a causal relationship, a definition. Extracting claims at this level prevents surface-level wording differences from masking underlying agreement or disagreement.',
+        },
+        step3: {
+          title: 'Step 3 — Agreement Mapping',
+          content: 'Claims from all responses are mapped against each other. Claims that appear across multiple responses are flagged as high-agreement. Claims that appear in only one or two responses are flagged as low-agreement. The mapping produces a structured view of which parts of the answer are consistent across models and which parts are contested.',
+        },
+        step4: {
+          title: 'Step 4 — Confidence Weighting',
+          content: 'Not all models are equally reliable for all question types. PromptQuorum applies confidence weighting based on model capability benchmarks and the question domain. A coding question weights responses from models with strong code benchmarks more heavily. A factual recall question weights models with larger training data more heavily. The weighting is transparent and adjustable.',
+        },
+        step5: {
+          title: 'Step 5 — Divergence Flagging',
+          content: 'Any claim where models disagree is explicitly flagged in the Quorum Verdict output. Divergence does not mean one model is wrong — it means the question has genuine uncertainty, the models have different training-data coverage for that topic, or one model has hallucinated. Flagged divergences are the most valuable output: they tell you exactly where to focus your verification effort.',
+        },
+        highConsensus: {
+          title: 'Why High Consensus Is a Reliability Signal',
+          content: [
+            'When eight models independently produce the same claim — having been trained on different datasets, using different architectures, with different fine-tuning — the probability that all eight have independently hallucinated the same specific false answer is very low.',
+            'This is the statistical basis for consensus scoring. It does not require any model to be perfect. It requires only that model errors are not systematically correlated. For the vast majority of factual questions, model hallucinations are independent events — different models make different mistakes. High cross-model agreement is therefore a meaningful signal of ground truth.',
+            'The threshold for "high confidence" in PromptQuorum is configurable. A default of 5/5 models agreeing on a claim gives high confidence. 4/5 gives moderate confidence. 3/5 or below triggers a divergence flag.',
+          ],
+        },
+        lowConsensus: {
+          title: 'Why Low Consensus Means Uncertainty Worth Investigating',
+          content: [
+            'Low consensus is not a failure state — it is useful signal. When models disagree on a claim, one of three things is true: the question has no single correct answer (genuinely contested), the correct answer is not well-represented in training data (knowledge gap), or one or more models has hallucinated.',
+            'All three cases are worth knowing about before you act on an AI response. Low consensus tells you to verify before trusting. It surfaces the specific claims that need checking, rather than asking you to re-read entire responses looking for problems.',
+            'In practice, low-consensus claims are the highest-value output of a Quorum Verdict. They are a precise map of where the AI answer is fragile.',
+          ],
+        },
+        useCases: {
+          title: 'Real-World Use Cases',
+          items: [
+            'Research validation — cross-checking factual claims in literature reviews or market research before including them in a report',
+            'Medical queries — identifying where models agree on general health information vs. where answers diverge and professional consultation is essential',
+            'Legal questions — flagging jurisdiction-specific claims where model training data may be uneven or out of date',
+            'Code review — verifying that multiple models agree on the correctness of a function, edge case behaviour, or security property',
+            'Financial analysis — detecting conflicting claims about figures, rates, or regulatory requirements across model responses',
+            'Content fact-checking — validating statistics, attributions, and historical dates in AI-generated drafts before publication',
+          ],
+        },
+        vsTabs: {
+          title: 'How This Differs from Opening Multiple Tabs Manually',
+          content: [
+            'Manually opening ChatGPT, Claude, and Gemini in three browser tabs and comparing responses is a reasonable starting point, but it has significant limitations.',
+            'First, it does not scale. You can realistically compare three or four responses manually. PromptQuorum dispatches to 25+ models in the time it takes you to open the first tab.',
+            'Second, manual comparison is unstructured. You are comparing full-text responses, which makes it easy to miss disagreements buried in similar-sounding paragraphs. Claim-level extraction surfaces disagreements that a quick read would miss.',
+            'Third, manual comparison has no memory. You are reading responses sequentially and relying on your own recall to spot conflicts. Automated agreement mapping is exact and exhaustive.',
+            'Fourth, manual comparison does not produce a confidence score. After reading three tabs, you have an intuition about reliability. Consensus scoring produces a structured, auditable signal you can reference and share.',
+          ],
+        },
+        faq: {
+          title: 'Frequently Asked Questions',
+          items: [
+            'What is consensus scoring in AI? — Consensus scoring is a technique that sends the same prompt to multiple AI models and analyses the pattern of agreement and disagreement across their responses to produce a reliability signal for each claim.',
+            'How does PromptQuorum calculate consensus? — PromptQuorum extracts discrete claims from each model response, maps them for agreement across all responses, applies confidence weighting by model capability and domain, and flags claims where models diverge. The result is a Quorum Verdict showing which parts of the answer are high-confidence and which need verification.',
+            'Is a high consensus score always correct? — No. High consensus is a reliability signal, not a guarantee. If a false claim appears in the training data of multiple models, all models may confidently repeat it. Consensus scoring reduces hallucination risk — it does not eliminate it. Use it as a filter, not a replacement for primary source verification in high-stakes decisions.',
+            'Which AI models does PromptQuorum use for consensus? — PromptQuorum supports 25+ models including GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, Mistral Large, Llama 3 (via Ollama), DeepSeek, Phi-3, Gemma, and others. You configure which models to include using your own API keys. Local models via Ollama are fully supported and run with no data leaving your device.',
+          ],
+        },
+      },
+    },
+    de: {
+      category: 'PromptQuorum',
+      title: 'Was ist KI-Konsens-Scoring? Wie PromptQuorum Übereinstimmungen zwischen Modellen erkennt',
+      intro: 'Konsens-Scoring analysiert Antworten mehrerer KI-Modelle und misst, wo sie übereinstimmen, wo sie abweichen und was dieses Muster über die Zuverlässigkeit einer Antwort verrät.',
+      publishDate: 'Veröffentlicht 17. März 2026',
+      readTime: '6 Min. Lesezeit',
+      sections: {
+        problem: { title: 'Das Problem mit dem Vertrauen in ein einzelnes KI-Modell', content: 'Jedes Sprachmodell produziert Ausgaben basierend auf seinen Trainingsdaten, seiner Architektur und seinen Inferenzparametern. Wenn Sie ein Modell befragen und es eine zuversichtliche Antwort zurückgibt, haben Sie keine Möglichkeit zu wissen, ob diese Antwort auf einem breiten Wissenskonsens basiert oder eine plausibel klingende Erfindung ist.' },
+        definition: { title: 'Was ist Konsens-Scoring?', content: 'Konsens-Scoring ist eine Zuverlässigkeitsmessung, die dieselbe Anfrage an mehrere unabhängige KI-Modelle sendet und das Muster ihrer Antworten analysiert. Wenn mehrere Modelle — mit unterschiedlichen Daten trainiert — unabhängig voneinander dieselbe Antwort produzieren, ist diese wahrscheinlicher im realen Wissen verankert.' },
+        faq: { title: 'Häufig gestellte Fragen', items: ['Was ist Konsens-Scoring in der KI? — Eine Technik, die denselben Prompt an mehrere Modelle sendet und Übereinstimmungsmuster analysiert.', 'Wie berechnet PromptQuorum Konsens? — Durch Extraktion einzelner Behauptungen, Zuordnung der Übereinstimmungen und Kennzeichnung von Abweichungen.', 'Ist ein hoher Konsens-Score immer korrekt? — Nein. Hoher Konsens ist ein Zuverlässigkeitssignal, keine Garantie.', 'Welche Modelle verwendet PromptQuorum? — 25+ Modelle darunter GPT-4o, Claude, Gemini, Mistral und lokale Modelle via Ollama.'] },
+      },
+    },
+    fr: {
+      category: 'PromptQuorum',
+      title: 'Qu\'est-ce que le Score de Consensus IA? Comment PromptQuorum Détecte l\'Accord entre Modèles',
+      intro: 'Le score de consensus analyse les réponses de plusieurs modèles IA et mesure où ils s\'accordent, où ils divergent, et ce que ce schéma révèle sur la fiabilité d\'une réponse.',
+      publishDate: 'Publié 17 mars 2026',
+      readTime: '6 min de lecture',
+      sections: {
+        problem: { title: 'Le problème de faire confiance à un seul modèle IA', content: 'Chaque modèle de langage produit des sorties basées sur ses données d\'entraînement, son architecture et ses paramètres d\'inférence. Tous les LLM actuels hallucinent — produisant des affirmations fausses avec la même fluidité que les vraies.' },
+        definition: { title: 'Qu\'est-ce que le score de consensus?', content: 'Le score de consensus est une technique qui envoie la même requête à plusieurs modèles indépendants et analyse le schéma de leurs réponses. Si plusieurs modèles produisent indépendamment la même réponse, celle-ci est plus probablement fondée sur des connaissances réelles.' },
+        faq: { title: 'Questions fréquentes', items: ['Qu\'est-ce que le score de consensus IA? — Une technique analysant l\'accord entre plusieurs modèles.', 'Comment PromptQuorum calcule-t-il le consensus? — Par extraction de claims, mappage des accords et signalement des divergences.', 'Un score de consensus élevé est-il toujours correct? — Non. C\'est un signal de fiabilité, pas une garantie.', 'Quels modèles PromptQuorum utilise-t-il? — 25+ modèles dont GPT-4o, Claude, Gemini, Mistral et des modèles locaux via Ollama.'] },
+      },
+    },
+    ja: {
+      category: 'PromptQuorum',
+      title: 'AIコンセンサススコアリングとは？PromptQuorumがモデル間の合意を検出する方法',
+      intro: 'コンセンサススコアリングは、複数のAIモデルからの回答を分析し、どこで一致し、どこで乖離するか、そしてそのパターンが回答の信頼性について何を示すかを測定します。',
+      publishDate: '2026年3月17日公開',
+      readTime: '6分の読み物',
+      sections: {
+        problem: { title: '単一のAIモデルを信頼することの問題', content: 'すべての大規模言語モデルはトレーニングデータ、アーキテクチャ、推論パラメータに基づいて出力を生成します。現在のすべてのLLMはハルシネーションを起こします。' },
+        definition: { title: 'コンセンサススコアリングとは？', content: 'コンセンサススコアリングは、同じクエリを複数の独立したAIモデルに送信し、回答のパターンを分析する信頼性測定技術です。' },
+        faq: { title: 'よくある質問', items: ['AIにおけるコンセンサススコアリングとは？ — 複数のモデルにプロンプトを送り、合意パターンを分析する技術。', 'PromptQuorumはどのようにコンセンサスを計算しますか？ — クレームを抽出し、合意をマッピングし、乖離をフラグします。', '高いコンセンサススコアは常に正しいですか？ — いいえ。信頼性のシグナルであり、保証ではありません。', 'PromptQuorumはどのモデルを使用しますか？ — GPT-4o、Claude、Gemini、Mistral、Ollamaのローカルモデルを含む25+モデル。'] },
+      },
+    },
+    zh: {
+      category: 'PromptQuorum',
+      title: '什么是AI共识评分？PromptQuorum如何检测模型间的一致性',
+      intro: '共识评分分析多个AI模型的回答，测量它们在哪里一致、在哪里分歧，以及这种模式对答案可靠性意味着什么。',
+      publishDate: '发布于 2026年3月17日',
+      readTime: '6分钟阅读',
+      sections: {
+        problem: { title: '信任单一AI模型的问题', content: '每个大型语言模型都根据其训练数据、架构和推理参数生成输出。当前所有LLM都会产生幻觉——以与准确陈述相同的流畅度和自信度产生虚假陈述。' },
+        definition: { title: '什么是共识评分？', content: '共识评分是一种可靠性测量技术，将同一查询发送给多个独立的AI模型，并分析其回答模式。当多个模型独立产生相同答案时，该答案更可能基于真实知识。' },
+        faq: { title: '常见问题', items: ['什么是AI共识评分？ — 一种向多个模型发送相同提示并分析一致性模式的技术。', 'PromptQuorum如何计算共识？ — 通过提取声明、映射一致性并标记分歧。', '高共识分数总是正确的吗？ — 不是。它是可靠性信号，不是保证。', 'PromptQuorum使用哪些模型？ — 25+模型，包括GPT-4o、Claude、Gemini、Mistral和通过Ollama的本地模型。'] },
+      },
+    },
+  },
   vsAskQuorum: {
     en: {
       category: 'Comparison',

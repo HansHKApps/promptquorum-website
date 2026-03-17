@@ -49,6 +49,13 @@ export const blogMetadata = {
     ja: { category: '研究', title: '研究：プロンプト最適化がAI性能に及ぼす影響', intro: '新しい研究は、プロンプト最適化がAI性能を改善する方法を示しています。', publishDate: '2026年3月公開', readTime: '13分の読み物' },
     zh: { category: '研究', title: '研究：提示优化对AI性能的影响', intro: '新研究表明提示优化如何改进AI性能。', publishDate: '发布于 2026年3月', readTime: '13分钟阅读' }
   },
+  whatIsConsensusScoring: {
+    en: { category: 'PromptQuorum', title: 'What Is AI Consensus Scoring? How PromptQuorum Detects Agreement Across Models', intro: 'Consensus scoring analyses responses from multiple AI models and measures where they agree, where they diverge, and what that pattern tells you about the reliability of an answer.', publishDate: 'Published March 17, 2026', readTime: '6 min read' },
+    de: { category: 'PromptQuorum', title: 'Was ist KI-Konsens-Scoring? Wie PromptQuorum Übereinstimmungen zwischen Modellen erkennt', intro: 'Konsens-Scoring analysiert Antworten mehrerer KI-Modelle und misst, wo sie übereinstimmen, wo sie abweichen und was dieses Muster über die Zuverlässigkeit einer Antwort verrät.', publishDate: 'Veröffentlicht 17. März 2026', readTime: '6 Min. Lesezeit' },
+    fr: { category: 'PromptQuorum', title: 'Qu\'est-ce que le Score de Consensus IA? Comment PromptQuorum Détecte l\'Accord entre Modèles', intro: 'Le score de consensus analyse les réponses de plusieurs modèles IA et mesure où ils s\'accordent, où ils divergent, et ce que ce schéma révèle sur la fiabilité d\'une réponse.', publishDate: 'Publié 17 mars 2026', readTime: '6 min de lecture' },
+    ja: { category: 'PromptQuorum', title: 'AIコンセンサススコアリングとは？PromptQuorumがモデル間の合意を検出する方法', intro: 'コンセンサススコアリングは、複数のAIモデルからの回答を分析し、どこで一致し、どこで乖離するか、そのパターンが信頼性について何を示すかを測定します。', publishDate: '2026年3月17日公開', readTime: '6分の読み物' },
+    zh: { category: 'PromptQuorum', title: '什么是AI共识评分？PromptQuorum如何检测模型间的一致性', intro: '共识评分分析多个AI模型的回答，测量它们在哪里一致、在哪里分歧，以及这种模式对答案可靠性意味着什么。', publishDate: '发布于 2026年3月17日', readTime: '6分钟阅读' }
+  },
   vsAskQuorum: {
     en: { category: 'Comparison', title: 'PromptQuorum vs AskQuorum AI — What\'s the Difference?', intro: 'Two tools, similar names, very different products. Here\'s a clear breakdown of what PromptQuorum and AskQuorum AI each do, who they\'re built for, and why they\'re not the same thing.', publishDate: 'Published March 17, 2026', readTime: '4 min read' },
     de: { category: 'Vergleich', title: 'PromptQuorum vs AskQuorum AI — Was ist der Unterschied?', intro: 'Zwei Tools, ähnliche Namen, sehr unterschiedliche Produkte. Hier ist ein klarer Überblick über die Unterschiede.', publishDate: 'Veröffentlicht 17. März 2026', readTime: '4 Min. Lesezeit' },

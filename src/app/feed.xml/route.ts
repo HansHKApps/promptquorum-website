@@ -59,6 +59,12 @@ const POSTS = [
     description: 'Two tools, similar names, very different products. A factual breakdown of origins, target users, local LLM support, GDPR compliance, pricing, and BYOK approach.',
     pubDate: 'Mon, 17 Mar 2026 00:00:00 GMT',
   },
+  {
+    slug: 'what-is-ai-consensus-scoring',
+    title: 'What Is AI Consensus Scoring? How PromptQuorum Detects Agreement Across Models',
+    description: 'Consensus scoring analyses responses from multiple AI models and measures where they agree, where they diverge, and what that pattern tells you about the reliability of an answer.',
+    pubDate: 'Mon, 17 Mar 2026 00:00:00 GMT',
+  },
 ]
 
 export function GET() {
