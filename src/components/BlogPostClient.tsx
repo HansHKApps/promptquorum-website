@@ -47,6 +47,8 @@ function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
               <span>{metadata?.publishDate || post.publishDate}</span>
               <span>•</span>
               <span>{metadata?.readTime || post.readTime}</span>
+              <span>•</span>
+              <span>By Hans Kuepper · PromptQuorum</span>
             </div>
           </div>
 
