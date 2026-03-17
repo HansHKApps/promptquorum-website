@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return FRAMEWORK_SLUGS.map(slug => ({ slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const fw = getFramework(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const fw = getFramework(slug)
   if (!fw) return {}
   return {
     title: `${fw.name} Prompt Framework — Fields, Examples & When To Use It | PromptQuorum`,
@@ -40,8 +41,9 @@ const COMPLEXITY_COLOR: Record<string, string> = {
   High: 'text-orange-400 bg-orange-400/10 border-orange-400/30',
 }
 
-export default function FrameworkPage({ params }: { params: { slug: string } }) {
-  const fw = getFramework(params.slug)
+export default async function FrameworkPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const fw = getFramework(slug)
   if (!fw) notFound()
 
   const related = FRAMEWORKS.filter(f => fw.related.includes(f.slug))
