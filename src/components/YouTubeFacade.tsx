@@ -11,7 +11,7 @@ export function YouTubeFacade() {
     return (
       <iframe
         className="absolute top-0 left-0 w-full h-full"
-        src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1`}
+        src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1`}
         title="PromptQuorum Demo"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
