@@ -66,8 +66,8 @@ module.exports = {
 				},
 			},
 			fontFamily: {
-				sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-				mono: ['JetBrains Mono', 'monospace'],
+				sans: ['var(--font-plus-jakarta-sans)', 'system-ui', 'sans-serif'],
+				mono: ['var(--font-jetbrains-mono)', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
