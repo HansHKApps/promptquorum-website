@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { InteractivePipeline } from './InteractivePipeline'
 import { LandingPageClient } from './LandingPageClient'
+import { YouTubeFacade } from './YouTubeFacade'
 import { BlogSectionClient } from './BlogSectionClient'
 import { Suspense } from 'react'
 import { useLang } from '@/hooks/useLang'
@@ -246,13 +247,7 @@ export function LandingPageServer() {
           <div className="mt-16 animate-fade-in" style={{ animationDelay: '500ms' }}>
             <div className="max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-200">
               <div className="relative w-full pb-[56.25%]">
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/R-bDPhT5EMo"
-                  title="PromptQuorum Demo"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                <YouTubeFacade />
               </div>
             </div>
           </div>
