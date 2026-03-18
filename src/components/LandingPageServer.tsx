@@ -362,22 +362,22 @@ export function LandingPageServer() {
             </div>
 
             <div className="flex items-center gap-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="PromptQuorum on GitHub" className="text-text-muted hover:text-primary transition-colors">
                 <Github />
               </a>
-              <a href="https://x.com/HansKuepperAPPs" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
+              <a href="https://x.com/HansKuepperAPPs" target="_blank" rel="noopener noreferrer" aria-label="PromptQuorum on X (Twitter)" className="text-text-muted hover:text-primary transition-colors">
                 <Twitter />
               </a>
-              <a href="https://www.linkedin.com/company/promptquorum" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/company/promptquorum" target="_blank" rel="noopener noreferrer" aria-label="PromptQuorum on LinkedIn" className="text-text-muted hover:text-primary transition-colors">
                 <Linkedin />
               </a>
-              <a href="https://discord.com/channels/1482063293509271724/1482063418113396736" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
+              <a href="https://discord.com/channels/1482063293509271724/1482063418113396736" target="_blank" rel="noopener noreferrer" aria-label="PromptQuorum Discord community" className="text-text-muted hover:text-primary transition-colors">
                 <Discord />
               </a>
-              <a href="https://www.youtube.com/channel/UC5PL_1lU5pdV1d1EC1XeLhA" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
+              <a href="https://www.youtube.com/channel/UC5PL_1lU5pdV1d1EC1XeLhA" target="_blank" rel="noopener noreferrer" aria-label="PromptQuorum on YouTube" className="text-text-muted hover:text-primary transition-colors">
                 <YouTube />
               </a>
-              <a href="https://substack.com/@promptquorum" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
+              <a href="https://substack.com/@promptquorum" target="_blank" rel="noopener noreferrer" aria-label="PromptQuorum on Substack" className="text-text-muted hover:text-primary transition-colors">
                 <Substack />
               </a>
             </div>
