@@ -18,6 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { CookieBanner } from '@/components/CookieBanner'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   title: 'PromptQuorum — One Prompt. 25+ AI Models. Consensus Scoring.',
@@ -197,6 +198,7 @@ export default function RootLayout({
           <HeaderClient />
           {children}
           <CookieBanner />
+          <Analytics />
         </Providers>
       </body>
     </html>
