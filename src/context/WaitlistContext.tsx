@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, ReactNode } from 'react'
+import { createContext, useContext, useState, useCallback, ReactNode } from 'react'
 
 interface WaitlistContextType {
   isOpen: boolean
@@ -13,8 +13,8 @@ const WaitlistContext = createContext<WaitlistContextType | undefined>(undefined
 export function WaitlistProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false)
 
-  const openWaitlist = () => setIsOpen(true)
-  const closeWaitlist = () => setIsOpen(false)
+  const openWaitlist = useCallback(() => setIsOpen(true), [])
+  const closeWaitlist = useCallback(() => setIsOpen(false), [])
 
   return (
     <WaitlistContext.Provider value={{ isOpen, openWaitlist, closeWaitlist }}>
