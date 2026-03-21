@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { themes } from '@/lib/prompt-engineering/themes'
+import { themes, type PETheme } from '@/lib/prompt-engineering/themes'
 import { useLang } from '@/hooks/useLang'
 
 function navHref(path: string, lang: string) {
@@ -10,32 +10,32 @@ function navHref(path: string, lang: string) {
 
 const THEME_LABELS: Record<string, Record<string, string>> = {
   fundamentals: {
-    en: 'Fundamentals',
-    de: 'Grundlagen',
-    fr: 'Fondamentaux',
-    ja: '基礎',
-    zh: '基础知识',
+    en: 'Fundamentals: What Do You Actually Need to Know?',
+    de: 'Grundlagen: Was müssen Sie wirklich wissen?',
+    fr: 'Fondamentaux : Que faut-il vraiment savoir ?',
+    ja: '基礎：本当に必要な知識とは？',
+    zh: '基础知识：你真正需要了解什么？',
   },
   frameworks: {
-    en: 'Frameworks',
-    de: 'Frameworks',
-    fr: 'Frameworks',
-    ja: 'フレームワーク',
-    zh: '框架',
+    en: 'Frameworks: Which Template Gets the Best Results?',
+    de: 'Frameworks: Welches Template liefert die besten Ergebnisse?',
+    fr: 'Frameworks : Quel modèle donne les meilleurs résultats ?',
+    ja: 'フレームワーク：最高の結果を出すテンプレートは？',
+    zh: '框架：哪个模板效果最好？',
   },
   techniques: {
-    en: 'Techniques',
-    de: 'Techniken',
-    fr: 'Techniques',
-    ja: 'テクニック',
-    zh: '技术',
+    en: 'Techniques: What Separates Good Prompts from Great Ones?',
+    de: 'Techniken: Was unterscheidet gute von großartigen Prompts?',
+    fr: 'Techniques : Qu\'est-ce qui distingue les bons prompts des excellents ?',
+    ja: 'テクニック：良いプロンプトと優れたプロンプトの違いは？',
+    zh: '技术：好提示词与优秀提示词的区别是什么？',
   },
   'use-topics': {
-    en: 'Use Topics',
-    de: 'Anwendungsthemen',
-    fr: 'Sujets d\'usage',
-    ja: '活用テーマ',
-    zh: '应用主题',
+    en: 'Use Topics: How Do You Prompt for Your Specific Job?',
+    de: 'Anwendungsthemen: Wie prompten Sie für Ihren Job?',
+    fr: 'Sujets d\'usage : Comment prompter pour votre métier ?',
+    ja: '活用テーマ：あなたの仕事に合ったプロンプトとは？',
+    zh: '应用主题：如何针对你的工作提示？',
   },
 }
 
@@ -79,17 +79,19 @@ const ARTICLE_TITLES: Record<string, string> = {
   'rag-explained': 'RAG Explained: How to Ground AI Answers in Real Data',
   'structured-output-json-mode': 'Structured Output & JSON Mode: Get AI to Return Usable Data',
 
-  // Use Topics
-  'prompts-for-writing': 'Prompt Engineering for Writing',
-  'prompts-for-coding': 'Prompt Engineering for Coding',
-  'prompts-for-research': 'Prompt Engineering for Research',
-  'prompts-for-data-analysis': 'Prompt Engineering for Data Analysis',
-  'prompts-for-customer-support': 'Prompt Engineering for Customer Support',
-  'prompts-for-marketing': 'Prompt Engineering for Marketing',
-  'prompts-for-education': 'Prompt Engineering for Education',
-  'prompts-for-legal': 'Prompt Engineering for Legal Work',
-  'prompts-for-finance': 'Prompt Engineering for Finance',
-  'prompts-for-healthcare': 'Prompt Engineering for Healthcare',
+  // Use Topics — Use Cases by Vertical
+  'write-better-code-with-ai': 'Write Better Code with AI: A Developer\'s Guide',
+  'ai-powered-research': 'AI-Powered Research: How to Research Smarter',
+  'seo-meets-ai': 'SEO Meets AI: How to Prompt for Better Rankings',
+  'teaching-with-ai': 'Teaching with AI: Prompts That Work in the Classroom',
+  'extract-and-summarise': 'Extract & Summarise: How to Pull Key Facts Fast',
+  'ai-code-review': 'AI Code Review: Prompts That Catch Bugs',
+  'prompting-across-languages': 'Prompting Across Languages: How to Get Consistent Results',
+  // Use Topics — Output Engineering
+  'control-the-output': 'Control the Output: JSON, Markdown, Tables and More',
+  'build-quality-checks': 'How to Build Quality Checks Directly Into Your Prompts',
+  'your-brand-voice-ai': 'Your Brand Voice, Your AI: How to Maintain Consistent Tone',
+  'build-a-prompt-library': 'Build a Prompt Library That Saves Hours',
 }
 
 const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
@@ -97,6 +99,19 @@ const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
   frameworks:   { badge: 'bg-purple-50 text-purple-700 border-purple-200', dot: 'bg-purple-400' },
   techniques:   { badge: 'bg-emerald-50 text-emerald-700 border-emerald-200', dot: 'bg-emerald-400' },
   'use-topics': { badge: 'bg-orange-50 text-orange-700 border-orange-200', dot: 'bg-orange-400' },
+}
+
+function ArticleCard({ articleKey, dot }: { articleKey: string; dot: string }) {
+  const title = ARTICLE_TITLES[articleKey] ?? articleKey
+  return (
+    <div
+      className="flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 cursor-default"
+      title="Article coming soon"
+    >
+      <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
+      <span className="text-text-primary text-sm font-medium leading-snug">{title}</span>
+    </div>
+  )
 }
 
 function PromptEngineeringHubContent() {
@@ -124,33 +139,42 @@ function PromptEngineeringHubContent() {
             const label = THEME_LABELS[theme.id]?.[lang] ?? THEME_LABELS[theme.id]?.['en'] ?? theme.title
             const colors = THEME_COLORS[theme.id]
 
+            const articleKeys = theme.articleKeys ?? theme.subSections?.flatMap(s => s.articleKeys) ?? []
+
             return (
               <section key={theme.id} id={theme.id}>
-                {/* Theme header */}
+                {/* Theme header — label shown once as h2, no badge */}
                 <div className="mb-8">
-                  <span className={`inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full border mb-4 ${colors.badge}`}>
-                    {label}
-                  </span>
                   <h2 className="text-2xl font-bold text-text-primary mb-2">{label}</h2>
                   <p className="text-text-secondary leading-relaxed max-w-2xl">{theme.description}</p>
                 </div>
 
-                {/* Article grid */}
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                  {theme.articleKeys.map((key) => {
-                    const title = ARTICLE_TITLES[key] ?? key
-                    return (
-                      <div
-                        key={key}
-                        className="group flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 cursor-default"
-                        title="Article coming soon"
-                      >
-                        <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${colors.dot}`} />
-                        <span className="text-text-primary text-sm font-medium leading-snug">{title}</span>
+                {/* Flat article grid (most themes) */}
+                {theme.articleKeys && (
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {theme.articleKeys.map((key) => (
+                      <ArticleCard key={key} articleKey={key} dot={colors.dot} />
+                    ))}
+                  </div>
+                )}
+
+                {/* Sub-section article grids (Use Topics) */}
+                {theme.subSections && (
+                  <div className="space-y-8">
+                    {theme.subSections.map((sub) => (
+                      <div key={sub.title}>
+                        <h3 className={`text-xs font-bold uppercase tracking-widest mb-4 px-1 ${colors.badge.split(' ').find(c => c.startsWith('text-')) ?? 'text-primary'}`}>
+                          {sub.title}
+                        </h3>
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                          {sub.articleKeys.map((key) => (
+                            <ArticleCard key={key} articleKey={key} dot={colors.dot} />
+                          ))}
+                        </div>
                       </div>
-                    )
-                  })}
-                </div>
+                    ))}
+                  </div>
+                )}
               </section>
             )
           })}

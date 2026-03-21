@@ -1,8 +1,14 @@
+export interface PESubSection {
+  title: string
+  articleKeys: string[]
+}
+
 export interface PETheme {
   id: string
   title: string
   description: string
-  articleKeys: string[]
+  articleKeys?: string[]
+  subSections?: PESubSection[]
 }
 
 export const themes: PETheme[] = [
@@ -61,18 +67,29 @@ export const themes: PETheme[] = [
   {
     id: 'use-topics',
     title: 'Use Topics',
-    description: 'Practical prompt engineering guides for specific domains — writing, coding, research, data analysis, customer support, and more.',
-    articleKeys: [
-      'prompts-for-writing',
-      'prompts-for-coding',
-      'prompts-for-research',
-      'prompts-for-data-analysis',
-      'prompts-for-customer-support',
-      'prompts-for-marketing',
-      'prompts-for-education',
-      'prompts-for-legal',
-      'prompts-for-finance',
-      'prompts-for-healthcare',
+    description: 'Practical prompt engineering guides for specific domains and output types.',
+    subSections: [
+      {
+        title: 'Use Cases by Vertical',
+        articleKeys: [
+          'write-better-code-with-ai',
+          'ai-powered-research',
+          'seo-meets-ai',
+          'teaching-with-ai',
+          'extract-and-summarise',
+          'ai-code-review',
+          'prompting-across-languages',
+        ],
+      },
+      {
+        title: 'Output Engineering',
+        articleKeys: [
+          'control-the-output',
+          'build-quality-checks',
+          'your-brand-voice-ai',
+          'build-a-prompt-library',
+        ],
+      },
     ],
   },
 ]

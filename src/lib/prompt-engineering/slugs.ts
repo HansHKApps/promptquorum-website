@@ -37,15 +37,17 @@ export const PE_SLUG_TO_KEY: Record<string, string> = {
   'rag-explained': 'rag-explained',
   'structured-output-json-mode': 'structured-output-json-mode',
 
-  // Use Topics
-  'prompts-for-writing': 'prompts-for-writing',
-  'prompts-for-coding': 'prompts-for-coding',
-  'prompts-for-research': 'prompts-for-research',
-  'prompts-for-data-analysis': 'prompts-for-data-analysis',
-  'prompts-for-customer-support': 'prompts-for-customer-support',
-  'prompts-for-marketing': 'prompts-for-marketing',
-  'prompts-for-education': 'prompts-for-education',
-  'prompts-for-legal': 'prompts-for-legal',
-  'prompts-for-finance': 'prompts-for-finance',
-  'prompts-for-healthcare': 'prompts-for-healthcare',
+  // Use Topics — Use Cases by Vertical
+  'write-better-code-with-ai': 'write-better-code-with-ai',
+  'ai-powered-research': 'ai-powered-research',
+  'seo-meets-ai': 'seo-meets-ai',
+  'teaching-with-ai': 'teaching-with-ai',
+  'extract-and-summarise': 'extract-and-summarise',
+  'ai-code-review': 'ai-code-review',
+  'prompting-across-languages': 'prompting-across-languages',
+  // Use Topics — Output Engineering
+  'control-the-output': 'control-the-output',
+  'build-quality-checks': 'build-quality-checks',
+  'your-brand-voice-ai': 'your-brand-voice-ai',
+  'build-a-prompt-library': 'build-a-prompt-library',
 }
