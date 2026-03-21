@@ -101,16 +101,18 @@ const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
   'use-topics': { badge: 'bg-orange-50 text-orange-700 border-orange-200', dot: 'bg-orange-400' },
 }
 
-function ArticleCard({ articleKey, dot }: { articleKey: string; dot: string }) {
+function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: string; lang: string }) {
   const title = ARTICLE_TITLES[articleKey] ?? articleKey
+  const href = navHref(`/prompt-engineering/${articleKey}`, lang)
+
   return (
-    <div
-      className="flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 cursor-default"
-      title="Article coming soon"
+    <Link
+      href={href}
+      className="flex items-start gap-3 bg-card border border-primary/15 rounded-xl p-4 hover:border-primary/50 hover:bg-primary/5 transition-colors group"
     >
       <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
-      <span className="text-text-primary text-sm font-medium leading-snug">{title}</span>
-    </div>
+      <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors">{title}</span>
+    </Link>
   )
 }
 
@@ -153,7 +155,7 @@ function PromptEngineeringHubContent() {
                 {theme.articleKeys && (
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {theme.articleKeys.map((key) => (
-                      <ArticleCard key={key} articleKey={key} dot={colors.dot} />
+                      <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} />
                     ))}
                   </div>
                 )}
@@ -168,7 +170,7 @@ function PromptEngineeringHubContent() {
                         </h3>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                           {sub.articleKeys.map((key) => (
-                            <ArticleCard key={key} articleKey={key} dot={colors.dot} />
+                            <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} />
                           ))}
                         </div>
                       </div>
