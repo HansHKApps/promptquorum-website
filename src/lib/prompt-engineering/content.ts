@@ -32,10 +32,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       sections: {
 
         definition: {
-          title: 'What Is Prompt Engineering in 2026?',
+          title: 'What Is Prompt Engineering?',
           content: [
             '**Prompt engineering is the practice of designing and structuring text inputs — called prompts — to get accurate, useful, and repeatable outputs from large language models (LLMs).** It applies to GPT-4o, Claude, Gemini, and locally-run models via Ollama or LM Studio. The difference between prompt engineering and "just asking AI a question" is the difference between a vague request and a precise instruction with a defined objective, context, and output format.',
-            'As of 2026, prompt engineering is a structured discipline with named techniques, reusable frameworks, and measurable outcomes. It is not about tricking AI systems or finding hidden commands — it is about giving a probabilistic model the clearest possible signal of what you need. A well-engineered prompt consistently produces usable output on the first attempt.',
+            'Today, prompt engineering is a structured discipline with named techniques, reusable frameworks, and measurable outcomes. It is not about tricking AI systems or finding hidden commands — it is about giving a probabilistic model the clearest possible signal of what you need. A well-engineered prompt consistently produces usable output on the first attempt.',
             'Prompt engineering basics start with understanding that LLMs are pattern-completion engines. They generate output based on the statistical likelihood of what should follow your input. The more precisely you specify the task, context, constraints, and desired format, the less the model has to guess — and the better the result.',
           ],
         },
@@ -77,6 +77,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'Core Building Blocks of a Prompt',
           content: [
             'Every effective prompt is assembled from some combination of these seven elements. You rarely need all seven at once — the skill is knowing which ones to include for a given task.',
+            'A 2024 survey of prompting techniques (Schulhoff et al., "The Prompt Report", arXiv:2406.06608) catalogued over 58 discrete techniques used in production AI systems — all are structured variations of these seven building blocks applied in different combinations.',
             'For a deeper breakdown with examples of each element in action, see [Fundamentals: The 5 Building Blocks Every Prompt Needs].',
           ],
           items: [
@@ -148,7 +149,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         canDo: {
-          title: 'What Prompt Engineering Can and Cannot Do',
+          title: 'Prompt Engineering Limits: What It Can and Cannot Do',
           content: '**What prompt engineering reliably improves:**',
           items: [
             'Output consistency — the same structured prompt produces similar results across runs and team members',
@@ -190,8 +191,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'FAQ: Prompt Engineering Basics',
           faqs: [
             {
-              q: 'Is prompt engineering still useful with newer AI models in 2026?',
-              a: 'Yes — and more so. More capable models are better at following precise instructions, which means the return on well-structured prompts increases as models improve. As of 2026, even the most capable models produce inconsistent or vague output when given vague input. Structured prompts remain the most reliable way to get professional-grade output on the first attempt.',
+              q: 'Is prompt engineering still useful with newer AI models?',
+              a: 'Yes — and more so. More capable models are better at following precise instructions, which means the return on well-structured prompts increases as models improve. Even today, the most capable models produce inconsistent or vague output when given vague input. Structured prompts remain the most reliable way to get professional-grade output on the first attempt.',
             },
             {
               q: 'Do I need to know how to code to learn prompt engineering?',
@@ -206,8 +207,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               a: 'A technique is a specific pattern applied to achieve a particular output quality — for example, Chain-of-Thought prompting improves reasoning accuracy. A framework is a structural template that organises all the elements of a prompt — for example, CO-STAR defines the order in which to specify context, objective, style, tone, audience, and response format. Frameworks help you build the prompt; techniques help you refine what the model does with it.',
             },
             {
-              q: 'Will prompt engineering still matter in a few years?',
-              a: 'All available evidence as of 2026 points to yes. LLMs are not yet capable of reliably producing professional-grade output from unstructured natural language alone. Even as AI interfaces become more conversational, the underlying principles of good prompts — clear objective, relevant context, explicit constraints, specified output format — remain the difference between a useful and a useless AI response.',
+              q: 'Will prompt engineering still matter long-term?',
+              a: 'All available evidence points to yes. LLMs are not yet capable of reliably producing professional-grade output from unstructured natural language alone. Even as AI interfaces become more conversational, the underlying principles of good prompts — clear objective, relevant context, explicit constraints, specified output format — remain the difference between a useful and a useless AI response.',
             },
             {
               q: 'What is the difference between prompt engineering and fine-tuning?',
@@ -216,6 +217,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             {
               q: 'How does prompt engineering relate to a tool like PromptQuorum?',
               a: 'PromptQuorum is a multi-model AI dispatch tool built around prompt engineering principles. It includes 9 built-in prompt frameworks, an AI-powered prompt optimiser, and the ability to dispatch one prompt to multiple models simultaneously — GPT-4o, Claude, Gemini, and local models — and compare results side by side. It makes prompt engineering repeatable and removes the friction of testing across models manually.',
+            },
+            {
+              q: 'Is prompt engineering still relevant now that AI agents exist?',
+              a: 'Yes. AI agents — autonomous systems that plan and execute multi-step tasks — are built on top of prompt engineering. Every agent has a system prompt defining its role, constraints, and available tools. Every tool call is triggered by structured instructions. Prompt engineering is the foundation that makes agents controllable and predictable. As agents become more common, the skill becomes more important, not less.',
+            },
+            {
+              q: 'How does a user prompt differ from a system prompt?',
+              a: 'A system prompt is a persistent instruction set that applies to the entire session — it defines the model\'s role, constraints, and default behaviour before the user says anything. A user prompt is the per-request input — the specific task or question for that interaction. In most AI products, developers write the system prompt; end users write the user prompt. Both benefit from prompt engineering, but they serve different functions and require different design approaches. → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             },
           ],
         },
@@ -232,10 +241,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       readTime: '10 Min. Lesezeit',
       sections: {
         definition: {
-          title: 'Was ist Prompt Engineering im Jahr 2026?',
+          title: 'Was ist Prompt Engineering?',
           content: [
             '**Prompt Engineering ist die Praxis, Texteingaben – sogenannte Prompts – so zu gestalten und zu strukturieren, dass große Sprachmodelle (LLMs) genaue, nützliche und wiederholbare Ausgaben liefern.** Dies gilt für GPT-4o, Claude, Gemini sowie lokal betriebene Modelle über Ollama oder LM Studio. Der Unterschied zwischen Prompt Engineering und „einfach eine Frage an eine KI stellen" ist der Unterschied zwischen einer vagen Anfrage und einer präzisen Anweisung mit klar definiertem Ziel, Kontext und Ausgabeformat.',
-            'Stand 2026 ist Prompt Engineering eine strukturierte Disziplin mit benannten Techniken, wiederverwendbaren Frameworks und messbaren Ergebnissen. Es geht nicht darum, KI-Systeme zu überlisten oder versteckte Befehle zu finden – es geht darum, einem probabilistischen Modell das klarstmögliche Signal zu geben, was man benötigt. Ein gut entwickelter Prompt liefert konsistent nutzbare Ergebnisse beim ersten Versuch.',
+            'Heute ist Prompt Engineering eine strukturierte Disziplin mit benannten Techniken, wiederverwendbaren Frameworks und messbaren Ergebnissen. Es geht nicht darum, KI-Systeme zu überlisten oder versteckte Befehle zu finden – es geht darum, einem probabilistischen Modell das klarstmögliche Signal zu geben, was man benötigt. Ein gut entwickelter Prompt liefert konsistent nutzbare Ergebnisse beim ersten Versuch.',
             'Die Grundlagen des Prompt Engineerings beginnen mit dem Verständnis, dass LLMs Mustervervollständigungs-Engines sind. Sie erzeugen Ausgaben auf Basis der statistischen Wahrscheinlichkeit, was auf die Eingabe folgen sollte. Je präziser man Aufgabe, Kontext, Einschränkungen und gewünschtes Format angibt, desto weniger muss das Modell raten – und desto besser das Ergebnis.',
           ],
         },
@@ -277,6 +286,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'Die wichtigsten Bausteine eines Prompts',
           content: [
             'Jeder effektive Prompt setzt sich aus einer Kombination dieser sieben Elemente zusammen. Man braucht selten alle sieben gleichzeitig – die Kunst liegt darin, zu wissen, welche für eine bestimmte Aufgabe erforderlich sind.',
+            'Eine Übersichtsarbeit aus dem Jahr 2024 über Prompting-Techniken (Schulhoff et al., „The Prompt Report", arXiv:2406.06608) katalogisierte über 58 verschiedene Techniken, die in Produktions-KI-Systemen eingesetzt werden – alle sind strukturierte Variationen dieser sieben Bausteine in unterschiedlichen Kombinationen.',
             'Eine ausführlichere Aufschlüsselung mit Beispielen für jedes Element in der Praxis findet sich unter [Fundamentals: The 5 Building Blocks Every Prompt Needs].',
           ],
           items: [
@@ -348,7 +358,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         canDo: {
-          title: 'Was Prompt Engineering kann und was nicht',
+          title: 'Grenzen des Prompt Engineerings: Was es kann und nicht kann',
           content: '**Was Prompt Engineering zuverlässig verbessert:**',
           items: [
             'Ausgabekonsistenz – derselbe strukturierte Prompt liefert ähnliche Ergebnisse über verschiedene Durchläufe und Teammitglieder hinweg',
@@ -390,8 +400,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'FAQ: Prompt-Engineering-Grundlagen',
           faqs: [
             {
-              q: 'Ist Prompt Engineering bei neueren KI-Modellen im Jahr 2026 noch nützlich?',
-              a: 'Ja – und sogar mehr als zuvor. Leistungsfähigere Modelle können präzisen Anweisungen besser folgen, was bedeutet, dass der Nutzen gut strukturierter Prompts steigt, wenn Modelle sich verbessern. Stand 2026 liefern selbst die leistungsfähigsten Modelle inkonsistente oder vage Ausgaben bei vagen Eingaben. Strukturierte Prompts bleiben der zuverlässigste Weg, beim ersten Versuch professionelle Ausgaben zu erzielen.',
+              q: 'Ist Prompt Engineering bei neueren KI-Modellen noch nützlich?',
+              a: 'Ja – und sogar mehr als zuvor. Leistungsfähigere Modelle können präzisen Anweisungen besser folgen, was bedeutet, dass der Nutzen gut strukturierter Prompts steigt, wenn Modelle sich verbessern. Selbst heute liefern die leistungsfähigsten Modelle inkonsistente oder vage Ausgaben bei vagen Eingaben. Strukturierte Prompts bleiben der zuverlässigste Weg, beim ersten Versuch professionelle Ausgaben zu erzielen.',
             },
             {
               q: 'Muss ich programmieren können, um Prompt Engineering zu erlernen?',
@@ -406,8 +416,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               a: 'Eine Technik ist ein spezifisches Muster, das angewendet wird, um eine bestimmte Ausgabequalität zu erreichen – Chain-of-Thought-Prompting verbessert zum Beispiel die Denk-Genauigkeit. Ein Framework ist eine strukturelle Vorlage, die alle Elemente eines Prompts organisiert – CO-STAR definiert zum Beispiel die Reihenfolge, in der Kontext, Ziel, Stil, Ton, Zielgruppe und Antwortformat anzugeben sind. Frameworks helfen beim Aufbau des Prompts; Techniken helfen dabei zu verfeinern, was das Modell damit macht.',
             },
             {
-              q: 'Wird Prompt Engineering in einigen Jahren noch relevant sein?',
-              a: 'Alle verfügbaren Belege stand 2026 deuten auf Ja hin. LLMs sind noch nicht in der Lage, zuverlässig professionelle Ausgaben aus unstrukturierter natürlicher Sprache allein zu produzieren. Selbst wenn KI-Oberflächen konversationeller werden, bleiben die zugrunde liegenden Prinzipien guter Prompts – klares Ziel, relevanter Kontext, explizite Einschränkungen, festgelegtes Ausgabeformat – der Unterschied zwischen einer nützlichen und einer nutzlosen KI-Antwort.',
+              q: 'Wird Prompt Engineering langfristig noch relevant sein?',
+              a: 'Alle verfügbaren Belege deuten auf Ja hin. LLMs sind noch nicht in der Lage, zuverlässig professionelle Ausgaben aus unstrukturierter natürlicher Sprache allein zu produzieren. Selbst wenn KI-Oberflächen konversationeller werden, bleiben die zugrunde liegenden Prinzipien guter Prompts – klares Ziel, relevanter Kontext, explizite Einschränkungen, festgelegtes Ausgabeformat – der Unterschied zwischen einer nützlichen und einer nutzlosen KI-Antwort.',
             },
             {
               q: 'Was ist der Unterschied zwischen Prompt Engineering und Fine-Tuning?',
@@ -416,6 +426,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             {
               q: 'Wie verhält sich Prompt Engineering zu einem Werkzeug wie PromptQuorum?',
               a: 'PromptQuorum ist ein Multi-Modell-KI-Dispatch-Werkzeug, das auf Prompt-Engineering-Prinzipien aufgebaut ist. Es enthält 9 eingebaute Prompt-Frameworks, einen KI-gestützten Prompt-Optimierer und die Möglichkeit, einen Prompt gleichzeitig an mehrere Modelle zu senden – GPT-4o, Claude, Gemini und lokale Modelle – und Ergebnisse nebeneinander zu vergleichen. Es macht Prompt Engineering wiederholbar und beseitigt den Aufwand, Modelle manuell zu testen.',
+            },
+            {
+              q: 'Ist Prompt Engineering noch relevant, jetzt wo KI-Agenten existieren?',
+              a: 'Ja. KI-Agenten – autonome Systeme, die mehrstufige Aufgaben planen und ausführen – basieren auf Prompt Engineering. Jeder Agent hat einen System-Prompt, der seine Rolle, Einschränkungen und verfügbaren Werkzeuge definiert. Jeder Tool-Aufruf wird durch strukturierte Anweisungen ausgelöst. Prompt Engineering ist die Grundlage, die Agenten kontrollierbar und vorhersehbar macht. Je verbreiteter Agenten werden, desto wichtiger wird diese Fähigkeit.',
+            },
+            {
+              q: 'Wie unterscheidet sich ein Nutzer-Prompt von einem System-Prompt?',
+              a: 'Ein System-Prompt ist ein dauerhafter Anweisungssatz, der für die gesamte Sitzung gilt – er definiert die Rolle des Modells, seine Einschränkungen und das Standardverhalten, bevor der Nutzer etwas sagt. Ein Nutzer-Prompt ist die anforderungsbezogene Eingabe – die spezifische Aufgabe oder Frage für diese Interaktion. In den meisten KI-Produkten schreiben Entwickler den System-Prompt; Endnutzer schreiben den Nutzer-Prompt. Beide profitieren von Prompt Engineering, erfüllen aber unterschiedliche Funktionen.',
             },
           ],
         },
@@ -429,10 +447,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       readTime: '10 min de lecture',
       sections: {
         definition: {
-          title: 'Qu\'est-ce que le prompt engineering en 2026 ?',
+          title: 'Qu\'est-ce que le prompt engineering ?',
           content: [
             '**Le prompt engineering est la pratique qui consiste à concevoir et à structurer des entrées textuelles — appelées prompts — pour obtenir des résultats précis, utiles et reproductibles des grands modèles de langage (LLM).** Il s\'applique à GPT-4o, Claude, Gemini et aux modèles exécutés localement via Ollama ou LM Studio. La différence entre le prompt engineering et le simple fait de « poser une question à une IA » est la même qu\'entre une demande vague et une instruction précise avec un objectif défini, un contexte et un format de sortie.',
-            'En 2026, le prompt engineering est une discipline structurée avec des techniques nommées, des frameworks réutilisables et des résultats mesurables. Il ne s\'agit pas de tromper les systèmes d\'IA ni de trouver des commandes cachées — il s\'agit de donner à un modèle probabiliste le signal le plus clair possible de ce dont vous avez besoin. Un prompt bien conçu produit de manière constante un résultat utilisable dès la première tentative.',
+            'Aujourd\'hui, le prompt engineering est une discipline structurée avec des techniques nommées, des frameworks réutilisables et des résultats mesurables. Il ne s\'agit pas de tromper les systèmes d\'IA ni de trouver des commandes cachées — il s\'agit de donner à un modèle probabiliste le signal le plus clair possible de ce dont vous avez besoin. Un prompt bien conçu produit de manière constante un résultat utilisable dès la première tentative.',
             'Les bases du prompt engineering commencent par la compréhension du fait que les LLM sont des moteurs de complétion de schémas. Ils génèrent des sorties en fonction de la probabilité statistique de ce qui doit suivre votre entrée. Plus vous spécifiez précisément la tâche, le contexte, les contraintes et le format souhaité, moins le modèle doit deviner — et meilleur est le résultat.',
           ],
         },
@@ -474,6 +492,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'Les éléments fondamentaux d\'un prompt',
           content: [
             'Tout prompt efficace est assemblé à partir d\'une combinaison de ces sept éléments. Il est rare d\'avoir besoin des sept à la fois — la compétence réside dans le fait de savoir lesquels inclure pour une tâche donnée.',
+            'Une étude de 2024 sur les techniques de prompting (Schulhoff et al., « The Prompt Report », arXiv:2406.06608) a recensé plus de 58 techniques distinctes utilisées dans les systèmes d\'IA en production — toutes sont des variations structurées de ces sept blocs de construction appliqués dans différentes combinaisons.',
             'Pour une analyse approfondie avec des exemples de chaque élément en action, voir [Fundamentals: The 5 Building Blocks Every Prompt Needs].',
           ],
           items: [
@@ -545,7 +564,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         canDo: {
-          title: 'Ce que le prompt engineering peut et ne peut pas faire',
+          title: 'Limites du prompt engineering : ce qu\'il peut et ne peut pas faire',
           content: '**Ce que le prompt engineering améliore de manière fiable :**',
           items: [
             'Cohérence des sorties — le même prompt structuré produit des résultats similaires d\'une exécution à l\'autre et entre membres d\'équipe',
@@ -587,8 +606,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'FAQ : Les bases du prompt engineering',
           faqs: [
             {
-              q: 'Le prompt engineering est-il encore utile avec les nouveaux modèles d\'IA en 2026 ?',
-              a: 'Oui — et même davantage. Les modèles plus capables suivent mieux les instructions précises, ce qui signifie que le retour sur des prompts bien structurés augmente à mesure que les modèles s\'améliorent. En 2026, même les modèles les plus capables produisent des sorties incohérentes ou vagues lorsqu\'on leur donne des entrées vagues. Les prompts structurés restent le moyen le plus fiable d\'obtenir une sortie de qualité professionnelle dès la première tentative.',
+              q: 'Le prompt engineering est-il encore utile avec les nouveaux modèles d\'IA ?',
+              a: 'Oui — et même davantage. Les modèles plus capables suivent mieux les instructions précises, ce qui signifie que le retour sur des prompts bien structurés augmente à mesure que les modèles s\'améliorent. Même aujourd\'hui, même les modèles les plus capables produisent des sorties incohérentes ou vagues lorsqu\'on leur donne des entrées vagues. Les prompts structurés restent le moyen le plus fiable d\'obtenir une sortie de qualité professionnelle dès la première tentative.',
             },
             {
               q: 'Faut-il savoir coder pour apprendre le prompt engineering ?',
@@ -604,7 +623,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             },
             {
               q: 'Le prompt engineering sera-t-il encore important dans quelques années ?',
-              a: 'Toutes les preuves disponibles en 2026 indiquent que oui. Les LLM ne sont pas encore capables de produire de manière fiable des sorties de qualité professionnelle à partir d\'un langage naturel non structuré seul. Même si les interfaces IA deviennent plus conversationnelles, les principes sous-jacents des bons prompts — objectif clair, contexte pertinent, contraintes explicites, format de sortie spécifié — restent la différence entre une réponse IA utile et inutile.',
+              a: 'Toutes les preuves disponibles indiquent que oui. Les LLM ne sont pas encore capables de produire de manière fiable des sorties de qualité professionnelle à partir d\'un langage naturel non structuré seul. Même si les interfaces IA deviennent plus conversationnelles, les principes sous-jacents des bons prompts — objectif clair, contexte pertinent, contraintes explicites, format de sortie spécifié — restent la différence entre une réponse IA utile et inutile.',
             },
             {
               q: 'Quelle est la différence entre le prompt engineering et le fine-tuning ?',
@@ -613,6 +632,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             {
               q: 'Quel est le rapport entre le prompt engineering et un outil comme PromptQuorum ?',
               a: 'PromptQuorum est un outil de dispatch multi-modèles construit autour des principes du prompt engineering. Il inclut 9 frameworks de prompts intégrés, un optimiseur de prompts propulsé par IA, et la capacité d\'envoyer un prompt à plusieurs modèles simultanément — GPT-4o, Claude, Gemini et les modèles locaux — et de comparer les résultats côte à côte. Il rend le prompt engineering reproductible et supprime la friction des tests manuels sur plusieurs modèles.',
+            },
+            {
+              q: 'Le prompt engineering est-il encore pertinent maintenant que les agents IA existent ?',
+              a: 'Oui. Les agents IA — des systèmes autonomes qui planifient et exécutent des tâches en plusieurs étapes — sont construits sur le prompt engineering. Chaque agent possède un system prompt définissant son rôle, ses contraintes et ses outils disponibles. Chaque appel d\'outil est déclenché par des instructions structurées. Le prompt engineering est le fondement qui rend les agents contrôlables et prévisibles. À mesure que les agents se généralisent, cette compétence devient plus importante, pas moins.',
+            },
+            {
+              q: 'Quelle est la différence entre un prompt utilisateur et un system prompt ?',
+              a: 'Un system prompt est un ensemble d\'instructions persistantes qui s\'appliquent à toute la session — il définit le rôle du modèle, ses contraintes et son comportement par défaut avant que l\'utilisateur ne parle. Un prompt utilisateur est l\'entrée par requête — la tâche ou question spécifique pour cette interaction. Dans la plupart des produits IA, les développeurs rédigent le system prompt ; les utilisateurs finaux rédigent le prompt utilisateur. Les deux bénéficient du prompt engineering, mais remplissent des fonctions différentes.',
             },
           ],
         },
@@ -626,10 +653,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       readTime: '10分で読める',
       sections: {
         definition: {
-          title: 'プロンプトエンジニアリングとは？（2026年版）',
+          title: 'プロンプトエンジニアリングとは何か？',
           content: [
             '**プロンプトエンジニアリングとは、大規模言語モデル（LLM）から正確で有用かつ再現性のある出力を得るために、「プロンプト」と呼ばれるテキスト入力を設計・構造化する実践です。** GPT-4o、Claude、Gemini、そしてOllamaやLM Studioを介してローカルで動作するモデルにも適用されます。プロンプトエンジニアリングと「AIにただ質問する」の違いは、漠然としたリクエストと、明確な目標・コンテキスト・出力形式を備えた精密な指示との違いに等しいです。',
-            '2026年現在、プロンプトエンジニアリングは、名前の付いたテクニック・再利用可能なフレームワーク・測定可能な成果を持つ体系的な分野として確立されています。AIシステムを騙したり、隠しコマンドを探したりするものではなく、確率的なモデルに対して、必要なものを可能な限り明確に伝えることが目的です。よく設計されたプロンプトは、初回の試みで一貫して使用可能な出力を生成します。',
+            '現在、プロンプトエンジニアリングは、名前の付いたテクニック・再利用可能なフレームワーク・測定可能な成果を持つ体系的な分野として確立されています。AIシステムを騙したり、隠しコマンドを探したりするものではなく、確率的なモデルに対して、必要なものを可能な限り明確に伝えることが目的です。よく設計されたプロンプトは、初回の試みで一貫して使用可能な出力を生成します。',
             'プロンプトエンジニアリングの基礎は、LLMがパターン補完エンジンであるという理解から始まります。モデルは、入力の後に続くべき内容の統計的確率に基づいて出力を生成します。タスク・コンテキスト・制約・希望する形式を正確に指定するほど、モデルが推測する必要がなくなり、結果も向上します。',
           ],
         },
@@ -671,6 +698,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'プロンプトの核となる構成要素',
           content: [
             'すべての効果的なプロンプトは、以下の7つの要素を組み合わせて構成されます。7つすべてを一度に必要とすることはほとんどありません。特定のタスクにどれを含めるかを見極めることがスキルです。',
+            '2024年のプロンプティング技術の調査論文（Schulhoff et al.、「The Prompt Report」、arXiv:2406.06608）では、実運用のAIシステムで使用される58以上の個別技術が体系化されました——これらすべては、この7つの構成要素をさまざまな組み合わせで適用した構造化バリエーションです。',
             '各要素の具体的な使用例を含む詳しい解説は [Fundamentals: The 5 Building Blocks Every Prompt Needs] を参照してください。',
           ],
           items: [
@@ -742,7 +770,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         canDo: {
-          title: 'プロンプトエンジニアリングができることとできないこと',
+          title: 'プロンプトエンジニアリングの限界：できることとできないこと',
           content: '**プロンプトエンジニアリングが確実に改善するもの：**',
           items: [
             '出力の一貫性 — 同じ構造化プロンプトは、実行間・チームメンバー間で同様の結果を生成する',
@@ -784,8 +812,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'FAQ：プロンプトエンジニアリングの基礎',
           faqs: [
             {
-              q: '2026年の新しいAIモデルでも、プロンプトエンジニアリングは有効ですか？',
-              a: 'はい — むしろより重要になっています。高性能なモデルほど精密な指示に従うのが得意なため、モデルが改善されるにつれて、適切に構造化されたプロンプトからのリターンが増加します。2026年現在でも、最も高性能なモデルでさえ、漠然とした入力を与えると一貫性のない出力や曖昧な出力を生成します。構造化されたプロンプトは、初回の試みでプロフェッショナルグレードの出力を得るための最も信頼できる方法であり続けています。',
+              q: '新しいAIモデルでも、プロンプトエンジニアリングは有効ですか？',
+              a: 'はい — むしろより重要になっています。高性能なモデルほど精密な指示に従うのが得意なため、モデルが改善されるにつれて、適切に構造化されたプロンプトからのリターンが増加します。現在でも、最も高性能なモデルでさえ、漠然とした入力を与えると一貫性のない出力や曖昧な出力を生成します。構造化されたプロンプトは、初回の試みでプロフェッショナルグレードの出力を得るための最も信頼できる方法であり続けています。',
             },
             {
               q: 'プロンプトエンジニアリングを学ぶにはコーディングの知識が必要ですか？',
@@ -801,7 +829,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             },
             {
               q: '数年後もプロンプトエンジニアリングは重要であり続けますか？',
-              a: '2026年時点のすべての証拠はイエスを指しています。LLMはまだ、構造化されていない自然言語だけからプロフェッショナルグレードの出力を確実に生成できる段階にありません。AIインターフェースがより会話的になっても、優れたプロンプトの根本原則 — 明確な目標・関連するコンテキスト・明示的な制約・指定された出力形式 — は、有用なAIレスポンスと無用なAIレスポンスの違いであり続けます。',
+              a: '現在入手可能なすべての証拠はイエスを指しています。LLMはまだ、構造化されていない自然言語だけからプロフェッショナルグレードの出力を確実に生成できる段階にありません。AIインターフェースがより会話的になっても、優れたプロンプトの根本原則 — 明確な目標・関連するコンテキスト・明示的な制約・指定された出力形式 — は、有用なAIレスポンスと無用なAIレスポンスの違いであり続けます。',
             },
             {
               q: 'プロンプトエンジニアリングとファインチューニングの違いは何ですか？',
@@ -810,6 +838,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             {
               q: 'プロンプトエンジニアリングとPromptQuorumのようなツールはどのように関連していますか？',
               a: 'PromptQuorumはプロンプトエンジニアリングの原則を中心に構築されたマルチモデルAIディスパッチツールです。9つの組み込みプロンプトフレームワーク・AIによるプロンプトオプティマイザー・一つのプロンプトをGPT-4o・Claude・Gemini・ローカルモデルなど複数のモデルに同時送信して結果を並べて比較する機能を備えています。プロンプトエンジニアリングを再現可能にし、モデル間でのテストの手間を省きます。',
+            },
+            {
+              q: 'AIエージェントが存在する今、プロンプトエンジニアリングはまだ関連性がありますか？',
+              a: 'はい。AIエージェント——多段階タスクを計画・実行する自律システム——はプロンプトエンジニアリングの上に構築されています。すべてのエージェントには、その役割、制約、利用可能なツールを定義するシステムプロンプトがあります。すべてのツール呼び出しは構造化された指示によって引き起こされます。プロンプトエンジニアリングはエージェントを制御可能で予測可能にする基盤です。エージェントが普及するにつれて、このスキルはより重要になります。',
+            },
+            {
+              q: 'ユーザープロンプトとシステムプロンプトの違いは何ですか？',
+              a: 'システムプロンプトはセッション全体に適用される永続的な指示セットであり、ユーザーが何か言う前にモデルの役割、制約、デフォルトの動作を定義します。ユーザープロンプトはリクエストごとの入力——その対話の特定のタスクや質問です。ほとんどのAI製品では、開発者がシステムプロンプトを書き、エンドユーザーがユーザープロンプトを書きます。どちらもプロンプトエンジニアリングの恩恵を受けますが、異なる機能を果たします。',
             },
           ],
         },
@@ -823,10 +859,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       readTime: '阅读约10分钟',
       sections: {
         definition: {
-          title: '2026年，什么是提示词工程？',
+          title: '什么是提示词工程？',
           content: [
             '**提示词工程是设计和构建文本输入——称为提示词——的实践，目的是从大型语言模型（LLM）中获得准确、有用且可重复的输出。** 它适用于 GPT-4o、Claude、Gemini，以及通过 Ollama 或 LM Studio 在本地运行的模型。提示词工程与"随便问 AI 一个问题"的区别，就在于模糊请求与精确指令之间的差距——后者具有明确的目标、上下文和输出格式。',
-            '截至2026年，提示词工程已发展为一门具有命名技术、可复用框架和可量化成果的结构化学科。它并非关于欺骗 AI 系统或寻找隐藏指令，而是为概率模型提供尽可能清晰的信号，告知其你需要什么。一个精心设计的提示词能在首次尝试时稳定产出可用的结果。',
+            '如今，提示词工程已发展为一门具有命名技术、可复用框架和可量化成果的结构化学科。它并非关于欺骗 AI 系统或寻找隐藏指令，而是为概率模型提供尽可能清晰的信号，告知其你需要什么。一个精心设计的提示词能在首次尝试时稳定产出可用的结果。',
             '提示词工程的基础始于理解一件事：大型语言模型是模式补全引擎。它们根据你的输入内容之后最有可能跟随什么内容来生成输出。你对任务、上下文、约束和期望格式的描述越精确，模型需要猜测的就越少——结果也就越好。',
           ],
         },
@@ -868,6 +904,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: '提示词的核心构建模块',
           content: [
             '每个有效的提示词都由以下七个要素中的若干组合构成。你很少需要同时使用全部七个——关键技能在于判断哪些要素适合特定任务。',
+            '2024年一项提示词技术综述（Schulhoff等人，《The Prompt Report》，arXiv:2406.06608）整理了在生产AI系统中使用的58种以上的独立技术——它们都是这七个构建块以不同组合方式应用的结构化变体。',
             '有关每个要素在实际中的使用示例的深入解析，请参阅 [Fundamentals: The 5 Building Blocks Every Prompt Needs]。',
           ],
           items: [
@@ -939,7 +976,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         canDo: {
-          title: '提示词工程能做什么，不能做什么',
+          title: '提示词工程的局限性：能做什么和不能做什么',
           content: '**提示词工程能可靠改善的方面：**',
           items: [
             '输出一致性——同一个结构化提示词在多次运行和团队成员之间产生相似的结果',
@@ -981,8 +1018,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'FAQ：提示词工程基础',
           faqs: [
             {
-              q: '2026年，提示词工程对更新的 AI 模型仍然有用吗？',
-              a: '是的——而且更加有用。能力更强的模型更善于遵循精确指令，这意味着随着模型的改进，结构良好的提示词的回报也在增加。截至2026年，即便是最强大的模型，在面对模糊输入时也会产出不一致或模糊的结果。结构化提示词仍然是首次尝试就获得专业级输出的最可靠方式。',
+              q: '提示词工程对更新的 AI 模型仍然有用吗？',
+              a: '是的——而且更加有用。能力更强的模型更善于遵循精确指令，这意味着随着模型的改进，结构良好的提示词的回报也在增加。即使今天，即便是最强大的模型，在面对模糊输入时也会产出不一致或模糊的结果。结构化提示词仍然是首次尝试就获得专业级输出的最可靠方式。',
             },
             {
               q: '学习提示词工程需要会编程吗？',
@@ -997,8 +1034,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               a: '技术是应用于实现特定输出质量的具体模式——例如，思维链（Chain-of-Thought）提示能提高推理准确性。框架是组织提示词所有要素的结构化模板——例如，CO-STAR 定义了指定上下文、目标、风格、语气、受众和响应格式的顺序。框架帮助你构建提示词；技术帮助你改进模型对其的处理方式。',
             },
             {
-              q: '几年后提示词工程还会重要吗？',
-              a: '截至2026年，所有现有证据都指向肯定的答案。大型语言模型尚不能仅凭非结构化的自然语言稳定产出专业级输出。即使 AI 界面变得越来越对话化，好的提示词的底层原则——清晰的目标、相关的上下文、明确的约束、指定的输出格式——仍然是有用和无用 AI 响应之间的关键差异。',
+              q: '提示词工程在未来还会重要吗？',
+              a: '所有现有证据都指向肯定的答案。大型语言模型尚不能仅凭非结构化的自然语言稳定产出专业级输出。即使 AI 界面变得越来越对话化，好的提示词的底层原则——清晰的目标、相关的上下文、明确的约束、指定的输出格式——仍然是有用和无用 AI 响应之间的关键差异。',
             },
             {
               q: '提示词工程与微调有什么区别？',
@@ -1007,6 +1044,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             {
               q: 'PromptQuorum 这样的工具与提示词工程有什么关系？',
               a: 'PromptQuorum 是一个围绕提示词工程原则构建的多模型 AI 调度工具。它内置9个提示词框架、一个 AI 驱动的提示词优化器，以及将一个提示词同时发送给多个模型——GPT-4o、Claude、Gemini 和本地模型——并排比较结果的功能。它使提示词工程可重复，并消除了手动跨模型测试的摩擦。',
+            },
+            {
+              q: '现在AI智能体已经存在，提示词工程还有意义吗？',
+              a: '有。AI智能体——自主规划和执行多步骤任务的系统——建立在提示词工程之上。每个智能体都有一个系统提示词，定义其角色、约束条件和可用工具。每次工具调用都由结构化指令触发。提示词工程是使智能体可控和可预测的基础。随着智能体日益普及，这一技能变得更加重要，而非更少。',
+            },
+            {
+              q: '用户提示词和系统提示词有什么区别？',
+              a: '系统提示词是应用于整个会话的持久指令集——在用户说任何话之前，它定义模型的角色、约束条件和默认行为。用户提示词是每次请求的输入——该交互的特定任务或问题。在大多数AI产品中，开发者编写系统提示词；最终用户编写用户提示词。两者都受益于提示词工程，但服务于不同的功能。',
             },
           ],
         },
@@ -1057,6 +1102,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             '**The modern history of prompt engineering effectively begins with GPT-3.** In May 2020, OpenAI released GPT-3, a 175-billion-parameter model, alongside the landmark paper by Brown et al., "Language Models are Few-Shot Learners" [External: Brown et al., 2020 – Language Models are Few-Shot Learners]. The paper demonstrated that by including a few examples of the desired task directly in the prompt — without any weight updates to the model — performance on downstream tasks improved dramatically.',
             'This was the seed of prompt engineering as a discipline. Researchers and developers realised that the same model could be turned into a translator, a summariser, a code generator, or a question-answering system simply by changing how the prompt was written. The model did not need retraining — it needed a better prompt. That insight reframed what a prompt was: not just an input, but a design artifact.',
+            'Brown et al. reported that few-shot performance scaled consistently with model size: the 175B GPT-3 model substantially outperformed smaller variants across every benchmark tested, establishing that scale and prompt-based learning were directly linked. This made the quality of the prompt a variable that practitioners — not just researchers — could control.',
             'See [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?] for a practical guide to the technique GPT-3 made famous.',
           ],
         },
@@ -1072,7 +1118,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         cot: {
           title: '2022: Chain-of-Thought and Reasoning Prompts',
           content: [
-            '**The introduction of Chain-of-Thought (CoT) prompting in 2022 was the most significant technical development in the discipline\'s short history.** Wei et al. (Google Brain) published "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models", demonstrating that asking a model to reason step by step before answering dramatically improved performance on arithmetic, commonsense reasoning, and symbolic reasoning tasks. The implication was profound: the structure of the prompt could activate different reasoning behaviour — not just different facts.',
+            '**The introduction of Chain-of-Thought (CoT) prompting in 2022 was the most significant technical development in the discipline\'s short history.** Wei et al. (Google Brain) published "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models", demonstrating that asking a model to reason step by step before answering dramatically improved performance on arithmetic, commonsense reasoning, and symbolic reasoning tasks. In one headline result, chain-of-thought prompting improved PaLM\'s accuracy on the GSM8K grade-school maths benchmark from 17.9% to 58% — a gain achieved purely by changing the prompt structure, with no additional model training. The implication was profound: the structure of the prompt could activate different reasoning behaviour — not just different facts.',
             'Related techniques followed quickly. Zhou et al. introduced least-to-most prompting, which decomposed complex problems into a sequence of simpler sub-problems solved in order. These approaches turned prompt engineering from a formatting exercise into a tool for eliciting structured reasoning from models that had not been explicitly trained to reason that way. Prompting had become scaffolding for cognition.',
             'For the full technique guide, see [Techniques: Chain-of-Thought Prompting: Make AI Show Its Reasoning] and [Techniques: Prompt Chaining: How to Break Big Tasks Into Winning Steps].',
           ],
@@ -1081,7 +1127,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         chatgpt: {
           title: 'Late 2022–2023: The ChatGPT Moment and the Prompt Engineer Job Title',
           content: [
-            '**The release of ChatGPT on November 30, 2022, changed the public profile of prompt engineering overnight.** Within days, millions of people were experimenting with prompts and discovering that their results varied enormously based on how they phrased requests. Tech media covered "prompt engineering" as a skill worth learning. The Oxford English Dictionary added "prompt" as a verb related to AI in 2023, and the word itself became a runner-up for word of the year in multiple rankings.',
+            '**The release of ChatGPT on November 30, 2022, changed the public profile of prompt engineering overnight.** ChatGPT reached one million users within its first five days — confirmed by OpenAI CEO Sam Altman on Twitter in December 2022 — and 100 million monthly active users by January 2023, according to a UBS analysis cited by Reuters. Within days, millions of people were experimenting with prompts and discovering that their results varied enormously based on how they phrased requests. Tech media covered "prompt engineering" as a skill worth learning. The Oxford English Dictionary added "prompt" as a verb related to AI in 2023, and the word itself became a runner-up for word of the year in multiple rankings.',
             'By early 2023, "prompt engineer" appeared as a job title with reported salaries of $175,000–$335,000 at companies including Anthropic, according to widely cited job postings. The role attracted significant media attention — Bloomberg, The Guardian, and The Atlantic all covered whether prompt engineering was a real career. The consensus at the time: it was a transitional role, part human-computer interface design, part subject-matter expertise, part quality assurance.',
             'The popularisation of the phrase "prompt engineering" is sometimes attributed to various practitioners and commentators. Richard Socher, former Chief Scientist at Salesforce, is mentioned in some commentary as having helped frame the idea early. The Wikipedia article on prompt engineering [External: Prompt Engineering – Wikipedia] provides a balanced overview of competing claims about the term\'s origins.',
           ],
@@ -1184,6 +1230,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               q: 'Will automated tools replace the need to understand prompt engineering?',
               a: 'Automated tools like DSPy can optimise prompt wording within defined objectives, but they require a human to specify what the objective is, what constraints apply, and how to evaluate success. Understanding prompt engineering principles remains necessary to use these tools effectively — and to diagnose when they produce the wrong outcome. Automation removes some of the manual iteration; it does not remove the need for structured thinking.',
             },
+            {
+              q: 'Is prompt engineering dead in 2026?',
+              a: 'No. The discipline has shifted, not disappeared. As models grow more capable, the work moves from syntax tricks and formatting hacks to context design — structuring inputs, managing retrieval, and composing tool outputs. The job title "Prompt Engineer" is narrowing, but the underlying skill is embedded in every role that uses AI: developer, analyst, marketer, researcher. McKinsey\'s 2024 State of AI report found that effective AI adoption still correlates strongly with how well users frame tasks for the model.',
+            },
+            {
+              q: 'Do I need to learn prompt engineering if AI models keep improving?',
+              a: 'Yes — but the focus shifts with each generation. Better models reduce the need for elaborate workarounds (special tokens, repetitive reinforcement, rigid formatting constraints) and increase the payoff for clear intent, structured context, and well-chosen examples. The fundamentals — role, context, format, constraints — remain stable across every model generation. Learning them now means the skill compounds rather than expires.',
+            },
+            {
+              q: 'What is the difference between prompt engineering and fine-tuning?',
+              a: 'Prompt engineering changes how you talk to a model without modifying its weights. Fine-tuning retrains a model on new data to change its behaviour permanently. Prompt engineering is faster, cheaper, and reversible — you can iterate in minutes. Fine-tuning is better when the target behaviour is consistent, high-volume, or impossible to describe reliably in a prompt. Most teams start with prompting and fine-tune only when prompting approaches a ceiling on their specific task.',
+            },
           ],
         },
 
@@ -1231,6 +1289,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             '**Die moderne Geschichte des Prompt Engineerings beginnt effektiv mit GPT-3.** Im Mai 2020 veröffentlichte OpenAI GPT-3, ein 175-Milliarden-Parameter-Modell, zusammen mit dem bahnbrechenden Paper von Brown et al., „Language Models are Few-Shot Learners" [External: Brown et al., 2020 – Language Models are Few-Shot Learners]. Das Paper demonstrierte, dass durch das Einschließen einiger Beispiele der gewünschten Aufgabe direkt im Prompt – ohne Gewichtsaktualisierungen am Modell – die Leistung bei nachgelagerten Aufgaben dramatisch verbessert wurde.',
             'Dies war der Keim des Prompt Engineerings als Disziplin. Forscher und Entwickler erkannten, dass dasselbe Modell in einen Übersetzer, einen Zusammenfasser, einen Code-Generator oder ein Frage-Antwort-System verwandelt werden konnte, indem einfach die Art geändert wurde, wie der Prompt geschrieben wurde. Das Modell brauchte kein Neu-Training – es brauchte einen besseren Prompt. Diese Erkenntnis rahmte neu, was ein Prompt war: nicht nur eine Eingabe, sondern ein Design-Artefakt.',
+            'Brown et al. berichteten, dass die Few-Shot-Leistung konsistent mit der Modellgröße skalierte: Das 175-Milliarden-Parameter-Modell GPT-3 übertraf kleinere Varianten in allen getesteten Benchmarks deutlich und zeigte, dass Skalierung und prompt-basiertes Lernen direkt miteinander verknüpft sind. Dies machte die Qualität des Prompts zu einer Variablen, die Praktiker – nicht nur Forscher – direkt kontrollieren konnten.',
             'Siehe [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?] für einen praktischen Leitfaden zur Technik, die GPT-3 bekannt machte.',
           ],
         },
@@ -1246,7 +1305,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         cot: {
           title: '2022: Chain-of-Thought und Reasoning-Prompts',
           content: [
-            '**Die Einführung des Chain-of-Thought (CoT)-Promptings im Jahr 2022 war die bedeutendste technische Entwicklung in der kurzen Geschichte der Disziplin.** Wei et al. (Google Brain) veröffentlichten „Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" und demonstrierten, dass das Bitten eines Modells, Schritt für Schritt zu denken, bevor es antwortet, die Leistung bei arithmetischen, alltagspraktischen und symbolischen Denkaufgaben dramatisch verbesserte. Die Implikation war tiefgreifend: Die Struktur des Prompts konnte unterschiedliches Denkverhalten aktivieren – nicht nur unterschiedliche Fakten.',
+            '**Die Einführung des Chain-of-Thought (CoT)-Promptings im Jahr 2022 war die bedeutendste technische Entwicklung in der kurzen Geschichte der Disziplin.** Wei et al. (Google Brain) veröffentlichten „Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" und demonstrierten, dass das Bitten eines Modells, Schritt für Schritt zu denken, bevor es antwortet, die Leistung bei arithmetischen, alltagspraktischen und symbolischen Denkaufgaben dramatisch verbesserte. In einem zentralen Ergebnis verbesserte Chain-of-Thought-Prompting die Genauigkeit von PaLM auf dem GSM8K-Grundschulmathematik-Benchmark von 17,9 % auf 58 % – ein Gewinn, der ausschließlich durch Änderung der Prompt-Struktur erzielt wurde, ohne zusätzliches Modelltraining. Die Implikation war tiefgreifend: Die Struktur des Prompts konnte unterschiedliches Denkverhalten aktivieren – nicht nur unterschiedliche Fakten.',
             'Verwandte Techniken folgten schnell. Zhou et al. führten das Least-to-Most-Prompting ein, das komplexe Probleme in eine Folge einfacherer Teilprobleme zerlegte, die der Reihe nach gelöst wurden. Diese Ansätze verwandelten Prompt Engineering von einer Formatierungsübung in ein Werkzeug, um strukturiertes Denken aus Modellen zu elizitieren, die nicht explizit darauf trainiert worden waren, auf diese Weise zu denken. Prompting war zum Gerüst für Kognition geworden.',
             'Den vollständigen Technik-Leitfaden findest du unter [Techniques: Chain-of-Thought Prompting: Make AI Show Its Reasoning] und [Techniques: Prompt Chaining: How to Break Big Tasks Into Winning Steps].',
           ],
@@ -1255,7 +1314,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         chatgpt: {
           title: 'Ende 2022–2023: Der ChatGPT-Moment und der Berufsbezeichnung „Prompt Engineer"',
           content: [
-            '**Die Veröffentlichung von ChatGPT am 30. November 2022 veränderte das öffentliche Profil des Prompt Engineerings über Nacht.** Innerhalb von Tagen experimentierten Millionen von Menschen mit Prompts und stellten fest, dass ihre Ergebnisse je nach Formulierung der Anfragen enorm variierten. Technologiemedien berichteten über „Prompt Engineering" als eine Fähigkeit, die es zu erlernen lohnte. Das Oxford English Dictionary fügte „prompt" im Jahr 2023 als ein auf KI bezogenes Verb hinzu, und das Wort selbst wurde in mehreren Rankings zum Läufer-up für das Wort des Jahres.',
+            '**Die Veröffentlichung von ChatGPT am 30. November 2022 veränderte das öffentliche Profil des Prompt Engineerings über Nacht.** ChatGPT erreichte innerhalb der ersten fünf Tage eine Million Nutzer – bestätigt von OpenAI-CEO Sam Altman auf Twitter im Dezember 2022 – und 100 Millionen monatlich aktive Nutzer bis Januar 2023 gemäß einer UBS-Analyse, die von Reuters zitiert wurde. Innerhalb von Tagen experimentierten Millionen von Menschen mit Prompts und stellten fest, dass ihre Ergebnisse je nach Formulierung der Anfragen enorm variierten. Technologiemedien berichteten über „Prompt Engineering" als eine Fähigkeit, die es zu erlernen lohnte. Das Oxford English Dictionary fügte „prompt" im Jahr 2023 als ein auf KI bezogenes Verb hinzu, und das Wort selbst wurde in mehreren Rankings zum Läufer-up für das Wort des Jahres.',
             'Bis Anfang 2023 erschien „Prompt Engineer" als Berufsbezeichnung mit gemeldeten Gehältern von 175.000–335.000 Dollar bei Unternehmen einschließlich Anthropic, laut weitzitierten Stellenausschreibungen. Die Rolle zog erhebliche Medienaufmerksamkeit auf sich – Bloomberg, The Guardian und The Atlantic berichteten alle darüber, ob Prompt Engineering eine echte Karriere sei. Der damalige Konsens: Es war eine Übergangsrolle, teils Human-Computer-Interface-Design, teils Fachexpertise, teils Qualitätssicherung.',
             'Die Popularisierung des Ausdrucks „Prompt Engineering" wird manchmal verschiedenen Praktikern und Kommentatoren zugeschrieben. Richard Socher, ehemaliger Chief Scientist bei Salesforce, wird in einigen Kommentaren erwähnt, als er dazu beigetragen hat, die Idee früh zu rahmen. Der Wikipedia-Artikel über Prompt Engineering [External: Prompt Engineering – Wikipedia] bietet einen ausgewogenen Überblick über konkurrierende Behauptungen über die Herkunft des Begriffs.',
           ],
@@ -1358,6 +1417,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               q: 'Werden automatisierte Werkzeuge die Notwendigkeit eliminieren, Prompt Engineering zu verstehen?',
               a: 'Automatisierte Werkzeuge wie DSPy können Prompt-Formulierungen innerhalb definierter Ziele optimieren, erfordern jedoch, dass ein Mensch festlegt, was das Ziel ist, welche Einschränkungen gelten und wie Erfolg bewertet wird. Das Verständnis von Prompt-Engineering-Prinzipien bleibt notwendig, um diese Werkzeuge effektiv einzusetzen – und um zu diagnostizieren, wenn sie das falsche Ergebnis liefern. Automatisierung beseitigt einen Teil der manuellen Iteration; sie beseitigt nicht die Notwendigkeit strukturierten Denkens.',
             },
+            {
+              q: 'Ist Prompt Engineering im Jahr 2026 tot?',
+              a: 'Nein. Die Disziplin hat sich verändert, ist aber nicht verschwunden. Mit wachsender Modellkompetenz verlagert sich die Arbeit von Syntax-Tricks und Formatierungs-Hacks hin zum Kontext-Design – Strukturierung von Eingaben, Verwaltung von Retrieval und Komposition von Tool-Ausgaben. Die Berufsbezeichnung „Prompt Engineer" wird enger gefasst, aber die zugrunde liegende Fähigkeit ist in jede Rolle integriert, die KI nutzt: Entwickler, Analyst, Marketingspezialist, Forscher. McKinseys State of AI-Bericht 2024 stellte fest, dass effektive KI-Einführung nach wie vor stark damit korreliert, wie gut Nutzer Aufgaben für das Modell formulieren.',
+            },
+            {
+              q: 'Muss ich Prompt Engineering lernen, wenn KI-Modelle immer besser werden?',
+              a: 'Ja – aber der Fokus verschiebt sich mit jeder Generation. Bessere Modelle reduzieren den Bedarf an aufwändigen Workarounds und erhöhen den Nutzen klarer Absicht, strukturierten Kontexts und gut gewählter Beispiele. Die Grundlagen – Rolle, Kontext, Format, Einschränkungen – bleiben über jede Modellgeneration hinweg stabil. Wer sie jetzt lernt, akkumuliert eine Fähigkeit, die sich aufbaut statt zu verfallen.',
+            },
+            {
+              q: 'Was ist der Unterschied zwischen Prompt Engineering und Fine-Tuning?',
+              a: 'Prompt Engineering ändert, wie man mit einem Modell kommuniziert, ohne seine Gewichte zu verändern. Fine-Tuning trainiert ein Modell auf neuen Daten und ändert sein Verhalten dauerhaft. Prompt Engineering ist schneller, günstiger und reversibel – Iteration in Minuten ist möglich. Fine-Tuning ist besser, wenn das Zielverhalten konsistent, hochvolumig oder im Prompt nicht zuverlässig beschreibbar ist. Die meisten Teams beginnen mit Prompting und wechseln zum Fine-Tuning erst, wenn Prompting an seine Grenzen stößt.',
+            },
           ],
         },
       },
@@ -1403,6 +1474,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             '**L\'histoire moderne du prompt engineering commence effectivement avec GPT-3.** En mai 2020, OpenAI a publié GPT-3, un modèle à 175 milliards de paramètres, accompagné de l\'article phare de Brown et al., « Language Models are Few-Shot Learners » [External: Brown et al., 2020 – Language Models are Few-Shot Learners]. L\'article démontrait qu\'en incluant quelques exemples de la tâche souhaitée directement dans le prompt — sans aucune mise à jour des poids du modèle — les performances sur les tâches en aval s\'amélioraient de façon spectaculaire.',
             'C\'était la graine du prompt engineering en tant que discipline. Les chercheurs et développeurs ont réalisé que le même modèle pouvait être transformé en traducteur, résumeur, générateur de code ou système de questions-réponses simplement en changeant la façon dont le prompt était rédigé. Le modèle n\'avait pas besoin d\'être ré-entraîné — il avait besoin d\'un meilleur prompt. Cette prise de conscience a reformulé ce qu\'était un prompt : pas seulement une entrée, mais un artefact de conception.',
+            'Brown et al. ont rapporté que les performances en few-shot augmentaient régulièrement avec la taille du modèle : le GPT-3 à 175 milliards de paramètres surpassait nettement les variantes plus petites sur tous les benchmarks testés, établissant que l\'échelle et l\'apprentissage basé sur les prompts étaient directement liés. La qualité du prompt est ainsi devenue une variable que les praticiens — pas seulement les chercheurs — pouvaient contrôler directement.',
             'Voir [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?] pour un guide pratique de la technique que GPT-3 a rendue célèbre.',
           ],
         },
@@ -1418,7 +1490,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         cot: {
           title: '2022 : Chain-of-Thought et les prompts de raisonnement',
           content: [
-            '**L\'introduction du prompting Chain-of-Thought (CoT) en 2022 a été le développement technique le plus significatif de la courte histoire de la discipline.** Wei et al. (Google Brain) ont publié « Chain-of-Thought Prompting Elicits Reasoning in Large Language Models », démontrant que demander à un modèle de raisonner étape par étape avant de répondre améliorait considérablement les performances sur les tâches arithmétiques, de raisonnement de sens commun et de raisonnement symbolique. L\'implication était profonde : la structure du prompt pouvait activer un comportement de raisonnement différent — pas seulement des faits différents.',
+            '**L\'introduction du prompting Chain-of-Thought (CoT) en 2022 a été le développement technique le plus significatif de la courte histoire de la discipline.** Wei et al. (Google Brain) ont publié « Chain-of-Thought Prompting Elicits Reasoning in Large Language Models », démontrant que demander à un modèle de raisonner étape par étape avant de répondre améliorait considérablement les performances sur les tâches arithmétiques, de raisonnement de sens commun et de raisonnement symbolique. Dans un résultat clé, le chain-of-thought prompting a amélioré la précision de PaLM sur le benchmark de mathématiques scolaires GSM8K, passant de 17,9 % à 58 % — un gain obtenu uniquement en modifiant la structure du prompt, sans entraînement supplémentaire du modèle. L\'implication était profonde : la structure du prompt pouvait activer un comportement de raisonnement différent — pas seulement des faits différents.',
             'Des techniques connexes ont suivi rapidement. Zhou et al. ont introduit le prompting du moins au plus, qui décomposait les problèmes complexes en une séquence de sous-problèmes plus simples résolus dans l\'ordre. Ces approches ont transformé le prompt engineering d\'un exercice de formatage en un outil pour éliciter un raisonnement structuré de modèles qui n\'avaient pas été explicitement entraînés à raisonner de cette façon. Le prompting était devenu un échafaudage pour la cognition.',
             'Pour le guide complet des techniques, voir [Techniques: Chain-of-Thought Prompting: Make AI Show Its Reasoning] et [Techniques: Prompt Chaining: How to Break Big Tasks Into Winning Steps].',
           ],
@@ -1427,7 +1499,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         chatgpt: {
           title: 'Fin 2022–2023 : Le moment ChatGPT et le titre de « prompt engineer »',
           content: [
-            '**La sortie de ChatGPT le 30 novembre 2022 a changé du jour au lendemain le profil public du prompt engineering.** En quelques jours, des millions de personnes expérimentaient avec des prompts et découvraient que leurs résultats variaient énormément selon la façon dont elles formulaient leurs demandes. Les médias tech couvraient le « prompt engineering » comme une compétence valant la peine d\'être apprise. L\'Oxford English Dictionary a ajouté « prompt » comme verbe lié à l\'IA en 2023, et le mot lui-même est devenu finaliste pour le mot de l\'année dans plusieurs classements.',
+            '**La sortie de ChatGPT le 30 novembre 2022 a changé du jour au lendemain le profil public du prompt engineering.** ChatGPT a atteint un million d\'utilisateurs dans les cinq premiers jours — confirmé par le PDG d\'OpenAI Sam Altman sur Twitter en décembre 2022 — et 100 millions d\'utilisateurs actifs mensuels en janvier 2023, selon une analyse UBS citée par Reuters. En quelques jours, des millions de personnes expérimentaient avec des prompts et découvraient que leurs résultats variaient énormément selon la façon dont elles formulaient leurs demandes. Les médias tech couvraient le « prompt engineering » comme une compétence valant la peine d\'être apprise. L\'Oxford English Dictionary a ajouté « prompt » comme verbe lié à l\'IA en 2023, et le mot lui-même est devenu finaliste pour le mot de l\'année dans plusieurs classements.',
             'Début 2023, « prompt engineer » est apparu comme titre de poste avec des salaires annoncés de 175 000 à 335 000 dollars dans des entreprises incluant Anthropic, selon des offres d\'emploi largement citées. Le rôle a attiré une attention médiatique significative — Bloomberg, The Guardian et The Atlantic ont tous couvert la question de savoir si le prompt engineering était une vraie carrière. Le consensus de l\'époque : c\'était un rôle transitoire, mi-conception d\'interface homme-machine, mi-expertise du domaine, mi-assurance qualité.',
             'La popularisation de l\'expression « prompt engineering » est parfois attribuée à divers praticiens et commentateurs. Richard Socher, ancien scientifique en chef chez Salesforce, est mentionné dans certains commentaires comme ayant contribué à cadrer l\'idée tôt. L\'article Wikipédia sur le prompt engineering [External: Prompt Engineering – Wikipedia] donne un aperçu équilibré des revendications concurrentes sur les origines du terme.',
           ],
@@ -1530,6 +1602,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               q: 'Les outils automatisés remplaceront-ils le besoin de comprendre le prompt engineering ?',
               a: 'Les outils automatisés comme DSPy peuvent optimiser la formulation des prompts dans des objectifs définis, mais ils nécessitent qu\'un humain spécifie quel est l\'objectif, quelles contraintes s\'appliquent et comment évaluer le succès. Comprendre les principes du prompt engineering reste nécessaire pour utiliser ces outils efficacement — et pour diagnostiquer quand ils produisent le mauvais résultat. L\'automatisation supprime une partie de l\'itération manuelle ; elle ne supprime pas le besoin d\'une réflexion structurée.',
             },
+            {
+              q: 'Le prompt engineering est-il mort en 2026 ?',
+              a: 'Non. La discipline a évolué, elle n\'a pas disparu. À mesure que les modèles deviennent plus capables, le travail passe des astuces syntaxiques vers la conception de contexte — structurer les entrées, gérer la récupération et composer les sorties d\'outils. L\'intitulé « Prompt Engineer » se rétrécit, mais la compétence est intégrée dans chaque rôle utilisant l\'IA : développeur, analyste, marketeur, chercheur. Le rapport State of AI 2024 de McKinsey a constaté que l\'adoption efficace de l\'IA corrèle toujours fortement avec la façon dont les utilisateurs formulent les tâches pour le modèle.',
+            },
+            {
+              q: 'Dois-je apprendre le prompt engineering si les modèles continuent de s\'améliorer ?',
+              a: 'Oui — mais le focus évolue à chaque génération. Les modèles plus performants réduisent le besoin de contournements élaborés et augmentent la valeur d\'une intention claire, d\'un contexte structuré et d\'exemples bien choisis. Les fondamentaux — rôle, contexte, format, contraintes — restent stables d\'une génération de modèles à l\'autre.',
+            },
+            {
+              q: 'Quelle est la différence entre le prompt engineering et le fine-tuning ?',
+              a: 'Le prompt engineering modifie la façon dont on communique avec un modèle sans changer ses poids. Le fine-tuning réentraîne un modèle sur de nouvelles données pour modifier son comportement de façon permanente. Le prompt engineering est plus rapide, moins coûteux et réversible. Le fine-tuning convient mieux lorsque le comportement cible est constant, à fort volume ou impossible à décrire dans un prompt. La plupart des équipes commencent par le prompting et passent au fine-tuning uniquement lorsque le prompting atteint ses limites.',
+            },
           ],
         },
       },
@@ -1575,6 +1659,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             '**プロンプトエンジニアリングの現代史は実質的にGPT-3から始まります。** 2020年5月、OpenAIは1750億パラメーターのモデルであるGPT-3を、Brown et al.による画期的な論文「Language Models are Few-Shot Learners」[External: Brown et al., 2020 – Language Models are Few-Shot Learners] とともにリリースしました。この論文は、モデルへの重みの更新なしに、望ましいタスクのいくつかの例をプロンプトに直接含めるだけで、下流タスクのパフォーマンスが劇的に向上することを実証しました。',
             'これがプロンプトエンジニアリングという分野の種でした。研究者と開発者は、プロンプトの書き方を変えるだけで、同じモデルが翻訳者・要約者・コードジェネレーター・質問応答システムに変身できることを認識しました。モデルの再トレーニングは不要でした — より良いプロンプトが必要なだけでした。その洞察はプロンプトの意味を再構築しました：単なる入力ではなく、設計上の成果物として。',
+            'ブラウンらは、few-shotの性能がモデルサイズと一貫して拡張することを報告しました。1,750億パラメータのGPT-3は、テストしたすべてのベンチマークで小型バリアントを大幅に上回り、スケールとプロンプトベースの学習が直接結びついていることを確立しました。これにより、プロンプトの品質は研究者だけでなく実務家も直接制御できる変数となりました。',
             'GPT-3が有名にしたテクニックの実践ガイドについては [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?] を参照してください。',
           ],
         },
@@ -1590,7 +1675,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         cot: {
           title: '2022年：思考の連鎖（Chain-of-Thought）と推論プロンプト',
           content: [
-            '**2022年の思考の連鎖（CoT）プロンプティングの導入は、この分野の短い歴史における最も重要な技術的発展でした。** Wei et al.（Google Brain）が「Chain-of-Thought Prompting Elicits Reasoning in Large Language Models」を発表し、回答する前にステップバイステップで推論するようモデルに求めることで、算術・常識的推論・記号的推論タスクのパフォーマンスが劇的に向上することを実証しました。その意味は深遠でした：プロンプトの構造が異なる推論行動を活性化できる — 単に異なる事実だけでなく。',
+            '**2022年の思考の連鎖（CoT）プロンプティングの導入は、この分野の短い歴史における最も重要な技術的発展でした。** Wei et al.（Google Brain）が「Chain-of-Thought Prompting Elicits Reasoning in Large Language Models」を発表し、回答する前にステップバイステップで推論するようモデルに求めることで、算術・常識的推論・記号的推論タスクのパフォーマンスが劇的に向上することを実証しました。GSM8Kの小学校数学ベンチマークでは、chain-of-thoughtプロンプティングによりPaLMの精度が17.9%から58%に向上しました。これは追加のモデルトレーニングなしに、プロンプト構造を変えるだけで達成された成果です。 その意味は深遠でした：プロンプトの構造が異なる推論行動を活性化できる — 単に異なる事実だけでなく。',
             '関連するテクニックが素早く続きました。Zhou et al.は最小から最大へのプロンプティングを導入し、複雑な問題を順番に解決される一連のより単純なサブ問題に分解しました。これらのアプローチにより、プロンプトエンジニアリングはフォーマット演習から、そのような推論方法で明示的にトレーニングされていないモデルから構造化された推論を引き出すツールへと変わりました。プロンプティングは認知のための足場になりました。',
             '完全なテクニックガイドについては [Techniques: Chain-of-Thought Prompting: Make AI Show Its Reasoning] と [Techniques: Prompt Chaining: How to Break Big Tasks Into Winning Steps] を参照してください。',
           ],
@@ -1599,7 +1684,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         chatgpt: {
           title: '2022年後半〜2023年：ChatGPTの瞬間とプロンプトエンジニアという肩書き',
           content: [
-            '**2022年11月30日のChatGPTリリースは、プロンプトエンジニアリングの公的なプロフィールを一夜にして変えました。** 数日のうちに、何百万もの人々がプロンプトを試し、リクエストのフレーズの仕方によって結果が大きく異なることを発見しました。テクノロジーメディアは「プロンプトエンジニアリング」を習得する価値のあるスキルとして取り上げました。オックスフォード英語辞典は2023年にAIに関連する動詞として「prompt」を追加し、その単語自体が複数のランキングで今年の言葉の候補になりました。',
+            '**2022年11月30日のChatGPTリリースは、プロンプトエンジニアリングの公的なプロフィールを一夜にして変えました。** ChatGPTはサービス開始から5日以内に100万ユーザーを達成しました——2022年12月にOpenAI CEOのサム・アルトマンがTwitterで確認——そしてロイターが引用したUBSの分析によると、2023年1月には月間アクティブユーザー1億人に達しました。 数日のうちに、何百万もの人々がプロンプトを試し、リクエストのフレーズの仕方によって結果が大きく異なることを発見しました。テクノロジーメディアは「プロンプトエンジニアリング」を習得する価値のあるスキルとして取り上げました。オックスフォード英語辞典は2023年にAIに関連する動詞として「prompt」を追加し、その単語自体が複数のランキングで今年の言葉の候補になりました。',
             '2023年初頭までに、「プロンプトエンジニア」は広く引用された求人票によるとAnthropicを含む企業で17.5万〜33.5万ドルの給与で求人タイトルとして登場しました。この役職は大きなメディアの注目を集めました — Bloomberg・The Guardian・The Atlanticがすべて、プロンプトエンジニアリングが真のキャリアかどうかを取り上げました。当時のコンセンサス：それは移行期的な役割であり、ヒューマンコンピューターインターフェース設計・専門知識・品質保証の一部だと。',
             '「プロンプトエンジニアリング」というフレーズの普及化は、様々な実践者やコメンテーターに起因するとされることがあります。Salesforceの元チーフサイエンティストであるRichard Socherは、その考えを早期に広めることに貢献したとする解説に言及されています。Wikipediaのプロンプトエンジニアリングの記事 [External: Prompt Engineering – Wikipedia] は、用語の起源についての競合する主張をバランスよく概説しています。',
           ],
@@ -1702,6 +1787,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               q: '自動化ツールはプロンプトエンジニアリングを理解する必要性を置き換えるでしょうか？',
               a: 'DSPyのような自動化ツールは定義された目標の中でプロンプトの言い回しを最適化できますが、目標が何か・どのような制約が適用されるか・成功をどのように評価するかを指定するには人間が必要です。プロンプトエンジニアリングの原則を理解することは、これらのツールを効果的に使うために、そして間違った結果を生成したときに診断するために必要であり続けます。自動化は手動のイテレーションの一部を取り除きます；構造化された思考の必要性は取り除きません。',
             },
+            {
+              q: 'プロンプトエンジニアリングは2026年に時代遅れになっていますか？',
+              a: 'いいえ。この分野は変化しましたが、消えてはいません。モデルが高性能になるにつれて、作業は構文のトリックからコンテキスト設計——入力の構造化、検索の管理、ツール出力の構成——へと移行しています。「プロンプトエンジニア」という職種は縮小していますが、スキル自体はAIを使用するすべての役割に組み込まれています：開発者、アナリスト、マーケター、研究者。McKinseyの2024年AI現状報告書は、効果的なAI導入がモデルへのタスクの伝え方と依然として強く相関していることを発見しました。',
+            },
+            {
+              q: 'モデルが改善し続ける中でプロンプトエンジニアリングを学ぶ必要がありますか？',
+              a: 'はい——ただし世代ごとに焦点が変わります。高性能なモデルは複雑な回避策の必要性を減らし、明確な意図、構造化されたコンテキスト、適切なサンプルの価値を高めます。役割、コンテキスト、形式、制約というファンダメンタルズはモデル世代を超えて安定しています。',
+            },
+            {
+              q: 'プロンプトエンジニアリングとファインチューニングの違いは何ですか？',
+              a: 'プロンプトエンジニアリングはモデルの重みを変えずにモデルとの対話方法を変えます。ファインチューニングは新しいデータでモデルを再トレーニングし、その動作を永続的に変更します。プロンプトエンジニアリングは速く、安価で、可逆的です。ファインチューニングは目標の動作が一定で、高ボリュームで、またはプロンプトで確実に記述できない場合に適しています。ほとんどのチームはプロンプティングから始め、プロンプティングが限界に達したときのみファインチューニングに切り替えます。',
+            },
           ],
         },
       },
@@ -1747,6 +1844,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             '**提示词工程的现代历史实际上始于 GPT-3。** 2020年5月，OpenAI 发布了 GPT-3（一个拥有1750亿参数的模型），并同时发表了 Brown 等人的里程碑论文《语言模型是少样本学习者》（Language Models are Few-Shot Learners）[External: Brown et al., 2020 – Language Models are Few-Shot Learners]。该论文证明，通过在提示词中直接包含几个所需任务的示例——无需对模型进行任何权重更新——下游任务的性能得到了显著提升。',
             '这是提示词工程作为一门学科的种子。研究人员和开发者意识到，仅仅通过改变提示词的写法，同一个模型就可以变成翻译器、摘要生成器、代码生成器或问答系统。模型不需要重新训练——它需要更好的提示词。这一洞见重塑了提示词的含义：它不再只是输入，而是一件设计产物。',
+            '布朗等人报告称，few-shot性能随模型规模稳定提升：1750亿参数的GPT-3在所有测试基准上均大幅超越较小变体，确立了规模与基于提示词的学习直接相关的关系。这使提示词质量成为从业者——而不仅仅是研究人员——可以直接控制的变量。',
             '有关 GPT-3 使之名声大噪的这项技术的实用指南，请参阅 [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?]。',
           ],
         },
@@ -1762,7 +1860,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         cot: {
           title: '2022年：思维链与推理提示',
           content: [
-            '**2022年思维链（CoT）提示的引入是这门学科短暂历史中最重要的技术发展。** Wei 等人（Google Brain）发表了《思维链提示在大型语言模型中激发推理》（Chain-of-Thought Prompting Elicits Reasoning in Large Language Models），证明要求模型在回答前逐步推理，能显著提升其在算术、常识推理和符号推理任务上的表现。这一含义深远：提示词的结构可以激活不同的推理行为——而不仅仅是不同的事实。',
+            '**2022年思维链（CoT）提示的引入是这门学科短暂历史中最重要的技术发展。** Wei 等人（Google Brain）发表了《思维链提示在大型语言模型中激发推理》（Chain-of-Thought Prompting Elicits Reasoning in Large Language Models），证明要求模型在回答前逐步推理，能显著提升其在算术、常识推理和符号推理任务上的表现。在一项关键结果中，思维链提示将PaLM在GSM8K小学数学基准测试上的准确率从17.9%提升至58%——这一提升完全通过改变提示词结构实现，无需任何额外的模型训练。 这一含义深远：提示词的结构可以激活不同的推理行为——而不仅仅是不同的事实。',
             '相关技术随之迅速跟进。Zhou 等人引入了由简到繁的提示（least-to-most prompting），将复杂问题分解为按顺序解决的一系列更简单的子问题。这些方法将提示词工程从格式化练习转变为从未经过明确推理训练的模型中激发结构化推理的工具。提示词已成为认知的脚手架。',
             '有关完整技术指南，请参阅 [Techniques: Chain-of-Thought Prompting: Make AI Show Its Reasoning] 和 [Techniques: Prompt Chaining: How to Break Big Tasks Into Winning Steps]。',
           ],
@@ -1771,7 +1869,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         chatgpt: {
           title: '2022年底至2023年：ChatGPT 时刻与"提示词工程师"职位的出现',
           content: [
-            '**2022年11月30日 ChatGPT 的发布一夜之间改变了提示词工程的公众形象。** 在短短几天内，数百万人开始尝试提示词，并发现他们的结果因措辞方式的不同而大相径庭。科技媒体将"提示词工程"作为一门值得学习的技能进行报道。牛津英语词典在2023年将"prompt"添加为与 AI 相关的动词，这个词本身在多个年度词汇评选中成为年度词汇的有力候选。',
+            '**2022年11月30日 ChatGPT 的发布一夜之间改变了提示词工程的公众形象。** ChatGPT在上线后五天内达到100万用户——由OpenAI CEO山姆·奥特曼于2022年12月在Twitter上确认——并根据路透社引用的瑞银分析，于2023年1月达到1亿月活跃用户。 在短短几天内，数百万人开始尝试提示词，并发现他们的结果因措辞方式的不同而大相径庭。科技媒体将"提示词工程"作为一门值得学习的技能进行报道。牛津英语词典在2023年将"prompt"添加为与 AI 相关的动词，这个词本身在多个年度词汇评选中成为年度词汇的有力候选。',
             '到2023年初，"提示词工程师"作为一个职位名称出现，据广泛引用的招聘信息显示，包括 Anthropic 在内的公司开出了175,000至335,000美元的薪资。这个角色引起了广泛媒体关注——彭博社、卫报和大西洋月刊都报道了提示词工程是否真的是一种职业。当时的共识是：这是一个过渡性角色，部分是人机界面设计，部分是主题专业知识，部分是质量保证。',
             '"提示词工程"这一短语的普及有时被归因于不同的从业者和评论者。前 Salesforce 首席科学家 Richard Socher 在一些评论中被提及为早期帮助构建这一概念的人之一。维基百科上的提示词工程词条 [External: Prompt Engineering – Wikipedia] 对关于这一术语起源的各方说法提供了客观概述。',
           ],
@@ -1873,6 +1971,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             {
               q: '自动化工具会取代理解提示词工程的必要性吗？',
               a: '像 DSPy 这样的自动化工具可以在定义的目标内优化提示词措辞，但它们需要人类来指定目标是什么、适用哪些约束以及如何评估成功。理解提示词工程原则仍然是有效使用这些工具的必要条件——也是在它们产出错误结果时进行诊断的必要条件。自动化消除了一些手动迭代；它不能消除结构化思考的需要。',
+            },
+            {
+              q: '提示词工程在2026年已经过时了吗？',
+              a: '不。这一领域已经演变，但并未消失。随着模型能力的增强，工作重心从语法技巧转向上下文设计——结构化输入、管理检索和组合工具输出。"提示词工程师"这一职称在缩小，但这一技能已融入每个使用AI的角色：开发者、分析师、营销人员、研究者。麦肯锡2024年AI现状报告发现，有效的AI采用仍与用户为模型构建任务的方式密切相关。',
+            },
+            {
+              q: '随着AI模型不断改进，我还需要学习提示词工程吗？',
+              a: '需要——但每一代的重点会有所转变。更好的模型减少了对复杂变通方法的需求，提高了清晰意图、结构化上下文和精选示例的价值。角色、上下文、格式、约束这些基础知识在每代模型中保持稳定。',
+            },
+            {
+              q: '提示词工程和微调有什么区别？',
+              a: '提示词工程在不修改模型权重的情况下改变与模型的交互方式。微调在新数据上重新训练模型，永久改变其行为。提示词工程更快、更便宜、可逆——可以在几分钟内迭代。微调更适合目标行为一致、高频或无法在提示词中可靠描述的情况。大多数团队从提示词工程开始，只有当提示词工程达到上限时才转向微调。',
             },
           ],
         },

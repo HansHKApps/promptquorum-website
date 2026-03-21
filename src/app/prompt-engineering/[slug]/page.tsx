@@ -137,10 +137,41 @@ export default async function PromptEngineeringArticlePage({ params }: PageProps
     ],
   }
 
+  const faqSectionData = Object.values(article.sections).find((s) => s.faqs && s.faqs.length > 0)
+  const faqSchema = faqSectionData
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqSectionData.faqs!.map((faq) => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: { '@type': 'Answer', text: faq.a },
+        })),
+      }
+    : null
+
+  const howToSectionData = article.sections['howToStart']
+  const howToSchema =
+    howToSectionData?.numberedItems
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: howToSectionData.title ?? article.title,
+          description: article.intro,
+          step: howToSectionData.numberedItems.map((step, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
+            text: step.replace(/\*\*/g, '').replace(/\[.*?\]/g, '').trim(),
+          })),
+        }
+      : null
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
+      {howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
       <PromptEngineeringPostClient slug={slug} />
     </>
   )
