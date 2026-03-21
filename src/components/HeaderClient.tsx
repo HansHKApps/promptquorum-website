@@ -8,11 +8,11 @@ import { useLang } from '@/hooks/useLang'
 
 const NAV_LABELS: Record<string, Record<string, string>> = {
   compare: {
-    en: 'Compare Models',
-    de: 'Modelle vergleichen',
-    fr: 'Comparer les modèles',
-    ja: 'モデル比較',
-    zh: '模型对比',
+    en: 'Compare Tools',
+    de: 'Tools vergleichen',
+    fr: 'Comparer les outils',
+    ja: 'ツール比較',
+    zh: '工具对比',
   },
   features: {
     en: 'Features',
