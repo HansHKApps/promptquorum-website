@@ -45,7 +45,7 @@ const ARTICLE_TITLES: Record<string, string> = {
   // Fundamentals
   'prompt-engineering-history': 'From GPT-2 to Today: How Prompt Engineering Evolved',
   'prompt-building-blocks': 'The 5 Building Blocks Every Prompt Needs',
-  'ai-hallucinations-how-to-stop': 'Why AI Makes Things Up — and How to Stop It',
+  'ai-hallucinations-how-to-stop': 'AI Hallucinations: Why AI Makes Things Up — and How to Stop Them',
   'prompt-for-speed': 'Faster AI Answers: How to Prompt for Speed',
   'temperature-and-top-p': 'Temperature & Top-P: The Two Dials That Control AI Creativity',
   'context-windows-explained': 'Context Windows Explained: Why Your AI Forgets',

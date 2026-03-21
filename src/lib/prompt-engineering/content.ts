@@ -62,7 +62,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Higher output quality:** Explicit instructions reduce ambiguity and model guesswork',
             '**Speed:** Well-framed prompts reduce the need for back-and-forth clarification → [Fundamentals: Faster AI Answers: How to Prompt for Speed]',
             '**Cost control:** Precise prompts use fewer tokens per task → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
-            '**Hallucination reduction:** Clear grounding and constraints reduce fabricated facts → [Fundamentals: Why AI Makes Things Up — and How to Stop It]',
+            '**Hallucination reduction:** Clear grounding and constraints reduce fabricated facts → [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them]',
             '**Multi-model compatibility:** Good prompt engineering techniques work across GPT-4o, Claude, Gemini, and local LLMs via Ollama or LM Studio',
             '**Repeatability:** A well-designed prompt is reusable — treat it as an asset, not a one-off message',
           ],
