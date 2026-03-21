@@ -55,17 +55,17 @@ const ARTICLE_TITLES: Record<string, string> = {
   'gpt-claude-gemini-which-model': 'GPT, Claude or Gemini? How to Pick the Right Model',
 
   // Frameworks
+  'which-framework-to-use': 'Which Prompt Framework Should You Use?',
+  'single-prompt-method': 'The Single-Step Prompt Method',
+  'ape-framework': 'APE Framework',
   'craft-framework': 'CRAFT Framework',
   'co-star-framework': 'CO-STAR Framework',
-  'ape-framework': 'APE Framework',
-  'rtf-framework': 'RTF Framework',
-  'tag-framework': 'TAG Framework',
+  'specs-framework': 'SPECS Framework',
   'risen-framework': 'RISEN Framework',
-  'rodes-framework': 'RODES Framework',
   'trace-framework': 'TRACE Framework',
-  'care-framework': 'CARE Framework',
-  'era-framework': 'ERA Framework',
-  'choosing-the-right-framework': 'How to Choose the Right Framework',
+  'google-prompting-guide': "Google's Prompting Guide",
+  'rtf-framework': 'RTF Framework',
+  'build-your-own-framework': 'Build Your Own Framework',
 
   // Techniques
   'chain-of-thought-prompting': 'Chain of Thought Prompting',

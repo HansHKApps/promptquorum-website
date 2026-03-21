@@ -13,17 +13,17 @@ export const PE_SLUG_TO_KEY: Record<string, string> = {
   'gpt-claude-gemini-which-model': 'gpt-claude-gemini-which-model',
 
   // Frameworks
+  'which-framework-to-use': 'which-framework-to-use',
+  'single-prompt-method': 'single-prompt-method',
+  'ape-framework': 'ape-framework',
   'craft-framework': 'craft-framework',
   'co-star-framework': 'co-star-framework',
-  'ape-framework': 'ape-framework',
-  'rtf-framework': 'rtf-framework',
-  'tag-framework': 'tag-framework',
+  'specs-framework': 'specs-framework',
   'risen-framework': 'risen-framework',
-  'rodes-framework': 'rodes-framework',
   'trace-framework': 'trace-framework',
-  'care-framework': 'care-framework',
-  'era-framework': 'era-framework',
-  'choosing-the-right-framework': 'choosing-the-right-framework',
+  'google-prompting-guide': 'google-prompting-guide',
+  'rtf-framework': 'rtf-framework',
+  'build-your-own-framework': 'build-your-own-framework',
 
   // Techniques
   'chain-of-thought-prompting': 'chain-of-thought-prompting',
