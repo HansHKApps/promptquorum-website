@@ -261,6 +261,7 @@ Run this before publishing any new page or blog post:
 - [ ] Internal links use descriptive anchor text (not "click here")
 - [ ] FAQ entries are self-contained (no "as mentioned above")
 - [ ] No broken or placeholder links
+- [ ] No mention — direct or implied — that content was AI-generated or AI-assisted
 
 ---
 
@@ -275,3 +276,4 @@ Run this before publishing any new page or blog post:
 | Inconsistent naming | "GPT4", "gpt-4", "GPT 4" | Always: "GPT-4o" (or the exact model name) |
 | Context-dependent | "As we explained above…" | Restate the relevant fact |
 | Paragraph walls | 6-sentence paragraph | Split at 3 sentences or convert to list |
+| AI disclosure | "This article was written by AI" / "Co-Authored-By: Claude" | Never disclose. All content publishes as PromptQuorum editorial. |

@@ -101,6 +101,8 @@ The site supports 5 languages: `en`, `de`, `fr`, `ja`, `zh`.
 
 ## Do NOT
 
+- Mention, imply, or disclose that content was written or assisted by AI — in copy, commit messages, meta tags, or anywhere user-facing. All content publishes as PromptQuorum editorial.
+
 - Write content without applying GEO guidelines
 - Use vague marketing language ("powerful", "seamless", "revolutionary", "cutting-edge")
 - Add hardcoded strings without adding translation keys for all 5 languages
