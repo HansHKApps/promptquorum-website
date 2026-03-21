@@ -8,6 +8,99 @@ function navHref(path: string, lang: string) {
   return lang === 'en' ? path : `${path}?lang=${lang}`
 }
 
+const HUB_HERO_TITLE: Record<string, string> = {
+  en: 'The complete guide to writing better AI prompts.',
+  de: 'Der vollständige Leitfaden für bessere KI-Prompts.',
+  fr: 'Le guide complet pour écrire de meilleurs prompts IA.',
+  ja: 'より良いAIプロンプトを書くための完全ガイド。',
+  zh: '编写更好AI提示词的完整指南。',
+}
+
+const HUB_HERO_DESC: Record<string, string> = {
+  en: 'Prompt engineering determines whether an AI model gives you a useful answer or a vague one. These guides cover everything from core concepts to advanced techniques and domain-specific templates.',
+  de: 'Prompt Engineering entscheidet, ob ein KI-Modell eine nützliche oder eine vage Antwort liefert. Diese Leitfäden decken alles ab — von Grundkonzepten bis zu fortgeschrittenen Techniken und domänenspezifischen Templates.',
+  fr: 'Le prompt engineering détermine si un modèle d\'IA vous donne une réponse utile ou vague. Ces guides couvrent tout, des concepts fondamentaux aux techniques avancées et aux templates spécifiques à chaque domaine.',
+  ja: 'プロンプトエンジニアリングは、AIモデルが有用な回答を返すか曖昧な回答を返すかを決定します。これらのガイドは、基本概念から高度なテクニック、ドメイン固有のテンプレートまですべてをカバーしています。',
+  zh: '提示词工程决定了AI模型是给出有用答案还是模糊答案。这些指南涵盖从核心概念到高级技术和特定领域模板的一切内容。',
+}
+
+const HUB_CTA_TEXT: Record<string, string> = {
+  en: 'PromptQuorum optimizes your prompts automatically and tests them across 25+ AI models simultaneously.',
+  de: 'PromptQuorum optimiert Ihre Prompts automatisch und testet sie gleichzeitig mit 25+ KI-Modellen.',
+  fr: 'PromptQuorum optimise vos prompts automatiquement et les teste simultanément sur plus de 25 modèles d\'IA.',
+  ja: 'PromptQuorumはプロンプトを自動的に最適化し、25以上のAIモデルで同時にテストします。',
+  zh: 'PromptQuorum自动优化您的提示词，并同时在25+个AI模型中进行测试。',
+}
+
+const HUB_CTA_BUTTON: Record<string, string> = {
+  en: 'Try PromptQuorum free →',
+  de: 'PromptQuorum kostenlos testen →',
+  fr: 'Essayer PromptQuorum gratuitement →',
+  ja: 'PromptQuorumを無料で試す →',
+  zh: '免费试用PromptQuorum →',
+}
+
+const HUB_NAV_HOME: Record<string, string> = {
+  en: '← Home', de: '← Startseite', fr: '← Accueil', ja: '← ホーム', zh: '← 主页',
+}
+const HUB_NAV_FEATURES: Record<string, string> = {
+  en: 'Features', de: 'Funktionen', fr: 'Fonctionnalités', ja: '機能', zh: '功能',
+}
+const HUB_NAV_HOW: Record<string, string> = {
+  en: 'How It Works', de: 'So funktioniert es', fr: 'Comment ça marche', ja: '仕組み', zh: '工作原理',
+}
+const HUB_NAV_BLOG: Record<string, string> = {
+  en: 'Blog', de: 'Blog', fr: 'Blog', ja: 'ブログ', zh: '博客',
+}
+
+const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
+  fundamentals: {
+    en: 'Core concepts every prompt engineer needs to understand — how LLMs work, what tokens are, and why prompt structure determines output quality.',
+    de: 'Grundkonzepte, die jeder Prompt Engineer verstehen muss — wie LLMs funktionieren, was Tokens sind und warum die Prompt-Struktur die Ausgabequalität bestimmt.',
+    fr: 'Concepts fondamentaux que tout prompt engineer doit comprendre — comment fonctionnent les LLMs, ce que sont les tokens et pourquoi la structure du prompt détermine la qualité de la sortie.',
+    ja: 'すべてのプロンプトエンジニアが理解すべき基本概念 — LLMの仕組み、トークンとは何か、プロンプトの構造が出力品質を決定する理由。',
+    zh: '每位提示词工程师需要理解的核心概念——LLM的工作原理、词元是什么，以及为什么提示词结构决定输出质量。',
+  },
+  frameworks: {
+    en: 'Structured templates for building reliable, repeatable prompts across different tasks — marketing, coding, research, and more.',
+    de: 'Strukturierte Vorlagen für zuverlässige, wiederholbare Prompts für verschiedene Aufgaben — Marketing, Coding, Recherche und mehr.',
+    fr: 'Modèles structurés pour construire des prompts fiables et reproductibles pour différentes tâches — marketing, code, recherche et plus encore.',
+    ja: 'マーケティング、コーディング、調査などさまざまなタスクで信頼性が高く再現可能なプロンプトを構築するための構造化テンプレート。',
+    zh: '用于构建可靠、可重复提示词的结构化模板，适用于营销、编程、研究等不同任务。',
+  },
+  techniques: {
+    en: 'Proven prompting techniques that improve accuracy, reduce errors, and produce more useful AI outputs for any task.',
+    de: 'Bewährte Prompting-Techniken, die die Genauigkeit verbessern, Fehler reduzieren und nützlichere KI-Ausgaben für jede Aufgabe liefern.',
+    fr: 'Techniques de prompting éprouvées qui améliorent la précision, réduisent les erreurs et produisent des sorties IA plus utiles pour n\'importe quelle tâche.',
+    ja: '精度を向上させ、エラーを削減し、あらゆるタスクでより有用なAI出力を生成することが実証されたプロンプトテクニック。',
+    zh: '经过验证的提示技术，可提高准确性、减少错误，为任何任务产生更有用的AI输出。',
+  },
+  'use-topics': {
+    en: 'Practical prompt engineering guides for specific domains and output types.',
+    de: 'Praktische Prompt Engineering Leitfäden für spezifische Domänen und Ausgabetypen.',
+    fr: 'Guides pratiques de prompt engineering pour des domaines et types de sortie spécifiques.',
+    ja: '特定のドメインと出力タイプ向けの実践的なプロンプトエンジニアリングガイド。',
+    zh: '面向特定领域和输出类型的实用提示词工程指南。',
+  },
+}
+
+const SUBSECTION_LABELS: Record<string, Record<string, string>> = {
+  'Use Cases by Vertical': {
+    en: 'Use Cases by Vertical',
+    de: 'Anwendungsfälle nach Branche',
+    fr: 'Cas d\'usage par secteur',
+    ja: '業種別ユースケース',
+    zh: '按垂直领域划分的用例',
+  },
+  'Output Engineering': {
+    en: 'Output Engineering',
+    de: 'Ausgabe-Engineering',
+    fr: 'Ingénierie de sortie',
+    ja: '出力エンジニアリング',
+    zh: '输出工程',
+  },
+}
+
 const THEME_LABELS: Record<string, Record<string, string>> = {
   fundamentals: {
     en: 'Fundamentals: What Do You Actually Need to Know?',
@@ -128,11 +221,10 @@ function PromptEngineeringHubContent() {
         <div className="py-16 border-b border-primary/20 mb-16">
           <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">Prompt Engineering</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
-            The complete guide to writing better AI prompts.
+            {HUB_HERO_TITLE[lang] ?? HUB_HERO_TITLE['en']}
           </h1>
           <p className="text-xl text-text-secondary leading-relaxed max-w-3xl">
-            Prompt engineering determines whether an AI model gives you a useful answer or a vague one.
-            These guides cover everything from core concepts to advanced techniques and domain-specific templates.
+            {HUB_HERO_DESC[lang] ?? HUB_HERO_DESC['en']}
           </p>
         </div>
 
@@ -149,7 +241,9 @@ function PromptEngineeringHubContent() {
                 {/* Theme header — label shown once as h2, no badge */}
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-text-primary mb-2">{label}</h2>
-                  <p className="text-text-secondary leading-relaxed max-w-2xl">{theme.description}</p>
+                  <p className="text-text-secondary leading-relaxed max-w-2xl">
+                    {THEME_DESCRIPTIONS[theme.id]?.[lang] ?? THEME_DESCRIPTIONS[theme.id]?.['en'] ?? theme.description}
+                  </p>
                 </div>
 
                 {/* Flat article grid (most themes) */}
@@ -167,7 +261,7 @@ function PromptEngineeringHubContent() {
                     {theme.subSections.map((sub) => (
                       <div key={sub.title}>
                         <h3 className={`text-xs font-bold uppercase tracking-widest mb-4 px-1 ${colors.badge.split(' ').find(c => c.startsWith('text-')) ?? 'text-primary'}`}>
-                          {sub.title}
+                          {SUBSECTION_LABELS[sub.title]?.[lang] ?? sub.title}
                         </h3>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                           {sub.articleKeys.map((key) => (
@@ -186,22 +280,22 @@ function PromptEngineeringHubContent() {
         {/* CTA */}
         <div className="mt-20 pt-12 border-t border-primary/20 text-center">
           <p className="text-text-secondary mb-6 max-w-xl mx-auto">
-            PromptQuorum optimizes your prompts automatically and tests them across 25+ AI models simultaneously.
+            {HUB_CTA_TEXT[lang] ?? HUB_CTA_TEXT['en']}
           </p>
           <Link
             href={navHref('/', lang)}
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
-            Try PromptQuorum free →
+            {HUB_CTA_BUTTON[lang] ?? HUB_CTA_BUTTON['en']}
           </Link>
         </div>
 
         {/* Footer nav */}
         <div className="flex flex-wrap gap-4 mt-12 pt-8 border-t border-primary/20">
-          <Link href={navHref('/', lang)} className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
-          <Link href={navHref('/features', lang)} className="text-primary hover:text-primary/80 font-medium text-sm">Features</Link>
-          <Link href={navHref('/how-it-works', lang)} className="text-primary hover:text-primary/80 font-medium text-sm">How It Works</Link>
-          <Link href={navHref('/blog', lang)} className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
+          <Link href={navHref('/', lang)} className="text-primary hover:text-primary/80 font-medium text-sm">{HUB_NAV_HOME[lang] ?? HUB_NAV_HOME['en']}</Link>
+          <Link href={navHref('/features', lang)} className="text-primary hover:text-primary/80 font-medium text-sm">{HUB_NAV_FEATURES[lang] ?? HUB_NAV_FEATURES['en']}</Link>
+          <Link href={navHref('/how-it-works', lang)} className="text-primary hover:text-primary/80 font-medium text-sm">{HUB_NAV_HOW[lang] ?? HUB_NAV_HOW['en']}</Link>
+          <Link href={navHref('/blog', lang)} className="text-primary hover:text-primary/80 font-medium text-sm">{HUB_NAV_BLOG[lang] ?? HUB_NAV_BLOG['en']}</Link>
         </div>
 
       </div>

@@ -234,6 +234,47 @@ function SectionBlock({ section, colors }: { section: PESection; colors: { dot: 
   )
 }
 
+const POST_UI: Record<string, Record<string, string>> = {
+  byLine: {
+    en: 'By Hans Kuepper · PromptQuorum',
+    de: 'Von Hans Kuepper · PromptQuorum',
+    fr: 'Par Hans Kuepper · PromptQuorum',
+    ja: 'Hans Kuepper 著 · PromptQuorum',
+    zh: '作者：Hans Kuepper · PromptQuorum',
+  },
+  ctaText: {
+    en: 'Apply these techniques across 25+ AI models simultaneously with PromptQuorum.',
+    de: 'Wenden Sie diese Techniken gleichzeitig mit 25+ KI-Modellen in PromptQuorum an.',
+    fr: 'Appliquez ces techniques simultanément sur plus de 25 modèles d\'IA avec PromptQuorum.',
+    ja: 'これらのテクニックをPromptQuorumで25以上のAIモデルに同時に適用しましょう。',
+    zh: '使用PromptQuorum将这些技术同时应用于25+个AI模型。',
+  },
+  ctaButton: {
+    en: 'Try PromptQuorum free →',
+    de: 'PromptQuorum kostenlos testen →',
+    fr: 'Essayer PromptQuorum gratuitement →',
+    ja: 'PromptQuorumを無料で試す →',
+    zh: '免费试用PromptQuorum →',
+  },
+  backLink: {
+    en: '← Back to Prompt Engineering',
+    de: '← Zurück zu Prompt Engineering',
+    fr: '← Retour au Prompt Engineering',
+    ja: '← プロンプトエンジニアリングに戻る',
+    zh: '← 返回提示词工程',
+  },
+  breadcrumbHome: {
+    en: 'Home', de: 'Startseite', fr: 'Accueil', ja: 'ホーム', zh: '主页',
+  },
+  breadcrumbHub: {
+    en: 'Prompt Engineering',
+    de: 'Prompt Engineering',
+    fr: 'Prompt Engineering',
+    ja: 'プロンプトエンジニアリング',
+    zh: '提示词工程',
+  },
+}
+
 const THEME_COLORS: Record<string, { dot: string; badge: string; label: string }> = {
   Fundamentals: { dot: 'bg-blue-400', badge: 'bg-blue-50 text-blue-700 border border-blue-200', label: 'Fundamentals' },
   Frameworks:   { dot: 'bg-purple-400', badge: 'bg-purple-50 text-purple-700 border border-purple-200', label: 'Frameworks' },
@@ -262,9 +303,9 @@ function PromptEngineeringPostContent({ slug }: Props) {
         {/* Breadcrumb + language */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-2 text-sm text-text-secondary flex-wrap">
-            <a href="/" className="hover:text-primary">Home</a>
+            <a href="/" className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
             <span>/</span>
-            <a href="/prompt-engineering" className="hover:text-primary">Prompt Engineering</a>
+            <a href="/prompt-engineering" className="hover:text-primary">{POST_UI.breadcrumbHub[lang] ?? 'Prompt Engineering'}</a>
             <span>/</span>
             <span className="text-text-primary font-medium">{article.title}</span>
           </div>
@@ -284,7 +325,7 @@ function PromptEngineeringPostContent({ slug }: Props) {
             <span>·</span>
             <span>{article.readTime}</span>
             <span>·</span>
-            <span>By Hans Kuepper · PromptQuorum</span>
+            <span>{POST_UI.byLine[lang] ?? POST_UI.byLine['en']}</span>
           </div>
         </div>
 
@@ -298,19 +339,19 @@ function PromptEngineeringPostContent({ slug }: Props) {
         {/* Footer CTA */}
         <div className="mt-16 pt-8 border-t border-primary/20 text-center">
           <p className="text-text-secondary mb-6">
-            Apply these techniques across 25+ AI models simultaneously with PromptQuorum.
+            {POST_UI.ctaText[lang] ?? POST_UI.ctaText['en']}
           </p>
           <a
             href="/"
             className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
-            Try PromptQuorum free →
+            {POST_UI.ctaButton[lang] ?? POST_UI.ctaButton['en']}
           </a>
         </div>
 
         <p className="text-center mt-8">
           <a href="/prompt-engineering" className="text-primary hover:text-primary/80 text-sm">
-            ← Back to Prompt Engineering
+            {POST_UI.backLink[lang] ?? POST_UI.backLink['en']}
           </a>
         </p>
 
