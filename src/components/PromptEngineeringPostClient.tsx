@@ -49,7 +49,7 @@ function SectionBlock({ section, colors }: { section: PESection; colors: { dot: 
       {/* TL;DR block */}
       {section.isTldr && section.items && (
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 my-4">
-          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">TL;DR</p>
+          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Key Takeaways</p>
           <ul className="space-y-2">
             {section.items.map((item, i) => (
               <li key={i} className="flex gap-3 text-text-secondary text-sm">

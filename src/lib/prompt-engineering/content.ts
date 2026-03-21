@@ -41,7 +41,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         tldr: {
-          title: 'TL;DR',
+          title: 'Key Takeaways',
           isTldr: true,
           items: [
             'Prompt engineering = designing inputs to get reliable, accurate outputs from LLMs',
