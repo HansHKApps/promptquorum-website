@@ -40,7 +40,7 @@ function renderInlineLinks(text: string) {
 function SectionBlock({ section, colors }: { section: PESection; colors: { dot: string; badge: string } }) {
   return (
     <div className="mt-8">
-      {section.title && (
+      {section.title && !section.isTldr && (
         <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4">
           {section.title}
         </h2>
