@@ -42,6 +42,13 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     ja: 'ブログ',
     zh: '博客',
   },
+  promptEngineering: {
+    en: 'Prompt Engineering',
+    de: 'Prompt Engineering',
+    fr: 'Prompt Engineering',
+    ja: 'プロンプト設計',
+    zh: '提示词工程',
+  },
   waitlist: {
     en: 'Waitlist',
     de: 'Warteliste',
@@ -85,6 +92,7 @@ function HeaderInner() {
           <Link href={navHref('/how-it-works', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('howItWorks', lang)}</Link>
           <Link href={navHref('/faq', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('faq', lang)}</Link>
           <Link href={navHref('/blog', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('blog', lang)}</Link>
+          <Link href={navHref('/prompt-engineering', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptEngineering', lang)}</Link>
           <a
             href="#waitlist"
             onClick={handleWaitlistClick}
@@ -150,6 +158,13 @@ function HeaderInner() {
             onClick={() => setMobileMenuOpen(false)}
           >
             {t('blog', lang)}
+          </Link>
+          <Link
+            href={navHref('/prompt-engineering', lang)}
+            className="block px-4 py-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            {t('promptEngineering', lang)}
           </Link>
           <a
             href="#waitlist"
