@@ -1,87 +1,109 @@
 # CLAUDE.md — PromptQuorum Website
 
-## Project Summary
+## MANDATORY: Read Before Any Content Work
 
-PromptQuorum Website is a modern marketing landing page for PromptQuorum. It showcases features, includes a waitlist form, multi-language support (5 languages), and deploys to Vercel.
+Before writing or editing any user-facing text on this website, read and apply the full GEO writing guidelines:
 
-## Tech Stack
+**`docs/GEO_WRITING_GUIDELINES.md`** — mandatory for all content (pages, blog posts, FAQ entries, feature descriptions, meta tags, headings, CTAs)
 
-| Layer | Technology |
-|---|---|
-| Frontend | React 18 + TypeScript |
-| Styling | Tailwind CSS |
-| Build tool | Vite |
-| Package manager | npm |
-| Deployment | Vercel (auto-deploy on push to main) |
-
-## Environment Setup
-
-```bash
-npm install
-npm run dev          # Start dev server (http://localhost:5173)
-npm run build        # Production build
-npm run preview      # Preview production build locally
+Summary of non-negotiable rules:
+- **Answer-first:** Lead every section with the direct answer or key fact. Explanation follows.
+- **Structure:** Use H2/H3 headings, bullet lists, short paragraphs (≤3 sentences each).
+- **Facts only:** Every claim must be verifiable. No vague superlatives ("leading", "best", "powerful", "revolutionary").
+- **Entity names:** Use full product/company names on first mention (e.g., "PromptQuorum", "OpenAI GPT-4o", "Ollama"). Be consistent throughout.
+- **Schema markup:** Every page needs relevant JSON-LD (Article, FAQPage, HowTo, BreadcrumbList, etc.).
+- **No marketing fluff:** Every sentence must add information. Delete anything decorative.
 
 ---
 
-**Your turn:** 
-1. Create `CLAUDE.md` in your project root
-2. Paste that content into it
-3. Save it
-4. Let me know when done ✅
-
-Then we'll reorganize the folder # CLAUDE.md — PromptQuorum Website
-
 ## Project Summary
 
-PromptQuorum Website is a modern marketing landing page for PromptQuorum. It showcases features, includes a waitlist form, multi-language support (5 languages), and deploys to Vercel.
+PromptQuorum Website is the marketing site for PromptQuorum — a multi-model AI prompt dispatch and consensus tool. The site showcases features, explains how the product works, hosts a blog, and collects waitlist signups. It deploys automatically to Vercel on every push to `main`.
 
 ## Tech Stack
 
 | Layer | Technology |
 |---|---|
-| Frontend | React 18 + TypeScript |
-| Styling | Tailwind CSS |
-| Build tool | Vite |
+| Framework | Next.js 14 (App Router) |
+| Styling | Tailwind CSS + custom design tokens |
+| UI components | Radix UI primitives |
+| Language | TypeScript (strict mode) |
 | Package manager | npm |
 | Deployment | Vercel (auto-deploy on push to main) |
+| Dev server | `http://localhost:3000` |
 
 ## Environment Setup
 
 ```bash
 npm install
-npm run dev          # Start dev server (http://localhost:5173)
-npm run build        # Production build
-npm run preview      # Preview production build locally
+npm run dev      # Start dev server (http://localhost:3000)
+npm run build    # Production build
+npm run start    # Preview production build
+```
 
-Code Conventions
-Components: PascalCase filenames (e.g., Header.tsx)
-Folders: kebab-case (e.g., src/components/)
-Functions/variables: camelCase
-Styling: Tailwind CSS in className prop only — no separate CSS files
-Exports: Named exports (not default)
-TypeScript: Strict mode required
-File Structure
+## File Structure
 
+```
 src/
-  components/      # Reusable UI components
-  App.tsx          # Main app component
-  main.tsx         # Entry point
-  index.css        # Global Tailwind styles
+  app/               # Next.js App Router pages
+    page.tsx         # Home page
+    blog/            # Blog listing + individual posts
+    compare/         # Model comparison page
+    features/        # Features page
+    how-it-works/    # How it works page
+    faq/             # FAQ page
+    waitlist/        # Waitlist page (auto-opens modal)
+    about/           # About page
+    not-found.tsx    # Custom 404 page
+    layout.tsx       # Root layout with shared header/footer
+  components/        # Reusable UI components
+    HeaderClient.tsx # Navigation with language switcher
+    Footer.tsx       # Site footer
+    LanguageSwitcherWrapper.tsx
+  context/           # React context providers
+    WaitlistContext.tsx
+  hooks/
+    useLang.ts       # Reads ?lang= query param for language routing
+  lib/
+    blog/
+      blogContent.ts # All blog post content (5000+ lines)
+  locales/           # Translation strings per language
 public/
-  logo.svg         # Logo asset
-Git Workflow
-Branch: Work on feature branches (feature/[name])
-Commits: Conventional format (feat:, fix:, refactor:)
-Main: Always stable, auto-deploys to Vercel
-Working on This Project
-Make changes locally
-Test on npm run dev
-Commit with clear message
-Push to GitHub → Vercel auto-deploys
-All user-facing strings use translations (see translations.ts)
-Dependency Notes
-react-i18next for multi-language support
-Formspree for waitlist email collection
-No external UI library — using Tailwind + custom components
+  logo.svg
+  llms.txt           # GEO: machine-readable site description for AI crawlers
+docs/
+  GEO_WRITING_GUIDELINES.md  # Full GEO content rules (read before writing anything)
+```
 
+## Code Conventions
+
+- Components: `PascalCase` filenames (`HeaderClient.tsx`)
+- Folders: `kebab-case` (`src/components/`)
+- Functions/variables: `camelCase`
+- Styling: Tailwind CSS `className` prop only — no separate CSS files
+- Exports: Named exports (not default)
+- TypeScript: Strict mode — no `any`
+
+## Language / i18n
+
+The site supports 5 languages: `en`, `de`, `fr`, `ja`, `zh`.
+
+- Language is set via `?lang=XX` query param (e.g., `/?lang=fr`)
+- `useLang()` hook reads `window.location.search`
+- All nav links must include `?lang=XX` via the `navHref(path, lang)` helper in `HeaderClient.tsx`
+- Translations live in `src/locales/[lang].ts`
+
+## Git Workflow
+
+- Branch: `feature/[name]` for all new work, `fix/` for bugs
+- Commits: conventional format (`feat:`, `fix:`, `docs:`, `refactor:`)
+- `main` is always stable and auto-deploys to Vercel
+
+## Do NOT
+
+- Write content without applying GEO guidelines
+- Use vague marketing language ("powerful", "seamless", "revolutionary", "cutting-edge")
+- Add hardcoded strings without adding translation keys for all 5 languages
+- Use CSS files or `<style>` tags — Tailwind only
+- Use default exports — named exports only
+- Omit JSON-LD schema markup on new pages
