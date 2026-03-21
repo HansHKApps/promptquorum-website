@@ -1,16 +1,16 @@
 // Maps URL slugs to article keys used in content.ts
 export const PE_SLUG_TO_KEY: Record<string, string> = {
   // Fundamentals
-  'what-is-prompt-engineering': 'what-is-prompt-engineering',
-  'how-llms-process-prompts': 'how-llms-process-prompts',
-  'tokens-context-windows-explained': 'tokens-context-windows-explained',
-  'temperature-and-sampling': 'temperature-and-sampling',
-  'system-prompts-explained': 'system-prompts-explained',
-  'few-shot-vs-zero-shot': 'few-shot-vs-zero-shot',
-  'hallucinations-causes-prevention': 'hallucinations-causes-prevention',
-  'prompt-anatomy': 'prompt-anatomy',
-  'input-output-format-control': 'input-output-format-control',
-  'common-prompt-mistakes': 'common-prompt-mistakes',
+  'prompt-engineering-history': 'prompt-engineering-history',
+  'prompt-building-blocks': 'prompt-building-blocks',
+  'ai-hallucinations-how-to-stop': 'ai-hallucinations-how-to-stop',
+  'prompt-for-speed': 'prompt-for-speed',
+  'temperature-and-top-p': 'temperature-and-top-p',
+  'context-windows-explained': 'context-windows-explained',
+  'prompt-with-images': 'prompt-with-images',
+  'tokens-costs-limits': 'tokens-costs-limits',
+  'system-prompt-vs-user-prompt': 'system-prompt-vs-user-prompt',
+  'gpt-claude-gemini-which-model': 'gpt-claude-gemini-which-model',
 
   // Frameworks
   'craft-framework': 'craft-framework',

@@ -43,16 +43,16 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
 // These will be replaced with translated titles once article content is added
 const ARTICLE_TITLES: Record<string, string> = {
   // Fundamentals
-  'what-is-prompt-engineering': 'What is Prompt Engineering?',
-  'how-llms-process-prompts': 'How LLMs Process Prompts',
-  'tokens-context-windows-explained': 'Tokens and Context Windows Explained',
-  'temperature-and-sampling': 'Temperature and Sampling: Controlling Randomness',
-  'system-prompts-explained': 'System Prompts Explained',
-  'few-shot-vs-zero-shot': 'Few-Shot vs Zero-Shot Prompting',
-  'hallucinations-causes-prevention': 'AI Hallucinations: Causes and Prevention',
-  'prompt-anatomy': 'The Anatomy of a Good Prompt',
-  'input-output-format-control': 'Controlling Input and Output Format',
-  'common-prompt-mistakes': '10 Common Prompt Mistakes (and How to Fix Them)',
+  'prompt-engineering-history': 'From GPT-2 to Today: How Prompt Engineering Evolved',
+  'prompt-building-blocks': 'The 5 Building Blocks Every Prompt Needs',
+  'ai-hallucinations-how-to-stop': 'Why AI Makes Things Up — and How to Stop It',
+  'prompt-for-speed': 'Faster AI Answers: How to Prompt for Speed',
+  'temperature-and-top-p': 'Temperature & Top-P: The Two Dials That Control AI Creativity',
+  'context-windows-explained': 'Context Windows Explained: Why Your AI Forgets',
+  'prompt-with-images': 'Beyond Text: How to Prompt with Images',
+  'tokens-costs-limits': 'Tokens, Costs & Limits: The Economics of AI Prompting',
+  'system-prompt-vs-user-prompt': 'System Prompt vs. User Prompt: What\'s the Difference?',
+  'gpt-claude-gemini-which-model': 'GPT, Claude or Gemini? How to Pick the Right Model',
 
   // Frameworks
   'craft-framework': 'CRAFT Framework',
