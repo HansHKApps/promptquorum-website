@@ -1,8 +1,22 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import { PromptEngineeringPostClient } from '@/components/PromptEngineeringPostClient'
 import { peContent } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
+import { themes } from '@/lib/prompt-engineering/themes'
+
+// Look up the human-readable title for a slug from the themes data
+function getTitleForSlug(slug: string): string {
+  for (const theme of themes) {
+    const keys = theme.articleKeys ?? theme.subSections?.flatMap(s => s.articleKeys) ?? []
+    if (keys.includes(slug)) {
+      // Title is stored in PromptEngineeringHub ARTICLE_TITLES — use slug as fallback
+      return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+    }
+  }
+  return slug
+}
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -15,7 +29,16 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
   const key = PE_SLUG_TO_KEY[slug]
-  if (!key || !peContent[key]) return notFound()
+  if (!key) return notFound()
+
+  // Article not written yet — still return basic metadata
+  if (!peContent[key]) {
+    return {
+      title: `${getTitleForSlug(slug)} — Coming Soon | PromptQuorum`,
+      description: 'This article is coming soon. Explore our Prompt Engineering hub in the meantime.',
+      robots: { index: false, follow: true },
+    }
+  }
 
   const article = peContent[key]['en']
   const canonicalUrl = `https://www.promptquorum.com/prompt-engineering/${slug}`
@@ -54,7 +77,31 @@ export default async function PromptEngineeringArticlePage({ params }: PageProps
   const { slug } = await params
   const key = PE_SLUG_TO_KEY[slug]
 
-  if (!key || !peContent[key]) notFound()
+  if (!key) notFound()
+
+  // Article not written yet — show coming soon page
+  if (!peContent[key]) {
+    const title = getTitleForSlug(slug)
+    return (
+      <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-primary/10 text-primary mb-8">
+            Coming Soon
+          </span>
+          <h1 className="text-3xl sm:text-4xl font-bold text-text-primary mb-6">{title}</h1>
+          <p className="text-text-secondary leading-relaxed mb-10 max-w-xl mx-auto">
+            This article is being written. Check back soon — or explore the other guides in the Prompt Engineering hub.
+          </p>
+          <Link
+            href="/prompt-engineering"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
+          >
+            ← Back to Prompt Engineering
+          </Link>
+        </div>
+      </div>
+    )
+  }
 
   const article = peContent[key]['en']
   const canonicalUrl = `https://www.promptquorum.com/prompt-engineering/${slug}`
