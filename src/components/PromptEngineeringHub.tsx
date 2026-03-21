@@ -43,6 +43,7 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
 // These will be replaced with translated titles once article content is added
 const ARTICLE_TITLES: Record<string, string> = {
   // Fundamentals
+  'what-is-prompt-engineering': 'What Is Prompt Engineering?',
   'prompt-engineering-history': 'From GPT-2 to Today: How Prompt Engineering Evolved',
   'prompt-building-blocks': 'The 5 Building Blocks Every Prompt Needs',
   'ai-hallucinations-how-to-stop': 'AI Hallucinations: Why AI Makes Things Up — and How to Stop Them',

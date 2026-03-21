@@ -17,6 +17,7 @@ export const themes: PETheme[] = [
     title: 'Fundamentals',
     description: 'Core concepts every prompt engineer needs to understand — how LLMs work, what tokens are, and why prompt structure determines output quality.',
     articleKeys: [
+      'what-is-prompt-engineering',
       'prompt-engineering-history',
       'prompt-building-blocks',
       'ai-hallucinations-how-to-stop',
