@@ -68,17 +68,16 @@ const ARTICLE_TITLES: Record<string, string> = {
   'build-your-own-framework': 'Build Your Own Framework',
 
   // Techniques
-  'chain-of-thought-prompting': 'Chain of Thought Prompting',
-  'role-prompting': 'Role Prompting',
-  'constraint-setting': 'Constraint Setting',
-  'output-format-specification': 'Output Format Specification',
-  'iterative-refinement': 'Iterative Refinement',
-  'prompt-chaining': 'Prompt Chaining',
-  'self-consistency': 'Self-Consistency',
-  'tree-of-thoughts': 'Tree of Thoughts',
-  'meta-prompting': 'Meta-Prompting',
-  'retrieval-augmented-generation': 'Retrieval-Augmented Generation (RAG)',
-  'multi-model-consensus': 'Multi-Model Consensus',
+  'zero-shot-vs-few-shot': 'Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?',
+  'constrained-prompting': 'Constrained Prompting: How to Set Rules the AI Must Follow',
+  'chain-of-thought-prompting': 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
+  'persona-prompting': 'Persona Prompting: Give Your AI a Role and Watch It Improve',
+  'prompt-chaining': 'Prompt Chaining: How to Break Big Tasks Into Winning Steps',
+  'negative-prompting': 'Negative Prompting: Tell the AI What NOT to Do',
+  'self-consistency-prompting': 'Self-Consistency Prompting: Let the AI Check Its Own Work',
+  'tree-of-thought-react': 'Tree of Thought & ReAct: Advanced Reasoning for Hard Problems',
+  'rag-explained': 'RAG Explained: How to Ground AI Answers in Real Data',
+  'structured-output-json-mode': 'Structured Output & JSON Mode: Get AI to Return Usable Data',
 
   // Use Topics
   'prompts-for-writing': 'Prompt Engineering for Writing',

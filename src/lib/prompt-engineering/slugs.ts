@@ -26,17 +26,16 @@ export const PE_SLUG_TO_KEY: Record<string, string> = {
   'build-your-own-framework': 'build-your-own-framework',
 
   // Techniques
+  'zero-shot-vs-few-shot': 'zero-shot-vs-few-shot',
+  'constrained-prompting': 'constrained-prompting',
   'chain-of-thought-prompting': 'chain-of-thought-prompting',
-  'role-prompting': 'role-prompting',
-  'constraint-setting': 'constraint-setting',
-  'output-format-specification': 'output-format-specification',
-  'iterative-refinement': 'iterative-refinement',
+  'persona-prompting': 'persona-prompting',
   'prompt-chaining': 'prompt-chaining',
-  'self-consistency': 'self-consistency',
-  'tree-of-thoughts': 'tree-of-thoughts',
-  'meta-prompting': 'meta-prompting',
-  'retrieval-augmented-generation': 'retrieval-augmented-generation',
-  'multi-model-consensus': 'multi-model-consensus',
+  'negative-prompting': 'negative-prompting',
+  'self-consistency-prompting': 'self-consistency-prompting',
+  'tree-of-thought-react': 'tree-of-thought-react',
+  'rag-explained': 'rag-explained',
+  'structured-output-json-mode': 'structured-output-json-mode',
 
   // Use Topics
   'prompts-for-writing': 'prompts-for-writing',
