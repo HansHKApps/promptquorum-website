@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { peContent, type PESection } from '@/lib/prompt-engineering/content'
@@ -10,19 +11,111 @@ interface Props {
   slug: string
 }
 
+// Maps article display titles to their URL slugs
+const TITLE_TO_SLUG: Record<string, string> = {
+  // Fundamentals
+  'What Is Prompt Engineering?': 'what-is-prompt-engineering',
+  'From GPT-2 to Today: How Prompt Engineering Evolved': 'how-prompt-engineering-evolved',
+  'The 5 Building Blocks Every Prompt Needs': '5-building-blocks-every-prompt-needs',
+  'AI Hallucinations: Why AI Makes Things Up — and How to Stop Them': 'ai-hallucinations-why-ai-makes-things-up',
+  'Faster AI Answers: How to Prompt for Speed': 'faster-ai-answers-how-to-prompt-for-speed',
+  'Temperature & Top-P: The Two Dials That Control AI Creativity': 'temperature-and-top-p-control-ai-creativity',
+  'Context Windows Explained: Why Your AI Forgets': 'context-windows-explained-why-ai-forgets',
+  'Beyond Text: How to Prompt with Images': 'beyond-text-how-to-prompt-with-images',
+  'Tokens, Costs & Limits: The Economics of AI Prompting': 'tokens-costs-limits-economics-of-ai-prompting',
+  "System Prompt vs. User Prompt: What's the Difference?": 'system-prompt-vs-user-prompt-whats-the-difference',
+  'GPT, Claude or Gemini? How to Pick the Right Model': 'gpt-claude-or-gemini-how-to-pick-the-right-model',
+  // Frameworks
+  'Which Prompt Framework Should You Use?': 'which-prompt-framework-should-you-use',
+  'The Single-Step Prompt Method': 'the-single-step-prompt-method',
+  'APE Framework': 'ape-framework',
+  'CRAFT Framework': 'craft-framework',
+  'CO-STAR Framework': 'co-star-framework',
+  'SPECS Framework': 'specs-framework',
+  'RISEN Framework': 'risen-framework',
+  'TRACE Framework': 'trace-framework',
+  "Google's Prompting Guide": 'googles-prompting-guide',
+  'RTF Framework': 'rtf-framework',
+  'Build Your Own Framework': 'build-your-own-prompt-framework',
+  'Build Your Own Prompt Framework': 'build-your-own-prompt-framework',
+  // Techniques
+  'Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?': 'zero-shot-vs-few-shot',
+  'Constrained Prompting: How to Set Rules the AI Must Follow': 'constrained-prompting',
+  'Chain-of-Thought Prompting: Make AI Show Its Reasoning': 'chain-of-thought-prompting',
+  'Persona Prompting: Give Your AI a Role and Watch It Improve': 'persona-prompting',
+  'Prompt Chaining: How to Break Big Tasks Into Winning Steps': 'prompt-chaining',
+  'Negative Prompting: Tell the AI What NOT to Do': 'negative-prompting',
+  'Self-Consistency Prompting: Let the AI Check Its Own Work': 'self-consistency-prompting',
+  'Tree of Thought & ReAct: Advanced Reasoning for Hard Problems': 'tree-of-thought-and-react',
+  'RAG Explained: How to Ground AI Answers in Real Data': 'rag-explained',
+  'Structured Output & JSON Mode: Get AI to Return Usable Data': 'structured-output-and-json-mode',
+  // Use Topics
+  "Write Better Code with AI: A Developer's Guide": 'write-better-code-with-ai',
+  'AI-Powered Research: How to Research Smarter': 'ai-powered-research',
+  'SEO Meets AI: How to Prompt for Better Rankings': 'seo-meets-ai',
+  'Teaching with AI: Prompts That Work in the Classroom': 'teaching-with-ai',
+  'Extract & Summarise: How to Pull Key Facts Fast': 'extract-and-summarise',
+  'AI Code Review: Prompts That Catch Bugs': 'ai-code-review',
+  'Prompting Across Languages: How to Get Consistent Results': 'prompting-across-languages',
+  'Control the Output: JSON, Markdown, Tables and More': 'control-the-output',
+  'How to Build Quality Checks Directly Into Your Prompts': 'build-quality-checks',
+  'Your Brand Voice, Your AI: How to Maintain Consistent Tone': 'your-brand-voice-ai',
+  'Build a Prompt Library That Saves Hours': 'build-a-prompt-library',
+}
+
+// Maps bare category names to their hub section anchors
+const CATEGORY_ANCHORS: Record<string, string> = {
+  'Fundamentals': '/prompt-engineering#fundamentals',
+  'Frameworks': '/prompt-engineering#frameworks',
+  'Techniques': '/prompt-engineering#techniques',
+  'Use Topics': '/prompt-engineering#use-topics',
+}
+
 // Render inline link placeholders like [Techniques: Chain-of-Thought Prompting]
-// as styled spans for now (full links added once article pages exist)
+// as real Next.js links resolved from the title-to-slug map
 function renderInlineLinks(text: string) {
   const parts = text.split(/(\[[^\]]+\])/g)
   return parts.map((part, i) => {
     if (part.startsWith('[') && part.endsWith(']')) {
       const label = part.slice(1, -1)
-      return (
-        <span key={i} className="text-primary font-medium cursor-default" title="Internal link — coming soon">
-          {label}
-        </span>
-      )
+
+      // Bare category link: [Fundamentals], [Techniques], etc.
+      if (CATEGORY_ANCHORS[label]) {
+        return (
+          <Link key={i} href={CATEGORY_ANCHORS[label]} className="text-primary font-medium hover:underline">
+            {label}
+          </Link>
+        )
+      }
+
+      // Category-prefixed link: [Fundamentals: Article Title]
+      const colonIdx = label.indexOf(': ')
+      if (colonIdx !== -1) {
+        const category = label.slice(0, colonIdx)
+        const title = label.slice(colonIdx + 2)
+        const slug = TITLE_TO_SLUG[title]
+
+        if (slug) {
+          return (
+            <Link key={i} href={`/prompt-engineering/${slug}`} className="text-primary font-medium hover:underline">
+              {title}
+            </Link>
+          )
+        }
+
+        // Fallback: link to the category hub section
+        const fallbackHref = CATEGORY_ANCHORS[category] ?? '/prompt-engineering'
+        return (
+          <Link key={i} href={fallbackHref} className="text-primary font-medium hover:underline">
+            {title || label}
+          </Link>
+        )
+      }
+
+      // Unknown format — plain styled text
+      return <span key={i} className="text-primary font-medium">{label}</span>
     }
+
     // Handle **bold** markers
     const boldParts = part.split(/(\*\*[^*]+\*\*)/g)
     return (
