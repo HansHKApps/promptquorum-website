@@ -14,6 +14,7 @@ const HELPFUL_LINKS = [
   { href: '/compare', label: 'Compare Tools', desc: 'How we compare to alternatives' },
   { href: '/faq', label: 'FAQ', desc: 'Common questions answered' },
   { href: '/blog', label: 'Blog', desc: 'Latest writing and updates' },
+  { href: '/prompt-engineering', label: 'Prompt Engineering', desc: 'Guides, frameworks and techniques' },
 ]
 
 export default function NotFound() {

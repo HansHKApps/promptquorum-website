@@ -1,6 +1,7 @@
 // Maps URL slugs to article keys used in content.ts
 export const PE_SLUG_TO_KEY: Record<string, string> = {
   // Fundamentals
+  'what-is-prompt-engineering': 'what-is-prompt-engineering',
   'prompt-engineering-history': 'prompt-engineering-history',
   'prompt-building-blocks': 'prompt-building-blocks',
   'ai-hallucinations-how-to-stop': 'ai-hallucinations-how-to-stop',
