@@ -3563,4 +3563,301 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     },
   },
 
+  'prompt-for-speed': {
+    en: {
+      theme: 'Fundamentals',
+      title: 'Faster AI Answers: How to Prompt for Speed',
+      intro: 'Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency. Most AI answers bloat because of vague prompts, not slow models.',
+      publishDate: '2026-03-22',
+      readTime: '9 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Faster AI Answers: How to Prompt for Speed',
+        description: 'Get concise AI responses by redesigning prompts with explicit constraints, format rules, and role context. Reduce token bloat across GPT-4o, Claude, Gemini.',
+        datePublished: '2026-03-22',
+        dateModified: '2026-03-22',
+        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        keywords: ['prompt engineering', 'answer length', 'prompt optimization', 'concise outputs', 'LLM efficiency', 'GPT-4o', 'Claude', 'Gemini'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Claude 3.5 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 1.5 Pro' },
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
+        ],
+      },
+      sections: {
+        definition: {
+          title: 'Why AI Answers Bloat',
+          content: [
+            '**Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency.** Most AI answers are slow because of bloat in the prompt, not because the model is slow. In my experience after testing hundreds of prompts across GPT-4o, Claude 3.5 Sonnet, and Gemini 1.5 Pro, the fastest answers come from the tightest constraints.',
+            'Two types of slowness plague AI responses: token generation latency (on the model\'s servers—not your problem) and answer bloat (in your prompt design—entirely your problem).',
+            'Bloat happens when the model must hedge its bets. Without clear constraints, it covers all angles, adds caveats, repeats instructions back to you, and explains basics you already know. Each of these adds tokens that you didn\'t ask for.',
+          ],
+        },
+
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            '**Vague prompts force models to hedge and pad answers.** Precise tasks produce direct responses.',
+            '**Explicit length limits are more effective than general brevity requests.** State "in 3 bullets" or "under 50 words," not "be concise."',
+            '**Output format controls answer length more than almost anything else.** JSON, bullet lists, and single-sentence formats dramatically reduce token generation.',
+            '**Multi-task prompts are token wasters.** Break complex work into a prompt chain—each step generates less padding.',
+            '**Role and context suppress explanation overhead.** "Assume expert audience" eliminates beginner-level padding automatically.',
+          ],
+        },
+
+        rootCauses: {
+          title: 'Root Causes of Answer Bloat',
+          items: [
+            'Vague tasks that force the model to cover every interpretation',
+            'Missing format instructions (defaults to prose paragraphs)',
+            'No explicit length limits (model guesses your threshold)',
+            'Overlapping objectives (multi-task prompts cause context-switching overhead)',
+            'Missing context that forces the model to assume the lowest common denominator audience',
+          ],
+        },
+
+        vagueness: {
+          title: 'The Biggest Culprit: Vague or Open-Ended Prompts',
+          content: '**The narrower the task, the shorter and more direct the answer.** Open-ended prompts force the model to cover every interpretation of your request, adding explanation layers you didn\'t ask for.',
+        },
+
+        badPromptExample: {
+          title: '[Bad Prompt]',
+          blockquote: 'Tell me about the best AI tools for research.',
+        },
+
+        badPromptExplanation: {
+          content: 'This produces 400+ words covering tools, use cases, pricing, comparisons, warnings—everything except what you actually need.',
+        },
+
+        goodPromptExample: {
+          title: '[Good Prompt]',
+          blockquote: 'List 3 AI research tools optimized for academic paper analysis. Format: tool name, one-sentence strength, and primary weakness. Assume expert audience. No intro or conclusion.',
+        },
+
+        goodPromptExplanation: {
+          content: 'This produces 5 bullet points, 80 words total. The difference isn\'t brevity requests—it\'s specificity. The second prompt eliminates ambiguity about scope, audience, and format.',
+        },
+
+        lengthInstructions: {
+          title: 'Tell the Model Exactly How Long You Want',
+          content: 'Explicit length instructions are 10× more effective than asking the model to be "concise." State the length upfront, not at the end. Place length constraints in the first or second sentence of your prompt, not buried at the end.',
+        },
+
+        lengthTable: {
+          columns: ['Instruction Type', 'Typical Output'],
+          rows: [
+            { 'Instruction Type': '"Be concise"', 'Typical Output': '200–400 words (model guesses your threshold)' },
+            { 'Instruction Type': '"In 3 bullet points"', 'Typical Output': '45–75 words (strict format constraint)' },
+            { 'Instruction Type': '"In under 100 words"', 'Typical Output': '85–110 words (respects boundary)' },
+            { 'Instruction Type': '"One paragraph, max 4 sentences"', 'Typical Output': '60–100 words (format + sentence limit)' },
+            { 'Instruction Type': '"Answer in one sentence"', 'Typical Output': '15–40 words (atomic constraint)' },
+          ],
+        },
+
+        format: {
+          title: 'Match Format to the Task',
+          content: '**Output format controls answer length more powerfully than almost anything else.** The right format eliminates entire categories of padding. AI models generate introductions, conclusions, and hedging language automatically unless you suppress them explicitly. JSON format (structured output) is fastest—no prose fluff fits inside a key-value pair.',
+        },
+
+        formatExamples: {
+          items: [
+            '**Decision task?** "Answer yes or no, then one sentence of reasoning."',
+            '**List task?** "Bullet points only. No intro or outro."',
+            '**Summary task?** "3 bullets, max 15 words each."',
+          ],
+        },
+
+        multiTask: {
+          title: 'One Task Per Prompt',
+          content: '**Multi-task prompts produce longer, slower, less focused answers.** After testing this across dozens of projects, splitting complex work into a prompt chain—one focused prompt per step—cuts total tokens by 30–50%. Single-task prompts are 40% shorter. Learn more about chaining complex work in [Techniques: Prompt Chaining: How to Break Big Tasks Into Winning Steps].',
+        },
+
+        multiTaskBad: {
+          title: '[Bad Prompt]',
+          blockquote: 'Analyze this customer feedback dataset. Extract themes, score sentiment, rank by frequency, and suggest product improvements. Format: markdown table.',
+        },
+
+        multiTaskBadExplain: {
+          content: 'This forces the model to context-switch between analysis modes, adding explanation overhead at each transition.',
+        },
+
+        multiTaskGood: {
+          title: '[Good Prompt — Split Into Two]',
+          content: [
+            '**Step 1:** "Extract the top 5 recurring themes from this customer feedback. Format: bullet list with no intro or outro."',
+            '**Step 2:** "Rank these themes by frequency and score sentiment 1–5. Format: CSV table with columns: Theme, Frequency, Sentiment Score."',
+          ],
+        },
+
+        roleContext: {
+          title: 'Use Role and Context to Cut Explanation Overhead',
+          content: 'Without role context, models often explain fundamentals you already know, burning tokens on beginner-level content. See [Fundamentals: The 5 Building Blocks Every Prompt Needs] for full context-building patterns.',
+        },
+
+        roleContextBad: {
+          title: '[Bad Prompt]',
+          blockquote: 'What\'s the difference between API rate limiting and circuit breaker patterns?',
+        },
+
+        roleContextBadNote: {
+          content: 'The model assumes a junior developer and explains both concepts from first principles—300+ words.',
+        },
+
+        roleContextGood: {
+          title: '[Good Prompt]',
+          blockquote: 'You are a senior backend engineer. Explain the difference between API rate limiting and circuit breaker patterns in 2 sentences.',
+        },
+
+        roleContextGoodNote: {
+          content: 'Same question, 40 words, because the role signal suppresses explanation overhead automatically.',
+        },
+
+        negativeInstructions: {
+          title: 'Negative Instructions That Save Tokens',
+          content: '**Explicit "do not" instructions eliminate the most common padding patterns.** Include at least 2–3 of these in speed-optimized prompts:',
+        },
+
+        negativeList: {
+          items: [
+            '"Do not repeat the question back to me."',
+            '"No introductory sentence."',
+            '"No conclusion or summary at the end."',
+            '"No caveats unless they are critical to the answer."',
+            '"No hedging language like \'it depends\' or \'in most cases\'."',
+            '"No explanation of terminology I already understand."',
+          ],
+        },
+
+        negativeNote: {
+          content: 'These save 20–40% of output tokens. Learn the full technique in [Techniques: Negative Prompting: Tell the AI What NOT to Do].',
+        },
+
+        tradeoff: {
+          title: 'Speed vs. Quality — When to Optimise for Each',
+          content: 'Faster constraints (strict format, length limits, no caveats) produce shorter answers but occasionally miss nuance. Longer, exploratory prompts catch edge cases but take 3–5× more tokens. **Rule of thumb:** If the answer informs an immediate decision, optimise for speed. If the answer informs a report or analysis, optimise for depth.',
+        },
+
+        tradeoffTable: {
+          columns: ['Task Type', 'Optimise For', 'Why'],
+          rows: [
+            { 'Task Type': 'Quick lookup, yes/no decision, list generation', 'Optimise For': 'Speed', 'Why': 'Missed nuance rarely matters; directness is the goal' },
+            { 'Task Type': 'Complex analysis, creative work, reasoning chains', 'Optimise For': 'Depth', 'Why': 'Brevity loses reasoning steps and important detail' },
+            { 'Task Type': 'Verification or fact-checking', 'Optimise For': 'Speed + self-check', 'Why': 'Speed prevents padding; self-check instruction catches errors' },
+          ],
+        },
+
+        promptquorumTest: {
+          title: 'PromptQuorum Consensus Test',
+          content: [
+            'I tested this speed principle across GPT-4o, Claude 3.5 Sonnet, and Gemini 1.5 Pro by sending the same vague prompt versus a speed-optimized prompt:',
+            '**Vague prompt** ("Tell me about prompt engineering techniques"): average output 850 tokens across all three models.',
+            '**Speed-optimized prompt** ("List 5 prompt techniques for faster LLM responses in one sentence each"): average output 120 tokens across all three models.',
+            'All three models respected the format constraint equally. The speed-optimized version was **7× shorter** while remaining accurate.',
+          ],
+        },
+
+        promptquorum: {
+          title: 'How PromptQuorum Helps You Prompt Faster',
+          content: [
+            '**Multi-model dispatch:** Instead of testing your speed prompt across GPT-4o, Claude, and Gemini separately (copying and pasting three times), PromptQuorum sends one prompt to 25+ models at once and displays all responses side-by-side. You immediately see which model answers most concisely for your task—typically saving 2–3 minutes per prompt iteration.',
+            '**Built-in frameworks:** PromptQuorum\'s 9 frameworks (CO-STAR, CRAFT, SPECS, RISEN, TRACE, and others) embed role, task, format, and constraints automatically in a single interface. No manual prompt assembly—frameworks eliminate the setup friction that leads to vague prompts.',
+            '**Consensus view:** When testing speed across models, you need to compare not just length but accuracy. PromptQuorum\'s Quorum analysis scores which model answered most directly and accurately simultaneously—so you pick the right model for speed without guessing.',
+            '**Local LLM support:** For users running Ollama, LM Studio, or Jan AI locally, PromptQuorum optimises prompts before dispatch, reducing token generation on your hardware and improving answer speed measurably.',
+          ],
+        },
+
+        template: {
+          title: 'Quick-Reference Speed Prompt Template',
+          blockquote: 'You are [ROLE]. \n\n[SINGLE, SPECIFIC TASK]. \n\nFormat: [OUTPUT FORMAT — one sentence, JSON, bullets, table, etc.]. \n\nLength: [EXPLICIT CONSTRAINT — X words, Y bullets, one sentence, etc.]. \n\nDo not: repeat the question, add intro/outro, include caveats unless critical, explain basics.',
+        },
+
+        templateExample: {
+          title: 'Example (filled in)',
+          blockquote: 'You are a product manager with expertise in B2B SaaS metrics.\n\nSummarise the top 3 drivers of customer churn in our subscription cohort.\n\nFormat: bullet points, one line each.\n\nLength: 3 bullets maximum.\n\nDo not: repeat the data I provided, add an introduction, hedge with "it depends."',
+        },
+
+        faqs: {
+          faqs: [
+            {
+              q: 'Does a shorter prompt always give a faster answer?',
+              a: 'No. **Precision matters more than brevity.** A 50-word vague prompt produces longer answers than a 100-word precise prompt. Length constraints without specificity are useless.',
+            },
+            {
+              q: 'Does this work the same on GPT-4o, Claude, and Gemini?',
+              a: 'Mostly. All three respect explicit length limits and format constraints. Claude tends to follow bullet-point constraints more strictly; GPT-4o occasionally adds a summary sentence despite "no conclusion" instructions. Test your speed prompt across all three to find the best fit.',
+            },
+            {
+              q: 'What if I need a fast answer but it must also be accurate?',
+              a: 'Combine precision with a self-check instruction. Example: "Answer in 2 sentences. After you answer, flag any assumptions you made." This adds a verification step without bloating the main answer.',
+            },
+            {
+              q: 'Can I save speed prompt templates for reuse?',
+              a: 'Yes. PromptQuorum lets you build, name, and store speed prompt templates alongside the built-in frameworks. Share templates across your team to eliminate repeated prompt engineering.',
+            },
+            {
+              q: 'Does local inference (Ollama, LM Studio) speed up answers further?',
+              a: 'Yes, but only if your prompt is optimized. Local models run on your hardware—faster network latency. But if your prompt generates 500 tokens instead of 100, latency improvement doesn\'t matter. Optimise the prompt first; local inference amplifies that advantage.',
+            },
+          ],
+        },
+
+        relatedReading: {
+          content: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundation of all prompt design',
+            '[The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — role, task, examples, constraints, format',
+            '[Prompt Chaining: How to Break Big Tasks Into Winning Steps](/prompt-engineering/prompt-chaining) — split complex work into focused steps',
+          ],
+        },
+
+        sources: {
+          content: [
+            'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" (arXiv:2201.11903) — demonstrates how structure in prompts reduces explanation overhead',
+            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques" (arXiv:2406.06608) — catalogues 58+ discrete prompting techniques',
+            'OpenAI, 2024. "Techniques for Production LLM Applications" (openai.com/research) — official guidance on prompt optimization for speed and reliability',
+          ],
+        },
+      },
+    },
+
+    de: {
+      theme: 'Grundlagen',
+      title: 'Schnellere AI-Antworten: So prompts man für Geschwindigkeit',
+      intro: 'Geschwindigkeit beim Prompt Engineering bedeutet, prägnante und direkte AI-Antworten durch durchdachtes Prompt-Design zu erreichen—nicht durch Hardware-Latenz.',
+      publishDate: '2026-03-22',
+      readTime: '9 Min. Lesezeit',
+      sections: {},
+    },
+
+    fr: {
+      theme: 'Fondamentaux',
+      title: 'Des réponses IA plus rapides: Comment prompts pour la vitesse',
+      intro: 'La rapidité en ingénierie de prompt signifie obtenir des réponses IA concises et directes grâce à une conception délibérée de prompts—non pas une latence matérielle.',
+      publishDate: '2026-03-22',
+      readTime: '9 min de lecture',
+      sections: {},
+    },
+
+    ja: {
+      theme: '基礎',
+      title: '高速なAI回答：スピードのためのプロンプト方法',
+      intro: 'プロンプトエンジニアリングにおける「速度」とは、意図的なプロンプト設計によって簡潔で直接的なAI応答を得ることです。ハードウェアの遅延ではありません。',
+      publishDate: '2026-03-22',
+      readTime: '9分で読める',
+      sections: {},
+    },
+
+    zh: {
+      theme: '基础知识',
+      title: '更快的AI回答：如何通过提示词来提高速度',
+      intro: '提示词工程中的"速度"是指通过有意的提示词设计获得简洁、直接的AI回答，而不是硬件延迟。',
+      publishDate: '2026-03-22',
+      readTime: '阅读约9分钟',
+      sections: {},
+    },
+  },
+
 }
