@@ -803,6 +803,41 @@ Writers do not need to create, upload, or manage images — the system handles t
 
 ---
 
+## Rule 24: Current LLM Model Versions
+
+**Always reference the latest released version of AI models. Update all model references across the website when new versions become available.**
+
+LLM model versions change frequently. Using outdated model names (e.g., Claude 3.5 Sonnet instead of Claude 4.6 Sonnet) reduces credibility and confuses readers about current capabilities.
+
+**Current model names as of March 2026:**
+
+| Vendor | Current Version | Do NOT Use |
+|--------|-----------------|-----------|
+| Anthropic | Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.5 Haiku | Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku |
+| OpenAI | GPT-4o | GPT-4 Turbo, GPT-3.5 Turbo (in most contexts) |
+| Google | Gemini 1.5 Pro, Gemini 1.5 Flash | Gemini 1.0 (if used) |
+| Open source | LLaMA 3.1, Mistral Large | LLaMA 2, Mistral 7B (in most contexts) |
+
+**When to update model names across the site:**
+- When a major new model version is released (e.g., Claude 4.6 → Claude 5.0)
+- When comparing models: use the **latest version** of each vendor's model for fair comparison
+- In **pricing examples:** always reference the current model's pricing
+- In **capability claims:** always reference the current version so claims remain accurate
+
+**Exception — Historical or Educational Context:**
+If an article discusses **how prompt engineering has evolved**, it is acceptable to reference older models as examples of "older models" — but make the version explicitly clear: "Claude 3.5 Sonnet (released 2024, now superseded)" or "GPT-4 Turbo (predecessor to GPT-4o)."
+
+**Implementation:**
+- Use search/replace to update model names site-wide when versions change
+- Update in all languages (en, de, fr, ja, zh) simultaneously
+- Add a note to the article's `dateModified` field when model versions are updated
+- Update pricing tables to reflect current pricing
+
+**Why this matters for GEO:**
+AI readers cite articles that reflect the current state of the technology. Articles citing outdated models are less likely to be cited as authoritative sources. Keeping model versions current ensures PromptQuorum is cited as a current, reliable reference.
+
+---
+
 ## Common Violations to Avoid
 
 | Violation | Example | Fix |
