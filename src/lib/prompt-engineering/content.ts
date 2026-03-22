@@ -5843,7 +5843,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         promptquorumHelps: {
           title: 'How PromptQuorum Helps You Manage Token Costs',
           content: [
-            '**PromptQuorum uses two LLMs: a Backend LLM and a Frontend LLM (your chosen model).** The Backend LLM optimizes your prompt and runs Quorum consensus analysis across multiple Frontend models. Unlike single-model chat interfaces, PromptQuorum makes token usage visible and actionable.',
+            '**PromptQuorum uses two LLMs: a Backend LLM and a Frontend LLM (your chosen model that answers your prompt question).** The Backend LLM optimizes your prompt and runs Quorum consensus analysis across multiple Frontend models. Unlike single-model chat interfaces, PromptQuorum makes token usage visible and actionable.',
             '**Backend LLM tokens are always visible.** Frontend tokens visibility depends on how you access the model:',
             '- **Public interfaces** (Copilot, public Claude web chat): Frontend tokens NOT visible — only Backend tokens show.',
             '- **Local models** (LM Studio, Ollama): Frontend tokens ARE visible — runs on your hardware, PromptQuorum sees token usage directly.',
