@@ -22,7 +22,11 @@
       "Bash(gh run:*)",
       "Bash(npx vercel:*)",
       "Bash(pnpm install:*)",
-      "Bash(pnpm add:*)"
+      "Bash(pnpm add:*)",
+      "Bash(pnpm exec:*)",
+      "Bash(ls /Users/hanskuepper/promptquorum-website/public/og*)",
+      "Bash(ls /Users/hanskuepper/promptquorum-website/src/app/video-sitemap*)",
+      "Bash(node -e \":*)"
     ]
   }
 }

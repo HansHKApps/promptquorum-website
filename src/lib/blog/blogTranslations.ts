@@ -70,13 +70,6 @@ export const blogMetadata = {
     ja: { category: 'AI信頼性', title: 'AIコンセンサススコアリング：複数モデルにわたるハルシネーションの検出方法', intro: '5つのAIモデルが独立してある事実に同意する場合、1つのモデルが単独で答える場合よりも回答の信頼性が大幅に高くなります。これがAIコンセンサススコアリングの原理です。', publishDate: '2026年3月16日公開', readTime: '11分の読み物' },
     zh: { category: 'AI可靠性', title: 'AI共识评分：如何跨多个模型检测幻觉', intro: '当五个AI模型独立认同某个事实时，答案的可靠性远高于单个模型单独回答。这就是AI共识评分的原理。', publishDate: '发布于 2026年3月16日', readTime: '11分钟阅读' }
   },
-  hallucinations: {
-    en: { category: 'AI Reliability', title: 'AI Hallucinations: Why AI Makes Things Up', intro: 'Large language models confidently produce false information. Understanding why hallucinations happen and how to detect and reduce them is essential for anyone using LLMs in real work.', publishDate: 'Last updated: March 22, 2026', readTime: '12 min read' },
-    de: { category: 'KI-Zuverlässigkeit', title: 'KI-Halluzinationen: Warum KI Dinge erfindet', intro: 'Große Sprachmodelle produzieren vertrauensvoll falsche Informationen. Zu verstehen, warum Halluzinationen auftreten und wie man sie erkennt, ist für jeden wichtig, der LLMs in echter Arbeit verwendet.', publishDate: 'Zuletzt aktualisiert: 22. März 2026', readTime: '12 Min. Lesezeit' },
-    fr: { category: 'Fiabilité IA', title: 'Hallucinations IA: Pourquoi l\'IA Invente des Choses', intro: 'Les grands modèles de langage produisent confidentement des informations fausses. Comprendre pourquoi les hallucinations se produisent et comment les détecter est essentiel pour quiconque utilise les LLM dans un vrai travail.', publishDate: 'Dernier mise à jour: 22 mars 2026', readTime: '12 min de lecture' },
-    ja: { category: 'AI信頼性', title: 'AIハルシネーション：AIがなぜ物を作り出すのか', intro: '大規模言語モデルは誤った情報を自信を持って生成します。ハルシネーションが発生する理由と、それらを検出および削減する方法を理解することは、実務でLLMを使用する誰にとってもが重要です。', publishDate: '最終更新：2026年3月22日', readTime: '12分の読み物' },
-    zh: { category: 'AI可靠性', title: 'AI幻觉：为什么AI会编造东西', intro: '大型语言模型自信地产生错误信息。理解为什么会发生幻觉以及如何检测和减少幻觉对于在实际工作中使用LLM的任何人都是必不可少的。', publishDate: '最后更新：2026年3月22日', readTime: '12分钟阅读' }
-  }
 }
 
 // Legacy translations object (kept for reference)
