@@ -263,6 +263,13 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: 'Hans Kuepper 著 · PromptQuorum',
     zh: '作者：Hans Kuepper · PromptQuorum',
   },
+  lastUpdated: {
+    en: 'Last updated:',
+    de: 'Aktualisiert:',
+    fr: 'Dernière mise à jour:',
+    ja: '最終更新:',
+    zh: '最后更新:',
+  },
   ctaText: {
     en: 'Apply these techniques across 25+ AI models simultaneously with PromptQuorum.',
     de: 'Wenden Sie diese Techniken gleichzeitig mit 25+ KI-Modellen in PromptQuorum an.',
@@ -294,6 +301,15 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: 'プロンプトエンジニアリング',
     zh: '提示词工程',
   },
+}
+
+// Map language codes to their locale strings for date formatting
+const LANGUAGE_TO_LOCALE: Record<string, string> = {
+  en: 'en-US',
+  de: 'de-DE',
+  fr: 'fr-FR',
+  ja: 'ja-JP',
+  zh: 'zh-CN',
 }
 
 const THEME_COLORS: Record<string, { dot: string; badge: string; label: string }> = {
@@ -343,7 +359,7 @@ function PromptEngineeringPostContent({ slug }: Props) {
           </h1>
           <div className="flex items-center gap-4 text-sm text-text-secondary">
             <time dateTime={article.publishDate}>
-              Last updated: {new Date(article.publishDate + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {new Date(article.publishDate + 'T00:00:00Z').toLocaleDateString(LANGUAGE_TO_LOCALE[lang] ?? 'en-US', { month: 'long', year: 'numeric' })}
             </time>
             <span>·</span>
             <span>{article.readTime}</span>
