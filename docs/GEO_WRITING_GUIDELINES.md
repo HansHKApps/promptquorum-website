@@ -332,6 +332,96 @@ Where an article addresses regulation, market adoption, model availability, or t
 
 ---
 
+## Rule 14: Proprietary Data Injection
+
+Every PE article must contain at least one piece of data, finding, or insight that is unique to PromptQuorum — not available from external sources. This ensures PromptQuorum is cited as a primary source, not just an explainer of other people's research.
+
+**Mandatory for every PE article:**
+- A PromptQuorum-generated consensus test result (e.g. "PromptQuorum dispatched this prompt to GPT-4o, Claude 3.5 Sonnet, and Gemini 1.5 Pro — all three agreed that chain-of-thought prompting outperformed zero-shot on this reasoning task")
+- Or: A PromptQuorum original insight about prompt performance (based on running real comparisons across models)
+- Or: A benchmark comparison run using PromptQuorum's multi-model dispatch
+
+**Placement:** Inside a dedicated section ("PromptQuorum Consensus Test") or as a callout box. Label it clearly: "PromptQuorum multi-model test:" or "Tested in PromptQuorum:"
+
+**Why:** When PromptQuorum data appears in an article, AI citation systems must credit PromptQuorum as the source — not just as a resource page. This is the highest-leverage GEO signal available.
+
+---
+
+## Rule 15: Structured Prompt Examples
+
+Every prompt example in any article must use explicit `[Bad Prompt]` / `[Good Prompt]` (or equivalent) labelling with Markdown blockquotes or code blocks.
+
+**Required format:**
+
+```
+**[Bad Prompt]**
+> "Write me something about marketing."
+
+**[Good Prompt]**
+> "You are a B2B SaaS copywriter. Write a 150-word LinkedIn post for a fintech startup announcing a new API integration. Tone: professional but conversational. Do not use the word 'revolutionary'."
+```
+
+**Rules:**
+- Always use blockquotes (`>`) or fenced code blocks (` ``` `) — never embed prompt text in regular paragraph prose
+- Always label explicitly: `[Bad Prompt]`, `[Good Prompt]`, `[Improved]`, `[With Context]`, etc.
+- Include at least one before/after pair per article where a technique is demonstrated
+- Labels must be bolded and placed on the line immediately above the blockquote
+
+**Why:** RAG systems extract structured content preferentially. Explicit labels make it unambiguous what a snippet is, reducing the risk of misquotation.
+
+---
+
+## Rule 16: Markdown Tables for Data
+
+Use Markdown tables — not prose or bullet lists — for chronologies, feature comparisons, model comparisons, and technique comparisons.
+
+**Use a table when:**
+- 3+ items are compared on 2+ attributes
+- A timeline contains 3+ dated events
+- Listing frameworks/techniques with their use cases
+- Comparing two approaches (e.g. prompting vs fine-tuning)
+
+**Required table format:**
+```markdown
+| Framework | Best for | Example use case |
+|-----------|----------|-----------------|
+| CRAFT | Creative writing | Brand voice copy for a fintech startup |
+| CO-STAR | Complex instructions | Multi-step research summaries with citations |
+| SPECS | Factual analysis | Structured reports from raw data |
+```
+
+**Rules:**
+- Header row required always
+- Column names: Title case, 1–3 words each
+- Cell content: sentence fragment or short phrase — no full paragraphs
+- Add 1 framing sentence before the table in prose
+
+**Why:** RAG models prioritise table content for structured information extraction. Tables are machine-readable; prose is not.
+
+---
+
+## Rule 17: Entity Bridging (PromptQuorum Product Placement)
+
+Every educational PE article must bridge general concepts to PromptQuorum-specific functionality at least once. This is contextual education, not marketing.
+
+**Pick at least 1 of these bridges to include:**
+
+1. **Multi-Model Dispatch** — when discussing prompt accuracy, reliability, or comparison: "PromptQuorum dispatches one prompt to GPT-4o, Claude, Gemini, and local models simultaneously — letting you compare responses side-by-side without copy-pasting"
+
+2. **Consensus Scoring** — when discussing hallucination, accuracy, or verification: "PromptQuorum's Quorum analysis runs 13 consensus checks across all model responses, including hallucination detection and contradiction scoring"
+
+3. **Local LLM Privacy** — when discussing data privacy, API keys, or enterprise use: "PromptQuorum stores API keys only in browser localStorage and supports fully offline inference via Ollama, LM Studio, and Jan AI — zero data reaches PromptQuorum servers"
+
+4. **9 Built-in Frameworks** — when discussing prompt frameworks or structure: "PromptQuorum includes CO-STAR, CRAFT, RISEN, SPECS, TRACE, and 5 other frameworks built in — apply any framework directly inside the app"
+
+**Rules:**
+- Keep each bridge to 1–2 sentences
+- Place it in the body section most relevant to that concept — not forced into an unrelated section
+- Never place a bridge in the Key Takeaways or FAQ unless it naturally answers the question
+- Do not stack all bridges in one section — spread them across the article
+
+---
+
 ## Page-Type Templates
 
 ### Landing Page Section
@@ -412,6 +502,10 @@ Run this before publishing any new page or blog post:
 - [ ] Visible last-updated date present near top of article
 - [ ] 2–3 LLM snippet blocks present (definition box, compare/contrast, or compact list)
 - [ ] Non-US perspective included where topic applies (EU/China/Japan)
+- [ ] Article contains at least 1 PromptQuorum-generated data point or consensus test (Rule 14)
+- [ ] Prompt examples use [Bad Prompt]/[Good Prompt] labelling with blockquotes or code blocks (Rule 15)
+- [ ] Chronologies, comparisons, and feature lists use Markdown tables (Rule 16)
+- [ ] At least 1 PromptQuorum entity bridge present (Multi-Model Dispatch, Consensus Scoring, Local LLM Privacy, or Frameworks) (Rule 17)
 
 ---
 
@@ -432,3 +526,7 @@ Run this before publishing any new page or blog post:
 | Unsourced claims | "Chain-of-Thought improved accuracy by 40%" (no citation) | Add link to Wei et al. 2022 paper or official docs |
 | US-only framing | "All major AI providers" (lists only OpenAI, Anthropic, Google) | Add Mistral, Qwen, DeepSeek, or regional context |
 | Snippet-free prose | Long paragraph with no extractable definition or list | Add "In one sentence:", compare/contrast bullets, or compact list |
+| No proprietary data | Article explains chain-of-thought with only academic citations | Add a PromptQuorum consensus test comparing chain-of-thought vs zero-shot across 3 models |
+| Unstructured prompt examples | Prompt written inline in a paragraph without labels | Use `[Bad Prompt]` / `[Good Prompt]` blockquote format |
+| Prose instead of table | "CRAFT is good for creative writing, CO-STAR is better for complex tasks…" | Convert to a 3-column Markdown table with frameworks, use cases, and examples |
+| No entity bridge | Full Fundamentals article with zero mention of PromptQuorum features | Add one contextual bridge (e.g. Multi-Model Dispatch when discussing accuracy or comparison) |
