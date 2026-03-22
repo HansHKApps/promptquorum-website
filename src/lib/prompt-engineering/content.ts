@@ -782,7 +782,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: '基礎',
       title: 'プロンプトエンジニアリングとは？',
       intro: 'プロンプトエンジニアリングとは、大規模言語モデルから正確で有用かつ再現性のある出力を得るために、テキスト入力（プロンプト）を設計・構造化する実践です。',
-      publishDate: '2026年3月公開',
+      publishDate: '2026-03-01',
       readTime: '10分で読める',
       sections: {
         definition: {
@@ -2195,7 +2195,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'The 5 Building Blocks Every Prompt Needs',
       intro: 'The 5 building blocks every prompt needs: Role & Context, Task, Input & Examples, Constraints, and Output Format. How to use each one.',
-      publishDate: 'Published March 2026',
+      publishDate: '2026-03-01',
       readTime: '8 min read',
       sections: {
 
@@ -2404,7 +2404,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'Die 5 Bausteine jedes Prompts',
       intro: 'Die 5 Bausteine jedes Prompts: Rolle & Kontext, Aufgabe, Eingabe & Beispiele, Einschränkungen und Ausgabeformat.',
-      publishDate: 'Veröffentlicht März 2026',
+      publishDate: '2026-03-01',
       readTime: '8 Min. Lesezeit',
       sections: {
         definition: {
@@ -2610,7 +2610,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fondamentaux',
       title: 'Les 5 éléments fondamentaux de tout prompt',
       intro: 'Les 5 éléments fondamentaux de tout prompt : Rôle & Contexte, Tâche, Entrée & Exemples, Contraintes et Format de sortie.',
-      publishDate: 'Publié mars 2026',
+      publishDate: '2026-03-01',
       readTime: '8 min de lecture',
       sections: {
         definition: {
@@ -2816,7 +2816,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: '基礎',
       title: 'すべてのプロンプトに必要な5つの構成要素',
       intro: 'プロンプトの5つの構成要素：役割とコンテキスト、タスク、入力と例、制約、出力形式。それぞれの使い方を解説します。',
-      publishDate: '2026年3月公開',
+      publishDate: '2026-03-01',
       readTime: '8分で読める',
       sections: {
         definition: {
@@ -3040,7 +3040,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: '基础知识',
       title: '每个提示词必需的5个构建模块',
       intro: '每个提示词必需的5个构建模块：角色与上下文、任务、输入与示例、约束条件和输出格式。',
-      publishDate: '发布于2026年3月',
+      publishDate: '2026-03-01',
       readTime: '阅读约8分钟',
       sections: {
         definition: {
