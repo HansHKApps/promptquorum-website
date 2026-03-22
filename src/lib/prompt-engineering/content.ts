@@ -3815,9 +3815,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         sources: {
           content: [
-            'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" (arXiv:2201.11903) — demonstrates how structure in prompts reduces explanation overhead',
-            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques" (arXiv:2406.06608) — catalogues 58+ discrete prompting techniques',
-            'OpenAI, 2024. "Techniques for Production LLM Applications" (openai.com/research) — official guidance on prompt optimization for speed and reliability',
+            '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" (arXiv:2201.11903)](https://arxiv.org/abs/2201.11903) — demonstrates how structure in prompts reduces explanation overhead',
+            '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques" (arXiv:2406.06608)](https://arxiv.org/abs/2406.06608) — catalogues 58+ discrete prompting techniques',
+            '[OpenAI, 2024. "Techniques for Production LLM Applications"](https://platform.openai.com/docs/guides/prompt-engineering) — official guidance on prompt optimization for speed and reliability',
           ],
         },
       },

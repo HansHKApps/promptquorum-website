@@ -300,16 +300,25 @@ Every PE article must cite 2–3 high-authority external sources to ground claim
 - Any URL that resolves to another /prompt-engineering article on this site — external citations must be genuinely external
 
 **Format:**
-- Cite using author/org and year in-text: `[Brown et al., 2020]` or `[OpenAI, 2023]`
-- Provide the full link in a "Sources" section at the bottom or inline (your choice)
-- Keep the sources section short — 2–3 sentences max, not a formal bibliography
+- Every source citation MUST be a hyperlinked URL, not plain text.
+- Use Markdown link format: `[Author, Year. "Title"](URL)` — description
+- Cite using author/org and year: `[Brown et al., 2020. "Language Models are Few-Shot Learners"](https://arxiv.org/abs/2005.14165)` or `[OpenAI, 2023. "..."]`
 - Verify every external URL resolves to the correct page before publishing — dead links lose all citation value
+- Keep the sources section short — 2–3 sources max, not a formal bibliography
 
-**Example:**
+**Example (CORRECT — with working links):**
 ```markdown
 ### Sources
-- Brown et al., 2020. "Language Models are Few-Shot Learners" (arXiv:2005.14165) — the foundational GPT-3 paper demonstrating few-shot learning
-- Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" (arXiv:2201.11903) — the paper that proved step-by-step reasoning improves output quality
+- [Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — the paper that proved step-by-step reasoning improves output quality
+- [Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — catalogues 58+ discrete prompting techniques
+- [OpenAI, 2024. "Techniques for Production LLM Applications"](https://platform.openai.com/docs/guides/prompt-engineering) — official guidance on prompt optimization
+```
+
+**What NOT to do (plain text, no links):**
+```markdown
+### Sources
+❌ Wei et al., 2022. "Chain-of-Thought Prompting..." (arXiv:2201.11903)
+❌ Brown et al., 2020 demonstrated...
 ```
 
 ---
@@ -626,7 +635,7 @@ Run this before publishing any new page or blog post:
 - [ ] Article links sideways to 2+ sibling articles in same theme column
 - [ ] Article links down to 1+ article in a different theme column
 - [ ] "Related reading" block present at end of article (exactly 3 internal links)
-- [ ] 2–3 external source links included (peer-reviewed papers or official docs preferred) — no competitor product links (Rule 10)
+- [ ] 2–3 external source links included (peer-reviewed papers or official docs preferred) — MUST be hyperlinked URLs in Markdown format, not plain text — no competitor product links (Rule 10)
 - [ ] Visible last-updated date present near top of article with `<time datetime="">` HTML element (Rule 11)
 - [ ] 2–3 LLM snippet blocks present (definition box, compare/contrast, or compact list)
 - [ ] Non-US perspective included where topic applies (EU/China/Japan)
