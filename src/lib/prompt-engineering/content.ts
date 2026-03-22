@@ -3449,7 +3449,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         goodPrompt: {
           title: '[Good Prompt]',
-          content: 'Using only the following timeline, summarize the major breakthroughs in AI from 1950 to 1990:\n\n[TIMELINE DATA INSERTED]\n\nFormat your answer as:\n\n**BREAKTHROUGH:** [Name]\n**YEAR:** [Year — only if stated in timeline]\n**SIGNIFICANCE:** [What it enabled]\n**SOURCE:** [Which document from the timeline mentions this?]\n\nDo not add information not in the timeline. If you\'re unsure whether something is in the timeline, skip it rather than guessing.',
+          content: 'Using only the following timeline, summarize the major breakthroughs in AI from 1950 to 1990:\n\n{TIMELINE DATA INSERTED}\n\nFormat your answer as:\n\n**BREAKTHROUGH:** {Name}\n**YEAR:** {Year — only if stated in timeline}\n**SIGNIFICANCE:** {What it enabled}\n**SOURCE:** {Which document from the timeline mentions this?}\n\nDo not add information not in the timeline. If you\'re unsure whether something is in the timeline, skip it rather than guessing.',
         },
 
         whyWorks: {
