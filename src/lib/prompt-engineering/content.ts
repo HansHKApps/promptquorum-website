@@ -5733,7 +5733,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         definition: {
           title: 'What Is a Token?',
           content: [
-            '**A token is the smallest unit of text an AI model processes, approximately 3–4 characters or ¾ of an English word.** In English text, "ChatGPT" counts as 2 tokens, and "Hello, how are you?" is roughly 5–6 tokens. Other languages tokenise less efficiently — the same phrase in German or Japanese may consume 20–40% more tokens. You are billed for every token in your prompt (input) and every token the model outputs.',
+            '**A token is the smallest unit of text an AI model processes, approximately 3–4 characters or ¾ of an English word.** In English text, "ChatGPT" counts as 2 tokens, and "Hello, how are you?" is roughly 5–6 tokens. Other languages tokenise less efficiently — the same phrase in German or Japanese may consume 20–40% more tokens. You are billed for every token in your prompt (input) and every token the model outputs. Understanding tokens is fundamental to [what is prompt engineering](/prompt-engineering/what-is-prompt-engineering) — the practice of structuring your inputs to get reliable outputs.',
             'Models do not "think" in words or characters. Internally, they convert your text into token IDs and process those numerically. This is why tokenisation matters: a single character change can sometimes affect the token boundary, and a poorly organised prompt with redundant words can waste hundreds of tokens without improving output quality.',
             'In one sentence: a token is the smallest unit of text an AI model processes, approximately 3–4 characters or ¾ of an English word, and you are billed for every token in and every token out.'
           ]
@@ -5752,7 +5752,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
         tokenCounting: {
           title: 'How Token Counting Works in Practice',
-          content: '**Every element of your API call — system prompt, conversation history, new message, files, and the model\'s own output — consumes tokens from your quota.** This is why a conversation that started with a small message can suddenly become expensive after five turns of back-and-forth. You\'re paying for all of it, accumulated.',
+          content: '**Every element of your API call — system prompt, conversation history, new message, files, and the model\'s own output — consumes tokens from your quota.** This is why a conversation that started with a small message can suddenly become expensive after five turns of back-and-forth. You\'re paying for all of it, accumulated. Understanding the distinction between [system prompt and user prompt](/prompt-engineering/system-prompt-vs-user-prompt) is critical because both are billed on every call.',
           items: [
             '**System prompt:** Counted once per message. A 200-word system prompt = ~250 tokens on every API call.',
             '**Full conversation history:** Included on every request unless explicitly summarised or dropped. A 10-turn conversation with 500 tokens per turn = 5,000 tokens counted again on turn 11.',
@@ -5765,7 +5765,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         pricing: {
           title: 'How Much Do GPT-4o, Claude, and Gemini Cost per Million Tokens in 2026?',
           content: [
-            'Prices vary dramatically based on model capability. All figures below are public pricing as of March 2026. Note that output tokens typically cost 2–5× more than input tokens — this is where costs accumulate fastest.',
+            'Prices vary dramatically based on model capability. All figures below are public pricing as of March 2026. Note that output tokens typically cost 2–5× more than input tokens — this is where costs accumulate fastest. The right model choice is the biggest cost lever — see [how to pick between GPT-4o, Claude, and Gemini](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) for detailed comparisons.',
             'Prices as of March 2026. Verify current rates: [OpenAI pricing](https://openai.com/pricing) · [Anthropic pricing](https://www.anthropic.com/api) · [Google pricing](https://ai.google.dev/pricing)'
           ],
           columns: ['Model', 'Input (per 1M tokens)', 'Output (per 1M tokens)'],
@@ -5793,7 +5793,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         promptDesign: {
           title: 'How Can I Reduce My LLM API Costs by 30–50×?',
           content: [
-            '**Tested in PromptQuorum — 20 identical research-summary prompts executed on GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro with varying levels of system prompt verbosity:** With a 500-token system prompt, average output was 450 tokens at an average cost of $0.032 per call. With the same instructions in a trimmed 200-token prompt, average output was 460 tokens at $0.025 per call — an 18% cost reduction with identical output quality.',
+            '**Tested in PromptQuorum — 20 identical research-summary prompts executed on GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro with varying levels of system prompt verbosity:** With a 500-token system prompt, average output was 450 tokens at an average cost of $0.032 per call. With the same instructions in a trimmed 200-token prompt, average output was 460 tokens at $0.025 per call — an 18% cost reduction with identical output quality. This aligns with [how to prompt for speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — efficiency reduces both latency and cost.',
             '**Every unnecessary token in your prompt wastes money — and the costs accumulate faster because your entire prompt is reincluded on every API call in a conversation.** Trimming a 500-token system prompt to 300 tokens saves $0.001 per call, but on 1,000 calls per day, that\'s $1/day or $365/year.'
           ],
           items: [
@@ -5810,7 +5810,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'How to Cut LLM API Costs in 5 Steps',
           numberedItems: [
             'Match model to task complexity: use GPT-4o mini or Claude 4.5 Haiku for simple classification and Q&A — 33× cheaper than frontier models',
-            'Summarise conversation history every 5 turns: prevents full history re-billing on every call',
+            'Summarise conversation history every 5 turns: prevents full history re-billing on every call (a technique aligned with [chain-of-thought prompting](/prompt-engineering/chain-of-thought-prompting) — structure your reasoning upfront)',
             'Cap output length explicitly: "Answer in 3 bullets" or "Maximum 100 words" prevents verbose token-heavy responses',
             'Trim system prompts to essentials: remove filler phrases; every redundant word is re-billed on every API call',
             'Test local LLMs via Ollama for high-volume private workflows: zero per-token cost at the price of frontier model capability',
@@ -5831,7 +5831,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
         localLLMs: {
           title: 'What Are the Trade-offs of Local LLMs (Ollama) vs Cloud APIs?',
-          content: '**Local models via Ollama or LM Studio have zero per-token API cost — you only pay for the hardware (VRAM and electricity).** This makes them ideal for high-volume workflows, privacy-sensitive applications, and cost-critical pipelines. The trade-offs are capability (local models lag frontier models) and latency (running on consumer VRAM is slower).',
+          content: '**Local models via Ollama or LM Studio have zero per-token API cost — you only pay for the hardware (VRAM and electricity).** This makes them ideal for high-volume workflows, privacy-sensitive applications, and cost-critical pipelines. The trade-offs are capability (local models lag frontier models) and latency (running on consumer VRAM is slower). Understanding [context windows](/prompt-engineering/context-windows-explained-why-ai-forgets) is essential when planning local deployments — your VRAM limits the context window size you can support.',
           items: [
             '**Hardware costs:** Ollama models like LLaMA 3.1 7B require ~8GB VRAM, 13B models need ~16GB, 70B models need 40GB+. GPU memory is the limiting factor.',
             '**Capability trade-off:** Local models are excellent at classification, summarisation, and repetitive tasks. They struggle with multi-step reasoning, code generation, and creative writing compared to GPT-4o or Claude 4.6 Sonnet.',
