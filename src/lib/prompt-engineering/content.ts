@@ -5849,12 +5849,6 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '- **Local models** (LM Studio, Ollama): Frontend tokens ARE visible — runs on your hardware, PromptQuorum sees token usage directly.',
             '- **APIs** (OpenAI, Anthropic): It depends. With direct API integration, Frontend tokens visible. Via third-party endpoint or public interface, Frontend tokens NOT visible.',
             '**Tested in PromptQuorum — 20 identical research-summary prompts dispatched to GPT-4o and GPT-4o mini:** Output quality matched on 17 of 20 tasks. Cost difference: $0.003 per prompt (GPT-4o) vs $0.00007 per prompt (mini) — a 43× cost reduction. On the 3 tasks where GPT-4o outperformed, complexity involved multi-step reasoning across documents.'
-          ],
-          items: [
-            '**Backend tokens always visible.** Frontend tokens visible for: local models (LM Studio, Ollama) because they run on your hardware, and direct API integrations (OpenAI, Anthropic if integrated). NOT visible for: public web interfaces (Copilot, public Claude) or APIs accessed via third-party endpoints.',
-            '**Model routing for cost optimization:** Send one prompt to multiple Frontend models (GPT-4o, GPT-4o mini, Haiku, local LLaMA). Compare output quality vs total token cost (Backend + Frontend) and pick the cheapest model that meets your bar.',
-            '**Local LLM integration:** Route high-volume or privacy-sensitive workflows to Ollama or LM Studio. PromptQuorum manages context window sizing to fit VRAM constraints and tracks total tokens (Backend + local Frontend). Zero API costs for Frontend; only Backend LLM scales with volume.',
-            '**Cost forecasting:** Before running a batch of 10,000 prompts, PromptQuorum estimates total spend based on Frontend model choice, prompt length, and Backend LLM operations. Avoid surprises.'
           ]
         },
         recipes: {
