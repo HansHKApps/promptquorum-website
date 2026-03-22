@@ -30,6 +30,7 @@ PromptQuorum Website is the marketing site for PromptQuorum — a multi-model AI
 | Language | TypeScript (strict mode) |
 | Package manager | npm |
 | Deployment | Vercel (auto-deploy on push to main) |
+| OG Images | Next.js `next/og` ImageResponse (built-in, free) |
 | Dev server | `http://localhost:3000` |
 
 ## Environment Setup
@@ -46,6 +47,8 @@ npm run start    # Preview production build
 ```
 src/
   app/               # Next.js App Router pages
+    api/
+      og/[slug]/     # Dynamic og:image generation route for all articles (all 5 languages)
     page.tsx         # Home page
     blog/            # Blog listing + individual posts
     compare/         # Model comparison page
@@ -92,6 +95,19 @@ The site supports 5 languages: `en`, `de`, `fr`, `ja`, `zh`.
 - `useLang()` hook reads `window.location.search`
 - All nav links must include `?lang=XX` via the `navHref(path, lang)` helper in `HeaderClient.tsx`
 - Translations live in `src/locales/[lang].ts`
+
+## OG Image Generation
+
+All Prompt Engineering articles automatically generate language-specific Open Graph images for social sharing.
+
+- Route: `src/app/api/og/[slug]/route.tsx` — uses Next.js built-in `next/og` (free, no dependencies)
+- **Automatic:** Images are generated on-demand with article title, intro, and PromptQuorum branding
+- **Multi-language:** Each image includes the selected language (`?lang=XX` param)
+- **No manual work:** Just write the article content — og:image is automatically created for all languages
+- **Cache:** Generated images are cached for 24 hours (immutable)
+- **GEO-compliant:** Ensures all articles have unique, professional social sharing previews
+
+Writers do not need to create or manage og:images; they are handled automatically by the system.
 
 ## Git Workflow
 

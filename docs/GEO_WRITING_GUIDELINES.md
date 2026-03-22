@@ -773,6 +773,21 @@ Run this before publishing any new page or blog post:
 - [ ] Mathematical concepts use notation or LaTeX, not just prose (Rule 20)
 - [ ] Article mentions and defines 5–7 high-value entities (products, companies, technical terms) (Rule 4a/Rule 21)
 - [ ] All technical constraints use exact numbers: context window in tokens, VRAM in GB, costs in $/1M tokens, latency in ms (Rule 2a/Rule 22)
+- [ ] **OG image is auto-generated** — No manual work needed. System creates language-specific social sharing images (all 5 languages) with article title, intro, and PromptQuorum branding for each language variant (Rule 23)
+
+---
+
+## Rule 23: Social Sharing Images (OG Images)
+
+**All articles automatically generate language-specific Open Graph images for social sharing. No writer action needed.**
+
+When an article is published:
+- A unique og:image is automatically created with the article title, intro, and PromptQuorum branding
+- The og:image is generated for all 5 languages (`en`, `de`, `fr`, `ja`, `zh`)
+- When a reader shares the article on Twitter, LinkedIn, Facebook, etc., their language variant shows the appropriate language version
+- Images are cached for 24 hours to ensure performance
+
+Writers do not need to create, upload, or manage images — the system handles this automatically. Just write the article content, and social sharing previews are generated in all languages.
 
 ---
 
