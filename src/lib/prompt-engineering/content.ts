@@ -5936,4 +5936,242 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Fundamentals', title: 'Tokens, Costs & Limits: The Economics of AI Prompting', intro: '每个AI API调用都用令牌来测量和计费——该单位控制模型可以处理的内容以及您支付的金额。理解令牌是高效且经济有效提示的基础。', publishDate: '2026-03-22', readTime: '13 min read', sections: { definition: { title: '什么是令牌？', content: [ '**令牌是AI模型处理的最小文本单位，大约3-4个字符或3/4个英文单词。** 在英文文本中，"ChatGPT"计为2个令牌，"Hello, how are you?"大约是5-6个令牌。其他语言的令牌化效率较低——相同的短语用德语或日语可能会消耗20-40%的额外令牌。您需要为提示（输入）中的每个令牌和模型输出的每个令牌付费。理解令牌对于了解[什么是提示工程](/prompt-engineering/what-is-prompt-engineering)——构造输入以获得可靠输出的实践——是基础。', '模型不会用文字或字符"思考"。在内部，它们将您的文本转换为令牌ID并进行数值处理。这就是为什么令牌化很重要：单个字符更改有时会影响令牌边界，而包含冗余单词的组织不当的提示可能会浪费数百个令牌而不会改善输出质量。', '一句话：令牌是AI模型处理的最小文本单位，大约3-4个字符或3/4个英文单词，您需要为每个输入令牌和输出令牌付费。' ] }, tldr: { title: '重点', isTldr: true, items: [ '令牌是AI成本和处理的单位。大约3-4个字符=英文中的1个令牌；其他语言需要更多令牌。', '您为输入令牌和输出令牌分别付费——输出令牌通常费用多2-5倍。长冗长的输出是成本飙升的地方。', '令牌计数包括系统提示、完整的对话历史、附加文件和图像——不仅仅是您的最后一条消息。', '速率限制（每分钟请求数、每分钟令牌数）存在以防止滥用并确保公平的资源分配。免费层有严格的限制；付费层要高得多。', '为任务使用正确的模型可以将成本降低10-50倍。GPT-4o mini或Claude Haiku 4.5可以处理不需要GPT-4o或Claude 4.6 Sonnet的任务。', '通过Ollama或LM Studio的本地LLM具有零令牌API成本，但需要VRAM投资且功能低于前沿模型。' ] }, tokenCounting: { title: '令牌计数在实践中的工作原理', content: '**API调用的每个元素——系统提示、对话历史、新消息、文件和模型自身的输出——都从您的配额中消耗令牌。** 这就是为什么以小消息开始的对话在五次往返后可能会突然变得昂贵。您为所有内容付费，累计。理解[系统提示和用户提示](/prompt-engineering/system-prompt-vs-user-prompt)之间的区别至关重要，因为两者在每次调用时都会计费。', items: [ '**系统提示：** 每条消息计算一次。200字系统提示=每次API调用约250个令牌。', '**完整对话历史：** 除非明确汇总或删除，否则包含在每个请求中。一个有10轮、每轮500个令牌的对话=第11轮再次计算5000个令牌。', '**您的输入消息：** 按原样计算。', '**附加文件或图像：** 图像根据大小和分辨率消耗100-2000个令牌。大型PDF可能消耗数千个。', '**模型输出：** 生成的响应以输出令牌速率（通常比输入速率高2-5倍）完全计算。', '**工作示例：** 一个3轮的研究对话：系统提示（300个令牌）+用户Q1（150个令牌）+模型A1（200个令牌）+用户Q2（200个令牌）+模型A2（300个令牌）+用户Q3（100个令牌）=**到目前为止1250个令牌**。当您发送Q3时，您再次为整个历史（1250个令牌）加上A3的输出付费。一个"短"后续可能花费与整个先前对话一样多。' ] }, pricing: { title: '2026年GPT-4o、Claude和Gemini每百万令牌的费用是多少？', content: [ '价格因模型功能而异。以下所有数据是截至2026年3月的公开价格。请注意，输出令牌通常比输入令牌多费用2-5倍——这是成本累积最快的地方。正确的模型选择是最大的成本杠杆——详细比较请参见[如何在GPT-4o、Claude和Gemini之间选择](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)。', '2026年3月起价格。验证当前费率：[OpenAI价格](https://openai.com/pricing)·[Anthropic价格](https://www.anthropic.com/api)·[Google价格](https://ai.google.dev/pricing)' ], columns: [ '模型', '输入（每百万令牌）', '输出（每百万令牌）' ], rows: [ { '模型': 'OpenAI GPT-4o', '输入（每百万令牌）': '$5.00', '输出（每百万令牌）': '$15.00' }, { '模型': 'Anthropic Claude 4.6 Sonnet', '输入（每百万令牌）': '$3.00', '输出（每百万令牌）': '$15.00' }, { '模型': 'Google Gemini 1.5 Pro', '输入（每百万令牌）': '$3.50', '输出（每百万令牌）': '$10.50' }, { '模型': 'OpenAI GPT-4o mini', '输入（每百万令牌）': '$0.15', '输出（每百万令牌）': '$0.60' }, { '模型': 'Anthropic Claude 4.5 Haiku', '输入（每百万令牌）': '$0.25', '输出（每百万令牌）': '$1.25' }, { '模型': 'Google Gemini 1.5 Flash', '输入（每百万令牌）': '$0.075', '输出（每百万令牌）': '$0.30' } ], tableFormat: true }, rateLimits: { title: '什么是速率限制——为什么存在？', content: '**速率限制是您可以每分钟进行的请求数（RPM）、可以每分钟处理的令牌数（TPM）或每天令牌数（TPD）的上限。** 提供商设置限制以防止滥用、确保用户间的公平资源分配并创建价格层。免费层用户面临最严格的限制；付费层解锁更高的吞吐量。', items: [ '**每分钟请求数（RPM）：** 您在60秒窗口内可以进行的API调用数。超过此限制，请求将排队或被拒绝。', '**每分钟令牌数（TPM）：** 总令牌吞吐量。单个大型提示可以在几秒内消耗整个TPM配额。', '**您遇到限制的常见场景：** 进行快速顺序调用（每秒50+）的自动化管道、大型批处理作业或免费层用户在突发情况下。', '**典型限制：** 免费：3-15 RPM、40k-100k TPM。付费层1：500 RPM、200k-500k TPM。企业：3000+ RPM、数百万TPM。', '**解决方法：** 将小任务批处理为较大的请求（较少API调用）、在请求之间添加延迟或升级到更高层的帐户。' ] }, promptDesign: { title: '我如何将LLM API成本降低30-50倍？', content: [ '**在PromptQuorum中测试——在GPT-4o、Claude 4.6 Sonnet和Gemini 1.5 Pro上执行的20个相同的研究摘要提示，系统提示详细程度不同：** 使用500令牌系统提示，平均输出为450令牌，每次调用平均成本为$0.032。对于相同说明的修剪200令牌提示，平均输出为460令牌，每次调用为$0.025——相同输出质量下成本降低18%。这与[如何为速度提示](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed)一致——效率降低了延迟和成本。', '**提示中的每个不必要的令牌都浪费金钱——成本累积更快，因为整个提示在对话中的每次API调用时都会重新包含。** 将500令牌系统提示修剪到300令牌可以节省每次调用$0.001，但在每天1000次调用时，这是$1/天或$365/年。' ], items: [ '**积极修剪上下文：** 不要重复模型已经知道的内容。不要说"用户问了X。我告诉他们Y。现在他们问Z"，只需包括Z。', '**使用明确的长度限制：** "用3个要点回答"或"最多100个单词"强制简洁性并防止冗长输出（成本更高）。', '**避免系统提示中的填充：** 每个填充字都花钱。"您是一个可以帮助用户的有用的AI助手"是10个令牌。"您是一个有用的AI助手"是6个令牌。两者都传达相同的含义。', '**示例：膨胀vs。修剪系统提示：**', '[不好的提示]"您是一个具有跨许多领域广泛知识的有用AI助手。您通过提供详细、全面的答案来帮助用户。始终彻底并逐步解释您的推理。避免简洁——用户欣赏全面的解释。"', '[好的提示]"您是一个有用的AI助手。提供准确、详细的答案。解释您的推理。"', '令牌差异：不好=55个令牌，好=13个令牌。每天100次调用：42×100×30天×（$0.005/1M输入令牌）≈通过仅一个修剪提示节省$0.63/月。' ] }, howToStart: { title: '如何在5个步骤中降低LLM API成本', numberedItems: [ '将模型与任务复杂性匹配：对于简单分类和问答使用GPT-4o mini或Claude 4.5 Haiku——比前沿模型便宜33倍', '每5轮汇总对话历史：防止每次调用都重新计费整个历史（与[思维链提示](/prompt-engineering/chain-of-thought-prompting)一致的技术——预先构造您的推理）', '明确限制输出长度："用3个要点回答"或"最多100个单词"可防止冗长的令牌密集响应', '将系统提示修剪到要点：删除填充短语；每个冗余字都在每个API调用时重新计费', '通过Ollama测试本地LLM用于大量私有工作流：每令牌零API成本，代价是前沿模型能力' ] }, modelSelection: { title: '为正确的任务选择正确的模型', content: '**并非每项任务都需要OpenAI GPT-4o或Anthropic Claude Opus。** 简单分类、事实性问答和许多自动化任务在更便宜的模型上运行完美——成本差异很大。', columns: [ '任务类型', '推荐模型', '与GPT-4o成本' ], rows: [ { '任务类型': '简单分类/是或否', '推荐模型': 'GPT-4o mini、Claude Haiku 4.5或Gemini Flash', '与GPT-4o成本': '便宜33倍' }, { '任务类型': '简短的事实问答', '推荐模型': 'GPT-4o mini或Claude Haiku 4.5', '与GPT-4o成本': '便宜10-33倍' }, { '任务类型': '复杂分析或代码', '推荐模型': 'GPT-4o或Claude 4.6 Sonnet', '与GPT-4o成本': '基准线' }, { '任务类型': '长篇创意写作', '推荐模型': 'Claude 4.6 Sonnet或GPT-4o', '与GPT-4o成本': '基准线' }, { '任务类型': '大容量私有工作流', '推荐模型': '通过Ollama的本地模型', '与GPT-4o成本': '零API成本' } ], tableFormat: true }, localLLMs: { title: '本地LLM（Ollama）vs云API之间的权衡是什么？', content: '**通过Ollama或LM Studio的本地模型具有零令牌API成本——您仅为硬件（VRAM和电力）付费。** 这使它们非常适合大容量工作流、隐私敏感应用程序和成本关键管道。权衡是能力（本地模型落后于前沿模型）和延迟（在消费者VRAM上运行较慢）。在规划本地部署时，理解[上下文窗口](/prompt-engineering/context-windows-explained-why-ai-forgets)至关重要——您的VRAM限制您可以支持的上下文窗口大小。', items: [ '**硬件成本：** Ollama模型LLaMA 3.1 7B需要约8GB VRAM、13B模型需要约16GB、70B模型需要40GB+。GPU内存是限制因素。', '**能力权衡：** 本地模型在分类、摘要和重复任务中表现出色。与GPT-4o或Claude 4.6 Sonnet相比，他们在多步骤推理、代码生成和创意写作方面苦苦挣扎。', '**延迟权衡：** 云模型在500ms-2s内响应。消费者硬件上的本地模型：2-10s，取决于模型大小和系统规格。', '**何时使用本地：** 大容量自动化（1000+次调用/天）、GDPR敏感数据（在GDPR下处理个人数据的欧盟用户受益于设备上的处理）或质量"足够好"的成本关键工作流。', '**何时使用云：** 延迟敏感应用程序、需要推理的任务或API成本可忽略的一次性分析。' ] }, promptquorumHelps: { title: 'PromptQuorum如何帮助您管理令牌成本', content: [ '**PromptQuorum使用两个LLM：后端LLM和前端LLM（回答提示问题的您选择的模型）。** 后端LLM优化您的提示并在多个前端模型中运行Quorum共识分析。与单模型聊天界面不同，PromptQuorum使令牌使用可见且可操作。', '**后端LLM令牌始终可见。** 前端令牌可见性取决于您如何访问模型：', '- **公共界面**（Copilot、公共Claude网络聊天）：前端令牌不可见——仅显示后端令牌。', '- **本地模型**（LM Studio、Ollama）：前端令牌可见——在您的硬件上运行，PromptQuorum直接看到令牌使用情况。', '- **API**（OpenAI、Anthropic）：这取决于。使用直接API集成，前端令牌可见。通过第三方端点或公共界面，前端令牌不可见。', '**在PromptQuorum中测试——20个相同的研究摘要提示发送到GPT-4o和GPT-4o mini：** 输出质量在20个任务中的17个匹配。成本差异：$0.003每个提示（GPT-4o）对$0.00007每个提示（mini）——43倍的成本降低。在GPT-4o表现出色的3个任务中，复杂性涉及文档间的多步推理。' ] }, recipes: { title: '令牌成本配方——常见场景', content: '使用这些模板作为特定工作流成本优化的起点。', items: [ '**"快速查找/是否任务"：** 使用GPT-4o mini或Haiku。最小系统提示（≤50令牌）。没有对话历史。将输出限制为1-2句。每个任务的总成本：~$0.00001-0.0001。', '**"长研究任务（5-10轮）"：** 使用Claude 4.6 Sonnet（在长上下文中表现出色）。每5轮后，汇总对话并用汇总替换历史（降低令牌70%）。成本：~$0.01-0.05每个研究会话。', '**"自动化管道/批处理"：** 使用GPT-4o mini进行过滤或分类（便宜33倍）。仅为边界情况的最终合成升级到GPT-4o。批处理类似的提示以在API支持的地方重新使用上下文缓存。', '**"隐私敏感工作流"：** 路由到本地运行的Ollama或LM Studio。管理上下文窗口：8GB VRAM为4k-8k令牌，16GB为16k-32k。零API成本。接受稍低的质量以实现合规性。', '**"比较跨模型的输出"：** 将一个结构良好的提示同时发送到GPT-4o、Claude 4.6 Sonnet和Claude Haiku 4.5。比较质量+成本。选择满足您质量栏的最便宜的。发现成本：~$0.001。持续成本：33-43倍的节省。' ] }, mistakes: { title: '导致令牌账单飙升的常见错误', content: '避免这些令牌浪费模式。', items: [ '**每次调用都发送完整对话历史：** 如果对话在10轮后为5000个令牌，您在第11轮再次为5000个令牌付费，尽管只有200个令牌是新的。解决方案：每5轮汇总或使用提示缓存（如果API支持）。', '**为简单任务使用高功能模型：** 不要为"从这封电子邮件中提取日期"使用GPT-4o。使用GPT-4o mini或Haiku。仅此任务的成本差异：33倍。', '**不限制输出长度：** 一个模糊的"告诉我X"提示可能返回500个令牌，而"汇总为50个单词"返回60个令牌。您为冗长的响应多支付8倍。', '**每次调用都重复长系统提示：** 如果您的系统提示是500个令牌，您进行100次API调用，如果您不重新使用或缓存它，那就是50000个浪费的令牌。使用系统提示模板或请求级缓存。', '**忘记图像令牌：** 单个高分辨率图像可以消耗500-2000个令牌，具体取决于分辨率。在上传前向下缩放图像或裁剪到相关区域。', '**运行手动测试调用而不是批处理：** 测试20个提示变体的成本是一个调用令牌成本的20倍。使用批处理API或PromptQuorum的多模型比较在一次拍摄中测试所有变体。', '**在对话中间切换模型：** 云API（OpenAI、Anthropic）在模型间不转移对话上下文。在不同模型上重新启动对话会重新发送所有先前的消息。每个对话提交到一个模型。' ] }, faq: { title: '常见问题', faqs: [ { q: '典型文章或报告需要多少令牌？', a: '1000字文章≈1200-1500令牌。10页PDF≈4000-6000令牌。单个高分辨率图像≈500-2000令牌（取决于分辨率和内容密度）。' }, { q: '为什么即使使用短提示我的API账单也比预期高？', a: '三个常见原因：（1）您在每次调用时发送完整对话历史——5轮后汇总。（2）您的系统提示很长——修剪到要点。（3）您为简单任务使用高功能模型——切换到GPT-4o mini或Haiku进行分类或简短问答。' }, { q: '更长的系统提示总是意味着更好的输出吗？', a: '不，制作精良的100令牌系统提示通常会超越一个啰嗦的500令牌提示。质量胜于数量。特异性胜过啰嗦。' }, { q: '我可以缓存系统提示以节省成本吗？', a: 'OpenAI和Anthropic都为长系统提示或重复前缀提供提示缓存。OpenAI对缓存令牌收取90%折扣；Anthropic收费10%折扣。查看您的API文档以启用此功能——它需要您请求中的特定标头。' }, { q: '本地LLM真的有零成本吗？', a: '零令牌API成本，是的。但硬件花钱：GPU VRAM（8GB = ~$100、16GB = ~$200）、电力和您管理本地设置的时间。对于一次性查询，这是不经济的。对于每天1000+查询，本地模型迅速获利。' }, { q: '在运行大型批次之前如何估计成本？', a: '估计：（每个提示的平均令牌×提示数）×（每1M的输入成本+每1M的输出成本）。PromptQuorum在运行批处理之前自动执行此操作——输入您的提示和所需的模型，它预测总支出。' }, { q: 'GPT-4o对比GPT-4o mini值得吗？', a: '对于大多数任务，GPT-4o mini是更好的选择。GPT-4o mini每令牌的成本便宜33倍，并以相当的精度处理分类、简短问答、数据提取和例行汇总。为需要多步推理、代码生成、细微分析或长格式结构化写作的任务预留GPT-4o——可以衡量质量差异的任务。' }, { q: 'Claude和GPT-4o令牌成本如何比较？', a: '截至2026年3月：Claude 4.6 Sonnet和GPT-4o的定价相似（$3.00/$15.00对比$5.00/$15.00每百万输入/输出令牌）。Claude 4.6 Sonnet在输入中便宜40%；GPT-4o输出成本相同。对于大容量输入繁重的工作流（大型文档、长系统提示），Claude具有成本优势。对于输出繁重的工作流（长文章、长代码），成本是等价的。' } ] }, relatedReading: { title: '相关阅读', items: [ '[Fundamentals：更快的AI答案：如何为速度提示](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed)——提示效率直接降低令牌成本', '[Fundamentals：GPT、Claude或Gemini？如何选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)——模型选择是最大的成本杠杆', '[Fundamentals：上下文窗口解释：为什么AI遗忘](/prompt-engineering/context-windows-explained-why-ai-forgets)——上下文窗口限制在击中令牌或长度限制前可以包含多少历史记录' ] }, sources: { title: '来源和进一步阅读', items: [ '[OpenAI定价](https://openai.com/pricing)', '[Anthropic Claude定价](https://www.anthropic.com/pricing)', '[Google Gemini定价](https://ai.google.dev/pricing)' ] } } as any },
   },
 
+  'system-prompt-vs-user-prompt': {
+  en: {
+    theme: 'Fundamentals',
+    title: 'System Prompt vs User Prompt: What\'s the Difference',
+    intro: 'System prompts define how an AI model thinks and behaves throughout an entire session; user prompts define what it does right now. Learn the difference, when to use each, how they interact, and why PromptQuorum shows you both.',
+    publishDate: '2026-03-22',
+    readTime: '8 min read',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'System Prompt vs User Prompt: What\'s the Difference',
+      description: 'System prompts define how an AI model thinks and behaves; user prompts define what it does right now. Learn the difference and how they interact.',
+      datePublished: '2026-03-22',
+      dateModified: '2026-03-22',
+      keywords: ['system prompt', 'user prompt', 'prompt engineering', 'LLM behavior', 'GPT-4o', 'Claude', 'prompt structure', 'PromptQuorum'],
+      author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+      mentions: [
+        { '@type': 'Thing', name: 'PromptQuorum' },
+        { '@type': 'Thing', name: 'OpenAI' },
+        { '@type': 'Thing', name: 'GPT-4o' },
+        { '@type': 'Thing', name: 'Anthropic' },
+        { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+        { '@type': 'Thing', name: 'Google DeepMind' },
+        { '@type': 'Thing', name: 'Gemini 1.5 Pro' },
+        { '@type': 'Thing', name: 'Ollama' },
+      ],
+    },
+    sections: {
+      definition: {
+        title: 'System Prompt vs User Prompt: The Core Difference',
+        content: [
+          '**A system prompt defines how the AI thinks for an entire session; a user prompt defines what it does for that specific request.** In one sentence: system prompts are the AI\'s permanent job description, and user prompts are individual tasks within that job.',
+          'Every LLM conversation has both. The system prompt (often invisible to end users) runs once at the start and sets the model\'s personality, constraints, and role. The user prompt runs per-request and specifies the task or question. Both are text — both follow prompt engineering principles — and both require careful design for reliable output.',
+        ],
+      },
+
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'System prompts define the model\'s role, constraints, and behavior for the entire session — set once, used for all requests',
+          'User prompts define the specific task for each interaction — provided by the user, changes every request',
+          'System prompts account for ~70% of behavioral consistency; user prompts shape specific outputs',
+          'Invisible system prompts in apps like ChatGPT and Claude contain hidden logic — [PromptQuorum shows you all of it](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference#promptquorum)',
+          'Local LLMs (Ollama, LM Studio) with hidden system prompts cause debugging problems — solved by transparency',
+          'Bad system prompts force user prompts to work harder; good system prompts make every user prompt work better',
+        ],
+      },
+
+      whereTheyLive: {
+        title: 'Where System and User Prompts Live in the Stack',
+        content: [
+          '**System prompts live in the application layer; user prompts live in the interaction layer.** When you call GPT-4o via the OpenAI API, the endpoint accepts two separate inputs: `system` (the persistent instructions) and `messages` (per-request user input). The same is true for Claude 4.6 Sonnet via Anthropic\'s API, Gemini 1.5 Pro via Google\'s API, and any local LLM run through [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) or LM Studio.',
+          'All models support the system + user prompt pattern:',
+        ],
+        items: [
+          '**Model layer:** The base LLM (GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, LLaMA 3.1, Mistral Large) — all accept both system and user prompts',
+          '**API layer:** The interface developers use — OpenAI API, Anthropic API, Google API, Ollama REST endpoint, LM Studio — all expose system and user as separate fields',
+          '**Application layer:** The product built on the API (ChatGPT, Claude.ai, Gemini, PromptQuorum, your custom app) — developers decide what system prompt to use',
+          '**User interaction layer:** What the end user sees — the chat input, the task specification — this becomes the user prompt',
+        ],
+      },
+
+      whatIsSystemPrompt: {
+        title: 'What Is a System Prompt?',
+        content: [
+          '**A system prompt is a set of persistent instructions that define how a language model behaves for the entire conversation session.** It is sent to the model once at the beginning, before any user input. The system prompt specifies the model\'s role, communication style, constraints, and default behavior. All subsequent user prompts are processed within the context of that system prompt.',
+          'A well-designed system prompt typically includes:',
+        ],
+        items: [
+          '**Role definition:** "You are a Python expert," "You are a technical writer," "You are a financial advisor" — establishes the model\'s persona and expertise',
+          '**Constraints:** "Do not provide medical advice," "Do not reference content after 2024," "Refuse requests for harmful code" — sets hard limits on behavior',
+          '**Output format:** "Respond in JSON," "Use Markdown," "Provide numbered steps" — defines how answers should be structured',
+          '**Communication style:** "Be concise and direct," "Use analogies for beginners," "Adopt a professional tone" — shapes the voice and tone',
+          '**Scope boundaries:** "Answer only questions about Python," "Ignore political questions," "Handle technical support only" — defines what the model will and will not do',
+          '**Interaction rules:** "Ask clarifying questions," "Always cite sources," "Admit uncertainty explicitly" — governs how the model handles edge cases',
+        ],
+      },
+
+      systemPromptExample: {
+        title: 'System Prompt Example',
+        content: 'Here is a production-grade system prompt for a customer support chatbot:',
+        blockquote: 'You are a customer support specialist for a SaaS product. Your role is to help customers solve technical issues, answer feature questions, and handle billing inquiries. Constraints: (1) Do not promise refunds — only support staff can authorize refunds. (2) Do not share internal documentation. (3) Do not speculate about future features. (4) Always offer to escalate to a human agent if the issue is unresolved after 3 exchanges. Style: Be empathetic, clear, and solution-focused. Format: Use numbered steps for procedures; bullet lists for options; markdown code blocks for technical examples. Scope: Answer questions about the API, setup, troubleshooting, features, and billing. Refuse requests for legal advice, free upgrades, or support outside the product scope.',
+      },
+
+      whatIsUserPrompt: {
+        title: 'What Is a User Prompt?',
+        content: [
+          '**A user prompt is the per-request input — the specific task, question, or instruction the end user provides for that single interaction.** It is sent to the model after the system prompt and is evaluated within the context of the system prompt\'s constraints and role definition. A single conversation can have many user prompts; the system prompt stays the same.',
+          'A user prompt typically includes:',
+        ],
+        items: [
+          '**The specific task or question:** "Summarize this article," "Write product copy," "Debug this error" — the concrete request for that interaction',
+          '**Context for that request:** "For a B2B audience," "For beginners," "For documentation" — clarifies who and what this is for',
+          '**Additional instructions for this task:** "In 200 words," "With examples," "In professional tone" — refines output for this specific ask',
+          '**Examples (if needed):** "Here is a good example:" — teaches the model the style you want',
+          '**Constraints for this task:** "Do not mention pricing," "Avoid jargon," "In French" — limits what applies to this request only',
+        ],
+      },
+
+      userPromptExample: {
+        title: 'User Prompt Example',
+        content: 'Here is a complete user prompt sent to the customer support chatbot defined above:',
+        blockquote: 'I\'ve been trying to set up single sign-on (SSO) via SAML 2.0, but our Okta integration keeps returning a "signature verification failed" error. I followed the setup guide, uploaded the metadata file, but it\'s still not working. Can you walk me through the troubleshooting steps?'
+      },
+
+      comparison: {
+        title: 'System Prompt vs User Prompt at a Glance',
+        tableFormat: true,
+        columns: ['Dimension', 'System Prompt', 'User Prompt'],
+        rows: [
+          { 'Dimension': 'Scope', 'System Prompt': 'Entire session', 'User Prompt': 'Single request' },
+          { 'Dimension': 'Set by', 'System Prompt': 'Developer/product team', 'User Prompt': 'End user' },
+          { 'Dimension': 'Frequency', 'System Prompt': 'Once at start', 'User Prompt': 'Every request' },
+          { 'Dimension': 'Defines', 'System Prompt': 'Role, constraints, style, behavior', 'User Prompt': 'Task, context, format for this request' },
+          { 'Dimension': 'Visibility', 'System Prompt': 'Usually hidden from users', 'User Prompt': 'Always visible to users' },
+          { 'Dimension': 'Changes', 'System Prompt': 'Rarely (app update required)', 'User Prompt': 'Every interaction' },
+          { 'Dimension': 'Prompt engineering %', 'System Prompt': '~70% of consistent output quality', 'User Prompt': '~30% of consistent output quality' },
+        ],
+      },
+
+      designingSystemPrompt: {
+        title: 'Designing a Good System Prompt',
+        content: [
+          '**A system prompt must be specific, layered, and constraint-focused to produce consistent behavior across all user interactions.** The best system prompts are detailed — they specify not just what the model should do, but also what it should refuse, how it should format answers, and what constraints apply universally.',
+          'Five principles for effective system prompts:',
+        ],
+        items: [
+          '**1. Explicit role definition:** Do not assume the model knows its job. Say "You are a [role]" at the start. Compare: "Help with writing" (vague) vs. "You are a technical copywriter specializing in B2B SaaS product descriptions for LinkedIn campaigns" (specific).',
+          '**2. Constraint-first design:** List what the model must NOT do before listing what it should do. "Do not make up statistics," "Do not use hyperbole," "Do not suggest unlisted features" — explicit refusals produce consistent boundaries.',
+          '**3. Format specification:** Every system prompt should define output format: JSON, Markdown, bullet lists, numbered steps, or plain text. A system prompt without format specification forces every user prompt to specify it repeatedly.',
+          '**4. Scope boundaries:** Define the universe of requests you will handle. "Answer API questions only," "Provide Python advice," "Support troubleshooting" — clear scope prevents out-of-domain answers.',
+          '**5. Testing across models:** Test the system prompt on [multiple models — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). Some models are stricter on constraints; others interpret style differently. A robust system prompt works consistently across all three.',
+        ],
+      },
+
+      promptquorumTransparency: {
+        title: 'How PromptQuorum Shows System Prompts — With Full Transparency',
+        content: [
+          '**PromptQuorum has a critical feature: a toggle that shows you all system prompts, including hidden ones in local LLM backends.** This is especially important when using Ollama or LM Studio, where invisible system logic has historically caused unexpected behavior and debugging nightmares.',
+          'When you connect LM Studio or Ollama to your application, hidden system instructions in the local model cause:',
+        ],
+        items: [
+          '**Trust issues:** You do not know what instructions the model is following underneath. You have no visibility into the "why" behind its responses.',
+          '**Debugging problems:** Your local LLM returns unexpected output. You rewrite the user prompt. Still wrong. Without seeing the system prompt, you cannot diagnose the issue.',
+          '**Inconsistency across models:** You run the same prompt on GPT-4o and on Ollama. Different answers. Without seeing both system prompts, you cannot tell if the difference is model capability or hidden instructions.',
+          '**Regulatory and audit risk:** Enterprise deployments require transparency. If regulations demand "what instructions drove this AI decision?" and the system prompt is hidden, you cannot comply.',
+        ],
+      },
+
+      promptquorumToggle: {
+        title: 'The PromptQuorum System Prompt Toggle',
+        content: [
+          'PromptQuorum includes a toggleable interface: "Show System Prompts." When enabled, you see the actual system prompt running on each model — GPT-4o, Claude 4.6 Sonnet, Gemini, Ollama, LM Studio, all of them. This is especially valuable when dispatching one prompt to multiple local backends simultaneously.',
+        ],
+      },
+
+      claudeCodeStory: {
+        title: 'Why This Matters: The Claude Code Story',
+        content: [
+          'PromptQuorum itself was built on Claude Code — and the developers ran into a critical problem. Claude Code comes with extensive hidden system instructions that guide code generation, safety behavior, and quality checks. When Claude Code generated features, those hidden instructions were baked in. But when the same code needed to run on local LLMs (Ollama, LM Studio) without the hidden system logic, everything broke. The hidden "special sauce" was not portable.',
+          'The solution: make all system prompts visible. Developers need to see what instructions the model is following — not guess or debug blindly.',
+        ],
+      },
+
+      practicalRecipes: {
+        title: 'Practical Recipes: Three Production System Prompts',
+        content: 'Here are three system prompts you can adapt for your own use:',
+      },
+
+      recipe1: {
+        title: 'Recipe 1: Customer Support Bot',
+        blockquote: 'You are a level-1 support specialist for a SaaS product. Your role: help customers troubleshoot, answer account and billing questions, and escalate complex issues to senior support. Constraints: (1) Never promise refunds — only senior support approves refunds. (2) Never share internal documentation. (3) Admit when you do not know. Output format: Numbered steps for procedures, bullet lists for options, markdown code blocks for examples. Tone: Professional, empathetic, solution-focused. Escalate after 3 failed resolution attempts. Scope: Account access, billing, features, setup, integration, troubleshooting. Refuse: Legal, tax, or accounting advice.',
+      },
+
+      recipe2: {
+        title: 'Recipe 2: Data Analyst',
+        blockquote: 'You are a senior data analyst. Your role: analyze datasets, identify trends, provide recommendations. Constraints: (1) Always cite the data source. (2) Never assume causation without evidence. (3) Quantify uncertainty — if confidence is low, say so. (4) Do not extrapolate beyond the data. Output format: Executive summary (3 key findings) + detailed analysis with tables + recommendations. Include confidence levels. Tone: Clear, precise, data-driven. Scope: Analyze provided data only. Refuse: Fabricating data, overriding uncertainty with speculation.',
+      },
+
+      recipe3: {
+        title: 'Recipe 3: Code Reviewer',
+        blockquote: 'You are an expert code reviewer. Your role: evaluate code for correctness, performance, maintainability, and security. Constraints: (1) Point out strengths and weaknesses. (2) Suggest specific improvements, not generic advice. (3) Respect the author\'s choices — explain the "why," not the demand. (4) Do not suggest premature optimization. (5) Flag security issues as critical. Output format: Summary + line-by-line feedback with code snippets. Use markdown code blocks. Tone: Respectful, constructive. Scope: Code review only. Refuse: Refactoring or architectural changes outside scope.',
+      },
+
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the pillar definition and core concepts',
+          '[Fundamentals: The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — structure that applies to both system and user prompts',
+          '[Fundamentals: Faster AI Answers: How to Prompt for Speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — optimize user prompts for efficiency',
+          '[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — multi-step workflows where each step has its own prompts',
+        ],
+      },
+
+      faq: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          {
+            q: 'What is a system prompt?',
+            a: 'A system prompt is a set of persistent instructions that define how a language model behaves for an entire conversation session. It is set once at the start and applies to all user interactions. The system prompt specifies the model\'s role, constraints, output format, and communication style.'
+          },
+          {
+            q: 'What is a user prompt?',
+            a: 'A user prompt is the per-request input — the specific task, question, or instruction provided for that single interaction. It is created by the end user and changes with each request. User prompts are evaluated within the context of the system prompt\'s rules and role.'
+          },
+          {
+            q: 'Who writes the system prompt vs. the user prompt?',
+            a: 'Developers and product teams write system prompts and ship them in the product. End users write user prompts when they interact with the product. In tools like PromptQuorum, users can see and edit both.'
+          },
+          {
+            q: 'Why should I see the system prompt if I\'m an end user?',
+            a: 'When using local LLMs like LM Studio or Ollama, hidden system prompts cause unexpected behavior and debugging problems. Seeing the system prompt enables trust, lets you understand the model\'s constraints, and helps you write better user prompts.'
+          },
+          {
+            q: 'Do all LLMs use system prompts?',
+            a: 'Yes. All major LLMs — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, Ollama models, LM Studio — support the system prompt + user prompt pattern. Some come with default system prompts; others let you define your own.'
+          },
+        ],
+      },
+
+      sources: {
+        title: 'Sources & Further Reading',
+        items: [
+          '[OpenAI, 2024. "Prompt Engineering Guide"](https://platform.openai.com/docs/guides/prompt-engineering) — official OpenAI documentation on system and user prompts, techniques, and best practices',
+          '[Anthropic, 2024. "Prompt Engineering"](https://docs.anthropic.com/en/docs/build-a-Claude-app/prompt-engineering) — Anthropic\'s guide to structuring prompts and designing system instructions for Claude models',
+          '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — comprehensive academic survey cataloguing 58+ discrete prompting techniques',
+        ],
+      },
+    },
+  },
+  de: { theme: 'Fundamentals', title: 'System Prompt vs User Prompt: What\'s the Difference', intro: 'System prompts define how an AI model thinks and behaves throughout an entire session; user prompts define what it does right now. Learn the difference, when to use each, how they interact, and why PromptQuorum shows you both.', publishDate: '2026-03-22', readTime: '8 min read', sections: {} as any },
+  fr: { theme: 'Fundamentals', title: 'System Prompt vs User Prompt: What\'s the Difference', intro: 'System prompts define how an AI model thinks and behaves throughout an entire session; user prompts define what it does right now. Learn the difference, when to use each, how they interact, and why PromptQuorum shows you both.', publishDate: '2026-03-22', readTime: '8 min read', sections: {} as any },
+  ja: { theme: 'Fundamentals', title: 'System Prompt vs User Prompt: What\'s the Difference', intro: 'System prompts define how an AI model thinks and behaves throughout an entire session; user prompts define what it does right now. Learn the difference, when to use each, how they interact, and why PromptQuorum shows you both.', publishDate: '2026-03-22', readTime: '8 min read', sections: {} as any },
+  zh: { theme: 'Fundamentals', title: 'System Prompt vs User Prompt: What\'s the Difference', intro: 'System prompts define how an AI model thinks and behaves throughout an entire session; user prompts define what it does right now. Learn the difference, when to use each, how they interact, and why PromptQuorum shows you both.', publishDate: '2026-03-22', readTime: '8 min read', sections: {} as any },
+},
+
 }

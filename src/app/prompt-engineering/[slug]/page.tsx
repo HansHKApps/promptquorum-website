@@ -120,7 +120,8 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
   const article = peContent[key][selectedLang] || peContent[key]['en']
   const canonicalUrl = `https://www.promptquorum.com/prompt-engineering/${slug}`
 
-  const articleSchema = {
+  // Use article.schema if defined; otherwise fallback to generic Article schema
+  const articleSchema = article.schema || {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: article.title,
