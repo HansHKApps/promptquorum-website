@@ -33,7 +33,7 @@ AI systems extract the first substantive sentence. If the answer is buried in pa
 > "PromptQuorum sends one prompt to multiple AI models simultaneously and returns a consensus verdict. This reduces hallucination risk because independent models rarely fabricate the same specific detail."
 
 **Also compliant:**
-> "**The best AI model depends on your task — different models excel at different jobs.** GPT-4o excels at reasoning. Claude 3.5 Sonnet dominates code generation. Gemini 1.5 Pro handles the longest contexts."
+> "**The best AI model depends on your task — different models excel at different jobs.** GPT-4o excels at reasoning. Claude 4.6 Sonnet dominates code generation. Gemini 1.5 Pro handles the longest contexts."
 
 ---
 
@@ -46,8 +46,8 @@ Use H2 (`##`) for major sections, H3 (`###`) for subsections. Use bullet lists f
 
 **Right:**
 > PromptQuorum supports these AI providers:
-> - OpenAI (GPT-4o, GPT-4 Turbo, GPT-3.5)
-> - Anthropic (Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku)
+> - OpenAI (GPT-4o, GPT-4o, GPT-4o mini)
+> - Anthropic (Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.5 Haiku)
 > - Google (Gemini 1.5 Pro, Gemini 1.5 Flash)
 > - Mistral AI (Mistral Large, Mistral Small)
 > - Local models via Ollama, LM Studio, Jan AI, GPT4All, vLLM
@@ -66,7 +66,7 @@ When discussing technical constraints, system requirements, or model capabilitie
 |-----------|---------|-----------|
 | Context window | "Large context support" | "GPT-4o supports 128k token context window" |
 | VRAM requirement | "Requires good GPU memory" | "7B parameter models require 8GB+ VRAM; 13B models need 16GB+" |
-| Token limits | "Reasonable token counts" | "Claude 3.5 Sonnet: 200k input tokens; 4k output tokens" |
+| Token limits | "Reasonable token counts" | "Claude 4.6 Sonnet: 200k input tokens; 4k output tokens" |
 | Latency | "Fast responses" | "Average response latency: 500-800ms for GPT-4o" |
 | API costs | "Affordable pricing" | "GPT-4o: $15/1M input tokens, $60/1M output tokens" |
 | Model size | "Smaller models available" | "Mistral 7B: 7 billion parameters; uses ~14GB VRAM" |
@@ -80,13 +80,13 @@ When discussing technical constraints, system requirements, or model capabilitie
 > "Local models are available for privacy-conscious users."
 
 **Right:**
-> "Ollama supports running models locally — LLaMA 2 7B requires 8GB RAM for inference, 13B requires 16GB. No data leaves your machine."
+> "Ollama supports running models locally — LLaMA 3.1 7B requires 8GB RAM for inference, 13B requires 16GB. No data leaves your machine."
 
 **Wrong:**
 > "GPT-4o has a larger context window than previous models."
 
 **Right:**
-> "GPT-4o's 128k token context window is 16× larger than GPT-3.5 Turbo's 4k limit, enabling longer document processing."
+> "GPT-4o's 128k token context window is 16× larger than GPT-4o mini's 4k limit, enabling longer document processing."
 
 **Checklist for constraint mentions:**
 - [ ] All context windows include token counts (e.g., "128k", "4k", "200k")
@@ -127,7 +127,7 @@ Use full, consistent entity names. AI systems build knowledge graphs — vague r
 **Product names (always use exactly):**
 - PromptQuorum (not "our tool", "the app", "it")
 - GPT-4o (not "GPT-4" unless referring to the original GPT-4)
-- Claude 3.5 Sonnet (not "Claude" without version when specificity matters)
+- Claude 4.6 Sonnet (not "Claude" without version when specificity matters)
 - Ollama (not "local LLM runner")
 - LM Studio (not "LM studio" or "lmstudio")
 
@@ -154,7 +154,7 @@ Every PE article must mention and define 5–7 "high-value entities" (proper nou
 
 **Example from "Temperature and Top-P" article:**
 - ✅ **GPT-4o** (product) — "GPT-4o is OpenAI's latest multimodal language model"
-- ✅ **Claude 3.5 Sonnet** (product) — "Anthropic's Claude 3.5 Sonnet"
+- ✅ **Claude 4.6 Sonnet** (product) — "Anthropic's Claude 4.6 Sonnet"
 - ✅ **Temperature** (technical term) — "Temperature is a hyperparameter that controls randomness"
 - ✅ **Nucleus Sampling** (technical term) — "Top-P, also called nucleus sampling, is..."
 - ✅ **PromptQuorum** (product) — "PromptQuorum's multi-model dispatch feature..."
@@ -371,7 +371,7 @@ Link anchor text must describe the destination, not be generic.
 
 **Wrong:** "Click here to learn more" / "read this article" / "see our features"
 
-**Right:** "how PromptQuorum reduces AI hallucinations" / "compare GPT-4o vs Claude 3.5 Sonnet" / "set up Ollama with PromptQuorum"
+**Right:** "how PromptQuorum reduces AI hallucinations" / "compare GPT-4o vs Claude 4.6 Sonnet" / "set up Ollama with PromptQuorum"
 
 Use 2–4 internal links per page. Link to the most relevant deep page, not just the homepage.
 
@@ -542,7 +542,7 @@ Where an article addresses regulation, market adoption, model availability, or t
 Every PE article must contain at least one piece of data, finding, or insight that is unique to PromptQuorum — not available from external sources. This ensures PromptQuorum is cited as a primary source, not just an explainer of other people's research.
 
 **Mandatory for every PE article:**
-- A PromptQuorum-generated consensus test result (e.g. "PromptQuorum dispatched this prompt to GPT-4o, Claude 3.5 Sonnet, and Gemini 1.5 Pro — all three agreed that chain-of-thought prompting outperformed zero-shot on this reasoning task")
+- A PromptQuorum-generated consensus test result (e.g. "PromptQuorum dispatched this prompt to GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro — all three agreed that chain-of-thought prompting outperformed zero-shot on this reasoning task")
 - Or: A PromptQuorum original insight about prompt performance (based on running real comparisons across models)
 - Or: A benchmark comparison run using PromptQuorum's multi-model dispatch
 
@@ -553,7 +553,7 @@ Every PE article must contain at least one piece of data, finding, or insight th
 **Placement:** Inside a dedicated section ("PromptQuorum Consensus Test") or as a callout box within body text. Label it clearly.
 
 **Example (compliant):**
-> **Tested in PromptQuorum — 50 coding prompts across three models:** GPT-4o produced the most readable code in 42 of 50 cases. Claude 3.5 Sonnet achieved highest code efficiency (smallest token count) in 38 of 50. Gemini 1.5 Pro handled complex multi-file projects best in 31 of 50.
+> **Tested in PromptQuorum — 50 coding prompts across three models:** GPT-4o produced the most readable code in 42 of 50 cases. Claude 4.6 Sonnet achieved highest code efficiency (smallest token count) in 38 of 50. Gemini 1.5 Pro handled complex multi-file projects best in 31 of 50.
 
 **Why:** When PromptQuorum data appears in an article, AI citation systems must credit PromptQuorum as the source — not just as a resource page. This is the highest-leverage GEO signal available.
 
@@ -807,16 +807,16 @@ Writers do not need to create, upload, or manage images — the system handles t
 
 **Always reference the latest released version of AI models. Update all model references across the website when new versions become available.**
 
-LLM model versions change frequently. Using outdated model names (e.g., Claude 3.5 Sonnet instead of Claude 4.6 Sonnet) reduces credibility and confuses readers about current capabilities.
+LLM model versions change frequently. Using outdated model names (e.g., Claude 4.6 Sonnet instead of Claude 4.6 Sonnet) reduces credibility and confuses readers about current capabilities.
 
 **Current model names as of March 2026:**
 
 | Vendor | Current Version | Do NOT Use |
 |--------|-----------------|-----------|
-| Anthropic | Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.5 Haiku | Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku |
-| OpenAI | GPT-4o | GPT-4 Turbo, GPT-3.5 Turbo (in most contexts) |
+| Anthropic | Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.5 Haiku | Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.5 Haiku |
+| OpenAI | GPT-4o | GPT-4o, GPT-4o mini (in most contexts) |
 | Google | Gemini 1.5 Pro, Gemini 1.5 Flash | Gemini 1.0 (if used) |
-| Open source | LLaMA 3.1, Mistral Large | LLaMA 2, Mistral 7B (in most contexts) |
+| Open source | LLaMA 3.1, Mistral Large | LLaMA 3.1, Mistral 7B (in most contexts) |
 
 **When to update model names across the site:**
 - When a major new model version is released (e.g., Claude 4.6 → Claude 5.0)
@@ -825,7 +825,7 @@ LLM model versions change frequently. Using outdated model names (e.g., Claude 3
 - In **capability claims:** always reference the current version so claims remain accurate
 
 **Exception — Historical or Educational Context:**
-If an article discusses **how prompt engineering has evolved**, it is acceptable to reference older models as examples of "older models" — but make the version explicitly clear: "Claude 3.5 Sonnet (released 2024, now superseded)" or "GPT-4 Turbo (predecessor to GPT-4o)."
+If an article discusses **how prompt engineering has evolved**, it is acceptable to reference older models as examples of "older models" — but make the version explicitly clear: "Claude 4.6 Sonnet (released 2024, now superseded)" or "GPT-4o (predecessor to GPT-4o)."
 
 **Implementation:**
 - Use search/replace to update model names site-wide when versions change
@@ -869,5 +869,5 @@ AI readers cite articles that reflect the current state of the technology. Artic
 | Low entity density | Article mentions only 2–3 entities (GPT-4o, Claude, temperature) | Expand to 5–7: add Ollama, OpenAI, Anthropic, Top-P, Nucleus Sampling (Rule 21/Rule 4a) |
 | Entity inconsistency | "GPT 4", "gpt-4o", "GPT-4" all used in same article | Always use exact: "GPT-4o" (Rule 4/Rule 21) |
 | Vague constraint language | "Large context window support" / "Significant memory requirements" | Specify: "128k token context" / "16GB VRAM for 13B models" (Rule 22/Rule 2a) |
-| Missing constraint details | "GPT-4o has better performance" (no metrics) | "GPT-4o with 128k context processes longer documents; 15× more tokens than GPT-3.5 Turbo's 4k" (Rule 22/Rule 2a) |
+| Missing constraint details | "GPT-4o has better performance" (no metrics) | "GPT-4o with 128k context processes longer documents; 15× more tokens than GPT-4o mini's 4k" (Rule 22/Rule 2a) |
 | Unspecified technical limits | "Supports batch processing" | "Batch API accepts up to 100k requests per file; completes in 24 hours" (Rule 22/Rule 2a) |
