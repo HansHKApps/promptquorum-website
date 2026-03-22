@@ -9,6 +9,7 @@ export const SLUG_TO_POST_ID = {
   'ai-consensus-scoring': 'consensusScoring',
   'promptquorum-vs-askquorum': 'vsAskQuorum',
   'what-is-ai-consensus-scoring': 'whatIsConsensusScoring',
+  'ai-hallucinations-why-ai-makes-things-up': 'hallucinations',
 } as const
 
 export type BlogSlug = keyof typeof SLUG_TO_POST_ID

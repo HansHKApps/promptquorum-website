@@ -17,6 +17,7 @@ const blogPosts = [
   { key: 'consensusScoring' as const, href: '/blog/ai-consensus-scoring' },
   { key: 'vsAskQuorum' as const, href: '/blog/promptquorum-vs-askquorum' },
   { key: 'whatIsConsensusScoring' as const, href: '/blog/what-is-ai-consensus-scoring' },
+  { key: 'hallucinations' as const, href: '/blog/ai-hallucinations-why-ai-makes-things-up' },
 ]
 
 function BlogSectionInner() {

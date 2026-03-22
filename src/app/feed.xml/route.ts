@@ -65,6 +65,12 @@ const POSTS = [
     description: 'Consensus scoring analyses responses from multiple AI models and measures where they agree, where they diverge, and what that pattern tells you about the reliability of an answer.',
     pubDate: 'Mon, 17 Mar 2026 00:00:00 GMT',
   },
+  {
+    slug: 'ai-hallucinations-why-ai-makes-things-up',
+    title: 'AI Hallucinations: Why AI Makes Things Up',
+    description: 'Large language models confidently produce false information. Understanding why hallucinations happen and how to detect and reduce them is essential for anyone using LLMs in real work.',
+    pubDate: 'Mon, 22 Mar 2026 00:00:00 GMT',
+  },
 ]
 
 export function GET() {
