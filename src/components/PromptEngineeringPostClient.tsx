@@ -334,7 +334,7 @@ function PromptEngineeringPostContent({ slug }: Props) {
   const colors = THEME_COLORS[article.theme] ?? THEME_COLORS['Fundamentals']
 
   return (
-    <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6">
+    <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6" key={`${slug}-${lang}`}>
       <div className="max-w-3xl mx-auto">
 
         {/* Breadcrumb + language */}
