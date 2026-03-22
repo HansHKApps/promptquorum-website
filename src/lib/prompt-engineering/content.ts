@@ -5631,4 +5631,223 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Fundamentals', title: 'Beyond Text: How to Prompt With Images', intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 3.5 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.', publishDate: '2026-03-25', readTime: '12 min read', sections: imagesWithTextZh },
   },
 
+  'tokens-costs-limits': {
+    en: {
+      theme: 'Fundamentals',
+      title: 'Tokens, Costs & Limits: The Economics of AI Prompting',
+      intro: 'Every AI API call is measured and billed in tokens — the unit that controls both what the model can process and how much you pay. Understanding tokens is the foundation of efficient, cost-effective prompting.',
+      publishDate: '2026-03-22',
+      readTime: '13 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Tokens, Costs & Limits: The Economics of AI Prompting',
+        description: 'Learn how tokens control AI costs and limits. Understand pricing models, rate limits, and strategies to optimize spending across GPT-4o, Claude, Gemini, and local models.',
+        datePublished: '2026-03-22',
+        dateModified: '2026-03-22',
+        url: 'https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting',
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/tokens-costs-limits-economics-of-ai-prompting', width: 1200, height: 630 },
+        keywords: ['tokens', 'API costs', 'rate limits', 'prompt engineering', 'GPT-4o', 'Claude', 'Gemini', 'cost optimization', 'local LLMs'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        mentions: [
+          { '@type': 'Thing', name: 'OpenAI GPT-4o' },
+          { '@type': 'Thing', name: 'Anthropic Claude 3.5 Sonnet' },
+          { '@type': 'Thing', name: 'Google Gemini 1.5 Pro' },
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'Ollama' },
+          { '@type': 'Thing', name: 'LM Studio' },
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Token economics' },
+          { '@type': 'Thing', name: 'API cost optimization' },
+          { '@type': 'Thing', name: 'Rate limits' },
+          { '@type': 'Thing', name: 'Local LLMs' },
+        ],
+      },
+      sections: {
+        definition: {
+          title: 'What Is a Token?',
+          content: [
+            '**A token is the smallest unit of text an AI model processes, approximately 3–4 characters or ¾ of an English word.** In English text, "ChatGPT" counts as 2 tokens, and "Hello, how are you?" is roughly 5–6 tokens. Other languages tokenise less efficiently — the same phrase in German or Japanese may consume 20–40% more tokens. You are billed for every token in your prompt (input) and every token the model outputs.',
+            'Models do not "think" in words or characters. Internally, they convert your text into token IDs and process those numerically. This is why tokenisation matters: a single character change can sometimes affect the token boundary, and a poorly organised prompt with redundant words can waste hundreds of tokens without improving output quality.',
+            'In one sentence: a token is the smallest unit of text an AI model processes, approximately 3–4 characters or ¾ of an English word, and you are billed for every token in and every token out.'
+          ]
+        },
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'Tokens are the unit of AI cost and processing. Approximately 3–4 characters = 1 token in English; other languages require more tokens.',
+            'You pay separately for input tokens and output tokens — output tokens typically cost 2–5× more. So long verbose outputs are where costs spike.',
+            'Token counting includes system prompts, full conversation history, attached files, and images — not just your latest message.',
+            'Rate limits (requests per minute, tokens per minute) exist to prevent abuse and ensure fair resource allocation. Free tiers have strict limits; paid tiers are much higher.',
+            'Using the right model for the task reduces cost by 10–50×. GPT-4o mini or Haiku can handle tasks that don\'t need GPT-4o or Claude 3.5 Sonnet.',
+            'Local LLMs via Ollama or LM Studio have zero per-token API cost but require VRAM investment and have lower capabilities than frontier models.'
+          ]
+        },
+        tokenCounting: {
+          title: 'How Token Counting Works in Practice',
+          content: '**Every element of your API call — system prompt, conversation history, new message, files, and the model\'s own output — consumes tokens from your quota.** This is why a conversation that started with a small message can suddenly become expensive after five turns of back-and-forth. You\'re paying for all of it, accumulated.',
+          items: [
+            '**System prompt:** Counted once per message. A 200-word system prompt = ~250 tokens on every API call.',
+            '**Full conversation history:** Included on every request unless explicitly summarised or dropped. A 10-turn conversation with 500 tokens per turn = 5,000 tokens counted again on turn 11.',
+            '**Your input message:** Counted as-is.',
+            '**Attached files or images:** Images consume 100–2,000 tokens each depending on size and resolution. Large PDFs can consume thousands.',
+            '**Model output:** The generated response is counted in full at output token rates (usually 2–5× higher than input rates).',
+            '**Worked example:** A 3-turn research conversation: System prompt (300 tokens) + User Q1 (150 tokens) + Model A1 (200 tokens) + User Q2 (200 tokens) + Model A2 (300 tokens) + User Q3 (100 tokens) = **1,250 tokens so far**. When you send Q3, you pay for the entire history again (1,250 tokens) plus the output of A3. A single "short" follow-up can cost as much as the entire prior conversation.'
+          ]
+        },
+        pricing: {
+          title: 'Pricing Models Across Cloud Providers',
+          content: 'Prices vary dramatically based on model capability. All figures below are public pricing as of March 2026. Note that output tokens typically cost 2–5× more than input tokens — this is where costs accumulate fastest.',
+          columns: ['Model', 'Input (per 1M tokens)', 'Output (per 1M tokens)'],
+          rows: [
+            { 'Model': 'OpenAI GPT-4o', 'Input (per 1M tokens)': '$5.00', 'Output (per 1M tokens)': '$15.00' },
+            { 'Model': 'Anthropic Claude 3.5 Sonnet', 'Input (per 1M tokens)': '$3.00', 'Output (per 1M tokens)': '$15.00' },
+            { 'Model': 'Google Gemini 1.5 Pro', 'Input (per 1M tokens)': '$3.50', 'Output (per 1M tokens)': '$10.50' },
+            { 'Model': 'OpenAI GPT-4o mini', 'Input (per 1M tokens)': '$0.15', 'Output (per 1M tokens)': '$0.60' },
+            { 'Model': 'Anthropic Claude 3 Haiku', 'Input (per 1M tokens)': '$0.25', 'Output (per 1M tokens)': '$1.25' },
+            { 'Model': 'Google Gemini 1.5 Flash', 'Input (per 1M tokens)': '$0.075', 'Output (per 1M tokens)': '$0.30' },
+          ],
+          tableFormat: true
+        },
+        rateLimits: {
+          title: 'Rate Limits — What They Are and Why They Exist',
+          content: '**Rate limits are caps on how many requests you can make per minute (RPM), how many tokens you can process per minute (TPM), or how many tokens per day (TPD).** Providers impose limits to prevent abuse, ensure fair resource allocation across users, and create pricing tiers. Free-tier users face the strictest limits; paid tiers unlock much higher throughput.',
+          items: [
+            '**Requests per minute (RPM):** The number of API calls you can make in a 60-second window. Exceed this and requests are queued or rejected.',
+            '**Tokens per minute (TPM):** The total token throughput. A single large prompt can consume your entire TPM quota in seconds.',
+            '**Common scenarios where you hit limits:** Automated pipelines making rapid sequential calls (50+ per second), large batch-processing jobs, or free-tier users in burst situations.',
+            '**Typical limits:** Free tier: 3–15 RPM, 40k–100k TPM. Paid tier 1: 500 RPM, 200k–500k TPM. Enterprise: 3,000+ RPM, millions of TPM.',
+            '**Workaround strategies:** Batch small tasks into larger requests (fewer API calls), add delays between requests, or upgrade to a higher-tier account.'
+          ]
+        },
+        promptDesign: {
+          title: 'How Prompt Design Directly Controls Your Costs',
+          content: '**Every unnecessary token in your prompt wastes money — and the costs accumulate faster because your entire prompt is reincluded on every API call in a conversation.** Trimming a 500-token system prompt to 300 tokens saves $0.001 per call, but on 1,000 calls per day, that\'s $1/day or $365/year.',
+          items: [
+            '**Trim context aggressively:** Don\'t repeat what the model already knows. Instead of "The user asked X. I told them Y. Now they ask Z," just include Z.',
+            '**Use explicit length constraints:** "Answer in 3 bullets." or "Maximum 100 words." forces brevity and prevents verbose outputs (which cost more).',
+            '**Avoid padding in system prompts:** Every filler word costs money. "You are an expert assistant who helps users" is 10 tokens. "You are an expert assistant" is 6 tokens. Both convey the same meaning.',
+            '**Example: Bloated vs Trimmed System Prompt:**',
+            '[Bad Prompt] "You are a helpful AI assistant with extensive knowledge across many domains. You help users by providing detailed, comprehensive answers to their questions. Always be thorough and explain your reasoning step by step. Avoid being concise — users appreciate thorough explanations."',
+            '[Good Prompt] "You are an expert assistant. Provide accurate, detailed answers. Explain your reasoning."',
+            'Token difference: Bad = 55 tokens, Good = 13 tokens. On 100 calls per day: 42 × 100 × 30 days × ($0.005 / 1M input tokens) ≈ $0.63/month saved by just one trimmed prompt.'
+          ]
+        },
+        modelSelection: {
+          title: 'Choosing the Right Model for the Right Task',
+          content: '**Not every task requires OpenAI GPT-4o or Anthropic Claude Opus.** Simple classification, factual Q&A, and many automated tasks run perfectly on cheaper models — and the cost difference is dramatic.',
+          columns: ['Task Type', 'Recommended Model', 'Cost vs GPT-4o'],
+          rows: [
+            { 'Task Type': 'Simple classification / yes-no', 'Recommended Model': 'GPT-4o mini, Haiku, or Flash', 'Cost vs GPT-4o': '33× cheaper' },
+            { 'Task Type': 'Short factual Q&A', 'Recommended Model': 'GPT-4o mini or Haiku', 'Cost vs GPT-4o': '10–33× cheaper' },
+            { 'Task Type': 'Complex analysis or code', 'Recommended Model': 'GPT-4o or Claude 3.5 Sonnet', 'Cost vs GPT-4o': 'baseline' },
+            { 'Task Type': 'Long-form creative writing', 'Recommended Model': 'Claude 3.5 Sonnet or GPT-4o', 'Cost vs GPT-4o': 'baseline' },
+            { 'Task Type': 'High-volume private workflows', 'Recommended Model': 'Local model via Ollama', 'Cost vs GPT-4o': 'zero API cost' },
+          ],
+          tableFormat: true
+        },
+        localLLMs: {
+          title: 'Local LLMs — When Cost Goes to Zero (and What You Trade)',
+          content: '**Local models via Ollama or LM Studio have zero per-token API cost — you only pay for the hardware (VRAM and electricity).** This makes them ideal for high-volume workflows, privacy-sensitive applications, and cost-critical pipelines. The trade-offs are capability (local models lag frontier models) and latency (running on consumer VRAM is slower).',
+          items: [
+            '**Hardware costs:** Ollama models like LLaMA 2 7B require ~8GB VRAM, 13B models need ~16GB, 70B models need 40GB+. GPU memory is the limiting factor.',
+            '**Capability trade-off:** Local models are excellent at classification, summarisation, and repetitive tasks. They struggle with multi-step reasoning, code generation, and creative writing compared to GPT-4o or Claude 3.5 Sonnet.',
+            '**Latency trade-off:** Cloud models respond in 500ms–2s. Local models on consumer hardware: 2–10s depending on model size and system specs.',
+            '**When to use local:** High-volume automation (1,000+ calls/day), GDPR-sensitive data (EU users processing personal data under GDPR benefit from on-device processing with no external API calls), or cost-critical workflows where quality is "good enough."',
+            '**When to use cloud:** Latency-sensitive applications, tasks requiring reasoning, or one-off analyses where API cost is negligible.'
+          ]
+        },
+        promptquorumHelps: {
+          title: 'How PromptQuorum Helps You Manage Token Costs',
+          content: [
+            '**PromptQuorum is a multi-model dispatch platform that makes the cost dimension visible and actionable.** Unlike single-model chat interfaces, PromptQuorum lets you see token usage, compare costs across models, and route high-volume workloads to local models — reducing unnecessary spending.',
+            '**Tested in PromptQuorum — 20 identical research-summary prompts dispatched to GPT-4o and GPT-4o mini:** Output quality matched on 17 of 20 tasks. Cost difference: $0.003 per prompt (GPT-4o) vs $0.00007 per prompt (mini) — a 43× cost reduction. On the 3 tasks where GPT-4o outperformed, complexity involved multi-step reasoning across documents.'
+          ],
+          items: [
+            '**Built-in token counter:** PromptQuorum tracks token usage for cloud APIs (OpenAI, Anthropic, Google) and local models (Ollama, LM Studio) simultaneously. This is unique — Ollama and LM Studio don\'t provide token metrics natively.',
+            '**Model routing for cost optimization:** Send one prompt to multiple models (GPT-4o, GPT-4o mini, Haiku, local LLaMA). Compare output quality vs token cost and pick the cheapest model that meets your bar.',
+            '**Local LLM integration:** Route high-volume or privacy-sensitive workflows to Ollama or LM Studio. PromptQuorum manages context window sizing to fit VRAM constraints — the "cost" equivalent for local models.',
+            '**Cost forecasting:** Before running a batch of 10,000 prompts, PromptQuorum estimates total API spend based on model choice and prompt length. Avoid surprises.'
+          ]
+        },
+        recipes: {
+          title: 'Token Cost Recipes — Common Scenarios',
+          content: 'Use these templates as starting points for optimizing costs in specific workflows.',
+          items: [
+            '**"Quick lookup / yes-no task":** Use GPT-4o mini or Haiku. Minimal system prompt (≤50 tokens). No conversation history. Constrain output to 1–2 sentences. Total cost per task: ~$0.00001–0.0001.',
+            '**"Long research task (5–10 turns)":** Use Claude 3.5 Sonnet (excellent at long context). After every 5 turns, summarise the conversation and replace history with a summary (cuts tokens by 70%). Cost: ~$0.01–0.05 per research session.',
+            '**"Automated pipeline / batch processing":** Use GPT-4o mini for filtering or classification (33× cheaper). Only escalate to GPT-4o for final synthesis on borderline cases. Batch similar prompts to reuse context caching where the API supports it.',
+            '**"Privacy-sensitive workflow":** Route to Ollama or LM Studio running locally. Manage context window: 4k–8k tokens for 8GB VRAM, 16k–32k for 16GB. Zero API costs. Accept slightly lower quality for compliance.',
+            '**"Comparing outputs across models":** Send one well-structured prompt to GPT-4o, Claude 3.5 Sonnet, and Haiku simultaneously. Compare quality + cost. Pick the cheapest that meets your quality bar. Discovery cost: ~$0.001. Ongoing cost: 33–43× savings.'
+          ]
+        },
+        mistakes: {
+          title: 'Common Mistakes That Spike Your Token Bill',
+          content: 'Avoid these token-wasting patterns.',
+          items: [
+            '**Sending full conversation history on every call:** If a conversation is 5,000 tokens after 10 turns, you\'re paying 5,000 tokens again on turn 11 even though only 200 tokens are new. Solution: Summarise every 5 turns or use prompt caching if the API supports it.',
+            '**Using a powerful model for simple tasks:** Don\'t use GPT-4o for "extract the date from this email." Use GPT-4o mini or Haiku. Cost difference: 33× on this task alone.',
+            '**Not constraining output length:** A vague "tell me about X" prompt can return 500 tokens when "summarise in 50 words" returns 60 tokens. You pay 8× more for the verbose response.',
+            '**Repeating long system prompts on every call:** If your system prompt is 500 tokens and you make 100 API calls, that\'s 50,000 wasted tokens if you\'re not reusing or caching it. Use system prompt templates or request-level caching.',
+            '**Forgetting image tokens:** A single high-resolution image can consume 500–2,000 tokens depending on resolution. Downscale images or crop to the relevant region before uploading.',
+            '**Running manual test calls instead of batching:** Testing 20 variations of a prompt costs 20× the token cost of one call. Use batch APIs or PromptQuorum\'s multi-model comparison to test all variations in one shot.',
+            '**Switching models mid-conversation:** Cloud APIs (OpenAI, Anthropic) don\'t carry over conversation context between models. Restarting the conversation on a different model re-sends all prior messages. Commit to one model per conversation.'
+          ]
+        },
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'How many tokens is a typical article or report?',
+              a: 'A 1,000-word article ≈ 1,200–1,500 tokens. A 10-page PDF ≈ 4,000–6,000 tokens. A single high-resolution image ≈ 500–2,000 tokens depending on resolution and content density.'
+            },
+            {
+              q: 'Why is my API bill higher than expected even with short prompts?',
+              a: 'Three common causes: (1) You\'re sending full conversation history on every call — summarise after 5 turns. (2) Your system prompt is long — trim it to essentials. (3) You\'re using a powerful model for simple tasks — switch to GPT-4o mini or Haiku for classification or short Q&A.'
+            },
+            {
+              q: 'Does a longer system prompt always mean better output?',
+              a: 'No. A well-crafted 100-token system prompt often outperforms a rambling 500-token prompt. Quality beats quantity. Specificity beats verbosity.'
+            },
+            {
+              q: 'Can I cache my system prompt to save costs?',
+              a: 'OpenAI and Anthropic both offer prompt caching for long system prompts or repeated prefixes. OpenAI charges 90% discount on cached tokens; Anthropic charges 10% discount. Check your API documentation to enable this — it requires a specific header on your request.'
+            },
+            {
+              q: 'Do local LLMs really have zero cost?',
+              a: 'Zero per-token API cost, yes. But hardware costs money: GPU VRAM (8GB = ~$100, 16GB = ~$200), electricity, and your time to manage the local setup. For one-off queries this is uneconomical. For 1,000+ queries per day, local models break even quickly.'
+            },
+            {
+              q: 'How do I estimate costs before running a big batch?',
+              a: 'Estimate: (average tokens per prompt × number of prompts) × (input cost per 1M + output cost per 1M). PromptQuorum does this automatically before you run a batch — input your prompt and desired model, and it forecasts total spend.'
+            }
+          ]
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Fundamentals: Faster AI Answers: How to Prompt for Speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — prompt efficiency directly reduces token costs',
+            '[Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — model selection is the biggest cost lever',
+            '[Fundamentals: Context Windows Explained: Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets) — context windows limit how much history you can include before hitting token or length caps'
+          ]
+        },
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            '[OpenAI Pricing](https://openai.com/pricing)',
+            '[Anthropic Claude Pricing](https://www.anthropic.com/pricing)',
+            '[Google Gemini Pricing](https://ai.google.dev/pricing)'
+          ]
+        }
+      }
+    },
+    de: { theme: 'Fundamentals', title: 'Tokens, Costs & Limits: The Economics of AI Prompting', intro: 'Every AI API call is measured and billed in tokens — the unit that controls both what the model can process and how much you pay. Understanding tokens is the foundation of efficient, cost-effective prompting.', publishDate: '2026-03-22', readTime: '13 min read', sections: {} as any },
+    fr: { theme: 'Fundamentals', title: 'Tokens, Costs & Limits: The Economics of AI Prompting', intro: 'Every AI API call is measured and billed in tokens — the unit that controls both what the model can process and how much you pay. Understanding tokens is the foundation of efficient, cost-effective prompting.', publishDate: '2026-03-22', readTime: '13 min read', sections: {} as any },
+    ja: { theme: 'Fundamentals', title: 'Tokens, Costs & Limits: The Economics of AI Prompting', intro: 'Every AI API call is measured and billed in tokens — the unit that controls both what the model can process and how much you pay. Understanding tokens is the foundation of efficient, cost-effective prompting.', publishDate: '2026-03-22', readTime: '13 min read', sections: {} as any },
+    zh: { theme: 'Fundamentals', title: 'Tokens, Costs & Limits: The Economics of AI Prompting', intro: 'Every AI API call is measured and billed in tokens — the unit that controls both what the model can process and how much you pay. Understanding tokens is the foundation of efficient, cost-effective prompting.', publishDate: '2026-03-22', readTime: '13 min read', sections: {} as any },
+  },
+
 }
