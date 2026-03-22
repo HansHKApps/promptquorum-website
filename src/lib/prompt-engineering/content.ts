@@ -3309,6 +3309,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           columns: ['Type', 'Example', 'Why It Happens', 'Severity'],
         },
 
+        hallucinationTypesList: {
+          isTldr: false,
+          content: '**The seven types of hallucinations are:** invented sources, wrong facts, fabricated URLs and emails, lost context, role drift, overconfident generalization, and internal contradictions.',
+        },
+
         promptDesignIntro: {
           title: 'How Prompt Design Affects Hallucination Risk',
           content: 'Your prompts either encourage or discourage hallucinations. The difference is measurable.',
@@ -3342,6 +3347,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         techniques: {
           title: 'Techniques to Reduce Hallucinations',
+          content: 'Three complementary approaches reduce hallucinations:\n- **Prompt-level:** Add constraints and permission to admit uncertainty in your prompts\n- **System-level:** Use RAG, function calling, or retrieval to ground answers in real data\n- **Model-level:** Run the same prompt across multiple independent models to detect hallucinations by consensus',
         },
 
         technique1: {
@@ -3405,6 +3411,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         consensusTest: {
           title: 'PromptQuorum Consensus Test',
           content: 'We dispatched the same hallucination-prone prompt ("List five published papers on AI consensus scoring") to GPT-4o, Claude 3.5 Sonnet, and Gemini 1.5 Pro. GPT-4o invented one citation completely (a fictional 2024 paper); Claude declined to cite papers it wasn\'t sure about; Gemini cited three real papers but one with an incorrect publication year. Only one citation appeared across all three models. This test demonstrates that consensus across models is a meaningful signal of reliability—and that single-model answers are more likely to contain fabrications.\n\nPromptQuorum automates this: send one prompt to 25+ AI models simultaneously, run consensus analysis across all responses, and get a verdict on which claims have high agreement (more likely reliable) and which have low agreement (worth investigating further). The tool flags exactly which claims contradict, surfaces claims that appear in only one or two responses, and weights model responses by capability—transforming hallucination detection from educated guessing into structured, data-driven analysis.\n\nSee how [multi-model AI reduces hallucinations](/prompt-engineering/consensus-scoring) for a deeper technical explanation.',
+        },
+
+        globalPerspective: {
+          title: 'Global Perspectives on Hallucination Governance',
+          content: 'Hallucination risk and mitigation strategies vary by region and regulatory context. **In Europe**, the EU AI Act emphasizes transparency and error reporting for high-risk AI systems, making hallucination documentation mandatory. Mistral AI (France) has built models with specific focus on reducing hallucinations in EU-compliant applications. **In China**, models like Qwen 2.5 and DeepSeek have different hallucination patterns due to training data composition and tokenization efficiency for CJK (Chinese, Japanese, Korean) languages—these models handle token-to-information ratios differently than English-optimized models. **In Japan**, enterprises operating under METI (Ministry of Economy, Trade and Industry) data governance guidelines increasingly deploy models locally for hallucination-prone tasks to ensure data residency and compliance.\n\nRegardless of region, the core techniques (RAG, consensus checking, human review) remain universally applicable. Choose and verify models based on your regulatory context and language requirements.',
         },
 
         dangerDomains: {

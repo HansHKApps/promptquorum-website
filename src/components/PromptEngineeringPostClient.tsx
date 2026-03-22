@@ -73,9 +73,23 @@ const CATEGORY_ANCHORS: Record<string, string> = {
 
 // Render inline link placeholders like [Techniques: Chain-of-Thought Prompting]
 // as real Next.js links resolved from the title-to-slug map
+// Also handles markdown links: [text](url)
 function renderInlineLinks(text: string) {
-  const parts = text.split(/(\[[^\]]+\])/g)
+  // Split on both markdown links [text](url) and bracketed labels [text]
+  const parts = text.split(/(\[[^\]]+\]\([^\)]+\)|\[[^\]]+\])/g)
   return parts.map((part, i) => {
+    // Handle markdown links: [text](url)
+    const markdownMatch = part.match(/^\[([^\]]+)\]\(([^\)]+)\)$/)
+    if (markdownMatch) {
+      const [, label, url] = markdownMatch
+      return (
+        <Link key={i} href={url} className="text-primary font-medium hover:underline">
+          {label}
+        </Link>
+      )
+    }
+
+    // Handle bracketed labels [text]
     if (part.startsWith('[') && part.endsWith(']')) {
       const label = part.slice(1, -1)
 
@@ -321,7 +335,9 @@ function PromptEngineeringPostContent({ slug }: Props) {
             {article.title}
           </h1>
           <div className="flex items-center gap-4 text-sm text-text-secondary">
-            <span>{article.publishDate}</span>
+            <time dateTime={article.publishDate}>
+              Last updated: {new Date(article.publishDate + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+            </time>
             <span>·</span>
             <span>{article.readTime}</span>
             <span>·</span>
