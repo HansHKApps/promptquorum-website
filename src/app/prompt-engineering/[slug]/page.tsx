@@ -20,13 +20,14 @@ function getTitleForSlug(slug: string): string {
 
 interface PageProps {
   params: Promise<{ slug: string }>
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export async function generateStaticParams() {
   return Object.keys(PE_SLUG_TO_KEY).map((slug) => ({ slug }))
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const { slug } = await params
   const key = PE_SLUG_TO_KEY[slug]
   if (!key) return notFound()
@@ -40,8 +41,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
-  const article = peContent[key]['en']
+  // Extract language from searchParams, default to 'en'
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
+
+  const article = peContent[key][selectedLang] || peContent[key]['en']
   const canonicalUrl = `https://www.promptquorum.com/prompt-engineering/${slug}`
+  const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
 
   return {
     title: `${article.title} | PromptQuorum`,
@@ -62,7 +70,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: canonicalUrl,
       type: 'article',
       siteName: 'PromptQuorum',
-      images: [{ url: `https://www.promptquorum.com/api/og/${slug}`, width: 1200, height: 630 }],
+      images: [{ url: ogImageUrl, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -73,7 +81,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export default async function PromptEngineeringArticlePage({ params }: PageProps) {
+export default async function PromptEngineeringArticlePage({ params, searchParams }: PageProps) {
   const { slug } = await params
   const key = PE_SLUG_TO_KEY[slug]
 
@@ -103,7 +111,13 @@ export default async function PromptEngineeringArticlePage({ params }: PageProps
     )
   }
 
-  const article = peContent[key]['en']
+  // Extract language from searchParams for schema generation
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
+
+  const article = peContent[key][selectedLang] || peContent[key]['en']
   const canonicalUrl = `https://www.promptquorum.com/prompt-engineering/${slug}`
 
   const articleSchema = {

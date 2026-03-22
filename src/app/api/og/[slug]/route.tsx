@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og'
 import { peContent } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
+import type { Language } from '@/lib/blog/blogContent'
 
 export const runtime = 'nodejs'
 
@@ -12,7 +13,13 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
     return new Response('Not Found', { status: 404 })
   }
 
-  const article = peContent[key]['en']
+  // Extract language from query param, default to 'en'
+  const url = new URL(request.url)
+  const lang = (url.searchParams.get('lang') || 'en') as Language
+  const validLangs: Language[] = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+
+  const article = peContent[key][selectedLang] || peContent[key]['en']
   const title = article.title
   const intro = article.intro
 
