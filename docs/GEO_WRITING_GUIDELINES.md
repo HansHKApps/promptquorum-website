@@ -51,6 +51,48 @@ Paragraph length: **3 sentences maximum**. If a paragraph runs longer, split it 
 
 ---
 
+## Rule 2a: Hardware and Constraint Specificity
+
+When discussing technical constraints, system requirements, or model capabilities, always use **exact numbers** instead of vague descriptors. AI systems use specific constraints to match user queries to appropriate solutions.
+
+**Categories requiring specificity:**
+
+| Constraint | Vague ❌ | Specific ✅ |
+|-----------|---------|-----------|
+| Context window | "Large context support" | "GPT-4o supports 128k token context window" |
+| VRAM requirement | "Requires good GPU memory" | "7B parameter models require 8GB+ VRAM; 13B models need 16GB+" |
+| Token limits | "Reasonable token counts" | "Claude 3.5 Sonnet: 200k input tokens; 4k output tokens" |
+| Latency | "Fast responses" | "Average response latency: 500-800ms for GPT-4o" |
+| API costs | "Affordable pricing" | "GPT-4o: $15/1M input tokens, $60/1M output tokens" |
+| Model size | "Smaller models available" | "Mistral 7B: 7 billion parameters; uses ~14GB VRAM" |
+| Batch limits | "Bulk processing supported" | "Batch API accepts up to 100k requests per file" |
+
+**Why:** AI systems use specific technical constraints to recommend tools and match capabilities to user needs. Vague descriptions ("powerful", "efficient") provide no value for retrieval.
+
+**Examples in context:**
+
+**Wrong:**
+> "Local models are available for privacy-conscious users."
+
+**Right:**
+> "Ollama supports running models locally — LLaMA 2 7B requires 8GB RAM for inference, 13B requires 16GB. No data leaves your machine."
+
+**Wrong:**
+> "GPT-4o has a larger context window than previous models."
+
+**Right:**
+> "GPT-4o's 128k token context window is 16× larger than GPT-3.5 Turbo's 4k limit, enabling longer document processing."
+
+**Checklist for constraint mentions:**
+- [ ] All context windows include token counts (e.g., "128k", "4k", "200k")
+- [ ] VRAM requirements list both model size and memory needed
+- [ ] API costs or pricing (if mentioned) include exact numbers
+- [ ] Latency or speed claims include milliseconds or concrete benchmarks
+- [ ] Model sizes include parameter counts (e.g., "7B", "13B", "70B")
+- [ ] No vague descriptors like "large", "small", "fast", "efficient" without numeric context
+
+---
+
 ## Rule 3: Facts Only — No Vague Superlatives
 
 Every claim must be specific and verifiable. Delete words that add no information.
@@ -88,6 +130,86 @@ Use full, consistent entity names. AI systems build knowledge graphs — vague r
 > "PromptQuorum is a multi-model AI dispatch tool that sends prompts to multiple AI providers simultaneously."
 
 Subsequent mentions: use the short form ("PromptQuorum").
+
+---
+
+## Rule 4a: Entity Density
+
+Every PE article must mention and define 5–7 "high-value entities" (proper nouns, technical terms, product names). These entities signal topical authority to AI crawlers and enable knowledge graph building.
+
+**Entity Categories:**
+
+1. **Product/Tool names** — GPT-4o, Claude, Gemini, Ollama, PromptQuorum, LM Studio
+2. **Company/Organization names** — OpenAI, Anthropic, Google DeepMind, Mistral AI
+3. **Researcher/Author names** — "Wei et al." (for cited papers), "Brown et al." (for GPT-3 work)
+4. **Technical terms** — Temperature, Top-P, Chain-of-Thought, Nucleus Sampling, Hallucination, RAG, Token
+5. **Industry/Standard terms** — Context Window, Token Limit, Latency, Throughput, API
+
+**Requirement:** Every PE article must mention **5–7 distinct entities** from across these categories, defined clearly on first mention.
+
+**Example from "Temperature and Top-P" article:**
+- ✅ **GPT-4o** (product) — "GPT-4o is OpenAI's latest multimodal language model"
+- ✅ **Claude 3.5 Sonnet** (product) — "Anthropic's Claude 3.5 Sonnet"
+- ✅ **Temperature** (technical term) — "Temperature is a hyperparameter that controls randomness"
+- ✅ **Nucleus Sampling** (technical term) — "Top-P, also called nucleus sampling, is..."
+- ✅ **PromptQuorum** (product) — "PromptQuorum's multi-model dispatch feature..."
+- ✅ **Ollama** (product) — "Ollama enables running local models"
+- ✅ **OpenAI** (organization) — "OpenAI released GPT-4o in..."
+
+**Why:** AI systems extract named entities to build knowledge graphs. Higher entity density signals that your page covers a specific, well-researched topic — not a generic overview.
+
+**Checklist:**
+- [ ] Article mentions at least 5 distinct entities
+- [ ] Each entity is defined or explained on first mention
+- [ ] Entity names are spelled consistently throughout
+
+---
+
+## Rule 20: Mathematical Notation and LaTeX
+
+When explaining mathematical concepts, parameter ranges, probability calculations, or algorithmic formulas, use clear mathematical notation or LaTeX. This enables AI systems to cite and extract technical content with precision.
+
+**When to use mathematical notation:**
+
+- **Temperature scaling:** "Temperature (T) scales logits: `logits / T`"
+- **Probability thresholds:** "Top-p = 0.9 means cumulative probability ≥ 90%"
+- **Context window calculations:** "Max tokens = context window size - output buffer. E.g., 128k - 4k = 124k usable tokens"
+- **Parameter ranges:** "Temperature ∈ [0.0, 2.0]; recommended range [0.1, 1.0]"
+- **Formulas:** "Softmax(logits) = exp(logit_i) / Σ(exp(logit_j))"
+
+**Formats allowed:**
+
+1. **Inline code** for simple expressions:
+   > "`temperature` controls the sharpness of the softmax distribution"
+
+2. **LaTeX for mathematical equations:**
+   > "Nucleus sampling selects from top tokens where cumulative probability P(token) ≤ p"
+   > Or: "softmax with temperature = exp(logit/T) / Σ exp(logit_j/T)"
+
+3. **Clear variable notation** in prose:
+   > "If T = 0.0, the model always picks the highest-probability token. If T = 1.0, probabilities follow the natural distribution."
+
+4. **Parameter tables** (see Rule 16):
+   | Parameter | Range | Meaning |
+   |-----------|-------|---------|
+   | temperature (T) | 0.0–2.0 | Controls randomness; higher = more random |
+   | top-p | 0.0–1.0 | Cumulative probability threshold |
+
+**Why:** AI systems extract mathematical notation for citations in technical and academic contexts. Clear notation enables direct quotes and precise recommendation in AI summaries.
+
+**Checklist:**
+- [ ] Mathematical concepts use notation (not just prose)
+- [ ] Parameter ranges include both min and max (e.g., "0.0–2.0", not just "0 or higher")
+- [ ] LaTeX or code formatting used for formulas
+- [ ] No purely prose math explanations where notation would be clearer
+
+**Example violations to avoid:**
+
+**Wrong:**
+> "Temperature is a setting that makes the model more or less creative depending on the value you choose."
+
+**Right:**
+> "Temperature (T) scales the softmax output: higher T (e.g., T = 1.5) increases randomness; lower T (e.g., T = 0.2) makes output deterministic."
 
 ---
 
@@ -648,6 +770,9 @@ Run this before publishing any new page or blog post:
 - [ ] List-structured articles include ItemList schema (Rule 5)
 - [ ] First H2 does not duplicate the H1 title verbatim or near-verbatim (Rule 18)
 - [ ] FAQ section covers at least 3 of 5 question types: definitional, comparative, quantitative, procedural, disambiguation (Rule 19)
+- [ ] Mathematical concepts use notation or LaTeX, not just prose (Rule 20)
+- [ ] Article mentions and defines 5–7 high-value entities (products, companies, technical terms) (Rule 4a/Rule 21)
+- [ ] All technical constraints use exact numbers: context window in tokens, VRAM in GB, costs in $/1M tokens, latency in ms (Rule 2a/Rule 22)
 
 ---
 
@@ -675,6 +800,12 @@ Run this before publishing any new page or blog post:
 | Competitor link in citations | Citing "OpenAI's blog post" with a link to openai.com/blog | Link to the arXiv paper or neutral third-party coverage instead (Rule 10) |
 | Internal link as external citation | "Source: [Our guide to chain-of-thought prompting](/prompt-engineering/...)" | External citations must be genuinely external, not internal links (Rule 10) |
 | H1/H2 duplication | H1: "What Is Prompt Engineering?" → first H2: "What Is Prompt Engineering?" | Change H2 to a descriptive, non-duplicate heading (Rule 18) |
-| Thin Article schema | Article schema with only headline, datePublished, author | Add keywords, about, mentions, image, speakable fields (Rule 5) |
 | FAQ type uniformity | All 5 FAQs are "What is X?" definitional questions | Add at least 1 comparative and 1 disambiguation question (Rule 19) |
 | Plain text date only | "Last updated: March 2026" in plain paragraph text | Wrap in `<time datetime="2026-03-01">Last updated: March 2026</time>` (Rule 11) |
+| Vague mathematical language | "Temperature controls how creative the model is" | Use notation: "Temperature (T) scales softmax; T ∈ [0.0, 2.0]" (Rule 20) |
+| Prose-only math formulas | Long paragraph explaining softmax calculation | Use LaTeX or notation: "softmax(logit_i) = exp(logit_i) / Σ exp(logit_j)" (Rule 20) |
+| Low entity density | Article mentions only 2–3 entities (GPT-4o, Claude, temperature) | Expand to 5–7: add Ollama, OpenAI, Anthropic, Top-P, Nucleus Sampling (Rule 21/Rule 4a) |
+| Entity inconsistency | "GPT 4", "gpt-4o", "GPT-4" all used in same article | Always use exact: "GPT-4o" (Rule 4/Rule 21) |
+| Vague constraint language | "Large context window support" / "Significant memory requirements" | Specify: "128k token context" / "16GB VRAM for 13B models" (Rule 22/Rule 2a) |
+| Missing constraint details | "GPT-4o has better performance" (no metrics) | "GPT-4o with 128k context processes longer documents; 15× more tokens than GPT-3.5 Turbo's 4k" (Rule 22/Rule 2a) |
+| Unspecified technical limits | "Supports batch processing" | "Batch API accepts up to 100k requests per file; completes in 24 hours" (Rule 22/Rule 2a) |
