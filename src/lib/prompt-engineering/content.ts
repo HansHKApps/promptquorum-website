@@ -3563,6 +3563,253 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     },
   },
 
+  'temperature-and-top-p': {
+    en: {
+      theme: 'Fundamentals',
+      title: 'Temperature and Top-P: Control AI Creativity',
+      intro: 'Temperature and top-p control how adventurous or conservative an AI\'s word choices are. By tuning these settings, you trade off creativity versus reliability—higher values produce surprising, varied outputs; lower values produce safe, predictable ones.',
+      publishDate: '2026-03-22',
+      readTime: '10 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Temperature and Top-P: Control AI Creativity',
+        description: 'Learn how temperature and top-p control AI randomness. Practical settings for coding, summaries, brainstorming, and balancing creativity with reliability across GPT-4o, Claude, Gemini.',
+        datePublished: '2026-03-22',
+        dateModified: '2026-03-22',
+        author: { '@type': 'Person', name: 'Hans Kuepper' },
+        keywords: ['temperature', 'top-p', 'nucleus sampling', 'AI randomness', 'LLM settings', 'creativity', 'GPT-4o', 'Claude', 'Gemini', 'prompt tuning'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Claude 3.5 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 1.5 Pro' },
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
+        ],
+      },
+      sections: {
+        definition: {
+          title: 'What Are Temperature and Top-P?',
+          content: [
+            '**Temperature is a knob that makes the model\'s output more random (higher) or more deterministic (lower).** At temperature 0.0, the model always picks the single most likely next word—producing identical output on every run. At temperature 1.0+, the model considers riskier alternatives, producing surprising and varied text.',
+            '**Top-p (nucleus sampling) controls how many likely word options the model considers at each step.** Instead of "how random," think of it as "how many plausible choices." At top-p 0.1, the model only considers the very top options until they reach 10% cumulative probability—narrow and safe. At top-p 0.9, it considers a much wider set of possible words—looser and more varied.',
+            'In plain terms: temperature controls "how adventurous," and top-p controls "how many options to consider." Both affect output variety, but in different ways.',
+          ],
+        },
+
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            '**Temperature controls randomness directly:** 0.0–0.3 for deterministic, 0.4–0.7 for balanced, 0.8+ for creative.',
+            '**Top-p controls the range of word options:** lower narrows choices, higher broadens them.',
+            '**Most users should tune one and keep the other at default.** Adjusting both at once makes it impossible to know which setting helped.',
+            '**Prompt design still matters more than slider settings.** Fix vague instructions first, then adjust parameters if needed.',
+            '**Different use cases need different settings:** code demands low temperature, brainstorming rewards higher values.',
+          ],
+        },
+
+        behavior: {
+          title: 'How They Change AI Behaviour',
+          content: [
+            '**Temperature effects:**',
+          ],
+        },
+
+        tempTable: {
+          columns: ['Temperature Range', 'Behaviour', 'Best For'],
+          rows: [
+            { 'Temperature Range': 'Low (0.0–0.3)', 'Behaviour': 'Focused, repetitive, highly stable', 'Best For': 'Tasks requiring exact same answer every time; risk of loops' },
+            { 'Temperature Range': 'Medium (0.4–0.7)', 'Behaviour': 'Balanced stability and variation', 'Best For': 'Most general tasks; recommended starting point' },
+            { 'Temperature Range': 'High (0.8–1.0+)', 'Behaviour': 'Creative, diverse, surprising', 'Best For': 'Brainstorming and variations; risk of hallucinations' },
+          ],
+        },
+
+        toppBehavior: {
+          content: '**Top-p effects:** Low (0.1–0.3) creates very narrow option sets and highly conservative output. Medium (0.5–0.7) balances diversity with stability. High (0.8–1.0) broadens option set and encourages creativity, similar to high temperature. **Important:** Many providers link or cap these settings. OpenAI\'s GPT models often ignore top-p if temperature is explicitly set. Claude lets you control both independently. Always check your provider\'s documentation—the same numbers don\'t mean the same thing across all models.',
+        },
+
+        tradeoff: {
+          title: 'Temperature vs Top-P: Do You Need Both?',
+          content: '**Both settings control randomness, but most users should tune only one and keep the other at a sensible default.** Changing both at once makes it impossible to know which setting produced the effect you want. My experience after tuning thousands of prompts: keep top-p at a default (e.g. 0.9–1.0) and only adjust temperature, unless a specific model recommends otherwise.',
+        },
+
+        strategyTable: {
+          columns: ['Strategy', 'Temperature', 'Top-P', 'When to Use'],
+          rows: [
+            { 'Strategy': 'Deterministic mode', 'Temperature': '0.0–0.2', 'Top-P': '1.0 (default)', 'When to Use': 'Code, data extraction, mission-critical output' },
+            { 'Strategy': 'Balanced default', 'Temperature': '0.5–0.7', 'Top-P': '0.9–1.0', 'When to Use': 'Most general tasks, summaries, explanations' },
+            { 'Strategy': 'Creative/brainstorming', 'Temperature': '0.8–1.0', 'Top-P': '0.9–1.0', 'When to Use': 'Ideation, marketing copy, variations, storytelling' },
+            { 'Strategy': 'High-stability production', 'Temperature': '0.0–0.3', 'Top-P': '0.95', 'When to Use': 'Healthcare, finance, legal, safety-critical' },
+          ],
+        },
+
+        useCases: {
+          title: 'Recommended Settings by Use Case',
+          items: [
+            '**Coding, refactoring, bug fixing:** Temperature 0.1–0.3, top-p 0.95. Syntax must be correct, creativity gets in the way. Lower settings prevent hallucinated function names or logic errors.',
+            '**Summaries and explanations:** Temperature 0.4–0.6, top-p 0.9. You want clarity and consistency, but some variation in phrasing is fine. Low temperature can make summaries mechanical.',
+            '**Brainstorming ideas, marketing copy, creative variations:** Temperature 0.7–1.0, top-p 1.0. Higher settings encourage unexpected combinations and novel phrasings. You\'ll need to filter more outputs, but you\'ll get wilder ideas.',
+            '**Data extraction and structured output:** Temperature 0.0–0.2, top-p 0.95. Format must be exact. Higher randomness invites parsing errors and missing fields.',
+            '**Long-form writing (essays, blog posts):** Temperature 0.6–0.8, top-p 0.9–1.0. Start here and adjust based on feedback. If output feels generic, increase temperature; if it diverges or hallucinates, lower it.',
+            '**Fact-based Q&A (no grounding):** Temperature 0.3–0.5, top-p 0.9. Moderate settings reduce hallucinations while keeping responses natural.',
+          ],
+        },
+
+        promptsAndParams: {
+          title: 'How Prompts and Parameters Work Together',
+          content: [
+            '**Prompt design still matters more than slider settings.** A vague instruction at temperature 0.2 will still produce a bad answer—just a consistent bad answer. A clear, well-structured prompt at any temperature produces better results than a poor prompt with perfect settings. For prompt structure fundamentals, see [Fundamentals: What Is Prompt Engineering?].',
+            'The right workflow is: (1) Design the prompt first with clear task, context, constraints, output format (see [Fundamentals: The 5 Building Blocks Every Prompt Needs]). (2) Test at your target temperature/top-p. (3) Only adjust sliders if you need more or less variation after the prompt is solid.',
+            'Same prompt at different temperatures produces very different styles. At temperature 0.2, outputs are safe and direct. At temperature 0.8, outputs are creative and poetic. Neither is "better"—it depends on your brand voice and use case. For most tasks, fixing the prompt first eliminates the need to fiddle with temperature at all.',
+          ],
+        },
+
+        example: {
+          title: '[Example Prompt]',
+          blockquote: 'Write a short, punchy product tagline for a productivity app. Keep it under 10 words.',
+        },
+
+        lowTemp: {
+          title: 'At Temperature 0.2:',
+          blockquote: '"Get more done in less time."',
+        },
+
+        highTemp: {
+          title: 'At Temperature 0.8:',
+          blockquote: '"Chaos to clarity: where moments transform into momentum."',
+        },
+
+        risk: {
+          title: 'When Higher Creativity Becomes Risky',
+          content: [
+            '**Higher temperature and top-p increase hallucinations, off-topic tangents, and style drift—especially for factual tasks.** Be conservative (temp 0.0–0.5) for: code that goes to production (hallucinated APIs break systems), health and medical advice (wrong information causes harm), finance and legal (accuracy is mandatory), and safety-critical decisions (errors have consequences).',
+            'For tasks grounded in facts, consider pairing lower temperature with [Techniques: RAG Explained: How to Ground AI Answers in Real Data] or explicit source constraints to further reduce errors. See also [Fundamentals: AI Hallucinations: Why AI Makes Things Up] for deeper context on why higher temperatures amplify fabrication.',
+          ],
+        },
+
+        promptquorum: {
+          title: 'How PromptQuorum Helps You Tune Temperature and Top-P',
+          content: [
+            'Normally, testing temperature and top-p settings means running the same prompt many times across multiple models, manually logging outputs, and comparing—time-consuming and hard to track. PromptQuorum streamlines this workflow.',
+            '**Multi-model comparisons:** Send one prompt at different temperature/top-p settings across 25+ models (GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, Mistral, local Ollama models) in a single dispatch. See instantly which model stays stable at higher temperature and which one gives the best creative output at your target setting.',
+            '**Framework-based structure:** PromptQuorum\'s frameworks ensure your instructions, format, and constraints are well-structured before you touch any sliders. This isolates the effect of temperature/top-p from other variables—you\'re not mixing a bad prompt with parameter tuning.',
+            '**Consensus and scoring:** View all outputs side-by-side with Quorum analysis that scores hallucination risk, style consistency, and relevance. Pick the model + settings combination that best fits your task\'s creativity-reliability tradeoff.',
+            '**Local LLM workflows:** Test different temperature/top-p combinations on Ollama or LM Studio without writing scripts, then save the best presets for your workflow.',
+          ],
+        },
+
+        recipes: {
+          title: 'Quick-Start Recipes',
+          content: 'Use these as starting points for your task:',
+        },
+
+        recipeSafe: {
+          items: [
+            '**Safe Factual Mode:** Temperature 0.2, top-p 0.95 | Best for Q&A, summaries, data extraction, fact-based tasks | Output: Reliable, consistent, minimal hallucination',
+            '**Default Balanced Mode:** Temperature 0.5, top-p 0.9 | Best for most general tasks, explanations, general writing | Output: Natural, stable, but with some variation',
+            '**Creative Brainstorming Mode:** Temperature 0.8, top-p 1.0 | Best for ideation, marketing copy, storytelling, variations | Output: Diverse, surprising, lots of options to filter',
+            '**Short-Answer Mode:** Temperature 0.3, top-p 0.95 (pairs with [Fundamentals: Faster AI Answers: How to Prompt for Speed]) | Best for direct responses, quick decisions, concise output | Output: Fast, direct, minimal elaboration',
+            '**Experimental Mode:** Temperature 1.0, top-p 1.0 | Best for exploring model behaviour, understanding limits, research | Output: Unpredictable, highest variation',
+          ],
+        },
+
+        mistakes: {
+          title: 'Common Mistakes with Temperature and Top-P',
+          items: [
+            '**Cranking both to max and expecting reliability.** High temperature + high top-p = maximum randomness. Only do this if you\'re brainstorming or experimenting.',
+            '**Changing both knobs at once.** You won\'t know which setting helped or hurt. Change one, observe, then change the other if needed.',
+            '**Trying to fix a bad prompt with sliders.** A vague instruction at any temperature still produces bad outputs. Fix the prompt first.',
+            '**Forgetting models interpret the same values differently.** Temperature 0.7 on Claude feels different from 0.7 on GPT-4o. Always test your actual model.',
+            '**Not testing enough runs.** One output at temperature 0.5 might be an outlier. Run at least 3–5 times to see the typical behaviour.',
+            '**Setting temperature to 0 and expecting perfect correctness.** Low temperature reduces randomness but doesn\'t eliminate hallucinations. Hallucinations come from training data gaps, not random sampling.',
+            '**Ignoring top-p entirely because your provider ignores it.** Some models do; some don\'t. Check documentation to avoid wasting time adjusting a disabled knob.',
+          ],
+        },
+
+        faqs: {
+          faqs: [
+            {
+              q: 'Should I adjust temperature or top-p first?',
+              a: 'Temperature. It has a more obvious effect. Keep top-p at a default (0.9–1.0) until you have a sense of what temperature does for your task, then fine-tune top-p only if needed.',
+            },
+            {
+              q: 'Why does one model ignore my temperature setting?',
+              a: 'Some models cap or disable temperature and top-p in certain configurations (e.g. OpenAI ignores top-p if temperature is set to 0.0). Check your provider\'s documentation. With PromptQuorum\'s multi-model view, you\'ll spot this immediately.',
+            },
+            {
+              q: 'Can I set temperature to 0 for guaranteed correctness?',
+              a: 'No. Temperature 0.0 means "always pick the most likely word," which is deterministic but not always correct. Hallucinations are about training data gaps and task ambiguity, not random sampling. Combine low temperature with clear prompts and grounding for better reliability.',
+            },
+            {
+              q: 'Why do I still see hallucinations at low temperature?',
+              a: 'Hallucinations happen when the model\'s training data has gaps or the task is ambiguous—not just because of random sampling. A low-temperature setting will be consistent about its hallucinations, but it won\'t eliminate them. Use RAG or explicit source constraints to reduce them.',
+            },
+            {
+              q: 'Do recommended settings differ between GPT-4o, Claude 3.5 Sonnet, and Gemini 1.5 Pro?',
+              a: 'Slightly. All three behave reasonably at temperature 0.5–0.7, but their tolerance for higher temperatures varies. GPT-4o can go higher without becoming incoherent; Claude 3.5 Sonnet is very stable; Gemini 1.5 Pro is more experimental. Test your actual model.',
+            },
+            {
+              q: 'How many runs do I need to compare settings fairly?',
+              a: 'At least 3–5 per setting to see the typical behaviour. More if you\'re working with higher temperatures where output variance is high. PromptQuorum\'s multi-run feature handles this automatically across all models.',
+            },
+          ],
+        },
+
+        relatedReading: {
+          content: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — why prompt structure matters more than parameters',
+            '[The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — how to structure prompts before tuning parameters',
+            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — why lower temperature doesn\'t eliminate hallucinations',
+          ],
+        },
+
+        sources: {
+          content: [
+            '[OpenAI, 2024. "API reference: Temperature and top_p parameters"](https://platform.openai.com/docs/api-reference/chat/create) — official documentation on parameter ranges and effects',
+            '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) — research on nucleus sampling (top-p) and its effects on text quality',
+            '[Anthropic, 2024. "Claude: How to Work with Prompts"](https://docs.anthropic.com/) — Claude-specific guidance on temperature and parameter tuning',
+          ],
+        },
+      },
+    },
+
+    de: {
+      theme: 'Grundlagen',
+      title: 'Temperatur und Top-P: Kontrolliere die KI-Kreativität',
+      intro: 'Temperatur und Top-P kontrollieren, wie abenteuerlich oder konservativ die Wortwahlentscheidungen eines KI-Modells sind.',
+      publishDate: '2026-03-22',
+      readTime: '10 Min. Lesezeit',
+      sections: {},
+    },
+
+    fr: {
+      theme: 'Fondamentaux',
+      title: 'Température et Top-P : Contrôle la créativité de l\'IA',
+      intro: 'La température et le top-p contrôlent comment une IA fait des choix de mots aventureux ou conservateurs.',
+      publishDate: '2026-03-22',
+      readTime: '10 min de lecture',
+      sections: {},
+    },
+
+    ja: {
+      theme: '基礎',
+      title: '温度とTop-P：AI創造性を制御する',
+      intro: '温度とTop-Pは、AIのモデルがどの程度冒険的または保守的な単語選択をするかを制御します。',
+      publishDate: '2026-03-22',
+      readTime: '10分で読める',
+      sections: {},
+    },
+
+    zh: {
+      theme: '基础知识',
+      title: '温度和Top-P：控制AI创造力',
+      intro: '温度和top-p控制AI模型如何进行冒险或保守的词汇选择。',
+      publishDate: '2026-03-22',
+      readTime: '阅读约10分钟',
+      sections: {},
+    },
+  },
+
   'prompt-for-speed': {
     en: {
       theme: 'Fundamentals',
