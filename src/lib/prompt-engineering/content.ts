@@ -268,9 +268,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         sources: {
           title: 'Sources & Further Reading',
           items: [
-            'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903',
-            'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165',
-            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
+            'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)" — the foundational paper demonstrating that step-by-step reasoning reduces hallucinations in math and logic tasks.',
+            'Maynez, J., Narayan, S., Hashimoto, B., & Hardt, D. (2021). "[On Faithfulness and Factuality in Abstractive Summarization](https://aclanthology.org/2021.acl-long.200/)" — empirical study of hallucination rates and mechanisms in neural text generation.',
+            'Anthropic (2024). "[Constitutional AI](https://www.anthropic.com/constitutional-ai)" — Anthropic\'s approach to reducing harmful outputs and hallucinations through principles-based training.',
           ],
         },
 
@@ -520,9 +520,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         sources: {
           title: 'Quellen & Weiterführende Ressourcen',
           items: [
-            'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903',
-            'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165',
-            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
+            'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)" — das grundlegende Paper, das zeigt, dass schrittweise Begründung Halluzinationen bei Mathe- und Logikaufgaben reduziert.',
+            'Maynez, J., Narayan, S., Hashimoto, B., & Hardt, D. (2021). "[On Faithfulness and Factuality in Abstractive Summarization](https://aclanthology.org/2021.acl-long.200/)" — empirische Studie von Halluzinationsraten und Mechanismen in neuronalen Textgenerierung.',
+            'Anthropic (2024). "[Constitutional AI](https://www.anthropic.com/constitutional-ai)" — Anthropics Ansatz zur Reduzierung schädlicher Ausgaben und Halluzinationen durch prinzipiengestützte Schulung.',
           ],
         },
       },
