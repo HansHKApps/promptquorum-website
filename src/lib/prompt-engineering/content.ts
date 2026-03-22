@@ -5652,7 +5652,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         mentions: [
           { '@type': 'Thing', name: 'OpenAI GPT-4o' },
-          { '@type': 'Thing', name: 'Anthropic Claude 3.5 Sonnet' },
+          { '@type': 'Thing', name: 'Anthropic Claude 4.6 Sonnet' },
           { '@type': 'Thing', name: 'Google Gemini 1.5 Pro' },
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'Ollama' },
@@ -5682,7 +5682,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'You pay separately for input tokens and output tokens — output tokens typically cost 2–5× more. So long verbose outputs are where costs spike.',
             'Token counting includes system prompts, full conversation history, attached files, and images — not just your latest message.',
             'Rate limits (requests per minute, tokens per minute) exist to prevent abuse and ensure fair resource allocation. Free tiers have strict limits; paid tiers are much higher.',
-            'Using the right model for the task reduces cost by 10–50×. GPT-4o mini or Haiku can handle tasks that don\'t need GPT-4o or Claude 3.5 Sonnet.',
+            'Using the right model for the task reduces cost by 10–50×. GPT-4o mini or Claude Haiku 4.5 can handle tasks that don\'t need GPT-4o or Claude 4.6 Sonnet.',
             'Local LLMs via Ollama or LM Studio have zero per-token API cost but require VRAM investment and have lower capabilities than frontier models.'
           ]
         },
@@ -5704,10 +5704,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           columns: ['Model', 'Input (per 1M tokens)', 'Output (per 1M tokens)'],
           rows: [
             { 'Model': 'OpenAI GPT-4o', 'Input (per 1M tokens)': '$5.00', 'Output (per 1M tokens)': '$15.00' },
-            { 'Model': 'Anthropic Claude 3.5 Sonnet', 'Input (per 1M tokens)': '$3.00', 'Output (per 1M tokens)': '$15.00' },
+            { 'Model': 'Anthropic Claude 4.6 Sonnet', 'Input (per 1M tokens)': '$3.00', 'Output (per 1M tokens)': '$15.00' },
             { 'Model': 'Google Gemini 1.5 Pro', 'Input (per 1M tokens)': '$3.50', 'Output (per 1M tokens)': '$10.50' },
             { 'Model': 'OpenAI GPT-4o mini', 'Input (per 1M tokens)': '$0.15', 'Output (per 1M tokens)': '$0.60' },
-            { 'Model': 'Anthropic Claude 3 Haiku', 'Input (per 1M tokens)': '$0.25', 'Output (per 1M tokens)': '$1.25' },
+            { 'Model': 'Anthropic Claude 4.5 Haiku', 'Input (per 1M tokens)': '$0.25', 'Output (per 1M tokens)': '$1.25' },
             { 'Model': 'Google Gemini 1.5 Flash', 'Input (per 1M tokens)': '$0.075', 'Output (per 1M tokens)': '$0.30' },
           ],
           tableFormat: true
@@ -5741,10 +5741,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: '**Not every task requires OpenAI GPT-4o or Anthropic Claude Opus.** Simple classification, factual Q&A, and many automated tasks run perfectly on cheaper models — and the cost difference is dramatic.',
           columns: ['Task Type', 'Recommended Model', 'Cost vs GPT-4o'],
           rows: [
-            { 'Task Type': 'Simple classification / yes-no', 'Recommended Model': 'GPT-4o mini, Haiku, or Flash', 'Cost vs GPT-4o': '33× cheaper' },
-            { 'Task Type': 'Short factual Q&A', 'Recommended Model': 'GPT-4o mini or Haiku', 'Cost vs GPT-4o': '10–33× cheaper' },
-            { 'Task Type': 'Complex analysis or code', 'Recommended Model': 'GPT-4o or Claude 3.5 Sonnet', 'Cost vs GPT-4o': 'baseline' },
-            { 'Task Type': 'Long-form creative writing', 'Recommended Model': 'Claude 3.5 Sonnet or GPT-4o', 'Cost vs GPT-4o': 'baseline' },
+            { 'Task Type': 'Simple classification / yes-no', 'Recommended Model': 'GPT-4o mini, Claude Haiku 4.5, or Gemini Flash', 'Cost vs GPT-4o': '33× cheaper' },
+            { 'Task Type': 'Short factual Q&A', 'Recommended Model': 'GPT-4o mini or Claude Haiku 4.5', 'Cost vs GPT-4o': '10–33× cheaper' },
+            { 'Task Type': 'Complex analysis or code', 'Recommended Model': 'GPT-4o or Claude 4.6 Sonnet', 'Cost vs GPT-4o': 'baseline' },
+            { 'Task Type': 'Long-form creative writing', 'Recommended Model': 'Claude 4.6 Sonnet or GPT-4o', 'Cost vs GPT-4o': 'baseline' },
             { 'Task Type': 'High-volume private workflows', 'Recommended Model': 'Local model via Ollama', 'Cost vs GPT-4o': 'zero API cost' },
           ],
           tableFormat: true
@@ -5754,7 +5754,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: '**Local models via Ollama or LM Studio have zero per-token API cost — you only pay for the hardware (VRAM and electricity).** This makes them ideal for high-volume workflows, privacy-sensitive applications, and cost-critical pipelines. The trade-offs are capability (local models lag frontier models) and latency (running on consumer VRAM is slower).',
           items: [
             '**Hardware costs:** Ollama models like LLaMA 2 7B require ~8GB VRAM, 13B models need ~16GB, 70B models need 40GB+. GPU memory is the limiting factor.',
-            '**Capability trade-off:** Local models are excellent at classification, summarisation, and repetitive tasks. They struggle with multi-step reasoning, code generation, and creative writing compared to GPT-4o or Claude 3.5 Sonnet.',
+            '**Capability trade-off:** Local models are excellent at classification, summarisation, and repetitive tasks. They struggle with multi-step reasoning, code generation, and creative writing compared to GPT-4o or Claude 4.6 Sonnet.',
             '**Latency trade-off:** Cloud models respond in 500ms–2s. Local models on consumer hardware: 2–10s depending on model size and system specs.',
             '**When to use local:** High-volume automation (1,000+ calls/day), GDPR-sensitive data (EU users processing personal data under GDPR benefit from on-device processing with no external API calls), or cost-critical workflows where quality is "good enough."',
             '**When to use cloud:** Latency-sensitive applications, tasks requiring reasoning, or one-off analyses where API cost is negligible.'
@@ -5778,10 +5778,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: 'Use these templates as starting points for optimizing costs in specific workflows.',
           items: [
             '**"Quick lookup / yes-no task":** Use GPT-4o mini or Haiku. Minimal system prompt (≤50 tokens). No conversation history. Constrain output to 1–2 sentences. Total cost per task: ~$0.00001–0.0001.',
-            '**"Long research task (5–10 turns)":** Use Claude 3.5 Sonnet (excellent at long context). After every 5 turns, summarise the conversation and replace history with a summary (cuts tokens by 70%). Cost: ~$0.01–0.05 per research session.',
+            '**"Long research task (5–10 turns)":** Use Claude 4.6 Sonnet (excellent at long context). After every 5 turns, summarise the conversation and replace history with a summary (cuts tokens by 70%). Cost: ~$0.01–0.05 per research session.',
             '**"Automated pipeline / batch processing":** Use GPT-4o mini for filtering or classification (33× cheaper). Only escalate to GPT-4o for final synthesis on borderline cases. Batch similar prompts to reuse context caching where the API supports it.',
             '**"Privacy-sensitive workflow":** Route to Ollama or LM Studio running locally. Manage context window: 4k–8k tokens for 8GB VRAM, 16k–32k for 16GB. Zero API costs. Accept slightly lower quality for compliance.',
-            '**"Comparing outputs across models":** Send one well-structured prompt to GPT-4o, Claude 3.5 Sonnet, and Haiku simultaneously. Compare quality + cost. Pick the cheapest that meets your quality bar. Discovery cost: ~$0.001. Ongoing cost: 33–43× savings.'
+            '**"Comparing outputs across models":** Send one well-structured prompt to GPT-4o, Claude 4.6 Sonnet, and Claude Haiku 4.5 simultaneously. Compare quality + cost. Pick the cheapest that meets your quality bar. Discovery cost: ~$0.001. Ongoing cost: 33–43× savings.'
           ]
         },
         mistakes: {
