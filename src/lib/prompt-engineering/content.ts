@@ -5573,14 +5573,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   'prompt-with-images': {
     en: {
       theme: 'Fundamentals',
-      title: 'Beyond Text: How to Prompt With Images — PromptQuorum Guide',
+      title: 'Beyond Text: How to Prompt With Images',
       intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 3.5 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.',
       publishDate: '2026-03-25',
       readTime: '12 min read',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Beyond Text: How to Prompt With Images — PromptQuorum Guide',
+        headline: 'Beyond Text: How to Prompt With Images',
         description: 'Master multimodal prompting with vision-language models. Learn patterns for image analysis, text-to-image generation, image editing, and reliable multimodal outputs.',
         datePublished: '2026-03-25',
         dateModified: '2026-03-25',
@@ -5614,10 +5614,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         sources: { title: 'Sources & Further Reading', items: ['[OpenAI Vision API Documentation](https://platform.openai.com/docs/guides/vision)', '[Anthropic Claude Vision Documentation](https://docs.anthropic.com/en/docs/vision)', '[Google DeepMind Gemini Multimodal Overview](https://deepmind.google/technologies/gemini/)'] },
       },
     },
-    de: { theme: 'Fundamentals', title: 'Beyond Text: How to Prompt With Images — PromptQuorum Guide', intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 3.5 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.', publishDate: '2026-03-25', readTime: '12 min read', sections: {} },
-    fr: { theme: 'Fundamentals', title: 'Beyond Text: How to Prompt With Images — PromptQuorum Guide', intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 3.5 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.', publishDate: '2026-03-25', readTime: '12 min read', sections: {} },
-    ja: { theme: 'Fundamentals', title: 'Beyond Text: How to Prompt With Images — PromptQuorum Guide', intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 3.5 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.', publishDate: '2026-03-25', readTime: '12 min read', sections: {} },
-    zh: { theme: 'Fundamentals', title: 'Beyond Text: How to Prompt With Images — PromptQuorum Guide', intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 3.5 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.', publishDate: '2026-03-25', readTime: '12 min read', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Beyond Text: How to Prompt With Images', intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 3.5 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.', publishDate: '2026-03-25', readTime: '12 min read', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Beyond Text: How to Prompt With Images', intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 3.5 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.', publishDate: '2026-03-25', readTime: '12 min read', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'Beyond Text: How to Prompt With Images', intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 3.5 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.', publishDate: '2026-03-25', readTime: '12 min read', sections: {} },
+    zh: { theme: 'Fundamentals', title: 'Beyond Text: How to Prompt With Images', intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 3.5 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.', publishDate: '2026-03-25', readTime: '12 min read', sections: {} },
   },
 
 }
