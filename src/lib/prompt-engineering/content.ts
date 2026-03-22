@@ -3,6 +3,7 @@ import type { Language } from '@/lib/blog/blogContent'
 export interface PESection {
   title?: string
   content?: string | string[]
+  blockquote?: string
   items?: string[]
   numberedItems?: string[]
   rows?: Array<{ [key: string]: string }>
