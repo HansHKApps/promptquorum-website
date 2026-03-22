@@ -1238,7 +1238,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'From GPT-2 to Today: How Prompt Engineering Evolved',
       intro: 'The history of prompt engineering from GPT-3 and few-shot prompting in 2020 to context design in 2026. Key milestones, papers, and turning points.',
-      publishDate: 'Published March 2026',
+      publishDate: '2026-03-01',
       readTime: '10 min read',
       sections: {
 
@@ -1426,7 +1426,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'Von GPT-2 bis heute: Wie sich Prompt Engineering entwickelt hat',
       intro: 'Die Geschichte des Prompt Engineerings von GPT-3 und Few-Shot-Prompting im Jahr 2020 bis zum Context Design im Jahr 2026.',
-      publishDate: 'Veröffentlicht März 2026',
+      publishDate: '2026-03-01',
       readTime: '10 Min. Lesezeit',
       sections: {
         definition: {
@@ -1796,7 +1796,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: '基礎',
       title: 'GPT-2から現在まで：プロンプトエンジニアリングの進化',
       intro: '2020年のGPT-3とフューショットプロンプティングから2026年のコンテキストデザインまで、プロンプトエンジニアリングの歴史。',
-      publishDate: '2026年3月公開',
+      publishDate: '2026-03-01',
       readTime: '10分で読める',
       sections: {
         definition: {
@@ -2007,7 +2007,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: '基础知识',
       title: '从GPT-2到今天：提示词工程的演变',
       intro: '提示词工程的历史：从2020年的GPT-3和少样本提示到2026年的上下文设计。',
-      publishDate: '发布于2026年3月',
+      publishDate: '2026-03-01',
       readTime: '阅读约10分钟',
       sections: {
         definition: {
