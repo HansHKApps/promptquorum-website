@@ -21,6 +21,7 @@ export const imagesWithTextDe: Record<string, PESection> = {
   modes: {
     title: 'Drei Modi des Multimodalen Prompting',
     content: 'Multimodales Prompting nimmt drei Hauptformen an, jede geeignet für verschiedene Aufgaben.',
+    columns: ['Modus', 'Eingabe', 'Ausgabe', 'Beste Anwendungsfälle'],
     rows: [
       {
         'Modus': 'Bild → Text',
@@ -216,6 +217,7 @@ export const imagesWithTextFr: Record<string, PESection> = {
   modes: {
     title: 'Trois Modes du Prompting Multimodal',
     content: 'Le prompting multimodal prend trois formes principales, chacune adaptée à des tâches différentes.',
+    columns: ['Mode', 'Entrée', 'Sortie', 'Meilleurs Cas d\'Usage'],
     rows: [
       {
         'Mode': 'Image → Texte',
@@ -411,6 +413,7 @@ export const imagesWithTextJa: Record<string, PESection> = {
   modes: {
     title: 'マルチモーダルプロンプティングの3つのモード',
     content: 'マルチモーダルプロンプティングは、さまざまなタスクに適した3つの主要な形式をとります。',
+    columns: ['モード', '入力', '出力', '最適なユースケース'],
     rows: [
       {
         'モード': '画像 → テキスト',
@@ -606,6 +609,7 @@ export const imagesWithTextZh: Record<string, PESection> = {
   modes: {
     title: '多模态提示的三种模式',
     content: '多模态提示有三种主要形式，每种形式适合不同的任务。',
+    columns: ['模式', '输入', '输出', '最佳用例'],
     rows: [
       {
         '模式': '图像 → 文本',
