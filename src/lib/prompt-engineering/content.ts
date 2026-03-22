@@ -5964,6 +5964,23 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'Ollama' },
       ],
     },
+    supplementalSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'name': 'System Prompt vs User Prompt — Key Differences',
+      'description': 'A comparison of system prompts and user prompts across 9 dimensions for AI language models',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Scope', 'description': 'System prompt: entire session. User prompt: single request' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Set by', 'description': 'System prompt: developer or product team. User prompt: end user' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Frequency', 'description': 'System prompt: once at session start. User prompt: every request' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'Defines', 'description': 'System prompt: role, constraints, style, behavior. User prompt: task, context, format for this request' },
+        { '@type': 'ListItem', 'position': 5, 'name': 'Visibility', 'description': 'System prompt: usually hidden from users. User prompt: always visible to users' },
+        { '@type': 'ListItem', 'position': 6, 'name': 'Changes', 'description': 'System prompt: rarely, requires app update. User prompt: every interaction' },
+        { '@type': 'ListItem', 'position': 7, 'name': 'Prompt engineering contribution', 'description': 'System prompt: approximately 70% of consistent output quality. User prompt: approximately 30%' },
+        { '@type': 'ListItem', 'position': 8, 'name': 'Override risk', 'description': 'System prompt: hard to override, persistent, developer-controlled. User prompt: easy to adjust, user-controlled per request' },
+        { '@type': 'ListItem', 'position': 9, 'name': 'Best for', 'description': 'System prompt: role consistency, safety guardrails, output format. User prompt: task-specific detail, context, few-shot examples' },
+      ],
+    },
     sections: {
       definition: {
         title: 'System Prompt vs User Prompt: The Core Difference',
@@ -5979,7 +5996,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         items: [
           'System prompts define the model\'s role, constraints, and behavior for the entire session — set once, used for all requests',
           'User prompts define the specific task for each interaction — provided by the user, changes every request',
-          'System prompts account for ~70% of behavioral consistency; user prompts shape specific outputs',
+          'System prompts account for ~70% of behavioral consistency based on PromptQuorum testing across GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro; user prompts shape specific outputs',
           'Invisible system prompts in apps like ChatGPT and Claude contain hidden logic — [PromptQuorum shows you all of it](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference#promptquorum)',
           'Local LLMs (Ollama, LM Studio) with hidden system prompts cause debugging problems — solved by transparency',
           'Bad system prompts force user prompts to work harder; good system prompts make every user prompt work better',
@@ -5987,7 +6004,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       },
 
       whereTheyLive: {
-        title: 'Where System and User Prompts Live in the Stack',
+        title: 'Where Do System and User Prompts Live in the API Stack?',
         content: [
           '**System prompts live in the application layer; user prompts live in the interaction layer.** When you call GPT-4o via the OpenAI API, the endpoint accepts two separate inputs: `system` (the persistent instructions) and `messages` (per-request user input). The same is true for Claude 4.6 Sonnet via Anthropic\'s API, Gemini 1.5 Pro via Google\'s API, and any local LLM run through [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) or LM Studio.',
           'All models support the system + user prompt pattern:',
@@ -6055,11 +6072,13 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { 'Dimension': 'Visibility', 'System Prompt': 'Usually hidden from users', 'User Prompt': 'Always visible to users' },
           { 'Dimension': 'Changes', 'System Prompt': 'Rarely (app update required)', 'User Prompt': 'Every interaction' },
           { 'Dimension': 'Prompt engineering %', 'System Prompt': '~70% of consistent output quality', 'User Prompt': '~30% of consistent output quality' },
+          { 'Dimension': 'Override risk', 'System Prompt': 'Hard to override — persistent, developer-controlled', 'User Prompt': 'Easy to adjust — user-controlled per request' },
+          { 'Dimension': 'Best for', 'System Prompt': 'Role consistency, safety guardrails, output format', 'User Prompt': 'Task-specific detail, context, few-shot examples' },
         ],
       },
 
       designingSystemPrompt: {
-        title: 'Designing a Good System Prompt',
+        title: 'What Makes an Effective System Prompt?',
         content: [
           '**A system prompt must be specific, layered, and constraint-focused to produce consistent behavior across all user interactions.** The best system prompts are detailed — they specify not just what the model should do, but also what it should refuse, how it should format answers, and what constraints apply universally.',
           'Five principles for effective system prompts:',
@@ -6074,7 +6093,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       },
 
       promptquorumTransparency: {
-        title: 'How PromptQuorum Shows System Prompts — With Full Transparency',
+        title: 'Why Are System Prompts Hidden — and How Can You View Them?',
         content: [
           '**PromptQuorum has a critical feature: a toggle that shows you all system prompts, including hidden ones in local LLM backends.** This is especially important when using Ollama or LM Studio, where invisible system logic has historically caused unexpected behavior and debugging nightmares.',
           'When you connect LM Studio or Ollama to your application, hidden system instructions in the local model cause:',
@@ -6095,7 +6114,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       },
 
       claudeCodeStory: {
-        title: 'Why This Matters: The Claude Code Story',
+        title: 'What Happens When System Prompts Are Hidden? A Real Example',
         content: [
           'PromptQuorum itself was built on Claude Code — and the developers ran into a critical problem. Claude Code comes with extensive hidden system instructions that guide code generation, safety behavior, and quality checks. When Claude Code generated features, those hidden instructions were baked in. But when the same code needed to run on local LLMs (Ollama, LM Studio) without the hidden system logic, everything broke. The hidden "special sauce" was not portable.',
           'The solution: make all system prompts visible. Developers need to see what instructions the model is following — not guess or debug blindly.',
@@ -6154,6 +6173,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           {
             q: 'Do all LLMs use system prompts?',
             a: 'Yes. All major LLMs — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, Ollama models, LM Studio — support the system prompt + user prompt pattern. Some come with default system prompts; others let you define your own.'
+          },
+          {
+            q: 'Can a user prompt override a system prompt?',
+            a: 'Not directly. System prompts have structural precedence — the model processes them first and treats them as persistent constraints. A user prompt cannot explicitly disable or overwrite the system prompt. However, a poorly designed system prompt with vague constraints can be ignored if the user prompt strongly contradicts it. Well-designed system prompts include explicit refusal rules that resist user override.'
+          },
+          {
+            q: 'What happens if there is no system prompt?',
+            a: 'The model falls back to its default training behavior. GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro all have built-in baseline behavior (helpful, harmless, honest) when no system prompt is present. The model will still respond to user prompts, but without role definition, output format constraints, or scope boundaries — results will be less consistent and less specialized.'
           },
         ],
       },
