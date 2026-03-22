@@ -23,6 +23,7 @@ export interface PEArticle {
   readTime: string
   sections: Record<string, PESection>
   schema?: Record<string, unknown>
+  supplementalSchema?: Record<string, unknown>
 }
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
@@ -5714,6 +5715,20 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Local LLMs' },
         ],
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'AI Model Pricing per Million Tokens — March 2026',
+        'description': 'Input and output token costs for major AI models as of March 2026',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'OpenAI GPT-4o', 'description': 'Input: $5.00/1M tokens. Output: $15.00/1M tokens' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Anthropic Claude 4.6 Sonnet', 'description': 'Input: $3.00/1M tokens. Output: $15.00/1M tokens' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Google Gemini 1.5 Pro', 'description': 'Input: $3.50/1M tokens. Output: $10.50/1M tokens' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'OpenAI GPT-4o mini', 'description': 'Input: $0.15/1M tokens. Output: $0.60/1M tokens' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Anthropic Claude 4.5 Haiku', 'description': 'Input: $0.25/1M tokens. Output: $1.25/1M tokens' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Google Gemini 1.5 Flash', 'description': 'Input: $0.075/1M tokens. Output: $0.30/1M tokens' }
+        ]
+      },
       sections: {
         definition: {
           title: 'What Is a Token?',
@@ -5748,8 +5763,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ]
         },
         pricing: {
-          title: 'Pricing Models Across Cloud Providers',
-          content: 'Prices vary dramatically based on model capability. All figures below are public pricing as of March 2026. Note that output tokens typically cost 2–5× more than input tokens — this is where costs accumulate fastest.',
+          title: 'How Much Do GPT-4o, Claude, and Gemini Cost per Million Tokens in 2026?',
+          content: [
+            'Prices vary dramatically based on model capability. All figures below are public pricing as of March 2026. Note that output tokens typically cost 2–5× more than input tokens — this is where costs accumulate fastest.',
+            'Prices as of March 2026. Verify current rates: [OpenAI pricing](https://openai.com/pricing) · [Anthropic pricing](https://www.anthropic.com/api) · [Google pricing](https://ai.google.dev/pricing)'
+          ],
           columns: ['Model', 'Input (per 1M tokens)', 'Output (per 1M tokens)'],
           rows: [
             { 'Model': 'OpenAI GPT-4o', 'Input (per 1M tokens)': '$5.00', 'Output (per 1M tokens)': '$15.00' },
@@ -5762,7 +5780,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           tableFormat: true
         },
         rateLimits: {
-          title: 'Rate Limits — What They Are and Why They Exist',
+          title: 'What Are Rate Limits — and Why Do They Exist?',
           content: '**Rate limits are caps on how many requests you can make per minute (RPM), how many tokens you can process per minute (TPM), or how many tokens per day (TPD).** Providers impose limits to prevent abuse, ensure fair resource allocation across users, and create pricing tiers. Free-tier users face the strictest limits; paid tiers unlock much higher throughput.',
           items: [
             '**Requests per minute (RPM):** The number of API calls you can make in a 60-second window. Exceed this and requests are queued or rejected.',
@@ -5773,7 +5791,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ]
         },
         promptDesign: {
-          title: 'How Prompt Design Directly Controls Your Costs',
+          title: 'How Can I Reduce My LLM API Costs by 30–50×?',
           content: [
             '**Tested in PromptQuorum — 20 identical research-summary prompts executed on GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro with varying levels of system prompt verbosity:** With a 500-token system prompt, average output was 450 tokens at an average cost of $0.032 per call. With the same instructions in a trimmed 200-token prompt, average output was 460 tokens at $0.025 per call — an 18% cost reduction with identical output quality.',
             '**Every unnecessary token in your prompt wastes money — and the costs accumulate faster because your entire prompt is reincluded on every API call in a conversation.** Trimming a 500-token system prompt to 300 tokens saves $0.001 per call, but on 1,000 calls per day, that\'s $1/day or $365/year.'
@@ -5787,6 +5805,16 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[Good Prompt] "You are an expert assistant. Provide accurate, detailed answers. Explain your reasoning."',
             'Token difference: Bad = 55 tokens, Good = 13 tokens. On 100 calls per day: 42 × 100 × 30 days × ($0.005 / 1M input tokens) ≈ $0.63/month saved by just one trimmed prompt.'
           ]
+        },
+        howToStart: {
+          title: 'How to Cut LLM API Costs in 5 Steps',
+          numberedItems: [
+            'Match model to task complexity: use GPT-4o mini or Claude 4.5 Haiku for simple classification and Q&A — 33× cheaper than frontier models',
+            'Summarise conversation history every 5 turns: prevents full history re-billing on every call',
+            'Cap output length explicitly: "Answer in 3 bullets" or "Maximum 100 words" prevents verbose token-heavy responses',
+            'Trim system prompts to essentials: remove filler phrases; every redundant word is re-billed on every API call',
+            'Test local LLMs via Ollama for high-volume private workflows: zero per-token cost at the price of frontier model capability',
+          ],
         },
         modelSelection: {
           title: 'Choosing the Right Model for the Right Task',
@@ -5802,7 +5830,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           tableFormat: true
         },
         localLLMs: {
-          title: 'Local LLMs — When Cost Goes to Zero (and What You Trade)',
+          title: 'What Are the Trade-offs of Local LLMs (Ollama) vs Cloud APIs?',
           content: '**Local models via Ollama or LM Studio have zero per-token API cost — you only pay for the hardware (VRAM and electricity).** This makes them ideal for high-volume workflows, privacy-sensitive applications, and cost-critical pipelines. The trade-offs are capability (local models lag frontier models) and latency (running on consumer VRAM is slower).',
           items: [
             '**Hardware costs:** Ollama models like LLaMA 3.1 7B require ~8GB VRAM, 13B models need ~16GB, 70B models need 40GB+. GPU memory is the limiting factor.',
@@ -5875,6 +5903,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             {
               q: 'How do I estimate costs before running a big batch?',
               a: 'Estimate: (average tokens per prompt × number of prompts) × (input cost per 1M + output cost per 1M). PromptQuorum does this automatically before you run a batch — input your prompt and desired model, and it forecasts total spend.'
+            },
+            {
+              q: 'Is GPT-4o worth the cost vs GPT-4o mini?',
+              a: 'For most tasks, GPT-4o mini is the better choice. GPT-4o mini costs 33× less per token and handles classification, short Q&A, data extraction, and routine summarisation with comparable accuracy. Reserve GPT-4o for tasks requiring multi-step reasoning, code generation, nuanced analysis, or long-form structured writing — tasks where you can measure the quality difference.'
+            },
+            {
+              q: 'How do Claude and GPT-4o token costs compare?',
+              a: 'As of March 2026: Claude 4.6 Sonnet and GPT-4o are priced similarly ($3.00/$15.00 vs $5.00/$15.00 per million input/output tokens). Claude 4.6 Sonnet is 40% cheaper on input; GPT-4o output costs are identical. For high-volume input-heavy workflows (large documents, long system prompts), Claude has a cost advantage. For output-heavy workflows (long essays, long code), costs are equivalent.'
             }
           ]
         },
