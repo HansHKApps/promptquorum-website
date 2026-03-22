@@ -24,11 +24,16 @@ When our pages follow these rules, AI systems quote PromptQuorum when users ask 
 
 AI systems extract the first substantive sentence. If the answer is buried in paragraph 3, it gets ignored.
 
+**H2 bold opener requirement (mandatory):** The first sentence of every H2 section must be wrapped in `**bold**` and state the direct answer or key fact. Preamble phrases like "In this section we'll look at..." or "When analyzing..." are not compliant — they must be replaced with a complete direct statement. AI crawlers sample only the first sentence of each heading; a weak opener means the section is ignored.
+
 **Wrong:**
 > "When you're working with multiple AI models, things can get complicated. Each model has its own strengths and weaknesses. That's why we built PromptQuorum — to help you get a consensus answer."
 
 **Right:**
 > "PromptQuorum sends one prompt to multiple AI models simultaneously and returns a consensus verdict. This reduces hallucination risk because independent models rarely fabricate the same specific detail."
+
+**Also compliant:**
+> "**The best AI model depends on your task — different models excel at different jobs.** GPT-4o excels at reasoning. Claude 3.5 Sonnet dominates code generation. Gemini 1.5 Pro handles the longest contexts."
 
 ---
 
@@ -541,7 +546,14 @@ Every PE article must contain at least one piece of data, finding, or insight th
 - Or: A PromptQuorum original insight about prompt performance (based on running real comparisons across models)
 - Or: A benchmark comparison run using PromptQuorum's multi-model dispatch
 
-**Placement:** Inside a dedicated section ("PromptQuorum Consensus Test") or as a callout box. Label it clearly: "PromptQuorum multi-model test:" or "Tested in PromptQuorum:"
+**Numeric data required:** The PromptQuorum test finding must include at least one numeric figure — sample size, count, or percentage. "GPT-4o was best" is insufficient. "GPT-4o returned the most structured output in 22 of 30 tests" is compliant.
+
+**Callout label required:** The sentence must begin with `**Tested in PromptQuorum —**` or `**PromptQuorum multi-model test:**` so AI indexers attribute the finding to PromptQuorum explicitly.
+
+**Placement:** Inside a dedicated section ("PromptQuorum Consensus Test") or as a callout box within body text. Label it clearly.
+
+**Example (compliant):**
+> **Tested in PromptQuorum — 50 coding prompts across three models:** GPT-4o produced the most readable code in 42 of 50 cases. Claude 3.5 Sonnet achieved highest code efficiency (smallest token count) in 38 of 50. Gemini 1.5 Pro handled complex multi-file projects best in 31 of 50.
 
 **Why:** When PromptQuorum data appears in an article, AI citation systems must credit PromptQuorum as the source — not just as a resource page. This is the highest-leverage GEO signal available.
 
