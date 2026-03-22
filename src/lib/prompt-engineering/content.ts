@@ -1,4 +1,5 @@
 import type { Language } from '@/lib/blog/blogContent'
+import { contextWindowsDe, contextWindowsFr, contextWindowsJa, contextWindowsZh } from './contextWindowsTranslations'
 
 export interface PESection {
   title?: string
@@ -5563,10 +5564,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         sources: { title: 'Sources', items: ['[OpenAI, 2024. "API reference: Models and context windows"](https://platform.openai.com/docs/models) — official documentation on token limits and pricing per model', '[Anthropic, 2024. "Claude model context windows and token costs"](https://docs.anthropic.com/en/docs/about-claude/models/overview) — Claude\'s 200k context window and March 2026 Opus 4.6 1M context announcement', '[Raffel et al., 2020. "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"](https://arxiv.org/abs/1910.10683) — foundational research on context window effects in transformers'] },
       },
     },
-    de: { theme: 'Fundamentals', title: 'Context Windows Explained: Why AI Forgets (and What to Do)', intro: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts to stay within limits, and how to manage context windows across cloud and local models.', publishDate: '2026-03-22', readTime: '11 min read', sections: {} },
-    fr: { theme: 'Fundamentals', title: 'Context Windows Explained: Why AI Forgets (and What to Do)', intro: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts to stay within limits, and how to manage context windows across cloud and local models.', publishDate: '2026-03-22', readTime: '11 min read', sections: {} },
-    ja: { theme: 'Fundamentals', title: 'Context Windows Explained: Why AI Forgets (and What to Do)', intro: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts to stay within limits, and how to manage context windows across cloud and local models.', publishDate: '2026-03-22', readTime: '11 min read', sections: {} },
-    zh: { theme: 'Fundamentals', title: 'Context Windows Explained: Why AI Forgets (and What to Do)', intro: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts to stay within limits, and how to manage context windows across cloud and local models.', publishDate: '2026-03-22', readTime: '11 min read', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Kontextfenster erklärt: Warum KI vergisst (und was Sie tun können)', intro: 'LLMs haben kein Langzeitgedächtnis — sie "sehen" nur ein Schiebefenster mit aktuellen Tokens. Erfahren Sie, warum KI den Kontext vergisst, wie Sie Prompts strukturieren, um innerhalb von Grenzen zu bleiben, und wie Sie Kontextfenster über Cloud- und lokale Modelle hinweg verwalten.', publishDate: '2026-03-22', readTime: '11 Min. Lesezeit', sections: contextWindowsDe },
+    fr: { theme: 'Fundamentals', title: 'Fenêtres de contexte expliquées : Pourquoi l\'IA oublie (et comment y remédier)', intro: 'Les LLM n\'ont pas de mémoire à long terme — ils ne "voient" que une fenêtre glissante de tokens récents. Découvrez pourquoi l\'IA oublie le contexte, comment structurer les prompts pour rester dans les limites, et comment gérer les fenêtres de contexte entre les modèles cloud et locaux.', publishDate: '2026-03-22', readTime: '11 min read', sections: contextWindowsFr },
+    ja: { theme: 'Fundamentals', title: 'コンテキストウィンドウの説明：AIが忘れる理由（と対処法）', intro: 'LLMは長期記憶を持たず、最近のトークンのスライディングウィンドウのみを「見て」います。AIがコンテキストを忘れる理由、制限内にとどまるようにプロンプトを構成する方法、クラウドおよびローカルモデル間でコンテキストウィンドウを管理する方法を学びます。', publishDate: '2026-03-22', readTime: '11分読む', sections: contextWindowsJa },
+    zh: { theme: 'Fundamentals', title: '上下文窗口解释：为什么AI会忘记（以及如何处理）', intro: 'LLM没有长期记忆——它们只能"看到"最近令牌的滑动窗口。了解AI为什么会忘记上下文，如何结构化提示以保持在限制内，以及如何在云和本地模型之间管理上下文窗口。', publishDate: '2026-03-22', readTime: '11分钟阅读', sections: contextWindowsZh },
   },
 
 }
