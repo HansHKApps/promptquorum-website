@@ -3396,7 +3396,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         systemItems: {
           items: [
-            '**Retrieval-Augmented Generation (RAG).** Feed the model a specific document, knowledge base, or dataset and ask it to answer only using that content. This grounds answers in real data instead of the model\'s training data and eliminates hallucinations about missing information. Tools like LangChain and Anthropic\'s [prompt caching](https://docs.anthropic.com/claude/reference/making-requests) implement this pattern.',
+            '**Retrieval-Augmented Generation (RAG).** Feed the model a specific document, knowledge base, or dataset and ask it to answer only using that content. This grounds answers in real data instead of the model\'s training data and eliminates hallucinations about missing information. Tools like LangChain, Anthropic\'s prompt caching, and vector databases implement this pattern.',
             '**Tool calling and function use.** Let the model call external functions for calculations, database lookups, or fact-checking. Instead of inventing a statistic, the model calls a function to retrieve it. This removes the temptation to hallucinate entirely for specific domains.',
             '**Human review and expert verification.** For critical decisions—medical, legal, financial, safety-critical—always have a human (preferably an expert) verify AI-generated answers. No prompt technique replaces expert judgment.',
             '**Automated fact-checking workflows.** Run model outputs through automated systems (fact-checking APIs, URL validation, citation verification) before showing them to users. This catches hallucinations at scale without manual review of every output.',
