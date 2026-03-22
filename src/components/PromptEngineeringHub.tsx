@@ -2,7 +2,10 @@
 
 import Link from 'next/link'
 import { themes, type PETheme } from '@/lib/prompt-engineering/themes'
+import { peContent } from '@/lib/prompt-engineering/content'
+import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { useLang } from '@/hooks/useLang'
+import type { Language } from '@/lib/blog/blogContent'
 
 function navHref(path: string, lang: string) {
   return lang === 'en' ? path : `${path}?lang=${lang}`
@@ -132,60 +135,17 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
   },
 }
 
-// Article titles displayed on the hub — English only for now
-// These will be replaced with translated titles once article content is added
-const ARTICLE_TITLES: Record<string, string> = {
-  // Fundamentals
-  'what-is-prompt-engineering': 'What Is Prompt Engineering?',
-  'how-prompt-engineering-evolved': 'From GPT-2 to Today: How Prompt Engineering Evolved',
-  '5-building-blocks-every-prompt-needs': 'The 5 Building Blocks Every Prompt Needs',
-  'ai-hallucinations-why-ai-makes-things-up': 'AI Hallucinations: Why AI Makes Things Up — and How to Stop Them',
-  'faster-ai-answers-how-to-prompt-for-speed': 'Faster AI Answers: How to Prompt for Speed',
-  'temperature-and-top-p-control-ai-creativity': 'Temperature & Top-P: The Two Dials That Control AI Creativity',
-  'context-windows-explained-why-ai-forgets': 'Context Windows Explained: Why Your AI Forgets',
-  'beyond-text-how-to-prompt-with-images': 'Beyond Text: How to Prompt with Images',
-  'tokens-costs-limits-economics-of-ai-prompting': 'Tokens, Costs & Limits: The Economics of AI Prompting',
-  'system-prompt-vs-user-prompt-whats-the-difference': 'System Prompt vs. User Prompt: What\'s the Difference?',
-  'gpt-claude-or-gemini-how-to-pick-the-right-model': 'GPT, Claude or Gemini? How to Pick the Right Model',
-
-  // Frameworks
-  'which-prompt-framework-should-you-use': 'Which Prompt Framework Should You Use?',
-  'the-single-step-prompt-method': 'The Single-Step Prompt Method',
-  'ape-framework': 'APE Framework',
-  'craft-framework': 'CRAFT Framework',
-  'co-star-framework': 'CO-STAR Framework',
-  'specs-framework': 'SPECS Framework',
-  'risen-framework': 'RISEN Framework',
-  'trace-framework': 'TRACE Framework',
-  'googles-prompting-guide': "Google's Prompting Guide",
-  'rtf-framework': 'RTF Framework',
-  'build-your-own-prompt-framework': 'Build Your Own Framework',
-
-  // Techniques
-  'zero-shot-vs-few-shot': 'Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?',
-  'constrained-prompting': 'Constrained Prompting: How to Set Rules the AI Must Follow',
-  'chain-of-thought-prompting': 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
-  'persona-prompting': 'Persona Prompting: Give Your AI a Role and Watch It Improve',
-  'prompt-chaining': 'Prompt Chaining: How to Break Big Tasks Into Winning Steps',
-  'negative-prompting': 'Negative Prompting: Tell the AI What NOT to Do',
-  'self-consistency-prompting': 'Self-Consistency Prompting: Let the AI Check Its Own Work',
-  'tree-of-thought-and-react': 'Tree of Thought & ReAct: Advanced Reasoning for Hard Problems',
-  'rag-explained': 'RAG Explained: How to Ground AI Answers in Real Data',
-  'structured-output-and-json-mode': 'Structured Output & JSON Mode: Get AI to Return Usable Data',
-
-  // Use Topics — Use Cases by Vertical
-  'write-better-code-with-ai': 'Write Better Code with AI: A Developer\'s Guide',
-  'ai-powered-research': 'AI-Powered Research: How to Research Smarter',
-  'seo-meets-ai': 'SEO Meets AI: How to Prompt for Better Rankings',
-  'teaching-with-ai': 'Teaching with AI: Prompts That Work in the Classroom',
-  'extract-and-summarise': 'Extract & Summarise: How to Pull Key Facts Fast',
-  'ai-code-review': 'AI Code Review: Prompts That Catch Bugs',
-  'prompting-across-languages': 'Prompting Across Languages: How to Get Consistent Results',
-  // Use Topics — Output Engineering
-  'control-the-output': 'Control the Output: JSON, Markdown, Tables and More',
-  'build-quality-checks': 'How to Build Quality Checks Directly Into Your Prompts',
-  'your-brand-voice-ai': 'Your Brand Voice, Your AI: How to Maintain Consistent Tone',
-  'build-a-prompt-library': 'Build a Prompt Library That Saves Hours',
+// Get translated article title from content or fallback
+function getArticleTitle(articleKey: string, lang: Language): string {
+  const contentKey = PE_SLUG_TO_KEY[articleKey]
+  if (contentKey && peContent[contentKey]?.[lang]) {
+    return peContent[contentKey][lang].title
+  }
+  if (contentKey && peContent[contentKey]?.en) {
+    return peContent[contentKey].en.title
+  }
+  // Fallback: capitalize slug if no content found
+  return articleKey.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 }
 
 const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
@@ -195,8 +155,8 @@ const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
   'use-topics': { badge: 'bg-orange-50 text-orange-700 border-orange-200', dot: 'bg-orange-400' },
 }
 
-function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: string; lang: string }) {
-  const title = ARTICLE_TITLES[articleKey] ?? articleKey
+function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: string; lang: Language }) {
+  const title = getArticleTitle(articleKey, lang)
   const href = navHref(`/prompt-engineering/${articleKey}`, lang)
 
   return (
