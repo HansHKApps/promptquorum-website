@@ -1610,8 +1610,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     fr: {
       theme: 'Fondamentaux',
       title: 'De GPT-2 à aujourd\'hui : Comment le prompt engineering a évolué',
-      intro: 'L\'histoire du prompt engineering de GPT-3 et du few-shot prompting en 2020 au context design en 2026.',
-      publishDate: 'Publié mars 2026',
+      intro: 'L\'histoire du prompt engineering de GPT-3 et du prompting few-shot en 2020 à la conception de contexte en 2026.',
+      publishDate: '2026-03-01',
       readTime: '10 min de lecture',
       sections: {
         definition: {
@@ -3629,7 +3629,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         "safePrompts": {
                 "title": "Prompts, die das Halluzinationsrisiko reduzieren:",
                 "items": [
-                        "\"Sie können \\"Ich weiß nicht\\" sagen, wenn Sie unsicher sind\" – explizite Erlaubnis, Wissenslücken einzugestehen",
+                        "\"Sie können \\\"Ich weiß nicht\\\" sagen, wenn Sie unsicher sind\" – explizite Erlaubnis, Wissenslücken einzugestehen",
                         "\"Verwenden Sie nur Informationen aus dem unten stehenden Kontext\" – begrenzt die Antwort auf bereitgestellte Daten, nicht erfundenes Wissen",
                         "\"Trennen Sie Fakten von Meinungen. Markieren Sie unsichere Ansprüche [UNSICHER]\" – zwingt das Modell zu differenzieren",
                         "\"Zitieren Sie Ihre Quelle für jeden faktischen Anspruch\" – macht erfundene Zitate offensichtlich sichtbar",
@@ -3638,16 +3638,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
         "promptStructure": {
                 "title": "Gute Prompt-Struktur",
-                "content": "Gute Prompts kombinieren vier Elemente: eine **klare Rolle oder Kontext** (welchen Rahmen sollte das Modell annehmen?), eine **spezifische Aufgabe** (welche Ausgabe brauche ich?), **echte Eingabedaten** (welche Informationen werden bereitgestellt?) und **explizite Einschränkungen** (was darf das Modell NICHT tun?). Diese Struktur reduziert den Druck zu halluzinieren, indem sie Mehrdeutigkeiten über das, was das Modell tun soll, entfernt. Unser Leitfaden zu [den 5 Bausteinen, die jeder Prompt braucht](/prompt-engineering/5-building-blocks-every-prompt-needs) behandelt jedes Element mit Beispielen.
-
-Siehe die vollständige Definition von [Prompt-Engineering-Grundlagen](/prompt-engineering/what-is-prompt-engineering) für eine tiefere Erkundung, wie Struktur die Zuverlässigkeit der Ausgabe beeinflusst."
+                "content": ["Gute Prompts kombinieren vier Elemente: eine **klare Rolle oder Kontext** (welchen Rahmen sollte das Modell annehmen?), eine **spezifische Aufgabe** (welche Ausgabe brauche ich?), **echte Eingabedaten** (welche Informationen werden bereitgestellt?) und **explizite Einschränkungen** (was darf das Modell NICHT tun?). Diese Struktur reduziert den Druck zu halluzinieren, indem sie Mehrdeutigkeiten über das, was das Modell tun soll, entfernt. Unser Leitfaden zu [den 5 Bausteinen, die jeder Prompt braucht](/prompt-engineering/5-building-blocks-every-prompt-needs) behandelt jedes Element mit Beispielen.", "Siehe die vollständige Definition von [Prompt-Engineering-Grundlagen](/prompt-engineering/what-is-prompt-engineering) für eine tiefere Erkundung, wie Struktur die Zuverlässigkeit der Ausgabe beeinflusst."]
         },
         "techniques": {
                 "title": "Techniken zur Reduzierung von Halluzinationen",
-                "content": "Drei komplementäre Ansätze reduzieren Halluzinationen:
-- **Prompt-Ebene:** Fügen Sie Einschränkungen und Erlaubnis hinzu, Unsicherheit in Ihren Prompts zuzugeben
-- **System-Ebene:** Verwenden Sie RAG, Funktionsaufrufe oder Abruf, um Antworten in echten Daten zu verankern
-- **Modell-Ebene:** Führen Sie denselben Prompt über mehrere unabhängige Modelle aus, um Halluzinationen durch Konsens zu erkennen"
+                "content": "Drei komplementäre Ansätze reduzieren Halluzinationen:\n- **Prompt-Ebene:** Fügen Sie Einschränkungen und Erlaubnis hinzu, Unsicherheit in Ihren Prompts zuzugeben\n- **System-Ebene:** Verwenden Sie RAG, Funktionsaufrufe oder Abruf, um Antworten in echten Daten zu verankern\n- **Modell-Ebene:** Führen Sie denselben Prompt über mehrere unabhängige Modelle aus, um Halluzinationen durch Konsens zu erkennen"
         },
         "technique1": {
                 "title": "1. Explizite Erlaubnis zu sagen \"Ich weiß nicht\"",
