@@ -82,6 +82,21 @@ function renderInlineLinks(text: string) {
     const markdownMatch = part.match(/^\[([^\]]+)\]\(([^\)]+)\)$/)
     if (markdownMatch) {
       const [, label, url] = markdownMatch
+      // External links: open in new tab with security attributes
+      if (url.startsWith('http://') || url.startsWith('https://')) {
+        return (
+          <a
+            key={i}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary font-medium hover:underline"
+          >
+            {label}
+          </a>
+        )
+      }
+      // Internal links: use Next.js Link
       return (
         <Link key={i} href={url} className="text-primary font-medium hover:underline">
           {label}
