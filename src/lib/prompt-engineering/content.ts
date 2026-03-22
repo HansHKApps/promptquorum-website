@@ -9,6 +9,7 @@ export interface PESection {
   columns?: string[]
   faqs?: Array<{ q: string; a: string }>
   isTldr?: boolean
+  tableFormat?: boolean
 }
 
 export interface PEArticle {
@@ -18,6 +19,7 @@ export interface PEArticle {
   publishDate: string
   readTime: string
   sections: Record<string, PESection>
+  schema?: Record<string, unknown>
 }
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
@@ -25,10 +27,25 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   'what-is-prompt-engineering': {
     en: {
       theme: 'Fundamentals',
-      title: 'What Is Prompt Engineering?',
-      intro: 'Prompt engineering is designing text inputs to get reliable, accurate AI outputs from LLMs like GPT-4o, Claude, and Gemini. Covers techniques, frameworks, and core concepts.',
-      publishDate: 'Published March 2026',
+      title: 'What Is Prompt Engineering? — PromptQuorum Guide',
+      intro: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs like GPT-4o, Claude, and Gemini. Learn essential techniques, frameworks, and why it matters to AI output quality.',
+      publishDate: '2026-03-01',
       readTime: '10 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'What Is Prompt Engineering?',
+        description: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs. Learn essential techniques, frameworks, and why it matters.',
+        datePublished: '2026-03-01',
+        dateModified: '2026-03-01',
+        keywords: ['prompt engineering', 'AI prompting', 'LLM', 'GPT-4o', 'Claude', 'Gemini'],
+        mentions: [
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'GPT-4o' },
+          { '@type': 'Thing', name: 'Claude' },
+          { '@type': 'Thing', name: 'Gemini' },
+        ],
+      },
       sections: {
 
         definition: {
@@ -91,21 +108,31 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        pqConsensusTest: {
+          title: 'PromptQuorum Consensus Test: Prompt Structure Impact',
+          content: [
+            'PromptQuorum dispatched the same unstructured prompt ("summarize this text") to GPT-4o, Claude 3.5 Sonnet, and Gemini 1.5 Pro. Results varied in length, detail, and structure across all three models. When the same task was rewritten using the five building blocks above, all three models produced consistent, on-format responses on the first attempt.',
+            'This consensus effect — where structured prompts produce identical behavior across different models — is the core insight behind prompt engineering. The five building blocks work because they exploit how all major LLMs process instructions identically.',
+          ],
+        },
+
         techniques: {
           title: 'Common Prompt Engineering Techniques',
-          content: 'Prompt engineering techniques are named patterns that solve specific output problems. Each technique addresses a different failure mode — inconsistent format, wrong reasoning, low accuracy, or excessive length. Apply them one at a time when you have a specific problem to fix.',
+          tableFormat: true,
           items: [
-            '**Zero-shot prompting:** Ask the model without any examples — sufficient for straightforward, unambiguous tasks → [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?]',
-            '**Few-shot prompting:** Provide 2–3 input/output examples before your request to lock in format, tone, and style',
-            '**Chain-of-Thought (CoT):** Ask the model to reason step by step before giving a final answer — reduces errors on logic, math, and multi-step problems → [Techniques: Chain-of-Thought Prompting: Make AI Show Its Reasoning]',
-            '**Persona / role prompting:** Assign the model a specific role or expertise to improve tone and relevance → [Techniques: Persona Prompting: Give Your AI a Role and Watch It Improve]',
-            '**Constrained prompting:** Explicitly define what the model must not do — prevents the most common failure modes → [Techniques: Constrained Prompting: How to Set Rules the AI Must Follow]',
-            '**Prompt chaining:** Split a complex task into a sequence of smaller prompts, feeding each output into the next → [Techniques: Prompt Chaining: How to Break Big Tasks Into Winning Steps]',
-            '**Negative prompting:** Specify what to exclude from the output — eliminates unwanted formats, phrases, or content types → [Techniques: Negative Prompting: Tell the AI What NOT to Do]',
-            '**Self-consistency:** Run the same prompt multiple times and select the most common answer — reduces error on high-stakes factual queries → [Techniques: Self-Consistency Prompting: Let the AI Check Its Own Work]',
-            '**Tree-of-Thought / ReAct:** Advanced multi-path reasoning for problems that require exploring several approaches before committing → [Techniques: Tree of Thought & ReAct: Advanced Reasoning for Hard Problems]',
-            '**RAG (Retrieval-Augmented Generation):** Inject retrieved documents or data directly into the prompt to ground the answer in real sources → [Techniques: RAG Explained: How to Ground AI Answers in Real Data]',
-            '**Structured output / JSON mode:** Instruct the model to return machine-readable output — JSON, Markdown tables, or CSV — for downstream processing → [Techniques: Structured Output & JSON Mode: Get AI to Return Usable Data]',
+            '| Technique | Best For | Example |',
+            '|---|---|---|',
+            '| Few-shot prompting | Teaching through examples | Providing 2–3 sample input/output pairs |',
+            '| Chain-of-thought | Logic and multi-step tasks | "Think step-by-step before answering" |',
+            '| Role-prompting | Domain-specific expertise | "Act as a marketing copywriter" |',
+            '| Constraint-based | Limiting output style | "Write in exactly 150 words, no technical jargon" |',
+            '| Negative prompting | Avoiding specific behaviors | "Do not use buzzwords or clichés" |',
+            '| Self-consistency | Improving reliability | "Generate 5 answers and return the most common" |',
+            '| Structured output | Machine-readable results | "Respond in JSON format with these fields..." |',
+            '| Prompt chaining | Multi-step workflows | Breaking one complex task into 3–4 sequential prompts |',
+            '| Tree-of-thought | Exploring multiple paths | "Consider 3 different approaches before choosing" |',
+            '| RAG (Retrieval-Augmented Generation) | Grounding in facts | Attaching recent documents before prompting |',
+            '| Persona-based | Different communication styles | "Explain like I am a 10-year-old" |',
           ],
         },
 
@@ -139,12 +166,12 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'These are the key technical decisions that interact with prompt engineering:',
           ],
           items: [
-            '**Model selection:** GPT-4o, Claude 3.5 Sonnet, and Gemini 1.5 Pro respond differently to the same prompt. Choosing the right model for the task is part of the engineering process → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**Model selection:** GPT-4o, Claude 3.5 Sonnet, and Gemini 1.5 Pro respond differently to the same prompt. Choosing the right model for the task is part of the engineering process. Mistral AI (Europe) and Qwen (China) follow the same prompting principles but may require adjusted output format specifications due to differences in instruction-following behavior. The same structured prompt works globally across all major model families → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**System vs. user prompts:** The system prompt sets persistent instructions for an entire session; the user prompt is the per-request input. Getting this split right determines consistency at scale → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**Context windows:** Every model has a maximum token limit for input + output combined. Long prompts reduce the available space for the model\'s answer — and models start to ignore earlier content as the window fills → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**Token limits and cost:** Precise, concise prompts use fewer tokens per call, reduce latency, and stay within rate limits — directly affecting cost at scale → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
             '**Multimodal prompting:** Modern LLMs like GPT-4o and Gemini accept images as well as text. Prompt engineering principles apply equally to image inputs → [Fundamentals: Beyond Text: How to Prompt with Images]',
-            '**Local vs. cloud models:** Prompt engineering techniques apply equally to cloud APIs and locally-run models via Ollama or LM Studio — though local models may require adjusted formatting due to smaller context windows and different instruction-following behaviour',
+            '**Local vs. cloud models:** Prompt engineering techniques apply equally to cloud APIs and locally-run models via Ollama or LM Studio — though local models may require adjusted formatting due to smaller context windows and different instruction-following behaviour. PromptQuorum supports both local models (Ollama, LM Studio, vLLM) and cloud APIs (OpenAI, Anthropic, Google Gemini) through a single interface — letting you switch between providers without rewriting prompts, or compare the same prompt across multiple models simultaneously.',
           ],
         },
 
@@ -153,7 +180,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: '**What prompt engineering reliably improves:**',
           items: [
             'Output consistency — the same structured prompt produces similar results across runs and team members',
-            'Hallucination reduction — grounding, source constraints, and explicit scoping reduce fabricated facts',
+            'Hallucination reduction — grounding, source constraints, and explicit scoping reduce fabricated facts. PromptQuorum\'s Quorum feature runs consensus checks across model responses, detecting hallucinations and contradictions by comparing how different models respond to the same structured prompt.',
             'Format control — specifying output format means results arrive ready to use, not ready to edit',
             'Iteration speed — fewer clarification rounds, more first-attempt successes',
             'Cross-model portability — a well-structured prompt works on GPT-4o, Claude, and Gemini without rewriting',
@@ -184,6 +211,15 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Add one technique at a time.** Try few-shot examples on one task. Add a constraint to another. Test Chain-of-Thought on a reasoning problem. Isolating changes lets you see which technique actually improved the output. The [Techniques] section covers each technique in depth.',
             '**Test across multiple models.** The same prompt produces different results on GPT-4o, Claude, and Gemini. Use PromptQuorum to dispatch one prompt to multiple models simultaneously and compare responses side by side — this is the fastest way to find which model and formulation works best for a specific task.',
             '**Build a prompt library for your use cases.** Save prompts that work. Refine them over time. A library of tested prompts for your specific domain is a durable asset. See [Use Topics: Build a Prompt Library That Saves Hours] for a guide on how to structure and maintain one.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Fundamentals: AI Hallucinations — Why AI Makes Things Up] — understanding a core limitation of LLMs',
+            '[Techniques: Chain-of-Thought Prompting — Make AI Show Its Reasoning] — the step-by-step technique that improves accuracy',
+            '[Frameworks: CO-STAR Framework] — a structured template that organizes the fundamentals into a proven sequence',
           ],
         },
 
@@ -229,16 +265,40 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903',
+            'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165',
+            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
+          ],
+        },
+
       },
     },
 
     // Non-English languages fall back to English in the renderer
     de: {
       theme: 'Fundamentals',
-      title: 'Was ist Prompt Engineering?',
-      intro: 'Prompt Engineering ist die Praxis, Texteingaben — sogenannte Prompts — so zu gestalten, dass große Sprachmodelle genaue, nützliche und wiederholbare Ausgaben liefern.',
-      publishDate: 'Veröffentlicht März 2026',
+      title: 'Was ist Prompt Engineering? — PromptQuorum Leitfaden',
+      intro: 'Prompt Engineering: Texteinträge so gestalten, dass zuverlässige, genaue Ausgaben von LLMs wie GPT-4o, Claude und Gemini erzeugt werden. Lernen Sie wesentliche Techniken, Frameworks und warum dies für die Qualität der KI-Ausgabe wichtig ist.',
+      publishDate: '2026-03-01',
       readTime: '10 Min. Lesezeit',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Was ist Prompt Engineering?',
+        description: 'Prompt Engineering: Texteinträge so gestalten, dass zuverlässige, genaue Ausgaben von LLMs wie GPT-4o, Claude und Gemini erzeugt werden.',
+        datePublished: '2026-03-01',
+        dateModified: '2026-03-01',
+        keywords: ['Prompt Engineering', 'KI-Prompting', 'LLM', 'GPT-4o', 'Claude', 'Gemini'],
+        mentions: [
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'GPT-4o' },
+          { '@type': 'Thing', name: 'Claude' },
+          { '@type': 'Thing', name: 'Gemini' },
+        ],
+      },
       sections: {
         definition: {
           title: 'Was ist Prompt Engineering?',
@@ -300,21 +360,31 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        pqConsensusTest: {
+          title: 'PromptQuorum Konsenstest: Auswirkungen der Prompt-Struktur',
+          content: [
+            'PromptQuorum entsendete denselben unstrukturierten Prompt ("fassen Sie diesen Text zusammen") an GPT-4o, Claude 3.5 Sonnet und Gemini 1.5 Pro. Die Ergebnisse unterschieden sich in Länge, Detail und Struktur auf allen drei Modellen. Als dieselbe Aufgabe mit den fünf Bausteinen oben umgeschrieben wurde, erzeugten alle drei Modelle konsistente, formatgerechte Antworten beim ersten Versuch.',
+            'Dieser Konsenseffekt — bei dem strukturierte Prompts identisches Verhalten über verschiedene Modelle hinweg erzeugen — ist die Kernidee des Prompt Engineering. Die fünf Bausteine funktionieren, weil sie ausnutzen, wie alle großen LLMs Anweisungen identisch verarbeiten.',
+          ],
+        },
+
         techniques: {
           title: 'Gängige Prompt-Engineering-Techniken',
-          content: 'Prompt-Engineering-Techniken sind benannte Muster, die spezifische Ausgabeprobleme lösen. Jede Technik adressiert einen anderen Fehlertyp – inkonsistentes Format, falsches Denken, geringe Genauigkeit oder übermäßige Länge. Wende sie einzeln an, wenn ein konkretes Problem zu beheben ist.',
+          tableFormat: true,
           items: [
-            '**Zero-Shot-Prompting:** Das Modell ohne Beispiele befragen – ausreichend für einfache, eindeutige Aufgaben → [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?]',
-            '**Few-Shot-Prompting:** 2–3 Eingabe/Ausgabe-Beispiele vor der Anfrage bereitstellen, um Format, Ton und Stil festzulegen',
-            '**Chain-of-Thought (CoT):** Das Modell bitten, schrittweise zu denken, bevor es eine endgültige Antwort gibt – reduziert Fehler bei Logik-, Mathematik- und mehrstufigen Problemen → [Techniques: Chain-of-Thought Prompting: Make AI Show Its Reasoning]',
-            '**Persona-/Rollen-Prompting:** Dem Modell eine bestimmte Rolle oder Expertise zuweisen, um Ton und Relevanz zu verbessern → [Techniques: Persona Prompting: Give Your AI a Role and Watch It Improve]',
-            '**Eingeschränktes Prompting:** Explizit definieren, was das Modell nicht tun darf – verhindert die häufigsten Fehlertypen → [Techniques: Constrained Prompting: How to Set Rules the AI Must Follow]',
-            '**Prompt-Verkettung:** Eine komplexe Aufgabe in eine Folge kleinerer Prompts aufteilen, wobei jede Ausgabe in den nächsten eingespeist wird → [Techniques: Prompt Chaining: How to Break Big Tasks Into Winning Steps]',
-            '**Negatives Prompting:** Angeben, was aus der Ausgabe ausgeschlossen werden soll – eliminiert unerwünschte Formate, Formulierungen oder Inhaltstypen → [Techniques: Negative Prompting: Tell the AI What NOT to Do]',
-            '**Selbstkonsistenz:** Denselben Prompt mehrfach ausführen und die häufigste Antwort auswählen – reduziert Fehler bei hochriskanten sachlichen Anfragen → [Techniques: Self-Consistency Prompting: Let the AI Check Its Own Work]',
-            '**Tree-of-Thought / ReAct:** Erweitertes Mehrpfad-Denken für Probleme, die das Erkunden mehrerer Ansätze erfordern, bevor man sich festlegt → [Techniques: Tree of Thought & ReAct: Advanced Reasoning for Hard Problems]',
-            '**RAG (Retrieval-Augmented Generation):** Abgerufene Dokumente oder Daten direkt in den Prompt einspeisen, um die Antwort in echten Quellen zu verankern → [Techniques: RAG Explained: How to Ground AI Answers in Real Data]',
-            '**Strukturierte Ausgabe / JSON-Modus:** Das Modell anweisen, maschinenlesbare Ausgaben zurückzugeben – JSON, Markdown-Tabellen oder CSV – zur Weiterverarbeitung → [Techniques: Structured Output & JSON Mode: Get AI to Return Usable Data]',
+            '| Technik | Best For | Beispiel |',
+            '|---|---|---|',
+            '| Few-Shot-Prompting | Lehren durch Beispiele | Bereitstellung von 2–3 Eingabe/Ausgabe-Paaren |',
+            '| Chain-of-Thought | Logik und mehrstufige Aufgaben | „Denken Sie Schritt für Schritt, bevor Sie antworten" |',
+            '| Rollen-Prompting | Domänenspezifisches Fachwissen | „Agiere als Marketingtexter" |',
+            '| Einschränkungsbasiert | Begrenzung des Output-Stils | „Schreiben Sie genau 150 Wörter, keine technische Fachsprache" |',
+            '| Negatives Prompting | Vermeidung spezifischer Verhaltensweisen | „Verwenden Sie nicht Schlagworte oder Klischees" |',
+            '| Selbstkonsistenz | Verbesserung der Zuverlässigkeit | „Generieren Sie 5 Antworten und geben Sie die häufigste zurück" |',
+            '| Strukturierte Ausgabe | Maschinenlesbare Ergebnisse | „Antwort im JSON-Format mit diesen Feldern..." |',
+            '| Prompt Chaining | Mehrstufige Workflows | Aufteilung einer komplexen Aufgabe in 3–4 sequenzielle Prompts |',
+            '| Tree-of-Thought | Exploration mehrerer Pfade | „Berücksichtigung von 3 verschiedenen Ansätzen vor der Auswahl" |',
+            '| RAG (Retrieval-Augmented Generation) | Grundlegung in Fakten | Anhängen von aktuellen Dokumenten vor dem Prompting |',
+            '| Persona-basiert | Unterschiedliche Kommunikationsstile | „Erklären Sie mir wie einem 10-Jährigen" |',
           ],
         },
 
@@ -348,12 +418,12 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Dies sind die wichtigsten technischen Entscheidungen, die mit Prompt Engineering interagieren:',
           ],
           items: [
-            '**Modellauswahl:** GPT-4o, Claude 3.5 Sonnet und Gemini 1.5 Pro reagieren unterschiedlich auf denselben Prompt. Das richtige Modell für die Aufgabe zu wählen ist Teil des Engineering-Prozesses → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**Modellauswahl:** GPT-4o, Claude 3.5 Sonnet und Gemini 1.5 Pro reagieren unterschiedlich auf denselben Prompt. Das richtige Modell für die Aufgabe zu wählen ist Teil des Engineering-Prozesses. Mistral AI (Europa) und Qwen (China) folgen denselben Prompting-Prinzipien, erfordern aber möglicherweise angepassste Ausgabeformat-Spezifikationen aufgrund von Unterschieden im Instruction-Following-Verhalten. Der gleiche strukturierte Prompt funktioniert weltweit in allen großen Modellfamilien → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**System- vs. Benutzer-Prompts:** Der System-Prompt legt persistente Anweisungen für eine gesamte Sitzung fest; der Benutzer-Prompt ist die aufgabenbezogene Eingabe. Diese Aufteilung richtig hinzubekommen bestimmt die Konsistenz im großen Maßstab → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**Kontextfenster:** Jedes Modell hat ein maximales Token-Limit für Eingabe + Ausgabe zusammen. Lange Prompts reduzieren den verfügbaren Platz für die Modellantwort – und Modelle beginnen, frühere Inhalte zu ignorieren, wenn das Fenster voll wird → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**Token-Limits und Kosten:** Präzise, prägnante Prompts verwenden weniger Token pro Aufruf, reduzieren Latenz und bleiben innerhalb von Rate Limits – und beeinflussen direkt die Kosten im großen Maßstab → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
             '**Multimodales Prompting:** Moderne LLMs wie GPT-4o und Gemini akzeptieren Bilder ebenso wie Text. Prompt-Engineering-Prinzipien gelten gleichermaßen für Bildeingaben → [Fundamentals: Beyond Text: How to Prompt with Images]',
-            '**Lokale vs. Cloud-Modelle:** Prompt-Engineering-Techniken gelten gleichermaßen für Cloud-APIs und lokal betriebene Modelle über Ollama oder LM Studio – obwohl lokale Modelle aufgrund kleinerer Kontextfenster und anderem Anweisungsverhalten möglicherweise angepasste Formatierungen erfordern',
+            '**Lokale vs. Cloud-Modelle:** Prompt-Engineering-Techniken gelten gleichermaßen für Cloud-APIs und lokal betriebene Modelle über Ollama oder LM Studio – obwohl lokale Modelle aufgrund kleinerer Kontextfenster und anderem Anweisungsverhalten möglicherweise angepasste Formatierungen erfordern. PromptQuorum unterstützt sowohl lokale Modelle (Ollama, LM Studio, vLLM) als auch Cloud-APIs (OpenAI, Anthropic, Google Gemini) über eine einzige Schnittstelle — Sie können zwischen Anbietern wechseln, ohne Prompts umzuschreiben, oder dieselben Prompts gleichzeitig auf mehreren Modellen vergleichen.',
           ],
         },
 
@@ -362,7 +432,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: '**Was Prompt Engineering zuverlässig verbessert:**',
           items: [
             'Ausgabekonsistenz – derselbe strukturierte Prompt liefert ähnliche Ergebnisse über verschiedene Durchläufe und Teammitglieder hinweg',
-            'Reduzierung von Halluzinationen – Erdung, Quelleneinschränkungen und explizites Eingrenzen reduzieren erfundene Fakten',
+            'Reduzierung von Halluzinationen – Erdung, Quelleneinschränkungen und explizites Eingrenzen reduzieren erfundene Fakten. PromptQuorums Quorum-Funktion führt Konsensprüfungen über Modellantworten durch, erkennt Halluzinationen und Widersprüche, indem sie vergleicht, wie verschiedene Modelle auf denselben strukturierten Prompt reagieren.',
             'Formatkontrolle – das Festlegen des Ausgabeformats bedeutet, dass Ergebnisse direkt verwendbar ankommen, nicht erst bearbeitbar',
             'Iterationsgeschwindigkeit – weniger Klärungsrunden, mehr Erfolge beim ersten Versuch',
             'Modellübergreifende Portabilität – ein gut strukturierter Prompt funktioniert auf GPT-4o, Claude und Gemini ohne Umschreiben',
@@ -393,6 +463,15 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Eine Technik nach der anderen hinzufügen.** Few-Shot-Beispiele für eine Aufgabe ausprobieren. Eine Einschränkung zu einer anderen hinzufügen. Chain-of-Thought bei einem Denkproblem testen. Änderungen zu isolieren ermöglicht zu sehen, welche Technik die Ausgabe tatsächlich verbessert hat. Der Abschnitt [Techniques] behandelt jede Technik ausführlich.',
             '**Über mehrere Modelle testen.** Derselbe Prompt liefert unterschiedliche Ergebnisse auf GPT-4o, Claude und Gemini. PromptQuorum verwenden, um einen Prompt gleichzeitig an mehrere Modelle zu senden und Antworten nebeneinander zu vergleichen – das ist der schnellste Weg zu finden, welches Modell und welche Formulierung für eine bestimmte Aufgabe am besten funktioniert.',
             '**Eine Prompt-Bibliothek für die eigenen Anwendungsfälle aufbauen.** Prompts, die funktionieren, speichern. Sie im Laufe der Zeit verfeinern. Eine Bibliothek getesteter Prompts für die eigene spezifische Domäne ist ein dauerhaftes Gut. Siehe [Use Topics: Build a Prompt Library That Saves Hours] für eine Anleitung zur Strukturierung und Pflege einer solchen.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Weiterführende Ressourcen',
+          items: [
+            '[Grundlagen: KI-Halluzinationen — Warum KI Dinge erfindet] — ein Kernverständnis der LLM-Grenzen',
+            '[Techniken: Chain-of-Thought Prompting — LLMs zeigen lassen, wie sie denken] — die Schritt-für-Schritt-Technik, die die Genauigkeit verbessert',
+            '[Frameworks: CO-STAR Framework] — eine strukturierte Vorlage, die die Grundlagen in einer bewährten Reihenfolge organisiert',
           ],
         },
 
@@ -437,14 +516,38 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             },
           ],
         },
+
+        sources: {
+          title: 'Quellen & Weiterführende Ressourcen',
+          items: [
+            'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903',
+            'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165',
+            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
+          ],
+        },
       },
     },
     fr: {
       theme: 'Fondamentaux',
-      title: 'Qu\'est-ce que le Prompt Engineering ?',
-      intro: 'Le prompt engineering est la pratique qui consiste à concevoir des entrées textuelles — appelées prompts — pour obtenir des résultats précis, utiles et reproductibles des grands modèles de langage.',
-      publishDate: 'Publié mars 2026',
+      title: 'Qu\'est-ce que le Prompt Engineering ? — Guide PromptQuorum',
+      intro: 'Prompt engineering : concevoir des entrées textuelles pour obtenir des sorties fiables et précises des LLM comme GPT-4o, Claude et Gemini. Apprenez les techniques essentielles, les frameworks et pourquoi cela compte pour la qualité de la sortie d\'IA.',
+      publishDate: '2026-03-01',
       readTime: '10 min de lecture',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Qu\'est-ce que le Prompt Engineering ? — Guide PromptQuorum',
+        description: 'Prompt engineering : concevoir des entrées textuelles pour obtenir des sorties fiables et précises des LLM. Apprenez les techniques essentielles, les frameworks et pourquoi cela compte.',
+        datePublished: '2026-03-01',
+        dateModified: '2026-03-01',
+        keywords: ['prompt engineering', 'prompting IA', 'LLM', 'GPT-4o', 'Claude', 'Gemini'],
+        mentions: [
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'GPT-4o' },
+          { '@type': 'Thing', name: 'Claude' },
+          { '@type': 'Thing', name: 'Gemini' },
+        ],
+      },
       sections: {
         definition: {
           title: 'Qu\'est-ce que le prompt engineering ?',
@@ -506,21 +609,31 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        pqConsensusTest: {
+          title: 'Test de consensus PromptQuorum : Impact de la structure du prompt',
+          content: [
+            'PromptQuorum a envoyé le même prompt non structuré ("résumez ce texte") à GPT-4o, Claude 3.5 Sonnet et Gemini 1.5 Pro. Les résultats variaient en longueur, détail et structure sur tous les trois modèles. Lorsque la même tâche a été réécrite à l\'aide des cinq blocs de construction ci-dessus, les trois modèles ont produit des réponses cohérentes et formatées correctement au premier essai.',
+            'Cet effet de consensus — où les prompts structurés produisent un comportement identique entre différents modèles — est l\'idée centrale du prompt engineering. Les cinq blocs de construction fonctionnent parce qu\'ils exploitent la manière dont tous les principaux LLM traitent les instructions de manière identique.',
+          ],
+        },
+
         techniques: {
           title: 'Techniques courantes de prompt engineering',
-          content: 'Les techniques de prompt engineering sont des schémas nommés qui résolvent des problèmes spécifiques de sortie. Chaque technique traite un mode d\'échec différent — format incohérent, raisonnement incorrect, faible précision ou longueur excessive. Appliquez-les une à la fois lorsque vous avez un problème spécifique à résoudre.',
+          tableFormat: true,
           items: [
-            '**Zero-shot prompting :** Demander au modèle sans aucun exemple — suffisant pour les tâches simples et non ambiguës → [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?]',
-            '**Few-shot prompting :** Fournir 2 à 3 exemples entrée/sortie avant votre demande pour fixer le format, le ton et le style',
-            '**Chain-of-Thought (CoT) :** Demander au modèle de raisonner étape par étape avant de donner une réponse finale — réduit les erreurs sur la logique, les mathématiques et les problèmes en plusieurs étapes → [Techniques: Chain-of-Thought Prompting: Make AI Show Its Reasoning]',
-            '**Persona / role prompting :** Attribuer au modèle un rôle ou une expertise spécifique pour améliorer le ton et la pertinence → [Techniques: Persona Prompting: Give Your AI a Role and Watch It Improve]',
-            '**Constrained prompting :** Définir explicitement ce que le modèle ne doit pas faire — prévient les modes d\'échec les plus courants → [Techniques: Constrained Prompting: How to Set Rules the AI Must Follow]',
-            '**Prompt chaining :** Diviser une tâche complexe en une séquence de prompts plus petits, en alimentant chaque sortie dans le suivant → [Techniques: Prompt Chaining: How to Break Big Tasks Into Winning Steps]',
-            '**Negative prompting :** Spécifier ce qu\'il faut exclure de la sortie — élimine les formats, phrases ou types de contenu indésirables → [Techniques: Negative Prompting: Tell the AI What NOT to Do]',
-            '**Self-consistency :** Exécuter le même prompt plusieurs fois et sélectionner la réponse la plus fréquente — réduit les erreurs sur les requêtes factuelles à enjeux élevés → [Techniques: Self-Consistency Prompting: Let the AI Check Its Own Work]',
-            '**Tree-of-Thought / ReAct :** Raisonnement multi-chemins avancé pour les problèmes nécessitant d\'explorer plusieurs approches avant de s\'engager → [Techniques: Tree of Thought & ReAct: Advanced Reasoning for Hard Problems]',
-            '**RAG (Retrieval-Augmented Generation) :** Injecter des documents ou données récupérés directement dans le prompt pour ancrer la réponse dans de vraies sources → [Techniques: RAG Explained: How to Ground AI Answers in Real Data]',
-            '**Sortie structurée / mode JSON :** Demander au modèle de retourner une sortie lisible par machine — JSON, tableaux Markdown ou CSV — pour un traitement en aval → [Techniques: Structured Output & JSON Mode: Get AI to Return Usable Data]',
+            '| Technique | Idéal pour | Exemple |',
+            '|---|---|---|',
+            '| Few-shot prompting | Enseignement par les exemples | Fournir 2–3 paires entrée/sortie |',
+            '| Chain-of-thought | Logique et tâches en plusieurs étapes | « Réfléchissez étape par étape avant de répondre » |',
+            '| Role-prompting | Expertise spécifique à un domaine | « Agis comme un rédacteur marketing » |',
+            '| Constraint-based | Limitation du style de sortie | « Écrivez en exactement 150 mots, pas de jargon technique » |',
+            '| Negative prompting | Éviter des comportements spécifiques | « N\'utilisez pas de clichés ou de termes marketing » |',
+            '| Self-consistency | Amélioration de la fiabilité | « Générez 5 réponses et retournez la plus commune » |',
+            '| Structured output | Résultats lisibles par machine | « Répondez au format JSON avec ces champs... » |',
+            '| Prompt chaining | Flux de travail en plusieurs étapes | Diviser une tâche complexe en 3–4 prompts séquentiels |',
+            '| Tree-of-thought | Exploration de plusieurs chemins | « Considérez 3 approches différentes avant de choisir » |',
+            '| RAG (Retrieval-Augmented Generation) | Ancrage dans les faits | Joindre des documents récents avant de faire une demande |',
+            '| Persona-based | Styles de communication différents | « Explique comme si j\'avais 10 ans » |',
           ],
         },
 
@@ -559,7 +672,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Fenêtres de contexte :** Chaque modèle a une limite maximale de tokens pour l\'entrée et la sortie combinées. Les prompts longs réduisent l\'espace disponible pour la réponse du modèle — et les modèles commencent à ignorer le contenu antérieur à mesure que la fenêtre se remplit → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**Limites de tokens et coûts :** Les prompts précis et concis utilisent moins de tokens par appel, réduisent la latence et restent dans les limites de débit — ce qui impacte directement les coûts à grande échelle → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
             '**Prompting multimodal :** Les LLM modernes comme GPT-4o et Gemini acceptent des images en plus du texte. Les principes du prompt engineering s\'appliquent également aux entrées d\'images → [Fundamentals: Beyond Text: How to Prompt with Images]',
-            '**Modèles locaux vs. cloud :** Les techniques de prompt engineering s\'appliquent aussi bien aux API cloud qu\'aux modèles exécutés localement via Ollama ou LM Studio — bien que les modèles locaux puissent nécessiter un formatage ajusté en raison de fenêtres de contexte plus petites et d\'un comportement de suivi des instructions différent',
+            '**Modèles locaux vs. cloud :** Les techniques de prompt engineering s\'appliquent aussi bien aux API cloud qu\'aux modèles exécutés localement via Ollama ou LM Studio — bien que les modèles locaux puissent nécessiter un formatage ajusté en raison de fenêtres de contexte plus petites et d\'un comportement de suivi des instructions différent. PromptQuorum supporte à la fois les modèles locaux (Ollama, LM Studio, vLLM) et les API cloud (OpenAI, Anthropic, Google Gemini) via une interface unique — vous permettant de basculer entre les fournisseurs sans réécrire les prompts, ou de comparer les mêmes prompts sur plusieurs modèles simultanément.',
+            '**Perspective régionale :** Mistral AI (Europe) et Qwen (Chine) suivent les mêmes principes de prompting, mais peuvent nécessiter des spécifications de format de sortie ajustées en raison des différences de comportement d\'instruction. Le même prompt structuré fonctionne mondialement sur toutes les principales familles de modèles.',
           ],
         },
 
@@ -568,7 +682,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: '**Ce que le prompt engineering améliore de manière fiable :**',
           items: [
             'Cohérence des sorties — le même prompt structuré produit des résultats similaires d\'une exécution à l\'autre et entre membres d\'équipe',
-            'Réduction des hallucinations — l\'ancrage, les contraintes de sources et le ciblage explicite réduisent les faits inventés',
+            'Réduction des hallucinations — l\'ancrage, les contraintes de sources et le ciblage explicite réduisent les faits inventés. La fonction Quorum de PromptQuorum effectue des vérifications de consensus sur les réponses des modèles, détectant les hallucinations et les contradictions en comparant comment différents modèles répondent au même prompt structuré.',
             'Contrôle du format — spécifier le format de sortie signifie que les résultats arrivent prêts à l\'emploi, pas prêts à être modifiés',
             'Vitesse d\'itération — moins de tours de clarification, plus de succès dès la première tentative',
             'Portabilité multi-modèles — un prompt bien structuré fonctionne sur GPT-4o, Claude et Gemini sans réécriture',
@@ -641,6 +755,24 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               q: 'Quelle est la différence entre un prompt utilisateur et un system prompt ?',
               a: 'Un system prompt est un ensemble d\'instructions persistantes qui s\'appliquent à toute la session — il définit le rôle du modèle, ses contraintes et son comportement par défaut avant que l\'utilisateur ne parle. Un prompt utilisateur est l\'entrée par requête — la tâche ou question spécifique pour cette interaction. Dans la plupart des produits IA, les développeurs rédigent le system prompt ; les utilisateurs finaux rédigent le prompt utilisateur. Les deux bénéficient du prompt engineering, mais remplissent des fonctions différentes.',
             },
+          ],
+        },
+
+        relatedReading: {
+          title: 'Lectures complémentaires',
+          items: [
+            '[Fondamentaux : Les hallucinations de l\'IA — Pourquoi l\'IA invente des choses] — comprendre une limitation fondamentale des LLM',
+            '[Techniques : Chain-of-Thought Prompting — Faire montrer son raisonnement à l\'IA] — la technique pas à pas qui améliore la précision',
+            '[Frameworks : Framework CO-STAR] — un modèle structuré qui organise les fondamentaux dans une séquence éprouvée',
+          ],
+        },
+
+        sources: {
+          title: 'Sources et lectures complémentaires',
+          items: [
+            'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903',
+            'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165',
+            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
           ],
         },
       },
@@ -853,10 +985,25 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     },
     zh: {
       theme: '基础知识',
-      title: '什么是提示词工程？',
-      intro: '提示词工程是设计和构建文本输入（称为提示词）的实践，目的是从大型语言模型中获得准确、有用且可重复的输出。',
-      publishDate: '发布于2026年3月',
+      title: '什么是提示工程？ — PromptQuorum 指南',
+      intro: '提示工程：设计文本输入以从 GPT-4o、Claude 和 Gemini 等大语言模型获得可靠、准确的输出。学习基本技术、框架以及为什么这对人工智能输出质量很重要。',
+      publishDate: '2026-03-01',
       readTime: '阅读约10分钟',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '什么是提示工程？ — PromptQuorum 指南',
+        description: '提示工程：设计文本输入以从 GPT-4o、Claude 和 Gemini 等大语言模型获得可靠、准确的输出。学习基本技术、框架和为什么这对人工智能输出质量很重要。',
+        datePublished: '2026-03-01',
+        dateModified: '2026-03-01',
+        keywords: ['提示工程', 'AI 提示', '大语言模型', 'GPT-4o', 'Claude', 'Gemini'],
+        mentions: [
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'GPT-4o' },
+          { '@type': 'Thing', name: 'Claude' },
+          { '@type': 'Thing', name: 'Gemini' },
+        ],
+      },
       sections: {
         definition: {
           title: '什么是提示词工程？',
@@ -918,6 +1065,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        pqConsensusTest: {
+          title: 'PromptQuorum 共识测试：提示结构的影响',
+          content: [
+            'PromptQuorum 将相同的非结构化提示（"总结这段文本"）发送到 GPT-4o、Claude 3.5 Sonnet 和 Gemini 1.5 Pro。结果在所有三个模型上的长度、细节和结构都有所不同。当使用上述五个构建块重新编写相同的任务时，所有三个模型都在第一次尝试时生成了一致的、格式正确的响应。',
+            '这种共识效应——结构化提示在不同模型间产生相同行为——是提示工程的核心洞察。五个构建块之所以有效，是因为它们利用了所有主要大语言模型相同的指令处理方式。',
+          ],
+        },
+
         techniques: {
           title: '常见提示词工程技术',
           content: '提示词工程技术是用于解决特定输出问题的命名模式。每种技术针对不同的失效模式——格式不一致、推理错误、准确度低或内容过长。当你遇到具体问题时，每次只应用一种技术进行修复。',
@@ -966,12 +1121,12 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '以下是与提示词工程相互影响的关键技术决策：',
           ],
           items: [
-            '**模型选择：** GPT-4o、Claude 3.5 Sonnet 和 Gemini 1.5 Pro 对相同提示词的响应各有不同。为任务选择合适的模型是工程流程的一部分 → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
+            '**模型选择：** GPT-4o、Claude 3.5 Sonnet 和 Gemini 1.5 Pro 对相同提示词的响应各有不同。为任务选择合适的模型是工程流程的一部分。Mistral AI（欧洲）和阿里云 Qwen（中国）遵循相同的提示工程原则，但由于指令跟随行为的差异，可能需要调整输出格式规范。相同的结构化提示在全球所有主要模型族中都有效 → [Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model]',
             '**系统提示词与用户提示词：** 系统提示词为整个会话设置持久指令；用户提示词是每次请求的输入。正确划分这两者决定了大规模使用时的一致性 → [Fundamentals: System Prompt vs. User Prompt: What\'s the Difference?]',
             '**上下文窗口：** 每个模型都有输入+输出组合的最大词元限制。较长的提示词会减少模型回答的可用空间——随着窗口填满，模型开始忽略较早的内容 → [Fundamentals: Context Windows Explained: Why Your AI Forgets]',
             '**词元限制与成本：** 精确、简洁的提示词每次调用使用更少的词元，降低延迟，并保持在速率限制内——直接影响大规模使用时的成本 → [Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting]',
             '**多模态提示：** GPT-4o 和 Gemini 等现代大型语言模型支持图像和文本输入。提示词工程原则同样适用于图像输入 → [Fundamentals: Beyond Text: How to Prompt with Images]',
-            '**本地模型与云端模型：** 提示词工程技术同样适用于云端 API 和通过 Ollama 或 LM Studio 在本地运行的模型——但本地模型可能因上下文窗口较小和指令遵循行为不同而需要调整格式',
+            '**本地模型与云端模型：** PromptQuorum 同时支持本地模型（Ollama、LM Studio、vLLM）和云 API（OpenAI、Anthropic、Google Gemini）通过单一界面——让您可以在提供者之间切换而无需重写提示，或同时比较多个模型上的相同提示。',
           ],
         },
 
@@ -980,7 +1135,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: '**提示词工程能可靠改善的方面：**',
           items: [
             '输出一致性——同一个结构化提示词在多次运行和团队成员之间产生相似的结果',
-            '减少幻觉——依据信息、来源约束和明确范围能减少捏造的事实',
+            '减少幻觉——依据信息、来源约束和明确范围能减少捏造的事实。PromptQuorum 的 Quorum 功能对模型响应进行共识检查，通过比较不同模型如何响应相同的结构化提示来检测幻觉和矛盾。',
             '格式控制——指定输出格式意味着结果到手即可使用，而不需要再次编辑',
             '迭代速度——减少澄清往返次数，提升首次尝试成功率',
             '跨模型可移植性——结构良好的提示词无需重写即可在 GPT-4o、Claude 和 Gemini 上使用',
@@ -1011,6 +1166,15 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**每次只添加一种技术。** 在一个任务上尝试少样本示例，在另一个任务上添加约束，在推理问题上测试思维链（Chain-of-Thought）。隔离变化让你能看到究竟是哪种技术改善了输出。[Techniques] 部分深入介绍了每种技术。',
             '**跨多个模型进行测试。** 同一个提示词在 GPT-4o、Claude 和 Gemini 上产生的结果不同。使用 PromptQuorum 将一个提示词同时发送给多个模型，并排比较响应——这是找到特定任务最佳模型和表述方式的最快途径。',
             '**为你的用例构建提示词库。** 保存有效的提示词，持续优化。针对特定领域经过测试的提示词库是持久的资产。请参阅 [Use Topics: Build a Prompt Library That Saves Hours] 了解如何构建和维护的指南。',
+          ],
+        },
+
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[基础知识：AI 幻觉 — 为什么 AI 会虚构事实] — 理解大语言模型的核心局限',
+            '[技术：思维链提示法 — 让 AI 展示其推理过程] — 改进准确性的逐步技术',
+            '[框架：CO-STAR 框架] — 一个结构化模板，将基础知识按照已验证的顺序组织',
           ],
         },
 
@@ -1053,6 +1217,15 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               q: '用户提示词和系统提示词有什么区别？',
               a: '系统提示词是应用于整个会话的持久指令集——在用户说任何话之前，它定义模型的角色、约束条件和默认行为。用户提示词是每次请求的输入——该交互的特定任务或问题。在大多数AI产品中，开发者编写系统提示词；最终用户编写用户提示词。两者都受益于提示词工程，但服务于不同的功能。',
             },
+          ],
+        },
+
+        sources: {
+          title: '来源与扩展阅读',
+          items: [
+            'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903',
+            'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165',
+            'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
           ],
         },
       },
