@@ -3444,12 +3444,12 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         badPrompt: {
           title: '[Bad Prompt]',
-          content: '> Tell me about the history of artificial intelligence. Include major breakthroughs and important researchers.\n\n**Why this fails:** Open-ended, no constraints, no permission to admit uncertainty. The model will invent dates, misattribute breakthroughs, confidently state outdated information, and potentially cite papers that don\'t exist.',
+          content: 'Tell me about the history of artificial intelligence. Include major breakthroughs and important researchers.\n\n**Why this fails:** Open-ended, no constraints, no permission to admit uncertainty. The model will invent dates, misattribute breakthroughs, confidently state outdated information, and potentially cite papers that don\'t exist.',
         },
 
         goodPrompt: {
           title: '[Good Prompt]',
-          content: '> Using only the following timeline, summarize the major breakthroughs in AI from 1950 to 1990:\n>\n> [TIMELINE DATA INSERTED]\n>\n> Format your answer as:\n>\n> **BREAKTHROUGH:** [Name]\n> **YEAR:** [Year — only if stated in timeline]\n> **SIGNIFICANCE:** [What it enabled]\n> **SOURCE:** [Which document from the timeline mentions this?]\n>\n> Do not add information not in the timeline. If you\'re unsure whether something is in the timeline, skip it rather than guessing.',
+          content: 'Using only the following timeline, summarize the major breakthroughs in AI from 1950 to 1990:\n\n[TIMELINE DATA INSERTED]\n\nFormat your answer as:\n\n**BREAKTHROUGH:** [Name]\n**YEAR:** [Year — only if stated in timeline]\n**SIGNIFICANCE:** [What it enabled]\n**SOURCE:** [Which document from the timeline mentions this?]\n\nDo not add information not in the timeline. If you\'re unsure whether something is in the timeline, skip it rather than guessing.',
         },
 
         whyWorks: {
