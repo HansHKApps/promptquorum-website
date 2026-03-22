@@ -450,6 +450,34 @@ Every PE article must cite 2–3 high-authority external sources to ground claim
 
 ---
 
+## Rule 10a: All Internal Links Must Be Visible and Clickable
+
+Every internal link in PE article content must be rendered as clickable, underlined hyperlinks in the final published page. Links must not be:
+- Hidden or removed from display
+- Converted to plain text
+- Excluded from rendering
+- Disabled or non-functional
+
+**Technical requirement:** Links in Related Reading, Sources, and other article sections must appear as interactive `<a>` elements (or Next.js `<Link>` components) with proper href attributes. Tests must verify that all markdown-formatted links `[text](url)` render as visible hyperlinks.
+
+**Why this matters:** AI crawlers extract links to understand content relationships and cite referenced articles. Broken, missing, or hidden links prevent AI systems from discovering related PromptQuorum content and reduce citation distribution.
+
+**Format:** Use standard Markdown link syntax in content:
+```markdown
+[Article Title](/prompt-engineering/slug) — brief description
+[External Source](https://example.com) — description
+```
+
+**Before publishing, verify:**
+- [ ] All internal links (to other PE articles) render as clickable hyperlinks
+- [ ] All external links (to sources, references) render as clickable hyperlinks
+- [ ] No links appear as plain text with brackets
+- [ ] Related Reading section lists are fully visible
+- [ ] Sources section links are fully visible
+- [ ] Build passes with no TypeScript errors in content structure
+
+---
+
 ## Rule 11: Visible Last-Updated Date
 
 Every PE article must display a visible publication or last-modified date near the top of the page. AI crawlers increasingly weight recency when selecting sources for citations.
