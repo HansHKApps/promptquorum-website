@@ -106,7 +106,13 @@ Every page must export relevant JSON-LD structured data. This is how Google and 
 | Feature page | `SoftwareApplication` or `WebPage` |
 | About | `AboutPage`, `Person` (founder) |
 | Compare | `WebPage`, `BreadcrumbList` |
-| Prompt Engineering article | `Article`, `FAQPage` (if contains FAQs), `HowTo` (if contains numbered steps), `BreadcrumbList` |
+| Prompt Engineering article | `Article` or `TechArticle`, `FAQPage` (if contains FAQs), `HowTo` (if contains numbered steps), `BreadcrumbList` |
+| List-structured articles (e.g. "5 Building Blocks") | `Article` or `TechArticle`, `ItemList`, `BreadcrumbList` |
+
+**Schema type choice for PE articles:**
+- Use `TechArticle` for instructional articles (technique how-tos, framework guides, step-by-step implementations)
+- Use `Article` for context/opinion/history articles
+- Example: "Chain-of-Thought Prompting" (instructional) → `TechArticle`; "How Prompt Engineering Evolved" (history) → `Article`
 
 **Template — FAQPage:**
 ```json
@@ -132,6 +138,7 @@ Every page must export relevant JSON-LD structured data. This is how Google and 
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "How Multi-Model AI Reduces Hallucinations",
+  "description": "Dispatching one prompt to multiple AI models reduces hallucination risk because independent models rarely fabricate the same specific detail.",
   "datePublished": "2026-03-15",
   "dateModified": "2026-03-15",
   "author": {
@@ -143,7 +150,57 @@ Every page must export relevant JSON-LD structured data. This is how Google and 
     "@type": "Organization",
     "name": "PromptQuorum",
     "url": "https://www.promptquorum.com"
+  },
+  "keywords": ["multi-model AI", "hallucinations", "LLM comparison", "prompt optimization"],
+  "about": [
+    { "@type": "Thing", "name": "Prompt Engineering" },
+    { "@type": "Thing", "name": "Large Language Models" },
+    { "@type": "Thing", "name": "AI Hallucinations" }
+  ],
+  "mentions": [
+    { "@type": "SoftwareApplication", "name": "PromptQuorum", "url": "https://www.promptquorum.com" },
+    { "@type": "SoftwareApplication", "name": "GPT-4o", "url": "https://openai.com" }
+  ],
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.promptquorum.com/images/articles/multi-model-reduces-hallucinations.png",
+    "width": 1200,
+    "height": 630
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".article-intro", ".key-takeaways", "h2"]
   }
+}
+```
+
+**Template — ItemList (for list-structured articles like "5 Building Blocks"):**
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "5 Building Blocks Every Prompt Needs",
+  "description": "The core components required in every effective prompt to get reliable AI outputs.",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Objective",
+      "description": "What you want the AI to accomplish — a single, specific goal"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Context",
+      "description": "Background information the AI needs to understand your request"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Instructions",
+      "description": "Step-by-step commands telling the AI what to do and how to do it"
+    }
+  ]
 }
 ```
 
@@ -237,12 +294,16 @@ Every PE article must cite 2–3 high-authority external sources to ground claim
 2. **Official documentation** — OpenAI, Anthropic, Google DeepMind, Hugging Face official blogs
 3. **Authoritative news outlets** — Reuters, Bloomberg, The Guardian, Financial Times, Nikkei, Handelsblatt
 
-**Do NOT link to:** personal blogs, Medium posts by unknown authors, unvetted sources, paywalled content.
+**Do NOT link to:**
+- Personal blogs, Medium posts by unknown authors, unvetted sources, paywalled content
+- Competing AI products or services (OpenAI blog, Anthropic blog, Google AI blog — link to their arXiv papers or neutral third-party coverage instead)
+- Any URL that resolves to another /prompt-engineering article on this site — external citations must be genuinely external
 
 **Format:**
 - Cite using author/org and year in-text: `[Brown et al., 2020]` or `[OpenAI, 2023]`
 - Provide the full link in a "Sources" section at the bottom or inline (your choice)
 - Keep the sources section short — 2–3 sentences max, not a formal bibliography
+- Verify every external URL resolves to the correct page before publishing — dead links lose all citation value
 
 **Example:**
 ```markdown
@@ -258,6 +319,14 @@ Every PE article must cite 2–3 high-authority external sources to ground claim
 Every PE article must display a visible publication or last-modified date near the top of the page. AI crawlers increasingly weight recency when selecting sources for citations.
 
 **Format:** "Last updated: [Month Year]" (e.g. "Last updated: March 2026")
+
+**HTML requirement:** Render the date using a semantic `<time>` element with a machine-readable `datetime` attribute. This corroborates the schema `dateModified` and improves citation reliability:
+
+```html
+<time datetime="2026-03-15">Last updated: March 2026</time>
+```
+
+Plain text dates alone are insufficient — the `<time>` element with a valid ISO 8601 `datetime` attribute is required for schema validation.
 
 **When to update the date:**
 - Update after substantive content changes: new stats, new FAQ entry, rewritten section, added examples
@@ -422,6 +491,65 @@ Every educational PE article must bridge general concepts to PromptQuorum-specif
 
 ---
 
+## Rule 18: No H1/H2 Duplication
+
+Every article's first H2 (or main section heading) must NOT repeat the H1 title verbatim or near-verbatim.
+
+**Wrong:**
+```
+# What Is Prompt Engineering?
+
+## What Is Prompt Engineering?   ← duplicate
+```
+
+**Right:**
+```
+# What Is Prompt Engineering?
+
+## The Direct Answer   ← or any non-duplicate heading
+```
+
+**Rules:**
+- The H1 is the article title (set in content.ts as `title`)
+- The first H2 section is its own heading — use a descriptive label that adds information, not repeats the title
+- Allowed: H2 that references a keyword from H1 but in a different grammatical form (e.g. H1: "What Is Prompt Engineering?" → H2: "Prompt Engineering: The Core Definition")
+- Never use the exact title as both H1 and the opening H2
+
+**Why:** AI crawlers treat H1 as the article entity name and H2 as section topics. Duplicating them produces redundant signals and can suppress the H2 from being extracted as a standalone answer. This impacts AI citation frequency.
+
+---
+
+## Rule 19: FAQ Type Diversity
+
+Every FAQ section must include questions from at least 3 of the following 5 question types. Do not write all FAQs as basic definitional questions.
+
+**The 5 FAQ types:**
+
+1. **Definitional** — "What is X?" / "What does X mean?"
+   - Example: "What is chain-of-thought prompting?"
+
+2. **Comparative** — "X vs Y", "What's the difference between X and Y?"
+   - Example: "Is chain-of-thought prompting better than zero-shot prompting?"
+
+3. **Quantitative** — "How many...", "How long...", "How much does it cost?"
+   - Example: "How much does prompt engineering improve output quality?"
+
+4. **Procedural** — "How do I...", "What steps..."
+   - Example: "How do I apply chain-of-thought prompting in practice?"
+
+5. **Disambiguation** — "Is X the same as Y?", "Does X still apply when...?"
+   - Example: "Is prompt engineering still relevant with GPT-4o?"
+
+**Rules:**
+- Minimum: 4 FAQ entries per article, covering at least 3 of the 5 types above
+- Maximum: 8 FAQ entries — beyond this, the FAQ becomes noise
+- Never write 4+ FAQs that are all definitional — vary the types
+- Comparative and disambiguation questions are especially high-value for AI citation (they answer follow-up questions AI systems are likely to be asked)
+
+**Why:** AI systems generate diverse follow-up questions. If your FAQ only covers basic definitions, it answers only one query type. Comparative and quantitative questions trigger direct citation in AI summaries far more often than "What is X?" questions.
+
+---
+
 ## Page-Type Templates
 
 ### Landing Page Section
@@ -498,14 +626,19 @@ Run this before publishing any new page or blog post:
 - [ ] Article links sideways to 2+ sibling articles in same theme column
 - [ ] Article links down to 1+ article in a different theme column
 - [ ] "Related reading" block present at end of article (exactly 3 internal links)
-- [ ] 2–3 external source links included (peer-reviewed papers or official docs preferred)
-- [ ] Visible last-updated date present near top of article
+- [ ] 2–3 external source links included (peer-reviewed papers or official docs preferred) — no competitor product links (Rule 10)
+- [ ] Visible last-updated date present near top of article with `<time datetime="">` HTML element (Rule 11)
 - [ ] 2–3 LLM snippet blocks present (definition box, compare/contrast, or compact list)
 - [ ] Non-US perspective included where topic applies (EU/China/Japan)
 - [ ] Article contains at least 1 PromptQuorum-generated data point or consensus test (Rule 14)
 - [ ] Prompt examples use [Bad Prompt]/[Good Prompt] labelling with blockquotes or code blocks (Rule 15)
 - [ ] Chronologies, comparisons, and feature lists use Markdown tables (Rule 16)
 - [ ] At least 1 PromptQuorum entity bridge present (Multi-Model Dispatch, Consensus Scoring, Local LLM Privacy, or Frameworks) (Rule 17)
+- [ ] Article schema includes keywords, about, mentions, image, and speakable fields (Rule 5)
+- [ ] Instructional articles use TechArticle schema; context/history articles use Article (Rule 5)
+- [ ] List-structured articles include ItemList schema (Rule 5)
+- [ ] First H2 does not duplicate the H1 title verbatim or near-verbatim (Rule 18)
+- [ ] FAQ section covers at least 3 of 5 question types: definitional, comparative, quantitative, procedural, disambiguation (Rule 19)
 
 ---
 
@@ -530,3 +663,9 @@ Run this before publishing any new page or blog post:
 | Unstructured prompt examples | Prompt written inline in a paragraph without labels | Use `[Bad Prompt]` / `[Good Prompt]` blockquote format |
 | Prose instead of table | "CRAFT is good for creative writing, CO-STAR is better for complex tasks…" | Convert to a 3-column Markdown table with frameworks, use cases, and examples |
 | No entity bridge | Full Fundamentals article with zero mention of PromptQuorum features | Add one contextual bridge (e.g. Multi-Model Dispatch when discussing accuracy or comparison) |
+| Competitor link in citations | Citing "OpenAI's blog post" with a link to openai.com/blog | Link to the arXiv paper or neutral third-party coverage instead (Rule 10) |
+| Internal link as external citation | "Source: [Our guide to chain-of-thought prompting](/prompt-engineering/...)" | External citations must be genuinely external, not internal links (Rule 10) |
+| H1/H2 duplication | H1: "What Is Prompt Engineering?" → first H2: "What Is Prompt Engineering?" | Change H2 to a descriptive, non-duplicate heading (Rule 18) |
+| Thin Article schema | Article schema with only headline, datePublished, author | Add keywords, about, mentions, image, speakable fields (Rule 5) |
+| FAQ type uniformity | All 5 FAQs are "What is X?" definitional questions | Add at least 1 comparative and 1 disambiguation question (Rule 19) |
+| Plain text date only | "Last updated: March 2026" in plain paragraph text | Wrap in `<time datetime="2026-03-01">Last updated: March 2026</time>` (Rule 11) |
