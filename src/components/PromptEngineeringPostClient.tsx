@@ -168,6 +168,13 @@ function SectionBlock({ section, colors }: { section: PESection; colors: { dot: 
         </div>
       )}
 
+      {/* Blockquote content */}
+      {section.blockquote && (
+        <blockquote className="border-l-4 border-primary/30 bg-primary/5 pl-4 py-2 my-4 italic text-text-secondary">
+          {renderInlineLinks(section.blockquote)}
+        </blockquote>
+      )}
+
       {/* Regular content paragraphs */}
       {section.content && !section.isTldr && (
         <div className="space-y-4">
