@@ -899,3 +899,81 @@ AI readers cite articles that reflect the current state of the technology. Artic
 | Vague constraint language | "Large context window support" / "Significant memory requirements" | Specify: "128k token context" / "16GB VRAM for 13B models" (Rule 22/Rule 2a) |
 | Missing constraint details | "GPT-4o has better performance" (no metrics) | "GPT-4o with 128k context processes longer documents; 15× more tokens than GPT-4o mini's 4k" (Rule 22/Rule 2a) |
 | Unspecified technical limits | "Supports batch processing" | "Batch API accepts up to 100k requests per file; completes in 24 hours" (Rule 22/Rule 2a) |
+
+---
+
+## Post-Writing Compliance Check (Mandatory)
+
+**CRITICAL: Before publishing any article, run a GEO compliance audit against these checklist items.**
+
+After you finish writing content, always:
+
+### 1. Verify Bold Openers (Rule 1)
+- [ ] Every H2 section starts with a **bold** direct answer or key fact
+- [ ] No preamble phrases like "In this section we'll look at..." or "When analyzing..."
+- [ ] Bold opener is a complete statement, not a fragment
+
+### 2. Search for Banned Words (Rule 3)
+Run grep/search for these words in your article:
+- [ ] "powerful" / "powerfully"
+- [ ] "seamless" / "seamlessly"
+- [ ] "leading" / "leadership"
+- [ ] "revolutionary" / "game-changing" / "transformative"
+- [ ] "cutting-edge" / "state-of-the-art"
+- [ ] "unique" (unless explained: "unique because...")
+- [ ] "comprehensive" / "complete" / "all-in-one"
+- [ ] "best-in-class" / "industry-leading"
+- [ ] "easy to use" / "simple" (unless explained why)
+
+**Replace with:** Specific, verifiable claims. Examples:
+- Instead of "powerful reasoning" → "excels at step-by-step problem-solving"
+- Instead of "seamless integration" → "native integration with Google Workspace"
+- Instead of "leading multimodal" → "strongest multimodal capabilities"
+
+### 3. Entity Density Check (Rule 4a)
+- [ ] Article mentions 5–7 distinct high-value entities
+- [ ] Each entity is named consistently (use exact product names)
+- [ ] First mention includes a one-line description
+- [ ] All entity names match official product names exactly
+
+### 4. Section Self-Containment (Rule 6)
+- [ ] Search for "as mentioned above" or "as we discussed" — delete and restate the fact instead
+- [ ] Each section answers its question completely without requiring prior context
+- [ ] FAQ entries are especially critical: each Q&A pair must stand alone
+
+### 5. Schema & Metadata Check (Rule 5)
+- [ ] TechArticle schema present (datePublished, author, keywords, mentions)
+- [ ] If list-structured, ItemList supplementalSchema included
+- [ ] If has FAQs, FAQPage schema auto-generated from faq.faqs array
+- [ ] All mentions include valid "@type" (Thing, SoftwareApplication, etc.)
+
+### How to Run the Audit
+
+**Automated checks (recommended):**
+```bash
+# Search for banned words
+grep -i "powerful\|seamless\|leading\|revolutionary\|cutting-edge" article.md
+
+# Check for context-dependent language
+grep -i "as mentioned\|as discussed\|above\|earlier" article.md
+
+# Verify bold openers in each section
+grep "^## " article.md | while read line; do
+  section=$(echo $line | sed 's/## //')
+  echo "Checking: $section"
+done
+```
+
+**Manual review:**
+1. Read the first sentence of every H2 section — is it bold and complete?
+2. Search the full article for banned words
+3. Count distinct entity mentions (minimum 5)
+4. Check each FAQ entry works standalone (copy it to a fresh document, does it make sense?)
+
+**If audit fails:**
+- DO NOT publish
+- Fix the violations
+- Re-run the audit
+- Only publish after 100% compliance
+
+---
