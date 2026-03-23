@@ -6245,6 +6245,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'ListItem', 'position': 5, 'name': 'Baidu ERNIE', 'description': 'Best for: mainland China consumer and enterprise apps, Baidu Cloud integration. Required for regulatory compliance in China.' },
         ],
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'How to Pick the Right AI Model',
+        'description': 'A step-by-step decision process for choosing between GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, and Baidu ERNIE based on task, geography, and budget',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Identify your primary use case', 'text': 'Determine whether you need tool integration, writing quality, long-context research, or China-compatible models.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Check geographic constraints', 'text': 'If users or data are in mainland China, use DeepSeek or Baidu ERNIE — Western models are restricted or high-latency.' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Evaluate cost vs quality trade-off', 'text': 'Use budget models for high-volume tasks; reserve frontier models for complex reasoning.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Test on your actual task', 'text': 'Use PromptQuorum to dispatch one prompt to all models simultaneously and compare results on your real data.' },
+        ],
+      },
       sections: {
         definition: {
           title: 'No Single "Best" AI Model — Choose by Task',
