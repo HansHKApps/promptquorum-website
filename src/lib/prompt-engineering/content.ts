@@ -6560,6 +6560,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         sources: {
           title: 'Sources & Further Reading',
+          content: '**Model strengths and pricing reflect March 2026 usage patterns and benchmarks from LMSYS Arena, SWE-Bench, and GPQA.** Model capabilities and pricing change frequently — check official pricing pages for current rates, and test on your task before committing to production.',
           items: [
             '[OpenAI — GPT-4o and model overview](https://platform.openai.com/docs/models)',
             '[Anthropic — Claude models overview](https://docs.anthropic.com/en/docs/models-overview)',
@@ -6567,6 +6568,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[DeepSeek — API documentation and models](https://api-docs.deepseek.com)',
             '[Baidu AI Cloud — ERNIE Bot platform](https://cloud.baidu.com/product/wenxinworkshop)',
             '[ERNIE API documentation](https://cloud.baidu.com/doc/WENXINWORKSHOP/index.html)',
+            '[LMSYS Chatbot Arena — live model leaderboards](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard)',
+            '[SWE-Bench — coding capability benchmarks](https://www.swebench.com/)',
           ],
         },
 
