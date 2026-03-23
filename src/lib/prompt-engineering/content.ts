@@ -6455,6 +6455,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               q: 'Where do open-source local models fit into this picture?',
               a: 'Local models (LLaMA 3.1, Mistral, others via Ollama or LM Studio) are best for: high-volume repetitive tasks (classify, summarize, extract), private data (no API calls), cost-sensitive workloads, and testing before committing to API costs. They do not match frontier models on quality but excel on privacy and cost. Use them for the 80% of tasks that do not need frontier-level reasoning.'
             },
+            {
+              q: 'Is Claude better than ChatGPT?',
+              a: '"Better" depends entirely on your task. Claude 4.6 Sonnet excels at writing quality, reasoning, code review, and structured output. GPT-4o dominates tool integration, multimodal (images/audio), and agent workflows. On benchmarks, they trade first place quarterly. Use PromptQuorum to test both on your actual task—do not rely on generic comparisons. For your specific writing style or codebase, one will clearly outperform the other.'
+            },
+            {
+              q: 'Which AI model is most accurate?',
+              a: 'Accuracy is task-specific, not absolute. GPT-4o ranks highest on math and reasoning benchmarks; Claude 4.6 Sonnet ranks highest on writing quality and factual grounding; Gemini 2.5 Pro ranks highest on retrieval and long-context tasks. Your data, prompt structure, and use case matter more than generic leaderboard position. Test your models on a representative sample of YOUR data—that is the only reliable accuracy metric.'
+            },
+            {
+              q: 'What is the difference between GPT-4o and GPT-4o mini?',
+              a: 'GPT-4o mini is a smaller, faster, cheaper variant: ~90% of GPT-4o quality on most tasks but at 1/10 the cost and 2–3× faster latency. Use mini for high-volume tasks (bulk analysis, moderation, classification) and context-light queries. Use full GPT-4o for complex reasoning, multimodal analysis, and agent workflows. OpenAI recommends testing both on your task to find the quality/cost/speed trade-off that fits your needs.'
+            },
           ],
         },
 
