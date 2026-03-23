@@ -1,0 +1,46 @@
+name: Daily IndexNow Submission
+
+on:
+  schedule:
+    # Run every day at 2 AM UTC (10 PM EST / 7 PM PST)
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  submit-to-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Extract article slugs and submit to IndexNow
+        run: |
+          # Extract all published PE article slugs from content.ts
+          # This gets all keys from PE_SLUG_TO_KEY mapping
+          SLUGS=$(grep -oP "PE_SLUG_TO_KEY\['\K[^']+(?='\])" src/lib/prompt-engineering/slugs.ts | head -20)
+
+          # Build URL list
+          URLS="["
+          for slug in $SLUGS; do
+            URLS="$URLS\"https://www.promptquorum.com/prompt-engineering/$slug\","
+          done
+          # Remove trailing comma and close array
+          URLS="${URLS%,}]"
+
+          echo "📢 Submitting articles to Bing IndexNow..."
+          echo "URLs: $URLS"
+
+          # Submit to IndexNow API
+          curl -X POST https://www.promptquorum.com/api/indexnow \
+            -H "Content-Type: application/json" \
+            -d "{\"urls\": $URLS}" \
+            -w "\nStatus: %{http_code}\n"
+
+      - name: Notify on failure
+        if: failure()
+        run: echo "⚠️ IndexNow submission failed. Check logs above."
