@@ -19,6 +19,7 @@ import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { CookieBanner } from '@/components/CookieBanner'
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   title: 'PromptQuorum — One Prompt. 25+ AI Models. Consensus Scoring.',
@@ -199,6 +200,7 @@ export default function RootLayout({
           {children}
           <CookieBanner />
           <Analytics />
+          <SpeedInsights />
         </Providers>
       </body>
     </html>
