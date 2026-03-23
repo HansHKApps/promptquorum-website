@@ -6242,9 +6242,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'ListItem', 'position': 2, 'name': 'Writing', 'description': 'GPT-4o: great, sometimes verbose. Claude 4.6 Sonnet: excellent structure and clarity. Gemini 2.5 Pro: good, neutral tone. DeepSeek: good, Chinese-first. Baidu ERNIE: good, Chinese-first' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Coding', 'description': 'GPT-4o: strong. Claude 4.6 Sonnet: excellent, premium quality. Gemini 2.5 Pro: great value. DeepSeek: very strong for Chinese developers. Baidu ERNIE: good for applied business' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Long-context handling', 'description': 'GPT-4o: 128k tokens. Claude 4.6 Sonnet: 200k tokens, strongest. Gemini 2.5 Pro: 2M tokens + web grounding. DeepSeek: good. Baidu ERNIE: good with Baidu data' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Multimodal (image/audio/video)', 'description': 'GPT-4o: leading. Claude 4.6 Sonnet: good vision. Gemini 2.5 Pro: very strong, especially video and web search. DeepSeek: varies by release. Baidu ERNIE: focused on text + Chinese web' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Multimodal (image/audio/video)', 'description': 'GPT-4o: strongest capabilities. Claude 4.6 Sonnet: good vision. Gemini 2.5 Pro: very strong, especially video and web search. DeepSeek: varies by release. Baidu ERNIE: focused on text + Chinese web' },
           { '@type': 'ListItem', 'position': 6, 'name': 'Cost efficiency', 'description': 'GPT-4o: medium-high. Claude 4.6 Sonnet: higher cost, premium quality. Gemini 2.5 Pro: very cost-effective. DeepSeek: very cost-competitive. Baidu ERNIE: competitive in China enterprise' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'Global ecosystem (tools, integrations, APIs)', 'description': 'GPT-4o: richest. Claude 4.6 Sonnet: growing, especially enterprise. Gemini 2.5 Pro: strong in Google world. DeepSeek: limited outside China. Baidu ERNIE: strong in Baidu ecosystem' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Global ecosystem (tools, integrations, APIs)', 'description': 'GPT-4o: most extensive third-party support. Claude 4.6 Sonnet: growing, especially enterprise. Gemini 2.5 Pro: strong in Google world. DeepSeek: limited outside China. Baidu ERNIE: strong in Baidu ecosystem' },
           { '@type': 'ListItem', 'position': 8, 'name': 'China access and latency', 'description': 'GPT-4o: often restricted or high-latency. Claude 4.6 Sonnet: often restricted or high-latency. Gemini 2.5 Pro: often restricted. DeepSeek: native, low-latency, required for mainland China. Baidu ERNIE: native, required for mainland China' },
         ],
       },
@@ -6260,9 +6260,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         tldr: {
           title: 'Key Takeaways',
+          content: '**Different models excel at different tasks — GPT-4o dominates tool integration, Claude excels at writing, Gemini handles long documents best, and DeepSeek/ERNIE are required for China.**',
           isTldr: true,
           items: [
-            '**GPT-4o:** tools + ecosystem. Best for multi-agent workflows, tool calling, and the richest third-party integrations.',
+            '**GPT-4o:** tools + ecosystem. Best for multi-agent workflows, tool calling, and the most extensive third-party integrations.',
             '**Claude 4.6 Sonnet:** careful reasoning + writing. Best for reports, analyses, code reviews, and enterprise safety requirements.',
             '**Gemini 2.5 Pro:** Google ecosystem + cost. Best for teams in Google Workspace, batch coding, and long-context research.',
             '**DeepSeek / Baidu ERNIE:** China-focused workloads. Mandatory for mainland China due to latency, access restrictions, and regulatory requirements.',
@@ -6287,9 +6288,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         gptSection: {
           title: 'When Should You Use GPT-4o?',
-          content: '**GPT-4o is OpenAI\'s frontier multimodal model — strongest for tool-heavy agentic workflows and the richest third-party ecosystem.** Use GPT-4o when tooling, integrations, and multimodal capabilities matter more than cost.',
+          content: '**GPT-4o is OpenAI\'s frontier multimodal model — strongest for tool-heavy agentic workflows with the most extensive third-party integrations and tools.** Use GPT-4o when tooling, integrations, and multimodal capabilities matter more than cost.',
           items: [
-            '**Strengths:** Excellent general reasoning and chat across all domains. Leading multimodal capabilities — processes images, audio, sometimes video reliably. Best-in-class tool calling and integrations (agents, IDE plugins, enterprise stack). Trusted in production by millions of developers.',
+            '**Strengths:** Excellent general reasoning and chat across all domains. Strong multimodal capabilities — reliably processes images, audio, and sometimes video. Best-in-class tool calling and integrations (agents, IDE plugins, enterprise stack). Trusted in production by millions of developers.',
             '**Best use cases:** Multi-step agent workflows. Complex chains where tool calling (APIs, databases, code execution) is required. Tasks needing screenshot or image analysis. OpenAI ecosystem projects (ChatGPT, Assistants API, Codex, fine-tuning).',
             '**Trade-offs:** Premium frontier models cost more per token ($15 input / $60 output per million). Output can be verbose — requires prompt discipline to enforce conciseness.',
             '**Context window:** 128,000 tokens (handles ~100 pages of text).',
@@ -6329,6 +6330,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         comparison: {
           title: 'Side-by-Side Model Snapshot',
+          content: '**This table compares 5 AI models across 8 key dimensions: general reasoning, writing, coding, long-context handling, multimodal support, cost efficiency, global ecosystem, and China access.**',
           tableFormat: true,
           columns: ['Dimension', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro', 'DeepSeek', 'Baidu ERNIE'],
           rows: [
@@ -6338,7 +6340,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             { 'Dimension': 'Long context', 'GPT-4o': 'Strong (128k)', 'Claude 4.6 Sonnet': 'Strong (200k)', 'Gemini 2.5 Pro': 'Strongest (2M) + web', 'DeepSeek': 'Good', 'Baidu ERNIE': 'Good with Baidu data' },
             { 'Dimension': 'Multimodal', 'GPT-4o': 'Leading (image/audio)', 'Claude 4.6 Sonnet': 'Good vision', 'Gemini 2.5 Pro': 'Very strong (video/web)', 'DeepSeek': 'Varies', 'Baidu ERNIE': 'Text + CN web' },
             { 'Dimension': 'Cost efficiency', 'GPT-4o': 'Medium–High', 'Claude 4.6 Sonnet': 'Higher, premium quality', 'Gemini 2.5 Pro': 'Very cost-effective', 'DeepSeek': 'Very cost-competitive', 'Baidu ERNIE': 'Competitive (CN enterprise)' },
-            { 'Dimension': 'Global ecosystem', 'GPT-4o': 'Richest', 'Claude 4.6 Sonnet': 'Growing, esp. enterprise', 'Gemini 2.5 Pro': 'Strong in Google world', 'DeepSeek': 'Limited outside China', 'Baidu ERNIE': 'Strong in Baidu ecosystem' },
+            { 'Dimension': 'Global ecosystem', 'GPT-4o': 'Most extensive', 'Claude 4.6 Sonnet': 'Growing, esp. enterprise', 'Gemini 2.5 Pro': 'Strong in Google world', 'DeepSeek': 'Limited outside China', 'Baidu ERNIE': 'Strong in Baidu ecosystem' },
             { 'Dimension': 'China access/latency', 'GPT-4o': 'Often restricted', 'Claude 4.6 Sonnet': 'Often restricted', 'Gemini 2.5 Pro': 'Often restricted', 'DeepSeek': 'Native / low-latency', 'Baidu ERNIE': 'Native / required' },
           ],
         },
@@ -6347,7 +6349,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'How Do You Pick the Right AI Model?',
           content: [
             '**Start with your primary use case, layer in your constraints, then choose the model best suited to both.**',
-            '**If: General assistant, multi-tool agentic workflows.** Then: Start with GPT-4o. You need the richest tooling and integrations.',
+            '**If: General assistant, multi-tool agentic workflows.** Then: Start with GPT-4o. You need the most extensive tooling ecosystem and integrations.',
             '**If: Deep writing, analysis, complex code, or strong safety requirements.** Then: Start with Claude 4.6 Sonnet. Quality and trustworthiness matter more than cost.',
             '**If: Heavy Google Workspace usage, batch coding/data, or processing 100+ long documents.** Then: Start with Gemini 2.5 Pro. Long context and ecosystem integration save time.',
             '**If: Users and data primarily in mainland China.** Then: Start with DeepSeek (coding-heavy) or Baidu ERNIE (consumer/business apps). Western models are restricted or high-latency.',
@@ -6385,7 +6387,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         promptquorumSection: {
           title: 'How Does PromptQuorum Help You Compare and Route Models?',
-          content: '**The pain point: manual switching between providers, copying prompts between tabs, trying to remember subjective impressions of which model worked best last month.** PromptQuorum solves this by sending one structured prompt to all models at once.',
+          content: '**PromptQuorum solves the pain of manual model switching by sending one structured prompt to all models simultaneously and comparing results automatically.** No more copying prompts between tabs or guessing which model performed best.',
           items: [
             '**One structured prompt → many models simultaneously.** Write your prompt once. [PromptQuorum](/prompt-engineering) dispatches it to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, Baidu ERNIE, and local LLMs (Ollama, LM Studio) in parallel. See all responses side-by-side.',
             '**Shared frameworks ensure fair comparison.** Use the same prompt structure, constraints, and formats across all models. This eliminates the excuse "Claude got better output because I worded the prompt for Claude."',
@@ -6398,7 +6400,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         practicalRecipes: {
           title: 'Practical Recipes: 4 Ways to Use PromptQuorum for Model Comparison',
-          content: 'Here are 4 concrete scenarios where multi-model testing reveals which model works best for YOU:',
+          content: '**Multi-model testing in PromptQuorum reveals which model works best for YOUR specific task, data, and brand — not generic benchmarks.** Here are 4 concrete scenarios:',
         },
 
         recipe1: {
