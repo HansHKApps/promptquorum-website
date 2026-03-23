@@ -6254,7 +6254,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             '**No single AI model is best for every task. GPT-4o excels at tool integration and reasoning; Claude 4.6 Sonnet dominates writing and code quality; Gemini 2.5 Pro offers cost-effective performance and deep Google Workspace integration; DeepSeek and Baidu ERNIE are essential for mainland China workloads.**',
             'When you have a new task, the first question should not be "what is the best model?" but rather "which model is best for THIS task, in THIS geography, at THIS budget?" Benchmarks and leaderboards shift every few months. Your actual task — your specific writing style, codebase, customers in China, data sensitivity — should drive the choice.',
-            '[PromptQuorum](/prompt-engineering) is a multi-model AI dispatch tool that solves this directly: send one structured prompt to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, Baidu ERNIE, and local LLMs (Ollama, LM Studio) simultaneously. See all responses side-by-side. Let PromptQuorum score which model performs best for YOUR task, YOUR data, YOUR brand voice — not YouTube benchmarks.',
+            'PromptQuorum is a multi-model AI dispatch tool that solves this directly: send one structured prompt to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, Baidu ERNIE, and local LLMs (Ollama, LM Studio) simultaneously. See all responses side-by-side. Let PromptQuorum score which model performs best for YOUR task, YOUR data, YOUR brand voice — not YouTube benchmarks.',
           ],
         },
 
@@ -6358,7 +6358,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Budget tight, volume high:** Favor Gemini Flash / DeepSeek / smaller GPT models.',
             '**Strict compliance, enterprise contracts:** Claude enterprise, Baidu ERNIE for China.',
             '**Need multimodal (screenshots, charts, audio):** GPT-4o or Gemini 2.5 Pro.',
-            '**Private data only:** Local LLMs via [Ollama](/prompt-engineering) or [LM Studio](/prompt-engineering) (no data leaves your device).',
+            '**Private data only:** Local LLMs via Ollama or LM Studio (no data leaves your device).',
           ],
         },
 
@@ -6389,7 +6389,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'How Does PromptQuorum Help You Compare and Route Models?',
           content: '**PromptQuorum solves the pain of manual model switching by sending one structured prompt to all models simultaneously and comparing results automatically.** No more copying prompts between tabs or guessing which model performed best.',
           items: [
-            '**One structured prompt → many models simultaneously.** Write your prompt once. [PromptQuorum](/prompt-engineering) dispatches it to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, Baidu ERNIE, and local LLMs (Ollama, LM Studio) in parallel. See all responses side-by-side.',
+            '**One structured prompt → many models simultaneously.** Write your prompt once. PromptQuorum dispatches it to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, Baidu ERNIE, and local LLMs (Ollama, LM Studio) in parallel. See all responses side-by-side.',
             '**Shared frameworks ensure fair comparison.** Use the same prompt structure, constraints, and formats across all models. This eliminates the excuse "Claude got better output because I worded the prompt for Claude."',
             '**Consensus and scoring view.** PromptQuorum shows you which model writes best for your brand voice, which produces the most correct code, which handles your proprietary documents most reliably, and which model is fastest and cheapest for YOUR task.',
             '**Routing rules:** Send cheap / high-volume tasks to small or local models. Send complex reasoning to premium models. Automate model selection based on task type.',

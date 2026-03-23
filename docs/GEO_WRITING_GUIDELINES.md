@@ -333,7 +333,31 @@ Every page must export relevant JSON-LD structured data. This is how Google and 
 
 ---
 
-## Rule 6: Semantic Completeness
+## Rule 6a: Internal Links Point to Content, Not Hubs
+
+**Every internal link must point to a page with substantive content, NOT a hub or gateway page with only further links.**
+
+**Wrong:**
+> "For more information, see [PromptQuorum](/prompt-engineering)." — points to hub page with only navigation links
+
+**Right:**
+> "Compare multiple models instantly with [PromptQuorum's consensus scoring](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)." — points to actual article with detailed content
+
+**Rule of thumb:**
+- ✅ Link to articles, guides, how-tos, tutorials, case studies
+- ❌ Don't link to listing pages, hubs, or disambiguation pages
+- ✅ Use descriptive anchor text that tells the reader what content they'll find
+- ❌ Don't use generic anchors like "Learn more" or "See our guide"
+- ✅ Can link to pages outside /prompt-engineering (e.g., /blog/, /features/, /how-it-works/)
+- ❌ Don't link to nav/landing pages without substantive content
+
+**If there's no single article to link to:**
+- Remove the link entirely, OR
+- Mention the topic by name without a link (e.g., "See PromptQuorum features" instead of "[PromptQuorum](/prompt-engineering)")
+
+---
+
+## Rule 7: Semantic Completeness
 
 Each section must answer its question completely without requiring the reader to have read previous sections.
 
@@ -347,7 +371,7 @@ FAQ entries in particular must be self-contained — AI systems extract individu
 
 ---
 
-## Rule 7: Meta Tags and Page Titles
+## Rule 8: Meta Tags and Page Titles
 
 Every page needs:
 - `<title>`: Format: `[Specific Topic] — PromptQuorum | [Benefit]`
