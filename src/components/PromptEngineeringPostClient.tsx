@@ -255,6 +255,32 @@ function SectionBlock({ section, colors }: { section: PESection; colors: { dot: 
         </div>
       )}
 
+      {/* Image with caption */}
+      {section.image && (
+        <figure className="my-8 flex flex-col items-center">
+          <img
+            src={section.image}
+            alt={section.imageCaption || 'Article visualization'}
+            className="w-full max-w-2xl rounded-lg border border-primary/20 shadow-sm"
+          />
+          {section.imageCaption && (
+            <figcaption className="text-sm text-text-secondary italic mt-3 text-center max-w-2xl">
+              {section.imageCaption}
+            </figcaption>
+          )}
+        </figure>
+      )}
+
+      {/* Image placeholder */}
+      {section.imagePlaceholder && (
+        <figure className="my-8 flex flex-col items-center bg-primary/5 border border-dashed border-primary/30 rounded-lg p-8">
+          <div className="text-center">
+            <p className="text-primary/60 text-sm font-semibold mb-2">📊 Image Coming Soon</p>
+            <p className="text-text-secondary text-sm">{section.imageCaption}</p>
+          </div>
+        </figure>
+      )}
+
       {/* FAQ */}
       {section.faqs && (
         <div className="space-y-6 mt-4">

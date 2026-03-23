@@ -13,6 +13,9 @@ export interface PESection {
   faqs?: Array<{ q: string; a: string }>
   isTldr?: boolean
   tableFormat?: boolean
+  image?: string
+  imageCaption?: string
+  imagePlaceholder?: boolean
 }
 
 export interface PEArticle {
@@ -24,6 +27,11 @@ export interface PEArticle {
   sections: Record<string, PESection>
   schema?: Record<string, unknown>
   supplementalSchema?: Record<string, unknown>
+  howToSchema?: Record<string, unknown>
+  faqSchema?: Record<string, unknown>
+  tableSchema?: Record<string, unknown>
+  recipesHowToSchema?: Record<string, unknown>
+  softwareSchema?: Record<string, unknown>
 }
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
