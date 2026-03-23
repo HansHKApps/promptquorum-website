@@ -6244,25 +6244,28 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'AI Model Comparison — GPT-4o vs Claude vs Gemini vs DeepSeek vs Baidu ERNIE (March 2026)',
-        'description': 'Comparison of 5 major AI models across 8 dimensions: reasoning, writing, coding, context, multimodal, cost, ecosystem, and China access',
+        'description': 'Comparison of 5 major AI models across 8 dimensions: general reasoning, writing, coding, long-context, multimodal, cost, ecosystem, and China access.',
+        'numberOfItems': 5,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'GPT-4o', 'description': 'Best for: tool integration, agentic workflows, multimodal. Context: 128k tokens. Cost: $15 input/$60 output per 1M tokens. Restricted in mainland China.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Claude 4.6 Sonnet', 'description': 'Best for: writing quality, code review, enterprise safety. Context: 200k tokens. Cost: $3 input/$15 output per 1M tokens. Restricted in mainland China.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Gemini 2.5 Pro', 'description': 'Best for: Google Workspace, long documents, cost efficiency. Context: 2M tokens. Very cost-effective Flash tier. Restricted in mainland China.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'DeepSeek', 'description': 'Best for: mainland China workloads, coding, cost-sensitive high-volume tasks. Native low-latency in China. Competitive pricing.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Baidu ERNIE', 'description': 'Best for: mainland China consumer and enterprise apps, Baidu Cloud integration. Required for regulatory compliance in China.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'GPT-4o', 'description': 'Best for tool integration and agentic workflows. Context: 128k tokens. Cost: $5 input/$15 output per 1M tokens. Restricted in mainland China.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Claude 4.6 Sonnet', 'description': 'Best for writing quality, code review, enterprise safety. Context: 200k tokens. Cost: $3 input/$15 output per 1M tokens. Restricted in mainland China.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Gemini 2.5 Pro', 'description': 'Best for Google Workspace, long documents, cost efficiency. Context: 2M tokens. Most cost-effective frontier model. Restricted in mainland China.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'DeepSeek', 'description': 'Best for mainland China workloads, coding, cost-sensitive high-volume tasks. Native low-latency in China. Competitive pricing globally.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Baidu ERNIE', 'description': 'Required for mainland China consumer and enterprise apps. Deep Baidu Cloud integration. Optimized for Chinese language and regulatory compliance.' },
         ],
       },
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'How to Pick the Right AI Model',
-        'description': 'A step-by-step decision process for choosing between GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, and Baidu ERNIE based on task, geography, and budget',
+        'description': 'A step-by-step decision process for choosing between GPT-4o, Claude, Gemini, DeepSeek, and Baidu ERNIE based on task, geography, and budget.',
+        'totalTime': 'PT5M',
         'step': [
-          { '@type': 'HowToStep', 'position': 1, 'name': 'Identify your primary use case', 'text': 'Determine whether you need tool integration, writing quality, long-context research, or China-compatible models.' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'Check geographic constraints', 'text': 'If users or data are in mainland China, use DeepSeek or Baidu ERNIE — Western models are restricted or high-latency.' },
-          { '@type': 'HowToStep', 'position': 3, 'name': 'Evaluate cost vs quality trade-off', 'text': 'Use budget models for high-volume tasks; reserve frontier models for complex reasoning.' },
-          { '@type': 'HowToStep', 'position': 4, 'name': 'Test on your actual task', 'text': 'Use PromptQuorum to dispatch one prompt to all models simultaneously and compare results on your real data.' },
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Identify your primary use case', 'text': 'Determine whether you primarily need tool integration and agents (GPT-4o), writing and code quality (Claude 4.6 Sonnet), long-context research or Google Workspace (Gemini 2.5 Pro), or China-compatible models (DeepSeek or Baidu ERNIE).' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Check geographic constraints', 'text': 'If users or data are in mainland China, use DeepSeek or Baidu ERNIE. Western frontier models (GPT-4o, Claude, Gemini) are restricted or high-latency in China due to network restrictions and regulatory requirements.' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Evaluate cost versus quality trade-off', 'text': 'Use budget models (GPT-4o mini, Gemini Flash, DeepSeek) for high-volume repetitive tasks. Reserve frontier models (GPT-4o, Claude 4.6 Sonnet) for complex reasoning where quality matters more than cost.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Consider data privacy requirements', 'text': 'For EU data residency or sensitive data that cannot leave your infrastructure, use local models via Ollama or LM Studio. No data leaves your device with local inference.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Test on your actual task with PromptQuorum', 'text': 'Send one prompt to all models simultaneously using PromptQuorum. Compare results on your real data and brand voice. The winning model for your specific task is the right choice — not generic benchmarks.' },
         ],
       },
       faqSchema: {
@@ -6274,9 +6277,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'Question', 'name': 'Can I mix multiple models inside one product or agent?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — and you should. Route different tasks to different models: Claude for writing, Gemini for retrieval, GPT for agents. Use conditional logic: if this is a writing task, use Claude; if this is a retrieval task, use Gemini. This is how production systems work.' } },
           { '@type': 'Question', 'name': 'How do I think about vendor lock-in?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Vendor lock-in happens when your system depends on one model\'s API format, special features, or pricing. Protect yourself: (1) Use standard prompt structures that work across models. (2) Use abstraction layers (like PromptQuorum) that support multiple providers. (3) Test regularly on multiple models to catch vendor-specific drift. (4) For critical systems, support local models (Ollama, LM Studio) as a fallback.' } },
           { '@type': 'Question', 'name': 'Where do open-source local models fit into this picture?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Local models (LLaMA 3.1, Mistral, others via Ollama or LM Studio) are best for: high-volume repetitive tasks (classify, summarize, extract), private data (no API calls), cost-sensitive workloads, and testing before committing to API costs. They do not match frontier models on quality but excel on privacy and cost. Use them for the 80% of tasks that do not need frontier-level reasoning.' } },
-          { '@type': 'Question', 'name': 'Is Claude better than ChatGPT?', 'acceptedAnswer': { '@type': 'Answer', 'text': '"Better" depends entirely on your task. Claude 4.6 Sonnet excels at writing quality, reasoning, code review, and structured output. GPT-4o dominates tool integration, multimodal (images/audio), and agent workflows. On benchmarks, they trade first place quarterly. Use PromptQuorum to test both on your actual task—do not rely on generic comparisons. For your specific writing style or codebase, one will clearly outperform the other.' } },
-          { '@type': 'Question', 'name': 'Which AI model is most accurate?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Accuracy is task-specific, not absolute. GPT-4o ranks highest on math and reasoning benchmarks; Claude 4.6 Sonnet ranks highest on writing quality and factual grounding; Gemini 2.5 Pro ranks highest on retrieval and long-context tasks. Your data, prompt structure, and use case matter more than generic leaderboard position. Test your models on a representative sample of YOUR data—that is the only reliable accuracy metric.' } },
-          { '@type': 'Question', 'name': 'What is the difference between GPT-4o and GPT-4o mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPT-4o mini is a smaller, faster, cheaper variant: ~90% of GPT-4o quality on most tasks but at 1/10 the cost and 2–3× faster latency. Use mini for high-volume tasks (bulk analysis, moderation, classification) and context-light queries. Use full GPT-4o for complex reasoning, multimodal analysis, and agent workflows. OpenAI recommends testing both on your task to find the quality/cost/speed trade-off that fits your needs.' } },
+          { '@type': 'Question', 'name': 'Is Claude better than ChatGPT?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For writing quality, code review, and structured reasoning, Claude 4.6 Sonnet outperforms ChatGPT (GPT-4o) in most evaluations. For tool integration, multi-agent workflows, and the broadest third-party ecosystem, GPT-4o has the advantage. Neither is universally better — the right choice depends on your specific task. Use PromptQuorum to test both on your actual prompts and compare results directly.' } },
+          { '@type': 'Question', 'name': 'Which AI model is most accurate?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No single model is most accurate across all tasks. Claude 4.6 Sonnet leads on writing and structured analysis. GPT-4o leads on tool-integrated reasoning. Gemini 2.5 Pro leads on long-document research with live web grounding. Accuracy is task-specific — the only reliable test is running your actual prompts across all models and measuring the results.' } },
+          { '@type': 'Question', 'name': 'What is the difference between GPT-4o and GPT-4o mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPT-4o is OpenAI\'s frontier model — highest capability, highest cost ($5 input/$15 output per million tokens). GPT-4o mini is a smaller, faster, cheaper version ($0.15 input/$0.60 output per million tokens) — 33x cheaper with slightly lower quality. Use GPT-4o mini for classification, summarization, and high-volume tasks where frontier reasoning is not required. Use GPT-4o for complex multi-step reasoning, agent workflows, and tasks where quality is critical.' } },
         ],
       },
       tableSchema: {
@@ -6375,7 +6378,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           items: [
             '**Strengths:** Excellent general reasoning and chat across all domains. Strong multimodal capabilities — reliably processes images, audio, and sometimes video. Best-in-class tool calling and integrations (agents, IDE plugins, enterprise stack). Trusted in production by millions of developers.',
             '**Best use cases:** Multi-step agent workflows. Complex chains where tool calling (APIs, databases, code execution) is required. Tasks needing screenshot or image analysis. OpenAI ecosystem projects (ChatGPT, Assistants API, Codex, fine-tuning).',
-            '**Trade-offs:** Premium frontier models cost more per token ($15 input / $60 output per million). Output can be verbose — requires prompt discipline to enforce conciseness.',
+            '**Trade-offs:** Premium frontier models cost more per token ($5 input / $15 output per million). Output can be verbose — requires prompt discipline to enforce conciseness.',
             '**Context window:** 128,000 tokens (handles ~100 pages of text).',
           ],
         },
@@ -6475,7 +6478,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'How Do Costs and Token Limits Compare?',
           content: '**All major models are priced per input and output token, with rate limits based on your tier.** Frontier models cost 10–100× more per token than budget models. Pricing varies by region (especially China).',
           items: [
-            '**Frontier models (most expensive per token):** GPT-4o ($15 input / $60 output per million tokens), Claude 4.6 Sonnet (~$3 input / $15 output per million tokens).',
+            '**Frontier models (most expensive per token):** GPT-4o ($5 input / $15 output per million tokens), Claude 4.6 Sonnet (~$3 input / $15 output per million tokens).',
             '**Cost-effective mid-tier:** Gemini 2.5 Flash ($0.075 input / $0.30 output per million tokens).',
             '**Competitive budget models:** DeepSeek (aggressive pricing), local models via Ollama/LM Studio (free, run on-device).',
             '**Rate limits:** Frontier models often start at 100 req/min; scaled tier can reach 10,000+ req/min. Local models depend on your hardware.',
@@ -6564,15 +6567,15 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             },
             {
               q: 'Is Claude better than ChatGPT?',
-              a: '"Better" depends entirely on your task. Claude 4.6 Sonnet excels at writing quality, reasoning, code review, and structured output. GPT-4o dominates tool integration, multimodal (images/audio), and agent workflows. On benchmarks, they trade first place quarterly. Use PromptQuorum to test both on your actual task—do not rely on generic comparisons. For your specific writing style or codebase, one will clearly outperform the other.'
+              a: 'For writing quality, code review, and structured reasoning, Claude 4.6 Sonnet outperforms ChatGPT (GPT-4o) in most evaluations. For tool integration, multi-agent workflows, and the broadest third-party ecosystem, GPT-4o has the advantage. Neither is universally better — the right choice depends on your specific task. Use PromptQuorum to test both on your actual prompts and compare results directly.'
             },
             {
               q: 'Which AI model is most accurate?',
-              a: 'Accuracy is task-specific, not absolute. GPT-4o ranks highest on math and reasoning benchmarks; Claude 4.6 Sonnet ranks highest on writing quality and factual grounding; Gemini 2.5 Pro ranks highest on retrieval and long-context tasks. Your data, prompt structure, and use case matter more than generic leaderboard position. Test your models on a representative sample of YOUR data—that is the only reliable accuracy metric.'
+              a: 'No single model is most accurate across all tasks. Claude 4.6 Sonnet leads on writing and structured analysis. GPT-4o leads on tool-integrated reasoning. Gemini 2.5 Pro leads on long-document research with live web grounding. Accuracy is task-specific — the only reliable test is running your actual prompts across all models and measuring the results.'
             },
             {
               q: 'What is the difference between GPT-4o and GPT-4o mini?',
-              a: 'GPT-4o mini is a smaller, faster, cheaper variant: ~90% of GPT-4o quality on most tasks but at 1/10 the cost and 2–3× faster latency. Use mini for high-volume tasks (bulk analysis, moderation, classification) and context-light queries. Use full GPT-4o for complex reasoning, multimodal analysis, and agent workflows. OpenAI recommends testing both on your task to find the quality/cost/speed trade-off that fits your needs.'
+              a: 'GPT-4o is OpenAI\'s frontier model — highest capability, highest cost ($5 input/$15 output per million tokens). GPT-4o mini is a smaller, faster, cheaper version ($0.15 input/$0.60 output per million tokens) — 33x cheaper with slightly lower quality. Use GPT-4o mini for classification, summarization, and high-volume tasks where frontier reasoning is not required. Use GPT-4o for complex multi-step reasoning, agent workflows, and tasks where quality is critical.'
             },
           ],
         },
