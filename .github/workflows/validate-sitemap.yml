@@ -18,60 +18,140 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Validate sitemap completeness
+      - name: Validate complete sitemap coverage
         run: |
           set -e
 
-          echo "🔍 Validating sitemap completeness..."
-
-          # Count PE articles in slugs.ts
-          PE_SLUGS=$(grep -c "^  '[^']*':" src/lib/prompt-engineering/slugs.ts || echo "0")
-          echo "✓ Found $PE_SLUGS PE article slugs in slugs.ts"
-
-          # Count blog articles in blogSlugs.ts
-          BLOG_SLUGS=$(grep -c "^  '" src/lib/blogSlugs.ts || echo "0")
-          echo "✓ Found $BLOG_SLUGS blog article slugs in blogSlugs.ts"
-
-          # Verify imports
-          if grep -q "import { PE_SLUG_TO_KEY }" src/app/sitemap.ts; then
-            echo "✓ PE_SLUG_TO_KEY imported in sitemap.ts"
-          else
-            echo "❌ ERROR: PE_SLUG_TO_KEY not imported in sitemap.ts!"
-            exit 1
-          fi
-
-          if grep -q "import { SLUG_TO_POST_ID }" src/app/sitemap.ts; then
-            echo "✓ SLUG_TO_POST_ID imported in sitemap.ts"
-          else
-            echo "❌ ERROR: SLUG_TO_POST_ID not imported in sitemap.ts!"
-            exit 1
-          fi
-
-          # Verify hreflang utility exists
-          if [ -f "src/lib/hreflang.ts" ]; then
-            echo "✓ hreflang utility exists for language alternates"
-          else
-            echo "❌ ERROR: hreflang.ts utility missing!"
-            exit 1
-          fi
-
-          # Verify alternates in metadata
-          if grep -q "alternates.*languages" src/app/layout.tsx; then
-            echo "✓ Language alternates configured in root layout"
-          else
-            echo "❌ ERROR: Language alternates not in root layout!"
-            exit 1
-          fi
-
-          # Build to verify no errors
-          echo "🔨 Building to verify no errors..."
-          npm run build > /dev/null 2>&1
-
+          echo "🔍 COMPREHENSIVE SITEMAP VALIDATION"
+          echo "===================================="
           echo ""
-          echo "✨ Sitemap validation passed!"
-          echo "   • PE articles: $PE_SLUGS (dynamically included in sitemap × 5 languages = $((PE_SLUGS * 5)) URLs)"
-          echo "   • Blog articles: $BLOG_SLUGS (dynamically included in sitemap × 5 languages = $((BLOG_SLUGS * 5)) URLs)"
-          echo "   • hreflang tags: ✓ Configured for all language variants"
+
+          # 1. STATIC PAGES CHECK
+          echo "1️⃣  Static Pages Validation"
+          STATIC_PAGES=(
+            "" "/" "compare" "features" "features/optimization" "features/quorum"
+            "how-it-works" "download" "faq" "about" "waitlist" "privacy"
+          )
+          STATIC_COUNT=${#STATIC_PAGES[@]}
+          for page in "${STATIC_PAGES[@]}"; do
+            if grep -q "'${page}'" src/app/sitemap.ts 2>/dev/null || [ -z "$page" ]; then
+              echo "  ✓ /$page"
+            else
+              echo "  ❌ Missing: /$page"
+              exit 1
+            fi
+          done
+          echo "  Found $STATIC_COUNT static pages"
+          echo ""
+
+          # 2. PROMPT ENGINEERING ARTICLES CHECK
+          echo "2️⃣  Prompt Engineering Articles Validation"
+          PE_SLUGS=$(grep -c "^  '[^']*':" src/lib/prompt-engineering/slugs.ts || echo "0")
+          echo "  Checking PE_SLUG_TO_KEY import..."
+          if grep -q "import { PE_SLUG_TO_KEY }" src/app/sitemap.ts; then
+            echo "  ✓ PE_SLUG_TO_KEY imported"
+          else
+            echo "  ❌ ERROR: PE_SLUG_TO_KEY not imported!"
+            exit 1
+          fi
+          echo "  ✓ Found $PE_SLUGS PE articles (will be included × 5 languages = $((PE_SLUGS * 5)) URLs)"
+          echo ""
+
+          # 3. BLOG ARTICLES CHECK
+          echo "3️⃣  Blog Articles Validation"
+          BLOG_SLUGS=$(grep -c "^  '" src/lib/blogSlugs.ts || echo "0")
+          echo "  Checking SLUG_TO_POST_ID import..."
+          if grep -q "import { SLUG_TO_POST_ID }" src/app/sitemap.ts; then
+            echo "  ✓ SLUG_TO_POST_ID imported"
+          else
+            echo "  ❌ ERROR: SLUG_TO_POST_ID not imported!"
+            exit 1
+          fi
+          echo "  ✓ Found $BLOG_SLUGS blog articles (will be included × 5 languages = $((BLOG_SLUGS * 5)) URLs)"
+          echo ""
+
+          # 4. FRAMEWORK PAGES CHECK
+          echo "4️⃣  Framework Pages Validation"
+          FRAMEWORK_PAGES=(
+            "frameworks" "frameworks/co-star" "frameworks/craft" "frameworks/risen"
+            "frameworks/trace" "frameworks/ape" "frameworks/specs" "frameworks/rtf"
+            "frameworks/google-prompt" "frameworks/single-prompt-line"
+          )
+          FRAMEWORK_COUNT=${#FRAMEWORK_PAGES[@]}
+          for page in "${FRAMEWORK_PAGES[@]}"; do
+            if grep -q "'/$page'" src/app/sitemap.ts 2>/dev/null; then
+              echo "  ✓ /$page"
+            else
+              echo "  ❌ Missing: /$page"
+              exit 1
+            fi
+          done
+          echo "  Found $FRAMEWORK_COUNT framework pages"
+          echo ""
+
+          # 5. MULTI-LANGUAGE SUPPORT CHECK
+          echo "5️⃣  Multi-Language SEO Validation"
+          if grep -q "LANGS.*en.*de.*fr.*ja.*zh" src/app/sitemap.ts; then
+            echo "  ✓ All 5 languages (en, de, fr, ja, zh) configured"
+          else
+            echo "  ❌ ERROR: Missing languages in sitemap.ts!"
+            exit 1
+          fi
+
+          if [ -f "src/lib/hreflang.ts" ]; then
+            echo "  ✓ hreflang utility exists"
+          else
+            echo "  ❌ ERROR: hreflang.ts missing!"
+            exit 1
+          fi
+
+          if grep -q "alternates.*languages" src/app/layout.tsx; then
+            echo "  ✓ Language alternates in root layout"
+          else
+            echo "  ❌ ERROR: Language alternates not in layout!"
+            exit 1
+          fi
+          echo ""
+
+          # 6. SITEMAP STRUCTURE CHECK
+          echo "6️⃣  Sitemap Structure Validation"
+          if grep -q "const PAGES: Page\[\] = \[...STATIC_PAGES, ...PE_PAGES, ...BLOG_PAGES, ...FRAMEWORK_PAGES\]" src/app/sitemap.ts; then
+            echo "  ✓ All page arrays merged in PAGES constant"
+          else
+            echo "  ❌ ERROR: PAGES array not properly constructed!"
+            exit 1
+          fi
+
+          if grep -q "LANGS.forEach(lang =>" src/app/sitemap.ts; then
+            echo "  ✓ Language iteration implemented for all variants"
+          else
+            echo "  ❌ ERROR: Language iteration missing!"
+            exit 1
+          fi
+          echo ""
+
+          # 7. BUILD VERIFICATION
+          echo "7️⃣  Build Verification"
+          echo "  Running npm run build..."
+          npm run build > /dev/null 2>&1
+          echo "  ✓ Build successful"
+          echo ""
+
+          # 8. SUMMARY
+          echo "===================================="
+          echo "✨ COMPLETE SITEMAP VALIDATION PASSED"
+          echo "===================================="
+          TOTAL_URLS=$((($STATIC_COUNT + $PE_SLUGS + $BLOG_SLUGS + $FRAMEWORK_COUNT) * 5))
+          echo ""
+          echo "📊 COVERAGE SUMMARY:"
+          echo "  • Static pages: $STATIC_COUNT × 5 languages = $((STATIC_COUNT * 5)) URLs"
+          echo "  • PE articles: $PE_SLUGS × 5 languages = $((PE_SLUGS * 5)) URLs"
+          echo "  • Blog articles: $BLOG_SLUGS × 5 languages = $((BLOG_SLUGS * 5)) URLs"
+          echo "  • Framework pages: $FRAMEWORK_COUNT × 5 languages = $((FRAMEWORK_COUNT * 5)) URLs"
+          echo ""
+          echo "🔗 TOTAL SITEMAP COVERAGE: ~$TOTAL_URLS URLs"
+          echo "✓ hreflang tags: Configured for all language variants"
+          echo "✓ All pages included dynamically — sitemap auto-updates when you add content"
 
       - name: Notify on failure
         if: failure()
