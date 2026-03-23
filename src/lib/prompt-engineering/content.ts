@@ -6470,6 +6470,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            '[OpenAI — GPT-4o and model overview](https://platform.openai.com/docs/models)',
+            '[Anthropic — Claude models overview](https://docs.anthropic.com/en/docs/models-overview)',
+            '[Google — Gemini models and pricing](https://ai.google.dev/gemini-api/docs/models)',
+            '[DeepSeek — API documentation and models](https://api-docs.deepseek.com)',
+            '[Baidu AI Cloud — ERNIE Bot platform](https://cloud.baidu.com/product/wenxinworkshop)',
+            '[ERNIE API documentation](https://cloud.baidu.com/doc/WENXINWORKSHOP/index.html)',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           items: [
