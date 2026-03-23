@@ -6257,6 +6257,52 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'HowToStep', 'position': 4, 'name': 'Test on your actual task', 'text': 'Use PromptQuorum to dispatch one prompt to all models simultaneously and compare results on your real data.' },
         ],
       },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'If I can only pay for one subscription, which should I choose?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Start with Claude 4.6 Sonnet for highest quality across writing, reasoning, and code. If your primary need is tool integration and multimodal, choose GPT-4o. If you have a Google Workspace-heavy team and cost is critical, choose Gemini. If your users are in mainland China, you have no choice — choose DeepSeek or Baidu ERNIE (required for latency and compliance).' } },
+          { '@type': 'Question', 'name': 'How often should I re-evaluate my model choices?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Quarterly. Every 3–4 months, new models launch and leaderboard positions shift. Use PromptQuorum to re-test your most critical tasks on the latest models. What was best 6 months ago might no longer be optimal.' } },
+          { '@type': 'Question', 'name': 'Can I mix multiple models inside one product or agent?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — and you should. Route different tasks to different models: Claude for writing, Gemini for retrieval, GPT for agents. Use conditional logic: if this is a writing task, use Claude; if this is a retrieval task, use Gemini. This is how production systems work.' } },
+          { '@type': 'Question', 'name': 'How do I think about vendor lock-in?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Vendor lock-in happens when your system depends on one model\'s API format, special features, or pricing. Protect yourself: (1) Use standard prompt structures that work across models. (2) Use abstraction layers (like PromptQuorum) that support multiple providers. (3) Test regularly on multiple models to catch vendor-specific drift. (4) For critical systems, support local models (Ollama, LM Studio) as a fallback.' } },
+          { '@type': 'Question', 'name': 'Where do open-source local models fit into this picture?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Local models (LLaMA 3.1, Mistral, others via Ollama or LM Studio) are best for: high-volume repetitive tasks (classify, summarize, extract), private data (no API calls), cost-sensitive workloads, and testing before committing to API costs. They do not match frontier models on quality but excel on privacy and cost. Use them for the 80% of tasks that do not need frontier-level reasoning.' } },
+          { '@type': 'Question', 'name': 'Is Claude better than ChatGPT?', 'acceptedAnswer': { '@type': 'Answer', 'text': '"Better" depends entirely on your task. Claude 4.6 Sonnet excels at writing quality, reasoning, code review, and structured output. GPT-4o dominates tool integration, multimodal (images/audio), and agent workflows. On benchmarks, they trade first place quarterly. Use PromptQuorum to test both on your actual task—do not rely on generic comparisons. For your specific writing style or codebase, one will clearly outperform the other.' } },
+          { '@type': 'Question', 'name': 'Which AI model is most accurate?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Accuracy is task-specific, not absolute. GPT-4o ranks highest on math and reasoning benchmarks; Claude 4.6 Sonnet ranks highest on writing quality and factual grounding; Gemini 2.5 Pro ranks highest on retrieval and long-context tasks. Your data, prompt structure, and use case matter more than generic leaderboard position. Test your models on a representative sample of YOUR data—that is the only reliable accuracy metric.' } },
+          { '@type': 'Question', 'name': 'What is the difference between GPT-4o and GPT-4o mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPT-4o mini is a smaller, faster, cheaper variant: ~90% of GPT-4o quality on most tasks but at 1/10 the cost and 2–3× faster latency. Use mini for high-volume tasks (bulk analysis, moderation, classification) and context-light queries. Use full GPT-4o for complex reasoning, multimodal analysis, and agent workflows. OpenAI recommends testing both on your task to find the quality/cost/speed trade-off that fits your needs.' } },
+        ],
+      },
+      tableSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'Table',
+        'name': 'AI Model Comparison Table',
+        'about': 'Compares GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, and Baidu ERNIE across 8 dimensions',
+      },
+      recipesHowToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Practical Recipes for Model Selection & Testing',
+        'description': '4 real-world scenarios for deciding which AI model to use and how to test your choice',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Recipe 1: Decide which model writes best for your brand voice', 'text': 'Send a sample of your writing (article, email, sales page) to PromptQuorum with a prompt: "Rewrite this in our brand voice." Compare outputs side-by-side. The model that requires the fewest revisions is your writing model.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Recipe 2: Compare coding quality and cost for your backend stack', 'text': 'Take a real coding task from your backlog. Dispatch it to GPT-4o, Claude, Gemini, and DeepSeek. Measure: code correctness (does it work?), time to implement (token usage), cost per token. Gemini and DeepSeek usually win on cost; Claude and GPT on quality.' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Recipe 3: Set up a global + China stack: GPT/Claude/Gemini + DeepSeek/ERNIE', 'text': 'If you serve users globally AND in mainland China: route Western users to your multi-model setup (GPT, Claude, Gemini rotated by task). Route China users to DeepSeek or Baidu ERNIE (latency and compliance). Automate via geography detection (IP, user setting, browser language).' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Recipe 4: Use local LLMs for private data, frontier models for final polish', 'text': 'You have sensitive customer data. Step 1: Process locally with Ollama or LM Studio (no data leaves your servers). Step 2: Send the refined output to Claude or GPT for final polish and quality check. This hybrid approach is cheap, private, and produces high-quality output. Test it in PromptQuorum to find the local model that works best for your pipeline.' },
+        ],
+      },
+      softwareSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'PromptQuorum',
+        'description': 'Multi-model AI dispatch tool that sends one structured prompt to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, Baidu ERNIE, and local LLMs simultaneously — returns all responses for comparison and consensus scoring',
+        'url': 'https://www.promptquorum.com',
+        'applicationCategory': 'ProductivityApplication',
+        'operatingSystem': 'Web, macOS, Windows, Linux',
+        'offers': {
+          '@type': 'Offer',
+          'price': 'Free tier available; premium plans for team collaboration',
+          'priceCurrency': 'USD',
+        },
+      },
       sections: {
         definition: {
           title: 'No Single "Best" AI Model — Choose by Task',
