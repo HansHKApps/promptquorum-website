@@ -6429,9 +6429,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         chineseModels: {
           title: 'How to choose an AI model if you\'re in China or need low latency?',
           content: [
-            '**For users and data in mainland China, DeepSeek and Baidu ERNIE are not optional — they are required.** Western frontier models (GPT-4o, Claude, Gemini) are often restricted or high-latency in China due to network restrictions and regulatory requirements.',
-            '**DeepSeek (frontier model, competitive coding):** Competitive coding and reasoning performance, aggressive pricing, excellent Chinese language support and mixed Chinese–English tasks. Best for developer workflows in mainland China and high-volume cost-sensitive workloads. Trade-offs: smaller ecosystem outside China, fewer third-party integrations vs GPT/Claude/Gemini.',
-            '**Baidu ERNIE (enterprise and consumer):** Tight integration with Baidu search and cloud, strong grounding in Chinese web content and enterprise data. Best for consumer and enterprise apps targeting Chinese users, apps on Baidu Cloud infrastructure. Trade-offs: primarily optimized for Chinese, English and other languages may lag Western frontier models.',
+            '**For users and data in mainland China, DeepSeek and Baidu ERNIE are not optional — they are required.** Western frontier models (GPT-4o, Claude, Gemini) are often restricted or high-latency in China due to network restrictions and regulatory requirements. In 2026, latency (3–10 second response times vs 500ms locally) and compliance (data residency, content moderation) are massive pain points. Using a Western model in mainland China means either: (1) unavailable service, (2) unacceptable latency for users, (3) regulatory violations. Local models eliminate all three.',
+            '**DeepSeek (frontier model, competitive coding):** Competitive coding and reasoning performance, aggressive pricing, excellent Chinese language support and mixed Chinese–English tasks. Native mainland China infrastructure = sub-500ms latency. Best for developer workflows in mainland China and high-volume cost-sensitive workloads. Trade-offs: smaller ecosystem outside China, fewer third-party integrations vs GPT/Claude/Gemini.',
+            '**Baidu ERNIE (enterprise and consumer):** Tight integration with Baidu search and cloud, strong grounding in Chinese web content and enterprise data. Fully compliant with mainland China regulatory requirements (content moderation, data residency, keyword filtering). Best for consumer and enterprise apps targeting Chinese users, apps on Baidu Cloud infrastructure where compliance is non-negotiable. Trade-offs: primarily optimized for Chinese, English and other languages may lag Western frontier models.',
           ],
         },
 
@@ -6521,12 +6521,12 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         recipe1: {
           title: 'Recipe 1: Decide Which Model Writes Best for Your Brand Voice',
-          blockquote: 'You are writing product copy for a B2B SaaS landing page. The tone needs to be authoritative but accessible — no marketing fluff, no vague superlatives. Test the same brief on GPT-4o, Claude 4.6 Sonnet, and Gemini. See which model captures your brand voice best. Run it through PromptQuorum, score each output on tone, clarity, and adherence to your brand guidelines. The winner becomes your go-to model for copywriting.',
+          blockquote: 'You are writing product copy for a B2B SaaS landing page. The tone needs to be authoritative but accessible — no marketing fluff, no vague superlatives. Test the same brief on GPT-4o, Claude 4.6 Sonnet, and Gemini. See which model captures your brand voice best. Run it through PromptQuorum, score each output on tone, clarity, and adherence to your brand guidelines. The winner becomes your go-to model for copywriting. Example prompt: "Rewrite this feature description in our brand voice: [paste your style guide + existing copy]. Which model matches best?"',
         },
 
         recipe2: {
           title: 'Recipe 2: Compare Coding Quality and Cost for Your Backend Stack',
-          blockquote: 'You have a Python codebase. Test: "Review this function for performance and bugs. Suggest refactoring." Run it through GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Flash. Which catches the most bugs? Which refactoring is cleanest? Which is cheapest per request? Use PromptQuorum to score code quality. You might find Gemini Flash catches 90% of the issues at 1/50th the cost of Claude.',
+          blockquote: 'You have a Python codebase. Test: "Review this function for performance and bugs. Suggest refactoring." Run it through GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Flash. Which catches the most bugs? Which refactoring is cleanest? Which is cheapest per request? Use PromptQuorum to score code quality. You might find Gemini Flash catches 90% of the issues at 1/50th the cost of Claude. Example: "Optimize this database query for speed. What's the time complexity?" — routed to Claude for deep analysis, Gemini for budget-conscious iteration.',
         },
 
         recipe3: {
