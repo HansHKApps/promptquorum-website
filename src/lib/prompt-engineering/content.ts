@@ -6328,8 +6328,30 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        coding: {
+          title: 'Which AI model is best for coding in 2026?',
+          content: '**Claude 4.6 Sonnet excels at code quality and refactoring; GPT-4o dominates tool integration and multi-file reasoning; Gemini 2.5 Pro offers the best cost/quality ratio for batch tasks; DeepSeek is the choice for mainland China developers.** The "best" model for coding depends on your primary challenge: code quality, integration breadth, cost per token, or geography.',
+          items: [
+            '**GPT-4o:** Strongest for multi-step coding tasks with tool use (file system access, APIs, shell commands). Excellent at reasoning across large codebases and generating complex workflows. Best if integrations with GitHub, AWS, APIs are critical.',
+            '**Claude 4.6 Sonnet:** Best for code review, refactoring, and architecture discussions. Catches subtle bugs others miss. Preferred for maintaining existing codebases and explaining legacy code. Higher token cost but often reduces rounds of back-and-forth.',
+            '**Gemini 2.5 Pro:** Best cost/quality for batch coding tasks (data processing, utility scripts, automation). 2M context means you can load entire projects at once. Excellent for prototype-to-production velocity where cost matters.',
+            '**DeepSeek:** Competitive with GPT for coding but 10× cheaper. Best for mainland China developers and high-volume coding tasks (scaffolding, boilerplate, routine refactoring). Very strong on algorithm problems and competitive programming.',
+          ],
+        },
+
+        longContext: {
+          title: 'Best LLM for long context or large documents 2026?',
+          content: '**Gemini 2.5 Pro dominates with 2M context tokens (handles ~1,500 pages); Claude 4.6 Sonnet with 200k tokens is next (handles ~150 pages); GPT-4o at 128k tokens is sufficient for most single-document tasks.** Choose based on document size, retrieval precision, and whether you need to load multiple files simultaneously.',
+          items: [
+            '**Gemini 2.5 Pro (2M tokens):** Load entire codebases, legal document sets, or research archives. Web search integration lets you reference external sources within long context. Best for: due diligence reviews, regulatory analysis, knowledge base search, processing 100+ page PDFs.',
+            '**Claude 4.6 Sonnet (200k tokens):** Strong enough for most documents: books, theses, lengthy codebase walk-throughs. Excellent for detailed analysis and extracting nuanced information. Trade-off: higher cost per token, but quality may reduce revision rounds.',
+            '**GPT-4o (128k tokens):** Sufficient for single documents under 100 pages. Use when you need tool calling alongside long context (file system, APIs). Trade-off: Cannot load multiple large documents; requires chunking/splitting.',
+            '**Practical strategy:** For very long tasks (multi-document workflows), use Gemini first (cheapest, largest context), then refine with Claude if output quality needs polish.',
+          ],
+        },
+
         chineseModels: {
-          title: 'When Should You Use DeepSeek or Baidu ERNIE?',
+          title: 'How to choose an AI model if you\'re in China or need low latency?',
           content: [
             '**For users and data in mainland China, DeepSeek and Baidu ERNIE are not optional — they are required.** Western frontier models (GPT-4o, Claude, Gemini) are often restricted or high-latency in China due to network restrictions and regulatory requirements.',
             '**DeepSeek (frontier model, competitive coding):** Competitive coding and reasoning performance, aggressive pricing, excellent Chinese language support and mixed Chinese–English tasks. Best for developer workflows in mainland China and high-volume cost-sensitive workloads. Trade-offs: smaller ecosystem outside China, fewer third-party integrations vs GPT/Claude/Gemini.',
@@ -6338,7 +6360,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         comparison: {
-          title: 'Side-by-Side Model Snapshot',
+          title: 'GPT-4o vs Claude 4.6 Sonnet vs Gemini 2.5 Pro: Quick comparison',
           content: '**This table compares 5 AI models across 8 key dimensions: general reasoning, writing, coding, long-context handling, multimodal support, cost efficiency, global ecosystem, and China access.**',
           tableFormat: true,
           columns: ['Dimension', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro', 'DeepSeek', 'Baidu ERNIE'],
@@ -6384,7 +6406,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         whyMultipleModels: {
-          title: 'Why Should You Use More Than One AI Model?',
+          title: 'Why use multiple AI models instead of one in 2026?',
           content: '**Benchmarks and leaderboards change every few months. Different tasks are best served by different models. And geographic constraints (EU data residency, China latency) force multi-model stacks.**',
           items: [
             '**Reason 1: Task-specific excellence.** No model wins at everything. Claude excels at writing; Gemini at long-context research; GPT at multi-step reasoning. Route your tasks to the specialist.',
