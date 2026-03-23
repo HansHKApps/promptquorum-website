@@ -64,18 +64,28 @@ const FRAMEWORK_PAGES: Page[] = [
 const PAGES: Page[] = [...STATIC_PAGES, ...PE_PAGES, ...BLOG_PAGES, ...FRAMEWORK_PAGES]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return PAGES.map(({ path, priority, changefreq, lastmod }) => ({
-    url: `${BASE}${path}`,
-    lastModified: lastmod,
-    changeFrequency: changefreq,
-    priority,
-    alternates: {
-      languages: Object.fromEntries(
-        LANGS.map(lang => [
-          lang,
-          lang === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${lang}`,
-        ])
-      ),
-    },
-  }))
+  const entries: MetadataRoute.Sitemap = []
+
+  PAGES.forEach(({ path, priority, changefreq, lastmod }) => {
+    // Add entry for each language variant
+    LANGS.forEach(lang => {
+      const url = lang === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${lang}`
+      entries.push({
+        url,
+        lastModified: lastmod,
+        changeFrequency: changefreq,
+        priority,
+        alternates: {
+          languages: Object.fromEntries(
+            LANGS.map(l => [
+              l,
+              l === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${l}`,
+            ])
+          ),
+        },
+      })
+    })
+  })
+
+  return entries
 }

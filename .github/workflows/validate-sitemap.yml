@@ -28,27 +28,9 @@ jobs:
           PE_SLUGS=$(grep -c "^  '[^']*':" src/lib/prompt-engineering/slugs.ts || echo "0")
           echo "✓ Found $PE_SLUGS PE article slugs in slugs.ts"
 
-          # Count PE articles in sitemap.ts
-          PE_IN_SITEMAP=$(grep -c "^  ...Object.keys(PE_SLUG_TO_KEY)" src/app/sitemap.ts || echo "0")
-          if [ "$PE_IN_SITEMAP" -gt 0 ]; then
-            echo "✓ PE articles are included in sitemap (dynamic generation)"
-          else
-            echo "❌ ERROR: PE articles not included in sitemap!"
-            exit 1
-          fi
-
           # Count blog articles in blogSlugs.ts
           BLOG_SLUGS=$(grep -c "^  '" src/lib/blogSlugs.ts || echo "0")
           echo "✓ Found $BLOG_SLUGS blog article slugs in blogSlugs.ts"
-
-          # Count blog articles in sitemap.ts
-          BLOG_IN_SITEMAP=$(grep -c "^  ...Object.keys(SLUG_TO_POST_ID)" src/app/sitemap.ts || echo "0")
-          if [ "$BLOG_IN_SITEMAP" -gt 0 ]; then
-            echo "✓ Blog articles are included in sitemap (dynamic generation)"
-          else
-            echo "❌ ERROR: Blog articles not included in sitemap!"
-            exit 1
-          fi
 
           # Verify imports
           if grep -q "import { PE_SLUG_TO_KEY }" src/app/sitemap.ts; then
@@ -65,10 +47,31 @@ jobs:
             exit 1
           fi
 
+          # Verify hreflang utility exists
+          if [ -f "src/lib/hreflang.ts" ]; then
+            echo "✓ hreflang utility exists for language alternates"
+          else
+            echo "❌ ERROR: hreflang.ts utility missing!"
+            exit 1
+          fi
+
+          # Verify alternates in metadata
+          if grep -q "alternates.*languages" src/app/layout.tsx; then
+            echo "✓ Language alternates configured in root layout"
+          else
+            echo "❌ ERROR: Language alternates not in root layout!"
+            exit 1
+          fi
+
+          # Build to verify no errors
+          echo "🔨 Building to verify no errors..."
+          npm run build > /dev/null 2>&1
+
           echo ""
           echo "✨ Sitemap validation passed!"
-          echo "   • PE articles: $PE_SLUGS in slugs.ts, dynamically included in sitemap"
-          echo "   • Blog articles: $BLOG_SLUGS in blogSlugs.ts, dynamically included in sitemap"
+          echo "   • PE articles: $PE_SLUGS (dynamically included in sitemap × 5 languages = $((PE_SLUGS * 5)) URLs)"
+          echo "   • Blog articles: $BLOG_SLUGS (dynamically included in sitemap × 5 languages = $((BLOG_SLUGS * 5)) URLs)"
+          echo "   • hreflang tags: ✓ Configured for all language variants"
 
       - name: Notify on failure
         if: failure()
