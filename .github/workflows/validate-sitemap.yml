@@ -1,0 +1,78 @@
+name: Weekly Sitemap Validation
+
+on:
+  schedule:
+    # Every Monday at 9 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  validate-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Validate sitemap completeness
+        run: |
+          set -e
+
+          echo "🔍 Validating sitemap completeness..."
+
+          # Count PE articles in slugs.ts
+          PE_SLUGS=$(grep -c "^  '[^']*':" src/lib/prompt-engineering/slugs.ts || echo "0")
+          echo "✓ Found $PE_SLUGS PE article slugs in slugs.ts"
+
+          # Count PE articles in sitemap.ts
+          PE_IN_SITEMAP=$(grep -c "^  ...Object.keys(PE_SLUG_TO_KEY)" src/app/sitemap.ts || echo "0")
+          if [ "$PE_IN_SITEMAP" -gt 0 ]; then
+            echo "✓ PE articles are included in sitemap (dynamic generation)"
+          else
+            echo "❌ ERROR: PE articles not included in sitemap!"
+            exit 1
+          fi
+
+          # Count blog articles in blogSlugs.ts
+          BLOG_SLUGS=$(grep -c "^  '" src/lib/blogSlugs.ts || echo "0")
+          echo "✓ Found $BLOG_SLUGS blog article slugs in blogSlugs.ts"
+
+          # Count blog articles in sitemap.ts
+          BLOG_IN_SITEMAP=$(grep -c "^  ...Object.keys(SLUG_TO_POST_ID)" src/app/sitemap.ts || echo "0")
+          if [ "$BLOG_IN_SITEMAP" -gt 0 ]; then
+            echo "✓ Blog articles are included in sitemap (dynamic generation)"
+          else
+            echo "❌ ERROR: Blog articles not included in sitemap!"
+            exit 1
+          fi
+
+          # Verify imports
+          if grep -q "import { PE_SLUG_TO_KEY }" src/app/sitemap.ts; then
+            echo "✓ PE_SLUG_TO_KEY imported in sitemap.ts"
+          else
+            echo "❌ ERROR: PE_SLUG_TO_KEY not imported in sitemap.ts!"
+            exit 1
+          fi
+
+          if grep -q "import { SLUG_TO_POST_ID }" src/app/sitemap.ts; then
+            echo "✓ SLUG_TO_POST_ID imported in sitemap.ts"
+          else
+            echo "❌ ERROR: SLUG_TO_POST_ID not imported in sitemap.ts!"
+            exit 1
+          fi
+
+          echo ""
+          echo "✨ Sitemap validation passed!"
+          echo "   • PE articles: $PE_SLUGS in slugs.ts, dynamically included in sitemap"
+          echo "   • Blog articles: $BLOG_SLUGS in blogSlugs.ts, dynamically included in sitemap"
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "⚠️ Sitemap validation failed!"
+          echo "Check the logs above and update sitemap.ts to include all article types."
+          exit 1
