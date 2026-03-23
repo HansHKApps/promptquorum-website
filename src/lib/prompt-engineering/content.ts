@@ -6267,6 +6267,26 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        decisionMatrix: {
+          title: 'Quick Decision Matrix — Pick Your Starting Model',
+          content: '**Choose your starting model based on your primary task. Most teams use multiple models — start with the right one and switch as needed.**',
+          items: [
+            'GPT-4o wins: multi-agent workflows, tool integration, API ecosystem, multimodal (images/audio). Start here if integrations matter.',
+            'Claude 4.6 Sonnet wins: writing quality, code review, reasoning depth, enterprise safety. Start here for content/code quality.',
+            'Gemini 2.5 Pro wins: long documents (2M tokens), batch processing, cost efficiency, Google Workspace. Start here for large-scale document analysis.',
+            'DeepSeek/Baidu ERNIE wins: mainland China (required for latency/access), high-volume cost-sensitive tasks. Only choice if data stays in China.',
+            'Use PromptQuorum to test all 5 on your actual task — benchmarks lie; your data tells the truth.',
+          ],
+          tableFormat: true,
+          columns: ['Your Priority', 'Start With', 'Why', 'When to Switch'],
+          rows: [
+            { 'Your Priority': 'Complex writing & analysis', 'Start With': 'Claude 4.6 Sonnet', 'Why': 'Highest output quality; cuts revision rounds', 'When to Switch': 'Switch to GPT-4o if you need multi-tool workflows or integrations' },
+            { 'Your Priority': 'Coding & development speed', 'Start With': 'Gemini 2.5 Pro or Flash', 'Why': '2M context (load entire projects) + best cost/quality', 'When to Switch': 'Switch to Claude for deep debugging or code review; GPT for tool integration' },
+            { 'Your Priority': 'Multi-agent workflows / APIs', 'Start With': 'GPT-4o', 'Why': 'Richest third-party ecosystem; best tool calling', 'When to Switch': 'Switch to Gemini to save costs on high-volume tasks' },
+            { 'Your Priority': 'Mainland China users/data', 'Start With': 'DeepSeek or Baidu ERNIE', 'Why': 'Only practical choice — Western models restricted/slow', 'When to Switch': 'N/A — compliance/latency requirements make switch impossible' },
+          ],
+        },
+
         tldr: {
           title: 'Key Takeaways',
           content: '**Different models excel at different tasks — GPT-4o dominates tool integration, Claude excels at writing, Gemini handles long documents best, and DeepSeek/ERNIE are required for China.**',
