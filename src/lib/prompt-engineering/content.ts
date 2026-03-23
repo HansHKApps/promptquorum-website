@@ -6320,17 +6320,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         chineseModels: {
           title: 'When Should You Use DeepSeek or Baidu ERNIE?',
-          content: '**For users and data in mainland China, DeepSeek and Baidu ERNIE are not optional — they are required.** Western frontier models (GPT-4o, Claude, Gemini) are often restricted or high-latency in China due to network restrictions and regulatory requirements.',
-          items: [
-            '**DeepSeek (frontier model, competitive coding):**',
-            '  - Strengths: Competitive coding and reasoning performance. Aggressive pricing. Excellent Chinese language support and mixed Chinese–English tasks.',
-            '  - Best for: Developer workflows in mainland China. High-volume, cost-sensitive workloads using Chinese data.',
-            '  - Trade-offs: Smaller ecosystem outside China. Fewer third-party integrations vs GPT/Claude/Gemini.',
-            '',
-            '**Baidu ERNIE (enterprise and consumer):**',
-            '  - Strengths: Tight integration with Baidu search and cloud. Strong grounding in Chinese web content and enterprise data.',
-            '  - Best for: Consumer and enterprise apps targeting Chinese users. Apps on Baidu Cloud infrastructure. Chinese-language customer support and chatbots.',
-            '  - Trade-offs: Primarily optimized for Chinese. English and other languages may lag Western frontier models.',
+          content: [
+            '**For users and data in mainland China, DeepSeek and Baidu ERNIE are not optional — they are required.** Western frontier models (GPT-4o, Claude, Gemini) are often restricted or high-latency in China due to network restrictions and regulatory requirements.',
+            '**DeepSeek (frontier model, competitive coding):** Competitive coding and reasoning performance, aggressive pricing, excellent Chinese language support and mixed Chinese–English tasks. Best for developer workflows in mainland China and high-volume cost-sensitive workloads. Trade-offs: smaller ecosystem outside China, fewer third-party integrations vs GPT/Claude/Gemini.',
+            '**Baidu ERNIE (enterprise and consumer):** Tight integration with Baidu search and cloud, strong grounding in Chinese web content and enterprise data. Best for consumer and enterprise apps targeting Chinese users, apps on Baidu Cloud infrastructure. Trade-offs: primarily optimized for Chinese, English and other languages may lag Western frontier models.',
           ],
         },
 
@@ -6352,18 +6345,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         decisionFramework: {
           title: 'How Do You Pick the Right AI Model?',
-          content: '**Start with your primary use case, layer in your constraints, then choose the model best suited to both.**',
-          items: [
+          content: [
+            '**Start with your primary use case, layer in your constraints, then choose the model best suited to both.**',
             '**If: General assistant, multi-tool agentic workflows.** Then: Start with GPT-4o. You need the richest tooling and integrations.',
             '**If: Deep writing, analysis, complex code, or strong safety requirements.** Then: Start with Claude 4.6 Sonnet. Quality and trustworthiness matter more than cost.',
             '**If: Heavy Google Workspace usage, batch coding/data, or processing 100+ long documents.** Then: Start with Gemini 2.5 Pro. Long context and ecosystem integration save time.',
             '**If: Users and data primarily in mainland China.** Then: Start with DeepSeek (coding-heavy) or Baidu ERNIE (consumer/business apps). Western models are restricted or high-latency.',
-            '',
-            '**Then, layer constraints:**',
-            '  - **Budget tight, volume high:** Favor Gemini Flash / DeepSeek / smaller GPT models.',
-            '  - **Strict compliance, enterprise contracts:** Claude enterprise, Baidu ERNIE for China.',
-            '  - **Need multimodal (screenshots, charts, audio):** GPT-4o or Gemini 2.5 Pro.',
-            '  - **Private data only:** Local LLMs via [Ollama](/prompt-engineering) or [LM Studio](/prompt-engineering) (no data leaves your device).',
+          ],
+          items: [
+            '**Budget tight, volume high:** Favor Gemini Flash / DeepSeek / smaller GPT models.',
+            '**Strict compliance, enterprise contracts:** Claude enterprise, Baidu ERNIE for China.',
+            '**Need multimodal (screenshots, charts, audio):** GPT-4o or Gemini 2.5 Pro.',
+            '**Private data only:** Local LLMs via [Ollama](/prompt-engineering) or [LM Studio](/prompt-engineering) (no data leaves your device).',
           ],
         },
 
@@ -6396,11 +6389,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           items: [
             '**One structured prompt → many models simultaneously.** Write your prompt once. [PromptQuorum](/prompt-engineering) dispatches it to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, Baidu ERNIE, and local LLMs (Ollama, LM Studio) in parallel. See all responses side-by-side.',
             '**Shared frameworks ensure fair comparison.** Use the same prompt structure, constraints, and formats across all models. This eliminates the excuse "Claude got better output because I worded the prompt for Claude."',
-            '**Consensus and scoring view.** PromptQuorum shows you:',
-            '  - Which model writes best for your brand voice.',
-            '  - Which produces the most correct code.',
-            '  - Which handles your proprietary documents most reliably.',
-            '  - Which model is fastest and cheapest for YOUR task.',
+            '**Consensus and scoring view.** PromptQuorum shows you which model writes best for your brand voice, which produces the most correct code, which handles your proprietary documents most reliably, and which model is fastest and cheapest for YOUR task.',
             '**Routing rules:** Send cheap / high-volume tasks to small or local models. Send complex reasoning to premium models. Automate model selection based on task type.',
             '**Support for local LLMs.** Connect Ollama or LM Studio for completely private inference. No data leaves your device. Route sensitive tasks locally; send commodity tasks to cloud APIs.',
             '**Stop guessing from YouTube benchmarks.** Test your own tasks directly on your own data. That is the only truth that matters.',
