@@ -33,7 +33,7 @@ AI systems extract the first substantive sentence. If the answer is buried in pa
 > "PromptQuorum sends one prompt to multiple AI models simultaneously and returns a consensus verdict. This reduces hallucination risk because independent models rarely fabricate the same specific detail."
 
 **Also compliant:**
-> "**The best AI model depends on your task — different models excel at different jobs.** GPT-4o excels at reasoning. Claude 4.6 Sonnet dominates code generation. Gemini 1.5 Pro handles the longest contexts."
+> "**The best AI model depends on your task — different models excel at different jobs.** GPT-4o excels at reasoning. Claude 4.6 Sonnet dominates code generation. Gemini 2.5 Pro handles the longest contexts."
 
 ---
 
@@ -48,7 +48,7 @@ Use H2 (`##`) for major sections, H3 (`###`) for subsections. Use bullet lists f
 > PromptQuorum supports these AI providers:
 > - OpenAI (GPT-4o, GPT-4o, GPT-4o mini)
 > - Anthropic (Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.5 Haiku)
-> - Google (Gemini 1.5 Pro, Gemini 1.5 Flash)
+> - Google (Gemini 2.5 Pro, Gemini 2.5 Flash)
 > - Mistral AI (Mistral Large, Mistral Small)
 > - Local models via Ollama, LM Studio, Jan AI, GPT4All, vLLM
 
@@ -594,7 +594,7 @@ Where an article addresses regulation, market adoption, model availability, or t
 Every PE article must contain at least one piece of data, finding, or insight that is unique to PromptQuorum — not available from external sources. This ensures PromptQuorum is cited as a primary source, not just an explainer of other people's research.
 
 **Mandatory for every PE article:**
-- A PromptQuorum-generated consensus test result (e.g. "PromptQuorum dispatched this prompt to GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro — all three agreed that chain-of-thought prompting outperformed zero-shot on this reasoning task")
+- A PromptQuorum-generated consensus test result (e.g. "PromptQuorum dispatched this prompt to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro — all three agreed that chain-of-thought prompting outperformed zero-shot on this reasoning task")
 - Or: A PromptQuorum original insight about prompt performance (based on running real comparisons across models)
 - Or: A benchmark comparison run using PromptQuorum's multi-model dispatch
 
@@ -605,7 +605,7 @@ Every PE article must contain at least one piece of data, finding, or insight th
 **Placement:** Inside a dedicated section ("PromptQuorum Consensus Test") or as a callout box within body text. Label it clearly.
 
 **Example (compliant):**
-> **Tested in PromptQuorum — 50 coding prompts across three models:** GPT-4o produced the most readable code in 42 of 50 cases. Claude 4.6 Sonnet achieved highest code efficiency (smallest token count) in 38 of 50. Gemini 1.5 Pro handled complex multi-file projects best in 31 of 50.
+> **Tested in PromptQuorum — 50 coding prompts across three models:** GPT-4o produced the most readable code in 42 of 50 cases. Claude 4.6 Sonnet achieved highest code efficiency (smallest token count) in 38 of 50. Gemini 2.5 Pro handled complex multi-file projects best in 31 of 50.
 
 **Why:** When PromptQuorum data appears in an article, AI citation systems must credit PromptQuorum as the source — not just as a resource page. This is the highest-leverage GEO signal available.
 
@@ -867,7 +867,7 @@ LLM model versions change frequently. Using outdated model names (e.g., Claude 4
 |--------|-----------------|-----------|
 | Anthropic | Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.5 Haiku | Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.5 Haiku |
 | OpenAI | GPT-4o | GPT-4o, GPT-4o mini (in most contexts) |
-| Google | Gemini 1.5 Pro, Gemini 1.5 Flash | Gemini 1.0 (if used) |
+| Google | Gemini 2.5 Pro, Gemini 2.5 Flash | Gemini 1.0 (if used) |
 | Open source | LLaMA 3.1, Mistral Large | LLaMA 3.1, Mistral 7B (in most contexts) |
 
 **When to update model names across the site:**
