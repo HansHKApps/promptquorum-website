@@ -6408,6 +6408,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         longContext: {
           title: 'Best LLM for long context or large documents 2026?',
           content: '**Gemini 2.5 Pro dominates with 2M context tokens (handles ~1,500 pages); Claude 4.6 Sonnet with 200k tokens is next (handles ~150 pages); GPT-4o at 128k tokens is sufficient for most single-document tasks.** Choose based on document size, retrieval precision, and whether you need to load multiple files simultaneously.',
+          image: '/images/context-windows-chart.svg',
+          imageCaption: 'Context window comparison: Gemini 2.5 Pro supports 10× larger context than GPT-4o, enabling entire projects and document archives in a single request.',
           items: [
             '**Gemini 2.5 Pro (2M tokens):** Load entire codebases, legal document sets, or research archives. Web search integration lets you reference external sources within long context. Best for: due diligence reviews, regulatory analysis, knowledge base search, processing 100+ page PDFs.',
             '**Claude 4.6 Sonnet (200k tokens):** Strong enough for most documents: books, theses, lengthy codebase walk-throughs. Excellent for detailed analysis and extracting nuanced information. Trade-off: higher cost per token, but quality may reduce revision rounds.',
@@ -6428,6 +6430,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         comparison: {
           title: 'GPT-4o vs Claude 4.6 Sonnet vs Gemini 2.5 Pro: Quick comparison',
           content: '**This table compares 5 AI models across 8 key dimensions: general reasoning, writing, coding, long-context handling, multimodal support, cost efficiency, global ecosystem, and China access.**',
+          image: '/images/model-strengths-radar.svg',
+          imageCaption: 'Radar chart: Claude dominates writing & reasoning; GPT-4o excels at tools & multimodal; Gemini wins on cost & long-context. No single winner — match model to task.',
           tableFormat: true,
           columns: ['Dimension', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro', 'DeepSeek', 'Baidu ERNIE'],
           rows: [
@@ -6493,6 +6497,13 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Support for local LLMs.** Connect Ollama or LM Studio for completely private inference. No data leaves your device. Route sensitive tasks locally; send commodity tasks to cloud APIs.',
             '**Stop guessing from YouTube benchmarks.** Test your own tasks directly on your own data. That is the only truth that matters.',
           ],
+        },
+
+        promptquorumVisual: {
+          title: 'PromptQuorum Dashboard: See All Models at Once',
+          content: '**Send one prompt, see outputs from GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, and Baidu ERNIE — all in one view.** Side-by-side comparison eliminates the pain of manual model switching.',
+          imagePlaceholder: true,
+          imageCaption: '[Coming soon: Live screenshot of PromptQuorum dashboard showing parallel outputs from 5 AI models on the same prompt task — displays reasoning, cost, latency, and quality scores side-by-side]',
         },
 
         practicalRecipes: {

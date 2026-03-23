@@ -1,0 +1,79 @@
+<svg viewBox="0 0 900 750" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="750" fill="#f9fafb"/>
+
+  <!-- Title -->
+  <text x="450" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1f2937">
+    Model Strengths Across 8 Dimensions
+  </text>
+  <text x="450" y="55" font-size="13" text-anchor="middle" fill="#6b7280">
+    Scale: 1 (weak) to 5 (strongest)
+  </text>
+
+  <!-- Center point -->
+  <circle cx="450" cy="380" r="2" fill="#1f2937"/>
+
+  <!-- Radar grid circles (5 concentric circles for 1-5 scale) -->
+  <circle cx="450" cy="380" r="40" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <circle cx="450" cy="380" r="80" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <circle cx="450" cy="380" r="120" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <circle cx="450" cy="380" r="160" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <circle cx="450" cy="380" r="200" fill="none" stroke="#d1d5db" stroke-width="2"/>
+
+  <!-- Axis lines and labels (8 dimensions) -->
+  <!-- 1. Coding (top) -->
+  <line x1="450" y1="380" x2="450" y2="180" stroke="#d1d5db" stroke-width="1"/>
+  <text x="450" y="160" font-size="12" font-weight="600" text-anchor="middle" fill="#1f2937">Coding</text>
+
+  <!-- 2. Writing (top-right) -->
+  <line x1="450" y1="380" x2="591" y2="231" stroke="#d1d5db" stroke-width="1"/>
+  <text x="615" y="220" font-size="12" font-weight="600" text-anchor="start" fill="#1f2937">Writing</text>
+
+  <!-- 3. Reasoning (right) -->
+  <line x1="450" y1="380" x2="650" y2="380" stroke="#d1d5db" stroke-width="1"/>
+  <text x="670" y="385" font-size="12" font-weight="600" text-anchor="start" fill="#1f2937">Reasoning</text>
+
+  <!-- 4. Cost Efficiency (bottom-right) -->
+  <line x1="450" y1="380" x2="591" y2="529" stroke="#d1d5db" stroke-width="1"/>
+  <text x="615" y="555" font-size="12" font-weight="600" text-anchor="start" fill="#1f2937">Cost</text>
+
+  <!-- 5. Long-Context (bottom) -->
+  <line x1="450" y1="380" x2="450" y2="580" stroke="#d1d5db" stroke-width="1"/>
+  <text x="450" y="605" font-size="12" font-weight="600" text-anchor="middle" fill="#1f2937">Long-Context</text>
+
+  <!-- 6. Multimodal (bottom-left) -->
+  <line x1="450" y1="380" x2="309" y2="529" stroke="#d1d5db" stroke-width="1"/>
+  <text x="270" y="555" font-size="12" font-weight="600" text-anchor="end" fill="#1f2937">Multimodal</text>
+
+  <!-- 7. Ecosystem (left) -->
+  <line x1="450" y1="380" x2="250" y2="380" stroke="#d1d5db" stroke-width="1"/>
+  <text x="230" y="385" font-size="12" font-weight="600" text-anchor="end" fill="#1f2937">Ecosystem</text>
+
+  <!-- 8. Safety/Enterprise (top-left) -->
+  <line x1="450" y1="380" x2="309" y2="231" stroke="#d1d5db" stroke-width="1"/>
+  <text x="270" y="220" font-size="12" font-weight="600" text-anchor="end" fill="#1f2937">Safety</text>
+
+  <!-- GPT-4o polygon (blue): Coding=4, Writing=3, Reasoning=5, Cost=2, Long-Context=2, Multimodal=5, Ecosystem=5, Safety=3 -->
+  <polygon points="450,180 531,280 650,180 571,480 450,580 329,480 250,180 329,280"
+           fill="#3b82f6" opacity="0.2" stroke="#3b82f6" stroke-width="2"/>
+
+  <!-- Claude polygon (purple): Coding=5, Writing=5, Reasoning=5, Cost=2, Long-Context=4, Multimodal=3, Ecosystem=3, Safety=5 -->
+  <polygon points="450,180 576,263 650,180 511,529 450,580 389,529 250,180 324,263"
+           fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="2"/>
+
+  <!-- Gemini polygon (green): Coding=4, Writing=3, Reasoning=3, Cost=5, Long-Context=5, Multimodal=4, Ecosystem=3, Safety=4 -->
+  <polygon points="450,180 531,280 550,280 591,480 450,580 309,480 350,280 369,280"
+           fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="2"/>
+
+  <!-- Legend -->
+  <g transform="translate(50, 680)">
+    <rect x="0" y="0" width="15" height="15" fill="#3b82f6" opacity="0.5" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="12" font-size="13" font-weight="500" fill="#1f2937">GPT-4o</text>
+
+    <rect x="150" y="0" width="15" height="15" fill="#8b5cf6" opacity="0.5" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="170" y="12" font-size="13" font-weight="500" fill="#1f2937">Claude 4.6 Sonnet</text>
+
+    <rect x="380" y="0" width="15" height="15" fill="#10b981" opacity="0.5" stroke="#10b981" stroke-width="2"/>
+    <text x="400" y="12" font-size="13" font-weight="500" fill="#1f2937">Gemini 2.5 Pro</text>
+  </g>
+</svg>
