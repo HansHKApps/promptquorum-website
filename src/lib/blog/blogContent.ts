@@ -5456,10 +5456,10 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         },
       },
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { category: 'Forschung', title: '', intro: '', publishDate: 'Veröffentlicht März 2026', readTime: '', sections: {} },
+    fr: { category: 'Recherche', title: '', intro: '', publishDate: 'Publié mars 2026', readTime: '', sections: {} },
+    ja: { category: '研究', title: '', intro: '', publishDate: '2026年3月公開', readTime: '', sections: {} },
+    zh: { category: '研究', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '', sections: {} },
   },
 }
 
