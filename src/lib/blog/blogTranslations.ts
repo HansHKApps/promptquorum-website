@@ -125,5 +125,12 @@ export const blogTranslations = {
         }
       }
     }
+  },
+  promptToolsMarket2026: {
+    en: { category: 'Research', title: 'Prompt Optimization & Comparison Tools: Market Overview 2026', intro: 'The LLM Prompt Tools market reached $456M in 2024 (projected $1,018M by 2031). Independent comparison of 17 tools across 6 groups — pricing, features, and acquisition data. March 2026.', publishDate: 'Published March 2026', readTime: '15 min read' },
+    de: { category: 'Forschung', title: '', intro: '', publishDate: 'Veröffentlicht März 2026', readTime: '15 Min. Lesezeit' },
+    fr: { category: 'Recherche', title: '', intro: '', publishDate: 'Publié mars 2026', readTime: '15 min de lecture' },
+    ja: { category: '研究', title: '', intro: '', publishDate: '2026年3月公開', readTime: '15分の読み物' },
+    zh: { category: '研究', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '15分钟阅读' }
   }
 }

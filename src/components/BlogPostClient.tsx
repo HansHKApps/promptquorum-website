@@ -121,6 +121,22 @@ function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
                     </table>
                   </div>
                 )}
+
+                {/* Download CTA */}
+                {section.downloadCta && (
+                  <div className="my-6 p-5 border border-primary/30 rounded-xl bg-primary/5">
+                    {section.downloadCta.description && (
+                      <p className="text-sm text-text-secondary mb-3">{section.downloadCta.description}</p>
+                    )}
+                    <a
+                      href={section.downloadCta.href}
+                      download
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                    >
+                      ↓ {section.downloadCta.label}
+                    </a>
+                  </div>
+                )}
               </section>
             ))}
           </div>

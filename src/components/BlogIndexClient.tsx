@@ -14,6 +14,7 @@ const blogPosts = [
   { key: 'optimization' as const, slug: 'prompt-optimization' },
   { key: 'dataPrivacy' as const, slug: 'enterprise-data-privacy' },
   { key: 'promptImpact' as const, slug: 'research-prompt-optimization-impact' },
+  { key: 'promptToolsMarket2026' as const, slug: 'prompt-optimization-market-overview-2026' },
 ]
 
 function BlogIndexInner() {

@@ -6,6 +6,11 @@ export interface BlogSection {
   items?: string[]
   rows?: Array<{ [key: string]: string }>
   columns?: string[]
+  downloadCta?: {
+    label: string
+    href: string
+    description?: string
+  }
 }
 
 export interface BlogPost {
@@ -5197,6 +5202,264 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         },
       },
     },
+  },
+
+  promptToolsMarket2026: {
+    en: {
+      category: 'Research',
+      title: 'Prompt Optimization & Comparison Tools: Market Overview 2026',
+      intro: 'The LLM Prompt Tools market reached $456M in 2024 (projected $1,018M by 2031). Independent comparison of 17 tools across 6 groups — pricing, features, and acquisition data. March 2026.',
+      publishDate: 'Published March 2026',
+      readTime: '15 min read',
+      sections: {
+        downloadReport: {
+          downloadCta: {
+            label: 'Download Full Report as PDF',
+            href: '/pdfs/prompt-optimization-market-overview-2026.pdf',
+            description: 'Free download — full market report with pricing tables, tool comparisons, and acquisition timeline (PDF, March 2026)',
+          },
+        },
+        marketOverview: {
+          title: 'The LLM Prompt Tools Market in 2026',
+          content: [
+            'The global LLM Prompt Generation Tools market reached USD 456 million in 2024 and is projected to reach USD 1,018 million by 2031, growing at a 12.0% compound annual growth rate (CAGR). Growth is driven by enterprises shifting from experimental AI deployments to structured, governance-driven prompt engineering — formalizing prompt libraries, implementing compliance layers, and deploying centralized management platforms.',
+            'Two landmark acquisitions in early 2026 signal market consolidation: OpenAI acquired Promptfoo in March 2026, integrating AI security testing into its Frontier platform. ClickHouse acquired Langfuse in January 2026, unifying AI observability with analytics database infrastructure.',
+          ],
+          items: [
+            'Consumer & Prosumer Optimizers: PrompTessor, PromptPerfect, Promptmetheus',
+            'Team Prompt Management: PromptHub, PromptLayer, Vellum AI, Maxim AI',
+            'Developer Evaluation & Observability: Braintrust, LangSmith, Promptfoo, Langfuse, Galileo AI, Agenta',
+            'Prompt Libraries & Marketplaces: PromptBase, AIPRM, FlowGPT',
+            'Open-Source Frameworks: DSPy, DSPyLab',
+            'Multi-Model Comparison: Prompts.ai',
+          ],
+        },
+        group1Intro: {
+          title: 'Group 1: Consumer & Prosumer Prompt Optimizers',
+          content: 'Consumer and prosumer prompt optimizers serve individual users, content creators, marketers, and non-technical users seeking to improve prompt quality without writing code. Three tools lead this group in 2026.',
+        },
+        promptTessor: {
+          title: 'PrompTessor',
+          content: 'PrompTessor scores prompts on a 0—100 effectiveness scale across 6 dimensions: Clarity, Specificity, Context, Goal Orientation, Structure, and Constraints. It provides reverse engineering from images, video, audio, and text (added in 2026) and supports 30+ languages with cultural context adaptation. Released in June 2025.',
+          columns: ['Plan', 'Price', 'Key Details'],
+          rows: [
+            { Plan: 'Free', Price: '$0', 'Key Details': 'Basic analysis, 1 free prompt' },
+            { Plan: 'Basic', Price: 'From $7/month', 'Key Details': 'Unlimited basic analysis & optimization' },
+            { Plan: 'Pro', Price: '$10/month', 'Key Details': 'All features, unlimited requests' },
+            { Plan: 'Lifetime Deal', Price: '$249 one-time', 'Key Details': 'All pro features permanently' },
+          ],
+        },
+        promptPerfect: {
+          title: 'PromptPerfect',
+          content: 'PromptPerfect behaves like an integrated development environment (IDE) for prompts, focusing on real-time optimization with results delivered in approximately 10 seconds. It supports multi-goal optimization (for example, quality and cost) and multi-language prompt support with pre-built templates. Available as a standalone web dashboard and ChatGPT plugin.',
+          columns: ['Plan', 'Price', 'Key Details'],
+          rows: [
+            { Plan: 'Free', Price: '$0', 'Key Details': '10 optimizations/month' },
+            { Plan: 'Standard', Price: '$20/month', 'Key Details': 'Increased limits' },
+            { Plan: 'Enterprise', Price: 'Custom', 'Key Details': 'Full team features, compliance' },
+          ],
+        },
+        promptmetheus: {
+          title: 'Promptmetheus',
+          content: 'Promptmetheus targets professional prompt engineers and AI developers. It supports testing across 150+ models from 15 providers — one of the broadest multi-model testing environments available. Key feature: prompt composability enables chaining simple prompts into modular pipelines instead of writing single long instructions.',
+          columns: ['Plan', 'Price', 'Seats', 'Key Features'],
+          rows: [
+            { Plan: 'Playground', Price: 'Free', Seats: '1', 'Key Features': 'Local storage, OpenAI models, community support' },
+            { Plan: 'Standard', Price: '$29/month', Seats: '1', 'Key Features': 'Cloud sync, 150+ models, prompt history, traceability' },
+            { Plan: 'Team', Price: '$99/month', Seats: '3 (+$19/additional)', 'Key Features': 'Shared workspace, real-time collaboration, user management' },
+          ],
+        },
+        group2Intro: {
+          title: 'Group 2: Team Prompt Management & Versioning Platforms',
+          content: 'Team prompt management platforms treat prompts as versioned software artifacts — with git-style workflows, CI/CD integration, and multi-user collaboration as core features. Four tools serve this category in 2026.',
+        },
+        promptHub: {
+          title: 'PromptHub',
+          content: 'PromptHub is built around a philosophy borrowed from software development: prompts should be versioned, branched, merged, and reviewed just like code. It provides Git-style workflows for prompt iteration and includes CI/CD guardrails that auto-block deployments when quality regressions appear. The free plan offers all features with unlimited seats — the only restriction is that prompts remain public.',
+          columns: ['Plan', 'Price', 'Key Features'],
+          rows: [
+            { Plan: 'Free', Price: '$0', 'Key Features': 'All features, unlimited seats, 2,000 req/month, public prompts only' },
+            { Plan: 'Solo', Price: '$12/user/month', 'Key Features': 'Private prompts, higher limits' },
+            { Plan: 'Team', Price: '$20/user/month', 'Key Features': 'Full team features' },
+          ],
+        },
+        promptLayer: {
+          title: 'PromptLayer',
+          content: 'PromptLayer logs every prompt and response so teams can search, compare, and measure prompt behavior over time. It offers version control with rollback, no-code A/B testing on datasets, and a visual drag-and-drop agent builder for multi-step workflows. HIPAA compliance is available on the Enterprise plan.',
+          columns: ['Plan', 'Price', 'Users', 'Requests/Month'],
+          rows: [
+            { Plan: 'Free', Price: '$0', Users: '5', 'Requests/Month': '2,500' },
+            { Plan: 'Pro', Price: '$49/month', Users: '5', 'Requests/Month': '2,500+ (+$0.003/transaction)' },
+            { Plan: 'Team', Price: '$500/month', Users: '25', 'Requests/Month': '100,000+' },
+            { Plan: 'Enterprise', Price: 'Custom', Users: 'Unlimited', 'Requests/Month': 'Custom' },
+          ],
+        },
+        vellumAI: {
+          title: 'Vellum AI',
+          content: 'Vellum emerged from Y Combinator and focuses on visual workflow design alongside rigorous prompt management. Teams can design complex, multi-model orchestration workflows in a drag-and-drop editor. It includes built-in retrieval-augmented generation (RAG) supporting up to 10K pages on the free tier, and role-based access control (RBAC) on Pro and above.',
+          columns: ['Plan', 'Price', 'Daily Executions', 'Users'],
+          rows: [
+            { Plan: 'Free', Price: '$0', 'Daily Executions': '50', Users: 'Up to 5' },
+            { Plan: 'Pro', Price: '$500/month', 'Daily Executions': '5,000', Users: 'Up to 5' },
+            { Plan: 'Enterprise', Price: 'Custom', 'Daily Executions': 'Unlimited', Users: 'Custom' },
+          ],
+        },
+        maximAI: {
+          title: 'Maxim AI',
+          content: 'Maxim AI is a full-stack platform combining prompt management, evaluation, simulation, and production observability in a single unified workspace. It is designed specifically for complex, multi-turn AI agents where prompt management cannot be decoupled from evaluation and monitoring. Features include visual prompt editor, multi-turn conversation simulation, and a Prompt CMS for one-click deployment.',
+          columns: ['Plan', 'Price', 'Key Limits'],
+          rows: [
+            { Plan: 'Free Forever', Price: '$0', 'Key Limits': '10K logs/month, full feature access' },
+            { Plan: 'Growth / Pro', Price: 'Seat-based (contact)', 'Key Limits': 'Higher limits, team features' },
+            { Plan: 'Enterprise', Price: 'Custom', 'Key Limits': 'Dedicated support, compliance, unlimited' },
+          ],
+        },
+        group3Intro: {
+          title: 'Group 3: Developer Evaluation & Observability Platforms',
+          content: 'Developer evaluation and observability platforms provide systematic, measurable quality assurance for prompts in production AI applications. Six tools cover this category in 2026.',
+        },
+        braintrust: {
+          title: 'Braintrust',
+          content: 'Braintrust is an enterprise-grade AI evaluation platform with a centerpiece called Loop — an AI assistant that automatically optimizes prompts based on evaluation results. Loop generates test datasets, creates custom scorers, runs experiments, and suggests prompt modifications. Teams at Notion, Stripe, and Airtable report 30%+ accuracy improvements within weeks of adoption.',
+          columns: ['Plan', 'Price'],
+          rows: [
+            { Plan: 'Starter', Price: 'Free' },
+            { Plan: 'Pro', Price: '$249/month' },
+            { Plan: 'Enterprise', Price: 'Custom' },
+          ],
+        },
+        langSmith: {
+          title: 'LangSmith',
+          content: 'LangSmith is the observability tool built by the LangChain team — creators of the most widely used LLM application framework. It provides deep chain debugging, tracing full LangChain and LangGraph execution paths, and surfacing metrics like latency, token usage, errors, and cost in real time. It includes 3 workspace environments for dev, staging, and production.',
+          columns: ['Plan', 'Price', 'Traces', 'Users'],
+          rows: [
+            { Plan: 'Developer', Price: '$0', Traces: '5,000', Users: 'Unlimited' },
+            { Plan: 'Plus', Price: '$39/seat/month', Traces: '10,000', Users: 'Unlimited' },
+            { Plan: 'Team', Price: '$39/seat/month', Traces: '10,000', Users: 'Unlimited (enhanced)' },
+            { Plan: 'Enterprise', Price: '~$100K+/year', Traces: 'Custom', Users: 'Custom' },
+          ],
+        },
+        promptfoo: {
+          title: 'Promptfoo',
+          content: 'Promptfoo is an open-source framework for test-driven prompt engineering and AI security. As of 2025—2026, it has 300,000+ open-source users, is used by 127 Fortune 500 companies, raised $18.4M Series A (led by Insight Partners), and was acquired by OpenAI in March 2026. The open-source project remains free. Features include YAML-defined test cases, automated red teaming against hundreds of known attack scenarios, and CI/CD integration.',
+        },
+        langfuse: {
+          title: 'Langfuse',
+          content: 'Langfuse is an open-source LLM observability platform with prompt management, acquired by ClickHouse in January 2026. It is MIT-licensed and fully self-hostable. Langfuse logs every model call with cost, latency, and token metrics, and provides a central prompt CMS so teams can update prompts without redeploying code. Evaluation methods include user feedback, LLM-as-judge, human annotation, and custom scoring functions.',
+          columns: ['Plan', 'Price', 'Observations', 'Key Details'],
+          rows: [
+            { Plan: 'Free (Cloud)', Price: '$0', Observations: '50,000', 'Key Details': '2 users, 30-day retention, core features' },
+            { Plan: 'Core', Price: '$29/month', Observations: '100,000', 'Key Details': '3-year retention, SOC2/ISO27001' },
+            { Plan: 'Pro', Price: '$199/month', Observations: 'Higher limits', 'Key Details': 'Priority support, advanced features' },
+            { Plan: 'Self-Host', Price: '$0', Observations: 'Unlimited', 'Key Details': 'MIT license' },
+          ],
+        },
+        galileoAI: {
+          title: 'Galileo AI',
+          content: 'Galileo AI focuses on evaluation cost and runtime safety. Its Luna-2 evaluation models provide low-cost scoring — reducing evaluation costs by up to 97% compared to using frontier model APIs for scoring. An Agent Protect API can intercept unsafe or low-quality responses in real time, preventing problematic outputs from reaching users.',
+          columns: ['Plan', 'Price', 'Traces/Month'],
+          rows: [
+            { Plan: 'Free', Price: '$0', 'Traces/Month': '5,000' },
+            { Plan: 'Paid', Price: 'From $100/month', 'Traces/Month': 'Higher limits' },
+            { Plan: 'Enterprise', Price: 'Custom', 'Traces/Month': 'Custom' },
+          ],
+        },
+        agenta: {
+          title: 'Agenta',
+          content: 'Agenta is a fully open-source LLMOps platform providing prompt management, evaluations, and LLM observability in one integrated environment. It is particularly strong for teams wanting open-source flexibility without sacrificing a polished user interface. Uses Git-like versioning where multiple prompt variants (branches) can be maintained in parallel, each with its own commit history.',
+          items: [
+            'Open Source / Self-Host: Free (MIT license)',
+            'Cloud plans: Available with free tier entry point',
+            'Integrates with observability platforms like Langfuse',
+          ],
+        },
+        group4: {
+          title: 'Group 4: Prompt Libraries & Community Platforms',
+          content: 'Prompt libraries and marketplaces provide ready-made prompts and community-tested templates.',
+          items: [
+            'PromptBase (promptbase.com): Marketplace for professionally tested prompts, usually priced $4—5+ each, with a no-code app builder for creating mini-applications.',
+            'AIPRM (aiprm.com): Adds a community prompt library directly inside ChatGPT via browser extension, using a freemium model.',
+            'FlowGPT (flowgpt.com): Community platform for discovering, sharing, and testing prompts, also with freemium access.',
+          ],
+        },
+        group5: {
+          title: 'Group 5: Open-Source Frameworks',
+          content: 'Open-source frameworks enable developers to build automated prompt optimization pipelines.',
+          items: [
+            'DSPy (Stanford NLP): Turns prompt engineering into a programmatic process. Developers declare input/output signatures and quality objectives. DSPy optimizers (MIPROv2, GEPA) automatically search over prompt variants to maximize performance on a dataset. Benchmarks show smaller models with DSPy can match or beat GPT-3.5 setups. Apache 2.0 license.',
+            'DSPyLab (dspylab.com): Wraps DSPy in a no-code web UI. Generates up to 5 prompt variants using different temperatures, evaluates them with LLM-as-Judge, and selects the best automatically. Pricing: $5 free credits on signup; $20 in credits per month on base plan.',
+          ],
+        },
+        group6: {
+          title: 'Group 6: Multi-Model Comparison Platforms',
+          content: 'Multi-model comparison platforms allow users to run the same prompt across multiple AI models simultaneously to compare quality, cost, and speed.',
+          items: [
+            'Prompts.ai (prompts.ai): AI orchestration platform consolidating access to 35+ large language models — including GPT-4o, Claude, LLaMA, Gemini — into a single interface. Side-by-side performance comparison runs the same prompt on multiple models simultaneously, enabling data-driven model selection. Uses a pay-as-you-go TOKN credit system. Claims 98% cost reduction versus maintaining multiple subscriptions.',
+          ],
+        },
+        comparativeTable: {
+          title: 'Full Comparative Overview: 17 Tools Across 6 Groups',
+          columns: ['Tool', 'Group', 'Free Plan', 'Paid Starting', 'Best For', 'Open Source'],
+          rows: [
+            { Tool: 'PrompTessor', Group: 'Consumer', 'Free Plan': 'Yes', 'Paid Starting': '$7/month', 'Best For': 'Scoring & reverse engineering', 'Open Source': 'No' },
+            { Tool: 'PromptPerfect', Group: 'Consumer', 'Free Plan': 'Yes (10/mo)', 'Paid Starting': '$20/month', 'Best For': 'Real-time optimization', 'Open Source': 'No' },
+            { Tool: 'Promptmetheus', Group: 'Consumer', 'Free Plan': 'Yes', 'Paid Starting': '$29/month', 'Best For': '150+ models, composability', 'Open Source': 'No' },
+            { Tool: 'PromptHub', Group: 'Team', 'Free Plan': 'Yes', 'Paid Starting': '$12/user/month', 'Best For': 'Git-style versioning', 'Open Source': 'No' },
+            { Tool: 'PromptLayer', Group: 'Team', 'Free Plan': 'Yes', 'Paid Starting': '$49/month', 'Best For': 'Logging, A/B testing', 'Open Source': 'No' },
+            { Tool: 'Vellum AI', Group: 'Team', 'Free Plan': 'Yes', 'Paid Starting': '$500/month', 'Best For': 'Visual orchestration', 'Open Source': 'No' },
+            { Tool: 'Maxim AI', Group: 'Team', 'Free Plan': 'Yes', 'Paid Starting': 'Contact', 'Best For': 'Multi-turn agents', 'Open Source': 'No' },
+            { Tool: 'Braintrust', Group: 'Eval', 'Free Plan': 'Yes', 'Paid Starting': '$249/month', 'Best For': 'Loop AI optimization', 'Open Source': 'No' },
+            { Tool: 'LangSmith', Group: 'Eval', 'Free Plan': 'Yes', 'Paid Starting': '$39/user/month', 'Best For': 'LangChain/LangGraph tracing', 'Open Source': 'No' },
+            { Tool: 'Promptfoo', Group: 'Security', 'Free Plan': 'Yes (OSS)', 'Paid Starting': 'Enterprise custom', 'Best For': 'Red teaming, security', 'Open Source': 'Yes' },
+            { Tool: 'Langfuse', Group: 'Observability', 'Free Plan': 'Yes', 'Paid Starting': '$29/month', 'Best For': 'Self-hosting, cost control', 'Open Source': 'Yes' },
+            { Tool: 'Galileo AI', Group: 'Eval', 'Free Plan': 'Yes', 'Paid Starting': '$100/month', 'Best For': 'Cost-efficient evaluation', 'Open Source': 'No' },
+            { Tool: 'Agenta', Group: 'LLMOps', 'Free Plan': 'Yes', 'Paid Starting': 'Free (OSS)', 'Best For': 'Open-source LLMOps', 'Open Source': 'Yes' },
+            { Tool: 'DSPy', Group: 'Framework', 'Free Plan': 'N/A', 'Paid Starting': 'Free', 'Best For': 'Automatic optimization', 'Open Source': 'Yes' },
+            { Tool: 'PromptBase', Group: 'Marketplace', 'Free Plan': 'No', 'Paid Starting': '$4—5/prompt', 'Best For': 'Buying verified prompts', 'Open Source': 'No' },
+            { Tool: 'AIPRM', Group: 'Library', 'Free Plan': 'Yes', 'Paid Starting': 'Subscription', 'Best For': 'ChatGPT integration', 'Open Source': 'No' },
+            { Tool: 'Prompts.ai', Group: 'Comparison', 'Free Plan': 'Yes', 'Paid Starting': 'TOKN credits', 'Best For': 'Multi-model side-by-side', 'Open Source': 'No' },
+          ],
+        },
+        keyEvents: {
+          title: 'Key Market Events: 2025—2026',
+          items: [
+            'March 2026: OpenAI acquires Promptfoo — integrating AI security testing into OpenAI Frontier',
+            'January 2026: ClickHouse acquires Langfuse — unifying AI observability with analytics infrastructure',
+            '2025—2026: Promptfoo raises $18.4M Series A (Insight Partners), reaches 300,000+ open-source users',
+            'April 2025: Maxim AI launches Free Forever plan — democratizing access to enterprise-grade agent evaluation',
+            'June 2025: PrompTessor initial release — expands rapidly with iOS App and reverse engineering features',
+          ],
+        },
+        howToChoose: {
+          title: 'How to Choose the Right Prompt Tool',
+          content: 'The right tool depends on your role and primary need.',
+          items: [
+            'Individual users wanting better prompts (no code): PrompTessor or PromptPerfect',
+            'Professional prompt engineers across many models: Promptmetheus',
+            'Teams versioning and collaborating on prompts: PromptHub or PromptLayer',
+            'Enterprise LLM apps with complex orchestration: Vellum AI or Maxim AI',
+            'Rigorous evaluation and quality metrics: Braintrust or LangSmith',
+            'Testing for security vulnerabilities: Promptfoo',
+            'Open-source with self-hosting: Langfuse or Agenta',
+            'Automated prompt optimization (developer/researcher): DSPy or DSPyLab',
+            'Side-by-side model comparison: Prompts.ai',
+            'Ready-to-use tested prompts: PromptBase or AIPRM',
+          ],
+        },
+        disclaimer: {
+          title: 'About This Report',
+          content: [
+            'This market overview was compiled in March 2026 for PromptQuorum. All pricing and feature data is sourced from official product websites, G2, SaaSWorthy, and independent reviews. Data is timestamped per product entry.',
+            'The global LLM Prompt Generation Tools market was valued at USD 456 million in 2024 and is projected to reach USD 1,018 million by 2031 at a CAGR of 12.0% (Source: market research forecast, 2024). Pricing structures are subject to change — always confirm directly with the vendor before making purchasing decisions.',
+            'PromptQuorum has no commercial affiliation, partnership, sponsorship agreement, or financial relationship with any of the companies, products, or services mentioned in this report.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 }
 

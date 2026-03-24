@@ -138,7 +138,7 @@ export default async function BlogPage({ params }: PageProps) {
   // JSON-LD: ScholarlyArticle/ResearchArticle schema (for AI systems)
   const scholarlyArticleSchema = {
     '@context': 'https://schema.org',
-    '@type': postId === 'promptImpact' ? 'ResearchArticle' : 'ScholarlyArticle',
+    '@type': (postId === 'promptImpact' || postId === 'promptToolsMarket2026') ? 'ResearchArticle' : 'ScholarlyArticle',
     headline: post.title,
     description: post.intro,
     articleBody: post.sections ? Object.values(post.sections).map((section: any) => section.content).join(' ') : '',
@@ -180,6 +180,25 @@ export default async function BlogPage({ params }: PageProps) {
       methodDescription: 'Analyzed 50,000+ prompt-response pairs across multiple AI models with statistical significance testing (p < 0.05)',
       studyLocation: 'Global (Multi-model analysis)',
       temporalCoverage: '2024/2026',
+    }),
+    ...(postId === 'promptToolsMarket2026' && {
+      keywords: [
+        'prompt optimization tools',
+        'LLM prompt generation',
+        'prompt management platform',
+        'AI evaluation tools',
+        'Braintrust',
+        'LangSmith',
+        'Promptfoo',
+        'Langfuse',
+        'DSPy',
+        'PromptHub',
+        'PromptLayer',
+        'Vellum AI',
+        'PromptQuorum',
+      ],
+      studySubject: 'AI Prompt Optimization and LLM Evaluation Tools Market 2026',
+      temporalCoverage: '2025/2026',
     }),
   }
 
