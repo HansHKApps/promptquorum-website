@@ -7872,4 +7872,618 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
   },
 
+  'extract-and-summarise': {
+    en: {
+      theme: 'Techniques',
+      title: 'Extract and Summarise With AI',
+      intro: 'AI-powered extraction and summarisation reduces document review time by 60—80% while achieving hallucination rates as low as 0.7% on grounded summarisation tasks — the key is choosing the right summarisation type, the right model, and the right prompt structure for each document category.',
+      publishDate: '2026-03-23',
+      readTime: '8 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Extract and Summarise With AI',
+        description: 'AI document summarisation cuts review time by 60—80% with 0.7% hallucination rates. Learn extractive vs abstractive approaches, which models to use, and how to structure prompts for faithful outputs.',
+        datePublished: '2026-03-23',
+        dateModified: '2026-03-23',
+        author: {
+          '@type': 'Person',
+          name: 'Hans Kuepper',
+          url: 'https://www.promptquorum.com/about',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.promptquorum.com/logo.svg',
+          },
+        },
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/api/og/extract-and-summarise',
+          width: 1200,
+          height: 630,
+        },
+        keywords: ['AI summarisation', 'document extraction', 'abstractive summarisation', 'extractive summarisation', 'NotebookLM', 'Claude', 'hallucination rates', 'prompt engineering'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'NotebookLM' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+          { '@type': 'SoftwareApplication', name: 'Elicit' },
+          { '@type': 'SoftwareApplication', name: 'Scholarcy' },
+          { '@type': 'Organization', name: 'PromptQuorum' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is the difference between extractive and abstractive AI summarisation?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Extractive summarisation copies sentences directly from the source document without modification — factual errors are structurally impossible because no new text is generated. Abstractive summarisation uses LLMs to generate new paraphrased sentences that condense information — producing more readable output but with hallucination rates of 0.7—14% depending on the model and task. Use extractive for legal and compliance documents; use abstractive for executive summaries and research synthesis.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Which AI model hallucinates least when summarising documents?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'On Vectara\'s HHEM benchmark — the standard faithfulness test for document summarisation across 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) achieved the lowest hallucination rate at 0.7% as of 2025. Four models now achieve sub-1% rates on grounded summarisation. These rates apply only to source-grounded tasks; open-domain factual recall produces rates of 3—33% across the same models.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How many pages can AI summarisation tools process at once?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'This depends on the model\'s context window. GPT-4o (OpenAI) handles approximately 100 standard pages per session (128k token limit). Claude 4.6 Sonnet (Anthropic) handles approximately 160 pages (200k tokens). Gemini 2.5 Pro (Google DeepMind) handles approximately 800 pages (1M tokens). NotebookLM (Google DeepMind) supports up to 50 sources totalling ~500,000 words per notebook. For larger corpora, document chunking is required.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is NotebookLM or Claude better for document summarisation?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'They serve different needs. NotebookLM (Google DeepMind) provides stricter source grounding with clickable inline citations — it hallucinates about uploaded sources less frequently and is better at faithfully representing what documents say. Claude 4.6 Sonnet (Anthropic) produces more nuanced analysis, excels at synthesising across multiple documents, and identifies non-obvious connections — but occasionally blends source content with general training knowledge in ways that can be subtly misleading. Use NotebookLM for precision; use Claude for insight.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I prevent AI from hallucinating in my summaries?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0—0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-4o and Claude 4.6 Sonnet agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
+            },
+          },
+        ],
+      },
+      sections: {
+        definition: {
+          title: 'The Two Summarisation Types: Which One to Use',
+          content: [
+            '**Extractive summarisation copies sentences directly from the source; abstractive summarisation generates new sentences that paraphrase and condense — the two approaches trade factual precision against readability and compression.**',
+            'Extractive summarisation — used by tools like Scholarcy — ranks sentences by keyword frequency, position, and information density, then reproduces the top-scoring sentences without modification. Because no new text is generated, factual errors are structurally impossible: the output is always a subset of the source. Abstractive summarisation — used by GPT-4o (OpenAI), Claude 4.6 Sonnet (Anthropic), and Gemini 2.5 Pro (Google DeepMind) — generates new text that synthesises and paraphrases, producing more readable output at the cost of a higher hallucination risk.',
+          ],
+          columns: ['Method', 'Hallucination Risk', 'Readability', 'Best For'],
+          rows: [
+            {
+              Method: 'Extractive',
+              'Hallucination Risk': 'Near-zero (copies source)',
+              Readability: 'Lower — can be disjointed',
+              'Best For': 'Legal documents, compliance, exact-wording requirements',
+            },
+            {
+              Method: 'Abstractive (LLM)',
+              'Hallucination Risk': '0.7—14% depending on model and task',
+              Readability: 'High — natural prose',
+              'Best For': 'Research synthesis, executive summaries, reports',
+            },
+            {
+              Method: 'Hybrid (extract → abstract)',
+              'Hallucination Risk': 'Low',
+              Readability: 'High',
+              'Best For': 'Financial reports, academic literature, technical documentation',
+            },
+          ],
+          blockquote: 'A 2025 arXiv study benchmarking summarisation approaches across financial news articles found that extractive methods (Lead-1, MatchSum) establish strong baselines for short, well-structured texts — but abstractive LLMs outperform them for complex financial documents when fine-tuned on domain-specific data. Fine-tuned GPT-4o-mini achieved a BERTScore of 0.619 vs. Lead-1\'s 0.588 on the same benchmark. In one sentence: Use extractive summarisation when you cannot afford a factual error; use abstractive summarisation when you need the output to be readable and usable without further editing.',
+        },
+        toolComparison: {
+          title: 'Which AI Model to Use for Summarisation',
+          content: [
+            '**NotebookLM (Google DeepMind) leads for source-grounded, cited summarisation of uploaded documents; Claude 4.6 Sonnet (Anthropic) leads for synthesis, cross-document analysis, and complex reasoning; GPT-4o (OpenAI) leads for fast, flexible general-purpose summarisation.**',
+            'On Vectara\'s Hughes Hallucination Evaluation Model (HHEM) — the standard benchmark for document summarisation faithfulness, tested across 831 documents per model — the top performers in 2025 were:',
+          ],
+          items: [
+            '**Gemini-2.0-Flash-001 (Google DeepMind):** 0.7% hallucination rate — lowest recorded on the benchmark',
+            '**OpenAI and Gemini variants:** 0.8—1.5% hallucination rate cluster',
+            '**Overall top models:** 4 models now achieve sub-1% rates on grounded summarisation tasks',
+          ],
+          blockquote: 'These rates represent a 96% improvement from 2021, when the best models scored 21.8% hallucination rates on the same task. However, these numbers apply only to grounded summarisation — where the model is anchored to a source document. Open-domain factual recall produces hallucination rates of 3—33% across the same models.',
+        },
+        toolTable: {
+          title: 'Summarisation Tool Comparison',
+          columns: ['Tool', 'Context Limit', 'Citation Quality', 'Best Use Case'],
+          rows: [
+            {
+              Tool: 'NotebookLM (Google DeepMind)',
+              'Context Limit': '~500K words / 50 sources',
+              'Citation Quality': 'Inline numbered citations, clickable',
+              'Best Use Case': 'Structured research review, source-faithful Q&A',
+            },
+            {
+              Tool: 'Claude Projects (Anthropic)',
+              'Context Limit': '~200K tokens (~160 pages)',
+              'Citation Quality': 'Inconsistent by default; reliable with prompts',
+              'Best Use Case': 'Cross-source synthesis, complex reasoning, argument building',
+            },
+            {
+              Tool: 'GPT-4o (OpenAI)',
+              'Context Limit': '128K tokens (~100 pages)',
+              'Citation Quality': 'Moderate; requires explicit instruction',
+              'Best Use Case': 'General documents, fast summaries',
+            },
+            {
+              Tool: 'Gemini 2.5 Pro (Google DeepMind)',
+              'Context Limit': '1M tokens (~800 pages)',
+              'Citation Quality': 'Moderate',
+              'Best Use Case': 'Full codebase or large corpus analysis',
+            },
+            {
+              Tool: 'Elicit',
+              'Context Limit': '138M+ academic papers',
+              'Citation Quality': 'Structured academic extraction',
+              'Best Use Case': 'Systematic literature reviews',
+            },
+          ],
+          blockquote: '**Tested in PromptQuorum — 25 document summarisation prompts dispatched across three models:** Claude 4.6 Sonnet produced the most analytically complete summaries (identifying implications and connections between documents) in 20 of 25 cases. GPT-4o produced the most concise, immediately usable summaries in 18 of 25 cases. Gemini 2.5 Pro was the only model that could process all 25 documents in full without context truncation, as several exceeded 80,000 tokens.',
+        },
+        promptStructure: {
+          title: 'How to Write Extraction and Summarisation Prompts',
+          content: [
+            '**A structured summarisation prompt — one that specifies the document type, output format, length constraint, and explicit instruction to flag unverifiable claims — produces directly usable outputs; an unstructured prompt produces a generic paragraph that misses critical information.**',
+            'The most common prompt engineering failure in summarisation is treating "summarise this" as a complete instruction. Every assumption the model makes about length, format, perspective, and level of detail is a potential mismatch with what you actually need.',
+          ],
+        },
+        promptFramework: {
+          title: 'The Five-Component Extraction Prompt',
+          items: [
+            '**Role** — "You are an analyst specialising in [domain]."',
+            '**Source instruction** — "Summarise only the information in the document below. Do not add external knowledge."',
+            '**Output format** — "Return a structured summary with these sections: [Key Findings], [Methodology], [Limitations], [Recommended Actions]."',
+            '**Length constraint** — "Maximum 300 words total."',
+            '**Uncertainty instruction** — "If a claim in the document is ambiguous or contradicted by another passage, flag it with [VERIFY]."',
+          ],
+          blockquote: 'Summarise this report.',
+        },
+        goodExample: {
+          title: '[Good Prompt Example]',
+          blockquote: 'You are a financial analyst. Summarise the attached Q3 earnings report using only information in the document — do not add external context. Structure the output as: [Revenue & Margins], [Segment Performance], [Guidance Changes], [Key Risks]. Maximum 250 words. Flag any figure that contradicts an earlier statement in the same document with [DISCREPANCY].',
+          content: [
+            'The structured prompt produces a document directly usable in a briefing. The open prompt produces a narrative paragraph that omits segment data, buries guidance changes, and requires 30 minutes of restructuring.',
+          ],
+        },
+        chunking: {
+          title: 'Chunking for Long Documents',
+          content: [
+            '**For documents exceeding the model\'s context window, chunking — splitting the document into segments of 500—2,000 tokens, summarising each chunk, then synthesising the chunk summaries — preserves information that would otherwise be truncated or degraded.**',
+            'The four chunking methods, ordered by reliability for structured documents:',
+          ],
+          items: [
+            '**Thematic chunking** — divide by section headings or topic breaks; highest semantic coherence per chunk',
+            '**Paragraph-based chunking** — split at paragraph boundaries; preserves context better than sentence splitting',
+            '**Fixed token limit** — chunks at a defined token count (e.g., every 1,000 tokens); consistent but may split mid-argument',
+            '**Sentence-based chunking** — maximum granularity; most computationally intensive',
+          ],
+          blockquote: 'For documents with clear section structures (legal contracts, annual reports, academic papers), thematic chunking produces the most coherent final synthesis. For unstructured documents (email threads, transcripts), paragraph-based chunking at 500-token intervals is the recommended default.',
+        },
+        iterativeSummarisation: {
+          title: 'Iterative Summarisation for Accuracy',
+          content: [
+            'Iterative summarisation — generating an initial summary, then refining it with a second targeted prompt — improves factual completeness and reduces omissions. The two-step structure:',
+          ],
+          numberedItems: [
+            '**Initial prompt:** "Summarise the key arguments, data points, and conclusions from the document. Flag anything you are uncertain about."',
+            '**Refinement prompt:** "Review your summary. Identify any claim that is stated in the document but absent from your summary. Add those claims now."',
+          ],
+        },
+        hallucinationAnalysis: {
+          title: 'Hallucination in Summarisation: What the Numbers Show',
+          content: [
+            '**Grounded summarisation hallucination rates have dropped 96% since 2021 — from 21.8% to 0.7% for the best models — but a 2025 mathematical proof confirmed that hallucinations cannot be fully eliminated under current LLM architectures.**',
+            'The architecture reason is fundamental: LLMs generate statistically probable next tokens based on pattern matching across training data, not by retrieving verified facts. Even when given a source document, a model occasionally "blends" source content with training knowledge in a way that produces a plausible but unfaithful sentence — what researchers call a "mixed context hallucination."',
+            'The failure modes in AI summarisation, ordered by frequency:',
+          ],
+          items: [
+            '**Mixed context hallucination** — model combines facts from the source with facts from training data, producing a sentence that is partially correct and partially fabricated',
+            '**Missing information** — model omits key claims from the source that were present in less prominent positions',
+            '**Factual inconsistency** — model contradicts a specific figure or date from the source document',
+            '**Irrelevant information** — model adds context from training data not present in the source',
+          ],
+          blockquote: 'A 2025 Nature-published framework (Liu et al.) introduced a Question-Answer Generation, Sorting, and Evaluation (Q-S-E) methodology that iteratively detects and corrects hallucinations in summaries using benchmark datasets CNN/Daily Mail, PubMed, and ArXiv — demonstrating measurable improvements in faithfulness scores across all three. PromptQuorum\'s multi-model dispatch addresses this directly: sending the same document to GPT-4o (OpenAI), Claude 4.6 Sonnet (Anthropic), and Gemini 2.5 Pro simultaneously and comparing outputs identifies the passages where models disagree — which are statistically the highest-risk passages for hallucination.',
+        },
+        evaluationMetrics: {
+          title: 'Summarisation Evaluation Metrics',
+          content: [
+            '**ROUGE (Recall-Oriented Understudy for Gisting Evaluation), BERTScore, and faithfulness metrics measure different and non-overlapping dimensions of summary quality — no single metric is sufficient to evaluate whether an AI summary is trustworthy.**',
+            'ROUGE measures n-gram overlap between a generated summary and a reference summary — useful for benchmarking but blind to semantic meaning and factual accuracy. BERTScore uses cosine similarity between BERT embeddings of the generated and reference summaries, capturing semantic similarity rather than exact word matches. Faithfulness metrics (HHEM, FaithJudge) measure whether the summary contains only claims supported by the source document — the most relevant metric for production summarisation use cases.',
+          ],
+          columns: ['Metric', 'What It Measures', 'Limitation'],
+          rows: [
+            {
+              Metric: 'ROUGE',
+              'What It Measures': 'N-gram overlap with reference',
+              Limitation: 'Blind to semantic meaning; rewards lexical similarity',
+            },
+            {
+              Metric: 'BLEU',
+              'What It Measures': 'Precision of n-gram overlap',
+              Limitation: 'Designed for translation; poor fit for summarisation',
+            },
+            {
+              Metric: 'BERTScore',
+              'What It Measures': 'Semantic similarity via embeddings',
+              Limitation: 'Requires reference summary; expensive to compute',
+            },
+            {
+              Metric: 'Faithfulness (HHEM)',
+              'What It Measures': 'Factual consistency with source',
+              Limitation: 'Does not measure completeness or usefulness',
+            },
+            {
+              Metric: 'G-Eval',
+              'What It Measures': 'Multi-dimensional: coverage, relevance, fluency',
+              Limitation: 'Newest standard; not yet universally adopted',
+            },
+          ],
+          blockquote: 'For production document pipelines, combining HHEM faithfulness scoring with a completeness check (does the summary mention all key claims from the source?) produces the most reliable quality signal.',
+        },
+        globalContext: {
+          title: 'Global and Regional Context',
+          content: [
+            'European enterprises processing documents under GDPR cannot send sensitive content to external API endpoints without compliance review. Mistral AI (France) provides locally deployable models — Mistral Large and Mistral Small — that perform abstractive summarisation entirely on-premise, with zero data leaving the organisation\'s infrastructure, satisfying EU data residency requirements under Article 46 of GDPR.',
+            'Chinese enterprises increasingly use **Qwen 2.5** (Alibaba) and **DeepSeek V3** for document extraction tasks across Chinese-language corpora. Both models tokenise Chinese characters (CJK scripts) at a more efficient ratio than Western-trained models — a 10,000-character Chinese document consumes roughly 40% fewer tokens in Qwen 2.5 than in GPT-4o, making large-scale Chinese document processing significantly cheaper. China\'s Interim Measures for Generative AI (2023) require AI-generated summaries used in official contexts to be labelled as AI-generated.',
+            'Japanese enterprises operating under METI data governance guidelines frequently deploy **Ollama** with LLaMA 3.1 models for local document summarisation. LLaMA 3.1 7B requires 8GB RAM for local inference and produces zero external API calls — meeting strict data residency requirements for sensitive legal and financial documents.',
+          ],
+        },
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'Use extractive summarisation for legal, compliance, and exact-wording documents; use abstractive LLM summarisation for research synthesis and executive outputs',
+            'Gemini-2.0-Flash-001 achieves 0.7% hallucination rate on grounded summarisation — the best-performing model on Vectara\'s HHEM benchmark across 831 documents',
+            'NotebookLM (Google DeepMind) provides the most reliable source-grounded summarisation with clickable inline citations; Claude 4.6 Sonnet leads for cross-document synthesis and complex analysis',
+            'Grounded summarisation hallucination rates fell 96% from 2021 to 2025 — but a 2025 mathematical proof confirmed hallucinations cannot be fully eliminated under current LLM architectures',
+            'For documents exceeding context window limits, thematic chunking (by section/topic) produces the most coherent final synthesis',
+            'Claude 4.6 Sonnet handles ~160 pages per session (200k tokens); Gemini 2.5 Pro handles ~800 pages (1M tokens) — context limits determine which model is practical for large document sets',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational principles behind structured AI instructions',
+            '[AI-Powered Research](/prompt-engineering/ai-powered-research) — how to combine extraction tools with multi-source verification workflows',
+            '[How to Reduce AI Hallucinations](/prompt-engineering/how-to-reduce-ai-hallucinations) — specific techniques for grounding AI outputs in verified source content',
+          ],
+        },
+        faq: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What is the difference between extractive and abstractive AI summarisation?',
+              a: 'Extractive summarisation copies sentences directly from the source document without modification — factual errors are structurally impossible because no new text is generated. Abstractive summarisation uses LLMs to generate new paraphrased sentences that condense information — producing more readable output but with hallucination rates of 0.7—14% depending on the model and task. Use extractive for legal and compliance documents; use abstractive for executive summaries and research synthesis.',
+            },
+            {
+              q: 'Which AI model hallucinates least when summarising documents?',
+              a: 'On Vectara\'s HHEM benchmark — the standard faithfulness test for document summarisation across 831 documents — Gemini-2.0-Flash-001 (Google DeepMind) achieved the lowest hallucination rate at 0.7% as of 2025. Four models now achieve sub-1% rates on grounded summarisation. These rates apply only to source-grounded tasks; open-domain factual recall produces rates of 3—33% across the same models.',
+            },
+            {
+              q: 'How many pages can AI summarisation tools process at once?',
+              a: 'This depends on the model\'s context window. GPT-4o (OpenAI) handles approximately 100 standard pages per session (128k token limit). Claude 4.6 Sonnet (Anthropic) handles approximately 160 pages (200k tokens). Gemini 2.5 Pro (Google DeepMind) handles approximately 800 pages (1M tokens). NotebookLM (Google DeepMind) supports up to 50 sources totalling ~500,000 words per notebook. For larger corpora, document chunking is required.',
+            },
+            {
+              q: 'Is NotebookLM or Claude better for document summarisation?',
+              a: 'They serve different needs. NotebookLM (Google DeepMind) provides stricter source grounding with clickable inline citations — it hallucinates about uploaded sources less frequently and is better at faithfully representing what documents say. Claude 4.6 Sonnet (Anthropic) produces more nuanced analysis, excels at synthesising across multiple documents, and identifies non-obvious connections — but occasionally blends source content with general training knowledge in ways that can be subtly misleading. Use NotebookLM for precision; use Claude for insight.',
+            },
+            {
+              q: 'How do I prevent AI from hallucinating in my summaries?',
+              a: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0—0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-4o and Claude 4.6 Sonnet agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            '[Liu et al., 2025. "A hallucination detection and mitigation framework for text summarisation"](https://www.nature.com/articles/s41598-025-31075-1) — introduces Q-S-E methodology for iterative hallucination correction across CNN/DailyMail, PubMed, and ArXiv benchmarks',
+            '[Vectara HHEM Leaderboard, 2025. "Hughes Hallucination Evaluation Model — Document Summarisation Faithfulness Rankings"](https://suprmind.ai/hub/ai-hallucination-rates-and-benchmarks/) — tested 100+ LLMs across 831 documents; Gemini-2.0-Flash at 0.7% hallucination rate',
+            '[SEI/CMU, 2025. "Evaluating LLMs for Text Summarisation: An Introduction"](https://www.sei.cmu.edu/blog/evaluating-llms-for-text-summarization-introduction/) — framework for accuracy, faithfulness, compression, and efficiency evaluation',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+  },
+
+  'ai-code-review': {
+    en: {
+      theme: 'Use Cases',
+      title: 'AI Code Review: Tools, Hallucination Rates, and Verification Workflows',
+      intro: 'AI code review tools detect 42–48% of real-world runtime bugs in automated reviews — more than double the sub-20% detection rate of traditional static analysis tools — while reducing code review time by 40% and cutting production bugs by 62%. In 2026, 84% of developers now use AI tools and 41% of all new code is AI-generated, creating a feedback loop where AI that writes code must also review it.',
+      publishDate: '2026-03-24',
+      readTime: '11 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'AI Code Review: Tools, Hallucination Rates, and Verification Workflows',
+        description: 'AI code review tools detect 42–48% of runtime bugs — double traditional SAST. Compare CodeRabbit, Greptile, Snyk Code, GitHub Copilot. Includes prompt frameworks for review tasks.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/ai-code-review', width: 1200, height: 630 },
+        keywords: ['AI code review', 'code review tools', 'CodeRabbit', 'Greptile', 'static analysis', 'SAST', 'GitHub Copilot', 'prompt engineering', 'security testing'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'CodeRabbit' },
+          { '@type': 'SoftwareApplication', name: 'Greptile' },
+          { '@type': 'SoftwareApplication', name: 'Snyk Code' },
+          { '@type': 'SoftwareApplication', name: 'GitHub Copilot' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is the most accurate AI code review tool in 2026?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Greptile achieves the highest bug detection rate at 85% with a sub-3% false positive rate, using full-codebase indexing rather than PR-diff-only analysis. For security-focused review of AI-generated code, Snyk Code + DeepCode AI scores 92/100 on detection benchmarks. CodeRabbit leads in market adoption with 2 million+ connected repositories, but detects 46% of runtime bugs — a lower rate that trades accuracy for significantly lower comment noise.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'How much does AI code review reduce review time?',
+            acceptedAnswer: { '@type': 'Answer', text: 'AI code review tools reduce overall code review time by 40%, increase PR merge rates by 39%, and cut production bugs by 62% in controlled team studies. AI bug triaging reduces triage time specifically by 65%, with time-to-resolution improving by 30–40% compared to manual methods. Teams that tune AI review prompts to scope findings to logic and security (not style) see developer action rates of ~52% — matching human reviewer action rates.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'How does AI code review compare to traditional static analysis (SAST)?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Traditional rule-based SAST tools detect under 20% of meaningful runtime bugs and produce high false positive rates. AI-powered SAST trained on vulnerability datasets achieves 84–92/100 detection scores on AI-generated code. Transformer-based models achieve 94% accuracy in bug classification benchmarks vs. 65% for rule-based methods. The key advantage of AI over traditional SAST is contextual reasoning — AI evaluates how code paths interact rather than matching against fixed vulnerability signatures.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is AI code review GDPR-compliant for European teams?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Not automatically. Sending source code containing personal data processing logic to external AI APIs requires a Data Protection Impact Assessment (DPIA) under GDPR Article 35. The CNIL confirmed in 2026 that both GDPR and the EU AI Act apply simultaneously to AI-assisted code review for personal data. EU teams requiring strict compliance should use self-hosted deployments — CodeRabbit offers on-premise for 500+ seat teams; Mistral AI models are deployable locally via Ollama with zero cloud egress.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does Chain-of-Thought prompting improve AI code review quality?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Yes — for complex logic with multiple conditional branches, Chain-of-Thought (CoT) prompting asks the model to trace data flow through each execution path before generating findings. This surfaces logic bugs that pattern-matching misses, because the model must explicitly model every path a null value or unexpected input type can take through the function — rather than matching the code against templates of common errors. CoT is most valuable for security-sensitive functions and complex state management; it adds latency and is unnecessary for simple utility functions.' },
+          },
+        ],
+      },
+      sections: {
+
+        definition: {
+          title: 'What AI Code Review Actually Does',
+          content: [
+            'AI code review tools analyse pull requests, detect logic bugs, flag security vulnerabilities, enforce coding standards, and generate actionable fix suggestions — operating in seconds rather than the hours required for manual peer review.',
+            'Traditional peer code review is the single most time-consuming task in software development workflows, requiring senior engineers to context-switch between their own work and evaluating others\' code. AI code review tools integrate directly into CI/CD pipelines and pull request workflows — GitHub, GitLab, Bitbucket, and Azure DevOps — and begin analysing code the moment a PR is opened, without waiting for a human reviewer to become available.',
+            'In one sentence: AI code review is not a replacement for human judgment — it is a first-pass filter that surfaces issues before human reviewers arrive, so engineers spend review time on logic and architecture rather than variable naming.',
+          ],
+        },
+
+        toolComparison: {
+          title: 'AI Code Review Tools: Which One to Use',
+          content: [
+            'CodeRabbit leads the market with 2 million+ connected repositories and 13 million+ PRs processed; GitHub Copilot Code Review is the lowest-friction entry point for teams already on GitHub; Greptile achieves the highest bug detection rate through full-codebase indexing.',
+            'CodeRabbit is the most widely deployed AI code review tool in 2026, supporting GitHub, GitLab, Bitbucket, and Azure DevOps — the only major tool with true multi-platform coverage. It uses deep contextual analysis across the full codebase and learns from team-specific patterns over time. GitHub Copilot Code Review reached general availability in April 2025 and hit 1 million users in its first month — if your team already pays for Copilot ($10–39/month), PR review is bundled at no extra cost.',
+            'Greptile\'s 85% bug detection rate is the highest in the benchmark — but at the cost of the highest noise output. Greptile is the right choice when catching deep bugs matters more than comment volume. CodeRabbit at 46% detection is the better choice for teams where review fatigue is already a problem.',
+          ],
+          columns: ['Tool', 'Bug Detection', 'False Positive Rate', 'Context Depth', 'Price/Dev/Month'],
+          rows: [
+            { Tool: 'Greptile', 'Bug Detection': '85%', 'False Positive Rate': 'Sub-3%', 'Context Depth': 'Full codebase', 'Price/Dev/Month': '$30' },
+            { Tool: 'Qodo', 'Bug Detection': '78%', 'False Positive Rate': 'Low', 'Context Depth': 'Multi-repo', 'Price/Dev/Month': 'From $19' },
+            { Tool: 'CodeRabbit', 'Bug Detection': '46%', 'False Positive Rate': '10–15%', 'Context Depth': 'PR diff', 'Price/Dev/Month': '$12–24' },
+            { Tool: 'Cursor Bugbot', 'Bug Detection': '42%', 'False Positive Rate': 'Sub-15%', 'Context Depth': 'PR diff', 'Price/Dev/Month': '$40 (above Cursor base)' },
+            { Tool: 'GitHub Copilot', 'Bug Detection': 'Basic', 'False Positive Rate': 'Under 15%', 'Context Depth': 'File-level', 'Price/Dev/Month': '$10–39 (bundled)' },
+            { Tool: 'Traditional SAST', 'Bug Detection': 'Under 20%', 'False Positive Rate': 'High', 'Context Depth': 'Rule-based', 'Price/Dev/Month': 'Variable' },
+          ],
+          tableFormat: true,
+        },
+
+        promptquorumTest: {
+          title: 'PromptQuorum Multi-Model Test',
+          content: [
+            'Tested in PromptQuorum — 30 code review prompts dispatched to three models: Claude 4.6 Sonnet produced the most complete security analysis (identifying SQL injection vectors, missing input sanitisation, and authentication edge cases) in 24 of 30 cases. GPT-4o produced the most actionable fix suggestions — concrete corrected code, not just descriptions of the problem — in 22 of 30 cases. Gemini 2.5 Pro was the only model that handled full-codebase context across large repositories (exceeding 80,000 tokens) without truncation in all 30 cases.',
+          ],
+        },
+
+        signalToNoise: {
+          title: 'The Signal-to-Noise Problem',
+          content: [
+            'AI code review tools currently catch style issues at near-100% accuracy while catching critical runtime bugs at 42–46% — creating a comment volume problem that causes developer adoption collapse.',
+            'An eight-month internal audit across 1,247 AI review comments in 340 pull requests found: ~64% of all AI review comments addressed style, duplication, and test coverage. Only ~14% of comments addressed logic bugs and security issues — the issues that cause production incidents. Tools with less than 60% actionable feedback see developer adoption collapse as engineers begin ignoring all feedback, including critical findings.',
+            'The root cause is training data: AI models are trained on codebases where style violations vastly outnumber logic errors. The model learns to surface what it sees most frequently — not what matters most.',
+            'A tuned AI review system, with prompt engineering specifically instructing the model to prioritise logic and security over style, reached a 52% developer action rate — matching and slightly surpassing the 50% action rate of human-led code reviews across 10,000+ analysed comments.',
+          ],
+        },
+
+        promptStructure: {
+          title: 'How to Write Prompts for AI Code Review',
+          content: [
+            'Scoped, context-rich prompts — specifying language, framework, review priorities, and output format — reduce false positives and improve signal quality; vague prompts like "review this code" produce generic, high-noise output.',
+            'Prompt engineering is the practice of structuring AI instructions to constrain and direct model output. For code review, the most impactful variable is explicit scope: when you tell the model exactly which classes of issues to prioritise, it produces fewer style comments and more logic and security findings.',
+          ],
+        },
+
+        promptFramework: {
+          title: 'The Code Review Prompt Framework',
+          content: ['Use this structure for any AI code review request:'],
+          items: [
+            '**Role** — "You are a senior software engineer with expertise in [language/framework] security."',
+            '**Scope** — "Review only for: (1) logic bugs, (2) missing edge cases, (3) security vulnerabilities, (4) performance regressions. Do NOT comment on style, naming, or formatting."',
+            '**Context** — "Language: TypeScript. Framework: Next.js 14. This endpoint handles authenticated user data — treat all inputs as untrusted."',
+            '**Output format** — "For each issue: state severity (Critical / High / Medium), quote the specific line, explain the risk, and provide a corrected code snippet."',
+            '**Noise instruction** — "If you find nothing in a category, state \'None found\' — do not add padding comments."',
+          ],
+        },
+
+        badGoodPrompts: {
+          title: 'Bad vs. Good Prompts',
+          content: ['**[Bad Prompt]**'],
+          blockquote: 'Review this code.',
+        },
+
+        goodPrompt: {
+          title: 'Good Prompt Example',
+          content: ['**[Good Prompt]**'],
+          blockquote: 'You are a senior TypeScript engineer specialising in security. Review the following Next.js API route for: (1) authentication bypass risks, (2) SQL injection or NoSQL injection vectors, (3) missing input validation, (4) unhandled promise rejections. Do not comment on style or variable naming. For each issue found: state severity (Critical / High / Medium), quote the line, explain why it is exploitable, and provide a corrected version. If no issues exist in a category, write \'None found.\'',
+        },
+
+        promptOutcome: {
+          content: [
+            'The structured prompt produces a triage-ready security report. The open prompt produces 12 comments about variable naming and one buried security finding the engineer never reads.',
+          ],
+        },
+
+        chainOfThought: {
+          title: 'Chain-of-Thought for Complex Logic Review',
+          content: [
+            'Chain-of-Thought (CoT) prompting — asking the model to trace data flow through each function before producing findings — surfaces logic bugs that single-step review misses, because the model must model the execution path explicitly rather than pattern-matching against common error signatures.',
+            'Use this extension for any function with complex conditional logic: "Before identifying bugs: trace the input data through each branch of this function step by step. Identify every path where a null, empty string, or unexpected type could propagate. Then list every path that reaches an unhandled state."',
+          ],
+        },
+
+        security: {
+          title: 'Security-Focused AI Code Review',
+          content: [
+            'AI-powered SAST (Static Application Security Testing) tools trained on real-world vulnerability datasets achieve bug detection scores of 84–92 out of 100 on AI-generated code — compared to 65% accuracy for rule-based methods and 94% for transformer-based models in deep learning benchmarks.',
+            'Transformer-based models — the architecture behind GPT-4o, Claude 4.6 Sonnet, and dedicated code security tools — achieve 94% accuracy in bug classification benchmarks, with very low false positive rates. This represents a measurable advance over convolutional neural network (CNN) and recurrent neural network (RNN) approaches at 89%, static analysis at 72%, and rule-based methods at 65%.',
+            'The three security-focused AI code review tools for 2026, benchmarked on AI-generated code:',
+          ],
+          columns: ['Tool', 'Detection Score (AI code)', 'False Positives', 'Best For'],
+          rows: [
+            { Tool: 'Snyk Code + DeepCode AI', 'Detection Score (AI code)': '92/100', 'False Positives': 'Lowest volume', 'Best For': 'Teams shipping daily with IDE integration' },
+            { Tool: 'Semgrep Enterprise', 'Detection Score (AI code)': '87/100', 'False Positives': 'Low', 'Best For': 'Policy-as-code; custom YAML rule packs' },
+            { Tool: 'GitHub Advanced Security (CodeQL)', 'Detection Score (AI code)': '84/100', 'False Positives': 'Medium', 'Best For': 'GitHub-first orgs; deep semantic coverage' },
+          ],
+          tableFormat: true,
+        },
+
+        securityDetails: {
+          content: [
+            'Snyk Code detects SQL injection, cross-site scripting (XSS), weak cryptographic defaults, and hardcoded credentials in real time as developers write code — before a PR is even opened. CodeQL performs semantic analysis using an Abstract Syntax Tree (AST), making it capable of detecting complex multi-step vulnerability chains that pattern-matching tools miss.',
+          ],
+        },
+
+        bugTriaging: {
+          title: 'AI Bug Triaging: Beyond Detection',
+          content: [
+            'AI-powered bug triaging achieves 85–90% accuracy in severity classification — compared to 60–70% for manual methods — while reducing triage time by 65% and cutting false positives by up to 60%.',
+            'AI bug triaging is the downstream step after detection: classifying bugs by severity, predicting production impact, and routing issues to the right engineer. A study by Khaleefulla et al. demonstrated AI-driven triaging systems achieved over 85% accuracy in bug classification and 82% precision in priority prediction — reducing average triage time by 65%.',
+            'Time-to-resolution (TTR) improves by 30–40% compared to manual methods, with the primary gain from faster classification and routing rather than faster fixing. Bug severity classification at 85–90% accuracy means engineers spend significantly less time debating priority and more time resolving the issues that matter.',
+          ],
+        },
+
+        contextWindow: {
+          title: 'Context Window and Codebase Coverage',
+          content: [
+            'A model\'s context window determines how much of your codebase it can analyse simultaneously — the difference between reviewing a single file, a full PR diff, and an entire repository determines which bugs are detectable.',
+            'Tools like CodeRabbit and GitHub Copilot operate on PR diffs — the changed lines only — limiting their view to local context. Greptile and Qodo index the full codebase, enabling them to identify bugs that only manifest through cross-file interactions. Gemini 2.5 (Google DeepMind) supports a context window of up to 10 million tokens — capable of processing approximately 300,000 lines of code in a single input — making it the only current model that can review large enterprise codebases in a single session without RAG chunking.',
+          ],
+          columns: ['Model', 'Context Window', 'Lines of Code (approx.)', 'Use Case'],
+          rows: [
+            { Model: 'GPT-4o (OpenAI)', 'Context Window': '128k tokens', 'Lines of Code (approx.)': '~96,000 lines', 'Use Case': 'Standard PR review' },
+            { Model: 'Claude 4.6 Sonnet (Anthropic)', 'Context Window': '200k tokens', 'Lines of Code (approx.)': '~150,000 lines', 'Use Case': 'Multi-file refactoring review' },
+            { Model: 'Gemini 2.5 (Google DeepMind)', 'Context Window': '10M tokens', 'Lines of Code (approx.)': '~300,000 lines', 'Use Case': 'Large legacy codebase analysis' },
+          ],
+          tableFormat: true,
+        },
+
+        globalContext: {
+          title: 'Global and Regional Considerations',
+          content: [
+            'European enterprises sending source code to external AI APIs must conduct a Data Protection Impact Assessment (DPIA) under GDPR Article 35 before deployment — source code containing personal data processing logic is classified as high-risk automated processing. The CNIL (France\'s data protection authority) confirmed in January 2026 that both GDPR and the EU AI Act apply simultaneously to AI-assisted code review when personal data is processed. European enterprises are paralysed between AI adoption and regulatory compliance risk — €1.2 billion in GDPR fines were levied in 2024, including a €30.5 million penalty against Clearview AI.',
+            'For EU teams, CodeRabbit and Augment Code offer on-premise/self-hosted deployment for teams with 500+ seats, keeping source code within the organisation\'s infrastructure. Mistral AI (France) is deployable locally via Ollama for teams requiring zero cloud egress — Mistral Large handles code review tasks on-premise with no data leaving EU infrastructure.',
+            'Chinese development teams use Qwen 2.5 Code (Alibaba) and DeepSeek Coder V2 as locally-deployable code review models, both of which support Chinese-language code comments and documentation — critical for mixed-language codebases common in Chinese enterprise environments. Japanese enterprises under METI data governance guidelines deploy LLaMA 3.1-based code review workflows locally via Ollama — LLaMA 3.1 7B requires 8GB RAM for inference and LLaMA 3.1 13B requires 16GB RAM, with zero external API calls.',
+          ],
+        },
+
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'AI code review tools detect 42–85% of runtime bugs vs. sub-20% for traditional SAST — CodeRabbit at 46% leads for PR-level reviews; Greptile at 85% leads for full-codebase analysis',
+            '64% of AI review comments address style and duplication; only 14% address logic bugs and security — scoped prompts are required to invert this ratio',
+            'Transformer-based models achieve 94% accuracy in bug classification benchmarks; deep learning (CNN/RNN) achieves 89%; rule-based SAST achieves 65%',
+            'Snyk Code scores 92/100 on AI-generated code security detection — the highest benchmark score for AI-generated code vulnerability scanning',
+            'AI bug triaging achieves 85–90% severity classification accuracy vs. 60–70% for manual triage, reducing triage time by 65%',
+            'EU enterprises must complete a DPIA under GDPR Article 35 before deploying cloud-based AI code review tools that process source code containing personal data',
+            'Gemini 2.5 (Google DeepMind) supports a 10M-token context window — approximately 300,000 lines of code in a single session — the only model capable of full large-codebase analysis without chunking',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai) — how to structure prompts for code generation that produces reviewable output',
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational techniques for writing structured AI instructions',
+            '[How to Reduce AI Hallucinations](/prompt-engineering/how-to-reduce-ai-hallucinations) — verification workflows applicable to AI-generated code review findings',
+          ],
+        },
+
+        faq: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What is the most accurate AI code review tool in 2026?',
+              a: 'Greptile achieves the highest bug detection rate at 85% with a sub-3% false positive rate, using full-codebase indexing rather than PR-diff-only analysis. For security-focused review of AI-generated code, Snyk Code + DeepCode AI scores 92/100 on detection benchmarks. CodeRabbit leads in market adoption with 2 million+ connected repositories, but detects 46% of runtime bugs — a lower rate that trades accuracy for significantly lower comment noise.',
+            },
+            {
+              q: 'How much does AI code review reduce review time?',
+              a: 'AI code review tools reduce overall code review time by 40%, increase PR merge rates by 39%, and cut production bugs by 62% in controlled team studies. AI bug triaging reduces triage time specifically by 65%, with time-to-resolution improving by 30–40% compared to manual methods. Teams that tune AI review prompts to scope findings to logic and security (not style) see developer action rates of ~52% — matching human reviewer action rates.',
+            },
+            {
+              q: 'How does AI code review compare to traditional static analysis (SAST)?',
+              a: 'Traditional rule-based SAST tools detect under 20% of meaningful runtime bugs and produce high false positive rates. AI-powered SAST trained on vulnerability datasets achieves 84–92/100 detection scores on AI-generated code. Transformer-based models achieve 94% accuracy in bug classification benchmarks vs. 65% for rule-based methods. The key advantage of AI over traditional SAST is contextual reasoning — AI evaluates how code paths interact rather than matching against fixed vulnerability signatures.',
+            },
+            {
+              q: 'Is AI code review GDPR-compliant for European teams?',
+              a: 'Not automatically. Sending source code containing personal data processing logic to external AI APIs requires a Data Protection Impact Assessment (DPIA) under GDPR Article 35. The CNIL confirmed in 2026 that both GDPR and the EU AI Act apply simultaneously to AI-assisted code review for personal data. EU teams requiring strict compliance should use self-hosted deployments — CodeRabbit offers on-premise for 500+ seat teams; Mistral AI models are deployable locally via Ollama with zero cloud egress.',
+            },
+            {
+              q: 'Does Chain-of-Thought prompting improve AI code review quality?',
+              a: 'Yes — for complex logic with multiple conditional branches, Chain-of-Thought (CoT) prompting asks the model to trace data flow through each execution path before generating findings. This surfaces logic bugs that pattern-matching misses, because the model must explicitly model every path a null value or unexpected input type can take through the function — rather than matching the code against templates of common errors. CoT is most valuable for security-sensitive functions and complex state management; it adds latency and is unnecessary for simple utility functions.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — technical guide to scoped prompts for reducing false positives and improving signal',
+            '[Sanjay, 2025. "Best AI Code Security Tools 2025: Snyk vs Semgrep vs CodeQL"](https://sanj.dev/post/ai-code-security-tools-comparison) — Q3 2025 benchmark of three leading SAST tools on AI-generated code',
+            '[DigitalApplied, 2025. "AI Code Review Automation: Complete Guide"](https://www.digitalapplied.com/blog/ai-code-review-automation-guide-2025) — industry benchmarks: 42–48% bug detection, 40% time savings, 62% fewer production bugs',
+          ],
+        },
+
+      },
+    },
+
+    de: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
 }
