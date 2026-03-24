@@ -9325,4 +9325,79 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'how-llms-actually-work': {
+    en: {
+      theme: 'Fundamentals',
+      title: 'How LLMs Actually Work',
+      intro: 'Coming soon — a deep dive into how large language models process tokens, generate predictions, and why understanding the architecture makes you a better prompt engineer.',
+      publishDate: '2026-03-24',
+      readTime: 'Coming soon',
+      sections: {},
+    },
+    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
+  'prompt-injection-and-security': {
+    en: {
+      theme: 'Fundamentals',
+      title: 'Prompt Injection & Security',
+      intro: 'Coming soon — how to defend your AI systems against prompt injection attacks, jailbreaks, and malicious input manipulation.',
+      publishDate: '2026-03-24',
+      readTime: 'Coming soon',
+      sections: {},
+    },
+    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
+  'ai-limitations-what-llms-cant-do': {
+    en: {
+      theme: 'Fundamentals',
+      title: 'AI Limitations — What LLMs Can\'t Do',
+      intro: 'Coming soon — understanding the hard boundaries of large language models, where they fail, and how to design systems that account for these limitations.',
+      publishDate: '2026-03-24',
+      readTime: 'Coming soon',
+      sections: {},
+    },
+    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
+  'open-source-vs-proprietary-llms': {
+    en: {
+      theme: 'Fundamentals',
+      title: 'Open Source vs Proprietary LLMs: The Race',
+      intro: 'Coming soon — comparing open-source models like LLaMA and Mistral against proprietary options like GPT-4o and Claude, including cost, control, and performance trade-offs.',
+      publishDate: '2026-03-24',
+      readTime: 'Coming soon',
+      sections: {},
+    },
+    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
+  'geopolitics-and-ai': {
+    en: {
+      theme: 'Fundamentals',
+      title: 'Geopolitics and AI',
+      intro: 'Coming soon — how geopolitical tensions, regulation, and regional strategies shape AI development and what that means for prompt engineers and organizations.',
+      publishDate: '2026-03-24',
+      readTime: 'Coming soon',
+      sections: {},
+    },
+    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
 }

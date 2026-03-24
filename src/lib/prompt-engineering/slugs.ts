@@ -12,6 +12,11 @@ export const PE_SLUG_TO_KEY: Record<string, string> = {
   'tokens-costs-limits-economics-of-ai-prompting': 'tokens-costs-limits',
   'system-prompt-vs-user-prompt-whats-the-difference': 'system-prompt-vs-user-prompt',
   'gpt-claude-or-gemini-how-to-pick-the-right-model': 'gpt-claude-gemini-which-model',
+  'how-llms-actually-work': 'how-llms-actually-work',
+  'prompt-injection-and-security': 'prompt-injection-and-security',
+  'ai-limitations-what-llms-cant-do': 'ai-limitations-what-llms-cant-do',
+  'open-source-vs-proprietary-llms': 'open-source-vs-proprietary-llms',
+  'geopolitics-and-ai': 'geopolitics-and-ai',
 
   // Frameworks
   'which-prompt-framework-should-you-use': 'which-framework-to-use',
