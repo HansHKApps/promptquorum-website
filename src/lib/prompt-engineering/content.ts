@@ -8914,4 +8914,202 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'build-a-prompt-library': {
+    en: {
+      theme: 'Techniques',
+      title: 'Build A Prompt Library: Structure, Versioning, and Team Governance',
+      intro: 'A prompt library is a central, searchable collection of tested prompts with clear metadata so your team can reuse what works instead of reinventing instructions in every chat. Done well, it behaves like a shared "AI playbook": people grab a proven template for a task, adapt a few inputs, and get consistent results across models and projects.',
+      publishDate: '2026-03-24',
+      readTime: '9 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Build A Prompt Library: Structure, Versioning, and Team Governance',
+        description: 'Design and maintain a searchable prompt library for your team. Includes schemas, versioning strategies, testing approaches, and storage options from Git to Notion.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-a-prompt-library', width: 1200, height: 630 },
+        keywords: ['prompt library', 'prompt management', 'team governance', 'prompt versioning', 'prompt testing', 'prompt reuse', 'prompt engineering'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'Notion' },
+          { '@type': 'SoftwareApplication', name: 'Airtable' },
+          { '@type': 'SoftwareApplication', name: 'Google Sheets' },
+          { '@type': 'SoftwareApplication', name: 'Git' },
+        ],
+      },
+      sections: {
+
+        definition: {
+          title: 'What a Prompt Library Is (and Is Not)',
+          content: [
+            'A prompt library is a structured repository of prompts, each with a defined purpose, inputs, and expected output; it is not just a long list of cool prompts copied from the internet.',
+            'Each entry should read more like a small tool than a snippet of text. A useful prompt record typically includes:',
+          ],
+          items: [
+            'A clear **title** ("Summarise stakeholder interviews into risks and actions").',
+            'A one-line **use case** (what problem it solves).',
+            'The full **prompt body**, including placeholders for inputs.',
+            '**Inputs required** (e.g. transcript, user story, Git diff).',
+            'Recommended **model / parameters** if relevant.',
+            'Expected **output format** (email, JSON, bullets, table).',
+            '**Tags** (e.g. `#research`, `#marketing`, `#support`, `#code-review`).',
+            '**Owner** and a simple **version** ("v1.2 — updated for new model").',
+          ],
+        },
+
+        definitionConclusion: {
+          content: [
+            'This turns each prompt into a reusable asset someone else can pick up and use with minimal explanation.',
+          ],
+        },
+
+        whyBuild: {
+          title: 'Why You Should Build One',
+          content: [
+            'A prompt library saves time, reduces variability between people, and gives you a safe place to refine prompts instead of losing them in private chat logs.',
+            'Typical benefits:',
+          ],
+          items: [
+            '**Speed:** People start from a tested template, not a blank box.',
+            '**Consistency:** Similar tasks (summaries, briefs, code reviews) follow consistent patterns, tone, and structure.',
+            '**Quality:** Prompts improve over time as you record what works and retire what doesn\'t.',
+            '**Onboarding:** New colleagues can browse examples and get productive quickly instead of guessing how to "talk to the AI."',
+            '**Governance:** Sensitive areas (legal, HR, finance, compliance) use reviewed prompts instead of ad-hoc instructions.',
+          ],
+        },
+
+        whyBuildConclusion: {
+          content: [
+            'Instead of each person maintaining a private prompt stash in notes, you end up with one shared system that represents how your organisation actually wants to use AI.',
+          ],
+        },
+
+        schema: {
+          title: 'What to Store for Each Prompt',
+          content: [
+            'Every prompt should capture enough context that another person can reproduce your results reliably, even months later.',
+            'A practical schema:',
+          ],
+          items: [
+            '**Title** — Short, task-oriented: "Meeting notes → action list," "Bug report triage classifier," "AI code review — security only."',
+            '**Goal / description** — One or two sentences: "Turn raw meeting notes into a clean action list with owners and deadlines."',
+            '**Prompt body** — The full instruction text, with placeholders like `<PASTE_NOTES_HERE>` and any system-style guidance (role, constraints, style).',
+            '**Inputs** — What the user must provide (e.g. "Zoom transcript," "Jira ticket list," "SQL query + schema").',
+            '**Model guidance** — Recommended models and settings if important (e.g. "Claude Sonnet, low temperature", "Any GPT-4-class model").',
+            '**Output format** — For example: "Markdown bullet list," "2-column table (Issue | Recommendation)," "Valid JSON array of objects."',
+            '**Tags / category** — For example: `#summarisation`, `#planning`, `#analysis`, `#generation`, `#classification`, `#code`, plus functional tags like `#marketing`, `#sales`, `#support`.',
+            '**Owner / version / last updated** — Who maintains it, simple version string, and date of last change so you know how fresh it is.',
+          ],
+        },
+
+        schemaOptional: {
+          content: [
+            'Optional but valuable:',
+          ],
+          items: [
+            '**Example input and output** — One realistic input and a good output so users can judge fit at a glance.',
+          ],
+        },
+
+        buildProcess: {
+          title: 'How to Build Your Library Step by Step',
+          content: [
+            'The fastest way to build a usable prompt library is to harvest real prompts from everyday work, normalise them into a common template, and then add light governance.',
+            'A practical approach:',
+          ],
+          items: [
+            '**1. Start with real, high-value use cases** — Pick 3–5 repetitive tasks where AI already helps: meeting summaries, support replies, code review comments, campaign drafts, research syntheses. These will give you prompts people actually use, not theoretical ones.',
+            '**2. Capture prompts that already work** — For one to two weeks, whenever you or someone else gets a great result from a prompt, save it immediately into an "inbox" section of your library. Focus only on prompts that were used more than once and produced reliably good output.',
+            '**3. Normalise into a standard template** — Rewrite each good prompt into your standard schema: clear title and goal, prompt body broken into role, task, constraints, and output format, proper placeholders instead of hardcoded content, tags, owner, and version.',
+            '**4. Organise by task, not by model** — Group prompts by what they help you do (summarise, plan, analyse, generate, review code) rather than by which model they use. Model specifics belong in metadata, so you can swap models later without rewriting the library structure.',
+            '**5. Add ownership and minimal review** — For each category, assign a person responsible (for example, "support prompts owner," "engineering prompts owner"). When someone wants to add or change a prompt, that owner reviews it quickly for clarity and fit before marking it "Approved" instead of "Draft."',
+            '**6. Review and prune regularly** — On a monthly cadence, look at which prompts are used a lot (those may need variants or extra documentation), which prompts are rarely used (either improve, re-tag, or archive them), and where people keep editing the same prompt ad-hoc (maybe it should be split into two clearer prompts).',
+          ],
+        },
+
+        buildProcessConclusion: {
+          content: [
+            'Over time, this turns scattered instructions into a curated toolkit that reflects how your team actually works.',
+          ],
+        },
+
+        storage: {
+          title: 'Where to Store It and How to Structure It',
+          content: [
+            'You can implement a prompt library in anything from a Git repo to a shared list; the important part is searchable fields, easy editing, and some history of changes.',
+            'Common, effective options:',
+          ],
+          items: [
+            '**Markdown files in a repo** — One file per category or per prompt. Use headings (`##`) for prompts, with metadata in a front-matter block. Benefits: version control, code review, diffs, branches for experiments.',
+            '**Tables or lists (Notion, Lists, Airtable, Sheets)** — Columns for title, prompt, category, tags, model, owner, last updated, and status. Easy filter and search for non-technical users. Can be linked from where work happens (docs, chat, wikis).',
+            '**Dedicated prompt management tools** — Often add one-click execution, per-prompt analytics, and access control. Useful if you have many non-technical users and want tight governance.',
+          ],
+        },
+
+        storageStructure: {
+          content: [
+            'For structure, a simple hybrid works well:',
+          ],
+          items: [
+            '**Categories** by function: `Marketing`, `Sales`, `Support`, `Product`, `Engineering`, `Ops`.',
+            '**Sub-categories** or tags by task: `summarise`, `plan`, `rewrite`, `analyse`, `classify`, `code-generate`, `code-review`.',
+            '**Status**: `Draft`, `Approved`, `Deprecated`.',
+          ],
+        },
+
+        storageConclusion: {
+          content: [
+            'Categories give structure; tags keep it flexible as your usage evolves.',
+          ],
+        },
+
+        governance: {
+          title: 'Versioning, Testing, and Keeping Quality High',
+          content: [
+            'Without versioning and basic testing, a prompt library turns into a junk drawer; with light governance, it becomes a reliable internal product.',
+            'Practical habits:',
+          ],
+          items: [
+            '**Version prompts explicitly** — Use a simple scheme like `v1.0` → `v1.1` when you change important behaviour. Add a one-line change note ("v1.1 — added JSON output format; reduced hallucinations for dates").',
+            '**Attach test cases to important prompts** — For high-impact prompts (support classification, legal summaries, financial overviews), keep 3–5 test inputs and expected output patterns. After editing a prompt or changing models, run those tests to make sure it still behaves correctly.',
+            '**Track usage and feedback** — Even a simple "stars" rating or a short comment ("too verbose," "great for technical readers") helps you see which prompts are working and which need attention.',
+            '**Plan for rollback** — Always keep the previous version accessible. If a new version underperforms, you should know exactly which version to revert to.',
+            '**Retire prompts intentionally** — When a prompt is outdated or superseded, mark it "Deprecated" rather than deleting it. This preserves history and makes it easier to resurrect an old approach if needed.',
+          ],
+        },
+
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'A prompt library is a structured, searchable collection of prompts with metadata, not just a random list of cool examples.',
+            'Each prompt should include title, goal, full body with placeholders, required inputs, recommended model/parameters, output format, tags, owner, and version.',
+            'Build your library by harvesting real, high-value prompts from everyday work, normalising them into a standard template, and assigning ownership.',
+            'Organise prompts by task (summarise, analyse, generate, code-review) rather than by model, so you can swap models later without restructuring.',
+            'Store your library in a versioned system (Git repo, Notion, Airtable) with searchable fields and history tracking.',
+            'Add light governance: ownership by category, quick review before approval, monthly pruning, test cases for high-impact prompts, and explicit versioning.',
+            'Version prompts explicitly, attach test cases to important ones, track usage and feedback, plan for rollback, and retire prompts intentionally rather than deleting them.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational principles for designing effective prompts',
+            '[How to Write a System Prompt](/prompt-engineering/how-to-write-a-system-prompt) — techniques for building reusable, consistent prompt structures',
+            '[Prompt Engineering Frameworks](/prompt-engineering/what-is-prompt-engineering) — structured approaches (CRAFT, CO-STAR, SPECS) for designing prompts',
+          ],
+        },
+
+      },
+    },
+
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
 }
