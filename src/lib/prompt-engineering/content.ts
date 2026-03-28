@@ -11642,4 +11642,121 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
   },
 
+  'rag-explained': {
+    en: {
+      theme: 'Techniques',
+      title: 'RAG Explained: How to Ground AI Answers in Real Data',
+      intro: 'Retrieval-Augmented Generation (RAG) is an approach where a language model first retrieves relevant documents from a knowledge source and then uses those documents to generate an answer. This keeps responses grounded in real data instead of relying only on what the model memorized during training.',
+      publishDate: '2026-03-26',
+      readTime: '8 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'RAG Explained: How to Ground AI Answers in Real Data',
+        description: 'What Retrieval-Augmented Generation (RAG) is, why it matters, and how it grounds language model outputs in your own documents.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['RAG', 'Retrieval-Augmented Generation', 'prompt engineering', 'knowledge grounding', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'Knowledge Grounding' },
+        ],
+      },
+      sections: {
+        whatIsRAG: {
+          title: 'What RAG Is',
+          content: [
+            '**RAG combines a retriever that finds relevant information with a generator that writes the final answer using that information.** The retriever searches a knowledge base (such as indexed PDFs, web pages, or internal documents) based on the user\'s query. The generator then reads the retrieved passages and produces a response that cites or reflects that content.',
+            'This is different from a plain language model call, where the model answers from its internal parameters alone. In RAG, the model is "reading" fresh context every time you ask a question.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Why RAG Matters',
+          content: [
+            '**RAG matters because it reduces hallucinations and keeps answers up to date.** A pure language model can confidently invent details, especially on specialized or recent topics. With RAG, answers are anchored in retrieved documents you control.',
+            'RAG is also important for privacy and governance. Instead of fine-tuning a model on sensitive data, you can keep that data in your own store and only feed relevant snippets into the model at query time. That way, the model reasons over your content without permanently absorbing it.',
+          ],
+        },
+        howItWorks: {
+          title: 'How a RAG System Works Step by Step',
+          content: [
+            '**A typical RAG system runs through four main stages: ingestion, indexing, retrieval, and generation.** Each stage can be tuned independently.',
+          ],
+          numberedItems: [
+            'Ingestion: You load documents (for example PDFs, knowledge base articles, tickets, code) and split them into chunks, often 200–1,000 tokens each. Metadata such as titles, dates, authors, or tags can be attached.',
+            'Indexing: Each chunk is transformed into a vector representation using an embedding model, then stored in a vector database or search index. This lets the system find semantically similar content for new queries.',
+            'Retrieval: When the user asks a question, the system embeds the query and retrieves the most relevant chunks from the index. Filters (such as date range, document type, or user permissions) can be applied at this stage.',
+            'Generation: The system constructs a prompt that includes the user\'s question and the retrieved chunks, then sends it to a language model. The model generates an answer that should be consistent with the provided context.',
+          ],
+        },
+        decoupling: {
+          content: [
+            'Because retrieval and generation are decoupled, you can improve one without changing the other—for example, swap in a better retriever while keeping the same model.',
+          ],
+        },
+        vsFineTuning: {
+          title: 'RAG vs Fine-Tuning',
+          content: [
+            '**RAG and fine-tuning are complementary: RAG brings external knowledge into each query, while fine-tuning changes the model\'s behavior at the parameter level.** They solve different problems.',
+            'Use RAG when:',
+          ],
+          items: [
+            'You need current or frequently changing information (for example policies, product docs).',
+            'You must keep data in your own infrastructure or apply strict access control.',
+            'You want traceable answers linked to sources.',
+          ],
+        },
+        useFinetuning: {
+          content: [
+            'Use (or add) fine-tuning when:',
+          ],
+          items: [
+            'You want the model to adopt a very specific style, workflow, or domain behavior by default.',
+            'Your tasks are narrow and stable, and you have many labeled examples.',
+          ],
+        },
+        productionChoice: {
+          content: [
+            'In many production systems, RAG is the first choice because it is easier to update (just change the documents) and safer for sensitive data.',
+          ],
+        },
+        example: {
+          title: 'Example: Without vs With RAG',
+          content: [
+            '**The benefit of RAG becomes clear when you compare answering from memory only with answering using retrieved documents.** Here is a conceptual example for an internal policy question.',
+            '**[Bad Prompt – No RAG]**',
+            '"What is our company\'s travel reimbursement policy?"',
+            'The model will guess based on generic patterns, which may be wrong for your organization.',
+            '**[Good Prompt – With RAG]**',
+            '"You are an assistant answering questions about our internal company policies. Here are relevant policy excerpts:\n\n[...insert retrieved policy text chunks...]\n\nUsing only the information in these excerpts, answer the question: "What is our company\'s travel reimbursement policy?" If something is not covered in the excerpts, say that it is not specified."',
+            'In the second case, the model is grounded in your actual policy documents, and it is clear what to do when information is missing.',
+          ],
+        },
+        multiModel: {
+          title: 'RAG in Multi-Model Workflows',
+          content: [
+            '**RAG becomes even more powerful when combined with multiple models and structured prompting.** You can:',
+          ],
+          items: [
+            'Use one model or service to embed and retrieve documents, and another to generate answers.',
+            'Apply reasoning-focused prompts (such as chain-of-thought or TRACE-style structures) on top of retrieved context.',
+            'Run the same RAG prompt across several models to compare how well each uses the same documents.',
+          ],
+        },
+        modularity: {
+          content: [
+            'This modularity is one of RAG\'s biggest strengths: you can upgrade individual components—retriever, index, generator, prompts—without rebuilding the entire system.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
 }
