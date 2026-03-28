@@ -5671,6 +5671,19 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             '**Safety & Alignment (15 prompts)** — Edge cases, refusal behavior, jailbreak resistance.',
           ],
         },
+        faq: {
+          title: 'Frequently Asked Questions',
+          content: [
+            'What is the best frontier model in March 2026?',
+            'There is no universally "best" model — the choice depends on your task. GPT-5.x excels at reasoning and code. Claude 4.6 Sonnet dominates long-context analysis. Gemini 3 Pro handles multimodal tasks. Use PromptQuorum to test multiple models on your specific task and measure quality, speed, and cost.',
+            'Which frontier model is cheapest?',
+            'DeepSeek V4 at $0.27/$1.1 per 1M tokens is 60–70% cheaper than GPT-5.x ($20/$80) and Claude 4.6 Sonnet ($3/$15). Llama 4 is free (open-source, local deployment). Trade-off: lower cost models sometimes have lower quality for specialized reasoning tasks.',
+            'What is the difference between GPT-5.x and Claude 4.6 Sonnet?',
+            'GPT-5.x: Excels at reasoning, code, analysis. 200k context. $20/$80 pricing. Multi-modal (image, video). Claude 4.6 Sonnet: Stronger at long-context tasks, research. 200k context. Cheaper at $3/$15. Excellent safety alignment. No video support. For most tasks, test both — results vary by domain.',
+            'Which frontier model supports local/offline deployment?',
+            'Llama 4 (open-source, runs via Ollama, LM Studio, Jan AI) supports full local deployment. All other frontier models require cloud API access. If privacy and data residency are critical, Llama 4 is the only frontier option.',
+          ],
+        },
         resources: {
           title: 'Resources for Further Comparison',
           content: [
