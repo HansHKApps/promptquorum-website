@@ -11493,4 +11493,153 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
   },
 
+  'tree-of-thought-react': {
+    en: {
+      theme: 'Techniques',
+      title: 'Tree of Thought & ReAct: Advanced Reasoning for Hard Problems',
+      intro: 'Tree-of-Thought and ReAct prompting are two advanced reasoning techniques: Tree-of-Thought explores multiple possible solution paths like a decision tree, while ReAct interleaves reasoning with explicit "actions" such as searching or retrieving information. Both aim to make complex problem-solving more reliable and transparent.',
+      publishDate: '2026-03-26',
+      readTime: '8 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Tree of Thought & ReAct: Advanced Reasoning for Hard Problems',
+        description: 'What Tree-of-Thought and ReAct prompting are, how they differ, when to use each, and how to combine them in PromptQuorum for complex reasoning workflows.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['tree-of-thought prompting', 'ReAct prompting', 'advanced reasoning', 'prompt engineering', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'Advanced Reasoning' },
+        ],
+      },
+      sections: {
+        whatIsTreeOfThought: {
+          title: 'What Tree-of-Thought Prompting Is',
+          content: [
+            '**Tree-of-Thought prompting asks the model to branch its reasoning into multiple candidate paths, evaluate them, and then select the best one instead of following a single linear chain.** You explicitly instruct the model to propose several approaches, explore each a bit, then compare and choose.',
+            'A simple Tree-of-Thought pattern:',
+          ],
+          items: [
+            'Generate multiple ideas or plans for solving the problem.',
+            'Expand or simulate each branch for a few steps.',
+            'Critically compare branches based on clear criteria (such as feasibility, risk, or payoff).',
+            'Pick the winning branch and develop it into a final answer.',
+          ],
+        },
+        treeTransform: {
+          content: [
+            'This transforms reasoning from a single "line of thought" into a small search over a solution space.',
+          ],
+        },
+        whatIsReAct: {
+          title: 'What ReAct Prompting Is',
+          content: [
+            '**ReAct (Reason + Act) prompting interleaves natural language reasoning steps ("thoughts") with explicit actions, such as calling tools, searching, or retrieving data.** The model first reasons about what it needs, then issues an action, observes the result, and updates its reasoning.',
+            'A typical ReAct loop:',
+          ],
+          items: [
+            'Thought: State what information or subgoal is needed next.',
+            'Action: Perform an operation (for example "search the docs for X", "look up Y in this table").',
+            'Observation: Read and interpret the result of the action.',
+            'Thought: Update the plan, repeat, or conclude.',
+          ],
+        },
+        reActPower: {
+          content: [
+            'This is particularly powerful in agent-style setups, where the model can interact with external systems, databases, or APIs while maintaining a coherent line of reasoning.',
+          ],
+        },
+        howTheyDiffer: {
+          title: 'How Tree-of-Thought and ReAct Differ',
+          content: [
+            '**Tree-of-Thought and ReAct both improve reasoning, but they focus on different dimensions: search over ideas vs interaction with tools.**',
+            'Key distinctions:',
+          ],
+          items: [
+            'Tree-of-Thought explores multiple branches of reasoning in parallel or sequence, then selects the best path.',
+            'ReAct alternates between thinking and doing, using external information or tools to inform the next step.',
+            'Tree-of-Thought is like brainstorming and pruning a decision tree in the model\'s head.',
+            'ReAct is like an analyst who thinks, looks something up, rethinks, and repeats.',
+          ],
+        },
+        combination: {
+          content: [
+            'You can even combine them: use Tree-of-Thought to explore different high-level plans, and use ReAct inside each branch when you need data or tools.',
+          ],
+        },
+        example: {
+          title: 'Example: Tree-of-Thought vs ReAct',
+          content: [
+            '**The difference becomes clearer when you see how prompts are structured for the same kind of problem.** Here is a simplified planning example.',
+            '**[Bad Prompt]**',
+            '"Create a launch plan for our new feature."',
+            '**[Tree-of-Thought Prompt]**',
+            '"You are a product marketing strategist. Task: Create a launch plan for our new feature. 1) Generate three distinct high-level launch strategies (for example "quiet launch", "beta cohort", "big announcement"). 2) For each strategy, list pros and cons in bullet points. 3) Choose the best strategy based on reach, risk, and required resources, and explain in 3–5 sentences why it wins. 4) For the chosen strategy, provide a 5-step action plan."',
+            'Here, the model explicitly explores multiple branches and then chooses one.',
+            '**[ReAct-Style Prompt]**',
+            '"You are a product marketing strategist. We will plan a launch using a Reason–Act loop. When you need more information, write a line starting with `Thought:` explaining what you want, then a line starting with `Action:` describing the lookup or analysis you would perform (for example "review past launch metrics", "check competitor launches"). After each `Action:`, write `Observation:` and describe the information you (hypothetically) obtained. Repeat Thought – Action – Observation steps until you have enough information. Then write `Plan:` and provide a concrete 5-step launch plan."',
+            'Here, the model alternates between reasoning and (simulated) actions, updating its plan as it goes.',
+          ],
+        },
+        whenToUse: {
+          title: 'When to Use Tree-of-Thought vs ReAct',
+          content: [
+            '**You should use Tree-of-Thought prompting when your main challenge is exploring and comparing multiple solution ideas, and ReAct when your main challenge is reasoning while interacting with information sources or tools.**',
+            'Good fits:',
+          ],
+        },
+        treeGoodFits: {
+          content: [
+            'Tree-of-Thought:',
+          ],
+          items: [
+            'Strategy design with several plausible directions.',
+            'Complex puzzles or planning problems with branching options.',
+            'Creative ideation where you want to compare different concepts before choosing.',
+          ],
+        },
+        reactGoodFits: {
+          content: [
+            'ReAct:',
+          ],
+          items: [
+            'Tasks that require looking things up in documents, knowledge bases, or APIs.',
+            'Multi-step workflows like research, debugging, or data analysis, where each step depends on what you find.',
+            'Agent-like behaviors where the model needs to decide which tool or data source to use next.',
+          ],
+        },
+        hardestProblems: {
+          content: [
+            'For the hardest problems, you can layer both: use Tree-of-Thought to explore plan variations, and use ReAct within each plan to fetch and integrate real data.',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Tree-of-Thought and ReAct in PromptQuorum',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool where Tree-of-Thought and ReAct-style prompting can be standardized as reusable frameworks and compared across models.** You can design a Tree-of-Thought template that always asks for multiple branches and a ReAct-style template that always alternates Thought–Action–Observation.',
+            'In PromptQuorum, you can:',
+          ],
+          items: [
+            'Run the same Tree-of-Thought prompt across several models (for example GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro) to see how each explores and evaluates branches.',
+            'Use ReAct-style prompts to structure stepwise reasoning with simulated or real tool interactions, then compare how different models handle the Reason–Act loop.',
+            'Save both styles as frameworks so your team can apply Tree-of-Thought and ReAct patterns consistently across projects, instead of reinventing them per prompt.',
+          ],
+        },
+        pqConclusion: {
+          content: [
+            'By turning these techniques into structured, repeatable patterns, PromptQuorum helps you move from ad-hoc experiments to deliberate, testable reasoning workflows.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
 }
