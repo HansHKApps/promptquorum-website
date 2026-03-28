@@ -160,7 +160,11 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
         mainEntity: faqSectionData.faqs!.map((faq) => ({
           '@type': 'Question',
           name: faq.q,
-          acceptedAnswer: { '@type': 'Answer', text: faq.a },
+          acceptedAnswer: {
+            '@type': 'Answer',
+            name: faq.q,
+            text: faq.a,
+          },
         })),
       }
     : null
