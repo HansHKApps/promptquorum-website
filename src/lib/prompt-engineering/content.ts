@@ -10654,4 +10654,108 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'zero-shot-vs-few-shot': {
+    en: {
+      theme: 'Techniques',
+      title: 'Zero-Shot vs. Few-Shot Prompting',
+      intro: 'Zero shot prompting uses no examples in the prompt and relies entirely on the model\'s pre-training, while few shot prompting embeds a handful of examples so the model can imitate a desired pattern.',
+      publishDate: '2026-03-26',
+      readTime: '6 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Zero Shot vs Few Shot Prompting',
+        description: 'A practical comparison of zero shot and few shot prompting, when to use each, and how PromptQuorum helps you choose the right strategy.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['zero shot prompting', 'few shot prompting', 'prompt engineering', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      },
+      sections: {
+        whatIsZeroShot: {
+          title: 'What Zero Shot Prompting Is',
+          content: [
+            '**Zero shot prompting asks the model to solve a task using only a clear instruction and no in-prompt examples.** The model leans on its general knowledge and instruction-following capabilities learned during pre-training and alignment.',
+            'Zero shot is fast to set up because you do not need to design or curate example pairs. It works well for broad tasks such as generic Q&A, simple classification, summarization, or straightforward translation where the instructions alone are usually enough.',
+          ],
+        },
+        whatIsFewShot: {
+          title: 'What Few Shot Prompting Is',
+          content: [
+            '**Few shot prompting adds a small number of input–output examples to the instruction so the model can infer the task pattern from concrete demonstrations.** In practice, few shot usually means between two and ten examples.',
+            'These examples act like a mini training set inside the prompt, guiding how the model should interpret ambiguous tasks, specialized formats, or domain-specific language. Few shot prompting is especially helpful when you need a specific style, schema, or nuanced behavior that generic instructions do not capture.',
+          ],
+        },
+        keyDifferences: {
+          title: 'Key Differences: Zero Shot vs Few Shot',
+          content: [
+            '**Zero shot and few shot prompting differ mainly in setup effort, accuracy on specific tasks, and scalability across many use cases.** Both rely on the same underlying model but trade example design effort for better task alignment.',
+          ],
+          rows: [
+            { 'Dimension': 'Examples in prompt', 'Zero Shot': 'None', 'Few Shot': '2–10+ representative examples' },
+            { 'Dimension': 'Setup speed', 'Zero Shot': 'Very fast; no example curation', 'Few Shot': 'Slower; examples must be selected and maintained' },
+            { 'Dimension': 'Data requirements', 'Zero Shot': 'No labeled examples needed', 'Few Shot': 'Requires at least a few labeled examples' },
+            { 'Dimension': 'Accuracy on narrow tasks', 'Zero Shot': 'Often lower or more generic', 'Few Shot': 'Typically higher and more consistent on specific domains' },
+            { 'Dimension': 'Scalability across tasks', 'Zero Shot': 'Highly scalable, easy to add new tasks', 'Few Shot': 'Less scalable; each task may need its own examples' },
+          ],
+          columns: ['Dimension', 'Zero Shot', 'Few Shot'],
+        },
+        whenToUseZeroShot: {
+          title: 'When to Use Zero Shot',
+          content: [
+            '**You should use zero shot prompting when you need speed, have no labeled examples, and your task is reasonably general.** This pattern works well as a first pass or baseline.',
+            'Typical zero shot scenarios:',
+          ],
+          items: [
+            'General Q&A, simple summaries, and basic sentiment classification.',
+            'Rapid experimentation when you are still discovering the task shape.',
+            'New domains or languages where you lack curated examples.',
+          ],
+        },
+        whenToUseFewShot: {
+          title: 'When to Use Few Shot',
+          content: [
+            '**You should use few shot prompting when the task is specialized, format-sensitive, or high risk, and you can provide good examples.** In these cases, examples significantly improve reliability over pure instructions.',
+            'Common few shot scenarios:',
+          ],
+          items: [
+            'Domain-specific classification or extraction (legal, medical, finance) where precise labels and wording matter.',
+            'Tasks with strict schemas, such as extracting structured JSON from messy text.',
+            'Multilingual or localization tasks where a few examples per language help handle idioms and style.',
+          ],
+        },
+        example: {
+          title: 'Example: Zero Shot vs Few Shot Prompt',
+          content: [
+            '**The practical difference between zero shot and few shot appears clearly when you compare prompts for the same task.** Here we classify support tickets by intent.',
+            '**[Bad Prompt – Unstructured]**',
+            '"Look at this support ticket and tell me what it is about."',
+            '**[Zero Shot Prompt]**',
+            '"Classify the following support ticket into one of these categories: `billing_issue`, `login_problem`, `feature_request`, `bug_report`, or `other`. Ticket: "I tried to reset my password three times today and the link always says it expired." Output only the category name."',
+            '**[Few Shot Prompt]**',
+            '"Classify each support ticket into one of these categories: `billing_issue`, `login_problem`, `feature_request`, `bug_report`, or `other`. Output only the category name. Example 1: Ticket: "You charged me twice this month for the same subscription." Label: `billing_issue` Example 2: Ticket: "Whenever I click \'export report\' nothing happens, even after refreshing the page." Label: `bug_report` Example 3: Ticket: "Could you add support for exporting reports directly to Google Sheets?" Label: `feature_request` Now classify this ticket: "I tried to reset my password three times today and the link always says it expired."',
+            'The few shot version shows the pattern explicitly, which usually improves classification quality for nuanced or noisy tickets.',
+          ],
+        },
+        howPQHelps: {
+          title: 'How PromptQuorum Helps You Choose',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that lets you test zero shot and few shot prompts across multiple providers in one place.** You can send the same instruction-only prompt and the same example-augmented prompt to models such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro side by side.',
+            'Inside PromptQuorum, you can:',
+          ],
+          items: [
+            'Start with zero shot prompts using frameworks like Single Step, RTF, or CO-STAR for quick baselines.',
+            'Upgrade to few shot prompts by embedding representative examples inside frameworks like SPECS or Google\'s Prompting Guide when you need tighter control.',
+            'Save both zero shot and few shot versions as templates, then compare accuracy, latency, and token costs across models over time.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
 }
