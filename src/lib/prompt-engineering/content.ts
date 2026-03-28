@@ -10177,4 +10177,121 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'risen-framework': {
+    en: {
+      theme: 'Frameworks',
+      title: 'The RISEN Framework',
+      intro: 'The RISEN Framework is an iterative prompt structure that focuses on Refine, Inspect, Summarize, Evaluate, and Next steps so you can systematically improve AI outputs instead of rewriting prompts from scratch each time. PromptQuorum includes the RISEN Framework as a built-in option that any user can select and use directly in the app.',
+      publishDate: '2026-03-24',
+      readTime: '8 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'The RISEN Framework',
+        description: 'How the RISEN Framework (Refine, Inspect, Summarize, Evaluate, Next steps) works, when to use it, and how PromptQuorum offers RISEN as a built-in option.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['RISEN Framework', 'Refine Inspect Summarize Evaluate Next steps', 'prompt frameworks', 'prompt engineering', 'iterative prompts', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Prompt Frameworks' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+        ],
+      },
+      sections: {
+        whatIsRISEN: {
+          title: 'What the RISEN Framework Is',
+          content: [
+            '**The RISEN Framework is a loop-oriented prompt pattern designed for refining drafts, analyses, and plans over multiple iterations with clear checkpoints.** Instead of treating each prompt as a one-off, you use RISEN to walk a model like GPT-4o, Claude 4.6 Sonnet, or Gemini 2.5 Pro through a structured improvement cycle. This makes your workflow more like continuous editing than random trial-and-error.',
+            'RISEN is especially useful when you already have a first version—such as a draft article, strategy note, or code snippet—and you want the model to improve it in a controlled, auditable way. Each RISEN step has a distinct purpose, which keeps revisions focused.',
+          ],
+        },
+        fiveComponents: {
+          title: 'The Five RISEN Components',
+          content: [
+            '**A strong RISEN prompt explicitly asks the model to move through five stages: Refine, Inspect, Summarize, Evaluate, and Next steps.** You can use these stages in one longer prompt or in a short series of prompts, depending on how interactive you want the process to be.',
+            'A common interpretation looks like this:',
+          ],
+          items: [
+            'Refine: Improve the existing draft according to your goals (for example clarity, structure, or correctness).',
+            'Inspect: Identify concrete changes made, such as sections rewritten, details added, or issues fixed.',
+            'Summarize: Provide a concise explanation of what the new version now says or does.',
+            'Evaluate: Critique the result against explicit criteria (for example tone, accuracy, or alignment with audience).',
+            'Next steps: Recommend further edits or follow-up actions for the next iteration.',
+          ],
+        },
+        whyRISENIsUseful: {
+          title: 'Why the RISEN Framework Is Useful',
+          content: [
+            '**The RISEN Framework is useful whenever you want to turn "make this better" into a transparent, repeatable workflow instead of a black box.** It encourages the model not only to generate, but also to analyze and critique its own work.',
+            'Practical benefits include:',
+          ],
+          items: [
+            'Clear visibility into what changed between versions.',
+            'Structured self-critique that exposes weaknesses or gaps.',
+            'A built-in roadmap for the next iteration so you are never stuck wondering what to try next.',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Example: Bad vs Good RISEN Prompt',
+          content: [
+            '**The difference between an unstructured revision request and a RISEN-based request becomes clear when you apply both to the same draft.** Below is a simple example for improving a product description.',
+            '**[Bad Prompt]**',
+            '"Make this product description better."',
+            '**[Good Prompt]**',
+            '"You are a product marketing editor. I will give you a draft product description. Use the RISEN process as follows: Refine: Rewrite the description for clarity and conciseness while keeping all factual details. Target 120–160 words. Inspect: List 5–7 specific edits you made (for example \'clarified benefit X\', \'removed repeated sentence Y\'). Summarize: In 2–3 sentences, explain what the updated description now emphasizes. Evaluate: Rate the new description on a 1–5 scale for clarity, persuasiveness, and alignment with B2B audiences, and justify each rating in one sentence. Next steps: Suggest 3 focused edits I could request in a future prompt to further improve this copy. Draft: [paste draft here]"',
+            'The RISEN version turns a vague request into a mini process, producing not just an improved description but also an audit trail and a plan.',
+          ],
+        },
+        whenToUse: {
+          title: 'When to Use the RISEN Framework',
+          content: [
+            '**You should use the RISEN Framework for iterative improvement tasks where you already have material and care about understanding each change.** Typical use cases include:',
+          ],
+          items: [
+            'Refining blog posts, documentation, or help-center articles over several rounds.',
+            'Polishing sales decks, pitch scripts, and executive summaries.',
+            'Reviewing and improving prompts themselves, especially complex ones used in production.',
+            'Iteratively tightening long analyses so they become clearer and more actionable.',
+          ],
+        },
+        howPQImplements: {
+          title: 'How PromptQuorum Implements the RISEN Framework',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that offers the RISEN Framework as one of its built-in prompt structures so users can run structured revision cycles across several models at once.** When you choose the RISEN option in PromptQuorum, the app provides labeled fields that correspond to the framework\'s steps and composes them into a single, reusable instruction.',
+            'Inside PromptQuorum, the RISEN Framework allows you to:',
+          ],
+          items: [
+            'Plug in an existing draft and apply a pre-structured "Refine–Inspect–Summarize–Evaluate–Next steps" pattern without writing the full meta-prompt yourself.',
+            'Send the same RISEN-based instructions to multiple models—such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro—and compare how each one refines and critiques the draft.',
+            'Save RISEN templates for recurring workflows, for example "blog draft refinement" or "changelog polishing," and share them with your team.',
+          ],
+        },
+        usingRISENWithOthers: {
+          title: 'Using RISEN With Other Frameworks',
+          content: [
+            '**You should combine the RISEN Framework with other frameworks by assigning RISEN to the revision phase and using generation-focused frameworks earlier in the workflow.** A practical pattern is:',
+          ],
+          items: [
+            'Start with a generation framework such as Single Step, CRAFT, or CO-STAR to create the first draft.',
+            'Switch to RISEN when you are ready to refine, inspect changes, and plan further edits.',
+            'Optionally move to a specification-style framework like SPECS if the final output must follow a strict schema.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
 }
