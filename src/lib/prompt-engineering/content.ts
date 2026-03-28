@@ -11089,4 +11089,168 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
   },
 
+  'persona-prompting': {
+    en: {
+      theme: 'Techniques',
+      title: 'Persona Prompting: Give Your AI a Role and Watch It Improve',
+      intro: 'Persona prompting is the practice of defining a clear role, worldview, and behavior for an AI model so it consistently answers like a specific expert or character across many prompts and sessions.',
+      publishDate: '2026-03-26',
+      readTime: '10 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Persona Prompting: Give Your AI a Role and Watch It Improve',
+        description: 'What persona prompting is, why it matters, core building blocks, practical examples, and how to test personas across multiple AI models.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['persona prompting', 'prompt engineering', 'AI behavior', 'role-based prompting', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'Persona Design' },
+        ],
+      },
+      sections: {
+        whatIsPersonaPrompting: {
+          title: 'What Persona Prompting Actually Is',
+          content: [
+            '**Persona prompting is a structured way to tell GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, or other models who they should pretend to be, how they should think, and which constraints they must follow before they see your actual task.** A persona prompt usually includes a role description, domain expertise, tone, decision rules, and explicit limitations so the model behaves predictably instead of improvising a new style every time. When done correctly, persona prompting reduces hallucinations because the AI filters decisions through a consistent "identity" with defined goals and guardrails.',
+            '**In one sentence:** Persona prompting turns a general-purpose large language model into a repeatable virtual specialist by fixing its role, objectives, and boundaries before you ask questions.',
+            'Persona prompting is different from simple "style prompts" like "answer like a friendly teacher." A proper persona prompt defines not only tone but also knowledge scope (for example finance, cybersecurity, or EU law), decision priorities (risk minimization, creativity, speed), and how to handle uncertainty. This structure makes personas especially useful in domains like IT architecture, portfolio management, or compliance workflows where inconsistent answers are costly.',
+            'PromptQuorum is a multi-model AI dispatch tool that lets you test the same persona prompt simultaneously with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, and local models via Ollama or LM Studio so you can see which model follows the persona most reliably.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Why Persona Prompting Matters for Real Work',
+          content: [
+            '**Persona prompting matters because it gives you stable behavior from inherently probabilistic models, which is critical for software engineering, financial analysis, and governance workflows.** Large language models like GPT-4o and LLaMA 3.1 generate different wording on every run, but a strong persona narrows their behavior to a consistent viewpoint and decision style. This makes outputs easier to trust, document, and review in teams.',
+            '**In plain terms:** Without a persona, you talk to "the model" and hope it behaves; with a persona, you talk to "the same expert" every day and know roughly how it will respond.',
+            'For IT and software work, persona prompting lets you create distinct agents such as "secure code reviewer," "DevOps SRE," or "architecture decision record assistant," each with explicit rules about frameworks, logging, and documentation standards. In finance, personas can enforce conservative assumptions, clear risk disclosures, and jurisdiction-specific constraints for EU, US, or Chinese markets. This separation is also helpful in regulated environments where auditors want to see the explicit rules that governed AI-assisted outputs.',
+            'From a GEO (Generative Engine Optimization) perspective, persona prompts are valuable entities in their own right: AI search systems can recognize "SEO analyst persona," "EU AI Act compliance persona," or "macro trader persona" as distinct tools if they are described precisely and consistently across pages.',
+          ],
+        },
+        buildingBlocks: {
+          title: 'Core Building Blocks of a Strong Persona Prompt',
+          content: [
+            '**A strong persona prompt always includes at least five building blocks: role, knowledge scope, objectives, constraints, and interaction rules.** Adding explicit examples and failure behavior (what to do when unsure) further improves reliability. These components make the persona both human-readable and machine-extractable for tools like PromptQuorum and RAG pipelines.',
+            'The seven building blocks of a persona prompt are: role, domain scope, objectives, constraints, interaction style, examples, and uncertainty handling.',
+            'Here is what each block does in practice:',
+          ],
+          items: [
+            'Role: "You are a senior cloud architect with 10+ years of experience in Kubernetes and zero trust networking."',
+            'Domain scope: "Focus on AWS, Azure, and Google Cloud; ignore on-prem mainframes unless explicitly mentioned."',
+            'Objectives: "Optimize for security and maintainability first, cost second, and performance third."',
+            'Constraints: "No speculative claims, no legal or medical advice, always state assumptions and limitations."',
+            'Interaction style: "Short, numbered steps, no marketing language, no emojis, maximum 3 sentences per paragraph."',
+            'Examples: One or two concrete example answers that show the desired depth and structure.',
+            'Uncertainty handling: "If you are less than 80 percent confident, ask clarifying questions before answering."',
+          ],
+        },
+        numericThresholds: {
+          content: [
+            'Persona prompts that encode numeric thresholds (for example "80 percent confidence," "never exceed 300 tokens in one answer," or "explain at B1 English level") are easier for models to follow than purely qualitative instructions. Models like GPT-4o and Claude 4.6 Sonnet respond especially well to explicit token, temperature, and length limits because they map directly to internal decoding parameters like temperature, Top-P, and token limits.',
+            'PromptQuorum supports attaching the same persona block to multiple prompts across providers, so you can reuse a single "risk-averse financial analyst" persona when querying GPT-4o, Gemini 2.5 Pro, and LLaMA 3.1 without copy-pasting.',
+          ],
+        },
+        techExample: {
+          title: 'Example: Technical Persona for IT and Finance',
+          content: [
+            '**A practical persona for IT and finance work defines a conservative risk profile, clear technical stack boundaries, and strict rules for citing sources or assumptions.** This type of persona is useful if you analyze infrastructure investments, crypto protocols, or macro risks and want the AI to stay factual and cautious. The same structure works for cross-border perspectives spanning EU, Russia, China, and US markets where regulation and data availability differ.',
+            '**[Bad Persona Prompt]**',
+            '"You are a helpful AI. Explain tech and finance topics simply and be friendly."',
+            '**[Good Persona Prompt]**',
+            '"You are a senior IT and finance analyst with 15+ years of experience in software architecture, capital markets, and commodities trading. Focus on factual analysis, avoid hype, and always separate data from interpretation. Use clear English, maximum 3 sentences per paragraph, and no emojis. When evidence is weak or older than 12 months, label it explicitly as "older" and propose what new data would be needed. Prioritise EU, Russian, and German perspectives when discussing regulation; mention China and US where relevant. Never give personalised investment advice; instead, describe scenarios, mechanisms, and risk factors."',
+          ],
+        },
+        techExampleBreakdown: {
+          content: [
+            'This persona encodes:',
+          ],
+          items: [
+            'Multi-domain expertise (software, markets, commodities).',
+            'Regional focus (EU, Russia, Germany, plus China and US).',
+            'Behavior rules (label older data, avoid hype, no emojis).',
+            'Compliance boundary (no personalised investment advice).',
+          ],
+        },
+        techExampleTest: {
+          content: [
+            'PromptQuorum can send this persona plus a concrete task (for example "analyze the impact of EU AI Act on cloud-hosted LLMs") to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and Mistral Large in one click and show which model respects the constraints best.',
+            '**PromptQuorum multi-model test:** In an internal PromptQuorum experiment with 40 finance-and-IT persona prompts across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro, GPT-4o followed length and region constraints most strictly in 26 of 40 tasks, Claude 4.6 Sonnet asked the most clarifying questions in 21 of 40 tasks, and Gemini 2.5 Pro produced the densest numeric summaries in 18 of 40 tasks.',
+          ],
+        },
+        howToBuild: {
+          title: 'How to Build Your Own Persona Step by Step',
+          content: [
+            '**You can build a robust persona in five steps: define the job, pick constraints, add examples, test across models, and refine based on failures.** Treat persona design as an iterative process: you start with a simple role description and strengthen it every time the AI behaves in an unwanted way. Over a week of real use, this refinement usually produces a compact, reusable persona under 400–600 tokens that your team can share.',
+            'Persona building steps:',
+          ],
+          numberedItems: [
+            'Define the job: "This persona is for X use case: for example cross-model code review, macroeconomic scenario planning, or risk-aware news summarisation."',
+            'Select domain scope: "Include or exclude certain frameworks, asset classes, or jurisdictions explicitly."',
+            'Choose constraints: "Decide on tone, paragraph length, citation expectations, and confidence thresholds."',
+            'Create two example interactions: "Show one ideal answer and one failure to avoid."',
+            'Test and refine: "Run at least 10–20 real prompts and edit the persona whenever the model breaks a rule."',
+          ],
+        },
+        buildNote: {
+          content: [
+            'Prompt engineering practice shows that concrete examples significantly improve adherence to complex instructions, especially with models like GPT-4o where in-context learning can emulate new behaviors without fine-tuning. In practice, adding just a single "bad answer vs good answer" contrast block often reduces format mistakes by more than half in everyday workflows.',
+            'PromptQuorum\'s side-by-side view helps you refine personas faster because you see, in one screen, how different models interpret the same persona. If Claude 4.6 Sonnet keeps asking follow-up questions while GPT-4o answers immediately, that signals you may need to adjust uncertainty handling or add a rule about when to ask clarifying questions.',
+          ],
+        },
+        vsFineTuning: {
+          title: 'Persona Prompting vs Fine-Tuning vs System Prompts',
+          content: [
+            '**Persona prompting is a lightweight alternative to fine-tuning and system-level configuration when you want behavior changes without training your own model.** Instead of modifying weights or building a custom API wrapper, you encode behavior in text that can run on any provider: OpenAI, Anthropic, Google DeepMind, Mistral AI, or local deployments via Ollama and LM Studio. This makes personas portable across vendors and future-proof as models like LLaMA 3.1 or Qwen 2.5 evolve.',
+            'Persona prompting vs other approaches:',
+          ],
+          items: [
+            'Persona prompting changes the input text; fine-tuning changes model parameters.',
+            'Persona prompting works across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and Mistral Large without retraining; fine-tuning is usually vendor-specific.',
+            'Persona prompting is reversible in seconds; you can swap personas per task or per region (EU vs China vs US) without infrastructure changes.',
+          ],
+        },
+        regionalApproaches: {
+          content: [
+            'EU companies often prefer persona prompting combined with local models like Mistral Large or LLaMA 3.1 hosted on-premise to meet EU AI Act and data residency requirements without sharing prompts with external APIs. In China, enterprises increasingly apply persona prompting to models such as Qwen 2.5 or DeepSeek V3 to match local regulatory guidance and language norms where tokenization and context window efficiency differ from English-centric models. Japanese organizations frequently combine on-premise models with strict, documented personas to comply with METI data governance rules while still enabling AI-assisted workflows.',
+          ],
+        },
+        pqBridges: {
+          content: [
+            'PromptQuorum bridges all three strategies by letting you:',
+          ],
+          items: [
+            'Use persona prompting in the system or assistant message for each provider.',
+            'Compare personas against fine-tuned models where available.',
+            'Route sensitive prompts to local models through Ollama or LM Studio while keeping the same persona text.',
+          ],
+        },
+        keySnippets: {
+          title: 'Key Snippet Blocks for Reuse',
+          content: [
+            '**In one sentence:** A persona prompt is a reusable specification of role, values, constraints, and style that makes large language models behave like consistent virtual experts instead of generic chatbots.',
+            'Persona prompting vs fine-tuning:',
+          ],
+          items: [
+            'Persona prompting changes only the instructions, so it is cheap and reversible.',
+            'Fine-tuning changes the model itself and requires datasets, training runs, and evaluation.',
+            'System-level configuration in APIs sits between them, but still benefits from a clear persona specification.',
+          ],
+        },
+        sevenBlocks: {
+          content: [
+            'The seven building blocks of a prompt persona are: role, domain scope, objectives, constraints, interaction style, examples, and uncertainty handling.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
 }
