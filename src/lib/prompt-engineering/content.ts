@@ -10964,4 +10964,129 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
   },
 
+  'prompt-chaining': {
+    en: {
+      theme: 'Techniques',
+      title: 'Prompt Chaining: How to Break Big Tasks Into Winning Steps',
+      intro: 'Prompt chaining is a technique where you break a complex task into multiple smaller prompts and feed the output of one step into the next. This lets you build reliable multi-step workflows instead of relying on a single, overly complicated prompt.',
+      publishDate: '2026-03-26',
+      readTime: '8 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Prompt Chaining: How to Break Big Tasks Into Winning Steps',
+        description: 'What prompt chaining is, why it matters, and how to design multi-step AI workflows that are easier to control and reuse.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['prompt chaining', 'prompt engineering', 'AI workflows', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'AI Workflows' },
+        ],
+      },
+      sections: {
+        whatIsPromptChaining: {
+          title: 'What Prompt Chaining Is',
+          content: [
+            '**Prompt chaining means connecting several prompts so that each one performs a focused subtask and passes its result forward.** Instead of asking the model to "do everything at once," you create a sequence such as "analyze → structure → generate → review."',
+            'Each step has a clear input, a clear output format, and a narrow responsibility. The chain as a whole behaves more like a pipeline or workflow than a chat, which makes it easier to debug, maintain, and reuse.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Why Prompt Chaining Matters',
+          content: [
+            '**Prompt chaining matters because most real-world tasks are too complex or brittle for a single prompt to handle well.** When you separate understanding, planning, generation, and checking into distinct steps, you reduce errors and gain control.',
+            'Benefits include:',
+          ],
+          items: [
+            'Better accuracy, because each step is optimized for a specific function.',
+            'Easier troubleshooting, since you can see exactly where a chain breaks.',
+            'More reuse, as individual steps (like "summarize input" or "extract entities") can be shared across different workflows.',
+          ],
+        },
+        additionalBenefit: {
+          content: [
+            'For teams, prompt chains become building blocks in larger AI systems rather than one-off conversations.',
+          ],
+        },
+        typicalPatterns: {
+          title: 'Typical Prompt Chain Patterns',
+          content: [
+            '**Most prompt chains use a few recurring patterns that you can adapt to your own workflows.** The exact structure depends on your goal, but the logic stays similar.',
+            'Common patterns include:',
+          ],
+          items: [
+            'Analyze → Plan → Draft → Refine: For writing articles, reports, or strategies.',
+            'Extract → Transform → Summarize: For processing raw documents, logs, or tickets.',
+            'Classify → Route → Generate: For triaging inputs and sending them to specialized prompts.',
+            'Generate → Critique → Improve: For iterative refinement of copy, code, or designs.',
+          ],
+        },
+        chainImplementation: {
+          content: [
+            'You can implement these chains synchronously (step by step in a single session) or as separate jobs orchestrated by your application.',
+          ],
+        },
+        example: {
+          title: 'Example: Single Prompt vs Prompt Chain',
+          content: [
+            '**The value of prompt chaining is easiest to see when you compare a single complex prompt with a short chain tackling the same job.** Here is an example for producing a customer-facing changelog.',
+            '**[Bad Prompt]**',
+            '"Read these release notes and write a friendly changelog for our users."',
+            '**[Good Prompt Chain]**',
+            '**Step 1 – Extract changes**',
+            '"You are a release engineer. Extract all user-visible changes from the raw release notes and list them as bullet points grouped by feature area."',
+            '**Step 2 – Classify impact**',
+            '"You are a product manager. For each bullet point, label it as `bug fix`, `improvement`, or `new feature`, and add a short internal note on why it matters."',
+            '**Step 3 – Generate changelog**',
+            '"You are a customer success writer. Using the labeled list, write a user-facing changelog email with a short intro paragraph and 3–6 bullets. Focus on benefits, not internal details."',
+            'By chaining these steps, you make each prompt simpler, more testable, and more reusable.',
+          ],
+        },
+        whenToUse: {
+          title: 'When to Use Prompt Chaining',
+          content: [
+            '**You should use prompt chaining whenever a task naturally decomposes into stages that can fail or change independently.** If you find yourself writing a very long, fragile prompt with many "if" conditions, it is usually a sign you need a chain.',
+            'Typical use cases:',
+          ],
+          items: [
+            'Content production pipelines (research → outline → draft → edit).',
+            'Data pipelines (ingest → clean → extract → enrich → summarize).',
+            'Decision support (gather facts → generate options → evaluate trade-offs → recommend).',
+            'Product workflows like onboarding, support automation, and document generation.',
+          ],
+        },
+        whenSinglePrompt: {
+          content: [
+            'For small, one-off tasks, a single prompt is usually enough. For anything you expect to run repeatedly or at scale, chaining delivers more control.',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Prompt Chaining in PromptQuorum',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that fits naturally with prompt chaining because you can standardize each step and run it across multiple models.** Instead of one monolithic prompt, you define a series of framework-backed prompts and connect them in your workflow.',
+            'With PromptQuorum, you can:',
+          ],
+          items: [
+            'Use different frameworks at different stages—for example, SPECS for structured extraction, TRACE for reasoning, and CRAFT for final copy.',
+            'Run key steps in parallel across models (such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro) to compare how each handles extraction, planning, or generation.',
+            'Save each step as a template so that chains are easy to rebuild, modify, or share with your team.',
+          ],
+        },
+        pqClosing: {
+          content: [
+            'By treating prompt chaining as a first-class pattern, PromptQuorum helps you turn complex, multi-step tasks into consistent, maintainable AI workflows.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
 }
