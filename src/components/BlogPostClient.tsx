@@ -7,6 +7,19 @@ import { blogMetadata } from '@/lib/blog/blogTranslations'
 import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
+// Helper to convert "Published Month DD, YYYY" to ISO date format "YYYY-MM-DD"
+function getDateISO(dateStr: string): string {
+  const match = dateStr.match(/(\w+)\s+(\d{1,2}),?\s+(\d{4})/)
+  if (!match) return new Date().toISOString().split('T')[0]
+  const monthMap: Record<string, string> = {
+    January: '01', February: '02', March: '03', April: '04', May: '05', June: '06',
+    July: '07', August: '08', September: '09', October: '10', November: '11', December: '12'
+  }
+  const [, month, day, year] = match
+  const monthNum = monthMap[month] || '01'
+  return `${year}-${monthNum}-${day.padStart(2, '0')}`
+}
+
 interface BlogPostClientProps {
   post: BlogPost
   slug: string
@@ -45,7 +58,9 @@ function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
             </h1>
             <p className="text-lg text-text-secondary mb-4">{metadata?.intro || post.intro}</p>
             <div className="flex items-center gap-4 text-sm text-text-secondary">
-              <span>{metadata?.publishDate || post.publishDate}</span>
+              <time dateTime={getDateISO(metadata?.publishDate || post.publishDate)}>
+                {metadata?.publishDate || post.publishDate}
+              </time>
               <span>•</span>
               <span>{metadata?.readTime || post.readTime}</span>
               <span>•</span>
