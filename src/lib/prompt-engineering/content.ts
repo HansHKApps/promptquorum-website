@@ -11253,4 +11253,124 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
   },
 
+  'negative-prompting': {
+    en: {
+      theme: 'Techniques',
+      title: 'Negative Prompting: Tell the AI What NOT to Do',
+      intro: 'Negative prompting is a technique where you tell the model what it must avoid—content, style, structure, or behaviors—so outputs stay inside clear boundaries. It acts as a "guardrail layer" on top of your normal instructions.',
+      publishDate: '2026-03-26',
+      readTime: '6 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Negative Prompting: Tell the AI What NOT to Do',
+        description: 'What negative prompting is, why it matters, and how to use explicit "do not" rules to keep AI outputs inside safe, on-brand boundaries.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['negative prompting', 'prompt engineering', 'guardrails', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'Guardrails' },
+        ],
+      },
+      sections: {
+        whatIsNegativePrompting: {
+          title: 'What Negative Prompting Is',
+          content: [
+            '**Negative prompting means adding explicit "do not" rules to your prompts alongside what you want the model to do.** Instead of only describing the target output, you also specify unwanted topics, tones, formats, or mistakes.',
+            'These negative instructions can cover banned phrases, prohibited content categories, off-limits opinions, or simply styles you do not want (for example "no jokes," "no emojis," or "avoid hype words"). The clearer the "do not" rules, the easier it is for the model to stay aligned.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Why Negative Prompting Matters',
+          content: [
+            '**Negative prompting matters because real-world outputs are constrained not just by goals, but by limits—brand, legal, safety, and quality constraints.** A good result is often "correct and within boundaries," not just "useful."',
+            'Negative instructions help you:',
+          ],
+          items: [
+            'Prevent specific failure modes you have already seen, such as overselling, speculation, or unwanted disclaimers.',
+            'Enforce brand and tone rules directly in the prompt, like avoiding jargon or banned adjectives.',
+            'Reduce manual editing, since many common corrections can be preempted by clear "do not" guidance.',
+          ],
+        },
+        useNote: {
+          content: [
+            'Used well, negative prompting turns prior mistakes into reusable guardrails.',
+          ],
+        },
+        whatYouCanConstrain: {
+          title: 'What You Can Constrain With Negative Prompts',
+          content: [
+            '**You can apply negative prompting to content, style, structure, and behavior.** The goal is to be specific enough that the model knows exactly what to avoid.',
+            'Common negative constraints:',
+          ],
+          items: [
+            'Content: "Do not include medical advice," "do not mention competitors," "do not provide legal conclusions."',
+            'Style: "Do not use hype words like "revolutionary" or "game-changing"," "no emojis," "avoid sarcasm."',
+            'Structure: "Do not add an introduction section," "do not use numbered lists," "do not include a conclusion."',
+            'Behavior: "Do not fabricate statistics," "if you are unsure, say you are unsure instead of guessing."',
+          ],
+        },
+        combiningNote: {
+          content: [
+            'Combining positive and negative instructions gives you a much tighter prompt specification.',
+          ],
+        },
+        example: {
+          title: 'Example: Without vs With Negative Prompting',
+          content: [
+            '**The effect of negative prompting becomes clear when you compare a generic prompt with one that encodes explicit "do not" rules.** Here is a product description example.',
+            '**[Bad Prompt]**',
+            '"Write a product description for our new analytics dashboard."',
+            '**[Good Prompt]**',
+            '"You are a B2B product marketer. Task: Write a product description for our new analytics dashboard targeted at operations managers. Constraints (negative prompting): Do not use hype words such as "revolutionary", "disruptive", or "game-changing". Do not mention competitors or compare us to other tools. Do not promise future features; describe only what exists today. Do not exceed 180 words. Output format: 1 short paragraph for the overview, followed by 3 bullet points for key benefits."',
+            'The "good" version encodes known pitfalls (hype, speculation, comparisons) directly into the instructions, reducing the need for manual clean-up.',
+          ],
+        },
+        whenToUse: {
+          title: 'When to Use Negative Prompting',
+          content: [
+            '**You should use negative prompting whenever you have clear examples of what you never want to see again.** It is especially helpful in repeatable workflows where the same mistakes keep reappearing.',
+            'Typical use cases:',
+          ],
+          items: [
+            'Customer communication where tone, claims, and promises must stay within strict guidelines.',
+            'Regulated contexts (finance, health, legal) where certain kinds of advice or wording must be avoided.',
+            'Internal documentation or reports that must not include confidential details, personal data, or speculation.',
+            'Public-facing content where you want to avoid sensitive topics, political opinions, or controversial language.',
+          ],
+        },
+        productionNote: {
+          content: [
+            'For quick, low-risk experiments, you can keep negative prompting light. As prompts mature into production workflows, your list of "do not" rules usually grows.',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Negative Prompting in PromptQuorum',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool where negative prompting can be baked into reusable frameworks instead of retyped each time.** You can define standard negative constraints once and attach them to many tasks.',
+            'In PromptQuorum, you can:',
+          ],
+          items: [
+            'Add negative prompting blocks (for example "banned phrases," "forbidden content," "style restrictions") to frameworks like SPECS, RTF, or CRAFT so they are always applied.',
+            'Maintain shared lists of "do not" rules for your brand or team, ensuring consistent guardrails across all prompts and models.',
+            'Run the same negatively constrained prompt across different models to see which provider adheres best to your boundaries.',
+          ],
+        },
+        pqConversion: {
+          content: [
+            'By treating negative prompting as part of your prompt architecture, PromptQuorum helps you convert past mistakes into durable, reusable constraints.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
 }
