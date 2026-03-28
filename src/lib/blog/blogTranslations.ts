@@ -76,5 +76,12 @@ export const blogMetadata = {
     fr: { category: 'Recherche', title: '', intro: '', publishDate: 'Publié mars 2026', readTime: '15 min de lecture' },
     ja: { category: '研究', title: '', intro: '', publishDate: '2026年3月公開', readTime: '15分の読み物' },
     zh: { category: '研究', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '15分钟阅读' }
+  },
+  frontierModelsPromptLibrary: {
+    en: { category: 'AI Model Comparison', title: 'Frontier AI Models and Prompt Library: GPT-5.x, Claude 4.6, Gemini 3 Pro, and Beyond', intro: 'Frontier AI models represent the cutting edge of large language model development. This guide compares GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 across reasoning, cost, speed, and real-world task performance — with 170+ evaluation prompts for your own testing.', publishDate: 'Published March 24, 2026', readTime: '15 min read' },
+    de: { category: 'KI-Modellvergleich', title: '', intro: '', publishDate: 'Veröffentlicht März 2026', readTime: '15 Min. Lesezeit' },
+    fr: { category: 'Comparaison de modèles IA', title: '', intro: '', publishDate: 'Publié mars 2026', readTime: '15 min de lecture' },
+    ja: { category: 'AIモデル比較', title: '', intro: '', publishDate: '2026年3月公開', readTime: '15分の読み物' },
+    zh: { category: 'AI模型比较', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '15分钟阅读' }
   }
 }

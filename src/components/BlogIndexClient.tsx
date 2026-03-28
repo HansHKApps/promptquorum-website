@@ -10,6 +10,7 @@ const blogPosts = [
   { key: 'frameworks' as const, slug: 'prompt-frameworks' },
   { key: 'localAI' as const, slug: 'local-ai-vs-cloud' },
   { key: 'comparison' as const, slug: 'ai-model-comparison' },
+  { key: 'frontierModelsPromptLibrary' as const, slug: 'frontier-models-prompt-library' },
   { key: 'quorum' as const, slug: 'quorum' },
   { key: 'optimization' as const, slug: 'prompt-optimization' },
   { key: 'dataPrivacy' as const, slug: 'enterprise-data-privacy' },
