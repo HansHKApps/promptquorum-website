@@ -9789,4 +9789,130 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'craft-framework': {
+    en: {
+      theme: 'Frameworks',
+      title: 'The CRAFT Framework',
+      intro: 'The CRAFT Framework is a prompt structure designed to produce targeted, audience-aware content by focusing on Context, Role, Audience, Format, and Tone in a single, well-formed instruction. In PromptQuorum, the CRAFT Framework is available as a built-in option that any user can select and apply across all supported models.',
+      publishDate: '2026-03-24',
+      readTime: '7 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'The CRAFT Framework',
+        description: 'How the CRAFT Framework for Context, Role, Audience, Format, and Tone works, when to use it, and how PromptQuorum offers CRAFT as a built-in option.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['CRAFT Framework', 'prompt frameworks', 'prompt engineering', 'creative prompts', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Prompt Frameworks' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+        ],
+      },
+      sections: {
+        whatIsCRAFT: {
+          title: 'What the CRAFT Framework Is',
+          content: [
+            '**The CRAFT Framework is a prompt template for creative and marketing tasks that makes large language models specify who they are writing as, who they are writing for, and how the output should look.** Instead of sending a vague request like "write a post about our product," you define each CRAFT element so models such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro can produce consistent, reusable copy.',
+            'The acronym typically expands as:',
+          ],
+          items: [
+            'Context: Background information about the product, situation, or campaign.',
+            'Role: The voice or professional perspective the model should adopt.',
+            'Audience: The target reader and their needs or pain points.',
+            'Format: The concrete output structure, such as "LinkedIn post" or "landing page hero section."',
+            'Tone: The style of writing, from formal to conversational, plus any style constraints.',
+          ],
+        },
+        whyCRAFTWorks: {
+          title: 'Why the CRAFT Framework Works for Creative Tasks',
+          content: [
+            '**The CRAFT Framework works well for creative and marketing prompts because it encodes the same fields that human copywriters use in real briefs.** When models see explicit context, audience, and tone, they spend less effort guessing and more effort tailoring language to your goals.',
+            'This structure is especially helpful when you:',
+          ],
+          items: [
+            'Need to maintain a consistent brand voice across many pieces of content.',
+            'Want to compare how different models handle the same creative brief.',
+            'Work in a team where prompts must be understandable and editable by non-technical colleagues.',
+          ],
+        },
+        fiveComponents: {
+          title: 'The Five CRAFT Components in Detail',
+          content: [
+            '**A strong CRAFT prompt includes clear instructions for each of the five components so that nothing important is left implicit.** You can phrase them as labeled lines or as a compact paragraph; the key is that each part is present.',
+            'Typical component descriptions:',
+          ],
+          items: [
+            'Context: What is being promoted, what it does, and any key facts the model must respect.',
+            'Role: For example "You are a B2B SaaS copywriter" or "You are a senior growth marketer."',
+            'Audience: Who will read this, such as "technical founders at seed-stage startups" or "HR managers in large enterprises."',
+            'Format: The final artifact, like "Twitter thread with 5 tweets," "email follow-up," or "product announcement blog intro."',
+            'Tone: Style constraints, such as "professional but approachable," "no hype words," or "plain language with short sentences."',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Example: Bad vs Good CRAFT Prompt',
+          content: [
+            '**The difference between an unstructured creative prompt and a CRAFT-based prompt is easiest to see on the same task.** Below is a simple example for a LinkedIn post about a new feature.',
+            '**[Bad Prompt]**',
+            '"Write a LinkedIn post about our new AI feature."',
+            '**[Good Prompt]**',
+            '"Context: We are launching a new AI feature that automatically summarizes weekly customer support tickets into a one-page report for managers. It integrates with existing helpdesk tools and reduces manual reporting time. Role: You are a B2B SaaS copywriter. Audience: Busy customer support leaders in mid-size companies who struggle to keep an overview of recurring issues. Format: LinkedIn post with 3 short paragraphs and 3 bullet points. Maximum 180 words. Tone: Professional but conversational. Avoid hype words like \'revolutionary\' or \'game-changing\'. End with a clear call to action to book a demo."',
+            'The CRAFT version behaves like a mini creative brief: any model receiving it can produce on-brand copy with less trial and error.',
+          ],
+        },
+        whenToUse: {
+          title: 'When to Use the CRAFT Framework',
+          content: [
+            '**You should use the CRAFT Framework whenever you are creating content where audience, format, and voice matter as much as the factual content.** This includes most marketing, sales, and communication workflows.',
+            'Typical use cases:',
+          ],
+          items: [
+            'Social media posts for platforms like LinkedIn, X, or company blogs.',
+            'Email campaigns, onboarding sequences, and product announcements.',
+            'Landing page copy, feature descriptions, and app store listings.',
+            'Video scripts or webinar invitations where tone and pacing are important.',
+          ],
+        },
+        howPQImplements: {
+          title: 'How PromptQuorum Implements the CRAFT Framework',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that includes the CRAFT Framework as one of its built-in prompt structures so users can generate creative content consistently across many models.** When you choose the CRAFT option in PromptQuorum, the app exposes dedicated fields for each component and assembles them into a single, well-formed prompt.',
+            'Within PromptQuorum, the CRAFT Framework lets you:',
+          ],
+          items: [
+            'Fill in Context, Role, Audience, Format, and Tone through structured inputs instead of remembering the pattern manually.',
+            'Apply the same CRAFT-based prompt to multiple models in parallel, comparing how GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models respond to the same creative brief.',
+            'Save and reuse CRAFT templates for recurring workflows such as "feature launch LinkedIn post," "customer success case study," or "sales outreach email."',
+          ],
+        },
+        usingCRAFTWithOthers: {
+          title: 'Using CRAFT Alongside Other Frameworks',
+          content: [
+            '**You should combine the CRAFT Framework with other frameworks in your toolkit by aligning each one with the type of task it serves best.** CRAFT is not a universal solution; it is optimized for content where audience and tone are central.',
+            'A practical pattern is:',
+          ],
+          items: [
+            'Use CRAFT for creative outputs: posts, emails, scripts, landing pages.',
+            'Use a Single Step or specification-style framework for structured reports, checklists, or JSON outputs.',
+            'Use reasoning-oriented frameworks, such as an Analyze–Plan–Execute structure, for complex analysis and planning.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
 }
