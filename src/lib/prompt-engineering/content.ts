@@ -11999,6 +11999,31 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             { 'Term': 'Prompt Versioning & Rollback', 'What it means': 'Treating prompts as software artifacts with semantic versioning, changelogs, A/B testing hooks, and automated rollback when regressions are detected in evals or production metrics.', 'Sources & references': '[KeepMyPrompts – Prompt management](https://www.keepmyprompts.com/blog/en/prompt-engineering-guide-2026), [Lakera – Prompt lifecycle](https://www.lakera.ai/blog/prompt-engineering-guide), [Braintrust – Tools](https://www.braintrust.dev/articles/best-prompt-engineering-tools-2026)' },
           ],
         },
+        faq: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What is prompt engineering in simple terms?',
+              a: 'Prompt engineering is the discipline of designing and iterating prompts so language models produce useful, predictable, and safe outputs. It involves structuring instructions, adding context, and choosing techniques like few-shot or chain-of-thought to improve reliability and quality.',
+            },
+            {
+              q: 'What is the difference between zero-shot and few-shot prompting?',
+              a: 'Zero-shot prompting asks the model to perform a task using only instructions, without any examples—best for common tasks where the model\'s prior training already covers the pattern. Few-shot prompting includes a small number of input-output examples in the prompt so the model can infer the desired pattern, format, or style before handling the real query. Few-shot typically produces higher quality on complex or uncommon tasks.',
+            },
+            {
+              q: 'What does RAG stand for in AI?',
+              a: 'RAG stands for Retrieval-Augmented Generation. It\'s an architecture where relevant documents are retrieved from a knowledge base and injected into the prompt so the model answers based on current, grounded data rather than relying on training data alone. This reduces hallucinations and ensures answers are based on real, up-to-date information.',
+            },
+            {
+              q: 'What is the difference between prompt engineering and fine-tuning?',
+              a: 'Prompt engineering is the discipline of designing and iterating prompts to steer model outputs without changing the model itself. Fine-tuning, by contrast, modifies the model\'s weights by training it on task-specific data. Prompt engineering is faster, cheaper, and easier to iterate on, while fine-tuning can achieve better results on specialized tasks but requires more data and computational resources.',
+            },
+            {
+              q: 'What is a context window in AI?',
+              a: 'A context window is the maximum number of tokens the model can consider at once, including system prompt, conversation history, and retrieved documents. When context limits are exceeded, older or middle parts of the context are truncated or ignored. Understanding context window size is crucial for managing costs and latencies, as longer contexts are more expensive and slower to process.',
+            },
+          ],
+        },
       },
     },
     de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-28', readTime: '', sections: {} },
