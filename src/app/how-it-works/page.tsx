@@ -50,6 +50,43 @@ export default function HowItWorksPage() {
             },
             {
               '@context': 'https://schema.org',
+              '@type': 'HowTo',
+              'name': 'How to Use PromptQuorum: 4-Stage Workflow',
+              'description': 'A complete guide to the PromptQuorum 4-stage workflow for multi-model AI dispatch and consensus analysis.',
+              'image': 'https://www.promptquorum.com/og-image.png',
+              'step': [
+                {
+                  '@type': 'HowToStep',
+                  'position': 1,
+                  'name': 'Write Your Structured Prompt',
+                  'text': 'Start with a structured prompt using one of PromptQuorum\'s 9 built-in frameworks (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google Prompt, RTF, or Single Prompt Line). Include role, objective, context, constraints, and output format.',
+                  'image': 'https://www.promptquorum.com/og-image.png',
+                },
+                {
+                  '@type': 'HowToStep',
+                  'position': 2,
+                  'name': 'Optimize With Your Own LLM',
+                  'text': 'Optionally improve your prompt by sending it to your connected LLM for optimization. PromptQuorum can refine the prompt structure, wording, and constraints before dispatch.',
+                  'image': 'https://www.promptquorum.com/og-image.png',
+                },
+                {
+                  '@type': 'HowToStep',
+                  'position': 3,
+                  'name': 'Dispatch to 25+ AI Models',
+                  'text': 'Send your prompt simultaneously to 25+ AI models including OpenAI GPT-4o, Anthropic Claude, Google Gemini, xAI Grok, DeepSeek, Mistral, Cohere, and more. PromptQuorum opens all destinations in parallel browser tabs in a single click.',
+                  'image': 'https://www.promptquorum.com/og-image.png',
+                },
+                {
+                  '@type': 'HowToStep',
+                  'position': 4,
+                  'name': 'Run Quorum Analysis on Results',
+                  'text': 'Use PromptQuorum\'s 13 analysis types to compare and synthesize results: Hallucination Detection, Contradiction Detection, Best Answer Selection, Consensus Summary, Weighted Merge, Cost Analysis, Speed Analysis, Quality Score, Confidence Level, Minority Report, Model Reliability, Semantic Similarity, and Custom Analysis.',
+                  'image': 'https://www.promptquorum.com/og-image.png',
+                },
+              ],
+            },
+            {
+              '@context': 'https://schema.org',
               '@type': 'FAQPage',
               'mainEntity': [
                 {
