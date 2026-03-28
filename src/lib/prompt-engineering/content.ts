@@ -10758,4 +10758,210 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
   },
 
+  'constrained-prompting': {
+    en: {
+      theme: 'Techniques',
+      title: 'Constrained Prompting',
+      intro: 'Constrained prompting is a technique where you tell the model not just what to do, but also what it must and must not do, so outputs stay inside clearly defined boundaries. This is essential when you need reliable formats, safe content, or strict compliance with internal rules.',
+      publishDate: '2026-03-26',
+      readTime: '6 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Constrained Prompting',
+        description: 'What constrained prompting is, why it matters, and how to use it to make AI outputs predictable and safe in real workflows.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['constrained prompting', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      },
+      sections: {
+        whatIsConstrained: {
+          title: 'What Constrained Prompting Is',
+          content: [
+            '**Constrained prompting means adding explicit rules about content, structure, length, and behavior directly into your prompt.** Instead of a loose instruction like "summarize this," you specify allowed formats, required fields, banned topics, and validation rules.',
+            'Constraints can include output schemas (such as JSON with fixed keys), word limits, tone requirements, and safety restrictions like "do not provide medical diagnoses." By making these rules part of the prompt, you reduce ambiguity and make the model easier to integrate into production workflows.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Why Constrained Prompting Matters',
+          content: [
+            '**Constrained prompting matters whenever model output feeds into people, processes, or other systems that depend on predictable behavior.** Without constraints, the same prompt may produce different structures or levels of detail across runs.',
+            'Clear constraints help you:',
+          ],
+          items: [
+            'Prevent unexpected content or formatting that breaks downstream tools.',
+            'Enforce brand, legal, or safety guidelines directly at the prompt level.',
+            'Reduce review time because outputs already match your required structure.',
+          ],
+        },
+        typesOfConstraints: {
+          title: 'Types of Constraints You Can Use',
+          content: [
+            '**You can constrain prompts along several dimensions: structure, content, style, length, and safety.** The more precise you are, the more consistent the outputs become.',
+            'Common constraint types include:',
+          ],
+          items: [
+            'Structural constraints: Required headings, bullet lists, tables, or JSON with specific keys.',
+            'Content constraints: Required sections (such as "Risks" or "Next steps") and banned topics or phrases.',
+            'Style constraints: Tone ("formal," "neutral," "conversational"), reading level, or terminology rules.',
+            'Length constraints: Word or character limits, or a fixed number of bullets or sections.',
+            'Safety constraints: Instructions to avoid personal data, medical advice, legal conclusions, or disallowed content categories.',
+          ],
+        },
+        example: {
+          title: 'Example: Unconstrained vs Constrained Prompt',
+          content: [
+            '**The impact of constrained prompting is easiest to see when you compare an unconstrained prompt with a constrained one for the same task.** Here we draft a short product summary.',
+            '**[Bad Prompt]**',
+            '"Write a summary of our new analytics feature."',
+            '**[Good Prompt]**',
+            '"You are a B2B product marketer. Task: Write a summary of our new analytics feature for a product page. Constraints: Length: 120–160 words. Structure: 1 short intro paragraph, then 3 bullet points, then 1 closing sentence. Style: Clear, neutral-professional tone. No hype words like \'revolutionary\' or \'game-changing\'. Content: Mention the main benefit (faster insight into customer behavior) and one concrete example use case. Output format: Valid Markdown with bullet points using `-`."',
+            'The constrained version defines length, structure, style, and required content, which makes the output far more predictable and easier to reuse.',
+          ],
+        },
+        whenToUse: {
+          title: 'When to Use Constrained Prompting',
+          content: [
+            '**You should use constrained prompting whenever correctness and consistency are more important than maximum creativity.** This is particularly true in operational, analytical, and regulated contexts.',
+            'Typical use cases include:',
+          ],
+          items: [
+            'Generating JSON or table outputs that other systems will parse.',
+            'Creating standardized reports, summaries, or status updates across teams.',
+            'Drafting customer communications that must follow brand or legal guidelines.',
+            'Extracting structured data (issues, entities, metrics) from unstructured text.',
+          ],
+        },
+        howPQSupports: {
+          title: 'How PromptQuorum Supports Constrained Prompting',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that is designed to work well with constrained prompting by letting you define, save, and reuse structured prompt frameworks.** You can combine constraints with frameworks like SPECS, RTF, or Google\'s Prompting Guide and send them to several models at once.',
+            'In PromptQuorum, you can:',
+          ],
+          items: [
+            'Encode structural and content constraints directly into frameworks so every run follows the same rules.',
+            'Test constrained prompts across multiple models side by side to see which provider adheres best to your specifications.',
+            'Save constrained prompts as templates for recurring tasks, ensuring your team always uses the same validated patterns.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
+  'chain-of-thought-prompting': {
+    en: {
+      theme: 'Techniques',
+      title: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
+      intro: 'Chain-of-thought prompting is a technique where you explicitly ask the model to show its reasoning steps instead of jumping straight to the final answer. This makes complex decisions easier to audit, debug, and improve over time.',
+      publishDate: '2026-03-26',
+      readTime: '7 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
+        description: 'What chain-of-thought prompting is, when it helps, and how to structure prompts so models show their reasoning clearly.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['chain-of-thought prompting', 'step-by-step reasoning', 'prompt engineering', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'Reasoning' },
+        ],
+      },
+      sections: {
+        whatIsChainOfThought: {
+          title: 'What Chain-of-Thought Prompting Is',
+          content: [
+            '**Chain-of-thought prompting asks the model to reason step by step before giving a final conclusion.** Instead of returning only "the answer," the model writes out intermediate calculations, logical steps, or explanations.',
+            'You can trigger this behavior by instructions like "think step by step," "show your reasoning," or by providing worked examples where the reasoning is explicit. The result is a trace you can read to understand how the model reached its conclusion.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Why Chain-of-Thought Prompting Matters',
+          content: [
+            '**Chain-of-thought prompting matters because it makes model behavior more transparent on tasks that involve multi-step reasoning.** When you see each step, you can spot misinterpretations, missing assumptions, or arithmetic errors.',
+            'This is especially valuable in domains like analytics, planning, and troubleshooting. Instead of a single opaque output, you get a narrative that can be checked, corrected, or reused as documentation.',
+          ],
+        },
+        whenItHelps: {
+          title: 'When Chain-of-Thought Helps (and When It Doesn\'t)',
+          content: [
+            '**Chain-of-thought prompting helps most on tasks that naturally break into clear steps, but it is not necessary for every prompt.** It shines wherever the path is as important as the destination.',
+            'Good use cases include:',
+          ],
+          items: [
+            'Math and quantitative reasoning problems.',
+            'Multi-step logical puzzles or decision analyses.',
+            'Root-cause analysis, incident postmortems, and trade-off discussions.',
+            'Planning tasks where the sequence of actions must be explicit.',
+          ],
+        },
+        whenItDoesntHelp: {
+          content: [
+            'For simple classification, quick copywriting, or short factual answers, chain-of-thought often adds verbosity without much extra value. In sensitive domains, you may also want to keep reasoning internal and show only the final answer to end users.',
+          ],
+        },
+        example: {
+          title: 'Example: Without vs With Chain of Thought',
+          content: [
+            '**The difference becomes clear when you compare a direct-answer prompt with one that explicitly asks for reasoning.** Here is a simple decision example.',
+            '**[Bad Prompt]**',
+            '"Which project should we prioritize next quarter?"',
+            '**[Good Prompt]**',
+            '"You are a product operations manager. We have three candidate projects for next quarter. Use chain-of-thought reasoning to decide which project to prioritize. 1) List the decision criteria you will use (for example revenue impact, risk, alignment with strategy). 2) Evaluate each project against these criteria step by step. 3) Make a clear recommendation and justify it in 3–5 sentences. At the end, provide a short final answer starting with `Recommendation:` on a separate line."',
+            'In the "good" version, the model explains how it chose its criteria, how each project scores, and then states a recommendation you can challenge or accept.',
+          ],
+        },
+        howToWrite: {
+          title: 'How to Write Effective Chain-of-Thought Prompts',
+          content: [
+            '**To write effective chain-of-thought prompts, you should define the structure of the reasoning and the structure of the final answer.** Vague requests like "explain more" are less reliable than concrete instructions.',
+            'A practical pattern is:',
+          ],
+          items: [
+            'Tell the model its role (for example "You are a senior data analyst.").',
+            'Specify that it should think step by step or use chain-of-thought.',
+            'Define the sections of reasoning you expect (for example assumptions, calculations, comparison, conclusion).',
+            'Ask for a short, clearly marked final answer at the end so you can use it quickly.',
+          ],
+        },
+        howtWriteNote: {
+          content: [
+            'This separates the detailed reasoning from the concise output, which is helpful when you integrate the result into other tools or reports.',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Chain-of-Thought Prompting in PromptQuorum',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool where you can apply chain-of-thought prompting consistently across different models.** You write one structured chain-of-thought prompt and send it to several providers in parallel.',
+            'In PromptQuorum, you can:',
+          ],
+          items: [
+            'Combine chain-of-thought instructions with reasoning-focused frameworks such as TRACE or APE so that thinking steps are explicitly labeled.',
+            'Compare how different models handle the same reasoning task and inspect their step-by-step traces side by side.',
+            'Save chain-of-thought prompts as templates for recurring analyses, incident reviews, or strategic decisions.',
+          ],
+        },
+        inPromptQuorumClosing: {
+          content: [
+            'This turns chain-of-thought prompting from a one-off trick into a repeatable part of your decision-making process.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
 }
