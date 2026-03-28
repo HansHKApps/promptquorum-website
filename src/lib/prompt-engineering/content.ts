@@ -10425,4 +10425,114 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'google-prompting-guide': {
+    en: {
+      theme: 'Frameworks',
+      title: "Google's Prompting Guide",
+      intro: "Google's Prompting Guide is a set of practical recommendations from Google DeepMind for writing prompts that make models like Gemini 2.5 Pro more reliable, controllable, and useful in real-world applications. PromptQuorum includes Google's Prompting Guide as a framework that users can select and apply directly across all supported models.",
+      publishDate: '2026-03-24',
+      readTime: '7 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: "Google's Prompting Guide as a Framework",
+        description: "How Google's Prompting Guide works, its core techniques, and how PromptQuorum offers it as a reusable framework across multiple AI models.",
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['Google Prompting Guide', 'prompt best practices', 'Gemini 2.5 Pro', 'prompt frameworks', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Prompt Frameworks' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Google DeepMind', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+        ],
+      },
+      sections: {
+        whatIsGoogle: {
+          title: "What Google's Prompting Guide Is",
+          content: [
+            "**Google's Prompting Guide is a collection of patterns and best practices for prompting Gemini and other large language models, focused on specificity, structure, and safety.** The guide translates research from Google DeepMind into concrete rules that non-experts can use. It covers how to define roles, provide context, constrain outputs, and handle tasks such as reasoning, coding, and data extraction.",
+            'In practice, the guide functions like a catalog of prompt recipes. Each recipe shows how to phrase instructions, what to avoid, and how to add examples so that the model\'s behavior becomes more predictable. These patterns work not only for Gemini 2.5 Pro but also for models such as GPT-4o and Claude 4.6 Sonnet, because the underlying principles are general.',
+          ],
+        },
+        corePrinciples: {
+          title: "Core Principles in Google's Prompting Guide",
+          content: [
+            "**The core principles in Google's Prompting Guide revolve around clarity, constraint, and iterative refinement rather than clever wording.** The emphasis is on telling the model exactly what you want in a way that is easy to evaluate.",
+            'Common themes include:',
+          ],
+          items: [
+            'Be explicit about the task, audience, and output format instead of relying on the model to guess.',
+            'Provide representative examples when possible so the model can imitate the pattern.',
+            'Break complex tasks into steps and ask the model to reason before answering.',
+            'Use clear safety and quality constraints, such as banned content, citation requirements, or length limits.',
+          ],
+        },
+        techniques: {
+          title: "Techniques Highlighted in Google's Prompting Guide",
+          content: [
+            "**Google's Prompting Guide highlights a set of recurring techniques that you can apply across domains, from research to coding to product copy.** While naming and emphasis may vary between versions, the underlying ideas are consistent.",
+            'Typical techniques include:',
+          ],
+          items: [
+            'Role prompting: Asking the model to "act as" a specific expert (for example a data analyst or product manager).',
+            'Step-by-step reasoning: Requesting intermediate steps or explanations before the final answer.',
+            'Few-shot prompting: Supplying several input–output examples to anchor behavior.',
+            'Structured output: Asking for answers in defined formats such as bullet lists, tables, or JSON.',
+            'Iterative refinement: Reusing the model\'s own output as input for revision and improvement.',
+          ],
+        },
+        badVsGoodExample: {
+          title: "Example: Bad vs Good Prompt Using Google's Guide",
+          content: [
+            "**The impact of Google-style prompting is easiest to see when you compare an unstructured prompt to one that follows these principles for the same task.** Below is a simple example for a product explainer.",
+            '**[Bad Prompt]**',
+            '"Explain our new AI feature to users."',
+            '**[Good Prompt]**',
+            '"You are a product educator writing for non-technical users. Task: Explain our new AI feature that automatically summarizes weekly customer support tickets into a one-page report for managers. Audience: Busy support leaders with limited technical background. Requirements: Use plain language with short sentences. Structure the answer with an intro, 3 bullet points for key benefits, and a short closing paragraph. Do not use hype words like \'revolutionary\' or \'game-changing\'. Keep the explanation between 250 and 300 words. Output: Markdown with H2 headings for each section."',
+            "This \"good\" version follows Google's recommendations by defining role, audience, structure, constraints, and format in a way that any modern model can follow.",
+          ],
+        },
+        howPQImplements: {
+          title: "How PromptQuorum Implements Google's Prompting Guide",
+          content: [
+            "**PromptQuorum is a multi-model AI dispatch tool that packages Google's Prompting Guide as a reusable framework so users can apply these best practices without memorizing them.** When you select the Google Prompting Guide framework in PromptQuorum, the app exposes fields that reflect the guide's core ideas—task, role, audience, structure, constraints, and examples—and combines them into a single high-quality prompt.",
+            'Inside PromptQuorum, you can:',
+          ],
+          items: [
+            'Fill in guide-aligned fields once and send the resulting prompt to Gemini 2.5 Pro, GPT-4o, Claude 4.6 Sonnet, and local models via Ollama or LM Studio in parallel.',
+            'Save Google-style prompt templates for recurring workflows such as explainers, code reviews, and structured summaries.',
+            'Compare how different models respond when guided by the same Google-derived structure, then choose the provider that best fits each task.',
+          ],
+        },
+        usingWithOthers: {
+          title: "Using Google's Guide With Other Frameworks",
+          content: [
+            "**You should treat Google's Prompting Guide as a set of low-level techniques that work together with higher-level frameworks like Single Step, CO-STAR, SPECS, RISEN, and TRACE.** The guide tells you how to phrase instructions; the frameworks tell you how to structure entire workflows.",
+            'A practical approach is:',
+          ],
+          items: [
+            'Use a framework (for example CO-STAR or SPECS) to define the overall structure of the task.',
+            "Apply Google's prompting principles inside that structure: explicit roles, clear constraints, few-shot examples, and step-by-step reasoning when needed.",
+            'Run the combined prompt in PromptQuorum across multiple models to validate that it behaves consistently.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
 }
