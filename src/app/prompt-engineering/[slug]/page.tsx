@@ -152,6 +152,24 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     ],
   }
 
+  // Generate DefinedTermSet schema for glossary
+  const definedTermSetSchema = slug === 'prompt-engineering-glossary' ? {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTermSet',
+    name: article.title,
+    description: article.intro,
+    url: canonicalUrl,
+    definedTerm: Object.values(article.sections).flatMap((section) => {
+      if (!section.rows) return []
+      return section.rows.map((row) => ({
+        '@type': 'DefinedTerm',
+        name: row['Term'] || '',
+        description: row['What it means'] || '',
+        inDefinedTermSet: canonicalUrl,
+      }))
+    }),
+  } : null
+
   const faqSectionData = Object.values(article.sections).find((s) => s.faqs && s.faqs.length > 0)
   const faqSchema = faqSectionData
     ? {
@@ -189,6 +207,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {definedTermSetSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }} />}
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       {howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
       {article.supplementalSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.supplementalSchema) }} />}
