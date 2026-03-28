@@ -5478,7 +5478,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
     zh: { category: '研究', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '', sections: {} },
   },
 
-  'frontier-models-prompt-library': {
+  frontierModelsPromptLibrary: {
     en: {
       category: 'AI Model Comparison',
       title: 'Frontier AI Models and Prompt Library: GPT-5.x, Claude 4.6, Gemini 3 Pro, and Beyond',
