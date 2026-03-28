@@ -195,9 +195,9 @@ function renderInlineLinks(text: string) {
   })
 }
 
-function SectionBlock({ section, colors }: { section: PESection; colors: { dot: string; badge: string } }) {
+function SectionBlock({ section, colors, id }: { section: PESection; colors: { dot: string; badge: string }; id?: string }) {
   return (
-    <div className="mt-8">
+    <div className="mt-8" id={id}>
       {section.title && !section.isTldr && (
         <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4">
           {section.title}
@@ -206,7 +206,7 @@ function SectionBlock({ section, colors }: { section: PESection; colors: { dot: 
 
       {/* TL;DR block */}
       {section.isTldr && section.items && (
-        <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 my-4">
+        <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 my-4 key-takeaways">
           <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Key Takeaways</p>
           <ul className="space-y-2">
             {section.items.map((item, i) => (
@@ -445,11 +445,48 @@ function PromptEngineeringPostContent({ slug }: Props) {
           </div>
         </div>
 
+        {/* Jump navigation for glossary */}
+        {slug === 'prompt-engineering-glossary' && article.sections.intro && (
+          <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-4">
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Jump to section</p>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { id: '#core-concepts', label: 'Core Concepts' },
+                { id: '#agents-orchestration', label: 'Agents' },
+                { id: '#safety-alignment', label: 'Safety' },
+                { id: '#evaluation-testing', label: 'Evaluation' },
+                { id: '#advanced-techniques', label: 'Advanced' },
+                { id: '#metrics-production', label: 'Metrics' },
+              ].map((link) => (
+                <a
+                  key={link.id}
+                  href={link.id}
+                  className="text-sm text-primary hover:text-primary/80 font-medium transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </nav>
+        )}
+
         {/* Sections */}
-        <article>
-          {Object.entries(article.sections).map(([key, section]) => (
-            <SectionBlock key={key} section={section} colors={colors} />
-          ))}
+        <article className="key-takeaways-container">
+          {Object.entries(article.sections).map(([key, section]) => {
+            // Map section keys to anchor IDs
+            const sectionIdMap: Record<string, string> = {
+              'corePrompting': 'core-concepts',
+              'agentsOrchestration': 'agents-orchestration',
+              'safetyAlignment': 'safety-alignment',
+              'evalsTesting': 'evaluation-testing',
+              'advancedTechniques': 'advanced-techniques',
+              'metricsProduction': 'metrics-production',
+            }
+            const sectionId = sectionIdMap[key]
+            return (
+              <SectionBlock key={key} section={section} colors={colors} id={sectionId} />
+            )
+          })}
         </article>
 
         {/* Footer CTA */}

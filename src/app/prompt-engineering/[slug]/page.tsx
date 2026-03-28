@@ -120,6 +120,14 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
   const article = peContent[key][selectedLang] || peContent[key]['en']
   const canonicalUrl = `https://www.promptquorum.com/prompt-engineering/${slug}`
 
+  // Extract all 100 glossary terms for keywords if this is the glossary
+  const glossaryKeywords = slug === 'prompt-engineering-glossary'
+    ? Object.values(article.sections).flatMap((section) => {
+        if (!section.rows) return []
+        return section.rows.map((row) => row['Term'] || '')
+      }).filter(Boolean)
+    : []
+
   // Use article.schema if defined; otherwise fallback to generic Article schema
   const articleSchema = article.schema || {
     '@context': 'https://schema.org',
@@ -127,7 +135,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     headline: article.title,
     description: article.intro,
     datePublished: '2026-03-01',
-    dateModified: '2026-03-01',
+    dateModified: article.publishDate || '2026-03-28',
     url: canonicalUrl,
     author: {
       '@type': 'Person',
@@ -140,6 +148,26 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
       url: 'https://www.promptquorum.com',
       logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
     },
+    ...(glossaryKeywords.length > 0 && { keywords: glossaryKeywords }),
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1 + p', '.key-takeaways'],
+    },
+    isPartOf: {
+      '@type': 'WebPage',
+      name: 'Prompt Engineering Guide',
+      url: 'https://www.promptquorum.com/prompt-engineering',
+    },
+    ...(slug === 'prompt-engineering-glossary' && {
+      hasPart: [
+        { '@type': 'WebPageElement', name: 'Core Prompting Concepts', cssSelector: '#core-concepts' },
+        { '@type': 'WebPageElement', name: 'Agents & Orchestration', cssSelector: '#agents-orchestration' },
+        { '@type': 'WebPageElement', name: 'Safety & Alignment', cssSelector: '#safety-alignment' },
+        { '@type': 'WebPageElement', name: 'Evaluation & Testing', cssSelector: '#evaluation-testing' },
+        { '@type': 'WebPageElement', name: 'Advanced Techniques', cssSelector: '#advanced-techniques' },
+        { '@type': 'WebPageElement', name: 'Metrics & Production', cssSelector: '#metrics-production' },
+      ],
+    }),
   }
 
   const breadcrumbSchema = {
