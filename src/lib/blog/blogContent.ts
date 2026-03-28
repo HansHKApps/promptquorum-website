@@ -5684,10 +5684,22 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             'Llama 4 (open-source, runs via Ollama, LM Studio, Jan AI) supports full local deployment. All other frontier models require cloud API access. If privacy and data residency are critical, Llama 4 is the only frontier option.',
           ],
         },
-        resources: {
-          title: 'Resources for Further Comparison',
+        relatedReading: {
+          title: 'Related PromptQuorum Articles',
           content: [
-            'To continue your frontier model research:',
+            'Continue your research on AI models and prompt optimization:',
+          ],
+          items: [
+            '[Compare AI Models Side-by-Side](/blog/ai-model-comparison) — Multi-model comparison methodology and decision framework',
+            '[What Is AI Consensus Scoring?](/blog/what-is-ai-consensus-scoring) — How PromptQuorum aggregates responses across models',
+            '[Prompt Optimization Techniques](/blog/prompt-optimization) — Structured refinement methods that improve outputs across all models',
+            '[Prompt Engineering Hub](/prompt-engineering) — 50+ articles on frameworks, techniques, and optimization strategies',
+          ],
+        },
+        resources: {
+          title: 'Official Model Documentation',
+          content: [
+            'Verify specifications and pricing directly from vendors:',
           ],
           items: [
             'OpenAI GPT-5.x documentation — https://platform.openai.com/docs/',
