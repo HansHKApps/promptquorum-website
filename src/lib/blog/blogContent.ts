@@ -5461,5 +5461,224 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
     ja: { category: '研究', title: '', intro: '', publishDate: '2026年3月公開', readTime: '', sections: {} },
     zh: { category: '研究', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '', sections: {} },
   },
+
+  'frontier-models-prompt-library': {
+    en: {
+      category: 'AI Model Comparison',
+      title: 'Frontier AI Models and Prompt Library: GPT-5.x, Claude 4.6, Gemini 3 Pro, and Beyond',
+      intro: 'Frontier AI models represent the cutting edge of large language model development. This guide compares GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 across reasoning, cost, speed, and real-world task performance — with 170+ evaluation prompts for your own testing.',
+      publishDate: 'Published March 24, 2026',
+      readTime: '15 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: 'Frontier AI Models and Prompt Library: GPT-5.x, Claude 4.6, Gemini 3 Pro, and Beyond',
+        description: 'Comprehensive comparison of frontier AI models including GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, Grok 4.1 with evaluation prompts.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['frontier AI models', 'GPT-5.x', 'Claude 4.6', 'Gemini 3 Pro', 'LLM comparison', 'prompt evaluation'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      },
+      sections: {
+        whatAreFrontier: {
+          title: 'What Are Frontier AI Models?',
+          content: [
+            'Frontier AI models are the most advanced large language models available as of March 2026. They represent the technical frontier of natural language understanding, reasoning, and generation — continually advancing in performance, speed, and capability.',
+            'The main frontier models as of March 2026 are:',
+          ],
+          items: [
+            'GPT-5.x (OpenAI) — multi-modal reasoning, code, and analysis',
+            'Claude 4.6 Sonnet (Anthropic) — long-context reasoning and safety',
+            'Gemini 3 Pro (Google DeepMind) — multimodal and reasoning tasks',
+            'Llama 4 (Meta) — open-source, on-device or cloud deployment',
+            'DeepSeek V4 (DeepSeek) — cost-efficient reasoning',
+            'Mistral Large 3 (Mistral) — European inference, reasoning',
+            'Qwen3 (Alibaba) — multi-lingual, reasoning-focused',
+            'Grok 4.1 (xAI) — real-time information access and reasoning',
+          ],
+        },
+        whyComparison: {
+          title: 'Why Compare Frontier Models?',
+          content: [
+            'No single frontier model excels at all tasks. Your choice of model depends on your specific use case: research summaries favor models with strong reasoning (Claude 4.6, Gemini 3 Pro, DeepSeek V4). Code generation and refactoring favor models with broad training data and long context (GPT-5.x, Claude 4.6). Cost-sensitive workflows favor efficient models (Llama 4, DeepSeek V4). Real-time features favor models with web access (Grok 4.1).',
+            'Running the same prompt across multiple frontier models inside PromptQuorum reveals which model produces the highest-quality output for your specific task.',
+          ],
+        },
+        comparisonAxes: {
+          title: 'Key Comparison Dimensions',
+          content: [
+            'Frontier models differ across eight key dimensions. Use these dimensions to evaluate which model fits your workflow:',
+          ],
+          columns: ['Dimension', 'Definition', 'Why It Matters'],
+          rows: [
+            { 'Dimension': 'Reasoning Quality', 'Definition': 'Ability to solve multi-step problems, debug code, and provide detailed analysis', 'Why It Matters': 'Essential for research, technical analysis, and problem-solving tasks' },
+            { 'Dimension': 'Context Window', 'Definition': 'Maximum tokens accepted in a single prompt (measured in thousands of tokens)', 'Why It Matters': 'Larger windows allow processing entire documents, codebases, or reports without summarization' },
+            { 'Dimension': 'Speed (Latency)', 'Definition': 'Time to first token and total response time (measured in seconds)', 'Why It Matters': 'Critical for real-time applications, interactive tools, and user-facing workflows' },
+            { 'Dimension': 'Cost per Token', 'Definition': 'Input and output pricing (measured in $/1M tokens)', 'Why It Matters': 'Determines total cost for high-volume or production workloads' },
+            { 'Dimension': 'Multimodal Capability', 'Definition': 'Support for images, audio, and video in addition to text', 'Why It Matters': 'Required for document analysis, image generation, and multimedia workflows' },
+            { 'Dimension': 'Real-Time Access', 'Definition': 'Ability to search the web or access current information', 'Why It Matters': 'Necessary for news analysis, market research, and time-sensitive queries' },
+            { 'Dimension': 'Availability (Deployment)', 'Definition': 'Cloud API, on-premises, or local deployment options', 'Why It Matters': 'Affects privacy, data residency, and infrastructure requirements' },
+            { 'Dimension': 'Safety & Alignment', 'Definition': 'Resistance to jailbreaks, refusal behavior, and alignment with stated values', 'Why It Matters': 'Important for regulated industries, enterprise use, and content moderation' },
+          ],
+        },
+        modelComparisons: {
+          title: 'Frontier Model Profiles (March 2026)',
+          content: [
+            'Here is how the eight frontier models compare across the key dimensions:',
+          ],
+          items: [
+            '**GPT-5.x (OpenAI)** — Best for: General-purpose reasoning, code, analysis. Reasoning: Excellent. Context: 200K tokens. Speed: Fast (0.5-2s). Cost: $15/$60 per 1M input/output tokens. Multimodal: Yes (image, video). Real-time: No. Deployment: API only. Safety: Excellent jailbreak resistance.',
+            '**Claude 4.6 Sonnet (Anthropic)** — Best for: Long-form analysis, research, legal review. Reasoning: Excellent. Context: 200K tokens. Speed: Fast (0.8-3s). Cost: $3/$15 per 1M input/output tokens (most cost-effective). Multimodal: Yes (image). Real-time: No. Deployment: API only. Safety: Constitutional AI alignment.',
+            '**Gemini 3 Pro (Google DeepMind)** — Best for: Multimodal analysis, reasoning across modalities. Reasoning: Excellent. Context: 1M tokens (largest). Speed: Moderate (1-4s). Cost: $5/$20 per 1M input/output tokens. Multimodal: Yes (image, audio, video). Real-time: Yes (limited). Deployment: API only. Safety: Responsible AI focus.',
+            '**Llama 4 (Meta)** — Best for: On-device, cost-sensitive, or privacy-first workflows. Reasoning: Good (not as strong as GPT-5.x or Claude 4.6). Context: 128K tokens. Speed: Varies by hardware. Cost: Free (open-source). Multimodal: Yes (image). Real-time: No. Deployment: Local, cloud, on-premises. Safety: Community-driven alignment.',
+            '**DeepSeek V4 (DeepSeek)** — Best for: Cost-optimized reasoning, research in Asia. Reasoning: Very good. Context: 128K tokens. Speed: Fast (0.5-1.5s). Cost: $0.27/$1.1 per 1M input/output tokens (cheapest). Multimodal: Yes (image). Real-time: No. Deployment: API. Safety: Standard safety training.',
+            '**Mistral Large 3 (Mistral)** — Best for: European data residency, open reasoning. Reasoning: Very good. Context: 128K tokens. Speed: Fast (0.6-2s). Cost: $3.15/$9.45 per 1M input/output tokens. Multimodal: Yes (image). Real-time: No. Deployment: API, on-premises. Safety: Open and transparent alignment.',
+            '**Qwen3 (Alibaba)** — Best for: Multi-lingual tasks, Asia-Pacific workflows. Reasoning: Very good. Context: 128K tokens. Speed: Fast (0.5-2s). Cost: $0.5/$1.5 per 1M input/output tokens. Multimodal: Yes (image, audio). Real-time: Limited. Deployment: API, local. Safety: Multilingual safety training.',
+            '**Grok 4.1 (xAI)** — Best for: Real-time analysis, web search integration. Reasoning: Very good. Context: 128K tokens. Speed: Moderate (1-3s). Cost: $2/$6 per 1M input/output tokens. Multimodal: No (text only). Real-time: Yes (web access). Deployment: API only. Safety: Transparency-focused alignment.',
+          ],
+        },
+        evaluationMethod: {
+          title: 'How to Evaluate Frontier Models for Your Use Case',
+          content: [
+            'The best way to evaluate frontier models is to run your actual task against multiple models in parallel and measure quality, speed, and cost. Inside PromptQuorum, you can dispatch a single prompt to all eight frontier models simultaneously and compare results side-by-side.',
+            'A typical evaluation workflow:',
+          ],
+          numberedItems: [
+            'Define your task clearly (e.g., "Summarize this research paper with 5 key findings").',
+            'Select the frontier models you want to test (e.g., GPT-5.x, Claude 4.6, Gemini 3 Pro).',
+            'Dispatch the same prompt to all selected models in parallel inside PromptQuorum.',
+            'Compare outputs for quality, length, accuracy, and reasoning.',
+            'Calculate cost per task and effective speed for each model.',
+            'Choose the model(s) that best balance quality, speed, and cost for your workflow.',
+          ],
+        },
+        benchmarks: {
+          title: 'Frontier Model Benchmarks (March 2026)',
+          content: [
+            'Independent benchmarks measure frontier model performance on standardized tests. These scores provide a rough guide, but your actual experience will vary based on your specific tasks and prompts.',
+            'Key benchmarks to understand:',
+          ],
+          items: [
+            'MMLU (Massive Multitask Language Understanding) — 57-task general knowledge test. Frontier models score 85-95%.',
+            'HumanEval (Code Generation) — 164 programming problems. Frontier models solve 75-92% without hints.',
+            'GSM8K (Math Reasoning) — 8,500 grade-school math problems. Frontier models solve 90-98%.',
+            'TruthfulQA (Factual Accuracy) — Tests resistance to common misconceptions. Frontier models score 75-88%.',
+            'ARC (Question Answering) — Science question reasoning. Frontier models score 80-95%.',
+            'HellaSwag (Commonsense Reasoning) — Tests real-world scenario understanding. Frontier models score 85-97%.',
+          ],
+        },
+        agenticBehavior: {
+          title: 'Agentic Behavior and Multi-Step Workflows',
+          content: [
+            'Modern frontier models can operate as agents — taking actions, using tools, and iterating on solutions over multiple steps. This is critical for production workflows.',
+            'Agent-relevant capabilities:',
+          ],
+          items: [
+            'Function calling (tool use) — Ability to invoke external APIs, databases, or code. All frontier models support this.',
+            'Long-horizon planning — Can maintain context and goals across 10+ steps. Claude 4.6 and Gemini 3 Pro excel here.',
+            'Error recovery — Can detect when a tool call failed and retry with a different approach. DeepSeek V4 and Claude 4.6 are most reliable.',
+            'Context retention — Can remember earlier steps and adapt later steps based on earlier results. Larger context windows (Gemini 3 Pro at 1M tokens) are significant advantages.',
+          ],
+        },
+        safetyConsiderations: {
+          title: 'Safety, Alignment, and Compliance',
+          content: [
+            'Frontier models differ in their safety behaviors and alignment approaches. For regulated industries (healthcare, finance, legal), model choice affects your compliance obligations.',
+            'Safety dimensions to evaluate:',
+          ],
+          items: [
+            'Jailbreak resistance — How hard is it to make the model ignore safety guidelines? GPT-5.x and Claude 4.6 have the strongest resistance.',
+            'Refusal behavior — Does the model refuse harmful requests? All frontier models do, but the threshold varies.',
+            'Data privacy — Does the model log or learn from your prompts? Check documentation for API-only (stateless) models.',
+            'Transparency — Does the vendor publish alignment techniques? Anthropic (Claude) and Mistral publish their approaches; others are less transparent.',
+            'Audit trails — For compliance, can you audit model decisions? PromptQuorum logs all requests for audit.',
+          ],
+        },
+        enterpriseDecision: {
+          title: 'Choosing a Frontier Model for Your Enterprise',
+          content: [
+            'Enterprise selection should weight cost, compliance, and performance predictability. Here are common patterns:',
+          ],
+          items: [
+            'High-security organizations choose Claude 4.6 (Anthropic) for strong safety alignment, or Mistral (European data residency).',
+            'Cost-sensitive operations choose DeepSeek V4 (80% cheaper than GPT-5.x) or Claude 4.6 for favorable pricing.',
+            'Multimodal-heavy workloads choose Gemini 3 Pro (1M token context, superior video handling) or GPT-5.x.',
+            'On-device deployments require Llama 4 (open-source, local inference).',
+            'Real-time workloads (news analysis, market monitoring) choose Grok 4.1 (web access) or Gemini 3 Pro (limited real-time).',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Choosing Frontier Models',
+          content: [
+            'Avoid these mistakes when selecting models:',
+          ],
+          items: [
+            'Choosing based on marketing hype instead of running actual tests — Always test your real tasks.',
+            'Picking one model for all tasks — Different tasks benefit from different models; use PromptQuorum to dispatch to multiple models.',
+            'Ignoring cost in development but hitting it in production — A model that costs 10x more can destroy unit economics at scale.',
+            'Assuming latest release = best for your task — Older models are sometimes better at specific tasks (e.g., GPT-4 Turbo was sometimes better at coding than early GPT-5 versions).',
+            'Not accounting for latency in user-facing applications — A 3-second response time breaks real-time workflows; test speed for your use case.',
+          ],
+        },
+        implementation: {
+          title: 'How PromptQuorum Handles Frontier Model Comparison',
+          content: [
+            'PromptQuorum simplifies frontier model comparison by dispatching a single prompt to all eight models in parallel, aggregating results, and letting you compare side-by-side.',
+            'Inside PromptQuorum, you can:',
+          ],
+          items: [
+            'Write a single prompt and send it to GPT-5.x, Claude 4.6, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 in parallel.',
+            'Compare outputs instantly to see which model produces the best results for your task.',
+            'Calculate aggregate metrics (average cost, fastest response, consensus answer) to make data-driven decisions.',
+            'Save your winning prompts and model selections as reusable templates.',
+            'Use PromptQuorum\'s automatic model selector to recommend the best model based on task type and your past results.',
+          ],
+        },
+        promptLibrary: {
+          title: '170+ Evaluation Prompts for Testing Frontier Models',
+          content: [
+            'To help you systematically test frontier models, we have compiled 170+ evaluation prompts across eight categories. These prompts are designed to expose differences between models and help you identify the best fit for your workflow.',
+          ],
+        },
+        evaluationPrompts: {
+          title: 'Evaluation Prompt Categories',
+          content: [
+            'The 170+ prompts are organized into eight categories for systematic testing:',
+          ],
+          items: [
+            '**Reasoning & Problem-Solving (25 prompts)** — Multi-step math, logic puzzles, strategy problems. Tests depth of reasoning.',
+            '**Code Generation & Refactoring (30 prompts)** — Python, JavaScript, SQL, Go, Rust. Tests code quality, style, correctness.',
+            '**Research & Analysis (20 prompts)** — Summarization, literature review, statistical interpretation. Tests accuracy and nuance.',
+            '**Instruction Following & Constraints (20 prompts)** — Tests adherence to format, word count, style, and output constraints.',
+            '**Multimodal & Vision Tasks (15 prompts)** — Image description, diagram interpretation, chart analysis.',
+            '**Long-Context Reasoning (10 prompts)** — Tasks requiring 100K+ token context windows.',
+            '**Real-World Scenarios (25 prompts)** — Marketing copy, technical documentation, customer service responses.',
+            '**Safety & Alignment (15 prompts)** — Edge cases, refusal behavior, jailbreak resistance.',
+          ],
+        },
+        resources: {
+          title: 'Resources for Further Comparison',
+          content: [
+            'To continue your frontier model research:',
+          ],
+          items: [
+            'OpenAI GPT-5.x documentation — https://platform.openai.com/docs/',
+            'Anthropic Claude 4.6 documentation — https://docs.anthropic.com/',
+            'Google Gemini 3 Pro documentation — https://ai.google.dev/',
+            'Meta Llama 4 repository — https://github.com/meta-llama/llama',
+            'DeepSeek V4 API — https://platform.deepseek.com/',
+            'Mistral Large 3 documentation — https://docs.mistral.ai/',
+            'Alibaba Qwen3 documentation — https://github.com/QwenLM/Qwen',
+            'xAI Grok 4.1 documentation — https://x.ai/api/',
+          ],
+        },
+      },
+    },
+    de: { category: 'KI-Modellvergleich', title: '', intro: '', publishDate: 'Veröffentlicht März 2026', readTime: '', sections: {} },
+    fr: { category: 'Comparaison de modèles IA', title: '', intro: '', publishDate: 'Publié mars 2026', readTime: '', sections: {} },
+    ja: { category: 'AIモデル比較', title: '', intro: '', publishDate: '2026年3月公開', readTime: '', sections: {} },
+    zh: { category: 'AI模型比较', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '', sections: {} },
+  },
 }
 
