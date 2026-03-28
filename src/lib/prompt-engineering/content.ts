@@ -9400,4 +9400,150 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'which-framework-to-use': {
+    en: {
+      theme: 'Frameworks',
+      title: 'Which Prompt Framework Should You Use?',
+      intro: 'The right prompt framework depends on your task, your experience level, and whether you are optimizing for creativity, precision, or reliable reasoning. PromptQuorum makes this choice easier by including multiple frameworks, an automatic selector, and a custom framework builder directly in the app.',
+      publishDate: '2026-03-24',
+      readTime: '9 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Which Prompt Framework Should You Use?',
+        description: 'How to choose the right prompt framework for GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models — and how PromptQuorum automates framework selection.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['prompt frameworks', 'prompt engineering', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'Prompt Frameworks' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+        ],
+      },
+      sections: {
+        whatFrameworksDo: {
+          title: 'What Prompt Frameworks Actually Do',
+          content: [
+            '**Prompt frameworks give you a repeatable structure for prompts so that GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and other models know exactly what role to take, what context to use, and how to format outputs.** A framework is not a model feature; it is a template that controls how you talk to the model. When you use a consistent framework, you reduce hallucination risk because the model receives clearer objectives, constraints, and output formats.',
+            'Most frameworks decompose a prompt into building blocks such as objective, role, context, constraints, and format. This structure turns a vague request like "help me with this" into a well-specified task with measurable quality. In practice, frameworks are especially helpful when you need reproducible outputs across different models and providers such as OpenAI, Anthropic, and Google DeepMind.',
+          ],
+        },
+        frameworksAtAGlance: {
+          title: 'The Major Prompt Frameworks at a Glance',
+          content: [
+            '**The main prompt frameworks differ in their focus: some optimize for structured reasoning, others for creativity, and others for crisp specifications.** For multi-model work across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models via Ollama or LM Studio, you will usually rotate between a small set of well-tested frameworks.',
+            'Here are the most common frameworks and what they are best for:',
+          ],
+          columns: ['Framework', 'Best for', 'Core idea'],
+          rows: [
+            { 'Framework': 'CO-STAR', 'Best for': 'Complex tasks', 'Core idea': 'Break tasks into Context, Objective, Style, Tone, Audience, Response' },
+            { 'Framework': 'CRAFT',   'Best for': 'Creative work', 'Core idea': 'Focus on role, format, audience, and testing variations' },
+            { 'Framework': 'SPECS',   'Best for': 'Precise outputs', 'Core idea': 'Specify Scope, Purpose, Examples, Constraints, Steps' },
+            { 'Framework': 'RISEN',   'Best for': 'Iteration', 'Core idea': 'Rapidly refine prompts over multiple turns' },
+            { 'Framework': 'TRACE',   'Best for': 'Reasoning', 'Core idea': 'Force the model to show Thought, Reasoning, Analysis, Conclusion, Evaluation' },
+          ],
+        },
+        howToChooseByUseCase: {
+          title: 'How to Choose a Framework by Use Case',
+          content: [
+            '**You should pick your prompt framework based on the output you care about most: reasoning quality, creative variation, or strict formatting.** Once you link frameworks to use cases, the choice becomes a simple rule rather than a guessing game.',
+            'Typical mappings:',
+          ],
+          items: [
+            'For research summaries, technical analysis, or multi-step workflows, use a reasoning-first framework such as TRACE or CO-STAR.',
+            'For blog posts, ad copy, and ideation, use CRAFT or a similar creativity-oriented structure that emphasizes audience, tone, and variation.',
+            'For data extraction, reporting, or code refactoring, use SPECS or another specification-heavy template that locks down format and constraints.',
+          ],
+        },
+        whenToSwitch: {
+          title: 'When You Should Switch Frameworks',
+          content: [
+            '**You should switch prompt frameworks when your current structure cannot express your constraints or when outputs from multiple models drift away from your required format.** This is easiest to see when you run the same task across several models and notice inconsistent headings, missing fields, or over-creative phrasing.',
+            'Clear signals that a different framework is better suited:',
+          ],
+          items: [
+            'You need strict JSON with fixed fields across GPT-4o and Gemini 2.5 Pro, which points to a specification-heavy framework like SPECS.',
+            'You are exploring product positioning ideas and care more about divergent options than strict structure, which points to CRAFT.',
+            'You are debugging a complex reasoning failure in Claude 4.6 Sonnet and need explicit step-by-step thinking, which points to TRACE or a chain-of-thought style framework.',
+          ],
+        },
+        howPQHandlesFrameworks: {
+          title: 'How PromptQuorum Handles Frameworks for You',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that includes the main prompt frameworks, an automatic framework selector, and a custom framework editor so that you do not have to manage templates manually.** PromptQuorum can send one prompt, structured with your chosen framework, to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models via Ollama or LM Studio in parallel.',
+            'Inside PromptQuorum, you can:',
+          ],
+          items: [
+            'Pick from multiple built-in frameworks such as CO-STAR, CRAFT, RISEN, SPECS, TRACE, and several additional variants tuned for analysis or generation.',
+            'Let the app recommend a framework automatically based on the task type you select (for example "research summary," "marketing copy," or "code review").',
+            'Define your own framework by specifying roles, required questions, constraints, and output schemas, then reuse it across all models and projects.',
+          ],
+        },
+        automaticSelection: {
+          title: "PromptQuorum's Automatic Framework Selection",
+          content: [
+            "**PromptQuorum's framework selector recommends a prompt framework automatically using the task category, desired output format, and your saved preferences.** This reduces the time you spend thinking about meta-structure and lets you focus on describing the task itself.",
+            'A typical flow:',
+          ],
+          numberedItems: [
+            'You select a task such as "summarize research with citations" or "generate LinkedIn post ideas."',
+            'PromptQuorum maps this task to a default framework — for example a reasoning-first framework for research or a creative framework for ideation.',
+            'You can accept the suggestion, override it with a different framework, or lock certain projects to a specific framework for consistency.',
+          ],
+        },
+        customFrameworks: {
+          title: 'Creating Your Own Prompt Frameworks in PromptQuorum',
+          content: [
+            '**PromptQuorum lets you define, save, and reuse your own prompt frameworks so that your domain-specific workflows become first-class tools instead of ad-hoc prompts.** This is essential if you run repeated analyses, reports, or audits with strict internal standards.',
+            'When you create a custom framework in PromptQuorum, you can:',
+          ],
+          items: [
+            'Define the sections (for example Objective, Context, Data Sources, Constraints, Output Format).',
+            'Add mandatory questions that the app will ask each time before dispatch, so you never forget critical inputs.',
+            'Attach specific output formats, such as Markdown sections, bullet lists, or JSON with predefined keys.',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Example: Bad vs Good Use of a Framework',
+          content: [
+            '**The clearest way to see the value of frameworks is to compare an unstructured prompt with a framework-based prompt for the same task.** The example below uses a generic specification-style framework similar to SPECS to write a short report from data.',
+            '**[Bad Prompt]**',
+            '"Look at this data and tell me what you think."',
+            '**[Good Prompt]**',
+            '"You are a data analyst. Scope: Analyze the attached sales data for Q1 2026 in the EU market. Purpose: Identify the three most important trends that a VP of Sales should know before planning Q2. Examples: Structure insights as numbered findings with one sentence per finding. Constraints: Do not invent data; if a metric is missing, say "not in dataset". Steps: 1) Describe overall trend, 2) Highlight country-level outliers, 3) Suggest one concrete action per finding."',
+            'In PromptQuorum, you can store this structure as a reusable framework and apply it to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro in parallel, then compare how each model handles the same specification.',
+          ],
+        },
+        conclusion: {
+          title: 'Which Prompt Framework Should You Use Today?',
+          content: [
+            '**For most users, the best starting point is to pick one reasoning-focused framework for analysis tasks and one creativity-focused framework for writing tasks, then standardize on those across all models via PromptQuorum.** As your workflows mature, you can introduce a specification-heavy framework for structured outputs and optionally a custom framework tuned to your domain.',
+            'A practical baseline:',
+          ],
+          items: [
+            'Use a CO-STAR- or TRACE-style framework for research summaries, technical breakdowns, and complex reasoning.',
+            'Use a CRAFT-style framework for marketing copy, content ideas, and messaging experiments.',
+            "Use a SPECS-style framework for structured outputs such as reports, checklists, or JSON that must be parsed by downstream tools.",
+            "PromptQuorum's automatic selector and custom framework editor help you enforce this pattern at scale so that prompt quality does not depend on individual memory or skill.",
+          ],
+        },
+      },
+    },
+    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
 }
