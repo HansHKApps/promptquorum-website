@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { BlogPost, Language } from '@/lib/blog/blogContent'
 import { blogMetadata } from '@/lib/blog/blogTranslations'
@@ -48,7 +49,7 @@ function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
               <span>•</span>
               <span>{metadata?.readTime || post.readTime}</span>
               <span>•</span>
-              <span>By Hans Kuepper · PromptQuorum</span>
+              <span>By <Link href="/author/hans-kuepper" className="text-primary hover:text-primary/80 font-medium">Hans Kuepper</Link> · PromptQuorum</span>
             </div>
           </div>
 

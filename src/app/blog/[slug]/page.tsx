@@ -78,7 +78,7 @@ export default async function BlogPage({ params }: PageProps) {
     author: {
       '@type': 'Person',
       name: 'Hans Kuepper',
-      url: 'https://www.promptquorum.com/about',
+      url: 'https://www.promptquorum.com/author/hans-kuepper',
     },
     publisher: {
       '@type': 'Organization',
@@ -148,7 +148,7 @@ export default async function BlogPage({ params }: PageProps) {
     author: {
       '@type': 'Person',
       name: 'Hans Kuepper',
-      url: 'https://www.linkedin.com/in/hanskuepper/',
+      url: 'https://www.promptquorum.com/author/hans-kuepper',
     },
     publisher: {
       '@type': 'Organization',
