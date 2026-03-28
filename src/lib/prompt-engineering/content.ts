@@ -11373,4 +11373,124 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
   },
 
+  'self-consistency-prompting': {
+    en: {
+      theme: 'Techniques',
+      title: 'Self-Consistency Prompting: Let the AI Check Its Own Work',
+      intro: 'Self-consistency prompting is a technique where you ask the model to generate multiple reasoning paths for the same task and then aggregate the results, instead of trusting a single answer. This increases reliability on complex reasoning problems.',
+      publishDate: '2026-03-26',
+      readTime: '7 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Self-Consistency Prompting: Let the AI Check Its Own Work',
+        description: 'What self-consistency prompting is, why it improves reliability on hard reasoning tasks, and how to use it in structured workflows.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['self-consistency prompting', 'prompt engineering', 'reasoning prompts', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'Reasoning' },
+        ],
+      },
+      sections: {
+        whatIsSelfConsistency: {
+          title: 'What Self-Consistency Prompting Is',
+          content: [
+            '**Self-consistency prompting means sampling several independent answers to the same prompt and selecting the most consistent conclusion.** Rather than one chain of thought, you get multiple, potentially different chains.',
+            'The idea is simple: if the model reasons in several different ways and most paths converge on the same answer, that answer is more trustworthy than a single run. If the paths disagree, you know the problem is ambiguous or difficult and needs closer review.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Why Self-Consistency Prompting Matters',
+          content: [
+            '**Self-consistency prompting matters because language models can be unstable on hard reasoning tasks—small changes in sampling can flip the answer.** By looking at a set of attempts instead of one, you reduce the impact of any single hallucination or mistake.',
+            'This is especially useful for:',
+          ],
+          items: [
+            'Math and logic puzzles.',
+            'Multi-step analytical questions.',
+            'Decisions with subtle trade-offs where small reasoning slips change the outcome.',
+          ],
+        },
+        useNote: {
+          content: [
+            'Instead of pretending the model is perfectly consistent, you explicitly measure its own variation and use that signal.',
+          ],
+        },
+        howItWorks: {
+          title: 'How Self-Consistency Prompting Works in Practice',
+          content: [
+            '**In practice, self-consistency prompting follows a two-phase pattern: generate diverse answers, then aggregate them.** You keep the task prompt the same but allow randomness so the model explores different reasoning paths.',
+            'A typical flow:',
+          ],
+          numberedItems: [
+            'Use a reasoning-style prompt (often with chain-of-thought instructions) and a slightly higher temperature so the model produces varied explanations.',
+            'Run the same prompt multiple times (for example 5–20) and collect all final answers.',
+            'Aggregate: pick the majority answer, cluster similar answers, or have another pass that reviews and votes on them.',
+            'Optionally, ask the model to reconcile disagreements and produce a final, justified conclusion.',
+          ],
+        },
+        ensembleNote: {
+          content: [
+            'This turns one brittle reasoning attempt into a small "ensemble" built from the same model.',
+          ],
+        },
+        example: {
+          title: 'Example: Single Pass vs Self-Consistency',
+          content: [
+            '**The difference becomes clear when you compare one-shot reasoning with a self-consistent approach on the same kind of question.** Here is a conceptual example.',
+            '**[Bad Prompt]**',
+            '"Solve this reasoning problem and give the final answer."',
+            '**[Good Prompt – Self-Consistency Pattern]**',
+            '"You are a careful reasoning assistant. Task: Solve the following reasoning problem. Instructions: Think step by step and show your full reasoning. At the end, clearly state your final answer on a separate line starting with `Answer:`. Problem: [insert problem here]"',
+            'You then run this "good" prompt multiple times. If most runs produce the same `Answer: X`, you treat X as the self-consistent result. If answers differ, you know the problem is fragile and needs human review or an additional reconciliation step.',
+          ],
+        },
+        whenToUse: {
+          title: 'When to Use Self-Consistency Prompting',
+          content: [
+            '**You should use self-consistency prompting when the cost of a wrong answer is high and the task involves non-trivial reasoning.** It trades compute and latency for better robustness.',
+            'Good candidates include:',
+          ],
+          items: [
+            'Analytical questions driving business or technical decisions.',
+            'Complex coding tasks where logical mistakes are expensive.',
+            'Educational or exam-style reasoning where intermediate steps matter.',
+            'Any workflow where you have already observed that single runs are unstable.',
+          ],
+        },
+        simpleTasks: {
+          content: [
+            'For simple classification, short copy, or low-risk tasks, a single run is usually enough and faster.',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Self-Consistency Prompting in PromptQuorum',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that naturally complements self-consistency prompting by letting you generate and compare multiple answers easily.** You can treat "multiple runs from one model" and "multiple models on one prompt" as two layers of consistency checks.',
+            'With PromptQuorum, you can:',
+          ],
+          items: [
+            'Reuse a reasoning-focused framework (such as TRACE or APE) and run it several times per model to collect diverse chains of thought.',
+            'Run the same reasoning prompt across several models side by side to see whether they converge on the same answer.',
+            'Save self-consistency workflows as templates, so your team can repeatedly apply "sample multiple times, then aggregate" without designing the pattern from scratch.',
+          ],
+        },
+        pqClosing: {
+          content: [
+            'By combining self-consistency with multi-model comparison, PromptQuorum helps you separate stable conclusions from fragile guesses.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
 }
