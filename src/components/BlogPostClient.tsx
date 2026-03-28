@@ -160,7 +160,7 @@ function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
 
         {/* Back to blog */}
         <p className="text-center mt-8">
-          <a href="/#blog" className="text-primary hover:text-primary/80">
+          <a href="/blog" className="text-primary hover:text-primary/80">
             ← Back to Blog
           </a>
         </p>
