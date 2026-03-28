@@ -5485,17 +5485,6 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       intro: 'Frontier AI models represent the cutting edge of large language model development. This guide compares GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 across reasoning, cost, speed, and real-world task performance — with 170+ evaluation prompts for your own testing.',
       publishDate: 'Published March 24, 2026',
       readTime: '15 min read',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: 'Frontier AI Models and Prompt Library: GPT-5.x, Claude 4.6, Gemini 3 Pro, and Beyond',
-        description: 'Comprehensive comparison of frontier AI models including GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, Grok 4.1 with evaluation prompts.',
-        datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['frontier AI models', 'GPT-5.x', 'Claude 4.6', 'Gemini 3 Pro', 'LLM comparison', 'prompt evaluation'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      },
       sections: {
         whatAreFrontier: {
           title: 'What Are Frontier AI Models?',
@@ -5559,14 +5548,12 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
           content: [
             'The best way to evaluate frontier models is to run your actual task against multiple models in parallel and measure quality, speed, and cost. Inside PromptQuorum, you can dispatch a single prompt to all eight frontier models simultaneously and compare results side-by-side.',
             'A typical evaluation workflow:',
-          ],
-          numberedItems: [
-            'Define your task clearly (e.g., "Summarize this research paper with 5 key findings").',
-            'Select the frontier models you want to test (e.g., GPT-5.x, Claude 4.6, Gemini 3 Pro).',
-            'Dispatch the same prompt to all selected models in parallel inside PromptQuorum.',
-            'Compare outputs for quality, length, accuracy, and reasoning.',
-            'Calculate cost per task and effective speed for each model.',
-            'Choose the model(s) that best balance quality, speed, and cost for your workflow.',
+            '1. Define your task clearly (e.g., "Summarize this research paper with 5 key findings").',
+            '2. Select the frontier models you want to test (e.g., GPT-5.x, Claude 4.6, Gemini 3 Pro).',
+            '3. Dispatch the same prompt to all selected models in parallel inside PromptQuorum.',
+            '4. Compare outputs for quality, length, accuracy, and reasoning.',
+            '5. Calculate cost per task and effective speed for each model.',
+            '6. Choose the model(s) that best balance quality, speed, and cost for your workflow.',
           ],
         },
         benchmarks: {
