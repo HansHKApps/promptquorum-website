@@ -10294,4 +10294,135 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'trace-framework': {
+    en: {
+      theme: 'Frameworks',
+      title: 'The TRACE Framework',
+      intro: 'The TRACE Framework is a prompt structure that asks models to Think, Reason, Analyze, Conclude, and Explain so their internal decision process becomes visible instead of hidden. PromptQuorum includes the TRACE Framework as a built-in option that any user can select and use directly inside the app.',
+      publishDate: '2026-03-24',
+      readTime: '8 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'The TRACE Framework',
+        description: 'How the TRACE Framework (Think, Reason, Analyze, Conclude, Explain) works, when to use it, and how PromptQuorum offers TRACE as a built-in option.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['TRACE Framework', 'Think Reason Analyze Conclude Explain', 'prompt frameworks', 'prompt engineering', 'reasoning prompts', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Prompt Frameworks' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        ],
+      },
+      sections: {
+        whatIsTRACE: {
+          title: 'What the TRACE Framework Is',
+          content: [
+            '**The TRACE Framework is a reasoning-first prompt pattern that forces large language models to show their working, not just their final answer.** It is designed for tasks where you care about how the model arrived at a result, such as technical analysis, strategy, or complex troubleshooting.',
+            'A common interpretation of TRACE is:',
+          ],
+          items: [
+            'Think: Restate and interpret the problem in your own words.',
+            'Reason: Explore possible approaches or hypotheses.',
+            'Analyze: Apply those approaches to the concrete data or situation.',
+            'Conclude: State the final answer or recommendation clearly.',
+            'Explain: Justify the conclusion in a way that humans can quickly follow.',
+          ],
+        },
+        whyTRACEMatters: {
+          title: 'Why the TRACE Framework Matters',
+          content: [
+            '**The TRACE Framework matters because it reduces blind trust in model outputs by making the reasoning path explicit.** When the model explains each stage, you can spot misread requirements, weak assumptions, or gaps in logic early.',
+            'This is especially useful when:',
+          ],
+          items: [
+            'You are making business or technical decisions based on model outputs.',
+            'You need to compare how different models reason about the same problem.',
+            'You want a record you can show to teammates or stakeholders to justify a choice.',
+          ],
+        },
+        fiveStages: {
+          title: 'The Five TRACE Stages in Detail',
+          content: [
+            '**A good TRACE prompt tells the model exactly what to do at each stage so that the reasoning trace is consistent across tasks and models.** You can compress this into one message while still keeping the steps clear.',
+            'Typical stage definitions:',
+          ],
+          items: [
+            'Think: Clarify the task, list key variables, and surface any ambiguities.',
+            'Reason: Outline potential methods, trade-offs, or solution paths.',
+            'Analyze: Apply the chosen method step by step to the actual inputs.',
+            'Conclude: Provide a direct answer or recommendation tied to the question.',
+            'Explain: Summarize the logic in plain language, focusing on the "why" behind the answer.',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Example: Bad vs Good TRACE Prompt',
+          content: [
+            '**The benefit of the TRACE Framework becomes clear when you compare a generic request to a TRACE-based request for the same task.** Here is a simple example for choosing between two product pricing options.',
+            '**[Bad Prompt]**',
+            '"Which of these two pricing plans is better?"',
+            '**[Good Prompt]**',
+            '"You are a SaaS pricing analyst. Use the TRACE process for this decision. Think: Restate the problem and list the key factors that matter (for example revenue, churn risk, customer perception). Reason: Propose 2–3 possible ways to compare the two pricing plans (for example break-even analysis, upgrade path, perceived fairness). Analyze: Apply your preferred comparison method step by step to the data I provide. Show numbers or concrete examples where possible. Conclude: State clearly which pricing plan you recommend and for which customer segments, if relevant. Explain: In 3–5 sentences, justify your recommendation in plain language that a non-technical stakeholder can understand. Data: [insert plan details here]"',
+            'The TRACE version does not just tell you "Plan A is better"; it shows how the model thought about the trade-offs.',
+          ],
+        },
+        whenToUse: {
+          title: 'When to Use the TRACE Framework',
+          content: [
+            '**You should use the TRACE Framework when your main concern is reasoning quality and justification rather than maximum brevity.** TRACE adds overhead compared to a one-line answer, but it pays off when errors are costly.',
+            'Typical use cases include:',
+          ],
+          items: [
+            'Evaluating strategic options, trade-offs, or technical architectures.',
+            'Reviewing complex code changes or debugging tricky issues.',
+            'Analyzing research findings, metrics, or user feedback to draw conclusions.',
+            'Creating explainable recommendations you can share with managers or clients.',
+          ],
+        },
+        howToWrite: {
+          title: 'How to Write a TRACE Prompt',
+          content: [
+            '**Writing a TRACE prompt is straightforward if you explicitly reference the five stages and define expectations for each.** You can start from a simple template and adapt it to your domain.',
+            'A generic pattern looks like this:',
+            '"You are [role]. Use the TRACE process. Think: [how to restate and clarify the problem]. Reason: [how to explore solution paths]. Analyze: [how to apply reasoning to the specific data or context]. Conclude: [how to present the final answer]. Explain: [how to justify the answer for a human reader]. Context/Data: [insert here]."',
+            'Once saved as a template, you only need to change the role and context for each new task.',
+          ],
+        },
+        howPQImplements: {
+          title: 'How PromptQuorum Implements the TRACE Framework',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that includes the TRACE Framework as one of its built-in prompt structures so users can run reasoning-first prompts across several models with one click.** When you choose TRACE inside PromptQuorum, the interface exposes fields aligned with the framework\'s stages and automatically composes them into a single instruction.',
+            'In PromptQuorum, you can:',
+          ],
+          items: [
+            'Fill in task-specific context while the app keeps the TRACE structure consistent.',
+            'Send the same TRACE-based prompt to multiple models in parallel, compare their reasoning traces, and see which provider aligns best with your expectations.',
+            'Save TRACE templates for recurring analyses—such as "feature trade-off review" or "incident postmortem analysis"—and share them across your team.',
+          ],
+        },
+        combiningTRACE: {
+          title: 'Combining TRACE With Other Frameworks',
+          content: [
+            '**You should combine the TRACE Framework with other frameworks by aligning each with a phase of your workflow: TRACE for reasoning, others for drafting or formatting.** A practical pattern is:',
+          ],
+          items: [
+            'Use a generation-oriented framework (for example Single Step, CO-STAR, or CRAFT) to draft content or options.',
+            'Switch to TRACE when you need to analyze choices, validate assumptions, or justify a decision.',
+            'Optionally finish with a specification-style framework (such as SPECS) if the final result must follow a strict structure or schema.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
 }
