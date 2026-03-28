@@ -9546,4 +9546,131 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'single-prompt-method': {
+    en: {
+      theme: 'Frameworks',
+      title: 'The Single Step Prompt Method',
+      intro: 'The Single Step Prompt Method is a minimal prompt framework where you describe the entire task in one carefully structured instruction instead of building a multi-turn conversation. This method reduces overhead, makes results easier to compare across models, and is the default starting framework inside PromptQuorum for new users.',
+      publishDate: '2026-03-24',
+      readTime: '8 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'The Single Step Prompt Method',
+        description: 'How the Single Step Prompt Method works, when to use it, and how PromptQuorum uses it as the main framework for new users.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['Single Step Prompt Method', 'prompt frameworks', 'prompt engineering', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Prompt Frameworks' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+        ],
+      },
+      sections: {
+        whatIsSingleStep: {
+          title: 'What the Single Step Prompt Method Is',
+          content: [
+            '**The Single Step Prompt Method is a one-shot prompt structure that packs role, objective, context, constraints, and output format into a single message to the model.** Instead of asking the AI to "brainstorm together" over several turns, you give it everything it needs upfront. This approach works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models such as those you run via Ollama or LM Studio.',
+            'The core idea is to think once, write once, and execute once. You invest effort in designing one precise prompt, then reuse it across tasks, projects, and models. Because the structure is fixed, you can measure quality, change one parameter at a time, and improve your prompts systematically.',
+          ],
+        },
+        whySingleStepWorks: {
+          title: 'Why Single Step Prompts Work So Well',
+          content: [
+            '**Single step prompts work well because large language models perform best when they receive a complete, unambiguous instruction rather than vague, incremental hints.** When the model sees the full objective and constraints in one message, it can plan its internal reasoning path more effectively.',
+            'This structure also reduces the risk of forgetting important details mid-conversation. If the first message already includes audience, tone, format, and any constraints like word count or banned phrases, you do not have to remember to add them later. For teams, this is critical: a shared single step prompt becomes a repeatable asset instead of an improvised chat.',
+          ],
+        },
+        fiveBlocks: {
+          title: 'The Five Building Blocks of a Single Step Prompt',
+          content: [
+            '**A good Single Step Prompt contains five building blocks: role, objective, context, constraints, and output format.** You can write them as one flowing paragraph or as clearly labeled sections; the method does not require a rigid template as long as each element is present.',
+            'The building blocks are:',
+          ],
+          items: [
+            'Role: Who the model should act as (for example "You are a technical product manager").',
+            'Objective: What you want, expressed as a single clear goal.',
+            'Context: Background information the model needs but will not see elsewhere.',
+            'Constraints: Boundaries such as word count, banned phrases, or citation style.',
+            'Output format: The structure you want back (for example bullets, headings, or JSON).',
+          ],
+        },
+        singleVsMulti: {
+          title: 'Single Step vs Multi-Step Prompting',
+          content: [
+            '**You should use the Single Step Prompt Method when you already know what you want and can specify it upfront, and reserve multi-step prompting for genuinely ambiguous or exploratory tasks.** If your goal is clear, a one-shot instruction will generally produce more consistent results across models and runs.',
+            'The main differences are:',
+          ],
+          items: [
+            'Single step prompts front-load the thinking; you design the prompt carefully once.',
+            'Multi-step prompts spread the thinking across several turns, which can introduce inconsistency and forgotten constraints.',
+            'Single step prompts are easier to store, version, and apply in tools like PromptQuorum, because they are atomic assets rather than conversation logs.',
+          ],
+        },
+        howPQImplements: {
+          title: 'How PromptQuorum Implements the Single Step Prompt Method',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool where the Single Step Prompt Method is the main built-in framework and the default starting point for new users.** When you open PromptQuorum and create a new task, the app guides you to structure a single, complete instruction rather than a loose chat message.',
+            'Inside PromptQuorum, the Single Step framework:',
+          ],
+          items: [
+            'Presents clear fields for role, objective, context, constraints, and output format so you do not forget any building block.',
+            'Applies the same structured prompt to multiple models in parallel, including GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models configured through Ollama or LM Studio.',
+            'Lets you save successful single step prompts as reusable templates for future tasks and for your team members.',
+          ],
+        },
+        whenToStart: {
+          title: 'When to Start With the Single Step Prompt in PromptQuorum',
+          content: [
+            '**If you are unsure which framework to choose in PromptQuorum, you should start with the Single Step Prompt Method and only switch to a more specialized framework when you hit a clear limitation.** This keeps your workflow simple while still allowing advanced optimization later.',
+            'Typical situations where Single Step is the right starting point:',
+          ],
+          items: [
+            'You need a research summary, report, email, or code review with a clear goal and format.',
+            'You want to compare how different models respond to the same well-defined task.',
+            'You are designing new internal templates and want a base pattern that everyone can understand quickly.',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Example: Bad vs Good Single Step Prompt',
+          content: [
+            '**The easiest way to understand the Single Step Prompt Method is to compare an unstructured request with a well-formed single step prompt for the same task.** The example below targets a short B2B email, but the structure applies to any domain.',
+            '**[Bad Prompt]**',
+            '"Write a follow-up email for a potential client."',
+            '**[Good Prompt]**',
+            '"You are a B2B sales copywriter. Objective: Write a follow-up email to a CTO who had a demo of our SaaS tool last week but has not replied yet. Context: The product is a cloud dashboard that helps engineering teams track deployment failures and incident response times. The demo went well, and the CTO mentioned that their on-call process is not standardized. Constraints: Maximum 180 words. Neutral-professional tone. Do not use hype words like \'revolutionary\' or \'game-changing\'. Include one specific next step: a 30-minute call next week with two time slots. Output format: Subject line on a separate line, then the email body in short paragraphs."',
+            'This single message gives the model everything it needs to produce a targeted, reusable email without further clarification.',
+          ],
+        },
+        teamAsset: {
+          title: 'Turning Single Step Prompts Into a Team Asset',
+          content: [
+            '**The Single Step Prompt Method becomes most valuable when you standardize it across your team and store your best prompts as shared templates in PromptQuorum.** This turns individual experimentation into an operational capability.',
+            'In PromptQuorum, you can:',
+          ],
+          items: [
+            'Save a successful Single Step prompt as a named template tied to a particular workflow, such as "Product feature announcement" or "Quarterly customer summary."',
+            'Share templates so that new team members can run high-quality prompts without inventing their own structure.',
+            'Run these prompts across multiple models in one click to see which provider fits each workflow best.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
 }
