@@ -11759,4 +11759,129 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
   },
 
+  'structured-output-json-mode': {
+    en: {
+      theme: 'Techniques',
+      title: 'Structured Output & JSON Mode: Get AI to Return Usable Data',
+      intro: 'Structured output and JSON mode are techniques for getting language models to produce machine-readable results instead of free-form text. They are essential when you want to plug AI directly into applications, dashboards, or automation workflows.',
+      publishDate: '2026-03-26',
+      readTime: '7 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Structured Output & JSON Mode: Get AI to Return Usable Data',
+        description: 'What structured output and JSON mode are, why they matter, and how to design prompts that produce machine-readable results.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['structured output', 'JSON mode', 'prompt engineering', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'Data Formatting' },
+        ],
+      },
+      sections: {
+        whatIsStructured: {
+          title: 'What Structured Output Is',
+          content: [
+            '**Structured output means asking the model to follow a fixed schema—such as lists, tables, or JSON—so downstream tools can parse results reliably.** Instead of a loose paragraph, you define fields, types, and allowed values.',
+            'Structured output can take several forms:',
+          ],
+          items: [
+            'Bullet lists with a fixed number of items.',
+            'Markdown tables with specific columns.',
+            'Key–value pairs for simple attributes.',
+            'Full JSON objects or arrays with predefined keys.',
+          ],
+        },
+        structuredGoal: {
+          content: [
+            'The goal is always the same: turn a fuzzy description ("some notes about the meeting") into a predictable shape ("title, date, attendees, decisions, risks").',
+          ],
+        },
+        whatIsJSON: {
+          title: 'What JSON Mode Is',
+          content: [
+            '**JSON mode is a stricter variant of structured output where the model is instructed—or configured—to return valid JSON only.** In JSON mode, everything the model outputs should be parseable as JSON without additional cleanup.',
+            'A typical JSON schema might look like this:',
+          ],
+          blockquote: '{\n  "title": "string",\n  "summary": "string",\n  "tags": ["string"],\n  "priority": "low | medium | high"\n}',
+        },
+        jsonModeApproach: {
+          content: [
+            'You reflect that schema in your prompt, then ask the model to fill it. Some platforms also provide special settings or APIs that enforce JSON-only responses, reducing the chance of extra commentary.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Why Structured Output and JSON Mode Matter',
+          content: [
+            '**Structured output and JSON mode matter because they let you turn language models into components in larger systems, not just chat helpers.** When the output is predictable, you can:',
+          ],
+          items: [
+            'Feed results directly into databases, CRMs, or analytics tools.',
+            'Trigger automations based on fields like `priority`, `status`, or `confidence`.',
+            'Build UIs that display model results in cards, tables, or dashboards without manual formatting.',
+          ],
+        },
+        debuggingBenefit: {
+          content: [
+            'They also make prompts easier to debug. If the structure is broken, you know the problem is in the prompt or schema, not in some vague "quality" dimension.',
+          ],
+        },
+        example: {
+          title: 'Example: Free Text vs Structured JSON',
+          content: [
+            '**The difference becomes clear when you compare a free-text prompt with a structured JSON prompt for the same task.** Here we classify and summarize a customer email.',
+            '**[Bad Prompt]**',
+            '"Read this customer email and summarize what they want."',
+            '**[Good Prompt – JSON Mode]**',
+            '"You are a customer support assistant. Read the customer email below and extract key information into a JSON object. Requirements: Output valid JSON only, with double-quoted keys and string values. Do not include any explanations or extra text outside the JSON. If a value is missing, use an empty string. JSON schema: {\n  "issue_type": "string",\n  "urgency": "low | medium | high",\n  "summary": "string (max 25 words)",\n  "customer_sentiment": "negative | neutral | positive"\n} Customer email: [paste email text here]"',
+            'The "good" version defines the schema, valid values, and JSON-only requirement, making the output straightforward to parse and use in other systems.',
+          ],
+        },
+        bestPractices: {
+          title: 'Best Practices for Structured Output and JSON Mode',
+          content: [
+            '**To get reliable structured outputs, you need to be explicit, consistent, and strict in your prompts.** A few practices help a lot:',
+          ],
+          items: [
+            'Show the exact schema you expect, including allowed values for enums.',
+            'State clearly that nothing except the JSON (or structure) should be returned.',
+            'Use short, unambiguous key names (for example `issue_type`, `urgency`, `summary`).',
+            'Add examples of valid outputs when the task is complex or sensitive.',
+            'For nested structures, build them up step by step and test with real inputs.',
+          ],
+        },
+        practicesAddendum: {
+          content: [
+            'If you still see formatting issues, you can add a simple instruction like "If you are unsure, leave the field as an empty string instead of guessing."',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Structured Output and JSON Mode in PromptQuorum',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that works well with structured output and JSON mode because it lets you apply the same schema across multiple models.** You define your structured prompt once and see how different models respect it.',
+            'In PromptQuorum, you can:',
+          ],
+          items: [
+            'Use specification-focused frameworks (like SPECS or RTF with format constraints) to encode JSON schemas directly into prompts.',
+            'Run the same structured-output prompt on several models side by side, then measure which one produces the cleanest, most parseable JSON.',
+            'Save structured-output and JSON-mode prompts as templates, so your team always uses proven schemas for summarization, classification, or extraction tasks.',
+          ],
+        },
+        pqConclusion: {
+          content: [
+            'By standardizing structured output and JSON mode at the framework level, PromptQuorum helps you turn unstructured text into consistent, automation-ready data.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
 }
