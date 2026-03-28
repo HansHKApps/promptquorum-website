@@ -17,6 +17,7 @@ export const PE_SLUG_TO_KEY: Record<string, string> = {
   'ai-limitations-what-llms-cant-do': 'ai-limitations-what-llms-cant-do',
   'open-source-vs-proprietary-llms': 'open-source-vs-proprietary-llms',
   'geopolitics-and-ai': 'geopolitics-and-ai',
+  'prompt-engineering-glossary': 'prompt-engineering-glossary',
 
   // Frameworks
   'which-prompt-framework-should-you-use': 'which-framework-to-use',

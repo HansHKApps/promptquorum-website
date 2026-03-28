@@ -33,6 +33,7 @@ export const themes: PETheme[] = [
       'ai-limitations-what-llms-cant-do',
       'open-source-vs-proprietary-llms',
       'geopolitics-and-ai',
+      'prompt-engineering-glossary',
     ],
   },
   {

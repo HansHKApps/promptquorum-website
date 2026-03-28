@@ -25,6 +25,7 @@ const TITLE_TO_SLUG: Record<string, string> = {
   'Tokens, Costs & Limits: The Economics of AI Prompting': 'tokens-costs-limits-economics-of-ai-prompting',
   "System Prompt vs. User Prompt: What's the Difference?": 'system-prompt-vs-user-prompt-whats-the-difference',
   'GPT, Claude or Gemini? How to Pick the Right Model': 'gpt-claude-or-gemini-how-to-pick-the-right-model',
+  'Prompt Engineering Glossary: 100 Key Terms': 'prompt-engineering-glossary',
   // Frameworks
   'Which Prompt Framework Should You Use?': 'which-prompt-framework-should-you-use',
   'The Single-Step Prompt Method': 'the-single-step-prompt-method',
@@ -69,6 +70,19 @@ const CATEGORY_ANCHORS: Record<string, string> = {
   'Frameworks': '/prompt-engineering#frameworks',
   'Techniques': '/prompt-engineering#techniques',
   'Use Topics': '/prompt-engineering#use-topics',
+}
+
+// Maps external citation names to their URLs
+const EXTERNAL_CITATIONS: Record<string, string> = {
+  'Brown et al., 2020 – Language Models are Few-Shot Learners': 'https://arxiv.org/abs/2005.14165',
+  'Prompt Engineering Guide – promptingguide.ai': 'https://www.promptingguide.ai/',
+  'Prompt Engineering – Wikipedia': 'https://en.wikipedia.org/wiki/Prompt_engineering',
+  'OpenAI – Best Practices for Prompt Engineering': 'https://platform.openai.com/docs/guides/prompt-engineering',
+  'Google Cloud – Prompt Engineering for AI Guide': 'https://cloud.google.com/discover/what-is-prompt-engineering',
+  'Prompt engineering as a new 21st century skill – Frontiers': 'https://www.frontiersin.org/articles/10.3389/feduc.2023.1209897/full',
+  'Prompt Engineering from 2020 to 2025 – AI Supremacy': 'https://www.aisupremacy.org/blog/prompt-engineering-evolution-2020-2025',
+  'The Evolution of Prompt Engineering to Context Design – 2026': 'https://www.promptengineering.ai/articles/context-design-evolution',
+  'McKinsey 2024 State of AI': 'https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024',
 }
 
 // Render inline link placeholders like [Techniques: Chain-of-Thought Prompting]
@@ -139,6 +153,28 @@ function renderInlineLinks(text: string) {
             {title || label}
           </Link>
         )
+      }
+
+      // External citation: [External: Name – Description]
+      if (label.startsWith('External: ')) {
+        const citationName = label.slice(10) // Remove "External: " prefix
+        const url = EXTERNAL_CITATIONS[citationName]
+
+        if (url) {
+          return (
+            <a
+              key={i}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-medium hover:underline"
+            >
+              {citationName}
+            </a>
+          )
+        }
+        // Fallback if citation not found in mapping
+        return <span key={i} className="text-primary font-medium">{citationName}</span>
       }
 
       // Unknown format — plain styled text
