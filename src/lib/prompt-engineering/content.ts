@@ -10535,4 +10535,123 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'rtf-framework': {
+    en: {
+      theme: 'Frameworks',
+      title: 'The RTF Framework',
+      intro: 'The RTF Framework is a prompt structure that focuses on Role, Task, and Format so you can give models a complete instruction in one compact message. PromptQuorum includes the RTF Framework as a built-in option that any user can select and apply across all supported models.',
+      publishDate: '2026-03-24',
+      readTime: '6 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'The RTF Framework',
+        description: 'How the RTF Framework (Role, Task, Format) works, when to use it, and how PromptQuorum offers RTF as a built-in option.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['RTF Framework', 'Role Task Format', 'prompt frameworks', 'prompt engineering', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Prompt Frameworks' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+        ],
+      },
+      sections: {
+        whatIsRTF: {
+          title: 'What the RTF Framework Is',
+          content: [
+            '**The RTF Framework is a three-part prompt pattern that tells the model who it is, what to do, and exactly how the answer should look.** Instead of sending a loose question, you specify Role, Task, and Format explicitly. This works across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models you run via Ollama or LM Studio.',
+            'RTF is intentionally minimal. With only three fields, it is easy to remember, fast to fill in, and flexible enough for many day-to-day tasks. You can treat it as a "default prompt skeleton" whenever you are not sure which specialized framework to use.',
+          ],
+        },
+        threeComponents: {
+          title: 'The Three RTF Components',
+          content: [
+            '**A strong RTF prompt clearly defines each of the three components so the model has no ambiguity about its job.** You can write them as labeled lines or as one sentence that still contains all three parts.',
+            'Typical definitions:',
+          ],
+          items: [
+            'Role: The perspective or expertise the model should adopt (for example "You are a senior data analyst").',
+            'Task: The concrete action you want, described in one or two sentences.',
+            'Format: The structure, length, and style of the output (for example "3 bullet points plus a 2-sentence summary").',
+          ],
+        },
+        whyRTFIsUseful: {
+          title: 'Why the RTF Framework Is Useful',
+          content: [
+            '**The RTF Framework is useful because it gives you most of the benefits of more complex frameworks with almost no overhead.** It forces you to make three decisions—who, what, and how—before sending a prompt.',
+            'Practical advantages include:',
+          ],
+          items: [
+            'Faster prompt writing than multi-section frameworks for routine work.',
+            'Better consistency across models and runs, since the format is always explicit.',
+            'Easy onboarding for teammates who can learn RTF in a few minutes and reuse it everywhere.',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Example: Bad vs Good RTF Prompt',
+          content: [
+            '**The difference between an unstructured request and an RTF-based prompt becomes clear when you look at the same task written both ways.** Here is an example for summarizing a meeting.',
+            '**[Bad Prompt]**',
+            '"Summarize this meeting."',
+            '**[Good Prompt]**',
+            '"Role: You are an operations manager summarizing a project status meeting for senior leadership. Task: Read the transcript and identify the key decisions, open risks, and next steps discussed in the meeting. Format: Output a Markdown summary with three sections (`Decisions`, `Risks`, `Next steps`). Under each section, use 3–5 bullet points. Keep the total summary under 250 words."',
+            'The RTF version tells the model exactly how to think about the content and how to package the result so others can use it immediately.',
+          ],
+        },
+        whenToUse: {
+          title: 'When to Use the RTF Framework',
+          content: [
+            '**You should use the RTF Framework when you want a simple, reusable pattern that still enforces clarity and structure.** It is a strong default whenever you do not need long specifications or multi-step reasoning traces.',
+            'Typical use cases include:',
+          ],
+          items: [
+            'Short reports, recaps, and summaries for emails or chat.',
+            'Drafting responses to customers or internal stakeholders with clear structure.',
+            'Generating small code snippets or refactors with a specified output format.',
+            'Quick content pieces like product blurbs, FAQ entries, or simple checklists.',
+          ],
+        },
+        howPQImplements: {
+          title: 'How PromptQuorum Implements the RTF Framework',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that includes the RTF Framework as one of its built-in prompt structures so users can apply Role–Task–Format prompting in a consistent way.** When you choose the RTF option inside PromptQuorum, the interface exposes fields for Role, Task, and Format and assembles them into a single well-formed instruction.',
+            'In PromptQuorum, the RTF Framework lets you:',
+          ],
+          items: [
+            'Fill in Role, Task, and Format once and send the same structured prompt to multiple models such as GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models configured through Ollama or LM Studio.',
+            'Save RTF prompts as templates for recurring workflows—for example "weekly status summary," "customer reply draft," or "bug report recap."',
+            'Share RTF templates across your team so that even non-experts can create prompts that produce consistent, structured outputs.',
+          ],
+        },
+        combiningRTF: {
+          title: 'Combining RTF With Other Frameworks',
+          content: [
+            '**You should combine the RTF Framework with other frameworks by treating RTF as your lightweight default and switching to heavier frameworks when constraints increase.** A practical pattern is:',
+          ],
+          items: [
+            'Start with RTF for most new tasks where you just need clear structure quickly.',
+            'Move to SPECS when you need strict schemas, examples, and constraints.',
+            'Use TRACE or APE when you want explicit reasoning steps before the final answer.',
+            'Use creative frameworks like CRAFT when audience and tone are central.',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
 }
