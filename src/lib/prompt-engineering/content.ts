@@ -7963,6 +7963,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
+    },
     de: {
   theme: 'Fundamentals',
   title: 'GPT, Claude oder Gemini: Wie Sie das richtige KI-Modell auswählen',
