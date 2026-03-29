@@ -8239,6 +8239,307 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       content: 'Das beste KI-Modell für Sie ist nicht GPT oder Claude oder Gemini — es ist die, die die beste Arbeit auf IHRER Aufgabe, IHREM Daten und IHRER Region leistet. Verschiedene Modelle dominieren verschiedene Jobs. GPT-4o ist am besten für Tool-Integration. Claude schreibt am besten. Gemini kann die längsten Dokumente verarbeiten. DeepSeek und Baidu ERNIE sind erforderlich, wenn Ihre Daten in Festlandchina sind. Verwenden Sie PromptQuorum, um alle auf Ihrer echten Aufgabe zu testen — das Modell, das gewinnt, ist Ihre Antwort.',
     },
   },
+  fr: {
+    theme: 'Fundamentals',
+    title: 'GPT, Claude ou Gemini : Comment choisir le bon modèle IA',
+    intro: 'Aucun modèle IA unique n\'est le meilleur pour chaque tâche. GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek et Baidu ERNIE excellent chacun dans des tâches, régions et budgets différents. Ce guide vous offre un cadre décisionnel pratique — pas une autre liste de benchmarks.',
+    publishDate: '2026-03-23',
+    readTime: '12 min de lecture',
+    sections: {
+      definition: {
+        title: 'Aucun modèle IA « meilleur » — choisissez par tâche',
+        content: [
+          '**Aucun modèle IA unique n\'est le meilleur pour toutes les tâches. GPT-4o excelle à l\'intégration d\'outils et au raisonnement; Claude 4.6 Sonnet domine la qualité de l\'écriture et du code; Gemini 2.5 Pro offre des performances rentables et une intégration profonde avec Google Workspace; DeepSeek et Baidu ERNIE sont essentiels pour les charges de travail en Chine continentale.**',
+          'Lorsque vous avez une nouvelle tâche, la première question ne devrait pas être « quel est le meilleur modèle? » mais plutôt « quel modèle est le meilleur pour CETTE tâche, dans CETTE région, avec CE budget? » Les benchmarks et les classements changent tous les quelques mois. Votre tâche réelle — votre style d\'écriture spécifique, votre base de code, vos clients en Chine, votre sensibilité aux données — devrait guider le choix.',
+          'PromptQuorum est un outil de dispatch multi-modèle IA qui résout cela directement: envoyez une invite structurée unique à GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, Baidu ERNIE et LLMs locaux (Ollama, LM Studio) simultanément. Voyez toutes les réponses côte à côte. Laissez PromptQuorum noter quel modèle fonctionne le mieux pour VOTRE tâche, VOS données, VOTRE voix de marque — pas les benchmarks YouTube.',
+        ],
+      },
+
+      decisionMatrix: {
+        title: 'Matrice de décision rapide — choisissez votre modèle de départ',
+        content: '**Choisissez votre modèle de départ en fonction de votre tâche principale. La plupart des équipes utilisent plusieurs modèles — commencez par le bon et changez selon les besoins.**',
+        items: [
+          'GPT-4o gagne: workflows multi-agents, intégration d\'outils, écosystème API, multimodal (images/audio). Commencez ici si les intégrations sont importantes.',
+          'Claude 4.6 Sonnet gagne: qualité de l\'écriture, révision de code, profondeur du raisonnement, sécurité d\'entreprise. Commencez ici pour la qualité du contenu/code.',
+          'Gemini 2.5 Pro gagne: longs documents (2M tokens), traitement par lots, efficacité des coûts, Google Workspace. Commencez ici pour l\'analyse à grande échelle de documents.',
+          'DeepSeek/Baidu ERNIE gagne: Chine continentale (requis pour la latence/accès), tâches sensibles aux coûts à haut volume. Seul choix si les données restent en Chine.',
+          'Utilisez PromptQuorum pour tester les 5 sur votre tâche réelle — les benchmarks mentent; vos données disent la vérité.',
+        ],
+        tableFormat: true,
+        columns: ['Votre priorité', 'Commencez par', 'Pourquoi', 'Quand changer'],
+        rows: [
+          { 'Votre priorité': 'Écriture & analyse complexe', 'Commencez par': 'Claude 4.6 Sonnet', 'Pourquoi': 'Qualité de sortie la plus élevée; réduit les cycles de révision', 'Quand changer': 'Basculez vers GPT-4o si vous avez besoin de workflows multi-outils ou d\'intégrations' },
+          { 'Votre priorité': 'Codage & vitesse de développement', 'Commencez par': 'Gemini 2.5 Pro ou Flash', 'Pourquoi': '2M contexte (chargez des projets complets) + meilleur coût/qualité', 'Quand changer': 'Basculez vers Claude pour le débogage approfondi ou la révision de code; GPT pour l\'intégration d\'outils' },
+          { 'Votre priorité': 'Workflows multi-agents / APIs', 'Commencez par': 'GPT-4o', 'Pourquoi': 'Écosystème tiers le plus riche; meilleur appel d\'outils', 'Quand changer': 'Basculez vers Gemini pour économiser sur les tâches à haut volume' },
+          { 'Votre priorité': 'Utilisateurs/données Chine continentale', 'Commencez par': 'DeepSeek ou Baidu ERNIE', 'Pourquoi': 'Seul choix pratique — modèles occidentaux restreints/lents', 'Quand changer': 'N/A — les exigences de conformité/latence rendent le changement impossible' },
+        ],
+      },
+
+      tldr: {
+        title: 'Points clés',
+        content: '**Différents modèles excellent dans différentes tâches — GPT-4o domine l\'intégration d\'outils, Claude excelle à l\'écriture, Gemini gère mieux les longs documents, et DeepSeek/ERNIE sont requis pour la Chine.**',
+        isTldr: true,
+        items: [
+          '**GPT-4o:** outils + écosystème. Meilleur pour les workflows multi-agents, l\'appel d\'outils et les intégrations tierces les plus étendues.',
+          '**Claude 4.6 Sonnet:** raisonnement réfléchi + écriture. Meilleur pour les rapports, analyses, révisions de code et exigences de sécurité d\'entreprise.',
+          '**Gemini 2.5 Pro:** écosystème Google + coûts. Meilleur pour les équipes dans Google Workspace, codage par lots et recherche en contexte long.',
+          '**DeepSeek / Baidu ERNIE:** charges de travail axées sur la Chine. Obligatoire pour la Chine continentale en raison de la latence, des restrictions d\'accès et des exigences réglementaires.',
+          '**Utilisez plus d\'un modèle; routez par tâche.** Différents modèles excellent dans différents emplois. Utilisez Claude pour l\'écriture, Gemini pour le codage, GPT pour les agents, DeepSeek/ERNIE pour les utilisateurs chinois.',
+          '**PromptQuorum:** envoyez une invite simultanément à tous les modèles, comparez les résultats, voyez quel modèle gagne pour VOTRE tâche.',
+        ],
+      },
+
+      whatMatters: {
+        title: 'Qu\'est-ce qui compte lors du choix d\'un modèle IA?',
+        content: '**La sélection de modèle devrait commencer par votre cas d\'usage et vos contraintes, pas le battage ou la position du classement.** Voici les 7 dimensions qui comptent réellement:',
+        items: [
+          '**Qualité pour votre tâche:** Ce modèle excelle-t-il à l\'écriture, codage, analyse ou raisonnement? Vérifiez les performances sur des tâches similaires aux vôtres — pas des benchmarks génériques.',
+          '**Coût par token et niveaux de tarification:** Les modèles frontier coûtent $15–60 par million de tokens; les modèles budgétaires coûtent $0,15–3. Le prix varie selon les tokens d\'entrée et de sortie. [Voir l\'économie des tokens en détail.](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+          '**Latence et limites de débit:** À quelle vitesse répond-il? Peut-il gérer votre volume de demandes? Certains modèles sont limités à 100 requêtes par minute; d\'autres supportent 10 000+.',
+          '**Taille de la fenêtre de contexte:** GPT-4o: 128k tokens. Claude 4.6 Sonnet: 200k tokens. Gemini 2.5 Pro: 2M tokens (10× plus grand, meilleur pour les longs documents). [En savoir plus sur les fenêtres de contexte.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
+          '**Capacités multimodales:** Peut-il traiter les images, l\'audio ou la vidéo? GPT-4o et Gemini 2.5 Pro supportent bien les images. DeepSeek et Baidu ERNIE se concentrent sur le texte.',
+          '**Écosystème et intégrations:** Combien d\'outils tiers, plugins et APIs le supportent? GPT-4o domine ici. Les modèles locaux via Ollama ou LM Studio supportent des milliers d\'intégrations communautaires.',
+          '**Géographie et règles de résidence des données:** Est-il disponible dans votre région? Vos données doivent-elles rester dans un pays ou un réseau d\'entreprise? La Chine continentale exige des modèles locaux (DeepSeek, Baidu ERNIE) en raison des réglementations et de la latence.',
+        ],
+      },
+
+      gptSection: {
+        title: 'Quand utiliser GPT-4o?',
+        content: '**GPT-4o est le modèle multimodal frontier d\'OpenAI — le plus fort pour les workflows agentic lourds en outils avec les intégrations tierces et outils les plus étendus.** Utilisez GPT-4o quand les outils, intégrations et capacités multimodales sont plus importants que le coût.',
+        items: [
+          '**Forces:** Excellent raisonnement général et chat sur tous les domaines. Fortes capacités multimodales — traite de manière fiable les images, l\'audio et parfois la vidéo. Appel d\'outils et intégrations de classe mondiale (agents, plugins IDE, pile d\'entreprise). De confiance en production par des millions de développeurs.',
+          '**Meilleurs cas d\'usage:** Workflows agents multi-étapes. Chaînes complexes où l\'appel d\'outils (APIs, bases de données, exécution de code) est requis. Tâches nécessitant l\'analyse de captures d\'écran ou d\'images. Projets d\'écosystème OpenAI (ChatGPT, Assistants API, Codex, fine-tuning).',
+          '**Compromis:** Les modèles frontier premium coûtent plus cher par token ($5 entrée / $15 sortie par million). La sortie peut être verbeuse — nécessite la discipline dans les invites pour assurer la concision.',
+          '**Fenêtre de contexte:** 128 000 tokens (gère ~100 pages de texte).',
+        ],
+      },
+
+      claudeSection: {
+        title: 'Quand utiliser Claude 4.6 Sonnet?',
+        content: '**Claude 4.6 Sonnet d\'Anthropic excelle au raisonnement réfléchi, à la qualité de l\'écriture et au refactorisation du code — avec une sécurité de classe mondiale.** Utilisez Claude quand la qualité de sortie, la clarté et la fiabilité sont les plus importantes.',
+        items: [
+          '**Forces:** Écriture de haute qualité et résumés; les sorties sont concises, bien structurées et prêtes pour la publication. Excellente compréhension du code, refactorisation et explication — découvre souvent des bogues que d\'autres modèles manquent. Bon traitement du contexte long pour la recherche et les workflows de documents. Culture de sécurité forte; préféré dans les industries réglementées.',
+          '**Meilleurs cas d\'usage:** Rapports, analyses et travaux de connaissance où la structure et la clarté sont essentielles. Codebases et discussions d\'architecture complexes. Contextes d\'entreprise avec exigences de conformité et de sécurité. Contenu nécessitant une minimisation des modifications.',
+          '**Compromis:** Points de prix plus élevés pour les niveaux supérieurs; peut être excessif pour les tâches simples. Certaines intégrations tierces sont plus récentes que les équivalents GPT-4o.',
+          '**Fenêtre de contexte:** 200 000 tokens (gère ~150 pages de texte).',
+        ],
+      },
+
+      geminiSection: {
+        title: 'Quand utiliser Gemini 2.5 Pro?',
+        content: '**Gemini 2.5 Pro de Google DeepMind est rentable avec le traitement du contexte long le plus fort et l\'intégration profonde avec Google Workspace.** Utilisez Gemini quand vous traitez de nombreux longs documents ou quand votre équipe vit dans Google Workspace.',
+        items: [
+          '**Forces:** Très bonnes performances de codage à des prix attractifs — surtout les modèles Flash de mid-tier. Traitement du contexte long le plus fort (2M tokens) et retrieval; excellent pour la recherche sur de nombreux documents + recherche web en direct. Intégration native avec Google Workspace (Docs, Sheets, Drive, Gmail, Slides).',
+          '**Meilleurs cas d\'usage:** Équipes vivant dans Google Workspace. Codage par lots et tâches de données où le ratio coût/performance est critique. Workflows de recherche combinant des documents locaux avec recherche web. Traitement de 100+ pages de PDFs ou transcriptions.',
+          '**Compromis:** Le ton de l\'écriture peut paraître plus prudent ou générique que Claude ou GPT. En dehors de l\'écosystème Google, certaines intégrations traînent derrière les concurrents.',
+          '**Fenêtre de contexte:** 2 000 000 tokens (plus fort; gère ~1 500 pages de texte).',
+        ],
+      },
+
+      coding: {
+        title: 'Quel modèle IA est meilleur pour le codage en 2026?',
+        content: '**Claude 4.6 Sonnet excelle à la qualité du code et au refactorisation; GPT-4o domine l\'intégration d\'outils et le raisonnement multi-fichiers; Gemini 2.5 Pro offre le meilleur ratio coût/qualité pour les tâches par lots; DeepSeek est le choix pour les développeurs de Chine continentale.** Le modèle « meilleur » pour le codage dépend de votre défi principal: qualité du code, largeur d\'intégration, coût par token ou géographie.',
+        items: [
+          '**GPT-4o:** Le plus fort pour les tâches de codage multi-étapes avec usage d\'outils (accès système de fichiers, APIs, commandes shell). Excellent au raisonnement sur les grandes codebases et à la génération de workflows complexes. Meilleur si les intégrations avec GitHub, AWS, APIs sont critiques.',
+          '**Claude 4.6 Sonnet:** Meilleur pour la révision de code, le refactorisation et les discussions d\'architecture. Détecte les bogues subtils que d\'autres modèles manquent. Préféré pour maintenir les codebases existantes et expliquer le code hérité. Coût de token plus élevé mais réduit souvent les allers-retours.',
+          '**Gemini 2.5 Pro:** Meilleur coût/qualité pour les tâches de codage par lots (traitement de données, scripts utilitaires, automation). 2M contexte signifie charger des projets entiers à la fois. Excellent pour la vélocité prototype-à-production où le coût compte.',
+          '**DeepSeek:** Compétitif avec GPT pour le codage mais 10× moins cher. Meilleur pour les développeurs de Chine continentale et tâches de codage sensibles aux coûts (scaffolding, boilerplate, refactorisation routinière). Très fort sur les problèmes d\'algorithme et la programmation compétitive.',
+        ],
+      },
+
+      longContext: {
+        title: 'Meilleur LLM pour le contexte long ou les grands documents 2026?',
+        content: '**Gemini 2.5 Pro domine avec 2M tokens de contexte (gère ~1 500 pages); Claude 4.6 Sonnet avec 200k tokens est suivant (gère ~150 pages); GPT-4o à 128k tokens suffit pour la plupart des tâches sur un seul document.** Choisissez en fonction de la taille du document, de la précision de retrieval, et si vous devez charger plusieurs fichiers simultanément.',
+        image: '/images/context-windows-chart.svg',
+        imageCaption: 'Comparaison de fenêtre de contexte: Gemini 2.5 Pro supporte un contexte 10× plus grand que GPT-4o, permettant des projets entiers et des archives de documents en une seule requête.',
+        items: [
+          '**Gemini 2.5 Pro (2M tokens):** Chargez des codebases entières, des ensembles de documents juridiques ou des archives de recherche. L\'intégration de recherche web vous permet de référencer des sources externes dans le contexte long. Meilleur pour: examens de diligence raisonnable, analyse réglementaire, recherche dans la base de connaissances, traitement de 100+ PDFs pages.',
+          '**Claude 4.6 Sonnet (200k tokens):** Assez fort pour la plupart des documents: livres, thèses, walkthrough de codebase longueur. Excellent pour l\'analyse détaillée et l\'extraction d\'informations nuancées. Compromis: coût plus élevé par token, mais la qualité peut réduire les cycles de révision.',
+          '**GPT-4o (128k tokens):** Suffisant pour les documents uniques sous 100 pages. Utilisez quand vous avez besoin d\'appel d\'outils aux côtés du contexte long (système de fichiers, APIs). Compromis: ne peut pas charger plusieurs grands documents; nécessite chunking/division.',
+          '**Stratégie pratique:** Pour les tâches très longues (workflows multi-documents), utilisez d\'abord Gemini (moins cher, plus grand contexte), puis affinez avec Claude si la qualité de sortie a besoin de finition.',
+        ],
+      },
+
+      chineseModels: {
+        title: 'Comment choisir un modèle IA si vous êtes en Chine ou avez besoin de faible latence?',
+        content: [
+          '**Pour les utilisateurs et données en Chine continentale, DeepSeek et Baidu ERNIE ne sont pas optionnels — ils sont requis.** Les modèles frontier occidentaux (GPT-4o, Claude, Gemini) sont souvent restreints ou à latence élevée en Chine en raison des restrictions de réseau et des exigences réglementaires. En 2026, la latence (3–10 secondes de temps de réponse vs 500ms localement) et la conformité (résidence des données, modération du contenu) sont des douleurs énormes. Utiliser un modèle occidental en Chine continentale signifie soit: (1) service indisponible, (2) latence inacceptable pour les utilisateurs, (3) violations réglementaires. Les modèles locaux éliminent tous les trois.',
+          '**DeepSeek (modèle frontier, codage compétitif):** Performances compétitives en codage et raisonnement, tarification agressive, excellent support des langues chinoises et tâches mixtes chinois-anglais. Infrastructure native Chine continentale = latence sub-500ms. Meilleur pour les workflows de développeurs en Chine continentale et les charges de travail sensibles aux coûts à haut volume. Compromis: écosystème plus petit en dehors de la Chine, moins d\'intégrations tierces vs GPT/Claude/Gemini.',
+          '**Baidu ERNIE (entreprise et consommateur):** Intégration étroite avec la recherche Baidu et le cloud, ancrage fort dans le contenu web chinois et les données d\'entreprise. Entièrement conforme aux exigences réglementaires de Chine continentale (modération du contenu, résidence des données, filtrage des mots-clés). Meilleur pour les applications consommateur et d\'entreprise ciblant les utilisateurs chinois, les applications sur l\'infrastructure Baidu Cloud où la conformité est non-négociable. Compromis: principalement optimisé pour le chinois, l\'anglais et les autres langues peuvent traîner derrière les modèles frontier occidentaux.',
+        ],
+      },
+
+      comparison: {
+        title: 'GPT-4o vs Claude 4.6 Sonnet vs Gemini 2.5 Pro: Comparaison rapide',
+        content: '**Ce tableau compare 5 modèles IA sur 8 dimensions clés: raisonnement général, écriture, codage, traitement du contexte long, support multimodal, efficacité des coûts, écosystème global et accès à la Chine.**',
+        image: '/images/model-strengths-radar.svg',
+        imageCaption: 'Diagramme radar: Claude domine l\'écriture & raisonnement; GPT-4o excelle aux outils & multimodal; Gemini gagne sur coûts & contexte-long. Aucun gagnant unique — appareille le modèle à la tâche.',
+        tableFormat: true,
+        columns: ['Dimension', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro', 'DeepSeek', 'Baidu ERNIE'],
+        rows: [
+          { 'Dimension': 'Q&A Générale', 'GPT-4o': 'Excellent global', 'Claude 4.6 Sonnet': 'Très bon, prudent', 'Gemini 2.5 Pro': 'Très bon + retrieval', 'DeepSeek': 'Fort, meilleur pour CN', 'Baidu ERNIE': 'Fort, meilleur pour CN' },
+          { 'Dimension': 'Écriture', 'GPT-4o': 'Excellent, parfois verbeux', 'Claude 4.6 Sonnet': 'Structure & clarté excellent', 'Gemini 2.5 Pro': 'Bon, ton neutre', 'DeepSeek': 'Bon, chinois-first', 'Baidu ERNIE': 'Bon, chinois-first' },
+          { 'Dimension': 'Codage', 'GPT-4o': 'Fort', 'Claude 4.6 Sonnet': 'Excellent, premium', 'Gemini 2.5 Pro': 'Excellent rapport qualité-prix', 'DeepSeek': 'Très fort pour dév CN', 'Baidu ERNIE': 'Bon, business appliqué' },
+          { 'Dimension': 'Contexte long', 'GPT-4o': 'Fort (128k)', 'Claude 4.6 Sonnet': 'Fort (200k)', 'Gemini 2.5 Pro': 'Plus fort (2M) + web', 'DeepSeek': 'Bon', 'Baidu ERNIE': 'Bon avec données Baidu' },
+          { 'Dimension': 'Multimodal', 'GPT-4o': 'Leader (image/audio)', 'Claude 4.6 Sonnet': 'Bonne vision', 'Gemini 2.5 Pro': 'Très fort (vidéo/web)', 'DeepSeek': 'Varie', 'Baidu ERNIE': 'Texte + web CN' },
+          { 'Dimension': 'Efficacité des coûts', 'GPT-4o': 'Moyen–Élevé', 'Claude 4.6 Sonnet': 'Plus élevé, qualité premium', 'Gemini 2.5 Pro': 'Très rentable', 'DeepSeek': 'Très compétitif', 'Baidu ERNIE': 'Compétitif (ent CN)' },
+          { 'Dimension': 'Écosystème global', 'GPT-4o': 'Le plus étendu', 'Claude 4.6 Sonnet': 'Croissance, esp. d\'entreprise', 'Gemini 2.5 Pro': 'Fort dans monde Google', 'DeepSeek': 'Limité hors Chine', 'Baidu ERNIE': 'Fort écosystème Baidu' },
+          { 'Dimension': 'Accès/latence Chine', 'GPT-4o': 'Souvent restreint', 'Claude 4.6 Sonnet': 'Souvent restreint', 'Gemini 2.5 Pro': 'Souvent restreint', 'DeepSeek': 'Natif / faible latence', 'Baidu ERNIE': 'Natif / requis' },
+        ],
+      },
+
+      decisionFramework: {
+        title: 'Comment choisir le bon modèle IA?',
+        content: [
+          '**Commencez par votre cas d\'usage principal, intégrez vos contraintes, puis choisissez le modèle le mieux adapté aux deux.**',
+          '**Si: Assistant général, workflows agentic multi-outils.** Alors: Commencez par GPT-4o. Vous avez besoin de l\'écosystème d\'outils le plus étendu et des intégrations.',
+          '**Si: Écriture approfondie, analyse, code complexe ou fortes exigences de sécurité.** Alors: Commencez par Claude 4.6 Sonnet. La qualité et la fiabilité sont plus importantes que le coût.',
+          '**Si: Utilisation intensive de Google Workspace, codage/données par lots ou traitement de 100+ longs documents.** Alors: Commencez par Gemini 2.5 Pro. Le contexte long et l\'intégration d\'écosystème économisent du temps.',
+          '**Si: Utilisateurs et données principalement en Chine continentale.** Alors: Commencez par DeepSeek (codage-lourd) ou Baidu ERNIE (applications consommateur/entreprise). Les modèles occidentaux sont restreints ou à latence élevée.',
+        ],
+        items: [
+          '**Budget serré, volume élevé:** Favorisez Gemini Flash / DeepSeek / modèles GPT plus petits.',
+          '**Conformité stricte, contrats d\'entreprise:** Claude d\'entreprise, Baidu ERNIE pour la Chine.',
+          '**Besoin multimodal (captures d\'écran, graphiques, audio):** GPT-4o ou Gemini 2.5 Pro.',
+          '**Données privées uniquement:** LLMs locaux via Ollama ou LM Studio (aucune donnée ne quitte votre appareil).',
+        ],
+      },
+
+      costAndLimits: {
+        title: 'Comment les coûts et limites de tokens se comparent-ils?',
+        content: '**Tous les modèles majeurs sont tarifés par token d\'entrée et sortie, avec des limites de débit basées sur votre niveau.** Les modèles frontier coûtent 10–100× plus par token que les modèles budgétaires. La tarification varie selon la région (surtout la Chine).',
+        items: [
+          '**Modèles frontier (les plus chers par token):** GPT-4o ($5 entrée / $15 sortie par million de tokens), Claude 4.6 Sonnet (~$3 entrée / $15 sortie par million de tokens).',
+          '**Mid-tier rentable:** Gemini 2.5 Flash ($0,075 entrée / $0,30 sortie par million de tokens).',
+          '**Modèles budgétaires compétitifs:** DeepSeek (tarification agressive), modèles locaux via Ollama/LM Studio (gratuits, exécution sur appareil).',
+          '**Limites de débit:** Les modèles frontier commencent souvent à 100 req/min; le niveau échelonné peut atteindre 10 000+ req/min. Les modèles locaux dépendent de votre matériel.',
+          '[Voir l\'économie détaillée des tokens et les calculs de coûts.](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+        ],
+      },
+
+      whyMultipleModels: {
+        title: 'Pourquoi utiliser plusieurs modèles IA au lieu d\'un en 2026?',
+        content: '**Les benchmarks et les classements changent tous les quelques mois. Différentes tâches sont mieux servies par différents modèles. Et les contraintes géographiques (résidence des données UE, latence en Chine) forcent les piles multi-modèles.**',
+        items: [
+          '**Raison 1: Excellence spécifique à la tâche.** Aucun modèle ne gagne à tout. Claude excelle à l\'écriture; Gemini à la recherche en contexte long; GPT au raisonnement multi-étapes. Routez vos tâches vers le spécialiste.',
+          '**Raison 2: Optimisation des coûts.** Utilisez des modèles petits / budgétaires pour le travail répétitif à haut volume (résumé, catégorisation). Réservez les modèles frontier pour le raisonnement complexe. Vous réduisez les coûts de 10–50× tout en maintenant la qualité sur les tâches qui comptent.',
+          '**Raison 3: Contraintes réglementaires et géographiques.** UE nécessite résidence des données UE (Ollama local). Chine nécessite modèles locaux. Les piles multi-modèles vous permettent de respecter toutes les contraintes.',
+          '**Exemple de pile:** Claude pour l\'écriture, Gemini pour le codage, GPT pour les agents, DeepSeek/ERNIE pour les utilisateurs chinois. Ce n\'est pas complexe — c\'est pratique.',
+        ],
+      },
+
+      promptquorumSection: {
+        title: 'Comment PromptQuorum vous aide à comparer et router les modèles?',
+        content: '**PromptQuorum résout la douleur du changement manuel de modèle en envoyant une invite structurée unique à tous les modèles simultanément et en comparant automatiquement les résultats.** Plus de copie d\'invites entre onglets ou de devinage de quel modèle a eu les meilleur résultats.',
+        items: [
+          '**Une invite structurée → nombreux modèles simultanément.** Écrivez votre invite une fois. PromptQuorum la dispatch à GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, Baidu ERNIE et LLMs locaux (Ollama, LM Studio) en parallèle. Voyez toutes les réponses côte à côte.',
+          '**Cadres partagés assurent une comparaison équitable.** Utilisez la même structure d\'invite, contraintes et formats sur tous les modèles. Cela élimine l\'excuse « Claude a obtenu une meilleure sortie parce que j\'ai formulé l\'invite pour Claude. »',
+          '**Vue consensus et notation.** PromptQuorum vous montre quel modèle écrit le mieux pour votre voix de marque, qui produit le code le plus correct, quel modèle gère le plus fiablement vos documents propriétaires, et quel modèle est le plus rapide et le moins cher pour VOTRE tâche.',
+          '**Règles de routage:** Envoyez les tâches bon marché / haut volume aux modèles petits ou locaux. Envoyez le raisonnement complexe aux modèles premium. Automatisez la sélection de modèle en fonction du type de tâche.',
+          '**Support pour LLMs locaux.** Connectez Ollama ou LM Studio pour l\'inférence complètement privée. Aucune donnée ne quitte votre appareil. Routez les tâches sensibles localement; envoyez les tâches de base aux APIs cloud.',
+          '**Arrêtez de deviner à partir des benchmarks YouTube.** Testez vos propres tâches directement sur vos propres données. C\'est la seule vérité qui compte.',
+        ],
+      },
+
+      promptquorumVisual: {
+        title: 'Tableau de bord PromptQuorum: Voir tous les modèles à la fois',
+        content: '**Envoyez une invite, voyez les sorties de GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek et Baidu ERNIE — tous dans une seule vue.** La comparaison côte à côte élimine la douleur du changement manuel de modèle.',
+        imagePlaceholder: true,
+        imageCaption: '[À venir: Capture d\'écran en direct du tableau de bord PromptQuorum montrant les sorties parallèles de 5 modèles IA sur la même tâche d\'invite — affiche le raisonnement, coût, latence et scores de qualité côte à côte]',
+      },
+
+      practicalRecipes: {
+        title: 'Recettes pratiques: 4 façons d\'utiliser PromptQuorum pour la comparaison de modèles',
+        content: '**Les tests multi-modèles dans PromptQuorum révèlent quel modèle fonctionne le mieux pour VOTRE tâche spécifique, données et marque — pas les benchmarks génériques.** Voici 4 scénarios concrets:',
+      },
+
+      recipe1: {
+        title: 'Recette 1: Décider quel modèle écrit le mieux pour votre voix de marque',
+        blockquote: 'Vous écrivez une copie de produit pour une page d\'atterrissage B2B SaaS. Le ton doit être autoritaire mais accessible — pas de battage marketing, pas de superlatives vagues. Testez le même brief sur GPT-4o, Claude 4.6 Sonnet et Gemini. Voyez quel modèle capture le mieux votre voix de marque. Exécutez-le via PromptQuorum, notez chaque sortie sur le ton, la clarté et la conformité à vos directives de marque. Le gagnant devient votre modèle préféré pour la rédaction. Invite exemple: « Réécrivez cette description de fonction dans notre voix de marque: [collez votre guide de style + copie existante]. Quel modèle correspond le mieux? »',
+      },
+
+      recipe2: {
+        title: 'Recette 2: Comparer la qualité du codage et le coût pour votre pile backend',
+        blockquote: 'Vous avez une codebase Python. Testez: « Examinez cette fonction pour la performance et les bogues. Suggérez un refactorisation. » Exécutez-la via GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Flash. Qui détecte le plus de bogues? Quel refactorisation est le plus propre? Lequel est le moins cher par requête? Utilisez PromptQuorum pour noter la qualité du code. Vous pourriez trouver que Gemini Flash détecte 90% des problèmes à 1/50ème du coût de Claude. Exemple: « Optimisez cette requête de base de données pour la vitesse. Quelle\\\'s la complexité temporelle? » — routé vers Claude pour une analyse approfondie, Gemini pour l\'itération conscious des coûts.',
+      },
+
+      recipe3: {
+        title: 'Recette 3: Configurer une pile mondiale + Chine (GPT / Claude / Gemini + DeepSeek / ERNIE)',
+        blockquote: 'Votre produit sert les utilisateurs mondialement et en Chine continentale. Routez les utilisateurs mondiaux vers GPT, Claude ou Gemini (votre pile mondiale). Routez les utilisateurs chinois vers DeepSeek ou Baidu ERNIE (requis pour la latence et la conformité). Utilisez PromptQuorum pour tester les performances de modèle sur vos invites utilisateur réelles dans chaque région. Assurez la cohérence tout en respectant les contraintes régionales.',
+      },
+
+      recipe4: {
+        title: 'Recette 4: Utiliser les LLMs locaux pour les données privées, les modèles frontier pour le polissage final',
+        blockquote: 'Vous avez des données sensibles des clients. Étape 1: Traiter localement avec Ollama ou LM Studio (aucune donnée ne quitte vos serveurs). Étape 2: Envoyer la sortie affinée à Claude ou GPT pour le polissage final et la vérification de qualité. Cette approche hybride est bon marché, privée et produit une sortie de haute qualité. Testez-la dans PromptQuorum pour trouver le modèle local qui fonctionne le mieux pour votre pipeline.',
+      },
+
+      faq: {
+        title: 'Questions fréquemment posées',
+        faqs: [
+          {
+            q: 'Si je ne peux payer que pour un seul abonnement, lequel devrais-je choisir?',
+            a: 'Commencez par Claude 4.6 Sonnet. C\'est la qualité la plus élevée sur l\'écriture, le raisonnement et le code. Si votre besoin principal est l\'intégration d\'outils et multimodal (images/audio), choisissez GPT-4o. Si vous avez une équipe lourde Google Workspace et le coût est critique, choisissez Gemini. Si vos utilisateurs sont en Chine continentale, vous n\'avez pas de choix — choisissez DeepSeek ou Baidu ERNIE (requis pour la latence et la conformité).'
+          },
+          {
+            q: 'À quelle fréquence devrais-je rééévaluer mes choix de modèle?',
+            a: 'Trimestriellement. Tous les 3–4 mois, de nouveaux modèles se lancent et les positions du classement changent. Utilisez PromptQuorum pour re-tester vos tâches les plus critiques sur les derniers modèles. Ce qui était le mieux il y a 6 mois pourrait ne plus être optimal.'
+          },
+          {
+            q: 'Puis-je mélanger plusieurs modèles dans un produit ou un agent?',
+            a: 'Oui — et vous devriez. Routez différentes tâches vers différents modèles: Claude pour l\'écriture, Gemini pour le retrieval, GPT pour les agents. Utilisez la logique conditionnelle: si c\'est une tâche d\'écriture, utilisez Claude; si c\'est une tâche de retrieval, utilisez Gemini. C\'est ainsi que les systèmes de production fonctionnent.'
+          },
+          {
+            q: 'Comment dois-je penser au vendor lock-in?',
+            a: 'Le vendor lock-in se produit quand votre système dépend du format API d\'un modèle, des fonctions spéciales ou de la tarification. Protégez-vous: (1) Utilisez des structures d\'invite standard qui fonctionnent sur les modèles. (2) Utilisez des couches d\'abstraction (comme PromptQuorum) qui soutiennent plusieurs fournisseurs. (3) Testez régulièrement sur plusieurs modèles pour déterminer la dérive spécifique au vendeur. (4) Pour les systèmes critiques, supportez les modèles locaux (Ollama, LM Studio) comme fallback.'
+          },
+          {
+            q: 'Où les modèles locaux open-source s\'adaptent-ils à ce tableau?',
+            a: 'Les modèles locaux (LLaMA 3.1, Mistral, autres via Ollama ou LM Studio) sont meilleurs pour: tâches répétitives haut volume (classer, résumer, extraire), données privées (pas d\'appels API), charges de travail sensibles aux coûts et tests avant engagement aux coûts API. Ils ne correspondent pas aux modèles frontier en qualité mais excellent sur la confidentialité et le coût. Utilisez-les pour les 80% des tâches qui ne nécessitent pas de raisonnement au niveau frontier.'
+          },
+          {
+            q: 'Claude est-il meilleur que ChatGPT?',
+            a: 'Pour la qualité de l\'écriture, la révision de code et le raisonnement structuré, Claude 4.6 Sonnet surpasse ChatGPT (GPT-4o) dans la plupart des évaluations. Pour l\'intégration d\'outils, les workflows multi-agents et l\'écosystème tiers le plus large, GPT-4o a l\'avantage. Aucun n\'est universellement meilleur — le bon choix dépend de votre tâche spécifique. Utilisez PromptQuorum pour tester les deux sur vos invites réelles et comparer les résultats directement.'
+          },
+          {
+            q: 'Quel modèle IA est le plus précis?',
+            a: 'Aucun modèle unique n\'est le plus précis sur toutes les tâches. Claude 4.6 Sonnet mène à l\'écriture et analyse structurée. GPT-4o mène au raisonnement intégré d\'outils. Gemini 2.5 Pro mène à la recherche de longs documents avec ancrage web en direct. La précision est spécifique à la tâche — le seul test fiable est d\'exécuter vos invites réelles sur tous les modèles et de mesurer les résultats.'
+          },
+          {
+            q: 'Quelle est la différence entre GPT-4o et GPT-4o mini?',
+            a: 'GPT-4o est le modèle frontier d\'OpenAI — capacité la plus élevée, coût le plus élevé ($5 entrée/$15 sortie par million de tokens). GPT-4o mini est une version plus petite, plus rapide, moins chère ($0,15 entrée/$0,60 sortie par million de tokens) — 33× moins cher avec qualité légèrement inférieure. Utilisez GPT-4o mini pour la classification, le résumé et les tâches haut volume où le raisonnement frontier n\'est pas requis. Utilisez GPT-4o pour le raisonnement multi-étapes complexe, les workflows d\'agents et les tâches où la qualité est critique.'
+          },
+        ],
+      },
+
+      sources: {
+        title: 'Sources et lectures complémentaires',
+        content: '**Les forces du modèle et la tarification reflètent les modèles d\'utilisation de mars 2026 et les benchmarks de LMSYS Arena, SWE-Bench et GPQA.** Les capacités du modèle et la tarification changent fréquemment — vérifiez les pages de tarification officielles pour les taux actuels et testez sur votre tâche avant de valider la production.',
+        items: [
+          '[OpenAI — GPT-4o et aperçu du modèle](https://platform.openai.com/docs/models)',
+          '[Anthropic — Aperçu des modèles Claude](https://docs.anthropic.com/en/docs/models-overview)',
+          '[Google — Modèles Gemini et tarification](https://ai.google.dev/gemini-api/docs/models)',
+          '[DeepSeek — Documentation API et modèles](https://api-docs.deepseek.com)',
+          '[Baidu AI Cloud — Plateforme ERNIE Bot](https://cloud.baidu.com/product/wenxinworkshop)',
+          '[Documentation API ERNIE](https://cloud.baidu.com/doc/WENXINWORKSHOP/index.html)',
+          '[LMSYS Chatbot Arena — classements de modèles en direct](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard)',
+          '[SWE-Bench — benchmarks de capacité de codage](https://www.swebench.com/)',
+        ],
+      },
+
+      relatedReading: {
+        title: 'Lectures connexes',
+        items: [
+          '[Fondamentaux: Tokens, coûts et limites: L\'économie de la programmation IA](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — comprendre la tarification des tokens, les limites de débit et l\'optimisation des coûts',
+          '[Fondamentaux: Invite système vs invite utilisateur: Quelle différence](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — comment les invites système définissent le comportement du modèle sur les modèles',
+          '[Fondamentaux: Quel cadre d\'invite devriez-vous utiliser?](/prompt-engineering/which-prompt-framework-should-you-use) — les cadres fonctionnent sur les modèles; choisissez celui qui correspond à votre tâche',
+          '[Techniques: Chaînage d\'invites](/prompt-engineering/prompt-chaining) — workflows multi-étapes où différents modèles peuvent gérer différentes étapes',
+        ],
+      },
+    },
+  },
+
+  },
+
 },
 
   'write-better-code-with-ai': {
