@@ -1,0 +1,273 @@
+================================================================================
+QUICK REFERENCE: GPT-Claude-Gemini Article Sections
+================================================================================
+
+ARTICLE: "GPT, Claude or Gemini: How to Pick the Right AI Model"
+SLUG: gpt-claude-gemini-which-model
+CATEGORY: Fundamentals
+PUBLISH DATE: 2026-03-23
+READ TIME: 12 minutes
+
+================================================================================
+28 SECTIONS IN ORDER (ENGLISH)
+================================================================================
+
+1. definition
+   Title: "No Single "Best" AI Model — Choose by Task"
+   Type: Content (3 paragraphs)
+
+2. decisionMatrix
+   Title: "Quick Decision Matrix — Pick Your Starting Model"
+   Type: Table (4 rows, 4 columns) + bullet list
+
+3. tldr
+   Title: "Key Takeaways"
+   Type: TLDR section with 6 items
+   Flag: isTldr: true
+
+4. whatMatters
+   Title: "What Matters When Choosing an AI Model?"
+   Type: 7 key dimensions with explanations
+
+5. gptSection
+   Title: "When Should You Use GPT-4o?"
+   Type: Section with 4 items (Strengths, Use Cases, Trade-offs, Context)
+
+6. claudeSection
+   Title: "When Should You Use Claude 4.6 Sonnet?"
+   Type: Section with 4 items
+
+7. geminiSection
+   Title: "When Should You Use Gemini 2.5 Pro?"
+   Type: Section with 4 items
+
+8. coding
+   Title: "Which AI model is best for coding in 2026?"
+   Type: Content with 4 items
+
+9. longContext
+   Title: "Best LLM for long context or large documents 2026?"
+   Type: Section with image caption + 4 items
+
+10. chineseModels
+    Title: "How to choose an AI model if you're in China or need low latency?"
+    Type: Content (3 paragraphs)
+
+11. comparison
+    Title: "GPT-4o vs Claude 4.6 Sonnet vs Gemini 2.5 Pro: Quick comparison"
+    Type: Table (8 rows, 5 columns) with image caption
+
+12. decisionFramework
+    Title: "How Do You Pick the Right AI Model?"
+    Type: Content (5 if/then statements) + 4 items
+
+13. costAndLimits
+    Title: "How Do Costs and Token Limits Compare?"
+    Type: Content with 5 items (includes link)
+
+14. whyMultipleModels
+    Title: "Why use multiple AI models instead of one in 2026?"
+    Type: Content with 4 reasons + example
+
+15. promptquorumSection
+    Title: "How Does PromptQuorum Help You Compare and Route Models?"
+    Type: Section with 6 items
+
+16. promptquorumVisual
+    Title: "PromptQuorum Dashboard: See All Models at Once"
+    Type: Image placeholder section
+
+17. practicalRecipes
+    Title: "Practical Recipes: 4 Ways to Use PromptQuorum for Model Comparison"
+    Type: Intro section only
+
+18. recipe1
+    Title: "Recipe 1: Decide Which Model Writes Best for Your Brand Voice"
+    Type: Blockquote (example scenario)
+
+19. recipe2
+    Title: "Recipe 2: Compare Coding Quality and Cost for Your Backend Stack"
+    Type: Blockquote (example scenario)
+
+20. recipe3
+    Title: "Recipe 3: Set Up a Global + China Stack (GPT / Claude / Gemini + DeepSeek / ERNIE)"
+    Type: Blockquote (example scenario)
+
+21. recipe4
+    Title: "Recipe 4: Use Local LLMs for Private Data, Frontier Models for Final Polish"
+    Type: Blockquote (example scenario)
+
+22. faq
+    Title: "Frequently Asked Questions"
+    Type: FAQ section with 8 Q&A pairs
+    Questions:
+      1. "If I can only pay for one subscription, which should I choose?"
+      2. "How often should I re-evaluate my model choices?"
+      3. "Can I mix multiple models inside one product or agent?"
+      4. "How do I think about vendor lock-in?"
+      5. "Where do open-source local models fit into this picture?"
+      6. "Is Claude better than ChatGPT?"
+      7. "Which AI model is most accurate?"
+      8. "What is the difference between GPT-4o and GPT-4o mini?"
+
+23. relatedReading
+    Title: "Related Reading"
+    Type: 7 internal links (all within /prompt-engineering/ path)
+
+24. sources
+    Title: "Sources & Further Reading"
+    Type: 7 external source links
+
+================================================================================
+LANGUAGE STATUS SUMMARY
+================================================================================
+
+┌─────────────┬──────────────┬─────────────────┬──────────────────────┐
+│ Language    │ Code │ Metadata │ Sections        │ Status               │
+├─────────────┼──────┼──────────┼─────────────────┼──────────────────────┤
+│ English     │ en   │ ✓        │ ✓ (28/28)       │ COMPLETE             │
+│ German      │ de   │ ✓        │ ✗ (0/28)        │ Title & intro only    │
+│ French      │ fr   │ ✗        │ ✗ (0/28)        │ Needs all metadata    │
+│ Japanese    │ ja   │ ✗        │ ✗ (0/28)        │ Needs all metadata    │
+│ Chinese     │ zh   │ ✗        │ ✗ (0/28)        │ Needs all metadata    │
+└─────────────┴──────┴──────────┴─────────────────┴──────────────────────┘
+
+WORK REQUIRED:
+  - German (de):     28 sections to translate (~300+ strings)
+  - French (fr):     5 metadata fields + 28 sections (~330+ strings)
+  - Japanese (ja):   5 metadata fields + 28 sections (~330+ strings)
+  - Chinese (zh):    5 metadata fields + 28 sections (~330+ strings)
+
+================================================================================
+METADATA FIELDS BY LANGUAGE
+================================================================================
+
+Required for all languages:
+  - theme: "Fundamentals" (same for all)
+  - title: "GPT, Claude or Gemini: How to Pick the Right AI Model" (translate)
+  - intro: "No single AI model is best..." (translate, ~40 words)
+  - publishDate: "2026-03-23" (same for all)
+  - readTime: "12 min read" (translate to XX min XX)
+
+TRANSLATIONS:
+  English:   title: "GPT, Claude or Gemini: How to Pick the Right AI Model"
+  German:    title: "GPT, Claude oder Gemini: Welches KI-Modell sollten Sie wählen?"
+  French:    title: (needs translation)
+  Japanese:  title: (needs translation)
+  Chinese:   title: (needs translation)
+
+================================================================================
+CONTENT TYPES BREAKDOWN
+================================================================================
+
+By section type:
+
+TEXT CONTENT (8 sections):
+  - definition: 3 paragraphs
+  - whatMatters: intro + 7 bullet points
+  - coding: intro + 4 items
+  - chineseModels: 3 paragraphs
+  - decisionFramework: content + 4 items
+  - costAndLimits: content + 5 items
+  - whyMultipleModels: content + 4 reasons
+  - promptquorumSection: content + 6 items
+
+DECISION MATRIX TABLES (2 sections):
+  - decisionMatrix: 4 rows × 4 columns
+  - comparison: 8 rows × 5 columns
+
+MODEL-SPECIFIC GUIDES (3 sections):
+  - gptSection: title + 4 items
+  - claudeSection: title + 4 items
+  - geminiSection: title + 4 items
+
+OTHER GUIDES (3 sections):
+  - longContext: title + image caption + 4 items
+  - tldr: title + 6 items (marked isTldr: true)
+  - practicalRecipes: title + content only
+
+RECIPES / EXAMPLES (5 sections):
+  - recipe1–recipe4: title + blockquote (example scenarios)
+  - promptquorumVisual: title + image caption (placeholder)
+
+REFERENCE SECTIONS (3 sections):
+  - faq: title + 8 Q&A pairs
+  - relatedReading: title + 7 links
+  - sources: title + 7 links
+
+================================================================================
+DO NOT TRANSLATE LIST
+================================================================================
+
+Product & Company Names:
+  - PromptQuorum (always capitalize "PQ")
+  - OpenAI, Anthropic, Google DeepMind
+  - ChatGPT (not "GPT Chat" or other variations)
+
+Model Names (keep exact):
+  - GPT-4o (not "GPT 4o" or "GPT4o")
+  - GPT-4o mini (not "mini" alone)
+  - Claude 4.6 Sonnet (exact version)
+  - Gemini 2.5 Pro (exact version)
+  - Gemini 2.5 Flash (exact version)
+  - DeepSeek (not "deep-seek" or variants)
+  - Baidu ERNIE (exact capitalization)
+  - LLaMA 3.1 (exact format: capital L's)
+  - Mistral (not "Mistral AI")
+  - Qwen 2.5 (Alibaba model)
+  - Ollama (not "Ollama LLM")
+  - LM Studio (exact spacing)
+
+Technical Terms (context-dependent):
+  - Keep context window token counts: 128k, 200k, 2M
+  - Keep pricing: $5, $15, $0.15, $0.30, $0.60, $0.075 per million
+  - Keep URL paths intact: /prompt-engineering/...
+  - Keep abbreviations: GPT, LLM, RAG, API, IDE, etc.
+
+Metrics & Units (keep as-is):
+  - tokens, input tokens, output tokens
+  - requests per minute (req/min), req/min
+  - percentage values: 45%, 65%, 90%, etc.
+  - time periods: seconds, minutes, months, years
+
+================================================================================
+FORMATTING PRESERVED IN ALL LANGUAGES
+================================================================================
+
+Bold text: **text** → Must remain bold in translation
+Internal links: [...](/path) → Keep URL path, translate link text
+Model names: Always exact, never localize
+Bullet points: Structure preserved, indentation same
+Table rows/cols: Keep exact same structure
+Blockquotes: Keep as blockquotes, translate content
+FAQ pairs: {q: "...", a: "..."} → keep structure, translate text
+
+================================================================================
+FILE REFERENCES
+================================================================================
+
+EXTRACTION OUTPUT FILES:
+  1. gpt-claude-gemini-sections-TEMPLATE.md (330 lines)
+     - Full English sections object ready to copy
+     - Use as baseline for translations
+
+  2. TRANSLATION_GUIDE-gpt-claude-gemini.md
+     - Step-by-step translation instructions
+     - Validation checklist
+     - Language-specific notes
+
+  3. EXTRACTION_SUMMARY.txt
+     - Line numbers and locations
+     - Status overview for all 5 languages
+
+  4. SECTIONS_QUICK_REFERENCE.txt (THIS FILE)
+     - Visual overview of all 28 sections
+     - Content types breakdown
+     - DO NOT TRANSLATE checklist
+
+SOURCE FILE:
+  - src/lib/prompt-engineering/content.ts (lines 7571–7970)
+  - Article starts: line 7571
+  - English sections: lines 7675–7960
+
+================================================================================

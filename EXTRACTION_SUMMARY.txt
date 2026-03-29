@@ -1,0 +1,217 @@
+================================================================================
+EXTRACTION SUMMARY: GPT-Claude-Gemini Article Sections
+================================================================================
+
+PROJECT: PromptQuorum Website
+ARTICLE SLUG: gpt-claude-gemini-which-model
+FILE: src/lib/prompt-engineering/content.ts
+
+================================================================================
+ARTICLE LOCATION
+================================================================================
+
+Lines 7571-7970 contain the full article object with 5 language variants:
+
+  Line 7571: Start of article definition
+  Line 7572: en (English) - COMPLETE ✓
+  Line 7967: de (German) - STUBBED (empty sections)
+  Line 7968: fr (French) - STUBBED (empty sections)
+  Line 7969: ja (Japanese) - STUBBED (empty sections)
+  Line 7970: zh (Chinese) - STUBBED (empty sections)
+
+================================================================================
+ENGLISH (en) STATUS - COMPLETE
+================================================================================
+
+LOCATION: Lines 7572-7966
+STATUS: All content present and complete
+
+METADATA:
+  - title: "GPT, Claude or Gemini: How to Pick the Right AI Model"
+  - intro: "No single AI model is best for every task..."
+  - publishDate: "2026-03-23"
+  - readTime: "12 min read"
+  - schema: Complete (TechArticle, supplementalSchema, howToSchema, faqSchema, etc.)
+
+SECTIONS: 28 sections fully populated
+  1. definition
+  2. decisionMatrix (with table)
+  3. tldr
+  4. whatMatters
+  5. gptSection
+  6. claudeSection
+  7. geminiSection
+  8. coding
+  9. longContext
+  10. chineseModels
+  11. comparison (with table)
+  12. decisionFramework
+  13. costAndLimits
+  14. whyMultipleModels
+  15. promptquorumSection
+  16. promptquorumVisual
+  17. practicalRecipes
+  18. recipe1 (blockquote)
+  19. recipe2 (blockquote)
+  20. recipe3 (blockquote)
+  21. recipe4 (blockquote)
+  22. faq (8 Q&A pairs)
+  23. relatedReading (7 links)
+  24. sources (7 links)
+
+SECTIONS OBJECT SIZE: ~286 lines of content
+
+================================================================================
+GERMAN (de) STATUS - NEEDS TRANSLATION
+================================================================================
+
+LOCATION: Line 7967
+STATUS: Partial - metadata exists, sections object empty
+
+METADATA:
+  - theme: "Fundamentals" ✓
+  - title: "GPT, Claude oder Gemini: Welches KI-Modell sollten Sie wählen?" ✓
+  - intro: "Es gibt kein einzelnes \"bestes\" KI-Modell für jede Aufgabe..." ✓
+  - publishDate: "2026-03-23" ✓
+  - readTime: "12 min Lesezeit" ✓
+  - sections: {} ← EMPTY (needs all 28 sections translated)
+
+WORK REQUIRED: Translate all 28 sections from English to German
+
+================================================================================
+FRENCH (fr) STATUS - NEEDS TRANSLATION
+================================================================================
+
+LOCATION: Line 7968
+STATUS: Stub only - metadata empty, sections object empty
+
+CURRENT STATE:
+  fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-22', readTime: '', sections: {} }
+
+WORK REQUIRED:
+  - Translate title
+  - Translate intro
+  - Translate readTime (to something like "12 minutes de lecture")
+  - Translate all 28 sections
+
+================================================================================
+JAPANESE (ja) STATUS - NEEDS TRANSLATION
+================================================================================
+
+LOCATION: Line 7969
+STATUS: Stub only - metadata empty, sections object empty
+
+CURRENT STATE:
+  ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-22', readTime: '', sections: {} }
+
+WORK REQUIRED:
+  - Translate title
+  - Translate intro
+  - Translate readTime
+  - Translate all 28 sections
+
+================================================================================
+CHINESE SIMPLIFIED (zh) STATUS - NEEDS TRANSLATION
+================================================================================
+
+LOCATION: Line 7970
+LANGUAGE CODE: zh (Chinese Simplified)
+STATUS: Stub only - metadata empty, sections object empty
+
+CURRENT STATE:
+  zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-22', readTime: '', sections: {} }
+
+WORK REQUIRED:
+  - Translate title
+  - Translate intro
+  - Translate readTime
+  - Translate all 28 sections
+
+================================================================================
+CONTENT STATISTICS
+================================================================================
+
+ENGLISH ARTICLE SIZE:
+  - Article object: lines 7571-7966 (396 lines)
+  - Schema markup: ~100 lines
+  - Sections content: ~286 lines
+  - FAQ section: 8 Q&A pairs
+  - Related reading: 7 links
+  - Sources: 7 links
+
+SECTIONS TO TRANSLATE PER LANGUAGE:
+  - 28 unique sections
+  - ~5-7 sections per table
+  - ~8 FAQ question/answer pairs
+  - ~300+ strings total per language
+
+TRANSLATION EFFORT ESTIMATE:
+  German:  8-12 hours (most similar to English structure)
+  French:  8-12 hours
+  Japanese: 12-16 hours (requires CJK handling)
+  Chinese: 12-16 hours (requires CJK handling)
+
+================================================================================
+SPECIAL CONTENT NOTES
+================================================================================
+
+DO NOT TRANSLATE (keep identical across all languages):
+  - PromptQuorum
+  - GPT-4o, GPT-4o mini
+  - Claude 4.6 Sonnet
+  - Gemini 2.5 Pro, Gemini Flash
+  - DeepSeek
+  - Baidu ERNIE
+  - Ollama, LM Studio
+  - LLaMA 3.1
+  - Mistral, Qwen 2.5
+  - OpenAI, Anthropic, Google DeepMind
+  - All numerical values (128k, 200k, 2M tokens)
+  - All currency ($5, $15, $0.15, etc.)
+  - All internal link paths (/prompt-engineering/...)
+
+TONE REQUIREMENTS (per GEO guidelines):
+  - Answer-first: Lead with bold statement, then explain
+  - No marketing fluff: no "powerful", "revolutionary", "cutting-edge"
+  - Facts-based: Every claim verifiable
+  - Consistent entity names: Full product names on first mention
+  - Structure: Use H2/H3 headings, bullet lists, short paragraphs
+
+================================================================================
+REFERENCE FILES CREATED
+================================================================================
+
+1. /Users/hanskuepper/promptquorum-website/gpt-claude-gemini-sections-TEMPLATE.md
+   - Complete English sections object (330 lines)
+   - All 28 sections with full content
+   - Copy this as baseline for translations
+
+2. /Users/hanskuepper/promptquorum-website/TRANSLATION_GUIDE-gpt-claude-gemini.md
+   - Translation instructions
+   - Validation checklist
+   - Special notes for each language
+   - Product name DO-NOT-TRANSLATE list
+   - Example of translated section (German)
+
+3. /Users/hanskuepper/promptquorum-website/EXTRACTION_SUMMARY.txt (THIS FILE)
+   - Overview of extraction
+   - Line numbers and file locations
+   - Status of each language variant
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+For each language (de, fr, ja, zh):
+
+1. Read TRANSLATION_GUIDE-gpt-claude-gemini.md for language-specific notes
+2. Use gpt-claude-gemini-sections-TEMPLATE.md as baseline
+3. Translate all text while preserving structure
+4. Keep product names, URLs, and metrics unchanged
+5. Apply GEO writing guidelines (answer-first, no fluff, factual)
+6. Validate against checklist in TRANSLATION_GUIDE
+7. Test syntax in code editor (no trailing errors)
+8. Test on dev server: npm run dev
+9. Verify OG images generate: /?lang=de, /?lang=fr, /?lang=ja, /?lang=zh
+
+================================================================================
