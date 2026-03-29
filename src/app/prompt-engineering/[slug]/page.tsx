@@ -170,12 +170,21 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     }),
   }
 
+  // Breadcrumb translations
+  const breadcrumbLabels: Record<string, Record<string, string>> = {
+    en: { home: 'Home', hub: 'Prompt Engineering' },
+    de: { home: 'Startseite', hub: 'Prompt Engineering' },
+    fr: { home: 'Accueil', hub: 'Prompt Engineering' },
+    ja: { home: 'ホーム', hub: 'プロンプトエンジニアリング' },
+    zh: { home: '主页', hub: '提示词工程' },
+  }
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
-      { '@type': 'ListItem', position: 2, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+      { '@type': 'ListItem', position: 1, name: breadcrumbLabels[selectedLang].home, item: 'https://www.promptquorum.com' },
+      { '@type': 'ListItem', position: 2, name: breadcrumbLabels[selectedLang].hub, item: 'https://www.promptquorum.com/prompt-engineering' },
       { '@type': 'ListItem', position: 3, name: article.title, item: canonicalUrl },
     ],
   }
