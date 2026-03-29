@@ -12036,10 +12036,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-28', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-28', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-28', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-28', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Prompt-Engineering-Glossar: 100 wesentliche Begriffe', intro: 'Prägnante Definitionen der 100 wichtigsten Prompt-Engineering-Begriffe — von Tokens und Kontextfenstern bis zur Agent-Orchestrierung, RAG und Evaluierungsmetriken.', publishDate: '2026-03-28', readTime: '12 min Lesezeit', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Glossaire de l\'ingénierie de prompt : 100 termes essentiels', intro: 'Définitions concises des 100 termes les plus importants de l\'ingénierie de prompt — des tokens et fenêtres de contexte à l\'orchestration d\'agents, RAG et métriques d\'évaluation.', publishDate: '2026-03-28', readTime: '12 min de lecture', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'プロンプトエンジニアリング用語集：100の主要な用語', intro: 'プロンプトエンジニアリングの100の最も重要な用語の簡潔な定義 — トークンとコンテキストウィンドウからエージェントオーケストレーション、RAG、評価メトリクスまで。', publishDate: '2026-03-28', readTime: '12分で読める', sections: {} },
+    zh: { theme: 'Fundamentals', title: '提示工程词汇表：100个关键术语', intro: '100个最重要的提示工程术语的简明定义——从令牌和上下文窗口到代理编排、RAG和评估指标。', publishDate: '2026-03-28', readTime: '12分钟阅读', sections: {} },
   },
 
 }
