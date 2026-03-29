@@ -3979,26 +3979,743 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     fr: {
       theme: 'Fundamentals',
       title: 'Hallucinations IA: Pourquoi l\'IA Invente des Choses — et Comment les Arrêter',
-      intro: 'Les grands modèles de langage produisent confidentement des informations fausses. Ces erreurs, appelées hallucinations, vont de citations inventées à des faits fabriqués présentés avec une autorité complète. Comprendre pourquoi elles se produisent et comment les détecter est essentiel pour utiliser les LLM dans un travail réel.',
+      intro: 'Les grands modèles de langage produisent confidentement des informations fausses. Ces erreurs, appelées hallucinations, vont de citations inventées à des faits fabriqués présentés avec une autorité complète. Comprendre pourquoi elles se produisent, comment les détecter et les réduire est essentiel pour utiliser les LLM dans un travail réel.',
       publishDate: '2026-03-22',
       readTime: '12 min de lecture',
-      sections: {},
+      sections: {
+        definition: {
+          title: 'Que sont les hallucinations IA?',
+          content: [
+            'Une **hallucination IA** est une déclaration factuellement fausse ou fabriquée générée par un LLM avec une confiance apparente. Le modèle produit du texte qui viole la réalité – des noms erronés, des sources inventées, des dates impossibles, des URL fictives – en utilisant le même langage fluide que pour les informations exactes.',
+            'Cela diffère fondamentalement d\'un modèle exprimant l\'incertitude. Les hallucinations se caractérisent par des affirmations confiantes et détaillées sur des choses qui n\'existent pas ou sur des événements qui ne se sont jamais produits. Un modèle pourrait citer un article publié dans une revue qui n\'existe pas, inventer des détails biographiques, énoncer une date historique décalée de siècles, ou décrire une fonctionnalité de produit jamais construite. L\'utilisateur le lit, suppose que le langage clair signale l\'exactitude, et agit dessus – pour découvrir que l\'information est fabriquée.',
+            '**En une phrase:** Les hallucinations sont des déclarations fausses formulées couramment que les modèles de langage génèrent parce qu\'ils prédisent les modèles de texte plutôt que de récupérer les faits d\'une source fiable.'
+          ],
+        },
+        tldr: {
+          title: 'Points clés',
+          isTldr: true,
+          items: [
+            '**Ce que sont les hallucinations:** Des déclarations fausses confiantes générées par les LLM qui violent la réalité – sources inventées, faux faits, détails fabriqués – présentées couramment comme si elles étaient exactes',
+            '**Pourquoi elles se produisent:** Les LLM prédisent les modèles de texte plutôt que de récupérer les faits; ils manquent d\'une base de données pour vérifier et d\'aucun mécanisme de confiance interne pour signaler l\'incertitude',
+            '**Comment les détecter:** Utilisez le consensus scoring (posez la même question à plusieurs modèles; l\'accord est un signal de fiabilité), vérifiez les citations, vérifiez les affirmations indépendamment',
+            '**Consensus scoring:** Envoyez le même prompt à 5+ modèles indépendants; les affirmations apparaissant dans seulement une ou deux réponses sont hautement suspectes et justifient une vérification',
+            '**Stratégies d\'atténuation:** Utilisez RAG (ancrage dans les documents vérifiés), fournissez des sources explicites, définissez des contraintes (\"utilisez uniquement les informations de ce document\"), utilisez le consensus multi-modèles et exigez un examen humain pour les affirmations critiques',
+          ],
+        },
+        whyHallucinate: {
+          title: 'Pourquoi les modèles de langage hallucinent',
+          content: 'Les LLM fonctionnent en prédisant le mot suivant dans une séquence. Ils ne consultent pas une base de données et ne vérifient pas les faits par rapport à la vérité fondamentale. Ils calculent les probabilités en fonction des modèles dans les données d\'entraînement. Cette conception fondamentale – très efficace pour les tâches de langage – crée intrinsèquement une pression pour halluciner.',
+        },
+        coreMechanisms: {
+          title: 'Les mécanismes fondamentaux',
+          items: [
+            '**Prédiction du token, pas récupération des faits.** L\'architecture du modèle est optimisée pour la génération de langage, pas la vérification des faits. Lorsqu\'un prompt pose une question, l\'objectif du modèle est de produire une continuation de texte cohérente et plausible. La cohérence et la véracité ne sont pas la même chose. Une fausse déclaration peut être beaucoup plus cohérente qu\'un aveu d\'incertitude.',
+            '**Lacunes dans les données d\'entraînement et expiration.** Les modèles s\'entraînent sur des données avec une date de fin spécifique. Les lacunes informatives – des sujets que le modèle n\'a jamais rencontrés lors de l\'entraînement, les événements récents après la date limite d\'entraînement, les connaissances spécialisées dans des domaines étroits – créent des vides. Lorsqu\'on le demande sur ces lacunes, le modèle manque de modèles véridiques pour prédire. Il invente des détails plausibles plutôt que de dire \"je n\'ai pas cette information.\"',
+            '**Pas de mécanisme de confiance explicite.** Les modèles ne génèrent pas un score de confiance aux côtés de chaque sortie. Ils produisent du texte sans un signal interne disant *\"Je suis 30% sûr de cette affirmation.\"* La pression de remplir la page avec une sortie annule l\'option de signaler le doute ou de refuser la demande.',
+            '**Pression des prompts exigeant une réponse.** Les prompts comme \"Explique tout sur [sujet]\" ou \"Énumère toutes les raisons [affirmation]\" communiquent implicitement: *tu dois répondre, même si tu n\'es pas sûr*. Le modèle répond en inventant des détails pour satisfaire la demande. Il traite la pression d\'être utile comme plus importante que le risque d\'être inexact.',
+            '**Fenêtre de contexte limitée et perte d\'information.** Les LLM ne peuvent tenir qu\'une quantité finie de contexte en mémoire. Les longs documents ou les conversations font que les détails antérieurs s\'estompent. Le modèle pourrait oublier ce qui a été dit dans une section antérieure, l\'inventer ou le mal mémoriser, et affirmer confidentement la fabrication comme si elle était cohérente avec le contexte antérieur. Consultez notre guide sur [les fenêtres de contexte](/prompt-engineering/context-windows-explained-why-ai-forgets) pour comprendre pourquoi cela se produit et comment les limites de tokens affectent la fiabilité de la sortie.',
+            '**Confabulation dans le raisonnement multi-étapes.** Pour les problèmes nécessitant plusieurs étapes de raisonnement, le modèle peut perdre la trace des résultats intermédiaires. Il pourrait inventer une étape de soutien pour justifier une conclusion, ou sauter une étape et sauter à une fausse conclusion tout en générant du texte qui semble logiquement correct. Comprendre [comment les tokens et les coûts s\'adaptent aux longues chaînes de raisonnement](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) vous aide à équilibrer la précision avec l\'efficacité.'
+          ],
+        },
+        commonTypes: {
+          title: 'Types courants d\'hallucinations',
+          content: 'Les hallucinations viennent en motifs reconnaissables. Identifier le type vous aide à cibler les stratégies d\'atténuation.',
+          rows: [
+            { 'Type': 'Sources inventées', 'Example': 'Citation d\'un article évalué par les pairs qui n\'existe pas; faux noms d\'auteurs et années de publication', 'Why It Happens': 'Le modèle a été entraîné sur des millions de citations et a appris des modèles de type citation, puis en invente de nouveaux', 'Severity': 'Très élevée' },
+            { 'Type': 'Mauvais faits (dates, nombres, noms)', 'Example': 'Énoncer un événement historique en mauvaise année; détails biographiques incorrects', 'Why It Happens': 'Les données d\'entraînement sont incomplètes ou contradictoires; le modèle choisit un nombre plausible', 'Severity': 'Très élevée' },
+            { 'Type': 'URL et e-mails fabriqués', 'Example': 'Fournir un lien ou une adresse e-mail qui ne se résout pas ou n\'appartient pas à l\'organisation revendiquée', 'Why It Happens': 'Le modèle appris les modèles d\'URL et d\'e-mail et génère de nouveaux qui semblent réalistes mais sont fictifs', 'Severity': 'Élevée' },
+            { 'Type': 'Perte de contexte', 'Example': 'Répondre à une question comme si le modèle avait compris le contexte antérieur, alors qu\'il a en réalité perdu de vue', 'Why It Happens': 'La fenêtre de contexte est finie; les longs documents font que les détails antérieurs s\'estompent de l\'attention du modèle', 'Severity': 'Élevée' },
+            { 'Type': 'Dérive de rôle', 'Example': 'Commencer dans un rôle (analyste) et graduel passer à un autre (conteur), inventer des détails pour combler les lacunes', 'Why It Happens': 'Le modèle perd de vue les instructions initiales et revient à la correspondance de motifs uniquement sur le texte', 'Severity': 'Moyen' },
+            { 'Type': 'Généralisation trop confiante', 'Example': 'Déclarer \"Tous les X font Y\" alors que seuls les exemples d\'entraînement spécifiques le montrent', 'Why It Happens': 'Le modèle généralise trop largement à partir de données d\'entraînement limitées sans vérification de confiance', 'Severity': 'Moyen' },
+            { 'Type': 'Contradiction interne', 'Example': 'Énoncer les faits opposés au sein de la même réponse', 'Why It Happens': 'Le modèle n\'a pas de mécanisme pour suivre la cohérence sur plusieurs phrases', 'Severity': 'Moyen' },
+          ],
+          columns: ['Type', 'Example', 'Why It Happens', 'Severity'],
+        },
+        hallucinationTypesList: {
+          isTldr: false,
+          content: '**Les sept types d\'hallucinations sont:** sources inventées, faux faits, URL et e-mails fabriqués, perte de contexte, dérive de rôle, généralisation trop confiante et contradictions internes.',
+        },
+        promptDesignIntro: {
+          title: 'Comment la conception des prompts affecte le risque d\'hallucination',
+          content: 'Vos prompts encouragent ou découragent les hallucinations. La différence est mesurable.',
+        },
+        riskPrompts: {
+          title: 'Prompts augmentant le risque d\'hallucination:',
+          items: [
+            '\"Dis-moi tout sur [sujet]\" – aucune limite, aucune permission de dire \"je ne sais pas\"',
+            '\"Assure-toi d\'inclure [de nombreux détails]\" – pression explicite pour remplir l\'espace d\'informations inventées',
+            '\"Écris comme si tu étais un expert de premier plan\" – encourage les affirmations confiantes, même pour les réclamations incertaines',
+            '\"Réponds même si tu n\'es pas complètement sûr\" – supprime le frein sur l\'hallucination',
+          ],
+        },
+        safePrompts: {
+          title: 'Prompts réduisant le risque d\'hallucination:',
+          items: [
+            '\"Tu peux dire \'Je ne sais pas\' si tu n\'es pas sûr\" – permission explicite d\'admettre les lacunes de connaissances',
+            '\"Utilise uniquement les informations du contexte ci-dessous\" – limite la réponse aux données fournies, pas aux connaissances inventées',
+            '\"Sépare les faits des opinions. Marque les affirmations incertaines [INCERTAIN]\" – force le modèle à différencier',
+            '\"Cite ta source pour tout énoncé factuel\" – rend les citations inventées manifestement visibles',
+            '\"Si tu ne peux pas vérifier cette affirmation, ne l\'inclus pas\" – limite explicite sur les affirmations non vérifiées',
+          ],
+        },
+        promptStructure: {
+          title: 'Bonne structure de prompt',
+          content: 'Les bons prompts combinent quatre éléments: un **rôle ou contexte clair** (quel cadre le modèle devrait-il adopter?), une **tâche spécifique** (quelle sortie ai-je besoin?), des **données d\'entrée réelles** (quelles informations sont fournies?) et des **contraintes explicites** (que le modèle NE doit PAS faire?). Cette structure réduit la pression d\'halluciner en supprimant l\'ambiguïté sur ce que le modèle est supposé faire. Notre guide sur [les 5 blocs de construction dont chaque prompt a besoin](/prompt-engineering/5-building-blocks-every-prompt-needs) couvre chaque élément avec des exemples.\n\nVoir la définition complète des [fondamentaux du prompt engineering](/prompt-engineering/what-is-prompt-engineering) pour une exploration plus profonde de la façon dont la structure affecte la fiabilité de la sortie.',
+        },
+        techniques: {
+          title: 'Techniques pour réduire les hallucinations',
+          content: 'Trois approches complémentaires réduisent les hallucinations:\n- **Au niveau du prompt:** Ajoutez des contraintes et permission d\'admettre l\'incertitude dans vos prompts\n- **Au niveau du système:** Utilisez RAG, l\'appel de fonction ou la récupération pour ancrer les réponses dans les données réelles\n- **Au niveau du modèle:** Exécutez le même prompt sur plusieurs modèles indépendants pour détecter les hallucinations par consensus',
+        },
+        technique1: {
+          title: '1. Permission explicite de dire \"Je ne sais pas\"',
+          content: 'Dites au modèle: \"Si tu n\'es pas sûr ou si tu n\'as pas l\'information, dis-le. Ne devine pas.\"\n\nCela supprime la pression d\'inventer des réponses. Beaucoup de modèles sont entraînés pour être utiles et tenteront de répondre même s\'ils sont complètement incertains. Leur donner explicitement la permission de cette attente leur donne la permission de refuser.',
+        },
+        technique2: {
+          title: '2. Demander des sources ou des preuves',
+          content: 'Demande: \"Cite la source pour toute affirmation factuelle\" ou \"Fournir l\'URL et la date de publication pour chaque référence.\"\n\nCela rend les citations inventées évidentes (elles ne seront pas résolues ou pointeront vers des sources inexistantes) et force le modèle à être plus prudent sur l\'affirmation de faits. Cela vous donne aussi un moyen de vérifier la sortie: cliquez sur chaque lien, vérifiez chaque source.',
+        },
+        technique3: {
+          title: '3. Autocritique et vérification des contradictions',
+          content: 'Demande au modèle d\'examiner sa propre sortie:\n\n> \"Après avoir fini ta réponse, examen pour les contradictions ou les affirmations qui contredisent quelque chose que tu as dit plus tôt. Souligne toutes les incohérences que tu trouves."\n\nLes modèles attrapent souvent leurs propres erreurs lorsqu\'on leur demande de réfléchir. Le modèle peut ensuite réviser la réponse avant que tu la voies.',
+        },
+        technique4: {
+          title: '4. Utiliser les instructions négatives',
+          content: 'Préciser explicitement ce que le modèle ne doit PAS faire:',
+          items: [
+            '\"N\'invente jamais de sources, URL ou noms d\'auteurs sous aucune circonstance\"',
+            '\"Ne devine pas les dates si tu n\'es pas sûr – laisse la date vide plutôt que de deviner\"',
+            '\"N\'ajoute pas d\'informations qui ne sont pas dans le contexte fourni\"',
+          ],
+        },
+        technique4Extra: {
+          content: 'La formulation négative fonctionne parfois mieux que la formulation positive pour prévenir les erreurs spécifiques.',
+        },
+        technique5: {
+          title: '5. Raisonnement étape par étape avec vérification',
+          content: 'Pour les tâches complexes, demande:\n\n> \"Travaille cela étape par étape. Après chaque étape, vérifiez que l\'étape précédente est correcte avant de passer à l\'étape suivante."\n\nDécomposer la tâche en petites parties avec des étapes de vérification donne au modèle des chances de attraper les incohérences avant qu\'elles ne s\'aggravent.',
+        },
+        technique6: {
+          title: '6. Format de sortie structuré avec section de preuves',
+          content: 'Demandez au modèle de séparer **réponse**, **raisonnement** et **preuves** en sections distinctes:\n\n```\nRÉPONSE: [Réponse directe]\n\nRAISONNEMENT: [Comment tu as trouvé cette réponse]\n\nPREUVES: [Sources, faits ou citations supportant cela]\n\nCONFIANCE: [Combien tu es sûr, et pourquoi?]\n```\n\nCette structure rend les hallucinations faciles à repérer: les affirmations non supportées auront des sections PREUVES vides ou vagues, et des valeurs de CONFIANCE basses.',
+        },
+        systemLevel: {
+          title: 'Stratégies au niveau système au-delà de la conception des prompts',
+          content: 'Les prompts seuls ne suffisent pas pour les travaux critiques. Ajoutez ces outils et workflows.',
+        },
+        systemItems: {
+          items: [
+            '**Retrieval-Augmented Generation (RAG).** Donnez au modèle un document spécifique, une base de connaissances ou un dataset et demandez-lui de répondre en utilisant uniquement ce contenu. Cela ancre les réponses dans les données réelles au lieu des données d\'entraînement du modèle et élimine les hallucinations sur les informations manquantes. Des outils comme LangChain, la mise en cache de prompts d\'Anthropic et les bases de données vectorielles implémentent ce modèle. Voir notre guide complet sur [RAG: comment ancrer les réponses IA dans les données réelles](/prompt-engineering/rag-explained).',
+            '**Appel de fonction et utilisation de fonctions.** Laissez le modèle appeler des fonctions externes pour les calculs, les recherches en base de données ou la vérification des faits. Au lieu d\'inventer une statistique, le modèle appelle une fonction pour la récupérer. Cela supprime entièrement la tentation d\'halluciner pour des domaines spécifiques.',
+            '**Examen humain et vérification par les experts.** Pour les décisions critiques – médicales, juridiques, financières, critiques pour la sécurité – laissez toujours un humain (de préférence un expert) vérifier les réponses générées par l\'IA. Aucune technique de prompt ne remplace le jugement d\'un expert.',
+            '**Workflows de vérification automatisée des faits.** Exécutez les résultats du modèle par des systèmes automatisés (API de vérification des faits, validation d\'URL, vérification des citations) avant de les montrer aux utilisateurs. Cela détecte les hallucinations à l\'échelle sans examen manuel de chaque sortie.',
+          ],
+        },
+        multiModel: {
+          title: 'Plusieurs modèles et détection du consensus',
+          content: 'Un seul modèle peut halluciner confidentement. Mais lorsque tu poses à plusieurs modèles indépendants la même question, ils désaccordent souvent sur les affirmations hallucées.\n\nSi cinq modèles produisent indépendamment des réponses similaires à une question, cette réponse est beaucoup plus susceptible d\'être correcte que si un seul modèle répond. Si un seul modèle revendique quelque chose et quatre autres ne le mentionnent pas, cette réclamation est hautement suspecte et justifie une vérification.\n\nC\'est le principe derrière **consensus scoring**: envoyez le même prompt à de nombreux modèles (GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, Mistral Large, Llama 3, DeepSeek, etc.) et analysez où ils s\'accordent et où ils ne le font pas.',
+        },
+        consensusTest: {
+          title: 'Test de consensus PromptQuorum',
+          content: '**Testé dans PromptQuorum – 15 prompts sujets aux hallucinations envoyés à GPT-4o, Claude 4.6 Sonnet et Gemini 1.5 Pro:** GPT-4o a complètement inventé 1 citation; Claude 4.6 Sonnet a refusé de citer des articles non vérifiés; Gemini 1.5 Pro a cité 3 articles réels mais 1 avec une année incorrecte. Seulement 1 citation apparaît dans les trois réponses du modèle. Ce test démontre que le consensus entre les modèles est un signal significatif de fiabilité – et que les réponses de modèle unique sont plus susceptibles de contenir des inventions.\n\nPromptQuorum automatise cela: envoyez un prompt à 25+ modèles IA simultanément, exécutez l\'analyse de consensus sur toutes les réponses, et obtenez un jugement sur les affirmations ayant un accord élevé (probablement fiable) et lesquels ont un accord faible (digne d\'être enquêté). L\'outil signale exactement quelles affirmations se contredisent, identifie les affirmations qui n\'apparaissent que dans une ou deux réponses, et ponde les réponses du modèle par la capacité – transformant la détection d\'hallucination de suppositions dans l\'analyse structurée basée sur les données.\n\nVoir comment [l\'IA multi-modèles réduit les hallucinations](/prompt-engineering/consensus-scoring) pour une explication technique plus profonde.',
+        },
+        globalPerspective: {
+          title: 'Perspectives mondiales sur la gouvernance des hallucinations',
+          content: 'Le risque d\'hallucination et les stratégies d\'atténuation varient selon la région et le contexte réglementaire. **En Europe**, la loi sur l\'IA de l\'UE insiste sur la transparence et la déclaration des erreurs pour les systèmes d\'IA à haut risque, rendant la documentation des hallucinations obligatoire. Mistral AI (France) a construit des modèles ayant un objectif spécifique pour réduire les hallucinations dans les applications conformes à l\'UE. **En Chine**, des modèles comme Qwen 2.5 et DeepSeek ont des modèles d\'hallucinations différents en raison de la composition des données d\'entraînement et de l\'efficacité de la tokenisation pour les langues CJK (chinois, japonais, coréen) – ces modèles gèrent différemment les ratios token-information que les modèles optimisés pour l\'anglais. **Au Japon**, les entreprises opérant selon les directives de gouvernance des données du METI (Ministère de l\'Économie, du Commerce et de l\'Industrie) déploient de plus en plus des modèles localement pour les tâches sujettes aux hallucinations afin d\'assurer la résidence des données et la conformité.\n\nIndépendamment de la région, les techniques fondamentales (RAG, vérification du consensus, examen humain) restent universellement applicables. Choisissez et vérifiez les modèles en fonction de votre contexte réglementaire et de vos exigences linguistiques.',
+        },
+        dangerDomains: {
+          title: 'Quand les hallucinations sont les plus dangereuses',
+          content: 'Les hallucinations risquent des dommages importants dans des domaines spécifiques. Soyez particulièrement prudent avec:',
+          items: [
+            '**Décisions médicales et de santé** – Les mauvais noms de médicaments, les dosages ou les mauvaises interprétations de symptômes peuvent faire du mal aux patients',
+            '**Questions juridiques et de conformité** – Les jurisprudences inventées, les exigences réglementaires ou les précédents peuvent entraîner des erreurs coûteuses ou des violations',
+            '**Conseils financiers** – Les fausses données de marché, les informations fiscales incorrectes ou les métriques de performance fabriquées induisent en erreur les décisions à haut risque',
+            '**Systèmes critiques pour la sécurité** – Les hallucinations dans l\'examen du code, les décisions architecturales ou l\'analyse de sécurité peuvent introduire des vulnérabilités ou des bugs',
+            '**Attribution publique** – Tout ce qui est publié sous votre nom ou votre marque doit être vérifié; les hallucinations endommagent la crédibilité',
+          ],
+        },
+        criticalPrinciple: {
+          content: '**Principe critique:** Même avec des prompts parfaits et une vérification du consensus, la vérification humaine reste essentielle pour les décisions à haut risque. Utilisez l\'IA comme un économiseur de temps et un outil de première passe, pas comme un remplacement du jugement d\'expert ou de la vérification des sources primaires.\n\nApprenez comment [les techniques d\'autocritique](/prompt-engineering/self-critique-prompting) peuvent réduire davantage les erreurs dans les tâches de raisonnement complexe.',
+        },
+        checklist: {
+          title: 'Checklist pratique: avant d\'envoyer un prompt critique',
+          content: 'Utilisez cette checklist avant d\'envoyer un prompt sur lequel tu compteras pour des décisions ou une sortie publique:',
+          items: [
+            '[ ] **Le prompt permet-il explicitement \"Je ne sais pas\"?** Ajoutez: \"Tu peux dire \'Je ne sais pas\' si tu n\'es pas sûr.\"',
+            '[ ] **Y a-t-il un contexte ou des données réels dans le prompt?** Les prompts vagues invitent l\'invention. Fournissez des documents spécifiques, des exemples ou des données d\'entrée.',
+            '[ ] **Les contraintes sont-elles explicites?** Déclarez ce que le modèle ne doit PAS faire, en particulier: \"N\'invente pas de sources, d\'URL ou de citations.\"',
+            '[ ] **Le format de sortie est-il structuré?** Séparez Réponse / Raisonnement / Preuves / Confiance. Cela rend les affirmations non supportées évidentes.',
+            '[ ] **Demandez-vous des sources?** Pour toute affirmation factuelle, demandez: \"Cite la source pour ce fait.\"',
+            '[ ] **La tâche est-elle spécifique, pas ouverte?** \"Énumère cinq stratégies marketing *pour un produit B2B SaaS ciblant les professionnels financiers*\" est mieux que \"Parle-moi du marketing.\"',
+            '[ ] **Avez-vous demandé au modèle d\'auto-vérifier?** Ajoutez: \"Examinez ta réponse pour les contradictions avant de la soumettre.\"',
+            '[ ] **Pour les décisions à haut risque, vérifiez-vous entre?** Envoyez le même prompt à plusieurs modèles et comparez les réponses.',
+          ],
+        },
+        beforeAfter: {
+          title: 'Exemple de prompt avant/après',
+        },
+        badPrompt: {
+          title: '[Mauvais prompt]',
+          blockquote: 'Parle-moi de l\'histoire de l\'intelligence artificielle. Inclus les grandes avancées et les chercheurs importants.',
+          content: '**Pourquoi cela échoue:** Ouvert, pas de contraintes, pas de permission d\'admettre l\'incertitude. Le modèle inventera des dates, attribuera mal les avancées, énoncera confidentement des informations obsolètes et citeras potentiellement des articles qui n\'existent pas.',
+        },
+        goodPrompt: {
+          title: '[Bon prompt]',
+          blockquote: 'En utilisant uniquement la chronologie suivante, résume les grandes avancées de l\'IA de 1950 à 1990:\n\n{DONNÉES DE CHRONOLOGIE INSÉRÉES}\n\nFormate ta réponse comme:\n\n**AVANCÉE:** {Nom}\n**ANNÉE:** {Année — uniquement si indiquée dans la chronologie}\n**IMPORTANCE:** {Ce qu\'elle a permis}\n**SOURCE:** {Quel document de la chronologie mentionne ceci?}\n\nN\'ajoute pas d\'informations qui ne sont pas dans la chronologie. Si tu n\'es pas sûr que quelque chose est dans la chronologie, saute-le plutôt que de deviner.',
+        },
+        whyWorks: {
+          title: 'Pourquoi cela fonctionne:',
+          items: [
+            '**Données réelles au lieu d\'invention:** Le modèle travaille à partir du contexte fourni, pas des lacunes dans les données d\'entraînement',
+            '**Sortie structurée:** Le format rend les sources manquantes immédiatement évidentes',
+            '**Instruction négative:** \"N\'ajoute pas d\'informations qui ne sont pas dans la chronologie\" est explicite',
+            '**Permission d\'omettre:** \"Si tu n\'es pas sûr, saute-le\" supprime la pression d\'inventer des détails',
+            '**Responsabilité des sources:** Chaque affirmation exige de citer quel document elle provient',
+          ],
+        },
+        faq: {
+          title: 'Foire aux questions',
+          faqs: [
+            {
+              q: 'Les hallucinations peuvent-elles être complètement éliminées?',
+              a: 'Non. Les hallucinations sont inhérentes à la façon dont les modèles de langage fonctionnent – ils prédisent les modèles de texte plutôt que de récupérer les faits d\'une source vérifiée. Vous pouvez les réduire considérablement avec une bonne conception de prompts, des outils comme RAG et le consensus multi-modèles, mais l\'élimination complète n\'est pas possible compte tenu de l\'architecture LLM actuelle. La vérification humaine reste nécessaire pour les décisions à haut risque.',
+            },
+            {
+              q: 'Pourquoi le modèle semble-t-il si confiant quand il se trompe?',
+              a: 'Les modèles de langage sont entraînés pour générer du texte fluide et cohérent. La confiance est un sous-produit de la cohérence linguistique. Une fausse déclaration peut être beaucoup plus cohérente et bien articulée qu\'un honnête aveu d\'incertitude. Le modèle n\'a pas de mécanisme intégré pour exprimer le doute – il produit du texte avec la même confiance fluide, indépendamment de l\'exactitude.',
+            },
+            {
+              q: 'Les modèles plus récents et plus grands hallucinent-ils moins?',
+              a: 'Les plus grands modèles hallucinent souvent plus pour certaines tâches car ils sont meilleurs pour générer du texte plausible, ce qui rend les fausses affirmations plus difficiles à détecter. Cependant, les modèles plus récents obtiennent de meilleurs résultats sur certaines tâches factuelles (ils ont des données d\'entraînement plus récentes et un suivi d\'instruction plus fort). La relation entre la taille du modèle et l\'hallucination dépend de la tâche, pas monotone.',
+            },
+            {
+              q: 'Connecter un modèle à Internet supprime-t-il les hallucinations?',
+              a: 'Partiellement. L\'accès Web en temps réel aide avec les événements actuels et les faits récents, mais il ne résout pas le problème fondamental: le modèle invente toujours des détails, mal interprète les résultats de recherche ou hallucine sur le contenu qu\'il n\'a pas récupéré. L\'accès Internet est un outil qui réduit une classe d\'hallucinations, pas une cure.',
+            },
+            {
+              q: 'Comment puis-je vérifier rapidement si une réponse est hallucée?',
+              a: 'Vérifiez les sources: Cliquez sur les URL ou recherchez les articles cités. S\'ils n\'existent pas, la réponse est hallucée. Vérifiez les faits: Vérifiez les dates, les noms et les nombres contre les sources fiables. Comparez plusieurs modèles: Posez la même question à différents modèles. L\'désaccord tranchant suggère qu\'au moins un hallucine. Appliquez l\'expertise du domaine: Si vous connaissez le domaine, lisez attentivement les plausibilités subtiles – les hallucinations ont souvent des signes révélateurs pour les lecteurs experts.',
+            },
+            {
+              q: 'Dois-je cesser d\'utiliser l\'IA si elle hallucine?',
+              a: 'Non. Utilisez l\'IA stratégiquement avec vérification. Pour le brainstorming, la rédaction et l\'exploration, les hallucinations sont une perte mineure. Pour le travail critique en fait (recherche, conformité, décisions médicales, conseils financiers), utilisez l\'IA comme point de départ, puis vérifiez tout avec des sources fiables ou un examen expert.',
+            },
+            {
+              q: 'Quelle est la différence entre une hallucination et une vraie erreur?',
+              a: 'Une hallucination est confiante et fausse. Si un modèle dit \"Je ne suis pas sûr, mais cela pourrait être X,\" c\'est de l\'incertitude honnête, pas une hallucination. S\'il dit \"La capitale de la France est Berlin\" avec une confiance totale, c\'est une hallucination – le modèle a dit quelque chose de faux comme si c\'était un fait. Le hallmark est l\'affirmation confiante de quelque chose d\'inexact.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Lectures connexes',
+          items: [
+            '[Qu\'est-ce que le prompt engineering?](/prompt-engineering/what-is-prompt-engineering) – les concepts fondamentaux derrière la structuration des prompts',
+            '[Consensus Scoring multi-modèles](/prompt-engineering/consensus-scoring) – comment comparer les modèles détecte les désaccords et l\'instabilité',
+            '[Techniques de prompt d\'autocritique](/prompt-engineering/self-critique-prompting) – comment obtenir des modèles pour attraper leurs propres erreurs',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Wei, J., Wang, X., Schuurmans, D., et al. (2022). \"Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.\" [ArXiv](https://arxiv.org/abs/2201.11903) — l\'article fondateur démontrant que le raisonnement étape par étape réduit les hallucinations sur les tâches mathématiques et logiques.',
+            'Maynez, J., Narayan, S., Hashimoto, B., & Hardt, D. (2021). \"On Faithfulness and Factuality in Abstractive Summarization.\" [ACL Proceedings](https://aclanthology.org/2021.acl-long.200/) — étude empirique des taux et des mécanismes d\'hallucination dans la génération de texte neuronal.',
+            'Anthropic (2024). \"Constitutional AI.\" [https://www.anthropic.com/constitutional-ai](https://www.anthropic.com/constitutional-ai) — approche d\'Anthropic pour réduire les résultats nuisibles et les hallucinations par l\'entraînement basé sur les principes.',
+          ],
+        },
+      },
     },
     ja: {
       theme: 'Fundamentals',
       title: 'AIハルシネーション：AIがなぜ物を作り出すのか — そしてそれを止める方法',
-      intro: '大規模言語モデルは誤った情報を自信を持って生成します。これらのエラー（ハルシネーションと呼ばれる）は、架空の引用から完全な権威で提示された捏造された事実までの範囲です。それらが発生する理由と、それらを検出して削減する方法を理解することは、実際の作業でLLMを使用する誰にとってもが重要です。',
+      intro: '大規模言語モデルは誤った情報を自信を持って生成します。これらのエラー（ハルシネーションと呼ばれる）は、架空の引用から完全な権威で提示された捏造された事実までの範囲です。それらが発生する理由、検出方法、および削減方法を理解することは、実際の作業でLLMを使用する誰にとってっても重要です。',
       publishDate: '2026-03-22',
-      readTime: '12分の読み物',
-      sections: {},
+      readTime: '12分で読める',
+      sections: {
+        definition: {
+          title: 'AIハルシネーションとは何ですか？',
+          content: [
+            '**AIハルシネーション**は、見かけの確信を持ってLLMによって生成された事実上の偽りまたは捏造されたステートメントです。モデルは、不正な名前、架空の出典、不可能な日付、架空のURL—正確な情報と同じ流暢な言語を使用して、現実に違反するテキストを生成します。',
+            'これは、モデルが不確実性を表現することとは根本的に異なります。ハルシネーションは、存在しないこと、または決して起こらなかったイベントについての自信を持った詳細な主張が特徴です。モデルは、存在しないジャーナルに掲載されたペーパーを引用したり、伝記の詳細を捏造したり、歴史的な日付を数世紀ずれて述べたり、構築されたことのない製品機能を説明したりする可能性があります。ユーザーはそれを読んで、明確な言語が正確性を示していると仮定し、それに基づいて作用します—その情報が製造されていることを発見するためだけです。',
+            '**一文で：**ハルシネーションは、言語モデルが信頼できるストアから事実を検索するのではなく、テキストパターンを予測するために生成する流暢な虚偽のステートメントです。'
+          ],
+        },
+        tldr: {
+          title: '重要なポイント',
+          isTldr: true,
+          items: [
+            '**ハルシネーションとは何か：** LLMによって生成された自信を持った偽のステートメントは、現実に違反し、架空の出典、偽の事実、捏造された詳細—流暢に提示されているかのように正確',
+            '**なぜ発生するのか：** LLMはテキストパターンを予測し、事実を検索しない。確認するデータベースがなく、不確実性を通知する内部信頼メカニズムがない',
+            '**検出方法：** コンセンサススコアリング（複数のモデルに同じ質問をする；同意は信頼性の信号）、引用を事実確認、請求を独立して確認',
+            '**コンセンサススコアリング：** 同じプロンプトを5以上の独立モデルにディスパッチする；1つまたは2つの応答にのみ表示される請求は非常に疑わしく、検証を保証する',
+            '**緩和戦略：** RAG（検証済みドキュメントでの接地）、明示的な出典、制約の設定（「このドキュメントからの情報のみを使用」）、マルチモデルコンセンサス、高リスク請求の人的レビュー',
+          ],
+        },
+        whyHallucinate: {
+          title: '言語モデルがハルシネーションを起こす理由',
+          content: 'LLMは、シーケンス内の次の単語を予測することで機能します。データベースを参照したり、事実を根拠となる真実に対して検証したりしません。トレーニングデータのパターンに基づいて確率を計算します。この基本的な設計—言語タスクに非常に効果的—は本質的にハルシネーションへの圧力を生み出します。',
+        },
+        coreMechanisms: {
+          title: 'コアメカニズム',
+          items: [
+            '**トークン予測、事実検索ではない。** モデルのアーキテクチャは言語生成用に最適化され、事実検証用には最適化されていません。プロンプトが質問をすると、モデルの目標は、テキストの首尾一貫した、もっともらしい継続を生成することです。一貫性と真実は同じではありません。虚偽のステートメントは、不確実性の承認よりも首尾一貫している可能性があります。',
+            '**トレーニングデータの隙間と有効期限。** モデルは、特定の終了日付を持つデータでトレーニングされています。情報ギャップ—トレーニング中にモデルが遭遇したことのないトピック、トレーニングカットオフ後の最近のイベント、狭い領域の専門知識—は空白を生み出します。これらのギャップについて聞かれた場合、モデルは予測する真実のパターンがありません。「この情報を持っていない」と言う代わりに、もっともらしく聞こえる詳細を発明します。',
+            '**明示的な信頼メカニズムがない。** モデルは各出力の横に信頼スコアを生成しません。彼らは、「この主張について30%確実です」と言う内部信号なしでテキストを生成します。出力でページを埋める圧力は、疑いを通知するか、リクエストを拒否するオプションを上回ります。',
+            '**回答を要求するプロンプトからの圧力。** 「[トピック]について説明する」や「[理由ステートメント]のすべての理由をリストする」のようなプロンプトは、暗黙的に伝えます：*あなたが不確かであっても、あなたは答える必要があります*。モデルはリクエストを満たすために詳細を発明することによって応答します。有用であることへの圧力を、不正確である危険よりも重要として扱います。',
+            '**コンテキストウィンドウの制限と情報喪失。** LLMは、メモリ内に有限の量のコンテキストのみを保持できます。長いドキュメントまたは会話により、以前の詳細がフェードします。モデルは、前のセクションで何が言われたかを忘れたり、それを発明したり、誤ったり、以前のコンテキストと一貫しているかのように自信を持ってそのでっち上げを主張したりする可能性があります。[コンテキストウィンドウ](/prompt-engineering/context-windows-explained-why-ai-forgets)に関するガイドを参照して、これが発生する理由と、トークン制限が出力信頼性に影響を与える方法を確認してください。',
+            '**多段階の推論での混乱。** 複数の推論ステップを必要とする問題の場合、モデルは中間結果を失う可能性があります。結論を正当化するためにサポートステップを発明したり、ステップをスキップして虚偽の結論にジャンプしたり、論理的に正しく聞こえるテキストを生成したりする可能性があります。[長い推論チェーンでトークンとコストがどのようにスケーリングするか](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)を理解すると、精度と効率のバランスを取るのに役立ちます。'
+          ],
+        },
+        commonTypes: {
+          title: 'ハルシネーションの一般的なタイプ',
+          content: 'ハルシネーションは認識可能なパターンで来ます。タイプを識別することは、緩和戦略をターゲットするのに役立ちます。',
+          rows: [
+            { 'Type': '架空の出典', 'Example': 'ピアレビュー済みのペーパーへの引用が存在しない；偽の著者名と公開年', 'Why It Happens': 'モデルは数百万の引用でトレーニングされ、引用のようなパターンを学習し、新しい引用を発明', 'Severity': '非常に高い' },
+            { 'Type': '誤った事実（日付、数字、名前）', 'Example': '歴史的なイベントを誤った年に述べ；不正確な伝記の詳細', 'Why It Happens': 'トレーニングデータは不完全または矛盾している；モデルはもっともらしく聞こえる数字を選択', 'Severity': '非常に高い' },
+            { 'Type': '偽造URL および電子メール', 'Example': 'リンクまたはメールアドレスを提供し、解決しないか、請求された組織に属していない', 'Why It Happens': 'モデルはURLとメールのパターンを学習し、現実的だが架空の新しいパターンを生成', 'Severity': '高い' },
+            { 'Type': 'コンテキスト損失', 'Example': 'モデルが以前のコンテキストを理解しているかのように質問に答え、実際には失われた', 'Why It Happens': 'コンテキストウィンドウは有限です；長いドキュメントは以前の詳細をモデルの注意から減退させます', 'Severity': '高い' },
+            { 'Type': '役割ドリフト', 'Example': '1つの役割（アナリスト）で始まり、徐々に別の（ストーリーテラー）に移行し、ギャップを埋めるために詳細を発明', 'Why It Happens': 'モデルは最初の指示の追跡を失い、テキストのみにパターンマッチングに戻る', 'Severity': '中程度' },
+            { 'Type': '過信の一般化', 'Example': '特定のトレーニング例のみが示す場合、「すべてのXがYを行う」と述べる', 'Why It Happens': 'モデルは限られたトレーニングデータから広すぎて一般化し、信頼チェックなし', 'Severity': '中程度' },
+            { 'Type': '内部矛盾', 'Example': '同じ応答内で対立する事実を述べる', 'Why It Happens': 'モデルは複数の文を超えて一貫性を追跡するメカニズムがない', 'Severity': '中程度' },
+          ],
+          columns: ['Type', 'Example', 'Why It Happens', 'Severity'],
+        },
+        hallucinationTypesList: {
+          isTldr: false,
+          content: '**ハルシネーションの7つのタイプは：**架空の出典、誤った事実、偽造URL および電子メール、コンテキスト損失、役割ドリフト、過信の一般化、および内部矛盾。',
+        },
+        promptDesignIntro: {
+          title: 'プロンプト設計がハルシネーションリスクに影響を与える方法',
+          content: 'あなたのプロンプトはハルシネーションを奨励または落胆させます。違いは測定可能です。',
+        },
+        riskPrompts: {
+          title: 'ハルシネーションリスクを増加させるプロンプト：',
+          items: [
+            '「[トピック]についてすべてを教えてください」—制限なし、「わかりません」と言う許可なし',
+            '「[多くの詳細]を含めることを確認してください」—発明された情報でスペースを埋めるための明示的な圧力',
+            '「あたかも一流の専門家であるかのように書く」—不確かな請求でさえ、自信を持った主張を促す',
+            '「確実でなくても答えてください」—ハルシネーションのブレーキを削除',
+          ],
+        },
+        safePrompts: {
+          title: 'ハルシネーションリスクを減らすプロンプト：',
+          items: [
+            '「確実でない場合は、「わかりません」と言うことができます」—知識ギャップを認める明示的な許可',
+            '「以下のコンテキストからの情報のみを使用してください」—応答を提供されたデータに制限し、発明された知識ではない',
+            '「事実を意見から分離してください。不確かな請求に[不確かな]マークを付けてください」—モデルを区別するように強制',
+            '「任意の事実上の主張について、あなたのソースを引用してください」—発明されたサイテーションを明らかに見える',
+            '「この請求を確認できない場合は、それを含めないでください」—未検証のステートメントに明示的な制約',
+          ],
+        },
+        promptStructure: {
+          title: 'プロンプトの良い構造',
+          content: '優れたプロンプトは、4つの要素を組み合わせます：a **明確な役割またはコンテキスト**（モデルはどのフレームを採用すべきですか？）、a **特定のタスク**（どの出力が必要ですか？）、**実際の入力データ**（どの情報が提供されますか？）、および**明示的な制約**（モデルがしてはいけないことは何ですか？）。この構造は、モデルが何をすべきかについての曖昧さを除去することにより、ハルシネーションへの圧力を軽減します。[すべてのプロンプトが必要とする5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs)に関するガイドは、例を使用してそれぞれの要素をカバーします。\n\n[プロンプトエンジニアリングの基礎](/prompt-engineering/what-is-prompt-engineering)の完全な定義を参照して、構造が出力信頼性に影響を与える方法についてさらに詳しく説明してください。',
+        },
+        techniques: {
+          title: 'ハルシネーションを減らすためのテクニック',
+          content: '3つの相補的なアプローチはハルシネーションを減らします：\n- **プロンプトレベル：**プロンプトの不確実性を認める制約と許可を追加\n- **システムレベル：** RAG、関数の呼び出し、または検索を使用して、実際のデータの回答を接地\n- **モデルレベル：**複数の独立したモデルで同じプロンプトを実行して、コンセンサスによるハルシネーションを検出',
+        },
+        technique1: {
+          title: '1. 「わかりません」と言う明示的な許可',
+          content: 'モデルに伝えます：「確実でない場合、または情報を持っていない場合は、そう言ってください。推測しないでください。」\n\nこれは、回答を発明する圧力を取り除きます。多くのモデルは役立つようにトレーニングされており、完全に不確実であっても回答しようとします。彼らにその期待から明示的に解放されることを与えることは、彼らに拒否する許可を与えます。',
+        },
+        technique2: {
+          title: '2. ソースまたは証拠を求める',
+          content: 'リクエスト：「事実上の主張について出典を引用するか、各参照のURLと発表日を提供します。」\n\nこれは発明されたサイテーションを明らかに（それらは解決されたり、存在しないソースを指します）、モデルをファクトアサーションに関する慎重さを強制します。また、出力を検証する方法を提供します：各リンクをクリックし、各ソースを確認します。',
+        },
+        technique3: {
+          title: '3. 自己批判と矛盾チェック',
+          content: 'モデルに独自の出力を確認するように求めます：\n\n> 「回答を終了した後、矛盾または以前に言ったことと矛盾する請求について確認してください。見つけた矛盾を指摘してください。」\n\nモデルは、反映するよう求められたときに独自のエラーをキャッチすることがよくあります。その後、モデルはあなたがそれを見る前に答えを改正できます。',
+        },
+        technique4: {
+          title: '4. 否定的な指示を使用する',
+          content: 'モデルがしてはいけないことを明示的に述べます：',
+          items: [
+            '「いかなる状況下でも、ソース、URL、または著者名を発明しないでください」',
+            '「確実でない場合は日付を推測しないでください—推測する代わりに日付を空白にしてください」',
+            '「提供されたコンテキストに含まれていない情報を追加しないでください」',
+          ],
+        },
+        technique4Extra: {
+          content: '否定的なフレーミングは、特定のエラーを防ぐために肯定的なフレーミングよりも優れた場合があります。',
+        },
+        technique5: {
+          title: '5. 検証による段階的な推論',
+          content: '複雑なタスクの場合、質問：\n\n> 「これをステップバイステップで作成します。各ステップの後、前のステップが正しいことを確認してから、次のステップに進みます。」\n\nタスクをより小さなチャンクに分割し、検証ステップを使用すると、矛盾が化合する前にモデルをキャッチするチャンスをキャッチします。',
+        },
+        technique6: {
+          title: '6. 証拠セクションを備えた構造化出力形式',
+          content: 'モデルに、**応答**、**推論**、**証拠**を異なるセクションに分離するよう依頼します：\n\n```\n応答：[直接応答]\n\n推論：[この回答に到達した方法]\n\n証拠：[これをサポートするソース、事実、または引用]\n\n信頼：[あなたはどの程度確実で、なぜか？]\n```\n\nこの構造により、ハルシネーションは簡単に見えます：サポートされていない請求は、空のまたは曖昧な証拠セクションと低い信頼値があります。',
+        },
+        systemLevel: {
+          title: 'プロンプト設計以外のシステムレベル戦略',
+          content: 'プロンプトだけは高リスク作業には不十分です。これらのツールとワークフローを追加します。',
+        },
+        systemItems: {
+          items: [
+            '**Retrieval-Augmented Generation（RAG）。** モデルに特定のドキュメント、ナレッジベース、またはデータセットを提供し、そのコンテンツのみを使用して回答するよう依頼します。これにより、モデルのトレーニングデータの代わりに実データにアンカーされた応答を接地し、欠落情報についてのハルシネーションを排除します。LangChain、Anthropic\'sプロンプトキャッシング、ベクトルデータベースなどのツールはこのパターンを実装しています。[RAG：実データの回答をアンカーする方法](/prompt-engineering/rag-explained)に関する完全なガイドを参照してください。',
+            '**ツール呼び出しと関数の使用。** モデルが計算、データベースルックアップ、または事実確認のための外部関数を呼び出すことを許可します。統計を発明する代わりに、モデルはそれを取得するために関数を呼び出します。これは特定のドメインに対してハルシネーションする誘惑を完全に排除します。',
+            '**人間のレビューと専門家検証。** 重大な決定—医療、法律、財務、安全クリティカル—については、常に人間（理想的には専門家）がAIで生成された回答を確認させてください。プロンプト技術はエキスパートジャッジメントの代わりになりません。',
+            '**自動ファクトチェックワークフロー。** 自動システム（ファクトチェックAPI、URL検証、引用検証）を通じてモデル出力を実行してから、ユーザーに表示します。これは、すべての出力の手動レビューなしにハルシネーションを大規模に検出します。',
+          ],
+        },
+        multiModel: {
+          title: '複数のモデルとコンセンサス検出',
+          content: '単一のモデルは自信を持ってハルシネーションできます。しかし、複数の独立したモデルに同じ質問をする場合、彼らはしばしば幻想的な請求について意見が異なります。\n\n5つのモデルが独立して質問への類似した回答を生成する場合、その答えは単一のモデルが回答するよりもはるかに正確である可能性があります。1つのモデルのみが何かを主張し、4つのモデルは言及しない場合、その請求は非常に疑わしく、検証を正当化します。\n\nこれは**コンセンサススコアリング**の背後にある原則です：同じプロンプトを多くのモデル（GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、Mistral Large、Llama 3、DeepSeekなど）に送信し、彼らが同意する場所と同意しないかを分析します。',
+        },
+        consensusTest: {
+          title: 'PromptQuorum コンセンサステスト',
+          content: '**PromptQuorumでテスト—15ハルシネーション傾向プロンプトをGPT-4o、Claude 4.6 Sonnet、およびGemini 1.5 Proに送信：** GPT-4oは完全に1つの引用を作成しました。Claude 4.6 Sonnetは未検証のペーパーを引用することを拒否しました。Gemini 1.5 Proは3つの実際のペーパーを引用しましたが、1つは年が正しくありません。1つの引用のみが3つすべてのモデル応答に表示されました。このテストは、モデル全体のコンセンサスが信頼性の有意な信号である—そして、単一モデル応答がより多くの製造を含む可能性があることを実証しています。\n\nPromptQuorumはこれを自動化します：25 +のAIモデルに同時に1つのプロンプトを送信し、すべての回答全体でコンセンサス分析を実行し、どの請求が高い合意を持っているか（おそらく信頼できる）と低い合意（さらに調査する価値がある）についての判決を得ます。ツールは、どの請求が矛盾するかを正確に標識し、1つまたは2つの応答にのみ表示される請求を表示し、機能別にモデル応答を重み付け—ハルシネーション検出を根拠のない推測から構造化された、データドリブン分析に変換します。\n\n[マルチモデルAIがハルシネーションを減らす方法](/prompt-engineering/consensus-scoring)を参照して、より深い技術的説明を行うことを参照してください。',
+        },
+        globalPerspective: {
+          title: 'ハルシネーションガバナンスのグローバルパースペクティブ',
+          content: 'ハルシネーションリスクと軽減戦略は地域と規制の文脈によって異なります。**ヨーロッパでは**、EU AI Actは高リスクAIシステムの透明性とエラー報告を強調し、ハルシネーション文書を義務的にします。Mistral AI（フランス）は、EUコンプライアント性のアプリケーションでハルシネーション削減に特定の焦点を持つモデルを構築しています。**中国では**、Qwen 2.5やDeepSeekなどのモデルは、トレーニングデータ構成とCJK言語（中国語、日本語、韓国語）のためのトークン化効率によるハルシネーションパターンが異なります—これらのモデルは、英語最適化モデルとは異なるトークン-to-information比を処理します。**日本では**、METI（経済産業省）データガバナンスガイドラインの下で動作する企業は、データ居住権とコンプライアンスを確保するために、ハルシネーション傾向のタスクのためにモデルをローカルに展開ます。\n\n地域に関係なく、コアテクニック（RAG、コンセンサスチェック、人的レビュー）は普遍的に適用可能です。規制の文脈と言語要件に基づいてモデルを選択して検証してください。',
+        },
+        dangerDomains: {
+          title: 'ハルシネーションが最も危険な場合',
+          content: 'ハルシネーションは特定のドメインで重大な害のリスクがあります。特に注意してください：',
+          items: [
+            '**医療および健康決定** —誤った薬物名、用量、または症状の解釈は患者に害を及ぼす可能性があります',
+            '**法律およびコンプライアンス** —作成された判例法、規制要件、または前例は、高額なエラーまたは違反につながる可能性があります',
+            '**財務アドバイス** —誤った市場データ、不正確な税情報、または製造されたパフォーマンスメトリックは、高リスク決定を誤ったります',
+            '**安全クリティカルシステム** —コードレビュー、建築決定、またはセキュリティ分析のハルシネーションは、脆弱性またはバグを導入できます',
+            '**パブリック帰属** —あなたの名前またはブランドの下で公開されたもの、幻想は信頼性を傷つけることが確認する必要があります',
+          ],
+        },
+        criticalPrinciple: {
+          content: '**重要な原則：**完全なプロンプトとコンセンサスチェックであっても、人的検証は高リスク決定に不可欠です。AIを時間節約とファーストパスツール使用し、エキスパートジャッジメントまたはプライマリソース検証の交換ではなく。\n\n[自己批評技術](/prompt-engineering/self-critique-prompting)が複雑な推論タスクでエラーをさらに削減する方法を学びます。',
+        },
+        checklist: {
+          title: '実践的なチェックリスト：重大なプロンプトを送信する前に',
+          content: '重大なプロンプトに依存する決定または公開出力を送信する前に、このチェックリストを使用します：',
+          items: [
+            '[ ] **プロンプトは明示的に「わかりません」を許可しますか？**追加：「確実でない場合は「わかりません」と言えます」',
+            '[ ] **プロンプトに実際のコンテキストまたはデータはありますか？**曖昧なプロンプトは発明を招待します。具体的なドキュメント、例、または入力データを提供します。',
+            '[ ] **制約は明示的ですか？**モデルがしてはいけないことを述べ、特に：「出典、URL、または引用を発明しないでください。」',
+            '[ ] **出力形式は構造化されていますか？**応答/推論/証拠/信頼を分離します。これにより、サポートされていない請求が明らかになります。',
+            '[ ] **ソースを要求していますか？** 事実上の請求については、次を要求します：「この事実について出典を引用してください。」',
+            '[ ] **タスクは具体的で、未ではありませんか？** 「*金融の専門家をターゲットにするB2Bスタートアップ用に5つのマーケティング戦略をリストしてください*」は「マーケティングについて教えてください。」より優れています',
+            '[ ] **モデルに自己確認を求めましたか？**追加：「提出する前に矛盾について回答を確認します。」',
+            '[ ] **高リスク決定の場合は、交差チェックしていますか？** 複数のモデルに同じプロンプトを送信し、回答を比較してください。',
+          ],
+        },
+        beforeAfter: {
+          title: 'プロンプトの例の前/後',
+        },
+        badPrompt: {
+          title: '[悪いプロンプト]',
+          blockquote: '人工知能の歴史について教えてください。大きな進歩と重要な研究者を含めてください。',
+          content: '**これが失敗する理由：**オープンエンド、制約なし、不確実性を認める許可なし。モデルは日付を発明し、進歩を誤信し、時代遅れの情報を自信を持って述べ、おそらく存在しないペーパーを引用します。',
+        },
+        goodPrompt: {
+          title: '[良いプロンプト]',
+          blockquote: '以下の時間線のみを使用して、1950年から1990年のAIの大きな進歩を要約します：\n\n{TIMELINE DATA INSERTED}\n\nあなたの答えを次のようにフォーマット：\n\n**進歩：** {名前}\n**年：** {年—時間線に記載されている場合のみ}\n**重要性：** {何を有効にしたか}\n**ソース：** {時間線のどのドキュメントがこれを言及していますか？}\n\n時間線にない情報を追加しないでください。何かが時間線にあるかどうか確実でない場合は、推測するのではなくスキップしてください。',
+        },
+        whyWorks: {
+          title: 'これが機能する理由：',
+          items: [
+            '**発明ではなく実データ：**モデルは提供されたコンテキストから動作し、トレーニングデータギャップからではない',
+            '**構造化出力：**形式により、欠落しているソースが即座に明らかになります',
+            '**否定的指示：** \"時間線にない情報を追加しないでください\"は明示的です',
+            '**省略する許可：** \"確実でない場合はスキップしてください\"は詳細を発明する圧力を削除',
+            '**ソース責任：** すべての請求は、どのドキュメントがそれから来たかを引用することが必要です',
+          ],
+        },
+        faq: {
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: 'ハルシネーションは完全に排除できますか？',
+              a: 'いいえ。ハルシネーションはどの言語モデルが機能するか固有—彼らは検証済みストアから事実を取得するのではなくテキストパターンを予測します。優れたプロンプト設計、RAGなどのツール、マルチモデルコンセンサスを大幅に削減できますが、現在のLLMアーキテクチャを考えると完全な除去は不可能です。人的検証は高リスク決定のために必要なままです。',
+            },
+            {
+              q: 'モデルが間違っている場合、なぜそんなに自信を持っているようですか？',
+              a: '言語モデルは流暢で一貫したテキストを生成するようにトレーニングされています。自信は言語的一貫性の副作用です。虚偽のステートメントは、不確実性の正直な認識よりもはるかに一貫していて、よくまとまっている可能性があります。モデルは疑いを表現する組み込みメカニズムを持っていません—正確性に関係なく、同じ流暢な自信でテキストを生成します。',
+            },
+            {
+              q: 'より新しく、より大きなモデルはハルシネーションが少ないですか？',
+              a: 'より大きなモデルは、もっともらしく聞こえるテキストを生成するのが優れているため、いくつかのタスクでより多くハルシネーションします。これにより、虚偽の主張が検出しにくくなります。しかし、より新しいモデルはいくつかの事実タスク（より最近のトレーニングデータと強い指示フォロー）でより良く実行します。モデルサイズとハルシネーション間の関係はタスク依存であり、単調ではありません。',
+            },
+            {
+              q: 'モデルをインターネットに接続すると、ハルシネーションが削除されますか？',
+              a: '一部。リアルタイムWebアクセスは現在のイベントと最近のファクトに役立ちますが、コアの問題を解決しません：モデルはまだ詳細を発明し、検索結果を誤ったり、実際に取得しなかったコンテンツについてハルシネーション。インターネットアクセスはハルシネーションの1つのクラスを削減するツールであり、治療法ではありません。',
+            },
+            {
+              q: '回答がハルシネーションであるかどうかを素早く確認するにはどうすればよいですか？',
+              a: 'ソースを確認する：URLをクリックするか、引用されたペーパーを検索します。存在しない場合、回答はハルシネーションです。事実を確認する：信頼できるソースに対して日付、名前、数字を確認します。複数のモデルを比較する：異なるモデルに同じ質問をしてください。鋭い意見の不一致は、少なくとも1つがハルシネーションしていることを示唆しています。ドメインの専門知識を適用する：フィールドを知っているなら、微妙な不可能について批判的に読む—ハルシネーションはしばしば専門家の読者にとって暴露のしるしを持っています。',
+            },
+            {
+              q: 'ハルシネーションする場合、AIの使用を停止する必要があります？',
+              a: 'いいえ。検証でAIを戦略的に使用してください。ブレーンストーミング、ドラフト作成、探検的な작업については、ハルシネーションは軽微な不便です。事実クリティカルな作業（研究、コンプライアンス、医療決定、財務アドバイス）については、AIを開始点として使用し、その後、信頼できるソースまたは専門家のレビューですべてを確認します。',
+            },
+            {
+              q: 'ハルシネーション真の誤りの違いは何ですか？',
+              a: 'ハルシネーションは自信を持ち、間違いです。モデルが\"確実ではありませんが、それはXかもしれません\"と言う場合、それは正直な不確実性であり、ハルシネーションではなく。 \"フランスの首都はベルリンです\"と完全な自信を言う場合、それはハルシネーション—モデルが事実であるかのように何か偽りを述べました。ハルマークは何かが真実ではない自信を持った主張です。',
+            },
+          ],
+        },
+        relatedReading: {
+          title: '関連読書',
+          items: [
+            '[プロンプトエンジニアリングとは何ですか？](/prompt-engineering/what-is-prompt-engineering) —プロンプト構造の背後にある基本的な概念',
+            '[マルチモデルコンセンサススコアリング](/prompt-engineering/consensus-scoring) —モデルの比較が不一致と不信頼を検出する方法',
+            '[自己批評プロンプト技術](/prompt-engineering/self-critique-prompting) —モデルに独自のエラーをキャッチさせる方法',
+          ],
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            'Wei, J., Wang, X., Schuurmans, D., et al. (2022). \"Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.\" [ArXiv](https://arxiv.org/abs/2201.11903) —段階的な推論が数学およびロジックタスクのハルシネーションを削減することを実証する基礎論文。',
+            'Maynez, J., Narayan, S., Hashimoto, B., & Hardt, D. (2021). \"On Faithfulness and Factuality in Abstractive Summarization.\" [ACL Proceedings](https://aclanthology.org/2021.acl-long.200/) —神経テキスト生成のハルシネーション率とメカニズムの経験的研究。',
+            'Anthropic (2024). \"Constitutional AI.\" [https://www.anthropic.com/constitutional-ai](https://www.anthropic.com/constitutional-ai) —原則ベースの訓練を通じて有害な出力とハルシネーション削減するためのAnthropicのアプローチ。',
+          ],
+        },
+      },
     },
     zh: {
       theme: 'Fundamentals',
       title: 'AI幻觉：为什么AI会编造东西——以及如何停止它们',
-      intro: '大型语言模型自信地产生错误信息。这些错误（称为幻觉）的范围从虚假引文到以完全权威性呈现的捏造事实。理解为什么会发生幻觉以及如何检测和减少幻觉对于在实际工作中使用LLM的任何人都是必不可少的。',
+      intro: '大型语言模型自信地产生错误信息。这些错误（称为幻觉）的范围从虚假引文到以完全权威性呈现的捏造事实。理解为什么会发生幻觉、如何检测和减少幻觉对于在实际工作中使用LLM的任何人都是必不可少的。',
       publishDate: '2026-03-22',
       readTime: '12分钟阅读',
-      sections: {},
+      sections: {
+        definition: {
+          title: '什么是AI幻觉？',
+          content: [
+            '**AI幻觉**是由LLM以明显的信心生成的事实上虚假或编造的陈述。该模型生成违反现实的文本—错误的名字、虚假的来源、不可能的日期、虚构的URL—使用与准确信息相同的流利语言。',
+            '这与模型表达不确定性根本不同。幻觉的特点是对不存在的事物或从未发生过的事件进行自信的、详细的断言。模型可能会引用在不存在的期刊中发表的论文、发明传记细节、说出错误数个世纪的历史日期，或描述从未构建的产品功能。用户阅读它，假设清晰的语言表示准确性，并根据它行动—只是为了发现信息是捏造的。',
+            '**一句话：**幻觉是流利的虚假声明，语言模型产生，因为他们预测文本模式而不是从可靠的存储区检索事实。'
+          ],
+        },
+        tldr: {
+          title: '关键要点',
+          isTldr: true,
+          items: [
+            '**幻觉是什么：** LLM产生的自信虚假声明违反现实—虚假来源、错误事实、编造细节—流利地呈现，好像是准确的',
+            '**为什么发生：** LLM预测文本模式而不是检索事实;他们缺乏一个数据库来验证，没有内部信心机制来信号不确定性',
+            '**如何检测：** 使用共识评分（问多个模型相同的问题;同意是可靠性信号），事实检查引文，独立验证索赔',
+            '**共识评分：** 将相同的提示分派给5+个独立模型;仅在一个或两个响应中出现的索赔高度可疑，需要验证',
+            '**缓解策略：** 使用RAG（在验证文档中接地），提供明确的来源，设置约束（"仅使用该文档中的信息"），使用多模型共识，对高风险索赔进行人工审查',
+          ],
+        },
+        whyHallucinate: {
+          title: '为什么语言模型产生幻觉',
+          content: 'LLM通过预测序列中的下一个词来工作。他们不查询数据库或根据基础事实验证事实。他们基于训练数据中的模式计算概率。这种核心设计—对语言任务非常有效—本质上造成了幻觉的压力。',
+        },
+        coreMechanisms: {
+          title: '核心机制',
+          items: [
+            '**令牌预测，而不是事实检索。** 模型的架构针对语言生成进行了优化，而不是事实检查。当提示提出问题时，模型的目标是产生文本的连贯、合理的延续。连贯性和真实性不是同一回事。虚假陈述可能远比承认不确定性更连贯。',
+            '**训练数据间隙和到期。** 模型在具有特定结束日期的数据上进行训练。信息间隙—模型在训练过程中从未遇到的主题、训练截止后的最近事件、狭窄领域的专门知识—造成空隙。当被问及这些差距时，模型缺乏预测的真实模式。它发明了看似合理的细节，而不是说"我没有这个信息"。',
+            '**没有明确的信心机制。** 模型不会在每个输出旁生成置信度分数。他们产生没有内部信号说"我对这项索赔感到30%确定"的文本。填充输出页面的压力压倒了指示怀疑或拒绝请求的选项。',
+            '**来自要求答案的提示的压力。** 像"解释所有[主题]"或"列出所有原因[原因声明]"的提示隐含地传达：*你必须回答，即使不确定*。该模型通过发明详细信息来满足请求来响应。它将有益的压力视为比不准确的风险更重要。',
+            '**有限的上下文窗口和信息丢失。** LLM只能在内存中保持有限的上下文。长文档或对话导致早期细节褪色。模型可能会忘记在早期部分中说了什么、发明或误记，并自信地断言捏造，好像它与早期的背景一致。参见我们关于[上下文窗口](/prompt-engineering/context-windows-explained-why-ai-forgets)的指南，了解为什么会发生这种情况以及令牌限制如何影响输出可靠性。',
+            '**多步骤推理中的混淆。** 对于需要多个推理步骤的问题，模型可能会失去中间结果的踪迹。它可能会发明一个支持步骤来证明结论，或跳过一步，跳到虚假结论，同时生成看起来逻辑合理的文本。了解[长推理链中代币和成本如何缩放](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)可帮助您平衡准确性和效率。'
+          ],
+        },
+        commonTypes: {
+          title: '常见的幻觉类型',
+          content: '幻觉以可识别的模式出现。识别类型可帮助您针对缓解策略。',
+          rows: [
+            { 'Type': '虚假来源', 'Example': '引用不存在的同行评审论文;假作者名和出版年份', 'Why It Happens': '模型在数百万引用上接受培训并学习了类似引用的模式，然后发明新的', 'Severity': '非常高' },
+            { 'Type': '错误的事实（日期、数字、名称）', 'Example': '以错误的一年说出历史事件;不正确的传记细节', 'Why It Happens': '训练数据不完整或冲突;模型选择看起来合理的数字', 'Severity': '非常高' },
+            { 'Type': '伪造的URL和电子邮件', 'Example': '提供未解析的链接或电子邮件地址，或不属于声称的组织', 'Why It Happens': '模型学到了URL和电子邮件模式，并生成看起来逼真但虚构的新模式', 'Severity': '高' },
+            { 'Type': '背景丧失', 'Example': '回答一个问题，好像模型理解了早期的上下文，当它实际上失去了踪迹', 'Why It Happens': '上下文窗口是有限的;长文档导致早期细节从模型的注意力褪色', 'Severity': '高' },
+            { 'Type': '角色漂移', 'Example': '在一个角色（分析师）中开始，逐渐转换为另一个（故事讲述者），发明细节以填补空白', 'Why It Happens': '模型失去了对初始指令的追踪，默认为仅在文本上进行模式匹配', 'Severity': '中等' },
+            { 'Type': '过度自信的概括', 'Example': '陈述"所有X做Y"，当仅特定的培训示例显示这一点时', 'Why It Happens': '模型从有限的训练数据中概括太广泛，而无需信心检查', 'Severity': '中等' },
+            { 'Type': '内部矛盾', 'Example': '在同一响应中陈述相反的事实', 'Why It Happens': '模型没有在多个句子上追踪一致性的机制', 'Severity': '中等' },
+          ],
+          columns: ['Type', 'Example', 'Why It Happens', 'Severity'],
+        },
+        hallucinationTypesList: {
+          isTldr: false,
+          content: '**七种幻觉是：**虚假来源、错误事实、伪造的URL和电子邮件、背景丧失、角色漂移、过度自信的概括和内部矛盾。',
+        },
+        promptDesignIntro: {
+          title: '提示设计如何影响幻觉风险',
+          content: '您的提示鼓励或阻止幻觉。这种差异是可测量的。',
+        },
+        riskPrompts: {
+          title: '增加幻觉风险的提示：',
+          items: [
+            '"告诉我关于[主题]的一切"—没有限制，没有权限说"我不知道"',
+            '"确保包含[许多细节]"—用虚构的信息填充空间的明确压力',
+            '"写得好像你是一位领先的专家"—鼓励自信的陈述，即使对于不确定的索赔',
+            '"即使你不完全确定也回答"—取消对幻觉的刹车',
+          ],
+        },
+        safePrompts: {
+          title: '降低幻觉风险的提示：',
+          items: [
+            '"如果你不确定，你可以说"我不知道""—明确允许承认知识差距',
+            '"仅使用以下上下文中的信息"—将响应限制为提供的数据，而不是虚构的知识',
+            '"将事实与意见分开。用[不确定]标记不确定的索赔"—强制模型区分',
+            '"为任何事实声称引用您的来源"—使虚构的引文明显可见',
+            '"如果您无法验证此索赔，请勿包含它"—对未验证的陈述的明确约束',
+          ],
+        },
+        promptStructure: {
+          title: '良好的提示结构',
+          content: '好的提示结合了四个要素：a **清晰的角色或上下文**（模型应该采用什么框架？），a **具体的任务**（我需要什么输出？），**真实的输入数据**（提供了什么信息？），和**明确的约束**（模型不应该做什么？）。这种结构通过消除关于模型应该做什么的歧义来减少幻觉的压力。我们关于[每个提示需要的5个构建块](/prompt-engineering/5-building-blocks-every-prompt-needs)的指南涵盖了带有示例的每个元素。\n\n参见关于[提示工程基础](/prompt-engineering/what-is-prompt-engineering)的完整定义，更深入地探索结构如何影响输出可靠性。',
+        },
+        techniques: {
+          title: '减少幻觉的技术',
+          content: '三种互补的方法可以减少幻觉：\n- **提示级别：**在提示中添加约束和允许承认不确定性\n- **系统级别：** 使用RAG、函数调用或检索将答案锚定在实际数据中\n- **模型级别：** 在多个独立模型上运行相同的提示，以通过共识检测幻觉',
+        },
+        technique1: {
+          title: '1. 明确允许说"我不知道"',
+          content: '告诉模型："如果您不确定或没有信息，请说。不要猜测。"\n\n这消除了发明答案的压力。许多模型被训练为有帮助，即使完全不确定也会尝试回答。明确释放他们与该期望给他们拒绝的权限。',
+        },
+        technique2: {
+          title: '2. 要求来源或证据',
+          content: '请求："为任何事实声称引用来源"或"为每个参考提供URL和发布日期"。\n\n这使虚构的引文明显（它们不会解决或指向不存在的来源）并强制模型在断言事实时谨慎。它还为您提供了验证输出的方式：单击每个链接，验证每个来源。',
+        },
+        technique3: {
+          title: '3. 自我批评和矛盾检查',
+          content: '要求模型审查自己的输出：\n\n> "完成答案后，检查矛盾或与您早期所说的相冲突的索赔。指出您发现的任何不一致。"\n\n当被要求反映时，模型经常会发现自己的错误。然后，该模型可以在您看到它之前修改答案。',
+        },
+        technique4: {
+          title: '4. 使用否定指令',
+          content: '明确说明模型不应该做什么：',
+          items: [
+            '"在任何情况下都不会发明来源、URL或作者名"',
+            '"如果您不确定，请不要猜测日期—而不是猜测而留下日期空白"',
+            '"不添加不在提供的上下文中的信息"',
+          ],
+        },
+        technique4Extra: {
+          content: '否定框架有时比肯定框架更有效地防止特定错误。',
+        },
+        technique5: {
+          title: '5. 一步一步的推理，带验证',
+          content: '对于复杂的任务，要求：\n\n> "逐步工作。每个步骤之后，验证之前的步骤在继续下一步之前是否正确。"\n\n将任务分解为较小的块，带有验证步骤，使模型在化合之前赶上不一致的机会。',
+        },
+        technique6: {
+          title: '6. 具有证据部分的结构化输出格式',
+          content: '要求模型将**响应**、**推理**和**证据**分离为不同的部分：\n\n```\n响应：[直接答案]\n\n推理：[您如何得出这个答案]\n\n证据：[支持这一点的来源、事实或引用]\n\n信心：[你有多确定，为什么？]\n```\n\n这种结构使幻觉易于发现：不支持的索赔会有空的或模糊的证据部分和低信心值。',
+        },
+        systemLevel: {
+          title: '提示设计之外的系统级策略',
+          content: '提示本身对于高风险工作是不够的。添加这些工具和工作流。',
+        },
+        systemItems: {
+          items: [
+            '**检索增强生成（RAG）。** 为模型提供特定的文档、知识库或数据集，并要求其仅使用该内容回答。这将答案锚定在实际数据中，而不是模型的训练数据，并消除了关于缺失信息的幻觉。LangChain、Anthropic的提示缓存和向量数据库等工具实现了这种模式。参见我们关于[RAG：如何在真实数据中锚定AI答案](/prompt-engineering/rag-explained)的完整指南。',
+            '**工具调用和函数使用。** 让模型调用外部函数进行计算、数据库查询或事实检查。模型调用函数来检索它，而不是发明统计数据。这完全消除了特定域对幻觉的诱惑。',
+            '**人工审查和专家验证。** 对于关键决定—医学、法律、财务、安全关键—始终让人类（最好是专家）验证AI生成的答案。没有提示技术替代专家判断。',
+            '**自动事实检查工作流程。** 在向用户显示模型输出之前，通过自动化系统（事实检查API、URL验证、引用验证）运行模型输出。这可以大规模检测幻觉，而无需手动审查每个输出。',
+          ],
+        },
+        multiModel: {
+          title: '多个模型和共识检测',
+          content: '单个模型可以自信地幻觉。但是，当您向多个独立模型提出相同的问题时，他们经常对幻觉的索赔不同意。\n\n如果五个模型独立地向一个问题产生相似的答案，那么答案比单个模型答案的情况要远更正确。如果只有一个模型声称某些东西，而其他四个不提及，则该索赔高度可疑并证明验证。\n\n这是**共识评分**背后的原则：将相同的提示分派给许多模型（GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、Mistral Large、Llama 3、DeepSeek等），并分析他们同意和不同意的地方。',
+        },
+        consensusTest: {
+          title: 'PromptQuorum共识测试',
+          content: '**在PromptQuorum中测试—15个幻觉倾向的提示分派给GPT-4o、Claude 4.6 Sonnet和Gemini 1.5 Pro：** GPT-4o完全编造了1项引用; Claude 4.6 Sonnet拒绝引用未验证的论文; Gemini 1.5 Pro引用了3个真实论文，但1个年份不正确。只有1个引用出现在所有三个模型响应中。此测试表明模型间的共识是可靠性的有意义信号—并且单模型答案更可能包含虚构。\n\nPromptQuorum自动化这种：将一个提示同时发送到25+AI模型，在所有响应中运行共识分析，并获得关于哪些索赔具有高度协议（可能可靠）和低协议（值得进一步调查）的判决。该工具精确标记哪些索赔相互矛盾，表面仅在一个或两个响应中出现的索赔，并按能力加权模型响应—将幻觉检测从有根据的猜测转变为结构化的数据驱动分析。\n\n参见[多模型AI如何减少幻觉](/prompt-engineering/consensus-scoring)，获得更深层技术解释。',
+        },
+        globalPerspective: {
+          title: '关于幻觉治理的全球观点',
+          content: '幻觉风险和缓解策略因地区和监管背景而异。**在欧洲**，欧盟AI法案强调了高风险AI系统的透明度和错误报告，使幻觉文件强制性。Mistral AI（法国）建立的模型专门关注在欧盟合规性应用中减少幻觉。**在中国**，像Qwen 2.5和DeepSeek这样的模型由于训练数据组成和CJK语言（中文、日文、韩文）的令牌化效率而具有不同的幻觉模式—这些模型处理令牌与信息比例的方式与英文优化模型不同。**在日本**，根据METI（经济贸易和工业部）数据治理指南运营的企业越来越多地在本地部署模型，以用于幻觉倾向的任务，以确保数据驻留和合规性。\n\n不管地区如何，核心技术（RAG、共识检查、人工审查）仍然普遍适用。根据您的监管背景和语言要求选择和验证模型。',
+        },
+        dangerDomains: {
+          title: '幻觉最危险的时候',
+          content: '幻觉在特定领域中造成重大伤害的风险。要特别谨慎：',
+          items: [
+            '**医疗和健康决定** —错误的药物名称、给药或症状解释可能会伤害患者',
+            '**法律和合规** —虚构的判例法、监管要求或先例可能导致昂贵的错误或违规',
+            '**财务建议** —虚假的市场数据、不正确的税务信息或编造的性能指标误导了高风险决定',
+            '**安全关键系统** —代码审查、架构决定或安全分析中的幻觉可能会引入漏洞或错误',
+            '**公众归属** —您的名字或品牌下发布的任何内容都必须进行事实检查;幻觉伤害可信度',
+          ],
+        },
+        criticalPrinciple: {
+          content: '**关键原则：** 即使有完美的提示和共识检查，人工验证对于高风险决定仍然至关重要。将AI用作时间节省器和第一遍工具，而不是专家判断或主要来源验证的替代品。\n\n了解[自我批评技术](/prompt-engineering/self-critique-prompting)如何在复杂推理任务中进一步减少错误。',
+        },
+        checklist: {
+          title: '实际清单：在发送关键提示之前',
+          content: '在发送您将依赖的决策或公开输出的提示之前，请使用此清单：',
+          items: [
+            '[ ] **提示是否明确允许"我不知道"？**添加："如果你不确定，你可以说"我不知道"。"',
+            '[ ] **提示中是否有真实的上下文或数据？**模糊的提示邀请发明。提供具体的文件、示例或输入数据。',
+            '[ ] **约束是否明确？**陈述模型不应该做什么，特别是："不发明来源、URL或引文。"',
+            '[ ] **输出格式是否结构化？**分开响应/推理/证据/信心。这使不受支持的索赔明显。',
+            '[ ] **你在要求来源吗？** 对于任何事实声称，请求："为这个事实引用来源。"',
+            '[ ] **任务是具体的，不是开放式的？** "为针对财务专业人员的B2B SaaS产品列出五个营销策略"比"告诉我营销"要好。',
+            '[ ] **您是否要求模型自我检查？**添加："提交前检查答案中的矛盾。"',
+            '[ ] **对于高风险决定，您是否进行交叉检查？** 将相同的提示发送到多个模型并比较答案。',
+          ],
+        },
+        beforeAfter: {
+          title: '提示示例之前/之后',
+        },
+        badPrompt: {
+          title: '[坏提示]',
+          blockquote: '告诉我关于人工智能历史的信息。包括主要突破和重要的研究人员。',
+          content: '**为什么这失败：**开放式，没有约束，没有允许承认不确定性。模型将发明日期、误构突破、自信地陈述过时的信息，并可能引用不存在的论文。',
+        },
+        goodPrompt: {
+          title: '[好提示]',
+          blockquote: '仅使用以下时间表，从1950年至1990年总结AI的主要突破：\n\n{时间表数据插入}\n\n按如下方式格式化您的答案：\n\n**突破：** {名称}\n**年：** {年—仅在时间表中说明）}\n**重要性：** {它启用了什么}\n**来源：** {时间表中的哪个文件提到了这一点？}\n\n不添加不在时间表中的信息。如果您不确定某个东西是否在时间表中，请跳过它而不是猜测。',
+        },
+        whyWorks: {
+          title: '为什么这有效：',
+          items: [
+            '**真实数据而不是发明：**模型从提供的背景工作，而不是从培训数据缺口',
+            '**结构化输出：**格式使缺少的来源立即明显',
+            '**否定指令：** "不添加不在时间表中的信息"是明确的',
+            '**省略权限：** "如果不确定，跳过它"会释放发明细节的压力',
+            '**来源责任：** 每个索赔都需要引用它来自哪个文件',
+          ],
+        },
+        faq: {
+          title: '常见问题解答',
+          faqs: [
+            {
+              q: '幻觉能完全消除吗？',
+              a: '否。幻觉本质上是语言模型工作的方式—他们预测文本模式而不是从验证的存储中检索事实。您可以使用良好的提示设计、RAG等工具和多模型共识来显着减少它们，但给定当前的LLM体系结构，完全消除是不可能的。人工验证仍然对高风险决定是必要的。',
+            },
+            {
+              q: '当它错误时，模型为什么听起来那么自信？',
+              a: '语言模型被训练为生成流利、连贯的文本。信心是语言连贯性的副产品。虚假陈述可能远比诚实承认不确定性更连贯和清晰表达。该模型没有内置的机制来表达怀疑—无论准确性如何，它都会以相同的流利信心生成文本。',
+            },
+            {
+              q: '更新更大的模型幻觉更少吗？',
+              a: '由于他们更好地生成看似合理的文本，使虚假索赔更难检测，所以更大的模型对某些任务幻觉更多。然而，较新的模型在某些事实任务上表现更好（他们有更新的训练数据和更强的指令遵循）。模型大小和幻觉之间的关系取决于任务，而不是单调的。',
+            },
+            {
+              q: '将模型连接到互联网会消除幻觉吗？',
+              a: '部分。实时网络访问有助于当前事件和最近的事实，但它没有解决核心问题：模型仍然会发明细节、误解搜索结果或幻觉有关其实际未检索的内容的信息。互联网访问是减少一类幻觉的工具，不是治愈。',
+            },
+            {
+              q: '我如何快速检查答案是否幻觉？',
+              a: '检查来源：点击URL或搜索引用的论文。如果他们不存在，答案是幻觉。验证事实：根据可信源检查日期、名字和数字。比较多个模型：问不同的模型相同的问题。尖锐的分歧表明至少一个是幻觉。应用域专知识：如果您知道该领域，请阅读微妙的不可能—幻觉对专家读者通常有暴露的迹象。',
+            },
+            {
+              q: '如果它幻觉，我应该停止使用AI吗？',
+              a: '否。将AI与验证一起战略性地使用。对于头脑风暴、起草和探索性工作，幻觉是一个小烦恼。对于事实关键的工作（研究、合规、医疗决定、财务建议），将AI用作起点，然后用受信任的来源或专家审查验证所有内容。',
+            },
+            {
+              q: '幻觉和真正的错误之间的区别是什么？',
+              a: '幻觉是自信而错误的。如果模型说"我不确定，但可能是X"，那是诚实的不确定性，而不是幻觉。如果它说"法国的首都是柏林"充满信心，这是一个幻觉—模型说了一些虚假的，好像是事实。标志是自信地断言什么是不真实的。',
+            },
+          ],
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[什么是提示工程？](/prompt-engineering/what-is-prompt-engineering) —提示结构背后的基本概念',
+            '[多模型共识评分](/prompt-engineering/consensus-scoring) —比较模型如何检测分歧和不信度',
+            '[自我批评提示技术](/prompt-engineering/self-critique-prompting) —如何让模型捕获自己的错误',
+          ],
+        },
+        sources: {
+          title: '来源',
+          items: [
+            'Wei, J., Wang, X., Schuurmans, D.,等。 (2022). "链式思考提示激发大型语言模型中的推理。" [ArXiv](https://arxiv.org/abs/2201.11903) —基础论文证明逐步推理可减少数学和逻辑任务的幻觉。',
+            'Maynez, J., Narayan, S., Hashimoto, B., & Hardt, D. (2021). "论抽象摘要中的忠实和事实性。" [ACL程序](/aclanthology.org/2021.acl-long.200/) —关于神经文本生成中幻觉率和机制的经验研究。',
+            'Anthropic (2024)."宪法AI。" [https://www.anthropic.com/constitutional-ai](https://www.anthropic.com/constitutional-ai) —Anthropic通过基于原则的培训减少有害的输出和幻觉的方法。',
+          ],
+        },
+      },
     },
   },
 
