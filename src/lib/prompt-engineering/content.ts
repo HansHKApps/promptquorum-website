@@ -8841,6 +8841,304 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
   },
 
+  zh: {
+    theme: 'Fundamentals',
+    title: 'GPT、Claude还是Gemini：如何选择正确的AI模型',
+    intro: '没有一个AI模型对所有任务都是最好的。GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、DeepSeek和Baidu ERNIE在不同的任务、地区和预算中各有所长。本指南为您提供了实用的决策框架——而不是另一个基准测试清单。',
+    publishDate: '2026-03-23',
+    readTime: '12分钟阅读',
+    sections: {
+      definition: {
+        title: '没有单一"最佳"AI模型——按任务选择',
+        content: [
+          '**没有单个AI模型对所有任务都是最好的。GPT-4o在工具集成和推理方面表现出色;Claude 4.6 Sonnet主导写作质量和代码质量;Gemini 2.5 Pro提供具有成本效益的性能和深度Google Workspace集成;DeepSeek和Baidu ERNIE对中国大陆工作负载至关重要。**',
+          '当您有新任务时,第一个问题不应该是"什么是最好的模型?"而应该是"此任务、此地区、此预算的最佳模型是什么?"基准和排名每几个月都会改变。您的实际任务——您的特定写作风格、代码库、中国客户、数据敏感性——应该指导选择。',
+          'PromptQuorum是一个AI多模型调度工具,可直接解决此问题:将一个结构化提示同时发送到GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、DeepSeek、Baidu ERNIE和本地LLM(Ollama、LM Studio)。并排查看所有响应。让PromptQuorum评分哪个模型对您的任务、您的数据、您的品牌声音最有效——而不是YouTube基准。',
+        ],
+      },
+
+      decisionMatrix: {
+        title: '快速决策矩阵——选择您的起始模型',
+        content: '**根据您的主要任务选择您的起始模型。大多数团队使用多个模型——从正确的模型开始,根据需要切换。**',
+        items: [
+          'GPT-4o赢得:多代理工作流程、工具集成、API生态系统、多模态(图像/音频)。如果集成很重要,请从这里开始。',
+          'Claude 4.6 Sonnet赢得:写作质量、代码审查、推理深度、企业安全。如果内容/代码质量很重要,请从这里开始。',
+          'Gemini 2.5 Pro赢得:长文档(2M令牌)、批处理、成本效益、Google Workspace。如果大规模文档分析,请从这里开始。',
+          'DeepSeek/Baidu ERNIE赢得:中国大陆(延迟/访问权限必需)、成本敏感的大量任务。如果数据留在中国,这是唯一的选择。',
+          '使用PromptQuorum在您的实际任务上测试所有5个——基准说谎;您的数据说真话。',
+        ],
+        tableFormat: true,
+        columns: ['您的优先级', '开始使用', '为什么', '何时切换'],
+        rows: [
+          { '您的优先级': '复杂的写作和分析', '开始使用': 'Claude 4.6 Sonnet', '为什么': '最高的输出质量;减少修订轮次', '何时切换': '如果您需要多工具工作流或集成,请切换到GPT-4o' },
+          { '您的优先级': '编码和开发速度', '开始使用': 'Gemini 2.5 Pro或Flash', '为什么': '2M上下文(加载整个项目)+最佳成本/质量', '何时切换': '深度调试或代码审查切换到Claude;工具集成切换到GPT' },
+          { '您的优先级': '多代理工作流/API', '开始使用': 'GPT-4o', '为什么': '最丰富的第三方生态系统;最佳工具调用', '何时切换': '在高容量任务上节省成本时切换到Gemini' },
+          { '您的优先级': '中国大陆用户/数据', '开始使用': 'DeepSeek或Baidu ERNIE', '为什么': '唯一实用的选择——西方模型受限/慢', '何时切换': 'N/A——合规/延迟要求使切换不可能' },
+        ],
+      },
+
+      tldr: {
+        title: '主要要点',
+        content: '**不同的模型在不同的任务中表现出色——GPT-4o主导工具集成,Claude在写作中表现出色,Gemini最好地处理长文档,DeepSeek/ERNIE对中国是必需的。**',
+        isTldr: true,
+        items: [
+          '**GPT-4o:** 工具+生态系统。最适合多代理工作流、工具调用和最广泛的第三方集成。',
+          '**Claude 4.6 Sonnet:** 深思熟虑的推理+写作。最适合报告、分析、代码审查和企业安全要求。',
+          '**Gemini 2.5 Pro:** Google生态系统+成本。最适合Google Workspace中的团队、批量编码和长上下文研究。',
+          '**DeepSeek / Baidu ERNIE:** 中国中心的工作负载。由于延迟、访问限制和监管要求,中国大陆必需。',
+          '**使用多个模型;按任务路由。** 不同的模型在不同的工作中表现出色。对写作使用Claude,对编码使用Gemini,对代理使用GPT,对中国用户使用DeepSeek/ERNIE。',
+          '**PromptQuorum:** 同时将一个提示发送给所有模型,比较结果,看看哪个模型在您的任务中胜出。',
+        ],
+      },
+
+      whatMatters: {
+        title: '选择AI模型时什么很重要?',
+        content: '**模型选择应该从您的用例和约束条件开始,而不是炒作或排名位置。** 这里是真正重要的7个维度:',
+        items: [
+          '**您的任务质量:** 此模型在写作、编码、分析或推理方面表现出色吗?检查与您的任务类似的任务的性能——而不是通用基准。',
+          '**每令牌成本和定价等级:** 前沿模型成本$15–60 per百万令牌;预算模型成本$0.15–3。价格随输入和输出令牌缩放。[详细查看令牌经济学。](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+          '**延迟和速率限制:** 它的响应速度有多快?它能处理您的请求量吗?某些模型限制为每分钟100个请求;其他模型支持10,000+。',
+          '**上下文窗口大小:** GPT-4o: 128k令牌。Claude 4.6 Sonnet: 200k令牌。Gemini 2.5 Pro: 2M令牌(大10倍,最适合长文档)。[了解上下文窗口。](/prompt-engineering/context-windows-explained-why-ai-forgets)',
+          '**多模态功能:** 它能处理图像、音频或视频吗?GPT-4o和Gemini 2.5 Pro很好地支持图像。DeepSeek和Baidu ERNIE专注于文本。',
+          '**生态系统和集成:** 多少第三方工具、插件和API支持它?GPT-4o在这里占主导地位。Ollama或LM Studio的本地模型支持数千个社区集成。',
+          '**地理和数据驻留规则:** 在您的地区可用吗?您的数据需要留在国家或公司网络内吗?中国大陆因规定和延迟需要本地模型(DeepSeek、Baidu ERNIE)。',
+        ],
+      },
+
+      gptSection: {
+        title: '什么时候应该使用GPT-4o?',
+        content: '**GPT-4o是OpenAI的前沿多模态模型——最强大的工具密集型代理工作流,具有最广泛的第三方集成和工具。** 当工具、集成和多模态功能比成本更重要时,使用GPT-4o。',
+        items: [
+          '**优势:** 跨所有领域的优秀通用推理和聊天。强大的多模态功能——可靠地处理图像、音频,有时还处理视频。一流的工具调用和集成(代理、IDE插件、企业堆栈)。被数百万开发人员在生产中信任。',
+          '**最佳用例:** 多步骤代理工作流。需要工具调用(API、数据库、代码执行)的复杂链。需要屏幕截图或图像分析的任务。ChatGPT、Assistants API、Codex、微调等OpenAI生态系统项目。',
+          '**权衡:** 高级前沿模型的每令牌成本更高($5输入/$15输出百万)。输出可能很冗长——需要提示纪律来强制简洁。',
+          '**上下文窗口:** 128,000令牌(处理~100页文本)。',
+        ],
+      },
+
+      claudeSection: {
+        title: '什么时候应该使用Claude 4.6 Sonnet?',
+        content: '**Anthropic的Claude 4.6 Sonnet在深思熟虑的推理、写作质量和代码重构中表现出色——具有业界领先的安全性。** 当输出质量、清晰度和可靠性最重要时,使用Claude。',
+        items: [
+          '**优势:** 高质量的写作和总结;输出简洁、结构良好、可发表。优秀的代码理解、重构和解释——经常发现其他模型遗漏的错误。优秀的长上下文处理,用于研究和文档工作流。强大的安全文化;在受管制的行业中是首选。',
+          '**最佳用例:** 结构和清晰度至关重要的报告、分析和知识工作。复杂的代码库和架构讨论。具有合规和安全要求的企业设置。需要最少编辑的内容。',
+          '**权衡:** 最高级更高的价格点;可能对简单任务过度。一些第三方集成比GPT-4o等价物更新。',
+          '**上下文窗口:** 200,000令牌(处理~150页文本)。',
+        ],
+      },
+
+      geminiSection: {
+        title: '什么时候应该使用Gemini 2.5 Pro?',
+        content: '**Google DeepMind的Gemini 2.5 Pro具有成本效益,拥有最强的长上下文处理和深度Google Workspace集成。** 当处理许多长文档或团队在Google Workspace中工作时,使用Gemini。',
+        items: [
+          '**优势:** 以有吸引力的价格具有非常好的编码性能——尤其是中端Flash模型。最强的长上下文(2M令牌)和检索;对多文档+实时网络搜索的研究很好。与Google Workspace的本地集成(Docs、Sheets、Drive、Gmail、Slides)。',
+          '**最佳用例:** 在Google Workspace中工作的团队。成本/性能比至关重要的批量编码和数据任务。结合本地文档和网络搜索的研究工作流。处理100+页PDF或成绩单。',
+          '**权衡:** 写作语气可能比Claude或GPT更谨慎或更通用。在Google的生态系统之外,一些集成在竞争对手之后。',
+          '**上下文窗口:** 2,000,000令牌(最强;处理~1,500页文本)。',
+        ],
+      },
+
+      coding: {
+        title: '2026年编码的最佳AI模型是什么?',
+        content: '**Claude 4.6 Sonnet在代码质量和重构方面表现出色;GPT-4o主导工具集成和多文件推理;Gemini 2.5 Pro为批处理任务提供最佳成本/质量比;DeepSeek是中国大陆开发人员的选择。** 编码的"最佳"模型取决于您的主要挑战:代码质量、集成宽度、每令牌成本或地理。',
+        items: [
+          '**GPT-4o:** 对于具有工具使用的多步骤编码任务(文件系统访问、API、shell命令)最强。擅长跨大型代码库的推理和生成复杂工作流。如果与GitHub、AWS、API的集成至关重要,最佳。',
+          '**Claude 4.6 Sonnet:** 最适合代码审查、重构和架构讨论。检测其他模型遗漏的微妙错误。对维护现有代码库和解释遗留代码首选。令牌成本更高,但往往减少来回次数。',
+          '**Gemini 2.5 Pro:** 对于批量编码任务(数据处理、实用程序脚本、自动化)最佳成本/质量。2M上下文意味着一次加载整个项目。对于成本很重要的原型到生产速度很好。',
+          '**DeepSeek:** 与GPT的编码竞争力,但便宜10倍。最适合中国大陆开发人员和成本敏感的编码任务(脚手架、样板、日常重构)。在算法问题和竞争程序设计上非常强。',
+        ],
+      },
+
+      longContext: {
+        title: '2026年最适合长上下文或大型文档的LLM?',
+        content: '**Gemini 2.5 Pro以2M上下文令牌占主导地位(处理~1,500页);Claude 4.6 Sonnet具有200k令牌是下一个(处理~150页);GPT-4o具有128k令牌对大多数单文档任务来说足够。** 根据文档大小、检索精度以及是否需要同时加载多个文件进行选择。',
+        image: '/images/context-windows-chart.svg',
+        imageCaption: '上下文窗口比较:Gemini 2.5 Pro支持比GPT-4o大10倍的上下文,在单个请求中启用整个项目和文档档案。',
+        items: [
+          '**Gemini 2.5 Pro(2M令牌):** 加载完整的代码库、法律文件集或研究档案。网络搜索集成允许您在长上下文中引用外部源。最适合:尽职调查审查、监管分析、知识库搜索、处理100+页PDF。',
+          '**Claude 4.6 Sonnet(200k令牌):** 足以用于大多数文档:书籍、论文、长代码库演练。擅长详细分析和提取细微信息。权衡:每令牌的成本更高,但质量可能会减少修订周期。',
+          '**GPT-4o(128k令牌):** 足以用于100页以下的单个文档。当您需要长上下文(文件系统、API)旁边的工具调用时使用。权衡:无法加载多个大文档;需要分块/拆分。',
+          '**实用策略:** 对于非常长的任务(多文档工作流),首先使用Gemini(更便宜、更大的上下文),然后如果输出质量需要最后的润色,则用Claude改进。',
+        ],
+      },
+
+      chineseModels: {
+        title: '如果您在中国或需要低延迟,如何选择AI模型?',
+        content: [
+          '**对于中国大陆的用户和数据,DeepSeek和Baidu ERNIE不是可选的——它们是必需的。** 由于网络限制和监管要求,西方前沿模型(GPT-4o、Claude、Gemini)在中国经常受到限制或高延迟。在2026年,延迟(3–10秒响应时间vs本地500毫秒)和合规性(数据驻留、内容审核)是巨大的痛点。在中国大陆使用西方模型意味着:(1)不可用的服务、(2)用户无法接受的延迟、(3)监管违规。本地模型消除了所有三个。',
+          '**DeepSeek(前沿模型、竞争性编码):** 竞争性编码和推理性能、激进的定价、优秀的中文支持和混合中文-英文任务。中国大陆的本地基础设施=亚500毫秒延迟。最适合中国大陆开发人员工作流和高容量成本敏感的工作负载。权衡:中国外的较小生态系统,比GPT/Claude/Gemini少的第三方集成。',
+          '**Baidu ERNIE(企业和消费者):** 与百度搜索和云的紧密集成,与中文网络内容和企业数据的强大锚定。完全符合中国大陆的监管要求(内容审核、数据驻留、关键字过滤)。最适合针对中文用户的消费者和企业应用、Baidu Cloud基础设施上的应用,其中合规性不可商议。权衡:主要针对中文进行了优化;英文和其他语言可能落后于西方前沿模型。',
+        ],
+      },
+
+      comparison: {
+        title: 'GPT-4o vs Claude 4.6 Sonnet vs Gemini 2.5 Pro:快速比较',
+        content: '**此表格将5个AI模型与8个关键维度进行比较:通用推理、写作、编码、长上下文处理、多模态支持、成本效率、全球生态系统和中国访问权限。**',
+        image: '/images/model-strengths-radar.svg',
+        imageCaption: '雷达图:Claude在写作和推理中占主导地位;GPT-4o在工具和多模态中表现出色;Gemini在成本和长上下文中胜出。没有单一的赢家——将模型与任务匹配。',
+        tableFormat: true,
+        columns: ['维度', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro', 'DeepSeek', 'Baidu ERNIE'],
+        rows: [
+          { '维度': '常规问答', 'GPT-4o': '优秀全球', 'Claude 4.6 Sonnet': '很好,谨慎', 'Gemini 2.5 Pro': '很好+检索', 'DeepSeek': '强,最好CN', 'Baidu ERNIE': '强,最好CN' },
+          { '维度': '写作', 'GPT-4o': '优秀,有时冗长', 'Claude 4.6 Sonnet': '优秀结构和清晰', 'Gemini 2.5 Pro': '好,中立语气', 'DeepSeek': '好,中文优先', 'Baidu ERNIE': '好,中文优先' },
+          { '维度': '编码', 'GPT-4o': '强', 'Claude 4.6 Sonnet': '优秀,高级', 'Gemini 2.5 Pro': '优秀价值', 'DeepSeek': '非常强CN开发者', 'Baidu ERNIE': '好,应用业务' },
+          { '维度': '长上下文', 'GPT-4o': '强(128k)', 'Claude 4.6 Sonnet': '强(200k)', 'Gemini 2.5 Pro': '最强(2M)+网络', 'DeepSeek': '好', 'Baidu ERNIE': '好带百度数据' },
+          { '维度': '多模态', 'GPT-4o': '领先(图像/音频)', 'Claude 4.6 Sonnet': '好的视觉', 'Gemini 2.5 Pro': '非常强(视频/网络)', 'DeepSeek': '变化', 'Baidu ERNIE': '文本+中文网络' },
+          { '维度': '成本效率', 'GPT-4o': '中等-高', 'Claude 4.6 Sonnet': '更高、高级质量', 'Gemini 2.5 Pro': '非常划算', 'DeepSeek': '非常有竞争力', 'Baidu ERNIE': '竞争力(ent CN)' },
+          { '维度': '全球生态系统', 'GPT-4o': '最广泛', 'Claude 4.6 Sonnet': '增长,特别是企业', 'Gemini 2.5 Pro': '在Google世界中强大', 'DeepSeek': '中国外有限', 'Baidu ERNIE': '强大的百度生态' },
+          { '维度': '中国访问权/延迟', 'GPT-4o': '经常受限', 'Claude 4.6 Sonnet': '经常受限', 'Gemini 2.5 Pro': '经常受限', 'DeepSeek': '本机/低延迟', 'Baidu ERNIE': '本机/必需' },
+        ],
+      },
+
+      decisionFramework: {
+        title: '如何选择正确的AI模型?',
+        content: [
+          '**从您的主要用例开始,分层您的约束,然后选择最适合两者的模型。**',
+          '**如果:通用助手、多工具代理工作流程。** 然后:从GPT-4o开始。您需要最广泛的工具生态系统和集成。',
+          '**如果:深度写作、分析、复杂代码或强大的安全要求。** 然后:从Claude 4.6 Sonnet开始。质量和可信度比成本更重要。',
+          '**如果:大量Google Workspace使用、批量编码/数据或处理100+长文档。** 然后:从Gemini 2.5 Pro开始。长上下文和生态系统集成节省时间。',
+          '**如果:用户和数据主要在中国大陆。** 然后:从DeepSeek(编码重型)或Baidu ERNIE(消费者/企业应用)开始。西方模型受限或高延迟。',
+        ],
+        items: [
+          '**预算紧张、容量高:** 偏好Gemini Flash / DeepSeek /较小的GPT模型。',
+          '**严格合规、企业合同:** Claude企业,中国的Baidu ERNIE。',
+          '**需要多模态(屏幕截图、图表、音频):** GPT-4o或Gemini 2.5 Pro。',
+          '**私有数据仅:** 通过Ollama或LM Studio的本地LLM(设备上没有数据离开)。',
+        ],
+      },
+
+      costAndLimits: {
+        title: '成本和令牌限制如何比较?',
+        content: '**所有主要模型都按输入和输出令牌定价,速率限制基于您的级别。** 前沿模型的每令牌成本比预算模型高10–100倍。定价因地区而异(特别是中国)。',
+        items: [
+          '**前沿模型(每令牌成本最高):** GPT-4o(百万令牌$5输入/$15输出)、Claude 4.6 Sonnet(约百万令牌$3输入/$15输出)。',
+          '**划算的中端:** Gemini 2.5 Flash(百万令牌$0.075输入/$0.30输出)。',
+          '**竞争力强的预算模型:** DeepSeek(激进的定价)、通过Ollama/LM Studio的本地模型(免费,在设备上运行)。',
+          '**速率限制:** 前沿模型通常从100 req/min开始;扩展级别可以达到10,000+ req/min。本地模型取决于您的硬件。',
+          '[查看详细的令牌经济和成本计算。](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+        ],
+      },
+
+      whyMultipleModels: {
+        title: '为什么在2026年使用多个AI模型而不是一个?',
+        content: '**基准和排名每几个月都会改变。不同的任务由不同的模型最好处理。地理约束(EU数据驻留、中国延迟)强制进行多模型堆栈。**',
+        items: [
+          '**原因1:特定于任务的卓越。** 没有模型赢得一切。Claude在写作上表现出色;Gemini在长上下文研究上;GPT在多步骤推理上。将您的任务路由到专家。',
+          '**原因2:成本优化。** 对高容量重复工作(总结、分类)使用小型/预算模型。为复杂推理保留前沿模型。您将成本降低10–50倍,同时在重要的任务上保持质量。',
+          '**原因3:监管和地理约束。** EU需要EU数据驻留(Ollama本地)。中国需要本地模型。多模型堆栈允许您遵守所有约束。',
+          '**堆栈示例:** 写作使用Claude、编码使用Gemini、代理使用GPT、中国用户使用DeepSeek/ERNIE。不复杂——很实用。',
+        ],
+      },
+
+      promptquorumSection: {
+        title: 'PromptQuorum如何帮助您比较和路由模型?',
+        content: '**PromptQuorum通过将一个结构化的提示同时发送到所有模型并自动比较结果,解决了手动模型切换的问题。** 不再在选项卡之间复制提示或猜测哪个模型性能最好。',
+        items: [
+          '**一个结构化的提示→许多模型同时。** 一次写您的提示。PromptQuorum将其并行分发到GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、DeepSeek、Baidu ERNIE和本地LLM(Ollama、LM Studio)。并排查看所有响应。',
+          '**共享框架确保公平比较。** 在所有模型中使用相同的提示结构、约束和格式。这消除了"Claude得到更好的输出,因为我为Claude措辞提示"的借口。',
+          '**共识和评分视图。** PromptQuorum显示您为品牌语音最好地写作的模型,生成最正确代码的模型,最可靠地处理专有文档的模型,以及您的任务中最快最便宜的模型。',
+          '**路由规则:** 便宜/高容量任务发送到小或本地模型。复杂推理发送到高级模型。基于任务类型自动执行模型选择。',
+          '**本地LLM支持。** 连接Ollama或LM Studio进行完全私密的推理。没有数据离开您的设备。将敏感任务本地路由;将商品任务发送到云API。',
+          '**停止从YouTube基准猜测。** 在您自己的数据上直接测试您自己的任务。那是唯一重要的真理。',
+        ],
+      },
+
+      promptquorumVisual: {
+        title: 'PromptQuorum仪表板:同时查看所有模型',
+        content: '**发送一个提示,看到来自GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、DeepSeek和Baidu ERNIE的输出——全部在一个视图中。** 并排比较消除了手动模型切换的痛苦。',
+        imagePlaceholder: true,
+        imageCaption: '[即将推出:PromptQuorum仪表板的实时屏幕截图,显示同一提示任务上5个AI模型的并行输出——并排显示推理、成本、延迟和质量分数]',
+      },
+
+      practicalRecipes: {
+        title: '实用食谱:使用PromptQuorum进行模型比较的4种方法',
+        content: '**PromptQuorum中的多模型测试显示哪个模型最适合您的特定任务、数据和品牌——而不是通用基准。** 这里有4个具体的场景:',
+      },
+
+      recipe1: {
+        title: '食谱1:决定哪个模型最适合您的品牌语音',
+        blockquote: '您正在为B2B SaaS登录页面编写产品文案。语气需要权威但可访问——没有营销炒作,没有模糊的最高级。在GPT-4o、Claude 4.6 Sonnet和Gemini上测试相同的简报。看看哪个模型最好地捕捉您的品牌声音。通过PromptQuorum运行它,根据语气、清晰度和对您的品牌指南的合规性对每个输出进行评分。赢家成为您的文案首选模型。示例提示:"用我们的品牌语音重写此功能说明:[粘贴您的样式指南+现有副本]。哪个模型最匹配?"',
+      },
+
+      recipe2: {
+        title: '食谱2:比较后端堆栈的编码质量和成本',
+        blockquote: '您有一个Python代码库。测试:"查看此函数的性能和错误。建议重构。"通过GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Flash运行它。谁检测到最多的错误?哪个重构最干净?哪个是每个请求最便宜的?使用PromptQuorum为代码质量评分。您可能会发现Gemini Flash以Claude成本的1/50检测到90%的问题。例子:"将此数据库查询优化以提高速度。时间复杂性是什么?"——路由到Claude进行深入分析,路由到Gemini进行成本意识的迭代。',
+      },
+
+      recipe3: {
+        title: '食谱3:设置全球+中国堆栈(GPT / Claude / Gemini + DeepSeek / ERNIE)',
+        blockquote: '您的产品在全球和中国大陆为用户服务。将全球用户路由到GPT、Claude或Gemini(您的全球堆栈)。将中国用户路由到DeepSeek或Baidu ERNIE(延迟和合规性必需)。使用PromptQuorum在每个地理的实际用户提示上测试模型性能。在尊重地区约束的同时确保一致性。',
+      },
+
+      recipe4: {
+        title: '食谱4:对私有数据使用本地LLM,对最后的润色使用前沿模型',
+        blockquote: '您拥有敏感的客户数据。步骤1:使用Ollama或LM Studio本地处理(没有数据离开您的服务器)。步骤2:将精炼的输出发送到Claude或GPT进行最后的润色和质量检查。这种混合方法成本便宜、私密,并产生高质量的输出。在PromptQuorum中测试它,以找到最适合您的管道的本地模型。',
+      },
+
+      faq: {
+        title: '常见问题解答',
+        faqs: [
+          {
+            q: '如果我只能为一个订阅付费,应该选择哪一个?',
+            a: '从Claude 4.6 Sonnet开始。这是写作、推理和代码的最高质量。如果您的主要需求是工具集成和多模态(图像/音频),请选择GPT-4o。如果您有一个Google Workspace繁重的团队,成本是关键,请选择Gemini。如果您的用户在中国大陆,您没有选择——选择DeepSeek或Baidu ERNIE(延迟和合规性必需)。'
+          },
+          {
+            q: '我应该多久重新评估我的模型选择?',
+            a: '每季度。每3–4个月,新模型推出,排名位置改变。使用PromptQuorum在最新模型上重新测试您最关键的任务。6个月前最好的可能不再是最优的。'
+          },
+          {
+            q: '我能在一个产品或代理中混合多个模型吗?',
+            a: '是的——你应该这样做。将不同的任务路由到不同的模型:Claude用于写作,Gemini用于检索,GPT用于代理。使用条件逻辑:如果这是一个写作任务,使用Claude;如果这是一个检索任务,使用Gemini。这就是生产系统的运作方式。'
+          },
+          {
+            q: '我应该如何考虑供应商锁定?',
+            a: '当您的系统依赖于一个模型的API格式、特殊功能或定价时,就会发生供应商锁定。保护自己:(1)使用跨模型工作的标准提示结构。(2)使用支持多个提供商的抽象层(如PromptQuorum)。(3)定期在多个模型上测试以发现供应商特定的漂移。(4)对于关键系统,支持本地模型(Ollama、LM Studio)作为回退。'
+          },
+          {
+            q: '开源本地模型如何适应这一点?',
+            a: '本地模型(LLaMA 3.1、Mistral、Ollama或LM Studio的其他)最好用于:高容量重复任务(分类、总结、提取)、私有数据(无API调用)、成本敏感的工作负载,以及在提交API成本前测试。它们在质量上与前沿模型不匹配,但在隐私和成本上表现出色。将它们用于不需要前沿级推理的80%的任务。'
+          },
+          {
+            q: 'Claude比ChatGPT更好吗?',
+            a: '对于写作质量、代码审查和结构化推理,Claude 4.6 Sonnet在大多数评估中都超过ChatGPT(GPT-4o)。对于工具集成、多代理工作流和最广泛的第三方生态系统,GPT-4o具有优势。两者都不是普遍更好的——正确的选择取决于您的特定任务。使用PromptQuorum在您的实际提示上测试两者并直接比较结果。'
+          },
+          {
+            q: '哪个AI模型最准确?',
+            a: '没有单个模型对所有任务都最准确。Claude 4.6 Sonnet在写作和结构化分析中领先。GPT-4o在工具集成推理中领先。Gemini 2.5 Pro在具有实时网络基础的长文档研究中领先。准确性是特定于任务的——唯一可靠的测试是在所有模型上运行您的实际提示并测量结果。'
+          },
+          {
+            q: 'GPT-4o和GPT-4o mini之间有什么区别?',
+            a: 'GPT-4o是OpenAI的前沿模型——最高的功能,最高的成本(百万令牌$5输入/$15输出)。GPT-4o mini是一个更小、更快、更便宜的版本(百万令牌$0.15输入/$0.60输出)——便宜33倍,质量略低。对于分类、总结和不需要前沿推理的高容量任务,使用GPT-4o mini。对于复杂的多步骤推理、代理工作流和质量至关重要的任务,使用GPT-4o。'
+          },
+        ],
+      },
+
+      sources: {
+        title: '来源和参考文献',
+        content: '**模型优势和定价反映了2026年3月的使用模式和来自LMSYS Arena、SWE-Bench和GPQA的基准。** 模型功能和定价经常更改——检查官方定价页面以获取当前费率,并在生产承诺前在您的任务上测试。',
+        items: [
+          '[OpenAI — GPT-4o和模型概述](https://platform.openai.com/docs/models)',
+          '[Anthropic — Claude模型概述](https://docs.anthropic.com/en/docs/models-overview)',
+          '[Google — Gemini模型和定价](https://ai.google.dev/gemini-api/docs/models)',
+          '[DeepSeek — API文档和模型](https://api-docs.deepseek.com)',
+          '[百度AI云 — ERNIE Bot平台](https://cloud.baidu.com/product/wenxinworkshop)',
+          '[ERNIE API文档](https://cloud.baidu.com/doc/WENXINWORKSHOP/index.html)',
+          '[LMSYS聊天机器人竞技场——实时模型排名](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard)',
+          '[SWE-Bench——编码能力基准](https://www.swebench.com/)',
+        ],
+      },
+
+      relatedReading: {
+        title: '相关阅读',
+        items: [
+          '[基础知识:令牌、成本和限制:AI提示的经济学](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)——理解令牌定价、速率限制和成本优化',
+          '[基础知识:系统提示vs用户提示:有什么区别](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)——系统提示如何跨模型定义模型行为',
+          '[基础知识:您应该使用哪个提示框架?](/prompt-engineering/which-prompt-framework-should-you-use)——框架可在模型中工作;选择适合您的任务的一个',
+          '[技巧:提示链](/prompt-engineering/prompt-chaining)——多步骤工作流,其中不同的模型可以处理不同的步骤',
+        ],
+      },
+    },
+  },
 },
 
   'write-better-code-with-ai': {
