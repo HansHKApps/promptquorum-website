@@ -60,6 +60,25 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
   },
 }
 
+// Section header translations
+const SECTION_HEADER_LABELS: Record<Language, Record<string, string>> = {
+  en: {
+    keyTakeaways: 'Key Takeaways',
+  },
+  de: {
+    keyTakeaways: 'Wichtigste Erkenntnisse',
+  },
+  fr: {
+    keyTakeaways: 'Points clés',
+  },
+  ja: {
+    keyTakeaways: '重要なポイント',
+  },
+  zh: {
+    keyTakeaways: '关键要点',
+  },
+}
+
 // Maps article display titles to their URL slugs
 const TITLE_TO_SLUG: Record<string, string> = {
   // Fundamentals
@@ -244,7 +263,7 @@ function renderInlineLinks(text: string) {
   })
 }
 
-function SectionBlock({ section, colors, id }: { section: PESection; colors: { dot: string; badge: string }; id?: string }) {
+function SectionBlock({ section, colors, id, lang }: { section: PESection; colors: { dot: string; badge: string }; id?: string; lang: Language }) {
   return (
     <div className="mt-8" id={id}>
       {section.title && !section.isTldr && (
@@ -256,7 +275,7 @@ function SectionBlock({ section, colors, id }: { section: PESection; colors: { d
       {/* TL;DR block */}
       {section.isTldr && section.items && (
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 my-4 key-takeaways">
-          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Key Takeaways</p>
+          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{SECTION_HEADER_LABELS[lang].keyTakeaways}</p>
           <ul className="space-y-2">
             {section.items.map((item, i) => (
               <li key={i} className="flex gap-3 text-text-secondary text-sm">
@@ -533,7 +552,7 @@ function PromptEngineeringPostContent({ slug }: Props) {
             }
             const sectionId = sectionIdMap[key]
             return (
-              <SectionBlock key={key} section={section} colors={colors} id={sectionId} />
+              <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} />
             )
           })}
         </article>
