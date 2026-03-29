@@ -3732,10 +3732,249 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     de: {
       theme: 'Fundamentals',
       title: 'KI-Halluzinationen: Warum KI Dinge erfindet — und wie man sie stoppt',
-      intro: 'Große Sprachmodelle produzieren vertrauensvoll falsche Informationen. Diese Fehler – Halluzinationen genannt – reichen von erfundenen Zitaten bis zu erfundenen Fakten, die mit vollständiger Autorität präsentiert werden. Das Verständnis, warum sie auftreten und wie man sie erkennt, ist für die Arbeit mit LLMs unerlässlich.',
+      intro: 'Große Sprachmodelle produzieren vertrauensvoll falsche Informationen. Diese Fehler – Halluzinationen genannt – reichen von erfundenen Zitaten bis zu erfundenen Fakten, die mit vollständiger Autorität präsentiert werden. Das Verständnis, warum sie auftreten und wie man sie erkennt und reduziert, ist für die praktische Arbeit mit LLMs unerlässlich.',
       publishDate: '2026-03-22',
       readTime: '12 Min. Lesezeit',
-      sections: {},
+      sections: {
+        definition: {
+          title: 'Was sind KI-Halluzinationen?',
+          content: [
+            'Eine **KI-Halluzination** ist eine sachlich falsche oder erfundene Aussage, die von einem LLM mit anscheinender Sicherheit generiert wird. Das Modell produziert Text, der der Realität widerspricht – falsche Namen, erfundene Quellen, unmögliche Daten, fiktive URLs – und verwendet dabei die gleiche flüssige Sprache wie bei korrekten Informationen.',
+            'Dies unterscheidet sich grundlegend davon, dass ein Modell Unsicherheit ausdrückt. Halluzinationen zeichnen sich durch selbstsichere, detaillierte Aussagen über Dinge aus, die nicht existieren, oder über Ereignisse, die nie stattgefunden haben. Ein Modell könnte ein Papier zitieren, das in einer nicht existierenden Zeitschrift veröffentlicht wurde, biografische Details erfinden, ein historisches Datum um Jahrhunderte daneben liegen, oder ein Produktmerkmal beschreiben, das nie gebaut wurde. Der Nutzer liest es, geht davon aus, dass die klare Sprache Genauigkeit signalisiert, und handelt danach – um dann festzustellen, dass die Information erfunden ist.',
+            '**In einem Satz:** Halluzinationen sind flüssig formulierte falsche Aussagen, die Sprachmodelle erzeugen, weil sie Textmuster vorhersagen, anstatt Fakten aus einem zuverlässigen Speicher abzurufen.'
+          ],
+        },
+        tldr: {
+          title: 'Wichtigste Erkenntnisse',
+          isTldr: true,
+          items: [
+            '**Was Halluzinationen sind:** Von LLMs generierte selbstsichere falsche Aussagen, die der Realität widersprechen – erfundene Quellen, falsche Fakten, erfundene Details – flüssig präsentiert, als wären sie korrekt',
+            '**Warum sie auftreten:** LLMs sagen Textmuster vorher, anstatt Fakten abzurufen; ihnen fehlt eine Datenbank zur Überprüfung und ein interner Mechanismus zur Signalisierung von Unsicherheit',
+            '**Wie man sie erkennt:** Verwenden Sie Consensus Scoring (fragen Sie mehrere Modelle die gleiche Frage; Übereinstimmung ist ein Zuverlässigkeitssignal), überprüfen Sie Zitate, verifizieren Sie Ansprüche unabhängig',
+            '**Consensus Scoring:** Senden Sie die gleiche Aufforderung an 5+ unabhängige Modelle; Aussagen, die nur in einer oder zwei Antworten erscheinen, sind hochgradig verdächtig und rechtfertigen eine Überprüfung',
+            '**Minderungsstrategien:** Verwenden Sie RAG (Verankerung in verifizierten Dokumenten), geben Sie explizite Quellen an, setzen Sie Einschränkungen („Verwenden Sie nur Informationen aus diesem Dokument"), verwenden Sie Multi-Modell-Consensus und verlangen Sie menschliche Überprüfung für kritische Ansprüche',
+          ],
+        },
+        whyHallucinate: {
+          title: 'Warum Sprachmodelle halluzinieren',
+          content: 'LLMs funktionieren, indem sie das nächste Wort in einer Sequenz vorhersagen. Sie konsultieren keine Datenbank und verifizieren keine Fakten gegen die Grundwahrheit. Sie berechnen Wahrscheinlichkeiten basierend auf Mustern in den Trainingsdaten. Dieses Grunddesign – sehr effektiv für Sprachaufgaben – führt inhärent zu Druck, zu halluzinieren.',
+        },
+        coreMechanisms: {
+          title: 'Die Kernmechanismen',
+          items: [
+            '**Token-Vorhersage, nicht Faktenabruf.** Die Architektur des Modells ist auf Sprachgenerierung optimiert, nicht auf Faktenkontrolle. Wenn eine Aufforderung eine Frage stellt, besteht das Ziel des Modells darin, eine kohärente, plausible Fortsetzung des Textes zu produzieren. Kohärenz und Wahrheit sind nicht dasselbe. Eine falsche Aussage kann viel kohärenter sein als das Eingeständnis von Unsicherheit.',
+            '**Lücken und Ablauf von Trainingsdaten.** Modelle werden mit Daten trainiert, die ein spezifisches Enddatum haben. Informationslücken – Themen, denen das Modell während des Trainings nie begegnet ist, aktuelle Ereignisse nach dem Trainingsdatum, spezialisiertes Wissen in engen Bereichen – erzeugen Leerstellen. Wenn das Modell über diese Lücken gefragt wird, fehlen ihm echte Muster zum Vorhersagen. Es erfindet plausibel klingende Details, anstatt zu sagen „Ich habe diese Information nicht."',
+            '**Kein expliziter Konfidenz-Mechanismus.** Modelle generieren neben ihrer Ausgabe keinen Konfidenz-Score. Sie produzieren Text ohne ein internes Signal, das sagt *„Ich bin mir zu 30% sicher bei dieser Aussage."* Der Druck, die Seite mit Ausgaben zu füllen, überwiegt die Option, Zweifel zu signalisieren oder die Anfrage abzulehnen.',
+            '**Druck aus Aufforderungen, die Antworten fordern.** Aufforderungen wie „Erkläre alles über [Thema]" oder „Nenne alle Gründe für [Aussage]" kommunizieren implizit: *du musst antworten, auch wenn du unsicher bist*. Das Modell antwortet, indem es Details erfindet, um die Anforderung zu erfüllen. Es behandelt den Druck, hilfreich zu sein, als wichtiger als das Risiko, ungenau zu sein.',
+            '**Begrenztes Kontextfenster und Informationsverlust.** LLMs können nur eine begrenzte Menge an Kontext im Speicher halten. Lange Dokumente oder Gespräche führen dazu, dass frühere Details verblassen. Das Modell könnte vergessen, was in einem früheren Abschnitt gesagt wurde, es erfinden oder falsch erinnern und die Erfindung selbstsicher behaupten, als wäre sie konsistent mit dem früheren Kontext. Siehe unseren Leitfaden zu [Kontextfenstern](/prompt-engineering/context-windows-explained-why-ai-forgets), um zu verstehen, warum dies geschieht und wie Token-Limits die Ausgabezuverlässigkeit beeinflussen.',
+            '**Konfabulation in mehrstufigen Überlegungen.** Bei Problemen, die mehrere Denkschritte erfordern, kann das Modell die Spur von Zwischenergebnissen verlieren. Es könnte einen unterstützenden Schritt erfinden, um eine Schlussfolgerung zu rechtfertigen, oder einen Schritt überspringen und zu einer falschen Schlussfolgerung springen, während es Text generiert, der logisch korrekt aussieht. Zu verstehen, [wie Tokens und Kosten mit langen Begründungsketten skalieren](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting), hilft Ihnen, Genauigkeit gegen Effizienz abzuwägen.'
+          ],
+        },
+        commonTypes: {
+          title: 'Häufige Arten von Halluzinationen',
+          content: 'Halluzinationen folgen erkennbaren Mustern. Die Identifikation des Typs hilft Ihnen, gezielte Minderungsstrategien auszuwählen.',
+          rows: [
+            { 'Type': 'Erfundene Quellen', 'Example': 'Zitat eines Fachjournals, das nicht existiert; erfundene Autorennamen und Publikationsjahre', 'Why It Happens': 'Das Modell wurde mit Millionen von Zitaten trainiert und lernte zitatähnliche Muster, erfindet dann neue', 'Severity': 'Sehr hoch' },
+            { 'Type': 'Falsche Fakten (Daten, Zahlen, Namen)', 'Example': 'Ein historisches Ereignis im falschen Jahr nennen; fehlerhafte biografische Details', 'Why It Happens': 'Trainingsdaten sind unvollständig oder widersprüchlich; Modell wählt eine plausibel klingende Zahl', 'Severity': 'Sehr hoch' },
+            { 'Type': 'Gefälschte URLs und E-Mails', 'Example': 'Einen Link oder eine E-Mail-Adresse angeben, der/die nicht funktioniert oder nicht der beanspruchten Organisation gehört', 'Why It Happens': 'Modell lernte URL- und E-Mail-Muster und generiert neue, die realistisch, aber fiktiv sind', 'Severity': 'Hoch' },
+            { 'Type': 'Kontextverlust', 'Example': 'Eine Frage so beantworten, als hätte das Modell früheren Kontext verstanden, verlor aber tatsächlich die Spur', 'Why It Happens': 'Das Kontextfenster ist endlich; lange Dokumente führen dazu, dass frühere Details aus der Aufmerksamkeit des Modells verblassen', 'Severity': 'Hoch' },
+            { 'Type': 'Rollenwechsel', 'Example': 'Mit einer Rolle (Analyst) beginnen und graduel zu einer anderen (Geschichtenerzähler) wechseln, Details erfinden, um Lücken zu füllen', 'Why It Happens': 'Modell verliert die Spur der ursprünglichen Anweisung und fällt auf reines Mustervergleichen zurück', 'Severity': 'Mittel' },
+            { 'Type': 'Überconfidente Verallgemeinerung', 'Example': '„Alle X tun Y" sagen, wenn nur die spezifischen Trainingsbeispiele dies zeigen', 'Why It Happens': 'Modell verallgemeinert zu breit aus begrenzten Trainingsdaten ohne Konfidenz-Überprüfung', 'Severity': 'Mittel' },
+            { 'Type': 'Innerer Widerspruch', 'Example': 'Widersprüchliche Fakten innerhalb der gleichen Antwort feststellen', 'Why It Happens': 'Modell hat keinen Mechanismus, um Konsistenz über mehrere Sätze zu verfolgen', 'Severity': 'Mittel' },
+          ],
+          columns: ['Type', 'Example', 'Why It Happens', 'Severity'],
+        },
+        hallucinationTypesList: {
+          isTldr: false,
+          content: '**Die sieben Arten von Halluzinationen sind:** erfundene Quellen, falsche Fakten, gefälschte URLs und E-Mails, Kontextverlust, Rollenwechsel, überconfidente Verallgemeinerung und innere Widersprüche.',
+        },
+        promptDesignIntro: {
+          title: 'Wie Prompt-Design das Halluzinationsrisiko beeinflusst',
+          content: 'Ihre Prompts ermutigen oder entmutigen Halluzinationen. Der Unterschied ist messbar.',
+        },
+        riskPrompts: {
+          title: 'Prompts, die das Halluzinationsrisiko erhöhen:',
+          items: [
+            '„Erzähle mir alles über [Thema]" – keine Grenzen, keine Erlaubnis zu sagen „Ich weiß nicht"',
+            '„Stelle sicher, dass du [viele Details] einbeziehst" – expliziter Druck, Raum mit erfundenen Informationen zu füllen',
+            '„Schreibe, als wärst du ein führender Experte" – ermutigt selbstsichere Aussagen, auch bei unsicheren Ansprüchen',
+            '„Antworte, auch wenn du dir nicht völlig sicher bist" – entfernt die Bremse bei Halluzinationen',
+          ],
+        },
+        safePrompts: {
+          title: 'Prompts, die das Halluzinationsrisiko reduzieren:',
+          items: [
+            '„Du darfst sagen \'Ich weiß nicht\', wenn du unsicher bist" – explizite Erlaubnis, Wissenslücken zuzugeben',
+            '„Verwende nur Informationen aus dem Kontext unten" – beschränkt die Antwort auf bereitgestellte Daten, nicht erfundenes Wissen',
+            '„Unterscheide Fakten von Meinungen. Markiere unsichere Aussagen [UNSICHER]" – zwingt das Modell zu differenzieren',
+            '„Zitiere deine Quelle für jeden Faktnanspruch" – macht erfundene Zitate offensichtlich sichtbar',
+            '„Wenn du diesen Anspruch nicht verifizieren kannst, beziehe ihn nicht ein" – explizite Einschränkung unverifizierten Aussagen',
+          ],
+        },
+        promptStructure: {
+          title: 'Gute Prompt-Struktur',
+          content: 'Gute Prompts verbinden vier Elemente: eine **klare Rolle oder einen Kontext** (welchen Rahmen sollte das Modell annehmen?), eine **spezifische Aufgabe** (welche Ausgabe brauche ich?), **echte Eingabedaten** (welche Informationen werden bereitgestellt?) und **explizite Einschränkungen** (was darf das Modell NICHT tun?). Diese Struktur reduziert den Druck zu halluzinieren, indem sie die Mehrdeutigkeit über das, was das Modell tun soll, beseitigt. Unser Leitfaden zu [den 5 Bausteinen, die jeder Prompt braucht](/prompt-engineering/5-building-blocks-every-prompt-needs) behandelt jedes Element mit Beispielen.\n\nSiehe die vollständige Definition der [Prompt-Engineering-Grundlagen](/prompt-engineering/what-is-prompt-engineering) für eine tiefere Exploration, wie Struktur die Zuverlässigkeit der Ausgabe beeinflusst.',
+        },
+        techniques: {
+          title: 'Techniken zur Reduzierung von Halluzinationen',
+          content: 'Drei komplementäre Ansätze reduzieren Halluzinationen:\n- **Auf Prompt-Ebene:** Füge Einschränkungen und Erlaubnis hinzu, Unsicherheit in deinen Prompts zuzugeben\n- **Auf Systemebene:** Verwende RAG, Function Calling oder Abruf, um Antworten in echten Daten zu verankern\n- **Auf Modellebene:** Führe den gleichen Prompt über mehrere unabhängige Modelle aus, um Halluzinationen durch Consensus zu erkennen',
+        },
+        technique1: {
+          title: '1. Explizite Erlaubnis zu sagen „Ich weiß nicht"',
+          content: 'Teile dem Modell mit: „Wenn du unsicher bist oder keine Information hast, sag es. Rate nicht.\"\n\nDies entfernt den Druck, Antworten zu erfinden. Viele Modelle sind darauf trainiert, hilfreich zu sein, und werden versuchen zu antworten, auch wenn sie völlig unsicher sind. Ihnen explizit von dieser Erwartung zu entbinden gibt ihnen die Erlaubnis, abzulehnen.',
+        },
+        technique2: {
+          title: '2. Nach Quellen oder Belegen fragen',
+          content: 'Verlange: „Zitiere die Quelle für jeden Faktnanspruch" oder „Gebe URL und Veröffentlichungsdatum für jede Referenz an.\"\n\nDies macht erfundene Zitate offensichtlich (sie funktionieren nicht oder zeigen auf nicht existente Quellen) und zwingt das Modell, vorsichtiger mit der Behauptung von Fakten zu sein. Es gibt dir auch einen Weg, die Ausgabe zu überprüfen: klicke auf jeden Link, verifiziere jede Quelle.',
+        },
+        technique3: {
+          title: '3. Selbstkritik und Widerspruchsprüfung',
+          content: 'Fordere das Modell auf, seine eigene Ausgabe zu überprüfen:\n\n> „Nachdem du deine Antwort fertig hast, überprüfe sie auf Widersprüche oder Aussagen, die etwas widersprechen, das du früher gesagt hast. Zeige alle Inkonsistenzen auf, die du findest."\n\nModelle fangen oft ihre eigenen Fehler, wenn sie aufgefordert werden, zu reflektieren. Das Modell kann dann die Antwort überarbeiten, bevor du sie siehst.',
+        },
+        technique4: {
+          title: '4. Verwende Negativanweisungen',
+          content: 'Gebe explizit an, was das Modell NICHT tun darf:',
+          items: [
+            '„Erfinde niemals Quellen, URLs oder Autorennamen unter irgendwelchen Umständen"',
+            '„Nicht raten bei Daten, wenn du unsicher bist – lass das Datum leer, anstatt zu raten"',
+            '„Füge keine Informationen hinzu, die nicht in dem bereitgestellten Kontext stehen"',
+          ],
+        },
+        technique4Extra: {
+          content: 'Negative Formulierung funktioniert manchmal besser als positive Formulierung, um bestimmte Fehler zu verhindern.',
+        },
+        technique5: {
+          title: '5. Schrittweise Begründung mit Überprüfung',
+          content: 'Für komplexe Aufgaben frage:\n\n> „Arbeite dies Schritt für Schritt durch. Nach jedem Schritt, überprüfe, dass der vorherige Schritt korrekt ist, bevor du zum nächsten Schritt gehst."\n\nDie Aufgabe in kleinere Teile mit Überprüfungsschritten zu unterteilen gibt dem Modell Chancen, Inkonsistenzen zu fangen, bevor sie sich verstärken.',
+        },
+        technique6: {
+          title: '6. Strukturiertes Ausgabeformat mit Evidence-Bereich',
+          content: 'Fordere das Modell auf, **Antwort**, **Begründung** und **Belege** in unterschiedliche Abschnitte zu unterteilen:\n\n```\nANTWORT: [Direkte Antwort]\n\nBEGRÜNDUNG: [Wie du zu dieser Antwort gekommen bist]\n\nBELEGE: [Quellen, Fakten oder Zitate, die das unterstützen]\n\nSICHERHEIT: [Wie sicher bist du und warum?]\n```\n\nDiese Struktur macht Halluzinationen leicht zu erkennen: unbegründete Ansprüche haben leere oder vage BELEGE-Abschnitte und niedrige SICHERHEIT-Werte.',
+        },
+        systemLevel: {
+          title: 'Systemebenen-Strategien jenseits von Prompt-Design',
+          content: 'Prompts allein reichen für kritische Arbeit nicht aus. Füge diese Tools und Workflows hinzu.',
+        },
+        systemItems: {
+          items: [
+            '**Retrieval-Augmented Generation (RAG).** Gebe dem Modell ein spezifisches Dokument, eine Wissensdatenbank oder einen Datensatz und fordere es auf, nur mit diesem Inhalt zu antworten. Dies verankert Antworten in echten Daten, anstatt in den Trainingsdaten des Modells, und eliminiert Halluzinationen über fehlende Informationen. Tools wie LangChain, Anthropic\'s Prompt Caching und Vektor-Datenbanken implementieren dieses Muster. Siehe unseren vollständigen Leitfaden zu [RAG: wie man KI-Antworten in echten Daten verankert](/prompt-engineering/rag-explained).',
+            '**Tool Calling und Function Use.** Lasse das Modell externe Funktionen für Berechnungen, Datenbankabfragen oder Faktenkontrolle aufrufen. Anstatt eine Statistik zu erfinden, ruft das Modell eine Funktion auf, um sie abzurufen. Dies entfernt die Versu​chung zu halluzinieren vollständig für spezifische Domänen.',
+            '**Menschliche Überprüfung und Expertenverifikation.** Für kritische Entscheidungen – medizinisch, rechtlich, finanziell, sicherheitskritisch – lasse immer einen Menschen (vorzugsweise einen Experten) KI-generierte Antworten verifizieren. Keine Prompt-Technik ersetzt ein Expertenurteil.',
+            '**Automatisierte Fakten-Überprüfungs-Workflows.** Führe Modell-Ausgaben durch automatisierte Systeme (Fakten-Überprüfungs-APIs, URL-Validierung, Zitat-Verifikation), bevor du sie Nutzern zeigst. Dies erkennt Halluzinationen im Maßstab, ohne jede Ausgabe manuell zu überprüfen.',
+          ],
+        },
+        multiModel: {
+          title: 'Mehrere Modelle und Consensus-Erkennung',
+          content: 'Ein einzelnes Modell kann selbstsicher halluzinieren. Aber wenn du mehrere unabhängige Modelle die gleiche Frage stellst, sind sie sich oft uneinig über halluzinierte Aussagen.\n\nWenn fünf Modelle unabhängig ähnliche Antworten auf eine Frage geben, ist diese Antwort viel wahrscheinlicher korrekt, als wenn nur ein Modell antwortet. Wenn nur ein Modell etwas behauptet und vier andere erwähnen es nicht, ist dieser Anspruch hochgradig verdächtig und rechtfertigt eine Überprüfung.\n\nDies ist das Prinzip hinter **Consensus Scoring**: den gleichen Prompt zu vielen Modellen senden (GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, Mistral Large, Llama 3, DeepSeek, etc.) und analysieren, wo sie sich einigen und wo sie nicht einig sind.',
+        },
+        consensusTest: {
+          title: 'PromptQuorum Consensus Test',
+          content: '**Getestet in PromptQuorum – 15 halluzinationsanfällige Prompts an GPT-4o, Claude 4.6 Sonnet und Gemini 1.5 Pro gesendet:** GPT-4o erfand 1 Zitat komplett; Claude 4.6 Sonnet lehnte ab, unverifizierte Paper zu zitieren; Gemini 1.5 Pro zitierte 3 echte Paper, aber 1 mit falscher Jahr. Nur 1 Zitat erschien in allen drei Modell-Antworten. Dieser Test zeigt, dass Consensus über Modelle ein aussagekräftiges Signal für Zuverlässigkeit ist – und dass Single-Modell-Antworten mehr Erfindungen enthalten.\n\nPromptQuorum automatisiert dies: sende einen Prompt an 25+ KI-Modelle gleichzeitig, führe Consensus-Analyse über alle Antworten durch und erhalte ein Urteil darüber, welche Aussagen hohe Übereinstimmung haben (wahrscheinlich zuverlässig) und welche niedrige Übereinstimmung haben (wert, nachzuschlagen). Das Tool markiert genau, welche Aussagen widersprüchlich sind, zeigt Aussagen auf, die nur in ein oder zwei Antworten erscheinen, und gewichtet Model-Antworten nach Fähigkeit – und transformiert Halluzinations-Erkennung von Vermutungen in strukturierte, datengestützte Analyse.\n\nSiehe, wie [Multi-Modell-KI Halluzinationen reduziert](/prompt-engineering/consensus-scoring) für eine tiefere technische Erklärung.',
+        },
+        globalPerspective: {
+          title: 'Globale Perspektiven auf Halluzinationsgovernance',
+          content: 'Das Halluzinationsrisiko und die Minderungsstrategien variieren je nach Region und Regelungskontext. **In Europa** betont der EU AI Act Transparenz und Fehlermeldung für hochrisiko-KI-Systeme, was Halluzinationsdokumentation verbindlich macht. Mistral AI (Frankreich) hat Modelle mit speziellem Fokus auf Halluzinationsreduktion in EU-konformen Anwendungen gebaut. **In China** haben Modelle wie Qwen 2.5 und DeepSeek andere Halluzinationsmuster aufgrund von Trainingsdatenzusammensetzung und Tokenisierungseffizienz für CJK-Sprachen (Chinesisch, Japanisch, Koreanisch) – diese Modelle handhaben Token-zu-Informations-Verhältnisse anders als englisch-optimierte Modelle. **In Japan** stellen Unternehmungen, die unter METI (Ministry of Economy, Trade and Industry) Daten-Governanceleitung arbeiten, zunehmend Modelle lokal für halluzinationsanfällige Aufgaben bereit, um Datenresidenz und Compliance sicherzustellen.\n\nUnabhängig von der Region bleiben die Kernttechniken (RAG, Consensus-Überprüfung, menschliche Überprüfung) universell anwendbar. Wähle und überprüfe Modelle basierend auf deinem regulatorischen Kontext und deinen Sprachanforderungen.',
+        },
+        dangerDomains: {
+          title: 'Wenn Halluzinationen am gefährlichsten sind',
+          content: 'Halluzinationen riskieren erheblichen Schaden in spezifischen Domänen. Sei besonders vorsichtig mit:',
+          items: [
+            '**Medizinische und Gesundheitsentscheidungen** – Falsche Arzneimittelnamen, Dosierungen oder Symptominterpretationen können Patienten schaden',
+            '**Rechtliche und Compliance-Fragen** – Erfundene Rechtsprechung, Regelungsanforderungen oder Präzedenzfälle können zu teuren Fehlern oder Verstößen führen',
+            '**Finanzielle Ratschläge** – Falsche Marktdaten, falsche Steuerinformationen oder erfundene Leistungsmetriken führen hochriskante Entscheidungen fehlleitet',
+            '**Sicherheitskritische Systeme** – Halluzinationen bei Code Review, Architekturentscheidungen oder Sicherheitsanalyse können Schwachstellen oder Bugs einführen',
+            '**Öffentliche Zuschreibung** – Alles, das unter deinem Namen oder Marke veröffentlicht wird, muss überprüft werden; Halluzinationen beschädigen Glaubwürdigkeit',
+          ],
+        },
+        criticalPrinciple: {
+          content: '**Kritisches Prinzip:** Selbst mit perfekten Prompts und Consensus-Überprüfung bleibt menschliche Verifikation für hochriskante Entscheidungen wesentlich. Verwende KI als Zeit-sparer und First-Pass-Tool, nicht als Ersatz für Expertenurteil oder primäre Quellenverifikation.\n\nLerne, wie [Self-Critique-Techniken](/prompt-engineering/self-critique-prompting) Fehler in komplexen Denkaufgaben weiter reduzieren können.',
+        },
+        checklist: {
+          title: 'Praktische Checkliste: Bevor du einen kritischen Prompt sendest',
+          content: 'Verwende diese Checkliste, bevor du einen Prompt sendest, auf den du dich für Entscheidungen oder öffentliche Ausgaben stützen wirst:',
+          items: [
+            '[ ] **Erlaubt der Prompt explizit „Ich weiß nicht"?** Füge hinzu: „Du darfst \'Ich weiß nicht\' sagen, wenn du unsicher bist."',
+            '[ ] **Gibt es echten Kontext oder Daten im Prompt?** Vage Prompts laden zur Erfindung ein. Gebe spezifische Dokumente, Beispiele oder Eingabedaten an.',
+            '[ ] **Sind Einschränkungen explizit?** Sag, was das Modell NICHT tun darf, besonders: „Erfinde keine Quellen, URLs oder Zitate."',
+            '[ ] **Ist das Ausgabeformat strukturiert?** Trenne Answer / Reasoning / Evidence / Confidence. Das macht unbegründete Aussagen offensichtlich.',
+            '[ ] **Fragst du nach Quellen?** Für jeden faktischen Anspruch, verlange: „Zitiere die Quelle für diesen Fakt."',
+            '[ ] **Ist die Aufgabe spezifisch, nicht offenendlich?** „Nenne fünf Marketingstrategien *für ein B2B-SaaS-Produkt für Finanzfachleute*" ist besser als „Erzähl mir von Marketing."',
+            '[ ] **Hast du das Modell aufgefordert zu selbst-überprüfen?** Füge hinzu: „Überprüfe deine Antwort auf Widersprüche, bevor du sie absendet."',
+            '[ ] **Für hochriskante Entscheidungen, überprüfst du quer?** Sende den gleichen Prompt zu mehreren Modellen und vergleiche Antworten.',
+          ],
+        },
+        beforeAfter: {
+          title: 'Vorher / Nachher Prompt-Beispiel',
+        },
+        badPrompt: {
+          title: '[Schlechter Prompt]',
+          blockquote: 'Erzähl mir von der Geschichte der künstlichen Intelligenz. Beziehe große Durchbrüche und wichtige Forscher ein.',
+          content: '**Warum das fehlschlägt:** Offenendlich, keine Einschränkungen, keine Erlaubnis, Unsicherheit zuzugeben. Das Modell wird Daten erfinden, Durchbrüche falsch zuordnen, selbstsicher veraltete Informationen wiedergeben, und möglicherweise Paper zitieren, die nicht existieren.',
+        },
+        goodPrompt: {
+          title: '[Guter Prompt]',
+          blockquote: 'Verwende nur die folgende Zeitleiste, um die großen Durchbrüche in AI von 1950 bis 1990 zusammenzufassen:\n\n{ZEITLEISTE DATEN EINGEFÜGT}\n\nFormatiere deine Antwort als:\n\n**DURCHBRUCH:** {Name}\n**JAHR:** {Jahr — nur wenn in Zeitleiste angegeben}\n**BEDEUTUNG:** {Was es ermöglichte}\n**QUELLE:** {Welches Dokument aus der Zeitleiste erwähnt das?}\n\nFüge keine Informationen hinzu, die nicht in der Zeitleiste sind. Wenn du unsicher bist, ob etwas in der Zeitleiste ist, überspringe es, anstatt zu raten.',
+        },
+        whyWorks: {
+          title: 'Warum das funktioniert:',
+          items: [
+            '**Echte Daten statt Erfindung:** Das Modell arbeitet von bereitgestelltem Kontext, nicht von Trainingsdaten-Lücken',
+            '**Strukturierte Ausgabe:** Das Format macht fehlende Quellen sofort offensichtlich',
+            '**Negativanweisung:** „Füge keine Informationen hinzu, die nicht in der Zeitleiste sind" ist explizit',
+            '**Erlaubnis auszulassen:** „Wenn unsicher, überspringe es" entfernt den Druck, Details zu erfinden',
+            '**Quellen-Verantwortlichkeit:** Jede Aussage erfordert, die Quellenangabe zu zitieren',
+          ],
+        },
+        faq: {
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            {
+              q: 'Können Halluzinationen vollständig eliminiert werden?',
+              a: 'Nein. Halluzinationen sind dem Funktionieren von Sprachmodellen eigen – sie sagen Textmuster vorher, anstatt Fakten aus einem verifizierten Speicher abzurufen. Du kannst sie mit gutem Prompt-Design, Tools wie RAG und Multi-Modell-Consensus erheblich reduzieren, aber vollständige Elimination ist nicht möglich, gegeben die aktuelle LLM-Architektur. Menschliche Verifikation bleibt für hochriskante Entscheidungen notwendig.',
+            },
+            {
+              q: 'Warum klingt das Modell so selbstsicher, wenn es falsch ist?',
+              a: 'Sprachmodelle sind darauf trainiert, flüssigen, kohärenten Text zu generieren. Selbstsicherheit ist ein Nebenprodukt sprachlicher Kohärenz. Eine falsche Aussage kann viel kohärenter und wohl-artikuliert sein als ein ehrliches Eingeständnis von Unsicherheit. Das Modell hat keinen eingebauten Mechanismus, um Zweifel auszudrücken – es produziert Text mit gleicher flüssiger Selbstsicherheit, unabhängig von der Genauigkeit.',
+            },
+            {
+              q: 'Halluzinieren neuere, größere Modelle weniger?',
+              a: 'Größere Modelle halluzinieren oft mehr bei einigen Aufgaben, weil sie besser darin sind, plausibel klingende Text zu generieren, was falsche Aussagen schwerer zu erkennen macht. Neuere Modelle schneiden bei einigen faktischen Aufgaben jedoch besser ab (sie haben aktuellere Trainingsdaten und stärkeres Instruction-Following). Die Beziehung zwischen Modellgröße und Halluzination ist aufgabenabhängig, nicht monoton.',
+            },
+            {
+              q: 'Entfernt das Verbinden eines Modells mit dem Internet Halluzinationen?',
+              a: 'Teilweise. Echtzeit-Web-Zugang hilft bei aktuellen Ereignissen und neuesten Fakten, löst aber nicht das Kernproblem: das Modell erfindet immer noch Details, missinterpretiert Suchergebnisse oder halluziniert über Inhalte, die es nicht wirklich abgerufen hat. Internet-Zugang ist ein Tool, das eine Klasse von Halluzinationen reduziert, keine Heilmittel.',
+            },
+            {
+              q: 'Wie kann ich schnell überprüfen, ob eine Antwort halluziniert ist?',
+              a: 'Überprüfe Quellen: Klicke URLs an oder suche nach zitierten Paper. Wenn sie nicht existieren, ist die Antwort halluziniert. Überprüfe Fakten: Stelle Daten, Namen und Zahlen gegen vertrauenswürdige Quellen. Vergleiche mehrere Modelle: Frage die gleiche Frage verschiedenen Modellen. Starke Uneinigkeit schlägt vor, dass mindestens eines halluziniert. Wende Fachexpertise an: Wenn du das Feld kennst, lies kritisch auf subtile Implausibilität – Halluzinationen haben oft Erkennungszeichen für Expertenleser.',
+            },
+            {
+              q: 'Sollte ich aufhören, KI zu verwenden, wenn sie halluziniert?',
+              a: 'Nein. Verwende KI strategisch mit Verifikation. Für Brainstorming, Entwürfe und erkundendes Arbeiten sind Halluzinationen ein geringer Ärger. Für faktenkritische Arbeit (Recherche, Compliance, medizinische Entscheidungen, finanzielle Ratschläge), verwende KI als Ausgangspunkt, überprüfe dann alles mit vertrauenswürdigen Quellen oder Expertenüberprüfung.',
+            },
+            {
+              q: 'Was ist der Unterschied zwischen einer Halluzination und einem echten Fehler?',
+              a: 'Eine Halluzination ist selbstsicher und falsch. Wenn ein Modell sagt „Ich bin nicht sicher, aber es könnte X sein," das ist ehrliche Unsicherheit, nicht Halluzination. Wenn es sagt „Die Hauptstadt von Frankreich ist Berlin" mit vollständiger Selbstsicherheit, das ist eine Halluzination – das Modell hat etwas Falsches so gesagt, als wäre es ein Fakt. Das Erkennungszeichen ist selbstsichere Behauptung von etwas Unwahrem.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Weiterführendes Material',
+          items: [
+            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) – die Grundkonzepte hinter der Strukturierung von Prompts',
+            '[Multi-Modell Consensus Scoring](/prompt-engineering/consensus-scoring) – wie das Vergleichen von Modellen Uneinigkeiten und Unzuverlässigkeit erkennt',
+            '[Self-Critique Prompting Techniken](/prompt-engineering/self-critique-prompting) – wie man Modelle dazu bringt, ihre eigenen Fehler zu fangen',
+          ],
+        },
+        sources: {
+          title: 'Quellen',
+          items: [
+            'Wei, J., Wang, X., Schuurmans, D., et al. (2022). „Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." [ArXiv](https://arxiv.org/abs/2201.11903) — das Grundlagenpaper, das zeigt, dass schrittweise Begründung Halluzinationen bei Mathematik- und Logik-Aufgaben reduziert.',
+            'Maynez, J., Narayan, S., Hashimoto, B., & Hardt, D. (2021). „On Faithfulness and Factuality in Abstractive Summarization." [ACL Proceedings](https://aclanthology.org/2021.acl-long.200/) — empirische Studie von Halluzinationsraten und Mechanismen in neuronaler Textgenerierung.',
+            'Anthropic (2024). „Constitutional AI." [https://www.anthropic.com/constitutional-ai](https://www.anthropic.com/constitutional-ai) — Anthropic\'s Ansatz zur Reduzierung schädlicher Ausgaben und Halluzinationen durch prinzipiengestützte Schulung.',
+          ],
+        },
+      },
     },
     fr: {
       theme: 'Fundamentals',
