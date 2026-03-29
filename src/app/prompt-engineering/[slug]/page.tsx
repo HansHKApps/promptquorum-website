@@ -217,7 +217,6 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
           name: faq.q,
           acceptedAnswer: {
             '@type': 'Answer',
-            name: faq.q,
             text: faq.a,
           },
         })),
