@@ -11,6 +11,55 @@ interface Props {
   slug: string
 }
 
+// Jump-to-section translations
+const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
+  en: {
+    jumpToSection: 'Jump to section',
+    corePrompting: 'Core Concepts',
+    agentsOrchestration: 'Agents',
+    safetyAlignment: 'Safety',
+    evalsTesting: 'Evaluation',
+    advancedTechniques: 'Advanced',
+    metricsProduction: 'Metrics',
+  },
+  de: {
+    jumpToSection: 'Zu Abschnitt springen',
+    corePrompting: 'Kernkonzepte',
+    agentsOrchestration: 'Agenten',
+    safetyAlignment: 'Sicherheit',
+    evalsTesting: 'Evaluierung',
+    advancedTechniques: 'Fortgeschrittene Techniken',
+    metricsProduction: 'Metriken',
+  },
+  fr: {
+    jumpToSection: 'Aller à la section',
+    corePrompting: 'Concepts fondamentaux',
+    agentsOrchestration: 'Agents',
+    safetyAlignment: 'Sécurité',
+    evalsTesting: 'Évaluation',
+    advancedTechniques: 'Techniques avancées',
+    metricsProduction: 'Métriques',
+  },
+  ja: {
+    jumpToSection: 'セクションにジャンプ',
+    corePrompting: 'コア概念',
+    agentsOrchestration: 'エージェント',
+    safetyAlignment: 'セキュリティ',
+    evalsTesting: '評価',
+    advancedTechniques: '高度なテクニック',
+    metricsProduction: 'メトリクス',
+  },
+  zh: {
+    jumpToSection: '跳转到部分',
+    corePrompting: '核心概念',
+    agentsOrchestration: '代理',
+    safetyAlignment: '安全',
+    evalsTesting: '评估',
+    advancedTechniques: '高级技术',
+    metricsProduction: '指标',
+  },
+}
+
 // Maps article display titles to their URL slugs
 const TITLE_TO_SLUG: Record<string, string> = {
   // Fundamentals
@@ -448,22 +497,22 @@ function PromptEngineeringPostContent({ slug }: Props) {
         {/* Jump navigation for glossary */}
         {slug === 'prompt-engineering-glossary' && article.sections.intro && (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-4">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Jump to section</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{JUMP_SECTION_LABELS[lang].jumpToSection}</p>
             <div className="flex flex-wrap gap-2">
               {[
-                { id: '#core-concepts', label: 'Core Concepts' },
-                { id: '#agents-orchestration', label: 'Agents' },
-                { id: '#safety-alignment', label: 'Safety' },
-                { id: '#evaluation-testing', label: 'Evaluation' },
-                { id: '#advanced-techniques', label: 'Advanced' },
-                { id: '#metrics-production', label: 'Metrics' },
+                { id: '#core-concepts', key: 'corePrompting' },
+                { id: '#agents-orchestration', key: 'agentsOrchestration' },
+                { id: '#safety-alignment', key: 'safetyAlignment' },
+                { id: '#evaluation-testing', key: 'evalsTesting' },
+                { id: '#advanced-techniques', key: 'advancedTechniques' },
+                { id: '#metrics-production', key: 'metricsProduction' },
               ].map((link) => (
                 <a
                   key={link.id}
                   href={link.id}
                   className="text-sm text-primary hover:text-primary/80 font-medium transition-colors"
                 >
-                  {link.label}
+                  {JUMP_SECTION_LABELS[lang][link.key as keyof typeof JUMP_SECTION_LABELS.en]}
                 </a>
               ))}
             </div>
