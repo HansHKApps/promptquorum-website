@@ -23,6 +23,7 @@ export interface PEArticle {
   title: string
   intro: string
   publishDate: string
+  dateModified?: string
   readTime: string
   sections: Record<string, PESection>
   schema?: Record<string, unknown>
@@ -11661,6 +11662,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'How LLMs Actually Work: Tokens, Attention, and Inference',
       intro: 'Large language models predict the next token using probability distributions learned from billions of text examples — not by understanding, retrieving, or reasoning in the human sense. Understanding this mechanism explains why prompts fail, why temperature matters, and why different models produce different outputs on the same input.',
       publishDate: '2026-03-30',
+      dateModified: '2026-03-30',
       readTime: '12 min read',
       schema: {
         '@context': 'https://schema.org',

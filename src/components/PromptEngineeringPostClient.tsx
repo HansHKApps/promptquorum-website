@@ -503,8 +503,8 @@ function PromptEngineeringPostContent({ slug }: Props) {
             {article.title}
           </h1>
           <div className="flex items-center gap-4 text-sm text-text-secondary">
-            <time dateTime={article.publishDate}>
-              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {new Date(article.publishDate + 'T00:00:00Z').toLocaleDateString(LANGUAGE_TO_LOCALE[lang] ?? 'en-US', { month: 'long', year: 'numeric' })}
+            <time dateTime={article.dateModified ?? article.publishDate}>
+              {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {new Date((article.dateModified ?? article.publishDate) + 'T00:00:00Z').toLocaleDateString(LANGUAGE_TO_LOCALE[lang] ?? 'en-US', { month: 'long', year: 'numeric' })}
             </time>
             <span>·</span>
             <span>{article.readTime}</span>
