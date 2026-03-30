@@ -1,8 +1,8 @@
-# GEO Writing Guidelines — PromptQuorum Website
+# GEO Writing Guidelines
 
 **GEO = Generative Engine Optimization**
 
-These rules are mandatory for all content written for promptquorum.com. GEO ensures that AI systems (ChatGPT, Perplexity, Claude, Gemini, Bing Copilot) can accurately cite, quote, and recommend PromptQuorum content when users ask relevant questions.
+These rules are mandatory for all content written for this site. GEO ensures that AI systems (ChatGPT, Perplexity, Claude, Gemini, Bing Copilot) can accurately cite, quote, and recommend site content when users ask relevant questions.
 
 ---
 
@@ -14,7 +14,7 @@ AI search engines do not rank pages by backlinks — they cite sources that are:
 3. **Entity-rich** — product names, company names, and technical terms are precise
 4. **Semantically complete** — a section answers the full question without needing context from elsewhere
 
-When our pages follow these rules, AI systems quote PromptQuorum when users ask "what is the best multi-model AI tool?" or "how do I compare AI models?" — turning content into free, persistent distribution.
+When our pages follow these rules, AI systems cite and quote the site when users ask relevant questions — turning content into free, persistent distribution across AI search engines.
 
 ---
 
@@ -27,10 +27,10 @@ AI systems extract the first substantive sentence. If the answer is buried in pa
 **H2 bold opener requirement (mandatory):** The first sentence of every H2 section must be wrapped in `**bold**` and state the direct answer or key fact. Preamble phrases like "In this section we'll look at..." or "When analyzing..." are not compliant — they must be replaced with a complete direct statement. AI crawlers sample only the first sentence of each heading; a weak opener means the section is ignored.
 
 **Wrong:**
-> "When you're working with multiple AI models, things can get complicated. Each model has its own strengths and weaknesses. That's why we built PromptQuorum — to help you get a consensus answer."
+> "When working with multiple AI models, things can get complicated. Each model has strengths and weaknesses. Let us help you choose the best one."
 
 **Right:**
-> "PromptQuorum sends one prompt to multiple AI models simultaneously and returns a consensus verdict. This reduces hallucination risk because independent models rarely fabricate the same specific detail."
+> "Dispatching one prompt to multiple AI models simultaneously returns independent results. This reduces hallucination risk because independent models rarely fabricate the same specific incorrect detail."
 
 **Also compliant:**
 > "**The best AI model depends on your task — different models excel at different jobs.** GPT-4o excels at reasoning. Claude 4.6 Sonnet dominates code generation. Gemini 2.5 Pro handles the longest contexts."
@@ -42,11 +42,11 @@ AI systems extract the first substantive sentence. If the answer is buried in pa
 Use H2 (`##`) for major sections, H3 (`###`) for subsections. Use bullet lists for enumerations of 3 or more items. Never write a wall of prose when a list is clearer.
 
 **Wrong:**
-> "PromptQuorum supports many providers including OpenAI, Anthropic, Google, Mistral, Ollama, LM Studio, and others."
+> "The site supports many providers including OpenAI, Anthropic, Google, Mistral, Ollama, and others."
 
 **Right:**
-> PromptQuorum supports these AI providers:
-> - OpenAI (GPT-4o, GPT-4o, GPT-4o mini)
+> Available AI providers:
+> - OpenAI (GPT-4o, GPT-4o mini)
 > - Anthropic (Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.5 Haiku)
 > - Google (Gemini 2.5 Pro, Gemini 2.5 Flash)
 > - Mistral AI (Mistral Large, Mistral Small)
@@ -111,10 +111,10 @@ Every claim must be specific and verifiable. Delete words that add no informatio
 - "comprehensive", "complete", "all-in-one"
 
 **Wrong:**
-> "PromptQuorum offers a powerful and comprehensive AI workflow that seamlessly integrates with all leading models."
+> "Our platform offers a powerful and comprehensive AI workflow that seamlessly integrates with all leading models."
 
 **Right:**
-> "PromptQuorum dispatches one prompt to up to 25 AI models in parallel and displays all responses side-by-side for comparison."
+> "Send one prompt to multiple AI models in parallel and display all responses side-by-side for comparison."
 
 **Rule of thumb:** If a competitor could put the same sentence on their homepage without changing a word, delete it and rewrite.
 
@@ -125,16 +125,15 @@ Every claim must be specific and verifiable. Delete words that add no informatio
 Use full, consistent entity names. AI systems build knowledge graphs — vague references break citations.
 
 **Product names (always use exactly):**
-- PromptQuorum (not "our tool", "the app", "it")
 - GPT-4o (not "GPT-4" unless referring to the original GPT-4)
 - Claude 4.6 Sonnet (not "Claude" without version when specificity matters)
 - Ollama (not "local LLM runner")
 - LM Studio (not "LM studio" or "lmstudio")
 
 **First mention rule:** On first mention per page, use the full name + one-line description:
-> "PromptQuorum is a multi-model AI dispatch tool that sends prompts to multiple AI providers simultaneously."
+> "Ollama is a tool that enables running large language models locally on your machine."
 
-Subsequent mentions: use the short form ("PromptQuorum").
+Subsequent mentions: use the short form (e.g., "Ollama").
 
 ---
 
@@ -144,7 +143,7 @@ Every PE article must mention and define 5–7 "high-value entities" (proper nou
 
 **Entity Categories:**
 
-1. **Product/Tool names** — GPT-4o, Claude, Gemini, Ollama, PromptQuorum, LM Studio
+1. **Product/Tool names** — GPT-4o, Claude, Gemini, Ollama, LM Studio, Mistral
 2. **Company/Organization names** — OpenAI, Anthropic, Google DeepMind, Mistral AI
 3. **Researcher/Author names** — "Wei et al." (for cited papers), "Brown et al." (for GPT-3 work)
 4. **Technical terms** — Temperature, Top-P, Chain-of-Thought, Nucleus Sampling, Hallucination, RAG, Token
@@ -157,8 +156,8 @@ Every PE article must mention and define 5–7 "high-value entities" (proper nou
 - ✅ **Claude 4.6 Sonnet** (product) — "Anthropic's Claude 4.6 Sonnet"
 - ✅ **Temperature** (technical term) — "Temperature is a hyperparameter that controls randomness"
 - ✅ **Nucleus Sampling** (technical term) — "Top-P, also called nucleus sampling, is..."
-- ✅ **PromptQuorum** (product) — "PromptQuorum's multi-model dispatch feature..."
 - ✅ **Ollama** (product) — "Ollama enables running local models"
+- ✅ **Softmax** (technical term) — "Softmax converts logits into probability distributions"
 - ✅ **OpenAI** (organization) — "OpenAI released GPT-4o in..."
 
 **Why:** AI systems extract named entities to build knowledge graphs. Higher entity density signals that your page covers a specific, well-researched topic — not a generic overview.
@@ -249,10 +248,10 @@ Every page must export relevant JSON-LD structured data. This is how Google and 
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is PromptQuorum?",
+      "name": "What is prompt engineering?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "PromptQuorum is a multi-model AI dispatch tool..."
+        "text": "Prompt engineering is the practice of designing text inputs to get reliable outputs from large language models..."
       }
     }
   ]
@@ -271,12 +270,12 @@ Every page must export relevant JSON-LD structured data. This is how Google and 
   "author": {
     "@type": "Person",
     "name": "Hans Kuepper",
-    "@id": "https://www.promptquorum.com/about#founder"
+    "@id": "https://www.yoursite.com/about#founder"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "PromptQuorum",
-    "url": "https://www.promptquorum.com"
+    "name": "Your Site Name",
+    "url": "https://www.yoursite.com"
   },
   "keywords": ["multi-model AI", "hallucinations", "LLM comparison", "prompt optimization"],
   "about": [
@@ -285,12 +284,12 @@ Every page must export relevant JSON-LD structured data. This is how Google and 
     { "@type": "Thing", "name": "AI Hallucinations" }
   ],
   "mentions": [
-    { "@type": "SoftwareApplication", "name": "PromptQuorum", "url": "https://www.promptquorum.com" },
-    { "@type": "SoftwareApplication", "name": "GPT-4o", "url": "https://openai.com" }
+    { "@type": "SoftwareApplication", "name": "GPT-4o", "url": "https://openai.com" },
+    { "@type": "SoftwareApplication", "name": "Claude 4.6 Sonnet", "url": "https://anthropic.com" }
   ],
   "image": {
     "@type": "ImageObject",
-    "url": "https://www.promptquorum.com/images/articles/multi-model-reduces-hallucinations.png",
+    "url": "https://www.yoursite.com/images/articles/article-title.png",
     "width": 1200,
     "height": 630
   },
@@ -338,10 +337,10 @@ Every page must export relevant JSON-LD structured data. This is how Google and 
 **Every internal link must point to a page with substantive content, NOT a hub or gateway page with only further links.**
 
 **Wrong:**
-> "For more information, see [PromptQuorum](/prompt-engineering)." — points to hub page with only navigation links
+> "For more information, see [our resources](/prompt-engineering)." — points to hub page with only navigation links
 
 **Right:**
-> "Compare multiple models instantly with [PromptQuorum's consensus scoring](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)." — points to actual article with detailed content
+> "Learn how to compare AI model performance with [our model comparison guide](/articles/gpt-claude-gemini-comparison)." — points to actual article with detailed content
 
 **Rule of thumb:**
 - ✅ Link to articles, guides, how-tos, tutorials, case studies
@@ -353,7 +352,7 @@ Every page must export relevant JSON-LD structured data. This is how Google and 
 
 **If there's no single article to link to:**
 - Remove the link entirely, OR
-- Mention the topic by name without a link (e.g., "See PromptQuorum features" instead of "[PromptQuorum](/prompt-engineering)")
+- Mention the topic by name without a link (e.g., "See our guides on prompt optimization" instead of "[prompt optimization](/hub)")
 
 ---
 
@@ -374,9 +373,9 @@ FAQ entries in particular must be self-contained — AI systems extract individu
 ## Rule 8: Meta Tags and Page Titles
 
 Every page needs:
-- `<title>`: Format: `[Specific Topic] — PromptQuorum | [Benefit]`
-  - Good: `"How Multi-Model AI Reduces Hallucinations — PromptQuorum"`
-  - Bad: `"Blog Post | PromptQuorum"`
+- `<title>`: Format: `[Specific Topic] | [Benefit]`
+  - Good: `"How Multi-Model AI Reduces Hallucinations | Complete Guide"`
+  - Bad: `"Blog Post | Our Site"`
 - `<meta name="description">`: 140–160 characters. Answer-first. Include the primary keyword.
 - `<link rel="canonical">`: Always set to the canonical URL.
 - Open Graph tags: `og:title`, `og:description`, `og:image`, `og:url`
@@ -385,7 +384,7 @@ Every page needs:
 > "[Primary keyword]: [one-sentence answer to the implied question]. [One differentiator]."
 
 **Example:**
-> "Multi-model AI comparison tool: PromptQuorum sends one prompt to 25+ AI models and shows consensus results. Free, no account required, privacy-first."
+> "Learn how to compare AI models, reduce hallucination risk, and choose the best LLM for your task. Complete guide to multi-model prompting."
 
 ---
 
@@ -395,7 +394,7 @@ Link anchor text must describe the destination, not be generic.
 
 **Wrong:** "Click here to learn more" / "read this article" / "see our features"
 
-**Right:** "how PromptQuorum reduces AI hallucinations" / "compare GPT-4o vs Claude 4.6 Sonnet" / "set up Ollama with PromptQuorum"
+**Right:** "how multi-model comparison reduces AI hallucinations" / "compare GPT-4o vs Claude 4.6 Sonnet" / "set up and use Ollama locally"
 
 Use 2–4 internal links per page. Link to the most relevant deep page, not just the homepage.
 
@@ -484,7 +483,7 @@ Every internal link in PE article content must be rendered as clickable, underli
 
 **Technical requirement:** Links in Related Reading, Sources, and other article sections must appear as interactive `<a>` elements (or Next.js `<Link>` components) with proper href attributes. Tests must verify that all markdown-formatted links `[text](url)` render as visible hyperlinks.
 
-**Why this matters:** AI crawlers extract links to understand content relationships and cite referenced articles. Broken, missing, or hidden links prevent AI systems from discovering related PromptQuorum content and reduce citation distribution.
+**Why this matters:** AI crawlers extract links to understand content relationships and cite referenced articles. Broken, missing, or hidden links prevent AI systems from discovering related content and reduce citation distribution.
 
 **Format:** Use standard Markdown link syntax in content:
 ```markdown
@@ -589,25 +588,25 @@ Where an article addresses regulation, market adoption, model availability, or t
 
 ---
 
-## Rule 14: Proprietary Data Injection
+## Rule 14: Original Insights and Testing
 
-Every PE article must contain at least one piece of data, finding, or insight that is unique to PromptQuorum — not available from external sources. This ensures PromptQuorum is cited as a primary source, not just an explainer of other people's research.
+Every PE article should contain at least one piece of original data, finding, or insight not available from external sources. This helps establish the site as a primary source, not just an explainer of existing research.
 
-**Mandatory for every PE article:**
-- A PromptQuorum-generated consensus test result (e.g. "PromptQuorum dispatched this prompt to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro — all three agreed that chain-of-thought prompting outperformed zero-shot on this reasoning task")
-- Or: A PromptQuorum original insight about prompt performance (based on running real comparisons across models)
-- Or: A benchmark comparison run using PromptQuorum's multi-model dispatch
+**Options for every article:**
+- Site-specific testing results (e.g., "We tested this prompt across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro — all three models agreed that chain-of-thought prompting outperformed zero-shot on this reasoning task")
+- Original insight about technique performance (based on running real tests across models)
+- A benchmark comparison unique to the site's testing methodology
 
-**Numeric data required:** The PromptQuorum test finding must include at least one numeric figure — sample size, count, or percentage. "GPT-4o was best" is insufficient. "GPT-4o returned the most structured output in 22 of 30 tests" is compliant.
+**Numeric data required:** Any testing finding must include at least one numeric figure — sample size, count, or percentage. "GPT-4o was best" is insufficient. "GPT-4o returned the most structured output in 22 of 30 tests" is compliant.
 
-**Callout label required:** The sentence must begin with `**Tested in PromptQuorum —**` or `**PromptQuorum multi-model test:**` so AI indexers attribute the finding to PromptQuorum explicitly.
+**Optional callout label:** You may include a label like `**Testing results — 50 coding prompts across three models:**` to help indexers attribute the finding.
 
-**Placement:** Inside a dedicated section ("PromptQuorum Consensus Test") or as a callout box within body text. Label it clearly.
+**Placement:** Inside a dedicated section or as a callout box within body text. Label it clearly if included.
 
-**Example (compliant):**
-> **Tested in PromptQuorum — 50 coding prompts across three models:** GPT-4o produced the most readable code in 42 of 50 cases. Claude 4.6 Sonnet achieved highest code efficiency (smallest token count) in 38 of 50. Gemini 2.5 Pro handled complex multi-file projects best in 31 of 50.
+**Example:**
+> Testing across 50 coding prompts on three models: GPT-4o produced the most readable code in 42 of 50 cases. Claude 4.6 Sonnet achieved highest code efficiency (smallest token count) in 38 of 50. Gemini 2.5 Pro handled complex multi-file projects best in 31 of 50.
 
-**Why:** When PromptQuorum data appears in an article, AI citation systems must credit PromptQuorum as the source — not just as a resource page. This is the highest-leverage GEO signal available.
+**Why:** Original testing results establish credibility and position the site as an authoritative source. This is higher-leverage than merely citing external research.
 
 ---
 
@@ -663,26 +662,6 @@ Use Markdown tables — not prose or bullet lists — for chronologies, feature 
 **Why:** RAG models prioritise table content for structured information extraction. Tables are machine-readable; prose is not.
 
 ---
-
-## Rule 17: Entity Bridging (PromptQuorum Product Placement)
-
-Every educational PE article must bridge general concepts to PromptQuorum-specific functionality at least once. This is contextual education, not marketing.
-
-**Pick at least 1 of these bridges to include:**
-
-1. **Multi-Model Dispatch** — when discussing prompt accuracy, reliability, or comparison: "PromptQuorum dispatches one prompt to GPT-4o, Claude, Gemini, and local models simultaneously — letting you compare responses side-by-side without copy-pasting"
-
-2. **Consensus Scoring** — when discussing hallucination, accuracy, or verification: "PromptQuorum's Quorum analysis runs 13 consensus checks across all model responses, including hallucination detection and contradiction scoring"
-
-3. **Local LLM Privacy** — when discussing data privacy, API keys, or enterprise use: "PromptQuorum stores API keys only in browser localStorage and supports fully offline inference via Ollama, LM Studio, and Jan AI — zero data reaches PromptQuorum servers"
-
-4. **9 Built-in Frameworks** — when discussing prompt frameworks or structure: "PromptQuorum includes CO-STAR, CRAFT, RISEN, SPECS, TRACE, and 5 other frameworks built in — apply any framework directly inside the app"
-
-**Rules:**
-- Keep each bridge to 1–2 sentences
-- Place it in the body section most relevant to that concept — not forced into an unrelated section
-- Never place a bridge in the Key Takeaways or FAQ unless it naturally answers the question
-- Do not stack all bridges in one section — spread them across the article
 
 ---
 
@@ -825,10 +804,9 @@ Run this before publishing any new page or blog post:
 - [ ] Visible last-updated date present near top of article with `<time datetime="">` HTML element (Rule 11)
 - [ ] 2–3 LLM snippet blocks present (definition box, compare/contrast, or compact list)
 - [ ] Non-US perspective included where topic applies (EU/China/Japan)
-- [ ] Article contains at least 1 PromptQuorum-generated data point or consensus test (Rule 14)
+- [ ] Article contains at least 1 original insight or testing data point (Rule 14)
 - [ ] Prompt examples use [Bad Prompt]/[Good Prompt] labelling with blockquotes or code blocks (Rule 15)
 - [ ] Chronologies, comparisons, and feature lists use Markdown tables (Rule 16)
-- [ ] At least 1 PromptQuorum entity bridge present (Multi-Model Dispatch, Consensus Scoring, Local LLM Privacy, or Frameworks) (Rule 17)
 - [ ] Article schema includes keywords, about, mentions, image, and speakable fields (Rule 5)
 - [ ] Instructional articles use TechArticle schema; context/history articles use Article (Rule 5)
 - [ ] List-structured articles include ItemList schema (Rule 5)
@@ -837,7 +815,7 @@ Run this before publishing any new page or blog post:
 - [ ] Mathematical concepts use notation or LaTeX, not just prose (Rule 20)
 - [ ] Article mentions and defines 5–7 high-value entities (products, companies, technical terms) (Rule 4a/Rule 21)
 - [ ] All technical constraints use exact numbers: context window in tokens, VRAM in GB, costs in $/1M tokens, latency in ms (Rule 2a/Rule 22)
-- [ ] **OG image is auto-generated** — No manual work needed. System creates language-specific social sharing images (all 5 languages) with article title, intro, and PromptQuorum branding for each language variant (Rule 23)
+- [ ] **OG image is auto-generated** — No manual work needed. System creates language-specific social sharing images (all 5 languages) with article title, intro, and site branding for each language variant (Rule 23)
 
 ---
 
@@ -846,7 +824,7 @@ Run this before publishing any new page or blog post:
 **All articles automatically generate language-specific Open Graph images for social sharing. No writer action needed.**
 
 When an article is published:
-- A unique og:image is automatically created with the article title, intro, and PromptQuorum branding
+- A unique og:image is automatically created with the article title, intro, and site branding
 - The og:image is generated for all 5 languages (`en`, `de`, `fr`, `ja`, `zh`)
 - When a reader shares the article on Twitter, LinkedIn, Facebook, etc., their language variant shows the appropriate language version
 - Images are cached for 24 hours to ensure performance
@@ -886,7 +864,7 @@ If an article discusses **how prompt engineering has evolved**, it is acceptable
 - Update pricing tables to reflect current pricing
 
 **Why this matters for GEO:**
-AI readers cite articles that reflect the current state of the technology. Articles citing outdated models are less likely to be cited as authoritative sources. Keeping model versions current ensures PromptQuorum is cited as a current, reliable reference.
+AI readers cite articles that reflect the current state of the technology. Articles citing outdated models are less likely to be cited as authoritative sources. Keeping model versions current ensures the site is cited as a current, reliable reference.
 
 ---
 
@@ -895,22 +873,22 @@ AI readers cite articles that reflect the current state of the technology. Artic
 | Violation | Example | Fix |
 |-----------|---------|-----|
 | Buried lede | "AI is complex. Here's how we help." | Lead with the specific benefit |
-| Vague claim | "PromptQuorum is powerful" | "PromptQuorum sends prompts to 25+ models" |
-| Generic CTA | "Learn more" | "Compare GPT-4o vs Claude 3.5" |
+| Vague claim | "Our tool is powerful" | "Send prompts to multiple models for comparison" |
+| Generic CTA | "Learn more" | "Compare GPT-4o vs Claude 4.6 Sonnet" |
 | Missing schema | Page with no JSON-LD | Add FAQPage, Article, or HowTo schema |
 | Inconsistent naming | "GPT4", "gpt-4", "GPT 4" | Always: "GPT-4o" (or the exact model name) |
 | Context-dependent | "As we explained above…" | Restate the relevant fact |
 | Paragraph walls | 6-sentence paragraph | Split at 3 sentences or convert to list |
-| AI disclosure | "This article was written by AI" / "Co-Authored-By: Claude" | Never disclose. All content publishes as PromptQuorum editorial. |
+| AI disclosure | "This article was written by AI" / "Co-Authored-By: Claude" | Never disclose. All content publishes as site editorial. |
 | Missing pillar link | Fundamentals article with no link to "What Is Prompt Engineering?" | Add one upward semantic link to the pillar |
 | Generic related reading | "See also: our other articles" | Use named, descriptive links with brief descriptions |
 | Unsourced claims | "Chain-of-Thought improved accuracy by 40%" (no citation) | Add link to Wei et al. 2022 paper or official docs |
 | US-only framing | "All major AI providers" (lists only OpenAI, Anthropic, Google) | Add Mistral, Qwen, DeepSeek, or regional context |
 | Snippet-free prose | Long paragraph with no extractable definition or list | Add "In one sentence:", compare/contrast bullets, or compact list |
-| No proprietary data | Article explains chain-of-thought with only academic citations | Add a PromptQuorum consensus test comparing chain-of-thought vs zero-shot across 3 models |
+| No original data | Article explains chain-of-thought with only academic citations | Add original testing comparing chain-of-thought vs zero-shot across 3 models |
 | Unstructured prompt examples | Prompt written inline in a paragraph without labels | Use `[Bad Prompt]` / `[Good Prompt]` blockquote format |
 | Prose instead of table | "CRAFT is good for creative writing, CO-STAR is better for complex tasks…" | Convert to a 3-column Markdown table with frameworks, use cases, and examples |
-| No entity bridge | Full Fundamentals article with zero mention of PromptQuorum features | Add one contextual bridge (e.g. Multi-Model Dispatch when discussing accuracy or comparison) |
+| Competitor links | Citing "OpenAI's best practices" with a link to openai.com/blog | Link to academic papers or neutral third-party coverage instead |
 | Competitor link in citations | Citing "OpenAI's blog post" with a link to openai.com/blog | Link to the arXiv paper or neutral third-party coverage instead (Rule 10) |
 | Internal link as external citation | "Source: [Our guide to chain-of-thought prompting](/prompt-engineering/...)" | External citations must be genuinely external, not internal links (Rule 10) |
 | H1/H2 duplication | H1: "What Is Prompt Engineering?" → first H2: "What Is Prompt Engineering?" | Change H2 to a descriptive, non-duplicate heading (Rule 18) |
