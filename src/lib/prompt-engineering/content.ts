@@ -11948,7 +11948,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         inference: {
           title: 'How Inference Works: Sampling and Decoding',
           content: [
-            '**During inference, the model generates output one token at a time — computing a probability distribution over the entire vocabulary and sampling from it according to decoding parameters you control.** The three most important parameters are temperature, [top-p](/prompt-engineering/prompt-engineering-glossary#top-p) (nucleus sampling), and max tokens.',
+            '**During inference, the model generates output one token at a time — computing a probability distribution over the entire vocabulary and sampling from it according to decoding parameters you control.** The three most important parameters are [temperature](/prompt-engineering/prompt-engineering-glossary#temperature), [top-p](/prompt-engineering/prompt-engineering-glossary#top-p) (nucleus sampling), and max tokens.',
           ],
           tableFormat: true,
           columns: ['Parameter', 'Range', 'Effect', 'Best for'],
@@ -11962,9 +11962,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         contextWindowSection: {
-          title: 'Context Windows: What the Model Can See',
+          title: '[Context Windows](/prompt-engineering/prompt-engineering-glossary#context-window): What the Model Can See',
           content: [
-            '**The context window is the maximum number of tokens the model can process in a single inference call — combining the system prompt, conversation history, documents, and the current user message.** Nothing persists between sessions; the model starts fresh every time.',
+            '**The [context window](/prompt-engineering/prompt-engineering-glossary#context-window) is the maximum number of tokens the model can process in a single inference call — combining the system prompt, conversation history, documents, and the current user message.** Nothing persists between sessions; the model starts fresh every time.',
             'Context window size varies significantly by model and directly affects which use cases are practical:',
           ],
           tableFormat: true,
