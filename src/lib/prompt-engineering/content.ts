@@ -32,6 +32,7 @@ export interface PEArticle {
   tableSchema?: Record<string, unknown>
   recipesHowToSchema?: Record<string, unknown>
   softwareSchema?: Record<string, unknown>
+  itemListSchema?: Record<string, unknown>
 }
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
@@ -11782,6 +11783,44 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             position: 5,
             name: 'Use retrieval-augmented generation for long documents',
             text: 'Do not assume large context windows mean equal attention across all tokens. For documents longer than approximately 50,000 tokens, use retrieval-augmented generation (RAG) with document chunking instead of full-context stuffing to maintain retrieval quality.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Common LLM Misconceptions',
+        description: 'Five widespread misconceptions about how large language models work and what they can do, with clarifications of the actual behavior.',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'The model reads and understands my document',
+            description: 'The model processes token sequences and predicts continuations — no reading comprehension occurs. Explicitly state what you want extracted; do not assume the model infers your goal.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'The model remembers our last conversation',
+            description: 'Each API call is stateless; history must be explicitly included in the context window. Include relevant prior context in the system prompt or conversation history.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'The model knows the current date',
+            description: 'The model has a training cutoff and does not know what day it is unless told. Inject the current date in the system prompt for any date-sensitive task.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Higher temperature equals smarter output',
+            description: 'Temperature controls sampling randomness, not capability or accuracy. Use low temperature (0.0–0.3) for analytical tasks; higher for creative variation.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'The model can count characters reliably',
+            description: 'Token boundaries are sub-word units; precise character or word counting is not a native skill. Do not rely on the model to count words precisely; use post-processing or code.',
           },
         ],
       },
