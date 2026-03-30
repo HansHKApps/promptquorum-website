@@ -11746,6 +11746,30 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               text: 'The context window is all the text the model can see during a single inference call — including the system prompt, conversation history, and the current user message. It is not persistent memory: when the conversation ends, the model retains nothing. GPT-4o has a 128,000-token context window (~96,000 words). Claude 4.6 Sonnet supports 200,000 tokens (~150,000 words). Gemini 2.5 Pro supports 2,000,000 tokens (~1,500,000 words).',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'What is the "lost in the middle" effect and how do I avoid it?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The "lost in the middle" effect, documented by Liu et al. (2023) at Stanford, shows that transformer attention systematically underweights information in the middle of long contexts — tokens at the beginning and end receive more attention weight. To avoid it: place critical instructions and constraints in the system prompt (beginning), keep important context in the first 10-15% of your input, and repeat the most important constraint at the end of the user message. For documents longer than ~50,000 tokens, use retrieval-augmented generation (RAG) instead of stuffing the full context.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How does RLHF differ from Constitutional AI?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'RLHF (Reinforcement Learning from Human Feedback) is a post-training technique where human raters score model outputs, a reward model is trained on those ratings, and the LLM is fine-tuned to maximize reward. Constitutional AI (used by Anthropic for Claude) extends RLHF by adding a set of written principles ("constitution") that guide the model\'s behavior. This reduces reliance on human feedback for every edge case — the constitution provides consistent guidance for refusals, tone, and values alignment without needing human raters for every scenario.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the difference between GPT-4o, Claude, and Gemini architecturally?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'All three are transformer-based LLMs trained on massive text corpora, but they differ in scale, context window, and post-training approach. GPT-4o (OpenAI) has a 128,000-token context window. Claude 4.6 Sonnet (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 2.5 Pro (Google DeepMind) has the largest context window at 2,000,000 tokens. These differences affect cost, latency, and suitability for different tasks — GPT-4o excels at reasoning, Claude at long context and nuance, Gemini at ultra-long document processing.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -11999,6 +12023,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             {
               q: 'What is the difference between a context window and memory?',
               a: 'The context window is all text the model can see during one inference call — system prompt, history, and current message. It is not persistent: when the conversation ends, the model retains nothing. GPT-4o: 128,000 tokens. Claude 4.6 Sonnet: 200,000 tokens. Gemini 2.5 Pro: 2,000,000 tokens.',
+            },
+            {
+              q: 'What is the "lost in the middle" effect and how do I avoid it?',
+              a: 'The "lost in the middle" effect, documented by Liu et al. (2023) at Stanford, shows that transformer attention systematically underweights information in the middle of long contexts — tokens at the beginning and end receive more attention weight. To avoid it: place critical instructions in the system prompt (beginning), keep important context in the first 10-15% of input, and repeat the most important constraint at the end. For documents longer than ~50,000 tokens, use retrieval-augmented generation (RAG) instead of full-context stuffing.',
+            },
+            {
+              q: 'How does RLHF differ from Constitutional AI?',
+              a: 'RLHF (Reinforcement Learning from Human Feedback) uses human raters to score outputs, trains a reward model, and fine-tunes the LLM to maximize reward. Constitutional AI (used by Anthropic for Claude) extends RLHF by adding a set of written principles ("constitution") that guide behavior without needing human feedback for every edge case. This reduces reliance on human raters while maintaining consistent alignment with values.',
+            },
+            {
+              q: 'What is the difference between GPT-4o, Claude, and Gemini architecturally?',
+              a: 'All three are transformer-based LLMs trained on massive text corpora but differ in scale and post-training. GPT-4o (OpenAI) has 128,000-token context and excels at reasoning. Claude 4.6 Sonnet (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 2.5 Pro (Google DeepMind) has 2,000,000 tokens for ultra-long document processing. These differences affect cost, latency, and suitability for different tasks.',
             },
           ],
         },
