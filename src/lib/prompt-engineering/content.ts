@@ -11690,7 +11690,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['.tldr', '.faq'],
+          cssSelector: ['h1 + p', '.tldr'],
         },
       },
       faqSchema: {
