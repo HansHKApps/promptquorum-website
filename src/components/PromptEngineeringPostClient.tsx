@@ -268,7 +268,7 @@ function SectionBlock({ section, colors, id, lang }: { section: PESection; color
     <div className="mt-8" id={id}>
       {section.title && !section.isTldr && (
         <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4">
-          {section.title}
+          {renderInlineLinks(section.title)}
         </h2>
       )}
 
