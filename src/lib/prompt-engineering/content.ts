@@ -11680,9 +11680,16 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         keywords: ['large language models', 'LLM architecture', 'transformer', 'tokenization', 'attention mechanism', 'RLHF', 'temperature', 'context window', 'prompt engineering', 'GPT-4o', 'Claude'],
         about: [
           { '@type': 'Thing', name: 'Large Language Models' },
-          { '@type': 'Thing', name: 'Transformer Architecture' },
+          { '@type': 'Thing', name: 'Transformer architecture' },
+          { '@type': 'Thing', name: 'RLHF' },
+          { '@type': 'Thing', name: 'Tokenization' },
+          { '@type': 'Thing', name: 'Self-attention mechanism' },
           { '@type': 'Thing', name: 'Prompt Engineering' },
         ],
+        isPartOf: {
+          '@type': 'WebPage',
+          url: 'https://www.promptquorum.com/prompt-engineering',
+        },
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-4o' },
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
@@ -12006,6 +12013,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — how to apply LLM architecture knowledge to systematic prompt design',
             '[Fundamentals: Context Windows Explained — Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets) — deep dive into context window limits and retrieval strategies',
             '[Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — token pricing, rate limits, and cost optimization across GPT-4o, Claude, and Gemini',
+            '[Fundamentals: AI Hallucinations Explained — Why LLMs Make Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — how token prediction and the lack of fact retrieval lead to confidence errors',
           ],
         },
 
