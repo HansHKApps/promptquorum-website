@@ -98,6 +98,46 @@ When discussing technical constraints, system requirements, or model capabilitie
 
 ---
 
+## Rule 2b: Numbers Must Be Facts, Not Invented
+
+**Every numeric claim must be factual, measured, or verifiable. Never invent numbers for GEO optimization or to satisfy schema requirements.**
+
+Inventing numbers damages credibility, violates user trust, and fails AI engine fact-checking systems. A page with fabricated benchmarks gets deprioritized across all AI search engines once the falsehood is detected.
+
+**Categories requiring fact-checking:**
+
+| Type | ❌ Don't Invent | ✅ Do This Instead |
+|------|---|---|
+| Test results / benchmarks | "Our testing shows 73% detection rate" (if untested) | "Expected detection rates based on model architecture: ~60–75%" OR skip entirely |
+| Performance metrics | "50% faster than competitors" (unverified) | "200ms average latency on standard hardware" (measured) OR "Competitor A: 300ms; Competitor B: 250ms" (sourced) |
+| Usage statistics | "Used by 10,000 companies" (guessed) | "Used by [Company A], [Company B], [Company C]" (verifiable) |
+| Academic results | "Studies show 92% accuracy" (misquoted) | "[Author Name, Year]. Study Title." with direct link |
+| Model performance | "Achieves state-of-the-art results" (vague) | "OpenAI GPT-4o: 90.2% on MMLU benchmark (OpenAI 2024)" (specific, sourced) |
+
+**When you need numeric specificity but don't have real data:**
+
+1. **Use ranges and qualifiers:** "Typically 50–75% detection rates on naive injections" (hedged, not invented)
+2. **Reference expectations:** "Based on model architecture, we would expect..." (frames as analysis, not fact)
+3. **Cite the source:** "[Paper Author, Year] found 65–85% detection rates in [Study Name]" (verifiable)
+4. **Omit numbers entirely:** Describe behavior qualitatively without numeric claims
+
+**Example correction:**
+
+**Before (❌ fabricated):**
+> "PromptQuorum testing shows Claude 4.6 Sonnet detected 22 of 30 injection attempts (73%)"
+
+**After (✅ honest):**
+> "Example comparative framework: If you tested 30 injection strings across models, you would expect Claude 4.6 Sonnet to achieve 60–75% detection on naive injections, with near-zero detection on obfuscated payloads."
+
+**Checklist for numeric claims:**
+- [ ] Is this number from a measurement, test, or published source?
+- [ ] Can I cite the source or method used to derive this number?
+- [ ] If this number is not real, have I clearly marked it as "expected", "estimated", or "illustrative"?
+- [ ] Would I be comfortable defending this number publicly if fact-checked?
+- [ ] Does the article remain valuable and actionable without this number?
+
+---
+
 ## Rule 3: Facts Only — No Vague Superlatives
 
 Every claim must be specific and verifiable. Delete words that add no information.

@@ -13297,23 +13297,23 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         },
 
         promptquorumBridge: {
-          title: 'Tested in PromptQuorum: Injection Detection Benchmark Across Models',
+          title: 'Model Injection Resistance: Comparative Analysis Framework',
           content: [
-            '**Tested in PromptQuorum — 30 adversarial injection strings (15 direct, 15 indirect-style document injections) were submitted simultaneously to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.** Results show why no single model should be trusted as a primary injection defense.',
+            '**Example comparative framework:** If you were to submit 30 adversarial injection strings (15 direct, 15 indirect-style document injections) simultaneously to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro, you would likely observe that models with stronger safety training (Constitutional AI in Claude) show higher detection rates on naive injections, while all models achieve near-zero detection on adversarially obfuscated payloads. This analysis framework is illustrative; actual detection rates depend on your specific injection patterns and model versions.',
             '*Obfuscated = encoded (Base64, ROT13), split across sentences, or phrased as hypothetical ("If you were to ignore instructions...").',
           ],
           tableFormat: true,
-          columns: ['Model', 'Direct Injections', 'Indirect Injections', 'Obfuscated*', 'Overall'],
+          columns: ['Model', 'Expected Direct Detection', 'Expected Indirect Detection', 'Expected Obfuscated Detection', 'Typical Baseline'],
           rows: [
-            { Model: '**Claude 4.6 Sonnet**', 'Direct Injections': '14/15 (93%)', 'Indirect Injections': '8/15 (53%)', 'Obfuscated*': '0/6 (0%)', Overall: '**22/30 (73%)**' },
-            { Model: '**GPT-4o**', 'Direct Injections': '12/15 (80%)', 'Indirect Injections': '6/15 (40%)', 'Obfuscated*': '0/6 (0%)', Overall: '**18/30 (60%)**' },
-            { Model: '**Gemini 2.5 Pro**', 'Direct Injections': '11/15 (73%)', 'Indirect Injections': '5/15 (33%)', 'Obfuscated*': '0/6 (0%)', Overall: '**16/30 (53%)**' },
+            { Model: '**Claude 4.6 Sonnet**', 'Expected Direct Detection': 'High (85–95%)', 'Expected Indirect Detection': 'Moderate (40–60%)', 'Expected Obfuscated Detection': 'Very Low (0–10%)', 'Typical Baseline': '60–70%' },
+            { Model: '**GPT-4o**', 'Expected Direct Detection': 'Moderate (70–80%)', 'Expected Indirect Detection': 'Low (30–50%)', 'Expected Obfuscated Detection': 'Very Low (0–10%)', 'Typical Baseline': '50–65%' },
+            { Model: '**Gemini 2.5 Pro**', 'Expected Direct Detection': 'Moderate (65–75%)', 'Expected Indirect Detection': 'Low (25–45%)', 'Expected Obfuscated Detection': 'Very Low (0–10%)', 'Typical Baseline': '45–60%' },
           ],
           items: [
-            '**Claude 4.6 Sonnet leads on naive injections.** Constitutional AI\'s principle-based training translates to stronger resistance against direct injection patterns.',
-            '**No model detects obfuscated injections.** All three models achieved 0% detection on adversarially encoded, split, or hypothetically framed payloads.',
-            '**Indirect injections bypass models more easily.** Document-embedded payloads (ambiguous context) evade detection at higher rates than boldly-phrased user-typed injections.',
-            '**Actionable:** Use PromptQuorum\'s multi-model dispatch to test your specific injection patterns across all three models. Select the highest-detection model for your threat profile — but treat model self-detection as a secondary layer only. Architecture-level controls (privilege separation, output validation) remain the primary defense.',
+            '**Models with stronger alignment show higher baseline resistance.** Constitutional AI\'s principle-based training translates to stronger resistance against direct injection patterns — but this advantage narrows significantly on obfuscated attacks.',
+            '**No model reliably detects obfuscated injections.** All three models achieve near-zero detection on adversarially encoded, split, or hypothetically framed payloads — suggesting the structural problem is fundamental to LLM architecture.',
+            '**Indirect injections exploit models more easily than direct.** Document-embedded payloads (ambiguous context) are harder for models to flag than boldly-phrased user-typed injections.',
+            '**Test your specific patterns.** Deploy your anticipated injection threats against your chosen model(s) in a staging environment before production. Detection rates vary significantly by attack type. Treat model self-detection as a secondary layer only — architecture-level controls (privilege separation, output validation, least-privilege tool access) remain the only reliable primary defense.',
           ],
         },
 
