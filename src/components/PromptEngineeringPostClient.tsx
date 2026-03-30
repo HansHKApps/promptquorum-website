@@ -289,8 +289,13 @@ function SectionBlock({ section, colors, id, lang }: { section: PESection; color
 
       {/* Blockquote content */}
       {section.blockquote && (
-        <blockquote className="border-l-4 border-primary/30 bg-primary/5 pl-4 py-2 my-4 italic text-text-secondary">
-          {renderInlineLinks(section.blockquote)}
+        <blockquote className="border-l-4 border-primary/40 bg-primary/5 pl-5 py-3 my-6 text-text-secondary">
+          <p className="italic leading-relaxed">{renderInlineLinks(section.blockquote)}</p>
+          {section.blockquoteSource && (
+            <footer className="mt-2 text-xs font-semibold text-text-secondary not-italic opacity-75">
+              — {renderInlineLinks(section.blockquoteSource)}
+            </footer>
+          )}
         </blockquote>
       )}
 

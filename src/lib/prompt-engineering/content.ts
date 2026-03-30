@@ -6,6 +6,7 @@ export interface PESection {
   title?: string
   content?: string | string[]
   blockquote?: string
+  blockquoteSource?: string
   items?: string[]
   numberedItems?: string[]
   rows?: Array<{ [key: string]: string }>
@@ -13227,6 +13228,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             { 'Attack Surface': 'AI code assistant (IDE)', 'Injection Payload Location': 'Code comments, dependency README files', 'Potential Impact': 'Malicious code suggestion, credential leakage' },
             { 'Attack Surface': 'Customer-facing chatbot + CRM', 'Injection Payload Location': 'CRM notes or customer records', 'Potential Impact': 'Misinformation, pricing manipulation, competitor promotion' },
           ],
+          blockquote: '"We show that indirect prompt injections are a powerful new attack vector [...] an attacker can inject malicious instructions into any content that the LLM processes as part of its context window, including web pages that a user visits, files retrieved from storage, or API responses — without ever interacting with the application directly."',
+          blockquoteSource: 'Greshake et al., 2023. "Not What You\'ve Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection." [arXiv:2302.12173](https://arxiv.org/abs/2302.12173)',
         },
 
         directVsIndirectComparison: {
@@ -13269,6 +13272,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             '**No single defense eliminates prompt injection risk — effective protection requires layered controls applied at the input, processing, output, and access layers.** These five layers reflect the NIST AI RMF (National Institute of Standards and Technology AI Risk Management Framework) "Govern, Map, Measure, Manage" approach applied to LLM pipelines.',
           ],
+          blockquote: '"LLM01: Prompt Injection — Prompt injection vulnerabilities allow attackers to manipulate LLMs through carefully crafted inputs, leading to unauthorized actions. Direct injections overwrite system prompts, while indirect ones manipulate inputs from external sources."',
+          blockquoteSource: '[OWASP Top 10 for Large Language Model Applications, LLM01](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — Open Worldwide Application Security Project, 2023',
           numberedItems: [
             '**Input sanitization:** Treat all user input and external content as untrusted. Strip known injection patterns (regex for "ignore previous instructions", "new instructions:", "system override"). For RAG pipelines, wrap retrieved content in explicit delimiters — `<retrieved_context>` vs `<user_query>` — to signal to the model that retrieved content is data, not instructions.',
             '**Privilege separation and least-privilege tool access:** [Constrained prompting](/prompt-engineering/constrained-prompting) restricts model behavior to only permitted actions. LLM agents should only have access to tools and data needed for the current task. An LLM reading a PDF should not have write access to email or file systems. If the model has no send-email capability, an injection payload that tries to exfiltrate data via email fails at the action layer, not the model layer.',
@@ -13366,6 +13371,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**China:** The Cyberspace Administration of China (CAC) Generative AI regulations (effective August 2023) require providers to conduct security assessments against adversarial inputs. Alibaba\'s Qwen 3 and Baidu ERNIE 4.0 have published red-team testing results that include prompt injection evaluation.',
             '**Germany:** BSI (Bundesamt für Sicherheit in der Informationstechnik) guidance requires enterprises deploying LLMs under IT-Grundschutz compliance to document AI system threat models, including prompt injection vectors and mitigations.',
           ],
+          blockquote: '"Trustworthy AI systems are designed, developed, deployed, and operated in a manner consistent with AI risk management practices. AI systems that interact with adversarial inputs should be tested for prompt injection resistance as part of adversarial robustness evaluation."',
+          blockquoteSource: '[NIST AI Risk Management Framework (AI RMF 1.0)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.RMF.1.0.pdf) — National Institute of Standards and Technology, January 2023',
         },
 
         relatedReading: {
