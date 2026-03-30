@@ -497,6 +497,123 @@ Every internal link in PE article content must be rendered as clickable, underli
 - [ ] No links appear as plain text with brackets
 - [ ] Related Reading section lists are fully visible
 - [ ] Sources section links are fully visible
+
+---
+
+## Rule 21: GEO + SEO Rules for New PromptQuorum Pages
+
+These rules apply to all new PromptQuorum pages (Prompt Engineering articles, blog posts, feature pages). They are designed to maximize both Generative Engine Optimization (GEO) and classic SEO.
+
+### 21.1 Answer-First Intros With Clear Outcome
+
+- The first paragraph must:
+  - Clearly state what the page is about in one sentence.
+  - Name the primary audience (for example "AI engineers", "solo developers", "enterprise teams").
+  - State what the reader will walk away with (for example "a checklist", "a framework", "ready-to-use prompt templates", "comparison tables").
+- Recommended intro pattern:
+  - "This guide explains [topic] for [audience] and gives you [output] you can copy into GPT-4o, Claude, Gemini, or local LLMs."
+
+### 21.2 Query-Mirroring in Titles, Headings, and Intros
+
+- Every new page must be written around 1–2 realistic user queries in natural language (for example "what is prompt optimization", "ai code review", "what is a context window", "prompt optimization techniques").
+- At least one target query must appear:
+  - In the `<title>` tag.
+  - In the H1 or first H2.
+  - Once in the first paragraph.
+- When a section targets a specific question, its first sentence must contain that question phrasing and immediately answer it.
+
+### 21.3 SERP- and LLM-Facing Snippet Blocks
+
+- Each new article must include at least one snippet block designed to be quoted directly by search and LLMs.
+- Formats:
+  - "In one sentence: [single-sentence, self-contained definition/answer]."
+  - Or "In plain terms: [2–3 sentence explanation that works on its own]."
+- Place the snippet block near the top (intro or first H2).
+- The snippet must be understandable without reading any other part of the page.
+
+### 21.4 PromptQuorum-Specific Findings (Proprietary Data)
+
+- Every Prompt Engineering article must include at least one PromptQuorum-specific finding or insight with numeric data.
+- Use one of these lead-ins:
+  - "**Tested in PromptQuorum —** …"
+  - "**PromptQuorum multi-model test:** …"
+- Requirements:
+  - Include at least one number (for example "22 of 30 tests", "70% of prompts", "3 of 4 models").
+  - Describe behaviour across at least two models (for example GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, local LLaMA/Qwen via Ollama or LM Studio).
+  - Keep tone factual and neutral (no marketing adjectives).
+
+### 21.5 Long-Tail Question Sections
+
+- For broad topics (for example "prompt optimization", "context windows", "AI hallucinations", "AI code review", "what is prompt engineering"), each new page must include at least one dedicated section that answers a specific long-tail question in full.
+- Use the long-tail as the section heading where possible:
+  - Examples: "What is a context window?", "Prompt optimization techniques", "AI prompts for code review".
+- In that section:
+  - Answer the question directly in the first sentence.
+  - Keep the answer self-contained (no "as mentioned above").
+  - Use at most 2–3 short paragraphs and lists where helpful.
+
+### 21.6 Regional Notes (Russia, Germany/EU, US, China, Japan)
+
+- Where a topic touches regulation, model availability, or deployment choices, include a short "Regional note" that:
+  - Mentions Germany/EU where EU AI Act or data residency is relevant.
+  - Mentions Russia or CIS where local model use or access differs.
+  - Optionally mentions US, China, or Japan if they have distinct models (for example Mistral in EU, Qwen/DeepSeek in China) or deployment norms (on-prem vs cloud).
+- Keep these notes factual and concise (one or two sentences).
+
+### 21.7 Brand vs Non-Brand Positioning
+
+- Brand-intent pages (for example homepage, /compare, /download, /faq):
+  - Must mention "PromptQuorum" in the first sentence.
+  - Must connect PromptQuorum directly to the main user problem and outcome (for example "PromptQuorum is a multi-model AI dispatch tool for prompt optimization and AI code review.").
+- Non-brand informational pages (Prompt Engineering articles, general blog posts):
+  - Must first provide a neutral, tool-agnostic explanation of the concept.
+  - Then include at least one short "PromptQuorum bridge" that connects the concept to PromptQuorum capabilities (multi-model dispatch, consensus scoring, local LLM privacy, built-in frameworks).
+
+### 21.8 FAQ Requirements for Broad Topics
+
+- Any new page that covers a broad concept must include an FAQ with 4–6 questions.
+- The FAQ must cover at least 3 of these 5 types:
+  - Definitional ("What is X?").
+  - Comparative ("X vs Y", "Is X better than Y?").
+  - Quantitative ("How many…?", "How long…?", "How much does it cost?").
+  - Procedural ("How do I…?", "What steps…?").
+  - Disambiguation ("Is X the same as Y?", "Does X still apply when…?").
+- Each FAQ answer:
+  - Starts with a direct answer in the first sentence.
+  - Is 2–3 sentences maximum.
+  - Is fully self-contained.
+
+### 21.9 Comparison ("X vs Y") Handling
+
+- When a new page includes or targets "X vs Y" queries (for example "poe.com vs lmarena.ai", "CRAFT vs CO-STAR", "GPT-4o vs Claude 4.6 Sonnet"):
+  - Use the exact "X vs Y" phrase once near the top in a clear sentence.
+  - Add a small Markdown comparison table (2–5 rows, 3–4 columns) as per Rule 16.
+- The first sentence of the comparison section must state:
+  - What is being compared.
+  - The main axis of comparison (for example cost, latency, accuracy, use case fit).
+
+### 21.10 Classic SEO Items (Titles, Meta, Internal Links, Schema)
+
+For every new page, the content must be written so that these standard SEO elements can be set correctly:
+
+- Title tag:
+  - Answer-first.
+  - Includes at least one natural-language query phrase.
+  - Stays under ~60 characters where possible.
+- Meta description:
+  - 140–160 characters.
+  - States the main question and the main benefit of the article in one or two sentences.
+- Internal links:
+  - One "upward" link to the main "What Is Prompt Engineering?" pillar where relevant.
+  - At least two "sideways" links to sibling articles within the same theme.
+  - At least one "downward" link to a framework or technique page.
+  - Anchor text must describe the destination (no "click here").
+- Structured data and dates:
+  - Article/TechArticle schema with `keywords`, `about`, `mentions`, and `image`.
+  - FAQPage schema where FAQs exist.
+  - Visible "Last updated: [Month Year]" in a `<time datetime="YYYY-MM-DD">` element near the top.
+
+All other existing GEO rules (answer-first H2s, short paragraphs, entity density, numeric specificity, snippet blocks, PromptQuorum bridges) continue to apply.
 - [ ] Build passes with no TypeScript errors in content structure
 
 ---
