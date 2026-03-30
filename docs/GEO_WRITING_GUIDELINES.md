@@ -138,6 +138,79 @@ Inventing numbers damages credibility, violates user trust, and fails AI engine 
 
 ---
 
+## Rule 2c: Deep Internal Linking — 5–10 Real Links Per Article
+
+**Every article should include 5–10 internal links to other PromptQuorum pages.** Links should be woven into article body text where relevant concepts are discussed, not just listed in a "Related Reading" section at the end.
+
+AI engines weight internal links for topical clustering and entity association. The more pages a concept links to, the more authoritative that concept becomes across the site. Deep linking also increases dwell time and signals comprehensive coverage to search engines.
+
+**Linking strategy:**
+
+1. **Body links first (5–7):** As you write each section, link to related concepts when first mentioned:
+   - Link glossary terms on first mention (e.g., "[RAG](/prompt-engineering/prompt-engineering-glossary#rag)")
+   - Link to prerequisite articles when introducing dependencies (e.g., "Learn [how LLMs work](/prompt-engineering/how-llms-actually-work) to understand why...")
+   - Link to implementation guides when discussing techniques (e.g., "[Constrained prompting](/prompt-engineering/constrained-prompting) restricts model behavior")
+   - Link to comparison articles when discussing tradeoffs (e.g., "Unlike [zero-shot prompting](/prompt-engineering/zero-shot-vs-few-shot)...")
+
+2. **Related Reading section (3–5):** Curate deeper cross-links at the end:
+   - Include pillar articles (upward: foundational concepts)
+   - Include sibling articles (sideways: same theme, different angles)
+   - Include downstream articles (downward: advanced applications, specific domains)
+   - Use descriptive anchor text that explains why the link is relevant
+
+3. **Link quality over quantity:**
+   - Only link when the connection is semantic and valuable
+   - Use specific anchor text (not "click here" or "learn more")
+   - Don't create duplicate links to the same page in the same article
+   - Prefer linking to live articles over stubs or "Coming Soon" pages
+
+**Example of deep linking:**
+
+**Wrong (only Related Reading at end):**
+```
+Prompt injection exploits the fact that LLMs process instructions and user data together.
+...
+[Several paragraphs later]
+
+## Related Reading
+- Introduction to Prompt Engineering
+- How LLMs Work
+```
+
+**Right (links embedded in body where concepts are discussed):**
+```
+Prompt injection exploits the fact that [LLMs process instructions and user data together](/prompt-engineering/how-llms-actually-work)
+without a native way to distinguish trusted from untrusted content.
+
+...
+
+For production applications, enforce [structured output validation](/prompt-engineering/structured-output-and-json-mode)
+to detect injections that attempt to alter response format.
+
+## Related Reading
+- [Fundamentals: How LLMs Actually Work](/prompt-engineering/how-llms-actually-work) — architecture of attention and why token streams merge instructions
+- [Techniques: Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode) — schema validation as an injection defense layer
+- [Use Topics: Build Quality Checks](/prompt-engineering/build-quality-checks) — output validation patterns
+```
+
+**Link anchor best practices:**
+
+| ❌ Weak | ✅ Strong |
+|---|---|
+| [read more](/article) | [learn how context windows affect injection surface](/context-windows-explained-why-ai-forgets) |
+| [related concept](/article) | [RAG systems expand the attack surface](/rag-explained) |
+| [click here](/article) | [constrained prompting restricts tool access](/constrained-prompting) |
+
+**Checklist for linking compliance:**
+- [ ] Article has 5–10 total internal links
+- [ ] At least 4–5 links are embedded in body text (not just Related Reading)
+- [ ] All links use descriptive anchor text that explains the connection
+- [ ] No more than 1 link to the same page in the same article
+- [ ] Links point to live articles, not stubs
+- [ ] Related Reading section includes 3–5 curated links with brief context
+
+---
+
 ## Rule 3: Facts Only — No Vague Superlatives
 
 Every claim must be specific and verifiable. Delete words that add no information.
