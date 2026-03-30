@@ -11830,7 +11830,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             '**An LLM (large language model) is a transformer-based neural network trained to predict the most probable next token given a sequence of input tokens — it is not a database, a search engine, or a reasoning system.** The model learns statistical relationships between tokens by processing hundreds of billions of words from web pages, books, code, and other text during training.',
             'When you type a prompt, the model converts your text into a sequence of numeric token IDs, passes them through dozens of transformer layers, and outputs a probability distribution over its entire vocabulary (typically 50,000–100,000 tokens). It samples one token from that distribution, appends it to the sequence, and repeats until it generates a stop token or hits the output limit.',
-            'This architecture explains several behaviors that confuse users: why LLMs "hallucinate" plausible-but-false facts (they predict probable text, not verified truth), why they can fail on arithmetic (token patterns, not calculation), and why rephrasing a prompt changes the output (different token sequences trigger different probability distributions).',
+            'This architecture explains several behaviors that confuse users: why LLMs "[hallucinate](/prompt-engineering/prompt-engineering-glossary#hallucination)" plausible-but-false facts (they predict probable text, not verified truth), why they can fail on arithmetic (token patterns, not calculation), and why rephrasing a prompt changes the output (different token sequences trigger different probability distributions).',
           ],
           tableFormat: true,
           columns: ['Property', 'LLM', 'Traditional software'],
@@ -11849,17 +11849,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           items: [
             '**LLMs predict tokens, not answers.** They generate statistically probable text sequences — not retrieved facts, logical deductions, or verified information.',
             '**1 token ≈ 0.75 English words.** A 1,000-word document uses ~1,300 tokens. Chinese and Japanese are ~50% denser.',
-            '**Temperature controls creativity vs. determinism.** Temperature 0 = deterministic. Temperature 1.0 = proportional sampling. Above 1.5 = high hallucination risk.',
-            '**Context windows are not memory.** GPT-4o: 128k tokens. Claude 4.6 Sonnet: 200k tokens. Gemini 2.5 Pro: 2M tokens. Nothing persists between sessions.',
-            '**Position matters.** Transformer attention weights the beginning and end of the context more heavily. Put critical instructions first and last — not buried in the middle.',
-            '**RLHF shapes behavior, not capability.** Refusals, tone, and helpfulness come from post-training fine-tuning — not the base model architecture.',
+            '**[Temperature](/prompt-engineering/prompt-engineering-glossary#temperature) controls creativity vs. determinism.** Temperature 0 = deterministic. Temperature 1.0 = proportional sampling. Above 1.5 = high hallucination risk.',
+            '**[Context windows](/prompt-engineering/prompt-engineering-glossary#context-window) are not memory.** GPT-4o: 128k tokens. Claude 4.6 Sonnet: 200k tokens. Gemini 2.5 Pro: 2M tokens. Nothing persists between sessions.',
+            '**Position matters.** Transformer [attention](/prompt-engineering/prompt-engineering-glossary#attention) weights the beginning and end of the context more heavily. Put critical instructions first and last — not buried in the middle.',
+            '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) shapes behavior, not capability.** Refusals, tone, and helpfulness come from post-training fine-tuning — not the base model architecture.',
           ],
         },
 
         tokenization: {
-          title: 'Tokenization: How Text Becomes Numbers',
+          title: '[Tokenization](/prompt-engineering/prompt-engineering-glossary#tokenization): How Text Becomes Numbers',
           content: [
-            '**Before an LLM can process any text, it must convert it into a sequence of integer token IDs — a process called tokenization.** GPT-4o uses Byte Pair Encoding (BPE), which breaks text into frequently occurring sub-word units. Claude 4.6 Sonnet and Gemini 2.5 Pro use similar sub-word tokenization schemes.',
+            '**Before an LLM can process any text, it must convert it into a sequence of integer token IDs — a process called [tokenization](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-4o uses Byte Pair Encoding (BPE), which breaks text into frequently occurring sub-word units. Claude 4.6 Sonnet and Gemini 2.5 Pro use similar sub-word tokenization schemes.',
             'Tokenization is language-dependent. English text averages approximately 1 token per 0.75 words. Chinese and Japanese average 1 token per 0.5 words — meaning the same document costs roughly twice as many tokens in Chinese as in English, which directly affects API cost and context window usage.',
           ],
           tableFormat: true,
@@ -11899,7 +11899,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         inference: {
           title: 'How Inference Works: Sampling and Decoding',
           content: [
-            '**During inference, the model generates output one token at a time — computing a probability distribution over the entire vocabulary and sampling from it according to decoding parameters you control.** The three most important parameters are temperature, top-p (nucleus sampling), and max tokens.',
+            '**During inference, the model generates output one token at a time — computing a probability distribution over the entire vocabulary and sampling from it according to decoding parameters you control.** The three most important parameters are temperature, [top-p](/prompt-engineering/prompt-engineering-glossary#top-p) (nucleus sampling), and max tokens.',
           ],
           tableFormat: true,
           columns: ['Parameter', 'Range', 'Effect', 'Best for'],
