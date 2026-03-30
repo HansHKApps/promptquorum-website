@@ -359,6 +359,23 @@ function SectionBlock({ section, colors, id, lang }: { section: PESection; color
         </div>
       )}
 
+      {/* Code block */}
+      {section.codeBlock && (
+        <div className="my-6">
+          {section.codeLanguage && (
+            <div className="flex items-center gap-2 bg-gray-800 rounded-t-lg px-4 py-2 text-xs text-gray-400 font-mono">
+              <span className="w-2 h-2 rounded-full bg-red-400" />
+              <span className="w-2 h-2 rounded-full bg-yellow-400" />
+              <span className="w-2 h-2 rounded-full bg-green-400" />
+              <span className="ml-2">{section.codeLanguage}</span>
+            </div>
+          )}
+          <pre className={`bg-gray-900 text-gray-100 text-xs leading-relaxed p-5 overflow-x-auto ${section.codeLanguage ? 'rounded-b-lg' : 'rounded-lg'}`}>
+            <code>{section.codeBlock}</code>
+          </pre>
+        </div>
+      )}
+
       {/* Image with caption */}
       {section.image && (
         <figure className="my-8 flex flex-col items-center">

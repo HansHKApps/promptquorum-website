@@ -224,18 +224,26 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     : null
 
   const howToSectionData = article.sections['howToStart']
-  const howToSchema =
-    howToSectionData?.numberedItems
+  // Use explicit article.howToSchema if defined (has named steps); otherwise auto-generate from numberedItems
+  const howToSchema = article.howToSchema
+    ? null
+    : howToSectionData?.numberedItems
       ? {
           '@context': 'https://schema.org',
           '@type': 'HowTo',
           name: howToSectionData.title ?? article.title,
           description: article.intro,
-          step: howToSectionData.numberedItems.map((step, i) => ({
-            '@type': 'HowToStep',
-            position: i + 1,
-            text: step.replace(/\*\*/g, '').replace(/\[.*?\]/g, '').trim(),
-          })),
+          step: howToSectionData.numberedItems.map((step, i) => {
+            const cleanText = step.replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1').replace(/\[([^\]]+)\]/g, '$1').trim()
+            const colonIdx = cleanText.indexOf(':')
+            const stepName = colonIdx > 0 && colonIdx < 80 ? cleanText.slice(0, colonIdx).trim() : undefined
+            return {
+              '@type': 'HowToStep',
+              position: i + 1,
+              ...(stepName && { name: stepName }),
+              text: cleanText,
+            }
+          }),
         }
       : null
 

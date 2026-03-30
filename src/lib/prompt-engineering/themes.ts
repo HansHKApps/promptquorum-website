@@ -29,7 +29,6 @@ export const themes: PETheme[] = [
       'system-prompt-vs-user-prompt-whats-the-difference',
       'gpt-claude-or-gemini-how-to-pick-the-right-model',
       'how-llms-actually-work',
-      'prompt-injection-and-security',
       'ai-limitations-what-llms-cant-do',
       'open-source-vs-proprietary-llms',
       'geopolitics-and-ai',
@@ -59,6 +58,7 @@ export const themes: PETheme[] = [
     title: 'Techniques',
     description: 'Proven prompting techniques that improve accuracy, reduce errors, and produce more useful AI outputs for any task.',
     articleKeys: [
+      'prompt-injection-and-security',
       'zero-shot-vs-few-shot',
       'constrained-prompting',
       'chain-of-thought-prompting',
