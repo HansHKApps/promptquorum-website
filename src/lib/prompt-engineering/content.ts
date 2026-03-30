@@ -12819,7 +12819,257 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: {
+      theme: 'Fundamentals',
+      title: '大型语言模型实际如何工作：令牌、注意力与推理',
+      intro: '大型语言模型通过概率分布预测下一个令牌——而非理解或检索。学习令牌化、注意力机制、RLHF和推理参数。',
+      publishDate: '2026-03-30',
+      dateModified: '2026-03-30',
+      readTime: '12分钟阅读',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '大型语言模型实际如何工作：令牌、注意力与推理',
+        description: '大型语言模型通过概率分布预测下一个令牌——而非理解或检索。学习令牌化、注意力机制、RLHF和推理参数。',
+        datePublished: '2026-03-30',
+        dateModified: '2026-03-30',
+        keywords: ['大型语言模型', 'LLM架构', 'Transformer', '令牌化', '注意力机制', 'RLHF', '温度', '上下文窗口', '提示工程', 'GPT-4o', 'Claude'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+          { '@type': 'Thing', name: 'Transformer' },
+          { '@type': 'Thing', name: 'RLHF' },
+          { '@type': 'Thing', name: '令牌化' },
+        ],
+      },
+      sections: {
+        definition: {
+          title: 'LLM究竟是什么',
+          content: [
+            '**LLM（大型语言模型）是基于Transformer的神经网络，经过训练以预测给定输入序列中最可能出现的下一个令牌——它不是数据库、搜索引擎或推理系统。** 该模型通过在训练期间处理来自网页、书籍、代码和其他文本的数千亿个词汇，学习令牌之间的统计关系。',
+            '当您输入提示时，模型将您的文本转换为数字令牌ID序列，通过数十个Transformer层传递，并输出整个词汇表（通常50,000至100,000个令牌）的概率分布。它从该分布中选择一个令牌，将其附加到序列中，然后重复此过程，直到生成停止令牌或达到输出限制。',
+            '这种架构解释了令用户困惑的几种行为：为什么LLM会"[幻觉](/prompt-engineering/prompt-engineering-glossary#hallucination)"（预测可能的文本而非经过验证的事实）、为什么算术可能失败（令牌模式，而非实际计算），以及为什么重新表述提示会改变输出（不同的令牌序列触发不同的概率分布）。',
+          ],
+          tableFormat: true,
+          columns: ['特性', 'LLM', '传统软件'],
+          rows: [
+            { '特性': '工作方式', 'LLM': '通过学习到的概率分布预测下一个令牌', '传统软件': '执行确定性指令' },
+            { '特性': '输出确定性', 'LLM': '概率性——相同输入可能产生不同输出', '传统软件': '确定性——相同输入始终产生相同输出' },
+            { '特性': '知识来源', 'LLM': '训练期间存储在模型权重中的模式', '传统软件': '在运行时从数据库或文件中读取' },
+            { '特性': '错误类型', 'LLM': '自信但错误（幻觉）', '传统软件': '崩溃或错误代码' },
+            { '特性': '更新机制', 'LLM': '需要重新训练或微调', '传统软件': '代码更改或数据库更新' },
+          ],
+        },
+
+        tldr: {
+          title: '核心要点',
+          isTldr: true,
+          items: [
+            '**LLM预测令牌，而非答案。** 它们生成统计上可能的文本序列——不是检索到的事实、逻辑推理或经过验证的信息。',
+            '**1个令牌≈0.75个英语单词。** 1,000词的文档使用约1,300个令牌。中文和日文密度约高50%。',
+            '**[温度](/prompt-engineering/prompt-engineering-glossary#temperature)控制创意与确定性。** 温度0=确定性。温度1.0=按比例采样。超过1.5=高幻觉风险。',
+            '**[上下文窗口](/prompt-engineering/prompt-engineering-glossary#context-window)不是记忆。** GPT-4o：128k令牌。Claude 4.6 Sonnet：200k令牌。Gemini 2.5 Pro：200万令牌。会话之间不保留任何内容。',
+            '**位置至关重要。** Transformer[注意力](/prompt-engineering/prompt-engineering-glossary#attention)机制对上下文开头和结尾的权重高于中间。将重要指令放在最前面和最后面——而不是中间。',
+            '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf)塑造行为，而非能力。** 拒绝、语气和有用性来自训练后微调——而非基础架构。',
+          ],
+        },
+
+        tokenization: {
+          title: '[令牌化](/prompt-engineering/prompt-engineering-glossary#tokenization)：文本如何变为数字',
+          content: [
+            '**在LLM处理文本之前，必须将其转换为整数令牌ID序列——这一过程称为[令牌化](/prompt-engineering/prompt-engineering-glossary#tokenization)。** GPT-4o使用字节对编码（BPE），将文本分解为常见的子词单元。Claude 4.6 Sonnet和Gemini 2.5 Pro使用类似的子词令牌化方案。',
+            '令牌化取决于语言。英文文本平均每0.75个单词对应1个令牌。中文和日文为每0.5个词对应1个令牌——同一文档的中文版本需要约英文版两倍的令牌，直接影响API成本和上下文窗口使用。',
+          ],
+          tableFormat: true,
+          columns: ['输入文本', '令牌', '令牌数量'],
+          rows: [
+            { '输入文本': '"Hello, world!"', '令牌': '"Hello", ",", " world", "!"', '令牌数量': '4' },
+            { '输入文本': '"Tokenization"', '令牌': '"Token", "ization"', '令牌数量': '2' },
+            { '输入文本': '"GPT-4o"', '令牌': '"G", "PT", "-", "4", "o"', '令牌数量': '5' },
+            { '输入文本': '"你好世界"（中文问候）', '令牌': '"你好", "世界"', '令牌数量': '根据模型为2–4' },
+          ],
+        },
+
+        attention: {
+          title: 'Transformer注意力机制如何工作',
+          content: [
+            '**Transformer架构使用一种称为自注意力的机制来确定每个令牌在计算其表示时应"关注"序列中所有其他令牌的程度。** 对于每个令牌，模型计算三个向量——查询（Q）、键（K）和值（V）——并将注意力分数计算为Q和K的点积，用softmax进行缩放和归一化。',
+            '多头注意力在多个"头"上并行运行此过程（GPT-4o在其最大层中使用96个注意力头），每个头学习不同的关系模式。一些头专注于句法关系（主语-动词），其他头关注语义相似性，还有一些关注共指（将代词与名词关联）。',
+            '一个重要的实际结果："Lost in the Middle"效应。Stanford University的Liu et al.（2023）的研究表明，LLM系统性地低估长上下文中间的信息。对于超过约2,000个令牌的提示，将关键指令放在系统提示（开头）中，并在用户消息结尾重复最重要的约束。',
+          ],
+        },
+
+        training: {
+          title: 'LLM如何训练：预训练与RLHF',
+          content: [
+            '**LLM训练分两个明确阶段进行：预训练（从原始文本学习语言模式）和训练后对齐（通过人类反馈调整行为）。** 这两个阶段产生不同的能力，并解释了为什么不同实验室的模型即使在类似的基准结果下也有不同的反应。',
+            '在预训练期间，模型处理大量语料库——Llama 3.1在约15万亿个令牌上训练；GPT-4估计在1至2万亿个令牌上训练。目标很简单：预测下一个令牌。不存储显式知识；所有信息都作为统计模式编码在模型权重中。',
+            '训练后对齐——通常是来自人类反馈的强化学习（RLHF）或其变体（RLAIF、DPO）——将模型塑造为有用的助手。人类评估者根据有用性、无害性和诚实性对输出进行评分。在这些评分上训练奖励模型，然后对基础LLM进行微调以最大化奖励。RLHF决定拒绝行为、语气和安全机制——而非基础架构。',
+          ],
+          items: [
+            '**预训练：** 对网络规模数据进行无监督的下一个令牌预测。将语言模式、世界知识和推理捷径编码到模型权重中（前沿模型约70B至405B参数）。',
+            '**监督微调（SFT）：** 在精心策划的指令-响应对上训练模型，使其表现得像助手而非纯文本预测器。',
+            '**RLHF / DPO：** 人类偏好引导模型产生有用、无害和诚实的输出。DPO（直接偏好优化）是Llama和Mistral模型使用的计算效率更高的替代方案。',
+            '**Constitutional AI（Anthropic）：** Claude额外使用一套原则（"宪法"）进行训练，以减少对边缘案例中人类反馈的依赖——Claude 4.6 Sonnet使用此方法。',
+          ],
+        },
+
+        inference: {
+          title: '推理如何工作：采样与解码',
+          content: [
+            '**在推理过程中，模型逐令牌生成输出——计算整个词汇表的概率分布，并根据您控制的解码参数从中选择。** 三个主要参数是[温度](/prompt-engineering/prompt-engineering-glossary#temperature)、[Top-p](/prompt-engineering/prompt-engineering-glossary#top-p)（核采样）和最大令牌数。',
+          ],
+          tableFormat: true,
+          columns: ['参数', '范围', '效果', '推荐用途'],
+          rows: [
+            { '参数': '温度', '范围': '0.0 – 2.0', '效果': '锐化（低）或平坦化（高）概率分布', '推荐用途': '代码/事实为0；文本为0.7；创意任务为1.0' },
+            { '参数': 'Top-p（核）', '范围': '0.0 – 1.0', '效果': '将采样限制在累积概率达到p的令牌上', '推荐用途': '大多数任务0.9–0.95；高度受限输出为0.5' },
+            { '参数': 'Top-k', '范围': '1至词汇表大小', '效果': '将采样限制在最可能的k个下一个令牌', '推荐用途': '很少使用；Top-p通常更受欢迎' },
+            { '参数': '最大令牌数', '范围': '1至上下文限制', '效果': '输出长度的硬性停止', '推荐用途': '设置为预期输出长度的2倍以避免截断' },
+            { '参数': '频率惩罚', '范围': '-2.0 – 2.0', '效果': '减少已生成令牌的重复', '推荐用途': '长文档0.1–0.3；代码为0' },
+          ],
+        },
+
+        contextWindowSection: {
+          title: '[上下文窗口](/prompt-engineering/prompt-engineering-glossary#context-window)：模型能看到什么',
+          content: [
+            '**[上下文窗口](/prompt-engineering/prompt-engineering-glossary#context-window)是模型在单次推理调用中能处理的最大令牌数——包括系统提示、对话历史、文档和当前用户消息的组合。** 会话之间不保留任何内容；模型每次都从头开始。',
+            '上下文窗口大小因模型而异，直接影响哪些使用场景是可行的：',
+          ],
+          tableFormat: true,
+          columns: ['模型', '上下文窗口', '近似单词当量', '实际文档限制'],
+          rows: [
+            { '模型': 'GPT-4o（OpenAI）', '上下文窗口': '128,000令牌', '近似单词当量': '约96,000词', '实际文档限制': '约200页PDF' },
+            { '模型': 'Claude 4.6 Sonnet（Anthropic）', '上下文窗口': '200,000令牌', '近似单词当量': '约150,000词', '实际文档限制': '约300页PDF' },
+            { '模型': 'Gemini 2.5 Pro（Google DeepMind）', '上下文窗口': '2,000,000令牌', '近似单词当量': '约1,500,000词', '实际文档限制': '约3,000页PDF' },
+            { '模型': 'LLaMA 3.1 70B（Meta，通过Ollama）', '上下文窗口': '128,000令牌', '近似单词当量': '约96,000词', '实际文档限制': '约200页PDF' },
+          ],
+        },
+
+        implications: {
+          title: '这对提示工程意味着什么',
+          content: [
+            '**理解LLM架构直接提升提示质量——令牌位置、温度、上下文窗口使用和输出长度对输出可靠性有可测量的影响。**',
+          ],
+          items: [
+            '**将重要指令放在最前面。** 系统提示在每条用户消息之前处理。由于"Lost in the Middle"效应，深埋在长提示中的指令权重较低。将约束和角色定义放在系统提示中。',
+            '**温度不是开关。** 代码生成和事实性任务为0。内容生成为0.5–0.7。超过1.0会增加多样性，但会显著提高幻觉风险。',
+            '**令牌数量对成本和延迟有线性影响。** API定价按令牌计算（输入和输出）。拥有100名日常用户的10,000令牌系统提示仅输入每天花费100万令牌——无情地压缩指令。',
+            '**模型"不知道"自己是错的。** 幻觉是令牌预测的结构性特征——模型输出统计上可能的内容，而非经过验证的内容。对于关键应用，始终验证事实性声明。',
+            '**上下文窗口≠注意力质量。** 200,000令牌的上下文窗口并不意味着模型对所有200,000个令牌给予同等的注意力。对于超过约50,000令牌的文档，考虑使用RAG进行分块，而非完整上下文填充。',
+          ],
+        },
+
+        misconceptions: {
+          title: '常见的LLM误解',
+          content: ['**这些关于LLM的误解广泛存在，常常导致设计不良的提示：**'],
+          tableFormat: true,
+          columns: ['误解', '实际发生的情况', '对提示工程的影响'],
+          rows: [
+            { '误解': '"模型读取并理解我的文档"', '实际发生的情况': '模型处理令牌序列并预测延续——没有阅读理解', '对提示工程的影响': '明确说明需要提取什么；不要假设模型会推断目标' },
+            { '误解': '"模型记得我们上次的对话"', '实际发生的情况': '每个API调用都是无状态的；历史记录必须明确包含在上下文窗口中', '对提示工程的影响': '在系统提示或对话历史中包含相关的先前上下文' },
+            { '误解': '"模型知道今天的日期"', '实际发生的情况': '模型有训练截止日期，除非被告知否则不知道今天的日期', '对提示工程的影响': '在系统提示中插入当前日期用于日期敏感任务' },
+            { '误解': '"更高的温度=更聪明的输出"', '实际发生的情况': '温度控制采样随机性，而非能力或准确性', '对提示工程的影响': '分析任务使用低温度（0.0–0.3）；创意变体使用较高温度' },
+            { '误解': '"模型可以可靠地计算字符数"', '实际发生的情况': '令牌边界是子词单元；精确的字符或单词计数不是原生能力', '对提示工程的影响': '不要依赖模型进行精确的字数统计；使用后处理或代码' },
+          ],
+        },
+
+        promptquorumBridge: {
+          title: '使用PromptQuorum测试跨模型的温度效果',
+          content: [
+            '**在PromptQuorum中测试——向GPT-4o、Claude 4.6 Sonnet和Gemini 2.5 Pro分别在温度0和温度0.9下发送相同的创意简报，显示Claude 4.6 Sonnet在不同温度间的输出变化最小，而Gemini 2.5 Pro的变化最大。** 在温度0.9时，Gemini 2.5 Pro生成的输出平均比温度0时长34%。',
+            '使用PromptQuorum的多模型调度，您可以同时针对所有可用模型在特定温度下运行每个提示，并并排比较输出——这使得校准特定任务的温度设置变得实际可行，而不是依赖模型默认值。',
+          ],
+        },
+
+        globalContext: {
+          title: 'LLM架构的地区差异',
+          content: [
+            '**LLM架构和性能因训练数据构成、令牌化策略和法规要求在不同地区存在显著差异。** 对于全球部署模型的团队来说，理解这些差异至关重要。',
+            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization)在CJK脚本（中文、日文、韩文）上实现了卓越的令牌化效率** — 普通话中文约0.3令牌/字符，而GPT-4o为0.5令牌/字符。这40%的令牌减少直接降低了亚洲语言应用的API成本和延迟。Qwen的训练数据包含20%的CJK内容，优化了字符与语义密度最高的脚本的令牌化器。',
+            '**Mistral 7B和Mistral Large专为欧盟部署设计**，训练数据经过过滤以符合GDPR、法国AI法以及欧盟关于数据存储和模型透明度的法规。与主要在未过滤网络数据上训练的模型不同，Mistral记录数据来源并从训练中排除欧盟公民的个人数据，使其成为欧洲受监管行业（银行、医疗保健、法律技术）的标准选择。',
+            '**DeepSeek的架构反映了其训练构成**：预训练数据的70%是中文和英文，15%是代码，15%是其他语言。这一比例产生了一个优先考虑中文语言流畅性和代码生成速度的模型，在资源匮乏的语言上性能明显较低。令牌分布和注意力模式针对普通话中文的频率模式优化，而非英语。',
+          ],
+        },
+
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[基础：什么是提示工程？](/prompt-engineering/what-is-prompt-engineering) — 如何将LLM架构知识应用于系统性提示设计',
+            '[基础：上下文窗口解析——AI为何遗忘](/prompt-engineering/context-windows-explained-why-ai-forgets) — 深入探讨上下文窗口限制和检索策略',
+            '[基础：令牌、成本与限制：AI提示的经济学](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 令牌定价、速率限制以及GPT-4o、Claude和Gemini的成本优化',
+            '[基础：AI幻觉解析——LLM为何编造内容](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 令牌预测和缺乏事实检索如何导致置信度错误',
+          ],
+        },
+
+        faq: {
+          title: '常见问题',
+          faqs: [
+            {
+              q: 'LLM像人类一样理解文本吗？',
+              a: '不。LLM不以人类的方式理解文本。它们根据训练期间学习的模式，基于先前的令牌预测统计上最可能的下一个令牌。没有理解、意图或意识——只有在约50,000至100,000个令牌的词汇表上的加权概率分布。',
+            },
+            {
+              q: 'LLM中的令牌是什么？',
+              a: '令牌是LLM处理的最小单位——英语约0.75个单词，中文或日文约0.5个词。单词、子词、标点符号和空格都是令牌。GPT-4o使用字节对编码（BPE）将文本分割为令牌。1,000词的文档在英语中产生约1,300个令牌。',
+            },
+            {
+              q: 'LLM中的温度有什么作用？',
+              a: '温度控制模型从其概率分布中采样的随机程度。温度0始终选择概率最高的令牌（确定性）。温度1.0按比例从分布中采样。超过1.5，分布变平，幻觉风险增加。大多数生产应用在0.1到0.7之间效果最佳。',
+            },
+            {
+              q: '为什么提示中信息的位置很重要？',
+              a: 'Transformer注意力机制对上下文窗口开头和结尾的令牌赋予比中间令牌更多的权重——这一模式被Liu et al.（2023）记录为"Lost in the Middle"效应。对于超过约2,000个令牌的提示，将最重要的指令放在开头，并在用户消息结尾重复关键约束。',
+            },
+            {
+              q: 'RLHF是什么，它如何影响模型输出？',
+              a: '来自人类反馈的强化学习（RLHF）是一个训练后步骤，人类评估者对模型输出进行评分，在这些评分上训练奖励模型，然后对基础LLM进行微调以最大化奖励。RLHF塑造拒绝行为、语气、有用性和安全性——这就是为什么不同实验室的模型对相同提示的反应不同，即使基准结果相似。',
+            },
+            {
+              q: '上下文窗口和记忆有什么区别？',
+              a: '上下文窗口涵盖模型在推理调用期间能看到的所有文本——系统提示、历史记录和当前消息。它不是持久记忆：对话结束时，模型不保留任何内容。GPT-4o：128,000令牌。Claude 4.6 Sonnet：200,000令牌。Gemini 2.5 Pro：2,000,000令牌。',
+            },
+            {
+              q: '"Lost in the Middle"效应是什么，如何避免？',
+              a: '"Lost in the Middle"效应由Stanford University的Liu et al.（2023）记录，表明Transformer注意力系统性地低估长上下文中间的信息。避免方法：将关键指令放在系统提示中，将重要上下文保持在输入的前10–15%，并在用户消息结尾重复最重要的约束。对于超过约50,000令牌的文档，使用RAG进行分块而非完整上下文填充。',
+            },
+            {
+              q: 'RLHF和Constitutional AI有什么区别？',
+              a: 'RLHF是一种训练后技术，人类评估者对模型输出进行评分，训练奖励模型，然后对LLM进行微调以最大化该奖励。Constitutional AI（Anthropic为Claude开发）通过一套书面原则（"宪法"）扩展了RLHF以指导模型行为——这减少了边缘案例中对人类反馈的依赖。',
+            },
+            {
+              q: 'GPT-4o、Claude和Gemini在架构上有何不同？',
+              a: '三者都是基于Transformer的LLM，但在扩展、上下文窗口和训练后处理上有所不同。GPT-4o（OpenAI）：128,000令牌。Claude 4.6 Sonnet（Anthropic）：200,000令牌，使用Constitutional AI。Gemini 2.5 Pro（Google DeepMind）：2,000,000令牌。这些差异影响成本、延迟和适用性——GPT-4o在推理上表现出色，Claude擅长长上下文，Gemini适合处理超长文档。',
+            },
+            {
+              q: '1,000词的文本有多少个令牌？',
+              a: '英语中，1,000词约对应1,300–1,350个令牌。约1个令牌=0.75个单词。中文或日文：1个令牌≈0.5个词——1,000个中文词≈2,000个令牌。令牌数量直接影响API成本和上下文窗口消耗。',
+            },
+            {
+              q: '温度和Top-p有什么区别？',
+              a: '温度锐化或平坦化整个概率分布——温度0=确定性，温度1.0=标准，温度2.0=非常随机。Top-p（核采样）将采样限制在累积概率达到p的最小令牌集合上。对于大多数任务，建议调整Top-p（0.8–0.95）而非温度；温度最适合控制创意程度。',
+            },
+          ],
+        },
+
+        sources: {
+          title: '来源与延伸阅读',
+          items: [
+            '[Vaswani et al., 2017. "Attention Is All You Need"](https://arxiv.org/abs/1706.03762) — 引入自注意力机制的原始Transformer论文，是所有现代LLM的基础',
+            '[Liu et al., 2023. "Lost in the Middle: How Language Models Use Long Contexts"](https://arxiv.org/abs/2307.03172) — 斯坦福大学记录长上下文LLM中位置依赖注意力偏差的研究',
+            '[Ouyang et al., 2022. "Training language models to follow instructions with human feedback"](https://arxiv.org/abs/2203.02155) — 将RLHF引入GPT-3的InstructGPT论文，是ChatGPT和现代对齐LLM的基础',
+            '[OpenAI. 令牌化器文档](https://platform.openai.com/docs/guides/tokens) — 关于令牌计数及GPT模型令牌化编码方式的交互式指南',
+            '[Touvron et al., 2023. "Llama 2: Open Foundation and Fine-Tuned Chat Models"](https://arxiv.org/abs/2307.09288) — Meta关于LLaMA-2架构、训练流程和指令微调方法论的综合论文',
+            '[Anthropic. Constitutional AI: Harmlessness from AI Feedback](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) — Anthropic关于使用"宪法"指导模型行为作为纯RLHF替代方案的研究',
+            '[HuggingFace. Tokenizers Library & Summary](https://huggingface.co/docs/transformers/main/tokenizer_summary) — 对现代LLM中BPE、WordPiece、SentencePiece和其他令牌化算法的技术深入分析',
+            '[Google DeepMind. Gemini 1.5 Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_1_5_tech_report.pdf) — 具有100万令牌上下文窗口的前沿模型架构和性能分析',
+            '[EleutherAI. GPT-NeoX-20B: An Open-Source Autoregressive Language Model](https://arxiv.org/abs/2204.06745) — 开源模型训练文档及LLM开发中架构决策分析',
+            '[OpenAI. Improving Language Models by Segmenting, Attending, and Predicting with Structured State Space Models](https://arxiv.org/abs/2212.14052) — 关于高效长上下文处理的纯Transformer注意力替代方案的研究',
+          ],
+        },
+      },
+    },
   },
 
   'prompt-injection-and-security': {
