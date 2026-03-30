@@ -11747,6 +11747,44 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           },
         ],
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Write Better Prompts Based on How LLMs Work',
+        description: 'Five practical steps for improving prompt quality by understanding how large language models process and generate text.',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Put critical instructions first',
+            text: 'Place your most important constraints and role definitions in the system prompt, which is processed before any user message. Due to the "lost in the middle" effect, instructions buried in the middle of long prompts are under-weighted by transformer attention.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Use temperature strategically',
+            text: 'Use temperature 0 for code generation and factual tasks (deterministic output). Use 0.5–0.7 for content generation (balanced creativity). Use higher temperatures only for high-diversity creative tasks, as temperature above 1.0 raises hallucination risk significantly.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Optimize prompts for token cost and latency',
+            text: 'Reduce token count in your prompts since API pricing scales linearly with tokens. A 10,000-token system prompt with 100 daily users costs 1,000,000 tokens per day in input alone — compress instructions ruthlessly to reduce cost and response time.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Validate outputs in high-stakes contexts',
+            text: 'Remember that hallucination is a structural property of token prediction: models output statistically probable text, not verified information. Always validate factual claims and citations in generated output before using in high-stakes applications.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Use retrieval-augmented generation for long documents',
+            text: 'Do not assume large context windows mean equal attention across all tokens. For documents longer than approximately 50,000 tokens, use retrieval-augmented generation (RAG) with document chunking instead of full-context stuffing to maintain retrieval quality.',
+          },
+        ],
+      },
       sections: {
         definition: {
           title: 'What an LLM Actually Is',
