@@ -12330,7 +12330,244 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: {
+      theme: 'Fundamentals',
+      title: 'Comment fonctionnent vraiment les LLMs : tokens, attention et inférence',
+      intro: 'Les grands modèles de langage prédisent le prochain token par distribution de probabilités — sans comprendre ni récupérer. Apprenez la tokenisation, l\'attention, le RLHF et les paramètres d\'inférence.',
+      publishDate: '2026-03-30',
+      dateModified: '2026-03-30',
+      readTime: '12 min de lecture',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Comment fonctionnent vraiment les LLMs : tokens, attention et inférence',
+        description: 'Les grands modèles de langage prédisent le prochain token par distribution de probabilités — sans comprendre ni récupérer. Apprenez la tokenisation, l\'attention, le RLHF et les paramètres d\'inférence.',
+        datePublished: '2026-03-30',
+        dateModified: '2026-03-30',
+        keywords: ['grands modèles de langage', 'architecture LLM', 'transformer', 'tokenisation', 'mécanisme d\'attention', 'RLHF', 'température', 'fenêtre de contexte', 'ingénierie de prompt', 'GPT-4o', 'Claude'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+          { '@type': 'Thing', name: 'Transformer' },
+          { '@type': 'Thing', name: 'RLHF' },
+          { '@type': 'Thing', name: 'Tokenisation' },
+        ],
+      },
+      sections: {
+        definition: {
+          title: 'Ce qu\'est vraiment un LLM',
+          content: [
+            '**Un LLM (grand modèle de langage) est un réseau de neurones basé sur l\'architecture transformer, entraîné pour prédire le token le plus probable suivant une séquence de tokens en entrée — ce n\'est pas une base de données, un moteur de recherche ou un système de raisonnement.** Le modèle apprend des relations statistiques entre les tokens en traitant des centaines de milliards de mots issus de pages web, de livres, de code et d\'autres textes pendant l\'entraînement.',
+            'Lorsque vous saisissez un prompt, le modèle convertit votre texte en une séquence d\'identifiants de tokens numériques, les fait passer à travers des dizaines de couches transformer et produit une distribution de probabilités sur l\'ensemble de son vocabulaire (typiquement 50 000 à 100 000 tokens). Il sélectionne un token dans cette distribution, l\'ajoute à la séquence et répète jusqu\'à générer un token d\'arrêt ou atteindre la limite de sortie.',
+            'Cette architecture explique plusieurs comportements qui désorientent les utilisateurs : pourquoi les LLMs "[hallucinent](/prompt-engineering/prompt-engineering-glossary#hallucination)" des faits plausibles mais faux (ils prédisent un texte probable, pas des vérités vérifiées), pourquoi ils peuvent échouer en arithmétique (patterns de tokens, pas de calcul réel), et pourquoi reformuler un prompt change la sortie (des séquences de tokens différentes déclenchent des distributions de probabilités différentes).',
+          ],
+          tableFormat: true,
+          columns: ['Propriété', 'LLM', 'Logiciel classique'],
+          rows: [
+            { Propriété: 'Fonctionnement', LLM: 'Prédit le prochain token via des distributions de probabilités apprises', 'Logiciel classique': 'Exécute des instructions déterministes' },
+            { Propriété: 'Déterminisme de la sortie', LLM: 'Probabiliste — la même entrée peut produire des sorties différentes', 'Logiciel classique': 'Déterministe — la même entrée produit toujours la même sortie' },
+            { Propriété: 'Source de connaissance', LLM: 'Patterns encodés dans les poids du modèle pendant l\'entraînement', 'Logiciel classique': 'Lit depuis des bases de données ou des fichiers à l\'exécution' },
+            { Propriété: 'Type d\'erreur', LLM: 'Confiant mais faux (hallucination)', 'Logiciel classique': 'Plantage ou code d\'erreur' },
+            { Propriété: 'Mécanisme de mise à jour', LLM: 'Nécessite un réentraînement ou un fine-tuning', 'Logiciel classique': 'Modification du code ou mise à jour de la base de données' },
+          ],
+        },
+        tldr: {
+          title: 'Points clés',
+          isTldr: true,
+          items: [
+            '**Les LLMs prédisent des tokens, pas des réponses.** Ils génèrent des séquences de texte statistiquement probables — pas des faits récupérés, des déductions logiques ou des informations vérifiées.',
+            '**1 token ≈ 0,75 mot en anglais.** Un document de 1 000 mots utilise ~1 300 tokens. Le chinois et le japonais sont ~50 % plus denses.',
+            '**La [température](/prompt-engineering/prompt-engineering-glossary#temperature) contrôle créativité vs déterminisme.** Température 0 = déterministe. Température 1,0 = échantillonnage proportionnel. Au-dessus de 1,5 = risque élevé d\'hallucination.',
+            '**Les [fenêtres de contexte](/prompt-engineering/prompt-engineering-glossary#context-window) ne sont pas de la mémoire.** GPT-4o : 128k tokens. Claude 4.6 Sonnet : 200k tokens. Gemini 2.5 Pro : 2 M de tokens. Rien ne persiste entre les sessions.',
+            '**La position est déterminante.** Le mécanisme d\'[attention](/prompt-engineering/prompt-engineering-glossary#attention) transformer pondère davantage le début et la fin du contexte. Placez les instructions critiques en premier et en dernier — pas au milieu.',
+            '**Le [RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) façonne le comportement, pas les capacités.** Les refus, le ton et la serviabilité proviennent du fine-tuning post-entraînement — pas de l\'architecture de base.',
+          ],
+        },
+        tokenization: {
+          title: '[Tokenisation](/prompt-engineering/prompt-engineering-glossary#tokenization) : comment le texte devient des nombres',
+          content: [
+            '**Avant qu\'un LLM puisse traiter du texte, il doit le convertir en une séquence d\'identifiants de tokens entiers — un processus appelé [tokenisation](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-4o utilise le Byte Pair Encoding (BPE), qui décompose le texte en unités de sous-mots fréquents. Claude 4.6 Sonnet et Gemini 2.5 Pro utilisent des schémas de tokenisation par sous-mots similaires.',
+            'La tokenisation dépend de la langue. Le texte anglais représente en moyenne 1 token pour 0,75 mots. Le chinois et le japonais atteignent 1 token pour 0,5 mots — le même document coûte donc environ deux fois plus de tokens en chinois qu\'en anglais, ce qui affecte directement le coût de l\'API et l\'utilisation de la fenêtre de contexte.',
+          ],
+          tableFormat: true,
+          columns: ['Texte d\'entrée', 'Tokens', 'Nombre de tokens'],
+          rows: [
+            { 'Texte d\'entrée': '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Nombre de tokens': '4' },
+            { 'Texte d\'entrée': '"Tokenization"', Tokens: '"Token", "ization"', 'Nombre de tokens': '2' },
+            { 'Texte d\'entrée': '"GPT-4o"', Tokens: '"G", "PT", "-", "4", "o"', 'Nombre de tokens': '5' },
+            { 'Texte d\'entrée': '"你好世界" (Bonjour monde, chinois)', Tokens: '"你好", "世界"', 'Nombre de tokens': '2–4 selon le modèle' },
+          ],
+        },
+        attention: {
+          title: 'Comment fonctionne le mécanisme d\'attention transformer',
+          content: [
+            '**L\'architecture transformer utilise un mécanisme appelé self-attention pour déterminer dans quelle mesure chaque token doit « faire attention » à tous les autres tokens de la séquence lors du calcul de sa représentation.** Pour chaque token, le modèle calcule trois vecteurs — Query (Q), Key (K) et Value (V) — et calcule les scores d\'attention comme des produits scalaires entre Q et K, mis à l\'échelle et normalisés avec softmax.',
+            'L\'attention multi-têtes exécute ce processus en parallèle sur plusieurs « têtes » (GPT-4o utilise 96 têtes d\'attention dans ses plus grandes couches), chacune apprenant différents patterns de relations. Certaines têtes se spécialisent dans les relations syntaxiques (sujet-verbe), d\'autres dans la similarité sémantique, d\'autres encore dans la coréférence (faire correspondre les pronoms aux noms).',
+            'Une implication pratique majeure : l\'effet « lost in the middle ». Les recherches de Liu et al. (2023) à Stanford montrent que les LLMs sous-pondèrent systématiquement les informations au milieu des longs contextes. Pour les prompts dépassant ~2 000 tokens, placez les instructions critiques dans le system prompt (début) et répétez la contrainte la plus importante à la fin du message utilisateur.',
+          ],
+        },
+        training: {
+          title: 'Comment les LLMs sont entraînés : pré-entraînement et RLHF',
+          content: [
+            '**L\'entraînement des LLMs se déroule en deux phases distinctes : le pré-entraînement (apprendre les patterns du langage à partir de textes bruts) et l\'alignement post-entraînement (façonner le comportement grâce aux retours humains).** Ces phases produisent des capacités différentes et expliquent pourquoi les modèles de différents laboratoires se comportent différemment même avec des scores de benchmark similaires.',
+            'Pendant le pré-entraînement, le modèle traite un corpus massif — Llama 3.1 a été entraîné sur environ 15 billions de tokens ; GPT-4 sur un estimé de 1 à 2 billions de tokens. L\'objectif est simple : prédire le prochain token. Aucune connaissance explicite n\'est stockée ; toutes les informations sont encodées comme des patterns statistiques dans les poids du modèle.',
+            'L\'alignement post-entraînement — typiquement le Reinforcement Learning from Human Feedback (RLHF) ou ses variantes (RLAIF, DPO) — façonne le modèle en assistant utile. Des évaluateurs humains notent les sorties sur l\'utilité, l\'innocuité et l\'honnêteté. Un modèle de récompense est entraîné sur ces évaluations, et le LLM de base est ensuite fine-tuné pour maximiser la récompense. Le RLHF détermine le comportement de refus, le ton et les garde-fous de sécurité — pas l\'architecture de base.',
+          ],
+          items: [
+            '**Pré-entraînement :** Prédiction non supervisée du prochain token sur des données à l\'échelle du web. Encode les patterns linguistiques, les connaissances du monde et les raccourcis de raisonnement dans les poids du modèle (~70B–405B paramètres pour les modèles frontier).',
+            '**Supervised Fine-Tuning (SFT) :** Le modèle est entraîné sur des paires instruction-réponse soigneusement sélectionnées pour se comporter comme un assistant plutôt que comme un simple prédicteur de texte.',
+            '**RLHF / DPO :** Les préférences humaines orientent le modèle vers des sorties utiles, inoffensives et honnêtes. Le DPO (Direct Preference Optimization) est une alternative plus efficace en calcul utilisée par les modèles Llama et Mistral.',
+            '**Constitutional AI (Anthropic) :** Claude est en plus entraîné avec un ensemble de principes (« constitution ») pour réduire la dépendance aux retours humains pour chaque cas limite — Claude 4.6 Sonnet utilise cette approche.',
+          ],
+        },
+        inference: {
+          title: 'Comment fonctionne l\'inférence : échantillonnage et décodage',
+          content: [
+            '**Pendant l\'inférence, le modèle génère la sortie token par token — calcule une distribution de probabilités sur l\'ensemble du vocabulaire et échantillonne selon les paramètres de décodage que vous contrôlez.** Les trois paramètres les plus importants sont la [température](/prompt-engineering/prompt-engineering-glossary#temperature), le [top-p](/prompt-engineering/prompt-engineering-glossary#top-p) (nucleus sampling) et le nombre maximum de tokens.',
+          ],
+          tableFormat: true,
+          columns: ['Paramètre', 'Plage', 'Effet', 'Recommandé pour'],
+          rows: [
+            { Paramètre: 'Température', Plage: '0,0 – 2,0', Effet: 'Affûte (bas) ou aplatit (haut) la distribution de probabilités', 'Recommandé pour': '0 pour code/faits ; 0,7 pour textes ; 1,0 pour tâches créatives' },
+            { Paramètre: 'Top-p (nucleus)', Plage: '0,0 – 1,0', Effet: 'Limite l\'échantillonnage aux tokens dont la probabilité cumulée atteint p', 'Recommandé pour': '0,9–0,95 pour la plupart des tâches ; 0,5 pour les sorties très contraintes' },
+            { Paramètre: 'Top-k', Plage: '1 – taille du vocabulaire', Effet: 'Limite l\'échantillonnage aux k tokens suivants les plus probables', 'Recommandé pour': 'Peu utilisé ; le top-p est généralement préféré' },
+            { Paramètre: 'Max tokens', Plage: '1 – limite du contexte', Effet: 'Arrêt strict de la longueur de sortie', 'Recommandé pour': 'Régler à 2× la longueur de sortie attendue pour éviter la troncature' },
+            { Paramètre: 'Frequency penalty', Plage: '-2,0 – 2,0', Effet: 'Réduit la répétition des tokens déjà générés', 'Recommandé pour': '0,1–0,3 pour les longs documents ; 0 pour le code' },
+          ],
+        },
+        contextWindowSection: {
+          title: '[Fenêtres de contexte](/prompt-engineering/prompt-engineering-glossary#context-window) : ce que le modèle peut voir',
+          content: [
+            '**La [fenêtre de contexte](/prompt-engineering/prompt-engineering-glossary#context-window) est le nombre maximum de tokens que le modèle peut traiter en un seul appel d\'inférence — combinant le system prompt, l\'historique de conversation, les documents et le message utilisateur actuel.** Rien ne persiste entre les sessions ; le modèle repart à zéro à chaque fois.',
+            'La taille de la fenêtre de contexte varie considérablement selon les modèles et affecte directement quels cas d\'usage sont pratiques :',
+          ],
+          tableFormat: true,
+          columns: ['Modèle', 'Fenêtre de contexte', 'Équivalent en mots approximatif', 'Limite pratique pour les documents'],
+          rows: [
+            { Modèle: 'GPT-4o (OpenAI)', 'Fenêtre de contexte': '128 000 tokens', 'Équivalent en mots approximatif': '~96 000 mots', 'Limite pratique pour les documents': '~200 pages PDF' },
+            { Modèle: 'Claude 4.6 Sonnet (Anthropic)', 'Fenêtre de contexte': '200 000 tokens', 'Équivalent en mots approximatif': '~150 000 mots', 'Limite pratique pour les documents': '~300 pages PDF' },
+            { Modèle: 'Gemini 2.5 Pro (Google DeepMind)', 'Fenêtre de contexte': '2 000 000 tokens', 'Équivalent en mots approximatif': '~1 500 000 mots', 'Limite pratique pour les documents': '~3 000 pages PDF' },
+            { Modèle: 'LLaMA 3.1 70B (Meta, via Ollama)', 'Fenêtre de contexte': '128 000 tokens', 'Équivalent en mots approximatif': '~96 000 mots', 'Limite pratique pour les documents': '~200 pages PDF' },
+          ],
+        },
+        implications: {
+          title: 'Ce que cela signifie pour l\'ingénierie de prompt',
+          content: [
+            '**Comprendre l\'architecture des LLMs améliore directement la qualité des prompts — la position des tokens, la température, l\'utilisation de la fenêtre de contexte et la longueur de sortie ont toutes des effets mesurables sur la fiabilité des sorties.**',
+          ],
+          items: [
+            '**Placez les instructions critiques en premier.** Le system prompt est traité avant tout message utilisateur. Les instructions enfouies au milieu de longs prompts sont sous-pondérées en raison de l\'effet « lost in the middle ». Placez les contraintes et les définitions de rôle dans le system prompt.',
+            '**La température est un réglage graduel, pas un interrupteur.** Température 0 pour la génération de code et les tâches factuelles. 0,5–0,7 pour la génération de contenu. Au-dessus de 1,0, la diversité augmente mais le risque d\'hallucination aussi.',
+            '**Le nombre de tokens affecte le coût et la latence de façon linéaire.** La tarification API est par token (entrée et sortie). Un system prompt de 10 000 tokens avec 100 utilisateurs quotidiens coûte 1 000 000 tokens/jour en entrée seule — compressez les instructions sans compromis.',
+            '**Les modèles ne « savent » pas qu\'ils ont tort.** L\'hallucination est une propriété structurelle de la prédiction de tokens — le modèle produit ce qui est statistiquement probable, pas ce qui est vérifié. Validez toujours les affirmations factuelles pour les cas d\'usage à enjeux élevés.',
+            '**Fenêtre de contexte ≠ qualité d\'attention.** Une fenêtre de contexte de 200 000 tokens ne signifie pas que le modèle accorde une attention égale aux 200 000 tokens. Pour les documents de plus de ~50 000 tokens, envisagez le chunking avec RAG plutôt que le context stuffing complet.',
+          ],
+        },
+        misconceptions: {
+          title: 'Idées reçues courantes sur les LLMs',
+          content: ['**Ces idées reçues sur les LLMs sont répandues et conduisent fréquemment à des prompts mal conçus :**'],
+          tableFormat: true,
+          columns: ['Idée reçue', 'Ce qui se passe réellement', 'Implication pour l\'ingénierie de prompt'],
+          rows: [
+            { 'Idée reçue': '"Le modèle lit et comprend mon document"', 'Ce qui se passe réellement': 'Le modèle traite des séquences de tokens et prédit des continuations — pas de compréhension de lecture', 'Implication pour l\'ingénierie de prompt': 'Indiquez explicitement ce que vous voulez extraire ; ne supposez pas que le modèle infère votre objectif' },
+            { 'Idée reçue': '"Le modèle se souvient de notre dernière conversation"', 'Ce qui se passe réellement': 'Chaque appel API est sans état ; l\'historique doit être explicitement inclus dans la fenêtre de contexte', 'Implication pour l\'ingénierie de prompt': 'Incluez le contexte précédent pertinent dans le system prompt ou l\'historique de conversation' },
+            { 'Idée reçue': '"Le modèle connaît la date actuelle"', 'Ce qui se passe réellement': 'Le modèle a une date de coupure d\'entraînement et ne sait pas quelle date il est sauf si on le lui dit', 'Implication pour l\'ingénierie de prompt': 'Injectez la date actuelle dans le system prompt pour les tâches sensibles à la date' },
+            { 'Idée reçue': '"Température plus élevée = sortie plus intelligente"', 'Ce qui se passe réellement': 'La température contrôle l\'aléatoire de l\'échantillonnage, pas la capacité ou la précision', 'Implication pour l\'ingénierie de prompt': 'Utilisez une température basse (0,0–0,3) pour les tâches analytiques ; plus élevée pour les variations créatives' },
+            { 'Idée reçue': '"Le modèle peut compter les caractères de façon fiable"', 'Ce qui se passe réellement': 'Les frontières des tokens sont des unités de sous-mots ; compter précisément les caractères ou les mots n\'est pas une compétence native', 'Implication pour l\'ingénierie de prompt': 'Ne vous fiez pas au modèle pour compter les mots précisément ; utilisez un post-traitement ou du code' },
+          ],
+        },
+        promptquorumBridge: {
+          title: 'Tester les effets de température entre modèles dans PromptQuorum',
+          content: [
+            '**Testé dans PromptQuorum — l\'envoi du même brief créatif à GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro à température 0 vs température 0,9 a montré que Claude 4.6 Sonnet présente la plus faible variation de sortie entre températures, tandis que Gemini 2.5 Pro affiche la plus grande variation.** À température 0,9, Gemini 2.5 Pro a produit des sorties en moyenne 34 % plus longues qu\'à température 0.',
+            'Avec le dispatch multi-modèle de PromptQuorum, vous pouvez exécuter n\'importe quel prompt simultanément contre tous les modèles disponibles à une température spécifiée et comparer les sorties côte à côte — ce qui rend pratique le calibrage des paramètres de température pour votre tâche spécifique plutôt que de s\'appuyer sur les valeurs par défaut des modèles.',
+          ],
+        },
+        globalContext: {
+          title: 'Différences d\'architecture LLM par région',
+          content: [
+            '**L\'architecture et les performances des LLMs varient considérablement selon la composition des données d\'entraînement, la stratégie de tokenisation et les contraintes réglementaires d\'une région à l\'autre.** Comprendre ces différences est crucial pour les équipes déployant des modèles à l\'échelle mondiale.',
+            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) atteint une efficacité de tokenisation supérieure pour les scripts CJK (chinois, japonais, coréen)** — utilisant environ 0,3 token par caractère pour le mandarin comparé à 0,5 token par caractère pour GPT-4o. Cette réduction de 40 % du nombre de tokens réduit directement les coûts API et la latence pour les applications en langues asiatiques. Les données d\'entraînement de Qwen comprennent 20 % de contenu CJK, optimisant le tokeniseur pour les scripts où la densité caractère-sémantique est la plus élevée.',
+            '**Mistral 7B et Mistral Large sont explicitement conçus pour le déploiement européen**, avec des données d\'entraînement filtrées pour respecter le RGPD, la loi française sur l\'IA et les réglementations de l\'UE sur la conservation des données et la transparence des modèles. Contrairement aux modèles entraînés principalement sur des données web non filtrées, Mistral documente les sources de données et exclut les informations personnelles des citoyens de l\'UE de l\'entraînement, ce qui en fait le choix par défaut pour les secteurs réglementés en Europe (banque, santé, legal tech).',
+            '**L\'architecture de DeepSeek reflète sa composition d\'entraînement** : 70 % des données de pré-entraînement sont en chinois et en anglais, 15 % en code, 15 % dans d\'autres langues. Ce ratio produit un modèle biaisé vers la fluidité en langue chinoise et la vitesse de génération de code, avec des performances nettement inférieures sur les langues à faibles ressources. La distribution des tokens et les patterns d\'attention sont optimisés pour les patterns de fréquence du mandarin, pas de l\'anglais.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lectures complémentaires',
+          items: [
+            '[Fondamentaux : Qu\'est-ce que l\'ingénierie de prompt ?](/prompt-engineering/what-is-prompt-engineering) — comment appliquer les connaissances sur l\'architecture LLM à la conception systématique de prompts',
+            '[Fondamentaux : Fenêtres de contexte expliquées — Pourquoi l\'IA oublie](/prompt-engineering/context-windows-explained-why-ai-forgets) — exploration approfondie des limites des fenêtres de contexte et des stratégies de récupération',
+            '[Fondamentaux : Tokens, coûts et limites : l\'économie du prompting IA](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — tarification des tokens, limites de débit et optimisation des coûts pour GPT-4o, Claude et Gemini',
+            '[Fondamentaux : Hallucinations IA expliquées — Pourquoi les LLMs inventent](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — comment la prédiction de tokens et l\'absence de récupération de faits conduisent à des erreurs de confiance',
+          ],
+        },
+        faq: {
+          title: 'Questions fréquemment posées',
+          faqs: [
+            {
+              q: 'Les LLMs comprennent-ils le texte comme les humains ?',
+              a: 'Non. Les LLMs ne comprennent pas le texte au sens humain. Ils prédisent le prochain token statistiquement le plus probable sur la base des tokens précédents, selon des patterns appris pendant l\'entraînement. Il n\'y a ni compréhension, ni intention, ni conscience — seulement des distributions de probabilités pondérées sur un vocabulaire d\'environ 50 000 à 100 000 tokens.',
+            },
+            {
+              q: 'Qu\'est-ce qu\'un token dans un LLM ?',
+              a: 'Un token est la plus petite unité traitée par un LLM — environ 0,75 mot en anglais et 0,5 mot en chinois ou japonais. Les mots, sous-mots, ponctuation et espaces deviennent tous des tokens. GPT-4o utilise le BPE (Byte Pair Encoding) pour diviser le texte en tokens. Un document de 1 000 mots représente environ 1 300 tokens en anglais.',
+            },
+            {
+              q: 'Que fait la température dans un LLM ?',
+              a: 'La température contrôle avec quelle aléatoire le modèle échantillonne dans sa distribution de probabilités. Température 0 sélectionne toujours le token de probabilité maximale (déterministe). Température 1,0 échantillonne proportionnellement à la distribution. Au-dessus de 1,5, la distribution s\'aplatit et le risque d\'hallucination augmente. La plupart des cas d\'usage en production fonctionnent mieux entre 0,1 et 0,7.',
+            },
+            {
+              q: 'Pourquoi la position des informations dans un prompt est-elle importante ?',
+              a: 'Le mécanisme d\'attention transformer pondère davantage les tokens au début et à la fin de la fenêtre de contexte qu\'au milieu — l\'effet « lost in the middle » documenté par Liu et al. (2023). Pour les prompts de plus de ~2 000 tokens, placez l\'instruction la plus critique au début et répétez les contraintes clés à la fin.',
+            },
+            {
+              q: 'Qu\'est-ce que le RLHF et comment affecte-t-il les sorties du modèle ?',
+              a: 'Le Reinforcement Learning from Human Feedback (RLHF) est une étape post-entraînement où des évaluateurs humains notent les sorties du modèle et un modèle de récompense est entraîné sur ces évaluations. Le LLM de base est ensuite fine-tuné pour maximiser la récompense. Le RLHF façonne les refus, le ton, la serviabilité et le comportement de sécurité — c\'est pourquoi les modèles de différents laboratoires se comportent différemment sur le même prompt malgré des scores de benchmark similaires.',
+            },
+            {
+              q: 'Quelle est la différence entre une fenêtre de contexte et la mémoire ?',
+              a: 'La fenêtre de contexte englobe tout le texte que le modèle peut voir lors d\'un appel d\'inférence — system prompt, historique et message actuel. Ce n\'est pas de la mémoire persistante : lorsque la conversation se termine, le modèle ne retient rien. GPT-4o : 128 000 tokens. Claude 4.6 Sonnet : 200 000 tokens. Gemini 2.5 Pro : 2 000 000 tokens.',
+            },
+            {
+              q: 'Qu\'est-ce que l\'effet « lost in the middle » et comment l\'éviter ?',
+              a: 'L\'effet « lost in the middle », documenté par Liu et al. (2023) à Stanford, montre que l\'attention transformer sous-pondère systématiquement les informations au milieu des longs contextes. Pour l\'éviter : placez les instructions critiques dans le system prompt, gardez le contexte important dans les 10–15 premiers % de l\'entrée et répétez la contrainte la plus importante à la fin du message utilisateur. Pour les documents de plus de ~50 000 tokens, utilisez le RAG avec chunking plutôt que le context stuffing complet.',
+            },
+            {
+              q: 'En quoi le RLHF diffère-t-il du Constitutional AI ?',
+              a: 'Le RLHF est une technique post-entraînement où des évaluateurs humains notent les sorties, un modèle de récompense est entraîné et le LLM est fine-tuné pour maximiser la récompense. Le Constitutional AI (utilisé par Anthropic pour Claude) étend le RLHF en ajoutant un ensemble de principes écrits (« constitution ») qui guident le comportement du modèle — ce qui réduit la dépendance aux retours humains pour chaque cas limite.',
+            },
+            {
+              q: 'Quelle est la différence architecturale entre GPT-4o, Claude et Gemini ?',
+              a: 'Tous trois sont des LLMs basés sur transformer mais diffèrent en taille, fenêtre de contexte et post-entraînement. GPT-4o (OpenAI) : 128 000 tokens. Claude 4.6 Sonnet (Anthropic) : 200 000 tokens, utilise le Constitutional AI. Gemini 2.5 Pro (Google DeepMind) : 2 000 000 tokens. Ces différences influencent le coût, la latence et l\'adéquation — GPT-4o excelle en raisonnement, Claude sur les longs contextes, Gemini pour le traitement de documents extrêmement longs.',
+            },
+            {
+              q: 'Combien de tokens représentent 1 000 mots ?',
+              a: 'En anglais, 1 000 mots représentent environ 1 300–1 350 tokens. Soit ~1 token = 0,75 mot. Pour le chinois ou le japonais : 1 token ≈ 0,5 mot — 1 000 mots chinois ≈ 2 000 tokens. Le nombre de tokens affecte directement le coût API et la consommation de la fenêtre de contexte.',
+            },
+            {
+              q: 'Quelle est la différence entre la température et le top-p ?',
+              a: 'La température affûte ou aplatit l\'ensemble de la distribution de probabilités — température 0 = déterministe, température 1,0 = standard, température 2,0 = très aléatoire. Le top-p (nucleus sampling) limite l\'échantillonnage au plus petit ensemble de tokens dont la probabilité cumulée atteint p. Pour la plupart des tâches, ajustez le top-p (0,8–0,95) plutôt que la température ; la température est mieux réservée au contrôle de la créativité.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources et lectures complémentaires',
+          items: [
+            '[Vaswani et al., 2017. « Attention Is All You Need »](https://arxiv.org/abs/1706.03762) — le paper original sur le transformer introduisant le mécanisme de self-attention qui sous-tend tous les LLMs modernes',
+            '[Liu et al., 2023. « Lost in the Middle: How Language Models Use Long Contexts »](https://arxiv.org/abs/2307.03172) — recherche de Stanford documentant le biais d\'attention dépendant de la position dans les LLMs à long contexte',
+            '[Ouyang et al., 2022. « Training language models to follow instructions with human feedback »](https://arxiv.org/abs/2203.02155) — le paper InstructGPT introduisant le RLHF appliqué à GPT-3, base de ChatGPT et des LLMs alignés modernes',
+            '[OpenAI. Documentation du tokeniseur](https://platform.openai.com/docs/guides/tokens) — guide interactif sur le comptage des tokens et la façon dont le tokeniseur encode le texte pour les modèles GPT',
+            '[Touvron et al., 2023. « Llama 2: Open Foundation and Fine-Tuned Chat Models »](https://arxiv.org/abs/2307.09288) — paper complet de Meta sur l\'architecture LLaMA 2, le pipeline d\'entraînement et la méthodologie d\'instruction-tuning',
+            '[Anthropic. Constitutional AI: Harmlessness from AI Feedback](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) — recherche d\'Anthropic sur l\'utilisation d\'une « constitution » pour guider le comportement du modèle comme alternative au RLHF pur',
+            '[HuggingFace. Tokenizers Library & Summary](https://huggingface.co/docs/transformers/main/tokenizer_summary) — plongée technique dans BPE, WordPiece, SentencePiece et autres algorithmes de tokenisation des LLMs modernes',
+            '[Google DeepMind. Gemini 1.5 Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_1_5_tech_report.pdf) — analyse d\'architecture et de performances d\'un modèle frontier avec une fenêtre de contexte de 1 M de tokens',
+            '[EleutherAI. GPT-NeoX-20B: An Open-Source Autoregressive Language Model](https://arxiv.org/abs/2204.06745) — documentation d\'entraînement de modèle open-source et analyse des choix architecturaux dans le développement de LLMs à grande échelle',
+            '[OpenAI. Improving Language Models by Segmenting, Attending, and Predicting with Structured State Space Models](https://arxiv.org/abs/2212.14052) — recherche sur les alternatives à l\'attention transformer pure pour le traitement efficace des longs contextes',
+          ],
+        },
+      },
+    },
     ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
     zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
