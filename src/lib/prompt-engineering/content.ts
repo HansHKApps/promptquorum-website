@@ -11779,6 +11779,22 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               text: 'All three are transformer-based LLMs trained on massive text corpora, but they differ in scale, context window, and post-training approach. GPT-4o (OpenAI) has a 128,000-token context window. Claude 4.6 Sonnet (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 2.5 Pro (Google DeepMind) has the largest context window at 2,000,000 tokens. These differences affect cost, latency, and suitability for different tasks — GPT-4o excels at reasoning, Claude at long context and nuance, Gemini at ultra-long document processing.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'How many tokens is 1000 words?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'In English, 1,000 words ≈ 1,300–1,350 tokens using GPT-4o or Claude tokenizers. Roughly 1 token = 0.75 words. For Chinese or Japanese, use 1 token ≈ 0.5 words — so 1,000 Chinese/Japanese words ≈ 2,000 tokens. Token count directly affects API cost and context window consumption, so understanding the ratio is critical for budgeting.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the difference between temperature and top-p?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Temperature sharpens or flattens the entire probability distribution — temperature 0 = deterministic, temperature 1.0 = standard, temperature 2.0 = very random. Top-p (nucleus sampling) restricts sampling to the smallest set of tokens whose cumulative probability reaches p — top-p 0.9 means "sample from the tokens that make up 90% of the probability mass." For most tasks, adjust top-p (0.8–0.95) rather than temperature; temperature is best reserved for creativity control.',
+            },
+          },
         ],
       },
       howToSchema: {
