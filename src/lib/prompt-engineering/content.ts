@@ -14796,7 +14796,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             { '攻击面': 'AI代码助手（IDE）', '注入载荷位置': '代码注释、依赖项README文件', '潜在影响': '恶意代码建议、凭证泄露' },
             { '攻击面': '面向客户的聊天机器人+CRM', '注入载荷位置': 'CRM备注或客户记录', '潜在影响': '虚假信息、定价操控、竞争对手推广' },
           ],
-          blockquote: '"We show that indirect prompt injections are a powerful new attack vector [...] an attacker can inject malicious instructions into any content that the LLM processes as part of its context window, including web pages that a user visits, files retrieved from storage, or API responses — without ever interacting with the application directly."',
+          blockquote: '"我们证明间接提示词注入是一种强大的新型攻击向量[...]攻击者可以将恶意指令注入到LLM作为其上下文窗口一部分处理的任何内容中，包括用户访问的网页、从存储中检索的文件或API响应——完全无需与应用程序直接交互。"',
           blockquoteSource: 'Greshake等，2023年。"Not What You\'ve Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection." [arXiv:2302.12173](https://arxiv.org/abs/2302.12173)',
         },
 
@@ -14840,7 +14840,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           content: [
             '**没有单一防御措施能消除提示词注入风险——有效保护需要在输入、处理、输出和访问层应用多层控制。** 这五层反映了NIST AI RMF（美国国家标准与技术研究院AI风险管理框架）的"治理、映射、度量、管理"方法，应用于LLM管道。',
           ],
-          blockquote: '"LLM01: Prompt Injection — Prompt injection vulnerabilities allow attackers to manipulate LLMs through carefully crafted inputs, leading to unauthorized actions. Direct injections overwrite system prompts, while indirect ones manipulate inputs from external sources."',
+          blockquote: '"LLM01：提示词注入——提示词注入漏洞允许攻击者通过精心编制的输入来操控LLM，导致未授权操作。直接注入会覆盖系统提示词，而间接注入会操控来自外部来源的输入。"',
           blockquoteSource: '[OWASP大型语言模型应用Top 10，LLM01](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — 开放全球应用安全项目，2023年',
           numberedItems: [
             '**输入净化：** 将所有用户输入和外部内容视为不可信。删除已知注入模式（正则表达式匹配"ignore previous instructions"、"new instructions:"、"system override"）。对于RAG管道，将检索到的内容包裹在显式分隔符中——`<retrieved_context>`与`<user_query>`——向模型表明检索内容是数据而非指令。',
@@ -14939,7 +14939,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**中国：** 国家互联网信息办公室（CAC）生成式AI法规（2023年8月生效）要求提供商针对对抗性输入进行安全评估。阿里巴巴Qwen 3和百度ERNIE 4.0已发布包含提示词注入评估的红队测试结果。',
             '**德国：** BSI（德国联邦信息安全办公室）指南要求在IT-Grundschutz合规下部署LLM的企业记录AI系统威胁模型，包括提示词注入向量和缓解措施。',
           ],
-          blockquote: '"Trustworthy AI systems are designed, developed, deployed, and operated in a manner consistent with AI risk management practices. AI systems that interact with adversarial inputs should be tested for prompt injection resistance as part of adversarial robustness evaluation."',
+          blockquote: '"可信AI系统应以与AI风险管理实践一致的方式进行设计、开发、部署和运营。与对抗性输入交互的AI系统应作为对抗性鲁棒性评估的一部分进行提示词注入抵抗力测试。"',
           blockquoteSource: '[NIST AI风险管理框架（AI RMF 1.0）](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.RMF.1.0.pdf) — 美国国家标准与技术研究院，2023年1月',
         },
 

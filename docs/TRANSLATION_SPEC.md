@@ -41,7 +41,8 @@ Quick-reference table. Use these exact codes, templates, and section titles.
 - All `sections[*].content[]` paragraph strings (array or single string)
 - All `sections[*].items[]` bullet points
 - All `sections[*].numberedItems[]` numbered list items
-- All `sections[*].blockquoteSource` **label text** (keep URL inside `[...]` unchanged)
+- All `sections[*].blockquote` text — translate the full quote to target language
+- All `sections[*].blockquoteSource` **label text** (keep URL inside `[...]` unchanged; author names stay in English)
 - All `sections[*].columns[]` table header row (translated strings)
 - All `sections[*].rows[*]` table cell **keys AND values**
   - **Keys must exactly match the translated `columns[]` entries** (case-sensitive)
@@ -61,7 +62,6 @@ Quick-reference table. Use these exact codes, templates, and section titles.
 - **Boolean flags:** `isTldr`, `tableFormat`, `theme` (values unchanged)
 - **Numeric positions:** `position` in `HowToStep`, array indices
 - **Code blocks:** Full `codeBlock` string + `codeLanguage` value (unchanged)
-- **Blockquotes:** Academic citation text (e.g., "Greshake et al., 2023") — keep in original English; translate only `blockquoteSource` label text that comes after
 - **`relatedReading` links:** The URL part; translate only the link label text inside `[...]` and the descriptive suffix after `—`
 
 ---
