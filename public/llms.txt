@@ -36,6 +36,17 @@
 - [FAQ](https://www.promptquorum.com/faq): 26 answers covering pricing, privacy, frameworks, hallucination detection, local LLMs
 - [Download](https://www.promptquorum.com/download): Desktop app for macOS and Windows
 
+## Prompt Engineering Guides (Core Content)
+
+- [What Is Prompt Engineering?](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering): Foundational guide covering the definition, history, core techniques, and why prompt engineering matters in 2026.
+- [5 Building Blocks Every Prompt Needs](https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs): The 5 essential structural components of every effective prompt — role, task, input, constraints, output format.
+- [Prompt Injection & Security: How to Defend AI Systems](https://www.promptquorum.com/prompt-engineering/prompt-injection-and-security): OWASP LLM #1 attack vector — direct vs indirect injection, jailbreak vs injection, and 5-layer defense framework.
+- [How LLMs Actually Work: Tokens, Attention, and Inference](https://www.promptquorum.com/prompt-engineering/how-llms-actually-work): Demystify token prediction, attention mechanisms, RLHF training, and inference for better prompt design.
+- [How Prompt Engineering Evolved (2018–2026)](https://www.promptquorum.com/prompt-engineering/how-prompt-engineering-evolved): Historical timeline from few-shot prompting with GPT-3 to modern multi-modal, multi-step, multi-model techniques.
+- [Chain of Thought Prompting: Structured Reasoning](https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting): How step-by-step reasoning prompts unlock complex problem-solving in GPT-4o, Claude, Gemini.
+- [Constrained Prompting: Limiting Model Behavior](https://www.promptquorum.com/prompt-engineering/constrained-prompting): Enforce output boundaries, prevent hallucination escape, and make models comply with structured rules.
+- [RAG Explained: Retrieval-Augmented Generation](https://www.promptquorum.com/prompt-engineering/rag-explained): How to augment LLM knowledge with external documents; retrieval strategies, prompt engineering for RAG, and hallucination mitigation.
+
 ## Blog & Research
 
 - [8 Prompt Frameworks Compared: CRAFT vs CO-STAR vs APE (2026 Guide)](https://www.promptquorum.com/blog/prompt-frameworks): When to use each of the 9 built-in frameworks; strengths, ideal use cases, and effectiveness data for CO-STAR, CRAFT, RISEN, APE, SPECS, TRACE, RTF, Google Prompt, and Single Prompt Line.
@@ -52,4 +63,4 @@
 
 ---
 
-Last updated: 2026-03-15
+Last updated: 2026-03-31
