@@ -923,6 +923,38 @@ Every article's first H2 (or main section heading) must NOT repeat the H1 title 
 
 ---
 
+## Rule 18a: Question-Format H2s (Required for GEO + "People Also Ask")
+
+**Every major section heading (H2) must be phrased as a question OR lead with a direct answer phrase.** This is the primary trigger for Google "People Also Ask" boxes and AI engine section citations.
+
+**Why this matters:** Google extracts H2 questions + the first sentence as standalone answers. AI systems (Perplexity, ChatGPT Search, Grok) match user queries to the nearest question-format heading when building citations. A descriptive label like "Core Building Blocks" is invisible to this system. A question like "What Are the 5 Building Blocks Every Prompt Needs?" is directly matchable.
+
+**Question-format H2 examples:**
+
+| Section topic | Wrong ❌ | Right ✅ |
+|---|---|---|
+| Intro/definition | "What Is Prompt Engineering" | "What Is Prompt Engineering?" (must end with `?`) |
+| Defense steps | "How to Defend Against Injection" | "How Do You Defend Against Prompt Injection?" |
+| Comparison | "Direct vs Indirect Injection" | "What Is the Difference Between Direct and Indirect Prompt Injection?" |
+| Context | "Global Regulatory Landscape" | "Which Countries Regulate LLM Security in 2026?" |
+| Checklist | "Security Checklist" | "What Should Be on Every LLM Security Checklist?" |
+
+**Allowed non-question formats** (when the section is a reference block, not a conceptual answer):
+- TL;DR / Key Takeaways blocks
+- Related Reading sections
+- Sources sections
+- Security checklists (list format, not prose)
+- FAQ sections (already question-format by definition)
+
+**FAQ phrasing rule (sub-rule):** FAQ questions must mirror how users actually search — natural language, conversational. Check phrasing against Google Autocomplete or "People Also Ask" for the topic before finalizing.
+
+**Wrong FAQ question:** "Can prompt injection attacks be prevented?"  
+**Right FAQ question:** "Is it possible to fully prevent prompt injection?"
+
+**Rule:** Every new article section title set in `content.ts` as `sections[*].title` must be reviewed against this rule before publish. All 5 language versions of the title must also use question format.
+
+---
+
 ## Rule 19: FAQ Type Diversity
 
 Every FAQ section must include questions from at least 3 of the following 5 question types. Do not write all FAQs as basic definitional questions.
