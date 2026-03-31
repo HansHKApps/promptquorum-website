@@ -15047,10 +15047,10 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       readTime: 'Coming soon',
       sections: {},
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'KI-Beschränkungen – Was LLMs nicht können', intro: 'In Kürze — Verständnis der harten Grenzen großer Sprachmodelle, wo sie scheitern und wie Sie Systeme entwerfen, die diese Grenzen berücksichtigen.', publishDate: '2026-03-24', readTime: 'In Kürze', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Limitations de l\'IA – Ce que les LLMs ne peuvent pas faire', intro: 'À venir — comprendre les limites difficiles des grands modèles de langage, où ils échouent et comment concevoir des systèmes qui tiennent compte de ces limitations.', publishDate: '2026-03-24', readTime: 'À venir', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'AIの制限 — LLMができないこと', intro: '近日公開予定 — 大規模言語モデルの厳しい限界、失敗する場所、およびこれらの制限を考慮したシステムを設計する方法を理解します。', publishDate: '2026-03-24', readTime: '近日公開予定', sections: {} },
+    zh: { theme: 'Fundamentals', title: 'AI限制——LLM不能做的事', intro: '即将推出——理解大型语言模型的硬边界、它们失败的地方以及如何设计考虑这些限制的系统。', publishDate: '2026-03-24', readTime: '即将推出', sections: {} },
   },
 
   'open-source-vs-proprietary-llms': {
@@ -15062,10 +15062,10 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       readTime: 'Coming soon',
       sections: {},
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Open Source vs. proprietäre LLMs: Das Rennen', intro: 'In Kürze — Vergleich von Open-Source-Modellen wie LLaMA und Mistral mit proprietären Optionen wie GPT-4o und Claude, einschließlich Kosten-, Kontroll- und Leistungs-Kompromissen.', publishDate: '2026-03-24', readTime: 'In Kürze', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'LLMs open source vs propriétaires : La course', intro: 'À venir — comparaison des modèles open source comme LLaMA et Mistral avec les options propriétaires comme GPT-4o et Claude, incluant les compromis de coût, contrôle et performance.', publishDate: '2026-03-24', readTime: 'À venir', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'オープンソース vs 独自LLM：競争の行方', intro: '近日公開予定 — LLaMAやMistralなどのオープンソースモデルとGPT-4oやClaudeなどの独自オプションを、コスト・制御・パフォーマンスのトレードオフを含めて比較します。', publishDate: '2026-03-24', readTime: '近日公開予定', sections: {} },
+    zh: { theme: 'Fundamentals', title: '开源与专有LLM：竞争格局', intro: '即将推出——将LLaMA和Mistral等开源模型与GPT-4o和Claude等专有选项进行比较，包括成本、控制和性能权衡。', publishDate: '2026-03-24', readTime: '即将推出', sections: {} },
   },
 
   'geopolitics-and-ai': {
@@ -15077,10 +15077,10 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       readTime: 'Coming soon',
       sections: {},
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Geopolitik und KI', intro: 'In Kürze — wie geopolitische Spannungen, Regulierung und regionale Strategien die KI-Entwicklung prägen und was das für Prompt-Ingenieure und Organisationen bedeutet.', publishDate: '2026-03-24', readTime: 'In Kürze', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Géopolitique et IA', intro: 'À venir — comment les tensions géopolitiques, la réglementation et les stratégies régionales façonnent le développement de l\'IA et ce que cela signifie pour les ingénieurs de prompts et les organisations.', publishDate: '2026-03-24', readTime: 'À venir', sections: {} },
+    ja: { theme: 'Fundamentals', title: '地政学とAI', intro: '近日公開予定 — 地政学的緊張、規制、地域戦略がAI開発をどのように形成し、プロンプトエンジニアや組織にとって何を意味するかを解説します。', publishDate: '2026-03-24', readTime: '近日公開予定', sections: {} },
+    zh: { theme: 'Fundamentals', title: '地缘政治与AI', intro: '即将推出——地缘政治紧张局势、监管和地区战略如何塑造AI发展，以及这对提示词工程师和组织意味着什么。', publishDate: '2026-03-24', readTime: '即将推出', sections: {} },
   },
 
   'which-framework-to-use': {
