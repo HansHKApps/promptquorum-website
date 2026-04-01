@@ -19812,6 +19812,63 @@ zh: {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai', width: 1200, height: 630 },
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'AI Regulatory Framework Comparison: EU AI Act vs US Strategy vs China',
+        description: 'Comprehensive comparison of how the European Union, United States, and China regulate artificial intelligence across 9 key dimensions.',
+        url: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Primary Regulatory Approach',
+            description: 'EU: Rights-based legal framework classifying AI by risk to fundamental rights. US: Sectoral, innovation-first approach with no federal AI law. China: State-directed, control-first strategy treating AI as a national development priority.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Key AI Legislation',
+            description: 'EU: EU AI Act (2024, mandatory) + GDPR. US: No federal AI law; NIST AI Risk Management Framework (voluntary); Trump AI Action Plan (2025). China: Cyberspace Administration of China (CAC) algorithm and generative AI regulations (2022–2023).',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Risk Tiering Framework',
+            description: 'EU: 4-tier system (Unacceptable/banned, High/conformity assessment required, Limited/disclosure required, Minimal/no specific obligations). US: Voluntary NIST AI RMF with 7 trustworthiness dimensions; no mandatory tiering. China: Pre-deployment security assessment required for generative AI.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Maximum Penalties',
+            description: 'EU: €35 million or 7% of global turnover for prohibited practices; €15 million or 3% for high-risk violations. US: No federal AI-specific fine; FTC pursues unfair/deceptive practices. China: Up to ¥100,000 per violation; service suspension for non-compliant generative AI.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Data Protection Rules',
+            description: 'EU: GDPR + AI Act; personal data in training requires legal basis. US: Sectoral (HIPAA, CCPA, FERPA); no federal equivalent to GDPR. China: Personal Information Protection Law (PIPL, 2021); state security agencies retain data access rights.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'Banned AI Applications',
+            description: 'EU: Social scoring by public authorities, real-time public biometric surveillance, AI exploiting cognitive vulnerabilities, untargeted facial image scraping. US: No federal bans; state-level variation. China: Content undermining CPC leadership or "socialist core values"; deepfakes must be disclosed.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 7,
+            name: 'Enforcement Authority',
+            description: 'EU: EU AI Office (GPAI models) + national market surveillance authorities (high-risk AI) + Data Protection Authorities (GDPR). US: FTC, FDA, CFPB, EEOC, NIST across domains. China: Cyberspace Administration of China (CAC) as primary enforcer.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 8,
+            name: 'International Reach',
+            description: 'EU: Brussels Effect — applies to any AI placed on EU market or whose output is used in EU; extraterritorial by design. US: Export controls on hardware; no extraterritorial content regulation. China: BRI AI exports spread Chinese governance norms; Great Firewall limits foreign AI access domestically.',
+          },
+        ],
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
