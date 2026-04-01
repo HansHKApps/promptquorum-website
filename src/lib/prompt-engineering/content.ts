@@ -17333,6 +17333,19 @@ zh: {
           ],
         },
 
+        featureComparison: {
+          title: 'Quick Feature Comparison',
+          columns: ['Feature', 'Open Source LLM', 'Proprietary LLM'],
+          rows: [
+            { 'Feature': 'Cost', 'Open Source LLM': 'Infrastructure only ($0.50–2.00/hr self-hosted)', 'Proprietary LLM': 'Pay-per-token ($0.15–5.00 per 1M input tokens)' },
+            { 'Feature': 'Control', 'Open Source LLM': 'Full — own weights, can fine-tune and modify', 'Proprietary LLM': 'Limited — vendor controls model and updates' },
+            { 'Feature': 'Setup', 'Open Source LLM': 'Complex — requires GPUs, VRAM, DevOps skill', 'Proprietary LLM': 'Easy — API keys, network access only' },
+            { 'Feature': 'Performance', 'Open Source LLM': '80–82% (MMLU) — competitive on specific tasks', 'Proprietary LLM': '88–90% (MMLU) — higher on general reasoning' },
+            { 'Feature': 'Data Privacy', 'Open Source LLM': 'Full control — no data leaves your infrastructure', 'Proprietary LLM': 'Provider dependent — data transits vendor servers' },
+          ],
+          tableFormat: true,
+        },
+
         quickReference: {
           title: 'Quick Comparison: Top Open-Source vs Proprietary Models in 2026',
           columns: ['Model', 'Type', 'Context Window', 'Approx. Cost', 'Best For'],
