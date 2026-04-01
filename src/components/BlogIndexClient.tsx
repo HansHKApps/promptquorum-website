@@ -6,6 +6,19 @@ import { blogMetadata } from '@/lib/blog/blogTranslations'
 import { translations } from '@/translations'
 import type { Language } from '@/translations'
 
+// Helper to convert "Published Month DD, YYYY" to ISO date "YYYY-MM-DD" for datetime attribute
+function getDateISO(dateStr: string): string {
+  const match = dateStr.match(/(\w+)\s+(\d{1,2}),?\s+(\d{4})/)
+  if (!match) return new Date().toISOString().split('T')[0]
+  const monthMap: Record<string, string> = {
+    January: '01', February: '02', March: '03', April: '04', May: '05', June: '06',
+    July: '07', August: '08', September: '09', October: '10', November: '11', December: '12'
+  }
+  const [, month, day, year] = match
+  const monthNum = monthMap[month] || '01'
+  return `${year}-${monthNum}-${day.padStart(2, '0')}`
+}
+
 const blogPosts = [
   { key: 'frameworks' as const, slug: 'prompt-frameworks' },
   { key: 'localAI' as const, slug: 'local-ai-vs-cloud' },
@@ -56,7 +69,7 @@ function BlogIndexInner() {
                     {post.intro}
                   </p>
                   <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>{post.publishDate}</span>
+                    <time dateTime={getDateISO(post.publishDate)}>{post.publishDate}</time>
                     <span className="flex items-center gap-1 text-purple-600 font-medium group-hover:gap-2 transition-all">
                       {post.readTime} →
                     </span>
