@@ -19240,7 +19240,528 @@ zh: {
         },
       },
     },
-    zh: { theme: 'Fundamentals', title: '开源与专有LLM：竞争格局', intro: '即将推出——将LLaMA和Mistral等开源模型与GPT-4o和Claude等专有选项进行比较，包括成本、控制和性能权衡。', publishDate: '2026-03-24', readTime: '即将推出', sections: {} },
+    zh: {
+      theme: 'Techniques',
+      title: '开源与专有LLM：竞争格局',
+      intro: '开放权重模型（如LLaMA 3.1和Mistral）提供控制力与成本节省；专有模型（如GPT-4o和Claude 4.6 Sonnet）则提供前沿性能。两类模型的能力正在趋同，但在访问方式、定制化程度和合规要求上存在明显分歧。',
+      metaDescription: '开源与专有LLM对比：2026年的成本、控制权、隐私保护、微调能力与性能权衡分析。为您的用例选择合适的模型。',
+      publishDate: '2026-03-24',
+      dateModified: '2026-04-01',
+      readTime: '阅读约14分钟',
+      educationalLevel: 'Intermediate',
+      primaryTerm: '开源LLM',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '开源与专有LLM：竞争格局',
+        description: '开放权重模型（如LLaMA 3.1和Mistral）提供控制力与成本节省；专有模型（如GPT-4o和Claude 4.6 Sonnet）则提供前沿性能。',
+        datePublished: '2026-03-24',
+        dateModified: '2026-04-01',
+        keywords: ['开源LLM', 'LLaMA', 'Mistral', '专有模型', 'GPT-4o', 'Claude', '微调', '成本分析', '开放权重', '本地推理'],
+        teaches: [
+          'LLM中开放权重与开源许可的区别',
+          '开放权重模型与专有模型在成本和性能上的权衡',
+          '何时选择本地推理与API访问',
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Open-source LLMs' },
+          { '@type': 'Thing', name: 'LLaMA 3.1' },
+          { '@type': 'Thing', name: 'Mistral Large' },
+          { '@type': 'Thing', name: 'EU AI Act compliance' },
+          { '@type': 'Thing', name: 'LLM fine-tuning' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1 + p', '.key-takeaways'],
+        },
+        mentions: [
+          { '@type': 'Thing', name: 'GPT-4o' },
+          { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'Thing', name: 'Gemini 2.5 Pro' },
+          { '@type': 'Thing', name: 'LLaMA 3.1' },
+          { '@type': 'Thing', name: 'Mistral Large 2' },
+          { '@type': 'Thing', name: 'Qwen 2.5' },
+          { '@type': 'Thing', name: 'Ollama' },
+        ],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 630 },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '开放权重模型与专有LLM——全面对比',
+        description: '从成本、性能、隐私、微调、上下文窗口、数据主权、速度、支持、更新频率和供应商锁定十个维度对比开放权重模型与专有LLM。',
+        numberOfItems: 10,
+        url: 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: '成本模型',
+            description: '开放权重：每小时基础设施费用0.50–2.00美元；部署后免费，无按token计费。专有：API按token计费，输入每百万token 0.15–5.00美元，输出每百万token 0.30–15.00美元。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: '性能上限',
+            description: '开放权重（LLaMA 70B、Mistral Large）：MMLU 80–82%，在特定任务上具有竞争力。专有（GPT-4o、Claude、Gemini）：MMLU 88–90%，在推理和多模态方面具有更高上限。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: '上下文窗口',
+            description: '开放权重：LLaMA 3.1为131K，Mistral Large为123K，Qwen为128K——足以处理长文档。专有：GPT-4o为128K，Claude为200K，Gemini 2.5 Pro为200万token。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: '隐私保护',
+            description: '开放权重：完全数据主权，数据不离开您的基础设施，供应商零日志记录。专有：数据经过供应商服务器传输；承诺合同删除，但短暂曝光仍会发生。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: '微调能力',
+            description: '开放权重：支持完整微调（LoRA、QLoRA、全量训练）；您拥有生成的权重。专有：有限（仅OpenAI mini模型）或不可用（Anthropic Claude）。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: '数据主权',
+            description: '开放权重：本地部署实现完全主权；可符合欧盟AI法案、HIPAA、SOX要求。专有：依赖API；数据驻留不明确；合规性难以证明。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 7,
+            name: '推理速度',
+            description: '开放权重：取决于硬件——A100每秒20–30个token（70B），RTX 4090每秒10–15个token。专有：优化服务器每秒30–50+个token；供应商负责优化。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 8,
+            name: '技术支持',
+            description: '开放权重：社区驱动文档；无供应商SLA；自行支持。专有：包含供应商支持、API SLA、事故响应和正常运行时间保证。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 9,
+            name: '更新频率',
+            description: '开放权重：离线运行；您控制新版本的采用；无强制更新。专有：服务器端；供应商更新模型；适应或使用版本化API端点。',
+          },
+          {
+            '@type': 'ListItem',
+            position: 10,
+            name: '供应商锁定',
+            description: '开放权重：零锁定；随处部署；拥有自己的计算资源。专有：中度到高度锁定；模型行为、API和定价受供应商控制。',
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '如何在开源与专有LLM之间做出选择',
+        'description': '基于成本、隐私、定制化和性能需求，选择开放权重或专有模型的决策框架。',
+        'totalTime': 'PT10M',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': '评估数据隐私需求', 'text': '如果数据必须保留在本地（医疗、金融、法律、欧盟AI法案高风险部署），则必须使用开放权重模型。专有模型通过外部API路由数据，可能违反HIPAA、GDPR或律师-客户特权要求。' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '计算每日token量', 'text': '计算100万、1000万和1亿每日token的API成本。每天低于约500万token时，专有API通常更便宜，因为基础设施成本为零。每天超过1000万token时，开放权重自托管具有成本效益；超过1亿token时，开放权重明显胜出。' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '评估微调需求', 'text': '如果您需要针对特定领域、术语或任务分布对模型进行专业化，则需要开放权重模型。开放权重支持LoRA、QLoRA和全量微调——您拥有生成的权重。专有API禁止或严格限制定制化。' },
+          { '@type': 'HowToStep', 'position': 4, 'name': '检查基础设施准备情况', 'text': '开放权重需要VRAM、GPU和DevOps技能进行自托管（LLaMA 70B：在A100上约需40GB VRAM）。专有模型只需API密钥和网络连接，零基础设施。如果缺乏GPU资源或随叫随到的运维能力，专有模型是更简单的选择。' },
+          { '@type': 'HowToStep', 'position': 5, 'name': '在实际任务上进行基准测试', 'text': '使用PromptQuorum同时将您的提示词分发给GPT-4o、Claude和本地Ollama实例。并排比较输出质量、延迟和成本。在您的具体任务和数据上胜出的模型才是正确选择——而不是基准测试排名第一的模型。' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'LLaMA 3.1真的是开源的还是只是开放权重？', 'acceptedAnswer': { '@type': 'Answer', 'text': '只是开放权重。LLaMA 3.1在Llama Community License 2.1下发布模型权重，该许可证不符合OSI的开源标准。该许可证允许商业使用，但限制将衍生品命名为"LLaMA"，要求署名，并包含竞业禁止条款。真正的开源许可证（Apache 2.0、MIT、GPL）没有这些限制。' } },
+          { '@type': 'Question', 'name': '2026年哪个更便宜——自托管LLaMA还是使用GPT-4o API？', 'acceptedAnswer': { '@type': 'Answer', 'text': '每天低于500万token时，GPT-4o API更便宜——无基础设施成本。每天500万至1000万token时，成本持平。每天超过1000万token时，自托管LLaMA 3.1在成本上胜出。每天1亿token时，自托管便宜10–20倍。隐藏因素：GPU摊销、电费、DevOps人力成本和停机风险往往使边界情况倾向于API。' } },
+          { '@type': 'Question', 'name': '欧盟AI法案是否影响开源LLM？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的，取决于部署方式。高风险AI系统（招聘、信贷、法律决策）需要风险文档、偏见测试和审计跟踪。本地部署的开放权重模型使合规更容易——您控制数据和日志。专有API迫使依赖供应商证明。训练计算量超过10^25 FLOP的通用模型面临额外的透明度义务。' } },
+          { '@type': 'Question', 'name': '2026年哪个开源LLM最接近GPT-4o？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 3.1 70B和Mistral Large 2最接近。MMLU分数：GPT-4o 88.7%，LLaMA 3.1 70B 80.5%，Mistral Large 81.2%。在分类、摘要和提取任务上，开放权重现已与专有模型相当。推理差距每年缩小约2–3个百分点。' } },
+          { '@type': 'Question', 'name': '我可以微调GPT-4o吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不可以。OpenAI微调仅适用于GPT-4o mini、GPT-4和gpt-3.5-turbo。Anthropic不为Claude提供微调。Google提供Gemini微调。开放权重模型（LLaMA、Mistral、Qwen）通过LoRA、QLoRA或全量训练支持完整微调。' } },
+          { '@type': 'Question', 'name': '在本地运行LLaMA 3.1 70B需要什么硬件？', 'acceptedAnswer': { '@type': 'Answer', 'text': '全精度：约40GB VRAM（A100 80GB或双RTX 4090）。4位量化：约16–20GB VRAM（单张RTX 4090）。LLaMA 3.1 8B可在消费级硬件上运行（约8GB VRAM）。Ollama自动处理量化和优化。' } },
+          { '@type': 'Question', 'name': '我可以在MacBook上运行开源LLM吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。搭载Apple Silicon（M1/M2/M3/M4/M5）的Mac可通过Ollama或LM Studio运行开放权重模型。M2 Pro 16GB可以10–15个token/秒的速度运行LLaMA 3.1 8B。M3 Max 128GB可运行LLaMA 3.1 70B（4位量化）。速度比专用GPU服务器慢，但适合开发使用。' } },
+          { '@type': 'Question', 'name': '开源LLM与专有模型有相同的局限性吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在基础层面是的：两者都会产生幻觉，都有知识截止日期和上下文限制。开放权重无法进行服务器端修补——更新需要新版本发布。专有模型可以逐步改进。对开放权重进行微调可以缓解特定领域的限制，但无法克服结构性约束。' } },
+          { '@type': 'Question', 'name': '2026年哪个开放权重模型最适合编程？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 3.1 70B和Mistral Large 2最强。HumanEval分数：约73–78%，而GPT-4o约90%，Claude 4.6 Sonnet约87%。在Python、SQL和结构化输出方面具有竞争力。专有模型在复杂算法设计和多文件推理方面仍保持优势。' } },
+          { '@type': 'Question', 'name': '我可以将开源LLM用于商业应用吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。LLaMA、Mistral和Qwen明确允许商业使用。主要限制：不能将衍生品品牌命名为"LLaMA"。LLaMA 2限制月活用户超过7亿的组织（LLaMA 3.x中已取消）。内部私有推理部署完全避免了命名问题。' } },
+          { '@type': 'Question', 'name': 'LoRA是什么？为什么它对开放权重微调如此重要？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LoRA（低秩适应）训练约1–5%的模型参数作为适配器，而非全量反向传播，将训练成本降低5–10倍。QLoRA通过4位量化将其扩展到消费级GPU（16–24GB VRAM）。LoRA是针对LLaMA和Mistral进行领域专业化而无需全量重训练的标准方法。' } },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: '核心要点',
+          isTldr: true,
+          items: [
+            '**开放权重模型在规模化时成本更低；专有模型提供前沿性能和托管基础设施。** 每天低于500万token时，API更便宜。每天超过1000万token时，开放权重自托管在成本上胜出。',
+            '开放权重 = 可下载的模型权重（LLaMA、Mistral、Qwen）；专有 = 仅限API访问（GPT-4o、Claude 4.6、Gemini 2.5）。"开放权重"与开源许可证不同。',
+            '性能差距已缩小：LLaMA 3.1 70B和Mistral Large 2现已在分类、摘要和结构化任务上与专有模型相当——但在复杂推理方面仍有差距（MMLU差距：88.7% vs 80–81%）。',
+            '专有优势：前沿推理、工具集成、托管基础设施。开放权重优势：完整微调、本地部署、零数据外泄、欧盟AI法案合规。',
+            '开放权重需要GPU基础设施和DevOps技能；专有模型需要API密钥和网络访问。根据基础设施准备情况选择，而不仅仅是成本。',
+            '微调：开放权重模型支持LoRA、QLoRA和全量训练；专有模型提供有限（OpenAI/Google）或无微调（Anthropic）选项。',
+            '隐私/合规：本地部署的开放权重 = 数据不离开您的基础设施。专有API通过供应商服务器路由数据，可能违反医疗、金融或法律合规规定。',
+          ],
+        },
+
+        whatIsOpenSource: {
+          title: '什么是开源LLM？',
+          content: [
+            '**"开源"与"开放权重"并不同义。** 开源许可证（Apache 2.0、MIT、GPL）适用于源代码，允许不受限制的商业和私人使用。开放权重意味着训练好的模型权重可以下载，但可能受专门许可证的限制。LLaMA 3.1是开放权重，而非开源——Meta在Llama Community License 2.1下发布权重，允许商业使用但包含限制，禁止将衍生模型命名为"LLaMA"且要求署名。',
+            '**专有模型既非开放权重也非开源。** OpenAI（GPT-4o）、Anthropic（Claude 4.6 Sonnet）和Google（Gemini 2.5 Pro）不发布模型权重。您只能通过API访问它们。权重保持封闭；您无法查看、下载、修改或自行部署模型。',
+            '理解这一区别对合规、定制化和数据主权至关重要。[了解LLM内部工作原理以理解权重的重要性](/prompt-engineering/how-llms-actually-work?lang=zh)。',
+          ],
+        },
+
+        whatIsProprietary: {
+          title: '什么是专有LLM？',
+          content: [
+            '**专有LLM是封闭模型，只能通过API访问——供应商控制权重、训练数据、安全对齐和所有更新。** OpenAI（GPT-4o）、Anthropic（Claude 4.6 Sonnet）、Google（Gemini 2.5 Pro）和Mistral API都是专有的。您无法下载权重、查看训练数据、在本地运行推理或直接定制模型权重。',
+            '**定价为供应商控制服务器上的按token API计费。** GPT-4o的输入费用为每百万token 5美元，输出为每百万token 15美元。Claude 4.6 Sonnet为3美元/15美元。Gemini 2.5 Pro为1.25美元/2.50美元（≤200K上下文）。您没有基础设施成本，但无法精确预测每月支出——成本随使用量扩展。',
+            '**专有供应商对模型更新、行为和对齐保持控制。** 当OpenAI更新GPT-4o时，您会自动获得新版本。安全对齐、Constitutional AI和指令遵循是供应商的责任。对于受监管行业，这可以简化合规——供应商维护审计跟踪和已发布的安全实践。',
+          ],
+        },
+
+        definitions: {
+          title: '关键概念与定义',
+          content: [
+            '**开放权重模型。** 一种大型语言模型，其训练权重（训练过程中学习的数值参数）公开可用，可以下载、修改、微调和自托管。示例：LLaMA 3.1（Meta）、Mistral Large 2（Mistral AI）、Qwen 2.5（阿里巴巴）。不要与开源许可证混淆；"开放权重"是指可下载的模型文件，不一定是源代码或符合OSI的许可证。',
+            '**专有LLM。** 一种大型语言模型，其权重保密且从不发布。访问完全通过供应商的API进行，需要按token计费和网络连接。示例：GPT-4o（OpenAI）、Claude 4.6 Sonnet（Anthropic）、Gemini 2.5 Pro（Google）。用户无法下载、检查、修改或自托管模型。',
+            '**微调。** 在针对特定领域或任务的新的较小数据集上重新训练预训练模型的过程。微调更新模型的权重以专业化于您的用例（例如客服语气、领域词汇）。开放权重模型通过LoRA、QLoRA或全量反向传播支持完整微调；大多数专有模型限制或禁止微调。',
+            '**训练数据截止日期。** 模型对此日期之后的事件或信息不具备知识的日期。GPT-4o的截止日期为2024年10月；Claude 4.6 Sonnet为2025年初；Gemini 2.5 Pro为2024年10月。模型无法提供截止日期后事件的准确信息。',
+            '**模型权重。** 训练过程中学习的数值参数（数十亿到数万亿个数字）。权重决定了模型的行为、知识和推理模式。开放权重模型发布这些文件（约15–800 GB，取决于模型大小）；专有模型将权重保密。',
+          ],
+        },
+
+        questionDifference: {
+          title: '开源与专有LLM有什么区别？',
+          content: '开源LLM（LLaMA 3.1、Mistral、Qwen）使模型权重公开可用——组织可以下载、检查、微调和自托管它们。专有LLM（GPT-4o、Claude、Gemini）由供应商拥有，只能通过API访问。用户无法下载或修改专有权重，但受益于托管基础设施和供应商更新。',
+        },
+
+        questionPerformance: {
+          title: '开源LLM与专有模型一样好吗？',
+          content: '在许多任务上，是的。推理基准（MMLU）上的性能差距已缩小至7–8个百分点。在分类、摘要和特定领域任务上，LLaMA 3.1 70B等开放权重模型现已与专有同类产品相当。专有模型在复杂多步骤推理、智能体编排和多模态输入处理方面仍然领先。',
+        },
+
+        questionWhenToUse: {
+          title: '企业什么时候应该使用开源LLM？',
+          content: '当数据隐私是强制要求时（医疗、金融、法律），当每天处理超过1000万token时，当需要特定领域微调时，或者当欧盟AI法案合规要求本地数据驻留时，企业应使用开源LLM。开放权重模型还消除了供应商锁定和按token API计费。',
+        },
+
+        questionCanReplace: {
+          title: '开源LLM能取代专有AI模型吗？',
+          content: '对于许多用例，可以。开源LLM在分类、摘要、提取和特定领域任务上已可用于生产。专有模型在复杂推理、多模态输入、工具集成和零基础设施部署方面保持优势。混合方法——根据成本、隐私和性能需求路由任务——优于单独依赖任一模型类别。',
+        },
+
+        featureComparison: {
+          title: '快速功能对比',
+          columns: ['功能', '开源LLM', '专有LLM'],
+          rows: [
+            { '功能': '成本', '开源LLM': '仅基础设施费用（自托管每小时0.50–2.00美元）', '专有LLM': '按token付费（输入每百万token 0.15–5.00美元）' },
+            { '功能': '控制权', '开源LLM': '完全——拥有权重，可微调和修改', '专有LLM': '有限——供应商控制模型和更新' },
+            { '功能': '部署难度', '开源LLM': '复杂——需要GPU、VRAM、DevOps技能', '专有LLM': '简单——仅需API密钥和网络访问' },
+            { '功能': '性能', '开源LLM': '80–82%（MMLU）——在特定任务上有竞争力', '专有LLM': '88–90%（MMLU）——在通用推理上更高' },
+            { '功能': '数据隐私', '开源LLM': '完全控制——数据不离开您的基础设施', '专有LLM': '取决于供应商——数据经过供应商服务器传输' },
+          ],
+          tableFormat: true,
+        },
+
+        decisionFramework: {
+          title: '决策框架：您应该选择哪个？',
+          content: '**用这个框架在30秒内做决定。** 回答：您的用例是否符合以下类别之一？如果多个标准适用，请根据对您项目的重要性加权。',
+          items: [
+            '**选择开源LLM的情况：**',
+            '• 数据隐私至关重要（医疗、金融、法律、欧盟GDPR）',
+            '• 您需要完全的模型控制和定制化（微调、领域专业化）',
+            '• 您每天处理1000万+个token（规模化时成本节省显著）',
+            '• 您在没有互联网访问的环境中运行（潜艇、飞机、离线网络）',
+            '• 高风险AI系统需要符合欧盟AI法案',
+            '• 您希望避免供应商锁定，保持独立性',
+            '',
+            '**选择专有LLM的情况：**',
+            '• 您需要推理和多步骤任务的前沿性能',
+            '• 您每天处理不到500万token（API比基础设施更便宜）',
+            '• 您希望零基础设施开销和托管扩展',
+            '• 您需要多模态输入（图像、音频）可靠性',
+            '• 您需要工具集成和智能体编排',
+            '• 您偏好供应商管理的安全对齐和更新',
+            '• 您缺乏GPU资源或DevOps专业知识',
+            '',
+            '**选择混合方式（两者都用）的情况：**',
+            '• 您有混合用例：私密工作使用开放权重，复杂推理使用专有',
+            '• 您可以根据隐私/成本/延迟需求智能路由请求',
+            '• 您希望在决定使用某一供应商之前比较模型',
+          ],
+        },
+
+        quickReference: {
+          title: '快速参考：2026年顶级开源与专有模型对比',
+          columns: ['模型', '类型', '上下文窗口', '大致成本', '最适用场景'],
+          rows: [
+            { '模型': 'GPT-4o', '类型': '专有', '上下文窗口': '128K个token', '大致成本': '输入/输出每百万token 5/15美元', '最适用场景': '工具集成、智能体、多模态推理' },
+            { '模型': 'Claude 4.6 Sonnet', '类型': '专有', '上下文窗口': '200K个token', '大致成本': '输入/输出每百万token 3/15美元', '最适用场景': '写作、代码审查、结构化推理' },
+            { '模型': 'Gemini 2.5 Pro', '类型': '专有', '上下文窗口': '200万个token', '大致成本': '输入/输出每百万token 1.25/2.50美元（≤200K）', '最适用场景': '长文档研究、Google集成' },
+            { '模型': 'LLaMA 3.1 70B', '类型': '开放权重', '上下文窗口': '131K个token', '大致成本': '在A100 GPU上约每小时2美元（自托管）', '最适用场景': '隐私保护、微调、规模化成本' },
+            { '模型': 'Mistral Large 2', '类型': '开放权重', '上下文窗口': '123K个token', '大致成本': '在A100 GPU上约每小时2美元（自托管）', '最适用场景': '欧洲部署、有竞争力的推理' },
+            { '模型': 'Qwen 2.5 72B', '类型': '开放权重', '上下文窗口': '128K个token', '大致成本': '在A100 GPU上约每小时2美元（自托管）', '最适用场景': '亚太地区工作负载、中文处理' },
+            { '模型': 'Mistral 7B', '类型': '开放权重', '上下文窗口': '32K个token', '大致成本': '在消费级GPU上约每小时0.50美元（自托管）', '最适用场景': '测试、原型开发、成本敏感工作' },
+          ],
+          tableFormat: true,
+        },
+
+        openSourceLandscape: {
+          title: '2026年开放权重市场格局',
+          content: [
+            '**开源LLM允许组织下载、检查和修改模型权重，然后在没有供应商依赖或按token API成本的情况下在本地部署。** 2026年领先的模型是Meta的LLaMA 3.1、Mistral Large 2、Qwen 2.5以及其他在社区许可证下发布的模型。',
+            '**Meta的LLaMA 3.1系列是开放权重模型中与专有模型竞争的领先者。** LLaMA 3.1有三种规格：8B（推理约需8GB VRAM）、70B（约需40GB VRAM）和405B（多GPU约需800GB+ VRAM）。三种规格都支持131K token上下文窗口——与许多专有模型持平或更优。LLaMA 3.1在15万亿token的多语言文本上训练；较新的变体具有竞争性的多语言支持。',
+            '**Mistral AI提供两款强劲竞争者：Mistral 7B和Mistral Large 2。** Mistral 7B是具有32K上下文的精简7B参数模型，适合消费级推理和快速原型开发。Mistral Large 2扩展到1230亿参数和123K上下文，目标是"前沿精简版"性能级别——直接与LLaMA 70B和专有模型竞争。两者均可在Mistral Community License下用于商业用途。',
+            '**Qwen 2.5（阿里巴巴）和新兴模型（Falcon、Phi-4）构成了市场全貌。** Qwen 2.5 72B支持128K上下文，在中文任务上表现出色；适合服务亚太市场的团队。Phi-4（微软）和Falcon 180B等较小模型面向成本敏感或专业用例。所有这些都可下载、自托管，并通过LoRA或全量训练支持微调。',
+          ],
+        },
+
+        proprietaryLandscape: {
+          title: '2026年专有模型市场格局',
+          content: [
+            '**专有LLM完全通过供应商控制的API访问；模型权重从不发布，无法下载、修改或在本地部署。** 用户按token API计费，并接受供应商对模型更新、安全策略和性能特性的控制。',
+            '**OpenAI的GPT-4o仍然是推理领域的领导者。** GPT-4o支持128K token上下文，训练截止日期为2024年10月。它在工具使用、智能体工作流、多模态输入（图像、文本）和复杂多步骤推理方面表现出色。API定价：每百万输入token 5美元，每百万输出token 15美元（2026年3月价格）。GPT-4o仅限API；权重从不发布。参见[上下文窗口如何影响您的AI系统](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh)以了解权衡。',
+            '**Anthropic的Claude 4.6 Sonnet在写作和代码质量基准上占据主导地位。** Claude支持200K token上下文——是GPT-4o的2倍——能够处理更长的文档和更长的对话。训练数据截止日期：2025年初。API定价：每百万输入token 3美元，每百万输出token 15美元。Claude不提供公开微调。Anthropic将可解释性和安全对齐置于基准最大化之上。',
+            '**Google的Gemini 2.5 Pro提供最大的上下文窗口：200万token。** 这使得处理完整书籍长度的文档、详尽研究和扩展多轮对话成为可能。定价：每百万输入token 1.25美元（≤200K上下文），每百万输出token 10美元；超过200K上下文时价格更高。Gemini与Google Workspace、日历、Gmail和网络搜索深度集成。训练数据截止日期：2024年10月。Gemini模型可进行微调。',
+          ],
+        },
+
+        performanceBenchmarks: {
+          title: '基准性能：2026年的差距现状',
+          content: [
+            '**专有模型在通用推理（MMLU）上仍然领先，但差距已缩小至7–8个百分点。** MMLU（大规模多任务语言理解）是涵盖57个学术学科的广泛基准。要了解[LLM实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh)对推理能力的重要性，请阅读我们关于transformer架构的深度解析。当前分数：',
+            '',
+            'GPT-4o: 88.7%（OpenAI，2024年）',
+            'Claude 3.5 Sonnet: 88.3%（Anthropic，2024年）',
+            'LLaMA 3.1 70B: 80.5%（Meta，2024年）',
+            'Mistral Large 2: 81.2%（Mistral AI，2024年）',
+            'Qwen 2.5 72B: 82.1%（阿里巴巴，2024年）',
+            '',
+            '**2022年开放权重与专有模型之间的性能差距从15–20个百分点缩小到2026年推理任务的7–8个百分点。** 在专项任务（编程、数学、摘要、分类）上，开放权重模型现已与专有同类产品持平或超越。',
+            '',
+            '剩余差距主要在抽象推理和[工具使用编排](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh)上。——Touvron等，"LLaMA 3模型群"，2024年',
+            '',
+            '**重要说明：** 基准测试衡量的是狭窄技能。特定任务性能各有不同：在分类、摘要和提取方面，LLaMA 3.1 70B经常与GPT-4o持平甚至超越。在复杂多步骤推理（代数、长思维链）方面，专有模型保持优势。唯一可靠的基准是在您的实际任务上测试——参见[如何为您的用例选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh)。',
+          ],
+        },
+
+        costAnalysis: {
+          title: '成本分析：API定价与自托管对比',
+          content: [
+            '**直接成本对比：专有API在低量时占优；开放权重自托管在规模化时胜出。** 交叉点通常为每天500万至1000万token。在此阈值以下，API简便性和无基础设施成本有利于专有模型。在此之上，开放权重自托管具有成本效益。',
+            '',
+            '截至2026年3月的API定价：',
+            '',
+            '自托管基础设施成本：NVIDIA A100 80GB在云端租用约每小时2美元；RTX 4090消费级硬件成本约每小时1.50美元（电费+摊销，3年使用寿命）。对于Mistral 7B，每GPU推理吞吐量约为每秒50–100个token，即每天每GPU约1.8–3.6亿个token。Mistral Large 2或LLaMA 70B：每A100约每秒20–30个token，即每天约170–260万个token。按这些吞吐量计算：',
+            '',
+            '**每天500万token时：** A100自托管成本约每天2.50美元。Claude Sonnet的API成本：500万 × (3美元 + 15美元) / 100万 = 每天90美元（假设输入输出各50%）。API仍然更便宜。',
+            '',
+            '**每天5000万token时：** 需要20台A100自托管 = 每天50美元。API成本：每天900美元。开放权重明显胜出。',
+            '',
+            '**每天1亿token时：** 需要40台A100 = 每天100美元。API成本：每天1,800美元。开放权重便宜18倍。',
+            '',
+            '验证定价：[OpenAI定价](https://openai.com/pricing) · [Anthropic定价](https://www.anthropic.com/api) · [Google定价](https://ai.google.dev/pricing)——价格每季度变化。参见[token、成本与限制详解](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh)获取详细的token成本分析。',
+          ],
+          columns: ['模型', '输入（每百万token）', '输出（每百万token）'],
+          rows: [
+            { '模型': 'GPT-4o', '输入（每百万token）': '$5.00', '输出（每百万token）': '$15.00' },
+            { '模型': 'Claude 4.6 Sonnet', '输入（每百万token）': '$3.00', '输出（每百万token）': '$15.00' },
+            { '模型': 'Gemini 2.5 Pro', '输入（每百万token）': '$1.25（≤200K上下文）', '输出（每百万token）': '$2.50' },
+          ],
+          tableFormat: true,
+        },
+
+        privacyAndDataSovereignty: {
+          title: '隐私、数据主权与欧盟AI法案',
+          content: [
+            '**本地部署的开放权重模型 = 数据零外泄。** 当您通过Ollama在私有GPU上运行LLaMA 3.1时，没有任何推理数据、元数据或查询日志离开您的网络。这就是数据主权：您保持完全控制。专有API（OpenAI、Anthropic、Google）要求您通过网络将请求发送到外部服务器。即使有合同数据删除承诺，数据仍会短暂经过供应商基础设施并被记录以供合规使用。',
+            '**欧盟AI法案（2024年）将某些LLM应用定为"高风险"，要求风险文档、偏见测试和审计跟踪。** 类别包括做出重大决策的系统（招聘、信贷、法律发现、福利确定）。高风险系统必须维护决策记录、证明无歧视性，并支持人工监督。本地部署的开放权重模型使此类要求更容易满足——您控制审计跟踪和数据存储。专有API使此类要求更难满足——您依赖供应商合规报告，这对于受监管行业可能不够充分。',
+            '**对于受监管行业（医疗、金融、法律服务），开放权重通常是强制要求。** HIPAA（医疗）、SOX（金融）和律师-客户特权要求数据驻留——意味着数据不能离开您的司法管辖区。基于美国或其他国家的专有API违反这些要求。这些领域的团队通常在本地基础设施上部署开放权重模型（LLaMA、Mistral或商业发行版）。',
+          ],
+        },
+
+        customizationAndFineTuning: {
+          title: '微调与定制化：开放权重的优势所在',
+          content: [
+            '**开放权重模型允许完整微调；专有模型限制甚至禁止微调。** 微调意味着在您自己的数据上重新训练模型权重，以将其专业化于您的领域。您可以使用LoRA（低秩适应）进行高效微调，使用QLoRA进行量化训练，或者在有足够算力时进行全量反向传播训练。微调后，模型成为您的——您拥有生成的权重，可以在任何地方部署它们，并可以离线更新它们。',
+            '**专有微调可用性：** OpenAI微调API仅适用于GPT-4o mini、GPT-4（旧版模型），不适用于GPT-4o旗舰版。Anthropic不通过API为Claude提供微调。Google为Gemini提供有限的微调。这些都不允许拥有微调后的权重——您只是租用专有模型的微调副本。',
+            '**安全考虑：** 在专有API上进行微调时，您的训练数据会上传到供应商服务器。对于敏感领域，这违反合规规定。开放权重微调保留在本地。参见[提示词注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh)了解使用外部API时的其他攻击面考虑因素。',
+          ],
+        },
+
+        comparisonTable: {
+          title: '开源与专有LLM的关键差异',
+          content: '**开放权重模型在规模化时成本更低，支持完整定制化；专有模型以更高的按token成本提供更快的价值实现时间和托管基础设施。** 每天低于500万token时，专有API通常更便宜。每天超过1000万token时，自托管的开放权重在成本上胜出。根据您的量、隐私需求和基础设施准备情况做出选择。',
+          columns: ['维度', '开放权重模型', '专有模型'],
+          rows: [
+            { '维度': '成本模型', '开放权重模型': '自托管：每小时0.50–2.00美元基础设施费用。部署后免费，无按token计费。', '专有模型': 'API计费：输入每百万token 0.15–5.00美元；输出每百万token 0.30–15.00美元。随使用量扩展。' },
+            { '维度': '性能上限', '开放权重模型': '最佳开放权重（LLaMA 70B、Mistral Large）：MMLU 80–82%。在特定任务上有竞争力，在抽象推理上有差距。', '专有模型': '前沿（GPT-4o、Claude、Gemini）：MMLU 88–90%。在推理、智能体和多模态方面上限更高。' },
+            { '维度': '上下文窗口', '开放权重模型': 'LLaMA 3.1：131K。Mistral Large：123K。Qwen：128K。足以处理长文档。', '专有模型': 'GPT-4o：128K。Claude：200K。Gemini 2.5：200万。更大窗口支持更长研究。' },
+            { '维度': '隐私保护', '开放权重模型': '完全数据主权。数据不离开您的基础设施。供应商零日志记录。', '专有模型': '数据经过供应商服务器传输。承诺合同删除，但处理过程中短暂曝光。' },
+            { '维度': '微调能力', '开放权重模型': '支持完整微调（LoRA、QLoRA、全量训练）。您拥有权重。支持领域定制化。', '专有模型': '有限（仅OpenAI mini模型）或不可用（Anthropic Claude）。您不拥有生成的权重。' },
+            { '维度': '数据主权', '开放权重模型': '本地部署：完全主权。符合欧盟AI法案。可实现HIPAA/SOX/法律合规。', '专有模型': 'API依赖：数据驻留不明确。受监管行业难以证明合规性。' },
+            { '维度': '推理速度', '开放权重模型': '取决于硬件。A100：每秒20–30个token（70B）。RTX 4090：每秒10–15个token。', '专有模型': '优化服务器：每秒30–50+个token。确定性。供应商负责优化。' },
+            { '维度': '技术支持', '开放权重模型': '社区驱动。文档良好；无供应商SLA。自行支持。', '专有模型': '包含供应商支持。API SLA、事故响应、正常运行时间保证。' },
+            { '维度': '更新频率', '开放权重模型': '离线运行。发布新版本；您选择何时采用。无强制更新。', '专有模型': '服务器端。供应商更新模型；您适应或使用版本化API端点。' },
+            { '维度': '供应商锁定', '开放权重模型': '零锁定。随处部署。自由切换供应商或自托管。拥有自己的计算资源。', '专有模型': '中度到高度锁定。模型行为、API和定价受供应商控制。切换需要迁移工作。' },
+          ],
+          tableFormat: true,
+        },
+
+        promptEngineeringImplications: {
+          title: '提示词工程中的开源与专有LLM',
+          content: [
+            '**开放权重模型以更低的成本支持更深入的提示词实验。** 您可以在本地LLaMA 3.1实例上对同一提示词运行100次，并在没有按token计费的情况下迭代措辞、温度和结构。在您领域的提示词-响应对上微调模型。在私有基础设施中实验越狱和边缘案例。这种沙盒环境非常适合研究、原型开发和理解模型行为。',
+            '**专有API测试更快，更易于扩展。** 您编写一个提示词，调用GPT-4o或Claude API，在毫秒内获得结果，无需任何基础设施设置。无需管理VRAM、量化或模型下载。对于快速A/B测试、生产部署和处理可变流量，专有模型降低了运营复杂性。',
+            '**混合方式：在开放权重上原型开发，在专有模型上验证。** 使用LLaMA 3.1 8B在本地开发和完善提示词（快速迭代，无成本）。一旦提示词策略确定，在GPT-4o或Claude 4.6上测试以确认前沿性能。将性能更好的模型部署到生产环境。这结合了开放权重的灵活性与专有模型的可靠性。',
+          ],
+        },
+
+        whenOpenSource: {
+          title: '何时使用开源模型',
+          content: '**当数据隐私、规模化成本或深度定制需求主导您的约束时，选择开放权重。** 开放权重的优势场景：',
+          items: [
+            '**敏感数据（医疗、金融、法律）：** 患者记录、金融数据、律师-客户通信不能经过外部API传输。本地部署的开放权重将数据保留在您的控制之下，实现合规性。使用LLaMA 3.1或Mistral满足HIPAA、GDPR和律师-客户特权合规要求。配合[提示词注入安全控制措施](/prompt-engineering/prompt-injection-and-security?lang=zh)保护模型输入。',
+            '**高量自动化（每天5000万+个token）：** 每天超过约1000万token时，自托管比专有API更便宜。对于[API成本会过高](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh)的高量分类、提取、摘要或数据处理管道，使用开放权重。',
+            '**领域定制化和微调：** 您有标注数据集，需要模型在您的术语、写作风格或任务分布上进行专业化。开放权重支持LoRA、QLoRA或全量微调。专有API禁止或限制定制化。',
+            '**地理或网络约束：** 您需要在没有互联网访问的情况下进行推理（潜艇、飞机、远程站点）。开放权重可离线运行。专有API需要网络连接。',
+            '**欧盟AI法案合规（高风险部署）：** 招聘系统、信贷决策、福利确定。审计跟踪、风险文档和本地数据驻留通过开放权重更容易实现。专有API使合规性更难证明。',
+            '**成本可预测性：** 开放权重基础设施成本是固定的（硬件+电费）。专有API随使用量不可预测地扩展。对于成本敏感的组织，开放权重预算更清晰。',
+          ],
+        },
+
+        whenProprietary: {
+          title: '何时使用专有模型',
+          content: '**当绝对性能、托管基础设施或安全对齐最为重要时，选择专有模型。** 专有模型的优势场景：',
+          items: [
+            '**复杂多步骤推理：** 智能体工作流、复杂研究综合和抽象问题解决。GPT-4o、Claude 4.6和Gemini 2.5在MMLU上保持7–8个百分点的优势。开放权重在特定任务上缩小差距，但在通用推理上仍有差距。',
+            '**长上下文文档研究（100万+个token）：** Gemini 2.5 Pro是目前唯一具有200万token上下文的生产模型。对于处理整本书、研究语料库或详尽案例法，没有开放权重模型能与其匹敌。当文档长度超过开放权重能力时，使用专有模型。',
+            '**零基础设施开销：** 您缺乏GPU资源、DevOps专业知识或模型基础设施的随叫随到运维能力。专有API处理可用性、扩展和优化。为简便性付费；避免运营负担。',
+            '**工具集成和智能体：** OpenAI在工具使用、函数调用和多步骤智能体编排方面处于领先地位。如果您的系统需要可靠的函数路由和多轮智能体行为，GPT-4o是实用的选择。',
+            '**托管安全和对齐：** 专有供应商在Constitutional AI、RLHF和指令遵循方面投入大量资源。对于聊天机器人、客服和面向用户的系统，专有模型开箱即用通常更安全。',
+            '**多模态输入（图像、音频）：** GPT-4o和Claude 4.6 Sonnet可靠地处理图像输入。多模态开放权重模型存在但不够成熟。对于可靠的视觉-语言任务，使用专有模型。',
+          ],
+        },
+
+        hybridArchitecture: {
+          title: '混合AI架构（开放与封闭模型结合）',
+          content: '**组织可以使用混合AI架构，将敏感数据和成本敏感任务的请求路由到开放权重模型，同时将复杂推理和多模态工作分发给专有模型。** 这种方法结合了开放权重的成本效率、隐私保护和定制化能力，以及专有LLM的性能和托管基础设施。',
+          items: [
+            '**隐私敏感数据 → 本地开放权重；复杂推理 → 专有API。** 将患者记录、金融数据和法律文件路由到通过Ollama本地运行的LLaMA 3.1。将多步骤研究综合、代码生成和智能体编排路由到GPT-4o或Claude 4.6 Sonnet。这种混合方式在保持前沿性能的同时实现合规性。',
+            '**成本敏感的批处理 → 本地开放权重；交互式请求 → 专有API。** 对于后台任务（分类、提取、摘要），使用自托管的LLaMA 3.1 70B（在A100上约每小时2美元）。对于延迟重要的实时用户请求，使用GPT-4o API（每百万token 5/15美元）。混合方式降低总成本和延迟。',
+            '**多模型对比和共识 → PromptQuorum。** 通过PromptQuorum同时将单个[提示词](/prompt-engineering/what-is-prompt-engineering?lang=zh)分发到本地Ollama、GPT-4o、Claude 4.6和Gemini 2.5 Pro。并排比较质量、延迟和成本方面的输出。选择生产中的获胜者，或将输出组合用于集成推理。',
+            '**测试和暂存 → 开放权重；生产服务 → 专有。** 使用本地运行的LLaMA 3.1 8B进行快速原型开发和开发工作。一旦提示词和管道经过验证，升级到GPT-4o或Claude用于生产流量，在可靠性、工具集成和安全保证最重要的地方使用。',
+          ],
+        },
+
+        nuancedTakes: {
+          title: '颠覆传统认知的观点',
+          content: '**开放权重并不总是比专有API更便宜。** 每天低于500万token时，专有API（GPT-4o mini、Claude Haiku、Gemini Flash）通常更便宜，因为基础设施成本（GPU摊销、电费、DevOps人力成本）超过API计费。只有每天超过1000万token时，开放权重自托管才具有成本优势。',
+          items: [
+            '**性能差距是特定任务的，并非普遍适用。** 专有模型在MMLU（推理）上领先7–8个百分点。但在分类、摘要、提取和许多领域任务上，LLaMA 3.1 70B与专有模型持平甚至超越。"专有模型更好"过于笼统。在您的实际任务上进行基准测试。',
+            '**"开源"许可证复杂，通常并不真正是开源。** LLaMA、Mistral和Qwen不符合OSI的开源标准——它们是非标准许可证下的"开放权重"。将它们称为"开源"具有误导性，可能引起法律混淆。在依赖法律保护之前，请咨询法律顾问确认许可证要求。',
+            '**专有模型并不总是更安全或更对齐。** [所有模型都会产生幻觉](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh)。专有训练数据、截止日期和Constitutional AI无法防止越狱、[提示词注入](/prompt-engineering/prompt-injection-and-security?lang=zh)或滥用。开放权重可以微调以匹配或超越专有模型的对齐效果。安全是部署和护栏的属性，而非模型类别的属性。',
+          ],
+        },
+
+        keyTerms: {
+          title: '关键术语',
+          items: [
+            '[开放权重](/prompt-engineering/prompt-engineering-glossary?lang=zh#open-weights) — 模型权重可下载，但可能受许可证限制',
+            '[微调](/prompt-engineering/prompt-engineering-glossary?lang=zh#fine-tuning) — 在特定领域数据上重新训练模型权重',
+            '[LoRA](/prompt-engineering/prompt-engineering-glossary?lang=zh#lora) — 通过低秩适应进行高效微调（全量训练成本的5–10%）',
+            '[RAG](/prompt-engineering/prompt-engineering-glossary?lang=zh#rag) — 检索增强生成；将LLM输出锚定于外部文档',
+            '[上下文窗口](/prompt-engineering/prompt-engineering-glossary?lang=zh#context-window) — 输入+输出合并的最大token容量',
+            '[VRAM](/prompt-engineering/prompt-engineering-glossary?lang=zh#vram) — 模型推理所需的GPU显存',
+          ],
+        },
+
+        promptExample: {
+          title: '实践中的提示词结构',
+          content: [
+            '[不佳提示词] "开源和GPT-4o哪个更好？"',
+            '[优质提示词] "我需要每天处理2000万个客户支持工单token。我无法将数据发送到欧盟以外。请比较开放权重（自托管LLaMA 3.1 70B）与专有模型（通过API使用GPT-4o）在此用例下的表现：包括每天2000万token的基础设施成本、GDPR数据驻留合规性、微调可行性，以及在工单分类任务上的预期质量。"',
+          ],
+        },
+
+        relatedReading: {
+          title: '延伸阅读',
+          items: [
+            '[基础知识：AI的局限性与结构性约束](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — 专有和开放权重模型为何共享幻觉和上下文限制等基本局限性',
+            '[基础知识：LLM实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh) — 了解transformer架构有助于解释开放权重与专有模型共享相同核心机制',
+            '[基础知识：GPT-4o、Claude还是Gemini？如何选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh) — 前沿专有模型的详细对比',
+            '[技术：RAG详解——检索增强生成](/prompt-engineering/rag-explained?lang=zh) — 如何用外部知识扩展任意模型（专有或开放权重）',
+            '[基础知识：Token、成本与限制](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh) — 详细的成本分析和token经济学',
+            '[基础知识：提示词注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 两类模型的安全注意事项',
+          ],
+        },
+
+        faq: {
+          title: '常见问题',
+          faqs: [
+            {
+              q: 'LLaMA 3.1真的是开源的还是只是开放权重？',
+              a: '只是开放权重。LLaMA 3.1在Llama Community License 2.1下发布模型权重，该许可证不符合OSI的开源标准。该许可证允许商业使用，但限制将衍生品命名为"LLaMA"，要求署名，并包含竞业禁止条款。真正的开源许可证（Apache 2.0、MIT、GPL）没有这些限制。LLaMA比封闭的专有访问更宽松，但在法律上不是"开源"。',
+            },
+            {
+              q: '2026年哪个更便宜——自托管LLaMA还是使用GPT-4o API？',
+              a: '取决于量。每天低于500万token时，GPT-4o API（或GPT-4o mini）更便宜，因为基础设施成本超过API计费。每天500万至1000万token时，成本大致持平。每天超过1000万token时，自托管LLaMA 3.1在成本上胜出。每天1亿token时，自托管便宜10–20倍。隐藏因素：GPU摊销、电费（约每度电0.10美元）、DevOps人力成本和停机风险往往使边界情况倾向于API。',
+            },
+            {
+              q: '欧盟AI法案是否影响开源LLM？',
+              a: '是的，取决于您如何部署。欧盟AI法案（2024年）将"高风险"AI系统——招聘、信用评分、法律发现——定为需要风险文档、偏见测试和审计跟踪。本地部署的开放权重使合规更容易，因为您控制数据和日志。专有API迫使依赖供应商证明。训练计算量超过10^25 FLOP的通用AI模型（前沿模型）面临额外的透明度义务。对于受监管领域，请咨询合规法律顾问。',
+            },
+            {
+              q: '2026年哪个开源LLM最接近GPT-4o？',
+              a: 'LLaMA 3.1 70B和Mistral Large 2最接近，但差距依然存在。在MMLU（推理基准）上，GPT-4o得分88.7%，LLaMA 3.1 70B为80.5%，Mistral Large为81.2%。在特定任务（分类、摘要、提取）上，开放权重现已与专有模型相当。差距每年缩小约2–3个百分点；推理任务上的趋同可能在18–24个月内实现。',
+            },
+            {
+              q: '我可以微调GPT-4o吗？',
+              a: '不可以。OpenAI微调仅适用于GPT-4o mini、GPT-4和gpt-3.5-turbo——不适用于GPT-4o本身。Anthropic不为Claude提供微调。Google为Gemini提供微调。开放权重模型（LLaMA、Mistral、Qwen）通过LoRA、QLoRA或全量梯度训练支持完整微调——您拥有生成的权重。',
+            },
+            {
+              q: '在本地运行LLaMA 3.1 70B需要什么硬件？',
+              a: '全精度：约40GB VRAM（A100 80GB或双RTX 3090/4090）。通过Ollama进行4位量化：约16–20GB VRAM（单张RTX 4090 24GB）。LLaMA 3.1 8B可在消费级硬件上运行（约8GB VRAM，RTX 3060或Apple M2 Pro）。Ollama自动处理量化和模型管理——推荐用于大多数本地部署。',
+            },
+            {
+              q: '我可以在MacBook上运行开源LLM吗？',
+              a: '可以。搭载Apple Silicon（M1/M2/M3/M4/M5）的Mac可通过Ollama或LM Studio运行开放权重模型。统一内存架构与GPU共享RAM——配备16GB内存的M2 Pro可以10–15个token/秒的速度运行LLaMA 3.1 8B。配备128GB内存的M3 Max可以4位量化运行LLaMA 3.1 70B。性能比专用GPU服务器慢，但适合开发和个人使用。',
+            },
+            {
+              q: '开源LLM与专有模型有相同的局限性吗？',
+              a: '在基础层面是的：两者都会产生幻觉，都有知识截止日期、上下文窗口限制和推理边界。开放权重无法进行服务器端修补——权重更新需要新版本发布和重新训练。专有模型可以在用户无需任何操作的情况下逐步改进。微调开放权重可以缓解特定限制（领域知识、语气），但无法克服知识截止日期或幻觉风险等结构性约束。',
+            },
+            {
+              q: '2026年哪个开放权重模型最适合编程？',
+              a: 'LLaMA 3.1 70B和Mistral Large 2是最强的开放权重编程模型。在HumanEval（代码生成基准）上，它们得分73–78%，而GPT-4o约90%，Claude 4.6 Sonnet约87%。在Python、SQL和结构化输出方面，开放权重具有竞争力。在复杂算法设计和多文件推理方面，专有模型保持显著优势。',
+            },
+            {
+              q: '我可以将开源LLM用于商业应用吗？',
+              a: '可以。LLaMA、Mistral和Qwen明确允许在其许可证下商业使用。主要限制：不能将衍生品品牌命名为"LLaMA"（必须重命名）；必须包含许可证署名；LLaMA 2限制月活用户超过7亿的组织（LLaMA 3.x中已取消）。大多数团队在内部（私有推理）部署开放权重，完全避免了命名问题。',
+            },
+            {
+              q: 'LoRA是什么？为什么它对开放权重微调如此重要？',
+              a: 'LoRA（低秩适应）是一种微调方法，只训练一小部分适配器权重（约占模型参数的1–5%），而非对所有层进行全量反向传播。这在质量损失最小的情况下将训练成本降低5–10倍。QLoRA通过4位量化将其扩展到消费级GPU（16–24GB VRAM）。LoRA是将LLaMA和Mistral适应于特定领域任务而无需全量重训练的标准方法。',
+            },
+          ],
+        },
+
+        sources: {
+          title: '参考来源',
+          items: [
+            'Meta AI，"Llama 3 Herd of Models"（Touvron等，2024年）——架构、上下文窗口、基准分数和训练数据文档',
+            'Mistral AI，模型卡片和技术文档（2024年）——Mistral Large 2和Mistral 7B规格',
+            'Hendrycks等，"Measuring Massive Multitask Language Understanding"（2021年）——MMLU基准定义和基线分数。arXiv:2009.03300',
+            'Chen等，"Evaluating Large Language Models Trained on Code"（2021年）——代码生成的HumanEval基准。arXiv:2107.03374',
+            '欧洲联盟，"人工智能法案"（2024年）——高风险AI系统类别、GPAI模型义务和合规要求',
+            'Hu等，"LoRA: Low-Rank Adaptation of Large Language Models"（2021年）——LoRA方法定义和效率结果。arXiv:2106.09685',
+            'Dettmers等，"QLoRA: Efficient Finetuning of Quantized LLMs"（2023年）——QLoRA方法和消费级GPU微调结果。arXiv:2305.14314',
+          ],
+        },
+      },
+    },
   },
 
   'geopolitics-and-ai': {
