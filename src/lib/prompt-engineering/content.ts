@@ -6874,6 +6874,45 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'ListItem', 'position': 6, 'name': 'Google Gemini 1.5 Flash', 'description': 'Input: $0.075/1M tokens. Output: $0.30/1M tokens' }
         ]
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'AI Model Selection by Task Type — Cost Optimization Guide',
+        description: 'Which AI model to use for each task type to minimize API cost without sacrificing output quality, as of 2026.',
+        url: 'https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Simple classification or yes/no tasks',
+            description: 'Use GPT-4o mini, Claude Haiku 4.5, or Gemini Flash — 33× cheaper than GPT-4o with equivalent accuracy on straightforward classification.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Short factual Q&A',
+            description: 'Use GPT-4o mini or Claude Haiku 4.5 — 10–33× cheaper than frontier models. Suitable for lookup tasks, single-answer questions, and entity extraction.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Complex analysis or code generation',
+            description: 'Use GPT-4o or Claude 4.6 Sonnet — frontier capability required for multi-step reasoning, debugging, and technical synthesis.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Long-form creative writing',
+            description: 'Use Claude 4.6 Sonnet or GPT-4o — both excel at sustained narrative quality and style consistency across long outputs.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'High-volume private or automated workflows',
+            description: 'Use a local model via Ollama or LM Studio — zero per-token API cost. Requires VRAM investment; best for tasks where "good enough" quality is acceptable.',
+          },
+        ],
+      },
       sections: {
         definition: {
           title: 'What Is a Token?',
