@@ -17382,7 +17382,7 @@ zh: {
         performanceBenchmarks: {
           title: 'Benchmark Performance: Where the Gap Stands in 2026',
           content: [
-            '**Proprietary models still lead on general reasoning (MMLU), but the gap has narrowed to 7–8 percentage points.** MMLU (Massive Multitask Language Understanding) is a broad benchmark covering 57 academic disciplines. Current scores:',
+            '**Proprietary models still lead on general reasoning (MMLU), but the gap has narrowed to 7–8 percentage points.** MMLU (Massive Multitask Language Understanding) is a broad benchmark covering 57 academic disciplines. To understand why [how LLMs actually work](/prompt-engineering/how-llms-actually-work) matters for reasoning ability, read our deep dive on transformer architecture. Current scores:',
             '',
             'GPT-4o: 88.7% (OpenAI, 2024)',
             'Claude 3.5 Sonnet: 88.3% (Anthropic, 2024)',
@@ -17390,7 +17390,7 @@ zh: {
             'Mistral Large 2: 81.2% (Mistral AI, 2024)',
             'Qwen 2.5 72B: 82.1% (Alibaba, 2024)',
             '',
-            'The gap between open-weights and proprietary models has significantly narrowed in capability. On specialized tasks (coding, math, summarization), open-weights models now match or exceed proprietary peers. The remaining gap is primarily on abstract reasoning and tool-use orchestration. — Touvron et al., "Llama 3 Herd of Models", 2024',
+            'The gap between open-weights and proprietary models has significantly narrowed in capability. On specialized tasks (coding, math, summarization), open-weights models now match or exceed proprietary peers. The remaining gap is primarily on abstract reasoning and [tool-use orchestration](/prompt-engineering/gpt-claude-gemini-which-model). — Touvron et al., "Llama 3 Herd of Models", 2024',
             '',
             '**Important caveat:** Benchmarks measure narrow skills. Task-specific performance varies: on classification, summarization, and extraction, LLaMA 3.1 70B often matches or exceeds GPT-4o. For complex multi-step reasoning (algebra, long chains of thought), proprietary models maintain an edge. The only reliable benchmark is testing on your actual task — see [how to pick the right model for your use case](/prompt-engineering/gpt-claude-gemini-which-model).',
           ],
@@ -17462,8 +17462,8 @@ zh: {
           title: 'When to Use Open Source Models',
           content: '**Choose open-weights when data privacy, cost at scale, or deep customization requirements dominate your constraints.** Open-weights excel in:',
           items: [
-            '**Sensitive data (healthcare, finance, legal):** Patient records, financial data, attorney-client communications cannot transit external APIs. Open-weights deployed on-premises keeps data in your control and achieves compliance. Use LLaMA 3.1 or Mistral for HIPAA, GDPR, and attorney-client privilege compliance.',
-            '**High-volume automation (50M+ tokens/day):** Above ~10M tokens/day, self-hosting becomes cheaper than proprietary APIs. Use open-weights for high-volume classification, extraction, summarization, or data processing pipelines where API costs would be prohibitive.',
+            '**Sensitive data (healthcare, finance, legal):** Patient records, financial data, attorney-client communications cannot transit external APIs. Open-weights deployed on-premises keeps data in your control and achieves compliance. Use LLaMA 3.1 or Mistral for HIPAA, GDPR, and attorney-client privilege compliance. Pair with [security controls against prompt injection](/prompt-engineering/prompt-injection-and-security) to protect model inputs.',
+            '**High-volume automation (50M+ tokens/day):** Above ~10M tokens/day, self-hosting becomes cheaper than proprietary APIs. Use open-weights for high-volume classification, extraction, summarization, or data processing pipelines where [API costs would be prohibitive](/prompt-engineering/tokens-costs-limits).',
             '**Domain customization and fine-tuning:** You have labeled datasets and need the model to specialize on your terminology, writing style, or task distribution. Open-weights permit LoRA, QLoRA, or full fine-tuning. Proprietary APIs forbid or restrict customization.',
             '**Geographic or network constraints:** You need inference with no internet access (submarines, aircraft, remote sites). Open-weights runs offline. Proprietary APIs require network connectivity.',
             '**EU AI Act compliance (high-risk deployments):** Hiring systems, credit decisions, benefits determination. Audit trails, risk documentation, and on-premises data residency are easier with open-weights. Proprietary APIs make compliance harder to demonstrate.',
@@ -17490,7 +17490,7 @@ zh: {
           items: [
             '**Privacy-sensitive data → local open-weights; complex reasoning → proprietary API.** Route patient records, financial data, and legal documents to LLaMA 3.1 running locally via Ollama. Route multi-step research synthesis, code generation, and agent orchestration to GPT-4o or Claude 4.6 Sonnet. This hybrid approach achieves compliance while maintaining frontier performance.',
             '**Cost-sensitive batch processing → local open-weights; interactive requests → proprietary API.** For background tasks (classification, extraction, summarization), use self-hosted LLaMA 3.1 70B (~$2/hr on A100). For real-time user requests where latency matters, use GPT-4o API ($5/$15 per 1M tokens). Hybrid reduces total cost and latency.',
-            '**Multi-model comparison and consensus → PromptQuorum.** Dispatch a single prompt to local Ollama, GPT-4o, Claude 4.6, and Gemini 2.5 Pro simultaneously via [PromptQuorum](/prompt-engineering/prompt-engineering-glossary#promptquorum). Compare outputs side-by-side on quality, latency, and cost. Choose the winner for production or combine outputs for ensemble reasoning.',
+            '**Multi-model comparison and consensus → PromptQuorum.** Dispatch a single [prompt](/prompt-engineering/what-is-prompt-engineering) to local Ollama, GPT-4o, Claude 4.6, and Gemini 2.5 Pro simultaneously via PromptQuorum. Compare outputs side-by-side on quality, latency, and cost. Choose the winner for production or combine outputs for ensemble reasoning.',
             '**Testing and staging → open-weights; production serving → proprietary.** Use LLaMA 3.1 8B running locally for rapid prototyping and development. Once the prompt and pipeline are validated, upgrade to GPT-4o or Claude for production traffic where reliability, tool integration, and safety guarantees matter most.',
           ],
         },
@@ -17501,7 +17501,7 @@ zh: {
           items: [
             '**The performance gap is task-specific, not universal.** Proprietary models lead on MMLU (reasoning) by 7–8 points. But on classification, summarization, extraction, and many domain tasks, LLaMA 3.1 70B matches or beats proprietary models. "Proprietary is better" is too broad. Benchmark your actual task.',
             '**"Open source" licensing is complex and often not actually open source.** LLaMA, Mistral, and Qwen are not OSI-compliant open source — they are "open weights" under non-standard licenses. Calling them "open source" is misleading and invites legal confusion. Clarify licensing with counsel before relying on legal protections.',
-            '**Proprietary is not always more safe or aligned.** All models hallucinate. Proprietary training data, cutoffs, and constitutional AI do not prevent jailbreaking, prompt injection, or misuse. Open-weights can be fine-tuned to match or exceed proprietary alignment. Safety is a property of the deployment and guardrails, not the model class.',
+            '**Proprietary is not always more safe or aligned.** [All models hallucinate](/prompt-engineering/ai-limitations-what-llms-cant-do). Proprietary training data, cutoffs, and constitutional AI do not prevent jailbreaking, [prompt injection](/prompt-engineering/prompt-injection-and-security), or misuse. Open-weights can be fine-tuned to match or exceed proprietary alignment. Safety is a property of the deployment and guardrails, not the model class.',
           ],
         },
 
