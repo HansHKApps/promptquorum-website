@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { PromptEngineeringPostClient } from '@/components/PromptEngineeringPostClient'
-import { peContent } from '@/lib/prompt-engineering/content'
+import { peContent, type PEArticle } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { themes } from '@/lib/prompt-engineering/themes'
 
@@ -247,6 +247,47 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
         }
       : null
 
+  // LearningResource schema for educational articles
+  const enArticle = peContent[key]['en']
+  const educationalLevel = (article as PEArticle & { educationalLevel?: string }).educationalLevel
+    ?? (enArticle as PEArticle & { educationalLevel?: string })?.educationalLevel
+
+  const learningResourceSchema = educationalLevel ? {
+    '@context': 'https://schema.org',
+    '@type': 'LearningResource',
+    name: article.title,
+    description: article.intro,
+    url: canonicalUrl,
+    inLanguage: selectedLang,
+    educationalLevel,
+    learningResourceType: 'Article',
+    ...(Array.isArray((article.schema as any)?.teaches) && { teaches: (article.schema as any).teaches }),
+    ...(Array.isArray((article.schema as any)?.assesses) && { assesses: (article.schema as any).assesses }),
+    datePublished: article.publishDate,
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: {
+      '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com',
+      logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' },
+    },
+  } : null
+
+  // DefinedTerm schema for concept-definition articles
+  const primaryTerm = (article as PEArticle & { primaryTerm?: string }).primaryTerm
+    ?? (enArticle as PEArticle & { primaryTerm?: string })?.primaryTerm
+
+  const definedTermSchema = primaryTerm ? {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTerm',
+    name: primaryTerm,
+    description: article.intro,
+    url: canonicalUrl,
+    inDefinedTermSet: {
+      '@type': 'DefinedTermSet',
+      name: 'PromptQuorum Prompt Engineering Glossary',
+      url: 'https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary',
+    },
+  } : null
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -261,6 +302,8 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
       {article.softwareSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.softwareSchema) }} />}
       {article.howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.howToSchema) }} />}
       {article.itemListSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.itemListSchema) }} />}
+      {learningResourceSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceSchema) }} />}
+      {definedTermSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }} />}
       <PromptEngineeringPostClient slug={slug} />
     </>
   )

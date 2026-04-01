@@ -37,6 +37,8 @@ export interface PEArticle {
   recipesHowToSchema?: Record<string, unknown>
   softwareSchema?: Record<string, unknown>
   itemListSchema?: Record<string, unknown>
+  educationalLevel?: string  // 'Beginner' | 'Intermediate' | 'Advanced'
+  primaryTerm?: string       // Key concept this article defines, e.g., 'Prompt Engineering'
 }
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
@@ -48,6 +50,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'A prompt library is a central, searchable collection of tested prompts with clear metadata so your team can reuse what works instead of reinventing instructions in every chat. Done well, it behaves like a shared "AI playbook": people grab a proven template for a task, adapt a few inputs, and get consistent results across models and projects.',
       publishDate: '2026-03-24',
       readTime: '10 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -211,6 +214,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs like GPT-4o, Claude, and Gemini. Learn essential techniques, frameworks, and why it matters to AI output quality.',
       publishDate: '2026-03-01',
       readTime: '10 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Prompt Engineering',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1430,6 +1435,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'The history of prompt engineering from GPT-3 and few-shot prompting in 2020 to context design in 2026. Key milestones, papers, and turning points.',
       publishDate: '2026-03-01',
       readTime: '10 min read',
+      educationalLevel: 'Beginner',
       sections: {
 
         definition: {
@@ -2387,6 +2393,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'The 5 building blocks every prompt needs: Role & Context, Task, Input & Examples, Constraints, and Output Format. How to use each one.',
       publishDate: '2026-03-01',
       readTime: '8 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Prompt Structure',
       sections: {
 
         definition: {
@@ -3441,6 +3449,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Large language models confidently produce false information. These errors—called hallucinations—range from invented citations to fabricated facts presented with complete authority. Understanding why they happen and how to detect and reduce them is essential for anyone using LLMs in real work.',
       publishDate: '2026-03-22',
       readTime: '12 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'AI Hallucination',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -4731,6 +4741,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Temperature and top-p control how adventurous or conservative an AI\'s word choices are. By tuning these settings, you trade off creativity versus reliability—higher values produce surprising, varied outputs; lower values produce safe, predictable ones.',
       publishDate: '2026-03-22',
       readTime: '10 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Temperature and Top-P Sampling',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -5591,6 +5603,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency. Most AI answers bloat because of vague prompts, not slow models.',
       publishDate: '2026-03-22',
       readTime: '9 min read',
+      educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -6696,6 +6709,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts to stay within limits, and how to manage context windows across cloud and local models.',
       publishDate: '2026-03-22',
       readTime: '11 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Context Window',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -6760,6 +6775,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 4.6 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.',
       publishDate: '2026-03-25',
       readTime: '12 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -6820,6 +6836,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Every AI API call is measured and billed in tokens — the unit that controls both what the model can process and how much you pay. Understanding tokens is the foundation of efficient, cost-effective prompting.',
       publishDate: '2026-03-22',
       readTime: '13 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'LLM Tokens',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -7075,6 +7093,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     intro: 'System prompts define how an AI model thinks and behaves throughout an entire session; user prompts define what it does right now. Learn the difference, when to use each, how they interact, and why PromptQuorum shows you both.',
     publishDate: '2026-03-22',
     readTime: '8 min read',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'System Prompt',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -7580,6 +7600,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'No single AI model is best for every task. GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, and Baidu ERNIE each win on different tasks, geographies, and budgets. This guide gives you a practical decision framework — not another benchmark list.',
       publishDate: '2026-03-23',
       readTime: '12 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -9151,6 +9172,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI coding assistants reduce time spent on code generation, debugging, and documentation by 30–75% when used with structured prompts and human review. In 2026, 41% of all code written globally is AI-generated or AI-assisted — making prompt quality the single most important variable in the output you receive.',
       publishDate: '2026-03-22',
       readTime: '15 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -9468,6 +9490,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI-powered research tools reduce literature review time from weeks to hours — but the average AI model hallucinates 9.2% of the time on general knowledge questions, making verification workflows mandatory, not optional. In 2026, 75% of global knowledge workers use AI tools regularly. The researchers who get the most from AI treat it as a structured workflow — specific tools for discovery, extraction, synthesis, and verification — not as a single chatbot they ask one question.',
       publishDate: '2026-03-23',
       readTime: '9 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -9806,6 +9829,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Generative Engine Optimization (GEO) is the practice of structuring content so that AI-powered search engines — including ChatGPT, Google AI Overviews, Perplexity, Claude, and Microsoft Copilot — retrieve, cite, and recommend your content when answering user questions. GEO does not replace traditional SEO; it adds a second optimization layer for a search landscape where AI assistants handle over 40% of search interactions and nearly 60% of all searches now end without a single click.',
       publishDate: '2026-03-23',
       readTime: '8 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -10125,6 +10149,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI tutoring systems outperform traditional active learning classrooms — a peer-reviewed randomized controlled trial from Harvard University found students using an AI tutor learned more than twice as much in 49 minutes compared to 60 minutes of classroom instruction. In 2026, 85% of teachers and 86% of students in the US used AI during the 2024—25 school year — adoption rates higher than any other industry globally.',
       publishDate: '2026-03-23',
       readTime: '8 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -10411,6 +10436,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI-powered extraction and summarisation reduces document review time by 60—80% while achieving hallucination rates as low as 0.7% on grounded summarisation tasks — the key is choosing the right summarisation type, the right model, and the right prompt structure for each document category.',
       publishDate: '2026-03-23',
       readTime: '8 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -10751,6 +10777,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI code review tools detect 42–48% of real-world runtime bugs in automated reviews — more than double the sub-20% detection rate of traditional static analysis tools — while reducing code review time by 40% and cutting production bugs by 62%. In 2026, 84% of developers now use AI tools and 41% of all new code is AI-generated, creating a feedback loop where AI that writes code must also review it.',
       publishDate: '2026-03-24',
       readTime: '11 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -11025,6 +11052,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Before native structured output capabilities existed, models scored below 40% on complex JSON schema compliance; with constrained decoding — used by OpenAI\'s `strict: true` mode and Anthropic\'s Strict Tool Use Mode — JSON Schema compliance reaches 100%, guaranteed at the token level. Output control is the single most important engineering variable between a prototype that works 80% of the time and a production system that works reliably.',
       publishDate: '2026-03-24',
       readTime: '10 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -11295,6 +11323,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'A well-trained brand voice AI lets you generate and review content at scale without losing the tone, style, and personality that make your brand recognizable. Used correctly, it becomes an extension of your brand team: it learns from your best copy, applies those patterns across every channel, and flags anything that sounds off-brand before customers ever see it.',
       publishDate: '2026-03-24',
       readTime: '8 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -11453,6 +11482,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI-generated code fails traditional quality gates at scale: a large share of AI-written programs contain exploitable vulnerabilities, and a non-trivial fraction of AI-suggested packages or APIs simply do not exist. To keep these hallucinations and AI-specific failure modes out of production, build quality checks must evolve from generic "tests + coverage" gates into AI-aware pipelines that detect unreal APIs, fake dependencies, and confident-but-wrong logic before merge.',
       publishDate: '2026-03-24',
       readTime: '10 min read',
+      educationalLevel: 'Beginner',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -11667,6 +11697,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       publishDate: '2026-03-30',
       dateModified: '2026-03-30',
       readTime: '12 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Large Language Model (LLM)',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -15090,6 +15122,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'The right prompt framework depends on your task, your experience level, and whether you are optimizing for creativity, precision, or reliable reasoning. PromptQuorum makes this choice easier by including multiple frameworks, an automatic selector, and a custom framework builder directly in the app.',
       publishDate: '2026-03-24',
       readTime: '9 min read',
+      educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -15236,6 +15269,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'The Single Step Prompt Method is a minimal prompt framework where you describe the entire task in one carefully structured instruction instead of building a multi-turn conversation. This method reduces overhead, makes results easier to compare across models, and is the default starting framework inside PromptQuorum for new users.',
       publishDate: '2026-03-24',
       readTime: '8 min read',
+      educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -15363,6 +15397,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'The APE Framework is a simple three-step prompt structure built around Analyze, Plan, and Execute so that large language models produce clear, traceable outputs from a single instruction. In PromptQuorum, the APE Framework is available as a ready-made option that any user can select and apply across all supported models.',
       publishDate: '2026-03-24',
       readTime: '7 min read',
+      educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -15479,6 +15514,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'The CRAFT Framework is a prompt structure designed to produce targeted, audience-aware content by focusing on Context, Role, Audience, Format, and Tone in a single, well-formed instruction. In PromptQuorum, the CRAFT Framework is available as a built-in option that any user can select and apply across all supported models.',
       publishDate: '2026-03-24',
       readTime: '7 min read',
+      educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -15605,6 +15641,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'The CO-STAR Framework is a structured prompt format that helps you design clear, multi-step instructions for complex tasks by defining Context, Objective, Style, Tone, Audience, and Response in one coherent message. In PromptQuorum, the CO-STAR Framework is available as a built-in option that any user can select and apply across all supported models.',
       publishDate: '2026-03-24',
       readTime: '8 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'CO-STAR Prompt Framework',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -15749,6 +15787,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'The SPECS Framework is a prompt structure that turns vague requests into precise specifications so that large language models produce predictable, parseable outputs. In PromptQuorum, the SPECS Framework is available as a built-in option that any user can select and apply directly in the app.',
       publishDate: '2026-03-24',
       readTime: '8 min read',
+      educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -15867,6 +15906,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'The RISEN Framework is an iterative prompt structure that focuses on Refine, Inspect, Summarize, Evaluate, and Next steps so you can systematically improve AI outputs instead of rewriting prompts from scratch each time. PromptQuorum includes the RISEN Framework as a built-in option that any user can select and use directly in the app.',
       publishDate: '2026-03-24',
       readTime: '8 min read',
+      educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -15984,6 +16024,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'The TRACE Framework is a prompt structure that asks models to Think, Reason, Analyze, Conclude, and Explain so their internal decision process becomes visible instead of hidden. PromptQuorum includes the TRACE Framework as a built-in option that any user can select and use directly inside the app.',
       publishDate: '2026-03-24',
       readTime: '8 min read',
+      educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -16115,6 +16156,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: "Google's Prompting Guide is a set of practical recommendations from Google DeepMind for writing prompts that make models like Gemini 2.5 Pro more reliable, controllable, and useful in real-world applications. PromptQuorum includes Google's Prompting Guide as a framework that users can select and apply directly across all supported models.",
       publishDate: '2026-03-24',
       readTime: '7 min read',
+      educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -16225,6 +16267,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'The RTF Framework is a prompt structure that focuses on Role, Task, and Format so you can give models a complete instruction in one compact message. PromptQuorum includes the RTF Framework as a built-in option that any user can select and apply across all supported models.',
       publishDate: '2026-03-24',
       readTime: '6 min read',
+      educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -16344,6 +16387,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'Zero shot prompting uses no examples in the prompt and relies entirely on the model\'s pre-training, while few shot prompting embeds a handful of examples so the model can imitate a desired pattern.',
       publishDate: '2026-03-26',
       readTime: '6 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Zero-Shot and Few-Shot Prompting',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -16448,6 +16493,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'Constrained prompting is a technique where you tell the model not just what to do, but also what it must and must not do, so outputs stay inside clearly defined boundaries. This is essential when you need reliable formats, safe content, or strict compliance with internal rules.',
       publishDate: '2026-03-26',
       readTime: '6 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Constrained Prompting',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -16544,6 +16591,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'Chain-of-thought prompting is a technique where you explicitly ask the model to show its reasoning steps instead of jumping straight to the final answer. This makes complex decisions easier to audit, debug, and improve over time.',
       publishDate: '2026-03-26',
       readTime: '7 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Chain-of-Thought Prompting',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -16654,6 +16703,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'Prompt chaining is a technique where you break a complex task into multiple smaller prompts and feed the output of one step into the next. This lets you build reliable multi-step workflows instead of relying on a single, overly complicated prompt.',
       publishDate: '2026-03-26',
       readTime: '8 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Prompt Chaining',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -17574,6 +17625,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       intro: 'Concise definitions of the 100 most important prompt engineering terms — from tokens and context windows to agent orchestration, RAG, and evaluation metrics.',
       publishDate: '2026-03-28',
       readTime: '12 min read',
+      educationalLevel: 'Beginner',
       sections: {
         intro: {
           content: [
