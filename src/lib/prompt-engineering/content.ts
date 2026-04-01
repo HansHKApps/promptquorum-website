@@ -19938,6 +19938,34 @@ zh: {
           ],
         },
 
+        qaWhyStrategic: {
+          title: 'Why is AI Strategically Important?',
+          content: [
+            'AI is strategically important because it amplifies capability across every dimension of national power simultaneously — economic productivity, military effectiveness, intelligence analysis, and cyber operations. Nations with leading AI can automate scientific research, optimize military logistics, process surveillance data at scale, and develop autonomous weapons systems. The OECD projects AI could add $15.7 trillion to global GDP by 2030, making AI leadership the equivalent of industrial leadership in the 20th century. Countries that fall behind in AI capability face compounding disadvantages across defense, trade, and diplomacy.',
+          ],
+        },
+
+        qaWhichCountriesDominate: {
+          title: 'Which Countries Dominate AI Development?',
+          content: [
+            'The United States dominates frontier model capability — OpenAI (GPT-4o), Anthropic (Claude), and Google DeepMind (Gemini) are all US-headquartered. China leads on AI patent volume (~70% of global patents in 2022 per WIPO) and has the most capable domestic models outside the US: Alibaba Qwen 2.5, Baidu ERNIE 4.0, and DeepSeek R1. The EU leads on AI regulation but trails on frontier capability — France\'s Mistral AI is the strongest European contender. The UK, Canada, and UAE are investing in AI as independent actors rather than aligning exclusively with either US or Chinese infrastructure.',
+          ],
+        },
+
+        qaChipsRole: {
+          title: 'What Role Do Chips Play in AI Geopolitics?',
+          content: [
+            'Semiconductor chips are the physical substrate of AI capability. Training frontier models requires thousands of specialized GPUs running for months — a single training run for a large model can cost $10–100 million in compute. Nvidia holds approximately 80% of the AI training GPU market; TSMC in Taiwan fabricates them. This creates two geopolitical chokepoints: the US can restrict Nvidia GPU exports to adversary nations (restricting A100 and H100 sales to China since 2022), and any disruption to TSMC\'s operations would immediately reduce global AI hardware supply. The US CHIPS and Science Act ($52 billion) explicitly funds domestic fab capacity to reduce this single-point dependency.',
+          ],
+        },
+
+        qaHowAIChangePower: {
+          title: 'How Could AI Change Global Power?',
+          content: [
+            'AI could shift global power by making AI-leading nations disproportionately powerful relative to their economic or population size. Militarily, AI enables autonomous targeting, logistics optimization, and signals intelligence processing at speeds no human-staffed system can match. Economically, AI productivity gains compound — nations with frontier AI access could sustain GDP growth rates that widen the gap with those without. Diplomatically, nations that export AI infrastructure — hardware, models, governance frameworks — gain soft power and create dependency relationships comparable to those created by oil exports or telecommunications infrastructure in earlier eras. The EU\'s Brussels Effect is already doing this through regulation: the EU AI Act shapes global AI development without the EU leading on model capability.',
+          ],
+        },
+
         geopoliticsOfAI: {
           title: 'The Geopolitics of Artificial Intelligence',
           content: [
