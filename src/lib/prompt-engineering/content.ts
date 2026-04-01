@@ -15716,6 +15716,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '[AI Hallucinations — Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — deeper dive on limitation 2',
             '[Context Windows Explained — Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets) — detailed breakdown of token limits',
             '[RAG Explained](/prompt-engineering/rag-explained) — the primary workaround for knowledge cutoffs',
+            '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — essential reading for tool use and agent architectures (limitations 6 & 8)',
           ],
         },
         faq: {
