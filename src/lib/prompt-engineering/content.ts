@@ -20088,6 +20088,62 @@ zh: {
           ],
         },
 
+        qaWhatIsAIGeopolitics: {
+          title: 'What is AI Geopolitics?',
+          content: [
+            'AI geopolitics is the study of how artificial intelligence affects global power relations between states — including economic competition, military capabilities, regulatory influence, and technological leadership. It encompasses three simultaneous competitions: which nations build the most capable models, which regulatory frameworks govern global AI deployment, and which countries control the semiconductor supply chains that make frontier AI possible. For organizations, AI geopolitics determines which tools are legally permissible, where data can be processed, and which vendors carry procurement risk.',
+          ],
+        },
+
+        qaWhoIsWinning: {
+          title: 'Who is Winning the Global AI Race?',
+          content: [
+            'The United States leads on frontier model capability — GPT-4o (OpenAI), Claude (Anthropic), and Gemini (Google DeepMind) — and on private AI investment ($67 billion in 2023 per OECD data). China leads on AI patent filings, state-directed deployment scale, and domestic model development; DeepSeek R1 matched GPT-4o on key benchmarks in January 2025. The European Union leads on AI regulation — the EU AI Act is the global reference framework — but trails on frontier model capability and private investment relative to its economic size. No single actor leads on all three dimensions simultaneously.',
+          ],
+        },
+
+        qaWhatIsBrusselsEffect: {
+          title: 'What is the Brussels Effect in AI?',
+          content: [
+            'The Brussels Effect describes how EU regulations become de facto global standards because multinational companies find it operationally simpler to apply the strictest standard worldwide rather than maintain separate compliance stacks per jurisdiction. The EU AI Act applies to any AI system placed on the EU market or whose output reaches EU users — forcing OpenAI, Google DeepMind, and Anthropic to comply with EU transparency obligations for their global products, not just EU-specific versions. The same mechanism made GDPR a global privacy standard.',
+          ],
+        },
+
+        qaHowChinaRegulates: {
+          title: 'How Does China Regulate Artificial Intelligence?',
+          content: [
+            'China regulates AI through the Cyberspace Administration of China (CAC). The Algorithm Recommendation Regulations (2022) require labeling of algorithmically curated content. The Generative AI Measures (2023) require a CAC security assessment — a 45–90 day process — before any consumer-facing generative AI service can launch in China, and mandate that AI outputs align with "socialist core values." Foreign AI models (GPT-4o, Claude, Gemini) are inaccessible from mainland China without circumvention tools. Domestic alternatives include Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao, and DeepSeek.',
+          ],
+        },
+
+        qaWhatEUAIActRequires: {
+          title: 'What Does the EU AI Act Require from Organizations?',
+          content: [
+            'The EU AI Act classifies AI systems into four risk tiers with scaled obligations. Prohibited practices — social scoring by public authorities, real-time biometric surveillance in public spaces — are banned from August 2024. High-risk AI systems used in employment, credit assessment, healthcare, or law enforcement require conformity assessments, human oversight documentation, and registration in the EU AI database before August 2026. General Purpose AI models (GPT-4o, Claude, Gemini) must publish training data summaries and comply with EU copyright law — rules that applied from August 2025. All organizations serving EU users must comply regardless of where they are headquartered.',
+          ],
+        },
+
+        qaExportControls: {
+          title: 'How Do US Export Controls Affect AI Development?',
+          content: [
+            'US export controls restrict the sale of advanced Nvidia GPUs — including the A100 and H100 — to China, aiming to limit China\'s capacity to train frontier AI models. The controls are enforced through the Export Administration Regulations (EAR) and apply to Nvidia, AMD, and Intel products above specified compute thresholds. DeepSeek R1\'s January 2025 release demonstrated the limits of this approach: trained on China-restricted H800 GPUs at a fraction of the reported cost of comparable US models, it matched GPT-4o on AIME 2024, MATH-500, and HumanEval benchmarks. Export controls slow but have not halted Chinese frontier AI development.',
+          ],
+        },
+
+        qaTSMCRole: {
+          title: 'What is TSMC\'s Role in AI Geopolitics?',
+          content: [
+            'TSMC (Taiwan Semiconductor Manufacturing Company) fabricates the advanced chips that power frontier AI — Nvidia\'s H100 and H200 GPUs, Google\'s TPUs, and Apple\'s Neural Engine are all manufactured at TSMC fabs in Taiwan. No other company currently manufactures chips at comparable process nodes (3nm, 2nm) at scale. This makes TSMC a single point of dependency in global AI infrastructure: US export controls rely on TSMC not supplying advanced nodes to Chinese chipmakers, and any disruption to Taiwan\'s political status would immediately constrain global AI hardware supply. The US CHIPS and Science Act ($52 billion) funds domestic US fab capacity specifically to reduce this dependency.',
+          ],
+        },
+
+        qaUSEUChinaDifferences: {
+          title: 'What are the Main Differences Between US, EU, and Chinese AI Strategies?',
+          content: [
+            'The three major AI strategies differ fundamentally in philosophy, legal structure, and international reach. The US prioritizes innovation and competitiveness through private sector leadership with no federal AI law — existing sector regulators (FTC, FDA, EEOC) apply existing mandates to AI within their domains. The EU prioritizes fundamental rights protection through a mandatory horizontal legal framework — the EU AI Act — that applies extraterritorially to any AI reaching EU users. China prioritizes state control and national development through mandatory content regulation and pre-launch security assessments enforced by the CAC. These approaches are structurally incompatible: organizations operating across all three jurisdictions must navigate conflicting requirements simultaneously.',
+          ],
+        },
+
         politicianQuotes: {
           title: 'What Politicians Are Saying',
           content: [
