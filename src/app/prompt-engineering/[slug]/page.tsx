@@ -154,7 +154,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     ...(glossaryKeywords.length > 0 && { keywords: glossaryKeywords }),
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['h1 + p', '.key-takeaways'],
+      cssSelector: ['.article-intro', '.key-takeaways'],
     },
     isPartOf: {
       '@type': 'WebPage',

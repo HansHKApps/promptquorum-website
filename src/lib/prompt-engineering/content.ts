@@ -19771,7 +19771,7 @@ zh: {
       intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
       metaDescription: 'How AI is reshaping global power. The EU, US, and China are pursuing incompatible AI strategies — different rules, different models, different risks. What this means for organizations deploying AI in 2026.',
       publishDate: '2026-04-01',
-      dateModified: '2026-04-01',
+      dateModified: '2026-04-02',
       readTime: '16 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'AI Geopolitics',
@@ -19781,7 +19781,7 @@ zh: {
         headline: 'Geopolitics and AI: How the EU, US, and China Are Competing for AI Dominance',
         description: 'The US, China, and European Union are pursuing incompatible visions of AI governance. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements.',
         datePublished: '2026-04-01',
-        dateModified: '2026-04-01',
+        dateModified: '2026-04-02',
         keywords: ['AI geopolitics', 'EU AI Act', 'CHIPS Act', 'AI regulation', 'China AI strategy', 'Brussels Effect', 'AI governance', 'DeepSeek', 'AI Safety Institute', 'Made in China 2025'],
         teaches: [
           'How the EU AI Act classifies risk and what deadlines apply',
