@@ -25,6 +25,7 @@ export interface PEArticle {
   theme: string
   title: string
   intro: string
+  metaDescription?: string   // 150–160 char SEO-optimised description for meta tag (falls back to intro if absent)
   publishDate: string
   dateModified?: string
   readTime: string
@@ -15457,6 +15458,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       theme: 'Fundamentals',
       title: 'AI Limitations — What LLMs Can\'t Do',
       intro: 'Large language models cannot access real-time data, verify their own outputs, or reason reliably through multi-step logic. Understanding these structural limits is the prerequisite for writing prompts that produce reliable results. This guide covers the eight hard limits that apply to every LLM — OpenAI GPT-4o, Anthropic Claude 4.6 Sonnet, Google Gemini 2.5 Pro, and open-source alternatives alike.',
+      metaDescription: 'The 8 structural limits of LLMs in 2026 — knowledge cutoffs, hallucination, no real-world actions — plus proven prompting workarounds and PromptQuorum test results.',
       publishDate: '2026-03-24',
       dateModified: '2026-04-01',
       readTime: '11 min read',

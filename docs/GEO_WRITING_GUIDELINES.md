@@ -1299,6 +1299,7 @@ done
 - [ ] Hub card title matches H1 exactly (no slug-format rendering)
 - [ ] Breadcrumb category matches articleSection in schema: Fundamentals | Frameworks | Techniques | Use Cases | Security
 - [ ] Page categorized as "Techniques" not "Fundamentals" for: security, injection, jailbreak, RAG, output validation content
+- [ ] `metaDescription` field is set (150–160 chars, NOT the full `intro`). Do NOT omit this — the `intro` field is typically 300–400 chars and will be truncated by search engines. Required fields: primary keyword, year, key topics, differentiator (PromptQuorum test data, number of items, etc.). Never duplicate the first sentence of `intro`.
 
 ---
 

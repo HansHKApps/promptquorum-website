@@ -53,7 +53,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
 
   return {
     title: `${article.title} | PromptQuorum`,
-    description: article.intro,
+    description: (article as PEArticle & { metaDescription?: string }).metaDescription ?? article.intro,
     alternates: {
       canonical: canonicalUrl,
       languages: {
