@@ -96,6 +96,22 @@ The site supports 5 languages: `en`, `de`, `fr`, `ja`, `zh`.
 - All nav links must include `?lang=XX` via the `navHref(path, lang)` helper in `HeaderClient.tsx`
 - Translations live in `src/locales/[lang].ts`
 
+### Critical: Server-to-Client Language Handoff
+
+**`useLang()` defaults to `'en'` on first render.** Any client component that renders article body content must receive the server-resolved language as a prop — otherwise crawlers (Google, Perplexity, ChatGPT Browse) see English HTML on all `?lang=XX` URLs, making translations invisible to search engines.
+
+**Rule:** Always pass `initialLang={selectedLang}` from the server page to `PromptEngineeringPostClient`:
+
+```tsx
+// page.tsx — correct ✅
+<PromptEngineeringPostClient slug={slug} initialLang={selectedLang} />
+
+// Wrong ❌ — all language URLs serve English to crawlers
+<PromptEngineeringPostClient slug={slug} />
+```
+
+If you add a new client component that renders multilingual content, follow the same pattern: accept `initialLang?: Language` as a prop and use it as the initial value before `useLang()` hydrates. Full details in `docs/TRANSLATION_SPEC.md` section 9.
+
 ## OG Image Generation
 
 All Prompt Engineering articles automatically generate language-specific Open Graph images for social sharing.
@@ -125,3 +141,4 @@ Writers do not need to create or manage og:images; they are handled automaticall
 - Use CSS files or `<style>` tags — Tailwind only
 - Use default exports — named exports only
 - Omit JSON-LD schema markup on new pages
+- Add a client component that renders multilingual content without passing `initialLang` from the server page (see Language / i18n section above)
