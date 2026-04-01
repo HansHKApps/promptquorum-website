@@ -57,6 +57,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     alternates: {
       canonical: canonicalUrl,
       languages: {
+        'x-default': canonicalUrl,
         en: `${canonicalUrl}?lang=en`,
         de: `${canonicalUrl}?lang=de`,
         fr: `${canonicalUrl}?lang=fr`,
