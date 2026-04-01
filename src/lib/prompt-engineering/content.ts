@@ -19974,6 +19974,20 @@ zh: {
           ],
         },
 
+        fiveGeopoliticalDimensions: {
+          title: '5 Geopolitical Dimensions of AI',
+          content: [
+            'AI geopolitics operates across five distinct dimensions. Each represents a separate arena of competition between the US, China, and the EU — and each creates different obligations and risks for organizations deploying AI.',
+          ],
+          items: [
+            '**1. Economy.** AI drives productivity, automation, and GDP growth. Nations with superior AI capability gain manufacturing efficiency, financial modeling advantages, and faster scientific discovery. The OECD projects AI could add $15.7 trillion to global GDP by 2030 — the majority captured by leading AI nations.',
+            '**2. Military.** AI enables autonomous weapons systems, predictive logistics, battlefield intelligence processing, and cyber operations at machine speed. The US, China, and Russia are all developing AI-enabled military systems. The US DoD\'s Joint Artificial Intelligence Center (JAIC) and China\'s Military-Civil Fusion strategy both prioritize AI for national defense.',
+            '**3. Intelligence.** AI processes satellite imagery, intercepts signals, and analyzes open-source data at scales impossible for human analysts. NSA, GCHQ, and China\'s MSS all use AI for intelligence collection and analysis. AI-generated synthetic media (deepfakes) are an emerging intelligence and influence operation tool.',
+            '**4. Infrastructure.** AI depends on physical infrastructure: semiconductor fabs (TSMC, Samsung, Intel), data centers, undersea cables, and power grids. Nations that control critical AI infrastructure — chip manufacturing, cloud platforms, training compute — hold structural leverage over those that do not.',
+            '**5. Global governance.** Which regulatory framework becomes the global default determines what AI systems can do, what data they can use, and which organizations can deploy them. The EU AI Act, US NIST frameworks, and China\'s CAC regulations represent three competing governance models — and the Brussels Effect means the EU\'s model already applies beyond its borders.',
+          ],
+        },
+
         threeWayRace: {
           title: 'The Three-Way Race: US, China, and the EU',
           content: [
