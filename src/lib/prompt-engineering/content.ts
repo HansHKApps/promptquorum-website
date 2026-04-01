@@ -7274,6 +7274,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         { '@type': 'ListItem', 'position': 9, 'name': 'Best for', 'description': 'System prompt: role consistency, safety guardrails, output format. User prompt: task-specific detail, context, few-shot examples' },
       ],
     },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'name': 'System Prompt vs User Prompt: Core Topics',
+      'description': 'Key concepts covered in this article about system and user prompts',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'What Is a System Prompt?', 'description': 'A set of persistent instructions that define how a language model behaves for an entire conversation session' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'What Is a User Prompt?', 'description': 'The specific task or question provided by an end user for a single interaction' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'How System and User Prompts Interact', 'description': 'How the two work together in an API stack and conversation flow' },
+        { '@type': 'ListItem', 'position': 4, 'name': 'Why Transparency Matters', 'description': 'How hidden system prompts prevent users and developers from debugging and optimizing output' },
+      ],
+    },
     sections: {
       definition: {
         title: 'System Prompt vs User Prompt: The Core Difference',
@@ -7849,6 +7861,19 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           'price': 'Free tier available; premium plans for team collaboration',
           'priceCurrency': 'USD',
         },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'AI Model Selection: Key Topics',
+        'description': 'Core concepts and topics covered in choosing the right AI model',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Quick Decision Matrix', 'description': 'How to pick your starting model based on task, geography, and budget' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Full Model Comparison', 'description': 'Detailed comparison of GPT-4o, Claude, Gemini, DeepSeek, and Baidu ERNIE' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Cost vs Quality Trade-offs', 'description': 'When to use budget models vs frontier models, and cost per token breakdown' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Geographic Constraints and China Access', 'description': 'Model availability in mainland China and considerations for global/regional routing' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Testing with PromptQuorum', 'description': 'How to benchmark models on your actual task data and brand voice' },
+        ],
       },
       sections: {
         definition: {
@@ -9411,6 +9436,19 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'AI Code Generation: Key Topics',
+        'description': 'Core concepts for writing better code with AI assistance',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Prompt Quality Determines Code Quality', 'description': 'How structured prompts and clear specifications produce better code outcomes' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Which Model to Use for Coding Tasks', 'description': 'Comparing Claude, GPT-4o, Gemini, and local models across different coding scenarios' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Prompt Structure for Code Generation', 'description': 'How to write prompts with role, objective, constraints, format, and edge cases' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Chain-of-Thought for Debugging', 'description': 'Using CoT prompting to trace errors step-by-step and improve code correctness' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Security in AI-Generated Code', 'description': 'Common vulnerabilities in AI-generated code and review workflows' },
+        ],
+      },
       sections: {
         directAnswer: {
           title: 'The Direct Answer: Prompt Quality Determines Code Quality',
@@ -9749,6 +9787,19 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               text: 'Yes. European researchers must comply with EU AI Act transparency requirements for AI-assisted work. Chinese institutions primarily use Qwen 2.5 (Alibaba) and DeepSeek V3, which have faster token processing for CJK-language literature. Japanese researchers under METI data governance guidelines often use Ollama-based local models — LLaMA 3.1 7B runs locally with 8GB RAM, with no data leaving the institution\'s infrastructure.',
             },
           },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'AI-Powered Research: Key Topics',
+        'description': 'Core concepts for conducting effective research with AI tools',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'What AI-Powered Research Does', 'description': 'Using LLMs and semantic search to accelerate literature discovery, synthesis, and citation checking' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'The Right Tool for Each Research Stage', 'description': 'Comparing Elicit, Consensus, Perplexity, scite.ai, and NotebookLM for different research tasks' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'AI Hallucination and Verification Workflows', 'description': 'Understanding hallucination rates and implementing verification strategies for citations and facts' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Multi-Model Fact-Checking with PromptQuorum', 'description': 'Using multiple models simultaneously to cross-check facts and reduce hallucination errors' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'RAG, Context Windows, and Long Documents', 'description': 'How context windows and Retrieval-Augmented Generation enable processing large research corpora' },
         ],
       },
       sections: {
@@ -10098,6 +10149,19 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'SEO Meets AI: Key Topics',
+        'description': 'Core concepts for understanding Generative Engine Optimization',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'GEO vs SEO: Two Different Games', 'description': 'Understanding the differences between traditional SEO and Generative Engine Optimization' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Why AI Traffic Converts Differently', 'description': 'How AI-referred visitors convert at higher rates than organic search' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'The Technical Foundations of GEO', 'description': 'JSON-LD schema markup and its impact on AI citation rates' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'The AI Crawler Stack', 'description': 'Understanding GPTBot, ClaudeBot, PerplexityBot and llms.txt standards' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Content Structure and AI Citation', 'description': 'How answer-first structure, entity density, and formatting maximize AI citations' },
+        ],
+      },
       sections: {
         definition: {
           title: 'GEO vs. SEO: Two Different Games',
@@ -10430,6 +10494,19 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Teaching With AI: Key Topics',
+        'description': 'Core concepts for using AI effectively in education',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'What AI Teaching Tools Do', 'description': 'The four distinct functions of AI in education: tutoring, lesson planning, assessment, and administration' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'AI Tools for Teachers Comparison', 'description': 'Comparing Khanmigo, MagicSchool, ChatGPT, Claude, and NotebookLM for classroom use' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'How to Write Prompts for Teaching Tasks', 'description': 'Structured prompt components that produce classroom-ready materials' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Learning Outcomes Evidence', 'description': 'Research showing AI tutoring improves student outcomes by 15-35%' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Legal and Ethical Considerations', 'description': 'EU AI Act compliance, AI detection, and responsible AI use in schools' },
+        ],
+      },
       sections: {
         definition: {
           title: 'What AI Teaching Tools Actually Do',
@@ -10723,6 +10800,19 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               text: 'Four techniques reduce hallucination in summarisation tasks: (1) instruct the model explicitly — "summarise only from the document below; do not add external knowledge"; (2) set Temperature (T) to 0.0—0.1 for maximum determinism; (3) use a faithfulness check — ask the model to list every claim in its summary and identify its source sentence; (4) cross-check with a second model — when GPT-4o and Claude 4.6 Sonnet agree on a specific fact, the probability of shared hallucination is statistically near-zero.',
             },
           },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Extract and Summarise With AI: Key Topics',
+        'description': 'Core concepts for AI-powered document extraction and summarisation',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Extractive vs Abstractive Summarisation', 'description': 'Understanding trade-offs between factual precision and readability' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Which AI Model to Use', 'description': 'Comparing NotebookLM, Claude, GPT-4o, and Gemini for summarisation tasks' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Prompt Structure for Extraction', 'description': 'How to write structured prompts that prevent hallucination and ensure accuracy' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Reducing AI Hallucinations', 'description': 'Temperature settings, faithfulness checks, and multi-model verification' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Tools and Workflows', 'description': 'Using NotebookLM, Scholarcy, Elicit, and custom extraction pipelines' },
         ],
       },
       sections: {
@@ -11044,6 +11134,19 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           },
         ],
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'AI Code Review: Key Topics',
+        'description': 'Core concepts for using AI in code review workflows',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'What AI Code Review Does', 'description': 'How AI analyzes PRs, detects bugs, flags security issues, and generates fix suggestions' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Tools Comparison', 'description': 'Comparing CodeRabbit, Greptile, Snyk, GitHub Copilot by detection rate and false positives' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'AI vs Traditional SAST', 'description': 'How AI code review detects bugs at 42-92% vs traditional static analysis at under 20%' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Prompt Engineering for Code Review', 'description': 'How to structure prompts that prioritize logic and security over style noise' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Security-Focused Review', 'description': 'Detecting SQL injection, XSS, credential leaks, and complex vulnerability chains' },
+        ],
+      },
       sections: {
 
         definition: {
@@ -11325,6 +11428,19 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             name: 'How do stop sequences differ from negative constraints in prompts?',
             acceptedAnswer: { '@type': 'Answer', text: 'Stop sequences are enforced at the API/inference level — the model halts generation the instant the specified string is generated, with no exceptions. Negative constraints in the prompt body ("Do not include explanations", "No markdown") instruct the model to avoid certain outputs but are not binding — a model may still violate them, particularly under high Temperature settings or long-context drift. Use both: stop sequences for structural termination guarantees, negative constraints for shaping content style and reducing unwanted output patterns.' },
           },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Control the Output: Key Topics',
+        'description': 'Core concepts for managing structured output from AI models',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'The Three Levels of Output Control', 'description': 'Prompt-based, schema-based, and constrained decoding approaches with trade-offs' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Output Format Control via Prompts', 'description': 'Model-specific techniques for achieving JSON compliance without constrained decoding' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Sampling Parameters', 'description': 'Temperature, Top-P, Top-K, max_tokens, and penalty parameters explained' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'The Reasoning-Format Trade-off', 'description': 'Understanding accuracy reduction from constrained decoding and two-stage solutions' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Stop Sequences and Constraints', 'description': 'Using API-level constraints and negative instructions to control output boundaries' },
         ],
       },
       sections: {
