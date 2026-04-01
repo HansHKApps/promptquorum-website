@@ -17316,11 +17316,20 @@ zh: {
         },
 
         whatIsOpenSource: {
-          title: 'What "Open Source" Actually Means for LLMs',
+          title: 'What Is an Open Source LLM?',
           content: [
             '**"Open source" and "open weights" are not synonymous.** Open-source licensing (Apache 2.0, MIT, GPL) applies to source code and permits unrestricted commercial and private use. Open-weights means the trained model weights are downloadable but may be restricted under a specialized license. LLaMA 3.1 is open-weights, not open source — Meta releases the weights under Llama Community License 2.1, which permits commercial use but includes restrictions that prevent calling derivative models "LLaMA" and require attribution.',
             '**Proprietary models are neither open weights nor open source.** OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet), and Google (Gemini 2.5 Pro) do not release model weights. You access them exclusively via API. The weights remain closed; you cannot see, download, modify, or deploy the model yourself.',
             'Understanding this distinction matters for compliance, customization, and data sovereignty. [Learn how LLMs work internally to understand why weights matter](/prompt-engineering/how-llms-actually-work).',
+          ],
+        },
+
+        whatIsProprietary: {
+          title: 'What Is a Proprietary LLM?',
+          content: [
+            '**Proprietary LLMs are closed models accessible only via API — the vendor controls the weights, training data, safety alignment, and all updates.** OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet), Google (Gemini 2.5 Pro), and Mistral API are proprietary. You cannot download weights, view training data, run inference locally, or customize the model weights directly.',
+            '**Pricing is per-token API billing on a vendor-controlled server.** GPT-4o costs $5 per 1M input tokens and $15 per 1M output tokens. Claude 4.6 Sonnet costs $3/$15. Gemini 2.5 Pro costs $1.25/$2.50 (≤200K context). You have no infrastructure cost but cannot predict monthly spend precisely — costs scale with usage.',
+            '**Proprietary vendors maintain control over model updates, behavior, and alignment.** When OpenAI updates GPT-4o, you automatically get the new version. Safety alignment, constitutional AI, and instruction-following are vendor responsibilities. For regulated industries, this can simplify compliance — the vendor maintains audit trails and published safety practices.',
           ],
         },
 
@@ -17419,7 +17428,7 @@ zh: {
         },
 
         comparisonTable: {
-          title: 'Open Source vs Proprietary LLMs — Full Comparison',
+          title: 'Key Differences Between Open Source and Proprietary LLMs',
           columns: ['Dimension', 'Open-Weights Models', 'Proprietary Models'],
           rows: [
             { 'Dimension': 'Cost model', 'Open-Weights Models': 'Self-host: $0.50–2.00/hr infrastructure. Free once deployed. No per-token billing.', 'Proprietary Models': 'API billing: $0.15–5.00 per 1M input tokens; $0.30–15.00 per 1M output tokens. Scales with usage.' },
@@ -17437,7 +17446,7 @@ zh: {
         },
 
         whenOpenSource: {
-          title: 'When to Choose Open-Weights Models',
+          title: 'When to Use Open Source Models',
           content: '**Choose open-weights when data privacy, cost at scale, or deep customization requirements dominate your constraints.** Open-weights excel in:',
           items: [
             '**Sensitive data (healthcare, finance, legal):** Patient records, financial data, attorney-client communications cannot transit external APIs. Open-weights deployed on-premises keeps data in your control and achieves compliance. Use LLaMA 3.1 or Mistral for HIPAA, GDPR, and attorney-client privilege compliance.',
@@ -17450,7 +17459,7 @@ zh: {
         },
 
         whenProprietary: {
-          title: 'When to Choose Proprietary Models',
+          title: 'When to Use Proprietary Models',
           content: '**Choose proprietary when absolute performance, managed infrastructure, or safety alignment matters most.** Proprietary excels in:',
           items: [
             '**Complex multi-step reasoning:** Agent workflows, complex research synthesis, and abstract problem-solving. GPT-4o, Claude 4.6, and Gemini 2.5 maintain a 7–8 point edge on MMLU. Open-weights close the gap on specific tasks but lag on general reasoning.',
@@ -17459,6 +17468,17 @@ zh: {
             '**Tool integration and agents:** OpenAI leads on tool use, function calling, and multi-step agent orchestration. If your system requires reliable function routing and multi-turn agent behaviors, GPT-4o is the pragmatic choice.',
             '**Managed safety and alignment:** Proprietary vendors invest heavily in constitutional AI, RLHF, and instruction-following. For chatbots, customer service, and user-facing systems, proprietary models are typically safer out-of-the-box.',
             '**Multimodal input (images, audio):** GPT-4o and Claude 4.6 Sonnet handle image input reliably. Multimodal open-weights models exist but are less mature. Use proprietary for reliable vision-language tasks.',
+          ],
+        },
+
+        hybridArchitecture: {
+          title: 'Hybrid AI Architectures (Open + Closed Models)',
+          content: '**The best approach often combines both open-weights and proprietary models in the same system.** Route tasks based on cost, latency, privacy, and performance requirements rather than choosing a single model for everything.',
+          items: [
+            '**Privacy-sensitive data → local open-weights; complex reasoning → proprietary API.** Route patient records, financial data, and legal documents to LLaMA 3.1 running locally via Ollama. Route multi-step research synthesis, code generation, and agent orchestration to GPT-4o or Claude 4.6 Sonnet. This hybrid approach achieves compliance while maintaining frontier performance.',
+            '**Cost-sensitive batch processing → local open-weights; interactive requests → proprietary API.** For background tasks (classification, extraction, summarization), use self-hosted LLaMA 3.1 70B (~$2/hr on A100). For real-time user requests where latency matters, use GPT-4o API ($5/$15 per 1M tokens). Hybrid reduces total cost and latency.',
+            '**Multi-model comparison and consensus → PromptQuorum.** Dispatch a single prompt to local Ollama, GPT-4o, Claude 4.6, and Gemini 2.5 Pro simultaneously via [PromptQuorum](/prompt-engineering/prompt-engineering-glossary#promptquorum). Compare outputs side-by-side on quality, latency, and cost. Choose the winner for production or combine outputs for ensemble reasoning.',
+            '**Testing and staging → open-weights; production serving → proprietary.** Use LLaMA 3.1 8B running locally for rapid prototyping and development. Once the prompt and pipeline are validated, upgrade to GPT-4o or Claude for production traffic where reliability, tool integration, and safety guarantees matter most.',
           ],
         },
 
