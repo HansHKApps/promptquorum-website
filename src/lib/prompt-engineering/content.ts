@@ -15722,6 +15722,19 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**Validate outputs before publishing.** Check all key figures, dates, citations, and technical specifications against authoritative primary sources. LLM output is a high-quality draft, not a primary source.',
           ],
         },
+        keyTerms: {
+          title: 'Key Terms',
+          content: ['Definitions for the core concepts used throughout this article. Each term links to the full entry in the [Prompt Engineering Glossary](/prompt-engineering/prompt-engineering-glossary).'],
+          items: [
+            '**[Knowledge Cutoff](/prompt-engineering/prompt-engineering-glossary)** — The date beyond which a model has no training data. Any event, pricing change, or release after this date is invisible to the model unless you paste it into the prompt. GPT-4o: October 2024; Claude 4.6 Sonnet and Gemini 2.5 Pro: early 2025.',
+            '**[Hallucination](/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Confident-sounding but factually incorrect or fabricated output. Caused by statistical token prediction rather than truth lookup. Grounding prompts with source material reduces but does not eliminate it.',
+            '**[Context Window](/prompt-engineering/prompt-engineering-glossary#core-concepts)** — The maximum number of tokens (words + punctuation) the model can process at once, including system prompt, conversation history, and retrieved documents. GPT-4o: 128K tokens; Claude 4.6 Sonnet: 200K; Gemini 2.5 Pro: 2M.',
+            '**[Tool Use / Function Calling](/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — A capability that lets the model invoke external functions (web search, code execution, database queries) instead of generating text answers. Required to work around the no-real-world-action limitation.',
+            '**[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary#core-concepts)** — A prompting technique where you ask the model to reason step by step before giving a final answer. Significantly improves accuracy on multi-step arithmetic, logic, and planning tasks.',
+            '**[RAG (Retrieval-Augmented Generation)](/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Architecture where relevant documents are retrieved from an external knowledge base and injected into the prompt at query time. The primary workaround for knowledge cutoffs.',
+            '**[Training Bias](/prompt-engineering/prompt-engineering-glossary#safety-alignment)** — Systematic skew in model outputs caused by imbalances in training data — primarily English-language, Western, and pre-2025 internet content. Non-English and niche-domain tasks are structurally weaker across all major models.',
+          ],
+        },
         regionalContext: {
           title: 'How LLM Limitations Vary by Region',
           content: [
