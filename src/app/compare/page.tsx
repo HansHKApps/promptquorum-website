@@ -14,10 +14,20 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ComparePage() {
+interface PageProps {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export default async function ComparePage({ searchParams }: PageProps) {
+  // Extract language from searchParams
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+
   return (
     <>
-      <ComparePageClient />
+      <ComparePageClient initialLang={selectedLang as any} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -23,7 +23,17 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PromptEngineeringPage() {
+interface PageProps {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export default async function PromptEngineeringPage({ searchParams }: PageProps) {
+  // Extract language from searchParams
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+
   return (
     <>
       <script
@@ -49,7 +59,7 @@ export default function PromptEngineeringPage() {
           ]),
         }}
       />
-      <PromptEngineeringHub />
+      <PromptEngineeringHub initialLang={selectedLang as any} />
     </>
   )
 }
