@@ -9387,7 +9387,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=en',
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['.tldr', '.faq'],
+          cssSelector: ['h1 + p', '.key-takeaways'],
         },
       },
       faqSchema: {
@@ -12107,7 +12107,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.tldr'],
+          cssSelector: ['h1 + p', '.key-takeaways'],
         },
       },
       faqSchema: {
