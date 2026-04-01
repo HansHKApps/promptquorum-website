@@ -539,7 +539,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
 
         {/* Article intro paragraph */}
         {article.intro && (
-          <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl">
+          <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl article-intro">
             {renderInlineLinks(article.intro)}
           </p>
         )}

@@ -9388,7 +9388,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         image: 'https://www.promptquorum.com/api/og/write-better-code-with-ai?lang=en',
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
       },
       faqSchema: {
@@ -12108,7 +12108,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
       },
       faqSchema: {
@@ -13544,7 +13544,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
       },
       howToSchema: {
@@ -13936,7 +13936,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
       },
       howToSchema: {
@@ -14328,7 +14328,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
       },
       howToSchema: {
@@ -14720,7 +14720,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
       },
       howToSchema: {
@@ -15112,7 +15112,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
       },
       howToSchema: {
@@ -17184,7 +17184,7 @@ zh: {
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
         mentions: [
           { '@type': 'Thing', name: 'GPT-4o' },
@@ -17706,7 +17706,7 @@ zh: {
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
         mentions: [
           { '@type': 'Thing', name: 'GPT-4o' },
@@ -18228,7 +18228,7 @@ zh: {
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
         mentions: [
           { '@type': 'Thing', name: 'GPT-4o' },
@@ -18750,7 +18750,7 @@ zh: {
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
         mentions: [
           { '@type': 'Thing', name: 'GPT-4o' },
@@ -19272,7 +19272,7 @@ zh: {
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
         mentions: [
           { '@type': 'Thing', name: 'GPT-4o' },
@@ -19805,7 +19805,7 @@ zh: {
         ],
         speakable: {
           '@type': 'SpeakableSpecification',
-          cssSelector: ['h1 + p', '.key-takeaways'],
+          cssSelector: ['.article-intro', '.key-takeaways'],
         },
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
