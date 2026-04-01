@@ -19901,12 +19901,33 @@ zh: {
           ],
         },
 
+        geopoliticsOfAI: {
+          title: 'The Geopolitics of Artificial Intelligence',
+          content: [
+            '**The geopolitics of artificial intelligence is the study of how states use AI capability, AI regulation, and AI infrastructure as instruments of power.** It encompasses three distinct competitions: the race to build the most capable models, the contest over whose regulatory framework governs global AI deployment, and the struggle to control the hardware supply chains that make frontier AI possible.',
+            'Each dimension has concrete consequences for organizations. Model capability determines what AI tools are available. Regulatory frameworks determine what tools are permissible and what documentation is required. Hardware control determines which nations can sustain frontier AI development independently — and which cannot. The US, China, and EU are pursuing incompatible strategies across all three dimensions simultaneously.',
+          ],
+        },
+
         threeWayRace: {
           title: 'The Three-Way Race: US, China, and the EU',
           content: [
             '**Three incompatible visions of AI governance are competing for global adoption, and the outcome will determine which rules govern the AI systems your organization uses.** The US prioritizes innovation and competitiveness, China uses state direction and control to achieve strategic AI dominance, and the EU builds a rights-based legal framework that exports its standards globally through the Brussels Effect.',
             'The race is not only about which country produces the most capable AI models. It is about which regulatory framework becomes the global default — defining what AI systems can do, what data they can use, and which organizations can deploy them. The EU AI Act, by applying to any AI system deployed to EU users, has already made Brussels the effective regulator of OpenAI, Anthropic, and Google DeepMind in Europe.',
             'Hardware control is a third dimension of the competition. The US CHIPS and Science Act ($52 billion) and export restrictions on advanced Nvidia GPUs aim to limit China\'s ability to train frontier models. DeepSeek R1\'s January 2025 release — competitive with GPT-4o and trained at a reported fraction of the cost — demonstrated that compute restrictions alone cannot halt AI capability development. See [open-source vs proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) for how these dynamics affect model availability.',
+          ],
+        },
+
+        aiArmsRace: {
+          title: 'The AI Arms Race: US, China, Europe',
+          content: [
+            '**The term "AI arms race" refers to the accelerating competition between the US, China, and Europe to achieve superiority in AI capability, talent, compute infrastructure, and regulatory influence.** Unlike traditional arms races, this one is primarily civilian and commercial — the leading AI labs are private companies (OpenAI, Anthropic, Google DeepMind, Baidu, Alibaba), and the most consequential deployments are in commerce, healthcare, and public administration rather than military systems.',
+          ],
+          items: [
+            '**US position:** Leads on frontier model capability (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro), chip design (Nvidia, AMD), and AI investment ($67B in private AI investment in 2023 per OECD data). Lacks a unified regulatory framework — which accelerates deployment but creates compliance fragmentation.',
+            '**China\'s position:** Leads on AI patent filings, facial recognition deployment, and state-directed AI integration into public infrastructure. Models (Qwen 2.5, ERNIE 4.0, DeepSeek R1) are competitive on many benchmarks. Hardware dependence on Nvidia architectures is a strategic vulnerability that export controls are designed to exploit.',
+            '**Europe\'s position:** Leads on AI regulation (EU AI Act is the global reference framework) and open-weights research (Mistral from France). Trails on frontier model capability and private investment. Compensates through regulatory leverage — the Brussels Effect forces US and Chinese AI providers to comply with EU standards for global products.',
+            '**The hardware layer:** Nvidia GPUs (A100, H100, B100 series) are the primary training hardware for frontier models. US export controls restrict their sale to China. DeepSeek R1\'s January 2025 release — trained on China-specific H800 GPUs at a reported fraction of the cost of comparable US models — demonstrated that these controls have not halted Chinese frontier AI development.',
           ],
         },
 
@@ -20018,6 +20039,20 @@ zh: {
             { 'Dimension': 'Banned applications', 'European Union': 'Social scoring by public authorities; real-time public biometric surveillance; AI exploiting cognitive vulnerabilities; untargeted facial image scraping', 'United States': 'No federally banned AI applications; some state bans (e.g., Illinois BIPA on biometrics)', 'China': 'Content undermining CPC leadership, state authority, or "socialist core values"; deep fakes require disclosure' },
             { 'Dimension': 'Enforcement body', 'European Union': 'EU AI Office (GPAI models) + national market surveillance authorities (high-risk AI) + Data Protection Authorities (GDPR intersection)', 'United States': 'FTC (consumer protection), FDA (medical AI), CFPB (financial AI), EEOC (employment AI), NIST (standards)', 'China': 'Cyberspace Administration of China (CAC) — primary enforcer; MIIT and SAMR for industry-specific AI' },
             { 'Dimension': 'International reach', 'European Union': 'Brussels Effect — applies to any AI placed on EU market or whose output is used in EU; extraterritorial by design', 'United States': 'Export controls on AI hardware affect global supply chains; no extraterritorial content regulation', 'China': 'BRI AI exports spread Chinese AI governance norms; Great Firewall limits foreign AI service access domestically' },
+          ],
+        },
+
+        globalPowerCompetition: {
+          title: 'AI and Global Power Competition',
+          content: [
+            '**AI is now a primary dimension of great power competition — shaping alliance structures, technology export policy, and the rules governing international trade in AI systems.** The competition is not simply bilateral (US vs China); it involves a third pole in the EU, a contested middle ground of non-aligned nations, and a series of multilateral forums (G7, G20, UN, OECD) producing competing governance frameworks.',
+            'For organizations operating internationally, global power competition in AI creates four practical risks: export control compliance (what AI hardware and software can be transferred to which countries), procurement restrictions (which AI providers can be used for government contracts), data sovereignty requirements (where AI inference on sensitive data can occur), and regulatory fragmentation (maintaining compliance with EU, US, and Chinese rules simultaneously when they conflict).',
+          ],
+          items: [
+            '**Alliance-based AI governance:** The US has coordinated AI export controls with allied nations including the Netherlands (ASML lithography controls), Japan (advanced chip export restrictions), and the UK (AI Safety Institute collaboration). This creates an informal "AI alliance" with shared technology access rules.',
+            '**Non-aligned nations:** India, Brazil, UAE, and Saudi Arabia are investing in domestic AI capability to avoid dependency on either US or Chinese AI infrastructure. India\'s BharatGPT initiative and UAE\'s Falcon model (Technology Innovation Institute) are examples of deliberate AI sovereignty strategies.',
+            '**Multilateral governance:** The G7 Hiroshima AI Process (2023), the UN AI Advisory Body report (2024), and the OECD AI Principles (updated 2024) represent parallel international governance tracks — all voluntary, all competing with the EU\'s legally binding approach.',
+            '**International relations risk:** Organizations using AI tools from providers in geopolitical adversary nations face secondary risks: reputational exposure, future procurement disqualification, and potential regulatory liability if the provider\'s government access provisions conflict with local data protection law.',
           ],
         },
 
