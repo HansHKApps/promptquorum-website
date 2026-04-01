@@ -139,6 +139,7 @@ const CATEGORY_ANCHORS: Record<string, string> = {
   'Frameworks': '/prompt-engineering#frameworks',
   'Techniques': '/prompt-engineering#techniques',
   'Use Topics': '/prompt-engineering#use-topics',
+  'Policy & Compliance': '/prompt-engineering#policy',
 }
 
 // Maps external citation names to their URLs
@@ -482,7 +483,8 @@ const THEME_COLORS: Record<string, { dot: string; badge: string; label: string }
   Fundamentals: { dot: 'bg-blue-400', badge: 'bg-blue-50 text-blue-700 border border-blue-200', label: 'Fundamentals' },
   Frameworks:   { dot: 'bg-purple-400', badge: 'bg-purple-50 text-purple-700 border border-purple-200', label: 'Frameworks' },
   Techniques:   { dot: 'bg-emerald-400', badge: 'bg-emerald-50 text-emerald-700 border border-emerald-200', label: 'Techniques' },
-  'Use Topics': { dot: 'bg-orange-400', badge: 'bg-orange-50 text-orange-700 border border-orange-200', label: 'Use Topics' },
+  'Use Topics':         { dot: 'bg-orange-400', badge: 'bg-orange-50 text-orange-700 border border-orange-200', label: 'Use Topics' },
+  'Policy & Compliance': { dot: 'bg-rose-400',   badge: 'bg-rose-50 text-rose-700 border border-rose-200',     label: 'Policy & Compliance' },
 }
 
 function PromptEngineeringPostContent({ slug, initialLang }: Props) {

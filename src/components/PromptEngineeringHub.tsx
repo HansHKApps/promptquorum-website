@@ -85,6 +85,13 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: '特定のドメインと出力タイプ向けの実践的なプロンプトエンジニアリングガイド。',
     zh: '面向特定领域和输出类型的实用提示词工程指南。',
   },
+  policy: {
+    en: 'How AI regulation, data residency law, and geopolitical competition affect organizations deploying AI.',
+    de: 'Wie KI-Regulierung, Datenspeichergesetze und geopolitischer Wettbewerb Organisationen beim KI-Einsatz betreffen.',
+    fr: 'Comment la régulation IA, les lois sur la résidence des données et la concurrence géopolitique affectent les organisations.',
+    ja: 'AI規制、データ保管法、地政学的競争が、AIを展開する組織に与える影響。',
+    zh: 'AI法规、数据驻留法律和地缘政治竞争如何影响部署AI的组织。',
+  },
 }
 
 const SUBSECTION_LABELS: Record<string, Record<string, string>> = {
@@ -133,6 +140,13 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     ja: '活用テーマ：あなたの仕事に合ったプロンプトとは？',
     zh: '应用主题：如何针对你的工作提示？',
   },
+  policy: {
+    en: 'Policy & Compliance: What Do AI Regulations Mean for Your Organization?',
+    de: 'Politik & Compliance: Was bedeuten KI-Regulierungen für Ihre Organisation?',
+    fr: 'Politique & Conformité : Que signifient les régulations IA pour votre organisation ?',
+    ja: 'ポリシーとコンプライアンス：AI規制はあなたの組織に何を意味するのか？',
+    zh: '政策与合规：AI法规对您的组织意味着什么？',
+  },
 }
 
 // Get translated article title from content or fallback
@@ -153,6 +167,7 @@ const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
   frameworks:   { badge: 'bg-purple-50 text-purple-700 border-purple-200', dot: 'bg-purple-400' },
   techniques:   { badge: 'bg-emerald-50 text-emerald-700 border-emerald-200', dot: 'bg-emerald-400' },
   'use-topics': { badge: 'bg-orange-50 text-orange-700 border-orange-200', dot: 'bg-orange-400' },
+  policy:       { badge: 'bg-rose-50 text-rose-700 border-rose-200', dot: 'bg-rose-400' },
 }
 
 function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: string; lang: Language }) {

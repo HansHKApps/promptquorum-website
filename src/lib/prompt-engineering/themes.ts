@@ -31,7 +31,6 @@ export const themes: PETheme[] = [
       'how-llms-actually-work',
       'ai-limitations-what-llms-cant-do',
       'open-source-vs-proprietary-llms',
-      'geopolitics-and-ai',
       'prompt-engineering-glossary',
     ],
   },
@@ -97,6 +96,14 @@ export const themes: PETheme[] = [
           'build-a-prompt-library',
         ],
       },
+    ],
+  },
+  {
+    id: 'policy',
+    title: 'Policy & Compliance',
+    description: 'How AI regulation, data residency law, and geopolitical competition affect organizations deploying AI.',
+    articleKeys: [
+      'geopolitics-and-ai',
     ],
   },
 ]
