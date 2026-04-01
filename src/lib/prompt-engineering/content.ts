@@ -136,7 +136,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Example input and output: One realistic input and a good output so users can judge fit at a glance.',
           ],
         },
-        buildStepByStep: {
+        howToStart: {
           title: 'How to Build Your Library Step by Step',
           content: [
             '**The fastest way to build a usable prompt library is to harvest real prompts from everyday work, normalize them into a common template, and then add light governance.**',
@@ -1436,6 +1436,26 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       publishDate: '2026-03-01',
       readTime: '10 min read',
       educationalLevel: 'Beginner',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'From GPT-2 to Today: How Prompt Engineering Evolved',
+        description: 'The history of prompt engineering from GPT-3 and few-shot prompting in 2020 to context design in 2026. Key milestones, papers, and turning points that shaped the discipline.',
+        datePublished: '2026-03-01',
+        dateModified: '2026-03-01',
+        url: 'https://www.promptquorum.com/prompt-engineering/how-prompt-engineering-evolved',
+        keywords: ['prompt engineering history', 'GPT-3 few-shot learning', 'chain-of-thought prompting', 'ChatGPT', 'context engineering', 'prompt engineering timeline', 'InstructGPT', 'RLHF'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        mentions: [
+          { '@type': 'Thing', name: 'OpenAI GPT-3' },
+          { '@type': 'Thing', name: 'OpenAI GPT-4o' },
+          { '@type': 'Thing', name: 'Anthropic Claude' },
+          { '@type': 'Thing', name: 'Google Brain' },
+          { '@type': 'Thing', name: 'ChatGPT' },
+          { '@type': 'Thing', name: 'PromptQuorum' },
+        ],
+      },
       sections: {
 
         definition: {
@@ -2390,6 +2410,26 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       readTime: '8 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Structure',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'The 5 Building Blocks Every Prompt Needs',
+        description: 'Master the 5 building blocks every prompt needs: Role & Context, Task, Input & Examples, Constraints, and Output Format. With these five components, any AI prompt becomes reliable and repeatable.',
+        datePublished: '2026-03-01',
+        dateModified: '2026-03-01',
+        url: 'https://www.promptquorum.com/prompt-engineering/5-building-blocks-every-prompt-needs',
+        keywords: ['prompt structure', 'prompt building blocks', 'role and context', 'output format', 'prompt constraints', 'few-shot examples', 'prompt engineering', 'GPT-4o', 'Claude', 'Gemini'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        mentions: [
+          { '@type': 'Thing', name: 'OpenAI GPT-4o' },
+          { '@type': 'Thing', name: 'Anthropic Claude' },
+          { '@type': 'Thing', name: 'Google Gemini' },
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'CO-STAR framework' },
+          { '@type': 'Thing', name: 'CRAFT framework' },
+        ],
+      },
       sections: {
 
         definition: {
@@ -2557,6 +2597,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Unspecified output format:** The model chooses its own structure — which changes between runs and breaks downstream processes',
             '**Merging everything into one paragraph:** Blocks mixed into a wall of text are harder for the model to parse — use line breaks or explicit labels for each block',
             '**Over-identical examples:** Three examples that are all the same teach only one pattern — vary them to cover the real range of inputs',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Build a Prompt Using the 5 Building Blocks',
+          numberedItems: [
+            '**Set Role & Context:** Open with who the model is and the domain it is operating in. Example: "You are a senior tax advisor helping a small business owner in Germany." Without this, the model answers from a generic perspective.',
+            '**Write the Task / Instruction:** State exactly what you want produced — specific and testable. "Summarise the key VAT obligations in 200 words" is better than "tell me about VAT."',
+            '**Add Input & Examples:** Provide the raw data and at least one example of the correct output format. A single well-chosen example reduces inconsistency more than any other single technique.',
+            '**Define Constraints:** List what the model must not do, the length limit, and the tone rules. Example: "Do not give advice for jurisdictions outside Germany. Maximum 200 words. Formal tone."',
+            '**Specify Output Format:** State the exact shape of the answer — JSON object, 3-bullet summary, table, or prose paragraph. Omitting this is the most common cause of unusable AI output.',
           ],
         },
 
@@ -3683,6 +3734,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Negative instruction:** "Do not add information not in the timeline" is explicit',
             '**Permission to omit:** "If unsure, skip it" releases pressure to invent details',
             '**Source accountability:** Every claim requires citing which document it came from',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Reduce AI Hallucinations: 6 Prompt Techniques',
+          numberedItems: [
+            '**Give explicit permission to say "I don\'t know":** Add to every factual prompt: "If you are not certain, say \'I don\'t know\' rather than guessing." This alone eliminates a large class of confident fabrications.',
+            '**Ask for sources or evidence:** Instruct the model to cite a source for each claim, or flag claims it cannot verify. Example: "After each fact, note either the source name or \'[unverified]\'."',
+            '**Add a self-critique step:** Ask the model to review its own output before finalising. Example: "Before answering, list any claims you are less than 90% confident in."',
+            '**Use negative instructions:** Explicitly prohibit hallucination-prone behaviour. Example: "Do not invent names, titles, or statistics. Do not extrapolate beyond the provided context."',
+            '**Require step-by-step reasoning:** Chain-of-thought prompting forces the model to show its work, making errors detectable before they reach the final answer.',
+            '**Dispatch to multiple models with PromptQuorum:** Send the same prompt to GPT-4o, Claude, and Gemini simultaneously. Facts confirmed by all three have high confidence; diverging answers flag claims needing verification.',
           ],
         },
 
@@ -4915,6 +4978,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        howToStart: {
+          title: 'How to Set Temperature and Top-P for Your Task',
+          numberedItems: [
+            '**Start with the prompt, not the parameters:** Write and refine your instructions until they are clear. Parameters cannot fix a vague prompt — they only affect the sampling distribution, not the model\'s understanding of the task.',
+            '**Identify your task type:** Factual or analytical tasks (legal analysis, code review, data extraction) → set temperature 0.0–0.3. Creative or generative tasks (brainstorming, copywriting, story ideas) → set temperature 0.7–1.0.',
+            '**Leave top-p at its default (0.9–1.0):** Only adjust top-p if you have a specific reason. Adjusting both temperature and top-p simultaneously makes it harder to diagnose which setting changed the output.',
+            '**Run 3–5 test prompts at your target temperature:** Evaluate output consistency. If outputs vary too much for a factual task, lower temperature. If outputs feel repetitive for a creative task, raise temperature.',
+            '**Document your calibrated settings per use case:** Once you find the right temperature for a specific workflow, record it in your system prompt template so it applies consistently across sessions.',
+          ],
+        },
+
         faqs: {
           faqs: [
             {
@@ -5807,6 +5881,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         templateExample: {
           title: 'Example (filled in)',
           blockquote: 'You are a product manager with expertise in B2B SaaS metrics.\n\nSummarise the top 3 drivers of customer churn in our subscription cohort.\n\nFormat: bullet points, one line each.\n\nLength: 3 bullets maximum.\n\nDo not: repeat the data I provided, add an introduction, hedge with "it depends."',
+        },
+
+        howToStart: {
+          title: 'How to Prompt for Faster, More Concise AI Answers',
+          numberedItems: [
+            '**Narrow the task to a single specific question:** Split compound tasks into separate prompts. "Summarise this contract and identify risks" becomes two prompts — shorter, faster, and more accurate on each.',
+            '**Add an explicit length constraint:** Include a word or sentence limit in every prompt that does not need a long output. "Answer in 3 bullets" or "maximum 100 words" prevents verbose preambles and padding.',
+            '**Match format to the task:** Use bullet lists for lists, tables for comparisons, and single sentences for yes/no answers. Models default to prose when no format is specified.',
+            '**Use role and context to cut explanation overhead:** A model that knows it is speaking to an expert skips basic definitions. "You are advising a senior software engineer" eliminates paragraphs of background.',
+            '**Add negative instructions to block padding:** "Do not repeat the question," "Do not add a closing summary," and "Do not use filler phrases" eliminate the most common sources of answer bloat.',
+          ],
         },
 
         faqs: {
@@ -6752,6 +6837,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         recipe3: { title: 'Recipe 3: Prompting at the Edge of the Context Window', content: '**Goal:** Use nearly the full context window without overflow.', numberedItems: ['Calculate your budget: Context window size − system prompt tokens − expected output tokens = available tokens for your input + history.', 'Example: 128k window, 200-token system prompt, 1k output buffer = 126.8k available tokens.', 'Before sending, check in PromptQuorum: "How many tokens does this input take?"', 'If close to the limit, trim the oldest turn or summarise it before continuing.', 'This keeps you operating intentionally near the limit, not randomly hitting it.'] },
         recipe4: { title: 'Recipe 4: Local LLM with Limited VRAM', content: '**Goal:** Run a local model effectively without crashes.', numberedItems: ['Start with a conservative context window (8k–16k) for your model\'s VRAM.', 'In PromptQuorum\'s settings, note the VRAM requirement at that window size.', 'Run your task. If you hit overflow, summarise the conversation and restart from the summary.', 'If you never approach the limit, slowly increase the context window and re-test.', 'Find your model\'s "right-sized" context window for your hardware and tasks.'] },
         commonMistakes: { title: 'Common Mistakes with Context Windows', items: ['"The model remembers all my previous chats." It doesn\'t. Each new conversation starts with zero context from past chats. Even within one chat, once your exchange exceeds the context window, it\'s gone.', '"I\'ll just paste the same long context on every turn." This wastes tokens and doesn\'t help — the model still can\'t reason over 300 pages effectively. Instead, summarise and reference the summary.', '"I\'ll mix five different projects in one long conversation." Each project competes for tokens. When context fills, details get truncated. Use separate conversations per project.', '"The AI is bad at reasoning — must be temperature or top-p." Maybe. But first, check context window. If the model no longer sees the original constraint, it\'s not a parameter problem; it\'s missing information.', '"I\'ll max out the context window on my local LLM." Then you run out of VRAM, the process crashes, and inference falls back to slow CPU mode. Set context to match your hardware instead.', '"The app warned me about overflow, but I sent it anyway." Trust the warning. Overflow leads to silent truncation, hidden hallucinations, and wasted tokens. Summarise first.'] },
+        howToStart: {
+          title: 'How to Manage Context Windows in Your Prompts',
+          numberedItems: [
+            '**Check the context window for your model:** GPT-4o = 128k tokens, Claude 4.6 Sonnet = 200k tokens, Claude Opus 4.6 = 1M tokens. Local models vary (typically 4k–128k). Know your limit before you start.',
+            '**Front-load critical instructions in your system prompt:** Place non-negotiable constraints and role definitions first. Once a turn falls out of context, instructions buried 20 turns later are invisible to the model.',
+            '**Summarise long conversations before continuing:** After every 10–15 exchanges, ask the model: "What are the 5 most important decisions we\'ve made?" Then use that summary as your next turn\'s context instead of relying on scattered earlier messages.',
+            '**For long documents, process in sections, not as a whole:** Break a 100-page report into chapters. Ask focused questions per chapter, then combine summaries at the end. This prevents "lost in a book" context confusion.',
+            '**Monitor for context overflow before sending:** Use PromptQuorum or manually count: (available context) − (system prompt tokens) − (expected output tokens) = (max input tokens). Stay within that budget.',
+            '**For local LLMs, right-size the context window to your VRAM:** Doubling context window roughly doubles VRAM usage. A 7B model with 32k context needs ~28GB. Test your hardware ceiling instead of maxing everything out.',
+          ],
+        },
         faq: { title: 'FAQ', faqs: [{ q: 'Does the model remember my previous chats?', a: 'No. Each new conversation session starts with zero history. The model only sees tokens within the current context window. If you want to reference a previous chat, you must copy relevant parts into the current conversation.' }, { q: 'Why did the AI ignore an instruction I gave 20 messages ago?', a: 'That instruction likely fell out of the context window. The model no longer sees it, so it can\'t follow it. Solution: Repeat critical instructions in your system prompt or ask the model to recap and re-embed the instruction mid-conversation.' }, { q: 'Is a bigger context window always better?', a: 'No. A larger window lets you include more content, but it also increases cost (more tokens to process) and, for local models, VRAM usage. Choose a context window that matches your task: 4k for simple Q&A, 32k for long conversations, 128k+ for document analysis. Bigger is not "better" — *appropriate* is better.' }, { q: 'How do I know when I\'ve hit the context limit?', a: 'The model\'s responses shift tone, contradict earlier instructions, or lose track of details you set earlier. Use PromptQuorum\'s context overflow check before sending — it warns you if you\'re approaching the limit.' }, { q: 'How does context window size affect VRAM for local models?', a: 'Larger context windows use more VRAM roughly proportionally: doubling the context window roughly doubles VRAM usage. A 7B model at 4k context ≈ 14GB VRAM; at 32k context ≈ 28GB VRAM. Check PromptQuorum\'s VRAM calculator to know your hardware\'s ceiling.' }, { q: 'Can tools like PromptQuorum prevent context overflow?', a: 'Yes. PromptQuorum checks your prompt\'s token count, your configured context window, and your model\'s actual limit, then warns you before you send if overflow is likely. You can then trim or summarise before continuing.' }, { q: 'Do different models handle long context differently?', a: 'Yes. Claude 4.6 Sonnet maintains focus across 200k tokens well. GPT-4o is solid at 128k. Smaller models (e.g., LLaMA 3.1 7B) sometimes lose reasoning coherence beyond 8k–16k, even if their context window is technically larger. The safest approach: test your specific model and task.' }] },
         relatedReading: { title: 'Related Reading', items: ['[Fundamentals: The 5 Building Blocks Every Prompt Needs] — how to structure prompts before context becomes a constraint', '[Fundamentals: AI Hallucinations: Why AI Makes Things Up] — why missing context increases hallucination risk', '[Techniques: RAG Explained: How to Ground AI Answers in Real Data] — how to handle truly large document sets with retrieval instead of raw context'] },
         sources: { title: 'Sources', items: ['[OpenAI, 2024. "API reference: Models and context windows"](https://platform.openai.com/docs/models) — official documentation on token limits and pricing per model', '[Anthropic, 2024. "Claude model context windows and token costs"](https://docs.anthropic.com/en/docs/about-claude/models/overview) — Claude\'s 200k context window and March 2026 Opus 4.6 1M context announcement', '[Raffel et al., 2020. "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"](https://arxiv.org/abs/1910.10683) — foundational research on context window effects in transformers'] },
@@ -6813,6 +6909,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         pitfalls: { title: 'Common Multimodal Pitfalls', content: '**Six pitfalls consistently degrade multimodal output quality: vague prompts, missing image context, wrong analysis scope, over-relying on precision, image overloading, and privacy/jurisdiction risks.** Recognizing and avoiding these mistakes is the fastest path to better results.', items: ['**Vague image prompts:** [Bad Prompt] "Analyze this image." [Good Prompt] "This is a screenshot of a web interface. Identify all buttons, input fields, and links. For each, note its color, position, and visible text."', '**Forgetting image labels or context:** Tell the model what the image shows before asking questions. "This is a microscopic image of a virus particle. Describe the structure visible." is better than "What is this?"', '**Wrong analysis scope:** [Bad Prompt] "Count the objects in this image." [Good Prompt] "Count only the red apples in this fruit bowl. Do not count other fruits. If uncertain, note it."', '**Assuming precision:** Vision-language models are prone to hallucination. Don\'t rely on them for pixel-perfect accuracy. For critical tasks, use specialized tools (OCR for text, object-detection APIs for counting) alongside VLMs.', '**Overloading with multiple images:** Most VLMs handle 2–10 images reliably; performance degrades beyond that. Batch them: "Analyze the first 5 images. Then analyze the next 5." Label clearly: "Image 1: [description], Image 2: [description]."', '**Privacy and jurisdiction risks with cloud VLMs:** In the EU, sending images containing personal data to cloud VLMs like GPT-4o or Gemini falls under GDPR Article 9 if biometric information is involved. Local models via Ollama or LM Studio process images on-device, keeping data within your jurisdiction without external API calls.'] },
         promptquorumHelps: { title: 'How PromptQuorum Helps You Prompt With Images', content: ['**PromptQuorum is a multi-model prompt dispatch platform that lets you test multimodal prompts across GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, and other models simultaneously.** **Tested in PromptQuorum — 30 product image prompts dispatched across three models:** GPT-4o returned the most structured output in 22 of 30 cases, Claude 4.6 Sonnet achieved the highest precision on text extraction in 25 of 30 cases, and Gemini 1.5 Pro captured the most contextual detail in 18 of 30 cases — revealing that different models excel at different image analysis tasks. Consensus Scoring identified the outlier response in every multi-model disagreement.', 'By dispatching the same multimodal prompt to all three, you see which model answers best, then use Consensus Scoring to weight their outputs.'], items: ['**Multi-model image comparison:** Upload an image and ask the same question across all models. Compare responses in seconds to discover which model suits your use case.', '**Framework application:** Apply PromptQuorum\'s structured prompt framework to multimodal requests. Define roles, context, constraints, and output format—then include an image. This ensures consistency across models.', '**Consensus scoring on image outputs:** When multiple models analyze the same image, Consensus Scoring identifies which analyses are most reliable. If three models agree but one disagrees, the score flags the outlier.'] },
         recipes: { title: 'Mini Recipes: Copy-Paste Multimodal Prompts', content: 'Use these templates as starting points for common tasks. Each follows [structured prompt building blocks](/prompt-engineering/5-building-blocks-every-prompt-needs) to ensure consistency and repeatability.', items: ['**Product photography:** "Analyze this product image and extract: (1) main materials, (2) color palette, (3) size relative to surroundings, (4) lighting direction, (5) any defects. Be specific; avoid generic adjectives."', '**Document extraction:** "Extract all visible text from this document. Preserve formatting, line breaks, and emphasis. If text is partially illegible, note [UNCLEAR] and your best guess. Format as a markdown code block."', '**UI/UX critique:** "Identify: (1) primary call-to-action and prominence, (2) visual hierarchy, (3) spacing and alignment issues, (4) color contrast problems. Focus on functional and accessibility concerns only."', '**Text-to-image template:** "Subject: [noun]. Action: [verb + state]. Style: [art style]. Context: [setting]. Technical: [camera angle, lighting]. Example: Subject: vintage gramophone. Action: playing with sound waves visible. Style: surrealism, oil painting. Context: antique shop, dimly lit. Technical: side angle, golden light, shallow depth of field."', '**Image editing:** "Edit this target image to match this reference image\'s style while preserving the target image\'s composition and subject. Do not add or remove major elements; apply only color, lighting, and texture changes."', '**Alt-text generation:** "Write alt-text for this image. Must be ≤125 characters. Describe what a blind or low-vision user needs to know. Example: \'a man in a blue suit shakes hands with a woman in a red dress at a formal event with a cityscape background.\'"'] },
+        howToStart: {
+          title: 'How to Start Prompting With Images',
+          numberedItems: [
+            '**Identify your mode: Image→Text (analyze), Text→Image (generate), or Image↔Image (edit).** Each mode has different best practices. Analysis requires specific questions; generation requires detailed visual descriptions; editing requires explicit before/after constraints.',
+            '**For image analysis, be specific about what you want to extract.** Instead of "Analyze this image," ask "Extract the date, invoice number, and total cost from this receipt" or "Identify all people in this photo and their positioning."',
+            '**For text-to-image generation, structure every prompt around five elements:** Subject (what you see), Action (what it\'s doing), Style (how it looks), Context (where it is), and Technical details (lighting, angle, camera). Skip vague terms like "beautiful."',
+            '**For image editing, explicitly describe the region to change and what must stay unchanged.** Example: "Replace the background with a forest, but keep the person\'s pose and expression identical."',
+            '**Test across multiple models with PromptQuorum.** GPT-4o excels at scene understanding, Claude 4.6 Sonnet at text extraction, Gemini 1.5 Pro at long contexts. One model is rarely best for all tasks—compare outputs to find your best fit.',
+            '**Avoid three pitfalls:** vague prompts ("analyze this image"), assuming precision (VLMs hallucinate details), and overloading with many images (batch beyond 10).',
+          ],
+        },
         faq: { title: 'FAQ', faqs: [{ q: 'Which vision-language model is best for analyzing images?', a: 'No single model is best. GPT-4o excels at general scene understanding and complex reasoning. Claude 4.6 Sonnet is precise at document analysis and text extraction. Gemini 1.5 Pro handles longer multimodal contexts (1 million tokens). Use PromptQuorum to test all three against your specific task.' }, { q: 'Can vision-language models count objects accurately?', a: 'No. VLMs struggle with precise counting, especially of small or densely packed objects. For accurate counts, use specialized object-detection APIs, or ask the model to enumerate objects with explicit constraints: "Count only red items; be conservative—if uncertain, don\'t count it."' }, { q: 'How many images can I include in one prompt?', a: 'Most VLMs handle 2–10 images reliably. Performance degrades beyond 10. If you need to analyze many images, batch them and process in rounds. Label each image clearly: "Image 1: [description], Image 2: [description]."' }, { q: 'What image formats do vision-language models support?', a: 'GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro accept JPEG, PNG, GIF, and WebP. Most support images up to 20 MB. Specific limits vary by model; check OpenAI and Anthropic documentation for current details.' }, { q: 'Can I use local models like Ollama for multimodal prompting?', a: 'Yes. Models like LLaVA and Ollama support local image analysis. Local models offer privacy but lower accuracy than GPT-4o or Claude 4.6 Sonnet. Use them for non-critical tasks or when privacy is essential.' }, { q: 'How do I improve consistency in text-to-image generation?', a: 'Use structured templates (Subject/Action/Style/Context/Technical), provide reference images, and specify constraints (resolution, composition, element count). Iterate with the same model—switching models between iterations produces inconsistent results.' }, { q: 'What\'s the difference between prompting for image analysis versus generation?', a: 'Analysis prompts specify the information scope ("Extract only the date and invoice number"). Generation prompts must describe all visual elements clearly (subject, action, style, context, technical details). Generation demands more precision because the model imagines rather than perceives.' }] },
         relatedReading: { title: 'Related Reading', items: ['[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational concepts for all prompting', '[The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — how structure applies to all prompts, including multimodal', '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — reasoning patterns that combine with image prompting for complex tasks'] },
         sources: { title: 'Sources & Further Reading', items: ['[OpenAI Vision API Documentation](https://platform.openai.com/docs/guides/vision)', '[Anthropic Claude Vision Documentation](https://docs.anthropic.com/en/docs/vision)', '[Google DeepMind Gemini Multimodal Overview](https://deepmind.google/technologies/gemini/)'] },
@@ -7325,6 +7432,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       recipe3: {
         title: 'Recipe 3: Code Reviewer',
         blockquote: 'You are an expert code reviewer. Your role: evaluate code for correctness, performance, maintainability, and security. Constraints: (1) Point out strengths and weaknesses. (2) Suggest specific improvements, not generic advice. (3) Respect the author\'s choices — explain the "why," not the demand. (4) Do not suggest premature optimization. (5) Flag security issues as critical. Output format: Summary + line-by-line feedback with code snippets. Use markdown code blocks. Tone: Respectful, constructive. Scope: Code review only. Refuse: Refactoring or architectural changes outside scope.',
+      },
+
+      howToStart: {
+        title: 'How to Write an Effective System Prompt in 5 Steps',
+        numberedItems: [
+          '**Define the role explicitly:** Open with a clear, domain-specific role statement. "You are a B2B SaaS copywriter specialising in developer tools" is more effective than "You are a helpful assistant."',
+          '**Write constraints before capabilities:** State what the model must not do first — scope boundaries, prohibited topics, tone rules. Constraints set before instructions are harder for user inputs to override.',
+          '**Specify the output format in the system prompt:** Define the default output structure (bullets, JSON, prose, table) so every user message produces consistently formatted output without needing repeated format instructions.',
+          '**Set scope boundaries:** Define what the model should decline or redirect. Example: "If asked about topics outside software pricing, reply: \'That\'s outside my scope — please contact the general support team.\'"',
+          '**Test with at least 5 different user messages:** Try edge cases — off-topic questions, long inputs, ambiguous requests — before deploying. Refine based on where the model breaks character or format.',
+        ],
       },
 
       relatedReading: {
@@ -7958,6 +8076,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         recipe4: {
           title: 'Recipe 4: Use Local LLMs for Private Data, Frontier Models for Final Polish',
           blockquote: 'You have sensitive customer data. Step 1: Process locally with Ollama or LM Studio (no data leaves your servers). Step 2: Send the refined output to Claude or GPT for final polish and quality check. This hybrid approach is cheap, private, and produces high-quality output. Test it in PromptQuorum to find the local model that works best for your pipeline.',
+        },
+
+        howToStart: {
+          title: 'How to Choose an AI Model for Your Task',
+          numberedItems: [
+            '**Define your task type:** Is it factual/analytical (legal analysis, code review, data extraction) or creative/generative (brainstorming, copywriting, design ideation)? Factual tasks favor GPT-4o or Claude 4.6 Sonnet; creative tasks work across all frontier models.',
+            '**Match the model to speed/cost trade-offs:** GPT-4o is fastest and cheapest for most tasks. Claude 4.6 Sonnet is best for long reasoning and accuracy. Gemini 1.5 Pro excels at multimodal and long context (1M tokens). Use PromptQuorum to benchmark all three against your specific prompt.',
+            '**Start with a frontier model (GPT-4o, Claude 4.6 Sonnet, or Gemini 1.5 Pro), then downgrade if possible:** A task that works well on GPT-4o might run just as well on GPT-4o mini (10–33× cheaper). Test your prompt on cheaper models once you have a working version.',
+            '**For local/private workflows, use Ollama or LM Studio, but accept lower quality:** Local models handle private data without external API calls but produce lower accuracy than frontier models. Use a hybrid: local model for first pass, frontier model for quality check.',
+            '**For geographically distributed users, route by region:** Global users (US, EU, Japan) → GPT-4o / Claude / Gemini. China → DeepSeek or Baidu ERNIE (legal requirement). Use PromptQuorum to test each region\'s model independently.',
+            '**Test all three (or more) with PromptQuorum before committing:** Send your prompt to GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro simultaneously. Compare outputs to discover which model suits your task best.',
+          ],
         },
 
         faq: {
@@ -9476,6 +9606,16 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p) — how randomness parameters affect every model output',
           ],
         },
+        howToStart: {
+          title: 'How to Write Better Code With AI',
+          numberedItems: [
+            '**Define your role and constraints upfront.** Before writing the request, specify \'You are a senior [language] engineer,\' the target framework (React, FastAPI, etc.), and any architectural constraints (no new packages, strict type safety, etc.).',
+            '**Structure your prompt with role, objective, constraints, and output format.** Use a consistent template: role → objective → constraints → output format → edge cases. This reduces the model\'s guesswork and produces cleaner code on the first attempt.',
+            '**Use Chain-of-Thought (CoT) prompting for debugging tasks.** Ask the model to \'trace the execution step by step\' before producing the final fix. This makes the model\'s reasoning inspectable and catches logic errors before they enter production.',
+            '**Set Temperature (T) to 0.1–0.2 for production code.** Deterministic output is safer than creative variation when writing code that will run in production. Reserve T = 0.7–0.9 only for algorithmic brainstorming.',
+            '**Run the code through a security linter and multi-model cross-check.** Never deploy AI-generated code without: (1) a security scanner (Bandit for Python, ESLint for JavaScript), and (2) verification via PromptQuorum or similar multi-model dispatch to catch hallucinated dependencies.',
+          ],
+        },
         faq: {
           title: 'Frequently Asked Questions',
           faqs: [
@@ -9815,6 +9955,16 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p) — how randomness parameters affect factual accuracy',
           ],
         },
+        howToStart: {
+          title: 'How to Conduct AI-Powered Research',
+          numberedItems: [
+            '**Map your research workflow by stage: discovery, gathering, synthesis, verification.** Use Perplexity for exploratory discovery, Elicit for structured literature extraction, Consensus for evidence synthesis, and scite.ai for citation verification. Route each task to the tool designed for it.',
+            '**Set Temperature (T) to 0.0–0.1 for citation generation.** Deterministic output minimizes hallucinations on author names, years, and DOIs. Use T = 0.7–0.9 only for hypothesis brainstorming, not for any fact-based claim.',
+            '**Structure research prompts with role, scope, objective, citation requirement, and output format.** Example: \'You are a systematic review researcher. Analyze peer-reviewed papers 2020–2026 only. Summarize scientific consensus on [topic]. Cite every claim with author, year, journal. Return as table: Claim | Source | Year | Confidence.\'',
+            '**Use multi-model cross-checking to detect hallucinated citations.** Run the same research question through GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro via PromptQuorum. Any citation where models disagree on author, year, or journal requires manual verification in Google Scholar or PubMed.',
+            '**Verify all citations manually before inclusion in academic work.** Every AI-generated reference must be checked against the source database. Hallucinated citations have been confirmed in papers that passed peer review at top conferences like NeurIPS 2025.',
+          ],
+        },
         faq: {
           title: 'Frequently Asked Questions',
           faqs: [
@@ -10135,6 +10285,16 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[Write Better Content With AI](/prompt-engineering/write-better-code-with-ai) — applying GEO-compliant structure across all content types',
           ],
         },
+        howToStart: {
+          title: 'How to Optimize Content for GEO (Generative Engine Optimization)',
+          numberedItems: [
+            '**Audit your current content through an AI lens: searchability and citability.** Pull 10 of your highest-traffic pages and ask ChatGPT, Perplexity, and Google AI Overviews if they cite or recommend your content when answering queries related to your topic. Flag gaps where you\'re not appearing.',
+            '**Structure your content as answer-first with verifiable facts and clear schema markup.** Lead each section with a direct answer (not a question). Support every claim with sources or clear reasoning. Add JSON-LD schema (Article, FAQPage, HowTo, Breadcrumb) so AI crawlers understand your content structure.',
+            '**Include the keyword intent, not just the keyword.** If you rank for \'best AI tools,\' GEO requires you to answer \'What makes an AI tool the best?\' (accuracy, speed, cost, ease of use). AI systems use intent-matching, not keyword-matching—ensure your answer matches what AI systems infer the user wants.',
+            '**Build FAQ sections that answer derived questions AI systems ask.** AI systems decompose broad queries into sub-questions. If you target \'AI hallucinations,\' add FAQ sections answering \'How common are AI hallucinations?\', \'Can hallucinations be prevented?\', \'Which models hallucinate most?\'.',
+            '**Add a machine-readable llms.txt file to your root directory.** Include your high-value content topics, data sources, and trust signals (credentials, citations, update frequency). This helps AI crawlers quickly determine whether to cite your content.',
+          ],
+        },
         faq: {
           title: 'Frequently Asked Questions',
           faqs: [
@@ -10420,6 +10580,16 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational principles behind effective AI instructions',
             '[Write Better Content With AI](/prompt-engineering/write-better-code-with-ai) — structuring AI-generated educational materials for clarity and accuracy',
             '[How to Reduce AI Hallucinations](/prompt-engineering/how-to-reduce-ai-hallucinations) — verification workflows for AI-generated content in academic settings',
+          ],
+        },
+        howToStart: {
+          title: 'How to Teach With AI',
+          numberedItems: [
+            '**Define learning objectives and assessments before introducing AI.** Specify what students must know (Bloom\'s levels: recall, understand, apply, analyze) and how you\'ll assess it. Then design where AI strengthens instruction (practice, feedback, personalization) versus where it cannot (deep critical thinking, hands-on labs).',
+            '**Use AI for personalized practice and immediate feedback, not for grading judgment calls.** AI excels at generating practice problems, explaining concepts multiple ways, and providing instant feedback on low-stakes quizzes. Avoid using AI for subjective grading (essays, presentations) without human review—particularly in high-stakes contexts.',
+            '**Teach students how to verify AI outputs and detect hallucinations.** Show them multi-model cross-checking: run the same question through GPT-4o, Claude, and Gemini, then compare responses. Have them fact-check AI answers against primary sources. This builds critical thinking and AI literacy simultaneously.',
+            '**Create a structured prompt template students use for all AI interactions.** Example: \'Role → Objective → Scope → Output Format → Verification Method.\' Practice this template together until students can recognize when vague prompts produce vague answers.',
+            '**Set clear policies on AI use for specific tasks.** Be explicit: AI is allowed for brainstorming, generating practice problems, and iterative drafts; AI is not allowed for initial essay outlines, exam answers, or code without attribution. This prevents plagiarism while preserving AI\'s pedagogical value.',
           ],
         },
         faq: {
@@ -10763,6 +10933,16 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[How to Reduce AI Hallucinations](/prompt-engineering/how-to-reduce-ai-hallucinations) — specific techniques for grounding AI outputs in verified source content',
           ],
         },
+        howToStart: {
+          title: 'How to Extract Data and Summarize With AI',
+          numberedItems: [
+            '**Choose your tool based on the source type and extraction structure.** Use NotebookLM for your own PDFs or documents, Elicit for academic papers with structured fields (methodology, sample size, outcomes), and Perplexity for real-time web summarization. Text-to-table extractions work best with systems designed for it (Elicit) rather than general chat models.',
+            '**Define your extraction schema upfront (JSON, table, bullet list).** Tell the model exactly what columns or fields you need and the data type for each. Example: \'Return as JSON array with keys: author (string), year (integer), finding (text max 200 chars), confidence (enum: high/medium/low).\'',
+            '**Set Temperature (T) to 0.1–0.3 for extraction and summarization.** Lower temperatures produce more deterministic, consistent outputs. Reserve higher temperatures only for brainstorming alternative interpretations of ambiguous source material.',
+            '**For large documents, break extraction into multiple passes with intermediate checkpoints.** If you have 100-page PDFs, extract sections 1–25, then 26–50, etc., storing results in a structured format. This prevents context window overflow and makes errors easier to spot and correct.',
+            '**Cross-check key extractions with the source document.** Always spot-check 10–20% of extracted data against the original. AI models can hallucinate or misread structured data, especially from tables with merged cells or unclear formatting.',
+          ],
+        },
         faq: {
           title: 'Frequently Asked Questions',
           faqs: [
@@ -11032,6 +11212,16 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai) — how to structure prompts for code generation that produces reviewable output',
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational techniques for writing structured AI instructions',
             '[How to Reduce AI Hallucinations](/prompt-engineering/how-to-reduce-ai-hallucinations) — verification workflows applicable to AI-generated code review findings',
+          ],
+        },
+        howToStart: {
+          title: 'How to Use AI for Code Review',
+          numberedItems: [
+            '**Brief the AI on your codebase architecture, naming conventions, and constraints before asking it to review code.** Provide a short context doc: \'This is a Next.js app. We use TypeScript strict mode, no `any` types, all components must have JSDoc, all API endpoints must have rate limiting.\' Without this, the AI makes generic comments that miss project-specific issues.',
+            '**Ask AI to check for specific categories of bugs: security, performance, logic, consistency.** Instead of \'review this code,\' ask: \'Review for security vulnerabilities (inputs, auth, data exposure), then check if this pattern matches our established error handling.\' Specific questions produce more focused, useful feedback.',
+            '**Use Chain-of-Thought (CoT) prompting: ask the model to trace execution before producing feedback.** For complex functions, ask \'Trace the execution for input X, then identify any logic errors.\' This makes the AI\'s reasoning transparent and catches subtle bugs humans might miss.',
+            '**Use multi-model code review for high-risk changes (auth, payments, infrastructure).** Run the same code through GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. When all three flag the same issue, it\'s a strong signal. When only one model catches something, investigate carefully.',
+            '**Treat AI as a first-pass filter, not the final arbiter.** AI is excellent at catching obvious bugs (missing returns, type mismatches, SQL injection patterns) but can miss context-specific issues (performance implications, scaling problems, team conventions). Always have a human review AI-based feedback.',
           ],
         },
 
@@ -11305,6 +11495,16 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai) — applying output control techniques in code generation workflows',
           ],
         },
+        howToStart: {
+          title: 'How to Control AI Output Format',
+          numberedItems: [
+            '**Always specify your desired output format explicitly in the prompt.** Instead of \'summarize this\', say: \'Summarize as a bulleted list of 5–7 items, each 1–2 sentences. Use active voice. Do not include opinions.\' Be specific about structure: bullets, tables, JSON, markdown, plain text.',
+            '**Use JSON schema to enforce structured output when available (OpenAI, Anthropic).** If you\'re extracting data or generating machine-readable content, define the schema: field names, types, required fields, enum constraints. The model will format output to match automatically.',
+            '**Provide an example of the exact output format you want.** Show the model a concrete example: \'Format like this: { \"topic\": \"...\", \"key_points\": [...], \"confidence\": \"high|medium|low\" }.\' Examples are more powerful than descriptions alone.',
+            '**Use constraint-based language: \'You must X, you must not Y, always Z.\'** Avoid soft language (\'try to\', \'aim to\'). Say: \'Return exactly 3 steps, no more, no fewer. Do not use technical jargon. Always include a warning if the recommendation has limitations.\'',
+            '**Test your output format specification on one example before running it at scale.** Generate one output, check if it matches your spec, adjust the prompt if needed. This prevents discovering formatting problems after processing 100 items.',
+          ],
+        },
 
         faq: {
           title: 'Frequently Asked Questions',
@@ -11497,6 +11697,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational principles for structuring AI instructions',
             '[How to Write Prompts for Better Results](/prompt-engineering/how-to-write-a-system-prompt) — techniques for building reusable, consistent prompts',
             '[Write Better Content With AI](/prompt-engineering/write-better-code-with-ai) — applying structured prompting to content workflows',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Train AI With Your Brand Voice',
+          numberedItems: [
+            '**Define 3–5 voice pillars as simple adjectives describing your brand tone.** Examples: \'clear, helpful, confident, approachable\' or \'technical, authoritative, accessible.\' These become your reference whenever you brief AI. Write them down and share with your team.',
+            '**Collect your best 5–10 on-brand examples and 3–5 off-brand examples.** Gather real copy (blog intros, emails, social posts, ads) that exemplify your voice. Include counter-examples showing what you want to avoid (too salesy, too stiff, too casual). This gives AI concrete patterns to learn from.',
+            '**Create a reusable brand voice instruction block you can paste into any prompt.** Template: \'Voice pillars: [3–5 adjectives]. Style: [formal/casual, sentence length, humour]. Use: [preferred phrases]. Avoid: [banned phrases/tones]. On-tone examples: [1–2 short excerpts].\' Store this in a shared doc or prompt library.',
+            '**Apply the voice instruction consistently across all content—generation, rewriting, and QA.** Whether drafting new copy or auditing existing content, use the same voice block. This maintains consistency across channels and teams.',
+            '**Run AI-generated content through a \'voice QA\' check before publishing.** Use AI itself: \'Is this on-brand according to our voice guidelines? If not, flag which sentences deviate and why.\' This catches drifts automatically.',
           ],
         },
 
@@ -11711,6 +11922,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[Write Better Code With AI](/prompt-engineering/write-better-code-with-ai) — how to structure prompts for code generation that produces reviewable output',
             '[AI Code Review: Tools and Verification](/prompt-engineering/ai-code-review) — using AI to review code quality and security',
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational principles for reliable AI output',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Build AI-Aware Quality Checks',
+          numberedItems: [
+            '**Add a dependency validation step: check that all imported packages actually exist in your package manager.** Before running tests, verify that every package mentioned in `import` or `require` statements exists in npm, pip, PyPI, or your internal registry. AI hallucinations often invent plausible-sounding package names.',
+            '**Scan for common hallucination patterns: non-existent APIs, functions with wrong signatures, and fabricated config flags.** Run a linter or custom script checking if every API call matches the actual SDK or service documentation. Flag calls to methods that don\'t exist.',
+            '**Add a security-focused gate: SAST (Static Application Security Testing) plus explicit checks for common AI-generated vulnerabilities.** Use tools like Bandit (Python), ESLint-Security (JavaScript), or Snyk. Also scan for: SQL injection patterns, overly broad CORS rules, hardcoded credentials, insecure deserialization.',
+            '**Use multi-model code validation for critical paths (auth, payments, infrastructure).** Before merging, run your code through ChatGPT, Claude, and Gemini asking \'Does this code match the intended logic? Any security risks?\' Flag divergence.',
+            '**Require human code review with focus on logic vs. syntax.** Automated gates catch obvious hallucinations (missing packages, wrong methods). Code reviewers should verify: Does this do what was intended? Are edge cases handled? Is the approach appropriate for the use case?',
           ],
         },
 
@@ -12099,6 +12321,16 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[Fundamentals: Context Windows Explained — Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets) — deep dive into context window limits and retrieval strategies',
             '[Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — token pricing, rate limits, and cost optimization across GPT-4o, Claude, and Gemini',
             '[Fundamentals: AI Hallucinations Explained — Why LLMs Make Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — how token prediction and the lack of fact retrieval lead to confidence errors',
+          ],
+        },
+        howToStart: {
+          title: 'How to Understand How LLMs Work',
+          numberedItems: [
+            '**Start with tokens: understand that LLMs don\'t see letters or words, they see tokens (subword units), usually 1–2 tokens per word in English.** Use an online tokenizer (OpenAI\'s, Anthropic\'s) to count tokens in sample text. See how \'ChatGPT\' becomes \'Chat\' + \'G\' + \'PT\', and how that affects pricing and context windows.',
+            '**Learn the transformer architecture\'s three core layers: embeddings, attention, and output projection.** You don\'t need to implement it, but know conceptually: embeddings convert tokens to vectors, attention compares all pairs of tokens to understand relationships, output projection maps back to vocabulary. This explains why LLMs understand context and why they hallucinate.',
+            '**Understand why LLMs hallucinate: they predict \'likely next tokens\' based on training data patterns, not \'correct facts.\'** When training data has conflicting or scarce information on a topic, the model\'s best guess is sometimes wrong. This is a fundamental property, not a fixable bug. Set Temperature (T) low for factual tasks, high for creative ones.',
+            '**Experiment with temperature and top-p to see how they change output.** Generate text at T=0.0 (deterministic), T=0.7 (varied but coherent), and T=1.5 (random). See that higher T = more variation. Understand top-p (nucleus sampling) filters unlikely tokens, reducing nonsense.',
+            '**Understand context windows: the model \'sees\' only a fixed window of recent tokens.** GPT-4o\'s 128k-token window is ~96,000 words. Old information gets \'forgotten\' because it falls outside the window. This explains why LLMs sometimes contradict information earlier in a long conversation.',
           ],
         },
 
@@ -15288,6 +15520,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             "PromptQuorum's automatic selector and custom framework editor help you enforce this pattern at scale so that prompt quality does not depend on individual memory or skill.",
           ],
         },
+
+        howToStart: {
+          title: 'How to Choose a Prompt Framework',
+          numberedItems: [
+            '**Map your task type to a framework: reasoning (CoT), specification (SPECS), role-based (Persona), structured output (JSON-mode), or multi-step (Chaining).** Different frameworks solve different problems. CoT for logic, SPECS for structured requirements, Persona for tone/style, JSON-mode for data extraction, Chaining for multi-step workflows.',
+            '**Test your task with 2–3 frameworks on the same prompts and compare outputs.** For \'summarize this document,\' try CoT (reason first, then summarize) vs. direct summarization vs. prompt chaining (extract key points → synthesize). See which produces the best output for your use case.',
+            '**For complex tasks, layer frameworks: use Persona to set tone, SPECS to define constraints, and CoT to reason through edge cases.** You don\'t have to stick with one framework. Combine them to match your task\'s complexity.',
+            '**Document why you chose a framework for each prompt in your library.** Example: \'For bug analysis, we use CoT because the model needs to trace execution before identifying the error. For code generation, we use SPECS because we need deterministic, constraint-respecting output.\'',
+            '**Revisit framework choice when task requirements change.** If your summarization task shifts from \'extracting facts\' to \'synthesizing three perspectives,\' you might move from a direct summary (faster) to Chaining (more nuanced). Framework choice is iterative, not permanent.',
+          ],
+        },
       },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -15416,6 +15659,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Run these prompts across multiple models in one click to see which provider fits each workflow best.',
           ],
         },
+
+        howToStart: {
+          title: 'How to Use the Single Prompt Method',
+          numberedItems: [
+            '**Write one clear, comprehensive prompt describing your task, context, constraints, and desired output.** Instead of multiple shorter prompts, create a single, well-structured prompt that serves as the \'contract\' between you and the model. Include role, objective, scope, constraints, and output format.',
+            '**Structure the prompt with clear sections: Role → Objective → Scope → Constraints → Output Format → Example.** Use headers or numbered sections. This makes the prompt scannable and ensures the model weights all parts equally.',
+            '**Test your single prompt on representative examples before scaling.** Run it on 3–5 diverse inputs. If output quality varies wildly, refine the constraints or example. Once it\'s reliable on test cases, apply it to your full dataset.',
+            '**Store your single prompt as a reusable template in your prompt library.** Document which fields are placeholders (you fill in at runtime) vs. fixed instructions. This makes it reproducible across team members and tools.',
+            '**Update the prompt when new edge cases emerge.** After processing 100 items, you\'ll discover cases your original prompt didn\'t anticipate. Document these and update the prompt to handle them, then reprocess previous items for consistency.',
+          ],
+        },
       },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -15531,6 +15785,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Pick APE for complex but self-contained tasks where reasoning matters.',
             'Pick a Single Step-style framework when you already know the exact output format and only need one well-specified instruction.',
             'Pick more detailed frameworks (with many sections and parameters) only when you have strict internal standards that must be encoded into the prompt.',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Use the APE (Automatic Prompt Optimization) Framework',
+          numberedItems: [
+            '**Define your task, success metric, and a few seed examples.** Example: Task = \'classify customer feedback sentiment.\' Success metric = \'accuracy on 20 labeled examples.\' Seed examples = 3 diverse customer messages with correct sentiment labels.',
+            '**Use an APE tool or ChatGPT to automatically generate prompt variants.** Provide your task and examples, and ask: \'Generate 5 different prompt variations that might solve this task. Vary instruction style, examples, and constraints.\' Evaluate each variant on your test set.',
+            '**Score each variant on your success metric.** Run all variants on your held-out examples. Record accuracy, speed, cost. APE\'s goal is to find the best prompt without manual trial-and-error.',
+            '**Iterate: pick the top 2 variants, ask the optimizer to generate mutations of those.** If variant 3 scored 85% accuracy and variant 5 scored 82%, ask the optimizer to \'generate variations similar to variant 3 but with [specific tweak].\' Refine iteratively.',
+            '**Once you have a strong prompt, test it on fresh data to confirm it generalizes.** Your optimized prompt scored well on your test set—now verify it works on new, unseen examples. If performance drops, you may have overfit to your test data.',
           ],
         },
       },
@@ -15658,6 +15923,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Use CRAFT for creative outputs: posts, emails, scripts, landing pages.',
             'Use a Single Step or specification-style framework for structured reports, checklists, or JSON outputs.',
             'Use reasoning-oriented frameworks, such as an Analyze–Plan–Execute structure, for complex analysis and planning.',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Use the CRAFT Framework',
+          numberedItems: [
+            '**C—Clarify the task with a one-sentence objective.** Example: \'Classify customer feedback sentiment.\' Not: \'Help with analysis.\' Be specific.',
+            '**R—Rank constraints by priority.** Example: (1) Must preserve customer tone, (2) Response should be ≤100 words, (3) Classify complaint type if possible. Prioritize what matters most to your outcome.',
+            '**A—Articulate the audience and desired style.** Example: \'Audience: support managers (non-technical). Style: professional, concise, actionable.\' This shapes tone and detail level.',
+            '**F—Frame examples that illustrate what you want and don\'t want.** Provide 2–3 good examples and 1–2 counter-examples. This teaches the model by contrast.',
+            '**T—Test your prompt on representative cases before deployment.** Use CRAFT structure to build the prompt, then validate on a small batch. If results are poor, iterate: clarify constraints, add better examples, or adjust audience framing.',
           ],
         },
       },
@@ -15806,6 +16082,18 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Use reasoning-oriented frameworks like Analyze–Plan–Execute when you want the model to expose its intermediate thinking.',
           ],
         },
+
+        howToStart: {
+          title: 'How to Use the CO-STAR Framework',
+          numberedItems: [
+            '**Context: Provide relevant background information the model needs to understand your task.** Example: \'You are reviewing a pull request for a React component library. The project enforces TypeScript strict mode, immutable state, and functional components only.\'',
+            '**Objective: State what you want the model to do in one sentence.** Example: \'Review this code for type safety and functional programming violations.\'',
+            '**Style: Specify tone and format.** Example: \'Be direct and critical. Return feedback as a bulleted list. Use technical language.\'',
+            '**Task: Describe the actual task with specific inputs and outputs.** Example: \'Analyze this React component. Flag any type errors, mutable state, or class component patterns. Return: list of issues + severity level (critical/warning/info) + suggested fix.\'',
+            '**Augment with examples: Show one good example (code that passes review) and one bad example (code with violations).** This teaches the model what you\'re looking for.',
+            '**Response format: State exactly how you want output structured.** Example: \'Return as JSON: { issues: [...], summary: string, confidence: high|medium|low }.\'',
+          ],
+        },
       },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -15925,6 +16213,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Use single-step general-purpose frameworks for quick tasks that do not justify a full specification.',
           ],
         },
+
+        howToStart: {
+          title: 'How to Use the SPECS Framework',
+          numberedItems: [
+            '**Setting: Provide context about the environment, system, or domain.** Example: \'You are a data analyst at a healthcare company. Patient privacy is critical. All queries must comply with HIPAA.\'',
+            '**Problem statement: State the specific problem you\'re solving.** Example: \'Identify which patient cohorts show low medication adherence in the last 90 days.\'',
+            '**Examples: Provide 2–3 concrete examples of good output.** For analysis, show a sample output table or findings. For code generation, show working code that matches your style.',
+            '**Constraints: List hard rules and preferences.** Example: \'Use only SQL (no Python). Query must run in under 5 seconds. Output must be anonymized (no patient names).\'',
+            '**Style: Specify tone, language, and format preferences.** Example: \'Technical audience. Use precise terminology. Return as a markdown report.\'',
+          ],
+        },
       },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -16041,6 +16340,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Start with a generation framework such as Single Step, CRAFT, or CO-STAR to create the first draft.',
             'Switch to RISEN when you are ready to refine, inspect changes, and plan further edits.',
             'Optionally move to a specification-style framework like SPECS if the final output must follow a strict schema.',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Use the RISEN Framework',
+          numberedItems: [
+            '**Role: Define the AI\'s role explicitly.** Example: \'You are a senior software architect with 20 years of experience in microservices design.\'',
+            '**Instruction: State the task clearly.** Example: \'Design a scalable architecture for a real-time chat application serving 1M+ concurrent users.\'',
+            '**Steps to follow: Break the task into ordered steps the model should follow.** Example: (1) Identify bottlenecks, (2) Recommend caching layers, (3) Design database sharding strategy, (4) Outline deployment approach.\'',
+            '**End goal: Clarify the desired outcome.** Example: \'Produce a detailed architectural diagram with component justifications and trade-off analysis.\'',
+            '**Narrow down (iterate): Ask follow-up questions or request refinements.** Example: \'Now apply this architecture to handle 10x the load. What changes?\'',
           ],
         },
       },
@@ -16175,6 +16485,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Optionally finish with a specification-style framework (such as SPECS) if the final result must follow a strict structure or schema.',
           ],
         },
+
+        howToStart: {
+          title: 'How to Use the TRACE Framework',
+          numberedItems: [
+            '**Task: Define what the model should do.** Example: \'Explain how the recursive Fibonacci function works.\'',
+            '**Request: Ask a specific question or provide input.** Example: \'Trace the execution of fib(5) step by step.\'',
+            '**Action: Instruct the model to \'show work\'—trace through logic, not just conclusions.** Example: \'Show each function call, the return value at each level, and which calls are made from each level.\'',
+            '**Clarify: Add constraints or requirements.** Example: \'Format as a tree showing function call relationships. Highlight the redundant calls that make recursion inefficient.\'',
+            '**Examine: Ask the model to evaluate its own output or answer follow-up questions.** Example: \'Why does this approach become slow? How could you optimize it?\' This ensures depth.',
+          ],
+        },
       },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -16284,6 +16605,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Use a framework (for example CO-STAR or SPECS) to define the overall structure of the task.',
             "Apply Google's prompting principles inside that structure: explicit roles, clear constraints, few-shot examples, and step-by-step reasoning when needed.",
             'Run the combined prompt in PromptQuorum across multiple models to validate that it behaves consistently.',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Follow Google\'s Prompting Best Practices',
+          numberedItems: [
+            '**Be clear and specific: avoid vague instructions.** Instead of \'Tell me about AI,\' ask \'Explain how Large Language Models (LLMs) generate text, with technical detail suitable for computer science students.\'',
+            '**Provide examples of the desired output format.** Show a sample answer or code example the model should emulate. Examples teach better than descriptions.',
+            '**Give the model a \'role\' to play if it helps.** Example: \'You are a financial advisor. Explain tax-loss harvesting to a high-net-worth individual.\' Roles guide tone and detail level.',
+            '**Use step-by-step reasoning for complex tasks.** Ask the model to \'think step by step\' before answering. This forces deliberation and catches errors.',
+            '**Test your prompt on varied inputs before deploying at scale.** A prompt that works on one example may fail on edge cases. Validate across diverse scenarios.',
           ],
         },
       },
@@ -16406,6 +16738,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Use creative frameworks like CRAFT when audience and tone are central.',
           ],
         },
+
+        howToStart: {
+          title: 'How to Use the RTF (Role, Task, Format) Framework',
+          numberedItems: [
+            '**Role: Define who the AI is playing.** Example: \'You are a product manager at a B2B SaaS company.\'',
+            '**Task: State what the AI should do.** Example: \'Write product requirements for a new analytics dashboard feature.\'',
+            '**Format: Specify the structure and style of output.** Example: \'Return as a PRD document with sections: Overview, Goals, User Personas, Key Features, Success Metrics, Timeline. Use professional, clear language.\'',
+            '**Combine RTF with constraints for better control.** Example: \'RTF: Role = Product Manager, Task = Write PRD, Format = Markdown document. Constraints: 2000 words max, focus on enterprise users, no buzzwords.\'',
+            '**Test RTF prompts on sample tasks to ensure clarity before using them repeatedly.** RTF is a simple framework—validate that your role, task, and format choices actually produce the output you need.',
+          ],
+        },
       },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -16512,6 +16855,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Save both zero shot and few shot versions as templates, then compare accuracy, latency, and token costs across models over time.',
           ],
         },
+
+        howToStart: {
+          title: 'How to Choose Between Zero-Shot and Few-Shot Prompting',
+          numberedItems: [
+            '**For routine, straightforward tasks, start with zero-shot (no examples).** Example: \'Classify this review as positive or negative.\' If accuracy is sufficient, zero-shot is faster and cheaper.',
+            '**When zero-shot performance is poor (< 80% accuracy or quality), add 2–5 few-shot examples.** Show the model 2–3 positive and 2–3 negative reviews with correct labels. Few-shot teaches by example.',
+            '**For tasks with subtle distinctions or rare patterns, add 5–10 examples (few-shot+).** If your task requires detecting sarcasm, harmful bias, or domain-specific nuance, more examples help.',
+            '**Choose examples that span the range of inputs you expect.** If you\'re classifying product reviews, include enthusiastic, lukewarm, and negative examples. Don\'t show only easy cases.',
+            '**Measure few-shot benefit on a test set before committing to it in production.** Run the same prompt with 0 examples and 5 examples on 50 test cases. If few-shot adds 10+ percentage points of accuracy, include examples. If the gain is <5%, stick with zero-shot.',
+          ],
+        },
       },
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -16608,6 +16962,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Encode structural and content constraints directly into frameworks so every run follows the same rules.',
             'Test constrained prompts across multiple models side by side to see which provider adheres best to your specifications.',
             'Save constrained prompts as templates for recurring tasks, ensuring your team always uses the same validated patterns.',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Use Constrained Prompting',
+          numberedItems: [
+            '**Identify output constraints relevant to your task: length, format, vocabulary, scope, safety.** Example: \'Response must be ≤100 words, JSON format, use only technical terms, cover only recent developments (2024+), must not mention competitors.\'',
+            '**State constraints explicitly using \'must,\' \'must not,\' and \'only\' language.** Avoid soft directives like \'try to\' or \'aim to.\' Hard constraints are more reliable.',
+            '**For format constraints, provide an example of the exact format you want.** Show the model: \'Return as JSON: { \"finding\": \"...\", \"confidence\": \"high|medium|low\", \"sources\": [...] }\'',
+            '**For content constraints, list what to include and exclude explicitly.** Example: \'Include: technical details, performance metrics. Exclude: marketing language, competitor names, pricing.\'',
+            '**Test constrained prompts on edge cases to ensure the model respects all constraints.** Generate 10 outputs. Check: Do all respect the length limit? Do all use the correct format? Are there any violations?',
           ],
         },
       },
@@ -16720,6 +17085,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         inPromptQuorumClosing: {
           content: [
             'This turns chain-of-thought prompting from a one-off trick into a repeatable part of your decision-making process.',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Use Chain-of-Thought (CoT) Prompting',
+          numberedItems: [
+            '**For logic, reasoning, or debugging tasks, ask the model to \'think step by step\' before answering.** Instead of \'What is the bug?\', ask \'Trace the execution step by step, then identify the bug.\'',
+            '**Provide a worked example showing step-by-step reasoning.** Don\'t just describe it—show the model what step-by-step reasoning looks like. Example: \'First, I check the function signature... Then, I trace the first call with input X...\'',
+            '**Use explicit prompts like \'Let\'s think step by step\' or \'First, identify... Then...\'** These trigger more deliberate reasoning in the model.',
+            '**For complex problems, ask the model to trace intermediate outputs.** Example: \'Trace the execution of this function for input [5]. Show the value of each variable after each line.\'',
+            '**Combine CoT with verifiable outputs: ask the model to show its work so you can audit it.** \'Explain your reasoning at each step. If you make a mistake, I should be able to spot it from your shown work.\'',
           ],
         },
       },
@@ -16847,6 +17223,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         pqClosing: {
           content: [
             'By treating prompt chaining as a first-class pattern, PromptQuorum helps you turn complex, multi-step tasks into consistent, maintainable AI workflows.',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Use Prompt Chaining',
+          numberedItems: [
+            '**Break your complex task into sequential subtasks, each solved by a separate prompt.** Example for \"write and publish a blog post\": (1) Generate outline, (2) Write sections, (3) Fact-check claims, (4) Optimize for SEO, (5) Format for publishing.',
+            '**Feed the output of one prompt as input to the next.** The outline from step 1 guides section writing in step 2. The draft from step 2 is fact-checked in step 3. This sequential flow reduces hallucinations.',
+            '**Optimize each prompt independently before chaining them.** Tune prompt 1 until it generates good outlines, then tune prompt 2 until it writes good sections given an outline. Test each step separately.',
+            '**Use intermediate checkpoints where a human can review before proceeding.** After generating an outline, review it before writing sections. After fact-checking, flag claims that fail verification. This prevents errors from cascading.',
+            '**Document the chain structure and dependencies.** Create a diagram or flowchart showing: Step 1 → Step 2 → Step 3, and which outputs feed into which inputs. This makes the pipeline clear and maintainable.',
           ],
         },
       },
@@ -17013,6 +17400,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'The seven building blocks of a prompt persona are: role, domain scope, objectives, constraints, interaction style, examples, and uncertainty handling.',
           ],
         },
+
+        howToStart: {
+          title: 'How to Use Persona-Based Prompting',
+          numberedItems: [
+            '**Choose a persona that matches your desired output style.** For marketing copy: \'You are a creative copywriter.\' For technical documentation: \'You are a principal engineer.\' For accessibility: \'You are writing for non-technical users.\'',
+            '**Describe the persona with specific traits relevant to your task.** Instead of \'friendly,\' say: \'You explain technical concepts with analogies, use short sentences, avoid jargon, and prioritize clarity over completeness.\'',
+            '**Combine persona with task clarity.** Example: \'You are a technical writer experienced in making complex systems accessible to non-experts. Write a 500-word explanation of how API rate limiting works.\'',
+            '**Use personas to control tone and style without micromanaging every detail.** A persona brings implicit conventions and priorities. \'Software architect\' suggests structured thinking; \'journalist\' suggests fact-based narrative.',
+            '**Test persona choices by running the same prompt with different personas and comparing outputs.** Generate the same content as \'casual marketer\' vs. \'professional consultant.\' See which tone matches your brand or use case better.',
+          ],
+        },
       },
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -17133,6 +17531,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'By treating negative prompting as part of your prompt architecture, PromptQuorum helps you convert past mistakes into durable, reusable constraints.',
           ],
         },
+
+        howToStart: {
+          title: 'How to Use Negative Prompting',
+          numberedItems: [
+            '**Identify what you don\'t want in the output: specific words, tones, styles, or approaches.** Example: \'Do not use marketing buzzwords. Do not make promises. Do not reference competitors.\'',
+            '**State negatives explicitly using \'do not,\' \'must not,\' \'never\' language.** Soft negatives like \'avoid if possible\' are less effective. Be direct: \'Never use the words \"disrupt,\" \"game-change,\" or \"AI-powered.\"\'',
+            '**Provide negative examples: show the model what you explicitly don\'t want.** Example: \'Don\'t write like this: \"Unlock explosive growth with our AI solution.\" Don\'t write like this: \"Our cutting-edge platform uses machine learning.\" Write like this: [provide positive example].\'',
+            '**Combine positive and negative guidance.** Don\'t just say what to avoid—also say what to do instead. Example: \'Do not use hype language. Instead, focus on specific, measurable benefits.\'',
+            '**Use negative prompting sparingly—it can sometimes confuse the model.** Positive guidance (\'write clearly and technically\') often works better than heavy negatives (\'don\'t be vague, don\'t simplify, don\'t omit details\'). Balance both approaches.',
+          ],
+        },
       },
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -17251,6 +17660,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         pqClosing: {
           content: [
             'By combining self-consistency with multi-model comparison, PromptQuorum helps you separate stable conclusions from fragile guesses.',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Use Self-Consistency Prompting',
+          numberedItems: [
+            '**For complex reasoning tasks, generate multiple outputs (5–10) from the same prompt with different random seeds.** Ask the model the same question 5 times. You\'ll get 5 different responses.',
+            '**Analyze the outputs to find consistent patterns (the \'consensus\').** If 4 of 5 responses agree on an answer, that agreement is your confidence signal. If all 5 disagree, the task is ambiguous or the prompt needs refinement.',
+            '**Use Self-Consistency to detect hallucinations in research and knowledge tasks.** If asking \'What is the capital of France?\' and 3 responses say \'Paris\' while 2 say \'Lyon,\' the consensus (Paris) is your answer. If you see random different cities, the model is hallucinating.',
+            '**Set Temperature (T) higher (0.7–1.0) to encourage diverse outputs.** Lower temperatures (T = 0) produce the same deterministic output every time, defeating the purpose. Self-Consistency needs variation to find consensus.',
+            '**Implement self-consistency in production pipelines where cost allows.** Running 5–10x more generations is expensive, but for critical decisions (medical advice, financial recommendations, research synthesis), the consensus signal justifies the cost.',
           ],
         },
       },
@@ -17402,6 +17822,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'By turning these techniques into structured, repeatable patterns, PromptQuorum helps you move from ad-hoc experiments to deliberate, testable reasoning workflows.',
           ],
         },
+
+        howToStart: {
+          title: 'How to Use Tree-of-Thought (ToT) and ReAct Prompting',
+          numberedItems: [
+            '**Tree-of-Thought (ToT): For branching logic problems, ask the model to explore multiple solution paths before committing.** Example: \'Consider 3 different approaches to this problem. Evaluate each approach. Then choose the best one and explain why.\'',
+            '**ReAct (Reasoning + Acting): For tasks requiring external information, ask the model to reason, decide what to search/look up, then act on that decision.** Example: \'Reason about this question. What information do you need? What would you search for? Then answer using what you know.\'',
+            '**For ToT, structure as: Propose → Evaluate → Decide.** Propose multiple solution paths. Evaluate each one (pros, cons, feasibility). Decide on the best one with justification.',
+            '**For ReAct, structure as: Reason → Plan Action → Take Action → Observe → Iterate.** This mimics human problem-solving: think, plan, do, observe, adjust.',
+            '**Use ToT when the task has clear correctness criteria (logic puzzles, system design reviews).** Use ReAct when the task requires external lookup (research, fact-checking, verification). Combining both is powerful for complex tasks.',
+          ],
+        },
       },
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -17517,6 +17948,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         modularity: {
           content: [
             'This modularity is one of RAG\'s biggest strengths: you can upgrade individual components—retriever, index, generator, prompts—without rebuilding the entire system.',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Use Retrieval-Augmented Generation (RAG)',
+          numberedItems: [
+            '**Identify the knowledge sources the AI needs (documents, PDFs, databases, APIs).** Example: For customer support, you might include FAQs, product docs, and past ticket resolutions. For research, include your paper repository and external databases.',
+            '**Convert static documents into searchable embeddings using a vector database (Pinecone, Weaviate, Chroma, Milvus).** This process breaks documents into chunks (paragraphs or sentences), converts each to a vector (numerical representation of meaning), and stores them for fast semantic search.',
+            '**At query time: (1) Convert the user\'s question to a vector, (2) Retrieve the most similar documents, (3) Pass retrieved documents + question to the LLM.** Example: User asks \'How do I reset my password?\' → System finds relevant FAQ/docs → LLM generates answer grounded in those docs, not from training data.',
+            '**For large document sets (100+ pages), implement chunking strategy: break documents into 200–500 word chunks with overlap.** This balances context comprehension with search precision. Test chunk sizes on representative queries.',
+            '**Verify that retrieved documents actually contain the answer before the LLM generates output.** If retrieval returns irrelevant docs, even a good LLM will struggle. Use a relevance threshold: only pass retrieved docs to the LLM if they exceed a similarity score (e.g., > 0.7).',
           ],
         },
       },
@@ -17642,6 +18084,17 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         pqConclusion: {
           content: [
             'By standardizing structured output and JSON mode at the framework level, PromptQuorum helps you turn unstructured text into consistent, automation-ready data.',
+          ],
+        },
+
+        howToStart: {
+          title: 'How to Use Structured Output and JSON Mode',
+          numberedItems: [
+            '**For data extraction and machine-readable outputs, use JSON mode (available in OpenAI, Anthropic, others).** This guarantees the model returns valid JSON, not prose. Example: Extract product info as JSON with keys: name, price, description, rating.',
+            '**Define your JSON schema explicitly, including field names, data types, and constraints.** Example: { \"name\": string, \"price\": number (≥ 0), \"in_stock\": boolean, \"tags\": array of strings }.',
+            '**Provide an example of the exact JSON structure you want.** Example: \'{ \"issue\": \"memory leak\", \"severity\": \"critical\", \"suggested_fix\": \"...\", \"code_snippet\": \"...\" }. Examples are more powerful than schema descriptions.',
+            '**For nested structures (objects within arrays), be explicit about hierarchy.** Example: { \"articles\": [ { \"title\": string, \"author\": string, \"citations\": [ { \"title\": string, \"year\": number } ] } ] }.',
+            '**Validate JSON output before using it in downstream systems.** Parse the returned JSON and check: (1) It\'s valid JSON syntax, (2) All required fields are present, (3) Data types match expectations. Handle parse errors gracefully.',
           ],
         },
       },
