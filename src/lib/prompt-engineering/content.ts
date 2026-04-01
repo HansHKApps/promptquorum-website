@@ -17333,6 +17333,17 @@ zh: {
           ],
         },
 
+        definitions: {
+          title: 'Key Concepts & Definitions',
+          content: [
+            '**Open-Weights Model.** A large language model whose trained weights (the numerical parameters learned during training) are publicly available and can be downloaded, modified, fine-tuned, and self-hosted. Examples: LLaMA 3.1 (Meta), Mistral Large 2 (Mistral AI), Qwen 2.5 (Alibaba). Not to be confused with open-source licensing; "open weights" is about downloadable model files, not necessarily source code or OSI-compliant licensing.',
+            '**Proprietary LLM.** A large language model whose weights are kept private and never released. Access is exclusively through a vendor\'s API, requiring per-token billing and network connectivity. Examples: GPT-4o (OpenAI), Claude 4.6 Sonnet (Anthropic), Gemini 2.5 Pro (Google). Users cannot download, inspect, modify, or self-host the model.',
+            '**Fine-Tuning.** The process of retraining a pretrained model on a new, smaller dataset specific to a domain or task. Fine-tuning updates the model\'s weights to specialize in your use case (e.g., customer service tone, domain vocabulary). Open-weights models support full fine-tuning via LoRA, QLoRA, or full backpropagation; most proprietary models restrict or forbid fine-tuning.',
+            '**Training Data Cutoff.** The date after which a model has no knowledge of events or information. GPT-4o has a cutoff of October 2024; Claude 4.6 Sonnet has early 2025; Gemini 2.5 Pro has October 2024. Models cannot provide accurate information about events after their cutoff date.',
+            '**Model Weights.** The numerical parameters (billions to trillions of numbers) learned during model training. Weights determine the model\'s behavior, knowledge, and reasoning patterns. Open-weights models release these files (~15–800 GB depending on model size); proprietary models keep weights secret.',
+          ],
+        },
+
         featureComparison: {
           title: 'Quick Feature Comparison',
           columns: ['Feature', 'Open Source LLM', 'Proprietary LLM'],
