@@ -19767,16 +19767,292 @@ zh: {
   'geopolitics-and-ai': {
     en: {
       theme: 'Fundamentals',
-      title: 'Geopolitics and AI',
-      intro: 'Coming soon — how geopolitical tensions, regulation, and regional strategies shape AI development and what that means for prompt engineers and organizations.',
-      publishDate: '2026-03-24',
-      readTime: 'Coming soon',
-      sections: {},
+      title: 'Geopolitics and AI: How the EU, US, and China Are Competing for AI Dominance',
+      intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
+      metaDescription: 'EU AI Act, US CHIPS Act, China AI regulations: how the three AI superpowers compete and what this means for organizations deploying AI in 2026.',
+      publishDate: '2026-04-01',
+      dateModified: '2026-04-01',
+      readTime: '16 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'AI Geopolitics',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: 'Geopolitics and AI: How the EU, US, and China Are Competing for AI Dominance',
+        description: 'The US, China, and European Union are pursuing incompatible visions of AI governance. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements.',
+        datePublished: '2026-04-01',
+        dateModified: '2026-04-01',
+        keywords: ['AI geopolitics', 'EU AI Act', 'CHIPS Act', 'AI regulation', 'China AI strategy', 'Brussels Effect', 'AI governance', 'DeepSeek', 'AI Safety Institute', 'Made in China 2025'],
+        teaches: [
+          'How the EU AI Act classifies risk and what deadlines apply',
+          'What individual EU and non-EU European countries are doing on AI',
+          'How US and Chinese AI strategies differ from the EU approach',
+          'What the Brussels Effect means for non-EU organizations using AI tools',
+          'How geopolitical competition shapes AI model availability and procurement decisions',
+        ],
+        about: [
+          { '@type': 'Thing', name: 'EU AI Act' },
+          { '@type': 'Thing', name: 'AI geopolitics' },
+          { '@type': 'Thing', name: 'Brussels Effect' },
+          { '@type': 'Thing', name: 'AI governance' },
+          { '@type': 'Thing', name: 'DeepSeek' },
+        ],
+        mentions: [
+          { '@type': 'Thing', name: 'European Commission' },
+          { '@type': 'Thing', name: 'Cyberspace Administration of China' },
+          { '@type': 'Thing', name: 'NIST AI Risk Management Framework' },
+          { '@type': 'Thing', name: 'UK AI Safety Institute' },
+          { '@type': 'Thing', name: 'CHIPS and Science Act' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1 + p', '.key-takeaways'],
+        },
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/geopolitics-and-ai', width: 1200, height: 630 },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What is the EU AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act is the world\'s first comprehensive legal framework for artificial intelligence, passed by the European Parliament in March 2024 with 523 votes in favor. It classifies AI systems into four risk tiers — Unacceptable, High, Limited, and Minimal — and applies different requirements and fines to each tier. Full enforcement applies from August 2026.' } },
+          { '@type': 'Question', name: 'Does the EU AI Act apply to companies outside the EU?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The EU AI Act applies to any organization that places AI systems on the EU market or whose AI outputs are used in the EU, regardless of where the organization is headquartered. This extraterritorial reach is called the Brussels Effect and means US and Asian AI providers must also comply if they serve EU users.' } },
+          { '@type': 'Question', name: 'What are the fines for violating the EU AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Fines reach up to €35 million or 7% of global annual turnover for prohibited AI practices (whichever is higher). High-risk AI violations carry fines up to €15 million or 3% of global turnover. Providing incorrect information to authorities carries fines up to €7.5 million or 1% of global turnover.' } },
+          { '@type': 'Question', name: 'What AI applications does the EU ban outright?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act prohibits: social scoring systems by public authorities, real-time biometric surveillance in public spaces (with narrow law enforcement exceptions), AI that exploits cognitive vulnerabilities, and untargeted scraping of facial images from the internet to build recognition databases. These are categorized as Unacceptable Risk.' } },
+          { '@type': 'Question', name: 'How does US AI regulation differ from the EU approach?', acceptedAnswer: { '@type': 'Answer', text: 'The US uses a sectoral, voluntary approach — existing regulators (FTC, FDA, CFPB, EEOC) apply their mandates to AI within their domains. There is no federal AI law equivalent to the EU AI Act. The Biden Executive Order on AI Safety (October 2023) was revoked by the Trump administration in January 2025 and replaced with a competitiveness-focused AI Action Plan.' } },
+          { '@type': 'Question', name: 'Is China\'s AI as capable as US AI systems?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1, released January 2025, matched GPT-4o on multiple benchmarks (AIME 2024, MATH-500, HumanEval) while reportedly training at a fraction of the cost. China\'s leading models — including Alibaba\'s Qwen and Baidu\'s ERNIE — are competitive on many tasks but trail on multilingual reasoning and safety benchmarks. Hardware export controls limit China\'s access to the latest Nvidia GPUs.' } },
+          { '@type': 'Question', name: 'Can EU companies use GPT-4o and Claude under the AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, for most use cases. GPT-4o and Claude 4.6 Sonnet qualify as General Purpose AI (GPAI) models and must comply with transparency obligations — including publishing training data summaries and complying with EU copyright law — which took effect August 2025. OpenAI and Anthropic have both published GPAI compliance documentation for EU users.' } },
+          { '@type': 'Question', name: 'What is the UK AI Safety Institute (AISI)?', acceptedAnswer: { '@type': 'Answer', text: 'The UK AI Safety Institute (AISI) was established in November 2023 following the AI Safety Summit at Bletchley Park. It conducts technical research on AI safety, evaluates frontier AI models for dangerous capabilities, and publishes safety reports. The AISI operates independently of commercial AI developers and collaborates with the US AI Safety Institute.' } },
+          { '@type': 'Question', name: 'How does DeepSeek affect the AI geopolitics race?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1\'s January 2025 release demonstrated that frontier AI capabilities are achievable at significantly lower compute costs than previously assumed. This weakens the argument that export controls on Nvidia GPUs will permanently limit Chinese AI development. It accelerated US and EU policy discussions about whether compute-based containment strategies are sufficient.' } },
+          { '@type': 'Question', name: 'What is the Brussels Effect in AI?', acceptedAnswer: { '@type': 'Answer', text: 'The Brussels Effect describes how EU regulations become de facto global standards because multinational companies find it easier to apply the strictest standard worldwide rather than maintain separate compliance stacks per jurisdiction. For AI, this means the EU AI Act effectively raises standards for GPT-4o, Claude, and Gemini globally — regardless of where users are located.' } },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            '**The EU AI Act is the world\'s first comprehensive AI law** — passed March 2024, GPAI rules applied August 2025, full enforcement from August 2026. Fines up to €35M or 7% of global turnover.',
+            'The EU bans outright: social scoring, real-time public biometric surveillance, and AI that exploits cognitive vulnerabilities. These prohibitions apply to all organizations serving EU users.',
+            '**EU member states have national AI strategies**: Germany (€5B investment 2019–2025), France (€2B, hosted 2025 AI Action Summit in Paris), Sweden (AI Commission 2024 report), Poland (military AI focus).',
+            'Non-EU Europe is diverging: UK chose a pro-innovation, sector-led approach (no AI law); Switzerland maintains AI neutrality; Ukraine deploys AI in active warfare.',
+            '**The US revoked Biden\'s AI Safety Executive Order** in January 2025. The Trump administration\'s AI Action Plan prioritizes competitiveness over safety mandates.',
+            'China\'s DeepSeek R1 (January 2025) matched GPT-4o on key benchmarks at a fraction of training cost — demonstrating that GPU export controls have not halted Chinese AI development.',
+            'The Brussels Effect means EU AI Act compliance requirements apply to US and Asian AI providers serving EU users — GPT-4o, Claude, and Gemini must all comply with GPAI transparency rules.',
+          ],
+        },
+
+        threeWayRace: {
+          title: 'The Three-Way Race: US, China, and the EU',
+          content: [
+            '**Three incompatible visions of AI governance are competing for global adoption, and the outcome will determine which rules govern the AI systems your organization uses.** The US prioritizes innovation and competitiveness, China uses state direction and control to achieve strategic AI dominance, and the EU builds a rights-based legal framework that exports its standards globally through the Brussels Effect.',
+            'The race is not only about which country produces the most capable AI models. It is about which regulatory framework becomes the global default — defining what AI systems can do, what data they can use, and which organizations can deploy them. The EU AI Act, by applying to any AI system deployed to EU users, has already made Brussels the effective regulator of OpenAI, Anthropic, and Google DeepMind in Europe.',
+            'Hardware control is a third dimension of the competition. The US CHIPS and Science Act ($52 billion) and export restrictions on advanced Nvidia GPUs aim to limit China\'s ability to train frontier models. DeepSeek R1\'s January 2025 release — competitive with GPT-4o and trained at a reported fraction of the cost — demonstrated that compute restrictions alone cannot halt AI capability development. See [open-source vs proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) for how these dynamics affect model availability.',
+          ],
+        },
+
+        euAiAct: {
+          title: 'The EU AI Act: What It Actually Requires',
+          content: [
+            '**The EU AI Act classifies AI systems into four risk tiers, with requirements and fines scaled to the level of risk the system poses to fundamental rights and safety.** The European Parliament passed the Act in March 2024 with 523 votes in favor, 46 against, and 49 abstentions — the widest political consensus of any major AI legislation globally.',
+            'The Act applies to providers placing AI systems on the EU market, deployers using AI systems within the EU, and importers and distributors — regardless of where these organizations are headquartered. A US company whose AI output is used in EU member states must comply.',
+          ],
+          items: [
+            '**Unacceptable Risk (prohibited):** Social scoring by public authorities; real-time biometric identification in public spaces (narrow law enforcement exceptions permitted); AI exploiting cognitive vulnerabilities; untargeted facial image scraping. These are banned from August 2024 onwards.',
+            '**High Risk:** AI in critical infrastructure, education, employment, essential services (credit, benefits), law enforcement, border control, and administration of justice. Requires conformity assessments, transparency documentation, human oversight, and registration in the EU database.',
+            '**Limited Risk:** Chatbots and AI-generated content. Requires disclosure — users must know they are interacting with AI.',
+            '**Minimal Risk:** Spam filters, AI in video games, recommendation systems without significant impact. No specific obligations beyond existing law.',
+            '**General Purpose AI (GPAI):** Models like GPT-4o, Claude, and Gemini must publish training data summaries, comply with EU copyright law, and report serious incidents. Models with systemic risk (trained with >10^25 FLOPS) face additional adversarial testing requirements. GPAI rules applied August 2025.',
+            '**Enforcement:** EU AI Office (within European Commission) oversees GPAI models. National market surveillance authorities enforce high-risk AI rules. Fines: up to €35M or 7% global turnover for prohibited practices; €15M or 3% for high-risk violations.',
+            '**Timeline:** Prohibited practices: August 2024. GPAI obligations: August 2025. High-risk AI systems: August 2026. High-risk AI in regulated products: August 2027.',
+          ],
+        },
+
+        euMemberStates: {
+          title: 'EU Member States: National AI Strategies',
+          content: [
+            '**Every EU member state has adopted a national AI strategy, but investment levels, focus areas, and implementation pace vary significantly.** France and Germany lead on funding; the Nordic states lead on governance frameworks; Central and Eastern European states are increasingly integrating AI into defence and public administration.',
+          ],
+          items: [
+            '**Germany:** Federal AI Strategy (Nationale KI-Strategie), updated 2023. €5 billion invested in AI research, infrastructure, and talent 2019–2025 across federal programs. Six AI competence centers established at major universities. Bundestag debates on AI liability ongoing. Fraunhofer Society and DFKI (German Research Center for Artificial Intelligence) are key research institutions.',
+            '**France:** €2 billion public AI investment announced by President Macron (2024). France AI (government coordination body) manages national strategy. Paris hosted the AI Action Summit in February 2025 — the first G7-level AI governance summit under French EU presidency. CNRS and INRIA lead academic AI research. France supports open-weights AI as a strategic alternative to US API dependency.',
+            '**Netherlands:** National AI Strategy 2024 update, AI regulation sandbox operated by ACM (Authority for Consumers and Markets). Amsterdam hosts SURF (national research network) AI cluster. Dutch Data Protection Authority (AP) issued GDPR enforcement guidance specifically for AI systems.',
+            '**Poland:** National AI Development Program focuses on AI for defence, cybersecurity, and public administration. Poland is among the highest per-capita spenders on defence tech in NATO and integrates AI into military procurement. Warsaw hosts a growing AI startup ecosystem, partly driven by Ukrainian tech talent relocation post-2022.',
+            '**Spain:** Spain\'s National AI Strategy (ENIA) allocates €600 million 2021–2025. Real Instituto Elcano research on AI and geopolitics is internationally cited. Spain established the AESIA (Spanish Agency for the Supervision of Artificial Intelligence) — the first national AI regulator in the EU, established 2023.',
+            '**Sweden:** Swedish AI Commission published its report in 2024 with 60+ recommendations covering education, public sector deployment, and innovation. Vinnova (Sweden\'s innovation agency) funds AI research. Sweden is home to Spotify\'s AI recommendation systems and H&M\'s AI-driven inventory management — frequently cited as private-sector AI adoption case studies.',
+            '**Italy:** Italy held the G7 presidency in 2024, which produced the Hiroshima AI Process Code of Conduct — 11 guiding principles for advanced AI developers adopted by G7 nations. Italy\'s Garante (data protection authority) temporarily blocked ChatGPT in March 2023 over GDPR concerns — later resolved after OpenAI implemented transparency measures. This was the first national ChatGPT restriction in the EU.',
+          ],
+        },
+
+        nonEuEurope: {
+          title: 'Non-EU Europe: UK, Switzerland, Norway, Ukraine',
+          content: [
+            '**Four major non-EU European states have chosen distinct AI governance paths, none of which align fully with the EU AI Act — creating a fragmented European regulatory landscape.** For organizations operating across European jurisdictions, this means compliance stacks differ between EU member states and neighbouring countries.',
+          ],
+          items: [
+            '**United Kingdom:** Post-Brexit, the UK chose a pro-innovation, sector-led approach with no AI-specific legislation as of 2026. The existing regulators (FCA, ICO, Ofcom, CMA) apply their sector mandates to AI. The UK AI Safety Institute (AISI), established November 2023 following the Bletchley Park AI Safety Summit, conducts frontier model evaluations and publishes safety reports. The UK government committed £900 million to AI compute infrastructure. UK organizations are not subject to the EU AI Act but many comply voluntarily to maintain EU market access.',
+            '**Switzerland:** Switzerland maintains AI neutrality — no national AI law, no plans for one. The Federal Council relies on existing legislation (data protection, product liability, sector regulation). Switzerland hosts the UN AI for Good Summit in Geneva annually, CERN\'s AI for science programs, and major European research institutions (ETH Zurich, EPFL). Swiss neutrality extends to AI governance: the country participates in OECD AI Principles but does not align with either the EU\'s regulatory approach or the US competitiveness framing.',
+            '**Norway:** Norway participates in the European Economic Area (EEA), meaning the EU AI Act applies when it is incorporated into the EEA Agreement — an ongoing process. Norway\'s Government Pension Fund Global (the world\'s largest sovereign wealth fund, ~$1.8 trillion) has published AI investment criteria, requiring portfolio companies to disclose AI governance policies. Equinor (state energy company) has deployed AI for oil field optimization. The Norwegian Data Protection Authority (Datatilsynet) has been active on AI-related GDPR enforcement.',
+            '**Ukraine:** Ukraine is the most active deployer of AI in a live conflict context. The Ukrainian military uses AI for drone targeting, signals intelligence, satellite image analysis, and logistics optimization. The Ministry of Digital Transformation (Mінцифра) has signed AI cooperation agreements with both the EU and the US. Ukraine applied for EU membership in 2022 and is aligning its digital legislation — including AI governance — with EU standards as part of accession requirements. Ukrainian AI startups (including those behind Grammarly and GitLab) have relocated teams to EU countries while maintaining technical operations.',
+          ],
+        },
+
+        usStrategy: {
+          title: 'US Strategy: Executive Orders, CHIPS Act, NIST',
+          content: [
+            '**The United States does not have a federal AI law, and the Trump administration\'s 2025 revocation of Biden\'s AI Safety Executive Order reversed the main federal safety framework — shifting US AI policy fully toward competitiveness.** This creates a regulatory gap between the US and EU that affects cross-Atlantic AI procurement and data sharing.',
+          ],
+          items: [
+            '**Biden Executive Order on AI Safety (October 2023):** Required frontier AI developers to share safety test results with the US government, established NIST AI safety standards, addressed AI in critical infrastructure and national security. Revoked by President Trump in January 2025.',
+            '**Trump AI Action Plan (2025):** Replaces Biden\'s EO with a focus on removing regulatory barriers to AI development, maintaining US leadership over China, and promoting AI export to allied nations. No mandatory safety reporting requirements for AI developers.',
+            '**CHIPS and Science Act ($52 billion):** Signed August 2022. Funds domestic semiconductor manufacturing, R&D, and workforce development. Reduces US dependency on Taiwan Semiconductor Manufacturing Company (TSMC) for advanced chips. Intel, TSMC, and Samsung are building US fabs with CHIPS Act funding.',
+            '**Export controls on AI hardware:** The Biden administration restricted exports of advanced Nvidia A100 and H100 GPUs to China and other countries of concern. The restrictions were expanded in October 2023 and October 2024. Nvidia created China-specific chips (A800, H800) that fell within export limits — these were subsequently restricted too.',
+            '**NIST AI Risk Management Framework (AI RMF 1.0):** Published January 2023. A voluntary framework — not legally binding — covering AI trustworthiness across seven dimensions: valid/reliable, safe, secure/resilient, explainable/interpretable, privacy-enhanced, fair with managed bias, accountable/transparent. Widely adopted by US federal agencies and large enterprises as a compliance baseline.',
+            '**NSF National AI Research Institutes:** $200M+ invested across 25 AI research institutes at US universities. Focuses on fundamental AI research, safety, ethics, and domain applications (healthcare, agriculture, climate).',
+          ],
+        },
+
+        chinaStrategy: {
+          title: 'China\'s AI Strategy: Made in China 2025, CAC Regulations, DeepSeek',
+          content: [
+            '**China\'s AI strategy combines state-directed industrial policy, restrictive domestic content regulation, and aggressive international AI diplomacy — a combination that has produced competitive frontier models despite US hardware export controls.** China\'s approach treats AI primarily as a strategic capability for economic development, national security, and social governance.',
+          ],
+          items: [
+            '**Made in China 2025 and New Generation AI Development Plan (2017):** China\'s 2017 AI plan targeted global AI leadership by 2030 across research, talent, product development, and regulation. It allocated $15 billion in state funding and set benchmarks for AI patent output, research citations, and industry revenue. AI is designated a core strategic technology alongside semiconductors and quantum computing.',
+            '**Cyberspace Administration of China (CAC) algorithm regulations (March 2022):** Required all algorithm-based recommendation systems serving Chinese users to register with the CAC, disclose how algorithms work, and allow users to opt out of personalized recommendations. Extended to generative AI in July 2023 — all generative AI services must register, pass a security assessment, and ensure outputs align with "socialist core values."',
+            '**DeepSeek R1 (January 2025):** Released by DeepSeek (a Chinese AI lab backed by High-Flyer hedge fund), R1 matched or exceeded GPT-4o on multiple benchmarks including AIME 2024 (79.8% vs GPT-4o\'s 74.4%), MATH-500 (97.3%), and HumanEval coding tasks. Trained on Nvidia H800 GPUs — the China-specific variant within export control limits. The release triggered a significant drop in Nvidia\'s stock price and accelerated US policy debates about the effectiveness of hardware export controls.',
+            '**Huawei Ascend chips:** Huawei\'s Ascend 910B and 910C chips are positioned as domestic alternatives to Nvidia GPUs for AI training. Performance remains below Nvidia H100 on most benchmarks but sufficient for training medium-scale models. Major Chinese tech companies (Baidu, Alibaba, ByteDance) have begun migrating some workloads to Ascend to reduce Nvidia dependency.',
+            '**Belt and Road AI diplomacy:** China exports AI surveillance infrastructure (facial recognition, smart city systems) to developing nations through BRI partnerships. Providers include Huawei, Alibaba Cloud, and ZTE. This exports Chinese AI governance norms — including algorithmic social management — to partner countries, creating a parallel AI standards ecosystem outside the OECD/EU framework.',
+            '**Leading Chinese AI models:** Alibaba Qwen 2.5, Baidu ERNIE 4.0, ByteDance Doubao, Zhipu AI GLM-4. These are competitive on Chinese-language tasks and increasingly on multilingual benchmarks. [Open-source vs proprietary LLM tradeoffs](/prompt-engineering/open-source-vs-proprietary-llms) affect Chinese model adoption — Qwen\'s open-weights release has attracted international developers.',
+          ],
+        },
+
+        regulatoryComparison: {
+          title: 'Regulatory Comparison: EU vs US vs China',
+          content: [
+            '**The three major AI regulatory frameworks differ fundamentally in philosophy, legal force, and international reach.** Understanding these differences is essential for organizations that operate across jurisdictions or use AI tools from providers headquartered in different regulatory blocs.',
+          ],
+          tableFormat: true,
+          columns: ['Dimension', 'European Union', 'United States', 'China'],
+          rows: [
+            { 'Dimension': 'Primary approach', 'European Union': 'Rights-based legal framework — AI Act classifies systems by risk to fundamental rights', 'United States': 'Sectoral, innovation-first — existing regulators apply domain mandates to AI; no federal AI law', 'China': 'State-directed, control-first — AI serves national development and social governance goals' },
+            { 'Dimension': 'Key legislation', 'European Union': 'EU AI Act (2024) — mandatory compliance; GDPR applies to AI training data and outputs', 'United States': 'No federal AI law. NIST AI RMF (voluntary). EO 14110 (Biden, revoked 2025); AI Action Plan (Trump 2025)', 'China': 'Algorithm Recommendation Regulations (2022); Generative AI Measures (2023); both enforced by CAC' },
+            { 'Dimension': 'Risk framework', 'European Union': '4 tiers: Unacceptable (banned), High (conformity assessment required), Limited (disclosure), Minimal (no specific obligations)', 'United States': 'Voluntary NIST AI RMF — 7 trustworthiness dimensions; no mandatory tiering', 'China': 'Security assessment required for generative AI services before deployment; content must align with "socialist core values"' },
+            { 'Dimension': 'Maximum fine', 'European Union': '€35M or 7% of global annual turnover for prohibited practices; €15M or 3% for high-risk violations', 'United States': 'No federal AI-specific fine. FTC can pursue unfair/deceptive practice claims; state-level penalties vary', 'China': 'Up to ¥100,000 per violation under algorithm rules; suspension of service for non-compliant generative AI' },
+            { 'Dimension': 'Data protection', 'European Union': 'GDPR + AI Act — AI training on personal data requires legal basis; outputs touching personal data require GDPR compliance', 'United States': 'Sectoral: HIPAA (health), CCPA/CPRA (California), FERPA (education); no federal equivalent of GDPR', 'China': 'PIPL (Personal Information Protection Law, 2021) applies; state security agencies retain data access rights' },
+            { 'Dimension': 'Banned applications', 'European Union': 'Social scoring by public authorities; real-time public biometric surveillance; AI exploiting cognitive vulnerabilities; untargeted facial image scraping', 'United States': 'No federally banned AI applications; some state bans (e.g., Illinois BIPA on biometrics)', 'China': 'Content undermining CPC leadership, state authority, or "socialist core values"; deep fakes require disclosure' },
+            { 'Dimension': 'Enforcement body', 'European Union': 'EU AI Office (GPAI models) + national market surveillance authorities (high-risk AI) + Data Protection Authorities (GDPR intersection)', 'United States': 'FTC (consumer protection), FDA (medical AI), CFPB (financial AI), EEOC (employment AI), NIST (standards)', 'China': 'Cyberspace Administration of China (CAC) — primary enforcer; MIIT and SAMR for industry-specific AI' },
+            { 'Dimension': 'International reach', 'European Union': 'Brussels Effect — applies to any AI placed on EU market or whose output is used in EU; extraterritorial by design', 'United States': 'Export controls on AI hardware affect global supply chains; no extraterritorial content regulation', 'China': 'BRI AI exports spread Chinese AI governance norms; Great Firewall limits foreign AI service access domestically' },
+          ],
+        },
+
+        organizationsImplications: {
+          title: 'What This Means for Organizations Using AI',
+          content: [
+            '**For organizations deploying AI, geopolitical competition translates into four concrete operational decisions: which AI tools are permissible, where data can be stored, what compliance documentation is required, and how quickly regulations will change.** These decisions differ significantly depending on whether the organization is based in the EU, operates in EU markets, or uses US or Chinese AI providers.',
+          ],
+          items: [
+            '**EU-based organizations:** Must comply with the EU AI Act directly. High-risk AI systems (HR, credit, healthcare, public services) require conformity assessments, human oversight documentation, and registration in the EU AI database before August 2026. All AI handling personal data must comply with GDPR — including AI training pipelines and output processing.',
+            '**Non-EU organizations serving EU users:** Subject to the Brussels Effect — the EU AI Act applies to your AI outputs if they reach EU users. GPAI models used in EU-facing products must comply with transparency obligations (August 2025 onwards). Failing to comply carries the same fines as EU-headquartered violators.',
+            '**US AI tools in EU deployments:** GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro are all classified as GPAI models. OpenAI, Anthropic, and Google have published EU AI Act GPAI compliance documentation. Organizations using these tools in high-risk AI systems (as deployers) remain responsible for their own conformity assessments — the provider\'s GPAI compliance does not cover your deployment.',
+            '**Chinese AI tools:** DeepSeek R1 and other Chinese models are available internationally but carry additional procurement risk for EU and US organizations — data residency is unclear, the provider is subject to CAC content regulations, and the Cyberspace Administration of China can compel data disclosure. Government and critical infrastructure organizations in EU and NATO member states are restricting or prohibiting Chinese AI tool usage.',
+            '**Data residency:** EU GDPR restricts personal data transfer to countries without "adequacy" decisions or appropriate safeguards. AI inference on personal data using US providers requires Standard Contractual Clauses (SCCs) or relies on the EU-US Data Privacy Framework (2023). Transfer to China has no adequacy decision — contractual safeguards must be in place and are difficult to enforce.',
+            '**Procurement decisions:** US federal agencies are prohibited from using AI from designated Chinese entities. Several EU member states (Germany, France, Netherlands) have issued guidance restricting Chinese AI tools in government procurement. For private sector organizations, procurement policy should address the jurisdiction of the AI provider\'s training data, content moderation practices, and government access provisions.',
+            '**Monitoring regulatory change:** The pace of AI regulation is high. The Trump administration\'s 2025 reversal of Biden\'s EO, the EU AI Act\'s rolling enforcement timeline, and China\'s ongoing CAC rule updates mean compliance status can change within months. Organizations should designate an AI governance owner and subscribe to the EU AI Office newsletter and OECD AI Policy Observatory updates.',
+          ],
+        },
+
+        politicianQuotes: {
+          title: 'What Politicians Are Saying',
+          content: [
+            '**AI has become a top-tier political issue across all three regulatory blocs, with leaders framing it as a matter of economic survival, democratic values, and national security.** The statements below are drawn from official speeches and parliamentary records.',
+          ],
+        },
+
+        quoteVonDerLeyen: {
+          title: '',
+          blockquote: 'Artificial intelligence is the defining technology of our time. Europe must shape it — not just adopt it. We want AI that works for people, not the other way around.',
+          blockquoteSource: 'Ursula von der Leyen, President of the European Commission — European AI strategy address, 2024',
+        },
+
+        quoteVestager: {
+          title: '',
+          blockquote: 'The AI Act is the world\'s first comprehensive legal framework for artificial intelligence. It puts people and their safety at the centre — not just the technology. This is what responsible innovation looks like.',
+          blockquoteSource: 'Margrethe Vestager, former Executive Vice-President of the European Commission — European Parliament, March 2024',
+        },
+
+        quoteBreton: {
+          title: '',
+          blockquote: 'The AI Act is a historic achievement. Europe is the first continent to establish a clear legal framework for AI. Safety and innovation are not opposites — they go together. We have shown the world that.',
+          blockquoteSource: 'Thierry Breton, former EU Commissioner for Internal Market — European Commission, March 2024',
+        },
+
+        quoteMacron: {
+          title: '',
+          blockquote: 'France wants to be a leading AI nation in Europe. Paris will host the AI Action Summit. We are investing in open, trustworthy, and sustainable AI — and we are inviting the world to join us.',
+          blockquoteSource: 'Emmanuel Macron, President of France — AI Action Summit announcement, 2024',
+        },
+
+        quoteSunak: {
+          title: '',
+          blockquote: 'The United Kingdom will work with partners around the world to make sure that AI is safe. Bletchley Park is where this conversation begins — but it must not end here.',
+          blockquoteSource: '[Rishi Sunak, Prime Minister of the United Kingdom — AI Safety Summit, Bletchley Park, November 2023](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
+        },
+
+        quoteScholz: {
+          title: '',
+          blockquote: 'Germany wants to become one of Europe\'s leading AI locations. We are investing in AI research, digital infrastructure, and the people who will build the next generation of intelligent systems.',
+          blockquoteSource: 'Olaf Scholz, Federal Chancellor of Germany — National AI Strategy update, 2024',
+        },
+
+        faq: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            { q: 'What is the EU AI Act and when does it apply?', a: 'The EU AI Act is the world\'s first comprehensive AI law, passed by the European Parliament in March 2024. Prohibited practices apply from August 2024. GPAI model obligations (for GPT-4o, Claude, Gemini-class models) apply from August 2025. High-risk AI system requirements apply from August 2026. It applies to any organization placing AI on the EU market or using AI that affects EU residents.' },
+            { q: 'Does the EU AI Act apply to non-EU companies?', a: 'Yes. The EU AI Act has extraterritorial reach — it applies to any provider whose AI outputs are used in the EU, regardless of where the provider is headquartered. A US company whose AI product is used by EU residents must comply. This is the same extraterritorial principle that made GDPR a global standard.' },
+            { q: 'What are the fines for violating the EU AI Act?', a: 'Fines up to €35 million or 7% of global annual turnover (whichever is higher) for prohibited AI practices. Up to €15 million or 3% for high-risk AI violations. Up to €7.5 million or 1% for providing incorrect information to enforcement authorities. The higher of the percentage or fixed amount applies.' },
+            { q: 'What AI applications are banned under the EU AI Act?', a: 'Banned (Unacceptable Risk): social scoring systems by public authorities; real-time biometric identification in public spaces (with narrow exceptions); AI that exploits psychological vulnerabilities; untargeted scraping of facial images from the internet. These have been prohibited since August 2024.' },
+            { q: 'How does US AI regulation differ from the EU?', a: 'The US has no federal AI law. Existing sector regulators (FTC, FDA, CFPB, EEOC) apply their existing mandates to AI in their domains. The Biden AI Safety Executive Order (October 2023) was revoked in January 2025 and replaced with a competitiveness-focused AI Action Plan. The NIST AI Risk Management Framework is voluntary. US regulation is reactive and sector-specific; EU regulation is proactive and horizontal.' },
+            { q: 'Is DeepSeek safe to use in EU organizations?', a: 'DeepSeek is subject to CAC (Cyberspace Administration of China) regulations, meaning the Chinese government can compel data disclosure. DeepSeek\'s privacy policy states data is stored on servers in China. For EU organizations processing personal data, using DeepSeek requires GDPR-compliant data transfer safeguards (SCCs), which are difficult to enforce against Chinese law. Government and critical infrastructure organizations in EU member states are generally avoiding Chinese AI tools.' },
+            { q: 'What is the Brussels Effect?', a: 'The Brussels Effect describes how EU regulations become de facto global standards because multinational companies prefer one strict standard over maintaining separate compliance for each jurisdiction. The GDPR became a global privacy standard this way. The EU AI Act is doing the same for AI — OpenAI, Anthropic, and Google must comply with EU AI Act GPAI requirements for their global products, not just for EU-specific versions.' },
+            { q: 'What did the Bletchley Park AI Safety Summit achieve?', a: 'The November 2023 AI Safety Summit at Bletchley Park produced the Bletchley Declaration — signed by 28 countries including the US, China, and EU member states — acknowledging that frontier AI poses serious risks and requires international cooperation. The summit established the UK AI Safety Institute (AISI) and initiated a series of global AI safety institutes in the US and elsewhere. China\'s participation was notable given broader geopolitical tensions.' },
+            { q: 'How does France support AI differently from Germany?', a: 'France prioritizes high-profile international positioning (AI Action Summit in Paris, February 2025) and open-weights AI research through INRIA and CNRS, with €2 billion in public investment. Germany focuses on applied industrial AI through the Fraunhofer Society and DFKI, with €5 billion invested 2019–2025, and emphasizes AI governance and liability frameworks through federal legislation. Both have national AI strategies but different sector emphases.' },
+            { q: 'How does the EU AI Act affect AI used in prompt engineering?', a: 'Most prompt engineering work falls in the Limited or Minimal risk category — standard chatbots and AI writing tools require disclosure (users must know they interact with AI) but no conformity assessment. High-risk classifications apply when AI makes significant decisions: employment screening, credit assessment, educational evaluation, or law enforcement. [AI limitations in practice](/prompt-engineering/ai-limitations-what-llms-cant-do) are relevant to high-risk system documentation requirements.' },
+          ],
+        },
+
+        sources: {
+          title: 'Sources',
+          items: [
+            'European Parliament, "Artificial Intelligence Act" — Official text, March 2024. [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)',
+            'European Commission, "AI Office" — GPAI compliance documentation and enforcement guidance. [AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)',
+            'NIST, "Artificial Intelligence Risk Management Framework (AI RMF 1.0)" — January 2023. [NIST](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)',
+            'UK Government, "AI Safety Summit — Bletchley Declaration" — November 2023. [Gov.uk](https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration)',
+            'Cyberspace Administration of China, "Provisions on the Management of Generative Artificial Intelligence Services" — July 2023',
+            'DeepSeek-AI, "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning" — arXiv:2501.12948, January 2025',
+            'OECD AI Policy Observatory — [oecd.ai](https://oecd.ai) — country-level AI policy database and comparative analysis',
+            'German Federal Government, "Strategie Künstliche Intelligenz" — National AI Strategy, updated 2023. [Bundesregierung](https://www.bundesregierung.de/breg-de/themen/digitalisierung/ki-strategie)',
+            'Rishi Sunak, PM Speech at AI Safety Summit — November 2023. [Gov.uk](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Open Source vs Proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) — How EU AI Act compliance and data sovereignty requirements affect the open-weights vs API decision',
+            '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — Understanding capability limits relevant to high-risk AI system assessments under the EU AI Act',
+            '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — Security vulnerabilities that national AI strategies and the EU AI Act address in high-risk system requirements',
+            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Reliability issues central to EU AI Act high-risk documentation and human oversight requirements',
+            '[RAG Explained](/prompt-engineering/rag-explained) — How retrieval-augmented generation addresses knowledge cutoff and hallucination concerns relevant to regulated AI deployments',
+          ],
+        },
+      },
     },
-    de: { theme: 'Fundamentals', title: 'Geopolitik und KI', intro: 'In Kürze — wie geopolitische Spannungen, Regulierung und regionale Strategien die KI-Entwicklung prägen und was das für Prompt-Ingenieure und Organisationen bedeutet.', publishDate: '2026-03-24', readTime: 'In Kürze', sections: {} },
-    fr: { theme: 'Fundamentals', title: 'Géopolitique et IA', intro: 'À venir — comment les tensions géopolitiques, la réglementation et les stratégies régionales façonnent le développement de l\'IA et ce que cela signifie pour les ingénieurs de prompts et les organisations.', publishDate: '2026-03-24', readTime: 'À venir', sections: {} },
-    ja: { theme: 'Fundamentals', title: '地政学とAI', intro: '近日公開予定 — 地政学的緊張、規制、地域戦略がAI開発をどのように形成し、プロンプトエンジニアや組織にとって何を意味するかを解説します。', publishDate: '2026-03-24', readTime: '近日公開予定', sections: {} },
-    zh: { theme: 'Fundamentals', title: '地缘政治与AI', intro: '即将推出——地缘政治紧张局势、监管和地区战略如何塑造AI发展，以及这对提示词工程师和组织意味着什么。', publishDate: '2026-03-24', readTime: '即将推出', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Geopolitik und KI: Wie EU, USA und China um KI-Dominanz konkurrieren', intro: 'Die USA, China und die EU verfolgen unvereinbare Visionen der KI-Regulierung — die USA priorisieren Wettbewerbsfähigkeit, China betont staatliche Kontrolle, und die EU baut einen rechtsbasierten Rahmen. Für Organisationen, die KI einsetzen, entstehen daraus konkrete Compliance-Pflichten, Beschaffungsbeschränkungen und Anforderungen an den Datenspeicherort.', publishDate: '2026-04-01', readTime: 'In Kürze', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Géopolitique et IA : Comment l\'UE, les États-Unis et la Chine rivalisent pour la domination de l\'IA', intro: 'Les États-Unis, la Chine et l\'Union européenne poursuivent des visions incompatibles de la gouvernance de l\'IA. Pour les organisations déployant l\'IA, ces différences se traduisent par des obligations de conformité concrètes, des contraintes d\'approvisionnement et des exigences de résidence des données.', publishDate: '2026-04-01', readTime: 'À venir', sections: {} },
+    ja: { theme: 'Fundamentals', title: '地政学とAI：EU、米国、中国のAI覇権競争', intro: '米国、中国、EUはAIガバナンスに関して相反するビジョンを追求しており、AIを展開する組織にとっては具体的なコンプライアンス義務、調達制約、データ保管要件に直結します。', publishDate: '2026-04-01', readTime: '近日公開予定', sections: {} },
+    zh: { theme: 'Fundamentals', title: '地缘政治与AI：欧盟、美国和中国如何争夺AI主导权', intro: '美国、中国和欧盟正在追求不兼容的AI治理愿景。对于部署AI的组织而言，这些差异转化为具体的合规义务、采购限制和数据存储要求。', publishDate: '2026-04-01', readTime: '即将推出', sections: {} },
   },
 
   'which-framework-to-use': {
