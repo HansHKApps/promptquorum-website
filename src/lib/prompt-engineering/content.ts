@@ -15565,6 +15565,11 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             name: 'What\'s the difference between an LLM limitation and a bug?',
             acceptedAnswer: { '@type': 'Answer', text: 'A bug is an unintended error fixable with a software update. A limitation is a structural property of how the model works. Hallucination, knowledge cutoffs, and context window caps are limitations — they emerge from the transformer architecture and training process and cannot be patched away, only worked around with system design.' },
           },
+          {
+            '@type': 'Question',
+            name: 'Which LLM has the fewest limitations?',
+            acceptedAnswer: { '@type': 'Answer', text: 'No model eliminates any of the eight structural limitations — they are universal to transformer architecture. Gemini 2.5 Pro has the largest context window (2 million tokens), best mitigating limitation 4. Claude 4.6 Sonnet hedges uncertainty and acknowledges knowledge cutoffs most reliably, mitigating hallucination risk. GPT-4o excels at tool use (limitation 6 workaround). Choose based on your specific limitation bottleneck, not on which model is "least limited."' },
+          },
         ],
       },
       sections: {
@@ -15729,6 +15734,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             { q: 'Can I fix LLM limitations with better prompting?', a: 'Prompting reduces the impact of limitations but does not eliminate them. Chain-of-thought prompting improves reasoning accuracy. Providing facts in the prompt mitigates knowledge cutoffs. Explicit uncertainty instructions reduce hallucination confidence. But prompting cannot give a model real-time data access, genuine memory, or the ability to take real-world actions.' },
             { q: 'Do fine-tuned models have the same limitations?', a: 'Yes. Fine-tuning adjusts style, domain focus, or instruction-following behavior — it does not add real-time data access, true reasoning, or persistent memory. A fine-tuned GPT-4o retains the same knowledge cutoff and hallucination risk as the base model.' },
             { q: 'What\'s the difference between an LLM limitation and a bug?', a: 'A bug is an unintended error fixable with a software update. A limitation is a structural property of how the model works. Hallucination, knowledge cutoffs, and context window caps are limitations — they emerge from the transformer architecture and training process and cannot be patched away, only worked around with system design.' },
+            { q: 'Which LLM has the fewest limitations?', a: 'No model eliminates any of the eight structural limitations — they are universal to transformer architecture. Gemini 2.5 Pro has the largest context window (2 million tokens), best mitigating limitation 4. Claude 4.6 Sonnet hedges uncertainty and acknowledges knowledge cutoffs most reliably, mitigating hallucination risk. GPT-4o excels at tool use (limitation 6 workaround). Choose based on your specific limitation bottleneck, not on which model is "least limited."' },
           ],
         },
         sources: {
