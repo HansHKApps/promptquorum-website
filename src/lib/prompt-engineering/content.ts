@@ -17364,6 +17364,7 @@ zh: {
         openSourceLandscape: {
           title: 'The Open-Weights Landscape in 2026',
           content: [
+            '**Open-source LLMs allow organizations to download, inspect, and modify model weights, then deploy them locally without vendor dependency or per-token API costs.** The leading models in 2026 are Meta\'s LLaMA 3.1, Mistral Large 2, Qwen 2.5, and others released under community licenses.',
             '**Meta\'s LLaMA 3.1 family is the leading open-weights competitor to proprietary models.** LLaMA 3.1 comes in three sizes: 8B (~8GB VRAM for inference), 70B (~40GB VRAM), and 405B (~800GB+ VRAM across multiple GPUs). All three support 131K token context windows — matching or exceeding many proprietary models. LLaMA 3.1 is trained on 15 trillion tokens of multilingual text; newer variants support multiple languages competitively.',
             '**Mistral AI offers two strong contenders: Mistral 7B and Mistral Large 2.** Mistral 7B is a lean 7B-parameter model with 32K context, ideal for consumer-grade inference and rapid prototyping. Mistral Large 2 scales to 123B parameters with 123K context, targeting the "frontier lite" performance band — competing directly with LLaMA 70B and proprietary models. Both are available for commercial use under Mistral Community License.',
             '**Qwen 2.5 (Alibaba) and emerging models (Falcon, Phi-4) round out the landscape.** Qwen 2.5 72B supports 128K context and excels on Chinese language tasks; useful for teams serving Asia-Pacific markets. Smaller models like Phi-4 (Microsoft) and Falcon 180B target cost-sensitive or specialized use cases. All are downloadable, self-hostable, and support fine-tuning via LoRA or full training.',
@@ -17373,6 +17374,7 @@ zh: {
         proprietaryLandscape: {
           title: 'The Proprietary Landscape in 2026',
           content: [
+            '**Proprietary LLMs are accessed exclusively through vendor-controlled APIs; model weights are never released and cannot be downloaded, modified, or deployed locally.** Users pay per-token API billing and accept vendor control over model updates, safety policies, and performance characteristics.',
             '**OpenAI\'s GPT-4o remains the reasoning leader.** GPT-4o supports 128K token context with a training cutoff of October 2024. It excels at tool use, agent workflows, multimodal input (images, text), and complex multi-step reasoning. API pricing: $5 per 1M input tokens, $15 per 1M output tokens (March 2026 rates). GPT-4o is API-only; weights are never released. See [how context windows affect your AI system](/prompt-engineering/context-windows-explained) to understand trade-offs.',
             '**Anthropic\'s Claude 4.6 Sonnet dominates writing and code quality benchmarks.** Claude supports 200K token context — 2× larger than GPT-4o — enabling longer documents and extended conversations. Training data cutoff: early 2025. API pricing: $3 per 1M input tokens, $15 per 1M output tokens. Claude does not offer public fine-tuning. Anthropic prioritizes interpretability and safety alignment over benchmark maximization.',
             '**Google\'s Gemini 2.5 Pro offers the largest context window: 2M tokens.** This enables full book-length document processing, exhaustive research, and extended multi-turn conversations. Pricing: $1.25 per 1M input tokens (≤200K context), $10 per 1M output tokens; higher rates for >200K context. Gemini integrates deeply with Google Workspace, Calendar, Gmail, and web search. Training data cutoff: October 2024. Fine-tuning is available for Gemini models.',
@@ -17390,7 +17392,9 @@ zh: {
             'Mistral Large 2: 81.2% (Mistral AI, 2024)',
             'Qwen 2.5 72B: 82.1% (Alibaba, 2024)',
             '',
-            'The gap between open-weights and proprietary models has significantly narrowed in capability. On specialized tasks (coding, math, summarization), open-weights models now match or exceed proprietary peers. The remaining gap is primarily on abstract reasoning and [tool-use orchestration](/prompt-engineering/gpt-claude-gemini-which-model). — Touvron et al., "Llama 3 Herd of Models", 2024',
+            '**The performance gap between open-weights and proprietary models has narrowed from 15–20 percentage points in 2022 to 7–8 points on reasoning tasks in 2026.** On specialized tasks (coding, math, summarization, classification), open-weights models now match or exceed proprietary peers.',
+            '',
+            'The remaining gap is primarily on abstract reasoning and [tool-use orchestration](/prompt-engineering/gpt-claude-gemini-which-model). — Touvron et al., "Llama 3 Herd of Models", 2024',
             '',
             '**Important caveat:** Benchmarks measure narrow skills. Task-specific performance varies: on classification, summarization, and extraction, LLaMA 3.1 70B often matches or exceeds GPT-4o. For complex multi-step reasoning (algebra, long chains of thought), proprietary models maintain an edge. The only reliable benchmark is testing on your actual task — see [how to pick the right model for your use case](/prompt-engineering/gpt-claude-gemini-which-model).',
           ],
@@ -17442,6 +17446,7 @@ zh: {
 
         comparisonTable: {
           title: 'Key Differences Between Open Source and Proprietary LLMs',
+          content: '**Open-weights models cost less at scale and enable full customization; proprietary models deliver faster time-to-value and managed infrastructure at higher per-token cost.** Below 5M tokens/day, proprietary APIs are usually cheaper. Above 10M tokens/day, self-hosted open-weights wins on cost. Choose based on your volume, privacy requirements, and infrastructure readiness.',
           columns: ['Dimension', 'Open-Weights Models', 'Proprietary Models'],
           rows: [
             { 'Dimension': 'Cost model', 'Open-Weights Models': 'Self-host: $0.50–2.00/hr infrastructure. Free once deployed. No per-token billing.', 'Proprietary Models': 'API billing: $0.15–5.00 per 1M input tokens; $0.30–15.00 per 1M output tokens. Scales with usage.' },
@@ -17486,7 +17491,7 @@ zh: {
 
         hybridArchitecture: {
           title: 'Hybrid AI Architectures (Open + Closed Models)',
-          content: '**The best approach often combines both open-weights and proprietary models in the same system.** Route tasks based on cost, latency, privacy, and performance requirements rather than choosing a single model for everything.',
+          content: '**Organizations can use hybrid AI architectures that route requests to open-weights models for sensitive data and cost-sensitive tasks, while dispatching complex reasoning and multimodal work to proprietary models.** This approach combines the cost efficiency, privacy, and customization of open-weights with the performance and managed infrastructure of proprietary LLMs.',
           items: [
             '**Privacy-sensitive data → local open-weights; complex reasoning → proprietary API.** Route patient records, financial data, and legal documents to LLaMA 3.1 running locally via Ollama. Route multi-step research synthesis, code generation, and agent orchestration to GPT-4o or Claude 4.6 Sonnet. This hybrid approach achieves compliance while maintaining frontier performance.',
             '**Cost-sensitive batch processing → local open-weights; interactive requests → proprietary API.** For background tasks (classification, extraction, summarization), use self-hosted LLaMA 3.1 70B (~$2/hr on A100). For real-time user requests where latency matters, use GPT-4o API ($5/$15 per 1M tokens). Hybrid reduces total cost and latency.',
@@ -17497,7 +17502,12 @@ zh: {
 
         nuancedTakes: {
           title: 'Where the Conventional Wisdom Is Wrong',
-          content: '**Open-weights is not always cheaper.** The "open-weights = cheaper" narrative is incomplete. At <5M tokens/day, proprietary APIs are often cheaper because infrastructure cost (even cloud renting) exceeds API cost. Only above 10M tokens/day do open-weights win. Many teams are in the 1–5M/day range, where proprietary is cost-optimal. The "cheaper" claim assumes scale.',
+          content: '**Open-weights is not always cheaper than proprietary APIs.** At <5M tokens/day, proprietary APIs (GPT-4o mini, Claude Haiku, Gemini Flash) are often cheaper because infrastructure cost (GPU amortization, electricity, DevOps labor) exceeds API billing. Only above 10M tokens/day do open-weights self-hosting become cost-optimal.',
+          items: [
+            '**The performance gap is task-specific, not universal.** Proprietary models lead on MMLU (reasoning) by 7–8 points. But on classification, summarization, extraction, and many domain tasks, LLaMA 3.1 70B matches or beats proprietary models. "Proprietary is better" is too broad. Benchmark your actual task.',
+            '**"Open source" licensing is complex and often not actually open source.** LLaMA, Mistral, and Qwen are not OSI-compliant open source — they are "open weights" under non-standard licenses. Calling them "open source" is misleading and invites legal confusion. Clarify licensing with counsel before relying on legal protections.',
+            '**Proprietary is not always more safe or aligned.** [All models hallucinate](/prompt-engineering/ai-limitations-what-llms-cant-do). Proprietary training data, cutoffs, and constitutional AI do not prevent jailbreaking, [prompt injection](/prompt-engineering/prompt-injection-and-security), or misuse. Open-weights can be fine-tuned to match or exceed proprietary alignment. Safety is a property of the deployment and guardrails, not the model class.',
+          ],
           items: [
             '**The performance gap is task-specific, not universal.** Proprietary models lead on MMLU (reasoning) by 7–8 points. But on classification, summarization, extraction, and many domain tasks, LLaMA 3.1 70B matches or beats proprietary models. "Proprietary is better" is too broad. Benchmark your actual task.',
             '**"Open source" licensing is complex and often not actually open source.** LLaMA, Mistral, and Qwen are not OSI-compliant open source — they are "open weights" under non-standard licenses. Calling them "open source" is misleading and invites legal confusion. Clarify licensing with counsel before relying on legal protections.',
