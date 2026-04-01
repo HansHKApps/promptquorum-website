@@ -19769,7 +19769,7 @@ zh: {
       theme: 'Policy & Compliance',
       title: 'Geopolitics and AI: How the EU, US, and China Are Competing for AI Dominance',
       intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
-      metaDescription: 'How AI is reshaping global power. The EU, US, and China are pursuing incompatible AI strategies — different rules, different models, different risks. What this means for organizations deploying AI in 2026.',
+      metaDescription: 'AI geopolitics explained: global AI regulation, the AI arms race, and AI geopolitical risks — how the EU, US, and China compete and what it means for your organization.',
       publishDate: '2026-04-01',
       dateModified: '2026-04-02',
       readTime: '16 min read',
@@ -20103,7 +20103,7 @@ zh: {
         },
 
         regulatoryComparison: {
-          title: 'Regulatory Comparison: EU vs US vs China',
+          title: 'Global AI Regulation: EU vs US vs China Compared',
           content: [
             '**The three major AI regulatory frameworks differ fundamentally in philosophy, legal force, and international reach.** Understanding these differences is essential for organizations that operate across jurisdictions or use AI tools from providers headquartered in different regulatory blocs.',
           ],
@@ -20136,7 +20136,7 @@ zh: {
         },
 
         organizationsImplications: {
-          title: 'What This Means for Organizations Using AI',
+          title: 'AI Geopolitical Risks: What This Means for Organizations',
           content: [
             '**For organizations deploying AI, geopolitical competition translates into four concrete operational decisions: which AI tools are permissible, where data can be stored, what compliance documentation is required, and how quickly regulations will change.** These decisions differ significantly depending on whether the organization is based in the EU, operates in EU markets, or uses US or Chinese AI providers.',
             'PromptQuorum supports compliance-conscious model selection — dispatch prompts across EU-compliant models (Mistral, local Ollama) and US frontier models simultaneously, letting you benchmark EU AI Act compliant options against proprietary alternatives without separate infrastructure.',
