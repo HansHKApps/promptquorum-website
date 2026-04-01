@@ -15575,6 +15575,11 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             name: 'Which LLM has the fewest limitations?',
             acceptedAnswer: { '@type': 'Answer', text: 'No model eliminates any of the eight structural limitations — they are universal to transformer architecture. Gemini 2.5 Pro has the largest context window (2 million tokens), best mitigating limitation 4. Claude 4.6 Sonnet hedges uncertainty and acknowledges knowledge cutoffs most reliably, mitigating hallucination risk. GPT-4o excels at tool use (limitation 6 workaround). Choose based on your specific limitation bottleneck, not on which model is "least limited."' },
           },
+          {
+            '@type': 'Question',
+            name: 'How do limitations differ between open-source and proprietary models in 2026?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Open-source models (LLaMA 3.1, Mistral Large, Qwen 2.5) and proprietary models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) face identical structural limitations — knowledge cutoffs, hallucination, context windows, reasoning constraints. The differences are in severity and cost: proprietary models typically have larger contexts (Gemini 2.5 Pro: 2M tokens vs. Mistral: 128K), better instruction-following, and more frequent training updates. Open-source models trade capabilities for cost and deployment control. Neither category eliminates any of the eight limitations.' },
+          },
         ],
       },
       sections: {
@@ -15598,6 +15603,21 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**LLMs have eight structural limitations that no prompt, fine-tune, or model size increase can fully overcome — they require architectural additions to work around.** These limits emerge from the transformer architecture and training process itself, not from poor implementation.',
             'The distinction matters for prompt engineering: limitations require *system design changes* (retrieval tools, memory layers, verification steps), while poor prompt quality is a separate, fixable problem. Conflating the two leads to over-engineering prompts when the real constraint is architectural.',
             'The eight limits are: knowledge cutoffs, hallucination, weak multi-step reasoning, context window caps, no persistent memory, no real-world action, training data bias, and inability to self-verify outputs.',
+          ],
+        },
+        quickReference: {
+          title: 'The 8 Limitations at a Glance',
+          content: ['Quick lookup table before diving into detail.'],
+          columns: ['#', 'Limitation', 'Quick Workaround'],
+          rows: [
+            { '#': '1', 'Limitation': 'Knowledge cutoff', 'Quick Workaround': 'Paste current context or use RAG' },
+            { '#': '2', 'Limitation': 'Hallucination', 'Quick Workaround': 'Ground prompts; validate outputs' },
+            { '#': '3', 'Limitation': 'Weak reasoning', 'Quick Workaround': 'Chain-of-thought prompting' },
+            { '#': '4', 'Limitation': 'Context window cap', 'Quick Workaround': 'Chunking or summarization' },
+            { '#': '5', 'Limitation': 'No memory', 'Quick Workaround': 'Store state in app layer' },
+            { '#': '6', 'Limitation': 'No real-world action', 'Quick Workaround': 'Tool use / function calling' },
+            { '#': '7', 'Limitation': 'Training bias', 'Quick Workaround': 'Provide domain context' },
+            { '#': '8', 'Limitation': 'Cannot self-verify', 'Quick Workaround': 'Validate against primary sources' },
           ],
         },
         knowledgeCutoff: {
@@ -15732,6 +15752,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             { q: 'Do fine-tuned models have the same limitations?', a: 'Yes. Fine-tuning adjusts style, domain focus, or instruction-following behavior — it does not add real-time data access, true reasoning, or persistent memory. A fine-tuned GPT-4o retains the same knowledge cutoff and hallucination risk as the base model.' },
             { q: 'What\'s the difference between an LLM limitation and a bug?', a: 'A bug is an unintended error fixable with a software update. A limitation is a structural property of how the model works. Hallucination, knowledge cutoffs, and context window caps are limitations — they emerge from the transformer architecture and training process and cannot be patched away, only worked around with system design.' },
             { q: 'Which LLM has the fewest limitations?', a: 'No model eliminates any of the eight structural limitations — they are universal to transformer architecture. Gemini 2.5 Pro has the largest context window (2 million tokens), best mitigating limitation 4. Claude 4.6 Sonnet hedges uncertainty and acknowledges knowledge cutoffs most reliably, mitigating hallucination risk. GPT-4o excels at tool use (limitation 6 workaround). Choose based on your specific limitation bottleneck, not on which model is "least limited."' },
+            { q: 'How do limitations differ between open-source and proprietary models in 2026?', a: 'Open-source models (LLaMA 3.1, Mistral Large, Qwen 2.5) and proprietary models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) face identical structural limitations — knowledge cutoffs, hallucination, context windows, reasoning constraints. The differences are in severity and cost: proprietary models typically have larger contexts (Gemini 2.5 Pro: 2M tokens vs. Mistral: 128K), better instruction-following, and more frequent training updates. Open-source models trade capabilities for cost and deployment control. Neither category eliminates any of the eight limitations.' },
           ],
         },
         sources: {
