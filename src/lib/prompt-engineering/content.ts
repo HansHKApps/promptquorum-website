@@ -20025,6 +20025,7 @@ zh: {
           title: 'What This Means for Organizations Using AI',
           content: [
             '**For organizations deploying AI, geopolitical competition translates into four concrete operational decisions: which AI tools are permissible, where data can be stored, what compliance documentation is required, and how quickly regulations will change.** These decisions differ significantly depending on whether the organization is based in the EU, operates in EU markets, or uses US or Chinese AI providers.',
+            'PromptQuorum supports compliance-conscious model selection — dispatch prompts across EU-compliant models (Mistral, local Ollama) and US frontier models simultaneously, letting you benchmark EU AI Act compliant options against proprietary alternatives without separate infrastructure.',
           ],
           items: [
             '**EU-based organizations:** Must comply with the EU AI Act directly. High-risk AI systems (HR, credit, healthcare, public services) require conformity assessments, human oversight documentation, and registration in the EU AI database before August 2026. All AI handling personal data must comply with GDPR — including AI training pipelines and output processing.',
