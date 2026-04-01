@@ -17344,6 +17344,26 @@ zh: {
           ],
         },
 
+        questionDifference: {
+          title: 'What is the Difference Between Open-Source and Proprietary LLMs?',
+          content: 'Open-source LLMs (LLaMA 3.1, Mistral, Qwen) make model weights publicly available — organizations can download, inspect, fine-tune, and self-host them. Proprietary LLMs (GPT-4o, Claude, Gemini) are owned by vendors and accessible only through APIs. Users cannot download or modify proprietary weights, but benefit from managed infrastructure and vendor updates.',
+        },
+
+        questionPerformance: {
+          title: 'Are Open-Source LLMs as Good as Proprietary Models?',
+          content: 'On many tasks, yes. The performance gap has narrowed to 7–8 percentage points on reasoning benchmarks (MMLU). On classification, summarization, and domain-specific tasks, open-weights models like LLaMA 3.1 70B now match proprietary peers. Proprietary models still lead on complex multi-step reasoning, agent orchestration, and multimodal input handling.',
+        },
+
+        questionWhenToUse: {
+          title: 'When Should Companies Use Open-Source LLMs?',
+          content: 'Companies should use open-source LLMs when data privacy is mandatory (healthcare, finance, legal), when processing more than 10 million tokens per day, when domain-specific fine-tuning is required, or when EU AI Act compliance demands on-premises data residency. Open-weights models also eliminate vendor lock-in and per-token API billing.',
+        },
+
+        questionCanReplace: {
+          title: 'Can Open-Source LLMs Replace Proprietary AI Models?',
+          content: 'For many use cases, yes. Open-source LLMs are production-ready for classification, summarization, extraction, and domain-specific tasks. Proprietary models maintain advantages on complex reasoning, multimodal input, tool integration, and zero-infrastructure deployment. A hybrid approach — routing tasks based on cost, privacy, and performance requirements — outperforms relying on either model class alone.',
+        },
+
         featureComparison: {
           title: 'Quick Feature Comparison',
           columns: ['Feature', 'Open Source LLM', 'Proprietary LLM'],
