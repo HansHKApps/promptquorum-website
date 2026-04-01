@@ -15703,6 +15703,19 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             { 'Limitation': 'Cannot self-verify', 'Root Cause': 'No ground-truth access', 'Severity': 'High for factual accuracy', 'Primary Workaround': 'External validation, primary sources' },
           ],
         },
+        nuancedTakes: {
+          title: 'When the Limitations Don\'t Apply — Edge Cases and Experimental Workarounds',
+          content: [
+            '**The eight structural limitations are real, but each has at least one scenario where the conventional warning overstates the problem — or where 2025–2026 research has partially closed the gap.** Knowing the exceptions is as important as knowing the rule.',
+          ],
+          items: [
+            '**Knowledge cutoff is irrelevant for stable-domain questions.** The cutoff matters for current events, recent releases, and changing prices. For physics, mathematics, established software APIs (pre-2024), classical literature, and foundational legal frameworks, GPT-4o\'s October 2024 cutoff carries almost no practical penalty. Routing stable-domain queries to unaugmented models is often faster and cheaper than RAG.',
+            '**Hallucination is a feature for generative tasks.** The same token-prediction mechanism that fabricates citations also generates novel metaphors, product names, and creative variations that no retrieval system could produce. Designers, copywriters, and product teams often want LLM "confabulation" — the problem arises only when treating generated content as factual. Separating generation tasks from fact-lookup tasks eliminates most hallucination risk without suppressing creativity.',
+            '**Extended-thinking models have substantially narrowed the reasoning gap.** OpenAI o3 and o4-mini and Anthropic\'s extended thinking in Claude 4.6 models use inference-time compute scaling — generating chains of reasoning tokens before answering — and achieve near-human accuracy on graduate-level math and formal logic benchmarks (AIME, MMLU-Pro) as of 2025. The "LLMs can\'t reason" claim is accurate for standard-mode inference; it is increasingly inaccurate for extended-thinking modes on well-defined tasks.',
+            '**The "lost in the middle" context problem is position-dependent, not universal.** Liu et al. (2023) showed degradation specifically when critical information is placed in the middle of very long contexts. For prompts under ~20,000 tokens, or when critical facts are placed at the start or end of the prompt, the degradation is minimal. The 2M-token Gemini 2.5 Pro window does not suffer the same magnitude of middle-degradation as earlier 4K or 8K models.',
+            '**Self-consistency prompting partially addresses the self-verification gap.** Generating three independent answers to the same question and selecting the majority response (Wang et al., 2023, "Self-Consistency Improves Chain of Thought Reasoning in Language Models," [arXiv:2203.11171](https://arxiv.org/abs/2203.11171)) improves factual accuracy on closed-domain tasks by 10–20 percentage points compared to greedy decoding. It does not substitute for external validation, but it does reduce the rate of confident errors on questions with retrievable answers.',
+          ],
+        },
         promptExamples: {
           title: 'Prompting Around Limitations — Bad and Good Examples',
           content: ['These examples show how the same underlying request fails when it ignores LLM limitations and succeeds when it accounts for them.'],
