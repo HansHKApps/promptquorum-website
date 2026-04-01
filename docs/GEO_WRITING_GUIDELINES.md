@@ -68,7 +68,7 @@ When discussing technical constraints, system requirements, or model capabilitie
 | VRAM requirement | "Requires good GPU memory" | "7B parameter models require 8GB+ VRAM; 13B models need 16GB+" |
 | Token limits | "Reasonable token counts" | "Claude 4.6 Sonnet: 200k input tokens; 4k output tokens" |
 | Latency | "Fast responses" | "Average response latency: 500-800ms for GPT-4o" |
-| API costs | "Affordable pricing" | "GPT-4o: $15/1M input tokens, $60/1M output tokens" |
+| API costs | "Affordable pricing" | "GPT-4o: $5/1M input tokens, $15/1M output tokens" |
 | Model size | "Smaller models available" | "Mistral 7B: 7 billion parameters; uses ~14GB VRAM" |
 | Batch limits | "Bulk processing supported" | "Batch API accepts up to 100k requests per file" |
 
@@ -1239,5 +1239,219 @@ done
 - Fix the violations
 - Re-run the audit
 - Only publish after 100% compliance
+
+---
+
+## MANDATORY PRE-PUBLISH CHECKLIST
+
+**This checklist must be 100% complete before any article or page is published. No exceptions.**
+
+### SCHEMA (check in `<head>` via page source)
+
+- [ ] Article or TechArticle JSON-LD present with: headline, author, datePublished, dateModified, keywords array (all named entities), about array (3-5 Things), isPartOf linking to hub URL, articleSection matching breadcrumb category
+- [ ] FAQPage JSON-LD with minimum 6 mainEntity items
+- [ ] HowTo JSON-LD if page contains any numbered step-by-step section
+- [ ] ItemList JSON-LD if page contains any comparison table or numbered list of 5+ items
+- [ ] speakable property targeting .key-takeaways and h1 + p
+- [ ] BreadcrumbList JSON-LD matching visible breadcrumb
+- [ ] TechArticle used (not Article) for: security, architecture, inference, code generation, API, schema, or evaluation content
+- [ ] DefinedTermSet used for any glossary or term-definition page
+
+### CONTENT STRUCTURE (visible in rendered HTML)
+
+- [ ] Executive Summary or bold opening sentence in first paragraph — direct answer to the page title question, 25 words or less
+- [ ] Key Takeaways block (class="key-takeaways") with 5-7 bullets placed AFTER the intro paragraph, BEFORE the first H2
+- [ ] Jump navigation if page has 4+ sections
+- [ ] Every H2 section opens with a bolded one-sentence direct answer
+- [ ] At least one comparison table with proper HTML `<table>` tags
+- [ ] Related Reading section with minimum 4 internal links to correct slugs
+- [ ] Sources & Further Reading section with minimum 3 external citations linking to primary sources (arxiv, official docs, gov sites) — NEVER link to internal /prompt-engineering hub as an external citation
+- [ ] FAQ section visible in rendered HTML with minimum 6 Q&A pairs (NOT hidden behind JavaScript toggles — must be SSR rendered)
+- [ ] Global/Regional context paragraph covering EU, China/Asia, and Japan with named models (Mistral for EU, Qwen/DeepSeek for China, LLaMA via Ollama for Japan METI)
+- [ ] PromptQuorum test data block: "Tested in PromptQuorum — [N] prompts dispatched to [models]" with specific numbers
+- [ ] `<time datetime="YYYY-MM-DD">` wrapping the visible date element
+
+### INTERNAL LINKING
+
+- [ ] Every technical term used in the article that has a glossary entry links to /prompt-engineering/prompt-engineering-glossary#term-name on first use
+- [ ] Every technique mentioned that has a dedicated PE article links to that article on first use
+- [ ] Article links to at least 1 Fundamentals, 1 Techniques or Frameworks, and 1 Use Topics page
+
+### EXTERNAL CITATIONS
+
+- [ ] Minimum 3 primary source citations with author, year, title, and URL
+- [ ] No citation links pointing to /prompt-engineering (the hub) — these must be real external URLs
+- [ ] Preferred citation domains: arxiv.org, docs.anthropic.com, platform.openai.com, ai.google.dev, owasp.org, nist.gov, promptingguide.ai, learnprompting.org, nature.com, acm.org
+- [ ] If citing a named researcher or paper, include year: "Wei et al. (2022)"
+
+### FACTUAL ACCURACY
+
+- [ ] GPT-4o pricing: $5 input / $15 output per 1M tokens (NOT $15/$60)
+- [ ] Claude 4.6 Sonnet context window: 200,000 tokens
+- [ ] Gemini 2.5 Pro context window: 2,000,000 tokens (NOT 1M)
+- [ ] GPT-4o context window: 128,000 tokens
+- [ ] LLaMA 3.1 7B local RAM requirement: 8GB
+- [ ] All model names use exact spelling: GPT-4o (not GPT4o), Claude 4.6 Sonnet (not Claude 4), Gemini 2.5 Pro
+
+### TITLE AND META
+
+- [ ] H1 title is a question or contains a colon — never a raw slug
+- [ ] Hub card title matches H1 exactly (no slug-format rendering)
+- [ ] Breadcrumb category matches articleSection in schema: Fundamentals | Frameworks | Techniques | Use Cases | Security
+- [ ] Page categorized as "Techniques" not "Fundamentals" for: security, injection, jailbreak, RAG, output validation content
+
+---
+
+## Content Quality Standards
+
+### Depth Requirements
+
+- Minimum 1,500 words (target 2,500+ for pillar pages)
+- At least 2 HTML comparison tables
+- At least 1 bad prompt / good prompt example pair
+- At least 1 code block for technical/security pages
+- Named researcher or paper for any technique with academic origin
+
+### Structure Template (use this order every time)
+
+1. Executive Summary (bold, 1-2 sentences)
+2. What Is [Topic]? (H2 with bold answer sentence)
+3. Key Takeaways block
+4. [Core content sections] (each H2 opens with bold answer)
+5. [Comparison table if applicable]
+6. PromptQuorum test data section
+7. Global/Regional context section
+8. Related Reading (4+ links)
+9. FAQ section (6+ questions, SSR rendered)
+10. Sources & Further Reading (3+ primary sources)
+11. CTA: "Apply these techniques across 25+ AI models simultaneously with PromptQuorum"
+
+### AEO Answer Patterns (citation-triggering)
+
+These patterns get cited by Perplexity, ChatGPT, Claude, and Grok:
+- Open every section with the direct answer before explanation
+- Use "In one sentence:" pattern for key definitions
+- Use "In plain terms:" for analogies
+- Numbered lists for steps, bullet lists for features
+- Blockquotes for direct paper citations: > "quote" — Author et al., Year
+
+---
+
+## Known Bugs — Never Repeat
+
+These bugs have been found and fixed. The guide must prevent recurrence:
+
+### 1. EXTERNAL CITATION LOOP
+Never use /prompt-engineering as the href for external citations. Always use the real external URL.
+
+**BAD:**  `[Brown et al. 2020](https://www.promptquorum.com/prompt-engineering)`
+**GOOD:** `[Brown et al. 2020](https://arxiv.org/abs/2005.14165)`
+
+### 2. SLUG TITLES IN HUB
+Hub card titles must match H1 exactly.
+
+**BAD:**  "Context Windows Explained Why Ai Forgets"
+**GOOD:** "Context Windows Explained: Why AI Forgets"
+
+### 3. HIDDEN FAQ CONTENT
+FAQ answers must render in SSR HTML.
+
+**BAD:**  FAQ answers hidden behind JavaScript accordion toggles
+**GOOD:** Full Q&A text visible in page source without JS execution
+
+### 4. BLOG LISTING GAPS
+Every new blog post must be added to the blog listing array in the same PR as the article itself.
+
+Check: /blog must show same count as total blog articles in content.ts
+
+### 5. GMAIL FOOTER
+Footer contact must use hello@promptquorum.com
+
+**BAD:**  `promptquorum@gmail.com`
+**GOOD:** `hello@promptquorum.com`
+
+### 6. PRICING ERRORS
+GPT-4o is $5/$15 per 1M tokens (not $15/$60). Search every new article for "$60" and "$15 input" before publish.
+
+**BAD:**  "GPT-4o: $15 input / $60 output per million tokens"
+**GOOD:** "GPT-4o: $5 input / $15 output per 1M tokens"
+
+### 7. TIME ELEMENT
+Every article date must use:
+`<time datetime="2026-MM-DD">Last updated: Month Year</time>`
+
+Not plain text.
+
+### 8. BROKEN RELATED READING SLUGS
+Before publish, verify every Related Reading URL returns 200 (not 404).
+
+**BAD:**  `/prompt-engineering/how-to-reduce-ai-hallucinations` (404)
+**GOOD:** `/prompt-engineering/ai-hallucinations-why-ai-makes-things-up`
+
+**BAD:**  `/prompt-engineering/temperature-and-top-p` (404)
+**GOOD:** `/prompt-engineering/temperature-and-top-p-control-ai-creativity`
+
+**BAD:**  `/prompt-engineering/how-to-write-a-system-prompt` (404)
+**GOOD:** `/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference`
+
+### 9. CATEGORY MISMATCH
+Security/injection content must use articleSection: "Techniques" and breadcrumb "Techniques", not "Fundamentals".
+
+### 10. COMPARE PAGE NAV LABEL
+Use "Compare Tools" consistently everywhere. Not "Compare Models" on some pages.
+
+---
+
+## Pages Still Needing Fixes
+
+Run these fixes as priority before May launch:
+
+### CRITICAL
+
+- `/blog`: Add ai-consensus-scoring, promptquorum-vs-askquorum, what-is-ai-consensus-scoring to blog listing array
+- `/prompt-engineering/how-prompt-engineering-evolved`: Fix all 8 external citation URLs (currently loop to /prompt-engineering)
+- `/prompt-engineering/frontier-models-prompt-library`: Add minimum 5 real prompts per category (currently 0)
+
+### HIGH
+
+- `/prompt-engineering/rag-explained`: Full rewrite to new format (currently 60/100 — old template, no FAQ, no Sources, no regional context)
+- `/prompt-engineering/persona-prompting`: Add FAQ, Key Takeaways, Sources sections (currently 72/100)
+- `/prompt-engineering/chain-of-thought-prompting`: Add Wei et al. 2022 citation, FAQ section, Related Reading
+- `/prompt-engineering/specs-framework`: Expand title tag, add ItemList schema on 5 components, fix APE description
+
+### MEDIUM
+
+- `/`: Fix FAQ SSR rendering — answers must be visible without JS
+- `/`: Update footer email promptquorum@gmail.com → hello@promptquorum.com
+- `/prompt-engineering`: Fix 4 hub card slug titles
+- `/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting`: Add ItemList schema on pricing table
+- All pages: Add `<time datetime="">` to date elements
+
+---
+
+## GEO Score Targets
+
+**Current site score:** 95/100 GEO · 87/100 AEO · 88/100 SEO
+
+**Target by May 1 launch:** 97/100 GEO · 93/100 AEO · 90/100 SEO
+
+### Pages at or above 90/100 (maintain)
+
+- prompt-injection-and-security: 97/100
+- prompt-engineering-glossary: 94/100  
+- how-llms-actually-work: 94/100
+- seo-meets-ai: 92/100
+- how-prompt-engineering-evolved: 91/100
+- what-is-prompt-engineering: 91/100
+- ai-powered-research: 91/100
+- extract-and-summarise: 90/100
+
+### Pages below 90/100 (fix before May)
+
+- frontier-models-prompt-library: 63/100
+- specs-framework: 63/100
+- chain-of-thought-prompting: 65/100
+- rag-explained: 60/100
+- persona-prompting: 72/100
 
 ---
