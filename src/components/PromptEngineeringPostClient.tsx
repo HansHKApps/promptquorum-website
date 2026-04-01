@@ -533,6 +533,13 @@ function PromptEngineeringPostContent({ slug }: Props) {
           </div>
         </div>
 
+        {/* Article intro paragraph */}
+        {article.intro && (
+          <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl">
+            {renderInlineLinks(article.intro)}
+          </p>
+        )}
+
         {/* Jump navigation for glossary */}
         {slug === 'prompt-engineering-glossary' && article.sections.intro && (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-4">
