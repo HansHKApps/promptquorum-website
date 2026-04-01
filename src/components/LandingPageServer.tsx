@@ -73,6 +73,14 @@ const T = {
     faqH2: 'Frequently Asked Questions',
     waitlistH2: 'Join the PromptQuorum Waitlist',
     waitlistDesc: 'PromptQuorum launches April 2026. Join the waitlist to get access on day one and provide direct input into the product roadmap.',
+    faqs: [
+      { q: 'Is PromptQuorum free?', a: 'Yes. PromptQuorum is free to use. You can bring your own API key, use a local LLM, or try our limited free backend service for prompt optimization on a test basis.' },
+      { q: 'How does privacy work?', a: 'You decide where your data goes. Keep everything local with LM Studio or Ollama, or use your own API keys. PromptQuorum is as private as you set it up.' },
+      { q: 'Which AI providers are supported?', a: 'Over 25 AI providers are included, and you can add your own custom providers. Connect to ChatGPT, Claude, Gemini, and many more.' },
+      { q: 'What platforms does PromptQuorum run on?', a: 'PromptQuorum starts with desktop apps (Mac, Windows), followed by a web application, and eventually mobile solutions.' },
+      { q: 'What makes PromptQuorum different?', a: 'PromptQuorum is highly automated for prompt improvements, can send the same prompt to multiple AIs simultaneously, and analyzes results based on your criteria.' },
+      { q: 'Are there any limits?', a: 'No limits from PromptQuorum side. Your usage is only limited by your API keys or local LLM resources.' },
+    ],
     copyright: '© 2026 PromptQuorum. All rights reserved.',
     worldwide: '🌍 Available worldwide',
     langs: 'English, Deutsch, Français, 日本語, 中文',
@@ -101,6 +109,14 @@ const T = {
     faqH2: 'Häufig gestellte Fragen',
     waitlistH2: 'Der PromptQuorum-Warteliste beitreten',
     waitlistDesc: 'PromptQuorum startet im April 2026. Tragen Sie sich in die Warteliste ein, um am ersten Tag Zugang zu erhalten und direkt am Produkt mitzuwirken.',
+    faqs: [
+      { q: 'Ist PromptQuorum kostenlos?', a: 'Ja. PromptQuorum ist kostenlos nutzbar. Sie können Ihren eigenen API-Schlüssel mitbringen, ein lokales LLM verwenden oder unseren kostenlosen Testdienst ausprobieren.' },
+      { q: 'Wie funktioniert der Datenschutz?', a: 'Sie entscheiden, wohin Ihre Daten gehen. Alles lokal halten mit LM Studio oder Ollama, oder Ihre eigenen API-Schlüssel verwenden. PromptQuorum ist so privat, wie Sie es einrichten.' },
+      { q: 'Welche KI-Anbieter werden unterstützt?', a: 'Über 25 KI-Anbieter sind enthalten, und Sie können Ihre eigenen hinzufügen. Verbinden Sie sich mit ChatGPT, Claude, Gemini und vielen mehr.' },
+      { q: 'Auf welchen Plattformen läuft PromptQuorum?', a: 'PromptQuorum beginnt mit Desktop-Apps (Mac, Windows), gefolgt von einer Webanwendung und schließlich mobilen Lösungen.' },
+      { q: 'Was macht PromptQuorum besonders?', a: 'PromptQuorum ist hochgradig automatisiert für Prompt-Verbesserungen, kann denselben Prompt gleichzeitig an mehrere KIs senden und Ergebnisse nach Ihren Kriterien analysieren.' },
+      { q: 'Gibt es Limits?', a: 'Keine Limits von PromptQuorum. Ihre Nutzung ist nur durch Ihre API-Schlüssel oder lokale LLM-Ressourcen begrenzt.' },
+    ],
     copyright: '© 2026 PromptQuorum. Alle Rechte vorbehalten.',
     worldwide: '🌍 Weltweit verfügbar',
     langs: 'English, Deutsch, Français, 日本語, 中文',
@@ -129,6 +145,14 @@ const T = {
     faqH2: 'Questions fréquemment posées',
     waitlistH2: 'Rejoindre la liste d\'attente PromptQuorum',
     waitlistDesc: 'PromptQuorum sort en avril 2026. Inscrivez-vous sur la liste d\'attente pour accéder dès le premier jour et contribuer directement à la feuille de route produit.',
+    faqs: [
+      { q: 'PromptQuorum est-il gratuit ?', a: 'Oui. PromptQuorum est gratuit. Vous pouvez apporter votre propre clé API, utiliser un LLM local, ou essayer notre service backend gratuit limité.' },
+      { q: 'Comment fonctionne la confidentialité ?', a: 'Vous décidez où vont vos données. Gardez tout local avec LM Studio ou Ollama, ou utilisez vos propres clés API. PromptQuorum est aussi privé que vous le configurez.' },
+      { q: 'Quels fournisseurs IA sont supportés ?', a: 'Plus de 25 fournisseurs IA sont inclus, et vous pouvez ajouter les vôtres. Connectez-vous à ChatGPT, Claude, Gemini et bien plus.' },
+      { q: 'Sur quelles plateformes fonctionne PromptQuorum ?', a: 'PromptQuorum commence par des applications desktop (Mac, Windows), suivies d\'une application web, puis mobile.' },
+      { q: 'Qu\'est-ce qui différencie PromptQuorum ?', a: 'PromptQuorum est très automatisé pour améliorer les prompts, peut envoyer le même prompt à plusieurs IA simultanément et analyser les résultats selon vos critères.' },
+      { q: 'Y a-t-il des limites ?', a: 'Aucune limite de la part de PromptQuorum. Votre utilisation est uniquement limitée par vos clés API ou ressources LLM locales.' },
+    ],
     copyright: '© 2026 PromptQuorum. Tous droits réservés.',
     worldwide: '🌍 Disponible dans le monde entier',
     langs: 'English, Deutsch, Français, 日本語, 中文',
@@ -157,6 +181,14 @@ const T = {
     faqH2: 'よくある質問',
     waitlistH2: 'PromptQuorumウェイトリストに参加',
     waitlistDesc: 'PromptQuorumは2026年4月にローンチします。ウェイトリストに登録して初日からアクセスし、製品ロードマップに直接貢献しましょう。',
+    faqs: [
+      { q: 'PromptQuorumは無料ですか？', a: 'はい、無料でご利用いただけます。独自のAPIキーを持ち込むか、ローカルLLMを使用するか、テスト用の無料バックエンドサービスをお試しください。' },
+      { q: 'プライバシーはどう機能しますか？', a: 'データの行き先はあなたが決めます。LM StudioやOllamaですべてローカルに保つか、独自のAPIキーを使用してください。PromptQuorumはあなたの設定通りにプライベートです。' },
+      { q: 'どのAIプロバイダーがサポートされていますか？', a: '25以上のAIプロバイダーが含まれており、独自のものも追加できます。ChatGPT・Claude・Geminiなどに接続可能です。' },
+      { q: 'どのプラットフォームで動きますか？', a: 'PromptQuorumはデスクトップアプリ（Mac・Windows）から始まり、ウェブアプリ、そしてモバイルソリューションへと展開します。' },
+      { q: 'PromptQuorumの何が違うのですか？', a: 'プロンプト改善の高度な自動化、複数のAIへの同時送信、そしてあなたの基準に基づく結果分析が特長です。' },
+      { q: '利用制限はありますか？', a: 'PromptQuorum側からの制限はありません。利用はAPIキーまたはローカルLLMのリソースにのみ依存します。' },
+    ],
     copyright: '© 2026 PromptQuorum. All rights reserved.',
     worldwide: '🌍 世界中で利用可能',
     langs: 'English, Deutsch, Français, 日本語, 中文',
@@ -185,6 +217,14 @@ const T = {
     faqH2: '常见问题',
     waitlistH2: '加入 PromptQuorum 候补名单',
     waitlistDesc: 'PromptQuorum 将于 2026 年 4 月发布。加入候补名单，在发布首日获得访问权限，并直接参与产品路线图的制定。',
+    faqs: [
+      { q: 'PromptQuorum 是免费的吗？', a: '是的，PromptQuorum 免费使用。您可以自带 API 密钥、使用本地 LLM，或试用我们有限的免费后端服务。' },
+      { q: '隐私如何保障？', a: '您决定数据的去向。通过 LM Studio 或 Ollama 将所有内容保存在本地，或使用您自己的 API 密钥。PromptQuorum 的隐私程度由您自己设置决定。' },
+      { q: '支持哪些 AI 提供商？', a: '已包含 25+ 个 AI 提供商，您还可以添加自定义提供商。可连接 ChatGPT、Claude、Gemini 等众多服务。' },
+      { q: 'PromptQuorum 支持哪些平台？', a: 'PromptQuorum 从桌面应用（Mac、Windows）开始，随后推出网页应用，最终推出移动端解决方案。' },
+      { q: 'PromptQuorum 有何独特之处？', a: 'PromptQuorum 在提示词改进方面高度自动化，可同时将相同提示词发送给多个 AI，并根据您的标准分析结果。' },
+      { q: '有使用限制吗？', a: 'PromptQuorum 本身没有任何限制。您的使用量仅受 API 密钥或本地 LLM 资源限制。' },
+    ],
     copyright: '© 2026 PromptQuorum. 保留所有权利。',
     worldwide: '🌍 全球可用',
     langs: 'English, Deutsch, Français, 日本語, 中文',
@@ -322,9 +362,18 @@ export function LandingPageServer() {
             </h2>
           </div>
 
-          <Suspense fallback={<div className="space-y-4" />}>
-            <LandingPageClient isClientContent={true} lang={lang} />
-          </Suspense>
+          <div className="space-y-4">
+            {t.faqs.map((faq, i) => (
+              <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
+                <div className="px-6 py-4 bg-white">
+                  <h3 className="font-medium text-text-primary">{faq.q}</h3>
+                </div>
+                <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
+                  <p className="text-text-secondary">{faq.a}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
