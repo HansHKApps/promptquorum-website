@@ -17522,6 +17522,15 @@ zh: {
           tableFormat: true,
         },
 
+        promptEngineeringImplications: {
+          title: 'Open Source vs Proprietary LLMs for Prompt Engineering',
+          content: [
+            '**Open-weights models enable deeper prompt experimentation at lower cost.** You can run the same prompt 100 times against a local LLaMA 3.1 instance and iterate on wording, temperature, and structure without per-token billing. Fine-tune the model on prompt-response pairs from your domain. Experiment with jailbreaks and edge cases in your private infrastructure. This sandbox environment is ideal for research, prototyping, and understanding model behavior.',
+            '**Proprietary APIs are faster to test and easier to scale.** You write a prompt, call the GPT-4o or Claude API, and get results in milliseconds with zero infrastructure setup. No need to manage VRAM, quantization, or model downloads. For quick A/B testing, production deployment, and handling variable traffic, proprietary models reduce operational complexity.',
+            '**Hybrid approach: prototype on open-weights, validate on proprietary.** Develop and refine prompts locally with LLaMA 3.1 8B (fast iteration, no cost). Once the prompt strategy is locked, test on GPT-4o or Claude 4.6 to confirm frontier performance. Deploy the better performer to production. This combines open-weights flexibility with proprietary reliability.',
+          ],
+        },
+
         whenOpenSource: {
           title: 'When to Use Open Source Models',
           content: '**Choose open-weights when data privacy, cost at scale, or deep customization requirements dominate your constraints.** Open-weights excel in:',
