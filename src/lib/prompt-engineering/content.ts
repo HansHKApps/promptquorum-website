@@ -19919,6 +19919,25 @@ zh: {
           ],
         },
 
+        keyStatistics: {
+          title: 'AI Geopolitics: Key Data Points',
+          content: [
+            'The following figures represent the scale of government AI investment, hardware concentration, and research capacity that define the current geopolitical competition in artificial intelligence.',
+          ],
+          items: [
+            '**Government AI investment — United States:** The CHIPS and Science Act (2022) allocated $52 billion for domestic semiconductor manufacturing and $200 billion for science research. The National AI Initiative Act funds AI R&D across 25 federal agencies.',
+            '**Government AI investment — China:** Estimated ¥1 trillion ($140 billion) in government-directed AI and semiconductor investment 2021–2025, including the National New Generation AI Development Plan targeting global AI leadership by 2030.',
+            '**Government AI investment — European Union:** €1 billion from the European Innovation Council AI fund; member state strategies add €10+ billion: Germany €5 billion (2019–2025), France €2 billion, UK £1 billion in AI safety and compute.',
+            '**Chip manufacturing concentration:** TSMC (Taiwan) manufactures approximately 90% of the world\'s most advanced chips below 7nm. ASML (Netherlands) is the sole manufacturer of EUV lithography machines required for advanced node fabrication — giving the Netherlands a structural chokepoint in global chip supply.',
+            '**Nvidia GPU market share:** Nvidia holds approximately 80% market share in AI training GPUs. The H100 and H200 series power the majority of frontier model training at OpenAI, Google DeepMind, Anthropic, and Baidu.',
+            '**AI researcher distribution:** The US employs approximately 40% of the world\'s top AI researchers by publication impact (Stanford HAI 2024 AI Index). China produces the largest number of computer science PhDs — approximately 50,000 per year — and accounts for ~30% of top AI conference authors.',
+            '**AI patent filings:** China filed approximately 70% of global AI patents in 2022 (WIPO Global Innovation Index). The US leads on citations and commercialized inventions; China leads on volume.',
+            '**Model training cost compression:** GPT-4 training estimated at ~$100 million in compute (2023). DeepSeek R1 (January 2025) reported training cost of approximately $6 million — a 94% reduction — demonstrating that compute-cost export controls cannot permanently constrain Chinese AI development.',
+            '**EU AI Act coverage:** The Act covers 450 million consumers across 27 EU member states. The systemic risk threshold for GPAI models is 10²⁵ FLOPs of training compute — the level at which additional adversarial testing requirements apply.',
+            '**Bletchley Declaration (November 2023):** Signed by 28 nations including the US, China, and EU member states — the broadest international AI safety consensus to date, though non-binding.',
+          ],
+        },
+
         geopoliticsOfAI: {
           title: 'The Geopolitics of Artificial Intelligence',
           content: [
