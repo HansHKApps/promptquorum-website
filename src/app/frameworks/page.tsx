@@ -24,13 +24,22 @@ export const metadata: Metadata = {
   },
 }
 
+interface PageProps {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
 const COMPLEXITY_COLOR: Record<string, string> = {
   Low: 'text-green-400 bg-green-400/10 border-green-400/30',
   Medium: 'text-yellow-400 bg-yellow-400/10 border-yellow-400/30',
   High: 'text-orange-400 bg-orange-400/10 border-orange-400/30',
 }
 
-export default function FrameworksIndexPage() {
+export default async function FrameworksIndexPage({ searchParams }: PageProps) {
+  // Extract language from searchParams
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
   return (
     <>
       <script
