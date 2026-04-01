@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FRAMEWORKS } from '@/lib/frameworksData'
+import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
   title: 'Prompt Engineering Frameworks — CO-STAR, CRAFT, RISEN, TRACE & More | PromptQuorum',
   description: 'Complete guides to 9 prompt engineering frameworks: CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, RTF, Google Prompt, and Single Prompt Line. Fields, examples, and when to use each.',
-  alternates: {
-    canonical: 'https://www.promptquorum.com/frameworks',
-  },
+  alternates: generateAlternates('/frameworks'),
   openGraph: {
     type: 'website',
     url: 'https://www.promptquorum.com/frameworks',

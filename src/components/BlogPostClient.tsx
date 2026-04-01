@@ -23,10 +23,11 @@ function getDateISO(dateStr: string): string {
 interface BlogPostClientProps {
   post: BlogPost
   slug: string
+  initialLang?: Language
 }
 
-function BlogPostClientContent({ post, slug }: BlogPostClientProps) {
-  const lang = useLang() as Language
+function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps) {
+  const lang = useLang(initialLang) as Language
 
   // Get translated metadata
   const postId = SLUG_TO_POST_ID[slug as keyof typeof SLUG_TO_POST_ID]

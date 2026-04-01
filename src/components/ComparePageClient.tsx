@@ -3,10 +3,10 @@
 import { useLang } from '@/hooks/useLang'
 import Link from 'next/link'
 
-function CompareContent() {
+function CompareContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
   // Language used for future translation expansion; content currently EN-only
   // as competitor-specific copy requires professional translation
-  useLang()
+  useLang(initialLang)
 
   return (
     <div className="min-h-screen bg-white pt-28 pb-20">
@@ -347,6 +347,6 @@ function CompareContent() {
   )
 }
 
-export function ComparePageClient() {
-  return <CompareContent />
+export function ComparePageClient({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+  return <CompareContent initialLang={initialLang} />
 }

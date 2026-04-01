@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import { FeaturesPageClient } from '@/components/FeaturesPageClient'
+import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
   title: '9 Prompt Frameworks, Multi-Model Dispatch & Consensus Analysis | PromptQuorum',
   description: 'PromptQuorum features: 9 structured prompt frameworks (CO-STAR, CRAFT, RISEN), simultaneous dispatch to 25+ AI providers, 13-type Quorum consensus analysis, hallucination detection, and full offline support with local LLMs.',
-  alternates: {
-    canonical: 'https://www.promptquorum.com/features',
-  },
+  alternates: generateAlternates('/features'),
 }
 
 export default function FeaturesPage() {

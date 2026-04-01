@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import { PromptEngineeringHub } from '@/components/PromptEngineeringHub'
+import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
   title: 'Prompt Engineering Guide — PromptQuorum',
   description: 'Complete prompt engineering resource: fundamentals, frameworks (CRAFT, CO-STAR, APE), techniques (chain of thought, role prompting), and domain-specific guides for writing, coding, research, and more.',
-  alternates: {
-    canonical: 'https://www.promptquorum.com/prompt-engineering',
-  },
+  alternates: generateAlternates('/prompt-engineering'),
   openGraph: {
     type: 'website',
     url: 'https://www.promptquorum.com/prompt-engineering',

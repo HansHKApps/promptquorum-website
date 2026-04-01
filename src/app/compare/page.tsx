@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import { ComparePageClient } from '@/components/ComparePageClient'
+import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
   title: 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo — Multi-LLM Tools Compared (2026)',
   description: 'Compare the best multi-LLM tools in 2026: PromptQuorum, Poe, LM Arena, OpenMark, and AiZolo. See which tools offer simultaneous dispatch, consensus scoring, local LLM support, and API key control.',
-  alternates: {
-    canonical: 'https://www.promptquorum.com/compare',
-  },
+  alternates: generateAlternates('/compare'),
   openGraph: {
     title: 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo — Multi-LLM Tools Compared',
     description: 'The definitive 2026 comparison of multi-LLM tools. Simultaneous dispatch, consensus scoring, local LLM support, and pricing — all in one table.',

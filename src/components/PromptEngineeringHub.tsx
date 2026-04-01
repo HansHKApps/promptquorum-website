@@ -170,8 +170,8 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
   )
 }
 
-function PromptEngineeringHubContent() {
-  const lang = useLang()
+function PromptEngineeringHubContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+  const lang = useLang(initialLang)
 
   return (
     <div className="min-h-screen bg-surface pt-24 pb-20">
@@ -263,6 +263,6 @@ function PromptEngineeringHubContent() {
   )
 }
 
-export function PromptEngineeringHub() {
-  return <PromptEngineeringHubContent />
+export function PromptEngineeringHub({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+  return <PromptEngineeringHubContent initialLang={initialLang} />
 }

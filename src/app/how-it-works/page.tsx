@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import { HowItWorksPageClient } from '@/components/HowItWorksPageClient'
+import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
   title: 'How Multi-Model AI Dispatch & Consensus Works | PromptQuorum',
   description: 'How PromptQuorum works: write structured prompts with 9 frameworks, optimize with your own LLM, dispatch simultaneously to 25+ AI services, then run 13 types of consensus analysis — Hallucination Detection, Contradiction Detection, Best Answer Selection, and more.',
-  alternates: {
-    canonical: 'https://www.promptquorum.com/how-it-works',
-  },
+  alternates: generateAlternates('/how-it-works'),
   openGraph: {
     type: 'website',
     url: 'https://www.promptquorum.com/how-it-works',

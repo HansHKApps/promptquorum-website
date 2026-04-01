@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { FRAMEWORKS, FRAMEWORK_SLUGS, getFramework } from '@/lib/frameworksData'
+import { generateAlternates } from '@/lib/hreflang'
 
 export function generateStaticParams() {
   return FRAMEWORK_SLUGS.map(slug => ({ slug }))
@@ -14,9 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${fw.name} Prompt Framework — Fields, Examples & When To Use It | PromptQuorum`,
     description: `${fw.expansion}. ${fw.tagline} See all fields, a real example, and when to use ${fw.name} vs other prompt frameworks.`,
-    alternates: {
-      canonical: `https://www.promptquorum.com/frameworks/${fw.slug}`,
-    },
+    alternates: generateAlternates(`/frameworks/${fw.slug}`),
     openGraph: {
       type: 'article',
       url: `https://www.promptquorum.com/frameworks/${fw.slug}`,

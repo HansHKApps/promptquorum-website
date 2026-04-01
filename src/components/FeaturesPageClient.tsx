@@ -153,8 +153,8 @@ function FeatureCard({ icon: Icon, title, description }: { icon: React.ElementTy
   )
 }
 
-function FeaturesContent() {
-  const lang = useLang()
+function FeaturesContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+  const lang = useLang(initialLang)
   const t = T[lang] ?? T.en
 
   return (
@@ -229,6 +229,6 @@ function FeaturesContent() {
   )
 }
 
-export function FeaturesPageClient() {
-  return <FeaturesContent />
+export function FeaturesPageClient({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+  return <FeaturesContent initialLang={initialLang} />
 }

@@ -539,8 +539,8 @@ const providers = {
   local: ['Ollama (localhost:11434)', 'LM Studio (localhost:1234)', 'Jan AI (localhost:1337)', 'GPT4All (localhost:4891)', 'Open WebUI', 'KoboldCpp', 'vLLM', 'oobabooga', 'Any OpenAI-compatible endpoint'],
 }
 
-function HowItWorksContent() {
-  const lang = useLang()
+function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+  const lang = useLang(initialLang)
   const t = T[lang] ?? T.en
 
   return (
@@ -736,6 +736,6 @@ function HowItWorksContent() {
   )
 }
 
-export function HowItWorksPageClient() {
-  return <HowItWorksContent />
+export function HowItWorksPageClient({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+  return <HowItWorksContent initialLang={initialLang} />
 }

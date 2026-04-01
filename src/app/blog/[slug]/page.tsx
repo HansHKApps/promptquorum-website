@@ -6,6 +6,7 @@ import { SLUG_TO_POST_ID, type BlogSlug } from '@/lib/blogSlugs'
 
 interface PageProps {
   params: Promise<{ slug: string }>
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 // Generate static paths for all blog posts
@@ -33,6 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: canonicalUrl,
       languages: {
+        'x-default': canonicalUrl,
         'en': `${canonicalUrl}?lang=en`,
         'de': `${canonicalUrl}?lang=de`,
         'fr': `${canonicalUrl}?lang=fr`,
@@ -55,7 +57,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export default async function BlogPage({ params }: PageProps) {
+export default async function BlogPage({ params, searchParams }: PageProps) {
   const { slug } = await params
   const postId = SLUG_TO_POST_ID[slug as BlogSlug]
 
@@ -63,7 +65,13 @@ export default async function BlogPage({ params }: PageProps) {
     notFound()
   }
 
-  const post = blogContent[postId]['en'] // Server reads English content
+  // Extract language from searchParams
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = (validLangs.includes(lang) ? lang : 'en') as Language
+
+  const post = blogContent[postId][selectedLang] || blogContent[postId]['en']
 
   // JSON-LD: Article schema
   const publishDate = post.publishDate.replace('Published ', '').split(' ').slice(0, 3).join(' ')
@@ -220,7 +228,7 @@ export default async function BlogPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(scholarlyArticleSchema) }}
       />
-      <BlogPostClient post={post} slug={slug} />
+      <BlogPostClient post={post} slug={slug} initialLang={selectedLang} />
     </>
   )
 }

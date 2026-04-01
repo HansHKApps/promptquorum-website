@@ -34,8 +34,8 @@ const blogPosts = [
   { key: 'vsAskQuorum' as const, slug: 'promptquorum-vs-askquorum' },
 ]
 
-function BlogIndexInner() {
-  const lang = useLang() as Language
+function BlogIndexInner({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+  const lang = useLang(initialLang) as Language
   const t = translations[lang] || translations.en
 
   return (
@@ -87,6 +87,6 @@ function BlogIndexInner() {
   )
 }
 
-export function BlogIndexClient() {
-  return <BlogIndexInner />
+export function BlogIndexClient({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+  return <BlogIndexInner initialLang={initialLang} />
 }

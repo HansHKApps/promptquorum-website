@@ -48,8 +48,8 @@ const T = {
   },
 }
 
-function FAQContent() {
-  const lang = useLang()
+function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+  const lang = useLang(initialLang)
   const t = T[lang] ?? T.en
 
   return (
@@ -83,6 +83,6 @@ function FAQContent() {
   )
 }
 
-export function FAQPageClient() {
-  return <FAQContent />
+export function FAQPageClient({ initialLang }: { initialLang?: import("@/hooks/useLang").Lang }) {
+  return <FAQContent initialLang={initialLang} />
 }

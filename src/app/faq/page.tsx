@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import { FAQPageClient } from '@/components/FAQPageClient'
+import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
   title: 'FAQ — Multi-Model AI Dispatch, Consensus Scoring & Prompt Frameworks | PromptQuorum',
   description: '26 answers about PromptQuorum: how multi-model dispatch works, consensus scoring, hallucination detection, 9 prompt frameworks (CO-STAR, CRAFT, RISEN), local LLM support, BYOM privacy model, and getting started.',
-  alternates: {
-    canonical: 'https://www.promptquorum.com/faq',
-  },
+  alternates: generateAlternates('/faq'),
   openGraph: {
     title: 'FAQ | PromptQuorum',
     description: 'Everything you need to know about PromptQuorum — prompt engineering, privacy, AI providers, and getting started.',

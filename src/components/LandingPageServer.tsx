@@ -250,8 +250,8 @@ function FeatureCard({ icon: Icon, title, description, delay }: { icon: React.El
 const ICONS = [Sparkles, Layers, Brain, Zap, Shield, Download]
 
 // Main Landing Page Server Component
-export function LandingPageServer() {
-  const lang = useLang()
+export function LandingPageServer({ initialLang }: { initialLang?: import('@/hooks/useLang').Lang }) {
+  const lang = useLang(initialLang)
   const t = T[lang] ?? T.en
 
   return (
