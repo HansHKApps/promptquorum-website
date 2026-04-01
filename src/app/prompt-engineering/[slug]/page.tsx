@@ -71,6 +71,8 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       type: 'article',
       siteName: 'PromptQuorum',
       images: [{ url: ogImageUrl, width: 1200, height: 630 }],
+      publishedTime: article.publishDate,
+      modifiedTime: article.dateModified ?? article.publishDate,
     },
     twitter: {
       card: 'summary_large_image',
