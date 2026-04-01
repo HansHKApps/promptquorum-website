@@ -15491,6 +15491,9 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         ],
         isPartOf: { '@type': 'WebPage', url: 'https://www.promptquorum.com/prompt-engineering' },
         articleSection: 'Fundamentals',
+        proficiencyLevel: 'Intermediate',
+        dependencies: 'Basic understanding of how large language models work',
+        audience: { '@type': 'Audience', audienceType: 'Developers, AI practitioners, product teams' },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1 + p', '.key-takeaways'] },
       },
       itemListSchema: {
