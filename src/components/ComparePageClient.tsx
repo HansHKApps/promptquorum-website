@@ -21,7 +21,7 @@ function CompareContent({ initialLang }: { initialLang?: import("@/hooks/useLang
           </p>
           <div className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-full px-3 py-1 text-xs font-mono text-text-secondary mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
-            Updated March 2026
+            <time dateTime="2026-03-01">Updated March 2026</time>
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary leading-tight tracking-tight mb-4">
             PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo —{' '}

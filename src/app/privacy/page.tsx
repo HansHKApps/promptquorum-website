@@ -45,7 +45,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-sm font-mono text-text-secondary">
-            Effective date: {EFFECTIVE_DATE} &nbsp;·&nbsp; Controller: {CONTROLLER} &nbsp;·&nbsp; Contact: {CONTROLLER_EMAIL}
+            Effective date: <time dateTime="2026-03-15">{EFFECTIVE_DATE}</time> &nbsp;·&nbsp; Controller: {CONTROLLER} &nbsp;·&nbsp; Contact: {CONTROLLER_EMAIL}
           </p>
         </div>
 
