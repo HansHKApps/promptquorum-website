@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for each blog post
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const { slug } = await params
   const postId = SLUG_TO_POST_ID[slug as BlogSlug]
 
@@ -25,7 +25,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return notFound()
   }
 
-  const post = blogContent[postId]['en'] // Use English for SEO
+  // Extract language from searchParams
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = (validLangs.includes(lang) ? lang : 'en') as Language
+
+  const post = blogContent[postId][selectedLang] || blogContent[postId]['en']
   const canonicalUrl = `https://www.promptquorum.com/blog/${slug}`
 
   return {
