@@ -246,6 +246,38 @@ After the agent completes the translation, verify:
 - [ ] `primaryTerm` translated
 - [ ] `blockquote` fields translated — no English blockquotes on non-English pages
 - [ ] Open the translated article in browser at `?lang=XX` and spot-check: H1, first H2, meta description in dev tools, any blockquotes all in target language
+- [ ] **View page source** (Ctrl+U) at `?lang=XX` — the raw HTML (before JavaScript) must contain the translated H1 and first paragraph, not English. If it shows English, `initialLang` is not being passed from the server component to `PromptEngineeringPostClient`.
+
+---
+
+## 9. Server-Side Language Rendering — Non-Negotiable
+
+**Every article page must pass `initialLang` from the server to the client component.** Without it, `useLang()` defaults to `'en'` on first render and all language URLs serve English HTML to crawlers — making the translation invisible to Google and AI engines.
+
+### The Rule
+
+In `src/app/prompt-engineering/[slug]/page.tsx`, the `PromptEngineeringPostClient` call must include `initialLang`:
+
+```tsx
+// Correct ✅
+<PromptEngineeringPostClient slug={slug} initialLang={selectedLang} />
+
+// Wrong ❌ — crawlers see English on all ?lang=XX URLs
+<PromptEngineeringPostClient slug={slug} />
+```
+
+### Why This Matters
+
+`PromptEngineeringPostClient` is a `'use client'` component. Its `useLang()` hook reads `window.location.search` — which is only available after JavaScript hydrates in the browser. The initial server-rendered HTML always contains the default `useState('en')` value.
+
+Result without `initialLang`: Googlebot, Perplexity, ChatGPT Browse, and other crawlers that read the initial HTML see English content on `?lang=de`, `?lang=fr`, `?lang=ja`, and `?lang=zh` URLs — even if full translations exist in `content.ts`.
+
+### If You Add a New Client-Rendered Article Component
+
+Any new client component that renders article body content must follow the same pattern:
+1. Accept an `initialLang?: Language` prop
+2. Use it as the initial value before `useLang()` hydrates
+3. Be passed `initialLang={selectedLang}` from the server page
 
 ---
 
