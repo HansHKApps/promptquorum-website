@@ -9,6 +9,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
 interface Props {
   slug: string
+  initialLang?: Language
 }
 
 // Jump-to-section translations
@@ -484,8 +485,11 @@ const THEME_COLORS: Record<string, { dot: string; badge: string; label: string }
   'Use Topics': { dot: 'bg-orange-400', badge: 'bg-orange-50 text-orange-700 border border-orange-200', label: 'Use Topics' },
 }
 
-function PromptEngineeringPostContent({ slug }: Props) {
-  const lang = useLang() as Language
+function PromptEngineeringPostContent({ slug, initialLang }: Props) {
+  const clientLang = useLang() as Language
+  // Use server-resolved initialLang for first render (SEO-correct HTML),
+  // then switch to client-side lang once the hook hydrates past 'en' default.
+  const lang: Language = (clientLang !== 'en' ? clientLang : (initialLang ?? clientLang))
   const key = PE_SLUG_TO_KEY[slug]
   const articleData = key ? peContent[key] : null
 
@@ -611,3 +615,4 @@ function PromptEngineeringPostContent({ slug }: Props) {
 export function PromptEngineeringPostClient(props: Props) {
   return <PromptEngineeringPostContent {...props} />
 }
+

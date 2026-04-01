@@ -307,7 +307,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
       {article.itemListSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.itemListSchema) }} />}
       {learningResourceSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceSchema) }} />}
       {definedTermSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }} />}
-      <PromptEngineeringPostClient slug={slug} />
+      <PromptEngineeringPostClient slug={slug} initialLang={selectedLang} />
     </>
   )
 }
