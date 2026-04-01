@@ -148,8 +148,6 @@ const EXTERNAL_CITATIONS: Record<string, string> = {
   'OpenAI – Best Practices for Prompt Engineering': 'https://platform.openai.com/docs/guides/prompt-engineering',
   'Google Cloud – Prompt Engineering for AI Guide': 'https://cloud.google.com/discover/what-is-prompt-engineering',
   'Prompt engineering as a new 21st century skill – Frontiers': 'https://www.frontiersin.org/articles/10.3389/feduc.2023.1209897/full',
-  'Prompt Engineering from 2020 to 2025 – AI Supremacy': 'https://www.aisupremacy.org/blog/prompt-engineering-evolution-2020-2025',
-  'The Evolution of Prompt Engineering to Context Design – 2026': 'https://www.promptengineering.ai/articles/context-design-evolution',
   'McKinsey 2024 State of AI': 'https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024',
 }
 
