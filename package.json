@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "node build-with-fix.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "validate-seo": "node scripts/validate-seo.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
