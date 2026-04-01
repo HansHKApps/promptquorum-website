@@ -6,6 +6,18 @@ Load this file as your primary reference when translating. It eliminates the nee
 
 ---
 
+## ZERO ENGLISH RULE — Non-negotiable
+
+> A DE, FR, JA, or ZH page must contain **no English text** — visible or search-engine-facing.
+> This includes: every heading (H1–H4), every paragraph, every bullet point, every table cell,
+> every FAQ question and answer, every blockquote, every meta tag, and every schema markup
+> field used by search engines (`metaDescription`, `og:description`, `schema.headline`,
+> `schema.keywords`, FAQPage questions/answers, HowTo steps, ItemList names, DefinedTerm name).
+> The only permitted English on a non-English page:
+> product/model names, technical acronyms, code blocks, and external URLs — see section 2.
+
+---
+
 ## 1. Supported Languages
 
 Quick-reference table. Use these exact codes, templates, and section titles.
@@ -27,6 +39,8 @@ Quick-reference table. Use these exact codes, templates, and section titles.
 - `title` — article headline
 - `intro` — 2–3 sentence summary (for cards, meta, OG images)
 - `readTime` — use template above; scale the number to the article (e.g., "12 min read" → "12 min Lesezeit")
+- `metaDescription` — used as `<meta name="description">` and feeds `og:description` fallback; translate fully (150–160 chars in target language)
+- `primaryTerm` — used in DefinedTerm JSON-LD schema `name` field by search engines; translate to target language
 - `schema.headline` — same as `title`
 - `schema.description` — same as `intro`
 - `schema.keywords[]` — translate each keyword to target language
@@ -41,7 +55,7 @@ Quick-reference table. Use these exact codes, templates, and section titles.
 - All `sections[*].content[]` paragraph strings (array or single string)
 - All `sections[*].items[]` bullet points
 - All `sections[*].numberedItems[]` numbered list items
-- All `sections[*].blockquote` text — translate the full quote to target language
+- All `sections[*].blockquote` text — translate the full quote to target language (no exceptions; all blockquotes must be in the target language)
 - All `sections[*].blockquoteSource` **label text** (keep URL inside `[...]` unchanged; author names stay in English)
 - All `sections[*].columns[]` table header row (translated strings)
 - All `sections[*].rows[*]` table cell **keys AND values**
@@ -196,6 +210,8 @@ Read docs/TRANSLATION_SPEC.md completely before starting.
 Translate the `en:` block for article slug [ARTICLE_SLUG] to language code [LANG_CODE].
 
 Apply EVERY rule in the spec exactly:
+- ZERO ENGLISH RULE: translate metaDescription, primaryTerm, blockquote fields — no exceptions
+- Every H1/H2/H3/H4 heading, paragraph, bullet, table cell, FAQ, and schema text field must be in target language
 - Append ?lang=[LANG_CODE] to all internal /prompt-engineering/... links
 - Match table row keys to translated column headers (critical!)
 - Use the readTime template for [LANG_CODE]
@@ -226,8 +242,10 @@ After the agent completes the translation, verify:
 - [ ] `publishDate` and `dateModified` match the English source
 - [ ] All `schema.teaches[]` and `schema.assesses[]` translated
 - [ ] FAQ questions and answers translated
-- [ ] No blockquote citation text translated (only `blockquoteSource` label)
-- [ ] Open the translated article in browser at `?lang=XX` and spot-check rendering
+- [ ] `metaDescription` translated (not English version copied over)
+- [ ] `primaryTerm` translated
+- [ ] `blockquote` fields translated — no English blockquotes on non-English pages
+- [ ] Open the translated article in browser at `?lang=XX` and spot-check: H1, first H2, meta description in dev tools, any blockquotes all in target language
 
 ---
 
@@ -253,10 +271,12 @@ After the agent completes the translation, verify:
 | sections | `rows[]` | **Yes** | Table cells, keys **must match columns[]** |
 | sections | `faqs[].q` | **Yes** | Questions |
 | sections | `faqs[].a` | **Yes** | Answers |
-| sections | `blockquote` | No | Citation text stays English |
+| sections | `blockquote` | **Yes** | Translate fully — no exceptions; no English blockquotes on non-English pages |
 | sections | `blockquoteSource` | **Yes** | Label text (keep URL in `[...]`) |
+| Root | `metaDescription` | **Yes** | 150–160 chars in target language |
+| Root | `primaryTerm` | **Yes** | Used in DefinedTerm schema name |
 
 ---
 
-**Last updated:** 2026-03-31
+**Last updated:** 2026-04-01
 **Next review:** After 3rd translation using this spec
