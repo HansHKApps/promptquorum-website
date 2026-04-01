@@ -15538,12 +15538,12 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           {
             '@type': 'Question',
             name: 'Can GPT-4o access the internet?',
-            acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o in the standard API cannot access the internet. ChatGPT\'s interface offers an optional browsing tool, but the base model API has a training cutoff of April 2024 and no live retrieval. Always confirm whether a tool-use layer is active in your specific integration before assuming the model has current data.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o in the standard API cannot access the internet. ChatGPT\'s interface offers an optional browsing tool, but the base model API has a training cutoff of October 2024 and no live retrieval. Always confirm whether a tool-use layer is active in your specific integration before assuming the model has current data.' },
           },
           {
             '@type': 'Question',
             name: 'How do knowledge cutoffs differ between GPT-4o, Claude, and Gemini?',
-            acceptedAnswer: { '@type': 'Answer', text: 'As of 2026: OpenAI GPT-4o has a training cutoff of April 2024; Anthropic Claude 4.6 Sonnet and Google Gemini 2.5 Pro have cutoffs in early 2025. All three models may have imprecise knowledge of events close to their cutoffs due to sparse training coverage of the most recent months.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'As of 2026: OpenAI GPT-4o has a training cutoff of October 2024; Anthropic Claude 4.6 Sonnet and Google Gemini 2.5 Pro have cutoffs in early 2025. All three models may have imprecise knowledge of events close to their cutoffs due to sparse training coverage of the most recent months.' },
           },
           {
             '@type': 'Question',
@@ -15588,8 +15588,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         knowledgeCutoff: {
           title: 'Limitation 1 — Knowledge Cutoffs and No Real-Time Data',
           content: [
-            '**Every LLM has a training cutoff date, and the model has no knowledge of events, prices, papers, or product versions released after that date unless external retrieval is added.** OpenAI GPT-4o has a cutoff of April 2024. Anthropic Claude 4.6 Sonnet and Google Gemini 2.5 Pro have cutoffs in early 2025.',
-            'Models also have sparse knowledge of events *close to* their cutoff, because training data collection and processing takes weeks to months after events occur. A model trained through April 2024 may have thin coverage of March–April 2024 events.',
+            '**Every LLM has a training cutoff date, and the model has no knowledge of events, prices, papers, or product versions released after that date unless external retrieval is added.** OpenAI GPT-4o has a cutoff of October 2024. Anthropic Claude 4.6 Sonnet and Google Gemini 2.5 Pro have cutoffs in early 2025.',
+            'Models also have sparse knowledge of events *close to* their cutoff, because training data collection and processing takes weeks to months after events occur. A model trained through October 2024 may have thin coverage of September–October 2024 events.',
             'The primary workaround is [retrieval-augmented generation (RAG)](/prompt-engineering/rag-explained), which injects live or recent documents into the prompt at query time. A secondary workaround is prompt grounding: pasting the relevant current facts directly into the prompt and instructing the model to answer only from that context.',
           ],
         },
@@ -15672,7 +15672,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           blockquote: '[Bad Prompt] "What\'s the current pricing for GPT-4o?"',
           blockquoteSource: 'This prompt assumes real-time knowledge the model does not have. The model will confidently state outdated or fabricated pricing.',
           items: [
-            'This prompt ignores the knowledge cutoff limitation. GPT-4o\'s training data ends April 2024 — pricing may have changed since then. The model will generate an answer that sounds authoritative but may be months out of date.',
+            'This prompt ignores the knowledge cutoff limitation. GPT-4o\'s training data ends October 2024 — pricing may have changed since then. The model will generate an answer that sounds authoritative but may be months out of date.',
             'A better approach explicitly accounts for the limitation:',
             '[Good Prompt] "Explain the typical pricing structure OpenAI uses for GPT-4o (input tokens, output tokens, batching). Note: I know your training data may not reflect the latest rates — I\'ll verify the exact current numbers at platform.openai.com after reading your explanation."',
           ],
@@ -15718,8 +15718,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           faqs: [
             { q: 'What are the main things LLMs can\'t do?', a: 'LLMs cannot access real-time data, verify their own outputs, retain memory across sessions, take real-world actions without tool scaffolding, or reason reliably through multi-step logic without chain-of-thought prompting. These are structural limits applying to every model — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and open-source alternatives alike.' },
             { q: 'Why do LLMs hallucinate?', a: 'Hallucination is structural: LLMs predict the most statistically likely next token based on training data, not verified truth. When training signal for a specific fact is thin — niche figures, recent events, obscure citations — the model generates a plausible-sounding fabrication without flagging uncertainty. Grounding prompts with explicit source material reduces but does not eliminate hallucination.' },
-            { q: 'Can GPT-4o access the internet?', a: 'GPT-4o in the standard API cannot access the internet. ChatGPT\'s interface offers an optional browsing tool, but the base model API has a training cutoff of April 2024 and no live retrieval. Always confirm whether a tool-use layer is active in your specific integration before assuming the model has current data.' },
-            { q: 'How do knowledge cutoffs differ between GPT-4o, Claude, and Gemini?', a: 'As of 2026: OpenAI GPT-4o has a training cutoff of April 2024; Anthropic Claude 4.6 Sonnet and Google Gemini 2.5 Pro have cutoffs in early 2025. All three models may have imprecise knowledge of events close to their cutoffs due to sparse training coverage of the most recent months.' },
+            { q: 'Can GPT-4o access the internet?', a: 'GPT-4o in the standard API cannot access the internet. ChatGPT\'s interface offers an optional browsing tool, but the base model API has a training cutoff of October 2024 and no live retrieval. Always confirm whether a tool-use layer is active in your specific integration before assuming the model has current data.' },
+            { q: 'How do knowledge cutoffs differ between GPT-4o, Claude, and Gemini?', a: 'As of 2026: OpenAI GPT-4o has a training cutoff of October 2024; Anthropic Claude 4.6 Sonnet and Google Gemini 2.5 Pro have cutoffs in early 2025. All three models may have imprecise knowledge of events close to their cutoffs due to sparse training coverage of the most recent months.' },
             { q: 'Can I fix LLM limitations with better prompting?', a: 'Prompting reduces the impact of limitations but does not eliminate them. Chain-of-thought prompting improves reasoning accuracy. Providing facts in the prompt mitigates knowledge cutoffs. Explicit uncertainty instructions reduce hallucination confidence. But prompting cannot give a model real-time data access, genuine memory, or the ability to take real-world actions.' },
             { q: 'Do fine-tuned models have the same limitations?', a: 'Yes. Fine-tuning adjusts style, domain focus, or instruction-following behavior — it does not add real-time data access, true reasoning, or persistent memory. A fine-tuned GPT-4o retains the same knowledge cutoff and hallucination risk as the base model.' },
             { q: 'What\'s the difference between an LLM limitation and a bug?', a: 'A bug is an unintended error fixable with a software update. A limitation is a structural property of how the model works. Hallucination, knowledge cutoffs, and context window caps are limitations — they emerge from the transformer architecture and training process and cannot be patched away, only worked around with system design.' },
