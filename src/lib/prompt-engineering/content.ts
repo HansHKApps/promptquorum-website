@@ -15974,7 +15974,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Halluzination tritt am häufigsten auf bei: spezifischen numerischen Werten (Preise, Daten, Statistiken), Zitaten und Papierreferenzen, Nischen-Technikspezifikationen und Ereignissen nahe oder nach dem Trainings-Cutoff. Modelle signalisieren selten, wenn sie halluzinieren.',
             'Workarounds: das Quellmaterial im Prompt bereitstellen und das Modell anweisen, nur daraus zu antworten; das Modell bitten, jede Behauptung zu markieren, die es nicht aus dem bereitgestellten Kontext bestätigen kann; [RAG](/prompt-engineering/rag-explained?lang=de) verwenden, um Antworten an verifizierten Dokumenten zu verankern; alle Schlüsselzahlen vor der Veröffentlichung gegen primäre Quellen validieren.',
           ],
-          blockquote: '"The model does not know what it does not know. It fills gaps with patterns, not silence."',
+          blockquote: '„Das Modell weiß nicht, was es nicht weiß. Es füllt Lücken mit Mustern, nicht mit Stille."',
           blockquoteSource: 'Forschungsergebnis aus mehreren Halluzinations-Benchmarks, 2023–2024',
         },
         reasoning: {
@@ -15992,7 +15992,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'Das "Lost in the Middle"-Problem: mehrere Studien zeigen, dass die LLM-Genauigkeit beim Abrufen von Informationen aus der Mitte eines langen Kontexts deutlich geringer ist als vom Anfang oder Ende. Ein 200K-Token-Fenster bedeutet keine einheitliche Aufmerksamkeit über alle 200K Tokens.',
             'Workarounds: wichtige Informationen am Anfang oder Ende des Prompts strukturieren; RAG verwenden, um nur relevante Chunks abzurufen, anstatt vollständige Dokumente einzufügen; lange Dokumente in Chunk-Sitzungen mit Zusammenfassungsschritten aufteilen.',
           ],
-          blockquote: 'Performance is often highest when relevant information occurs at the beginning or end of the input context, and significantly degrades when models must reason over information in the middle of long contexts, even for explicitly long-context models.',
+          blockquote: 'Die Leistung ist oft am höchsten, wenn relevante Informationen am Anfang oder Ende des Eingabekontexts auftreten, und verschlechtert sich erheblich, wenn Modelle über Informationen in der Mitte langer Kontexte nachdenken müssen, auch bei explizit langen Kontextmodellen.',
           blockquoteSource: 'Nelson F. Liu et al. (2023), "Lost in the Middle: How Language Models Use Long Contexts," [arXiv:2307.03172](https://arxiv.org/abs/2307.03172)',
         },
         noMemory: {
