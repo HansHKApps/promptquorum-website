@@ -16402,7 +16402,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           items: [
             'Ce prompt ignore la limitation de coupure de connaissance. Les données d\'entraînement de GPT-4o se terminent en octobre 2024 — les tarifs peuvent avoir changé depuis. Le modèle va générer une réponse qui sonne autoritaire mais peut être obsolète de plusieurs mois.',
             'Une meilleure approche tient explicitement compte de la limitation :',
-            '[Good Prompt] "Explain the typical pricing structure OpenAI uses for GPT-4o (input tokens, output tokens, batching). Note: I know your training data may not reflect the latest rates — I\'ll verify the exact current numbers at platform.openai.com after reading your explanation."',
+            '[Bon Prompt] « Expliquer la structure de tarification typique qu\'OpenAI utilise pour GPT-4o (jetons d\'entrée, jetons de sortie, traitement par lots). Remarque : je sais que vos données d\'entraînement peuvent ne pas refléter les tarifs les plus récents — je vérifierai les chiffres exacts actuels sur platform.openai.com après avoir lu votre explication. »',
           ],
         },
         howToStart: {
