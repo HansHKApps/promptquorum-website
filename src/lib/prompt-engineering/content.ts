@@ -15702,14 +15702,6 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             '**Validate outputs before publishing.** Check all key figures, dates, citations, and technical specifications against authoritative primary sources. LLM output is a high-quality draft, not a primary source.',
           ],
         },
-        promptquorumTest: {
-          title: 'What PromptQuorum Testing Reveals',
-          content: [
-            '**Tested in PromptQuorum — 47 prompts dispatched to OpenAI GPT-4o, Anthropic Claude 4.6 Sonnet, and Google Gemini 2.5 Pro asking questions about events after each model\'s training cutoff.** All three models produced outdated or fabricated information 83% of the time when prompts contained no acknowledgment of the knowledge cutoff.',
-            'When prompts included explicit instructions ("acknowledge if you are uncertain about recent events"), accurate hedging increased to 91% across all three models. Claude 4.6 Sonnet hedged most accurately without being prompted; GPT-4o was most likely to state outdated pricing as current fact.',
-            'A secondary test of multi-step arithmetic (10-step calculation, no chain-of-thought instruction): all three models produced an incorrect final answer. When chain-of-thought prompting was added, accuracy improved to 78% for Claude 4.6 Sonnet, 71% for GPT-4o, and 74% for Gemini 2.5 Pro.',
-          ],
-        },
         regionalContext: {
           title: 'How LLM Limitations Vary by Region',
           content: [

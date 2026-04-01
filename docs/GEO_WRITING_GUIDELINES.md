@@ -121,14 +121,6 @@ Inventing numbers damages credibility, violates user trust, and fails AI engine 
 3. **Cite the source:** "[Paper Author, Year] found 65–85% detection rates in [Study Name]" (verifiable)
 4. **Omit numbers entirely:** Describe behavior qualitatively without numeric claims
 
-**Example correction:**
-
-**Before (❌ fabricated):**
-> "PromptQuorum testing shows Claude 4.6 Sonnet detected 22 of 30 injection attempts (73%)"
-
-**After (✅ honest):**
-> "Example comparative framework: If you tested 30 injection strings across models, you would expect Claude 4.6 Sonnet to achieve 60–75% detection on naive injections, with near-zero detection on obfuscated payloads."
-
 **Checklist for numeric claims:**
 - [ ] Is this number from a measurement, test, or published source?
 - [ ] Can I cite the source or method used to derive this number?
@@ -644,18 +636,7 @@ These rules apply to all new PromptQuorum pages (Prompt Engineering articles, bl
 - Place the snippet block near the top (intro or first H2).
 - The snippet must be understandable without reading any other part of the page.
 
-### 21.4 PromptQuorum-Specific Findings (Proprietary Data)
-
-- Every Prompt Engineering article must include at least one PromptQuorum-specific finding or insight with numeric data.
-- Use one of these lead-ins:
-  - "**Tested in PromptQuorum —** …"
-  - "**PromptQuorum multi-model test:** …"
-- Requirements:
-  - Include at least one number (for example "22 of 30 tests", "70% of prompts", "3 of 4 models").
-  - Describe behaviour across at least two models (for example GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, local LLaMA/Qwen via Ollama or LM Studio).
-  - Keep tone factual and neutral (no marketing adjectives).
-
-### 21.5 Long-Tail Question Sections
+### 21.4 Long-Tail Question Sections
 
 - For broad topics (for example "prompt optimization", "context windows", "AI hallucinations", "AI code review", "what is prompt engineering"), each new page must include at least one dedicated section that answers a specific long-tail question in full.
 - Use the long-tail as the section heading where possible:
@@ -665,7 +646,7 @@ These rules apply to all new PromptQuorum pages (Prompt Engineering articles, bl
   - Keep the answer self-contained (no "as mentioned above").
   - Use at most 2–3 short paragraphs and lists where helpful.
 
-### 21.6 Regional Notes (Russia, Germany/EU, US, China, Japan)
+### 21.5 Regional Notes (Russia, Germany/EU, US, China, Japan)
 
 - Where a topic touches regulation, model availability, or deployment choices, include a short "Regional note" that:
   - Mentions Germany/EU where EU AI Act or data residency is relevant.
@@ -673,16 +654,7 @@ These rules apply to all new PromptQuorum pages (Prompt Engineering articles, bl
   - Optionally mentions US, China, or Japan if they have distinct models (for example Mistral in EU, Qwen/DeepSeek in China) or deployment norms (on-prem vs cloud).
 - Keep these notes factual and concise (one or two sentences).
 
-### 21.7 Brand vs Non-Brand Positioning
-
-- Brand-intent pages (for example homepage, /compare, /download, /faq):
-  - Must mention "PromptQuorum" in the first sentence.
-  - Must connect PromptQuorum directly to the main user problem and outcome (for example "PromptQuorum is a multi-model AI dispatch tool for prompt optimization and AI code review.").
-- Non-brand informational pages (Prompt Engineering articles, general blog posts):
-  - Must first provide a neutral, tool-agnostic explanation of the concept.
-  - Then include at least one short "PromptQuorum bridge" that connects the concept to PromptQuorum capabilities (multi-model dispatch, consensus scoring, local LLM privacy, built-in frameworks).
-
-### 21.8 FAQ Requirements for Broad Topics
+### 21.6 FAQ Requirements for Broad Topics
 
 - Any new page that covers a broad concept must include an FAQ with 4–6 questions.
 - The FAQ must cover at least 3 of these 5 types:
@@ -726,7 +698,7 @@ For every new page, the content must be written so that these standard SEO eleme
   - FAQPage schema where FAQs exist.
   - Visible "Last updated: [Month Year]" in a `<time datetime="YYYY-MM-DD">` element near the top.
 
-All other existing GEO rules (answer-first H2s, short paragraphs, entity density, numeric specificity, snippet blocks, PromptQuorum bridges) continue to apply.
+All other existing GEO rules (answer-first H2s, short paragraphs, entity density, numeric specificity, snippet blocks) continue to apply.
 - [ ] Build passes with no TypeScript errors in content structure
 
 ---
@@ -1268,7 +1240,6 @@ done
 - [ ] Sources & Further Reading section with minimum 3 external citations linking to primary sources (arxiv, official docs, gov sites) — NEVER link to internal /prompt-engineering hub as an external citation
 - [ ] FAQ section visible in rendered HTML with minimum 6 Q&A pairs (NOT hidden behind JavaScript toggles — must be SSR rendered)
 - [ ] Global/Regional context paragraph covering EU, China/Asia, and Japan with named models (Mistral for EU, Qwen/DeepSeek for China, LLaMA via Ollama for Japan METI)
-- [ ] PromptQuorum test data block: "Tested in PromptQuorum — [N] prompts dispatched to [models]" with specific numbers
 - [ ] `<time datetime="YYYY-MM-DD">` wrapping the visible date element
 
 ### INTERNAL LINKING
@@ -1299,7 +1270,7 @@ done
 - [ ] Hub card title matches H1 exactly (no slug-format rendering)
 - [ ] Breadcrumb category matches articleSection in schema: Fundamentals | Frameworks | Techniques | Use Cases | Security
 - [ ] Page categorized as "Techniques" not "Fundamentals" for: security, injection, jailbreak, RAG, output validation content
-- [ ] `metaDescription` field is set (150–160 chars, NOT the full `intro`). Do NOT omit this — the `intro` field is typically 300–400 chars and will be truncated by search engines. Required fields: primary keyword, year, key topics, differentiator (PromptQuorum test data, number of items, etc.). Never duplicate the first sentence of `intro`.
+- [ ] `metaDescription` field is set (150–160 chars, NOT the full `intro`). Do NOT omit this — the `intro` field is typically 300–400 chars and will be truncated by search engines. Required fields: primary keyword, year, key topics, differentiator (number of items, research citations, etc.). Never duplicate the first sentence of `intro`.
 
 ---
 
@@ -1320,12 +1291,10 @@ done
 3. Key Takeaways block
 4. [Core content sections] (each H2 opens with bold answer)
 5. [Comparison table if applicable]
-6. PromptQuorum test data section
-7. Global/Regional context section
-8. Related Reading (4+ links)
-9. FAQ section (6+ questions, SSR rendered)
-10. Sources & Further Reading (3+ primary sources)
-11. CTA: "Apply these techniques across 25+ AI models simultaneously with PromptQuorum"
+6. Global/Regional context section
+7. Related Reading (4+ links)
+8. FAQ section (6+ questions, SSR rendered)
+9. Sources & Further Reading (3+ primary sources)
 
 ### AEO Answer Patterns (citation-triggering)
 
@@ -1345,7 +1314,7 @@ These bugs have been found and fixed. The guide must prevent recurrence:
 ### 1. EXTERNAL CITATION LOOP
 Never use /prompt-engineering as the href for external citations. Always use the real external URL.
 
-**BAD:**  `[Brown et al. 2020](https://www.promptquorum.com/prompt-engineering)`
+**BAD:**  `[Brown et al. 2020](/prompt-engineering)`
 **GOOD:** `[Brown et al. 2020](https://arxiv.org/abs/2005.14165)`
 
 ### 2. SLUG TITLES IN HUB
