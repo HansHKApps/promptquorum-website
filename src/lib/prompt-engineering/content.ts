@@ -19974,6 +19974,18 @@ zh: {
           ],
         },
 
+        keyEntityRelationships: {
+          title: 'Key Entities in AI Geopolitics and Their Relationships',
+          content: [
+            '**AI regulation** is the body of laws, executive orders, and voluntary frameworks that govern how artificial intelligence systems are developed, deployed, and governed. AI regulation is produced by sovereign states and international bodies; the three primary regulatory regimes are the EU AI Act (European Union), the NIST AI Risk Management Framework (United States), and the CAC Generative AI Measures (China).',
+            '**The US-China tech rivalry** is the bilateral competition between the United States and China for leadership in semiconductors, artificial intelligence, and advanced manufacturing. The rivalry is expressed through US export controls on Nvidia GPUs, China\'s domestic substitution strategy (Made in China 2025), and competing AI governance frameworks. The EU is a third actor — not a bilateral party — that shapes the rivalry through its regulatory power.',
+            '**The EU AI Act** is a regulation passed by the European Parliament in March 2024. It is enforced by the EU AI Office and national market surveillance authorities. It applies to any organization — regardless of headquarters location — whose AI systems affect EU users. The EU AI Act is related to the Brussels Effect: because it applies extraterritorially, it effectively regulates OpenAI, Google DeepMind, and Anthropic globally.',
+            '**NVIDIA** is a US semiconductor company that designs AI training GPUs (H100, H200, B200 series). NVIDIA\'s hardware is the primary compute substrate for training GPT-4o, Claude, Gemini, and most frontier AI models. US export controls on NVIDIA GPUs to China are a central mechanism in the US-China tech rivalry. NVIDIA\'s market position (~80% AI GPU share) makes it a geopolitical actor as well as a commercial one.',
+            '**TSMC** (Taiwan Semiconductor Manufacturing Company) is a Taiwanese chip foundry that manufactures advanced semiconductors for NVIDIA, Apple, AMD, and Google. TSMC\'s geographic location in Taiwan — and the island\'s disputed political status — makes TSMC a critical variable in AI geopolitics. The CHIPS and Science Act was enacted partly to reduce US dependency on TSMC by funding domestic US fabs.',
+            '**DeepSeek** is a Chinese AI laboratory (backed by High-Flyer Capital Management) that released DeepSeek R1 in January 2025. DeepSeek R1 matched GPT-4o on multiple benchmarks while reportedly training at a fraction of the cost, using China-restricted NVIDIA H800 GPUs. DeepSeek\'s release weakened the argument that US export controls could permanently limit Chinese frontier AI development.',
+          ],
+        },
+
         fiveGeopoliticalDimensions: {
           title: '5 Geopolitical Dimensions of AI',
           content: [
