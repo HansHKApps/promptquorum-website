@@ -17674,7 +17674,528 @@ zh: {
         },
       },
     },
-    de: { theme: 'Fundamentals', title: 'Open Source vs. proprietäre LLMs: Das Rennen', intro: 'In Kürze — Vergleich von Open-Source-Modellen wie LLaMA und Mistral mit proprietären Optionen wie GPT-4o und Claude, einschließlich Kosten-, Kontroll- und Leistungs-Kompromissen.', publishDate: '2026-03-24', readTime: 'In Kürze', sections: {} },
+    de: {
+      theme: 'Techniques',
+      title: 'Open Source vs. proprietäre LLMs',
+      intro: 'Open-Weights-Modelle wie LLaMA 3.1 und Mistral bieten Kontrolle und Kosteneinsparungen; proprietäre Modelle wie GPT-4o und Claude 4.6 Sonnet liefern Spitzenleistung. Beide Kategorien konvergieren in der Leistungsfähigkeit, divergieren aber bei Zugriff, Anpassung und Compliance-Anforderungen.',
+      metaDescription: 'Open Source vs. proprietäre LLMs: Kosten, Kontrolle, Datenschutz, Fine-Tuning und Performance-Kompromisse in 2026. Wählen Sie das richtige Modell für Ihren Anwendungsfall.',
+      publishDate: '2026-03-24',
+      dateModified: '2026-04-01',
+      readTime: '14 min Lesezeit',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Open-Source-LLMs',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Open Source vs. proprietäre LLMs',
+        description: 'Open-Weights-Modelle wie LLaMA 3.1 und Mistral bieten Kontrolle und Kosteneinsparungen; proprietäre Modelle wie GPT-4o und Claude 4.6 Sonnet liefern Spitzenleistung.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-04-01',
+        keywords: ['Open-Source-LLMs', 'LLaMA', 'Mistral', 'proprietäre Modelle', 'GPT-4o', 'Claude', 'Fine-Tuning', 'Kostenanalyse', 'Open-Weights', 'lokale Inferenz'],
+        teaches: [
+          'Der Unterschied zwischen Open-Weights und Open-Source-Lizenzen für LLMs',
+          'Kosten- und Leistungskompromisse zwischen Open-Weights- und proprietären Modellen',
+          'Wann lokale Inferenz versus API-Zugriff zu verwenden ist',
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Open-Source-LLMs' },
+          { '@type': 'Thing', name: 'LLaMA 3.1' },
+          { '@type': 'Thing', name: 'Mistral Large' },
+          { '@type': 'Thing', name: 'EU AI Act Compliance' },
+          { '@type': 'Thing', name: 'LLM Fine-Tuning' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1 + p', '.key-takeaways'],
+        },
+        mentions: [
+          { '@type': 'Thing', name: 'GPT-4o' },
+          { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'Thing', name: 'Gemini 2.5 Pro' },
+          { '@type': 'Thing', name: 'LLaMA 3.1' },
+          { '@type': 'Thing', name: 'Mistral Large 2' },
+          { '@type': 'Thing', name: 'Qwen 2.5' },
+          { '@type': 'Thing', name: 'Ollama' },
+        ],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/open-source-vs-proprietary-llms', width: 1200, height: 630 },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Open-Weights vs. proprietäre LLMs — Vollständiger Vergleich',
+        description: '10-dimensionaler Vergleich von Open-Weights- und proprietären LLMs mit Fokus auf Kosten, Leistung, Datenschutz, Fine-Tuning, Kontextfenster, Souveränität, Geschwindigkeit, Support, Updates und Vendor Lock-in.',
+        numberOfItems: 10,
+        url: 'https://www.promptquorum.com/prompt-engineering/open-source-vs-proprietary-llms',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Kostenmodell',
+            description: 'Open-Weights: $0,50–2,00/Stunde Infrastruktur; kostenlos nach Bereitstellung, kein Pro-Token-Billing. Proprietär: API-Billing $0,15–5,00 pro 1 Million Input-Token; $0,30–15,00 pro 1 Million Output-Token.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Leistungsobergrenze',
+            description: 'Open-Weights (LLaMA 70B, Mistral Large): MMLU 80–82%, wettbewerbsfähig bei spezifischen Aufgaben. Proprietär (GPT-4o, Claude, Gemini): MMLU 88–90%, höhere Obergrenze bei Reasoning und Multimodal.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Kontextfenster',
+            description: 'Open-Weights: LLaMA 3.1 131K, Mistral Large 123K, Qwen 128K — ausreichend für lange Dokumente. Proprietär: GPT-4o 128K, Claude 200K, Gemini 2.5 Pro 2M Token.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Datenschutz',
+            description: 'Open-Weights: vollständige Datensouveränität, keine Daten verlassen die Infrastruktur, keine Vendor-Protokollierung. Proprietär: Daten durchqueren Vendor-Server; vertragliche Löschung versprochen, aber kurzes Exponieren tritt auf.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Fine-Tuning',
+            description: 'Open-Weights: Vollständiges Fine-Tuning unterstützt (LoRA, QLoRA, vollständiges Training); Sie besitzen resultierende Gewichte. Proprietär: Begrenzt (nur OpenAI Mini-Modelle) oder nicht verfügbar (Anthropic Claude).',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'Datensouveränität',
+            description: 'Open-Weights: On-Premises-Bereitstellung erreichbar; EU AI Act, HIPAA, SOX konform. Proprietär: API-abhängig; Datenspeicherort unklar; schwieriger zu beweisen, dass Compliance erfüllt ist.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 7,
+            name: 'Inferenz-Geschwindigkeit',
+            description: 'Open-Weights: hardwareabhängig — A100 20–30 Token/Sec (70B), RTX 4090 10–15 Token/Sec. Proprietär: optimierte Server 30–50+ Token/Sec; Vendor verwaltet Optimierung.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 8,
+            name: 'Support',
+            description: 'Open-Weights: Community-getriebene Dokumentation; kein Vendor SLA; selbst unterstützt. Proprietär: Vendor-Support, API SLAs, Incident Response und Uptime-Garantien enthalten.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 9,
+            name: 'Update-Frequenz',
+            description: 'Open-Weights: offline; Sie kontrollieren die Einführung neuer Modellversionen; keine erzwungenen Updates. Proprietär: serverseitig; Vendor aktualisiert Modelle; passen Sie sich an oder verwenden Sie versionierte API-Endpoints.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 10,
+            name: 'Vendor Lock-in',
+            description: 'Open-Weights: kein Lock-in; stellen Sie überall bereit; besitzen Sie Ihre Compute. Proprietär: mäßig bis hohes Lock-in; Modellverhalten, APIs und Preisgestaltung unter Vendor-Kontrolle.',
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Wie man zwischen Open-Source- und proprietären LLMs wählt',
+        'description': 'Ein Entscheidungsrahmen zur Auswahl von Open-Weights- oder proprietären Modellen basierend auf Kosten-, Datenschutz-, Anpassungs- und Leistungsanforderungen.',
+        'totalTime': 'PT10M',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Datenschutzanforderungen bewerten', 'text': 'Wenn Daten auf den Unternehmenseigenen Systemen bleiben müssen (Gesundheitswesen, Finanzen, Recht, EU AI Act High-Risk-Implementierungen), ist Open-Weights obligatorisch. Proprietäre Modelle leiten Daten über externe APIs weiter, was HIPAA-, GDPR- oder Anwalt-Klient-Berechtigungsanforderungen verletzen kann.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Tägliches Token-Volumen berechnen', 'text': 'Berechnen Sie die API-Kosten für 1M, 10M und 100M tägliche Token. Unter ~5M Token/Tag sind proprietäre APIs üblicherweise billiger aufgrund von Null-Infrastrukturkosten. Über 10M Token/Tag wird Open-Weights Self-Hosting kosteneffektiv; über 100M Token/Tag gewinnt Open-Weights entscheidend.' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Fine-Tuning-Anforderungen bewerten', 'text': 'Wenn Sie das Modell auf Ihrer Domain, Terminologie oder Task-Verteilung spezialisieren müssen, ist Open-Weights erforderlich. Open-Weights unterstützen LoRA, QLoRA und vollständiges Fine-Tuning — Sie besitzen die resultierenden Gewichte. Proprietäre APIs verbieten oder beschränken stark die Anpassung.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Infrastruktur-Bereitschaft prüfen', 'text': 'Open-Weights erfordert VRAM, GPUs und DevOps-Fähigkeiten zum Self-Hosting (LLaMA 70B: ~40GB VRAM auf A100). Proprietär erfordert API-Schlüssel und Netzwerkverbindung, aber null Infrastruktur. Wenn Ihnen GPU-Ressourcen oder On-Call-Coverage fehlt, ist proprietär der einfachere Weg.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Benchmark auf Ihrer tatsächlichen Aufgabe', 'text': 'Verwenden Sie PromptQuorum, um Ihren Prompt gleichzeitig an GPT-4o, Claude und eine lokale Ollama-Instanz zu verteilen. Vergleichen Sie Output-Qualität, Latenz und Kosten nebeneinander. Das Modell, das bei Ihrer spezifischen Aufgabe und Ihren Daten gewinnt, ist die richtige Wahl — nicht der Benchmark-Leiter.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Ist Llama 3.1 wirklich Open Source oder nur Open-Weights?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nur Open-Weights. LLaMA 3.1 veröffentlicht Modellgewichte unter Llama Community License 2.1, die nicht OSI-konform ist. Die Lizenz erlaubt kommerzielle Nutzung, beschränkt aber die Benennung von Derivaten als "LLaMA", erfordert Attribution und enthält Non-Compete-Klauseln. Echte Open-Source-Lizenzen (Apache 2.0, MIT, GPL) haben keine dieser Einschränkungen.' } },
+          { '@type': 'Question', 'name': 'Was ist billiger in 2026 — Self-Hosting von Llama oder Nutzung der GPT-4o API?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Das hängt vom Volumen ab. Unter 5M Token/Tag ist GPT-4o API billiger — keine Infrastrukturkosten. Bei 5–10M Token/Tag gleichen sich die Kosten aus. Über 10M Token/Tag gewinnt Self-Hosting LLaMA 3.1 bei Kosten. Bei 100M Token/Tag ist Self-Hosting 10–20× billiger. Versteckte Faktoren: GPU-Amortisierung, Elektrizität und DevOps-Arbeit kippen Grenzfälle oft zur API.' } },
+          { '@type': 'Question', 'name': 'Betrifft der EU AI Act Open-Source-LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, abhängig von der Bereitstellung. High-Risk-AI-Systeme (Einstellung, Kredit, Rechtsbeschlüsse) erfordern Risicodokumentation, Bias-Tests und Audit-Trails. Open-Weights auf Unternehmenseigenen Systemen erleichtert Compliance — Sie kontrollieren Daten und Logs. Proprietäre APIs zwingen zur Abhängigkeit von Vendor-Bescheinigungen. Allzweckmodelle mit >10^25 FLOP Trainingscompute sehen sich zusätzlichen Transparenzpflichten gegenüber.' } },
+          { '@type': 'Question', 'name': 'Welches Open-Source-LLM ist GPT-4o in 2026 am nächsten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 3.1 70B und Mistral Large 2 sind am nächsten. MMLU-Scores: GPT-4o 88,7%, LLaMA 3.1 70B 80,5%, Mistral Large 81,2%. Bei Klassifizierung, Zusammenfassung und Extraktion entspricht Open-Weights jetzt dem Proprietären. Der Reasoning-Gap verengt sich ~2–3 Punkte pro Jahr.' } },
+          { '@type': 'Question', 'name': 'Kann ich GPT-4o Fine-Tunen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. OpenAI Fine-Tuning ist nur für GPT-4o mini, GPT-4 und gpt-3.5-turbo verfügbar. Anthropic bietet kein Fine-Tuning für Claude an. Google bietet Gemini Fine-Tuning an. Open-Weights (LLaMA, Mistral, Qwen) unterstützen vollständiges Fine-Tuning via LoRA, QLoRA oder vollständiges Training.' } },
+          { '@type': 'Question', 'name': 'Welche Hardware benötige ich, um LLaMA 3.1 70B lokal zu betreiben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Vollständige Präzision: ~40GB VRAM (A100 80GB oder dual RTX 4090). Quantisiert 4-Bit: ~16–20GB VRAM (einzelner RTX 4090). LLaMA 3.1 8B läuft auf Consumer-Hardware (~8GB VRAM). Ollama behandelt Quantisierung und Optimierung automatisch.' } },
+          { '@type': 'Question', 'name': 'Kann ich Open-Source-LLMs auf einem MacBook ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Apple Silicon Macs führen Open-Weights-Modelle über Ollama oder LM Studio aus. M2 Pro 16GB führt LLaMA 3.1 8B mit 10–15 Token/Sec aus. M3 Max 128GB führt LLaMA 3.1 70B (4-Bit) aus. Langsamer als dedizierte GPU-Server, aber lebensfähig für Entwicklung.' } },
+          { '@type': 'Question', 'name': 'Haben Open-Source-LLMs die gleichen Einschränkungen wie proprietäre?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja auf Grundlagen: beide halluzinieren, haben Wissens-Cutoffs und Kontextgrenzen. Open-Weights können nicht serverseitig gepatcht werden — Updates erfordern eine neue Veröffentlichung. Proprietäre Modelle können inkrementell verbessert werden. Fine-Tuning von Open-Weights kann domänenspezifische Einschränkungen mindern, kann aber nicht strukturelle Zwänge überwinden.' } },
+          { '@type': 'Question', 'name': 'Welches Open-Weights-Modell ist 2026 am besten für Programmierung?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 3.1 70B und Mistral Large 2 sind am stärksten. HumanEval-Scores: ~73–78% vs. GPT-4o ~90% und Claude 4.6 Sonnet ~87%. Wettbewerbsfähig für Python, SQL und strukturierte Ausgabe. Proprietäre Modelle behalten einen Vorteil bei komplexem Algorithmus-Design und Multi-File-Reasoning.' } },
+          { '@type': 'Question', 'name': 'Kann ich Open-Source-LLMs für kommerzielle Anwendungen nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. LLaMA, Mistral und Qwen erlauben kommerzielle Nutzung. Schlüsselbeschränkung: können Derivate nicht "LLaMA" nennen; müssen Lizenzattribution einfügen; LLaMA 2 beschränkte Organisationen mit >700M monatlichen aktiven Benutzern (in LLaMA 3.x entfernt). Die meisten Teams stellen Open-Weights intern bereit (private Inferenz), was Benennungsprobleme vermeidet.' } },
+          { '@type': 'Question', 'name': 'Was ist LoRA und warum spielt es eine Rolle für Open-Weights Fine-Tuning?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LoRA (Low-Rank Adaptation) trainiert ~1–5% der Modellparameter als Adapter anstelle von vollständiger Rückausbreitung, Reduktion von Trainingskosten 5–10×. QLoRA erweitert dies mit 4-Bit-Quantisierung für Consumer-GPUs (16–24GB VRAM). LoRA ist der Standard-Ansatz zum Spezialisieren von LLaMA und Mistral ohne vollständiges Neutraining.' } },
+        ],
+      },
+      sections: {
+        tldr: {
+          title: 'Wichtigste Erkenntnisse',
+          isTldr: true,
+          items: [
+            '**Open-Weights-Modelle kosten in großem Maßstab weniger; proprietäre Modelle liefern Spitzenleistung und verwaltete Infrastruktur.** Unter 5M Token/Tag sind APIs billiger. Über 10M Token/Tag gewinnt Open-Weights Self-Hosting bei Kosten.',
+            'Open-Weights = herunterladbare Modellgewichte (LLaMA, Mistral, Qwen); proprietär = nur API-Zugriff (GPT-4o, Claude 4.6, Gemini 2.5). "Open Weights" ist nicht dasselbe wie Open-Source-Lizenzierung.',
+            'Leistungslücke hat sich verengt: LLaMA 3.1 70B und Mistral Large 2 entsprechen jetzt proprietären Modellen bei Klassifizierung, Zusammenfassung und strukturierten Aufgaben — liegen aber hinter bei komplexem Reasoning zurück (MMLU-Lücke: 88,7% vs. 80–81%).',
+            'Proprietäre Vorteile: Frontier-Reasoning, Tool-Integration, verwaltete Infrastruktur. Open-Weights-Vorteile: vollständiges Fine-Tuning, lokale Bereitstellung, Zero-Daten-Egress, EU AI Act Compliance.',
+            'Open-Weights erfordern GPU-Infrastruktur und DevOps-Fähigkeiten; proprietär erfordert API-Schlüssel und Netzwerkzugriff. Wählen Sie basierend auf Infrastruktur-Bereitschaft, nicht nur Kosten.',
+            'Fine-Tuning: Open-Weights-Modelle unterstützen LoRA, QLoRA, vollständiges Training; proprietär bietet begrenzt (OpenAI/Google) oder kein Fine-Tuning (Anthropic).',
+            'Datenschutz/Compliance: Open-Weights lokal bereitgestellt = keine Daten verlassen Ihre Infrastruktur. Proprietäre APIs leiten Daten durch Vendor-Server, was Gesundheitswesen-, Finanz- oder Rechts-Compliance-Regeln verletzen kann.',
+          ],
+        },
+    
+        whatIsOpenSource: {
+          title: 'Was ist ein Open-Source-LLM?',
+          content: [
+            '**"Open Source" und "Open Weights" sind nicht synonym.** Open-Source-Lizenzierung (Apache 2.0, MIT, GPL) gilt für Quellcode und erlaubt unbeschränkte kommerzielle und private Nutzung. Open-Weights bedeutet, dass die trainierten Modellgewichte herunterladbar sind, aber möglicherweise unter einer spezialisierten Lizenz beschränkt sind. LLaMA 3.1 ist Open-Weights, nicht Open Source — Meta veröffentlicht die Gewichte unter Llama Community License 2.1, die kommerzielle Nutzung erlaubt, aber Einschränkungen enthält, die das Aufrufen von Derivatmodellen als "LLaMA" verhindern und Attribution erfordern.',
+            '**Proprietäre Modelle sind weder Open-Weights noch Open Source.** OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet) und Google (Gemini 2.5 Pro) veröffentlichen keine Modellgewichte. Sie greifen ausschließlich über API zu. Die Gewichte bleiben geschlossen; Sie können das Modell nicht sehen, herunterladen, ändern oder selbst bereitstellen.',
+            'Das Verständnis dieser Unterscheidung ist wichtig für Compliance, Anpassung und Datensouveränität. [Erfahren Sie, wie LLMs intern funktionieren, um zu verstehen, warum Gewichte wichtig sind](/prompt-engineering/how-llms-actually-work?lang=de).',
+          ],
+        },
+    
+        whatIsProprietary: {
+          title: 'Was ist ein proprietäres LLM?',
+          content: [
+            '**Proprietäre LLMs sind geschlossene Modelle, auf die nur über API zugegriffen werden kann — der Vendor kontrolliert die Gewichte, Trainingsdaten, Safety-Alignment und alle Updates.** OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet), Google (Gemini 2.5 Pro) und Mistral API sind proprietär. Sie können keine Gewichte herunterladen, Trainingsdaten anzeigen, lokal Inferenz ausführen oder die Modellgewichte direkt anpassen.',
+            '**Die Preisgestaltung ist Pro-Token-API-Billing auf einem Vendor-kontrollierten Server.** GPT-4o kostet $5 pro 1 Million Input-Token und $15 pro 1 Million Output-Token. Claude 4.6 Sonnet kostet $3/$15. Gemini 2.5 Pro kostet $1,25/$2,50 (≤200K Kontext). Sie haben keine Infrastrukturkosten, können aber die monatliche Ausgabe nicht genau vorhersagen — Kosten skalieren mit Nutzung.',
+            '**Proprietäre Vendor behalten Kontrolle über Modell-Updates, Verhalten und Alignment.** Wenn OpenAI GPT-4o aktualisiert, erhalten Sie automatisch die neue Version. Safety-Alignment, Constitutional AI und Instruction-Following sind Vendor-Verantwortlichkeiten. Für regulierte Branchen kann dies Compliance vereinfachen — der Vendor behält Audit-Trails und veröffentlichte Safety-Praktiken.',
+          ],
+        },
+    
+        definitions: {
+          title: 'Schlüsselkonzepte & Definitionen',
+          content: [
+            '**Open-Weights-Modell.** Ein großes Sprachmodell, dessen trainierte Gewichte (die numerischen Parameter, die während des Trainings gelernt wurden) öffentlich verfügbar sind und heruntergeladen, geändert, Fine-tuned und selbst gehostet werden können. Beispiele: LLaMA 3.1 (Meta), Mistral Large 2 (Mistral AI), Qwen 2.5 (Alibaba). Nicht zu verwechseln mit Open-Source-Lizenzierung; "Open Weights" ist über herunterladbare Modelldateien, nicht unbedingt Quellcode oder OSI-konforme Lizenzierung.',
+            '**Proprietäres LLM.** Ein großes Sprachmodell, dessen Gewichte privat bleiben und nie freigegeben werden. Der Zugriff erfolgt ausschließlich über die API eines Vendors, erfordert Pro-Token-Billing und Netzwerkverbindung. Beispiele: GPT-4o (OpenAI), Claude 4.6 Sonnet (Anthropic), Gemini 2.5 Pro (Google). Benutzer können das Modell nicht herunterladen, inspizieren, ändern oder selbst hosten.',
+            '**Fine-Tuning.** Der Prozess der Umschulung eines vortrainierten Modells auf einem neuen, kleineren Datensatz, der für eine Domain oder Aufgabe spezifisch ist. Fine-Tuning aktualisiert die Modellgewichte, um sich auf Ihren Anwendungsfall zu spezialisieren (z. B. Kundenservice-Ton, Domain-Vokabeln). Open-Weights-Modelle unterstützen vollständiges Fine-Tuning via LoRA, QLoRA oder vollständige Rückausbreitung; die meisten proprietären Modelle beschränken oder verbieten Fine-Tuning.',
+            '**Training-Datums-Cutoff.** Das Datum, nach dem ein Modell kein Wissen über Ereignisse oder Informationen hat. GPT-4o hat einen Cutoff von Oktober 2024; Claude 4.6 Sonnet hat Anfang 2025; Gemini 2.5 Pro hat Oktober 2024. Modelle können keine genauen Informationen über Ereignisse nach ihrem Cutoff-Datum bereitstellen.',
+            '**Modellgewichte.** Die numerischen Parameter (Milliarden bis Billionen von Zahlen), die während des Modelltrainings gelernt wurden. Gewichte bestimmen das Verhalten, Wissen und Reasoning-Muster des Modells. Open-Weights-Modelle veröffentlichen diese Dateien (~15–800 GB je nach Modellgröße); proprietäre Modelle halten Gewichte geheim.',
+          ],
+        },
+    
+        questionDifference: {
+          title: 'Was ist der Unterschied zwischen Open-Source- und proprietären LLMs?',
+          content: 'Open-Source-LLMs (LLaMA 3.1, Mistral, Qwen) machen Modellgewichte öffentlich verfügbar — Organisationen können sie herunterladen, inspizieren, Fine-tunen und selbst hosten. Proprietäre LLMs (GPT-4o, Claude, Gemini) gehören Vendors und sind nur über APIs zugänglich. Benutzer können proprietäre Gewichte nicht herunterladen oder ändern, profitieren aber von verwalteter Infrastruktur und Vendor-Updates.',
+        },
+    
+        questionPerformance: {
+          title: 'Sind Open-Source-LLMs so gut wie proprietäre Modelle?',
+          content: 'Bei vielen Aufgaben ja. Die Leistungslücke hat sich auf 7–8 Prozentpunkte bei Reasoning-Benchmarks (MMLU) verengt. Bei Klassifizierung, Zusammenfassung und Domain-spezifischen Aufgaben entsprechen Open-Weights-Modelle wie LLaMA 3.1 70B jetzt proprietären Pendants. Proprietäre Modelle führen immer noch bei komplexem Multi-Step-Reasoning, Agent-Orchestrierung und Multimodal-Input-Handhabung.',
+        },
+    
+        questionWhenToUse: {
+          title: 'Wann sollten Unternehmen Open-Source-LLMs verwenden?',
+          content: 'Unternehmen sollten Open-Source-LLMs verwenden, wenn Datenschutz obligatorisch ist (Gesundheitswesen, Finanzen, Recht), wenn die Verarbeitung mehr als 10 Millionen Token pro Tag erfolgt, wenn Domain-spezifische Fine-Tuning erforderlich ist oder wenn EU AI Act Compliance On-Premises-Datenresidenz verlangt. Open-Weights-Modelle eliminieren auch Vendor Lock-in und Pro-Token-API-Billing.',
+        },
+    
+        questionCanReplace: {
+          title: 'Können Open-Source-LLMs proprietäre AI-Modelle ersetzen?',
+          content: 'Für viele Anwendungsfälle ja. Open-Source-LLMs sind produktionsreif für Klassifizierung, Zusammenfassung, Extraktion und Domain-spezifische Aufgaben. Proprietäre Modelle behalten Vorteile bei komplexem Reasoning, Multimodal-Input, Tool-Integration und Zero-Infrastruktur-Bereitstellung. Ein hybrider Ansatz — Routing von Aufgaben basierend auf Kosten-, Datenschutz- und Leistungsanforderungen — übertrifft die Abhängigkeit von einer Modellklasse allein.',
+        },
+    
+        featureComparison: {
+          title: 'Quick Feature Comparison',
+          columns: ['Funktion', 'Open-Source-LLM', 'Proprietäres LLM'],
+          rows: [
+            { 'Funktion': 'Kosten', 'Open-Source-LLM': 'Nur Infrastruktur ($0,50–2,00/Stunde Self-Hosted)', 'Proprietäres LLM': 'Pay-per-Token ($0,15–5,00 pro 1 Million Input-Token)' },
+            { 'Funktion': 'Kontrolle', 'Open-Source-LLM': 'Vollständig — besitzen Gewichte, können Fine-tunen und ändern', 'Proprietäres LLM': 'Begrenzt — Vendor kontrolliert Modell und Updates' },
+            { 'Funktion': 'Setup', 'Open-Source-LLM': 'Komplex — erfordert GPUs, VRAM, DevOps-Fähigkeiten', 'Proprietäres LLM': 'Einfach — API-Schlüssel, nur Netzwerkzugriff' },
+            { 'Funktion': 'Leistung', 'Open-Source-LLM': '80–82% (MMLU) — wettbewerbsfähig bei spezifischen Aufgaben', 'Proprietäres LLM': '88–90% (MMLU) — höher bei allgemeinem Reasoning' },
+            { 'Funktion': 'Datenschutz', 'Open-Source-LLM': 'Vollständige Kontrolle — keine Daten verlassen Ihre Infrastruktur', 'Proprietäres LLM': 'Provider-abhängig — Daten durchqueren Vendor-Server' },
+          ],
+          tableFormat: true,
+        },
+    
+        decisionFramework: {
+          title: 'Entscheidungsrahmen: Welchen sollten Sie wählen?',
+          content: '**Verwenden Sie diesen Rahmen, um in 30 Sekunden zu entscheiden.** Antwort: Passt Ihr Anwendungsfall in eine der unten stehenden Kategorien? Wenn mehrere Kriterien zutreffen, gewichten Sie sie nach Wichtigkeit für Ihr Projekt.',
+          items: [
+            '**Wählen Sie Open-Source-LLMs, wenn:**',
+            '• Datenschutz ist kritisch (Gesundheitswesen, Finanzen, Recht, EU GDPR)',
+            '• Sie benötigen vollständige Modellkontrolle und Anpassung (Fine-Tuning, Domain-Spezialisierung)',
+            '• Sie verarbeiten 10M+ Token/Tag (Kostenersparnis dominiert in großem Maßstab)',
+            '• Sie ohne Internetverbindung arbeiten (U-Boote, Flugzeuge, Offline-Netzwerke)',
+            '• EU AI Act Compliance ist erforderlich für High-Risk-AI-Systeme',
+            '• Sie möchten Vendor Lock-in vermeiden und Unabhängigkeit bewahren',
+            '',
+            '**Wählen Sie proprietäre LLMs, wenn:**',
+            '• Sie benötigen Frontier-Leistung bei Reasoning und Multi-Step-Aufgaben',
+            '• Sie verarbeiten <5M Token/Tag (APIs sind billiger als Infrastruktur)',
+            '• Sie wollen Zero-Infrastruktur-Overhead und verwaltete Skalierung',
+            '• Sie benötigen Multimodal-Input (Bilder, Audio) Zuverlässigkeit',
+            '• Sie benötigen Tool-Integration und Agent-Orchestrierung',
+            '• Sie bevorzugen Vendor-verwaltete Safety-Alignment und Updates',
+            '• Ihnen fehlen GPU-Ressourcen oder DevOps-Expertise',
+            '',
+            '**Wählen Sie einen hybriden Ansatz (beide), wenn:**',
+            '• Sie haben gemischte Anwendungsfälle: private Arbeit auf Open-Weights, komplexes Reasoning auf proprietär',
+            '• Sie können Anfragen intelligently basierend auf Datenschutz-/Kosten-/Latenzanforderungen weiterleiten',
+            '• Sie Modelle vor Commitment zu einem Vendor vergleichen möchten',
+          ],
+        },
+    
+        quickReference: {
+          title: 'Quick Comparison: Top Open-Source vs Proprietäre Modelle in 2026',
+          columns: ['Modell', 'Typ', 'Kontextfenster', 'Ungefähre Kosten', 'Am besten für'],
+          rows: [
+            { 'Modell': 'GPT-4o', 'Typ': 'Proprietär', 'Kontextfenster': '128K Token', 'Ungefähre Kosten': '$5/$15 pro 1 Million Input/Output-Token', 'Am besten für': 'Tool-Integration, Agents, Multimodal-Reasoning' },
+            { 'Modell': 'Claude 4.6 Sonnet', 'Typ': 'Proprietär', 'Kontextfenster': '200K Token', 'Ungefähre Kosten': '$3/$15 pro 1 Million Input/Output-Token', 'Am besten für': 'Schreiben, Code Review, strukturiertes Reasoning' },
+            { 'Modell': 'Gemini 2.5 Pro', 'Typ': 'Proprietär', 'Kontextfenster': '2M Token', 'Ungefähre Kosten': '$1,25/$2,50 pro 1 Million Input/Output-Token (≤200K)', 'Am besten für': 'Langdokument-Forschung, Google-Integration' },
+            { 'Modell': 'LLaMA 3.1 70B', 'Typ': 'Open-Weights', 'Kontextfenster': '131K Token', 'Ungefähre Kosten': '~$2/Stunde auf A100 GPU (Self-Hosted)', 'Am besten für': 'Datenschutz, Fine-Tuning, Kosten in großem Maßstab' },
+            { 'Modell': 'Mistral Large 2', 'Typ': 'Open-Weights', 'Kontextfenster': '123K Token', 'Ungefähre Kosten': '~$2/Stunde auf A100 GPU (Self-Hosted)', 'Am besten für': 'Europäische Bereitstellungen, wettbewerbsfähiges Reasoning' },
+            { 'Modell': 'Qwen 2.5 72B', 'Typ': 'Open-Weights', 'Kontextfenster': '128K Token', 'Ungefähre Kosten': '~$2/Stunde auf A100 GPU (Self-Hosted)', 'Am besten für': 'Asia-Pacific-Workloads, Chinesische Sprache' },
+            { 'Modell': 'Mistral 7B', 'Typ': 'Open-Weights', 'Kontextfenster': '32K Token', 'Ungefähre Kosten': '~$0,50/Stunde auf Consumer GPU (Self-Hosted)', 'Am besten für': 'Testing, Prototypen, kostenempfindliche Arbeit' },
+          ],
+          tableFormat: true,
+        },
+    
+        openSourceLandscape: {
+          title: 'Die Open-Weights-Landschaft in 2026',
+          content: [
+            '**Open-Source-LLMs ermöglichen Organisationen, Modellgewichte herunterzuladen, zu inspizieren und zu ändern und dann lokal ohne Vendor-Abhängigkeit oder Pro-Token-API-Kosten bereitzustellen.** Die führenden Modelle in 2026 sind Metas LLaMA 3.1, Mistral Large 2, Qwen 2.5 und andere, die unter Community-Lizenzen veröffentlicht wurden.',
+            '**Metas LLaMA 3.1 Familie ist der führende Open-Weights-Konkurrent zu proprietären Modellen.** LLaMA 3.1 kommt in drei Größen: 8B (~8GB VRAM für Inferenz), 70B (~40GB VRAM) und 405B (~800GB+ VRAM über mehrere GPUs). Alle drei unterstützen 131K Token-Kontextfenster — entsprechend oder übertreffend viele proprietäre Modelle. LLaMA 3.1 wird auf 15 Billionen Token mehrsprachigen Text trainiert; neuere Varianten unterstützen mehrere Sprachen wettbewerbsfähig.',
+            '**Mistral AI bietet zwei starke Kandidaten: Mistral 7B und Mistral Large 2.** Mistral 7B ist ein schlankes 7B-Parameter-Modell mit 32K Kontext, ideal für Consumer-Grade-Inferenz und schnelle Prototypen. Mistral Large 2 skaliert auf 123B Parameter mit 123K Kontext und zielt auf die "Frontier Lite" Leistungsband — konkurriert direkt mit LLaMA 70B und proprietären Modellen. Beide sind unter Mistral Community License für kommerzielle Nutzung verfügbar.',
+            '**Qwen 2.5 (Alibaba) und aufstrebende Modelle (Falcon, Phi-4) runden die Landschaft ab.** Qwen 2.5 72B unterstützt 128K Kontext und zeichnet sich bei chinesischen Sprachaufgaben aus; nützlich für Teams, die Asia-Pacific-Märkte bedienen. Kleinere Modelle wie Phi-4 (Microsoft) und Falcon 180B zielen auf kostenempfindliche oder spezialisierte Anwendungsfälle ab. Alle sind herunterladbar, selbst-hostbar und unterstützen Fine-Tuning via LoRA oder vollständiges Training.',
+          ],
+        },
+    
+        proprietaryLandscape: {
+          title: 'Die proprietäre Landschaft in 2026',
+          content: [
+            '**Proprietäre LLMs werden ausschließlich über Vendor-kontrollierte APIs zugegriffen; Modellgewichte werden nie veröffentlicht und können nicht heruntergeladen, geändert oder lokal bereitgestellt werden.** Benutzer zahlen Pro-Token-API-Billing und akzeptieren Vendor-Kontrolle über Modell-Updates, Sicherheitsrichtlinien und Leistungsmerkmale.',
+            '**OpenAIs GPT-4o bleibt der Reasoning-Leiter.** GPT-4o unterstützt 128K Token-Kontextfenster mit Training-Cutoff Oktober 2024. Es zeichnet sich bei Tool-Use, Agent-Workflows, Multimodal-Input (Bilder, Text) und komplexem Multi-Step-Reasoning aus. API-Preisgestaltung: $5 pro 1 Million Input-Token, $15 pro 1 Million Output-Token (März 2026 Raten). GPT-4o ist nur API; Gewichte werden nie veröffentlicht. Siehe [wie Kontextfenster Ihr AI-System beeinflussen](/prompt-engineering/context-windows-explained?lang=de), um Trade-Offs zu verstehen.',
+            '**Anthropics Claude 4.6 Sonnet dominiert Schreib- und Code-Qualitäts-Benchmarks.** Claude unterstützt 200K Token-Kontext — 2× größer als GPT-4o — ermöglicht längere Dokumente und erweiterte Gespräche. Training-Datums-Cutoff: Anfang 2025. API-Preisgestaltung: $3 pro 1 Million Input-Token, $15 pro 1 Million Output-Token. Claude bietet kein öffentliches Fine-Tuning. Anthropic priorisiert Interpretierbarkeit und Safety-Alignment gegenüber Benchmark-Maximierung.',
+            '**Googles Gemini 2.5 Pro bietet das größte Kontextfenster: 2M Token.** Dies ermöglicht vollständiges Buch-Längen-Dokument-Verarbeitung, erschöpfende Forschung und erweiterte Multi-Turn-Gespräche. Preisgestaltung: $1,25 pro 1 Million Input-Token (≤200K Kontext), $10 pro 1 Million Output-Token; höhere Raten für >200K Kontext. Gemini integriert sich tief mit Google Workspace, Calendar, Gmail und Web-Suche. Training-Datums-Cutoff: Oktober 2024. Fine-Tuning ist für Gemini-Modelle verfügbar.',
+          ],
+        },
+    
+        performanceBenchmarks: {
+          title: 'Benchmark-Leistung: Wo die Lücke in 2026 steht',
+          content: [
+            '**Proprietäre Modelle führen immer noch bei allgemeinem Reasoning (MMLU), aber die Lücke hat sich auf 7–8 Prozentpunkte verengt.** MMLU (Massive Multitask Language Understanding) ist ein breiter Benchmark, der 57 akademische Disziplinen abdeckt. Um zu verstehen, warum [wie LLMs tatsächlich funktionieren](/prompt-engineering/how-llms-actually-work?lang=de) wichtig für Reasoning-Fähigkeit ist, lesen Sie unseren tiefgehenden Bericht zur Transformer-Architektur. Aktuelle Scores:',
+            '',
+            'GPT-4o: 88,7% (OpenAI, 2024)',
+            'Claude 3.5 Sonnet: 88,3% (Anthropic, 2024)',
+            'LLaMA 3.1 70B: 80,5% (Meta, 2024)',
+            'Mistral Large 2: 81,2% (Mistral AI, 2024)',
+            'Qwen 2.5 72B: 82,1% (Alibaba, 2024)',
+            '',
+            '**Die Leistungslücke zwischen Open-Weights- und proprietären Modellen hat sich von 15–20 Prozentpunkten in 2022 auf 7–8 Punkte bei Reasoning-Aufgaben in 2026 verengt.** Bei spezialisierten Aufgaben (Programmierung, Mathematik, Zusammenfassung, Klassifizierung) entsprechen Open-Weights-Modelle jetzt proprietären Pendants oder übertreffen sie.',
+            '',
+            'Die verbleibende Lücke ist hauptsächlich bei abstraktem Reasoning und [Tool-Use-Orchestrierung](/prompt-engineering/gpt-claude-gemini-which-model?lang=de). — Touvron et al., "Llama 3 Herd of Models", 2024',
+            '',
+            '**Wichtiger Vorbehalt:** Benchmarks messen enge Fähigkeiten. Task-spezifische Leistung variiert: bei Klassifizierung, Zusammenfassung und Extraktion entspricht LLaMA 3.1 70B oft oder übertrifft GPT-4o. Für komplexes Multi-Step-Reasoning (Algebra, lange Gedankenketten), behalten proprietäre Modelle einen Vorteil. Der einzige zuverlässige Benchmark ist das Testen bei Ihrer tatsächlichen Aufgabe — siehe [wie Sie das richtige Modell für Ihren Anwendungsfall wählen](/prompt-engineering/gpt-claude-gemini-which-model?lang=de).',
+          ],
+        },
+    
+        costAnalysis: {
+          title: 'Kostenanalyse: API-Preisgestaltung vs. Self-Hosting',
+          content: [
+            '**Direkter Kostenvergleich: proprietäre APIs dominieren bei niedrigem Volumen; Open-Weights Self-Hosting gewinnt in großem Maßstab.** Der Überkreuzungspunkt liegt typischerweise bei 5–10M Token pro Tag. Unter dieser Schwelle begünstigen API-Einfachheit und keine Infrastrukturkosten proprietär. Darüber gewinnt Open-Weights Self-Hosting bei Kosten.',
+            '',
+            'API-Preisgestaltung ab März 2026:',
+            '',
+            'Self-Hosting-Infrastruktur-Kosten: NVIDIA A100 80GB mietet für ~$2/Stunde in der Cloud; RTX 4090 Consumer-Hardware kostet ~$1,50/Stunde in Elektrizität + Amortisierung (3-Jahre Lebensdauer). Für Mistral 7B, Inferenz-Durchsatz ist ~50–100 Token/Sekunde pro GPU oder ~180–360M Token/Tag pro GPU. Mistral Large 2 oder LLaMA 70B: ~20–30 Token/Sekunde pro A100 oder ~1,7–2,6M Token/Tag. Bei diesen Durchsätzen:',
+            '',
+            '**Bei 5M Token/Tag:** A100 Self-Hosting kostet ~$2,50/Tag. API-Kosten für Claude Sonnet: 5M × ($3 + $15) / 1M = $90/Tag (angenommen 50% Input, 50% Output durchschnittlich). APIs immer noch billiger.',
+            '',
+            '**Bei 50M Token/Tag:** Benötigen 20 A100s Self-Hosting = $50/Tag. API-Kosten: $900/Tag. Open-Weights gewinnt entscheidend.',
+            '',
+            '**Bei 100M Token/Tag:** Benötigen 40 A100s = $100/Tag. API-Kosten: $1.800/Tag. Open-Weights ist 18× billiger.',
+            '',
+            'Überprüfen Sie Preisgestaltung: [OpenAI Pricing](https://openai.com/pricing) · [Anthropic Pricing](https://www.anthropic.com/api) · [Google Pricing](https://ai.google.dev/pricing) — Raten ändern sich vierteljährlich. Siehe [Token, Kosten und Limits erklärt](/prompt-engineering/tokens-costs-limits?lang=de) für detaillierter Token-Kosten-Aufschlüsselung.',
+          ],
+          columns: ['Modell', 'Input (pro 1M Token)', 'Output (pro 1M Token)'],
+          rows: [
+            { 'Modell': 'GPT-4o', 'Input (pro 1M Token)': '$5,00', 'Output (pro 1M Token)': '$15,00' },
+            { 'Modell': 'Claude 4.6 Sonnet', 'Input (pro 1M Token)': '$3,00', 'Output (pro 1M Token)': '$15,00' },
+            { 'Modell': 'Gemini 2.5 Pro', 'Input (pro 1M Token)': '$1,25 (≤200K ctx)', 'Output (pro 1M Token)': '$2,50' },
+          ],
+          tableFormat: true,
+        },
+    
+        privacyAndDataSovereignty: {
+          title: 'Datenschutz, Datensouveränität und der EU AI Act',
+          content: [
+            '**Open-Weights-Modelle lokal bereitgestellt = keine Daten verlassen Ihre Infrastruktur.** Wenn Sie LLaMA 3.1 über Ollama auf Ihrer privaten GPU ausführen, verlassen keine Inferenzdaten, Metadaten oder Abfrage-Logs Ihr Netzwerk. Dies ist Datensouveränität: Sie behalten vollständige Kontrolle. Proprietäre APIs (OpenAI, Anthropic, Google) erfordern, dass Sie Anfragen über das Netzwerk an externe Server senden. Selbst mit vertraglicher Datenlöschung, die Daten durchquert kurzzeitig Vendor-Infrastruktur und wird für Compliance protokolliert.',
+            '**Der EU AI Act (2024) bezeichnet bestimmte LLM-Anwendungen als "hochriskant", die Risicodokumentation, Bias-Tests und Audit-Trails erfordern.** Kategorien umfassen Systeme, die bedeutende Entscheidungen treffen (Einstellung, Kredit, Rechtswegermittlung, Vorteilsbestimmung). Hochriskante Systeme müssen Aufzeichnungen darüber führen, wie Entscheidungen getroffen werden, Nicht-Diskriminierung beweisen und menschliche Aufsicht unterstützen. Open-Weights-Modelle On-Premises erleichtern dies — Sie kontrollieren das Audit-Trail und die Datenspeicherung. Proprietäre APIs erschweren dies — Sie verlassen sich auf Vendor-Compliance-Berichte, die möglicherweise für regulierte Branchen unzureichend sind.',
+            '**Für regulierte Branchen (Gesundheitswesen, Finanzen, Rechtsdienstleistungen) ist Open-Weights oft obligatorisch.** HIPAA (Gesundheitswesen), SOX (Finanzen) und Anwalt-Klient-Berechtigungsprivileg erfordern Datenresidenz — d. h. Daten können Ihre Gerichtsbarkeit nicht verlassen. Proprietäre APIs mit Sitz in den USA oder anderen Ländern verletzen diese Anforderungen. Teams in diesen Sektoren stellen typischerweise Open-Weights-Modelle (LLaMA, Mistral oder kommerzielle Verteilungen) auf On-Premises-Infrastruktur bereit.',
+          ],
+        },
+    
+        customizationAndFineTuning: {
+          title: 'Fine-Tuning und Anpassung: Wo Open-Weights gewinnen',
+          content: [
+            '**Open-Weights-Modelle erlauben vollständiges Fine-Tuning; proprietäre Modelle beschränken oder verbieten es.** Fine-Tuning bedeutet Umschulung der Modellgewichte auf Ihren eigenen Daten, um das Modell für Ihre Domain zu spezialisieren. Sie können LoRA (Low-Rank Adaptation) für effizientes Fine-Tuning, QLoRA für quantisiertes Training oder vollständiges Backpropagation-Training verwenden, wenn Sie die Compute haben. Nach Fine-Tuning gehört das Modell Ihnen — Sie besitzen die resultierenden Gewichte, können sie überall bereitstellen und können sie offline aktualisieren.',
+            '**Proprietäre Fine-Tuning-Verfügbarkeit:** OpenAI Fine-Tuning-API funktioniert nur für GPT-4o mini, GPT-4 (ältere Modelle). Nicht verfügbar für GPT-4o Flagship. Anthropic bietet kein Fine-Tuning für Claude über API. Google bietet begrenzt Fine-Tuning für Gemini. Keine dieser Optionen erlaubt Besitz der Fine-Tuned-Gewichte — Sie mieten eine Fine-Tuned-Kopie des proprietären Modells.',
+            '**Sicherheitsüberlegung:** Bei Fine-Tuning auf proprietären APIs werden Ihre Trainingsdaten auf Vendor-Server hochgeladen. Für sensitive Domains verletzt dies Compliance-Regeln. Open-Weights Fine-Tuning bleibt On-Premises. Siehe [Prompt-Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) für zusätzliche Angriffsflächen-Überlegungen bei Verwendung externer APIs.',
+          ],
+        },
+    
+        comparisonTable: {
+          title: 'Schlüsseldifferenzen zwischen Open-Source- und proprietären LLMs',
+          content: '**Open-Weights-Modelle kosten in großem Maßstab weniger und ermöglichen vollständige Anpassung; proprietäre Modelle liefern schnellere Time-to-Value und verwaltete Infrastruktur zu höheren Pro-Token-Kosten.** Unter 5M Token/Tag sind proprietäre APIs üblicherweise billiger. Über 10M Token/Tag gewinnt Self-Hosted Open-Weights bei Kosten. Wählen Sie basierend auf Ihrem Volumen, Datenschutzanforderungen und Infrastruktur-Bereitschaft.',
+          columns: ['Dimension', 'Open-Weights-Modelle', 'Proprietäre Modelle'],
+          rows: [
+            { 'Dimension': 'Kostenmodell', 'Open-Weights-Modelle': 'Self-Host: $0,50–2,00/Stunde Infrastruktur. Kostenlos nach Bereitstellung. Kein Pro-Token-Billing.', 'Proprietäre Modelle': 'API-Billing: $0,15–5,00 pro 1M Input-Token; $0,30–15,00 pro 1M Output-Token. Skaliert mit Nutzung.' },
+            { 'Dimension': 'Leistungsobergrenze', 'Open-Weights-Modelle': 'Beste Open-Weights (LLaMA 70B, Mistral Large): MMLU 80–82%. Wettbewerbsfähig bei spezifischen Aufgaben, hinter bei abstraktem Reasoning.', 'Proprietäre Modelle': 'Frontier (GPT-4o, Claude, Gemini): MMLU 88–90%. Höhere Obergrenze bei Reasoning, Agents, Multimodal.' },
+            { 'Dimension': 'Kontextfenster', 'Open-Weights-Modelle': 'LLaMA 3.1: 131K. Mistral Large: 123K. Qwen: 128K. Ausreichend für lange Dokumente.', 'Proprietäre Modelle': 'GPT-4o: 128K. Claude: 200K. Gemini 2.5: 2M. Größere Fenster ermöglichen längere Forschung.' },
+            { 'Dimension': 'Datenschutz', 'Open-Weights-Modelle': 'Vollständige Datensouveränität. Keine Daten verlassen Infrastruktur. Keine Vendor-Protokollierung.', 'Proprietäre Modelle': 'Daten durchqueren Vendor-Server. Vertragliche Löschung versprochen, aber kurzes Exponieren während Verarbeitung.' },
+            { 'Dimension': 'Fine-Tuning', 'Open-Weights-Modelle': 'Vollständiges Fine-Tuning unterstützt (LoRA, QLoRA, vollständiges Training). Sie besitzen Gewichte. Domain-Anpassung.', 'Proprietäre Modelle': 'Begrenzt (nur OpenAI Mini-Modelle) oder nicht verfügbar (Anthropic Claude). Sie besitzen resultierende Gewichte nicht.' },
+            { 'Dimension': 'Datensouveränität', 'Open-Weights-Modelle': 'On-Premises-Bereitstellung: vollständige Souveränität. EU AI Act konform. HIPAA/SOX/Rechts-Compliance erreichbar.', 'Proprietäre Modelle': 'API-abhängig: Datenspeicherort unklar. Schwieriger zu beweisen, dass Compliance für regulierte Branchen erfüllt ist.' },
+            { 'Dimension': 'Inferenz-Geschwindigkeit', 'Open-Weights-Modelle': 'Hängt von Hardware ab. A100: 20–30 Token/Sec (70B). RTX 4090: 10–15 Token/Sec.', 'Proprietäre Modelle': 'Optimierte Server: 30–50+ Token/Sec. Deterministisch. Vendor verwaltet Optimierung.' },
+            { 'Dimension': 'Support', 'Open-Weights-Modelle': 'Community-getrieben. Dokumentation gut; Vendor SLA nicht verfügbar. Sie unterstützen sich selbst.', 'Proprietäre Modelle': 'Vendor-Support enthalten. API SLAs, Incident Response, Uptime-Garantien.' },
+            { 'Dimension': 'Update-Frequenz', 'Open-Weights-Modelle': 'Offline. Neue Versionen veröffentlicht; Sie wählen, wann Sie übernehmen. Keine erzwungenen Updates.', 'Proprietäre Modelle': 'Serverseitig. Vendor aktualisiert Modelle; Sie passen an oder verwenden versionierte API-Endpoints.' },
+            { 'Dimension': 'Vendor Lock-in', 'Open-Weights-Modelle': 'Kein Lock-in. Stellen Sie überall bereit. Wechseln Sie Vendors oder Self-Host frei. Besitzen Sie Compute.', 'Proprietäre Modelle': 'Mäßig bis hohes Lock-in. Modellverhalten, APIs und Preisgestaltung unter Vendor-Kontrolle. Wechselkosten durch Migrations-Aufwand.' },
+          ],
+          tableFormat: true,
+        },
+    
+        promptEngineeringImplications: {
+          title: 'Open Source vs. proprietäre LLMs für Prompt Engineering',
+          content: [
+            '**Open-Weights-Modelle ermöglichen tiefere Prompt-Experimente zu niedrigeren Kosten.** Sie können denselben Prompt 100 Mal gegen eine lokale LLaMA 3.1-Instanz ausführen und über Wording, Temperatur und Struktur ohne Pro-Token-Billing iterieren. Fine-Tune das Modell auf Prompt-Response-Paaren aus Ihrer Domain. Experimentieren Sie mit Jailbreaks und Grenzfällen in Ihrer privaten Infrastruktur. Diese Sandbox-Umgebung ist ideal für Forschung, Prototypen und Verständnis des Modellverhaltens.',
+            '**Proprietäre APIs sind schneller zu testen und einfacher zu skalieren.** Sie schreiben einen Prompt, rufen die GPT-4o oder Claude-API auf und erhalten Ergebnisse in Millisekunden mit Null-Infrastruktur-Setup. Keine Notwendigkeit, VRAM, Quantisierung oder Modell-Downloads zu verwalten. Für schnelle A/B-Tests, Produktions-Bereitstellung und Handhabung variabler Traffic, reduzieren proprietäre Modelle operative Komplexität.',
+            '**Hybrider Ansatz: Prototype auf Open-Weights, validiere auf proprietär.** Entwickeln und verfeinern Sie Prompts lokal mit LLaMA 3.1 8B (schnelle Iteration, keine Kosten). Sobald die Prompt-Strategie gesperrt ist, testen Sie auf GPT-4o oder Claude 4.6, um Frontier-Leistung zu bestätigen. Stellen Sie den besseren Performer zur Produktion bereit. Dies kombiniert Open-Weights-Flexibilität mit proprietärer Zuverlässigkeit.',
+          ],
+        },
+    
+        whenOpenSource: {
+          title: 'Wann Open-Source-Modelle zu verwenden',
+          content: '**Wählen Sie Open-Weights, wenn Datenschutz, Kosten in großem Maßstab oder tiefe Anpassungsanforderungen Ihre Zwänge dominieren.** Open-Weights zeichnen sich aus in:',
+          items: [
+            '**Sensitive Daten (Gesundheitswesen, Finanzen, Recht):** Patientenakten, Finanzdaten, Anwalt-Klient-Kommunikation können externe APIs nicht durchqueren. Open-Weights lokal bereitgestellt hält Daten in Ihrer Kontrolle und erreicht Compliance. Verwenden Sie LLaMA 3.1 oder Mistral für HIPAA-, GDPR- und Anwalt-Klient-Berechtigungs-Compliance. Kombinieren Sie mit [Sicherheitskontrollen gegen Prompt-Injection](/prompt-engineering/prompt-injection-and-security?lang=de), um Modell-Eingaben zu schützen.',
+            '**High-Volume-Automatisierung (50M+ Token/Tag):** Über ~10M Token/Tag wird Self-Hosting billiger als proprietäre APIs. Verwenden Sie Open-Weights für High-Volume-Klassifizierung, Extraktion, Zusammenfassung oder Datenverarbeitungs-Pipelines, wo [API-Kosten unerschwinglich wären](/prompt-engineering/tokens-costs-limits?lang=de).',
+            '**Domain-Anpassung und Fine-Tuning:** Sie haben gekennzeichnete Datensätze und müssen das Modell auf Ihre Terminologie, Schreibstil oder Task-Verteilung spezialisieren. Open-Weights erlauben LoRA, QLoRA oder vollständiges Fine-Tuning. Proprietäre APIs verbieten oder beschränken Anpassung.',
+            '**Geografische oder Netzwerk-Zwänge:** Sie benötigen Inferenz ohne Internetverbindung (U-Boote, Flugzeuge, Remote-Standorte). Open-Weights läuft offline. Proprietäre APIs erfordern Netzwerkverbindung.',
+            '**EU AI Act Compliance (High-Risk-Bereitstellungen):** Einstellungssysteme, Kreditentscheidungen, Vorteilsbestimmung. Audit-Trails, Risicodokumentation und On-Premises-Datenresidenz sind mit Open-Weights einfacher. Proprietäre APIs erschweren Compliance-Nachweis.',
+            '**Kostenvorhersagbarkeit:** Open-Weights-Infrastruktur-Kosten sind fest (Hardware + Elektrizität). Proprietäre APIs skalieren unvorhersehbar mit Nutzung. Für kostenempfindliche Organisationen ist Open-Weights-Budgetierung klarer.',
+          ],
+        },
+    
+        whenProprietary: {
+          title: 'Wann proprietäre Modelle zu verwenden',
+          content: '**Wählen Sie proprietär, wenn absolute Leistung, verwaltete Infrastruktur oder Safety-Alignment am meisten wichtig ist.** Proprietär zeichnet sich aus in:',
+          items: [
+            '**Komplexes Multi-Step-Reasoning:** Agent-Workflows, komplexe Forschungs-Synthese und abstrakte Problemlösung. GPT-4o, Claude 4.6 und Gemini 2.5 behalten eine 7–8 Punkt-Kante bei MMLU. Open-Weights schließen die Lücke bei spezifischen Aufgaben, liegen aber bei allgemeinem Reasoning zurück.',
+            '**Langkontext-Dokument-Forschung (1M+ Token):** Gemini 2.5 Pro ist das einzige Produktions-Modell mit 2M Token-Kontext. Für die Verarbeitung ganzer Bücher, Forschungs-Korpora oder erschöpfender Rechtsprechung entspricht kein Open-Weights-Modell. Verwenden Sie proprietär, wenn die Dokumentenlänge Open-Weights-Fähigkeiten übersteigt.',
+            '**Zero-Infrastruktur-Overhead:** Ihnen fehlen GPU-Ressourcen, DevOps-Expertise oder On-Call-Coverage für Modell-Infrastruktur. Proprietäre APIs verwalten Verfügbarkeit, Skalierung und Optimierung. Zahlen Sie für Einfachheit; vermeiden Sie operative Last.',
+            '**Tool-Integration und Agents:** OpenAI führt bei Tool-Use, Function-Calling und Multi-Step-Agent-Orchestrierung. Wenn Ihr System zuverlässiges Function-Routing und Multi-Turn-Agent-Verhalten erfordert, ist GPT-4o die pragmatische Wahl.',
+            '**Verwaltete Safety und Alignment:** Proprietäre Vendor investieren schwer in Constitutional AI, RLHF und Instruction-Following. Für Chatbots, Kundenservice und User-Facing-Systeme sind proprietäre Modelle typischerweise sicherer Out-of-the-Box.',
+            '**Multimodal-Input (Bilder, Audio):** GPT-4o und Claude 4.6 Sonnet verarbeiten Bild-Eingabe zuverlässig. Multimodal-Open-Weights-Modelle existieren, sind aber weniger reif. Verwenden Sie proprietär für zuverlässige Vision-Language-Aufgaben.',
+          ],
+        },
+    
+        hybridArchitecture: {
+          title: 'Hybrid-AI-Architekturen (Open + Closed Modelle)',
+          content: '**Organisationen können Hybrid-AI-Architekturen verwenden, die Anfragen an Open-Weights-Modelle für sensitive Daten und kostenempfindliche Aufgaben weiterleiten, während komplexes Reasoning und Multimodal-Arbeit an proprietäre Modelle verteilt werden.** Dieser Ansatz kombiniert die Kosteneffizienz, den Datenschutz und die Anpassung von Open-Weights mit der Leistung und verwalteten Infrastruktur von proprietären LLMs.',
+          items: [
+            '**Datenschutz-sensitive Daten → lokal Open-Weights; komplexes Reasoning → proprietäre API.** Leiten Sie Patientenakten, Finanzdaten und Rechtsdokumente an LLaMA 3.1 lokal über Ollama weiter. Leiten Sie Multi-Step-Forschungs-Synthese, Code-Generierung und Agent-Orchestrierung an GPT-4o oder Claude 4.6 Sonnet weiter. Dieser Hybrid-Ansatz erreicht Compliance bei Aufrechterhaltung der Frontier-Leistung.',
+            '**Kostenempfindliche Batch-Verarbeitung → lokal Open-Weights; interaktive Anfragen → proprietäre API.** Für Background-Aufgaben (Klassifizierung, Extraktion, Zusammenfassung) verwenden Sie Self-Hosted LLaMA 3.1 70B (~$2/Stunde auf A100). Für Real-Time-User-Anfragen, wo Latenz wichtig ist, verwenden Sie GPT-4o API ($5/$15 pro 1M Token). Hybrid reduziert Gesamtkosten und Latenz.',
+            '**Multi-Model-Vergleich und Consensus → PromptQuorum.** Verteilen Sie einen einzelnen [Prompt](/prompt-engineering/what-is-prompt-engineering?lang=de) gleichzeitig an lokal Ollama, GPT-4o, Claude 4.6 und Gemini 2.5 Pro über PromptQuorum. Vergleichen Sie Outputs nebeneinander auf Qualität, Latenz und Kosten. Wählen Sie den Gewinner für Produktion oder kombinieren Sie Outputs für Ensemble-Reasoning.',
+            '**Testing und Staging → Open-Weights; Produktions-Serving → proprietär.** Verwenden Sie LLaMA 3.1 8B lokal für schnelle Prototypen und Entwicklung. Sobald Prompt und Pipeline validiert sind, upgraden Sie zu GPT-4o oder Claude für Production-Traffic, wo Zuverlässigkeit, Tool-Integration und Safety-Garantien am meisten wichtig sind.',
+          ],
+        },
+    
+        nuancedTakes: {
+          title: 'Wo die konventionelle Weisheit falsch ist',
+          content: '**Open-Weights ist nicht immer billiger als proprietäre APIs.** Bei <5M Token/Tag sind proprietäre APIs (GPT-4o mini, Claude Haiku, Gemini Flash) oft billiger, da Infrastruktur-Kosten (GPU-Amortisierung, Elektrizität, DevOps-Arbeit) API-Billing übersteigen. Nur über 10M Token/Tag wird Open-Weights Self-Hosting kostenoptimal.',
+          items: [
+            '**Die Leistungslücke ist task-spezifisch, nicht universell.** Proprietäre Modelle führen bei MMLU (Reasoning) um 7–8 Punkte. Aber bei Klassifizierung, Zusammenfassung, Extraktion und vielen Domain-Aufgaben entspricht LLaMA 3.1 70B proprietären Modellen oder übertrifft sie. "Proprietär ist besser" ist zu breit. Benchmark Ihre tatsächliche Aufgabe.',
+            '**"Open Source" Lizenzierung ist komplex und oft nicht wirklich Open Source.** LLaMA, Mistral und Qwen sind nicht OSI-konform Open Source — sie sind "Open Weights" unter nicht-Standard-Lizenzen. Sie "Open Source" zu nennen ist irreführend und lädt zu Rechtsverwirung ein. Klären Sie Lizenzierung mit Rat bevor Sie sich auf legale Schutzmaßnahmen verlassen.',
+            '**Proprietär ist nicht immer sicherer oder besser aligned.** [Alle Modelle halluzinieren](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de). Proprietäres Training-Data, Cutoffs und Constitutional AI verhindern nicht Jailbreaking, [Prompt-Injection](/prompt-engineering/prompt-injection-and-security?lang=de) oder Missbrauch. Open-Weights können Fine-Tuned werden, um proprietäres Alignment zu entsprechen oder zu übertreffen. Safety ist eine Eigenschaft der Bereitstellung und Schutzmaßnahmen, nicht der Modellklasse.',
+          ],
+        },
+    
+        keyTerms: {
+          title: 'Schlüsselbegriffe',
+          items: [
+            '[Open Weights](/prompt-engineering/prompt-engineering-glossary?lang=de#open-weights) — Modellgewichte sind herunterladbar, aber möglicherweise unter Lizenz beschränkt',
+            '[Fine-Tuning](/prompt-engineering/prompt-engineering-glossary?lang=de#fine-tuning) — Umschulung von Modellgewichten auf Domain-spezifischen Daten',
+            '[LoRA](/prompt-engineering/prompt-engineering-glossary?lang=de#lora) — Effizientes Fine-Tuning über Low-Rank-Adaptation (5–10% von vollständigen Trainingskosten)',
+            '[RAG](/prompt-engineering/prompt-engineering-glossary?lang=de#rag) — Retrieval-Augmented Generation; Verankerung von LLM-Ausgaben in externen Dokumenten',
+            '[Context Window](/prompt-engineering/prompt-engineering-glossary?lang=de#context-window) — Maximale Token-Kapazität für Input + Output kombiniert',
+            '[VRAM](/prompt-engineering/prompt-engineering-glossary?lang=de#vram) — GPU-Speicher erforderlich für Modell-Inferenz',
+          ],
+        },
+    
+        promptExample: {
+          title: 'Prompt-Struktur in der Praxis',
+          content: [
+            '[Bad Prompt] "Welches ist besser, Open Source oder GPT-4o?"',
+            '[Good Prompt] "Ich muss 20M Token/Tag von Kundenservice-Tickets verarbeiten. Ich kann Daten nicht außerhalb der EU senden. Vergleichen Sie Open-Weights (LLaMA 3.1 70B Self-Hosted) vs. proprietär (GPT-4o über API) für diesen Anwendungsfall: Infrastruktur-Kosten bei 20M Token/Tag, GDPR-Datenresidenz-Compliance, Fine-Tuning-Machbarkeit und erwartete Qualität bei Ticket-Klassifizierungs-Aufgaben einbeziehen."',
+          ],
+        },
+    
+        relatedReading: {
+          title: 'Weiterführende Literatur',
+          items: [
+            '[Fundamentals: AI Limitations and Structural Constraints](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — Warum sowohl proprietäre als auch Open-Weights-Modelle fundamentale Einschränkungen wie Halluzination und Kontextgrenzen teilen',
+            '[Fundamentals: How LLMs Actually Work](/prompt-engineering/how-llms-actually-work?lang=de) — Verstehen von Transformer-Architektur erklärt, warum Open-Weights- und proprietäre Modelle den gleichen Core-Mechanismen teilen',
+            '[Fundamentals: GPT-4o, Claude, or Gemini? How to Pick the Right Model](/prompt-engineering/gpt-claude-gemini-which-model?lang=de) — Detaillierter Vergleich von Frontier-proprietären Modellen',
+            '[Techniques: RAG Explained — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=de) — Wie man jedes Modell (proprietär oder Open-Weights) mit externem Wissen erweitert',
+            '[Fundamentals: Tokens, Costs & Limits](/prompt-engineering/tokens-costs-limits?lang=de) — Detaillierte Kostenanalyse und Token-Ökonomie',
+            '[Fundamentals: Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security?lang=de) — Sicherheitsüberlegungen für beide Modellklassen',
+          ],
+        },
+    
+        faq: {
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            {
+              q: 'Ist Llama 3.1 wirklich Open Source oder nur Open-Weights?',
+              a: 'Nur Open-Weights. LLaMA 3.1 veröffentlicht Modellgewichte unter Llama Community License 2.1, die nicht OSI-konform ist. Die Lizenz erlaubt kommerzielle Nutzung, beschränkt aber die Benennung von Derivaten als "LLaMA," erfordert Attribution und enthält Non-Compete-Klauseln. Echte Open-Source-Lizenzen (Apache 2.0, MIT, GPL) haben keine dieser Einschränkungen. LLaMA ist permissiver als geschlossener proprietärer Zugriff, ist aber nicht rechtlich "Open Source."',
+            },
+            {
+              q: 'Was ist billiger in 2026 — Self-Hosting von Llama oder Nutzung der GPT-4o API?',
+              a: 'Es hängt vom Volumen ab. Unter 5M Token/Tag ist GPT-4o API (oder GPT-4o mini) billiger, da Infrastruktur-Kosten API-Billing übersteigen. Bei 5–10M Token/Tag gleichen sich Kosten aus. Über 10M Token/Tag gewinnt Self-Hosting LLaMA 3.1 bei Kosten. Bei 100M Token/Tag ist Self-Hosting 10–20× billiger. Versteckte Faktoren: GPU-Amortisierung, Elektrizität (~$0,10/kWh) und DevOps-Arbeit kippen oft Grenzfälle zur API.',
+            },
+            {
+              q: 'Betrifft der EU AI Act Open-Source-LLMs?',
+              a: 'Ja, abhängig von der Bereitstellung. Der EU AI Act (2024) bezeichnet "High-Risk" AI-Systeme — Einstellung, Kreditvergabe, Rechtsentscheidung — als erforderlich für Risicodokumentation, Bias-Tests und Audit-Trails. Open-Weights On-Premises erleichtern Compliance, da Sie Daten und Logs kontrollieren. Proprietäre APIs zwingen zu Abhängigkeit von Vendor-Bescheinigungen. Allzweck-AI-Modelle mit >10^25 FLOP Trainingscompute sehen sich zusätzlichen Transparenzpflichten gegenüber. Konsultieren Sie Compliance-Rat für regulierte Sektoren.',
+            },
+            {
+              q: 'Welches Open-Source-LLM ist GPT-4o in 2026 am nächsten?',
+              a: 'LLaMA 3.1 70B und Mistral Large 2 sind am nächsten, aber Lücken bleiben. Bei MMLU (Reasoning-Benchmark) erzielt GPT-4o 88,7% vs. LLaMA 3.1 70B bei 80,5% und Mistral Large bei 81,2%. Bei spezifischen Aufgaben (Klassifizierung, Zusammenfassung, Extraktion) entspricht Open-Weights jetzt proprietär. Die Lücke verengt sich ~2–3 Punkte pro Jahr; Konvergenz bei Reasoning-Aufgaben ist in 18–24 Monaten wahrscheinlich.',
+            },
+            {
+              q: 'Kann ich GPT-4o Fine-Tunen?',
+              a: 'Nein. OpenAI Fine-Tuning ist nur für GPT-4o mini, GPT-4 und gpt-3.5-turbo verfügbar — nicht GPT-4o selbst. Anthropic bietet kein Fine-Tuning für Claude an. Google bietet Fine-Tuning für Gemini an. Open-Weights-Modelle (LLaMA, Mistral, Qwen) unterstützen vollständiges Fine-Tuning via LoRA, QLoRA oder vollständiges Gradient-Training — Sie besitzen die resultierenden Gewichte.',
+            },
+            {
+              q: 'Welche Hardware benötige ich, um LLaMA 3.1 70B lokal zu betreiben?',
+              a: 'Vollständige Präzision: ~40GB VRAM (A100 80GB oder dual RTX 3090/4090). Quantisiert 4-Bit über Ollama: ~16–20GB VRAM (einzelner RTX 4090 24GB). LLaMA 3.1 8B läuft auf Consumer-Hardware (~8GB VRAM, RTX 3060 oder Apple M2 Pro). Ollama verarbeitet Quantisierung und Modell-Management automatisch — empfohlen für die meisten lokalen Bereitstellungen.',
+            },
+            {
+              q: 'Kann ich Open-Source-LLMs auf einem MacBook ausführen?',
+              a: 'Ja. Apple Silicon (M1/M2/M3/M4) Macs können Open-Weights-Modelle über Ollama oder LM Studio ausführen. Die unified Memory-Architektur teilt RAM mit GPU — ein M2 Pro mit 16GB führt LLaMA 3.1 8B mit 10–15 Token/Sec aus. M3 Max mit 128GB Speicher kann LLaMA 3.1 70B in 4-Bit-Quantisierung ausführen. Leistung ist langsamer als ein dedizierter GPU-Server, aber lebensfähig für Entwicklung und persönliche Nutzung.',
+            },
+            {
+              q: 'Haben Open-Source-LLMs die gleichen Einschränkungen wie proprietäre?',
+              a: 'Ja bei Fundamentalen: beide halluzinieren, haben Wissens-Cutoffs, Kontextfenster-Grenzen und Reasoning-Grenzen. Open-Weights können nicht serverseitig gepatcht werden — Gewichts-Updates erfordern eine neue Veröffentlichung und Umschulung. Proprietäre Modelle können inkrementell ohne Benutzer-Aktion verbessert werden. Fine-Tuning von Open-Weights kann spezifische Einschränkungen (Domain-Wissen, Ton) mindern, kann aber strukturelle Zwänge wie Wissens-Cutoff oder Halluzinations-Risiko nicht überwinden.',
+            },
+            {
+              q: 'Welches Open-Weights-Modell ist 2026 am besten für Programmierung?',
+              a: 'LLaMA 3.1 70B und Mistral Large 2 sind die stärksten Open-Weights-Programmierungs-Modelle. Bei HumanEval (Code-Generierungs-Benchmark) erzielen sie 73–78%, verglichen mit GPT-4o bei ~90% und Claude 4.6 Sonnet bei ~87%. Für Python, SQL und strukturierte Ausgabe ist Open-Weights wettbewerbsfähig. Für komplexes Algorithmus-Design und Multi-File-Reasoning behalten proprietäre Modelle einen signifikanten Vorteil.',
+            },
+            {
+              q: 'Kann ich Open-Source-LLMs für kommerzielle Anwendungen nutzen?',
+              a: 'Ja. LLaMA, Mistral und Qwen erlauben ausdrücklich kommerzielle Nutzung unter ihren Lizenzen. Schlüssel-Zwänge: können Derivate nicht "LLaMA" nennen (müssen umbenennen); müssen Lizenz-Attribution einschließen; LLaMA 2 beschränkte Organisationen mit >700M monatlichen aktiven Benutzern (entfernt in LLaMA 3.x). Die meisten Teams stellen Open-Weights intern bereit (private Inferenz), was Benennungs-Probleme ganz vermeidet.',
+            },
+            {
+              q: 'Was ist LoRA und warum spielt es eine Rolle für Open-Weights Fine-Tuning?',
+              a: 'LoRA (Low-Rank Adaptation) ist ein Fine-Tuning-Methode, die nur einen kleinen Satz von Adapter-Gewichten trainiert (~1–5% der Modellparameter) anstelle von vollständiger Rückausbreitung über alle Layer. Dies reduziert Trainingskosten 5–10× vs. vollständigem Fine-Tuning mit minimalem Qualitätsverlust. QLoRA erweitert dies mit 4-Bit-Quantisierung, ermöglicht Fine-Tuning auf Consumer-GPUs (16–24GB VRAM). LoRA ist der Standard-Ansatz zur Anpassung von LLaMA und Mistral an Domain-spezifische Aufgaben ohne vollständiges Umtraining.',
+            },
+          ],
+        },
+    
+        sources: {
+          title: 'Quellen',
+          items: [
+            'Meta AI, "Llama 3 Herd of Models" (Touvron et al., 2024) — Architektur, Kontextfenster, Benchmark-Scores und Trainings-Daten-Dokumentation',
+            'Mistral AI, Model Cards and Technical Documentation (2024) — Mistral Large 2 und Mistral 7B Spezifikationen',
+            'Hendrycks et al., "Measuring Massive Multitask Language Understanding" (2021) — MMLU-Benchmark-Definition und Baseline-Scores. arXiv:2009.03300',
+            'Chen et al., "Evaluating Large Language Models Trained on Code" (2021) — HumanEval-Benchmark für Code-Generierung. arXiv:2107.03374',
+            'European Union, "Artificial Intelligence Act" (2024) — High-Risk-AI-System-Kategorien, GPAI-Modell-Verpflichtungen und Compliance-Anforderungen',
+            'Hu et al., "LoRA: Low-Rank Adaptation of Large Language Models" (2021) — LoRA-Methoden-Definition und Effizienz-Ergebnisse. arXiv:2106.09685',
+            'Dettmers et al., "QLoRA: Efficient Finetuning of Quantized LLMs" (2023) — QLoRA-Methode und Consumer-GPU-Fine-Tuning-Ergebnisse. arXiv:2305.14314',
+          ],
+        },
+      },
+    },
     fr: { theme: 'Fundamentals', title: 'LLMs open source vs propriétaires : La course', intro: 'À venir — comparaison des modèles open source comme LLaMA et Mistral avec les options propriétaires comme GPT-4o et Claude, incluant les compromis de coût, contrôle et performance.', publishDate: '2026-03-24', readTime: 'À venir', sections: {} },
     ja: { theme: 'Fundamentals', title: 'オープンソース vs 独自LLM：競争の行方', intro: '近日公開予定 — LLaMAやMistralなどのオープンソースモデルとGPT-4oやClaudeなどの独自オプションを、コスト・制御・パフォーマンスのトレードオフを含めて比較します。', publishDate: '2026-03-24', readTime: '近日公開予定', sections: {} },
     zh: { theme: 'Fundamentals', title: '开源与专有LLM：竞争格局', intro: '即将推出——将LLaMA和Mistral等开源模型与GPT-4o和Claude等专有选项进行比较，包括成本、控制和性能权衡。', publishDate: '2026-03-24', readTime: '即将推出', sections: {} },
