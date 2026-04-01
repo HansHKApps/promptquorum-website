@@ -15653,6 +15653,8 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
             'The "lost in the middle" problem: multiple studies show LLM accuracy on retrieving information from the middle of a long context is significantly lower than from the beginning or end. A 200K token window does not mean uniform attention across all 200K tokens.',
             'Workarounds: structure important information at the start or end of the prompt; use RAG to retrieve only relevant chunks rather than dumping full documents; break long documents into chunked sessions with summarization steps.',
           ],
+          blockquote: 'Performance is often highest when relevant information occurs at the beginning or end of the input context, and significantly degrades when models must reason over information in the middle of long contexts, even for explicitly long-context models.',
+          blockquoteSource: 'Nelson F. Liu et al. (2023), "Lost in the Middle: How Language Models Use Long Contexts," [arXiv:2307.03172](https://arxiv.org/abs/2307.03172)',
         },
         noMemory: {
           title: 'Limitation 5 — No Persistent Memory Across Conversations',
