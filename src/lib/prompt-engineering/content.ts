@@ -17153,7 +17153,7 @@ zh: {
 
   'open-source-vs-proprietary-llms': {
     en: {
-      theme: 'Fundamentals',
+      theme: 'Techniques',
       title: 'Open Source vs Proprietary LLMs: The Race',
       intro: 'Open-weights models like LLaMA 3.1 and Mistral offer control and cost savings; proprietary models like GPT-4o and Claude 4.6 Sonnet deliver frontier performance. Both categories converge in capability but diverge in access, customization, and compliance requirements.',
       metaDescription: 'Open-source LLMs vs proprietary models: cost, control, privacy, fine-tuning, and performance tradeoffs in 2026. Choose the right approach for your use case.',
@@ -17176,15 +17176,16 @@ zh: {
           'When to choose local inference vs API access',
         ],
         about: [
-          { '@type': 'Thing', name: 'Open-Weights LLMs' },
-          { '@type': 'Thing', name: 'Proprietary Language Models' },
-          { '@type': 'Thing', name: 'Fine-tuning and Customization' },
-          { '@type': 'Thing', name: 'Model Performance Benchmarks' },
-          { '@type': 'Thing', name: 'EU AI Act' },
-          { '@type': 'Thing', name: 'Local Model Inference' },
-          { '@type': 'Thing', name: 'Data Privacy and Sovereignty' },
-          { '@type': 'Thing', name: 'API Pricing Models' },
+          { '@type': 'Thing', name: 'Open-source LLMs' },
+          { '@type': 'Thing', name: 'LLaMA 3.1' },
+          { '@type': 'Thing', name: 'Mistral Large' },
+          { '@type': 'Thing', name: 'EU AI Act compliance' },
+          { '@type': 'Thing', name: 'LLM fine-tuning' },
         ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1 + p', '.key-takeaways'],
+        },
         mentions: [
           { '@type': 'Thing', name: 'GPT-4o' },
           { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
@@ -17275,11 +17276,11 @@ zh: {
         'description': 'A decision framework for selecting open-weights or proprietary models based on cost, privacy, customization, and performance requirements.',
         'totalTime': 'PT10M',
         'step': [
-          { '@type': 'HowToStep', 'position': 1, 'name': 'Define your primary constraint', 'text': 'Do you need cost control (open-weights wins), frontier performance (proprietary wins), data privacy (open-weights wins), or managed infrastructure (proprietary wins)? Pick the constraint that dominates your decision.' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'Evaluate infrastructure readiness', 'text': 'Open-weights requires VRAM, GPUs, and DevOps skill to self-host. Proprietary requires API keys and network connectivity but zero infrastructure. If you lack GPU resources, proprietary is simpler.' },
-          { '@type': 'HowToStep', 'position': 3, 'name': 'Measure cost at your expected volume', 'text': 'Calculate API cost for 1M, 10M, and 100M daily tokens. Below ~5M tokens/day, proprietary APIs are usually cheaper. Above 10M tokens/day, open-weights self-hosting becomes cost-effective; above 100M tokens/day, open-weights wins decisively.' },
-          { '@type': 'HowToStep', 'position': 4, 'name': 'Check compliance and privacy requirements', 'text': 'If data must remain on-premises (healthcare, finance, legal, EU-regulated), open-weights is mandatory. Proprietary models route data through external APIs, which may violate compliance rules.' },
-          { '@type': 'HowToStep', 'position': 5, 'name': 'Test both on your actual task', 'text': 'Use PromptQuorum to dispatch your prompt to GPT-4o, Claude, and a local Ollama instance simultaneously. Compare output quality, latency, and cost. The winner on your specific task is the right choice.' },
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Assess data privacy requirements', 'text': 'If data must remain on-premises (healthcare, finance, legal, EU AI Act high-risk deployments), open-weights is mandatory. Proprietary models route data through external APIs, which may violate HIPAA, GDPR, or attorney-client privilege requirements.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Calculate daily token volume', 'text': 'Calculate API cost for 1M, 10M, and 100M daily tokens. Below ~5M tokens/day, proprietary APIs are usually cheaper due to zero infrastructure cost. Above 10M tokens/day, open-weights self-hosting becomes cost-effective; above 100M tokens/day, open-weights wins decisively.' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Evaluate fine-tuning needs', 'text': 'If you need to specialize the model on your domain, terminology, or task distribution, open-weights is required. Open-weights support LoRA, QLoRA, and full fine-tuning — you own the resulting weights. Proprietary APIs forbid or severely restrict customization.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Check infrastructure readiness', 'text': 'Open-weights requires VRAM, GPUs, and DevOps skill to self-host (LLaMA 70B: ~40GB VRAM on A100). Proprietary requires API keys and network connectivity but zero infrastructure. If you lack GPU resources or on-call coverage, proprietary is the simpler path.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Benchmark on your actual task', 'text': 'Use PromptQuorum to dispatch your prompt to GPT-4o, Claude, and a local Ollama instance simultaneously. Compare output quality, latency, and cost side-by-side. The model that wins on your specific task and data is the right choice — not the benchmark leader.' },
         ],
       },
       faqSchema: {
@@ -17477,6 +17478,14 @@ zh: {
             '[RAG](/prompt-engineering/prompt-engineering-glossary#rag) — Retrieval-Augmented Generation; grounding LLM outputs in external documents',
             '[Context Window](/prompt-engineering/prompt-engineering-glossary#context-window) — Maximum token capacity for input + output combined',
             '[VRAM](/prompt-engineering/prompt-engineering-glossary#vram) — GPU memory required for model inference',
+          ],
+        },
+
+        promptExample: {
+          title: 'Prompt Structure in Practice',
+          content: [
+            '[Bad Prompt] "Which is better, open source or GPT-4o?"',
+            '[Good Prompt] "I need to process 20M tokens/day of customer support tickets. I cannot send data outside the EU. Compare open-weights (LLaMA 3.1 70B self-hosted) vs proprietary (GPT-4o via API) for this use case: include infrastructure cost at 20M tokens/day, GDPR data residency compliance, fine-tuning feasibility, and expected quality on ticket classification tasks."',
           ],
         },
 
