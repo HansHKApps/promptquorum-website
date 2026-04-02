@@ -19768,7 +19768,7 @@ zh: {
   'geopolitics-and-ai': {
     en: {
       theme: 'Policy & Compliance',
-      title: 'Geopolitics and AI: How the EU, US, and China Are Competing for AI Dominance',
+      title: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
       intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
       metaDescription: 'Geopolitics and AI explained: EU AI Act, US strategy, China CAC — AI geopolitical risks and global AI regulation for prompt engineering practitioners and organizations.',
       publishDate: '2026-04-01',
@@ -19779,7 +19779,7 @@ zh: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        headline: 'Geopolitics and AI: How the EU, US, and China Are Competing for AI Dominance',
+        headline: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
         description: 'The US, China, and European Union are pursuing incompatible visions of AI governance. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements.',
         datePublished: '2026-04-01',
         dateModified: '2026-04-02',
