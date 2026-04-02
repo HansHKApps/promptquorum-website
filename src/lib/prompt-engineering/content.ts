@@ -300,6 +300,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         { label: 'Advanced Optimization Techniques', anchor: 'advanced-optimization-techniques' },
         { label: 'Saving Optimized Prompts to a Library', anchor: 'saving-optimized-prompts-to-a-library' },
         { label: 'Regulatory Compliance', anchor: 'prompt-optimization-and-regulatory-compliance' },
+        { label: 'Languages & Regions', anchor: 'prompt-optimization-across-languages-and-regions' },
         { label: 'FAQ', anchor: 'faq-prompt-optimization' },
       ],
       sections: {
@@ -529,6 +530,25 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             '**In regulated markets, systematic prompt optimization is a compliance requirement, not just a best practice.** The EU AI Act classifies AI systems used in high-risk contexts — recruitment, credit scoring, critical infrastructure, medical devices — as requiring documented, testable, and auditable outputs. A version-controlled prompt library with iteration records, before/after test results, and output quality logs directly satisfies the Act\'s requirements for technical documentation and human oversight. Organizations deploying AI in the EU that optimize prompts informally, without version control or measurement records, face documentation gaps that cannot be retroactively closed.',
             'Japan\'s Ministry of Economy, Trade and Industry (METI) AI Governance Guidelines similarly require organizations to maintain traceable records of AI decision inputs — including the prompts used to generate outputs. Systematic prompt optimization, documented as described in the 6-step process above, produces the audit trail METI guidance requires. In China, the Cyberspace Administration\'s Generative AI Service Measures (2023) mandate that providers document their model configurations and output testing protocols — prompt version history and quality metrics are the most direct way to satisfy this requirement at the inference layer.',
+          ],
+        },
+
+        multilingualReach: {
+          title: 'Prompt Optimization Across Languages and Regions',
+          content: [
+            '**Prompt optimization is a universal discipline — the 6 levers and 6-step process apply regardless of the language your prompt is written in.** However, local search terms differ significantly, primary models vary by region, and some languages expose unique optimization challenges (tokenization density, character-based scripts, formal/informal register splits). The table below maps the most important regional variants. See [Prompting Across Languages](/prompt-engineering/prompting-across-languages) for a full guide to multilingual prompt engineering.',
+          ],
+          columns: ['Language / Region', 'Local term for "prompt optimization"', 'Primary model', 'Key regional note'],
+          rows: [
+            { 'Language / Region': 'English — US', 'Local term for "prompt optimization"': 'prompt optimization', 'Primary model': 'GPT-4o, Claude 4.6 Sonnet', 'Key regional note': 'Highest search volume globally; most published research is in English' },
+            { 'Language / Region': 'English — UK / AU', 'Local term for "prompt optimization"': 'prompt optimisation', 'Primary model': 'GPT-4o, Claude 4.6 Sonnet', 'Key regional note': 'British spelling (-ise); same technique, different keyword for UK/AU SEO' },
+            { 'Language / Region': 'German — DE / AT / CH', 'Local term for "prompt optimization"': 'Prompt-Optimierung', 'Primary model': 'GPT-4o, Claude 4.6 Sonnet', 'Key regional note': 'German compound noun; EU AI Act compliance context is especially relevant for DACH enterprises' },
+            { 'Language / Region': 'French — FR / CA', 'Local term for "prompt optimization"': 'optimisation de prompt', 'Primary model': 'GPT-4o, Claude 4.6 Sonnet', 'Key regional note': 'Feminine noun (l\'optimisation); French models respond well to explicit role definitions with formal register' },
+            { 'Language / Region': 'Spanish — ES / LATAM', 'Local term for "prompt optimization"': 'optimización de prompts', 'Primary model': 'GPT-4o', 'Key regional note': 'High-growth market; Latin America leads LATAM AI adoption; "prompts" is commonly used untranslated' },
+            { 'Language / Region': 'Portuguese — BR', 'Local term for "prompt optimization"': 'otimização de prompts', 'Primary model': 'GPT-4o', 'Key regional note': 'Brazil is the largest AI market in Latin America; BR spelling differs from PT (otimização vs optimização)' },
+            { 'Language / Region': 'Japanese — JP', 'Local term for "prompt optimization"': 'プロンプト最適化', 'Primary model': 'GPT-4o (strong Japanese support)', 'Key regional note': 'Katakana for "prompt" (プロンプト); Japanese text uses ~1.5–2× more tokens per character than English — context budget optimization is critical' },
+            { 'Language / Region': 'Chinese Simplified — CN', 'Local term for "prompt optimization"': '提示词优化', 'Primary model': 'DeepSeek, Qwen 3', 'Key regional note': '"提示词" (tíshì cí) = prompt token; "优化" = optimize; DeepSeek and Qwen outperform Western models on Chinese-language tasks; CAC compliance required' },
+            { 'Language / Region': 'Korean — KR', 'Local term for "prompt optimization"': '프롬프트 최적화', 'Primary model': 'GPT-4o, Claude 4.6 Sonnet', 'Key regional note': 'High technical AI adoption; Korean text has dense tokenization — shorter prompts are proportionally more important' },
           ],
         },
 
