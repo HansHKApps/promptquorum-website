@@ -229,6 +229,83 @@ Replace:
 
 ---
 
+## 7b. Batch Translation Approach for Large Articles
+
+For articles with 40+ sections (e.g., `geopolitics-and-ai`), use the **batch approach** instead of translating the entire article at once. This method breaks the translation into 10 logical batches, allowing incremental building and early error detection.
+
+### When to Use
+
+- Article has 40+ sections (too large for single agent pass)
+- Multiple sections share similar structure (tables, FAQs, QA pairs)
+- You want to verify build success incrementally rather than waiting for full completion
+
+### Batch Structure
+
+| Batch | Typical Content | Example |
+|-------|---|---|
+| 1 | Metadata + first 3 sections | `title`, `intro`, `metaDescription`, `readTime`, `educationalLevel`, `primaryTerm`, `tldr`, `euImplications`, `promptEngineerTakeaways` |
+| 2 | Data tables | `promptOptimizationByRegion` (5-region × 4-column table) |
+| 3 | Key facts + Q&A | `keyStatistics` (10 items), `qaWhyStrategic`, `qaWhichCountriesDominate`, `qaChipsRole`, `qaHowAIChangePower` |
+| 4 | Definitions + dimensions | `geopoliticsOfAI`, `keyEntityRelationships`, `fiveGeopoliticalDimensions` |
+| 5 | Major themes | `threeWayRace`, `euAiAct` — **CHECKPOINT BUILD** |
+| 6–9 | Regional sections, strategy blocks, additional Q&A | `euMemberStates`, `franceMistral`, `usStrategy`, `chinaAiStrategy`, etc. |
+| 10 | Remaining Q&A, definitions, blockquotes, FAQs | Final glossary, related reading — **FINAL BUILD + COMMIT** |
+
+### How to Execute
+
+1. **Batch 1 (Metadata):** Replace the entire language stub (`ja: { ... }`) with an expanded object containing metadata + first 3 sections
+2. **Batches 2–9:** Insert new sections **before the closing `},` of the sections block**, maintaining TypeScript object syntax
+3. **After Batch 5:** Run `npm run build` to catch syntax errors early
+4. **After Batch 10:** Run `npm run build` again, then commit and push
+
+### Example: Inserting a Batch
+
+Replace:
+```typescript
+ja: {
+  theme: '...',
+  title: '...',
+  // ... earlier sections ...
+  sections: {
+    euImplications: { ... },
+    promptEngineerTakeaways: { ... },
+  },
+},
+```
+
+With:
+```typescript
+ja: {
+  theme: '...',
+  title: '...',
+  // ... earlier sections ...
+  sections: {
+    euImplications: { ... },
+    promptEngineerTakeaways: { ... },
+    promptOptimizationByRegion: {
+      // NEW SECTION: Batch 2 content here
+    },
+  },
+},
+```
+
+### Build Verification
+
+After each checkpoint build (`npm run build`):
+- Check that TypeScript compiles with no errors
+- Confirm the article renders at `http://localhost:3000/prompt-engineering/[slug]?lang=XX`
+- Spot-check that new sections appear in the rendered HTML
+
+### Commits
+
+- **Batches 1–4:** Single commit with message `feat: Add [language] translation batches 1–4 for [article-slug]`
+- **Batches 5–9:** Second commit with message `feat: Add [language] translation batches 5–9 for [article-slug]`
+- **Batch 10:** Final commit with message `feat: Complete [language] translation for [article-slug]`
+
+After final build passes, push to `origin/main`.
+
+---
+
 ## 8. Verification Checklist
 
 After the agent completes the translation, verify:
@@ -310,5 +387,5 @@ Any new client component that renders article body content must follow the same 
 
 ---
 
-**Last updated:** 2026-04-01
-**Next review:** After 3rd translation using this spec
+**Last updated:** 2026-04-02
+**Next review:** After completion of geopolitics-and-ai translations (all 5 languages)
