@@ -20925,6 +20925,93 @@ zh: {
           title: 'Definition: Standard Contractual Clauses (SCCs)',
           content: 'Vor-genehmigte Vertrag-Vorlagen, die von der Europäischen Kommission ausgegeben werden, die Organisationen erlauben, personenbezogene Daten von der EU zu nicht-angemessenen Jurisdiktionen (wie die USA oder China) zu transferieren, während GDPR-Konformität beansprucht wird. SCCs platzieren vertragliche Verpflichtungen auf den Daten-Importeur, die Daten unter EU-Standards zu schützen. Effektivität wird anfordert: das EU-Gerichtssystem hat fraggestellt, ob SCCs gegen Regierungs-Überwachung in den USA und anderen Ländern schützen.',
         },
+
+        politicianQuotes: {
+          title: 'Was sagen Politiker',
+          content: [
+            '**KI ist zu einem Top-Tier-Politischen Problem über alle drei Regulierungs-Blöcke geworden, mit Führern, die es als eine Frage von wirtschaftlichen Überleben, demokratischen Werten und nationaler Sicherheit rahmen.** Die Aussagen unten sind gezogen aus offiziellen Reden und parlamentarischen Aufzeichnungen.',
+          ],
+        },
+
+        quoteVonDerLeyen: {
+          title: '',
+          blockquote: 'Künstliche Intelligenz ist die definierende Technologie unserer Zeit. Europa muss sie formen — nicht nur adoptieren. Wir wollen KI, die für Menschen funktioniert, nicht andersherum.',
+          blockquoteSource: 'Ursula von der Leyen, Präsidentin der Europäischen Kommission — Europäische KI-Strategie Ansprache, 2024',
+        },
+
+        quoteVestager: {
+          title: '',
+          blockquote: 'Der KI Act ist der weltweite erste umfassende rechtliche Rahmen für künstliche Intelligenz. Er setzt Menschen und ihre Sicherheit ins Zentrum — nicht nur die Technologie. Das ist, wie verantwortliche Innovation aussieht.',
+          blockquoteSource: 'Margrethe Vestager, ehemalige Executive Vice-Präsidentin der Europäischen Kommission — Europäisches Parlament, März 2024',
+        },
+
+        quoteBreton: {
+          title: '',
+          blockquote: 'Der KI Act ist eine historische Leistung. Europa ist der erste Kontinent, der einen klaren rechtlichen Rahmen für KI etabliert. Sicherheit und Innovation sind nicht Gegensätze — sie gehen zusammen. Wir haben der Welt das gezeigt.',
+          blockquoteSource: 'Thierry Breton, ehemaliger EU-Kommissar für Binnenmarkt — Europäische Kommission, März 2024',
+        },
+
+        quoteMacron: {
+          title: '',
+          blockquote: 'Frankreich möchte eine führende KI-Nation in Europa sein. Paris wird den KI Action Summit veranstalten. Wir investieren in offene, vertrauenswürdige und nachhaltige KI — und wir laden die Welt ein, uns beizutreten.',
+          blockquoteSource: 'Emmanuel Macron, Präsident von Frankreich — KI Action Summit Ankündigung, 2024',
+        },
+
+        quoteSunak: {
+          title: '',
+          blockquote: 'Das Vereinigte Königreich wird mit Partnern weltweit zusammenarbeiten, um sicherzustellen, dass KI sicher ist. Bletchley Park ist, wo diese Konversation beginnt — aber sie darf hier nicht enden.',
+          blockquoteSource: 'Rishi Sunak, ehemaliger Premierminister des Vereinigten Königreichs — AI Safety Summit, Bletchley Park, November 2023',
+        },
+
+        quoteScholz: {
+          title: '',
+          blockquote: 'Deutschland möchte zu einem von Europas führenden KI-Standorten werden. Wir investieren in KI-Forschung, digitale Infrastruktur und die Menschen, die das nächste Jahrzehnt intelligenter Systeme bauen werden.',
+          blockquoteSource: 'Olaf Scholz, ehemaliger Bundeskanzler von Deutschland — Nationale KI-Strategie Update, 2024',
+        },
+
+        faq: {
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            { q: 'Was ist der EU AI Act und wann wird er angewendet?', a: 'Der EU AI Act ist das weltweite erste umfassende KI-Gesetz, verabschiedet durch das Europäische Parlament im März 2024. Verbotene Praktiken gelten ab August 2024. GPAI-Modell-Verpflichtungen (für GPT-4o, Claude, Gemini-Klasse-Modelle) gelten ab August 2025. Hochrisiko-KI-System-Anforderungen gelten ab August 2026. Es wird angewendet auf jede Organisation, die KI auf dem EU-Markt platziert oder KI nutzt, die EU-Einwohner beeinflusst.' },
+            { q: 'Wird der EU AI Act auf Nicht-EU-Unternehmen angewendet?', a: 'Ja. Der EU AI Act hat extraterritoriales Reichweite — er wird angewendet auf jeden Provider, dessen KI-Outputs in der EU genutzt werden, unabhängig davon, wo der Provider ansässig ist. Ein US-Unternehmen, dessen KI-Produkt von EU-Einwohnern genutzt wird, muss konform sein. Dies ist das gleiche extraterritoriale Prinzip, das GDPR zu einem globalen Standard machte.' },
+            { q: 'Was sind die Geldstrafen für Verstöße gegen den EU AI Act?', a: 'Geldstrafen bis zu 35 Millionen EUR oder 7% des globalen jährlichen Umsatzes (je nachdem, welcher Wert höher ist) für verbotene KI-Praktiken. Bis zu 15 Millionen EUR oder 3% für Hochrisiko-KI-Verstöße. Bis zu 7,5 Millionen EUR oder 1% für die Bereitstellung falscher Informationen an Durchsetzungsbehörden. Die höhere des Prozentsatzes oder des festen Betrages wird angewendet.' },
+            { q: 'Welche KI-Anwendungen sind unter dem EU AI Act verboten?', a: 'Verboten (Inakzeptables Risiko): Soziale Scoring-Systeme durch öffentliche Behörden; Echtzeit-Biometrische Identifizierung in öffentlichen Räumen (mit engen Ausnahmen); KI, die psychologische Schwachstellen nutzt aus; unkontrolliertes Scraping von Gesichtsbildern aus dem Internet. Diese wurden seit August 2024 verboten.' },
+            { q: 'Wie unterscheidet sich die US-KI-Regulierung von der EU?', a: 'Die USA haben kein bundesweites KI-Gesetz. Bestehende Sektor-Regulatoren (FTC, FDA, CFPB, EEOC) wenden ihre bestehenden Mandate auf KI in ihren Domänen an. Die Biden KI-Sicherheits-Executive Order (Oktober 2023) wurde im Januar 2025 aufgehoben und durch einen Wettbewerbsorientiert fokussierten KI Action Plan ersetzt. Das NIST AI Risk Management Framework ist freiwillig. US-Regulierung ist reaktiv und Sektor-spezifisch; EU-Regulierung ist proaktiv und horizontal.' },
+            { q: 'Ist DeepSeek sicher, um in EU-Organisationen zu nutzen?', a: 'DeepSeek unterliegt CAC (Cyberspace Administration of China)-Regulierungen, bedeutend, dass die chinesische Regierung Daten-Offenlegung erzwingen kann. DeepSeeks Datenschutz-Richtlinie besagt, Daten werden auf Servern in China gespeichert. Für EU-Organisationen, die personenbezogene Daten verarbeiten, verlangt die Nutzung von DeepSeek GDPR-konforme Daten-Transfer-Sicherheitsvorkehrungen (SCCs), die schwer gegen chinesisches Gesetz durchzusetzen sind. Regierungs- und kritische Infrastruktur-Organisationen in EU-Mitgliedstaaten vermeiden allgemein chinesische KI-Tools.' },
+            { q: 'Was ist der Brussels Effect?', a: 'Der Brussels Effect beschreibt, wie EU-Regulierungen De-facto-Globale Standards werden, weil multinationale Unternehmen einen strikten Standard über die Aufrechterhaltung separater Konformität für jede Jurisdiktion bevorzugen. GDPR wurde diese Weise ein globaler Datenschutz-Standard. Der EU AI Act tut das gleiche für KI — OpenAI, Anthropic und Google müssen EU AI Act GPAI-Anforderungen für ihre globalen Produkte befolgen, nicht nur EU-spezifische Versionen.' },
+            { q: 'Was erreichte der Bletchley Park KI-Sicherheits-Gipfel?', a: 'Der November 2023 KI-Sicherheits-Gipfel bei Bletchley Park produzierte die Bletchley Declaration — unterzeichnet von 28 Ländern, einschließlich USA, China und EU-Mitgliedstaaten — anerkennend, dass Frontier-KI ernsthafte Risiken darstellt und internationale Zusammenarbeit verlangt. Der Gipfel etablierte das UK AI Safety Institute (AISI) und initiierte eine Serie globaler KI-Sicherheits-Institute in den USA und anderswo. Chinas Teilnahme war bemerkenswert, gegeben breitere geopolitische Spannungen.' },
+            { q: 'Wie unterstützt Frankreich KI anders als Deutschland?', a: 'Frankreich priorisiert hochprofil-internationales Positionierung (KI Action Summit in Paris, Februar 2025) und Open-Weights-KI-Forschung durch INRIA und CNRS, mit 2 Milliarden EUR öffentliche Investition. Deutschland konzentriert sich auf angewandte industrielle KI durch die Fraunhofer-Gesellschaft und DFKI, mit 5 Milliarden EUR investiert 2019–2025, und betont KI-Governance und Haftungs-Rahmen durch föderale Gesetzgebung. Beide haben nationale KI-Strategien, aber unterschiedliche Sektor-Schwerpunkte.' },
+            { q: 'Wie beeinflusst der EU AI Act KI, die in Prompt Engineering genutzt wird?', a: 'Die meisten Prompt-Engineering-Arbeiten fallen in die Begrenzte oder Minimalrisiko-Kategorie — standard Chatbots und KI-Schreib-Tools verlangen Offenlegung (Nutzer müssen wissen, dass sie mit KI interagieren), aber keine Konformitätsbewertung. Hochrisiko-Klassifizierungen gelten, wenn KI signifikante Entscheidungen trifft: Beschäftigungs-Screening, Kredit-Bewertung, Bildungs-Evaluierung oder Strafverfolgung.' },
+            { q: 'Was ist der Hiroshima KI-Prozess und was erreichte er?', a: 'Der Hiroshima KI-Prozess ist eine G7-Initiative, die beim 2023 Hiroshima Gipfel unter Japans G7-Präsidentschaft gestartet wurde. Er produzierte den Hiroshima KI Process Code of Conduct — 11 freiwillige Leitprinzipien für Entwickler fortgeschrittener KI-Systeme, angenommen von G7-Nationen im Oktober 2023. Prinzipien decken Transparenz, Vorfall-Berichterstattung, Sicherheits-Test und Wasserzeichen von KI-generiertem Inhalt. Italiens 2024 G7-Präsidentschaft erweiterte den Rahmen mit eine breitere internationale KI-Governance-Agenda. Der Code of Conduct ist freiwillig, nicht rechtlich bindend, signalisiert aber internationale Koordination separat von dem EU-KI Act.' },
+            { q: 'Können EU-Organisationen DeepSeek für kommerzielle Anwendungen nutzen?', a: 'Technisch ja, mit GDPR-konformen vertraglichen Sicherheitsvorkehrungen (Standard Contractual Clauses). In der Praxis sind SCCs schwer gegen chinesisches Gesetz durchzusetzen, das DeepSeek verlangt, CAC-Daten-Offenlegungsanforderungen zu befolgen. Regierungs-Beschaffung ist eine separate Einschränkung: Deutschlands BSI, Frankreichs ANSSI und die Niederlande\'s NCSC gaben Empfehlungen oder Restriktionen zu chinesischen KI-Tools für Regierungs- und kritische Infrastruktur-Nutzung aus. Privat-Sektor EU-Organisationen können DeepSeek kommerziell nutzen, müssen aber eine Transfer Impact Assessment unter GDPR Artikel 46 durchführen und das residuale Risiko dokumentieren. Die meisten Legal-Ratgeber raten gegen die Verarbeitung personenbezogener Daten über DeepSeek.' },
+          ],
+        },
+
+        sources: {
+          title: 'Quellen',
+          items: [
+            'Europäisches Parlament, "Artificial Intelligence Act" — Offizieller Text, März 2024. [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)',
+            'Europäische Kommission, "AI Office" — GPAI-Konformitäts-Dokumentation und Durchsetzungs-Richtlinien. [AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)',
+            'NIST, "Artificial Intelligence Risk Management Framework (AI RMF 1.0)" — Januar 2023. [NIST](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)',
+            'UK Regierung, "AI Safety Summit — Bletchley Declaration" — November 2023. [Gov.uk](https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration)',
+            'Cyberspace Administration of China, "Provisions on the Management of Generative Artificial Intelligence Services" — Juli 2023',
+            'DeepSeek-AI, "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning" — arXiv:2501.12948, Januar 2025',
+            'OECD AI Policy Observatory — [oecd.ai](https://oecd.ai) — Land-Ebene KI-Richtlinien-Datenbank und vergleichende Analyse',
+            'Deutschlandfunk, "Strategie Künstliche Intelligenz" — Nationale KI-Strategie, aktualisiert 2023. [Bundesregierung](https://www.bundesregierung.de/breg-de/themen/digitalisierung/ki-strategie)',
+            'Rishi Sunak, PM Speech at AI Safety Summit — November 2023. [Gov.uk](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Verwandte Lektüre',
+          items: [
+            '[Open Source vs Proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) — Wie EU AI Act-Konformität und Datensouveränität-Anforderungen die Open-Weights vs API-Entscheidung beeinflussen',
+            '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — Verstehen von Leistungs-Grenzen, relevant zu Hochrisiko-KI-System-Bewertungen unter dem EU AI Act',
+            '[Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security) — Sicherheits-Schwachstellen, die nationale KI-Strategien und der EU AI Act in Hochrisiko-System-Anforderungen adressieren',
+            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — Zuverlässigkeitsprobleme zentral zu EU AI Act Hochrisiko-Dokumentation und Menschliche Überwachungs-Anforderungen',
+            '[RAG Explained](/prompt-engineering/rag-explained) — Wie Retrieval-Augmented Generation Wissens-Cutoff und Halluzinations-Bedenken adressiert, relevant zu regulierten KI-Einsätzen',
+          ],
+        },
       },
     },
     fr: { theme: 'Policy & Compliance', title: 'Géopolitique et IA : Comment l\'UE, les États-Unis et la Chine rivalisent pour la domination de l\'IA', intro: 'Les États-Unis, la Chine et l\'Union européenne poursuivent des visions incompatibles de la gouvernance de l\'IA. Pour les organisations déployant l\'IA, ces différences se traduisent par des obligations de conformité concrètes, des contraintes d\'approvisionnement et des exigences de résidence des données.', publishDate: '2026-04-01', readTime: 'À venir', sections: {} },
