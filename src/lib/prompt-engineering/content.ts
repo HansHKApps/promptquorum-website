@@ -29070,20 +29070,108 @@ zh: {
       theme: 'Techniques',
       title: 'Zero-Shot vs. Few-Shot Prompting',
       intro: 'Zero shot prompting uses no examples in the prompt and relies entirely on the model\'s pre-training, while few shot prompting embeds a handful of examples so the model can imitate a desired pattern.',
+      metaDescription: 'Zero-shot vs few-shot prompting: zero-shot uses no examples and is fast to set up; few-shot embeds 2-10 examples for better accuracy on specialized tasks. Choose based on task complexity and available training data.',
       publishDate: '2026-03-26',
+      dateModified: '2026-04-02',
       readTime: '6 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Zero-Shot and Few-Shot Prompting',
+      toc: [
+        { label: 'What Is Zero-Shot Prompting?', anchor: 'what-is-zero-shot' },
+        { label: 'What Is Few-Shot Prompting?', anchor: 'what-is-few-shot' },
+        { label: 'Key Differences', anchor: 'key-differences' },
+        { label: 'When to Use Zero-Shot', anchor: 'when-to-use-zero-shot' },
+        { label: 'When to Use Few-Shot', anchor: 'when-to-use-few-shot' },
+        { label: 'Practical Example', anchor: 'example' },
+        { label: 'PromptQuorum Support', anchor: 'how-pq-helps' },
+        { label: 'How to Choose', anchor: 'how-to-start' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Zero Shot vs Few Shot Prompting',
-        description: 'A practical comparison of zero shot and few shot prompting, when to use each, and how PromptQuorum helps you choose the right strategy.',
+        headline: 'Zero-Shot vs. Few-Shot Prompting',
+        description: 'Zero-shot vs few-shot prompting: zero-shot uses no examples and is fast to set up; few-shot embeds 2-10 examples for better accuracy on specialized tasks. Choose based on task complexity and available training data.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
-        keywords: ['zero shot prompting', 'few shot prompting', 'prompt engineering', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        proficiencyLevel: 'Intermediate',
+        keywords: ['zero-shot prompting', 'few-shot prompting', 'prompt engineering', 'in-context learning', 'example-based prompting', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: 'https://www.promptquorum.com/api/og/zero-shot-vs-few-shot?lang=en',
+        articleSection: 'Techniques',
+        teaches: [
+          'Understanding zero-shot prompting: definition, strengths, and when to use (broad tasks, rapid iteration, no labeled data)',
+          'Understanding few-shot prompting: definition, strengths, and when to use (specialized tasks, domain-specific language, format constraints)',
+          'Practical comparison: setup effort, accuracy, scalability, and data requirements',
+          'Decision framework: when to use zero-shot vs few-shot based on task complexity and accuracy targets',
+          'How to measure few-shot benefit and optimize example selection',
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': ['BreadcrumbList', 'FAQPage'],
+        breadcrumbListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+          { '@type': 'ListItem', position: 2, name: 'Techniques', item: 'https://www.promptquorum.com/prompt-engineering/techniques' },
+          { '@type': 'ListItem', position: 3, name: 'Zero-Shot vs. Few-Shot Prompting' },
+        ],
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is zero-shot prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Zero-shot prompting asks the model to solve a task using only a clear instruction and no in-prompt examples. The model relies on its general knowledge and instruction-following capabilities learned during pre-training and alignment. Zero-shot is fast to set up because you do not need to design or curate example pairs, and it works well for broad tasks such as Q&A, classification, summarization, or translation.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is few-shot prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Few-shot prompting adds a small number of input–output examples (typically 2-10) to the instruction so the model can infer the task pattern from concrete demonstrations. These examples act like a mini training set inside the prompt, guiding how the model should interpret ambiguous tasks, specialized formats, or domain-specific language. Few-shot is especially helpful when you need a specific style, schema, or nuanced behavior.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I use zero-shot vs few-shot?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use zero-shot when you need speed, have no labeled examples, and your task is reasonably general. Use few-shot when the task is specialized, format-sensitive, or high-risk, and you can provide good examples. Zero-shot is highly scalable but often produces less consistent results on narrow tasks. Few-shot is less scalable but typically delivers higher accuracy on domain-specific problems.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How many examples do I need for few-shot prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Few-shot typically means between 2 and 10 examples. Start with 2-5 representative examples that span the range of inputs you expect (easy, moderate, and difficult cases). Measure few-shot benefit on a test set before committing: run the same prompt with 0 examples and 5 examples on 50 test cases. If few-shot adds 10+ percentage points of accuracy, include examples. If the gain is less than 5%, stick with zero-shot.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use few-shot prompting with all models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, all major models support few-shot prompting, including GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. However, models vary slightly in their sensitivity to example quality and ordering. It is a good practice to test your specific few-shot examples across your intended model(s) before deploying to production.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is in-context learning?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'In-context learning is the ability of an LLM to learn from examples (or instructions) provided within the same prompt context window, without retraining or fine-tuning the model. Both zero-shot and few-shot prompting rely on in-context learning. Few-shot is an explicit form of in-context learning because you provide concrete examples; zero-shot uses a weaker form where the model learns from the instruction alone.',
+            },
+          },
+        ],
       },
       sections: {
         whatIsZeroShot: {
@@ -29172,6 +29260,77 @@ zh: {
             '**For tasks with subtle distinctions or rare patterns, add 5–10 examples (few-shot+).** If your task requires detecting sarcasm, harmful bias, or domain-specific nuance, more examples help.',
             '**Choose examples that span the range of inputs you expect.** If you\'re classifying product reviews, include enthusiastic, lukewarm, and negative examples. Don\'t show only easy cases.',
             '**Measure few-shot benefit on a test set before committing to it in production.** Run the same prompt with 0 examples and 5 examples on 50 test cases. If few-shot adds 10+ percentage points of accuracy, include examples. If the gain is <5%, stick with zero-shot.',
+          ],
+        },
+
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            '**Zero-shot uses no examples; few-shot uses 2–10 examples.** Zero-shot is faster to implement but often less accurate on specialized tasks. Few-shot requires curated examples but delivers better results when examples are representative.',
+            '**Zero-shot is ideal for broad, general tasks (Q&A, summarization, simple classification).** Few-shot is ideal for domain-specific work, strict format requirements, or high-stakes applications.',
+            '**The practical difference is measurable: test both on 50 test cases and compare accuracy.** If few-shot adds 10+ percentage points, use it. If the gain is <5%, stick with zero-shot.',
+            '**Start with zero-shot as your baseline.** Once you measure performance, upgrade to few-shot only if accuracy is insufficient (< 80%) or if the task requires nuance your instruction alone cannot convey.',
+            '**Models vary slightly in their sensitivity to example quality and order.** GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro all support few-shot, but test your specific examples across your target models.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational concepts behind both zero-shot and few-shot prompting',
+            '[Techniques: Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — how reasoning steps interact with zero-shot and few-shot strategies',
+            '[Techniques: Prompt Injection & Security](/prompt-engineering/prompt-injection-and-security) — security considerations when using examples in few-shot prompts',
+            '[Techniques: Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode) — how few-shot examples improve structured output reliability',
+            '[Use Topics: Control the Output](/prompt-engineering/control-the-output) — techniques for enforcing format consistency with few-shot examples',
+          ],
+        },
+
+        faq: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What is zero-shot prompting?',
+              a: 'Zero-shot prompting asks the model to solve a task using only a clear instruction and no in-prompt examples. The model relies on its general knowledge and instruction-following capabilities learned during pre-training and alignment.',
+            },
+            {
+              q: 'What is few-shot prompting?',
+              a: 'Few-shot prompting adds a small number of input–output examples (typically 2-10) to the instruction so the model can infer the task pattern from concrete demonstrations. These examples act as a mini training set inside the prompt.',
+            },
+            {
+              q: 'When should I use zero-shot vs few-shot?',
+              a: 'Use zero-shot for broad, general tasks where speed matters and you have no labeled data. Use few-shot for domain-specific tasks, strict format requirements, or high-stakes work where accuracy is critical and you can provide representative examples.',
+            },
+            {
+              q: 'How many examples do I need for few-shot?',
+              a: 'Few-shot typically means 2-10 examples. Start with 2-5 representative examples that span easy, moderate, and difficult cases. Test on a hold-out set: if few-shot adds 10+ percentage points of accuracy, keep it; if <5%, use zero-shot.',
+            },
+            {
+              q: 'Can I use few-shot with all LLMs?',
+              a: 'Yes, all major models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) support few-shot prompting. However, they vary slightly in sensitivity to example quality and ordering, so test your specific examples before production use.',
+            },
+            {
+              q: 'What is in-context learning?',
+              a: 'In-context learning is the ability of an LLM to learn from examples or instructions within the same prompt without retraining. Few-shot is an explicit form of in-context learning; zero-shot uses a weaker form where the model learns from instruction alone.',
+            },
+            {
+              q: 'How do I choose good few-shot examples?',
+              a: 'Choose examples that: (1) span the full range of expected inputs; (2) include edge cases, not just easy ones; (3) match the format and style you want the model to output; (4) are representative of real-world data. Test different example sets on a validation set.',
+            },
+            {
+              q: 'Does example order matter in few-shot prompting?',
+              a: 'Yes, slightly. Models show some sensitivity to example ordering — typically, recent examples (later in the prompt) have more influence than early ones. Test both random and curated orderings to see which performs best on your task.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            '[Brown et al., 2020. "Language Models are Few-Shot Learners"](https://arxiv.org/abs/2005.14165) — foundational paper introducing GPT-3 and demonstrating few-shot learning capabilities',
+            '[OpenAI. "Prompt Engineering Guide"](https://platform.openai.com/docs/guides/prompt-engineering) — official OpenAI documentation on zero-shot and few-shot strategies for GPT models',
+            '[Anthropic. "Prompting Guide"](https://docs.anthropic.com/en/docs/build-a-claude-app/build-chatbots) — Anthropic\'s guidance on effective prompting patterns with Claude 4.6 Sonnet, including few-shot examples',
+            '[Google. "Best Practices for Prompt Engineering"](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design) — Google\'s framework for zero-shot and few-shot design with Gemini models',
           ],
         },
       },
