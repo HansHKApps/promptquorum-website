@@ -24753,18 +24753,45 @@ zh: {
     en: {
       theme: 'Frameworks',
       title: 'The APE Framework',
-      intro: 'The APE Framework is a simple three-step prompt structure built around Analyze, Plan, and Execute so that large language models produce clear, traceable outputs from a single instruction. In PromptQuorum, the APE Framework is available as a ready-made option that any user can select and apply across all supported models.',
+      intro: 'The APE Framework is a three-step prompt structure built around Analyze, Plan, and Execute that makes large language models show their reasoning across three distinct stages instead of jumping straight to a final answer. By asking models to first analyze the problem, then outline a plan, and finally execute the output, you gain visibility into the model\'s thinking and can catch misalignment early. In PromptQuorum, the APE Framework is available as a built-in option that any user can select and apply across all supported models.',
+      metaDescription: 'Learn the APE Framework: Analyze, Plan, Execute structure for AI prompts that show reasoning. When to use APE, how to write APE prompts, PromptQuorum implementation.',
+      primaryTerm: 'APE Framework',
       publishDate: '2026-03-24',
+      dateModified: '2026-04-02',
       readTime: '7 min read',
       educationalLevel: 'Intermediate',
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'What Is the APE Framework?', anchor: 'what-is-the-ape-framework' },
+        { label: 'What Do Analyze, Plan, and Execute Mean?', anchor: 'what-do-analyze-plan-and-execute-mean' },
+        { label: 'When Should You Use the APE Framework?', anchor: 'when-should-you-use-the-ape-framework' },
+        { label: 'How Do You Write an APE Prompt?', anchor: 'how-do-you-write-an-ape-prompt' },
+        { label: 'What Does a Strong APE Prompt Look Like?', anchor: 'what-does-a-strong-ape-prompt-look-like' },
+        { label: 'How Does PromptQuorum Implement the APE Framework?', anchor: 'how-does-promptquorum-implement-the-ape-framework' },
+        { label: 'How Does APE Compare to Other Prompt Frameworks?', anchor: 'how-does-ape-compare-to-other-prompt-frameworks' },
+        { label: 'How to Use the APE Framework Step by Step', anchor: 'how-to-use-the-ape-framework-step-by-step' },
+        { label: 'Related Reading', anchor: 'related-reading' },
+        { label: 'FAQ: APE Framework', anchor: 'faq-ape-framework' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'The APE Framework',
         description: 'How the Analyze–Plan–Execute (APE) prompt framework works, when to use it, and how PromptQuorum offers APE as a built-in option.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['APE Framework', 'Analyze Plan Execute', 'prompt frameworks', 'prompt engineering', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        isPartOf: {
+          '@type': 'Series',
+          name: 'Prompt Engineering Frameworks',
+          url: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks',
+        },
+        articleSection: 'Frameworks',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
+        keywords: ['APE Framework', 'Analyze Plan Execute', 'prompt frameworks', 'prompt engineering', 'PromptQuorum', 'Analyze Plan Execute prompting', 'structured prompt reasoning', 'prompt reasoning framework'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -24781,31 +24808,169 @@ zh: {
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': ['BreadcrumbList', 'ItemList'],
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Home',
+              item: 'https://www.promptquorum.com',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Prompt Engineering',
+              item: 'https://www.promptquorum.com/prompt-engineering',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Frameworks',
+              item: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks',
+            },
+            {
+              '@type': 'ListItem',
+              position: 4,
+              name: 'The APE Framework',
+              item: 'https://www.promptquorum.com/prompt-engineering/ape-framework',
+            },
+          ],
+        },
+        apeSteps: {
+          '@type': 'ItemList',
+          name: 'Three Steps of the APE Framework',
+          description: 'The three essential stages of Analyze, Plan, and Execute that structure an APE prompt.',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Analyze',
+              description: 'Restate the task in your own words, identify key constraints, and surface any missing information.',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Plan',
+              description: 'Propose a short step-by-step approach that you will follow to solve the task.',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Execute',
+              description: 'Produce the final answer following the plan, with the requested structure and formatting.',
+            },
+          ],
+        },
+        faq: {
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What is the APE Framework?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'The APE Framework is a three-part prompt structure that asks a model to first Analyze the problem, then Plan a solution approach, and finally Execute the output. This makes the model\'s reasoning visible at each stage and helps you spot misalignment early.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What does APE stand for in prompt engineering?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'APE stands for Analyze, Plan, Execute. It is a prompt structure framework, not "Automatic Prompt Engineer".',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How do I write an APE prompt?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Mention the three stages by name and specify what you expect in each part. Start with: "You are [role]. First, Analyze the task by listing key goals, constraints, and missing information. Then, Plan your approach in 3–5 bullet points. Finally, Execute by producing [output format]." Customize with domain details and context.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How do I use the APE Framework in PromptQuorum?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Open PromptQuorum, select the APE Framework, fill the Analyze section with the problem and constraints, fill the Plan section with your intended approach in bullet points, fill the Execute section with the output format requirements, then run across models and save as a template.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'When should I use APE vs single step prompting?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Use Single Step when you already know the exact output format and just need a well-structured instruction. Use APE when the task is complex enough that you want to see the model\'s reasoning at each stage—analysis, planning, and execution.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How is APE different from Chain-of-Thought prompting?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Chain-of-Thought asks for intermediate reasoning steps within a single output. APE explicitly structures the prompt into three labeled sections: analyze (understand the problem), plan (design the approach), then execute (produce the output). APE is more rigid and compact; Chain-of-Thought is more flexible and exploratory.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long should an APE prompt be?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'APE prompts typically range from 100–300 words total. The three stages (Analyze, Plan, Execute) should each be 20–50 words of instruction, with the rest allocated to context and constraints. Conciseness matters — remove redundancy but include all necessary details for each stage.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Is "APE" the same as "Automatic Prompt Engineer"?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'No. In this context, APE stands for Analyze, Plan, Execute — a prompt structure framework. Automatic Prompt Engineer (also called APE) is a separate, unrelated concept from Stanford research on automated prompt optimization.',
+              },
+            },
+          ],
+        },
+      },
       sections: {
-        whatIsAPE: {
-          title: 'What the APE Framework Is',
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
           content: [
-            '**The APE Framework is a prompt template that forces models like GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to separate their thinking into analysis, planning, and execution.** Instead of getting one undifferentiated answer, you see how the model understood the problem, how it intends to solve it, and the final output. This structure improves reliability because you can inspect each stage.',
-            'APE is especially useful when you are dealing with complex or high-stakes tasks. By asking the model to show its reasoning path explicitly, you reduce the chance that hidden assumptions or shortcuts stay invisible. Even when you run local models through tools such as Ollama or LM Studio, the same three-part pattern keeps results consistent.',
+            '**The APE Framework** stands for Analyze, Plan, Execute — a three-part prompt structure that makes large language models show their reasoning at each stage instead of jumping straight to a final answer.',
+            '**The three stages:** Analyze (model restates the problem and identifies constraints), Plan (model outlines a step-by-step approach), Execute (model produces the final output following the plan).',
+            '**Use APE when** your task is complex enough that you want to inspect the model\'s reasoning, such as technical analysis, multi-step research, strategic writing, or any situation where catching reasoning errors early prevents costly mistakes.',
+            '**APE vs alternatives:** APE is more structured than Single Step (which is one message, no labeled stages) but less complex than Chain-of-Thought (which captures reasoning within a single answer). Use Single Step for simple tasks, APE for complex tasks where reasoning visibility matters.',
+            '**PromptQuorum integrates APE** as a built-in framework with labeled fields for Analyze, Plan, and Execute, so you can dispatch the same three-part prompt to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models in parallel, then save successful prompts as reusable templates.',
+          ],
+        },
+        whatIsAPE: {
+          title: 'What Is the APE Framework?',
+          content: [
+            '**The APE Framework is a prompt structure that requires models to separate their thinking into three explicit stages: Analyze, Plan, and Execute.** Instead of asking a model to produce one undifferentiated answer, you see how the model understood the problem (Analyze), how it intends to solve it (Plan), and finally the structured output (Execute). This visibility into reasoning helps you catch misalignment early and trust the model\'s output.',
+            'APE is especially useful for complex or high-stakes tasks. By asking the model to show its reasoning path explicitly, you reduce the chance that hidden assumptions or shortcuts stay invisible. Learn more in [What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering). Even when you run local models through tools such as Ollama or LM Studio, the same three-part pattern keeps results consistent and traceable.',
           ],
         },
         threeSteps: {
-          title: 'The Three Steps: Analyze, Plan, Execute',
+          title: 'What Do Analyze, Plan, and Execute Mean?',
           content: [
-            '**The core of the APE Framework is that every prompt instructs the model to first analyze the problem, then plan the solution, and only then execute the final answer.** These three steps map directly to how humans handle non-trivial work and give you clear checkpoints.',
+            '**The core of the APE Framework is that every prompt instructs the model to first analyze the problem, then plan the solution, and only then execute the final answer.** These three stages map directly to how humans approach non-trivial work and create clear checkpoints for verification.',
             'A typical breakdown looks like this:',
           ],
           items: [
-            'Analyze: Restate the task in your own words, identify key constraints, and surface any missing information.',
-            'Plan: Propose a short step-by-step approach that you will follow to solve the task.',
-            'Execute: Produce the final answer following the plan, with the requested structure and formatting.',
+            'Analyze: Restate the task in your own words, identify key constraints, and surface any missing information. The model should acknowledge what it understands and what is ambiguous.',
+            'Plan: Propose a short step-by-step approach in 3–5 bullets that you will follow to solve the task. This becomes the "contract" the model agrees to follow.',
+            'Execute: Produce the final answer following the plan, with the requested structure and formatting. Bonus: the model can reference the Analyze and Plan sections if it needs to backtrack.',
           ],
         },
         whenToUse: {
-          title: 'When to Use the APE Framework',
+          title: 'When Should You Use the APE Framework?',
           content: [
-            '**You should use the APE Framework when your task is complex enough that you care about the model\'s reasoning, not just its final output.** This includes technical analysis, multi-step research, strategic writing, and any situation where errors are costly.',
-            'Typical use cases include:',
+            '**You should use the APE Framework when your task is complex enough that you care about the model\'s reasoning, not just its final output.** This includes technical analysis, multi-step research, strategic writing, and any situation where errors are costly. If you have a simple, well-defined task and don\'t need to see the model\'s reasoning, use the [Single Step Prompt Method](/prompt-engineering/the-single-step-prompt-method) instead.',
+            'Typical use cases for APE include:',
           ],
           items: [
             'Breaking down a product requirement into user stories and acceptance criteria.',
@@ -24815,58 +24980,116 @@ zh: {
           ],
         },
         howToWrite: {
-          title: 'How to Write an APE Prompt',
+          title: 'How Do You Write an APE Prompt?',
           content: [
-            '**An effective APE prompt mentions the three stages by name and specifies what you expect in each part: analysis notes, a step-by-step plan, and a final output.** You can do this in a compact way so that it still counts as a single prompt.',
-            'A generic pattern is:',
+            '**An effective APE prompt mentions the three stages by name and specifies what you expect in each part: analysis notes, a step-by-step plan, and a final output.** You can do this in a compact way so that it still counts as a single, unified instruction (not a multi-turn conversation).',
+            'A generic starting pattern is:',
             '"You are [role]. First, **Analyze** the task by listing the key goals, constraints, and missing information. Then, **Plan** your approach in 3–5 bullet points. Finally, **Execute** by producing [desired output format], strictly following your plan."',
-            'You can then customize this base pattern with domain details such as audience, tone, file structure, or citation requirements. Once defined, you can reuse the same APE prompt across multiple tasks by changing only the objective and context.',
+            'Customize this base pattern with domain details such as audience, tone, file structure, or citation requirements. For more on structuring prompts effectively, see [The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs). Once defined, you can reuse the same APE prompt across multiple tasks by changing only the objective and context.',
           ],
         },
         badVsGoodExample: {
-          title: 'Example: Bad vs Good APE Prompt',
+          title: 'What Does a Strong APE Prompt Look Like?',
           content: [
             '**The difference between an unstructured prompt and an APE prompt becomes clear when you compare them on the same task.** Here is a simple example for a product launch email.',
             '**[Bad Prompt]**',
             '"Write an email announcing our new analytics dashboard."',
             '**[Good Prompt]**',
             '"You are a SaaS product marketer. Objective: Create an announcement email for our new analytics dashboard aimed at existing customers. APE structure: 1) **Analyze**: Briefly list the target audience, their main pain points, and the key benefits this dashboard addresses. 2) **Plan**: Outline the email structure in 3–5 bullet points (hook, key benefits, call to action, etc.). 3) **Execute**: Write the final email (max 220 words) in a clear, professional tone. Include a subject line, preview text, and body."',
-            'With the APE Framework, the model shows its understanding of the problem and the plan before producing the email, which makes it easier to spot misalignment early.',
+            '**Why the APE version is better:** The model shows its understanding of the problem, outlines its plan, and then produces the email. If the plan is misaligned with your intent, you can catch it before the email is written and refine the APE prompt accordingly. The unstructured prompt gives no visibility into the model\'s reasoning.',
           ],
         },
         howPQImplements: {
-          title: 'How PromptQuorum Implements the APE Framework',
+          title: 'How Does PromptQuorum Implement the APE Framework?',
           content: [
             '**PromptQuorum is a multi-model AI dispatch tool that includes the APE Framework as one of its built-in prompt structures so users can apply Analyze–Plan–Execute prompting with a single click.** When you choose the APE option in PromptQuorum, the app automatically injects the three-step structure around your objective and context.',
             'Within PromptQuorum, the APE Framework:',
           ],
           items: [
             'Provides labeled sections for analysis, planning, and execution expectations so you do not have to remember the pattern each time.',
-            'Sends the same APE-structured prompt to multiple models in parallel, making it easy to compare how GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models respond at each stage.',
-            'Can be saved as a template for repeated workflows such as code reviews, strategy memos, or research briefs.',
+            'Sends the same APE-structured prompt to multiple models in parallel, making it easy to compare how GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models respond at each stage and adjust your approach.',
+            'Can be saved as a template for repeated workflows such as code reviews, strategy memos, or research briefs. See [Build a Prompt Library](/prompt-engineering/build-a-prompt-library) for best practices on managing your team\'s templates.',
           ],
         },
         choosingAPE: {
-          title: 'Choosing APE vs Other Frameworks',
+          title: 'How Does APE Compare to Other Prompt Frameworks?',
           content: [
-            '**You should choose the APE Framework over other prompt frameworks when you want explicit reasoning steps but do not need a large number of parameters or sections.** APE is deliberately compact: three stages are often enough to improve clarity without overwhelming the user.',
+            '**You should choose the APE Framework when you want explicit reasoning visibility but do not need a large number of parameters or sections.** APE is deliberately compact: three stages are often enough to improve clarity without overwhelming the user.',
             'In practice:',
           ],
           items: [
-            'Pick APE for complex but self-contained tasks where reasoning matters.',
-            'Pick a Single Step-style framework when you already know the exact output format and only need one well-specified instruction.',
-            'Pick more detailed frameworks (with many sections and parameters) only when you have strict internal standards that must be encoded into the prompt.',
+            'Pick [APE](/prompt-engineering/ape-framework) for complex but self-contained tasks where you want to see the model\'s reasoning at each stage.',
+            'Pick the [Single Step Prompt Method](/prompt-engineering/the-single-step-prompt-method) when you already know the exact output format and only need one well-specified instruction without visibility into reasoning.',
+            'Pick the [CRAFT Framework](/prompt-engineering/craft-framework) when you\'re focused on creative or marketing tasks that need explicit attention to audience, tone, and format.',
+            'Pick more detailed multi-step frameworks (with many sections) only when you have strict internal standards that must be encoded into the prompt.',
           ],
         },
 
         howToStart: {
-          title: 'How to Use the APE (Automatic Prompt Optimization) Framework',
+          title: 'How to Use the APE Framework Step by Step',
           numberedItems: [
-            '**Define your task, success metric, and a few seed examples.** Example: Task = \'classify customer feedback sentiment.\' Success metric = \'accuracy on 20 labeled examples.\' Seed examples = 3 diverse customer messages with correct sentiment labels.',
-            '**Use an APE tool or ChatGPT to automatically generate prompt variants.** Provide your task and examples, and ask: \'Generate 5 different prompt variations that might solve this task. Vary instruction style, examples, and constraints.\' Evaluate each variant on your test set.',
-            '**Score each variant on your success metric.** Run all variants on your held-out examples. Record accuracy, speed, cost. APE\'s goal is to find the best prompt without manual trial-and-error.',
-            '**Iterate: pick the top 2 variants, ask the optimizer to generate mutations of those.** If variant 3 scored 85% accuracy and variant 5 scored 82%, ask the optimizer to \'generate variations similar to variant 3 but with [specific tweak].\' Refine iteratively.',
-            '**Once you have a strong prompt, test it on fresh data to confirm it generalizes.** Your optimized prompt scored well on your test set—now verify it works on new, unseen examples. If performance drops, you may have overfit to your test data.',
+            '**Open PromptQuorum and select the APE Framework option.** This loads the three-stage template (Analyze, Plan, Execute) so you don\'t have to write the structure from scratch. Alternatively, if you\'re writing your own prompt, follow the pattern: "You are [role]. First, **Analyze** [problem]. Then, **Plan** [approach]. Finally, **Execute** [output format]."',
+            '**Fill the Analyze section with your task and key constraints.** Instruct the model to restate the problem in its own words, identify what information is missing, and list any limits it should respect. Example: "Analyze this product requirement by summarizing the goal, the target user, and any constraints on scope or timeline."',
+            '**Fill the Plan section with the approach you want the model to propose.** Tell the model to outline the steps it will follow, usually in 3–5 bullet points. Example: "Plan your approach in bullet points, listing each code review step (structure, logic, tests, performance)."',
+            '**Fill the Execute section with the output format requirements.** Specify exactly how the final output should look: markdown, JSON, a table, prose, etc. Example: "Execute by producing the final code review in this format: [Structure Analysis] [Logic Issues] [Test Coverage]"',
+            '**Run the APE prompt across models in PromptQuorum.** Dispatch the same prompt to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and any local models you configure. Compare the Analyze and Plan outputs across models — if they diverge significantly, refine the prompt. Once you\'re happy with the output, save it as a [reusable template](/prompt-engineering/fundamentals-of-prompt-optimization) for your team.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — The foundations of designing effective instructions for AI models, and where the APE Framework fits in the broader landscape.',
+            '[The Single Step Prompt Method](/prompt-engineering/the-single-step-prompt-method) — A simpler, single-message framework when you don\'t need visibility into the model\'s reasoning.',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — A flexible approach to capturing intermediate reasoning within a single output, compared to APE\'s three explicit stages.',
+            '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — How to save and manage your APE prompts as reusable templates for your team.',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ: APE Framework',
+          faqs: [
+            {
+              q: 'What is the APE Framework?',
+              a: 'The APE Framework is a three-part prompt structure (Analyze, Plan, Execute) that makes large language models show their reasoning at each stage. Instead of jumping straight to a final answer, the model first restates the problem, then proposes an approach, then produces the output.',
+            },
+            {
+              q: 'What does APE stand for in prompt engineering?',
+              a: 'APE stands for Analyze, Plan, Execute. It is a prompt structure framework for making AI reasoning visible. (Note: APE is not "Automatic Prompt Engineer," which is a separate research project.)',
+            },
+            {
+              q: 'How do I write an APE prompt?',
+              a: 'Start with a base template: "You are [role]. First, **Analyze** [the problem, constraints, and missing info]. Then, **Plan** [your approach in 3–5 steps]. Finally, **Execute** [the output in this format]." Customize with your domain details, then test on a few examples.',
+            },
+            {
+              q: 'How do I use the APE Framework in PromptQuorum?',
+              a: 'Select the APE option when creating a new prompt in PromptQuorum. Fill the Analyze section with your task and constraints, the Plan section with the approach you want, and the Execute section with the output format. Run across all models, then save as a template.',
+            },
+            {
+              q: 'When should I use APE vs single step prompting?',
+              a: 'Use Single Step when the task is straightforward and you already know the exact output format. Use APE when the task is complex and you want to inspect the model\'s understanding and plan before it produces the output.',
+            },
+            {
+              q: 'How is APE different from Chain-of-Thought prompting?',
+              a: 'Chain-of-Thought asks for intermediate reasoning within a single output. APE explicitly structures the prompt into three labeled sections (Analyze, Plan, Execute). APE is more rigid and structured; Chain-of-Thought is more flexible and open-ended.',
+            },
+            {
+              q: 'How long should an APE prompt be?',
+              a: 'APE prompts typically range from 100–250 words total. The Analyze and Plan instructions should be 20–40 words each, with the rest allocated to context, task details, and constraints. Keep it concise but complete.',
+            },
+            {
+              q: 'Is "APE" the same as "Automatic Prompt Engineer"?',
+              a: 'No. In this article, APE stands for Analyze, Plan, Execute — a prompt structure framework. Automatic Prompt Engineer (also called APE) is a separate research project from Stanford on using AI to automatically optimize prompts.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources',
+          items: [
+            '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — A comprehensive survey documenting 58+ discrete prompting techniques; structured multi-step prompting is identified as a core category of techniques.',
+            '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — Foundational research demonstrating that explicit reasoning steps improve accuracy on complex reasoning tasks, a principle underlying APE.',
+            '[OpenAI, 2024. "Prompt Engineering Guide"](https://platform.openai.com/docs/guides/prompt-engineering) — Official guidance recommending structured, multi-part instructions and explicit reasoning steps for complex tasks.',
           ],
         },
       },
