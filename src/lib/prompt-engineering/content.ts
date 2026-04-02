@@ -291,11 +291,23 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'Prompt optimization = iterative revision of an existing prompt to improve output quality',
-            'The 6 levers: specificity, context, examples, constraints, output format, role/persona',
+            'The 6 levers: **specificity**, **context**, **examples**, **constraints**, **output format**, **role/persona**',
             'Change one lever at a time — isolating variables is how you find what actually works',
             'Test on ≥2 models (GPT-4o, Claude, Gemini) to confirm the improvement is model-agnostic',
             'Common failure mode: changing too many variables at once makes diagnosis impossible',
             'A tested, optimized prompt is a durable asset — save it to a prompt library',
+          ],
+        },
+
+        localLLMTldr: {
+          title: 'Key Takeaways for Local LLM Users',
+          isTldr: true,
+          items: [
+            'Prompt optimization is more critical for local models — quantized models (4-bit, 8-bit) are more sensitive to ambiguous instructions than frontier APIs',
+            'Ollama and LM Studio support the same 6 optimization levers; the difference is that smaller models (LLaMA 3.1 8B, Mistral 7B) require more explicit constraints and shorter context windows',
+            'Quantized models have reduced instruction-following capacity — use simpler, more prescriptive prompts with explicit output format and fewer simultaneous constraints',
+            'Temperature defaults differ: Ollama defaults to 0.8 (higher creativity, less consistency); set temperature to 0.1–0.3 for structured output tasks requiring consistency across runs',
+            'Local models cannot be tested against a cloud baseline — use PromptQuorum to compare your optimized local prompt against GPT-4o and Claude to quantify the quality gap',
           ],
         },
 
@@ -437,6 +449,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        localLLMExamples: {
+          title: 'Optimizing Prompts for Local LLMs (Ollama, LM Studio)',
+          content: [
+            '**Local models run via Ollama or LM Studio respond to the same 6 optimization levers, but with tighter tolerances.** Quantized models (4-bit, 8-bit) have reduced instruction-following capacity compared to full-precision frontier APIs — they benefit most from simpler, more explicit prompts and are more likely to fail on ambiguous instructions. The examples below show before/after optimization for three common local LLM failure modes.',
+          ],
+          items: [
+            '**Example 1: Quantized Model Output Inconsistency (Lever: Output Format + Constraints)**\n_Model:_ LLaMA 3.1 8B via Ollama (4-bit quantization)\n_Weak prompt:_ "Summarize this support ticket."\n_Failure mode:_ Output varies wildly between runs — sometimes a sentence, sometimes a list, sometimes a question back to the user. 4-bit quantization amplifies randomness.\n_Lever changed:_ Output format + temperature constraint.\n_Optimized prompt:_ "Summarize this support ticket in exactly 2 sentences. Sentence 1: the customer\'s problem. Sentence 2: what they have tried. No other text."\n_Additional fix:_ Set temperature to 0.1 in Ollama (ollama run llama3 --temperature 0.1).\n_Result:_ Consistent 2-sentence summaries across all runs. Works on LLaMA 3.1 8B and 70B.',
+            '**Example 2: Context Length Constraint Failure on LM Studio (Lever: Specificity + Context)**\n_Model:_ Mistral 7B Instruct via LM Studio (Q4_K_M quantization, 4096-token context)\n_Weak prompt:_ "Analyze this document and list the key risks." [full 3,000-word document pasted]\n_Failure mode:_ Model truncates mid-analysis, misses the last third of the document, produces incomplete output without signaling the truncation.\n_Lever changed:_ Specificity — reduce scope to fit within context budget.\n_Optimized prompt:_ "You are a risk analyst. Read the following document excerpt (first 1,500 words only) and list up to 5 specific risks, each in ≤15 words. Format: Risk 1: [description]. Risk 2: [description]. Stop after 5."\n_Result:_ Complete analysis within context window. No truncation. Consistent across Q4 and Q8 quantization levels.',
+            '**Example 3: Instruction Override in Quantized Models (Lever: Constraints)**\n_Model:_ Phi-3 Mini via Ollama\n_Weak prompt:_ "Extract all dates from this text. Return JSON only."\n_Failure mode:_ Model returns JSON plus a paragraph explanation ("Here are the dates I found..."). Small models frequently add unsolicited commentary even when format is specified.\n_Lever changed:_ Constraints — explicit prohibition.\n_Optimized prompt:_ "Extract all dates from the text below. Return a JSON array only. No explanation. No preamble. No commentary. Output: [\\\"date1\\\", \\\"date2\\\", ...]"\n_Result:_ Clean JSON output with no prose. Consistent across Phi-3 Mini and Mistral 7B. This constraint pattern (triple prohibition) works across all small local models.',
+          ],
+        },
+
         commonMistakes: {
           title: 'The 7 Most Common Optimization Mistakes',
           content: [
@@ -476,6 +500,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'Saving Optimized Prompts to a Library',
           content: [
             '**An optimized prompt is a durable asset.** Once you have tested a prompt across 3 models, confirmed it works on 5–10 representative inputs, and documented what each lever does — save it. A prompt library lets you reuse optimized prompts across projects, share them with your team, and improve them over time.',
+            'What to save with each prompt: the final prompt text, the lever that was changed, the failure mode it fixed, which models it was tested on, and the pass/fail results on your representative inputs. This documentation is what separates a prompt library from a simple folder of text files — and what satisfies EU AI Act audit trail requirements.',
+            '**PromptQuorum stores every prompt you run, version-controlled, alongside its responses from GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.** Instead of copying outputs into a spreadsheet, your test results are automatically preserved. [Start your prompt library on PromptQuorum](https://www.promptquorum.com) — every prompt you optimize is saved and replayable.',
             'See [Build a Prompt Library That Saves Hours](/prompt-engineering/build-a-prompt-library) for a complete guide on structuring, versioning, and maintaining a library.',
           ],
         },
