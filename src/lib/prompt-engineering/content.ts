@@ -26,6 +26,7 @@ export interface PEArticle {
   title: string
   intro: string
   metaDescription?: string   // 150–160 char SEO-optimised description for meta tag (falls back to intro if absent)
+  seoTitle?: string          // SEO-optimized page title distinct from article.title (used in <title> tag when present)
   publishDate: string
   dateModified?: string
   readTime: string
@@ -312,6 +313,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Fundamentals',
       title: 'How to Optimize Prompts: Prompt Optimization Techniques & Best Practices',
+      seoTitle: 'How to Optimize Prompts: 2026 Guide',
       intro: 'Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy. This comprehensive guide teaches prompt optimization techniques and fundamentals: the 6 core levers, a proven 6-step optimization process, before/after examples for GPT-4o, Claude, and Gemini, and the 7 most common mistakes to avoid when optimizing prompts.',
       metaDescription: 'Learn how to optimize prompts using proven techniques: 6 levers, 6-step process, before/after examples. Improve AI prompt outputs by 20–40% on structured tasks. Fundamentals for all models.',
       publishDate: '2026-04-02',
@@ -4509,6 +4511,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'The 5 Building Blocks Every Prompt Needs',
       intro: 'The 5 building blocks every prompt needs: Role & Context, Task, Input & Examples, Constraints, and Output Format. How to use each one.',
       publishDate: '2026-03-01',
+      metaDescription: 'The 5 building blocks: role, context, instruction, output format, constraints. Learn how to structure prompts for reliability and accurate AI outputs.',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Structure',
@@ -5595,6 +5598,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'AI Hallucinations: Why AI Makes Things Up — and How to Stop Them',
       intro: 'Large language models confidently produce false information. These errors—called hallucinations—range from invented citations to fabricated facts presented with complete authority. Understanding why they happen and how to detect and reduce them is essential for anyone using LLMs in real work.',
+      metaDescription: 'AI hallucinations: why LLMs generate false facts, how to detect them with consensus scoring, and 5 mitigation strategies including RAG, constraints, and multi-model verification.',
       publishDate: '2026-03-22',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
@@ -6899,6 +6903,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'Temperature and Top-P: Control AI Creativity',
       intro: 'Temperature and top-p control how adventurous or conservative an AI\'s word choices are. By tuning these settings, you trade off creativity versus reliability—higher values produce surprising, varied outputs; lower values produce safe, predictable ones.',
+      metaDescription: 'Temperature and top-p: sampling parameters that control AI randomness. Settings for coding, summaries, brainstorming. Practical tuning for GPT-4o, Claude, Gemini.',
       publishDate: '2026-03-22',
       readTime: '10 min read',
       educationalLevel: 'Intermediate',
@@ -7772,6 +7777,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'Faster AI Answers: How to Prompt for Speed',
       intro: 'Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency. Most AI answers bloat because of vague prompts, not slow models.',
+      metaDescription: 'Speed up AI responses: reduce token bloat with explicit constraints, format rules, role context. Prompt design patterns for concise answers across GPT-4o, Claude, Gemini.',
       publishDate: '2026-03-22',
       readTime: '9 min read',
       educationalLevel: 'Intermediate',
@@ -8889,6 +8895,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'Context Windows Explained: Why AI Forgets (and What to Do)',
       intro: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts to stay within limits, and how to manage context windows across cloud and local models.',
+      metaDescription: 'Context windows: why AI forgets, how many tokens each model supports (GPT-4o, Claude, Gemini, Ollama), and prompt strategies to manage token limits.',
       publishDate: '2026-03-22',
       readTime: '11 min read',
       educationalLevel: 'Beginner',
@@ -8966,6 +8973,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'Beyond Text: How to Prompt With Images',
       intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 4.6 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.',
+      metaDescription: 'Multimodal prompting: patterns for image analysis, text-to-image generation, image editing with GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro vision-language models.',
       publishDate: '2026-03-25',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
@@ -9038,6 +9046,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'Tokens, Costs & Limits: The Economics of AI Prompting',
       intro: 'Every AI API call is measured and billed in tokens — the unit that controls both what the model can process and how much you pay. Understanding tokens is the foundation of efficient, cost-effective prompting.',
+      metaDescription: 'Tokens: what they are, how they affect costs and limits. Pricing models for GPT-4o, Claude, Gemini. Cost optimization strategies for API calls.',
       publishDate: '2026-03-22',
       readTime: '13 min read',
       educationalLevel: 'Beginner',
@@ -9863,6 +9872,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Fundamentals',
       title: 'GPT, Claude or Gemini: How to Pick the Right AI Model',
+      metaDescription: 'Compare GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, ERNIE: strengths, costs, speed. Decision framework for choosing the right model.',
       intro: 'No single AI model is best for every task. GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, and Baidu ERNIE each win on different tasks, geographies, and budgets. This guide gives you a practical decision framework — not another benchmark list.',
       publishDate: '2026-03-23',
       readTime: '12 min read',
@@ -11832,6 +11842,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Use Cases',
       title: 'AI-Powered Research: Tools, Hallucination Rates, and Verification Workflows',
+      seoTitle: 'AI Research Tools: Verification Workflows',
       intro: 'AI-powered research tools reduce literature review time from weeks to hours — but the average AI model hallucinates 9.2% of the time on general knowledge questions, making verification workflows mandatory, not optional. In 2026, 75% of global knowledge workers use AI tools regularly. The researchers who get the most from AI treat it as a structured workflow — specific tools for discovery, extraction, synthesis, and verification — not as a single chatbot they ask one question.',
       metaDescription: 'AI research tools: manage 9.2% hallucination rates with Elicit, Consensus, Perplexity, scite.ai. Learn verification workflows, multi-model cross-checking, prompt frameworks.',
       publishDate: '2026-03-23',
@@ -13339,6 +13350,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Use Cases',
       title: 'AI Code Review: Tools, Hallucination Rates, and Verification Workflows',
+      seoTitle: 'AI Code Review: Tools & Verification',
       intro: 'AI code review tools detect 42–48% of real-world runtime bugs in automated reviews — more than double the sub-20% detection rate of traditional static analysis tools — while reducing code review time by 40% and cutting production bugs by 62%. In 2026, 84% of developers now use AI tools and 41% of all new code is AI-generated, creating a feedback loop where AI that writes code must also review it.',
       publishDate: '2026-03-24',
       metaDescription: 'AI code review: detect 42—48% of runtime bugs vs. 20% for static analysis. Compare CodeRabbit, GitHub Copilot, Greptile, Snyk Code. Learn prompt frameworks for security, performance, and maintainability reviews.',
@@ -13668,6 +13680,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Techniques',
       title: 'Control the Output: JSON Schema Compliance, Constrained Decoding, and Format Selection',
+      seoTitle: 'Control LLM Output: JSON & Format Guide',
       intro: 'Before native structured output capabilities existed, models scored below 40% on complex JSON schema compliance; with constrained decoding — used by OpenAI\'s `strict: true` mode and Anthropic\'s Strict Tool Use Mode — JSON Schema compliance reaches 100%, guaranteed at the token level. Output control is the single most important engineering variable between a prototype that works 80% of the time and a production system that works reliably.',
       publishDate: '2026-03-24',
       metaDescription: 'Output control: constrained decoding, JSON schema compliance 100%, sampling parameters, prompt formatting. Learn Temperature, Top-P, two-stage reasoning patterns for production LLM pipelines.',
@@ -14420,6 +14433,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Fundamentals',
       title: 'Build Quality Checks With AI In Mind: Detecting Hallucinations and Fabricated Dependencies',
+      seoTitle: 'AI Quality Gates: Detect Hallucinations',
       intro: 'AI-generated code fails traditional quality gates at scale: a large share of AI-written programs contain exploitable vulnerabilities, and a non-trivial fraction of AI-suggested packages or APIs simply do not exist. To keep these hallucinations and AI-specific failure modes out of production, build quality checks must evolve from generic "tests + coverage" gates into AI-aware pipelines that detect unreal APIs, fake dependencies, and confident-but-wrong logic before merge.',
       publishDate: '2026-03-24',
       metaDescription: 'AI code quality gates: detect hallucinations, fake APIs, fabricated dependencies. Learn CI/CD architecture, dependency validation, security gates, test strategies for AI-generated code.',
@@ -14734,6 +14748,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'How LLMs Actually Work: Tokens, Attention, and Inference',
       intro: 'Large language models predict the next token using probability distributions — not by understanding. Learn tokenization, attention, RLHF, inference parameters, and why this matters for prompt engineering.',
+      metaDescription: 'How LLMs work: tokenization, embeddings, transformer attention, training with RLHF, inference. Technical guide to understanding GPT-4o, Claude, Gemini.',
       publishDate: '2026-03-30',
       dateModified: '2026-03-30',
       readTime: '12 min read',
@@ -22515,6 +22530,7 @@ zh: {
     en: {
       theme: 'Policy & Compliance',
       title: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
+      seoTitle: 'AI Geopolitics: EU AI Act vs US vs China',
       intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
       metaDescription: 'AI geopolitics explained: EU AI Act enforcement, US vs China AI strategy, and global AI regulation risks. What organizations deploying AI need to know in 2026.',
       publishDate: '2026-04-01',
@@ -24969,6 +24985,7 @@ zh: {
       theme: 'Frameworks',
       title: 'Which Prompt Framework Should You Use?',
       intro: 'The right prompt framework depends on your task, your experience level, and whether you are optimizing for creativity, precision, or reliable reasoning. PromptQuorum makes this choice easier by including multiple frameworks, an automatic selector, and a custom framework builder directly in the app.',
+      metaDescription: 'Prompt frameworks: CRAFT, CO-STAR, SPECS, RISEN, TRACE, RTF. Comparison and when to use each framework for better AI outputs.',
       publishDate: '2026-03-24',
       readTime: '9 min read',
       educationalLevel: 'Intermediate',
@@ -32562,6 +32579,7 @@ zh: {
       theme: 'Fundamentals',
       title: 'Prompt Engineering Glossary: 100 Key Terms',
       intro: 'Concise definitions of the 100 most important prompt engineering terms — from tokens and context windows to agent orchestration, RAG, and evaluation metrics.',
+      metaDescription: 'Prompt engineering glossary: 100+ terms from zero-shot prompting to chain-of-thought, RAG, hallucinations, tokens, models, frameworks, and techniques.',
       publishDate: '2026-03-28',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
