@@ -568,6 +568,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — catalogues 58+ discrete prompting techniques used in production systems',
             '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — peer-reviewed academic basis for step-by-step reasoning as an optimization lever',
             '[OpenAI, 2024. "Prompt Engineering"](https://platform.openai.com/docs/guides/prompt-engineering) — official guidance on prompt optimization for GPT-4o',
+            '[Brown et al., 2020. "Language Models are Few-Shot Learners"](https://arxiv.org/abs/2005.14165) — foundational paper establishing few-shot examples as a high-leverage optimization lever; the basis for the Examples lever in the 6-lever framework',
           ],
         },
 
