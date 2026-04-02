@@ -24419,9 +24419,11 @@ zh: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['h1', 'h2'],
         },
-        keywords: ['Single Step Prompt Method', 'prompt frameworks', 'prompt engineering', 'PromptQuorum', 'single step prompting', 'prompt framework', 'one-shot prompt', 'prompt templates'],
+        keywords: ['Single Step Prompt Method', 'one-shot prompting', 'how to write single step prompts', 'prompt frameworks', 'prompt engineering', 'PromptQuorum', 'single step prompting', 'prompt framework', 'one-shot prompt', 'prompt templates'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        reviewedBy: { '@type': 'Person', name: 'PromptQuorum Editorial Team', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        sourceOrganization: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Prompt Frameworks' },
@@ -24605,8 +24607,24 @@ zh: {
         whatIsSingleStep: {
           title: 'What Is the Single Step Prompt Method?',
           content: [
-            '**The Single Step Prompt Method is a one-shot prompt structure that packs role, objective, context, constraints, and output format into a single message to the model.** Instead of asking the AI to "brainstorm together" over several turns, you give it everything it needs upfront. This approach works with [GPT-4o](https://openai.com), [Claude 4.6 Sonnet](https://www.anthropic.com), [Gemini 2.5 Pro](https://deepmind.google), and local models such as those you run via [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai).',
-            'The core idea is to think once, write once, and execute once. You invest effort in designing one precise prompt, then reuse it across tasks, projects, and models. Because the structure is fixed, you can measure quality, change one parameter at a time, and improve your prompts systematically. For more on this, see [What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering).',
+            '**The Single Step Prompt Method (also called one-shot prompting) is a complete, self-contained AI instruction that packs role, objective, context, constraints, and output format into one single message.**',
+            'Instead of multi-turn "brainstorm together" chats, you give the model everything it needs upfront. This produces more consistent, on-format results across [GPT-4o](https://openai.com), [Claude 4.6 Sonnet](https://www.anthropic.com), [Gemini 2.5 Pro](https://deepmind.google), and local models ([Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai)).',
+            '**Core idea:** Think once → write once → execute once. You create one precise, reusable prompt that you can version, measure, and improve systematically.',
+            'The five building blocks are: **Role** (who the model acts as), **Objective** (what you want), **Context** (background info), **Constraints** (limits), and **Output Format** (structure). See the next section for detailed explanations of each. For foundational concepts, see [What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering).',
+          ],
+        },
+        fiveBlocks: {
+          title: 'What Are the Five Building Blocks of a Single Step Prompt?',
+          content: [
+            '**A good Single Step Prompt contains five building blocks: role, objective, context, constraints, and output format.** You can write them as one flowing paragraph or as clearly labeled sections; the method does not require a rigid template as long as each element is present.',
+            'Here is what each block does:',
+          ],
+          items: [
+            '**1. Role:** Who the model should act as (example: "You are a technical product manager"). See [System Prompt vs User Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) for more on role definition.',
+            '**2. Objective:** What you want, expressed as a single clear goal (example: "Write a PRD for an analytics dashboard").',
+            '**3. Context:** Background information the model needs but will not see elsewhere (example: "Our platform serves 50k B2B customers in financial services").',
+            '**4. Constraints:** Boundaries such as word count, banned phrases, or citation style. See [Constrained Prompting](/prompt-engineering/constrained-prompting) for techniques.',
+            '**5. Output Format:** The structure you want back (example: "Return as Markdown with H2 headings, 2000-2500 words, no buzzwords"). Learn about [few-shot examples](/prompt-engineering/zero-shot-vs-few-shot) for specifying exact output patterns.',
           ],
         },
         whySingleStepWorks: {
@@ -24614,20 +24632,6 @@ zh: {
           content: [
             '**Single step prompts outperform incremental prompts because large language models perform best when they receive a complete, unambiguous instruction rather than vague, incremental hints.** Research supports this: Brown et al. (2020) found that structuring prompts with explicit examples and constraints "significantly improves performance on a range of language tasks." PromptQuorum consensus test data confirms this: 40 summarization prompts dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro showed single step structured prompts produced on-format output in 38 of 40 cases (95%) versus 21 of 40 (52%) for the same task given as a vague one-liner. When the model sees the full objective and constraints in one message, it can plan its internal reasoning path more effectively.',
             'This structure also reduces the risk of forgetting important details mid-conversation. If the first message already includes audience, tone, format, and any constraints like word count or banned phrases, you do not have to remember to add them later. For teams, this is critical: a shared single step prompt becomes a repeatable asset instead of an improvised chat. The Prompt Report (Schulhoff et al., 2024) documents that "structured, comprehensive prompts with explicit role, constraint, and example specifications reduce error rates by up to 40% compared to unstructured prompts."',
-          ],
-        },
-        fiveBlocks: {
-          title: 'What Are the Five Building Blocks of a Single Step Prompt?',
-          content: [
-            '**A good Single Step Prompt contains five building blocks: role, objective, context, constraints, and output format.** You can write them as one flowing paragraph or as clearly labeled sections; the method does not require a rigid template as long as each element is present.',
-            'The building blocks are:',
-          ],
-          items: [
-            'Role: Who the model should act as (for example "You are a technical product manager"). See [System Prompt vs User Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) for more on role definition.',
-            'Objective: What you want, expressed as a single clear goal.',
-            'Context: Background information the model needs but will not see elsewhere.',
-            'Constraints: Boundaries such as word count, banned phrases, or citation style. See [Constrained Prompting](/prompt-engineering/constrained-prompting) for techniques.',
-            'Output format: The structure you want back (for example bullets, headings, or JSON). Learn about [few-shot examples](/prompt-engineering/zero-shot-vs-few-shot) for specifying exact output patterns.',
           ],
         },
         singleVsMulti: {
