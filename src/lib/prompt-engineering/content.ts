@@ -30742,22 +30742,104 @@ zh: {
       theme: 'Techniques',
       title: 'Negative Prompting: Tell the AI What NOT to Do',
       intro: 'Negative prompting is a technique where you tell the model what it must avoid—content, style, structure, or behaviors—so outputs stay inside clear boundaries. It acts as a "guardrail layer" on top of your normal instructions.',
+      metaDescription: 'Negative prompting: tell AI what NOT to do using explicit "do not" rules for content, style, tone, and behavior. Learn when to use it and how to combine with positive instructions.',
       publishDate: '2026-03-26',
+      dateModified: '2026-04-02',
       readTime: '6 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Negative Prompting',
+      toc: [
+        { label: 'What Is Negative Prompting?', anchor: 'what-is-negative-prompting' },
+        { label: 'Why It Matters', anchor: 'why-it-matters' },
+        { label: 'What You Can Constrain', anchor: 'what-you-can-constrain' },
+        { label: 'Practical Example', anchor: 'example' },
+        { label: 'When to Use', anchor: 'when-to-use' },
+        { label: 'PromptQuorum Support', anchor: 'in-prompt-quorum' },
+        { label: 'How to Implement', anchor: 'how-to-start' },
+        { label: 'Key Takeaways', anchor: 'tldr' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Negative Prompting: Tell the AI What NOT to Do',
-        description: 'What negative prompting is, why it matters, and how to use explicit "do not" rules to keep AI outputs inside safe, on-brand boundaries.',
+        description: 'Negative prompting: tell AI what NOT to do using explicit "do not" rules for content, style, tone, and behavior. Learn when to use it and how to combine with positive instructions.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
-        keywords: ['negative prompting', 'prompt engineering', 'guardrails', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        proficiencyLevel: 'Intermediate',
+        keywords: ['negative prompting', 'prompt engineering', 'guardrails', 'content constraints', 'output validation', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: 'https://www.promptquorum.com/api/og/negative-prompting?lang=en',
+        articleSection: 'Techniques',
+        teaches: [
+          'Definition and purpose of negative prompting: specifying what to avoid alongside what to do',
+          '4 types of negative constraints: content (banned phrases, topics), style (tone, vocabulary), structure (layout, format), behavior (hallucinations, fabrication)',
+          'How to write effective negative instructions using "do not", "must not", "never" language with examples',
+          'When to use negative prompting: brand compliance, regulated contexts, repeatable workflows, sensitive content',
+          'Combining positive and negative guidance for tighter prompt specifications',
+        ],
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Large Language Models' },
           { '@type': 'Thing', name: 'Guardrails' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': ['BreadcrumbList', 'FAQPage'],
+        breadcrumbListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+          { '@type': 'ListItem', position: 2, name: 'Techniques', item: 'https://www.promptquorum.com/prompt-engineering/techniques' },
+          { '@type': 'ListItem', position: 3, name: 'Negative Prompting' },
+        ],
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is negative prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Negative prompting means adding explicit "do not" rules to your prompts alongside what you want the model to do. Instead of only describing the target output, you also specify unwanted topics, tones, formats, or mistakes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What can I constrain with negative prompts?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'You can constrain content (banned phrases, prohibited topics), style (tone, vocabulary, emojis), structure (layout, format, sections), and behavior (no fabrication, no hallucinations). The clearer your "do not" rules, the easier it is for the model to comply.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I write effective negative instructions?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use hard language: "do not", "must not", "never" instead of soft directives like "avoid if possible". Be specific: \'Never use "disrupt" or "game-change"\'. Provide negative examples: show the model what you explicitly don\'t want. Combine with positive guidance.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I use negative prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use negative prompting for brand-compliant communication, regulated contexts (finance, health, legal), internal documentation, repeatable workflows where mistakes keep appearing, and public-facing content where you want to avoid sensitive topics.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does negative prompting work with all models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. All major models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) respond well to explicit negative instructions. Models with stronger alignment (Claude with Constitutional AI) tend to adhere more consistently. Test your specific constraints on your target model(s).',
+            },
+          },
         ],
       },
       sections: {
@@ -30858,6 +30940,75 @@ zh: {
             '**Provide negative examples: show the model what you explicitly don\'t want.** Example: \'Don\'t write like this: \"Unlock explosive growth with our AI solution.\" Don\'t write like this: \"Our cutting-edge platform uses machine learning.\" Write like this: [provide positive example].\'',
             '**Combine positive and negative guidance.** Don\'t just say what to avoid—also say what to do instead. Example: \'Do not use hype language. Instead, focus on specific, measurable benefits.\'',
             '**Use negative prompting sparingly—it can sometimes confuse the model.** Positive guidance (\'write clearly and technically\') often works better than heavy negatives (\'don\'t be vague, don\'t simplify, don\'t omit details\'). Balance both approaches.',
+          ],
+        },
+
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            '**Negative prompting adds explicit "do not" rules alongside what you want the model to do.** It acts as a guardrail layer for brand, legal, safety, and quality constraints.',
+            '**Constrain 4 dimensions:** content (banned phrases, topics), style (tone, vocabulary), structure (format, layout), behavior (no fabrication, no hallucinations).',
+            '**Use hard language.** "Do not" and "must not" are more effective than "avoid if possible". Be specific and provide negative examples.',
+            '**Combine positive AND negative guidance.** Don\'t just say what to avoid; say what to do instead. Negative-only prompts confuse models.',
+            '**Use negative prompting for repeatable workflows where the same mistakes keep appearing:** brand communication, regulated contexts, internal documentation, sensitive content.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational concepts for designing effective instructions',
+            '[Techniques: Constrained Prompting](/prompt-engineering/constrained-prompting) — broader constraint approach covering structure, content, and format',
+            '[Techniques: Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode) — format-level constraints to ensure model compliance',
+            '[Use Topics: Control the Output](/prompt-engineering/control-the-output) — techniques for deterministic outputs that match your boundaries',
+          ],
+        },
+
+        faq: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What is negative prompting?',
+              a: 'Negative prompting means adding explicit "do not" rules to your prompts alongside what you want the model to do. Instead of only describing the target output, you also specify unwanted topics, tones, formats, or mistakes.',
+            },
+            {
+              q: 'How is negative prompting different from constrained prompting?',
+              a: 'Negative prompting focuses on what to avoid ("do not..."). Constrained prompting is broader and covers both positive constraints (required structure, format) and negative ones. Use negative prompting as part of a larger constrained approach.',
+            },
+            {
+              q: 'What can I constrain with negative prompts?',
+              a: 'You can constrain content (banned words, topics, references), style (tone, vocabulary, emojis), structure (sections, format, layout), and behavior (hallucination prevention, fact-checking).',
+            },
+            {
+              q: 'How do I write effective negative instructions?',
+              a: 'Use hard language ("must not", "never") instead of soft directives ("avoid if possible"). Be specific with examples: "Never use \'disrupt\' or \'game-change\'". Provide negative examples (what not to write) and positive examples (what to write instead).',
+            },
+            {
+              q: 'Does negative prompting work with all models?',
+              a: 'Yes, all models respond to explicit negative instructions. Models with stronger alignment (Claude 4.6 Sonnet) adhere more consistently. Test your specific constraints on your target model(s) before production use.',
+            },
+            {
+              q: 'When should I use negative vs positive guidance?',
+              a: 'Positive guidance ("write clearly") usually works better than negative-only ("don\'t be vague"). Use both: "Do not use jargon. Instead, use simple, direct language." Balance prevents model confusion.',
+            },
+            {
+              q: 'Can negative prompting reduce hallucinations?',
+              a: 'Partially. Negative prompts can help prevent specific hallucinations you have seen before ("Do not fabricate statistics"). However, for fact-grounding, combine negative prompts with RAG or external sources.',
+            },
+            {
+              q: 'What are common mistakes with negative prompting?',
+              a: 'Using only negative instructions (confuses models), soft language ("avoid if possible" instead of "never"), and listing too many negatives (pick 3-5 most critical). Balance negative and positive guidance.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            '[OpenAI. "Prompt Engineering Guide"](https://platform.openai.com/docs/guides/prompt-engineering) — best practices for guardrails and output constraints with GPT-4o',
+            '[Anthropic. "Prompting Guide"](https://docs.anthropic.com/en/docs/build-a-claude-app/build-chatbots) — guidance on instruction clarity and constraints with Claude 4.6 Sonnet',
+            '[Google. "Prompt Engineering Guide"](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design) — best practices for Gemini model guardrails',
           ],
         },
       },
