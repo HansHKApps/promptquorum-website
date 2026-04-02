@@ -25479,21 +25479,33 @@ zh: {
     en: {
       theme: 'Frameworks',
       title: 'The CO-STAR Framework',
-      intro: 'The CO-STAR Framework is a structured prompt format that helps you design clear, multi-step instructions for complex tasks by defining Context, Objective, Style, Tone, Audience, and Response in one coherent message. In PromptQuorum, the CO-STAR Framework is available as a built-in option that any user can select and apply across all supported models.',
+      intro: '**The CO-STAR Framework is a six-component prompt structure for writing complex, multi-constraint instructions: Context, Objective, Style, Tone, Audience, and Response.** Unlike simpler frameworks like CRAFT (5 components), CO-STAR separates Objective and Response as explicit fields, making it ideal for tasks where you need to control goal, structure, voice, and audience simultaneously. In PromptQuorum, CO-STAR is available as a built-in framework with dedicated input fields for each component, so you can dispatch consistent, well-structured prompts across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and compatible local models.',
       publishDate: '2026-03-24',
+      dateModified: '2026-04-02',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'CO-STAR Prompt Framework',
+      metaDescription: 'Learn the CO-STAR Framework: a six-component prompt structure (Context, Objective, Style, Tone, Audience, Response) for multi-constraint tasks in product documentation, guides, and structured explanations. Works with GPT-4o, Claude, Gemini, and local models.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'The CO-STAR Framework',
         description: 'How the CO-STAR Framework (Context, Objective, Style, Tone, Audience, Response) works, when to use it, and how PromptQuorum offers CO-STAR as a built-in option.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['CO-STAR Framework', 'Context Objective Style Tone Audience Response', 'prompt frameworks', 'prompt engineering', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        keywords: ['CO-STAR Framework', 'Context Objective Style Tone Audience Response', 'prompt frameworks', 'prompt engineering', 'PromptQuorum', 'CO-STAR prompt template', 'structured AI prompts', 'content prompt framework'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        isPartOf: {
+          '@type': 'Series',
+          name: 'Prompt Engineering Frameworks',
+          url: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks',
+        },
+        articleSection: 'Frameworks',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Prompt Frameworks' },
@@ -25504,13 +25516,186 @@ zh: {
           { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        supplementalSchema: {
+          '@context': 'https://schema.org',
+          '@type': ['BreadcrumbList', 'ItemList'],
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://www.promptquorum.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Prompt Engineering',
+                item: 'https://www.promptquorum.com/prompt-engineering',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Frameworks',
+                item: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks',
+              },
+              {
+                '@type': 'ListItem',
+                position: 4,
+                name: 'CO-STAR Framework',
+                item: 'https://www.promptquorum.com/prompt-engineering/co-star-framework',
+              },
+            ],
+          },
+          costarComponents: {
+            '@type': 'ItemList',
+            name: 'Six Components of the CO-STAR Framework',
+            description: 'The six essential components of any CO-STAR prompt: Context, Objective, Style, Tone, Audience, and Response.',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Context',
+                description: 'Background information and relevant facts.',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Objective',
+                description: 'The single main goal of the task.',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Style',
+                description: 'Structural or rhetorical preferences.',
+              },
+              {
+                '@type': 'ListItem',
+                position: 4,
+                name: 'Tone',
+                description: 'The emotional flavor or voice.',
+              },
+              {
+                '@type': 'ListItem',
+                position: 5,
+                name: 'Audience',
+                description: 'Who will read or use the output.',
+              },
+              {
+                '@type': 'ListItem',
+                position: 6,
+                name: 'Response',
+                description: 'The exact output format you expect.',
+              },
+            ],
+          },
+          faq: {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is the CO-STAR Framework?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The CO-STAR Framework is a six-component prompt structure that helps you design clear instructions for complex tasks. CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response. It is more comprehensive than simpler frameworks like CRAFT and works well when audience, structure, and voice all matter.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What does CO-STAR stand for?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'CO-STAR stands for Context, Objective, Style, Tone, Audience, Response. Each component addresses a different dimension of your prompt.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How do I write a CO-STAR prompt?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Write six short sections: Context (background info), Objective (main goal), Style (structure preference), Tone (voice and emotional feel), Audience (who will use this), and Response (exact output format). You can format them as labeled lines or structured text; the important part is that each component is clear and easy to edit.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How do I use the CO-STAR Framework in PromptQuorum?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Open PromptQuorum, select the CO-STAR Framework from the built-in options, fill out the six dedicated input fields (Context, Objective, Style, Tone, Audience, Response), then dispatch the assembled prompt to multiple models like GPT-4o, Claude, or Gemini. You can save your CO-STAR prompts as templates for future use.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'When should I use CO-STAR vs CRAFT?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Use CO-STAR when you need explicit control over both objective and response format, especially for multi-constraint communication tasks like product documentation or educational guides. CRAFT is simpler (5 components) and works better for pure marketing and brand voice. CO-STAR is more thorough for structured explanations where audience and structure both matter.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How is CO-STAR different from the APE Framework?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'APE (Analyze–Plan–Execute) is a reasoning-oriented framework designed to expose the model\'s intermediate thinking. CO-STAR is a structural framework for defining context, goal, style, voice, and audience. Use APE when you want to see the model\'s reasoning process; use CO-STAR when you need consistent, well-formatted output from the beginning.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How long should a CO-STAR prompt be?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'There is no fixed length. Each component (Context, Objective, Style, Tone, Audience, Response) should be clear and concise—typically 1–3 sentences per section. A typical CO-STAR prompt might be 200–400 words total, but it depends on task complexity. Use PromptQuorum to test and compare prompts across models to find what works best.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is CO-STAR the same as STAR or other similar frameworks?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'No. CO-STAR is distinct: it includes Context and Objective at the start (unlike STAR frameworks) and adds Tone and Audience as separate components. Other frameworks like STAR or S.T.A.R. have different structures and purposes. Always verify the exact components of a framework before adopting it.',
+                },
+              },
+            ],
+          },
+        },
       },
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'What Is the CO-STAR Framework?', anchor: 'what-is-the-co-star-framework' },
+        { label: 'Why Does the CO-STAR Framework Work?', anchor: 'why-does-the-co-star-framework-work' },
+        { label: 'What Are the Six CO-STAR Components?', anchor: 'what-are-the-six-co-star-components' },
+        { label: 'What Does a Strong CO-STAR Prompt Look Like?', anchor: 'what-does-a-strong-co-star-prompt-look-like' },
+        { label: 'When Should You Use the CO-STAR Framework?', anchor: 'when-should-you-use-the-co-star-framework' },
+        { label: 'How to Write a CO-STAR Prompt in Practice', anchor: 'how-to-write-a-co-star-prompt-in-practice' },
+        { label: 'How PromptQuorum Implements the CO-STAR Framework', anchor: 'how-promptquorum-implements-the-co-star-framework' },
+        { label: 'How Does CO-STAR Compare to Other Prompt Frameworks?', anchor: 'how-does-co-star-compare-to-other-prompt-frameworks' },
+        { label: 'How to Use the CO-STAR Framework Step by Step', anchor: 'how-to-use-the-co-star-framework-step-by-step' },
+        { label: 'Related Reading', anchor: 'related-reading' },
+        { label: 'FAQ: CO-STAR Framework', anchor: 'faq-co-star-framework' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Key Takeaways',
+          items: [
+            '**CO-STAR = Context, Objective, Style, Tone, Audience, Response** — a six-component prompt template designed for complex, multi-constraint tasks where structure, voice, and audience all matter.',
+            '**More comprehensive than CRAFT** (5 components): CO-STAR makes Objective and Response explicit separate fields, giving you finer-grained control over goal and output format.',
+            '**Best for product documentation, educational guides, structured explanations, and communication tasks** where you need explicit control over goal, structure, voice, audience, and format simultaneously.',
+            '**PromptQuorum includes CO-STAR as a built-in framework** with dedicated input fields for all six components, so you can assemble and dispatch CO-STAR prompts without memorizing the pattern.',
+            '**Use CO-STAR over Single Step or CRAFT** when you need to balance multiple constraints: clear goal, specific structure, particular tone, target audience, and exact output format all at once.',
+          ],
+        },
         whatIsCOSTAR: {
-          title: 'What the CO-STAR Framework Is',
+          title: 'What Is the CO-STAR Framework?',
           content: [
-            '**The CO-STAR Framework is a prompt engineering pattern for complex instructions where you need models to understand not just what to do, but how, for whom, and in which style.** Instead of writing a single vague sentence, you break your prompt into explicit CO-STAR components so that GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and other models receive a complete brief.',
+            '**The CO-STAR Framework is a prompt engineering pattern for complex instructions where you need models to understand not just what to do, but how, for whom, and in which style.** Instead of writing a single vague sentence, you break your prompt into explicit CO-STAR components so that GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and other models receive a complete brief. This is a core principle of effective [prompt engineering](/prompt-engineering/what-is-prompt-engineering).',
             'The acronym typically expands as:',
           ],
           items: [
@@ -25523,7 +25708,7 @@ zh: {
           ],
         },
         whyCOSTARWorks: {
-          title: 'Why the CO-STAR Framework Works',
+          title: 'Why Does the CO-STAR Framework Work?',
           content: [
             '**The CO-STAR Framework works because it mirrors how humans write good briefs: it makes the model aware of context, goal, and audience before it starts generating.** When these elements are explicit, the model does not have to infer them from a short, ambiguous instruction.',
             'This leads to several practical benefits:',
@@ -25535,22 +25720,22 @@ zh: {
           ],
         },
         components: {
-          title: 'The CO-STAR Components in Detail',
+          title: 'What Are the Six CO-STAR Components?',
           content: [
-            '**A strong CO-STAR prompt includes all six components, each written as a short, clear instruction or sentence.** You can format them as labeled lines or as a structured paragraph; the important part is that each component is easy to spot and edit.',
+            '**A strong CO-STAR prompt includes all six components, each written as a short, clear instruction or sentence.** You can format them as labeled lines or as a structured paragraph; the important part is that each component is easy to spot and edit. Understanding how each component relates to the five [building blocks every prompt needs](/prompt-engineering/5-building-blocks-every-prompt-needs) will help you write stronger CO-STAR prompts.',
             'Typical component descriptions:',
           ],
           items: [
             'Context: What the task is about, what has already happened, and any constraints or data sources.',
             'Objective: One concise statement of what success looks like.',
             'Style: Whether you want a narrative, a list, a step-by-step guide, or another structure.',
-            'Tone: Whether the voice should be formal, neutral, conversational, or something else.',
+            'Tone: Whether the voice should be formal, neutral, conversational, or something else. This is closely related to [how system prompts and user prompts differ](/prompt-engineering/system-prompt-vs-user-prompt) in shaping model behavior.',
             'Audience: The specific group you are targeting, including their role and knowledge level.',
             'Response: The required format, such as headings, bullets, length limit, or JSON fields.',
           ],
         },
         badVsGoodExample: {
-          title: 'Example: Bad vs Good CO-STAR Prompt',
+          title: 'What Does a Strong CO-STAR Prompt Look Like?',
           content: [
             '**The value of the CO-STAR Framework becomes clear when you compare an unstructured prompt with a CO-STAR-based prompt for the same task.** Here is an example for a technical explainer.',
             '**[Bad Prompt]**',
@@ -25561,9 +25746,9 @@ zh: {
           ],
         },
         whenToUse: {
-          title: 'When to Use the CO-STAR Framework',
+          title: 'When Should You Use the CO-STAR Framework?',
           content: [
-            '**You should use the CO-STAR Framework when you are dealing with multi-constraint tasks where audience, structure, and tone all matter at the same time.** This includes many common workflows in product, marketing, customer success, and education.',
+            '**You should use the CO-STAR Framework when you are dealing with multi-constraint tasks where audience, structure, and tone all matter at the same time.** This includes many common workflows in product, marketing, customer success, and education. CO-STAR is more comprehensive than the [Single Step prompt method](/prompt-engineering/the-single-step-prompt-method) and better suited to complex, multi-part instructions.',
             'Typical use cases:',
           ],
           items: [
@@ -25576,7 +25761,7 @@ zh: {
         howToWrite: {
           title: 'How to Write a CO-STAR Prompt in Practice',
           content: [
-            '**Writing a CO-STAR prompt is straightforward if you think of it as filling out six lines of a brief, then sending them together as one instruction.** You can store this pattern and reuse it for different tasks by changing only the details.',
+            '**Writing a CO-STAR prompt is straightforward if you think of it as filling out six lines of a brief, then sending them together as one instruction.** You can store this pattern and reuse it for different tasks by changing only the details. This approach is similar to how the [CRAFT Framework](/prompt-engineering/craft-framework) structures multi-part prompts, though CO-STAR is more granular.',
             'A generic template looks like this:',
           ],
           items: [
@@ -25596,33 +25781,95 @@ zh: {
           ],
           items: [
             'Fill out CO-STAR fields for a task and dispatch the resulting prompt to multiple models such as GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and compatible local models.',
-            'Save CO-STAR prompts as templates for recurring workflows, such as documentation updates, feature announcements, or quarterly summaries.',
+            'Save CO-STAR prompts as templates for recurring workflows, such as documentation updates, feature announcements, or quarterly summaries. This is a core feature of [building a prompt library](/prompt-engineering/build-a-prompt-library) that your team can reuse.',
             'Share these templates with your team so that everyone uses the same structure, even if they are new to prompt engineering.',
           ],
         },
         usingCOSTARWithOthers: {
-          title: 'Using CO-STAR Alongside Other Frameworks',
+          title: 'How Does CO-STAR Compare to Other Prompt Frameworks?',
           content: [
             '**You should position the CO-STAR Framework alongside other prompt frameworks by assigning each one a clear role in your workflow.** CO-STAR excels at multi-constraint communication tasks where audience and structure are both important.',
             'A simple strategy is:',
           ],
           items: [
             'Use CO-STAR for structured explanations, guides, and communication pieces.',
-            'Use CRAFT when you are focused on pure marketing and brand voice for specific channels.',
+            'Use [CRAFT](/prompt-engineering/craft-framework) when you are focused on pure marketing and brand voice for specific channels.',
             'Use Single Step or specification-style frameworks for tightly formatted outputs such as reports or JSON.',
-            'Use reasoning-oriented frameworks like Analyze–Plan–Execute when you want the model to expose its intermediate thinking.',
+            'Use reasoning-oriented frameworks like [Analyze–Plan–Execute (APE)](/prompt-engineering/ape-framework) when you want the model to expose its intermediate thinking.',
           ],
         },
 
         howToStart: {
-          title: 'How to Use the CO-STAR Framework',
+          title: 'How to Use the CO-STAR Framework Step by Step',
           numberedItems: [
-            '**Context: Provide relevant background information the model needs to understand your task.** Example: \'You are reviewing a pull request for a React component library. The project enforces TypeScript strict mode, immutable state, and functional components only.\'',
-            '**Objective: State what you want the model to do in one sentence.** Example: \'Review this code for type safety and functional programming violations.\'',
-            '**Style: Specify tone and format.** Example: \'Be direct and critical. Return feedback as a bulleted list. Use technical language.\'',
-            '**Task: Describe the actual task with specific inputs and outputs.** Example: \'Analyze this React component. Flag any type errors, mutable state, or class component patterns. Return: list of issues + severity level (critical/warning/info) + suggested fix.\'',
-            '**Augment with examples: Show one good example (code that passes review) and one bad example (code with violations).** This teaches the model what you\'re looking for.',
-            '**Response format: State exactly how you want output structured.** Example: \'Return as JSON: { issues: [...], summary: string, confidence: high|medium|low }.\'',
+            '**Open PromptQuorum and select the CO-STAR Framework** from the built-in prompt structure options. This ensures all six components are properly assembled and formatted for dispatch across multiple models.',
+            '**Fill Context: Provide relevant background information the model needs to understand your task.** Example: "You are reviewing a pull request for a React component library. The project enforces TypeScript strict mode, immutable state, and functional components only."',
+            '**Fill Objective: State what you want the model to do in one concise sentence.** Example: "Review this code for type safety and functional programming violations."',
+            '**Fill Style: Specify the structural preference for how you want the output organized.** Example: "Return feedback as a bulleted list organized by severity."',
+            '**Fill Tone: Specify the emotional flavor and voice you want the response to use.** Example: "Be direct and critical. Use technical language without being condescending."',
+            '**Fill Audience: Specify who will read the output and what they know.** Example: "The audience is senior engineers who are familiar with TypeScript and React best practices."',
+            '**Fill Response: State exactly how you want the output formatted, with any required structure, length, or special fields.** Example: "Return as JSON: { issues: [...], summary: string, confidence: high|medium|low }."',
+            '**Run the prompt across multiple models** such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to compare outputs and choose the best result. Save your CO-STAR prompt as a template for future use with the same or similar tasks.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          content: [
+            'Explore these related frameworks and foundational concepts to deepen your prompt engineering skills:',
+          ],
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — Foundational concepts and core principles.',
+            '[The CRAFT Framework](/prompt-engineering/craft-framework) — A simpler five-component alternative for marketing and brand voice.',
+            '[The APE Framework](/prompt-engineering/ape-framework) — A reasoning-oriented framework for exposing model thinking.',
+            '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — How to save, organize, and reuse your best prompts across your team.',
+          ],
+        },
+        faq: {
+          title: 'FAQ: CO-STAR Framework',
+          faqs: [
+            {
+              q: 'What is the CO-STAR Framework?',
+              a: 'The CO-STAR Framework is a six-component prompt structure that helps you design clear instructions for complex tasks. CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response. Each component addresses a different dimension of your prompt, making it more comprehensive than simpler frameworks like CRAFT.',
+            },
+            {
+              q: 'What does CO-STAR stand for?',
+              a: 'CO-STAR stands for Context (background info), Objective (main goal), Style (structure preference), Tone (emotional flavor), Audience (who will use the output), and Response (exact output format). These six components work together to ensure the model receives a complete, unambiguous brief.',
+            },
+            {
+              q: 'How do I write a CO-STAR prompt?',
+              a: 'Write six short sections for each component: Context (background information), Objective (main goal in one sentence), Style (structure preference), Tone (voice and emotional feel), Audience (who will read this and what they know), and Response (exact output format). You can format them as labeled lines or structured text; the important part is that each component is clear and easy to edit.',
+            },
+            {
+              q: 'How do I use the CO-STAR Framework in PromptQuorum?',
+              a: 'Open PromptQuorum, select the CO-STAR Framework from the built-in options, fill out the six dedicated input fields (Context, Objective, Style, Tone, Audience, Response), then dispatch the assembled prompt to multiple models like GPT-4o, Claude, or Gemini. You can save your CO-STAR prompts as templates for future use and share them with your team.',
+            },
+            {
+              q: 'When should I use CO-STAR vs CRAFT?',
+              a: 'Use CO-STAR when you need explicit control over both objective and response format, especially for multi-constraint communication tasks like product documentation or educational guides. CRAFT is simpler (five components) and works better for pure marketing and brand voice. CO-STAR is more thorough when you need to balance multiple constraints: clear goal, specific structure, particular tone, target audience, and exact output format.',
+            },
+            {
+              q: 'How is CO-STAR different from the APE Framework?',
+              a: 'APE (Analyze–Plan–Execute) is a reasoning-oriented framework designed to expose the model\'s intermediate thinking and planning process. CO-STAR is a structural framework for defining context, goal, style, voice, and audience at the outset. Use APE when you want to see the model\'s reasoning process; use CO-STAR when you need consistent, well-formatted output from the beginning.',
+            },
+            {
+              q: 'How long should a CO-STAR prompt be?',
+              a: 'There is no fixed length requirement. Each component (Context, Objective, Style, Tone, Audience, Response) should be clear and concise—typically one to three sentences per section. A typical CO-STAR prompt might be 200–400 words total, but it depends on task complexity. Use PromptQuorum to test and compare prompts across models to find what works best for your use case.',
+            },
+            {
+              q: 'Is CO-STAR the same as STAR or other similar frameworks?',
+              a: 'No. CO-STAR is distinct: it includes Context and Objective at the start (unlike some STAR frameworks) and adds Tone and Audience as separate components. Other frameworks like STAR or S.T.A.R. have different structures and purposes. Always verify the exact components and definitions of a framework before adopting it for your team or workflow.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          content: [
+            'This article is based on current best practices in prompt engineering and documented implementations in production systems:',
+          ],
+          items: [
+            'Schulhoff, S., Teotia, N., Bansal, Y., Hegselmann, S., & Gunasekar, S. (2024). [The Prompt Report: A Systematic Survey of Prompt Engineering](https://arxiv.org/abs/2406.06608). *arXiv preprint arXiv:2406.06608*. — Comprehensive taxonomy of prompt engineering techniques and frameworks.',
+            'Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., ... & Amodei, D. (2020). [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165). *Advances in Neural Information Processing Systems (NeurIPS)*. — Foundational research on in-context learning and structured prompting with large language models.',
+            'OpenAI (2024). [Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering). — Industry best practices for designing effective prompts for production applications.',
           ],
         },
       },
