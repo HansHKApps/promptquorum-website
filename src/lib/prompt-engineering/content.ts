@@ -215,8 +215,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Fundamentals of Prompt Optimization: How to Improve Any AI Prompt',
       intro: 'Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy. This guide covers the 6 core levers, a 6-step optimization process, before/after examples for GPT-4o, Claude, and Gemini, and the 7 most common mistakes.',
       publishDate: '2026-04-02',
-      dateModified: '2026-04-02',
-      readTime: '12 min read',
+      dateModified: '2026-04-03',
+      readTime: '14 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Optimization',
       schema: {
@@ -225,7 +225,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         headline: 'Fundamentals of Prompt Optimization: How to Improve Any AI Prompt',
         description: 'Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy. Learn the 6 core levers, a 6-step optimization process, before/after examples, and 7 common mistakes.',
         datePublished: '2026-04-02',
-        dateModified: '2026-04-02',
+        dateModified: '2026-04-03',
         keywords: ['prompt optimization', 'prompt engineering', 'AI prompting', 'LLM optimization', 'GPT-4o', 'Claude', 'Gemini', 'iterative prompting', 'few-shot prompting', 'chain-of-thought'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -234,6 +234,12 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Gemini 2.5 Pro' },
           { '@type': 'Thing', name: 'Ollama' },
           { '@type': 'Thing', name: 'LM Studio' },
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Prompt optimization' },
+          { '@type': 'Thing', name: 'Few-shot prompting' },
+          { '@type': 'Thing', name: 'Chain-of-thought prompting' },
+          { '@type': 'Thing', name: 'LLM output quality' },
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -462,6 +468,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             '**An optimized prompt is a durable asset.** Once you have tested a prompt across 3 models, confirmed it works on 5–10 representative inputs, and documented what each lever does — save it. A prompt library lets you reuse optimized prompts across projects, share them with your team, and improve them over time.',
             'See [Build a Prompt Library That Saves Hours](/prompt-engineering/build-a-prompt-library) for a complete guide on structuring, versioning, and maintaining a library.',
+          ],
+        },
+
+        regionalCompliance: {
+          title: 'Prompt Optimization and Regulatory Compliance',
+          content: [
+            '**In regulated markets, systematic prompt optimization is a compliance requirement, not just a best practice.** The EU AI Act classifies AI systems used in high-risk contexts — recruitment, credit scoring, critical infrastructure, medical devices — as requiring documented, testable, and auditable outputs. A version-controlled prompt library with iteration records, before/after test results, and output quality logs directly satisfies the Act\'s requirements for technical documentation and human oversight. Organizations deploying AI in the EU that optimize prompts informally, without version control or measurement records, face documentation gaps that cannot be retroactively closed.',
+            'Japan\'s Ministry of Economy, Trade and Industry (METI) AI Governance Guidelines similarly require organizations to maintain traceable records of AI decision inputs — including the prompts used to generate outputs. Systematic prompt optimization, documented as described in the 6-step process above, produces the audit trail METI guidance requires. In China, the Cyberspace Administration\'s Generative AI Service Measures (2023) mandate that providers document their model configurations and output testing protocols — prompt version history and quality metrics are the most direct way to satisfy this requirement at the inference layer.',
           ],
         },
 
