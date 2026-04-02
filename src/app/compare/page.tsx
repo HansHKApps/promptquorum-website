@@ -4,7 +4,7 @@ import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
   title: 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo — Multi-LLM Tools Compared (2026)',
-  description: 'Compare the best multi-LLM tools in 2026: PromptQuorum, Poe, LM Arena, OpenMark, and AiZolo. See which tools offer simultaneous dispatch, consensus scoring, local LLM support, and API key control.',
+  description: 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo: compare simultaneous dispatch, consensus scoring, local LLM support, and API key control in 2026.',
   alternates: generateAlternates('/compare'),
   openGraph: {
     title: 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo — Multi-LLM Tools Compared',
@@ -34,6 +34,15 @@ export default async function ComparePage({ searchParams }: PageProps) {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@graph': [
+              {
+                '@type': 'WebPage',
+                '@id': 'https://www.promptquorum.com/compare',
+                'url': 'https://www.promptquorum.com/compare',
+                'name': 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo — Multi-LLM Tools Compared (2026)',
+                'description': 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo: compare simultaneous dispatch, consensus scoring, local LLM support, and API key control in 2026.',
+                'inLanguage': 'en',
+                'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
+              },
               {
                 '@type': 'BreadcrumbList',
                 'itemListElement': [
@@ -106,6 +115,20 @@ export default async function ComparePage({ searchParams }: PageProps) {
                   'API key control — bring your own keys',
                   'Side-by-side response comparison',
                   'Hallucination detection',
+                ],
+                'keywords': [
+                  'multi-LLM tool',
+                  'compare LLMs',
+                  'PromptQuorum vs Poe',
+                  'PromptQuorum vs LM Arena',
+                  'simultaneous prompt dispatch',
+                  'consensus scoring',
+                  'local LLM support',
+                  'Ollama',
+                  'LM Studio',
+                  'API key control',
+                  'ChatGPT alternative',
+                  'multi-model AI',
                 ],
               },
             ],
