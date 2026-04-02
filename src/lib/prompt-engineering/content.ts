@@ -19975,6 +19975,47 @@ zh: {
           ],
         },
 
+        promptOptimizationByRegion: {
+          title: 'How Geopolitics Changes Prompt Optimization: Country-by-Country',
+          content: [
+            '**Where your AI output is consumed determines what your prompts must do — and what they must avoid.** Language affects model performance directly: a prompt written in English sent to a Chinese model (ERNIE 4.0, Qwen) underperforms the same prompt written in Mandarin. Law affects prompt design structurally: EU AI Act disclosure requirements, US sector regulations, and China\'s CAC content filters each impose different constraints on how prompts can be framed, what outputs can be generated, and how applications must handle responses.',
+          ],
+          tableFormat: true,
+          columns: ['Region', 'Legal constraint on prompts', 'Language optimization', 'Recommended model'],
+          rows: [
+            {
+              'Region': 'European Union',
+              'Legal constraint on prompts': 'EU AI Act: prompts generating content that interacts with EU consumers must include AI disclosure. GDPR: prompts must not include personal data without legal basis. High-risk AI applications (HR, credit, healthcare) require human oversight — prompts must not automate final decisions.',
+              'Language optimization': 'Write prompts in the target language (German, French, etc.) — GPT-4o and Claude 4.6 Sonnet perform significantly better on non-English tasks when prompts are in the same language as the desired output. Explicitly specify output language in system prompts.',
+              'Recommended model': 'Mistral Large (French, EU-headquartered), local Ollama deployment (data never leaves infrastructure), or GPT-4o/Claude with EU-region API endpoints and SCCs.',
+            },
+            {
+              'Region': 'United States',
+              'Legal constraint on prompts': 'No federal AI law, but sector rules apply: HIPAA (healthcare — PHI must not appear in prompts), CCPA/CPRA (California — personal data in prompts triggers consumer rights), FTC Act (prompts must not generate deceptive content in consumer contexts). State biometric laws (Illinois BIPA) restrict prompts that process facial/voice data.',
+              'Language optimization': 'US frontier models (GPT-4o, Claude 4.6 Sonnet) are English-optimized and perform at their ceiling on English prompts. For Spanish-language US markets, explicitly instruct the model in Spanish or use a bilingual system prompt — do not rely on auto-detection.',
+              'Recommended model': 'GPT-4o or Claude 4.6 Sonnet for general use. For regulated healthcare or financial prompts, use API with SCCs and avoid sending PHI/PII in prompt context.',
+            },
+            {
+              'Region': 'China',
+              'Legal constraint on prompts': 'CAC Generative AI Measures (2023): prompts that request content on CPC leadership, Taiwan/Tibet/Xinjiang independence, the 1989 Tiananmen events, or anything undermining "socialist core values" will be blocked. Returned as HTTP 200 with `is_safe: 0`. PIPL: prompts containing personal data of Chinese users must not be routed to non-China servers.',
+              'Language optimization': 'Write prompts in Simplified Chinese (Mandarin) for Chinese-language tasks — Qwen 2.5 and ERNIE 4.0 score 10–20% higher on Chinese-language benchmarks (C-Eval) vs the same prompt in English. Use Pinyin or English for technical terminology when no Chinese equivalent exists.',
+              'Recommended model': 'Qwen 2.5 72B (self-hosted outside China, no CAC filters) for cross-border tasks. ERNIE 4.0 via Qianfan API (CAC-registered) for consumer-facing China deployments. DeepSeek R1 for reasoning tasks that do not touch filtered content areas.',
+            },
+            {
+              'Region': 'UK / Post-Brexit',
+              'Legal constraint on prompts': 'UK GDPR (equivalent to EU GDPR) applies to personal data. UK AI Safety Institute focuses on frontier model evaluation, not application-level compliance. No mandatory AI disclosure law — UK chose a pro-innovation, sector-led approach. OFCOM regulates AI-generated content in broadcast contexts.',
+              'Language optimization': 'British English spellings and idioms in prompts improve output quality for UK-facing content. GPT-4o responds to explicit "UK English" instructions in system prompts; without them, defaults to American English.',
+              'Recommended model': 'GPT-4o or Claude 4.6 Sonnet. UK-EU data transfers require SCCs post-Brexit — UK adequacy decision from EU in place but subject to review.',
+            },
+            {
+              'Region': 'Japan',
+              'Legal constraint on prompts': 'Japan\'s Act on Protection of Personal Information (APPI) restricts use of personal data in AI prompts. Japan has no AI-specific law (as of 2026) — guidance from METI and Ministry of Internal Affairs is voluntary. Japan participated in the Hiroshima AI Process — adherence to its 11 principles is encouraged for Japanese enterprises.',
+              'Language optimization': 'Japanese prompts on Japanese-language tasks outperform English prompts across all major models. GPT-4o and Claude 4.6 Sonnet handle Japanese well; Rakuten AI and NTT LLMs are available for Japan-specific deployments. Avoid casual (tame-go) register in system prompts — polite (keigo) framing improves compliance and output quality for Japanese business contexts.',
+              'Recommended model': 'GPT-4o or Claude 4.6 Sonnet for general Japanese tasks. Rakuten AI (Rakuten Group) or NTT LLMs for Japan-domestic compliance-sensitive deployments.',
+            },
+          ],
+        },
+
         keyStatistics: {
           title: 'AI Geopolitics: Key Data Points',
           content: [
