@@ -12841,19 +12841,37 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
   'extract-and-summarise': {
     en: {
-      theme: 'Techniques',
+      theme: 'Use Cases',
       title: 'Extract and Summarise With AI',
       intro: 'AI-powered extraction and summarisation reduces document review time by 60—80% while achieving hallucination rates as low as 0.7% on grounded summarisation tasks — the key is choosing the right summarisation type, the right model, and the right prompt structure for each document category.',
       publishDate: '2026-03-23',
+      metaDescription: 'Extract and summarise documents with AI: reduce review time 60—80% with Claude 4.6 Sonnet (200k tokens), GPT-4o, Gemini 2.5 Pro. Learn abstractive vs. extractive summarization, hallucination rates (0.7—4.1%), and prompt patterns.',
+      dateModified: '2026-04-02',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
+      primaryTerm: 'AI-Powered Summarization and Extraction',
+      toc: [
+        { label: 'What Is AI Summarization and Extraction?', anchor: '#definition' },
+        { label: 'Extractive vs. Abstractive Summarization', anchor: '#types' },
+        { label: 'AI Models for Summarization: Capabilities Comparison', anchor: '#modelComparison' },
+        { label: 'Grounded Summarization and Hallucination Rates', anchor: '#hallucination' },
+        { label: 'How to Write Effective Summarization Prompts', anchor: '#promptStructure' },
+        { label: 'Extraction Patterns for Different Document Types', anchor: '#patterns' },
+        { label: 'Global Compliance Context: Data Handling and GDPR', anchor: '#compliance' },
+        { label: 'Key Takeaways', anchor: '#tldr' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Extract and Summarise With AI',
         description: 'AI document summarisation cuts review time by 60—80% with 0.7% hallucination rates. Learn extractive vs abstractive approaches, which models to use, and how to structure prompts for faithful outputs.',
         datePublished: '2026-03-23',
-        dateModified: '2026-03-23',
+        dateModified: '2026-04-02',
+        proficiencyLevel: 'Beginner',
+        articleSection: 'Use Cases',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
@@ -12874,7 +12892,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           width: 1200,
           height: 630,
         },
-        keywords: ['AI summarisation', 'document extraction', 'abstractive summarisation', 'extractive summarisation', 'NotebookLM', 'Claude', 'hallucination rates', 'prompt engineering'],
+        keywords: ['AI summarisation', 'document extraction', 'abstractive summarisation', 'extractive summarisation', 'NotebookLM', 'Claude', 'hallucination rates', 'prompt engineering', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'NotebookLM' },
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
@@ -12883,6 +12901,19 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Elicit' },
           { '@type': 'SoftwareApplication', name: 'Scholarcy' },
           { '@type': 'Organization', name: 'PromptQuorum' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+          { '@type': 'ListItem', position: 2, name: 'Use Cases', item: 'https://www.promptquorum.com/prompt-engineering/use-cases' },
+          { '@type': 'ListItem', position: 3, name: 'Extract and Summarise With AI' },
         ],
       },
       faqSchema: {
