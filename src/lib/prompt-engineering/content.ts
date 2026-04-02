@@ -239,16 +239,22 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Optimize a Prompt in 6 Steps',
+        description: 'The iterative process for improving any AI prompt — from establishing a baseline to saving the optimized version to a prompt library.',
+        totalTime: 'PT30M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Establish a baseline', text: 'Run the current prompt on your target task 3 times on representative inputs. Note the failure mode: Is the output too long or too short? Wrong format? Hallucinating? Off-topic? This baseline is crucial — you cannot measure improvement without it.' },
+          { '@type': 'HowToStep', position: 2, name: 'Identify the root lever', text: 'Map the failure to one of the 6 levers: specificity, context, examples, constraints, output format, or role/persona. Examples: prose instead of bullets → output format lever; vague answer → specificity lever; wrong tone → role lever.' },
+          { '@type': 'HowToStep', position: 3, name: 'Change one variable only', text: 'Make a single targeted change to the identified lever. Do not edit the objective, add examples, AND change the format in the same revision — you cannot attribute improvement if three things changed.' },
+          { '@type': 'HowToStep', position: 4, name: 'Test across models', text: 'Run the revised prompt on GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. A prompt that only works on one model is fragile. Agreement across models means the prompt is robust; divergence means further refinement is needed.' },
+          { '@type': 'HowToStep', position: 5, name: 'Measure against criteria', text: 'Check whether accuracy improved, format complied, and hallucinations decreased. Run the prompt 3 times to confirm consistency. If no improvement, the change did not address the root cause — try a different lever.' },
+          { '@type': 'HowToStep', position: 6, name: 'Save to a prompt library', text: 'Document what changed and why it improved. Version the prompt. A tested, optimized prompt stored in a prompt library is a reusable asset — far more valuable than a one-off prompt solved once and forgotten.' },
+        ],
+      },
       sections: {
-
-        definition: {
-          title: 'What Is Prompt Optimization?',
-          content: [
-            '**Prompt optimization is the iterative process of revising an existing prompt to improve the quality, accuracy, or consistency of AI output for a specific task.** It applies to all major models — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and locally-run models via Ollama or LM Studio. Where prompt engineering designs the initial prompt structure, prompt optimization diagnoses what is failing and applies targeted changes until the output meets a defined standard.',
-            'Prompt optimization is a subprocess of prompt engineering. You always start with a working prompt and make one change at a time. This isolation of variables is what makes diagnosis possible — when you revise specificity, output format, and constraints simultaneously, you cannot determine which change improved the result. The skill of prompt optimization is mapping a failure to the right lever, changing only that variable, and measuring the improvement.',
-            'Why this matters: the same model produces radically different outputs from near-identical prompts. The difference between "sort of correct" and "reliably right" is not luck — it is systematic optimization. An unoptimized prompt succeeds on some inputs and fails on others. An optimized prompt succeeds consistently across a representative sample of inputs.',
-          ],
-        },
 
         tldr: {
           title: 'Key Takeaways',
@@ -260,6 +266,15 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Test on ≥2 models (GPT-4o, Claude, Gemini) to confirm the improvement is model-agnostic',
             'Common failure mode: changing too many variables at once makes diagnosis impossible',
             'A tested, optimized prompt is a durable asset — save it to a prompt library',
+          ],
+        },
+
+        definition: {
+          title: 'What Is Prompt Optimization?',
+          content: [
+            '**Prompt optimization is the iterative process of revising an existing prompt to improve the quality, accuracy, or consistency of AI output for a specific task.** It applies to all major models — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and locally-run models via Ollama or LM Studio. Where prompt engineering designs the initial prompt structure, prompt optimization diagnoses what is failing and applies targeted changes until the output meets a defined standard.',
+            'Prompt optimization is a subprocess of prompt engineering. You always start with a working prompt and make one change at a time. This isolation of variables is what makes diagnosis possible — when you revise specificity, output format, and constraints simultaneously, you cannot determine which change improved the result. The skill of prompt optimization is mapping a failure to the right lever, changing only that variable, and measuring the improvement.',
+            'Why this matters: the same model produces radically different outputs from near-identical prompts. The difference between "sort of correct" and "reliably right" is not luck — it is systematic optimization. An unoptimized prompt succeeds on some inputs and fails on others. An optimized prompt succeeds consistently across a representative sample of inputs.',
           ],
         },
 
