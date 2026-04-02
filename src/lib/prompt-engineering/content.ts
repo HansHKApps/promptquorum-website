@@ -24685,6 +24685,63 @@ zh: {
           ],
         },
 
+        examples: {
+          title: '5 Single Step Prompt Examples With Explanations',
+          content: ['**The following five examples show the Single Step Method applied across diverse domains, demonstrating how one comprehensive instruction eliminates back-and-forth and produces consistent results.**'],
+          numberedItems: [
+            '**Customer Support Response**\nPrompt: "You are a support specialist for a B2B SaaS platform. Objective: Write a response to a customer email about a feature bug that is affecting their workflow. Context: They report that the export-to-CSV feature is returning empty files for datasets over 1 million rows. We identified the bug and shipped a fix in version 2.3, released yesterday. Constraints: Keep response under 150 words. Acknowledge the frustration. Provide the exact version number and release date. Offer one follow-up action (retest or contact support). Output format: Plain email body, 2–3 short paragraphs, no HTML."\nWhy it works: One instruction gives the model everything needed; no follow-up clarifications required.',
+            '**Code Documentation**\nPrompt: "You are a technical writer. Objective: Generate docstring documentation for a Python function that calculates the compound annual growth rate (CAGR). Context: The function takes three parameters: initial_value, final_value, years. It returns a float. The formula is ((final_value / initial_value)^(1 / years) - 1). Constraints: Follow Google docstring style. Include Args, Returns, and a usage example. Keep it under 15 lines. Output format: Python docstring triple-quoted comment block."\nWhy it works: Complete specification ensures the docstring follows exact standards.',
+            '**Blog Article Outline**\nPrompt: "You are an editor planning a technical blog. Objective: Create a detailed outline for a post titled \'Why Databases Choose ACID Over Speed.\' Context: The post should help backend engineers understand the ACID principles and why they matter. Audience: Engineers with 3–5 years of experience. Constraints: Outline should be 8–12 sections. Include one code example section. Target post length: 2000–2500 words. No marketing language. Output format: Markdown with H2 headings for each section and 1–2 sentence descriptions under each heading."\nWhy it works: One prompt eliminates back-and-forth about outline structure and scope.',
+            '**Data Analysis Report**\nPrompt: "You are a data analyst. Objective: Summarize customer churn trends for Q1 2026. Context: Data includes 50k customers. Churn rate was 3.2%, up from 2.9% in Q4 2025. Top churn reason: pricing concerns (45%). Secondary reason: feature gaps (35%). Constraints: Report should be 300–400 words. Highlight the top two drivers. Include one actionable recommendation. Use plain language. No charts, text-only. Output format: Executive summary (2 paragraphs) + key findings (3 bullets) + recommendation (1 paragraph)."\nWhy it works: Explicit constraints and format prevent vague summaries.',
+            '**Email Campaign Subject Lines**\nPrompt: "You are a growth marketing strategist. Objective: Generate 5 subject line options for a re-engagement email campaign targeting customers who have not logged in for 90+ days. Context: Our product is a project management tool. The re-engagement email will offer a 50% discount on annual plans for the first 3 months. Constraints: Each subject line max 50 characters. No exclamation marks. A/B test format: use both curiosity and direct benefit angles. Output format: Numbered list (1–5) with character count in parentheses for each."\nWhy it works: Complete structure ensures five distinct, testable options in one pass.',
+          ],
+        },
+        historyAndDeveloper: {
+          title: 'History and Origin of the Single Step Prompt Method',
+          content: [
+            '**The Single Step Prompt Method emerged from early best practices in prompt engineering, particularly from teams building AI-augmented workflows and observing that clear, complete instructions produced better results than vague, iterative guidance.** The method formalized what became intuitive: if you tell the model everything it needs to know upfront, it performs better.',
+            'The framework\'s popularity grew as organizations scaled AI use. Early teams discovered that one well-written prompt executed multiple times across datasets was more reliable and cheaper than iterative prompting (brainstorming back-and-forth with the model). This led to the insight that single-step prompts should be designed as reusable assets, not disposable chat messages.',
+            'Today, the Single Step Method is the default framework in most prompt engineering tools and the entry point for new practitioners. Its simplicity and effectiveness make it the benchmark against which more complex frameworks are compared.',
+          ],
+        },
+        whenNotToUse: {
+          title: 'When the Single Step Prompt Method Is Not the Right Choice',
+          content: ['**The Single Step Method requires you to know what you want upfront. Use this table to identify when other approaches are better.**'],
+          rows: [
+            { 'Situation': 'Genuinely exploratory or ambiguous task', 'Why Single Step is wrong': 'Single Step requires upfront clarity. Exploratory tasks need iteration and refinement, which is harder in a one-shot format.', 'Better alternative': 'Use multi-step prompting (conversation) to discover the requirements, then convert to single step once you know what you want.' },
+            { 'Situation': 'Task requires visible reasoning or decision justification', 'Why Single Step is wrong': 'Single Step prioritizes output; it does not expose reasoning unless explicitly requested.', 'Better alternative': 'Use TRACE or APE to make reasoning visible and auditable.' },
+            { 'Situation': 'Multiple conflicting constraints (role, audience, tone, format)', 'Why Single Step is wrong': 'Single Step can carry these, but does not compartmentalize them. Nuance gets buried in the instruction.', 'Better alternative': 'Use CO-STAR or CRAFT to make each dimension explicit.' },
+            { 'Situation': 'Machine-usable output with strict schema or examples', 'Why Single Step is wrong': 'Single Step works for this, but lacks the structured example-focused design of SPECS.', 'Better alternative': 'Use SPECS which makes examples and constraints explicit and testable.' },
+            { 'Situation': 'High-stakes decision where you need to audit reasoning', 'Why Single Step is wrong': 'Single Step generates output; it does not necessarily expose the chain of reasoning.', 'Better alternative': 'Use TRACE to compartmentalize and audit reasoning stages.' },
+            { 'Situation': 'Very routine, repetitive task with no variation', 'Why Single Step is overkill': 'For simple templated generation, RTF (Role, Task, Format) is lighter and faster.', 'Better alternative': 'Use RTF for minimal overhead on routine tasks.' },
+          ],
+          columns: ['Situation', 'Why Single Step is wrong', 'Better alternative'],
+        },
+        frameworkComparison: {
+          title: 'Single Step vs Other Prompt Frameworks: Comparison Table',
+          content: ['**The Single Step Method is the baseline—all other frameworks add complexity and specialization.** This table shows how it compares.'],
+          rows: [
+            { 'Dimension': 'Complexity level', 'Single Step': '★★★ (five blocks, clear structure)', 'RTF': '★★ (three components, lightest)', 'CO-STAR': '★★★★★ (six components, most)', 'SPECS': '★★★★ (five components, strict)' },
+            { 'Dimension': 'Best for starting out', 'Single Step': '★★★★★ (ideal entry point)', 'RTF': '★★★★ (even lighter)', 'CO-STAR': '★★ (too many components)', 'SPECS': '★★ (too rigid)' },
+            { 'Dimension': 'Flexibility', 'Single Step': '★★★★ (general purpose)', 'RTF': '★★★★★ (most flexible)', 'CO-STAR': '★★★ (structured)', 'SPECS': '★★ (intentionally rigid)' },
+            { 'Dimension': 'Machine-usable output', 'Single Step': '★★★ (workable with constraints)', 'RTF': '★★ (not designed for this)', 'CO-STAR': '★★ (not designed for this)', 'SPECS': '★★★★★ (explicitly designed)' },
+            { 'Dimension': 'Voice/audience control', 'Single Step': '★★★ (can specify in constraints)', 'RTF': '★★★ (Role helps)', 'CO-STAR': '★★★★★ (explicit Tone/Audience)', 'SPECS': '★ (not designed for voice)' },
+            { 'Dimension': 'Auditable reasoning', 'Single Step': '★★ (output only)', 'RTF': '★ (none)', 'CO-STAR': '★★ (none)', 'SPECS': '★ (output structure, not reasoning)' },
+          ],
+          columns: ['Dimension', 'Single Step', 'RTF', 'CO-STAR', 'SPECS'],
+        },
+        vsFrameworks: {
+          title: 'Single Step vs Specific Frameworks: Key Differences',
+          content: ['**Use this to decide if Single Step is enough or if a specialized framework makes sense.**'],
+          items: [
+            '**Single Step vs [RTF](/prompt-engineering/rtf-framework):** RTF is lighter (three components: Role, Task, Format). Use RTF for routine, repetitive tasks. Use Single Step for novel or complex tasks that need more context and constraints.',
+            '**Single Step vs [CO-STAR](/prompt-engineering/co-star-framework):** CO-STAR explicitly separates Tone, Audience, and Style. Use Single Step for general tasks. Use CO-STAR when multiple constraints (goal, style, audience, tone) need independent control.',
+            '**Single Step vs [SPECS](/prompt-engineering/specs-framework):** SPECS emphasizes examples and strict output format. Use Single Step for general output. Use SPECS when the output must feed into a system and schema consistency is critical.',
+            '**Single Step vs [TRACE](/prompt-engineering/trace-framework):** TRACE compartmentalizes reasoning into five stages. Use Single Step for straightforward tasks. Use TRACE when you need to justify or audit the reasoning, especially for high-stakes decisions.',
+            '**Single Step + Google\'s Guide:** Single Step + few-shot examples (from Google\'s Prompting Guide) = stronger specification for specialized tasks. Add role, constraints, and examples to Single Step when baseline quality is insufficient.',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           items: [
@@ -24729,6 +24786,30 @@ zh: {
             {
               q: 'Is the Single Step Prompt Method the same as zero-shot prompting?',
               a: 'Not quite. Zero-shot means asking the model to do something without examples. The Single Step Method is a structural approach (packing five building blocks into one message) that can be used with or without examples. Zero-shot single-step prompts are one common variation.',
+            },
+            {
+              q: 'When should I add few-shot examples to a Single Step prompt?',
+              a: 'Add examples when the task has a specific pattern or format that is hard to describe in words. For example, if you want exact JSON structure, show 2–3 example input-output pairs. If the task is straightforward (summarize, translate, explain), examples are optional. Test without examples first; add them if quality is insufficient.',
+            },
+            {
+              q: 'How do I know if my single step prompt is good enough?',
+              a: 'Test it on 3–5 representative examples. If output quality is consistent (same structure, same tone, same depth), your prompt is good. If results vary widely, refine the constraints or context. Once you pass the test set, save it as a template.',
+            },
+            {
+              q: 'Can I convert a multi-step prompt to single step?',
+              a: 'Yes. Take your multi-step conversation and distill the final requirement into one comprehensive instruction that includes all constraints, context, and examples discovered in the conversation. This usually produces better results because the model sees everything upfront.',
+            },
+            {
+              q: 'What should I do if my single step prompt is too long?',
+              a: 'Long prompts are fine if every line adds information. If you have redundancy or unnecessary details, remove them. If you have 500+ words and it all matters, that is acceptable—clarity is more important than brevity. You pay per token, so optimize word choice, not word count.',
+            },
+            {
+              q: 'How do I update a single step prompt when requirements change?',
+              a: 'Version your prompts (v1, v2, etc.) in PromptQuorum. When requirements change, create a new version instead of modifying the old one. Test the new version on your test set. If it performs better, make it the new default; keep the old version for historical reference.',
+            },
+            {
+              q: 'Can a single step prompt work for multiple models?',
+              a: 'Yes—that is the strength of the method. A single-step prompt dispatched to GPT-4o, Claude, and Gemini usually produces consistent results. Differences may occur, but they are usually small. If one model diverges, you can create a model-specific variant in PromptQuorum.',
             },
           ],
         },
@@ -25036,11 +25117,80 @@ zh: {
           ],
         },
 
+        examples: {
+          title: '5 APE Prompt Examples With Explanations',
+          content: [
+            '**The following five examples show how to apply the APE Framework across different domains.** Each example includes the full prompt structure and an explanation of what makes it effective.',
+          ],
+          numberedItems: [
+            '**Product Launch Email**\nPrompt: "You are a SaaS product marketer. Analyze: List the target audience, their pain points, and the 3 key benefits of our new analytics dashboard. Plan: Outline the email structure in bullet points (hook, 3 benefits, CTA). Execute: Write the final announcement email in under 220 words, professional tone, with subject line and preview text."\nWhy it works: The model surfaces its understanding before writing, catching misalignments before they affect the final output.',
+            '**Code Review**\nPrompt: "You are a senior TypeScript engineer. Analyze: Review this component for type safety, state management, and component design issues. List all problems found. Plan: Prioritize the issues by severity (critical/warning/info) and outline your review structure. Execute: Write a structured code review using this format: [Critical Issues] [Warnings] [Suggestions]. Be specific with line numbers."\nWhy it works: The analysis stage prevents the model from skipping to solutions before fully understanding the problems.',
+            '**Competitive Analysis**\nPrompt: "You are a B2B SaaS analyst. Analyze: Review these 3 competitor websites and identify their main positioning, target customer, and pricing strategy. Plan: Structure the comparison across 5 dimensions: target market, pricing, key features, messaging, weaknesses. Execute: Produce a 400-word competitive analysis with a summary table comparing all three on the 5 dimensions."\nWhy it works: The explicit plan ensures the model compares all dimensions consistently rather than producing an unstructured narrative.',
+            '**Technical Documentation**\nPrompt: "You are a technical writer. Analyze: Review this API endpoint specification and list what needs to be documented (parameters, error codes, examples, edge cases). Plan: Outline the documentation sections in order. Execute: Write complete developer documentation for this endpoint, using the standard format: Overview, Authentication, Parameters, Request/Response Examples, Error Codes."\nWhy it works: The analysis step uncovers documentation gaps before writing begins.',
+            '**Strategy Memo**\nPrompt: "You are a product strategy consultant. Analyze: Review this product idea brief and identify the core problem, key assumptions, risks, and missing information. Plan: Outline the sections of a strategy memo that addresses all identified gaps. Execute: Write a 600-word strategy memo with sections: Problem Statement, Key Assumptions, Risks, Recommended Approach, Success Metrics."\nWhy it works: The planning stage ensures the memo structure responds to the actual gaps uncovered in analysis, not just a generic template.',
+          ],
+        },
+
+        historyAndDeveloper: {
+          title: 'History and Origin of the APE Framework',
+          content: [
+            '**The APE Framework (Analyze, Plan, Execute) emerged from the broader chain-of-thought prompting research that gained momentum in 2022–2023.** The underlying principle — that models perform better when reasoning is made explicit and structured — was established by Wei et al. at Google Brain in their foundational 2022 paper "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models."',
+            'The three-stage Analyze–Plan–Execute structure itself was developed and refined by the prompt engineering community as a practical, named pattern that maps the implicit reasoning in chain-of-thought into three labeled, auditable stages. The naming coincidentally overlaps with "Automatic Prompt Engineer" (a 2022 Stanford research project by Zhou et al. on automated prompt optimization) — these are distinct concepts.',
+            '**Note on disambiguation:** When practitioners refer to "APE Framework" in prompt structuring contexts, they mean Analyze–Plan–Execute. The academic "APE" (Automatic Prompt Engineer) is a research technique for automated prompt generation and is unrelated to this framework.',
+          ],
+        },
+
+        whenNotToUse: {
+          title: 'When the APE Framework Is Not the Right Choice',
+          content: [
+            '**APE adds overhead that is not always justified.** The three-stage structure works well for complex tasks but creates unnecessary friction for simpler use cases.',
+          ],
+          rows: [
+            { 'Situation': 'Simple factual questions', 'Why APE is wrong': 'No reasoning audit needed; direct answer is faster and cleaner', 'Better alternative': 'Single Step Prompt' },
+            { 'Situation': 'Creative writing (open brief)', 'Why APE is wrong': 'Rigid Analyze–Plan slows creative exploration', 'Better alternative': 'CRAFT or CO-STAR' },
+            { 'Situation': 'Iterative drafts needing refinement', 'Why APE is wrong': 'APE is for first-pass generation; RISEN handles revision cycles better', 'Better alternative': 'RISEN Framework' },
+            { 'Situation': 'Strict JSON or schema output', 'Why APE is wrong': 'APE doesn\'t enforce output contracts well; SPECS provides scope, constraints, and steps', 'Better alternative': 'SPECS Framework' },
+            { 'Situation': 'Quick summaries or recaps', 'Why APE is wrong': 'Three stages are overkill when you need one short output quickly', 'Better alternative': 'RTF Framework' },
+            { 'Situation': 'Multi-turn dialogue or chat', 'Why APE is wrong': 'APE is a single-message pattern; back-and-forth refinement needs a different approach', 'Better alternative': 'RISEN or conversational prompting' },
+          ],
+          columns: ['Situation', 'Why APE is wrong', 'Better alternative'],
+        },
+
+        frameworkComparison: {
+          title: 'APE vs Other Prompt Frameworks: Comparison Table',
+          content: [
+            '**APE sits in the middle ground between simple single-step frameworks and highly structured multi-component systems.** This table compares APE to the three closest alternatives on key dimensions.',
+          ],
+          rows: [
+            { 'Dimension': 'Number of components', 'APE': '3 (Analyze, Plan, Execute)', 'CO-STAR': '6 (Context, Objective, Style, Tone, Audience, Response)', 'TRACE': '5 (Think, Reason, Analyze, Conclude, Explain)', 'Single Step': '1 (complete instruction)' },
+            { 'Dimension': 'Primary purpose', 'APE': 'Visible, structured reasoning', 'CO-STAR': 'Multi-constraint communication', 'TRACE': 'Auditable, explainable decisions', 'Single Step': 'Efficient, complete instructions' },
+            { 'Dimension': 'Reasoning visibility', 'APE': 'High — model shows analysis and plan', 'CO-STAR': 'Low — focused on output structure', 'TRACE': 'Very high — all 5 stages visible', 'Single Step': 'None — output only' },
+            { 'Dimension': 'Best task type', 'APE': 'Complex analysis, research, code review', 'CO-STAR': 'Documentation, guides, multi-constraint content', 'TRACE': 'Decisions needing justification', 'Single Step': 'Well-defined, routine tasks' },
+            { 'Dimension': 'Overhead', 'APE': 'Medium', 'CO-STAR': 'Medium-high', 'TRACE': 'High', 'Single Step': 'Low' },
+            { 'Dimension': 'PromptQuorum integration', 'APE': 'Built-in framework', 'CO-STAR': 'Built-in framework', 'TRACE': 'Built-in framework', 'Single Step': 'Default framework' },
+          ],
+          columns: ['Dimension', 'APE', 'CO-STAR', 'TRACE', 'Single Step'],
+        },
+
+        vsFrameworks: {
+          title: 'APE vs Specific Frameworks: Key Differences',
+          content: [
+            '**Before choosing APE, compare it to the most commonly confused alternatives:**',
+          ],
+          items: [
+            '**APE vs [Single Step](/prompt-engineering/single-prompt-method):** Single Step is for tasks where you already know the output format and don\'t need reasoning visibility. APE adds two stages (Analyze, Plan) that expose reasoning before execution. Use Single Step for efficiency; use APE when catching reasoning errors matters more than speed.',
+            '**APE vs [TRACE](/prompt-engineering/trace-framework):** Both expose reasoning, but TRACE has 5 stages (Think, Reason, Analyze, Conclude, Explain) and is better for decision-making and justification. APE has 3 stages and is better for task execution. Use TRACE when you need to justify a decision; use APE when you need to execute a plan.',
+            '**APE vs [CO-STAR](/prompt-engineering/co-star-framework):** CO-STAR defines 6 structural parameters (Context, Objective, Style, Tone, Audience, Response) for communication tasks. APE defines 3 reasoning stages for complex tasks. They serve different purposes and are rarely interchangeable.',
+            '**APE vs [CRAFT](/prompt-engineering/craft-framework):** CRAFT is designed for creative and marketing content (Context, Role, Audience, Format, Tone). APE is for analytical and structured tasks. If you\'re writing content for audiences, CRAFT wins; if you\'re analyzing data or reviewing code, APE wins.',
+            '**APE vs [SPECS](/prompt-engineering/specs-framework):** SPECS provides a specification with Scope, Purpose, Examples, Constraints, and Steps — best for machine-usable, structured output. APE reveals reasoning at each stage but doesn\'t enforce strict output contracts. Use SPECS when downstream systems consume the output; use APE when humans review the reasoning.',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           items: [
             '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — The foundations of designing effective instructions for AI models, and where the APE Framework fits in the broader landscape.',
-            '[The Single Step Prompt Method](/prompt-engineering/the-single-step-prompt-method) — A simpler, single-message framework when you don\'t need visibility into the model\'s reasoning.',
+            '[The Single Step Prompt Method](/prompt-engineering/single-prompt-method) — A simpler, single-message framework when you don\'t need visibility into the model\'s reasoning.',
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — A flexible approach to capturing intermediate reasoning within a single output, compared to APE\'s three explicit stages.',
             '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — How to save and manage your APE prompts as reusable templates for your team.',
           ],
@@ -25059,7 +25209,7 @@ zh: {
             },
             {
               q: 'How do I write an APE prompt?',
-              a: 'Start with a base template: "You are [role]. First, **Analyze** [the problem, constraints, and missing info]. Then, **Plan** [your approach in 3–5 steps]. Finally, **Execute** [the output in this format]." Customize with your domain details, then test on a few examples.',
+              a: 'Start with a base template: "You are [role]. First, Analyze [the problem, constraints, and missing info]. Then, Plan [your approach in 3–5 steps]. Finally, Execute [the output in this format]." Customize with your domain details, then test on a few examples.',
             },
             {
               q: 'How do I use the APE Framework in PromptQuorum?',
@@ -25080,6 +25230,34 @@ zh: {
             {
               q: 'Is "APE" the same as "Automatic Prompt Engineer"?',
               a: 'No. In this article, APE stands for Analyze, Plan, Execute — a prompt structure framework. Automatic Prompt Engineer (also called APE) is a separate research project from Stanford on using AI to automatically optimize prompts.',
+            },
+            {
+              q: 'Can I use APE with local models like Ollama or LM Studio?',
+              a: 'Yes. The APE structure works with any model that follows instructions — including local models running in Ollama or LM Studio. PromptQuorum supports dispatching APE prompts to local models alongside cloud models like GPT-4o and Claude.',
+            },
+            {
+              q: 'Does APE work for creative tasks?',
+              a: 'APE can technically be applied to creative tasks, but the structured Analyze–Plan stages can limit creative exploration. For creative writing, marketing copy, or open-ended brainstorming, use CRAFT or CO-STAR instead. APE is best for analytical and structured outputs.',
+            },
+            {
+              q: 'How does APE relate to few-shot prompting?',
+              a: 'APE and few-shot prompting are complementary. You can add examples to the Execute section of an APE prompt to anchor the output format. This combines APE\'s reasoning structure with few-shot demonstrations, which can improve accuracy on specialized tasks.',
+            },
+            {
+              q: 'How do I know if my APE prompt is working?',
+              a: 'A good APE prompt produces an Analyze section that correctly identifies the problem, a Plan section with logical, actionable steps, and an Execute section that follows the plan. If the Analyze section is vague or the Plan skips obvious steps, revise the prompt instructions before running it at scale.',
+            },
+            {
+              q: 'Can APE be combined with other frameworks?',
+              a: 'Yes. APE can be combined with other frameworks at different stages. Use CO-STAR to define the structural parameters, then embed APE reasoning stages within the Execute section. Or use APE for the initial generation and RISEN for the revision cycle.',
+            },
+            {
+              q: 'Is APE suitable for beginners?',
+              a: 'APE is straightforward enough for beginners. The three stages (Analyze, Plan, Execute) map to how most people naturally think about tasks. The learning curve is minimal — just add these three labeled instructions to any prompt you would already write.',
+            },
+            {
+              q: 'How does PromptQuorum\'s APE integration work in practice?',
+              a: 'In PromptQuorum, you select APE as the framework, fill the three input fields, and click run. The app assembles a complete three-stage prompt, dispatches it to multiple models simultaneously, and displays the results side by side. You can then compare how different models handled the Analyze and Plan stages.',
             },
           ],
         },
@@ -25411,13 +25589,82 @@ zh: {
           ],
         },
 
+        examples: {
+          title: '5 CRAFT Prompt Examples With Explanations',
+          content: [
+            '**The following five examples show how to apply the CRAFT Framework across different marketing and creative scenarios.**',
+          ],
+          numberedItems: [
+            '**LinkedIn Product Announcement**\nPrompt: "You are a B2B SaaS growth marketer. Context: We\'re launching an AI analytics dashboard that turns weekly support tickets into a one-page executive summary. Audience: Heads of Customer Success at Series A–C SaaS companies. Format: LinkedIn post, max 180 words, 3 short paragraphs followed by 3 bullets. Tone: Professional but conversational, no hype words."\nWhy it works: Every dimension of the brief is explicit — the model doesn\'t need to infer the channel, audience level, or tone.',
+            '**Email Newsletter Intro**\nPrompt: "You are a content strategist writing for a developer tools newsletter. Context: This week\'s edition covers new vector database benchmarks comparing Pinecone, Weaviate, and Qdrant. Audience: Senior engineers and architects who already use embeddings in production. Format: 90-word intro paragraph with a single hook sentence and 2 supporting sentences. Tone: Direct, no-nonsense, peer-to-peer."\nWhy it works: The Role (content strategist for devs) and Audience (senior engineers) together prevent overly general or introductory language.',
+            '**Landing Page Hero Section**\nPrompt: "You are a conversion copywriter. Context: PromptQuorum lets teams run the same AI prompt across GPT-4o, Claude, and Gemini simultaneously and compare results side by side. Audience: Product managers and AI-curious developers at companies already paying for AI tools. Format: Hero section copy with H1 (max 8 words), subheading (max 18 words), and 3-bullet value prop. Tone: Clear, specific, confident. Zero superlatives."\nWhy it works: The Format section (H1 word limit, subheading word limit, bullet count) produces usable copy without back-and-forth editing.',
+            '**Social Media Campaign — Twitter/X Thread**\nPrompt: "You are a developer advocate writing an educational thread. Context: Chain-of-thought prompting makes LLMs show their reasoning, leading to better accuracy on complex tasks. Audience: Developers curious about AI who follow prompt engineering trends but aren\'t deep experts. Format: Twitter thread, 5 tweets, each max 240 characters, numbered. Tweet 1 is the hook, tweets 2–4 explain the concept with a simple example, tweet 5 is a CTA to try it. Tone: Engaging, clear, no academic language."\nWhy it works: The Format breaks the thread structure down completely, so the model doesn\'t have to guess whether it should lead with a question, statement, or example.',
+            '**Customer Case Study Excerpt**\nPrompt: "You are a B2B content writer specializing in SaaS case studies. Context: A mid-market retail company reduced customer support response time by 40% using AI-generated ticket summaries from our product. Audience: Procurement managers and operations leads evaluating support automation tools. Format: 200-word case study excerpt covering situation, challenge, solution, and result. Include one direct quote from \'a support manager.\' Tone: Factual, professional, outcome-focused. No hype language."\nWhy it works: Specifying a fictional quote persona (\'a support manager\') without attributing it to a real person prevents hallucinations while giving the model license to make the excerpt feel authentic.',
+          ],
+        },
+
+        historyAndDeveloper: {
+          title: 'History and Origin of the CRAFT Framework',
+          content: [
+            '**The CRAFT Framework emerged from the prompt engineering community in 2023 as practitioners formalized what professional copywriters had always done in creative briefs.** The five components — Context, Role, Audience, Format, Tone — map directly to the fields that advertising agencies and content strategists use when briefing creative teams.',
+            'No single academic paper or researcher is credited with inventing CRAFT. The framework gained traction organically as marketers and content creators discovered that the same briefing structure they used for human writers also dramatically improved AI output quality. By giving the model the same information a human copywriter would expect, they found consistency and brand alignment improved significantly.',
+            'CRAFT spread primarily through marketing and content creation communities in 2023–2024, appearing in various prompt engineering guides, LinkedIn articles, and creator courses. It is distinct from all other CRAFT acronyms in business writing — when used in AI prompting, it specifically means Context, Role, Audience, Format, Tone.',
+          ],
+        },
+
+        whenNotToUse: {
+          title: 'When the CRAFT Framework Is Not the Right Choice',
+          content: [
+            '**CRAFT is purpose-built for creative and marketing tasks.** Outside of those use cases, it adds structure without adding value.',
+          ],
+          rows: [
+            { 'Situation': 'Code generation or review', 'Why CRAFT is wrong': 'Role/Audience/Tone add no value for technical output; schema and constraints matter more', 'Better alternative': 'SPECS or APE Framework' },
+            { 'Situation': 'Data extraction or JSON output', 'Why CRAFT is wrong': 'CRAFT doesn\'t define output schemas or step-by-step logic', 'Better alternative': 'SPECS Framework' },
+            { 'Situation': 'Decision analysis with justification', 'Why CRAFT is wrong': 'CRAFT doesn\'t expose reasoning; structured analysis requires visible steps', 'Better alternative': 'TRACE or APE Framework' },
+            { 'Situation': 'Iterative draft improvement', 'Why CRAFT is wrong': 'CRAFT is for initial generation, not revision cycles', 'Better alternative': 'RISEN Framework' },
+            { 'Situation': 'Quick, one-off factual questions', 'Why CRAFT is wrong': 'Five components are overkill for simple, clear queries', 'Better alternative': 'RTF or Single Step' },
+            { 'Situation': 'Technical documentation', 'Why CRAFT is wrong': 'Audience/Tone help but CRAFT misses objective and response format control', 'Better alternative': 'CO-STAR Framework' },
+          ],
+          columns: ['Situation', 'Why CRAFT is wrong', 'Better alternative'],
+        },
+
+        frameworkComparison: {
+          title: 'CRAFT vs Other Prompt Frameworks: Comparison Table',
+          content: [
+            '**CRAFT is purpose-built for creative content, which makes it easy to compare to the alternatives:**',
+          ],
+          rows: [
+            { 'Dimension': 'Number of components', 'CRAFT': '5 (Context, Role, Audience, Format, Tone)', 'CO-STAR': '6 (adds Objective and Response)', 'RTF': '3 (Role, Task, Format)', 'APE': '3 (Analyze, Plan, Execute)' },
+            { 'Dimension': 'Primary purpose', 'CRAFT': 'Creative and marketing content', 'CO-STAR': 'Multi-constraint structured tasks', 'RTF': 'Quick, routine tasks', 'APE': 'Complex reasoning and analysis' },
+            { 'Dimension': 'Audience control', 'CRAFT': 'Explicit field', 'CO-STAR': 'Explicit field', 'RTF': 'Via Role only', 'APE': 'None — not a focus' },
+            { 'Dimension': 'Reasoning visibility', 'CRAFT': 'None', 'CO-STAR': 'None', 'RTF': 'None', 'APE': 'High — shows analysis and plan' },
+            { 'Dimension': 'Best use case', 'CRAFT': 'LinkedIn posts, emails, landing pages', 'CO-STAR': 'Documentation, guides, structured content', 'RTF': 'Recaps, quick reports, simple copy', 'APE': 'Code review, research, strategic memos' },
+            { 'Dimension': 'PromptQuorum integration', 'CRAFT': 'Built-in framework', 'CO-STAR': 'Built-in framework', 'RTF': 'Built-in framework', 'APE': 'Built-in framework' },
+          ],
+          columns: ['Dimension', 'CRAFT', 'CO-STAR', 'RTF', 'APE'],
+        },
+
+        vsFrameworks: {
+          title: 'CRAFT vs Specific Frameworks: Key Differences',
+          content: [
+            '**Before choosing CRAFT, compare it to the most commonly confused alternatives:**',
+          ],
+          items: [
+            '**CRAFT vs [CO-STAR](/prompt-engineering/co-star-framework):** CO-STAR adds Objective and Response as separate fields, making it better for tasks with explicit goals and output requirements. CRAFT is simpler and more natural for copywriters. If you\'re writing docs or educational guides where you need to define the exact output format and goal separately, use CO-STAR.',
+            '**CRAFT vs [RTF](/prompt-engineering/rtf-framework):** RTF (Role, Task, Format) is CRAFT\'s lightweight sibling. RTF drops Audience and splits the task into Role+Task+Format. Use RTF when you don\'t need explicit audience targeting — quick recaps, internal summaries, or simple copy. Use CRAFT when the audience is critical to the tone and language.',
+            '**CRAFT vs [APE](/prompt-engineering/ape-framework):** APE (Analyze, Plan, Execute) is for complex analytical tasks; CRAFT is for creative tasks. They rarely overlap. If you\'re generating marketing copy, use CRAFT. If you\'re reviewing a strategy proposal, use APE.',
+            '**CRAFT vs [Single Step](/prompt-engineering/single-prompt-method):** Single Step combines everything into one comprehensive instruction. CRAFT is Single Step with five named fields. Use CRAFT when you want labeled, reusable components; use Single Step when you prefer writing a single coherent paragraph.',
+            '**CRAFT vs [SPECS](/prompt-engineering/specs-framework):** SPECS is for structured, machine-usable output (JSON, reports). CRAFT is for readable, human-facing content (copy, posts, emails). They don\'t compete — different domains entirely.',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           items: [
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — The foundations of designing effective instructions for AI models, and where the CRAFT Framework fits in the broader landscape.',
-            '[The Single Step Prompt Method](/prompt-engineering/the-single-step-prompt-method) — A simpler framework for well-defined, non-creative tasks where audience and tone don\'t need explicit specification.',
-            '[The APE Framework](/prompt-engineering/ape-framework) — A reasoning-focused framework for complex analysis and planning tasks where you want to see the model\'s intermediate thinking.',
-            '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — How to save and manage your CRAFT templates as reusable assets for your team and recurring workflows.',
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — The foundations of designing effective instructions for AI models.',
+            '[The CO-STAR Framework](/prompt-engineering/co-star-framework) — Six components for multi-constraint tasks with explicit objectives.',
+            '[The APE Framework](/prompt-engineering/ape-framework) — Reasoning-focused framework for analysis and planning tasks.',
+            '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — How to save and manage your CRAFT templates as reusable assets.',
           ],
         },
 
@@ -25434,27 +25681,55 @@ zh: {
             },
             {
               q: 'How do I write a CRAFT prompt?',
-              a: 'Define each of the five components and combine them into a single, structured instruction. Start with: "[Role]. Context: [background]. Audience: [description]. Format: [output structure]. Tone: [style]." Customize with your specific details.',
+              a: 'Define each component: "[Role]. Context: [background]. Audience: [description]. Format: [output structure]. Tone: [style]." Keep each section specific and concise.',
             },
             {
               q: 'How do I use the CRAFT Framework in PromptQuorum?',
-              a: 'Select the CRAFT option when creating a prompt in PromptQuorum. Fill in the Context, Role, Audience, Format, and Tone fields through the structured UI, run across all models, then save as a template for reuse.',
+              a: 'Select the CRAFT option in PromptQuorum, fill in all five fields, run across models, then save as a template.',
             },
             {
-              q: 'When should I use CRAFT vs Single Step prompting?',
-              a: 'Use CRAFT when creating marketing or creative content and you need explicit control over brand voice, audience targeting, and output format. Use Single Step for straightforward, well-defined tasks where tone and audience are less critical.',
+              q: 'When should I use CRAFT vs Single Step?',
+              a: 'Use CRAFT when you need explicit audience targeting and tone control. Use Single Step for straightforward tasks where these dimensions are less critical.',
             },
             {
-              q: 'How is CRAFT different from the CO-STAR framework?',
-              a: 'CRAFT (5 components) is optimized for marketing and creative content. CO-STAR (6 components) is more general-purpose with separate fields for Objective and Response. Use CRAFT for social media and copy; use CO-STAR for complex, structured tasks.',
+              q: 'How is CRAFT different from CO-STAR?',
+              a: 'CRAFT (5 components) is for marketing and creative content. CO-STAR (6 components) adds separate Objective and Response fields, making it better for structured documentation or complex tasks.',
             },
             {
               q: 'How long should a CRAFT prompt be?',
-              a: 'CRAFT prompts typically range from 150–300 words. Each component (Context, Role, Audience, Format, Tone) should be 20–60 words, depending on complexity. Keep it specific but concise—every word should add information.',
+              a: 'Typically 150–300 words total. Each component should be 20–60 words — specific but concise.',
             },
             {
               q: 'Is CRAFT a universal prompt framework?',
-              a: 'No. CRAFT is optimized for creative and marketing tasks where audience, tone, and brand voice matter. For technical tasks, analysis, or reasoning-heavy work, use frameworks like APE or Single Step instead.',
+              a: 'No. CRAFT is for creative and marketing content. For technical tasks or analysis, use APE, TRACE, or SPECS.',
+            },
+            {
+              q: 'Can CRAFT work with local AI models like Ollama?',
+              a: 'Yes. CRAFT works with any instruction-following model, including local models in Ollama or LM Studio. PromptQuorum lets you dispatch CRAFT prompts to local and cloud models simultaneously.',
+            },
+            {
+              q: 'Does CRAFT include few-shot examples?',
+              a: 'By default no, but you can add examples in the Format or Context fields. Adding one good example alongside your CRAFT prompt significantly improves output consistency for specialized formats.',
+            },
+            {
+              q: 'How do I maintain brand voice with CRAFT across multiple pieces?',
+              a: 'Save a CRAFT template with your core brand settings (Role, Audience, Tone) pre-filled, then only change Context and Format for each new piece. PromptQuorum\'s prompt library supports exactly this pattern.',
+            },
+            {
+              q: 'Can I combine CRAFT with other frameworks?',
+              a: 'Yes. A common pattern is using CRAFT for the initial draft and RISEN for revision cycles. You can also embed CRAFT components inside CO-STAR\'s Style and Tone fields for more complex tasks.',
+            },
+            {
+              q: 'What is the biggest mistake people make with CRAFT?',
+              a: 'Leaving Audience too generic (e.g., "general users" instead of "non-technical HR managers at mid-market companies"). The more specific the Audience field, the better the tone calibration.',
+            },
+            {
+              q: 'How does PromptQuorum implement CRAFT specifically?',
+              a: 'PromptQuorum provides five dedicated input fields (Context, Role, Audience, Format, Tone), assembles them into a structured prompt, and dispatches to multiple models. Results are displayed side by side so you can compare how GPT-4o, Claude, and Gemini handle the same creative brief.',
+            },
+            {
+              q: 'Does the order of CRAFT components matter?',
+              a: 'Not strictly, but starting with Role (model identity) then Context (background) before Audience and Format tends to produce better results. The model benefits from knowing who it is before processing what it needs to do.',
             },
           ],
         },
@@ -25812,6 +26087,75 @@ zh: {
             '**Run the prompt across multiple models** such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to compare outputs and choose the best result. Save your CO-STAR prompt as a template for future use with the same or similar tasks.',
           ],
         },
+        examples: {
+          title: '5 CO-STAR Prompt Examples With Explanations',
+          content: [
+            '**The following five examples show how CO-STAR applies across different domains requiring multi-constraint control.**',
+          ],
+          numberedItems: [
+            '**Product Documentation**\nPrompt: "Context: We\'re launching a REST API for developers to automate customer data exports. Objective: Write a complete Getting Started guide that reduces time-to-first-request to under 10 minutes. Style: Step-by-step numbered sections with H2 headings, code blocks for all requests. Tone: Technical and precise, but friendly — avoid jargon without explanation. Audience: Back-end developers familiar with REST APIs but new to our platform. Response: 600–800 word guide with 5 sections: Overview, Authentication, First Request, Common Errors, Next Steps."\nWhy it works: Objective and Response are separate fields — the model knows both the goal (10-min onboarding) and the exact output shape (5 sections, 600–800 words).',
+            '**Educational Explainer**\nPrompt: "Context: An EdTech company that teaches Python to non-programmers. Objective: Explain list comprehensions in a way that makes students feel capable, not intimidated. Style: Conversational narrative with a real-world analogy, followed by 2 progressively complex examples. Tone: Encouraging and accessible. No condescension. Audience: Adults with zero programming background taking their first Python course. Response: 400-word explanation followed by 2 annotated code examples with inline comments."\nWhy it works: Style (analogy + examples) and Tone (encouraging) are separated so each is optimized independently.',
+            '**Internal Strategy Memo**\nPrompt: "Context: Q3 planning for a B2B SaaS company — two product roadmap directions under debate. Objective: Present both options objectively, then recommend one based on customer impact and engineering effort. Style: Executive memo format with H2 sections per option, pros/cons table. Tone: Neutral and analytical — no advocacy language until the Recommendation section. Audience: C-suite and VP-level stakeholders who will make the final call. Response: 700-word memo with sections: Background, Option A, Option B, Recommendation, Next Steps."\nWhy it works: The Tone instruction (neutral until Recommendation) prevents the model from editorializing too early.',
+            '**Help Center Article**\nPrompt: "Context: A customer support team building a self-service help center for a project management SaaS. Objective: Explain how to set up recurring task automation so customers can reduce manual work by at least 50%. Style: Short paragraphs (max 3 sentences), numbered steps for setup, bullet list for common issues. Tone: Friendly, practical, assumes moderate technical familiarity. Audience: Operations managers and team leads who use the product daily but aren\'t developers. Response: 350-word article with: Intro, Setup (numbered), Troubleshooting (bullets), Related Links."\nWhy it works: Response defines a full article schema upfront, so the model builds toward a usable deliverable.',
+            '**Email Campaign**\nPrompt: "Context: A cybersecurity SaaS company running an end-of-quarter nurture campaign for mid-funnel prospects who downloaded a whitepaper 30 days ago. Objective: Move recipients one step closer to requesting a demo by demonstrating specific ROI outcomes. Style: Short email, 3 paragraphs, no headers, plain text-friendly. Tone: Confident and peer-level — prospects are CISOs and security managers. Don\'t be salesy. Audience: Security decision-makers at enterprise companies who evaluate tools analytically. Response: Subject line + preview text + email body under 150 words + single CTA."\nWhy it works: Every dimension is filled — the model can\'t default to generic marketing language because Audience and Tone constrain it precisely.',
+          ],
+        },
+
+        historyAndDeveloper: {
+          title: 'History and Origin of the CO-STAR Framework',
+          content: [
+            '**The CO-STAR Framework was developed and popularized within the Singapore prompt engineering community, primarily through the work of Sheila Teo, a data scientist who published a detailed breakdown of the framework in 2023.** The framework gained significant traction after a widely read Medium article and LinkedIn post explained how CO-STAR improved output consistency for Gemini and GPT-4 prompts in professional contexts.',
+            'The framework builds on earlier prompt engineering research into structured instructions, most notably the findings of Brown et al. (2020) on few-shot learning and the broader practice of explicit role and task specification. The specific six-component CO-STAR structure — separating Objective and Response as distinct fields — was the key innovation over simpler frameworks like CRAFT, which collapsed these into a single Format field.',
+            'By 2024, CO-STAR had been referenced in multiple prompt engineering courses, enterprise AI training programs, and practitioner communities. PromptQuorum integrated CO-STAR as a built-in framework based on direct user feedback identifying it as the most commonly used multi-component framework after the Single Step method.',
+          ],
+        },
+
+        whenNotToUse: {
+          title: 'When the CO-STAR Framework Is Not the Right Choice',
+          content: [
+            '**CO-STAR\'s six components are powerful but heavy.** For simpler tasks, this overhead creates friction without improving output quality.',
+          ],
+          rows: [
+            { 'Situation': 'Quick factual lookup or simple query', 'Why CO-STAR is wrong': 'Six fields are overkill for a single-sentence answer', 'Better alternative': 'Single Step or RTF' },
+            { 'Situation': 'Code generation or data extraction', 'Why CO-STAR is wrong': 'CO-STAR lacks scope constraints, examples, and step definitions needed for machine-usable output', 'Better alternative': 'SPECS Framework' },
+            { 'Situation': 'Iterative document revision', 'Why CO-STAR is wrong': 'CO-STAR is for first-pass generation, not structured revision cycles', 'Better alternative': 'RISEN Framework' },
+            { 'Situation': 'Pure reasoning audit or decision analysis', 'Why CO-STAR is wrong': 'CO-STAR doesn\'t expose reasoning steps; analysis tasks benefit from visible logic', 'Better alternative': 'TRACE or APE Framework' },
+            { 'Situation': 'Short team communication (chat, email recap)', 'Why CO-STAR is wrong': 'Three-component RTF is faster and sufficient for single-purpose messages', 'Better alternative': 'RTF Framework' },
+            { 'Situation': 'Exploratory brainstorming or ideation', 'Why CO-STAR is wrong': 'Tight Response constraints block creative divergence', 'Better alternative': 'CRAFT without Format/Response constraints' },
+          ],
+          columns: ['Situation', 'Why CO-STAR is wrong', 'Better alternative'],
+        },
+
+        frameworkComparison: {
+          title: 'CO-STAR vs Other Prompt Frameworks: Comparison Table',
+          content: [
+            '**CO-STAR is the most comprehensive communication framework — compare it to the closest alternatives:**',
+          ],
+          rows: [
+            { 'Dimension': 'Components', 'CO-STAR': '6 (Context, Objective, Style, Tone, Audience, Response)', 'CRAFT': '5 (Context, Role, Audience, Format, Tone)', 'SPECS': '5 (Scope, Purpose, Examples, Constraints, Steps)', 'RTF': '3 (Role, Task, Format)' },
+            { 'Dimension': 'Explicit goal field', 'CO-STAR': '✓ Objective', 'CRAFT': '✗ (goal implied in Role)', 'SPECS': '✓ Purpose', 'RTF': '✗ (implied in Task)' },
+            { 'Dimension': 'Explicit output format field', 'CO-STAR': '✓ Response', 'CRAFT': '✓ Format', 'SPECS': '✓ Constraints + Steps', 'RTF': '✓ Format' },
+            { 'Dimension': 'Audience targeting', 'CO-STAR': '✓ Audience field', 'CRAFT': '✓ Audience field', 'SPECS': '✗', 'RTF': '✗' },
+            { 'Dimension': 'Best for', 'CO-STAR': 'Documentation, guides, multi-constraint content', 'CRAFT': 'Marketing copy, social media', 'SPECS': 'Machine-readable output, data extraction', 'RTF': 'Quick routine tasks' },
+            { 'Dimension': 'PromptQuorum built-in', 'CO-STAR': '✓', 'CRAFT': '✓', 'SPECS': '✓', 'RTF': '✓' },
+          ],
+          columns: ['Dimension', 'CO-STAR', 'CRAFT', 'SPECS', 'RTF'],
+        },
+
+        vsFrameworks: {
+          title: 'CO-STAR vs Specific Frameworks: Key Differences',
+          content: [
+            '**Use these comparisons to choose correctly between CO-STAR and the most commonly confused alternatives:**',
+          ],
+          items: [
+            '**CO-STAR vs [CRAFT](/prompt-engineering/craft-framework):** CRAFT has 5 components (drops Objective, combines Format+Response). Use CRAFT for pure marketing and copywriting where the goal is implicit in the role. Use CO-STAR when the goal and output format need to be independent, explicit fields — for documentation, education, or complex briefs.',
+            '**CO-STAR vs [RTF](/prompt-engineering/rtf-framework):** RTF (Role, Task, Format) is CO-STAR\'s minimal sibling. Use RTF for quick, routine tasks. Upgrade to CO-STAR when audience, tone, and objective all need separate control — typically for content that will be read by a specific audience with specific expectations.',
+            '**CO-STAR vs [SPECS](/prompt-engineering/specs-framework):** SPECS is for machine-usable structured output (JSON, schemas, fixed tables). CO-STAR is for human-readable content. Use SPECS when a downstream system will consume the output. Use CO-STAR when a human reader is the target.',
+            '**CO-STAR vs [APE](/prompt-engineering/ape-framework):** APE structures reasoning (Analyze, Plan, Execute). CO-STAR structures the output parameters. Use APE when you need the model to think through a complex problem. Use CO-STAR when you already know the goal and need to control how the output is shaped.',
+            '**CO-STAR vs [RISEN](/prompt-engineering/risen-framework):** RISEN is a revision framework. CO-STAR is a generation framework. Typical workflow: use CO-STAR to generate the first draft, then RISEN to refine it through structured review cycles.',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           content: [
@@ -25858,6 +26202,30 @@ zh: {
             {
               q: 'Is CO-STAR the same as STAR or other similar frameworks?',
               a: 'No. CO-STAR is distinct: it includes Context and Objective at the start (unlike some STAR frameworks) and adds Tone and Audience as separate components. Other frameworks like STAR or S.T.A.R. have different structures and purposes. Always verify the exact components and definitions of a framework before adopting it for your team or workflow.',
+            },
+            {
+              q: 'Can I combine CO-STAR with other frameworks?',
+              a: 'Yes. A common pattern is to use CO-STAR for initial generation and then apply RISEN (Refine, Inspect, Evaluate, Next steps) for structured revision cycles. You can also use CO-STAR with reasoning frameworks like APE by including a "think through the steps" instruction in the Context or Style components. The key is clarity: document which framework you are using and in what order to avoid confusion with your team.',
+            },
+            {
+              q: 'How does CO-STAR perform with local models like Ollama or LM Studio?',
+              a: 'CO-STAR works well with local models because it is purely structural—it does not depend on any specific model\'s capabilities or limitations. Smaller local models often benefit from CO-STAR\'s explicitness because they have less in-context learning ability. When using Ollama or LM Studio, the six components (Context, Objective, Style, Tone, Audience, Response) provide the scaffolding that helps smaller models stay on track.',
+            },
+            {
+              q: 'What if I do not have a clear Audience in mind?',
+              a: 'Define one. Even if your immediate use case is internal, describe the audience as accurately as possible: "internal engineers with 5+ years Python experience" or "marketing team members with no AI background." If you truly cannot narrow it down, write "diverse audience with mixed technical backgrounds" and adjust your Style and Tone accordingly. The Audience component exists precisely to prevent vague outputs.',
+            },
+            {
+              q: 'Should I use the same CO-STAR prompt across all models?',
+              a: 'Start with the same CO-STAR prompt across all models—that is the value of using PromptQuorum. Compare the outputs. If one model consistently outperforms others, you can create model-specific variants by tweaking the Response or Style components. But begin with one CO-STAR prompt dispatched to multiple models and iterate from there.',
+            },
+            {
+              q: 'How do I know if a CO-STAR prompt is working?',
+              a: 'Test across multiple models and check: (1) Does every output meet the Response specification? (2) Is the tone consistent with the Tone component? (3) Does the content match the Audience level? (4) Is the structure (Style) preserved? If all four are "yes," your CO-STAR prompt is working. If not, revise the component that does not align and rerun. PromptQuorum makes A/B testing easy by dispatching to multiple models simultaneously.',
+            },
+            {
+              q: 'Can CO-STAR handle very complex tasks with many constraints?',
+              a: 'CO-STAR is designed for complex, multi-constraint tasks, but there are limits. If you have more than 10–15 major constraints, consider breaking the task into two smaller CO-STAR prompts (e.g., one for generation, one for validation using RISEN). Alternatively, use the Context and Style components to structure constraints logically: group them by type (format rules, tone rules, content rules) so the model can process them systematically.',
             },
           ],
         },
@@ -26082,6 +26450,63 @@ zh: {
             '**Run the SPECS prompt across multiple models** such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to compare outputs and verify structure consistency. Save as a template for reuse.',
           ],
         },
+        examples: {
+          title: '5 SPECS Prompt Examples With Explanations',
+          content: ['**The following five examples show the SPECS Framework applied to real workflows, demonstrating how structure reduces ambiguity and improves output quality across models.**'],
+          numberedItems: [
+            '**Customer Email Classification**\nPrompt: "Scope: Analyze a single customer support email. Classify issues into predefined categories and extract sentiment. Purpose: Enable automated routing of tickets to the correct support team. Examples: Input: \'I can\'t log in anymore\' Output: {\"issue_category\": \"authentication\", \"sentiment\": \"frustrated\", \"priority\": \"high\"}. Constraints: Output must be JSON. Valid categories: authentication, billing, feature_request, bug_report, other. Sentiment must be: positive, neutral, negative. Steps: 1) Read the email, 2) identify the main issue, 3) determine category, 4) infer sentiment from tone, 5) set priority based on urgency signals."\nWhy it works: The SPECS format forces the model to follow a repeatable process with fixed output fields, making the classification suitable for downstream API integration.',
+            '**Code Documentation Generation**\nPrompt: "Scope: Generate documentation for a single Python function based on its code and signature. Purpose: Create docstrings that other engineers can understand without reading the implementation. Examples: Input: `def calculate_tax(amount, rate): return amount * rate` Output: \'\'\'Calculate tax on a given amount.\\n\\nArgs:\\n    amount (float): The taxable amount in USD.\\n    rate (float): The tax rate as a decimal (e.g., 0.08 for 8%).\\n\\nReturns:\\n    float: The calculated tax amount.\\n\'\'\'. Constraints: Docstring must follow PEP 257. Include Args, Returns, and Raises sections. Max 150 words. Steps: 1) parse the function signature, 2) infer parameter and return types, 3) write one-sentence summary, 4) document each parameter, 5) add example usage."\nWhy it works: SPECS ensures generated documentation follows a consistent structure, making it easy for teams to integrate into automated documentation pipelines.',
+            '**Structured Interview Transcript Analysis**\nPrompt: "Scope: Analyze a customer interview transcript (500–2000 words). Extract insights about customer pain points, goals, and satisfaction. Purpose: Populate a structured data sheet that the product team uses in weekly synthesis meetings. Examples: Input: [transcript], Output: {\"pain_points\": [\"slow onboarding\"], \"goals\": [\"reduce setup time\"], \"satisfaction\": 7/10, \"actionable_feature_requests\": [\"API documentation\"]}. Constraints: Output as JSON. Pain points and goals as arrays of short phrases. Satisfaction as a single integer 1–10. Steps: 1) read full transcript, 2) identify pain points, 3) identify goals, 4) estimate satisfaction from tone and language, 5) extract specific feature requests."\nWhy it works: SPECS transforms an open-ended analysis task into a repeatable extraction workflow, enabling consistent data collection across many interviews.',
+            '**Product Feature Comparison Table**\nPrompt: "Scope: Compare the input product against three named competitors on five specified dimensions. Purpose: Generate a filled table for a marketing webpage that helps potential customers see the value difference. Examples: Input: \\"Compare our project management tool vs Asana, Monday.com, Jira on pricing, learning curve, integrations, mobile experience, reporting\\" Output: [table with 6 rows and 5 columns, filled with short phrases]. Constraints: Use one-phrase answers only (max 10 words per cell). No marketing superlatives (\\"best\\", \\"fastest\\"). Only factual, verifiable claims. Steps: 1) identify each product\'s key strengths on each dimension, 2) research pricing, 3) assess UI complexity, 4) list major integrations, 5) compare mobile experience, 6) evaluate built-in reporting tools."\nWhy it works: SPECS prevents marketing from overselling by enforcing factual answers and structure, while producing output that integrates directly into web templates.',
+            '**SQL Query Generation from Business Request**\nPrompt: "Scope: Convert a business question into a single SQL SELECT query targeting a postgres database. Assume a schema with tables: users, orders, order_items, products. Purpose: Enable non-technical team members to request data without contacting engineering. Examples: Input: \'How much total revenue did we get from each product category in March 2026?\' Output: \'SELECT p.category, SUM(oi.quantity * oi.unit_price) as total_revenue FROM order_items oi JOIN products p ON oi.product_id = p.id JOIN orders o ON oi.order_id = o.id WHERE EXTRACT(MONTH FROM o.created_at) = 3 AND EXTRACT(YEAR FROM o.created_at) = 2026 GROUP BY p.category ORDER BY total_revenue DESC;\'. Constraints: Return only valid SQL. No subqueries unless necessary. Assume all tables are properly indexed. Step: 1) parse the business question, 2) identify required tables, 3) determine joins, 4) identify filtering conditions, 5) determine aggregations and grouping."\nWhy it works: SPECS ensures generated queries follow safe patterns and produce valid syntax, reducing the risk of malformed database requests.',
+          ],
+        },
+        historyAndDeveloper: {
+          title: 'History and Origin of the SPECS Framework',
+          content: [
+            '**The SPECS Framework emerged from production practices in data-intensive and operational teams — specifically those working on systems where AI output must integrate with downstream tools, databases, or workflows.** The framework is not attributed to a single author but instead represents a converging best practice across industry teams (data science, MLOps, product operations, and customer success) who discovered that rigid structure dramatically improved model reliability.',
+            'The core insight — treating a prompt like a specification document rather than a conversation — reflects decades of engineering discipline: clear scope boundaries, explicit purpose statements, concrete examples, and enumerated constraints all come from requirements engineering. Teams running production systems realized that applying the same rigor to prompts reduced debugging time, improved cross-model consistency, and made hand-offs to non-technical team members safer and more reliable.',
+            'Today, SPECS is one of the most widely adopted frameworks in operational and analytical contexts, in part because it bridges the gap between prompt engineering and traditional engineering practices. By framing prompts as specifications, SPECS makes AI outputs predictable enough to automate downstream tasks, making it a natural fit for production workflows in data teams, customer support operations, and product analytics.',
+          ],
+        },
+        whenNotToUse: {
+          title: 'When the SPECS Framework Is Not the Right Choice',
+          content: ['**SPECS adds overhead by design — every component must be explicit and tested. This overhead is worthwhile for production workflows but counterproductive for other tasks.** Use this table to quickly decide whether SPECS or a lighter framework is the right choice.'],
+          rows: [
+            { 'Situation': 'Brainstorming and exploratory writing', 'Why SPECS is wrong': 'SPECS enforces rigid structure; brainstorming thrives on open-ended exploration. Constraints and fixed output formats stifle creative iteration.', 'Better alternative': 'Use CO-STAR (for structured creativity) or Single Step (for quick, free-form exploration).' },
+            { 'Situation': 'Marketing copy and brand messaging', 'Why SPECS is wrong': 'SPECS prioritizes predictability over voice and emotional appeal. A marketing message needs tone, audience feel, and style flexibility that SPECS does not encourage.', 'Better alternative': 'Use CRAFT Framework, which has five components (Context, Role, Audience, Format, Tone) explicitly designed for voice and brand consistency.' },
+            { 'Situation': 'One-off, quick requests with no reuse', 'Why SPECS is wrong': 'SPECS investment pays off when the prompt is reused or when consistency across runs is critical. A single quick request does not justify the specification overhead.', 'Better alternative': 'Use Single Step prompt method for quick, ad-hoc questions.' },
+            { 'Situation': 'Tasks that benefit from visible reasoning or intermediate steps', 'Why SPECS is wrong': 'SPECS defines execution steps but does not inherently expose reasoning. If you want to see the model\'s thinking process, you are looking for reasoning transparency, not specification structure.', 'Better alternative': 'Use APE (Analyze–Plan–Execute) to expose intermediate reasoning, then combine with SPECS in downstream refinement cycles.' },
+            { 'Situation': 'Content meant to be read by humans and refined by hand', 'Why SPECS is wrong': 'SPECS treats output as machine-consumable. If a human will edit and refine the output afterward, the rigid structure may feel constraining rather than helpful.', 'Better alternative': 'Use CO-STAR for human-readable content that will be polished by a human editor.' },
+            { 'Situation': 'Very fast iteration and experimentation', 'Why SPECS is wrong': 'SPECS requires you to define scope, purpose, constraints, and examples up front. If you are rapidly changing requirements, the specification work becomes wasted effort.', 'Better alternative': 'Start with Single Step or CRAFT to iterate fast, then graduate to SPECS once the task is stable.' },
+          ],
+          columns: ['Situation', 'Why SPECS is wrong', 'Better alternative'],
+        },
+        frameworkComparison: {
+          title: 'SPECS vs Other Prompt Frameworks: Comparison Table',
+          content: ['**SPECS sits firmly on the structure and predictability end of the spectrum.** This table shows how SPECS compares to the most commonly used alternatives across six critical dimensions.'],
+          rows: [
+            { 'Dimension': 'Component count', 'SPECS': '5 (Scope, Purpose, Examples, Constraints, Steps)', 'CO-STAR': '6 (Context, Objective, Style, Tone, Audience, Response)', 'CRAFT': '5 (Context, Role, Audience, Format, Tone)', 'APE': '3 (Analyze, Plan, Execute)' },
+            { 'Dimension': 'Primary use case', 'SPECS': 'Machine-readable output; predictable, repeatable tasks', 'CO-STAR': 'Multi-constraint communication (documentation, guides)', 'CRAFT': 'Marketing and copywriting; brand voice', 'APE': 'Complex reasoning and planning' },
+            { 'Dimension': 'Output predictability', 'SPECS': '★★★★★ (highest)', 'CO-STAR': '★★★★ (very high)', 'CRAFT': '★★★ (medium-high)', 'APE': '★★ (medium)' },
+            { 'Dimension': 'Flexibility for iteration', 'SPECS': '★★ (low; structure is rigid)', 'CO-STAR': '★★★ (medium)', 'CRAFT': '★★★★ (high)', 'APE': '★★★★★ (highest)' },
+            { 'Dimension': 'Explicitness required', 'SPECS': 'Very high (every constraint must be listed)', 'CO-STAR': 'High (six components)', 'CRAFT': 'Medium (five components)', 'APE': 'Low (just set up the reasoning flow)' },
+            { 'Dimension': 'Best when model output feeds into...', 'SPECS': 'A system, script, or database', 'CO-STAR': 'A human reader', 'CRAFT': 'A marketing channel or user', 'APE': 'Further human reasoning or refinement' },
+          ],
+          columns: ['Dimension', 'SPECS', 'CO-STAR', 'CRAFT', 'APE'],
+        },
+        vsFrameworks: {
+          title: 'SPECS vs Specific Frameworks: Key Differences',
+          content: ['**Use these comparisons to choose correctly between SPECS and the most commonly confused alternatives.**'],
+          items: [
+            '**SPECS vs [CO-STAR](/prompt-engineering/co-star-framework):** Both are detailed frameworks, but SPECS targets machine-usable output while CO-STAR targets human-readable content. SPECS has Constraints and Steps; CO-STAR has Audience, Tone, and Style. If your output will be parsed by code, use SPECS. If a human will read or refine the output, use CO-STAR.',
+            '**SPECS vs [CRAFT](/prompt-engineering/craft-framework):** CRAFT is designed for voice and brand messaging. SPECS is designed for accuracy and structure. CRAFT has Tone and Role; SPECS has Constraints and Steps. Use CRAFT for marketing, social media, and creative copy. Use SPECS for data extraction, code generation, and integration with downstream systems.',
+            '**SPECS vs [APE](/prompt-engineering/ape-framework):** APE exposes reasoning (Analyze, Plan, Execute). SPECS enforces output structure (Scope, Purpose, Examples, Constraints, Steps). Use APE when you want to see the model\'s thinking. Use SPECS when you need consistent, machine-usable results. A common pattern: use APE for first-draft reasoning, then SPECS for refinement into production.',
+            '**SPECS vs [RISEN](/prompt-engineering/risen-framework):** RISEN is for iteration and refinement; SPECS is for specification and generation. Use SPECS to create the initial structured output. Use RISEN in a second pass to critique and improve the SPECS output through Refine-Inspect-Summarize-Evaluate-Next steps cycles.',
+            '**SPECS vs [Single Step](/prompt-engineering/the-single-step-prompt-method):** Single Step is minimal and flexible; SPECS is detailed and rigid. Use Single Step for quick, one-off requests. Use SPECS when the same prompt will be run repeatedly, when output must integrate with tools, or when you need consistency across teams and models.',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           content: [
@@ -26128,6 +26553,30 @@ zh: {
             {
               q: 'Is SPECS the same as chain-of-thought prompting?',
               a: 'No. Chain-of-thought prompting asks the model to show its reasoning steps. SPECS defines the structural requirements of the prompt itself — scope, purpose, examples, constraints, and execution steps. The two are complementary: you can include reasoning steps within a SPECS prompt using the Steps component.',
+            },
+            {
+              q: 'How do I handle very strict output requirements with SPECS?',
+              a: 'Use the Constraints component to list every requirement explicitly. Include examples in the Examples component that show the exact format, field names, and values. Test your SPECS prompt across multiple models and check that every output meets the specification. Use PromptQuorum to run the prompt against GPT-4o, Claude, and Gemini simultaneously and compare outputs — if 90% of results are valid, SPECS is working.',
+            },
+            {
+              q: 'Can SPECS prompts work with very large inputs?',
+              a: 'Yes, but be strategic. If your Scope is to analyze a 10,000-word document, break it into smaller chunks and run SPECS separately on each chunk, then aggregate the results in a final step. Alternatively, use the Steps component to tell the model to skim for key information first, then analyze deeply. The SPECS structure helps here because it forces you to be explicit about what matters and what can be skipped.',
+            },
+            {
+              q: 'What if different models produce different formats when I use the same SPECS prompt?',
+              a: 'This is common when constraints are not specific enough. Make your Constraints section more detailed: instead of "output as JSON," write "output valid JSON with keys: issue_type (string), urgency (one of: low, medium, high), summary (string under 25 words)." Include at least two Examples showing the exact format. Test on all models and refine the Constraints until outputs converge.',
+            },
+            {
+              q: 'Can I use SPECS for creative tasks?',
+              a: 'SPECS can constrain creative output, but it is not ideal for pure creativity. If you want a haiku under 50 characters with specific imagery, SPECS works. If you want "write something creative," SPECS will make the output predictable and formulaic, which defeats the purpose. Use CRAFT or CO-STAR for creative direction, SPECS for structured creative constraints.',
+            },
+            {
+              q: 'Should I update my SPECS prompt if model behavior changes?',
+              a: 'Yes. Large language models are periodically updated, and newer versions sometimes behave differently. If you notice that your SPECS prompt produces inconsistent results with a new model version, test with fresh Examples and refine your Constraints. Version your SPECS prompts (v1, v2, etc.) and test them side-by-side before rolling out changes.',
+            },
+            {
+              q: 'Can SPECS work for tasks where the exact output format is not known in advance?',
+              a: 'Not well. SPECS requires you to define scope, purpose, examples, and constraints in advance. If the output format is truly unpredictable or experimental, start with a lighter framework like Single Step or CRAFT, explore possibilities, and then convert to SPECS once you have locked down the output shape. SPECS is for production-ready tasks with known requirements.',
             },
           ],
         },
@@ -26351,6 +26800,63 @@ zh: {
             '**Run the RISEN prompt across multiple models** such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. Compare the Inspect and Evaluate outputs to understand which model produces the most useful revision analysis. Save the best-performing variant as a template.',
           ],
         },
+        examples: {
+          title: '5 RISEN Prompt Examples With Explanations',
+          content: ['**The following five examples show the RISEN Framework applied to different iterative refinement workflows, demonstrating how structured critique and revision feedback improve quality across models.**'],
+          numberedItems: [
+            '**Blog Post Refinement for Clarity**\nPrompt: "I have a draft blog post about prompt engineering best practices. Refine it for clarity and conciseness without removing factual depth. Inspect the specific changes you made. Summarize what the revised version now emphasizes. Evaluate it on a 1–5 scale for accessibility to non-technical readers. Next steps: List 3 further improvements I could make."\nWhy it works: RISEN turns vague feedback ("make it clearer") into auditable steps, exposing which sentences the model changed and why, plus specific criteria for grading the result.',
+            '**API Documentation Improvement**\nPrompt: "I have documentation for our REST API that was generated and needs refinement. Refine it to match our company style guide and fix any technical inaccuracies. Inspect every change you made with line-by-line notes. Summarize what the updated doc now makes clear that the original did not. Evaluate against our style guide and technical accuracy (rate 1–5 each). Next steps: What sections still need work?"\nWhy it works: RISEN enables technical writers to get detailed feedback from AI on specific, measurable criteria (style, accuracy), making it easy to decide whether to accept or reject revisions.',
+            '**Product Strategy Document Revision**\nPrompt: "I have a first draft of our Q2 strategy. Refine it to be more concise—target 1200–1500 words instead of 2000. Inspect which sections you condensed and how. Summarize the key message now. Evaluate whether it still covers all required topics (market analysis, goals, risks). Next steps: What critical points could be added with 300 more words?"\nWhy it works: RISEN structures iteration on strategic content, ensuring accountability: the Inspect stage shows what was cut (sometimes important), and Evaluate confirms completeness.',
+            '**Code Review Comment Response**\nPrompt: "Here is a code block I wrote for a payment processing function. Refine it to address these code review comments: [list]. Inspect the changes you made. Summarize what the updated function now does better. Evaluate it against security best practices and performance (rate 1–5). Next steps: What additional hardening would make this production-ready?"\nWhy it works: RISEN turns code reviews into a documented workflow: the Inspect output shows exactly which comments were addressed, Evaluate confirms best practices are met, and Next steps provides a roadmap for further work.',
+            '**Customer Support Macro Improvement**\nPrompt: "I have a customer support response template for billing inquiries. Refine it to be more empathetic while staying concise. Inspect the emotional tone changes. Summarize what a customer would now understand about their billing issue. Evaluate on a 1–5 scale for helpfulness and empathy. Next steps: What follow-up steps should we add to the macro?"\nWhy it works: RISEN makes soft qualities like tone auditable: the Inspect stage shows what phrases were reworded, Evaluate rates the result on multiple dimensions, and Next steps suggests concrete improvements.',
+          ],
+        },
+        historyAndDeveloper: {
+          title: 'History and Origin of the RISEN Framework',
+          content: [
+            '**The RISEN Framework emerged from AI-assisted content workflows, particularly in teams doing iterative refinement of high-stakes material — legal documents, product strategy, technical writing, and marketing copy.** The framework is not attributed to a single originator but represents a convergence of best practices in editorial and engineering workflows where "revision" had to become transparent and auditable rather than opaque.',
+            'The core insight — structuring revision into five explicit stages (Refine, Inspect, Summarize, Evaluate, Next steps) — comes from professional editing practices where changes must be justified and reviewable. Teams using early large language models discovered that generic feedback like "make this better" produced unpredictable results. By asking the model to explain what changed (Inspect), describe the new version (Summarize), and grade it (Evaluate), reviewers could trust the revision and plan further iterations without starting over.',
+            'Today, RISEN is essential in production content workflows where AI assists humans rather than replacing them. The framework makes AI revisions auditable, turning the model into a reasoning partner rather than a black-box editor. This is why RISEN is widely adopted in technical writing, product management, and editorial teams where every change must be documented and justified.',
+          ],
+        },
+        whenNotToUse: {
+          title: 'When the RISEN Framework Is Not the Right Choice',
+          content: ['**RISEN is designed for iterative improvement of existing drafts. It is not suited for tasks where generation, not revision, is the bottleneck.** Use this table to quickly decide whether RISEN or a generation framework is the right choice.'],
+          rows: [
+            { 'Situation': 'Starting from scratch with no draft', 'Why RISEN is wrong': 'RISEN requires an existing draft to refine. If you have nothing yet, RISEN cannot help because it has no material to improve.', 'Better alternative': 'Use CO-STAR or CRAFT to generate the first draft, then switch to RISEN for refinement cycles.' },
+            { 'Situation': 'Quick, one-off improvement with no further iteration', 'Why RISEN is wrong': 'RISEN overhead (Inspect, Summarize, Evaluate, Next steps) is justified only when revision will continue. For a single pass of improvement, lighter alternatives are faster.', 'Better alternative': 'Use a simple instruction: "Improve this for [goal]." If it is good enough, move on. Use RISEN only when multiple refinement cycles are planned.' },
+            { 'Situation': 'Output must be predictable and schema-consistent', 'Why RISEN is wrong': 'RISEN may change output format or structure unpredictably in pursuit of improvement. If format consistency matters, RISEN risks breaking downstream systems.', 'Better alternative': 'Use SPECS Framework to lock down structure, or RISEN + SPECS in sequence: RISEN for improvement, then SPECS to re-conform output to schema.' },
+            { 'Situation': 'You want to explore creative directions, not critique existing work', 'Why RISEN is wrong': 'RISEN is designed for critique and improvement within a direction. It is not suited for "what if we took this in a completely different direction?" exploration.', 'Better alternative': 'Use CRAFT or CO-STAR to generate alternative directions, compare them, then use RISEN to refine the best one.' },
+            { 'Situation': 'The draft is already nearly final and just needs light touch-ups', 'Why RISEN is wrong': 'RISEN forces five full stages (Refine, Inspect, Summarize, Evaluate, Next steps) even for minor edits, adding unnecessary overhead.', 'Better alternative': 'Use a focused instruction: "Proofread this for [specific issues]." Reserve RISEN for substantial revision cycles.' },
+            { 'Situation': 'You cannot articulate clear evaluation criteria for the Evaluate stage', 'Why RISEN is wrong': 'RISEN\'s Evaluate stage depends on explicit criteria. If you do not know what "good" looks like, RISEN cannot guide the revision effectively.', 'Better alternative': 'Define your success criteria first (with stakeholders if needed), then use RISEN. Or use lighter revision frameworks while you clarify what success looks like.' },
+          ],
+          columns: ['Situation', 'Why RISEN is wrong', 'Better alternative'],
+        },
+        frameworkComparison: {
+          title: 'RISEN vs Other Prompt Frameworks: Comparison Table',
+          content: ['**RISEN sits on the revision and critique end of the spectrum.** This table shows how RISEN compares to the most commonly used alternatives across six critical dimensions.'],
+          rows: [
+            { 'Dimension': 'Primary purpose', 'RISEN': 'Iterative refinement and critique of existing drafts', 'CO-STAR': 'Structured generation of multi-constraint content', 'SPECS': 'Structured generation of machine-readable output', 'APE': 'Exposing reasoning and planning steps' },
+            { 'Dimension': 'Requires pre-existing material', 'RISEN': '✓ Yes (needs a draft)', 'CO-STAR': '✗ No (generates from scratch)', 'SPECS': '✗ No (generates from scratch)', 'APE': '✗ No (generates from scratch)' },
+            { 'Dimension': 'Revision transparency', 'RISEN': '★★★★★ (highest; Inspect stage shows all changes)', 'CO-STAR': '★★ (limited; no change tracking)', 'SPECS': '★ (none; output is new, not revised)', 'APE': '★★★ (shows reasoning, not change history)' },
+            { 'Dimension': 'Self-critique capability', 'RISEN': '★★★★★ (Evaluate stage)', 'CO-STAR': '★★ (no built-in critique)', 'SPECS': '★★ (no built-in critique)', 'APE': '★★★★ (reasoning inherently includes critique)' },
+            { 'Dimension': 'Multi-iteration support', 'RISEN': '★★★★★ (Next steps feeds next cycle)', 'CO-STAR': '★★★ (regenerate, not iterate)', 'SPECS': '★★ (regenerate, not iterate)', 'APE': '★★★★ (reasoning loops naturally)' },
+            { 'Dimension': 'Typical workflow', 'RISEN': 'Draft → RISEN Cycle 1 → RISEN Cycle 2 → Finalize', 'CO-STAR': 'Generate with CO-STAR → Done (or manual edit)', 'SPECS': 'Generate with SPECS → Done (or manual edit)', 'APE': 'Generate reasoning → Implement result' },
+          ],
+          columns: ['Dimension', 'RISEN', 'CO-STAR', 'SPECS', 'APE'],
+        },
+        vsFrameworks: {
+          title: 'RISEN vs Specific Frameworks: Key Differences',
+          content: ['**Use these comparisons to choose correctly between RISEN and commonly confused frameworks.**'],
+          items: [
+            '**RISEN vs [CO-STAR](/prompt-engineering/co-star-framework):** CO-STAR is for generation, RISEN is for revision. Use CO-STAR to create the first draft, then RISEN to improve it. They are sequential parts of the same workflow: CO-STAR → [manual work] → RISEN → [manual work] → RISEN again.',
+            '**RISEN vs [SPECS](/prompt-engineering/specs-framework):** SPECS is for structured generation, RISEN is for unstructured improvement. If you need a predictable output format, use SPECS to generate it, then optionally RISEN to refine quality. They complement each other: SPECS for correctness, RISEN for quality.',
+            '**RISEN vs [APE](/prompt-engineering/ape-framework):** APE (Analyze–Plan–Execute) exposes reasoning steps upfront. RISEN retrospectively analyzes what changed and why. Use APE for complex problem-solving, RISEN for iterative content improvement. For a strategic decision, APE first (see the reasoning), then RISEN if you need to refine the output afterward.',
+            '**RISEN vs [CRAFT](/prompt-engineering/craft-framework):** CRAFT generates marketing content. RISEN refines any content. Generate with CRAFT, improve with RISEN. A typical workflow: CRAFT first draft → RISEN improvement cycle 1 → RISEN improvement cycle 2 → final editing by human.',
+            '**RISEN vs [Single Step](/prompt-engineering/the-single-step-prompt-method):** Single Step is for quick generation. RISEN is for systematic refinement. Use Single Step for throwaway outputs or rapid experimentation. Use RISEN when quality matters and multiple refinement cycles are planned.',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           content: [
@@ -26397,6 +26903,34 @@ zh: {
             {
               q: 'Can RISEN work for technical content like code or documentation?',
               a: 'Yes. RISEN works for any iterative improvement task: blog posts, documentation, help-center articles, code, and strategic plans. For technical content, the Evaluate stage should include explicit correctness criteria such as type safety, performance, or accuracy against specifications.',
+            },
+            {
+              q: 'What if the model does not make any changes in the Refine stage?',
+              a: 'This usually means your refinement goal was unclear or the draft is already near-perfect. Add specificity to your goal: instead of "improve tone," write "make this more formal and less conversational." Run it again. Alternatively, run across multiple models—if none of them suggest changes, your draft may be ready for the next phase (human review or production).',
+            },
+            {
+              q: 'Can I skip stages of RISEN (e.g., just do Refine and Evaluate, skip Inspect)?',
+              a: 'Technically yes, but you lose the transparency that makes RISEN useful. The Inspect stage is critical: it shows exactly what changed, making it auditable. The Summarize stage helps you understand the direction. We recommend running all five stages; if time is tight, combine them into a single prompt instead of skipping them.',
+            },
+            {
+              q: 'How do I handle disagreement between the model\'s evaluation and my own assessment?',
+              a: 'Disagreement is valuable: it means your evaluation criteria were unclear to the model. Rewrite your Evaluate instructions more specifically. For example, instead of "rate this for clarity," write "rate this for clarity on a 1–5 scale: 1 = requires re-reading to understand, 5 = immediately clear to someone with no prior knowledge." Run again. Use PromptQuorum to test your instructions across multiple models to see if the issue is model-specific.',
+            },
+            {
+              q: 'Can RISEN work for very long documents (10,000+ words)?',
+              a: 'Yes, but add an extra step: ask the model to identify the most critical sections first, refine those, and then handle the rest in subsequent cycles. Alternatively, break the document into chapters or sections and apply RISEN to each separately, then aggregate feedback for a final full-document pass. The framework is agnostic about document length; managing complexity is up to your prompt design.',
+            },
+            {
+              q: 'Should I specify different refinement goals for different models when using RISEN in PromptQuorum?',
+              a: 'Start with the same goal for all models, then compare their outputs. If one model (e.g., Claude) consistently produces better refinements than another, investigate why: it may be that the model is more aligned with your style or domain. You can then create model-specific variants in your prompt library, but begin with parity to understand the baseline behavior.',
+            },
+            {
+              q: 'How do I know when to stop iterating with RISEN?',
+              a: 'When the Evaluate stage consistently rates your draft 4/5 or higher against your criteria, and the Next steps are increasingly minor (typos, rewording, not structural changes), the draft is likely ready. Run one more cycle to confirm the Next steps are truly non-critical, then move to human review or production. RISEN convergence typically takes 2–4 cycles for most content.',
+            },
+            {
+              q: 'Can RISEN replace human editing?',
+              a: 'RISEN is a powerful refinement tool, but human editors bring judgment, consistency, and brand voice that AI cannot replicate. Use RISEN to improve drafts and provide feedback, then have a human editor do a final pass. This hybrid approach (AI first, human second) is often faster and higher-quality than either alone.',
             },
           ],
         },
@@ -26638,6 +27172,63 @@ zh: {
             '**Run the TRACE prompt across multiple models** such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to compare their reasoning traces and choose the most coherent one.',
           ],
         },
+        examples: {
+          title: '5 TRACE Prompt Examples With Explanations',
+          content: ['**The following five examples show the TRACE Framework applied to complex analytical and decision-making tasks, demonstrating how structured reasoning becomes visible and auditable.**'],
+          numberedItems: [
+            '**Pricing Strategy Analysis**\nPrompt: "Think: Restate the goal of our new pricing model in your own words. What constraints matter? Reason: Outline two different pricing approaches and their trade-offs. Analyze: Apply break-even analysis to our customer data using our 5-tiered segmentation. Show calculations. Conclude: Which approach would maximize gross margin while keeping churn below 5%? Explain: In 3 sentences, explain your recommendation for a non-financial stakeholder." Data: [customer segments, costs, current pricing]\nWhy it works: TRACE transforms a vague business decision ("what should we charge?") into auditable steps. The Think stage confirms understanding, Reason explores options transparently, Analyze works with real numbers, and Explain justifies the conclusion in accessible language.',
+            '**Technical Architecture Decision**\nPrompt: "You are a senior engineer. Think: Restate the requirements for our new data pipeline. What are the hard constraints (latency, cost, reliability)? Reason: List three possible architectures (serverless, Kubernetes, managed service) and compare them on your chosen dimensions. Analyze: For each architecture, estimate costs, latency, and operational burden given our expected volume of 1M events/day. Conclude: Recommend one architecture and explain why it dominates the others. Explain: Write a paragraph a junior engineer could understand that justifies this choice."\nWhy it works: TRACE surfaces engineering trade-offs explicitly. The Reason stage prevents tunnel vision (exploring only one option), Analyze forces estimation against real constraints, and Explain ensures knowledge transfer.',
+            '**Incident Postmortem Analysis**\nPrompt: "Think: Summarize the incident—what happened and what was its impact? Reason: What are the possible root causes? Brainstorm 5+ hypotheses. Analyze: Using our logs and metrics, evaluate each hypothesis. Which have evidence? Which can be ruled out? Conclude: What was the true root cause? Explain: Write a postmortem summary that explains the root cause and one preventive action for the engineering team."\nWhy it works: TRACE structures investigation so no root cause is missed. Reason forces brainstorming; Analyze filters hypotheses with evidence; Explain documents learning for future prevention.',
+            '**Research Paper Evaluation**\nPrompt: "Think: Summarize the paper\'s main claim and methodology. Reason: What are the paper\'s strengths and weaknesses? Consider novelty, rigor, reproducibility, and significance. Analyze: Compare this paper\'s approach and results to the three closest prior works in the field. Does it advance the state-of-the-art? Conclude: Should we implement this technique in production? Why or why not? Explain: Write a one-paragraph summary for non-researchers about what this paper does and whether it matters."\nWhy it works: TRACE prevents dismissive or unrealistic evaluation. Reason forces balanced assessment, Analyze situates the work in context, Conclude forces a clear yes/no with justification.',
+            '**Feature Trade-off Review**\nPrompt: "Think: Clarify what problem this feature would solve and for whom. Reason: List three alternative solutions to the same problem (including \'do nothing\'). Analyze: For each alternative, estimate dev cost, time to market, expected user adoption, and risk (e.g., performance impact). Conclude: Which alternative should we build? Why? Explain: In 2–3 sentences, explain your recommendation to the product and engineering leadership."\nWhy it works: TRACE prevents premature optimization of one solution. Reason forces evaluation of alternatives, Analyze quantifies trade-offs, Explain ensures buy-in from leadership.',
+          ],
+        },
+        historyAndDeveloper: {
+          title: 'History and Origin of the TRACE Framework',
+          content: [
+            '**The TRACE Framework emerged from academic research on reasoning in large language models, specifically the breakthrough paper "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" by Wei et al. (2022).** The core discovery was that asking models to show their reasoning steps dramatically improved accuracy on complex tasks. TRACE represents an evolution of that idea: where chain-of-thought says "show your work," TRACE defines five specific, auditable stages of reasoning.',
+            'The framework gained traction in enterprise and research contexts because it made AI reasoning legible to non-AI experts. A model can be asked to "think," "reason," "analyze," "conclude," and "explain," and these stages have intuitive meaning to business leaders, engineers, and decision-makers. Unlike pure chain-of-thought (which can produce rambling explanations), TRACE compartmentalizes reasoning into structured, evaluable phases.',
+            'Today, TRACE is essential in high-stakes contexts: medical diagnosis, legal analysis, incident investigation, and strategic planning. In these domains, "why did you decide that?" is as important as "what did you decide?" TRACE makes that auditability standard rather than an afterthought.',
+          ],
+        },
+        whenNotToUse: {
+          title: 'When the TRACE Framework Is Not the Right Choice',
+          content: ['**TRACE is overhead-heavy and designed for reasoning transparency. It is wrong for tasks where speed or simplicity matters more than visible reasoning.** Use this table to decide whether TRACE or a lighter framework is right.'],
+          rows: [
+            { 'Situation': 'Routine, low-risk tasks with clear right answers', 'Why TRACE is wrong': 'TRACE imposes five stages of reasoning on a task that needs only one direct answer. The overhead is wasted.', 'Better alternative': 'Use Single Step for quick answers or RTF for routine, bounded tasks.' },
+            { 'Situation': 'Time-critical decisions (within minutes)', 'Why TRACE is wrong': 'TRACE tokens add up: the five stages typically consume 500–2000 tokens. For time-critical decisions, this latency is unacceptable.', 'Better alternative': 'Use Single Step or RTF for speed. Use TRACE post-decision for documentation and learning.' },
+            { 'Situation': 'Pure generation tasks (write a poem, brainstorm ideas)', 'Why TRACE is wrong': 'TRACE is designed for analytical reasoning, not creativity. It forces structure where you want freedom to explore.', 'Better alternative': 'Use CRAFT or CO-STAR for creative direction. Use TRACE only if you need to justify the creative choices later.' },
+            { 'Situation': 'Tasks where the user does not care about reasoning, only results', 'Why TRACE is wrong': 'If downstream consumers only care about the final answer, the reasoning transparency that TRACE provides adds no value.', 'Better alternative': 'Use CO-STAR or SPECS to generate results directly. Save TRACE for internal decision-making or auditable workflows.' },
+            { 'Situation': 'Very constrained environments (cost, token budget, latency SLA)', 'Why TRACE is wrong': 'TRACE is expensive in tokens and latency. In cost-constrained or speed-constrained environments, it may be infeasible.', 'Better alternative': 'Use Single Step, RTF, or other lightweight frameworks. Use TRACE only for high-value decisions where the cost is justified.' },
+            { 'Situation': 'Tasks where the model lacks domain expertise', 'Why TRACE is wrong': 'TRACE reveals reasoning, but if the model\'s reasoning is unfounded (limited domain knowledge), transparency just shows you the errors more clearly.', 'Better alternative': 'For domain-specific tasks, focus on providing better examples and constraints (SPECS) rather than expecting reasoning transparency (TRACE).' },
+          ],
+          columns: ['Situation', 'Why TRACE is wrong', 'Better alternative'],
+        },
+        frameworkComparison: {
+          title: 'TRACE vs Other Prompt Frameworks: Comparison Table',
+          content: ['**TRACE sits on the reasoning and transparency end of the spectrum.** This table shows how TRACE compares to the most commonly used alternatives across six critical dimensions.'],
+          rows: [
+            { 'Dimension': 'Primary purpose', 'TRACE': 'Making AI reasoning visible and auditable for complex decisions', 'APE': 'Structured reasoning (Analyze, Plan, Execute) without explicit stages', 'CO-STAR': 'Structured generation of multi-constraint communication content', 'SPECS': 'Structured generation of machine-readable output' },
+            { 'Dimension': 'Reasoning transparency', 'TRACE': '★★★★★ (highest; five explicit reasoning stages)', 'APE': '★★★★ (reasoning shown, but less compartmentalized)', 'CO-STAR': '★★ (reasoning implicit, not surfaced)', 'SPECS': '★ (output-focused, not reasoning-focused)' },
+            { 'Dimension': 'Typical token cost', 'TRACE': '500–2000 tokens (high due to multiple reasoning stages)', 'APE': '400–1500 tokens (medium-high)', 'CO-STAR': '300–800 tokens (medium)', 'SPECS': '200–600 tokens (lower due to structure)' },
+            { 'Dimension': 'Best for justifying decisions', 'TRACE': '★★★★★ (all five stages are auditable)', 'APE': '★★★★ (reasoning visible, but can meander)', 'CO-STAR': '★★ (goal and audience clear, but not reasoning)', 'SPECS': '★ (output is justified, not reasoning)' },
+            { 'Dimension': 'Speed to result', 'TRACE': '★★ (slow; multiple reasoning stages)', 'APE': '★★★ (medium; structured reasoning loop)', 'CO-STAR': '★★★★ (fast; generation-focused)', 'SPECS': '★★★★★ (fastest; simple generation)' },
+            { 'Dimension': 'Suitable for high-stakes decisions', 'TRACE': '★★★★★ (explicitly designed for this)', 'APE': '★★★★ (good, but less compartmentalized)', 'CO-STAR': '★★★ (good for communication, weaker for analysis)', 'SPECS': '★★ (good for predictability, not reasoning)' },
+          ],
+          columns: ['Dimension', 'TRACE', 'APE', 'CO-STAR', 'SPECS'],
+        },
+        vsFrameworks: {
+          title: 'TRACE vs Specific Frameworks: Key Differences',
+          content: ['**Use these comparisons to choose correctly between TRACE and commonly confused frameworks.**'],
+          items: [
+            '**TRACE vs [APE](/prompt-engineering/ape-framework):** Both surface reasoning, but TRACE is more compartmentalized: Think, Reason, Analyze, Conclude, Explain are distinct. APE (Analyze, Plan, Execute) is more fluid. Use TRACE when you need auditable reasoning in a specific order. Use APE for continuous reasoning loops.',
+            '**TRACE vs [CO-STAR](/prompt-engineering/co-star-framework):** CO-STAR is for generation with multiple constraints; TRACE is for analytical reasoning. Use CO-STAR to generate content, TRACE to audit decisions. They can be sequential: use CO-STAR to draft options, then TRACE to analyze and choose.',
+            '**TRACE vs [SPECS](/prompt-engineering/specs-framework):** SPECS is for predictable output structure; TRACE is for visible reasoning. Use SPECS when the output format matters most. Use TRACE when understanding "why" matters most. Combine them: TRACE for analysis, then SPECS to structure the final output.',
+            '**TRACE vs [RISEN](/prompt-engineering/risen-framework):** RISEN is for iterative refinement; TRACE is for initial analytical reasoning. Use TRACE to make a decision with visible reasoning, then RISEN to improve that decision in subsequent cycles.',
+            '**TRACE vs [Single Step](/prompt-engineering/the-single-step-prompt-method):** Single Step is minimal and fast; TRACE is detailed and transparent. Use Single Step for quick answers. Use TRACE when you need to justify the answer or when complexity demands structured reasoning.',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           content: [
@@ -26684,6 +27275,34 @@ zh: {
             {
               q: 'How many tokens does a TRACE prompt typically use?',
               a: 'TRACE prompts typically run 500–2000 tokens depending on task complexity. The overhead is worth it for high-stakes decisions, but for quick tasks, simpler frameworks like RTF are more efficient.',
+            },
+            {
+              q: 'How do I know which reasoning stage is producing weak output?',
+              a: 'Run the TRACE prompt across multiple models in PromptQuorum and compare their outputs stage by stage. If all models struggle at the Analyze stage but excel at Think and Reason, the issue is likely poor data or unclear constraints in the Analyze instructions.',
+            },
+            {
+              q: 'Can I reorder the TRACE stages for my specific task?',
+              a: 'You can adjust the instructions within each stage, but reordering defeats the purpose. TRACE\'s power comes from the fixed sequence: Think establishes understanding, Reason explores possibilities, Analyze tests hypotheses, Conclude summarizes, Explain justifies. Reordering creates confusion.',
+            },
+            {
+              q: 'What if the model\'s reasoning diverges from my expectations?',
+              a: 'This is valuable. Divergence means your assumptions about the problem may be incomplete. Ask the model to be more specific: "In the Reason stage, compare these three approaches: [list]" instead of open-ended exploration. Constraints in TRACE usually fix reasoning divergence.',
+            },
+            {
+              q: 'Can TRACE work for troubleshooting or debugging technical issues?',
+              a: 'Yes. TRACE is excellent for debugging: Think (restate the symptoms), Reason (list possible causes), Analyze (test each hypothesis against logs or reproduction steps), Conclude (identify root cause), Explain (describe fix for team). This systematic approach prevents missed causes.',
+            },
+            {
+              q: 'How does TRACE compare to "rubber duck debugging" for code review?',
+              a: 'Both use explicit reasoning, but TRACE is more structured. TRACE forces compartmentalization; rubber duck is free-form. For critical code reviews, TRACE ensures no step is skipped. For quick walkthroughs, rubber duck is faster.',
+            },
+            {
+              q: 'Can TRACE handle multi-part questions or decisions?',
+              a: 'Yes, but write one TRACE prompt per decision. If you have three related pricing decisions, run three separate TRACE sequences. This prevents the model from conflating decisions and keeps reasoning clear and auditable for each one.',
+            },
+            {
+              q: 'What is the right length for a TRACE Explain stage?',
+              a: 'The Explain should be 2–5 sentences, enough for a non-expert (a manager without domain knowledge) to understand and act. If Explain is longer than one paragraph, you have probably not distilled the reasoning sufficiently.',
             },
           ],
         },
@@ -26895,6 +27514,62 @@ zh: {
             '**Test your prompt on varied inputs before deploying at scale.** A prompt that works on one example may fail on edge cases. Validate across diverse scenarios.',
           ],
         },
+        examples: {
+          title: "5 Google's Prompting Guide Examples With Explanations",
+          content: ["**The following five examples show Google's Prompting Guide principles applied across different domains, demonstrating how explicit structure, role, and examples improve output quality.**"],
+          numberedItems: [
+            "**Customer Support Response Using Role + Constraints**\nPrompt: \"You are an empathetic customer support specialist. Task: Respond to a support ticket that expresses frustration about a billing error. Audience: The customer is technically proficient but upset. Requirements: Acknowledge the frustration, apologize for the inconvenience, explain what happened, and state the solution. Do not use corporate jargon. Keep response under 150 words. Output: Plain text, paragraph format.\"\nWhy it works: Google's guide principles—role, explicit audience, constraints, and format—transform a vague request into actionable structure.",
+            "**Code Review Comment Using Few-Shot Examples**\nPrompt: \"You are a senior software engineer reviewing a junior engineer's code. Task: Provide constructive feedback on this pull request [code]. Audience: The engineer has 2 years of experience. Examples of good feedback: \\\"Consider using a const instead of let here because the variable is never reassigned.\\\" \\\"The function is clear, but adding a docstring would help future maintainers.\\\" Requirements: Give 3–5 specific feedback items. Be encouraging. Explain why each suggestion matters. Output: Markdown list with one feedback item per bullet.\"\nWhy it works: Few-shot examples (from the guide) show exactly the tone and specificity expected, not just a general instruction.",
+            "**API Documentation Using Explicit Constraints + Role**\nPrompt: \"You are a technical writer specializing in API documentation. Task: Document the endpoint POST /users/signin. Audience: Backend developers building integrations. Include: endpoint path, HTTP method, required parameters (with type and description), response format (success and error cases), example curl request. Constraints: Keep each parameter description under 20 words. Do not assume prior knowledge of OAuth. Use real parameter names from our API. Output: Markdown formatted.\"\nWhy it works: Google's explicit constraints and role guide the documentation toward both completeness and clarity.",
+            "**Research Paper Summary Using Role + Reasoning Chain**\nPrompt: \"You are a research scientist summarizing academic papers for practitioners. Task: Summarize this paper [title/abstract] for someone new to machine learning. Audience: Product managers with non-technical backgrounds. Process: 1) Explain the problem the paper solves, 2) Describe the approach in plain language, 3) Explain why it matters. Constraints: No mathematical notation. Avoid jargon. If you must use a technical term, explain it first. Output: 3–4 short paragraphs.\"\nWhy it works: Google's step-by-step reasoning (from the guide) ensures the summary progresses logically from problem to impact.",
+            "**Blog Post Generation Using Constraints + Few-Shot Example**\nPrompt: \"You are a technical blogger. Task: Write a post introducing prompt engineering to senior engineers unfamiliar with AI. Audience: Smart but skeptical engineers. Example post on a similar topic: [paste example]. Constraints: Post should be 800–1200 words, open with a concrete problem, include 2–3 code examples (in Python), avoid hype words ('revolutionary', 'game-changing'). Close with actionable next steps. Output: Markdown with H2 headings for each section.\"\nWhy it works: Google's few-shot example + constraints combine to guide tone, structure, and depth simultaneously.",
+          ],
+        },
+        historyAndDeveloper: {
+          title: "History and Origin of Google's Prompting Guide",
+          content: [
+            "**Google's Prompting Guide emerged from research at Google DeepMind as LLMs became more central to product development across Google.** Rather than a single published framework, it is a distillation of best practices learned through deploying models like Gemini at scale. The guide reflects insights from years of real-world use: what patterns work reliably across diverse tasks and models.",
+            "The core principles—explicit instructions, role prompting, few-shot examples, safety constraints, iterative refinement—are not novel individually, but the guide's strength is in showing how they work together. By the time of Gemini's public release, these practices were mature enough to be published as recommendations, making them accessible to developers outside Google.",
+            "Today, Google's Prompting Guide is one of the most widely cited prompt engineering resources because it is both research-grounded and practical. It sits between academic papers (which are rigorous but abstract) and community blogs (which are practical but anecdotal). The guide offers the best of both: evidence-backed principles presented in actionable form.",
+          ],
+        },
+        whenNotToUse: {
+          title: "When Google's Prompting Guide Principles Are Not the Right Choice",
+          content: ["**Google's Prompting Guide is a toolkit of general techniques, not a single rigid framework. Some situations call for lighter or heavier approaches.**"],
+          rows: [
+            { 'Situation': 'One-off, exploratory questions with no structure required', 'Why the guide is overkill': 'The guide emphasizes role, constraints, and examples. For throwaway exploration, this overhead is wasted.', 'Better alternative': 'Use Single Step prompt method for quick, open-ended exploration.' },
+            { 'Situation': 'Very domain-specific or proprietary tasks where public examples are risky', 'Why the guide is limiting': 'The guide recommends few-shot examples. If you cannot share examples (proprietary data), you lose this leverage.', 'Better alternative': 'Use SPECS or CO-STAR to provide structure through constraints and components instead of examples.' },
+            { 'Situation': 'Reasoning-heavy tasks where you need to see thinking process explicitly', 'Why the guide is incomplete': 'Google\'s guide mentions step-by-step reasoning but does not compartmentalize it. For auditable reasoning, TRACE is more explicit.', 'Better alternative': 'Use TRACE Framework which makes reasoning visible in five discrete stages.' },
+            { 'Situation': 'Content tasks where voice, tone, and audience are the only things that matter', 'Why the guide is underspecified': 'The guide is neutral about voice. If tone and style are everything, a framework like CRAFT is more explicit.', 'Better alternative': 'Use CRAFT Framework (Context, Role, Audience, Format, Tone) which emphasizes voice and brand.' },
+            { 'Situation': 'Structured generation where output schema is predefined', 'Why the guide is weak': 'Google\'s guide does not emphasize output structure enough for strict formatting needs.', 'Better alternative': 'Use SPECS Framework which makes constraints and format explicit and testable.' },
+            { 'Situation': 'Routine, low-skill tasks where even role-playing feels like overkill', 'Why the guide is unnecessary': 'For simple summarization or list generation, defining a role and providing constraints adds no value.', 'Better alternative': 'Use Single Step or RTF for quick, repetitive tasks.' },
+          ],
+          columns: ['Situation', 'Why the guide is overkill', 'Better alternative'],
+        },
+        frameworkComparison: {
+          title: "Google's Prompting Guide vs Other Frameworks: Comparison Table",
+          content: ["**Google's Prompting Guide is unique: it is a toolkit of techniques, not a single framework.** This table shows how the guide's principles stack up against full frameworks."],
+          rows: [
+            { 'Dimension': 'Type', 'Google Guide': 'Toolkit of low-level techniques', 'CO-STAR': 'Full generation framework', 'SPECS': 'Full generation framework', 'CRAFT': 'Full generation framework' },
+            { 'Dimension': 'Core contribution', 'Google Guide': 'How to phrase and structure prompts (explicit, role, examples, constraints)', 'CO-STAR': 'What to include (six components)', 'SPECS': 'How to structure spec-like output', 'CRAFT': 'How to embed brand voice' },
+            { 'Dimension': 'Best paired with', 'Google Guide': 'Works inside any framework', 'CO-STAR': 'Google techniques can enhance it', 'SPECS': 'Google techniques improve clarity', 'CRAFT': 'Natural complement (both emphasize role)' },
+            { 'Dimension': 'Learning curve', 'Google Guide': '★★ (general principles, easy)', 'CO-STAR': '★★★★ (six components, memorization)', 'SPECS': '★★★★ (five components, strictness)', 'CRAFT': '★★★ (five components, brand nuance)' },
+            { 'Dimension': 'Flexibility', 'Google Guide': '★★★★★ (applies anywhere)', 'CO-STAR': '★★★ (structure is fixed)', 'SPECS': '★★ (strict for good reason)', 'CRAFT': '★★★★ (flexible voice)' },
+            { 'Dimension': 'Typical use', 'Google Guide': 'Improve any prompt', 'CO-STAR': 'Multi-constraint generation', 'SPECS': 'Machine-usable output', 'CRAFT': 'Marketing and creative' },
+          ],
+          columns: ['Dimension', 'Google Guide', 'CO-STAR', 'SPECS', 'CRAFT'],
+        },
+        vsFrameworks: {
+          title: "Google's Guide vs Specific Frameworks: Key Differences",
+          content: ["**Google's Prompting Guide is complementary to, not competitive with, full frameworks.**"],
+          items: [
+            "**Google's Guide + [CO-STAR](/prompt-engineering/co-star-framework):** CO-STAR defines the structure (six components); Google's guide tells you how to phrase each component. Use CO-STAR for structure, apply Google's principles (role, examples, constraints) within each component.",
+            "**Google's Guide + [SPECS](/prompt-engineering/specs-framework):** SPECS defines rigid output structure; Google's guide emphasizes that your Examples component matters more than descriptions. When using SPECS, invest in clear examples (Google principle) rather than verbose explanations.",
+            "**Google's Guide + [CRAFT](/prompt-engineering/craft-framework):** Both emphasize role, audience, and constraints. Google's guide adds the principle of examples and iterative testing. CRAFT focuses on brand voice; Google's guide ensures the voice is backed by clear structure.",
+            "**Google's Guide + [TRACE](/prompt-engineering/trace-framework):** Google's guide recommends step-by-step reasoning; TRACE makes that explicit with five stages. Use Google's principles to refine each TRACE stage: role in Think, constraints in Analyze, examples in Reason.",
+            "**Google's Guide + [Single Step](/prompt-engineering/the-single-step-prompt-method):** Single Step is minimal; Google's guide adds depth. A Single Step prompt becomes stronger by adding role, examples, and clear constraints. Start simple, add Google's principles if quality is insufficient.",
+          ],
+        },
         relatedReading: {
           title: 'Related Reading',
           content: [
@@ -26941,6 +27616,34 @@ zh: {
             {
               q: "How is Google's guide different from other prompting best practices?",
               a: "Google's guide is research-backed (from DeepMind) and emphasizes practical, universally applicable techniques rather than complex frameworks. It focuses on clarity, examples, constraints, and testing—principles that work across all models and domains.",
+            },
+            {
+              q: "How do I prioritize which Google techniques to apply first?",
+              a: 'Start with explicit instructions (be specific). Add role prompting if tone or expertise matters. Add few-shot examples if the pattern is non-obvious. Add constraints if output format must be strict. Iterate: test your prompt, measure quality, add the next technique based on what failed.',
+            },
+            {
+              q: 'Should I use all five Google techniques in every prompt?',
+              a: 'No. Use the techniques that matter for your task. A simple summarization might need only explicit instructions. A complex analysis might benefit from role, examples, and constraints. Start minimal, add techniques only if quality is insufficient.',
+            },
+            {
+              q: "Can Google's techniques replace a full framework like CO-STAR or SPECS?",
+              a: 'No. Google\'s techniques improve individual prompts; frameworks provide overall structure for workflows. For single-shot tasks, Google\'s techniques may suffice. For complex, repeatable workflows, use a framework (CO-STAR, SPECS, TRACE) and apply Google\'s principles within it.',
+            },
+            {
+              q: "What does 'iterative refinement' mean in Google's guide?",
+              a: 'Iterative refinement means: 1) Run your prompt, 2) Evaluate the output quality, 3) Adjust the prompt based on failures, 4) Re-run, 5) Repeat until quality is acceptable. It is the discipline of testing and improving rather than hoping your first draft works.',
+            },
+            {
+              q: 'How do I know if my few-shot examples are good?',
+              a: 'Good examples are representative of the diversity you expect in real inputs. Include edge cases, not just typical cases. Examples should show the exact output format and style you want. If the model still produces wrong format or tone, your examples probably lack diversity.',
+            },
+            {
+              q: "Can I mix Google's prompting guide techniques with custom prompting?",
+              a: 'Absolutely. Google\'s guide is not dogmatic. It is a set of principles. Mix them with your own insights, domain knowledge, and custom examples. The goal is quality output, not compliance with any system.',
+            },
+            {
+              q: 'How do I test whether Google\'s techniques actually improved my prompt?',
+              a: 'Run the same task with and without Google techniques (e.g., with and without role) and measure quality on explicit criteria (correctness, length, tone, format). Use PromptQuorum to run both versions against multiple models and compare outputs systematically.',
             },
           ],
         },
@@ -27161,6 +27864,63 @@ zh: {
             '**Run the RTF prompt across multiple models** such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to compare outputs. Save your best RTF prompts as templates for reuse.',
           ],
         },
+        examples: {
+          title: '5 RTF Prompt Examples With Explanations',
+          content: ['**The following five examples show RTF Framework applied to quick, routine tasks, demonstrating how three components enable consistent, reusable prompts.**'],
+          numberedItems: [
+            '**Weekly Status Summary**\nPrompt: "Role: You are an executive summarizing team progress. Task: Summarize this week\'s updates from five team leads. Format: Markdown bullet list with one paragraph per team. Max 250 words. Highlight blockers and wins only."\nWhy it works: RTF is perfect for recurring tasks. Once you save this template, reuse it weekly by just swapping input text.',
+            '**Code Review Feedback**\nPrompt: "Role: You are a senior backend engineer doing code review. Task: Review this pull request for security, performance, and maintainability issues. Format: Feedback as numbered list. Be direct and constructive."\nWhy it works: RTF scales across teams—each engineer uses the same template but tailors feedback to their domain.',
+            '**Customer Support Escalation Summary**\nPrompt: "Role: You are a support escalation specialist. Task: Summarize the conversation history into a brief (100–150 words) summary for the engineering team explaining the customer\'s problem. Format: Problem statement, impact, steps to reproduce, error messages (if any). Bullet format."\nWhy it works: RTF enables consistent documentation—every escalation summary follows the same structure.',
+            '**Blog Post Draft from Topic**\nPrompt: "Role: You are a technical blogger writing for engineering managers. Task: Draft a 600-word blog post about [topic]. Format: H2 headings for sections, 3–4 paragraphs per section, include one code example."\nWhy it works: RTF lets non-writers produce consistent first drafts using the same template across many blog posts.',
+            '**Meeting Notes Summary**\nPrompt: "Role: You are a meeting note-taker. Task: Create concise notes from this meeting transcript. Format: Agenda items, decisions made (numbered), action items with owners, next steps."\nWhy it works: RTF ensures all meeting notes follow the same structure, making them easy to search and reference later.',
+          ],
+        },
+        historyAndDeveloper: {
+          title: 'History and Origin of the RTF Framework',
+          content: [
+            '**The RTF Framework is one of the earliest structured prompt patterns, emerging from practical workflows in AI-assisted content and operations teams.** RTF—Role, Task, Format—distills the simplest useful structure for repetitive work. Unlike frameworks designed for complex multi-constraint tasks, RTF is built for speed and reuse.',
+            'RTF gained popularity because it is easy to teach and remember. With only three components, it is the default framework for teams just starting prompt engineering. Its lightness is intentional: the framework is designed to be fast enough for ad-hoc use yet structured enough to template and reuse.',
+            'Today, RTF serves as the entry point for many organizations. Once teams find RTF insufficient (when audience matters, or output constraints become strict), they graduate to CRAFT, CO-STAR, or SPECS. RTF\'s simplicity makes it the ideal default before specializing.',
+          ],
+        },
+        whenNotToUse: {
+          title: 'When the RTF Framework Is Not the Right Choice',
+          content: ['**RTF\'s simplicity is its strength and its limit. Use this table to decide if RTF is enough or if a richer framework is needed.**'],
+          rows: [
+            { 'Situation': 'Audience, tone, and style all matter equally', 'Why RTF is wrong': 'RTF has no explicit Audience or Tone components. These get buried in Format, leading to inconsistent tone across outputs.', 'Better alternative': 'Use CRAFT (Context, Role, Audience, Format, Tone) for fine-grained voice control.' },
+            { 'Situation': 'Multiple constraints (scope, examples, output schema) matter', 'Why RTF is wrong': 'RTF cannot express scope boundaries or constrain output structure tightly enough for data extraction or API integration.', 'Better alternative': 'Use SPECS (Scope, Purpose, Examples, Constraints, Steps) for machine-usable output.' },
+            { 'Situation': 'Goal/objective needs to be explicit and separate from task', 'Why RTF is wrong': 'RTF conflates goal and task into one component, losing nuance when the goal and execution method differ.', 'Better alternative': 'Use CO-STAR which separates Objective and Response as distinct fields.' },
+            { 'Situation': 'You need to audit or justify reasoning', 'Why RTF is wrong': 'RTF does not expose reasoning; it is output-focused. If you need to see how the model decided, RTF is insufficient.', 'Better alternative': 'Use TRACE (Think, Reason, Analyze, Conclude, Explain) for auditable reasoning.' },
+            { 'Situation': 'Very complex or ambiguous task', 'Why RTF is wrong': 'RTF\'s three-component simplicity cannot capture nuanced task complexity that needs explicit examples, step-by-step instructions, or iterative refinement.', 'Better alternative': 'Use SPECS for structured generation or APE for reasoning-heavy tasks.' },
+            { 'Situation': 'One-time ad-hoc question with no reuse', 'Why RTF is overkill': 'For single-shot exploratory tasks, even RTF adds overhead. A natural-language question or Single Step method is faster.', 'Better alternative': 'Use Single Step for quick, throwaway prompts.' },
+          ],
+          columns: ['Situation', 'Why RTF is wrong', 'Better alternative'],
+        },
+        frameworkComparison: {
+          title: 'RTF vs Other Prompt Frameworks: Comparison Table',
+          content: ['**RTF is the lightest of all major frameworks.** This table shows how it compares to alternatives on key dimensions.'],
+          rows: [
+            { 'Dimension': 'Component count', 'RTF': '3 (Role, Task, Format)', 'CRAFT': '5 (Context, Role, Audience, Format, Tone)', 'CO-STAR': '6 (Context, Objective, Style, Tone, Audience, Response)', 'SPECS': '5 (Scope, Purpose, Examples, Constraints, Steps)' },
+            { 'Dimension': 'Easiest to learn', 'RTF': '★★★★★ (three simple components)', 'CRAFT': '★★★ (five, but role-focused)', 'CO-STAR': '★★ (six, many interactions)', 'SPECS': '★★ (five, but strict)' },
+            { 'Dimension': 'Best for quick iteration', 'RTF': '★★★★★ (minimal setup)', 'CRAFT': '★★★★ (role-and-format focused)', 'CO-STAR': '★★★ (medium overhead)', 'SPECS': '★★ (requires upfront design)' },
+            { 'Dimension': 'Audience/tone control', 'RTF': '★★ (implicit in Format)', 'CRAFT': '★★★★★ (explicit Audience and Tone)', 'CO-STAR': '★★★★★ (Tone and Audience separate)', 'SPECS': '★ (not designed for voice)' },
+            { 'Dimension': 'Output schema strictness', 'RTF': '★★ (Format can suggest, not guarantee)', 'CRAFT': '★★★ (Format can be strict)', 'CO-STAR': '★★★ (Response can be strict)', 'SPECS': '★★★★★ (Constraints + Steps guarantee)' },
+            { 'Dimension': 'Suitable for templates/reuse', 'RTF': '★★★★★ (lightweight templates easy to reuse)', 'CRAFT': '★★★★ (role and format template well)', 'CO-STAR': '★★★ (more overhead to template)', 'SPECS': '★★★ (templates are useful but complex)' },
+          ],
+          columns: ['Dimension', 'RTF', 'CRAFT', 'CO-STAR', 'SPECS'],
+        },
+        vsFrameworks: {
+          title: 'RTF vs Specific Frameworks: Key Differences',
+          content: ['**RTF is your lightweight default. Here\'s when to switch to heavier frameworks.**'],
+          items: [
+            '**RTF vs [CRAFT](/prompt-engineering/craft-framework):** CRAFT adds Audience and Tone as explicit components. Use RTF when Role is enough. Use CRAFT when you must control voice and audience separately.',
+            '**RTF vs [CO-STAR](/prompt-engineering/co-star-framework):** CO-STAR has six components with explicit Objective and Response fields. Use RTF for simple tasks. Use CO-STAR when goal, output format, and audience all need independent control.',
+            '**RTF vs [SPECS](/prompt-engineering/specs-framework):** SPECS is for machine-usable output with strict schema. Use RTF for human-readable content. Use SPECS when the output must feed into a system.',
+            '**RTF vs [Single Step](/prompt-engineering/the-single-step-prompt-method):** Single Step is even lighter (no template). Use RTF for reusable templates. Use Single Step for one-off exploratory questions.',
+            '**RTF + Google\'s Guide:** Add few-shot examples and explicit constraints (from Google\'s Prompting Guide) to RTF\'s Format field for better quality on specialized tasks.',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           content: [
@@ -27207,6 +27967,30 @@ zh: {
             {
               q: 'How does RTF compare to just asking a question?',
               a: 'A bare question leaves role, task specificity, and format to the model\'s defaults, which is inconsistent. RTF makes these explicit, so the model knows exactly who it is, what to do, and how the answer should look—increasing consistency and reusability.',
+            },
+            {
+              q: 'Can I add constraints to RTF like in SPECS?',
+              a: 'Yes, use the Format field to include constraints. For example: "Format: Return as JSON. Fields: name (string), email (string), phone (string). Do not include null values." This hybrid approach gives you more control without the overhead of SPECS.',
+            },
+            {
+              q: 'What if the model ignores my Format specification?',
+              a: 'Add examples or be more explicit. Instead of "markdown format," write "Return as a markdown bulleted list with no numbering." If that fails, upgrade to SPECS or add few-shot examples (Google\'s Prompting Guide) to show the exact format you expect.',
+            },
+            {
+              q: 'Should I use RTF for creative work like copywriting?',
+              a: 'RTF works for copywriting with clear Format (e.g., "write a social media post for LinkedIn"). For nuanced brand voice, CRAFT is better because it has explicit Tone and Audience components. RTF leans too heavily on Role to carry voice.',
+            },
+            {
+              q: 'Can I combine RTF with other frameworks?',
+              a: 'Yes. Start with RTF for quick templates. Add Google\'s Prompting Guide techniques (role, examples, constraints) to the Format field for more control. Upgrade to SPECS or CRAFT when RTF becomes limiting.',
+            },
+            {
+              q: 'How do I save and reuse RTF prompts?',
+              a: 'In PromptQuorum, save your RTF prompts as templates. Share them with your team. For each use, fill Role, Task, and Format with the same template structure—only the input data changes. This is why RTF is ideal for templates: minimum structure, maximum reuse.',
+            },
+            {
+              q: 'What\'s the difference between RTF Task and RTF Role?',
+              a: 'Role defines WHO the model is (perspective, expertise). Task defines WHAT the model should do (the action). For example: Role: "You are a code reviewer." Task: "Review this pull request for bugs and security issues."',
             },
           ],
         },
