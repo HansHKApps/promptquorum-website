@@ -278,6 +278,12 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'HowToStep', position: 6, name: 'Save to a prompt library', text: 'Document what changed and why it improved. Version the prompt. A tested, optimized prompt stored in a prompt library is a reusable asset — far more valuable than a one-off prompt solved once and forgotten.' },
         ],
       },
+      tableSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'Table',
+        name: 'Prompt Quality Measurement Criteria',
+        about: 'Six criteria for measuring whether a prompt optimization iteration succeeded: task accuracy, format compliance, factual grounding, consistency, token efficiency, and cross-model agreement.',
+      },
       sections: {
 
         tldr: {
