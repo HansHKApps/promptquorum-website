@@ -1425,3 +1425,59 @@ Run these fixes as priority before May launch:
 - persona-prompting: 72/100
 
 ---
+
+## SECTION 6: MULTILINGUAL REQUIREMENTS
+
+PromptQuorum serves 5 languages: EN, DE, FR, JA, ZH.
+Every page must correctly signal language variants to 
+Google and AI crawlers.
+
+### HREFLANG — MANDATORY (already implemented in layout.tsx)
+
+The following 6 hreflang tags are auto-generated for every 
+page via layout.tsx. No per-article action required — 
+verify they render correctly when adding new page types 
+(new routes, new static pages outside the PE hub).
+
+**Required tags on every page:**
+```
+<link rel="alternate" hreflang="en" href="[full URL]?lang=en" />
+<link rel="alternate" hreflang="de" href="[full URL]?lang=de" />
+<link rel="alternate" hreflang="fr" href="[full URL]?lang=fr" />
+<link rel="alternate" hreflang="ja" href="[full URL]?lang=ja" />
+<link rel="alternate" hreflang="zh" href="[full URL]?lang=zh" />
+<link rel="alternate" hreflang="x-default" href="[full URL]" />
+```
+
+### CONTENT TRANSLATION STATUS
+
+- **EN:** ✅ All pages — source language, fully published
+- **DE:** 🔄 In progress — translate before App Store launch (Aug 2026)
+- **JA:** 🔄 In progress — priority: Local LLM section (Ollama audience)
+- **FR:** ⏳ Planned Q3 2026
+- **ZH:** ⏳ Planned Q3 2026
+
+### TRANSLATION CHECKLIST — when publishing a translated page
+
+- [ ] Body content is in the target language (not English)
+- [ ] H1 title is translated
+- [ ] Key Takeaways block is translated
+- [ ] FAQ section is translated
+- [ ] Meta description is translated and under 160 chars
+- [ ] `<html lang="XX">` attribute matches the language code
+- [ ] hreflang tags are already present via layout.tsx
+- [ ] Do NOT translate: model names (GPT-4o, Claude, LLaMA), benchmark names (MMLU, HumanEval), code blocks, organization names, URLs
+
+### KNOWN BUGS TO NEVER REPEAT
+
+- **NEVER** serve English body content under a non-English lang param — Google ignores hreflang if content language doesn't match declared language
+- **NEVER** use relative URLs in hreflang tags — must be full absolute URLs with `https://www.promptquorum.com`
+- **NEVER** let `?lang=` params stack (`?lang=en&lang=de`) — strip existing lang param before building alternates
+- **ALWAYS** include `x-default` pointing to base URL without lang param — this is the fallback for users in countries not covered by the 5 languages
+
+### NEW ROUTE CHECKLIST
+
+When adding a new route type (new static page, new section):
+- [ ] Confirm layout.tsx hreflang generation covers the new route
+- [ ] Test by viewing page source and searching for `hreflang`
+- [ ] Verify all 6 tags appear with correct absolute URLs
