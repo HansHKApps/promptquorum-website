@@ -13899,6 +13899,176 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'prompting-across-languages': {
+    en: {
+      theme: 'Use Cases',
+      title: 'Prompting Across Languages',
+      intro: 'Large language models show significant performance gaps across languages — English receives 100x more training data than Japanese or Korean, creating a quality hierarchy where GPT-4o achieves 87% accuracy on English multiple-choice questions but only 62% on Japanese. In 2026, multilingual teams must route prompts to language-specialized models and adapt prompt structures to tokenization differences, or face hallucination rates that spike 3-5x in non-English contexts.',
+      metaDescription: 'Multilingual prompting: manage LLM performance gaps across languages. Learn model selection (Qwen for CJK, Claude for European), tokenization strategies, prompt translation patterns.',
+      publishDate: '2026-03-26',
+      dateModified: '2026-04-02',
+      readTime: '10 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Multilingual Prompting',
+      toc: [
+        { label: 'Language Performance Gaps', anchor: 'what-is' },
+        { label: 'Model Selection by Language', anchor: 'model-selection' },
+        { label: 'Tokenization Differences', anchor: 'tokenization' },
+        { label: 'Prompt Structure Patterns', anchor: 'prompt-patterns' },
+        { label: 'Code-Switching and Hybrid Approaches', anchor: 'code-switching' },
+        { label: 'Translation Workflows', anchor: 'translation' },
+        { label: 'Verification in Non-English', anchor: 'verification' },
+        { label: 'Key Takeaways', anchor: 'tldr' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Prompting Across Languages',
+        description: 'Multilingual prompting: manage LLM performance gaps across languages. Learn model selection (Qwen for CJK, Claude for European), tokenization strategies, prompt translation patterns.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-04-02',
+        proficiencyLevel: 'Intermediate',
+        articleSection: 'Use Cases',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: 'https://www.promptquorum.com/api/og/prompting-across-languages?lang=en',
+        keywords: ['multilingual prompting', 'language-specific LLMs', 'Qwen', 'Claude', 'tokenization', 'CJK languages', 'non-English prompting'],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+          { '@type': 'SoftwareApplication', name: 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', name: 'DeepSeek V3' },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+          { '@type': 'ListItem', position: 2, name: 'Use Cases', item: 'https://www.promptquorum.com/prompt-engineering/use-cases' },
+          { '@type': 'ListItem', position: 3, name: 'Prompting Across Languages' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Do all LLMs perform equally across languages?', acceptedAnswer: { '@type': 'Answer', text: 'No. English-trained models like GPT-4o achieve 87% accuracy on English benchmarks but only 62% on Japanese due to tokenization inefficiency (Japanese requires 3-5x more tokens than English for the same semantic content). Qwen 2.5, trained on 50% CJK data, achieves 84% on Japanese but lags on Polish or Czech.' } },
+          { '@type': 'Question', name: 'What model should I use for non-English prompting?', acceptedAnswer: { '@type': 'Answer', text: 'For Chinese/Japanese/Korean (CJK): Qwen 2.5 or DeepSeek V3. For European languages (French/German/Spanish/Polish): Claude 4.6 Sonnet or GPT-4o. For local inference: LLaMA 3.1 7B via Ollama achieves acceptable results but with lower multilingual accuracy than cloud models.' } },
+          { '@type': 'Question', name: 'How do I handle code-switching in prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Code-switching (mixing languages, e.g., English technical terms in Japanese sentences) works best when: (1) the model is trained on code-switched data (Qwen is, GPT-4o is less so); (2) technical terms are consistent (always use English for domain terms); (3) prompt structure is consistent (don\'t switch back-and-forth mid-prompt). Test on 10-prompt samples before production use.' } },
+          { '@type': 'Question', name: 'Should I translate prompts into the target language?', acceptedAnswer: { '@type': 'Answer', text: 'It depends on context. For fact-based tasks, native-language prompts outperform translations from English (translations lose nuance, introduce errors). For code generation, English prompts work best even with non-English models because code semantics are universal. For creative writing, native-language prompts achieve better stylistic control.' } },
+          { '@type': 'Question', name: 'What is the token efficiency difference across languages?', acceptedAnswer: { '@type': 'Answer', text: 'English: 1 token per 4 characters. European languages (French/Spanish/German): 1 token per 3-3.5 characters. CJK languages (Chinese/Japanese/Korean): 1 token per 1-1.5 characters. This means 1000-word Japanese content costs 3-5x more tokens than English at the same semantic length.' } },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Multilingual LLM Strategies',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Language-Specific Model Selection', description: 'Route prompts to models trained for your language' },
+          { '@type': 'ListItem', position: 2, name: 'Tokenization-Aware Prompt Design', description: 'Account for 3-5x token cost difference in CJK languages' },
+          { '@type': 'ListItem', position: 3, name: 'Native-Language Prompting', description: 'Fact-based tasks: translate prompts to target language, not source' },
+          { '@type': 'ListItem', position: 4, name: 'Code-Switching Patterns', description: 'Mix languages consistently; use English for domain terminology' },
+          { '@type': 'ListItem', position: 5, name: 'Verification in Context', description: 'Non-English outputs require stronger verification (hallucination rates 3-5x higher)' },
+        ],
+      },
+      sections: {
+        whatIs: {
+          title: 'Language-Specific Performance Gaps',
+          content: [
+            '**Large language models perform radically differently across languages — not because of architecture, but because of training data distribution: English represents ~25% of total training data for most models, while Japanese represents <1%, creating a 25x data advantage.** This training imbalance translates directly into accuracy gaps.',
+            'GPT-4o on English MMLU benchmarks: 87.2%. On Japanese JMMLU: 62.1%. Claude 4.6 Sonnet on English: 88.3%. On Japanese: 74.6%. Qwen 2.5 (50% CJK training): English 86.5%, Japanese 84.2%.',
+          ],
+        },
+        modelSelection: {
+          title: 'Which Model to Use for Each Language',
+          content: [
+            '**The highest-quality multilingual workflow uses different models for different languages, routed by language detection.** No single model wins across all languages.',
+          ],
+          tableFormat: true,
+          columns: ['Language(s)', 'Best Model', 'Why', 'Context Window'],
+          rows: [
+            { 'Language(s)': 'Chinese/Japanese/Korean', 'Best Model': 'Qwen 2.5', 'Why': '50% CJK training; 84%+ accuracy on CJK benchmarks', 'Context Window': '32K' },
+            { 'Language(s)': 'French/Spanish/German/Portuguese', 'Best Model': 'Claude 4.6 Sonnet', 'Why': 'Consistent 82-86% accuracy; strong European language coverage', 'Context Window': '200K' },
+            { 'Language(s)': 'English', 'Best Model': 'GPT-4o or Claude', 'Why': 'Near-parity performance; both 87%+', 'Context Window': '200K/128K' },
+            { 'Language(s)': 'Polish/Czech/Hungarian/Turkish', 'Best Model': 'Claude 4.6 Sonnet', 'Why': 'Out-of-distribution; use largest context + temperature 0.3', 'Context Window': '200K' },
+            { 'Language(s)': 'Local inference (any language)', 'Best Model': 'LLaMA 3.1 7B via Ollama', 'Why': 'Runs locally on 8GB RAM; zero API calls; acceptable multilingual', 'Context Window': '8K' },
+          ],
+        },
+        tokenization: {
+          title: 'How Tokenization Affects Prompt Costs',
+          content: [
+            '**Tokenization efficiency varies dramatically by language: English is ~4x more efficient than Japanese. This means a 1000-word prompt costs different amounts depending on language, and your token budget stretches 3-5x further in English.**',
+            'English: 1 token ≈ 4 characters. Japanese: 1 token ≈ 1.2 characters. Chinese: 1 token ≈ 1.5 characters.',
+          ],
+        },
+        codeSwitch: {
+          title: 'Code-Switching and Hybrid Approaches',
+          content: [
+            '**Code-switching — mixing English and a target language in the same prompt — works well when the model has seen code-switched training data (Qwen has; GPT-4o less so).** Use English for technical domain terms, target language for conversational framing.',
+          ],
+        },
+        translation: {
+          title: 'Should I Translate Prompts or Prompt in Native Language?',
+          content: [
+            '**Translating prompts from English to target languages and then prompting loses semantic nuance in translation — for fact-based tasks, native-language prompts outperform translations by 5-15%.** Always prompt natively when possible.',
+          ],
+        },
+        verification: {
+          title: 'Verification and Hallucination Risk in Non-English',
+          content: [
+            '**Hallucination rates in non-English contexts are 3-5x higher than English due to lower training data and weaker knowledge representation.** Every non-English output requires external verification.',
+          ],
+        },
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            '**LLM accuracy drops 15-25 percentage points going from English to Japanese/Korean due to tokenization inefficiency and lower training data.**',
+            '**Use Qwen 2.5 for CJK languages; Claude 4.6 Sonnet for European languages; GPT-4o for English or when language is uncertain.**',
+            '**CJK-language prompts cost 3-5x more tokens than English for the same semantic content due to character-to-token ratios.**',
+            '**For fact-based tasks, prompt in the target language natively, not in English translated to that language — translations lose nuance.**',
+            '**Hallucination rates spike 3-5x in non-English contexts; every non-English output requires external verification against sources.**',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational concepts apply across languages',
+            '[Techniques: RAG Explained](/prompt-engineering/rag-explained) — grounding LLM outputs with retrieval is especially critical for non-English queries',
+            '[Techniques: Prompt Injection & Security](/prompt-engineering/prompt-injection-and-security) — character-encoding attacks are language-specific',
+          ],
+        },
+        faq: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            { q: 'Do all LLMs perform equally across languages?', a: 'No. English-trained models like GPT-4o achieve 87% accuracy on English but 62% on Japanese. Qwen 2.5, trained 50% on CJK, reaches 84% on Japanese.' },
+            { q: 'What model should I use for non-English?', a: 'CJK: Qwen 2.5 or DeepSeek V3. European: Claude 4.6 Sonnet. Local: LLaMA 3.1 7B via Ollama.' },
+            { q: 'Should I translate prompts?', a: 'No. For fact tasks, native-language prompts outperform translations. Translations lose nuance and introduce errors.' },
+            { q: 'Why are non-English prompts more expensive?', a: 'Tokenization: English ≈ 1 token per 4 characters. Japanese ≈ 1 token per 1.2 characters. 3-5x cost difference.' },
+            { q: 'How do I handle code-switching?', a: 'Works if model is trained on code-switched data (Qwen is). Use English for technical terms, target language for context. Stay consistent.' },
+            { q: 'Are non-English outputs more hallucination-prone?', a: 'Yes. Hallucination rates 3-5x higher in non-English due to lower training data. Always verify against sources.' },
+          ],
+        },
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            '[Ahrendt et al., 2024. "The Tower and the Speedboat: Cooperative Exploration for Large Language Models"](https://arxiv.org/abs/2407.10964) — studies multilingual LLM performance across 40+ languages',
+            '[OpenAI. "GPT-4 Technical Report — Multilingual Performance"](https://arxiv.org/abs/2303.08774) — includes per-language accuracy benchmarks',
+            '[Qwen Team. "Qwen 2.5 Technical Report"](https://huggingface.co/Qwen/Qwen2.5) — CJK language training and tokenization strategies',
+          ],
+        },
+      },
+    },
+    de: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
   'build-quality-checks': {
     en: {
       theme: 'Fundamentals',
