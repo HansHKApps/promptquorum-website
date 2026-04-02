@@ -20429,7 +20429,7 @@ zh: {
         quoteScholz: {
           title: '',
           blockquote: 'Germany wants to become one of Europe\'s leading AI locations. We are investing in AI research, digital infrastructure, and the people who will build the next generation of intelligent systems.',
-          blockquoteSource: 'Olaf Scholz, Federal Chancellor of Germany — National AI Strategy update, 2024',
+          blockquoteSource: 'Olaf Scholz, former Federal Chancellor of Germany — National AI Strategy update, 2024',
         },
 
         faq: {
