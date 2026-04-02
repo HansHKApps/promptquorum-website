@@ -29994,24 +29994,105 @@ zh: {
       theme: 'Techniques',
       title: 'Prompt Chaining: How to Break Big Tasks Into Winning Steps',
       intro: 'Prompt chaining is a technique where you break a complex task into multiple smaller prompts and feed the output of one step into the next. This lets you build reliable multi-step workflows instead of relying on a single, overly complicated prompt.',
+      metaDescription: 'Prompt chaining: break complex AI tasks into sequential steps. Learn 4 patterns (Analyze→Plan→Draft→Refine, Extract→Transform→Summarize, etc.) and how to implement them.',
       publishDate: '2026-03-26',
+      dateModified: '2026-04-02',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Prompt Chaining',
+      toc: [
+        { label: 'What Is Prompt Chaining?', anchor: 'what-is-prompt-chaining' },
+        { label: 'Why It Matters', anchor: 'why-it-matters' },
+        { label: 'Typical Chain Patterns', anchor: 'typical-patterns' },
+        { label: 'Practical Example', anchor: 'example' },
+        { label: 'When to Use', anchor: 'when-to-use' },
+        { label: 'PromptQuorum Support', anchor: 'in-prompt-quorum' },
+        { label: 'How to Implement', anchor: 'how-to-start' },
+        { label: 'Key Takeaways', anchor: 'tldr' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Prompt Chaining: How to Break Big Tasks Into Winning Steps',
-        description: 'What prompt chaining is, why it matters, and how to design multi-step AI workflows that are easier to control and reuse.',
+        description: 'Prompt chaining: break complex AI tasks into sequential steps. Learn 4 patterns and how to implement reliable multi-step workflows.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
-        keywords: ['prompt chaining', 'prompt engineering', 'AI workflows', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        proficiencyLevel: 'Intermediate',
+        keywords: ['prompt chaining', 'prompt engineering', 'multi-step workflows', 'AI pipelines', 'workflow automation', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: 'https://www.promptquorum.com/api/og/prompt-chaining?lang=en',
+        articleSection: 'Techniques',
+        teaches: [
+          'Definition and purpose of prompt chaining: breaking complex tasks into focused sequential steps',
+          '4 recurring chain patterns: Analyze→Plan→Draft→Refine, Extract→Transform→Summarize, Classify→Route→Generate, Generate→Critique→Improve',
+          'When to use prompt chaining: complex tasks, multi-step workflows, content production, data pipelines, decision support',
+          'How to implement chains: task decomposition, output feeding, independent optimization, human checkpoints, documentation',
+          'Integration with PromptQuorum: standardizing steps, comparing models at each stage, reusable templates',
+        ],
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Large Language Models' },
           { '@type': 'Thing', name: 'AI Workflows' },
+          { '@type': 'Thing', name: 'Workflow Automation' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': ['BreadcrumbList', 'FAQPage'],
+        breadcrumbListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+          { '@type': 'ListItem', position: 2, name: 'Techniques', item: 'https://www.promptquorum.com/prompt-engineering/techniques' },
+          { '@type': 'ListItem', position: 3, name: 'Prompt Chaining' },
+        ],
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is prompt chaining?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Prompt chaining means connecting several prompts so that each one performs a focused subtask and passes its result forward. Instead of asking a model to "do everything at once", you create a sequence (analyze → plan → draft → review). Each step has a clear input, output format, and responsibility.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Why does prompt chaining matter?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Most real-world tasks are too complex for a single prompt. Prompt chaining improves accuracy by optimizing each step independently, makes troubleshooting easier because you can see where a chain breaks, and increases reuse because individual steps can be shared across workflows.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What are the 4 common prompt chain patterns?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The 4 recurring patterns are: (1) Analyze → Plan → Draft → Refine for writing; (2) Extract → Transform → Summarize for document processing; (3) Classify → Route → Generate for input triage; (4) Generate → Critique → Improve for iterative refinement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I use prompt chaining?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use prompt chaining for complex tasks that decompose into natural stages: content pipelines (research → outline → draft → edit), data pipelines (ingest → clean → extract → enrich), decision support (gather facts → generate options → evaluate), and product workflows.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I implement a prompt chain?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Step 1: Decompose the task into sequential subtasks. Step 2: Feed output from one prompt into the next. Step 3: Optimize each prompt independently. Step 4: Add human review checkpoints. Step 5: Document the chain structure and dependencies.',
+            },
+          },
         ],
       },
       sections: {
@@ -30117,6 +30198,77 @@ zh: {
             '**Optimize each prompt independently before chaining them.** Tune prompt 1 until it generates good outlines, then tune prompt 2 until it writes good sections given an outline. Test each step separately.',
             '**Use intermediate checkpoints where a human can review before proceeding.** After generating an outline, review it before writing sections. After fact-checking, flag claims that fail verification. This prevents errors from cascading.',
             '**Document the chain structure and dependencies.** Create a diagram or flowchart showing: Step 1 → Step 2 → Step 3, and which outputs feed into which inputs. This makes the pipeline clear and maintainable.',
+          ],
+        },
+
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            '**Prompt chaining breaks complex tasks into sequential steps, each handled by a separate prompt.** Instead of one giant prompt, you create a pipeline where output from Step 1 feeds into Step 2, reducing errors and improving control.',
+            '**Use 4 recurring patterns:** Analyze→Plan→Draft→Refine (writing), Extract→Transform→Summarize (data), Classify→Route→Generate (triage), Generate→Critique→Improve (iteration).',
+            '**Chains excel at decomposable tasks:** content production, data pipelines, decision support, onboarding, customer support automation. They are overkill for one-off, simple tasks.',
+            '**Optimize each step independently before chaining.** Test prompt 1 until it reliably produces outlines. Test prompt 2 until it writes good sections given an outline. Only then connect them.',
+            '**Add human review checkpoints between critical steps.** After generating an outline, review it before writing. After fact-checking, flag failures. This prevents errors from cascading down the chain.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational concepts underlying prompt chaining',
+            '[Techniques: Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — reasoning steps within individual chain links (complement to chaining)',
+            '[Techniques: Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode) — enforcing consistent format at each chain step',
+            '[Use Topics: Control the Output](/prompt-engineering/control-the-output) — techniques for predictable outputs that feed into subsequent steps',
+            '[Use Topics: How to Build Quality Checks With AI In Mind](/prompt-engineering/build-quality-checks) — validation patterns at each chain stage',
+          ],
+        },
+
+        faq: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What is prompt chaining?',
+              a: 'Prompt chaining means connecting several prompts so that each one performs a focused subtask and passes its result forward. Instead of asking a model to "do everything", you create a pipeline (analyze → plan → draft → review).',
+            },
+            {
+              q: 'Why should I use prompt chaining instead of one big prompt?',
+              a: 'Prompt chaining improves accuracy by optimizing each step independently, makes debugging easier because you can see where failures occur, enables reuse because individual steps work across different workflows, and reduces hallucinations by limiting scope per step.',
+            },
+            {
+              q: 'What are the 4 main chain patterns?',
+              a: '(1) Analyze → Plan → Draft → Refine: for writing articles, reports, strategies. (2) Extract → Transform → Summarize: for processing documents and logs. (3) Classify → Route → Generate: for input triage. (4) Generate → Critique → Improve: for iterative refinement.',
+            },
+            {
+              q: 'How do I know if my task needs chaining?',
+              a: 'Use chaining if your task naturally decomposes into stages that can fail or change independently. If your single prompt has many "if" conditions or is very long and fragile, it is usually a sign you need a chain.',
+            },
+            {
+              q: 'How do I implement a chain?',
+              a: 'Step 1: Decompose the task into sequential subtasks. Step 2: Write and test one prompt per step. Step 3: Feed output from step N into step N+1. Step 4: Add human review checkpoints. Step 5: Document the chain structure.',
+            },
+            {
+              q: 'Do I need to use the same model for all steps?',
+              a: 'No. You can use different models at different steps. For example, use GPT-4o for complex reasoning, Claude 4.6 Sonnet for extraction, and Gemini 2.5 Pro for generation. Mix and match based on each step\'s requirements.',
+            },
+            {
+              q: 'How does prompt chaining differ from chain-of-thought?',
+              a: 'Chain-of-Thought (CoT) is a technique within a single prompt where you ask the model to show its reasoning step by step. Prompt chaining connects multiple separate prompts in sequence. They are complementary: you can use CoT within individual chain links.',
+            },
+            {
+              q: 'What if one step in the chain fails?',
+              a: 'You can implement error handling: (1) Add human review checkpoints where a human flags failures before proceeding. (2) Implement validation at each step (e.g., check if output matches expected schema). (3) Add retry logic with refined prompts. (4) Route to a fallback step.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            '[OpenAI. "Prompt Engineering Guide"](https://platform.openai.com/docs/guides/prompt-engineering) — official best practices for chaining API calls and managing multi-step workflows with GPT-4o',
+            '[Anthropic. "Prompting Guide"](https://docs.anthropic.com/en/docs/build-a-claude-app/build-chatbots) — Anthropic\'s guidance on building multi-turn and chained workflows with Claude 4.6 Sonnet',
+            '[Google. "Multi-Step Reasoning with Gemini"](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design) — Google\'s patterns for chaining calls to Gemini 2.5 Pro',
+            '[Langchain Documentation](https://langchain.readthedocs.io) — open-source framework for building and managing prompt chains and AI applications',
           ],
         },
       },
