@@ -229,15 +229,24 @@ Replace:
 
 ---
 
-## 7b. Batch Translation Approach for Large Articles
+## 7b. Batch Translation Approach for Large Articles — MANDATORY
 
-For articles with 40+ sections (e.g., `geopolitics-and-ai`), use the **batch approach** instead of translating the entire article at once. This method breaks the translation into 10 logical batches, allowing incremental building and early error detection.
+**For ALL articles with 30+ sections, use the batch approach. Never translate an entire large article in a single pass.**
 
-### When to Use
+This method breaks translations into 5–10 small logical batches (each batch = 1 Edit call), allowing incremental building, early error detection, and clear commit history.
 
-- Article has 40+ sections (too large for single agent pass)
-- Multiple sections share similar structure (tables, FAQs, QA pairs)
-- You want to verify build success incrementally rather than waiting for full completion
+### When to Use (Mandatory)
+
+- Article has 30+ sections (too large for single agent pass)
+- Multiple sections share similar structure (tables, FAQs, QA pairs, definitions)
+- You want to verify build success incrementally and catch errors early
+
+### Why This Approach
+
+- **Single-pass failures:** Large articles translated all at once risk syntax errors that cascade and are hard to debug
+- **Incremental verification:** Build after Batch 5 catches errors before the full article is done
+- **Atomic commits:** Each commit captures a logical milestone, not a massive diff
+- **Efficiency:** Errors are caught early, not after 40 sections are translated and invalid
 
 ### Batch Structure
 
@@ -250,6 +259,8 @@ For articles with 40+ sections (e.g., `geopolitics-and-ai`), use the **batch app
 | 5 | Major themes | `threeWayRace`, `euAiAct` — **CHECKPOINT BUILD** |
 | 6–9 | Regional sections, strategy blocks, additional Q&A | `euMemberStates`, `franceMistral`, `usStrategy`, `chinaAiStrategy`, etc. |
 | 10 | Remaining Q&A, definitions, blockquotes, FAQs | Final glossary, related reading — **FINAL BUILD + COMMIT** |
+
+**Golden Rule:** One batch = one Edit call. Never combine two batches in a single edit.
 
 ### How to Execute
 
@@ -298,11 +309,30 @@ After each checkpoint build (`npm run build`):
 
 ### Commits
 
-- **Batches 1–4:** Single commit with message `feat: Add [language] translation batches 1–4 for [article-slug]`
-- **Batches 5–9:** Second commit with message `feat: Add [language] translation batches 5–9 for [article-slug]`
-- **Batch 10:** Final commit with message `feat: Complete [language] translation for [article-slug]`
+- **Batches 1–4:** Single commit with message `feat: Add [language] translation for [article-slug] (Batches 1–4)`
+- **Batches 5–10:** Single commit with message `feat: Complete [language] translation for [article-slug] (Batches 5–10)`
 
 After final build passes, push to `origin/main`.
+
+### Anti-Pattern: Do NOT Combine Batches
+
+**Wrong ❌**
+```
+# Single Edit attempting Batches 6 AND 7 together
+old_string: "... organizationsImplications: { ... }, ... }"
+new_string: "... organizationsImplications: { ... }, qaWhatIsAIGeopolitics: { ... }, qaWhoIsWinning: { ... }, ... }"
+```
+
+**Correct ✅**
+```
+# Batch 6: One Edit
+old_string: "... organizationsImplications: { ... }, ... }"
+new_string: "... organizationsImplications: { ... }, qaWhatIsAIGeopolitics: { ... }, ... }"
+
+# Batch 7: Separate Edit (after Batch 6 is verified)
+old_string: "... qaWhatIsAIGeopolitics: { ... }, ... }"
+new_string: "... qaWhatIsAIGeopolitics: { ... }, qaWhoIsWinning: { ... }, ... }"
+```
 
 ---
 
