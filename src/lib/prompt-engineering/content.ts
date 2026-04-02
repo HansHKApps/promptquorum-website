@@ -19901,6 +19901,36 @@ zh: {
           { '@type': 'Question', name: 'Can EU organizations use DeepSeek for commercial applications?', acceptedAnswer: { '@type': 'Answer', text: 'Technically yes, with GDPR-compliant Standard Contractual Clauses (SCCs). In practice, SCCs are difficult to enforce against Chinese law obligations requiring CAC data disclosure compliance. Germany (BSI), France (ANSSI), and the Netherlands (NCSC) have issued advisories restricting Chinese AI tools for government and critical infrastructure. Private-sector organizations must conduct a Transfer Impact Assessment under GDPR Article 46 before processing personal data through DeepSeek.' } },
         ],
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Deploy Generative AI Products in China: A Developer Guide',
+        description: 'Step-by-step guide for developers deploying AI products in China — model selection, content restrictions, CAC security assessment, PIPL data residency, and go-to-market timeline.',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Understand Available AI Models in China', text: 'Foreign models (GPT-4o, Claude, Gemini) are inaccessible from mainland China without a VPN. Available options: Alibaba Qwen 2.5 (open-weights, 7B–72B, 128K context), Baidu ERNIE 4.0 (Qianfan API), ByteDance Doubao (Volcano Engine), Zhipu AI GLM-4, DeepSeek R1/V3. Qwen 2.5 72B is the strongest open-weights option for self-hosting.' },
+          { '@type': 'HowToStep', position: 2, name: 'Plan for API-Level Content Restrictions', text: 'CAC-registered generative AI services filter content blocking CPC leadership criticism, Taiwan/Tibet/Xinjiang independence discussions, politically sensitive historical events, and content undermining "socialist core values." Filters are built into the API. Filter errors return HTTP 200 with is_safe: 0 — not HTTP 4xx — requiring explicit application-level handling.' },
+          { '@type': 'HowToStep', position: 3, name: 'Complete the CAC Security Assessment', text: 'Required before any consumer-facing generative AI service launches in China. Submit training data sources, content filtering documentation, and sample outputs. Timeline: 45–90 days. Foreign companies must partner with a mainland China entity or licensed cloud provider (Alibaba Cloud, Tencent Cloud) as the registered provider.' },
+          { '@type': 'HowToStep', position: 4, name: 'Deploy a Hybrid Model for China and International Users', text: 'Deploy Qwen 2.5 72B (Apache 2.0) on your own infrastructure outside China for international users. Use Alibaba Cloud API for the China segment under their CAC registration. Qwen 2.5 72B scores within 5 points of GPT-4o on MMLU and outperforms on C-Eval. 128K context window.' },
+          { '@type': 'HowToStep', position: 5, name: 'Comply with PIPL Data Residency Requirements', text: 'PIPL (2021) requires personal data from Chinese users to stay in China or pass a government security assessment before cross-border transfer. Route all China-user traffic through mainland-hosted inference (Alibaba Cloud, Tencent Cloud, Huawei Cloud).' },
+          { '@type': 'HowToStep', position: 6, name: 'Plan Your China Go-to-Market Timeline', text: 'Budget 45–90 days for CAC pre-launch review. Partner with a mainland entity for consumer-facing products. Use Qwen 2.5 72B for Chinese-language tasks. Avoid routing Chinese user data through US-hosted APIs.' },
+        ],
+      },
+      tableSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'Dataset',
+        name: 'Global AI Regulation Comparison: EU AI Act vs US Strategy vs China CAC',
+        description: 'Structured comparison of AI regulatory frameworks across 8 dimensions — primary approach, key legislation, risk framework, maximum fine, data protection, banned applications, enforcement body, and international reach — for the European Union, United States, and China.',
+        url: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai',
+        creator: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        dateModified: '2026-04-02',
+        variableMeasured: [
+          { '@type': 'PropertyValue', name: 'Primary Approach', description: 'EU: Rights-based legal framework. US: Sectoral, innovation-first. China: State-directed, control-first.' },
+          { '@type': 'PropertyValue', name: 'Key Legislation', description: 'EU: EU AI Act (2024). US: No federal AI law; NIST AI RMF voluntary. China: Algorithm Recommendations Regulations (2022); Generative AI Measures (2023).' },
+          { '@type': 'PropertyValue', name: 'Maximum Fine', description: 'EU: €35M or 7% global turnover. US: No federal AI-specific fine. China: Up to ¥100,000 per violation.' },
+          { '@type': 'PropertyValue', name: 'Enforcement Body', description: 'EU: EU AI Office + national authorities. US: FTC, FDA, CFPB, EEOC. China: Cyberspace Administration of China (CAC).' },
+          { '@type': 'PropertyValue', name: 'International Reach', description: 'EU: Brussels Effect — applies extraterritorially. US: Hardware export controls only. China: BRI AI exports spread governance norms.' },
+        ],
+      },
       sections: {
         tldr: {
           title: 'Key Takeaways',
