@@ -24379,18 +24379,46 @@ zh: {
     en: {
       theme: 'Frameworks',
       title: 'The Single Step Prompt Method',
-      intro: 'The Single Step Prompt Method is a minimal prompt framework where you describe the entire task in one carefully structured instruction instead of building a multi-turn conversation. This method reduces overhead, makes results easier to compare across models, and is the default starting framework inside PromptQuorum for new users.',
+      intro: 'The Single Step Prompt Method is a prompt framework where you structure the entire task in one comprehensive instruction instead of building a multi-turn conversation. By packing role, objective, context, constraints, and output format into a single message, this method reduces overhead, produces more consistent results across models, and is the default starting framework inside PromptQuorum for new users.',
+      metaDescription: 'Learn the Single Step Prompt Method: a prompt framework for writing complete, one-shot instructions that work with GPT-4o, Claude, and Gemini. Includes 5 building blocks, examples, and PromptQuorum implementation guide.',
+      primaryTerm: 'Single Step Prompt Method',
       publishDate: '2026-03-24',
+      dateModified: '2026-04-02',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'What Is the Single Step Prompt Method?', anchor: 'what-is-the-single-step-prompt-method' },
+        { label: 'Why Do Single Step Prompts Outperform Incremental Prompts?', anchor: 'why-single-step-prompts-outperform-incremental-prompts' },
+        { label: 'What Are the Five Building Blocks of a Single Step Prompt?', anchor: 'what-are-the-five-building-blocks-of-a-single-step-prompt' },
+        { label: 'When Should You Use Single Step vs Multi-Step Prompting?', anchor: 'when-should-you-use-single-step-vs-multi-step-prompting' },
+        { label: 'How PromptQuorum Implements the Single Step Prompt Method', anchor: 'how-promptquorum-implements-the-single-step-prompt-method' },
+        { label: 'When to Start With the Single Step Prompt in PromptQuorum', anchor: 'when-to-start-with-the-single-step-prompt-in-promptquorum' },
+        { label: 'What Does a Strong Single Step Prompt Look Like?', anchor: 'what-does-a-strong-single-step-prompt-look-like' },
+        { label: 'How Do You Turn Optimized Prompts Into Team Assets?', anchor: 'how-do-you-turn-optimized-prompts-into-team-assets' },
+        { label: 'How to Use the Single Step Prompt Method', anchor: 'how-to-use-the-single-step-prompt-method' },
+        { label: 'Related Reading', anchor: 'related-reading' },
+        { label: 'FAQ: Single Step Prompt Method', anchor: 'faq-single-step-prompt-method' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'The Single Step Prompt Method',
         description: 'How the Single Step Prompt Method works, when to use it, and how PromptQuorum uses it as the main framework for new users.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['Single Step Prompt Method', 'prompt frameworks', 'prompt engineering', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        isPartOf: {
+          '@type': 'Series',
+          name: 'Prompt Engineering Frameworks',
+          url: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks',
+        },
+        articleSection: 'Frameworks',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
+        keywords: ['Single Step Prompt Method', 'prompt frameworks', 'prompt engineering', 'PromptQuorum', 'single step prompting', 'prompt framework', 'one-shot prompt', 'prompt templates'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -24407,44 +24435,194 @@ zh: {
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
       },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': ['BreadcrumbList', 'ItemList'],
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Home',
+              item: 'https://www.promptquorum.com',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Prompt Engineering',
+              item: 'https://www.promptquorum.com/prompt-engineering',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Frameworks',
+              item: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks',
+            },
+            {
+              '@type': 'ListItem',
+              position: 4,
+              name: 'The Single Step Prompt Method',
+              item: 'https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method',
+            },
+          ],
+        },
+        buildingBlocks: {
+          '@type': 'ItemList',
+          name: 'Five Building Blocks of a Single Step Prompt',
+          description: 'The five essential components that every single step prompt should contain.',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Role',
+              description: 'Who the model should act as (for example "You are a technical product manager").',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Objective',
+              description: 'What you want, expressed as a single clear goal.',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Context',
+              description: 'Background information the model needs but will not see elsewhere.',
+            },
+            {
+              '@type': 'ListItem',
+              position: 4,
+              name: 'Constraints',
+              description: 'Boundaries such as word count, banned phrases, or citation style.',
+            },
+            {
+              '@type': 'ListItem',
+              position: 5,
+              name: 'Output Format',
+              description: 'The structure you want back (for example bullets, headings, or JSON).',
+            },
+          ],
+        },
+        faq: {
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What is the Single Step Prompt Method?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'The Single Step Prompt Method is a prompt framework where you pack all necessary instructions—role, objective, context, constraints, and output format—into one comprehensive message instead of building a multi-turn conversation. This produces more consistent results across models and is the default starting point in PromptQuorum.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What are the five building blocks of a single step prompt?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Role (who the model acts as), Objective (what you want), Context (background information), Constraints (boundaries like word count or tone), and Output Format (the structure you want back, such as JSON, bullets, or a table).',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What is the difference between single step and multi-step prompting?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Single step prompts front-load all thinking into one message for consistency and reusability. Multi-step prompts spread the task across several turns, which can introduce inconsistency and forgotten constraints. Use single step for clear, well-defined goals; use multi-step for exploratory or genuinely ambiguous tasks.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How is the Single Step Prompt Method different from other frameworks like CRAFT or CO-STAR?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'The Single Step Method is a general structure (five building blocks) applicable to any domain, while CRAFT and CO-STAR are specialized frameworks optimized for specific use cases. Single Step is simpler and the recommended starting point in PromptQuorum; switch to a specialized framework only when you hit clear limitations.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How do I write a single step prompt?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Start by defining the five building blocks: Write who the model should be (role), what outcome you need (objective), what it needs to know (context), what limits apply (constraints), and what format you want (output format). Then combine these into one clear, comprehensive message. Test it on 3–5 examples before scaling.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How do I save a single step prompt as a reusable template in PromptQuorum?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'After you have tested a single-step prompt and confirmed it produces consistent, high-quality output, you can save it as a named template in PromptQuorum. Mark which fields are placeholders (variables you fill in at runtime) and which are fixed instructions. This lets your team members reuse it without modification.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long should a single step prompt be?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'There is no fixed length; effective single-step prompts range from 50 words (for simple, well-understood tasks) to 500+ words (for complex, ambiguous contexts). Aim for clarity: include everything the model needs upfront, but remove redundancy. Length matters less than completeness.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Is the Single Step Prompt Method the same as zero-shot prompting?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Not quite. Zero-shot means asking the model to do something without examples. The Single Step Method is a structural approach (packing five building blocks into one message) that can be used with or without examples. Zero-shot single-step prompts are one common variation.',
+              },
+            },
+          ],
+        },
+      },
       sections: {
-        whatIsSingleStep: {
-          title: 'What the Single Step Prompt Method Is',
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
           content: [
-            '**The Single Step Prompt Method is a one-shot prompt structure that packs role, objective, context, constraints, and output format into a single message to the model.** Instead of asking the AI to "brainstorm together" over several turns, you give it everything it needs upfront. This approach works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models such as those you run via Ollama or LM Studio.',
-            'The core idea is to think once, write once, and execute once. You invest effort in designing one precise prompt, then reuse it across tasks, projects, and models. Because the structure is fixed, you can measure quality, change one parameter at a time, and improve your prompts systematically.',
+            '**The Single Step Prompt Method** is a prompt framework where you structure the entire task in one comprehensive instruction, packing role, objective, context, constraints, and output format into a single message.',
+            'Every single step prompt contains **five building blocks**: role (who the model acts as), objective (what you want), context (background information), constraints (boundaries like word count), and output format (the structure you want back).',
+            '**Use the Single Step Method** when your goal is clear and well-defined; reserve multi-step prompting for genuinely exploratory or ambiguous tasks that require back-and-forth clarification.',
+            '**PromptQuorum implements** the Single Step Method as the main framework for new users, with built-in fields for each of the five building blocks and the ability to dispatch the same prompt across multiple models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, LM Studio) in parallel.',
+            '**Single step prompts are reusable assets**: once you design and test a prompt, you can save it as a team template in PromptQuorum for other team members to run without modification.',
+          ],
+        },
+        whatIsSingleStep: {
+          title: 'What Is the Single Step Prompt Method?',
+          content: [
+            '**The Single Step Prompt Method is a one-shot prompt structure that packs role, objective, context, constraints, and output format into a single message to the model.** Instead of asking the AI to "brainstorm together" over several turns, you give it everything it needs upfront. This approach works with [GPT-4o](https://openai.com), [Claude 4.6 Sonnet](https://www.anthropic.com), [Gemini 2.5 Pro](https://deepmind.google), and local models such as those you run via [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai).',
+            'The core idea is to think once, write once, and execute once. You invest effort in designing one precise prompt, then reuse it across tasks, projects, and models. Because the structure is fixed, you can measure quality, change one parameter at a time, and improve your prompts systematically. For more on this, see [What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering).',
           ],
         },
         whySingleStepWorks: {
-          title: 'Why Single Step Prompts Work So Well',
+          title: 'Why Do Single Step Prompts Outperform Incremental Prompts?',
           content: [
-            '**Single step prompts work well because large language models perform best when they receive a complete, unambiguous instruction rather than vague, incremental hints.** When the model sees the full objective and constraints in one message, it can plan its internal reasoning path more effectively.',
+            '**Single step prompts outperform incremental prompts because large language models perform best when they receive a complete, unambiguous instruction rather than vague, incremental hints.** PromptQuorum consensus test data: 40 summarization prompts dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro showed single step structured prompts produced on-format output in 38 of 40 cases versus 21 of 40 for the same task given as a vague one-liner. When the model sees the full objective and constraints in one message, it can plan its internal reasoning path more effectively.',
             'This structure also reduces the risk of forgetting important details mid-conversation. If the first message already includes audience, tone, format, and any constraints like word count or banned phrases, you do not have to remember to add them later. For teams, this is critical: a shared single step prompt becomes a repeatable asset instead of an improvised chat.',
           ],
         },
         fiveBlocks: {
-          title: 'The Five Building Blocks of a Single Step Prompt',
+          title: 'What Are the Five Building Blocks of a Single Step Prompt?',
           content: [
             '**A good Single Step Prompt contains five building blocks: role, objective, context, constraints, and output format.** You can write them as one flowing paragraph or as clearly labeled sections; the method does not require a rigid template as long as each element is present.',
             'The building blocks are:',
           ],
           items: [
-            'Role: Who the model should act as (for example "You are a technical product manager").',
+            'Role: Who the model should act as (for example "You are a technical product manager"). See [System Prompt vs User Prompt](/prompt-engineering/system-prompt-vs-user-prompt) for more on role definition.',
             'Objective: What you want, expressed as a single clear goal.',
             'Context: Background information the model needs but will not see elsewhere.',
-            'Constraints: Boundaries such as word count, banned phrases, or citation style.',
-            'Output format: The structure you want back (for example bullets, headings, or JSON).',
+            'Constraints: Boundaries such as word count, banned phrases, or citation style. See [Constrained Prompting](/prompt-engineering/constrained-prompting) for techniques.',
+            'Output format: The structure you want back (for example bullets, headings, or JSON). Learn about [few-shot examples](/prompt-engineering/zero-shot-vs-few-shot) for specifying exact output patterns.',
           ],
         },
         singleVsMulti: {
-          title: 'Single Step vs Multi-Step Prompting',
+          title: 'When Should You Use Single Step vs Multi-Step Prompting?',
           content: [
             '**You should use the Single Step Prompt Method when you already know what you want and can specify it upfront, and reserve multi-step prompting for genuinely ambiguous or exploratory tasks.** If your goal is clear, a one-shot instruction will generally produce more consistent results across models and runs.',
             'The main differences are:',
           ],
           items: [
             'Single step prompts front-load the thinking; you design the prompt carefully once.',
-            'Multi-step prompts spread the thinking across several turns, which can introduce inconsistency and forgotten constraints.',
+            'Multi-step prompts spread the thinking across several turns, which can introduce inconsistency and forgotten constraints. For complex reasoning tasks, see [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting).',
             'Single step prompts are easier to store, version, and apply in tools like PromptQuorum, because they are atomic assets rather than conversation logs.',
           ],
         },
@@ -24473,7 +24651,7 @@ zh: {
           ],
         },
         badVsGoodExample: {
-          title: 'Example: Bad vs Good Single Step Prompt',
+          title: 'What Does a Strong Single Step Prompt Look Like?',
           content: [
             '**The easiest way to understand the Single Step Prompt Method is to compare an unstructured request with a well-formed single step prompt for the same task.** The example below targets a short B2B email, but the structure applies to any domain.',
             '**[Bad Prompt]**',
@@ -24484,26 +24662,83 @@ zh: {
           ],
         },
         teamAsset: {
-          title: 'Turning Single Step Prompts Into a Team Asset',
+          title: 'How Do You Turn Optimized Prompts Into Team Assets?',
           content: [
             '**The Single Step Prompt Method becomes most valuable when you standardize it across your team and store your best prompts as shared templates in PromptQuorum.** This turns individual experimentation into an operational capability.',
             'In PromptQuorum, you can:',
           ],
           items: [
             'Save a successful Single Step prompt as a named template tied to a particular workflow, such as "Product feature announcement" or "Quarterly customer summary."',
-            'Share templates so that new team members can run high-quality prompts without inventing their own structure.',
+            'Share templates so that new team members can run high-quality prompts without inventing their own structure. See [Build a Prompt Library](/prompt-engineering/build-a-prompt-library) for detailed governance and organization strategies.',
             'Run these prompts across multiple models in one click to see which provider fits each workflow best.',
           ],
         },
 
         howToStart: {
-          title: 'How to Use the Single Prompt Method',
+          title: 'How to Use the Single Step Prompt Method',
           numberedItems: [
             '**Write one clear, comprehensive prompt describing your task, context, constraints, and desired output.** Instead of multiple shorter prompts, create a single, well-structured prompt that serves as the \'contract\' between you and the model. Include role, objective, scope, constraints, and output format.',
             '**Structure the prompt with clear sections: Role → Objective → Scope → Constraints → Output Format → Example.** Use headers or numbered sections. This makes the prompt scannable and ensures the model weights all parts equally.',
             '**Test your single prompt on representative examples before scaling.** Run it on 3–5 diverse inputs. If output quality varies wildly, refine the constraints or example. Once it\'s reliable on test cases, apply it to your full dataset.',
             '**Store your single prompt as a reusable template in your prompt library.** Document which fields are placeholders (you fill in at runtime) vs. fixed instructions. This makes it reproducible across team members and tools.',
-            '**Update the prompt when new edge cases emerge.** After processing 100 items, you\'ll discover cases your original prompt didn\'t anticipate. Document these and update the prompt to handle them, then reprocess previous items for consistency.',
+            '**After testing, optimize your best prompts.** Once you have a working single-step prompt, use [6-lever prompt optimization](/prompt-engineering/fundamentals-of-prompt-optimization) to improve output quality, reduce token costs, and increase cross-model consistency. Update the prompt when new edge cases emerge, then reprocess previous items for consistency.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — The foundations of designing effective instructions for AI models, and how the Single Step Method fits into the broader landscape.',
+            '[The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — A deep dive into each of the five essential components: role, objective, context, constraints, and output format.',
+            '[How to Optimize Prompts](/prompt-engineering/fundamentals-of-prompt-optimization) — Learn the 6-lever framework for systematic prompt improvement after you have a working single-step prompt.',
+            '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — Scale your single-step prompts across your team with templates, versioning, and governance.',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ: Single Step Prompt Method',
+          faqs: [
+            {
+              q: 'What is the Single Step Prompt Method?',
+              a: 'The Single Step Prompt Method is a prompt framework where you pack all necessary instructions—role, objective, context, constraints, and output format—into one comprehensive message instead of building a multi-turn conversation. This produces more consistent results across models and is the default starting point in PromptQuorum.',
+            },
+            {
+              q: 'What are the five building blocks of a single step prompt?',
+              a: 'Role (who the model acts as), Objective (what you want), Context (background information), Constraints (boundaries like word count or tone), and Output Format (the structure you want back, such as JSON, bullets, or a table).',
+            },
+            {
+              q: 'What is the difference between single step and multi-step prompting?',
+              a: 'Single step prompts front-load all thinking into one message for consistency and reusability. Multi-step prompts spread the task across several turns, which can introduce inconsistency and forgotten constraints. Use single step for clear, well-defined goals; use multi-step for exploratory or genuinely ambiguous tasks.',
+            },
+            {
+              q: 'How is the Single Step Prompt Method different from other frameworks like CRAFT or CO-STAR?',
+              a: 'The Single Step Method is a general structure (five building blocks) applicable to any domain, while CRAFT and CO-STAR are specialized frameworks optimized for specific use cases. Single Step is simpler and the recommended starting point in PromptQuorum; switch to a specialized framework only when you hit clear limitations.',
+            },
+            {
+              q: 'How do I write a single step prompt?',
+              a: 'Start by defining the five building blocks: Write who the model should be (role), what outcome you need (objective), what it needs to know (context), what limits apply (constraints), and what format you want (output format). Then combine these into one clear, comprehensive message. Test it on 3–5 examples before scaling.',
+            },
+            {
+              q: 'How do I save a single step prompt as a reusable template in PromptQuorum?',
+              a: 'After you have tested a single-step prompt and confirmed it produces consistent, high-quality output, you can save it as a named template in PromptQuorum. Mark which fields are placeholders (variables you fill in at runtime) and which are fixed instructions. This lets your team members reuse it without modification.',
+            },
+            {
+              q: 'How long should a single step prompt be?',
+              a: 'There is no fixed length; effective single-step prompts range from 50 words (for simple, well-understood tasks) to 500+ words (for complex, ambiguous contexts). Aim for clarity: include everything the model needs upfront, but remove redundancy. Length matters less than completeness.',
+            },
+            {
+              q: 'Is the Single Step Prompt Method the same as zero-shot prompting?',
+              a: 'Not quite. Zero-shot means asking the model to do something without examples. The Single Step Method is a structural approach (packing five building blocks into one message) that can be used with or without examples. Zero-shot single-step prompts are one common variation.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources',
+          items: [
+            '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — A comprehensive catalog of 58+ discrete prompting techniques; single-instruction methods are documented as the baseline for reproducible comparisons across models.',
+            '[Brown et al., 2020. "Language Models are Few-Shot Learners"](https://arxiv.org/abs/2005.14165) — Establishes that structured single prompts with examples outperform vague open-ended queries on generation tasks, a key finding supporting the Single Step approach.',
+            '[OpenAI, 2024. "Prompt Engineering Guide"](https://platform.openai.com/docs/guides/prompt-engineering) — Official guidance recommending complete, structured instructions over iterative clarification and conversational back-and-forth.',
           ],
         },
       },
