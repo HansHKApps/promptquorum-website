@@ -684,7 +684,337 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
       },
     },
-    de: { theme: 'Fundamentals', title: 'Grundlagen der Prompt-Optimierung', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
+    de: {
+      theme: 'Fundamentals',
+      title: 'So optimierst du Prompts: Prompt-Optimierungstechniken und Best Practices',
+      intro: 'Prompt-Optimierung ist der iterative Prozess der Überarbeitung eines Prompts zur Verbesserung der Ausgabequalität, Konsistenz oder Genauigkeit von KI-Systemen. Dieser umfassende Leitfaden vermittelt Prompt-Optimierungstechniken und Grundlagen: die 6 zentralen Hebel, einen bewährten 6-Schritte-Optimierungsprozess, vorher/nachher-Beispiele für GPT-4o, Claude und Gemini sowie die 7 häufigsten Fehler, die du bei der Prompt-Optimierung vermeiden solltest.',
+      metaDescription: 'Erfahre, wie du Prompts mit bewährten Techniken optimierst: 6 Hebel, 6-Schritte-Prozess, vorher/nachher-Beispiele. Verbessere die KI-Prompt-Ausgaben um 20–40 % bei strukturierten Aufgaben. Grundlagen für alle Modelle.',
+      publishDate: '2026-04-02',
+      dateModified: '2026-04-04',
+      readTime: '14 min Lesezeit',
+      educationalLevel: 'Anfänger',
+      primaryTerm: 'Prompt-Optimierung',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        proficiencyLevel: 'Beginner to Intermediate',
+        dependencies: 'Basic understanding of LLMs and prompt structure',
+        headline: 'So optimierst du Prompts: Prompt-Optimierungstechniken und Best Practices',
+        description: 'Lerne Prompt-Optimierungstechniken und Best Practices: 6 zentrale Hebel, 6-Schritte-Prozess, vorher/nachher-Beispiele. Wie du KI-Prompts für GPT-4o, Claude und Gemini optimierst – Grundlagen für alle Modelle.',
+        datePublished: '2026-04-02',
+        dateModified: '2026-04-04',
+        keywords: ['Prompt-Optimierung', 'Prompt-Optimierungstechniken', 'wie man Prompts optimiert', 'KI-Prompts verbessern', 'Grundlagen der Prompt-Entwicklung', 'LLM-Optimierung', 'GPT-4o', 'Claude', 'Gemini', 'Few-Shot-Prompting', 'Chain-of-Thought-Prompting'],
+        mentions: [
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'GPT-4o' },
+          { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'Thing', name: 'Gemini 2.5 Pro' },
+          { '@type': 'Thing', name: 'Ollama' },
+          { '@type': 'Thing', name: 'LM Studio' },
+        ],
+        about: [
+          { '@type': 'Thing', name: 'Prompt-Optimierung' },
+          { '@type': 'Thing', name: 'Few-Shot-Prompting' },
+          { '@type': 'Thing', name: 'Chain-of-Thought-Prompting' },
+          { '@type': 'Thing', name: 'LLM-Ausgabequalität' },
+          { '@type': 'Thing', name: 'KI-Prompt-Entwicklung' },
+        ],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
+      },
+      sections: {
+        tldr: {
+          title: 'Wichtigste Erkenntnisse',
+          isTldr: true,
+          items: [
+            'Prompt-Optimierung = iterative Überarbeitung eines bestehenden Prompts zur Verbesserung der Ausgabequalität',
+            'Die 6 Hebel: **Spezifität**, **Kontext**, **Beispiele**, **Beschränkungen**, **Ausgabeformat**, **Rolle/Persona**',
+            'Ändere immer einen Hebel nach dem anderen – die Isolierung von Variablen ist der Schlüssel zum Erfolg',
+            'Teste mit ≥2 Modellen (GPT-4o, Claude, Gemini), um sicherzustellen, dass die Verbesserung modellunabhängig ist',
+            'Häufiges Fehlermuster: Zu viele Variablen gleichzeitig zu ändern macht die Diagnose unmöglich',
+            'Ein getesteter, optimierter Prompt ist ein dauerhafter Vermögenswert – speichere ihn in einer Prompt-Bibliothek',
+          ],
+        },
+
+        localLLMTldr: {
+          title: 'Wichtigste Erkenntnisse für Nutzer lokaler LLMs',
+          isTldr: true,
+          items: [
+            'Prompt-Optimierung ist für lokale Modelle kritischer – quantisierte Modelle (4-Bit, 8-Bit) sind sensibler gegenüber mehrdeutigen Anweisungen als Cloud-APIs',
+            'Ollama und LM Studio unterstützen dieselben 6 Optimierungshebel; der Unterschied besteht darin, dass kleinere Modelle (LLaMA 3.1 8B, Mistral 7B) explizitere Beschränkungen und kürzere Kontextfenster erfordern',
+            'Quantisierte Modelle haben reduzierte Anweisungsfolgefähigkeit – verwende einfachere, präskriptivere Prompts mit explizitem Ausgabeformat und weniger gleichzeitigen Beschränkungen',
+            'Temperaturfestlegungen unterscheiden sich: Ollama setzt standardmäßig auf 0,8 (höhere Kreativität, weniger Konsistenz); setze die Temperatur auf 0,1–0,3 für strukturierte Ausgabeaufgaben, die Konsistenz über mehrere Durchläufe erfordern',
+            'Lokale Modelle können nicht gegen eine Cloud-Baseline getestet werden – verwende PromptQuorum, um deinen optimierten lokalen Prompt mit GPT-4o und Claude zu vergleichen und die Qualitätslücke zu quantifizieren',
+          ],
+        },
+
+        definition: {
+          title: 'Was ist Prompt-Optimierung?',
+          content: [
+            '**Prompt-Optimierung ist der iterative Prozess der Überarbeitung eines bestehenden Prompts zur Verbesserung der Qualität, Genauigkeit oder Konsistenz der KI-Ausgabe für eine spezifische Aufgabe.** Sie gilt für alle großen Modelle – GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokal ausgeführte Modelle über Ollama oder LM Studio. Während Prompt-Entwicklung die ursprüngliche Prompt-Struktur entwirft, diagnostiziert Prompt-Optimierung, was fehlschlägt, und wendet gezielte Änderungen an, bis die Ausgabe einen definierten Standard erfüllt.',
+            'Prompt-Optimierung ist ein Unterprozess der Prompt-Entwicklung. Du fängst immer mit einem funktionierenden Prompt an und machst jeweils eine Änderung. Diese Isolierung von Variablen ermöglicht die Diagnose – wenn du Spezifität, Ausgabeformat und Beschränkungen gleichzeitig überarbeitest, kannst du nicht bestimmen, welche Änderung das Ergebnis verbessert hat. Die Kunst der Prompt-Optimierung ist es, einen Fehler einem richtigen Hebel zuzuordnen, nur diese Variable zu ändern und die Verbesserung zu messen.',
+            'Warum das wichtig ist: Das gleiche Modell erzeugt radikal unterschiedliche Ausgaben aus nahezu identischen Prompts. Der Unterschied zwischen „halbwegs korrekt" und „zuverlässig richtig" ist nicht Glück – es ist systematische Optimierung. Ein nicht optimierter Prompt ist erfolgreich bei einigen Eingaben und schlägt bei anderen fehl. Ein optimierter Prompt ist zuverlässig erfolgreich über eine repräsentative Stichprobe von Eingaben.',
+          ],
+        },
+
+        vsPromptEngineering: {
+          title: 'Prompt-Optimierung vs. Prompt-Engineering',
+          content: [
+            '**Prompt-Optimierung und Prompt-Engineering sind komplementäre Disziplinen, die sequenziell zusammenwirken.** Prompt-Engineering entwirft einen Prompt von Grund auf mit Bausteinen (Ziel, Kontext, Beispiele, Einschränkungen, Ausgabeformat, Rolle). Prompt-Optimierung nimmt einen bestehenden Prompt und verbessert ihn durch iterative Überarbeitungen. Sie brauchen beides: Prompt-Engineering bringt Sie zum „Funktionieren"; Prompt-Optimierung bringt Sie zur „Zuverlässigkeit".',
+            'Denken Sie es sich so: Prompt-Engineering baut die Struktur; Prompt-Optimierung verfeinert sie. Prompt-Engineering fragt „welche Elemente sollte dieser Prompt haben?" Prompt-Optimierung fragt „warum schlägt dieser Prompt fehl, und welche einzelne Änderung wird ihn beheben?" Die Unterscheidung ist wichtig, weil die Strategien unterschiedlich sind. Engineering beginnt mit Prinzipien und Bausteinen. Optimierung beginnt mit Fehlerdiagnose.',
+          ],
+          columns: ['Dimension', 'Prompt-Engineering', 'Prompt-Optimierung'],
+          rows: [
+            { 'Dimension': 'Ausgangspunkt', 'Prompt-Engineering': 'Leere Seite', 'Prompt-Optimierung': 'Bestehender Prompt' },
+            { 'Dimension': 'Ziel', 'Prompt-Engineering': 'Struktur entwerfen', 'Prompt-Optimierung': 'Ausgabe verbessern' },
+            { 'Dimension': 'Methode', 'Prompt-Engineering': 'Frameworks, Bausteine', 'Prompt-Optimierung': 'Isolieren, ändern, testen, messen' },
+          ],
+        },
+
+        whyOptimize: {
+          title: 'Warum ist Prompt-Optimierung wichtig',
+          content: [
+            'Ein vager Prompt erzeugt eine vage Ausgabe. Ein schlecht spezifizierter Prompt erzeugt eine verfehlt angestrebte Antwort. Ein Prompt, der am Montag funktioniert, könnte am Freitag fehlschlagen, wenn sich die Eingabe leicht ändert. Optimierung beseitigt diese Schwankungen durch systematische Diagnose und gezielte Überarbeitung.',
+            'Echtes Vorher/Nachher: Ein nicht optimierter Prompt lautet „Fasse diesen Artikel zusammen." Dreimal auf denselben Artikel angewendet, erzeugt er völlig unterschiedliche Ausgaben: eine mit 47 Wörtern, eine mit 120 Wörtern, die dritte übersieht den Hauptpunkt völlig. Nach Optimierung — Zugabe von Ausgabeformat („3 Aufzählungspunkte, je ≤20 Wörter"), einer Rolle („Analyst") und Spezifität („Liste die 3 Schlüsselbefunde auf, nicht die Methodik") — produziert derselbe Prompt konsistente, spezifizierte Ergebnisse alle 3 Male, über GPT-4o, Claude und Gemini hinweg.',
+            '**Für EU-Organisationen ist systematische Prompt-Optimierung eine Compliance-Anforderung, nicht nur eine Best Practice.** Das EU-Gesetz über künstliche Intelligenz (2024) verlangt von Hochrisiko-AI-Systemen — solche, die bei Einstellung, Kreditbewertung, Gesundheitswesen oder Strafverfolgung verwendet werden — zu dokumentieren, wie AI-Entscheidungen getroffen werden, und konsistente, testbare Ergebnisse zu demonstrieren. Eine versionskontrollierte Prompt-Bibliothek mit dokumentierter Optimierungshistorie erfüllt diese Audit-Trail-Anforderung. In Japan erfordert die METI-AI-Governance-Richtlinie ähnlich nachverfolgbare AI-Entscheidungsdokumentation für regulierte Anwendungen. Prompt-Optimierung ist die Grundlage dieser Nachverfolgbarkeit. Siehe [Geopolitik und KI](/prompt-engineering/geopolitics-and-ai?lang=de) für den vollständigen Compliance-Kontext.',
+          ],
+        },
+
+        callout1: {
+          blockquote: 'Das Hinzufügen einer Chain-of-Thought-Instruktion – die Aufforderung an das Modell, Schritt für Schritt zu argumentieren, bevor es antwortet – verbesserte die Genauigkeit bei mehrstufigen arithmetischen Benchmarks von 17,9 % auf 56,9 % bei einem 540B-Parameter-Modell. Eine einzelne gezielte Änderung der Prompt-Struktur, ohne Modellumschulung, erzielte einen 3x-Genauigkeitsgewinn.',
+          blockquoteSource: 'Jason Wei et al., Google Brain. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arxiv.org/abs/2201.11903',
+        },
+
+        sixLevers: {
+          title: 'Die 6 Optimierungshebel',
+          content: [
+            '**Jeder Prompt besteht aus sechs unabhängigen Variablen, die Sie anpassen können, um die Ausgabe zu verbessern.** Dies sind die „Hebel" der Optimierung. Wenn ein Prompt fehlschlägt, lässt sich der Fehlschlag auf einen oder mehrere dieser Hebel zurückführen, die nicht korrekt eingestellt sind. Die Fertigkeit der Optimierung besteht darin, ein Symptom dem richtigen Hebel zuzuordnen, ihn zu ändern und das Ergebnis zu messen.',
+          ],
+          columns: ['Hebel', 'Was es ändert', 'Optimierungsmaßnahme', 'Beispiel'],
+          rows: [
+            { 'Hebel': 'Spezifität', 'Was es ändert': 'Wie präzise die Aufgabe definiert ist', 'Optimierungsmaßnahme': 'Schreibe vage Ziele als exakte Anweisung um', 'Beispiel': '„Fasse zusammen" → „Liste 3 Schlüsselbefunde in je ≤20 Wörtern auf"' },
+            { 'Hebel': 'Kontext', 'Was es ändert': 'Informationen, die das Modell verarbeitet', 'Optimierungsmaßnahme': 'Addiere Hintergrund, Zielgruppe, Einschränkungen', 'Beispiel': '„Schreibe einen Bericht" → „Schreibe einen Bericht für einen nicht technisch versierten CFO"' },
+            { 'Hebel': 'Beispiele', 'Was es ändert': 'Verständnis des Modells für das gewünschte Ausgabeformat', 'Optimierungsmaßnahme': 'Füge 1–3 Input/Output-Paare hinzu (Few-Shot)', 'Beispiel': 'Zeige das gewünschte Format genau einmal' },
+            { 'Hebel': 'Einschränkungen', 'Was es ändert': 'Grenzen dessen, was das Modell ausgeben kann', 'Optimierungsmaßnahme': 'Addiere explizite Verbote', 'Beispiel': '„Verwende keine Fachjargon. Maximum 150 Wörter."' },
+            { 'Hebel': 'Ausgabeformat', 'Was es ändert': 'Struktur der Antwort', 'Optimierungsmaßnahme': 'Spezifiziere das Format explizit', 'Beispiel': '„Antworte in JSON: {title, summary, tags[]}"' },
+            { 'Hebel': 'Rolle/Persona', 'Was es ändert': 'Expertise-Niveau, das das Modell annimmt', 'Optimierungsmaßnahme': 'Addiere eine spezifische Rolle', 'Beispiel': '„Handele als Senior Data Analyst bei einem B2B-SaaS-Unternehmen"' },
+          ],
+        },
+
+        callout2: {
+          blockquote: 'Few-Shot-Prompting mit einer kleinen Anzahl von Beispielen ermöglichte GPT-3, die Leistung fein abgestimmter Modelle bei mehreren Benchmarks zu entsprechen oder zu übertreffen – und etablierte Beispiele als hochgradig wirksamen Optimierungshebel, der keine Schulung, keine zusätzliche Rechenleistung und keinen Modellzugriff über einen Standard-API-Aufruf erfordert.',
+          blockquoteSource: 'Tom B. Brown et al., OpenAI. "Language Models are Few-Shot Learners." NeurIPS 2020. arxiv.org/abs/2005.14165',
+        },
+
+        optimizationProcess: {
+          title: 'Der 6-Schritte-Optimierungsprozess',
+          content: [
+            '**Prompt-Optimierung ist ein systematischer, messbarer Prozess.** Jeder Schritt verengt die Diagnose: Du identifizierst das Symptom, ordnest es einem Hebel zu, änderst eine Variable, testest über Modelle hinweg und misst die Verbesserung. Dies ist der genaue Prozess:',
+          ],
+          items: [
+            '**Schritt 1: Richte eine Baseline ein.** Führe den aktuellen Prompt auf deiner Zielaufgabe 3 Mal mit repräsentativen Eingaben aus. Notiere den Fehlermodus: Ist die Ausgabe zu lang oder zu kurz? Falsches Format? Halluzinationen? Außer Thema? Nebensächlich? Diese Baseline ist entscheidend – ohne sie kannst du Verbesserung nicht messen.',
+            '**Schritt 2: Identifiziere den richtigen Hebel.** Ordne den Fehler einem der 6 Hebel zu. Beispiele: „Ausgabe ist eine Prosa-Wand statt Aufzählungspunkte" → Ausgabeformat-Hebel; „Antwort ist vage" → Spezifität-Hebel; „Ton ist falsch" → Rollen-Hebel; „enthält erfundene Fakten" → Kontext- oder Beschränkungs-Hebel.',
+            '**Schritt 3: Ändere eine Variable.** Mache eine einzelne, gezielte Änderung am identifizierten Hebel. Ändere nicht das Ziel, addiere Beispiele UND ändere das Format in einer Überarbeitung – du kannst Verbesserung nicht zurechnen, wenn sich drei Dinge geändert haben. Diese Isolierung ist nicht verhandelbar.',
+            '**Schritt 4: Teste über Modelle hinweg.** Führe den überarbeiteten Prompt auf GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro aus. Ein Prompt, der auf nur einem Modell funktioniert, ist fragil und modellspezifisch. Nutze PromptQuorum, um einen Prompt gleichzeitig an alle drei zu versenden und Antworten Seite an Seite zu vergleichen. Übereinstimmung über Modelle hinweg bedeutet, der Prompt ist robust; Abweichung bedeutet, du brauchst weitere Verfeinerung.',
+            '**Schritt 5: Messe gegen Kriterien.** Hat die Genauigkeit sich verbessert? Hat das Format die Anforderungen erfüllt? Sind Halluzinationen gesunken? Bestehen Ausgaben jetzt Konsistenz-Tests (3× in Folge ausführen)? Messung ist wie du bestätigst, dass die Änderung funktioniert hat. Wenn du die Änderung machtest, aber keine Verbesserung sahst, addressierte die Änderung nicht die Grundursache – versuche einen anderen Hebel.',
+            '**Schritt 6: Speichere in einer Prompt-Bibliothek.** Ein getesteter, optimierter Prompt ist ein wiederverwendbarer Vermögenswert. Dokumentiere was sich geändert hat und warum es sich verbessert hat. Versioniere es. Eine Prompt-Bibliothek, die gespeichert und versionskontrolliert ist, ist weit wertvoller als ein einmaliger Prompt, der ein Problem einmal gelöst hat.',
+          ],
+        },
+
+        callout3: {
+          blockquote: 'In einem kontrollierten Experiment mit 444 akademisch gebildeten Fachleuten verbesserte der Zugang zu ChatGPT die Aufgabenvollendungsgeschwindigkeit um 25,1 % und die Bewertungen der Ausgabequalität um 18,3 %, wie von unabhängigen Evaluatoren bewertet. Die größten Gewinne fielen an Arbeiter in der unteren Hälfte der Baseline-Kompetenzverteilung an – KI-Unterstützung reduzierte die Qualitätslücke zwischen schwachen und starken Leistungsträgern.',
+          blockquoteSource: 'Shakked Noy & Whitney Zhang, MIT Sloan School of Management. "Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence." Science, 2023.',
+        },
+
+        measurementCriteria: {
+          title: 'Wie man Prompt-Qualität misst',
+          content: [
+            '**Du kannst nicht optimieren, was du nicht messen kannst.** Die folgenden Kriterien definieren, ob ein Prompt erfolgreich war. Nutze diese Kontrollpunkte nach jeder Iteration:',
+          ],
+          columns: ['Kriterium', 'Was zu prüfen ist', 'Bestanden / Fehler Signal'],
+          rows: [
+            { 'Kriterium': 'Aufgabengenauigkeit', 'Was zu prüfen ist': 'Beantwortet die Ausgabe die tatsächliche Frage?', 'Bestanden / Fehler Signal': 'Vergleiche gegen eine bekannt korrekte Antwort' },
+            { 'Kriterium': 'Format-Einhaltung', 'Was zu prüfen ist': 'Entspricht die Ausgabe der spezifizierten Struktur?', 'Bestanden / Fehler Signal': 'Analysiert JSON korrekt? Sind Aufzählungslängen angemessen?' },
+            { 'Kriterium': 'Faktische Grundierung', 'Was zu prüfen ist': 'Sind spezifische Behauptungen korrekt?', 'Bestanden / Fehler Signal': 'Spot-Check 3–5 Fakten' },
+            { 'Kriterium': 'Konsistenz', 'Was zu prüfen ist': 'Produziert Wiederholung ähnliche Ausgabe?', 'Bestanden / Fehler Signal': 'Führe denselben Prompt 3× aus – unterscheiden sich Ausgaben strukturell?' },
+            { 'Kriterium': 'Token-Effizienz', 'Was zu prüfen ist': 'Ist die Ausgabelänge angemessen?', 'Bestanden / Fehler Signal': 'Messe Token-Zahl vs. Informationsdichte' },
+            { 'Kriterium': 'Modellübergreifende Übereinstimmung', 'Was zu prüfen ist': 'Produzieren 2–3 Modelle ähnliche Ergebnisse?', 'Bestanden / Fehler Signal': 'Sende an GPT-4o, Claude, Gemini via PromptQuorum – Übereinstimmung = robust' },
+          ],
+        },
+
+        callout4: {
+          blockquote: 'In einem randomisierten Experiment mit 758 BCG-Beratern zeigten KI-unterstützte Arbeiter 40 % bessere Leistung bei Qualitätsmetriken für Aufgaben innerhalb der KI-Leistungsgrenze. Allerdings zeigten Arbeiter, die KI bei Aufgaben außerhalb dieser Grenze nutzten – solche, die tiefes Organisationswissen erfordern – schlechtere Leistung als unaided Peers. Zu wissen, wann Ausgabe rigoros zu messen ist und wann das Modell zu überstimmen ist, erwies sich als primäre differenzierende Fertigkeit zwischen Hochleistern und Schwachleistern.',
+          blockquoteSource: 'Fabrizio Dell\'Acqua, Ethan Mollick et al., Harvard Business School & Wharton. "Navigating the Jagged Technological Frontier." Harvard Business School Working Paper 24-013, 2023.',
+        },
+
+        beforeAfterExamples: {
+          title: 'Wie sieht Prompt-Optimierung in der Praxis aus?',
+          content: [],
+          items: [
+            '**Schlecht:** „Fasse diesen Artikel zusammen." | **Verbessert:** „Fasse in 3 Aufzählungspunkten zusammen, je ≤20 Wörter. Fokus auf geschäftliche Auswirkungen." | **Warum:** Ausgabeformat eliminiert Inkonsistenz.',
+            '**Schlecht:** „Überprüfe diesen Code." | **Verbessert:** „Überprüfe auf (1) Korrektheit, (2) Leistung, (3) Sicherheit. Zitiere Zeilennummern. Max 3 Probleme." | **Warum:** Rolle + Beschränkungen eliminieren generische Rückmeldung.',
+            '**Schlecht:** „Synthesiere diese Papers." | **Verbessert:** „Synthesiere nur aus den 5 bereitgestellten Papers. Format: [Befund A]. [Befund B]. [Implikation]. Erfinde nicht." | **Warum:** Kontext + Beschränkungen eliminieren Halluzinationen.',
+            '**Schlecht:** „Schreibe eine Email an einen Kunden." | **Verbessert:** „Schreibe eine Email an einen wütenden Kunden, der 2 Wochen auf Support wartete. Entschuldige dich einmal, biete 2 Lösungen, frage nach Vorliebe. ≤150 Wörter." | **Warum:** Spezifität + Beschränkungen verbessern Ton und Relevanz.',
+            '**Schlecht:** „Extrahiere Daten aus dieser Tabelle." | **Verbessert:** „Extrahiere Namen und Beträge als JSON: [{\"name\": \"...\", \"amount\": ...}]. Keine Erklärungen." | **Warum:** Explizites Format eliminiert Prosa-Ausgabe.',
+            '**Schlecht:** „Ist dieser Code sicher?" | **Verbessert:** „Überprüfe auf: (1) SQL-Injection, (2) unvalidierte Benutzereingabe, (3) hardcodierte Secrets. Antworte mit jedem Fund als: [Zeile N: Problem]. Keine Falsch-Positive." | **Warum:** Spezifität + Beschränkungen verbessern Genauigkeit.',
+          ],
+        },
+
+        definitionBoxes: {
+          title: 'Was bedeuten diese Prompt-Optimierungsbegriffe?',
+          content: [],
+          items: [
+            '**Prompt-Optimierung** — Der iterative Prozess der Überarbeitung eines Prompts zur Verbesserung der Ausgabequalität durch Diagnose von Fehlermodi und Änderung jeweils einer Variable (Spezifität, Kontext, Beispiele, Beschränkungen, Format oder Rolle). Siehe [5 Bausteine, die jeder Prompt braucht](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) für die strukturellen Elemente, die du optimierst.',
+            '**Few-Shot-Prompting** — Einbeziehen von 1–3 Input/Output-Beispielen im Prompt, um das Modell das gewünschte Format oder Muster zu lehren. Siehe [Zero-Shot vs. Few-Shot-Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) für wann man Beispiele als primären Optimierungshebel hinzufügt.',
+            '**Chain-of-Thought (CoT)** — Das Modell Schritt-für-Schritt argumentieren lassen („denk nach, bevor du antwortest"), um Genauigkeit bei mehrstufigen Logikaufgaben um 10–15 % zu verbessern. Siehe [Chain-of-Thought-Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) für detaillierte Techniken.',
+            '**Beschränkung** — Ein explizites Verbot oder eine Grenze (z.B. „verwende keine Fachjargon", „maximum 150 Wörter", „zitiere nur Quellen"), die Ausgabespielraum einengt und häufige Fehlermodi verhindert. Siehe [Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de) für erweiterte Beschränkungsmuster.',
+            '**Token** — Die kleinste Texteinheit, die das Modell verarbeitet; etwa 4 Zeichen oder 1 Wort im Englischen. Prompt-Länge und Ausgabebudget werden in Tokens gemessen. Siehe [Tokens, Kosten & Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de) für Kostenberechnung.',
+            '**Halluzination** — Selbstbewusste aber faktisch falsche Ausgabe; tritt auf, wenn das Modell Fakten erfindet, nicht existierende Studien zitiert oder unbegründete Behauptungen wiederholt. Siehe [KI-Halluzinationen: Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — gemindert durch Hinzufügen von Verankerungskontext, Beispielen und Beschränkungen.',
+            '**Fine-Tuning** — Umschulung von Modellgewichten auf domänenspezifischen beschrifteten Daten; verwendet, wenn Prompt-Optimierung die erforderliche Qualität nicht erreichen kann. Erschöpfe immer Optimierung bevor Fine-Tuning — es ist langsamer und teurer.',
+            '**RAG (Retrieval-Augmented Generation)** — Einspritzen von abgerufenen Dokumenten in den Prompt-Kontext bevor du das Modell fragst. Siehe [RAG erklärt](/prompt-engineering/rag-explained?lang=de) — komplementär zur Optimierung (RAG verbessert Information; Optimierung verbessert wie das Modell sie nutzt).',
+            '**System-Prompt** — Persistente Anweisung, die die Rolle, Beschränkungen und das Verhalten des Modells über alle Züge setzt. Siehe [System-Prompt vs. User-Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=de) — erfordert separate Optimierungstests vom nutzerfachigen Prompt.',
+            '**Spezifität** — Präzision in der Aufgabendefinition; von vagen Anweisungen („fasse zusammen") zu exakten Anforderungen („liste 3 Aufzählungspunkte, je ≤20 Wörter"). Der erste und oft höchsten Impact-Optimierungshebel zum Anpassen.',
+          ],
+        },
+
+        modelSpecificTips: {
+          title: 'Modellspezifische Optimierungstipps',
+          content: [
+            '**Die 6 Optimierungshebel gelten über alle großen Modelle — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und Mistral Large.** Allerdings reagiert jedes Modell unterschiedlich auf Anweisungsdichte, Format-Spezifität und Rollendefinition. Hier sind modellspezifische Tuning-Tipps:',
+          ],
+          items: [
+            '**GPT-4o (OpenAI):** Reagiert außergewöhnlich gut auf explizite JSON-Format-Anfragen und Markdown-Überschriften in System-Prompts. Anweisungsfolgung ist stark — enge Beschränkungen reduzieren Über-Erklärung. Wenn dein GPT-4o-Prompt über-erklärt, addiere eine Beschränkung: „Sei prägnant. Erkläre dein Denken nicht, es sei denn gefragt."',
+            '**Claude 4.6 Sonnet (Anthropic):** Excelliert bei nuancierten, mehrteiligen Anweisungen. Handhabt lange, detaillierte System-Prompts zuverlässig und übersieht selten impliziten Kontext. Profitiert von expliziter Ausgabelänge-Anleitung („antworte in ≤200 Wörtern"). Wenn du für Kürze optimierst, sei spezifisch: „Antworte in nicht mehr als 150 Wörtern."',
+            '**Gemini 2.5 Pro (Google DeepMind):** Best-in-Klasse für Langkontext-Dokumentanalyse (bis 1M Tokens). Explizite Abschnittsüberschriften in Prompts verbessern Konsistenz strukturierter Ausgabe. Wenn du lange Dokumente verarbeitest, addiere Überschriften: „## Input-Dokument\n[dokument]\n## Aufgabe\n[aufgabe]."',
+            '**Mistral Large (Mistral AI):** Profitiert von expliziten Rollendefinitionen und preskriptiverer Anweisungsformulierung. Weniger tolerant gegenüber impliziter Aufgabengestaltung als GPT-4o oder Claude. Wenn dein Prompt auf GPT-4o funktioniert aber nicht auf Mistral, mache Anweisungen expliziter und addiere eine Rolle: „Du bist ein [spezifische Rolle]. Deine Aufgabe ist es, [explizites Ziel]."',
+          ],
+        },
+
+        localLLMExamples: {
+          title: 'Optimierung von Prompts für lokale LLMs (Ollama, LM Studio)',
+          content: [
+            '**Lokale Modelle betrieben via Ollama oder LM Studio reagieren auf dieselben 6 Optimierungshebel, aber mit engeren Toleranzen.** Quantisierte Modelle (4-Bit, 8-Bit) haben reduzierte Anweisungsfolgefähigkeit im Vergleich zu Vollpräzisions-Frontier-APIs — sie profitieren am meisten von einfacheren, expliziereren Prompts und scheitern eher an mehrdeutigen Anweisungen. Die Beispiele unten zeigen vorher/nachher-Optimierung für drei häufige lokale LLM-Fehlermodi.',
+          ],
+          items: [
+            '**Beispiel 1: Quantisiertes Modell Ausgabe-Inkonsistenz (Hebel: Ausgabeformat + Beschränkungen)**\n_Modell:_ LLaMA 3.1 8B via Ollama (4-Bit-Quantisierung)\n_Schwacher Prompt:_ „Fasse diesen Support-Ticket zusammen."\n_Fehlermodus:_ Ausgabe variiert wildly zwischen Läufen — manchmal ein Satz, manchmal eine Liste, manchmal eine Gegenfrage an den Benutzer. 4-Bit-Quantisierung verstärkt Zufälligkeit.\n_Hebel geändert:_ Ausgabeformat + Temperatur-Beschränkung.\n_Optimierter Prompt:_ „Fasse diesen Support-Ticket in genau 2 Sätzen zusammen. Satz 1: das Problem des Kunden. Satz 2: was sie versucht haben. Kein anderer Text."\n_Zusätzliche Behebung:_ Setze Temperatur auf 0,1 in Ollama (ollama run llama3 --temperature 0.1).\n_Ergebnis:_ Konsistente 2-Satz-Zusammenfassungen über alle Läufe. Funktioniert auf LLaMA 3.1 8B und 70B.',
+            '**Beispiel 2: Kontextlängen-Beschränkung Fehlschlag auf LM Studio (Hebel: Spezifität + Kontext)**\n_Modell:_ Mistral 7B Instruct via LM Studio (Q4_K_M-Quantisierung, 4096-Token-Kontext)\n_Schwacher Prompt:_ „Analysiere dieses Dokument und liste die Schlüssel-Risiken auf." [volles 3.000-Wort-Dokument eingefügt]\n_Fehlermodus:_ Modell bricht in der Mitte der Analyse ab, übersieht das letzte Drittel des Dokuments, erzeugt unvollständige Ausgabe ohne Abbruch zu signalisieren.\n_Hebel geändert:_ Spezifität — reduziere Umfang um ins Kontext-Budget zu passen.\n_Optimierter Prompt:_ „Du bist ein Risikoanalyst. Lese den folgenden Dokumentausschnitt (nur erste 1.500 Wörter) und liste bis zu 5 spezifische Risiken, je ≤15 Wörter. Format: Risiko 1: [Beschreibung]. Risiko 2: [Beschreibung]. Stoppe nach 5."\n_Ergebnis:_ Vollständige Analyse innerhalb des Kontextfensters. Kein Abbruch. Konsistent über Q4- und Q8-Quantisierungsstufen.',
+            '**Beispiel 3: Anweisungs-Überschreibung in Quantisierten Modellen (Hebel: Beschränkungen)**\n_Modell:_ Phi-3 Mini via Ollama\n_Schwacher Prompt:_ „Extrahiere alle Daten aus diesem Text. Gib nur JSON zurück."\n_Fehlermodus:_ Modell gibt JSON plus einen Absatz Erklärung zurück („Hier sind die Daten, die ich gefunden habe..."). Kleine Modelle addieren häufig unverlangt Kommentar sogar wenn Format spezifiziert ist.\n_Hebel geändert:_ Beschränkungen — explizites Verbot.\n_Optimierter Prompt:_ „Extrahiere alle Daten aus dem Text unten. Gib nur ein JSON-Array zurück. Keine Erklärung. Keine Einleitung. Kein Kommentar. Ausgabe: [\\\"datum1\\\", \\\"datum2\\\", ...]"\n_Ergebnis:_ Saubere JSON-Ausgabe ohne Prosa. Konsistent über Phi-3 Mini und Mistral 7B. Dieses Beschränkungs-Muster (dreifaches Verbot) funktioniert über alle kleinen lokalen Modelle.',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'Die 7 häufigsten Optimierungsfehler',
+          content: [
+            '**Most Optimierung schlägt fehl wegen Prozessfehlern, nicht konzeptuellem Missverständnis.** Hier sind die häufigsten Fallstricke und wie man sie vermeidet:',
+          ],
+          items: [
+            '**Fehler 1: Mehrere Variablen gleichzeitig ändern.** Du addierst Beispiele, änderst das Ausgabeformat UND passt die Rolle in einer Überarbeitung an. Jetzt wenn die Ausgabe sich verbessert, weißt du nicht welche Änderung geholfen hat. Effektive Optimierung isoliert eine Änderung pro Iteration. Dies ist der #1-Grund warum Optimierung schlägt fehl.',
+            '**Fehler 2: Optimierung auf eine einzelne Eingabe.** Du testest ein Beispiel, siehst Verbesserung und erklärst Erfolg. Im echten Gebrauch scheitert der Prompt bei verschiedenen Eingaben. Teste auf 5–10 repräsentative Beispiele. Wenn der Prompt nicht auf allen 5 erfolgreich ist, weiter optimieren.',
+            '**Fehler 3: Optimierung für nur ein Modell.** Du optimierst für GPT-4o, siehst perfekte Ergebnisse, dann stellst bereit auf Claude. Es schlägt fehl. Jedes Modell hat leicht verschiedenes Anweisungs-Folge-Verhalten. Teste auf mindestens 2 Modellen (GPT-4o und Claude 4.6 Sonnet); ideal 3.',
+            '**Fehler 4: Ausgabeformat ignorieren.** Ein Prompt erzeugt die richtigen Fakten aber in der falschen Struktur. „Falsches Format" ist der häufigste und schnellste Fehlermodus zu beheben. Spezifiziere immer: „Antworte in JSON mit Feldern: [liste]" oder „Verwende eine Markdown-Tabelle mit Spalten: [liste]." Format-Einhaltung ist oft der Unterschied zwischen nutzbarer und unbrauchbarer Ausgabe.',
+            '**Fehler 5: Über-Prompting.** Du addierst 15 Beschränkungen, 5 Rollenbeschreibungen und 10 Beispiele in einen 200-Token-Prompt. Zu viele gleichzeitige Anweisungen überfordern das Modell. Starte minimal, addiere dann Beschränkungen nur wenn nötig. Wenn ein Prompt nicht funktioniert, ist der erste Schritt zu vereinfachen, nicht zu expandieren.',
+            '**Fehler 6: Optimierung mit Fine-Tuning verwechseln.** Optimierung verbessert Prompts; Fine-Tuning trainiert das Modell. Wenn du alle 6 Hebel versucht hast und der Prompt immer noch schlägt fehl, kann dem Modell Wissen oder Fähigkeit für die Aufgabe mangeln — das ist ein Fine-Tuning-Problem, nicht ein Optimierungs-Problem. Fine-Tuning ist viel langsamer und teurer. Erschöpfe Prompt-Optimierung erst.',
+            '**Fehler 7: Optimierte Prompts nicht speichern.** Du optimierst einen Prompt, stellst bereit, und optimierst dann denselben Prompt 6 Monate später weil niemand die Version speicherte, die funktionierte. Eine Prompt-Bibliothek — versionskontrolliert, dokumentiert und geteilt — verwandelt Optimierungsarbeit in ein dauerhaftes Vermögenswert.',
+          ],
+        },
+
+        advancedTechniques: {
+          title: 'Prompt-Optimierungstechniken: Fortgeschrittene Methoden',
+          content: [
+            '**Jenseits der 6 Kern-Hebel wenden fortgeschrittene Prompt-Optimierungstechniken spezialisierte Muster an, um spezifische Fehlermodi zu beheben.** Diese Techniken kombinieren mehrere Hebel oder schichten Beschränkungen, um schwierigere Probleme zu lösen. Erfahre, welche Techniken du je nach deiner Optimierungsherausforderung anwendest:',
+          ],
+          items: [
+            '[Few-Shot vs. Zero-Shot](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — Addiere 1–3 Beispiel-Input-Output-Paare zum Prompt, wenn das Modell die Ausgabe nicht korrekt formatiert oder den gewünschten Stil vermisst. Few-Shot-Beispiele sind die direkteste Art, Format zu lehren.',
+            '[Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=de) — Füge „denke Schritt für Schritt vor der Antwort" ein, um Fehler beim mehrstufigen Denken zu beheben. Diese Technik verbessert oft die Genauigkeit bei Logikaufgaben um 10–15 %.',
+            '[Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de) — Addiere explizite Verbote („Verwende keinen Jargon", „Erfinde keine Zahlen", „Wiederhole die Eingabe nicht"), um Umfang und Stil-Fehler zu beheben. Beschränkungen sind stärker als Anweisungen.',
+            '[Self-Consistency](/prompt-engineering/self-consistency-prompting?lang=de) — Generiere die Ausgabe des Prompts 3–5 Mal unabhängig, dann gebe die häufigste Antwort zurück. Dies reduziert Halluzinationen bei unwahrscheinlichen Fakten durch das Kombinieren von Modell-Läufen.',
+            '[Strukturierte Ausgabe](/prompt-engineering/structured-output-and-json-mode?lang=de) — Fordere JSON, Markdown-Tabellen oder andere maschinenlesbare Formate an, um Format-Compliance-Fehler zu beheben. Strukturierte Ausgabe ist schneller zu parsen und fehleranfälliger als Prosa.',
+          ],
+        },
+
+        promptLibrary: {
+          title: 'Optimierte Prompts in einer Bibliothek speichern',
+          content: [
+            '**Ein optimierter Prompt ist ein dauerhafter Vermögenswert.** Sobald du einen Prompt über 3 Modelle getestet hast, bestätigt hast, dass er auf 5–10 repräsentativen Eingaben funktioniert, und dokumentiert hast, was jeder Hebel tut — speichere ihn. Eine Prompt-Bibliothek ermöglicht es dir, optimierte Prompts über Projekte hinweg zu renutzen, sie mit deinem Team zu teilen und sie im Laufe der Zeit zu verbessern.',
+            'Was mit jedem Prompt zu speichern ist: der letzte Prompt-Text, der Hebel der geändert wurde, der Fehlermodus den er behob, welche Modelle er getestet wurden, und die Bestätigung/Fehler-Ergebnisse auf deinen repräsentativen Eingaben. Diese Dokumentation trennt eine Prompt-Bibliothek von einem einfachen Ordner von Textdateien — und erfüllt die Anforderungen für Audit-Trail der EU AI Act.',
+            '**PromptQuorum speichert jeden Prompt, den du ausführst, versionskontrolliert, zusammen mit seinen Antworten von GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro.** Anstatt Ausgaben in eine Tabellenkalkulation zu kopieren, werden deine Testergebnisse automatisch bewahrt. [Starte deine Prompt-Bibliothek auf PromptQuorum](https://www.promptquorum.com) — jeder Prompt, den du optimierst, wird gespeichert und neu abspielbar.',
+            'Siehe [Baue eine Prompt-Bibliothek, die Stunden spart](/prompt-engineering/build-a-prompt-library?lang=de) für einen vollständigen Leitfaden zur Strukturierung, Versionierung und Wartung einer Bibliothek.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Weiterführende Lektüre',
+          items: [
+            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — die Grunddefinition und Kern-Bausteine des Prompt-Designs',
+            '[5 Bausteine, die jeder Prompt braucht](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) — die strukturellen Elemente, die du optimierst',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — Schritt-für-Schritt-Denkens-Technik zur Genauigkeitsverbesserung',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — wann Beispiele als Optimierungshebel hinzufügen',
+            '[Baue eine Prompt-Bibliothek, die Stunden spart](/prompt-engineering/build-a-prompt-library?lang=de) — Bewahren optimierter Prompts als Team-Vermögenswerte',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ: Prompt-Optimierung',
+          faqs: [
+            {
+              q: 'Was ist Prompt-Optimierung?',
+              a: 'Prompt-Optimierung ist der iterative Prozess der Überarbeitung eines Prompts zur Verbesserung der KI-Ausgabequalität für eine spezifische Aufgabe. Es beinhaltet die Identifizierung eines Fehlermodus (falsches Format, Halluzination, vage Ausgabe), das Ändern einer Variable (Spezifität, Kontext, Beispiele, Beschränkungen, Ausgabeformat oder Rolle) und das Testen des Ergebnisses über Modelle wie GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro.',
+            },
+            {
+              q: 'Was ist der Unterschied zwischen Prompt-Optimierung und Prompt-Engineering?',
+              a: 'Prompt-Engineering ist die Disziplin des Designs einer Prompt-Struktur von Grund auf mit Bausteinen wie Ziel, Kontext und Ausgabeformat. Prompt-Optimierung ist der iterative Subprozess der Verbesserung eines bereits geschriebenen Prompts durch Diagnose von Fehlermodi und Anwendung gezielter Änderungen. Du brauchst Prompt-Engineering, um einen Ausgangspunkt zu schaffen; du verwendest Prompt-Optimierung, um ihn zu verfeinern.',
+            },
+            {
+              q: 'Wie viele Iterationen braucht es, um einen Prompt zu optimieren?',
+              a: 'Für die meisten Aufgaben reichen 2–4 gezielte Iterationen, um von einem fehlgeschlagenen Prompt zu einem zuverlässigen zu gelangen. Jede Iteration sollte eine Variable ändern und auf 3–5 repräsentativen Eingaben getestet werden. Abnehmende Erträge setzen nach 5–6 Iterationen ein — wenn ein Prompt sich bis dahin nicht stabilisiert hat, könnte die Aufgabendefinition selbst überarbeitet werden müssen.',
+            },
+            {
+              q: 'Welchen Hebel sollte ich zuerst ändern, wenn ich einen Prompt optimiere?',
+              a: 'Beginne mit dem Ausgabeformat. Format-Nicht-Einhaltung — ein Absatz statt einer Tabelle zu erhalten oder Klartext wenn du JSON brauchst — ist der häufigste und schnellste Fehlermodus zu beheben. Spezifiziere die genaue Struktur, die du willst, dann bearbeite andere Probleme (Genauigkeit, Ton, Umfang) in nachfolgenden Iterationen.',
+            },
+            {
+              q: 'Funktioniert Prompt-Optimierung über alle KI-Modelle?',
+              a: 'Ja, aber mit modellspezifischen Anpassungen. Die sechs Kern-Optimierungshebel (Spezifität, Kontext, Beispiele, Beschränkungen, Ausgabeformat, Rolle) gelten für GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und Mistral Large. Allerdings reagiert jedes Modell unterschiedlich auf Anweisungsdichte — Claude handhabt längere mehrteilige Anweisungen besser; GPT-4o reagiert gut auf strukturierte System-Prompts; Gemini profitiert von expliziten Abschnittsüberschriften.',
+            },
+            {
+              q: 'Was ist der häufigste Prompt-Optimierungsfehler?',
+              a: 'Das gleichzeitige Ändern mehrerer Variablen. Wenn du Beispiele hinzufügst, das Ausgabeformat änderst und eine Rollenanweisung in derselben Überarbeitung hinzufügst, kannst du nicht feststellen, welche Änderung sich verbessert (oder verschlechtert) hat. Effektive Optimierung ändert eine Variable pro Iteration.',
+            },
+            {
+              q: 'Kann Prompt-Optimierung KI-Halluzinationen reduzieren?',
+              a: 'Ja, mit den richtigen Techniken. Das Hinzufügen von Grundlagen-Kontext („Basiere deine Antwort nur auf dem folgenden Dokument"), Few-Shot-Beispiele mit faktisch korrekten Ausgaben und explizite Beschränkungen („Erfinde keine Zahlen — verwende nur Daten aus dem bereitgestellten Text") reduzieren zuverlässig Halluzinations-Raten. Self-Consistency-Prompting — das Generieren mehrerer Ausgaben und Zurückgeben der häufigsten — reduziert weiter niedrig-wahrscheinliche Erfindungen.',
+            },
+            {
+              q: 'Wann sollte ich Fine-Tuning statt Prompt-Optimierung verwenden?',
+              a: 'Verwende Fine-Tuning, wenn Prompt-Optimierung ein Plafond erreicht hat — typischerweise wenn das erforderliche Verhalten hochgradig domänenspezifisch ist, konsistente stilistische Stimme über Tausende von Ausgaben benötigt, oder abhängig ist von Wissen, das nicht in der Basis-Trainierung des Modells enthalten ist. Prompt-Optimierung ist schneller und günstiger und sollte immer vor Fine-Tuning ausgeschöpft werden.',
+            },
+            {
+              q: 'Woher weiß ich, wenn ein Prompt vollständig optimiert ist?',
+              a: 'Ein Prompt ist ausreichend optimiert, wenn er: (1) korrekte Ausgabe auf 4–5 repräsentativen Eingaben erzeugt, (2) konsistente Ausgabe bei Neu-Läufen erzeugt, (3) über mindestens zwei Modelle funktioniert (z.B. GPT-4o und Claude), und (4) die Format-Spezifikation ohne Nach-Verarbeitung erfüllt. Perfekte Prompts existieren nicht — „optimiert" bedeutet zuverlässig genug für den Anwendungsfall.',
+            },
+            {
+              q: 'Gilt Prompt-Optimierung für Bild-Prompts (Text-zu-Bild)?',
+              a: 'Die Grundsätze gelten — Spezifität, Beschränkungen und Beispiele (Referenzbilder) sind alle gültige Hebel für Bildmodelle wie DALL-E 3 und Stable Diffusion. Allerdings unterscheiden sich die Mechaniken: Bildmodelle reagieren auf Style-Modifizierer, Seitenverhältnisse und negative Prompts als Beschränkungen. Der Optimierungsprozess (Basis → Diagnose → eine Variable ändern → Testen) ist identisch.',
+            },
+            {
+              q: 'Was ist automatische Prompt-Optimierung?',
+              a: 'Automatische Prompt-Optimierung verwendet ein zweites KI-Modell (oder dasselbe Modell in einer Meta-Prompting-Schleife), um Prompts ohne menschliches Eingreifen umzuschreiben und zu verbessern. Tools wie DSPy (Stanford), TextGrad und APE (Automatic Prompt Engineer) generieren Kandidaten-Prompts, bewerten sie gegen eine Metrik (Genauigkeit, Format-Einhaltung, Benutzer-Rating) und wählen die beste Variante. Manuelle Optimierung ist schneller für gut verstandene Aufgaben; automatische Optimierung skaliert besser, wenn du markierte Evaluierungs-Daten hast und Hunderte von Varianten testen musst.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Quellen',
+          items: [
+            'Schulhoff et al., 2024. „The Prompt Report: A Systematic Survey of Prompting Techniques." https://arxiv.org/abs/2406.06608 — katalogisiert 58+ diskrete Prompting-Techniken',
+            'Wei et al., 2022. „Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." https://arxiv.org/abs/2201.11903 — akademische Grundlage für Schritt-für-Schritt-Denken als Optimierungshebel',
+            'OpenAI, 2024. „Prompt Engineering." https://platform.openai.com/docs/guides/prompt-engineering — offizielle Anleitung zur Prompt-Optimierung für GPT-4o',
+          ],
+        },
+
+      },
+    },
     fr: { theme: 'Fundamentals', title: 'Fondamentaux de l\'optimisation des prompts', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
     ja: { theme: 'Fundamentals', title: 'プロンプト最適化の基礎', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
     zh: { theme: 'Fundamentals', title: '提示词优化基础', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
