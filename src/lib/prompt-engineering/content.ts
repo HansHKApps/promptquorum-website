@@ -51,22 +51,121 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Build a Prompt Library That Saves Hours',
       intro: 'A prompt library is a central, searchable collection of tested prompts with clear metadata so your team can reuse what works instead of reinventing instructions in every chat. Done well, it behaves like a shared "AI playbook": people grab a proven template for a task, adapt a few inputs, and get consistent results across models and projects.',
       publishDate: '2026-03-24',
+      metaDescription: 'Prompt library: centralized, searchable templates for your team. Learn structure, governance, versioning, integration patterns, and why teams save 5—10 hours per week using reusable prompts.',
+      dateModified: '2026-04-02',
       readTime: '10 min read',
       educationalLevel: 'Beginner',
+      primaryTerm: 'Prompt Library and Governance',
+      toc: [
+        { label: 'What a Prompt Library Is (and Is Not)', anchor: '#whatIsLibrary' },
+        { label: 'Why You Should Build One', anchor: '#whyBuildOne' },
+        { label: 'What to Store for Each Prompt', anchor: '#whatToStore' },
+        { label: 'How to Build Your Library Step by Step', anchor: '#howToStart' },
+        { label: 'Where to Store It and How to Structure It', anchor: '#whereToStore' },
+        { label: 'Versioning, Testing, and Keeping Quality High', anchor: '#versioning' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Build a Prompt Library That Saves Hours',
         description: 'What a prompt library is, why your team should build one, how to structure and maintain it, and best practices for versioning and governance.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['prompt library', 'prompt management', 'prompt engineering', 'team productivity', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        proficiencyLevel: 'Beginner',
+        articleSection: 'Output Engineering',
+        keywords: ['prompt library', 'prompt management', 'prompt engineering', 'team productivity', 'PromptQuorum', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        publisher: {
+          '@type': 'Organization',
+          name: 'PromptQuorum',
+          url: 'https://www.promptquorum.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.promptquorum.com/logo.svg',
+          },
+        },
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://www.promptquorum.com/api/og/build-a-prompt-library',
+          width: 1200,
+          height: 630,
+        },
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Team Productivity' },
           { '@type': 'Thing', name: 'Knowledge Management' },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+          { '@type': 'ListItem', position: 2, name: 'Output Engineering', item: 'https://www.promptquorum.com/prompt-engineering/output-engineering' },
+          { '@type': 'ListItem', position: 3, name: 'Build a Prompt Library That Saves Hours' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is a prompt library?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A prompt library is a structured repository of tested prompts, each with a defined purpose, inputs, and expected output format. Unlike a long list of cool prompts copied from the internet, a useful prompt library contains records that include: a clear title, a one-line use case, the full prompt body with placeholders, inputs required, recommended model/parameters, expected output format, tags for discovery, and owner/version information. This turns each prompt into a reusable tool rather than a snippet.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Why should my team build a prompt library?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A prompt library saves time (people start from tested templates, not blank boxes), reduces variability (similar tasks follow consistent patterns and tone), improves quality (prompts refine over time), accelerates onboarding (new colleagues can browse examples), and enables governance (sensitive areas use reviewed prompts instead of ad-hoc instructions). Teams typically save 5—10 hours per week per person when they reuse library prompts instead of creating new instructions in every chat.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What should each prompt record include?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Essential fields: title (task-oriented), goal/description (one or two sentences), full prompt body (with placeholders), inputs (what the user must provide), model guidance (recommended models and settings), output format (bullet list, JSON, table, etc.), tags/category (for discovery), owner/version/last updated (who maintains it). Optional but valuable: example input and output so users can judge fit at a glance.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Where should we store our prompt library?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Storage options include: shared documents (Google Docs, Notion, Confluence — easy to start, searchable, accessible), purpose-built tools (PromptQuorum, Munch, Hayo — designed specifically for prompts with tagging, versioning, A/B testing), code repositories (GitHub, GitLab — version control and CI/CD integration), or internal wikis (Obsidian, GitBook — knowledge base approach). The best storage depends on your team size, technical comfort, and versioning needs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do we keep a prompt library maintained and up to date?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Assign a lightweight governance process: designate owners for categories (e.g., marketing owner, engineering owner), enforce a simple naming convention, require version bumps when prompts improve, retire prompts that stop working, document what changed and why, run periodic reviews (quarterly or biannually) to flag stale entries, and collect feedback from team members who use prompts regularly. Version incrementally (v1.0 → v1.1 → v2.0) to track evolution without breaking existing workflows.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Build a Prompt Library: Key Topics',
+        'description': 'Core concepts for building and maintaining a prompt library',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'What a Prompt Library Is', 'description': 'A structured repository of tested prompts with metadata for team reuse' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Why Build One', 'description': 'Saves time, reduces variability, improves quality, enables governance' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'What to Store for Each Prompt', 'description': 'Title, goal, prompt body, inputs, model guidance, output format, tags, owner/version' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Storage and Structure Options', 'description': 'Shared documents, purpose-built tools, code repos, internal wikis' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Governance and Versioning', 'description': 'Ownership, naming conventions, version bumping, retirement, periodic reviews' },
         ],
       },
       sections: {
