@@ -284,6 +284,24 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         name: 'Prompt Quality Measurement Criteria',
         about: 'Six criteria for measuring whether a prompt optimization iteration succeeded: task accuracy, format compliance, factual grounding, consistency, token efficiency, and cross-model agreement.',
       },
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'Key Takeaways for Local LLM Users', anchor: 'key-takeaways-for-local-llm-users' },
+        { label: 'What Is Prompt Optimization?', anchor: 'what-is-prompt-optimization' },
+        { label: 'Prompt Optimization vs Prompt Engineering', anchor: 'prompt-optimization-vs-prompt-engineering' },
+        { label: 'Why Prompt Optimization Matters', anchor: 'why-prompt-optimization-matters' },
+        { label: 'The 6 Optimization Levers', anchor: 'the-6-optimization-levers' },
+        { label: 'The 6-Step Optimization Process', anchor: 'the-6-step-optimization-process' },
+        { label: 'How to Measure Prompt Quality', anchor: 'how-to-measure-prompt-quality' },
+        { label: 'Three Real-World Optimization Examples', anchor: 'three-real-world-optimization-examples' },
+        { label: 'Model-Specific Optimization Tips', anchor: 'model-specific-optimization-tips' },
+        { label: 'Optimizing Prompts for Local LLMs', anchor: 'optimizing-prompts-for-local-llms-ollama-lm-studio' },
+        { label: 'The 7 Most Common Optimization Mistakes', anchor: 'the-7-most-common-optimization-mistakes' },
+        { label: 'Advanced Optimization Techniques', anchor: 'advanced-optimization-techniques' },
+        { label: 'Saving Optimized Prompts to a Library', anchor: 'saving-optimized-prompts-to-a-library' },
+        { label: 'Regulatory Compliance', anchor: 'prompt-optimization-and-regulatory-compliance' },
+        { label: 'FAQ', anchor: 'faq-prompt-optimization' },
+      ],
       sections: {
 
         tldr: {
