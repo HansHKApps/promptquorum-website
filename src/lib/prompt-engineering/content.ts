@@ -214,7 +214,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'Fundamentals of Prompt Optimization: How to Improve Any AI Prompt',
       intro: 'Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy. This guide covers the 6 core levers, a 6-step optimization process, before/after examples for GPT-4o, Claude, and Gemini, and the 7 most common mistakes.',
-      metaDescription: 'Master prompt optimization: 6 levers, 6-step process, before/after examples, and model-specific tips. Typical accuracy gains: 20–40% on structured tasks.',
+      metaDescription: 'Learn prompt optimization: 6 levers, 6-step process, before/after examples, and model-specific tips. Typical accuracy gains: 20–40% on structured tasks.',
       publishDate: '2026-04-02',
       dateModified: '2026-04-03',
       readTime: '14 min read',
