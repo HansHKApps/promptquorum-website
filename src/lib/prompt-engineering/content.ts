@@ -25712,6 +25712,7 @@ zh: {
         { label: 'How Does PromptQuorum Implement the APE Framework?', anchor: 'how-does-promptquorum-implement-the-ape-framework' },
         { label: 'How Does APE Compare to Other Prompt Frameworks?', anchor: 'how-does-ape-compare-to-other-prompt-frameworks' },
         { label: 'How to Use the APE Framework Step by Step', anchor: 'how-to-use-the-ape-framework-step-by-step' },
+        { label: 'APE Prompt Template: Copy and Customize', anchor: 'ape-prompt-template-copy-and-customize' },
         { label: 'Related Reading', anchor: 'related-reading' },
         { label: 'FAQ: APE Framework', anchor: 'faq-ape-framework' },
         { label: 'Sources', anchor: 'sources' },
@@ -26044,6 +26045,20 @@ zh: {
             '**APE vs [CO-STAR](/prompt-engineering/co-star-framework):** CO-STAR defines 6 structural parameters (Context, Objective, Style, Tone, Audience, Response) for communication tasks. APE defines 3 reasoning stages for complex tasks. They serve different purposes and are rarely interchangeable.',
             '**APE vs [CRAFT](/prompt-engineering/craft-framework):** CRAFT is designed for creative and marketing content (Context, Role, Audience, Format, Tone). APE is for analytical and structured tasks. If you\'re writing content for audiences, CRAFT wins; if you\'re analyzing data or reviewing code, APE wins.',
             '**APE vs [SPECS](/prompt-engineering/specs-framework):** SPECS provides a specification with Scope, Purpose, Examples, Constraints, and Steps — best for machine-usable, structured output. APE reveals reasoning at each stage but doesn\'t enforce strict output contracts. Use SPECS when downstream systems consume the output; use APE when humans review the reasoning.',
+          ],
+        },
+
+        apeTemplate: {
+          title: 'APE Prompt Template: Copy and Customize',
+          content: [
+            '**Copy this template, fill in your own details, and use it immediately. Replace each bracketed section with your specifics.**',
+            'You are [role from Context].',
+            '**Analyze:** Restate the task in your own words, identify key constraints, and list any missing information. What are the goals, limitations, and assumptions?',
+            '**Plan:** Propose a step-by-step approach in 3-5 bullet points to solve this task. What will you do first, second, third?',
+            '**Execute:** Produce the final output following your plan, using this format: [Output Format from above]. Respect all constraints and deliver exactly as specified.',
+            'Task: [Objective from above]',
+            'Context: [Context from above]',
+            'Constraints: [Constraints from above]',
           ],
         },
 
@@ -27088,6 +27103,10 @@ zh: {
               q: 'Can CO-STAR handle very complex tasks with many constraints?',
               a: 'CO-STAR is designed for complex, multi-constraint tasks, but there are limits. If you have more than 10–15 major constraints, consider breaking the task into two smaller CO-STAR prompts (e.g., one for generation, one for validation using RISEN). Alternatively, use the Context and Style components to structure constraints logically: group them by type (format rules, tone rules, content rules) so the model can process them systematically.',
             },
+            {
+              q: 'What is the difference between CO-STAR and CO-STAR with few-shot examples?',
+              a: 'Standard CO-STAR provides the six components and a single instruction. Adding few-shot examples (actual examples of the desired output) strengthens the prompt significantly. You can add examples in the Context or Response sections: "Here is an example of the output format I want: [example]." This helps the model anchor to your exact standards, especially for specialized domains or unique output structures.',
+            },
           ],
         },
         sources: {
@@ -27368,6 +27387,61 @@ zh: {
           ],
         },
 
+        historyAndDeveloper: {
+          title: 'History and Origin of the SPECS Framework',
+          content: [
+            '**The SPECS Framework (Scope, Purpose, Examples, Constraints, Steps) emerged from the discipline of requirements engineering and structured systems thinking applied to prompt design.** The framework codified the practice of separating specification concerns into discrete, auditable components — a pattern that had been implicit in professional prompt engineering but lacked a formal name.',
+            'The SPECS framework was developed and popularized within the prompt engineering community through documentation and peer practice around 2023–2024, as practitioners recognized the need for a specification-first approach to prompts. Unlike reasoning frameworks (APE, TRACE) or communication frameworks (CO-STAR, CRAFT), SPECS explicitly treats a prompt as a contract between human and model: the Scope defines what the model will see, the Purpose grounds the decision it will support, Examples anchor the output format, Constraints enforce non-negotiable rules, and Steps choreograph the reasoning sequence.',
+            '**SPECS draws intellectual roots from:** (1) Structured analysis and requirements engineering, where breaking specifications into discrete, testable parts is standard practice; (2) Few-shot learning research (Brown et al., 2020), which demonstrated that examples improve accuracy; (3) Formal constraint logic programming, which influenced the Constraints component.',
+          ],
+        },
+
+        whenNotToUse: {
+          title: 'When the SPECS Framework Is Not the Right Choice',
+          content: [
+            '**SPECS enforces rigor that is not always necessary.** The five-component structure works well for machine-usable output but creates unnecessary overhead for simpler or creative tasks.',
+          ],
+          rows: [
+            { 'Situation': 'Exploratory brainstorming or open-ended ideation', 'Why SPECS is wrong': 'Scope and Constraints limit creative divergence; fixed examples anchor the model too narrowly', 'Better alternative': 'CRAFT or RISEN' },
+            { 'Situation': 'Quick, one-off questions needing fast answers', 'Why SPECS is wrong': 'Five components are overkill for a simple lookup or short response', 'Better alternative': 'Single Step or RTF' },
+            { 'Situation': 'Human-readable documentation or guides', 'Why SPECS is wrong': 'SPECS optimizes for machine parsing, not for audience, tone, or communicative clarity', 'Better alternative': 'CO-STAR' },
+            { 'Situation': 'Iterative refinement or revision cycles', 'Why SPECS is wrong': 'SPECS is for initial generation; multi-pass refinement needs structured feedback loops', 'Better alternative': 'RISEN Framework' },
+            { 'Situation': 'Tasks needing visible reasoning or decision justification', 'Why SPECS is wrong': 'SPECS defines output structure but does not expose model reasoning steps', 'Better alternative': 'APE or TRACE' },
+            { 'Situation': 'Marketing copy, brand voice, or creative messaging', 'Why SPECS is wrong': 'SPECS forces predictable, formula-driven output; voice and brand cannot be specification-driven', 'Better alternative': 'CRAFT' },
+          ],
+          columns: ['Situation', 'Why SPECS is wrong', 'Better alternative'],
+        },
+
+        frameworkComparison: {
+          title: 'SPECS vs Other Prompt Frameworks: Comparison Table',
+          content: [
+            '**SPECS is the most specification-focused framework — compare it to the closest alternatives on key dimensions:**',
+          ],
+          rows: [
+            { 'Dimension': 'Components', 'SPECS': '5 (Scope, Purpose, Examples, Constraints, Steps)', 'CO-STAR': '6 (Context, Objective, Style, Tone, Audience, Response)', 'APE': '3 (Analyze, Plan, Execute)', 'CRAFT': '5 (Context, Role, Audience, Format, Tone)' },
+            { 'Dimension': 'Primary purpose', 'SPECS': 'Machine-usable, structured output', 'CO-STAR': 'Human-readable, multi-constraint communication', 'APE': 'Visible reasoning and planning', 'CRAFT': 'Voice, brand, marketing messaging' },
+            { 'Dimension': 'Output predictability', 'SPECS': 'Very high — contracts are enforced', 'CO-STAR': 'Medium — audience and tone influence output', 'APE': 'Low — reasoning steps vary by model', 'CRAFT': 'Low — voice is subjective' },
+            { 'Dimension': 'Best task type', 'SPECS': 'Data extraction, code generation, schema output', 'CO-STAR': 'Documentation, guides, policy memos', 'APE': 'Analysis, research, complex reasoning', 'CRAFT': 'Marketing, social media, brand copy' },
+            { 'Dimension': 'Typical prompt length', 'SPECS': '150–300 words', 'CO-STAR': '200–400 words', 'APE': '100–250 words', 'CRAFT': '100–250 words' },
+            { 'Dimension': 'PromptQuorum built-in', 'SPECS': '✓', 'CO-STAR': '✓', 'APE': '✓', 'CRAFT': '✓' },
+          ],
+          columns: ['Dimension', 'SPECS', 'CO-STAR', 'APE', 'CRAFT'],
+        },
+
+        vsFrameworks: {
+          title: 'SPECS vs Specific Frameworks: Key Differences',
+          content: [
+            '**Use these comparisons to choose correctly between SPECS and the most commonly confused alternatives:**',
+          ],
+          items: [
+            '**SPECS vs [CO-STAR](/prompt-engineering/co-star-framework):** Both are detailed frameworks, but SPECS targets machine-usable output while CO-STAR targets human-readable content. SPECS has Constraints and Steps; CO-STAR has Audience, Tone, and Style. If your output will be parsed by code, use SPECS. If a human will read or refine the output, use CO-STAR.',
+            '**SPECS vs [CRAFT](/prompt-engineering/craft-framework):** CRAFT is designed for voice and brand messaging. SPECS is designed for accuracy and structure. CRAFT has Tone and Role; SPECS has Constraints and Steps. Use CRAFT for marketing, social media, and creative copy. Use SPECS for data extraction, code generation, and integration with downstream systems.',
+            '**SPECS vs [APE](/prompt-engineering/ape-framework):** APE exposes reasoning (Analyze, Plan, Execute). SPECS enforces output structure (Scope, Purpose, Examples, Constraints, Steps). Use APE when you want to see the model\'s thinking. Use SPECS when you need consistent, machine-usable results. A common pattern: use APE for first-draft reasoning, then SPECS for refinement into production.',
+            '**SPECS vs [RISEN](/prompt-engineering/risen-framework):** RISEN is for iteration and refinement; SPECS is for specification and generation. Use SPECS to create the initial structured output. Use RISEN in a second pass to critique and improve the SPECS output through Refine-Inspect-Summarize-Evaluate-Next steps cycles.',
+            '**SPECS vs [Single Step](/prompt-engineering/the-single-step-prompt-method):** Single Step is minimal and flexible; SPECS is detailed and rigid. Use Single Step for quick, one-off requests. Use SPECS when the same prompt will be run repeatedly, when output must integrate with tools, or when you need consistency across teams and models.',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           content: [
@@ -27438,6 +27512,10 @@ zh: {
             {
               q: 'Can SPECS work for tasks where the exact output format is not known in advance?',
               a: 'Not well. SPECS requires you to define scope, purpose, examples, and constraints in advance. If the output format is truly unpredictable or experimental, start with a lighter framework like Single Step or CRAFT, explore possibilities, and then convert to SPECS once you have locked down the output shape. SPECS is for production-ready tasks with known requirements.',
+            },
+            {
+              q: 'How do I combine SPECS with other frameworks?',
+              a: 'SPECS pairs well with other frameworks at different stages of a workflow. Use APE in the first pass to expose reasoning about what the scope and purpose should be, then lock that reasoning into a SPECS prompt for production use. Alternatively, use SPECS for the initial generation and then RISEN to refine the output through structured review cycles. Document which frameworks you use and in what order to keep your workflow clear.',
             },
           ],
         },
@@ -27718,6 +27796,61 @@ zh: {
           ],
         },
 
+        historyAndDeveloper: {
+          title: 'History and Origin of the RISEN Framework',
+          content: [
+            '**The RISEN Framework (Refine, Inspect, Summarize, Evaluate, Next steps) emerged from the practice of multi-turn prompt optimization and iterative content improvement.** As practitioners discovered that a single generation prompt often produced outputs needing refinement, they developed structured patterns for the revision phase. RISEN codified these patterns into a named, repeatable framework designed specifically for iterative improvement workflows.',
+            'The framework was developed by the prompt engineering community around 2023–2024 through documented best practices in revision-oriented workflows. Unlike generation-focused frameworks (CO-STAR, CRAFT, APE, SPECS), which optimize for first-pass output, RISEN optimizes for the second, third, and fourth passes. The five stages—Refine, Inspect, Summarize, Evaluate, Next steps—map to the actual work of iterative improvement: making changes, auditing them, understanding the result, judging quality, and planning the next cycle.',
+            '**RISEN reflects insight from:** (1) Software engineering practices where code review and iteration are standard; (2) Editorial and publishing workflows where multiple passes are expected; (3) Iterative design methodologies (Agile, Design Thinking) that treat incremental refinement as normal; (4) The observation that LLMs improve outputs when asked to self-critique and plan next steps.',
+          ],
+        },
+
+        whenNotToUse: {
+          title: 'When the RISEN Framework Is Not the Right Choice',
+          content: [
+            '**RISEN is for revision, not generation.** If you do not yet have a draft to improve, use a generation framework instead.',
+          ],
+          rows: [
+            { 'Situation': 'Creating content from scratch (no existing draft)', 'Why RISEN is wrong': 'RISEN assumes you have material to refine; without a draft, it has nothing to work with', 'Better alternative': 'CO-STAR, CRAFT, or SPECS for generation' },
+            { 'Situation': 'One-time content that does not need iteration', 'Why RISEN is wrong': 'RISEN overhead is justified only when refinement happens multiple times', 'Better alternative': 'Single Step or generation framework' },
+            { 'Situation': 'Structured data extraction or code generation', 'Why RISEN is wrong': 'RISEN is subjective (iterative improvement); machine-usable output needs objective specs', 'Better alternative': 'SPECS Framework' },
+            { 'Situation': 'Exposing reasoning steps or decision justification', 'Why RISEN is wrong': 'RISEN refines outputs after generation; it does not expose reasoning during generation', 'Better alternative': 'APE or TRACE' },
+            { 'Situation': 'Quick turnaround, minimal budget for iterations', 'Why RISEN is wrong': 'RISEN assumes 2–4 iterations; quick projects cannot afford multiple passes', 'Better alternative': 'Single Step or one-shot generation' },
+            { 'Situation': 'Tasks with ambiguous or changing success criteria', 'Why RISEN is wrong': 'RISEN Evaluate stage requires explicit criteria; shifting targets make iteration futile', 'Better alternative': 'Exploratory frameworks like CRAFT or Single Step' },
+          ],
+          columns: ['Situation', 'Why RISEN is wrong', 'Better alternative'],
+        },
+
+        frameworkComparison: {
+          title: 'RISEN vs Other Prompt Frameworks: Comparison Table',
+          content: [
+            '**RISEN is the only iterative, refinement-focused framework — here is how it compares to generation-focused alternatives:**',
+          ],
+          rows: [
+            { 'Dimension': 'Primary purpose', 'RISEN': 'Iterative improvement of existing drafts', 'CO-STAR': 'Generate multi-constraint content', 'SPECS': 'Generate structured, machine-usable output', 'APE': 'Generate with visible reasoning' },
+            { 'Dimension': 'Workflow stage', 'RISEN': 'Second+ pass (refinement)', 'CO-STAR': 'First pass (generation)', 'SPECS': 'First pass (generation)', 'APE': 'First pass (generation)' },
+            { 'Dimension': 'Requires existing draft?', 'RISEN': 'Yes — mandatory', 'CO-STAR': 'No — starts from scratch', 'SPECS': 'No — starts from scratch', 'APE': 'No — starts from scratch' },
+            { 'Dimension': 'Iteration cycles typical', 'RISEN': '2–4 cycles common', 'CO-STAR': '0–1 (done after first pass)', 'SPECS': '0–1 (validation, not iteration)', 'APE': '0–1 (done after first pass)' },
+            { 'Dimension': 'Output auditability', 'RISEN': 'Very high — change tracking and self-critique', 'CO-STAR': 'Medium — output only', 'SPECS': 'High — spec compliance', 'APE': 'High — reasoning visible' },
+            { 'Dimension': 'PromptQuorum built-in', 'RISEN': '✓', 'CO-STAR': '✓', 'SPECS': '✓', 'APE': '✓' },
+          ],
+          columns: ['Dimension', 'RISEN', 'CO-STAR', 'SPECS', 'APE'],
+        },
+
+        vsFrameworks: {
+          title: 'RISEN vs Specific Frameworks: Key Differences',
+          content: [
+            '**Use these comparisons to understand RISEN\'s role in your workflow alongside generation frameworks:**',
+          ],
+          items: [
+            '**RISEN vs [CO-STAR](/prompt-engineering/co-star-framework):** CO-STAR is for generation, RISEN is for revision. Use CO-STAR to create the first draft, then RISEN to improve it. They are sequential parts of the same workflow: CO-STAR → [manual work] → RISEN → [manual work] → RISEN again.',
+            '**RISEN vs [SPECS](/prompt-engineering/specs-framework):** SPECS is for structured generation, RISEN is for unstructured improvement. If you need a predictable output format, use SPECS to generate it, then optionally RISEN to refine quality. They complement each other: SPECS for correctness, RISEN for quality.',
+            '**RISEN vs [APE](/prompt-engineering/ape-framework):** APE (Analyze–Plan–Execute) exposes reasoning steps upfront. RISEN retrospectively analyzes what changed and why. Use APE for complex problem-solving, RISEN for iterative content improvement. For a strategic decision, APE first (see the reasoning), then RISEN if you need to refine the output afterward.',
+            '**RISEN vs [CRAFT](/prompt-engineering/craft-framework):** CRAFT generates marketing content. RISEN refines any content. Generate with CRAFT, improve with RISEN. A typical workflow: CRAFT first draft → RISEN improvement cycle 1 → RISEN improvement cycle 2 → final editing by human.',
+            '**RISEN vs [Single Step](/prompt-engineering/the-single-step-prompt-method):** Single Step is for quick generation. RISEN is for systematic refinement. Use Single Step for throwaway outputs or rapid experimentation. Use RISEN when quality matters and multiple refinement cycles are planned.',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           content: [
@@ -27792,6 +27925,10 @@ zh: {
             {
               q: 'Can RISEN replace human editing?',
               a: 'RISEN is a powerful refinement tool, but human editors bring judgment, consistency, and brand voice that AI cannot replicate. Use RISEN to improve drafts and provide feedback, then have a human editor do a final pass. This hybrid approach (AI first, human second) is often faster and higher-quality than either alone.',
+            },
+            {
+              q: 'How do I combine RISEN with other frameworks in a multi-step workflow?',
+              a: 'A common workflow is: (1) Generate first draft using CO-STAR or CRAFT, (2) Run 2–3 RISEN cycles to improve quality, (3) Optionally run SPECS to validate structure and format, (4) Final human review and publish. You can also use APE to plan refinement goals before entering the RISEN cycle. Document the exact order of frameworks so your team understands the workflow.',
             },
           ],
         },
