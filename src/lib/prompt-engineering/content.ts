@@ -494,6 +494,46 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               q: 'Does prompt optimization apply to image prompts (text-to-image)?',
               a: 'The principles apply — specificity, constraints, and examples (reference images) are all valid levers for image models like DALL-E 3 and Stable Diffusion. However, the mechanics differ: image models respond to style modifiers, aspect ratio specifications, and negative prompts as constraints. The optimization process (baseline → diagnose → change one variable → test) is identical.',
             },
+            {
+              q: 'What is automatic prompt optimization?',
+              a: 'Automatic prompt optimization uses a second AI model (or the same model in a meta-prompting loop) to rewrite and improve prompts without human intervention. Tools like DSPy (Stanford), TextGrad, and APE (Automatic Prompt Engineer) generate candidate prompts, score them against a metric (accuracy, format compliance, user rating), and select the best variant. Manual optimization is faster for well-understood tasks; automatic optimization scales better when you have labeled evaluation data and need to test hundreds of variants.',
+            },
+            {
+              q: 'How does prompt optimization differ from prompt tuning?',
+              a: 'Prompt optimization improves discrete text prompts — the instructions you write in natural language — without modifying model weights. Prompt tuning (introduced by Lester et al., 2021) learns continuous soft prompt vectors that are prepended to the input and trained by gradient descent alongside or instead of the model. Prompt tuning requires compute and training data; prompt optimization requires neither. For most production use cases, optimize discrete prompts first and only consider prompt tuning when a hard quality ceiling has been reached.',
+            },
+            {
+              q: 'What are the best tools for prompt optimization?',
+              a: 'The most widely used tools are: PromptQuorum (dispatch one prompt to GPT-4o, Claude, and Gemini simultaneously for side-by-side comparison), DSPy (programmatic prompt optimization with automatic metric-based selection), LangSmith (prompt versioning, A/B testing, and tracing for LangChain pipelines), Promptfoo (open-source CLI for running prompts against test cases and regression testing), and PromptLayer (prompt versioning and analytics). For manual iteration, a spreadsheet logging prompt version, input, output, and pass/fail against criteria is sufficient for most single-task optimization work.',
+            },
+            {
+              q: 'How do I optimize a system prompt?',
+              a: 'System prompt optimization follows the same 6-step process as user prompt optimization, with two additional constraints. First, system prompts persist across all turns — an overly specific instruction can degrade performance on inputs you did not anticipate. Test across 5–10 diverse representative inputs, not just one. Second, system prompt length matters: very long system prompts (>2,000 tokens) can reduce instruction-following on later user turns on some models (notably GPT-4o). Optimize for conciseness: each instruction in the system prompt should be necessary. Remove any instruction that does not change output on your test set.',
+            },
+            {
+              q: 'Can you use ChatGPT to optimize prompts?',
+              a: 'Yes. You can ask GPT-4o to rewrite a prompt by providing the failing prompt and describing the failure mode: "This prompt produces output that is too vague. Rewrite it to require a 3-bullet structured response." This is a form of meta-prompting — using the model to improve its own inputs. The limitation is that GPT-4o will optimize for what it thinks is better, not necessarily what your specific evaluation criteria require. Always test the rewritten prompt on real inputs and measure against your actual pass/fail criteria before accepting the revision.',
+            },
+            {
+              q: 'What is prompt optimization in machine learning?',
+              a: 'In machine learning contexts, prompt optimization refers to techniques that improve the prompts fed into language models as part of a pipeline — without retraining the model itself. This includes both discrete prompt optimization (rewriting natural language instructions) and continuous prompt tuning (learning soft token embeddings via gradient descent). In production ML systems, prompt optimization is typically part of the inference pipeline: the prompt is treated as a hyperparameter that is tuned against a held-out evaluation set, analogous to learning rate selection in model training.',
+            },
+            {
+              q: 'How much does prompt optimization improve AI output quality?',
+              a: 'The improvement range depends on how poorly optimized the baseline prompt is. In controlled evaluations, moving from an unoptimized prompt to a well-optimized prompt typically improves task accuracy by 20–40% on structured tasks (classification, extraction, JSON generation) and 15–25% on open-ended tasks (summarization, analysis). The largest gains come from specifying output format (eliminating format non-compliance entirely) and adding 1–2 few-shot examples (reducing hallucination on structured outputs). The Schulhoff et al. 2024 Prompt Report documents consistent gains of 10–30% across 58 prompting techniques evaluated across multiple models.',
+            },
+            {
+              q: 'Should I optimize prompts for each AI model separately?',
+              a: 'Start with a model-agnostic optimization — apply the 6 levers (specificity, context, examples, constraints, output format, role) and test on GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. A well-structured prompt typically works well across all three. Only add model-specific variants if cross-model testing reveals divergent results. Common model-specific adjustments: Claude handles longer multi-part system prompts well; GPT-4o benefits from explicit JSON format requests; Gemini 2.5 Pro benefits from explicit section headers in long-document tasks. Keep model-specific variants in a prompt library with version notes.',
+            },
+            {
+              q: 'What is the difference between prompt optimization and RAG?',
+              a: 'Prompt optimization improves the instructions and structure of a prompt. Retrieval-Augmented Generation (RAG) improves the information available to the model at inference time by retrieving relevant documents and inserting them into the prompt context. The two are complementary: RAG solves the problem of the model not having the right facts; prompt optimization solves the problem of the model not processing those facts correctly. A fully optimized RAG pipeline requires both good retrieval (the right documents are fetched) and a well-optimized prompt (the model is instructed to use only the retrieved content, cite sources, and format the answer correctly).',
+            },
+            {
+              q: 'How do I optimize prompts for GPT-4o specifically?',
+              a: 'GPT-4o responds well to four optimization moves: (1) Explicit JSON format requests in the system prompt — GPT-4o\'s instruction-following on structured output is strong when the schema is defined precisely. (2) Markdown headers in system prompts — use H2 sections (## Role, ## Task, ## Output Format) to separate concerns; GPT-4o attends to this structure reliably. (3) Tight constraints — GPT-4o tends to over-explain without word/length constraints; add "respond in ≤150 words" or "return only the JSON object, no explanation." (4) Tool-use framing — for tasks involving retrieval or calculation, frame the prompt as a function definition rather than a prose instruction when using the Assistants API with tools enabled.',
+            },
           ],
         },
 
