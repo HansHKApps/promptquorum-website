@@ -19969,7 +19969,7 @@ zh: {
         },
 
         euImplications: {
-          title: 'If You're an EU-Based Organization: Critical Compliance Deadlines',
+          title: 'If You\'re an EU-Based Organization: Critical Compliance Deadlines',
           content: [
             '**The EU AI Act is binding and enforced as of August 2026.** If your organization is EU-headquartered or serves EU users, you must comply with its four-tier risk classification system. Fines for prohibited practices reach €35 million or 7% of global turnover — whichever is higher. Non-compliance is not negotiable.',
             '**If you deploy GPT-4o, Claude 4.6 Sonnet, or Gemini 2.5 Pro in the EU, you must audit their General Purpose AI (GPAI) compliance documentation.** OpenAI, Anthropic, and Google published transparency documentation (training data summaries, capability limitations, safety testing) as of August 2025. Store these attestations as proof of compliance — regulators will ask.',
@@ -20477,7 +20477,456 @@ zh: {
         },
       },
     },
-    de: { theme: 'Policy & Compliance', title: 'Geopolitik und KI: Wie EU, USA und China um KI-Dominanz konkurrieren', intro: 'Die USA, China und die EU verfolgen unvereinbare Visionen der KI-Regulierung — die USA priorisieren Wettbewerbsfähigkeit, China betont staatliche Kontrolle, und die EU baut einen rechtsbasierten Rahmen. Für Organisationen, die KI einsetzen, entstehen daraus konkrete Compliance-Pflichten, Beschaffungsbeschränkungen und Anforderungen an den Datenspeicherort.', publishDate: '2026-04-01', readTime: 'In Kürze', sections: {} },
+    de: {
+      theme: 'Policy & Compliance',
+      title: 'KI-Geopolitik erklärt: EU AI Act vs. USA vs. China (Analyse 2026)',
+      intro: 'Die USA, China und die Europäische Union verfolgen unvereinbare Visionen der KI-Governance — die USA priorisieren Wettbewerbsfähigkeit, China betont staatliche Kontrolle, und die EU baut einen rechtsbasierten Rahmen. Für Organisationen, die KI einsetzen, entstehen daraus konkrete Compliance-Pflichten, Beschaffungsbeschränkungen und Anforderungen an den Datenspeicherort, unabhängig davon, wo sich die Organisation befindet.',
+      metaDescription: 'KI-Geopolitik erklärt: EU AI Act Durchsetzung, US vs. China KI-Strategie, und globale KI-Regulierungsrisiken. Was Organisationen mit KI 2026 wissen müssen.',
+      publishDate: '2026-04-01',
+      dateModified: '2026-04-02',
+      readTime: '16 Min. Lesezeit',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'KI-Geopolitik',
+      sections: {
+        tldr: {
+          title: 'Kernaussagen',
+          isTldr: true,
+          items: [
+            'KI ist eine strategische nationale Technologie — die USA, China und die EU konkurrieren um Dominanz.',
+            'Länder konkurrieren um drei Ressourcen: Rechenkraft (Chips), KI-Talente und Trainingsdaten.',
+            'KI beeinflusst militärische Leistung, wirtschaftliche Wettbewerbsfähigkeit und Cyber-Macht gleichzeitig.',
+            'Der EU AI Act ist das erste verbindliche KI-Gesetz der Welt — Geldstrafen erreichen 35 Mio. EUR oder 7% des weltweiten Umsatzes.',
+            'Der Brussels Effect: EU AI Act-Regeln gelten für jede KI, die europäische Nutzer erreicht, weltweit.',
+            'Die USA haben kein bundesweites KI-Gesetz — sektorale Regulierungsbehörden wenden bestehende Mandate auf KI an.',
+            'Die USA hoben ihre KI-Sicherheitsverordnung im Januar 2025 auf — Wettbewerbsfähigkeit führt jetzt vor Sicherheit.',
+            'Chinas DeepSeek R1 entspricht GPT-4o bei Schlüsselbenchmarks — GPU-Exportkontrollen haben chinesische KI nicht gestoppt.',
+            'TSMC in Taiwan fertigt die Chips, die alle Frontier-KI antreiben — eine einzelne geopolitische Abhängigkeit.',
+            'Organisationen müssen drei konkurrierende Regulierungsrahmen gleichzeitig erfüllen: EU, USA und China.',
+          ],
+        },
+
+        euImplications: {
+          title: 'Wenn Sie eine EU-basierte Organisation sind: Kritische Compliance-Fristen',
+          content: [
+            '**Der EU AI Act ist verbindlich und wird ab August 2026 durchgesetzt.** Wenn Ihre Organisation in der EU ansässig ist oder EU-Nutzer bedient, müssen Sie sein vierteiliges Risikoeinstufungssystem erfüllen. Geldstrafen für verbotene Praktiken erreichen 35 Mio. EUR oder 7% des weltweiten Umsatzes — je nachdem, welcher Wert höher ist. Nicht-Konformität ist nicht verhandelbar.',
+            '**Wenn Sie GPT-4o, Claude 4.6 Sonnet oder Gemini 2.5 Pro in der EU einsetzen, müssen Sie ihre Konformitätsdokumentation zu General Purpose AI (GPAI) überprüfen.** OpenAI, Anthropic und Google veröffentlichten Transparenzdokumentation (Trainingsdaten-Zusammenfassungen, Leistungsgrenzen, Sicherheitstests) ab August 2025. Speichern Sie diese Bescheinigungen als Nachweis der Konformität — Regulierungsbehörden werden danach fragen.',
+            '**Hochrisiko-KI-Systeme (Einstellung, Kreditentscheidungen, Gesundheitswesen, Strafverfolgung) erfordern Konformitätsbewertungen vor dem Einsatz.** Dies bedeutet Tests auf Voreingenommenheit, Dokumentation von Überwachungsmechanismen durch Menschen und Audit-Protokolle aller KI-Entscheidungen. Open-Weights-Modelle, die lokal eingesetzt werden (LLaMA via Ollama, Mistral Large), erfüllen Datenspeicherort-Anforderungen — keine Daten verlassen Ihre Infrastruktur, und Sie kontrollieren die Audit-Spur.',
+            '**Der Brussels Effect gilt auch für Sie.** Wenn Ihre KI-System einen einzelnen EU-Einwohner erreicht, gilt der EU AI Act — auch wenn Ihr Unternehmen in den USA oder China ansässig ist. Dies bedeutet, dass die Durchsetzung der gleichen Compliance-Stufe global oft einfacher ist als die Verwaltung mehrerer Konfigurationen.',
+          ],
+        },
+
+        promptEngineerTakeaways: {
+          title: 'Kernaussagen für Prompt Engineers',
+          isTldr: true,
+          items: [
+            'Chinesische KI-APIs (DeepSeek, ERNIE 4.0, Qwen via Alibaba Cloud) filtern Inhalte auf API-Ebene — politische Themen, KP-Kritik und Taiwan/Tibet/Xinjiang geben `is_safe: 0` in HTTP-200-Antworten zurück, nicht HTTP-4xx. Behandeln Sie diese explizit in Ihrem Anwendungscode.',
+            'Mistral-Modelle und lokale Ollama-Implementierungen erfüllen EU AI Act-Anforderungen an Datenspeicherorte — Prompts und Outputs verlassen nie Ihre Infrastruktur. Dies ist der reibungsloseste Weg zu EU GDPR + AI Act-Konformität für Prompt Engineers.',
+            'GPT-4o und Claude 4.6 Sonnet sind ab August 2025 GPAI-konform unter dem EU AI Act. Sie können sie in EU-bezogenen Implementierungen ohne zusätzliche Konformitätsarbeit auf Modellebene verwenden — Ihre Verpflichtung liegt auf der Anwendungsebene (Bereitsteller), nicht auf der Modellebene.',
+            'Der Brussels Effect bedeutet, dass Prompts, die für EU-Bewohner bestimmte Produkte an US-gehostete Modelle gesendet werden, EU AI Act-Anforderungen unterliegen — auch wenn Ihr Unternehmen nicht in der EU ansässig ist.',
+            'Für Multi-Jurisdiktions-Tests versenden Sie denselben Prompt gleichzeitig an Mistral (EU-konform), GPT-4o (US/GPAI) und Qwen (China-zugänglich), um Outputs über Regulierungskontexte hinweg zu vergleichen. PromptQuorum unterstützt dies nativ.',
+          ],
+        },
+
+        promptOptimizationByRegion: {
+          title: 'Wie Geopolitik die Prompt-Optimierung ändert: Land für Land',
+          content: [
+            '**Wo Ihre KI-Ausgabe verbraucht wird, bestimmt, was Ihre Prompts tun müssen — und was sie vermeiden müssen.** Sprache beeinflusst die Modellleistung direkt: Ein auf Englisch geschriebener Prompt, der an ein chinesisches Modell (ERNIE 4.0, Qwen) gesendet wird, ist schlechter als der gleiche Prompt, der auf Mandarin geschrieben ist. Gesetze beeinflussen das Prompt-Design strukturell: EU AI Act-Offenlegungsanforderungen, US-Sektorregulierung und Chinas CAC-Inhaltsfilter legen jeweils unterschiedliche Zwänge darauf auf, wie Prompts formuliert werden können, welche Outputs generiert werden können und wie Anwendungen auf Antworten reagieren müssen.',
+          ],
+          tableFormat: true,
+          columns: ['Region', 'Gesetzliche Einschränkung für Prompts', 'Sprachoptimierung', 'Empfohlenes Modell'],
+          rows: [
+            {
+              'Region': 'Europäische Union',
+              'Gesetzliche Einschränkung für Prompts': 'EU AI Act: Prompts, die Inhalte für EU-Verbraucher generieren, müssen KI-Offenlegung enthalten. GDPR: Prompts dürfen personenbezogene Daten nicht ohne Rechtsgrundlage enthalten. Hochrisiko-KI-Anwendungen (HR, Kredit, Gesundheitswesen) erfordern Überwachung durch Menschen — Prompts dürfen finale Entscheidungen nicht automatisieren.',
+              'Sprachoptimierung': 'Schreiben Sie Prompts in der Zielsprache (Deutsch, Französisch usw.) — GPT-4o und Claude 4.6 Sonnet performen deutlich besser bei Nicht-Englisch-Aufgaben, wenn Prompts in der gleichen Sprache wie die gewünschte Ausgabe sind. Geben Sie die Ausgabesprache in System-Prompts explizit an.',
+              'Empfohlenes Modell': 'Mistral Large (Französisch, in der EU ansässig), lokale Ollama-Implementierung (Daten verlassen nie die Infrastruktur) oder GPT-4o/Claude mit EU-Region API-Endpoints und SCCs.',
+            },
+            {
+              'Region': 'Vereinigte Staaten',
+              'Gesetzliche Einschränkung für Prompts': 'Kein bundesweites KI-Gesetz, aber Sektorregeln gelten: HIPAA (Gesundheitswesen — PHI darf nicht in Prompts vorkommen), CCPA/CPRA (Kalifornien — personenbezogene Daten in Prompts triggern Verbraucherrechte), FTC Act (Prompts dürfen keinen täuschenden Inhalt in Verbraucherkontext generieren). Biometrische Gesetze der Bundesstaaten (Illinois BIPA) beschränken Prompts, die Gesichts-/Sprachdaten verarbeiten.',
+              'Sprachoptimierung': 'US-Frontier-Modelle (GPT-4o, Claude 4.6 Sonnet) sind Englisch-optimiert und erreichen ihre Spitzenleistung bei Englisch-Prompts. Für spanischsprachige US-Märkte instrui Sie das Modell explizit auf Spanisch oder verwenden Sie einen zweisprachigen System-Prompt — verlassen Sie sich nicht auf automatische Erkennung.',
+              'Empfohlenes Modell': 'GPT-4o oder Claude 4.6 Sonnet für allgemeine Nutzung. Für regulierte Gesundheits- oder Finanz-Prompts verwenden Sie API mit SCCs und senden Sie keine PHI/PII im Prompt-Kontext.',
+            },
+            {
+              'Region': 'China',
+              'Gesetzliche Einschränkung für Prompts': 'CAC Generative AI Measures (2023): Prompts, die Inhalte zu KP-Führung, Taiwan/Tibet/Xinjiang-Unabhängigkeit, die Tiananmen-Ereignisse von 1989 oder alles, das "sozialistische Kernwerte" untergräbt, anfordern, werden blockiert. Zurückgegeben als HTTP 200 mit `is_safe: 0`. PIPL: Prompts mit personenbezogenen Daten chinesischer Nutzer dürfen nicht an Nicht-China-Server weitergeleitet werden.',
+              'Sprachoptimierung': 'Schreiben Sie Prompts in vereinfachtem Chinesisch (Mandarin) für chinesischsprachige Aufgaben — Qwen 2.5 und ERNIE 4.0 erreichen 10–20% höhere Scores bei chinesischsprachigen Benchmarks (C-Eval) vs. den gleichen Prompt auf Englisch. Verwenden Sie Pinyin oder Englisch für technische Terminologie, wenn es kein chinesisches Äquivalent gibt.',
+              'Empfohlenes Modell': 'Qwen 2.5 72B (selbst-gehostet außerhalb Chinas, keine CAC-Filter) für grenzüberschreitende Aufgaben. ERNIE 4.0 via Qianfan API (CAC-registriert) für verbrauchernahe China-Implementierungen. DeepSeek R1 für Reasoning-Aufgaben, die gefilterte Inhaltsbereiche nicht berühren.',
+            },
+            {
+              'Region': 'UK / Post-Brexit',
+              'Gesetzliche Einschränkung für Prompts': 'UK GDPR (äquivalent zu EU GDPR) gilt für personenbezogene Daten. UK AI Safety Institute konzentriert sich auf Frontier-Modell-Evaluierung, nicht auf Konformität auf Anwendungsebene. Kein verbindliches KI-Offenlegungsgesetz — UK wählte einen innovationsfreundlichen, sektorgeführten Ansatz. OFCOM reguliert KI-generierte Inhalte in Broadcast-Kontexten.',
+              'Sprachoptimierung': 'Britisches Englisch Rechtschreibungen und Redewendungen in Prompts verbessern die Ausgabequalität für UK-bezogene Inhalte. GPT-4o antwortet auf explizite "UK English"-Anweisungen in System-Prompts; ohne diese standardmäßig auf American English.',
+              'Empfohlenes Modell': 'GPT-4o oder Claude 4.6 Sonnet. UK-EU-Datenübertragungen erfordern SCCs post-Brexit — UK-Angemessenheitsentscheidung der EU ist vorhanden, aber Überprüfung unterliegt.',
+            },
+            {
+              'Region': 'Japan',
+              'Gesetzliche Einschränkung für Prompts': 'Japans Act on Protection of Personal Information (APPI) beschränkt die Verwendung personenbezogener Daten in KI-Prompts. Japan hat kein KI-spezifisches Gesetz (ab 2026) — Richtlinien von METI und Ministry of Internal Affairs sind freiwillig. Japan nahm am Hiroshima AI Process teil — Einhaltung seiner 11 Prinzipien wird für japanische Unternehmungen empfohlen.',
+              'Sprachoptimierung': 'Japanische Prompts für japanischsprachige Aufgaben outperformen Englisch-Prompts über alle großen Modelle. GPT-4o und Claude 4.6 Sonnet behandeln Japanisch gut; Rakuten AI und NTT LLMs sind für Japan-spezifische Implementierungen verfügbar. Vermeiden Sie Casual (tame-go) Register in System-Prompts — höfliche (keigo) Formulierung verbessert Konformität und Ausgabequalität für japanische Geschäftskontexte.',
+              'Empfohlenes Modell': 'GPT-4o oder Claude 4.6 Sonnet für allgemeine japanische Aufgaben. Rakuten AI (Rakuten Group) oder NTT LLMs für Japan-inländische Konformitäts-sensitive Implementierungen.',
+            },
+          ],
+        },
+
+        keyStatistics: {
+          title: 'KI-Geopolitik: Wichtige Datenpunkte',
+          content: [
+            'Die folgenden Zahlen stellen das Ausmaß der staatlichen KI-Investitionen, der Hardware-Konzentration und der Forschungskapazität dar, die den aktuellen geopolitischen Wettbewerb in der künstlichen Intelligenz definieren.',
+          ],
+          items: [
+            '**Staatliche KI-Investitionen — Vereinigte Staaten:** 52 Milliarden USD, die durch den CHIPS and Science Act (2022) für inländische Halbleiterfertigung zugewiesen werden, plus 200 Milliarden USD für Wissenschaft F&E. Der National AI Initiative Act finanziert KI-Forschung über 25 Bundesbehörden.',
+            '**Staatliche KI-Investitionen — China:** Geschätzte 1 Billion CNY (140 Milliarden USD) an staatlich geleiteten KI- und Halbleiter-Investitionen 2021–2025, einschließlich des National New Generation AI Development Plan, das 2030 globale KI-Führerschaft anstrebt.',
+            '**Staatliche KI-Investitionen — Europäische Union:** 1 Milliarde EUR aus dem European Innovation Council AI-Fonds; nationale Strategien fügen 10+ Milliarden EUR hinzu: Deutschland 5 Milliarden EUR (2019–2025), Frankreich 2 Milliarden EUR, UK 1 Milliarde GBP in KI-Sicherheit und Rechenleistung.',
+            '**Halbleiter-Fertigungskonzentration:** TSMC (Taiwan) stellt etwa 90% der weltweit fortschrittlichsten Chips unter 7nm her. ASML (Niederlande) ist der alleinige Hersteller von EUV-Lithographiemaschinen, die für fortgeschrittene Knoten-Fertigung erforderlich sind — was den Niederlanden einen strukturellen Engpass in der globalen Chip-Versorgung gibt.',
+            '**Nvidia GPU-Marktanteil:** Nvidia hält etwa 80% Marktanteil bei KI-Trainings-GPUs. Die H100 und H200 Serie treiben die Mehrheit des Frontier-Modell-Trainings bei OpenAI, Google DeepMind, Anthropic und Baidu an.',
+            '**Verteilung von KI-Forschern:** Die USA beschäftigen etwa 40% der weltbesten KI-Forscher nach Veröffentlichungseinfluss (Stanford HAI 2024 AI Index). China produziert die meisten Informatik-Doktorate — etwa 50.000 pro Jahr — und macht ~30% der Top-KI-Konferenz-Autoren aus.',
+            '**KI-Patentanmeldungen:** China reichte etwa 70% der globalen KI-Patente 2022 ein (WIPO Global Innovation Index). Die USA führen bei Zitationen und kommerzialisierte Erfindungen; China führt nach Volumen.',
+            '**Kostenreduktion beim Modell-Training:** 94% Kostenreduktion — GPT-4 wird auf etwa 100 Millionen USD beim Trainings-Compute geschätzt (2023) vs DeepSeek R1\'s berichtete etwa 6 Millionen USD (Januar 2025). Diese Lücke zeigt, dass US-Compute-Export-Kontrolle chinesische Frontier-KI nicht dauerhaft einschränken kann.',
+            '**EU AI Act Abdeckung:** Der Act deckt 450 Millionen Verbraucher über 27 EU-Mitgliedstaaten ab. Der Systemrisiko-Schwellwert für GPAI-Modelle ist 10²⁵ FLOPs Trainings-Compute — das Niveau, bei dem zusätzliche Adversarial-Test-Anforderungen gelten.',
+            '**Bletchley Declaration (November 2023):** Von 28 Nationen unterzeichnet, einschließlich USA, China und EU-Mitgliedstaaten — der breiteste internationale KI-Sicherheitskonsens bis heute, obwohl nicht bindend.',
+          ],
+        },
+
+        qaWhyStrategic: {
+          title: 'Warum ist KI strategisch wichtig?',
+          content: [
+            'KI ist strategisch wichtig, weil sie die Leistung über jede Dimension der nationalen Macht gleichzeitig verstärkt — wirtschaftliche Produktivität, militärische Effektivität, Geheimdienstanalyse und Cyber-Operationen. Nationen mit führender KI können wissenschaftliche Forschung automatisieren, militärische Logistik optimieren, Überwachungsdaten im großen Maßstab verarbeiten und autonome Waffensysteme entwickeln. Die OECD prognostiziert, dass KI bis 2030 15,7 Billionen USD zum globalen BIP hinzufügen könnte, was KI-Führerschaft dem äquivalent macht zu industrieller Führerschaft im 20. Jahrhundert. Länder, die bei KI-Leistung zurückbleiben, sehen sich kumulative Nachteile über Verteidigung, Handel und Diplomatie.',
+          ],
+        },
+
+        qaWhichCountriesDominate: {
+          title: 'Welche Länder dominieren die KI-Entwicklung?',
+          content: [
+            'Die Vereinigten Staaten dominieren Frontier-Modell-Leistung — OpenAI (GPT-4o), Anthropic (Claude) und Google DeepMind (Gemini) sind alle in der USA ansässig. China führt beim KI-Patent-Volumen (~70% globaler Patente 2022 per WIPO) und hat die fähigsten inländischen Modelle außerhalb der USA: Alibaba Qwen 2.5, Baidu ERNIE 4.0 und DeepSeek R1. Die EU führt bei KI-Regulierung, bleibt aber bei Frontier-Leistung zurück — Frankreichs Mistral AI ist der stärkste europäische Kandidat. UK, Kanada und UAE investieren in KI als unabhängige Akteure statt exklusiv mit US oder chinesischer Infrastruktur zu alignieren.',
+          ],
+        },
+
+        qaChipsRole: {
+          title: 'Welche Rolle spielen Chips in der KI-Geopolitik?',
+          content: [
+            'Halbleiter-Chips sind das physische Substrat der KI-Leistung. Das Training von Frontier-Modellen erfordert Tausende spezialisierte GPUs, die monatelang laufen — eine einzelne Training-Lauf für ein großes Modell kann 10–100 Millionen USD Trainings-Compute kosten. Nvidia hält etwa 80% des KI-Trainings-GPU-Marktes; TSMC in Taiwan stellt sie her. Dies schafft zwei geopolitische Engpässe: Die USA können Nvidia GPU-Exporte zu Gegnernationen einschränken (A100 und H100-Verkäufe nach China seit 2022 eingeschränkt), und jede Störung von TSMCs Operationen würde sofort die globale KI-Hardware-Versorgung reduzieren. Der US CHIPS and Science Act (52 Milliarden USD) finanziert explizit inländische Fab-Kapazität, um diese Single-Point-Abhängigkeit zu reduzieren.',
+          ],
+        },
+
+        qaHowAIChangePower: {
+          title: 'Wie könnte KI die globale Macht verändern?',
+          content: [
+            'KI könnte globale Macht verschieben, indem KI-führende Nationen unverhältnismäßig mächtig relativ zu ihrer wirtschaftlichen oder Bevölkerungsgröße werden. Militärisch ermöglicht KI autonomes Targeting, Logistik-Optimierung und Signals-Intelligence-Verarbeitung bei Geschwindigkeiten, die kein menschlich besetztes System erreichen kann. Wirtschaftlich verstärken sich KI-Produktivitätsgewinne — Nationen mit Frontier-KI-Zugang könnten BIP-Wachstumsraten aufrechterhalten, die die Lücke mit denen ohne vergrößern. Diplomatisch gewinnen Nationen, die KI-Infrastruktur exportieren — Hardware, Modelle, Governance-Rahmen — Soft Power und schaffen Abhängigkeitsbeziehungen vergleichbar denen, die Ölexporte oder Telekommunikationsinfrastruktur in früheren Ären schufen. Der Brussels Effect der EU tut dies bereits durch Regulierung: Der EU AI Act formt globale KI-Entwicklung, ohne dass die EU bei Modell-Leistung führt.',
+          ],
+        },
+
+        geopoliticsOfAI: {
+          title: 'Die Geopolitik der künstlichen Intelligenz',
+          content: [
+            '**Die Geopolitik der künstlichen Intelligenz ist das Studium, wie Staaten KI-Leistung, KI-Regulierung und KI-Infrastruktur als Instrumente der Macht nutzen.** Sie umfasst drei unterschiedliche Wettbewerbe: das Rennen, die fähigsten Modelle zu bauen, der Wettstreit darüber, deren Regulierungsrahmen globale KI-Bereitstellung regiert, und der Kampf um die Kontrolle der Hardware-Supply-Chains, die Frontier-KI möglich machen.',
+            'Jede Dimension hat konkrete Konsequenzen für Organisationen. Modell-Leistung bestimmt, welche KI-Tools verfügbar sind. Regulierungsrahmen bestimmen, welche Tools zulässig sind und welche Dokumentation erforderlich ist. Hardware-Kontrolle bestimmt, welche Nationen Frontier-KI-Entwicklung unabhängig aufrechterhalten können — und welche nicht. Die USA, China und die EU verfolgen unvereinbare Strategien über alle drei Dimensionen gleichzeitig.',
+          ],
+        },
+
+        keyEntityRelationships: {
+          title: 'Schlüsselorganisationen in der KI-Geopolitik und ihre Beziehungen',
+          content: [
+            '**KI-Regulierung** ist die Gesamtheit von Gesetzen, Exekutivverordnungen und freiwilligen Rahmenbedingungen, die regeln, wie künstliche Intelligenzsysteme entwickelt, bereitgestellt und regiert werden. KI-Regulierung wird von souveränen Staaten und internationalen Körperschaften produziert; die drei primären Regulierungsregime sind der EU AI Act (Europäische Union), das NIST AI Risk Management Framework (Vereinigte Staaten) und die CAC Generative AI Measures (China).',
+            '**Der US-China-Tech-Wettstreit** ist der bilaterale Wettbewerb zwischen den Vereinigten Staaten und China um Führerschaft in Halbleitern, künstlicher Intelligenz und fortgeschrittener Fertigung. Der Wettstreit wird ausgedrückt durch US-Exportkontrollen auf Nvidia GPUs, Chinas inländische Substitutionsstrategie (Made in China 2025) und konkurrierende KI-Governance-Rahmen. Die EU ist ein dritter Akteur — keine bilaterale Partei — der den Wettstreit durch seine Regulierungsmacht formt.',
+            '**Der EU AI Act** ist eine Verordnung, die das Europäische Parlament im März 2024 verabschiedete. Sie wird durchgesetzt durch das EU AI Office und nationale Marktüberwachungsbehörden. Sie gilt für jede Organisation — unabhängig vom Hauptsitz — deren KI-Systeme EU-Nutzer beeinflussen. Der EU AI Act steht in Beziehung zum Brussels Effect: Weil er extraterritorial gilt, reguliert er tatsächlich OpenAI, Google DeepMind und Anthropic global.',
+            '**NVIDIA** ist ein US-Halbleitunternehmen, das KI-Trainings-GPUs entwirft (H100, H200, B200 Serie). NVIDIAs Hardware ist das primäre Berechnungs-Substrat für das Training von GPT-4o, Claude, Gemini und den meisten Frontier-KI-Modellen. US-Exportkontrollen auf NVIDIA GPUs nach China sind ein zentraler Mechanismus im US-China-Tech-Wettstreit. NVIDIAs Marktposition (~80% KI-GPU-Anteil) macht es zu einem geopolitischen Akteur sowie zu einem kommerziellen.',
+            '**TSMC** (Taiwan Semiconductor Manufacturing Company) ist eine taiwanische Chip-Gießerei, die fortgeschrittene Halbleiter für NVIDIA, Apple, AMD und Google herstellt. TSMCs geografische Lage in Taiwan — und der umstrittene politische Status der Insel — macht TSMC zu einer kritischen Variablen in der KI-Geopolitik. Der CHIPS and Science Act wurde teilweise verabschiedet, um die US-Abhängigkeit von TSMC durch Finanzierung inländischer US-Fabs zu reduzieren.',
+            '**DeepSeek** ist ein chinesisches KI-Labor (unterstützt von High-Flyer Capital Management), das DeepSeek R1 im Januar 2025 freigab. DeepSeek R1 entsprach GPT-4o bei mehreren Benchmarks, während es angeblich bei einem Bruchteil der Kosten trainiert wurde, unter Verwendung von China-beschränkten NVIDIA H800 GPUs. DeepSeeks Freigabe schwächte das Argument, dass US-Exportkontrollen chinesische Frontier-KI-Entwicklung dauerhaft begrenzen könnten.',
+          ],
+        },
+
+        fiveGeopoliticalDimensions: {
+          title: '5 geopolitische Dimensionen der KI',
+          content: [
+            'KI-Geopolitik funktioniert über fünf unterschiedliche Dimensionen. Jede stellt eine separate Wettkampfarena zwischen USA, China und EU dar — und jede schafft unterschiedliche Verpflichtungen und Risiken für Organisationen, die KI bereitstellen.',
+          ],
+          items: [
+            '**1. Wirtschaft.** KI treibt Produktivität, Automatisierung und BIP-Wachstum. Nationen mit überlegener KI-Leistung gewinnen Fertigungseffizienz, finanzielle Modellierungsvorteile und schnellere wissenschaftliche Entdeckung. Die OECD prognostiziert, dass KI bis 2030 15,7 Billionen USD zum globalen BIP hinzufügen könnte — die Mehrheit erfasst durch führende KI-Nationen.',
+            '**2. Militär.** KI ermöglicht autonome Waffensysteme, prädiktive Logistik, Schlachtfeld-Intelligence-Verarbeitung und Cyber-Operationen mit Maschinengeschwindigkeit. USA, China und Russland entwickeln alle KI-gestützte Militärsysteme. Das US DoD\'s Joint Artificial Intelligence Center (JAIC) und Chinas Military-Civil Fusion Strategie priorisieren beide KI für nationale Verteidigung.',
+            '**3. Geheimdienste.** KI verarbeitet Satellitenbilder, fängt Signale ab und analysiert Open-Source-Daten im großen Maßstab, unmöglich für menschliche Analysten. NSA, GCHQ und Chinas MSS nutzen KI alle für Geheimdienstsammlung und Analyse. KI-generierte synthetische Medien (Deepfakes) sind ein aufkommendes Geheimdienstinstrument und Einflussoperation-Tool.',
+            '**4. Infrastruktur.** KI hängt von physischer Infrastruktur ab: Halbleiter-Fabs (TSMC, Samsung, Intel), Datenzentren, unterseeische Kabel und Stromnetze. Nationen, die kritische KI-Infrastruktur kontrollieren — Chip-Fertigung, Cloud-Plattformen, Trainings-Rechenleistung — halten strukturelle Hebelwirkung über diejenigen, die dies nicht tun.',
+            '**5. Globale Governance.** Welcher Regulierungsrahmen zur globalen Standard wird, bestimmt, was KI-Systeme tun können, welche Daten sie nutzen können und welche Organisationen sie bereitstellen können. Der EU AI Act, US NIST-Rahmen und Chinas CAC-Regulierungen stellen drei konkurrierende Governance-Modelle dar — und der Brussels Effect bedeutet, dass das EU-Modell bereits über ihre Grenzen hinweg gilt.',
+          ],
+        },
+
+        threeWayRace: {
+          title: 'Das KI-Wettrüsten: USA, China und die EU',
+          content: [
+            '**Drei unvereinbare Visionen der KI-Governance konkurrieren um globale Übernahme — die USA priorisieren Innovation und Wettbewerbsfähigkeit, China nutzt staatliche Richtung, um strategische KI-Dominanz zu erreichen, und die EU baut einen rechtsbasierten rechtlichen Rahmen, der ihre Standards global durch den Brussels Effect exportiert.** Dieses KI-Wettrüsten ist hauptsächlich zivil: die führenden Labs sind private Unternehmen (OpenAI, Anthropic, Google DeepMind, Baidu, Alibaba), aber die Einsätze — Regulierungskontrolle, Hardware-Supply-Chains und Talente — sind geopolitisch.',
+            'Das Rennen geht nicht nur darum, wer die fähigsten Modelle baut. Es geht darum, welcher Regulierungsrahmen zur globalen Standard wird. Der EU AI Act, indem er auf jedes KI-System gilt, das für EU-Nutzer bereitgestellt wird, hat bereits Brüssel zum effektiven Regulator von OpenAI, Anthropic und Google DeepMind global gemacht. Hardware-Kontrolle ist eine dritte Dimension: Der CHIPS and Science Act (52 Milliarden USD) und Nvidia GPU-Exportkontrollen zielen darauf ab, Chinas Compute-Zugang zu begrenzen. DeepSeeks R1-Freigabe im Januar 2025 — wettbewerbsfähig mit GPT-4o bei einem Bruchteil der Trainings-Kosten — zeigte, dass diese Kontrollen Grenzen haben. Siehe [open-source vs proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) für wie diese Dynamiken Modell-Verfügbarkeit beeinflussen.',
+          ],
+          items: [
+            '**US-Position:** Führt bei Frontier-Modell-Leistung (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro), Chip-Design (Nvidia, AMD) und KI-Investitionen (67 Mrd. USD private Investition 2023 pro OECD). Kein einheitliches bundesweites KI-Gesetz — beschleunigt Bereitstellung, schafft aber Compliance-Fragmentierung.',
+            '**Chinas Position:** Führt bei KI-Patent-Volumen, Gesichtserkennung im großen Maßstab und staatlich geleiteter Infrastruktur-Bereitstellung. Modelle (Qwen 2.5, ERNIE 4.0, DeepSeek R1) sind bei vielen Benchmarks wettbewerbsfähig. Hardware-Abhängigkeit von Nvidia-Architekturen ist die primäre strategische Schwachstelle, die Export-Kontrolle anvisiert.',
+            '**Europas Position:** Führt bei KI-Regulierung — der EU AI Act ist das globale Referenz-Framework — und Open-Weights-Forschung (Mistral aus Frankreich). Bleibt bei Frontier-Modell-Leistung und private Investitionen zurück. Kompensiert durch Regulierungs-Hebelwirkung: Der Brussels Effect zwingt US- und chinesische Anbieter, EU-Standards für globale Produkte zu erfüllen.',
+            '**Die Hardware-Schicht:** Nvidia H100/H200 GPUs dominieren KI-Training. US-Exportkontrollen beschränken Verkäufe nach China. DeepSeek R1 trainiert auf beschränkten H800 GPUs bei berichteten ~6 Mio. USD — eine 94% Kostenreduktion vs GPT-4o Trainings-Schätzungen — zeigt, dass Hardware-Kontrolle chinesische Frontier-KI nicht gestoppt hat.',
+          ],
+        },
+
+        euAiAct: {
+          title: 'Der EU AI Act: Was er tatsächlich verlangt',
+          content: [
+            '**Der EU AI Act klassifiziert KI-Systeme in vier Risiko-Stufen, mit Anforderungen und Geldstrafen, die auf die Höhe des Risikos skaliert werden, das das System für Grundrechte und Sicherheit darstellt.** Das Europäische Parlament verabschiedete den Act im März 2024 mit 523 Stimmen dafür, 46 dagegen und 49 Enthaltungen — der breiteste politische Konsens von jeder großen KI-Gesetzgebung global.',
+            'Der Act gilt für Anbieter, die KI-Systeme auf dem EU-Markt platzieren, Bereitsteller, die KI-Systeme innerhalb der EU nutzen, und Importeure und Vertriebspartner — unabhängig davon, wo sich diese Organisationen befinden. Ein US-Unternehmen, dessen KI-Output in EU-Mitgliedstaaten genutzt wird, muss konform sein.',
+          ],
+          items: [
+            '**Inakzeptables Risiko (verboten):** Soziales Scoring durch öffentliche Behörden; Echtzeit-Biometrische Identifizierung in öffentlichen Räumen (enge Strafverfolgungsausnahmen erlaubt); KI nutzt kognitive Schwachstellen aus; unkontrolliertes Gesichtsbild-Scraping. Diese sind ab August 2024 an verboten.',
+            '**Hohes Risiko:** KI in kritischer Infrastruktur, Bildung, Beschäftigung, wesentlichen Dienstleistungen (Kredit, Leistungen), Strafverfolgung, Grenzschutz und Rechtsverwaltung. Erfordert Konformitätsbewertungen, Transparenzdokumentation, menschliche Überwachung und Registrierung in der EU-Datenbank.',
+            '**Begrenzte Risiko:** Chatbots und KI-generierte Inhalte. Erfordert Offenlegung — Nutzer müssen wissen, dass sie mit KI interagieren.',
+            '**Minimalrisiko:** Spam-Filter, KI in Videospielen, Empfehlungssysteme ohne signifikanten Einfluss. Keine spezifischen Verpflichtungen über bestehendes Recht hinaus.',
+            '**General Purpose AI (GPAI):** Modelle wie GPT-4o, Claude und Gemini müssen Trainingsdaten-Zusammenfassungen veröffentlichen, EU-Urheberrechtsgesetz befolgen und schwerwiegende Vorfälle melden. Modelle mit Systemrisiko (trainiert mit >10^25 FLOPS) sehen zusätzliche Adversarial-Testing-Anforderungen. GPAI-Regeln galten ab August 2025.',
+            '**Durchsetzung:** EU AI Office (innerhalb der Europäischen Kommission) überwacht GPAI-Modelle. Nationale Marktüberwachungsbehörden setzen Hochrisiko-KI-Regeln durch. Geldstrafen: bis zu 35 Mio. EUR oder 7% globaler Umsatz für verbotene Praktiken; 15 Mio. EUR oder 3% für Hochrisiko-Verstöße.',
+            '**Zeitplan:** Verbotene Praktiken: August 2024. GPAI-Verpflichtungen: August 2025. Hochrisiko-KI-Systeme: August 2026. Hochrisiko-KI in reglementierten Produkten: August 2027.',
+          ],
+        },
+
+        euMemberStates: {
+          title: 'EU-Mitgliedstaaten: nationale KI-Strategien',
+          content: [
+            '**Jeder EU-Mitgliedstaat hat eine nationale KI-Strategie angenommen, aber Investitionsniveaus, Fokus-Bereiche und Umsetzungstempo variieren erheblich.** Frankreich und Deutschland führen bei Finanzierung; die nordischen Staaten führen bei Governance-Rahmen; zentrale und östliche europäische Staaten integrieren zunehmend KI in Verteidigung und öffentliche Verwaltung.',
+          ],
+          items: [
+            '**Deutschland:** Bundesweite KI-Strategie (Nationale KI-Strategie), aktualisiert 2023. 5 Mrd. EUR in KI-Forschung, Infrastruktur und Talente 2019–2025 über Bundesprogramme investiert. Sechs KI-Kompetenzentren an großen Universitäten. Bundestag-Debatten zur KI-Haftung laufen. Fraunhofer-Gesellschaft und DFKI (Deutsches Forschungszentrum für Künstliche Intelligenz) sind Schlüssel-Forschungsinstitutionen.',
+            '**Frankreich:** 2 Mrd. EUR öffentliche KI-Investition von Präsident Macron angekündigt (2024). France AI (Regierungskoordinationsorgan) verwaltet nationale Strategie. Paris veranstaltete den AI Action Summit im Februar 2025 — der erste G7-Ebene KI-Governance-Gipfel unter französischer EU-Präsidentschaft. CNRS und INRIA führen akademische KI-Forschung. Frankreich unterstützt Open-Weights-KI als strategische Alternative zu US-API-Abhängigkeit.',
+            '**Niederlande:** Nationale KI-Strategie 2024-Update, KI-Regulierungs-Sandbox betrieben von ACM (Behörde für Verbraucher und Märkte). Amsterdam beherbergt SURF (nationales Forschungsnetzwerk) KI-Cluster. Niederländische Datenschutzbehörde (AP) gab GDPR-Durchsetzungsleitlinien speziell für KI-Systeme aus.',
+            '**Polen:** Nationales KI-Entwicklungsprogramm konzentriert sich auf KI für Verteidigung, Cybersicherheit und öffentliche Verwaltung. Polen gehört zu den höchsten pro-Kopf-Ausgebern für Verteidigungstechnologie in der NATO und integriert KI in Militärbeschaffung. Warschau beherbergt ein wachsendes KI-Startup-Ökosystem, teilweise angetrieben durch ukrainische Tech-Talentrelokation post-2022.',
+            '**Spanien:** Spaniens nationale KI-Strategie (ENIA) teilt 600 Millionen EUR 2021–2025 zu. Real Instituto Elcano-Forschung zu KI und Geopolitik ist international zitiert. Spanien etablierte die AESIA (Spanische Agentur für die Überwachung von Künstlicher Intelligenz) — der erste nationale KI-Regulator in der EU, etabliert 2023.',
+            '**Schweden:** Schwedische KI-Kommission veröffentlichte ihren Bericht 2024 mit 60+ Empfehlungen zu Bildung, öffentlichem Sektor-Einsatz und Innovation. Vinnova (Schwedens Innovationsagentur) finanziert KI-Forschung. Schweden ist die Heimat von Spotifys KI-Empfehlungssystemen und H&Ms KI-gestütztem Bestandsverwaltung — häufig zitiert als Private-Sector-KI-Adopter Fallstudien.',
+            '**Italien:** Italien hielt 2024 die G7-Präsidentschaft, die den Hiroshima AI Process Code of Conduct produzierte — 11 Leitprinzipien für fortgeschrittene KI-Entwickler, angenommen von G7-Nationen. Italiens Garante (Datenschutzbehörde) blockierte ChatGPT vorübergehend im März 2023 über GDPR-Bedenken — später gelöst nach OpenAI die Transparenzmaßnahmen umsetzte. Dies war die erste nationale ChatGPT-Restriktion in der EU.',
+          ],
+        },
+
+        franceMistral: {
+          title: 'Frankreich & Mistral: Europäische KI-Unabhängigkeit aufbauen',
+          content: [
+            '**Frankreich baut einen strategischen Gegenpoint zu US-KI-Dominanz durch öffentliche Investition und Mistral AI — positioniert Open-Weights-Modelle als Europas Weg zu KI-Souveränität.** Mistral stellt die lebensfähigste Alternative der EU zu GPT-4o und Claude dar, und Frankreichs 2 Mrd. EUR KI-Investition ist explizit entworfen, um Unternehmen wie Mistral zu finanzieren und die Abhängigkeit von OpenAI, Google und Anthropic zu reduzieren.',
+            '**Mistral AI (gegründet 2023):** Gegründet von Arthur Mensch, Guilaume Blanc und Tim Caron — alle ehemalige Meta-Mitarbeiter. Mistral gab Mistral 7B (Open-Weights) im September 2023 frei, gefolgt von Mistral Large 2 (wettbewerbsfähig mit GPT-4o bei vielen Aufgaben). Mistral Large 2 bewertet 81,2% auf MMLU vs GPT-4o\'s 88,7%, passt aber zu proprietären Modellen bei Klassifizierung, Zusammenfassung und Extraktionsaufgaben. 123K Token-Kontextfenster. Lizenziert unter Mistral Community License (erlaubt kommerzielle Nutzung; Ableitungs-Namensrestriktionen ähnlich LLaMA).',
+            '**Warum Frankreich Open-Weights wählte:** Frankreichs Position ist, dass proprietäre APIs Anbieter-Lock-in, Datenresidenz-Risiken und langfristige Abhängigkeit von US-Unternehmen schaffen. Open-Weights-Modelle können auf europäischer Infrastruktur bereitgestellt werden, Daten innerhalb der EU-Jurisdiktionen halten und GDPR/AI Act-Reibung mit US-Cloud-Anbietern vermeiden. Dies aligniert sich mit dem Brussels Effect — durch die Sicherstellung von Mistrals Konformität mit dem EU AI Act stärkt Frankreich Europas Regulierungs-Hebelwirkung global.',
+            '**Regierungsunterstützung:** Französische Regierungsunterstützung via La Caisse des Dépôts et Placements (staatlicher Investitionsfonds) und direkte Subventionen. Mistral erhielt 385 Millionen EUR Series B Finanzierung (Februar 2024) mit Unterstützung von französischen strategischen Investoren. Positioniert als "europäischer Champion" in KI — ähnlich, wie Airbus als europäischer Luft- und Raumfahrt-Gegenpoint zu Boeing gebaut wurde.',
+          ],
+        },
+
+        nonEuEurope: {
+          title: 'Nicht-EU-Europa: UK, Schweiz, Norwegen, Ukraine',
+          content: [
+            '**Vier große nicht-EU-europäische Staaten haben unterschiedliche KI-Governance-Pfade gewählt, keine von denen vollständig mit dem EU AI Act aligniert — schaffend eine fragmentierte europäische Regulierungslandschaft.** Für Organisationen, die über europäische Jurisdiktionen funktionieren, bedeutet das, dass Compliance-Stacks zwischen EU-Mitgliedstaaten und Nachbarländern unterschiedlich sind.',
+          ],
+          items: [
+            '**Vereinigtes Königreich:** Post-Brexit wählte UK einen innovationsfreundlichen, sektorgeführten Ansatz ohne AI-spezifische Gesetzgebung ab 2026. Die bestehenden Regulatoren (FCA, ICO, Ofcom, CMA) wenden ihre Sektormandate auf KI an. Das UK AI Safety Institute (AISI), etabliert November 2023 nach dem Bletchley Park AI Safety Summit, führt Frontier-Modell-Evaluierungen durch und veröffentlicht Sicherheitsberichte. Die UK-Regierung verpflichtete sich zu £900 Millionen zu KI-Compute-Infrastruktur. UK-Organisationen unterliegen nicht dem EU AI Act, aber viele konform, um EU-Marktzugang zu halten.',
+            '**Schweiz:** Schweiz erhält KI-Neutralität — kein nationales KI-Gesetz, keine Pläne für eines. Der Bundesrat verlässt sich auf bestehende Gesetzgebung (Datenschutz, Produkthaftung, Sektorregulation). Schweiz beherbergt den UN AI for Good Summit in Genf jährlich, CERNs AI-für-Wissenschaft-Programme und große europäische Forschungsinstitutionen (ETH Zürich, EPFL). Schweizer Neutralität erstreckt sich auf KI-Governance: das Land nimmt an OECD AI-Prinzipien teil, aligniert aber nicht mit weder EUs Regulierungs-Ansatz noch US-Wettbewerbs-Rahmen.',
+            '**Norwegen:** Norwegen nimmt am Europäischen Wirtschaftsraum (EWR) teil, bedeutend, dass der EU AI Act gilt, wenn er in das EWR-Abkommen integriert wird — ein laufender Prozess. Norwegens Government Pension Fund Global (der weltgrößte Sovereign Wealth Fund, ~1,8 Billionen USD) veröffentlichte KI-Investitionskriterien, verlangend von Portfoliounternehmen, KI-Governance-Richtlinien offenzulegen. Equinor (Staats-Energieunternehmen) hat KI für Ölfeldoptimierung bereitgestellt. Norwegische Datenschutzbehörde (Datatilsynet) war aktiv bei KI-bezogener GDPR-Durchsetzung.',
+            '**Ukraine:** Ukraine ist der aktivste Bereitsteller von KI in einem Live-Konflikt-Kontext. Das ukrainische Militär nutzt KI für Drohnen-Targeting, Signals-Intelligence, Satellitenbildanalyse und Logistik-Optimierung. Das Ministerium für Digitale Transformation (Мінцифра) hat KI-Kooperationsabkommen mit EU und USA unterzeichnet. Ukraine beantragte EU-Mitgliedschaft 2022 und aligniert seine digitale Gesetzgebung — einschließlich KI-Governance — mit EU-Standards als Teil von Beitrittserfordernissen. Ukrainische KI-Startups (einschließlich diejenigen hinter Grammarly und GitLab) haben Teams zu EU-Ländern verlegt, während technische Operationen aufrecht erhielten.',
+          ],
+        },
+
+        usStrategy: {
+          title: 'US-Strategie: Executive Orders, CHIPS Act, NIST',
+          content: [
+            '**Die Vereinigten Staaten haben kein föderales KI-Gesetz, und die Trump-Verwaltungs 2025-Aufhebung von Bidens KI-Sicherheits-Executive Order hat den Hauptrahmen für föderale Sicherheit rückgängig gemacht — Verschiebung der US-KI-Politik vollständig zur Wettbewerbsfähigkeit.** Dies schafft eine Regulierungs-Lücke zwischen USA und EU, die Cross-Atlantic-KI-Beschaffung und Datenteilung beeinflusst.',
+          ],
+          items: [
+            '**Biden Executive Order zur KI-Sicherheit (Oktober 2023):** Verlangte von Frontier-KI-Entwicklern, Sicherheits-Testergebnisse mit der US-Regierung zu teilen, etablierte NIST-KI-Sicherheitsstandards, adressierte KI in kritischer Infrastruktur und nationaler Sicherheit. Aufgehoben durch Präsident Trump im Januar 2025.',
+            '**Trump KI Action Plan (2025):** Ersetzt Bidens EO mit einem Fokus auf das Entfernen regulatorischer Barrieren für KI-Entwicklung, Aufrechterhaltung der US-Führerschaft über China und Förderung von KI-Exporten zu Verbündeten. Keine zwingenden Sicherheitsberichterstattungs-Anforderungen für KI-Entwickler.',
+            '**CHIPS and Science Act (52 Milliarden USD):** Unterzeichnet August 2022. Finanziert inländische Halbleiterfertigung, F&E und Workforce-Entwicklung. Reduziert US-Abhängigkeit von Taiwans TSMC für fortgeschrittene Chips. Intel, TSMC und Samsung bauen US-Fabs mit CHIPS Act Finanzierung.',
+            '**Exportkontrollen auf KI-Hardware:** Die Biden-Verwaltung beschränkte Exporte von fortgeschrittenen Nvidia A100 und H100 GPUs nach China und anderen Ländern von Bedenken. Die Restriktionen wurden im Oktober 2023 und Oktober 2024 erweitert. Nvidia schuf China-spezifische Chips (A800, H800), die innerhalb von Export-Grenzen fielen — diese wurden später auch eingeschränkt.',
+            '**NIST KI Risk Management Framework (AI RMF 1.0):** Veröffentlicht Januar 2023. Ein freiwilliger Rahmen — nicht gesetzlich bindend — abdeckend KI-Vertrauenswürdigkeit über sieben Dimensionen: valid/reliabel, sicher, sicher/belastbar, erklärbar/interpretierbar, privatsphärenverbessert, fair mit verwalteter Voreingenommenheit, verantwortlich/transparent. Weit angenommen von US-Bundesbehörden und großen Unternehmungen als Compliance-Grundlage.',
+            '**NSF National AI Research Institutes:** 200 Mio. USD+ investiert über 25 KI-Forschungsinstitute an US-Universitäten. Konzentriert sich auf fundamentale KI-Forschung, Sicherheit, Ethik und Domäne-Anwendungen (Gesundheitswesen, Landwirtschaft, Klima).',
+          ],
+        },
+
+        chinaStrategy: {
+          title: 'Chinas KI-Strategie: Made in China 2025, CAC-Regulierungen, DeepSeek',
+          content: [
+            '**Chinas KI-Strategie kombiniert staatlich geleitete Industriepolitik, restriktive inländische Inhalts-Regulierung und aggressive internationale KI-Diplomatie — eine Kombination, die wettbewerbsfähige Frontier-Modelle trotz US-Hardware-Exportkontrollen produziert hat.** Chinas Ansatz behandelt KI primär als eine strategische Leistung für wirtschaftliche Entwicklung, nationale Sicherheit und soziale Governance.',
+          ],
+          items: [
+            '**Made in China 2025 und New Generation AI Development Plan (2017):** Chinas 2017 KI-Plan zielt auf globale KI-Führerschaft bis 2030 über Forschung, Talent, Produktentwicklung und Regulierung. Es teilte 15 Milliarden USD staatliche Finanzierung zu und setzte Benchmarks für KI-Patent-Output, Forschungs-Zitate und Industrie-Umsatz. KI wird bezeichnet als eine Kern-Strategische Technologie neben Halbleitern und Quantencomputing.',
+            '**Cyberspace Administration of China (CAC) Algorithmus-Regulierungen (März 2022):** Verlangte von allen Algorithmen-basierte Empfehlungs-Systemen, die chinesische Nutzer bedienen, sich bei der CAC zu registrieren, offenzulegen wie Algorithmen funktionieren und Nutzern zu erlauben, aus personalisierten Empfehlungen auszusteigen. Erweitert zu generativer KI im Juli 2023 — alle generativen KI-Services müssen registrieren, eine Sicherheitsbewertung bestehen und Outputs sicherstellen, um sich mit "sozialistischen Kernwerten" zu alignieren.',
+            '**DeepSeek R1 (Januar 2025):** Freigegeben von DeepSeek (ein chinesisches KI-Lab von High-Flyer-Hedgefonds unterstützt), R1 passte oder übertraf GPT-4o bei mehreren Benchmarks, einschließlich AIME 2024 (79,8% vs GPT-4o\'s 74,4%), MATH-500 (97,3%) und HumanEval-Coding-Aufgaben. Trainiert auf Nvidia H800 GPUs — die China-spezifische Variante innerhalb von Exportkontroll-Grenzen. Die Freigabe triggerte einen signifikanten Drop in Nvidias Aktienkurs und beschleunigte US-Richtlinien-Debatten über die Effektivität von Hardware-Exportkontrollen.',
+            '**Huawei Ascend Chips:** Huaweis Ascend 910B und 910C Chips sind positioniert als inländische Alternativen zu Nvidia GPUs für KI-Training. Performance bleibt unter Nvidia H100 bei den meisten Benchmarks, aber ausreichend für das Training von Medium-Scale-Modellen. Große chinesische Tech-Unternehmen (Baidu, Alibaba, ByteDance) haben begonnen, einige Workloads zu Ascend zu migrieren, um Nvidia-Abhängigkeit zu reduzieren.',
+            '**Belt and Road KI-Diplomatie:** China exportiert KI-Überwachungs-Infrastruktur (Gesichtserkennung, Smart-City-Systeme) zu entwickelnden Nationen durch BRI-Partnerschaften. Anbieter enthalten Huawei, Alibaba Cloud und ZTE. Dies exportiert chinesische KI-Governance-Normen — einschließlich algorithmischer sozialer Verwaltung — zu Partner-Ländern, eine parallele KI-Standards-Ökosystem außerhalb des OECD/EU-Rahmens schaffend.',
+            '**Führende chinesische KI-Modelle:** Alibaba Qwen 2.5, Baidu ERNIE 4.0, ByteDance Doubao, Zhipu AI GLM-4. Diese sind wettbewerbsfähig bei chinesischen Sprach-Aufgaben und zunehmend bei mehrsprachigen Benchmarks. [Open-source vs proprietary LLM Tradeoffs](/prompt-engineering/open-source-vs-proprietary-llms) beeinflussen chinesische Modell-Annahme — Qwens Open-Weights-Freigabe hat internationale Entwickler angezogen.',
+          ],
+        },
+
+        chinaModelsAccessibility: {
+          title: 'China für Prompt Engineers: Welche Modelle sind verfügbar',
+          content: [
+            '**Wenn Ihr Produkt Nutzer in China bedient, funktionieren Sie in einem eigenständigen KI-Ökosystem mit unterschiedlichen verfügbaren Modellen, zwingenden Inhaltsfiltern und einer Pre-Launch-Genehmigungsanforderung ohne Äquivalent in der EU oder USA.** Ausländische Modelle — GPT-4o, Claude, Gemini — sind vom Festland China ohne VPN unzugänglich. Ihre Optionen sind auf domestic registrierte Alternativen begrenzt.',
+            '**Verfügbare Modelle in China:** Alibaba Qwen 2.5 (Open-Weights, 7B–72B, 128K Kontext, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via Qianfan Plattform), ByteDance Doubao (API via Volcano Engine), Zhipu AI GLM-4 (API via Zhipu Plattform) und DeepSeek R1/V3 (API via DeepSeek Plattform). Qwen 2.5 72B ist die stärkste Open-Weights-Option — Sie können sie außerhalb Chinas selbst-hosten, während Sie sie für chinesischsprachige Aufgaben nutzen. Sie bewertet sich innerhalb von 5 Prozentpunkten von GPT-4o bei MMLU und outperformt bei chinesisch-spezifischen Benchmarks (C-Eval).',
+          ],
+        },
+
+        chinaContentFilters: {
+          title: 'Content-Filter & CAC-Anforderungen: Kritische Einschränkungen',
+          content: [
+            '**Alle generativen KI-Services in China müssen die CAC Generative AI Measures (2023) befolgen.** Content-Restriktionen werden auf Modell- und API-Ebene durchgesetzt, nicht nur durch Gesetz. Services müssen Filter implementieren, die Output blockieren auf: KP-Führungs-Kritik, Taiwan/Tibet/Xinjiang-Unabhängigkeitsdiskussionen, politisch sensible historische Ereignisse (4. Juni 1989), Content, der "sozialistischen Kernwerte" untergräbt, und Material, das die CAC als Bedrohung der Staatssicherheit einstuft. Diese Filter sind in die API eingebaut — Sie können sie nicht konfigurieren.',
+            '**Kritisches Implementierungsdetail:** Requests, die Filter triggern, geben HTTP 200 zurück (nicht HTTP 4xx) mit einem `is_safe: 0` Flag im Response-Body — nicht ein traditioneller Fehler. Dies erfordert explizite Anwendungsebene-Behandlung in Ihrem Code. Wenn Sie ERNIE 4.0 oder DeepSeek mit einem gefilterten Prompt aufrufen, gibt die API einen validen HTTP-Response mit desinfizierten Outputs oder einem Error-Flag zurück, nicht einen 4xx-Status.',
+            '**Pre-Launch CAC Security Assessment ist zwingend.** Bevor ein Consumer-facing generatives KI-Service in China startet, muss der Provider eine CAC Assessment abschließen (45–90 Tage). Assessment verlangt: Trainingsdaten-Quellen, Content-Filterungs-Dokumentation, Sample-Output-Test und Selbst-Zertifizierung der Konformität. Ausländische Unternehmen können nicht direkt anwenden — Sie benötigen eine Mainland China Entität oder lizenzierten Partner (Alibaba Cloud, Tencent Cloud) als registrierten Provider. Ihre CAC Registration deckt die Modellebene; Ihre Anwendungsebene-Outputs bleiben Ihre Verantwortung.',
+          ],
+        },
+
+        chinaDataResidencyAPIs: {
+          title: 'PIPL Datenspeicherort, praktische APIs und Einsatz-Beispiele',
+          content: [
+            '**Das Personal Information Protection Law (PIPL, 2021) ist Ihre bindende Einschränkung.** PIPL verlangt, dass personenbezogene Daten, die von chinesischen Nutzern gesammelt werden, entweder in China bleiben oder eine Regierungs-Sicherheitsbewertung vor Cross-Border-Übertrag bestehen. Wenn Ihre KI-Anwendung personenbezogene Daten chinesischer Nutzer verarbeitet — Namen, IDs, Ort, Verhaltendaten — und es an eine Modell-API außerhalb Chinas sendet, verletzen Sie PIPL. Die praktische Lösung: routen Sie China-Nutzer-Traffic durch Mainland-gehostete Inferenz (Alibaba Cloud, Tencent Cloud, Huawei Cloud), so dass personenbezogene Daten nie chinesische Jurisdiktion verlassen.',
+            '**Baidu ERNIE 4.0 API (praktische Details):** Zugänglich via Qianfan (千帆) Plattform. Preisgestaltung: ¥0,12 per 1K Tokens (Input/Output) für ERNIE 4.0 Turbo ab 2026. Akzeptiert System-Prompts, unterstützt Funktionsaufrufe, gibt JSON-strukturierte Responses zurück. Rate-Limits: 60 QPM Standard-Tier. Content-Filter-Fehler geben HTTP 200 mit `is_safe: 0` Flag zurück — erfordert explizite Anwendungsebene-Fehlerbehandlung.',
+            '**Qwen 2.5 als Hybrid-Lösung:** Für Teams, die chinesische und internationale Nutzer bedienen, ist Qwen 2.5 (Open-Weights, Apache 2.0) die praktischste Brücke. Deployen Sie Qwen 2.5 72B auf Ihrer Infrastruktur außerhalb Chinas für internationale Nutzer (keine CAC-Filter), verwenden Sie Alibaba Cloud API für China-Segment unter Alibabas CAC-Registrierung. 128K Kontext-Fenster, wettbewerbsfähig bei mehrsprachigen Aufgaben.',
+          ],
+          items: [
+            '**Prompt-Beispiel (sicher):** "Was sind die Schlüsselbestimmungen von Chinas Generative AI Measures (2023) und welche Dokumentation muss ein Unternehmen vorbereiten, bevor es einen generativen KI-Service in China startet?" — Funktioniert, weil es faktische Regulierungs-Information verlangt, ohne verbotene Bereiche zu berühren. DeepSeek R1 behandelt Regulierungs-Analyse zuverlässig.',
+            '**Prompt-Beispiel (gefiltert):** "Vergleichen Sie die politischen Systeme von Taiwan und Festland-China" triggert `is_safe: 0` über CAC-APIs. Umformulieren: "Vergleichen Sie BIP pro Kopf und Handelsvolumen von Taiwan und Festland-China" — verschiebt Fokus zu Wirtschaft.',
+            '**Prompt-Beispiel (Qwen 2.5 Vorteil):** "Fassen Sie dieses chinesische Regulierungs-Dokument zusammen und identifizieren Sie drei Compliance-Verpflichtungen für ein ausländisches KI-Unternehmen." Qwen 2.5 72B (selbst-gehostet außerhalb Chinas) behandelt chinesischsprachige rechtliche Dokumente ohne CAC-Filter — beste Option für Cross-Border-Compliance-Workflows.',
+          ],
+        },
+
+        regulatoryComparison: {
+          title: 'Globale KI-Regulierung: EU vs USA vs China verglichen',
+          content: [
+            '**Die drei großen KI-Regulierungs-Rahmen unterscheiden sich grundlegend in Philosophie, rechtlicher Kraft und internationalem Reichweite.** Das Verstehen dieser Unterschiede ist essentiell für Organisationen, die über Jurisdiktionen funktionieren oder KI-Tools von Anbietern in verschiedenen Regulierungs-Blöcken nutzen.',
+          ],
+          tableFormat: true,
+          columns: ['Dimension', 'Europäische Union', 'Vereinigte Staaten', 'China'],
+          rows: [
+            { 'Dimension': 'Primär-Ansatz', 'Europäische Union': 'Rechtsbasierter rechtlicher Rahmen — KI Act klassifiziert Systeme nach Risiko zu Grundrechten', 'Vereinigte Staaten': 'Sektoral, Innovationsorientiert — bestehende Regulatoren wenden Domänenmandates auf KI an; kein bundesweites KI-Gesetz', 'China': 'Staatlich geleitete, Kontroll-Priorität — KI bedient nationale Entwicklung und soziale Governance-Ziele' },
+            { 'Dimension': 'Schlüssel-Gesetzgebung', 'Europäische Union': 'EU AI Act (2024) — zwingend Konformität; GDPR gilt für KI-Trainingsdaten und Outputs', 'Vereinigte Staaten': 'Kein bundesweites KI-Gesetz. NIST AI RMF (freiwillig). EO 14110 (Biden, aufgehoben 2025); AI Action Plan (Trump 2025)', 'China': 'Algorithm Recommendation Regulations (2022); Generative AI Measures (2023); beide durchgesetzt von CAC' },
+            { 'Dimension': 'Risiko-Rahmen', 'Europäische Union': '4 Stufen: Unakzeptabel (verboten), Hoch (Konformitätsbewertung erforderlich), Begrenzt (Offenlegung), Minimal (keine spezifischen Verpflichtungen)', 'Vereinigte Staaten': 'Freiwilliges NIST AI RMF — 7 Vertrauenswürdigkeits-Dimensionen; keine zwingende Stufing', 'China': 'Sicherheitsbewertung erforderlich für generative KI-Services vor Einsatz; Content muss sich mit "sozialistischen Kernwerten" alignieren' },
+            { 'Dimension': 'Max Geldstrafe', 'Europäische Union': '35 Mio. EUR oder 7% globalem jährlichen Umsatz für verbotene Praktiken; 15 Mio. EUR oder 3% für Hochrisiko-Verstöße', 'Vereinigte Staaten': 'Keine bundesweite KI-spezifische Geldstrafe. FTC kann unfaire/täuschende Praktik-Ansprüche verfolgen; Bundesstaats-Strafen variieren', 'China': 'Bis zu ¥100.000 pro Verstoß unter Algorithmus-Regeln; Service-Suspendierung für nicht-konforme generative KI' },
+            { 'Dimension': 'Datenschutz', 'Europäische Union': 'GDPR + KI Act — KI-Training auf personenbezogenen Daten verlangt Rechtsgrundlage; Outputs, die personenbezogene Daten berühren, verlangen GDPR-Konformität', 'Vereinigte Staaten': 'Sektoral: HIPAA (Gesundheit), CCPA/CPRA (Kalifornien), FERPA (Bildung); kein bundesweites GDPR-Äquivalent', 'China': 'PIPL (Personal Information Protection Law, 2021) gilt; Staatssicherheitsbehörden behalten Daten-Zugangsrechte' },
+            { 'Dimension': 'Verbotene Anwendungen', 'Europäische Union': 'Soziales Scoring durch öffentliche Behörden; Echtzeit-öffentliche Biometrische Überwachung; KI nutzt kognitive Schwachstellen aus; unkontrolliertes Gesichts-Bildscraperming', 'Vereinigte Staaten': 'Keine bundesweit verbotene KI-Anwendungen; einige Bundesstaats-Bans (z.B. Illinois BIPA zu Biometrik)', 'China': 'Content untergräbt KP-Führung, Staats-Autorität oder "sozialistische Kernwerte"; Deepfakes verlangen Offenlegung' },
+            { 'Dimension': 'Durchsetzungs-Körper', 'Europäische Union': 'EU AI Office (GPAI-Modelle) + nationale Marktüberwachungsbehörden (Hochrisiko-KI) + Datenschutzbehörden (GDPR-Schnittmenge)', 'Vereinigte Staaten': 'FTC (Verbraucherschutz), FDA (medizinische KI), CFPB (Finanz-KI), EEOC (Beschäftigungs-KI), NIST (Standards)', 'China': 'Cyberspace Administration of China (CAC) — Primär-Durchsetzer; MIIT und SAMR für branchenspezifische KI' },
+            { 'Dimension': 'Internationales Reichweite', 'Europäische Union': 'Brussels Effect — gilt für jede KI, die auf EU-Markt platziert oder deren Output in EU genutzt wird; extraterritorial nach Design', 'Vereinigte Staaten': 'Exportkontrollen auf KI-Hardware beeinflussen globale Supply-Chains; keine extraterritoriale Content-Regulierung', 'China': 'BRI KI-Exporte verbreiten chinesische KI-Governance-Normen; Great Firewall begrenzt Auslands-KI-Service-Zugang domestic' },
+          ],
+        },
+
+        globalPowerCompetition: {
+          title: 'KI und globaler Macht-Wettbewerb',
+          content: [
+            '**KI ist jetzt eine primäre Dimension des Großmacht-Wettbewerbs — formt Bündnis-Strukturen, Technologie-Export-Politik und die Regeln für internationalen Handel in KI-Systemen.** Der Wettbewerb ist nicht einfach bilateral (USA vs China); er beinhaltet ein drittes Pole in der EU, ein umstrittenes Mittelfeld von nicht-ausrichteten Nationen und eine Serie von multilateralen Foren (G7, G20, UN, OECD) produzierend konkurrierende Governance-Rahmen.',
+            'Für Organisationen, die international funktionieren, schafft globaler Macht-Wettbewerb in KI vier praktische Risiken: Export-Kontroll-Konformität (welche KI-Hardware und Software zu welchen Ländern transferiert werden kann), Beschaffungs-Restriktionen (welche KI-Anbieter für Regierungs-Verträge genutzt werden kann), Datensouveränitäts-Anforderungen (wo KI-Inferenz auf sensible Daten auftreten kann) und Regulierungs-Fragmentierung (Aufrechterhaltung der Konformität mit EU, USA und chinesischen Regeln gleichzeitig, wenn sie konkurrieren).',
+          ],
+          items: [
+            '**Bündnis-basierte KI-Governance:** Die USA haben KI-Exportkontrollen mit verbündeten Nationen koordiniert, einschließlich der Niederlande (ASML Lithographie-Kontrollen), Japan (fortgeschrittene Chip-Export-Restriktionen) und UK (AI Safety Institute Zusammenarbeit). Dies schafft ein informelles "KI-Bündnis" mit geteilten Technologie-Zugangsregeln.',
+            '**Nicht-ausrichtete Nationen:** Indien, Brasilien, UAE und Saudi-Arabien investieren in inländische KI-Leistung, um Abhängigkeit von entweder US oder chinesischer KI-Infrastruktur zu vermeiden. Indiens BharatGPT Initiative und UAE\'s Falcon Modell (Technology Innovation Institut) sind Beispiele deliberierter KI-Souveränität Strategien.',
+            '**Multilaterale Governance:** Der G7 Hiroshima KI-Prozess (2023), der UN AI Advisory Body Report (2024) und die OECD AI Principles (aktualisiert 2024) stellen parallele internationale Governance-Tracks dar — alle freiwillig, alle konkurrierend mit der EUs rechtlich bindend Ansatz.',
+            '**Internationale Relations-Risiko:** Organisationen, die KI-Tools von Anbietern in geopolitischen Gegner-Nationen nutzen, sehen sekundäre Risiken: Reputations-Exposition, zukünftige Beschaffungs-Disqualifizierung und potentielle Regulierungs-Haftung, wenn die Provider\'s Regierungs-Zugangsbestimmungen lokal Datenschutzgesetz konfligieren.',
+          ],
+        },
+
+        organizationsImplications: {
+          title: 'KI Geopolitische Risiken: Was das für Organisationen bedeutet',
+          content: [
+            '**Für Organisationen, die KI deployen, transliert geopolitischer Wettbewerb sich in vier konkrete operative Entscheidungen: welche KI-Tools zulässig sind, wo Daten gespeichert werden können, welche Compliance-Dokumentation erforderlich ist und wie schnell sich Regulierungen ändern.** Diese Entscheidungen unterscheiden sich signifikant abhängig davon, ob die Organisation in der EU ansässig ist, in EU-Märkten funktioniert oder US- oder chinesische KI-Anbieter nutzt.',
+            'PromptQuorum unterstützt compliance-bewusste Modell-Auswahl — dispatch Prompts über EU-konforme Modelle (Mistral, lokal Ollama) und US Frontier-Modelle gleichzeitig, erlaubend, dass Sie EU AI Act konforme Optionen gegen proprietäre Alternativen ohne separate Infrastruktur Benchmark.',
+          ],
+          items: [
+            '**EU-basierte Organisationen:** Müssen den EU AI Act direkt befolgen. Hochrisiko-KI-Systeme (HR, Kredit, Gesundheitswesen, öffentliche Services) verlangen Konformitätsbewertungen, Menschliche Überwachungs-Dokumentation und Registrierung in der EU AI-Datenbank vor August 2026. Alle KI, die personenbezogene Daten behandelt, muss GDPR befolgen — einschließlich KI-Trainings-Pipelines und Output-Verarbeitung.',
+            '**Nicht-EU-Organisationen, die EU-Nutzer bedienen:** Unterliegen dem Brussels Effect — der EU AI Act gilt für Ihre KI-Outputs, wenn sie EU-Nutzer erreichen. GPAI-Modelle, die in EU-bezogenen Produkten genutzt werden, müssen Transparenzverpflichtungen befolgen (ab August 2025). Nicht-Konformität trägt die gleichen Geldstrafen wie EU-ansässige Violators.',
+            '**US KI-Tools in EU-Einsätzen:** GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro sind alle als GPAI-Modelle klassifiziert. OpenAI, Anthropic und Google veröffentlichten EU AI Act GPAI-Konformitäts-Dokumentation. Organisationen, die diese Tools in Hochrisiko-KI-Systemen (als Bereitsteller) nutzen, bleiben selbst verantwortlich für ihre eigenen Konformitätsbewertungen — der Provider\'s GPAI-Konformität deckt nicht Ihren Einsatz.',
+            '**Chinesische KI-Tools:** DeepSeek R1 und andere chinesische Modelle sind international verfügbar, tragen aber zusätzliche Beschaffungs-Risiko für EU und US-Organisationen — Datenspeicherort ist unklar, der Provider unterliegt CAC-Content-Regulierungen und die Cyberspace Administration of China kann Daten-Offenlegung zwingen. Regierungs- und kritische Infrastruktur-Organisationen in EU und NATO-Mitgliedstaaten schränken oder verbieten chinesische KI-Tool-Nutzung.',
+            '**Datenspeicherort:** EU GDPR schränkt personenbezogenen Daten-Transfer zu Ländern ohne "Angemessenheit"-Entscheidungen oder angemessene Sicherheitsvorkehrungen ein. KI-Inferenz auf personenbezogenen Daten, die US-Provider nutzen, verlangt Standard Contractual Clauses (SCCs) oder verlässt sich auf das EU-US Data Privacy Framework (2023). Transfer nach China hat keine Angemessenheits-Entscheidung — contractuelle Sicherheitsvorkehrungen müssen vorhanden sein und sind schwer durchzusetzen.',
+            '**Beschaffungs-Entscheidungen:** US-Bundesbehörden sind verboten, KI von designierten chinesischen Entitäten zu nutzen. Mehrere EU-Mitgliedstaaten (Deutschland, Frankreich, Niederlande) gaben Richtlinien aus, die chinesische KI-Tools in Regierungs-Beschaffung einschränken. Für Private-Sector-Organisationen sollte Beschaffungs-Politik die Jurisdiktion der KI-Provider\'s Trainingsdaten, Content-Moderations-Praktiken und Regierungs-Zugangs-Bestimmungen adressieren.',
+            '**Überwachung regulatorische Veränderung:** Das Tempo der KI-Regulierung ist hoch. Die Trump Verwaltungs 2025 Aufhebung von Bidens EO, der EU AI Act\'s rollende Durchsetzungs-Zeitlinie und Chinas laufende CAC-Regel-Updates bedeuten, dass Konformitätsstatus sich innerhalb von Monaten ändern kann. Organisationen sollten einen KI-Governance-Eigentümer designieren und zum EU AI Office Newsletter und OECD AI Policy Observatory Updates abonnieren.',
+          ],
+        },
+
+        qaWhatIsAIGeopolitics: {
+          title: 'Was ist KI-Geopolitik?',
+          content: [
+            'KI-Geopolitik ist das Studium, wie künstliche Intelligenz Macht-Relationen zwischen Staaten global beeinflusst — einschließlich wirtschaftlichem Wettbewerb, militärischen Leistungen, Regulierungs-Einfluss und technologischer Führerschaft. Sie umfasst drei simultane Wettbewerbe: welche Nationen die fähigsten Modelle bauen, welche Regulierungs-Rahmen globale KI-Bereitstellung regieren und welche Länder Halbleiter-Supply-Chains kontrollieren, die Frontier-KI möglich machen. Für Organisationen bestimmt KI-Geopolitik, welche Tools rechtlich zulässig sind, wo Daten verarbeitet werden können und welche Anbieter Beschaffungs-Risiko tragen.',
+          ],
+        },
+
+        qaWhoIsWinning: {
+          title: 'Wer gewinnt das globale KI-Rennen?',
+          content: [
+            'Die Vereinigten Staaten führen bei Frontier-Modell-Leistung — GPT-4o (OpenAI), Claude (Anthropic) und Gemini (Google DeepMind) — und bei privaten KI-Investitionen (67 Milliarden USD 2023 per OECD-Daten). China führt bei KI-Patent-Anmeldungen, staatlich geleiteter Einsatz-Skala und inländlicher Modell-Entwicklung; DeepSeek R1 entsprach GPT-4o bei Schlüssel-Benchmarks im Januar 2025. Die Europäische Union führt bei KI-Regulierung — der EU AI Act ist das globale Referenz-Framework — bleibt aber bei Frontier-Modell-Leistung und privaten Investitionen relativ zu seiner wirtschaftlichen Größe zurück. Kein einzelner Akteur führt bei allen drei Dimensionen gleichzeitig.',
+          ],
+        },
+
+        qaWhatIsBrusselsEffect: {
+          title: 'Was ist der Brussels Effect in KI?',
+          content: [
+            'Der Brussels Effect beschreibt, wie EU-Regulierungen De-facto-Globale Standards werden, weil multinational Unternehmen es operativ einfacher finden, den strengsten Standard weltweit anzuwenden als separate Compliance-Stacks pro Jurisdiktion aufrecht zu erhalten. Der EU AI Act gilt für jedes KI-System, das auf dem EU-Markt platziert wird oder dessen Output EU-Nutzer erreicht — das zwingt OpenAI, Google DeepMind und Anthropic, EU-Transparenzverpflichtungen für ihre globalen Produkte zu befolgen, nicht nur EU-spezifische Versionen. Der gleiche Mechanismus machte GDPR zu einem globalen Datenschutz-Standard.',
+          ],
+        },
+
+        qaHowChinaRegulates: {
+          title: 'Wie reguliert China künstliche Intelligenz?',
+          content: [
+            'China reguliert KI durch die Cyberspace Administration of China (CAC). Die Algorithm Recommendation Regulations (2022) verlangen die Kennzeichnung von algorithmen-kuratierten Inhalten. Die Generative AI Measures (2023) verlangen eine CAC-Sicherheitsbewertung — ein 45–90-Tage-Prozess — bevor irgend ein Consumer-facing generatives KI-Service in China starten kann und mandat, dass KI-Outputs sich mit "sozialistischen Kernwerten" alignieren. Ausländische KI-Modelle (GPT-4o, Claude, Gemini) sind vom Festland China ohne Circumvention Tools unerreichbar. Inländische Alternativen enthalten Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao und DeepSeek.',
+          ],
+        },
+
+        qaWhatEUAIActRequires: {
+          title: 'Was verlangt der EU AI Act von Organisationen?',
+          content: [
+            'Der EU AI Act klassifiziert KI-Systeme in vier Risiko-Stufen mit skalieren Verpflichtungen. Verbotene Praktiken — soziales Scoring durch öffentliche Behörden, Echtzeit-Biometrische Überwachung in öffentlichen Räumen — sind ab August 2024 verboten. Hochrisiko-KI-Systeme in Beschäftigung, Kredit-Bewertung, Gesundheitswesen oder Strafverfolgung verlangen Konformitätsbewertungen, Menschliche Überwachungs-Dokumentation und Registrierung in der EU AI-Datenbank vor August 2026. General Purpose AI-Modelle (GPT-4o, Claude, Gemini) müssen Trainingsdaten-Zusammenfassungen veröffentlichen und EU-Urheberrecht befolgen — Regeln, die ab August 2025 galten. Alle Organisationen, die EU-Nutzer bedienen, müssen konform sein, unabhängig davon, wo sie ansässig sind.',
+          ],
+        },
+
+        qaExportControls: {
+          title: 'Wie beeinflussen US-Exportkontrollen die KI-Entwicklung?',
+          content: [
+            'US-Exportkontrollen schränken den Verkauf fortgeschrittener Nvidia GPUs — einschließlich A100 und H100 — nach China ein, anvisierend, Chinas Kapazität zu begrenzen, Frontier-KI-Modelle zu trainieren. Die Kontrollen werden durchgesetzt durch die Export Administration Regulations (EAR) und gelten für Nvidia, AMD und Intel Produkte über angegebenen Compute-Schwellen. DeepSeeks R1-Freigabe im Januar 2025 demonstrierte die Grenzen dieses Ansatzes: trainiert auf China-beschränkten H800 GPUs bei einem Bruchteil der berichteten Kosten vergleichbarer US-Modelle, entsprach es GPT-4o bei AIME 2024, MATH-500 und HumanEval-Benchmarks. Export-Kontrolle verlangsamen, aber haben chinesische Frontier-KI-Entwicklung nicht gestoppt.',
+          ],
+        },
+
+        qaTSMCRole: {
+          title: 'Was ist TSMCs Rolle in der KI-Geopolitik?',
+          content: [
+            'TSMC (Taiwan Semiconductor Manufacturing Company) stellt die fortgeschrittenen Chips her, die Frontier-KI antreiben — Nvidias H100 und H200 GPUs, Googles TPUs und Apples Neural Engine werden alle an TSMC Fabs in Taiwan hergestellt. Kein anderes Unternehmen stellt aktuell Chips bei vergleichbaren Process-Knoten (3nm, 2nm) in Skala her. Dies macht TSMC zu einem Single Point of Dependency in globaler KI-Infrastruktur: US-Exportkontrollen verlassen sich darauf, dass TSMC nicht fortgeschrittene Knoten an chinesische Chiphersteller liefert, und jede Störung von Taiwans politischem Status würde sofort globale KI-Hardware-Versorgung einschränken. Der US CHIPS and Science Act (52 Milliarden USD) finanziert inländische US-Fab-Kapazität speziell, um diese Abhängigkeit zu reduzieren.',
+          ],
+        },
+
+        qaUSEUChinaDifferences: {
+          title: 'Was sind die Hauptunterschiede zwischen US-, EU- und chinesischen KI-Strategien?',
+          content: [
+            'Die drei Hauptstrategien unterscheiden sich grundlegend in Philosophie, rechtlicher Struktur und internationalem Reichweite. Die USA priorisieren Innovation und Wettbewerbsfähigkeit durch Private-Sector-Führerschaft ohne bundesweites KI-Gesetz — bestehende Sektor-Regulatoren (FTC, FDA, EEOC) wenden bestehende Mandate auf KI innerhalb ihrer Domänen an. Die EU priorisiert Grundrechte-Schutz durch einen zwingenden horizontalen rechtlichen Rahmen — den EU AI Act — der extraterritorial auf jede KI anwendet, die EU-Nutzer erreicht. China priorisiert Staat-Kontrolle und nationale Entwicklung durch zwingende Content-Regulierung und Pre-Launch-Sicherheits-Bewertungen, durchgesetzt durch die CAC. Diese Ansätze sind strukturell inkompatibel: Organisationen, die über alle drei Jurisdiktionen funktionieren, müssen konkurrierende Anforderungen gleichzeitig navigieren.',
+          ],
+        },
+
+        defEUAIAct: {
+          title: 'Definition: EU AI Act',
+          content: 'Die weltweit erste umfassende, rechtlich bindende KI-Regulierung, verabschiedet durch das Europäische Parlament im März 2024. Sie klassifiziert KI-Systeme in vier Risiko-Stufen (Unakzeptabel, Hoch, Begrenzt, Minimal) mit skalierend Verpflichtungen. Verbotene Praktiken gelten ab August 2024; General Purpose AI-Transparenzverpflichtungen ab August 2025; Hochrisiko-System-Anforderungen ab August 2026. Geldstrafen erreichen 35 Mio. EUR oder 7% des globalen Umsatzes. Wendet sich extraterritorial auf jede KI an, die EU-Nutzer erreicht.',
+        },
+
+        defBrusselsEffect: {
+          title: 'Definition: Brussels Effect',
+          content: 'Das Phänomen, wo EU-Regulierungen De-facto-Globale Standards werden, weil multinationale Unternehmen es einfacher finden, einen strikten Standard weltweit anzuwenden, als separate Compliance-Stacks pro Jurisdiktion aufrecht zu erhalten. GDPR wurde ein globaler Datenschutz-Standard via Brussels Effect. Der EU AI Act tut das gleiche: OpenAI, Anthropic und Google müssen EU AI Act-Anforderungen für ihre globalen Produkte befolgen, nicht nur EU-spezifische Versionen.',
+        },
+
+        defHighRiskAI: {
+          title: 'Definition: Hochrisiko-KI-System',
+          content: 'Unter dem EU AI Act, ein KI-System, dessen Fehler oder Fehlfunktion signifikanten Schaden zu Grundrechten verursachen könnte. Beispiele: KI, die in Einstellungs-Entscheidungen, Kredit-Bewertung, Gesundheits-Diagnose, Strafverfolgung, öffentlichen Service-Zugang und Bildungs-Evaluierung verwendet wird. Hochrisiko-KI verlangt Konformitätsbewertungen, Menschliche Überwachungs-Dokumentation, Trainingsdaten-Qualität-Kontrollen und Registrierung in der EU AI-Datenbank vor Einsatz.',
+        },
+
+        defGPAI: {
+          title: 'Definition: General Purpose AI (GPAI)',
+          content: 'Ein KI-System, trainiert auf breite Daten mit einer allgemeinen Architektur (nicht spezialisiert oder Domäne-spezifisch), die für eine Breite Reihe von Downstream-Aufgaben angepasst werden kann. GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro sind GPAI-Modelle. Unter dem EU AI Act, GPAI-Modelle mit >10^25 FLOP Trainings-Compute-Seite Transparenzverpflichtungen enthalten Trainingsdaten-Zusammenfassungen, Leistungs-Dokumentation und Copyright-Konformität.',
+        },
+
+        defCAC: {
+          title: 'Definition: Cyberspace Administration of China (CAC)',
+          content: 'Chinas primäre Regulierungs-Körper für Internet, Cyberspace und KI-Governance. Durchsetzt die Algorithm Recommendation Regulations (2022) und Generative AI Measures (2023). Verlangt Sicherheitsbewertungen vor generativen KI-Services startet in China, mandat Content-Filter, die KP-Kritik und politisch sensible Themen blockieren, und kann Daten-Offenlegung von KI-Providern zwingen.',
+        },
+
+        defDataSovereignty: {
+          title: 'Definition: Datensouveränität',
+          content: 'Das Prinzip, dass Daten unterliegt den Gesetzen des Landes, wo es befindet oder generiert wird, und dass Organisationen volle Kontrolle über Daten halten können, ohne es zu ausländischen Jurisdiktionen zu transferieren. EU GDPR und der EU AI Act behandeln Datensouveränität als eine Konformitäts-Anforderung: Personenbezogenen Daten-Verarbeitung muss EU-Gesetz befolgen, auch wenn die Verarbeitung außerhalb der EU auftretet, wenn die Daten-Subjekte EU-Einwohner sind.',
+        },
+
+        defAlgorithmRecs: {
+          title: 'Definition: Algorithm Recommendation Regulations (China)',
+          content: 'Chinas 2022 Regulierung, verlangend, dass Plattformen, die Algorithmen nutzen, um Inhalte zu empfehlen, öffentlich Algorithmen-Kuration kennzeichnen und offenlegen. Wendet sich auf soziale Medien, News-Feeds, Video-Empfehlung und Suchmaschinen. Verlangt, dass Nutzer Optionen angeboten werden, um algorithmische Empfehlungen auszuschalten. Durchgesetzt durch die CAC, um Transparenz und Regierungs-Überwachung von algorithmischer Content-Verteilung zu erhöhen.',
+        },
+
+        defSCCs: {
+          title: 'Definition: Standard Contractual Clauses (SCCs)',
+          content: 'Vor-genehmigte Vertrag-Vorlagen, die von der Europäischen Kommission ausgegeben werden, die Organisationen erlauben, personenbezogene Daten von der EU zu nicht-angemessenen Jurisdiktionen (wie die USA oder China) zu transferieren, während GDPR-Konformität beansprucht wird. SCCs platzieren vertragliche Verpflichtungen auf den Daten-Importeur, die Daten unter EU-Standards zu schützen. Effektivität wird anfordert: das EU-Gerichtssystem hat fraggestellt, ob SCCs gegen Regierungs-Überwachung in den USA und anderen Ländern schützen.',
+        },
+      },
+    },
     fr: { theme: 'Policy & Compliance', title: 'Géopolitique et IA : Comment l\'UE, les États-Unis et la Chine rivalisent pour la domination de l\'IA', intro: 'Les États-Unis, la Chine et l\'Union européenne poursuivent des visions incompatibles de la gouvernance de l\'IA. Pour les organisations déployant l\'IA, ces différences se traduisent par des obligations de conformité concrètes, des contraintes d\'approvisionnement et des exigences de résidence des données.', publishDate: '2026-04-01', readTime: 'À venir', sections: {} },
     ja: { theme: 'Policy & Compliance', title: '地政学とAI：EU、米国、中国のAI覇権競争', intro: '米国、中国、EUはAIガバナンスに関して相反するビジョンを追求しており、AIを展開する組織にとっては具体的なコンプライアンス義務、調達制約、データ保管要件に直結します。', publishDate: '2026-04-01', readTime: '近日公開予定', sections: {} },
     zh: { theme: 'Policy & Compliance', title: '地缘政治与AI：欧盟、美国和中国如何争夺AI主导权', intro: '美国、中国和欧盟正在追求不兼容的AI治理愿景。对于部署AI的组织而言，这些差异转化为具体的合规义务、采购限制和数据存储要求。', publishDate: '2026-04-01', readTime: '即将推出', sections: {} },
