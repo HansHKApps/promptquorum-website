@@ -19914,6 +19914,7 @@ zh: {
         { label: 'China for Prompt Engineers', anchor: 'china-for-prompt-engineers-practical-deployment-guide' },
         { label: 'Global AI Regulation: EU vs US vs China', anchor: 'global-ai-regulation-eu-vs-us-vs-china-compared' },
         { label: 'AI Geopolitical Risks for Organizations', anchor: 'ai-geopolitical-risks-what-this-means-for-organizations' },
+        { label: 'Key Definitions', anchor: 'definition-eu-ai-act' },
         { label: 'Frequently Asked Questions', anchor: 'frequently-asked-questions' },
       ],
       howToSchema: {
@@ -20321,6 +20322,46 @@ zh: {
           content: [
             'The three major AI strategies differ fundamentally in philosophy, legal structure, and international reach. The US prioritizes innovation and competitiveness through private sector leadership with no federal AI law — existing sector regulators (FTC, FDA, EEOC) apply existing mandates to AI within their domains. The EU prioritizes fundamental rights protection through a mandatory horizontal legal framework — the EU AI Act — that applies extraterritorially to any AI reaching EU users. China prioritizes state control and national development through mandatory content regulation and pre-launch security assessments enforced by the CAC. These approaches are structurally incompatible: organizations operating across all three jurisdictions must navigate conflicting requirements simultaneously.',
           ],
+        },
+
+        defEUAIAct: {
+          title: 'Definition: EU AI Act',
+          content: 'The world\'s first comprehensive, legally binding AI regulation passed by the European Parliament in March 2024. It classifies AI systems into four risk tiers (Unacceptable, High, Limited, Minimal) with scaled obligations. Prohibited practices apply from August 2024; General Purpose AI transparency obligations from August 2025; high-risk system requirements from August 2026. Fines reach €35 million or 7% of global turnover. Applies extraterritorially to any AI reaching EU users.',
+        },
+
+        defBrusselsEffect: {
+          title: 'Definition: Brussels Effect',
+          content: 'The phenomenon where EU regulations become de facto global standards because multinational companies find it simpler to apply one strict standard worldwide rather than maintain separate compliance stacks per jurisdiction. The GDPR became a global privacy standard via the Brussels Effect. The EU AI Act is doing the same: OpenAI, Anthropic, and Google must comply with EU AI Act requirements for their global products, not just EU-specific versions.',
+        },
+
+        defHighRiskAI: {
+          title: 'Definition: High-Risk AI System',
+          content: 'Under the EU AI Act, an AI system whose failure or malfunction could cause significant harm to fundamental rights. Examples: AI used in hiring decisions, credit assessment, healthcare diagnosis, law enforcement, public service access, and educational evaluation. High-risk AI requires conformity assessments, human oversight documentation, training data quality controls, and registration in the EU AI database before deployment.',
+        },
+
+        defGPAI: {
+          title: 'Definition: General Purpose AI (GPAI)',
+          content: 'An AI system trained on broad data with a general architecture (not specialized or domain-specific) that can be adapted for a wide range of downstream tasks. GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro are GPAI models. Under the EU AI Act, GPAI models with >10^25 FLOP training compute face transparency obligations including training data summaries, capability documentation, and copyright compliance.',
+        },
+
+        defCAC: {
+          title: 'Definition: Cyberspace Administration of China (CAC)',
+          content: 'China\'s primary regulatory body for internet, cyberspace, and AI governance. Enforces the Algorithm Recommendation Regulations (2022) and Generative AI Measures (2023). Requires security assessments before generative AI services launch in China, mandates content filters blocking CPC criticism and politically sensitive topics, and can compel data disclosure from AI providers.',
+        },
+
+        defDataSovereignty: {
+          title: 'Definition: Data Sovereignty',
+          content: 'The principle that data is subject to the laws of the country where it is located or generated, and that organizations can maintain full control over data without transferring it to foreign jurisdictions. EU GDPR and the EU AI Act treat data sovereignty as a compliance requirement: personal data processing must comply with EU law even if the processing occurs outside the EU if the data subjects are EU residents.',
+        },
+
+        defAlgorithmRecs: {
+          title: 'Definition: Algorithm Recommendation Regulations (China)',
+          content: 'China\'s 2022 regulation requiring platforms that use algorithms to recommend content to publicly label and disclose algorithmic curation. Applies to social media, news feeds, video recommendation, and search engines. Requires that users be offered options to turn off algorithmic recommendations. Enforced by the CAC to increase transparency and government oversight of algorithmic content distribution.',
+        },
+
+        defSCCs: {
+          title: 'Definition: Standard Contractual Clauses (SCCs)',
+          content: 'Pre-approved contract templates issued by the European Commission that allow organizations to transfer personal data from the EU to non-adequate jurisdictions (like the US or China) while claiming GDPR compliance. SCCs place contractual obligations on the data importer to protect the data under EU standards. Effectiveness is challenged: the EU court system has questioned whether SCCs protect against government surveillance in the US and other countries.',
         },
 
         politicianQuotes: {
