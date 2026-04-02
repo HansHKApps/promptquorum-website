@@ -239,6 +239,21 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
       },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'The 6 Optimization Levers for Prompt Engineering',
+        description: 'The six independent variables you can adjust to improve AI output quality: specificity, context, examples, constraints, output format, and role/persona.',
+        url: 'https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Specificity', description: 'How precisely the task is defined. Optimization move: rewrite vague objective as exact instruction. Example: "Summarize" → "List 3 key findings in ≤20 words each".' },
+          { '@type': 'ListItem', position: 2, name: 'Context', description: 'Information the model has to work with. Optimization move: add background, audience, constraints. Example: "Write a report" → "Write a report for a non-technical CFO".' },
+          { '@type': 'ListItem', position: 3, name: 'Examples', description: 'The model\'s understanding of desired output format. Optimization move: add 1–3 input/output pairs (few-shot prompting). Show the exact format you want, once.' },
+          { '@type': 'ListItem', position: 4, name: 'Constraints', description: 'Boundaries on what the model can output. Optimization move: add explicit prohibitions. Example: "Do not use jargon. Maximum 150 words.".' },
+          { '@type': 'ListItem', position: 5, name: 'Output format', description: 'Structure of the response. Optimization move: specify format explicitly. Example: "Respond in JSON: {title, summary, tags[]}".' },
+          { '@type': 'ListItem', position: 6, name: 'Role/persona', description: 'Expertise level the model adopts. Optimization move: add a specific role. Example: "Act as a senior data analyst at a B2B SaaS company".' },
+        ],
+      },
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
