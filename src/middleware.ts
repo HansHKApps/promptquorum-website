@@ -12,6 +12,10 @@ export function middleware(request: NextRequest) {
   // Add lang as header for layout.tsx to read
   response.headers.set('x-selected-lang', selectedLang)
 
+  // Add pathname + query string (without lang param) as header for hreflang links
+  const pathnameWithoutLang = url.pathname + (url.search ? url.search.replace(/\?lang=[^&]*&?|&lang=[^&]*/g, '').replace(/\?$/, '') : '')
+  response.headers.set('x-pathname', pathnameWithoutLang)
+
   return response
 }
 

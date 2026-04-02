@@ -82,12 +82,25 @@ export default async function RootLayout({
   const headersList = await headers()
   const selectedLang = headersList.get('x-selected-lang') || 'en'
 
+  // Get current URL path + query (without lang param) for hreflang tags
+  const pathname = headersList.get('x-pathname') || '/'
+  const baseUrlWithoutLang = `https://www.promptquorum.com${pathname}`
+
   return (
     <html lang={selectedLang} className={`${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
       <head>
         <meta name="theme-color" content="#6750A4" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+        {/* hreflang alternate links for all 5 language variants */}
+        <link rel="alternate" hrefLang="x-default" href={baseUrlWithoutLang} />
+        <link rel="alternate" hrefLang="en" href={`${baseUrlWithoutLang}${baseUrlWithoutLang.includes('?') ? '&' : '?'}lang=en`} />
+        <link rel="alternate" hrefLang="de" href={`${baseUrlWithoutLang}${baseUrlWithoutLang.includes('?') ? '&' : '?'}lang=de`} />
+        <link rel="alternate" hrefLang="fr" href={`${baseUrlWithoutLang}${baseUrlWithoutLang.includes('?') ? '&' : '?'}lang=fr`} />
+        <link rel="alternate" hrefLang="ja" href={`${baseUrlWithoutLang}${baseUrlWithoutLang.includes('?') ? '&' : '?'}lang=ja`} />
+        <link rel="alternate" hrefLang="zh" href={`${baseUrlWithoutLang}${baseUrlWithoutLang.includes('?') ? '&' : '?'}lang=zh`} />
+
         {/* MCP discovery — Model Context Protocol manifest for AI agents */}
         <link rel="mcp" href="/mcp.json" type="application/json" />
         {/* AI crawler discovery hints */}
