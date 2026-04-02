@@ -210,7 +210,274 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   },
 
   'fundamentals-of-prompt-optimization': {
-    en: { theme: 'Fundamentals', title: 'Fundamentals of Prompt Optimization', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
+    en: {
+      theme: 'Fundamentals',
+      title: 'Fundamentals of Prompt Optimization: How to Improve Any AI Prompt',
+      intro: 'Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy. This guide covers the 6 core levers, a 6-step optimization process, before/after examples for GPT-4o, Claude, and Gemini, and the 7 most common mistakes.',
+      publishDate: '2026-04-02',
+      dateModified: '2026-04-02',
+      readTime: '12 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Prompt Optimization',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Fundamentals of Prompt Optimization: How to Improve Any AI Prompt',
+        description: 'Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy. Learn the 6 core levers, a 6-step optimization process, before/after examples, and 7 common mistakes.',
+        datePublished: '2026-04-02',
+        dateModified: '2026-04-02',
+        keywords: ['prompt optimization', 'prompt engineering', 'AI prompting', 'LLM optimization', 'GPT-4o', 'Claude', 'Gemini', 'iterative prompting', 'few-shot prompting', 'chain-of-thought'],
+        mentions: [
+          { '@type': 'Thing', name: 'PromptQuorum' },
+          { '@type': 'Thing', name: 'GPT-4o' },
+          { '@type': 'Thing', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'Thing', name: 'Gemini 2.5 Pro' },
+          { '@type': 'Thing', name: 'Ollama' },
+          { '@type': 'Thing', name: 'LM Studio' },
+        ],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/fundamentals-of-prompt-optimization', width: 1200, height: 630 },
+      },
+      sections: {
+
+        definition: {
+          title: 'What Is Prompt Optimization?',
+          content: [
+            '**Prompt optimization is the iterative process of revising an existing prompt to improve the quality, accuracy, or consistency of AI output for a specific task.** It applies to all major models — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and locally-run models via Ollama or LM Studio. Where prompt engineering designs the initial prompt structure, prompt optimization diagnoses what is failing and applies targeted changes until the output meets a defined standard.',
+            'Prompt optimization is a subprocess of prompt engineering. You always start with a working prompt and make one change at a time. This isolation of variables is what makes diagnosis possible — when you revise specificity, output format, and constraints simultaneously, you cannot determine which change improved the result. The skill of prompt optimization is mapping a failure to the right lever, changing only that variable, and measuring the improvement.',
+            'Why this matters: the same model produces radically different outputs from near-identical prompts. The difference between "sort of correct" and "reliably right" is not luck — it is systematic optimization. An unoptimized prompt succeeds on some inputs and fails on others. An optimized prompt succeeds consistently across a representative sample of inputs.',
+          ],
+        },
+
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'Prompt optimization = iterative revision of an existing prompt to improve output quality',
+            'The 6 levers: specificity, context, examples, constraints, output format, role/persona',
+            'Change one lever at a time — isolating variables is how you find what actually works',
+            'Test on ≥2 models (GPT-4o, Claude, Gemini) to confirm the improvement is model-agnostic',
+            'Common failure mode: changing too many variables at once makes diagnosis impossible',
+            'A tested, optimized prompt is a durable asset — save it to a prompt library',
+          ],
+        },
+
+        vsPromptEngineering: {
+          title: 'Prompt Optimization vs Prompt Engineering',
+          content: [
+            '**Prompt optimization and prompt engineering are complementary disciplines that work in sequence.** Prompt engineering designs a prompt from scratch using building blocks (objective, context, examples, constraints, output format, role). Prompt optimization takes an existing prompt and improves it through iterative revision. You need both: prompt engineering gets you to "working"; prompt optimization gets you to "reliable."',
+            'Think of it this way: prompt engineering builds the structure; prompt optimization refines it. Prompt engineering asks "what elements should this prompt have?" Prompt optimization asks "why is this prompt failing, and which single change will fix it?" The distinction matters because the strategies are different. Engineering starts from principles and building blocks. Optimization starts from failure diagnosis.',
+          ],
+          columns: ['Dimension', 'Prompt Engineering', 'Prompt Optimization'],
+          rows: [
+            { 'Dimension': 'Starting point', 'Prompt Engineering': 'Blank page', 'Prompt Optimization': 'Existing prompt' },
+            { 'Dimension': 'Goal', 'Prompt Engineering': 'Design the structure', 'Prompt Optimization': 'Improve the output' },
+            { 'Dimension': 'Method', 'Prompt Engineering': 'Frameworks, building blocks', 'Prompt Optimization': 'Isolate, change, test, measure' },
+          ],
+        },
+
+        whyOptimize: {
+          title: 'Why Prompt Optimization Matters',
+          content: [
+            'A vague prompt produces a vague output. A poorly specified prompt produces an off-target response. A prompt that works on Monday might fail on Friday if the input changes slightly. Optimization eliminates these variations through systematic diagnosis and targeted revision.',
+            'Real before/after: An unoptimized prompt reads "Summarize this article." Run 3 times on the same article, it produces wildly different outputs: one is 47 words, another is 120 words, the third misses the main point entirely. After optimization — adding output format ("3 bullet points, ≤20 words each"), a role ("analyst"), and specificity ("List the 3 key findings, not methodology") — the same prompt produces consistent, on-spec results all 3 times, across GPT-4o, Claude, and Gemini.',
+          ],
+        },
+
+        sixLevers: {
+          title: 'The 6 Optimization Levers',
+          content: [
+            '**Every prompt consists of six independent variables you can adjust to improve output.** These are the "levers" of optimization. When a prompt fails, the failure traces back to one or more of these levers not being set correctly. The skill of optimization is mapping a symptom to the right lever, changing it, and measuring the result.',
+          ],
+          columns: ['Lever', 'What It Changes', 'Optimization Move', 'Example'],
+          rows: [
+            { 'Lever': 'Specificity', 'What It Changes': 'How precisely the task is defined', 'Optimization Move': 'Rewrite vague objective as exact instruction', 'Example': '"Summarize" → "List 3 key findings in ≤20 words each"' },
+            { 'Lever': 'Context', 'What It Changes': 'Information the model has to work with', 'Optimization Move': 'Add background, audience, constraints', 'Example': '"Write a report" → "Write a report for a non-technical CFO"' },
+            { 'Lever': 'Examples', 'What It Changes': 'Model\'s understanding of desired output format', 'Optimization Move': 'Add 1–3 input/output pairs (few-shot)', 'Example': 'Show the exact format you want, once' },
+            { 'Lever': 'Constraints', 'What It Changes': 'Boundaries on what the model can output', 'Optimization Move': 'Add explicit prohibitions', 'Example': '"Do not use jargon. Maximum 150 words."' },
+            { 'Lever': 'Output format', 'What It Changes': 'Structure of the response', 'Optimization Move': 'Specify format explicitly', 'Example': '"Respond in JSON: {title, summary, tags[]}"' },
+            { 'Lever': 'Role/persona', 'What It Changes': 'Expertise level the model adopts', 'Optimization Move': 'Add a specific role', 'Example': '"Act as a senior data analyst at a B2B SaaS company"' },
+          ],
+        },
+
+        optimizationProcess: {
+          title: 'The 6-Step Optimization Process',
+          content: [
+            '**Prompt optimization is a systematic, measurable process.** Each step narrows the diagnosis: you identify the symptom, map it to a lever, change one variable, test across models, and measure improvement. Here is the exact process:',
+          ],
+          items: [
+            '**Step 1: Establish a baseline.** Run the current prompt on your target task 3 times on representative inputs. Note the failure mode: Is the output too long or too short? Wrong format? Hallucinating? Off-topic? Tangential? This baseline is crucial — you cannot measure improvement without it.',
+            '**Step 2: Identify the root lever.** Map the failure to one of the 6 levers. Examples: "output is a wall of prose instead of bullet points" → output format lever; "answer is vague" → specificity lever; "tone is wrong" → role lever; "includes made-up facts" → context or constraints lever.',
+            '**Step 3: Change one variable.** Make a single targeted change to the identified lever. Do not edit the objective, add examples, AND change the format in the same revision — you cannot attribute improvement if three things changed. This isolation is non-negotiable.',
+            '**Step 4: Test across models.** Run the revised prompt on GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. A prompt that only works on one model is fragile and model-specific. Use PromptQuorum to dispatch one prompt to all three simultaneously and compare responses side by side. Agreement across models means the prompt is robust; divergence means you need further refinement.',
+            '**Step 5: Measure against criteria.** Did accuracy improve? Did the format comply? Did hallucinations decrease? Do outputs now pass consistency tests (running 3× in a row)? Measurement is how you confirm the change worked. If you made the change but saw no improvement, the change did not address the root cause — try a different lever.',
+            '**Step 6: Save to a prompt library.** A tested, optimized prompt is a reusable asset. Document what changed and why it improved. Version it. A prompt library stored and version-controlled is far more valuable than a one-off prompt that solved a problem once.',
+          ],
+        },
+
+        measurementCriteria: {
+          title: 'How to Measure Prompt Quality',
+          content: [
+            '**You cannot optimize what you cannot measure.** The following criteria define whether a prompt has succeeded. Use these checkpoints after each iteration:',
+          ],
+          columns: ['Criterion', 'What to Check', 'Pass / Fail Signal'],
+          rows: [
+            { 'Criterion': 'Task accuracy', 'What to Check': 'Does the output answer the actual question?', 'Pass / Fail Signal': 'Compare against a known correct answer' },
+            { 'Criterion': 'Format compliance', 'What to Check': 'Does the output match the specified structure?', 'Pass / Fail Signal': 'Did JSON parse? Are bullets the right length?' },
+            { 'Criterion': 'Factual grounding', 'What to Check': 'Are specific claims correct?', 'Pass / Fail Signal': 'Spot-check 3–5 facts' },
+            { 'Criterion': 'Consistency', 'What to Check': 'Does re-running produce similar output?', 'Pass / Fail Signal': 'Run same prompt 3× — do outputs differ structurally?' },
+            { 'Criterion': 'Token efficiency', 'What to Check': 'Is the output length appropriate?', 'Pass / Fail Signal': 'Measure token count vs. information density' },
+            { 'Criterion': 'Cross-model agreement', 'What to Check': 'Do 2–3 models produce similar results?', 'Pass / Fail Signal': 'Dispatch to GPT-4o, Claude, Gemini via PromptQuorum — agreement = robust' },
+          ],
+        },
+
+        beforeAfterExamples: {
+          title: 'Three Real-World Optimization Examples',
+          content: [],
+          items: [
+            '**Example 1: Executive Summary (Levers: Output Format + Specificity)**',
+            '_Weak prompt:_ "Summarize this article."',
+            '_Failure mode:_ Inconsistent length (47 words one run, 140 words the next); missed the main point.',
+            '_Lever changed:_ Output format + specificity.',
+            '_Optimized prompt:_ "You are an analyst writing for a CFO. Summarize this article in exactly 3 bullet points. Each bullet ≤20 words. Focus on business impact, not methodology."',
+            '_Result:_ All 3 runs produce 3-bullet summaries, 18–22 words each, consistent focus. Works on GPT-4o, Claude, and Gemini.',
+            '',
+            '**Example 2: Code Review (Levers: Role + Constraints)**',
+            '_Weak prompt:_ "Review this code."',
+            '_Failure mode:_ Feedback is too generic ("good structure") or misses critical issues.',
+            '_Lever changed:_ Role + constraints.',
+            '_Optimized prompt:_ "You are a senior Python engineer with 10 years of experience. Review this code for: (1) correctness, (2) performance bottlenecks, (3) security vulnerabilities. Limit feedback to 3 issues max, ordered by severity. Be specific — cite the line number and the exact change needed."',
+            '_Result:_ Feedback is precise, actionable, security-focused. Consistent across runs.',
+            '',
+            '**Example 3: Research Synthesis (Levers: Context + Examples)**',
+            '_Weak prompt:_ "Write a summary based on these papers."',
+            '_Failure mode:_ Hallucinations (citing studies that do not exist); wrong emphasis; mixing concepts.',
+            '_Lever changed:_ Context + examples.',
+            '_Optimized prompt:_ "Synthesize these 5 research papers into a 2-paragraph summary. Base ONLY on the provided papers — do not cite external studies. Example format: [Key finding 1 from Paper A]. [Contrasting finding from Paper B]. [Implication]. Do not invent results."',
+            '_Result:_ No hallucinations; accurate synthesis; format compliance.',
+          ],
+        },
+
+        modelSpecificTips: {
+          title: 'Model-Specific Optimization Tips',
+          content: [
+            '**The 6 optimization levers apply across all major models — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and Mistral Large.** However, each model responds differently to instruction density, format specificity, and role definition. Below are model-specific tuning tips:',
+          ],
+          items: [
+            '**GPT-4o (OpenAI):** Responds exceptionally well to explicit JSON format requests and markdown headers in system prompts. Instruction-following is strong — tight constraints reduce over-explanation. If your GPT-4o prompt is over-explaining, add a constraint: "Be concise. Do not explain your reasoning unless asked."',
+            '**Claude 4.6 Sonnet (Anthropic):** Excels at nuanced, multi-part instructions. Handles long, detailed system prompts reliably and rarely misses implicit context. Benefits from explicit output length guidance ("respond in ≤200 words"). If you are optimizing for brevity, be specific: "Respond in no more than 150 words."',
+            '**Gemini 2.5 Pro (Google DeepMind):** Best-in-class for long-context document analysis (up to 1M tokens). Explicit section headers in prompts improve structured output consistency. If you are processing long documents, add headers: "## Input Document\n[document]\n## Task\n[task]."',
+            '**Mistral Large (Mistral AI):** Benefits from explicit role definitions and more prescriptive instruction phrasing. Less tolerant of implicit task framing than GPT-4o or Claude. If your prompt works on GPT-4o but not Mistral, make instructions more explicit and add a role: "You are a [specific role]. Your task is to [explicit objective]."',
+          ],
+        },
+
+        commonMistakes: {
+          title: 'The 7 Most Common Optimization Mistakes',
+          content: [
+            '**Most optimization fails because of process mistakes, not conceptual misunderstanding.** Here are the most common pitfalls and how to avoid them:',
+          ],
+          items: [
+            '**Mistake 1: Changing multiple variables simultaneously.** You add examples, change the output format, AND adjust the role in one revision. Now when the output improves, you do not know which change helped. Effective optimization isolates one change per iteration. This is the #1 reason optimization fails.',
+            '**Mistake 2: Optimizing on a single input.** You test one example, see improvement, and declare success. In real use, the prompt fails on different inputs. Test on 5–10 representative examples. If the prompt does not succeed on all 5, keep optimizing.',
+            '**Mistake 3: Optimizing for one model only.** You optimize for GPT-4o, see perfect results, then deploy on Claude. It fails. Each model has slightly different instruction-following behavior. Test on at least 2 models (GPT-4o and Claude 4.6 Sonnet); ideally 3.',
+            '**Mistake 4: Ignoring output format.** A prompt produces the right facts but in the wrong structure. "Wrong format" is the most common and fastest-to-fix failure mode. Always specify: "Respond in JSON with fields: [list]" or "Use a markdown table with columns: [list]." Format compliance is often the difference between usable and unusable output.',
+            '**Mistake 5: Over-prompting.** You add 15 constraints, 5 role descriptions, and 10 examples in a 200-token prompt. Too many simultaneous instructions overwhelm the model. Start minimal, then add constraints only when needed. If a prompt is not working, the first move is to simplify, not expand.',
+            '**Mistake 6: Conflating optimization with fine-tuning.** Optimization improves prompts; fine-tuning trains the model. If you have tried all 6 levers and the prompt still fails, the model may lack knowledge or capability for the task — that is a fine-tuning problem, not an optimization problem. Fine-tuning is vastly slower and more expensive. Exhaust prompt optimization first.',
+            '**Mistake 7: Not saving optimized prompts.** You optimize a prompt, deploy it, and then re-optimize the same prompt 6 months later because no one saved the version that worked. A prompt library — version-controlled, documented, and shared — turns optimization work into a lasting asset.',
+          ],
+        },
+
+        advancedTechniques: {
+          title: 'Advanced Optimization Techniques',
+          content: [
+            '**Once you master the 6 core levers, advanced techniques allow deeper optimization.** These techniques combine multiple levers or apply specialized patterns to specific failure modes:',
+          ],
+          items: [
+            '[Few-shot vs Zero-shot](/prompt-engineering/zero-shot-vs-few-shot): Add 1–3 example input/output pairs to the prompt when the model is not formatting output correctly or is missing the style you want. Few-shot examples are the most direct way to teach format.',
+            '[Chain-of-thought](/prompt-engineering/chain-of-thought-prompting): Insert "think step by step before answering" to fix multi-step reasoning failures. This technique often improves accuracy on logic problems by 10–15%.',
+            '[Constrained prompting](/prompt-engineering/constrained-prompting): Add explicit prohibitions ("Do not use jargon," "Do not invent figures," "Do not repeat the input") to fix scope and style failures. Constraints are stronger than instructions.',
+            '[Self-consistency](/prompt-engineering/self-consistency-prompting): Generate the prompt\'s output 3–5 times independently, then return the most common answer. This reduces hallucinations on low-probability facts by combining model runs.',
+            '[Structured output](/prompt-engineering/structured-output-and-json-mode): Request JSON, markdown tables, or other machine-readable formats to fix format compliance. Structured output is faster to parse and less error-prone than prose.',
+          ],
+        },
+
+        promptLibrary: {
+          title: 'Saving Optimized Prompts to a Library',
+          content: [
+            '**An optimized prompt is a durable asset.** Once you have tested a prompt across 3 models, confirmed it works on 5–10 representative inputs, and documented what each lever does — save it. A prompt library lets you reuse optimized prompts across projects, share them with your team, and improve them over time.',
+            'See [Build a Prompt Library That Saves Hours](/prompt-engineering/build-a-prompt-library) for a complete guide on structuring, versioning, and maintaining a library.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the pillar definition and core building blocks of prompt design',
+            '[5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — the structural elements you are optimizing',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — step-by-step reasoning technique for accuracy improvement',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — when to add examples as the optimization lever',
+            '[Build a Prompt Library That Saves Hours](/prompt-engineering/build-a-prompt-library) — persisting optimized prompts as team assets',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ: Prompt Optimization',
+          faqs: [
+            {
+              q: 'What is prompt optimization?',
+              a: 'Prompt optimization is the iterative process of revising an existing prompt to improve AI output quality for a specific task. It involves identifying a failure mode (wrong format, hallucination, vague output), changing one variable (specificity, context, examples, constraints, output format, or role), and testing the result across models like GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.',
+            },
+            {
+              q: 'What is the difference between prompt optimization and prompt engineering?',
+              a: 'Prompt engineering is the discipline of designing a prompt structure from scratch using building blocks like objective, context, and output format. Prompt optimization is the iterative subprocess of improving an already-written prompt by diagnosing failure modes and applying targeted changes. You need prompt engineering to create a starting point; you use prompt optimization to refine it.',
+            },
+            {
+              q: 'How many iterations does it take to optimize a prompt?',
+              a: 'For most tasks, 2–4 targeted iterations are sufficient to move from a failing prompt to a reliable one. Each iteration should change one variable and be tested on 3–5 representative inputs. Diminishing returns set in after 5–6 iterations — if a prompt has not stabilized by then, the task definition itself may need to be revised.',
+            },
+            {
+              q: 'Which lever should I change first when optimizing a prompt?',
+              a: 'Start with output format. Format non-compliance — receiving a paragraph when you wanted a table, or plain text when you needed JSON — is the most common and fastest-to-fix failure mode. Specify the exact structure you want, then address other issues (accuracy, tone, scope) in subsequent iterations.',
+            },
+            {
+              q: 'Does prompt optimization work across all AI models?',
+              a: 'Yes, but with model-specific adjustments. The six core optimization levers (specificity, context, examples, constraints, output format, role) apply to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and Mistral Large. However, each model responds differently to instruction density — Claude handles longer multi-part instructions better; GPT-4o responds well to structured system prompts; Gemini benefits from explicit section headers.',
+            },
+            {
+              q: 'What is the most common prompt optimization mistake?',
+              a: 'Changing multiple variables simultaneously. If you add examples, change the output format, and add a role instruction in the same revision, you cannot determine which change improved (or degraded) the output. Effective optimization changes one variable per iteration.',
+            },
+            {
+              q: 'Can prompt optimization reduce AI hallucinations?',
+              a: 'Yes, with the right techniques. Adding grounding context ("Base your answer only on the following document"), few-shot examples with factually correct outputs, and explicit constraints ("Do not invent figures — use only data from the provided text") reliably reduce hallucination rates. Self-consistency prompting — generating multiple outputs and returning the most common — further reduces low-probability fabrications.',
+            },
+            {
+              q: 'When should I use fine-tuning instead of prompt optimization?',
+              a: 'Use fine-tuning when prompt optimization has reached a ceiling — typically when the required behavior is highly domain-specific, requires consistent stylistic voice across thousands of outputs, or depends on knowledge not in the base model\'s training. Prompt optimization is faster and cheaper and should always be exhausted before fine-tuning.',
+            },
+            {
+              q: 'How do I know when a prompt is fully optimized?',
+              a: 'A prompt is sufficiently optimized when it: (1) produces correct output on 4–5 representative inputs, (2) produces consistent output on re-runs, (3) works across at least two models (e.g., GPT-4o and Claude), and (4) meets the format specification without post-processing. Perfect prompts do not exist — "optimized" means reliable enough for the use case.',
+            },
+            {
+              q: 'Does prompt optimization apply to image prompts (text-to-image)?',
+              a: 'The principles apply — specificity, constraints, and examples (reference images) are all valid levers for image models like DALL-E 3 and Stable Diffusion. However, the mechanics differ: image models respond to style modifiers, aspect ratio specifications, and negative prompts as constraints. The optimization process (baseline → diagnose → change one variable → test) is identical.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            '[Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — catalogues 58+ discrete prompting techniques used in production systems',
+            '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — peer-reviewed academic basis for step-by-step reasoning as an optimization lever',
+            '[OpenAI, 2024. "Prompt Engineering"](https://platform.openai.com/docs/guides/prompt-engineering) — official guidance on prompt optimization for GPT-4o',
+          ],
+        },
+
+      },
+    },
     de: { theme: 'Fundamentals', title: 'Grundlagen der Prompt-Optimierung', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
     fr: { theme: 'Fundamentals', title: 'Fondamentaux de l\'optimisation des prompts', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
     ja: { theme: 'Fundamentals', title: 'プロンプト最適化の基礎', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },

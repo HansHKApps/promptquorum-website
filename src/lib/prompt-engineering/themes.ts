@@ -36,11 +36,6 @@ export const themes: PETheme[] = [
     ],
   },
   {
-    id: 'prompt-optimization',
-    title: 'Fundamentals of Prompt Optimization',
-    description: '',
-  },
-  {
     id: 'frameworks',
     title: 'Frameworks',
     description: 'Structured templates for building reliable, repeatable prompts across different tasks — marketing, coding, research, and more.',
