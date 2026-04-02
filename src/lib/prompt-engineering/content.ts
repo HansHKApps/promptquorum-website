@@ -222,6 +222,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
+        proficiencyLevel: 'Beginner to Intermediate',
+        dependencies: 'Basic understanding of LLMs and prompt structure',
         headline: 'Fundamentals of Prompt Optimization: How to Improve Any AI Prompt',
         description: 'Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy. Learn the 6 core levers, a 6-step optimization process, before/after examples, and 7 common mistakes.',
         datePublished: '2026-04-02',
