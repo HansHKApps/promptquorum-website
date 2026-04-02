@@ -1571,12 +1571,100 @@ verify they render correctly when adding new page types
 - [ ] hreflang tags are already present via layout.tsx
 - [ ] Do NOT translate: model names (GPT-4o, Claude, LLaMA), benchmark names (MMLU, HumanEval), code blocks, organization names, URLs
 
+### TRANSLATION QUALITY CHECKLIST — Critical Issues to Avoid
+
+**Issue 1: Grammatical Errors in Body Text (E-E-A-T Risk)**
+- [ ] Zero untranslated English words in target language content (e.g., "Most Optimierung" is WRONG—should be "Meiste Optimierung" or "Optimierungen scheitern meistens")
+- [ ] Native speaker review for colloquialisms and grammar
+- [ ] All contractions and abbreviations localized (e.g., "GPT-4o's 128k context" → "GPT-4o's 128K Kontext" in German, not mixed)
+- [ ] Technical terms use correct gender and case (German: "die Ausgabeformat" ❌, "das Ausgabeformat" ✅)
+- [ ] No literal translations of idioms ("thinking outside the box" → use local idiom equivalent, not word-for-word)
+
+**Issue 2: FAQ Completeness (AEO Impact)**
+- [ ] Target language has ALL FAQs from English version (not a subset)
+- [ ] Count: English = 19 FAQs minimum for fundamentals-of-prompt-optimization
+- [ ] Each FAQ answer is self-contained and citable in isolation (no "see above" references)
+- [ ] FAQ titles are questions phrased naturally in the target language (German: "Was ist..." / "Wie funktioniert...")
+
+**Issue 3: Required Sections Must Translate** 
+- [ ] `definition` section (H2: "What Is [Topic]?") — always present
+- [ ] `faq` section with minimum 19 Q&A pairs
+- [ ] `sources` section with links (must include Brown et al. 2020 for prompt optimization articles)
+- [ ] `relatedReading` section with links
+- [ ] `Regulatory Compliance` section (critical for German DACH market — EU AI Act context)
+- [ ] `Languages & Regions` table (9-language region table with localized term for the topic)
+- [ ] `keyTerms` or `definitionBoxes` glossary section with anchor links
+
+**Issue 4: Table of Contents Completeness**
+- [ ] `toc` array exists with all section anchors
+- [ ] Count: 19 TOC entries minimum for fundamentals-of-prompt-optimization
+- [ ] All anchors are valid (generated from H2 titles using kebab-case)
+- [ ] No broken anchor links in body
+
+**Issue 5: Source Attribution (Credibility)**
+- [ ] Minimum 4 sources for academic/research articles
+- [ ] Brown et al. 2020 included for prompt optimization content (must have clickable link)
+- [ ] Sources formatted with title + URL: `[Title](URL) — description`
+- [ ] All URLs are absolute (https://...), not relative
+
+**Issue 6: No Mixed Language in Body Content**
+- [ ] Product/model names in English (GPT-4o, Claude, Gemini, Ollama, LM Studio) — correct
+- [ ] Benchmark names in English (MMLU, HumanEval) — correct
+- [ ] Technical acronyms preserved (RAG, CoT, JSON, API) — correct
+- [ ] But explanatory text fully translated (e.g., "RAG is Retrieval-Augmented Generation" → German: "RAG ist Retrieval-Augmented Generation" ✅, but surrounding prose must be 100% German)
+
+**Issue 7: Structural Element Translations**
+- [ ] H2 section titles are translated naturally (not word-for-word from English)
+- [ ] Code examples and JSON structures remain in English
+- [ ] Constraint examples translated (e.g., "Do not use jargon" → "Verwende keine Fachjargon" in German)
+- [ ] Quoted research findings translated, source citations preserved
+
+**Automated Validation Rules (add to pre-commit hook):**
+
+```bash
+# Before committing a translation, run this validation:
+Translation_Validation() {
+  local file="$1"
+  local lang="$2"
+  
+  # Rule 1: No English words in target language (except model names, URLs, code)
+  # Check for common English words in German/French/Japanese sections
+  grep -E "Most |the |and |or |is " "$file" | grep -v "GPT-4o|Claude|Gemini|https://|'@type'" && \
+    echo "❌ ERROR: Untranslated English detected. Check $lang section for mixed language."
+  
+  # Rule 2: FAQ count match English minimum
+  faq_count=$(grep -c '{ q: ' "$file" | tail -1)
+  [ "$faq_count" -lt 19 ] && echo "❌ ERROR: $lang has $faq_count FAQs. English minimum is 19."
+  
+  # Rule 3: Required sections exist
+  required_sections=("definition" "faq" "sources" "relatedReading")
+  for section in "${required_sections[@]}"; do
+    grep -q "$section:" "$file" || echo "❌ ERROR: Missing $section in $lang"
+  done
+  
+  # Rule 4: Sources include Brown et al. 2020
+  grep -q "Brown et al" "$file" || echo "⚠️  WARNING: Brown et al. 2020 missing from sources"
+  
+  # Rule 5: ToC array completeness
+  toc_count=$(grep -c '{ label:' "$file")
+  [ "$toc_count" -lt 19 ] && echo "⚠️  WARNING: $lang ToC has only $toc_count entries. English has 19."
+  
+  echo "✅ Validation complete for $lang"
+}
+```
+
+---
+
 ### KNOWN BUGS TO NEVER REPEAT
 
 - **NEVER** serve English body content under a non-English lang param — Google ignores hreflang if content language doesn't match declared language
 - **NEVER** use relative URLs in hreflang tags — must be full absolute URLs with `https://www.promptquorum.com`
 - **NEVER** let `?lang=` params stack (`?lang=en&lang=de`) — strip existing lang param before building alternates
 - **ALWAYS** include `x-default` pointing to base URL without lang param — this is the fallback for users in countries not covered by the 5 languages
+- **NEVER** translate product names, model names (GPT-4o, Claude 4.6 Sonnet, Gemini, Ollama, LM Studio, LLaMA), or benchmark names (MMLU, HumanEval, ARC)
+- **NEVER** have fewer FAQs in translation than in English — completeness is a quality signal to AI crawlers
+- **NEVER** omit the Regulatory Compliance section in German/DACH languages — EU AI Act context is critical for German enterprises
+- **NEVER** mix English and target language in body text (except for untranslatable proper nouns like model names)
 
 ### NEW ROUTE CHECKLIST
 

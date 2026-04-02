@@ -417,5 +417,140 @@ Any new client component that renders article body content must follow the same 
 
 ---
 
+---
+
+## 10. Translation Validation Checklist — Before Committing
+
+**Critical Quality Gates (must pass all before merge):**
+
+Run this checklist on every translated article before committing:
+
+### Issue 1: Grammatical Correctness (E-E-A-T Critical)
+- [ ] **Zero untranslated English words in body text** (except model names, code, URLs)
+  - Common mistake: "Most Optimierung" (English word "Most" in German sentence)
+  - Correct: "Meiste Optimierung" or "Optimierungen scheitern meistens"
+- [ ] No mixed English/target-language in section titles, FAQs, or table cells
+- [ ] All markdown formatting (*bold*, _italic_, `code`) preserved with native text inside
+- [ ] Contractions and abbreviations localized (e.g., "doesn't" → "geht nicht" not literal translation)
+
+### Issue 2: Content Completeness
+- [ ] **FAQ count matches English:** 19 FAQs minimum for fundamentals-of-prompt-optimization
+  - Count command: `grep -c '{ q: ' content.ts | grep -A5 "de:"` should return ≥ 19
+- [ ] **All major sections present:**
+  - ✅ `definition` (H2: "What Is [Topic]?")
+  - ✅ `tldr` (Key Takeaways)
+  - ✅ `faq` (19+ Q&A pairs)
+  - ✅ `sources` (minimum 4 sources)
+  - ✅ `relatedReading` (5+ links)
+  - ✅ `Regulatory Compliance` section (if original article has it)
+  - ✅ `Languages & Regions` table (if original article has it)
+  - ✅ `keyTerms` or `definitionBoxes` glossary
+
+### Issue 3: Table & TOC Completeness
+- [ ] **Table of Contents (`toc` array):** ≥ 19 entries, all with valid anchor slugs
+- [ ] **All table rows match column headers:** `rows[].keys === columns[]` (case-sensitive)
+- [ ] **No broken anchor links in body:** every internal link to `[...](...?lang=XX)` should have matching ToC anchor
+
+### Issue 4: Source Attribution
+- [ ] **4+ sources present** (Schulhoff 2024, Wei et al. 2022, OpenAI 2024, Brown et al. 2020 for optimization articles)
+- [ ] All sources formatted as markdown links: `[Title](URL)`
+- [ ] All URLs are absolute (`https://...`), not relative
+
+### Issue 5: Language Signals
+- [ ] No mixed-language section within a single translated block
+- [ ] Product names **always English:** GPT-4o, Claude, Gemini, Ollama, LM Studio, LLaMA
+- [ ] Benchmark names **always English:** MMLU, HumanEval, ARC
+- [ ] Acronyms **always English:** RAG, CoT, JSON, API, VRAM
+- [ ] But **all explanatory text is 100% target language** (not word-for-word literal translation)
+
+### Issue 6: Metadata Accuracy
+- [ ] `metaDescription` is translated and ≤ 160 characters in target language
+- [ ] `title` is naturally translated (not word-for-word from English)
+- [ ] `readTime` uses correct template for language (e.g., "14 min Lesezeit" not "14 min reading time")
+- [ ] `primaryTerm` is translated (e.g., "Prompt Optimization" → "Prompt-Optimierung" in German)
+
+### Automated Validation Script
+
+Save this as `scripts/validate-translation.sh`:
+
+```bash
+#!/bin/bash
+# Usage: ./scripts/validate-translation.sh src/lib/prompt-engineering/content.ts de
+# Validates a translation for critical quality issues
+
+FILE="$1"
+LANG="$2"
+
+if [ -z "$LANG" ]; then
+  echo "Usage: $0 <file> <lang-code>"
+  echo "Example: $0 src/lib/prompt-engineering/content.ts de"
+  exit 1
+fi
+
+echo "=== Validating $LANG translation ==="
+
+# Issue 1: Untranslated English words (common mistakes)
+echo ""
+echo "Issue 1: Checking for untranslated English..."
+grep -n "Most \|the \|and \|is \|a \|or " "$FILE" | grep "$LANG:" | head -5 && \
+  echo "⚠️  Possible untranslated English detected (review above lines)"
+
+# Issue 2: FAQ count
+echo ""
+echo "Issue 2: Checking FAQ count..."
+faq_count=$(sed -n "/$LANG: {/,/^    }/p" "$FILE" | grep -c '{ q: ')
+if [ "$faq_count" -lt 19 ]; then
+  echo "❌ FAIL: $LANG has only $faq_count FAQs. English minimum is 19."
+else
+  echo "✅ PASS: $LANG has $faq_count FAQs"
+fi
+
+# Issue 3: Required sections
+echo ""
+echo "Issue 3: Checking required sections..."
+required_sections=("definition" "faq" "sources" "relatedReading")
+for section in "${required_sections[@]}"; do
+  sed -n "/$LANG: {/,/^    }/p" "$FILE" | grep -q "$section:" && \
+    echo "✅ $section present" || echo "❌ MISSING: $section"
+done
+
+# Issue 4: Sources include academic citations
+echo ""
+echo "Issue 4: Checking sources..."
+sed -n "/$LANG: {/,/^    }/p" "$FILE" | grep -q "Brown" && \
+  echo "✅ Brown et al. 2020 present" || echo "⚠️  Brown et al. 2020 missing (for optimization articles)"
+
+# Issue 5: TOC completeness
+echo ""
+echo "Issue 5: Checking ToC..."
+toc_count=$(sed -n "/$LANG: {/,/^    }/p" "$FILE" | grep -c '{ label:')
+if [ "$toc_count" -lt 18 ]; then
+  echo "⚠️  ToC has only $toc_count entries (English has 19+)"
+else
+  echo "✅ ToC appears complete ($toc_count entries)"
+fi
+
+# Issue 6: No mixed language in critical fields
+echo ""
+echo "Issue 6: Checking for mixed language in FAQs..."
+sed -n "/$LANG: {/,/^    }/p" "$FILE" | sed -n '/faq:/,/^        }/p' | \
+  grep -i "english\|spanish\|german\|french\|japanese" && \
+  echo "⚠️  Language name found in FAQ (should be translated)" || echo "✅ No language names in FAQs"
+
+echo ""
+echo "=== Validation complete for $LANG ==="
+```
+
+**Run before committing:**
+```bash
+chmod +x scripts/validate-translation.sh
+./scripts/validate-translation.sh src/lib/prompt-engineering/content.ts de  # German
+./scripts/validate-translation.sh src/lib/prompt-engineering/content.ts fr  # French
+./scripts/validate-translation.sh src/lib/prompt-engineering/content.ts ja  # Japanese
+./scripts/validate-translation.sh src/lib/prompt-engineering/content.ts zh  # Chinese
+```
+
+---
+
 **Last updated:** 2026-04-02
 **Next review:** After completion of geopolitics-and-ai translations (all 5 languages)
