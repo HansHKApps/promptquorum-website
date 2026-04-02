@@ -2313,6 +2313,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'What Is Prompt Engineering? — PromptQuorum Guide',
       intro: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs like GPT-4o, Claude, and Gemini. Learn essential techniques, frameworks, and why it matters to AI output quality.',
       publishDate: '2026-03-01',
+      metaDescription: 'What is prompt engineering: techniques to design reliable AI outputs from GPT-4o, Claude, Gemini. Learn frameworks, best practices, and why it matters for AI quality.',
       readTime: '10 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Engineering',
@@ -3534,6 +3535,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'From GPT-2 to Today: How Prompt Engineering Evolved',
       intro: 'The history of prompt engineering from GPT-3 and few-shot prompting in 2020 to context design in 2026. Key milestones, papers, and turning points.',
       publishDate: '2026-03-01',
+      metaDescription: 'History of prompt engineering: from GPT-3 few-shot (2020) to context design (2026). Key milestones, papers, and turning points that shaped the discipline.',
       readTime: '10 min read',
       educationalLevel: 'Beginner',
       schema: {
