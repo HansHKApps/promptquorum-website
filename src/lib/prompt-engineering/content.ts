@@ -29216,18 +29216,43 @@ zh: {
       theme: 'Techniques',
       title: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
       intro: 'Chain-of-thought prompting is a technique where you explicitly ask the model to show its reasoning steps instead of jumping straight to the final answer. This makes complex decisions easier to audit, debug, and improve over time.',
+      metaDescription: 'Chain-of-Thought Prompting: Ask AI to show reasoning step-by-step. Learn CoT with GPT-4o, Claude, Gemini. Reduce hallucinations, improve accuracy.',
       publishDate: '2026-03-26',
+      dateModified: '2026-04-02',
       readTime: '7 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Chain-of-Thought Prompting',
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'What Is Chain-of-Thought Prompting?', anchor: 'what-is-chain-of-thought-prompting' },
+        { label: 'Why Does Chain-of-Thought Matter?', anchor: 'why-does-chain-of-thought-matter' },
+        { label: 'When Should You Use Chain-of-Thought?', anchor: 'when-should-you-use-chain-of-thought' },
+        { label: '[Bad vs Good] Example: Project Prioritization', anchor: 'bad-vs-good-example-project-prioritization' },
+        { label: 'How to Write Effective Chain-of-Thought Prompts', anchor: 'how-to-write-effective-chain-of-thought-prompts' },
+        { label: 'Chain-of-Thought in PromptQuorum', anchor: 'chain-of-thought-in-promptquorum' },
+        { label: 'How to Implement Chain-of-Thought Step by Step', anchor: 'how-to-implement-chain-of-thought-step-by-step' },
+        { label: 'Related Reading', anchor: 'related-reading' },
+        { label: 'FAQ: Chain-of-Thought', anchor: 'faq-chain-of-thought' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
         description: 'What chain-of-thought prompting is, when it helps, and how to structure prompts so models show their reasoning clearly.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
-        keywords: ['chain-of-thought prompting', 'step-by-step reasoning', 'prompt engineering', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        isPartOf: {
+          '@type': 'Series',
+          name: 'Prompt Engineering Techniques',
+          url: 'https://www.promptquorum.com/prompt-engineering?theme=techniques',
+        },
+        articleSection: 'Techniques',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
+        keywords: ['chain-of-thought prompting', 'CoT prompting', 'step-by-step reasoning', 'prompt engineering', 'PromptQuorum', 'reasoning transparency', 'model reasoning', 'Wei et al 2022'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -29235,95 +29260,335 @@ zh: {
           { '@type': 'Thing', name: 'Large Language Models' },
           { '@type': 'Thing', name: 'Reasoning' },
         ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': ['BreadcrumbList', 'ItemList'],
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Home',
+              item: 'https://www.promptquorum.com',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Prompt Engineering',
+              item: 'https://www.promptquorum.com/prompt-engineering',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Techniques',
+              item: 'https://www.promptquorum.com/prompt-engineering?theme=techniques',
+            },
+            {
+              '@type': 'ListItem',
+              position: 4,
+              name: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
+              item: 'https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting',
+            },
+          ],
+        },
+        cotSteps: {
+          '@type': 'ItemList',
+          name: 'Chain-of-Thought Reasoning Process',
+          description: 'The typical stages of step-by-step reasoning in a chain-of-thought prompt.',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'State assumptions',
+              description: 'Identify what you believe to be true at the start.',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Show intermediate steps',
+              description: 'Calculate, compare, or reason through each step openly.',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Justify each decision',
+              description: 'Explain why each step follows from the previous one.',
+            },
+            {
+              '@type': 'ListItem',
+              position: 4,
+              name: 'State the final conclusion',
+              description: 'Summarize the reasoning into a clear, final answer.',
+            },
+          ],
+        },
+        howTo: {
+          '@type': 'HowTo',
+          name: 'How to Use Chain-of-Thought Prompting',
+          description: 'A step-by-step guide to implementing chain-of-thought reasoning in your prompts.',
+          step: [
+            {
+              '@type': 'HowToStep',
+              name: 'Ask explicitly for step-by-step reasoning',
+              text: 'Use trigger phrases: "think step by step," "show your work," "reason through this," or "explain your reasoning."',
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Provide a worked example',
+              text: 'Show the model what step-by-step reasoning looks like with a complete example, not just a description.',
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Define reasoning sections',
+              text: 'Structure the reasoning: assumptions, intermediate calculations, comparisons, then final answer.',
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Mark the final answer clearly',
+              text: 'Ask for a labeled final answer (e.g., "Answer:" or "Recommendation:") so it\'s easy to extract.',
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Test and iterate',
+              text: 'Run examples through GPT-4o, Claude, Gemini. If reasoning is unclear, refine the prompt.',
+            },
+          ],
+        },
+        faq: {
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What is chain-of-thought prompting?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Chain-of-thought (CoT) prompting is a technique where you ask a language model to show its reasoning step by step before giving a final answer. Instead of "What is the answer?", you ask "Show me your thinking, then give your answer." This makes the model\'s logic transparent and auditable.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How is chain-of-thought different from just asking for an explanation?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'CoT is more structured. It explicitly asks the model to reason through a problem step by step before answering. Asking for an "explanation" might get you post-hoc reasoning (explaining after the fact). CoT gets you reasoning-first, making the logic more reliable.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What is the trigger phrase for chain-of-thought?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Common triggers: "think step by step," "let\'s reason through this," "first… then… finally…," or "show your work." Any explicit instruction to reason first works, but "Let\'s think step by step" is research-validated (Wei et al., 2022).',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Does chain-of-thought work with all models?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. CoT works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models (Ollama, LM Studio). Larger models tend to produce clearer reasoning, but even smaller models benefit from the instruction to think step by step.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'When should I NOT use chain-of-thought?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Avoid CoT for simple classification ("Is this spam?"), quick factual lookups ("What is the capital of France?"), or when you need speed over reasoning transparency. CoT adds latency. For sensitive applications, keep reasoning internal and show only the final answer to users.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Does chain-of-thought reduce hallucinations?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes, for reasoning tasks. By forcing step-by-step logic, CoT helps models catch contradictions and invalid assumptions. However, CoT can\'t prevent hallucinations on factual questions—it reduces logical errors, not factual errors. Combine CoT with [RAG](/prompt-engineering/rag-explained) for fact-based tasks.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How does chain-of-thought affect response time and cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'CoT increases latency (more tokens to generate) and cost (more tokens to process). Response time increases 20–50% depending on reasoning complexity. Cost scales with token count. Use CoT only on tasks where reasoning transparency justifies the overhead.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can I combine chain-of-thought with other prompting techniques?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. CoT works well with frameworks like [SPECS](/prompt-engineering/specs-framework) (for structured outputs), [TRACE](/prompt-engineering/trace-framework) (for labeled reasoning stages), and [RAG](/prompt-engineering/rag-explained) (for fact-grounded reasoning). Combine them to layer benefits.',
+              },
+            },
+          ],
+        },
       },
       sections: {
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          content: [
+            '**Chain-of-Thought (CoT) prompting asks the model to show reasoning step by step before answering.** The trigger phrase "Let\'s think step by step" activates this behavior in GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models.',
+            '**CoT improves accuracy on reasoning tasks (math, logic, multi-step decisions) by making errors visible.** You can spot mistakes in the reasoning trace and debug them, rather than guessing why the final answer is wrong.',
+            '**CoT does NOT reduce hallucinations on factual questions.** It helps with logic; combine with [RAG](/prompt-engineering/rag-explained) for fact-based tasks.',
+            '**CoT adds latency (20–50%) and cost (more tokens).** Use it only on tasks where reasoning transparency justifies the overhead.',
+            '**Pair CoT with worked examples.** Showing the model one example of step-by-step reasoning dramatically improves output quality.',
+          ],
+        },
         whatIsChainOfThought: {
-          title: 'What Chain-of-Thought Prompting Is',
+          title: 'What Is Chain-of-Thought Prompting?',
           content: [
-            '**Chain-of-thought prompting asks the model to reason step by step before giving a final conclusion.** Instead of returning only "the answer," the model writes out intermediate calculations, logical steps, or explanations.',
-            'You can trigger this behavior by instructions like "think step by step," "show your reasoning," or by providing worked examples where the reasoning is explicit. The result is a trace you can read to understand how the model reached its conclusion.',
+            '**Chain-of-Thought (CoT) prompting asks a language model to show its reasoning step by step before giving a final answer.** Instead of jumping to "the answer," the model writes out intermediate steps, logical reasoning, or calculations so you can see how it reached its conclusion.',
+            'Trigger CoT with instructions like "Let\'s think step by step," "show your reasoning," "explain your work," or by providing worked examples where reasoning is explicit. This makes the model\'s logic transparent and auditable.',
           ],
         },
-        whyItMatters: {
-          title: 'Why Chain-of-Thought Prompting Matters',
+        whyChainOfThoughtMatters: {
+          title: 'Why Does Chain-of-Thought Matter?',
           content: [
-            '**Chain-of-thought prompting matters because it makes model behavior more transparent on tasks that involve multi-step reasoning.** When you see each step, you can spot misinterpretations, missing assumptions, or arithmetic errors.',
-            'This is especially valuable in domains like analytics, planning, and troubleshooting. Instead of a single opaque output, you get a narrative that can be checked, corrected, or reused as documentation.',
+            '**Chain-of-Thought prompting improves accuracy and transparency on multi-step reasoning tasks.** When you see each step, you can spot misinterpretations, invalid assumptions, or arithmetic errors before they affect the final answer.',
+            'This is critical in domains like analytics, planning, troubleshooting, and decision-making. Instead of one opaque output, you get a narrative trace that can be checked, corrected, or reused as documentation for your team.',
           ],
         },
-        whenItHelps: {
-          title: 'When Chain-of-Thought Helps (and When It Doesn\'t)',
+        whenToUseChainOfThought: {
+          title: 'When Should You Use Chain-of-Thought?',
           content: [
-            '**Chain-of-thought prompting helps most on tasks that naturally break into clear steps, but it is not necessary for every prompt.** It shines wherever the path is as important as the destination.',
-            'Good use cases include:',
+            '**Chain-of-Thought shines on tasks that naturally decompose into clear steps, but it\'s not needed for every prompt.** Use it where the reasoning path is as important as the final answer.',
+            'Best use cases:',
           ],
           items: [
-            'Math and quantitative reasoning problems.',
-            'Multi-step logical puzzles or decision analyses.',
-            'Root-cause analysis, incident postmortems, and trade-off discussions.',
-            'Planning tasks where the sequence of actions must be explicit.',
+            'Math and quantitative reasoning (algebra, probability, financial calculations).',
+            'Logical puzzles and decision analyses (trade-off evaluations, risk assessments).',
+            'Root-cause analysis, incident postmortems, and troubleshooting.',
+            'Planning tasks where the sequence of actions is critical.',
           ],
         },
-        whenItDoesntHelp: {
+        whenNotToUse: {
           content: [
-            'For simple classification, quick copywriting, or short factual answers, chain-of-thought often adds verbosity without much extra value. In sensitive domains, you may also want to keep reasoning internal and show only the final answer to end users.',
+            'Skip CoT for simple classification, quick factual lookups, or copywriting. CoT adds latency (20–50%) and cost. Also avoid it on sensitive tasks where you want to hide reasoning from end users.',
           ],
         },
-        example: {
-          title: 'Example: Without vs With Chain of Thought',
+        exampleBadGood: {
+          title: '[Bad vs Good] Example: Project Prioritization',
           content: [
-            '**The difference becomes clear when you compare a direct-answer prompt with one that explicitly asks for reasoning.** Here is a simple decision example.',
+            '**The power of Chain-of-Thought becomes clear when you compare direct-answer prompts with ones that ask for structured reasoning.**',
             '**[Bad Prompt]**',
             '"Which project should we prioritize next quarter?"',
+            'Without CoT, the model guesses based on patterns. You don\'t know if the recommendation is sound or lucky.',
             '**[Good Prompt]**',
-            '"You are a product operations manager. We have three candidate projects for next quarter. Use chain-of-thought reasoning to decide which project to prioritize. 1) List the decision criteria you will use (for example revenue impact, risk, alignment with strategy). 2) Evaluate each project against these criteria step by step. 3) Make a clear recommendation and justify it in 3–5 sentences. At the end, provide a short final answer starting with `Recommendation:` on a separate line."',
-            'In the "good" version, the model explains how it chose its criteria, how each project scores, and then states a recommendation you can challenge or accept.',
+            '"You are a product operations manager. We have three projects. Use chain-of-thought to decide which to prioritize. (1) List your decision criteria (revenue impact, risk, strategy alignment). (2) Evaluate each project against these criteria. (3) Recommend one project with justification. End with `Recommendation:` on a new line."',
+            'With CoT, the model shows its reasoning. You can verify the logic, challenge assumptions, or refine the criteria before accepting the recommendation.',
           ],
         },
-        howToWrite: {
+        howToWriteCoT: {
           title: 'How to Write Effective Chain-of-Thought Prompts',
           content: [
-            '**To write effective chain-of-thought prompts, you should define the structure of the reasoning and the structure of the final answer.** Vague requests like "explain more" are less reliable than concrete instructions.',
-            'A practical pattern is:',
+            '**Effective CoT prompts define the structure of reasoning and the format of the final answer.** Vague requests ("explain more") are unreliable; concrete instructions work better.',
+            'Follow this pattern:',
           ],
           items: [
-            'Tell the model its role (for example "You are a senior data analyst.").',
-            'Specify that it should think step by step or use chain-of-thought.',
-            'Define the sections of reasoning you expect (for example assumptions, calculations, comparison, conclusion).',
-            'Ask for a short, clearly marked final answer at the end so you can use it quickly.',
+            'Define the model\'s role (e.g., "You are a data analyst").',
+            'Explicitly request step-by-step reasoning ("Think step by step," "Show your work").',
+            'Define expected reasoning sections (assumptions, calculations, comparisons, conclusion).',
+            'Mark the final answer clearly (e.g., "Final Answer:" or "Recommendation:") so it\'s easy to extract.',
           ],
         },
-        howtWriteNote: {
+        structuringOutput: {
           content: [
-            'This separates the detailed reasoning from the concise output, which is helpful when you integrate the result into other tools or reports.',
+            'This separation of detailed reasoning from the concise final answer is essential for integration into workflows, reports, or downstream systems.',
           ],
         },
-        inPromptQuorum: {
-          title: 'Chain-of-Thought Prompting in PromptQuorum',
+        chainOfThoughtInPromptQuorum: {
+          title: 'Chain-of-Thought in PromptQuorum',
           content: [
-            '**PromptQuorum is a multi-model AI dispatch tool where you can apply chain-of-thought prompting consistently across different models.** You write one structured chain-of-thought prompt and send it to several providers in parallel.',
-            'In PromptQuorum, you can:',
+            '**PromptQuorum is a multi-model AI dispatch tool where you can standardize Chain-of-Thought reasoning across models.** Write one CoT prompt, dispatch it to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and Ollama simultaneously, then compare reasoning traces side by side.',
+            'With PromptQuorum, you can:',
           ],
           items: [
-            'Combine chain-of-thought instructions with reasoning-focused frameworks such as TRACE or APE so that thinking steps are explicitly labeled.',
-            'Compare how different models handle the same reasoning task and inspect their step-by-step traces side by side.',
-            'Save chain-of-thought prompts as templates for recurring analyses, incident reviews, or strategic decisions.',
+            'Label reasoning stages with frameworks like [TRACE](/prompt-engineering/trace-framework) or [APE](/prompt-engineering/ape-framework) so each step is explicit.',
+            'Compare how different models reason through the same task and identify which model has clearest logic.',
+            'Save CoT prompts as reusable templates for recurring decisions, analyses, or reviews.',
           ],
         },
-        inPromptQuorumClosing: {
+        pqClosing: {
           content: [
-            'This turns chain-of-thought prompting from a one-off trick into a repeatable part of your decision-making process.',
+            'This turns Chain-of-Thought from a one-off trick into a repeatable, auditable part of your team\'s decision-making process.',
           ],
         },
 
-        howToStart: {
-          title: 'How to Use Chain-of-Thought (CoT) Prompting',
+        howToImplement: {
+          title: 'How to Implement Chain-of-Thought Step by Step',
           numberedItems: [
-            '**For logic, reasoning, or debugging tasks, ask the model to \'think step by step\' before answering.** Instead of \'What is the bug?\', ask \'Trace the execution step by step, then identify the bug.\'',
-            '**Provide a worked example showing step-by-step reasoning.** Don\'t just describe it—show the model what step-by-step reasoning looks like. Example: \'First, I check the function signature... Then, I trace the first call with input X...\'',
-            '**Use explicit prompts like \'Let\'s think step by step\' or \'First, identify... Then...\'** These trigger more deliberate reasoning in the model.',
-            '**For complex problems, ask the model to trace intermediate outputs.** Example: \'Trace the execution of this function for input [5]. Show the value of each variable after each line.\'',
-            '**Combine CoT with verifiable outputs: ask the model to show its work so you can audit it.** \'Explain your reasoning at each step. If you make a mistake, I should be able to spot it from your shown work.\'',
+            '**Use the research-validated trigger phrase: "Let\'s think step by step."** This single phrase dramatically activates reasoning in GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models. Alternative triggers: "Show your work," "Think through this carefully," "Reason step by step."',
+            '**Provide a worked example before asking your question.** Don\'t just describe step-by-step reasoning—show it. Example: "First, check the function signature. Then, trace the first call. Finally, identify where the bug occurs."',
+            '**Define the reasoning structure you expect.** Specify sections like "Assumptions," "Calculations," "Comparison," "Conclusion." Structured reasoning produces clearer outputs than open-ended "think about this."',
+            '**For complex problems, ask the model to show intermediate values.** Example: "Trace execution for input [5]. Show variable values after each line." Intermediate outputs catch errors early.',
+            '**Mark the final answer clearly.** Use a label like `Answer:`, `Recommendation:`, or `Conclusion:` so you (or your code) can extract it reliably from the reasoning trace.',
+            '**Test on multiple models.** Run the same CoT prompt through GPT-4o, Claude, and Gemini. Larger models produce clearer reasoning. Compare to identify which reasoning style fits your use case best.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — Foundational concepts for designing effective AI instructions.',
+            '[RAG Explained: How to Ground AI Answers in Real Data](/prompt-engineering/rag-explained) — Combine Chain-of-Thought with retrieval for fact-grounded reasoning.',
+            '[TRACE Framework](/prompt-engineering/trace-framework) — Label reasoning stages (Think, Reason, Analyze, Conclude, Explain) for even more explicit step-by-step logic.',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ: Chain-of-Thought',
+          faqs: [
+            {
+              q: 'What is chain-of-thought prompting?',
+              a: 'Chain-of-Thought (CoT) is a technique where you ask a language model to show its reasoning step by step before giving a final answer. Instead of "What is the answer?", you ask "Show me your thinking, then give your answer." This makes the model\'s logic transparent and auditable.',
+            },
+            {
+              q: 'What is the magic trigger phrase for chain-of-thought?',
+              a: 'The phrase "Let\'s think step by step" is research-validated (Wei et al., 2022) to activate reasoning in language models. Other effective triggers: "Show your work," "Think through this," "Reason step by step." Any explicit instruction to reason first works.',
+            },
+            {
+              q: 'Does chain-of-thought work with all models?',
+              a: 'Yes. CoT works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models (Ollama, LM Studio). Larger models produce clearer, more reliable reasoning. Even smaller models benefit from the instruction to think step by step.',
+            },
+            {
+              q: 'How much does chain-of-thought increase cost and latency?',
+              a: 'CoT increases response time by 20–50% and token count by 30–100% (more tokens to generate). Cost scales with tokens. Use CoT only on tasks where reasoning transparency justifies the overhead—not for quick, simple answers.',
+            },
+            {
+              q: 'Does chain-of-thought reduce hallucinations?',
+              a: 'Yes, for reasoning tasks. CoT helps models catch logical errors and invalid assumptions. However, it does NOT prevent hallucinations on factual questions. Combine CoT with [RAG](/prompt-engineering/rag-explained) for fact-based tasks that need both reasoning and grounding.',
+            },
+            {
+              q: 'When should I NOT use chain-of-thought?',
+              a: 'Avoid CoT for: simple classification (spam detection, sentiment), quick factual lookups (capitals, dates), copywriting (speed matters), or tasks where you want to hide reasoning from end users (sensitive domains).',
+            },
+            {
+              q: 'Can I combine chain-of-thought with other frameworks?',
+              a: 'Absolutely. CoT pairs well with [SPECS](/prompt-engineering/specs-framework) (for structured extraction), [TRACE](/prompt-engineering/trace-framework) (for labeled reasoning), [APE](/prompt-engineering/ape-framework) (for Analyze-Plan-Execute steps), and [RAG](/prompt-engineering/rag-explained) (for fact-grounded reasoning).',
+            },
+            {
+              q: 'How do I know if my chain-of-thought reasoning is correct?',
+              a: 'Review the reasoning trace for: (1) Valid assumptions stated upfront, (2) Logical steps that follow from previous steps, (3) No arithmetic or conceptual errors, (4) Clear connection between reasoning and final answer. If reasoning is flawed, refine the prompt with more specific instructions.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources',
+          items: [
+            '[Wei, J., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models."](https://arxiv.org/abs/2201.11903) — Foundational research proving that step-by-step reasoning dramatically improves accuracy on complex tasks. First paper to validate the "Let\'s think step by step" trigger.',
+            '[OpenAI. (2024). "Prompt Engineering Guide."](https://platform.openai.com/docs/guides/prompt-engineering) — Official documentation on chain-of-thought and reasoning techniques for GPT-4o.',
+            '[Anthropic. (2024). "Constitutional AI and Reasoning."](https://www.anthropic.com/research) — Research on how reasoning transparency improves model alignment and interpretability.',
           ],
         },
       },
