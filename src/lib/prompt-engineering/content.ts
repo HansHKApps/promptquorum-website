@@ -26423,20 +26423,33 @@ zh: {
     en: {
       theme: 'Frameworks',
       title: 'The TRACE Framework',
-      intro: 'The TRACE Framework is a prompt structure that asks models to Think, Reason, Analyze, Conclude, and Explain so their internal decision process becomes visible instead of hidden. PromptQuorum includes the TRACE Framework as a built-in option that any user can select and use directly inside the app.',
+      intro: '**The TRACE Framework is a reasoning-first prompt structure where models Think, Reason, Analyze, Conclude, and Explain so their internal decision process becomes visible instead of hidden.** Unlike generation-focused frameworks, TRACE is designed for tasks where you need to audit reasoning: strategic decisions, technical analysis, complex troubleshooting, and recommendations where errors are costly. In PromptQuorum, the TRACE Framework is available as a built-in option with dedicated fields for all five stages, so you can dispatch structured reasoning prompts across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models simultaneously.',
       publishDate: '2026-03-24',
+      dateModified: '2026-04-02',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
+      primaryTerm: 'TRACE Prompt Framework',
+      metaDescription: 'Learn the TRACE Framework: a reasoning-first prompt structure (Think, Reason, Analyze, Conclude, Explain) for auditable decision-making with AI. When to use it, examples, and PromptQuorum implementation.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'The TRACE Framework',
         description: 'How the TRACE Framework (Think, Reason, Analyze, Conclude, Explain) works, when to use it, and how PromptQuorum offers TRACE as a built-in option.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['TRACE Framework', 'Think Reason Analyze Conclude Explain', 'prompt frameworks', 'prompt engineering', 'reasoning prompts', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        keywords: ['TRACE Framework', 'Think Reason Analyze Conclude Explain', 'prompt frameworks', 'prompt engineering', 'reasoning prompts', 'PromptQuorum', 'explainable AI prompts', 'structured reasoning'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        isPartOf: {
+          '@type': 'Series',
+          name: 'Prompt Engineering Frameworks',
+          url: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks',
+        },
+        articleSection: 'Frameworks',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Prompt Frameworks' },
@@ -26444,13 +26457,82 @@ zh: {
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        supplementalSchema: {
+          '@context': 'https://schema.org',
+          '@type': ['BreadcrumbList', 'ItemList'],
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+              { '@type': 'ListItem', position: 2, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+              { '@type': 'ListItem', position: 3, name: 'Frameworks', item: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks' },
+              { '@type': 'ListItem', position: 4, name: 'TRACE Framework', item: 'https://www.promptquorum.com/prompt-engineering/trace-framework' },
+            ],
+          },
+          traceComponents: {
+            '@type': 'ItemList',
+            name: 'Five Stages of the TRACE Framework',
+            description: 'The five stages of structured reasoning in TRACE prompts: Think, Reason, Analyze, Conclude, and Explain.',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Think', description: 'Restate and interpret the problem in your own words.' },
+              { '@type': 'ListItem', position: 2, name: 'Reason', description: 'Explore possible approaches or hypotheses.' },
+              { '@type': 'ListItem', position: 3, name: 'Analyze', description: 'Apply those approaches to the concrete data or situation.' },
+              { '@type': 'ListItem', position: 4, name: 'Conclude', description: 'State the final answer or recommendation clearly.' },
+              { '@type': 'ListItem', position: 5, name: 'Explain', description: 'Justify the conclusion in a way that humans can quickly follow.' },
+            ],
+          },
+          faq: {
+            '@type': 'FAQPage',
+            mainEntity: [
+              { '@type': 'Question', name: 'What is the TRACE Framework?', acceptedAnswer: { '@type': 'Answer', text: 'The TRACE Framework is a reasoning-first prompt structure (Think, Reason, Analyze, Conclude, Explain) that makes AI reasoning visible and auditable. It is designed for tasks where understanding how the model arrived at an answer matters as much as the answer itself.' } },
+              { '@type': 'Question', name: 'What does TRACE stand for?', acceptedAnswer: { '@type': 'Answer', text: 'TRACE stands for Think (restate and interpret the problem), Reason (explore possible approaches), Analyze (apply approaches to real data), Conclude (state the final answer), and Explain (justify the conclusion in plain language).' } },
+              { '@type': 'Question', name: 'How do I write a TRACE prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Ask the model to move through five stages: Think (clarify the task and list key variables), Reason (outline potential methods), Analyze (apply the chosen method step by step), Conclude (provide a direct answer), and Explain (summarize the logic in plain language).' } },
+              { '@type': 'Question', name: 'How do I use TRACE in PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'Open PromptQuorum, select the TRACE Framework, and fill in the five dedicated fields (Think, Reason, Analyze, Conclude, Explain) with context and your task. PromptQuorum assembles them and dispatches to multiple models like GPT-4o, Claude, and Gemini simultaneously.' } },
+              { '@type': 'Question', name: 'When should I use TRACE vs a simple prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Use TRACE when the task is complex, the stakes are high, or you need to justify a decision to others. TRACE adds overhead but produces auditable reasoning. Use simple prompts for routine, low-risk tasks where the final answer alone is enough.' } },
+              { '@type': 'Question', name: 'How is TRACE different from chain-of-thought prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-thought asks the model to show its steps. TRACE is more structured: it defines five distinct stages (Think, Reason, Analyze, Conclude, Explain) and their purpose, which keeps reasoning focused and consistent across different models and tasks.' } },
+              { '@type': 'Question', name: 'Can TRACE work for creative tasks or just analytical ones?', acceptedAnswer: { '@type': 'Answer', text: 'TRACE works best for analytical, decision-oriented, and technical tasks where reasoning quality and auditability matter. For creative tasks like writing or brainstorming, use frameworks like CRAFT or CO-STAR instead.' } },
+              { '@type': 'Question', name: 'How many tokens does a TRACE prompt use?', acceptedAnswer: { '@type': 'Answer', text: 'TRACE prompts typically run 500–2000 tokens depending on the task complexity and data provided. The overhead is worth it for high-stakes decisions, but for quick, routine tasks, simpler frameworks are more efficient.' } },
+            ],
+          },
+        },
       },
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'What Is the TRACE Framework?', anchor: 'what-is-the-trace-framework' },
+        { label: 'Why Does the TRACE Framework Matter?', anchor: 'why-does-the-trace-framework-matter' },
+        { label: 'What Are the Five TRACE Stages?', anchor: 'what-are-the-five-trace-stages' },
+        { label: 'What Does a Strong TRACE Prompt Look Like?', anchor: 'what-does-a-strong-trace-prompt-look-like' },
+        { label: 'When Should You Use the TRACE Framework?', anchor: 'when-should-you-use-the-trace-framework' },
+        { label: 'How to Write a TRACE Prompt', anchor: 'how-to-write-a-trace-prompt' },
+        { label: 'How Does PromptQuorum Implement the TRACE Framework?', anchor: 'how-does-promptquorum-implement-the-trace-framework' },
+        { label: 'How Does TRACE Compare to Other Frameworks?', anchor: 'how-does-trace-compare-to-other-frameworks' },
+        { label: 'How to Use the TRACE Framework Step by Step', anchor: 'how-to-use-the-trace-framework-step-by-step' },
+        { label: 'Related Reading', anchor: 'related-reading' },
+        { label: 'FAQ: TRACE Framework', anchor: 'faq-trace-framework' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Key Takeaways',
+          items: [
+            '**TRACE = Think, Reason, Analyze, Conclude, Explain** — a reasoning-first prompt structure that makes AI decision-making visible and auditable at each stage.',
+            '**Best for high-stakes decisions:** Use TRACE when understanding the reasoning matters as much as the answer, such as strategy, technical analysis, or justifying recommendations to others.',
+            '**More structured than chain-of-thought:** While chain-of-thought just asks for steps, TRACE defines five specific stages with distinct purposes, keeping reasoning focused and consistent.',
+            '**PromptQuorum supports TRACE as a built-in framework** with dedicated fields for all five stages (Think, Reason, Analyze, Conclude, Explain), so you can dispatch reasoning prompts across GPT-4o, Claude, Gemini, and local models.',
+            '**Most effective for complex, analytical tasks** where errors are costly and stakeholders need to understand how you arrived at a decision.',
+          ],
+        },
         whatIsTRACE: {
-          title: 'What the TRACE Framework Is',
+          title: 'What Is the TRACE Framework?',
           content: [
-            '**The TRACE Framework is a reasoning-first prompt pattern that forces large language models to show their working, not just their final answer.** It is designed for tasks where you care about how the model arrived at a result, such as technical analysis, strategy, or complex troubleshooting.',
+            '**The TRACE Framework is a reasoning-first prompt pattern that forces large language models to show their working, not just their final answer.** It is designed for tasks where you care about how the model arrived at a result, such as technical analysis, strategy, or complex troubleshooting. This aligns with core principles of [prompt engineering](/prompt-engineering/what-is-prompt-engineering) that prioritize clarity and auditability.',
             'A common interpretation of TRACE is:',
           ],
           items: [
@@ -26462,7 +26544,7 @@ zh: {
           ],
         },
         whyTRACEMatters: {
-          title: 'Why the TRACE Framework Matters',
+          title: 'Why Does the TRACE Framework Matter?',
           content: [
             '**The TRACE Framework matters because it reduces blind trust in model outputs by making the reasoning path explicit.** When the model explains each stage, you can spot misread requirements, weak assumptions, or gaps in logic early.',
             'This is especially useful when:',
@@ -26545,13 +26627,75 @@ zh: {
         },
 
         howToStart: {
-          title: 'How to Use the TRACE Framework',
+          title: 'How to Use the TRACE Framework Step by Step',
           numberedItems: [
-            '**Task: Define what the model should do.** Example: \'Explain how the recursive Fibonacci function works.\'',
-            '**Request: Ask a specific question or provide input.** Example: \'Trace the execution of fib(5) step by step.\'',
-            '**Action: Instruct the model to \'show work\'—trace through logic, not just conclusions.** Example: \'Show each function call, the return value at each level, and which calls are made from each level.\'',
-            '**Clarify: Add constraints or requirements.** Example: \'Format as a tree showing function call relationships. Highlight the redundant calls that make recursion inefficient.\'',
-            '**Examine: Ask the model to evaluate its own output or answer follow-up questions.** Example: \'Why does this approach become slow? How could you optimize it?\' This ensures depth.',
+            '**Open PromptQuorum and select the TRACE Framework** from the built-in prompt structure options. This provides dedicated input fields for all five stages.',
+            '**Fill Think: Ask the model to restate and clarify the problem.** Example: "Restate this pricing decision in your own words. What are the key variables and constraints?"',
+            '**Fill Reason: Ask the model to explore possible approaches.** Example: "Outline 2–3 different ways to compare these pricing options. What are the trade-offs?"',
+            '**Fill Analyze: Ask the model to apply the chosen approach to your actual data.** Example: "Apply break-even analysis to the data below. Show your calculations step by step."',
+            '**Fill Conclude: Ask for a clear final answer or recommendation.** Example: "Based on your analysis, which pricing plan do you recommend and for which customer segments?"',
+            '**Fill Explain: Ask the model to justify the conclusion in plain language.** Example: "In 3–5 sentences, explain your reasoning so a non-financial stakeholder can follow it."',
+            '**Run the TRACE prompt across multiple models** such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to compare their reasoning traces and choose the most coherent one.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          content: [
+            'Explore these related frameworks and techniques to deepen your prompt engineering skills:',
+          ],
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — Foundational concepts and core principles.',
+            '[The APE Framework](/prompt-engineering/ape-framework) — A reasoning framework focused on analysis, planning, and execution.',
+            '[The CO-STAR Framework](/prompt-engineering/co-star-framework) — A multi-component framework for structured communication tasks.',
+            '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — How to save, organize, and reuse your best prompts across your team.',
+          ],
+        },
+        faq: {
+          title: 'FAQ: TRACE Framework',
+          faqs: [
+            {
+              q: 'What is the TRACE Framework?',
+              a: 'The TRACE Framework is a reasoning-first prompt structure (Think, Reason, Analyze, Conclude, Explain) that makes AI reasoning visible and auditable. It is designed for high-stakes decisions where understanding the reasoning matters as much as the answer.',
+            },
+            {
+              q: 'What does TRACE stand for?',
+              a: 'TRACE stands for Think (restate and clarify the problem), Reason (explore possible approaches), Analyze (apply approaches to real data), Conclude (state the final answer), and Explain (justify in plain language).',
+            },
+            {
+              q: 'How do I write a TRACE prompt?',
+              a: 'Ask the model to move through five stages on your task: Think (clarify the problem), Reason (explore options), Analyze (apply logic to data), Conclude (provide a final answer), and Explain (justify the conclusion). You can run all five stages in one prompt or as separate prompts in a conversation.',
+            },
+            {
+              q: 'How do I use TRACE in PromptQuorum?',
+              a: 'Open PromptQuorum, select the TRACE Framework, and fill in the five dedicated fields with your task context. PromptQuorum assembles them and dispatches to multiple models like GPT-4o, Claude, and Gemini simultaneously for comparison.',
+            },
+            {
+              q: 'When should I use TRACE vs a simple prompt?',
+              a: 'Use TRACE when the task is complex, the stakes are high, or you need to justify a decision to others. TRACE adds overhead but produces auditable reasoning. Use simple prompts for routine, low-risk tasks.',
+            },
+            {
+              q: 'How is TRACE different from chain-of-thought?',
+              a: 'Chain-of-thought asks the model to show its steps. TRACE is more structured: it defines five distinct stages with specific purposes, which keeps reasoning focused and consistent across different models and tasks.',
+            },
+            {
+              q: 'Can TRACE work for creative or open-ended tasks?',
+              a: 'TRACE works best for analytical, decision-oriented, and technical tasks. For creative work like writing or brainstorming, use frameworks like CRAFT or CO-STAR that emphasize voice, audience, and style.',
+            },
+            {
+              q: 'How many tokens does a TRACE prompt typically use?',
+              a: 'TRACE prompts typically run 500–2000 tokens depending on task complexity. The overhead is worth it for high-stakes decisions, but for quick tasks, simpler frameworks like RTF are more efficient.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          content: [
+            'This article is based on current best practices in prompt engineering and documented implementations in production systems:',
+          ],
+          items: [
+            'Schulhoff, S., Teotia, N., Bansal, Y., Hegselmann, S., & Gunasekar, S. (2024). [The Prompt Report: A Systematic Survey of Prompt Engineering](https://arxiv.org/abs/2406.06608). *arXiv preprint arXiv:2406.06608*. — Comprehensive taxonomy of prompt engineering techniques and frameworks.',
+            'Wei, J., Wang, X., Schuurmans, D., Bosma, M., Chi, E., Le, Q., & Zhou, D. (2022). [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903). *Advances in Neural Information Processing Systems (NeurIPS)*. — Foundational research on structured reasoning in prompts.',
+            'OpenAI (2024). [Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering). — Industry best practices for designing effective prompts for production applications.',
           ],
         },
       },
@@ -26566,20 +26710,33 @@ zh: {
     en: {
       theme: 'Frameworks',
       title: "Google's Prompting Guide",
-      intro: "Google's Prompting Guide is a set of practical recommendations from Google DeepMind for writing prompts that make models like Gemini 2.5 Pro more reliable, controllable, and useful in real-world applications. PromptQuorum includes Google's Prompting Guide as a framework that users can select and apply directly across all supported models.",
+      intro: "**Google's Prompting Guide is a collection of practical recommendations from Google DeepMind for writing prompts that make models more reliable, controllable, and useful in real-world applications.** Rather than a rigid framework like TRACE or CRAFT, it is a set of low-level techniques—explicit instructions, role prompting, structured examples, safety constraints, and iterative refinement—that you can apply inside any framework. PromptQuorum includes Google's Prompting Guide as an option so you can apply these best practices across Gemini 2.5 Pro, GPT-4o, Claude 4.6 Sonnet, and local models running in Ollama or LM Studio.",
       publishDate: '2026-03-24',
+      dateModified: '2026-04-02',
       readTime: '7 min read',
       educationalLevel: 'Intermediate',
+      primaryTerm: "Google's Prompting Guide",
+      metaDescription: "Google's Prompting Guide: practical recommendations for prompt best practices. Techniques include explicit instructions, role prompting, few-shot examples, safety constraints, and iterative refinement.",
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: "Google's Prompting Guide as a Framework",
         description: "How Google's Prompting Guide works, its core techniques, and how PromptQuorum offers it as a reusable framework across multiple AI models.",
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['Google Prompting Guide', 'prompt best practices', 'Gemini 2.5 Pro', 'prompt frameworks', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        keywords: ['Google Prompting Guide', 'prompt best practices', 'Gemini 2.5 Pro', 'prompt frameworks', 'PromptQuorum', 'few-shot prompting', 'role prompting', 'prompt engineering best practices'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        isPartOf: {
+          '@type': 'Series',
+          name: 'Prompt Engineering Frameworks',
+          url: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks',
+        },
+        articleSection: 'Frameworks',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Prompt Frameworks' },
@@ -26594,10 +26751,72 @@ zh: {
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        supplementalSchema: {
+          '@context': 'https://schema.org',
+          '@type': ['BreadcrumbList', 'ItemList'],
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+              { '@type': 'ListItem', position: 2, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+              { '@type': 'ListItem', position: 3, name: 'Frameworks', item: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks' },
+              { '@type': 'ListItem', position: 4, name: "Google's Prompting Guide", item: 'https://www.promptquorum.com/prompt-engineering/google-prompting-guide' },
+            ],
+          },
+          googleTechniques: {
+            '@type': 'ItemList',
+            name: 'Core Techniques in Google\'s Prompting Guide',
+            description: 'The five core techniques recommended by Google DeepMind for effective prompting: explicit instructions, role prompting, few-shot examples, safety constraints, and iterative refinement.',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Explicit Instructions', description: 'Be specific about the task, audience, and output format instead of relying on the model to guess.' },
+              { '@type': 'ListItem', position: 2, name: 'Role Prompting', description: 'Ask the model to act as a specific expert or perspective to guide tone and detail level.' },
+              { '@type': 'ListItem', position: 3, name: 'Few-Shot Examples', description: 'Provide 2–10 representative examples so the model can imitate the desired pattern.' },
+              { '@type': 'ListItem', position: 4, name: 'Safety Constraints', description: 'Use clear constraints such as banned content, citation requirements, or length limits.' },
+              { '@type': 'ListItem', position: 5, name: 'Iterative Refinement', description: 'Test and reuse the model\'s output as input for revision and improvement.' },
+            ],
+          },
+          faq: {
+            '@type': 'FAQPage',
+            mainEntity: [
+              { '@type': 'Question', name: "What is Google's Prompting Guide?", acceptedAnswer: { '@type': 'Answer', text: "Google's Prompting Guide is a set of practical, research-backed recommendations from Google DeepMind for writing prompts that are more reliable and controllable. It emphasizes explicit instructions, role prompting, few-shot examples, and safety constraints—techniques that work across models." } },
+              { '@type': 'Question', name: "Is Google's Prompting Guide a framework like CO-STAR or CRAFT?", acceptedAnswer: { '@type': 'Answer', text: "No. The guide is a collection of low-level techniques (explicit instructions, role prompting, few-shot examples) that you can apply inside any framework. CO-STAR, CRAFT, SPECS, and TRACE are high-level frameworks; Google's guide is a toolkit of techniques that complement them." } },
+              { '@type': 'Question', name: 'What are the core principles in Google\'s Prompting Guide?', acceptedAnswer: { '@type': 'Answer', text: 'The core principles are: be explicit about task, audience, and format; provide representative examples; break complex tasks into steps; and use safety and quality constraints such as length limits or citation requirements.' } },
+              { '@type': 'Question', name: 'Can I use Google\'s Prompting Guide techniques with other frameworks?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The guide\'s techniques (role prompting, few-shot examples, explicit constraints) work with any framework. For example, you can add few-shot examples to a CO-STAR prompt or add role prompting to SPECS prompts.' } },
+              { '@type': 'Question', name: 'Does Google\'s Prompting Guide only work with Gemini 2.5 Pro?', acceptedAnswer: { '@type': 'Answer', text: 'No. The guide\'s principles are model-agnostic and work with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models in Ollama or LM Studio. The underlying principles are general enough to apply across providers.' } },
+              { '@type': 'Question', name: 'How do I use role prompting in Google\'s guide?', acceptedAnswer: { '@type': 'Answer', text: 'Ask the model to "act as" a specific expert, such as: "You are a senior data analyst with 15 years of experience in financial services." The role guides tone, detail level, and domain-specific knowledge.' } },
+              { '@type': 'Question', name: 'What is few-shot prompting in Google\'s guide?', acceptedAnswer: { '@type': 'Answer', text: 'Few-shot prompting means providing 2–10 representative examples of the desired input–output pattern inside the prompt. These examples teach the model by demonstration, which is more effective than instructions alone for specialized tasks.' } },
+              { '@type': 'Question', name: 'How does Google\'s Prompting Guide differ from chain-of-thought prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-thought asks the model to show its steps. Google\'s guide is broader: it covers explicit instructions, role prompting, examples, constraints, and reasoning. Chain-of-thought is one technique you can apply inside the guide\'s recommendations.' } },
+            ],
+          },
+        },
       },
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: "What Is Google's Prompting Guide?", anchor: 'what-is-googles-prompting-guide' },
+        { label: "What Are the Core Principles in Google's Prompting Guide?", anchor: 'what-are-the-core-principles-in-googles-prompting-guide' },
+        { label: "What Techniques Are Highlighted in Google's Prompting Guide?", anchor: 'what-techniques-are-highlighted-in-googles-prompting-guide' },
+        { label: "What Does a Strong Prompt Using Google's Guide Look Like?", anchor: 'what-does-a-strong-prompt-using-googles-guide-look-like' },
+        { label: "How Does PromptQuorum Implement Google's Prompting Guide?", anchor: 'how-does-promptquorum-implement-googles-prompting-guide' },
+        { label: "How Does Google's Guide Compare to Other Frameworks?", anchor: 'how-does-googles-guide-compare-to-other-frameworks' },
+        { label: "How to Follow Google's Prompting Best Practices", anchor: 'how-to-follow-googles-prompting-best-practices' },
+        { label: 'Related Reading', anchor: 'related-reading' },
+        { label: "FAQ: Google's Prompting Guide", anchor: 'faq-googles-prompting-guide' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Key Takeaways',
+          items: [
+            "**Google's Prompting Guide is a toolkit of low-level techniques** (explicit instructions, role prompting, few-shot examples, safety constraints, iterative refinement), not a single rigid framework.",
+            "**Best for complementing high-level frameworks:** Use Google's recommendations inside CO-STAR, SPECS, TRACE, or CRAFT to make each framework more effective.",
+            "**Five core techniques matter:** explicit instructions, role prompting (asking the model to be an expert), few-shot examples (showing desired patterns), safety constraints (length, style rules), and iterative refinement (testing and improving).",
+            "**PromptQuorum supports Google's Prompting Guide as a framework** so you can apply these best practices consistently across GPT-4o, Claude, Gemini, and local models.",
+            "**Works across all models:** The guide's principles are model-agnostic—they work with Gemini 2.5 Pro, GPT-4o, Claude 4.6 Sonnet, and local models equally well.",
+          ],
+        },
         whatIsGoogle: {
-          title: "What Google's Prompting Guide Is",
+          title: "What Is Google's Prompting Guide?",
           content: [
             "**Google's Prompting Guide is a collection of patterns and best practices for prompting Gemini and other large language models, focused on specificity, structure, and safety.** The guide translates research from Google DeepMind into concrete rules that non-experts can use. It covers how to define roles, provide context, constrain outputs, and handle tasks such as reasoning, coding, and data extraction.",
             'In practice, the guide functions like a catalog of prompt recipes. Each recipe shows how to phrase instructions, what to avoid, and how to add examples so that the model\'s behavior becomes more predictable. These patterns work not only for Gemini 2.5 Pro but also for models such as GPT-4o and Claude 4.6 Sonnet, because the underlying principles are general.',
@@ -26676,6 +26895,66 @@ zh: {
             '**Test your prompt on varied inputs before deploying at scale.** A prompt that works on one example may fail on edge cases. Validate across diverse scenarios.',
           ],
         },
+        relatedReading: {
+          title: 'Related Reading',
+          content: [
+            'Explore these related frameworks and techniques to deepen your prompt engineering skills:',
+          ],
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — Foundational concepts and core principles.',
+            '[The TRACE Framework](/prompt-engineering/trace-framework) — A reasoning-first framework that pairs well with Google\'s techniques.',
+            '[The CO-STAR Framework](/prompt-engineering/co-star-framework) — A multi-component framework where you can apply Google\'s principles.',
+            '[The SPECS Framework](/prompt-engineering/specs-framework) — Apply Google\'s techniques inside SPECS for machine-usable output.',
+          ],
+        },
+        faq: {
+          title: "FAQ: Google's Prompting Guide",
+          faqs: [
+            {
+              q: "What is Google's Prompting Guide?",
+              a: "Google's Prompting Guide is a set of practical, research-backed recommendations from Google DeepMind for writing effective prompts. It emphasizes explicit instructions, role prompting, few-shot examples, safety constraints, and iterative testing—techniques that work across all models.",
+            },
+            {
+              q: "Is Google's Prompting Guide a framework like CO-STAR or CRAFT?",
+              a: "No. The guide is a toolkit of techniques you can use inside any framework. High-level frameworks like CO-STAR and CRAFT define overall structure; Google's guide tells you how to phrase and refine instructions within that structure.",
+            },
+            {
+              q: "What are the five core techniques in Google's Prompting Guide?",
+              a: 'The five core techniques are: (1) Explicit instructions—be specific about task, audience, format; (2) Role prompting—ask the model to be an expert; (3) Few-shot examples—provide sample input-output pairs; (4) Safety constraints—define length, style, banned phrases; (5) Iterative refinement—test and improve prompts based on results.',
+            },
+            {
+              q: 'Can I combine Google\'s techniques with other frameworks?',
+              a: 'Yes—that\'s the point. Add role prompting to SPECS prompts. Add few-shot examples to TRACE prompts. Add safety constraints to CO-STAR prompts. Google\'s guide is layer that improves any framework.',
+            },
+            {
+              q: "Does Google's Prompting Guide only work with Gemini?",
+              a: 'No. The guide\'s principles are model-agnostic. They work equally well with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models in Ollama or LM Studio.',
+            },
+            {
+              q: "What is role prompting in Google's guide?",
+              a: 'Role prompting means asking the model to adopt a specific expertise or perspective. Example: "You are a senior data analyst with 15 years of experience in financial services." The role guides tone, detail level, and domain knowledge.',
+            },
+            {
+              q: "What is few-shot prompting in Google's guide?",
+              a: 'Few-shot prompting means providing 2–10 representative examples of the desired input-output pattern. These examples teach the model through demonstration, which is more effective than instructions alone for specialized tasks.',
+            },
+            {
+              q: "How is Google's guide different from other prompting best practices?",
+              a: "Google's guide is research-backed (from DeepMind) and emphasizes practical, universally applicable techniques rather than complex frameworks. It focuses on clarity, examples, constraints, and testing—principles that work across all models and domains.",
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          content: [
+            'This article is based on Google DeepMind\'s publicly available prompting guide and supporting research:',
+          ],
+          items: [
+            'Google DeepMind (2024). [Prompt Engineering Guide](https://deepmind.google/technologies/gemini/). — Official recommendations from Google DeepMind for effective prompting.',
+            'Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., ... & Amodei, D. (2020). [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165). *Advances in Neural Information Processing Systems (NeurIPS)*. — Foundational research on few-shot prompting and in-context learning.',
+            'Wei, J., Wang, X., Schuurmans, D., Bosma, M., Chi, E., Le, Q., & Zhou, D. (2022). [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903). *Advances in Neural Information Processing Systems (NeurIPS)*. — Research supporting step-by-step reasoning techniques.',
+          ],
+        },
       },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -26688,20 +26967,33 @@ zh: {
     en: {
       theme: 'Frameworks',
       title: 'The RTF Framework',
-      intro: 'The RTF Framework is a prompt structure that focuses on Role, Task, and Format so you can give models a complete instruction in one compact message. PromptQuorum includes the RTF Framework as a built-in option that any user can select and apply across all supported models.',
+      intro: '**The RTF Framework is a lightweight, three-part prompt structure where you define Role, Task, and Format in one compact message.** Unlike larger frameworks like CO-STAR, SPECS, or TRACE, RTF is intentionally minimal: just three fields that cover most everyday use cases. In PromptQuorum, the RTF Framework is available as a built-in option so you can dispatch quick, structured prompts across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models running in Ollama or LM Studio.',
       publishDate: '2026-03-24',
+      dateModified: '2026-04-02',
       readTime: '6 min read',
       educationalLevel: 'Intermediate',
+      primaryTerm: 'RTF Prompt Framework',
+      metaDescription: 'Learn the RTF Framework: a lightweight prompt structure (Role, Task, Format) for quick, structured AI prompts. When to use it, examples, and PromptQuorum implementation.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'The RTF Framework',
         description: 'How the RTF Framework (Role, Task, Format) works, when to use it, and how PromptQuorum offers RTF as a built-in option.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['RTF Framework', 'Role Task Format', 'prompt frameworks', 'prompt engineering', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        keywords: ['RTF Framework', 'Role Task Format', 'prompt frameworks', 'prompt engineering', 'PromptQuorum', 'lightweight prompt structure', 'simple prompt template'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        isPartOf: {
+          '@type': 'Series',
+          name: 'Prompt Engineering Frameworks',
+          url: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks',
+        },
+        articleSection: 'Frameworks',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Prompt Frameworks' },
@@ -26715,10 +27007,71 @@ zh: {
           { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
           { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        supplementalSchema: {
+          '@context': 'https://schema.org',
+          '@type': ['BreadcrumbList', 'ItemList'],
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+              { '@type': 'ListItem', position: 2, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+              { '@type': 'ListItem', position: 3, name: 'Frameworks', item: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks' },
+              { '@type': 'ListItem', position: 4, name: 'RTF Framework', item: 'https://www.promptquorum.com/prompt-engineering/rtf-framework' },
+            ],
+          },
+          rtfComponents: {
+            '@type': 'ItemList',
+            name: 'Three Components of the RTF Framework',
+            description: 'The three essential components of any RTF prompt: Role, Task, and Format.',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Role', description: 'The perspective or expertise the model should adopt.' },
+              { '@type': 'ListItem', position: 2, name: 'Task', description: 'The concrete action you want, described in one or two sentences.' },
+              { '@type': 'ListItem', position: 3, name: 'Format', description: 'The structure, length, and style of the output.' },
+            ],
+          },
+          faq: {
+            '@type': 'FAQPage',
+            mainEntity: [
+              { '@type': 'Question', name: 'What is the RTF Framework?', acceptedAnswer: { '@type': 'Answer', text: 'The RTF Framework is a lightweight, three-component prompt structure (Role, Task, Format) designed for quick, everyday use. With only three fields, it is easy to remember and fast to fill in, making it a practical default for routine prompting tasks.' } },
+              { '@type': 'Question', name: 'What does RTF stand for?', acceptedAnswer: { '@type': 'Answer', text: 'RTF stands for Role (the perspective or expertise the model should adopt), Task (the concrete action you want), and Format (the structure, length, and style of the output).' } },
+              { '@type': 'Question', name: 'How do I write an RTF prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Define three simple components: Role (e.g., "You are a senior product manager"), Task (e.g., "Write product requirements"), and Format (e.g., "Return as a PRD document with sections: Overview, Goals, Features, Timeline"). Combine them in a single instruction.' } },
+              { '@type': 'Question', name: 'How do I use RTF in PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'Open PromptQuorum, select the RTF Framework, fill in the three fields (Role, Task, Format) with your specific needs, and dispatch to multiple models like GPT-4o, Claude, Gemini, or local models simultaneously.' } },
+              { '@type': 'Question', name: 'When should I use RTF vs CO-STAR or SPECS?', acceptedAnswer: { '@type': 'Answer', text: 'Use RTF for quick, routine tasks where simple structure is enough. Use CO-STAR for multi-constraint communication tasks requiring tone and audience control. Use SPECS for strict schemas and machine-usable output.' } },
+              { '@type': 'Question', name: 'Can I add constraints or examples to an RTF prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. RTF is a foundation; you can add constraints (length limits, banned phrases) or examples (few-shot demonstrations) to the Format field to increase specificity for more complex tasks.' } },
+              { '@type': 'Question', name: 'How is RTF different from just asking a question?', acceptedAnswer: { '@type': 'Answer', text: 'A bare question leaves tone, perspective, and output format to the model\'s defaults. RTF makes these explicit: the model knows who it is, what to do, and exactly how the answer should look. This increases consistency and predictability.' } },
+              { '@type': 'Question', name: 'Is RTF good for creative writing or brainstorming?', acceptedAnswer: { '@type': 'Answer', text: 'RTF can work for creative tasks, but frameworks like CRAFT (designed for voice, audience, and tone in marketing) may be better suited. RTF is strongest for structured, routine tasks where clarity and consistency matter most.' } },
+            ],
+          },
+        },
       },
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'What Is the RTF Framework?', anchor: 'what-is-the-rtf-framework' },
+        { label: 'What Are the Three RTF Components?', anchor: 'what-are-the-three-rtf-components' },
+        { label: 'Why Is the RTF Framework Useful?', anchor: 'why-is-the-rtf-framework-useful' },
+        { label: 'What Does a Strong RTF Prompt Look Like?', anchor: 'what-does-a-strong-rtf-prompt-look-like' },
+        { label: 'When Should You Use the RTF Framework?', anchor: 'when-should-you-use-the-rtf-framework' },
+        { label: 'How Does PromptQuorum Implement the RTF Framework?', anchor: 'how-does-promptquorum-implement-the-rtf-framework' },
+        { label: 'How Does RTF Compare to Other Frameworks?', anchor: 'how-does-rtf-compare-to-other-frameworks' },
+        { label: 'How to Use the RTF Framework', anchor: 'how-to-use-the-rtf-framework' },
+        { label: 'Related Reading', anchor: 'related-reading' },
+        { label: 'FAQ: RTF Framework', anchor: 'faq-rtf-framework' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Key Takeaways',
+          items: [
+            '**RTF = Role, Task, Format** — a lightweight, three-component prompt structure for quick, routine tasks where simple structure suffices.',
+            '**Designed for everyday use:** With only three fields, RTF is easy to remember and fast to apply, making it a practical default when you don\'t need complex frameworks.',
+            '**Your first choice when unsure:** RTF works for most routine tasks. Escalate to CO-STAR for multi-constraint communication, SPECS for strict schemas, or TRACE for reasoning audit.',
+            '**PromptQuorum includes RTF as a built-in framework** so you can dispatch three-part prompts consistently across GPT-4o, Claude, Gemini, and local models.',
+            '**Combines three critical dimensions:** explicit role (who the model is), clear task (what to do), and precise format (exactly how the answer should look).',
+          ],
+        },
         whatIsRTF: {
-          title: 'What the RTF Framework Is',
+          title: 'What Is the RTF Framework?',
           content: [
             '**The RTF Framework is a three-part prompt pattern that tells the model who it is, what to do, and exactly how the answer should look.** Instead of sending a loose question, you specify Role, Task, and Format explicitly. This works across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models you run via Ollama or LM Studio.',
             'RTF is intentionally minimal. With only three fields, it is easy to remember, fast to fill in, and flexible enough for many day-to-day tasks. You can treat it as a "default prompt skeleton" whenever you are not sure which specialized framework to use.',
@@ -26798,13 +27151,74 @@ zh: {
         },
 
         howToStart: {
-          title: 'How to Use the RTF (Role, Task, Format) Framework',
+          title: 'How to Use the RTF Framework',
           numberedItems: [
-            '**Role: Define who the AI is playing.** Example: \'You are a product manager at a B2B SaaS company.\'',
-            '**Task: State what the AI should do.** Example: \'Write product requirements for a new analytics dashboard feature.\'',
-            '**Format: Specify the structure and style of output.** Example: \'Return as a PRD document with sections: Overview, Goals, User Personas, Key Features, Success Metrics, Timeline. Use professional, clear language.\'',
-            '**Combine RTF with constraints for better control.** Example: \'RTF: Role = Product Manager, Task = Write PRD, Format = Markdown document. Constraints: 2000 words max, focus on enterprise users, no buzzwords.\'',
-            '**Test RTF prompts on sample tasks to ensure clarity before using them repeatedly.** RTF is a simple framework—validate that your role, task, and format choices actually produce the output you need.',
+            '**Open PromptQuorum and select the RTF Framework** from the built-in prompt structure options.',
+            '**Fill Role: Define the perspective or expertise the model should adopt.** Example: "You are a senior product manager at a B2B SaaS company with 10 years of experience."',
+            '**Fill Task: State the concrete action you want in one or two sentences.** Example: "Write product requirements for a new analytics dashboard feature that helps customers track cost trends."',
+            '**Fill Format: Specify the structure, style, and length of the output.** Example: "Return as a PRD document with sections: Overview, Goals, User Personas, Key Features, Success Metrics. Use professional, clear language. Target 2000 words max."',
+            '**Optionally add constraints to the Format field for fine-tuning.** Example: Add "No buzzwords or marketing hype. Focus on enterprise users only."',
+            '**Run the RTF prompt across multiple models** such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to compare outputs. Save your best RTF prompts as templates for reuse.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          content: [
+            'Explore these related frameworks to understand when to use RTF and when to escalate to larger frameworks:',
+          ],
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — Foundational concepts and core principles.',
+            '[The CO-STAR Framework](/prompt-engineering/co-star-framework) — Use when Role, Task, Format aren\'t enough and you need tone, audience, and objective control.',
+            '[The SPECS Framework](/prompt-engineering/specs-framework) — Use when you need strict schemas, examples, constraints, and step-by-step logic.',
+            '[The TRACE Framework](/prompt-engineering/trace-framework) — Use when you need to audit the model\'s reasoning for complex decisions.',
+          ],
+        },
+        faq: {
+          title: 'FAQ: RTF Framework',
+          faqs: [
+            {
+              q: 'What is the RTF Framework?',
+              a: 'The RTF Framework is a lightweight, three-component prompt structure (Role, Task, Format) designed for quick, routine use. With only three fields, it is easy to remember and fast to apply, making it an ideal default when you don\'t need a more complex framework.',
+            },
+            {
+              q: 'What does RTF stand for?',
+              a: 'RTF stands for Role (the perspective or expertise the model adopts), Task (the concrete action you want), and Format (the structure, style, and length of the output).',
+            },
+            {
+              q: 'How do I write an RTF prompt?',
+              a: 'Define three components: Role (e.g., "You are a senior product manager"), Task (e.g., "Write a PRD for an analytics feature"), and Format (e.g., "Return as a Markdown document with sections: Overview, Goals, Features. Keep under 2000 words."). Combine them in a single instruction.',
+            },
+            {
+              q: 'How do I use RTF in PromptQuorum?',
+              a: 'Open PromptQuorum, select the RTF Framework, fill in the three fields (Role, Task, Format), and dispatch to multiple models. PromptQuorum handles assembly and dispatch to GPT-4o, Claude, Gemini, and local models simultaneously.',
+            },
+            {
+              q: 'When should I use RTF vs CO-STAR or SPECS?',
+              a: 'Use RTF for quick, routine tasks where simple structure is enough. Use CO-STAR when audience, tone, and objective matter equally. Use SPECS when output format and constraints are critical.',
+            },
+            {
+              q: 'Can I add examples or detailed constraints to RTF?',
+              a: 'Yes. RTF is minimal but flexible. You can add few-shot examples or detailed constraints to the Format field to increase specificity for more nuanced tasks.',
+            },
+            {
+              q: 'Is RTF good for creative or open-ended tasks?',
+              a: 'RTF works for structured creative tasks like copywriting for specific channels. For open-ended brainstorming or deep creative work, frameworks like CRAFT are better suited because they emphasize voice, audience, and tone.',
+            },
+            {
+              q: 'How does RTF compare to just asking a question?',
+              a: 'A bare question leaves role, task specificity, and format to the model\'s defaults, which is inconsistent. RTF makes these explicit, so the model knows exactly who it is, what to do, and how the answer should look—increasing consistency and reusability.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          content: [
+            'This article is based on current best practices in prompt engineering and documented implementations in production systems:',
+          ],
+          items: [
+            'Schulhoff, S., Teotia, N., Bansal, Y., Hegselmann, S., & Gunasekar, S. (2024). [The Prompt Report: A Systematic Survey of Prompt Engineering](https://arxiv.org/abs/2406.06608). *arXiv preprint arXiv:2406.06608*. — Comprehensive taxonomy of prompt engineering techniques and frameworks.',
+            'Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., ... & Amodei, D. (2020). [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165). *Advances in Neural Information Processing Systems (NeurIPS)*. — Foundational research on in-context learning and structured prompting.',
+            'OpenAI (2024). [Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering). — Industry best practices for designing effective prompts for production applications.',
           ],
         },
       },
