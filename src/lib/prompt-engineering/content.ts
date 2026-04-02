@@ -14420,22 +14420,110 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Build Quality Checks With AI In Mind: Detecting Hallucinations and Fabricated Dependencies',
       intro: 'AI-generated code fails traditional quality gates at scale: a large share of AI-written programs contain exploitable vulnerabilities, and a non-trivial fraction of AI-suggested packages or APIs simply do not exist. To keep these hallucinations and AI-specific failure modes out of production, build quality checks must evolve from generic "tests + coverage" gates into AI-aware pipelines that detect unreal APIs, fake dependencies, and confident-but-wrong logic before merge.',
       publishDate: '2026-03-24',
+      metaDescription: 'AI code quality gates: detect hallucinations, fake APIs, fabricated dependencies. Learn CI/CD architecture, dependency validation, security gates, test strategies for AI-generated code.',
+      dateModified: '2026-04-02',
       readTime: '10 min read',
       educationalLevel: 'Beginner',
+      primaryTerm: 'AI-Aware Quality Checks and Hallucination Detection',
+      toc: [
+        { label: 'What Changes When AI Writes Your Code', anchor: '#definition' },
+        { label: 'Types of Hallucinations Your Gates Must Catch', anchor: '#hallucinations' },
+        { label: 'An AI-Aware CI/CD Quality Gate Architecture', anchor: '#architecture' },
+        { label: 'Concrete Checks to Add for AI-Generated Code', anchor: '#concreteChecks' },
+        { label: 'Handling Hallucinations Explicitly in the Pipeline', anchor: '#hallucinationHandling' },
+        { label: 'Making AI Quality Checks Developer-Friendly', anchor: '#developerFriendly' },
+        { label: 'Key Takeaways', anchor: '#tldr' },
+        { label: 'How to Build AI-Aware Quality Checks', anchor: '#howToStart' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Build Quality Checks With AI In Mind: Detecting Hallucinations and Fabricated Dependencies',
         description: 'Design CI/CD quality gates for AI-generated code. Includes hallucination detection, dependency validation, security gates, and developer-friendly practices.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-04-02',
+        proficiencyLevel: 'Beginner',
+        articleSection: 'Output Engineering',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/build-quality-checks', width: 1200, height: 630 },
-        keywords: ['quality gates', 'CI/CD', 'AI hallucinations', 'code review', 'security scanning', 'dependency validation', 'build checks'],
+        keywords: ['quality gates', 'CI/CD', 'AI hallucinations', 'code review', 'security scanning', 'dependency validation', 'build checks', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'SAST' },
           { '@type': 'SoftwareApplication', name: 'DAST' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+          { '@type': 'ListItem', position: 2, name: 'Output Engineering', item: 'https://www.promptquorum.com/prompt-engineering/output-engineering' },
+          { '@type': 'ListItem', position: 3, name: 'Build Quality Checks With AI In Mind: Detecting Hallucinations and Fabricated Dependencies' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What types of hallucinations can AI-generated code produce?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'AI code hallucinations fall into four categories: (1) Fabricated APIs — calls to functions or methods that don\'t exist in the specified libraries; (2) Non-existent packages — imports from packages that do not exist in npm, PyPI, or Maven; (3) Logic hallucinations — confident-sounding code that runs without error but produces wrong answers or introduces security vulnerabilities; (4) Requirement violations — code that looks correct but violates business logic, authentication, or data handling requirements specified in the task. These differ from traditional bugs—they are structurally plausible but factually false.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Do traditional quality gates catch AI hallucinations?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. Traditional quality gates (unit tests, code coverage, SAST tools) are designed for human-written code. They pass when code compiles, logic tests return expected values, and no known vulnerability patterns are detected. AI hallucinations often pass these gates because the code is syntactically correct and runs without error—the mistake is semantic (the API doesn\'t exist, the package was never published). Traditional SAST tools catch ~20% of meaningful bugs; AI-aware gates must add explicit dependency validation, API existence checks, and behavior verification to catch hallucinations.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is an AI-aware CI/CD quality gate architecture?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'A layered approach: (1) Pre-commit: syntax checking, import statement parsing; (2) Pull request: dependency existence (check npm/PyPI), package maturity (age, maintainers), API validation against library docs; (3) CI pipeline: unit tests, type checking, coverage thresholds (raised for AI-touched files); (4) Deeper analysis: security scanning (SAST), behavioral testing on specification examples, LLM-based logic review; (5) Runtime: error tracking and behavioral anomalies in staging environment. Each layer increases strictness and coverage for AI-generated code vs. human-written code.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I validate that an API actually exists?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'For Python: introspect the actual package with `hasattr(module, method_name)` or use static analysis (AST parsing) to extract all function calls, then validate them against library docs or source code. For JavaScript: check npm\'s package registry and the library\'s exported API. For Go: use the Go standard library documentation or open source indexing services. Automated tools: Semgrep, Pylint, ESLint with rules that validate function existence. For maximum accuracy, maintain a "known good API registry" for dependencies your team uses and validate all calls against it.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Should I block AI-generated code or just review it more closely?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Neither extreme is optimal. The pragmatic approach: tag AI-generated code (via commit metadata or comments) and apply stricter gates selectively. Require: (1) explicit tests for AI-touched functions (even if human-written tests exist); (2) security review for auth, data handling, or payment code; (3) higher code coverage thresholds on AI-touched functions; (4) peer review by a senior engineer, not just a junior reviewer. Don\'t outright block AI code—it is productive—but design gates that treat it as a higher-risk input requiring proportionally higher verification effort.',
+            },
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Build Quality Checks With AI In Mind: Key Topics',
+        'description': 'Core concepts for detecting AI hallucinations in code',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'AI Code Hallucinations', 'description': 'Types: fabricated APIs, non-existent packages, logic errors, requirement violations' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Why Traditional Gates Fail', 'description': 'Legacy quality checks don\'t detect hallucinations—code passes tests but is semantically wrong' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'AI-Aware CI/CD Architecture', 'description': 'Layered validation: pre-commit, PR-level, CI analysis, deep security scanning' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Concrete Detection Checks', 'description': 'API validation, dependency existence checks, behavior testing, security gates' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Developer-Friendly Implementation', 'description': 'Clear error messages, tuned thresholds, documented overrides, minimal false positives' },
         ],
       },
       sections: {
