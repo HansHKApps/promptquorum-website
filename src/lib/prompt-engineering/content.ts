@@ -293,14 +293,16 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         { label: 'The 6 Optimization Levers', anchor: 'the-6-optimization-levers' },
         { label: 'The 6-Step Optimization Process', anchor: 'the-6-step-optimization-process' },
         { label: 'How to Measure Prompt Quality', anchor: 'how-to-measure-prompt-quality' },
-        { label: 'Three Real-World Optimization Examples', anchor: 'three-real-world-optimization-examples' },
+        { label: 'What Does Prompt Optimization Look Like in Practice?', anchor: 'what-does-prompt-optimization-look-like-in-practice' },
         { label: 'Model-Specific Optimization Tips', anchor: 'model-specific-optimization-tips' },
         { label: 'Optimizing Prompts for Local LLMs', anchor: 'optimizing-prompts-for-local-llms-ollama-lm-studio' },
         { label: 'The 7 Most Common Optimization Mistakes', anchor: 'the-7-most-common-optimization-mistakes' },
-        { label: 'Advanced Optimization Techniques', anchor: 'advanced-optimization-techniques' },
+        { label: 'Prompt Optimization Techniques: Advanced Methods', anchor: 'prompt-optimization-techniques-advanced-methods' },
         { label: 'Saving Optimized Prompts to a Library', anchor: 'saving-optimized-prompts-to-a-library' },
         { label: 'Regulatory Compliance', anchor: 'prompt-optimization-and-regulatory-compliance' },
         { label: 'Languages & Regions', anchor: 'prompt-optimization-across-languages-and-regions' },
+        { label: 'What Do These Prompt Optimization Terms Mean?', anchor: 'what-do-these-prompt-optimization-terms-mean' },
+        { label: 'Related Reading', anchor: 'related-reading' },
         { label: 'FAQ', anchor: 'faq-prompt-optimization' },
       ],
       sections: {
@@ -429,7 +431,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         beforeAfterExamples: {
-          title: 'Before & After: Optimization in Practice',
+          title: 'What Does Prompt Optimization Look Like in Practice?',
           content: [],
           items: [
             '**Bad:** "Summarize this article." | **Improved:** "Summarize in 3 bullets, ≤20 words each. Focus on business impact." | **Why:** Output format eliminates inconsistency.',
@@ -442,7 +444,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         definitionBoxes: {
-          title: 'Key Definitions: Prompt Optimization Concepts',
+          title: 'What Do These Prompt Optimization Terms Mean?',
           content: [],
           items: [
             '**Prompt optimization** — The iterative process of revising a prompt to improve output quality by diagnosing failure modes and changing one variable (specificity, context, examples, constraints, format, or role) at a time. See [5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) for the structural elements you are optimizing.',
@@ -518,6 +520,22 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        keyTerms: {
+          title: 'What Are the Key Terms for Prompt Optimization?',
+          items: [
+            '[Few-shot prompting](/prompt-engineering/prompt-engineering-glossary#few-shot-prompting) — Including a small number of input/output examples in the prompt so the model infers the desired pattern or format; the Examples lever in the 6-lever optimization framework',
+            '[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary#chain-of-thought-cot) — Asking the model to reason step by step before answering; the primary technique for fixing multi-step reasoning failures',
+            '[Self-consistency](/prompt-engineering/prompt-engineering-glossary#self-consistency) — Generating multiple outputs and returning the most common answer; reduces hallucination rates on low-probability facts',
+            '[Zero-shot prompting](/prompt-engineering/prompt-engineering-glossary#zero-shot-prompting) — Prompting without examples; the baseline against which few-shot optimization is measured',
+            '[Hallucination](/prompt-engineering/prompt-engineering-glossary#hallucination) — Confident-sounding but factually incorrect output; one of the primary failure modes optimization targets',
+            '[Fine-tuning](/prompt-engineering/prompt-engineering-glossary#fine-tuning) — Retraining model weights on domain-specific data; the alternative to prompt optimization when a hard quality ceiling has been reached',
+            '[RAG (Retrieval-Augmented Generation)](/prompt-engineering/prompt-engineering-glossary#rag-retrieval-augmented-generation) — Injecting retrieved documents into the prompt context; complementary to prompt optimization (RAG improves information; optimization improves how the model uses it)',
+            '[System prompt](/prompt-engineering/prompt-engineering-glossary#system-prompt) — Persistent instruction that sets the model\'s role, constraints, and behavior across all turns; requires its own optimization pass',
+            '[Temperature](/prompt-engineering/prompt-engineering-glossary#temperature) — Decoding parameter controlling output randomness; lower temperature improves consistency across optimization test runs',
+            '[Prompt chaining](/prompt-engineering/prompt-engineering-glossary#prompt-chaining) — Breaking complex tasks into a sequence of smaller prompts; each sub-prompt benefits from independent optimization',
+          ],
+        },
+
         promptLibrary: {
           title: 'Saving Optimized Prompts to a Library',
           content: [
@@ -552,22 +570,6 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             { 'Language / Region': 'Japanese — JP', 'Local term for "prompt optimization"': 'プロンプト最適化', 'Primary model': 'GPT-4o (strong Japanese support)', 'Key regional note': 'Katakana for "prompt" (プロンプト); Japanese text uses ~1.5–2× more tokens per character than English — context budget optimization is critical' },
             { 'Language / Region': 'Chinese Simplified — CN', 'Local term for "prompt optimization"': '提示词优化', 'Primary model': 'DeepSeek, Qwen 3', 'Key regional note': '"提示词" (tíshì cí) = prompt token; "优化" = optimize; DeepSeek and Qwen outperform Western models on Chinese-language tasks; CAC compliance required' },
             { 'Language / Region': 'Korean — KR', 'Local term for "prompt optimization"': '프롬프트 최적화', 'Primary model': 'GPT-4o, Claude 4.6 Sonnet', 'Key regional note': 'High technical AI adoption; Korean text has dense tokenization — shorter prompts are proportionally more important' },
-          ],
-        },
-
-        keyTerms: {
-          title: 'Key Terms',
-          items: [
-            '[Few-shot prompting](/prompt-engineering/prompt-engineering-glossary#few-shot-prompting) — Including a small number of input-output examples in the prompt so the model infers the desired pattern or format; the Examples lever in the 6-lever optimization framework',
-            '[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary#chain-of-thought-cot) — Asking the model to reason step by step before answering; the primary technique for fixing multi-step reasoning failures',
-            '[Self-consistency](/prompt-engineering/prompt-engineering-glossary#self-consistency) — Generating multiple outputs and returning the most common answer; reduces hallucination rates on low-probability facts',
-            '[Zero-shot prompting](/prompt-engineering/prompt-engineering-glossary#zero-shot-prompting) — Prompting without examples; the baseline against which few-shot optimization is measured',
-            '[Hallucination](/prompt-engineering/prompt-engineering-glossary#hallucination) — Confident-sounding but factually incorrect output; one of the primary failure modes optimization targets',
-            '[Fine-tuning](/prompt-engineering/prompt-engineering-glossary#fine-tuning) — Retraining model weights on domain-specific data; the alternative to prompt optimization when a hard quality ceiling has been reached',
-            '[RAG (Retrieval-Augmented Generation)](/prompt-engineering/prompt-engineering-glossary#rag-retrieval-augmented-generation) — Injecting retrieved documents into the prompt context; complementary to prompt optimization (RAG improves information; optimization improves how the model uses it)',
-            '[System prompt](/prompt-engineering/prompt-engineering-glossary#system-prompt) — Persistent instruction that sets the model\'s role, constraints, and behavior across all turns; requires its own optimization pass',
-            '[Temperature](/prompt-engineering/prompt-engineering-glossary#temperature) — Decoding parameter controlling output randomness; lower temperature improves consistency across optimization test runs',
-            '[Prompt chaining](/prompt-engineering/prompt-engineering-glossary#prompt-chaining) — Breaking complex tasks into a sequence of smaller prompts; each sub-prompt benefits from independent optimization',
           ],
         },
 

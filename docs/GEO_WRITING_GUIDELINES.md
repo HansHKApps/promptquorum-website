@@ -750,6 +750,59 @@ All other existing GEO rules (answer-first H2s, short paragraphs, entity density
 
 ---
 
+## Rule 22: Featured Snippet Targeting — H2 Query-Driven Format & Answer Box Structure
+
+**Problem:** Articles written for humans often use descriptive H2 labels ("Key Terms", "Overview", "Core Concepts") instead of question-format headings. This is invisible to Google's "People Also Ask" extractor and AI citation systems, which match user queries to H2 questions.
+
+**Solution:** Make all H2s explicitly query-driven. Use these patterns:
+
+**Query-Format H2 Requirements:**
+
+1. **Every major section heading must be phrased as a question OR lead with a direct answer phrase.** Descriptive labels like "Key Definitions", "Core Concepts", "Overview" are not compliant with GEO rules for featured snippet targeting.
+
+| ❌ Descriptive (not compliant) | ✅ Query-driven (compliant) |
+|---|---|
+| Key Definitions | What Do These Terms Mean? |
+| Overview | What Is This? / How Does This Work? |
+| Core Concepts | What Are the Core Concepts? |
+| Tools and Resources | What Tools Should I Use? |
+| Key Takeaways | TL;DR (use `isTldr: true` instead) |
+
+2. **The first H2 after TL;DR must be "What Is [Topic]?"** — the definition section. This H2 must immediately follow the TL;DR block and contain a bold 1-sentence definition of the primary concept.
+
+**Correct example structure:**
+```
+## Key Takeaways (rendered as styled box, no H2 tag due to isTldr: true)
+
+## What Is Prompt Optimization?
+**[Direct 1-sentence definition in bold]**
+
+[Supporting paragraphs]
+```
+
+3. **TL;DR H2s are suppressed.** When `isTldr: true`, the section heading is NOT output as a crawlable `<h2>` — this is intentional (prevents duplicate H2/styled-box conflict). Writers must compensate: the section immediately after the TL;DR must carry the keyword signal.
+
+4. **Answer-box content structure:** For maximum featured snippet extraction, each H2 section should follow:
+   - H2: Question format ("What Is X?", "How Do You X?", "Why Does X Matter?")
+   - First sentence: `**[Direct answer to the H2 question, bold, 1 sentence]**`
+   - 2–4 supporting sentences
+   - Optional: table, list, code block, or screenshot
+
+**Checklist for H2 compliance:**
+- `[ ]` No descriptive labels as H2s ("Key Terms", "Overview", "Definitions")
+- `[ ]` Every H2 is phrased as a question or direct statement
+- `[ ]` First H2 after TL;DR is "What Is [Topic]?" with bold definition
+- `[ ]` No critical keyword-bearing sections use `isTldr: true`
+- `[ ]` FAQ questions use natural user language (not academic phrasing)
+
+**Why this matters:**
+- Google's "People Also Ask" extractor matches user search queries to H2 headings that are phrased as questions
+- AI systems (ChatGPT Search, Perplexity, Claude Browse) match query intent to question-format headings
+- Descriptive labels like "Key Terms" are visible to humans but invisible to query matchers
+- Weak H2 formatting = lower featured snippet extraction = fewer AI citations
+
+---
+
 ## Rule 11: Visible Last-Updated Date
 
 Every PE article must display a visible publication or last-modified date near the top of the page. AI crawlers increasingly weight recency when selecting sources for citations.
@@ -1092,10 +1145,13 @@ Run this before publishing any new page or blog post:
 - [ ] Instructional articles use TechArticle schema; context/history articles use Article (Rule 5)
 - [ ] List-structured articles include ItemList schema (Rule 5)
 - [ ] First H2 does not duplicate the H1 title verbatim or near-verbatim (Rule 18)
+- [ ] All major H2s are query-driven: no "Key Terms", "Overview", or "Key Definitions" headings without question format (Rule 18a + Rule 22)
+- [ ] "What Is [Topic]?" section is the first non-TL;DR H2 in the article (Rule 22)
+- [ ] Featured snippet structure: H2 question + first bold sentence = extractable answer for Google (Rule 22)
 - [ ] FAQ section covers at least 3 of 5 question types: definitional, comparative, quantitative, procedural, disambiguation (Rule 19)
 - [ ] Mathematical concepts use notation or LaTeX, not just prose (Rule 20)
 - [ ] Article mentions and defines 5–7 high-value entities (products, companies, technical terms) (Rule 4a/Rule 21)
-- [ ] All technical constraints use exact numbers: context window in tokens, VRAM in GB, costs in $/1M tokens, latency in ms (Rule 2a/Rule 22)
+- [ ] All technical constraints use exact numbers: context window in tokens, VRAM in GB, costs in $/1M tokens, latency in ms (Rule 2a)
 - [ ] **OG image is auto-generated** — No manual work needed. System creates language-specific social sharing images (all 5 languages) with article title, intro, and site branding for each language variant (Rule 23)
 
 ---
