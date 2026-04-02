@@ -315,6 +315,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        callout1: {
+          blockquote: 'Adding a chain-of-thought instruction — asking the model to reason step by step before answering — improved accuracy on multi-step arithmetic benchmarks from 17.9% to 56.9% on a 540B-parameter model. A single targeted change to the prompt structure, with no model retraining, produced a 3x accuracy gain.',
+          blockquoteSource: 'Jason Wei et al., Google Brain. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arxiv.org/abs/2201.11903',
+        },
+
         sixLevers: {
           title: 'The 6 Optimization Levers',
           content: [
@@ -329,6 +334,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             { 'Lever': 'Output format', 'What It Changes': 'Structure of the response', 'Optimization Move': 'Specify format explicitly', 'Example': '"Respond in JSON: {title, summary, tags[]}"' },
             { 'Lever': 'Role/persona', 'What It Changes': 'Expertise level the model adopts', 'Optimization Move': 'Add a specific role', 'Example': '"Act as a senior data analyst at a B2B SaaS company"' },
           ],
+        },
+
+        callout2: {
+          blockquote: 'Few-shot prompting with a small number of examples enabled GPT-3 to match or exceed the performance of fine-tuned models on several benchmarks — establishing examples as a high-leverage optimization lever that requires no training, no additional compute, and no model access beyond a standard API call.',
+          blockquoteSource: 'Tom B. Brown et al., OpenAI. "Language Models are Few-Shot Learners." NeurIPS 2020. arxiv.org/abs/2005.14165',
         },
 
         optimizationProcess: {
@@ -346,6 +356,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        callout3: {
+          blockquote: 'In a controlled experiment with 444 college-educated professionals, access to ChatGPT improved task completion speed by 25.1% and output quality ratings by 18.3%, as assessed by blind evaluators. The largest gains accrued to workers in the bottom half of the baseline skill distribution — AI assistance compressed the quality gap between weak and strong performers.',
+          blockquoteSource: 'Shakked Noy & Whitney Zhang, MIT Sloan School of Management. "Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence." Science, 2023.',
+        },
+
         measurementCriteria: {
           title: 'How to Measure Prompt Quality',
           content: [
@@ -360,6 +375,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             { 'Criterion': 'Token efficiency', 'What to Check': 'Is the output length appropriate?', 'Pass / Fail Signal': 'Measure token count vs. information density' },
             { 'Criterion': 'Cross-model agreement', 'What to Check': 'Do 2–3 models produce similar results?', 'Pass / Fail Signal': 'Dispatch to GPT-4o, Claude, Gemini via PromptQuorum — agreement = robust' },
           ],
+        },
+
+        callout4: {
+          blockquote: 'In a randomized experiment with 758 BCG consultants, AI-assisted workers performed 40% better on quality metrics for tasks within the AI\'s capability frontier. However, workers who used AI on tasks outside that frontier — requiring deep organizational judgment — performed worse than unaided peers. Knowing when to measure output rigorously and when to override the model turned out to be the primary differentiating skill between high and low performers.',
+          blockquoteSource: 'Fabrizio Dell\'Acqua, Ethan Mollick et al., Harvard Business School & Wharton. "Navigating the Jagged Technological Frontier." Harvard Business School Working Paper 24-013, 2023.',
         },
 
         beforeAfterExamples: {
@@ -416,6 +436,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Mistake 6: Conflating optimization with fine-tuning.** Optimization improves prompts; fine-tuning trains the model. If you have tried all 6 levers and the prompt still fails, the model may lack knowledge or capability for the task — that is a fine-tuning problem, not an optimization problem. Fine-tuning is vastly slower and more expensive. Exhaust prompt optimization first.',
             '**Mistake 7: Not saving optimized prompts.** You optimize a prompt, deploy it, and then re-optimize the same prompt 6 months later because no one saved the version that worked. A prompt library — version-controlled, documented, and shared — turns optimization work into a lasting asset.',
           ],
+        },
+
+        callout5: {
+          blockquote: 'A systematic survey of over 1,500 prompting research papers identified 58 discrete prompting techniques. Self-consistency — generating multiple outputs and selecting the most common answer — reduced hallucination rates by 10–20% on GPT-4 evaluations. Few-shot prompting showed consistent accuracy improvements of 10–30% over zero-shot baselines on structured tasks. The most underused technique: explicit output format specification, which eliminates format non-compliance — the most common and fastest-to-fix failure mode — in a single iteration.',
+          blockquoteSource: 'Sander Schulhoff et al. "The Prompt Report: A Systematic Survey of Prompting Techniques." 2024. arxiv.org/abs/2406.06608',
         },
 
         advancedTechniques: {
