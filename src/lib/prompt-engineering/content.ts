@@ -19963,20 +19963,32 @@ zh: {
           ],
         },
 
+        promptEngineerTakeaways: {
+          title: 'Key Takeaways for Prompt Engineers',
+          isTldr: true,
+          items: [
+            'Chinese AI APIs (DeepSeek, ERNIE 4.0, Qwen via Alibaba Cloud) filter content at the API level — political topics, CPC criticism, and Taiwan/Tibet/Xinjiang return `is_safe: 0` in HTTP 200 responses, not HTTP 4xx. Handle these explicitly in your application code.',
+            'Mistral models and local Ollama deployments satisfy EU AI Act data residency requirements — prompts and outputs never leave your infrastructure. This is the lowest-friction path to EU GDPR + AI Act compliance for prompt engineers.',
+            'GPT-4o and Claude 4.6 Sonnet are GPAI-compliant under the EU AI Act as of August 2025. You can use them in EU-facing deployments without additional model-level compliance work — your obligation is at the application (deployer) level, not the model level.',
+            'The Brussels Effect means prompts sent to US-hosted models for products used by EU residents are subject to EU AI Act requirements — even if your company is not EU-based.',
+            'For multi-jurisdictional testing, dispatch the same prompt to Mistral (EU-compliant), GPT-4o (US/GPAI), and Qwen (China-accessible) simultaneously to benchmark outputs across regulatory contexts. PromptQuorum supports this natively.',
+          ],
+        },
+
         keyStatistics: {
           title: 'AI Geopolitics: Key Data Points',
           content: [
             'The following figures represent the scale of government AI investment, hardware concentration, and research capacity that define the current geopolitical competition in artificial intelligence.',
           ],
           items: [
-            '**Government AI investment — United States:** The CHIPS and Science Act (2022) allocated $52 billion for domestic semiconductor manufacturing and $200 billion for science research. The National AI Initiative Act funds AI R&D across 25 federal agencies.',
+            '**Government AI investment — United States:** $52 billion allocated by the CHIPS and Science Act (2022) for domestic semiconductor manufacturing, plus $200 billion for science R&D. The National AI Initiative Act funds AI research across 25 federal agencies.',
             '**Government AI investment — China:** Estimated ¥1 trillion ($140 billion) in government-directed AI and semiconductor investment 2021–2025, including the National New Generation AI Development Plan targeting global AI leadership by 2030.',
             '**Government AI investment — European Union:** €1 billion from the European Innovation Council AI fund; member state strategies add €10+ billion: Germany €5 billion (2019–2025), France €2 billion, UK £1 billion in AI safety and compute.',
             '**Chip manufacturing concentration:** TSMC (Taiwan) manufactures approximately 90% of the world\'s most advanced chips below 7nm. ASML (Netherlands) is the sole manufacturer of EUV lithography machines required for advanced node fabrication — giving the Netherlands a structural chokepoint in global chip supply.',
             '**Nvidia GPU market share:** Nvidia holds approximately 80% market share in AI training GPUs. The H100 and H200 series power the majority of frontier model training at OpenAI, Google DeepMind, Anthropic, and Baidu.',
             '**AI researcher distribution:** The US employs approximately 40% of the world\'s top AI researchers by publication impact (Stanford HAI 2024 AI Index). China produces the largest number of computer science PhDs — approximately 50,000 per year — and accounts for ~30% of top AI conference authors.',
             '**AI patent filings:** China filed approximately 70% of global AI patents in 2022 (WIPO Global Innovation Index). The US leads on citations and commercialized inventions; China leads on volume.',
-            '**Model training cost compression:** GPT-4 training estimated at ~$100 million in compute (2023). DeepSeek R1 (January 2025) reported training cost of approximately $6 million — a 94% reduction — demonstrating that compute-cost export controls cannot permanently constrain Chinese AI development.',
+            '**Model training cost compression:** 94% cost reduction — GPT-4 estimated at ~$100 million in training compute (2023) vs DeepSeek R1\'s reported ~$6 million (January 2025). This gap demonstrates that US compute-cost export controls cannot permanently constrain Chinese frontier AI development.',
             '**EU AI Act coverage:** The Act covers 450 million consumers across 27 EU member states. The systemic risk threshold for GPAI models is 10²⁵ FLOPs of training compute — the level at which additional adversarial testing requirements apply.',
             '**Bletchley Declaration (November 2023):** Signed by 28 nations including the US, China, and EU member states — the broadest international AI safety consensus to date, though non-binding.',
           ],
@@ -20147,6 +20159,9 @@ zh: {
             '**ERNIE 4.0 API: what developers encounter.** Baidu\'s ERNIE 4.0 is accessible via the Qianfan (千帆) API platform. Pricing is ¥0.12 per 1K tokens (input) and ¥0.12 per 1K tokens (output) for ERNIE 4.0 Turbo as of 2026. The API accepts system prompts, supports function calling, and returns JSON-structured responses. Content filter errors return HTTP 200 with an `is_safe: 0` flag in the response body — not HTTP 4xx — which requires explicit handling in your application code. Rate limits: 60 QPM on the standard tier.',
             '**Data residency and the PIPL.** The Personal Information Protection Law (PIPL, 2021) requires that personal data collected from Chinese users either stays in China or passes a government security assessment before cross-border transfer. If your AI application processes any personal data of Chinese users — names, IDs, location, behavioral data — and sends it to a model API outside China, you are subject to PIPL cross-border data transfer rules. The practical solution: route China-user traffic through a mainland-hosted inference endpoint (Alibaba Cloud, Tencent Cloud, Huawei Cloud) so personal data never leaves Chinese jurisdiction.',
             '**Practical recommendation.** For most international development teams: use Qwen 2.5 72B (self-hosted or via Alibaba Cloud) for Chinese-language tasks; avoid routing Chinese user data through US-hosted APIs; partner with a mainland China entity if you need to deploy a consumer-facing generative AI product in China; and budget 45–90 days for CAC pre-launch review into your China go-to-market timeline.',
+            '**Prompt example — safe DeepSeek R1 query (regulatory analysis):** "What are the key provisions of China\'s Generative AI Measures (2023) and what documentation must a company prepare before launching a generative AI service in China?" — This works because it asks for factual regulatory information without touching prohibited content areas (political criticism, historical events, sovereignty). DeepSeek R1 handles regulatory and business analysis questions reliably.',
+            '**Prompt example — what to avoid on Chinese model APIs:** Prompts referencing the 1989 Tiananmen Square protests, Taiwan independence, Xinjiang detention policies, or criticism of CPC leadership will trigger content filters across all CAC-registered APIs. A prompt like "Compare the political systems of Taiwan and mainland China" will return a filtered response (`is_safe: 0`) on ERNIE 4.0 and DeepSeek. Rephrase to focus on economic or trade dimensions if you need comparative analysis: "Compare the GDP per capita and trade volume of Taiwan and mainland China."',
+            '**Prompt example — Qwen 2.5 for cross-border Chinese-language tasks:** "Summarize the following Chinese regulatory document and identify the three most important compliance obligations for a foreign AI company." — Qwen 2.5 72B (self-hosted outside China) handles Chinese-language regulatory documents without CAC content filters, making it the best option for legal and compliance workflows that process Chinese-language source material without serving Chinese users directly.',
           ],
         },
 
