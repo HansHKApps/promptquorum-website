@@ -571,11 +571,27 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
           </nav>
         )}
 
+        {/* Table of Contents */}
+        {(article as any).toc && (
+          <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Contents</p>
+            <ol className="space-y-1">
+              {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
+                <li key={item.anchor}>
+                  <a href={`#${item.anchor}`} className="text-sm text-primary hover:text-primary/80 transition-colors">
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
+
         {/* Sections */}
         <article className="key-takeaways-container">
           {Object.entries(article.sections).map(([key, section]) => {
-            // Map section keys to anchor IDs
-            const sectionIdMap: Record<string, string> = {
+            // Glossary explicit IDs take precedence; all other titled sections get auto-generated IDs
+            const glossaryIdMap: Record<string, string> = {
               'corePrompting': 'core-concepts',
               'agentsOrchestration': 'agents-orchestration',
               'safetyAlignment': 'safety-alignment',
@@ -583,7 +599,8 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
               'advancedTechniques': 'advanced-techniques',
               'metricsProduction': 'metrics-production',
             }
-            const sectionId = sectionIdMap[key]
+            const sectionId = glossaryIdMap[key]
+              ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined)
             return (
               <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} />
             )

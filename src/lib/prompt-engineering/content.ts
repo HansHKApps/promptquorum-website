@@ -40,6 +40,7 @@ export interface PEArticle {
   itemListSchema?: Record<string, unknown>
   educationalLevel?: string  // 'Beginner' | 'Intermediate' | 'Advanced'
   primaryTerm?: string       // Key concept this article defines, e.g., 'Prompt Engineering'
+  toc?: { label: string; anchor: string }[]  // Table of contents entries (label + anchor ID)
 }
 
 export const peContent: Record<string, Record<Language, PEArticle>> = {
@@ -19769,7 +19770,7 @@ zh: {
       theme: 'Policy & Compliance',
       title: 'Geopolitics and AI: How the EU, US, and China Are Competing for AI Dominance',
       intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
-      metaDescription: 'AI geopolitics explained: global AI regulation, the AI arms race, and AI geopolitical risks — how the EU, US, and China compete and what it means for your organization.',
+      metaDescription: 'Geopolitics and AI explained: EU AI Act, US strategy, China CAC — AI geopolitical risks and global AI regulation for prompt engineering practitioners and organizations.',
       publishDate: '2026-04-01',
       dateModified: '2026-04-02',
       readTime: '16 min read',
@@ -19901,6 +19902,19 @@ zh: {
           { '@type': 'Question', name: 'Can EU organizations use DeepSeek for commercial applications?', acceptedAnswer: { '@type': 'Answer', text: 'Technically yes, with GDPR-compliant Standard Contractual Clauses (SCCs). In practice, SCCs are difficult to enforce against Chinese law obligations requiring CAC data disclosure compliance. Germany (BSI), France (ANSSI), and the Netherlands (NCSC) have issued advisories restricting Chinese AI tools for government and critical infrastructure. Private-sector organizations must conduct a Transfer Impact Assessment under GDPR Article 46 before processing personal data through DeepSeek.' } },
         ],
       },
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'Key Data Points', anchor: 'ai-geopolitics-key-data-points' },
+        { label: 'The AI Arms Race: US, China, and the EU', anchor: 'the-ai-arms-race-us-china-and-the-eu' },
+        { label: 'The EU AI Act: What It Actually Requires', anchor: 'the-eu-ai-act-what-it-actually-requires' },
+        { label: 'EU Member States: National AI Strategies', anchor: 'eu-member-states-national-ai-strategies' },
+        { label: 'US Strategy: CHIPS Act, NIST', anchor: 'us-strategy-executive-orders-chips-act-nist' },
+        { label: "China's AI Strategy: DeepSeek, CAC", anchor: 'china-s-ai-strategy-made-in-china-2025-cac-regulations-deepseek' },
+        { label: 'China for Prompt Engineers', anchor: 'china-for-prompt-engineers-practical-deployment-guide' },
+        { label: 'Global AI Regulation: EU vs US vs China', anchor: 'global-ai-regulation-eu-vs-us-vs-china-compared' },
+        { label: 'AI Geopolitical Risks for Organizations', anchor: 'ai-geopolitical-risks-what-this-means-for-organizations' },
+        { label: 'Frequently Asked Questions', anchor: 'frequently-asked-questions' },
+      ],
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
@@ -20031,24 +20045,16 @@ zh: {
         },
 
         threeWayRace: {
-          title: 'The Three-Way Race: US, China, and the EU',
+          title: 'The AI Arms Race: US, China, and the EU',
           content: [
-            '**Three incompatible visions of AI governance are competing for global adoption, and the outcome will determine which rules govern the AI systems your organization uses.** The US prioritizes innovation and competitiveness, China uses state direction and control to achieve strategic AI dominance, and the EU builds a rights-based legal framework that exports its standards globally through the Brussels Effect.',
-            'The race is not only about which country produces the most capable AI models. It is about which regulatory framework becomes the global default — defining what AI systems can do, what data they can use, and which organizations can deploy them. The EU AI Act, by applying to any AI system deployed to EU users, has already made Brussels the effective regulator of OpenAI, Anthropic, and Google DeepMind in Europe.',
-            'Hardware control is a third dimension of the competition. The US CHIPS and Science Act ($52 billion) and export restrictions on advanced Nvidia GPUs aim to limit China\'s ability to train frontier models. DeepSeek R1\'s January 2025 release — competitive with GPT-4o and trained at a reported fraction of the cost — demonstrated that compute restrictions alone cannot halt AI capability development. See [open-source vs proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) for how these dynamics affect model availability.',
-          ],
-        },
-
-        aiArmsRace: {
-          title: 'The AI Arms Race: US, China, Europe',
-          content: [
-            '**The term "AI arms race" refers to the accelerating competition between the US, China, and Europe to achieve superiority in AI capability, talent, compute infrastructure, and regulatory influence.** Unlike traditional arms races, this one is primarily civilian and commercial — the leading AI labs are private companies (OpenAI, Anthropic, Google DeepMind, Baidu, Alibaba), and the most consequential deployments are in commerce, healthcare, and public administration rather than military systems.',
+            '**Three incompatible visions of AI governance are competing for global adoption — the US prioritizes innovation and competitiveness, China uses state direction to achieve strategic AI dominance, and the EU builds a rights-based legal framework that exports its standards globally through the Brussels Effect.** This AI arms race is primarily civilian: the leading labs are private companies (OpenAI, Anthropic, Google DeepMind, Baidu, Alibaba), but the stakes — regulatory control, hardware supply chains, and talent — are geopolitical.',
+            'The race is not only about who builds the most capable models. It is about which regulatory framework becomes the global default. The EU AI Act, by applying to any AI system deployed to EU users, has already made Brussels the effective regulator of OpenAI, Anthropic, and Google DeepMind globally. Hardware control is a third dimension: the CHIPS and Science Act ($52 billion) and Nvidia GPU export controls aim to limit China\'s compute access. DeepSeek R1\'s January 2025 release — competitive with GPT-4o at a fraction of the training cost — demonstrated those controls have limits. See [open-source vs proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) for how these dynamics affect model availability.',
           ],
           items: [
-            '**US position:** Leads on frontier model capability (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro), chip design (Nvidia, AMD), and AI investment ($67B in private AI investment in 2023 per OECD data). Lacks a unified regulatory framework — which accelerates deployment but creates compliance fragmentation.',
-            '**China\'s position:** Leads on AI patent filings, facial recognition deployment, and state-directed AI integration into public infrastructure. Models (Qwen 2.5, ERNIE 4.0, DeepSeek R1) are competitive on many benchmarks. Hardware dependence on Nvidia architectures is a strategic vulnerability that export controls are designed to exploit.',
-            '**Europe\'s position:** Leads on AI regulation (EU AI Act is the global reference framework) and open-weights research (Mistral from France). Trails on frontier model capability and private investment. Compensates through regulatory leverage — the Brussels Effect forces US and Chinese AI providers to comply with EU standards for global products.',
-            '**The hardware layer:** Nvidia GPUs (A100, H100, B100 series) are the primary training hardware for frontier models. US export controls restrict their sale to China. DeepSeek R1\'s January 2025 release — trained on China-specific H800 GPUs at a reported fraction of the cost of comparable US models — demonstrated that these controls have not halted Chinese frontier AI development.',
+            '**US position:** Leads on frontier model capability (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro), chip design (Nvidia, AMD), and AI investment ($67B private investment in 2023 per OECD). No unified federal AI law — accelerates deployment but creates compliance fragmentation.',
+            '**China\'s position:** Leads on AI patent volume, facial recognition scale, and state-directed infrastructure deployment. Models (Qwen 2.5, ERNIE 4.0, DeepSeek R1) are competitive on many benchmarks. Hardware dependence on Nvidia architectures is the primary strategic vulnerability export controls target.',
+            '**Europe\'s position:** Leads on AI regulation — the EU AI Act is the global reference framework — and open-weights research (Mistral from France). Trails on frontier model capability and private investment. Compensates through regulatory leverage: the Brussels Effect forces US and Chinese providers to comply with EU standards for global products.',
+            '**The hardware layer:** Nvidia H100/H200 GPUs dominate AI training. US export controls restrict sales to China. DeepSeek R1 trained on restricted H800 GPUs at reported ~$6M — a 94% cost reduction vs GPT-4o training estimates — demonstrating hardware controls have not halted Chinese frontier AI.',
           ],
         },
 
