@@ -30074,16 +30074,43 @@ zh: {
       theme: 'Techniques',
       title: 'RAG Explained: How to Ground AI Answers in Real Data',
       intro: 'Retrieval-Augmented Generation (RAG) is an approach where a language model first retrieves relevant documents from a knowledge source and then uses those documents to generate an answer. This keeps responses grounded in real data instead of relying only on what the model memorized during training.',
+      metaDescription: 'RAG Explained: Retrieval-Augmented Generation grounds AI answers in your documents. Learn how RAG reduces hallucinations, works with GPT-4o, Claude, Gemini, and local models.',
       publishDate: '2026-03-26',
+      dateModified: '2026-04-02',
       readTime: '8 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Retrieval-Augmented Generation',
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'What Is Retrieval-Augmented Generation (RAG)?', anchor: 'what-is-retrieval-augmented-generation-rag' },
+        { label: 'Why Does RAG Matter?', anchor: 'why-does-rag-matter' },
+        { label: 'How Does a RAG System Work?', anchor: 'how-does-a-rag-system-work' },
+        { label: 'RAG vs Fine-Tuning', anchor: 'rag-vs-fine-tuning' },
+        { label: 'Bad Prompt vs Good Prompt: RAG in Action', anchor: 'bad-prompt-vs-good-prompt-rag-in-action' },
+        { label: 'RAG in Multi-Model Workflows', anchor: 'rag-in-multi-model-workflows' },
+        { label: 'How to Implement RAG Step by Step', anchor: 'how-to-implement-rag-step-by-step' },
+        { label: 'Related Reading', anchor: 'related-reading' },
+        { label: 'FAQ: RAG', anchor: 'faq-rag' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'RAG Explained: How to Ground AI Answers in Real Data',
         description: 'What Retrieval-Augmented Generation (RAG) is, why it matters, and how it grounds language model outputs in your own documents.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
-        keywords: ['RAG', 'Retrieval-Augmented Generation', 'prompt engineering', 'knowledge grounding', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        isPartOf: {
+          '@type': 'Series',
+          name: 'Prompt Engineering Techniques',
+          url: 'https://www.promptquorum.com/prompt-engineering?theme=techniques',
+        },
+        articleSection: 'Techniques',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
+        keywords: ['RAG', 'Retrieval-Augmented Generation', 'prompt engineering', 'knowledge grounding', 'PromptQuorum', 'vector database', 'semantic search', 'document retrieval'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -30091,102 +30118,340 @@ zh: {
           { '@type': 'Thing', name: 'Large Language Models' },
           { '@type': 'Thing', name: 'Knowledge Grounding' },
         ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Pinecone', url: 'https://www.pinecone.io' },
+          { '@type': 'SoftwareApplication', name: 'Weaviate', url: 'https://weaviate.io' },
+          { '@type': 'SoftwareApplication', name: 'Chroma', url: 'https://www.trychroma.com' },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': ['BreadcrumbList', 'ItemList'],
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Home',
+              item: 'https://www.promptquorum.com',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Prompt Engineering',
+              item: 'https://www.promptquorum.com/prompt-engineering',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Techniques',
+              item: 'https://www.promptquorum.com/prompt-engineering?theme=techniques',
+            },
+            {
+              '@type': 'ListItem',
+              position: 4,
+              name: 'RAG Explained: How to Ground AI Answers in Real Data',
+              item: 'https://www.promptquorum.com/prompt-engineering/rag-explained',
+            },
+          ],
+        },
+        ragSteps: {
+          '@type': 'ItemList',
+          name: 'RAG System Pipeline',
+          description: 'The four stages of a Retrieval-Augmented Generation system.',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Ingestion',
+              description: 'Load documents and chunk them into 200–1,000 token segments with metadata.',
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Indexing',
+              description: 'Embed chunks into vectors and store in a vector database for semantic search.',
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: 'Retrieval',
+              description: 'Embed the user query and retrieve the most relevant document chunks.',
+            },
+            {
+              '@type': 'ListItem',
+              position: 4,
+              name: 'Generation',
+              description: 'Pass retrieved chunks + query to an LLM to generate a grounded answer.',
+            },
+          ],
+        },
+        howTo: {
+          '@type': 'HowTo',
+          name: 'How to Implement Retrieval-Augmented Generation',
+          description: 'A step-by-step guide to building a RAG system from document ingestion to answer generation.',
+          step: [
+            {
+              '@type': 'HowToStep',
+              name: 'Identify knowledge sources',
+              text: 'Select documents that will ground your AI answers: FAQs, product docs, research papers, databases, or APIs.',
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Prepare and chunk documents',
+              text: 'Split documents into 200–500 word chunks with overlap. Store metadata like date, title, or source.',
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Set up a vector database',
+              text: 'Choose a platform (Pinecone, Weaviate, Chroma, Milvus) and embed your chunks using an embedding model.',
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Query and retrieve',
+              text: 'At runtime: embed user query, retrieve most similar chunks using semantic search, apply relevance filters.',
+            },
+            {
+              '@type': 'HowToStep',
+              name: 'Generate with context',
+              text: 'Pass retrieved chunks + user query to an LLM (GPT-4o, Claude, Gemini). Model generates grounded answer.',
+            },
+          ],
+        },
+        faq: {
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What is RAG (Retrieval-Augmented Generation)?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'RAG is a technique where an AI system retrieves relevant documents from a knowledge base before generating an answer. This grounds the answer in real data, reducing hallucinations and keeping outputs up to date.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How is RAG different from fine-tuning?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'RAG retrieves external knowledge at query time (in-context), while fine-tuning modifies the model\'s parameters permanently. RAG is better for frequently-changing data; fine-tuning is better for teaching the model a specific style or domain behavior.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What is a vector database, and why do I need one for RAG?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'A vector database (Pinecone, Weaviate, Chroma, Milvus) stores numerical representations (embeddings) of your documents. At query time, it performs semantic search—finding the most relevant passages based on meaning, not just keywords.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can I use RAG with GPT-4o, Claude, and Gemini?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. RAG works with any LLM. You retrieve documents, include them in your prompt, and send the prompt to your chosen model (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, or local models like Ollama).',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What is the typical chunk size for RAG documents?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Most effective chunk sizes are 200–500 words. Smaller chunks (200 words) improve retrieval precision; larger chunks (500+ words) provide more context. Test both on your use case.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How do I prevent RAG from retrieving irrelevant documents?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Use a relevance threshold: only pass retrieved documents to the LLM if their similarity score exceeds a cutoff (e.g., > 0.7). Also tune your chunk size and embedding model, and add metadata filters (date, document type, user permissions).',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can RAG handle real-time data updates?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. RAG retrieves documents at query time, so if you update your knowledge base, new results appear immediately on the next query. This makes RAG ideal for live information like pricing, policies, or news.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Is RAG better than just using a larger context window?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'RAG is more efficient. A 1M-token context window can hold ~50 papers; RAG with semantic search finds the most relevant passages from millions of documents in milliseconds. RAG is also cheaper and scales better.',
+              },
+            },
+          ],
+        },
       },
       sections: {
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          content: [
+            '**RAG (Retrieval-Augmented Generation) retrieves relevant documents at query time and uses them to ground the LLM\'s answer.** This reduces hallucinations and keeps answers grounded in current, verifiable data.',
+            '**The RAG pipeline has four stages:** Ingestion (chunk documents), Indexing (convert to vectors), Retrieval (find relevant chunks), Generation (LLM answers using chunks).',
+            '**RAG works with any LLM:** GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, and local models all support RAG-based prompts.',
+            '**RAG vs fine-tuning:** Use RAG for dynamic data (policies, docs, current information); use fine-tuning for teaching the model a consistent style or behavior.',
+            '**Vector databases like Pinecone, Weaviate, and Chroma enable semantic search:** Finding documents by meaning, not keywords, making retrieval fast and accurate.',
+          ],
+        },
         whatIsRAG: {
-          title: 'What RAG Is',
+          title: 'What Is Retrieval-Augmented Generation (RAG)?',
           content: [
-            '**RAG combines a retriever that finds relevant information with a generator that writes the final answer using that information.** The retriever searches a knowledge base (such as indexed PDFs, web pages, or internal documents) based on the user\'s query. The generator then reads the retrieved passages and produces a response that cites or reflects that content.',
-            'This is different from a plain language model call, where the model answers from its internal parameters alone. In RAG, the model is "reading" fresh context every time you ask a question.',
+            '**Retrieval-Augmented Generation (RAG) is a technique where an AI system retrieves relevant documents from a knowledge base, then uses those documents as context to generate a grounded answer.** Unlike a standard LLM call where the model answers from its training data alone, RAG feeds fresh, verifiable information into the prompt at runtime.',
+            'A typical RAG flow: (1) User asks a question → (2) System retrieves relevant documents → (3) Documents are passed to the LLM → (4) LLM generates an answer grounded in those documents.',
           ],
         },
-        whyItMatters: {
-          title: 'Why RAG Matters',
+        whyRAGMatters: {
+          title: 'Why Does RAG Matter?',
           content: [
-            '**RAG matters because it reduces hallucinations and keeps answers up to date.** A pure language model can confidently invent details, especially on specialized or recent topics. With RAG, answers are anchored in retrieved documents you control.',
-            'RAG is also important for privacy and governance. Instead of fine-tuning a model on sensitive data, you can keep that data in your own store and only feed relevant snippets into the model at query time. That way, the model reasons over your content without permanently absorbing it.',
+            '**RAG reduces hallucinations and keeps answers current.** Language models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) can confidently invent details when answering outside their training data. RAG anchors answers in documents you control, making outputs traceable and verifiable.',
+            'RAG also protects privacy: instead of fine-tuning a model on sensitive data, you keep data in your own infrastructure and only pass relevant snippets to the LLM at query time. The model never absorbs your proprietary information.',
           ],
         },
-        howItWorks: {
-          title: 'How a RAG System Works Step by Step',
+        howRAGWorks: {
+          title: 'How Does a RAG System Work?',
           content: [
-            '**A typical RAG system runs through four main stages: ingestion, indexing, retrieval, and generation.** Each stage can be tuned independently.',
+            '**RAG systems follow a four-stage pipeline: Ingestion → Indexing → Retrieval → Generation.** Each stage is independent, so you can optimize them separately.',
           ],
           numberedItems: [
-            'Ingestion: You load documents (for example PDFs, knowledge base articles, tickets, code) and split them into chunks, often 200–1,000 tokens each. Metadata such as titles, dates, authors, or tags can be attached.',
-            'Indexing: Each chunk is transformed into a vector representation using an embedding model, then stored in a vector database or search index. This lets the system find semantically similar content for new queries.',
-            'Retrieval: When the user asks a question, the system embeds the query and retrieves the most relevant chunks from the index. Filters (such as date range, document type, or user permissions) can be applied at this stage.',
-            'Generation: The system constructs a prompt that includes the user\'s question and the retrieved chunks, then sends it to a language model. The model generates an answer that should be consistent with the provided context.',
-          ],
-        },
-        decoupling: {
-          content: [
-            'Because retrieval and generation are decoupled, you can improve one without changing the other—for example, swap in a better retriever while keeping the same model.',
-          ],
-        },
-        vsFineTuning: {
-          title: 'RAG vs Fine-Tuning',
-          content: [
-            '**RAG and fine-tuning are complementary: RAG brings external knowledge into each query, while fine-tuning changes the model\'s behavior at the parameter level.** They solve different problems.',
-            'Use RAG when:',
-          ],
-          items: [
-            'You need current or frequently changing information (for example policies, product docs).',
-            'You must keep data in your own infrastructure or apply strict access control.',
-            'You want traceable answers linked to sources.',
-          ],
-        },
-        useFinetuning: {
-          content: [
-            'Use (or add) fine-tuning when:',
-          ],
-          items: [
-            'You want the model to adopt a very specific style, workflow, or domain behavior by default.',
-            'Your tasks are narrow and stable, and you have many labeled examples.',
-          ],
-        },
-        productionChoice: {
-          content: [
-            'In many production systems, RAG is the first choice because it is easier to update (just change the documents) and safer for sensitive data.',
-          ],
-        },
-        example: {
-          title: 'Example: Without vs With RAG',
-          content: [
-            '**The benefit of RAG becomes clear when you compare answering from memory only with answering using retrieved documents.** Here is a conceptual example for an internal policy question.',
-            '**[Bad Prompt – No RAG]**',
-            '"What is our company\'s travel reimbursement policy?"',
-            'The model will guess based on generic patterns, which may be wrong for your organization.',
-            '**[Good Prompt – With RAG]**',
-            '"You are an assistant answering questions about our internal company policies. Here are relevant policy excerpts:\n\n[...insert retrieved policy text chunks...]\n\nUsing only the information in these excerpts, answer the question: "What is our company\'s travel reimbursement policy?" If something is not covered in the excerpts, say that it is not specified."',
-            'In the second case, the model is grounded in your actual policy documents, and it is clear what to do when information is missing.',
-          ],
-        },
-        multiModel: {
-          title: 'RAG in Multi-Model Workflows',
-          content: [
-            '**RAG becomes even more powerful when combined with multiple models and structured prompting.** You can:',
-          ],
-          items: [
-            'Use one model or service to embed and retrieve documents, and another to generate answers.',
-            'Apply reasoning-focused prompts (such as chain-of-thought or TRACE-style structures) on top of retrieved context.',
-            'Run the same RAG prompt across several models to compare how well each uses the same documents.',
+            '**Ingestion:** Load documents (PDFs, web pages, databases, code repositories) and split them into chunks (typically 200–500 words each). Attach metadata: date published, source URL, document title, access level.',
+            '**Indexing:** Convert each chunk into a vector (a numerical representation of meaning) using an embedding model. Store vectors in a vector database (Pinecone, Weaviate, Chroma, Milvus) for fast semantic search.',
+            '**Retrieval:** When a user asks a question, convert their query to a vector and find the most similar chunks using semantic distance. Apply optional filters (date range, document type, user permissions).',
+            '**Generation:** Combine the user\'s query + retrieved chunks into a single prompt, then send to an LLM. The model generates an answer grounded in the retrieved context.',
           ],
         },
         modularity: {
           content: [
-            'This modularity is one of RAG\'s biggest strengths: you can upgrade individual components—retriever, index, generator, prompts—without rebuilding the entire system.',
+            '**Key advantage:** Because retrieval and generation are decoupled, you can swap components independently. Upgrade your embedding model without changing the LLM. Replace your vector database without rewriting retrieval logic.',
+          ],
+        },
+        ragVsFineTuning: {
+          title: 'RAG vs Fine-Tuning: When to Use Each',
+          content: [
+            '**RAG and fine-tuning are complementary techniques solving different problems.** RAG retrieves external knowledge at query time; fine-tuning permanently modifies the model\'s parameters.',
+          ],
+          rows: [
+            { 'Use Case': 'Frequently-changing data (policies, product docs, news)', 'RAG': '✓ Ideal — retrieve latest docs at query time', 'Fine-Tuning': '✗ Requires retraining after each update' },
+            { 'Use Case': 'Sensitive data (medical records, financial data)', 'RAG': '✓ Best — keep data in your infrastructure', 'Fine-Tuning': '✗ Data absorbed into model parameters' },
+            { 'Use Case': 'Teaching consistent style or domain behavior', 'RAG': '✗ Struggles — RAG doesn\'t change model behavior', 'Fine-Tuning': '✓ Ideal — patterns learned during training' },
+            { 'Use Case': 'Large document corpus (100K+ pages)', 'RAG': '✓ Best — semantic search finds relevant docs', 'Fine-Tuning': '✗ Impractical—can\'t memorize all content' },
+            { 'Use Case': 'Cost per query is critical', 'RAG': '✓ Cheaper — retrieve only relevant context', 'Fine-Tuning': '✗ Increases model size, slower inference' },
+            { 'Use Case': 'Traceable, auditable answers with source citations', 'RAG': '✓ Ideal — retrieved docs serve as sources', 'Fine-Tuning': '✗ No clear provenance for generated text' },
+          ],
+          columns: ['Use Case', 'RAG', 'Fine-Tuning'],
+        },
+        exampleBadGood: {
+          title: 'Bad Prompt vs Good Prompt: RAG in Action',
+          content: [
+            '**The power of RAG becomes clear when you compare an answer without context to one grounded in retrieved documents.**',
+            '**[Bad Prompt – No RAG]**',
+            '"What is our company\'s travel reimbursement policy?"',
+            'Without RAG, the model guesses based on generic patterns. It might invent policies or state outdated information.',
+            '**[Good Prompt – With RAG]**',
+            '"You are an HR assistant. Answer the user\'s question using ONLY the policy excerpts below. If information is not in the excerpts, say \"This is not covered in the current policy.\"\n\nPolicy excerpts:\n[...retrieved policy document chunks...]\n\nUser question: What is our company\'s travel reimbursement policy?"',
+            'With RAG, the model is anchored in your actual policies. It can\'t invent details, and every answer is traceable to a source document.',
+          ],
+        },
+        ragMultiModel: {
+          title: 'RAG in Multi-Model Workflows',
+          content: [
+            '**RAG multiplies in power when combined with multiple models and structured prompting frameworks.** For example:',
+          ],
+          items: [
+            'Use GPT-4o for embedding and Gemini 2.5 Pro for generation, comparing which model uses retrieved context better.',
+            'Apply reasoning frameworks like [Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting) or [TRACE](/prompt-engineering/trace-framework) on top of RAG-retrieved documents.',
+            'Run the same RAG query across Claude 4.6 Sonnet, GPT-4o, and Gemini 2.5 Pro side-by-side via PromptQuorum, identifying which model is most faithful to retrieved sources.',
+          ],
+        },
+        ragComparison: {
+          title: 'RAG vs Other Techniques: Quick Comparison',
+          content: ['**Compare RAG to related techniques on key dimensions:**'],
+          rows: [
+            { 'Dimension': 'Where knowledge comes from', 'RAG': 'Retrieved documents at query time', 'Fine-Tuning': 'Model parameters (training)', 'Prompt Context': 'Hard-coded in the prompt' },
+            { 'Dimension': 'Update frequency', 'RAG': 'Real-time (change docs, get new answers)', 'Fine-Tuning': 'Requires retraining', 'Prompt Context': 'Manual prompt edit needed' },
+            { 'Dimension': 'Cost per query', 'RAG': 'Low (retrieve + generate)', 'Fine-Tuning': 'Medium (larger inference)', 'Prompt Context': 'Very high (large tokens)' },
+            { 'Dimension': 'Scalability to 100K+ documents', 'RAG': '★★★★★ (vector search scales well)', 'Fine-Tuning': '★★ (can\'t memorize all)', 'Prompt Context': '★ (hits token limits)' },
+            { 'Dimension': 'Source attribution', 'RAG': '✓ Retrieved docs are cited', 'Fine-Tuning': '✗ No clear sources', 'Prompt Context': '✓ Sources in prompt' },
+            { 'Dimension': 'Best for sensitive data', 'RAG': '★★★★★ (data stays external)', 'Fine-Tuning': '★ (data enters model)', 'Prompt Context': '★★★★ (in-prompt only)' },
+          ],
+          columns: ['Dimension', 'RAG', 'Fine-Tuning', 'Prompt Context'],
+        },
+
+        howToImplement: {
+          title: 'How to Implement RAG Step by Step',
+          numberedItems: [
+            '**Identify knowledge sources:** Collect documents that will ground your answers. Examples: customer FAQs, product documentation, research papers, internal wikis, API docs, regulatory compliance guides.',
+            '**Prepare and chunk documents:** Split documents into 200–500 word chunks. Add metadata (date, source URL, author, document type, security level). For 100+ page documents, use 200-word chunks for precision; for short FAQs, use 500-word chunks for context.',
+            '**Set up a vector database:** Choose a platform (Pinecone for managed simplicity, Weaviate for open-source flexibility, Chroma for lightweight local deployment, Milvus for enterprise scale). Upload your chunks with metadata.',
+            '**Build the retrieval pipeline:** Embed user queries and retrieve top-K similar documents (typically K=3–5). Apply filters: date ranges, document types, access permissions. Test retrieval on 10 representative queries.',
+            '**Generate with retrieved context:** Construct a prompt that includes the user\'s question + retrieved chunks. Send to an LLM (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, or Ollama). Model generates a grounded answer.',
+            '**Implement relevance thresholding:** Only pass retrieved documents to the LLM if their similarity score exceeds a cutoff (e.g., > 0.7). If no documents pass the threshold, return "Not found in knowledge base" rather than a hallucinated answer.',
           ],
         },
 
-        howToStart: {
-          title: 'How to Use Retrieval-Augmented Generation (RAG)',
-          numberedItems: [
-            '**Identify the knowledge sources the AI needs (documents, PDFs, databases, APIs).** Example: For customer support, you might include FAQs, product docs, and past ticket resolutions. For research, include your paper repository and external databases.',
-            '**Convert static documents into searchable embeddings using a vector database (Pinecone, Weaviate, Chroma, Milvus).** This process breaks documents into chunks (paragraphs or sentences), converts each to a vector (numerical representation of meaning), and stores them for fast semantic search.',
-            '**At query time: (1) Convert the user\'s question to a vector, (2) Retrieve the most similar documents, (3) Pass retrieved documents + question to the LLM.** Example: User asks \'How do I reset my password?\' → System finds relevant FAQ/docs → LLM generates answer grounded in those docs, not from training data.',
-            '**For large document sets (100+ pages), implement chunking strategy: break documents into 200–500 word chunks with overlap.** This balances context comprehension with search precision. Test chunk sizes on representative queries.',
-            '**Verify that retrieved documents actually contain the answer before the LLM generates output.** If retrieval returns irrelevant docs, even a good LLM will struggle. Use a relevance threshold: only pass retrieved docs to the LLM if they exceed a similarity score (e.g., > 0.7).',
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — Foundational concepts for designing effective AI instructions.',
+            '[Chain-of-Thought Prompting: Make AI Show Its Reasoning](/prompt-engineering/chain-of-thought-prompting) — Combine RAG with step-by-step reasoning for complex tasks.',
+            '[Structured Output & JSON Mode: Get AI to Return Usable Data](/prompt-engineering/structured-output-json-mode) — Format RAG answers as JSON for downstream systems.',
+          ],
+        },
+
+        faq: {
+          title: 'FAQ: RAG',
+          faqs: [
+            {
+              q: 'What is RAG (Retrieval-Augmented Generation)?',
+              a: 'RAG is a technique where an AI system retrieves relevant documents from a knowledge base before generating an answer. This grounds the answer in real data, reducing hallucinations and keeping outputs up to date.',
+            },
+            {
+              q: 'How is RAG different from fine-tuning?',
+              a: 'RAG retrieves external knowledge at query time (in-context learning). Fine-tuning modifies the model\'s parameters permanently. RAG is better for frequently-changing data; fine-tuning is better for teaching the model a consistent style or behavior.',
+            },
+            {
+              q: 'What is a vector database, and why do I need one for RAG?',
+              a: 'A vector database (Pinecone, Weaviate, Chroma, Milvus) stores numerical representations (embeddings) of your documents. At query time, it performs semantic search—finding the most relevant passages based on meaning, not just keyword matching.',
+            },
+            {
+              q: 'Can I use RAG with GPT-4o, Claude, and Gemini?',
+              a: 'Yes. RAG works with any LLM. You retrieve documents, construct a prompt with the retrieved context, and send it to your chosen model (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, or any other LLM).',
+            },
+            {
+              q: 'What is the optimal chunk size for RAG documents?',
+              a: 'Chunk sizes typically range from 200–500 words. Smaller chunks (200 words) improve retrieval precision; larger chunks (500+ words) provide richer context. Test both on representative queries from your domain.',
+            },
+            {
+              q: 'How do I prevent RAG from retrieving irrelevant documents?',
+              a: 'Use a relevance threshold: only pass documents to the LLM if similarity score > 0.7. Also experiment with chunk size, embedding model quality, and metadata filters (date, document type, access permissions).',
+            },
+            {
+              q: 'Does RAG handle real-time data updates?',
+              a: 'Yes. RAG retrieves documents at query time, so updates to your knowledge base appear immediately on the next query. This makes RAG ideal for live information (pricing, policies, breaking news).',
+            },
+            {
+              q: 'Is RAG better than using a large context window?',
+              a: 'RAG is more practical. A 1M-token context window holds ~50 papers; RAG can search millions of documents in milliseconds via semantic search. RAG is also cheaper per query and scales better.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources',
+          items: [
+            '[Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks."](https://arxiv.org/abs/2005.11401) — Foundational research introducing RAG for knowledge-grounded text generation.',
+            '[OpenAI. (2024). "Retrieval and Augmentation in Language Models."](https://platform.openai.com/docs/guides/prompt-engineering) — Official guidance on implementing RAG with GPT-4o.',
+            '[Weaviate. (2024). "RAG Architecture Best Practices."](https://weaviate.io/blog/rag-architectures) — Production patterns for scaling RAG systems.',
           ],
         },
       },
