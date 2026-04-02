@@ -51,9 +51,14 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const canonicalUrl = `https://www.promptquorum.com/prompt-engineering/${slug}`
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
 
+  // Use seoTitle if available for better SERP display, otherwise use article title
+  const pageTitle = (article as PEArticle & { seoTitle?: string }).seoTitle ?? article.title
+  // Use metaDescription for OG/Twitter when available, otherwise fall back to intro
+  const metaDesc = (article as PEArticle & { metaDescription?: string }).metaDescription ?? article.intro
+
   return {
-    title: `${article.title} | PromptQuorum`,
-    description: (article as PEArticle & { metaDescription?: string }).metaDescription ?? article.intro,
+    title: `${pageTitle} | PromptQuorum`,
+    description: metaDesc,
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -67,7 +72,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     },
     openGraph: {
       title: article.title,
-      description: article.intro,
+      description: metaDesc,
       url: canonicalUrl,
       type: 'article',
       siteName: 'PromptQuorum',
@@ -79,7 +84,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       card: 'summary_large_image',
       site: '@promptquorum',
       title: article.title,
-      description: article.intro,
+      description: metaDesc,
     },
   }
 }
