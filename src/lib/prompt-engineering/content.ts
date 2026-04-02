@@ -25884,20 +25884,33 @@ zh: {
     en: {
       theme: 'Frameworks',
       title: 'The SPECS Framework',
-      intro: 'The SPECS Framework is a prompt structure that turns vague requests into precise specifications so that large language models produce predictable, parseable outputs. In PromptQuorum, the SPECS Framework is available as a built-in option that any user can select and apply directly in the app.',
+      intro: '**The SPECS Framework is a specification-first prompt structure for tasks that demand predictable, parseable output: Scope, Purpose, Examples, Constraints, and Steps.** Unlike looser frameworks designed for communication or creativity, SPECS treats every prompt like a mini requirements document, reducing ambiguity and making outputs easier to process downstream. In PromptQuorum, the SPECS Framework is available as a built-in option with dedicated fields for each component, so you can design and dispatch structured prompts across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and compatible local models.',
       publishDate: '2026-03-24',
+      dateModified: '2026-04-02',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
+      primaryTerm: 'SPECS Framework',
+      metaDescription: 'Learn the SPECS Framework: a specification-first prompt structure (Scope, Purpose, Examples, Constraints, Steps) for reliable, machine-usable AI output. When to use it, examples, and PromptQuorum implementation.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'The SPECS Framework',
         description: 'How the SPECS Framework (Scope, Purpose, Examples, Constraints, Steps) works, when to use it, and how PromptQuorum offers SPECS as a built-in option.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        keywords: ['SPECS Framework', 'Scope Purpose Examples Constraints Steps', 'prompt frameworks', 'prompt engineering', 'structured prompts', 'PromptQuorum', 'specification prompting', 'structured AI output'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        isPartOf: {
+          '@type': 'Series',
+          name: 'Prompt Engineering Frameworks',
+          url: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks',
+        },
+        articleSection: 'Frameworks',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Prompt Frameworks' },
@@ -25908,20 +25921,85 @@ zh: {
           { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        supplementalSchema: {
+          '@context': 'https://schema.org',
+          '@type': ['BreadcrumbList', 'ItemList'],
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+              { '@type': 'ListItem', position: 2, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+              { '@type': 'ListItem', position: 3, name: 'Frameworks', item: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks' },
+              { '@type': 'ListItem', position: 4, name: 'SPECS Framework', item: 'https://www.promptquorum.com/prompt-engineering/specs-framework' },
+            ],
+          },
+          specsComponents: {
+            '@type': 'ItemList',
+            name: 'Five Components of the SPECS Framework',
+            description: 'The five essential components of any SPECS prompt: Scope, Purpose, Examples, Constraints, and Steps.',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Scope', description: 'What the task covers and what it explicitly does not cover.' },
+              { '@type': 'ListItem', position: 2, name: 'Purpose', description: 'The underlying goal or decision the output should support.' },
+              { '@type': 'ListItem', position: 3, name: 'Examples', description: 'One or more sample inputs and outputs to anchor the model.' },
+              { '@type': 'ListItem', position: 4, name: 'Constraints', description: 'Hard rules such as length limits, formats, or banned behaviors.' },
+              { '@type': 'ListItem', position: 5, name: 'Steps', description: 'The internal sequence the model should follow to reach the output.' },
+            ],
+          },
+          faq: {
+            '@type': 'FAQPage',
+            mainEntity: [
+              { '@type': 'Question', name: 'What is the SPECS Framework?', acceptedAnswer: { '@type': 'Answer', text: 'The SPECS Framework is a specification-first prompt structure (Scope, Purpose, Examples, Constraints, Steps) designed for tasks that require predictable, parseable outputs. It treats every prompt like a mini requirements document, making it ideal for data extraction, code generation, and structured report generation.' } },
+              { '@type': 'Question', name: 'What does SPECS stand for?', acceptedAnswer: { '@type': 'Answer', text: 'SPECS stands for Scope (what the task covers), Purpose (the underlying goal), Examples (sample inputs and outputs), Constraints (hard rules and limits), and Steps (the internal sequence the model should follow).' } },
+              { '@type': 'Question', name: 'How do I write a SPECS prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Define five components: Scope (what is in scope and out of scope), Purpose (what decision the output supports), Examples (one or more sample input-output pairs), Constraints (hard format, length, or behavior rules), and Steps (the ordered sequence the model should follow). Combine them in a single structured prompt.' } },
+              { '@type': 'Question', name: 'How do I use SPECS in PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'Open PromptQuorum, select the SPECS Framework, and fill in the five dedicated fields (Scope, Purpose, Examples, Constraints, Steps). PromptQuorum assembles them into a single structured prompt and dispatches it to multiple models like GPT-4o, Claude, or Gemini simultaneously.' } },
+              { '@type': 'Question', name: 'When should I use SPECS vs CO-STAR?', acceptedAnswer: { '@type': 'Answer', text: 'Use SPECS when you need machine-usable output with predictable structure — data extraction, code transformation, or JSON generation. Use CO-STAR when you need multi-constraint communication content like documentation or guides where audience, tone, and style all matter.' } },
+              { '@type': 'Question', name: 'How is SPECS different from CRAFT?', acceptedAnswer: { '@type': 'Answer', text: 'CRAFT (Context, Role, Audience, Format, Tone) is designed for creative and marketing content where voice, audience, and style matter. SPECS is designed for structured, analytical outputs where accuracy, predictability, and downstream processing are the priorities.' } },
+              { '@type': 'Question', name: 'Can SPECS work with local models like Ollama or LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The SPECS structure is model-agnostic and works well with local models running in Ollama or LM Studio, as well as cloud models like GPT-4o, Claude, and Gemini. PromptQuorum supports dispatching SPECS prompts to all these models simultaneously.' } },
+              { '@type': 'Question', name: 'Is SPECS the same as chain-of-thought prompting?', acceptedAnswer: { '@type': 'Answer', text: 'No. Chain-of-thought prompting asks the model to show its reasoning steps. SPECS defines the structural requirements of the prompt itself — scope, purpose, examples, constraints, and execution steps. The two are complementary: you can include reasoning steps within a SPECS prompt using the Steps component.' } },
+            ],
+          },
+        },
       },
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'What Is the SPECS Framework?', anchor: 'what-is-the-specs-framework' },
+        { label: 'What Are the Five SPECS Components?', anchor: 'what-are-the-five-specs-components' },
+        { label: 'Why Is the SPECS Framework Useful?', anchor: 'why-is-the-specs-framework-useful' },
+        { label: 'What Does a Strong SPECS Prompt Look Like?', anchor: 'what-does-a-strong-specs-prompt-look-like' },
+        { label: 'When Should You Use the SPECS Framework?', anchor: 'when-should-you-use-the-specs-framework' },
+        { label: 'How Does PromptQuorum Implement the SPECS Framework?', anchor: 'how-does-promptquorum-implement-the-specs-framework' },
+        { label: 'How Does SPECS Compare to Other Prompt Frameworks?', anchor: 'how-does-specs-compare-to-other-prompt-frameworks' },
+        { label: 'How to Use the SPECS Framework Step by Step', anchor: 'how-to-use-the-specs-framework-step-by-step' },
+        { label: 'Related Reading', anchor: 'related-reading' },
+        { label: 'FAQ: SPECS Framework', anchor: 'faq-specs-framework' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Key Takeaways',
+          items: [
+            '**SPECS = Scope, Purpose, Examples, Constraints, Steps** — a specification-first prompt structure for tasks requiring predictable, machine-usable output.',
+            '**Best for production workflows:** data extraction, code generation, report formatting, and any prompt where AI output feeds into another system or script.',
+            '**More structured than CO-STAR or CRAFT:** SPECS eliminates ambiguity by defining scope boundaries, explicit constraints, and a step-by-step execution path.',
+            '**PromptQuorum supports SPECS as a built-in framework** with dedicated input fields for all five components, so you can test SPECS prompts across GPT-4o, Claude, Gemini, and local models simultaneously.',
+            '**Use SPECS when output format matters more than voice or style.** If your task requires JSON, fixed schema, or structured tables, SPECS is the right choice.',
+          ],
+        },
         whatIsSPECS: {
-          title: 'What the SPECS Framework Is',
+          title: 'What Is the SPECS Framework?',
           content: [
-            '**The SPECS Framework is a specification-first prompt pattern that treats every prompt like a mini requirements document instead of a casual chat message.** It is designed for tasks where accuracy, structure, and repeatability matter more than open-ended creativity. SPECS works well with models such as GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models, because it removes ambiguity from your instructions.',
+            '**The SPECS Framework is a specification-first prompt pattern that treats every prompt like a mini requirements document instead of a casual chat message.** It is designed for tasks where accuracy, structure, and repeatability matter more than open-ended creativity. SPECS works well with models such as GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models running in Ollama or LM Studio, because it removes ambiguity from your instructions. This makes it one of the more structured options available in [prompt engineering](/prompt-engineering/what-is-prompt-engineering).',
             'SPECS is especially useful when different people or systems must run the same prompt and get consistent results. By turning the prompt into a clear specification, you make it easier to debug issues, compare model behavior, and enforce standards across your workflows.',
           ],
         },
         fiveComponents: {
-          title: 'The Five SPECS Components',
+          title: 'What Are the Five SPECS Components?',
           content: [
-            '**A strong SPECS prompt defines all five components so that the model knows exactly what to do, why, and how to format the answer.** Each component focuses on a different part of the instruction.',
+            '**A strong SPECS prompt defines all five components so that the model knows exactly what to do, why, and how to format the answer.** Each component focuses on a different part of the instruction. Together they cover the same ground as the [five building blocks every prompt needs](/prompt-engineering/5-building-blocks-every-prompt-needs), but in a more rigid, specification-oriented format.',
             'Typical definitions are:',
           ],
           items: [
@@ -25933,7 +26011,7 @@ zh: {
           ],
         },
         whySPECSIsUseful: {
-          title: 'Why the SPECS Framework Is Useful',
+          title: 'Why Is the SPECS Framework Useful?',
           content: [
             '**The SPECS Framework is useful for analytical, operational, and integration tasks where you need machine-usable results, not just readable prose.** It reduces hidden assumptions and makes every part of the prompt explicit, which is essential for production workflows.',
             'Common benefits include:',
@@ -25945,7 +26023,7 @@ zh: {
           ],
         },
         badVsGoodExample: {
-          title: 'Example: Bad vs Good SPECS Prompt',
+          title: 'What Does a Strong SPECS Prompt Look Like?',
           content: [
             '**The difference between an unstructured request and a SPECS-based request becomes obvious when you look at the same task written both ways.** Here is an example for extracting information from text.',
             '**[Bad Prompt]**',
@@ -25956,9 +26034,9 @@ zh: {
           ],
         },
         whenToUse: {
-          title: 'When to Use the SPECS Framework',
+          title: 'When Should You Use the SPECS Framework?',
           content: [
-            '**You should use the SPECS Framework when your primary goal is structured, reliable output rather than exploratory brainstorming.** This often includes:',
+            '**You should use the SPECS Framework when your primary goal is structured, reliable output rather than exploratory brainstorming.** This often includes tasks that are too complex or ambiguous for a [single-step prompt](/prompt-engineering/the-single-step-prompt-method) but where you need tighter control than CO-STAR or CRAFT provide.',
           ],
           items: [
             'Data extraction from emails, chats, or documents into fixed schemas.',
@@ -25968,7 +26046,7 @@ zh: {
           ],
         },
         howPQImplements: {
-          title: 'How PromptQuorum Implements the SPECS Framework',
+          title: 'How Does PromptQuorum Implement the SPECS Framework?',
           content: [
             '**PromptQuorum is a multi-model AI dispatch tool that offers the SPECS Framework as one of its built-in prompt structures so users can design specification-style prompts without building them from scratch.** When you choose SPECS in PromptQuorum, the app exposes dedicated fields for Scope, Purpose, Examples, Constraints, and Steps and then assembles them into a single, well-structured instruction.',
             'Within PromptQuorum, the SPECS Framework lets you:',
@@ -25976,30 +26054,92 @@ zh: {
           items: [
             'Capture each component in a separate field so the specification stays readable and easy to edit.',
             'Apply the same SPECS-based prompt to multiple models in parallel, making it simple to compare how different providers handle strict formats.',
-            'Save and share SPECS templates for recurring workflows such as ticket summarization, report generation, or code reviews.',
+            'Save and share SPECS templates for recurring workflows such as ticket summarization, report generation, or code reviews. See [how to build a prompt library](/prompt-engineering/build-a-prompt-library) for team-level reuse.',
           ],
         },
         usingSpecsWithOthers: {
-          title: 'Using SPECS With Other Frameworks',
+          title: 'How Does SPECS Compare to Other Prompt Frameworks?',
           content: [
             '**You should position the SPECS Framework as the backbone for structured outputs and combine it with other frameworks for complementary tasks.** A practical pattern is:',
           ],
           items: [
             'Use SPECS for anything that must produce predictable structures or feed into tools.',
-            'Use creative frameworks like CRAFT for marketing and copywriting.',
-            'Use reasoning-oriented frameworks such as Analyze–Plan–Execute (APE) when you want visible intermediate reasoning.',
-            'Use single-step general-purpose frameworks for quick tasks that do not justify a full specification.',
+            'Use [CRAFT](/prompt-engineering/craft-framework) for marketing and copywriting where voice, audience, and style matter.',
+            'Use reasoning-oriented frameworks such as [Analyze–Plan–Execute (APE)](/prompt-engineering/ape-framework) when you want visible intermediate reasoning.',
+            'Use [CO-STAR](/prompt-engineering/co-star-framework) for multi-constraint communication tasks like documentation or educational guides.',
           ],
         },
 
         howToStart: {
-          title: 'How to Use the SPECS Framework',
+          title: 'How to Use the SPECS Framework Step by Step',
           numberedItems: [
-            '**Setting: Provide context about the environment, system, or domain.** Example: \'You are a data analyst at a healthcare company. Patient privacy is critical. All queries must comply with HIPAA.\'',
-            '**Problem statement: State the specific problem you\'re solving.** Example: \'Identify which patient cohorts show low medication adherence in the last 90 days.\'',
-            '**Examples: Provide 2–3 concrete examples of good output.** For analysis, show a sample output table or findings. For code generation, show working code that matches your style.',
-            '**Constraints: List hard rules and preferences.** Example: \'Use only SQL (no Python). Query must run in under 5 seconds. Output must be anonymized (no patient names).\'',
-            '**Style: Specify tone, language, and format preferences.** Example: \'Technical audience. Use precise terminology. Return as a markdown report.\'',
+            '**Open PromptQuorum and select the SPECS Framework** from the built-in prompt structure options. This surfaces dedicated input fields for all five components.',
+            '**Fill Scope: Define exactly what the task covers and what it excludes.** Example: "Analyze a single customer support email and extract key information. Ignore marketing or sales opportunities."',
+            '**Fill Purpose: State the underlying goal the output should serve.** Example: "Produce a structured summary that can be logged in our ticketing system and used by agents to respond faster."',
+            '**Fill Examples: Provide one or more sample input-output pairs to anchor the model.** Example: Input: "I tried to reset my password twice and the link expired both times." Output: {"issue_type": "password_reset", "urgency": "medium", "summary": "Password reset link expires before user can complete reset"}',
+            '**Fill Constraints: List hard rules the model must follow.** Example: "Output must be valid JSON with keys `issue_type`, `urgency`, and `summary`. `urgency` must be one of: low, medium, high."',
+            '**Fill Steps: Define the ordered execution sequence the model should follow.** Example: "1) Identify the main issue, 2) infer urgency based on impact and frustration, 3) write a concise summary under 25 words."',
+            '**Run the SPECS prompt across multiple models** such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro to compare outputs and verify structure consistency. Save as a template for reuse.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          content: [
+            'Explore these related frameworks and foundational concepts to deepen your prompt engineering skills:',
+          ],
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — Foundational concepts and core principles.',
+            '[The CO-STAR Framework](/prompt-engineering/co-star-framework) — A six-component framework for communication tasks with multiple constraints.',
+            '[The APE Framework](/prompt-engineering/ape-framework) — A reasoning-oriented framework for exposing model thinking.',
+            '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — How to save, organize, and reuse your best prompts across your team.',
+          ],
+        },
+        faq: {
+          title: 'FAQ: SPECS Framework',
+          faqs: [
+            {
+              q: 'What is the SPECS Framework?',
+              a: 'The SPECS Framework is a specification-first prompt structure (Scope, Purpose, Examples, Constraints, Steps) designed for tasks that require predictable, parseable outputs. It treats every prompt like a mini requirements document, making it ideal for data extraction, code generation, and structured report generation.',
+            },
+            {
+              q: 'What does SPECS stand for?',
+              a: 'SPECS stands for Scope (what the task covers), Purpose (the underlying goal), Examples (sample inputs and outputs), Constraints (hard rules and limits), and Steps (the internal sequence the model should follow).',
+            },
+            {
+              q: 'How do I write a SPECS prompt?',
+              a: 'Define five components: Scope (what is in scope and out of scope), Purpose (what decision the output supports), Examples (one or more sample input-output pairs), Constraints (hard format, length, or behavior rules), and Steps (the ordered sequence the model should follow). Combine them in a single structured prompt.',
+            },
+            {
+              q: 'How do I use SPECS in PromptQuorum?',
+              a: 'Open PromptQuorum, select the SPECS Framework, and fill in the five dedicated fields (Scope, Purpose, Examples, Constraints, Steps). PromptQuorum assembles them into a single structured prompt and dispatches it to multiple models like GPT-4o, Claude, or Gemini simultaneously.',
+            },
+            {
+              q: 'When should I use SPECS vs CO-STAR?',
+              a: 'Use SPECS when you need machine-usable output with predictable structure — data extraction, code transformation, or JSON generation. Use CO-STAR when you need multi-constraint communication content like documentation or guides where audience, tone, and style all matter.',
+            },
+            {
+              q: 'How is SPECS different from CRAFT?',
+              a: 'CRAFT (Context, Role, Audience, Format, Tone) is designed for creative and marketing content where voice, audience, and style matter. SPECS is designed for structured, analytical outputs where accuracy, predictability, and downstream processing are the priorities.',
+            },
+            {
+              q: 'Can SPECS work with local models like Ollama or LM Studio?',
+              a: 'Yes. The SPECS structure is model-agnostic and works well with local models running in Ollama or LM Studio, as well as cloud models like GPT-4o, Claude, and Gemini. PromptQuorum supports dispatching SPECS prompts to all these models simultaneously.',
+            },
+            {
+              q: 'Is SPECS the same as chain-of-thought prompting?',
+              a: 'No. Chain-of-thought prompting asks the model to show its reasoning steps. SPECS defines the structural requirements of the prompt itself — scope, purpose, examples, constraints, and execution steps. The two are complementary: you can include reasoning steps within a SPECS prompt using the Steps component.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          content: [
+            'This article is based on current best practices in prompt engineering and documented implementations in production systems:',
+          ],
+          items: [
+            'Schulhoff, S., Teotia, N., Bansal, Y., Hegselmann, S., & Gunasekar, S. (2024). [The Prompt Report: A Systematic Survey of Prompt Engineering](https://arxiv.org/abs/2406.06608). *arXiv preprint arXiv:2406.06608*. — Comprehensive taxonomy of prompt engineering techniques and frameworks.',
+            'Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., ... & Amodei, D. (2020). [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165). *Advances in Neural Information Processing Systems (NeurIPS)*. — Foundational research on in-context learning and structured prompting with large language models.',
+            'OpenAI (2024). [Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering). — Industry best practices for designing effective prompts for production applications.',
           ],
         },
       },
@@ -26014,20 +26154,33 @@ zh: {
     en: {
       theme: 'Frameworks',
       title: 'The RISEN Framework',
-      intro: 'The RISEN Framework is an iterative prompt structure that focuses on Refine, Inspect, Summarize, Evaluate, and Next steps so you can systematically improve AI outputs instead of rewriting prompts from scratch each time. PromptQuorum includes the RISEN Framework as a built-in option that any user can select and use directly in the app.',
+      intro: '**The RISEN Framework is an iterative prompt structure for refining existing AI outputs through five structured stages: Refine, Inspect, Summarize, Evaluate, and Next steps.** Unlike generation-first frameworks that focus on producing a first draft, RISEN is built for the revision phase — it turns "make this better" into a transparent, auditable process with visible reasoning at each step. In PromptQuorum, the RISEN Framework is available as a built-in option so you can apply structured revision cycles across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and compatible local models simultaneously.',
       publishDate: '2026-03-24',
+      dateModified: '2026-04-02',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
+      primaryTerm: 'RISEN Prompt Framework',
+      metaDescription: 'Learn the RISEN Framework: an iterative prompt structure (Refine, Inspect, Summarize, Evaluate, Next steps) for systematically improving AI outputs. When to use it, examples, and PromptQuorum implementation.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'The RISEN Framework',
         description: 'How the RISEN Framework (Refine, Inspect, Summarize, Evaluate, Next steps) works, when to use it, and how PromptQuorum offers RISEN as a built-in option.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
-        keywords: ['RISEN Framework', 'Refine Inspect Summarize Evaluate Next steps', 'prompt frameworks', 'prompt engineering', 'iterative prompts', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        keywords: ['RISEN Framework', 'Refine Inspect Summarize Evaluate Next steps', 'prompt frameworks', 'prompt engineering', 'iterative prompts', 'PromptQuorum', 'iterative prompt refinement', 'AI output improvement'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        isPartOf: {
+          '@type': 'Series',
+          name: 'Prompt Engineering Frameworks',
+          url: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks',
+        },
+        articleSection: 'Frameworks',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
         about: [
           { '@type': 'Thing', name: 'Prompt Engineering' },
           { '@type': 'Thing', name: 'Prompt Frameworks' },
@@ -26038,20 +26191,85 @@ zh: {
           { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
         ],
+        supplementalSchema: {
+          '@context': 'https://schema.org',
+          '@type': ['BreadcrumbList', 'ItemList'],
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+              { '@type': 'ListItem', position: 2, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+              { '@type': 'ListItem', position: 3, name: 'Frameworks', item: 'https://www.promptquorum.com/prompt-engineering?theme=frameworks' },
+              { '@type': 'ListItem', position: 4, name: 'RISEN Framework', item: 'https://www.promptquorum.com/prompt-engineering/risen-framework' },
+            ],
+          },
+          risenComponents: {
+            '@type': 'ItemList',
+            name: 'Five Stages of the RISEN Framework',
+            description: 'The five stages of the RISEN iterative prompt process: Refine, Inspect, Summarize, Evaluate, and Next steps.',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Refine', description: 'Improve the existing draft according to your goals.' },
+              { '@type': 'ListItem', position: 2, name: 'Inspect', description: 'Identify concrete changes made during refinement.' },
+              { '@type': 'ListItem', position: 3, name: 'Summarize', description: 'Provide a concise explanation of what the new version now says or does.' },
+              { '@type': 'ListItem', position: 4, name: 'Evaluate', description: 'Critique the result against explicit criteria.' },
+              { '@type': 'ListItem', position: 5, name: 'Next steps', description: 'Recommend further edits or follow-up actions for the next iteration.' },
+            ],
+          },
+          faq: {
+            '@type': 'FAQPage',
+            mainEntity: [
+              { '@type': 'Question', name: 'What is the RISEN Framework?', acceptedAnswer: { '@type': 'Answer', text: 'The RISEN Framework is an iterative prompt structure (Refine, Inspect, Summarize, Evaluate, Next steps) for systematically improving AI outputs. Unlike generation-focused frameworks, RISEN is built for the revision phase: it gives you visible audit trails and structured self-critique at each step.' } },
+              { '@type': 'Question', name: 'What does RISEN stand for?', acceptedAnswer: { '@type': 'Answer', text: 'RISEN stands for Refine (improve the existing draft), Inspect (list specific changes made), Summarize (explain what the new version says), Evaluate (critique against explicit criteria), and Next steps (recommend further edits for the next iteration).' } },
+              { '@type': 'Question', name: 'How do I write a RISEN prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Ask the model to move through five stages on your existing draft: Refine it toward your goal, Inspect what changed, Summarize the new version, Evaluate it against criteria like tone or accuracy, and suggest Next steps. You can run all five stages in a single prompt or as separate prompts in a conversation.' } },
+              { '@type': 'Question', name: 'How do I use RISEN in PromptQuorum?', acceptedAnswer: { '@type': 'Answer', text: 'Open PromptQuorum and select the RISEN Framework from the built-in options. Paste your existing draft into the designated field, set your refinement goals, and dispatch the RISEN prompt to multiple models simultaneously. Compare how GPT-4o, Claude, and Gemini each refine and critique the draft.' } },
+              { '@type': 'Question', name: 'When should I use RISEN vs a generation framework?', acceptedAnswer: { '@type': 'Answer', text: 'Use a generation framework like CO-STAR or CRAFT to create the first draft. Once you have material to work with, switch to RISEN when you need structured improvement with visible change tracking and self-critique. RISEN is the revision layer, not the generation layer.' } },
+              { '@type': 'Question', name: 'How is RISEN different from simply saying "improve this"?', acceptedAnswer: { '@type': 'Answer', text: 'Saying "improve this" gives the model no criteria and produces unpredictable results. RISEN forces the model to: make specific targeted changes (Refine), explain exactly what changed (Inspect), describe the new version (Summarize), grade it against criteria (Evaluate), and plan next steps. This turns revision into an auditable workflow rather than a black box.' } },
+              { '@type': 'Question', name: 'How many iterations does RISEN typically require?', acceptedAnswer: { '@type': 'Answer', text: 'Most tasks converge in 2–4 RISEN cycles. Each cycle ends with a Next steps list that becomes the input for the following cycle. When the Evaluate step consistently scores the draft highly against your criteria, the content is ready. Use PromptQuorum to run each cycle across multiple models and pick the best refinement per round.' } },
+              { '@type': 'Question', name: 'Can RISEN work for technical content like code or documentation?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. RISEN works for any iterative improvement task: blog posts, documentation, help-center articles, code, and strategic plans. For technical content, the Evaluate stage should include explicit correctness criteria such as type safety, performance, or accuracy against specifications.' } },
+            ],
+          },
+        },
       },
+      toc: [
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'What Is the RISEN Framework?', anchor: 'what-is-the-risen-framework' },
+        { label: 'What Are the Five RISEN Stages?', anchor: 'what-are-the-five-risen-stages' },
+        { label: 'Why Is the RISEN Framework Useful?', anchor: 'why-is-the-risen-framework-useful' },
+        { label: 'What Does a Strong RISEN Prompt Look Like?', anchor: 'what-does-a-strong-risen-prompt-look-like' },
+        { label: 'When Should You Use the RISEN Framework?', anchor: 'when-should-you-use-the-risen-framework' },
+        { label: 'How Does PromptQuorum Implement the RISEN Framework?', anchor: 'how-does-promptquorum-implement-the-risen-framework' },
+        { label: 'How Does RISEN Compare to Other Prompt Frameworks?', anchor: 'how-does-risen-compare-to-other-prompt-frameworks' },
+        { label: 'How to Use the RISEN Framework Step by Step', anchor: 'how-to-use-the-risen-framework-step-by-step' },
+        { label: 'Related Reading', anchor: 'related-reading' },
+        { label: 'FAQ: RISEN Framework', anchor: 'faq-risen-framework' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Key Takeaways',
+          items: [
+            '**RISEN = Refine, Inspect, Summarize, Evaluate, Next steps** — an iterative prompt loop for improving existing AI outputs with transparent audit trails at each stage.',
+            '**Best for revision, not generation:** Use RISEN after you have a first draft from CO-STAR, CRAFT, or any generation framework. RISEN is the improvement layer.',
+            '**Each cycle produces an audit trail:** the model tells you exactly what it changed (Inspect), what the result means (Summarize), and how good it is (Evaluate) — not just a revised draft.',
+            '**PromptQuorum supports RISEN as a built-in framework** so you can run the same revision cycle across GPT-4o, Claude, Gemini, and local models simultaneously to compare how each refines your draft.',
+            '**Most tasks converge in 2–4 RISEN cycles.** Each cycle ends with Next steps, which become the input for the following cycle.',
+          ],
+        },
         whatIsRISEN: {
-          title: 'What the RISEN Framework Is',
+          title: 'What Is the RISEN Framework?',
           content: [
-            '**The RISEN Framework is a loop-oriented prompt pattern designed for refining drafts, analyses, and plans over multiple iterations with clear checkpoints.** Instead of treating each prompt as a one-off, you use RISEN to walk a model like GPT-4o, Claude 4.6 Sonnet, or Gemini 2.5 Pro through a structured improvement cycle. This makes your workflow more like continuous editing than random trial-and-error.',
+            '**The RISEN Framework is a loop-oriented prompt pattern designed for refining drafts, analyses, and plans over multiple iterations with clear checkpoints.** Instead of treating each prompt as a one-off, you use RISEN to walk a model like GPT-4o, Claude 4.6 Sonnet, or Gemini 2.5 Pro through a structured improvement cycle. This is a different approach from the initial generation techniques covered in [prompt engineering fundamentals](/prompt-engineering/what-is-prompt-engineering).',
             'RISEN is especially useful when you already have a first version—such as a draft article, strategy note, or code snippet—and you want the model to improve it in a controlled, auditable way. Each RISEN step has a distinct purpose, which keeps revisions focused.',
           ],
         },
         fiveComponents: {
-          title: 'The Five RISEN Components',
+          title: 'What Are the Five RISEN Stages?',
           content: [
-            '**A strong RISEN prompt explicitly asks the model to move through five stages: Refine, Inspect, Summarize, Evaluate, and Next steps.** You can use these stages in one longer prompt or in a short series of prompts, depending on how interactive you want the process to be.',
+            '**A strong RISEN prompt explicitly asks the model to move through five stages: Refine, Inspect, Summarize, Evaluate, and Next steps.** You can use these stages in one longer prompt or in a short series of prompts, depending on how interactive you want the process to be. This structured approach is one of several ways to apply the [five building blocks of a good prompt](/prompt-engineering/5-building-blocks-every-prompt-needs) to revision work.',
             'A common interpretation looks like this:',
           ],
           items: [
@@ -26063,7 +26281,7 @@ zh: {
           ],
         },
         whyRISENIsUseful: {
-          title: 'Why the RISEN Framework Is Useful',
+          title: 'Why Is the RISEN Framework Useful?',
           content: [
             '**The RISEN Framework is useful whenever you want to turn "make this better" into a transparent, repeatable workflow instead of a black box.** It encourages the model not only to generate, but also to analyze and critique its own work.',
             'Practical benefits include:',
@@ -26075,7 +26293,7 @@ zh: {
           ],
         },
         badVsGoodExample: {
-          title: 'Example: Bad vs Good RISEN Prompt',
+          title: 'What Does a Strong RISEN Prompt Look Like?',
           content: [
             '**The difference between an unstructured revision request and a RISEN-based request becomes clear when you apply both to the same draft.** Below is a simple example for improving a product description.',
             '**[Bad Prompt]**',
@@ -26086,9 +26304,9 @@ zh: {
           ],
         },
         whenToUse: {
-          title: 'When to Use the RISEN Framework',
+          title: 'When Should You Use the RISEN Framework?',
           content: [
-            '**You should use the RISEN Framework for iterative improvement tasks where you already have material and care about understanding each change.** Typical use cases include:',
+            '**You should use the RISEN Framework for iterative improvement tasks where you already have material and care about understanding each change.** This is distinct from first-draft generation frameworks like [CO-STAR](/prompt-engineering/co-star-framework) or [CRAFT](/prompt-engineering/craft-framework) — RISEN works on existing drafts, not on blank-slate tasks.',
           ],
           items: [
             'Refining blog posts, documentation, or help-center articles over several rounds.',
@@ -26098,7 +26316,7 @@ zh: {
           ],
         },
         howPQImplements: {
-          title: 'How PromptQuorum Implements the RISEN Framework',
+          title: 'How Does PromptQuorum Implement the RISEN Framework?',
           content: [
             '**PromptQuorum is a multi-model AI dispatch tool that offers the RISEN Framework as one of its built-in prompt structures so users can run structured revision cycles across several models at once.** When you choose the RISEN option in PromptQuorum, the app provides labeled fields that correspond to the framework\'s steps and composes them into a single, reusable instruction.',
             'Inside PromptQuorum, the RISEN Framework allows you to:',
@@ -26106,29 +26324,91 @@ zh: {
           items: [
             'Plug in an existing draft and apply a pre-structured "Refine–Inspect–Summarize–Evaluate–Next steps" pattern without writing the full meta-prompt yourself.',
             'Send the same RISEN-based instructions to multiple models—such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro—and compare how each one refines and critiques the draft.',
-            'Save RISEN templates for recurring workflows, for example "blog draft refinement" or "changelog polishing," and share them with your team.',
+            'Save RISEN templates for recurring workflows, for example "blog draft refinement" or "changelog polishing," and share them with your team as part of a [prompt library](/prompt-engineering/build-a-prompt-library).',
           ],
         },
         usingRISENWithOthers: {
-          title: 'Using RISEN With Other Frameworks',
+          title: 'How Does RISEN Compare to Other Prompt Frameworks?',
           content: [
             '**You should combine the RISEN Framework with other frameworks by assigning RISEN to the revision phase and using generation-focused frameworks earlier in the workflow.** A practical pattern is:',
           ],
           items: [
-            'Start with a generation framework such as Single Step, CRAFT, or CO-STAR to create the first draft.',
+            'Start with a generation framework such as [Single Step](/prompt-engineering/the-single-step-prompt-method), [CRAFT](/prompt-engineering/craft-framework), or [CO-STAR](/prompt-engineering/co-star-framework) to create the first draft.',
             'Switch to RISEN when you are ready to refine, inspect changes, and plan further edits.',
-            'Optionally move to a specification-style framework like SPECS if the final output must follow a strict schema.',
+            'Optionally move to a specification-style framework like [SPECS](/prompt-engineering/specs-framework) if the final output must follow a strict schema.',
           ],
         },
 
         howToStart: {
-          title: 'How to Use the RISEN Framework',
+          title: 'How to Use the RISEN Framework Step by Step',
           numberedItems: [
-            '**Role: Define the AI\'s role explicitly.** Example: \'You are a senior software architect with 20 years of experience in microservices design.\'',
-            '**Instruction: State the task clearly.** Example: \'Design a scalable architecture for a real-time chat application serving 1M+ concurrent users.\'',
-            '**Steps to follow: Break the task into ordered steps the model should follow.** Example: (1) Identify bottlenecks, (2) Recommend caching layers, (3) Design database sharding strategy, (4) Outline deployment approach.\'',
-            '**End goal: Clarify the desired outcome.** Example: \'Produce a detailed architectural diagram with component justifications and trade-off analysis.\'',
-            '**Narrow down (iterate): Ask follow-up questions or request refinements.** Example: \'Now apply this architecture to handle 10x the load. What changes?\'',
+            '**Open PromptQuorum and select the RISEN Framework** from the built-in prompt structure options. Paste your existing draft into the input area.',
+            '**Set the Refine goal: Tell the model exactly what aspect to improve.** Example: "Rewrite this product description for clarity and conciseness while keeping all factual details. Target 120–160 words."',
+            '**Request the Inspect output: Ask the model to list specific changes it made.** Example: "List 5–7 specific edits you made, such as \'clarified benefit X\' or \'removed repeated sentence Y\'."',
+            '**Request the Summarize output: Ask the model to describe what the updated version now says.** Example: "In 2–3 sentences, explain what the updated version now emphasizes differently from the original."',
+            '**Request the Evaluate output: Ask the model to score the result against explicit criteria.** Example: "Rate the new version on a 1–5 scale for clarity, persuasiveness, and alignment with B2B audiences. Justify each rating in one sentence."',
+            '**Request the Next steps: Ask the model for a focused list of further edits.** Example: "Suggest 3 specific edits I could make in the next iteration to further improve this copy."',
+            '**Run the RISEN prompt across multiple models** such as GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. Compare the Inspect and Evaluate outputs to understand which model produces the most useful revision analysis. Save the best-performing variant as a template.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          content: [
+            'Explore these related frameworks and foundational concepts to deepen your prompt engineering skills:',
+          ],
+          items: [
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — Foundational concepts and core principles.',
+            '[The CO-STAR Framework](/prompt-engineering/co-star-framework) — A six-component framework for generation tasks with multiple constraints.',
+            '[The CRAFT Framework](/prompt-engineering/craft-framework) — A five-component framework for marketing and creative content.',
+            '[Build a Prompt Library](/prompt-engineering/build-a-prompt-library) — How to save, organize, and reuse your best prompts across your team.',
+          ],
+        },
+        faq: {
+          title: 'FAQ: RISEN Framework',
+          faqs: [
+            {
+              q: 'What is the RISEN Framework?',
+              a: 'The RISEN Framework is an iterative prompt structure (Refine, Inspect, Summarize, Evaluate, Next steps) for systematically improving AI outputs. Unlike generation-focused frameworks, RISEN is built for the revision phase: it gives you visible audit trails and structured self-critique at each step.',
+            },
+            {
+              q: 'What does RISEN stand for?',
+              a: 'RISEN stands for Refine (improve the existing draft), Inspect (list specific changes made), Summarize (explain what the new version says), Evaluate (critique against explicit criteria), and Next steps (recommend further edits for the next iteration).',
+            },
+            {
+              q: 'How do I write a RISEN prompt?',
+              a: 'Ask the model to move through five stages on your existing draft: Refine it toward your goal, Inspect what changed, Summarize the new version, Evaluate it against criteria like tone or accuracy, and suggest Next steps. You can run all five stages in a single prompt or as separate prompts in a conversation.',
+            },
+            {
+              q: 'How do I use RISEN in PromptQuorum?',
+              a: 'Open PromptQuorum and select the RISEN Framework from the built-in options. Paste your existing draft, set your refinement goals, and dispatch the RISEN prompt to multiple models simultaneously. Compare how GPT-4o, Claude, and Gemini each refine and critique the draft.',
+            },
+            {
+              q: 'When should I use RISEN vs a generation framework?',
+              a: 'Use a generation framework like CO-STAR or CRAFT to create the first draft. Once you have material to work with, switch to RISEN when you need structured improvement with visible change tracking and self-critique. RISEN is the revision layer, not the generation layer.',
+            },
+            {
+              q: 'How is RISEN different from simply saying "improve this"?',
+              a: 'Saying "improve this" gives the model no criteria and produces unpredictable results. RISEN forces the model to make specific targeted changes (Refine), explain exactly what changed (Inspect), describe the new version (Summarize), grade it against criteria (Evaluate), and plan next steps. This turns revision into an auditable workflow rather than a black box.',
+            },
+            {
+              q: 'How many iterations does RISEN typically require?',
+              a: 'Most tasks converge in 2–4 RISEN cycles. Each cycle ends with a Next steps list that becomes the input for the following cycle. When the Evaluate step consistently scores the draft highly against your criteria, the content is ready. Use PromptQuorum to run each cycle across multiple models and pick the best refinement per round.',
+            },
+            {
+              q: 'Can RISEN work for technical content like code or documentation?',
+              a: 'Yes. RISEN works for any iterative improvement task: blog posts, documentation, help-center articles, code, and strategic plans. For technical content, the Evaluate stage should include explicit correctness criteria such as type safety, performance, or accuracy against specifications.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          content: [
+            'This article is based on current best practices in prompt engineering and documented implementations in production systems:',
+          ],
+          items: [
+            'Schulhoff, S., Teotia, N., Bansal, Y., Hegselmann, S., & Gunasekar, S. (2024). [The Prompt Report: A Systematic Survey of Prompt Engineering](https://arxiv.org/abs/2406.06608). *arXiv preprint arXiv:2406.06608*. — Comprehensive taxonomy of prompt engineering techniques and frameworks.',
+            'Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., ... & Amodei, D. (2020). [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165). *Advances in Neural Information Processing Systems (NeurIPS)*. — Foundational research on in-context learning and structured prompting with large language models.',
+            'OpenAI (2024). [Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering). — Industry best practices for designing effective prompts for production applications.',
           ],
         },
       },
