@@ -19770,7 +19770,7 @@ zh: {
       theme: 'Policy & Compliance',
       title: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
       intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
-      metaDescription: 'Geopolitics and AI explained: EU AI Act, US strategy, China CAC — AI geopolitical risks and global AI regulation for prompt engineering practitioners and organizations.',
+      metaDescription: 'AI geopolitics explained: EU AI Act enforcement, US vs China AI strategy, and global AI regulation risks. What organizations deploying AI need to know in 2026.',
       publishDate: '2026-04-01',
       dateModified: '2026-04-02',
       readTime: '16 min read',
