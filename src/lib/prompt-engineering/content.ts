@@ -20423,7 +20423,7 @@ zh: {
         quoteSunak: {
           title: '',
           blockquote: 'The United Kingdom will work with partners around the world to make sure that AI is safe. Bletchley Park is where this conversation begins — but it must not end here.',
-          blockquoteSource: '[Rishi Sunak, Prime Minister of the United Kingdom — AI Safety Summit, Bletchley Park, November 2023](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
+          blockquoteSource: '[Rishi Sunak, former Prime Minister of the United Kingdom — AI Safety Summit, Bletchley Park, November 2023](https://www.gov.uk/government/speeches/pm-speech-at-the-ai-safety-summit-1-november-2023)',
         },
 
         quoteScholz: {
