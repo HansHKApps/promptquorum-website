@@ -19909,6 +19909,7 @@ zh: {
         { label: 'The AI Arms Race: US, China, and the EU', anchor: 'the-ai-arms-race-us-china-and-the-eu' },
         { label: 'The EU AI Act: What It Actually Requires', anchor: 'the-eu-ai-act-what-it-actually-requires' },
         { label: 'EU Member States: National AI Strategies', anchor: 'eu-member-states-national-ai-strategies' },
+        { label: 'France & Mistral: EU AI Independence', anchor: 'france-mistral-building-european-ai-independence' },
         { label: 'US Strategy: CHIPS Act, NIST', anchor: 'us-strategy-executive-orders-chips-act-nist' },
         { label: "China's AI Strategy: DeepSeek, CAC", anchor: 'china-s-ai-strategy-made-in-china-2025-cac-regulations-deepseek' },
         { label: 'China: Available Models', anchor: 'china-for-prompt-engineers-which-models-are-available' },
@@ -20155,6 +20156,16 @@ zh: {
             '**Spain:** Spain\'s National AI Strategy (ENIA) allocates €600 million 2021–2025. Real Instituto Elcano research on AI and geopolitics is internationally cited. Spain established the AESIA (Spanish Agency for the Supervision of Artificial Intelligence) — the first national AI regulator in the EU, established 2023.',
             '**Sweden:** Swedish AI Commission published its report in 2024 with 60+ recommendations covering education, public sector deployment, and innovation. Vinnova (Sweden\'s innovation agency) funds AI research. Sweden is home to Spotify\'s AI recommendation systems and H&M\'s AI-driven inventory management — frequently cited as private-sector AI adoption case studies.',
             '**Italy:** Italy held the G7 presidency in 2024, which produced the Hiroshima AI Process Code of Conduct — 11 guiding principles for advanced AI developers adopted by G7 nations. Italy\'s Garante (data protection authority) temporarily blocked ChatGPT in March 2023 over GDPR concerns — later resolved after OpenAI implemented transparency measures. This was the first national ChatGPT restriction in the EU.',
+          ],
+        },
+
+        franceMistral: {
+          title: 'France & Mistral: Building European AI Independence',
+          content: [
+            '**France is building a strategic counter to US AI dominance through public investment and Mistral AI — positioning open-weights models as Europe\'s path to AI sovereignty.** Mistral represents the EU\'s most viable alternative to GPT-4o and Claude, and France\'s €2 billion AI investment is explicitly designed to fund companies like Mistral and reduce reliance on OpenAI, Google, and Anthropic.',
+            '**Mistral AI (founded 2023):** Founded by Arthur Mensch, Guilaume Blanc, and Tim Caron — all former Meta employees. Mistral released Mistral 7B (open-weights) in September 2023, followed by Mistral Large 2 (competitive with GPT-4o on many tasks). Mistral Large 2 scores 81.2% on MMLU vs GPT-4o\'s 88.7%, but matches proprietary models on classification, summarization, and extraction tasks. 123K token context window. Licensed under Mistral Community License (permits commercial use; derivative naming restrictions similar to LLaMA).',
+            '**Why France chose open-weights:** France\'s position is that proprietary APIs create vendor lock-in, data residency risks, and long-term dependency on US companies. Open-weights models can be deployed on European infrastructure, keeping data within EU jurisdictions and avoiding GDPR/AI Act friction with US cloud providers. This aligns with the Brussels Effect — by ensuring Mistral compliance with the EU AI Act, France strengthens Europe\'s regulatory leverage globally.',
+            '**Government support:** French government backing via La Caisse des Dépôts et Placements (state investment fund) and direct subsidies. Mistral received €385 million Series B funding (February 2024) with support from French strategic investors. Positioned as a "European champion" in AI — similar to how Airbus was built as a European aerospace counterweight to Boeing.',
           ],
         },
 
