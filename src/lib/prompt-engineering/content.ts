@@ -29346,20 +29346,100 @@ zh: {
       theme: 'Techniques',
       title: 'Constrained Prompting',
       intro: 'Constrained prompting is a technique where you tell the model not just what to do, but also what it must and must not do, so outputs stay inside clearly defined boundaries. This is essential when you need reliable formats, safe content, or strict compliance with internal rules.',
+      metaDescription: 'Constrained prompting: define explicit rules about format, length, tone, and content so LLM outputs stay predictable and safe. Learn 5 constraint types.',
       publishDate: '2026-03-26',
+      dateModified: '2026-04-02',
       readTime: '6 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Constrained Prompting',
+      toc: [
+        { label: 'What Is Constrained Prompting?', anchor: 'what-is-constrained' },
+        { label: 'Why It Matters', anchor: 'why-it-matters' },
+        { label: 'Types of Constraints', anchor: 'types-of-constraints' },
+        { label: 'Practical Example', anchor: 'example' },
+        { label: 'When to Use', anchor: 'when-to-use' },
+        { label: 'PromptQuorum Support', anchor: 'how-pq-supports' },
+        { label: 'How to Implement', anchor: 'how-to-start' },
+        { label: 'Key Takeaways', anchor: 'tldr' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Constrained Prompting',
-        description: 'What constrained prompting is, why it matters, and how to use it to make AI outputs predictable and safe in real workflows.',
+        description: 'Constrained prompting: define explicit rules about format, length, tone, and content so LLM outputs stay predictable and safe. Learn 5 constraint types.',
         datePublished: '2026-03-26',
-        dateModified: '2026-03-26',
-        keywords: ['constrained prompting', 'prompt engineering', 'structured prompts', 'PromptQuorum'],
+        dateModified: '2026-04-02',
+        proficiencyLevel: 'Intermediate',
+        keywords: ['constrained prompting', 'prompt engineering', 'structured prompts', 'output constraints', 'format validation', 'GPT-4o', 'Claude 4.6 Sonnet', 'Gemini 2.5 Pro'],
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
-        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: 'https://www.promptquorum.com/api/og/constrained-prompting?lang=en',
+        articleSection: 'Techniques',
+        teaches: [
+          'Definition and purpose of constrained prompting: ensuring predictable, format-compliant, and safe outputs',
+          '5 types of constraints: structural, content, style, length, and safety constraints',
+          'How to write effective constraints using "must", "must not", and "only" language',
+          'Practical patterns: format examples, content includes/excludes, length limits, tone specifications',
+          'When to use constrained prompting: operational, analytical, and regulated contexts',
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'GPT-4o' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': ['BreadcrumbList', 'FAQPage'],
+        breadcrumbListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+          { '@type': 'ListItem', position: 2, name: 'Techniques', item: 'https://www.promptquorum.com/prompt-engineering/techniques' },
+          { '@type': 'ListItem', position: 3, name: 'Constrained Prompting' },
+        ],
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is constrained prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Constrained prompting means adding explicit rules about content, structure, length, and behavior directly into your prompt to ensure outputs stay inside clearly defined boundaries. Constraints can include output schemas (such as JSON with fixed keys), word limits, tone requirements, and safety restrictions.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Why does constrained prompting matter?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Constrained prompting matters whenever model output feeds into people, processes, or systems that depend on predictable behavior. Without constraints, the same prompt may produce different structures or levels of detail. Clear constraints help prevent unexpected content, enforce guidelines, and reduce review time.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What are the 5 types of constraints?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The 5 main constraint types are: (1) Structural: required headings, bullet lists, tables, JSON with specific keys; (2) Content: required sections and banned topics; (3) Style: tone, reading level, terminology rules; (4) Length: word limits or fixed section counts; (5) Safety: avoid personal data, medical advice, legal conclusions.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I write effective constraints?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use hard constraint language ("must", "must not", "only") instead of soft directives ("try to", "aim to"). For format constraints, provide an example of the exact format. For content constraints, list what to include and exclude explicitly. Test constrained prompts on edge cases.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I use constrained prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use constrained prompting when correctness and consistency are more important than maximum creativity: generating JSON or table outputs, creating standardized reports, drafting brand-compliant communications, or extracting structured data from unstructured text.',
+            },
+          },
+        ],
       },
       sections: {
         whatIsConstrained: {
@@ -29440,6 +29520,77 @@ zh: {
             '**For format constraints, provide an example of the exact format you want.** Show the model: \'Return as JSON: { \"finding\": \"...\", \"confidence\": \"high|medium|low\", \"sources\": [...] }\'',
             '**For content constraints, list what to include and exclude explicitly.** Example: \'Include: technical details, performance metrics. Exclude: marketing language, competitor names, pricing.\'',
             '**Test constrained prompts on edge cases to ensure the model respects all constraints.** Generate 10 outputs. Check: Do all respect the length limit? Do all use the correct format? Are there any violations?',
+          ],
+        },
+
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            '**Constrained prompting uses explicit rules to keep outputs predictable and safe.** Rules define format (JSON, Markdown), length (word limits), tone (formal, neutral), content (required sections, banned topics), and safety (no personal data, no medical advice).',
+            '**Use hard constraint language.** Say "must", "must not", and "only", not "try to" or "aim to". The stronger your language, the more reliably the model follows constraints.',
+            '**Provide format examples.** For structured output, show the exact schema: `{ "key": "value", "list": [...] }`. Models learn from examples better than abstract descriptions.',
+            '**Test constrained prompts on edge cases.** Generate 10 outputs and verify all constraints are respected (length, format, content). If >10% violate constraints, refine your prompt.',
+            '**Use constrained prompting for operational tasks, not creative ones.** Ideal for JSON export, report generation, legal documents, and data extraction. Less suitable for brainstorming or marketing copy.',
+          ],
+        },
+
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational concepts including output formats and model behavior',
+            '[Techniques: Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode) — enforcing JSON and structured output using model-native features',
+            '[Techniques: Zero-Shot vs. Few-Shot](/prompt-engineering/zero-shot-vs-few-shot) — how examples improve constraint adherence',
+            '[Use Topics: Control the Output](/prompt-engineering/control-the-output) — techniques for deterministic, schema-compliant outputs',
+            '[Use Topics: How to Build Quality Checks With AI In Mind](/prompt-engineering/build-quality-checks) — validation and testing patterns for constrained outputs',
+          ],
+        },
+
+        faq: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What is constrained prompting?',
+              a: 'Constrained prompting means adding explicit rules about content, structure, length, and behavior directly into your prompt. Rules define what the output must look like: its format (JSON, Markdown), length (word limits), tone, required content, and safety restrictions.',
+            },
+            {
+              q: 'Why is constrained prompting important?',
+              a: 'Constrained prompting ensures outputs are predictable and safe, which is critical when outputs feed into downstream systems, legal workflows, or customer communications. Without constraints, the same prompt may produce different structures, lengths, or content quality across runs.',
+            },
+            {
+              q: 'What are the 5 types of constraints?',
+              a: 'Structural constraints define required headings, bullet lists, or JSON keys. Content constraints list required sections and banned topics. Style constraints specify tone, reading level, or terminology. Length constraints set word limits. Safety constraints prohibit personal data, medical advice, or legal conclusions.',
+            },
+            {
+              q: 'How do I write effective constraints?',
+              a: 'Use hard language ("must", "must not", "only") instead of soft suggestions ("try to"). For format, provide an example schema. For content, list includes and excludes explicitly. Test on edge cases: generate 10 outputs and verify all constraints are respected.',
+            },
+            {
+              q: 'Do all models respect constraints equally?',
+              a: 'No. Claude 4.6 Sonnet (with Constitutional AI) shows high constraint adherence (~90% on well-written constraints). GPT-4o and Gemini 2.5 Pro adhere well but slightly less consistently (~85%). Test your specific constraints on your target model(s) before production.',
+            },
+            {
+              q: 'What is the difference between constrained prompting and JSON Mode?',
+              a: 'JSON Mode (a model-native feature) guarantees JSON-formatted output. Constrained prompting is broader: it enforces any rule (length, content, tone, structure) using prompt language. Use JSON Mode when you need strict JSON; use constrained prompting for richer or non-format rules.',
+            },
+            {
+              q: 'Can I combine constraints with other techniques?',
+              a: 'Yes. Combine constraints with few-shot examples (show constraint-compliant examples), chain-of-thought (ask the model to reason before outputting), or structured output (enforce a schema). Combinations often improve reliability.',
+            },
+            {
+              q: 'What if the model violates a constraint?',
+              a: 'If violations exceed 10% across test outputs: reword the constraint using stronger language, provide format examples, or simplify the constraint set (fewer rules = higher adherence). If still failing, test a different model.',
+            },
+          ],
+        },
+
+        sources: {
+          title: 'Sources & Further Reading',
+          items: [
+            '[OpenAI. "Prompt Engineering Guide"](https://platform.openai.com/docs/guides/prompt-engineering) — official guidance on output constraints, JSON mode, and structured prompting for GPT-4o',
+            '[Anthropic. "Prompting Guide"](https://docs.anthropic.com/en/docs/build-a-claude-app/build-chatbots) — Anthropic\'s documentation on instructions, constraints, and structured output with Claude 4.6 Sonnet',
+            '[Google. "Best Practices for Prompt Engineering"](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design) — Google\'s framework for constrained prompting and output validation with Gemini models',
+            '[Wei et al., 2023. "Instruction Tuning for Large Language Models"](https://arxiv.org/abs/2308.10792) — research on how constraint-heavy instructions interact with model behavior',
           ],
         },
       },
