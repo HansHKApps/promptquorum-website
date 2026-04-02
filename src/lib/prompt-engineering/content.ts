@@ -19783,7 +19783,7 @@ zh: {
         description: 'The US, China, and European Union are pursuing incompatible visions of AI governance. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements.',
         datePublished: '2026-04-01',
         dateModified: '2026-04-02',
-        keywords: ['AI geopolitics', 'EU AI Act', 'CHIPS Act', 'AI regulation', 'China AI strategy', 'Brussels Effect', 'AI governance', 'DeepSeek', 'AI Safety Institute', 'Made in China 2025'],
+        keywords: ['AI geopolitics', 'EU AI Act', 'CHIPS Act', 'AI regulation', 'China AI strategy', 'Brussels Effect', 'AI governance', 'DeepSeek', 'AI Safety Institute', 'Made in China 2025', 'KI Gesetz', 'AI regulation Europe', 'AI governance EU', 'regolamento intelligenza artificiale', 'régulation de l\'IA', 'KI-Regulierung', '人工知能規制', 'AI中国战略'],
         teaches: [
           'How the EU AI Act classifies risk and what deadlines apply',
           'What individual EU and non-EU European countries are doing on AI',
@@ -19904,6 +19904,7 @@ zh: {
       },
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'EU Compliance Deadlines', anchor: 'if-you-re-an-eu-based-organization-critical-compliance-deadlines' },
         { label: 'Key Data Points', anchor: 'ai-geopolitics-key-data-points' },
         { label: 'The AI Arms Race: US, China, and the EU', anchor: 'the-ai-arms-race-us-china-and-the-eu' },
         { label: 'The EU AI Act: What It Actually Requires', anchor: 'the-eu-ai-act-what-it-actually-requires' },
@@ -19960,6 +19961,16 @@ zh: {
             'China\'s DeepSeek R1 matched GPT-4o on key benchmarks — GPU export controls have not stopped Chinese AI.',
             'TSMC in Taiwan fabricates the chips that power all frontier AI — a single geopolitical dependency.',
             'Organizations must comply with three conflicting regulatory frameworks simultaneously: EU, US, and China.',
+          ],
+        },
+
+        euImplications: {
+          title: 'If You're an EU-Based Organization: Critical Compliance Deadlines',
+          content: [
+            '**The EU AI Act is binding and enforced as of August 2026.** If your organization is EU-headquartered or serves EU users, you must comply with its four-tier risk classification system. Fines for prohibited practices reach €35 million or 7% of global turnover — whichever is higher. Non-compliance is not negotiable.',
+            '**If you deploy GPT-4o, Claude 4.6 Sonnet, or Gemini 2.5 Pro in the EU, you must audit their General Purpose AI (GPAI) compliance documentation.** OpenAI, Anthropic, and Google published transparency documentation (training data summaries, capability limitations, safety testing) as of August 2025. Store these attestations as proof of compliance — regulators will ask.',
+            '**High-risk AI systems (hiring, credit decisions, healthcare, law enforcement) require conformity assessments before deployment.** This means testing for bias, documentation of human oversight mechanisms, and audit trails of all AI decisions. Open-weights models deployed locally (LLaMA via Ollama, Mistral Large) satisfy data residency requirements — no data leaves your infrastructure, and you control the audit trail.',
+            '**The Brussels Effect applies to you.** If your AI system reaches a single EU resident, the EU AI Act applies — even if your company is headquartered in the US or China. This means enforcing the same compliance level globally is often simpler than maintaining multiple configurations.',
           ],
         },
 
