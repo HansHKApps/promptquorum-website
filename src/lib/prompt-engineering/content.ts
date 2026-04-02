@@ -481,6 +481,22 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+        keyTerms: {
+          title: 'Key Terms',
+          items: [
+            '[Few-shot prompting](/prompt-engineering/prompt-engineering-glossary#few-shot-prompting) — Including a small number of input-output examples in the prompt so the model infers the desired pattern or format; the Examples lever in the 6-lever optimization framework',
+            '[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary#chain-of-thought-cot) — Asking the model to reason step by step before answering; the primary technique for fixing multi-step reasoning failures',
+            '[Self-consistency](/prompt-engineering/prompt-engineering-glossary#self-consistency) — Generating multiple outputs and returning the most common answer; reduces hallucination rates on low-probability facts',
+            '[Zero-shot prompting](/prompt-engineering/prompt-engineering-glossary#zero-shot-prompting) — Prompting without examples; the baseline against which few-shot optimization is measured',
+            '[Hallucination](/prompt-engineering/prompt-engineering-glossary#hallucination) — Confident-sounding but factually incorrect output; one of the primary failure modes optimization targets',
+            '[Fine-tuning](/prompt-engineering/prompt-engineering-glossary#fine-tuning) — Retraining model weights on domain-specific data; the alternative to prompt optimization when a hard quality ceiling has been reached',
+            '[RAG (Retrieval-Augmented Generation)](/prompt-engineering/prompt-engineering-glossary#rag-retrieval-augmented-generation) — Injecting retrieved documents into the prompt context; complementary to prompt optimization (RAG improves information; optimization improves how the model uses it)',
+            '[System prompt](/prompt-engineering/prompt-engineering-glossary#system-prompt) — Persistent instruction that sets the model\'s role, constraints, and behavior across all turns; requires its own optimization pass',
+            '[Temperature](/prompt-engineering/prompt-engineering-glossary#temperature) — Decoding parameter controlling output randomness; lower temperature improves consistency across optimization test runs',
+            '[Prompt chaining](/prompt-engineering/prompt-engineering-glossary#prompt-chaining) — Breaking complex tasks into a sequence of smaller prompts; each sub-prompt benefits from independent optimization',
+          ],
+        },
+
         relatedReading: {
           title: 'Related Reading',
           items: [
