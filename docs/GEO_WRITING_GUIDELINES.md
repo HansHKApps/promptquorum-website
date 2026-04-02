@@ -627,6 +627,53 @@ These rules apply to all new PromptQuorum pages (Prompt Engineering articles, bl
   - Once in the first paragraph.
 - When a section targets a specific question, its first sentence must contain that question phrasing and immediately answer it.
 
+### 21.2a Keyword Targeting Strategy: Avoiding Weak Keyword Coverage
+
+**Problem:** Articles written for humans often omit explicit keyword targeting, causing search engines to be unsure what query the page should rank for. This dilutes ranking potential and lowers citation frequency in AI engines.
+
+**Solution:** Identify 3–5 target keyword phrases upfront. Write the article explicitly around those phrases using this checklist:
+
+**Keyword Identification (do this before writing):**
+- Primary keyword: The broadest, most-searched term (e.g., "prompt optimization")
+- 2–4 long-tail variants: More specific phrasing of the same concept (e.g., "how to optimize prompts", "prompt optimization techniques", "improve AI prompts")
+- 1 foundational keyword: Broader concept the article explains (e.g., "prompt engineering fundamentals")
+
+**Keyword Placement Checklist (mandatory):**
+
+| Element | Requirement | Example |
+|---------|-------------|---------|
+| Title tag | Includes primary keyword OR first long-tail variant | "How to Optimize Prompts: Prompt Optimization Techniques & Best Practices" ✅ NOT "Fundamentals of Prompt Optimization" (too generic) ❌ |
+| H1 / First H2 | Explicitly uses the primary or first long-tail keyword | "**What Is Prompt Optimization?**" OR "**Prompt Optimization Techniques: Advanced Methods**" ✅ |
+| Intro (first paragraph) | Mentions primary keyword once + at least one long-tail variant | Intro mentions: "Prompt optimization techniques", "how to optimize prompts", "improve AI prompts" ✅ |
+| Section headings | At least 1–2 section titles use long-tail keyword variants | Sections: "How to Measure Prompt Quality", "Prompt Optimization Techniques", "Optimizing Prompts for Local LLMs" ✅ |
+| FAQ questions | At least 2 FAQ questions use keyword variants | FAQ: "What is the most common prompt optimization mistake?", "Can prompt optimization reduce hallucinations?" ✅ |
+| Schema keywords array | All 3–5 target keywords appear in `keywords[]` | `["prompt optimization", "prompt optimization techniques", "how to optimize prompts", "improve AI prompts", "prompt engineering fundamentals"]` ✅ |
+
+**Keyword Dilution Trap (avoid):**
+
+| ❌ Diluted | ✅ Focused |
+|-----------|----------|
+| Keywords: `["prompt optimization", "prompt engineering", "LLM", "AI", "machine learning", "neural networks"]` — 6 unrelated concepts | Keywords: `["prompt optimization", "prompt optimization techniques", "how to optimize prompts", "improve AI prompts"]` — 4 related variants |
+| Title: "AI and Machine Learning: Everything About Prompts" | Title: "How to Optimize Prompts: Prompt Optimization Techniques" |
+| Intro: Mentions 8 different topics (context windows, fine-tuning, RAG, tokens, etc.) | Intro: Focuses on the 3-5 target keywords and their variations |
+
+**Why this matters:**
+- Google uses keyword presence to determine topical authority — if your page mentions "prompt optimization" once but then drifts into "fine-tuning", "RAG", and "model architecture", Google does not know what the page is *about*.
+- AI engines (ChatGPT, Claude, Perplexity) weight keyword density and placement when deciding which pages to cite for a user's query.
+- Weak keyword coverage = lower ranking + fewer AI citations + less traffic.
+
+**Checklist for keyword targeting compliance:**
+- [ ] Identified 3–5 target keyword phrases before writing
+- [ ] Primary keyword appears in title
+- [ ] At least one long-tail variant appears in first paragraph
+- [ ] Section headings include 1–2 keyword variants
+- [ ] FAQ questions use keyword variants
+- [ ] Schema `keywords` array lists all 3–5 target keywords
+- [ ] No keyword dilution — all keywords relate to the same topic
+- [ ] Keyword presence is explicit and natural (not forced repetition)
+
+---
+
 ### 21.3 SERP- and LLM-Facing Snippet Blocks
 
 - Each new article must include at least one snippet block designed to be quoted directly by search and LLMs.

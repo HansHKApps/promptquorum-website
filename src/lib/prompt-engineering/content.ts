@@ -212,9 +212,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   'fundamentals-of-prompt-optimization': {
     en: {
       theme: 'Fundamentals',
-      title: 'Fundamentals of Prompt Optimization: How to Improve Any AI Prompt',
-      intro: 'Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy. This guide covers the 6 core levers, a 6-step optimization process, before/after examples for GPT-4o, Claude, and Gemini, and the 7 most common mistakes.',
-      metaDescription: 'Learn prompt optimization: 6 levers, 6-step process, before/after examples, and model-specific tips. Typical accuracy gains: 20–40% on structured tasks.',
+      title: 'How to Optimize Prompts: Prompt Optimization Techniques & Best Practices',
+      intro: 'Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy. This comprehensive guide teaches prompt optimization techniques and fundamentals: the 6 core levers, a proven 6-step optimization process, before/after examples for GPT-4o, Claude, and Gemini, and the 7 most common mistakes to avoid when optimizing prompts.',
+      metaDescription: 'Learn how to optimize prompts using proven techniques: 6 levers, 6-step process, before/after examples. Improve AI prompt outputs by 20–40% on structured tasks. Fundamentals for all models.',
       publishDate: '2026-04-02',
       dateModified: '2026-04-03',
       readTime: '14 min read',
@@ -225,11 +225,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         '@type': 'TechArticle',
         proficiencyLevel: 'Beginner to Intermediate',
         dependencies: 'Basic understanding of LLMs and prompt structure',
-        headline: 'Fundamentals of Prompt Optimization: How to Improve Any AI Prompt',
-        description: 'Prompt optimization is the iterative process of revising a prompt to improve AI output quality, consistency, or accuracy. Learn the 6 core levers, a 6-step optimization process, before/after examples, and 7 common mistakes.',
+        headline: 'How to Optimize Prompts: Prompt Optimization Techniques & Best Practices',
+        description: 'Learn prompt optimization techniques and best practices: 6 core levers, 6-step process, before/after examples. How to improve AI prompts across GPT-4o, Claude, Gemini — fundamentals for all models.',
         datePublished: '2026-04-02',
-        dateModified: '2026-04-03',
-        keywords: ['prompt optimization', 'prompt engineering', 'AI prompting', 'LLM optimization', 'GPT-4o', 'Claude', 'Gemini', 'iterative prompting', 'few-shot prompting', 'chain-of-thought'],
+        dateModified: '2026-04-04',
+        keywords: ['prompt optimization', 'prompt optimization techniques', 'how to optimize prompts', 'improve AI prompts', 'prompt engineering fundamentals', 'LLM optimization', 'GPT-4o', 'Claude', 'Gemini', 'few-shot prompting', 'chain-of-thought'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
           { '@type': 'Thing', name: 'GPT-4o' },
@@ -505,9 +505,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         advancedTechniques: {
-          title: 'Advanced Optimization Techniques',
+          title: 'Prompt Optimization Techniques: Advanced Methods',
           content: [
-            '**Once you master the 6 core levers, advanced techniques allow deeper optimization.** These techniques combine multiple levers or apply specialized patterns to specific failure modes:',
+            '**Beyond the 6 core levers, advanced prompt optimization techniques apply specialized patterns to fix specific failure modes.** These techniques combine multiple levers or layer constraints to solve harder problems. Learn which techniques to apply based on your optimization challenge:',
           ],
           items: [
             '[Few-shot vs Zero-shot](/prompt-engineering/zero-shot-vs-few-shot): Add 1–3 example input/output pairs to the prompt when the model is not formatting output correctly or is missing the style you want. Few-shot examples are the most direct way to teach format.',
