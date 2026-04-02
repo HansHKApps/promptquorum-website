@@ -18,6 +18,7 @@ export const themes: PETheme[] = [
     description: 'Core concepts every prompt engineer needs to understand — how LLMs work, what tokens are, and why prompt structure determines output quality.',
     articleKeys: [
       'what-is-prompt-engineering',
+      'fundamentals-of-prompt-optimization',
       'how-prompt-engineering-evolved',
       '5-building-blocks-every-prompt-needs',
       'ai-hallucinations-why-ai-makes-things-up',
@@ -33,6 +34,11 @@ export const themes: PETheme[] = [
       'open-source-vs-proprietary-llms',
       'prompt-engineering-glossary',
     ],
+  },
+  {
+    id: 'prompt-optimization',
+    title: 'Fundamentals of Prompt Optimization',
+    description: '',
   },
   {
     id: 'frameworks',

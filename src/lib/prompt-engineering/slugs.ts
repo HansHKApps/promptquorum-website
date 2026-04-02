@@ -2,6 +2,7 @@
 export const PE_SLUG_TO_KEY: Record<string, string> = {
   // Fundamentals
   'what-is-prompt-engineering': 'what-is-prompt-engineering',
+  'fundamentals-of-prompt-optimization': 'fundamentals-of-prompt-optimization',
   'how-prompt-engineering-evolved': 'prompt-engineering-history',
   '5-building-blocks-every-prompt-needs': 'prompt-building-blocks',
   'ai-hallucinations-why-ai-makes-things-up': 'ai-hallucinations-how-to-stop',

@@ -209,6 +209,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
   },
 
+  'fundamentals-of-prompt-optimization': {
+    en: { theme: 'Fundamentals', title: 'Fundamentals of Prompt Optimization', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Grundlagen der Prompt-Optimierung', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Fondamentaux de l\'optimisation des prompts', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'プロンプト最適化の基礎', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
+    zh: { theme: 'Fundamentals', title: '提示词优化基础', intro: '', publishDate: '2026-04-02', readTime: '', sections: {} },
+  },
+
   'what-is-prompt-engineering': {
     en: {
       theme: 'Fundamentals',
@@ -21678,7 +21686,57 @@ zh: {
         },
       },
     },
-    zh: { theme: 'Policy & Compliance', title: '地缘政治与AI：欧盟、美国和中国如何争夺AI主导权', intro: '美国、中国和欧盟正在追求不兼容的AI治理愿景。对于部署AI的组织而言，这些差异转化为具体的合规义务、采购限制和数据存储要求。', publishDate: '2026-04-01', readTime: '即将推出', sections: {} },
+    zh: {
+      theme: 'Policy & Compliance',
+      title: 'AI地缘政治解释：EU AI法 vs 美国 vs 中国（2026年分析）',
+      intro: '美国、中国和欧盟正在追求不兼容的AI治理愿景——美国优先考虑竞争力，中国强调国家控制，欧盟建立基于权利的法律框架。对于部署AI的组织而言，这些差异转化为具体的合规义务、采购限制和数据驻留要求，无论组织总部位于何处。',
+      metaDescription: 'AI地缘政治解释：欧盟AI法执行、美国对华AI战略和全球AI监管风险。2026年部署AI的组织需要了解的内容。',
+      publishDate: '2026-04-01',
+      dateModified: '2026-04-02',
+      readTime: '16分钟阅读',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'AI地缘政治',
+      sections: {
+        tldr: {
+          title: '关键要点',
+          isTldr: true,
+          items: [
+            'AI是战略性国家技术——美国、中国和欧盟争夺主导地位。',
+            '国家争夺三种资源：计算能力（芯片）、AI人才和训练数据。',
+            'AI同时影响军事能力、经济竞争力和网络权力。',
+            'EU AI法是世界上第一部具有法律约束力的AI法——罚款可达3500万欧元或全球营业额的7%。',
+            '布鲁塞尔效应：EU AI法规则适用于到达EU用户的任何AI，全球范围。',
+            '美国没有联邦AI法——部门监管机构将现有授权应用于AI。',
+            '美国在2025年1月撤销了其AI安全行政令——竞争力现在优先于安全。',
+            '中国的DeepSeek R1在关键基准上与GPT-4o相媲美——GPU出口管制并未阻止中国AI。',
+            '台湾的TSMC制造所有前沿AI的芯片——单一地缘政治依赖。',
+            '组织必须同时遵守三个相互冲突的监管框架：欧盟、美国和中国。',
+          ],
+        },
+
+        euImplications: {
+          title: '如果您是基于欧盟的组织：关键合规截止日期',
+          content: [
+            '**EU AI法具有约束力，自2026年8月起生效。** 如果您的组织以欧盟为基地或为欧盟用户服务，您必须遵守其四层风险分类系统。禁止行为的罚款达3500万欧元或全球营业额的7%——以较高者为准。不合规不可协商。',
+            '**如果您在欧盟部署GPT-4o、Claude 4.6 Sonnet或Gemini 2.5 Pro，您必须审计其通用AI（GPAI）合规文档。** OpenAI、Anthropic和Google自2025年8月以来发布了透明度文档（训练数据摘要、能力限制、安全测试）。将这些证明保存为合规证据——监管机构会询问。',
+            '**高风险AI系统（招聘、信用决定、医疗、执法）在部署前需要合规性评估。** 这意味着测试偏差、文档化人工监督机制和所有AI决定的审计跟踪。本地部署的开放权重模型（Ollama上的LLaMA、Mistral Large）满足数据驻留要求——不会有数据离开您的基础设施，您控制审计跟踪。',
+            '**布鲁塞尔效应适用于您。** 如果您的AI系统到达单一欧盟居民，EU AI法适用——即使您的公司以美国或中国为基地。这意味着在全球范围内执行相同的合规水平通常比维护多个配置更简单。',
+          ],
+        },
+
+        promptEngineerTakeaways: {
+          title: '提示工程师的关键要点',
+          isTldr: true,
+          items: [
+            '中国AI API（DeepSeek、ERNIE 4.0、通过阿里巴巴云的Qwen）在API级别过滤内容——政治话题、对中共的批评、台湾/西藏/新疆在HTTP 200响应中返回`is_safe: 0`，而不是HTTP 4xx。在您的应用程序代码中明确处理这些。',
+            'Mistral模型和本地Ollama部署满足EU AI法数据驻留要求——提示和输出永远不会离开您的基础设施。这是提示工程师实现EU GDPR + AI法合规的最低摩擦路径。',
+            'GPT-4o和Claude 4.6 Sonnet自2025年8月以来在EU AI法下符合GPAI标准。您可以在面向欧盟的部署中使用它们，无需额外的模型级别合规工作——您的义务在应用程序（部署者）级别，而不是模型级别。',
+            '布鲁塞尔效应意味着发送到美国托管模型以供欧盟居民使用的产品的提示受EU AI法要求——即使您的公司不是基于欧盟。',
+            '对于多司法管辖权测试，同时将相同提示发送到Mistral（EU兼容）、GPT-4o（US/GPAI）和Qwen（中国可访问），以在监管环境中对输出进行基准测试。PromptQuorum本地支持这一点。',
+          ],
+        },
+      },
+    },
   },
 
   'which-framework-to-use': {
