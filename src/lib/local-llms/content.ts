@@ -12100,5 +12100,305 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'local-llm-pc-build-1000': {
+    en: {
+      theme: 'Hardware Setups',
+      title: 'Best Local LLM PC Build Under $1,000',
+      seoTitle: 'Best $1,000 PC Build for Local LLMs: RTX 4070, Ryzen 7, 32GB RAM',
+      intro: '**A $1,000 local LLM PC runs Llama 3.1 70B smoothly with RTX 4070 + Ryzen 7 5700X + 32GB RAM.** As of April 2026, this is the best value for serious local AI work. You get 120+ tokens/second inference speed, enough for multi-user setups and fine-tuning experiments.',
+      metaDescription: 'Best $1,000 PC build for local LLMs: RTX 4070, Ryzen 7, 32GB RAM. Parts list, assembly guide, performance. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '8 min',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'PC Build',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'What Are the Specs for a $1,000 Build?', anchor: '#specs' },
+        { label: 'Which GPU Should You Choose?', anchor: '#gpu' },
+        { label: 'How Do You Assemble and Set Up the PC?', anchor: '#assembly' },
+        { label: 'What Performance Should You Expect?', anchor: '#performance' },
+        { label: 'How Much Does Each Component Cost?', anchor: '#costs' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        'tldr': {
+          isTldr: true,
+          items: [
+            '**CPU:** AMD Ryzen 7 5700X ($250 used) — 8 cores, good for LLM hosting + OS tasks',
+            '**GPU:** RTX 4070 ($350 used) — 12GB VRAM, runs 70B quantized (Q4) at 120 tok/sec',
+            '**RAM:** 32GB DDR4 ($80–120 used) — Fast GPU inference + OS multitasking',
+            '**SSD:** 1TB NVMe ($40 new) — Boot drive; models stored on separate 2TB external SSD',
+            '**PSU:** 750W Gold ($70 new) — Enough for RTX 4070 + CPU + storage',
+            '**Cooling:** Stock Ryzen cooler ($0, included); optional case fans ($30) for 24/7 use',
+            '**Total:** ~$1,000 for new parts, $700–800 used market',
+            'Inference speed: 120–150 tokens/second on Llama 3.1 70B (Q4 quantization)',
+          ],
+        },
+        'specs': {
+          title: 'What Are the Specs for a $1,000 Build?',
+          content: [
+            'The $1,000 build targets Llama 3.1 70B inference at consumer-grade speed. RTX 4070 has 12GB VRAM, enough for 70B quantized models. Ryzen 7 5700X is fast enough for OS overhead (typically 5–10% CPU during inference). 32GB RAM prevents swapping to disk.',
+          ],
+          rows: [
+            { '0': 'Component', '1': 'Budget Pick', '2': 'Better Alternative' },
+            { '0': 'CPU', '1': 'Ryzen 5 5600X ($150 used)', '2': 'Ryzen 7 5700X ($250 used)' },
+            { '0': 'GPU', '1': 'RTX 4070 ($350 used)', '2': 'RTX 4070 Super ($450 used)' },
+            { '0': 'RAM', '1': '32GB DDR4 ($80 used)', '2': '64GB DDR4 ($150 used)' },
+            { '0': 'Storage', '1': '1TB NVMe SSD ($40)', '2': '2TB NVMe SSD ($70)' },
+            { '0': 'PSU', '1': '650W Gold ($60)', '2': '750W Gold ($70)' },
+            { '0': 'Case', '1': 'Basic ATX ($40)', '2': 'Case with fans ($70)' },
+          ],
+          columns: ['Component', 'Budget Pick', 'Better Alternative'],
+        },
+        'gpu': {
+          title: 'Which GPU Should You Choose?',
+          content: [
+            '**RTX 4070 (recommended):** 12GB VRAM, $350–450 used. Runs Llama 3.1 70B (Q4) at 120 tok/sec. Best value for $1K budget.',
+            '**RTX 4070 Super:** 12GB VRAM, $450–550 used. 10–15% faster than 4070. Worth it if you find one at $450.',
+            '**RTX 3090 (alternative):** 24GB VRAM, $400–600 used. Slightly slower than 4070 per token, but larger context window support.',
+            '**Avoid:** RTX 3080 10GB (too small VRAM), RTX 4060 12GB (too slow), anything <12GB for 70B models.',
+          ],
+        },
+        'assembly': {
+          title: 'How Do You Assemble and Set Up the PC?',
+          content: [
+            'Assembly is straightforward for standard ATX motherboards. Install CPU in socket, RAM in slots, SSD in M.2 slot, then GPU in top PCIe slot. Install Windows/Linux, NVIDIA drivers, then Ollama or vLLM.',
+          ],
+          numberedItems: [
+            'Install CPU into socket (align triangle markers).',
+            'Install RAM: Push down clips on both ends, insert RAM until it clicks.',
+            'Install NVMe SSD into M.2 slot (typically below GPU slot).',
+            'Install GPU: Remove slot covers, push PCIe retention clip, insert GPU, secure with bracket screw.',
+            'Connect 24-pin motherboard power + 8-pin CPU power from PSU.',
+            'Connect SATA data cable to SSD (if not NVMe).',
+            'Install Windows 11 or Ubuntu Linux from USB.',
+            'Download NVIDIA drivers (nvidia.com), install, reboot.',
+            'Install Ollama (ollama.ai) or vLLM (`pip install vllm`), pull model, test.',
+          ],
+        },
+        'performance': {
+          title: 'What Performance Should You Expect?',
+          content: [
+            'On RTX 4070: Llama 3.1 70B (Q4) runs at 120–150 tokens/second. This is sufficient for interactive chatbots, batch processing, and coding assistance. Full responses (300 tokens) complete in 2–3 seconds.',
+            'Single-user latency: ~5ms per token (model) + 50ms overhead (VRAM transfer) = 55ms/token wall-clock time (~18 tok/sec user-perceived).',
+            'For 24/7 use: Power draw is ~140W (Ryzen) + 250W (GPU) = 390W average, or ~$3.50/week in US electricity.',
+          ],
+        },
+        'costs': {
+          title: 'How Much Does Each Component Cost?',
+          content: [
+            'As of April 2026, used prices are 30–40% below new. Building used saves $300–400.',
+          ],
+          rows: [
+            { '0': 'Component', '1': 'New Price', '2': 'Used Price (eBay)' },
+            { '0': 'Ryzen 7 5700X', '1': '$350', '2': '$200–250' },
+            { '0': 'RTX 4070', '1': '$550', '2': '$350–400' },
+            { '0': 'Motherboard B550', '1': '$150', '2': '$80–100' },
+            { '0': '32GB RAM DDR4', '1': '$180', '2': '$80–120' },
+            { '0': 'NVMe SSD 1TB', '1': '$80', '2': '$40–50' },
+            { '0': 'PSU 750W', '1': '$120', '2': '$60–80' },
+            { '0': 'Case', '1': '$80', '2': '$30–50' },
+            { '0': 'TOTAL', '1': '$1,540', '2': '$840–900' },
+          ],
+          columns: ['Component', 'New Price', 'Used Price (eBay)'],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'Can I use this build for gaming and AI?',
+              a: 'Yes. Gaming uses GPU, AI uses GPU. Run one at a time to avoid bottlenecks. Ryzen 7 5700X is a solid gaming CPU (~120 fps 1440p in modern titles).',
+            },
+            {
+              q: 'Is 32GB RAM enough?',
+              a: 'For inference: Yes, sufficient. For training/fine-tuning: 64GB is better (allows larger batch sizes). 32GB OK for LoRA fine-tuning.',
+            },
+            {
+              q: 'Can I upgrade the GPU later?',
+              a: 'Yes. RTX 4070 is current-gen (2023). RTX 5070 will launch mid-2025. Motherboard will support future GPUs via PCIe 4.0.',
+            },
+            {
+              q: 'How long until the PC becomes obsolete?',
+              a: 'RTX 4070 will remain relevant 5+ years (similar to GTX 1080 today). Ryzen 5700X is solid for 7+ years.',
+            },
+            {
+              q: 'Should I buy new or used parts?',
+              a: 'Used GPU (eBay): Save 30–40%, 6-month warranty typical. Motherboard/CPU: Buy new for reliability ($250–300 extra total).',
+            },
+          ],
+        },
+        'commonMistakes': {
+          title: 'What Are Common Mistakes When Building?',
+          items: [
+            'Buying a small PSU (500W). RTX 4070 needs minimum 650W; use 750W for headroom.',
+            'Skimping on RAM. 16GB causes disk swap during large model loading; use 32GB minimum.',
+            'Choosing DDR5 RAM. DDR4 is cheaper. Ryzen 5000 supports DDR4 fine.',
+            'Not using PCIe 4.0. Older SSDs (SATA) bottleneck model loading. Get NVMe PCIe 4.0+.',
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Best Local LLM PC Build Under $2,000](/local-llms/local-llm-pc-build-2000)',
+            '[Best Workstation Build for Local AI](/local-llms/local-llm-workstation-build)',
+            '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026)',
+            '[VRAM Calculator for Local LLMs](/local-llms/vram-calculator-local-llm)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'eBay GPU pricing (RTX 4070): market data April 2026',
+            'AMD Ryzen 7 5700X specifications: AMD official specs',
+            'NVIDIA RTX 4070 TDP and power specifications (250W)',
+          ],
+        },
+      },
+    },
+  },
+
+  'local-llm-pc-build-2000': {
+    en: {
+      theme: 'Hardware Setups',
+      title: 'Best Local LLM PC Build Under $2,000',
+      seoTitle: 'Best $2,000 PC Build for Local LLMs: RTX 4090, Ryzen 9, 64GB RAM',
+      intro: '**A $2,000 local LLM PC runs Llama 3.1 and Claude equivalents at maximum quality with RTX 4090 + Ryzen 9 7950X + 64GB RAM.** As of April 2026, this is the performance sweet spot for power users, teams, and fine-tuning. You get 150+ tokens/second on 70B models and can serve 5+ concurrent users.',
+      metaDescription: 'Best $2,000 PC build for local LLMs: RTX 4090, Ryzen 9, 64GB RAM. Dual-GPU upgrade path. Parts list, assembly. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '8 min',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'PC Build',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'What Are the Specs for a $2,000 Build?', anchor: '#specs' },
+        { label: 'Which GPU and CPU Should You Choose?', anchor: '#gpu-cpu' },
+        { label: 'Why Is 64GB RAM Important?', anchor: '#ram' },
+        { label: 'How Do You Set Up Multi-GPU?', anchor: '#multi-gpu' },
+        { label: 'What Performance Should You Expect?', anchor: '#performance' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        'tldr': {
+          isTldr: true,
+          items: [
+            '**CPU:** AMD Ryzen 9 7950X ($450) — 16 cores, handles multi-user + fine-tuning overhead',
+            '**GPU:** RTX 4090 ($1,100 used) — 24GB VRAM, runs 70B models at 150+ tok/sec unquantized',
+            '**RAM:** 64GB DDR5 ($300) — Supports large batch fine-tuning, no disk swap',
+            '**SSD:** 2TB NVMe PCIe 5.0 ($100) — Fast model loading (250MB/s)',
+            '**PSU:** 1200W Platinum ($150) — Overhead for future GPU upgrade (dual-GPU capable)',
+            '**Motherboard:** X870 with PCIe 5.0 ($250) — Dual M.2, dual GPU-ready',
+            '**Total:** ~$2,350 (can build for $2,000 with used GPU)',
+            'Inference: 150+ tok/sec on Llama 3.1 70B; 5+ concurrent users on vLLM',
+          ],
+        },
+        'specs': {
+          title: 'What Are the Specs for a $2,000 Build?',
+          content: [
+            'This build prioritizes throughput and multi-user capability. RTX 4090 24GB VRAM handles unquantized 70B models. Ryzen 9 7950X is fast enough for multi-user serving + light fine-tuning. 64GB DDR5 avoids memory bottlenecks during concurrent inference.',
+          ],
+          rows: [
+            { '0': 'Component', '1': 'Recommended', '2': 'Premium Alternative' },
+            { '0': 'CPU', '1': 'Ryzen 9 7950X ($450)', '2': 'Ryzen 9 7950X3D ($600, better cache)' },
+            { '0': 'GPU', '1': 'RTX 4090 ($1,100 used)', '2': 'RTX 4090 new ($1,600) + spare room' },
+            { '0': 'RAM', '1': '64GB DDR5 ($300)', '2': '128GB DDR5 ($600, future-proof)' },
+            { '0': 'Motherboard', '1': 'X870 ($250)', '2': 'X870-E ($350, dual-GPU ready)' },
+            { '0': 'SSD', '1': '2TB NVMe PCIe 5.0 ($100)', '2': '4TB NVMe PCIe 5.0 ($180)' },
+            { '0': 'PSU', '1': '1200W Platinum ($150)', '2': '1600W Titanium ($200, dual-GPU)' },
+          ],
+          columns: ['Component', 'Recommended', 'Premium Alternative'],
+        },
+        'gpu-cpu': {
+          title: 'Which GPU and CPU Should You Choose?',
+          content: [
+            '**RTX 4090 (recommended):** 24GB VRAM, $1,100–1,300 used. Runs unquantized 70B models at 150 tok/sec. Industry standard for local inference.',
+            '**Ryzen 9 7950X (recommended):** 16 cores, $400–500. Handles multi-user + fine-tuning overhead. Better than 7900X for concurrent serving.',
+            '**Alternative: Dual RTX 4070 ($800 total):** 2× 12GB = 24GB effective VRAM, same total cost as one RTX 4090, but 30% slower (no NVLink). Use for fine-tuning only.',
+          ],
+        },
+        'ram': {
+          title: 'Why Is 64GB RAM Important?',
+          content: [
+            '64GB DDR5 prevents OS/application memory pressure during concurrent inference. With 32GB, the system swaps to disk when running 5+ concurrent requests. DDR5 is faster than DDR4, reducing latency by 5–10%.',
+            'For fine-tuning: LoRA fine-tuning on 70B model needs 40–50GB RAM (model + optimizer state + batch). 64GB provides 14–24GB headroom for other tasks.',
+          ],
+        },
+        'multi-gpu': {
+          title: 'How Do You Set Up Multi-GPU?',
+          content: [
+            'RTX 4090 is single GPU, but you can add a second GPU later (RTX 4070 for fine-tuning, RTX 4090 for inference parallelism).',
+            'For dual-GPU today: Use 2× RTX 4070 ($800 total) on the X870 motherboard with dual-GPU support. vLLM auto-scales across both GPUs via tensor parallelism.',
+          ],
+          numberedItems: [
+            'X870-E motherboards have dual GPU slots (PCIe 5.0). Verify before buying.',
+            'PSU must support 2× GPU power (typically 300W+ per GPU). 1600W minimum for headroom.',
+            'In vLLM: `--tensor-parallel-size 2` to split inference across both GPUs.',
+            'Throughput improves ~90% (nearly linear scaling for most models).',
+          ],
+        },
+        'performance': {
+          title: 'What Performance Should You Expect?',
+          content: [
+            'On RTX 4090: Llama 3.1 70B runs at 150–180 tokens/second (unquantized FP16). Quantized (Q4) achieves 200+ tok/sec.',
+            'Multi-user throughput: With vLLM + load balancing, serve 5–10 concurrent users without quality loss (prefill batching + token batching).',
+            'Fine-tuning: LoRA fine-tuning on 70B with batch_size=4 runs at 100–150 tokens/second (half inference speed due to gradient computation).',
+            'Power draw: RTX 4090 at full load = 450W + CPU 105W = 555W peak, or ~$4.10/day in US electricity.',
+          ],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'Can I run this build on 32GB RAM?',
+              a: 'Inference: Yes, barely (swaps to disk). Fine-tuning: No, insufficient. If budget-constrained, use RTX 4070 + 32GB as intermediate step.',
+            },
+            {
+              q: 'Is DDR5 worth it over DDR4?',
+              a: 'Yes for $2K+ build. 5–10% latency improvement, and X870 motherboards require DDR5 anyway. Difference is $50–100 vs DDR4.',
+            },
+            {
+              q: 'Should I buy new or used RTX 4090?',
+              a: 'Used $1,100 (30% savings) is good value. Check temps/power delivery. New has warranty; make choice based on budget.',
+            },
+            {
+              q: 'Can I upgrade to 3 or 4 GPUs?',
+              a: 'Technically yes (PCIe 5.0 x16 lanes on X870), but tensor parallelism scales linearly only up to 2–3 GPUs. 4+ GPUs requires pipeline parallelism (harder to set up).',
+            },
+            {
+              q: 'How long will this build stay relevant?',
+              a: 'RTX 4090 is top-tier (2023). Relevant for 6–8 years. Ryzen 9 7950X will be relevant 8–10 years.',
+            },
+          ],
+        },
+        'commonMistakes': {
+          title: 'What Are Common Mistakes When Building?',
+          items: [
+            'Buying a 850W PSU. RTX 4090 needs minimum 1000W; use 1200W for safety margin.',
+            'Choosing DDR4 on X870. X870 supports DDR5 only. Older X670 supports DDR4, but lacks PCIe 5.0.',
+            'Not verifying GPU clearance. RTX 4090 is large; check case dimensions (typically 305×111mm).',
+            'Ignoring cooling. RTX 4090 at 150+ tok/sec runs hot. Case needs 3+ 120mm fans minimum.',
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Best Local LLM PC Build Under $1,000](/local-llms/local-llm-pc-build-1000)',
+            '[Best Workstation Build for Serious Local AI](/local-llms/local-llm-workstation-build)',
+            '[Multi-GPU Local LLMs: Scaling Beyond Single GPU](/local-llms/multi-gpu-local-llms)',
+            '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'eBay GPU pricing (RTX 4090): market data April 2026',
+            'AMD Ryzen 9 7950X specifications: AMD official (16 cores, 5.7 GHz boost)',
+            'NVIDIA RTX 4090 TDP and specs (450W power, 24GB GDDR6X)',
+          ],
+        },
+      },
+    },
+  },
+
 }
 
