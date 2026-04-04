@@ -145,6 +145,122 @@ const TITLE_TO_SLUG: Record<string, string> = {
   'Build a Prompt Library That Saves Hours': 'build-a-prompt-library',
 }
 
+// Top 20 most important AI & prompt engineering terms for 2026
+// Used for glossary prioritization layer
+// Anchor IDs follow glossary term ID format: term-{slug}
+const TOP_20_TERMS: Record<Language, Array<{ term: string; anchor: string; description: string }>> = {
+  en: [
+    { term: 'RAG (Retrieval-Augmented Generation)', anchor: 'term-rag-retrieval-augmented-generation', description: 'Connecting LLMs to external knowledge bases so they answer based on real data, not training memory.' },
+    { term: 'Chain-of-Thought (CoT)', anchor: 'term-chain-of-thought-prompting', description: 'Asking the model to show its reasoning step-by-step before giving the final answer, improving accuracy on complex problems.' },
+    { term: 'AI Agent', anchor: 'term-ai-agent', description: 'An autonomous AI system that plans tasks, calls tools, and iterates until reaching a goal without human intervention.' },
+    { term: 'Prompt Injection', anchor: 'term-prompt-injection', description: 'An attack where untrusted user input tricks an LLM into ignoring its original instructions.' },
+    { term: 'Few-Shot Prompting', anchor: 'term-few-shot-prompting', description: 'Providing 2–5 examples of the desired behavior in the prompt so the model learns the pattern.' },
+    { term: 'Fine-Tuning', anchor: 'term-fine-tuning', description: 'Retraining a model on task-specific data to improve its performance on that exact task.' },
+    { term: 'Embeddings', anchor: 'term-embeddings', description: 'Converting text or images into numerical vectors that capture meaning, enabling semantic search and similarity.' },
+    { term: 'Vector Database', anchor: 'term-vector-database', description: 'A specialized database that stores and retrieves embeddings by similarity, enabling fast semantic search at scale.' },
+    { term: 'Hallucination', anchor: 'term-hallucination', description: 'When an LLM generates confident-sounding but false information, fabricating facts or citations.' },
+    { term: 'Context Window', anchor: 'term-context-window', description: 'The maximum number of tokens an LLM can process in a single request (e.g., GPT-4o: 128k tokens).' },
+    { term: 'Temperature', anchor: 'term-temperature-and-top-p', description: 'A setting controlling randomness: low (0.0) = predictable, high (1.0) = creative/chaotic.' },
+    { term: 'Zero-Shot Prompting', anchor: 'term-zero-shot-prompting', description: 'Asking the model to perform a task without any examples — the baseline approach.' },
+    { term: 'Tool Calling', anchor: 'term-tool-calling', description: 'Enabling an LLM to call external APIs, run code, or trigger actions based on its reasoning.' },
+    { term: 'Guardrails', anchor: 'term-guardrails', description: 'Safety systems that filter harmful inputs and outputs, preventing misuse or unwanted behavior.' },
+    { term: 'LLM Evaluation', anchor: 'term-llm-evaluation', description: 'Measuring model quality using benchmarks, human ratings, or automated metrics like BLEU or ROUGE.' },
+    { term: 'Prompt Engineering', anchor: 'term-prompt-engineering', description: 'The art of writing precise instructions to get accurate, useful answers from AI models.' },
+    { term: 'Multi-Agent Systems', anchor: 'term-multi-agent-systems', description: 'Multiple independent AI agents working in parallel or sequence to solve complex problems collaboratively.' },
+    { term: 'Context Engineering', anchor: 'term-context-engineering', description: 'Structuring the context window strategically to prioritize important information and reduce noise.' },
+    { term: 'Latency', anchor: 'term-latency', description: 'The time delay between sending a prompt and receiving the complete response (e.g., 800ms for GPT-4o).' },
+    { term: 'Cost Optimization', anchor: 'term-cost-optimization', description: 'Techniques like model selection, prompt caching, and batch processing to reduce API spending.' },
+  ],
+  de: [
+    { term: 'RAG (Retrieval-Augmented Generation)', anchor: 'term-rag-retrieval-augmented-generation', description: 'LLMs mit externen Wissensdatenbanken verbinden, damit sie basierend auf echten Daten antworten.' },
+    { term: 'Chain-of-Thought (CoT)', anchor: 'term-chain-of-thought-prompting', description: 'Das Modell auffordern, seinen Denkprozess Schritt für Schritt zu zeigen, bevor es die Endantwort gibt.' },
+    { term: 'AI Agent', anchor: 'term-ai-agent', description: 'Ein autonomes KI-System, das Aufgaben plant, Tools aufruft und iteriert, bis es ein Ziel erreicht.' },
+    { term: 'Prompt Injection', anchor: 'term-prompt-injection', description: 'Ein Angriff, bei dem nicht vertrauenswürdige Eingaben ein LLM dazu bringen, seine Anweisungen zu ignorieren.' },
+    { term: 'Few-Shot Prompting', anchor: 'term-few-shot-prompting', description: 'Bereitstellung von 2–5 Beispielen im Prompt, damit das Modell das Muster lernt.' },
+    { term: 'Fine-Tuning', anchor: 'term-fine-tuning', description: 'Umschulung eines Modells auf aufgabenspezifische Daten, um seine Leistung zu verbessern.' },
+    { term: 'Embeddings', anchor: 'term-embeddings', description: 'Umwandlung von Text oder Bildern in numerische Vektoren, die Bedeutung erfassen.' },
+    { term: 'Vector Database', anchor: 'term-vector-database', description: 'Eine spezialisierte Datenbank, die Embeddings nach Ähnlichkeit speichert und abruft.' },
+    { term: 'Hallucination', anchor: 'term-hallucination', description: 'Wenn ein LLM selbstbewusst falsche Informationen generiert oder Fakten erfindet.' },
+    { term: 'Context Window', anchor: 'term-context-window', description: 'Die maximale Anzahl von Tokens, die ein LLM in einer Anfrage verarbeiten kann.' },
+    { term: 'Temperature', anchor: 'term-temperature-and-top-p', description: 'Eine Einstellung, die Zufälligkeit steuert: niedrig = vorhersehbar, hoch = kreativ.' },
+    { term: 'Zero-Shot Prompting', anchor: 'term-zero-shot-prompting', description: 'Aufforderung an das Modell, eine Aufgabe ohne Beispiele zu erfüllen.' },
+    { term: 'Tool Calling', anchor: 'term-tool-calling', description: 'LLM ermöglichen, externe APIs aufzurufen oder Code basierend auf Reasoning auszuführen.' },
+    { term: 'Guardrails', anchor: 'term-guardrails', description: 'Sicherheitssysteme, die schädliche Ein- und Ausgaben filtern.' },
+    { term: 'LLM Evaluation', anchor: 'term-llm-evaluation', description: 'Messung der Modellqualität mit Benchmarks oder automatisierten Metriken.' },
+    { term: 'Prompt Engineering', anchor: 'term-prompt-engineering', description: 'Die Kunst, präzise Anweisungen zu schreiben, um genaue Antworten von KI-Modellen zu erhalten.' },
+    { term: 'Multi-Agent Systems', anchor: 'term-multi-agent-systems', description: 'Mehrere unabhängige KI-Agenten, die zusammenarbeiten, um komplexe Probleme zu lösen.' },
+    { term: 'Context Engineering', anchor: 'term-context-engineering', description: 'Strategische Strukturierung des Context Windows, um wichtige Informationen zu priorisieren.' },
+    { term: 'Latency', anchor: 'term-latency', description: 'Die Verzögerung zwischen dem Senden eines Prompts und dem Empfang der Antwort.' },
+    { term: 'Cost Optimization', anchor: 'term-cost-optimization', description: 'Techniken wie Modellauswahl und Batch-Verarbeitung zur Reduzierung der API-Kosten.' },
+  ],
+  fr: [
+    { term: 'RAG (Retrieval-Augmented Generation)', anchor: 'term-rag-retrieval-augmented-generation', description: 'Connecter les LLMs à des bases de connaissances externes pour répondre basé sur des données réelles.' },
+    { term: 'Chain-of-Thought (CoT)', anchor: 'term-chain-of-thought-prompting', description: 'Demander au modèle de montrer son raisonnement étape par étape avant de donner la réponse finale.' },
+    { term: 'AI Agent', anchor: 'term-ai-agent', description: 'Un système IA autonome qui planifie des tâches, appelle des outils et itère jusqu\'à atteindre un objectif.' },
+    { term: 'Prompt Injection', anchor: 'term-prompt-injection', description: 'Une attaque où une entrée non fiable trompe un LLM pour ignorer ses instructions originales.' },
+    { term: 'Few-Shot Prompting', anchor: 'term-few-shot-prompting', description: 'Fournir 2–5 exemples du comportement souhaité pour que le modèle apprenne le modèle.' },
+    { term: 'Fine-Tuning', anchor: 'term-fine-tuning', description: 'Réentraîner un modèle sur des données spécifiques à la tâche pour améliorer ses performances.' },
+    { term: 'Embeddings', anchor: 'term-embeddings', description: 'Conversion de texte ou d\'images en vecteurs numériques qui capturent le sens.' },
+    { term: 'Vector Database', anchor: 'term-vector-database', description: 'Une base de données spécialisée qui stocke et récupère les embeddings par similarité.' },
+    { term: 'Hallucination', anchor: 'term-hallucination', description: 'Quand un LLM génère des informations fausses mais confiantes, inventant des faits.' },
+    { term: 'Context Window', anchor: 'term-context-window', description: 'Le nombre maximum de tokens qu\'un LLM peut traiter dans une seule demande.' },
+    { term: 'Temperature', anchor: 'term-temperature-and-top-p', description: 'Un paramètre contrôlant l\'aléatoire: bas = prévisible, haut = créatif.' },
+    { term: 'Zero-Shot Prompting', anchor: 'term-zero-shot-prompting', description: 'Demander au modèle d\'effectuer une tâche sans aucun exemple.' },
+    { term: 'Tool Calling', anchor: 'term-tool-calling', description: 'Permettre à un LLM d\'appeler des APIs externes ou d\'exécuter des actions.' },
+    { term: 'Guardrails', anchor: 'term-guardrails', description: 'Systèmes de sécurité qui filtrent les entrées et sorties nuisibles.' },
+    { term: 'LLM Evaluation', anchor: 'term-llm-evaluation', description: 'Mesurer la qualité du modèle avec des benchmarks ou des métriques automatisées.' },
+    { term: 'Prompt Engineering', anchor: 'term-prompt-engineering', description: 'L\'art d\'écrire des instructions précises pour obtenir des réponses exactes des modèles IA.' },
+    { term: 'Multi-Agent Systems', anchor: 'term-multi-agent-systems', description: 'Plusieurs agents IA indépendants travaillant ensemble pour résoudre des problèmes complexes.' },
+    { term: 'Context Engineering', anchor: 'term-context-engineering', description: 'Structuration stratégique de la fenêtre de contexte pour prioriser les informations importantes.' },
+    { term: 'Latency', anchor: 'term-latency', description: 'Le délai entre l\'envoi d\'un prompt et la réception de la réponse complète.' },
+    { term: 'Cost Optimization', anchor: 'term-cost-optimization', description: 'Techniques comme la sélection de modèle et le traitement par lots pour réduire les dépenses.' },
+  ],
+  ja: [
+    { term: 'RAG (Retrieval-Augmented Generation)', anchor: 'term-rag-retrieval-augmented-generation', description: 'LLMを外部ナレッジベースに接続して、実際のデータに基づいて回答させること。' },
+    { term: 'Chain-of-Thought (CoT)', anchor: 'term-chain-of-thought-prompting', description: 'モデルに段階的に推論過程を示させてから最終回答を与えさせること。' },
+    { term: 'AI Agent', anchor: 'term-ai-agent', description: 'タスクを計画し、ツールを呼び出し、目標に達するまで繰り返す自律的なAIシステム。' },
+    { term: 'Prompt Injection', anchor: 'term-prompt-injection', description: '信頼できない入力がLLMの元の指示を無視させるよう騙すこと。' },
+    { term: 'Few-Shot Prompting', anchor: 'term-few-shot-prompting', description: 'プロンプトに2～5つの例を提供してモデルにパターンを学ばせること。' },
+    { term: 'Fine-Tuning', anchor: 'term-fine-tuning', description: '特定のタスク用データでモデルを再訓練してパフォーマンスを向上させること。' },
+    { term: 'Embeddings', anchor: 'term-embeddings', description: 'テキストや画像を意味を捉えた数値ベクトルに変換すること。' },
+    { term: 'Vector Database', anchor: 'term-vector-database', description: '埋め込みを類似度で保存・取得する特殊なデータベース。' },
+    { term: 'Hallucination', anchor: 'term-hallucination', description: 'LLMが自信を持って誤った情報を生成したり、事実を作り上げること。' },
+    { term: 'Context Window', anchor: 'term-context-window', description: '1つのリクエストで処理できるトークンの最大数（例：GPT-4oは128k）。' },
+    { term: 'Temperature', anchor: 'term-temperature-and-top-p', description: 'ランダム性を制御する設定：低い＝予測可能、高い＝創造的。' },
+    { term: 'Zero-Shot Prompting', anchor: 'term-zero-shot-prompting', description: '例なしでモデルにタスクを実行させること。' },
+    { term: 'Tool Calling', anchor: 'term-tool-calling', description: 'LLMが外部APIを呼び出したりコードを実行したりできるようにすること。' },
+    { term: 'Guardrails', anchor: 'term-guardrails', description: '有害な入出力をフィルタリングするセキュリティシステム。' },
+    { term: 'LLM Evaluation', anchor: 'term-llm-evaluation', description: 'ベンチマークまたは自動メトリクスを使用してモデル品質を測定すること。' },
+    { term: 'Prompt Engineering', anchor: 'term-prompt-engineering', description: 'AIモデルから正確な答えを得るための正確な指示を書く技術。' },
+    { term: 'Multi-Agent Systems', anchor: 'term-multi-agent-systems', description: '複数の独立したAIエージェントが協力して複雑な問題を解く。' },
+    { term: 'Context Engineering', anchor: 'term-context-engineering', description: 'コンテキストウィンドウを戦略的に構造化して重要情報を優先させること。' },
+    { term: 'Latency', anchor: 'term-latency', description: 'プロンプト送信から完全な応答受信までの時間遅延。' },
+    { term: 'Cost Optimization', anchor: 'term-cost-optimization', description: 'モデル選択やバッチ処理などのAPI支出削減技術。' },
+  ],
+  zh: [
+    { term: 'RAG (Retrieval-Augmented Generation)', anchor: 'term-rag-retrieval-augmented-generation', description: '将LLM连接到外部知识库，使其基于真实数据回答问题。' },
+    { term: 'Chain-of-Thought (CoT)', anchor: 'term-chain-of-thought-prompting', description: '让模型逐步展示推理过程，然后再给出最终答案。' },
+    { term: 'AI Agent', anchor: 'term-ai-agent', description: '自主规划任务、调用工具、不断迭代直到达成目标的AI系统。' },
+    { term: 'Prompt Injection', anchor: 'term-prompt-injection', description: '通过不可信的用户输入欺骗LLM忽视其原始指令的攻击。' },
+    { term: 'Few-Shot Prompting', anchor: 'term-few-shot-prompting', description: '在提示词中提供2-5个示例，让模型学习模式。' },
+    { term: 'Fine-Tuning', anchor: 'term-fine-tuning', description: '用特定任务数据重新训练模型，提高其性能。' },
+    { term: 'Embeddings', anchor: 'term-embeddings', description: '将文本或图像转换为捕捉语义的数值向量。' },
+    { term: 'Vector Database', anchor: 'term-vector-database', description: '按相似度存储和检索嵌入的特殊数据库。' },
+    { term: 'Hallucination', anchor: 'term-hallucination', description: 'LLM生成自信但错误的信息，编造事实。' },
+    { term: 'Context Window', anchor: 'term-context-window', description: 'LLM在单个请求中能处理的最大令牌数。' },
+    { term: 'Temperature', anchor: 'term-temperature-and-top-p', description: '控制随机性的设置：低=可预测，高=创意。' },
+    { term: 'Zero-Shot Prompting', anchor: 'term-zero-shot-prompting', description: '在没有示例的情况下让模型执行任务。' },
+    { term: 'Tool Calling', anchor: 'term-tool-calling', description: '让LLM能够调用外部API或执行操作。' },
+    { term: 'Guardrails', anchor: 'term-guardrails', description: '过滤有害输入和输出的安全系统。' },
+    { term: 'LLM Evaluation', anchor: 'term-llm-evaluation', description: '使用基准或自动指标衡量模型质量。' },
+    { term: 'Prompt Engineering', anchor: 'term-prompt-engineering', description: '编写精确指令以从AI模型获得准确答案的技术。' },
+    { term: 'Multi-Agent Systems', anchor: 'term-multi-agent-systems', description: '多个独立AI代理协作解决复杂问题。' },
+    { term: 'Context Engineering', anchor: 'term-context-engineering', description: '战略性地构建上下文窗口以优先处理重要信息。' },
+    { term: 'Latency', anchor: 'term-latency', description: '从发送提示词到收到完整响应之间的时间延迟。' },
+    { term: 'Cost Optimization', anchor: 'term-cost-optimization', description: '通过模型选择和批处理等技术降低API成本。' },
+  ],
+}
+
 // Maps bare category names to their hub section anchors
 const CATEGORY_ANCHORS: Record<string, string> = {
   'Fundamentals': '/prompt-engineering#fundamentals',
@@ -725,6 +841,33 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
           <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl article-intro">
             {renderInlineLinks(article.intro, lang)}
           </p>
+        )}
+
+        {/* Top 20 Most Important Terms Section (Glossary Only) */}
+        {slug === 'prompt-engineering-glossary' && TOP_20_TERMS[lang] && (
+          <section className="mb-12 bg-primary/5 border border-primary/20 rounded-xl p-6 top-terms-section">
+            <h2 className="text-2xl font-bold text-text-primary mb-4">Top 20 Most Important AI & Prompt Engineering Terms (2026)</h2>
+            <p className="text-text-secondary text-sm mb-6 leading-relaxed max-w-3xl">
+              Master the essential terminology of artificial intelligence and prompt engineering. These 20 core concepts form the foundation of working with LLMs, from fundamental architectures to advanced optimization techniques. Whether you're building AI agents, implementing RAG systems, or optimizing prompt performance, understanding these terms will accelerate your expertise across all areas of AI development and deployment.
+            </p>
+            <ul className="grid gap-3">
+              {TOP_20_TERMS[lang].map((item) => (
+                <li key={item.anchor} className="bg-white rounded-lg p-4 border border-primary/10 hover:border-primary/30 transition-colors">
+                  <a
+                    href={`#${item.anchor}`}
+                    className="block group"
+                  >
+                    <h3 className="font-bold text-text-primary group-hover:text-primary transition-colors mb-2">
+                      {item.term}
+                    </h3>
+                    <p className="text-sm text-text-secondary leading-relaxed">
+                      {item.description}
+                    </p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
         )}
 
         {/* Glossary search */}
