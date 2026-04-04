@@ -1259,6 +1259,134 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'local-llm-limitations': {
+    en: {
+      theme: 'Getting Started',
+      title: 'Local LLM Limitations: What Local Models Cannot Do (and When to Use Cloud Instead)',
+      seoTitle: 'Local LLM Limitations',
+      intro: 'Local LLMs have five significant limitations compared to frontier cloud models: lower output quality on complex tasks, slower inference on consumer hardware, high hardware requirements for large models, lack of real-time information, and significant setup complexity relative to cloud APIs. Understanding these limitations helps you decide when local inference is the right choice and when cloud APIs are better.',
+      metaDescription: 'Local LLM limitations explained: output quality gaps vs GPT-4o, inference speed, hardware requirements, context length, and when to use cloud APIs instead.',
+      publishDate: '2026-04-04',
+      readTime: '8 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM limitations',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Limitation 1: Output Quality Gap', anchor: '#limitation-1-output-quality' },
+        { label: 'Limitation 2: Inference Speed on Consumer Hardware', anchor: '#limitation-2-inference-speed' },
+        { label: 'Limitation 3: Hardware Requirements and Cost', anchor: '#limitation-3-hardware-requirements' },
+        { label: 'Limitation 4: No Real-Time Information', anchor: '#limitation-4-no-real-time-info' },
+        { label: 'Limitation 5: Setup and Maintenance Complexity', anchor: '#limitation-5-setup-complexity' },
+        { label: 'Limitation 6: Context Window Constraints', anchor: '#limitation-6-context-window' },
+        { label: 'When Should You Use Cloud Instead?', anchor: '#when-to-use-cloud' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Quality gap: local 7B models score 10–20 percentage points below GPT-4o on reasoning and coding benchmarks. The gap narrows significantly at 70B scale but requires 40–48 GB of RAM.',
+            'Speed: CPU-only inference on a 7B model produces 10–25 tok/sec. Cloud APIs produce 50–200 tok/sec. Apple Silicon and NVIDIA GPUs close this gap for consumer hardware.',
+            'No internet access: local models have a training cutoff date and cannot retrieve current information. Cloud models can use web search plugins.',
+            'Setup overhead: a working local LLM requires 5–15 minutes of installation and periodic model management. Cloud APIs require only an API key.',
+            'Context window: most practical local models support 4K–128K tokens. Some cloud models (Gemini 2.5 Pro) support 1M+ tokens — currently impractical locally.',
+          ],
+        },
+        qualityGap: {
+          title: 'Limitation 1: Output Quality Gap vs Frontier Cloud Models',
+          content: [
+            'The most significant limitation of local LLMs is output quality on complex tasks. Frontier cloud models — OpenAI GPT-4o, Anthropic Claude 4.6 Opus, Google Gemini 2.5 Pro — are trained on more data, with more compute, and with more sophisticated RLHF fine-tuning than any publicly available local model.',
+            'On MMLU (general knowledge), HumanEval (Python coding), and MATH benchmarks, frontier models score 85–92%. The best locally-runnable 70B models score 75–85%. Consumer-friendly 7B models score 55–70%.',
+            'The quality gap is task-dependent. For summarization, simple Q&A, translation, and code explanation, a 7B model produces results that are difficult to distinguish from GPT-4o in blind evaluations. The gap is widest on: complex multi-step reasoning, advanced mathematics, nuanced long-form writing, and tasks requiring current world knowledge.',
+          ],
+          rows: [
+            { 'Task Type': 'Simple Q&A', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-4o': 'Excellent' },
+            { 'Task Type': 'Code explanation', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-4o': 'Excellent' },
+            { 'Task Type': 'Multi-step reasoning', 'Local 7B': 'Poor', 'Local 70B': 'Adequate', 'GPT-4o': 'Excellent' },
+            { 'Task Type': 'Advanced math', 'Local 7B': 'Poor', 'Local 70B': 'Adequate', 'GPT-4o': 'Good' },
+            { 'Task Type': 'Long-form writing', 'Local 7B': 'Adequate', 'Local 70B': 'Good', 'GPT-4o': 'Excellent' },
+            { 'Task Type': 'Current events', 'Local 7B': 'None (no internet)', 'Local 70B': 'None (no internet)', 'GPT-4o': 'Good (with browsing)' },
+          ],
+          columns: ['Task Type', 'Local 7B', 'Local 70B', 'GPT-4o'],
+        },
+        speed: {
+          title: 'Limitation 2: Inference Speed on Consumer Hardware',
+          content: [
+            'Cloud APIs process tokens on dedicated server hardware with NVIDIA H100 or A100 GPUs. Consumer hardware — even high-end laptops and desktop GPUs — cannot match this throughput.',
+            'GPT-4o generates approximately 80–150 tokens/sec under typical load. A local 7B model on a modern laptop CPU generates 10–25 tokens/sec — 4–10× slower. On an NVIDIA RTX 4090 (the fastest consumer GPU), the same 7B model reaches 130–160 tokens/sec — comparable to cloud speed, but the hardware costs $1,600+.',
+            'For interactive chat use, the speed difference is noticeable but tolerable at 20+ tok/sec. For batch processing (summarizing hundreds of documents), the speed gap becomes a significant constraint.',
+          ],
+        },
+        hardware: {
+          title: 'Limitation 3: Hardware Requirements and Cost',
+          content: [
+            'Running a capable local model (13B+) requires hardware that not every user has. The minimum for a genuinely useful local LLM experience — matching GPT-3.5 quality — is 16 GB RAM and a modern CPU or Apple Silicon chip. This rules out roughly half of consumer laptops currently in use.',
+            'Matching frontier model quality locally requires a 70B model, which demands 40–48 GB of RAM — only available on high-end workstations or Mac Studio / Mac Pro with 64+ GB unified memory.',
+          ],
+          rows: [
+            { 'Hardware': 'Basic laptop (8 GB RAM, CPU only)', 'Max Useful Model': '7B at Q4_K_M', 'Quality Equivalent': 'Below GPT-3.5' },
+            { 'Hardware': 'Mid-range laptop (16 GB RAM)', 'Max Useful Model': '13B at Q4_K_M', 'Quality Equivalent': 'Roughly GPT-3.5' },
+            { 'Hardware': 'Apple M3 Pro (18 GB)', 'Max Useful Model': '13B full quality', 'Quality Equivalent': 'GPT-3.5 to GPT-4 (task dependent)' },
+            { 'Hardware': 'NVIDIA RTX 4090 (24 GB VRAM)', 'Max Useful Model': '34B at Q4_K_M', 'Quality Equivalent': 'Close to GPT-4' },
+            { 'Hardware': 'Mac Studio M2 Ultra (192 GB)', 'Max Useful Model': '70B full quality', 'Quality Equivalent': 'Competitive with GPT-4o' },
+          ],
+          columns: ['Hardware', 'Max Useful Model', 'Quality Equivalent'],
+        },
+        noInternet: {
+          title: 'Limitation 4: No Real-Time Information',
+          content: [
+            'Local LLMs have a training data cutoff. They cannot access the internet, cannot retrieve current news, cannot check live prices or stock data, and cannot visit URLs. A model trained with a cutoff of early 2024 will not know about events after that date.',
+            'Cloud models with browsing capabilities (GPT-4o with web search, Gemini with Google Search integration) can retrieve and cite current information. No consumer-grade local inference tool replicates this capability without significant additional infrastructure (RAG with a live web crawler).',
+            'For tasks that require current information — news summaries, recent product comparisons, live data analysis — cloud APIs are the practical choice. See [Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis) for a full comparison.',
+          ],
+        },
+        setup: {
+          title: 'Limitation 5: Setup and Maintenance Complexity',
+          content: [
+            'A cloud API requires creating an account, generating an API key, and making an HTTP call — typically 5–10 minutes total. A local LLM requires installing an inference engine, downloading a model file (2–50 GB), configuring GPU offloading, and troubleshooting driver issues.',
+            'Maintenance adds ongoing complexity: new model releases must be manually downloaded, inference tools require updates, and hardware compatibility issues arise with OS updates. For a user who wants to focus on using AI rather than managing infrastructure, cloud APIs have a dramatically lower operational burden.',
+            'See [Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) for fixes to the most common setup errors.',
+          ],
+        },
+        contextWindow: {
+          title: 'Limitation 6: Context Window Constraints',
+          content: [
+            'Most practical local models support 4K–128K token context windows. Google Gemini 2.5 Pro supports 1M tokens; OpenAI GPT-4o supports 128K tokens. While 128K is available locally (Llama 3.1, Qwen2.5), the inference speed for very long contexts degrades significantly — processing a 100K token context on a 7B model may take several minutes on consumer hardware.',
+            'For tasks involving very long documents (entire books, large codebases, hours of transcripts), cloud APIs with large context windows are more practical than local inference.',
+          ],
+        },
+        whenCloud: {
+          title: 'When Should You Use a Cloud API Instead of a Local LLM?',
+          items: [
+            '**Maximum output quality is required** — legal documents, complex code generation, advanced research analysis. Use GPT-4o or Claude 4.6 Opus.',
+            '**Real-time information is needed** — current news, live data, URL retrieval. Local models have a training cutoff.',
+            '**Setup time is a constraint** — for a quick prototype or one-off task, a cloud API key is faster to get working than a local install.',
+            '**Your hardware is limited** — on a machine with 4–6 GB RAM, local inference is marginal. Cloud APIs produce better results with zero hardware strain.',
+            '**Processing very long documents** — 100K+ token contexts are slow locally. Cloud models handle this more practically.',
+            '**Comparing local vs cloud side-by-side**: Tools like [PromptQuorum](/) dispatch one prompt to your local Ollama model and 25+ cloud models simultaneously, letting you evaluate quality differences on your specific tasks before committing to either approach.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Local LLM Limitations',
+          faqs: [
+            {
+              q: 'Will local models ever match frontier cloud model quality?',
+              a: 'The gap is narrowing. Meta Llama 3.3 70B (late 2025) matches GPT-4 (2023) on most benchmarks. The pattern has been roughly: today\'s frontier cloud model becomes locally achievable within 18–24 months. At the current rate, a GPT-4o equivalent may be locally runnable on consumer hardware by 2027.',
+            },
+            {
+              q: 'Can I add internet access to a local LLM?',
+              a: 'Yes, with additional infrastructure. RAG (retrieval-augmented generation) with a web search tool allows local models to retrieve information from the internet before generating a response. Tools like Perplexica (open source) or Ollama with web search extensions implement this. The setup is more complex than using a cloud model with built-in browsing.',
+            },
+            {
+              q: 'Are local LLMs good enough for production use?',
+              a: 'For many production use cases, yes. Private document analysis, code review assistance, customer support triage, and content moderation are all in production using local models at companies that cannot send data to cloud providers. The key is matching the task complexity to the model capability — a 7B model is not appropriate for tasks that require GPT-4 level reasoning, but it is entirely appropriate for classification, summarization, and template-based generation.',
+            },
+          ],
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
