@@ -88,6 +88,13 @@ interface CompareText {
   ctaH2: string
   ctaSubtext: string
   ctaButton: string
+
+  atAGlanceH2: string
+  atAGlanceItems: string[]
+  seeAlsoH2: string
+  seeAlsoLinks: { label: string; url: string }[]
+  sourcesH2: string
+  sourcesList: string[]
 }
 
 const content: Record<Lang, CompareText> = {
@@ -99,9 +106,34 @@ const content: Record<Lang, CompareText> = {
     h1Highlight: 'Multi-LLM Comparison Tools',
     introPara: 'The right multi-LLM tool depends on whether you need simultaneous dispatch to all models, automated consensus scoring, local LLM privacy via Ollama or LM Studio, or a simple side-by-side view. This page compares all five major options in 2026 — PromptQuorum, Poe, LM Arena, OpenMark, and AiZolo — with a feature table, per-tool breakdowns, and a decision guide.',
     disclaimerLabel: 'Accuracy notice:',
-    disclaimer: ' Feature and pricing information was verified in March 2026 and is provided in good faith based on each product\'s public documentation at that time. Products change frequently — verify current capabilities directly with each vendor before making a decision. If you believe any information on this page is inaccurate or outdated, please ',
+    disclaimer: ' Feature and pricing information was verified in March 2026 and is provided in good faith based on each product\'s public documentation: ',
     disclaimerContact: 'contact us',
     disclaimerContactSuffix: ' and we will correct it promptly. This comparison is produced by PromptQuorum and reflects our perspective as a participant in this market.',
+
+    atAGlanceH2: 'At a Glance',
+    atAGlanceItems: [
+      'PromptQuorum: Best for consensus scoring + local LLM privacy via Ollama/LM Studio',
+      'Poe: Best for simplicity + breadth (GPT-4o, Claude, Gemini, thousands of bots)',
+      'LM Arena: Best for academic benchmarking + community-driven model rankings',
+      'OpenMark: Best for API cost/quality analysis across 100+ models',
+      'AiZolo: Best for affordable multi-model content workflows ($9.90/mo)'
+    ],
+    seeAlsoH2: 'See Also',
+    seeAlsoLinks: [
+      { label: 'How PromptQuorum Works', url: '/how-it-works' },
+      { label: 'Prompt Engineering Best Practices', url: '/prompt-engineering' },
+      { label: 'Local LLMs vs Cloud APIs', url: '/local-llms/local-llms-vs-cloud-apis' },
+      { label: 'Features & Capabilities', url: '/features' }
+    ],
+    sourcesH2: 'Sources',
+    sourcesList: [
+      'PromptQuorum: promptquorum.com',
+      'Poe: poe.com',
+      'LM Arena: lmarena.ai',
+      'OpenMark: openmark.ai',
+      'AiZolo: aizolo.com'
+    ],
+
 
     jumpLinks: [
       ['#comparison-table', 'Comparison table'],
@@ -118,7 +150,7 @@ const content: Record<Lang, CompareText> = {
     introPara1: 'No single AI model is authoritative for all tasks in 2026. GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro each have different training data, architectural biases, and reasoning strengths. A response that looks correct from one model may be contradicted, qualified, or significantly expanded by another.',
     introPara2: 'The five tools compared here represent the major approaches currently available: consumer platforms (Poe by Quora), community benchmarks (LM Arena), developer evaluation suites (OpenMark), unified multi-model workspaces (AiZolo), and consensus scoring platforms (PromptQuorum). Each serves a different workflow.',
 
-    tableH2: 'Feature comparison: 5 multi-LLM tools (2026)',
+    tableH2: 'What are the key differences between 5 multi-LLM tools?',
     tablePara: 'The table below compares all five tools across the features that matter most for professional multi-LLM workflows — simultaneous dispatch, consensus scoring, local LLM support, API key control, and pricing.',
     tableToolCol: 'Tool',
     tableDispatchCol: 'Simultaneous dispatch',
@@ -128,7 +160,7 @@ const content: Record<Lang, CompareText> = {
     tablePriceCol: 'Pricing',
     tableFootnote: '✓ Yes · ~ Partial · ✗ No · Based on public documentation, March 2026. Pricing and features change — verify with each vendor. This comparison is produced by PromptQuorum.',
 
-    pqH2: 'PromptQuorum — consensus scoring + local LLM privacy',
+    pqH2: 'What makes PromptQuorum different from competitors?',
     pqBestFor: 'Best for: developers & power users',
     pqTags: ['Beta · April 2026', 'promptquorum.com', 'API keys required', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum is the only tool among those reviewed that combines simultaneous prompt dispatch with automated consensus scoring.** You write one prompt, select your models — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, and locally-running models — and PromptQuorum dispatches to all of them in parallel. The Quorum Verdict then analyses where the models agree, where they diverge, and what those patterns mean for the reliability of the answer.',
@@ -219,6 +251,31 @@ const content: Record<Lang, CompareText> = {
     disclaimerContact: 'kontaktiere uns',
     disclaimerContactSuffix: ' und wir korrigieren dies umgehend. Dieser Vergleich wird von PromptQuorum erstellt und spiegelt unsere Perspektive als Marktteilnehmer wider.',
 
+    atAGlanceH2: 'Im Überblick',
+    atAGlanceItems: [
+      'PromptQuorum: Best for Konsens-Scoring + lokale LLM-Privatsphäre via Ollama/LM Studio',
+      'Poe: Best for Einfachheit + Breite (GPT-4o, Claude, Gemini, tausende Bots)',
+      'LM Arena: Best for akademisches Benchmarking + gemeinschaftsgesteuerte Modellrankings',
+      'OpenMark: Best for API-Kosten-/Qualitätsanalyse über 100+ Modelle',
+      'AiZolo: Best for günstige Multi-Modell-Content-Workflows ($9.90/Monat)'
+    ],
+    seeAlsoH2: 'Siehe auch',
+    seeAlsoLinks: [
+      { label: 'Wie PromptQuorum funktioniert', url: '/how-it-works' },
+      { label: 'Best Practices für Prompt Engineering', url: '/prompt-engineering' },
+      { label: 'Lokale LLMs vs. Cloud-APIs', url: '/local-llms/local-llms-vs-cloud-apis' },
+      { label: 'Features & Funktionen', url: '/features' }
+    ],
+    sourcesH2: 'Quellen',
+    sourcesList: [
+      'PromptQuorum: promptquorum.com',
+      'Poe: poe.com',
+      'LM Arena: lmarena.ai',
+      'OpenMark: openmark.ai',
+      'AiZolo: aizolo.com'
+    ],
+
+
     jumpLinks: [
       ['#comparison-table', 'Vergleichstabelle'],
       ['#promptquorum', 'PromptQuorum'],
@@ -234,7 +291,7 @@ const content: Record<Lang, CompareText> = {
     introPara1: 'Im Jahr 2026 ist kein einzelnes KI-Modell für alle Aufgaben maßgeblich. GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro haben jeweils unterschiedliche Trainingsdaten, architektonische Schwerpunkte und Reasoning-Stärken. Eine Antwort, die von einem Modell korrekt erscheint, kann von einem anderen widerlegt, eingeschränkt oder erheblich erweitert werden.',
     introPara2: 'Die fünf hier verglichenen Tools repräsentieren die wichtigsten verfügbaren Ansätze: Consumer-Plattformen (Poe von Quora), Community-Benchmarks (LM Arena), Entwickler-Evaluierungs-Suites (OpenMark), einheitliche Multi-Modell-Arbeitsbereiche (AiZolo) und Konsens-Scoring-Plattformen (PromptQuorum). Jedes dient einem anderen Anwendungsfall.',
 
-    tableH2: 'Funktionsvergleich: 5 Multi-LLM-Tools (2026)',
+    tableH2: 'Welche sind die wichtigsten Unterschiede zwischen 5 Multi-LLM-Tools?',
     tablePara: 'Die folgende Tabelle vergleicht alle fünf Tools über die wichtigsten Funktionen für professionelle Multi-LLM-Workflows — simultanes Dispatching, Konsens-Scoring, lokale LLM-Unterstützung, API-Key-Kontrolle und Preisgestaltung.',
     tableToolCol: 'Tool',
     tableDispatchCol: 'Simultanes Dispatching',
@@ -244,7 +301,7 @@ const content: Record<Lang, CompareText> = {
     tablePriceCol: 'Preis',
     tableFootnote: '✓ Ja · ~ Teilweise · ✗ Nein · Basierend auf öffentlicher Dokumentation, März 2026. Preise und Funktionen ändern sich — beim jeweiligen Anbieter verifizieren. Dieser Vergleich wird von PromptQuorum erstellt.',
 
-    pqH2: 'PromptQuorum — Konsens-Scoring + lokale LLM-Privatsphäre',
+    pqH2: 'Was unterscheidet PromptQuorum von Konkurrenten?',
     pqBestFor: 'Beste Wahl für: Entwickler & Power-User',
     pqTags: ['Beta · April 2026', 'promptquorum.com', 'API-Keys erforderlich', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum ist das einzige Tool unter den hier geprüften, das simultanes Prompt-Dispatching mit automatischem Konsens-Scoring kombiniert.** Du schreibst einen Prompt, wählst deine Modelle — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large und lokal laufende Modelle — und PromptQuorum dispatcht an alle parallel. Das Quorum Verdict analysiert dann, wo die Modelle übereinstimmen, wo sie divergieren und was diese Muster für die Verlässlichkeit der Antwort bedeuten.',
@@ -335,6 +392,31 @@ const content: Record<Lang, CompareText> = {
     disclaimerContact: 'contactez-nous',
     disclaimerContactSuffix: ' et nous les corrigerons rapidement. Cette comparaison est produite par PromptQuorum et reflète notre perspective en tant que participant à ce marché.',
 
+    atAGlanceH2: 'Aperçu',
+    atAGlanceItems: [
+      'PromptQuorum: Meilleur pour le scoring de consensus + confidentialité LLM local via Ollama/LM Studio',
+      'Poe: Meilleur pour la simplicité + la largeur (GPT-4o, Claude, Gemini, des milliers de bots)',
+      'LM Arena: Meilleur pour les benchmarks académiques + classements de modèles pilotés par la communauté',
+      'OpenMark: Meilleur pour l\'analyse des coûts/qualité API sur 100+ modèles',
+      'AiZolo: Meilleur pour les workflows multi-modèles abordables ($9.90/mois)'
+    ],
+    seeAlsoH2: 'Voir aussi',
+    seeAlsoLinks: [
+      { label: 'Comment fonctionne PromptQuorum', url: '/how-it-works' },
+      { label: 'Meilleures pratiques d\'ingénierie des invites', url: '/prompt-engineering' },
+      { label: 'LLMs locaux vs APIs cloud', url: '/local-llms/local-llms-vs-cloud-apis' },
+      { label: 'Fonctionnalités et capacités', url: '/features' }
+    ],
+    sourcesH2: 'Sources',
+    sourcesList: [
+      'PromptQuorum: promptquorum.com',
+      'Poe: poe.com',
+      'LM Arena: lmarena.ai',
+      'OpenMark: openmark.ai',
+      'AiZolo: aizolo.com'
+    ],
+
+
     jumpLinks: [
       ['#comparison-table', 'Tableau comparatif'],
       ['#promptquorum', 'PromptQuorum'],
@@ -350,7 +432,7 @@ const content: Record<Lang, CompareText> = {
     introPara1: 'En 2026, aucun modèle d\'IA n\'est autoritaire pour toutes les tâches. GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro ont chacun des données d\'entraînement, des biais architecturaux et des forces de raisonnement différents. Une réponse qui semble correcte d\'un modèle peut être contredite, nuancée ou considérablement enrichie par un autre.',
     introPara2: 'Les cinq outils comparés ici représentent les principales approches disponibles : plateformes grand public (Poe de Quora), benchmarks communautaires (LM Arena), suites d\'évaluation développeurs (OpenMark), espaces de travail multi-modèles unifiés (AiZolo) et plateformes de scoring de consensus (PromptQuorum). Chacun sert un flux de travail différent.',
 
-    tableH2: 'Comparaison des fonctionnalités : 5 outils multi-LLM (2026)',
+    tableH2: 'Quelles sont les principales différences entre 5 outils multi-LLM ?',
     tablePara: 'Le tableau ci-dessous compare les cinq outils sur les fonctionnalités les plus importantes pour les flux de travail multi-LLM professionnels — dispatch simultané, scoring de consensus, support LLM local, contrôle des clés API et tarification.',
     tableToolCol: 'Outil',
     tableDispatchCol: 'Dispatch simultané',
@@ -360,7 +442,7 @@ const content: Record<Lang, CompareText> = {
     tablePriceCol: 'Tarification',
     tableFootnote: '✓ Oui · ~ Partiel · ✗ Non · Basé sur la documentation publique, mars 2026. Les tarifs et fonctionnalités changent — vérifiez auprès de chaque fournisseur. Cette comparaison est produite par PromptQuorum.',
 
-    pqH2: 'PromptQuorum — scoring de consensus + confidentialité LLM locale',
+    pqH2: 'Qu\'est-ce qui différencie PromptQuorum de ses concurrents ?',
     pqBestFor: 'Idéal pour : développeurs et power users',
     pqTags: ['Bêta · avril 2026', 'promptquorum.com', 'Clés API requises', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorum est le seul outil parmi ceux examinés qui combine le dispatch simultané de prompts avec le scoring de consensus automatisé.** Vous rédigez un prompt, sélectionnez vos modèles — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large et des modèles locaux — et PromptQuorum dispatche vers tous en parallèle. Le Quorum Verdict analyse ensuite où les modèles s\'accordent, où ils divergent et ce que ces schémas signifient pour la fiabilité de la réponse.',
@@ -451,6 +533,31 @@ const content: Record<Lang, CompareText> = {
     disclaimerContact: 'お問い合わせ',
     disclaimerContactSuffix: 'ください。迅速に修正します。この比較はPromptQuorumが制作しており、市場参加者としての当社の視点を反映しています。',
 
+    atAGlanceH2: '概要',
+    atAGlanceItems: [
+      'PromptQuorum: コンセンサススコアリング + Ollama/LM Studio経由のローカルLLMプライバシーに最適',
+      'Poe: シンプルさ + 幅広さ（GPT-4o、Claude、Gemini、数千のボット）に最適',
+      'LM Arena: 学術的ベンチマーキング + コミュニティ駆動のモデルランキングに最適',
+      'OpenMark: 100+モデル間のAPI費用/品質分析に最適',
+      'AiZolo: 手頃な価格のマルチモデルコンテンツワークフロー（$9.90/月）に最適'
+    ],
+    seeAlsoH2: '関連リンク',
+    seeAlsoLinks: [
+      { label: 'PromptQuorumの仕組み', url: '/how-it-works' },
+      { label: 'プロンプトエンジニアリングのベストプラクティス', url: '/prompt-engineering' },
+      { label: 'ローカルLLM vs クラウドAPI', url: '/local-llms/local-llms-vs-cloud-apis' },
+      { label: '機能と能力', url: '/features' }
+    ],
+    sourcesH2: 'ソース',
+    sourcesList: [
+      'PromptQuorum: promptquorum.com',
+      'Poe: poe.com',
+      'LM Arena: lmarena.ai',
+      'OpenMark: openmark.ai',
+      'AiZolo: aizolo.com'
+    ],
+
+
     jumpLinks: [
       ['#comparison-table', '比較表'],
       ['#promptquorum', 'PromptQuorum'],
@@ -466,7 +573,7 @@ const content: Record<Lang, CompareText> = {
     introPara1: '2026年、すべてのタスクで権威あるAIモデルは存在しません。GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proはそれぞれ異なるトレーニングデータ、アーキテクチャの偏り、推論の強みを持っています。1つのモデルで正しく見える回答が、別のモデルでは否定、制限、または大幅に拡張される場合があります。',
     introPara2: 'ここで比較する5つのツールは、現在利用可能な主要なアプローチを代表しています：コンシューマープラットフォーム（QuoraのPoe）、コミュニティベンチマーク（LM Arena）、開発者評価スイート（OpenMark）、統合マルチモデルワークスペース（AiZolo）、コンセンサススコアリングプラットフォーム（PromptQuorum）。それぞれ異なるワークフローに対応しています。',
 
-    tableH2: '機能比較：5つのマルチLLMツール（2026年）',
+    tableH2: '5つのマルチLLMツールの主な違いは何ですか？',
     tablePara: '以下の表は、プロフェッショナルなマルチLLMワークフローに最も重要な機能 — 同時ディスパッチ、コンセンサススコアリング、ローカルLLMサポート、APIキー制御、価格設定 — で5つのツールを比較しています。',
     tableToolCol: 'ツール',
     tableDispatchCol: '同時ディスパッチ',
@@ -476,7 +583,7 @@ const content: Record<Lang, CompareText> = {
     tablePriceCol: '価格',
     tableFootnote: '✓ あり · ~ 部分的 · ✗ なし · 2026年3月の公開ドキュメントに基づく。価格と機能は変更される場合があります — 各ベンダーに確認してください。この比較はPromptQuorumが制作しています。',
 
-    pqH2: 'PromptQuorum — コンセンサススコアリング＋ローカルLLMプライバシー',
+    pqH2: 'PromptQuorumは競合他社と何が異なりますか？',
     pqBestFor: '最適：開発者＆パワーユーザー',
     pqTags: ['ベータ · 2026年4月', 'promptquorum.com', 'APIキー必須', 'Ollama + LM Studio'],
     pqPara1: '**PromptQuorumは、同時プロンプトディスパッチと自動コンセンサススコアリングを組み合わせた、レビューされたツールの中で唯一のツールです。** プロンプトを入力し、モデルを選択（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、Mistral Large、ローカル実行モデル）すると、PromptQuorumがすべてに並列ディスパッチします。その後、Quorum Verdictがモデルが同意する箇所、相違する箇所、およびそれらのパターンが回答の信頼性にとって何を意味するかを分析します。',
@@ -566,6 +673,31 @@ const content: Record<Lang, CompareText> = {
     disclaimer: ' 功能和定价信息已于2026年3月根据各产品的公开文档进行了核实，并以诚信提供。产品经常变化——在做决定前，请直接向每个供应商核实当前功能。如果您认为本页面上的任何信息不准确或过时，请',
     disclaimerContact: '联系我们',
     disclaimerContactSuffix: '，我们将立即更正。本比较由PromptQuorum制作，反映了我们作为该市场参与者的视角。',
+
+    atAGlanceH2: '一览',
+    atAGlanceItems: [
+      'PromptQuorum: 最适合共识评分 + Ollama/LM Studio本地LLM隐私保护',
+      'Poe: 最适合简洁性 + 广泛性（GPT-4o、Claude、Gemini、数千个机器人）',
+      'LM Arena: 最适合学术基准测试 + 社区驱动的模型排名',
+      'OpenMark: 最适合100+模型的API成本/质量分析',
+      'AiZolo: 最适合价格合理的多模型内容工作流（$9.90/月）'
+    ],
+    seeAlsoH2: '另见',
+    seeAlsoLinks: [
+      { label: 'PromptQuorum如何工作', url: '/how-it-works' },
+      { label: '提示工程最佳实践', url: '/prompt-engineering' },
+      { label: '本地LLM与云API对比', url: '/local-llms/local-llms-vs-cloud-apis' },
+      { label: '功能与能力', url: '/features' }
+    ],
+    sourcesH2: '来源',
+    sourcesList: [
+      'PromptQuorum: promptquorum.com',
+      'Poe: poe.com',
+      'LM Arena: lmarena.ai',
+      'OpenMark: openmark.ai',
+      'AiZolo: aizolo.com'
+    ],
+
 
     jumpLinks: [
       ['#comparison-table', '比较表'],
