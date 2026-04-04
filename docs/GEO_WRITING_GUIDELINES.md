@@ -1709,6 +1709,29 @@ By [Name] · [Credential signal] · PromptQuorum
 - Author name must link to author bio page
 - `sameAs` with minimum 2 social URLs is required in schema
 
+### Rule 30.1: Top Byline Credential Signal (Below H1)
+
+**In addition to the bottom author bio block, every article must display a credential signal in a top byline placed below the H1, inside or immediately after the intro paragraph.**
+
+This top byline targets AI crawler E-E-A-T signals (Expertise, Authoritativeness, Trustworthiness). The bottom bio block targets human readers.
+
+**Required format:**
+```
+By [Author Name](/about) · [Credential signal] · PromptQuorum
+```
+
+**Valid credential signals (use the most specific truthful claim):**
+- "Tested 1,200+ prompts across 25 models"
+- "Founder of PromptQuorum, multi-model AI dispatch tool"
+- "Prompt engineering researcher, Frankfurt"
+
+**Rules:**
+- Author name MUST link to `/about` page
+- Never invent credentials — use only verifiable claims
+- This top byline is **separate and required in addition to** the bottom HTML bio block (Rule 30)
+- Render at SSR (server-side) — visible in page source without JavaScript
+- Placement: immediately after intro paragraph, before Key Takeaways box
+
 ---
 
 ## Rule 31: Lead Answer Block — Canonical Definition
@@ -2085,6 +2108,8 @@ done
 ### CONTENT STRUCTURE (visible in rendered HTML)
 
 - [ ] Lead Answer Block in first paragraph — bold, 30–50 words, direct answer to the page title question (see Rule 31)
+- [ ] Top byline with credential signal: "By [Author](/about) · [credential] · PromptQuorum" placed after Lead Answer Block, before Key Takeaways (see Rule 30.1)
+- [ ] Top byline author name links to `/about` page
 - [ ] Key Takeaways block (class="key-takeaways") with 5-7 bullets placed AFTER the intro paragraph, BEFORE the first H2
 - [ ] Jump navigation if page has 4+ sections
 - [ ] Every H2 section opens with a bolded one-sentence direct answer
@@ -2141,18 +2166,19 @@ done
 
 1. **H1 title**
 2. **Lead Answer Block** (25–50 words, bold, answers H1 directly — see Rule 31)
-3. **Key Takeaways block** (5–7 bullets — BEFORE the first H2, always)
-4. **Quick Facts block** (if article has 4+ numerical facts — see Rule 27)
-5. **Audience & Level signal** (Level: / Audience: — see Rule 29)
-6. **First H2: "What Is [Topic]?"** (bold one-sentence definition)
-7. **Core content sections** (each H2 opens with bold answer)
-8. **Comparison table** (if applicable, with anchor id — see Rule 26.10)
-9. **Global/Regional context section**
-10. **Common Mistakes section** (Frameworks/Techniques/Security articles — see Rule 25)
-11. **Related Reading** (min 4 links, full H1 titles as anchor text — see Rule 9)
-12. **FAQ section** (min 6, max 8 entries, SSR rendered — see Rule 19)
-13. **Sources & Further Reading** (min 3 external citations)
-14. **Author bio block** (with credential signal — see Rule 30)
+3. **Top byline with credential signal** (By [Author](/about) · [credential] · PromptQuorum — see Rule 30.1)
+4. **Key Takeaways block** (5–7 bullets — BEFORE the first H2, always)
+5. **Quick Facts block** (if article has 4+ numerical facts — see Rule 27)
+6. **Audience & Level signal** (Level: / Audience: — see Rule 29)
+7. **First H2: "What Is [Topic]?"** (bold one-sentence definition)
+8. **Core content sections** (each H2 opens with bold answer)
+9. **Comparison table** (if applicable, with anchor id — see Rule 26.10)
+10. **Global/Regional context section**
+11. **Common Mistakes section** (Frameworks/Techniques/Security articles — see Rule 25)
+12. **Related Reading** (min 4 links, full H1 titles as anchor text — see Rule 9)
+13. **FAQ section** (min 6, max 8 entries, SSR rendered — see Rule 19)
+14. **Sources & Further Reading** (min 3 external citations)
+15. **Author bio block** (with credential signal — see Rule 30)
 
 ### AEO Answer Patterns (citation-triggering)
 
