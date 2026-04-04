@@ -7889,6 +7889,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — Business case for on-prem AI.',
             '[Enterprise Compliance Local LLMs](/local-llms/enterprise-compliance-local-llms) — Regulatory requirements.',
             '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) — Production deployment beyond single machine.',
+            '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) — 12-step security verification.',
           ],
         },
         sources: {
@@ -8012,12 +8013,42 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Ignoring audit trails.** Logs must be kept, protected, and reviewed. Without logs, you cannot prove compliance.',
           ],
         },
+        faqSection: {
+          title: 'What Are Common Questions About Enterprise Compliance?',
+          faqs: [
+            {
+              q: 'Does local LLM deployment guarantee GDPR compliance?',
+              a: 'No — local deployment is necessary but not sufficient. You still need proper access controls, encryption, data retention policies, and incident response procedures. Local LLMs remove the cloud vendor risk factor but do not eliminate compliance responsibility.',
+            },
+            {
+              q: 'How long does SOC2 Type II certification take?',
+              a: 'Typically 6–12 months. You must demonstrate 6+ months of continuous compliance with security controls (encryption, access logs, incident response). Local LLM deployment can accelerate this by providing full control over all required controls.',
+            },
+            {
+              q: 'What happens if we are breached while using local LLMs?',
+              a: 'You must notify affected individuals and regulators within 72 hours (GDPR). Having audit trails, incident response procedures, and encryption in place reduces fines and demonstrates due diligence. Local LLMs help because all logs stay on-premises.',
+            },
+            {
+              q: 'Can we fine-tune a local LLM with proprietary data?',
+              a: 'Yes — fine-tuning on-premises keeps data fully under your control. No data leaves your infrastructure. This satisfies GDPR, HIPAA, and SOC2 because you maintain complete ownership and audit trails.',
+            },
+            {
+              q: 'Which regulation is hardest to satisfy?',
+              a: 'HIPAA is strictest: requires encryption, audit logs, access controls, and immediate breach notification. SOC2 is most procedural (requires documentation). GDPR is broadest (covers data processing globally). Local LLMs help with all three.',
+            },
+            {
+              q: 'Do we need separate insurance for local AI deployment?',
+              a: 'Check with your cyber insurance provider. Some policies distinguish on-premises vs. cloud. Local LLMs may actually reduce premiums because they eliminate third-party vendor risk.',
+            },
+          ],
+        },
         relatedReading: {
           title: 'Related Reading',
           items: [
             '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — Business case.',
             '[On-Prem Air-Gapped Local LLM](/local-llms/on-prem-air-gapped-local-llm) — Maximum security for classified data.',
             '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) — Production deployment with compliance controls.',
+            '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) — Compliance verification steps.',
           ],
         },
         sources: {
@@ -8139,12 +8170,42 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Assuming open-source tools scale to enterprise.** Ollama works great for 1 user. For 500 concurrent users, need enterprise monitoring and orchestration.',
           ],
         },
+        faqSection: {
+          title: 'What Are Common Questions About Scaling Local LLMs?',
+          faqs: [
+            {
+              q: 'How many GPUs do we need for enterprise deployment?',
+              a: 'Depends on concurrency and latency requirements. 100 concurrent users on 7B model: ~5–8 GPUs. 500 concurrent users: 20–30 GPUs. Formula: (concurrent users × expected latency) / (tokens/sec per GPU).',
+            },
+            {
+              q: 'What is the difference between load balancing and auto-scaling?',
+              a: '**Load balancing** distributes requests across existing pods. **Auto-scaling** adds/removes pods based on load. Both are needed: load balancing spreads work now, auto-scaling adjusts capacity.',
+            },
+            {
+              q: 'How do we handle GPU failures?',
+              a: 'Kubernetes automatically reschedules pods to healthy GPUs. If one GPU dies, Kubernetes marks it as unavailable and routes traffic to others. Have redundancy: if you need 8 GPUs, provision 10.',
+            },
+            {
+              q: 'What latency SLA should we target?',
+              a: 'p99 latency <2 seconds is standard for chatbots. p99 <500ms for real-time autocomplete. Define SLA based on user experience, then choose hardware/batch size to meet it.',
+            },
+            {
+              q: 'How do we monitor a distributed inference cluster?',
+              a: 'Monitor per-pod and cluster-wide: GPU utilization, queue depth, latency (p50/p95/p99), error rate, throughput, and uptime. Use Prometheus + Grafana or equivalent.',
+            },
+            {
+              q: 'Is on-premises scaling cheaper than cloud?',
+              a: 'Yes, at scale. Break-even is ~500k tokens/month. On-premises: high upfront cost ($500k–2M hardware), then low per-request cost. Cloud: no upfront cost, high per-request cost ($0.15–60/1M tokens).',
+            },
+          ],
+        },
         relatedReading: {
           title: 'Related Reading',
           items: [
             '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — Single-machine multi-GPU setup.',
             '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) — Hardware and infrastructure costs.',
             '[Corporate RAG Local LLMs](/local-llms/corporate-rag-local-llms) — Document Q&A at scale.',
+            '[Enterprise Compliance Local LLMs](/local-llms/enterprise-compliance-local-llms) — Compliance controls in scaled deployment.',
           ],
         },
         sources: {
@@ -8267,12 +8328,42 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Not re-ingesting updates.** Document database becomes stale. Schedule weekly/monthly re-ingest.',
           ],
         },
+        faqSection: {
+          title: 'What Are Common Questions About Corporate RAG?',
+          faqs: [
+            {
+              q: 'How many documents can corporate RAG handle?',
+              a: 'Depends on average document size and latency. Typical range: 10k–100k documents. Retrieval latency should be <1 second. If slower, optimize chunking or embeddings. Test with your actual document set.',
+            },
+            {
+              q: 'Which embedding model should we use?',
+              a: 'Open-source options: all-MiniLM-L6-v2 (fast, good), BAAI/bge-base-en-v1.5 (better quality). Proprietary: OpenAI text-embedding-3-small. For local deployment, use open-source. Quality difference matters: better embeddings = better retrieval.',
+            },
+            {
+              q: 'How do we update documents without losing chat history?',
+              a: 'Store chat history separately from document embeddings. Update embeddings on a schedule (weekly/monthly). Old chats still reference old document versions, which is fine—just document the version date.',
+            },
+            {
+              q: 'Can we use RAG for confidential documents?',
+              a: 'Yes—local RAG is ideal. Documents stay on-premises, queries are not logged externally, and you control access via role-based permissions. This satisfies HIPAA and GDPR.',
+            },
+            {
+              q: 'What is semantic vs fixed-size chunking?',
+              a: 'Fixed-size (e.g., 512 tokens) is simpler but splits topics mid-sentence. Semantic chunking uses sentence/paragraph boundaries, preserving meaning. Semantic is better for RAG quality but slower to set up.',
+            },
+            {
+              q: 'How do we measure RAG quality?',
+              a: 'Metrics: retrieval@k (right document in top k results), latency (should be <1 sec), user satisfaction (survey employees). Test with domain experts—they know what "correct" answers look like.',
+            },
+          ],
+        },
         relatedReading: {
           title: 'Related Reading',
           items: [
             '[Local RAG 2026](/local-llms/local-rag-2026) — Complete RAG implementation guide.',
             '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) — Multi-user infrastructure.',
             '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — Business case.',
+            '[Enterprise Compliance Local LLMs](/local-llms/enterprise-compliance-local-llms) — Compliance for document handling.',
           ],
         },
         sources: {
