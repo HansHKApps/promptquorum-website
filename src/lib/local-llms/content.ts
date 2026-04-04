@@ -1770,6 +1770,119 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'best-local-llms-for-creative-writing': {
+    en: {
+      theme: 'Best Models',
+      title: 'Best Local LLMs for Creative Writing in 2026: Fiction, Poetry, and Long-Form Content',
+      seoTitle: 'Best Local LLMs for Creative Writing',
+      intro: 'The best local LLMs for creative writing in 2026 are Meta Llama 3.3 70B (best prose quality), Mistral Small 3.1 24B (best quality under 16 GB RAM), and community fine-tunes like Fimbulvetr and Midnight-Rose (specialized for fiction and roleplay). Creative writing performance is not well captured by standard benchmarks — it requires evaluating narrative coherence, stylistic range, and instruction-following on open-ended prompts.',
+      metaDescription: 'Best local LLMs for creative writing in 2026: fiction, poetry, long-form content. Ranked by prose quality, instruction-following, and RAM requirements.',
+      publishDate: '2026-04-04',
+      readTime: '8 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM creative writing',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'How to Evaluate Creative Writing Quality', anchor: '#how-to-evaluate' },
+        { label: '#1 Llama 3.3 70B — Best Prose Quality', anchor: '#llama-3-3-70b' },
+        { label: '#2 Mistral Small 3.1 24B', anchor: '#mistral-small' },
+        { label: '#3 Llama 3.1 8B — Best 8 GB Option', anchor: '#llama-3-1-8b' },
+        { label: '#4 Fine-Tuned Models for Fiction', anchor: '#fine-tuned-models' },
+        { label: 'Prompting Tips for Creative Writing', anchor: '#prompting-tips' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Standard benchmarks (MMLU, HumanEval) do not measure creative writing quality — evaluate models with your own sample prompts.',
+            '**Best overall prose**: Llama 3.3 70B — most natural English narrative style at the locally-runnable scale.',
+            '**Best for 16 GB RAM**: Mistral Small 3.1 24B — strong creative output, noticeably better than 7B models for long-form narrative.',
+            '**Best for 8 GB RAM**: Llama 3.1 8B — better creative instruction-following than Qwen2.5 7B for English fiction tasks.',
+            'Community fine-tunes (Fimbulvetr-11B, Midnight-Rose-70B) trained specifically on creative fiction outperform base Llama on sustained narrative tasks.',
+          ],
+        },
+        howToEvaluate: {
+          title: 'How to Evaluate Local LLM Quality for Creative Writing',
+          content: [
+            'Objective benchmarks measure knowledge and reasoning, not creative quality. To evaluate a model for creative writing, test it directly with the types of prompts you plan to use:',
+          ],
+          items: [
+            '**Prose continuity test**: give the model the first two paragraphs of a scene and ask it to continue for 500 words. Does it maintain consistent tone, character voice, and narrative logic?',
+            '**Style instruction test**: ask the model to write a paragraph "in the style of Raymond Carver" or "with the pacing of a thriller novel." Does it demonstrably shift style, or produce generic output?',
+            '**Long-form coherence test**: ask for a 1,000-word short story with a specific twist ending. Does the model plant the setup naturally and deliver the payoff?',
+            '**Dialogue test**: write a scene with two characters with different speech patterns. Does each character sound distinct, or does the dialogue feel uniform?',
+          ],
+        },
+        llama33: {
+          title: '#1 Meta Llama 3.3 70B — Best Prose Quality Locally',
+          content: [
+            'Llama 3.3 70B produces the most natural, varied English prose of any locally-runnable model. Its training on a diverse English text corpus gives it the widest stylistic range — from minimalist literary fiction to genre thriller pacing. Long-form coherence (1,000–3,000 words) is noticeably better than any 7B or 13B model.',
+            'The constraint is hardware: 40 GB RAM at Q4_K_M. For creative writing sessions (rather than batch generation), the slower generation speed (8–15 tok/sec on CPU) is tolerable. On Apple M2 Ultra or M3 Max with 64+ GB unified memory, generation reaches 20–35 tok/sec.',
+          ],
+          rows: [
+            { 'Spec': 'Best for', 'Value': 'Long-form fiction, rich prose' },
+            { 'Spec': 'RAM required (Q4_K_M)', 'Value': '~40 GB' },
+            { 'Spec': 'Prose style range', 'Value': 'Widest of any local model' },
+            { 'Spec': 'Long-form coherence', 'Value': 'Strong (1K–3K word scenes)' },
+            { 'Spec': 'Ollama command', 'Value': 'ollama run llama3.3:70b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        mistralSmall: {
+          title: '#2 Mistral Small 3.1 24B — Best Creative Writing for 16 GB RAM',
+          content: [
+            'Mistral Small 3.1 24B delivers creative writing quality noticeably above any 7B model while fitting in 14 GB RAM. Its instruction-following is precise enough to handle detailed style specifications ("write in second person, present tense, with short punchy sentences") without drifting after a few paragraphs.',
+            'For users who want genuine long-form narrative capability without a workstation-class machine, Mistral Small 3.1 is the practical choice.',
+          ],
+        },
+        llama318: {
+          title: '#3 Llama 3.1 8B — Best Creative Writing for 8 GB RAM',
+          content: [
+            'At the 8 GB RAM tier, Llama 3.1 8B outperforms Qwen2.5 7B and Mistral 7B for English creative writing. Qwen2.5 is stronger at coding and structured tasks, but its English prose generation is less fluid for narrative purposes.',
+            'Llama 3.1 8B handles short fiction (up to 500 words) reliably. For stories over 1,000 words, quality consistency degrades — the model tends to drift from established narrative details. This is a fundamental limitation of 8B-scale models for long-form creative work.',
+          ],
+        },
+        fineTuned: {
+          title: '#4 Community Fine-Tunes for Fiction and Roleplay',
+          content: [
+            'The local LLM community maintains specialized fine-tunes trained on fiction corpora, which outperform base models on sustained narrative tasks. These are available on Hugging Face and can be loaded in LM Studio or Ollama (via custom Modelfiles):',
+          ],
+          items: [
+            '**Fimbulvetr-11B** — fine-tuned on high-quality fantasy and science fiction prose. Produces more vivid sensory detail and consistent character voice than base Llama 3.1 8B.',
+            '**Midnight-Rose-70B** — a Llama 3.3 70B fine-tune focused on creative writing and roleplay scenarios. Better long-form narrative coherence than the base model.',
+            '**Noromaid / Openhermes variants** — community fine-tunes focused on conversational roleplay. Lower prose quality than Fimbulvetr but more responsive to character direction.',
+            'Download these from Hugging Face (search "creative writing GGUF") and load in LM Studio\'s model browser or via `ollama create` with a custom Modelfile.',
+          ],
+        },
+        promptingTips: {
+          title: 'Prompting Tips That Improve Local LLM Creative Writing',
+          items: [
+            '**Specify style concretely**: "Write in the style of Cormac McCarthy — sparse dialogue, long descriptive sentences, no quotation marks" outperforms "write literary fiction."',
+            '**Give the model a role**: "You are a professional novelist. Continue this scene without summarizing, only showing." Instruction-following improves when the model has a defined identity.',
+            '**Set temperature to 0.9–1.1**: creative tasks benefit from higher temperature (more randomness). Default Ollama temperature is 0.8; LM Studio default is 0.7. Increase via the parameters slider.',
+            '**Use a system prompt**: set a persistent style instruction at the session level. "You are writing a gothic horror novel. Maintain dark, atmospheric prose throughout all responses."',
+            '**Break long tasks into sections**: for a 3,000-word chapter, generate it in 500-word sections. This keeps the model within its reliable coherence range.',
+            '**Compare local vs cloud outputs**: use [PromptQuorum](/) to send the same creative prompt to your local Ollama model and cloud models simultaneously — useful for calibrating when local quality is sufficient.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Local LLMs for Creative Writing',
+          faqs: [
+            {
+              q: 'Can a local LLM replace a writing assistant like Claude or GPT-4o for fiction?',
+              a: 'For short-form content (under 500 words), a well-prompted 13B+ local model produces output that is difficult to distinguish from cloud models in blind tests. For long-form fiction (novels, full short stories), Claude 4.6 Sonnet and GPT-4o maintain narrative coherence more reliably at any hardware tier. A 70B local model narrows this gap significantly.',
+            },
+            {
+              q: 'Does the model remember earlier parts of my story?',
+              a: 'Only within the current context window. If your conversation history exceeds the model\'s context limit (typically 4K–128K tokens), earlier details are forgotten. For long projects, periodically provide a story summary at the start of each session to re-establish context.',
+            },
+          ],
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
