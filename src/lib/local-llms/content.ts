@@ -171,6 +171,155 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'how-to-install-ollama': {
+    en: {
+      theme: 'Getting Started',
+      title: 'How to Install Ollama: Complete Setup Guide for macOS, Windows, and Linux',
+      seoTitle: 'How to Install Ollama',
+      intro: 'Ollama installs in under 2 minutes on macOS, Windows, and Linux. After installation, one command downloads and runs any model from the Ollama library — no Python environment, no configuration files, and no GPU required to get started.',
+      metaDescription: 'How to install Ollama on macOS, Windows, and Linux. Step-by-step guide with exact commands, first model walkthrough, and troubleshooting for common errors.',
+      publishDate: '2026-04-04',
+      readTime: '8 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Ollama',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Install on macOS', anchor: '#install-on-macos' },
+        { label: 'Install on Windows', anchor: '#install-on-windows' },
+        { label: 'Install on Linux', anchor: '#install-on-linux' },
+        { label: 'Pull and Run Your First Model', anchor: '#pull-and-run-your-first-model' },
+        { label: 'Verify Ollama Is Working', anchor: '#verify-ollama-is-working' },
+        { label: 'Useful Ollama Commands', anchor: '#useful-ollama-commands' },
+        { label: 'Troubleshooting', anchor: '#troubleshooting' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'macOS: download the .dmg from ollama.com or run `brew install ollama` — then `ollama run llama3.2` to start chatting.',
+            'Windows: download the installer from ollama.com/download. Ollama runs as a background service in the system tray.',
+            'Linux: one curl command installs everything — `curl -fsSL https://ollama.com/install.sh | sh`.',
+            'Minimum requirements: 4 GB RAM for a 3B model, 8 GB RAM for a 7B model. No GPU needed to start.',
+            'Ollama exposes an OpenAI-compatible REST API at `http://localhost:11434` — any OpenAI SDK app can use it without code changes.',
+          ],
+        },
+        whatIsOllama: {
+          title: 'What Is Ollama and Why Use It?',
+          content: [
+            'Ollama is an open-source inference engine that runs large language models locally. It packages model management, the llama.cpp inference backend, and an OpenAI-compatible REST API into a single lightweight application. No Python, no conda environment, and no CUDA setup is required.',
+            'Ollama maintains a curated model library (ollama.com/library) with one-command downloads for Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5, and 100+ other models. A model is downloaded once and cached on disk — subsequent runs start in under 5 seconds.',
+            'For alternatives to Ollama, see [Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers). To compare Ollama with LM Studio, see [How to Install LM Studio](/local-llms/how-to-install-lm-studio).',
+          ],
+        },
+        installMac: {
+          title: 'How to Install Ollama on macOS',
+          content: 'There are two methods. The installer download is faster; Homebrew is better if you manage software with brew.',
+          numberedItems: [
+            'Go to ollama.com/download and click "Download for macOS".',
+            'Open the downloaded Ollama.dmg file and drag Ollama to your Applications folder.',
+            'Launch Ollama from Applications. A llama icon appears in your menu bar — Ollama is now running as a background service.',
+            'Open Terminal and run your first model: `ollama run llama3.2`',
+            'The model downloads (~2 GB for llama3.2:3b) and a chat prompt appears. Type a message and press Enter.',
+          ],
+        },
+        installMacBrew: {
+          title: 'Install Ollama on macOS with Homebrew',
+          codeBlock: 'brew install ollama\n\n# Start the Ollama service\nollama serve &\n\n# Pull and run a model\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        installWindows: {
+          title: 'How to Install Ollama on Windows',
+          numberedItems: [
+            'Go to ollama.com/download and click "Download for Windows".',
+            'Run the downloaded OllamaSetup.exe installer. Ollama installs to %LOCALAPPDATA%\\Programs\\Ollama.',
+            'Ollama starts automatically and appears as a system tray icon.',
+            'Open PowerShell or Command Prompt and run: `ollama run llama3.2`',
+            'The model downloads on first run. Subsequent runs use the cached model.',
+          ],
+        },
+        installWindowsNote: {
+          title: 'GPU Support on Windows',
+          content: 'Ollama on Windows automatically detects and uses NVIDIA GPUs (CUDA 11.3+) and AMD GPUs (ROCm 6+). If you have an NVIDIA RTX card, Ollama will offload model layers to VRAM automatically — no manual configuration needed. To verify GPU is being used, run `ollama run llama3.2` and check Task Manager → GPU for activity.',
+        },
+        installLinux: {
+          title: 'How to Install Ollama on Linux',
+          content: 'A single command installs Ollama on any Linux distribution:',
+          codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+          codeLanguage: 'bash',
+        },
+        installLinuxService: {
+          title: 'Run Ollama as a systemd Service on Linux',
+          content: 'The install script automatically registers Ollama as a systemd service. To manage it:',
+          codeBlock: '# Check service status\nsystemctl status ollama\n\n# Start / stop / restart\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# View logs\njournalctl -u ollama -f',
+          codeLanguage: 'bash',
+        },
+        firstModel: {
+          title: 'How to Pull and Run Your First Model in Ollama',
+          content: 'After installing Ollama, run this command to download and start a model:',
+          codeBlock: '# Pull a model (downloads to ~/.ollama/models)\nollama pull llama3.2\n\n# Run it interactively\nollama run llama3.2\n\n# Or pull and run in one step\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        recommendedModels: {
+          title: 'Which Model Should You Start With?',
+          content: 'For a first run, these three models cover different hardware profiles:',
+          rows: [
+            { 'Model': 'llama3.2:3b', 'Download Size': '~2 GB', 'RAM Required': '4 GB', 'Best For': 'First test — any machine' },
+            { 'Model': 'llama3.1:8b', 'Download Size': '~4.7 GB', 'RAM Required': '8 GB', 'Best For': 'General use on most laptops' },
+            { 'Model': 'phi3:mini', 'Download Size': '~2.3 GB', 'RAM Required': '4 GB', 'Best For': 'Fast responses, low RAM' },
+          ],
+          columns: ['Model', 'Download Size', 'RAM Required', 'Best For'],
+        },
+        verify: {
+          title: 'How to Verify Ollama Is Working',
+          content: 'Test the REST API directly to confirm Ollama is running and accessible:',
+          codeBlock: '# Check Ollama is running\ncurl http://localhost:11434\n# Expected: "Ollama is running"\n\n# List downloaded models\nollama list\n\n# Send a prompt via API (OpenAI-compatible)\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "What is 2+2?",\n  "stream": false\n}\'',
+          codeLanguage: 'bash',
+        },
+        commands: {
+          title: 'Useful Ollama Commands',
+          rows: [
+            { 'Command': 'ollama list', 'What It Does': 'Show all downloaded models and their sizes' },
+            { 'Command': 'ollama pull <model>', 'What It Does': 'Download a model without running it' },
+            { 'Command': 'ollama rm <model>', 'What It Does': 'Delete a model from disk' },
+            { 'Command': 'ollama ps', 'What It Does': 'Show models currently loaded in memory' },
+            { 'Command': 'ollama show <model>', 'What It Does': 'Show model details (parameters, template, licence)' },
+            { 'Command': 'ollama serve', 'What It Does': 'Start the Ollama server manually (if not running as service)' },
+          ],
+          columns: ['Command', 'What It Does'],
+        },
+        troubleshooting: {
+          title: 'Troubleshooting Common Ollama Installation Issues',
+          faqs: [
+            {
+              q: 'Ollama says "could not connect to ollama app, is it running?"',
+              a: 'Ollama is not running as a background service. On macOS: open the Ollama app from Applications. On Linux: run `systemctl start ollama` or `ollama serve` in a terminal. On Windows: launch Ollama from the Start menu.',
+            },
+            {
+              q: 'The model download is very slow or stalled',
+              a: 'Model downloads are large (2–47 GB). If the download stalls, press Ctrl+C and re-run `ollama pull <model>` — Ollama resumes partial downloads. For faster downloads, use a wired connection instead of Wi-Fi.',
+            },
+            {
+              q: 'I get "error: model requires more system memory" when running a model',
+              a: 'The model is too large for your available RAM. Try a smaller quantization: `ollama run llama3.1:8b-instruct-q4_0` instead of the default Q4_K_M. Or switch to a smaller model like `llama3.2:3b`. See [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) for RAM-matched recommendations.',
+            },
+            {
+              q: 'Ollama is running but my GPU is not being used',
+              a: 'On Windows, verify your NVIDIA driver is version 452.39 or higher. On Linux, confirm the NVIDIA container toolkit is installed (`nvidia-smi` should return GPU info). Ollama offloads layers to GPU automatically when VRAM is available — run `ollama ps` after starting a model to see GPU utilization.',
+            },
+            {
+              q: 'Where are Ollama model files stored?',
+              a: 'Models are stored at ~/.ollama/models on macOS and Linux. On Windows, the default path is C:\\Users\\<username>\\.ollama\\models. You can change the storage location by setting the OLLAMA_MODELS environment variable before starting the service.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'What to Do After Installing Ollama',
+          content: 'Once Ollama is running, the next step is [Run Your First Local LLM](/local-llms/run-first-local-llm) to understand prompting, context length, and what to expect from local inference speed. To pick the best model for your hardware, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models). If you prefer a graphical chat interface over the terminal, [How to Install LM Studio](/local-llms/how-to-install-lm-studio) covers the desktop app alternative.',
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
