@@ -878,7 +878,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             'Ein vager Prompt erzeugt eine vage Ausgabe. Ein schlecht spezifizierter Prompt erzeugt eine verfehlt angestrebte Antwort. Ein Prompt, der am Montag funktioniert, könnte am Freitag fehlschlagen, wenn sich die Eingabe leicht ändert. Optimierung beseitigt diese Schwankungen durch systematische Diagnose und gezielte Überarbeitung.',
             'Echtes Vorher/Nachher: Ein nicht optimierter Prompt lautet „Fasse diesen Artikel zusammen." Dreimal auf denselben Artikel angewendet, erzeugt er völlig unterschiedliche Ausgaben: eine mit 47 Wörtern, eine mit 120 Wörtern, die dritte übersieht den Hauptpunkt völlig. Nach Optimierung — Zugabe von Ausgabeformat („3 Aufzählungspunkte, je ≤20 Wörter"), einer Rolle („Analyst") und Spezifität („Liste die 3 Schlüsselbefunde auf, nicht die Methodik") — produziert derselbe Prompt konsistente, spezifizierte Ergebnisse alle 3 Male, über GPT-4o, Claude und Gemini hinweg.',
-            '**Für EU-Organisationen ist systematische Prompt-Optimierung eine Compliance-Anforderung, nicht nur eine Best Practice.** Das EU-Gesetz über künstliche Intelligenz (2024) verlangt von Hochrisiko-AI-Systemen — solche, die bei Einstellung, Kreditbewertung, Gesundheitswesen oder Strafverfolgung verwendet werden — zu dokumentieren, wie AI-Entscheidungen getroffen werden, und konsistente, testbare Ergebnisse zu demonstrieren. Eine versionskontrollierte Prompt-Bibliothek mit dokumentierter Optimierungshistorie erfüllt diese Audit-Trail-Anforderung. In Japan erfordert die METI-AI-Governance-Richtlinie ähnlich nachverfolgbare AI-Entscheidungsdokumentation für regulierte Anwendungen. Prompt-Optimierung ist die Grundlage dieser Nachverfolgbarkeit. Siehe [Geopolitik und KI](/prompt-engineering/geopolitics-and-ai?lang=de?lang=de) für den vollständigen Compliance-Kontext.',
+            '**Für EU-Organisationen ist systematische Prompt-Optimierung eine Compliance-Anforderung, nicht nur eine Best Practice.** Das EU-Gesetz über künstliche Intelligenz (2024) verlangt von Hochrisiko-AI-Systemen — solche, die bei Einstellung, Kreditbewertung, Gesundheitswesen oder Strafverfolgung verwendet werden — zu dokumentieren, wie AI-Entscheidungen getroffen werden, und konsistente, testbare Ergebnisse zu demonstrieren. Eine versionskontrollierte Prompt-Bibliothek mit dokumentierter Optimierungshistorie erfüllt diese Audit-Trail-Anforderung. In Japan erfordert die METI-AI-Governance-Richtlinie ähnlich nachverfolgbare AI-Entscheidungsdokumentation für regulierte Anwendungen. Prompt-Optimierung ist die Grundlage dieser Nachverfolgbarkeit. Siehe [Geopolitik und KI](/prompt-engineering/geopolitics-and-ai?lang=de) für den vollständigen Compliance-Kontext.',
           ],
         },
 
@@ -966,15 +966,15 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'Was bedeuten diese Prompt-Optimierungsbegriffe?',
           content: [],
           items: [
-            '**Prompt-Optimierung** — Der iterative Prozess der Überarbeitung eines Prompts zur Verbesserung der Ausgabequalität durch Diagnose von Fehlermodi und Änderung jeweils einer Variable (Spezifität, Kontext, Beispiele, Beschränkungen, Format oder Rolle). Siehe [5 Bausteine, die jeder Prompt braucht](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de?lang=de) für die strukturellen Elemente, die du optimierst.',
-            '**Few-Shot-Prompting** — Einbeziehen von 1–3 Input/Output-Beispielen im Prompt, um das Modell das gewünschte Format oder Muster zu lehren. Siehe [Zero-Shot vs. Few-Shot-Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de?lang=de) für wann man Beispiele als primären Optimierungshebel hinzufügt.',
-            '**Chain-of-Thought (CoT)** — Das Modell Schritt-für-Schritt argumentieren lassen („denk nach, bevor du antwortest"), um Genauigkeit bei mehrstufigen Logikaufgaben um 10–15 % zu verbessern. Siehe [Chain-of-Thought-Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de?lang=de) für detaillierte Techniken.',
-            '**Beschränkung** — Ein explizites Verbot oder eine Grenze (z.B. „verwende keine Fachjargon", „maximum 150 Wörter", „zitiere nur Quellen"), die Ausgabespielraum einengt und häufige Fehlermodi verhindert. Siehe [Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de?lang=de) für erweiterte Beschränkungsmuster.',
-            '**Token** — Die kleinste Texteinheit, die das Modell verarbeitet; etwa 4 Zeichen oder 1 Wort im Englischen. Prompt-Länge und Ausgabebudget werden in Tokens gemessen. Siehe [Tokens, Kosten & Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de?lang=de) für Kostenberechnung.',
-            '**Halluzination** — Selbstbewusste aber faktisch falsche Ausgabe; tritt auf, wenn das Modell Fakten erfindet, nicht existierende Studien zitiert oder unbegründete Behauptungen wiederholt. Siehe [KI-Halluzinationen: Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de?lang=de) — gemindert durch Hinzufügen von Verankerungskontext, Beispielen und Beschränkungen.',
+            '**Prompt-Optimierung** — Der iterative Prozess der Überarbeitung eines Prompts zur Verbesserung der Ausgabequalität durch Diagnose von Fehlermodi und Änderung jeweils einer Variable (Spezifität, Kontext, Beispiele, Beschränkungen, Format oder Rolle). Siehe [5 Bausteine, die jeder Prompt braucht](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) für die strukturellen Elemente, die du optimierst.',
+            '**Few-Shot-Prompting** — Einbeziehen von 1–3 Input/Output-Beispielen im Prompt, um das Modell das gewünschte Format oder Muster zu lehren. Siehe [Zero-Shot vs. Few-Shot-Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) für wann man Beispiele als primären Optimierungshebel hinzufügt.',
+            '**Chain-of-Thought (CoT)** — Das Modell Schritt-für-Schritt argumentieren lassen („denk nach, bevor du antwortest"), um Genauigkeit bei mehrstufigen Logikaufgaben um 10–15 % zu verbessern. Siehe [Chain-of-Thought-Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) für detaillierte Techniken.',
+            '**Beschränkung** — Ein explizites Verbot oder eine Grenze (z.B. „verwende keine Fachjargon", „maximum 150 Wörter", „zitiere nur Quellen"), die Ausgabespielraum einengt und häufige Fehlermodi verhindert. Siehe [Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de) für erweiterte Beschränkungsmuster.',
+            '**Token** — Die kleinste Texteinheit, die das Modell verarbeitet; etwa 4 Zeichen oder 1 Wort im Englischen. Prompt-Länge und Ausgabebudget werden in Tokens gemessen. Siehe [Tokens, Kosten & Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de) für Kostenberechnung.',
+            '**Halluzination** — Selbstbewusste aber faktisch falsche Ausgabe; tritt auf, wenn das Modell Fakten erfindet, nicht existierende Studien zitiert oder unbegründete Behauptungen wiederholt. Siehe [KI-Halluzinationen: Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — gemindert durch Hinzufügen von Verankerungskontext, Beispielen und Beschränkungen.',
             '**Fine-Tuning** — Umschulung von Modellgewichten auf domänenspezifischen beschrifteten Daten; verwendet, wenn Prompt-Optimierung die erforderliche Qualität nicht erreichen kann. Erschöpfe immer Optimierung bevor Fine-Tuning — es ist langsamer und teurer.',
-            '**RAG (Retrieval-Augmented Generation)** — Einspritzen von abgerufenen Dokumenten in den Prompt-Kontext bevor du das Modell fragst. Siehe [RAG erklärt](/prompt-engineering/rag-explained?lang=de?lang=de) — komplementär zur Optimierung (RAG verbessert Information; Optimierung verbessert wie das Modell sie nutzt).',
-            '**System-Prompt** — Persistente Anweisung, die die Rolle, Beschränkungen und das Verhalten des Modells über alle Züge setzt. Siehe [System-Prompt vs. User-Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=de?lang=de) — erfordert separate Optimierungstests vom nutzerfachigen Prompt.',
+            '**RAG (Retrieval-Augmented Generation)** — Einspritzen von abgerufenen Dokumenten in den Prompt-Kontext bevor du das Modell fragst. Siehe [RAG erklärt](/prompt-engineering/rag-explained?lang=de) — komplementär zur Optimierung (RAG verbessert Information; Optimierung verbessert wie das Modell sie nutzt).',
+            '**System-Prompt** — Persistente Anweisung, die die Rolle, Beschränkungen und das Verhalten des Modells über alle Züge setzt. Siehe [System-Prompt vs. User-Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=de) — erfordert separate Optimierungstests vom nutzerfachigen Prompt.',
             '**Spezifität** — Präzision in der Aufgabendefinition; von vagen Anweisungen („fasse zusammen") zu exakten Anforderungen („liste 3 Aufzählungspunkte, je ≤20 Wörter"). Der erste und oft höchsten Impact-Optimierungshebel zum Anpassen.',
           ],
         },
@@ -1026,11 +1026,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Jenseits der 6 Kern-Hebel wenden fortgeschrittene Prompt-Optimierungstechniken spezialisierte Muster an, um spezifische Fehlermodi zu beheben.** Diese Techniken kombinieren mehrere Hebel oder schichten Beschränkungen, um schwierigere Probleme zu lösen. Erfahre, welche Techniken du je nach deiner Optimierungsherausforderung anwendest:',
           ],
           items: [
-            '[Few-Shot vs. Zero-Shot](/prompt-engineering/zero-shot-vs-few-shot?lang=de?lang=de) — Addiere 1–3 Beispiel-Input-Output-Paare zum Prompt, wenn das Modell die Ausgabe nicht korrekt formatiert oder den gewünschten Stil vermisst. Few-Shot-Beispiele sind die direkteste Art, Format zu lehren.',
-            '[Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=de?lang=de) — Füge „denke Schritt für Schritt vor der Antwort" ein, um Fehler beim mehrstufigen Denken zu beheben. Diese Technik verbessert oft die Genauigkeit bei Logikaufgaben um 10–15 %.',
-            '[Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de?lang=de) — Addiere explizite Verbote („Verwende keinen Jargon", „Erfinde keine Zahlen", „Wiederhole die Eingabe nicht"), um Umfang und Stil-Fehler zu beheben. Beschränkungen sind stärker als Anweisungen.',
-            '[Self-Consistency](/prompt-engineering/self-consistency-prompting?lang=de?lang=de) — Generiere die Ausgabe des Prompts 3–5 Mal unabhängig, dann gebe die häufigste Antwort zurück. Dies reduziert Halluzinationen bei unwahrscheinlichen Fakten durch das Kombinieren von Modell-Läufen.',
-            '[Strukturierte Ausgabe](/prompt-engineering/structured-output-and-json-mode?lang=de?lang=de) — Fordere JSON, Markdown-Tabellen oder andere maschinenlesbare Formate an, um Format-Compliance-Fehler zu beheben. Strukturierte Ausgabe ist schneller zu parsen und fehleranfälliger als Prosa.',
+            '[Few-Shot vs. Zero-Shot](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — Addiere 1–3 Beispiel-Input-Output-Paare zum Prompt, wenn das Modell die Ausgabe nicht korrekt formatiert oder den gewünschten Stil vermisst. Few-Shot-Beispiele sind die direkteste Art, Format zu lehren.',
+            '[Chain-of-Thought](/prompt-engineering/chain-of-thought-prompting?lang=de) — Füge „denke Schritt für Schritt vor der Antwort" ein, um Fehler beim mehrstufigen Denken zu beheben. Diese Technik verbessert oft die Genauigkeit bei Logikaufgaben um 10–15 %.',
+            '[Constrained Prompting](/prompt-engineering/constrained-prompting?lang=de) — Addiere explizite Verbote („Verwende keinen Jargon", „Erfinde keine Zahlen", „Wiederhole die Eingabe nicht"), um Umfang und Stil-Fehler zu beheben. Beschränkungen sind stärker als Anweisungen.',
+            '[Self-Consistency](/prompt-engineering/self-consistency-prompting?lang=de) — Generiere die Ausgabe des Prompts 3–5 Mal unabhängig, dann gebe die häufigste Antwort zurück. Dies reduziert Halluzinationen bei unwahrscheinlichen Fakten durch das Kombinieren von Modell-Läufen.',
+            '[Strukturierte Ausgabe](/prompt-engineering/structured-output-and-json-mode?lang=de) — Fordere JSON, Markdown-Tabellen oder andere maschinenlesbare Formate an, um Format-Compliance-Fehler zu beheben. Strukturierte Ausgabe ist schneller zu parsen und fehleranfälliger als Prosa.',
           ],
         },
 
@@ -1040,18 +1040,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Ein optimierter Prompt ist ein dauerhafter Vermögenswert.** Sobald du einen Prompt über 3 Modelle getestet hast, bestätigt hast, dass er auf 5–10 repräsentativen Eingaben funktioniert, und dokumentiert hast, was jeder Hebel tut — speichere ihn. Eine Prompt-Bibliothek ermöglicht es dir, optimierte Prompts über Projekte hinweg zu renutzen, sie mit deinem Team zu teilen und sie im Laufe der Zeit zu verbessern.',
             'Was mit jedem Prompt zu speichern ist: der letzte Prompt-Text, der Hebel der geändert wurde, der Fehlermodus den er behob, welche Modelle er getestet wurden, und die Bestätigung/Fehler-Ergebnisse auf deinen repräsentativen Eingaben. Diese Dokumentation trennt eine Prompt-Bibliothek von einem einfachen Ordner von Textdateien — und erfüllt die Anforderungen für Audit-Trail der EU AI Act.',
             '**PromptQuorum speichert jeden Prompt, den du ausführst, versionskontrolliert, zusammen mit seinen Antworten von GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro.** Anstatt Ausgaben in eine Tabellenkalkulation zu kopieren, werden deine Testergebnisse automatisch bewahrt. [Starte deine Prompt-Bibliothek auf PromptQuorum](https://www.promptquorum.com) — jeder Prompt, den du optimierst, wird gespeichert und neu abspielbar.',
-            'Siehe [Baue eine Prompt-Bibliothek, die Stunden spart](/prompt-engineering/build-a-prompt-library?lang=de?lang=de) für einen vollständigen Leitfaden zur Strukturierung, Versionierung und Wartung einer Bibliothek.',
+            'Siehe [Baue eine Prompt-Bibliothek, die Stunden spart](/prompt-engineering/build-a-prompt-library?lang=de) für einen vollständigen Leitfaden zur Strukturierung, Versionierung und Wartung einer Bibliothek.',
           ],
         },
 
         relatedReading: {
           title: 'Weiterführende Lektüre',
           items: [
-            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de?lang=de) — die Grunddefinition und Kern-Bausteine des Prompt-Designs',
-            '[5 Bausteine, die jeder Prompt braucht](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de?lang=de) — die strukturellen Elemente, die du optimierst',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de?lang=de) — Schritt-für-Schritt-Denkens-Technik zur Genauigkeitsverbesserung',
-            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de?lang=de) — wann Beispiele als Optimierungshebel hinzufügen',
-            '[Baue eine Prompt-Bibliothek, die Stunden spart](/prompt-engineering/build-a-prompt-library?lang=de?lang=de) — Bewahren optimierter Prompts als Team-Vermögenswerte',
+            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — die Grunddefinition und Kern-Bausteine des Prompt-Designs',
+            '[5 Bausteine, die jeder Prompt braucht](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=de) — die strukturellen Elemente, die du optimierst',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=de) — Schritt-für-Schritt-Denkens-Technik zur Genauigkeitsverbesserung',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=de) — wann Beispiele als Optimierungshebel hinzufügen',
+            '[Baue eine Prompt-Bibliothek, die Stunden spart](/prompt-engineering/build-a-prompt-library?lang=de) — Bewahren optimierter Prompts als Team-Vermögenswerte',
           ],
         },
 
@@ -1303,7 +1303,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             'Un prompt vague produit une sortie vague. Un prompt mal spécifié produit une réponse hors cible. Un prompt qui fonctionne lundi peut échouer vendredi si l\'entrée change légèrement. L\'optimisation élimine ces variations par un diagnostic systématique et une révision ciblée.',
             'Exemple réel avant/après : Un prompt non optimisé lit « Résumer cet article. » Exécuté 3 fois sur le même article, il produit des sorties radicalement différentes : une de 47 mots, une autre de 120 mots, la troisième rate complètement le point principal. Après optimisation — ajout du format de sortie (« 3 puces, ≤20 mots chacune »), un rôle (« analyste »), et spécificité (« Lister les 3 éléments clés, pas la méthodologie ») — le même prompt produit des résultats cohérents et conformes aux spécifications les 3 fois, sur GPT-4o, Claude et Gemini.',
-            '**Pour les organisations de l\'UE, l\'optimisation systématique des prompts est une exigence de conformité, pas seulement une meilleure pratique.** La loi sur l\'IA de l\'UE (2024) exige que les systèmes d\'IA à haut risque — ceux utilisés dans l\'embauche, l\'évaluation de crédit, la santé ou l\'application de la loi — documentent comment les décisions d\'IA sont prises et démontrent des sorties cohérentes et testables. Une bibliothèque de prompts contrôlée en version avec un historique d\'optimisation documenté satisfait cette exigence de piste d\'audit. Au Japon, les lignes directrices sur la gouvernance de l\'IA du METI exigent également la traçabilité de la documentation des décisions d\'IA pour les applications réglementées. L\'optimisation de prompt est la base de cette traçabilité. Voir [Géopolitique et IA](/prompt-engineering/geopolitics-and-ai?lang=fr?lang=fr) pour le contexte complet de conformité réglementaire.',
+            '**Pour les organisations de l\'UE, l\'optimisation systématique des prompts est une exigence de conformité, pas seulement une meilleure pratique.** La loi sur l\'IA de l\'UE (2024) exige que les systèmes d\'IA à haut risque — ceux utilisés dans l\'embauche, l\'évaluation de crédit, la santé ou l\'application de la loi — documentent comment les décisions d\'IA sont prises et démontrent des sorties cohérentes et testables. Une bibliothèque de prompts contrôlée en version avec un historique d\'optimisation documenté satisfait cette exigence de piste d\'audit. Au Japon, les lignes directrices sur la gouvernance de l\'IA du METI exigent également la traçabilité de la documentation des décisions d\'IA pour les applications réglementées. L\'optimisation de prompt est la base de cette traçabilité. Voir [Géopolitique et IA](/prompt-engineering/geopolitics-and-ai?lang=fr) pour le contexte complet de conformité réglementaire.',
           ],
         },
 
@@ -1391,15 +1391,15 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'Que signifient ces termes d\'optimisation de prompt ?',
           content: [],
           items: [
-            '**Optimisation de prompt** — Le processus itératif de révision d\'un prompt pour améliorer la qualité de la sortie en diagnostiquant les modes d\'échec et en modifiant une variable (spécificité, contexte, exemples, contraintes, format ou rôle) à la fois. Voir [5 éléments fondamentaux de tout prompt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr?lang=fr) pour les éléments structurels que vous optimisez.',
-            '**Prompting few-shot** — Inclure 1–3 exemples d\'entrée/sortie dans le prompt pour enseigner au modèle le format ou le modèle désiré. Voir [Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr?lang=fr) pour savoir quand ajouter des exemples comme levier d\'optimisation principal.',
-            '**Chain-of-Thought (CoT)** — Demander au modèle de raisonner étape par étape (« réfléchis avant de répondre ») pour améliorer la précision sur les problèmes logiques multi-étapes de 10–15 %. Voir [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr?lang=fr) pour les techniques détaillées.',
-            '**Contrainte** — Une interdiction explicite ou une limite (par ex., « ne pas utiliser de jargon », « maximum 150 mots », « citer uniquement les sources ») qui limite la portée de la sortie et prévient les modes d\'échec courants. Voir [Constrained Prompting](/prompt-engineering/constrained-prompting?lang=fr?lang=fr) pour les modèles de contrainte avancés.',
-            '**Token** — La plus petite unité de texte que le modèle traite ; environ 4 caractères ou 1 mot en anglais. La longueur des prompts et le budget de sortie sont mesurés en tokens. Voir [Tokens, Coûts & Limites](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr?lang=fr) pour le calcul des coûts.',
-            '**Hallucination** — Sortie confiante mais factuellement incorrecte ; se produit lorsque le modèle invente des faits, cite des études inexistantes ou répète des affirmations non fondées. Voir [Hallucinations IA : Pourquoi l\'IA invente des choses](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr?lang=fr) — atténuée en ajoutant du contexte d\'ancrage, des exemples et des contraintes.',
+            '**Optimisation de prompt** — Le processus itératif de révision d\'un prompt pour améliorer la qualité de la sortie en diagnostiquant les modes d\'échec et en modifiant une variable (spécificité, contexte, exemples, contraintes, format ou rôle) à la fois. Voir [5 éléments fondamentaux de tout prompt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) pour les éléments structurels que vous optimisez.',
+            '**Prompting few-shot** — Inclure 1–3 exemples d\'entrée/sortie dans le prompt pour enseigner au modèle le format ou le modèle désiré. Voir [Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) pour savoir quand ajouter des exemples comme levier d\'optimisation principal.',
+            '**Chain-of-Thought (CoT)** — Demander au modèle de raisonner étape par étape (« réfléchis avant de répondre ») pour améliorer la précision sur les problèmes logiques multi-étapes de 10–15 %. Voir [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) pour les techniques détaillées.',
+            '**Contrainte** — Une interdiction explicite ou une limite (par ex., « ne pas utiliser de jargon », « maximum 150 mots », « citer uniquement les sources ») qui limite la portée de la sortie et prévient les modes d\'échec courants. Voir [Constrained Prompting](/prompt-engineering/constrained-prompting?lang=fr) pour les modèles de contrainte avancés.',
+            '**Token** — La plus petite unité de texte que le modèle traite ; environ 4 caractères ou 1 mot en anglais. La longueur des prompts et le budget de sortie sont mesurés en tokens. Voir [Tokens, Coûts & Limites](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr) pour le calcul des coûts.',
+            '**Hallucination** — Sortie confiante mais factuellement incorrecte ; se produit lorsque le modèle invente des faits, cite des études inexistantes ou répète des affirmations non fondées. Voir [Hallucinations IA : Pourquoi l\'IA invente des choses](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) — atténuée en ajoutant du contexte d\'ancrage, des exemples et des contraintes.',
             '**Fine-tuning** — Réentraîner les poids du modèle sur les données étiquetées spécifiques au domaine ; utilisé lorsque l\'optimisation de prompt ne peut pas atteindre la qualité requise. Toujours épuiser l\'optimisation avant le fine-tuning — c\'est plus lent et plus coûteux.',
-            '**RAG (Retrieval-Augmented Generation)** — Injecter les documents récupérés dans le contexte du prompt avant de demander au modèle de répondre. Voir [RAG expliqué](/prompt-engineering/rag-explained?lang=fr?lang=fr) — complémentaire à l\'optimisation (RAG améliore l\'information ; l\'optimisation améliore comment le modèle l\'utilise).',
-            '**System prompt** — Instruction persistante qui définit le rôle, les contraintes et le comportement du modèle sur tous les tours. Voir [System Prompt vs User Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=fr?lang=fr) — nécessite des tests d\'optimisation séparés du prompt côté utilisateur.',
+            '**RAG (Retrieval-Augmented Generation)** — Injecter les documents récupérés dans le contexte du prompt avant de demander au modèle de répondre. Voir [RAG expliqué](/prompt-engineering/rag-explained?lang=fr) — complémentaire à l\'optimisation (RAG améliore l\'information ; l\'optimisation améliore comment le modèle l\'utilise).',
+            '**System prompt** — Instruction persistante qui définit le rôle, les contraintes et le comportement du modèle sur tous les tours. Voir [System Prompt vs User Prompt](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=fr) — nécessite des tests d\'optimisation séparés du prompt côté utilisateur.',
             '**Spécificité** — Précision dans la définition de la tâche ; passer d\'instructions vagues (« résumer ») à des exigences exactes (« lister 3 puces, ≤20 mots chacune »). Le premier et souvent le levier d\'optimisation le plus important à ajuster.',
           ],
         },
@@ -1456,11 +1456,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Au-delà des 6 leviers fondamentaux, les techniques avancées d\'optimisation de prompt appliquent des modèles spécialisés pour corriger les modes d\'échec spécifiques.** Ces techniques combinent plusieurs leviers ou superposent des contraintes pour résoudre des problèmes plus difficiles. Apprenez quelles techniques appliquer en fonction de votre défi d\'optimisation :',
           ],
           items: [
-            '[Few-shot vs Zero-shot](/prompt-engineering/zero-shot-vs-few-shot?lang=fr?lang=fr) : Ajouter 1–3 paires d\'entrée/sortie d\'exemple au prompt lorsque le modèle ne formate pas correctement la sortie ou manque le style que vous souhaitez. Les exemples few-shot sont le moyen le plus direct d\'enseigner le format.',
-            '[Chain-of-thought](/prompt-engineering/chain-of-thought-prompting?lang=fr?lang=fr) : Insérer « réfléchis étape par étape avant de répondre » pour corriger les défaillances du raisonnement multi-étapes. Cette technique améliore souvent la précision sur les problèmes logiques de 10–15 %.',
-            '[Constrained prompting](/prompt-engineering/constrained-prompting?lang=fr?lang=fr) : Ajouter des interdictions explicites (« Ne pas utiliser de jargon », « Ne pas inventer des chiffres », « Ne pas répéter l\'entrée ») pour corriger les défaillances de portée et de style. Les contraintes sont plus fortes que les instructions.',
-            '[Self-consistency](/prompt-engineering/self-consistency-prompting?lang=fr?lang=fr) : Générer la sortie du prompt 3–5 fois indépendamment, puis retourner la réponse la plus courante. Cela réduit les hallucinations sur les faits de faible probabilité en combinant les exécutions du modèle.',
-            '[Structured output](/prompt-engineering/structured-output-and-json-mode?lang=fr?lang=fr) : Demander JSON, des tableaux markdown ou d\'autres formats lisibles par machine pour corriger la conformité du format. La sortie structurée est plus rapide à analyser et moins sujette aux erreurs que la prose.',
+            '[Few-shot vs Zero-shot](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) : Ajouter 1–3 paires d\'entrée/sortie d\'exemple au prompt lorsque le modèle ne formate pas correctement la sortie ou manque le style que vous souhaitez. Les exemples few-shot sont le moyen le plus direct d\'enseigner le format.',
+            '[Chain-of-thought](/prompt-engineering/chain-of-thought-prompting?lang=fr) : Insérer « réfléchis étape par étape avant de répondre » pour corriger les défaillances du raisonnement multi-étapes. Cette technique améliore souvent la précision sur les problèmes logiques de 10–15 %.',
+            '[Constrained prompting](/prompt-engineering/constrained-prompting?lang=fr) : Ajouter des interdictions explicites (« Ne pas utiliser de jargon », « Ne pas inventer des chiffres », « Ne pas répéter l\'entrée ») pour corriger les défaillances de portée et de style. Les contraintes sont plus fortes que les instructions.',
+            '[Self-consistency](/prompt-engineering/self-consistency-prompting?lang=fr) : Générer la sortie du prompt 3–5 fois indépendamment, puis retourner la réponse la plus courante. Cela réduit les hallucinations sur les faits de faible probabilité en combinant les exécutions du modèle.',
+            '[Structured output](/prompt-engineering/structured-output-and-json-mode?lang=fr) : Demander JSON, des tableaux markdown ou d\'autres formats lisibles par machine pour corriger la conformité du format. La sortie structurée est plus rapide à analyser et moins sujette aux erreurs que la prose.',
           ],
         },
 
@@ -1470,18 +1470,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Un prompt optimisé est un atout durable.** Une fois que vous avez testé un prompt sur 3 modèles, confirmé qu\'il fonctionne sur 5–10 entrées représentatives et documenté ce que chaque levier fait — sauvegardez-le. Une bibliothèque de prompts vous permet de réutiliser les prompts optimisés dans les projets, de les partager avec votre équipe et de les améliorer au fil du temps.',
             'Ce qu\'il faut sauvegarder avec chaque prompt : le texte du prompt final, le levier qui a été modifié, le mode d\'échec qu\'il a corrigé, les modèles sur lesquels il a été testé et les résultats de réussite/échec sur vos entrées représentatives. Cette documentation est ce qui sépare une bibliothèque de prompts d\'un simple dossier de fichiers texte — et ce qui satisfait les exigences de piste d\'audit de la loi sur l\'IA de l\'UE.',
             '**PromptQuorum stocke chaque prompt que vous exécutez, contrôlé en version, aux côtés de ses réponses de GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro.** Au lieu de copier les sorties dans une feuille de calcul, vos résultats de test sont automatiquement préservés. [Commencez votre bibliothèque de prompts sur PromptQuorum](https://www.promptquorum.com) — chaque prompt que vous optimisez est sauvegardé et rejouable.',
-            'Voir [Construire une bibliothèque de prompts qui vous fait gagner des heures](/prompt-engineering/build-a-prompt-library?lang=fr?lang=fr) pour un guide complet sur la structuration, la versioning et la maintenance d\'une bibliothèque.',
+            'Voir [Construire une bibliothèque de prompts qui vous fait gagner des heures](/prompt-engineering/build-a-prompt-library?lang=fr) pour un guide complet sur la structuration, la versioning et la maintenance d\'une bibliothèque.',
           ],
         },
 
         relatedReading: {
           title: 'Lectures connexes',
           items: [
-            '[Qu\'est-ce que le prompt engineering ?](/prompt-engineering/what-is-prompt-engineering?lang=fr?lang=fr) — la définition pilier et les éléments constitutifs fondamentaux de la conception de prompts',
-            '[Les 5 éléments fondamentaux de tout prompt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr?lang=fr) — les éléments structurels que vous optimisez',
-            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr?lang=fr) — technique de raisonnement étape par étape pour améliorer la précision',
-            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr?lang=fr) — quand ajouter des exemples comme levier d\'optimisation',
-            '[Construire une bibliothèque de prompts qui vous fait gagner des heures](/prompt-engineering/build-a-prompt-library?lang=fr?lang=fr) — persister les prompts optimisés comme atouts d\'équipe',
+            '[Qu\'est-ce que le prompt engineering ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — la définition pilier et les éléments constitutifs fondamentaux de la conception de prompts',
+            '[Les 5 éléments fondamentaux de tout prompt](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=fr) — les éléments structurels que vous optimisez',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting?lang=fr) — technique de raisonnement étape par étape pour améliorer la précision',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot?lang=fr) — quand ajouter des exemples comme levier d\'optimisation',
+            '[Construire une bibliothèque de prompts qui vous fait gagner des heures](/prompt-engineering/build-a-prompt-library?lang=fr) — persister les prompts optimisés comme atouts d\'équipe',
           ],
         },
 
@@ -1732,7 +1732,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             '曖昧なプロンプトは曖昧な出力を生成します。不十分に指定されたプロンプトはオフターゲット応答を生成します。月曜日に機能するプロンプトは、入力がわずかに変わるとの金曜日に失敗する可能性があります。最適化はこれらの変動を体系的な診断とターゲット改定を通じて排除します。',
             '実際の前後：最適化されていないプロンプトは「この記事を要約する」と言及しています。同じ記事で3回実行し、根本的に異なる出力を生成します：1つは47ワード、別は120ワード、3番目は要点を完全に見逃します。最適化後—出力フォーマット（「3つのポイント、≤20語各」）、ロール（「アナリスト」）、および具体性（「方法論ではなく3つの重要な発見をリストアップ」）を追加—同じプロンプトがGPT-4o、Claude、Gemini全体の3回すべてで一貫性のある仕様準拠の結果を生成します。',
-            '**EU組織の場合、体系的なプロンプト最適化はベストプラクティスではなく、コンプライアンス要件です。** EU AI Act（2024）は、採用、信用査定、医療、または法執行行為で使用されるハイリスク AI システムが、AI決定をどのように下すか文書化し、一貫性のあるテスト可能な出力を実証することを要求します。改定履歴が文書化されたバージョン管理プロンプト・ライブラリはこの監査追跡要件を満たします。日本では、METI AI ガバナンス ガイダンス同様に規制されたアプリケーションのAI決定トレーサビリティ文書を要求します。プロンプト最適化はそのトレーサビリティの基礎です。全規制コンプライアンスコンテキストについては[地政学とAI](/prompt-engineering/geopolitics-and-ai?lang=ja?lang=ja)を参照してください。',
+            '**EU組織の場合、体系的なプロンプト最適化はベストプラクティスではなく、コンプライアンス要件です。** EU AI Act（2024）は、採用、信用査定、医療、または法執行行為で使用されるハイリスク AI システムが、AI決定をどのように下すか文書化し、一貫性のあるテスト可能な出力を実証することを要求します。改定履歴が文書化されたバージョン管理プロンプト・ライブラリはこの監査追跡要件を満たします。日本では、METI AI ガバナンス ガイダンス同様に規制されたアプリケーションのAI決定トレーサビリティ文書を要求します。プロンプト最適化はそのトレーサビリティの基礎です。全規制コンプライアンスコンテキストについては[地政学とAI](/prompt-engineering/geopolitics-and-ai?lang=ja)を参照してください。',
           ],
         },
 
@@ -1820,15 +1820,15 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'これらのプロンプト最適化用語は何ですか？',
           content: [],
           items: [
-            '**プロンプト最適化** — 失敗モードを診断し、（具体性、コンテキスト、例、制約、フォーマット、またはロール）1つずつ1つの変数を変更することで出力品質を改善するためにプロンプトを改定する反復的なプロセス。あなたが最適化している構造要素については[すべてのプロンプトが必要とする5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja?lang=ja)を参照してください。',
-            '**フューショット・プロンプティング** — モデルに目的のフォーマットまたはパターンを教えるためにプロンプトに1～3個の入出力例を含める。[ゼロショット対フューショット・プロンプティング](/prompt-engineering/zero-shot-vs-few-shot?lang=ja?lang=ja)を参照して、主な最適化・レバーとして例を追加するときを確認してください。',
-            '**チェーン・オブ・ソート（CoT）** — モデルにステップバイステップで推論を求める（「答える前に考える」）マルチステップ論理問題の精度を10～15％向上させる。詳細なテクニックについては[チェーン・オブ・ソート・プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja?lang=ja)を参照してください。',
-            '**制約** — 明示的な禁止または制限（例、「専門用語を使わない」、「最大150ワード」、「ソースのみを引用」）これは出力スコープを絞り込み、一般的な障害モードを防止します。[制約されたプロンプティング](/prompt-engineering/constrained-prompting?lang=ja?lang=ja)を参照して、高度な制約パターンを確認してください。',
-            '**トークン** — モデルが処理する最小のテキストユニット；英語では約4文字または1単語。プロンプト長と出力予算はトークンで測定されます。コスト計算については[トークン、コスト、限度](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja?lang=ja)を参照してください。',
-            '**幻覚** — 自信を持っているが事実的に不正確な出力；モデルが事実を発明し、存在しない研究を引用するか、根拠のない主張を繰り返すときに発生します。[AIの幻覚：なぜAIが物事を作成するのか](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja?lang=ja)を参照—係留コンテキスト、例、および制約を追加することで軽減。',
+            '**プロンプト最適化** — 失敗モードを診断し、（具体性、コンテキスト、例、制約、フォーマット、またはロール）1つずつ1つの変数を変更することで出力品質を改善するためにプロンプトを改定する反復的なプロセス。あなたが最適化している構造要素については[すべてのプロンプトが必要とする5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja)を参照してください。',
+            '**フューショット・プロンプティング** — モデルに目的のフォーマットまたはパターンを教えるためにプロンプトに1～3個の入出力例を含める。[ゼロショット対フューショット・プロンプティング](/prompt-engineering/zero-shot-vs-few-shot?lang=ja)を参照して、主な最適化・レバーとして例を追加するときを確認してください。',
+            '**チェーン・オブ・ソート（CoT）** — モデルにステップバイステップで推論を求める（「答える前に考える」）マルチステップ論理問題の精度を10～15％向上させる。詳細なテクニックについては[チェーン・オブ・ソート・プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja)を参照してください。',
+            '**制約** — 明示的な禁止または制限（例、「専門用語を使わない」、「最大150ワード」、「ソースのみを引用」）これは出力スコープを絞り込み、一般的な障害モードを防止します。[制約されたプロンプティング](/prompt-engineering/constrained-prompting?lang=ja)を参照して、高度な制約パターンを確認してください。',
+            '**トークン** — モデルが処理する最小のテキストユニット；英語では約4文字または1単語。プロンプト長と出力予算はトークンで測定されます。コスト計算については[トークン、コスト、限度](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja)を参照してください。',
+            '**幻覚** — 自信を持っているが事実的に不正確な出力；モデルが事実を発明し、存在しない研究を引用するか、根拠のない主張を繰り返すときに発生します。[AIの幻覚：なぜAIが物事を作成するのか](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja)を参照—係留コンテキスト、例、および制約を追加することで軽減。',
             '**ファインチューニング** — ドメイン固有のラベル付きデータでモデルウェイトを再トレーニング；プロンプト最適化が必要な品質に達することができないときに使用されます。ファインチューニングの前に常に最適化を最大化—それはより遅く、より高価です。',
-            '**RAG（検索増幅生成）** — モデルに答えるように求める前にプロンプト・コンテキストに検索されたドキュメントを注入します。[RAG説明](/prompt-engineering/rag-explained?lang=ja?lang=ja)を参照—最適化を補完（RAGは情報を改善；最適化はモデルがそれをどのように使用するかを改善）。',
-            '**システム・プロンプト** — モデルのロール、制約、およびすべてのターンに対する動作を設定する永続的な指示。[システム・プロンプト対ユーザー・プロンプト](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=ja?lang=ja)を参照—ユーザーに直面したプロンプトから別の最適化テストが必要。',
+            '**RAG（検索増幅生成）** — モデルに答えるように求める前にプロンプト・コンテキストに検索されたドキュメントを注入します。[RAG説明](/prompt-engineering/rag-explained?lang=ja)を参照—最適化を補完（RAGは情報を改善；最適化はモデルがそれをどのように使用するかを改善）。',
+            '**システム・プロンプト** — モデルのロール、制約、およびすべてのターンに対する動作を設定する永続的な指示。[システム・プロンプト対ユーザー・プロンプト](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=ja)を参照—ユーザーに直面したプロンプトから別の最適化テストが必要。',
             '**具体性** — タスク定義の精度；曖昧な指示（「要約する」）から正確な要件（「3つのポイント、≤20ワード各」）に移動。最初の、そしてしばしば最高影響最適化・レバーを調整すること。',
           ],
         },
@@ -1885,11 +1885,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**6つのコア・レバーを超えて、高度なプロンプト最適化テクニックは特定の障害モードを修正するために特殊なパターンを適用します。** これらのテクニックは複数のレバーを結合するか、より難しい問題を解決するための層制約。あなたの最適化チャレンジに基づいて適用するテクニックを学びます：',
           ],
           items: [
-            '[フューショット対ゼロショット](/prompt-engineering/zero-shot-vs-few-shot?lang=ja?lang=ja) : モデルが出力を正しくフォーマットしていないか、または必要なスタイルが不足している場合、プロンプトに1～3個の入出力ペアを追加します。フューショット例はフォーマットを教える最も直接的な方法です。',
-            '[チェーン・オブ・ソート](/prompt-engineering/chain-of-thought-prompting?lang=ja?lang=ja) : マルチステップ推論障害を修正するために「答える前にステップバイステップで考える」を挿入します。このテクニックはしばしば論理問題の精度を10～15％向上させます。',
-            '[制約されたプロンプティング](/prompt-engineering/constrained-prompting?lang=ja?lang=ja) : 範囲とスタイル障害を修正するために明示的な禁止（「専門用語を使わない」、「数字を発明しない」、「入力を繰り返さない」）を追加します。制約は指示より強い。',
-            '[自己一貫性](/prompt-engineering/self-consistency-prompting?lang=ja?lang=ja) : プロンプトの出力を3～5回独立して生成し、最も一般的な回答を返します。これはモデルの実行を組み合わせることで低確率のファクトでの幻覚を減らします。',
-            '[構造化出力](/prompt-engineering/structured-output-and-json-mode?lang=ja?lang=ja) : JSON、マークダウン表、またはその他のマシン読み取り可能な形式を要求してフォーマット準拠を修正します。構造化出力は散文より解析が速く、エラーが少ない。',
+            '[フューショット対ゼロショット](/prompt-engineering/zero-shot-vs-few-shot?lang=ja) : モデルが出力を正しくフォーマットしていないか、または必要なスタイルが不足している場合、プロンプトに1～3個の入出力ペアを追加します。フューショット例はフォーマットを教える最も直接的な方法です。',
+            '[チェーン・オブ・ソート](/prompt-engineering/chain-of-thought-prompting?lang=ja) : マルチステップ推論障害を修正するために「答える前にステップバイステップで考える」を挿入します。このテクニックはしばしば論理問題の精度を10～15％向上させます。',
+            '[制約されたプロンプティング](/prompt-engineering/constrained-prompting?lang=ja) : 範囲とスタイル障害を修正するために明示的な禁止（「専門用語を使わない」、「数字を発明しない」、「入力を繰り返さない」）を追加します。制約は指示より強い。',
+            '[自己一貫性](/prompt-engineering/self-consistency-prompting?lang=ja) : プロンプトの出力を3～5回独立して生成し、最も一般的な回答を返します。これはモデルの実行を組み合わせることで低確率のファクトでの幻覚を減らします。',
+            '[構造化出力](/prompt-engineering/structured-output-and-json-mode?lang=ja) : JSON、マークダウン表、またはその他のマシン読み取り可能な形式を要求してフォーマット準拠を修正します。構造化出力は散文より解析が速く、エラーが少ない。',
           ],
         },
 
@@ -1899,18 +1899,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**最適化されたプロンプトは耐久性のあるアセットです。** 3モデルでプロンプトをテストし、5～10個の代表的な入力で動作を確認し、各レバーが何をするかを文書化したら—保存します。プロンプト・ライブラリを使用すると、プロジェクト全体で最適化されたプロンプトを再利用し、チームと共有し、時間をかけて改善できます。',
             '各プロンプトで保存するもの：最終プロンプトテキスト、変更されたレバー、修正した障害モード、テストしたモデル、および代表的な入力での合格/不合格の結果。このドキュメント化は、プロンプト・ライブラリを単純なテキストファイルフォルダから分離するもの—およびEU AI Act監査追跡要件を満たします。',
             '**PromptQuorumは実行する各プロンプトを保存します、バージョン管理、GPT-4o、Claude 4.6 Sonnet、およびGemini 2.5 Proからの応答と一緒に。** スプレッドシートに出力をコピーする代わりに、テスト結果は自動的に保存されます。[PromptQuorumでプロンプト・ライブラリを開始](https://www.promptquorum.com)—最適化するすべてのプロンプトは保存され再生可能です。',
-            '完全なガイドについては、[数時間を節約するプロンプト・ライブラリを構築](/prompt-engineering/build-a-prompt-library?lang=ja?lang=ja)で、ライブラリの構造化、バージョン化、保守を参照してください。',
+            '完全なガイドについては、[数時間を節約するプロンプト・ライブラリを構築](/prompt-engineering/build-a-prompt-library?lang=ja)で、ライブラリの構造化、バージョン化、保守を参照してください。',
           ],
         },
 
         relatedReading: {
           title: '関連読書',
           items: [
-            '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja?lang=ja) — 柱の定義とプロンプト設計の核となる構成要素',
-            '[すべてのプロンプトが必要とする5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja?lang=ja) — あなたが最適化している構造要素',
-            '[チェーン・オブ・ソート・プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja?lang=ja) — 精度向上のためのステップバイステップ推論テクニック',
-            '[ゼロショット対フューショット・プロンプティング](/prompt-engineering/zero-shot-vs-few-shot?lang=ja?lang=ja) — 最適化・レバーとして例を追加するときを確認',
-            '[数時間を節約するプロンプト・ライブラリを構築](/prompt-engineering/build-a-prompt-library?lang=ja?lang=ja) — チーム・アセットとして最適化されたプロンプトを持続',
+            '[プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 柱の定義とプロンプト設計の核となる構成要素',
+            '[すべてのプロンプトが必要とする5つの構成要素](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=ja) — あなたが最適化している構造要素',
+            '[チェーン・オブ・ソート・プロンプティング](/prompt-engineering/chain-of-thought-prompting?lang=ja) — 精度向上のためのステップバイステップ推論テクニック',
+            '[ゼロショット対フューショット・プロンプティング](/prompt-engineering/zero-shot-vs-few-shot?lang=ja) — 最適化・レバーとして例を追加するときを確認',
+            '[数時間を節約するプロンプト・ライブラリを構築](/prompt-engineering/build-a-prompt-library?lang=ja) — チーム・アセットとして最適化されたプロンプトを持続',
           ],
         },
 
@@ -2186,27 +2186,27 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: '提示词优化技巧：高级方法',
           content: '当基础6个杠杆不足时，应用这些技巧。',
           items: [
-            '[少样本vs零样本](/prompt-engineering/zero-shot-vs-few-shot?lang=zh?lang=zh) — 添加1–3个示例以修复格式不一致',
-            '[思维链](/prompt-engineering/chain-of-thought-prompting?lang=zh?lang=zh) — 插入"逐步思考"以修复多步推理失败',
-            '[受约束的提示](/prompt-engineering/constrained-prompting?lang=zh?lang=zh) — 添加明确的禁止以修复范围和基调失败',
-            '[自一致性](/prompt-engineering/self-consistency-prompting?lang=zh?lang=zh) — 运行3–5次并返回最常见的答案以修复幻觉',
-            '[结构化输出](/prompt-engineering/structured-output-and-json-mode?lang=zh?lang=zh) — 请求JSON或markdown表格以修复格式合规性',
+            '[少样本vs零样本](/prompt-engineering/zero-shot-vs-few-shot?lang=zh) — 添加1–3个示例以修复格式不一致',
+            '[思维链](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 插入"逐步思考"以修复多步推理失败',
+            '[受约束的提示](/prompt-engineering/constrained-prompting?lang=zh) — 添加明确的禁止以修复范围和基调失败',
+            '[自一致性](/prompt-engineering/self-consistency-prompting?lang=zh) — 运行3–5次并返回最常见的答案以修复幻觉',
+            '[结构化输出](/prompt-engineering/structured-output-and-json-mode?lang=zh) — 请求JSON或markdown表格以修复格式合规性',
           ],
         },
 
         promptLibrary: {
           title: '将优化的提示词保存到库',
-          content: '优化的提示词是资产。提示词库存储它们及版本注释。查看[构建节省小时的提示词库](/prompt-engineering/build-a-prompt-library?lang=zh?lang=zh)以开始。',
+          content: '优化的提示词是资产。提示词库存储它们及版本注释。查看[构建节省小时的提示词库](/prompt-engineering/build-a-prompt-library?lang=zh)以开始。',
         },
 
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[什么是提示词工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh?lang=zh) — 提示词优化的上游学科',
-            '[每个提示词需要的5个构建块](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=zh?lang=zh) — 您正在优化的结构元素',
-            '[思维链提示](/prompt-engineering/chain-of-thought-prompting?lang=zh?lang=zh) — 用于准确性改进的逐步推理',
-            '[零样本vs少样本提示](/prompt-engineering/zero-shot-vs-few-shot?lang=zh?lang=zh) — 何时添加示例作为优化杠杆',
-            '[构建节省小时的提示词库](/prompt-engineering/build-a-prompt-library?lang=zh?lang=zh) — 持久化优化的提示词作为团队资产',
+            '[什么是提示词工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 提示词优化的上游学科',
+            '[每个提示词需要的5个构建块](/prompt-engineering/5-building-blocks-every-prompt-needs?lang=zh) — 您正在优化的结构元素',
+            '[思维链提示](/prompt-engineering/chain-of-thought-prompting?lang=zh) — 用于准确性改进的逐步推理',
+            '[零样本vs少样本提示](/prompt-engineering/zero-shot-vs-few-shot?lang=zh) — 何时添加示例作为优化杠杆',
+            '[构建节省小时的提示词库](/prompt-engineering/build-a-prompt-library?lang=zh) — 持久化优化的提示词作为团队资产',
           ],
         },
 
@@ -18726,15 +18726,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           content: [
             '**Jedes LLM hat ein Trainings-Cutoff-Datum, und das Modell hat kein Wissen über Ereignisse, Preise, Forschungsarbeiten oder Produktversionen, die nach diesem Datum veröffentlicht wurden, sofern kein externes Retrieval hinzugefügt wird.** OpenAI GPT-4o hat einen Cutoff von Oktober 2024. Anthropic Claude 4.6 Sonnet und Google Gemini 2.5 Pro haben Cutoffs Anfang 2025.',
             'Modelle haben auch spärliches Wissen über Ereignisse *nahe* ihres Cutoffs, da die Trainingsdatensammlung und -verarbeitung Wochen bis Monate nach dem Eintreten von Ereignissen dauert. Ein Modell, das bis Oktober 2024 trainiert wurde, kann dünne Abdeckung von Ereignissen September–Oktober 2024 haben.',
-            'Der primäre Workaround ist [Retrieval-Augmented Generation (RAG)](/prompt-engineering/rag-explained?lang=de?lang=de), das aktuelle oder neuere Dokumente zur Abfragezeit in den Prompt einfügt. Ein sekundärer Workaround ist Prompt-Erdung: die relevanten aktuellen Fakten direkt in den Prompt einfügen und das Modell anweisen, nur aus diesem Kontext zu antworten.',
+            'Der primäre Workaround ist [Retrieval-Augmented Generation (RAG)](/prompt-engineering/rag-explained?lang=de), das aktuelle oder neuere Dokumente zur Abfragezeit in den Prompt einfügt. Ein sekundärer Workaround ist Prompt-Erdung: die relevanten aktuellen Fakten direkt in den Prompt einfügen und das Modell anweisen, nur aus diesem Kontext zu antworten.',
           ],
         },
         hallucination: {
           title: 'Einschränkung 2 — Halluzination ist strukturell, kein Bug',
           content: [
-            '**LLMs generieren statistisch plausible Tokens, keine verifizierten Fakten — wenn das Trainings-Signal für einen spezifischen Fakt dünn ist, produziert das Modell eine selbstbewusst klingende Erfindung.** Dies gilt für jedes Modell, einschließlich GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro. Für einen tieferen Einblick siehe [KI-Halluzinationen — Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de?lang=de).',
+            '**LLMs generieren statistisch plausible Tokens, keine verifizierten Fakten — wenn das Trainings-Signal für einen spezifischen Fakt dünn ist, produziert das Modell eine selbstbewusst klingende Erfindung.** Dies gilt für jedes Modell, einschließlich GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro. Für einen tieferen Einblick siehe [KI-Halluzinationen — Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de).',
             'Halluzination tritt am häufigsten auf bei: spezifischen numerischen Werten (Preise, Daten, Statistiken), Zitaten und Papierreferenzen, Nischen-Technikspezifikationen und Ereignissen nahe oder nach dem Trainings-Cutoff. Modelle signalisieren selten, wenn sie halluzinieren.',
-            'Workarounds: das Quellmaterial im Prompt bereitstellen und das Modell anweisen, nur daraus zu antworten; das Modell bitten, jede Behauptung zu markieren, die es nicht aus dem bereitgestellten Kontext bestätigen kann; [RAG](/prompt-engineering/rag-explained?lang=de?lang=de) verwenden, um Antworten an verifizierten Dokumenten zu verankern; alle Schlüsselzahlen vor der Veröffentlichung gegen primäre Quellen validieren.',
+            'Workarounds: das Quellmaterial im Prompt bereitstellen und das Modell anweisen, nur daraus zu antworten; das Modell bitten, jede Behauptung zu markieren, die es nicht aus dem bereitgestellten Kontext bestätigen kann; [RAG](/prompt-engineering/rag-explained?lang=de) verwenden, um Antworten an verifizierten Dokumenten zu verankern; alle Schlüsselzahlen vor der Veröffentlichung gegen primäre Quellen validieren.',
           ],
           blockquote: '„Das Modell weiß nicht, was es nicht weiß. Es füllt Lücken mit Mustern, nicht mit Stille."',
           blockquoteSource: 'Forschungsergebnis aus mehreren Halluzinations-Benchmarks, 2023–2024',
@@ -18750,7 +18750,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         contextWindow: {
           title: 'Einschränkung 4 — Kontextfenster-Limits',
           content: [
-            '**Jede LLM-Sitzung hat ein hartes Token-Limit — GPT-4o bei 128.000 Tokens, Claude 4.6 Sonnet bei 200.000 Tokens, Gemini 2.5 Pro bei 2.000.000 Tokens — und die Leistung bei früheren Inhalten nimmt ab, wenn das Fenster sich füllt.** Siehe [Kontextfenster erklärt](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de?lang=de) für eine vollständige Erklärung.',
+            '**Jede LLM-Sitzung hat ein hartes Token-Limit — GPT-4o bei 128.000 Tokens, Claude 4.6 Sonnet bei 200.000 Tokens, Gemini 2.5 Pro bei 2.000.000 Tokens — und die Leistung bei früheren Inhalten nimmt ab, wenn das Fenster sich füllt.** Siehe [Kontextfenster erklärt](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de) für eine vollständige Erklärung.',
             'Das "Lost in the Middle"-Problem: mehrere Studien zeigen, dass die LLM-Genauigkeit beim Abrufen von Informationen aus der Mitte eines langen Kontexts deutlich geringer ist als vom Anfang oder Ende. Ein 200K-Token-Fenster bedeutet keine einheitliche Aufmerksamkeit über alle 200K Tokens.',
             'Workarounds: wichtige Informationen am Anfang oder Ende des Prompts strukturieren; RAG verwenden, um nur relevante Chunks abzurufen, anstatt vollständige Dokumente einzufügen; lange Dokumente in Chunk-Sitzungen mit Zusammenfassungsschritten aufteilen.',
           ],
@@ -18770,7 +18770,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           content: [
             '**LLMs generieren Text — sie können nicht im Web surfen, Code ausführen, E-Mails senden, Dateien ändern oder mit externen Systemen interagieren, sofern eine Tool-Use-Schicht diese Aktionen nicht explizit ermöglicht.** Das Modell produziert eine Textbeschreibung dessen, was es tun würde; die Gerüstschicht führt es aus.',
             'Tool-Use (auch Function Calling genannt) — verfügbar in GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro — lässt ein Modell strukturierte Funktionsaufrufe ausgeben, die eine Anwendung abfängt und ausführt. Das Modell kann immer noch keine Aktionen eigenständig durchführen; es kann nur strukturierten Text ausgeben, der externe Ausführung auslöst.',
-            'Autonome Agenten verpacken mehrere Tool-Aufrufe in einer Orchestrierungsschleife, was den Anschein unabhängiger Aktion erzeugt. Prompt-Injection und Sicherheitslücken sind erhebliche Bedenken in diesen Architekturen — siehe [Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de?lang=de).',
+            'Autonome Agenten verpacken mehrere Tool-Aufrufe in einer Orchestrierungsschleife, was den Anschein unabhängiger Aktion erzeugt. Prompt-Injection und Sicherheitslücken sind erhebliche Bedenken in diesen Architekturen — siehe [Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de).',
           ],
         },
         bias: {
@@ -18840,15 +18840,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         },
         keyTerms: {
           title: 'Schlüsselbegriffe',
-          content: ['Definitionen der Kernkonzepte, die in diesem Artikel verwendet werden. Jeder Begriff verlinkt zum vollständigen Eintrag im [Prompt Engineering Glossar](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de).'],
+          content: ['Definitionen der Kernkonzepte, die in diesem Artikel verwendet werden. Jeder Begriff verlinkt zum vollständigen Eintrag im [Prompt Engineering Glossar](/prompt-engineering/prompt-engineering-glossary?lang=de).'],
           items: [
-            '**[Wissens-Cutoff](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de)** — Das Datum, nach dem ein Modell keine Trainingsdaten hat. Jedes Ereignis, jede Preisänderung oder jeder Release nach diesem Datum ist für das Modell unsichtbar, sofern er nicht in den Prompt eingefügt wird. GPT-4o: Oktober 2024; Claude 4.6 Sonnet und Gemini 2.5 Pro: Anfang 2025.',
-            '**[Halluzination](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#core-concepts)** — Selbstbewusst klingende, aber faktisch falsche oder erfundene Ausgabe. Verursacht durch statistische Token-Vorhersage statt Wahrheitsabfrage. Das Erden von Prompts mit Quellmaterial reduziert, eliminiert sie aber nicht.',
-            '**[Kontextfenster](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#core-concepts)** — Die maximale Anzahl von Tokens (Wörter + Interpunktion), die das Modell gleichzeitig verarbeiten kann, einschließlich System-Prompt, Gesprächsverlauf und abgerufener Dokumente. GPT-4o: 128K Tokens; Claude 4.6 Sonnet: 200K; Gemini 2.5 Pro: 2M.',
-            '**[Tool-Use / Function Calling](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#agents-orchestration)** — Eine Fähigkeit, die es dem Modell ermöglicht, externe Funktionen (Websuche, Code-Ausführung, Datenbankabfragen) aufzurufen, anstatt Text-Antworten zu generieren. Erforderlich, um die Keine-Echtwelt-Aktion-Einschränkung zu umgehen.',
-            '**[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#core-concepts)** — Eine Prompting-Technik, bei der Sie das Modell bitten, Schritt für Schritt zu schlussfolgen, bevor Sie eine endgültige Antwort geben. Verbessert die Genauigkeit bei mehrstufiger Arithmetik, Logik und Planungsaufgaben erheblich.',
-            '**[RAG (Retrieval-Augmented Generation)](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#core-concepts)** — Architektur, bei der relevante Dokumente aus einer externen Wissensdatenbank abgerufen und zur Abfragezeit in den Prompt eingefügt werden. Der primäre Workaround für Wissens-Cutoffs.',
-            '**[Trainings-Bias](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#safety-alignment)** — Systematische Verzerrung in Modellausgaben, verursacht durch Ungleichgewichte in Trainingsdaten — primär englischsprachige, westliche und Pre-2025-Internetinhalte. Nicht-englische und Nischendomänen-Aufgaben sind strukturell schwächer bei allen großen Modellen.',
+            '**[Wissens-Cutoff](/prompt-engineering/prompt-engineering-glossary?lang=de)** — Das Datum, nach dem ein Modell keine Trainingsdaten hat. Jedes Ereignis, jede Preisänderung oder jeder Release nach diesem Datum ist für das Modell unsichtbar, sofern er nicht in den Prompt eingefügt wird. GPT-4o: Oktober 2024; Claude 4.6 Sonnet und Gemini 2.5 Pro: Anfang 2025.',
+            '**[Halluzination](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Selbstbewusst klingende, aber faktisch falsche oder erfundene Ausgabe. Verursacht durch statistische Token-Vorhersage statt Wahrheitsabfrage. Das Erden von Prompts mit Quellmaterial reduziert, eliminiert sie aber nicht.',
+            '**[Kontextfenster](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Die maximale Anzahl von Tokens (Wörter + Interpunktion), die das Modell gleichzeitig verarbeiten kann, einschließlich System-Prompt, Gesprächsverlauf und abgerufener Dokumente. GPT-4o: 128K Tokens; Claude 4.6 Sonnet: 200K; Gemini 2.5 Pro: 2M.',
+            '**[Tool-Use / Function Calling](/prompt-engineering/prompt-engineering-glossary?lang=de#agents-orchestration)** — Eine Fähigkeit, die es dem Modell ermöglicht, externe Funktionen (Websuche, Code-Ausführung, Datenbankabfragen) aufzurufen, anstatt Text-Antworten zu generieren. Erforderlich, um die Keine-Echtwelt-Aktion-Einschränkung zu umgehen.',
+            '**[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Eine Prompting-Technik, bei der Sie das Modell bitten, Schritt für Schritt zu schlussfolgen, bevor Sie eine endgültige Antwort geben. Verbessert die Genauigkeit bei mehrstufiger Arithmetik, Logik und Planungsaufgaben erheblich.',
+            '**[RAG (Retrieval-Augmented Generation)](/prompt-engineering/prompt-engineering-glossary?lang=de#core-concepts)** — Architektur, bei der relevante Dokumente aus einer externen Wissensdatenbank abgerufen und zur Abfragezeit in den Prompt eingefügt werden. Der primäre Workaround für Wissens-Cutoffs.',
+            '**[Trainings-Bias](/prompt-engineering/prompt-engineering-glossary?lang=de#safety-alignment)** — Systematische Verzerrung in Modellausgaben, verursacht durch Ungleichgewichte in Trainingsdaten — primär englischsprachige, westliche und Pre-2025-Internetinhalte. Nicht-englische und Nischendomänen-Aufgaben sind strukturell schwächer bei allen großen Modellen.',
           ],
         },
         regionalContext: {
@@ -18862,12 +18862,12 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de?lang=de) — Hier beginnen für die grundlegenden Konzepte',
-            '[Wie LLMs wirklich funktionieren](/prompt-engineering/how-llms-actually-work?lang=de?lang=de) — Die Transformer-Architektur, die erklärt, warum diese Grenzen existieren',
-            '[KI-Halluzinationen — Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de?lang=de) — Tieferer Einblick in Einschränkung 2',
-            '[Kontextfenster erklärt — Warum KI vergisst](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de?lang=de) — Detaillierte Aufschlüsselung der Token-Limits',
-            '[RAG erklärt](/prompt-engineering/rag-explained?lang=de?lang=de) — Der primäre Workaround für Wissens-Cutoffs',
-            '[Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de?lang=de) — Pflichtlektüre für Tool-Use und Agenten-Architekturen (Einschränkungen 6 & 8)',
+            '[Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering?lang=de) — Hier beginnen für die grundlegenden Konzepte',
+            '[Wie LLMs wirklich funktionieren](/prompt-engineering/how-llms-actually-work?lang=de) — Die Transformer-Architektur, die erklärt, warum diese Grenzen existieren',
+            '[KI-Halluzinationen — Warum KI Dinge erfindet](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=de) — Tieferer Einblick in Einschränkung 2',
+            '[Kontextfenster erklärt — Warum KI vergisst](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de) — Detaillierte Aufschlüsselung der Token-Limits',
+            '[RAG erklärt](/prompt-engineering/rag-explained?lang=de) — Der primäre Workaround für Wissens-Cutoffs',
+            '[Prompt Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) — Pflichtlektüre für Tool-Use und Agenten-Architekturen (Einschränkungen 6 & 8)',
           ],
         },
         faq: {
@@ -19065,15 +19065,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           content: [
             '**Chaque LLM a une date de coupure d\'entraînement, et le modèle n\'a aucune connaissance des événements, prix, articles ou versions de produits publiés après cette date sans récupération externe.** OpenAI GPT-4o a une coupure d\'octobre 2024. Anthropic Claude 4.6 Sonnet et Google Gemini 2.5 Pro ont des coupures début 2025.',
             'Les modèles ont également des connaissances clairsemées des événements *proches* de leur coupure, car la collecte et le traitement des données d\'entraînement prennent des semaines à des mois après que les événements se produisent. Un modèle entraîné jusqu\'en octobre 2024 peut avoir une couverture mince des événements de septembre–octobre 2024.',
-            'La solution principale est la [génération augmentée par récupération (RAG)](/prompt-engineering/rag-explained?lang=fr?lang=fr), qui injecte des documents actuels ou récents dans le prompt au moment de la requête. Une solution secondaire est l\'ancrage du prompt : coller les faits actuels pertinents directement dans le prompt et demander au modèle de répondre uniquement à partir de ce contexte.',
+            'La solution principale est la [génération augmentée par récupération (RAG)](/prompt-engineering/rag-explained?lang=fr), qui injecte des documents actuels ou récents dans le prompt au moment de la requête. Une solution secondaire est l\'ancrage du prompt : coller les faits actuels pertinents directement dans le prompt et demander au modèle de répondre uniquement à partir de ce contexte.',
           ],
         },
         hallucination: {
           title: 'Limitation 2 — L\'hallucination est structurelle, pas un bug',
           content: [
-            '**Les LLMs génèrent des tokens statistiquement plausibles, pas des faits vérifiés — quand le signal d\'entraînement pour un fait spécifique est faible, le modèle produit une fabrication qui sonne assurée.** Cela s\'applique à chaque modèle, y compris GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro. Pour un approfondissement, voir [Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr?lang=fr).',
+            '**Les LLMs génèrent des tokens statistiquement plausibles, pas des faits vérifiés — quand le signal d\'entraînement pour un fait spécifique est faible, le modèle produit une fabrication qui sonne assurée.** Cela s\'applique à chaque modèle, y compris GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro. Pour un approfondissement, voir [Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr).',
             'L\'hallucination se produit le plus fréquemment sur : les chiffres numériques spécifiques (prix, dates, statistiques), les citations et références d\'articles, les spécifications techniques de niche et les événements proches ou après la coupure d\'entraînement. Les modèles signalent rarement quand ils hallucinent.',
-            'Solutions : fournir le matériel source dans le prompt et demander au modèle de n\'y répondre qu\'à partir de celui-ci ; demander au modèle de signaler toute affirmation qu\'il ne peut pas confirmer à partir du contexte fourni ; utiliser [RAG](/prompt-engineering/rag-explained?lang=fr?lang=fr) pour ancrer les réponses sur des documents vérifiés ; valider tous les chiffres clés contre des sources primaires avant publication.',
+            'Solutions : fournir le matériel source dans le prompt et demander au modèle de n\'y répondre qu\'à partir de celui-ci ; demander au modèle de signaler toute affirmation qu\'il ne peut pas confirmer à partir du contexte fourni ; utiliser [RAG](/prompt-engineering/rag-explained?lang=fr) pour ancrer les réponses sur des documents vérifiés ; valider tous les chiffres clés contre des sources primaires avant publication.',
           ],
           blockquote: '« Le modèle ne sait pas ce qu\'il ne sait pas. Il comble les lacunes avec des motifs, pas avec le silence. »',
           blockquoteSource: 'Résultat de recherche issu de plusieurs benchmarks d\'hallucination, 2023–2024',
@@ -19089,7 +19089,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         contextWindow: {
           title: 'Limitation 4 — Limites de la fenêtre de contexte',
           content: [
-            '**Chaque session LLM a une limite stricte de tokens — GPT-4o à 128 000 tokens, Claude 4.6 Sonnet à 200 000 tokens, Gemini 2.5 Pro à 2 000 000 tokens — et les performances sur le contenu antérieur se dégradent à mesure que la fenêtre se remplit.** Voir [Fenêtres de contexte expliquées](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr?lang=fr) pour une explication complète.',
+            '**Chaque session LLM a une limite stricte de tokens — GPT-4o à 128 000 tokens, Claude 4.6 Sonnet à 200 000 tokens, Gemini 2.5 Pro à 2 000 000 tokens — et les performances sur le contenu antérieur se dégradent à mesure que la fenêtre se remplit.** Voir [Fenêtres de contexte expliquées](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr) pour une explication complète.',
             'Le problème « perdu au milieu » : plusieurs études montrent que la précision des LLMs pour récupérer des informations au milieu d\'un long contexte est significativement plus faible qu\'au début ou à la fin. Une fenêtre de 200K tokens ne signifie pas une attention uniforme sur tous les 200K tokens.',
             'Solutions : structurer les informations importantes au début ou à la fin du prompt ; utiliser RAG pour récupérer uniquement les morceaux pertinents plutôt que d\'insérer des documents complets ; découper les longs documents en sessions fragmentées avec des étapes de résumé.',
           ],
@@ -19109,7 +19109,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
           content: [
             '**Les LLMs génèrent du texte — ils ne peuvent pas naviguer sur le web, exécuter du code, envoyer des e-mails, modifier des fichiers ou interagir avec des systèmes externes sauf si une couche d\'utilisation d\'outils active explicitement ces actions.** Le modèle produit une description textuelle de ce qu\'il ferait ; la couche d\'infrastructure l\'exécute.',
             'L\'utilisation d\'outils (aussi appelée appel de fonctions) — disponible dans GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro — permet à un modèle d\'émettre des appels de fonctions structurés qu\'une application intercepte et exécute. Le modèle ne peut toujours pas agir de manière autonome ; il peut seulement émettre du texte structuré qui déclenche une exécution externe.',
-            'Les agents autonomes encapsulent plusieurs appels d\'outils dans une boucle d\'orchestration, créant l\'apparence d\'une action indépendante. L\'injection de prompts et les vulnérabilités de sécurité sont des préoccupations importantes dans ces architectures — voir [Injection de prompts et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr?lang=fr).',
+            'Les agents autonomes encapsulent plusieurs appels d\'outils dans une boucle d\'orchestration, créant l\'apparence d\'une action indépendante. L\'injection de prompts et les vulnérabilités de sécurité sont des préoccupations importantes dans ces architectures — voir [Injection de prompts et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr).',
           ],
         },
         bias: {
@@ -19179,15 +19179,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         },
         keyTerms: {
           title: 'Termes clés',
-          content: ['Définitions des concepts fondamentaux utilisés tout au long de cet article. Chaque terme renvoie à l\'entrée complète dans le [Glossaire d\'ingénierie des prompts](/prompt-engineering/prompt-engineering-glossary?lang=fr?lang=fr).'],
+          content: ['Définitions des concepts fondamentaux utilisés tout au long de cet article. Chaque terme renvoie à l\'entrée complète dans le [Glossaire d\'ingénierie des prompts](/prompt-engineering/prompt-engineering-glossary?lang=fr).'],
           items: [
-            '**[Coupure de connaissance](/prompt-engineering/prompt-engineering-glossary?lang=fr?lang=fr)** — La date au-delà de laquelle un modèle n\'a pas de données d\'entraînement. Tout événement, changement de prix ou publication après cette date est invisible pour le modèle sauf si vous le collez dans le prompt. GPT-4o : octobre 2024 ; Claude 4.6 Sonnet et Gemini 2.5 Pro : début 2025.',
-            '**[Hallucination](/prompt-engineering/prompt-engineering-glossary?lang=fr?lang=fr#core-concepts)** — Sortie qui sonne assurée mais factuellement incorrecte ou inventée. Causée par la prédiction statistique de tokens plutôt que la recherche de vérité. Ancrer les prompts avec des sources réduit mais n\'élimine pas ce phénomène.',
-            '**[Fenêtre de contexte](/prompt-engineering/prompt-engineering-glossary?lang=fr?lang=fr#core-concepts)** — Le nombre maximum de tokens (mots + ponctuation) que le modèle peut traiter en même temps, incluant le prompt système, l\'historique de conversation et les documents récupérés. GPT-4o : 128K tokens ; Claude 4.6 Sonnet : 200K ; Gemini 2.5 Pro : 2M.',
-            '**[Utilisation d\'outils / Appel de fonctions](/prompt-engineering/prompt-engineering-glossary?lang=fr?lang=fr#agents-orchestration)** — Une capacité permettant au modèle d\'invoquer des fonctions externes (recherche web, exécution de code, requêtes de base de données) au lieu de générer des réponses textuelles. Nécessaire pour contourner la limitation d\'absence d\'action réelle.',
-            '**[Chaîne-de-pensée (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=fr?lang=fr#core-concepts)** — Une technique de prompting où vous demandez au modèle de raisonner étape par étape avant de donner une réponse finale. Améliore significativement la précision sur l\'arithmétique multi-étapes, la logique et les tâches de planification.',
-            '**[RAG (Génération augmentée par récupération)](/prompt-engineering/prompt-engineering-glossary?lang=fr?lang=fr#core-concepts)** — Architecture où des documents pertinents sont récupérés depuis une base de connaissances externe et injectés dans le prompt au moment de la requête. La solution principale pour les coupures de connaissance.',
-            '**[Biais d\'entraînement](/prompt-engineering/prompt-engineering-glossary?lang=fr?lang=fr#safety-alignment)** — Distorsion systématique dans les sorties du modèle causée par des déséquilibres dans les données d\'entraînement — principalement du contenu internet anglophone, occidental et d\'avant 2025. Les tâches en langues non anglophones et dans des domaines de niche sont structurellement plus faibles pour tous les grands modèles.',
+            '**[Coupure de connaissance](/prompt-engineering/prompt-engineering-glossary?lang=fr)** — La date au-delà de laquelle un modèle n\'a pas de données d\'entraînement. Tout événement, changement de prix ou publication après cette date est invisible pour le modèle sauf si vous le collez dans le prompt. GPT-4o : octobre 2024 ; Claude 4.6 Sonnet et Gemini 2.5 Pro : début 2025.',
+            '**[Hallucination](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Sortie qui sonne assurée mais factuellement incorrecte ou inventée. Causée par la prédiction statistique de tokens plutôt que la recherche de vérité. Ancrer les prompts avec des sources réduit mais n\'élimine pas ce phénomène.',
+            '**[Fenêtre de contexte](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Le nombre maximum de tokens (mots + ponctuation) que le modèle peut traiter en même temps, incluant le prompt système, l\'historique de conversation et les documents récupérés. GPT-4o : 128K tokens ; Claude 4.6 Sonnet : 200K ; Gemini 2.5 Pro : 2M.',
+            '**[Utilisation d\'outils / Appel de fonctions](/prompt-engineering/prompt-engineering-glossary?lang=fr#agents-orchestration)** — Une capacité permettant au modèle d\'invoquer des fonctions externes (recherche web, exécution de code, requêtes de base de données) au lieu de générer des réponses textuelles. Nécessaire pour contourner la limitation d\'absence d\'action réelle.',
+            '**[Chaîne-de-pensée (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Une technique de prompting où vous demandez au modèle de raisonner étape par étape avant de donner une réponse finale. Améliore significativement la précision sur l\'arithmétique multi-étapes, la logique et les tâches de planification.',
+            '**[RAG (Génération augmentée par récupération)](/prompt-engineering/prompt-engineering-glossary?lang=fr#core-concepts)** — Architecture où des documents pertinents sont récupérés depuis une base de connaissances externe et injectés dans le prompt au moment de la requête. La solution principale pour les coupures de connaissance.',
+            '**[Biais d\'entraînement](/prompt-engineering/prompt-engineering-glossary?lang=fr#safety-alignment)** — Distorsion systématique dans les sorties du modèle causée par des déséquilibres dans les données d\'entraînement — principalement du contenu internet anglophone, occidental et d\'avant 2025. Les tâches en langues non anglophones et dans des domaines de niche sont structurellement plus faibles pour tous les grands modèles.',
           ],
         },
         regionalContext: {
@@ -19201,12 +19201,12 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Qu\'est-ce que l\'ingénierie des prompts ?](/prompt-engineering/what-is-prompt-engineering?lang=fr?lang=fr) — Commencez ici pour les concepts fondamentaux',
-            '[Comment les LLMs fonctionnent vraiment](/prompt-engineering/how-llms-actually-work?lang=fr?lang=fr) — L\'architecture transformer qui explique pourquoi ces limites existent',
-            '[Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr?lang=fr) — Approfondissement de la limitation 2',
-            '[Fenêtres de contexte expliquées — Pourquoi l\'IA oublie](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr?lang=fr) — Analyse détaillée des limites de tokens',
-            '[RAG expliqué](/prompt-engineering/rag-explained?lang=fr?lang=fr) — La solution principale pour les coupures de connaissance',
-            '[Injection de prompts et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr?lang=fr) — Lecture essentielle pour l\'utilisation d\'outils et les architectures d\'agents (limitations 6 & 8)',
+            '[Qu\'est-ce que l\'ingénierie des prompts ?](/prompt-engineering/what-is-prompt-engineering?lang=fr) — Commencez ici pour les concepts fondamentaux',
+            '[Comment les LLMs fonctionnent vraiment](/prompt-engineering/how-llms-actually-work?lang=fr) — L\'architecture transformer qui explique pourquoi ces limites existent',
+            '[Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=fr) — Approfondissement de la limitation 2',
+            '[Fenêtres de contexte expliquées — Pourquoi l\'IA oublie](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr) — Analyse détaillée des limites de tokens',
+            '[RAG expliqué](/prompt-engineering/rag-explained?lang=fr) — La solution principale pour les coupures de connaissance',
+            '[Injection de prompts et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — Lecture essentielle pour l\'utilisation d\'outils et les architectures d\'agents (limitations 6 & 8)',
           ],
         },
         faq: {
@@ -19404,15 +19404,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       content: [
         '**すべてのLLMはトレーニングカットオフ日を持ち、外部検索が追加されない限り、モデルはその日付の後にリリースされたイベント、価格、論文、または製品バージョンについての知識を持ちません。** OpenAI GPT-4oは2024年10月のカットオフを持っています。Anthropic Claude 4.6 SonnetとGoogle Gemini 2.5 Proは2025年初頭のカットオフを持っています。',
         'モデルはまた、カットオフに*近い*イベントについて希薄な知識を持っています。トレーニングデータの収集と処理にはイベントの発生から数週間から数か月かかるため。2024年10月までトレーニングされたモデルは、2024年9月から10月のイベントについてのカバレッジが薄い可能性があります。',
-        '主要な回避方法は、[検索拡張生成（RAG）](/prompt-engineering/rag-explained?lang=ja?lang=ja)で、クエリ時にプロンプトにライブまたは最近のドキュメントを注入します。二次的な回避方法はプロンプトの接地です：関連する現在の事実をプロンプトに直接貼り付けて、モデルにそのコンテキストからのみ答えるよう指示する。',
+        '主要な回避方法は、[検索拡張生成（RAG）](/prompt-engineering/rag-explained?lang=ja)で、クエリ時にプロンプトにライブまたは最近のドキュメントを注入します。二次的な回避方法はプロンプトの接地です：関連する現在の事実をプロンプトに直接貼り付けて、モデルにそのコンテキストからのみ答えるよう指示する。',
       ],
     },
     hallucination: {
       title: '制限2 — 幻覚は構造的で、バグではない',
       content: [
-        '**LLMは検証された事実ではなく、統計的にもっともらしいトークンを生成します — 特定の事実のトレーニング信号が薄いとき、モデルは確信を持った虚偽を生成します。** これはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proを含むすべてのモデルに適用されます。詳細については、[AI幻覚 — AIが物事を作り出す理由](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja?lang=ja)を参照してください。',
+        '**LLMは検証された事実ではなく、統計的にもっともらしいトークンを生成します — 特定の事実のトレーニング信号が薄いとき、モデルは確信を持った虚偽を生成します。** これはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proを含むすべてのモデルに適用されます。詳細については、[AI幻覚 — AIが物事を作り出す理由](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja)を参照してください。',
         '幻覚は最も頻繁に発生します：特定の数値（価格、日付、統計）、引用と論文参考文献、ニッチな技術仕様、およびトレーニングカットオフに近いまたは後のイベント。モデルが幻覚を起こしているときは、ほとんど信号を送りません。',
-        '回避方法：ソース資料をプロンプトに提供し、モデルにそれからのみ回答するよう指示する；モデルに提供されたコンテキストから確認できない主張にフラグを立てるよう指示する；[RAG](/prompt-engineering/rag-explained?lang=ja?lang=ja)を使用して、確認されたドキュメントに回答を結合する；公開前にすべての重要な数字を一次資料に対して検証する。',
+        '回避方法：ソース資料をプロンプトに提供し、モデルにそれからのみ回答するよう指示する；モデルに提供されたコンテキストから確認できない主張にフラグを立てるよう指示する；[RAG](/prompt-engineering/rag-explained?lang=ja)を使用して、確認されたドキュメントに回答を結合する；公開前にすべての重要な数字を一次資料に対して検証する。',
       ],
       blockquote: '「モデルは知らないことを知りません。ギャップを沈黙ではなくパターンで埋めます。」',
       blockquoteSource: '複数の幻覚ベンチマーク全体の研究結果、2023–2024',
@@ -19428,7 +19428,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
     contextWindow: {
       title: '制限4 — コンテキストウィンドウの上限',
       content: [
-        '**すべてのLLMセッションにハードなトークン制限があります — GPT-4oは128,000トークン、Claude 4.6 Sonnetは200,000トークン、Gemini 2.5 Proは2,000,000トークン — ウィンドウが満杯になると、前のコンテンツのパフォーマンスが低下します。** [コンテキストウィンドウの説明](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja?lang=ja)を参照して、完全な詳細を確認してください。',
+        '**すべてのLLMセッションにハードなトークン制限があります — GPT-4oは128,000トークン、Claude 4.6 Sonnetは200,000トークン、Gemini 2.5 Proは2,000,000トークン — ウィンドウが満杯になると、前のコンテンツのパフォーマンスが低下します。** [コンテキストウィンドウの説明](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja)を参照して、完全な詳細を確認してください。',
         '「中間で失われる」問題：複数の研究によると、長いコンテキストの中間から情報を取得するLLM精度は、始まりまたは終わりから大幅に低くなっています。200Kトークンウィンドウは、すべての200Kトークンに対して均一な注意が広がることを意味しません。',
         '回避方法：重要な情報をプロンプトの開始または終了に配置する；RAGを使用して関連チャンクのみを取得し、完全なドキュメントをダンプしない；長いドキュメントを要約ステップで分割されたセッションに分割する。',
       ],
@@ -19448,7 +19448,7 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       content: [
         '**LLMはテキストを生成します — ツール使用レイヤーが明示的にこれらのアクションを有効にしない限り、ウェブをブラウズしたり、コードを実行したり、メールを送信したり、ファイルを変更したり、外部システムと相互作用したりすることはできません。** モデルはそれが何をするかを説明するテキスト説明を生成します；スキャフォルディングレイヤーが実行します。',
         'ツール使用（関数呼び出しとも呼ばれる）— GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proで利用可能です — モデルがアプリケーションが傍受して実行する構造化関数呼び出しを出力できるようにします。モデルは独立してアクションを実行することはできず、外部実行をトリガーする構造化テキストのみを出力できます。',
-        '自律的なエージェントは、複数のツール呼び出しをオーケストレーションループで包みます。プロンプト注入とセキュリティの脆弱性はこれらのアーキテクチャの重大な懸念です — [プロンプト注入とセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja?lang=ja)を参照してください。',
+        '自律的なエージェントは、複数のツール呼び出しをオーケストレーションループで包みます。プロンプト注入とセキュリティの脆弱性はこれらのアーキテクチャの重大な懸念です — [プロンプト注入とセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja)を参照してください。',
       ],
     },
     bias: {
@@ -19518,15 +19518,15 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
     },
     keyTerms: {
       title: 'キーター',
-      content: ['この記事全体で使用されるコア概念の定義。各用語は、[プロンプトエンジニアリング用語集](/prompt-engineering/prompt-engineering-glossary?lang=ja?lang=ja)の完全なエントリにリンクしています。'],
+      content: ['この記事全体で使用されるコア概念の定義。各用語は、[プロンプトエンジニアリング用語集](/prompt-engineering/prompt-engineering-glossary?lang=ja)の完全なエントリにリンクしています。'],
       items: [
-        '**[知識カットオフ](/prompt-engineering/prompt-engineering-glossary?lang=ja?lang=ja)** — モデルがトレーニングデータを持たない日付。この日付後の任何のイベント、価格変更、またはリリースは、プロンプトに貼り付けない限り、モデルに見えません。GPT-4o：2024年10月；Claude 4.6 SonnetおよびGemini 2.5 Pro：2025年初頭。',
-        '**[幻覚](/prompt-engineering/prompt-engineering-glossary?lang=ja?lang=ja#core-concepts)** — 事実的に不正確または捏造された、確信を持った音の出力。統計的なトークン予測ではなく、真実検索による。ソース資料でプロンプトを接地することで削減されますが、排除されません。',
-        '**[コンテキストウィンドウ](/prompt-engineering/prompt-engineering-glossary?lang=ja?lang=ja#core-concepts)** — モデルが一度に処理できるトークンの最大数（単語 + 句読点）、システムプロンプト、会話履歴、取得ドキュメントを含む。GPT-4o：128Kトークン；Claude 4.6 Sonnet：200K；Gemini 2.5 Pro：2M。',
-        '**[ツール使用/関数呼び出し](/prompt-engineering/prompt-engineering-glossary?lang=ja?lang=ja#agents-orchestration)** — モデルがテキスト答えを生成する代わりに、外部関数（ウェブ検索、コード実行、データベースクエリ）を呼び出すことができる機能。実世界のアクション制限を回避するために必要。',
-        '**[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=ja?lang=ja#core-concepts)** — モデルに最終的な答えを与える前にステップバイステップで推論するよう指示するプロンプト技術。複数ステップの算術、ロジック、計画タスクの精度を大幅に改善します。',
-        '**[RAG (検索拡張生成)](/prompt-engineering/prompt-engineering-glossary?lang=ja?lang=ja#core-concepts)** — 関連するドキュメントが外部知識ベースから取得され、クエリ時にプロンプトに注入されるアーキテクチャ。知識カットオフの主要な回避方法。',
-        '**[トレーニングバイアス](/prompt-engineering/prompt-engineering-glossary?lang=ja?lang=ja#safety-alignment)** — トレーニングデータのバランス不均衡によるモデル出力の体系的なスキュー — 主に英語、西洋、2025年前のインターネットコンテンツ。非英語とニッチドメインのタスクは、すべての主要なモデル間で構造的に弱い。',
+        '**[知識カットオフ](/prompt-engineering/prompt-engineering-glossary?lang=ja)** — モデルがトレーニングデータを持たない日付。この日付後の任何のイベント、価格変更、またはリリースは、プロンプトに貼り付けない限り、モデルに見えません。GPT-4o：2024年10月；Claude 4.6 SonnetおよびGemini 2.5 Pro：2025年初頭。',
+        '**[幻覚](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — 事実的に不正確または捏造された、確信を持った音の出力。統計的なトークン予測ではなく、真実検索による。ソース資料でプロンプトを接地することで削減されますが、排除されません。',
+        '**[コンテキストウィンドウ](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — モデルが一度に処理できるトークンの最大数（単語 + 句読点）、システムプロンプト、会話履歴、取得ドキュメントを含む。GPT-4o：128Kトークン；Claude 4.6 Sonnet：200K；Gemini 2.5 Pro：2M。',
+        '**[ツール使用/関数呼び出し](/prompt-engineering/prompt-engineering-glossary?lang=ja#agents-orchestration)** — モデルがテキスト答えを生成する代わりに、外部関数（ウェブ検索、コード実行、データベースクエリ）を呼び出すことができる機能。実世界のアクション制限を回避するために必要。',
+        '**[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — モデルに最終的な答えを与える前にステップバイステップで推論するよう指示するプロンプト技術。複数ステップの算術、ロジック、計画タスクの精度を大幅に改善します。',
+        '**[RAG (検索拡張生成)](/prompt-engineering/prompt-engineering-glossary?lang=ja#core-concepts)** — 関連するドキュメントが外部知識ベースから取得され、クエリ時にプロンプトに注入されるアーキテクチャ。知識カットオフの主要な回避方法。',
+        '**[トレーニングバイアス](/prompt-engineering/prompt-engineering-glossary?lang=ja#safety-alignment)** — トレーニングデータのバランス不均衡によるモデル出力の体系的なスキュー — 主に英語、西洋、2025年前のインターネットコンテンツ。非英語とニッチドメインのタスクは、すべての主要なモデル間で構造的に弱い。',
       ],
     },
     regionalContext: {
@@ -19540,12 +19540,12 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
     relatedReading: {
       title: '関連資料',
       items: [
-        '[プロンプトエンジニアリングとは何か?](/prompt-engineering/what-is-prompt-engineering?lang=ja?lang=ja) — 基本的な概念から始めてください',
-        '[LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja?lang=ja) — これらの制限が存在する理由を説明するトランスフォーマーアーキテクチャ',
-        '[AI幻覚 — AIが物事を作り出す理由](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja?lang=ja) — 制限2についての詳細な掘り下げ',
-        '[コンテキストウィンドウの説明 — AIが忘れる理由](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja?lang=ja) — トークン制限の詳細な分析',
-        '[RAG説明](/prompt-engineering/rag-explained?lang=ja?lang=ja) — 知識カットオフの主要な回避方法',
-        '[プロンプト注入とセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja?lang=ja) — ツール使用とエージェントアーキテクチャに不可欠な読み（制限6 & 8）',
+        '[プロンプトエンジニアリングとは何か?](/prompt-engineering/what-is-prompt-engineering?lang=ja) — 基本的な概念から始めてください',
+        '[LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja) — これらの制限が存在する理由を説明するトランスフォーマーアーキテクチャ',
+        '[AI幻覚 — AIが物事を作り出す理由](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=ja) — 制限2についての詳細な掘り下げ',
+        '[コンテキストウィンドウの説明 — AIが忘れる理由](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja) — トークン制限の詳細な分析',
+        '[RAG説明](/prompt-engineering/rag-explained?lang=ja) — 知識カットオフの主要な回避方法',
+        '[プロンプト注入とセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — ツール使用とエージェントアーキテクチャに不可欠な読み（制限6 & 8）',
       ],
     },
     faq: {
@@ -19743,15 +19743,15 @@ zh: {
           content: [
             '**每个大语言模型都有训练截断日期，除非添加外部检索，否则模型对该日期后发布的事件、价格、论文或产品版本一无所知。** OpenAI GPT-4o 的截断为 2024 年 10 月。Anthropic Claude 4.6 Sonnet 和 Google Gemini 2.5 Pro 的截断为 2025 年初。',
             '模型对*接近*其截断的事件的了解也很少，因为训练数据收集和处理在事件发生后需要数周到数月。训练到 2024 年 10 月的模型可能对 2024 年 9 月-10 月的事件覆盖很少。',
-            '主要解决方案是[检索增强生成（RAG）](/prompt-engineering/rag-explained?lang=zh?lang=zh)，在查询时将实时或最近的文档注入提示词中。次要解决方案是提示词基础化：将相关当前事实直接粘贴到提示词中，并指示模型仅从该上下文回答。',
+            '主要解决方案是[检索增强生成（RAG）](/prompt-engineering/rag-explained?lang=zh)，在查询时将实时或最近的文档注入提示词中。次要解决方案是提示词基础化：将相关当前事实直接粘贴到提示词中，并指示模型仅从该上下文回答。',
           ],
         },
         hallucination: {
           title: '限制 2 — 幻觉是结构性的，不是错误',
           content: [
-            '**大语言模型生成统计上合理的令牌，而非已验证的事实 — 当特定事实的训练信号很少时，模型生成有信心但虚假的说法。** 这适用于每个模型，包括 GPT-4o、Claude 4.6 Sonnet 和 Gemini 2.5 Pro。深入了解，请参见[AI 幻觉 — 为什么 AI 编造东西](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh?lang=zh)。',
+            '**大语言模型生成统计上合理的令牌，而非已验证的事实 — 当特定事实的训练信号很少时，模型生成有信心但虚假的说法。** 这适用于每个模型，包括 GPT-4o、Claude 4.6 Sonnet 和 Gemini 2.5 Pro。深入了解，请参见[AI 幻觉 — 为什么 AI 编造东西](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh)。',
             '幻觉最常发生在：特定数值（价格、日期、统计数据）、引用和论文参考、利基技术规格和接近或超过训练截断的事件。模型很少在幻觉时发出信号。',
-            '解决方案：在提示词中提供源材料，指示模型仅从中回答；要求模型标记任何无法从提供的上下文确认的声明；使用[RAG](/prompt-engineering/rag-explained?lang=zh?lang=zh)将答案锚定到已验证文档；在发布前根据原始来源验证所有关键数字。',
+            '解决方案：在提示词中提供源材料，指示模型仅从中回答；要求模型标记任何无法从提供的上下文确认的声明；使用[RAG](/prompt-engineering/rag-explained?lang=zh)将答案锚定到已验证文档；在发布前根据原始来源验证所有关键数字。',
           ],
           blockquote: '"模型不知道它不知道的东西。它用模式而非沉默填充空白。"',
           blockquoteSource: '2023-2024 年多个幻觉基准的研究发现',
@@ -19767,7 +19767,7 @@ zh: {
         contextWindow: {
           title: '限制 4 — 上下文窗口限制',
           content: [
-            '**每个大语言模型会话都有硬令牌限制 — GPT-4o 128,000 令牌、Claude 4.6 Sonnet 200,000 令牌、Gemini 2.5 Pro 2,000,000 令牌 — 随着窗口填充，早期内容的性能会下降。** 请参见[上下文窗口详解](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh?lang=zh)获取完整分析。',
+            '**每个大语言模型会话都有硬令牌限制 — GPT-4o 128,000 令牌、Claude 4.6 Sonnet 200,000 令牌、Gemini 2.5 Pro 2,000,000 令牌 — 随着窗口填充，早期内容的性能会下降。** 请参见[上下文窗口详解](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh)获取完整分析。',
             '"中间遗忘"问题：多项研究表明大语言模型从长上下文中间检索信息的准确性明显低于从开始或结束。200K 令牌窗口不意味着对所有 200K 令牌的统一注意。',
             '解决方案：在提示词的开始或结束位置构造重要信息；使用 RAG 仅检索相关块而不是转储完整文档；将长文档分解为带摘要步骤的分块会话。',
           ],
@@ -19787,7 +19787,7 @@ zh: {
           content: [
             '**大语言模型生成文本 — 除非工具使用层明确启用这些操作，否则它们无法浏览网络、运行代码、发送电子邮件、修改文件或与外部系统交互。** 模型生成它会做什么的文本描述；支架层执行它。',
             '工具使用（也称函数调用） — 在 GPT-4o、Claude 4.6 Sonnet 和 Gemini 2.5 Pro 中可用 — 让模型输出应用拦截和执行的结构化函数调用。模型仍然无法独立采取行动；它只能发出触发外部执行的结构化文本。',
-            '自主代理在编排循环中包装多个工具调用，创建独立操作的*表象*。提示词注入和安全漏洞在这些架构中是重大问题 — 请参见[提示词注入和安全性](/prompt-engineering/prompt-injection-and-security?lang=zh?lang=zh)。',
+            '自主代理在编排循环中包装多个工具调用，创建独立操作的*表象*。提示词注入和安全漏洞在这些架构中是重大问题 — 请参见[提示词注入和安全性](/prompt-engineering/prompt-injection-and-security?lang=zh)。',
           ],
         },
         bias: {
@@ -19857,15 +19857,15 @@ zh: {
         },
         keyTerms: {
           title: '关键术语',
-          content: ['本文中使用的核心概念定义。每个术语链接到[提示词工程词汇表](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh)中的完整条目。'],
+          content: ['本文中使用的核心概念定义。每个术语链接到[提示词工程词汇表](/prompt-engineering/prompt-engineering-glossary?lang=zh)中的完整条目。'],
           items: [
-            '**[知识截断](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh)** — 模型之后没有训练数据的日期。此日期后的任何事件、价格变化或发布对模型是无形的，除非您将其粘贴到提示词中。GPT-4o：2024 年 10 月；Claude 4.6 Sonnet 和 Gemini 2.5 Pro：2025 年初。',
-            '**[幻觉](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#core-concepts)** — 有信心但事实不正确或虚构的输出。由统计令牌预测而非真实查找导致。用源材料基础化提示词减少但不消除它。',
-            '**[上下文窗口](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#core-concepts)** — 模型一次可处理的最大令牌数（单词+标点），包括系统提示、对话历史和检索文档。GPT-4o：128K 令牌；Claude 4.6 Sonnet：200K；Gemini 2.5 Pro：200 万。',
-            '**[工具使用/函数调用](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#agents-orchestration)** — 让模型调用外部函数（网络搜索、代码执行、数据库查询）而非生成文本答案的能力。需要解决无现实世界操作限制。',
-            '**[思维链（CoT）](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#core-concepts)** — 一种提示词技术，要求模型在给出最终答案前逐步推理。显著改善多步算术、逻辑和规划任务的准确性。',
-            '**[RAG（检索增强生成）](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#core-concepts)** — 相关文档从外部知识库检索并在查询时注入提示词的架构。知识截断的主要解决方案。',
-            '**[训练偏见](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#safety-alignment)** — 由训练数据中的不平衡导致的模型输出系统性偏斜 — 主要是英文、西方和 2025 年前的互联网内容。非英语和利基域任务在所有主要模型上结构上更弱。',
+            '**[知识截断](/prompt-engineering/prompt-engineering-glossary?lang=zh)** — 模型之后没有训练数据的日期。此日期后的任何事件、价格变化或发布对模型是无形的，除非您将其粘贴到提示词中。GPT-4o：2024 年 10 月；Claude 4.6 Sonnet 和 Gemini 2.5 Pro：2025 年初。',
+            '**[幻觉](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 有信心但事实不正确或虚构的输出。由统计令牌预测而非真实查找导致。用源材料基础化提示词减少但不消除它。',
+            '**[上下文窗口](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 模型一次可处理的最大令牌数（单词+标点），包括系统提示、对话历史和检索文档。GPT-4o：128K 令牌；Claude 4.6 Sonnet：200K；Gemini 2.5 Pro：200 万。',
+            '**[工具使用/函数调用](/prompt-engineering/prompt-engineering-glossary?lang=zh#agents-orchestration)** — 让模型调用外部函数（网络搜索、代码执行、数据库查询）而非生成文本答案的能力。需要解决无现实世界操作限制。',
+            '**[思维链（CoT）](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 一种提示词技术，要求模型在给出最终答案前逐步推理。显著改善多步算术、逻辑和规划任务的准确性。',
+            '**[RAG（检索增强生成）](/prompt-engineering/prompt-engineering-glossary?lang=zh#core-concepts)** — 相关文档从外部知识库检索并在查询时注入提示词的架构。知识截断的主要解决方案。',
+            '**[训练偏见](/prompt-engineering/prompt-engineering-glossary?lang=zh#safety-alignment)** — 由训练数据中的不平衡导致的模型输出系统性偏斜 — 主要是英文、西方和 2025 年前的互联网内容。非英语和利基域任务在所有主要模型上结构上更弱。',
           ],
         },
         regionalContext: {
@@ -19879,12 +19879,12 @@ zh: {
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[什么是提示词工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh?lang=zh) — 从基础概念开始',
-            '[大语言模型如何实际工作](/prompt-engineering/how-llms-actually-work?lang=zh?lang=zh) — 解释这些限制存在的 transformer 架构',
-            '[AI 幻觉 — 为什么 AI 编造东西](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh?lang=zh) — 限制 2 的深入探讨',
-            '[上下文窗口详解 — 为什么 AI 遗忘](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh?lang=zh) — 令牌限制的详细分析',
-            '[RAG 详解](/prompt-engineering/rag-explained?lang=zh?lang=zh) — 知识截断的主要解决方案',
-            '[提示词注入和安全性](/prompt-engineering/prompt-injection-and-security?lang=zh?lang=zh) — 工具使用和代理架构的必读（限制 6 和 8）',
+            '[什么是提示词工程？](/prompt-engineering/what-is-prompt-engineering?lang=zh) — 从基础概念开始',
+            '[大语言模型如何实际工作](/prompt-engineering/how-llms-actually-work?lang=zh) — 解释这些限制存在的 transformer 架构',
+            '[AI 幻觉 — 为什么 AI 编造东西](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh) — 限制 2 的深入探讨',
+            '[上下文窗口详解 — 为什么 AI 遗忘](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh) — 令牌限制的详细分析',
+            '[RAG 详解](/prompt-engineering/rag-explained?lang=zh) — 知识截断的主要解决方案',
+            '[提示词注入和安全性](/prompt-engineering/prompt-injection-and-security?lang=zh) — 工具使用和代理架构的必读（限制 6 和 8）',
           ],
         },
         faq: {
@@ -20604,7 +20604,7 @@ zh: {
           content: [
             '**"Open Source" und "Open Weights" sind nicht synonym.** Open-Source-Lizenzierung (Apache 2.0, MIT, GPL) gilt für Quellcode und erlaubt unbeschränkte kommerzielle und private Nutzung. Open-Weights bedeutet, dass die trainierten Modellgewichte herunterladbar sind, aber möglicherweise unter einer spezialisierten Lizenz beschränkt sind. LLaMA 3.1 ist Open-Weights, nicht Open Source — Meta veröffentlicht die Gewichte unter Llama Community License 2.1, die kommerzielle Nutzung erlaubt, aber Einschränkungen enthält, die das Aufrufen von Derivatmodellen als "LLaMA" verhindern und Attribution erfordern.',
             '**Proprietäre Modelle sind weder Open-Weights noch Open Source.** OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet) und Google (Gemini 2.5 Pro) veröffentlichen keine Modellgewichte. Sie greifen ausschließlich über API zu. Die Gewichte bleiben geschlossen; Sie können das Modell nicht sehen, herunterladen, ändern oder selbst bereitstellen.',
-            'Das Verständnis dieser Unterscheidung ist wichtig für Compliance, Anpassung und Datensouveränität. [Erfahren Sie, wie LLMs intern funktionieren, um zu verstehen, warum Gewichte wichtig sind](/prompt-engineering/how-llms-actually-work?lang=de?lang=de).',
+            'Das Verständnis dieser Unterscheidung ist wichtig für Compliance, Anpassung und Datensouveränität. [Erfahren Sie, wie LLMs intern funktionieren, um zu verstehen, warum Gewichte wichtig sind](/prompt-engineering/how-llms-actually-work?lang=de).',
           ],
         },
     
@@ -20718,7 +20718,7 @@ zh: {
           title: 'Die proprietäre Landschaft in 2026',
           content: [
             '**Proprietäre LLMs werden ausschließlich über Vendor-kontrollierte APIs zugegriffen; Modellgewichte werden nie veröffentlicht und können nicht heruntergeladen, geändert oder lokal bereitgestellt werden.** Benutzer zahlen Pro-Token-API-Billing und akzeptieren Vendor-Kontrolle über Modell-Updates, Sicherheitsrichtlinien und Leistungsmerkmale.',
-            '**OpenAIs GPT-4o bleibt der Reasoning-Leiter.** GPT-4o unterstützt 128K Token-Kontextfenster mit Training-Cutoff Oktober 2024. Es zeichnet sich bei Tool-Use, Agent-Workflows, Multimodal-Input (Bilder, Text) und komplexem Multi-Step-Reasoning aus. API-Preisgestaltung: $5 pro 1 Million Input-Token, $15 pro 1 Million Output-Token (März 2026 Raten). GPT-4o ist nur API; Gewichte werden nie veröffentlicht. Siehe [wie Kontextfenster Ihr AI-System beeinflussen](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de?lang=de), um Trade-Offs zu verstehen.',
+            '**OpenAIs GPT-4o bleibt der Reasoning-Leiter.** GPT-4o unterstützt 128K Token-Kontextfenster mit Training-Cutoff Oktober 2024. Es zeichnet sich bei Tool-Use, Agent-Workflows, Multimodal-Input (Bilder, Text) und komplexem Multi-Step-Reasoning aus. API-Preisgestaltung: $5 pro 1 Million Input-Token, $15 pro 1 Million Output-Token (März 2026 Raten). GPT-4o ist nur API; Gewichte werden nie veröffentlicht. Siehe [wie Kontextfenster Ihr AI-System beeinflussen](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=de), um Trade-Offs zu verstehen.',
             '**Anthropics Claude 4.6 Sonnet dominiert Schreib- und Code-Qualitäts-Benchmarks.** Claude unterstützt 200K Token-Kontext — 2× größer als GPT-4o — ermöglicht längere Dokumente und erweiterte Gespräche. Training-Datums-Cutoff: Anfang 2025. API-Preisgestaltung: $3 pro 1 Million Input-Token, $15 pro 1 Million Output-Token. Claude bietet kein öffentliches Fine-Tuning. Anthropic priorisiert Interpretierbarkeit und Safety-Alignment gegenüber Benchmark-Maximierung.',
             '**Googles Gemini 2.5 Pro bietet das größte Kontextfenster: 2M Token.** Dies ermöglicht vollständiges Buch-Längen-Dokument-Verarbeitung, erschöpfende Forschung und erweiterte Multi-Turn-Gespräche. Preisgestaltung: $1,25 pro 1 Million Input-Token (≤200K Kontext), $10 pro 1 Million Output-Token; höhere Raten für >200K Kontext. Gemini integriert sich tief mit Google Workspace, Calendar, Gmail und Web-Suche. Training-Datums-Cutoff: Oktober 2024. Fine-Tuning ist für Gemini-Modelle verfügbar.',
           ],
@@ -20727,7 +20727,7 @@ zh: {
         performanceBenchmarks: {
           title: 'Benchmark-Leistung: Wo die Lücke in 2026 steht',
           content: [
-            '**Proprietäre Modelle führen immer noch bei allgemeinem Reasoning (MMLU), aber die Lücke hat sich auf 7–8 Prozentpunkte verengt.** MMLU (Massive Multitask Language Understanding) ist ein breiter Benchmark, der 57 akademische Disziplinen abdeckt. Um zu verstehen, warum [wie LLMs tatsächlich funktionieren](/prompt-engineering/how-llms-actually-work?lang=de?lang=de) wichtig für Reasoning-Fähigkeit ist, lesen Sie unseren tiefgehenden Bericht zur Transformer-Architektur. Aktuelle Scores:',
+            '**Proprietäre Modelle führen immer noch bei allgemeinem Reasoning (MMLU), aber die Lücke hat sich auf 7–8 Prozentpunkte verengt.** MMLU (Massive Multitask Language Understanding) ist ein breiter Benchmark, der 57 akademische Disziplinen abdeckt. Um zu verstehen, warum [wie LLMs tatsächlich funktionieren](/prompt-engineering/how-llms-actually-work?lang=de) wichtig für Reasoning-Fähigkeit ist, lesen Sie unseren tiefgehenden Bericht zur Transformer-Architektur. Aktuelle Scores:',
             '',
             'GPT-4o: 88,7% (OpenAI, 2024)',
             'Claude 3.5 Sonnet: 88,3% (Anthropic, 2024)',
@@ -20737,9 +20737,9 @@ zh: {
             '',
             '**Die Leistungslücke zwischen Open-Weights- und proprietären Modellen hat sich von 15–20 Prozentpunkten in 2022 auf 7–8 Punkte bei Reasoning-Aufgaben in 2026 verengt.** Bei spezialisierten Aufgaben (Programmierung, Mathematik, Zusammenfassung, Klassifizierung) entsprechen Open-Weights-Modelle jetzt proprietären Pendants oder übertreffen sie.',
             '',
-            'Die verbleibende Lücke ist hauptsächlich bei abstraktem Reasoning und [Tool-Use-Orchestrierung](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de?lang=de). — Touvron et al., "Llama 3 Herd of Models", 2024',
+            'Die verbleibende Lücke ist hauptsächlich bei abstraktem Reasoning und [Tool-Use-Orchestrierung](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de). — Touvron et al., "Llama 3 Herd of Models", 2024',
             '',
-            '**Wichtiger Vorbehalt:** Benchmarks messen enge Fähigkeiten. Task-spezifische Leistung variiert: bei Klassifizierung, Zusammenfassung und Extraktion entspricht LLaMA 3.1 70B oft oder übertrifft GPT-4o. Für komplexes Multi-Step-Reasoning (Algebra, lange Gedankenketten), behalten proprietäre Modelle einen Vorteil. Der einzige zuverlässige Benchmark ist das Testen bei Ihrer tatsächlichen Aufgabe — siehe [wie Sie das richtige Modell für Ihren Anwendungsfall wählen](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de?lang=de).',
+            '**Wichtiger Vorbehalt:** Benchmarks messen enge Fähigkeiten. Task-spezifische Leistung variiert: bei Klassifizierung, Zusammenfassung und Extraktion entspricht LLaMA 3.1 70B oft oder übertrifft GPT-4o. Für komplexes Multi-Step-Reasoning (Algebra, lange Gedankenketten), behalten proprietäre Modelle einen Vorteil. Der einzige zuverlässige Benchmark ist das Testen bei Ihrer tatsächlichen Aufgabe — siehe [wie Sie das richtige Modell für Ihren Anwendungsfall wählen](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de).',
           ],
         },
     
@@ -20783,7 +20783,7 @@ zh: {
           content: [
             '**Open-Weights-Modelle erlauben vollständiges Fine-Tuning; proprietäre Modelle beschränken oder verbieten es.** Fine-Tuning bedeutet Umschulung der Modellgewichte auf Ihren eigenen Daten, um das Modell für Ihre Domain zu spezialisieren. Sie können LoRA (Low-Rank Adaptation) für effizientes Fine-Tuning, QLoRA für quantisiertes Training oder vollständiges Backpropagation-Training verwenden, wenn Sie die Compute haben. Nach Fine-Tuning gehört das Modell Ihnen — Sie besitzen die resultierenden Gewichte, können sie überall bereitstellen und können sie offline aktualisieren.',
             '**Proprietäre Fine-Tuning-Verfügbarkeit:** OpenAI Fine-Tuning-API funktioniert nur für GPT-4o mini, GPT-4 (ältere Modelle). Nicht verfügbar für GPT-4o Flagship. Anthropic bietet kein Fine-Tuning für Claude über API. Google bietet begrenzt Fine-Tuning für Gemini. Keine dieser Optionen erlaubt Besitz der Fine-Tuned-Gewichte — Sie mieten eine Fine-Tuned-Kopie des proprietären Modells.',
-            '**Sicherheitsüberlegung:** Bei Fine-Tuning auf proprietären APIs werden Ihre Trainingsdaten auf Vendor-Server hochgeladen. Für sensitive Domains verletzt dies Compliance-Regeln. Open-Weights Fine-Tuning bleibt On-Premises. Siehe [Prompt-Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de?lang=de) für zusätzliche Angriffsflächen-Überlegungen bei Verwendung externer APIs.',
+            '**Sicherheitsüberlegung:** Bei Fine-Tuning auf proprietären APIs werden Ihre Trainingsdaten auf Vendor-Server hochgeladen. Für sensitive Domains verletzt dies Compliance-Regeln. Open-Weights Fine-Tuning bleibt On-Premises. Siehe [Prompt-Injection und Sicherheit](/prompt-engineering/prompt-injection-and-security?lang=de) für zusätzliche Angriffsflächen-Überlegungen bei Verwendung externer APIs.',
           ],
         },
     
@@ -20819,8 +20819,8 @@ zh: {
           title: 'Wann Open-Source-Modelle zu verwenden',
           content: '**Wählen Sie Open-Weights, wenn Datenschutz, Kosten in großem Maßstab oder tiefe Anpassungsanforderungen Ihre Zwänge dominieren.** Open-Weights zeichnen sich aus in:',
           items: [
-            '**Sensitive Daten (Gesundheitswesen, Finanzen, Recht):** Patientenakten, Finanzdaten, Anwalt-Klient-Kommunikation können externe APIs nicht durchqueren. Open-Weights lokal bereitgestellt hält Daten in Ihrer Kontrolle und erreicht Compliance. Verwenden Sie LLaMA 3.1 oder Mistral für HIPAA-, GDPR- und Anwalt-Klient-Berechtigungs-Compliance. Kombinieren Sie mit [Sicherheitskontrollen gegen Prompt-Injection](/prompt-engineering/prompt-injection-and-security?lang=de?lang=de), um Modell-Eingaben zu schützen.',
-            '**High-Volume-Automatisierung (50M+ Token/Tag):** Über ~10M Token/Tag wird Self-Hosting billiger als proprietäre APIs. Verwenden Sie Open-Weights für High-Volume-Klassifizierung, Extraktion, Zusammenfassung oder Datenverarbeitungs-Pipelines, wo [API-Kosten unerschwinglich wären](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de?lang=de).',
+            '**Sensitive Daten (Gesundheitswesen, Finanzen, Recht):** Patientenakten, Finanzdaten, Anwalt-Klient-Kommunikation können externe APIs nicht durchqueren. Open-Weights lokal bereitgestellt hält Daten in Ihrer Kontrolle und erreicht Compliance. Verwenden Sie LLaMA 3.1 oder Mistral für HIPAA-, GDPR- und Anwalt-Klient-Berechtigungs-Compliance. Kombinieren Sie mit [Sicherheitskontrollen gegen Prompt-Injection](/prompt-engineering/prompt-injection-and-security?lang=de), um Modell-Eingaben zu schützen.',
+            '**High-Volume-Automatisierung (50M+ Token/Tag):** Über ~10M Token/Tag wird Self-Hosting billiger als proprietäre APIs. Verwenden Sie Open-Weights für High-Volume-Klassifizierung, Extraktion, Zusammenfassung oder Datenverarbeitungs-Pipelines, wo [API-Kosten unerschwinglich wären](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de).',
             '**Domain-Anpassung und Fine-Tuning:** Sie haben gekennzeichnete Datensätze und müssen das Modell auf Ihre Terminologie, Schreibstil oder Task-Verteilung spezialisieren. Open-Weights erlauben LoRA, QLoRA oder vollständiges Fine-Tuning. Proprietäre APIs verbieten oder beschränken Anpassung.',
             '**Geografische oder Netzwerk-Zwänge:** Sie benötigen Inferenz ohne Internetverbindung (U-Boote, Flugzeuge, Remote-Standorte). Open-Weights läuft offline. Proprietäre APIs erfordern Netzwerkverbindung.',
             '**EU AI Act Compliance (High-Risk-Bereitstellungen):** Einstellungssysteme, Kreditentscheidungen, Vorteilsbestimmung. Audit-Trails, Risicodokumentation und On-Premises-Datenresidenz sind mit Open-Weights einfacher. Proprietäre APIs erschweren Compliance-Nachweis.',
@@ -20847,7 +20847,7 @@ zh: {
           items: [
             '**Datenschutz-sensitive Daten → lokal Open-Weights; komplexes Reasoning → proprietäre API.** Leiten Sie Patientenakten, Finanzdaten und Rechtsdokumente an LLaMA 3.1 lokal über Ollama weiter. Leiten Sie Multi-Step-Forschungs-Synthese, Code-Generierung und Agent-Orchestrierung an GPT-4o oder Claude 4.6 Sonnet weiter. Dieser Hybrid-Ansatz erreicht Compliance bei Aufrechterhaltung der Frontier-Leistung.',
             '**Kostenempfindliche Batch-Verarbeitung → lokal Open-Weights; interaktive Anfragen → proprietäre API.** Für Background-Aufgaben (Klassifizierung, Extraktion, Zusammenfassung) verwenden Sie Self-Hosted LLaMA 3.1 70B (~$2/Stunde auf A100). Für Real-Time-User-Anfragen, wo Latenz wichtig ist, verwenden Sie GPT-4o API ($5/$15 pro 1M Token). Hybrid reduziert Gesamtkosten und Latenz.',
-            '**Multi-Model-Vergleich und Consensus → PromptQuorum.** Verteilen Sie einen einzelnen [Prompt](/prompt-engineering/what-is-prompt-engineering?lang=de?lang=de) gleichzeitig an lokal Ollama, GPT-4o, Claude 4.6 und Gemini 2.5 Pro über PromptQuorum. Vergleichen Sie Outputs nebeneinander auf Qualität, Latenz und Kosten. Wählen Sie den Gewinner für Produktion oder kombinieren Sie Outputs für Ensemble-Reasoning.',
+            '**Multi-Model-Vergleich und Consensus → PromptQuorum.** Verteilen Sie einen einzelnen [Prompt](/prompt-engineering/what-is-prompt-engineering?lang=de) gleichzeitig an lokal Ollama, GPT-4o, Claude 4.6 und Gemini 2.5 Pro über PromptQuorum. Vergleichen Sie Outputs nebeneinander auf Qualität, Latenz und Kosten. Wählen Sie den Gewinner für Produktion oder kombinieren Sie Outputs für Ensemble-Reasoning.',
             '**Testing und Staging → Open-Weights; Produktions-Serving → proprietär.** Verwenden Sie LLaMA 3.1 8B lokal für schnelle Prototypen und Entwicklung. Sobald Prompt und Pipeline validiert sind, upgraden Sie zu GPT-4o oder Claude für Production-Traffic, wo Zuverlässigkeit, Tool-Integration und Safety-Garantien am meisten wichtig sind.',
           ],
         },
@@ -20858,19 +20858,19 @@ zh: {
           items: [
             '**Die Leistungslücke ist task-spezifisch, nicht universell.** Proprietäre Modelle führen bei MMLU (Reasoning) um 7–8 Punkte. Aber bei Klassifizierung, Zusammenfassung, Extraktion und vielen Domain-Aufgaben entspricht LLaMA 3.1 70B proprietären Modellen oder übertrifft sie. "Proprietär ist besser" ist zu breit. Benchmark Ihre tatsächliche Aufgabe.',
             '**"Open Source" Lizenzierung ist komplex und oft nicht wirklich Open Source.** LLaMA, Mistral und Qwen sind nicht OSI-konform Open Source — sie sind "Open Weights" unter nicht-Standard-Lizenzen. Sie "Open Source" zu nennen ist irreführend und lädt zu Rechtsverwirung ein. Klären Sie Lizenzierung mit Rat bevor Sie sich auf legale Schutzmaßnahmen verlassen.',
-            '**Proprietär ist nicht immer sicherer oder besser aligned.** [Alle Modelle halluzinieren](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de?lang=de). Proprietäres Training-Data, Cutoffs und Constitutional AI verhindern nicht Jailbreaking, [Prompt-Injection](/prompt-engineering/prompt-injection-and-security?lang=de?lang=de) oder Missbrauch. Open-Weights können Fine-Tuned werden, um proprietäres Alignment zu entsprechen oder zu übertreffen. Safety ist eine Eigenschaft der Bereitstellung und Schutzmaßnahmen, nicht der Modellklasse.',
+            '**Proprietär ist nicht immer sicherer oder besser aligned.** [Alle Modelle halluzinieren](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de). Proprietäres Training-Data, Cutoffs und Constitutional AI verhindern nicht Jailbreaking, [Prompt-Injection](/prompt-engineering/prompt-injection-and-security?lang=de) oder Missbrauch. Open-Weights können Fine-Tuned werden, um proprietäres Alignment zu entsprechen oder zu übertreffen. Safety ist eine Eigenschaft der Bereitstellung und Schutzmaßnahmen, nicht der Modellklasse.',
           ],
         },
     
         keyTerms: {
           title: 'Schlüsselbegriffe',
           items: [
-            '[Open Weights](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#open-weights) — Modellgewichte sind herunterladbar, aber möglicherweise unter Lizenz beschränkt',
-            '[Fine-Tuning](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#fine-tuning) — Umschulung von Modellgewichten auf Domain-spezifischen Daten',
-            '[LoRA](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#lora) — Effizientes Fine-Tuning über Low-Rank-Adaptation (5–10% von vollständigen Trainingskosten)',
-            '[RAG](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#rag) — Retrieval-Augmented Generation; Verankerung von LLM-Ausgaben in externen Dokumenten',
-            '[Context Window](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#context-window) — Maximale Token-Kapazität für Input + Output kombiniert',
-            '[VRAM](/prompt-engineering/prompt-engineering-glossary?lang=de?lang=de#vram) — GPU-Speicher erforderlich für Modell-Inferenz',
+            '[Open Weights](/prompt-engineering/prompt-engineering-glossary?lang=de#open-weights) — Modellgewichte sind herunterladbar, aber möglicherweise unter Lizenz beschränkt',
+            '[Fine-Tuning](/prompt-engineering/prompt-engineering-glossary?lang=de#fine-tuning) — Umschulung von Modellgewichten auf Domain-spezifischen Daten',
+            '[LoRA](/prompt-engineering/prompt-engineering-glossary?lang=de#lora) — Effizientes Fine-Tuning über Low-Rank-Adaptation (5–10% von vollständigen Trainingskosten)',
+            '[RAG](/prompt-engineering/prompt-engineering-glossary?lang=de#rag) — Retrieval-Augmented Generation; Verankerung von LLM-Ausgaben in externen Dokumenten',
+            '[Context Window](/prompt-engineering/prompt-engineering-glossary?lang=de#context-window) — Maximale Token-Kapazität für Input + Output kombiniert',
+            '[VRAM](/prompt-engineering/prompt-engineering-glossary?lang=de#vram) — GPU-Speicher erforderlich für Modell-Inferenz',
           ],
         },
     
@@ -20885,12 +20885,12 @@ zh: {
         relatedReading: {
           title: 'Weiterführende Literatur',
           items: [
-            '[Fundamentals: AI Limitations and Structural Constraints](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de?lang=de) — Warum sowohl proprietäre als auch Open-Weights-Modelle fundamentale Einschränkungen wie Halluzination und Kontextgrenzen teilen',
-            '[Fundamentals: How LLMs Actually Work](/prompt-engineering/how-llms-actually-work?lang=de?lang=de) — Verstehen von Transformer-Architektur erklärt, warum Open-Weights- und proprietäre Modelle den gleichen Core-Mechanismen teilen',
-            '[Fundamentals: GPT-4o, Claude, or Gemini? How to Pick the Right Model](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de?lang=de) — Detaillierter Vergleich von Frontier-proprietären Modellen',
-            '[Techniques: RAG Explained — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=de?lang=de) — Wie man jedes Modell (proprietär oder Open-Weights) mit externem Wissen erweitert',
-            '[Fundamentals: Tokens, Costs & Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de?lang=de) — Detaillierte Kostenanalyse und Token-Ökonomie',
-            '[Fundamentals: Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security?lang=de?lang=de) — Sicherheitsüberlegungen für beide Modellklassen',
+            '[Fundamentals: AI Limitations and Structural Constraints](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de) — Warum sowohl proprietäre als auch Open-Weights-Modelle fundamentale Einschränkungen wie Halluzination und Kontextgrenzen teilen',
+            '[Fundamentals: How LLMs Actually Work](/prompt-engineering/how-llms-actually-work?lang=de) — Verstehen von Transformer-Architektur erklärt, warum Open-Weights- und proprietäre Modelle den gleichen Core-Mechanismen teilen',
+            '[Fundamentals: GPT-4o, Claude, or Gemini? How to Pick the Right Model](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=de) — Detaillierter Vergleich von Frontier-proprietären Modellen',
+            '[Techniques: RAG Explained — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=de) — Wie man jedes Modell (proprietär oder Open-Weights) mit externem Wissen erweitert',
+            '[Fundamentals: Tokens, Costs & Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de) — Detaillierte Kostenanalyse und Token-Ökonomie',
+            '[Fundamentals: Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security?lang=de) — Sicherheitsüberlegungen für beide Modellklassen',
           ],
         },
     
@@ -21126,7 +21126,7 @@ zh: {
           content: [
             '**"Open source" et "open-weights" ne sont pas synonymes.** La licence open source (Apache 2.0, MIT, GPL) s\'applique au code source et autorise un usage commercial et privé sans restriction. Open-weights signifie que les poids du modèle entraîné sont téléchargeables, mais peuvent être restreints par une licence spécialisée. LLaMA 3.1 est open-weights, pas open source — Meta publie les poids sous la Llama Community License 2.1, qui autorise l\'usage commercial mais contient des restrictions empêchant d\'appeler les modèles dérivés "LLaMA" et exigeant une attribution.',
             '**Les modèles propriétaires ne sont ni open-weights ni open source.** OpenAI (GPT-4o), Anthropic (Claude 4.6 Sonnet) et Google (Gemini 2.5 Pro) ne publient pas les poids des modèles. Vous y accédez exclusivement via API. Les poids restent fermés ; vous ne pouvez pas voir, télécharger, modifier ou déployer le modèle vous-même.',
-            'Comprendre cette distinction est essentiel pour la conformité, la personnalisation et la souveraineté des données. [Découvrez comment les LLMs fonctionnent en interne pour comprendre pourquoi les poids sont importants](/prompt-engineering/how-llms-actually-work?lang=fr?lang=fr).',
+            'Comprendre cette distinction est essentiel pour la conformité, la personnalisation et la souveraineté des données. [Découvrez comment les LLMs fonctionnent en interne pour comprendre pourquoi les poids sont importants](/prompt-engineering/how-llms-actually-work?lang=fr).',
           ],
         },
 
@@ -21240,7 +21240,7 @@ zh: {
           title: 'Le paysage propriétaire en 2026',
           content: [
             '**Les LLMs propriétaires sont accessibles exclusivement via des APIs contrôlées par le fournisseur ; les poids du modèle ne sont jamais publiés et ne peuvent être ni téléchargés, ni modifiés, ni déployés localement.** Les utilisateurs paient une facturation API par token et acceptent le contrôle du fournisseur sur les mises à jour du modèle, les politiques de sécurité et les caractéristiques de performance.',
-            '**GPT-4o d\'OpenAI reste le leader du raisonnement.** GPT-4o prend en charge un contexte de 128 K tokens avec une coupure d\'entraînement en octobre 2024. Il excelle dans l\'utilisation d\'outils, les workflows d\'agents, les entrées multimodales (images, texte) et le raisonnement multi-étapes complexe. Tarification API : 5 $ par million de tokens en entrée, 15 $ par million de tokens en sortie (tarifs mars 2026). GPT-4o est API uniquement ; les poids ne sont jamais publiés. Consultez [comment les fenêtres de contexte affectent votre système d\'IA](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr?lang=fr) pour comprendre les compromis.',
+            '**GPT-4o d\'OpenAI reste le leader du raisonnement.** GPT-4o prend en charge un contexte de 128 K tokens avec une coupure d\'entraînement en octobre 2024. Il excelle dans l\'utilisation d\'outils, les workflows d\'agents, les entrées multimodales (images, texte) et le raisonnement multi-étapes complexe. Tarification API : 5 $ par million de tokens en entrée, 15 $ par million de tokens en sortie (tarifs mars 2026). GPT-4o est API uniquement ; les poids ne sont jamais publiés. Consultez [comment les fenêtres de contexte affectent votre système d\'IA](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=fr) pour comprendre les compromis.',
             '**Claude 4.6 Sonnet d\'Anthropic domine les benchmarks de qualité rédactionnelle et de code.** Claude prend en charge un contexte de 200 K tokens — 2× plus grand que GPT-4o — permettant de traiter des documents plus longs et des conversations prolongées. Coupure des données d\'entraînement : début 2025. Tarification API : 3 $ par million de tokens en entrée, 15 $ par million de tokens en sortie. Claude ne propose pas de fine-tuning public. Anthropic privilégie l\'interprétabilité et l\'alignement de sécurité plutôt que la maximisation des benchmarks.',
             '**Gemini 2.5 Pro de Google offre la plus grande fenêtre de contexte : 2 M tokens.** Cela permet le traitement de documents de la longueur d\'un livre entier, de recherches exhaustives et de conversations multi-tours étendues. Tarification : 1,25 $ par million de tokens en entrée (≤200 K contexte), 10 $ par million de tokens en sortie ; tarifs plus élevés pour >200 K de contexte. Gemini s\'intègre profondément avec Google Workspace, Calendar, Gmail et la recherche web. Coupure des données d\'entraînement : octobre 2024. Le fine-tuning est disponible pour les modèles Gemini.',
           ],
@@ -21249,7 +21249,7 @@ zh: {
         performanceBenchmarks: {
           title: 'Performance sur les benchmarks : où en est l\'écart en 2026',
           content: [
-            '**Les modèles propriétaires mènent encore sur le raisonnement général (MMLU), mais l\'écart s\'est réduit à 7–8 points de pourcentage.** MMLU (Massive Multitask Language Understanding) est un benchmark large couvrant 57 disciplines académiques. Pour comprendre pourquoi [le fonctionnement réel des LLMs](/prompt-engineering/how-llms-actually-work?lang=fr?lang=fr) importe pour la capacité de raisonnement, consultez notre analyse approfondie de l\'architecture transformer. Scores actuels :',
+            '**Les modèles propriétaires mènent encore sur le raisonnement général (MMLU), mais l\'écart s\'est réduit à 7–8 points de pourcentage.** MMLU (Massive Multitask Language Understanding) est un benchmark large couvrant 57 disciplines académiques. Pour comprendre pourquoi [le fonctionnement réel des LLMs](/prompt-engineering/how-llms-actually-work?lang=fr) importe pour la capacité de raisonnement, consultez notre analyse approfondie de l\'architecture transformer. Scores actuels :',
             '',
             'GPT-4o : 88,7 % (OpenAI, 2024)',
             'Claude 3.5 Sonnet : 88,3 % (Anthropic, 2024)',
@@ -21259,9 +21259,9 @@ zh: {
             '',
             '**L\'écart de performance entre les modèles open-weights et propriétaires s\'est réduit de 15–20 points de pourcentage en 2022 à 7–8 points sur les tâches de raisonnement en 2026.** Sur les tâches spécialisées (code, mathématiques, résumé, classification), les modèles open-weights égalent ou dépassent désormais leurs homologues propriétaires.',
             '',
-            'L\'écart restant porte principalement sur le raisonnement abstrait et [l\'orchestration d\'outils](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr?lang=fr). — Touvron et al., "Llama 3 Herd of Models", 2024',
+            'L\'écart restant porte principalement sur le raisonnement abstrait et [l\'orchestration d\'outils](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr). — Touvron et al., "Llama 3 Herd of Models", 2024',
             '',
-            '**Mise en garde importante :** Les benchmarks mesurent des compétences étroites. Les performances spécifiques aux tâches varient : sur la classification, le résumé et l\'extraction, LLaMA 3.1 70B égale ou dépasse souvent GPT-4o. Pour le raisonnement multi-étapes complexe (algèbre, longues chaînes de pensée), les modèles propriétaires conservent un avantage. Le seul benchmark fiable est de tester sur votre tâche réelle — consultez [comment choisir le bon modèle pour votre cas d\'usage](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr?lang=fr).',
+            '**Mise en garde importante :** Les benchmarks mesurent des compétences étroites. Les performances spécifiques aux tâches varient : sur la classification, le résumé et l\'extraction, LLaMA 3.1 70B égale ou dépasse souvent GPT-4o. Pour le raisonnement multi-étapes complexe (algèbre, longues chaînes de pensée), les modèles propriétaires conservent un avantage. Le seul benchmark fiable est de tester sur votre tâche réelle — consultez [comment choisir le bon modèle pour votre cas d\'usage](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr).',
           ],
         },
 
@@ -21305,7 +21305,7 @@ zh: {
           content: [
             '**Les modèles open-weights permettent un fine-tuning complet ; les modèles propriétaires le restreignent ou l\'interdisent.** Le fine-tuning consiste à réentraîner les poids du modèle sur vos propres données pour le spécialiser sur votre domaine. Vous pouvez utiliser LoRA (Low-Rank Adaptation) pour un fine-tuning efficace, QLoRA pour un entraînement quantifié, ou la rétropropagation complète si vous disposez des ressources de calcul. Après le fine-tuning, le modèle vous appartient — vous êtes propriétaire des poids résultants, pouvez les déployer partout et les mettre à jour hors ligne.',
             '**Disponibilité du fine-tuning propriétaire :** L\'API de fine-tuning OpenAI fonctionne uniquement pour GPT-4o mini et GPT-4 (anciens modèles). Non disponible pour GPT-4o phare. Anthropic ne propose pas de fine-tuning pour Claude via API. Google propose un fine-tuning limité pour Gemini. Aucun de ces fournisseurs ne permet la propriété des poids affinés — vous louez une copie affinée du modèle propriétaire.',
-            '**Considération de sécurité :** Lors du fine-tuning sur des APIs propriétaires, vos données d\'entraînement sont téléchargées sur les serveurs du fournisseur. Pour les domaines sensibles, cela viole les règles de conformité. Le fine-tuning open-weights reste sur site. Consultez [injection de prompt et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr?lang=fr) pour des considérations supplémentaires sur la surface d\'attaque lors de l\'utilisation d\'APIs externes.',
+            '**Considération de sécurité :** Lors du fine-tuning sur des APIs propriétaires, vos données d\'entraînement sont téléchargées sur les serveurs du fournisseur. Pour les domaines sensibles, cela viole les règles de conformité. Le fine-tuning open-weights reste sur site. Consultez [injection de prompt et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) pour des considérations supplémentaires sur la surface d\'attaque lors de l\'utilisation d\'APIs externes.',
           ],
         },
 
@@ -21341,8 +21341,8 @@ zh: {
           title: 'Quand utiliser des modèles open source',
           content: '**Choisissez l\'open-weights quand la confidentialité des données, le coût à grande échelle ou les exigences de personnalisation approfondie dominent vos contraintes.** L\'open-weights excelle dans :',
           items: [
-            '**Données sensibles (santé, finance, juridique) :** Les dossiers patients, les données financières et les communications avocat-client ne peuvent pas transiter par des APIs externes. Les modèles open-weights déployés sur site gardent les données sous votre contrôle et assurent la conformité. Utilisez LLaMA 3.1 ou Mistral pour la conformité HIPAA, RGPD et le secret professionnel avocat-client. Associez avec des [contrôles de sécurité contre l\'injection de prompt](/prompt-engineering/prompt-injection-and-security?lang=fr?lang=fr) pour protéger les entrées du modèle.',
-            '**Automatisation à grand volume (50 M+ tokens/jour) :** Au-delà de ~10 M tokens/jour, l\'auto-hébergement devient moins cher que les APIs propriétaires. Utilisez l\'open-weights pour les pipelines de classification, extraction, résumé ou traitement de données à haut volume où [les coûts API seraient prohibitifs](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr?lang=fr).',
+            '**Données sensibles (santé, finance, juridique) :** Les dossiers patients, les données financières et les communications avocat-client ne peuvent pas transiter par des APIs externes. Les modèles open-weights déployés sur site gardent les données sous votre contrôle et assurent la conformité. Utilisez LLaMA 3.1 ou Mistral pour la conformité HIPAA, RGPD et le secret professionnel avocat-client. Associez avec des [contrôles de sécurité contre l\'injection de prompt](/prompt-engineering/prompt-injection-and-security?lang=fr) pour protéger les entrées du modèle.',
+            '**Automatisation à grand volume (50 M+ tokens/jour) :** Au-delà de ~10 M tokens/jour, l\'auto-hébergement devient moins cher que les APIs propriétaires. Utilisez l\'open-weights pour les pipelines de classification, extraction, résumé ou traitement de données à haut volume où [les coûts API seraient prohibitifs](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr).',
             '**Personnalisation et fine-tuning de domaine :** Vous disposez de jeux de données étiquetés et avez besoin que le modèle se spécialise sur votre terminologie, style rédactionnel ou distribution de tâches. L\'open-weights permet LoRA, QLoRA ou le fine-tuning complet. Les APIs propriétaires l\'interdisent ou le restreignent.',
             '**Contraintes géographiques ou réseau :** Vous avez besoin d\'inférence sans accès internet (sous-marins, aéronefs, sites distants). L\'open-weights fonctionne hors ligne. Les APIs propriétaires nécessitent une connectivité réseau.',
             '**Conformité EU AI Act (déploiements à haut risque) :** Systèmes de recrutement, décisions de crédit, attribution de prestations. Les pistes d\'audit, la documentation des risques et la résidence des données sur site sont plus faciles à réaliser avec l\'open-weights. Les APIs propriétaires rendent la conformité plus difficile à démontrer.',
@@ -21369,7 +21369,7 @@ zh: {
           items: [
             '**Données sensibles → open-weights local ; raisonnement complexe → API propriétaire.** Routez les dossiers patients, les données financières et les documents juridiques vers LLaMA 3.1 exécuté localement via Ollama. Routez la synthèse de recherche multi-étapes, la génération de code et l\'orchestration d\'agents vers GPT-4o ou Claude 4.6 Sonnet. Cette approche hybride assure la conformité tout en maintenant des performances de pointe.',
             '**Traitement par lots sensible aux coûts → open-weights local ; requêtes interactives → API propriétaire.** Pour les tâches en arrière-plan (classification, extraction, résumé), utilisez LLaMA 3.1 70B auto-hébergé (~2 $/h sur A100). Pour les requêtes utilisateur en temps réel où la latence compte, utilisez l\'API GPT-4o (5 $/15 $ par million de tokens). Le mode hybride réduit les coûts totaux et la latence.',
-            '**Comparaison et consensus multi-modèles → PromptQuorum.** Envoyez un seul [prompt](/prompt-engineering/what-is-prompt-engineering?lang=fr?lang=fr) à Ollama local, GPT-4o, Claude 4.6 et Gemini 2.5 Pro simultanément via PromptQuorum. Comparez les sorties côte à côte sur la qualité, la latence et le coût. Choisissez le meilleur pour la production ou combinez les sorties pour un raisonnement en ensemble.',
+            '**Comparaison et consensus multi-modèles → PromptQuorum.** Envoyez un seul [prompt](/prompt-engineering/what-is-prompt-engineering?lang=fr) à Ollama local, GPT-4o, Claude 4.6 et Gemini 2.5 Pro simultanément via PromptQuorum. Comparez les sorties côte à côte sur la qualité, la latence et le coût. Choisissez le meilleur pour la production ou combinez les sorties pour un raisonnement en ensemble.',
             '**Tests et préproduction → open-weights ; serving en production → propriétaire.** Utilisez LLaMA 3.1 8B exécuté localement pour le prototypage rapide et le développement. Une fois le prompt et le pipeline validés, passez à GPT-4o ou Claude pour le trafic de production où la fiabilité, l\'intégration d\'outils et les garanties de sécurité comptent le plus.',
           ],
         },
@@ -21380,7 +21380,7 @@ zh: {
           items: [
             '**L\'écart de performance est spécifique à la tâche, pas universel.** Les modèles propriétaires mènent sur MMLU (raisonnement) de 7–8 points. Mais sur la classification, le résumé, l\'extraction et de nombreuses tâches de domaine, LLaMA 3.1 70B égale ou dépasse les modèles propriétaires. "Le propriétaire est meilleur" est trop large. Benchmarkez votre tâche réelle.',
             '**La licence "open source" est complexe et souvent pas vraiment open source.** LLaMA, Mistral et Qwen ne sont pas conformes à l\'OSI — ce sont des "open-weights" sous des licences non standard. Les appeler "open source" est trompeur et invite à la confusion juridique. Clarifiez les licences avec un conseil juridique avant de vous reposer sur des protections légales.',
-            '**Le propriétaire n\'est pas toujours plus sûr ou mieux aligné.** [Tous les modèles hallucinent](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr?lang=fr). Les données d\'entraînement propriétaires, les dates de coupure et l\'IA constitutionnelle ne préviennent pas le jailbreaking, [l\'injection de prompt](/prompt-engineering/prompt-injection-and-security?lang=fr?lang=fr) ou les abus. Les modèles open-weights peuvent être affinés pour égaler ou dépasser l\'alignement propriétaire. La sécurité est une propriété du déploiement et des garde-fous, pas de la classe de modèle.',
+            '**Le propriétaire n\'est pas toujours plus sûr ou mieux aligné.** [Tous les modèles hallucinent](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr). Les données d\'entraînement propriétaires, les dates de coupure et l\'IA constitutionnelle ne préviennent pas le jailbreaking, [l\'injection de prompt](/prompt-engineering/prompt-injection-and-security?lang=fr) ou les abus. Les modèles open-weights peuvent être affinés pour égaler ou dépasser l\'alignement propriétaire. La sécurité est une propriété du déploiement et des garde-fous, pas de la classe de modèle.',
           ],
         },
 
@@ -21407,12 +21407,12 @@ zh: {
         relatedReading: {
           title: 'Lectures complémentaires',
           items: [
-            '[Fondamentaux : Limitations de l\'IA et contraintes structurelles](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr?lang=fr) — Pourquoi les modèles propriétaires et open-weights partagent des limitations fondamentales comme l\'hallucination et les limites de contexte',
-            '[Fondamentaux : Comment les LLMs fonctionnent réellement](/prompt-engineering/how-llms-actually-work?lang=fr?lang=fr) — Comprendre l\'architecture transformer explique pourquoi les modèles open-weights et propriétaires partagent les mêmes mécaniques fondamentales',
-            '[Fondamentaux : GPT-4o, Claude ou Gemini ? Comment choisir le bon modèle](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr?lang=fr) — Comparaison détaillée des modèles propriétaires de pointe',
-            '[Techniques : RAG expliqué — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=fr?lang=fr) — Comment étendre n\'importe quel modèle (propriétaire ou open-weights) avec des connaissances externes',
-            '[Fondamentaux : Tokens, coûts et limites](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr?lang=fr) — Analyse détaillée des coûts et économie des tokens',
-            '[Fondamentaux : Injection de prompt et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr?lang=fr) — Considérations de sécurité pour les deux classes de modèles',
+            '[Fondamentaux : Limitations de l\'IA et contraintes structurelles](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr) — Pourquoi les modèles propriétaires et open-weights partagent des limitations fondamentales comme l\'hallucination et les limites de contexte',
+            '[Fondamentaux : Comment les LLMs fonctionnent réellement](/prompt-engineering/how-llms-actually-work?lang=fr) — Comprendre l\'architecture transformer explique pourquoi les modèles open-weights et propriétaires partagent les mêmes mécaniques fondamentales',
+            '[Fondamentaux : GPT-4o, Claude ou Gemini ? Comment choisir le bon modèle](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=fr) — Comparaison détaillée des modèles propriétaires de pointe',
+            '[Techniques : RAG expliqué — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=fr) — Comment étendre n\'importe quel modèle (propriétaire ou open-weights) avec des connaissances externes',
+            '[Fondamentaux : Tokens, coûts et limites](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr) — Analyse détaillée des coûts et économie des tokens',
+            '[Fondamentaux : Injection de prompt et sécurité](/prompt-engineering/prompt-injection-and-security?lang=fr) — Considérations de sécurité pour les deux classes de modèles',
           ],
         },
 
@@ -21648,7 +21648,7 @@ zh: {
           content: [
             '**「オープンソース」と「オープンウェイト」は同義語ではありません。** オープンソースライセンス（Apache 2.0、MIT、GPL）はソースコードに適用され、無制限の商用・プライベート利用を許可します。オープンウェイトとは、学習済みモデルウェイトがダウンロード可能ですが、特殊なライセンスの下で制限される場合があることを意味します。LLaMA 3.1はオープンウェイトであり、オープンソースではありません — MetaはLlama Community License 2.1の下でウェイトをリリースしており、商用利用は許可されていますが、派生モデルを「LLaMA」と命名することを禁止し、帰属表示を要求する制限が含まれています。',
             '**独自モデルはオープンウェイトでもオープンソースでもありません。** OpenAI（GPT-4o）・Anthropic（Claude 4.6 Sonnet）・Google（Gemini 2.5 Pro）はモデルウェイトをリリースしていません。APIを通じてのみアクセスできます。ウェイトはクローズドのままで、自分でモデルを確認・ダウンロード・修正・デプロイすることはできません。',
-            'この区別を理解することは、コンプライアンス・カスタマイズ・データ主権の面で重要です。[LLMが内部でどのように機能するかを学ぶ](/prompt-engineering/how-llms-actually-work?lang=ja?lang=ja)と、なぜウェイトが重要なのかが理解できます。',
+            'この区別を理解することは、コンプライアンス・カスタマイズ・データ主権の面で重要です。[LLMが内部でどのように機能するかを学ぶ](/prompt-engineering/how-llms-actually-work?lang=ja)と、なぜウェイトが重要なのかが理解できます。',
           ],
         },
 
@@ -21762,7 +21762,7 @@ zh: {
           title: '2026年の独自モデルの状況',
           content: [
             '**独自LLMはベンダー管理のAPIを通じてのみアクセスできます。モデルウェイトは決してリリースされず、ダウンロード・修正・ローカルデプロイはできません。** ユーザーはトークン単位のAPI課金を支払い、モデルの更新・安全ポリシー・パフォーマンス特性に関するベンダーの管理を受け入れます。',
-            '**OpenAIのGPT-4oは推論のリーダーとして地位を維持しています。** GPT-4oは2024年10月の学習カットオフで128Kトークンのコンテキストをサポートしています。ツール使用・エージェントワークフロー・マルチモーダル入力（画像・テキスト）・複雑な多段階推論で優れています。APIの価格：入力100万トークンあたり$5、出力100万トークンあたり$15（2026年3月現在）。GPT-4oはAPIのみです。[コンテキストウィンドウがAIシステムにどう影響するか](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja?lang=ja)を参照して、トレードオフを理解してください。',
+            '**OpenAIのGPT-4oは推論のリーダーとして地位を維持しています。** GPT-4oは2024年10月の学習カットオフで128Kトークンのコンテキストをサポートしています。ツール使用・エージェントワークフロー・マルチモーダル入力（画像・テキスト）・複雑な多段階推論で優れています。APIの価格：入力100万トークンあたり$5、出力100万トークンあたり$15（2026年3月現在）。GPT-4oはAPIのみです。[コンテキストウィンドウがAIシステムにどう影響するか](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=ja)を参照して、トレードオフを理解してください。',
             '**AnthropicのClaude 4.6 Sonnetはライティングとコード品質ベンチマークで支配的です。** Claudeは200Kトークンのコンテキストをサポートしており、GPT-4oの2倍で、より長い文書と長い会話が可能です。学習データのカットオフ：2025年初頭。APIの価格：入力100万トークンあたり$3、出力100万トークンあたり$15。Claudeは公開のファインチューニングを提供していません。Anthropicはベンチマーク最大化よりも解釈可能性と安全アライメントを優先しています。',
             '**GoogleのGemini 2.5 Proは最大のコンテキストウィンドウを提供しています：200万トークン。** これにより、本の長さの文書処理・徹底的な調査・長い多ターンの会話が可能になります。価格：入力100万トークンあたり$1.25（200K以下のコンテキスト）、出力100万トークンあたり$10。200K超のコンテキストには高い料金が適用されます。GeminiはGoogle Workspace・Calendar・Gmail・Webサーチと深く統合されています。学習データのカットオフ：2024年10月。GeminiモデルのファインチューニングはGoogleが提供しています。',
           ],
@@ -21771,7 +21771,7 @@ zh: {
         performanceBenchmarks: {
           title: 'ベンチマークパフォーマンス：2026年の差の現状',
           content: [
-            '**独自モデルは一般推論（MMLU）でまだリードしていますが、差は7〜8ポイントに縮まっています。** MMLU（Massive Multitask Language Understanding）は57の学術分野を網羅する広範なベンチマークです。[LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja?lang=ja)が推論能力に関係する理由については、トランスフォーマーアーキテクチャに関する詳細解説をご覧ください。現在のスコア：',
+            '**独自モデルは一般推論（MMLU）でまだリードしていますが、差は7〜8ポイントに縮まっています。** MMLU（Massive Multitask Language Understanding）は57の学術分野を網羅する広範なベンチマークです。[LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja)が推論能力に関係する理由については、トランスフォーマーアーキテクチャに関する詳細解説をご覧ください。現在のスコア：',
             '',
             'GPT-4o: 88.7%（OpenAI、2024年）',
             'Claude 3.5 Sonnet: 88.3%（Anthropic、2024年）',
@@ -21781,9 +21781,9 @@ zh: {
             '',
             '**オープンウェイトと独自モデルのパフォーマンスの差は、2022年の15〜20ポイントから2026年の推論タスクでの7〜8ポイントに縮まっています。** 特化タスク（コーディング・数学・要約・分類）では、オープンウェイトモデルが独自モデルと同等またはそれ以上のパフォーマンスを発揮しています。',
             '',
-            '残りの差は主に抽象推論と[ツール使用オーケストレーション](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja?lang=ja)にあります。— Touvron et al., "Llama 3 Herd of Models", 2024',
+            '残りの差は主に抽象推論と[ツール使用オーケストレーション](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja)にあります。— Touvron et al., "Llama 3 Herd of Models", 2024',
             '',
-            '**重要な注意点：** ベンチマークは狭いスキルを測定します。タスク固有のパフォーマンスは変動します：分類・要約・抽出では、LLaMA 3.1 70BがGPT-4oと同等またはそれ以上のパフォーマンスを示すことが多いです。複雑な多段階推論（代数、長い思考の連鎖）では、独自モデルが優位性を維持しています。唯一の信頼できるベンチマークは、実際のタスクでテストすることです — [ユースケースに最適なモデルの選び方](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja?lang=ja)を参照してください。',
+            '**重要な注意点：** ベンチマークは狭いスキルを測定します。タスク固有のパフォーマンスは変動します：分類・要約・抽出では、LLaMA 3.1 70BがGPT-4oと同等またはそれ以上のパフォーマンスを示すことが多いです。複雑な多段階推論（代数、長い思考の連鎖）では、独自モデルが優位性を維持しています。唯一の信頼できるベンチマークは、実際のタスクでテストすることです — [ユースケースに最適なモデルの選び方](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja)を参照してください。',
           ],
         },
 
@@ -21827,7 +21827,7 @@ zh: {
           content: [
             '**オープンウェイトモデルはフルファインチューニングを許可します。独自モデルはこれを制限または禁止しています。** ファインチューニングとは、モデルのウェイトを自分のデータで再学習させて、特定のドメインに特化させることを意味します。効率的なファインチューニングにはLoRA（Low-Rank Adaptation）、量子化学習にはQLoRA、十分なコンピュートがある場合は完全なバックプロパゲーション学習を使用できます。ファインチューニング後、モデルはあなたのものになります — 生成されたウェイトを所有し、どこにでもデプロイでき、オフラインで更新できます。',
             '**独自のファインチューニング対応状況：** OpenAIのファインチューニングAPIはGPT-4o mini・GPT-4（旧モデル）のみ対応。GPT-4oフラッグシップには対応していません。AnthropicはAPIを通じたClaudeのファインチューニングを提供していません。GoogleはGeminiの限定的なファインチューニングを提供しています。これらのいずれもファインチューニングされたウェイトの所有権を許可しません — 独自モデルのファインチューニング済みコピーをレンタルするだけです。',
-            '**セキュリティ上の考慮事項：** 独自APIでファインチューニングを行う場合、学習データがベンダーサーバーにアップロードされます。機密ドメインでは、これがコンプライアンス規則に違反します。オープンウェイトのファインチューニングはオンプレミスで実施されます。外部APIを使用する際の追加の攻撃面の考慮事項については[プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja?lang=ja)を参照してください。',
+            '**セキュリティ上の考慮事項：** 独自APIでファインチューニングを行う場合、学習データがベンダーサーバーにアップロードされます。機密ドメインでは、これがコンプライアンス規則に違反します。オープンウェイトのファインチューニングはオンプレミスで実施されます。外部APIを使用する際の追加の攻撃面の考慮事項については[プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja)を参照してください。',
           ],
         },
 
@@ -21863,8 +21863,8 @@ zh: {
           title: 'オープンソースモデルをいつ使用するか',
           content: '**データプライバシー・大規模コスト・深いカスタマイズ要件が制約を支配する場合、オープンウェイトを選択してください。** オープンウェイトが優れているケース：',
           items: [
-            '**機密データ（医療・金融・法律）：** 患者記録・金融データ・弁護士-クライアント間のコミュニケーションは外部APIを経由できません。オンプレミスにデプロイされたオープンウェイトはデータを管理下に置き、コンプライアンスを達成できます。HIPAA・GDPR・弁護士秘密特権のコンプライアンスにはLLaMA 3.1またはMistralを使用してください。[プロンプトインジェクションに対するセキュリティ管理策](/prompt-engineering/prompt-injection-and-security?lang=ja?lang=ja)と組み合わせてモデル入力を保護してください。',
-            '**高量オートメーション（1日5000万+トークン）：** 1日約1000万トークンを超えると、セルフホスティングが独自APIより安価になります。[APIコストが法外になる](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja?lang=ja)高量の分類・抽出・要約・データ処理パイプラインにはオープンウェイトを使用してください。',
+            '**機密データ（医療・金融・法律）：** 患者記録・金融データ・弁護士-クライアント間のコミュニケーションは外部APIを経由できません。オンプレミスにデプロイされたオープンウェイトはデータを管理下に置き、コンプライアンスを達成できます。HIPAA・GDPR・弁護士秘密特権のコンプライアンスにはLLaMA 3.1またはMistralを使用してください。[プロンプトインジェクションに対するセキュリティ管理策](/prompt-engineering/prompt-injection-and-security?lang=ja)と組み合わせてモデル入力を保護してください。',
+            '**高量オートメーション（1日5000万+トークン）：** 1日約1000万トークンを超えると、セルフホスティングが独自APIより安価になります。[APIコストが法外になる](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja)高量の分類・抽出・要約・データ処理パイプラインにはオープンウェイトを使用してください。',
             '**ドメインカスタマイズとファインチューニング：** ラベル付きデータセットがあり、モデルを自分の用語・文体・タスク分布に特化させる必要がある場合。オープンウェイトはLoRA・QLoRA・フルファインチューニングを許可します。独自APIはカスタマイズを禁止または制限しています。',
             '**地理的またはネットワーク上の制約：** インターネットアクセスなしで推論が必要な場合（潜水艦・航空機・遠隔地）。オープンウェイトはオフラインで動作します。独自APIはネットワーク接続が必要です。',
             '**EU AI Actコンプライアンス（高リスクデプロイ）：** 採用システム・信用決定・給付金決定。監査証跡・リスク文書・オンプレミスのデータ所在地はオープンウェイトの方が容易です。独自APIはコンプライアンスの実証を困難にします。',
@@ -21891,7 +21891,7 @@ zh: {
           items: [
             '**プライバシー敏感データ → ローカルのオープンウェイト、複雑な推論 → 独自API。** 患者記録・金融データ・法的文書をOllamaを通じてローカルで動作するLLaMA 3.1にルーティングします。多段階の研究合成・コード生成・エージェントオーケストレーションをGPT-4oまたはClaude 4.6 Sonnetにルーティングします。このハイブリッドアプローチでコンプライアンスを達成しながらフロンティアパフォーマンスを維持できます。',
             '**コスト重視のバッチ処理 → ローカルのオープンウェイト、インタラクティブなリクエスト → 独自API。** バックグラウンドタスク（分類・抽出・要約）にはセルフホストのLLaMA 3.1 70Bを使用（A100で約$2/時間）。レイテンシーが重要なリアルタイムのユーザーリクエストにはGPT-4o API（100万トークンあたり$5/$15）を使用。ハイブリッドにより総コストとレイテンシーが削減されます。',
-            '**マルチモデル比較とコンセンサス → PromptQuorum。** PromptQuorumを使用して、単一の[プロンプト](/prompt-engineering/what-is-prompt-engineering?lang=ja?lang=ja)をローカルOllama・GPT-4o・Claude 4.6・Gemini 2.5 Proに同時にディスパッチします。品質・レイテンシー・コストを並べて比較してください。本番用のウィナーを選択するか、アンサンブル推論のために出力を組み合わせてください。',
+            '**マルチモデル比較とコンセンサス → PromptQuorum。** PromptQuorumを使用して、単一の[プロンプト](/prompt-engineering/what-is-prompt-engineering?lang=ja)をローカルOllama・GPT-4o・Claude 4.6・Gemini 2.5 Proに同時にディスパッチします。品質・レイテンシー・コストを並べて比較してください。本番用のウィナーを選択するか、アンサンブル推論のために出力を組み合わせてください。',
             '**テストとステージング → オープンウェイト、本番サービング → 独自。** ローカルで動作するLLaMA 3.1 8Bを使用して迅���なプロトタイピングと開発を行います。プロンプトとパイプラインが検証されたら、信頼性・ツール統合・安全保証が重要な本番トラフィック用にGPT-4oまたはClaudeにアップグレードします。',
           ],
         },
@@ -21902,7 +21902,7 @@ zh: {
           items: [
             '**パフォーマンスの差はタスク固有であり、普遍的ではありません。** 独自モデルはMMUL（推論）で7〜8ポイントリードしています。しかし分類・要約・抽出・多くのドメインタスクでは、LLaMA 3.1 70Bが独自モデルと同等またはそれ以上のパフォーマンスを発揮します。「独自モデルの方が優れている」という言い方は広すぎます。実際のタスクでベンチマークを測定してください。',
             '**「オープンソース」のライセンスは複雑であり、実際にはオープンソースではないことが多いです。** LLaMA・Mistral・Qwenは OSI準拠のオープンソースではなく、非標準ライセンスの下での「オープンウェイト」です。これらを「オープンソース」と呼ぶのは誤解を招き、法的な混乱を招きます。法的保護に依存する前に、顧問と一緒にライセンスを確認してください。',
-            '**独自モデルが常により安全またはアライメントされているわけではありません。** [すべてのモデルはハルシネーションします](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja?lang=ja)。独自の学習データ・カットオフ・Constitutional AIは、ジェイルブレイク・[プロンプトインジェクション](/prompt-engineering/prompt-injection-and-security?lang=ja?lang=ja)・悪用を防ぐことができません。オープンウェイトは独自のアライメントと同等またはそれ以上になるようにファインチューニングできます。安全性はモデルクラスではなく、デプロイとガードレールの特性です。',
+            '**独自モデルが常により安全またはアライメントされているわけではありません。** [すべてのモデルはハルシネーションします](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja)。独自の学習データ・カットオフ・Constitutional AIは、ジェイルブレイク・[プロンプトインジェクション](/prompt-engineering/prompt-injection-and-security?lang=ja)・悪用を防ぐことができません。オープンウェイトは独自のアライメントと同等またはそれ以上になるようにファインチューニングできます。安全性はモデルクラスではなく、デプロイとガードレールの特性です。',
           ],
         },
 
@@ -21929,12 +21929,12 @@ zh: {
         relatedReading: {
           title: '関連資料',
           items: [
-            '[基礎：AIの限界と構造的制約](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja?lang=ja) — 独自モデルとオープンウェイトモデルの両方がハルシネーションやコンテキスト上限などの基本的な制限を共有する理由',
-            '[基礎：LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja?lang=ja) — トランスフォーマーアーキテクチャを理解することで、オープンウェイトと独自モデルが同じコアメカニズムを共有する理由がわかる',
-            '[基礎：GPT-4o、Claude、それともGemini？正しいモデルの選び方](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja?lang=ja) — フロンティア独自モデルの詳細比較',
-            '[テクニック：RAG解説 — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=ja?lang=ja) — 任意のモデル（独自またはオープンウェイト）を外部知識で拡張する方法',
-            '[基礎：トークン・コスト・制限](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja?lang=ja) — 詳細なコスト分析とトークンエコノミクス',
-            '[基礎：プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja?lang=ja) — 両モデルクラスのセキュリティ上の考慮事項',
+            '[基礎：AIの限界と構造的制約](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja) — 独自モデルとオープンウェイトモデルの両方がハルシネーションやコンテキスト上限などの基本的な制限を共有する理由',
+            '[基礎：LLMが実際にどのように機能するか](/prompt-engineering/how-llms-actually-work?lang=ja) — トランスフォーマーアーキテクチャを理解することで、オープンウェイトと独自モデルが同じコアメカニズムを共有する理由がわかる',
+            '[基礎：GPT-4o、Claude、それともGemini？正しいモデルの選び方](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=ja) — フロンティア独自モデルの詳細比較',
+            '[テクニック：RAG解説 — Retrieval-Augmented Generation](/prompt-engineering/rag-explained?lang=ja) — 任意のモデル（独自またはオープンウェイト）を外部知識で拡張する方法',
+            '[基礎：トークン・コスト・制限](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja) — 詳細なコスト分析とトークンエコノミクス',
+            '[基礎：プロンプトインジェクションとセキュリティ](/prompt-engineering/prompt-injection-and-security?lang=ja) — 両モデルクラスのセキュリティ上の考慮事項',
           ],
         },
 
@@ -22170,7 +22170,7 @@ zh: {
           content: [
             '**"开源"与"开放权重"并不同义。** 开源许可证（Apache 2.0、MIT、GPL）适用于源代码，允许不受限制的商业和私人使用。开放权重意味着训练好的模型权重可以下载，但可能受专门许可证的限制。LLaMA 3.1是开放权重，而非开源——Meta在Llama Community License 2.1下发布权重，允许商业使用但包含限制，禁止将衍生模型命名为"LLaMA"且要求署名。',
             '**专有模型既非开放权重也非开源。** OpenAI（GPT-4o）、Anthropic（Claude 4.6 Sonnet）和Google（Gemini 2.5 Pro）不发布模型权重。您只能通过API访问它们。权重保持封闭；您无法查看、下载、修改或自行部署模型。',
-            '理解这一区别对合规、定制化和数据主权至关重要。[了解LLM内部工作原理以理解权重的重要性](/prompt-engineering/how-llms-actually-work?lang=zh?lang=zh)。',
+            '理解这一区别对合规、定制化和数据主权至关重要。[了解LLM内部工作原理以理解权重的重要性](/prompt-engineering/how-llms-actually-work?lang=zh)。',
           ],
         },
 
@@ -22284,7 +22284,7 @@ zh: {
           title: '2026年专有模型市场格局',
           content: [
             '**专有LLM完全通过供应商控制的API访问；模型权重从不发布，无法下载、修改或在本地部署。** 用户按token API计费，并接受供应商对模型更新、安全策略和性能特性的控制。',
-            '**OpenAI的GPT-4o仍然是推理领域的领导者。** GPT-4o支持128K token上下文，训练截止日期为2024年10月。它在工具使用、智能体工作流、多模态输入（图像、文本）和复杂多步骤推理方面表现出色。API定价：每百万输入token 5美元，每百万输出token 15美元（2026年3月价格）。GPT-4o仅限API；权重从不发布。参见[上下文窗口如何影响您的AI系统](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh?lang=zh)以了解权衡。',
+            '**OpenAI的GPT-4o仍然是推理领域的领导者。** GPT-4o支持128K token上下文，训练截止日期为2024年10月。它在工具使用、智能体工作流、多模态输入（图像、文本）和复杂多步骤推理方面表现出色。API定价：每百万输入token 5美元，每百万输出token 15美元（2026年3月价格）。GPT-4o仅限API；权重从不发布。参见[上下文窗口如何影响您的AI系统](/prompt-engineering/context-windows-explained-why-ai-forgets?lang=zh)以了解权衡。',
             '**Anthropic的Claude 4.6 Sonnet在写作和代码质量基准上占据主导地位。** Claude支持200K token上下文——是GPT-4o的2倍——能够处理更长的文档和更长的对话。训练数据截止日期：2025年初。API定价：每百万输入token 3美元，每百万输出token 15美元。Claude不提供公开微调。Anthropic将可解释性和安全对齐置于基准最大化之上。',
             '**Google的Gemini 2.5 Pro提供最大的上下文窗口：200万token。** 这使得处理完整书籍长度的文档、详尽研究和扩展多轮对话成为可能。定价：每百万输入token 1.25美元（≤200K上下文），每百万输出token 10美元；超过200K上下文时价格更高。Gemini与Google Workspace、日历、Gmail和网络搜索深度集成。训练数据截止日期：2024年10月。Gemini模型可进行微调。',
           ],
@@ -22293,7 +22293,7 @@ zh: {
         performanceBenchmarks: {
           title: '基准性能：2026年的差距现状',
           content: [
-            '**专有模型在通用推理（MMLU）上仍然领先，但差距已缩小至7–8个百分点。** MMLU（大规模多任务语言理解）是涵盖57个学术学科的广泛基准。要了解[LLM实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh?lang=zh)对推理能力的重要性，请阅读我们关于transformer架构的深度解析。当前分数：',
+            '**专有模型在通用推理（MMLU）上仍然领先，但差距已缩小至7–8个百分点。** MMLU（大规模多任务语言理解）是涵盖57个学术学科的广泛基准。要了解[LLM实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh)对推理能力的重要性，请阅读我们关于transformer架构的深度解析。当前分数：',
             '',
             'GPT-4o: 88.7%（OpenAI，2024年）',
             'Claude 3.5 Sonnet: 88.3%（Anthropic，2024年）',
@@ -22303,9 +22303,9 @@ zh: {
             '',
             '**2022年开放权重与专有模型之间的性能差距从15–20个百分点缩小到2026年推理任务的7–8个百分点。** 在专项任务（编程、数学、摘要、分类）上，开放权重模型现已与专有同类产品持平或超越。',
             '',
-            '剩余差距主要在抽象推理和[工具使用编排](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh?lang=zh)上。——Touvron等，"LLaMA 3模型群"，2024年',
+            '剩余差距主要在抽象推理和[工具使用编排](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh)上。——Touvron等，"LLaMA 3模型群"，2024年',
             '',
-            '**重要说明：** 基准测试衡量的是狭窄技能。特定任务性能各有不同：在分类、摘要和提取方面，LLaMA 3.1 70B经常与GPT-4o持平甚至超越。在复杂多步骤推理（代数、长思维链）方面，专有模型保持优势。唯一可靠的基准是在您的实际任务上测试——参见[如何为您的用例选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh?lang=zh)。',
+            '**重要说明：** 基准测试衡量的是狭窄技能。特定任务性能各有不同：在分类、摘要和提取方面，LLaMA 3.1 70B经常与GPT-4o持平甚至超越。在复杂多步骤推理（代数、长思维链）方面，专有模型保持优势。唯一可靠的基准是在您的实际任务上测试——参见[如何为您的用例选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh)。',
           ],
         },
 
@@ -22349,7 +22349,7 @@ zh: {
           content: [
             '**开放权重模型允许完整微调；专有模型限制甚至禁止微调。** 微调意味着在您自己的数据上重新训练模型权重，以将其专业化于您的领域。您可以使用LoRA（低秩适应）进行高效微调，使用QLoRA进行量化训练，或者在有足够算力时进行全量反向传播训练。微调后，模型成为您的——您拥有生成的权重，可以在任何地方部署它们，并可以离线更新它们。',
             '**专有微调可用性：** OpenAI微调API仅适用于GPT-4o mini、GPT-4（旧版模型），不适用于GPT-4o旗舰版。Anthropic不通过API为Claude提供微调。Google为Gemini提供有限的微调。这些都不允许拥有微调后的权重——您只是租用专有模型的微调副本。',
-            '**安全考虑：** 在专有API上进行微调时，您的训练数据会上传到供应商服务器。对于敏感领域，这违反合规规定。开放权重微调保留在本地。参见[提示词注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh?lang=zh)了解使用外部API时的其他攻击面考虑因素。',
+            '**安全考虑：** 在专有API上进行微调时，您的训练数据会上传到供应商服务器。对于敏感领域，这违反合规规定。开放权重微调保留在本地。参见[提示词注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh)了解使用外部API时的其他攻击面考虑因素。',
           ],
         },
 
@@ -22385,8 +22385,8 @@ zh: {
           title: '何时使用开源模型',
           content: '**当数据隐私、规模化成本或深度定制需求主导您的约束时，选择开放权重。** 开放权重的优势场景：',
           items: [
-            '**敏感数据（医疗、金融、法律）：** 患者记录、金融数据、律师-客户通信不能经过外部API传输。本地部署的开放权重将数据保留在您的控制之下，实现合规性。使用LLaMA 3.1或Mistral满足HIPAA、GDPR和律师-客户特权合规要求。配合[提示词注入安全控制措施](/prompt-engineering/prompt-injection-and-security?lang=zh?lang=zh)保护模型输入。',
-            '**高量自动化（每天5000万+个token）：** 每天超过约1000万token时，自托管比专有API更便宜。对于[API成本会过高](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh?lang=zh)的高量分类、提取、摘要或数据处理管道，使用开放权重。',
+            '**敏感数据（医疗、金融、法律）：** 患者记录、金融数据、律师-客户通信不能经过外部API传输。本地部署的开放权重将数据保留在您的控制之下，实现合规性。使用LLaMA 3.1或Mistral满足HIPAA、GDPR和律师-客户特权合规要求。配合[提示词注入安全控制措施](/prompt-engineering/prompt-injection-and-security?lang=zh)保护模型输入。',
+            '**高量自动化（每天5000万+个token）：** 每天超过约1000万token时，自托管比专有API更便宜。对于[API成本会过高](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh)的高量分类、提取、摘要或数据处理管道，使用开放权重。',
             '**领域定制化和微调：** 您有标注数据集，需要模型在您的术语、写作风格或任务分布上进行专业化。开放权重支持LoRA、QLoRA或全量微调。专有API禁止或限制定制化。',
             '**地理或网络约束：** 您需要在没有互联网访问的情况下进行推理（潜艇、飞机、远程站点）。开放权重可离线运行。专有API需要网络连接。',
             '**欧盟AI法案合规（高风险部署）：** 招聘系统、信贷决策、福利确定。审计跟踪、风险文档和本地数据驻留通过开放权重更容易实现。专有API使合规性更难证明。',
@@ -22413,7 +22413,7 @@ zh: {
           items: [
             '**隐私敏感数据 → 本地开放权重；复杂推理 → 专有API。** 将患者记录、金融数据和法律文件路由到通过Ollama本地运行的LLaMA 3.1。将多步骤研究综合、代码生成和智能体编排路由到GPT-4o或Claude 4.6 Sonnet。这种混合方式在保持前沿性能的同时实现合规性。',
             '**成本敏感的批处理 → 本地开放权重；交互式请求 → 专有API。** 对于后台任务（分类、提取、摘要），使用自托管的LLaMA 3.1 70B（在A100上约每小时2美元）。对于延迟重要的实时用户请求，使用GPT-4o API（每百万token 5/15美元）。混合方式降低总成本和延迟。',
-            '**多模型对比和共识 → PromptQuorum。** 通过PromptQuorum同时将单个[提示词](/prompt-engineering/what-is-prompt-engineering?lang=zh?lang=zh)分发到本地Ollama、GPT-4o、Claude 4.6和Gemini 2.5 Pro。并排比较质量、延迟和成本方面的输出。选择生产中的获胜者，或将输出组合用于集成推理。',
+            '**多模型对比和共识 → PromptQuorum。** 通过PromptQuorum同时将单个[提示词](/prompt-engineering/what-is-prompt-engineering?lang=zh)分发到本地Ollama、GPT-4o、Claude 4.6和Gemini 2.5 Pro。并排比较质量、延迟和成本方面的输出。选择生产中的获胜者，或将输出组合用于集成推理。',
             '**测试和暂存 → 开放权重；生产服务 → 专有。** 使用本地运行的LLaMA 3.1 8B进行快速原型开发和开发工作。一旦提示词和管道经过验证，升级到GPT-4o或Claude用于生产流量，在可靠性、工具集成和安全保证最重要的地方使用。',
           ],
         },
@@ -22424,19 +22424,19 @@ zh: {
           items: [
             '**性能差距是特定任务的，并非普遍适用。** 专有模型在MMLU（推理）上领先7–8个百分点。但在分类、摘要、提取和许多领域任务上，LLaMA 3.1 70B与专有模型持平甚至超越。"专有模型更好"过于笼统。在您的实际任务上进行基准测试。',
             '**"开源"许可证复杂，通常并不真正是开源。** LLaMA、Mistral和Qwen不符合OSI的开源标准——它们是非标准许可证下的"开放权重"。将它们称为"开源"具有误导性，可能引起法律混淆。在依赖法律保护之前，请咨询法律顾问确认许可证要求。',
-            '**专有模型并不总是更安全或更对齐。** [所有模型都会产生幻觉](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh?lang=zh)。专有训练数据、截止日期和Constitutional AI无法防止越狱、[提示词注入](/prompt-engineering/prompt-injection-and-security?lang=zh?lang=zh)或滥用。开放权重可以微调以匹配或超越专有模型的对齐效果。安全是部署和护栏的属性，而非模型类别的属性。',
+            '**专有模型并不总是更安全或更对齐。** [所有模型都会产生幻觉](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh)。专有训练数据、截止日期和Constitutional AI无法防止越狱、[提示词注入](/prompt-engineering/prompt-injection-and-security?lang=zh)或滥用。开放权重可以微调以匹配或超越专有模型的对齐效果。安全是部署和护栏的属性，而非模型类别的属性。',
           ],
         },
 
         keyTerms: {
           title: '关键术语',
           items: [
-            '[开放权重](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#open-weights) — 模型权重可下载，但可能受许可证限制',
-            '[微调](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#fine-tuning) — 在特定领域数据上重新训练模型权重',
-            '[LoRA](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#lora) — 通过低秩适应进行高效微调（全量训练成本的5–10%）',
-            '[RAG](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#rag) — 检索增强生成；将LLM输出锚定于外部文档',
-            '[上下文窗口](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#context-window) — 输入+输出合并的最大token容量',
-            '[VRAM](/prompt-engineering/prompt-engineering-glossary?lang=zh?lang=zh#vram) — 模型推理所需的GPU显存',
+            '[开放权重](/prompt-engineering/prompt-engineering-glossary?lang=zh#open-weights) — 模型权重可下载，但可能受许可证限制',
+            '[微调](/prompt-engineering/prompt-engineering-glossary?lang=zh#fine-tuning) — 在特定领域数据上重新训练模型权重',
+            '[LoRA](/prompt-engineering/prompt-engineering-glossary?lang=zh#lora) — 通过低秩适应进行高效微调（全量训练成本的5–10%）',
+            '[RAG](/prompt-engineering/prompt-engineering-glossary?lang=zh#rag) — 检索增强生成；将LLM输出锚定于外部文档',
+            '[上下文窗口](/prompt-engineering/prompt-engineering-glossary?lang=zh#context-window) — 输入+输出合并的最大token容量',
+            '[VRAM](/prompt-engineering/prompt-engineering-glossary?lang=zh#vram) — 模型推理所需的GPU显存',
           ],
         },
 
@@ -22451,12 +22451,12 @@ zh: {
         relatedReading: {
           title: '延伸阅读',
           items: [
-            '[基础知识：AI的局限性与结构性约束](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh?lang=zh) — 专有和开放权重模型为何共享幻觉和上下文限制等基本局限性',
-            '[基础知识：LLM实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh?lang=zh) — 了解transformer架构有助于解释开放权重与专有模型共享相同核心机制',
-            '[基础知识：GPT-4o、Claude还是Gemini？如何选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh?lang=zh) — 前沿专有模型的详细对比',
-            '[技术：RAG详解——检索增强生成](/prompt-engineering/rag-explained?lang=zh?lang=zh) — 如何用外部知识扩展任意模型（专有或开放权重）',
-            '[基础知识：Token、成本与限制](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh?lang=zh) — 详细的成本分析和token经济学',
-            '[基础知识：提示词注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh?lang=zh) — 两类模型的安全注意事项',
+            '[基础知识：AI的局限性与结构性约束](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — 专有和开放权重模型为何共享幻觉和上下文限制等基本局限性',
+            '[基础知识：LLM实际工作原理](/prompt-engineering/how-llms-actually-work?lang=zh) — 了解transformer架构有助于解释开放权重与专有模型共享相同核心机制',
+            '[基础知识：GPT-4o、Claude还是Gemini？如何选择合适的模型](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model?lang=zh) — 前沿专有模型的详细对比',
+            '[技术：RAG详解——检索增强生成](/prompt-engineering/rag-explained?lang=zh) — 如何用外部知识扩展任意模型（专有或开放权重）',
+            '[基础知识：Token、成本与限制](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh) — 详细的成本分析和token经济学',
+            '[基础知识：提示词注入与安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 两类模型的安全注意事项',
           ],
         },
 
@@ -24575,7 +24575,7 @@ zh: {
           title: 'AI军备竞赛：美国、中国和欧盟',
           content: [
             '**三种不兼容的AI治理愿景正在竞争全球采纳——美国优先考虑创新和竞争力，中国使用国家指导实现战略AI主导地位，欧盟建立通过布鲁塞尔效应在全球出口其标准的基于权利的法律框架。** 这场AI军备竞赛主要是民间的：领先的实验室是私营公司（OpenAI、Anthropic、Google DeepMind、百度、阿里巴巴），但利害关系——监管控制、硬件供应链和人才——是地缘政治的。',
-            '这场竞争不仅关乎谁能构建最强大的模型。它关乎哪种监管框架成为全球默认值。EU AI法通过适用于任何部署到欧盟用户的AI系统，已经使布鲁塞尔成为全球范围内OpenAI、Anthropic和Google DeepMind的实际监管者。硬件控制是第三个维度：《芯片与科学法案》（520亿美元）和Nvidia GPU出口管制旨在限制中国的计算访问。DeepSeek R1的2025年1月发布——以训练成本的一小部分与GPT-4o竞争——证明了这些管制有其局限性。见[开源vs专有LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=zh?lang=zh)了解这些动态如何影响模型可用性。',
+            '这场竞争不仅关乎谁能构建最强大的模型。它关乎哪种监管框架成为全球默认值。EU AI法通过适用于任何部署到欧盟用户的AI系统，已经使布鲁塞尔成为全球范围内OpenAI、Anthropic和Google DeepMind的实际监管者。硬件控制是第三个维度：《芯片与科学法案》（520亿美元）和Nvidia GPU出口管制旨在限制中国的计算访问。DeepSeek R1的2025年1月发布——以训练成本的一小部分与GPT-4o竞争——证明了这些管制有其局限性。见[开源vs专有LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=zh)了解这些动态如何影响模型可用性。',
           ],
           items: [
             '**美国地位：** 在前沿模型能力（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）、芯片设计（Nvidia、AMD）和AI投资（根据经合组织2023年私人投资670亿美元）上领先。无统一的联邦AI法——加快部署但造成合规分散。',
@@ -24968,11 +24968,11 @@ zh: {
         relatedReading: {
           title: '相关阅读',
           items: [
-            '[开源与专有LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=zh?lang=zh) — EU AI法合规性和数据主权要求如何影响开放权重与API决策',
-            '[AI限制：LLM不能做什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh?lang=zh) — 了解与EU AI法下高风险AI系统评估相关的能力限制',
-            '[提示注入和安全](/prompt-engineering/prompt-injection-and-security?lang=zh?lang=zh) — 国家AI战略和EU AI法在高风险系统要求中解决的安全漏洞',
-            '[AI幻觉：为什么AI编造东西](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh?lang=zh) — 与EU AI法高风险文档和人工监督要求中心的可靠性问题',
-            '[RAG解释](/prompt-engineering/rag-explained?lang=zh?lang=zh) — 检索增强生成如何解决与监管AI部署相关的知识截断和幻觉关注',
+            '[开源与专有LLM](/prompt-engineering/open-source-vs-proprietary-llms?lang=zh) — EU AI法合规性和数据主权要求如何影响开放权重与API决策',
+            '[AI限制：LLM不能做什么](/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh) — 了解与EU AI法下高风险AI系统评估相关的能力限制',
+            '[提示注入和安全](/prompt-engineering/prompt-injection-and-security?lang=zh) — 国家AI战略和EU AI法在高风险系统要求中解决的安全漏洞',
+            '[AI幻觉：为什么AI编造东西](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up?lang=zh) — 与EU AI法高风险文档和人工监督要求中心的可靠性问题',
+            '[RAG解释](/prompt-engineering/rag-explained?lang=zh) — 检索增强生成如何解决与监管AI部署相关的知识截断和幻觉关注',
           ],
         },
 

@@ -156,7 +156,8 @@ const EXTERNAL_CITATIONS: Record<string, string> = {
 // Render inline link placeholders like [Techniques: Chain-of-Thought Prompting]
 // as real Next.js links resolved from the title-to-slug map
 // Also handles markdown links: [text](url)
-function renderInlineLinks(text: string) {
+// Injects ?lang= query parameter for internal links when lang is not 'en'
+function renderInlineLinks(text: string, lang: Language = 'en') {
   // Split on both markdown links [text](url) and bracketed labels [text]
   const parts = text.split(/(\[[^\]]+\]\([^\)]+\)|\[[^\]]+\])/g)
   return parts.map((part, i) => {
@@ -178,9 +179,19 @@ function renderInlineLinks(text: string) {
           </a>
         )
       }
-      // Internal links: use Next.js Link
+      // Internal links: use Next.js Link with lang parameter injection
+      let finalUrl = url
+      if (lang !== 'en' && url.startsWith('/prompt-engineering/') && !url.includes('?lang=')) {
+        // Insert ?lang= before anchor fragment (#) if present
+        if (url.includes('#')) {
+          const [basePath, anchor] = url.split('#')
+          finalUrl = `${basePath}?lang=${lang}#${anchor}`
+        } else {
+          finalUrl = `${url}?lang=${lang}`
+        }
+      }
       return (
-        <Link key={i} href={url} className="text-primary font-medium hover:underline">
+        <Link key={i} href={finalUrl} className="text-primary font-medium hover:underline">
           {label}
         </Link>
       )
@@ -192,8 +203,13 @@ function renderInlineLinks(text: string) {
 
       // Bare category link: [Fundamentals], [Techniques], etc.
       if (CATEGORY_ANCHORS[label]) {
+        let href = CATEGORY_ANCHORS[label]
+        if (lang !== 'en') {
+          const [basePath, anchor] = href.split('#')
+          href = `${basePath}?lang=${lang}${anchor ? '#' + anchor : ''}`
+        }
         return (
-          <Link key={i} href={CATEGORY_ANCHORS[label]} className="text-primary font-medium hover:underline">
+          <Link key={i} href={href} className="text-primary font-medium hover:underline">
             {label}
           </Link>
         )
@@ -207,15 +223,20 @@ function renderInlineLinks(text: string) {
         const slug = TITLE_TO_SLUG[title]
 
         if (slug) {
+          const href = lang !== 'en' ? `/prompt-engineering/${slug}?lang=${lang}` : `/prompt-engineering/${slug}`
           return (
-            <Link key={i} href={`/prompt-engineering/${slug}`} className="text-primary font-medium hover:underline">
+            <Link key={i} href={href} className="text-primary font-medium hover:underline">
               {title}
             </Link>
           )
         }
 
         // Fallback: link to the category hub section
-        const fallbackHref = CATEGORY_ANCHORS[category] ?? '/prompt-engineering'
+        let fallbackHref = CATEGORY_ANCHORS[category] ?? '/prompt-engineering'
+        if (lang !== 'en' && !fallbackHref.includes('?lang=')) {
+          const [basePath, anchor] = fallbackHref.split('#')
+          fallbackHref = `${basePath}?lang=${lang}${anchor ? '#' + anchor : ''}`
+        }
         return (
           <Link key={i} href={fallbackHref} className="text-primary font-medium hover:underline">
             {title || label}
@@ -268,7 +289,7 @@ function SectionBlock({ section, colors, id, lang }: { section: PESection; color
     <div className="mt-8" id={id}>
       {section.title && !section.isTldr && (
         <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mt-10 mb-4">
-          {renderInlineLinks(section.title)}
+          {renderInlineLinks(section.title, lang)}
         </h2>
       )}
 
@@ -280,7 +301,7 @@ function SectionBlock({ section, colors, id, lang }: { section: PESection; color
             {section.items.map((item, i) => (
               <li key={i} className="flex gap-3 text-text-secondary text-sm">
                 <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-1.5 ${colors.dot}`} />
-                <span>{renderInlineLinks(item)}</span>
+                <span>{renderInlineLinks(item, lang)}</span>
               </li>
             ))}
           </ul>
@@ -290,10 +311,10 @@ function SectionBlock({ section, colors, id, lang }: { section: PESection; color
       {/* Blockquote content */}
       {section.blockquote && (
         <blockquote className="border-l-4 border-primary/40 bg-primary/5 pl-5 py-3 my-6 text-text-secondary">
-          <p className="italic leading-relaxed">{renderInlineLinks(section.blockquote)}</p>
+          <p className="italic leading-relaxed">{renderInlineLinks(section.blockquote, lang)}</p>
           {section.blockquoteSource && (
             <footer className="mt-2 text-xs font-semibold text-text-secondary not-italic opacity-75">
-              — {renderInlineLinks(section.blockquoteSource)}
+              — {renderInlineLinks(section.blockquoteSource, lang)}
             </footer>
           )}
         </blockquote>
@@ -304,7 +325,7 @@ function SectionBlock({ section, colors, id, lang }: { section: PESection; color
         <div className="space-y-4">
           {(Array.isArray(section.content) ? section.content : [section.content]).map((para, i) => (
             <p key={i} className="text-text-secondary leading-relaxed">
-              {renderInlineLinks(para)}
+              {renderInlineLinks(para, lang)}
             </p>
           ))}
         </div>
@@ -354,7 +375,7 @@ function SectionBlock({ section, colors, id, lang }: { section: PESection; color
                 <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors">
                   {section.columns!.map((col) => (
                     <td key={col} className="p-3 text-text-secondary">
-                      {renderInlineLinks(row[col] ?? '—')}
+                      {renderInlineLinks(row[col] ?? '—', lang)}
                     </td>
                   ))}
                 </tr>
@@ -413,7 +434,7 @@ function SectionBlock({ section, colors, id, lang }: { section: PESection; color
           {section.faqs.map((faq, i) => (
             <div key={i} className="border border-primary/15 rounded-xl p-5">
               <h3 className="font-bold text-text-primary mb-2">{faq.q}</h3>
-              <p className="text-text-secondary leading-relaxed text-sm">{renderInlineLinks(faq.a)}</p>
+              <p className="text-text-secondary leading-relaxed text-sm">{renderInlineLinks(faq.a, lang)}</p>
             </div>
           ))}
         </div>
@@ -542,7 +563,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         {/* Article intro paragraph */}
         {article.intro && (
           <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl article-intro">
-            {renderInlineLinks(article.intro)}
+            {renderInlineLinks(article.intro, lang)}
           </p>
         )}
 
