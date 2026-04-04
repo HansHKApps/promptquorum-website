@@ -2060,6 +2060,155 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  '70b-models-consumer-hardware': {
+    en: {
+      theme: 'Best Models',
+      title: 'How to Run 70B Local LLM Models on Consumer Hardware in 2026',
+      seoTitle: '70B Models on Consumer Hardware',
+      intro: 'Running a 70B parameter model locally requires 40–48 GB of RAM at Q4_K_M quantization. This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading. As of April 2026, Llama 3.3 70B and Qwen2.5 72B are the two primary 70B models available.',
+      metaDescription: 'Run 70B local LLMs on consumer hardware: RAM requirements, GPU options, layer offloading, and quantization. What you need for Llama 3.3 70B and Qwen2.5 72B.',
+      publishDate: '2026-04-04',
+      readTime: '9 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: '70B local LLM consumer hardware',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Hardware Can Run a 70B Model?', anchor: '#what-hardware-can-run-70b' },
+        { label: 'RAM Requirements by Quantization', anchor: '#ram-requirements-by-quantization' },
+        { label: 'Apple Silicon: Best Consumer Option for 70B', anchor: '#apple-silicon' },
+        { label: 'NVIDIA GPU + Layer Offloading', anchor: '#nvidia-gpu-layer-offloading' },
+        { label: 'CPU-Only 70B Inference: Is It Practical?', anchor: '#cpu-only-70b' },
+        { label: 'Which 70B Model Should You Run?', anchor: '#which-70b-model' },
+        { label: 'Common Mistakes Running 70B Models', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Q4_K_M quantization: Llama 3.3 70B requires ~40 GB RAM; Qwen2.5 72B requires ~43 GB RAM.',
+            '**Easiest consumer hardware**: Apple Mac Studio M2 Ultra (64 GB unified) or M3 Max MacBook Pro (64 GB) — full GPU acceleration, no layer offloading needed.',
+            '**NVIDIA option**: RTX 4090 (24 GB VRAM) + 32 GB system RAM with layer offloading in Ollama handles most 70B models, though 20–30% of layers run on CPU.',
+            '**CPU-only 70B**: possible on 64 GB RAM but produces 1–3 tok/sec — marginally usable for batch tasks, not for interactive chat.',
+            'As of April 2026, a 70B model locally matches GPT-4 (2023) quality and is the only consumer-accessible path to that quality tier without cloud costs.',
+          ],
+        },
+        whatHardware: {
+          title: 'What Hardware Can Actually Run a 70B Local LLM?',
+          content: [
+            'A 70B model at Q4_K_M quantization requires approximately 40–43 GB of memory that is accessible to the inference engine. This can come from GPU VRAM, unified system memory (Apple Silicon), system RAM, or a combination via layer offloading.',
+          ],
+          rows: [
+            { 'Hardware': 'Apple M3 Max (64 GB unified)', 'Can Run 70B?': 'Yes — full GPU', 'Speed (70B Q4)': '20–30 tok/sec', 'Notes': 'Best consumer laptop option' },
+            { 'Hardware': 'Apple M2 Ultra (64 GB unified)', 'Can Run 70B?': 'Yes — full GPU', 'Speed (70B Q4)': '25–35 tok/sec', 'Notes': 'Mac Studio baseline config' },
+            { 'Hardware': 'Apple M2 Ultra (192 GB unified)', 'Can Run 70B?': 'Yes — full GPU', 'Speed (70B Q4)': '30–40 tok/sec', 'Notes': 'Runs Q8_0 with room to spare' },
+            { 'Hardware': 'NVIDIA RTX 4090 (24 GB) + 32 GB RAM', 'Can Run 70B?': 'Yes — with offload', 'Speed (70B Q4)': '10–18 tok/sec', 'Notes': '~60% layers on GPU, ~40% on CPU' },
+            { 'Hardware': 'NVIDIA RTX 4080 (16 GB) + 32 GB RAM', 'Can Run 70B?': 'Partial offload only', 'Speed (70B Q4)': '5–10 tok/sec', 'Notes': 'Only ~35% layers on GPU' },
+            { 'Hardware': '64 GB RAM, CPU only', 'Can Run 70B?': 'Yes — CPU only', 'Speed (70B Q4)': '1–3 tok/sec', 'Notes': 'Impractical for interactive use' },
+          ],
+          columns: ['Hardware', 'Can Run 70B?', 'Speed (70B Q4)', 'Notes'],
+        },
+        ramByQuant: {
+          title: 'How Much RAM Does a 70B Model Need at Each Quantization Level?',
+          rows: [
+            { 'Quantization': 'FP16 (full precision)', 'RAM Required': '~140 GB', 'Quality': 'Reference quality', 'Practical?': 'No — server only' },
+            { 'Quantization': 'Q8_0', 'RAM Required': '~70 GB', 'Quality': 'Near-lossless', 'Practical?': 'Mac Ultra 192 GB only' },
+            { 'Quantization': 'Q5_K_M', 'RAM Required': '~50 GB', 'Quality': 'Minimal loss', 'Practical?': 'Mac Ultra 64 GB, tight' },
+            { 'Quantization': 'Q4_K_M', 'RAM Required': '~40–43 GB', 'Quality': 'Low loss — recommended', 'Practical?': 'Yes — most viable option' },
+            { 'Quantization': 'Q3_K_S', 'RAM Required': '~30 GB', 'Quality': 'Moderate loss', 'Practical?': 'Yes — 32 GB machines possible' },
+            { 'Quantization': 'Q2_K', 'RAM Required': '~22 GB', 'Quality': 'High loss', 'Practical?': 'Not recommended' },
+          ],
+          columns: ['Quantization', 'RAM Required', 'Quality', 'Practical?'],
+        },
+        appleSilicon: {
+          title: 'Why Is Apple Silicon the Best Consumer Option for 70B Models?',
+          content: [
+            'Apple Silicon uses unified memory — the CPU and GPU share the same physical memory pool. An M3 Max MacBook Pro with 64 GB of unified memory can run a 70B model at Q4_K_M entirely on GPU, achieving 20–30 tok/sec with no layer offloading overhead.',
+            'On NVIDIA hardware, the GPU and system RAM are separate. A 24 GB VRAM GPU can only hold ~60% of a Q4_K_M 70B model; the remaining layers run on CPU, creating a memory bandwidth bottleneck that reduces speed to 10–18 tok/sec.',
+            'As of April 2026, the Mac Studio M2 Ultra (64 GB, ~$2,000 refurbished) is the most cost-effective path to 70B local inference at usable speed. A new M3 Max MacBook Pro 64 GB costs approximately $3,500.',
+          ],
+        },
+        nvidiaOffload: {
+          title: 'How Does NVIDIA GPU + Layer Offloading Work for 70B Models?',
+          content: 'Ollama and llama.cpp support splitting a model across GPU VRAM and system RAM. Layers loaded in VRAM run at GPU speed; layers in system RAM run at CPU speed:',
+          codeBlock: '# Ollama automatically offloads as many layers as fit in VRAM\n# To explicitly control layers:\nollama run llama3.3:70b\n\n# Check how many layers are on GPU:\nollama ps\n# Output shows: llama3.3:70b  ...  23/80 GPU layers\n\n# For llama.cpp directly:\n./llama-cli -m llama-3.3-70b-q4_k_m.gguf \\\n  -ngl 40   # number of layers to offload to GPU\n  --ctx-size 4096',
+          codeLanguage: 'bash',
+        },
+        cpuOnly: {
+          title: 'Is CPU-Only 70B Inference Practical?',
+          content: [
+            'A 70B model at Q4_K_M on a high-core-count CPU (AMD Threadripper, Intel Xeon) with 64 GB RAM produces 1–3 tokens/sec. At 2 tok/sec, a 200-word response takes approximately 75 seconds.',
+            'This is impractical for interactive chat but usable for batch processing — summarizing documents, generating reports, or processing files overnight. For interactive use, the minimum practical hardware is a machine that can achieve 8+ tok/sec, which requires either Apple Silicon or NVIDIA GPU offloading.',
+          ],
+        },
+        which70b: {
+          title: 'Which 70B Model Should You Run Locally?',
+          rows: [
+            { 'Model': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'Best For': 'General English tasks, instruction-following' },
+            { 'Model': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'Best For': 'Coding, multilingual (29 languages)' },
+            { 'Model': 'Mistral Large 123B', 'MMLU': '84%', 'HumanEval': '80%', 'Best For': 'Requires 80+ GB — workstation only' },
+          ],
+          columns: ['Model', 'MMLU', 'HumanEval', 'Best For'],
+        },
+        commonMistakes: {
+          title: 'What Are the Common Mistakes When Running 70B Models on Consumer Hardware?',
+          faqs: [
+            {
+              q: 'Buying a GPU with less than 24 GB VRAM and expecting full 70B performance',
+              a: 'An RTX 4070 Ti (12 GB VRAM) can only hold ~30% of a Q4_K_M 70B model in VRAM. The remaining 70% runs on CPU, resulting in 3–5 tok/sec — barely faster than CPU-only inference. For 70B models, 24 GB VRAM (RTX 4090) is the practical minimum for useful GPU acceleration. Below this, consider running a 34B model instead.',
+            },
+            {
+              q: 'Not using layer offloading in Ollama',
+              a: 'By default, if a 70B model does not fit entirely in VRAM, Ollama falls back to CPU-only inference. Set the GPU layers explicitly with `OLLAMA_GPU_LAYERS=999` — Ollama will offload as many layers as fit in VRAM and run the remainder on CPU, which is significantly faster than all-CPU inference.',
+            },
+            {
+              q: 'Using Q4_K_M when Q3_K_S would fit better on available hardware',
+              a: 'On machines with 32–40 GB RAM, Q4_K_M for a 70B model may be too tight (leaving insufficient headroom for the OS). Q3_K_S reduces RAM to ~30 GB at moderate quality loss. Run `ollama ps` after loading the model — if you see swap usage, drop to Q3_K_S.',
+            },
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Running 70B Models on Consumer Hardware',
+          faqs: [
+            {
+              q: 'What is the cheapest hardware that can run a 70B model usably?',
+              a: 'As of April 2026, a used Mac Studio M2 Ultra (64 GB unified memory) for ~$2,000 is the cheapest path to 70B inference at 25+ tok/sec. A new machine equivalent would be the M3 Max MacBook Pro 64 GB (~$3,500). An NVIDIA RTX 4090 desktop build (24 GB VRAM + 32 GB RAM) costs ~$3,000–$4,000 total but produces slower inference due to layer offloading.',
+            },
+            {
+              q: 'Can I run a 70B model on two GPUs?',
+              a: 'Yes — llama.cpp and Ollama support multi-GPU inference on NVIDIA hardware. Two RTX 4090s (48 GB total VRAM) fit a Q4_K_M 70B model entirely in VRAM. Ollama handles multi-GPU automatically when multiple GPUs are present. Tensor parallelism in llama.cpp (`--tensor-split`) controls how layers are distributed.',
+            },
+            {
+              q: 'How does 70B local quality compare to GPT-4o?',
+              a: 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen2.5 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-4o (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-4o on most tasks.',
+            },
+            {
+              q: 'Does Ollama support running 70B models automatically?',
+              a: 'Yes. Running `ollama run llama3.3:70b` downloads and runs the model with automatic GPU layer offloading. Ollama detects available VRAM and system RAM, offloads as many layers as possible to GPU, and runs the rest on CPU. No manual configuration is required for basic use.',
+            },
+            {
+              q: 'How much electricity does running a 70B model use?',
+              a: 'A Mac Studio M2 Ultra running 70B inference draws approximately 30–50 W. An NVIDIA RTX 4090 desktop under load draws 350–450 W. At $0.15 per kWh, continuous 70B inference on an RTX 4090 costs approximately $0.05–0.07 per hour. Apple Silicon is 7–10× more energy-efficient for this workload.',
+            },
+            {
+              q: 'Are 70B models worth it compared to 13B models for everyday tasks?',
+              a: 'For complex reasoning, long-document analysis, and nuanced writing, yes — the quality difference is noticeable. For simple summarization, Q&A, and classification, a 13B or even 7B model produces nearly identical output. Run both on your specific use case with [PromptQuorum](/) to quantify the quality difference before investing in 70B hardware.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'llama.cpp GPU Offloading Documentation — github.com/ggerganov/llama.cpp/blob/master/docs/backend/CUDA.md',
+            'Ollama Model Library — ollama.com/library/llama3.3',
+            'Apple M3 Max Inference Benchmarks — github.com/ggerganov/llama.cpp/discussions (community benchmarks thread)',
+            'Meta Llama 3.3 Model Card — huggingface.co/meta-llama/Llama-3.3-70B-Instruct',
+          ],
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
