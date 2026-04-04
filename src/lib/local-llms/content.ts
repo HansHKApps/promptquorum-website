@@ -52,7 +52,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'What Are Local LLMs? How Running AI Models on Your Own Hardware Works',
       seoTitle: 'What Are Local LLMs?',
       intro: 'A local LLM is an AI language model that runs entirely on your own hardware — no internet connection, no API calls, no data leaving your machine. You download the model weights as a file, run an inference engine like Ollama or LM Studio, and the model responds from your CPU or GPU alone.',
-      metaDescription: 'Local LLMs run AI models on your own hardware with no internet required. Learn what they are, how they work, and when to use them instead of cloud APIs.',
+      metaDescription: 'Local LLMs run AI models on your own hardware with no internet required. Learn what they are, how they work, and when to use them Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '7 min read',
       educationalLevel: 'Beginner',
@@ -164,8 +164,33 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         nextSteps: {
-          title: 'How to Get Started with Local LLMs',
+          title: 'How Do You Get Started with Local LLMs',
           content: 'The fastest path to running your first local LLM is [How to Install Ollama](/local-llms/how-to-install-ollama) — a single command installs the engine and pulls a model in under 5 minutes on macOS, Windows, or Linux. If you prefer a graphical interface, [How to Install LM Studio](/local-llms/how-to-install-lm-studio) walks through the desktop app setup. To choose which model to start with, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models).',
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**llama.cpp — GitHub** — The foundational C++ library for running quantized models locally',
+            '**Hugging Face — Model Hub** — Repository of 100,000+ GGUF, safetensors, and other model formats',
+            '**Ollama Model Library** — Curated list of pre-quantized models available via one-click download',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Getting Started',
+          items: [
+            'Assuming all local models are equally private — some interfaces or quantizations may still log data.',
+            'Running models that are too large for available RAM, causing severe slowdown from disk swapping.',
+            'Not understanding that model quality varies dramatically — not all local models match GPT-4o on complex tasks.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Step-by-step setup and first model walkthrough',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — Desktop app alternative with graphical interface',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — RAM-matched model recommendations',
+            '[Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis) — Full comparison of trade-offs',
+          ],
         },
       },
     },
@@ -174,10 +199,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   'how-to-install-ollama': {
     en: {
       theme: 'Getting Started',
-      title: 'How to Install Ollama: Complete Setup Guide for macOS, Windows, and Linux',
+      title: 'How Do You Install Ollama: Complete Setup Guide for macOS, Windows, and Linux',
       seoTitle: 'How to Install Ollama',
       intro: 'Ollama installs in under 2 minutes on macOS, Windows, and Linux. After installation, one command downloads and runs any model from the Ollama library — no Python environment, no configuration files, and no GPU required to get started.',
-      metaDescription: 'How to install Ollama on macOS, Windows, and Linux. Step-by-step guide with exact commands, first model walkthrough, and troubleshooting for common errors.',
+      metaDescription: 'How to install Ollama on macOS, Windows, and Linux. Step-by-step guide with exact commands, first model walkthrough, and Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -212,7 +237,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         installMac: {
-          title: 'How to Install Ollama on macOS',
+          title: 'How Do You Install Ollama on macOS',
           content: 'There are two methods. The installer download is faster; Homebrew is better if you manage software with brew.',
           numberedItems: [
             'Go to ollama.com/download and click "Download for macOS".',
@@ -228,7 +253,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           codeLanguage: 'bash',
         },
         installWindows: {
-          title: 'How to Install Ollama on Windows',
+          title: 'How Do You Install Ollama on Windows',
           numberedItems: [
             'Go to ollama.com/download and click "Download for Windows".',
             'Run the downloaded OllamaSetup.exe installer. Ollama installs to %LOCALAPPDATA%\\Programs\\Ollama.',
@@ -242,7 +267,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           content: 'Ollama on Windows automatically detects and uses NVIDIA GPUs (CUDA 11.3+) and AMD GPUs (ROCm 6+). If you have an NVIDIA RTX card, Ollama will offload model layers to VRAM automatically — no manual configuration needed. To verify GPU is being used, run `ollama run llama3.2` and check Task Manager → GPU for activity.',
         },
         installLinux: {
-          title: 'How to Install Ollama on Linux',
+          title: 'How Do You Install Ollama on Linux',
           content: 'A single command installs Ollama on any Linux distribution:',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
@@ -254,7 +279,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           codeLanguage: 'bash',
         },
         firstModel: {
-          title: 'How to Pull and Run Your First Model in Ollama',
+          title: 'How Do You Pull and Run Your First Model in Ollama',
           content: 'After installing Ollama, run this command to download and start a model:',
           codeBlock: '# Pull a model (downloads to ~/.ollama/models)\nollama pull llama3.2\n\n# Run it interactively\nollama run llama3.2\n\n# Or pull and run in one step\nollama run llama3.2',
           codeLanguage: 'bash',
@@ -270,7 +295,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Model', 'Download Size', 'RAM Required', 'Best For'],
         },
         verify: {
-          title: 'How to Verify Ollama Is Working',
+          title: 'How Do You Verify Ollama Is Working',
           content: 'Test the REST API directly to confirm Ollama is running and accessible:',
           codeBlock: '# Check Ollama is running\ncurl http://localhost:11434\n# Expected: "Ollama is running"\n\n# List downloaded models\nollama list\n\n# Send a prompt via API (OpenAI-compatible)\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "What is 2+2?",\n  "stream": false\n}\'',
           codeLanguage: 'bash',
@@ -316,6 +341,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: 'What to Do After Installing Ollama',
           content: 'Once Ollama is running, the next step is [Run Your First Local LLM](/local-llms/run-first-local-llm) to understand prompting, context length, and what to expect from local inference speed. To pick the best model for your hardware, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models). If you prefer a graphical chat interface over the terminal, [How to Install LM Studio](/local-llms/how-to-install-lm-studio) covers the desktop app alternative.',
         },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**Ollama Official Website** — Installation downloads and official documentation',
+            '**Ollama GitHub Repository** — Source code, issues, and community discussions',
+            '**Ollama Model Library** — Curated collection of available models with download links',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Installing Ollama',
+          items: [
+            'Not checking that Ollama is running as a background service before expecting the API to respond.',
+            'Attempting to run models larger than available RAM without checking memory requirements first.',
+            'Ignoring GPU detection — Ollama supports NVIDIA and AMD but requires up-to-date drivers.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Are Local LLMs?](/local-llms/what-are-local-llms) — Definition and core concepts',
+            '[Run Your First Local LLM](/local-llms/run-first-local-llm) — Next step after installation',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations by hardware',
+            '[Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers) — Alternative tools to Ollama',
+          ],
+        },
       },
     },
   },
@@ -323,10 +373,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   'how-to-install-lm-studio': {
     en: {
       theme: 'Getting Started',
-      title: 'How to Install LM Studio: Desktop App Setup Guide for macOS, Windows, and Linux',
+      title: 'How Do You Install LM Studio: Desktop App Setup Guide for macOS, Windows, and Linux',
       seoTitle: 'How to Install LM Studio',
       intro: 'LM Studio is a desktop application that lets you browse, download, and run local LLMs through a graphical interface — no terminal commands required. It runs on macOS, Windows, and Linux, and includes a built-in chat UI and an OpenAI-compatible local server.',
-      metaDescription: 'Install LM Studio on macOS, Windows, or Linux. Step-by-step guide covering download, first model setup, the built-in chat UI, and local server configuration.',
+      metaDescription: 'Install LM Studio on macOS, Windows, or Linux. Step-by-step guide covering download, first model setup, the built-in chat UI, and local Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '7 min read',
       educationalLevel: 'Beginner',
@@ -372,7 +422,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Spec', 'Minimum', 'Recommended'],
         },
         download: {
-          title: 'How to Download and Install LM Studio',
+          title: 'How Do You Download and Install LM Studio',
           numberedItems: [
             'Go to lmstudio.ai and click the download button for your OS.',
             'macOS: Open the .dmg file and drag LM Studio to Applications. On first launch, approve the security prompt in System Preferences → Privacy & Security.',
@@ -382,7 +432,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         findModel: {
-          title: 'How to Find and Download a Model in LM Studio',
+          title: 'How Do You Find and Download a Model in LM Studio',
           content: 'Use the Search tab (magnifying glass icon in the left sidebar) to find models:',
           numberedItems: [
             'Click the Search tab in the left sidebar.',
@@ -393,7 +443,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         firstChat: {
-          title: 'How to Start Chatting with a Model in LM Studio',
+          title: 'How Do You Start Chatting with a Model in LM Studio',
           numberedItems: [
             'Click the Chat tab (speech bubble icon) in the left sidebar.',
             'At the top of the chat window, click the model selector dropdown and choose your downloaded model.',
@@ -403,7 +453,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         modelSettings: {
-          title: 'How to Adjust Model Settings in LM Studio',
+          title: 'How Do You Adjust Model Settings in LM Studio',
           content: 'The right panel in the Chat tab exposes key inference parameters:',
           items: [
             '**Temperature** (default 0.8): controls response randomness. Lower values (0.1–0.4) produce more focused, predictable output. Higher values (0.8–1.2) produce more varied, creative output.',
@@ -413,7 +463,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         localServer: {
-          title: 'How to Enable the LM Studio Local Server',
+          title: 'How Do You Enable the LM Studio Local Server',
           content: 'LM Studio includes a local server that mimics the OpenAI API. Any application that works with OpenAI can use your local model through this server:',
           numberedItems: [
             'Click the Local Server tab (the "<->" icon) in the left sidebar.',
@@ -464,6 +514,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: 'Next Steps After Installing LM Studio',
           content: 'With LM Studio running, try [Run Your First Local LLM](/local-llms/run-first-local-llm) to understand what response quality and speed to expect. For model recommendations matched to your hardware, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models). If you want to troubleshoot setup issues, see [Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup).',
         },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**LM Studio Official Website** — Downloads and documentation',
+            '**Hugging Face Model Hub** — Full range of GGUF-quantized models',
+            '**LM Studio GitHub** — Source code and community discussions',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Installing LM Studio',
+          items: [
+            'Not allocating enough system RAM for the model you selected in LM Studio settings.',
+            'Using a pre-quantized model that is still too large for your GPU VRAM.',
+            'Expecting instant responses from large models on CPU-only systems — response time will be 10–30 seconds.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Are Local LLMs?](/local-llms/what-are-local-llms) — Core concepts and components',
+            '[Run Your First Local LLM](/local-llms/run-first-local-llm) — Next steps after installation',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Terminal-based alternative to LM Studio',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations by hardware',
+          ],
+        },
       },
     },
   },
@@ -471,10 +546,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   'run-first-local-llm': {
     en: {
       theme: 'Getting Started',
-      title: 'How to Run Your First Local LLM: From Install to First Response in 10 Minutes',
+      title: 'How Do You Run Your First Local LLM: From Install to First Response in 10 Minutes',
       seoTitle: 'Run Your First Local LLM',
       intro: 'Running your first local LLM takes under 10 minutes with Ollama. Install Ollama, run one command to pull a model, and start chatting in your terminal — no API key, no account, and no internet connection after the initial download.',
-      metaDescription: 'Run your first local LLM in under 10 minutes using Ollama. Complete walkthrough: install, pull a model, first prompt, and what to expect from speed and quality.',
+      metaDescription: 'Run your first local LLM in under 10 minutes using Ollama. Complete walkthrough: install, pull a model, first prompt, and what to Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '7 min read',
       educationalLevel: 'Beginner',
@@ -557,7 +632,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         beyondTerminal: {
-          title: 'How to Use Your Local LLM Beyond the Terminal',
+          title: 'How Do You Use Your Local LLM Beyond the Terminal',
           content: 'The Ollama terminal chat is useful for testing, but most real use cases need a better interface:',
           items: [
             '**Open WebUI**: a full-featured web UI for Ollama. Run it with Docker: `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main`. Access at http://localhost:3000.',
@@ -587,6 +662,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: 'Next Steps After Your First Run',
           content: 'Now that you have a working local LLM, explore what it can do. To understand which models perform best for your hardware, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models). For laptop-specific performance tips, see [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop). For privacy and security best practices, see the [Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist).',
         },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**Ollama Model Library Documentation** — Official list of models and specifications',
+            '**Token Prediction Benchmarks** — Community performance data across hardware',
+            '**Llama 3.2 Model Card** — Official specifications and performance metrics',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes After Your First Run',
+          items: [
+            'Confusing token count with speed — a 7B model generating 100 tokens at 20 tokens/sec takes 5 seconds, not instant.',
+            'Running inference while the system is busy with other tasks, reducing effective tokens/sec significantly.',
+            'Not checking context window limits — most beginner models support 2K–8K tokens, not the 100K+ of frontier models.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and setup',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — GUI alternative',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations for your hardware',
+            '[What Are Local LLMs?](/local-llms/what-are-local-llms) — Core concepts and how they work',
+          ],
+        },
       },
     },
   },
@@ -597,7 +697,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Best Local LLM Models for Beginners in 2026: Ranked by RAM, Speed, and Quality',
       seoTitle: 'Best Beginner Local LLM Models 2026',
       intro: 'The five best local LLM models for beginners in 2026 are Meta Llama 3.2 3B, Microsoft Phi-3.5 Mini, Google Gemma 2 2B, Mistral 7B v0.3, and Qwen2.5 7B. Each runs on consumer hardware with 4–8 GB of RAM and produces output quality suitable for everyday tasks.',
-      metaDescription: 'Best local LLM models for beginners in 2026. Ranked by RAM requirement, speed, and quality — with exact VRAM numbers and Ollama pull commands for each model.',
+      metaDescription: 'Best local LLM models for beginners in 2026. Ranked by RAM requirement, speed, and quality — with exact VRAM numbers and Ollama pull Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
@@ -625,7 +725,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         howToChoose: {
-          title: 'How to Choose a Beginner Local LLM Model',
+          title: 'How Do You Choose a Beginner Local LLM Model',
           content: [
             'Model selection depends on three constraints: available RAM, acceptable inference speed, and the tasks you want to perform.',
             'The parameter count (3B, 7B, 13B) is the primary driver of RAM requirements. At 4-bit quantization — the default for most local inference tools — multiply the parameter count by ~0.5 to estimate GB of RAM needed. A 7B model at Q4_K_M requires approximately 4.5 GB of RAM.',
@@ -734,8 +834,33 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         nextSteps: {
-          title: 'How to Download and Run These Models',
+          title: 'How Do You Download and Run These Models',
           content: 'All five models are available through Ollama with a single pull command. See [How to Install Ollama](/local-llms/how-to-install-ollama) for setup, then [Run Your First Local LLM](/local-llms/run-first-local-llm) for a step-by-step first-run walkthrough. If you are running on a laptop with limited RAM, [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) covers quantization and performance tuning for constrained hardware.',
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**Meta Llama 3.2 Model Card** — Official specifications and benchmarks for Llama models',
+            '**Microsoft Phi-3 Mini** — Model card with performance metrics and optimization tips',
+            '**Google Gemma 2 2B** — Official documentation and performance characteristics',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Choosing Your First Model',
+          items: [
+            'Choosing a model size based only on parameter count — 7B at 4-bit quantization can outperform a poorly-quantized 13B.',
+            'Not accounting for GPU VRAM quantization overhead — a model may need 10–15% more VRAM than the file size.',
+            'Using older quantizations (Q3_K_S) when newer ones (Q4_K_M) offer better quality at the same size.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and first model download',
+            '[Run Your First Local LLM](/local-llms/run-first-local-llm) — Getting started after installation',
+            '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) — RAM and thermal optimization',
+            '[Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) — Debugging common issues',
+          ],
         },
       },
     },
@@ -747,7 +872,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Local LLM One-Click Installers: Ollama vs LM Studio vs Jan AI vs GPT4All Compared',
       seoTitle: 'Local LLM One-Click Installers Compared',
       intro: 'Four tools let you run local LLMs without any manual configuration: Ollama, LM Studio, Jan AI, and GPT4All. Each installs in under 5 minutes and manages model downloads automatically. The right choice depends on whether you prefer a terminal or GUI, need an API server, or want the simplest possible setup.',
-      metaDescription: 'Compare Ollama, LM Studio, Jan AI, and GPT4All — the four main local LLM one-click installers. See OS support, model libraries, API options, and which to choose.',
+      metaDescription: 'Compare Ollama, LM Studio, Jan AI, and GPT4All — the four main local LLM one-click installers. See OS support, model libraries, API Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -882,7 +1007,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Troubleshooting Local LLM Setup: Fix the 10 Most Common Errors',
       seoTitle: 'Troubleshooting Local LLM Setup',
       intro: 'The most common local LLM setup errors are: out-of-memory crashes, GPU not being detected, very slow inference on CPU, model file corruption, and connection refused errors from the API server. Each has a specific fix that takes under 5 minutes.',
-      metaDescription: 'Fix the 10 most common local LLM setup errors: out-of-memory, GPU not detected, slow inference, connection refused, and model not found — with exact commands.',
+      metaDescription: 'Fix the 10 most common local LLM setup errors: out-of-memory, GPU not detected, slow inference, connection refused, and model not found Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
@@ -935,7 +1060,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           codeLanguage: 'bash',
         },
         error2Fixes: {
-          title: 'How to Enable GPU in Ollama',
+          title: 'How Do You Enable GPU in Ollama',
           items: [
             '**NVIDIA on Linux**: install NVIDIA driver 525+ and CUDA toolkit 11.3+. Ollama detects CUDA automatically on restart.',
             '**NVIDIA on Windows**: ensure driver version 452.39 or higher. Ollama installs CUDA support automatically via the Windows installer.',
@@ -1022,10 +1147,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   'local-llm-on-laptop': {
     en: {
       theme: 'Getting Started',
-      title: 'How to Run Local LLMs on a Laptop: Performance, Thermals, and Model Selection',
+      title: 'How Do You Run Local LLMs on a Laptop: Performance, Thermals, and Model Selection',
       seoTitle: 'Running Local LLMs on a Laptop',
       intro: 'Running local LLMs on a laptop is practical with 8 GB of RAM and a modern CPU or Apple Silicon chip. The main constraints are RAM (limits model size), thermal throttling (reduces sustained speed), and battery drain (30–60% of battery per hour under load). The right model and quantization settings make the difference between a usable and an unusable experience.',
-      metaDescription: 'Run local LLMs on a laptop: which models work, RAM requirements, thermal throttling fixes, battery tips, and quantization settings for 8 GB and 16 GB machines.',
+      metaDescription: 'Run local LLMs on a laptop: which models work, RAM requirements, thermal throttling fixes, battery tips, and quantization settings for Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -1099,7 +1224,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Laptop Type', 'Speed (7B)', 'Battery Drain', 'Max Model'],
         },
         thermals: {
-          title: 'How to Handle Thermal Throttling on a Laptop',
+          title: 'How Do You Handle Thermal Throttling on a Laptop',
           content: [
             'Thermal throttling occurs when the CPU or GPU reaches its temperature limit and reduces clock speed to cool down. For local LLM inference, this typically kicks in after 10–15 minutes of sustained generation, reducing speed by 20–40%.',
           ],
@@ -1157,7 +1282,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup',
       seoTitle: 'Local LLM Security & Privacy Checklist',
       intro: 'Running a local LLM keeps your prompts off third-party servers, but it does not automatically make your setup private or secure. The 12-item checklist below covers model provenance, network isolation, telemetry settings, disk encryption, and access controls — the minimum required for a genuinely private local LLM setup.',
-      metaDescription: 'Local LLM security and privacy checklist: 12 steps covering model provenance, telemetry, network isolation, disk encryption, and access control for safe local AI use.',
+      metaDescription: 'Local LLM security and privacy checklist: 12 steps covering model provenance, telemetry, network isolation, disk encryption, and access Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -1223,13 +1348,13 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         networkIsolation: {
-          title: 'How to Block Outbound Connections from Local LLMs',
+          title: 'How Do You Block Outbound Connections from Local LLMs',
           content: 'For maximum privacy on sensitive workloads, use a firewall rule to prevent the inference tool from making outbound connections after the model is downloaded:',
           codeBlock: '# macOS — block Ollama outbound with pf firewall\n# Add to /etc/pf.conf:\nblock out proto tcp from any to any user ollama\n\n# Linux — block with ufw\nsudo ufw deny out from any to any app ollama\n\n# Or use Little Snitch (macOS) / OpenSnitch (Linux)\n# for per-application network control with a GUI',
           codeLanguage: 'bash',
         },
         telemetry: {
-          title: 'How to Disable Telemetry in Local LLM Tools',
+          title: 'How Do You Disable Telemetry in Local LLM Tools',
           rows: [
             { 'Tool': 'Ollama', 'Telemetry Default': 'None collected', 'How to Confirm': 'Check github.com/ollama/ollama — no analytics code' },
             { 'Tool': 'LM Studio', 'Telemetry Default': 'Anonymous analytics enabled', 'How to Disable': 'Settings → Privacy → uncheck "Send anonymous usage data"' },
@@ -1265,7 +1390,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Local LLM Limitations: What Local Models Cannot Do (and When to Use Cloud Instead)',
       seoTitle: 'Local LLM Limitations',
       intro: 'Local LLMs have five significant limitations compared to frontier cloud models: lower output quality on complex tasks, slower inference on consumer hardware, high hardware requirements for large models, lack of real-time information, and significant setup complexity relative to cloud APIs. Understanding these limitations helps you decide when local inference is the right choice and when cloud APIs are better.',
-      metaDescription: 'Local LLM limitations explained: output quality gaps vs GPT-4o, inference speed, hardware requirements, context length, and when to use cloud APIs instead.',
+      metaDescription: 'Local LLM limitations explained: output quality gaps vs GPT-4o, inference speed, hardware requirements, context length, and when to use Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -1393,7 +1518,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Best Local LLMs in 2026: Top Models Ranked by Task, Hardware, and Quality',
       seoTitle: 'Best Local LLMs 2026',
       intro: 'The best local LLMs in 2026 are Meta Llama 3.3 70B (best overall), Qwen2.5 72B (best coding and multilingual), Mistral Small 3.1 (best 7B class), Google Gemma 3 9B (best mid-range), and Microsoft Phi-4 Mini (best under 4 GB RAM). This ranking is based on MMLU, HumanEval, and MATH benchmark scores as of Q1 2026.',
-      metaDescription: 'Best local LLMs in 2026 ranked: Llama 3.3 70B, Qwen2.5 72B, Mistral Small 3.1, Gemma 3 9B, and Phi-4 Mini. VRAM requirements, benchmark scores, and Ollama commands.',
+      metaDescription: 'Best local LLMs in 2026 ranked: Llama 3.3 70B, Qwen2.5 72B, Mistral Small 3.1, Gemma 3 9B, and Phi-4 Mini. VRAM requirements, benchmark Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '10 min read',
       educationalLevel: 'Beginner',
@@ -1535,7 +1660,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Qwen vs Llama vs Mistral: Which Local LLM Model Family Should You Use?',
       seoTitle: 'Qwen vs Llama vs Mistral',
       intro: 'Qwen2.5, Meta Llama 3.x, and Mistral are the three dominant open-weight model families for local inference in 2026. Qwen2.5 leads on coding and multilingual tasks. Llama 3.x leads on general reasoning at 70B scale. Mistral leads on efficiency — delivering strong 7B-class performance in smaller packages. The right family depends on your task, language, and hardware.',
-      metaDescription: 'Qwen vs Llama vs Mistral compared: benchmark scores, RAM requirements, coding ability, multilingual support, and which model family to use for each task in 2026.',
+      metaDescription: 'Qwen vs Llama vs Mistral compared: benchmark scores, RAM requirements, coding ability, multilingual support, and which model family to Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
@@ -1631,7 +1756,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         gettingStarted: {
-          title: 'How to Try Each Family',
+          title: 'How Do You Try Each Family',
           codeBlock: '# Qwen2.5 family\nollama run qwen2.5:7b\nollama run qwen2.5:14b\nollama run qwen2.5:72b\n\n# Llama 3.x family\nollama run llama3.2:3b\nollama run llama3.1:8b\nollama run llama3.3:70b\n\n# Mistral family\nollama run mistral          # 7B\nollama run mistral-small3.1 # 24B',
           codeLanguage: 'bash',
         },
@@ -1645,7 +1770,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Best Local LLMs for Coding in 2026: Ranked by HumanEval, RAM, and Language Support',
       seoTitle: 'Best Local LLMs for Coding 2026',
       intro: 'The best local LLMs for coding in 2026 are Qwen2.5-Coder 32B (87% HumanEval), DeepSeek-Coder V2 Lite (81%), and Qwen2.5-Coder 7B (72%). All three run locally via Ollama and outperform general-purpose models at the same parameter count on Python, JavaScript, and SQL generation tasks.',
-      metaDescription: 'Best local LLMs for coding in 2026: Qwen2.5-Coder 32B, DeepSeek-Coder V2, and Starcoder2 ranked by HumanEval score, RAM requirements, and language support.',
+      metaDescription: 'Best local LLMs for coding in 2026: Qwen2.5-Coder 32B, DeepSeek-Coder V2, and Starcoder2 ranked by HumanEval score, RAM requirements, Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
@@ -1776,7 +1901,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Best Local LLMs for Creative Writing in 2026: Fiction, Poetry, and Long-Form Content',
       seoTitle: 'Best Local LLMs for Creative Writing',
       intro: 'The best local LLMs for creative writing in 2026 are Meta Llama 3.3 70B (best prose quality), Mistral Small 3.1 24B (best quality under 16 GB RAM), and community fine-tunes like Fimbulvetr and Midnight-Rose (specialized for fiction and roleplay). Creative writing performance is not well captured by standard benchmarks — it requires evaluating narrative coherence, stylistic range, and instruction-following on open-ended prompts.',
-      metaDescription: 'Best local LLMs for creative writing in 2026: fiction, poetry, long-form content. Ranked by prose quality, instruction-following, and RAM requirements.',
+      metaDescription: 'Best local LLMs for creative writing in 2026: fiction, poetry, long-form content. Ranked by prose quality, instruction-following, and Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -1803,7 +1928,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         howToEvaluate: {
-          title: 'How to Evaluate Local LLM Quality for Creative Writing',
+          title: 'How Do You Evaluate Local LLM Quality for Creative Writing',
           content: [
             'Objective benchmarks measure knowledge and reasoning, not creative quality. To evaluate a model for creative writing, test it directly with the types of prompts you plan to use:',
           ],
@@ -1889,7 +2014,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Small Local LLM Models: Best Sub-4B Models for Low RAM Machines in 2026',
       seoTitle: 'Small Local LLM Models 2026',
       intro: 'Small local LLMs (1B–4B parameters) run on machines with 4–8 GB RAM and produce 30–70 tokens/sec on CPU — fast enough for real-time chat. The best small models in 2026 are Microsoft Phi-4 Mini 3.8B (best reasoning), Google Gemma 2 2B (fastest), Qwen2.5 3B (best coding), and Meta Llama 3.2 3B (best general use).',
-      metaDescription: 'Small local LLM models for low RAM: best sub-4B models in 2026 ranked by quality, speed, and RAM. Runs on 4–8 GB RAM with exact Ollama commands.',
+      metaDescription: 'Small local LLM models for low RAM: best sub-4B models in 2026 ranked by quality, speed, and RAM. Runs on 4–8 GB RAM with exact Ollama Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -2063,10 +2188,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   '70b-models-consumer-hardware': {
     en: {
       theme: 'Best Models',
-      title: 'How to Run 70B Local LLM Models on Consumer Hardware in 2026',
+      title: 'How Do You Run 70B Local LLM Models on Consumer Hardware in 2026',
       seoTitle: '70B Models on Consumer Hardware',
       intro: 'Running a 70B parameter model locally requires 40–48 GB of RAM at Q4_K_M quantization. This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading. As of April 2026, Llama 3.3 70B and Qwen2.5 72B are the two primary 70B models available.',
-      metaDescription: 'Run 70B local LLMs on consumer hardware: RAM requirements, GPU options, layer offloading, and quantization. What you need for Llama 3.3 70B and Qwen2.5 72B.',
+      metaDescription: 'Run 70B local LLMs on consumer hardware: RAM requirements, GPU options, layer offloading, and quantization. What you need for Llama 3.3 Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Intermediate',
@@ -2215,7 +2340,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'LLM Quantization Explained: How Q4_K_M, Q8_0, and GGUF Formats Work',
       seoTitle: 'LLM Quantization Explained',
       intro: 'LLM quantization reduces model weight precision from 32-bit or 16-bit floats to 4-bit or 8-bit integers, cutting RAM requirements by 50–75% with minimal quality loss. Q4_K_M is the standard recommended quantization for local inference — it reduces a 7B model from ~14 GB to ~4.5 GB while retaining 97–99% of the original model quality on standard benchmarks.',
-      metaDescription: 'LLM quantization explained: how Q4_K_M, Q8_0, and GGUF work, RAM savings vs quality tradeoffs, and which quantization to use for your hardware in 2026.',
+      metaDescription: 'LLM quantization explained: how Q4_K_M, Q8_0, and GGUF work, RAM savings vs quality tradeoffs, and which quantization to use for your Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Intermediate',
@@ -2368,7 +2493,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Multilingual Local LLMs: Best Models for Non-English Languages in 2026',
       seoTitle: 'Multilingual Local LLMs 2026',
       intro: 'Qwen2.5 is the strongest multilingual local LLM family in 2026, with native support for 29 languages including Chinese, Japanese, Korean, Arabic, and all major European languages. For European languages specifically, Mistral and Llama 3.x models perform competitively. For Asian languages (Japanese, Korean, Chinese), Qwen2.5 outperforms all alternatives at every comparable model size.',
-      metaDescription: 'Best multilingual local LLMs for non-English languages in 2026: Qwen2.5 for Asian languages, Mistral for European. Benchmark scores, RAM requirements, Ollama commands.',
+      metaDescription: 'Best multilingual local LLMs for non-English languages in 2026: Qwen2.5 for Asian languages, Mistral for European. Benchmark scores, Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
@@ -2529,7 +2654,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Long Context Local LLMs: Which Models Handle 32K, 128K Tokens Locally?',
       seoTitle: 'Long Context Local LLMs 2026',
       intro: 'Most local LLM models in 2026 support 128K token context windows on paper, but practical usable context — where quality stays high — is typically 16K–32K tokens. Llama 3.1/3.2/3.3, Qwen2.5, and Mistral Small 3.1 all support 128K context. Processing full-length documents or books locally requires understanding RAM scaling and quality degradation at long ranges.',
-      metaDescription: 'Long context local LLMs: which models support 32K, 128K tokens locally, RAM requirements for long contexts, and practical limits before quality degrades.',
+      metaDescription: 'Long context local LLMs: which models support 32K, 128K tokens locally, RAM requirements for long contexts, and practical limits before Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
@@ -2600,7 +2725,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         contextSettings: {
-          title: 'How to Set Context Length in Ollama',
+          title: 'How Do You Set Context Length in Ollama',
           content: 'Ollama defaults to 2048 tokens of context unless configured otherwise. To use a model\'s full context window:',
           codeBlock: '# Set context length at runtime\nollama run llama3.1:8b --ctx 32768\n\n# Or create a custom model with a Modelfile\ncat << EOF > Modelfile\nFROM llama3.1:8b\nPARAMETER num_ctx 32768\nEOF\nollama create llama3.1-32k -f Modelfile\nollama run llama3.1-32k',
           codeLanguage: 'bash',
@@ -2670,7 +2795,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Top Open Source Models on Ollama in 2026: Most Downloaded and Highest Rated',
       seoTitle: 'Top Open Source Models on Ollama 2026',
       intro: 'The most downloaded models on Ollama in 2026 are Llama 3.x (most popular overall), Qwen2.5 (fastest growing, best coding), Mistral (most efficient), Gemma 3 (best image understanding), and DeepSeek-R1 (best reasoning). This guide covers the top 10 models by use case, with exact pull commands and performance data.',
-      metaDescription: 'Top open source models on Ollama in 2026: most downloaded, best coding, best reasoning, and best multilingual. Exact pull commands and performance benchmarks.',
+      metaDescription: 'Top open source models on Ollama in 2026: most downloaded, best coding, best reasoning, and best multilingual. Exact pull commands and Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
@@ -2824,7 +2949,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Local LLM Model Updates 2026: Every Major Open-Weight Release This Year',
       seoTitle: 'Local LLM Model Updates 2026',
       intro: 'As of April 2026, the most significant local LLM releases this year include Meta Llama 3.3 70B (December 2025), DeepSeek-R1 (January 2025), Qwen2.5 and Qwen2.5-Coder families (September 2025), Microsoft Phi-4 (December 2024), and Google Gemma 3 (February 2026). This article tracks all major model releases with their key specifications and Ollama availability.',
-      metaDescription: 'Local LLM model updates 2026: every major open-weight release tracked with specs, benchmarks, and Ollama availability. Updated April 2026.',
+      metaDescription: 'Local LLM model updates 2026: every major open-weight release tracked with specs, benchmarks, and Ollama availability. Updated April Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -2951,7 +3076,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Local LLMs vs Cloud APIs: Which Should You Use in 2026?',
       seoTitle: 'Local LLMs vs Cloud APIs',
       intro: 'Local LLMs run on your own hardware with zero API costs and full data privacy. Cloud APIs like OpenAI GPT-4o and Anthropic Claude 4.6 deliver higher output quality and require no hardware setup. The right choice depends on your data sensitivity, budget, required model quality, and whether you need offline access.',
-      metaDescription: 'Local LLMs vs cloud APIs compared: privacy, cost, speed, quality, and setup. Decide which is right for your use case with a concrete comparison table.',
+      metaDescription: 'Local LLMs vs cloud APIs compared: privacy, cost, speed, quality, and setup. Decide which is right for your use case with a concrete Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
