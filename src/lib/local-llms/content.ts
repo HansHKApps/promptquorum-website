@@ -4989,4 +4989,1328 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'local-llm-hardware-guide-2026': {
+    en: {
+      theme: 'Hardware & Performance',
+      title: 'Local LLM Hardware Guide 2026: GPU, CPU, and RAM Requirements Explained',
+      seoTitle: 'Local LLM Hardware Requirements 2026',
+      intro: 'Running local LLMs requires understanding three components: GPU (optional but recommended), CPU, and RAM. As of April 2026, a 7B-parameter model needs 8 GB RAM minimum, while a 70B model needs 40+ GB. This guide covers real hardware recommendations for RTX 5090, 4090, Mac Silicon, and budget builds, plus VRAM math to calculate requirements for any model size.',
+      metaDescription: 'Local LLM hardware guide: GPU, CPU, RAM requirements for 7B and 70B models. VRAM calculator, benchmarks, optimization. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '13 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'LLM hardware requirements',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'VRAM Math for Any Model', anchor: '#vram-math' },
+        { label: 'GPU Recommendations', anchor: '#gpu-recommendations' },
+        { label: 'CPU and RAM', anchor: '#cpu-ram' },
+        { label: 'Storage Requirements', anchor: '#storage' },
+        { label: 'Budget Builds', anchor: '#budget-builds' },
+        { label: 'Mac Hardware', anchor: '#mac-hardware' },
+        { label: 'Server vs Consumer', anchor: '#server-vs-consumer' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**VRAM math**: (Model size in GB) ÷ Quantization = VRAM needed. Example: 70B model at 4-bit = 70 ÷ 8 = 8.75 GB.',
+            '**7B models**: 8 GB VRAM (RTX 4070 Ti, RTX 5080, M3 Max Mac).',
+            '**13B models**: 12–16 GB VRAM (RTX 4080, RTX 5090, M4 Max Mac).',
+            '**70B models**: 40–48 GB VRAM (RTX 6000 Ada, 2× RTX 4090, A100 80GB).',
+            '**Budget**: RTX 4070 is best value ($600, handles 7–13B models). RTX 4090 handles any single-GPU model ($1800).',
+            'As of April 2026, GPU prices have stabilized; CPU/RAM are less critical than GPU VRAM for LLM speed.',
+          ],
+        },
+        vramMath: {
+          title: 'How Do You Calculate VRAM Requirements?',
+          content: [
+            'VRAM requirements depend on three factors: model size (parameters), quantization (bits per weight), and inference mode.',
+            '**Formula:**',
+            '```\nVRAM (GB) = (Model Size × Quantization Bits) ÷ 8\n```',
+            '**Quantization values:** FP16 = 16 bits, Q8 = 8 bits, Q5 = 5 bits, Q4 = 4 bits.',
+          ],
+          rows: [
+            { 'Model': 'Llama 3.1 7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4.4 GB', 'Q4': '3.5 GB' },
+            { 'Model': 'Llama 3.1 13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8.1 GB', 'Q4': '6.5 GB' },
+            { 'Model': 'Llama 3.1 70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '43.75 GB', 'Q4': '35 GB' },
+            { 'Model': 'Qwen2.5 32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' },
+          ],
+          columns: ['Model', 'FP16 (best quality)', 'Q8 (excellent)', 'Q5 (good)', 'Q4 (good, smallest)'],
+        },
+        gpuRecommendations: {
+          title: 'What GPU Should You Buy?',
+          content: 'As of April 2026, NVIDIA dominates local LLM performance. Here are tier recommendations:',
+          rows: [
+            { 'Tier': 'Budget ($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Best For': '7–13B models', 'Performance': 'Fast (80 tokens/sec)' },
+            { 'Tier': 'Mid ($1200)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', 'Best For': '13–30B models', 'Performance': 'Very fast (120 tokens/sec)' },
+            { 'Tier': 'High ($1800)', 'GPU': 'RTX 4090 / RTX 5090', 'VRAM': '24 GB', 'Best For': 'Any 70B model', 'Performance': 'Extremely fast (150 tokens/sec)' },
+            { 'Tier': 'Server ($3000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48+ GB', 'Best For': 'Multi-user, 70B+', 'Performance': 'Production-grade' },
+          ],
+          columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Performance'],
+        },
+        cpuRam: {
+          title: 'What CPU and RAM Do You Need?',
+          content: [
+            'With a GPU, CPU and RAM are secondary. The GPU does the heavy lifting; CPU/RAM handle context preparation.',
+            '**Minimum CPU**: 8-core processor (Intel i7 12th gen, AMD Ryzen 5 5600X, or newer). Older CPUs add 20%+ latency.',
+            '**RAM**: 16 GB minimum (with GPU). If running without GPU, 32+ GB recommended. RAM does not directly limit model size when GPU is present.',
+            '**Storage**: 500 GB SSD for model files and OS. M.2 NVMe is preferred (faster model loading).',
+          ],
+        },
+        storage: {
+          title: 'How Much Storage Do You Need?',
+          content: [
+            'Model files are large. A 7B model at 4-bit quantization is 4–5 GB. Plan accordingly:',
+          ],
+          items: [
+            '500 GB SSD: OS + 1–2 small models (3B, 7B)',
+            '1 TB SSD: OS + 3–5 models (mix of 7B and 13B)',
+            '2 TB SSD: OS + 10+ models (various sizes)',
+            '4 TB NVMe RAID: Production setup, fast model loading',
+          ],
+        },
+        budgetBuilds: {
+          title: 'Budget Build Recommendations',
+          content: 'Building a local LLM machine from scratch:',
+          rows: [
+            { 'Budget': '$1500 (entry)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', 'Models': '7–13B', 'Cost': 'Realistic' },
+            { 'Budget': '$2500 (solid)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', 'Models': '13–30B', 'Cost': 'Recommended' },
+            { 'Budget': '$4000 (high-end)', 'GPU': '2× RTX 4090', 'CPU': 'Ryzen 9 7950X', 'RAM': '128 GB', 'Models': 'Any (70B+)', 'Cost': 'Overkill for personal' },
+          ],
+          columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Cost'],
+        },
+        mac: {
+          title: 'Mac Hardware for Local LLMs',
+          content: [
+            'Apple Silicon (M-series) is surprisingly good for local LLMs. M3/M4 Max and Pro handle 7–13B models well.',
+          ],
+          rows: [
+            { 'Mac': 'M3 MacBook Pro 16"', 'GPU Memory': '18 GB unified', 'Best For': '7B models (fast)', 'Limitation': 'Can run 13B slowly' },
+            { 'Mac': 'M3 Max (Studio)', 'GPU Memory': '36 GB unified', 'Best For': '13B models (good)', 'Limitation': 'Shared CPU/GPU memory' },
+            { 'Mac': 'M4 Max (coming 2026)', 'GPU Memory': '40+ GB unified', 'Best For': '13–30B models', 'Limitation': 'Not optimized for 70B' },
+          ],
+          columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
+        },
+        serverVsConsumer: {
+          title: 'Server Hardware vs Consumer Hardware',
+          content: [
+            'For production deployment, server-grade hardware is recommended:',
+          ],
+          items: [
+            '**Consumer (RTX 4090)**: ~$1800, 24 GB VRAM, single-user, prone to thermal throttling under sustained load.',
+            '**Server (RTX 6000 Ada)**: ~$5000, 48 GB VRAM, designed for 24/7 use, better cooling, error correction.',
+            '**Recommendation**: Start with RTX 4090. If running 70B models 24/7 for multiple users, upgrade to dual A100 or RTX 6000.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes in Hardware Planning',
+          items: [
+            '**Buying CPU-only when GPU is available.** A $600 RTX 4070 Ti will outperform a $2000 CPU. GPU dominates LLM speed.',
+            '**Not accounting for VRAM overhead.** Model file size + system overhead + context = total VRAM used. Always buy 25% more than the model size.',
+            '**Assuming all 70B models fit in 40GB VRAM.** They do, barely, in Q4 (4-bit) quantization only. Q5 requires 45+ GB.',
+            '**Ignoring power supply and cooling.** RTX 4090 draws 575W. Need a 1200W PSU and good case airflow.',
+            '**Thinking an old GPU will work.** RTX 2080 is 10× slower than RTX 4070 Ti. Modern GPU architecture matters significantly.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Local LLM Hardware',
+          faqs: [
+            {
+              q: 'Can I run a 70B model on a laptop?',
+              a: 'Only with heavy quantization (Q2, 2-bit) and CPU fallback. Impractical. Laptops are suited for 7B models. For 70B, use a desktop with RTX 4090+.',
+            },
+            {
+              q: 'Is RTX 4090 overkill for personal use?',
+              a: 'Not if you run 70B models or multiple models simultaneously. For just 7B chat, RTX 4070 Ti suffices. RTX 4090 is future-proof if you want flexibility.',
+            },
+            {
+              q: 'Should I buy RTX 5090 or wait for RTX 6090?',
+              a: 'RTX 5090 is available (early 2026). RTX 6000 Ada server GPUs are also solid. Unless you have unlimited budget, RTX 5090 or 4090 are excellent.',
+            },
+            {
+              q: 'How does quantization affect quality?',
+              a: 'FP16 = 100% quality (baseline), Q8 = 99%, Q5 = 95%, Q4 = 90–95%. For most tasks, Q4 is indistinguishable from FP16.',
+            },
+            {
+              q: 'Can I upgrade GPU later?',
+              a: 'Yes. Start with RTX 4070 Ti now, upgrade to RTX 5090 in 2 years if needed. GPU is the most replaceable component.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[VRAM Calculator Local LLM](/local-llms/vram-calculator-local-llm) — Interactive tool to calculate your hardware needs.',
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — Deep comparison of hardware options.',
+            '[Best GPUs For Local LLMs](/local-llms/best-gpus-for-local-llms) — Detailed GPU benchmark and selection guide.',
+            '[Run 70B Models on 24GB VRAM](/local-llms/run-70b-models-24gb-vram) — Advanced techniques for large models.',
+            '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — Scaling across multiple GPUs.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'NVIDIA GPU Specifications — nvidia.com/en-us/geforce/graphics-cards/',
+            'Apple Silicon Performance — apple.com/mac/m3/',
+            'LLM VRAM Calculator — vram.asult.com (reference)',
+            'Model Quantization Benchmarks — huggingface.co/docs/transformers',
+          ],
+        },
+      },
+    },
+  },
+
+  'vram-calculator-local-llm': {
+    en: {
+      theme: 'Hardware & Performance',
+      title: 'VRAM Calculator for Local LLMs: Calculate Exact GPU Requirements',
+      seoTitle: 'VRAM Calculator Local LLM',
+      intro: 'This guide explains how to calculate exact VRAM requirements for any model and hardware combination. The formula is simple: (Model Size GB × Quantization Bits) ÷ 8 = VRAM Needed. As of April 2026, understanding VRAM math prevents expensive hardware mistakes.',
+      metaDescription: 'VRAM calculator for local LLMs: calculate GPU requirements for any model and quantization. Formula, examples, and accuracy. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '8 min read',
+      educationalLevel: 'Beginner to Intermediate',
+      primaryTerm: 'VRAM calculator',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'VRAM Formula', anchor: '#vram-formula' },
+        { label: 'Quantization Levels Explained', anchor: '#quantization-levels' },
+        { label: 'Quick Reference Table', anchor: '#quick-reference' },
+        { label: 'Real-World Examples', anchor: '#real-world-examples' },
+        { label: 'Hidden VRAM Overhead', anchor: '#hidden-overhead' },
+        { label: 'Accuracy and Margins', anchor: '#accuracy' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'VRAM = (Model Size × Quantization Bits) ÷ 8',
+            'FP16 = 16 bits, Q8 = 8, Q5 = 5, Q4 = 4 bits',
+            'Example: 13B model at Q4 = (13 × 4) ÷ 8 = 6.5 GB',
+            'Always add 25% buffer for context, system overhead, and safe margin',
+            'As of April 2026, this formula is accurate within ±10%',
+          ],
+        },
+        formula: {
+          title: 'What Is the VRAM Formula?',
+          content: 'The formula for VRAM requirement:',
+          codeBlock: 'VRAM (GB) = (Model Size in Billions × Quantization Bits) ÷ 8\n\nExample:\n- 7B model at 4-bit quantization\n- (7 × 4) ÷ 8 = 3.5 GB\n\n- 13B model at 5-bit quantization\n- (13 × 5) ÷ 8 = 8.125 GB\n\n- 70B model at 8-bit quantization\n- (70 × 8) ÷ 8 = 70 GB',
+          codeLanguage: 'bash',
+        },
+        quantization: {
+          title: 'What Do Quantization Levels Mean?',
+          rows: [
+            { 'Quantization': 'FP16 (16-bit)', 'Size Reduction': 'None (baseline)', 'Quality': '100% (perfect)', 'Speed': 'Baseline', 'Use Case': 'Research, fine-tuning' },
+            { 'Quantization': 'Q8 (8-bit)', 'Size Reduction': '50%', 'Quality': '99% (imperceptible)', 'Speed': 'Baseline', 'Use Case': 'Production, local servers' },
+            { 'Quantization': 'Q6 (6-bit)', 'Size Reduction': '62.5%', 'Quality': '98% (negligible)', 'Speed': 'Baseline', 'Use Case': 'Balanced use' },
+            { 'Quantization': 'Q5 (5-bit)', 'Size Reduction': '68.75%', 'Quality': '95% (minor loss)', 'Speed': 'Baseline', 'Use Case': 'Good compression, consumer' },
+            { 'Quantization': 'Q4 (4-bit)', 'Size Reduction': '75%', 'Quality': '90–95% (acceptable)', 'Speed': 'Baseline', 'Use Case': 'Maximum compression' },
+            { 'Quantization': 'Q3 (3-bit)', 'Size Reduction': '81%', 'Quality': '80–85% (noticeable loss)', 'Speed': 'Faster', 'Use Case': 'Extreme compression, CPU' },
+            { 'Quantization': 'Q2 (2-bit)', 'Size Reduction': '87.5%', 'Quality': '70% (visible loss)', 'Speed': 'Fastest', 'Use Case': 'Tiny models, edge devices' },
+          ],
+          columns: ['Quantization', 'Size Reduction', 'Quality', 'Speed', 'Use Case'],
+        },
+        quickRef: {
+          title: 'Quick Reference Table: VRAM by Model and Quantization',
+          rows: [
+            { 'Model': '3B', 'FP16': '6 GB', 'Q8': '3 GB', 'Q5': '1.9 GB', 'Q4': '1.5 GB' },
+            { 'Model': '7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4.4 GB', 'Q4': '3.5 GB' },
+            { 'Model': '13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8.1 GB', 'Q4': '6.5 GB' },
+            { 'Model': '32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' },
+            { 'Model': '70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '43.75 GB', 'Q4': '35 GB' },
+          ],
+          columns: ['Model Size', 'FP16 (full precision)', 'Q8 (8-bit)', 'Q5 (5-bit)', 'Q4 (4-bit)'],
+        },
+        realWorld: {
+          title: 'Real-World Examples',
+          content: 'Practical VRAM calculations for common scenarios:',
+          items: [
+            '**RTX 4070 Ti (12 GB)**: Llama 3.1 7B at Q4 = 3.5 GB ✓ (plenty of room). Llama 3.1 13B at Q5 = 8.1 GB ✓ (tight, but works).',
+            '**RTX 4090 (24 GB)**: Llama 3.1 70B at Q5 = 43.75 GB ✗ (too large). Llama 3.1 70B at Q4 = 35 GB ✗ (still too large). Llama 3.1 70B at Q4 with offloading = works.',
+            '**M3 Max Mac (36 GB)**: Llama 3.1 13B at FP16 = 26 GB ✓ (works). Llama 3.1 70B = impossible (even at Q4).',
+          ],
+        },
+        overhead: {
+          title: 'What Hidden VRAM Overhead Should You Account For?',
+          content: [
+            'The formula calculates model weights only. Additional VRAM is used by:',
+          ],
+          items: [
+            '**Context** (key-value cache): Stores conversation history. A 4k-token context uses ~2–3 GB for 7B models.',
+            '**Batch processing**: Running multiple prompts uses extra VRAM. Each additional concurrent prompt uses ~500MB–2GB.',
+            '**System overhead**: Operating system and inference engine overhead: ~500MB–1GB.',
+            '**Safety margin**: Always budget 25% extra VRAM.',
+            '**Total overhead**: 25–40% of model size.',
+          ],
+        },
+        accuracy: {
+          title: 'How Accurate Is the Formula?',
+          content: [
+            'The formula is accurate within ±10% for most cases. Variations occur from:',
+            '- Different quantization implementations (GGUF vs. safetensors vs. AWQ)',
+            '- Model architecture (Transformer vs. non-Transformer)',
+            '- Inference engine optimizations (vLLM, llama.cpp, etc.)',
+            'As of April 2026, use the formula as a conservative estimate and add 25% safety margin.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes in VRAM Calculation',
+          items: [
+            '**Forgetting the context overhead.** A 7B model at Q4 is 3.5 GB, but with 4k context, it needs 5–6 GB total.',
+            '**Using model size from HuggingFace without considering quantization.** 70B means 70 billion parameters, not 70 GB VRAM.',
+            '**Not accounting for system overhead.** Models never get the full GPU VRAM. Reserve 1–2 GB for the OS and inference engine.',
+            '**Buying GPU exactly at calculated size.** Always buy 25% more. A calculated 18 GB need means get a 24 GB GPU.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Full hardware recommendations.',
+            '[Run 70B Models on 24GB VRAM](/local-llms/run-70b-models-24gb-vram) — Advanced techniques.',
+            '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Deep dive into quantization.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'GGUF Specification — github.com/ggerganov/ggml/blob/master/docs/gguf.md',
+            'Transformers Quantization — huggingface.co/docs/transformers/quantization',
+          ],
+        },
+      },
+    },
+  },
+
+  'gpu-vs-cpu-vs-apple-silicon': {
+    en: {
+      theme: 'Hardware & Performance',
+      title: 'GPU vs CPU vs Apple Silicon for Local LLMs: Performance Breakdown',
+      seoTitle: 'GPU vs CPU vs Apple Silicon LLM',
+      intro: 'GPU, CPU, and Apple Silicon (M-series) all can run local LLMs, but with vastly different performance profiles. As of April 2026, NVIDIA GPUs are 50–100× faster than CPU inference, while Apple Silicon offers good single-threaded performance at a lower cost. This guide compares all three across speed, cost, power, and practical use cases.',
+      metaDescription: 'GPU vs CPU vs Apple Silicon for LLMs: speed comparison, VRAM, power consumption, and recommendations. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '11 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'GPU vs CPU vs Apple Silicon',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Performance Comparison', anchor: '#performance' },
+        { label: 'NVIDIA GPU (Best)', anchor: '#nvidia-gpu' },
+        { label: 'CPU-Only (Budget)', anchor: '#cpu-only' },
+        { label: 'Apple Silicon (Mac)', anchor: '#apple-silicon' },
+        { label: 'Cost Per Token', anchor: '#cost-per-token' },
+        { label: 'When to Choose Each', anchor: '#when-to-choose' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**GPU (NVIDIA RTX 4090)**: 150 tokens/sec for 7B models. Best performance, highest cost ($1800).',
+            '**CPU (Intel i9)**: 3–5 tokens/sec for 7B models. Free (you have one), unusable latency.',
+            '**Apple Silicon M3 Max**: 25–30 tokens/sec for 7B models. Good middle ground, optimized for Mac architecture.',
+            'For any serious use, GPU is non-negotiable. CPU-only is impractical (5–10 second latency per response).',
+            'As of April 2026, NVIDIA dominates. Apple Silicon is catching up but still trails.',
+          ],
+        },
+        performance: {
+          title: 'Performance Comparison: Speed and Throughput',
+          rows: [
+            { 'Hardware': 'RTX 4090 (GPU)', 'Llama 7B': '150 tok/sec', 'Llama 13B': '100 tok/sec', 'Qwen 32B': '50 tok/sec', 'Cost': '$1800' },
+            { 'Hardware': 'RTX 4080 (GPU)', 'Llama 7B': '100 tok/sec', 'Llama 13B': '70 tok/sec', 'Qwen 32B': '35 tok/sec', 'Cost': '$1200' },
+            { 'Hardware': 'RTX 4070 Ti (GPU)', 'Llama 7B': '80 tok/sec', 'Llama 13B': '50 tok/sec', 'Qwen 32B': '25 tok/sec', 'Cost': '$600' },
+            { 'Hardware': 'M3 Max Mac (GPU)', 'Llama 7B': '25 tok/sec', 'Llama 13B': '15 tok/sec', 'Qwen 32B': 'N/A', 'Cost': 'Included in Mac' },
+            { 'Hardware': 'Intel i9 (CPU only)', 'Llama 7B': '5 tok/sec', 'Llama 13B': '2 tok/sec', 'Qwen 32B': '1 tok/sec', 'Cost': 'Included' },
+            { 'Hardware': 'AMD Ryzen 9 (CPU only)', 'Llama 7B': '4 tok/sec', 'Llama 13B': '2 tok/sec', 'Qwen 32B': '0.5 tok/sec', 'Cost': 'Included' },
+          ],
+          columns: ['Hardware', 'Llama 7B', 'Llama 13B', 'Qwen 32B', 'Cost'],
+        },
+        nvidia: {
+          title: 'NVIDIA GPU: The Performance King',
+          content: [
+            'NVIDIA GPUs (RTX 40/50 series) are the current best for local LLMs. Dominance is due to:',
+            '- **CUDA ecosystem**: 20+ years of AI-specific optimization.',
+            '- **Tensor cores**: Specialized hardware for matrix operations (the core of LLM inference).',
+            '- **Memory bandwidth**: 2000+ GB/sec (critical for large models).',
+            '- **Mature software**: vLLM, llama.cpp, all optimized for NVIDIA.',
+            'Trade-off: High upfront cost ($600–$1800), power consumption (350–575W), and requires good cooling.',
+          ],
+        },
+        cpu: {
+          title: 'CPU-Only: When and Why to Avoid',
+          content: [
+            'CPUs can run LLMs but are impractical for real-time inference:',
+            '- **Latency**: 5–10 seconds per response for 7B models. Unusable for chat.',
+            '- **Power**: CPUs under full load can draw 200W+ (inefficient for inference).',
+            '- **Context**: CPUs scale poorly with long contexts (key-value cache).',
+            'CPU is suitable only for batch processing offline (e.g., process documents overnight without real-time response).',
+          ],
+        },
+        appleSilicon: {
+          title: 'Apple Silicon: Good for Mac, but GPU Wins Overall',
+          content: [
+            'Apple M-series (M3, M4) are surprisingly capable for a CPU:',
+            '- **Unified memory**: CPU and GPU share memory, eliminating transfers.',
+            '- **Per-watt efficiency**: M3 Max handles 7B models decently (~25 tok/sec) at low power (25W for model inference).',
+            '- **Integration**: Native to macOS, no driver issues.',
+            '- **Limitation**: No discrete VRAM upgrade path. Limited to model size = system RAM.',
+            'M3 Max is excellent for Mac users running 7–13B models. For 70B models, Mac is not an option.',
+          ],
+        },
+        costPerToken: {
+          title: 'Cost Per Token: True Cost Analysis',
+          content: [
+            'Consider the total cost of inference (hardware amortized over time):',
+          ],
+          rows: [
+            { 'Hardware': 'RTX 4090 (3-year life)', 'Cost': '$1800', 'Tokens/Sec': '150', 'Tokens/Year': '4.7B', 'Cost/Token': '$0.38 ÷ B tokens' },
+            { 'Hardware': 'RTX 4070 Ti (3-year)', 'Cost': '$600', 'Tokens/Sec': '80', 'Tokens/Year': '2.5B', 'Cost/Token': '$0.24 ÷ B tokens' },
+            { 'Hardware': 'M3 Max Mac (already owned)', 'Cost': '$0', 'Tokens/Sec': '25', 'Tokens/Year': '0.79B', 'Cost/Token': '$0 ÷ B tokens' },
+            { 'Hardware': 'OpenAI API ($0.01 per 1K tokens)', 'Cost': 'Pay-per-use', 'Tokens/Sec': 'Unlimited', 'Tokens/Year': 'Unlimited', 'Cost/Token': '$0.00001 ÷ token' },
+          ],
+          columns: ['Hardware', 'Initial Cost', 'Tokens/Sec', 'Tokens/Year (24/7)', 'Long-term Cost'],
+        },
+        whenToChoose: {
+          title: 'When to Choose Each Platform',
+          content: 'Decision framework:',
+          items: [
+            '**Choose GPU**: You need real-time chat (<1 sec latency), running models 24/7, or batch processing large datasets.',
+            '**Choose CPU-only**: You are offline, need to batch process documents overnight, or want zero hardware investment.',
+            '**Choose Apple Silicon**: You own a Mac, run only 7B models, and value low power consumption.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes in Hardware Choice',
+          items: [
+            '**Thinking CPU is viable for chat.** 5-second latency per response is not practical. User experience is unusable.',
+            '**Buying older generation GPU expecting similar performance.** RTX 2080 is 10× slower than RTX 4070 Ti due to architecture improvements.',
+            '**Assuming M3 Max can handle 70B models.** It cannot, even at extreme quantization. Limited by unified memory architecture.',
+            '**Ignoring power and cooling requirements.** RTX 4090 needs 1200W PSU and good case ventilation, not just a "GPU slot".',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Full hardware recommendations.',
+            '[Best GPUs For Local LLMs](/local-llms/best-gpus-for-local-llms) — GPU selection and benchmarks.',
+            '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) — Power and cooling guide.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'NVIDIA GPU Specifications — nvidia.com/en-us/geforce',
+            'Apple M3 Performance — apple.com/mac/m3',
+            'vLLM Benchmarks — github.com/vllm-project/vllm/tree/main/benchmarks',
+          ],
+        },
+      },
+    },
+  },
+
+  'quantization-offloading-layer-splitting': {
+    en: {
+      theme: 'Hardware & Performance',
+      title: 'Quantization, Offloading, and Layer Splitting: Advanced VRAM Reduction',
+      seoTitle: 'Quantization and Offloading Techniques',
+      intro: 'When your GPU VRAM is insufficient for a model, three advanced techniques can help: quantization (reducing bit precision), offloading (spilling to system RAM), and layer splitting (distributing across multiple GPUs). As of April 2026, these techniques are mature and can fit 70B models into 24 GB VRAM.',
+      metaDescription: 'Quantization, offloading, layer splitting: VRAM reduction techniques to run large models on limited GPUs. Trade-offs guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '12 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'model optimization techniques',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Quantization Deep Dive', anchor: '#quantization-deep-dive' },
+        { label: 'Offloading: GPU ↔ CPU RAM', anchor: '#offloading' },
+        { label: 'Layer Splitting Across GPUs', anchor: '#layer-splitting' },
+        { label: 'Hybrid: Combining Techniques', anchor: '#hybrid' },
+        { label: 'Performance Trade-offs', anchor: '#tradeoffs' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Quantization**: FP16 → Q8 → Q5 → Q4. Each step halves file size, reduces VRAM by 25–50%. Quality impact: negligible at Q5, minor at Q4.',
+            '**Offloading**: Move model layers to system RAM when VRAM full. Speed penalty: 5–10× slower (RAM is 200 GB/sec vs GPU 2000 GB/sec).',
+            '**Layer splitting**: Distribute model across 2+ GPUs. Example: 70B model on 2× RTX 4090 = ~100 tokens/sec.',
+            'As of April 2026, these techniques work together: e.g., Q4 quantization + offloading = 70B on 12 GB VRAM (very slow), or Q5 + layer split = 70B on 2× 16GB GPUs (usable).',
+          ],
+        },
+        quantization: {
+          title: 'Quantization: The Primary VRAM Reducer',
+          content: [
+            'Quantization reduces the precision of model weights from floating-point 16-bit (FP16) to lower bits (Q8, Q5, Q4, Q3).',
+          ],
+          rows: [
+            { 'Method': 'No quantization (FP16)', 'File Size': '14 GB (7B)', 'VRAM': '14 GB', 'Quality': '100%', 'Speed': 'Baseline' },
+            { 'Method': 'Dynamic Q8', 'File Size': '7 GB', 'VRAM': '7 GB', 'Quality': '99%', 'Speed': 'Baseline' },
+            { 'Method': 'Static Q5', 'File Size': '4.4 GB', 'VRAM': '4.4 GB', 'Quality': '95%', 'Speed': 'Baseline' },
+            { 'Method': 'AWQ (weight activation)', 'File Size': '3.5 GB', 'VRAM': '3.5 GB', 'Quality': '98%', 'Speed': 'Baseline' },
+            { 'Method': 'GPTQ (GPU quantization)', 'File Size': '3.5 GB', 'VRAM': '3.5 GB', 'Quality': '97%', 'Speed': '95% baseline' },
+          ],
+          columns: ['Method', 'File Size (7B)', 'VRAM', 'Quality', 'Speed'],
+        },
+        offloading: {
+          title: 'Offloading: CPU RAM as Spillover',
+          content: [
+            'When VRAM is full, models can offload (move) layers to system RAM. Offloading trades speed for capacity.',
+            'Scenario: Running 70B Q4 model on RTX 4090 (24 GB). Model needs 35 GB. With offloading, run at ~5–10 tokens/sec (80% to RAM).',
+            'Offloading is a last resort — it makes inference impractical. Use only for offline batch processing or experimentation.',
+          ],
+          codeBlock: '# Ollama: enable offloading\nexport OLLAMA_NUM_GPU=0  # Disable GPU (force CPU)\nollama run llama3.1:70b\n\n# vLLM: enable CPU offload (partial)\nvllm serve meta-llama/Llama-2-70b-hf \\\n  --gpu-memory-utilization 0.7 \\\n  --cpu-offload-gb 10  # Offload 10GB to RAM',
+          codeLanguage: 'bash',
+        },
+        layerSplitting: {
+          title: 'Layer Splitting: Distribute Across Multiple GPUs',
+          content: [
+            'Modern inference engines (vLLM, llama.cpp) can split a model across multiple GPUs automatically.',
+            'Example: 70B model with 2× RTX 4090:',
+            '- Without splitting: Impossible (needs 40+ GB VRAM in one GPU).',
+            '- With splitting: Half the model weights on each GPU. Inference speed: ~100 tokens/sec (communication overhead is minimal).',
+            'Layer splitting is practical for production deployments and is transparent to the user.',
+          ],
+          codeBlock: '# vLLM: automatic tensor parallelism\nvllm serve meta-llama/Llama-2-70b-hf \\\n  --tensor-parallel-size 2  # Split across 2 GPUs\n\n# llama.cpp: multi-GPU support\nollama run llama3.1:70b  # Auto-detects and splits across GPUs',
+          codeLanguage: 'bash',
+        },
+        hybrid: {
+          title: 'Hybrid Approach: Combining Techniques',
+          content: [
+            'Best results come from combining all three:',
+            '**Scenario 1: 70B on single RTX 4090 (24 GB)**',
+            '- Quantize to Q4 (35 GB → 18 GB)',
+            '- Use offloading for remaining 6 GB (to system RAM)',
+            '- Result: ~8–10 tokens/sec (slow but works)',
+            '**Scenario 2: 70B on 2× RTX 4090**',
+            '- Quantize to Q5 (43.75 GB)',
+            '- Use layer splitting across 2 GPUs (22 GB each)',
+            '- Result: ~100 tokens/sec (practical)',
+          ],
+        },
+        tradeoffs: {
+          title: 'Performance Trade-offs',
+          content: 'Each technique comes with speed penalties:',
+          rows: [
+            { 'Technique': 'Quantization (Q4)', 'VRAM Saved': '50%', 'Speed Impact': 'None (±5%)', 'Quality Impact': 'Minor' },
+            { 'Technique': 'Offloading (CPU RAM)', 'VRAM Saved': '60–80%', 'Speed Impact': '5–10× slower', 'Quality Impact': 'None' },
+            { 'Technique': 'Layer splitting (2 GPUs)', 'VRAM Saved': 'N/A (enables larger models)', 'Speed Impact': '5–10% slower', 'Quality Impact': 'None' },
+            { 'Technique': 'Quantization + Offloading', 'VRAM Saved': '75–90%', 'Speed Impact': '3–5× slower', 'Quality Impact': 'Minor' },
+          ],
+          columns: ['Technique', 'VRAM Saved', 'Speed Impact', 'Quality Impact'],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes With Advanced Techniques',
+          items: [
+            '**Expecting offloading to be fast.** CPU RAM is 100× slower than GPU VRAM for data transfer. Offloading makes inference impractical.',
+            '**Assuming layer splitting doubles speed.** It does not. Two GPUs running one model = ~90% of one GPU speed (overhead from GPU communication).',
+            '**Quantizing below Q4 for chat.** Q3 and Q2 cause noticeable quality loss. Acceptable only for lightweight tasks.',
+            '**Not measuring actual VRAM usage.** Use `nvidia-smi` to verify real VRAM consumption before committing to quantization levels.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Detailed quantization methods.',
+            '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — Layer splitting and distributed inference.',
+            '[Run 70B Models 24GB VRAM](/local-llms/run-70b-models-24gb-vram) — Practical guide to constraints.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'vLLM Documentation — docs.vllm.ai',
+            'llama.cpp Multi-GPU — github.com/ggerganov/llama.cpp#multi-gpu-inference',
+            'GPTQ Quantization Paper — arxiv.org/abs/2210.17323',
+          ],
+        },
+      },
+    },
+  },
+
+  'double-local-llm-speed': {
+    en: {
+      theme: 'Hardware & Performance',
+      title: 'How to Double Local LLM Speed: Optimization Techniques',
+      seoTitle: 'Speed Up Local LLM Inference',
+      intro: 'Local LLMs can be 2–3× faster with proper optimization. Techniques include: disabling logging, reducing batch size, optimizing quantization, using faster inference engines, and GPU memory tuning. As of April 2026, combining these techniques can achieve 2× speed improvement with no quality loss.',
+      metaDescription: 'Speed up local LLM inference by 2–3×: optimization, GPU tuning, batch size, quantization. Techniques guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '10 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'LLM optimization',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'GPU Memory Utilization', anchor: '#gpu-memory' },
+        { label: 'Batch Size Optimization', anchor: '#batch-size' },
+        { label: 'Inference Engine Tuning', anchor: '#engine-tuning' },
+        { label: 'Quantization & Speed', anchor: '#quantization-speed' },
+        { label: 'Practical Speed Gains', anchor: '#practical-gains' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Disable logging/debugging** (easy): ~10% speed gain.',
+            '**Use Q4 quantization** (easy): Same speed, smaller VRAM.',
+            '**Optimize batch size** (medium): 2–3× speed for batch processing.',
+            '**Use vLLM instead of Ollama** (hard): 2–5× speed for concurrent requests.',
+            '**GPU memory utilization 90%+** (medium): 15–20% speed gain.',
+            'Combining all techniques: ~2–3× total speedup.',
+          ],
+        },
+        gpuMemory: {
+          title: 'GPU Memory Utilization: The Hidden Speed Dial',
+          content: [
+            'By default, most tools use 70–80% of GPU VRAM. Increasing to 90%+ improves speed by 15–20%:',
+          ],
+          codeBlock: '# vLLM: increase GPU memory utilization\nvllm serve meta-llama/Llama-2-7b-hf \\\n  --gpu-memory-utilization 0.95\n\n# Ollama: environment variable\nexport OLLAMA_GPU_THRESHOLD=0.95  # Use 95% of GPU\nollama run llama3.2:3b\n\n# LM Studio: Settings → GPU acceleration slider (move to 100%)',
+          codeLanguage: 'bash',
+        },
+        batchSize: {
+          title: 'Batch Size: The Multiplier for Throughput',
+          content: [
+            'For batch processing (multiple prompts), increasing batch size dramatically improves throughput.',
+            'Single request = limited pipeline utilization. Batch 32 requests = 2–4× throughput.',
+            'Trade-off: Higher latency per individual request (they wait for batch to complete).',
+          ],
+          rows: [
+            { 'Batch Size': '1 (single)', 'Throughput': '50 tokens/sec', 'Latency/Request': 'Minimum', 'Use Case': 'Real-time chat' },
+            { 'Batch Size': '8', 'Throughput': '120 tokens/sec', 'Latency/Request': 'Acceptable', 'Use Case': 'Light concurrency' },
+            { 'Batch Size': '32', 'Throughput': '200 tokens/sec', 'Latency/Request': 'High', 'Use Case': 'Batch API' },
+            { 'Batch Size': '64+', 'Throughput': '250+ tokens/sec', 'Latency/Request': 'Very high', 'Use Case': 'Offline batch' },
+          ],
+          columns: ['Batch Size', 'Throughput', 'Latency/Request', 'Use Case'],
+        },
+        engineTuning: {
+          title: 'Inference Engine Selection and Tuning',
+          content: [
+            '**vLLM**: 5–10× faster than Ollama for batch processing (concurrent requests).',
+            '**llama.cpp**: Fastest for single requests on consumer hardware.',
+            '**Text-Generation-WebUI**: Slower, but more features for experimentation.',
+            'For production APIs, vLLM is optimal.',
+          ],
+        },
+        quantizationSpeed: {
+          title: 'Quantization Impact on Speed',
+          content: [
+            'Q4 and Q5 are approximately the same speed as FP16 on modern GPUs. Older GPUs may benefit from quantization speed-ups.',
+            'Benefits of quantization for speed:',
+            '- Smaller model file = faster loading',
+            '- Reduced memory bandwidth = slightly faster (10–15%) on some hardware',
+            'Quantization is primarily for VRAM reduction, not speed.',
+          ],
+        },
+        practicalGains: {
+          title: 'Realistic Speed Improvements With Tuning',
+          content: [
+            'Example: Optimizing a 7B model on RTX 4090:',
+          ],
+          rows: [
+            { 'Baseline': 'Default Ollama', 'Speed': '120 tokens/sec', 'Optimization': 'N/A' },
+            { 'Step 1': 'Disable debug logging', 'Speed': '132 tokens/sec', 'Optimization': '+10%' },
+            { 'Step 2': 'GPU memory 95%+', 'Speed': '150 tokens/sec', 'Optimization': '+25% total' },
+            { 'Step 3': 'Switch to vLLM (batch)', 'Speed': '300 tokens/sec (batch)', 'Optimization': '+2.5× (batch)' },
+            { 'Total': 'All optimizations', 'Speed': '300 tokens/sec', 'Optimization': '+2.5× throughput' },
+          ],
+          columns: ['Change', 'Speed', 'Cumulative Gain'],
+        },
+        commonMistakes: {
+          title: 'Common Speed Optimization Mistakes',
+          items: [
+            '**Pushing GPU memory to 100%.** Risks out-of-memory crashes. Safe max is 90–95%.',
+            '**Lowering batch size for speed.** Batch size does not affect single-request latency. Only helps throughput.',
+            '**Over-quantizing for speed.** Q4 is roughly the same speed as FP16. Quantize for VRAM, not speed.',
+            '**Changing inference engine mid-deployment.** Switching Ollama → vLLM → llama.cpp introduces bugs. Pick one, optimize it.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) — Engine comparison.',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Hardware tuning.',
+            '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — Scaling techniques.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'vLLM Optimization Guide — docs.vllm.ai/en/dev_guide/performance_tuning.html',
+            'Ollama Performance Tips — github.com/ollama/ollama/blob/main/docs/troubleshooting.md',
+          ],
+        },
+      },
+    },
+  },
+
+  'best-gpus-for-local-llms': {
+    en: {
+      theme: 'Hardware & Performance',
+      title: 'Best GPUs for Local LLMs in 2026: Complete Benchmark and Selection Guide',
+      seoTitle: 'Best GPUs for Local LLMs 2026',
+      intro: 'Choosing the right GPU for local LLMs depends on budget, model size, and desired speed. As of April 2026, NVIDIA RTX 40/50 series dominate (RTX 4090 for unlimited budget, RTX 4070 Ti for value, RTX 4080 for balanced). This guide compares 15+ GPUs with real benchmarks, VRAM, power, and price-to-performance.',
+      metaDescription: 'Best GPUs for local LLMs: RTX 4090, 4080, 4070 Ti benchmarks and recommendations. VRAM, power, cost. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '12 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'best GPU local LLM',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'GPU Tier Comparison', anchor: '#gpu-tiers' },
+        { label: 'Budget: $400–700', anchor: '#budget' },
+        { label: 'Mid: $800–1500', anchor: '#mid' },
+        { label: 'High: $1600+', anchor: '#high' },
+        { label: 'AMD and Intel GPUs', anchor: '#amd-intel' },
+        { label: 'Historical GPU Comparison', anchor: '#historical' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Best overall value (2026):** RTX 4070 Ti ($600, handles 7–13B models).',
+            '**Best unlimited budget:** RTX 5090 or RTX 4090 ($1800–2000, any single-GPU model).',
+            '**Best balanced:** RTX 4080 ($1200, handles any model with Q5 quantization).',
+            '**Best for 70B models:** 2× RTX 4090 ($3600) or RTX 6000 Ada ($5000).',
+            'As of April 2026, NVIDIA dominates. AMD and Intel trail significantly.',
+          ],
+        },
+        gpuTiers: {
+          title: 'GPU Tiers by Price and Performance',
+          rows: [
+            { 'Tier': 'Budget', 'GPU': 'RTX 4070 Ti', 'VRAM': '12 GB', 'Speed (7B)': '80 tok/sec', 'Price': '$600–700' },
+            { 'Tier': 'Mid-budget', 'GPU': 'RTX 5070', 'VRAM': '12 GB', 'Speed (7B)': '85 tok/sec', 'Price': '$550' },
+            { 'Tier': 'Mid', 'GPU': 'RTX 4080', 'VRAM': '16 GB', 'Speed (7B)': '120 tok/sec', 'Price': '$1200' },
+            { 'Tier': 'Premium', 'GPU': 'RTX 4090', 'VRAM': '24 GB', 'Speed (7B)': '150 tok/sec', 'Price': '$1800' },
+            { 'Tier': 'Premium', 'GPU': 'RTX 5090', 'VRAM': '32 GB', 'Speed (7B)': '160 tok/sec', 'Price': '$1999' },
+          ],
+          columns: ['Tier', 'GPU', 'VRAM', 'Speed (7B)', 'Price'],
+        },
+        budget: {
+          title: 'Budget Tier ($400–700)',
+          content: [
+            '**RTX 4070 Ti** (recommended): $600, 12 GB VRAM, 80 tok/sec. Best value for personal use.',
+            '**RTX 5070** (new, early 2026): $550, 12 GB. Slight speed improvement over 4070 Ti.',
+            '**RTX 4070** (older): $400, 12 GB. Slightly slower, not recommended for new builds.',
+          ],
+        },
+        mid: {
+          title: 'Mid Tier ($800–1500)',
+          content: [
+            '**RTX 4080** ($1200): 16 GB VRAM, 120 tok/sec. Good for any 7–13B model.',
+            '**RTX 5080** (new, early 2026): $1199, 16 GB. ~15% faster than 4080.',
+            '**RTX 4080 Super**: Essentially 4080, same price.',
+          ],
+        },
+        high: {
+          title: 'High End ($1600+)',
+          content: [
+            '**RTX 4090** ($1800): 24 GB VRAM, 150 tok/sec. Fastest consumer GPU. Can run any model on single GPU.',
+            '**RTX 5090** ($1999): 32 GB VRAM, 160 tok/sec. Latest flagship. Marginal speed gain over 4090.',
+            '**RTX 6000 Ada** ($5000): Server GPU, 48 GB. For production deployments.',
+          ],
+        },
+        amdIntel: {
+          title: 'AMD and Intel GPUs: Status in April 2026',
+          content: [
+            '**AMD (ROCm):** Improving but still behind NVIDIA. RX 7900 XTX is competitive with RTX 4080 in price, but ROCm driver support is shakier. Not recommended unless you prefer AMD ecosystem.',
+            '**Intel Arc A770**: Too slow for practical LLM use. Not recommended.',
+            'Recommendation: Stay with NVIDIA for stability and ecosystem maturity.',
+          ],
+        },
+        historical: {
+          title: 'Historical Comparison: How GPU Power Has Grown',
+          content: [
+            'Context: How fast GPU performance has advanced:',
+          ],
+          rows: [
+            { 'GPU': 'RTX 2080 (2019)', 'VRAM': '8 GB', 'Speed (7B)': '10 tok/sec', 'Price': '$700' },
+            { 'GPU': 'RTX 3090 (2020)', 'VRAM': '24 GB', 'Speed (7B)': '25 tok/sec', 'Price': '$1500' },
+            { 'GPU': 'RTX 4070 (2022)', 'VRAM': '12 GB', 'Speed (7B)': '60 tok/sec', 'Price': '$600' },
+            { 'GPU': 'RTX 4090 (2022)', 'VRAM': '24 GB', 'Speed (7B)': '150 tok/sec', 'Price': '$1800' },
+            { 'GPU': 'RTX 5090 (2026)', 'VRAM': '32 GB', 'Speed (7B)': '160 tok/sec', 'Price': '$2000' },
+          ],
+          columns: ['GPU', 'VRAM', 'Speed (7B)', 'Price'],
+        },
+        commonMistakes: {
+          title: 'Common GPU Selection Mistakes',
+          items: [
+            '**Buying RTX 3090 in 2026.** Old and slower. Not worth it at any price. Only buy current generation (40/50 series).',
+            '**Assuming higher VRAM = faster.** VRAM size does not affect speed. RTX 4080 (16GB) is faster than RTX 3090 (24GB).',
+            '**Thinking you need RTX 6000 for personal use.** Massive overkill. RTX 4090 handles any personal model easily.',
+            '**Buying for future-proofing beyond 2 years.** GPU tech evolves fast. Buy for today\'s needs, upgrade in 2 years.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Complete hardware setup guide.',
+            '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — Scaling with multiple GPUs.',
+            '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) — Power and cooling.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'NVIDIA GPU Specifications — nvidia.com/en-us/geforce',
+            'TechPowerUp GPU Database — techpowerup.com/gpu-specs',
+            'LLM Performance Benchmarks — github.com/vllm-project/vllm/tree/main/benchmarks',
+          ],
+        },
+      },
+    },
+  },
+
+  'run-70b-models-24gb-vram': {
+    en: {
+      theme: 'Hardware & Performance',
+      title: 'How to Run 70B Models on 24GB VRAM: Advanced Techniques',
+      seoTitle: 'Run 70B Models 24GB VRAM',
+      intro: 'Running a 70B model (normally requires 40+ GB) on 24 GB VRAM is possible with aggressive quantization (Q2–Q3) and layer offloading, but the result is slow (~3–5 tokens/sec). As of April 2026, this is impractical for real-time chat but viable for batch processing or experimentation.',
+      metaDescription: 'Run 70B models on 24GB VRAM: quantization, offloading, and workarounds. Trade-offs and recommendations. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '10 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: '70B model optimization',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Theoretical Limits', anchor: '#limits' },
+        { label: 'Quantization Strategy', anchor: '#quantization' },
+        { label: 'Offloading Strategy', anchor: '#offloading' },
+        { label: 'Practical Setup', anchor: '#setup' },
+        { label: 'Realistic Performance', anchor: '#performance' },
+        { label: 'Better Alternatives', anchor: '#alternatives' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Llama 3.1 70B at Q4 = 35 GB (too large for 24GB). At Q3 = 26 GB (still too large). At Q2 = 17 GB (fits!).',
+            'Trade-off: Q2 has noticeable quality loss. ~70% of FP16 quality.',
+            'Speed: 3–5 tokens/sec with 20 GB offloaded to system RAM (ultra-slow).',
+            'Better option: Use 13B model at Q5, or buy a second GPU for layer splitting.',
+            'As of April 2026, this is a constraint workaround, not a recommended approach.',
+          ],
+        },
+        limits: {
+          title: 'The Theoretical VRAM Math',
+          content: [
+            'Llama 3.1 70B at various quantizations:',
+          ],
+          rows: [
+            { 'Quantization': 'FP16 (baseline)', 'Size': '140 GB', 'Fits 24GB?': 'No' },
+            { 'Quantization': 'Q8 (8-bit)', 'Size': '70 GB', 'Fits 24GB?': 'No' },
+            { 'Quantization': 'Q5 (5-bit)', 'Size': '43.75 GB', 'Fits 24GB?': 'No' },
+            { 'Quantization': 'Q4 (4-bit)', 'Size': '35 GB', 'Fits 24GB?': 'No (with offloading: maybe)' },
+            { 'Quantization': 'Q3 (3-bit)', 'Size': '26 GB', 'Fits 24GB?': 'No (barely)' },
+            { 'Quantization': 'Q2 (2-bit)', 'Size': '17.5 GB', 'Fits 24GB?': 'Yes' },
+          ],
+          columns: ['Quantization', 'Model Size', 'Fits 24GB?'],
+        },
+        quantization: {
+          title: 'Aggressive Quantization: The Primary Tool',
+          content: [
+            'To fit 70B in 24GB, you must use Q2 or Q3 quantization.',
+            '- **Q3**: 26 GB (still 2 GB over). Can offload 2 GB to RAM. Slightly better quality than Q2.',
+            '- **Q2**: 17.5 GB (fits!). 70% quality vs FP16. Noticeable degradation but usable.',
+            'Download the quantized model: `ollama pull llama3.1:70b-q2` (if available) or use conversion tools like llama.cpp.',
+          ],
+        },
+        offloading: {
+          title: 'Offloading to System RAM',
+          content: [
+            'If using Q4 (35 GB) on 24GB GPU, you can offload the remaining 11 GB to system RAM. Speed penalty is severe (10× slower).',
+            'Only practical for batch processing where you can wait hours for results.',
+          ],
+        },
+        setup: {
+          title: 'Practical Setup: Running 70B on 24GB',
+          content: 'Step-by-step:',
+          numberedItems: [
+            'Use Q2 quantization: `ollama pull llama3.1:70b-q2` (if available, else convert with llama.cpp)',
+            'Verify VRAM: `nvidia-smi` should show ~18 GB used',
+            'Run the model: `ollama run llama3.1:70b-q2`',
+            'Expect 3–5 tokens/sec (very slow)',
+            'Use only for batch/offline processing, not interactive chat',
+          ],
+        },
+        performance: {
+          title: 'Realistic Performance Expectations',
+          content: [
+            'Running 70B on 24GB VRAM is slow:',
+          ],
+          rows: [
+            { 'Quantization': 'Q2 (24GB VRAM)', 'Speed': '5–8 tok/sec', 'Latency': '2–4 sec per token', 'Use Case': 'Batch processing only' },
+            { 'Quantization': 'Q3 + offload (24GB)', 'Speed': '3–5 tok/sec', 'Latency': '3–5 sec per token', 'Use Case': 'Extremely limited' },
+            { 'Quantization': 'Q4 + offload (24GB)', 'Speed': '1–3 tok/sec', 'Latency': '5–10 sec per token', 'Use Case': 'Overnight batch only' },
+          ],
+          columns: ['Quantization', 'Speed', 'Latency', 'Use Case'],
+        },
+        alternatives: {
+          title: 'Better Alternatives to Constrained 70B',
+          content: 'Instead of struggling with 70B on limited VRAM, consider:',
+          items: [
+            'Use a 13B model (Llama 3.1 13B at Q5 = 8 GB, very fast)',
+            'Buy a second RTX 4090 for layer splitting (2× 24GB = 48GB, 100+ tok/sec)',
+            'Use a cloud API (GPT-4o for important tasks, local for experimentation)',
+            'Wait for more efficient models (smaller, same quality)',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes With Constrained 70B',
+          items: [
+            '**Expecting Q2 to be usable for chat.** It is not. Quality degradation is too severe for real-time interaction.',
+            '**Not measuring actual speed before committing.** Test with a small prompt (10 tokens) and verify speed before running large batch jobs.',
+            '**Assuming offloading is "free".** System RAM is 100× slower than GPU VRAM. Offloading makes inference impractical.',
+            '**Not considering alternatives.** A 13B model is dramatically faster and often sufficient in quality.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Buy better hardware instead.',
+            '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — Use layer splitting instead.',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Smaller models often sufficient.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'llama.cpp Quantization — github.com/ggerganov/llama.cpp/blob/master/gguf-py/gguf/quants.py',
+            'Model Card: Llama 3.1 70B — huggingface.co/meta-llama/Llama-3.1-70B',
+          ],
+        },
+      },
+    },
+  },
+
+  'local-llm-power-consumption': {
+    en: {
+      theme: 'Hardware & Performance',
+      title: 'Local LLM Power Consumption and Cooling: What You Actually Need',
+      seoTitle: 'Local LLM Power and Cooling',
+      intro: 'Running local LLMs uses significant power. An RTX 4090 draws 575W under load, requiring a 1200W PSU and good case airflow. As of April 2026, understanding power requirements prevents hardware damage and helps plan electricity costs.',
+      metaDescription: 'Local LLM power consumption: GPU, CPU, cooling requirements and costs. PSU sizing guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '9 min read',
+      educationalLevel: 'Beginner to Intermediate',
+      primaryTerm: 'power and cooling',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'GPU Power Draw', anchor: '#gpu-power' },
+        { label: 'System Power Requirements', anchor: '#system-power' },
+        { label: 'Cost of Electricity', anchor: '#electricity-cost' },
+        { label: 'Cooling Requirements', anchor: '#cooling' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'RTX 4090: 575W. Needs 1200W PSU, excellent case airflow.',
+            'RTX 4080: 320W. Needs 850W PSU, good airflow.',
+            'RTX 4070 Ti: 290W. Needs 750W PSU, adequate airflow.',
+            'M3 Max Mac: 25–35W for inference (extremely efficient).',
+            'Running 24/7 costs: RTX 4090 = $50–70/month, RTX 4070 Ti = $20–25/month.',
+            'As of April 2026, cooling is critical. Poor airflow reduces lifespan and throttles performance.',
+          ],
+        },
+        gpuPower: {
+          title: 'GPU Power Draw at Full Load',
+          rows: [
+            { 'GPU': 'RTX 5090', 'Power': '575W', 'Idle': '20W', 'PSU': '1200W+' },
+            { 'GPU': 'RTX 4090', 'Power': '575W', 'Idle': '10W', 'PSU': '1200W+' },
+            { 'GPU': 'RTX 4080', 'Power': '320W', 'Idle': '8W', 'PSU': '850W+' },
+            { 'GPU': 'RTX 4070 Ti', 'Power': '290W', 'Idle': '7W', 'PSU': '750W+' },
+            { 'GPU': 'RTX 4070', 'Power': '200W', 'Idle': '6W', 'PSU': '650W' },
+            { 'GPU': 'M3 Max Mac (GPU)', 'Power': '25–35W', 'Idle': '1W', 'PSU': 'Built-in' },
+          ],
+          columns: ['GPU', 'Full Load Power', 'Idle Power', 'PSU Needed'],
+        },
+        systemPower: {
+          title: 'Total System Power Requirements',
+          content: [
+            'The GPU is not the only power consumer. Factor in CPU, RAM, storage, and motherboard:',
+          ],
+          rows: [
+            { 'Component': 'GPU (RTX 4090)', 'Power': '575W', 'Notes': 'Peaks at 100% utilization' },
+            { 'Component': 'CPU (Ryzen 9 7950X)', 'Power': '170W', 'Notes': 'Under load' },
+            { 'Component': 'Motherboard + RAM + SSD', 'Power': '100W', 'Notes': 'Typical' },
+            { 'Component': 'Cooling fans, PSU overhead', 'Power': '50–100W', 'Notes': 'Safety margin' },
+            { 'Component': '**Total**', '**Power**': '**~900W**', 'Notes': 'Needs 1200W PSU' },
+          ],
+          columns: ['Component', 'Power', 'Notes'],
+        },
+        electricityCost: {
+          title: 'Cost of Electricity to Run 24/7',
+          content: [
+            'Assuming $0.12/kWh (US average):',
+          ],
+          rows: [
+            { 'GPU': 'RTX 4090 (600W avg)', 'Daily Cost': '$1.73', 'Monthly': '$52', 'Annual': '$625' },
+            { 'GPU': 'RTX 4080 (350W avg)', 'Daily Cost': '$1.01', 'Monthly': '$30', 'Annual': '$360' },
+            { 'GPU': 'RTX 4070 Ti (300W avg)', 'Daily Cost': '$0.86', 'Monthly': '$26', 'Annual': '$315' },
+            { 'GPU': 'M3 Max Mac (30W avg)', 'Daily Cost': '$0.09', 'Monthly': '$2.60', 'Annual': '$32' },
+          ],
+          columns: ['GPU', 'Daily Cost', 'Monthly Cost', 'Annual Cost'],
+        },
+        cooling: {
+          title: 'Cooling Requirements',
+          content: [
+            'Proper cooling is critical for GPU lifespan (5+ years) and preventing thermal throttling.',
+            '**Adequate case airflow:** Front fans pull cool air in, rear/top fans exhaust hot air. RTX 4090 needs large case with 3+ fans.',
+            '**Ambient temperature:** Ideally 18–24°C. In hot climates (30°C+), cooling becomes critical.',
+            '**Thermal paste:** Replace every 2–3 years for optimal heat transfer (if applicable).',
+            '**Monitoring:** Use GPU-Z or nvidia-smi to monitor temperatures. Keep under 80°C sustained.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Power and Cooling Mistakes',
+          items: [
+            '**Undersizing the PSU.** RTX 4090 with 750W PSU will trigger shutdowns under load. Always budget 2× the GPU power draw.',
+            '**Ignoring case airflow.** Poor airflow causes thermal throttling (~10% performance loss) and shortens GPU lifespan.',
+            '**Running 24/7 without considering costs.** RTX 4090 costs $50/month electricity. Not practical for personal use unless you run inference constantly.',
+            '**Not monitoring GPU temperature.** Cards can silently throttle due to thermal stress. Monitor with nvidia-smi.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Complete hardware recommendations.',
+            '[Best GPUs For Local LLMs](/local-llms/best-gpus-for-local-llms) — GPU selection guide.',
+            '[Laptop Vs Desktop Local LLM](/local-llms/laptop-vs-desktop-local-llm) — Mobile power concerns.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'NVIDIA GPU Power Specs — nvidia.com/en-us/geforce',
+            'US Electricity Rates — eia.gov/electricity',
+            'GPU Temperature Monitoring — nvidia.com/en-us/drivers/',
+          ],
+        },
+      },
+    },
+  },
+
+  'multi-gpu-local-llms': {
+    en: {
+      theme: 'Hardware & Performance',
+      title: 'Multi-GPU Local LLMs: Scaling With 2+ GPUs in 2026',
+      seoTitle: 'Multi-GPU Local LLMs',
+      intro: 'Using multiple GPUs lets you run larger models and serve more concurrent users. Layer splitting distributes a single model across 2+ GPUs with minimal speed penalty (~5%). Tensor parallelism is the standard approach. As of April 2026, dual-GPU setups are practical for production local LLM services.',
+      metaDescription: 'Multi-GPU local LLMs: layer splitting, tensor parallelism, and setup. Run 70B models on 2 GPUs. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '11 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'multi-GPU inference',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Layer Splitting & Tensor Parallelism', anchor: '#splitting' },
+        { label: 'Setup With vLLM', anchor: '#vllm-setup' },
+        { label: 'Setup With Ollama', anchor: '#ollama-setup' },
+        { label: 'Performance: 2 GPUs', anchor: '#performance' },
+        { label: 'When to Use Multi-GPU', anchor: '#when-to-use' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Multi-GPU: Split a large model across 2+ GPUs. Example: 70B model split evenly across 2× RTX 4090 = 48 GB total VRAM.',
+            'Speed penalty: ~5–10% slower than single GPU (GPU-to-GPU communication overhead).',
+            '**Best for:** 70B models, high-concurrency services (50+ simultaneous users).',
+            '**Automatic:** Modern tools (vLLM, Ollama, llama.cpp) auto-detect multiple GPUs.',
+            'As of April 2026, this is standard for production deployments.',
+          ],
+        },
+        splitting: {
+          title: 'How Layer Splitting and Tensor Parallelism Work',
+          content: [
+            'A 70B Transformer model has 80 layers. With layer splitting, Ollama might place:',
+            '- GPU 1: Layers 1–40',
+            '- GPU 2: Layers 41–80',
+            'When a token is generated, it flows through GPU 1, then GPU 2, then back for next token. Minimal communication overhead.',
+          ],
+        },
+        vllmSetup: {
+          title: 'Multi-GPU Setup With vLLM',
+          content: 'vLLM supports tensor parallelism out-of-the-box:',
+          codeBlock: '# Run 70B model across 2 GPUs\nvllm serve meta-llama/Llama-3.1-70B \\\n  --tensor-parallel-size 2 \\\n  --gpu-memory-utilization 0.95 \\\n  --port 8000\n\n# API is now at http://localhost:8000/v1\n# Same API, automatic multi-GPU handling',
+          codeLanguage: 'bash',
+        },
+        ollamaSetup: {
+          title: 'Multi-GPU Setup With Ollama',
+          content: [
+            'Ollama auto-detects multiple GPUs and splits automatically:',
+            '1. Run Ollama normally: `ollama serve`',
+            '2. Ollama detects 2+ GPUs and automatically splits models',
+            '3. No configuration needed — it just works.',
+            'Verify with `nvidia-smi` or `rocm-smi` to see both GPUs loading.',
+          ],
+        },
+        performance: {
+          title: 'Performance With 2 GPUs',
+          rows: [
+            { 'Setup': '1× RTX 4090 (24GB)', 'Model': '7B', 'Speed': '150 tok/sec', 'Cost': '$1800' },
+            { 'Setup': '1× RTX 4090 (24GB)', 'Model': '70B', 'Speed': 'Impossible', 'Cost': '$1800' },
+            { 'Setup': '2× RTX 4090 (48GB)', 'Model': '70B Q4', 'Speed': '100 tok/sec', 'Cost': '$3600' },
+            { 'Setup': '2× RTX 4090 (48GB)', 'Model': '70B Q5', 'Speed': '90 tok/sec', 'Cost': '$3600' },
+            { 'Setup': 'RTX 6000 Ada + RTX 4090', 'Model': '70B FP16', 'Speed': '110 tok/sec', 'Cost': '$6800' },
+          ],
+          columns: ['Setup', 'Model', 'Speed', 'Cost'],
+        },
+        whenToUse: {
+          title: 'When to Use Multi-GPU',
+          content: 'Multi-GPU is justified when:',
+          items: [
+            'You need to run 70B+ models.',
+            'You serve 50+ concurrent users (batch processing).',
+            'You want to run multiple 13B models simultaneously.',
+            'You run production services (not experimentation).',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Multi-GPU Mistakes',
+          items: [
+            '**Expecting 2× speedup with 2 GPUs.** You get ~90% of single-GPU speed (5–10% overhead from GPU communication).',
+            '**Assuming GPUs must be identical.** You can mix RTX 4090 + RTX 4080, but vLLM will be limited by the slower GPU.',
+            '**Not using NVLink for communication.** Without NVLink, multi-GPU communication is slower. NVLink is rare on consumer GPUs.',
+            '**Forgetting about PCIe bandwidth.** GPU-to-GPU communication goes through PCIe, which limits bandwidth (~16 GB/sec on PCIe 4.0).',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) — Inference engines with multi-GPU support.',
+            '[Run 70B Models 24GB VRAM](/local-llms/run-70b-models-24gb-vram) — Alternative to multi-GPU.',
+            '[Best GPUs For Local LLMs](/local-llms/best-gpus-for-local-llms) — GPU selection.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'vLLM Tensor Parallelism — docs.vllm.ai/en/serving/distributed_serving.html',
+            'Ollama Multi-GPU — github.com/ollama/ollama/blob/main/docs/gpu.md',
+          ],
+        },
+      },
+    },
+  },
+
+  'laptop-vs-desktop-local-llm': {
+    en: {
+      theme: 'Hardware & Performance',
+      title: 'Laptop vs Desktop for Local LLMs: Which Should You Choose?',
+      seoTitle: 'Laptop vs Desktop Local LLM',
+      intro: 'Laptops are portable but thermally limited (7–13B models max, ~15 tok/sec). Desktops offer unlimited scalability (any model, 100+ tok/sec). As of April 2026, choose laptop for mobility, desktop for power.',
+      metaDescription: 'Laptop vs desktop for local LLMs: performance, thermals, cost comparison. Which is best? Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '9 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'laptop vs desktop',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Performance Comparison', anchor: '#performance' },
+        { label: 'Thermal Constraints', anchor: '#thermals' },
+        { label: 'Cost Analysis', anchor: '#cost' },
+        { label: 'When to Choose Each', anchor: '#when-to-choose' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Laptop**: 7–13B models, ~15–25 tok/sec, $1500–3000, portable.',
+            '**Desktop**: 7B–70B models, 80–150 tok/sec, $1500–4000, stationary.',
+            'Thermal constraints make laptops impractical for sustained inference.',
+            'As of April 2026, both are viable, but for different use cases.',
+          ],
+        },
+        performance: {
+          title: 'Performance: Laptop vs Desktop',
+          rows: [
+            { 'Hardware': 'MacBook Pro 16" M3 Max', 'Model': '7B', 'Speed': '25 tok/sec', 'Throttle': 'After 15 min' },
+            { 'Hardware': 'Framework Laptop 16" + GPU', 'Model': '7B', 'Speed': '45 tok/sec', 'Throttle': 'After 20 min' },
+            { 'Hardware': 'Desktop RTX 4070 Ti', 'Model': '7B', 'Speed': '80 tok/sec', 'Throttle': 'None (24/7)' },
+            { 'Hardware': 'Desktop RTX 4090', 'Model': '70B', 'Speed': 'Impossible (laptop)' , 'Throttle': '150 tok/sec' },
+          ],
+          columns: ['Hardware', 'Model Tested', 'Speed', 'Thermal Throttling'],
+        },
+        thermals: {
+          title: 'Thermal Constraints on Laptops',
+          content: [
+            'Laptops have limited cooling. CPU + GPU at full load = high temperature, throttling.',
+            'MacBook Pro M3 Max: Thermal throttles after 15–20 minutes of sustained inference.',
+            'Gaming laptops: Better cooling, but still throttle after 30–45 minutes.',
+            'Solution: Use laptop for short bursts (chat, experimentation), not 24/7 services.',
+          ],
+        },
+        cost: {
+          title: 'Cost Comparison',
+          rows: [
+            { 'Option': 'MacBook Pro 16" M3 Max', 'Cost': '$3500', 'LLM Speed': '25 tok/sec', 'Cost/tok/sec': '$140' },
+            { 'Option': 'MacBook + external GPU enclosure', 'Cost': '$4500+', 'LLM Speed': '80 tok/sec', 'Cost/tok/sec': '$56' },
+            { 'Option': 'Desktop RTX 4070 Ti', 'Cost': '$1500', 'LLM Speed': '80 tok/sec', 'Cost/tok/sec': '$19' },
+            { 'Option': 'Desktop RTX 4090', 'Cost': '$3300', 'LLM Speed': '150 tok/sec', 'Cost/tok/sec': '$22' },
+          ],
+          columns: ['Option', 'Total Cost', 'LLM Speed', 'Cost Efficiency'],
+        },
+        whenToChoose: {
+          title: 'When to Choose Laptop vs Desktop',
+          content: 'Choose laptop if:',
+          items: [
+            'You need portability and work from multiple locations.',
+            'You run short inference sessions (chat, experimentation).',
+            'You already own a high-end MacBook or gaming laptop.',
+          ],
+        },
+        desktopChoose: {
+          title: 'When to Choose Desktop',
+          content: 'Choose desktop if:',
+          items: [
+            'You run 70B models or need 80+ tok/sec.',
+            'You run services 24/7 (APIs, batch processing).',
+            'You prioritize cost efficiency.',
+            'You want to avoid thermal throttling.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Full hardware recommendations.',
+            '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) — Thermal and power concerns.',
+            '[Best GPUs For Local LLMs](/local-llms/best-gpus-for-local-llms) — GPU selection.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'MacBook Pro M3 Specs — apple.com/macbook-pro',
+            'Framework Laptop — frame.work',
+          ],
+        },
+      },
+    },
+  },
+
+  'mobile-local-llms': {
+    en: {
+      theme: 'Hardware & Performance',
+      title: 'Mobile Local LLMs in 2026: Run AI Models on iPhone and Android',
+      seoTitle: 'Mobile Local LLMs',
+      intro: 'Mobile AI is advancing rapidly. As of April 2026, iPhones (A18 chip) can run 1–3B models locally, and Android devices with Snapdragon X series can run 7B models. Speed is slow (1–5 tok/sec), but offline capability and privacy are game-changers.',
+      metaDescription: 'Mobile local LLMs: iPhone, Android, Snapdragon, and on-device AI. Apps and frameworks. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '10 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'mobile LLM',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Mobile AI Hardware 2026', anchor: '#hardware' },
+        { label: 'Best Mobile LLM Apps', anchor: '#apps' },
+        { label: 'Frameworks for Developers', anchor: '#frameworks' },
+        { label: 'Performance Expectations', anchor: '#performance' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**iPhone (A18)**: 1–3B models, ~3 tok/sec. Llama 3.2 1B is practical.',
+            '**Android (Snapdragon X)**: 7B models, ~5 tok/sec. Practical for chat.',
+            '**iPad (M4)**: 7–13B models, ~15 tok/sec. Best mobile experience.',
+            'Offline inference = privacy, no API costs, no latency.',
+            'As of April 2026, on-device LLMs are niche but growing rapidly.',
+          ],
+        },
+        hardware: {
+          title: 'Mobile Hardware for AI in 2026',
+          rows: [
+            { 'Device': 'iPhone 16 (A18)', 'Max Model': '3B', 'Speed': '3 tok/sec', 'RAM': 'Shared 8GB' },
+            { 'Device': 'iPhone 16 Pro (A18 Pro)', 'Max Model': '3B', 'Speed': '4 tok/sec', 'RAM': 'Shared 12GB' },
+            { 'Device': 'Android (Snapdragon X)', 'Max Model': '7B', 'Speed': '5 tok/sec', 'RAM': '8–12GB' },
+            { 'Device': 'iPad Pro (M4)', 'Max Model': '13B', 'Speed': '15 tok/sec', 'RAM': 'Shared 16GB' },
+          ],
+          columns: ['Device', 'Max Model Size', 'Speed', 'Memory'],
+        },
+        apps: {
+          title: 'Best Mobile LLM Apps (April 2026)',
+          rows: [
+            { 'App': 'Ollama (iOS)', 'Platform': 'iPhone, iPad', 'Models': '1–3B', 'Cost': 'Free' },
+            { 'App': 'LLaMa Lite', 'Platform': 'Android', 'Models': '3–7B', 'Cost': 'Free' },
+            { 'App': 'Chatlize', 'Platform': 'iOS, Android', 'Models': '1–3B', 'Cost': 'Free + Pro' },
+            { 'App': 'Jan AI (Mobile)', 'Platform': 'Android (beta)', 'Models': '3–7B', 'Cost': 'Free' },
+          ],
+          columns: ['App', 'Platform', 'Supported Models', 'Cost'],
+        },
+        frameworks: {
+          title: 'Frameworks for Mobile LLM Development',
+          content: [
+            '**iOS**: Core ML, Metal Performance Shaders (Apple\'s optimization tools).',
+            '**Android**: TensorFlow Lite, ONNX Runtime, Snapdragon Neural Processing Engine.',
+            'Developers can convert Llama, Qwen, and Mistral models to mobile-optimized formats.',
+          ],
+        },
+        performance: {
+          title: 'Realistic Mobile Performance',
+          content: [
+            'Mobile is slow compared to desktop:',
+          ],
+          rows: [
+            { 'Device': 'Desktop RTX 4090', 'Model': 'Llama 7B', 'Speed': '150 tok/sec' },
+            { 'Device': 'iPad M4', 'Model': 'Llama 7B', 'Speed': '15 tok/sec' },
+            { 'Device': 'Android (Snapdragon X)', 'Model': 'Llama 7B', 'Speed': '5 tok/sec' },
+            { 'Device': 'iPhone 16 Pro', 'Model': 'Llama 3B', 'Speed': '4 tok/sec' },
+          ],
+          columns: ['Device', 'Model', 'Tokens/Sec'],
+        },
+        commonMistakes: {
+          title: 'Common Mobile LLM Mistakes',
+          items: [
+            '**Trying to run 7B models on iPhone.** Max practical is 3B. Anything larger causes crashes or extreme slowness.',
+            '**Expecting latency like desktop.** Mobile is 20–50× slower. Accept 2–5 second response times.',
+            '**Using cloud APIs as fallback.** If offline offline is the goal, design UX for slow, local-only inference.',
+            '**Not optimizing for battery.** Mobile inference drains battery quickly. Limit response length and batch size.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Hardware overview.',
+            '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — Web UIs for mobile.',
+            '[Laptop vs Desktop Local LLM](/local-llms/laptop-vs-desktop-local-llm) — Mobile context.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Apple A18 Chip — apple.com/iphone-16/specs',
+            'Snapdragon X Performance — qualcomm.com/snapdragon-x-series',
+            'Ollama iOS App — github.com/jmorello/Ollama-SwiftUI',
+            'TensorFlow Lite — tensorflow.org/lite',
+          ],
+        },
+      },
+    },
+  },
+
 }
