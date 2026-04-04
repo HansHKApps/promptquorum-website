@@ -10573,10 +10573,12 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   'open-source-vs-proprietary-llms': {
     en: {
       theme: 'Fundamentals',
-      title: 'Open Source vs Proprietary LLMs: The Race',
-      intro: 'Coming soon — comparing open-source models like LLaMA and Mistral against proprietary options like GPT-4o and Claude, including cost, control, and performance trade-offs.',
+      title: 'Open Source vs Proprietary LLMs: Cost, Control, and Capability Trade-Offs',
+      intro: 'Open-source models like Llama 3.2 and Mistral let you run locally and customize freely. Proprietary models like GPT-4o and Claude 4.6 Sonnet offer superior capability and speed. As of April 2026, the best choice depends on your infrastructure, budget, and data privacy requirements.',
+      metaDescription: 'Open-source vs proprietary LLMs: cost, customization, privacy, performance. Decision framework and comparison table. Free beta — April 2026.',
+      educationalLevel: 'Intermediate',
       publishDate: '2026-03-24',
-      readTime: 'Coming soon',
+      readTime: '8 min read',
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -10783,6 +10785,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
 ,
+      metaDescription: 'What the Single Step Prompt Method is, the 5 building blocks, and when to use it. Free beta — April 2026.',
+      educationalLevel: 'Beginner',
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -10832,7 +10836,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Frameworks',
       title: 'The Single Step Prompt Method',
-      intro: 'The Single Step Prompt Method is a minimal prompt framework where you describe the entire task in one carefully structured instruction instead of building a multi-turn conversation. This method reduces overhead, makes results easier to compare across models, and is the default starting framework inside PromptQuorum for new users.',
+      intro: 'The Single Step Prompt Method is a minimal prompt framework where you describe the entire task in one carefully structured instruction instead of building a multi-turn conversation. As of April 2026, Single Step is the default framework for new PromptQuorum users and works effectively across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models.',
       publishDate: '2026-03-24',
       readTime: '8 min read',
       schema: {
@@ -12180,7 +12184,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Techniques',
       title: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
-      intro: 'Chain-of-thought prompting is a technique where you explicitly ask the model to show its reasoning steps instead of jumping straight to the final answer. This makes complex decisions easier to audit, debug, and improve over time.',
+      intro: 'Chain-of-thought prompting is a technique where you explicitly ask the model to show its reasoning steps instead of jumping straight to the final answer. As of April 2026, CoT is one of the most reliable techniques for improving accuracy across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and all other language models.',
+      metaDescription: 'What Chain-of-Thought prompting is, why it improves LLM accuracy, and how to write effective CoT prompts. Free beta — April 2026.',
+      educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '7 min read',
       schema: {
@@ -12403,7 +12409,91 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'By treating prompt chaining as a first-class pattern, PromptQuorum helps you turn complex, multi-step tasks into consistent, maintainable AI workflows.',
           ],
         },
+      },,
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'Chain-of-Thought (CoT) prompting asks the model to show reasoning steps before the final answer — improving accuracy across tasks',
+          'PromptQuorum testing: CoT improved accuracy 78% (Claude), 74% (Gemini), 71% (GPT-4o) on complex reasoning tasks',
+          'Zero-shot CoT: just ask "Let's think step by step" — works surprisingly well on many tasks without examples',
+          'Few-shot CoT: show 2–5 examples with step-by-step reasoning; helps the model learn your reasoning style',
+          'When to use CoT: math problems, logic puzzles, multi-step analysis, causal reasoning; not helpful for simple factual lookup',
+          'When NOT to use CoT: simple classification (yes/no), factual retrieval, or tasks where steps are not meaningful',
+          'CoT vs Tree-of-Thought: CoT shows a single linear path; Tree-of-Thought explores multiple reasoning branches',
+          'Regional compliance: EU AI Act Article 13 transparency requirements are satisfied by showing reasoning steps (explainability)'
+        ]
       },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What is Chain-of-Thought prompting?', a: 'Chain-of-Thought (CoT) prompting asks the model to show its reasoning steps before arriving at a final answer. Instead of jumping to a conclusion, the model "thinks aloud," which improves accuracy and makes reasoning transparent.' },
+          { q: 'How much does CoT improve accuracy?', a: 'In PromptQuorum testing, CoT improved accuracy by 7–23% on logic puzzles and multi-step math. Improvement varies by task: highest on reasoning tasks, minimal on simple classification.' },
+          { q: 'What is zero-shot CoT?', a: 'Zero-shot CoT is asking "Let's think step by step" without showing examples. Surprisingly effective on many tasks. Works because the instruction itself primes the model to decompose problems.' },
+          { q: 'What is few-shot CoT?', a: 'Few-shot CoT shows 2–5 examples with reasoning steps worked out, then asks the model to follow the same pattern for a new problem. More reliable than zero-shot on specialized tasks.' },
+          { q: 'When should I use CoT vs just asking for the answer?', a: 'Use CoT when accuracy matters more than speed (reasoning takes tokens). Use direct answers for simple factual lookups, classification (yes/no), or when reasoning steps are not meaningful.' },
+          { q: 'Does CoT work with all models?', a: 'Yes. CoT works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, Llama, Mistral, and other LLMs. Newer models show larger improvements, but all models benefit.' },
+          { q: 'How is CoT different from Tree-of-Thought?', a: 'CoT shows one linear reasoning path. Tree-of-Thought explores multiple reasoning branches and evaluates which is best. ToT is more thorough but costs more tokens.' },
+          { q: 'Can CoT reduce hallucination?', a: 'Partially. CoT makes reasoning transparent so you can spot errors early. But the model can still hallucinate facts within the reasoning steps. Combine CoT with fact-checking for critical applications.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Using CoT on tasks where it doesn't help: simple factual lookups, yes/no classification, or tasks without meaningful reasoning steps',
+          'Few-shot examples that show bad reasoning: the model learns from examples, so showing sloppy or circular logic sets a bad pattern',
+          'Forgetting to instruct the model to show reasoning in the output (just asking for the final answer negates the CoT benefit)',
+          'Using CoT on every task: adds 2–5x tokens cost; use selectively on high-stakes or complex reasoning only'
+        ]
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/zero-shot-vs-few-shot',
+          '/prompt-engineering/tree-of-thought-and-react',
+          '/prompt-engineering/structured-output-json-mode',
+          '/prompt-engineering/how-llms-actually-work',
+          '/prompt-engineering/self-consistency-prompting'
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903',
+          'Kojima et al., 2022. "Large Language Models are Zero-Shot Reasoners." arXiv:2205.11916',
+          'Wang et al., 2022. "Self-Consistency Improves Chain of Thought Reasoning in Language Models." arXiv:2203.11171'
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What is Chain-of-Thought prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-Thought asks the model to show reasoning steps before the final answer. This improves accuracy and makes decision-making transparent.' } },
+          { '@type': 'Question', name: 'How much does CoT improve accuracy?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum testing shows CoT improves accuracy 7–23% on logic puzzles, 15–18% on multi-step math. Benefit varies by task type.' } }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Use Chain-of-Thought Prompting',
+        step: [
+          { '@type': 'HowToStep', position: '1', name: 'Identify the task type', text: 'CoT helps most with reasoning: logic puzzles, math, causal analysis, multi-step decisions. Less helpful for simple factual lookup or classification.' },
+          { '@type': 'HowToStep', position: '2', name: 'Choose zero-shot or few-shot', text: 'Start with zero-shot: "Let's think step by step." If that's not precise enough, add 2–5 few-shot examples with your preferred reasoning style.' },
+          { '@type': 'HowToStep', position: '3', name: 'Write the final instruction', text: 'End with "What is the answer?" or "Provide your final answer." This signals the model to output a conclusion after showing reasoning.' },
+          { '@type': 'HowToStep', position: '4', name: 'Test across models', text: 'Run the same CoT prompt on GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. Accuracy may vary; pick the best performer for production.' },
+          { '@type': 'HowToStep', position: '5', name: 'Monitor token usage and cost', text: 'CoT increases tokens by 2–5x. For high-volume or long-document tasks, this cost may outweigh accuracy gains. Use selectively.' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: '1', name: 'Decomposition', description: 'CoT breaks problems into steps, making multi-step reasoning visible and reducing errors.' },
+          { '@type': 'ListItem', position: '2', name: 'Accuracy improvement', description: 'PromptQuorum testing: 7–23% accuracy gains on logic and math tasks; lower gains on retrieval or classification.' },
+          { '@type': 'ListItem', position: '3', name: 'Cost trade-off', description: 'CoT increases token usage 2–5x because the model must write reasoning. Higher cost for better reasoning on complex tasks.' },
+          { '@type': 'ListItem', position: '4', name: 'Zero-shot variant', description: 'Asking "Let's think step by step" works without examples on many tasks, enabling CoT without example engineering.' }
+        ]
+      }
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -12968,7 +13058,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Techniques',
       title: 'RAG Explained: How to Ground AI Answers in Real Data',
-      intro: 'Retrieval-Augmented Generation (RAG) is an approach where a language model first retrieves relevant documents from a knowledge source and then uses those documents to generate an answer. This keeps responses grounded in real data instead of relying only on what the model memorized during training.',
+      intro: 'Retrieval-Augmented Generation (RAG) is an approach where a language model first retrieves relevant documents from a knowledge source and then uses those documents to generate an answer. As of April 2026, RAG is one of the most effective techniques for grounding AI responses in real data instead of relying only on what the model memorized during training.',
+      metaDescription: 'What Retrieval-Augmented Generation (RAG) is, why it reduces hallucination, and how to implement RAG in production. Free beta — April 2026.',
+      educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '8 min read',
       schema: {
@@ -13074,6 +13166,94 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'RAG retrieves relevant documents first, then generates answers grounded in those documents — reducing hallucination',
+          'Typical RAG pipeline: ingestion (200–1,000 token chunks) → indexing (vector embeddings) → retrieval (semantic search) → generation (LLM writes answer)',
+          'RAG is decoupled: you can improve the retriever without changing the generator, or swap models independently',
+          'RAG vs Fine-Tuning: RAG brings external knowledge per-query (good for changing data); fine-tuning bakes behavior into parameters (good for stable style)',
+          'PromptQuorum testing: RAG reduced hallucination from 71% to 9% when context was injected, across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro',
+          'Privacy benefit: RAG keeps sensitive data in your own database; the model only "reads" snippets at query time, never absorbs the data',
+          'Multi-model RAG: apply chain-of-thought or TRACE-style reasoning over retrieved context to combine benefits',
+          'RAG modularity: swap embedders, retrievers, indexes, or generators independently without rebuilding the entire system'
+        ]
+      },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What is RAG (Retrieval-Augmented Generation)?', a: 'RAG is a two-stage process: first retrieve relevant documents from a knowledge base, then use those documents to ground the language model\'s answer. This keeps responses factual and traceable to sources.' },
+          { q: 'How does RAG reduce hallucination?', a: 'RAG grounds answers in retrieved documents you control. Instead of the model inventing details, it reads provided context. If information is not in the documents, the model can be instructed to say so rather than guess.' },
+          { q: 'What is the difference between RAG and fine-tuning?', a: 'RAG retrieves external knowledge per-query (good for frequently changing data). Fine-tuning changes the model\'s weights (good for baking in stable behavior). Many production systems use both.' },
+          { q: 'How do I set up RAG?', a: 'Steps: (1) Ingest and chunk documents (200–1,000 tokens each), (2) Embed chunks using an embedding model, (3) Store in a vector database, (4) At query time, embed the user query and retrieve similar chunks, (5) Feed chunks + query to an LLM.' },
+          { q: 'What are vector databases?', a: 'Vector databases (Pinecone, Weaviate, Qdrant, Milvus) store embeddings and retrieve them by semantic similarity. They replace keyword search with meaning-based search.' },
+          { q: 'Can RAG work with multiple models?', a: 'Yes. You can use one model for embeddings, another to retrieve, and a third to generate. Or dispatch the same RAG prompt across GPT-4o, Claude, and Gemini to compare results.' },
+          { q: 'What chunk size should I use?', a: 'Most teams start with 200–1,000 tokens per chunk. Smaller chunks (200–300) improve retrieval precision; larger chunks (500–1,000) provide more context. Test with your use case.' },
+          { q: 'How is RAG different from knowledge bases?', a: 'Knowledge bases store Q&A pairs manually. RAG automatically retrieves relevant passages. RAG is faster to maintain (update documents, not hand-write answers) and scales to larger datasets.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Using generic embedding models without domain fine-tuning (especially critical in finance/legal/medical where domain vocabulary matters)',
+          'Chunks that are too large (>1,500 tokens) that dilute relevance, or too small (<150 tokens) that lack context',
+          'Not implementing filters (by date, document type, user permissions) during retrieval, leading to irrelevant or unauthorized results',
+          'Assuming RAG solves all hallucination (it reduces hallucination but doesn\'t eliminate it; still add fact-checking layers for high-stakes outputs)'
+        ]
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/constrained-prompting',
+          '/prompt-engineering/structured-output-json-mode',
+          '/prompt-engineering/chain-of-thought-prompting',
+          '/prompt-engineering/prompt-engineering-vs-fine-tuning',
+          '/prompt-engineering/how-llms-actually-work',
+          '/prompt-engineering/ai-hallucinations-why-ai-makes-things-up'
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Lewis et al., 2020. "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." arXiv:2005.11401',
+          'Gao et al., 2023. "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997',
+          'Guu et al., 2020. "REALM: Retrieval-Augmented Language Model Pre-Training." arXiv:2002.08909'
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What is RAG?', acceptedAnswer: { '@type': 'Answer', text: 'RAG (Retrieval-Augmented Generation) is a technique that retrieves relevant documents first, then uses those documents to ground an LLM answer. This reduces hallucination and keeps answers factual and traceable.' } },
+          { '@type': 'Question', name: 'How does RAG work?', acceptedAnswer: { '@type': 'Answer', text: 'Four-step process: (1) Ingest documents and split into chunks (200–1,000 tokens), (2) Create embeddings and store in a vector database, (3) At query time, embed the query and retrieve similar chunks, (4) Feed chunks + query to an LLM which generates a grounded answer.' } },
+          { '@type': 'Question', name: 'What is the difference between RAG and fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'RAG retrieves external knowledge per-query (good for changing data, no model updates needed). Fine-tuning updates the model\'s weights (good for stable behavior, but requires retraining). They solve different problems.' } }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Implement RAG in Production',
+        step: [
+          { '@type': 'HowToStep', position: '1', name: 'Prepare and chunk documents', text: 'Load documents (PDFs, web pages, internal wikis) and split them into chunks of 200–1,000 tokens. Attach metadata (title, date, source URL, document type).' },
+          { '@type': 'HowToStep', position: '2', name: 'Create embeddings and build an index', text: 'Use an embedding model (OpenAI, Anthropic, or open-source) to convert each chunk into a vector. Store vectors in a vector database (Pinecone, Weaviate, Qdrant) or a local search index.' },
+          { '@type': 'HowToStep', position: '3', name: 'Implement retrieval logic', text: 'At query time, embed the user query with the same embedding model. Retrieve the top-K most similar chunks from the database. Apply filters (date range, permissions, document type) as needed.' },
+          { '@type': 'HowToStep', position: '4', name: 'Assemble and send the prompt to an LLM', text: 'Create a prompt that includes the user query + retrieved chunks. Send to GPT-4o, Claude 4.6 Sonnet, or Gemini 2.5 Pro. Instruct the model to answer using only the provided context.' },
+          { '@type': 'HowToStep', position: '5', name: 'Monitor and iterate', text: 'Track hallucination rates, retrieval precision, and user satisfaction. Adjust chunk size, embedding model, or retrieval filters based on results.' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: '1', name: 'Ingestion', description: 'Load documents and split into 200–1,000 token chunks; attach metadata (title, date, URL).' },
+          { '@type': 'ListItem', position: '2', name: 'Embedding', description: 'Convert each chunk to a vector using an embedding model (e.g., OpenAI embedding, Anthropic embeddings).' },
+          { '@type': 'ListItem', position: '3', name: 'Storage', description: 'Store embeddings in a vector database (Pinecone, Weaviate, Qdrant, Milvus) or local index for fast retrieval.' },
+          { '@type': 'ListItem', position: '4', name: 'Retrieval', description: 'Embed user query; search index for top-K most similar chunks; apply filters (date, type, permissions).' },
+          { '@type': 'ListItem', position: '5', name: 'Generation', description: 'Construct a prompt with user query + retrieved chunks; send to LLM (GPT-4o, Claude, Gemini); model generates answer grounded in context.' },
+          { '@type': 'ListItem', position: '6', name: 'Modularity', description: 'Embedding, retrieval, and generation are decoupled — you can improve one component without rebuilding the entire system.' }
+        ]
+      }
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
