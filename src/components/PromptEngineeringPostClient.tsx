@@ -313,6 +313,18 @@ function GlossaryTermCard({ row, lang }: { row: { [key: string]: string }; lang:
         </p>
       )}
 
+      {/* Entity relationships */}
+      {(row['Part of'] || row['Used with']) && (
+        <div className="text-xs text-text-secondary/70 mt-1 mb-1 flex flex-col gap-0.5">
+          {row['Part of'] && (
+            <p><span className="font-medium text-text-secondary">Part of:</span> {row['Part of']}</p>
+          )}
+          {row['Used with'] && (
+            <p><span className="font-medium text-text-secondary">Used with:</span> {row['Used with']}</p>
+          )}
+        </div>
+      )}
+
       {/* When to use */}
       {row['When to use'] && (
         <p className="text-xs text-text-secondary mb-1">
