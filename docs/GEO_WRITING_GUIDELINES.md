@@ -1358,20 +1358,58 @@ LLMs are sensitive to example order, with later examples weighted more heavily. 
 ### Blog Post Structure
 
 ```
-# [Specific, keyword-rich headline]
+# [Specific, keyword-rich H1 title]
 
-[One-paragraph answer to the headline question — 3 sentences max]
-
-## [First major point]
-[Answer-first paragraph]
-
-## [Second major point]
-[Answer-first paragraph]
+**[Lead Answer Block — 30–50 words, bold. Answers the H1 question directly.
+Primary keyword in first 10 words. No preamble. No hedging.]**
 
 ## Key Takeaways
-- [Specific fact]
-- [Specific fact]
-- [Specific fact]
+- [Specific, actionable fact]
+- [Specific, actionable fact]
+- [Specific, actionable fact]
+- [Specific, actionable fact]
+- [Specific, actionable fact]
+(5–7 bullets total — placed BEFORE the first H2, not after content)
+
+## Contents
+- [What Is [Topic]?](#what-is-topic)
+- [First major point](#first-point)
+- [Second major point](#second-point)
+- [Common Mistakes](#common-mistakes)
+- [Related Reading](#related-reading)
+- [FAQ](#faq)
+- [Sources](#sources)
+
+[Last Updated: Month Year · Sources: N peer-reviewed papers]
+
+## What Is [Topic]?
+**[Bold one-sentence definition — the direct answer to the H2 question.]**
+
+[Supporting paragraphs]
+
+## [First major point as a question — "How Does X Work?"]
+**[Bold direct answer sentence.]**
+
+[Body content]
+
+## [Second major point — question format]
+**[Bold direct answer sentence.]**
+
+[Body content]
+
+## [Comparison table if applicable — include id="comparison-[a]-vs-[b]"]
+
+## [Regional context paragraph]
+
+## What Are the Most Common [Topic] Mistakes?
+(Frameworks/Techniques/Security articles only — Rule 25)
+
+## Related Reading
+- [Full H1 title of article 1](/prompt-engineering/slug) — why it's relevant
+- [Full H1 title of article 2](/prompt-engineering/slug) — why it's relevant
+- [Full H1 title of article 3](/prompt-engineering/slug) — why it's relevant
+- [Full H1 title of article 4](/prompt-engineering/slug) — why it's relevant
+(Minimum 4 links, full H1 title as anchor text)
 
 ## Frequently Asked Questions
 
