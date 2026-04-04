@@ -2209,6 +2209,159 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'llm-quantization-explained': {
+    en: {
+      theme: 'Best Models',
+      title: 'LLM Quantization Explained: How Q4_K_M, Q8_0, and GGUF Formats Work',
+      seoTitle: 'LLM Quantization Explained',
+      intro: 'LLM quantization reduces model weight precision from 32-bit or 16-bit floats to 4-bit or 8-bit integers, cutting RAM requirements by 50–75% with minimal quality loss. Q4_K_M is the standard recommended quantization for local inference — it reduces a 7B model from ~14 GB to ~4.5 GB while retaining 97–99% of the original model quality on standard benchmarks.',
+      metaDescription: 'LLM quantization explained: how Q4_K_M, Q8_0, and GGUF work, RAM savings vs quality tradeoffs, and which quantization to use for your hardware in 2026.',
+      publishDate: '2026-04-04',
+      readTime: '9 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'LLM quantization',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Is LLM Quantization?', anchor: '#what-is-llm-quantization' },
+        { label: 'How Do Q4_K_M, Q5_K_M, and Q8_0 Differ?', anchor: '#quantization-levels' },
+        { label: 'What Is GGUF Format?', anchor: '#what-is-gguf-format' },
+        { label: 'RAM Savings by Quantization Level', anchor: '#ram-savings' },
+        { label: 'How Much Quality Do You Lose?', anchor: '#quality-loss' },
+        { label: 'Which Quantization Should You Use?', anchor: '#which-quantization' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Quantization converts 16-bit model weights to 4-bit or 8-bit, reducing RAM by 50–75%.',
+            '**Q4_K_M** is the standard recommended level — best balance of quality and RAM for consumer hardware.',
+            'A 7B model at FP16 = ~14 GB RAM. At Q4_K_M = ~4.5 GB. At Q8_0 = ~7 GB.',
+            'Quality loss at Q4_K_M is 1–3% on MMLU benchmarks compared to FP16 — imperceptible in most practical tasks.',
+            'GGUF is the file format that stores quantized models for llama.cpp, Ollama, and LM Studio.',
+          ],
+        },
+        whatIs: {
+          title: 'What Is LLM Quantization and Why Does It Matter?',
+          content: [
+            'A large language model stores its learned knowledge as billions of numerical weights. By default, these are stored as 16-bit floating-point numbers (FP16) — two bytes per weight. A 7B model has 7 billion weights, so the FP16 file size is approximately 14 GB.',
+            'Quantization replaces these 16-bit floats with lower-precision integers. At 4-bit quantization, each weight uses 0.5 bytes instead of 2 — cutting memory to ~3.5 GB for the weights alone. With metadata overhead, a quantized 7B model at Q4_K_M is approximately 4.5 GB.',
+            'This matters for local inference because consumer hardware has limited RAM. Without quantization, a 7B model requires 16 GB of RAM to run. With Q4_K_M quantization, the same model runs on 6 GB of RAM, making it accessible on most modern laptops.',
+          ],
+        },
+        quantizationLevels: {
+          title: 'How Do Q4_K_M, Q5_K_M, Q8_0, and Other Levels Differ?',
+          content: 'Quantization names follow a pattern: Q{bits}_{variant}. The bit count is the weight precision; the variant affects how the quantization is applied:',
+          rows: [
+            { 'Level': 'Q2_K', 'Bits': '2', 'RAM (7B)': '~2.7 GB', 'Quality Loss': 'High', 'Use When': 'RAM < 4 GB, accept quality degradation' },
+            { 'Level': 'Q3_K_S', 'Bits': '3', 'RAM (7B)': '~3.3 GB', 'Quality Loss': 'Moderate', 'Use When': 'RAM 4–5 GB' },
+            { 'Level': 'Q4_K_M', 'Bits': '4', 'RAM (7B)': '~4.5 GB', 'Quality Loss': 'Low (1–3%)', 'Use When': 'Default for most users' },
+            { 'Level': 'Q5_K_M', 'Bits': '5', 'RAM (7B)': '~5.7 GB', 'Quality Loss': 'Minimal (<1%)', 'Use When': '16 GB RAM, want better quality' },
+            { 'Level': 'Q6_K', 'Bits': '6', 'RAM (7B)': '~6.6 GB', 'Quality Loss': 'Near-lossless', 'Use When': '16 GB RAM, coding/math tasks' },
+            { 'Level': 'Q8_0', 'Bits': '8', 'RAM (7B)': '~7.7 GB', 'Quality Loss': 'Negligible', 'Use When': '16+ GB RAM, maximum quality' },
+          ],
+          columns: ['Level', 'Bits', 'RAM (7B)', 'Quality Loss', 'Use When'],
+        },
+        gguf: {
+          title: 'What Is GGUF Format and How Does It Relate to Quantization?',
+          content: [
+            'GGUF (GPT-Generated Unified Format) is the file format used to store quantized LLM weights for local inference. It was created by the llama.cpp project and replaces the older GGML format.',
+            'A GGUF file contains: the quantized model weights, all model metadata (architecture, tokenizer, context length), and a format version number. This self-contained design means a single `.gguf` file is everything needed to run the model — no separate tokenizer files, no configuration JSON.',
+            'As of April 2026, GGUF is the standard format for Ollama, LM Studio, Jan AI, and GPT4All. When you run `ollama pull llama3.1:8b`, Ollama downloads a GGUF file internally. When LM Studio shows model file sizes, those are GGUF file sizes.',
+            'The quantization level is part of the filename: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` is a Q4_K_M quantized GGUF of Llama 3.1 8B.',
+          ],
+        },
+        ramSavings: {
+          title: 'How Much RAM Does Quantization Save for Different Model Sizes?',
+          rows: [
+            { 'Model Size': '3B', 'FP16': '~6 GB', 'Q8_0': '~3.8 GB', 'Q4_K_M': '~2 GB', 'Q3_K_S': '~1.6 GB' },
+            { 'Model Size': '7B', 'FP16': '~14 GB', 'Q8_0': '~7.7 GB', 'Q4_K_M': '~4.5 GB', 'Q3_K_S': '~3.3 GB' },
+            { 'Model Size': '13B', 'FP16': '~26 GB', 'Q8_0': '~14 GB', 'Q4_K_M': '~8.5 GB', 'Q3_K_S': '~6 GB' },
+            { 'Model Size': '34B', 'FP16': '~68 GB', 'Q8_0': '~36 GB', 'Q4_K_M': '~22 GB', 'Q3_K_S': '~16 GB' },
+            { 'Model Size': '70B', 'FP16': '~140 GB', 'Q8_0': '~70 GB', 'Q4_K_M': '~40 GB', 'Q3_K_S': '~30 GB' },
+          ],
+          columns: ['Model Size', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+        },
+        qualityLoss: {
+          title: 'How Much Quality Do You Actually Lose with Quantization?',
+          content: [
+            'Quality loss from quantization is measured by running the same benchmarks on the full-precision model and the quantized version and comparing scores. As of April 2026, the established findings are:',
+          ],
+          items: [
+            '**Q4_K_M vs FP16**: 1–3% degradation on MMLU. On a 7B model scoring 73% at FP16, Q4_K_M scores 71–72%. In practical tasks, this difference is imperceptible.',
+            '**Q3_K_S vs FP16**: 5–10% degradation. Noticeable on complex reasoning and math tasks. A model that correctly solves a math problem at FP16 may fail at Q3_K_S.',
+            '**Q2_K vs FP16**: 15–25% degradation. Significant quality loss across all task types. Only use when RAM constraint is absolute.',
+            '**Q8_0 vs FP16**: under 0.5% degradation — essentially identical for all practical purposes.',
+            'The K_M variants (K-Quant Medium) use a mixed-precision approach that preserves quality better than older Q4_0 quantization at the same bit count. Always prefer Q4_K_M over Q4_0 when both are available.',
+          ],
+        },
+        whichQuantization: {
+          title: 'Which Quantization Level Should You Use?',
+          items: [
+            '**4–8 GB RAM available**: Q4_K_M — the default and best balance for constrained hardware.',
+            '**8–16 GB RAM available**: Q5_K_M or Q6_K — better quality with comfortable RAM headroom.',
+            '**16+ GB RAM available**: Q8_0 — near-lossless quality, no reason to use lower quantization.',
+            '**GPU with 24+ GB VRAM**: Q8_0 or Q6_K at the model sizes that fit in VRAM.',
+            '**Batch processing / overnight tasks**: Q4_K_M — maximizes throughput and model size per available RAM.',
+            '**Coding or math tasks specifically**: use Q5_K_M or higher — quantization effects are most visible on precise numerical and algorithmic reasoning.',
+          ],
+        },
+        commonMistakes: {
+          title: 'What Are the Common Mistakes with LLM Quantization?',
+          faqs: [
+            {
+              q: 'Downloading Q4_0 instead of Q4_K_M',
+              a: 'Q4_0 is an older quantization method that uses the same 4 bits per weight but without the K-Quant improvements. Q4_K_M is 5–8% better quality at the same RAM footprint. When both are available on Hugging Face, always choose Q4_K_M. Ollama\'s default pull already uses Q4_K_M for models in its library.',
+            },
+            {
+              q: 'Assuming higher quantization always means worse quality',
+              a: 'The numbers are counterintuitive: higher Q number = more bits = better quality. Q8_0 is better than Q4_K_M. Q5_K_M is better than Q4_K_M. The "higher = better quality" rule applies within the same model. Comparing across models is different — a Q4_K_M 70B model will outperform a Q8_0 7B model on most tasks.',
+            },
+            {
+              q: 'Not checking RAM headroom before loading a model',
+              a: 'The model size is not the only RAM consumer. The OS, browser, and other applications also use RAM. On an 8 GB machine, a 4.5 GB Q4_K_M 7B model leaves only 3.5 GB for everything else — which is tight. Close browsers before loading 7B models on 8 GB machines. As a rule: the model file size + 2 GB OS overhead + 1 GB headroom = minimum required RAM.',
+            },
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About LLM Quantization',
+          faqs: [
+            {
+              q: 'Does Ollama automatically use the best quantization?',
+              a: 'Yes — when you run `ollama pull llama3.1:8b`, Ollama downloads the Q4_K_M variant by default. To pull a specific quantization, append the tag: `ollama pull llama3.1:8b-instruct-q5_K_M`. Available quantization tags for each model are listed on the model\'s page at ollama.com/library.',
+            },
+            {
+              q: 'Can I quantize a model myself instead of downloading a pre-quantized version?',
+              a: 'Yes — llama.cpp includes a `quantize` binary that converts GGUF files to any supported quantization level. The process takes 5–30 minutes depending on model size. Most users should download pre-quantized GGUF files from Hugging Face rather than quantizing themselves, as the results are equivalent.',
+            },
+            {
+              q: 'Does quantization affect the model\'s context window?',
+              a: 'No — quantization only affects model weight precision, not the context length. A Llama 3.1 8B model supports 128K tokens whether quantized to Q4_K_M or run at FP16. However, processing longer contexts requires more RAM regardless of quantization — processing a 64K token context with a Q4_K_M 7B model may require 10+ GB RAM.',
+            },
+            {
+              q: 'What is the difference between GGUF and GPTQ quantization?',
+              a: 'GGUF (llama.cpp format) and GPTQ are two different quantization approaches. GGUF uses K-Quants and runs on CPU and GPU. GPTQ is GPU-only and requires PyTorch. For local inference with Ollama, LM Studio, or Jan AI, GGUF is the correct format. GPTQ is used with GPU-focused inference frameworks like AutoGPTQ and vLLM.',
+            },
+            {
+              q: 'Is there a quality difference between Q4_K_M models from different providers on Hugging Face?',
+              a: 'The quantization algorithm is standardized in llama.cpp, so Q4_K_M quantizations of the same base model should be nearly identical regardless of who created the GGUF file. However, some providers apply additional adjustments (imatrix quantization) that improve quality. Files described as "imat" or "importance matrix" quantized are generally higher quality at the same bit count.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'llama.cpp Quantization Documentation — github.com/ggerganov/llama.cpp/blob/master/examples/quantize/README.md',
+            'K-Quants Technical Discussion — github.com/ggerganov/llama.cpp/pull/1684 (original K-Quant PR)',
+            'GGUF Format Specification — github.com/ggerganov/ggml/blob/master/docs/gguf.md',
+            'Open LLM Leaderboard quantization benchmarks — huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard',
+          ],
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
