@@ -8978,4 +8978,391 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'local-llm-workstation-build': {
+    en: {
+      theme: 'Hardware Setups',
+      title: 'Best Workstation Build for Serious Local AI',
+      seoTitle: 'Professional Local AI Workstation: Dual GPU, 128GB RAM Build',
+      intro: '**A professional workstation for production local LLM inference costs $4,000–6,000 and features dual RTX 4090 GPUs (48GB VRAM), Threadripper CPU (32+ cores), and 128GB RAM.** As of April 2026, this tier enables concurrent 70B model serving (2–4 simultaneous users), fine-tuning side-by-side with inference, and on-premise deployment for organizations prioritizing data sovereignty over cloud costs.',
+      metaDescription: 'Professional local AI workstation: Dual RTX 4090, Threadripper, 128GB RAM, multi-user 70B serving. Parts list, cooling strategy, ROI calculator. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '10 min',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'AI Workstation',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'Who Needs a $4K–6K Workstation?', anchor: '#who-needs' },
+        { label: 'What\'s the Workstation Parts List?', anchor: '#parts-list' },
+        { label: 'Dual GPU Setup: Configuration & Scaling', anchor: '#dual-gpu' },
+        { label: 'How Do You Cool 1,200W of Heat?', anchor: '#cooling' },
+        { label: 'Power Supply & Electrical Planning', anchor: '#power' },
+        { label: 'Multi-User Inference Performance', anchor: '#perf' },
+        { label: 'Common Workstation Build Mistakes', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'CPU: Threadripper 7980X (64-core, $3,000) or Intel Xeon W9 ($5,000+). Enables parallel fine-tuning while serving inference.',
+            'GPU: 2× RTX 4090 24GB (used pair ~$2,200–2,600). 48GB total VRAM for multi-user 70B or single 70B + prep tasks.',
+            'RAM: 128GB DDR5 ($600–800). Supports 8+ concurrent users on 70B or single-user 70B + quantization in parallel.',
+            'Storage: 4–8TB NVMe SSD + 12–24TB HDD ($800–1,500). Multi-model library + backups + training datasets.',
+            'PSU: 2× 1200W or 1× 2000W ($800–1,200). Dual 4090s draw 900W sustained; headroom for spikes essential.',
+            'Cooling: Custom liquid loop or dual AIO ($1,000–2,000). Single large GPU + CPU = 1,200W heat output.',
+            'Network: 10Gbps Ethernet optional ($200–400). LAN multi-user access without bottlenecking.',
+            'Total: $4,000–6,000. Supports 8+ concurrent 70B users or 1 user fine-tuning + serving simultaneously.',
+          ],
+        },
+        'who-needs': {
+          title: 'Who Needs a $4K–6K Workstation?',
+          content: 'This tier is for:',
+          items: [
+            '**SMBs/Enterprises:** Running internal LLM API for 5+ employees simultaneously. On-prem data control required.',
+            '**AI researchers:** Fine-tuning large models (70B LoRA) while serving inference to team. Single $2K rig can\'t parallelize.',
+            '**MLOps engineers:** Building internal inference clusters. Start with one workstation as the server node.',
+            '**Content studios (serious):** Running 24/7 video captioning, code generation, summarization without API costs.',
+          ],
+        },
+        'parts-list': {
+          title: 'What\'s the Workstation Parts List?',
+          rows: [
+            { '0': 'GPU', '1': '2× RTX 4090 24GB (used)', '2': '$2,200–2,600', '3': 'NVLink bridges optional. Test both cards before pairing.' },
+            { '0': 'CPU', '1': 'Threadripper 7980X (64-core)', '2': '$2,800–3,200', '3': 'Overkill for inference alone. Essential for parallel quantization.' },
+            { '0': 'Motherboard', '1': 'TRX850 or Xeon W90', '2': '$400–800', '3': 'Dual GPU support, PCIe 5.0, enterprise-grade power delivery.' },
+            { '0': 'RAM', '1': '128GB DDR5 6000 MHz', '2': '$600–800', '3': 'Corsair Dominator Platinum. Enables 8+ concurrent users.' },
+            { '0': 'Storage', '1': '4TB NVMe + 12TB HDD', '2': '$800–1,200', '3': 'NVMe for hot models, HDD for backup & datasets.' },
+            { '0': 'PSU', '1': '2000W 80+ Platinum or 2× 1200W', '2': '$1,000–1,500', '3': 'Dual 4090s = 900W sustained, need 2000W+ headroom.' },
+            { '0': 'Cooling', '1': 'Custom loop or 2× 360mm AIO', '2': '$1,500–2,500', '3': 'CPU + 2 GPUs = 1,200W heat. Air cooling insufficient.' },
+            { '0': 'Case', '1': 'Lian Li O11 Dynamic or Corsair Crystal', '2': '$200–300', '3': 'Supports dual GPU + large AIO or loop.' },
+            { '0': 'Total', '1': '—', '2': '$4,000–6,000', '3': 'Scales with GPU market prices & cooling choice.' },
+          ],
+          columns: ['Component', 'Model', 'Price (April 2026)', 'Notes'],
+        },
+        'dual-gpu': {
+          title: 'Dual GPU Setup: Configuration & Scaling',
+          content: 'Two RTX 4090s give you 48GB VRAM and ~2× throughput for inference.',
+          numberedItems: [
+            '**Side-by-side (no NVLink):** Each GPU runs independently. Model A on GPU 0, Model B on GPU 1. Best for heterogeneous workloads (fine-tuning 7B + serving 70B).',
+            '**NVLink bridge:** Fuse VRAM (48GB appears as single 48GB pool). Enables larger batch sizes or massive context windows. Cost: $200–300 for bridge + setup complexity.',
+            '**Dual-GPU inference:** Shard a single 70B model across 2 GPUs for 2× throughput (28 tok/s instead of 14). Requires vLLM or llama.cpp tensor-parallel support.',
+          ],
+        },
+        'cooling': {
+          title: 'How Do You Cool 1,200W of Heat?',
+          content: 'RTX 4090 (450W) + RTX 4090 (450W) + CPU (200W) = 1,100W sustained, spikes to 1,300W.',
+          items: [
+            '**Custom liquid loop:** $1,500–2,500. CPU water block + GPU water blocks + 360mm radiator. Keeps GPUs <75°C, CPU <80°C.',
+            '**Dual 360mm AIO:** $600–900. One AIO per GPU + separate CPU cooler. More modular, easier maintenance than custom loop.',
+            '**Air cooling:** Not viable. Thermal throttling guaranteed on sustained 70B inference.',
+          ],
+        },
+        'power': {
+          title: 'Power Supply & Electrical Planning',
+          content: 'Dual 4090s demand careful PSU selection.',
+          items: [
+            '**Option 1: Single 2000W PSU:** Seasonic, Corsair, or EVGA 80+ Platinum. Cleaner cable routing, single point of failure.',
+            '**Option 2: Dual 1200W PSU:** One PSU per GPU + shared motherboard. Redundancy (one fails, inference continues at 50% speed). Complex setup.',
+            '**Capacity rule:** 2000W for dual 4090 is minimum. Anything less causes voltage sag under load.',
+            '**Circuit planning:** A dual-GPU rig pulls 2000W at peak. Ensure 20A circuit (typical home/office outlet is 15A, insufficient). Use dedicated 240V line if available.',
+          ],
+        },
+        'perf': {
+          title: 'Multi-User Inference Performance',
+          content: 'With 128GB RAM and dual 4090s:',
+          items: [
+            '**Single user, 70B model:** 28 tokens/sec (2× 14 tok/s per GPU via tensor parallelism).',
+            '**Two concurrent users, 70B each:** 14 tokens/sec per user (time-multiplexing requests).',
+            '**Four concurrent users, 7B each:** 120 tokens/sec total (each user gets 30 tok/s).',
+            '**Fine-tuning 7B LoRA + serving 70B:** Fine-tuning on GPU 0 (100W), inference on GPU 1 (450W). No interference.',
+          ],
+        },
+        'mistakes': {
+          title: 'Common Workstation Build Mistakes',
+          items: [
+            'Buying two different GPU models (5090 + 4090). Asymmetry causes load balancing issues. Stick to identical cards.',
+            'Skimping on PSU to save $300. A 1500W PSU + dual 4090s will throttle or crash under load.',
+            'Using air cooling instead of liquid. Thermal throttling cuts throughput 30–50% on sustained inference.',
+          ],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Is a Threadripper CPU necessary, or can I use Ryzen 9?', a: 'For inference alone: Ryzen 9 works fine. For inference + parallel fine-tuning: Threadripper\'s extra cores (64 vs. 16) are essential.' },
+            { q: 'Should I use NVLink to fuse the two 4090s?', a: 'Optional. Skip it if running separate models on each GPU (7B + 70B). Use it if sharding a single 70B across both GPUs for higher batch sizes.' },
+            { q: 'How many concurrent users can a dual-4090 rig handle?', a: 'For 70B: 2–3 users (each getting 14 tok/s). For 7B: 8+ users (each getting 30+ tok/s).' },
+            { q: 'Can I upgrade to RTX 5090 instead of dual 4090?', a: 'Single 5090: Similar performance to dual 4090, half the VRAM (24GB vs. 48GB), $1,999. Dual 5090: $4,000 (overkill, worse value).' },
+            { q: 'What\'s the ROI on a $5,000 workstation vs. cloud LLM API?', a: 'Cloud: $0.001 per 1K tokens. Workstation: $5,000 amortized over 2 years = $2,500/year, ~$0.000001 per token. Break-even at 2.5B tokens/year (light use).' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Best Local LLM PC Build Under $2,000](/local-llms/local-llm-pc-build-2000)',
+            '[Best Local LLM PC Build Under $1,000](/local-llms/local-llm-pc-build-1000)',
+            '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[Fine-Tuning Local LLMs with LoRA](/local-llms/fine-tuning-local-llms-lora)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'PCPartPicker: High-end workstation component pricing (April 2026)',
+            'TechPowerUp: Threadripper & Xeon W power consumption & specifications',
+            'NVIDIA NVLink documentation: GPU memory fusion and tensor-parallel inference',
+          ],
+        },
+      },
+    },
+  },
+
+  'best-mini-pcs-local-llm': {
+    en: {
+      theme: 'Hardware Setups',
+      title: 'Best Mini PCs for Running Local LLMs',
+      seoTitle: 'Best Mini PCs for Local LLMs: Compact 7B–13B Inference Guide',
+      intro: '**Mini PCs with discrete GPUs (RTX 4060 Ti or RTX 4070) run 7B–13B models at full speed in a space-saving form factor.** As of April 2026, mini PCs range from $800–2,000 and eliminate desk clutter without sacrificing performance. Intel NUC, ASUS PN51, and custom mini-ITX builds are all viable; the key is ensuring adequate cooling for sustained inference.',
+      metaDescription: 'Best mini PCs for local LLMs: Intel NUC, ASUS PN51, Giada mini-ITX. Compact 7B–13B inference. Space-saving, silent operation. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '8 min',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Mini PC',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'What Makes a Mini PC Suitable for Local LLMs?', anchor: '#what-makes' },
+        { label: 'Best Mini PC Platforms', anchor: '#platforms' },
+        { label: 'GPU Options for Mini PCs', anchor: '#gpu-options' },
+        { label: 'Cooling Challenges in Compact Cases', anchor: '#cooling' },
+        { label: 'Mini PC Limitations', anchor: '#limitations' },
+        { label: 'Common Mini PC Mistakes', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Mini PCs are compact desktops (5–10L volume) that fit under monitors or in media centers.',
+            'RTX 4060 Ti (8GB) is the sweet spot: runs 7B models smoothly, fits in mini-ITX form factor, stays under $400.',
+            'Intel NUC 13 Pro with RTX 4060 Ti docked externally: $1,200–1,400 total. Silent operation, small footprint.',
+            'ASUS PN51 (mini-ITX barebone) + RTX 4060 Ti: $800–1,000. Best DIY mini-PC value.',
+            'Expect 15–25 tokens/sec on 7B models in mini PCs (same as full-size rigs, just smaller case).',
+            'Cooling is tight: GPU fans run loud at full load. Plan for 60–70°C GPU temps.',
+            'Can\'t fit 70B models (need 24GB VRAM). Mini PCs max out at 13B comfortably.',
+            'Great for living room, office corner, or silent workspace. Poor for enterprise (no expansion).',
+          ],
+        },
+        'what-makes': {
+          title: 'What Makes a Mini PC Suitable for Local LLMs?',
+          content: 'A viable mini PC for local LLMs needs:',
+          items: [
+            '**PCIe x16 slot (full length):** To fit a discrete GPU. Some mini PCs use mezzanine connectors or USB-C external docks; avoid these for LLMs.',
+            '**Power budget:** Minimum 450W PSU. RTX 4060 Ti (160W) + CPU (65W) + motherboard (50W) = 275W, but spikes to 400W+.',
+            '**Cooling:** Active case fans + heatsink. Passive cooling works for 7B at low batch sizes; sustained inference needs forced air.',
+            '**Enough storage:** 1TB SSD for OS + 2–3 large models.',
+          ],
+        },
+        'platforms': {
+          title: 'Best Mini PC Platforms',
+          items: [
+            '**Intel NUC 13 Pro (Core i7):** Compact, upgradeable, runs 65W CPU. GPU via Thunderbolt 3 eGPU dock. $600 base + $400 RTX 4060 Ti + $200 dock = $1,200. Best build quality.',
+            '**ASUS PN51 or PN52 (mini-ITX):** Barebone (no CPU/RAM/SSD). Add Ryzen 5 ($150) + 32GB RAM ($80) + 1TB SSD ($70) + RTX 4060 Ti ($400) = $800–900. Best value.',
+            '**Giada F350 or Zotac ZBOX Sphere (pre-built):** Integrated GPU, no discrete card slot. Works for 3B–7B only. Skip for serious work.',
+            '**Custom mini-ITX build:** Sff cases (Lian Li A4, Thorin 12V). Most flexible, toughest assembly. $1,000–1,400 total.',
+          ],
+        },
+        'gpu-options': {
+          title: 'GPU Options for Mini PCs',
+          content: 'Mini-ITX slot space limits GPU length to 220mm max.',
+          items: [
+            '**RTX 4060 Ti (8GB):** Fits mini-ITX easily. Runs 7B models. $280–320 new, $180–220 used.',
+            '**RTX 4070 (12GB):** Slightly longer (may not fit all cases). Overkill for 7B, perfect for 13B. $350–450.',
+            '**RTX 4060 (6GB):** Fits, but VRAM is tight. 7B at Q4 leaves no headroom. Not recommended.',
+            '**RTX A4000 (16GB, enterprise):** Used, $200–250. Professional cooling, excellent VRAM. Check case compatibility.',
+          ],
+        },
+        'cooling': {
+          title: 'Cooling Challenges in Compact Cases',
+          content: 'Mini PC cases restrict airflow. GPU fans can be loud.',
+          items: [
+            '**Thermals:** Expect GPU 60–70°C, CPU 55–65°C under sustained inference. Not dangerous, but fans spin faster.',
+            '**Noise:** RTX 4060 Ti fans at full load = 50–60 dB (vacuum cleaner level). Acceptable for office, annoying for bedroom.',
+            '**Undervolting:** Drop GPU core voltage 50mV, reduce temps 5–10°C, lose 0–2% speed. Use MSI Afterburner (Windows) or GPU-tool (Linux).',
+            '**Silent operation:** Swap GPU fans for Noctua or BeQuiet! ($50–80 extra). Reduces noise 10–15 dB.',
+          ],
+        },
+        'limitations': {
+          title: 'Mini PC Limitations for Local LLMs',
+          content: 'Mini PCs trade performance ceiling for compactness.',
+          items: [
+            '**Max VRAM:** 8GB–16GB GPU only. Can\'t fit RTX 4090 (dual slot, huge cooler).',
+            '**Max model size:** Comfortably 13B. 70B is impractical.',
+            '**Upgrade path:** Limited. Swapping GPU might require case mod. RAM usually upgradeable.',
+            '**Multi-GPU:** Impossible in mini-ITX. A second discrete GPU won\'t fit.',
+            '**Long-term:** Mini PC cases designed for office use, not 24/7 inference. Plan for dust cleaning yearly.',
+          ],
+        },
+        'mistakes': {
+          title: 'Common Mini PC Mistakes',
+          items: [
+            'Buying a mini PC with integrated GPU thinking it can run 7B models. Integrated GPUs are 10× slower.',
+            'Choosing a mini PC with external TB3 eGPU dock, expecting full speed. eGPU loses 15–25% bandwidth.',
+            'Assuming a mini PC case will fit a full-size ATX PSU. Mini PCs need specialized SFF PSUs.',
+          ],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Can I run 13B models smoothly on a mini PC?', a: 'Yes, at Q4 quantization with RTX 4070 or RTX A4000 (12GB+). RTX 4060 Ti (8GB) is too tight for comfortable 13B inference.' },
+            { q: 'Is Intel NUC with external RTX 4060 Ti docked good for local LLMs?', a: 'Yes. TB3 eGPU loses 15–20% bandwidth, so expect 12 tok/s instead of 15 on 7B. Still usable. Great for small spaces.' },
+            { q: 'How loud is a mini PC running LLMs?', a: 'RTX 4060 Ti at full load = 50–60 dB (loud). Undervolting or replacing fans can drop to 40–45 dB (acceptable office level).' },
+            { q: 'Can I fit an RTX 4090 in a mini PC?', a: 'No. 4090 is dual-slot and huge (280mm+). Even custom SFF cases max at 220mm GPU length.' },
+            { q: 'Is a mini PC better than a laptop for local LLMs?', a: 'Mini PC: Better thermals, upgradeable, full-size components. Laptop: Portable, no setup needed. Mini PC wins for desktop use.' },
+            { q: 'What\'s the total cost of a mini PC for 7B inference?', a: 'ASUS PN51 build: $800–900. Intel NUC 13 + RTX 4060 Ti dock: $1,200–1,400. Both good, PN51 is better value.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Best Laptops for Running Local LLMs](/local-llms/best-laptops-local-llm)',
+            '[Local LLM PC Build Under $1,000](/local-llms/local-llm-pc-build-1000)',
+            '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
+            '[Local LLM on Laptop Guide](/local-llms/local-llm-on-laptop)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'Intel NUC specifications and TB3 eGPU compatibility matrix',
+            'ASUS PN51 / PN52 official documentation and user benchmarks',
+            'SFF PC community (smallformfactor.net): Mini-ITX case compatibility & thermal data',
+          ],
+        },
+      },
+    },
+  },
+
+  'best-laptops-local-llm': {
+    en: {
+      theme: 'Hardware Setups',
+      title: 'Best Laptops for Running Local LLMs',
+      seoTitle: 'Best Laptops for Local LLMs: GPU Specs, Battery Life, Buying Guide',
+      intro: '**High-end laptops with RTX 4060 or RTX 4070 GPUs can run 7B models at 8–12 tokens/sec, enabling offline AI on the go.** As of April 2026, expect $1,500–3,000 for a gaming laptop with adequate VRAM. Performance lags desktops by 20–30% due to thermal throttling, but portability makes them ideal for researchers, content creators, and remote workers who need local LLMs without cloud API calls.',
+      metaDescription: 'Best laptops for local LLMs: GPU requirements, model size limits, battery impact. RTX 4060/4070, 16GB VRAM minimum. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '9 min',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Gaming Laptop',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'What GPU Do You Need in a Laptop?', anchor: '#gpu-specs' },
+        { label: 'Best Laptops for Local LLMs (2026 Models)', anchor: '#best-models' },
+        { label: 'Performance Expectations: Desktop vs. Laptop', anchor: '#perf-gap' },
+        { label: 'Battery Life & Thermal Management', anchor: '#battery' },
+        { label: 'Storage & RAM Upgrades', anchor: '#upgrades' },
+        { label: 'Common Laptop LLM Mistakes', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'GPU: RTX 4060 (8GB) minimum for 7B models. RTX 4070 (12GB) for comfortable 13B.',
+            'RAM: 16GB DDR5 minimum, 32GB preferred. Swap to system RAM when GPU full.',
+            'Display: 1440p or 4K preferred for comfortable coding. 1080p is cramped.',
+            'Storage: 1TB SSD+ for OS + models library.',
+            'Battery life: 2–3 hours on LLM inference, 6–8 hours light tasks. Plug in for serious work.',
+            'Thermal throttling: Expect 20–30% performance loss vs. desktop due to cooling limits.',
+            'Best value: ASUS TUF A16 (RTX 4070, $1,800–2,200) or MSI Raider GE76 (older model, used $1,200–1,500).',
+            'Budget pick: MSI GF63 Thin (RTX 4050, $1,200–1,500). Not ideal for LLMs, but functional for light 7B.',
+          ],
+        },
+        'gpu-specs': {
+          title: 'What GPU Do You Need in a Laptop?',
+          content: 'Laptop GPUs are mobile (lower power, less VRAM than desktop counterparts).',
+          items: [
+            '**RTX 4050 (6GB):** Too slow & small VRAM. Avoid unless under $1,000.',
+            '**RTX 4060 (8GB):** Sweet spot for 7B models. 10–15 tokens/sec after thermal throttling.',
+            '**RTX 4070 (12GB):** Ideal for 13B models. 15–20 tokens/sec on 7B, 8–10 tokens/sec on 13B.',
+            '**RTX 4090 Laptop (24GB):** Premium ($3,500+), overkill for 7B, good for 70B. Very rare.',
+          ],
+        },
+        'best-models': {
+          title: 'Best Laptops for Local LLMs (2026 Models)',
+          items: [
+            '**ASUS TUF A16 (RTX 4070, i9-13980HX, 32GB DDR5):** $2,000–2,500. Best overall: great cooling, solid keyboard, long battery.',
+            '**MSI Raider GE76 (RTX 4070, i9-13900HX, 32GB DDR5):** $2,200–2,700. Gaming-focused, loud fans, but excellent thermals.',
+            '**Lenovo Legion Pro 9 (RTX 4090, i9-13900HX):** $3,500+. Overkill for 7B, excellent for research/fine-tuning.',
+            '**ASUS VivoBook Pro 16 (RTX 4070, Ryzen 9, 32GB DDR5):** $1,800–2,200. Lightweight (1.9kg), good battery, less gaming-heavy look.',
+            '**Used gaming laptops (2023):** Search eBay for used MSI GE75, ASUS ROG, Razer with RTX 4070. $1,200–1,600 (30–40% discount).',
+          ],
+        },
+        'perf-gap': {
+          title: 'Performance Expectations: Desktop vs. Laptop',
+          content: 'Laptop GPUs run cooler and slower than desktop equivalents.',
+          items: [
+            '**Llama 3 7B (Q4):** Desktop RTX 4060 = 15 tok/s. Laptop RTX 4060 = 10 tok/s (33% slower due to thermal throttling).',
+            '**Llama 3 13B (Q4):** Desktop RTX 4070 = 20 tok/s. Laptop RTX 4070 = 14 tok/s (30% slower).',
+            '**Why the gap?** Laptop GPUs have lower max clocks (2.0 GHz vs. 2.5 GHz desktop). Sustained load keeps clocks low to avoid thermal shutdown.',
+            '**Mitigation:** Undervolt GPU (-50mV) to reduce temps 10–15°C, recover 5–10% speed. Crank fans to max (loud, but helps).',
+          ],
+        },
+        'battery': {
+          title: 'Battery Life & Thermal Management',
+          content: 'Local LLM inference on battery is brief.',
+          items: [
+            '**On battery:** GPU disabled (switches to integrated graphics). LLM inference drops to 2–3 tok/s (very slow). Battery lasts 6–8 hours.',
+            '**Plugged in:** Full GPU power. 10–15 tok/s typical. Fan noise and heat noticeable.',
+            '**Sustained inference:** Keep laptop on AC. Battery degrades if discharged repeatedly under GPU load.',
+            '**Cooling pads:** $30–50 external pad improves thermals 5–10°C, extends battery life slightly.',
+          ],
+        },
+        'upgrades': {
+          title: 'Storage & RAM Upgrades',
+          content: 'Most gaming laptops allow SSD and RAM upgrades.',
+          items: [
+            '**SSD upgrade:** If laptop has 512GB, upgrade to 1TB NVMe ($80–120). Models load slower from HDD.',
+            '**RAM upgrade:** If stock 16GB, upgrade to 32GB DDR5 ($100–150). Enables 8+ concurrent LLM inferences.',
+            '**GPU not upgradeable:** Soldered to motherboard. Choose wisely when buying.',
+          ],
+        },
+        'mistakes': {
+          title: 'Common Laptop LLM Mistakes',
+          items: [
+            'Buying a thin, lightweight ultrabook (XPS, MacBook Pro) thinking it can run 7B. Integrated GPU can\'t do it; thermal envelope too small.',
+            'Expecting desktop performance on a laptop. Thermal throttling is unavoidable; expect 20–30% slowdown.',
+            'Leaving laptop in a closed bag during inference. Heat buildup throttles GPU to 30% clocks in 5 minutes.',
+          ],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Can I run a 7B model on my gaming laptop battery?', a: 'Technically yes, but GPU disables on battery. Inference drops to 2–3 tok/s (very slow). Plug in for real use.' },
+            { q: 'Is an RTX 4060 laptop good enough for 7B models?', a: 'Yes, at 10–12 tok/s after throttling. Acceptable for writing, brainstorming. Not ideal for production.' },
+            { q: 'Should I buy a gaming laptop or a mini PC for local LLMs?', a: 'Gaming laptop: portable, already equipped. Mini PC: cheaper, faster, more upgradeable. Choose based on mobility needs.' },
+            { q: 'How do I cool a laptop running inference 24/7?', a: 'Use external cooling pad + max fan settings. Check temps (GPU <80°C). Plan for dust cleaning every 3 months.' },
+            { q: 'Can I run 13B models on an RTX 4060 laptop?', a: 'Barely, at Q4. Expect OOM errors if batch size > 1. RTX 4070 (12GB) is much safer for 13B.' },
+            { q: 'What\'s the best cheap gaming laptop for local LLMs?', a: 'Used MSI GE75 or ASUS ROG with RTX 4070 (2023 model), $1,200–1,500 on eBay. Check return policy.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Local LLM on Laptop: Setup Guide](/local-llms/local-llm-on-laptop)',
+            '[Best Mini PCs for Local LLMs](/local-llms/best-mini-pcs-local-llm)',
+            '[Local LLM PC Build Under $2,000](/local-llms/local-llm-pc-build-2000)',
+            '[How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'NVIDIA RTX mobile GPU specifications and mobile vs. desktop TDP comparison',
+            'TechPowerUp laptop GPU database (2026 models)',
+            'Thermal benchmark data from NotebookCheck.net (RTX 4060/4070 thermals under load)',
+          ],
+        },
+      },
+    },
+  },
+
 }
