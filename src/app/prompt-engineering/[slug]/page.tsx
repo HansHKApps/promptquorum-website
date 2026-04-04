@@ -19,6 +19,24 @@ function getTitleForSlug(slug: string): string {
   return slug
 }
 
+// Validate and fix itemListSchema to ensure all ListItems have a 'name' property
+function ensureItemListSchemaValid(schema: any): any {
+  if (!schema || schema['@type'] !== 'ItemList' || !Array.isArray(schema.itemListElement)) {
+    return schema
+  }
+
+  const fixed = { ...schema }
+  fixed.itemListElement = schema.itemListElement.map((item: any) => {
+    // If item has nested item.name but no top-level name, copy it up
+    if (!item.name && item.item?.name) {
+      return { ...item, name: item.item.name }
+    }
+    return item
+  })
+
+  return fixed
+}
+
 interface PageProps {
   params: Promise<{ slug: string }>
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
@@ -250,6 +268,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
         itemListElement: TRENDING_TERMS_2026.map(({ rank, term, reason }) => ({
           '@type': 'ListItem',
           position: rank,
+          name: term,
           item: {
             '@type': 'DefinedTerm',
             name: term,
@@ -357,7 +376,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
       {article.recipesHowToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.recipesHowToSchema) }} />}
       {article.softwareSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.softwareSchema) }} />}
       {article.howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.howToSchema) }} />}
-      {article.itemListSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.itemListSchema) }} />}
+      {article.itemListSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ensureItemListSchemaValid(article.itemListSchema)) }} />}
       {learningResourceSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceSchema) }} />}
       {definedTermSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }} />}
       <PromptEngineeringPostClient slug={slug} initialLang={selectedLang} />

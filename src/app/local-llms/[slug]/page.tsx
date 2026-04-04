@@ -15,6 +15,24 @@ function getTitleForSlug(slug: string): string {
   return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 }
 
+// Validate and fix itemListSchema to ensure all ListItems have a 'name' property
+function ensureItemListSchemaValid(schema: any): any {
+  if (!schema || schema['@type'] !== 'ItemList' || !Array.isArray(schema.itemListElement)) {
+    return schema
+  }
+
+  const fixed = { ...schema }
+  fixed.itemListElement = schema.itemListElement.map((item: any) => {
+    // If item has nested item.name but no top-level name, copy it up
+    if (!item.name && item.item?.name) {
+      return { ...item, name: item.item.name }
+    }
+    return item
+  })
+
+  return fixed
+}
+
 interface PageProps {
   params: Promise<{ slug: string }>
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
@@ -198,7 +216,7 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
       {howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
       {article.supplementalSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.supplementalSchema) }} />}
       {article.tableSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.tableSchema) }} />}
-      {article.itemListSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.itemListSchema) }} />}
+      {article.itemListSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ensureItemListSchemaValid(article.itemListSchema)) }} />}
       <LocalLLMsPostClient slug={slug} initialLang={selectedLang} />
     </>
   )
