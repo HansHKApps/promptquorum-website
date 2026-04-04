@@ -1601,19 +1601,35 @@ Any article with **4 or more distinct numerical facts** (token counts, pricing, 
 
 **Any article with time-sensitive facts must include at least 2 inline date references in prose** — separate from and in addition to the `<time>` element in the page header.
 
+**Articles that MUST include inline dates (trigger categories):**
+- Model specs (context windows, VRAM, parameter counts)
+- Pricing ($X/1M tokens, $X/month, etc.)
+- API limits (rate limits, batch sizes, max requests)
+- Regulatory deadlines (EU AI Act, China AIGC rules, NIST frameworks, etc.)
+- Benchmark results (MMLU scores, HumanEval, ARC performance)
+- Model comparisons ("X vs Y" articles)
+- Temperature and sampling parameter guidance (varies by model version)
+
 **Required patterns (use at least 2 per article):**
 - `"As of [Month Year], [fact]..."`
 - `"[Model/regulation] released in [Month Year]..."`
 - `"(correct as of [Month Year])"`
 - `"Updated [Month Year]: [changed fact]..."`
 
-**Example (correct):**
+**Examples (correct):**
 ```markdown
 As of April 2026, GPT-4o pricing is $5 input / $15 output per 1M tokens.
+
 Claude 4.6 Sonnet was released in early 2024 and handles 200k token contexts.
+
+The EU AI Act's GPAI rules took effect in August 2025.
+
+Temperature behavior differs by model (correct as of April 2026).
+
+Updated April 2026: Gemini 2.5 Pro now supports 2M token contexts, up from 1M previously.
 ```
 
-**Why:** Articles with no dates in body text score lower on GEO freshness evaluation even when schema `dateModified` is current. AI crawlers treat inline dates as evidence of continuous fact-checking.
+**Why:** Articles with no dates in body text score lower on GEO freshness evaluation even when schema `dateModified` is current. AI crawlers reading body text (not just headers) treat inline dates as evidence of continuous fact-checking and currency checks. Without body-level dates, crawlers cannot verify that claims are still accurate as of today.
 
 ---
 
