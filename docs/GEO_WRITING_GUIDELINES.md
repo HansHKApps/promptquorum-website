@@ -493,7 +493,150 @@ Every page needs:
 
 ---
 
-## Rule 8: Internal Linking with Anchor Text
+## Rule 8a: MANDATORY Meta Description Format for New Articles
+
+**CRITICAL: Every new article must include a complete meta description at the very top of your output, before any markdown content.**
+
+**Requirements:**
+- Exactly 150–160 characters (not 140–160)
+- Must follow this exact format: `[Primary keyword]: [one-sentence direct answer]. [Unique benefit for prompt engineers or local LLM users]. Free templates + PromptQuorum app inside.`
+- The benefit statement should address either:
+  - Practical outcome (e.g., "improve accuracy by 20–40%", "reduce hallucinations", "speed up inference")
+  - Audience-specific value (e.g., "for prompt engineers", "for teams using local LLMs", "for developers")
+- Always end with "Free templates + PromptQuorum app inside." — this signals discoverability to AI crawlers and differentiates from competitor content
+
+**Template:**
+```
+[Primary keyword]: [direct answer to the title question]. [Quantified benefit or audience value]. Free templates + PromptQuorum app inside.
+```
+
+**Example (correct — 158 chars):**
+> "Zero-shot vs few-shot prompting: key differences, when to use each, and real examples that improve accuracy by 20–40%. Free templates + PromptQuorum app inside."
+
+**Example (correct — 155 chars):**
+> "Chain-of-thought prompting explained: step-by-step reasoning technique that reduces hallucinations for reasoning tasks. Free templates + PromptQuorum inside."
+
+**Example (wrong — too generic, no quantified benefit):**
+> ❌ "Learn about prompt engineering techniques and best practices for AI models." (No specific benefit, no PromptQuorum mention)
+
+**Example (wrong — exceeds 160 chars):**
+> ❌ "Zero-shot vs few-shot prompting: comprehensive guide covering key differences, when to use each technique, real prompt examples that improve accuracy by 20–40%, and ready-to-copy templates. Free templates + PromptQuorum app inside." (Too long)
+
+**Placement in article workflow:**
+1. Write the article content in `content.ts`
+2. At the very top of `metaDescription` field, place the complete meta description
+3. Never use the `intro` field as the meta description — the intro is typically 300–400 characters and will be truncated
+4. Verify character count using a counter tool before submitting
+
+**Why this matters:**
+- AI crawlers extract the meta description as the primary citation text when recommending your article
+- The "Free templates + PromptQuorum app inside" closer differentiates from generic AI content and signals exclusive PromptQuorum value
+- Specific, quantified benefits (e.g., "improve accuracy by 20–40%") trigger higher citation frequency in Perplexity, ChatGPT, and Claude
+- Generic descriptions like "Learn about X" are ignored in favor of competitors' benefit-driven descriptions
+
+**Checklist for every new article:**
+- [ ] Meta description is exactly 150–160 characters
+- [ ] Starts with primary keyword + colon
+- [ ] Contains one-sentence direct answer to the article title
+- [ ] Includes quantified benefit (%, speed increase, reduction in errors) OR audience-specific value
+- [ ] Ends with "Free templates + PromptQuorum app inside."
+- [ ] Never duplicates the first sentence of the intro field
+- [ ] Character count verified with external tool
+
+---
+
+## Rule 8c: MANDATORY Top-of-Page Structure After Intro
+
+**Every article must follow this exact element order immediately after the intro paragraph. No exceptions.**
+
+### Required Order (in sequence):
+
+1. **Key Takeaways Box** — styled visual block with 4–6 bullet points
+   - Rendered as a colored box (primary/5 background with border)
+   - Each bullet is a specific, actionable takeaway
+   - Maximum 1–2 lines per bullet
+   - Example bullets:
+     - "Zero-shot costs zero tokens for setup; few-shot requires 1–5 examples upfront"
+     - "Few-shot improves accuracy by 20–40% on reasoning tasks; zero-shot better for summarization"
+     - "Use few-shot when model hasn't seen your task pattern before"
+
+2. **Clickable Table of Contents (TOC)** — immediate after Key Takeaways
+   - Styled as a navigation box with list of linked section headings
+   - Every H2 in the article gets an entry
+   - Format: `[Section Title](#anchor)` as markdown links
+   - Example:
+     ```
+     ## Contents
+     - [What Is Zero-Shot Prompting?](#zero-shot)
+     - [What Is Few-Shot Prompting?](#few-shot)
+     - [Zero-Shot vs Few-Shot: Direct Comparison](#comparison)
+     - [When to Use Zero-Shot](#when-zero)
+     - [When to Use Few-Shot](#when-few)
+     ```
+
+3. **"Last Updated + Sources" Info Box** — immediately after TOC
+   - Displays: "Last updated: [Month Year]" with semantic `<time>` element
+   - Displays: "Sources: [N] peer-reviewed sources"
+   - Keep both pieces of info visible without JavaScript
+   - Example rendering:
+     ```
+     Last updated: March 2026 · Sources: 4 peer-reviewed papers · Read time: 8 min
+     ```
+
+### Why This Matters:
+
+- **Key Takeaways first:** AI crawlers extract the TL;DR immediately. Placing it first ensures summary extraction is accurate and complete.
+- **TOC second:** Enables semantic navigation for users and helps search engines understand article structure. AI systems weight TOC presence for E-E-A-T signals.
+- **Last Updated box third:** Recency signals matter for AI citations. Visible, machine-readable dates (using `<time>`) boost citation frequency.
+- **Sequence:** This specific order mimics how Perplexity, ChatGPT, and Claude structure summaries — match that UX to get cited more often.
+
+### Technical Implementation in content.ts:
+
+In the content data structure, this maps to:
+
+```typescript
+sections: {
+  // Auto-rendered: Key Takeaways box (isTldr: true)
+  keyTakeaways: {
+    isTldr: true,
+    items: [
+      "Bullet 1 with specific fact",
+      "Bullet 2 with specific fact",
+      // ... 4–6 items total
+    ]
+  },
+  
+  // Auto-rendered: Table of Contents (from toc array)
+  // The TOC is auto-generated from H2 section titles
+  
+  // Auto-rendered: Last Updated box
+  // Uses publishDate / dateModified field + sources count
+  
+  // First substantive H2 section starts here
+  definition: {
+    title: "What Is [Topic]?",
+    content: "..."
+  },
+  // ... rest of sections
+}
+```
+
+### Checklist for Every New Article:
+
+- [ ] Key Takeaways box is the first element after intro paragraph
+- [ ] Key Takeaways contains 4–6 specific, actionable bullets
+- [ ] Table of Contents is the second element after intro
+- [ ] TOC includes every H2 heading from the article
+- [ ] TOC links are clickable anchors (e.g., `#zero-shot`, `#few-shot`)
+- [ ] "Last Updated + Sources" box is the third element after intro
+- [ ] Last Updated uses semantic `<time datetime="YYYY-MM-DD">` element
+- [ ] Sources count is accurate and visible
+- [ ] All three elements render without JavaScript
+- [ ] No other elements (ads, CTAs, unrelated content) appear between intro and Key Takeaways
+
+---
+
+## Rule 8d: Internal Linking with Anchor Text
 
 Link anchor text must describe the destination, not be generic.
 
@@ -964,6 +1107,95 @@ Use Markdown tables — not prose or bullet lists — for chronologies, feature 
 **Why:** RAG models prioritise table content for structured information extraction. Tables are machine-readable; prose is not.
 
 ---
+
+## Rule 17: Mandatory Callout Boxes (Visual Highlight Blocks)
+
+**Every article must use highlighted callout boxes for key content.** Callout boxes improve scannability for humans and make content more extractable for AI crawlers.
+
+### When to Use Callout Boxes (Required):
+
+1. **Every prompt template** — All `[Bad Prompt]` / `[Good Prompt]` pairs
+2. **Every important tip or insight** — Critical best practices, common mistakes, warnings
+3. **Every "In one sentence" / "In plain terms" snippet** — Definition blocks, snippet extracts
+4. **Copy-paste ready templates** — Any prompt users should use directly
+5. **Original testing results** — Findings, benchmarks, performance data
+
+### Callout Box Format:
+
+Use Markdown blockquote styling with bold headers:
+
+```markdown
+> **[Label]**  
+> Content goes here
+```
+
+**Examples:**
+
+```markdown
+> **[Good Prompt Template]**  
+> You are an expert data analyst. Analyze this dataset and extract the top 5 trends. Format your response as a numbered list with specific numbers and percentages.
+```
+
+```markdown
+> **[Pro Tip]**  
+> Few-shot prompting works best when your examples match your use case exactly. Generic examples hurt performance more than help.
+```
+
+```markdown
+> **[In one sentence]**  
+> Chain-of-thought prompting forces the model to show step-by-step reasoning, which reduces hallucinations on logic-heavy tasks.
+```
+
+```markdown
+> **[Important: Common Mistake]**  
+> Developers often reuse zero-shot prompts for new tasks. Each task requires either zero-shot refinement OR few-shot examples. Mixing them causes output instability.
+```
+
+```markdown
+> **[Testing Result]**  
+> Across 50 customer service prompts: few-shot prompting reduced response hallucinations by 35–42% compared to zero-shot.
+```
+
+### Minimum Callout Box Requirements by Article Length:
+
+- **≤500 words:** Minimum 2 callout boxes (prompt templates or key tips)
+- **501–1500 words:** Minimum 5 callout boxes (mix of templates, tips, and snippets)
+- **1500+ words (pillar articles):** Minimum 8 callout boxes
+- **Articles with 5+ prompt examples:** Every prompt example MUST be in a callout box
+
+### Callout Box Labels (Standard Ones):
+
+| Label | When to Use |
+|-------|------------|
+| `[Good Prompt Template]` | Copy-paste ready, correct prompt to use |
+| `[Bad Prompt]` / `[Bad Example]` | Anti-pattern to avoid |
+| `[Pro Tip]` | Actionable insight that improves results |
+| `[Common Mistake]` | Frequent error users make (with fix) |
+| `[Important]` | Critical information for success |
+| `[In one sentence]` | Concise definition for AI extraction |
+| `[In plain terms]` | Non-technical explanation |
+| `[Testing Result]` | Original data / benchmark finding |
+| `[Copy-Paste Ready]` | Template users can use directly |
+| `[Warning]` | Gotchas, limitations, or risks |
+| `[Advanced]` | For experienced practitioners only |
+
+### Why Callouts Matter:
+
+- **Human readability:** Callout boxes break up text walls and make key points scannable
+- **AI extraction:** LLM RAG systems prioritize highlighted blocks when building summaries
+- **Citation trigger:** Articles with 5+ callout boxes get cited 2–3× more often in Perplexity and ChatGPT summaries
+- **Clip-ability:** Users and educators share callout content on social media more frequently (higher reach)
+- **E-E-A-T signal:** Structured, highlighted expert tips signal expertise to Google and AI crawlers
+
+### Placement Checklist:
+
+- [ ] First callout box appears in Key Takeaways or first H2 section
+- [ ] At least 1 callout per 300–400 words of content
+- [ ] Callout boxes use consistent bold label format
+- [ ] Every prompt example is in a callout (none in regular prose)
+- [ ] Testing results and original insights are in callout boxes
+- [ ] Pro tips and warnings are visually highlighted
+- [ ] Total callout count matches minimum requirement for article length
 
 ---
 
