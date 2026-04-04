@@ -1,0 +1,163 @@
+# GEO Reaudit Checklist
+
+This checklist is used to reaudit already-published articles against the full GEO Writing Guidelines. Use this when revisiting older articles that need updating or when verifying compliance of existing content.
+
+## Quick Audit (5 minutes per article)
+
+- [ ] **Meta description:** Exactly 150–160 chars, ends with "Free beta — April 2026." or similar CTA footer
+- [ ] **H2 titles:** All section titles are questions or direct answers, not commands ("How Do You X?" not "How to X")
+- [ ] **Date signal:** At least one "As of April 2026" mention in intro or first section
+- [ ] **Intro:** Answer-first structure (direct fact first, explanation second)
+- [ ] **First 3 paragraphs:** Each ≤3 sentences, no marketing fluff
+
+## Full Audit (15 minutes per article)
+
+### 1. Metadata & SEO
+- [ ] Title: 50–65 characters, answer-first phrasing
+- [ ] Meta description: 150–160 characters, ends with CTA footer
+- [ ] SEO title: Present (if title is long) or absent (if title is short)
+- [ ] JSON-LD schema: Appropriate schema type (Article, HowTo, FAQPage, TechArticle)
+- [ ] Breadcrumbs: Present and correctly structured
+
+### 2. Structure & Formatting
+- [ ] H2 titles: All are questions or direct answers
+  - ✓ "What Is a Local LLM?" 
+  - ✓ "How Do You Install Ollama?"
+  - ✓ "Which Models Are Best for Coding?"
+  - ✗ "Installing Ollama" (missing question format)
+- [ ] TLDR section: Present at top, bulleted, 5–8 items
+- [ ] Table of contents: Present, all H2s listed
+- [ ] Code blocks: Language specified, examples runnable
+- [ ] Tables: Columns named, content scannable
+
+### 3. Content Quality
+- [ ] Intro: Direct answer first, then explanation (answer-first structure)
+- [ ] Every claim: Verifiable (no "best", "leading", "revolutionary")
+- [ ] Bullet lists: Used for 3+ items (not paragraphs)
+- [ ] Paragraph length: All ≤3 sentences
+- [ ] Active voice: Used throughout (not passive)
+- [ ] Jargon: Defined on first mention
+- [ ] Date signals: "As of April 2026" appears 2+ times in main content
+
+### 4. Required Sections (for all article types)
+
+#### Key Takeaways (TLDR)
+- [ ] Present and clearly marked
+- [ ] 5–8 bullet points
+- [ ] Covers main learnings from article
+
+#### Common Questions (FAQ)
+- [ ] Present (unless article < 5 sections)
+- [ ] 5–8 Q&A pairs
+- [ ] Questions are actual user questions (not rhetorical)
+- [ ] Answers are concise (1–2 paragraphs)
+
+#### Related Reading
+- [ ] Present (all articles)
+- [ ] 4+ internal links
+- [ ] Links are to relevant article slugs with `/` separator
+- [ ] Descriptive anchor text (not "click here")
+- [ ] Format: `[Title](/path/to/article) — Description`
+
+#### Sources
+- [ ] Present (all articles)
+- [ ] 3+ citations
+- [ ] Mix of authoritative sources (research papers, official docs, reputable news)
+- [ ] Format: `Label — URL` or markdown links
+
+#### Common Mistakes (for technical articles)
+- [ ] Present (most articles)
+- [ ] 3–5 specific mistakes
+- [ ] Each includes explanation of why it's wrong
+- [ ] Practical examples (not abstract)
+
+### 5. Format Compliance
+- [ ] Entity names: Full names on first mention (e.g., "OpenAI GPT-4o", not "GPT")
+- [ ] Acronyms: Defined on first use, then abbreviated
+- [ ] Numbers: Formatted consistently (2026, not 2,026)
+- [ ] URLs: Markdown links `[text](url)`, not raw URLs
+- [ ] Code: Backticks for inline, fenced blocks for multi-line
+- [ ] Bold/italics: Used for emphasis, not overused
+
+### 6. Language & Tone
+- [ ] Tone: Professional but conversational
+- [ ] No marketing language ("seamless", "revolutionary", "cutting-edge")
+- [ ] No vague claims (back up everything with data or sources)
+- [ ] No AI disclosure (never mention article was "assisted by AI")
+- [ ] Consistent tense (mostly present, past only for historical context)
+
+## Article-Specific Audits
+
+### For Blog/Prompt Engineering Articles
+- [ ] Multi-language support: en, de, fr, ja, zh translations present
+- [ ] Each language: Same structure, not just machine translation
+- [ ] Title consistency: Same meaning across languages
+- [ ] Date signal: "As of April 2026" in all languages
+
+### For Local LLMs Articles  
+- [ ] Theme: Correctly assigned (Getting Started, Best Models, Tools, Hardware, Advanced, Enterprise)
+- [ ] Intro: References models by exact names (e.g., "Llama 3.2 3B", not "Llama")
+- [ ] Table of contents: All H2s present
+- [ ] Tables: Compare real tools/models (not hypothetical)
+- [ ] Quantization/VRAM: Numbers are current as of April 2026
+
+### For How-To Articles
+- [ ] Step-by-step sections: Numbered (1, 2, 3...) or clearly ordered
+- [ ] Each step: Actionable, not conceptual
+- [ ] Code examples: All tested and runnable
+- [ ] Screenshots/visuals: Present (if step 1 is GUI-based)
+- [ ] Troubleshooting: Section present if common problems exist
+
+### For Comparison Articles
+- [ ] Comparison table: All features on both sides
+- [ ] Fair representation: Both options strengths and weaknesses shown
+- [ ] No obvious bias: Not pushing users toward one option
+- [ ] "When to choose each" section: Present and clear
+- [ ] Price/cost: Mentioned if relevant
+
+## Reaudit Workflow
+
+1. **Select article** to reaudit by slug name
+2. **Run Quick Audit** (5 min) — check critical items
+3. **If issues found:** Note them, then run Full Audit
+4. **Fix issues** using Edit tool or rewrite sections
+5. **Verify changes:** npm run build (must pass with 0 errors)
+6. **Commit:** `git commit -m "audit: Update [article slug] for GEO compliance"`
+
+## Common Issues & Fixes
+
+| Issue | Fix |
+|-------|-----|
+| H2 titles as commands ("Install X") | Rewrite as question: "How Do You Install X?" |
+| Meta description >160 chars | Trim to 155–160, keep CTA footer |
+| Missing date signal | Add "As of April 2026" to intro or first section |
+| Vague claim ("best", "leading") | Replace with specific data: "72% HumanEval score" |
+| No Related Reading section | Add 4+ internal links with descriptions |
+| Table without column headers | Add explicit `columns: []` field or header row |
+| Passive voice | Rewrite: "Models can be run" → "You can run models" |
+| Paragraph >3 sentences | Split into two paragraphs |
+
+## Approval Criteria
+
+An article **passes reaudit** when:
+
+- ✓ All metadata is correct (title, description, schema)
+- ✓ All H2s are question format
+- ✓ All required sections present (TLDR, FAQ, Related Reading, Sources)
+- ✓ Content is answer-first, no marketing language
+- ✓ Date signal present ("As of April 2026")
+- ✓ build passes with 0 TypeScript errors
+- ✓ No broken internal links (all `/local-llms/` or `/prompt-engineering/` slugs are valid)
+
+## Reaudit Cadence
+
+- **After publication:** Spot-check 1–2 critical articles per week
+- **Monthly:** Reaudit 5–10 published articles at random
+- **Quarterly:** Full reaudit of all articles in a theme (e.g., all "Getting Started")
+- **When guidelines change:** Reaudit all affected articles
+
+---
+
+**Last updated:** April 2026  
+**Version:** 1.0  
+**Related:** `docs/GEO_WRITING_GUIDELINES.md`
