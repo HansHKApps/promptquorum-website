@@ -1,0 +1,109 @@
+export interface LLMTheme {
+  id: string
+  title: string
+  description: string
+  articleKeys: string[]
+}
+
+export const llmThemes: LLMTheme[] = [
+  {
+    id: 'getting-started',
+    title: 'Getting Started',
+    description: 'Zero-to-running in under 10 minutes. OS-specific installation guides, first-model walkthroughs, and a privacy-first setup checklist for beginners.',
+    articleKeys: [
+      'what-are-local-llms',
+      'local-llms-vs-cloud-apis',
+      'how-to-install-ollama',
+      'how-to-install-lm-studio',
+      'run-first-local-llm',
+      'best-beginner-local-llm-models',
+      'local-llm-one-click-installers',
+      'troubleshooting-local-llm-setup',
+      'local-llm-on-laptop',
+      'local-llm-security-privacy-checklist',
+      'local-llm-limitations',
+    ],
+  },
+  {
+    id: 'best-models',
+    title: 'Best Local LLM Models 2026',
+    description: 'Model reviews, benchmark comparisons, use-case winners, and quantization guides for Llama 4, Qwen3.5, DeepSeek, Gemma 4, and 70B+ models.',
+    articleKeys: [
+      'best-local-llms-2026',
+      'qwen-vs-llama-vs-mistral',
+      'best-local-llms-for-coding',
+      'best-local-llms-for-creative-writing',
+      'small-local-llm-models',
+      '70b-models-consumer-hardware',
+      'llm-quantization-explained',
+      'multilingual-local-llms',
+      'long-context-local-llms',
+      'top-open-source-models-ollama',
+      'local-llm-model-updates-2026',
+    ],
+  },
+  {
+    id: 'tools-interfaces',
+    title: 'Tools & Interfaces',
+    description: 'Software showdowns, GUI comparisons, API setups, and front-end guides — Ollama, LM Studio, OpenWebUI, vLLM, llama.cpp, and more.',
+    articleKeys: [
+      'ollama-vs-lm-studio',
+      'best-local-llm-frontends',
+      'text-generation-webui-vs-vllm-vs-llamacpp',
+      'local-llm-openai-compatible-api',
+      'lm-studio-advanced-features',
+      'ollama-command-guide',
+      'best-local-rag-tools',
+      'desktop-vs-webui-local-llm',
+      'local-llms-with-vscode-cursor',
+      'headless-local-llms',
+    ],
+  },
+  {
+    id: 'hardware-performance',
+    title: 'Hardware & Performance',
+    description: 'Real hardware recommendations, VRAM math, GPU benchmarks, quantization trade-offs, and optimization tricks for RTX 5090, 4090, Mac Silicon, and budget builds.',
+    articleKeys: [
+      'local-llm-hardware-guide-2026',
+      'vram-calculator-local-llm',
+      'gpu-vs-cpu-vs-apple-silicon',
+      'quantization-offloading-layer-splitting',
+      'double-local-llm-speed',
+      'best-gpus-for-local-llms',
+      'run-70b-models-24gb-vram',
+      'local-llm-power-consumption',
+      'multi-gpu-local-llms',
+      'laptop-vs-desktop-local-llm',
+      'mobile-local-llms',
+    ],
+  },
+  {
+    id: 'advanced-techniques',
+    title: 'Advanced Techniques & Applications',
+    description: 'Beyond basic chat — local RAG pipelines, LoRA fine-tuning, LangGraph agents, coding workflows, multimodal models, and custom model creation.',
+    articleKeys: [
+      'local-rag-2026',
+      'fine-tuning-local-llms-lora',
+      'local-ai-agents-langgraph-ollama',
+      'prompt-engineering-for-local-models',
+      'private-local-ai-for-business',
+      'local-llms-for-coding-workflows',
+      'multimodal-local-llms',
+      'local-vs-cloud-agents',
+      'create-custom-local-models',
+      'future-of-local-llms',
+    ],
+  },
+  {
+    id: 'enterprise',
+    title: 'Enterprise',
+    description: 'On-prem deployment, air-gapped setups, GDPR/HIPAA compliance, multi-user scaling, and private RAG for organizations requiring full data sovereignty.',
+    articleKeys: [
+      'why-enterprises-use-local-llms',
+      'on-prem-air-gapped-local-llm',
+      'enterprise-compliance-local-llms',
+      'scaling-local-llms-enterprise',
+      'corporate-rag-local-llms',
+    ],
+  },
+]
