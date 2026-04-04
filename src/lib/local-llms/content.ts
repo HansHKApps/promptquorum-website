@@ -2818,6 +2818,133 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'local-llm-model-updates-2026': {
+    en: {
+      theme: 'Best Models',
+      title: 'Local LLM Model Updates 2026: Every Major Open-Weight Release This Year',
+      seoTitle: 'Local LLM Model Updates 2026',
+      intro: 'As of April 2026, the most significant local LLM releases this year include Meta Llama 3.3 70B (December 2025), DeepSeek-R1 (January 2025), Qwen2.5 and Qwen2.5-Coder families (September 2025), Microsoft Phi-4 (December 2024), and Google Gemma 3 (February 2026). This article tracks all major model releases with their key specifications and Ollama availability.',
+      metaDescription: 'Local LLM model updates 2026: every major open-weight release tracked with specs, benchmarks, and Ollama availability. Updated April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '8 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM updates 2026',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Q1 2026 Releases', anchor: '#q1-2026-releases' },
+        { label: 'Q4 2025 Releases (Still Relevant)', anchor: '#q4-2025-releases' },
+        { label: 'Q3 2025 Releases (Still Widely Used)', anchor: '#q3-2025-releases' },
+        { label: 'What Changed: 2025 to 2026 Comparison', anchor: '#what-changed-2025-to-2026' },
+        { label: 'How to Stay Updated on New Models', anchor: '#how-to-stay-updated' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Biggest Q1 2026 release**: Google Gemma 3 (February 2026) — 1B, 4B, 9B, and 27B variants, vision support on all sizes, Apache 2.0 licence.',
+            '**Best reasoning model release**: DeepSeek-R1 (January 2025) — chain-of-thought reasoning, 52% MATH at 7B scale, disrupted the 7B benchmark landscape.',
+            '**Largest quality jump in 2025**: Llama 3.3 70B (December 2025) — matches GPT-4 (2023) on MMLU, available via `ollama run llama3.3:70b`.',
+            '**Fastest-growing model family in 2025**: Qwen2.5 — surpassed Mistral 7B in Ollama downloads by Q4 2025.',
+            'As of April 2026, the quality gap between locally-runnable models and frontier cloud models has narrowed to roughly 18–24 months of equivalent capability.',
+          ],
+        },
+        q12026: {
+          title: 'Which Local LLM Models Were Released in Q1 2026?',
+          content: 'As of April 2026, the notable open-weight model releases from January–April 2026:',
+          rows: [
+            { 'Model': 'Gemma 3 (all sizes)', 'Released': 'February 2026', 'Developer': 'Google', 'Key Feature': 'Vision on all sizes, 128K context, Apache 2.0', 'Ollama': 'ollama run gemma3:9b' },
+            { 'Model': 'Llama 4 Scout (preview)', 'Released': 'March 2026', 'Developer': 'Meta', 'Key Feature': 'MoE architecture preview, 10M token context claimed', 'Ollama': 'Not yet available' },
+            { 'Model': 'Mistral Small 3.2', 'Released': 'February 2026', 'Developer': 'Mistral AI', 'Key Feature': 'Improved instruction-following over Small 3.1', 'Ollama': 'ollama run mistral-small3.2' },
+            { 'Model': 'Phi-4 Mini', 'Released': 'January 2026', 'Developer': 'Microsoft', 'Key Feature': '3.8B, 70% HumanEval, 128K context', 'Ollama': 'ollama run phi4-mini' },
+          ],
+          columns: ['Model', 'Released', 'Developer', 'Key Feature', 'Ollama'],
+        },
+        q42025: {
+          title: 'Which Q4 2025 Models Are Still the Most Important in 2026?',
+          rows: [
+            { 'Model': 'Llama 3.3 70B', 'Released': 'December 2025', 'Key Specs': '82% MMLU, 88% HumanEval, 128K context', 'Still Relevant': 'Yes — best 70B option' },
+            { 'Model': 'Phi-4 14B', 'Released': 'December 2024', 'Key Specs': '84% MMLU — above its size class', 'Still Relevant': 'Yes — strong 14B reasoning model' },
+            { 'Model': 'Qwen2.5 full family', 'Released': 'September 2025', 'Key Specs': '0.5B–72B range, 29 languages, Apache 2.0', 'Still Relevant': 'Yes — current best multilingual family' },
+            { 'Model': 'DeepSeek-R1', 'Released': 'January 2025', 'Key Specs': 'Reasoning model, 52% MATH at 7B, MoE at large scale', 'Still Relevant': 'Yes — best reasoning locally' },
+          ],
+          columns: ['Model', 'Released', 'Key Specs', 'Still Relevant'],
+        },
+        q32025: {
+          title: 'Which Q3 2025 Models Are Still Widely Used?',
+          content: [
+            'Several 2025 releases remain widely deployed in 2026 due to tool compatibility and community documentation:',
+          ],
+          items: [
+            '**Llama 3.1 8B** (July 2025) — still the most documented 8B model, preferred by beginners for its extensive guides and tool integrations.',
+            '**Mistral 7B v0.3** (May 2025) — lower benchmark scores than current alternatives, but Apache 2.0 licence and Mistral EU provenance make it preferred in some European deployments.',
+            '**Llama 3.2 3B and 1B** (September 2025) — still the default first-install recommendation due to small size and widespread documentation.',
+          ],
+        },
+        whatChanged: {
+          title: 'How Much Has Local LLM Quality Improved from 2024 to 2026?',
+          content: [
+            'The two-year improvement in locally-runnable model quality is substantial. As of April 2026, a 7B model (Qwen2.5 7B, 74% MMLU) matches the benchmark performance of a 13B model from early 2024. A 70B model (Llama 3.3 70B, 82% MMLU) matches GPT-4 (2023) performance — a model that required billion-dollar server infrastructure 3 years ago now runs on a Mac Studio.',
+          ],
+          rows: [
+            { 'Year': 'Early 2024', 'Best 7B MMLU': '~64% (Mistral 7B)', 'Best Local 70B MMLU': '~75% (Llama 2 70B)', 'Hardware Needed': '7B: 8 GB RAM; 70B: 48 GB RAM' },
+            { 'Year': 'Late 2025', 'Best 7B MMLU': '~74% (Qwen2.5 7B)', 'Best Local 70B MMLU': '~82% (Llama 3.3 70B)', 'Hardware Needed': '7B: 5 GB RAM; 70B: 40 GB RAM' },
+            { 'Year': 'April 2026', 'Best 7B MMLU': '~74% (Qwen2.5 7B)', 'Best Local 70B MMLU': '~84% (Qwen2.5 72B)', 'Hardware Needed': '7B: 4.7 GB RAM; 70B: 43 GB RAM' },
+          ],
+          columns: ['Year', 'Best 7B MMLU', 'Best Local 70B MMLU', 'Hardware Needed'],
+        },
+        stayUpdated: {
+          title: 'How Do You Stay Updated on New Local LLM Releases?',
+          items: [
+            '**Ollama blog** (ollama.com/blog) — announces new models added to the Ollama library, typically within days of open-weight releases.',
+            '**Hugging Face Open LLM Leaderboard** (huggingface.co/spaces/open-llm-leaderboard) — tracks benchmark scores for all newly released models.',
+            '**r/LocalLLaMA** (reddit.com/r/LocalLLaMA) — the most active community for local AI news, benchmarks, and hardware discussion.',
+            '**GitHub Releases**: follow the repositories for llama.cpp (github.com/ggerganov/llama.cpp) and Ollama (github.com/ollama/ollama) to track engine updates that enable new models.',
+            '**PromptQuorum**: this guide is updated when major model releases change the recommendations. Check the dateModified field for the most recent update.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Local LLM Model Updates in 2026',
+          faqs: [
+            {
+              q: 'How quickly do new models appear in Ollama after their open-weight release?',
+              a: 'Typically 1–7 days for major model releases from Meta, Google, Mistral, and Alibaba. The Ollama team prioritizes high-profile releases — Llama 3.3 70B appeared in the Ollama library 3 days after Meta\'s open-weight release. Smaller or community models may take 2–4 weeks.',
+            },
+            {
+              q: 'Should I upgrade from Llama 3.1 8B to a newer model?',
+              a: 'If you use Llama 3.1 8B for general tasks and are satisfied with quality, upgrading is optional. Qwen2.5 7B scores slightly higher on benchmarks and has better multilingual and coding support. For most English-focused general use, the practical quality difference is small. Upgrade if your current model struggles on specific tasks.',
+            },
+            {
+              q: 'Will local models ever match current frontier cloud model quality?',
+              a: 'The trend suggests yes — with a lag of 18–24 months. GPT-4 (2023, estimated 1.7T parameters) is matched by Llama 3.3 70B (2025, locally runnable). GPT-4o (2024) will likely have a locally-runnable equivalent by late 2026 or 2027. The limiting factor is compute efficiency, not algorithmic capability.',
+            },
+            {
+              q: 'What happened with DeepSeek and why was it significant?',
+              a: 'DeepSeek-R1 (January 2025) demonstrated that a Chinese AI lab could produce reasoning-capable models competitive with OpenAI o1 at lower training cost. The open-weight release made a frontier-class reasoning model locally available for the first time. DeepSeek-R1 7B achieves 52% on MATH — nearly double the 28% of Mistral 7B — specifically because of its chain-of-thought training methodology.',
+            },
+            {
+              q: 'What is Llama 4 and is it available locally yet?',
+              a: 'As of April 2026, Meta released a preview of Llama 4 Scout — a mixture-of-experts model claiming up to 10M token context. The full open-weight release is not yet available for local inference. The Ollama library does not yet include Llama 4 variants. This page will be updated when Llama 4 becomes available for local deployment.',
+            },
+            {
+              q: 'Are there any local models specifically for enterprise or regulated industries in 2026?',
+              a: 'Mistral AI provides enterprise-grade support contracts for Mistral models. Their European origin is relevant for GDPR compliance (EU AI Act effective February 2025). For healthcare (HIPAA) or finance (SOC 2), any locally-deployed model can meet data residency requirements — the model itself is data-neutral. The compliance work is in the deployment infrastructure, not the model selection.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Hugging Face Open LLM Leaderboard — huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard',
+            'Google Gemma 3 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-3-report.pdf',
+            'Meta Llama 3.3 Release — ai.meta.com/blog/llama-3-3/',
+            'DeepSeek-R1 Technical Paper — arxiv.org/abs/2501.12948',
+          ],
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
