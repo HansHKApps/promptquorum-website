@@ -48,22 +48,8 @@ export interface LLMArticle {
 
 export const llmContent: Record<string, Record<Language, LLMArticle>> = {
 
-  // ── Example: first article to be written ──────────────────────────────────
-  // Uncomment and fill in when ready:
-  //
-  // 'what-are-local-llms': {
-  //   en: {
-  //     theme: 'Getting Started',
-  //     title: 'What Are Local LLMs and Why Run Them in 2026?',
-  //     intro: '...',
-  //     publishDate: '2026-04-10',
-  //     readTime: '8 min read',
-  //     sections: { ... },
-  //   },
-  //   de: { ... },
-  //   fr: { ... },
-  //   ja: { ... },
-  //   zh: { ... },
-  // },
+  // ── Getting Started articles (11 total) ──────────────────────────────────
+  // These are ready to be added from /tmp/llms-getting-started-articles.md
+  // Import and add articles as they are completed
 
 }

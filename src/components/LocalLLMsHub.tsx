@@ -101,12 +101,34 @@ const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
   enterprise:           { badge: 'bg-amber-50 text-amber-700 border-amber-200', dot: 'bg-amber-400' },
 }
 
+// Acronyms that must stay fully uppercase in slug-to-title fallbacks
+const SLUG_ACRONYMS: Record<string, string> = {
+  llms: 'LLMs',
+  llm: 'LLM',
+  ai: 'AI',
+  api: 'API',
+  gpu: 'GPU',
+  cpu: 'CPU',
+  vram: 'VRAM',
+  ram: 'RAM',
+  rag: 'RAG',
+  lora: 'LoRA',
+  vllm: 'vLLM',
+}
+
+function slugToTitle(slug: string): string {
+  return slug
+    .split('-')
+    .map(word => SLUG_ACRONYMS[word.toLowerCase()] ?? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ')
+}
+
 // Returns the article title from content, or a readable fallback from the slug
 function getArticleTitle(articleKey: string, lang: Language): string {
   const contentKey = LLM_SLUG_TO_KEY[articleKey]
   if (contentKey && llmContent[contentKey]?.[lang]) return llmContent[contentKey][lang].title
   if (contentKey && llmContent[contentKey]?.en)     return llmContent[contentKey].en.title
-  return articleKey.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+  return slugToTitle(articleKey)
 }
 
 function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: string; lang: Language }) {
