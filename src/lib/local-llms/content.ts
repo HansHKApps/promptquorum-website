@@ -997,6 +997,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'All four tools can coexist on the same machine. Models in GGUF format can be shared between them. The choice of installer does not lock you into a specific model set.',
           ],
         },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**Ollama Official** — Installation downloads and documentation',
+            '**LM Studio** — Desktop app downloads and feature documentation',
+            '**Jan AI** — Privacy-first installer with offline capabilities',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Choosing an Installer',
+          items: [
+            'Assuming all installers have the same model library — Jan AI has fewer models than Ollama.',
+            'Not realizing that one-click installers are still subject to hardware constraints — a 70B model won\'t run on 16 GB RAM.',
+            'Using GUI tools exclusively and never learning command-line alternatives for scripting or production.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Terminal-based installer guide',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — Desktop GUI installer guide',
+            '[Run Your First Local LLM](/local-llms/run-first-local-llm) — Getting started after installation',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations',
+          ],
+        },
       },
     },
   },
@@ -1140,6 +1165,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: 'Where to Find More Help',
           content: 'For hardware-specific issues on laptops (thermal throttling, battery drain), see [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop). For security and privacy configuration questions, see the [Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist). The Ollama GitHub issues page (github.com/ollama/ollama/issues) and the r/LocalLLaMA subreddit are the most active community resources for model-specific bugs.',
         },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**NVIDIA CUDA Toolkit Compatibility** — Official version mapping for GPU support',
+            '**llama.cpp Issues** — Community discussion of common inference errors',
+            '**Ollama Troubleshooting Guide** — Official documentation for error resolution',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Troubleshooting',
+          items: [
+            'Assuming OOM (out-of-memory) errors mean hardware failure — usually just means you need a smaller model or quantization.',
+            'Not checking system load — inference speed degrades significantly if other applications are consuming CPU/GPU.',
+            'Ignoring GPU driver version mismatches — NVIDIA CUDA requires specific driver versions for each CUDA version.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and setup',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — GUI-based alternative',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations',
+            '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) — Laptop-specific optimization',
+          ],
+        },
       },
     },
   },
@@ -1272,6 +1322,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             },
           ],
         },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**Apple MLX Framework** — GPU acceleration for Apple Silicon Macs',
+            '**Ollama macOS Guide** — Optimization for Apple hardware',
+            '**LM Studio System Requirements** — CPU and GPU compatibility data',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Running LLMs on Laptops',
+          items: [
+            'Not enabling GPU acceleration on Apple Silicon Macs, which dramatically improves speed.',
+            'Running models too large for laptop thermal design limits, causing throttling and poor performance.',
+            'Assuming all models are battery-efficient — large models drain a 8-hour battery in under 2 hours.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Small models optimized for laptops',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation guide',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — GUI-based installer',
+            '[Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) — Performance and error fixes',
+          ],
+        },
       },
     },
   },
@@ -1378,6 +1453,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               q: 'Does Ollama send my prompts anywhere?',
               a: 'No. Ollama is open source (github.com/ollama/ollama) and contains no telemetry or data collection code. Prompts are processed locally by llama.cpp and never transmitted. The only outbound network activity from Ollama is model downloads from ollama.com when you run `ollama pull`.',
             },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**OWASP Top 10 for AI** — Security considerations for model deployment',
+            '**Hugging Face Model Card Specifications** — Model provenance and licensing standards',
+            '**VeraCrypt Disk Encryption** — Open-source full-disk encryption tool',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes in Local LLM Security',
+          items: [
+            'Downloading models from untrusted sources without verifying checksums or model provenance.',
+            'Assuming privacy is automatic — check for telemetry, update checking, or sync features in your chosen tool.',
+            'Not isolating local LLMs from network — malicious prompts can exploit models to exfiltrate data.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Are Local LLMs?](/local-llms/what-are-local-llms) — Core concepts and components',
+            '[Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis) — Privacy trade-offs',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and setup',
+            '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) — Secure laptop configuration',
           ],
         },
       },
@@ -1506,6 +1606,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               q: 'Are local LLMs good enough for production use?',
               a: 'For many production use cases, yes. Private document analysis, code review assistance, customer support triage, and content moderation are all in production using local models at companies that cannot send data to cloud providers. The key is matching the task complexity to the model capability — a 7B model is not appropriate for tasks that require GPT-4 level reasoning, but it is entirely appropriate for classification, summarization, and template-based generation.',
             },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**GPT-4o Technical Report** — Benchmark comparisons and capability analysis',
+            '**Llama 3.3 Model Card** — Official performance metrics and limitations',
+            '**LLM Hallucination Research** — Academic study of model accuracy and errors',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes Regarding LLM Limitations',
+          items: [
+            'Expecting a locally-runnable 34B model to match GPT-4o on multi-step reasoning — it won\'t.',
+            'Assuming hallucination rates are lower locally — model size, not location, drives accuracy.',
+            'Not budgeting for the 30-minute setup time when recommending local LLMs to non-technical users.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[What Are Local LLMs?](/local-llms/what-are-local-llms) — Core concepts and how they work',
+            '[Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis) — When to use each approach',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations for limited hardware',
+            '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — Current top models and benchmarks',
           ],
         },
       },
@@ -1650,6 +1775,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Non-English languages**: Qwen2.5 — see [Multilingual Local LLMs](/local-llms/multilingual-local-llms).',
           ],
         },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**Hugging Face Open LLM Leaderboard** — Real-time benchmark rankings',
+            '**Ollama Model Library** — Available models with download sizes',
+            '**Model Release Announcements** — Official model cards and capabilities',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Choosing Models in 2026',
+          items: [
+            'Choosing based on benchmarks alone — real-world performance on your task may differ significantly.',
+            'Not testing model outputs on your specific use case before deploying.',
+            'Forgetting to check license restrictions for commercial use.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Foundation models for new users',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and model setup',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Coding-optimized model comparisons',
+            '[Local LLM Limitations](/local-llms/local-llm-limitations) — Understanding model constraints',
+          ],
+        },
       },
     },
   },
@@ -1759,6 +1909,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: 'How Do You Try Each Family',
           codeBlock: '# Qwen2.5 family\nollama run qwen2.5:7b\nollama run qwen2.5:14b\nollama run qwen2.5:72b\n\n# Llama 3.x family\nollama run llama3.2:3b\nollama run llama3.1:8b\nollama run llama3.3:70b\n\n# Mistral family\nollama run mistral          # 7B\nollama run mistral-small3.1 # 24B',
           codeLanguage: 'bash',
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**Qwen 2.5 Model Card** — Multilingual and coding capability benchmarks',
+            '**Meta Llama 3.3 70B** — Official specifications and performance data',
+            '**Mistral 7B Official** — Model documentation and capabilities',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Choosing Model Families',
+          items: [
+            'Comparing models at different parameter counts — Qwen 32B vs Llama 70B is not an apples-to-apples test.',
+            'Ignoring multilingual benchmarks when choosing between models if your workload is multilingual.',
+            'Assuming the latest model version is always best — sometimes older quantizations have better community support.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — Overall ranking of current best models',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Foundation models for new users',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Getting started with any model',
+            '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Understanding model formats',
+          ],
         },
       },
     },
@@ -1891,6 +2066,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Already running Llama 3.1 8B**: skip downloading a separate model — coding quality is equivalent to Qwen2.5-Coder 7B for everyday tasks.',
           ],
         },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**DeepSeek Coder Model** — Official documentation and HumanEval benchmarks',
+            '**Qwen2.5 Coder** — Model card with coding performance data',
+            '**Starcoder2 15B** — Fill-in-the-middle specialized model for code completion',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Choosing Coding Models',
+          items: [
+            'Using a general-purpose model when a coding-specialized model exists for 2–5× better code generation.',
+            'Not testing on the programming language you actually use — coding model rankings vary by language.',
+            'Expecting perfect code generation from 7B models — they require more prompt engineering than GPT-4o.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — Overall ranking across all use cases',
+            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) — Model family comparison',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and first-run setup',
+            '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Understanding model formats and performance',
+          ],
+        },
       },
     },
   },
@@ -2002,6 +2202,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               q: 'Does the model remember earlier parts of my story?',
               a: 'Only within the current context window. If your conversation history exceeds the model\'s context limit (typically 4K–128K tokens), earlier details are forgotten. For long projects, periodically provide a story summary at the start of each session to re-establish context.',
             },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**Neural Story Generation Papers** — Academic research on narrative coherence',
+            '**Mistral 7B for Creative Tasks** — Model documentation and creative benchmarks',
+            '**Llama 3.1 8B Creative Benchmark** — Evaluation on creative writing tasks',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes in Creative Writing Prompting',
+          items: [
+            'Using code-optimized models for creative tasks — creative models are tuned differently.',
+            'Expecting local models to generate novel, multi-novel narratives — they excel at short-form creative text.',
+            'Not adjusting temperature and sampling parameters for creative output.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — Overall ranking across use cases',
+            '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) — Performance optimization for writers',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Foundation models for creative writing',
+            '[Local LLM Limitations](/local-llms/local-llm-limitations) — Understanding model constraints',
           ],
         },
       },
