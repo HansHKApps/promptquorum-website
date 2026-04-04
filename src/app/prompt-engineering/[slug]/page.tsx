@@ -7,16 +7,28 @@ import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { themes } from '@/lib/prompt-engineering/themes'
 import { LEARNING_PATHS, TRENDING_TERMS_2026 } from '@/lib/prompt-engineering/learningPaths'
 
+// Acronyms that must stay fully uppercase in slug-to-title fallbacks
+const SLUG_ACRONYMS: Record<string, string> = {
+  llms: 'LLMs',
+  llm: 'LLM',
+  ai: 'AI',
+  api: 'API',
+  apis: 'APIs',
+  gpu: 'GPU',
+  cpu: 'CPU',
+  vram: 'VRAM',
+  ram: 'RAM',
+  rag: 'RAG',
+  lora: 'LoRA',
+  vllm: 'vLLM',
+}
+
 // Look up the human-readable title for a slug from the themes data
 function getTitleForSlug(slug: string): string {
-  for (const theme of themes) {
-    const keys = theme.articleKeys ?? theme.subSections?.flatMap(s => s.articleKeys) ?? []
-    if (keys.includes(slug)) {
-      // Title is stored in PromptEngineeringHub ARTICLE_TITLES — use slug as fallback
-      return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
-    }
-  }
   return slug
+    .split('-')
+    .map(word => SLUG_ACRONYMS[word.toLowerCase()] ?? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ')
 }
 
 // Validate and fix itemListSchema to ensure all ListItems have a 'name' property

@@ -6,13 +6,27 @@ import { llmContent } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { llmThemes } from '@/lib/local-llms/themes'
 
+// Acronyms that must stay fully uppercase in slug-to-title fallbacks
+const SLUG_ACRONYMS: Record<string, string> = {
+  llms: 'LLMs',
+  llm: 'LLM',
+  ai: 'AI',
+  api: 'API',
+  apis: 'APIs',
+  gpu: 'GPU',
+  cpu: 'CPU',
+  vram: 'VRAM',
+  ram: 'RAM',
+  rag: 'RAG',
+  lora: 'LoRA',
+  vllm: 'vLLM',
+}
+
 function getTitleForSlug(slug: string): string {
-  for (const theme of llmThemes) {
-    if (theme.articleKeys.includes(slug)) {
-      return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
-    }
-  }
-  return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+  return slug
+    .split('-')
+    .map(word => SLUG_ACRONYMS[word.toLowerCase()] ?? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ')
 }
 
 // Validate and fix itemListSchema to ensure all ListItems have a 'name' property
