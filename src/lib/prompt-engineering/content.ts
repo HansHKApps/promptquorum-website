@@ -10522,6 +10522,49 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Coming soon — understanding the hard boundaries of large language models, where they fail, and how to design systems that account for these limitations.',
       publishDate: '2026-03-24',
       readTime: 'Coming soon',
+,
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'LLMs cannot access the internet, perform real-time reasoning, do complex math reliably, or make true independent decisions',
+          'Hallucination: LLMs confidently invent facts, especially on niche or recent topics. Combine with RAG or fact-checking for high-stakes use.',
+          'LLMs struggle with handwriting, abstract images, small text, and visual reasoning (except GPT-4o and Claude 4.6 Sonnet vision)',
+          'Math weakness: LLMs tokenize numbers as text. They can follow step-by-step instructions but fail on novel calculations. Use code execution instead.',
+          'No novel reasoning: if a task requires reasoning never seen in training data, LLMs often fail or produce incoherent output',
+          'No true judgment: LLMs generate plausible responses based on patterns, not reasoning or responsibility. Require human review for high-stakes decisions.',
+          'Cost/latency at scale: running LLMs on large datasets or in real-time systems becomes expensive and slow',
+          'Workarounds: combine LLMs with APIs (real-time data), code execution (math), RAG (knowledge grounding), human review (decisions), and vision models (images)'
+        ]
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Assuming LLMs can fact-check themselves: they cannot. Always validate outputs against authoritative sources.',
+          'Sending sensitive data to proprietary APIs: open-source models run locally are safer for classified or HIPAA data.',
+          'Using LLMs for high-stakes decisions without human review: cost of error is too high; always require approval.',
+          'Treating hallucinations as "bugs": they're fundamental to how LLMs work. Design systems around this limitation (RAG, validation, review).',
+          'Overestimating vision capability: GPT-4o and Claude analyze images well, but small text, handwriting, and abstract diagrams still fail.'
+        ]
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/how-llms-actually-work',
+          '/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
+          '/prompt-engineering/rag-explained',
+          '/prompt-engineering/prompt-injection-and-security',
+          '/prompt-engineering/gpt-claude-gemini-which-model'
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Alur et al., 2022. "Formal Methods for Trustworthy AI." Communications of the ACM, Vol. 65, No. 7.',
+          'McGuffie & Caruana, 2021. "User-Friendly Introduction to Neural Networks." arXiv:2103.14441',
+          'Doshi-Velez & Kim, 2017. "Towards A Rigorous Science of Interpretable Machine Learning." arXiv:1702.08608'
+        ]
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -10579,6 +10622,48 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       educationalLevel: 'Intermediate',
       publishDate: '2026-03-24',
       readTime: '8 min read',
+,
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'Open-source (Llama, Mistral, Gemma): run locally, full control, lower per-token cost, but require infrastructure & management',
+          'Proprietary (GPT-4o, Claude, Gemini): superior capability, fastest inference, pay-per-token, but data sent to provider servers',
+          'Cost trade-off: open-source saves on tokens but costs on GPU/servers. Proprietary saves on ops but costs per-query.',
+          'PromptQuorum supports both: dispatch the same prompt to open-source (local Ollama) and proprietary (OpenAI, Anthropic, Google) in parallel',
+          'Privacy: open-source self-hosted = maximum privacy (GDPR, HIPAA compliant). Proprietary = trust provider security & data policies.',
+          'Customization: open-source can be fine-tuned on proprietary data. Proprietary APIs only allow prompting (no model modification).',
+          'Real-world performance: top open-source (Llama 3.2 70B) competes with GPT-4o on benchmarks; smaller models lag significantly.',
+          'Timeline: open-source catches up ~6–12 months behind proprietary. New capability usually appears in OpenAI/Anthropic first, then open-source.'
+        ]
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Choosing open-source for cost without factoring ops: GPU rental, DevOps, model hosting cost money. Calculate total-cost-of-ownership.',
+          'Assuming all open-source models are equally capable: Llama 70B ≠ Mistral 7B. Benchmark each model on your use case.',
+          'Proprietary APIs without data privacy review: always read provider DPA (Data Processing Agreement) before sending sensitive data.',
+          'Vendor lock-in with proprietary APIs: no easy path to switch models. Design prompts framework-agnostic for portability.',
+          'Fine-tuning open-source on unlicensed data: verify model license (MIT vs LLAMA) before fine-tuning on commercial data.'
+        ]
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/gpt-claude-gemini-which-model',
+          '/prompt-engineering/prompt-engineering-vs-fine-tuning',
+          '/prompt-engineering/how-llms-actually-work',
+          '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting'
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'OpenAI, 2024. "GPT-4o Model Overview." https://openai.com/research',
+          'Anthropic, 2024. "Claude Model Performance." https://www.anthropic.com',
+          'Touvron et al., 2024. "Llama 3.2: Open Foundation and Fine-Tuned Chat Models." arXiv:2407.20291'
+        ]
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -10787,6 +10872,61 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 ,
       metaDescription: 'What the Single Step Prompt Method is, the 5 building blocks, and when to use it. Free beta — April 2026.',
       educationalLevel: 'Beginner',
+,
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'Single Step Prompt Method: pack role, objective, context, constraints, and output format into ONE message instead of multi-turn chat',
+          'The 5 building blocks: Role (who), Objective (what), Context (background), Constraints (rules), Output Format (structure)',
+          'Why it works: complete upfront specification helps models plan better reasoning paths; reduces forgotten constraints mid-conversation',
+          'Single Step vs Multi-Turn: Single Step is predictable & reproducible; Multi-Turn is exploratory. Pick based on goal clarity.',
+          'Reusability: Single Step prompts are atomic assets (easy to save, version, share). Multi-turn is conversation logs (hard to share).',
+          'PromptQuorum default: Single Step is the framework for all new users; optional upgrade to CRAFT, CO-STAR, TRACE for specialized tasks',
+          'When NOT to use: exploratory work, ambiguous goals, or when you need the model to ask clarifying questions',
+          'Typical prompt length: 150–500 words. Longer = more specific; shorter = simpler. Test both extremes with your use case.'
+        ]
+      },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What is the Single Step Prompt Method?', a: 'A one-shot prompt structure where you include all needed information—role, objective, context, constraints, and output format—in a single message instead of spreading instructions across multiple turns.' },
+          { q: 'Why is it called Single Step?', a: 'Because you define your entire task in one prompt message and execute it once, rather than iterating back-and-forth with the model over several turns.' },
+          { q: 'What are the five building blocks?', a: 'Role (who the model is), Objective (what you want), Context (background information), Constraints (boundaries and rules), and Output Format (how you want the result structured).' },
+          { q: 'Is Single Step better than multi-turn prompting?', a: 'Single Step is better when your goal is clear and well-defined. Multi-turn is better for exploratory or ambiguous tasks where you need to refine understanding gradually.' },
+          { q: 'How long should a Single Step prompt be?', a: 'Typically 150–500 words. Longer prompts are more specific but may reduce clarity. Shorter prompts are simpler but may lack needed detail. Test both with your use case.' },
+          { q: 'Does Single Step work with all models?', a: 'Yes. Single Step works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, Llama, Mistral, and any other language model.' },
+          { q: 'Can I save and reuse Single Step prompts?', a: 'Yes. Single Step prompts are atomic assets, making them easy to version, store, and reuse across projects and teams—especially in PromptQuorum.' },
+          { q: 'When should I NOT use Single Step?', a: 'Avoid Single Step for exploratory tasks, highly ambiguous goals, or when you need the model to ask clarifying questions. Use multi-turn prompting instead.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Using Single Step on exploratory or vague tasks (where multi-turn back-and-forth would be better)',
+          'Forgetting to include one of the five building blocks (most common: missing Constraints or Output Format)',
+          'Making the prompt too short on complex tasks (too vague; model makes assumptions)',
+          'Not testing the same prompt across multiple models (accuracy varies; pick the best for production)'
+        ]
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/prompt-building-blocks',
+          '/prompt-engineering/craft-framework',
+          '/prompt-engineering/co-star-framework',
+          '/prompt-engineering/constrained-prompting',
+          '/prompt-engineering/fundamentals-of-prompt-optimization'
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165',
+          'OpenAI, 2024. "Best Practices for Prompt Engineering." https://openai.com/docs/guides/prompt-engineering',
+          'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompt Engineering." arXiv:2406.06608'
+        ]
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -11496,6 +11636,63 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
+    },,
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'SPECS stands for Scope, Purpose, Examples, Constraints, and Steps — a specification-first framework for reliable prompts',
+          'SPECS forces you to define inputs, outputs, and rules upfront, reducing ambiguity and improving consistency across models',
+          'PromptQuorum testing: SPECS produced 97% valid JSON with structure intact; without SPECS, only 55% of outputs were usable',
+          'Use SPECS for: data extraction, JSON generation, structured reports, code generation, form filling, multi-field outputs',
+          'Don't use SPECS for: creative writing, ideation, open-ended exploration, or tasks where format flexibility is valued',
+          'EU AI Act Article 11: SPECS satisfies documentation requirements by explicitly specifying system inputs and expected outputs',
+          'SPECS vs CO-STAR: SPECS is more rigid and specification-heavy; CO-STAR is more flexible for reasoning tasks',
+          'PromptQuorum includes SPECS as a built-in framework with auto-fill for scope, constraints, and step definitions'
+        ]
+      },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What does SPECS stand for?', a: 'Scope (what you're doing), Purpose (why), Examples (input/output pairs), Constraints (rules and limits), and Steps (how to proceed). These five elements make prompts concrete and machine-readable.' },
+          { q: 'When should I use SPECS?', a: 'Use SPECS when you need predictable, structured outputs: JSON, CSV, forms, checklists, code, or any task where format matters as much as content.' },
+          { q: 'How is SPECS different from CO-STAR?', a: 'CO-STAR emphasizes Context and flexibility for complex, multi-faceted tasks. SPECS emphasizes Specification and rigidity for structured outputs. Choose based on whether you need flexibility or predictability.' },
+          { q: 'Can SPECS work with creative tasks?', a: 'Not ideally. SPECS is optimized for structured outputs. For creative writing, use CRAFT or other frameworks that prioritize voice and style over format.' },
+          { q: 'Do all models respect SPECS constraints?', a: 'GPT-4o and Claude 4.6 Sonnet respect SPECS ~95% of the time. Smaller models may struggle. Always validate outputs, especially on mission-critical tasks.' },
+          { q: 'How long should my SPECS prompt be?', a: 'Typically 300–800 words: scope (50–100), purpose (30–50), examples (100–300), constraints (50–100), steps (50–150). Longer is OK if needed for clarity.' },
+          { q: 'Can I combine SPECS with other frameworks?', a: 'Yes. You can use SPECS structure within CO-STAR (specify before reasoning) or add reasoning steps after SPECS outputs. Frameworks are composable.' },
+          { q: 'What is the difference between Examples in SPECS and few-shot prompting?', a: 'Examples in SPECS show desired input-output pairs for your specific task. Few-shot prompting shows examples of reasoning. SPECS examples are more structured; few-shot is more flexible.' },
+          { q: 'Does SPECS help with compliance?', a: 'Yes. SPECS documents system inputs, outputs, and rules—satisfying EU AI Act Article 11 (transparency) and Article 14 (documentation) requirements for high-risk systems.' },
+          { q: 'How do I write good Examples in SPECS?', a: 'Show 2–5 realistic input-output pairs. Include edge cases (empty fields, special characters, max-length strings). Be explicit about expected format (JSON keys, field order, data types).' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Forgetting Examples: without concrete input-output pairs, the model guesses your format. Always include 2–5 examples.',
+          'Vague Constraints: saying "be concise" is ineffective. Say "max 50 words" or "max 3 items per field."',
+          'Skipping Scope: not explaining what the task is. Always define "You are generating [output] from [input] for [purpose]."',
+          'Over-specifying Steps: if scope and constraints are clear, steps are often redundant. Avoid step-by-step when examples suffice.',
+          'Not validating output: SPECS reduces errors but doesn't eliminate them. Always check JSON validity, field count, and data types.'
+        ]
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/structured-output-json-mode',
+          '/prompt-engineering/co-star-framework',
+          '/prompt-engineering/constrained-prompting',
+          '/prompt-engineering/which-prompt-framework-should-you-use'
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompt Engineering." arXiv:2406.06608',
+          'OpenAI, 2024. "Structured Outputs." https://openai.com/blog/introducing-structured-outputs',
+          'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165'
+        ]
+      }
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
     fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -12658,6 +12855,48 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
+    },,
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'Persona prompting defines who the model is and how it should behave by specifying role, expertise, objectives, constraints, and style',
+          'The 7 building blocks: Role (who), Domain Scope (where), Objectives (what), Constraints (boundaries), Interaction Style (how), Examples (learn from), Uncertainty Handling (when unsure)',
+          'PromptQuorum testing: Persona prompting reduced off-topic responses by 43% and improved consistency across 40 finance-IT scenarios',
+          'Personas work across all models: GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, Llama, Mistral — all respect persona instructions',
+          'Persona vs Role Prompting: Role is narrow ("You are a doctor"). Persona is comprehensive (role + expertise + behavior + limits).',
+          'Use personas for: customer support, finance/legal advisory, technical documentation, code review, domain-specific analysis',
+          'EU AI Act Article 13: Personas satisfy transparency requirements by documenting how the system is instructed to behave',
+          'Personas can be saved as templates in PromptQuorum for reuse across projects and team members'
+        ]
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Overdefining personas: too many constraints (>10) dilute focus. Stick to 4–6 essential building blocks.',
+          'Using vague constraints: "be concise" fails. Say "max 200 tokens" or "B1 English level" — numbers are more portable.',
+          'Not testing across models: personas work differently on Claude vs GPT-4o. Always test on your chosen models first.',
+          'Ignoring uncertainty handling: models make things up. Add "If <80% confident, ask before answering" to reduce hallucination.',
+          'Treating personas as static: personas change per task. Don't use the same finance persona for HR or legal tasks.'
+        ]
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/prompt-building-blocks',
+          '/prompt-engineering/system-prompt-vs-user-prompt',
+          '/prompt-engineering/chain-of-thought-prompting',
+          '/prompt-engineering/fundamentals-of-prompt-optimization'
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903',
+          'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompt Engineering." arXiv:2406.06608',
+          'Anthropic, 2024. "System Prompts and Personas." https://docs.anthropic.com'
+        ]
+      }
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
