@@ -78,23 +78,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
 
   PAGES.forEach(({ path, priority, changefreq, lastmod }) => {
-    // Add entry for each language variant
-    LANGS.forEach(lang => {
-      const url = lang === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${lang}`
-      entries.push({
-        url,
-        lastModified: lastmod,
-        changeFrequency: changefreq,
-        priority,
-        alternates: {
-          languages: Object.fromEntries(
-            LANGS.map(l => [
-              l,
-              l === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${l}`,
-            ])
-          ),
-        },
-      })
+    // Single entry per page with hreflang alternates for all languages
+    entries.push({
+      url: `${BASE}${path}`,
+      lastModified: lastmod,
+      changeFrequency: changefreq,
+      priority,
+      alternates: {
+        languages: Object.fromEntries(
+          LANGS.map(l => [
+            l,
+            l === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${l}`,
+          ])
+        ),
+      },
     })
   })
 
