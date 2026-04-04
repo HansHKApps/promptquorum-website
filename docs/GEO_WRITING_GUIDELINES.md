@@ -2775,3 +2775,153 @@ Apply this pattern to every page: **distinct opening, distinct tone, distinct be
 - [ ] `educationalLevel` and `audience` fields in schema (Rule 29)
 - [ ] Draft ends with: `Schema validated – ready for Google Rich Results Test and AI citation.` (Rule 33)
 
+
+---
+
+## === CONTENT GENERATION ENFORCEMENT PROTOCOL ===
+
+This protocol is MANDATORY for every new article written for
+promptquorum.com. It applies to all sections: /prompt-engineering/,
+/local-llms/, /blog/, and all future sections.
+
+The protocol has two phases. Both must complete before any article
+is considered done. Writing prose is PHASE 2. PHASE 1 must happen
+first. This order cannot be reversed.
+
+---
+
+### PHASE 1 — SCAFFOLD BEFORE YOU WRITE
+
+Before writing a single sentence of article content, produce the
+following scaffold and show it explicitly. Do not begin prose until
+the scaffold is approved or confirmed complete.
+
+Fill every field. Empty fields are not permitted.
+
+```
+ARTICLE SCAFFOLD
+
+Page URL slug: [e.g. /local-llms/how-to-install-ollama]
+H1 title (max 60 chars without | PromptQuorum): []
+Page title with brand (max 60 chars total): [] | PromptQuorum
+Meta description (150–160 chars exactly): []
+OG description (140–180 chars, different from meta): []
+Twitter description (100–130 chars, different from both): []
+
+Lead Answer Block (25–50 words, will be bolded): []
+
+Key Takeaways (5–7 bullets, specific facts with numbers): []
+
+Level: [Beginner / Intermediate / Advanced / Technical]
+Audience: [specific, not "AI users"]
+
+H2 list (every H2 must end in ? or be direct answer phrase):
+1. []
+2. []
+3. []
+[continue]
+
+Comparison tables planned (list topics): []
+Table anchor IDs (id="comparison-x-vs-y" format): []
+
+Common Mistakes section title (question format): []
+Common Mistakes (3–5, each with fix): []
+
+FAQ questions (minimum 6, covering 3+ of the 5 types):
+Type coverage: [ ] Definitional [ ] Comparative [ ] Quantitative
+              [ ] Procedural [ ] Disambiguation
+1. [] (type: )
+2. [] (type: )
+3. [] (type: )
+4. [] (type: )
+5. [] (type: )
+6. [] (type: )
+
+External sources (minimum 3, with URLs):
+1. [] — []
+2. [] — []
+3. [] — []
+
+Regional context sentence (EU/Germany/Japan/China): []
+
+Inline date signals planned (minimum 2 "As of [Month Year]"): []
+
+HowTo schema needed? [yes/no] — section title if yes: []
+```
+
+Only after this scaffold is complete does article writing begin.
+The scaffold becomes the article's contract. Every item in the
+scaffold must appear in the final article.
+
+---
+
+### PHASE 2 — POST-WRITE SELF-AUDIT
+
+Immediately after completing the article, before outputting the
+final version, run this audit and fix every ❌ before delivering.
+
+**H2 FORMAT CHECK** — Every H2 must end in ? or be a direct answer phrase. Flag any H2 that:
+- starts with "How to" (change to "How Do You")
+- is a label: Overview, Resources, Features, Summary, etc.
+- is a CTA: Join, Sign Up, Download, Get Started
+- is "Common Questions" or "Frequently Asked Questions"
+
+**FAQ COUNT CHECK** — Minimum 6 FAQ questions. Fewer = ❌
+
+**SOURCES SECTION CHECK** — Must have a Sources section with minimum 3 external citations with URLs. Missing = ❌
+
+**COMMON MISTAKES CHECK** — Required for Getting Started, Framework, Technique, and Comparison articles. Missing = ❌
+
+**META DESCRIPTION** — Must be 150–160 characters exactly. ❌ if outside this range.
+
+**LEAD ANSWER BLOCK** — First paragraph after intro must be wrapped in **bold**. ❌ if absent.
+
+**REGIONAL CONTEXT** — At least one EU/Japan/China reference where relevant. ❌ if absent and the topic is globally relevant.
+
+**INLINE DATE SIGNALS** — Minimum 2 "As of [Month Year]" phrases for time-sensitive facts. ❌ if fewer.
+
+**BANNED WORDS** — Scan for: powerful, seamless, leading, revolutionary, cutting-edge, comprehensive, best-in-class, game-changing, transformative. ❌ if any found.
+
+**TOC ANCHOR FORMAT** — All TOC links must use single `#anchor` not `##anchor`. ❌ if double-hash found.
+
+**THREE DESCRIPTION FIELDS DISTINCT** — metaDescription ≠ ogDescription ≠ twitterDescription. ❌ if any two are identical.
+
+---
+
+### HARD STOPS — DO NOT DELIVER THE ARTICLE IF ANY OF THESE ARE TRUE
+
+These are non-negotiable blocking conditions:
+
+- ❌ STOP: Sources section is missing
+- ❌ STOP: FAQ has fewer than 6 questions
+- ❌ STOP: Any H2 uses "How to" instead of "How Do You"
+- ❌ STOP: Lead Answer Block is not bolded
+- ❌ STOP: Meta description is not 150–160 characters
+- ❌ STOP: ogDescription is identical to metaDescription
+- ❌ STOP: TOC links use ## instead of #
+- ❌ STOP: Common Mistakes section is absent on Techniques/Frameworks/Getting Started articles
+
+When a hard stop condition is found, fix it and re-audit before delivering. Do not note the issue and deliver anyway.
+
+---
+
+### KNOWN TEMPLATE BUG — ALWAYS FIX
+
+Every article in every section currently has TOC links formatted as `(##anchor-name)` with double hash. The correct format is `(#anchor-name)` with a single hash.
+
+When writing or editing any article, scan all TOC links and correct any `##` to `#` before delivery. This applies to all sections including /prompt-engineering/ and /local-llms/.
+
+This is a known template defect, not a per-article decision.
+
+---
+
+### SECTION-SPECIFIC COMMON MISTAKES REQUIREMENTS
+
+- **Getting Started articles** (/local-llms/, /prompt-engineering/ fundamentals): Common Mistakes section required, minimum 3 entries.
+- **Framework articles**: Common Mistakes section required, minimum 3 entries.
+- **Technique articles**: Common Mistakes section required, minimum 3 entries.
+- **Comparison articles** (containing "vs" in URL or H1): Common Mistakes section required. Also: main comparison table must have anchor ID in format `id="comparison-x-vs-y"`.
+- **Glossary and reference pages**: Common Mistakes not required.
+- **Blog posts**: Common Mistakes optional but recommended.
+
+=== END CONTENT GENERATION ENFORCEMENT PROTOCOL ===
