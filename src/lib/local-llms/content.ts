@@ -3337,7 +3337,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         fullComparison: {
-          title: 'Full Comparison: Local LLMs vs Cloud APIs Across 8 Factors',
+          title: 'How Do Local LLMs and Cloud APIs Compare Across 8 Factors?',
           rows: [
             { 'Factor': 'Data privacy', 'Local LLM': 'Complete — data never leaves your device', 'Cloud API': 'Data processed on provider servers; subject to their privacy policy' },
             { 'Factor': 'Cost per token', 'Local LLM': '$0 (after hardware investment)', 'Cloud API': '$0.15–$60 per 1M tokens (varies by model)' },
@@ -3396,7 +3396,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          title: 'Common Questions About Local LLMs vs Cloud APIs',
+          title: 'What Are Common Questions About Local LLMs vs Cloud APIs?',
           faqs: [
             {
               q: 'Can I switch between local and cloud models in the same application?',
@@ -7563,6 +7563,716 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Hugging Face Model Hub — huggingface.co/models',
             'LLM Leaderboards — huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard',
             'Research Papers (arxiv) — arxiv.org (filter by date: 2025–2026)',
+          ],
+        },
+      },
+    },
+  },
+
+  'why-enterprises-use-local-llms': {
+    en: {
+      theme: 'Enterprise',
+      title: 'Why Enterprises Use Local LLMs: Cost, Compliance, and Control',
+      seoTitle: 'Why Enterprises Choose Local LLMs',
+      intro: 'Enterprises deploy local LLMs for three reasons: cost savings (eliminate per-token API fees), compliance (GDPR, HIPAA require data residency), and control (customize models, audit everything, no vendor lock-in). As of April 2026, 40% of enterprises with 500+ employees are evaluating or deploying on-premises AI.',
+      metaDescription: 'Why enterprises use local LLMs: cost analysis, compliance requirements, data sovereignty, and control. Business case. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '11 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'enterprise AI deployment',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Cost Savings Analysis', anchor: '#cost-savings' },
+        { label: 'Compliance Requirements', anchor: '#compliance' },
+        { label: 'Data Sovereignty and Control', anchor: '#data-sovereignty' },
+        { label: 'Vendor Independence', anchor: '#vendor-independence' },
+        { label: 'Real Enterprise Use Cases', anchor: '#use-cases' },
+        { label: 'Common Objections Answered', anchor: '#objections' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Cost:** Enterprises processing 1B+ tokens/month save $100k–500k annually by eliminating per-token API fees.',
+            '**Compliance:** GDPR (data residency), HIPAA (patient privacy), and SOC2 (audit trails) require on-premises AI.',
+            '**Control:** Customize models, control data lifecycle, audit all queries, no third-party visibility.',
+            '**Vendor lock-in:** Open-source local LLMs avoid dependence on OpenAI/Anthropic pricing and availability.',
+            'As of April 2026, break-even point is 200M–500M tokens/month depending on data residency costs.',
+          ],
+        },
+        costSavings: {
+          title: 'How Much Do Enterprises Save With Local LLMs?',
+          content: [
+            'Per-token pricing for cloud APIs accumulates quickly. Local LLMs have one-time hardware investment and ongoing operational costs.',
+          ],
+          rows: [
+            { 'Annual Volume': '100M tokens', 'Cloud (GPT-4)': '$2,000', 'Local (amortized)': '$500', 'Savings': '$1,500' },
+            { 'Annual Volume': '1B tokens', 'Cloud (GPT-4)': '$20,000', 'Local (amortized)': '$5,000', 'Savings': '$15,000' },
+            { 'Annual Volume': '10B tokens', 'Cloud (GPT-4)': '$200,000', 'Local (amortized)': '$50,000', 'Savings': '$150,000' },
+            { 'Annual Volume': '100B tokens', 'Cloud (GPT-4)': '$2,000,000', 'Local (amortized)': '$500,000', 'Savings': '$1,500,000' },
+          ],
+          columns: ['Annual Token Volume', 'Cloud API Cost', 'Local AI (amortized)', 'Annual Savings'],
+        },
+        compliance: {
+          title: 'What Compliance Requirements Drive Local AI?',
+          content: [
+            '**GDPR (EU):** Article 32 requires data processing within the EU. Cloud APIs to US servers violate GDPR.',
+            '**HIPAA (Healthcare):** 164.306 requires patient data stored and processed on secure, audited infrastructure. No third-party API access.',
+            '**SOC2 Type II (Enterprise):** Type II audit requires 6+ months of audit logs, encryption, access controls. On-premises provides full control.',
+            '**Data Residency Laws (China, Russia, India, Brazil):** Many countries mandate data stay within borders. Local AI ensures compliance.',
+            'Violating these regulations incurs fines: GDPR up to €20M or 4% revenue, HIPAA up to $1.5M per violation.',
+          ],
+        },
+        dataSovereignty: {
+          title: 'Why Do Enterprises Need Data Sovereignty?',
+          content: [
+            'Data sovereignty means data stays under the organization\'s physical and legal control. No third-party access, no government subpoena risk.',
+            '**Sensitive use cases:** Financial models, drug formulations, trade secrets, customer personal information.',
+            '**Competitive risk:** If data goes to cloud, competitors (or cloud provider employees) could access it.',
+            '**Historical incidents:** Multiple cloud provider breaches (AWS, Azure, Google Cloud) have exposed enterprise data. Local storage eliminates that risk.',
+          ],
+        },
+        vendorIndependence: {
+          title: 'How Do Local LLMs Avoid Vendor Lock-In?',
+          content: [
+            'Cloud APIs lock you into vendor pricing and availability. If OpenAI increases prices 10×, you cannot switch without rewriting integrations.',
+            'Open-source local LLMs (Meta Llama, Qwen, Mistral) let you:',
+          ],
+          items: [
+            'Switch models without code changes (same OpenAI-compatible API interface).',
+            'Avoid sudden price increases.',
+            'Use models forever (no deprecation risk).',
+            'Customize models via fine-tuning.',
+            'Run on any hardware (no vendor-specific accelerators).',
+          ],
+        },
+        useCases: {
+          title: 'Real Enterprise Use Cases',
+          content: 'How enterprises use local LLMs:',
+          rows: [
+            { 'Industry': 'Healthcare', 'Use Case': 'Medical document analysis (HIPAA-compliant)', 'Volume': '500M tokens/year', 'Savings': '$8k/year' },
+            { 'Industry': 'Finance', 'Use Case': 'Compliance analysis, regulatory filing', 'Volume': '2B tokens/year', 'Savings': '$35k/year' },
+            { 'Industry': 'Legal', 'Use Case': 'Contract review, due diligence', 'Volume': '1B tokens/year', 'Savings': '$18k/year' },
+            { 'Industry': 'Manufacturing', 'Use Case': 'Quality control, predictive maintenance', 'Volume': '100M tokens/year', 'Savings': '$1.5k/year' },
+            { 'Industry': 'Government', 'Use Case': 'Classified document processing', 'Volume': '500M tokens/year', 'Savings': '$8k/year + compliance' },
+          ],
+          columns: ['Industry', 'Use Case', 'Annual Volume', 'Annual Savings'],
+        },
+        objections: {
+          title: 'Common Objections to Local LLMs (Answered)',
+          content: 'Objection 1: "Local models are less capable than GPT-4"',
+          items: [
+            '**True, but:** Llama 3.1 70B matches GPT-4 (2023) on most benchmarks. For enterprises needing 80% GPT-4 quality at 1/10 cost, local is viable.',
+            '',
+            'Objection 2: "We need the latest models for competitive advantage"',
+            '',
+            '**Counter:** Most enterprise use cases (document analysis, Q&A, summarization) do not require frontier model quality. Fine-tuning open models beats cloud APIs on domain-specific tasks.',
+            '',
+            'Objection 3: "Infrastructure costs are too high"',
+            '',
+            '**Counter:** Hardware costs amortized over 5 years are 20–30% of API costs. Beyond 500M tokens/year, local is cheaper.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Enterprise Deployment Mistakes',
+          items: [
+            '**Underestimating infrastructure costs.** Hardware is $20k–100k, but cooling, networking, and maintenance cost 3–5× that over 5 years.',
+            '**Not planning for scaling.** Start with single-GPU setup, but production needs redundancy, failover, monitoring.',
+            '**Poor security posture.** Open ports, weak authentication, no encryption = breach risk worse than cloud.',
+            '**Using outdated models.** Deploy 2023 model, forget to retrain when new base models release. Plan for ongoing updates.',
+            '**Not measuring ROI.** Calculate savings only on API costs, ignoring operational costs (salaries, infrastructure). Be honest about break-even timeline.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions From Enterprise Leaders',
+          faqs: [
+            {
+              q: 'What is the minimum token volume to justify local LLMs?',
+              a: 'Break-even is approximately 200M–500M tokens per year (depends on infrastructure, salaries in your region). Below that, cloud APIs are cheaper.',
+            },
+            {
+              q: 'How do we ensure data never touches cloud?',
+              a: 'Deploy models entirely on-premises (not even inference goes to cloud). Use network monitoring and firewall rules to block external connections.',
+            },
+            {
+              q: 'What compliance certifications do we need?',
+              a: 'Depends on industry: SOC2 Type II (general enterprise), HIPAA (healthcare), GDPR compliance (EU operations), ISO 27001 (security best practice).',
+            },
+            {
+              q: 'Can we use cloud embeddings with local LLMs?',
+              a: 'Technically yes, but violates data sovereignty. If data is sensitive, use local embeddings (nomic-embed-text) instead.',
+            },
+            {
+              q: 'How do we migrate from cloud APIs to local?',
+              a: 'Most tools (Ollama, vLLM) expose the same OpenAI API interface. Swap base_url in your code from api.openai.com to localhost:11434.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[On-Prem Air-Gapped Local LLM](/local-llms/on-prem-air-gapped-local-llm) — Isolated deployment without internet.',
+            '[Enterprise Compliance Local LLMs](/local-llms/enterprise-compliance-local-llms) — Detailed compliance guide.',
+            '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) — Multi-user production setup.',
+            '[Corporate RAG Local LLMs](/local-llms/corporate-rag-local-llms) — Document Q&A for organizations.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'GDPR Official Text — gdpr-info.eu',
+            'HIPAA Security Rule — hhs.gov/hipaa/164-306',
+            'SOC2 Trust Service Criteria — aicpa.org/soc2',
+            'McKinsey AI in Enterprise 2026 — mckinsey.com',
+          ],
+        },
+      },
+    },
+  },
+
+  'on-prem-air-gapped-local-llm': {
+    en: {
+      theme: 'Enterprise',
+      title: 'On-Prem Air-Gapped Local LLMs: Isolated Deployment for Classified Environments',
+      seoTitle: 'Air-Gapped Local LLM Deployment',
+      intro: 'Air-gapped deployment means the LLM infrastructure is completely isolated from the internet. No internet connection, no external API calls, no data exfiltration risk. As of April 2026, this is standard for government, military, and financial institutions handling classified or highly sensitive data.',
+      metaDescription: 'Air-gapped local LLM deployment: architecture, security, updates, and classified environments. Isolated AI setup. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '12 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'air-gapped deployment',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Is Air-Gapped?', anchor: '#what-is-air-gapped' },
+        { label: 'Architecture Design', anchor: '#architecture' },
+        { label: 'Network Isolation', anchor: '#network-isolation' },
+        { label: 'Model and Data Management', anchor: '#model-management' },
+        { label: 'Updates and Maintenance', anchor: '#updates' },
+        { label: 'Security Considerations', anchor: '#security' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Air-gapped = completely isolated from internet. Zero network connectivity to external systems.',
+            'Use case: Government (classified), military (war scenarios), finance (high-security), healthcare (HIPAA ultra-sensitive).',
+            'Challenge: Cannot auto-update models, embeddings, or dependencies. Requires manual processes.',
+            'Architecture: Dedicated hardware, encrypted storage, restricted user access, physical security.',
+            'As of April 2026, air-gapped is standard for government and defense contractors.',
+          ],
+        },
+        whatIsAirGapped: {
+          title: 'What Does Air-Gapped Mean?',
+          content: [
+            'Air-gapped infrastructure has no network connection to the internet or any external system. All data and computation stays on isolated hardware.',
+            '**Absolute isolation:** No WiFi, no Ethernet to external networks, no USB connections to internet-connected devices.',
+            '**Data never leaves:** Inference happens locally, results stay locally.',
+            '**Updates are manual:** Cannot auto-download model updates. Updates require physical media (USB drive, SD card) or internal network transfer.',
+          ],
+        },
+        architecture: {
+          title: 'Typical Air-Gapped Architecture',
+          content: [
+            'A single machine or small cluster, completely isolated, with restricted physical access.',
+          ],
+          numberedItems: [
+            '**Dedicated hardware:** Servers used only for LLM inference, nothing else.',
+            '**Isolated network:** No connection to corporate network or internet. Separate VLAN at most.',
+            '**Encrypted storage:** All model files, data, logs encrypted at rest.',
+            '**Controlled access:** Only authorized personnel can access. Multi-factor authentication required.',
+            '**Physical security:** Locked server room, surveillance, access logs.',
+            '**No removable media:** USB ports disabled, CD/DVD drives removed.',
+            '**Local monitoring:** Logs stay on-system, not sent to external monitoring services.',
+          ],
+        },
+        networkIsolation: {
+          title: 'Network Isolation: Blocking All External Connections',
+          content: [
+            'Isolation is enforced at multiple levels:',
+          ],
+          items: [
+            '**Physical:** Separate network hardware (switch, router) for air-gapped infrastructure.',
+            '**Firewall:** Inbound and outbound traffic blocked. No exceptions for cloud services, NTP, DNS to external servers.',
+            '**Software:** Host-level firewalls (iptables, Windows Firewall) as secondary control.',
+            '**Monitoring:** Network traffic audited. Any attempt to connect externally is logged and flagged.',
+          ],
+        },
+        modelManagement: {
+          title: 'How Do You Manage Models in Air-Gapped Environments?',
+          content: [
+            'Model updates are manual, requiring physical media transfer or internal secure processes.',
+          ],
+          numberedItems: [
+            'Download model on internet-connected machine (separate, non-classified environment).',
+            'Verify model integrity (checksum, digital signature).',
+            'Transfer to air-gapped system via encrypted USB drive or internal file server.',
+            'Validation: Run tests to ensure model integrity was not compromised during transfer.',
+            'Deployment: Load model into inference engine.',
+            'Documentation: Log which models are deployed, versions, dates.',
+          ],
+        },
+        updates: {
+          title: 'Updates and Patching in Air-Gapped Systems',
+          content: [
+            'Security updates and model updates are manual:',
+          ],
+          items: [
+            '**Model updates:** Follow process above. Schedule updates quarterly or annually.',
+            '**OS patches:** Test on isolated staging environment first, then deploy to production.',
+            '**Dependencies:** Evaluate new versions carefully. Air-gapped systems run older versions longer.',
+            '**No auto-updates:** Disable automatic updates entirely. All updates are controlled, documented, audited.',
+          ],
+        },
+        security: {
+          title: 'Security in Air-Gapped Systems',
+          content: [
+            'Air-gapped inherently more secure (no external attacks), but new risks emerge:',
+          ],
+          items: [
+            '**Insider threats:** Employees with access could copy data via USB. Require two-person integrity.',
+            '**Supply chain attacks:** Compromised models or dependencies during transfer. Verify checksums, digital signatures.',
+            '**Physical theft:** Models and data worth millions. Require locked room, surveillance, intrusion detection.',
+            '**Social engineering:** "Trust me, I need to update the model." Require formal change control processes.',
+            '**Logging gaps:** If logs are not audited, nobody detects insider activity. Require external audit of logs regularly.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Air-Gapped Deployment Mistakes',
+          items: [
+            '**Incomplete isolation:** Leaving one port open, one wireless card enabled, or allowing USB devices defeats air-gapping. Audit rigorously.',
+            '**No change control:** Model updates happen informally, no documentation. Leads to loss of knowledge about which version is deployed.',
+            '**Poor backup strategy:** Air-gapped systems need redundant storage and off-site backups. But backups themselves must be air-gapped.',
+            '**Insufficient logging:** Air-gapped systems require comprehensive auditing (who accessed what, when). Without logs, breaches go undetected.',
+            '**Trusting physical security alone:** Security requires multiple layers: isolation, encryption, access control, auditing, not just locked doors.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Air-Gapped Systems',
+          faqs: [
+            {
+              q: 'How do we update models in an air-gapped system?',
+              a: 'Manually via encrypted USB, or via an internal secure network isolated from the internet. All updates require change control approval and audit trails.',
+            },
+            {
+              q: 'Can we use cloud backups for air-gapped systems?',
+              a: 'No. Cloud backups require internet connection (defeating air-gapping). Use physical backups (encrypted hard drives) stored in separate secure facility.',
+            },
+            {
+              q: 'Is air-gapped truly secure against all attacks?',
+              a: 'Mostly, but insider threats remain. Air-gapped is secure against remote attacks, but physical access or insider access can compromise it.',
+            },
+            {
+              q: 'How expensive is air-gapped deployment?',
+              a: 'Hardware costs $50k–500k (not much more than regular on-prem). Operational costs (security, auditing, training) are 5–10× higher due to manual processes.',
+            },
+            {
+              q: 'Can we use standard tools (Ollama, vLLM) in air-gapped environments?',
+              a: 'Yes. Both tools work without internet. Deploy once, then no internet connectivity needed. Ensure all dependencies are installed offline.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — Business case for on-prem AI.',
+            '[Enterprise Compliance Local LLMs](/local-llms/enterprise-compliance-local-llms) — Regulatory requirements.',
+            '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) — Production deployment beyond single machine.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'NIST Cybersecurity Framework — nist.gov/cyberframework',
+            'DoD Data Management — defense.gov/News/Releases/',
+            'Air-Gap Security Guidelines — ietf.org (RFC documents on network isolation)',
+          ],
+        },
+      },
+    },
+  },
+
+  'enterprise-compliance-local-llms': {
+    en: {
+      theme: 'Enterprise',
+      title: 'Enterprise Compliance: GDPR, HIPAA, SOC2, and AI Regulations',
+      seoTitle: 'Enterprise Compliance Local LLMs',
+      intro: 'Compliance frameworks (GDPR, HIPAA, SOC2, AI Act) impose specific requirements on AI systems: data residency, audit trails, transparency, and model documentation. Local LLMs help meet these requirements by keeping data on-premises and providing full control. As of April 2026, regulatory compliance is the primary driver of enterprise local AI adoption.',
+      metaDescription: 'Enterprise AI compliance: GDPR, HIPAA, SOC2, EU AI Act requirements. Regulatory guide for local LLMs. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '13 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'AI compliance',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'GDPR: Data Residency and Rights', anchor: '#gdpr' },
+        { label: 'HIPAA: Protected Health Information', anchor: '#hipaa' },
+        { label: 'SOC2: Audit and Controls', anchor: '#soc2' },
+        { label: 'EU AI Act: Transparency Requirements', anchor: '#eu-ai-act' },
+        { label: 'Documentation and Audit Trails', anchor: '#documentation' },
+        { label: 'Common Compliance Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**GDPR:** Personal data must stay in EU, data subjects have rights (access, deletion, portability). Cloud APIs violate this.',
+            '**HIPAA:** Patient data requires encryption, access logs, audit trails, and incident reporting. Cloud APIs introduce third-party risk.',
+            '**SOC2:** Type II audit requires 6+ months of controls evidence (encryption, access control, incident response).',
+            '**EU AI Act (2024):** AI systems must be documented, transparent, and audited. Local LLMs provide full control.',
+            'Local LLMs satisfy ALL compliance requirements because data never leaves your infrastructure.',
+          ],
+        },
+        gdpr: {
+          title: 'GDPR: What Does Compliance Mean for AI?',
+          content: [
+            'GDPR (General Data Protection Regulation) applies to any processing of EU residents\' personal data, regardless of where your company is located.',
+            '**Article 44 (Data Transfers):** Personal data cannot be transferred outside the EU unless specific safeguards apply. Cloud APIs to US servers violate this.',
+            '**Article 12-22 (Data Subject Rights):** Individuals can request access, deletion ("right to be forgotten"), or portability of their data. You must respond within 30 days.',
+            '**Article 5 (Principles):** Data must be minimized, accurate, and processed lawfully. Purpose limitation: data cannot be used for new purpose without consent.',
+            '**Penalties:** Up to €20 million or 4% of annual global revenue, whichever is higher.',
+          ],
+        },
+        hipaa: {
+          title: 'HIPAA: Protecting Patient Privacy',
+          content: [
+            'HIPAA (Health Insurance Portability and Accountability Act) applies to healthcare providers, insurers, and anyone handling Protected Health Information (PHI).',
+            '**164.306 (Security Rule):** Requires administrative, physical, and technical safeguards.',
+            '**Physical:** Facilities must be secure (locked, surveillance).',
+            '**Technical:** Encryption, access controls, audit logs.',
+            '**Administrative:** Policies, training, incident response.',
+            'Sending patient data to cloud APIs is prohibited. HIPAA requires "Business Associate Agreements" with vendors, but cloud AI services often refuse to sign BAAs.',
+            '**Penalties:** Up to $1.5 million per violation category per year.',
+          ],
+        },
+        soc2: {
+          title: 'SOC2 Type II: Audit and Controls Evidence',
+          content: [
+            'SOC2 (Service Organization Control) is a compliance certification for organizations processing enterprise data. Type II requires 6+ months of audit evidence.',
+            '**Certification auditor reviews:**',
+            '- Access controls (who can access systems)',
+            '- Encryption (data at rest and in transit)',
+            '- Incident response (procedures for security incidents)',
+            '- Change management (how updates are approved)',
+            '- Backup and disaster recovery procedures',
+            'Local LLMs help achieve SOC2 because you control all systems. Cloud APIs delegate some controls to the vendor, complicating certification.',
+          ],
+        },
+        euAiAct: {
+          title: 'EU AI Act: Transparency and Documentation',
+          content: [
+            'The EU AI Act (2024) imposes new requirements on AI systems deployed in the EU, regardless of vendor location.',
+            '**Prohibited AI:** Facial recognition (in public), predictive policing, certain emotion detection.',
+            '**High-risk AI:** Requires risk assessments, documentation, human oversight.',
+            '**Documentation required:**',
+            '- Training data sources and size',
+            '- Model performance on different populations',
+            '- Limitations and error rates',
+            '- Intended use and prohibited uses',
+            'Local LLMs let you document everything (you control the training). Cloud APIs make documentation difficult (vendor controls training).',
+          ],
+        },
+        documentation: {
+          title: 'What Documentation and Audit Trails Are Required?',
+          content: [
+            'Compliance requires comprehensive documentation and logging:',
+          ],
+          items: [
+            '**Data inventory:** What personal/sensitive data is processed, where, by whom.',
+            '**Data flows:** How data moves through systems.',
+            '**Access logs:** Who accessed what data, when, why.',
+            '**Change logs:** When models, data, or policies changed.',
+            '**Incident reports:** Security incidents, breaches, unauthorized access.',
+            '**Data retention policy:** How long data is kept, when it is deleted.',
+            '**Third-party risk:** Vendors and contractors handling data.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Enterprise Compliance Mistakes',
+          items: [
+            '**Assuming cloud vendors are compliant for you.** Even if vendor has SOC2, you are still responsible for GDPR and HIPAA compliance. Cloud does not absolve liability.',
+            '**Not documenting AI training data.** EU AI Act requires documentation. If you cannot document training, you violate the law.',
+            '**Poor access controls.** "Anyone with password" is not secure. Require multi-factor authentication, role-based access.',
+            '**No incident response plan.** When (not if) a breach happens, you must respond within days. Have a plan in advance.',
+            '**Ignoring audit trails.** Logs must be kept, protected, and reviewed. Without logs, you cannot prove compliance.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — Business case.',
+            '[On-Prem Air-Gapped Local LLM](/local-llms/on-prem-air-gapped-local-llm) — Maximum security for classified data.',
+            '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) — Production deployment with compliance controls.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'GDPR Official Text — gdpr-info.eu',
+            'HIPAA Final Rule — hhs.gov/hipaa',
+            'SOC2 Trust Services — aicpa.org/soc2',
+            'EU AI Act — ec.europa.eu/digital-single-market/en/news/proposal-regulation',
+          ],
+        },
+      },
+    },
+  },
+
+  'scaling-local-llms-enterprise': {
+    en: {
+      theme: 'Enterprise',
+      title: 'Scaling Local LLMs for Enterprise: Multi-User, Multi-GPU Production Deployment',
+      seoTitle: 'Enterprise Scale Local LLMs',
+      intro: 'Scaling from single-machine to production means: multi-user load balancing, redundancy, monitoring, and disaster recovery. As of April 2026, enterprise deployments use Kubernetes to orchestrate 5–50 GPUs across inference pods, serving 50–500 concurrent users, with 99.9% uptime requirements.',
+      metaDescription: 'Scale local LLMs for enterprise: Kubernetes, load balancing, redundancy, monitoring. Production deployment. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '12 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'enterprise scaling',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Architecture: From Single to Distributed', anchor: '#architecture' },
+        { label: 'Load Balancing and Routing', anchor: '#load-balancing' },
+        { label: 'Redundancy and Failover', anchor: '#redundancy' },
+        { label: 'Monitoring and Observability', anchor: '#monitoring' },
+        { label: 'Cost Optimization at Scale', anchor: '#cost' },
+        { label: 'Common Scaling Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Single machine:** 1 GPU, 10–50 concurrent users, simple setup.',
+            '**Multi-GPU:** 2–8 GPUs, 50–200 users, Kubernetes orchestration.',
+            '**Enterprise:** 5–50 GPUs, 500+ users, distributed, highly available.',
+            '**Load balancing:** Round-robin distributes requests across GPU pods.',
+            '**Monitoring:** Track latency, queue depth, GPU utilization, error rates.',
+            'As of April 2026, Kubernetes is standard for enterprise LLM deployment.',
+          ],
+        },
+        architecture: {
+          title: 'Architecture: Single Machine → Distributed System',
+          content: [
+            'Progression from single machine to production:',
+          ],
+          rows: [
+            { 'Stage': 'Prototype', 'GPUs': '1', 'Users': '1–10', 'Uptime': 'Not required', 'Setup': 'Ollama on laptop' },
+            { 'Stage': 'Small production', 'GPUs': '2–4', 'Users': '10–50', 'Uptime': '95%', 'Setup': 'Docker, basic monitoring' },
+            { 'Stage': 'Medium enterprise', 'GPUs': '5–16', 'Users': '50–200', 'Uptime': '99%', 'Setup': 'Kubernetes, load balancer' },
+            { 'Stage': 'Large enterprise', 'GPUs': '20–100', 'Users': '200–1000', 'Uptime': '99.9%', 'Setup': 'Kubernetes multi-zone, auto-scaling' },
+          ],
+          columns: ['Deployment Stage', 'Number of GPUs', 'Concurrent Users', 'SLA Uptime', 'Infrastructure Setup'],
+        },
+        loadBalancing: {
+          title: 'Load Balancing: Distributing Requests',
+          content: [
+            'Load balancer routes requests to least-busy inference pod.',
+            '**Round-robin:** Distribute equally across pods (simplest).',
+            '**Least-loaded:** Send to pod with shortest queue (better latency).',
+            '**Sticky sessions:** Same user always uses same pod (for context, but risky if pod fails).',
+          ],
+          codeBlock: '# Kubernetes Service with load balancing\napiVersion: v1\nkind: Service\nmetadata:\n  name: llm-inference\nspec:\n  selector:\n    app: vllm-inference\n  ports:\n  - port: 8000\n    targetPort: 8000\n  type: LoadBalancer\n  sessionAffinity: None  # Round-robin across pods',
+          codeLanguage: 'yaml',
+        },
+        redundancy: {
+          title: 'Redundancy and Failover',
+          content: [
+            'High availability requires redundant components:',
+            '**Pod replicas:** Multiple inference pods. If one dies, others handle requests.',
+            '**Health checks:** Kubernetes automatically removes unhealthy pods.',
+            '**Storage redundancy:** Model files replicated across nodes.',
+            '**DNS failover:** If entire data center fails, route to backup facility.',
+          ],
+        },
+        monitoring: {
+          title: 'Monitoring: What to Track',
+          content: [
+            'Enterprise deployments must monitor:',
+          ],
+          items: [
+            '**Latency:** Per-request time (p50, p95, p99 percentiles).',
+            '**Queue depth:** How many requests waiting. >10 = overloaded.',
+            '**GPU utilization:** Should be 70–90%. <50% = oversized. >95% = undersized.',
+            '**Error rate:** % of failed requests. Should be <0.1%.',
+            '**Throughput:** Tokens/sec across all pods.',
+            '**Uptime:** % of time service is available (target 99.9%).',
+            '**Cost per query:** $/request (amortized hardware).',
+          ],
+        },
+        cost: {
+          title: 'Cost Optimization at Scale',
+          content: [
+            'At scale, focus on:',
+          ],
+          items: [
+            '**GPU utilization:** Higher is cheaper per request. Target 80–90%.',
+            '**Model quantization:** Q4 vs FP16 uses 4× less VRAM, same speed. Reduces GPU count needed.',
+            '**Batch size:** Larger batches = lower cost per request (but higher latency).',
+            '**Auto-scaling:** Scale down at night, scale up during day (saves 30–50% cloud costs).',
+            '**Multi-tenancy:** Run 2–3 models per GPU (if VRAM allows). Higher utilization.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Enterprise Scaling Mistakes',
+          items: [
+            '**Ignoring latency requirements.** Agree on p99 latency SLA before deploying. 2-second latency may seem OK until users complain.',
+            '**Over-provisioning for peak.** If peak is 100 users for 2 hours/day, don\'t buy hardware for 100 concurrent users all day. Use auto-scaling.',
+            '**Poor failure isolation.** If one pod crashing takes down load balancer, architecture is wrong. Test failure scenarios.',
+            '**Not monitoring right metrics.** Monitoring GPU utilization but not latency is backwards. Latency impacts users.',
+            '**Assuming open-source tools scale to enterprise.** Ollama works great for 1 user. For 500 concurrent users, need enterprise monitoring and orchestration.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — Single-machine multi-GPU setup.',
+            '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) — Hardware and infrastructure costs.',
+            '[Corporate RAG Local LLMs](/local-llms/corporate-rag-local-llms) — Document Q&A at scale.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Kubernetes Documentation — kubernetes.io/docs',
+            'vLLM Deployment Guide — docs.vllm.ai/en/serving/distributed_serving.html',
+            'Prometheus Monitoring — prometheus.io',
+          ],
+        },
+      },
+    },
+  },
+
+  'corporate-rag-local-llms': {
+    en: {
+      theme: 'Enterprise',
+      title: 'Corporate RAG With Local LLMs: Document Q&A for Organizations',
+      seoTitle: 'Corporate RAG Local LLMs',
+      intro: 'RAG (Retrieval-Augmented Generation) applied to corporate documents: policies, contracts, internal wikis, research papers. Local RAG keeps proprietary documents on-premises, eliminates API costs, and provides full audit trails. As of April 2026, corporate RAG is the #1 enterprise use case for local LLMs.',
+      metaDescription: 'Corporate RAG: document Q&A, internal knowledge bases, audit trails. Enterprise knowledge system. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '12 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'corporate knowledge base',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Corporate RAG Use Cases', anchor: '#use-cases' },
+        { label: 'Document Ingestion at Scale', anchor: '#ingestion' },
+        { label: 'Multi-User RAG Architecture', anchor: '#architecture' },
+        { label: 'Retrieval Quality and Ranking', anchor: '#retrieval-quality' },
+        { label: 'Governance and Audit', anchor: '#governance' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Corporate RAG = internal knowledge base.** Upload all corporate documents, let employees ask questions.',
+            '**Use cases:** Policy lookup, contract Q&A, research discovery, onboarding, compliance training.',
+            '**Scale:** 10k–100k documents, 100–500 concurrent users, <2 sec latency.',
+            '**Local advantage:** Proprietary documents never leave your network. Full audit trail of who accessed what.',
+            'As of April 2026, corporate RAG saves companies $500k–5M annually in employee productivity.',
+          ],
+        },
+        useCases: {
+          title: 'What Documents Can Corporate RAG Handle?',
+          rows: [
+            { 'Document Type': 'Employee handbook', 'Use': 'Policy lookup ("How much PTO do I have?")', 'Users': 'All employees' },
+            { 'Document Type': 'Contracts', 'Use': 'Clause search ("What\'s the termination clause?")', 'Users': 'Legal, procurement' },
+            { 'Document Type': 'Technical docs', 'Use': 'API reference, code examples', 'Users': 'Engineers' },
+            { 'Document Type': 'Research papers', 'Use': 'Knowledge discovery ("Papers on quantum ML?")', 'Users': 'R&D teams' },
+            { 'Document Type': 'Compliance docs', 'Use': 'Regulatory lookup ("GDPR requirements for data retention?")', 'Users': 'Compliance, legal' },
+            { 'Document Type': 'Customer docs', 'Use': 'Product documentation, FAQ', 'Users': 'Support, sales' },
+          ],
+          columns: ['Document Type', 'RAG Use', 'Typical Users'],
+        },
+        ingestion: {
+          title: 'How Do You Ingest Documents at Scale?',
+          content: [
+            'Ingestion pipeline converts documents to embeddings and stores in vector DB.',
+          ],
+          numberedItems: [
+            '**Extract documents:** From file servers, SharePoint, Jira, Confluence, etc.',
+            '**Parse:** Convert PDFs, Word docs, HTML to text. Handle tables, images.',
+            '**Chunk:** Split into 500–1000 token chunks with 20% overlap.',
+            '**Embed:** Convert chunks to vectors using local embedding model (nomic-embed-text).',
+            '**Index:** Store vectors in Qdrant, Milvus, or Weaviate with metadata (source, date, author).',
+            '**Refresh:** Weekly or monthly re-ingest to capture updates.',
+          ],
+        },
+        architecture: {
+          title: 'Multi-User Corporate RAG Architecture',
+          content: [
+            'Typical stack:',
+            '- **Frontend:** Web interface or Slack bot.',
+            '- **API:** REST endpoint for RAG queries.',
+            '- **LLM:** Local Llama 13B (quality) or 7B (speed).',
+            '- **Embeddings:** Local nomic-embed-text (or cloud for speed).',
+            '- **Vector DB:** Qdrant (distributed) for 10k+ documents.',
+            '- **Document storage:** Encrypted file server for PDFs and sources.',
+            '- **Access control:** LDAP/AD integration for user permissions.',
+          ],
+        },
+        retrievalQuality: {
+          title: 'How Do You Ensure Retrieval Quality?',
+          content: [
+            'Poor retrieval = poor answers. Quality depends on:',
+          ],
+          items: [
+            '**Chunking strategy:** Semantic chunks (by topic) outperform fixed-size chunks.',
+            '**Embedding model:** Use domain-specific embeddings if available. Generic embeddings may miss domain terminology.',
+            '**Retrieval parameters:** k=5–10 (how many chunks to retrieve). Too low = missing context. Too high = noise.',
+            '**Reranking:** Use cross-encoder to re-rank chunks by relevance (small quality boost).',
+            '**User feedback:** "Feedback" button on answers. Use to tune retrieval parameters.',
+          ],
+        },
+        governance: {
+          title: 'Governance: Audit Trails and Access Control',
+          content: [
+            'Corporate RAG must track access for compliance:',
+          ],
+          items: [
+            '**Access logs:** Who queried what documents, when, from where.',
+            '**Retention:** Keep logs for 3–7 years (regulatory requirement).',
+            '**Access control:** Restrict documents by role (e.g., only legal sees contracts).',
+            '**Audit:** Quarterly review of access logs for unusual activity.',
+            '**Data classification:** Mark documents as public, internal, confidential, restricted.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Corporate RAG Mistakes',
+          items: [
+            '**Ingesting without cleaning.** Old documents, duplicates, test files = retrieval noise. Clean before ingesting.',
+            '**Not chunking intelligently.** Fixed-size chunks split topics mid-sentence. Use semantic chunking.',
+            '**No access control.** If all documents are visible to all employees, confidential info leaks.',
+            '**Ignoring retrieval quality.** Test with real employees before wide rollout. 50% of issues are retrieval, not generation.',
+            '**Not re-ingesting updates.** Document database becomes stale. Schedule weekly/monthly re-ingest.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local RAG 2026](/local-llms/local-rag-2026) — Complete RAG implementation guide.',
+            '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) — Multi-user infrastructure.',
+            '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — Business case.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'LlamaIndex Documentation — docs.llamaindex.ai',
+            'Qdrant Vector Database — qdrant.tech',
+            'Retrieval Evaluation — arxiv.org (search "RAG evaluation metrics")',
           ],
         },
       },
