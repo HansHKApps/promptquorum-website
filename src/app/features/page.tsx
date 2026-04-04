@@ -4,7 +4,7 @@ import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
   title: '9 Prompt Frameworks, Multi-Model Dispatch & Consensus Analysis | PromptQuorum',
-  description: 'PromptQuorum features: 9 structured prompt frameworks (CO-STAR, CRAFT, RISEN), simultaneous dispatch to 25+ AI providers, 13-type Quorum consensus analysis, hallucination detection, and full offline support with local LLMs.',
+  description: 'As of April 2026: PromptQuorum features 9 frameworks, dispatch to 25+ AI providers, 13 consensus analysis types, hallucination detection, and offline local LLM support.',
   openGraph: {
     description: "PromptQuorum gives you 9 structured frameworks to write better prompts, dispatches to 25+ AI models in parallel, then runs 13 Quorum analysis types to find the best answer. No tab-switching needed.",
   },
@@ -39,6 +39,8 @@ export default async function FeaturesPage({ searchParams }: PageProps) {
               'name': 'PromptQuorum Features — Prompt Engineering, Multi-Model Dispatch, Quorum Analysis',
               'url': 'https://www.promptquorum.com/features',
               'description': 'Explore PromptQuorum features: 9 prompt frameworks, AI optimization, dispatch to 25+ AI services, multi-model consensus analysis, hallucination detection, local LLM support, and full privacy.',
+              'datePublished': '2026-04-05',
+              'dateModified': '2026-04-05',
               'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
               'about': {
                 '@type': 'SoftwareApplication',
