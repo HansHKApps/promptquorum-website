@@ -1440,7 +1440,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             '2019–2020: GPT-2 and early transformers — prompts were inputs, not a discipline',
-            '2020: GPT-3 and Brown et al. introduced few-shot prompting as a paradigm ([Liu et al. 'Pre-train, Prompt, and Predict'](https://arxiv.org/abs/2107.13586)) shift',
+            '2020: GPT-3 and Brown et al. introduced few-shot prompting as a paradigm (Liu et al. Pre-train, Prompt, and Predict, arXiv:2107.13586) shift',
             '2022: Chain-of-Thought reasoning prompts turned prompting into a structured skill',
             'Late 2022: ChatGPT brought prompt engineering into mainstream awareness and job postings',
             '2023: GPT-4, multimodal prompting, and frameworks formalised best practices',
@@ -1451,7 +1451,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         pre2020: {
           title: 'Before Prompt Engineering Had a Name (Pre-2020)',
           content: [
-            'Before the term "prompt engineering" existed, researchers were already manipulating model inputs to elicit better outputs — they just did not call it that. Early transformer models like GPT-2 (2019, OpenAI) and BERT (2018, Google) and the foundational [Vaswani et al. 'Attention Is All You Need'](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017) were used through carefully chosen input text, but the practice was treated as part of data preprocessing, not a skill in its own right.',
+            'Before the term "prompt engineering" existed, researchers were already manipulating model inputs to elicit better outputs — they just did not call it that. Early transformer models like GPT-2 (2019, OpenAI) and BERT (2018, Google) and the foundational Vaswani et al. Attention Is All You Need (arXiv:1706.03762, 2017) were used through carefully chosen input text, but the practice was treated as part of data preprocessing, not a skill in its own right.',
             'GPT-2, released in February 2019, was a 1.5-billion-parameter model that could complete text in surprisingly coherent ways. Researchers and early practitioners noticed that the phrasing of an input dramatically changed the quality of the completion — but there was no framework, no terminology, and no community built around this observation yet. Prompts were inputs, not engineering artifacts.',
           ],
         },
