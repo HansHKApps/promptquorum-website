@@ -11399,4 +11399,705 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'local-llms-vs-chatgpt-plus': {
+    en: {
+      theme: 'Cost & Comparisons',
+      title: 'Local LLMs vs ChatGPT Plus: Full Cost Comparison',
+      seoTitle: 'Local LLMs vs ChatGPT Plus: Cost Analysis, Breakeven Point, ROI 2026',
+      intro: '**ChatGPT Plus costs $20/month for unlimited API-based access, but costs $0/month in hardware if you run a local LLM after your initial GPU investment.** As of April 2026, a local Llama 3.1 setup on an RTX 4060 (12GB VRAM, $250) breaks even with ChatGPT Plus in ~1 year if you use the API 5+ hours/week. For heavy users (10+ hours/week), local is 60–80% cheaper over 3 years.',
+      metaDescription: 'ChatGPT Plus vs Local LLMs: cost analysis, breakeven calculator, ROI timeline. GPT-4o vs Llama 3.1. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '7 min',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'ChatGPT Plus',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'ChatGPT Plus Pricing Model', anchor: '#chatgpt-pricing' },
+        { label: 'Local LLM Upfront Costs', anchor: '#local-upfront' },
+        { label: 'When Does Local Break Even?', anchor: '#breakeven' },
+        { label: '3-Year Total Cost Comparison', anchor: '#three-year' },
+        { label: 'Quality Parity: GPT-4o vs Llama 3.1', anchor: '#quality' },
+        { label: 'Frequently Asked Questions', anchor: '#faq' },
+      ],
+      sections: {
+        'tldr': {
+          isTldr: true,
+          items: [
+            'ChatGPT Plus: $20/month = $240/year, unlimited queries via web + API',
+            'Local Llama 3.1 on RTX 4060: $250 GPU + $30/year electricity = $280 total year 1, then $30/year forever',
+            'Breakeven point: 12–18 months at 5–10 hours weekly use',
+            'Over 3 years: ChatGPT Plus costs $720; local costs $340 total (GPU + power)',
+            'Quality: GPT-4o marginally better for complex reasoning; Llama 3.1 adequate for 80% of use cases',
+            'Hidden ChatGPT costs: rate limits (20 msg/3 hours on free tier); local has 0 rate limits',
+            'Local hidden costs: 24/7 idle power draw (~60W = $7/month), GPU replacement every 5–7 years',
+            'Best for ChatGPT Plus: Light users (≤2 hrs/week), non-technical users, no privacy concerns',
+          ],
+        },
+        'chatgpt-pricing': {
+          title: 'What Is the ChatGPT Plus Pricing Model?',
+          content: [
+            'ChatGPT Plus costs $20 USD per month (regional variants: €20 EU, £17 UK) and includes unlimited access to GPT-4o, GPT-4 Turbo, and retrieval-augmented generation (RAG) over the web interface. As of April 2026, there is no per-token billing; all conversations and file uploads (100MB limit) are included.',
+            'OpenAI separately offers the ChatGPT API at $0.015 per 1K input tokens and $0.06 per 1K output tokens for GPT-4o. A 500-word query costs ~$0.08, so a ChatGPT Plus subscriber using the API would pay $120–200/month (1,500–2,500 queries/month) to break even, making the subscription worthwhile only for web-UI users or very light API usage.',
+          ],
+        },
+        'local-upfront': {
+          title: 'What Are the Upfront Costs for a Local Setup?',
+          content: [
+            'A local Llama 3.1 8B setup requires: GPU ($150–800), host machine ($0 if using existing laptop/desktop), inference engine ($0, Ollama is free), and local interface ($0, OpenWebUI is free).',
+            'Recommended configuration (total: $250–400): RTX 4060 Super ($250) or RTX 4070 ($350), existing PC/Mac with 8GB+ RAM. Llama 3.1 70B (better quality) requires RTX 4090 ($1,600) or two RTX 4070s ($700). As of April 2026, used GPU market prices are 20–30% lower than new.',
+          ],
+        },
+        'breakeven': {
+          title: 'When Does a Local Setup Break Even with ChatGPT Plus?',
+          content: [
+            'Breakeven depends on weekly usage hours and model quality requirements. At 5 hours/week (260 hrs/year), ChatGPT Plus costs $20 × 12 = $240/year. An RTX 4060 ($250) + 1 year electricity ($30) = $280 year 1. Breakeven: year 1 (slightly more expensive in year 1, but year 2 costs only $30 vs $240).',
+            'At 10 hours/week: ChatGPT Plus remains $240/year; local remains $280 year 1 / $30 year 2+. Breakeven month 14.',
+            'At 2 hours/week: ChatGPT Plus is cheaper for first 2 years ($480 total vs $250 GPU + $60 power = $310 total).',
+          ],
+        },
+        'three-year': {
+          title: 'What Is the 3-Year Total Cost of Ownership?',
+          content: [
+            'ChatGPT Plus over 3 years: $20 × 36 months = $720, plus API costs if applicable.',
+            'Local Llama 3.1 over 3 years: RTX 4060 ($250, 5-year lifespan) + electricity 36 months ($90) = $340 total. If buying used GPU, ~$180 + $90 power = $270.',
+            'Local Llama 3.1 70B (better quality): RTX 4090 ($1,600 new, $1,000 used) + electricity ($180 over 3 years) = $1,600–1,780 total. Breakeven: 6–7 years vs ChatGPT Plus.',
+          ],
+        },
+        'quality': {
+          title: 'How Do GPT-4o and Llama 3.1 Compare in Quality?',
+          content: [
+            'GPT-4o (OpenAI, March 2024): Best-in-class reasoning, math, coding, creative writing. ~86% accuracy on MATH benchmark. Real-time multimodal (image, audio, video input).',
+            'Llama 3.1 70B (Meta, April 2024): 94% of GPT-4o quality on most benchmarks. Excellent coding, reasoning, long-context (128K tokens). No multimodal.',
+            'Llama 3.1 8B: 85% of GPT-4o quality. Adequate for summarization, brainstorming, general Q&A. Struggles with complex math, creative writing.',
+            'As of April 2026: GPT-4o remains marginally better for novel-problem reasoning; Llama 3.1 70B is 95%+ equivalent. For 80% of business use cases (email drafting, code review, summarization), Llama 3.1 8B is sufficient.',
+          ],
+        },
+        'faqSection': {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What if I need GPT-4o level quality? Is local worth it?',
+              a: 'No—Llama 3.1 8B is not competitive with GPT-4o. You would need Llama 3.1 70B ($1,000+ used GPU) or Claude 3.5 local equivalent (not yet available). For novel reasoning, stick with ChatGPT Plus or Claude Pro.',
+            },
+            {
+              q: 'Can I run ChatGPT Plus offline or without a subscription after paying?',
+              a: 'No. ChatGPT Plus is subscription-only and requires internet. You get access to the web UI and API, but never own the model. Local LLMs give you ownership and offline capability.',
+            },
+            {
+              q: 'Does ChatGPT Plus include API usage or just the web UI?',
+              a: 'Web UI only (as of April 2026). API access is separate billing at $0.015–0.06 per 1K tokens. The $20/month subscription does not cover API queries.',
+            },
+            {
+              q: 'What is the cost of electricity for running a local LLM 24/7?',
+              a: 'RTX 4060 at full load: ~140W power draw. US average: $0.14/kWh = $119/year (24/7). Most users idle 20 hours/day, reducing cost to ~$24/year. Europe: 2–3x higher (~$70/year).',
+            },
+            {
+              q: 'Can I use ChatGPT Plus on multiple devices?',
+              a: 'Yes, one subscription works on unlimited devices (web + mobile app). Local LLMs require separate setup per device (or remote access via VPN/LAN).',
+            },
+            {
+              q: 'Does ChatGPT Plus include priority support or faster response times?',
+              a: 'Slightly faster response times during peak hours. No priority support. Local LLMs have instant latency (~1–3 sec/token depending on GPU).',
+            },
+          ],
+        },
+        'commonMistakes': {
+          title: 'Common Mistakes When Choosing Between Local and ChatGPT Plus',
+          items: [
+            'Assuming ChatGPT Plus is cheaper because $20/month sounds low. Over 3 years = $720; a local GPU is often cheaper total cost of ownership.',
+            'Forgetting electricity costs. A 24/7 RTX 4090 adds $100+/year; idle average adds ~$20/year.',
+            'Expecting Llama 3.1 8B to match GPT-4o. It\'s 85% as capable; use Llama 3.1 70B for parity.',
+            'Buying the wrong GPU. RTX 4060 12GB is often overkill for Llama 3.1 8B; RTX 3060 12GB ($150 used) also works.',
+            'Not accounting for model updates. GPT-4o is regularly updated; you must re-fine-tune local models quarterly.',
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Local LLMs vs Claude Pro](/local-llms/local-llms-vs-claude-pro)',
+            '[Local LLM vs Cloud GPU: Cost Comparison](/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[Is Buying a GPU Worth It vs Paying for AI Subscriptions?](/local-llms/gpu-vs-ai-subscription-roi)',
+            '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'OpenAI ChatGPT Plus pricing: openai.com/pricing (April 2026)',
+            'Meta Llama 3.1 benchmarks: huggingface.co/meta-llama/Llama-3.1-70B',
+            'GPU power consumption specs: NVIDIA RTX 4060 / RTX 4090 TDP (Technical Specification, 2024)',
+          ],
+        },
+      },
+    },
+  },
+
+  'local-llms-vs-claude-pro': {
+    en: {
+      theme: 'Cost & Comparisons',
+      title: 'Local LLMs vs Claude Pro: Privacy, Cost, and Quality',
+      seoTitle: 'Local LLMs vs Claude Pro: Cost Analysis, Privacy, Model Quality Comparison',
+      intro: '**Claude Pro costs $20/month (same as ChatGPT Plus) but offers stronger privacy (Anthropic does not train on chat history) and superior long-context reasoning (200K token window).** As of April 2026, a local Llama 3.1 70B setup ($1,000 used GPU) matches Claude 3.5 Sonnet quality on 80% of tasks and costs 20–30% less over 3 years. Local LLMs win on privacy, cost, and long document handling.',
+      metaDescription: 'Claude Pro vs Local LLMs: cost, privacy, quality comparison. Anthropic vs open source. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '8 min',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Claude Pro',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'Claude Pro vs Local LLM Pricing', anchor: '#pricing' },
+        { label: 'Privacy: Anthropic vs Self-Hosted', anchor: '#privacy' },
+        { label: 'Model Quality: Claude 3.5 Sonnet vs Llama 3.1 70B', anchor: '#quality' },
+        { label: 'Long-Context Performance (200K Tokens)', anchor: '#context' },
+        { label: 'Total Cost Over 5 Years', anchor: '#five-year' },
+        { label: 'Frequently Asked Questions', anchor: '#faq' },
+      ],
+      sections: {
+        'tldr': {
+          isTldr: true,
+          items: [
+            'Claude Pro: $20/month = $240/year; includes 200K token context window, image understanding, file uploads',
+            'Local Llama 3.1 70B: $1,000 used GPU + $60/year electricity = $1,060 year 1, $60/year after',
+            'Privacy: Claude Pro — Anthropic doesn\'t train on chat history; still proprietary. Local LLMs — 100% private, your data never leaves your machine',
+            'Quality parity: Llama 3.1 70B ≈ Claude 3.5 Sonnet on benchmarks; Claude slightly better at nuance/edge cases',
+            'Context window: Claude Pro 200K tokens vs Llama 3.1 70B 128K tokens (still excellent for documents)',
+            '5-year TCO: Claude Pro $1,200 vs Local ($1,000 GPU + $300 power) = $1,300. Nearly identical cost.',
+            'Local advantage: Unlimited queries, zero rate limits, offline capability, model ownership',
+            'Claude Pro advantage: Better multimodal (images), real-time updates, no infrastructure overhead',
+          ],
+        },
+        'pricing': {
+          title: 'What Is the Price Difference Between Claude Pro and Local LLMs?',
+          content: [
+            'Claude Pro: $20 USD/month worldwide (€20 EU equivalent). As of April 2026, includes GPT-4 Turbo-competitive model (Claude 3.5 Sonnet), 200K context window, and image/PDF understanding. No per-token charges.',
+            'Local Llama 3.1 70B: RTX 4090 ($1,600 new, $1,000 used) or dual RTX 4070s ($700 used) + electricity ($60/year) = $1,000–1,660 upfront, $60/year ongoing. Open-source, zero licensing fees.',
+            'Year 1 cost: Claude Pro $240 vs Local $1,060–1,700. Year 5 cost: Claude Pro $1,200 vs Local $1,300–1,900. Breakeven at 4–5 years.',
+          ],
+        },
+        'privacy': {
+          title: 'How Do Privacy Models Differ Between Claude Pro and Local LLMs?',
+          content: [
+            'Claude Pro (Anthropic): Your conversations are not used to train future Claude models (Anthropic explicit privacy policy as of 2026). However, queries are logged on Anthropic servers for safety monitoring and debugging. Anthropic is US-based, subject to US law.',
+            'Local LLMs: All data remains on your machine. Zero cloud logging, zero third-party visibility. Suitable for healthcare (HIPAA), finance (PCI-DSS), and legal (attorney-client privilege) workflows. As of April 2026, Llama 3.1 is fully open-source (no Anthropic data collection).',
+          ],
+        },
+        'quality': {
+          title: 'How Do Claude 3.5 Sonnet and Llama 3.1 70B Compare in Quality?',
+          content: [
+            'Claude 3.5 Sonnet (Anthropic, June 2024): Best-in-class reasoning, nuance, instruction-following. 97% MMLU (language understanding) score. Excels at complex analysis, copywriting, coding reviews.',
+            'Llama 3.1 70B (Meta, April 2024): 96% MMLU score. Excellent reasoning, near-parity with Claude on benchmarks. Stronger coding performance (+2% on HumanEval). Slightly weaker on creative/narrative tasks.',
+            'On 80% of real-world tasks (summarization, Q&A, data extraction, coding), Llama 3.1 70B and Claude 3.5 Sonnet produce equivalent output. On edge cases (subtle narrative analysis, domain-specific creative writing), Claude is marginally better.',
+          ],
+        },
+        'context': {
+          title: 'How Much Can Each Handle Long Documents?',
+          content: [
+            'Claude Pro 200K tokens: ~150,000 words (equivalent to 3 books). Can process an entire codebase, legal contracts, or research papers in one query.',
+            'Llama 3.1 70B 128K tokens: ~96,000 words. Still excellent for most documents; some very large codebases or 500+ page contracts exceed this limit.',
+            'As of April 2026: For document processing workflows (RAG, bulk summarization, contract review), Claude Pro\'s 200K window is a tangible advantage. Llama 3.1 128K is adequate for ~95% of business documents.',
+          ],
+        },
+        'five-year': {
+          title: 'What Is the 5-Year Total Cost of Ownership Comparison?',
+          content: [
+            'Claude Pro: $20 × 60 months = $1,200 total.',
+            'Local Llama 3.1 70B (new GPU): RTX 4090 $1,600 + electricity 5 years $300 = $1,900 total.',
+            'Local Llama 3.1 70B (used GPU): $1,000 + $300 electricity = $1,300 total.',
+            'Break-even point: ~50 months (4.2 years) when using a used GPU. New GPU becomes cost-competitive only after 6+ years.',
+          ],
+        },
+        'faqSection': {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'Can I use Claude Pro offline?',
+              a: 'No. Claude Pro requires active internet connection and Anthropic servers. Local Llama 3.1 works fully offline.',
+            },
+            {
+              q: 'Does Anthropic use my Claude Pro conversations for training?',
+              a: 'No (as of April 2026). Anthropic explicitly does not train on chat history. Conversations are logged for safety/debugging but not used for model improvement.',
+            },
+            {
+              q: 'Is Llama 3.1 70B actually free to use?',
+              a: 'Yes. Llama 3.1 is open-source under Meta\'s community license. Once you own the GPU, inference costs $0 (only electricity). Model updates are free.',
+            },
+            {
+              q: 'Can I fine-tune Claude Pro or local Llama differently?',
+              a: 'Claude Pro: No fine-tuning available as of April 2026. Local Llama 3.1: Full fine-tuning support (LoRA, full parameter tuning). Local wins for customization.',
+            },
+            {
+              q: 'What if my local GPU fails?',
+              a: 'You lose compute capability until it\'s replaced (~$1,000). Claude Pro degrades gracefully (rate limiting). Local requires redundancy planning (backup GPU, cloud failover).',
+            },
+            {
+              q: 'Can Llama 3.1 handle images like Claude Pro?',
+              a: 'Native multimodal: No (as of April 2026). You can integrate with open-source vision models (CLIP, LLaVA) as a workaround, but it\'s not as seamless as Claude.',
+            },
+          ],
+        },
+        'commonMistakes': {
+          title: 'Common Mistakes When Comparing Claude Pro and Local LLMs',
+          items: [
+            'Thinking Claude Pro is cheaper because the monthly cost is visible. Over 5+ years, local catches up or becomes cheaper.',
+            'Assuming Llama 3.1 70B requires a $1,600 GPU. Used RTX 4090 (~$1,000) or dual RTX 4070s ($500–600 total) also work.',
+            'Expecting Llama 3.1 to match Claude\'s image understanding. Native multimodal is not available; use CLIP adapter.',
+            'Forgetting Claude Pro has a 200K context advantage. For single-query document processing, Claude wins. For average Q&A, Llama 3.1 is fine.',
+            'Not accounting for infrastructure overhead. Running Llama 3.1 70B requires expertise (CUDA, PyTorch, Docker). Claude Pro is turnkey.',
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Local LLMs vs ChatGPT Plus: Cost Comparison](/local-llms/local-llms-vs-chatgpt-plus)',
+            '[Local LLM vs Cloud GPU: Cost Analysis](/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[Best 70B Models for Consumer Hardware](/local-llms/70b-models-consumer-hardware)',
+            '[Is Buying a GPU Worth It vs AI Subscriptions?](/local-llms/gpu-vs-ai-subscription-roi)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'Anthropic Claude Pro pricing and privacy policy: claude.ai (April 2026)',
+            'Meta Llama 3.1 70B specifications and benchmarks: huggingface.co/meta-llama (April 2024)',
+            'MMLU and coding benchmark comparisons: huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard',
+          ],
+        },
+      },
+    },
+  },
+
+  'local-llm-vs-cloud-gpu-cost': {
+    en: {
+      theme: 'Cost & Comparisons',
+      title: 'Local LLM vs Cloud GPU: What Is Cheaper?',
+      seoTitle: 'Local LLM vs Cloud GPU Cost: Paperspace, Lambda Labs, AWS Comparison 2026',
+      intro: '**A local RTX 4070 ($350–500 used) costs $0.02–0.05 per inference hour, while cloud GPUs (Paperspace, Lambda Labs, AWS) cost $0.50–2.50/hour.** As of April 2026, local is 10–50x cheaper per hour, breaking even in 2–6 months for any consistent use. Cloud GPUs win only for burst workloads (unpredictable demand, no upfront capital) or specialized hardware (H100 Tensor cores).',
+      metaDescription: 'Local GPU vs cloud compute: cost per hour, breakeven analysis. Lambda Labs, Paperspace, AWS. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '7 min',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Cloud GPU Computing',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'Hourly Cost Breakdown: Local vs Cloud', anchor: '#hourly' },
+        { label: 'When Does Local Break Even?', anchor: '#breakeven' },
+        { label: 'Cloud GPU Providers Compared (2026)', anchor: '#providers' },
+        { label: 'Total Cost of Ownership: 1-Year Scenario', anchor: '#one-year' },
+        { label: 'Frequently Asked Questions', anchor: '#faq' },
+      ],
+      sections: {
+        'tldr': {
+          isTldr: true,
+          items: [
+            'Local RTX 4070: $350–500 used + $0.02/hour idle power = $0.02–0.05/hour all-in cost',
+            'Cloud Lambda Labs RTX 4090: $2.50/hour + storage + bandwidth',
+            'Cloud Paperspace A100: $0.60/hour; decent for LLM fine-tuning',
+            'Cloud AWS g4dn.2xlarge (V100): $0.98/hour + compute markup (10–20% premium)',
+            'Breakeven: Local RTX 4070 vs Lambda Labs RTX 4090 = 140–280 compute hours = 4–7 months of weekly use',
+            'For unpredictable workloads: Cloud cheaper (no upfront cost). For consistent 5+ hours/week use: Local is 5–10x cheaper',
+            'Hidden cloud costs: Bandwidth egress ($0.02–0.10/GB), GPU reservation fees, data transfer to/from cloud ($0.05–0.15/GB)',
+            'Local hidden costs: Cooling (included in building), network latency (~100ms), GPU replacement every 5–7 years',
+          ],
+        },
+        'hourly': {
+          title: 'What Is the Hourly Cost: Local vs Cloud?',
+          content: [
+            'Local RTX 4070 (used $350): 250W TDP, US electricity $0.14/kWh = $0.035/hour compute cost + $0.008/hour depreciation (5-year lifespan) = $0.043/hour total.',
+            'Local RTX 4090 (used $1,000): 450W TDP = $0.063/hour compute + $0.023/hour depreciation = $0.086/hour.',
+            'Cloud Lambda Labs RTX 4090: $2.50/hour (no depreciation, but includes storage and support). 10–50x more expensive than local.',
+            'Cloud Paperspace A100 (80GB): $0.60/hour; reasonable for fine-tuning, still 10–15x more than local RTX 4070.',
+            'Cloud AWS g4dn.2xlarge V100: $0.98/hour list price, ~$1.20 on-demand with markup.',
+          ],
+        },
+        'breakeven': {
+          title: 'When Does a Local GPU Break Even with Cloud Compute?',
+          content: [
+            'Local RTX 4070 ($350) vs Cloud Lambda Labs RTX 4090 ($2.50/hr): Breakeven = $350 / ($2.50 − $0.04) = 143 compute hours = 29 weeks at 5 hrs/week.',
+            'Local RTX 4090 ($1,000) vs Cloud Lambda Labs ($2.50/hr): Breakeven = 417 compute hours = 80 weeks at 5 hrs/week.',
+            'Local RTX 4070 vs Cloud Paperspace A100 ($0.60/hr): Breakeven = $350 / ($0.60 − $0.04) = 625 hours = 150 weeks at 5 hrs/week (almost 3 years).',
+            'For burst users (5–10 hours/month): Cloud is cheaper. For consistent users (5+ hours/week): Local is cheaper.',
+          ],
+        },
+        'providers': {
+          title: 'How Do Cloud GPU Providers Compare?',
+          content: [
+            'Lambda Labs (April 2026): RTX 4090 $2.50/hr, RTX 6000 Ada $3.50/hr, H100 $4.50/hr. No hourly reservation; pay-as-you-go. Excellent for bursts.',
+            'Paperspace (April 2026): A100 40GB $0.51/hr, RTX A6000 $0.73/hr. Cheaper than Lambda Labs but older hardware. Good for training.',
+            'AWS (April 2026): g4dn.2xlarge V100 $0.98/hr on-demand, ~$0.40/hr reserved (1-year commitment). ec2 g4dn.xlarge cheaper ($0.526/hr) but single V100.',
+            'Google Colab Pro: $10/month unlimited (L4 GPU), $50/month with A100. Best value for light users.',
+            'RunPod (April 2026): RTX 4090 $0.44/hr, A100 $1.29/hr. Cheaper than Lambda Labs; smaller provider.',
+          ],
+        },
+        'one-year': {
+          title: 'What Is the 1-Year Cost of Ownership?',
+          content: [
+            'Local RTX 4070 at 20 hrs/week (1,040 hours/year): $350 GPU + (1,040 × $0.03) electricity = $381 total.',
+            'Cloud Lambda Labs RTX 4090 at 20 hrs/week: 1,040 × $2.50 = $2,600 total.',
+            'Cost ratio: Cloud is 6.8x more expensive than local for this workload.',
+            'Local RTX 4090 at 20 hrs/week: $1,000 + (1,040 × $0.06) = $1,062 total.',
+            'Cloud Paperspace A100 at 20 hrs/week: 1,040 × $0.60 = $624 total (cheaper than local RTX 4090 for 1 year, but becomes more expensive in year 2).',
+          ],
+        },
+        'faqSection': {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'Can I use cloud GPUs for 24/7 continuous inference?',
+              a: 'Yes, but costs escalate fast. 24/7 Lambda Labs RTX 4090: $2.50 × 8,760 = $21,900/year. Local GPU: $1,000 + $526/year power = $1,526 first year, then $526/year.',
+            },
+            {
+              q: 'What about egress bandwidth costs on cloud?',
+              a: 'AWS/Google charge $0.02–0.10/GB for data leaving the cloud. Running a local API that returns 100MB/day = $60–300/month egress. Local has zero egress costs.',
+            },
+            {
+              q: 'Does local require a dedicated server or can I use my gaming PC?',
+              a: 'Your gaming PC works fine, but it can\'t serve both gaming and LLM inference simultaneously. Many use underutilized servers or mini PCs instead.',
+            },
+            {
+              q: 'Are cloud GPU prices guaranteed or can they change?',
+              a: 'Prices fluctuate (AWS spot instances vary 30–50%). Lambda Labs pricing is stable. Local GPU prices depend on the used market.',
+            },
+            {
+              q: 'What if my local GPU fails mid-inference?',
+              a: 'Downtime until replacement. Cloud provides redundancy via multi-region deployments. Local requires backup GPU or failover to cloud.',
+            },
+            {
+              q: 'Can I use cloud GPUs for fine-tuning instead of just inference?',
+              a: 'Yes. Fine-tuning is more cost-effective on cloud (better cooling for training stability). Cloud fine-tuning then deploy on local for inference is a common pattern.',
+            },
+          ],
+        },
+        'commonMistakes': {
+          title: 'Common Mistakes When Comparing Local and Cloud GPU Costs',
+          items: [
+            'Forgetting depreciation. A local GPU depreciates ~20% per year; include this in total cost.',
+            'Ignoring bandwidth costs. Cloud APIs that output large embeddings/tensors incur egress charges (~$0.02/GB).',
+            'Comparing new GPU prices to cloud. A used RTX 4090 ($1,000) is 2x cheaper than a new one ($1,600), shifting breakeven significantly.',
+            'Underestimating infrastructure overhead. Running a local cluster (cooling, redundancy, monitoring) costs 10–20% more than a single GPU.',
+            'Assuming cloud is only for bursts. For unpredictable workloads (spiky traffic), cloud wins. For baseline load, local is cheaper.',
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Is Buying a GPU Worth It vs AI Subscriptions?](/local-llms/gpu-vs-ai-subscription-roi)',
+            '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
+            '[Local LLM vs ChatGPT Plus Cost Comparison](/local-llms/local-llms-vs-chatgpt-plus)',
+            '[Multi-GPU Local LLMs: Scaling Beyond Single GPU](/local-llms/multi-gpu-local-llms)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'Lambda Labs GPU pricing: lambdalabs.com/service/gpu-cloud (April 2026)',
+            'Paperspace GPU pricing: paperspace.com/pricing (April 2026)',
+            'AWS EC2 GPU instance pricing: aws.amazon.com/ec2/pricing/on-demand (April 2026)',
+          ],
+        },
+      },
+    },
+  },
+
+  'mac-vs-windows-vs-linux-local-llm': {
+    en: {
+      theme: 'Cost & Comparisons',
+      title: 'Mac vs Windows vs Linux for Local LLMs',
+      seoTitle: 'macOS vs Windows vs Linux for Local LLM: Cost, Performance, Compatibility 2026',
+      intro: '**macOS is best for casual users (Apple Silicon, free Ollama, no GPU needed for 8B models). Windows is best for GPU users (NVIDIA CUDA ecosystem dominates). Linux is best for servers and clusters (lower overhead, best cost-per-inference).** As of April 2026, the choice depends on hardware you already own: Mac = free (existing machine) vs Windows/Linux = GPU investment ($150–1,600). Inference speed is identical across OS when using the same GPU.',
+      metaDescription: 'macOS vs Windows vs Linux for local LLMs: compatibility, performance, cost. NVIDIA CUDA, Apple Silicon, ROCm. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '8 min',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Operating Systems',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'Hardware Cost by OS', anchor: '#hardware-cost' },
+        { label: 'Software Setup & Complexity', anchor: '#setup' },
+        { label: 'Inference Performance Comparison', anchor: '#performance' },
+        { label: 'Tool/Framework Support by OS', anchor: '#tools' },
+        { label: 'Total Cost of Ownership Analysis', anchor: '#tco' },
+        { label: 'Frequently Asked Questions', anchor: '#faq' },
+      ],
+      sections: {
+        'tldr': {
+          isTldr: true,
+          items: [
+            'macOS (Apple Silicon): Zero GPU cost, free Ollama, handles Llama 3.1 8B smoothly. Best for casual/non-technical users.',
+            'Windows (NVIDIA GPU): Industry standard for GPU acceleration. CUDA ecosystem mature. $150–1,600 GPU depending on model size.',
+            'Linux (NVIDIA or AMD GPU): Lowest overhead (10–20% less power than Windows), best for 24/7 servers. Same GPU cost as Windows.',
+            'Inference speed: All three OS produce identical output speed when given the same GPU. Software setup difficulty differs.',
+            'Setup complexity: macOS simplest (Ollama one-click); Windows intermediate (NVIDIA drivers required); Linux requires command-line familiarity.',
+            'Cost per inference: Linux < Windows = macOS (same for GPU-accelerated; macOS cheaper for CPU-only).',
+            'Ecosystem: NVIDIA CUDA available on Windows/Linux (not Mac native). AMD ROCm on Linux/Windows. Apple Metal on macOS only.',
+            'Best choice: Mac for laptop/casual use; Windows for desktop gaming + LLM; Linux for servers.',
+          ],
+        },
+        'hardware-cost': {
+          title: 'What Is the Hardware Cost by Operating System?',
+          content: [
+            'macOS (Apple Silicon M1–M4): Already have it (MacBook $1,200–2,500, Mac mini $600–800). No separate GPU needed for Llama 3.1 8B (Apple Neural Engine is built-in). Total additional cost: $0.',
+            'Windows (NVIDIA GPU required): Existing Windows PC ($500–2,000) + RTX 4070 ($350–500 used) to RTX 4090 ($1,000–1,600 used). Additional cost: $350–1,600.',
+            'Linux (AMD or NVIDIA GPU): Bare-metal server ($300–1,000) or reuse old machine + GPU ($150–1,600). Additional cost: $150–2,600.',
+            'Used market advantage: RTX 4070 used ($350) vs new ($550), 36% cheaper. RTX 4090 used ($1,000) vs new ($1,600), 37% cheaper.',
+          ],
+        },
+        'setup': {
+          title: 'What Is the Setup and Complexity?',
+          content: [
+            'macOS: Download Ollama (1 minute), run Ollama app, select Llama 3.1 8B model (5 minutes). Total: 6 minutes, zero terminal commands. Best for non-technical users.',
+            'Windows: Install NVIDIA drivers (5–10 minutes), download Ollama or LM Studio (5 minutes), select model (5 minutes). Total: 15–20 minutes, zero terminal commands if using GUI.',
+            'Linux (Ubuntu server): SSH access, install CUDA/cuDNN (20–40 minutes), install Ollama or vLLM (10 minutes), configure systemd service (10–20 minutes). Total: 40–70 minutes, requires terminal comfort.',
+            'Long-term complexity: macOS = lowest maintenance (OS updates automatic). Windows = moderate (GPU driver updates quarterly, occasional conflicts). Linux = moderate to high (system-level tuning, dependency hell possible).',
+          ],
+        },
+        'performance': {
+          title: 'How Do Inference Speeds Compare?',
+          content: [
+            'Same GPU, same OS: RTX 4090 produces identical tokens/second on Windows, Linux, or macOS. OS does not affect compute speed.',
+            'macOS (Apple Silicon M4): Llama 3.1 8B = 8–12 tokens/second (CPU-only, no GPU). Adequate for most tasks.',
+            'macOS (M4 Max): Llama 3.1 70B = too slow (CPU-bound). Recommended: stick to 8B–13B models.',
+            'Windows + RTX 4090: Llama 3.1 70B = 120–150 tokens/second. Llama 3.1 8B = 200–250 tokens/second.',
+            'Linux + RTX 4090: Llama 3.1 70B = 125–155 tokens/second (1–5% faster than Windows due to lower OS overhead).',
+            'AMD ROCm (Windows/Linux): RTX 4090-equivalent performance varies by workload, but AMD generally 10–20% slower for LLM inference (as of April 2026).',
+          ],
+        },
+        'tools': {
+          title: 'What Tools and Frameworks Are Supported by OS?',
+          content: [
+            'Ollama (inference engine): macOS ✓, Windows ✓, Linux ✓. Identical features across all three.',
+            'LM Studio (GUI): macOS ✓, Windows ✓. Linux only via Docker (no native GUI).',
+            'vLLM (API server): macOS (limited, Apple Metal only), Windows ✓ (CUDA), Linux ✓ (CUDA/ROCm). Best on Linux.',
+            'NVIDIA CUDA toolkit: Windows ✓, Linux ✓. macOS ✗ (not supported as of April 2026, only Apple Metal).',
+            'PyTorch (deep learning framework): macOS ✓ (Apple Metal backend, slower), Windows ✓ (CUDA), Linux ✓ (CUDA/ROCm). Fastest on Linux/Windows with NVIDIA.',
+            'Fine-tuning support: macOS (slow CPU-only or via cloud); Windows ✓ (CUDA accelerated); Linux ✓✓ (best support).',
+          ],
+        },
+        'tco': {
+          title: 'What Is the Total Cost of Ownership Over 3 Years?',
+          content: [
+            'macOS (M4 Max MacBook): Existing hardware $2,500 + electricity 3 years ($200) = $2,700 (amortized). Limited to 8B–13B models.',
+            'Windows (RTX 4070): Existing PC $1,200 + GPU $350 + electricity ($150) = $1,700 total. Runs 70B models.',
+            'Linux (RTX 4070): Existing server $400 + GPU $350 + electricity ($120) = $870 total (cheapest option for production).',
+            'Cost-per-token: macOS ≈ Linux ≈ Windows (same when normalized for model size and throughput).',
+          ],
+        },
+        'faqSection': {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'Can I run Llama 3.1 70B on macOS?',
+              a: 'Barely. M4 Max (with 12-core GPU) can run 70B quantized models (Q4) at ~3–5 tokens/second. Not practical. Stick to 8B–13B on Mac.',
+            },
+            {
+              q: 'Can I use AMD GPUs instead of NVIDIA?',
+              a: 'Windows: Limited (ROCm is immature). Linux: Yes, excellent support via ROCm. AMD performance is 10–20% slower than equivalent NVIDIA for LLMs.',
+            },
+            {
+              q: 'Is Linux harder to set up for beginners?',
+              a: 'Yes. macOS: Ollama.app works out of the box. Linux: Requires command-line (apt, pip, systemctl). If you\'re not comfortable terminal, start with Mac.',
+            },
+            {
+              q: 'Can I switch OS mid-project?',
+              a: 'Models and fine-tuning weights are portable (GGUF format works on all OS). Framework code (PyTorch scripts) may need minor updates due to path differences.',
+            },
+            {
+              q: 'Does macOS use less electricity than Linux?',
+              a: 'No. Both use identical electricity for the same GPU. macOS laptops use less because they use lower-power hardware by design, not because of OS efficiency.',
+            },
+            {
+              q: 'Which OS is best for fine-tuning models?',
+              a: 'Linux > Windows > macOS. Linux has best CUDA support and community tooling (DeepSpeed, vLLM). macOS is practical only for small datasets.',
+            },
+          ],
+        },
+        'commonMistakes': {
+          title: 'Common Mistakes When Choosing an OS for Local LLMs',
+          items: [
+            'Assuming macOS can\'t run big models. M4 Max can run 70B, but slowly. For serious work, macOS is limited to 8B–13B models.',
+            'Buying a Windows PC specifically for LLMs without considering Mac. If you have a Mac, use it; GPU cost dominates the decision.',
+            'Thinking Linux is only for servers. Linux is excellent for home servers/mini PCs and has the lowest cost of ownership.',
+            'Forgetting NVIDIA market dominance. CUDA is the standard; AMD and Apple Metal are smaller ecosystems with fewer tutorials/libraries.',
+            'Believing OS affects inference speed. macOS on Apple Silicon and Windows on RTX 4090 produce different speeds due to hardware, not OS.',
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Local LLM on Laptop: Best Models and Setup](/local-llms/local-llm-on-laptop)',
+            '[GPU vs CPU vs Apple Silicon for Local LLMs](/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+            '[Best Mini PCs for Local LLMs](/local-llms/best-mini-pcs-local-llm)',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'Ollama GitHub: ollama.ai/docs (April 2026)',
+            'LM Studio system requirements: lmstudio.ai (April 2026)',
+            'NVIDIA CUDA toolkit documentation: developer.nvidia.com/cuda-toolkit',
+          ],
+        },
+      },
+    },
+  },
+
+  'gpu-vs-ai-subscription-roi': {
+    en: {
+      theme: 'Cost & Comparisons',
+      title: 'Is Buying a GPU Worth It vs Paying for AI Subscriptions?',
+      seoTitle: 'GPU ROI vs AI Subscriptions: Cost Analysis, Payback Period, Decision Matrix 2026',
+      intro: '**A $350 GPU breaks even with $20/month AI subscriptions (ChatGPT Plus, Claude Pro) in 18–24 months at 5 hours/week usage.** As of April 2026, if you use AI more than 3 hours/week, buying a used GPU is financially smarter than subscriptions. Heavy users (10+ hours/week) save $5,000+ over 5 years by going local. Light users (≤2 hrs/week) stay with subscriptions.',
+      metaDescription: 'GPU purchase vs AI subscription ROI: breakeven calculator, cost analysis. ChatGPT Plus, Claude Pro, local LLMs. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '8 min',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Return on Investment',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'Cost Structure: GPU vs Subscriptions', anchor: '#cost-structure' },
+        { label: 'Breakeven Analysis by Usage Level', anchor: '#breakeven' },
+        { label: '5-Year ROI Comparison', anchor: '#five-year-roi' },
+        { label: 'Hidden Costs in Both Models', anchor: '#hidden-costs' },
+        { label: 'Decision Matrix: When to Buy a GPU', anchor: '#decision-matrix' },
+        { label: 'Frequently Asked Questions', anchor: '#faq' },
+      ],
+      sections: {
+        'tldr': {
+          isTldr: true,
+          items: [
+            'GPU purchase: RTX 4070 used $350 + $30/year power = $350 upfront, $30/year forever',
+            'Subscriptions: $20/month × 12 = $240/year (ChatGPT Plus or Claude Pro)',
+            'Breakeven: 18 months at 5 hrs/week, 12 months at 10 hrs/week, 6 months at 20+ hrs/week',
+            '3-year savings (5 hrs/week): GPU ($440 total) vs Subscriptions ($720) = $280 savings',
+            '5-year savings (10 hrs/week): GPU ($220 total) vs Subscriptions ($1,200) = $980 savings',
+            'Quality trade-off: Subscriptions = GPT-4o/Claude 3.5 (best); Local = Llama 3.1 70B (95% as good)',
+            'Other factors: Privacy (local wins), offline capability (local wins), infrastructure overhead (subscription wins)',
+            'Rule of thumb: 5+ hours/week AI use = buy a GPU. 2–5 hours/week = borderline. ≤2 hours/week = stay with subscription',
+          ],
+        },
+        'cost-structure': {
+          title: 'What Is the Cost Structure of Each Model?',
+          content: [
+            'Subscription (ChatGPT Plus / Claude Pro): $20 USD/month = $240/year. No upfront cost. Includes unlimited queries, model updates, rate-limited usage.',
+            'GPU Purchase (RTX 4070 used): $350 upfront + $30/year electricity (at US rates) = $350 year 1, $30 year 2–7, then $0 if sold for salvage.',
+            'GPU Purchase (RTX 4090 used): $1,000 upfront + $60/year electricity = $1,000 year 1, $60 year 2–7.',
+            'Hybrid (subscription + local): $240/year subscriptions (for edge cases where local can\'t handle) + $350 GPU upfront = optimized for mixed workloads.',
+          ],
+        },
+        'breakeven': {
+          title: 'When Does a GPU Break Even with Subscriptions?',
+          content: [
+            'RTX 4070 ($350) vs ChatGPT Plus ($240/year): Breakeven = $350 / $240 = 1.46 years (approximately 17–18 months).',
+            'RTX 4090 ($1,000) vs ChatGPT Plus: Breakeven = $1,000 / $240 = 4.17 years.',
+            'At 2 hours/week (104 hours/year): If treating as "cost per hour" ($240 / 104 = $2.30/hour), then RTX 4070 ($0.05/hour) breaks even in year 1.',
+            'At 5 hours/week (260 hours/year): Breakeven at 1.5 years.',
+            'At 10 hours/week (520 hours/year): Breakeven at 12–14 months.',
+            'At 20+ hours/week: Breakeven in 6–8 months.',
+          ],
+        },
+        'five-year-roi': {
+          title: 'What Is the 5-Year ROI Comparison?',
+          content: [
+            'Light user (2 hrs/week): GPU $350 + $150 power = $500 total. Subscriptions $240 × 5 = $1,200. GPU loses by $700.',
+            'Casual user (5 hrs/week): GPU $350 + $150 power = $500. Subscriptions $1,200. GPU wins by $700.',
+            'Regular user (10 hrs/week): GPU $350 + $300 power = $650. Subscriptions $1,200. GPU wins by $550.',
+            'Power user (20 hrs/week): GPU $350 + $600 power = $950. Subscriptions $1,200. GPU wins by $250.',
+            'Extreme user (40 hrs/week): GPU $350 + $1,200 power = $1,550. Subscriptions $1,200. Subscriptions win by $350 (but local has no rate limits).',
+          ],
+        },
+        'hidden-costs': {
+          title: 'What Are the Hidden Costs in Both Models?',
+          content: [
+            'Subscription hidden costs: Rate limits (ChatGPT Plus: 20 messages per 3 hours in peak times), API costs if building applications ($0.015–0.06 per 1K tokens), data ownership (your conversations belong to OpenAI/Anthropic).',
+            'GPU hidden costs: Infrastructure (learning curve, troubleshooting, occasional crashes), electricity (24/7 idle draw if not managed), GPU replacement after 5–7 years ($350–1,600), cooling (may need better AC, +$100–500/year).',
+            'Subscription non-monetary cost: Vendor lock-in (can\'t export your trained models), dependency on internet and company stability.',
+            'GPU non-monetary cost: Technical debt (model fine-tuning becomes outdated, requires retraining).',
+          ],
+        },
+        'decision-matrix': {
+          title: 'Should I Buy a GPU or Keep a Subscription?',
+          content: [
+            '**Buy a GPU if:**',
+            '- You use AI 5+ hours/week consistently',
+            '- You need offline capability (no internet access)',
+            '- You require full privacy (healthcare, finance, legal data)',
+            '- You need unlimited queries (no rate limits)',
+            '- You want to fine-tune models for your specific use case',
+            '- You\'re comfortable with technical setup and troubleshooting',
+            '',
+            '**Keep a subscription if:**',
+            '- You use AI 2 or fewer hours/week',
+            '- You need best-in-class models (GPT-4o > local Llama 3.1 70B)',
+            '- You require always-on, zero-downtime service (cloud redundancy)',
+            '- You don\'t want infrastructure overhead',
+            '- You need multimodal (images, audio, video) as core feature',
+            '- You need real-time model updates without retraining',
+            '',
+            '**Hybrid approach (both) if:**',
+            '- You use AI 10+ hours/week but occasionally need cutting-edge models',
+            '- You\'re willing to maintain both local and cloud options',
+            '- You can segment workloads (commodity queries on local, edge cases on cloud)',
+          ],
+        },
+        'faqSection': {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What if electricity costs are much higher in my region?',
+              a: 'At $0.30/kWh (European rates), RTX 4070 costs $60/year instead of $30. Breakeven extends to 2 years instead of 1.5. Still competitive for 5+ hours/week.',
+            },
+            {
+              q: 'Does GPU price volatility affect ROI?',
+              a: 'Yes. Used RTX 4090 prices ranged $800–1,200 in 2024–2025. New GPU launches (NVIDIA RTX 5090 in 2025) may drop used prices 20–40%.',
+            },
+            {
+              q: 'Can I depreciate GPU as a business expense?',
+              a: 'If your AI usage is business-related, yes. Depreciate over 5–7 years, reducing effective cost. Subscriptions are immediate expense. Consult a CPA.',
+            },
+            {
+              q: 'What if I buy a GPU and stop using it?',
+              a: 'Resale value: RTX 4070 sells for 60–70% of purchase price; RTX 4090 for 50–65%. You recover most costs. Subscriptions sunk cost.',
+            },
+            {
+              q: 'Does cloud GPU rental fit this analysis?',
+              a: 'Cloud GPU (Lambda Labs $2.50/hr) is 10–50x more expensive than local per hour. Only viable for burst workloads. Not competitive for consistent use.',
+            },
+            {
+              q: 'Will future models (GPT-5, Claude 4) justify keeping subscriptions?',
+              a: 'Possibly. If GPT-5 is only available via subscription, local Llama equivalents may lag. For future-proofing, hybrid (local + subscription) is prudent.',
+            },
+          ],
+        },
+        'commonMistakes': {
+          title: 'Common Mistakes in GPU vs Subscription ROI Analysis',
+          items: [
+            'Underestimating usage. Most people think they\'ll use AI 2 hrs/week but actually use 5+. Track actual usage for 3 months before deciding.',
+            'Forgetting GPU resale value. A $350 GPU used for 3 years still sells for $200–250. Factor in resale.',
+            'Ignoring cooling/power infrastructure costs. Some setups require additional AC ($200–500) to keep GPU safe.',
+            'Not accounting for downtime. Subscriptions have 99.9% uptime; local GPU failure means zero availability until replacement.',
+            'Assuming electricity costs are negligible. At 100W draw 24/7, that\'s $75+/year. Over 5 years, it adds up.',
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Local LLMs vs ChatGPT Plus: Cost Comparison](/local-llms/local-llms-vs-chatgpt-plus)',
+            '[Local LLMs vs Claude Pro: Privacy and Cost](/local-llms/local-llms-vs-claude-pro)',
+            '[Local LLM vs Cloud GPU: What Is Cheaper?](/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'US average electricity rate (EIA): eia.gov/electricity (Q1 2026)',
+            'GPU pricing: eBay completed listings (RTX 4070, RTX 4090, used market, April 2026)',
+            'OpenAI ChatGPT Plus pricing: openai.com/pricing (April 2026)',
+            'Anthropic Claude Pro pricing: claude.ai/billing (April 2026)',
+          ],
+        },
+      },
+    },
+  },
+
 }
