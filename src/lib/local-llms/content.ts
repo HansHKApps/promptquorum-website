@@ -2664,6 +2664,160 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'top-open-source-models-ollama': {
+    en: {
+      theme: 'Best Models',
+      title: 'Top Open Source Models on Ollama in 2026: Most Downloaded and Highest Rated',
+      seoTitle: 'Top Open Source Models on Ollama 2026',
+      intro: 'The most downloaded models on Ollama in 2026 are Llama 3.x (most popular overall), Qwen2.5 (fastest growing, best coding), Mistral (most efficient), Gemma 3 (best image understanding), and DeepSeek-R1 (best reasoning). This guide covers the top 10 models by use case, with exact pull commands and performance data.',
+      metaDescription: 'Top open source models on Ollama in 2026: most downloaded, best coding, best reasoning, and best multilingual. Exact pull commands and performance benchmarks.',
+      publishDate: '2026-04-04',
+      readTime: '9 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'open source models Ollama',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Most Popular Models on Ollama', anchor: '#most-popular-models-on-ollama' },
+        { label: 'Top Models by Category', anchor: '#top-models-by-category' },
+        { label: 'Full Top 10 Comparison Table', anchor: '#full-top-10-comparison' },
+        { label: 'How to Browse the Ollama Library', anchor: '#how-to-browse-ollama-library' },
+        { label: 'Common Mistakes Choosing Ollama Models', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Most downloaded**: Llama 3.2 3B and Llama 3.1 8B — most tutorials, widest tool support.',
+            '**Best reasoning**: DeepSeek-R1 7B and 14B — chain-of-thought reasoning model, significantly above standard models on math and logic.',
+            '**Best coding**: Qwen2.5-Coder 7B and 32B — highest HumanEval scores at their size tiers.',
+            '**Best image understanding**: Llama 3.2 Vision 11B and Gemma 3 9B (vision variant) — both support image input locally.',
+            'As of April 2026, the Ollama library contains 200+ models. All are available via `ollama pull <name>`.',
+          ],
+        },
+        mostPopular: {
+          title: 'Which Models Are Most Popular on Ollama in 2026?',
+          content: [
+            'Popularity on Ollama is measured by download counts visible on each model\'s library page. As of April 2026, the top downloaded models are dominated by Meta\'s Llama family — Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model.',
+            'Qwen2.5 is the fastest-growing model family in the Ollama library, with Qwen2.5:7b overtaking Mistral 7B in monthly downloads in late 2025. DeepSeek-R1 saw a major spike in early 2025 following its release and remains highly downloaded for reasoning tasks.',
+          ],
+        },
+        byCategory: {
+          title: 'Top Ollama Models by Use Case',
+          items: [
+            '**General chat (beginner)**: `ollama run llama3.2:3b` — most documentation, best-supported first model.',
+            '**General chat (quality)**: `ollama run llama3.1:8b` — best balance of quality and RAM for 8 GB machines.',
+            '**Coding**: `ollama run qwen2.5-coder:7b` — 72% HumanEval, FIM support, 128K context.',
+            '**Reasoning and math**: `ollama run deepseek-r1:7b` — chain-of-thought model, best local math performance at 7B.',
+            '**Multilingual**: `ollama run qwen2.5:7b` — 29 native languages, strongest non-English support.',
+            '**Image understanding**: `ollama run llama3.2-vision:11b` — process images with text prompts locally.',
+            '**Fast and lightweight**: `ollama run gemma2:2b` — fastest CPU inference, 1.7 GB RAM.',
+            '**High quality (16 GB RAM)**: `ollama run mistral-small3.1` — near-70B quality at 14 GB RAM.',
+            '**Embedding generation**: `ollama run nomic-embed-text` — 137M parameter embedding model for RAG pipelines.',
+            '**Document Q&A (RAG)**: `ollama run llama3.1:8b` with Open WebUI\'s RAG feature — best-supported combination.',
+          ],
+        },
+        deepseekR1: {
+          title: 'What Is DeepSeek-R1 and Why Is It Different?',
+          content: [
+            'DeepSeek-R1 is a reasoning model — unlike standard chat models that generate answers directly, DeepSeek-R1 generates explicit chain-of-thought reasoning before its final answer. This significantly improves performance on math, logic puzzles, and step-by-step problem solving.',
+            'DeepSeek-R1 7B scores 52% on MATH (competition math) vs 28% for Mistral 7B at the same size. It is slower than standard models (more tokens per response) but significantly more accurate on tasks where reasoning matters.',
+          ],
+          codeBlock: '# Pull and run DeepSeek-R1\nollama run deepseek-r1:7b\n\n# Larger variants for better quality\nollama run deepseek-r1:14b   # 10 GB RAM\nollama run deepseek-r1:32b   # 20 GB RAM',
+          codeLanguage: 'bash',
+        },
+        visionModels: {
+          title: 'Which Ollama Models Support Image Input?',
+          content: 'As of April 2026, these models on Ollama support image input (multimodal):',
+          rows: [
+            { 'Model': 'llama3.2-vision:11b', 'RAM': '~8 GB', 'Image Support': 'Yes', 'Ollama Command': 'ollama run llama3.2-vision:11b' },
+            { 'Model': 'llama3.2-vision:90b', 'RAM': '~55 GB', 'Image Support': 'Yes', 'Ollama Command': 'ollama run llama3.2-vision:90b' },
+            { 'Model': 'gemma3:9b (vision)', 'RAM': '~6 GB', 'Image Support': 'Yes', 'Ollama Command': 'ollama run gemma3:9b' },
+            { 'Model': 'minicpm-v:8b', 'RAM': '~5.5 GB', 'Image Support': 'Yes', 'Ollama Command': 'ollama run minicpm-v' },
+          ],
+          columns: ['Model', 'RAM', 'Image Support', 'Ollama Command'],
+        },
+        fullTop10: {
+          title: 'Full Top 10 Open Source Ollama Models in 2026',
+          rows: [
+            { '#': '1', 'Model': 'llama3.2:3b', 'Best For': 'First model, general chat', 'RAM': '2.5 GB', 'HumanEval': '60%' },
+            { '#': '2', 'Model': 'llama3.1:8b', 'Best For': 'Quality general chat', 'RAM': '5.5 GB', 'HumanEval': '72%' },
+            { '#': '3', 'Model': 'qwen2.5:7b', 'Best For': 'Multilingual, coding', 'RAM': '4.7 GB', 'HumanEval': '72%' },
+            { '#': '4', 'Model': 'qwen2.5-coder:7b', 'Best For': 'Coding focus', 'RAM': '4.7 GB', 'HumanEval': '72%' },
+            { '#': '5', 'Model': 'deepseek-r1:7b', 'Best For': 'Reasoning, math', 'RAM': '5 GB', 'MATH': '52%' },
+            { '#': '6', 'Model': 'mistral:7b', 'Best For': 'EU use, efficient', 'RAM': '4.5 GB', 'HumanEval': '39%' },
+            { '#': '7', 'Model': 'mistral-small3.1', 'Best For': 'Quality on 16 GB', 'RAM': '14 GB', 'HumanEval': '74%' },
+            { '#': '8', 'Model': 'gemma2:2b', 'Best For': 'Fast, low RAM', 'RAM': '1.7 GB', 'Speed': '40–60 tok/s' },
+            { '#': '9', 'Model': 'llama3.2-vision:11b', 'Best For': 'Image + text input', 'RAM': '8 GB', 'Notes': 'Vision model' },
+            { '#': '10', 'Model': 'phi4-mini', 'Best For': 'Reasoning, 4 GB RAM', 'RAM': '2.5 GB', 'HumanEval': '70%' },
+          ],
+          columns: ['#', 'Model', 'Best For', 'RAM', 'HumanEval'],
+        },
+        howToBrowse: {
+          title: 'How Do You Browse the Ollama Model Library?',
+          content: 'The Ollama library is at ollama.com/library. Each model page shows available tags (size variants and quantizations), download counts, and supported capabilities.',
+          codeBlock: '# List all locally downloaded models\nollama list\n\n# Search for a model and pull it\nollama pull qwen2.5-coder:32b\n\n# See all available tags for a model\nollama show qwen2.5\n\n# Remove a model to free disk space\nollama rm llama3.2:3b',
+          codeLanguage: 'bash',
+        },
+        commonMistakes: {
+          title: 'What Are the Common Mistakes When Choosing Ollama Models?',
+          faqs: [
+            {
+              q: 'Pulling the largest model tag by default without checking RAM',
+              a: 'Running `ollama pull llama3.3` without specifying a tag downloads the default variant, which is typically the largest standard quantization. On a machine with 8 GB RAM, pulling llama3.3 (70B at ~40 GB) will fail or cause severe swap usage. Always specify the variant: `ollama pull llama3.2:3b` for 8 GB machines.',
+            },
+            {
+              q: 'Using a general model when a task-specific model exists',
+              a: 'For coding tasks, `qwen2.5-coder:7b` scores 72% HumanEval while the general `qwen2.5:7b` also scores 72% — but `qwen2.5-coder` includes FIM support for code completion. For reasoning/math, `deepseek-r1:7b` scores 52% MATH vs 28% for `mistral:7b`. Task-specific models exist in the Ollama library for a reason.',
+            },
+            {
+              q: 'Not verifying a model is available before building a workflow',
+              a: 'The Ollama library changes over time — models are added and occasionally removed. Before building a production pipeline around a specific model, confirm it is in the library (`ollama list` locally, or check ollama.com/library). Pin specific model versions in production workflows: `ollama pull llama3.1:8b-instruct-q4_K_M`.',
+            },
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Open Source Models on Ollama',
+          faqs: [
+            {
+              q: 'How many models are in the Ollama library?',
+              a: 'As of April 2026, the Ollama library contains approximately 200+ curated models with official support. Hugging Face hosts thousands of additional GGUF models that can be loaded via Ollama using custom Modelfiles.',
+            },
+            {
+              q: 'Can I use models from Hugging Face directly in Ollama?',
+              a: 'Yes. Download a GGUF file from Hugging Face and create a Modelfile: `FROM ./model.gguf`. Then run `ollama create mymodel -f Modelfile`. This works for any GGUF file including fine-tunes and models not in the official Ollama library.',
+            },
+            {
+              q: 'Which Ollama model is best for building a local chatbot?',
+              a: 'For a general-purpose local chatbot: `llama3.1:8b` on 8 GB RAM machines, `mistral-small3.1` on 16 GB RAM. For a coding assistant chatbot: `qwen2.5-coder:7b`. Pair with Open WebUI for a web-based interface that connects to Ollama\'s API at localhost:11434.',
+            },
+            {
+              q: 'Are all Ollama models truly open source?',
+              a: 'Not all. The Ollama library includes models with varying licences. Llama 3.x uses the Meta Llama Community Licence (not OSI-approved open source — restricts commercial use above 700M monthly active users). Mistral 7B, Qwen2.5, and Gemma 3 are Apache 2.0 (fully open source). Always check the licence before commercial deployment.',
+            },
+            {
+              q: 'Which embedding model should I use with Ollama for RAG?',
+              a: '`nomic-embed-text` is the standard choice — a 137M parameter model that generates 768-dimensional embeddings, runs at milliseconds per document, and is specifically designed for retrieval tasks. Pull it with `ollama pull nomic-embed-text`. Use with Open WebUI\'s built-in RAG, LangChain\'s OllamaEmbeddings, or LlamaIndex.',
+            },
+            {
+              q: 'How often does the Ollama library get updated with new models?',
+              a: 'The Ollama team adds new models within days to weeks of major releases. Meta Llama 3.3 appeared in the Ollama library within 3 days of its December 2025 release. Follow the Ollama GitHub repository (github.com/ollama/ollama) or the Ollama Twitter/X account for new model announcements.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Ollama Model Library — ollama.com/library',
+            'DeepSeek-R1 Technical Report — github.com/deepseek-ai/DeepSeek-R1',
+            'Llama 3.2 Vision Model Card — huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct',
+            'Ollama GitHub — github.com/ollama/ollama',
+          ],
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
