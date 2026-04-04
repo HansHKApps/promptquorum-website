@@ -671,15 +671,22 @@ Every PE article must link to at least 1 article from a different theme column:
 At the end of every PE article (before the FAQ section), add a "## Related Reading" section:
 ```markdown
 ## Related Reading
-- [What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the pillar definition
-- [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — step-by-step reasoning for logic tasks
-- [CO-STAR Framework](/prompt-engineering/co-star-framework) — a structured template for complex prompts
+- [What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the pillar definition; foundational concepts all prompts require
+- [Chain-of-Thought Prompting: Make AI Show Its Reasoning](/prompt-engineering/chain-of-thought-prompting) — step-by-step reasoning for logic tasks
+- [CO-STAR Framework: Structured Prompting for Complex Tasks](/prompt-engineering/co-star-framework) — a structured template for complex prompts
+- [Building Quality Checks Into Your Prompts](/prompt-engineering/build-quality-checks) — validation patterns for any technique
 ```
 
-**Rules for Related Reading:**
-- Exactly 3 internal links as a bullet list
+**Rules for Related Reading (MANDATORY):**
+- **Minimum 4 internal links** as a bullet list (not exactly 3)
+- **Maximum 6 internal links**
+- **Anchor text must be the full article H1 title**, not shortened or slug-style labels
+  - ✅ Correct: `[Chain-of-Thought Prompting: Make AI Show Its Reasoning]`
+  - ❌ Wrong: `[Chain-of-Thought Prompting]` (incomplete; missing the descriptor)
 - Must include at least 1 link from a different theme column (to signal cross-cluster navigation)
-- Brief 1–3 word description after each link, preceded by `—`
+- Include at least 1 link to the pillar page (`what-is-prompt-engineering`)
+- Brief 1–3 sentence description after each link, preceded by `—`
+- Each link should explain why it's relevant to the current article
 
 ---
 
@@ -846,7 +853,7 @@ These rules apply to all new PromptQuorum pages (Prompt Engineering articles, bl
 
 ### 21.6 FAQ Requirements for Broad Topics
 
-- Any new page that covers a broad concept must include an FAQ with 4–6 questions.
+- Any new page that covers a broad concept must include an FAQ with **minimum 6 questions, maximum 8**.
 - The FAQ must cover at least 3 of these 5 types:
   - Definitional ("What is X?").
   - Comparative ("X vs Y", "Is X better than Y?").
@@ -1280,13 +1287,54 @@ Every FAQ section must include questions from at least 3 of the following 5 ques
 5. **Disambiguation** — "Is X the same as Y?", "Does X still apply when...?"
    - Example: "Is prompt engineering still relevant with GPT-4o?"
 
-**Rules:**
-- Minimum: 4 FAQ entries per article, covering at least 3 of the 5 types above
-- Maximum: 8 FAQ entries — beyond this, the FAQ becomes noise
-- Never write 4+ FAQs that are all definitional — vary the types
+**Rules (MANDATORY):**
+- **Minimum: 6 FAQ entries per article**, covering at least 3 of the 5 types above
+- **Maximum: 8 FAQ entries** — beyond this, the FAQ becomes noise
+- Never write 6+ FAQs that are all definitional — vary the types
 - Comparative and disambiguation questions are especially high-value for AI citation (they answer follow-up questions AI systems are likely to be asked)
+- **Exception:** The `fundamentals-of-prompt-optimization` article requires minimum 19 FAQ entries (this is the only article with this requirement)
 
 **Why:** AI systems generate diverse follow-up questions. If your FAQ only covers basic definitions, it answers only one query type. Comparative and quantitative questions trigger direct citation in AI summaries far more often than "What is X?" questions.
+
+---
+
+## Rule 25: Mandatory Common Mistakes Section (Frameworks, Techniques, Security)
+
+**Every article in Frameworks, Techniques, or Security categories must include a "Common Mistakes" section.**
+
+**Placement in article:** After core how-to content, before Related Reading.
+
+**H2 format (question-form, MANDATORY):**
+- `"What Are the Most Common [Topic] Mistakes?"`
+- OR `"What Should You Avoid When Using [Topic]?"`
+
+**Content format per mistake:**
+
+```markdown
+**Mistake: [Specific name of the mistake].**
+[One sentence describing what goes wrong.] → **Fix:** [One-sentence remedy.]
+```
+
+**Example:**
+
+```markdown
+## What Are the Most Common Few-Shot Prompting Mistakes?
+
+**Mistake: Using generic examples that don't match your task.**
+The model learns from examples, so a generic few-shot example reduces accuracy. → **Fix:** Use 2–5 real examples from your actual use case domain.
+
+**Mistake: Putting examples in the wrong order.**
+LLMs are sensitive to example order, with later examples weighted more heavily. → **Fix:** Place your best examples last, ordered by similarity to the test input.
+```
+
+**Rules:**
+- **Minimum 3 mistakes, maximum 5** per section
+- Each mistake must be **specific and actionable** — not generic (❌ "using the wrong prompt", ✅ "using generic examples that don't match your task")
+- Each fix must be **one sentence the reader can apply immediately** (implementation-ready)
+- No mistake may repeat a point already made in the FAQ section
+- Mistakes should address real pain points, not theoretical edge cases
+
+**Why:** Common Mistakes sections answer follow-up questions at critical decision points. They increase article citation frequency by 25–40% because they address "what NOT to do" queries explicitly.
 
 ---
 
@@ -1458,6 +1506,165 @@ Every comparison or data table must appear in two forms:
 - Design matching infographic/image second
 - Embed image below the table with caption
 - Alt text on image must describe table structure and data
+
+### 26.10 Comparison Table Anchor IDs
+
+Every comparison table must have an HTML anchor ID in kebab-case format:
+
+```html
+<div id="comparison-[entity-a]-vs-[entity-b]">
+```
+
+**When required:** Any article whose H1 contains "vs", "or", or compares two named entities. Any intentional comparison table within any article.
+
+**Examples:**
+- `"Zero-Shot vs. Few-Shot Prompting"` → `id="comparison-zero-shot-vs-few-shot"`
+- `"GPT, Claude or Gemini: How to Pick the Right AI Model"` → `id="comparison-gpt-claude-gemini"`
+
+**Why:** Without an anchor ID, the table cannot rank as a standalone featured result for "[X] vs [Y]" queries and cannot be deep-linked from AI citations.
+
+---
+
+## Rule 27: Quick Facts Block (Required When 4+ Numerical Facts Present)
+
+Any article with **4 or more distinct numerical facts** (token counts, pricing, VRAM, latency, parameter counts, benchmark scores) must include a "Quick Facts" block.
+
+**Placement:** After the Key Takeaways block, before the first H2.
+
+**Format:**
+
+```markdown
+**Quick Facts**
+- [Entity]: [Exact number + unit] ([date if time-sensitive])
+- [Entity]: [Exact number + unit] — [one comparison reference]
+```
+
+**Example:**
+```markdown
+**Quick Facts**
+- GPT-4o context: 128,000 tokens
+- Claude 4.6 Sonnet context: 200,000 tokens — 1.56× larger than GPT-4o
+- Gemini 2.5 Pro context: 2,000,000 tokens (April 2026)
+- LLaMA 3.1 7B local VRAM: 8GB minimum
+- GPT-4o pricing: $5 input / $15 output per 1M tokens (April 2026)
+```
+
+**Rules:**
+- Numbers only — no qualitative claims (❌ "very fast", ✅ "200ms latency")
+- Every fact must include a unit: tokens, GB, ms, $/1M tokens, %, seconds
+- Time-sensitive facts must include date in parentheses: `(April 2026)`
+- All numbers must satisfy Rule 2b (verified, never invented)
+- Comparison references are optional but recommended where they add context
+- Maximum 6 facts per block
+
+---
+
+## Rule 28: Inline Date References in Body Text
+
+**Any article with time-sensitive facts must include at least 2 inline date references in prose** — separate from and in addition to the `<time>` element in the page header.
+
+**Required patterns (use at least 2 per article):**
+- `"As of [Month Year], [fact]..."`
+- `"[Model/regulation] released in [Month Year]..."`
+- `"(correct as of [Month Year])"`
+- `"Updated [Month Year]: [changed fact]..."`
+
+**Example (correct):**
+```markdown
+As of April 2026, GPT-4o pricing is $5 input / $15 output per 1M tokens.
+Claude 4.6 Sonnet was released in early 2024 and handles 200k token contexts.
+```
+
+**Why:** Articles with no dates in body text score lower on GEO freshness evaluation even when schema `dateModified` is current. AI crawlers treat inline dates as evidence of continuous fact-checking.
+
+---
+
+## Rule 29: Audience & Difficulty Level Signal
+
+**Every article must display a one-line audience and difficulty signal directly below the intro paragraph.**
+
+**Required format:**
+```
+Level: [Beginner | Intermediate | Advanced | Technical]
+Audience: [Specific description, e.g., "Developers, marketers, researchers using LLMs"]
+```
+
+**Level definitions:**
+
+| Level | Definition |
+|-------|-----------|
+| Beginner | No prior AI knowledge required |
+| Intermediate | Basic LLM familiarity assumed |
+| Advanced | Assumes working knowledge of prompt engineering |
+| Technical | Code, math notation, or architecture knowledge required |
+
+**Schema requirement:** The Article schema must include `educationalLevel` and `audience` fields:
+```json
+{
+  "educationalLevel": "Intermediate",
+  "audience": { "@type": "Audience", "audienceType": "Developers, prompt engineers" }
+}
+```
+
+**Rules:**
+- Audience must be specific (❌ "Everyone", ✅ "Marketing and content teams using ChatGPT or Claude")
+- This signal is separate from the audience mention in the intro paragraph (Rule 21.1) — both are required
+- Render without JavaScript (SSR visible)
+
+---
+
+## Rule 30: Author Byline with Credential Signal
+
+**Every article byline must include a credential signal — not just name and organization.**
+
+**Required format:**
+```
+By [Name] · [Credential signal] · PromptQuorum
+```
+
+**Valid credential signals (use the most specific true claim):**
+- "Tested 1,200+ prompts across 25 models"
+- "Prompt engineering researcher, Frankfurt"
+- "Built PromptQuorum, a multi-model AI dispatch tool"
+
+**Schema requirement:** The `author` field must include `sameAs` with at least 2 social profile URLs:
+```json
+{
+  "author": {
+    "@type": "Person",
+    "name": "Hans Kuepper",
+    "url": "https://www.promptquorum.com/about/hans-kuepper",
+    "sameAs": ["https://linkedin.com/in/hanskuepper", "https://x.com/hanskuepper"]
+  }
+}
+```
+
+**Rules:**
+- Must be factually accurate — never invent credentials
+- Author name must link to author bio page
+- `sameAs` with minimum 2 social URLs is required in schema
+
+---
+
+## Rule 31: Lead Answer Block — Canonical Definition
+
+**The "Lead Answer Block" is the canonical term for three previously inconsistent labels in this guide:**
+- "Executive Summary" (Structure Template)
+- "bold opening sentence" (Pre-Publish Checklist)
+- "SERP- and LLM-Facing Snippet Block" (Rule 21.3)
+
+When this guide uses any of those deprecated terms, apply the Lead Answer Block definition:
+
+**Definition:** A **25–50 word, bold paragraph** placed immediately after the H1, before the Key Takeaways block. It answers the H1 question directly in 1–2 sentences using the primary keyword.
+
+**Rules:**
+- No preamble ("In this article..."). No hedging ("It depends...").
+- The reader must be able to read only this block and have a complete answer to the article title question.
+- Primary keyword must appear within the first 10 words.
+- Must be bold (`**bold text here**`)
+
+**Example:**
+> **Few-shot prompting sends 2–5 examples alongside the task to teach the model your desired format or style. Unlike zero-shot prompting, it adds context cost but reduces hallucinations by 25–40% on formatting and reasoning tasks.**
 
 ---
 
@@ -1776,15 +1983,20 @@ done
 
 ### Structure Template (use this order every time)
 
-1. Executive Summary (bold, 1-2 sentences)
-2. What Is [Topic]? (H2 with bold answer sentence)
-3. Key Takeaways block
-4. [Core content sections] (each H2 opens with bold answer)
-5. [Comparison table if applicable]
-6. Global/Regional context section
-7. Related Reading (4+ links)
-8. FAQ section (6+ questions, SSR rendered)
-9. Sources & Further Reading (3+ primary sources)
+1. **H1 title**
+2. **Lead Answer Block** (25–50 words, bold, answers H1 directly — see Rule 31)
+3. **Key Takeaways block** (4–6 bullets — BEFORE the first H2, always)
+4. **Quick Facts block** (if article has 4+ numerical facts — see Rule 27)
+5. **Audience & Level signal** (Level: / Audience: — see Rule 29)
+6. **First H2: "What Is [Topic]?"** (bold one-sentence definition)
+7. **Core content sections** (each H2 opens with bold answer)
+8. **Comparison table** (if applicable, with anchor id — see Rule 26.10)
+9. **Global/Regional context section**
+10. **Common Mistakes section** (Frameworks/Techniques/Security articles — see Rule 25)
+11. **Related Reading** (min 4 links, full H1 titles as anchor text — see Rule 9)
+12. **FAQ section** (min 6, max 8 entries, SSR rendered — see Rule 19)
+13. **Sources & Further Reading** (min 3 external citations)
+14. **Author bio block** (with credential signal — see Rule 30)
 
 ### AEO Answer Patterns (citation-triggering)
 
