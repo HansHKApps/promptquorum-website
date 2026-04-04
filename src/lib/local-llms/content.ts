@@ -591,6 +591,156 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'best-beginner-local-llm-models': {
+    en: {
+      theme: 'Getting Started',
+      title: 'Best Local LLM Models for Beginners in 2026: Ranked by RAM, Speed, and Quality',
+      seoTitle: 'Best Beginner Local LLM Models 2026',
+      intro: 'The five best local LLM models for beginners in 2026 are Meta Llama 3.2 3B, Microsoft Phi-3.5 Mini, Google Gemma 2 2B, Mistral 7B v0.3, and Qwen2.5 7B. Each runs on consumer hardware with 4–8 GB of RAM and produces output quality suitable for everyday tasks.',
+      metaDescription: 'Best local LLM models for beginners in 2026. Ranked by RAM requirement, speed, and quality — with exact VRAM numbers and Ollama pull commands for each model.',
+      publishDate: '2026-04-04',
+      readTime: '9 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM models',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'How to Choose a Beginner Model', anchor: '#how-to-choose-a-beginner-model' },
+        { label: '#1 Llama 3.2 3B — Best Overall Beginner Model', anchor: '#llama-3-2-3b' },
+        { label: '#2 Phi-3.5 Mini — Best for Low RAM', anchor: '#phi-3-5-mini' },
+        { label: '#3 Gemma 2 2B — Fastest 2B Model', anchor: '#gemma-2-2b' },
+        { label: '#4 Mistral 7B — Best 7B All-Rounder', anchor: '#mistral-7b' },
+        { label: '#5 Qwen2.5 7B — Best for Multilingual', anchor: '#qwen2-5-7b' },
+        { label: 'Full Comparison Table', anchor: '#full-comparison' },
+        { label: 'Which Model Should You Start With?', anchor: '#which-model-to-start-with' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Best overall beginner model: **Llama 3.2 3B** — 2 GB download, runs on 4 GB RAM, strong instruction-following for its size.',
+            'Best for low RAM (4 GB or less): **Phi-3.5 Mini 3.8B** — Microsoft\'s compact model excels at reasoning and coding tasks.',
+            'Fastest 2B model: **Gemma 2 2B** — Google\'s smallest model runs at 40–60 tok/sec on CPU with surprisingly good output quality.',
+            'Best 7B all-rounder: **Mistral 7B v0.3** — the standard benchmark comparison model; reliable, fast, and widely supported.',
+            'Best for multilingual and coding: **Qwen2.5 7B** — outperforms Mistral 7B on coding benchmarks and supports 29 languages natively.',
+          ],
+        },
+        howToChoose: {
+          title: 'How to Choose a Beginner Local LLM Model',
+          content: [
+            'Model selection depends on three constraints: available RAM, acceptable inference speed, and the tasks you want to perform.',
+            'The parameter count (3B, 7B, 13B) is the primary driver of RAM requirements. At 4-bit quantization — the default for most local inference tools — multiply the parameter count by ~0.5 to estimate GB of RAM needed. A 7B model at Q4_K_M requires approximately 4.5 GB of RAM.',
+            'For most beginners, **7B models at Q4_K_M quantization** offer the best balance of quality, speed, and RAM use on machines with 8 GB or more. On machines with 4–6 GB RAM, 3B models are the practical ceiling.',
+          ],
+        },
+        llama32: {
+          title: '#1 Meta Llama 3.2 3B — Best Overall Beginner Model',
+          content: [
+            'Meta Llama 3.2 3B is the best starting point for most users. It downloads in under 5 minutes, runs on any machine with 4 GB RAM, and produces noticeably better instruction-following than previous 3B models. It uses a 128K context window — far larger than comparable-size models.',
+            'On an 8-core laptop CPU, Llama 3.2 3B generates 25–45 tokens/sec. On Apple M3 Pro, it reaches 70–90 tokens/sec. Quality is adequate for summarization, Q&A, and simple coding tasks, but falls short of 7B models on multi-step reasoning.',
+          ],
+          rows: [
+            { 'Spec': 'Parameters', 'Value': '3B' },
+            { 'Spec': 'RAM required', 'Value': '~2.5 GB (Q4_K_M)' },
+            { 'Spec': 'Download size', 'Value': '~2 GB' },
+            { 'Spec': 'Context window', 'Value': '128K tokens' },
+            { 'Spec': 'CPU speed (8-core laptop)', 'Value': '25–45 tok/sec' },
+            { 'Spec': 'Ollama command', 'Value': 'ollama run llama3.2:3b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        phi35: {
+          title: '#2 Microsoft Phi-3.5 Mini 3.8B — Best for Low RAM',
+          content: [
+            'Phi-3.5 Mini is Microsoft\'s compact model optimized for reasoning and coding tasks at small scale. Despite its 3.8B parameter count, it scores above many 7B models on math and coding benchmarks due to its training on high-quality synthetic data.',
+            'It is the recommended model for machines with 4–6 GB RAM where quality matters. The tradeoff is that Phi-3.5 Mini is less reliable on open-ended creative tasks compared to Llama 3.2.',
+          ],
+          rows: [
+            { 'Spec': 'Parameters', 'Value': '3.8B' },
+            { 'Spec': 'RAM required', 'Value': '~3 GB (Q4_K_M)' },
+            { 'Spec': 'Download size', 'Value': '~2.3 GB' },
+            { 'Spec': 'Context window', 'Value': '128K tokens' },
+            { 'Spec': 'CPU speed (8-core laptop)', 'Value': '20–35 tok/sec' },
+            { 'Spec': 'Ollama command', 'Value': 'ollama run phi3.5' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        gemma2: {
+          title: '#3 Google Gemma 2 2B — Fastest 2B Model',
+          content: [
+            'Gemma 2 2B is Google\'s smallest open model and the fastest option for CPU-only inference. It generates 40–60 tokens/sec on a mid-range laptop CPU — roughly double the speed of Llama 3.2 3B at the same hardware. Output quality is lower than Llama 3.2 3B on reasoning tasks, but acceptable for quick queries and simple generation.',
+            'Gemma 2 2B is a good choice when response speed matters more than output depth, or as a testing model to verify your local LLM setup before downloading larger models.',
+          ],
+          rows: [
+            { 'Spec': 'Parameters', 'Value': '2B' },
+            { 'Spec': 'RAM required', 'Value': '~1.7 GB (Q4_K_M)' },
+            { 'Spec': 'Download size', 'Value': '~1.6 GB' },
+            { 'Spec': 'Context window', 'Value': '8K tokens' },
+            { 'Spec': 'CPU speed (8-core laptop)', 'Value': '40–60 tok/sec' },
+            { 'Spec': 'Ollama command', 'Value': 'ollama run gemma2:2b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        mistral7b: {
+          title: '#4 Mistral 7B v0.3 — Best 7B All-Rounder',
+          content: [
+            'Mistral 7B v0.3 is the standard benchmark comparison model for local 7B inference. Released by Mistral AI in 2023 and updated in 2024, it consistently performs at or above Llama 2 13B quality while using half the RAM. It supports function calling and has a clean instruction-following format.',
+            'For machines with 8 GB RAM, Mistral 7B is a natural step up from 3B models. It handles longer text, more complex instructions, and multi-turn conversations more reliably than any 3B model.',
+          ],
+          rows: [
+            { 'Spec': 'Parameters', 'Value': '7B' },
+            { 'Spec': 'RAM required', 'Value': '~4.5 GB (Q4_K_M)' },
+            { 'Spec': 'Download size', 'Value': '~4.1 GB' },
+            { 'Spec': 'Context window', 'Value': '32K tokens' },
+            { 'Spec': 'CPU speed (8-core laptop)', 'Value': '10–20 tok/sec' },
+            { 'Spec': 'Ollama command', 'Value': 'ollama run mistral' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        qwen25: {
+          title: '#5 Qwen2.5 7B — Best for Multilingual and Coding',
+          content: [
+            'Qwen2.5 7B from Alibaba outperforms Mistral 7B on HumanEval (coding) and MBPP benchmarks and natively supports 29 languages including Chinese, Japanese, Korean, Arabic, and all major European languages. It is the recommended choice for non-English workflows or coding-heavy use cases.',
+            'Qwen2.5 7B uses a 128K context window (vs. 32K for Mistral 7B) and supports structured output with JSON mode. The model is available in instruct and base variants — for chat use, always use the instruct version.',
+          ],
+          rows: [
+            { 'Spec': 'Parameters', 'Value': '7B' },
+            { 'Spec': 'RAM required', 'Value': '~4.7 GB (Q4_K_M)' },
+            { 'Spec': 'Download size', 'Value': '~4.4 GB' },
+            { 'Spec': 'Context window', 'Value': '128K tokens' },
+            { 'Spec': 'CPU speed (8-core laptop)', 'Value': '10–18 tok/sec' },
+            { 'Spec': 'Ollama command', 'Value': 'ollama run qwen2.5:7b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        fullComparison: {
+          title: 'Full Comparison Table: 5 Best Beginner Local LLM Models',
+          rows: [
+            { 'Model': 'Llama 3.2 3B', 'RAM': '2.5 GB', 'Speed (CPU)': '25–45 tok/s', 'Context': '128K', 'Best For': 'General use, first model' },
+            { 'Model': 'Phi-3.5 Mini 3.8B', 'RAM': '3 GB', 'Speed (CPU)': '20–35 tok/s', 'Context': '128K', 'Best For': 'Reasoning, coding, low RAM' },
+            { 'Model': 'Gemma 2 2B', 'RAM': '1.7 GB', 'Speed (CPU)': '40–60 tok/s', 'Context': '8K', 'Best For': 'Speed, very low RAM' },
+            { 'Model': 'Mistral 7B v0.3', 'RAM': '4.5 GB', 'Speed (CPU)': '10–20 tok/s', 'Context': '32K', 'Best For': 'Balanced quality, 8 GB RAM' },
+            { 'Model': 'Qwen2.5 7B', 'RAM': '4.7 GB', 'Speed (CPU)': '10–18 tok/s', 'Context': '128K', 'Best For': 'Multilingual, coding' },
+          ],
+          columns: ['Model', 'RAM', 'Speed (CPU)', 'Context', 'Best For'],
+        },
+        whichToStart: {
+          title: 'Which Model Should You Start With?',
+          items: [
+            '**4 GB RAM or less**: `ollama run gemma2:2b` — fastest download, lowest memory use, acceptable quality for basic tasks.',
+            '**8 GB RAM, first model**: `ollama run llama3.2:3b` — best balance of quality and RAM for a first experience.',
+            '**8 GB RAM, serious use**: `ollama run mistral` or `ollama run qwen2.5:7b` — step up for longer documents, complex instructions.',
+            '**Primarily coding tasks**: `ollama run qwen2.5:7b` — best HumanEval score in this list; strong at Python, JavaScript, and SQL.',
+            '**Non-English language**: `ollama run qwen2.5:7b` — 29-language native support, no translation overhead.',
+          ],
+        },
+        nextSteps: {
+          title: 'How to Download and Run These Models',
+          content: 'All five models are available through Ollama with a single pull command. See [How to Install Ollama](/local-llms/how-to-install-ollama) for setup, then [Run Your First Local LLM](/local-llms/run-first-local-llm) for a step-by-step first-run walkthrough. If you are running on a laptop with limited RAM, [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) covers quantization and performance tuning for constrained hardware.',
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
