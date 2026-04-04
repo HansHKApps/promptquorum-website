@@ -2362,3 +2362,52 @@ When adding a new route type (new static page, new section):
 - [ ] Confirm layout.tsx hreflang generation covers the new route
 - [ ] Test by viewing page source and searching for `hreflang`
 - [ ] Verify all 6 tags appear with correct absolute URLs
+
+---
+
+## MANDATORY WRITE-TIME REQUIREMENTS — Full Compliance Checklist
+
+**Do not output any article draft until every item below is satisfied. This checklist is the final gate before a PromptQuorum article is considered ready to publish.**
+
+### 1. Pre-Writing (before any content)
+
+- [ ] `TARGET KEYWORDS:` block written at the very top of the draft (Rule 32)
+- [ ] Primary keyword identified (will appear in title, H1, first paragraph, at least one H2)
+- [ ] 3–5 long-tail variants identified
+
+### 2. Top of Output (meta + images, before article body)
+
+- [ ] Meta description written (150–160 chars exact, Rule 8a format)
+- [ ] 4–6 images described with keyword-rich file names (`keyword-rich-name-2026.png`) and alt text (Rule 26.5)
+- [ ] Every data/comparison table described as a custom image (Rule 26.9)
+
+### 3. Article Body (in order)
+
+- [ ] Lead Answer Block first (25–50 words, bold, answers H1 directly — Rule 31)
+- [ ] Key Takeaways box immediately after intro (4–6 bullets — Rule 8c)
+- [ ] Clickable Table of Contents with anchor links to every H2 (Rule 8c)
+- [ ] Last Updated + Sources box right after TOC (Rule 8c)
+- [ ] Every major section has an "In one sentence:" or "In plain terms:" snippet block (Rule 33)
+- [ ] Callout boxes used for all prompt templates, tips, and CTAs (Rule 17 / Rule 26.8)
+- [ ] Common Mistakes section included (Frameworks/Techniques/Security articles — Rule 25)
+- [ ] Comparison table includes anchor ID `id="comparison-[a]-vs-[b]"` (Rule 26.10)
+- [ ] Minimum 2 inline date references in body text for time-sensitive facts (Rule 28)
+- [ ] Quick Facts block included if 4+ numerical facts (Rule 27)
+- [ ] Audience & Level signal present below intro (Rule 29)
+
+### 4. Bottom of Article
+
+- [ ] Related Reading section (min 4 links, full H1 title as anchor text — Rule 9)
+- [ ] FAQ section (min 6, max 8 entries, SSR rendered — Rule 19)
+- [ ] Sources section (min 3 external citations, hyperlinked, no internal links — Rule 10)
+- [ ] Expanded author bio block (with credential signal — Rule 30)
+
+### 5. Schema & Technical
+
+- [ ] Full Article or TechArticle schema included (datePublished, author with sameAs, keywords, about, mentions, speakable)
+- [ ] FAQPage schema included (if FAQ section exists)
+- [ ] HowTo schema included (if numbered steps exist)
+- [ ] BreadcrumbList schema included
+- [ ] `educationalLevel` and `audience` fields in schema (Rule 29)
+- [ ] Draft ends with: `Schema validated – ready for Google Rich Results Test and AI citation.` (Rule 33)
+
