@@ -481,7 +481,7 @@ Every page needs:
 - `<title>`: Format: `[Specific Topic] | [Benefit]`
   - Good: `"How Multi-Model AI Reduces Hallucinations | Complete Guide"`
   - Bad: `"Blog Post | Our Site"`
-- `<meta name="description">`: 140–160 characters. Answer-first. Include the primary keyword.
+- `<meta name="description">`: 150–160 characters. Answer-first. Include the primary keyword.
 - `<link rel="canonical">`: Always set to the canonical URL.
 - Open Graph tags: `og:title`, `og:description`, `og:image`, `og:url`
 
@@ -551,7 +551,7 @@ Every page needs:
 
 ### Required Order (in sequence):
 
-1. **Key Takeaways Box** — styled visual block with 4–6 bullet points
+1. **Key Takeaways Box** — styled visual block with 5–7 bullet points
    - Rendered as a colored box (primary/5 background with border)
    - Each bullet is a specific, actionable takeaway
    - Maximum 1–2 lines per bullet
@@ -624,7 +624,7 @@ sections: {
 ### Checklist for Every New Article:
 
 - [ ] Key Takeaways box is the first element after intro paragraph
-- [ ] Key Takeaways contains 4–6 specific, actionable bullets
+- [ ] Key Takeaways contains 5–7 specific, actionable bullets
 - [ ] Table of Contents is the second element after intro
 - [ ] TOC includes every H2 heading from the article
 - [ ] TOC links are clickable anchors (e.g., `#zero-shot`, `#few-shot`)
@@ -883,7 +883,7 @@ For every new page, the content must be written so that these standard SEO eleme
   - Includes at least one natural-language query phrase.
   - Stays under ~60 characters where possible.
 - Meta description:
-  - 140–160 characters.
+  - 150–160 characters.
   - States the main question and the main benefit of the article in one or two sentences.
 - Internal links:
   - One "upward" link to the main "What Is Prompt Engineering?" pillar where relevant.
@@ -1422,7 +1422,7 @@ Every page must include valid JSON-LD schema for:
 | Schema Type | When Required | Fields |
 |---|---|---|
 | Article or TechArticle | Every article | headline, author, datePublished, dateModified, keywords, about, mentions |
-| FAQPage | If FAQ section exists | mainEntity with 4+ questions and answers |
+| FAQPage | If FAQ section exists | mainEntity with 6+ questions and answers |
 | HowTo | If numbered process exists | steps with step name, instructions |
 | BreadcrumbList | Every page | itemListElement with name and URL |
 | Person | Author information | name, image, URL (Hans Kuepper) |
@@ -1462,7 +1462,7 @@ Every article must include 4–6 custom images:
 
 After the intro paragraph, the page must start with this exact order (see Rule 8c):
 
-1. **Key Takeaways box** — 4–6 bullets, styled, first visible element
+1. **Key Takeaways box** — 5–7 bullets, styled, first visible element
 2. **Clickable Table of Contents** — anchor links to every H2 section
 3. **Last Updated + Sources box** — prominent placement right after TOC
 
@@ -1769,7 +1769,7 @@ Run this updated checklist before publishing any new page or blog post:
 - [ ] Meta description written (150–160 chars exact): `[Keyword]: [Answer]. [Benefit]. Free templates + PromptQuorum app inside.`
 - [ ] Canonical tag set to English/primary language version
 - [ ] Article or TechArticle JSON-LD schema included (headline, author, datePublished, dateModified, keywords, about, mentions)
-- [ ] FAQPage schema included (if FAQ exists) with 4+ Q&A pairs
+- [ ] FAQPage schema included (if FAQ exists) with 6+ Q&A pairs
 - [ ] HowTo schema included (if numbered process exists)
 - [ ] BreadcrumbList schema included with correct itemListElement
 - [ ] Person schema for author (Hans Kuepper) included
@@ -1807,7 +1807,7 @@ Run this before publishing any new page or blog post:
 - [ ] Lists used for enumerations of 3+ items
 - [ ] JSON-LD schema markup included and valid
 - [ ] Meta title is specific and keyword-rich (not generic)
-- [ ] Meta description is 140–160 chars, answer-first
+- [ ] Meta description is 150–160 chars, answer-first
 - [ ] Canonical URL set
 - [ ] Internal links use descriptive anchor text (not "click here")
 - [ ] FAQ entries are self-contained (no "as mentioned above")
@@ -1818,7 +1818,7 @@ Run this before publishing any new page or blog post:
 - [ ] Article links up to `/prompt-engineering/what-is-prompt-engineering` (pillar link)
 - [ ] Article links sideways to 2+ sibling articles in same theme column
 - [ ] Article links down to 1+ article in a different theme column
-- [ ] "Related reading" block present at end of article (exactly 3 internal links)
+- [ ] "Related reading" block present at end of article (minimum 4 internal links, full H1 title as anchor text)
 - [ ] 2–3 external source links included (peer-reviewed papers or official docs preferred) — MUST be hyperlinked URLs in Markdown format, not plain text — no competitor product links (Rule 10)
 - [ ] Visible last-updated date present near top of article with `<time datetime="">` HTML element (Rule 11)
 - [ ] 2–3 LLM snippet blocks present (definition box, compare/contrast, or compact list)
@@ -2019,7 +2019,7 @@ done
 
 ### CONTENT STRUCTURE (visible in rendered HTML)
 
-- [ ] Executive Summary or bold opening sentence in first paragraph — direct answer to the page title question, 25 words or less
+- [ ] Lead Answer Block in first paragraph — bold, 30–50 words, direct answer to the page title question (see Rule 31)
 - [ ] Key Takeaways block (class="key-takeaways") with 5-7 bullets placed AFTER the intro paragraph, BEFORE the first H2
 - [ ] Jump navigation if page has 4+ sections
 - [ ] Every H2 section opens with a bolded one-sentence direct answer
@@ -2076,7 +2076,7 @@ done
 
 1. **H1 title**
 2. **Lead Answer Block** (25–50 words, bold, answers H1 directly — see Rule 31)
-3. **Key Takeaways block** (4–6 bullets — BEFORE the first H2, always)
+3. **Key Takeaways block** (5–7 bullets — BEFORE the first H2, always)
 4. **Quick Facts block** (if article has 4+ numerical facts — see Rule 27)
 5. **Audience & Level signal** (Level: / Audience: — see Rule 29)
 6. **First H2: "What Is [Topic]?"** (bold one-sentence definition)
@@ -2384,7 +2384,7 @@ When adding a new route type (new static page, new section):
 ### 3. Article Body (in order)
 
 - [ ] Lead Answer Block first (25–50 words, bold, answers H1 directly — Rule 31)
-- [ ] Key Takeaways box immediately after intro (4–6 bullets — Rule 8c)
+- [ ] Key Takeaways box immediately after intro (5–7 bullets — Rule 8c)
 - [ ] Clickable Table of Contents with anchor links to every H2 (Rule 8c)
 - [ ] Last Updated + Sources box right after TOC (Rule 8c)
 - [ ] Every major section has an "In one sentence:" or "In plain terms:" snippet block (Rule 33)
