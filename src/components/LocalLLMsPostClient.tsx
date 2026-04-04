@@ -316,8 +316,10 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
   }
 
   // Fall back to English if translation has empty sections
-  const hasTranslation = articleData[lang] && Object.keys(articleData[lang].sections).length > 0
-  const article = hasTranslation ? articleData[lang] : articleData['en']
+  const langData = articleData[lang]
+  const enData = articleData['en']!
+  const hasTranslation = langData && Object.keys(langData.sections).length > 0
+  const article = hasTranslation ? langData : enData
   const colors = THEME_COLORS[article.theme] ?? THEME_COLORS['Getting Started']
 
   return (

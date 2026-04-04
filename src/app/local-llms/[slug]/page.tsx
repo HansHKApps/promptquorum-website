@@ -75,12 +75,13 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
-  const article = llmContent[key][selectedLang] || llmContent[key]['en']
+  const article = llmContent[key][selectedLang] ?? llmContent[key]['en']
+  if (!article) return notFound()
   const canonicalUrl = `https://www.promptquorum.com/local-llms/${slug}`
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
 
   // Use seoTitle if available for better SERP display, otherwise use article title
-  const pageTitle = (article as any).seoTitle ?? article.title
+  const pageTitle = article.seoTitle ?? article.title
   // Use metaDescription for OG/Twitter when available, otherwise fall back to intro
   const metaDesc = (article as any).metaDescription ?? article.intro
 
@@ -152,7 +153,7 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
   const selectedLang = (validLangs.includes(lang) ? lang : 'en') as 'en' | 'de' | 'fr' | 'ja' | 'zh'
 
-  const article = llmContent[key][selectedLang] || llmContent[key]['en']
+  const article = (llmContent[key][selectedLang] ?? llmContent[key]['en'])!
   const canonicalUrl = `https://www.promptquorum.com/local-llms/${slug}`
 
   // Use article.schema if defined; otherwise fallback to generic TechArticle schema
