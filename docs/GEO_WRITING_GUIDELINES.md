@@ -1635,34 +1635,45 @@ Updated April 2026: Gemini 2.5 Pro now supports 2M token contexts, up from 1M pr
 
 ## Rule 29: Audience & Difficulty Level Signal
 
-**Every article must display a one-line audience and difficulty signal directly below the intro paragraph.**
+**Every article must display a one-line audience and difficulty signal placed directly below the intro paragraph, before the Key Takeaways box.**
+
+**Rendering:** Display as small styled metadata, NOT as an H2 heading. Use semantic HTML or subtle styling (smaller font, muted color).
 
 **Required format:**
 ```
 Level: [Beginner | Intermediate | Advanced | Technical]
-Audience: [Specific description, e.g., "Developers, marketers, researchers using LLMs"]
+Audience: [Specific job role or use case, e.g., "Developers building with LLMs", "Marketers using ChatGPT", "AI researchers"]
 ```
 
 **Level definitions:**
 
-| Level | Definition |
-|-------|-----------|
-| Beginner | No prior AI knowledge required |
-| Intermediate | Basic LLM familiarity assumed |
-| Advanced | Assumes working knowledge of prompt engineering |
-| Technical | Code, math notation, or architecture knowledge required |
+| Level | Definition | Example articles |
+|-------|-----------|---|
+| Beginner | No prior AI knowledge required | "What Is Prompt Engineering?" |
+| Intermediate | Basic LLM familiarity assumed | "Few-Shot Prompting", "Temperature & Top-P" |
+| Advanced | Assumes working prompt engineering knowledge | "RAG Explained", "Prompt Injection Defense" |
+| Technical | Code, math notation, or model architecture knowledge required | "How LLMs Actually Work", "Token Economics" |
+
+**Audience specificity rule (MANDATORY):**
+- ❌ Wrong: "AI users", "Everyone", "People interested in AI"
+- ✅ Right: "Developers building with LLMs", "Marketers using ChatGPT", "Data scientists optimizing LLM pipelines", "Content teams producing AI-assisted copy"
+- ✅ Right: "Enterprise teams evaluating LLM vendors", "Prompt engineers at scale", "Researchers studying model behavior"
+
+The audience description must name a **specific job role or use case** — the reader should immediately know if this article is for them.
 
 **Schema requirement:** The Article schema must include `educationalLevel` and `audience` fields:
 ```json
 {
   "educationalLevel": "Intermediate",
-  "audience": { "@type": "Audience", "audienceType": "Developers, prompt engineers" }
+  "audience": { "@type": "Audience", "audienceType": "Developers building with LLMs, prompt engineers" }
 }
 ```
 
 **Rules:**
-- Audience must be specific (❌ "Everyone", ✅ "Marketing and content teams using ChatGPT or Claude")
+- Audience must be specific — names a job role, team type, or use case
 - This signal is separate from the audience mention in the intro paragraph (Rule 21.1) — both are required
+- Render without JavaScript (SSR visible)
+- Placement must be immediately after intro, before Key Takeaways box
 - Render without JavaScript (SSR visible)
 
 ---
@@ -2447,7 +2458,8 @@ When adding a new route type (new static page, new section):
 - [ ] Comparison table includes anchor ID `id="comparison-[a]-vs-[b]"` (Rule 26.10)
 - [ ] Minimum 2 inline date references in body text for time-sensitive facts (Rule 28)
 - [ ] Quick Facts block included if 4+ numerical facts (Rule 27)
-- [ ] Audience & Level signal present below intro (Rule 29)
+- [ ] Audience & Level signal present below intro, before Key Takeaways (Rule 29)
+- [ ] Audience description is specific — names a job role or use case, not generic "AI users" (Rule 29)
 
 ### 4. Bottom of Article
 
