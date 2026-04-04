@@ -1,5 +1,16 @@
+import type { Metadata } from 'next'
 import { LandingPageServer } from '@/components/LandingPageServer'
 import { ConfirmedToast } from '@/components/ConfirmedToast'
+
+export const metadata: Metadata = {
+  description: 'PromptQuorum dispatches one prompt to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and 25+ models simultaneously. Compare responses, detect hallucinations, and get Quorum consensus. Free — bring your own API key.',
+  openGraph: {
+    description: "Stop testing one AI model at a time. PromptQuorum sends your prompt to 25+ models at once — GPT-4o, Claude, Gemini, Mistral, Llama, DeepSeek — and surfaces which answers agree. Hallucination detection included.",
+  },
+  twitter: {
+    description: 'One prompt → 25+ AI models → consensus answer 🤖 Compare GPT-4o, Claude, Gemini in parallel. Hallucination detection built in. Free — BYOK.',
+  },
+}
 
 interface PageProps {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>

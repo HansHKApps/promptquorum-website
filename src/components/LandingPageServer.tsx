@@ -65,21 +65,21 @@ const T = {
       { title: 'Multi-Model Analysis', description: 'Compare responses from 25+ AI models side-by-side to detect hallucinations.' },
       { title: 'Model Capability Comparison', description: 'Identify which model excels at coding, reasoning, creative writing, or factual recall — side-by-side for your exact prompt.' },
       { title: 'Speed & Efficiency', description: 'Dispatch to 25+ models in one click instead of switching between browser tabs manually.' },
-      { title: 'Privacy First', description: 'Zero registration, zero tracking, total control. Run everything locally.' },
+      { title: 'Privacy First', description: 'API keys stay in your browser localStorage only — never transmitted to PromptQuorum servers. Zero registration, zero tracking, total control.' },
       { title: 'Open Source Integration', description: 'Deploy locally with Ollama, LM Studio, Jan AI, and Meta Llama — no API key required.' },
     ],
     pipelineH2: 'How Does the PromptQuorum 4-Stage Pipeline Work?',
     pipelineDesc: 'Optimize, compare, analyze, and improve your prompts automatically',
     faqH2: 'Frequently Asked Questions',
     waitlistH2: 'Join the PromptQuorum Waitlist',
-    waitlistDesc: 'PromptQuorum launches April 2026. Join the waitlist to get access on day one and provide direct input into the product roadmap.',
+    waitlistDesc: 'PromptQuorum launches April 2026. Early access includes lifetime premium features and priority support. Join to get day-one access and provide direct input into the product roadmap.',
     faqs: [
       { q: 'Is PromptQuorum free?', a: 'Yes. PromptQuorum is free to use. You can bring your own API key, use a local LLM, or try our limited free backend service for prompt optimization on a test basis.' },
       { q: 'How does privacy work?', a: 'You decide where your data goes. Keep everything local with LM Studio or Ollama, or use your own API keys. PromptQuorum is as private as you set it up.' },
-      { q: 'Which AI providers are supported?', a: 'Over 25 AI providers are included, and you can add your own custom providers. Connect to ChatGPT, Claude, Gemini, and many more.' },
+      { q: 'Which AI providers are supported?', a: 'PromptQuorum dispatches to 25+ cloud providers: GPT-4o, GPT-4o mini, Claude 3.5 Sonnet, Claude 4, Gemini 2.0 Flash, Gemini 1.5 Pro, Mistral Large, DeepSeek, Grok, and more. Plus local LLMs: Ollama, LM Studio, Jan AI, GPT4All.' },
       { q: 'What platforms does PromptQuorum run on?', a: 'PromptQuorum starts with desktop apps (Mac, Windows), followed by a web application, and eventually mobile solutions.' },
-      { q: 'What makes PromptQuorum different?', a: 'PromptQuorum is highly automated for prompt improvements, can send the same prompt to multiple AIs simultaneously, and analyzes results based on your criteria.' },
-      { q: 'Are there any limits?', a: 'No limits from PromptQuorum side. Your usage is only limited by your API keys or local LLM resources.' },
+      { q: 'What makes PromptQuorum different?', a: 'PromptQuorum covers the full prompt lifecycle: 9 built-in frameworks for writing, iterative optimization with 8 refinement types, simultaneous dispatch to 25+ models, and 13 Quorum analysis types for consensus scoring.' },
+      { q: 'Are there any limits?', a: 'No limits from PromptQuorum side. Your usage depends only on your own API rate limits or local LLM resources—we never throttle or meter usage.' },
     ],
     copyright: '© 2026 PromptQuorum. All rights reserved.',
     worldwide: '🌍 Available worldwide',
@@ -268,6 +268,10 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
             {t.h1a}
             <span className="block text-primary">{t.h1b}</span>
           </h1>
+
+          <p className="mt-6 text-lg text-text-primary max-w-3xl mx-auto animate-fade-in font-medium leading-relaxed" style={{ animationDelay: '150ms' }}>
+            <strong>PromptQuorum is a multi-AI dispatch tool that sends one prompt to 25+ models simultaneously — GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, DeepSeek, and more — and scores the results for consensus and hallucination risk.</strong>
+          </p>
 
           <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
             {t.heroDesc}

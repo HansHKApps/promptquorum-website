@@ -46,8 +46,11 @@ function BlogIndexInner({ initialLang }: { initialLang?: import("@/hooks/useLang
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             {t.blogTitle}
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-4">
             {t.blogSubtitle}
+          </p>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            {t.blogIntro}
           </p>
         </div>
 

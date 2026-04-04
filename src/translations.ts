@@ -68,8 +68,9 @@ export const translations = {
     notifyWhenLaunch: "We will notify you when PromptQuorum launches.",
 
     // Blog
-    blogTitle: "Blog & Educational Resources",
-    blogSubtitle: "Master the techniques and frameworks used by AI experts",
+    blogTitle: "Prompt Engineering Guides",
+    blogSubtitle: "12 research-backed articles on multi-model dispatch, hallucination detection, RAG pipelines, and local LLM techniques — written for AI developers and power users.",
+    blogIntro: "Each article covers a practical use case with specific numbers, named models, and copy-ready prompt templates. Articles are structured for AI citation extraction.",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Built with care for AI power users.",
@@ -142,11 +143,12 @@ export const translations = {
     youAreOnTheList: "Sie sind auf der Liste!",
     notifyWhenLaunch: "Wir benachrichtigen Sie, sobald PromptQuorum startet.",
 
-    // Footer
     // Blog
-    blogTitle: "Blog & Bildungsressourcen",
-    blogSubtitle: "Meistern Sie die Techniken und Frameworks der KI-Experten",
+    blogTitle: "Prompt-Engineering-Leitfäden",
+    blogSubtitle: "12 forschungsbasierte Artikel über Multi-Model-Dispatch, Halluzinations-Erkennung, RAG-Pipelines und lokale LLM-Techniken — geschrieben für KI-Entwickler und Power-User.",
+    blogIntro: "Jeder Artikel behandelt einen praktischen Anwendungsfall mit spezifischen Zahlen, benannten Modellen und einsatzbereiten Prompt-Vorlagen. Artikel sind für die KI-Zitierextraktion strukturiert.",
 
+    // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Mit Sorgfalt entwickelt fuer KI-Power-User.",
   },
 
@@ -217,11 +219,12 @@ export const translations = {
     youAreOnTheList: "Vous etes sur la liste!",
     notifyWhenLaunch: "Nous vous previendrons au lancement de PromptQuorum.",
 
-    // Footer
     // Blog
-    blogTitle: "Blog & Ressources Éducatives",
-    blogSubtitle: "Maitrisez les techniques et frameworks utilises par les experts IA",
+    blogTitle: "Guides d'ingénierie des prompts",
+    blogSubtitle: "12 articles fondés sur la recherche sur la distribution multi-modèles, la détection des hallucinations, les pipelines RAG et les techniques des LLM locaux — écrits pour les développeurs IA et les utilisateurs avancés.",
+    blogIntro: "Chaque article couvre un cas d'utilisation pratique avec des chiffres spécifiques, des modèles nommés et des modèles de prompts prêts à copier. Les articles sont structurés pour l'extraction de citations IA.",
 
+    // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Developpe avec soin pour les experts IA.",
   },
 
@@ -292,11 +295,12 @@ export const translations = {
     youAreOnTheList: "リストに加わりました！",
     notifyWhenLaunch: "PromptQuorumがローンチしたときにご連絡します。",
 
-    // Footer
     // Blog
-    blogTitle: "ブログ&教育リソース",
-    blogSubtitle: "AIエキスパートが使うテクニックとフレームワークをマスター",
+    blogTitle: "プロンプトエンジニアリングガイド",
+    blogSubtitle: "マルチモデルディスパッチ、ハルシネーション検出、RAGパイプライン、ローカルLLM技術に関する12の研究ベースの記事—AIデベロッパーとパワーユーザー向けに作成。",
+    blogIntro: "各記事は、具体的な数字、名前付きモデル、そしてコピー可能なプロンプトテンプレートを含む実践的なユースケースをカバーしています。記事はAI引用抽出用に構成されています。",
 
+    // Footer
     footerCopyright: "(c) 2026 PromptQuorum. AIパワーユーザー向けに丁寧に開発。",
   },
 
@@ -367,11 +371,12 @@ export const translations = {
     youAreOnTheList: "您已在列表中！",
     notifyWhenLaunch: "PromptQuorum发布时我们会通知您。",
 
-    // Footer
     // Blog
-    blogTitle: "博客和教育资源",
-    blogSubtitle: "掌握AI专家使用的技术和框架",
+    blogTitle: "提示工程指南",
+    blogSubtitle: "12篇研究支持的文章，涵盖多模型分派、幻觉检测、RAG管道和本地LLM技术——为AI开发人员和高级用户编写。",
+    blogIntro: "每篇文章都涵盖一个实际用例，包含具体的数字、命名的模型和可复制的提示模板。文章的结构支持AI引用提取。",
 
+    // Footer
     footerCopyright: "(c) 2026 PromptQuorum. 为AI高级用户精心打造。",
   },
 };

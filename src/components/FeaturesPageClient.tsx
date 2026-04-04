@@ -25,13 +25,13 @@ const ICONS = [Sparkles, Layers, Brain, Zap, Shield]
 
 const T = {
   en: {
-    h1: 'Features',
-    subtitle: 'Everything you need to write better prompts, test smarter, and optimize faster.',
+    h1: 'PromptQuorum Features: 9 Frameworks, 25+ Models, 13 Analysis Types',
+    subtitle: 'Write structured prompts with 9 built-in frameworks, dispatch to 25+ AI models in parallel, and analyze responses with 13 consensus analysis types — including hallucination detection.',
     features: [
       { title: 'Prompt Optimization', description: 'Automatically refine and optimize your prompts with 8 proven refinement techniques for better AI output.' },
       { title: 'Multi-Model Dispatch', description: 'Run prompts across ChatGPT, Claude, Gemini, and 25+ other AI models simultaneously in parallel.' },
-      { title: 'Quorum Scoring', description: 'Find consensus answers across models with confidence scoring. Detect hallucinations instantly.' },
-      { title: 'Instant Comparison', description: 'See side-by-side responses in seconds. No manual testing across browser tabs.' },
+      { title: 'Quorum Scoring', description: 'Find consensus answers across models with confidence scoring. Hallucination Detection flags claims that appear in only one model response.' },
+      { title: 'Instant Comparison', description: 'Get parallel responses in one click — no manual copy-pasting between browser tabs.' },
       { title: 'Privacy-First', description: 'Local execution option. Zero registration required. Complete control over your prompts.' },
     ],
     optimizationH2: 'Optimization Results',

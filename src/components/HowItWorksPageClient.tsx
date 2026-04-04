@@ -26,7 +26,7 @@ const T = {
       {
         number: '2', name: 'Optimize', route: '/optimize',
         title: 'Refine with Your Own LLM',
-        description: 'Prompt quality improves measurably with optimization. PromptQuorum applies 8 refinement types (Make Concise, Expand Detail, Break Into Steps, Increase Specificity, Simplify, Add Quality Controls, Multi-Expert Consultation, Compress to Essence) plus smart temperature detection.',
+        description: 'Prompt quality improves measurably with optimization — structured prompts score 25–45% higher in LLM evaluation. PromptQuorum applies 8 refinement types (Make Concise, Expand Detail, Break Into Steps, Increase Specificity, Simplify, Add Quality Controls, Multi-Expert Consultation, Compress to Essence) plus smart temperature detection.',
         details: [
           'Quality Assessment — 0-100% scoring on clarity, specificity, structure, and constraints',
           'Smart Temperature — recommends optimal creativity level (0.0-1.0) based on task type',
@@ -54,7 +54,7 @@ const T = {
       {
         number: '4', name: 'Quorum', route: '/quorum',
         title: 'Find Consensus Across All Models',
-        description: 'When 5+ independent models agree on an answer, confidence is dramatically higher than a single model. Paste all responses back into PromptQuorum and apply 13 consensus analysis types.',
+        description: 'When 5+ independent models agree on an answer, confidence is higher than with a single model. Paste all responses back into PromptQuorum and apply 13 consensus analysis types.',
         details: [
           'Consensus Summary — identifies shared themes and unanimous agreements',
           'Contradiction Detection — flags where models diverge; identifies minority opinions',
@@ -63,7 +63,7 @@ const T = {
           'Best Answer Selection — selects the highest-quality individual response',
           'Weighted Merge — synthesizes a hybrid response using best elements from all models',
         ],
-        callout: 'When 5 models agree, hallucination risk drops dramatically compared to single-model answers.',
+        callout: 'When 5+ independent models converge on the same answer, hallucination risk is lower than with a single model.',
       },
     ],
     frameworksH2: '9 Built-in Prompt Frameworks',
