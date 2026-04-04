@@ -6,7 +6,7 @@ import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { peContent, type PESection } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
-import { LEARNING_PATHS, TRENDING_TERMS_2026, getTermPaths, type LearningPath } from '@/lib/prompt-engineering/learningPaths'
+import { LEARNING_PATHS, TRENDING_TERMS_2026, getTermPaths, DOMAIN_TO_PATH, LEVEL_TO_PATHS, type LearningPath } from '@/lib/prompt-engineering/learningPaths'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
 interface Props {
@@ -673,6 +673,8 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
   const key = PE_SLUG_TO_KEY[slug]
   const articleData = key ? peContent[key] : null
   const [searchQuery, setSearchQuery] = useState('')
+  const [levelFilter, setLevelFilter] = useState('all')
+  const [domainFilter, setDomainFilter] = useState('all')
 
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
@@ -752,6 +754,51 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
                 })()}
               </p>
             )}
+          </div>
+        )}
+
+        {/* Filter bar for glossary */}
+        {slug === 'prompt-engineering-glossary' && !searchQuery && (
+          <div className="mb-8">
+            {/* Level filter */}
+            <div className="mb-4">
+              <p className="text-xs font-semibold text-text-primary uppercase tracking-widest mb-2">Level</p>
+              <div className="flex flex-wrap gap-2">
+                {['all', 'beginner', 'intermediate', 'advanced'].map(level => (
+                  <button
+                    key={level}
+                    onClick={() => setLevelFilter(level)}
+                    className={`text-sm px-3 py-1.5 rounded-full transition-colors ${
+                      levelFilter === level
+                        ? 'bg-primary text-white font-medium'
+                        : 'bg-primary/10 text-text-secondary border border-primary/20 hover:border-primary/40'
+                    }`}
+                  >
+                    {level === 'all' ? 'All' : level.charAt(0).toUpperCase() + level.slice(1)}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Domain filter */}
+            <div>
+              <p className="text-xs font-semibold text-text-primary uppercase tracking-widest mb-2">Domain</p>
+              <div className="flex flex-wrap gap-2">
+                {['all', 'agents', 'rag', 'safety', 'reasoning', 'fine-tuning', 'evaluation'].map(domain => (
+                  <button
+                    key={domain}
+                    onClick={() => setDomainFilter(domain)}
+                    className={`text-sm px-3 py-1.5 rounded-full transition-colors ${
+                      domainFilter === domain
+                        ? 'bg-primary text-white font-medium'
+                        : 'bg-primary/10 text-text-secondary border border-primary/20 hover:border-primary/40'
+                    }`}
+                  >
+                    {domain === 'all' ? 'All' : domain.charAt(0).toUpperCase() + domain.slice(1)}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         )}
 
@@ -889,18 +936,43 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
               })
             }
 
-            // Filter sections if searching (search only in Term column)
+            // Compute active filter paths
+            const activePathIds = new Set<string>()
+            if (levelFilter !== 'all') {
+              LEVEL_TO_PATHS[levelFilter]?.forEach(p => activePathIds.add(p))
+            }
+            if (domainFilter !== 'all' && DOMAIN_TO_PATH[domainFilter]) {
+              activePathIds.add(DOMAIN_TO_PATH[domainFilter])
+            }
+            const hasPathFilters = activePathIds.size > 0
+
+            // Filter sections by search query and active path filters
             const sectionsToRender = Object.entries(article.sections)
               .map(([key, section]) => {
-                if (!isSearching || !section.rows) {
+                if (!section.rows) {
                   return [key, section] as const
                 }
-                const filteredRows = section.rows.filter(row =>
-                  row['Term']?.toLowerCase?.().includes(query)
-                )
+
+                let filteredRows = section.rows
+
+                // Apply search filter
+                if (isSearching) {
+                  filteredRows = filteredRows.filter(row =>
+                    row['Term']?.toLowerCase?.().includes(query)
+                  )
+                }
+
+                // Apply path filter (level / domain)
+                if (hasPathFilters) {
+                  filteredRows = filteredRows.filter(row => {
+                    const paths = termPathMap.get(row['Term'] ?? '') ?? []
+                    return paths.some(p => activePathIds.has(p))
+                  })
+                }
+
                 return [key, { ...section, rows: filteredRows }] as const
               })
-              .filter(([, section]) => !isSearching || !section.rows || section.rows.length > 0)
+              .filter(([, section]) => !section.rows || section.rows.length > 0)
 
             return sectionsToRender.map(([key, section]) => {
               // Glossary explicit IDs take precedence; all other titled sections get auto-generated IDs
