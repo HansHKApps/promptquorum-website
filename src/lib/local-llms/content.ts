@@ -3416,4 +3416,1577 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'ollama-vs-lm-studio': {
+    en: {
+      theme: 'Tools & Interfaces',
+      title: 'Ollama vs LM Studio in 2026: Which Local LLM Tool Should You Choose?',
+      seoTitle: 'Ollama vs LM Studio: Complete Comparison',
+      intro: 'Ollama and LM Studio are the two most popular tools for running local LLMs in 2026. Ollama is a lightweight CLI-first tool that exposes a REST API — best for developers, automation, and production deployments. LM Studio is a graphical desktop application with a built-in chat interface — best for beginners and non-technical users. This guide compares both across setup complexity, model management, performance, and real-world use cases.',
+      metaDescription: 'Ollama vs LM Studio comparison: features, performance, ease-of-use, API compatibility, and which to choose. Expert guide for 2026. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '12 min read',
+      educationalLevel: 'Beginner to Advanced',
+      primaryTerm: 'Ollama vs LM Studio',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Quick Comparison Table', anchor: '#quick-comparison-table' },
+        { label: 'What Is Ollama?', anchor: '#what-is-ollama' },
+        { label: 'What Is LM Studio?', anchor: '#what-is-lm-studio' },
+        { label: 'Setup and Installation', anchor: '#setup-and-installation' },
+        { label: 'Model Management', anchor: '#model-management' },
+        { label: 'Performance and Speed', anchor: '#performance-and-speed' },
+        { label: 'API and Integration', anchor: '#api-and-integration' },
+        { label: 'When to Use Ollama', anchor: '#when-to-use-ollama' },
+        { label: 'When to Use LM Studio', anchor: '#when-to-use-lm-studio' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'As of April 2026, Ollama and LM Studio are the two dominant local LLM tools. Both run the same models and produce identical inference speed.',
+            '**Ollama** = lightweight CLI with REST API (OpenAI-compatible). No GUI. Works on macOS, Linux, Windows. Best for developers, production, automation.',
+            '**LM Studio** = full desktop app with built-in chat UI, model browser, GPU settings. Much easier for beginners. Windows and macOS only.',
+            'Both tools are free and open-source. Neither is objectively "better" — the choice depends entirely on your workflow.',
+            'Key difference: Ollama exposes an API (localhost:11434); LM Studio is primarily a standalone application (though it also has an API in beta).',
+          ],
+        },
+        quickComparison: {
+          title: 'Quick Comparison: Ollama vs LM Studio',
+          rows: [
+            { 'Feature': 'User Interface', 'Ollama': 'CLI only', 'LM Studio': 'Full graphical app' },
+            { 'Feature': 'Model Browser', 'Ollama': 'Command-line list', 'LM Studio': 'Visual model browser' },
+            { 'Feature': 'Built-in Chat UI', 'Ollama': 'No (requires 3rd-party app)', 'LM Studio': 'Yes, built-in' },
+            { 'Feature': 'REST API', 'Ollama': 'Yes, OpenAI-compatible', 'LM Studio': 'Yes (beta), OpenAI-compatible' },
+            { 'Feature': 'GPU Settings', 'Ollama': 'Via environment variables', 'LM Studio': 'Visual sliders in app' },
+            { 'Feature': 'Operating Systems', 'Ollama': 'macOS, Linux, Windows', 'LM Studio': 'macOS, Windows, Linux (beta)' },
+            { 'Feature': 'Setup Time', 'Ollama': '2–3 minutes (CLI)', 'LM Studio': '5 minutes (download, install, run)' },
+            { 'Feature': 'Ease for Beginners', 'Ollama': '★★☆☆☆', 'LM Studio': '★★★★★' },
+            { 'Feature': 'Ease for Developers', 'Ollama': '★★★★★', 'LM Studio': '★★★☆☆' },
+            { 'Feature': 'Price', 'Ollama': 'Free', 'LM Studio': 'Free' },
+          ],
+          columns: ['Feature', 'Ollama', 'LM Studio'],
+        },
+        whatIsOllama: {
+          title: 'What Is Ollama?',
+          content: [
+            'Ollama is a command-line tool that downloads and runs open-source language models locally. It is built on llama.cpp, a C++ inference engine optimized for CPU and GPU performance. As of April 2026, Ollama supports 200+ models across its library.',
+            'Ollama works by: (1) you run `ollama pull <model>` to download model weights, (2) you run `ollama run <model>` to start the model as a service, (3) the model becomes accessible via a REST API at `http://localhost:11434`, and (4) you connect any application (Python, Node.js, web app) to this API.',
+            'Ollama is lightweight — it adds minimal overhead and uses minimal disk space for temporary files. It is designed for developers and production use, not for users who want a graphical interface.',
+          ],
+        },
+        whatIsLmStudio: {
+          title: 'What Is LM Studio?',
+          content: [
+            'LM Studio is a desktop application that bundles a model downloader, a chat interface, and inference settings into one window. It is built on llama.cpp (the same underlying engine as Ollama), but wraps it in a user-friendly graphical interface.',
+            'LM Studio was designed for non-technical users and beginners. You launch the app, browse a visual library of models, download with one click, and start chatting. No command-line knowledge required.',
+            'As of April 2026, LM Studio supports macOS and Windows natively. Linux support is in beta. LM Studio also exposes an OpenAI-compatible API (in beta), allowing developers to integrate it into applications, though this feature is less mature than Ollama\'s.',
+          ],
+        },
+        setup: {
+          title: 'How Do You Set Up Ollama vs LM Studio?',
+          items: [
+            '**Ollama Setup (3 minutes)**: Download the installer from ollama.ai → run installer → open terminal → type `ollama run llama3.2:3b` → model downloads and starts. Done.',
+            '**LM Studio Setup (5 minutes)**: Download LM Studio from lmstudio.ai → run installer → launch app → click "Search models" → find "llama3.2:3b" → click download → wait for model → click "Start server" → open built-in chat tab. Done.',
+            'Both are genuinely simple. Ollama is faster if you already use the terminal; LM Studio is faster if you do not want to touch the terminal.',
+          ],
+        },
+        modelManagement: {
+          title: 'How Do You Manage Models in Each Tool?',
+          content: [
+            'Model management means downloading models, checking disk usage, deleting old models, and switching between different models.',
+            '**In Ollama**: All commands are CLI-based. `ollama list` shows downloaded models, `ollama pull <name>` downloads a new model, `ollama rm <name>` deletes a model, `ollama run <name>` launches a model. Model files are stored in `~/.ollama/models` on your machine. It is straightforward but requires terminal familiarity.',
+            '**In LM Studio**: Click "Search models" in the app, browse the visual library, click a model to see its details (size, quantization, description), click "Download" (shows progress bar), and models are stored in a settings-configurable folder. You can see all downloaded models in a sidebar and swap between them with one click. It is significantly more visual and beginner-friendly.',
+          ],
+          codeBlock: '# Ollama model management\nollama list              # See all downloaded models\nollama pull llama3.2:3b  # Download a model\nollama run llama3.2:3b   # Start a model\nollama rm llama3.2:3b    # Delete a model\nollama pull qwen2.5:7b   # Download a different model\n\n# LM Studio: same actions in GUI\n# Search models → Download → Click to use',
+          codeLanguage: 'bash',
+        },
+        performance: {
+          title: 'Which Is Faster: Ollama or LM Studio?',
+          content: [
+            'Both tools use the same underlying C++ inference engine (llama.cpp). On identical hardware running identical models, they produce **identical token generation speed**. As of April 2026, there is no performance difference between them.',
+            'Speed depends entirely on your hardware (GPU VRAM, GPU type, CPU cores) and the model you run. A Llama 3.2 3B model on an RTX 4090 generates about 150 tokens/second in both tools. The same model on a laptop CPU generates about 10 tokens/second in both tools.',
+            'LM Studio includes a visual benchmark tool (Settings → Benchmark) that lets you test token generation speed without using the terminal. Ollama does not have a built-in benchmark, but you can benchmark via the API.',
+          ],
+        },
+        api: {
+          title: 'Which Has Better API Support for Developers?',
+          content: [
+            'Ollama exposes a fully OpenAI-compatible REST API at `http://localhost:11434`. This means you can use any OpenAI SDK (Python, Node.js, Go, etc.) by simply changing the base URL and running a local model. This is production-ready and widely used in enterprise deployments.',
+            '**Example: using Ollama API from Python:**',
+            'LM Studio also exposes an OpenAI-compatible API (in beta as of April 2026), accessible at `http://localhost:1234`. However, it is less documented and less widely tested in production than Ollama. If you need API reliability for a production application, Ollama is the safer choice.',
+          ],
+          codeBlock: 'from openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama",  # dummy key, unused locally\n)\n\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[\n    {"role": "user", "content": "What is 2+2?"}\n  ]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        whenOllama: {
+          title: 'When Should You Choose Ollama?',
+          content: 'Choose Ollama if:',
+          items: [
+            'You are a developer building an application that needs to integrate a local LLM via API.',
+            'You are running models on a server or cloud VM (Linux), where a GUI is not useful.',
+            'You want a lightweight tool with minimal overhead.',
+            'You are comfortable using the command line.',
+            'You need production-ready, stable API support.',
+            'You want to automate model downloading and management (e.g., in shell scripts or CI/CD pipelines).',
+          ],
+        },
+        whenLmStudio: {
+          title: 'When Should You Choose LM Studio?',
+          content: 'Choose LM Studio if:',
+          items: [
+            'You are a non-technical user or beginner who wants a graphical interface.',
+            'You want a single application where you can browse models, download, chat, and adjust GPU settings — all in one place.',
+            'You prefer visual feedback (progress bars, memory usage graphs) over command-line output.',
+            'You want to experiment with models quickly without touching the terminal.',
+            'You are on macOS or Windows (best support for these OS).',
+            'You want quick model switching without memorizing command names.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Choosing Between Ollama and LM Studio',
+          items: [
+            '**Thinking one is significantly faster than the other.** They use the same inference engine. Speed differences are imperceptible on identical hardware and models. Choose based on UI preference and workflow, not speed.',
+            '**Assuming Ollama has no GUI.** Ollama does not have a built-in chat UI, but you can use it with third-party web interfaces (Open WebUI, Enchanted UI, etc.) that run in your browser. It is not a limitation, just a design choice.',
+            '**Not realizing both tools can run simultaneously.** You can run Ollama in the background (via CLI or systemd service) while also using LM Studio as your chat interface, and both access the same models. They do not conflict.',
+            '**Thinking LM Studio API is production-ready.** As of April 2026, LM Studio\'s API is still in beta and not recommended for production. Use Ollama for API-dependent production workloads.',
+            '**Not checking model quantization before download.** Both tools let you download the same model in different quantizations (4-bit, 5-bit, 8-bit). The quantization affects VRAM usage more than the tool choice. Always check the specific quantization before downloading.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions: Ollama vs LM Studio',
+          faqs: [
+            {
+              q: 'Can I use Ollama and LM Studio at the same time?',
+              a: 'Yes. Ollama runs as a background service (CLI-based), and LM Studio is a desktop app. You can run Ollama in a terminal and LM Studio simultaneously. However, they cannot both serve the same model at the same time — that would double the VRAM usage. You typically choose one to be your "active" tool for inference.',
+            },
+            {
+              q: 'Can I use the same models in both?',
+              a: 'Yes, both tools support GGUF and safetensors format. A model downloaded in Ollama can be imported into LM Studio (or vice versa) by pointing to the model file location. By default, they use separate folders, but you can configure LM Studio to use Ollama\'s model folder.',
+            },
+            {
+              q: 'Does Ollama work on Windows?',
+              a: 'Yes, as of April 2026. Ollama for Windows is in stable release and works reliably on Windows 10 and 11 with NVIDIA, AMD, and Intel GPUs. The Windows version is slightly less mature than macOS, but is production-ready.',
+            },
+            {
+              q: 'Is LM Studio better for Mac?',
+              a: 'LM Studio has excellent native macOS support, including Apple Silicon (M-series chips) optimization. Ollama also supports Mac and M-series chips equally well. On macOS, it is mostly a UI preference.',
+            },
+            {
+              q: 'Which tool uses less disk space?',
+              a: 'Both use the same amount of disk space to store models — they both use the same model files. The tool itself (the application code) is small in both cases. If anything, Ollama is slightly more minimal since it is CLI-only.',
+            },
+            {
+              q: 'Can I use Ollama with Cursor or VS Code?',
+              a: 'Yes. Both Cursor and VS Code can connect to Ollama\'s API (localhost:11434) using OpenAI-compatible plugins. See the [Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) guide for detailed setup.',
+            },
+            {
+              q: 'Which is better for RAG (Retrieval-Augmented Generation)?',
+              a: 'For RAG workflows, you typically run a model via API. Both Ollama and LM Studio support this, so either works. Ollama is slightly more common in RAG because its API is more stable. See [Best Local RAG Tools](/local-llms/best-local-rag-tools) for a complete comparison.',
+            },
+            {
+              q: 'Do I need a GPU to run either tool?',
+              a: 'No. Both tools can run models on CPU alone (much slower — 1–5 tokens/sec). A GPU makes both tools 10–50× faster. Ollama and LM Studio both auto-detect your GPU and use it automatically if present.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Step-by-step setup guide for Ollama on macOS, Windows, and Linux.',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — Complete LM Studio installation and first-model setup.',
+            '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — Guide to Open WebUI, Enchanted UI, and other chat interfaces for Ollama.',
+            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — How to connect Python, Node.js, and JavaScript apps to your local model.',
+            '[Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) — Integrate Ollama with your code editor for in-editor completions.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Ollama Official GitHub — github.com/ollama/ollama',
+            'LM Studio Official Website — lmstudio.ai',
+            'llama.cpp Project — github.com/ggerganov/llama.cpp (underlying inference engine)',
+            'OpenAI API Compatibility Spec — platform.openai.com/docs/api-reference',
+          ],
+        },
+      },
+    },
+  },
+
+  'best-local-llm-frontends': {
+    en: {
+      theme: 'Tools & Interfaces',
+      title: 'Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More',
+      seoTitle: 'Best Local LLM Chat Frontends',
+      intro: 'A frontend (or chat UI) is the interface where you interact with your local LLM. Ollama and LM Studio can run models, but for a polished chat experience, most developers use a third-party frontend. As of April 2026, Open WebUI is the most feature-rich option (25,000+ GitHub stars), Enchanted UI offers the fastest lightweight experience, and Jan AI provides an offline app alternative. This guide compares 8 frontends across features, ease-of-setup, and best use cases.',
+      metaDescription: 'Best local LLM chat UIs: Open WebUI, Enchanted, Jan, Continue, and more. Feature comparison and setup guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '11 min read',
+      educationalLevel: 'Beginner to Advanced',
+      primaryTerm: 'local LLM frontend',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Top 8 Frontends Comparison', anchor: '#top-8-frontends' },
+        { label: 'Best Overall: Open WebUI', anchor: '#best-overall-open-webui' },
+        { label: 'Best for Speed: Enchanted UI', anchor: '#best-for-speed-enchanted' },
+        { label: 'Best Desktop App: Jan AI', anchor: '#best-desktop-jan' },
+        { label: 'Best for Code: Continue.dev', anchor: '#best-for-code-continue' },
+        { label: 'Best Web Interface: Gradio/Streamlit', anchor: '#best-web-gradio' },
+        { label: 'Comparing Self-Hosted vs Cloud', anchor: '#self-hosted-vs-cloud' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'A local LLM frontend is the chat interface you use to talk to your model. Ollama provides the API; the frontend is the UI.',
+            '**Open WebUI** is the most feature-rich (RAG, multimodal, knowledge bases, function calling). Requires Docker. 12 GB RAM+ recommended.',
+            '**Enchanted UI** is the fastest and most minimal. Zero dependencies, runs in your browser. Best for lightweight use.',
+            '**Jan AI** is a desktop app (Windows, macOS) with offline sync. No server setup. Popular with non-technical users.',
+            '**Continue.dev** is a VS Code extension for inline code suggestions from your local Ollama model.',
+            'As of April 2026, all top frontends are open-source and free.',
+          ],
+        },
+        topFrontends: {
+          title: 'Top 8 Local LLM Frontends: Feature Comparison',
+          rows: [
+            { 'Frontend': 'Open WebUI', 'Type': 'Web app (Docker)', 'Best For': 'Feature-rich, RAG, teams', 'Setup Time': '5 min (with Docker)', 'RAM Required': '12 GB+', 'Open Source': 'Yes' },
+            { 'Frontend': 'Enchanted UI', 'Type': 'Web (no deps)', 'Best For': 'Speed, simplicity', 'Setup Time': '0 min (URL)', 'RAM Required': '8 GB+', 'Open Source': 'Yes' },
+            { 'Frontend': 'Jan AI', 'Type': 'Desktop app', 'Best For': 'Non-technical users, offline', 'Setup Time': '3 min (install)', 'RAM Required': '8 GB+', 'Open Source': 'Yes' },
+            { 'Frontend': 'Continue.dev', 'Type': 'VS Code extension', 'Best For': 'Code completion', 'Setup Time': '2 min (install extension)', 'RAM Required': '8 GB+', 'Open Source': 'Yes' },
+            { 'Frontend': 'Lobe Chat', 'Type': 'Web app', 'Best For': 'Privacy, user customization', 'Setup Time': '5 min', 'RAM Required': '8 GB+', 'Open Source': 'Yes' },
+            { 'Frontend': 'Gradio', 'Type': 'Python library', 'Best For': 'Custom interfaces, ML teams', 'Setup Time': '5 min (Python)', 'RAM Required': '8 GB+', 'Open Source': 'Yes' },
+            { 'Frontend': 'Streamlit', 'Type': 'Python framework', 'Best For': 'Data scientists, dashboards', 'Setup Time': '5 min (Python)', 'RAM Required': '8 GB+', 'Open Source': 'Yes' },
+            { 'Frontend': 'Text-generation-webui', 'Type': 'Web (complex)', 'Best For': 'Experimentation, advanced users', 'Setup Time': '15 min', 'RAM Required': '12 GB+', 'Open Source': 'Yes' },
+          ],
+          columns: ['Frontend', 'Type', 'Best For', 'Setup Time', 'RAM Required', 'Open Source'],
+        },
+        openWebUI: {
+          title: 'What Makes Open WebUI the Most Popular Frontend?',
+          content: [
+            'Open WebUI is an all-in-one interface for local models. It works with Ollama, LM Studio, or any OpenAI-compatible API. As of April 2026, it is the most downloaded local LLM frontend on GitHub (25,000+ stars) because it packs the most features into a single application.',
+            '**Key features:**',
+            '- **RAG (Retrieval-Augmented Generation)**: Upload documents (PDFs, text files) and have the model answer questions about them.',
+            '- **Multimodal support**: Upload images and ask questions about them.',
+            '- **Web search integration**: The model can search the web for current information.',
+            '- **Knowledge bases**: Create persistent collections of documents that the model references.',
+            '- **Function calling and tools**: Build workflows where the model can call functions or tools.',
+            '- **Team collaboration**: Multiple users can share the same instance.',
+            '- **Model marketplace**: Browse and download models directly from the UI.',
+            'As of April 2026, the main limitation is that Open WebUI requires Docker to run, which adds a 5-minute setup overhead. Once running, it is significantly more powerful than lightweight alternatives.',
+          ],
+          codeBlock: '# Run Open WebUI with Docker (5 min setup)\ndocker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \\\n  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \\\n  --name open-webui ghcr.io/open-webui/open-webui:latest\n\n# Then open http://localhost:3000 in your browser',
+          codeLanguage: 'bash',
+        },
+        enchanted: {
+          title: 'Why Choose Enchanted UI for Lightweight Speed?',
+          content: [
+            'Enchanted UI is a minimal, zero-dependency web interface for Ollama. It is not a downloadable app — it is a single HTML file that runs in your browser. As of April 2026, it is the fastest and most responsive frontend for simple chat.',
+            '**Key features:**',
+            '- **Instant launch**: No installation, no dependencies. Just open a URL.',
+            '- **Fast**: Minimal JavaScript, no heavy frameworks.',
+            '- **Private**: Everything runs in your browser; no data leaves your machine.',
+            '- **Beautiful dark mode**: Clean, modern interface.',
+            'Enchanted UI is perfect if you want to chat with your local model without any setup complexity. It lacks RAG, multimodal, and advanced features, but for everyday chat, it is unmatched in simplicity.',
+          ],
+          codeBlock: '# 1. Start your Ollama model\nollama run llama3.2:3b\n\n# 2. Open this URL in your browser\n# https://enchanted.div.ai/\n\n# Ollama will auto-detect, and you can start chatting immediately',
+          codeLanguage: 'bash',
+        },
+        janAI: {
+          title: 'Why Is Jan AI Best for Desktop Users?',
+          content: [
+            'Jan AI is a desktop application (Windows, macOS) that bundles model management, inference, and a chat UI into one app. It is similar to LM Studio but with stronger offline support and a community-driven approach.',
+            '**Key features:**',
+            '- **Offline-first**: Models sync to your device; no internet required to chat.',
+            '- **GPU and CPU fallback**: Automatically uses GPU if available, falls back to CPU.',
+            '- **Private by default**: No account required, no telemetry.',
+            '- **Extension marketplace**: Add plugins like RAG, web search, or tools.',
+            'Jan is best for non-technical users who want a polished desktop app. As of April 2026, it is gaining traction as a LM Studio alternative with stronger community support.',
+          ],
+        },
+        continueDev: {
+          title: 'How Do You Use Continue.dev for Code Completions?',
+          content: [
+            'Continue.dev is a VS Code and JetBrains IDE extension that connects your local Ollama model to your code editor. When you start typing, Continue suggests completions based on your local model.',
+            '**Setup (2 minutes):**',
+            '1. Install Continue from the VS Code marketplace.',
+            '2. Point it to your Ollama instance (Config → Configure Continue → Add localhost:11434).',
+            '3. Start typing code and press Tab or Ctrl+Shift+\\\ to get completions.',
+            'Continue is perfect for developers who want code suggestions without sending code to cloud APIs. For coding tasks, Ollama with Qwen2.5-Coder 7B or Llama Code models produces reasonable suggestions.',
+          ],
+        },
+        selfHosted: {
+          title: 'Should You Self-Host or Use a Cloud Frontend?',
+          content: 'All frontends listed here are self-hosted (run on your machine or your server). The alternative is cloud frontends like ChatGPT, Claude, or Gemini, which connect to remote servers.',
+          items: [
+            '**Choose self-hosted if:** you have sensitive data, you want zero API costs, you want to customize the interface, or you are offline.',
+            '**Choose cloud if:** you need the best model quality, you do not want to manage infrastructure, or you are low-volume.',
+            '**Use both in parallel:** Tools like [PromptQuorum](/) let you dispatch a prompt to both your local model and cloud APIs simultaneously, so you can compare results side-by-side.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes When Choosing a Frontend',
+          items: [
+            '**Assuming you need the most feature-rich frontend.** Open WebUI has the most features, but if you only want to chat, Enchanted is faster. Choose based on your actual needs, not feature count.',
+            '**Not realizing you can switch frontends easily.** Your Ollama model and models are separate from the frontend. Switch from Open WebUI to Enchanted UI to Jan AI without re-downloading models — they all share the same Ollama instance.',
+            '**Trying to run Open WebUI on a 8 GB RAM machine without GPU.** Open WebUI + model inference requires 12+ GB total. On limited hardware, use Enchanted UI or a lightweight alternative.',
+            '**Ignoring model quantization and frontend requirements.** A 13B model in 8-bit format is 13 GB alone. Open WebUI adds overhead. Do the math: model size + frontend overhead + OS = total RAM needed.',
+            '**Not setting up Ollama as a background service first.** Many new users try to run multiple frontends simultaneously without realizing Ollama needs to be running. Set up Ollama first (as a service via `ollama serve` in the background), then add your chosen frontend.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Local LLM Frontends',
+          faqs: [
+            {
+              q: 'Can I run multiple frontends simultaneously?',
+              a: 'Yes. All frontends connect to the same Ollama API (localhost:11434). You can have Open WebUI, Enchanted UI, and Continue.dev all running and using the same model simultaneously. This does not double the VRAM usage — they all share the same model instance.',
+            },
+            {
+              q: 'Which frontend is best for RAG?',
+              a: 'Open WebUI has the most mature RAG implementation. Upload documents, and the model will answer questions based on them. For advanced RAG workflows, see [Best Local RAG Tools](/local-llms/best-local-rag-tools).',
+            },
+            {
+              q: 'Do I need a frontend at all?',
+              a: 'No. Ollama provides a REST API at localhost:11434. You can write Python, JavaScript, or bash scripts to interact with the model directly via the API, with no frontend. A frontend is just for convenience and visual interaction.',
+            },
+            {
+              q: 'Which frontend works on Linux?',
+              a: 'Open WebUI, Enchanted UI, Lobe Chat, and Gradio/Streamlit all work on Linux. Jan AI has Linux support in beta (as of April 2026). Continue.dev works via VS Code on all platforms.',
+            },
+            {
+              q: 'Can I host a frontend on a remote server?',
+              a: 'Yes. All frontends are web apps (or can be containerized). You can run Ollama on a server and Open WebUI in Docker, then access it from your laptop via HTTP. Be sure to secure the interface with authentication or a firewall.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Setup guide for the underlying model engine.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — Comparison of the two most popular local LLM tools.',
+            '[Best Local RAG Tools](/local-llms/best-local-rag-tools) — Deep dive into Open WebUI RAG and other document-based LLM tools.',
+            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — How to use the API directly from code.',
+            '[Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) — Setup Continue.dev and VS Code integrations.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Open WebUI GitHub — github.com/open-webui/open-webui',
+            'Enchanted UI — enchanted.div.ai',
+            'Jan AI — jan.ai',
+            'Continue.dev — continue.dev',
+            'Lobe Chat — github.com/lobehub/lobe-chat',
+            'Ollama OpenAI API Compatibility — github.com/ollama/ollama/docs/api.md',
+          ],
+        },
+      },
+    },
+  },
+
+  'text-generation-webui-vs-vllm-vs-llamacpp': {
+    en: {
+      theme: 'Tools & Interfaces',
+      title: 'Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison',
+      seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
+      intro: 'Text-Generation-WebUI, vLLM, and llama.cpp are three popular inference engines for running local LLMs, each optimized for different use cases. llama.cpp is the lightest and powers Ollama; vLLM is the fastest for high-throughput production APIs; Text-Generation-WebUI is the most feature-rich for experimentation. As of April 2026, vLLM dominates production deployments, llama.cpp dominates consumer devices, and Text-Generation-WebUI dominates research and fine-tuning workflows.',
+      metaDescription: 'vLLM vs llama.cpp vs Text-Generation-WebUI: performance, throughput, features, and when to use each. Inference engine comparison. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '13 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'inference engine',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Is an Inference Engine?', anchor: '#what-is-inference-engine' },
+        { label: 'Feature Comparison Table', anchor: '#feature-comparison' },
+        { label: 'Understanding llama.cpp', anchor: '#understanding-llama-cpp' },
+        { label: 'Understanding vLLM', anchor: '#understanding-vllm' },
+        { label: 'Understanding Text-Generation-WebUI', anchor: '#understanding-text-generation-webui' },
+        { label: 'Performance: Tokens Per Second', anchor: '#performance-tokens-per-second' },
+        { label: 'Production Deployments', anchor: '#production-deployments' },
+        { label: 'When to Use Each Engine', anchor: '#when-to-use-each' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'An inference engine is the C/C++/Python software that loads a model file and generates tokens. It is separate from the UI or API layer.',
+            '**llama.cpp** = lightweight, CPU-efficient, powers Ollama. Best for: Consumer laptops, single-user, zero dependencies.',
+            '**vLLM** = production-grade, maximum GPU throughput, supports batching and distributed inference. Best for: API servers, multi-user, high throughput.',
+            '**Text-Generation-WebUI** = feature-rich experimentation tool with a web UI built-in. Best for: Fine-tuning, LoRA testing, advanced settings tweaking.',
+            'As of April 2026, vLLM leads production use, llama.cpp leads consumer use, and Text-Generation-WebUI leads research/fine-tuning.',
+          ],
+        },
+        whatIsInferenceEngine: {
+          title: 'What Is an Inference Engine?',
+          content: [
+            'An inference engine is the software component that loads a pre-trained model file and executes the mathematical operations needed to generate text. It is different from a chat interface (like Open WebUI or Enchanted UI) or an API layer (like Ollama\'s REST API).',
+            'A typical local LLM deployment has three layers:',
+            '1. **Model file** (e.g., llama-3.1-8b.gguf) — the neural network weights.',
+            '2. **Inference engine** (e.g., llama.cpp, vLLM) — loads the model and generates tokens.',
+            '3. **Interface or API** (e.g., REST API, web chat, VS Code extension) — lets you interact with the engine.',
+            'Ollama itself is primarily a wrapper around llama.cpp with an OpenAI-compatible API. vLLM is an inference engine without a built-in UI. Text-Generation-WebUI is an inference engine with a built-in web UI.',
+          ],
+        },
+        featureComparison: {
+          title: 'Feature Comparison: llama.cpp vs vLLM vs Text-Generation-WebUI',
+          rows: [
+            { 'Feature': 'Type', 'llama.cpp': 'C++ library (lightweight)', 'vLLM': 'Python framework (production)', 'Text-Gen-WebUI': 'Python app (experimentation)' },
+            { 'Feature': 'GPU Support', 'llama.cpp': 'NVIDIA, AMD, Apple Metal', 'vLLM': 'NVIDIA only (best support)', 'Text-Gen-WebUI': 'NVIDIA, AMD, CPU' },
+            { 'Feature': 'CPU Inference', 'llama.cpp': 'Excellent', 'vLLM': 'Poor', 'Text-Gen-WebUI': 'Good' },
+            { 'Feature': 'Throughput (tokens/sec)', 'llama.cpp': 'Medium (1–100)', 'vLLM': 'Very high (100–1000+)', 'Text-Gen-WebUI': 'Medium (1–100)' },
+            { 'Feature': 'Batch Support', 'llama.cpp': 'Limited', 'vLLM': 'Full (batches of 100+)', 'Text-Gen-WebUI': 'Limited' },
+            { 'Feature': 'Built-in Web UI', 'llama.cpp': 'No', 'vLLM': 'No', 'Text-Gen-WebUI': 'Yes' },
+            { 'Feature': 'LoRA Fine-tuning', 'llama.cpp': 'Not directly', 'vLLM': 'Limited', 'Text-Gen-WebUI': 'Built-in' },
+            { 'Feature': 'Quantization Formats', 'llama.cpp': 'GGUF, GGML', 'vLLM': 'Full precision, 8-bit, 4-bit', 'Text-Gen-WebUI': 'GGUF, safetensors, fp16' },
+            { 'Feature': 'Setup Difficulty', 'llama.cpp': 'Via Ollama (easy)', 'vLLM': 'pip install (medium)', 'Text-Gen-WebUI': 'GitHub clone (medium)' },
+            { 'Feature': 'Price', 'llama.cpp': 'Free', 'vLLM': 'Free', 'Text-Gen-WebUI': 'Free' },
+          ],
+          columns: ['Feature', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+        },
+        llamacpp: {
+          title: 'Understanding llama.cpp: The Foundation',
+          content: [
+            'llama.cpp is a C++ implementation of LLM inference, originally written to run Meta\'s Llama model on consumer hardware without GPU acceleration. As of April 2026, it remains the most lightweight and portable inference engine.',
+            '**Why llama.cpp dominates consumer use:**',
+            '- Minimal memory overhead — can run on 8 GB RAM with CPU alone.',
+            '- Supports multiple GPU backends (NVIDIA, AMD, Apple Metal, Intel).',
+            '- GGUF format: a quantized model format that compresses 70B models to 20–40 GB.',
+            '- Powers Ollama internally — you are using llama.cpp whenever you run Ollama.',
+            'llama.cpp is not a full application; it is a library. You interact with it through Ollama (the most common way) or through other tools that integrate it. If you want to use llama.cpp directly for advanced tuning, you need to compile it and interact with it via command-line tools or Python bindings.',
+          ],
+        },
+        vllm: {
+          title: 'Understanding vLLM: The Production Standard',
+          content: [
+            'vLLM is a Python framework designed for high-throughput inference on GPU clusters. It optimizes for serving models via API, with support for batching, distributed inference, and advanced scheduling.',
+            '**Why vLLM dominates production:**',
+            '- **Paged Attention**: vLLM uses a novel memory layout that improves GPU utilization from ~20% to ~70%, dramatically increasing throughput.',
+            '- **Batch processing**: Can process 50–100 prompts simultaneously, serving more users per GPU.',
+            '- **Distributed inference**: Split a 70B model across multiple GPUs automatically.',
+            '- **Wide model support**: Works with any HuggingFace model (Llama, Qwen, Mistral, Phi, etc.).',
+            'As of April 2026, most production local-LLM deployments in enterprises use vLLM. The trade-off is that vLLM requires NVIDIA GPUs; it has poor CPU performance.',
+          ],
+          codeBlock: '# Install vLLM\npip install vllm\n\n# Run a model via API\nvllm serve meta-llama/Llama-2-7b-hf \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Now accessible at http://localhost:8000/v1/completions',
+          codeLanguage: 'bash',
+        },
+        textGenerationWebUI: {
+          title: 'Understanding Text-Generation-WebUI: The Researcher\'s Tool',
+          content: [
+            'Text-Generation-WebUI (also called oobabooga) is a full-featured Python application with a web interface for experimenting with models. It combines inference with built-in tools for fine-tuning, LoRA training, embedding generation, and advanced prompt testing.',
+            '**Why researchers use Text-Generation-WebUI:**',
+            '- **LoRA fine-tuning built-in**: Train custom LoRA adapters on top of base models without needing external training scripts.',
+            '- **Multiple inference engines**: Can switch between llama.cpp, GPTQ, exllama, and other backends.',
+            '- **Character roleplay**: Built-in system for creating and testing character personas.',
+            '- **API exposure**: Exposes a FastAPI interface for programmatic use.',
+            '- **Extension ecosystem**: Community-built extensions for custom workflows.',
+            'Text-Generation-WebUI is more of a research and experimentation tool than a production server. Setup is more involved (requires GitHub clone and Python dependency management), but once running, it is extremely powerful for development.',
+          ],
+        },
+        performance: {
+          title: 'How Fast Is Each Engine? Throughput Comparison',
+          content: [
+            'Throughput (tokens per second) depends on the model size, hardware, and engine optimization. As of April 2026, here are real-world benchmarks on consumer hardware:',
+          ],
+          rows: [
+            { 'Scenario': 'Llama 3.1 8B on RTX 4090 (GPU)', 'llama.cpp': '150 tokens/sec', 'vLLM': '300 tokens/sec (with batching)', 'Text-Gen-WebUI': '150 tokens/sec' },
+            { 'Scenario': 'Llama 3.1 8B on 8-core CPU', 'llama.cpp': '5 tokens/sec', 'vLLM': '0.5 tokens/sec (unusable)', 'Text-Gen-WebUI': '4 tokens/sec' },
+            { 'Scenario': 'Llama 3.1 70B on 2× RTX 4090', 'llama.cpp': '20 tokens/sec (single GPU)', 'vLLM': '100 tokens/sec (distributed)', 'Text-Gen-WebUI': '20 tokens/sec' },
+            { 'Scenario': 'Phi-3 3.8B on M4 MacBook Pro', 'llama.cpp': '30 tokens/sec', 'vLLM': 'N/A (no Metal support)', 'Text-Gen-WebUI': '25 tokens/sec' },
+          ],
+          columns: ['Scenario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+        },
+        productionDeployments: {
+          title: 'Which Engine for Production Deployments?',
+          content: [
+            '**vLLM is the production standard as of April 2026.** Most companies running local LLM APIs in production use vLLM because of its throughput optimization and batching support. A single vLLM instance can serve 50+ concurrent users on one GPU, vs. 1–2 for llama.cpp.',
+            'However, production choice depends on your constraint:',
+            '- **Serving 100+ requests/day with limited GPU**: Use vLLM (best throughput).',
+            '- **Serving with only CPU or Apple Silicon**: Use llama.cpp via Ollama (best CPU support).',
+            '- **Using Llama models specifically**: Either llama.cpp or vLLM works; vLLM is faster.',
+            '- **Using diverse model formats (GPTQ, GGUF, safetensors)**: Text-Generation-WebUI supports all; vLLM requires full precision or specific quantization formats.',
+          ],
+        },
+        whenToUse: {
+          title: 'When Should You Choose Each Engine?',
+          content: 'Use this decision framework:',
+          items: [
+            '**llama.cpp (via Ollama):** You are a consumer, non-developer, or deploying on CPU/Apple Silicon. Best overall ease-of-use.',
+            '**vLLM:** You are serving an API with 50+ concurrent users, you have NVIDIA GPUs, and you need maximum throughput. Production standard.',
+            '**Text-Generation-WebUI:** You are fine-tuning models, testing LoRA adapters, or experimenting with advanced inference settings. Best for research.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes With Inference Engines',
+          items: [
+            '**Thinking you need to choose between Ollama and these engines.** Ollama uses llama.cpp internally. You are not choosing Ollama vs vLLM; vLLM is an alternative *backend* to Ollama, not a chat app. Both have their purpose.',
+            '**Assuming vLLM is faster on CPU.** vLLM has poor CPU performance; llama.cpp is 10× faster on CPU. Check your GPU availability before choosing vLLM.',
+            '**Running vLLM on a laptop GPU.** vLLM is optimized for datacenter GPUs (RTX 4090, A100). On consumer GPUs, the overhead of vLLM\'s batching scheduler can actually slow single-request performance. Stick with llama.cpp for laptops.',
+            '**Forgetting that inference throughput is not the same as user experience latency.** vLLM can batch 100 requests, but each request still takes time to generate its tokens. High throughput does not mean low latency.',
+            '**Installing dependencies wrong for Text-Generation-WebUI.** The GitHub instructions assume you have Git, Python 3.10+, and pip installed. On Windows, this often fails silently. Always verify Python version before cloning.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Inference Engines',
+          faqs: [
+            {
+              q: 'Can I switch inference engines without changing my model?',
+              a: 'Mostly yes. Model files in GGUF format work with llama.cpp (Ollama) and Text-Generation-WebUI. vLLM requires full precision or specific quantization formats. HuggingFace safetensors models work with all three.',
+            },
+            {
+              q: 'Which engine is best for Mac?',
+              a: 'llama.cpp via Ollama. It has excellent Apple Silicon (M-series) optimization. vLLM does not support Metal (Apple GPU), so CPU performance is poor. Text-Generation-WebUI works on Mac but is slower than Ollama.',
+            },
+            {
+              q: 'Is vLLM part of Ollama?',
+              a: 'No. Ollama uses llama.cpp internally. vLLM is a separate inference engine by UC Berkeley. They serve different purposes: Ollama is for simplicity; vLLM is for production throughput.',
+            },
+            {
+              q: 'Can I use vLLM without GPU?',
+              a: 'Technically yes, but it is unusably slow. vLLM is designed for GPU. For CPU-only deployments, use llama.cpp (Ollama).',
+            },
+            {
+              q: 'Does Text-Generation-WebUI scale to production?',
+              a: 'Not recommended. Text-Generation-WebUI is a research tool, not a production server. It lacks features like load balancing, monitoring, and distributed inference that production services need. Use vLLM for production.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Setup the most popular llama.cpp wrapper.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — Both use inference engines; compare their UIs.',
+            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — vLLM and Ollama both expose OpenAI-compatible APIs.',
+            '[Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) — Integrate your inference engine with your editor.',
+            '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — Frontends are UI layers on top of inference engines.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'llama.cpp GitHub — github.com/ggerganov/llama.cpp',
+            'vLLM GitHub — github.com/vllm-project/vllm',
+            'vLLM Paper (Paged Attention) — arxiv.org/abs/2309.06180',
+            'Text-Generation-WebUI — github.com/oobabooga/text-generation-webui',
+            'Ollama GitHub — github.com/ollama/ollama',
+          ],
+        },
+      },
+    },
+  },
+
+  'local-llm-openai-compatible-api': {
+    en: {
+      theme: 'Tools & Interfaces',
+      title: 'Local LLM OpenAI-Compatible API: Connect Python, Node.js, and JavaScript to Ollama',
+      seoTitle: 'Local LLM OpenAI-Compatible API Guide',
+      intro: 'Ollama, vLLM, and LM Studio all expose REST APIs that mimic the OpenAI API structure. This means you can use the official OpenAI Python library, Node.js client, or any OpenAI-compatible tool by simply changing the base URL to localhost. As of April 2026, this is the standard way to integrate local models into applications without vendor lock-in to OpenAI.',
+      metaDescription: 'How to use Ollama\'s OpenAI-compatible API with Python, Node.js, and JavaScript. Connect local LLMs to any OpenAI-based app. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '10 min read',
+      educationalLevel: 'Beginner to Advanced',
+      primaryTerm: 'OpenAI-compatible API',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Is OpenAI Compatibility?', anchor: '#what-is-openai-compatibility' },
+        { label: 'Ollama API Endpoint', anchor: '#ollama-api-endpoint' },
+        { label: 'Python: Using the Official OpenAI Library', anchor: '#python-openai-library' },
+        { label: 'Node.js: OpenAI SDK', anchor: '#nodejs-openai' },
+        { label: 'JavaScript: Browser Usage', anchor: '#javascript-browser' },
+        { label: 'Advanced: Streaming Responses', anchor: '#streaming-responses' },
+        { label: 'Advanced: Function Calling', anchor: '#function-calling' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Ollama exposes a REST API at `http://localhost:11434/v1` that mirrors OpenAI\'s API exactly.',
+            'Use the OpenAI Python library: change `api_key="openai"` to `api_key="ollama"` and `base_url="http://localhost:11434/v1"`.',
+            'Same approach in Node.js: OpenAI SDK, point to localhost:11434.',
+            'The OpenAI-compatible API is identical across Ollama, vLLM, and LM Studio — no code changes needed to switch providers.',
+            'As of April 2026, streaming (streaming responses token-by-token) and function calling both work with local models via this API.',
+          ],
+        },
+        whatIsOpenAI: {
+          title: 'What Does OpenAI-Compatible Mean?',
+          content: [
+            'OpenAI-compatible means the API endpoint returns responses in the same format as OpenAI\'s API. This allows any library or tool built for OpenAI to work with local models by pointing to a different URL.',
+            'Example: The OpenAI Python library sends requests like this:',
+            '```\nPOST /chat/completions\n{\n  "model": "gpt-4o",\n  "messages": [...],\n  "temperature": 0.7\n}\n```',
+            'Ollama\'s API accepts the exact same request at `localhost:11434/v1/chat/completions` and returns the response in OpenAI\'s format:',
+            '```\n{\n  "choices": [{\"message\": {\"content\": \"...\"}}],\n  "usage\": {\"prompt_tokens\": 10, \"completion_tokens\": 20}\n}\n```',
+            'Because the format is identical, you do not need to learn a new API or rewrite your code.',
+          ],
+        },
+        ollamaEndpoint: {
+          title: 'What Is Ollama\'s API Endpoint?',
+          content: 'When you run `ollama serve`, Ollama starts a REST API at `http://localhost:11434`. The OpenAI-compatible endpoints are:',
+          items: [
+            '**Chat completions:** `POST http://localhost:11434/v1/chat/completions` — matches `/chat/completions` from OpenAI.',
+            '**Text completions:** `POST http://localhost:11434/v1/completions` — matches `/completions` from OpenAI.',
+            '**Embeddings:** `POST http://localhost:11434/v1/embeddings` — convert text to vectors.',
+            '**List models:** `GET http://localhost:11434/v1/models` — list available models.',
+          ],
+        },
+        pythonOpenAI: {
+          title: 'How to Use Ollama API With Python (OpenAI Library)',
+          content: 'Install the OpenAI library and point it to localhost:',
+          codeBlock: '# 1. Install the OpenAI library\npip install openai\n\n# 2. Connect to Ollama\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"  # dummy key; Ollama ignores it\n)\n\n# 3. Make a request\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[\n    {"role": "user", "content": "What is 2+2?"}\n  ]\n)\n\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        nodejs: {
+          title: 'How to Use Ollama API With Node.js',
+          content: 'Install the OpenAI SDK and connect:',
+          codeBlock: '// 1. Install\nnpm install openai\n\n// 2. Connect to Ollama\nconst OpenAI = require("openai").default;\n\nconst client = new OpenAI({\n  baseURL: "http://localhost:11434/v1",\n  apiKey: "ollama"\n});\n\n// 3. Make a request\nconst response = await client.chat.completions.create({\n  model: "llama3.2:3b",\n  messages: [{\n    role: "user",\n    content: "What is 2+2?"\n  }]\n});\n\nconsole.log(response.choices[0].message.content);',
+          codeLanguage: 'javascript',
+        },
+        javascript: {
+          title: 'How to Use Ollama API From JavaScript in the Browser',
+          content: [
+            'Calling Ollama from browser-side JavaScript requires the browser and server to be on the same machine (or allow CORS). For security, browser requests to localhost work only if the JavaScript is served from localhost.',
+            'If you need to call Ollama from a browser on a different IP, set up a CORS proxy or use a server-side middleware.',
+          ],
+          codeBlock: '// Browser-side JavaScript (if server is localhost:3000, Ollama is localhost:11434)\nfetch("http://localhost:11434/v1/chat/completions", {\n  method: "POST",\n  headers: { "Content-Type": "application/json" },\n  body: JSON.stringify({\n    model: "llama3.2:3b",\n    messages: [{ role: "user", content: "What is 2+2?" }]\n  })\n})\n  .then(res => res.json())\n  .then(data => console.log(data.choices[0].message.content))',
+          codeLanguage: 'javascript',
+        },
+        streaming: {
+          title: 'How Do You Stream Responses Token-by-Token?',
+          content: 'Streaming lets you display responses as they are generated, token by token, instead of waiting for the entire response.',
+          codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
+          codeLanguage: 'python',
+        },
+        functionCalling: {
+          title: 'Can Your Local Model Call Functions?',
+          content: [
+            'Yes, as of April 2026, function calling works with local models via the OpenAI API. You define a function schema, and the model can respond with arguments to pass to your function.',
+            'Function calling support depends on the model. Llama 3.2 8B, Qwen2.5, and most recent models support it. Smaller models (3B) may not reliably use it.',
+          ],
+          codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
+          codeLanguage: 'python',
+        },
+        commonMistakes: {
+          title: 'Common Mistakes With Local LLM APIs',
+          items: [
+            '**Forgetting that the API key is ignored.** Ollama requires `api_key="ollama"` (any string works) because it is not authenticating. The real key is that the request comes from localhost or your local network.',
+            '**Not realizing the model name matters.** If you call `/chat/completions` with `model="gpt-4"` but have only pulled `llama3.2:3b` in Ollama, the request will fail. Use the exact model names from `ollama list`.',
+            '**Assuming Ollama needs internet.** It does not. The API is entirely local. But if your Python code tries to reach OpenAI\'s servers first (by default), it will fail. Always set `base_url` explicitly.',
+            '**CORS errors from browser.** If you call Ollama from a browser-side script and get a CORS error, it means the browser blocked the request for security. Workaround: make the call from a server-side proxy, or ensure your app is served from localhost.',
+            '**Not setting stream=True when expecting streaming.** If you want token-by-token responses, you must explicitly set `stream=True` in the request. By default, it waits for the full response.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Local LLM APIs',
+          faqs: [
+            {
+              q: 'Do I need to modify my OpenAI code to use Ollama?',
+              a: 'No. Set `base_url="http://localhost:11434/v1"` and `api_key="ollama"`. Everything else stays the same. If you have code using the OpenAI library, swap these two lines and it works with your local model.',
+            },
+            {
+              q: 'Can I use the API from a different computer on my network?',
+              a: 'Yes. By default, Ollama listens on localhost only. To allow network access, set the environment variable `OLLAMA_HOST=0.0.0.0:11434` before running Ollama. Then point your code to `http://<machine-ip>:11434/v1`. Be careful with security — use a firewall if this is production.',
+            },
+            {
+              q: 'Does LM Studio have an OpenAI-compatible API?',
+              a: 'Yes, as of April 2026, LM Studio has an OpenAI-compatible API in beta at `http://localhost:1234/v1`. Use the same code as Ollama, just change the port.',
+            },
+            {
+              q: 'Can I call multiple models simultaneously?',
+              a: 'If you have them loaded in Ollama, yes. But note that running two models simultaneously doubles VRAM usage. You must have enough GPU memory.',
+            },
+            {
+              q: 'Is the API authenticated?',
+              a: 'No. By default, Ollama\'s API has no authentication. Anyone with access to localhost:11434 can use it. For production with network access, add authentication via a reverse proxy (nginx with Basic Auth, etc.).',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Setup Ollama to expose the API.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — Both expose OpenAI-compatible APIs.',
+            '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — UIs that use this API internally.',
+            '[Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) — Code editors that use this API.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) — Different backends that expose this API.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Ollama API Documentation — github.com/ollama/ollama/blob/main/docs/api.md',
+            'OpenAI Python Library — github.com/openai/openai-python',
+            'OpenAI API Reference — platform.openai.com/docs/api-reference',
+            'LM Studio Local API (Beta) — lmstudio.ai/docs/local-server/overview',
+          ],
+        },
+      },
+    },
+  },
+
+  'lm-studio-advanced-features': {
+    en: {
+      theme: 'Tools & Interfaces',
+      title: 'LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning',
+      seoTitle: 'LM Studio Advanced Features Guide',
+      intro: 'LM Studio is primarily a chat app, but it also includes advanced features for developers: GPU memory configuration, context window adjustment, OpenAI-compatible API, and integration with fine-tuning tools. As of April 2026, LM Studio is expanding beyond chat to support professional workflows like LoRA fine-tuning and batch inference.',
+      metaDescription: 'LM Studio advanced features: GPU optimization, context window, API, LoRA fine-tuning, and production workflows. Configuration guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '9 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'LM Studio advanced',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'GPU Memory Configuration', anchor: '#gpu-memory' },
+        { label: 'Context Window Adjustment', anchor: '#context-window' },
+        { label: 'LM Studio Local API (Beta)', anchor: '#local-api' },
+        { label: 'LoRA and Fine-Tuning', anchor: '#lora-finetuning' },
+        { label: 'Batch Inference', anchor: '#batch-inference' },
+        { label: 'Performance Benchmarking', anchor: '#benchmarking' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'LM Studio has advanced settings in the Settings → Server tab (GPU options, context length).',
+            'GPU memory can be manually set from 10% to 100% of VRAM — lower values free up GPU for other apps.',
+            'Context window (number of tokens the model can see) can be extended up to model limits, but it uses more VRAM.',
+            'Local API (beta) exposes OpenAI-compatible endpoints at localhost:1234 for integration.',
+            'As of April 2026, LoRA fine-tuning is not yet built into LM Studio; use Text-Generation-WebUI or training scripts instead.',
+          ],
+        },
+        gpuMemory: {
+          title: 'How Do You Configure GPU Memory in LM Studio?',
+          content: 'LM Studio lets you control how much GPU VRAM the model uses:',
+          items: [
+            '1. Click **Settings** (bottom-left gear icon).',
+            '2. Find **GPU acceleration** slider (default: 100%).',
+            '3. Slide to 50% if you want the GPU to use 50% of VRAM, freeing up the rest for other applications.',
+            '4. Lower GPU allocation = slower inference speed, but more headroom for simultaneous apps.',
+            '5. Click **Restart** to apply changes.',
+          ],
+        },
+        contextWindow: {
+          title: 'How Do You Extend Context Window?',
+          content: 'Context window is the maximum number of tokens (text) the model can read. Extending it allows longer conversations but uses more VRAM.',
+          items: [
+            '1. Open Settings → Server.',
+            '2. Look for **Context length** (default: model\'s built-in limit).',
+            '3. Increase to 4k, 8k, 16k, or 32k (depending on model support).',
+            '4. Each doubling of context length roughly doubles VRAM usage.',
+            '5. Test your extended context by starting a chat and providing long prompts.',
+          ],
+        },
+        localAPI: {
+          title: 'How Do You Enable LM Studio\'s Local API (Beta)?',
+          content: 'LM Studio\'s local API (beta as of April 2026) mimics OpenAI\'s API:',
+          codeBlock: '# 1. Open LM Studio Settings → Server\n# 2. Turn on "Enable local API server"\n# 3. API runs at http://localhost:1234/v1\n\n# 4. Use it like Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="not-needed"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        lora: {
+          title: 'Can You Fine-Tune Models With LM Studio?',
+          content: [
+            'As of April 2026, LM Studio does not have built-in LoRA fine-tuning. For fine-tuning, use:',
+            '- **Text-Generation-WebUI** (easiest for LoRA)',
+            '- **LLaMA-Factory** (advanced, production-grade)',
+            '- **unsloth** (fastest, optimal for VRAM usage)',
+            'LM Studio is suitable for applying pre-trained LoRA adapters but not for training new ones. Future versions may add LoRA training directly.',
+          ],
+        },
+        batch: {
+          title: 'How Do You Run Batch Inference in LM Studio?',
+          content: [
+            'Batch inference means processing multiple prompts without waiting for responses between them. LM Studio does not have a built-in batch mode, but you can simulate it via the API or Python loop:',
+          ],
+          codeBlock: '# Python: batch inference via LM Studio API\nfrom openai import OpenAI\nimport json\n\nclient = OpenAI(base_url="http://localhost:1234/v1", api_key="x")\n\nprompts = [\n  "What is 2+2?",\n  "Explain quantum computing",\n  "How do transformers work?"\n]\n\nresults = []\nfor prompt in prompts:\n  response = client.chat.completions.create(\n    model="llama-3.2-3b-gguf",\n    messages=[{"role": "user", "content": prompt}]\n  )\n  results.append({\n    "prompt": prompt,\n    "response": response.choices[0].message.content\n  })\n\nwith open("batch_results.json", "w") as f:\n  json.dump(results, f, indent=2)',
+          codeLanguage: 'python',
+        },
+        benchmarking: {
+          title: 'How Do You Benchmark Model Speed in LM Studio?',
+          content: 'LM Studio includes a built-in benchmark tool:',
+          items: [
+            '1. Load a model in LM Studio.',
+            '2. Click **Settings** → **Benchmark** tab.',
+            '3. Click **Run benchmark** — it measures tokens/second for your specific hardware.',
+            '4. Results show baseline performance without chat overhead.',
+            'This helps you understand expected speed before deploying to production.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes With LM Studio Advanced Features',
+          items: [
+            '**Lowering GPU allocation too much and blaming slowness on the model.** If you set GPU to 10%, inference will be 5–10× slower because it is running mostly on CPU. Test with 80%+ GPU allocation first.',
+            '**Extending context window beyond model support.** Models have maximum supported context lengths. Extending beyond that does not add capability; it just wastes VRAM.',
+            '**Expecting LoRA training in LM Studio.** As of April 2026, it is not available. Use Text-Generation-WebUI or training libraries.',
+            '**Forgetting that API needs explicit enable.** The local API is off by default. Enable it in Settings → Server.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About LM Studio Advanced Features',
+          faqs: [
+            {
+              q: 'What is the difference between LM Studio API and Ollama API?',
+              a: 'Both expose OpenAI-compatible endpoints. LM Studio API is on localhost:1234, Ollama on localhost:11434. Both work identically. Choose whichever tool you prefer for chatting.',
+            },
+            {
+              q: 'Can I use the LM Studio API in production?',
+              a: 'It works, but Ollama API is more mature. LM Studio API is in beta. For production, Ollama is the safer choice.',
+            },
+            {
+              q: 'Does lowering GPU allocation reduce VRAM requirements?',
+              a: 'Yes. Lowering GPU allocation to 50% roughly halves VRAM usage, but inference is 2–5× slower because the model runs partially on CPU.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — Setup guide.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — Detailed comparison.',
+            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — API documentation.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) — Inference engines.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'LM Studio Documentation — lmstudio.ai/docs',
+            'LM Studio Local Server (Beta) — lmstudio.ai/docs/local-server/overview',
+            'OpenAI API Compatibility — platform.openai.com/docs/api-reference',
+          ],
+        },
+      },
+    },
+  },
+
+  'ollama-command-guide': {
+    en: {
+      theme: 'Tools & Interfaces',
+      title: 'Ollama Command Guide: Every Command Explained (2026)',
+      seoTitle: 'Ollama Commands Reference',
+      intro: 'Ollama is a command-line tool, and understanding its commands makes it much more powerful. This guide covers the essential commands: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve`, and advanced options like model quantization and custom Modelfiles. As of April 2026, these commands cover 95% of real-world use cases.',
+      metaDescription: 'Ollama command reference: pull, run, list, rm, serve, create, and more. Complete CLI guide with examples. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '11 min read',
+      educationalLevel: 'Beginner to Advanced',
+      primaryTerm: 'Ollama commands',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Essential Commands', anchor: '#essential-commands' },
+        { label: 'Managing Models', anchor: '#managing-models' },
+        { label: 'Running and Serving', anchor: '#running-serving' },
+        { label: 'Advanced: Custom Modelfiles', anchor: '#custom-modelfiles' },
+        { label: 'Advanced: Quantization', anchor: '#quantization' },
+        { label: 'Advanced: Embedding Models', anchor: '#embedding-models' },
+        { label: 'Environment Variables', anchor: '#env-variables' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '`ollama pull <model>` — Download a model (e.g., `ollama pull llama3.2:3b`).',
+            '`ollama run <model>` — Start a chat with a model.',
+            '`ollama list` — Show all downloaded models and their sizes.',
+            '`ollama rm <model>` — Delete a downloaded model.',
+            '`ollama serve` — Start the Ollama API server (runs automatically on Mac/Windows).',
+            '`ollama create <name> -f <modelfile>` — Build a custom model from a Modelfile.',
+            'As of April 2026, these commands are stable and cover all common use cases.',
+          ],
+        },
+        essentialCommands: {
+          title: 'What Are the Essential Ollama Commands?',
+          items: [
+            '**`ollama list`** — Show downloaded models, disk usage, and modification date.',
+            '**`ollama pull <model>`** — Download a model by name (e.g., `ollama pull mistral`).',
+            '**`ollama run <model>`** — Start a chat session with a model.',
+            '**`ollama rm <model>`** — Delete a model and free up disk space.',
+            '**`ollama serve`** — Start the REST API server (typically runs automatically).',
+            '**`ollama help`** — Show all available commands.',
+          ],
+        },
+        managingModels: {
+          title: 'How Do You Manage Models in Ollama?',
+          content: 'Model management in Ollama is entirely command-based:',
+          codeBlock: '# List all downloaded models\nollama list\n\n# Download a model from the Ollama library\nollama pull llama3.2:3b       # 7-bit version (~2.5 GB)\nollama pull llama3.2:3b-fp16  # Full precision (~6.5 GB)\n\n# Download specific quantization\nollama pull qwen2.5:7b-q4   # 4-bit quantization\nollama pull qwen2.5:7b-q8   # 8-bit quantization\n\n# See disk usage\ndu -sh ~/.ollama/models\n\n# Delete a model\nollama rm llama3.2:3b\n\n# Pull from custom registry (advanced)\nollama pull localhost:5000/custom-model',
+          codeLanguage: 'bash',
+        },
+        runningServing: {
+          title: 'How Do You Run and Serve Models?',
+          content: 'There are two ways to use Ollama:',
+          codeBlock: '# 1. Interactive chat (CLI)\nollama run llama3.2:3b\n# Now type your prompts and press Enter\n\n# 2. Start the API server (runs in background)\nollama serve\n# API listens at http://localhost:11434/v1\n\n# 3. Use the model via API from another terminal\ncurl http://localhost:11434/v1/chat/completions \\\n  -H "Content-Type: application/json" \\\n  -d \'{\n    "model": "llama3.2:3b",\n    "messages": [{"role": "user", "content": "Hello"}]\n  }\'',
+          codeLanguage: 'bash',
+        },
+        modelfiles: {
+          title: 'How Do You Create Custom Models With Modelfiles?',
+          content: [
+            'A Modelfile is a configuration file (like a Dockerfile) that defines a custom model by starting from a base model and adding system prompts, parameters, and weights.',
+          ],
+          codeBlock: '# Create a file named Modelfile\nFROM llama3.2:3b\n\n# Add a system prompt\nSYSTEM """\nYou are a helpful expert in machine learning.\nAlways explain complex concepts in simple terms.\n"""\n\n# Adjust parameters\nPARAMETER temperature 0.7\nPARAMETER top_p 0.9\n\n# Build the custom model\nollama create ml-expert -f Modelfile\n\n# Use it\nollama run ml-expert',
+          codeLanguage: 'bash',
+        },
+        quantization: {
+          title: 'What Quantization Options Does Ollama Support?',
+          content: [
+            'Quantization reduces model size and VRAM by using lower-precision numbers. Ollama supports GGUF format with multiple quantizations:',
+          ],
+          rows: [
+            { 'Quantization': 'FP16 (full precision)', 'Size (7B)': '14 GB', 'VRAM': '16 GB', 'Quality': 'Best', 'Speed': 'Slowest' },
+            { 'Quantization': 'Q8_0 (8-bit)', 'Size (7B)': '7 GB', 'VRAM': '8 GB', 'Quality': 'Excellent', 'Speed': 'Fast' },
+            { 'Quantization': 'Q6_K (6-bit)', 'Size (7B)': '5.5 GB', 'VRAM': '6 GB', 'Quality': 'Very good', 'Speed': 'Fast' },
+            { 'Quantization': 'Q5_K_M (5-bit)', 'Size (7B)': '5 GB', 'VRAM': '5.5 GB', 'Quality': 'Good', 'Speed': 'Very fast' },
+            { 'Quantization': 'Q4_K_M (4-bit)', 'Size (7B)': '4.7 GB', 'VRAM': '5 GB', 'Quality': 'Good', 'Speed': 'Very fast' },
+            { 'Quantization': 'Q3_K_M (3-bit)', 'Size (7B)': '3.3 GB', 'VRAM': '4 GB', 'Quality': 'Fair', 'Speed': 'Fastest' },
+          ],
+          columns: ['Quantization', 'Size (7B)', 'VRAM', 'Quality', 'Speed'],
+        },
+        embeddings: {
+          title: 'How Do You Generate Embeddings With Ollama?',
+          content: [
+            'Embeddings are numerical representations of text, useful for RAG (Retrieval-Augmented Generation) and semantic search.',
+          ],
+          codeBlock: '# Pull an embedding model\nollama pull nomic-embed-text  # Best for English, 137M params\n\n# Generate embeddings\ncurl http://localhost:11434/v1/embeddings \\\n  -H "Content-Type: application/json" \\\n  -d \'{\n    "model": "nomic-embed-text",\n    "input": "The quick brown fox jumps"\n  }\'\n\n# Response includes embeddings as a vector of 768 dimensions',
+          codeLanguage: 'bash',
+        },
+        envVariables: {
+          title: 'What Environment Variables Control Ollama?',
+          content: 'Key environment variables:',
+          items: [
+            '`OLLAMA_HOST` — Listen address (default: 127.0.0.1:11434). Set to `0.0.0.0:11434` for network access.',
+            '`OLLAMA_MODELS` — Where to store models (default: `~/.ollama/models`).',
+            '`OLLAMA_DEBUG` — Set to `1` for detailed logs.',
+            '`OLLAMA_GPU` — GPU to use (default: auto-detect). Set to `cuda` or `rocm`.',
+            '`OLLAMA_KEEP_ALIVE` — How long to keep model in memory (default: 5 minutes).',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes With Ollama Commands',
+          items: [
+            '**Forgetting model tags.** `ollama pull llama3.2` pulls the largest version; `ollama pull llama3.2:3b` pulls the 3B version.',
+            '**Not realizing `ollama serve` runs automatically.** On Mac and Windows, Ollama starts the API automatically when you launch the app. On Linux, you may need to start it manually.',
+            '**Pulling the wrong quantization.** Always specify the exact model tag (e.g., `qwen2.5:7b-q4`) to control VRAM usage.',
+            '**Expecting Ollama to work offline after pulling.** Ollama itself works offline, but models must be pulled while connected to the internet.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Ollama Commands',
+          faqs: [
+            {
+              q: 'Where are Ollama models stored?',
+              a: 'Default: `~/.ollama/models` on macOS/Linux or `%USERPROFILE%\\.ollama\\models` on Windows. Set `OLLAMA_MODELS` to change the location.',
+            },
+            {
+              q: 'Can I move models between computers?',
+              a: 'Yes. Copy the model files from `~/.ollama/models` to another computer\'s `~/.ollama/models`, then `ollama list` will recognize them.',
+            },
+            {
+              q: 'How do I see active model memory usage?',
+              a: 'Use `ollama ps` to list currently-loaded models. Models are unloaded after 5 minutes of inactivity by default.',
+            },
+            {
+              q: 'Can I run multiple models simultaneously?',
+              a: 'Yes, but they share VRAM. Running two 8B models requires 16 GB VRAM. Each additional model increases memory usage.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation guide.',
+            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — Use Ollama API from code.',
+            '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — Chat UIs for Ollama.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — Comparison with LM Studio.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Ollama GitHub — github.com/ollama/ollama',
+            'Ollama Documentation — github.com/ollama/ollama/blob/main/docs',
+            'Ollama Model Library — ollama.ai/library',
+          ],
+        },
+      },
+    },
+  },
+
+  'best-local-rag-tools': {
+    en: {
+      theme: 'Tools & Interfaces',
+      title: 'Best Local RAG Tools in 2026: Open WebUI, LlamaIndex, and LangChain',
+      seoTitle: 'Best Local RAG Tools Comparison',
+      intro: 'RAG (Retrieval-Augmented Generation) lets your local LLM answer questions about your own documents. As of April 2026, Open WebUI has the easiest built-in RAG (upload documents, ask questions), while LlamaIndex and LangChain are professional-grade frameworks for building RAG pipelines. This guide covers 8 tools across ease-of-use, features, and production readiness.',
+      metaDescription: 'Best local RAG tools: Open WebUI, LlamaIndex, LangChain, and more. Document Q&A, retrieval, chunking. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '12 min read',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'local RAG',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Is RAG?', anchor: '#what-is-rag' },
+        { label: 'Top 8 RAG Tools Comparison', anchor: '#top-8-rag-tools' },
+        { label: 'Best Easiest: Open WebUI RAG', anchor: '#easiest-open-webui' },
+        { label: 'Best Flexible: LlamaIndex', anchor: '#flexible-llamaindex' },
+        { label: 'Best Professional: LangChain', anchor: '#professional-langchain' },
+        { label: 'Open-Source Alternatives', anchor: '#open-source-alternatives' },
+        { label: 'RAG vs Fine-Tuning', anchor: '#rag-vs-finetuning' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'RAG = upload documents + let the model answer questions about them, citing sources.',
+            '**Open WebUI** has the easiest built-in RAG. Upload a PDF, ask questions. 5-minute setup.',
+            '**LlamaIndex** is the most flexible framework for building RAG pipelines.',
+            '**LangChain** is the most widely-used professional framework, with massive ecosystem.',
+            '**Chroma** and **Qdrant** are the leading vector databases for storing document chunks.',
+            'As of April 2026, local RAG is mature and production-ready.',
+          ],
+        },
+        whatIsRAG: {
+          title: 'What Is RAG (Retrieval-Augmented Generation)?',
+          content: [
+            'RAG is a technique that lets your LLM answer questions about your own documents without needing to fine-tune the model.',
+            'The process: (1) Upload your documents (PDFs, text files), (2) split them into chunks, (3) convert chunks to embeddings (numerical vectors), (4) store embeddings in a vector database, (5) when you ask a question, retrieve relevant chunks from the database, (6) pass the chunks + question to the LLM, (7) the LLM answers based on the chunks.',
+            'RAG is preferred over fine-tuning when your documents change frequently (fine-tuning is one-time training), and you need source attribution (RAG shows which documents were used).',
+          ],
+        },
+        top8Tools: {
+          title: 'Top 8 Local RAG Tools in 2026',
+          rows: [
+            { 'Tool': 'Open WebUI', 'Type': 'Web app (Docker)', 'Best For': 'Beginners, easiest setup', 'Vector DB': 'Built-in', 'Learning Curve': 'Zero' },
+            { 'Tool': 'LlamaIndex', 'Type': 'Python framework', 'Best For': 'Flexible pipelines', 'Vector DB': 'Any (Chroma, Qdrant, Pinecone)', 'Learning Curve': 'Medium' },
+            { 'Tool': 'LangChain', 'Type': 'Python framework', 'Best For': 'Production systems', 'Vector DB': 'Any', 'Learning Curve': 'Medium' },
+            { 'Tool': 'Chroma', 'Type': 'Vector database', 'Best For': 'Simple RAG', 'Vector DB': 'Chroma (embedded)', 'Learning Curve': 'Low' },
+            { 'Tool': 'Qdrant', 'Type': 'Vector database', 'Best For': 'Scalable RAG', 'Vector DB': 'Qdrant (distributed)', 'Learning Curve': 'Medium' },
+            { 'Tool': 'Weaviate', 'Type': 'Vector database', 'Best For': 'GraphQL queries', 'Vector DB': 'Weaviate', 'Learning Curve': 'Medium' },
+            { 'Tool': 'Milvus', 'Type': 'Vector database', 'Best For': 'Large-scale', 'Vector DB': 'Milvus', 'Learning Curve': 'High' },
+            { 'Tool': 'Text-Generation-WebUI RAG', 'Type': 'Extension', 'Best For': 'Integrated with model', 'Vector DB': 'Built-in', 'Learning Curve': 'Low' },
+          ],
+          columns: ['Tool', 'Type', 'Best For', 'Vector DB', 'Learning Curve'],
+        },
+        openWebUIRAG: {
+          title: 'How Do You Use Open WebUI RAG (Easiest)?',
+          content: [
+            'Open WebUI has built-in RAG. No setup beyond Docker. Just upload documents and ask questions.',
+          ],
+          codeBlock: '# 1. Run Open WebUI with Docker\ndocker run -d -p 3000:8080 \\\n  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \\\n  ghcr.io/open-webui/open-webui:latest\n\n# 2. Open http://localhost:3000\n# 3. Click "+" next to message input → "Upload files"\n# 4. Select PDFs or text files\n# 5. Ask questions — Open WebUI retrieves relevant chunks\n# 6. Model answers based on documents, with citations',
+          codeLanguage: 'bash',
+        },
+        llamaindex: {
+          title: 'How Do You Build RAG With LlamaIndex?',
+          content: [
+            'LlamaIndex is a framework that handles document loading, chunking, embedding, and retrieval. Flexible, supports any vector database.',
+          ],
+          codeBlock: '# 1. Install\npip install llama-index\npip install llama-index-embeddings-ollama  # use local Ollama embeddings\npip install llama-index-vector-stores-chroma  # use Chroma for storage\n\n# 2. Simple RAG pipeline\nfrom llama_index.core import SimpleDirectoryReader, VectorStoreIndex\nfrom llama_index.embeddings.ollama import OllamaEmbedding\n\n# Load documents\ndocuments = SimpleDirectoryReader("./documents").load_data()\n\n# Create index with local embeddings\nembedding_model = OllamaEmbedding(model_name="nomic-embed-text")\nindex = VectorStoreIndex.from_documents(\n  documents,\n  embed_model=embedding_model\n)\n\n# Query\nquery_engine = index.as_query_engine()\nresponse = query_engine.query("What does the document say about X?")\nprint(response)',
+          codeLanguage: 'python',
+        },
+        langchain: {
+          title: 'How Do You Build RAG With LangChain?',
+          content: [
+            'LangChain is the most widely-used framework for production RAG systems. Supports all vector databases and LLM providers.',
+          ],
+          codeBlock: '# pip install langchain langchain-community langchain-chroma\n\nfrom langchain.document_loaders import DirectoryLoader\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain.embeddings import OllamaEmbeddings\nfrom langchain.vectorstores import Chroma\nfrom langchain.chat_models import ChatOllama\nfrom langchain.chains import RetrievalQA\n\n# Load documents\nloader = DirectoryLoader("./documents")\ndocs = loader.load()\n\n# Split into chunks\nsplitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)\nchunks = splitter.split_documents(docs)\n\n# Create embeddings and vector store\nembeddings = OllamaEmbeddings(model="nomic-embed-text")\nvectorstore = Chroma.from_documents(chunks, embeddings)\n\n# Create QA chain\nllm = ChatOllama(model="llama3.2:8b")\nqa = RetrievalQA.from_chain_type(\n  llm=llm,\n  chain_type="stuff",\n  retriever=vectorstore.as_retriever()\n)\n\n# Answer questions\nresult = qa.run("What does the document say about X?")\nprint(result)',
+          codeLanguage: 'python',
+        },
+        vectors: {
+          title: 'What Vector Databases Are Best for Local RAG?',
+          content: [
+            '**Chroma** (easiest): In-process vector database. No server setup. Perfect for small RAG projects (< 1M documents).',
+            '**Qdrant** (scalable): Self-hosted or cloud. Better for large-scale RAG. More features than Chroma.',
+            '**Weaviate**: GraphQL-based. Good for complex queries across embeddings.',
+            '**Milvus**: Enterprise-grade. For massive-scale RAG (100M+ documents).',
+            'For most local deployments, Chroma is sufficient and easiest.',
+          ],
+        },
+        ragVsFinetuning: {
+          title: 'Should You Use RAG or Fine-Tuning?',
+          content: 'Use this framework:',
+          items: [
+            '**Use RAG if:** Your documents change frequently, you need source attribution, you want zero model training, or you have less than 100K documents.',
+            '**Use fine-tuning if:** Your knowledge base is fixed, you want the model to truly "understand" the domain, or you need inference speed (fine-tuned models are faster).',
+            '**Combine both:** Fine-tune a model on your domain, then add RAG on top for very high-quality Q&A.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes With Local RAG',
+          items: [
+            '**Using the wrong chunk size.** Too small (100 tokens) = too many small pieces. Too large (2000 tokens) = not specific. Optimal is 500–1000 tokens.',
+            '**Forgetting to use embeddings.** You cannot do RAG without converting chunks to embeddings. Use `nomic-embed-text` (best for English) or `bge-m3` (multilingual).',
+            '**Not evaluating retrieval quality.** Just because RAG runs does not mean it retrieves the right documents. Test with known questions and verify the retrieved chunks are relevant.',
+            '**Treating RAG as a replacement for fine-tuning.** RAG is retrieval + in-context learning. Fine-tuning is actual model adaptation. Different tools for different jobs.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Local RAG',
+          faqs: [
+            {
+              q: 'How many documents can local RAG handle?',
+              a: 'Depends on the vector database. Chroma handles 100K–1M documents easily on consumer hardware. Beyond 1M, use Qdrant or Milvus.',
+            },
+            {
+              q: 'Can RAG work with images?',
+              a: 'Only if you extract text first (OCR). For true image understanding, use multimodal models like Llama 3.2 Vision with RAG.',
+            },
+            {
+              q: 'Is RAG slower than fine-tuning?',
+              a: 'RAG requires retrieval (milliseconds) + context passing (tokens added to prompt). Typically slower than fine-tuned inference but much faster to set up.',
+            },
+            {
+              q: 'Can I use cloud embeddings with local LLMs?',
+              a: 'Yes. Use cloud embeddings (OpenAI, Cohere) for retrieval and local LLMs for answering. Hybrid approach is common.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — Open WebUI has built-in RAG.',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Setup for embeddings.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) — Inference engines for RAG.',
+            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — Use LLMs via API in RAG pipelines.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'LlamaIndex Documentation — docs.llamaindex.ai',
+            'LangChain Documentation — python.langchain.com',
+            'Chroma Documentation — docs.trychroma.com',
+            'Qdrant Documentation — qdrant.tech/documentation',
+            'RAG Paper — arxiv.org/abs/2005.11401',
+          ],
+        },
+      },
+    },
+  },
+
+  'desktop-vs-webui-local-llm': {
+    en: {
+      theme: 'Tools & Interfaces',
+      title: 'Desktop vs Web UI for Local LLMs: Which Interface Should You Choose?',
+      seoTitle: 'Desktop vs Web UI for Local LLMs',
+      intro: 'Local LLM tools come in two interface styles: desktop applications (LM Studio, Jan AI) and web UIs (Open WebUI, Enchanted UI). Desktop apps are simpler for consumers; web UIs are more powerful and shareable. As of April 2026, both approaches are mature, and the choice depends entirely on your workflow.',
+      metaDescription: 'Desktop vs web UI for local LLMs: comparison of interfaces, features, sharing, and scalability. Which is best? Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '9 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM interface',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Desktop Applications', anchor: '#desktop-apps' },
+        { label: 'Web UIs', anchor: '#web-uis' },
+        { label: 'Feature Comparison', anchor: '#feature-comparison' },
+        { label: 'When to Choose Each', anchor: '#when-to-choose' },
+        { label: 'Can You Use Both?', anchor: '#use-both' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Desktop apps** (LM Studio, Jan AI): Simple, single-user, no server setup. Best for consumers.',
+            '**Web UIs** (Open WebUI, Enchanted): Browser-based, shareable, multi-user capable. Best for teams and power users.',
+            'Both types connect to the same underlying models (Ollama, vLLM). You can switch between them.',
+            'Desktop apps are easier for beginners; web UIs are more flexible for professionals.',
+            'As of April 2026, both are mature and production-ready.',
+          ],
+        },
+        desktopApps: {
+          title: 'What Are Desktop Applications?',
+          content: [
+            'Desktop apps are native applications that run directly on your operating system. Examples: LM Studio, Jan AI.',
+            '**Advantages:** Simple setup, no server knowledge required, single-user, runs as a standalone application, GPU settings in GUI.',
+            '**Disadvantages:** Windows/macOS only (mostly), single machine only, no multi-user access, no easy sharing.',
+          ],
+        },
+        webUIs: {
+          title: 'What Are Web UIs?',
+          content: [
+            'Web UIs are interfaces accessed through your browser. They run a web server (usually in Docker) and serve a browser-based interface. Examples: Open WebUI, Enchanted UI.',
+            '**Advantages:** Browser-based (work on any OS), shareable via URL, multi-user capable, access from other devices on network, more powerful features.',
+            '**Disadvantages:** Requires understanding of Docker or ports, slightly more setup, requires a running web server.',
+          ],
+        },
+        featureComp: {
+          title: 'Feature Comparison: Desktop vs Web UI',
+          rows: [
+            { 'Feature': 'Setup complexity', 'Desktop': 'Very easy', 'Web UI': 'Medium' },
+            { 'Feature': 'GUI for GPU settings', 'Desktop': 'Yes', 'Web UI': 'Sometimes' },
+            { 'Feature': 'Multi-user access', 'Desktop': 'No', 'Web UI': 'Yes' },
+            { 'Feature': 'Access from other devices', 'Desktop': 'No', 'Web UI': 'Yes (if configured)' },
+            { 'Feature': 'Built-in chat', 'Desktop': 'Yes', 'Web UI': 'Yes' },
+            { 'Feature': 'RAG support', 'Desktop': 'Limited', 'Web UI': 'Full (Open WebUI)' },
+            { 'Feature': 'API exposure', 'Desktop': 'Sometimes', 'Web UI': 'Yes' },
+            { 'Feature': 'Operating systems', 'Desktop': 'macOS, Windows', 'Web UI': 'Any (Docker)' },
+            { 'Feature': 'Resource overhead', 'Desktop': 'Low', 'Web UI': 'Medium (Docker)' },
+          ],
+          columns: ['Feature', 'Desktop', 'Web UI'],
+        },
+        whenToChoose: {
+          title: 'When Should You Choose Desktop vs Web UI?',
+          content: 'Choose desktop app if:',
+          items: [
+            'You are a consumer / non-technical user.',
+            'You want the simplest possible setup.',
+            'You are using only one device.',
+            'You want native OS integration (notifications, system menu).',
+            'You are on macOS or Windows.',
+          ],
+        },
+        choosWebUI: {
+          title: 'When Should You Choose Web UI?',
+          content: 'Choose web UI if:',
+          items: [
+            'You are on Linux (best support).',
+            'You want multiple users to access the same model.',
+            'You want to access from other devices on your network.',
+            'You need RAG or advanced features (Open WebUI).',
+            'You want to deploy on a server or cloud VM.',
+            'You want to expose an API.',
+          ],
+        },
+        useBoth: {
+          title: 'Can You Run Both Desktop and Web UI Simultaneously?',
+          content: [
+            'Yes, but with caveats. Both will try to use the same GPU and models. You can run them both using the same Ollama backend (they share the model), but inference performance will be split.',
+            'Better approach: Run Ollama in the background, then use either LM Studio OR Open WebUI as your interface. Switching between them is instant.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes With Desktop vs Web UI',
+          items: [
+            '**Thinking desktop is always simpler.** Desktop is simpler initially, but web UIs have better features. For learning, desktop is simpler.',
+            '**Not realizing you can use both.** You can switch between LM Studio and Open WebUI by pointing them to the same Ollama instance.',
+            '**Assuming web UI requires server knowledge.** Modern web UIs (Open WebUI Docker) handle the server complexity for you. Just run the Docker command.',
+            '**Deploying a desktop app to a server.** Desktop apps (LM Studio, Jan) are single-user. For server deployments, use web UIs or APIs.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Desktop vs Web UI',
+          faqs: [
+            {
+              q: 'Can I run Open WebUI and LM Studio at the same time?',
+              a: 'Yes. Open WebUI (browser) and LM Studio (desktop) can both connect to the same Ollama backend. They share the model.',
+            },
+            {
+              q: 'Which is faster, desktop or web UI?',
+              a: 'Desktop apps have less overhead (no web server), so marginally faster. Difference is imperceptible for inference speed.',
+            },
+            {
+              q: 'Can I access my local LLM from my phone?',
+              a: 'Yes, with web UI. Run Open WebUI in Docker and configure `OLLAMA_HOST=0.0.0.0:11434`. Then access from your phone on the same network.',
+            },
+            {
+              q: 'Is there a security risk with web UI on a network?',
+              a: 'Yes. Ollama has no authentication by default. Use a firewall or reverse proxy (nginx) with authentication if exposing to a network.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — Complete list of interfaces.',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — Desktop app setup.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — Comparison of two tools.',
+            '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — Open WebUI and web alternatives.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'LM Studio — lmstudio.ai',
+            'Jan AI — jan.ai',
+            'Open WebUI — github.com/open-webui/open-webui',
+            'Enchanted UI — enchanted.div.ai',
+          ],
+        },
+      },
+    },
+  },
+
+  'local-llms-with-vscode-cursor': {
+    en: {
+      theme: 'Tools & Interfaces',
+      title: 'Local LLMs With VS Code and Cursor: Setup and Best Practices',
+      seoTitle: 'Local LLMs in VS Code and Cursor',
+      intro: 'VS Code and Cursor (an AI-first code editor) can both use local LLMs for code completions and suggestions, via Continue.dev extension (VS Code) or direct integration (Cursor). As of April 2026, local code completions are practical for 7B–13B models and require 8–16 GB RAM. This guide covers setup, best models, and performance tuning.',
+      metaDescription: 'Use local LLMs in VS Code and Cursor: Continue.dev setup, model selection, and performance. Code completion guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '10 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'local code completion',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'VS Code + Continue.dev', anchor: '#vscode-continue' },
+        { label: 'Cursor Editor', anchor: '#cursor-editor' },
+        { label: 'Best Models for Code', anchor: '#best-models' },
+        { label: 'Performance and VRAM', anchor: '#performance' },
+        { label: 'Advanced Configuration', anchor: '#advanced' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'VS Code uses Continue.dev extension to connect to local models (Ollama, LM Studio, vLLM).',
+            'Cursor is a VS Code fork with built-in local model support. No extension needed.',
+            '**Best local models for code**: Qwen2.5-Coder 7B, Llama Code 13B, or Mistral 7B.',
+            'Expect 2–5 second completion latency on consumer GPUs with 7B models.',
+            'As of April 2026, local code completions are practical for personal use, not yet production-grade for teams.',
+          ],
+        },
+        vscodeContinue: {
+          title: 'How to Set Up Continue.dev in VS Code',
+          content: 'Continue.dev is a VS Code extension for local and cloud code completions.',
+          codeBlock: '# 1. Install Continue from VS Code marketplace\n# Search "Continue" and click Install\n\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Continue settings (Ctrl+Shift+P → Continue: Open Settings)\n# config.json opens\n\n# 4. Configure for your local model:\n# Replace the default settings with:\n{\n  "models": [{\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b",\n    "apiBase": "http://localhost:11434"\n  }],\n  "tabAutocompleteModel": {\n    "title": "Ollama",\n    "provider": "ollama",\n    "model": "qwen2.5-coder:7b"\n  }\n}\n\n# 5. Start typing code and press Tab for completions\n# Or Ctrl+Shift+\\ to manually trigger completions',
+          codeLanguage: 'json',
+        },
+        cursor: {
+          title: 'How to Use Local Models in Cursor',
+          content: [
+            'Cursor is a VS Code fork optimized for AI-assisted coding. It has built-in support for local models via Ollama.',
+          ],
+          codeBlock: '# 1. Download Cursor from cursor.sh\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Cursor Settings (Cmd/Ctrl + ,)\n# 4. Search "Model" and set:\n#    - Model Provider: "Ollama"\n#    - Model: "qwen2.5-coder:7b" (or your choice)\n#    - API Base: "http://localhost:11434"\n\n# 5. Type code and press Tab for inline completions\n# 6. Ctrl+K for multi-line completions',
+          codeLanguage: 'bash',
+        },
+        bestModels: {
+          title: 'Which Models Are Best for Code?',
+          rows: [
+            { 'Model': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'Best balance, fastest' },
+            { 'Model': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'General coding' },
+            { 'Model': 'Mistral 7B', 'HumanEval': '61%', 'VRAM': '4.5 GB', 'Speed': 'Very fast', 'Best For': 'Lightweight, EU servers' },
+            { 'Model': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Speed': 'Medium', 'Best For': 'Better quality on 16GB machines' },
+            { 'Model': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Speed': 'Fast', 'Best For': 'Lightweight alternative' },
+          ],
+          columns: ['Model', 'HumanEval', 'VRAM', 'Speed', 'Best For'],
+        },
+        performance: {
+          title: 'What Latency and VRAM Should You Expect?',
+          content: [
+            'Completion latency (time to first token) is critical for IDE experience. As of April 2026, here are typical numbers:',
+          ],
+          rows: [
+            { 'Hardware': 'RTX 4090 GPU', 'Model': 'Qwen2.5-Coder 7B', 'Latency': '0.3–0.5 seconds', 'Throughput': '150 tokens/sec' },
+            { 'Hardware': 'RTX 4070 GPU', 'Model': 'Qwen2.5-Coder 7B', 'Latency': '0.8–1.5 seconds', 'Throughput': '80 tokens/sec' },
+            { 'Hardware': 'M3 MacBook Pro', 'Model': 'Qwen2.5-Coder 7B', 'Latency': '2–3 seconds', 'Throughput': '20 tokens/sec' },
+            { 'Hardware': '8-core CPU only', 'Model': 'Qwen2.5-Coder 7B', 'Latency': '5–10 seconds', 'Throughput': '3 tokens/sec' },
+          ],
+          columns: ['Hardware', 'Model', 'Latency', 'Throughput'],
+        },
+        advanced: {
+          title: 'Advanced Configuration for Code Completions',
+          content: 'Fine-tune the experience with these settings:',
+          codeBlock: '# config.json advanced settings\n{\n  "tabAutocompleteModel": {\n    "contextLength": 2048,     # How much code context to send\n    "maxTokens": 50            # Max tokens per completion\n  },\n  "completionOptions": {\n    "maxContextTokens": 1024,\n    "maxSuggestionsCount": 5,\n    "debounceWaitMs": 200      # Wait before showing completions (ms)\n  },\n  # For faster inference, use smaller context:\n  "models": [{\n    "contextLength": 1024      # Smaller context = faster\n  }]\n}\n\n# For best speed on 8GB machines:\n# - Use 7B model (not 13B)\n# - Set maxTokens to 30\n# - Set debounceWaitMs to 500 (less flickering)',
+          codeLanguage: 'json',
+        },
+        commonMistakes: {
+          title: 'Common Mistakes With Local Code Completions',
+          items: [
+            '**Not tuning debounce latency.** If completions feel "laggy", increase debounceWaitMs (e.g., to 400 ms) to avoid showing incomplete suggestions.',
+            '**Using a model too large for your VRAM.** A 13B model + editor overhead can use 12+ GB. On 8GB machines, stick with 7B models.',
+            '**Expecting cloud-level code quality.** GPT-4o is significantly better at code than any 7B model. Local completions are 70–80% of cloud quality.',
+            '**Running inference on CPU.** CPU completions are impractical (5–10 second latency). GPU is required for usable completions.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Local Code Completions',
+          faqs: [
+            {
+              q: 'Is local code completion faster than cloud?',
+              a: 'No. Cloud completions (GitHub Copilot) are faster due to optimized servers. Local completions have higher latency but zero cost and zero privacy risk.',
+            },
+            {
+              q: 'Can I use local completions with other IDEs (PyCharm, Neovim)?',
+              a: 'Yes, but setup varies. PyCharm has an Ollama plugin. For Neovim, use cmp-ollama (completion plugin). Always check the IDE community for integrations.',
+            },
+            {
+              q: 'Can I use cloud models in Continue or Cursor?',
+              a: 'Yes. Configure Continue to use OpenAI, Claude, or Gemini. You can also mix (local for fast, cloud for complex code).',
+            },
+            {
+              q: 'Does local code completion work offline?',
+              a: 'Yes. If you have pulled the model in Ollama, completions work entirely offline.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Setup Ollama for code completions.',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Detailed coding model benchmark.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — Which tool to use.',
+            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — Code completion APIs.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Continue.dev — continue.dev',
+            'Cursor Editor — cursor.sh',
+            'Continue GitHub — github.com/continuedev/continue',
+            'Qwen2.5-Coder — github.com/QwenLM/Qwen2.5-Coder',
+          ],
+        },
+      },
+    },
+  },
+
+  'headless-local-llms': {
+    en: {
+      theme: 'Tools & Interfaces',
+      title: 'Headless Local LLMs: Running Models Without a UI (2026)',
+      seoTitle: 'Headless Local LLM Deployment',
+      intro: 'A headless local LLM is a model running as a service (API) with no chat interface or UI. You interact via REST API from Python, Node.js, or curl. Headless deployments are ideal for production servers, batch processing, and automation. As of April 2026, this is the standard for production deployments.',
+      metaDescription: 'Headless local LLM deployment: running Ollama, vLLM, and APIs without UI. Production setup guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '10 min read',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'headless LLM',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Is Headless?', anchor: '#what-is-headless' },
+        { label: 'Headless Ollama', anchor: '#headless-ollama' },
+        { label: 'Headless vLLM', anchor: '#headless-vllm' },
+        { label: 'Production Deployment', anchor: '#production-deployment' },
+        { label: 'Monitoring and Scaling', anchor: '#monitoring' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Headless = no chat UI, just API. Ollama, vLLM, and LM Studio all can run headless.',
+            '**Ollama headless**: `ollama serve` starts the API at localhost:11434. No UI.',
+            '**vLLM headless**: `vllm serve` starts the API on port 8000. Better throughput than Ollama.',
+            '**Production**: Use vLLM for throughput, Ollama for simplicity, nginx for load balancing and security.',
+            'As of April 2026, vLLM is the production standard for high-throughput services.',
+          ],
+        },
+        whatIsHeadless: {
+          title: 'What Does Headless Mean?',
+          content: [
+            'Headless means the software runs as a service without a graphical user interface. You interact via API calls (REST, gRPC) instead of clicking buttons.',
+            'Advantages: lighter resource usage (no UI overhead), easier to automate, suitable for servers, easier to scale.',
+            'Disadvantages: no visual feedback, requires API knowledge, harder to debug without logs.',
+          ],
+        },
+        ollama: {
+          title: 'How to Run Ollama Headless',
+          content: 'Ollama can run as a pure API service:',
+          codeBlock: '# Run Ollama headless\nollama serve\n\n# This starts the API at http://localhost:11434/v1\n# No chat UI, just a background service\n\n# Use the API from Python\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)\n\n# Or from curl\ncurl http://localhost:11434/v1/chat/completions \\\n  -H "Content-Type: application/json" \\\n  -d \'{{"model": "llama3.2:3b", "messages": [{{"role": "user", "content": "Hello"}}]}}\'',
+          codeLanguage: 'bash',
+        },
+        vllm: {
+          title: 'How to Run vLLM Headless',
+          content: 'vLLM is optimized for headless, high-throughput deployments:',
+          codeBlock: '# Install vLLM\npip install vllm\n\n# Run headless with API\nvllm serve llama-3.1-8b-instruct \\\n  --host 0.0.0.0 \\\n  --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Access at http://localhost:8000/v1\n# Supports 50+ concurrent requests\n\n# Use from Python (same as Ollama)\nfrom openai import OpenAI\nclient = OpenAI(base_url="http://localhost:8000/v1", api_key="anything")\nresponse = client.chat.completions.create(\n  model="meta-llama/Llama-2-7b-chat-hf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'bash',
+        },
+        production: {
+          title: 'How to Deploy for Production',
+          content: [
+            '1. **Use vLLM** for high throughput (50+ concurrent users).',
+            '2. **Use Ollama** for simplicity (single-user or small teams).',
+            '3. **Add nginx reverse proxy** for load balancing and authentication.',
+            '4. **Monitor GPU memory** — models should not exceed 80% VRAM.',
+            '5. **Set up logging** — track errors and performance.',
+            '6. **Use systemd or Docker** for service management (auto-restart on crash).',
+          ],
+          codeBlock: '# Example: Deploy vLLM on a server via Docker\ndocker run --gpus all -p 8000:8000 \\\n  --env VLLM_API_KEY="your-secret-key" \\\n  vllm/vllm-openai:latest \\\n  --model meta-llama/Llama-2-13b-chat-hf \\\n  --tensor-parallel-size 2  # Use 2 GPUs\n\n# Nginx reverse proxy config (optional)\n# server {\n#   listen 80;\n#   location / {\n#     proxy_pass http://localhost:8000;\n#     proxy_set_header Authorization "Bearer $http_authorization";\n#   }\n# }',
+          codeLanguage: 'bash',
+        },
+        monitoring: {
+          title: 'How to Monitor Headless Deployments',
+          content: [
+            'Monitor GPU memory, request latency, and error rates:',
+          ],
+          codeBlock: '# Monitor GPU usage (nvidia-smi)\nwatch nvidia-smi  # Updates every 2 seconds\n\n# Monitor request latency\n# Add logging to your client code\nimport time\nstart = time.time()\nresponse = client.chat.completions.create(...)\nlatency = time.time() - start\nprint(f"Request took {latency:.2f} seconds")\n\n# Monitor vLLM logs\ndocker logs -f <container_id>\n\n# Check error rates\n# Parse logs for errors or use a monitoring tool (Prometheus + Grafana)',
+          codeLanguage: 'python',
+        },
+        commonMistakes: {
+          title: 'Common Mistakes With Headless Deployments',
+          items: [
+            '**Not monitoring VRAM.** Models can silently run out of memory. Monitor GPU before deploying to production.',
+            '**Exposing API without authentication.** Headless services are often exposed to networks. Always add authentication (API key, firewall).',
+            '**Not setting resource limits.** A model can consume 100% GPU, blocking other tasks. Use `--gpu-memory-utilization` in vLLM.',
+            '**Expecting Ollama to scale to 100+ users.** Use vLLM for high concurrency. Ollama can handle single-digit concurrent users.',
+            '**Not testing failover.** If your model server crashes, requests hang. Use a load balancer and health checks.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Headless Deployments',
+          faqs: [
+            {
+              q: 'Can Ollama and vLLM run on the same GPU?',
+              a: 'Not simultaneously. They will compete for VRAM. Run one or the other, or use multiple GPUs.',
+            },
+            {
+              q: 'Is it safe to expose the API to the internet?',
+              a: 'No, not without authentication. Always put an API key, firewall, or reverse proxy in front. Never expose localhost:11434 directly.',
+            },
+            {
+              q: 'How many concurrent users can Ollama handle?',
+              a: 'Typically 1–3 without queuing. For more, use vLLM or add request queuing.',
+            },
+            {
+              q: 'What is the difference between Ollama and vLLM performance?',
+              a: 'Single request: similar speed. Multiple concurrent requests: vLLM is 5–10× better because it batches requests.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Ollama setup.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) — Engine comparison.',
+            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — API documentation.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide-2026) — Hardware requirements.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Ollama GitHub — github.com/ollama/ollama',
+            'vLLM GitHub — github.com/vllm-project/vllm',
+            'vLLM Deployment Guide — docs.vllm.ai/en/serving/deploying_with_docker.html',
+            'Ollama API Docs — github.com/ollama/ollama/blob/main/docs/api.md',
+          ],
+        },
+      },
+    },
+  },
+
 }
