@@ -21,7 +21,7 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
     agentsOrchestration: 'Agents & Orchestration',
     safetyAlignment: 'Safety & Alignment',
     evalsTesting: 'Evals & Testing',
-    advancedTechniques: 'Advanced Techniques',
+    advancedTechniques: 'Reasoning Techniques',
     metricsProduction: 'Metrics & Production',
   },
   de: {
@@ -30,7 +30,7 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
     agentsOrchestration: 'Agenten & Orchestrierung',
     safetyAlignment: 'Sicherheit & Ausrichtung',
     evalsTesting: 'Bewertungen & Tests',
-    advancedTechniques: 'Erweiterte Techniken',
+    advancedTechniques: 'Reasoning-Techniken',
     metricsProduction: 'Metriken & Produktion',
   },
   fr: {
@@ -39,7 +39,7 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
     agentsOrchestration: 'Agents & Orchestration',
     safetyAlignment: 'Sécurité & Alignement',
     evalsTesting: 'Évaluations & Tests',
-    advancedTechniques: 'Techniques avancées',
+    advancedTechniques: 'Techniques de raisonnement',
     metricsProduction: 'Métriques & Production',
   },
   ja: {
@@ -48,7 +48,7 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
     agentsOrchestration: 'エージェント & オーケストレーション',
     safetyAlignment: 'セキュリティ & アライメント',
     evalsTesting: '評価 & テスト',
-    advancedTechniques: '高度な技術',
+    advancedTechniques: '推論テクニック',
     metricsProduction: 'メトリクス & 本番環境',
   },
   zh: {
@@ -57,7 +57,7 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
     agentsOrchestration: '代理 & 编排',
     safetyAlignment: '安全 & 对齐',
     evalsTesting: '评估 & 测试',
-    advancedTechniques: '高级技术',
+    advancedTechniques: '推理技术',
     metricsProduction: '指标 & 生产',
   },
 }
@@ -657,29 +657,69 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         )}
 
         {/* Jump navigation for glossary */}
-        {slug === 'prompt-engineering-glossary' && article.sections.intro && (
-          <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-4">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{JUMP_SECTION_LABELS[lang].jumpToSection}</p>
-            <div className="flex flex-wrap gap-2">
-              {[
-                { id: '#core-prompting', key: 'corePrompting' },
-                { id: '#agents-orchestration', key: 'agentsOrchestration' },
-                { id: '#safety-alignment', key: 'safetyAlignment' },
-                { id: '#evals-testing', key: 'evalsTesting' },
-                { id: '#advanced-techniques', key: 'advancedTechniques' },
-                { id: '#metrics-production', key: 'metricsProduction' },
-              ].map((link) => (
-                <a
-                  key={link.id}
-                  href={link.id}
-                  className="text-sm text-primary hover:text-primary/80 font-medium transition-colors"
-                >
-                  {JUMP_SECTION_LABELS[lang][link.key as keyof typeof JUMP_SECTION_LABELS.en]}
-                </a>
-              ))}
-            </div>
-          </nav>
-        )}
+        {slug === 'prompt-engineering-glossary' && article.sections.intro && (() => {
+          // Build A-Z index: letter → first term's anchor in this language
+          const alphaIndex: Record<string, string> = {}
+          Object.values(article.sections).forEach(section => {
+            if (!section.rows) return
+            section.rows.forEach(row => {
+              const term = row['Term'] || ''
+              const letter = term.charAt(0).toUpperCase()
+              if (/[A-Z]/.test(letter) && !alphaIndex[letter]) {
+                alphaIndex[letter] = `term-${term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`
+              }
+            })
+          })
+          const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+          return (
+            <>
+              <nav className="mb-4 bg-primary/5 border border-primary/20 rounded-lg p-4">
+                <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{JUMP_SECTION_LABELS[lang].jumpToSection}</p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { id: '#core-prompting', key: 'corePrompting' },
+                    { id: '#agents-orchestration', key: 'agentsOrchestration' },
+                    { id: '#safety-alignment', key: 'safetyAlignment' },
+                    { id: '#evals-testing', key: 'evalsTesting' },
+                    { id: '#advanced-techniques', key: 'advancedTechniques' },
+                    { id: '#metrics-production', key: 'metricsProduction' },
+                  ].map((link) => (
+                    <a
+                      key={link.id}
+                      href={link.id}
+                      className="text-sm text-primary hover:text-primary/80 font-medium transition-colors"
+                    >
+                      {JUMP_SECTION_LABELS[lang][link.key as keyof typeof JUMP_SECTION_LABELS.en]}
+                    </a>
+                  ))}
+                </div>
+              </nav>
+              <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg px-4 py-3" aria-label="A-Z glossary index">
+                <div className="flex flex-wrap gap-1">
+                  {ALPHABET.map(letter => {
+                    const anchor = alphaIndex[letter]
+                    return anchor ? (
+                      <a
+                        key={letter}
+                        href={`#${anchor}`}
+                        className="w-7 h-7 flex items-center justify-center text-xs font-bold text-primary hover:bg-primary/10 rounded transition-colors"
+                      >
+                        {letter}
+                      </a>
+                    ) : (
+                      <span
+                        key={letter}
+                        className="w-7 h-7 flex items-center justify-center text-xs font-bold text-text-secondary/30 cursor-default"
+                      >
+                        {letter}
+                      </span>
+                    )
+                  })}
+                </div>
+              </nav>
+            </>
+          )
+        })()}
 
         {/* Table of Contents */}
         {(article as any).toc && (
