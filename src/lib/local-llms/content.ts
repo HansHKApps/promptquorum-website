@@ -9404,7 +9404,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: 'What Stack Should You Use for Writing & Content Creation?',
           content: [
             '**Best stack: Ollama + OpenWebUI + Markdown editor**',
-            'Why this stack: OpenWebUI has the best chat UX. No coding required. Context window flexibility beats LM Studio for long-form writing.',
+            'Why this stack: OpenWebUI has the best chat UX. No coding required. Context window flexibility beats LM Studio for long-form writing. As of April 2026, this combo remains the simplest zero-config setup for writers.',
           ],
           numberedItems: [
             'Install Ollama, pull Llama 3 70B (if 24GB GPU) or Mistral 7B (if budget).',
