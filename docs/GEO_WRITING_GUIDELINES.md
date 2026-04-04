@@ -2456,6 +2456,146 @@ When adding a new route type (new static page, new section):
 
 ---
 
+## META COPY STYLE RULES BY CHANNEL
+
+**Three distinct meta fields, three distinct audiences, three distinct styles.** Every page must populate all three with channel-optimized content. Identical or interchangeable fields are a compliance failure.
+
+---
+
+### RULE COPY-01: Google Search Meta Descriptions (150–160 characters)
+
+**Channel focus:** Searcher scanning results  
+**Opening:** Keyword-first for scan matching  
+**Tone:** Direct benefit statement  
+**Ending:** CTA or outcome signal  
+**Length:** 150–160 characters (tight constraint enables full display without truncation)
+
+**Format template:**
+```
+[KEYWORD] [BENEFIT/OUTCOME]. [SPECIFICITY or ACTION]. [CTA or signal]
+```
+
+**Examples:**
+
+| Page | Meta Description |
+|---|---|
+| "How RAG Works" | "RAG retrieval-augmented generation improves LLM accuracy by fetching external documents before responding. Learn how chunking, embeddings, and ranking work together." (158 chars) |
+| "Fine-Tuning Guide" | "Fine-tuning customizes AI models on domain-specific data. Reduce hallucinations, enforce output format, achieve legal/medical specialization. Start with 100+ examples." (161 chars) |
+| "Model Comparison" | "Compare GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro: context windows, costs, latency, reasoning quality. Choose the best model for your task. Free comparison." (161 chars) |
+
+**Common mistakes:**
+- ❌ Repeating the H1 title word-for-word  
+- ❌ Omitting the keyword entirely (forces reader to infer relevance)  
+- ❌ Ending with generic phrases like "Learn more" without specificity  
+- ❌ Using vague benefits ("powerful", "efficient") instead of measurable outcomes  
+
+---
+
+### RULE COPY-02: Social og:description Fields (140–180 characters)
+
+**Channel focus:** Scroller in social feed deciding whether to click  
+**Opening:** Problem or hook statement (no keyword obsession)  
+**Tone:** Conversational, conversational, story-like  
+**Ending:** Curiosity or promise  
+**Length:** 140–180 characters (Pinterest, Facebook, LinkedIn previews tolerate variation)
+
+**Format template:**
+```
+[PROBLEM/HOOK]. [INSIGHT or PROMISE]. [CURIOSITY GAP]
+```
+
+**Examples:**
+
+| Page | og:description |
+|---|---|
+| "How RAG Works" | "Your AI keeps hallucinating answers that don't exist. RAG changes the game — it grounds responses in real documents. Here's why it works and how to implement it." (161 chars) |
+| "Fine-Tuning Guide" | "Off-the-shelf models give mediocre results for specialized domains. Fine-tuning teaches models your rules. Medical, legal, code generation — see what's possible." (162 chars) |
+| "Model Comparison" | "Picking the right AI model shouldn't require three spreadsheets. We benchmarked GPT-4o, Claude Sonnet, Gemini Pro on reasoning, speed, and cost. Here's what won." (162 chars) |
+
+**Common mistakes:**
+- ❌ Copying the meta description verbatim  
+- ❌ Keyword-stuffing (feels spammy in social context)  
+- ❌ Missing the human element (no problem, no story, just facts)  
+- ❌ Overly long sentences (40+ char sentences get truncated in previews)  
+
+---
+
+### RULE COPY-03: Twitter / X Descriptions (100–130 characters)
+
+**Channel focus:** Rapid scanner, short attention span  
+**Opening:** Immediate hook or punchline  
+**Tone:** Punchy, emoji-friendly, arrow-styled  
+**Ending:** Social proof or stat  
+**Length:** 100–130 characters (strict, matches tweet context)
+
+**Format template:**
+```
+[HOOK] → [BENEFIT]. [STAT or SOCIAL PROOF]
+```
+
+**Examples:**
+
+| Page | twitterDescription |
+|---|---|
+| "How RAG Works" | "RAG fixes AI hallucinations 🎯 Ground LLMs in real docs. Reduce false answers by 95%. Read the guide." (103 chars) |
+| "Fine-Tuning Guide" | "Fine-tune your AI → 10x better results. Medical, legal, code-specific models that actually know your domain. (129 chars) |
+| "Model Comparison" | "GPT-4o vs Claude vs Gemini → benchmarked. Speed vs. quality vs. cost. Pick your winner. 📊 (94 chars) |
+
+**Common mistakes:**
+- ❌ Twitter descriptions longer than 130 chars (get cut off mid-word)  
+- ❌ Missing hook or emoji (blends into feed noise)  
+- ❌ Repeating both previous descriptions (3 identical fields = zero differentiation)  
+- ❌ Using URLs in the description (Twitter handles URLs separately)  
+
+---
+
+### RULE COPY-04: Zero Tolerance for Field Duplication
+
+**Rule:** metaDescription, ogDescription, and twitterDescription must be completely distinct. Word overlap < 20%.
+
+**Enforcement:**
+- Audit every page: if two fields share > 3 consecutive words, refactor one
+- Copyedit checklist: [ ] Meta ≠ og ≠ twitter (audit word overlap)
+- Violations: fail pre-flight review, require revision before merging
+
+**Why:** AI systems and search engines see all three fields. Identical content signals low effort. Distinct fields show intentional channel optimization.
+
+---
+
+### RULE COPY-05: Quick Reference Table
+
+| Rule | Length | Opening | Tone | Ending | Example |
+|---|---|---|---|---|---|
+| **COPY-01 (Meta)** | 150–160 ch | Keyword-first | Direct benefit | CTA / outcome | "RAG improves LLM accuracy by fetching external documents. Learn how chunking and ranking work together." |
+| **COPY-02 (og:)** | 140–180 ch | Problem/hook | Conversational | Curiosity gap | "Your AI keeps hallucinating. RAG grounds responses in real docs. Here's why it works." |
+| **COPY-03 (Twitter)** | 100–130 ch | Hook + emoji | Punchy, →arrow | Stat / proof | "RAG fixes hallucinations 🎯 → 10x better. Reduce false answers by 95%." |
+
+---
+
+### RULE COPY-06: Homepage Reference Implementation
+
+**Canonical example:** PromptQuorum homepage (`/`)
+
+```markdown
+metaDescription (156 chars):
+"PromptQuorum dispatches prompts to multiple AI models simultaneously. Get independent results from GPT-4o, Claude, Gemini in one API call. Reduce hallucination risk."
+
+ogDescription (172 chars):
+"Stop picking one AI model. PromptQuorum runs your prompts across GPT-4o, Claude, Gemini, Mistral simultaneously — get consensus answers, reduce hallucinations, compare quality instantly."
+
+twitterDescription (118 chars):
+"Prompt → multiple AI models → consensus answers 🤖 Compare GPT-4o, Claude, Gemini in one API call. Reduce hallucinations. Try free."
+```
+
+**Analysis:**
+- Meta: Keyword ("PromptQuorum") + benefit (simultaneous dispatch) + outcome (reduces hallucination) → scannable, benefit-driven
+- og: Problem ("stop picking one") + hook (consensus) + social proof (multiple models, instant comparison) → story-like, shareable
+- Twitter: Hook (→arrow) + emoji + stat (one API call) + CTA (try free) → scannable, social-native
+
+Apply this pattern to every page: **distinct opening, distinct tone, distinct benefit**.
+
+---
+
 ## MANDATORY WRITE-TIME REQUIREMENTS — Full Compliance Checklist
 
 **Do not output any article draft until every item below is satisfied. This checklist is the final gate before a PromptQuorum article is considered ready to publish.**
