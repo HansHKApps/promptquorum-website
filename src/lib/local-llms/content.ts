@@ -1639,6 +1639,137 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'best-local-llms-for-coding': {
+    en: {
+      theme: 'Best Models',
+      title: 'Best Local LLMs for Coding in 2026: Ranked by HumanEval, RAM, and Language Support',
+      seoTitle: 'Best Local LLMs for Coding 2026',
+      intro: 'The best local LLMs for coding in 2026 are Qwen2.5-Coder 32B (87% HumanEval), DeepSeek-Coder V2 Lite (81%), and Qwen2.5-Coder 7B (72%). All three run locally via Ollama and outperform general-purpose models at the same parameter count on Python, JavaScript, and SQL generation tasks.',
+      metaDescription: 'Best local LLMs for coding in 2026: Qwen2.5-Coder 32B, DeepSeek-Coder V2, and Starcoder2 ranked by HumanEval score, RAM requirements, and language support.',
+      publishDate: '2026-04-04',
+      readTime: '9 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM for coding',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Makes a Local LLM Good for Coding?', anchor: '#what-makes-a-good-coding-llm' },
+        { label: '#1 Qwen2.5-Coder 32B', anchor: '#qwen2-5-coder-32b' },
+        { label: '#2 DeepSeek-Coder V2 Lite 16B', anchor: '#deepseek-coder-v2' },
+        { label: '#3 Qwen2.5-Coder 7B', anchor: '#qwen2-5-coder-7b' },
+        { label: '#4 Starcoder2 15B', anchor: '#starcoder2-15b' },
+        { label: '#5 Llama 3.1 8B (general fallback)', anchor: '#llama-3-1-8b' },
+        { label: 'HumanEval Benchmark Table', anchor: '#humaneval-benchmark-table' },
+        { label: 'Which Coding Model Should You Use?', anchor: '#which-coding-model' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Best overall coding model**: Qwen2.5-Coder 32B — 87% HumanEval, requires 20 GB RAM at Q4_K_M.',
+            '**Best for 8 GB RAM**: Qwen2.5-Coder 7B — 72% HumanEval, runs at 15–25 tok/sec on CPU.',
+            '**Best for fill-in-the-middle (code completion)**: Starcoder2 15B — purpose-built for IDE-style autocomplete.',
+            'Code-specific models score 5–15 percentage points higher on HumanEval than general-purpose models at the same parameter count.',
+            'For AI coding assistant workflows (VS Code, Cursor), see [Local LLMs for Coding Workflows](/local-llms/local-llms-for-coding-workflows).',
+          ],
+        },
+        whatMakesGood: {
+          title: 'What Makes a Local LLM Good for Coding?',
+          content: [
+            'Coding performance in local LLMs is measured primarily by HumanEval — a benchmark of 164 Python programming problems where the model must generate a correct function body. HumanEval pass@1 scores (percentage of problems solved on the first attempt) are the standard comparison metric.',
+            'Code-specific models are fine-tuned on large code corpora (GitHub, Stack Overflow, documentation) and often include fill-in-the-middle (FIM) training — the ability to complete code given both the preceding and following context, which is required for IDE autocomplete.',
+            'General-purpose models like Llama 3.1 8B score 72% on HumanEval, which is competitive. But dedicated coding models at the same size score 5–15% higher because their training data and fine-tuning prioritize code generation accuracy over general language tasks.',
+          ],
+        },
+        qwen25coder32: {
+          title: '#1 Qwen2.5-Coder 32B — Best Overall Local Coding LLM',
+          content: [
+            'Qwen2.5-Coder 32B is the highest-performing locally-runnable coding model in 2026. It scores 87% on HumanEval and 79% on MBPP (another Python coding benchmark). It supports 40+ programming languages including Python, JavaScript, TypeScript, Java, C++, SQL, Rust, and Go.',
+            'At Q4_K_M quantization, it requires ~20 GB RAM — manageable on workstations and MacBooks with 24+ GB of unified memory. Response quality on complex multi-file refactoring and algorithm design tasks is competitive with GPT-4o Mini.',
+          ],
+          rows: [
+            { 'Spec': 'HumanEval score', 'Value': '87%' },
+            { 'Spec': 'MBPP score', 'Value': '79%' },
+            { 'Spec': 'RAM required (Q4_K_M)', 'Value': '~20 GB' },
+            { 'Spec': 'Context window', 'Value': '128K tokens' },
+            { 'Spec': 'Languages', 'Value': '40+ programming languages' },
+            { 'Spec': 'Ollama command', 'Value': 'ollama run qwen2.5-coder:32b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        deepseek: {
+          title: '#2 DeepSeek-Coder V2 Lite 16B — Best for 16 GB RAM',
+          content: [
+            'DeepSeek-Coder V2 Lite is a 16B mixture-of-experts coding model from DeepSeek. Despite 16B active parameters, it achieves 81% HumanEval through its MoE architecture and requires ~10 GB RAM at Q4_K_M. It is the best coding model for machines with 16 GB RAM.',
+            'It supports fill-in-the-middle completion and handles multi-language codebases well. The Lite variant uses 2.4B active parameters per forward pass, making inference faster than a comparable dense 16B model.',
+          ],
+          rows: [
+            { 'Spec': 'HumanEval score', 'Value': '81%' },
+            { 'Spec': 'RAM required (Q4_K_M)', 'Value': '~10 GB' },
+            { 'Spec': 'Context window', 'Value': '128K tokens' },
+            { 'Spec': 'Architecture', 'Value': 'Mixture of Experts (MoE)' },
+            { 'Spec': 'Ollama command', 'Value': 'ollama run deepseek-coder-v2:16b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        qwen25coder7: {
+          title: '#3 Qwen2.5-Coder 7B — Best Coding Model for 8 GB RAM',
+          content: [
+            'Qwen2.5-Coder 7B scores 72% on HumanEval — matching the general-purpose Llama 3.1 8B while using ~4.7 GB RAM. For users with 8 GB RAM who want the best coding performance without sacrificing headroom for other applications, this is the recommended choice.',
+            'It includes FIM support for code completion tasks and is compatible with the Continue.dev VS Code extension for local AI coding assistance.',
+          ],
+          rows: [
+            { 'Spec': 'HumanEval score', 'Value': '72%' },
+            { 'Spec': 'RAM required (Q4_K_M)', 'Value': '~4.7 GB' },
+            { 'Spec': 'Context window', 'Value': '128K tokens' },
+            { 'Spec': 'FIM support', 'Value': 'Yes' },
+            { 'Spec': 'Ollama command', 'Value': 'ollama run qwen2.5-coder:7b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        starcoder2: {
+          title: '#4 Starcoder2 15B — Best for IDE Autocomplete',
+          content: [
+            'Starcoder2 15B from Hugging Face BigCode is purpose-built for fill-in-the-middle code completion — the pattern used by IDE autocomplete tools. It scores 67% on HumanEval but excels specifically on FIM tasks where context comes from both before and after the cursor position.',
+            'Starcoder2 is the recommended model when integrating a local LLM into a VS Code or JetBrains IDE via Continue.dev or Tabby. For chat-style code generation, Qwen2.5-Coder performs better.',
+          ],
+          rows: [
+            { 'Spec': 'HumanEval score', 'Value': '67%' },
+            { 'Spec': 'RAM required (Q4_K_M)', 'Value': '~9 GB' },
+            { 'Spec': 'FIM support', 'Value': 'Yes (primary use case)' },
+            { 'Spec': 'Training data', 'Value': '619 programming languages' },
+            { 'Spec': 'Ollama command', 'Value': 'ollama run starcoder2:15b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        llama318: {
+          title: '#5 Llama 3.1 8B — Best General-Purpose Fallback for Coding',
+          content: 'If you already have Llama 3.1 8B installed and do not want to download a separate coding model, it scores 72% on HumanEval — identical to Qwen2.5-Coder 7B. For everyday coding tasks (writing functions, explaining code, debugging), the quality difference between Llama 3.1 8B and a dedicated coding model is marginal. Switch to a coding-specific model for complex algorithm tasks or large codebase refactoring.',
+        },
+        humanEvalTable: {
+          title: 'HumanEval Benchmark: Best Local Coding LLMs Compared',
+          rows: [
+            { 'Model': 'Qwen2.5-Coder 32B', 'HumanEval': '87%', 'MBPP': '79%', 'RAM': '20 GB', 'FIM': 'Yes' },
+            { 'Model': 'DeepSeek-Coder V2 Lite 16B', 'HumanEval': '81%', 'MBPP': '71%', 'RAM': '10 GB', 'FIM': 'Yes' },
+            { 'Model': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'MBPP': '68%', 'RAM': '4.7 GB', 'FIM': 'Yes' },
+            { 'Model': 'Starcoder2 15B', 'HumanEval': '67%', 'MBPP': '54%', 'RAM': '9 GB', 'FIM': 'Yes (primary)' },
+            { 'Model': 'Llama 3.1 8B', 'HumanEval': '72%', 'MBPP': '68%', 'RAM': '5.5 GB', 'FIM': 'No' },
+          ],
+          columns: ['Model', 'HumanEval', 'MBPP', 'RAM', 'FIM'],
+        },
+        whichCodingModel: {
+          title: 'Which Local Coding LLM Should You Use?',
+          items: [
+            '**8 GB RAM, coding focus**: `ollama run qwen2.5-coder:7b` — best HumanEval per GB of RAM.',
+            '**16 GB RAM**: `ollama run deepseek-coder-v2:16b` — 81% HumanEval at only 10 GB RAM.',
+            '**20+ GB RAM (best quality)**: `ollama run qwen2.5-coder:32b` — highest available HumanEval locally.',
+            '**IDE autocomplete in VS Code**: Starcoder2 15B via Continue.dev — FIM-optimized for cursor position completion.',
+            '**Already running Llama 3.1 8B**: skip downloading a separate model — coding quality is equivalent to Qwen2.5-Coder 7B for everyday tasks.',
+          ],
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
