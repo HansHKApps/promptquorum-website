@@ -92,6 +92,34 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     ja: 'AI規制、データ保管法、地政学的競争が、AIを展開する組織に与える影響。',
     zh: 'AI法规、数据驻留法律和地缘政治竞争如何影响部署AI的组织。',
   },
+  'tools-platforms': {
+    en: 'Evaluate and compare the best prompt engineering tools, platforms, and IDEs for individual and team workflows.',
+    de: 'Bewerten und vergleichen Sie die besten Prompt Engineering Tools, Plattformen und IDEs für individuelle und Team-Workflows.',
+    fr: 'Évaluez et comparez les meilleurs outils, plateformes et IDEs de prompt engineering pour des flux de travail individuels et d\'équipe.',
+    ja: '個人とチームのワークフロー向けの最高のプロンプトエンジニアリングツール、プラットフォーム、IDEを評価・比較します。',
+    zh: '评估并比较最适合个人和团队工作流的提示词工程工具、平台和IDE。',
+  },
+  'evaluation-reliability': {
+    en: 'Systematic methods to evaluate prompt quality, test across models, and build reliable prompts for production.',
+    de: 'Systematische Methoden zur Bewertung der Prompt-Qualität, zum Testen über Modelle hinweg und zum Erstellen zuverlässiger Prompts für die Produktion.',
+    fr: 'Méthodes systématiques pour évaluer la qualité des prompts, tester sur plusieurs modèles et créer des prompts fiables pour la production.',
+    ja: 'プロンプト品質を評価し、複数のモデル間でテストし、本番環境向けに信頼性の高いプロンプトを構築するための体系的な方法。',
+    zh: '评估提示词质量、跨模型测试以及为生产环境构建可靠提示词的系统化方法。',
+  },
+  'team-governance': {
+    en: 'Establish version control, documentation, governance, and security workflows for team-based prompt engineering.',
+    de: 'Etablieren Sie Versionskontrolle, Dokumentation, Governance und Sicherheits-Workflows für teambasiertes Prompt Engineering.',
+    fr: 'Établissez le contrôle de version, la documentation, la gouvernance et les workflows de sécurité pour le prompt engineering en équipe.',
+    ja: 'チームベースのプロンプトエンジニアリングのためのバージョン管理、ドキュメント、ガバナンス、セキュリティワークフローを確立します。',
+    zh: '为基于团队的提示词工程建立版本控制、文档、治理和安全工作流。',
+  },
+  'workflows-automation': {
+    en: 'Build structured outputs, automate prompt workflows, and design repeatable processes for teams and use cases.',
+    de: 'Erstellen Sie strukturierte Ausgaben, automatisieren Sie Prompt-Workflows und entwerfen Sie wiederholbare Prozesse für Teams und Anwendungsfälle.',
+    fr: 'Créez des sorties structurées, automatisez les workflows de prompts et concevez des processus reproductibles pour les équipes et les cas d\'usage.',
+    ja: '構造化された出力を構築し、プロンプトワークフローを自動化し、チームとユースケース向けの反復可能なプロセスを設計します。',
+    zh: '构建结构化输出、自动化提示词工作流，以及为团队和用例设计可重复的流程。',
+  },
 }
 
 const SUBSECTION_LABELS: Record<string, Record<string, string>> = {
@@ -147,6 +175,34 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     ja: 'ポリシーとコンプライアンス：AI規制はあなたの組織に何を意味するのか？',
     zh: '政策与合规：AI法规对您的组织意味着什么？',
   },
+  'tools-platforms': {
+    en: 'Tools & Platforms: Which Tool Fits Your Workflow?',
+    de: 'Tools & Plattformen: Welches Tool passt zu Ihrem Workflow?',
+    fr: 'Outils & Plateformes : Quel outil correspond à votre flux de travail ?',
+    ja: 'ツール＆プラットフォーム：どのツールがあなたのワークフローに合うのか？',
+    zh: '工具与平台：哪个工具适合您的工作流程？',
+  },
+  'evaluation-reliability': {
+    en: 'Evaluation & Reliability: How Do You Know Your Prompts Work?',
+    de: 'Evaluierung & Zuverlässigkeit: Wie wissen Sie, dass Ihre Prompts funktionieren?',
+    fr: 'Évaluation & Fiabilité : Comment savez-vous que vos prompts fonctionnent ?',
+    ja: '評価と信頼性：プロンプトが機能していることをどのように確認しますか？',
+    zh: '评估与可靠性：您如何知道提示词是否有效？',
+  },
+  'team-governance': {
+    en: 'Team Governance: How Do You Manage Prompts at Scale?',
+    de: 'Team-Governance: Wie verwalten Sie Prompts in großem Maßstab?',
+    fr: 'Gouvernance d\'équipe : Comment gérez-vous les prompts à grande échelle ?',
+    ja: 'チームガバナンス：規模を拡大してプロンプトをどのように管理しますか？',
+    zh: '团队治理：如何大规模管理提示词？',
+  },
+  'workflows-automation': {
+    en: 'Workflows & Automation: How Do You Scale Prompts into Systems?',
+    de: 'Workflows & Automatisierung: Wie skalieren Sie Prompts zu Systemen?',
+    fr: 'Workflows & Automation : Comment transformez-vous les prompts en systèmes ?',
+    ja: 'ワークフロー＆オートメーション：プロンプトをどのようにシステムにスケーリングしますか？',
+    zh: '工作流程与自动化：如何将提示词扩展为系统？',
+  },
 }
 
 // Get translated article title from content or fallback
@@ -168,6 +224,10 @@ const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
   techniques:   { badge: 'bg-emerald-50 text-emerald-700 border-emerald-200', dot: 'bg-emerald-400' },
   'use-topics': { badge: 'bg-orange-50 text-orange-700 border-orange-200', dot: 'bg-orange-400' },
   policy:       { badge: 'bg-rose-50 text-rose-700 border-rose-200', dot: 'bg-rose-400' },
+  'tools-platforms': { badge: 'bg-cyan-50 text-cyan-700 border-cyan-200', dot: 'bg-cyan-400' },
+  'evaluation-reliability': { badge: 'bg-amber-50 text-amber-700 border-amber-200', dot: 'bg-amber-400' },
+  'team-governance': { badge: 'bg-indigo-50 text-indigo-700 border-indigo-200', dot: 'bg-indigo-400' },
+  'workflows-automation': { badge: 'bg-green-50 text-green-700 border-green-200', dot: 'bg-green-400' },
 }
 
 function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: string; lang: Language }) {

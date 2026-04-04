@@ -58,4 +58,46 @@ export const PE_SLUG_TO_KEY: Record<string, string> = {
   'build-quality-checks': 'build-quality-checks',
   'your-brand-voice-ai': 'your-brand-voice-ai',
   'build-a-prompt-library': 'build-a-prompt-library',
+
+  // Tools & Platforms — Block 1
+  'best-prompt-engineering-tools-2026': 'best-pe-tools-2026',
+  'best-prompt-optimization-tools-for-teams': 'best-prompt-optimization-tools-teams',
+  'best-prompt-testing-evaluation-tools': 'best-prompt-testing-tools',
+  'best-prompt-management-platforms': 'best-prompt-management-platforms',
+  'best-prompt-engineering-ides': 'best-prompt-engineering-ides',
+
+  // Tools & Platforms — Block 2: Comparisons
+  'braintrust-vs-prompthub-vs-vellum-vs-promptfoo': 'braintrust-vs-prompthub-vs-vellum',
+  'promptlayer-vs-mirascope-vs-promptperfect': 'promptlayer-vs-mirascope-vs-promptperfect',
+  'prompt-engineering-vs-fine-tuning': 'prompt-engineering-vs-fine-tuning',
+  'prompt-engineering-vs-rag-decision': 'prompt-engineering-vs-rag',
+  'manual-vs-automated-prompt-optimization': 'manual-vs-automated-prompt-optimization',
+
+  // Evaluation & Reliability
+  'how-to-evaluate-prompt-quality': 'how-to-evaluate-prompt-quality',
+  'prompt-evaluation-metrics': 'prompt-evaluation-metrics',
+  'how-to-test-prompts-across-models': 'how-to-test-prompts-across-models',
+  'how-to-reduce-prompt-brittleness': 'how-to-reduce-prompt-brittleness',
+  'prompt-review-workflow-for-teams': 'prompt-review-workflow-teams',
+
+  // Team Operations & Governance
+  'prompt-version-control-workflows': 'prompt-version-control',
+  'prompt-documentation-templates': 'prompt-documentation-templates',
+  'prompt-governance-in-production': 'prompt-governance-production',
+  'prompt-security-tools-injection-testing': 'prompt-security-tools',
+  'prompt-audit-and-regression-risk': 'prompt-audit-regression',
+
+  // Workflows & Automation — Block 5
+  'best-tools-structured-output-json': 'best-tools-structured-output',
+  'prompts-for-reliable-structured-data': 'prompts-reliable-structured-data',
+  'multi-model-prompt-testing-workflows': 'multi-model-prompt-testing',
+  'prompt-library-management-for-teams': 'prompt-library-team-management',
+  'prompts-to-repeatable-workflows': 'prompts-to-repeatable-workflows',
+
+  // Workflows & Automation — Block 6: Use Cases & Team Setups
+  'prompt-engineering-for-content-teams': 'pe-for-content-teams',
+  'prompt-engineering-for-developers-workflow': 'pe-for-developers-workflow',
+  'prompt-engineering-for-support-operations': 'pe-for-support-operations',
+  'prompt-framework-selection-for-teams': 'prompt-framework-for-teams',
+  'prompt-engineering-setup-small-teams': 'pe-setup-small-teams',
 }

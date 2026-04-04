@@ -3,22 +3,22 @@ import { PromptEngineeringHub } from '@/components/PromptEngineeringHub'
 import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
-  title: 'Prompt Engineering Guide — PromptQuorum',
-  description: 'Complete prompt engineering resource: fundamentals, frameworks (CRAFT, CO-STAR, APE), techniques (chain of thought, role prompting), and domain-specific guides for writing, coding, research, and more.',
+  title: 'Prompt Engineering Guide — 80 Articles on PromptQuorum',
+  description: '80 comprehensive guides on prompt engineering: fundamentals, frameworks, techniques, tools, evaluation methods, team governance, and workflows for individuals and teams.',
   alternates: generateAlternates('/prompt-engineering'),
   openGraph: {
     type: 'website',
     url: 'https://www.promptquorum.com/prompt-engineering',
     siteName: 'PromptQuorum',
-    title: 'Prompt Engineering Guide — PromptQuorum',
-    description: 'Fundamentals, frameworks, techniques, and domain-specific guides for writing better AI prompts.',
+    title: 'Prompt Engineering Guide — 80 Articles on PromptQuorum',
+    description: 'Fundamentals, frameworks, techniques, tools, evaluation, governance, and workflows for writing better AI prompts.',
     images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 630, alt: 'PromptQuorum Prompt Engineering Guide' }],
   },
   twitter: {
     card: 'summary_large_image',
     site: '@promptquorum',
-    title: 'Prompt Engineering Guide — PromptQuorum',
-    description: 'Fundamentals, frameworks, techniques, and domain guides for better AI prompts.',
+    title: 'Prompt Engineering Guide — 80 Articles',
+    description: 'Fundamentals, frameworks, techniques, tools, evaluation, governance, and workflows for better AI prompts.',
     images: ['https://www.promptquorum.com/og-image.png'],
   },
 }
