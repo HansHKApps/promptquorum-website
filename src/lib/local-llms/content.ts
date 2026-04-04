@@ -1151,6 +1151,114 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'local-llm-security-privacy-checklist': {
+    en: {
+      theme: 'Getting Started',
+      title: 'Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup',
+      seoTitle: 'Local LLM Security & Privacy Checklist',
+      intro: 'Running a local LLM keeps your prompts off third-party servers, but it does not automatically make your setup private or secure. The 12-item checklist below covers model provenance, network isolation, telemetry settings, disk encryption, and access controls — the minimum required for a genuinely private local LLM setup.',
+      metaDescription: 'Local LLM security and privacy checklist: 12 steps covering model provenance, telemetry, network isolation, disk encryption, and access control for safe local AI use.',
+      publishDate: '2026-04-04',
+      readTime: '8 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM privacy',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Why Local LLMs Are Not Automatically Private', anchor: '#why-not-automatically-private' },
+        { label: 'The 12-Item Security Checklist', anchor: '#the-12-item-checklist' },
+        { label: 'Model Provenance: Where to Download Safely', anchor: '#model-provenance' },
+        { label: 'Network Isolation: Blocking Outbound Connections', anchor: '#network-isolation' },
+        { label: 'Telemetry Settings by Tool', anchor: '#telemetry-settings' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Local inference keeps prompt data off third-party servers. The remaining risks are: telemetry from the inference tool, model files from untrusted sources, and the Ollama API being exposed on the network.',
+            'Ollama binds to localhost by default — it is not accessible from other devices unless you explicitly set OLLAMA_HOST=0.0.0.0.',
+            'Disable analytics in LM Studio (Settings → Privacy → disable "Send anonymous usage data") and GPT4All (Settings → disable telemetry).',
+            'Download model weights only from Hugging Face (huggingface.co) or the official Ollama library. Verify SHA256 checksums for sensitive deployments.',
+            'For regulated data (HIPAA, GDPR, legal privilege): enable full-disk encryption, use an air-gapped machine, and audit all installed extensions.',
+          ],
+        },
+        whyNotAutoPrivate: {
+          title: 'Why Are Local LLMs Not Automatically Private?',
+          content: [
+            'The model inference itself is private — your prompts are never sent to the model provider\'s servers. But three other data flows can leak information:',
+          ],
+          items: [
+            '**Application telemetry**: LM Studio, GPT4All, and some other tools collect anonymous usage analytics by default. These may include session counts, model names used, and performance metrics.',
+            '**Model download sources**: malicious GGUF files can contain code that executes during model loading in vulnerable inference engines. An unverified model file is a supply chain risk.',
+            '**Network exposure**: Ollama\'s API server is accessible to any process on your machine. If misconfigured with `OLLAMA_HOST=0.0.0.0`, it becomes accessible to your entire network without authentication.',
+          ],
+        },
+        checklist: {
+          title: 'The 12-Item Local LLM Security and Privacy Checklist',
+          numberedItems: [
+            '**Download models only from trusted sources** — Hugging Face (huggingface.co) and the Ollama library (ollama.com/library) are the two primary trusted sources. Avoid random GitHub releases or torrent sites.',
+            '**Verify model checksums for sensitive use** — Hugging Face shows SHA256 hashes for each model file. Compare with `sha256sum <model_file>` before loading.',
+            '**Disable telemetry in your inference tool** — see the Telemetry Settings section below for tool-specific instructions.',
+            '**Confirm Ollama is bound to localhost only** — run `curl http://localhost:11434` from another device. If it responds, Ollama is exposed. Fix: set `OLLAMA_HOST=127.0.0.1:11434`.',
+            '**Enable full-disk encryption** — on macOS: System Settings → Privacy & Security → FileVault. On Windows: Settings → Privacy & Security → Device encryption. This protects model weights and chat logs if the device is lost.',
+            '**Store sensitive chat logs in an encrypted folder** — LM Studio saves chat history to `~/Library/Application Support/LM Studio/` (macOS). Encrypt this folder or disable history in settings.',
+            '**Review installed extensions and plugins** — Open WebUI and Jan AI support third-party extensions that may have their own network access. Audit what is installed.',
+            '**Use a dedicated user account for LLM work** — separates model files, chat history, and API keys from your main user profile.',
+            '**Do not expose the local API to the internet** — never port-forward Ollama or LM Studio to a public IP address without adding authentication middleware.',
+            '**Audit system prompts in any app using local LLMs** — browser extensions and productivity tools that integrate local LLMs may include system prompts that send data to their own servers alongside the local inference call.',
+            '**Keep inference tools updated** — Ollama, LM Studio, and llama.cpp release security patches. Run `brew upgrade ollama` (macOS) or re-download the latest installer periodically.',
+            '**For air-gapped or regulated environments**: disable automatic model updates, remove Ollama from startup items, and document which model versions are approved for use.',
+          ],
+        },
+        modelProvenance: {
+          title: 'Where to Download Local LLM Model Weights Safely',
+          content: [
+            'Model weights are large binary files. A malicious GGUF file could exploit vulnerabilities in the parser used by llama.cpp. As of 2026, no widespread GGUF-based malware has been confirmed, but the attack surface exists.',
+          ],
+          items: [
+            '**Hugging Face** (huggingface.co): the primary source for open models. Each file has a verified SHA256 hash. Stick to models from well-known publishers (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
+            '**Ollama library** (ollama.com/library): Ollama verifies model hashes before storing them. Models pulled via `ollama pull` are safe.',
+            '**LM Studio model browser**: searches Hugging Face directly. The same trust rules apply — check the publisher account.',
+            '**Avoid**: anonymous file sharing sites, Discord file drops, and any source that does not provide a verifiable hash.',
+          ],
+        },
+        networkIsolation: {
+          title: 'How to Block Outbound Connections from Local LLMs',
+          content: 'For maximum privacy on sensitive workloads, use a firewall rule to prevent the inference tool from making outbound connections after the model is downloaded:',
+          codeBlock: '# macOS — block Ollama outbound with pf firewall\n# Add to /etc/pf.conf:\nblock out proto tcp from any to any user ollama\n\n# Linux — block with ufw\nsudo ufw deny out from any to any app ollama\n\n# Or use Little Snitch (macOS) / OpenSnitch (Linux)\n# for per-application network control with a GUI',
+          codeLanguage: 'bash',
+        },
+        telemetry: {
+          title: 'How to Disable Telemetry in Local LLM Tools',
+          rows: [
+            { 'Tool': 'Ollama', 'Telemetry Default': 'None collected', 'How to Confirm': 'Check github.com/ollama/ollama — no analytics code' },
+            { 'Tool': 'LM Studio', 'Telemetry Default': 'Anonymous analytics enabled', 'How to Disable': 'Settings → Privacy → uncheck "Send anonymous usage data"' },
+            { 'Tool': 'Jan AI', 'Telemetry Default': 'None — explicitly disabled', 'How to Confirm': 'Open source — audit github.com/janhq/jan' },
+            { 'Tool': 'GPT4All', 'Telemetry Default': 'Opt-in only at first launch', 'How to Change': 'Settings → Privacy → disable usage analytics' },
+          ],
+          columns: ['Tool', 'Telemetry Default', 'How to Confirm/Disable'],
+        },
+        faqSection: {
+          title: 'Common Security Questions About Local LLMs',
+          faqs: [
+            {
+              q: 'Can a local LLM access my files or the internet?',
+              a: 'No — the model itself is a static file that generates text. It has no ability to read your file system or make network requests. However, the inference tool running the model (Ollama, LM Studio) has normal OS-level access. Some tools include features that do read files — such as GPT4All\'s LocalDocs or LM Studio\'s file attachment feature. These features are opt-in and explicitly documented.',
+            },
+            {
+              q: 'Is it safe to use a local LLM with HIPAA-covered data?',
+              a: 'Local inference removes the third-party data processor risk that cloud APIs create. However, HIPAA compliance requires more than private inference — you need full-disk encryption, access controls, audit logging, and a Business Associate Agreement if any software vendor could access PHI. Using Ollama with FileVault enabled and telemetry disabled is a reasonable starting point, but formal HIPAA compliance requires a full risk assessment.',
+            },
+            {
+              q: 'Does Ollama send my prompts anywhere?',
+              a: 'No. Ollama is open source (github.com/ollama/ollama) and contains no telemetry or data collection code. Prompts are processed locally by llama.cpp and never transmitted. The only outbound network activity from Ollama is model downloads from ollama.com when you run `ollama pull`.',
+            },
+          ],
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
