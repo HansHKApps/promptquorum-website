@@ -16,48 +16,63 @@ interface Props {
 const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
   en: {
     jumpToSection: 'Jump to section',
-    corePrompting: 'Core Concepts',
-    agentsOrchestration: 'Agents',
-    safetyAlignment: 'Safety',
-    evalsTesting: 'Evaluation',
-    advancedTechniques: 'Advanced',
-    metricsProduction: 'Metrics',
+    promptingTechniques: 'Prompting Techniques',
+    aiSystemArchitectures: 'System Architectures',
+    modelBehaviorLimitations: 'Model Behavior',
+    componentsInfrastructure: 'Components',
+    optimizationPerformance: 'Optimization',
+    safetySecurity: 'Safety & Security',
+    agentTooling: 'Agent Concepts',
+    useCases: 'Use Cases',
+    emergingConcepts: 'Emerging',
   },
   de: {
     jumpToSection: 'Zu Abschnitt springen',
-    corePrompting: 'Kernkonzepte',
-    agentsOrchestration: 'Agenten',
-    safetyAlignment: 'Sicherheit',
-    evalsTesting: 'Evaluierung',
-    advancedTechniques: 'Fortgeschrittene Techniken',
-    metricsProduction: 'Metriken',
+    promptingTechniques: 'Prompting-Techniken',
+    aiSystemArchitectures: 'System-Architekturen',
+    modelBehaviorLimitations: 'Modellverhalten',
+    componentsInfrastructure: 'Komponenten',
+    optimizationPerformance: 'Optimierung',
+    safetySecurity: 'Sicherheit',
+    agentTooling: 'Agent-Konzepte',
+    useCases: 'Anwendungsfälle',
+    emergingConcepts: 'Aufstrebend',
   },
   fr: {
     jumpToSection: 'Aller à la section',
-    corePrompting: 'Concepts fondamentaux',
-    agentsOrchestration: 'Agents',
-    safetyAlignment: 'Sécurité',
-    evalsTesting: 'Évaluation',
-    advancedTechniques: 'Techniques avancées',
-    metricsProduction: 'Métriques',
+    promptingTechniques: 'Techniques de prompting',
+    aiSystemArchitectures: 'Architectures système',
+    modelBehaviorLimitations: 'Comportement du modèle',
+    componentsInfrastructure: 'Composants',
+    optimizationPerformance: 'Optimisation',
+    safetySecurity: 'Sécurité',
+    agentTooling: 'Concepts d\'agent',
+    useCases: 'Cas d\'usage',
+    emergingConcepts: 'Émergent',
   },
   ja: {
     jumpToSection: 'セクションにジャンプ',
-    corePrompting: 'コア概念',
-    agentsOrchestration: 'エージェント',
-    safetyAlignment: 'セキュリティ',
-    evalsTesting: '評価',
-    advancedTechniques: '高度なテクニック',
-    metricsProduction: 'メトリクス',
+    promptingTechniques: 'プロンプティング技術',
+    aiSystemArchitectures: 'システムアーキテクチャ',
+    modelBehaviorLimitations: 'モデル動作',
+    componentsInfrastructure: 'コンポーネント',
+    optimizationPerformance: '最適化',
+    safetySecurity: 'セキュリティ',
+    agentTooling: 'エージェント概念',
+    useCases: 'ユースケース',
+    emergingConcepts: '新興',
   },
   zh: {
     jumpToSection: '跳转到部分',
-    corePrompting: '核心概念',
-    agentsOrchestration: '代理',
-    safetyAlignment: '安全',
-    evalsTesting: '评估',
-    advancedTechniques: '高级技术',
-    metricsProduction: '指标',
+    promptingTechniques: '提示工程技术',
+    aiSystemArchitectures: '系统架构',
+    modelBehaviorLimitations: '模型行为',
+    componentsInfrastructure: '组件',
+    optimizationPerformance: '优化',
+    safetySecurity: '安全',
+    agentTooling: '代理概念',
+    useCases: '用例',
+    emergingConcepts: '新兴',
   },
 }
 
@@ -445,11 +460,11 @@ function SectionBlock({ section, colors, id, lang }: { section: PESection; color
 
 const POST_UI: Record<string, Record<string, string>> = {
   byLine: {
-    en: 'By Hans Kuepper · PromptQuorum',
-    de: 'Von Hans Kuepper · PromptQuorum',
-    fr: 'Par Hans Kuepper · PromptQuorum',
-    ja: 'Hans Kuepper 著 · PromptQuorum',
-    zh: '作者：Hans Kuepper · PromptQuorum',
+    en: 'By [Hans Kuepper](/about) · Founder of PromptQuorum, multi-model AI dispatch tool · PromptQuorum',
+    de: 'Von [Hans Kuepper](/about) · Gründer von PromptQuorum, Multi-Model-AI-Dispatch-Tool · PromptQuorum',
+    fr: 'Par [Hans Kuepper](/about) · Fondateur de PromptQuorum, outil de dispatch multi-modèle · PromptQuorum',
+    ja: '[Hans Kuepper](/about) 著 · PromptQuorumの創設者、マルチモデルAIディスパッチツール · PromptQuorum',
+    zh: '[Hans Kuepper](/about) 作者 · PromptQuorum创始人，多模型AI调度工具 · PromptQuorum',
   },
   lastUpdated: {
     en: 'Last updated:',
@@ -556,7 +571,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             <span>·</span>
             <span>{article.readTime}</span>
             <span>·</span>
-            <span>{POST_UI.byLine[lang] ?? POST_UI.byLine['en']}</span>
+            <span>{renderInlineLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'], lang)}</span>
           </div>
         </div>
 
@@ -573,12 +588,15 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{JUMP_SECTION_LABELS[lang].jumpToSection}</p>
             <div className="flex flex-wrap gap-2">
               {[
-                { id: '#core-concepts', key: 'corePrompting' },
-                { id: '#agents-orchestration', key: 'agentsOrchestration' },
-                { id: '#safety-alignment', key: 'safetyAlignment' },
-                { id: '#evaluation-testing', key: 'evalsTesting' },
-                { id: '#advanced-techniques', key: 'advancedTechniques' },
-                { id: '#metrics-production', key: 'metricsProduction' },
+                { id: '#prompting-techniques', key: 'promptingTechniques' },
+                { id: '#ai-system-architectures', key: 'aiSystemArchitectures' },
+                { id: '#model-behavior', key: 'modelBehaviorLimitations' },
+                { id: '#components-infrastructure', key: 'componentsInfrastructure' },
+                { id: '#optimization-performance', key: 'optimizationPerformance' },
+                { id: '#safety-security', key: 'safetySecurity' },
+                { id: '#agent-tooling', key: 'agentTooling' },
+                { id: '#use-cases', key: 'useCases' },
+                { id: '#emerging-concepts', key: 'emergingConcepts' },
               ].map((link) => (
                 <a
                   key={link.id}
@@ -613,12 +631,15 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
           {Object.entries(article.sections).map(([key, section]) => {
             // Glossary explicit IDs take precedence; all other titled sections get auto-generated IDs
             const glossaryIdMap: Record<string, string> = {
-              'corePrompting': 'core-concepts',
-              'agentsOrchestration': 'agents-orchestration',
-              'safetyAlignment': 'safety-alignment',
-              'evalsTesting': 'evaluation-testing',
-              'advancedTechniques': 'advanced-techniques',
-              'metricsProduction': 'metrics-production',
+              'promptingTechniques': 'prompting-techniques',
+              'aiSystemArchitectures': 'ai-system-architectures',
+              'modelBehaviorLimitations': 'model-behavior',
+              'componentsInfrastructure': 'components-infrastructure',
+              'optimizationPerformance': 'optimization-performance',
+              'safetySecurity': 'safety-security',
+              'agentTooling': 'agent-tooling',
+              'useCases': 'use-cases',
+              'emergingConcepts': 'emerging-concepts',
             }
             const sectionId = glossaryIdMap[key]
               ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined)
