@@ -7650,7 +7650,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         useCases: {
-          title: 'Real Enterprise Use Cases',
+          title: 'What Are Real Enterprise Use Cases?',
           content: 'How enterprises use local LLMs:',
           rows: [
             { 'Industry': 'Healthcare', 'Use Case': 'Medical document analysis (HIPAA-compliant)', 'Volume': '500M tokens/year', 'Savings': '$8k/year' },
@@ -7662,7 +7662,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Industry', 'Use Case', 'Annual Volume', 'Annual Savings'],
         },
         objections: {
-          title: 'Common Objections to Local LLMs (Answered)',
+          title: 'What Are Common Objections to Local LLMs?',
           content: 'Objection 1: "Local models are less capable than GPT-4"',
           items: [
             '**True, but:** Llama 3.1 70B matches GPT-4 (2023) on most benchmarks. For enterprises needing 80% GPT-4 quality at 1/10 cost, local is viable.',
@@ -7792,7 +7792,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         networkIsolation: {
-          title: 'Network Isolation: Blocking All External Connections',
+          title: 'How Do You Isolate Networks From External Connections?',
           content: [
             'Isolation is enforced at multiple levels:',
           ],
@@ -7941,7 +7941,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         hipaa: {
-          title: 'HIPAA: Protecting Patient Privacy',
+          title: 'How Does HIPAA Protect Patient Privacy?',
           content: [
             'HIPAA (Health Insurance Portability and Accountability Act) applies to healthcare providers, insurers, and anyone handling Protected Health Information (PHI).',
             '**164.306 (Security Rule):** Requires administrative, physical, and technical safeguards.',
@@ -7953,7 +7953,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         soc2: {
-          title: 'SOC2 Type II: Audit and Controls Evidence',
+          title: 'What Does SOC2 Type II Require?',
           content: [
             'SOC2 (Service Organization Control) is a compliance certification for organizations processing enterprise data. Type II requires 6+ months of audit evidence.',
             '**Certification auditor reviews:**',
@@ -7966,7 +7966,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         euAiAct: {
-          title: 'EU AI Act: Transparency and Documentation',
+          title: 'What Does the EU AI Act Require?',
           content: [
             'The EU AI Act (2024) imposes new requirements on AI systems deployed in the EU, regardless of vendor location.',
             '**Prohibited AI:** Facial recognition (in public), predictive policing, certain emotion detection.',
@@ -8060,7 +8060,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         architecture: {
-          title: 'Architecture: Single Machine → Distributed System',
+          title: 'How Do You Scale From Single Machine to Distributed System?',
           content: [
             'Progression from single machine to production:',
           ],
@@ -8073,7 +8073,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Deployment Stage', 'Number of GPUs', 'Concurrent Users', 'SLA Uptime', 'Infrastructure Setup'],
         },
         loadBalancing: {
-          title: 'Load Balancing: Distributing Requests',
+          title: 'How Do You Implement Load Balancing?',
           content: [
             'Load balancer routes requests to least-busy inference pod.',
             '**Round-robin:** Distribute equally across pods (simplest).',
@@ -8084,7 +8084,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           codeLanguage: 'yaml',
         },
         redundancy: {
-          title: 'Redundancy and Failover',
+          title: 'How Do You Implement Redundancy and Failover?',
           content: [
             'High availability requires redundant components:',
             '**Pod replicas:** Multiple inference pods. If one dies, others handle requests.',
@@ -8109,7 +8109,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         cost: {
-          title: 'Cost Optimization at Scale',
+          title: 'How Do You Optimize Costs at Scale?',
           content: [
             'At scale, focus on:',
           ],
