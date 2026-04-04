@@ -71,4 +71,46 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'enterprise-compliance-local-llms':     'enterprise-compliance-local-llms',
   'scaling-local-llms-enterprise':        'scaling-local-llms-enterprise',
   'corporate-rag-local-llms':             'corporate-rag-local-llms',
+
+  // GPU Buying Guides (NEW THEME)
+  'best-budget-gpus-local-llm':           'best-budget-gpus-local-llm',
+  'rtx-5090-vs-rtx-4090-local-llm':       'rtx-5090-vs-rtx-4090-local-llm',
+  'used-gpus-for-local-llms':             'used-gpus-for-local-llms',
+  'how-much-vram-local-llm':              'how-much-vram-local-llm',
+  'best-amd-gpus-local-llm':              'best-amd-gpus-local-llm',
+
+  // Hardware Setups (NEW THEME)
+  'local-llm-pc-build-1000':              'local-llm-pc-build-1000',
+  'local-llm-pc-build-2000':              'local-llm-pc-build-2000',
+  'local-llm-workstation-build':          'local-llm-workstation-build',
+  'best-mini-pcs-local-llm':              'best-mini-pcs-local-llm',
+  'best-laptops-local-llm':               'best-laptops-local-llm',
+
+  // Tools & Interfaces (EXPANDED)
+  'best-local-llm-stack-use-case':        'best-local-llm-stack-use-case',
+  'lm-studio-vs-jan-ai':                  'lm-studio-vs-jan-ai',
+  'open-webui-vs-sillytavern':            'open-webui-vs-sillytavern',
+  'llamacpp-vs-ollama-vs-vllm':           'llamacpp-vs-ollama-vs-vllm',
+  'local-llm-developer-stack':            'local-llm-developer-stack',
+
+  // Models by Use Case (EXPANDED from Best Models)
+  'best-local-llms-code-review':          'best-local-llms-code-review',
+  'best-local-llms-business-writing':     'best-local-llms-business-writing',
+  'best-7b-models-consumer-hardware':     'best-7b-models-consumer-hardware',
+  'fastest-local-llms-low-end-pcs':       'fastest-local-llms-low-end-pcs',
+  'quantization-levels-comparison':       'quantization-levels-comparison',
+
+  // Privacy & Business (NEW THEME)
+  'private-local-llm-sensitive-data':     'private-local-llm-sensitive-data',
+  'local-llm-setup-for-teams':            'local-llm-setup-for-teams',
+  'best-nas-storage-local-llm':           'best-nas-storage-local-llm',
+  'vpn-for-local-llm-users':              'vpn-for-local-llm-users',
+  'secure-offline-local-llm-workflow':    'secure-offline-local-llm-workflow',
+
+  // Cost & Comparisons (NEW THEME)
+  'local-llms-vs-chatgpt-plus':           'local-llms-vs-chatgpt-plus',
+  'local-llms-vs-claude-pro':             'local-llms-vs-claude-pro',
+  'local-llm-vs-cloud-gpu-cost':          'local-llm-vs-cloud-gpu-cost',
+  'mac-vs-windows-vs-linux-local-llm':    'mac-vs-windows-vs-linux-local-llm',
+  'gpu-vs-ai-subscription-roi':           'gpu-vs-ai-subscription-roi',
 }

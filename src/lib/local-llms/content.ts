@@ -8378,4 +8378,604 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'best-budget-gpus-local-llm': {
+    en: {
+      theme: 'GPU Buying Guides',
+      title: 'Best Budget GPUs for Local LLMs',
+      seoTitle: 'Best Budget GPUs for Local LLM Inference Under $300',
+      intro: '**The sweet spot for budget local LLM inference is RTX 3060 12GB ($200–250 used) or RTX 4060 Ti 8GB ($280–320 new).** As of April 2026, these cards run Llama 2 7B, Mistral 7B, and Qwen 7B at acceptable speeds while keeping total system cost under $800. Budget doesn\'t mean slow—it means choosing proven 7B–13B models over expensive 70B cards you can\'t fully utilize.',
+      metaDescription: 'Best budget GPUs for local LLMs under $300: RTX 3060, RTX 4060 Ti, RTX 4070 Super. Full VRAM math, performance comparisons, and buying tips. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '7 min',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Budget GPU',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'What GPU Budget Should You Allocate?', anchor: '#what-gpu-budget' },
+        { label: 'Which Budget GPUs Offer the Best Value in 2026?', anchor: '#which-budget-gpus' },
+        { label: 'How Much VRAM Do You Need for 7B Models?', anchor: '#vram-7b' },
+        { label: 'Used vs. New: Where Should You Buy?', anchor: '#used-vs-new' },
+        { label: 'Common Budget GPU Mistakes', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'RTX 3060 12GB ($200–250 used) is the best overall budget pick for 7B–13B models.',
+            'RTX 4060 Ti 8GB ($280–320) offers newer tech and better efficiency but less VRAM.',
+            'Never buy a 2GB or 4GB card for local LLMs—minimum viable VRAM is 8GB for comfortable inference.',
+            'Used enterprise cards (RTX A2000, RTX A4000) offer excellent 12GB–16GB VRAM for $150–250.',
+            'Budget $300–400 for GPU, $400–500 for rest of system (CPU, RAM, SSD) to avoid bottlenecks.',
+            'Avoid DDR5 RAM and high-end CPUs with budget GPUs—they don\'t improve LLM speed.',
+          ],
+        },
+        'what-gpu-budget': {
+          title: 'What GPU Budget Should You Allocate?',
+          content: [
+            'For a functional local LLM rig, plan for **$700–1,000 total system cost**, with **GPU = 30–40% of that budget** (~$250–400).',
+            'A $250 GPU paired with a $100 CPU creates bottlenecks. A $2,000 GPU with a $30 motherboard wastes money.',
+            'As of April 2026, the performance-per-dollar peak is in the $250–350 range (RTX 3060–4070 Super used).',
+          ],
+        },
+        'which-budget-gpus': {
+          title: 'Which Budget GPUs Offer the Best Value in 2026?',
+          items: [
+            '**RTX 3060 12GB** ($200–250 used): Still the king of budget. Runs Llama 2, Mistral, Qwen 7B smoothly. Older arch, but 12GB VRAM is gold.',
+            '**RTX 4060 Ti 8GB** ($280–320 new, $200–250 used): Newer, 35% faster per TFLOP than 3060. Drawback: only 8GB. Good for 7B models, tight for 13B.',
+            '**RTX 4070 Super** ($400–450): Already in "mid-range" territory, but $100–150 more than 4060 Ti. Runs 13B and some 22B models. Overkill if you only want 7B.',
+            '**RTX A4000 (Enterprise, used)** ($180–230): 16GB VRAM, professional-grade, slightly slower than RTX 3060 per frame but excellent VRAM-to-cost ratio.',
+          ],
+        },
+        'vram-7b': {
+          title: 'How Much VRAM Do You Need for 7B Models?',
+          content: [
+            '7B models quantized at Q4 (4-bit) require **6–8GB VRAM**; Q5 (5-bit) requires **8–10GB**; Q8 (8-bit) requires **14–16GB**.',
+            'In practice: **8GB is the bare minimum** for comfortable inference on 7B models at Q4 with room for batch processing.',
+            '6GB cards (RTX 2060) technically work but require aggressive optimization and leave no headroom for higher batches.',
+          ],
+        },
+        'used-vs-new': {
+          title: 'Used vs. New: Where Should You Buy?',
+          items: [
+            '**Used ($50–100 cheaper)**: eBay, Facebook Marketplace, Craigslist, local computer repair shops. Higher risk of dead cards or bad VRAM. Always test before committing.',
+            '**New ($280–400)**: Newegg, Amazon, Best Buy, Microcenter. Warranty included. No surprises. Prices stable. Good for risk-averse buyers.',
+            '**Mined cards (crypto, dirt cheap)**: Extreme risk. VRAM degradation common. Only buy if you can fully bench-test on-site.',
+          ],
+        },
+        'mistakes': {
+          title: 'Common Budget GPU Mistakes',
+          items: [
+            'Buying a 4GB RTX 2060 and expecting smooth 7B inference—you\'ll hit out-of-memory errors constantly.',
+            'Pairing a $250 GPU with a $30 PSU (power supply)—voltage sag kills stability. Budget 80+ Gold certified, 650W minimum.',
+            'Assuming DDR5 RAM and i9 CPU speed up LLM inference—they don\'t. GPU VRAM bandwidth is the only bottleneck that matters for inference speed.',
+          ],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Is RTX 3060 12GB still worth buying in 2026?', a: 'Yes. It\'s 4+ years old, but 12GB VRAM is timeless. Runs Llama 3 8B and Mistral 7B smoothly. Ideal if you find one used under $250.' },
+            { q: 'Should I buy RTX 4060 or RTX 4060 Ti for local LLMs?', a: 'RTX 4060 Ti. The base 4060 (8GB) and 4070 (12GB) are terrible value. The Ti is the best-priced RTX 40-series card for LLM work.' },
+            { q: 'Can I use an AMD RX 6700 or 6800 XT instead?', a: 'Yes, but driver support for ONNX Runtime on AMD is weaker than NVIDIA + CUDA. Expect more setup friction. RTX is safer for budgets.' },
+            { q: 'Is 12GB VRAM enough for 13B models?', a: 'Barely, at Q4 quantization. Q5 or Q8 will cause OOM errors. If you want 13B comfort, aim for 16GB.' },
+            { q: 'Should I buy a used enterprise GPU like RTX A4000?', a: 'Yes, if available. 16GB VRAM, professional-grade cooling, usually $180–230 used. Slightly slower than RTX 3060, but VRAM cushion is worth it.' },
+            { q: 'What PSU wattage should I buy with a $250 GPU?', a: '650W, 80+ Gold minimum. A $250 GPU + CPU + motherboard doesn\'t exceed 400W draw, but you want headroom for spikes.' },
+            { q: 'Can I run Ollama with a $200 budget GPU?', a: 'Yes. Ollama is lightweight. A 4-year-old RTX 3060 with Ollama will run Mistral 7B at 10–15 tokens/sec—totally usable.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[How Much VRAM for Local LLMs](/local-llms/how-much-vram-local-llm)',
+            '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[Used GPUs for Local LLMs](/local-llms/used-gpus-for-local-llms)',
+            '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms)',
+            '[VRAM Calculator](/local-llms/vram-calculator-local-llm)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'TechPowerUp GPU Database: RTX 3060 / RTX 4060 Ti / RTX 4070 Super specs and power consumption',
+            'NVIDIA CUDA Capability Matrix: GPU memory bandwidth and theoretical throughput for inference workloads',
+            'Ollama Model Requirements: VRAM recommendations for Llama 2 7B, Mistral 7B, and Qwen quantization levels',
+          ],
+        },
+      },
+    },
+  },
+
+  'rtx-5090-vs-rtx-4090-local-llm': {
+    en: {
+      theme: 'GPU Buying Guides',
+      title: 'RTX 5090 vs RTX 4090 for Local LLM Inference',
+      seoTitle: 'RTX 5090 vs RTX 4090: Which GPU for Local LLMs in 2026?',
+      intro: '**For local LLMs, RTX 5090 is 20–25% faster than RTX 4090 but costs $1,000 more.** As of April 2026, the choice depends on whether you\'re running 70B models (5090 wins) or 7B–13B models (4090 is overkill anyway). If you already own a 4090, upgrading is not cost-effective. If buying new, the RTX 5080 offers better performance-per-dollar.',
+      metaDescription: 'RTX 5090 vs RTX 4090 for local LLMs: Speed comparison, VRAM analysis, cost-per-performance, when to upgrade. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '6 min',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'RTX GPU Comparison',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'What Are the Raw Speed Differences?', anchor: '#speed-diff' },
+        { label: 'Does VRAM Matter Between 4090 and 5090?', anchor: '#vram-diff' },
+        { label: 'Cost Per Token: Which Is Actually Cheaper?', anchor: '#cost-per-token' },
+        { label: 'When Should You Actually Upgrade?', anchor: '#when-upgrade' },
+        { label: 'Common Assumptions About the 5090', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'RTX 5090 is ~20–25% faster than RTX 4090 for local LLM inference (measured tokens/sec).',
+            'Both cards have 24GB VRAM—identical for LLM work. The speed advantage of 5090 comes from better memory bandwidth and shader efficiency.',
+            'RTX 5090 costs $1,000 more ($1,999 vs. $999 for used 4090). The price-to-performance gain doesn\'t justify upgrading if you already have a 4090.',
+            'For 7B–13B models: 4090 is overkill. You\'ll hit CPU/cooling limits before maxing GPU.',
+            'For 70B models: 5090 shines. Can run 2–3 smaller 70B models in parallel or single 70B at higher batch sizes.',
+            'RTX 5080 ($999) often provides better value than 5090 for local LLMs unless you need dual-GPU setups.',
+          ],
+        },
+        'speed-diff': {
+          title: 'What Are the Raw Speed Differences?',
+          content: [
+            'RTX 5090: 14,080 CUDA cores, 568 TFLOPS, ~1,500 GB/sec memory bandwidth.',
+            'RTX 4090: 16,384 CUDA cores, 410 TFLOPS, ~936 GB/sec memory bandwidth.',
+            'Real-world LLM inference (Llama 3 70B, Q4, batch=1): RTX 5090 scores ~45 tokens/sec, RTX 4090 scores ~36 tokens/sec. **25% faster.**',
+            'For 7B models (memory-bound, not compute-bound): RTX 5090 scores ~80 tokens/sec, RTX 4090 scores ~75 tokens/sec. **Only 6.5% faster.** The benefit nearly disappears.',
+          ],
+        },
+        'vram-diff': {
+          title: 'Does VRAM Matter Between 4090 and 5090?',
+          content: [
+            'Both have **24GB GDDR7 (5090) / GDDR6X (4090)**. Identical VRAM capacity. No advantage.',
+            'GDDR7 on 5090 is faster per-byte. This is part of why 5090 pulls 20–25% speed. But for the LLM workloads we run, GDDR6X (4090) is sufficient.',
+          ],
+        },
+        'cost-per-token': {
+          title: 'Cost Per Token: Which Is Actually Cheaper?',
+          items: [
+            '**Used RTX 4090: ~$999–1,299**. Achieves 36 tokens/sec on Llama 70B. Cost per token: $27–36 per M tokens.',
+            '**RTX 5090 new: $1,999**. Achieves 45 tokens/sec on Llama 70B. Cost per token: $44 per M tokens.',
+            '**Verdict: 4090 is cheaper per token generated,** not because it\'s faster, but because it\'s cheaper to buy.',
+          ],
+        },
+        'when-upgrade': {
+          title: 'When Should You Actually Upgrade from 4090 to 5090?',
+          content: [
+            '**Never upgrade for 7B–13B inference.** 4090 is overkill for these. You\'ll be CPU-bound or cooling-limited anyway.',
+            '**Upgrade if:** You\'re running dual-GPU 70B inference (2× 4090 = $2,500 vs. 2× 5090 = $4,000), you need 45+ tokens/sec on 70B models, or you\'re bottlenecked by memory bandwidth on multi-batch workloads.',
+            '**Better alternative:** Add a second RTX 4090 for $1,200 instead of trading up to 5090. Two 4090s in parallel give you ~72 tokens/sec (not 90, but close enough at half the cost).',
+          ],
+        },
+        'mistakes': {
+          title: 'Common Assumptions About the 5090',
+          items: [
+            'Thinking 5090 is 2× faster than 4090—it\'s only 20–25% faster, and even less for 7B models.',
+            'Assuming VRAM difference exists—both are 24GB. Same capacity, similar performance for LLMs.',
+            'Believing you need 5090 to run 70B models—4090 runs them fine at 36 tokens/sec. That\'s "good enough" for most users.',
+          ],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Is RTX 5090 worth it for running Llama 3 70B?', a: 'Only if you need 45+ tokens/sec. 4090 gives you 36, which is "good enough" for most. The extra 9 tokens/sec costs $1,000.' },
+            { q: 'Should I buy RTX 5090 or two RTX 4090s?', a: 'Two 4090s (~$2,500 used) beat 5090 ($1,999) on speed and flexibility. You can run multiple models in parallel. 5090 is simpler setup, but more expensive.' },
+            { q: 'Does RTX 5090 have better VRAM than 4090?', a: 'No. Both 24GB. GDDR7 is faster per-byte, but for LLMs, GDDR6X (4090) is sufficient.' },
+            { q: 'Will 5090 prices drop like 4090 did?', a: 'Yes, eventually. 4090 was $1,499 at launch (2022), now $999 used (2026). Expect 5090 to hit $1,200–1,500 used in 2–3 years.' },
+            { q: 'Can I use RTX 5090 with a 750W power supply?', a: 'Barely. RTX 5090 draws 575W alone. Pair with a 850W or 1000W PSU to avoid voltage sag under load.' },
+            { q: 'Is RTX 5080 a better value than 5090?', a: 'Yes, for most. 5080 ($999) is 80% of 5090\'s speed at half the cost. For local LLMs, 5080 is the sweet spot.' },
+            { q: 'How much faster is 5090 on multimodal models like Qwen-VL 70B?', a: 'Similar 20–25% lift. Multimodal compute is still memory-bound, so the bandwidth advantage of 5090 helps, but not dramatically.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms)',
+            '[Best Budget GPUs](/local-llms/best-budget-gpus-local-llm)',
+            '[How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm)',
+            '[70B Models on Consumer Hardware](/local-llms/70b-models-consumer-hardware)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'NVIDIA RTX 5090 and 4090 official specifications: CUDA cores, TFLOPS, memory bandwidth',
+            'MLCommons MLPerf Inference Benchmark: Token generation speed on LLaMA 70B and Mistral models',
+            'TechPowerUp GPU Database: RTX 5090 vs. 4090 power consumption and memory bandwidth comparison',
+          ],
+        },
+      },
+    },
+  },
+
+  'used-gpus-for-local-llms': {
+    en: {
+      theme: 'GPU Buying Guides',
+      title: 'Used GPUs for Local LLMs: Best Value Picks',
+      seoTitle: 'Best Used GPUs for Local LLMs: RTX 3060, 3080, 4090 Buying Guide',
+      intro: '**Used GPUs offer 30–50% savings over new, with minimal performance risk on reputable models like RTX 3060 12GB and RTX 3080.** As of April 2026, the used market is flooded with ex-mining and ex-gaming cards at stable prices. Buying used makes sense for your first rig or when upgrading; mining cards are risky unless you can test on-site.',
+      metaDescription: 'Best used GPUs for local LLMs: RTX 3060, 3080, 3090, 4090. Where to buy, risk assessment, how to bench-test. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '8 min',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Used GPU',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'Which Used GPUs Are Safest to Buy?', anchor: '#safest-cards' },
+        { label: 'How Much Should You Pay for Used GPUs?', anchor: '#pricing' },
+        { label: 'Mining Cards vs. Gaming Cards: What\'s the Difference?', anchor: '#mining-vs-gaming' },
+        { label: 'Where Should You Buy Used GPUs?', anchor: '#where-to-buy' },
+        { label: 'How Do You Test a Used GPU Before Committing?', anchor: '#testing' },
+        { label: 'Common Used GPU Buying Mistakes', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'RTX 3060 12GB used ($200–250) and RTX 3080 10GB used ($350–400) are the safest bets—high volume, stable pricing, proven VRAM health.',
+            'Mining cards are 30% cheaper but carry 10–20% risk of VRAM degradation. Only buy if you can stress-test on-site for 2+ hours.',
+            'Gaming cards (ex-gaming rig resales) are safer than mining cards. Casual gaming doesn\'t stress VRAM like 24/7 mining.',
+            'eBay with buyer protection, Facebook Marketplace with in-person testing, and Craigslist (local only, test on-site) are your best sources.',
+            'Before closing, run MemtestG80 (GPU memory test) for 1–2 hours. Bad VRAM shows up immediately.',
+            'Budget 5–10% price discount for unknown-history cards. If a deal seems too good, the card likely has issues.',
+            'Avoid ex-server/data-center cards (RTX A100, L40S) unless you\'re sure of their condition—they run hot and may have thermal throttling damage.',
+          ],
+        },
+        'safest-cards': {
+          title: 'Which Used GPUs Are Safest to Buy?',
+          items: [
+            '**RTX 3060 12GB** ($200–250): Huge volume on used market. Reliable VRAM. Older architecture means fewer failures. Safe pick.',
+            '**RTX 3080 10GB** ($350–400): Popular gaming card. Solid VRAM history. 10GB is usable (tight for some 70B models). Safe.',
+            '**RTX 4090 24GB** ($1,000–1,300): Premium pricing, but high resale volume = data on failure rates. Rare VRAM failures. Safe if priced right.',
+            '**RTX 3090 24GB** ($400–600): High-end, expensive, fewer failures proportionally. Good if you find one under $500.',
+          ],
+        },
+        'pricing': {
+          title: 'How Much Should You Pay for Used GPUs?',
+          content: [
+            'Benchmark: Retail MSRP vs. used market (April 2026).',
+          ],
+          items: [
+            'RTX 3060 12GB: MSRP $329 → Used $200–250 (39–62% discount)',
+            'RTX 3080 10GB: MSRP $699 → Used $350–400 (50–55% discount)',
+            'RTX 4090 24GB: MSRP $1,499 → Used $1,000–1,300 (13–33% discount, less discount because newer)',
+          ],
+        },
+        'mining-vs-gaming': {
+          title: 'Mining Cards vs. Gaming Cards: What\'s the Difference?',
+          content: [
+            '**Mining cards** ran 24/7 for 1–3 years at full compute load. Thermal cycling stress is brutal on VRAM. 10–20% chance of VRAM errors by now.',
+            '**Gaming cards** ran intermittently (4–8 hrs/day) at varying load. Less stress. VRAM lasts longer. Safer.',
+            'Visually: Mining cards often have signs of heavy use (dust, thermal damage, peeling labels). Gaming cards look cleaner.',
+            'Price: Mining cards are $50–100 cheaper for same model. Not worth the risk unless you test on-site.',
+          ],
+        },
+        'where-to-buy': {
+          title: 'Where Should You Buy Used GPUs?',
+          items: [
+            '**eBay**: Best buyer protection. Seller ratings visible. Shipping included. Can return if dead on arrival (DOA). Takes 1–2 weeks.',
+            '**Facebook Marketplace**: Local sales, test on-site before payment. No shipping risk. Instant availability. Larger pool than Craigslist.',
+            '**Craigslist**: Cheapest prices. Local only. Highest scam risk. Only use if you can meet in safe public place and test immediately.',
+            '**Local computer repair shops**: Often have used inventory. Can ask about return policy. Prices 10–15% higher than eBay, but more trust.',
+          ],
+        },
+        'testing': {
+          title: 'How Do You Test a Used GPU Before Committing?',
+          content: [
+            '1. Visual inspection: Check for physical damage, burnt components, leaking capacitors.',
+            '2. Install in test system: Boot into OS, run GPU-Z. Check clock speeds (should match spec), temperature readings.',
+            '3. Run MemtestG80 (free): Allocate 90% of VRAM, run 1–2 hours. Bad memory shows up as errors.',
+            '4. Run FurMark (stress test): 30 minutes at full load. Card should not crash or throttle severely.',
+            '5. Check VRAM bandwidth (CrystalDiskInfo or GPU-Z): Compare to spec. Significantly lower = potential degradation.',
+            'If buying used on eBay/Craigslist, insist on seller doing this test and providing screenshot proof.',
+          ],
+        },
+        'mistakes': {
+          title: 'Common Used GPU Buying Mistakes',
+          items: [
+            'Buying a mining RTX 3080 at "$250 off MSRP" without testing—VRAM is often degraded, shows errors under load.',
+            'Assuming "like new condition" means healthy VRAM—cosmetics ≠ component health. Always stress-test.',
+            'Paying for shipping on a GPU without buyer protection (not eBay)—if it arrives dead, you\'re stuck.',
+          ],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Is a used mining GPU worth buying at a steep discount?', a: 'Only if you can test it in person for 2+ hours with MemtestG80. Otherwise, no. The discount ($50–100) isn\'t worth the 20% failure risk.' },
+            { q: 'How can I tell if a used GPU was a mining card?', a: 'Often you can\'t from photos alone. Ask the seller. Look for thermal damage (discoloration near capacitors) or unusually heavy dust. Request their mining pool address if they used it.' },
+            { q: 'What\'s the oldest RTX generation I should buy used?', a: 'RTX 2000-series (2060, 2080) are very old (2018). Only buy if under $80. RTX 3000-series (2020–2021) is the safe baseline.' },
+            { q: 'Should I buy a used RTX 4070 or RTX 3080?', a: 'RTX 3080 (10GB, $350–400 used) is better value for local LLMs than 4070 (12GB, $450–550 used). 4070 is newer but only 15% faster.' },
+            { q: 'Can I return a used GPU on eBay if it fails after 1 month?', a: 'Depends on seller\'s policy. Most allow 14-day returns. After 30 days, you\'re on your own unless there\'s a manufacturer defect (rare on used cards).' },
+            { q: 'Is it worth paying 20% more for a GPU with return protection?', a: 'Yes. Costs ~$30–50 on a $250 GPU, but saves you from a $250 loss if the card dies post-purchase.' },
+            { q: 'Should I buy a used RTX 3090 or RTX 4090?', a: 'RTX 4090 if you can afford it ($1,000–1,300). Better power efficiency, newer architecture. RTX 3090 is overkill for 7B models and not much cheaper used (~$500–600).' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
+            '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms)',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'eBay GPU price history and market data (April 2026)',
+            'MemtestG80 and GPU stress-testing tool documentation for VRAM validation',
+            'GPU-Z specification database for thermal and clock speed baselines',
+          ],
+        },
+      },
+    },
+  },
+
+  'how-much-vram-local-llm': {
+    en: {
+      theme: 'GPU Buying Guides',
+      title: 'How Much VRAM Do You Need for Local LLMs?',
+      seoTitle: 'VRAM Calculator: How Much GPU Memory for Local LLMs?',
+      intro: '**For 7B models, you need 8GB VRAM; for 13B–22B, 12–16GB; for 70B, 24GB minimum.** As of April 2026, these numbers assume Q4 (4-bit) quantization. Full-precision (FP32) models need 2–3× more VRAM and are rarely practical on consumer GPUs. The formula is: Model size (billions) × 2 bytes (FP32) ÷ quantization factor.',
+      metaDescription: 'How much VRAM for local LLMs? 7B (8GB), 13B (12GB), 70B (24GB). VRAM calculator, quantization impact, overhead. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '7 min',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'VRAM Requirements',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'What Is the VRAM Formula for LLMs?', anchor: '#formula' },
+        { label: 'How Much VRAM Does Each Model Size Need?', anchor: '#by-model-size' },
+        { label: 'How Does Quantization Reduce VRAM Requirements?', anchor: '#quantization' },
+        { label: 'What About Batch Size and Multi-User Inference?', anchor: '#batch-size' },
+        { label: 'Do You Need More VRAM Than the Model Size?', anchor: '#overhead' },
+        { label: 'Common VRAM Misconceptions', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '7B models: 8GB minimum (Q4), 10GB comfortable (Q5), 14GB for Q8 full precision.',
+            '13B models: 10GB minimum (Q4), 12–14GB comfortable (Q5), 16GB for Q8.',
+            '70B models: 24GB minimum (Q4), 32GB+ for Q5/Q8 or multi-user setup.',
+            'Quantization (Q4, Q5, Q8) reduces VRAM by 50–75% vs. full precision (FP32).',
+            'Always over-allocate by 1–2GB for overhead (KV cache, optimizer state, system OS).',
+            'Batch size ≠ VRAM per inference. Single inference uses same VRAM regardless of batch (batch processes sequentially).',
+            'More VRAM doesn\'t speed up single-prompt inference. It only helps with multi-user/multi-request setups.',
+          ],
+        },
+        'formula': {
+          title: 'What Is the VRAM Formula for LLMs?',
+          content: [
+            '**VRAM (GB) = (Model Size in Billions × 4 bytes × Quantization Factor)**',
+            '- Model size: Number of parameters (7B, 13B, 70B, etc.)',
+            '- 4 bytes: FP32 precision (1 byte = 8 bits)',
+            '- Quantization factor: 1.0 (FP32), 0.5 (Q8), 0.25 (Q4)',
+            'Example: Llama 3 70B, FP32, no quantization:',
+            '70 billion × 4 bytes = 280GB. Impractical.',
+            'Llama 3 70B, Q4 (4-bit) quantization:',
+            '70 billion × 4 bytes × 0.25 = 70GB allocated, ~24GB used after compression.',
+          ],
+        },
+        'by-model-size': {
+          title: 'How Much VRAM Does Each Model Size Need?',
+          rows: [
+            { '0': '3B (Phi, StableLM)', '1': '12GB', '2': '6GB', '3': '4GB', '4': '3GB', '5': 'RTX 2060 6GB' },
+            { '0': '7B (Llama 2, Mistral)', '1': '28GB', '2': '14GB', '3': '9GB', '4': '7GB', '5': 'RTX 3060 12GB' },
+            { '0': '13B (Llama 2, Mistral)', '1': '52GB', '2': '26GB', '3': '17GB', '4': '13GB', '5': 'RTX 3080 10GB (tight) or 3090 24GB' },
+            { '0': '22B (Qwen, Gemma)', '1': '88GB', '2': '44GB', '3': '28GB', '4': '22GB', '5': 'RTX 4090 24GB (Q4) or RTX 6000 ADA (48GB)' },
+            { '0': '70B (Llama 3, Qwen)', '1': '280GB', '2': '140GB', '3': '88GB', '4': '70GB', '5': '2× RTX 4090 (24GB each), or 1× H100 80GB' },
+          ],
+          columns: ['Model Size', 'FP32 (No Quantization)', 'Q8 (8-bit)', 'Q5 (5-bit)', 'Q4 (4-bit)', 'Recommended GPU'],
+        },
+        'quantization': {
+          title: 'How Does Quantization Reduce VRAM Requirements?',
+          content: [
+            '**Quantization** reduces the number of bits needed to represent each model parameter.',
+            '- **FP32** (32-bit float): Full precision. 1 parameter = 4 bytes. No loss. Slowest.',
+            '- **Q8** (8-bit): 1 parameter = 1 byte. ~6% accuracy loss. 75% VRAM savings.',
+            '- **Q5** (5-bit): 1 parameter = 0.625 bytes. ~2% accuracy loss. 84% VRAM savings.',
+            '- **Q4** (4-bit): 1 parameter = 0.5 bytes. ~1% accuracy loss. 87.5% VRAM savings.',
+            'For most users, Q4 is the sweet spot: imperceptible accuracy loss, 87% smaller VRAM footprint.',
+            'As of April 2026, Q4 is standard. Q5 and Q8 are available if you have extra VRAM and want marginal quality gains.',
+          ],
+        },
+        'batch-size': {
+          title: 'What About Batch Size and Multi-User Inference?',
+          content: [
+            'Batch size affects **throughput** (tokens per second), not single-inference **latency**.',
+            'A single user prompting "What is 2+2?" uses the same VRAM whether batch size is 1 or 32.',
+            'Batch size = 32 means processing 32 prompts in parallel. This uses ~32× more VRAM, but generates 32 responses faster.',
+            'For single-user (typical local LLM usage): Batch size = 1. VRAM is model size + 1–2GB overhead.',
+            'For multi-user server: Allocate batch size × model VRAM. A 70B model at batch=4 needs ~96GB (24GB × 4).',
+          ],
+        },
+        'overhead': {
+          title: 'Do You Need More VRAM Than the Model Size?',
+          content: [
+            'Yes. Beyond the model weights, add:',
+            '- **KV cache** (key-value cache for context): ~5–10% extra VRAM.',
+            '- **Optimizer state** (if fine-tuning): 2–4× model size (only relevant for training, not inference).',
+            '- **System overhead** (OS, drivers, Ollama/LM Studio runtime): ~1–2GB.',
+            'Rule: A 70B model Q4 (20GB) + KV cache (2GB) + system (2GB) = ~24GB allocated.',
+            'Always buy GPUs with at least 1–2GB headroom above theoretical minimums.',
+          ],
+        },
+        'mistakes': {
+          title: 'Common VRAM Misconceptions',
+          items: [
+            'More VRAM = faster inference. False. VRAM size doesn\'t affect speed. Memory bandwidth (GB/sec) does, and that\'s fixed per GPU.',
+            'Batch size = sequential token limit. False. Batch size = parallel requests. Single inference uses batch=1 regardless of VRAM size.',
+            'You need 24GB for any 70B model. False. Q4 needs 24GB. Q8 needs 48GB. Depends on quantization.',
+          ],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Can I run Mistral 7B on a 6GB GPU?', a: 'Barely, at Q4 with tight overhead. Practically, no. Buy at least 8GB. You\'ll hit OOM errors with 6GB.' },
+            { q: 'How much VRAM do I need for fine-tuning a 7B model?', a: 'For LoRA: 12–16GB. Full fine-tuning: 28GB+. Fine-tuning requires optimizer state (2–4× model VRAM), not just inference.' },
+            { q: 'Is 12GB enough for Llama 3 13B?', a: 'At Q4, yes barely. At Q5 or Q8, no. 12GB is cutting it close. 16GB is comfortable.' },
+            { q: 'Do I need 24GB for a 70B model?', a: 'At Q4, yes. At Q5+, no. Higher quantization (Q5, Q8) need 32GB+ for 70B.' },
+            { q: 'Does increasing batch size reduce VRAM for single inference?', a: 'No. Single inference always uses batch=1 VRAM. Batch size only helps throughput (multi-user scenarios).' },
+            { q: 'What\'s the best quantization for accuracy?', a: 'Q8 is nearly imperceptible loss. Q5 is ~2% loss. Q4 is ~1% loss. For most, Q4 is the sweet spot.' },
+            { q: 'Can I offload some VRAM to CPU RAM?', a: 'Yes, via layer-splitting (NVLink). Llama.cpp and Ollama support this. Performance drops 30–50% but it works.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[VRAM Calculator Tool](/local-llms/vram-calculator-local-llm)',
+            '[LLM Quantization Explained](/local-llms/llm-quantization-explained)',
+            '[Best 7B Models for Consumer Hardware](/local-llms/best-7b-models-consumer-hardware)',
+            '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'NVIDIA CUDA memory architecture and shared memory model documentation',
+            'Ollama and LM Studio official documentation: model VRAM requirements and quantization specs',
+            'llama.cpp project GitHub: quantization levels (Q4, Q5, Q8) and memory calculations',
+          ],
+        },
+      },
+    },
+  },
+
+  'best-amd-gpus-local-llm': {
+    en: {
+      theme: 'GPU Buying Guides',
+      title: 'Best AMD GPUs for Local LLMs',
+      seoTitle: 'Best AMD GPUs for Local LLMs: RX 6800 XT, 7900 XTX, Radeon Pro',
+      intro: '**AMD RX 6800 XT and RX 7900 XTX are solid NVIDIA alternatives, offering 15–20% better compute-per-dollar, but suffer from weaker ONNX Runtime and vLLM driver support.** As of April 2026, AMD ROCm (HIP) has matured, but compatibility layers add friction. NVIDIA CUDA is still the path of least resistance for local LLMs. Use AMD only if you find a great used deal or already own AMD hardware.',
+      metaDescription: 'Best AMD GPUs for local LLMs: RX 6800 XT, 7900 XTX, Radeon Pro. ROCm setup, vLLM support, NVIDIA vs AMD. Free beta — April 2026.',
+      publishDate: '2026-04-05',
+      readTime: '7 min',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'AMD GPU',
+      toc: [
+        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'Which AMD GPUs Are Actually Worth Using?', anchor: '#which-amd' },
+        { label: 'How Do AMD GPUs Compare to RTX on Price and Speed?', anchor: '#amd-vs-nvidia' },
+        { label: 'What\'s the ROCm Setup Friction for AMD?', anchor: '#rocm-setup' },
+        { label: 'Can You Run Ollama and vLLM on AMD?', anchor: '#software-support' },
+        { label: 'When Should You Actually Buy AMD Over NVIDIA?', anchor: '#when-buy-amd' },
+        { label: 'Common AMD Adoption Mistakes', anchor: '#mistakes' },
+        { label: 'FAQ', anchor: '#faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'AMD RX 6800 XT (16GB, $300–350 used) and RX 7900 XTX (24GB, $400–500 used) are the only viable options for local LLMs.',
+            'Performance-per-dollar: AMD is 20–30% cheaper than NVIDIA, but software friction costs 5–10 hours of setup time.',
+            'Ollama: Limited AMD support (ROCm path is buggy, CPU fallback is slow). Not recommended.',
+            'vLLM: Full AMD ROCm support as of v0.6.0, but setup requires manual drivers. Works well if you get past setup.',
+            'Text Generation WebUI: Excellent AMD support via ROCm. Best user experience on AMD.',
+            'Llama.cpp: Native AMD support (HIP backend). Solid performance. Recommended AMD path.',
+            'Setup cost: Plan 5–10 hours debugging ROCm drivers, HIPCC compilation, kernel compatibility.',
+            'Verdict (April 2026): Use AMD only if you have AMD already, or if you find a killer used deal ($300 for 16GB card). Otherwise, NVIDIA CUDA is still simpler.',
+          ],
+        },
+        'which-amd': {
+          title: 'Which AMD GPUs Are Actually Worth Using?',
+          items: [
+            '**RX 6800 XT** (16GB GDDR6): The value king for AMD. 2020 release. Still solid for 7B–22B inference. Used: $300–350.',
+            '**RX 6900 XT** (16GB GDDR6): Marginally faster 6800 XT. Rare. Used: $350–400. Not worth the price bump.',
+            '**RX 7900 XT** (20GB GDDR6): Newer RDNA 3 arch. 20% faster than 6800 XT. Used: $400–480. Good for 70B Q4.',
+            '**RX 7900 XTX** (24GB GDDR6): Top AMD consumer GPU. 24GB VRAM is game-changer for 70B. Used: $450–550. Comparable to RTX 4090 speed.',
+            '**Radeon Pro W6800 (32GB)**: Enterprise card, cheaper used (~$200–300). Slower, but 32GB is excellent for 70B Q8. Niche play.',
+          ],
+        },
+        'amd-vs-nvidia': {
+          title: 'How Do AMD GPUs Compare to RTX on Price and Speed?',
+          rows: [
+            { '0': 'RX 6800 XT', '1': '16GB', '2': '1,952', '3': '$300–350', '4': '+25%', '5': 'RTX 3080 (slower)' },
+            { '0': 'RX 7900 XT', '1': '20GB', '2': '2,540', '3': '$400–480', '4': '+20%', '5': 'RTX 4080 (similar)' },
+            { '0': 'RX 7900 XTX', '1': '24GB', '2': '2,750', '3': '$450–550', '4': '+15%', '5': 'RTX 4090 (similar speed)' },
+            { '0': 'RTX 3080', '1': '10GB', '2': '1,456', '3': '$350–400', '4': '—', '5': '—' },
+            { '0': 'RTX 4090', '1': '24GB', '2': '2,752', '3': '$1,000–1,300', '4': '—', '5': '—' },
+          ],
+          columns: ['GPU', 'VRAM', 'TFLOPS', 'Price Used', 'Perf/$ vs. RTX', 'Equivalent RTX'],
+        },
+        'rocm-setup': {
+          title: 'What\'s the ROCm Setup Friction for AMD?',
+          content: [
+            '1. Install AMD ROCm drivers: `apt-get install rocm-dkms` (Ubuntu). On Windows, manual .exe installer. Takes 30 min.',
+            '2. Verify HIP compiler: `hipcc --version`. Often fails on first try. Debug kernel compatibility for your GPU.',
+            '3. Install HIPCC (AMD\'s HIP-to-C++ compiler): `apt-get install hip-runtime-amd`. Another dependency chain.',
+            '4. Test with small LLM: Run inference to verify GPU acceleration is working. Often defaults to CPU fallback.',
+            '5. Troubleshoot driver version mismatches: ROCm v5.7 works with kernel 5.15 but not 6.x. Consume 2–4 hours debugging.',
+            'NVIDIA CUDA by comparison: `nvidia-cuda-toolkit` → one apt-get, instant GPU access. AMD requires 5–10× more friction.',
+          ],
+        },
+        'software-support': {
+          title: 'Can You Run Ollama and vLLM on AMD?',
+          content: [
+            '**Ollama on AMD:** Experimental/buggy as of April 2026. ROCm path works sometimes, CPU fallback is slow. Not recommended.',
+            '**vLLM on AMD:** Full ROCm support since v0.6.0. Works well, but requires manual ROCm/HIP driver setup. Good if you\'re past the setup gauntlet.',
+            '**Text Generation WebUI:** Excellent AMD ROCm support. Best user experience on AMD. Recommended.',
+            '**Llama.cpp:** Native HIP backend. Solid performance. Easiest AMD path. Recommended.',
+            '**LM Studio:** NVIDIA only. No AMD support.',
+            'As of April 2026: vLLM + llama.cpp are your AMD paths. Ollama is not reliable.',
+          ],
+        },
+        'when-buy-amd': {
+          title: 'When Should You Actually Buy AMD Over NVIDIA?',
+          content: [
+            'Buy AMD if:',
+            '- You find a used RX 7900 XTX for <$450 (under-priced vs. RTX 4090 value).',
+            '- You already own AMD hardware and want ecosystem consistency.',
+            '- You\'re building a cluster and value compute-per-dollar over ease-of-setup.',
+            'Don\'t buy AMD if:',
+            '- You want a plug-and-play experience. NVIDIA CUDA is faster to get working.',
+            '- You need Ollama. AMD support is unreliable.',
+            '- You\'re time-constrained. ROCm debugging can eat 10+ hours.',
+          ],
+        },
+        'mistakes': {
+          title: 'Common AMD Adoption Mistakes',
+          items: [
+            'Buying RX 6700 (12GB) thinking it\'s a 3060 12GB equivalent—it\'s 20% slower and often harder to find used.',
+            'Assuming ROCm "just works" like CUDA—plan 5–10 hours of troubleshooting driver and kernel compatibility.',
+            'Using Ollama with AMD expecting seamless integration—ROCm path is buggy; llama.cpp or vLLM are better bets.',
+          ],
+        },
+        'faqSection': {
+          title: 'FAQ',
+          faqs: [
+            { q: 'Should I buy AMD RX 6800 XT or NVIDIA RTX 3080 for local LLMs?', a: 'RTX 3080 if you value simplicity (CUDA "just works"). RX 6800 XT if you want 25% better value and don\'t mind 5–10 hours ROCm setup.' },
+            { q: 'Is AMD RX 7900 XTX better than RTX 4090?', a: 'Similar speed, same VRAM (24GB). RX 7900 XTX is $200–300 cheaper used ($450–550 vs. $1,000–1,300). ROCm setup is the trade-off.' },
+            { q: 'Can I use AMD GPUs with Ollama?', a: 'Technically yes, but expect buggy behavior. CPU fallback is common. Use vLLM or llama.cpp instead for AMD.' },
+            { q: 'What\'s the best AMD path for local LLMs in 2026?', a: 'Llama.cpp (HIP backend) + Text Generation WebUI. Both have solid AMD support. Avoid Ollama.' },
+            { q: 'Do I need Ubuntu for AMD ROCm, or does Windows work?', a: 'Windows support exists (HIP on Windows), but it\'s newer and buggier. Ubuntu is the recommended path.' },
+            { q: 'Is RX 6700 or 6750 good for 7B models?', a: 'RX 6700 (12GB) works but is 20% slower than RX 6800 XT. Only buy if <$250. Otherwise, stretch to 6800 XT.' },
+            { q: 'Can I mix AMD and NVIDIA GPUs in one system?', a: 'Theoretically yes, but management is a nightmare. Each GPU needs its own CUDA/HIP runtime. Not recommended.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Related Reading',
+          items: [
+            '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
+            '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms)',
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon)',
+            '[Text Generation WebUI vs vLLM vs Llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'AMD ROCm documentation and GitHub: HIP compiler, driver compatibility matrix, LLM inference examples',
+            'vLLM GitHub: AMD/ROCm backend implementation and support status (v0.6.0+)',
+            'Llama.cpp GitHub: HIP backend for AMD GPU support',
+          ],
+        },
+      },
+    },
+  },
+
 }

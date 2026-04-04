@@ -4,7 +4,7 @@ import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
   title: 'Local LLMs 2026: Complete Guide to Running AI Models Offline | PromptQuorum',
-  description: 'Run AI models locally with full privacy and zero API costs. 58 guides covering Ollama, LM Studio, hardware requirements, model selection, fine-tuning, and enterprise deployment.',
+  description: 'Run AI models locally with full privacy and zero API costs. 88 guides covering Ollama, LM Studio, hardware requirements, model selection, fine-tuning, and enterprise deployment.',
   openGraph: {
     title: 'Local LLMs 2026: Complete Guide | PromptQuorum',
     description: "Stop paying for AI APIs. Run Llama 4, Qwen3.5, DeepSeek, and 70B+ models locally on your own hardware — full privacy, offline capable, zero usage limits.",

@@ -26,7 +26,7 @@ export const llmThemes: LLMTheme[] = [
   },
   {
     id: 'best-models',
-    title: 'Best Local LLM Models 2026',
+    title: 'Models by Use Case',
     description: 'Model reviews, benchmark comparisons, use-case winners, and quantization guides for Llama 4, Qwen3.5, DeepSeek, Gemma 4, and 70B+ models.',
     articleKeys: [
       'best-local-llms-2026',
@@ -40,6 +40,11 @@ export const llmThemes: LLMTheme[] = [
       'long-context-local-llms',
       'top-open-source-models-ollama',
       'local-llm-model-updates-2026',
+      'best-local-llms-code-review',
+      'best-local-llms-business-writing',
+      'best-7b-models-consumer-hardware',
+      'fastest-local-llms-low-end-pcs',
+      'quantization-levels-comparison',
     ],
   },
   {
@@ -57,6 +62,11 @@ export const llmThemes: LLMTheme[] = [
       'desktop-vs-webui-local-llm',
       'local-llms-with-vscode-cursor',
       'headless-local-llms',
+      'best-local-llm-stack-use-case',
+      'lm-studio-vs-jan-ai',
+      'open-webui-vs-sillytavern',
+      'llamacpp-vs-ollama-vs-vllm',
+      'local-llm-developer-stack',
     ],
   },
   {
@@ -104,6 +114,54 @@ export const llmThemes: LLMTheme[] = [
       'enterprise-compliance-local-llms',
       'scaling-local-llms-enterprise',
       'corporate-rag-local-llms',
+    ],
+  },
+  {
+    id: 'gpu-buying-guides',
+    title: 'GPU Buying Guides',
+    description: 'GPU recommendations, budget picks, next-gen comparisons, and used-market value for running 7B to 70B models.',
+    articleKeys: [
+      'best-budget-gpus-local-llm',
+      'rtx-5090-vs-rtx-4090-local-llm',
+      'used-gpus-for-local-llms',
+      'how-much-vram-local-llm',
+      'best-amd-gpus-local-llm',
+    ],
+  },
+  {
+    id: 'hardware-setups',
+    title: 'Hardware Setups',
+    description: 'Complete system builds, mini PCs, laptops, and workstations at multiple price points for serious local inference.',
+    articleKeys: [
+      'local-llm-pc-build-1000',
+      'local-llm-pc-build-2000',
+      'local-llm-workstation-build',
+      'best-mini-pcs-local-llm',
+      'best-laptops-local-llm',
+    ],
+  },
+  {
+    id: 'privacy-business',
+    title: 'Privacy & Business',
+    description: 'Secure on-premises setups, multi-user deployments, NAS storage, and offline workflows for compliance-heavy organizations.',
+    articleKeys: [
+      'private-local-llm-sensitive-data',
+      'local-llm-setup-for-teams',
+      'best-nas-storage-local-llm',
+      'vpn-for-local-llm-users',
+      'secure-offline-local-llm-workflow',
+    ],
+  },
+  {
+    id: 'cost-comparisons',
+    title: 'Cost & Comparisons',
+    description: 'ROI analysis, price comparisons, total cost of ownership, and platform comparisons (Local vs CloudGPU vs Subscriptions).',
+    articleKeys: [
+      'local-llms-vs-chatgpt-plus',
+      'local-llms-vs-claude-pro',
+      'local-llm-vs-cloud-gpu-cost',
+      'mac-vs-windows-vs-linux-local-llm',
+      'gpu-vs-ai-subscription-roi',
     ],
   },
 ]

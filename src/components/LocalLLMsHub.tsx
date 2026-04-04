@@ -56,11 +56,11 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     zh: '入门：如何运行您的第一个本地LLM？',
   },
   'best-models': {
-    en: 'Best Models 2026: Which Local LLM Should You Actually Use?',
-    de: 'Beste Modelle 2026: Welches lokale LLM sollten Sie wirklich verwenden?',
-    fr: 'Meilleurs modèles 2026 : Quel LLM local devriez-vous vraiment utiliser ?',
-    ja: '2026年最良モデル：実際にどのローカルLLMを使うべきか？',
-    zh: '2026年最佳模型：您实际上应该使用哪个本地LLM？',
+    en: 'Models by Use Case: Which Local LLM Should You Actually Use?',
+    de: 'Modelle nach Anwendungsfall: Welches lokale LLM sollten Sie wirklich verwenden?',
+    fr: 'Modèles par cas d\'usage : Quel LLM local devriez-vous vraiment utiliser ?',
+    ja: 'ユースケース別モデル：実際にどのローカルLLMを使うべきか？',
+    zh: '按用例分类的模型：您实际上应该使用哪个本地LLM？',
   },
   'tools-interfaces': {
     en: 'Tools & Interfaces: Which Software Gets You Running Fastest?',
@@ -90,6 +90,34 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
     ja: 'エンタープライズ：組織はローカルLLMをどのようにスケールデプロイするか？',
     zh: '企业：组织如何大规模部署本地LLM？',
   },
+  'gpu-buying-guides': {
+    en: 'GPU Buying Guides: Which GPU Should You Buy for Local LLMs?',
+    de: 'GPU-Kaufratgeber: Welche GPU sollten Sie für lokale LLMs kaufen?',
+    fr: 'Guides d\'achat de GPU : Quelle GPU devriez-vous acheter pour les LLMs locaux ?',
+    ja: 'GPU購入ガイド：ローカルLLM用にどのGPUを購入すべきか？',
+    zh: 'GPU购买指南：您应该为本地LLM购买哪个GPU？',
+  },
+  'hardware-setups': {
+    en: 'Hardware Setups: What Computer Do You Need for Local LLMs?',
+    de: 'Hardware-Setups: Welchen Computer brauchen Sie für lokale LLMs?',
+    fr: 'Configurations matérielles : Quel ordinateur avez-vous besoin pour les LLMs locaux ?',
+    ja: 'ハードウェアセットアップ：ローカルLLM用にどのコンピュータが必要か？',
+    zh: '硬件设置：为本地LLM您需要什么计算机？',
+  },
+  'privacy-business': {
+    en: 'Privacy & Business: How Do You Secure Local LLMs for Organizations?',
+    de: 'Datenschutz & Unternehmen: Wie sichern Sie lokale LLMs für Organisationen?',
+    fr: 'Confidentialité & Entreprise : Comment sécuriser les LLMs locaux pour les organisations ?',
+    ja: 'プライバシーとビジネス：組織向けにローカルLLMをどのように保護するか？',
+    zh: '隐私与业务：您如何为组织保护本地LLM？',
+  },
+  'cost-comparisons': {
+    en: 'Cost & Comparisons: Local vs Cloud vs Subscriptions—What\'s Cheaper?',
+    de: 'Kosten & Vergleiche: Lokal vs Cloud vs Abos—Was ist günstiger?',
+    fr: 'Coûts et comparaisons : Local vs Cloud vs Abonnements—Qu\'est-ce qui est moins cher ?',
+    ja: 'コストと比較：ローカルvsクラウドvsサブスク—どれが安いか？',
+    zh: '成本与比较：本地vs云vs订阅—哪个更便宜？',
+  },
 }
 
 const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
@@ -99,6 +127,10 @@ const THEME_COLORS: Record<string, { badge: string; dot: string }> = {
   'hardware-performance': { badge: 'bg-orange-50 text-orange-700 border-orange-200', dot: 'bg-orange-400' },
   'advanced-techniques': { badge: 'bg-rose-50 text-rose-700 border-rose-200',   dot: 'bg-rose-400' },
   enterprise:           { badge: 'bg-amber-50 text-amber-700 border-amber-200', dot: 'bg-amber-400' },
+  'gpu-buying-guides':  { badge: 'bg-red-50 text-red-700 border-red-200',     dot: 'bg-red-400' },
+  'hardware-setups':    { badge: 'bg-indigo-50 text-indigo-700 border-indigo-200', dot: 'bg-indigo-400' },
+  'privacy-business':   { badge: 'bg-cyan-50 text-cyan-700 border-cyan-200',  dot: 'bg-cyan-400' },
+  'cost-comparisons':   { badge: 'bg-teal-50 text-teal-700 border-teal-200',  dot: 'bg-teal-400' },
 }
 
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
