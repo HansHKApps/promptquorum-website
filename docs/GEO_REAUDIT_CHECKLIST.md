@@ -119,10 +119,78 @@ This checklist is used to reaudit already-published articles against the full GE
 
 1. **Select article** to reaudit by slug name
 2. **Run Quick Audit** (5 min) — check critical items
-3. **If issues found:** Note them, then run Full Audit
-4. **Fix issues** using Edit tool or rewrite sections
-5. **Verify changes:** npm run build (must pass with 0 errors)
-6. **Commit:** `git commit -m "audit: Update [article slug] for GEO compliance"`
+3. **If issues found:** Note them in a failing checklist, then run Full Audit
+4. **Document issues:** Generate audit report listing ALL failures
+5. **Fix issues** using Edit tool or rewrite sections
+6. **Re-run audit:** Verify all failures are resolved
+7. **Verify changes:** npm run build (must pass with 0 errors)
+8. **Commit:** `git commit -m "audit: Update [article slug] for GEO compliance"`
+
+## Audit Report Generation
+
+After running the full audit, **generate a summary report** listing:
+
+### Report Template
+
+```
+# Reaudit Report: [article slug]
+**Date:** [YYYY-MM-DD]
+**Auditor:** [Name/Tool]
+**Status:** [PASS / FAIL]
+
+## Issues Found
+- [ ] Issue #1: [Category] — Description of what failed
+- [ ] Issue #2: [Category] — Description of what failed
+- [ ] Issue #3: [Category] — Description of what failed
+
+## By Category
+
+### Metadata Issues
+- Missing or incorrect meta description
+- Title too long/short
+- Missing SEO title
+- Missing JSON-LD schema
+
+### Structure Issues
+- H2 titles not in question format
+- Missing TLDR section
+- Missing table of contents
+- Code blocks missing language specification
+
+### Content Issues
+- Claim without sources/verification
+- Vague marketing language detected
+- Paragraph >3 sentences
+- Missing date signal ("As of April 2026")
+
+### Required Sections Issues
+- Missing Common Questions section
+- Missing Related Reading section (fewer than 4 links)
+- Missing Sources section (fewer than 3 citations)
+- Missing Common Mistakes section
+
+### Format Issues
+- Incorrect entity naming (e.g., "GPT" instead of "OpenAI GPT-4o")
+- Raw URLs instead of markdown links
+- Inconsistent formatting
+
+## What Was Fixed
+- [x] Fixed issue #1: [Description]
+- [x] Fixed issue #2: [Description]
+
+## Re-Audit Result
+**Status:** PASS ✓
+**All issues resolved:** Yes
+**Build verification:** npm run build passed with 0 errors
+```
+
+### Audit Report Distribution
+
+The audit report should be:
+1. **Saved locally:** `docs/audits/[article-slug]_[date]_audit.md`
+2. **Shared with author/editor:** Via email or pull request comment
+3. **Tracked:** Keep a registry of which articles have been audited and when
+4. **Actionable:** Each issue should clearly state what rule was violated and how to fix it
 
 ## Common Issues & Fixes
 
