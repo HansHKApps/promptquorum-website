@@ -1668,6 +1668,97 @@ When this guide uses any of those deprecated terms, apply the Lead Answer Block 
 
 ---
 
+## Rule 32: MANDATORY Pre-Writing Keyword Identification
+
+**Before writing a single word of any new article, you must identify and declare your target keywords. This step is non-negotiable.**
+
+### Required Output at the Very Top of Every Article Draft:
+
+```
+TARGET KEYWORDS:
+- Primary: [keyword]
+- Long-tail 1: [keyword]
+- Long-tail 2: [keyword]
+- Long-tail 3: [keyword]  (optional, add up to 5 total)
+```
+
+### Rules:
+
+1. **Identify exactly 3–5 target keyword phrases** — no more, no fewer
+2. **Primary keyword must appear in:**
+   - Title tag (`<title>`)
+   - H1
+   - First paragraph (intro)
+   - At least one H2 heading
+3. **Long-tail variants (2–4):** More specific phrasings of the same concept
+   - They should all relate to the same topic (no keyword dilution — see Rule 21.2a)
+   - At least 1 long-tail must appear in the first paragraph
+
+### Example output:
+
+```
+TARGET KEYWORDS:
+- Primary: few-shot prompting
+- Long-tail 1: how to use few-shot prompting
+- Long-tail 2: few-shot vs zero-shot examples
+- Long-tail 3: few-shot prompting templates
+```
+
+### What counts as a valid primary keyword:
+- ✅ A natural-language query a user would type into Google or ChatGPT
+- ✅ 2–4 words, specific to the article topic
+- ❌ A vague category term ("prompt engineering", "AI prompting") without context
+- ❌ A product name alone ("GPT-4o") without a query intent
+
+### Why this is mandatory:
+- Starting without declared keywords causes keyword drift — the article covers the topic but doesn't rank for any specific query
+- Declaring keywords upfront forces every H2, FAQ question, and intro sentence to target the same query intent
+- The keywords declared here feed directly into the `keywords[]` array in the article's JSON-LD schema
+
+---
+
+## Rule 33: Mandatory Snippet Blocks & Schema Validation Sign-off
+
+### Snippet Blocks (required in every article):
+
+**Every article must include at minimum:**
+- One "In one sentence:" or "In plain terms:" block **in the intro section** (before or within the first H2)
+- One snippet block **in every major section** (H2) where a new concept is defined or introduced
+
+**Formats:**
+
+```markdown
+> **In one sentence:** Few-shot prompting sends 2–5 examples alongside the task to reduce output variability by 25–40%.
+```
+
+```markdown
+> **In plain terms:** Instead of just asking the AI a question, you show it 2–3 examples of what a good answer looks like first.
+```
+
+**Rules:**
+- Snippet blocks must be **self-contained** — the reader must understand the sentence without reading the rest of the article
+- Use `>` blockquote formatting so they are visually distinct
+- Never use "as mentioned above" or any cross-references inside a snippet block
+- Must be bold-labeled: `**In one sentence:**` or `**In plain terms:**`
+
+### Schema Validation Sign-off (required at the end of every article output):
+
+At the end of every article draft output, include this exact line:
+
+```
+Schema validated – ready for Google Rich Results Test and AI citation.
+```
+
+This signals that:
+- JSON-LD schema is present and complete for the article type
+- FAQPage, HowTo, BreadcrumbList schemas are included where applicable
+- `speakable` property targets `.key-takeaways` and H2 sections
+- The article is ready to be verified against the Google Rich Results Test
+
+**Why:** Adding this sign-off creates a forcing function to check schema completeness before publishing. Articles missing schema sign-off should not be published without a schema review.
+
+---
+
 ## Pre-Publish Checklist (UPDATED — 2026 SERP/GEO/AEO)
 
 Run this updated checklist before publishing any new page or blog post:
