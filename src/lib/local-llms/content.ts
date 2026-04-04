@@ -2523,6 +2523,147 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'long-context-local-llms': {
+    en: {
+      theme: 'Best Models',
+      title: 'Long Context Local LLMs: Which Models Handle 32K, 128K Tokens Locally?',
+      seoTitle: 'Long Context Local LLMs 2026',
+      intro: 'Most local LLM models in 2026 support 128K token context windows on paper, but practical usable context — where quality stays high — is typically 16K–32K tokens. Llama 3.1/3.2/3.3, Qwen2.5, and Mistral Small 3.1 all support 128K context. Processing full-length documents or books locally requires understanding RAM scaling and quality degradation at long ranges.',
+      metaDescription: 'Long context local LLMs: which models support 32K, 128K tokens locally, RAM requirements for long contexts, and practical limits before quality degrades.',
+      publishDate: '2026-04-04',
+      readTime: '8 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'long context local LLM',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Is Context Length and Why Does It Matter?', anchor: '#what-is-context-length' },
+        { label: 'Which Local LLMs Support 128K Tokens?', anchor: '#which-local-llms-support-128k' },
+        { label: 'How Much RAM Does Long Context Use?', anchor: '#how-much-ram-for-long-context' },
+        { label: 'Practical vs Theoretical Context Length', anchor: '#practical-vs-theoretical' },
+        { label: 'Long Context Benchmark Comparison', anchor: '#long-context-benchmark' },
+        { label: 'Common Mistakes with Long Context', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Most Llama 3.x, Qwen2.5, and Mistral Small models support 128K token context windows as of April 2026.',
+            '128K tokens ≈ 96,000 words ≈ a 300-page book. Processing this requires 2–4× more RAM than standard 4K context inference.',
+            '**Practical quality limit**: most 7B–8B models maintain reliable quality up to 16K–32K tokens. Beyond 32K, information from the beginning of the context may be "lost" or ignored.',
+            'RAM for long context scales with context length: a 7B model at Q4_K_M with 128K context needs ~12–16 GB RAM vs ~6 GB for 4K context.',
+            'For truly long documents (100K+ tokens), cloud models (Gemini 2.5 Pro at 1M tokens) remain significantly more practical than local inference.',
+          ],
+        },
+        whatIsContext: {
+          title: 'What Is Context Length and Why Does It Matter for Local LLMs?',
+          content: [
+            'Context length is the maximum number of tokens a model can process in a single inference call — the combined size of the input (your document, conversation history, system prompt) and the output (the model\'s response). One token ≈ 0.75 words in English; 128K tokens ≈ 96,000 words.',
+            'For local LLM use cases, long context enables: summarizing entire books or long reports, analyzing full codebases in one prompt, processing hours of meeting transcripts, and maintaining long conversation histories without losing earlier context.',
+            'The key distinction is between the advertised context length (what the model architecture supports) and the practical context length (where quality stays reliable). A model may technically support 128K tokens but show degraded quality on information presented at the 100K token mark.',
+          ],
+        },
+        which128k: {
+          title: 'Which Local LLMs Support 128K Token Context in 2026?',
+          rows: [
+            { 'Model': 'Llama 3.1 8B', 'Context Window': '128K', 'Practical Limit': '~32K reliable', 'Ollama Command': 'ollama run llama3.1:8b' },
+            { 'Model': 'Llama 3.2 3B', 'Context Window': '128K', 'Practical Limit': '~16K reliable', 'Ollama Command': 'ollama run llama3.2:3b' },
+            { 'Model': 'Llama 3.3 70B', 'Context Window': '128K', 'Practical Limit': '~64K reliable', 'Ollama Command': 'ollama run llama3.3:70b' },
+            { 'Model': 'Qwen2.5 7B', 'Context Window': '128K', 'Practical Limit': '~32K reliable', 'Ollama Command': 'ollama run qwen2.5:7b' },
+            { 'Model': 'Qwen2.5 72B', 'Context Window': '128K', 'Practical Limit': '~64K reliable', 'Ollama Command': 'ollama run qwen2.5:72b' },
+            { 'Model': 'Mistral Small 3.1 24B', 'Context Window': '128K', 'Practical Limit': '~32K reliable', 'Ollama Command': 'ollama run mistral-small3.1' },
+            { 'Model': 'Gemma 2 2B', 'Context Window': '8K', 'Practical Limit': '~6K reliable', 'Ollama Command': 'ollama run gemma2:2b' },
+            { 'Model': 'Mistral 7B v0.3', 'Context Window': '32K', 'Practical Limit': '~16K reliable', 'Ollama Command': 'ollama run mistral' },
+          ],
+          columns: ['Model', 'Context Window', 'Practical Limit', 'Ollama Command'],
+        },
+        ramForLongContext: {
+          title: 'How Much RAM Does Long Context Processing Require?',
+          content: [
+            'RAM usage scales with both model size and context length. The KV cache (key-value cache) stores attention states for all processed tokens — this grows linearly with context length.',
+            'As of April 2026, a 7B model at Q4_K_M with 4K context uses ~6 GB RAM. The same model with 32K context uses ~8–9 GB RAM. With 128K context: ~12–16 GB RAM.',
+          ],
+          rows: [
+            { 'Model': 'Llama 3.1 8B Q4_K_M', '4K Context': '~6 GB', '32K Context': '~9 GB', '128K Context': '~14 GB' },
+            { 'Model': 'Qwen2.5 14B Q4_K_M', '4K Context': '~9 GB', '32K Context': '~12 GB', '128K Context': '~18 GB' },
+            { 'Model': 'Mistral Small 3.1 24B Q4_K_M', '4K Context': '~14 GB', '32K Context': '~17 GB', '128K Context': '~24 GB' },
+            { 'Model': 'Llama 3.3 70B Q4_K_M', '4K Context': '~40 GB', '32K Context': '~45 GB', '128K Context': '~55 GB' },
+          ],
+          columns: ['Model', '4K Context', '32K Context', '128K Context'],
+        },
+        practicalVsTheoretical: {
+          title: 'Why Is Practical Context Length Shorter Than the Advertised Maximum?',
+          content: [
+            'LLMs trained with RoPE positional encodings (used by Llama, Qwen, Mistral) can technically process tokens up to their maximum context length, but quality degrades in a known pattern called the "lost in the middle" effect.',
+            'Research shows that language models are best at using information at the beginning and end of the context window. Information placed in the middle of a very long context is retrieved less reliably. In practice, this means a model with a 128K context window may reliably answer questions about content in the first 32K tokens and last 16K tokens, but miss details from the 40K–80K token range.',
+            'For local models specifically, the practical reliable limit scales with model size: 3B models ≈ 8K–16K reliable; 7B–8B models ≈ 16K–32K reliable; 70B models ≈ 64K reliable. These are approximate — the actual limit depends on the specific task and how "important" the retrieved information is.',
+          ],
+        },
+        contextSettings: {
+          title: 'How to Set Context Length in Ollama',
+          content: 'Ollama defaults to 2048 tokens of context unless configured otherwise. To use a model\'s full context window:',
+          codeBlock: '# Set context length at runtime\nollama run llama3.1:8b --ctx 32768\n\n# Or create a custom model with a Modelfile\ncat << EOF > Modelfile\nFROM llama3.1:8b\nPARAMETER num_ctx 32768\nEOF\nollama create llama3.1-32k -f Modelfile\nollama run llama3.1-32k',
+          codeLanguage: 'bash',
+        },
+        commonMistakes: {
+          title: 'What Are the Common Mistakes with Long Context Local LLMs?',
+          faqs: [
+            {
+              q: 'Assuming 128K context works as well as 4K context',
+              a: 'It does not. The "lost in the middle" effect means information presented 30K–80K tokens ago is retrieved less reliably than information at the start or end of the context. For critical document analysis, chunk long documents into 16K–32K sections and process each separately rather than feeding an entire 100K document at once.',
+            },
+            {
+              q: 'Not increasing Ollama\'s default context size',
+              a: 'Ollama defaults to 2048 tokens of context regardless of the model\'s maximum. A conversation that exceeds 2048 tokens will truncate earlier messages. Always set `num_ctx` explicitly when using long-context features: add `PARAMETER num_ctx 32768` to your Modelfile or use `--ctx` at runtime.',
+            },
+            {
+              q: 'Running long context on insufficient RAM',
+              a: 'Loading a 7B model with 128K context on 8 GB RAM (total) will cause severe swap usage. The model weights (~4.5 GB) plus the 128K KV cache (~8+ GB) exceed 8 GB total. Either reduce context length to 32K (fits in ~9 GB) or use a machine with 16+ GB RAM for long-context inference.',
+            },
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Long Context Local LLMs',
+          faqs: [
+            {
+              q: 'Can I summarize an entire book with a local LLM?',
+              a: 'A typical 300-page book is 90,000–120,000 words — approximately 120K–160K tokens. This exceeds the practical reliable context of most 7B models and requires either a 70B model (64K reliable) or chunked processing. For 7B models, split the book into 20K-word chapters and summarize each, then summarize the chapter summaries.',
+            },
+            {
+              q: 'How many pages of text fit in 32K tokens?',
+              a: 'Approximately 50–70 pages of standard English text (250 words per page). A 32K token context holds a short novel, a full research paper with appendices, or a complete technical specification document.',
+            },
+            {
+              q: 'Does increasing context length slow down inference?',
+              a: 'Yes — processing a 32K context takes approximately 3–4× longer than processing a 4K context on the same hardware, due to the quadratic scaling of attention computation. Generation speed (tokens per second) is not significantly affected, but the time to first token (TTFT) scales with input length.',
+            },
+            {
+              q: 'Which local LLM handles RAG better than long context?',
+              a: 'For document search and retrieval tasks, RAG (retrieval-augmented generation) is often more effective than feeding entire documents as context. RAG retrieves the 3–5 most relevant chunks from a large document set and provides only those to the model. This uses 4K–8K tokens of context and avoids the "lost in the middle" problem. Tools like GPT4All LocalDocs and LlamaIndex implement local RAG.',
+            },
+            {
+              q: 'Does the EU AI Act affect how I can use long-context AI for document processing?',
+              a: 'The EU AI Act (effective February 2025) classifies AI systems processing personal data at scale as potentially high-risk. Local inference is not exempt, but it eliminates the third-party data processor risk. For legal document analysis or medical record summarization in the EU, running a local long-context model keeps data on-premises and under your control.',
+            },
+            {
+              q: 'Can local models handle 1M token contexts like Gemini 2.5 Pro?',
+              a: 'No — as of April 2026, no locally-runnable model supports 1M token contexts. Gemini 2.5 Pro\'s 1M token window requires Google\'s TPU infrastructure. Locally, 128K is the maximum supported by current consumer hardware. For tasks requiring 1M+ token contexts, cloud APIs remain the only practical option.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Lost in the Middle: How Language Models Use Long Contexts — arxiv.org/abs/2307.03172',
+            'Ollama Context Length Configuration — github.com/ollama/ollama/blob/main/docs/modelfile.md',
+            'Llama 3.1 Technical Report — ai.meta.com/research/publications/the-llama-3-herd-of-models/',
+            'EU AI Act Official Text — artificialintelligenceact.eu',
+          ],
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
