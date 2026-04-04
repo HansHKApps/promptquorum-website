@@ -72,7 +72,16 @@ const T = {
     pipelineDesc: 'Optimize, compare, analyze, and improve your prompts automatically',
     faqH2: 'Frequently Asked Questions',
     waitlistH2: 'Join the PromptQuorum Waitlist',
-    waitlistDesc: 'PromptQuorum launches April 2026. Early access includes lifetime premium features and priority support. Join to get day-one access and provide direct input into the product roadmap.',
+    publishedDate: 'Updated April 5, 2026',
+    waitlistDesc: 'PromptQuorum is live April 2026. Join the waitlist for early access and lifetime premium features. Your API keys stay in your browser—zero registration, zero tracking.',
+    whyH2: 'Why PromptQuorum?',
+    whyItems: [
+      'Dispatch one prompt to 25+ models simultaneously — no tab switching',
+      'Get Quorum Verdict: automated consensus scoring across all models',
+      'Detect hallucinations and flag contradictions automatically',
+      'Run locally with Ollama/LM Studio for total privacy',
+      'Free to use — bring your own API keys, stay in full control'
+    ],
     faqs: [
       { q: 'Is PromptQuorum free?', a: 'Yes. PromptQuorum is free to use. You can bring your own API key, use a local LLM, or try our limited free backend service for prompt optimization on a test basis.' },
       { q: 'How does privacy work?', a: 'You decide where your data goes. Keep everything local with LM Studio or Ollama, or use your own API keys. PromptQuorum is as private as you set it up.' },
@@ -108,7 +117,16 @@ const T = {
     pipelineDesc: 'Prompts automatisch optimieren, vergleichen, analysieren und verbessern',
     faqH2: 'Häufig gestellte Fragen',
     waitlistH2: 'Der PromptQuorum-Warteliste beitreten',
-    waitlistDesc: 'PromptQuorum startet im April 2026. Tragen Sie sich in die Warteliste ein, um am ersten Tag Zugang zu erhalten und direkt am Produkt mitzuwirken.',
+    publishedDate: 'Aktualisiert 5. April 2026',
+    waitlistDesc: 'PromptQuorum ist live im April 2026. Treten Sie der Warteliste bei, um Early Access und lebenslange Premium-Funktionen zu erhalten. Ihre API-Schlüssel bleiben in Ihrem Browser — null Registrierung, null Tracking.',
+    whyH2: 'Warum PromptQuorum?',
+    whyItems: [
+      'Senden Sie einen Prompt gleichzeitig an 25+ Modelle — kein Tab-Wechsel',
+      'Erhalten Sie das Quorum-Urteil: automatisierte Konsensbewertung über alle Modelle',
+      'Erkennen Sie Halluzinationen und kennzeichnen Sie Widersprüche automatisch',
+      'Führen Sie lokal mit Ollama/LM Studio für totale Privatsphäre durch',
+      'Kostenlose Nutzung — bringen Sie Ihre eigenen API-Schlüssel mit, bleiben Sie in voller Kontrolle'
+    ],
     faqs: [
       { q: 'Ist PromptQuorum kostenlos?', a: 'Ja. PromptQuorum ist kostenlos nutzbar. Sie können Ihren eigenen API-Schlüssel mitbringen, ein lokales LLM verwenden oder unseren kostenlosen Testdienst ausprobieren.' },
       { q: 'Wie funktioniert der Datenschutz?', a: 'Sie entscheiden, wohin Ihre Daten gehen. Alles lokal halten mit LM Studio oder Ollama, oder Ihre eigenen API-Schlüssel verwenden. PromptQuorum ist so privat, wie Sie es einrichten.' },
@@ -144,7 +162,16 @@ const T = {
     pipelineDesc: 'Optimisez, comparez, analysez et améliorez vos prompts automatiquement',
     faqH2: 'Questions fréquemment posées',
     waitlistH2: 'Rejoindre la liste d\'attente PromptQuorum',
-    waitlistDesc: 'PromptQuorum sort en avril 2026. Inscrivez-vous sur la liste d\'attente pour accéder dès le premier jour et contribuer directement à la feuille de route produit.',
+    publishedDate: 'Mis à jour 5 avril 2026',
+    waitlistDesc: 'PromptQuorum est en direct avril 2026. Rejoignez la liste d\'attente pour un accès précoce et les fonctionnalités premium à vie. Vos clés API restent dans votre navigateur — zéro inscription, zéro suivi.',
+    whyH2: 'Pourquoi PromptQuorum ?',
+    whyItems: [
+      'Envoyez un prompt à 25+ modèles simultanément — pas de changement d\'onglet',
+      'Obtenez le Quorum Verdict : notation de consensus automatisée sur tous les modèles',
+      'Détectez les hallucinations et signalez les contradictions automatiquement',
+      'Exécutez localement avec Ollama/LM Studio pour une confidentialité totale',
+      'Gratuit à utiliser — apportez vos propres clés API, restez en contrôle total'
+    ],
     faqs: [
       { q: 'PromptQuorum est-il gratuit ?', a: 'Oui. PromptQuorum est gratuit. Vous pouvez apporter votre propre clé API, utiliser un LLM local, ou essayer notre service backend gratuit limité.' },
       { q: 'Comment fonctionne la confidentialité ?', a: 'Vous décidez où vont vos données. Gardez tout local avec LM Studio ou Ollama, ou utilisez vos propres clés API. PromptQuorum est aussi privé que vous le configurez.' },
@@ -180,7 +207,16 @@ const T = {
     pipelineDesc: 'プロンプトの最適化・比較・分析・改善を自動で実行',
     faqH2: 'よくある質問',
     waitlistH2: 'PromptQuorumウェイトリストに参加',
-    waitlistDesc: 'PromptQuorumは2026年4月にローンチします。ウェイトリストに登録して初日からアクセスし、製品ロードマップに直接貢献しましょう。',
+    publishedDate: '更新日 2026年4月5日',
+    waitlistDesc: 'PromptQuorumは2026年4月にライブです。ウェイトリストに参加して、早期アクセスと生涯プレミアム機能を取得してください。APIキーはブラウザに保存されたまま—登録なし、トラッキングなし。',
+    whyH2: 'PromptQuorumを選ぶ理由',
+    whyItems: [
+      '1つのプロンプトを25+個のモデルに同時に送信 — タブ切り替えなし',
+      'Quorum Verdict を取得：すべてのモデル間で自動化されたコンセンサススコアリング',
+      'ハルシネーションを検出し、矛盾を自動的にフラグ',
+      'Ollama/LM Studioでローカル実行 — 完全なプライバシー',
+      '無料で使用可能 — 独自のAPIキーを持ち込み、完全なコントロール'
+    ],
     faqs: [
       { q: 'PromptQuorumは無料ですか？', a: 'はい、無料でご利用いただけます。独自のAPIキーを持ち込むか、ローカルLLMを使用するか、テスト用の無料バックエンドサービスをお試しください。' },
       { q: 'プライバシーはどう機能しますか？', a: 'データの行き先はあなたが決めます。LM StudioやOllamaですべてローカルに保つか、独自のAPIキーを使用してください。PromptQuorumはあなたの設定通りにプライベートです。' },
@@ -216,7 +252,16 @@ const T = {
     pipelineDesc: '自动优化、比较、分析并改进您的提示词',
     faqH2: '常见问题',
     waitlistH2: '加入 PromptQuorum 候补名单',
-    waitlistDesc: 'PromptQuorum 将于 2026 年 4 月发布。加入候补名单，在发布首日获得访问权限，并直接参与产品路线图的制定。',
+    publishedDate: '更新于2026年4月5日',
+    waitlistDesc: 'PromptQuorum在2026年4月上线。加入等待列表获得早期访问和终身高级功能。您的API密钥保留在您的浏览器中—零注册、零跟踪。',
+    whyH2: '为什么选择PromptQuorum？',
+    whyItems: [
+      '同时向25+个模型发送一个提示词 — 无需切换标签',
+      '获取Quorum Verdict：跨所有模型的自动化共识评分',
+      '自动检测幻觉并标记矛盾',
+      '使用Ollama/LM Studio本地运行，实现完全隐私',
+      '免费使用 — 使用您自己的API密钥，保持完全控制'
+    ],
     faqs: [
       { q: 'PromptQuorum 是免费的吗？', a: '是的，PromptQuorum 免费使用。您可以自带 API 密钥、使用本地 LLM，或试用我们有限的免费后端服务。' },
       { q: '隐私如何保障？', a: '您决定数据的去向。通过 LM Studio 或 Ollama 将所有内容保存在本地，或使用您自己的 API 密钥。PromptQuorum 的隐私程度由您自己设置决定。' },
