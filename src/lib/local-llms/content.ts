@@ -2362,6 +2362,167 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'multilingual-local-llms': {
+    en: {
+      theme: 'Best Models',
+      title: 'Multilingual Local LLMs: Best Models for Non-English Languages in 2026',
+      seoTitle: 'Multilingual Local LLMs 2026',
+      intro: 'Qwen2.5 is the strongest multilingual local LLM family in 2026, with native support for 29 languages including Chinese, Japanese, Korean, Arabic, and all major European languages. For European languages specifically, Mistral and Llama 3.x models perform competitively. For Asian languages (Japanese, Korean, Chinese), Qwen2.5 outperforms all alternatives at every comparable model size.',
+      metaDescription: 'Best multilingual local LLMs for non-English languages in 2026: Qwen2.5 for Asian languages, Mistral for European. Benchmark scores, RAM requirements, Ollama commands.',
+      publishDate: '2026-04-04',
+      readTime: '9 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'multilingual local LLM',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Which Local LLMs Support Multiple Languages?', anchor: '#which-llms-support-multiple-languages' },
+        { label: 'Best Models for European Languages', anchor: '#best-models-for-european-languages' },
+        { label: 'Best Models for Asian Languages', anchor: '#best-models-for-asian-languages' },
+        { label: 'Best Models for Arabic and Middle Eastern Languages', anchor: '#best-models-for-arabic' },
+        { label: 'How to Benchmark Multilingual Quality', anchor: '#how-to-benchmark-multilingual-quality' },
+        { label: 'Multilingual Comparison Table', anchor: '#multilingual-comparison-table' },
+        { label: 'Common Mistakes with Multilingual Models', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Best multilingual family**: Qwen2.5 — 29 native languages, highest non-English benchmark scores at every model size.',
+            '**European languages (German, French, Spanish, Italian)**: Mistral and Llama 3.x are competitive with Qwen2.5 for EU languages; Qwen2.5 still leads on code-mixed and formal register tasks.',
+            '**Japanese and Korean**: Qwen2.5 is significantly stronger — 15–25% better on language-specific benchmarks than Llama 3.x at the same size.',
+            '**Chinese (Simplified and Traditional)**: Qwen2.5 is the dominant model — trained on the largest Chinese corpus of any open-weight model.',
+            'As of April 2026, no locally-runnable model matches GPT-4o or Claude 4.6 Sonnet quality in Japanese or Korean for complex tasks. Qwen2.5 is the best available locally.',
+          ],
+        },
+        whichSupport: {
+          title: 'Which Local LLMs Actually Support Multiple Languages?',
+          content: [
+            '"Supporting" a language means more than generating text in that language. True multilingual support requires: training data in the language (not just translation), tokenization optimized for the language\'s script, and fine-tuning on instruction-following in the language.',
+            'Models that claim multilingual support but were primarily trained on English produce lower-quality output in other languages — grammatical errors, cultural mismatches, and reduced instruction-following accuracy. As of April 2026, only Qwen2.5 provides genuine native-quality support for Asian languages locally.',
+          ],
+          rows: [
+            { 'Model Family': 'Qwen2.5', 'Native Languages': '29', 'Strong Asian Support': 'Yes', 'Strong EU Support': 'Yes', 'Arabic Support': 'Yes' },
+            { 'Model Family': 'Llama 3.x', 'Native Languages': '8', 'Strong Asian Support': 'Limited', 'Strong EU Support': 'Good', 'Arabic Support': 'Limited' },
+            { 'Model Family': 'Mistral', 'Native Languages': '5', 'Strong Asian Support': 'No', 'Strong EU Support': 'Good', 'Arabic Support': 'Limited' },
+            { 'Model Family': 'Gemma 3', 'Native Languages': '35+', 'Strong Asian Support': 'Moderate', 'Strong EU Support': 'Good', 'Arabic Support': 'Moderate' },
+            { 'Model Family': 'Phi-4', 'Native Languages': '~10', 'Strong Asian Support': 'Limited', 'Strong EU Support': 'Moderate', 'Arabic Support': 'Limited' },
+          ],
+          columns: ['Model Family', 'Native Languages', 'Strong Asian Support', 'Strong EU Support', 'Arabic Support'],
+        },
+        european: {
+          title: 'Which Local LLMs Perform Best for European Languages?',
+          content: [
+            'For German, French, Spanish, Italian, Portuguese, Dutch, and Polish — Qwen2.5, Mistral, and Llama 3.x all produce acceptable quality. Mistral has a particular strength in French due to Mistral AI being a French company with French-language training data emphasis. As of April 2026, German-language benchmarks show Qwen2.5 7B leading Mistral 7B by 8–12% on instruction-following tasks in German.',
+            'For GDPR-sensitive use cases in the EU, running a local model (any family) is preferable to cloud APIs for data residency reasons. German businesses using AI under the EU AI Act (effective February 2025) benefit from local inference for high-risk AI applications. Mistral AI, being a EU company, is preferred by some European organizations on governance grounds regardless of benchmark score.',
+          ],
+          items: [
+            '**German**: Qwen2.5 7B leads on instruction-following; Mistral 7B competitive for formal text.',
+            '**French**: Mistral 7B is competitive with Qwen2.5 7B; both well above Llama 3.1 8B.',
+            '**Spanish, Italian, Portuguese**: Qwen2.5 7B slightly ahead; Llama 3.1 8B competitive.',
+            '**Polish, Czech, Romanian**: Qwen2.5 7B leads; significant quality drop for Mistral 7B.',
+          ],
+        },
+        asian: {
+          title: 'Which Local LLMs Perform Best for Japanese, Korean, and Chinese?',
+          content: [
+            'Qwen2.5 dominates Asian language performance. The model family was developed by Alibaba with massive Chinese-language training data and explicit multilingual fine-tuning for Japanese and Korean.',
+            'For Japanese: Qwen2.5 7B scores 15–20% higher than Llama 3.1 8B on JMT-bench (Japanese instruction-following benchmark). For Korean: Qwen2.5 outperforms alternatives by similar margins. For Chinese (Simplified): Qwen2.5 is in a class of its own among locally-runnable models.',
+            'As of April 2026, Japan\'s METI (Ministry of Economy, Trade and Industry) has been promoting domestic AI development, and some Japanese enterprises prefer locally-deployed models for data sovereignty. Qwen2.5 is the practical choice for Japanese-language local inference.',
+          ],
+          rows: [
+            { 'Language': 'Chinese (Simplified)', 'Best Model': 'Qwen2.5 (any size)', 'Second Best': 'Gemma 3', 'Notes': 'Qwen2.5 dominates — largest Chinese training corpus' },
+            { 'Language': 'Japanese', 'Best Model': 'Qwen2.5 7B+', 'Second Best': 'Gemma 3 9B', 'Notes': '15–20% gap over Llama on JMT-bench' },
+            { 'Language': 'Korean', 'Best Model': 'Qwen2.5 7B+', 'Second Best': 'Gemma 3 9B', 'Notes': 'Qwen2.5 significantly stronger' },
+            { 'Language': 'Traditional Chinese', 'Best Model': 'Qwen2.5', 'Second Best': 'Llama 3.1 8B', 'Notes': 'Qwen2.5 trained on both Simplified and Traditional' },
+          ],
+          columns: ['Language', 'Best Model', 'Second Best', 'Notes'],
+        },
+        arabic: {
+          title: 'Which Local LLMs Perform Best for Arabic?',
+          content: [
+            'Arabic presents a unique challenge due to its right-to-left script, morphological complexity, and the large number of dialects (Modern Standard Arabic vs. Egyptian, Gulf, Levantine). As of April 2026, Qwen2.5 and Gemma 3 are the strongest locally-runnable Arabic models.',
+            'For MSA (Modern Standard Arabic) instruction-following, Qwen2.5 14B and larger produce acceptable quality. For dialect Arabic, all local models perform significantly worse than cloud models like GPT-4o, which has broader Arabic dialect coverage.',
+          ],
+        },
+        howToBenchmark: {
+          title: 'How Do You Benchmark Multilingual Quality in Local LLMs?',
+          content: 'Standard benchmarks (MMLU, HumanEval) are English-only. To evaluate multilingual quality, use these approaches:',
+          numberedItems: [
+            'Run MGSM (Multilingual Grade School Math) — tests math reasoning across 10 languages. Available on Hugging Face: datasets/juletxara/mgsm.',
+            'Run m-MMLU — the multilingual version of MMLU covering 57 subjects in multiple languages.',
+            'For conversational quality: write 10 test prompts in your target language covering different task types (summarization, Q&A, translation, creative writing). Evaluate responses manually or with a native speaker.',
+            'For Japanese specifically: use JMT-bench (github.com/Stability-AI/lm-evaluation-harness) which covers Japanese instruction-following.',
+            'Compare your local model against cloud APIs using [PromptQuorum](/) — send the same multilingual prompt to your local Ollama model and GPT-4o simultaneously to quantify the quality gap on your specific use case.',
+          ],
+        },
+        comparisonTable: {
+          title: 'Multilingual Local LLM Comparison: Qwen2.5 vs Llama 3.x vs Mistral vs Gemma 3',
+          rows: [
+            { 'Language Group': 'Chinese (any dialect)', 'Qwen2.5 7B': '★★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Japanese', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Korean', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'French / German', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral 7B': '★★★★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Spanish / Italian', 'Qwen2.5 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral 7B': '★★★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Arabic (MSA)', 'Qwen2.5 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
+          ],
+          columns: ['Language Group', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+        },
+        commonMistakes: {
+          title: 'What Are the Common Mistakes When Using Multilingual Local LLMs?',
+          faqs: [
+            {
+              q: 'Using an English-primary model for Japanese or Chinese tasks',
+              a: 'Llama 3.1 8B and Mistral 7B produce grammatically plausible but semantically inconsistent Japanese and Chinese output. The errors are not obvious without native language knowledge. For Japanese or Chinese tasks, always use Qwen2.5 — the quality difference is significant and measurable.',
+            },
+            {
+              q: 'Prompting in English when the task is in another language',
+              a: 'Local models with native multilingual support produce better results when the system prompt, user instructions, and content are all in the same target language. Mixing English instructions with Chinese content produces lower-quality output than a fully Chinese prompt. Write system prompts in the target language for best results.',
+            },
+            {
+              q: 'Assuming the same model tag handles all scripts equally',
+              a: 'Tokenization efficiency varies by script. Latin scripts use ~3–4 characters per token; Chinese characters are often 1 character per token. A "4K context" means different amounts of content for different languages. A 4096-token context holds approximately 3,000 English words but only about 2,000 Chinese characters — plan context lengths accordingly.',
+            },
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Multilingual Local LLMs',
+          faqs: [
+            {
+              q: 'Can I run a Japanese-only fine-tuned model locally?',
+              a: 'Yes — the Japanese AI community maintains several Japanese-specific fine-tunes of Qwen2.5 and Llama models on Hugging Face. Search "Japanese instruct GGUF" on Hugging Face for current options. Load them in LM Studio or via `ollama create` with a custom Modelfile.',
+            },
+            {
+              q: 'Does multilingual capability reduce English quality?',
+              a: 'Not significantly for Qwen2.5. Benchmarks show Qwen2.5 7B scores 74% on English MMLU — comparable to Llama 3.1 8B at 73%. The multilingual training does not meaningfully degrade English performance at this model size.',
+            },
+            {
+              q: 'Which model is best for translation tasks locally?',
+              a: 'Qwen2.5 14B or larger for high-quality translation between English, Chinese, Japanese, and Korean. For European-language translation, Mistral Small 3.1 24B produces reliable output. For production translation workloads at scale, cloud APIs (DeepL, Google Translate) still outperform locally-runnable models for most language pairs.',
+            },
+            {
+              q: 'How do I set the language in Ollama?',
+              a: 'Write your prompt in the target language. No special language parameter is needed — the model detects the input language. For consistent output in a specific language, add a system prompt: "You are a helpful assistant. Always respond in German." Use the Ollama system parameter: `ollama run qwen2.5:7b --system "Always respond in Japanese."`',
+            },
+            {
+              q: 'Are there privacy-compliant multilingual local LLMs for EU organizations?',
+              a: 'Yes. Running Qwen2.5 or Mistral locally with Ollama keeps all data on-premises and fully offline. For EU AI Act compliance (effective February 2025), local inference eliminates the third-party data processor concern for high-risk AI applications. Mistral AI, based in France, is preferred by some EU organizations on data governance grounds even for locally-deployed models.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Qwen2.5 Technical Report — qwenlm.github.io/blog/qwen2.5/',
+            'MGSM Benchmark — huggingface.co/datasets/juletxara/mgsm',
+            'JMT-bench Japanese Evaluation — github.com/Stability-AI/lm-evaluation-harness',
+            'EU AI Act GDPR and Local AI — artificialintelligenceact.eu',
+          ],
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
