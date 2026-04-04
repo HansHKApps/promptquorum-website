@@ -6313,4 +6313,1260 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'local-rag-2026': {
+    en: {
+      theme: 'Advanced Techniques',
+      title: 'Local RAG 2026: Build Document Q&A Systems Without Cloud APIs',
+      seoTitle: 'Local RAG 2026 Guide',
+      intro: 'Retrieval-Augmented Generation (RAG) lets your local LLM answer questions about your own documents. You upload PDFs and text files, the system converts them to embeddings, stores them in a vector database, and retrieves relevant chunks when answering questions. As of April 2026, local RAG is production-ready and eliminates API costs.',
+      metaDescription: 'Local RAG 2026: build document Q&A systems, vector databases, chunking strategies, and retrieval optimization. Complete guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '14 min read',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'local RAG pipeline',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'How RAG Works', anchor: '#how-rag-works' },
+        { label: 'Document Chunking Strategy', anchor: '#chunking' },
+        { label: 'Vector Databases 2026', anchor: '#vector-databases' },
+        { label: 'Embedding Models', anchor: '#embedding-models' },
+        { label: 'Retrieval Pipeline', anchor: '#retrieval' },
+        { label: 'Evaluation and Optimization', anchor: '#evaluation' },
+        { label: 'Production RAG Patterns', anchor: '#production' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'RAG = upload documents + retrieval + local LLM answering. No training required.',
+            'Five steps: (1) Load documents, (2) chunk into 500–1000 token pieces, (3) generate embeddings, (4) store in vector DB, (5) retrieve on query.',
+            'Best embedding model: nomic-embed-text (137M, runs locally, 768-dim vectors).',
+            'Best vector DB: Chroma (simple, embedded) for <1M documents; Qdrant (distributed) for production.',
+            'As of April 2026, local RAG is faster and cheaper than cloud APIs. Quality depends on retrieval accuracy and prompt engineering.',
+          ],
+        },
+        howRag: {
+          title: 'How Does RAG Work Step-by-Step?',
+          numberedItems: [
+            '**Document ingestion:** Load PDFs, text files, or web pages.',
+            '**Chunking:** Split documents into 500–1000 token chunks (overlap 20% to prevent context breaks).',
+            '**Embedding:** Convert each chunk to a vector (768–1536 dimensions) using a local embedding model.',
+            '**Storage:** Store vectors in a vector database (Chroma, Qdrant, Milvus) with metadata (document name, page, timestamp).',
+            '**Query time:** Convert user question to embedding, search vector DB for top K similar chunks (k=5–10).',
+            '**Context assembly:** Combine retrieved chunks into a prompt with instructions for the local LLM.',
+            '**Generation:** Local LLM generates answer based on retrieved context.',
+            '**Attribution:** Return which documents the answer came from.',
+          ],
+        },
+        chunking: {
+          title: 'What Is the Optimal Chunking Strategy?',
+          content: [
+            'Chunking strategy determines retrieval quality. Bad chunking = relevant information split across chunks, retrieval fails.',
+            '**Semantic chunking (recommended):** Split by sentences or paragraphs, preserving meaning. Example: each paragraph = 1 chunk.',
+            '**Fixed-size chunking:** 500 tokens per chunk, 20% overlap. Simple but may split sentences.',
+            '**Recursive chunking:** Split by paragraphs first, then by sentences if too large. Preserves hierarchy.',
+            'As of April 2026, semantic chunking with 500–1000 token chunks and 20% overlap is optimal for most use cases.',
+          ],
+          codeBlock: '# Python: semantic chunking example\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\n\nsplitter = RecursiveCharacterTextSplitter(\n  chunk_size=1000,\n  chunk_overlap=200,  # 20% overlap\n  separators=["\\n\\n", "\\n", ".", " "]  # Split on paragraph, then sentence\n)\nchunks = splitter.split_documents(documents)\nprint(f"Created {len(chunks)} chunks")',
+          codeLanguage: 'python',
+        },
+        vectorDatabases: {
+          title: 'Which Vector Database Should You Use?',
+          rows: [
+            { 'Database': 'Chroma', 'Type': 'Embedded', 'Capacity': '<1M docs', 'Setup': 'pip install', 'Best For': 'Prototyping, small RAG' },
+            { 'Database': 'Qdrant', 'Type': 'Distributed', 'Capacity': 'Unlimited', 'Setup': 'Docker or cloud', 'Best For': 'Production, scalable' },
+            { 'Database': 'Milvus', 'Type': 'Distributed', 'Capacity': 'Unlimited', 'Setup': 'Complex', 'Best For': 'Enterprise, massive scale' },
+            { 'Database': 'Weaviate', 'Type': 'Graph + Vector', 'Capacity': 'Unlimited', 'Setup': 'Docker', 'Best For': 'Complex queries, relationships' },
+            { 'Database': 'Pinecone (cloud)', 'Type': 'Managed', 'Capacity': 'Unlimited', 'Setup': 'API key', 'Best For': 'Serverless, hands-off' },
+          ],
+          columns: ['Database', 'Type', 'Capacity', 'Setup Effort', 'Best For'],
+        },
+        embeddings: {
+          title: 'What Embedding Model Should You Choose?',
+          rows: [
+            { 'Model': 'nomic-embed-text (local)', 'Dimensions': '768', 'Speed': 'Fast', 'Quality': 'Excellent', 'Recommendation': 'Best for local RAG' },
+            { 'Model': 'bge-m3 (local)', 'Dimensions': '1024', 'Speed': 'Fast', 'Quality': 'Excellent', 'Recommendation': 'Multilingual support' },
+            { 'Model': 'OpenAI text-embedding-3 (cloud)', 'Dimensions': '3072', 'Speed': 'Very fast', 'Quality': 'Best in class', 'Recommendation': 'Hybrid approach' },
+            { 'Model': 'Cohere (cloud)', 'Dimensions': '4096', 'Speed': 'Fast', 'Quality': 'Excellent', 'Recommendation': 'Production cloud RAG' },
+          ],
+          columns: ['Model', 'Vector Dimensions', 'Speed', 'Quality', 'Recommendation'],
+        },
+        retrieval: {
+          title: 'How Do You Optimize Retrieval Quality?',
+          content: [
+            '**Retrieval quality** determines RAG success. Good retrieval = good answers. Bad retrieval = hallucinations.',
+          ],
+          items: [
+            '**Top K selection:** Retrieve k=5–10 chunks. Higher k = more context (slower), lower k = fewer distractions.',
+            '**Similarity threshold:** Filter results by minimum similarity score (e.g., >0.75). Avoids low-relevance chunks.',
+            '**Reranking:** Use a reranker (cross-encoder) to re-rank retrieved chunks by relevance. Small accuracy boost.',
+            '**Hybrid search:** Combine semantic search (embeddings) with BM25 keyword search. Catches documents with exact keywords.',
+            '**Query expansion:** Expand user query with synonyms or related terms. Improves recall.',
+          ],
+        },
+        evaluation: {
+          title: 'How Do You Evaluate RAG Quality?',
+          content: [
+            'RAG quality has two dimensions: (1) retrieval quality (did we get relevant chunks?), and (2) generation quality (did the LLM answer well?).',
+            '**Retrieval evaluation:** Create test queries with known correct documents. Measure precision (how many retrieved are relevant?) and recall (did we get all relevant documents?).',
+            '**Generation evaluation:** Run LLM on retrieved chunks, manually score answers (0–5 scale) for accuracy and completeness.',
+            'As of April 2026, automated evaluation tools (like Ragas) can measure retrieval and generation metrics automatically.',
+          ],
+        },
+        production: {
+          title: 'Production RAG Patterns',
+          content: 'For production services, use these patterns:',
+          items: [
+            '**Caching:** Cache embeddings of frequently-queried documents to avoid recomputing.',
+            '**Incremental indexing:** Add new documents without reindexing everything. Qdrant and Milvus support this.',
+            '**Monitoring:** Track retrieval latency, cache hit rate, and user feedback on answer quality.',
+            '**Fallback:** If retrieval fails (no relevant chunks), respond with "I don\'t have information about that" instead of hallucinating.',
+            '**Versioning:** Keep document versions for audit trails. Store which version was used for each answer.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes in Local RAG Implementation',
+          items: [
+            '**Chunking documents wrong.** Too many small chunks = retrieval noise. Too few large chunks = split information. Test chunk sizes empirically.',
+            '**Not evaluating retrieval.** Building RAG without testing if retrieval works is like building a car without testing the engine. Always measure precision/recall.',
+            '**Using generic embeddings for domain-specific documents.** Legal, medical, or technical documents may need fine-tuned embeddings. Consider domain-specific models.',
+            '**Forgetting about update frequency.** If documents change weekly, your vector DB gets stale. Build a pipeline to re-embed and update.',
+            '**Expecting RAG to replace fine-tuning.** RAG is context injection. Fine-tuning is model adaptation. For best results, combine both.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Local RAG',
+          faqs: [
+            {
+              q: 'How many documents can local RAG handle?',
+              a: 'Chroma handles 100K–1M documents on consumer hardware. Qdrant scales to billions with distributed setup. Beyond 1M, use Qdrant or Milvus.',
+            },
+            {
+              q: 'What latency should I expect?',
+              a: 'Embedding query (nomic-embed-text on CPU): 50–200ms. Retrieval (Chroma on disk): 10–50ms. LLM generation: 2–10 seconds (depends on model size). Total: 2–10 seconds per query.',
+            },
+            {
+              q: 'Can RAG handle real-time document updates?',
+              a: 'Yes. Add new documents to the vector DB dynamically. Indexing latency is 100–500ms per document, so real-time updates are practical.',
+            },
+            {
+              q: 'Is local RAG cheaper than cloud APIs?',
+              a: 'Yes. No per-token cost, no API calls to external services. One-time setup of embeddings, then free queries.',
+            },
+            {
+              q: 'Can I use cloud embeddings with local LLMs?',
+              a: 'Yes. Use OpenAI, Cohere, or other cloud embeddings for indexing, then use local LLMs for generation. Hybrid approach.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Best Local RAG Tools](/local-llms/best-local-rag-tools) — Vector databases and frameworks.',
+            '[Prompt Engineering For Local Models](/local-llms/prompt-engineering-for-local-models) — Optimize prompts for RAG.',
+            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — Expose RAG as API.',
+            '[Fine-Tuning Local LLMs LoRA](/local-llms/fine-tuning-local-llms-lora) — Combine fine-tuning with RAG.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'LlamaIndex Documentation — docs.llamaindex.ai',
+            'LangChain RAG Guide — python.langchain.com/docs/use_cases/question_answering',
+            'Chroma Documentation — docs.trychroma.com',
+            'Qdrant Vector Search Engine — qdrant.tech',
+            'RAG Paper (Lewis et al.) — arxiv.org/abs/2005.11401',
+          ],
+        },
+      },
+    },
+  },
+
+  'fine-tuning-local-llms-lora': {
+    en: {
+      theme: 'Advanced Techniques',
+      title: 'Fine-Tuning Local LLMs With LoRA: Adapt Models to Your Domain',
+      seoTitle: 'Fine-Tuning Local LLMs LoRA',
+      intro: 'Fine-tuning adapts a pre-trained model to your specific domain or task. LoRA (Low-Rank Adaptation) is the practical approach: add small adapter layers instead of retraining the entire model. A 7B model LoRA requires only 8 GB VRAM and 1–2 hours on consumer hardware. As of April 2026, LoRA fine-tuning is the standard for local model customization.',
+      metaDescription: 'Fine-tune local LLMs with LoRA: complete guide to domain adaptation, training data, evaluation. Build custom models. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '13 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'LoRA fine-tuning',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Is LoRA?', anchor: '#what-is-lora' },
+        { label: 'When to Fine-Tune vs RAG', anchor: '#finetuning-vs-rag' },
+        { label: 'Preparing Training Data', anchor: '#training-data' },
+        { label: 'LoRA Training Setup', anchor: '#training-setup' },
+        { label: 'Hyperparameter Tuning', anchor: '#hyperparameters' },
+        { label: 'Evaluation and Testing', anchor: '#evaluation' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'LoRA = add small trainable layers to a pre-trained model. Only 1–5% of model weights are trainable, dramatically reducing VRAM and time.',
+            'Fine-tuning requirements: 500–1000 high-quality examples, 8–16 GB VRAM, 1–4 hours training time.',
+            'Best tools: unsloth (fastest), Hugging Face TRL, Axolotl (most flexible).',
+            '**LoRA rank (r):** Lower (r=8) is smaller, faster; higher (r=64) is more expressive. Default: r=16–32.',
+            'As of April 2026, LoRA is production-ready and widely supported across inference engines.',
+          ],
+        },
+        whatIsLora: {
+          title: 'How Does LoRA Work?',
+          content: [
+            'LoRA adds small "adapter" matrices alongside the original model weights. During training, only the adapters are updated. Original weights freeze.',
+            'Example: A 13B model has 13 billion weights. LoRA adds only 50 million trainable parameters (~0.4% of original). Training is 100× faster.',
+            'At inference, the adapter output is merged with the main model output via matrix multiplication. Minimal speed penalty (~5%).',
+            'Result: A domain-specific model that performs better on your tasks, using only 8 GB VRAM instead of 26 GB.',
+          ],
+        },
+        finetuningVsRag: {
+          title: 'Should You Fine-Tune or Use RAG?',
+          content: 'Decision matrix:',
+          rows: [
+            { 'Criteria': 'Documents change frequency', 'Fine-Tuning': 'Annual or less', 'RAG': 'Weekly or more' },
+            { 'Criteria': 'Knowledge requirements', 'Fine-Tuning': 'Model needs deep understanding', 'RAG': 'Retrieval suffices' },
+            { 'Criteria': 'Training data available', 'Fine-Tuning': 'Need 500+ high-quality examples', 'RAG': 'Any documents work' },
+            { 'Criteria': 'Cost (long-term)', 'Fine-Tuning': 'One-time ($50–200)', 'RAG': 'Continuous embeddings' },
+            { 'Criteria': 'Latency', 'Fine-Tuning': 'Faster (no retrieval)', 'RAG': 'Slower (retrieval + LLM)' },
+            { 'Criteria': 'Best for', 'Fine-Tuning': 'Code, creative writing, domain style', 'RAG': 'Knowledge bases, Q&A' },
+          ],
+          columns: ['Criteria', 'Fine-Tuning', 'RAG'],
+        },
+        trainingData: {
+          title: 'How Do You Prepare Training Data?',
+          content: [
+            'Quality training data determines fine-tuning success. Poor data = poor model.',
+            '**Minimum:** 500 examples. Each example = input + expected output.',
+            '**Optimal:** 1000–5000 examples. More data = better accuracy.',
+            '**Format:** JSON or JSONL. Each line = one training example.',
+          ],
+          codeBlock: '[\n  {"instruction": "Translate to French", "input": "Hello world", "output": "Bonjour le monde"},\n  {"instruction": "Summarize", "input": "Long text...", "output": "Summary..."},\n  {"instruction": "Code review", "input": "Python code...", "output": "Review comments..."}\n]\n\n# OR instruction-only format:\n[\n  {"text": "<|user|>Translate to French\\nHello<|assistant|>Bonjour"},\n  {"text": "<|user|>Summarize\\nText<|assistant|>Summary"}\n]',
+          codeLanguage: 'json',
+        },
+        trainingSetup: {
+          title: 'Fine-Tuning Setup With Unsloth',
+          content: 'Unsloth is the fastest LoRA framework (4× speed vs standard training):',
+          codeBlock: '# Install unsloth\npip install unsloth[colab-new] xformers bitsandbytes\n\nfrom unsloth import FastLanguageModel\nfrom datasets import load_dataset\n\n# Load base model with LoRA\nmodel, tokenizer = FastLanguageModel.from_pretrained(\n  model_name="unsloth/llama-3-8b-bnb-4bit",\n  max_seq_length=2048,\n  load_in_4bit=True,\n  lora_r=16, lora_alpha=32,\n  lora_dropout=0.05\n)\n\n# Load training data\ndataset = load_dataset("json", data_files="training.jsonl")\n\n# Configure trainer\nfrom trl import SFTTrainer\ntrainer = SFTTrainer(\n  model=model,\n  tokenizer=tokenizer,\n  train_dataset=dataset["train"],\n  dataset_text_field="text",\n  max_seq_length=2048,\n  args=TrainingArguments(\n    per_device_train_batch_size=4,\n    num_train_epochs=3,\n    learning_rate=2e-4,\n    output_dir="output"\n  )\n)\n\n# Train\ntrainer.train()',
+          codeLanguage: 'python',
+        },
+        hyperparameters: {
+          title: 'Key Hyperparameters for LoRA Fine-Tuning',
+          rows: [
+            { 'Parameter': 'learning_rate', 'Default': '2e-4', 'Range': '1e-5 to 1e-3', 'Impact': 'Lower = stable, slower convergence' },
+            { 'Parameter': 'lora_r (rank)', 'Default': '16', 'Range': '4 to 64', 'Impact': 'Higher = more expressive, slower' },
+            { 'Parameter': 'lora_alpha', 'Default': '32', 'Range': '8 to 256', 'Impact': 'Higher = stronger LoRA effect' },
+            { 'Parameter': 'num_train_epochs', 'Default': '3', 'Range': '1 to 10', 'Impact': 'More epochs = risk of overfitting' },
+            { 'Parameter': 'batch_size', 'Default': '4', 'Range': '1 to 32', 'Impact': 'Larger = faster training, more VRAM' },
+            { 'Parameter': 'warmup_steps', 'Default': '100', 'Range': '0 to 1000', 'Impact': 'Gradual LR increase, stabilizes training' },
+          ],
+          columns: ['Hyperparameter', 'Recommended Value', 'Typical Range', 'Effect'],
+        },
+        evaluation: {
+          title: 'How Do You Evaluate Fine-Tuned Models?',
+          content: [
+            '**Training loss:** Should decrease over epochs. If flat, learning rate may be too low.',
+            '**Validation loss:** Should decrease but stay above training loss (normal). If increases, overfitting.',
+            '**Manual testing:** Run the fine-tuned model on test examples and compare outputs to expected results.',
+            '**Benchmark tasks:** Use standard benchmarks (MMLU, HumanEval) to measure improvement.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Fine-Tuning Mistakes',
+          items: [
+            '**Too few training examples.** <200 examples often leads to overfitting. Collect at least 500.',
+            '**Training for too many epochs.** Model memorizes data instead of learning generalizable patterns. Stop at 3–5 epochs max.',
+            '**Not validating on unseen data.** Always split data into train/validation (80/20). Validate frequently to catch overfitting.',
+            '**Using the same data for fine-tuning and evaluation.** Reported accuracy is meaningless if evaluated on training data.',
+            '**Not saving checkpoints.** Training can take hours. Save every epoch so you can recover from crashes.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About LoRA Fine-Tuning',
+          faqs: [
+            {
+              q: 'How much training data is needed?',
+              a: 'Minimum 500 examples, optimal 1000–5000. Quality matters more than quantity. 100 high-quality examples > 1000 low-quality examples.',
+            },
+            {
+              q: 'Can I fine-tune on a laptop?',
+              a: 'Yes. Use 4-bit quantization and LoRA. A 7B model requires 8 GB VRAM, training takes 1–2 hours on CPU (slow) or 10–15 min on GPU.',
+            },
+            {
+              q: 'How do I merge LoRA adapters into the base model?',
+              a: 'Use unsloth or HF transformers: `model.merge_and_unload()`. Creates a single model file (~3–4 GB for 7B), ready for inference.',
+            },
+            {
+              q: 'Can I combine multiple LoRA adapters?',
+              a: 'Yes, with restrictions. Stack adapters for sequential application, or use adapter composition techniques (e.g., DoRA).',
+            },
+            {
+              q: 'Is fine-tuned model quality better than RAG?',
+              a: 'For most tasks, yes. Fine-tuned models understand domain concepts deeply. RAG is better when documents are large and change frequently.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local RAG 2026](/local-llms/local-rag-2026) — Combine fine-tuning with RAG.',
+            '[Prompt Engineering For Local Models](/local-llms/prompt-engineering-for-local-models) — Optimize prompts for fine-tuned models.',
+            '[Create Custom Local Models](/local-llms/create-custom-local-models) — Build models from scratch.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'LoRA Paper (Hu et al.) — arxiv.org/abs/2106.09685',
+            'Unsloth GitHub — github.com/unslothai/unsloth',
+            'HuggingFace TRL — github.com/huggingface/trl',
+            'Axolotl — github.com/OpenAccess-AI-Collective/axolotl',
+          ],
+        },
+      },
+    },
+  },
+
+  'local-ai-agents-langgraph-ollama': {
+    en: {
+      theme: 'Advanced Techniques',
+      title: 'Local AI Agents With LangGraph and Ollama: Build Autonomous Decision-Making Systems',
+      seoTitle: 'Local AI Agents LangGraph',
+      intro: 'AI agents are systems that take actions based on observations and reasoning. LangGraph is a framework for building agentic workflows using local LLMs. Agents can browse documents, use tools, and make sequential decisions. As of April 2026, local agents are practical for automation, research, and decision support without cloud dependency.',
+      metaDescription: 'Build local AI agents with LangGraph and Ollama: workflows, tools, reasoning, and deployment. Agent framework guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '13 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'agentic AI',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'What Is an AI Agent?', anchor: '#what-is-agent' },
+        { label: 'Agent vs Chains', anchor: '#agent-vs-chains' },
+        { label: 'LangGraph Architecture', anchor: '#langgraph-architecture' },
+        { label: 'Tools and Functions', anchor: '#tools-functions' },
+        { label: 'Reasoning and Planning', anchor: '#reasoning' },
+        { label: 'Local Agent Patterns', anchor: '#patterns' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'AI agent = LLM + tools + loop. LLM decides which tool to use, executes, observes result, decides next action.',
+            'LangGraph is a framework for building agentic workflows using local or cloud LLMs.',
+            'Key components: LLM (Ollama), tools (web search, code execution, file access), memory (conversation history), planning (reasoning loops).',
+            'Local agents are slower than cloud (LLM reasoning takes time) but private and customizable.',
+            'As of April 2026, local agents work best for tasks that benefit from reasoning over speed.',
+          ],
+        },
+        whatIsAgent: {
+          title: 'How Does an AI Agent Work?',
+          content: [
+            'An agent follows this loop: (1) observe state/context, (2) LLM reasons about best action, (3) execute action (tool call), (4) observe result, (5) repeat until done.',
+            'Example: Research agent given task "Compare Llama 3.2 vs Qwen 2.5 on coding tasks".',
+            '- Observation: Task received.',
+            '- Reasoning: Need to find benchmarks, search for HumanEval scores.',
+            '- Action: Use web_search tool to find "Llama 3.2 HumanEval benchmark".',
+            '- Observation: Retrieved text with scores.',
+            '- Action: Search for "Qwen 2.5 HumanEval".',
+            '- Reasoning: Both models found. Qwen is faster, Llama is more general.',
+            '- Final Action: Synthesize answer and return.',
+          ],
+        },
+        agentVsChains: {
+          title: 'What Is the Difference Between Agents and Chains?',
+          rows: [
+            { 'Aspect': 'Decision-making', 'Chains': 'Predetermined sequence', 'Agents': 'Dynamic, LLM decides' },
+            { 'Aspect': 'Loops', 'Chains': 'No loops', 'Agents': 'Reasoning loop (repeat until done)' },
+            { 'Aspect': 'Error recovery', 'Chains': 'Manual error handling', 'Agents': 'LLM can recover from failures' },
+            { 'Aspect': 'Use case', 'Chains': 'Fixed workflows (summarize → email)', 'Agents': 'Complex reasoning (research, automation)' },
+            { 'Aspect': 'Complexity', 'Chains': 'Simple, predictable', 'Agents': 'Complex, unpredictable behavior' },
+          ],
+          columns: ['Aspect', 'Chains', 'Agents'],
+        },
+        langgraphArch: {
+          title: 'LangGraph Architecture',
+          content: [
+            'LangGraph defines agents as directed acyclic graphs (DAGs) with nodes (states) and edges (transitions).',
+            '- **State:** Information agent holds (context, observations, decisions).',
+            '- **Nodes:** Functions that process state (LLM reasoning, tool execution).',
+            '- **Edges:** Transitions between nodes (conditional based on LLM output).',
+            '- **Tools:** Functions the LLM can call (web search, code execution, database queries).',
+          ],
+        },
+        toolsFunctions: {
+          title: 'What Tools Can Agents Use?',
+          content: 'Agents are only as capable as their tools. Common tools:',
+          items: [
+            '**Web search:** Search the internet for information (duckduckgo, Google, Bing).',
+            '**Code execution:** Run Python code and return results.',
+            '**File operations:** Read/write files, list directories.',
+            '**Database queries:** Query local or remote databases.',
+            '**Document retrieval:** Search RAG vector database for documents.',
+            '**Calculator:** Perform arithmetic and symbolic math.',
+            '**Email:** Send messages (with caution, verify permissions).',
+            '**API calls:** Interact with external services.',
+          ],
+        },
+        reasoning: {
+          title: 'How Do Agents Reason and Plan?',
+          content: [
+            'Agent reasoning depends on the LLM model size and prompt quality.',
+            '- **Small models (3–7B):** Limited reasoning. Work best with deterministic tasks (tool lookup, classification).',
+            '- **Medium models (13–30B):** Decent reasoning. Can handle 2–3 step reasoning chains.',
+            '- **Large models (70B+):** Strong reasoning. Can solve complex problems with multi-step planning.',
+            'Prompting technique: Chain-of-Thought (CoT) helps agents think through steps before deciding.',
+          ],
+          codeBlock: '# Example: CoT reasoning prompt for agent\nsystem_prompt = """\nYou are a research agent. Break complex tasks into steps:\n1. Identify what information you need\n2. Call appropriate tools to gather information\n3. Analyze results and determine next steps\n4. Return the final answer with sources\nAlways reason step-by-step before calling tools.\n"""',
+          codeLanguage: 'python',
+        },
+        patterns: {
+          title: 'Common Local Agent Patterns',
+          items: [
+            '**Research agent:** Searches documents and web, synthesizes findings.',
+            '**Code agent:** Writes and executes code to solve problems.',
+            '**Planning agent:** Breaks complex tasks into subtasks, delegates to other agents.',
+            '**Conversational agent:** Maintains memory, answers questions, learns from feedback.',
+            '**Workflow automation:** Reads emails, executes tasks, sends confirmations.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Agent Implementation Mistakes',
+          items: [
+            '**Too many tools:** Agent gets confused with too many options. Limit to 5–10 relevant tools.',
+            '**Poor tool descriptions:** LLM won\'t use tools correctly if descriptions are vague. Write clear, specific descriptions.',
+            '**Infinite loops:** Agent can get stuck in reasoning loops. Add max iteration limit (e.g., 10 steps).',
+            '**No error handling:** Tool calls may fail. Have agent handle failures gracefully.',
+            '**Using small models:** 3B models cannot reason well enough for complex agents. Use 13B+ for autonomous agents.',
+          ],
+        },
+        faqSection: {
+          title: 'Common Questions About Local Agents',
+          faqs: [
+            {
+              q: 'How much faster are cloud agents vs local agents?',
+              a: 'Cloud agents: ~1 sec per reasoning step. Local agents: ~3–5 sec per step (depends on model size). Local adds latency but eliminates API costs.',
+            },
+            {
+              q: 'Can local agents access the internet?',
+              a: 'Yes, if you provide a web_search tool. Agents can browse any publicly accessible content.',
+            },
+            {
+              q: 'How do I ensure an agent doesn\'t break things (e.g., delete files)?',
+              a: 'Use sandboxed tool environments (Docker containers). Restrict file/network access. Log all tool calls for audit trails.',
+            },
+            {
+              q: 'Can I run multiple agents in parallel?',
+              a: 'Yes. Use async frameworks (FastAPI) to handle concurrent agent requests. Each gets its own LLM instance.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Prompt Engineering For Local Models](/local-llms/prompt-engineering-for-local-models) — Optimize agent prompts.',
+            '[Local Vs Cloud Agents](/local-llms/local-vs-cloud-agents) — Direct comparison.',
+            '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — UI for agent interaction.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'LangGraph Documentation — github.com/langchain-ai/langgraph',
+            'LangChain Agents — python.langchain.com/docs/modules/agents/',
+            'Agent Reasoning Papers — arxiv.org (search "agents reasoning")',
+          ],
+        },
+      },
+    },
+  },
+
+  'prompt-engineering-for-local-models': {
+    en: {
+      theme: 'Advanced Techniques',
+      title: 'Prompt Engineering For Local Models: Techniques That Actually Work',
+      seoTitle: 'Prompt Engineering Local LLMs',
+      intro: 'Local LLMs (7B–13B models) respond differently to prompts than cloud APIs. They need explicit structure, clearer instructions, and less reliance on in-context learning. As of April 2026, proven techniques include chain-of-thought prompting, role definition, output formatting, and example-based guidance.',
+      metaDescription: 'Prompt engineering for local LLMs: chain-of-thought, few-shot, structured outputs, and optimization techniques. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '11 min read',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'prompt engineering',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Differences From Cloud LLMs', anchor: '#differences' },
+        { label: 'Chain-of-Thought Prompting', anchor: '#chain-of-thought' },
+        { label: 'Structured Output Formatting', anchor: '#structured-output' },
+        { label: 'Role Definition and Personas', anchor: '#roles' },
+        { label: 'Few-Shot vs Zero-Shot', anchor: '#few-shot' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Local 7B models need more explicit guidance than GPT-4o. Longer prompts, clearer instructions.',
+            'Chain-of-thought ("Let me think step by step") improves reasoning accuracy by 10–20%.',
+            'Always specify output format (JSON, Markdown, plain text). Unstructured outputs are unpredictable.',
+            'Few-shot examples (1–3) work better than zero-shot for local models. More examples = better consistency.',
+            'Role definition ("You are a Python expert") improves domain-specific responses.',
+          ],
+        },
+        differences: {
+          title: 'How Are Local Models Different?',
+          rows: [
+            { 'Aspect': 'Context window', 'GPT-4o': '128K tokens', 'Local 7B': '4K–32K tokens' },
+            { 'Aspect': 'Instruction following', 'GPT-4o': 'Excellent', 'Local 7B': 'Good with clear prompts' },
+            { 'Aspect': 'Few-shot learning', 'GPT-4o': '1–2 examples sufficient', 'Local 7B': '3–5 examples needed' },
+            { 'Aspect': 'Reasoning complexity', 'GPT-4o': 'Multi-step, implicit', 'Local 7B': 'Step-by-step explicit required' },
+            { 'Aspect': 'Personality consistency', 'GPT-4o': 'Highly consistent', 'Local 7B': 'Varies with prompt wording' },
+          ],
+          columns: ['Aspect', 'GPT-4o', 'Local 7B Model'],
+        },
+        chainOfThought: {
+          title: 'Chain-of-Thought: Make Models Reason',
+          content: [
+            'Chain-of-thought (CoT) prompting asks the LLM to show its reasoning step-by-step before answering.',
+            '**Without CoT:** "What is 17 × 24?" → Model answers directly, often wrong.',
+            '**With CoT:** "Solve this step-by-step: 17 × 24" → Model shows: 17 × 20 = 340, 17 × 4 = 68, total = 408. More accurate.',
+          ],
+          codeBlock: '# Prompt with CoT\nprompt = """\nYou will answer a question by thinking step-by-step.\nLet me think about this:\n\nQuestion: Why do local LLMs require more explicit prompting than cloud APIs?\n\nThinking:\n1. First, consider the differences in model size...\n2. Then, think about training data and fine-tuning...\n3. Finally, consider the architecture and inference optimization...\n\nAnswer:\n"""\n\n# This guides the model to reason through the problem',
+          codeLanguage: 'python',
+        },
+        structuredOutput: {
+          title: 'Specifying Structured Output Formats',
+          content: [
+            'Local models produce unpredictable outputs unless you specify format explicitly.',
+            '**Example:** "Extract entities from the text" might return narrative text instead of a list.',
+            '**Better:** "Extract entities as JSON with keys: person, location, organization".',
+          ],
+          codeBlock: '# Bad: ambiguous output\nprompt = "Summarize this text"\n\n# Good: explicit format\nprompt = """\nSummarize the text in EXACTLY 3 bullet points.\nFormat as a JSON list:\n{\n  "summary": [\n    "- Point 1",\n    "- Point 2",\n    "- Point 3"\n  ]\n}\n"""',
+          codeLanguage: 'python',
+        },
+        roles: {
+          title: 'Role Definition and Persona Prompting',
+          content: [
+            'Telling the model to adopt a role improves domain-specific responses.',
+            'Examples:',
+            '- "You are a Python expert" → better code explanations',
+            '- "You are a medical researcher" → more detailed biomedical responses',
+            '- "You are a skeptical analyst" → more critical thinking',
+          ],
+        },
+        fewShot: {
+          title: 'Few-Shot Learning for Consistency',
+          content: [
+            'Provide examples (few-shot) to guide the model\'s output style and format.',
+            'Local models benefit from 3–5 examples. Cloud models work with 1–2.',
+          ],
+          codeBlock: '# Few-shot prompt\nprompt = """\nClassify sentiment. Examples:\n\n"I love this product!" → positive\n"Worst experience ever" → negative\n"It\'s okay, nothing special" → neutral\n\nNow classify: "This is amazing!"\nAnswer: """\n\n# Model learns format and style from examples',
+          codeLanguage: 'python',
+        },
+        commonMistakes: {
+          title: 'Common Prompt Engineering Mistakes',
+          items: [
+            '**Verbose prompts without structure.** Rambling instructions confuse local models. Be concise and explicit.',
+            '**Not using chain-of-thought.** CoT improves accuracy 10–20%. Always include for reasoning tasks.',
+            '**Assuming one prompt works for all.** Iterate and test. Small wording changes cause large output changes.',
+            '**Ignoring output format.** Without explicit format specification, outputs are unpredictable.',
+            '**Using vague role definitions.** "You are an expert" is vague. "You are a Python expert with 10 years experience" is better.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Fine-Tuning Local LLMs LoRA](/local-llms/fine-tuning-local-llms-lora) — Adapt models instead of prompt engineering.',
+            '[Local RAG 2026](/local-llms/local-rag-2026) — Use retrieval for better context.',
+            '[Local AI Agents LangGraph](/local-llms/local-ai-agents-langgraph-ollama) — Agents use prompting internally.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Chain-of-Thought Paper (Wei et al.) — arxiv.org/abs/2201.11903',
+            'Prompt Engineering Guide — github.com/dair-ai/Prompt-Engineering-Guide',
+          ],
+        },
+      },
+    },
+  },
+
+  'private-local-ai-for-business': {
+    en: {
+      theme: 'Advanced Techniques',
+      title: 'Private Local AI For Business: On-Premises Deployment Without Cloud',
+      seoTitle: 'Private Local AI Business',
+      intro: 'Deploying local LLMs on-premises eliminates cloud costs, ensures data privacy, and gives you full control. As of April 2026, businesses are moving inference to on-premises infrastructure to comply with regulations (GDPR, HIPAA) and avoid recurring API fees. This guide covers deployment, compliance, and practical business use cases.',
+      metaDescription: 'Deploy local LLMs for business: on-premises AI, compliance, privacy, cost analysis. Enterprise guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '12 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'on-premises AI',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Why Local AI for Business', anchor: '#why-local' },
+        { label: 'Compliance: GDPR, HIPAA, SOC2', anchor: '#compliance' },
+        { label: 'Architecture and Deployment', anchor: '#architecture' },
+        { label: 'Cost Analysis', anchor: '#cost-analysis' },
+        { label: 'Use Cases by Industry', anchor: '#use-cases' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Privacy:** Data never leaves your infrastructure. Critical for HIPAA, GDPR, financial services.',
+            '**Cost:** No per-token API fees. One-time hardware investment ($3k–50k), then free queries.',
+            '**Compliance:** Full audit trails, data residency control, no vendor lock-in.',
+            '**Speed:** Inference on local hardware = lower latency than cloud (if well-optimized).',
+            'As of April 2026, on-premises AI is economically viable for organizations processing 100M+ tokens/month.',
+          ],
+        },
+        whyLocal: {
+          title: 'Why Deploy Local AI Instead of Cloud APIs?',
+          rows: [
+            { 'Factor': 'Data privacy', 'Cloud API': 'Data sent to vendor', 'Local AI': 'Stays on-premises' },
+            { 'Factor': 'Compliance', 'Cloud API': 'Limited control', 'Local AI': 'Full audit and residency control' },
+            { 'Factor': 'Cost (annual)', 'Cloud API': '$100k–500k (at scale)', 'Local AI': '$20k–100k (hardware amortized)' },
+            { 'Factor': 'Latency', 'Cloud API': '200–500ms', 'Local AI': '100–300ms (if optimized)' },
+            { 'Factor': 'Model choice', 'Cloud API': 'Limited to vendor models', 'Local AI': 'Any open-source model' },
+          ],
+          columns: ['Factor', 'Cloud API', 'On-Premises AI'],
+        },
+        compliance: {
+          title: 'Compliance: GDPR, HIPAA, and SOC2',
+          content: [
+            '**GDPR (EU):** Data must not leave EU. Local AI ensures compliance if infrastructure is EU-based.',
+            '**HIPAA (Healthcare):** Patient data cannot be sent to third-party APIs. Local AI required for healthcare deployments.',
+            '**SOC2 (Enterprise):** Audit trails, encryption, access controls. Local AI gives you full compliance control.',
+            'Document your deployment: encryption at rest/in transit, access logs, data retention policies.',
+          ],
+        },
+        architecture: {
+          title: 'On-Premises AI Architecture',
+          content: [
+            'Typical deployment: Kubernetes cluster running vLLM inference pods, with Qdrant vector DB for RAG.',
+          ],
+          codeBlock: '# Example: Kubernetes deployment\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: local-llm-inference\nspec:\n  replicas: 3\n  template:\n    spec:\n      containers:\n      - name: vllm\n        image: vllm/vllm-openai:latest\n        args:\n        - --model meta-llama/Llama-2-13b-hf\n        - --tensor-parallel-size 2\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            nvidia.com/gpu: "2"  # 2 GPUs per pod',
+          codeLanguage: 'yaml',
+        },
+        costAnalysis: {
+          title: 'Cost Breakdown: Cloud vs Local',
+          rows: [
+            { 'Scenario': '10M tokens/month', 'Cloud API (GPT-4o)': '$200', 'Local AI': '$0 (amortized hardware)' },
+            { 'Scenario': '100M tokens/month', 'Cloud API': '$2,000', 'Local AI': '$0' },
+            { 'Scenario': '1B tokens/month', 'Cloud API': '$20,000', 'Local AI': '$0 (after initial investment)' },
+            { 'Scenario': 'Hardware cost (amortized/month)', 'Cloud API': '$0', 'Local AI': '$2,000–5,000' },
+            { 'Scenario': 'Break-even point', 'Cloud API': 'Never (APIs cheaper at low scale)', 'Local AI': '200M+ tokens/month' },
+          ],
+          columns: ['Scenario', 'Cloud API Cost', 'On-Premises AI Cost'],
+        },
+        useCases: {
+          title: 'Use Cases by Industry',
+          items: [
+            '**Healthcare:** Medical NLP (document classification, note summarization) on HIPAA-compliant infrastructure.',
+            '**Finance:** Compliance analysis, risk assessment, without sending data to cloud.',
+            '**Legal:** Document review, contract analysis, with full audit trails for regulatory requirements.',
+            '**Manufacturing:** Predictive maintenance, quality control, keeping proprietary data on-premises.',
+            '**Government:** Classified document processing, restricted to secure facilities.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Deployment Mistakes',
+          items: [
+            '**Underestimating infrastructure costs.** Hardware is cheap; networking, cooling, and maintenance are expensive. Budget 3–5× hardware cost over 5 years.',
+            '**Not planning for scaling.** Start small, then plan for growth. Single-GPU setup cannot scale to production.',
+            '**Ignoring disaster recovery.** Have backup hardware and data replication. Outages cost more than redundancy.',
+            '**Poor security posture.** Network isolation, encryption, and access controls are critical. Audit regularly.',
+            '**Using old open-source models.** Models from 2023 are outdated. Retrain or fine-tune regularly as new base models emerge.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — Scaling inference.',
+            '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) — Cooling and infrastructure.',
+            '[Fine-Tuning Local LLMs LoRA](/local-llms/fine-tuning-local-llms-lora) — Custom models for business.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'GDPR Official Text — gdpr-info.eu',
+            'HIPAA Compliance — hhs.gov/hipaa',
+            'SOC2 Framework — aicpa.org/soc2',
+          ],
+        },
+      },
+    },
+  },
+
+  'local-llms-for-coding-workflows': {
+    en: {
+      theme: 'Advanced Techniques',
+      title: 'Local LLMs For Coding Workflows: Code Generation, Review, and Testing',
+      seoTitle: 'Local LLMs Coding',
+      intro: 'Local LLMs can assist with coding: generating boilerplate, reviewing code, writing tests, and explaining functions. As of April 2026, models like Qwen2.5-Coder and Llama Code 13B achieve 70–75% accuracy on programming benchmarks. Speed is slower than cloud (2–5 sec per response), but you keep code private.',
+      metaDescription: 'Use local LLMs for coding: code generation, review, testing, documentation. Workflow integration guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '11 min read',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'coding with local LLMs',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Best Coding Models', anchor: '#best-models' },
+        { label: 'Code Generation', anchor: '#code-generation' },
+        { label: 'Code Review Workflows', anchor: '#code-review' },
+        { label: 'Test Generation', anchor: '#test-generation' },
+        { label: 'IDE Integration', anchor: '#ide-integration' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Best coding models (2026):** Qwen2.5-Coder 7B (72% HumanEval), Llama Code 13B (74%), Mistral 7B (61%).',
+            '**Speed:** 2–5 seconds per code suggestion. Fast enough for development, slower than GitHub Copilot (~300ms).',
+            '**Privacy:** Code never leaves your machine. Critical for proprietary codebases.',
+            '**Use cases:** Boilerplate generation, code review, test writing, documentation. Not suitable for complex architectural decisions.',
+            'As of April 2026, local coding AI is practical for solo developers and small teams.',
+          ],
+        },
+        bestModels: {
+          title: 'Best Models for Coding',
+          rows: [
+            { 'Model': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': 'Very fast', 'Best For': 'Balanced, fastest 7B' },
+            { 'Model': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Speed': 'Fast', 'Best For': 'Higher quality' },
+            { 'Model': 'Mistral 7B', 'HumanEval': '61%', 'VRAM': '4.5 GB', 'Speed': 'Very fast', 'Best For': 'Lightweight, EU' },
+            { 'Model': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Speed': 'Very fast', 'Best For': 'Tiny, efficient' },
+          ],
+          columns: ['Model', 'HumanEval %', 'VRAM', 'Inference Speed', 'Best For'],
+        },
+        codeGeneration: {
+          title: 'Code Generation Workflow',
+          content: [
+            'Prompt the model with function signature + docstring, let it generate implementation.',
+          ],
+          codeBlock: '# Prompt design for code generation\nprompt = """\nImplement the following function:\n\ndef merge_sorted_arrays(arr1: List[int], arr2: List[int]) -> List[int]:\n    \\"\\"\"\n    Merge two sorted arrays into a single sorted array.\n    Args:\n        arr1: First sorted array\n        arr2: Second sorted array\n    Returns:\n        Merged sorted array\n    \\"\\"\"\n    # Implementation:\n"""\n\n# Model outputs implementation\n# Expected: Two-pointer merge algorithm',
+          codeLanguage: 'python',
+        },
+        codeReview: {
+          title: 'Code Review With Local LLMs',
+          content: [
+            'Use local LLMs to review code for bugs, style, performance.',
+          ],
+          items: [
+            'Prompt: "Review this code for bugs, security issues, and performance." + code snippet.',
+            'Model identifies: unused variables, potential None errors, inefficient loops.',
+            'Limitations: Cannot understand complex domain logic or architectural patterns.',
+          ],
+        },
+        testGeneration: {
+          title: 'Test Generation',
+          content: [
+            'Generate unit tests from function implementations.',
+          ],
+          codeBlock: '# Prompt for test generation\nprompt = """\nWrite comprehensive unit tests for this function:\n\n[function code]\n\nGenerate tests covering:\n- Normal cases\n- Edge cases\n- Error cases\n\nUse pytest format:\n\"\"\"\n\n# Model generates test_* functions with assertions',
+          codeLanguage: 'python',
+        },
+        ideIntegration: {
+          title: 'IDE Integration',
+          content: [
+            'Integrate via VS Code (Continue.dev extension) or Cursor editor.',
+            'Inline completions: Ctrl+Shift+\\\\ triggers local LLM suggestion.',
+            'Context: Editor sends surrounding code for better suggestions.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes',
+          items: [
+            '**Trusting generated code without review.** Generated code can have bugs. Always review.',
+            '**Using models too small.** Qwen2.5-Coder 7B is minimum for practical coding. 3B models produce poor code.',
+            '**Not providing context.** Code quality depends on prompt context. Provide function signature, types, docstrings.',
+            '**Expecting it to understand architecture.** Local models understand individual functions, not system design.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local LLMs With VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) — Setup guide.',
+            '[Prompt Engineering For Local Models](/local-llms/prompt-engineering-for-local-models) — Optimize coding prompts.',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Detailed benchmarks.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'HumanEval Benchmark — github.com/openai/human-eval',
+            'Qwen2.5-Coder — github.com/QwenLM/Qwen2.5-Coder',
+          ],
+        },
+      },
+    },
+  },
+
+  'multimodal-local-llms': {
+    en: {
+      theme: 'Advanced Techniques',
+      title: 'Multimodal Local LLMs: Vision, Audio, and Text Processing',
+      seoTitle: 'Multimodal Local LLMs',
+      intro: 'Multimodal models process images, text, and audio. As of April 2026, Llama 3.2 Vision, Gemma 3 Vision, and Qwen2-VL are practical multimodal models for local deployment. They enable document OCR, image analysis, and visual question-answering without cloud APIs.',
+      metaDescription: 'Multimodal local LLMs: vision, image processing, OCR, and audio. Model guide and use cases. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '10 min read',
+      educationalLevel: 'Intermediate to Advanced',
+      primaryTerm: 'multimodal models',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Multimodal Models Available', anchor: '#models' },
+        { label: 'Vision Capabilities', anchor: '#vision' },
+        { label: 'Setup and Usage', anchor: '#setup' },
+        { label: 'Real-World Use Cases', anchor: '#use-cases' },
+        { label: 'Performance and Limitations', anchor: '#performance' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Multimodal = text + images (+ audio).** Process images natively without OCR preprocessing.',
+            '**Best models (2026):** Llama 3.2 Vision 11B, Qwen2-VL 7B, Gemma 3 Vision 9B.',
+            '**Use cases:** Document OCR, image analysis, visual Q&A, table extraction.',
+            '**Speed:** 2–5 seconds per image (11B model). Slower than text-only, but practical.',
+            'As of April 2026, multimodal is mature for specific use cases, not yet general-purpose.',
+          ],
+        },
+        models: {
+          title: 'Multimodal Models Available (April 2026)',
+          rows: [
+            { 'Model': 'Llama 3.2 Vision 11B', 'Image Support': 'Yes', 'VRAM': '8 GB', 'Speed': '3–5 sec/image', 'Best For': 'General vision' },
+            { 'Model': 'Qwen2-VL 7B', 'Image Support': 'Yes', 'VRAM': '5 GB', 'Speed': '2–3 sec/image', 'Best For': 'Fast vision' },
+            { 'Model': 'Gemma 3 Vision 9B', 'Image Support': 'Yes', 'VRAM': '6 GB', 'Speed': '3 sec/image', 'Best For': 'Balanced' },
+            { 'Model': 'Llama 3.2 Vision 90B', 'Image Support': 'Yes', 'VRAM': '55 GB', 'Speed': '10+ sec/image', 'Best For': 'High quality' },
+          ],
+          columns: ['Model', 'Image Support', 'VRAM', 'Speed per Image', 'Best For'],
+        },
+        vision: {
+          title: 'Vision Capabilities',
+          content: [
+            'Multimodal models can:',
+          ],
+          items: [
+            '**Image description:** Explain what is in an image.',
+            '**OCR (Optical Character Recognition):** Extract text from images (business card, document scan).',
+            '**Visual Q&A:** Answer questions about images ("What is the brand of the car?").',
+            '**Table extraction:** Parse tables from images into structured data.',
+            '**Chart analysis:** Interpret data visualizations.',
+            '**Object detection:** Identify and locate objects in images.',
+          ],
+        },
+        setup: {
+          title: 'Setup and Usage',
+          content: 'Using Llama 3.2 Vision with Ollama:',
+          codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
+          codeLanguage: 'python',
+        },
+        useCases: {
+          title: 'Real-World Use Cases',
+          items: [
+            '**Document processing:** Extract text from scanned PDFs without external OCR service.',
+            '**Content moderation:** Flag inappropriate images without sending to cloud.',
+            '**Accessibility:** Describe images for visually impaired users.',
+            '**Product analysis:** Analyze product images in e-commerce (category, condition, defects).',
+            '**Research:** Analyze scientific charts and diagrams.',
+          ],
+        },
+        performance: {
+          title: 'Performance and Limitations',
+          content: [
+            '**Accuracy:** Good for document OCR and description, but not perfect for detailed analysis or small objects.',
+            '**Speed:** 2–5 seconds per image. Cloud models (GPT-4 Vision) are 10–50× faster.',
+            '**Image size:** Supports up to ~1000×1000 pixels. Larger images are downsampled.',
+            '**Limitations:** Cannot match GPT-4 Vision accuracy on complex scenes. Trade-off: privacy vs. quality.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes',
+          items: [
+            '**Expecting accuracy of GPT-4 Vision.** Local models are 20–30% less accurate. Use for specific domains, not general vision.',
+            '**Not preparing images.** Crop images to focus area. Remove noise. Better input = better output.',
+            '**Using 7B models for complex vision.** Small models struggle with subtle details. Use 11B+ for reliable vision.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Vision can help code understanding.',
+            '[Local RAG 2026](/local-llms/local-rag-2026) — Combine vision with RAG for document processing.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Llama 3.2 Vision Model Card — huggingface.co/meta-llama/Llama-3.2-11B-Vision',
+            'Qwen2-VL — github.com/QwenLM/Qwen2-VL',
+          ],
+        },
+      },
+    },
+  },
+
+  'local-vs-cloud-agents': {
+    en: {
+      theme: 'Advanced Techniques',
+      title: 'Local vs Cloud Agents: When to Choose Each Approach',
+      seoTitle: 'Local vs Cloud AI Agents',
+      intro: 'Local agents run entirely on your hardware; cloud agents use APIs. As of April 2026, cloud agents are faster and more capable, but local agents are cheaper and private. This guide helps you choose based on latency, cost, privacy, and task complexity.',
+      metaDescription: 'Local vs cloud agents: speed, cost, privacy, capabilities. Decision framework for AI automation. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '10 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'agent deployment',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Performance Comparison', anchor: '#performance' },
+        { label: 'Cost Analysis', anchor: '#cost' },
+        { label: 'Privacy and Compliance', anchor: '#privacy' },
+        { label: 'Capability Comparison', anchor: '#capabilities' },
+        { label: 'When to Choose Each', anchor: '#when-to-choose' },
+        { label: 'Hybrid Approach', anchor: '#hybrid' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Cloud agents (GPT-4, Claude 4.6):** Fastest (50–200ms/step), most capable, most expensive, no privacy.',
+            '**Local agents (Llama 13B+):** Slower (2–5 sec/step), less capable, cheap at scale, fully private.',
+            'Break-even: ~50M tokens/month. Beyond that, local is cheaper.',
+            '**Best:** Hybrid. Use cloud for complex reasoning, local for routine automation.',
+            'As of April 2026, most businesses use hybrid approach.',
+          ],
+        },
+        performance: {
+          title: 'Performance: Speed and Latency',
+          rows: [
+            { 'Agent Type': 'GPT-4 API', 'Per Step': '100–200ms', 'Per Reasoning Loop': '1–2 sec', 'Scalability': 'Unlimited' },
+            { 'Agent Type': 'Claude 4.6 API', 'Per Step': '150–300ms', 'Per Reasoning Loop': '1–2 sec', 'Scalability': 'Unlimited' },
+            { 'Agent Type': 'Local Llama 13B', 'Per Step': '2–3 sec', 'Per Reasoning Loop': '6–10 sec', 'Scalability': 'Limited by hardware' },
+            { 'Agent Type': 'Local Qwen 32B', 'Per Step': '3–5 sec', 'Per Reasoning Loop': '10–15 sec', 'Scalability': 'Limited by hardware' },
+          ],
+          columns: ['Agent Type', 'Per Step (ms)', 'Per Reasoning Loop', 'Scalability'],
+        },
+        cost: {
+          title: 'Cost Breakdown',
+          rows: [
+            { 'Volume': '1M tokens/month', 'Cloud (GPT-4)': '$20', 'Cloud (Claude)': '$20', 'Local (amortized)': '$0' },
+            { 'Volume': '10M tokens/month', 'Cloud (GPT-4)': '$200', 'Cloud (Claude)': '$200', 'Local (amortized)': '$0' },
+            { 'Volume': '100M tokens/month', 'Cloud (GPT-4)': '$2,000', 'Cloud (Claude)': '$2,000', 'Local (amortized)': '$300' },
+            { 'Volume': '1B tokens/month', 'Cloud (GPT-4)': '$20,000', 'Cloud (Claude)': '$20,000', 'Local (amortized)': '$3,000' },
+          ],
+          columns: ['Monthly Volume', 'Cloud (GPT-4)', 'Cloud (Claude)', 'Local (amortized)'],
+        },
+        privacy: {
+          title: 'Privacy and Compliance',
+          content: [
+            '**Cloud agents:** Data sent to vendor servers. Subject to vendor\'s privacy policy and data retention.',
+            '**Local agents:** Data stays on your hardware. Full control over data lifecycle.',
+            '**Compliance:** GDPR, HIPAA require local agents for regulated data.',
+          ],
+        },
+        capabilities: {
+          title: 'Capability Comparison',
+          rows: [
+            { 'Task': 'Multi-step reasoning', 'Cloud': 'Excellent', 'Local': 'Good (13B+)' },
+            { 'Task': 'Code generation', 'Cloud': 'Excellent', 'Local': 'Good (13B+)' },
+            { 'Task': 'Web search/browsing', 'Cloud': 'Available', 'Local': 'DIY (difficult)' },
+            { 'Task': 'Document processing', 'Cloud': 'Excellent', 'Local': 'Good' },
+            { 'Task': 'Tool usage', 'Cloud': 'Native', 'Local': 'Works via APIs' },
+            { 'Task': 'Long-term memory', 'Cloud': 'Limited', 'Local': 'Full control' },
+          ],
+          columns: ['Task', 'Cloud Agents', 'Local Agents'],
+        },
+        whenToChoose: {
+          title: 'When to Choose Each',
+          content: 'Choose cloud if:',
+          items: [
+            'Task requires complex reasoning or world knowledge.',
+            'Low latency is critical (<500ms per step).',
+            'Volume is <50M tokens/month.',
+            'Data is non-sensitive.',
+            'You want managed infrastructure.',
+          ],
+        },
+        chooseLocal: {
+          title: 'When to Choose Local',
+          content: 'Choose local if:',
+          items: [
+            'Data is sensitive (healthcare, finance, proprietary).',
+            'GDPR or HIPAA compliance required.',
+            'Volume >50M tokens/month (cost advantage).',
+            'You need full customization of agent behavior.',
+            'You want zero vendor lock-in.',
+          ],
+        },
+        hybrid: {
+          title: 'Hybrid Approach',
+          content: [
+            'Best practice: Use cloud for complex tasks, local for routine automation.',
+            'Example workflow: Route simple queries to local agent (fast, cheap), complex queries to GPT-4 (accurate, slow).',
+            'Tools like PromptQuorum dispatch to both and compare results.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local AI Agents LangGraph](/local-llms/local-ai-agents-langgraph-ollama) — Build local agents.',
+            '[Private Local AI For Business](/local-llms/private-local-ai-for-business) — On-premises deployment.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'OpenAI API Pricing — openai.com/pricing',
+            'Anthropic Claude Pricing — anthropic.com/pricing',
+          ],
+        },
+      },
+    },
+  },
+
+  'create-custom-local-models': {
+    en: {
+      theme: 'Advanced Techniques',
+      title: 'Create Custom Local Models: Pre-Training and Domain Adaptation',
+      seoTitle: 'Create Custom Local Models',
+      intro: 'Creating custom models means either fine-tuning existing models (easier) or pre-training from scratch (expensive). As of April 2026, fine-tuning is practical for most organizations. Pre-training costs $50k–500k and requires 1,000+ GPUs. This guide covers both approaches.',
+      metaDescription: 'Create custom local AI models: pre-training, fine-tuning, domain adaptation, and practical approaches. Guide. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '12 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'model creation',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Fine-Tuning vs Pre-Training', anchor: '#finetuning-vs-pretraining' },
+        { label: 'Fine-Tuning Path', anchor: '#finetuning-path' },
+        { label: 'Pre-Training Basics', anchor: '#pretraining-basics' },
+        { label: 'Domain Adaptation Strategies', anchor: '#domain-adaptation' },
+        { label: 'Evaluation Metrics', anchor: '#evaluation' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Fine-tuning (recommended):** 8 GB VRAM, 500+ training examples, 1–4 hours. Cost: $100–500.',
+            '**Pre-training:** 8+ GPUs, 100B+ tokens, weeks of training. Cost: $50k–500k.',
+            'Most organizations should fine-tune, not pre-train. Diminishing returns for custom pre-training.',
+            'Best approach: Start with fine-tuning on your domain data, then evaluate if pre-training is justified.',
+            'As of April 2026, pre-training is rarely justified unless you need proprietary model.',
+          ],
+        },
+        ftVsPt: {
+          title: 'Fine-Tuning vs Pre-Training',
+          rows: [
+            { 'Aspect': 'Training time', 'Fine-Tuning': '1–4 hours', 'Pre-Training': 'Weeks–months' },
+            { 'Aspect': 'VRAM required', 'Fine-Tuning': '8 GB', 'Pre-Training': '100+ GB (multi-GPU)' },
+            { 'Aspect': 'Data required', 'Fine-Tuning': '500–5k examples', 'Pre-Training': '100B+ tokens' },
+            { 'Aspect': 'Cost', 'Fine-Tuning': '$100–500', 'Pre-Training': '$50k–500k' },
+            { 'Aspect': 'Customization', 'Fine-Tuning': 'Domain knowledge', 'Pre-Training': 'Proprietary model' },
+            { 'Aspect': 'When to use', 'Fine-Tuning': '99% of cases', 'Pre-Training': 'Rare, specialized needs' },
+          ],
+          columns: ['Aspect', 'Fine-Tuning', 'Pre-Training'],
+        },
+        finetuningPath: {
+          title: 'Fine-Tuning Path (Recommended)',
+          numberedItems: [
+            'Collect 500–5000 domain-specific examples (high quality matters).',
+            'Choose base model (Llama 3.1 8B, Qwen 7B, etc.).',
+            'Use LoRA for efficient training (4× faster, same quality).',
+            'Train for 3–5 epochs on GPU.',
+            'Evaluate on test set (precision, recall, custom metrics).',
+            'Merge LoRA adapter into base model.',
+            'Deploy as production model.',
+          ],
+        },
+        pretraining: {
+          title: 'Pre-Training: When and Why',
+          content: [
+            'Pre-training means learning from raw data (books, documents, code). Only justified if:',
+            '1. You have >10 billion tokens of unique, valuable data.',
+            '2. Pre-trained models consistently fail on your domain.',
+            '3. Budget is >$50k (realistic cost).',
+            '4. You need proprietary model (competitive advantage).',
+            'Example: A genomics company with 500GB of private research data might justify custom pre-training.',
+          ],
+        },
+        domainAdaptation: {
+          title: 'Domain Adaptation Strategies',
+          content: [
+            'Without full pre-training, improve model performance on your domain:',
+          ],
+          items: [
+            '**Continued pre-training:** Take base model, train on your domain data (10B+ tokens). Cheaper than full pre-training.',
+            '**LoRA fine-tuning:** Most practical. Tune on 500+ examples.',
+            '**Prompt engineering:** Craft good prompts. Free, but limited.',
+            '**RAG:** Retrieve documents, provide context. Works without retraining.',
+            '**Ensemble:** Combine multiple models.',
+          ],
+        },
+        evaluation: {
+          title: 'Evaluation Metrics',
+          content: [
+            'Measure model quality:',
+          ],
+          items: [
+            '**Task-specific metrics:** Accuracy, F1 score, BLEU (for text generation).',
+            '**Benchmark tests:** Run on standard benchmarks (MMLU, HumanEval).',
+            '**Human evaluation:** Manual scoring (time-consuming but accurate).',
+            '**Business metrics:** Does model improve actual business outcomes?',
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes',
+          items: [
+            '**Pre-training without sufficient data.** <10B tokens is wasted compute. Fine-tune instead.',
+            '**Not evaluating properly.** Only training loss is misleading. Test on unseen data.',
+            '**Expecting custom model to match GPT-4.** Gap between open models and frontier models is large.',
+            '**Ignoring inference costs.** Larger custom models = higher inference costs. Consider trade-off.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Fine-Tuning Local LLMs LoRA](/local-llms/fine-tuning-local-llms-lora) — Detailed fine-tuning guide.',
+            '[Prompt Engineering For Local Models](/local-llms/prompt-engineering-for-local-models) — Alternative to model changes.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Chinchilla Scaling Laws — arxiv.org/abs/2203.15556',
+            'Instruction Tuning Survey — arxiv.org/abs/2308.10792',
+          ],
+        },
+      },
+    },
+  },
+
+  'future-of-local-llms': {
+    en: {
+      theme: 'Advanced Techniques',
+      title: 'Future of Local LLMs: Trends and What\'s Coming in 2026+',
+      seoTitle: 'Future of Local LLMs',
+      intro: 'Local LLMs are evolving rapidly. By late 2026, expect: (1) smaller, more efficient models (1–3B with GPT-4 quality), (2) on-device inference on smartphones, (3) better fine-tuning tools, (4) production-grade frameworks. This guide surveys emerging trends and predictions.',
+      metaDescription: 'Future of local LLMs: emerging trends, 2026+ predictions, smaller models, on-device AI. Outlook. Free beta — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '10 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'local LLM trends',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Trend: Smaller Models', anchor: '#smaller-models' },
+        { label: 'Trend: On-Device Inference', anchor: '#on-device' },
+        { label: 'Trend: Better Fine-Tuning', anchor: '#finetuning-tools' },
+        { label: 'Trend: Reasoning Models', anchor: '#reasoning' },
+        { label: 'Adoption Outlook', anchor: '#adoption' },
+        { label: 'Challenges Ahead', anchor: '#challenges' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Trend 1:** Smaller, more efficient models (1–3B) approaching 7B quality.',
+            '**Trend 2:** On-device inference on phones (iPhone, Android) becoming practical.',
+            '**Trend 3:** Fine-tuning tools becoming easier (next-generation Unsloth, Axolotl).',
+            '**Trend 4:** Reasoning models (DeepSeek-R1 style) improving step-by-step accuracy.',
+            '**Prediction:** By 2027, 50% of enterprises will run inference on-premises for sensitive workloads.',
+          ],
+        },
+        smallerModels: {
+          title: 'Trend: Smaller Models with Larger Quality',
+          content: [
+            'Model quality per parameter is improving. 2B models in 2026 rival 7B models from 2023.',
+            'Drivers: better architecture (attention mechanisms), more efficient training (DistilBERT-style), parameter sharing.',
+            'Implication: Local LLMs become practical on edge devices and mobile.',
+          ],
+        },
+        onDevice: {
+          title: 'Trend: On-Device Inference',
+          content: [
+            'iPhones (A18) and Android phones (Snapdragon X) can run 1–3B models. By 2027, smartphones will handle 7B models.',
+            'Benefit: Zero latency, full privacy, no internet required.',
+            'Challenge: Limited VRAM and battery life.',
+          ],
+        },
+        finetuningTools: {
+          title: 'Trend: Better Fine-Tuning Tools',
+          content: [
+            'Expect: No-code fine-tuning platforms (similar to Hugging Face Hub but easier).',
+            'Expect: Multi-GPU training made trivial (auto-sharding, distributed training out-of-the-box).',
+            'Current state (2026): Unsloth and Axolotl require command-line skills. Next generation will be GUI-based.',
+          ],
+        },
+        reasoning: {
+          title: 'Trend: Reasoning Models',
+          content: [
+            'DeepSeek-R1 and OpenAI o1 showed that explicit reasoning improves accuracy. Expect more reasoning-focused models.',
+            'Challenge: Reasoning models are slower (more tokens for thinking).',
+            'Opportunity: Local reasoning models for complex analysis without cloud.',
+          ],
+        },
+        adoption: {
+          title: 'Enterprise Adoption Outlook',
+          content: [
+            'Current (2026): Large enterprises running local LLMs for sensitive data.',
+            'By 2027: Mid-market adopting local models (cost + privacy).',
+            'By 2028: SMBs have affordable on-premises AI (cheaper than API subscriptions).',
+            'Long-term: Hybrid approach standard (local for routine, cloud for peak capacity).',
+          ],
+        },
+        challenges: {
+          title: 'Challenges Ahead',
+          items: [
+            '**Quality gap:** Open models still lag proprietary models by 20–30%. Gap closing but not gone.',
+            '**Inference speed:** Local inference slower than cloud. Not suitable for real-time applications (<500ms latency).',
+            '**Infrastructure costs:** On-premises requires capital investment in hardware, cooling, maintenance.',
+            '**Talent shortage:** Few engineers know how to productionize local LLMs. Will improve.',
+            '**Regulatory uncertainty:** Data residency laws evolving. Local AI future depends on regulations.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Current state of hardware.',
+            '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — Latest model releases.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Hugging Face Model Hub — huggingface.co/models',
+            'LLM Leaderboards — huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard',
+            'Research Papers (arxiv) — arxiv.org (filter by date: 2025–2026)',
+          ],
+        },
+      },
+    },
+  },
+
 }
