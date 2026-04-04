@@ -5,6 +5,7 @@ import { PromptEngineeringPostClient } from '@/components/PromptEngineeringPostC
 import { peContent, type PEArticle } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { themes } from '@/lib/prompt-engineering/themes'
+import { LEARNING_PATHS, TRENDING_TERMS_2026 } from '@/lib/prompt-engineering/learningPaths'
 
 // Look up the human-readable title for a slug from the themes data
 function getTitleForSlug(slug: string): string {
@@ -216,6 +217,50 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     }),
   } : null
 
+  // Generate LearningResource schemas for each learning path
+  const learningPathsSchema = slug === 'prompt-engineering-glossary'
+    ? LEARNING_PATHS.map((path, i) => ({
+        '@context': 'https://schema.org',
+        '@type': 'LearningResource',
+        '@id': `${canonicalUrl}#learning-path-${path.id}`,
+        name: path.title,
+        description: path.description,
+        url: `${canonicalUrl}#learning-paths`,
+        educationalLevel: path.level,
+        learningResourceType: 'LearningPath',
+        position: i + 1,
+        hasPart: path.terms.map(term => ({
+          '@type': 'DefinedTerm',
+          name: term,
+          url: `${canonicalUrl}#term-${term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`,
+          inDefinedTermSet: canonicalUrl,
+        })),
+      }))
+    : null
+
+  // Generate ItemList schema for trending terms
+  const trendingSchema = slug === 'prompt-engineering-glossary'
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Most Important Prompt Engineering Terms in 2026',
+        description: 'Top 10 prompt engineering terms ranked by industry adoption in 2026',
+        url: `${canonicalUrl}#trending-2026`,
+        numberOfItems: TRENDING_TERMS_2026.length,
+        itemListElement: TRENDING_TERMS_2026.map(({ rank, term, reason }) => ({
+          '@type': 'ListItem',
+          position: rank,
+          item: {
+            '@type': 'DefinedTerm',
+            name: term,
+            description: reason,
+            url: `${canonicalUrl}#term-${term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`,
+            inDefinedTermSet: canonicalUrl,
+          },
+        })),
+      }
+    : null
+
   const faqSectionData = Object.values(article.sections).find((s) => s.faqs && s.faqs.length > 0)
   const faqSchema = faqSectionData
     ? {
@@ -302,6 +347,8 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {definedTermSetSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }} />}
+      {learningPathsSchema?.map((s, i) => <script key={`lp-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />)}
+      {trendingSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trendingSchema) }} />}
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       {howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
       {article.supplementalSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article.supplementalSchema) }} />}

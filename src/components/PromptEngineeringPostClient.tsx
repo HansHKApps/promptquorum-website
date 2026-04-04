@@ -6,6 +6,7 @@ import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { peContent, type PESection } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
+import { LEARNING_PATHS, TRENDING_TERMS_2026, getTermPaths, type LearningPath } from '@/lib/prompt-engineering/learningPaths'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
 interface Props {
@@ -17,6 +18,8 @@ interface Props {
 const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
   en: {
     jumpToSection: 'Jump to section',
+    learningPaths: 'Learning Paths',
+    trending2026: 'Trending in 2026',
     corePrompting: 'Core Prompting',
     agentsOrchestration: 'Agents & Orchestration',
     safetyAlignment: 'Safety & Alignment',
@@ -26,6 +29,8 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
   },
   de: {
     jumpToSection: 'Zu Abschnitt springen',
+    learningPaths: 'Learning Paths',
+    trending2026: 'Trending in 2026',
     corePrompting: 'Kern-Prompting',
     agentsOrchestration: 'Agenten & Orchestrierung',
     safetyAlignment: 'Sicherheit & Ausrichtung',
@@ -35,6 +40,8 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
   },
   fr: {
     jumpToSection: 'Aller à la section',
+    learningPaths: 'Learning Paths',
+    trending2026: 'Trending in 2026',
     corePrompting: 'Prompting principal',
     agentsOrchestration: 'Agents & Orchestration',
     safetyAlignment: 'Sécurité & Alignement',
@@ -44,6 +51,8 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
   },
   ja: {
     jumpToSection: 'セクションにジャンプ',
+    learningPaths: 'Learning Paths',
+    trending2026: 'Trending in 2026',
     corePrompting: 'コアプロンプティング',
     agentsOrchestration: 'エージェント & オーケストレーション',
     safetyAlignment: 'セキュリティ & アライメント',
@@ -53,6 +62,8 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
   },
   zh: {
     jumpToSection: '跳转到部分',
+    learningPaths: 'Learning Paths',
+    trending2026: 'Trending in 2026',
     corePrompting: '核心提示',
     agentsOrchestration: '代理 & 编排',
     safetyAlignment: '安全 & 对齐',
@@ -285,12 +296,28 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
   })
 }
 
-function GlossaryTermCard({ row, lang }: { row: { [key: string]: string }; lang: Language }) {
+function GlossaryTermCard({ row, lang, pathIds }: { row: { [key: string]: string }; lang: Language; pathIds?: string[] }) {
   const termId = `term-${(row['Term'] || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
   return (
     <div id={termId} className="border border-primary/15 rounded-xl p-5 mb-3 hover:border-primary/30 transition-colors">
       {/* Term name */}
       <h3 className="font-bold text-text-primary text-base mb-2">{row['Term']}</h3>
+
+      {/* Learning path badges */}
+      {pathIds && pathIds.length > 0 && (
+        <div className="flex flex-wrap gap-1 mb-2">
+          {pathIds.map(pid => {
+            const path = LEARNING_PATHS.find(p => p.id === pid)
+            if (!path) return null
+            return (
+              <span key={pid} className={`inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full font-medium ${path.color.badge}`}>
+                <span aria-hidden="true">{path.icon}</span>
+                {path.title}
+              </span>
+            )
+          })}
+        </div>
+      )}
 
       {/* Answer-first definition */}
       <div className="text-sm text-text-secondary leading-relaxed mb-3">
@@ -345,7 +372,36 @@ function GlossaryTermCard({ row, lang }: { row: { [key: string]: string }; lang:
   )
 }
 
-function SectionBlock({ section, colors, id, lang, isGlossary }: { section: PESection; colors: { dot: string; badge: string }; id?: string; lang: Language; isGlossary?: boolean }) {
+function LearningPathCard({ path }: { path: LearningPath }) {
+  const base = '/prompt-engineering/prompt-engineering-glossary'
+  return (
+    <div className={`border rounded-xl p-5 ${path.color.card} transition-colors`}>
+      <div className="flex items-start justify-between gap-3 mb-2">
+        <div className="flex items-center gap-2">
+          <span className="text-2xl" aria-hidden="true">{path.icon}</span>
+          <h3 className="font-bold text-text-primary text-base leading-snug">{path.title}</h3>
+        </div>
+        <span className={`flex-shrink-0 text-xs font-semibold px-2 py-0.5 rounded-full ${path.color.levelBadge}`}>
+          {path.level}
+        </span>
+      </div>
+      <p className="text-sm text-text-secondary leading-relaxed mb-4">{path.description}</p>
+      <ol className="space-y-1.5">
+        {path.terms.map((term, i) => {
+          const anchor = `term-${term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`
+          return (
+            <li key={term} className="flex items-center gap-2 text-sm">
+              <span className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white ${path.color.dot}`}>{i + 1}</span>
+              <a href={`${base}#${anchor}`} className="text-primary hover:text-primary/80 transition-colors">{term}</a>
+            </li>
+          )
+        })}
+      </ol>
+    </div>
+  )
+}
+
+function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { section: PESection; colors: { dot: string; badge: string }; id?: string; lang: Language; isGlossary?: boolean; termPathMap?: Map<string, string[]> }) {
   return (
     <div className="mt-8" id={id}>
       {section.title && !section.isTldr && (
@@ -422,7 +478,7 @@ function SectionBlock({ section, colors, id, lang, isGlossary }: { section: PESe
       {isGlossary && section.rows ? (
         <div className="space-y-0 mt-4">
           {section.rows.map((row, i) => (
-            <GlossaryTermCard key={i} row={row} lang={lang} />
+            <GlossaryTermCard key={i} row={row} lang={lang} pathIds={termPathMap?.get(row['Term'] ?? '') ?? []} />
           ))}
         </div>
       ) : (
@@ -685,10 +741,47 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
           const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
           return (
             <>
+              {/* Learning Paths section */}
+              {slug === 'prompt-engineering-glossary' && !searchQuery && (
+                <section id="learning-paths" className="mb-10">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-2">Learning Paths</h2>
+                  <p className="text-text-secondary text-sm mb-6">Curated term sequences — follow a path to build expertise in one area.</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {LEARNING_PATHS.map(path => <LearningPathCard key={path.id} path={path} />)}
+                  </div>
+                </section>
+              )}
+
+              {/* Trending in 2026 section */}
+              {slug === 'prompt-engineering-glossary' && !searchQuery && (
+                <section id="trending-2026" className="mb-10">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-2">Most Important Prompt Engineering Terms in 2026</h2>
+                  <p className="text-text-secondary text-sm mb-6">The 10 terms that matter most for AI practitioners building production systems in 2026 — ranked by industry adoption and search demand.</p>
+                  <ol className="space-y-3">
+                    {TRENDING_TERMS_2026.map(({ rank, term, reason }) => {
+                      const anchor = `term-${term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`
+                      return (
+                        <li key={rank} className="flex gap-4 items-start p-4 border border-border rounded-xl hover:border-primary/30 transition-colors">
+                          <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">{rank}</span>
+                          <div>
+                            <a href={`/prompt-engineering/prompt-engineering-glossary#${anchor}`} className="font-semibold text-text-primary hover:text-primary transition-colors">
+                              {term}
+                            </a>
+                            <p className="text-sm text-text-secondary mt-0.5">{reason}</p>
+                          </div>
+                        </li>
+                      )
+                    })}
+                  </ol>
+                </section>
+              )}
+
               <nav className="mb-4 bg-primary/5 border border-primary/20 rounded-lg p-4">
                 <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{JUMP_SECTION_LABELS[lang].jumpToSection}</p>
                 <div className="flex flex-wrap gap-2">
                   {[
+                    { id: '#learning-paths', key: 'learningPaths' },
+                    { id: '#trending-2026', key: 'trending2026' },
                     { id: '#core-prompting', key: 'corePrompting' },
                     { id: '#agents-orchestration', key: 'agentsOrchestration' },
                     { id: '#safety-alignment', key: 'safetyAlignment' },
@@ -755,6 +848,16 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             const query = searchQuery.trim().toLowerCase()
             const isSearching = query.length >= 2
 
+            // Pre-compute term→paths mapping for this render pass (glossary only)
+            const termPathMap = new Map<string, string[]>()
+            if (slug === 'prompt-engineering-glossary') {
+              Object.values(article.sections).forEach(section => {
+                section.rows?.forEach(row => {
+                  if (row['Term']) termPathMap.set(row['Term'], getTermPaths(row['Term']))
+                })
+              })
+            }
+
             // Filter sections if searching (search only in Term column)
             const sectionsToRender = Object.entries(article.sections)
               .map(([key, section]) => {
@@ -781,7 +884,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
               const sectionId = glossaryIdMap[key]
                 ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined)
               return (
-                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} isGlossary={slug === 'prompt-engineering-glossary'} />
+                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} isGlossary={slug === 'prompt-engineering-glossary'} termPathMap={slug === 'prompt-engineering-glossary' ? termPathMap : undefined} />
               )
             })
           })()}
