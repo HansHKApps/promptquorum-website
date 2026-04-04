@@ -2925,3 +2925,51 @@ This is a known template defect, not a per-article decision.
 - **Blog posts**: Common Mistakes optional but recommended.
 
 === END CONTENT GENERATION ENFORCEMENT PROTOCOL ===
+
+---
+
+## === APPLYING THE ENFORCEMENT PROTOCOL TO EXISTING ARTICLES ===
+
+When editing or auditing an article that already exists (rather than writing from scratch), use this adapted workflow:
+
+### Phase 1 — Gap Audit (replaces Scaffold)
+
+Before changing any prose, run the Post-Write Audit checklist against the existing article. Identify every ❌. Produce a gap list:
+
+```
+EXISTING ARTICLE GAP AUDIT: [article title]
+
+H2 format issues: []
+FAQ count: [] (minimum 6 required)
+Sources section: [present / missing]
+Common Mistakes section: [present / missing]
+Meta description length: [] chars (need 150–160)
+Lead Answer Block bolded: [yes / no]
+Regional context: [present / missing]
+Inline date signals: [] found (need ≥2)
+Banned words: []
+TOC anchor format (## bug): [present / clean]
+Three description fields distinct: [yes / no]
+```
+
+### Phase 2 — Targeted Fixes Only
+
+Apply only the fixes needed to clear the ❌ items. Do not rewrite sections that are already compliant. Do not add new sections not listed in the gap audit. The rule is: fix what is broken, leave what is working.
+
+For TOC anchor bugs (## → #): fix all instances in the article in one pass.
+
+For missing Sources: add a Sources section at the bottom with minimum 3 external citations. Do not invent URLs — use known authoritative sources relevant to the article topic.
+
+For missing Common Mistakes: add a section with minimum 3 concrete mistakes and their fixes. Base the mistakes on the most common errors for that topic — do not add generic advice.
+
+For insufficient FAQ: add questions to reach 6 minimum. Cover any FAQ types (Definitional, Comparative, Quantitative, Procedural, Disambiguation) not already present.
+
+### Do Not Do When Editing Existing Articles
+
+- Do not rewrite compliant sections to add variety or freshness
+- Do not change heading text unless it violates H-01 to H-07 rules
+- Do not add sections not called for by the gap audit
+- Do not alter metaDescription if it is already 150–160 chars and answer-first
+- Do not change publishDate — only update dateModified
+
+=== END APPLYING PROTOCOL TO EXISTING ARTICLES ===
