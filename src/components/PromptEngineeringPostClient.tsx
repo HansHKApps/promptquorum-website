@@ -602,7 +602,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
                     .reduce((sum, section) => {
                       if (!section.rows) return sum
                       return sum + section.rows.filter(row =>
-                        Object.values(row).some(val => val?.toLowerCase?.().includes(query))
+                        row['Term']?.toLowerCase?.().includes(query)
                       ).length
                     }, 0)
                   return totalMatches === 0
@@ -664,14 +664,14 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             const query = searchQuery.trim().toLowerCase()
             const isSearching = query.length >= 2
 
-            // Filter sections if searching
+            // Filter sections if searching (search only in Term column)
             const sectionsToRender = Object.entries(article.sections)
               .map(([key, section]) => {
                 if (!isSearching || !section.rows) {
                   return [key, section] as const
                 }
                 const filteredRows = section.rows.filter(row =>
-                  Object.values(row).some(val => val?.toLowerCase?.().includes(query))
+                  row['Term']?.toLowerCase?.().includes(query)
                 )
                 return [key, { ...section, rows: filteredRows }] as const
               })
