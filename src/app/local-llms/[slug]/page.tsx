@@ -46,8 +46,11 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const article = llmContent[key][selectedLang] || llmContent[key]['en']
   const canonicalUrl = `https://www.promptquorum.com/local-llms/${slug}`
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
-  const pageTitle = article.seoTitle ?? article.title
-  const metaDesc = article.metaDescription ?? article.intro
+
+  // Use seoTitle if available for better SERP display, otherwise use article title
+  const pageTitle = (article as any).seoTitle ?? article.title
+  // Use metaDescription for OG/Twitter when available, otherwise fall back to intro
+  const metaDesc = (article as any).metaDescription ?? article.intro
 
   return {
     title: `${pageTitle} | PromptQuorum`,
@@ -120,8 +123,8 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
   const article = llmContent[key][selectedLang] || llmContent[key]['en']
   const canonicalUrl = `https://www.promptquorum.com/local-llms/${slug}`
 
-  // Article schema — use article.schema if defined, otherwise generate generic TechArticle
-  const articleSchema = article.schema || {
+  // Use article.schema if defined; otherwise fallback to generic TechArticle schema
+  const articleSchema = (article as any).schema || {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     headline: article.title,

@@ -203,6 +203,138 @@ to detect injections that attempt to alter response format.
 
 ---
 
+## Rule 2d: H2 and H3 Heading Rules for AI Search Engines
+
+H2 and H3 tags are semantic signals to Google, Perplexity, ChatGPT, Gemini, and Bing Copilot. These rules ensure headings match real search queries and maximize AI engine citation extraction.
+
+### H-01: Every H2 Must Be a Question or Direct Answer Phrase
+
+H2 tags trigger Google "People Also Ask" boxes and AI engine section citations. Crawlers match user queries to H2 headings. A descriptive label is invisible to this system.
+
+Every H2 must be either:
+- **A)** A complete question ending in "?" (preferred)
+- **B)** A direct answer phrase starting with a bold factual statement
+
+**Wrong H2 formats (never use):**
+- Labels: "Core Features", "Overview", "Key Benefits"
+- Navigation: "Blog & Educational Resources", "Resources"
+- CTAs: "Join the Waitlist", "Get Started", "Sign Up Now"
+- Vague: "How It Works" (missing subject), "Learn More"
+- Brand jargon: "The 4-Stage Pipeline", "Quorum Scoring Explained"
+
+**Right H2 formats:**
+- "Which AI Model Gives the Best Answer for Your Task?"
+- "How Do You Compare AI Models Side-by-Side?"
+- "How Does Multi-Model AI Comparison Work?"
+- "What Is PromptQuorum and How Does It Work?"
+- "What Is Chain-of-Thought Prompting?"
+- "When Should You Use Few-Shot Instead of Zero-Shot?"
+
+### H-02: Three H2/H3 Patterns Are Banned from Heading Tags
+
+These must never appear as H2 or H3 tags. Replace with styled divs, section elements, or remove entirely.
+
+**TYPE 1 — CTA headings:**
+Any H2/H3 that is a call to action belongs in the UI layer, not semantic headings.
+
+- ❌ `<h2>Join the PromptQuorum Waitlist</h2>`
+- ✅ `<div class="cta-section"><h3 class="cta-title">...</h3></div>` (styled but removed from heading hierarchy)
+
+**TYPE 2 — Navigation/listing labels:**
+Any H2/H3 that simply names a content type without stating what it answers or explains.
+
+- ❌ `<h2>Blog & Educational Resources</h2>`
+- ✅ `<h2>Learn Prompt Engineering: Guides and Research</h2>`
+
+**TYPE 3 — FAQ section heading:**
+"Frequently Asked Questions" as an H2 provides no PAA signal because it matches no search query. Individual question H3s inside the FAQ section handle extraction via FAQPage schema.
+
+- ❌ `<h2>Frequently Asked Questions</h2>`
+- ✅ Remove the H2 entirely. Use a styled div with `class="faq-section-title"` instead.
+
+### H-03: H3 Tags Are for Subsections That Answer Follow-Up Questions
+
+H3s sit inside H2 sections and answer the specific sub-question implied by the H2. They follow the same question-or-direct-answer rule as H2s.
+
+**Good H3 patterns:**
+- Inside "How Does Multi-Model AI Comparison Work?":
+  - "What Happens in the Dispatch Stage?"
+  - "How Does Consensus Scoring Calculate Agreement?"
+  - "What Does the Quorum Verdict Mean?"
+
+**Wrong H3 patterns:**
+- "Step 1", "Step 2", "Step 3" — use ordered list items instead
+- "Note:", "Important:", "Pro Tip:" — use callout divs instead
+- Single-word labels: "Overview", "Details", "Summary"
+
+### H-04: Homepage H2 Specific Rules
+
+The homepage targets cold traffic with no prior product knowledge. Every H2 must work as a standalone question a potential user might actually type or ask an AI.
+
+**Approved homepage H2s (keep):**
+- ✅ "Which AI Model Gives the Best Answer for Your Task?"
+
+**Needs rewrite:**
+- ⚠️ "What Can You Do with PromptQuorum?" → Replace with: "How Do You Compare AI Models Side-by-Side?" (user action, not product-centric)
+- ⚠️ "How Does the PromptQuorum 4-Stage Pipeline Work?" → Replace with: "How Does Multi-Model AI Comparison Work?" (generic, not jargon)
+
+**Remove H2 tag entirely:**
+- ❌ "Frequently Asked Questions" → Use styled div
+- ❌ "Blog & Educational Resources" → Replace with semantic question or remove H2
+
+### H-05: Jargon Rule for H2s
+
+Any internal product term in an H2 must be replaced with the generic query-form equivalent that a user who has never heard of PromptQuorum would actually type.
+
+| Internal Jargon | Searchable Equivalent |
+|---|---|
+| "4-Stage Pipeline" | "Multi-Model AI Comparison" |
+| "Quorum Scoring" | "AI Consensus Scoring" or "How Models Agree" |
+| "Quorum Verdict" | "Which AI Model Is Most Accurate" |
+| "Dispatch Stage" | "How to Send a Prompt to Multiple Models" |
+| "Consensus Analysis" | "How to Compare AI Responses" |
+
+Jargon can appear in body text and section content — just not in H2 headings.
+
+### H-06: Heading Hierarchy Must Be Valid
+
+Valid hierarchy for every page:
+- One H1 per page (the page title)
+- H2s are top-level sections
+- H3s are subsections inside an H2
+- H4s are sub-subsections inside an H3 (use sparingly)
+- Never skip levels: no H3 without a parent H2
+
+**Common violation to catch:**
+```bash
+# Check for multiple H1s (should return exactly 1 result)
+grep -c "<h1" page.html
+
+# Check for H3s that appear before any H2 (orphaned H3)
+awk '/<h3/{found_h3=1} /<h2/{found_h2=1} found_h3 && !found_h2{
+  print "❌ H3 before first H2 on line " NR}' page.html
+
+# List all H2s for manual review
+grep -oP "(?<=<h2[^>]*>)[^<]+" page.html
+```
+
+### H-07: Pre-Commit H2/H3 Review Checklist
+
+Before committing any new or edited page, verify every heading:
+
+- [ ] Every H2 ends in "?" or opens with a bold direct answer phrase
+- [ ] No H2 is a label: "Overview", "Features", "Resources", "Key Concepts", "Summary", "Details"
+- [ ] No H2 is a CTA: "Join", "Sign Up", "Get Started", "Download", "Try Now"
+- [ ] No H2 is "Frequently Asked Questions" — remove tag, use styled div
+- [ ] No H2 contains internal jargon unknown to cold traffic
+- [ ] No H3 is a step label ("Step 1", "Step 2") — use ordered lists
+- [ ] Heading hierarchy is valid: H3s have parent H2s, no level skips
+- [ ] Total H2 count on article pages: 4–8 (fewer = thin, more = diluted)
+- [ ] Total H2 count on homepage: 3–5 substantive sections
+      (CTA and FAQ section labels removed from H2 count)
+
+---
+
 ## Rule 3: Facts Only — No Vague Superlatives
 
 Every claim must be specific and verifiable. Delete words that add no information.
