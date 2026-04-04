@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
@@ -530,6 +531,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
   const lang: Language = (clientLang !== 'en' ? clientLang : (initialLang ?? clientLang))
   const key = PE_SLUG_TO_KEY[slug]
   const articleData = key ? peContent[key] : null
+  const [searchQuery, setSearchQuery] = useState('')
 
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
@@ -582,6 +584,36 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
           </p>
         )}
 
+        {/* Glossary search */}
+        {slug === 'prompt-engineering-glossary' && article.sections && (
+          <div className="mb-8">
+            <input
+              type="search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search terms..."
+              className="w-full max-w-md px-4 py-2 border border-primary/30 rounded-lg text-sm bg-white text-text-primary placeholder-text-secondary/50 focus:outline-none focus:ring-2 focus:ring-primary/40"
+            />
+            {searchQuery.length >= 2 && (
+              <p className="mt-2 text-xs text-text-secondary">
+                {(() => {
+                  const query = searchQuery.trim().toLowerCase()
+                  const totalMatches = Object.values(article.sections)
+                    .reduce((sum, section) => {
+                      if (!section.rows) return sum
+                      return sum + section.rows.filter(row =>
+                        Object.values(row).some(val => val?.toLowerCase?.().includes(query))
+                      ).length
+                    }, 0)
+                  return totalMatches === 0
+                    ? 'No results found.'
+                    : `${totalMatches} result${totalMatches === 1 ? '' : 's'} found.`
+                })()}
+              </p>
+            )}
+          </div>
+        )}
+
         {/* Jump navigation for glossary */}
         {slug === 'prompt-engineering-glossary' && article.sections.intro && (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-4">
@@ -628,25 +660,43 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
 
         {/* Sections */}
         <article className="key-takeaways-container">
-          {Object.entries(article.sections).map(([key, section]) => {
-            // Glossary explicit IDs take precedence; all other titled sections get auto-generated IDs
-            const glossaryIdMap: Record<string, string> = {
-              'promptingTechniques': 'prompting-techniques',
-              'aiSystemArchitectures': 'ai-system-architectures',
-              'modelBehaviorLimitations': 'model-behavior',
-              'componentsInfrastructure': 'components-infrastructure',
-              'optimizationPerformance': 'optimization-performance',
-              'safetySecurity': 'safety-security',
-              'agentTooling': 'agent-tooling',
-              'useCases': 'use-cases',
-              'emergingConcepts': 'emerging-concepts',
-            }
-            const sectionId = glossaryIdMap[key]
-              ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined)
-            return (
-              <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} />
-            )
-          })}
+          {(() => {
+            const query = searchQuery.trim().toLowerCase()
+            const isSearching = query.length >= 2
+
+            // Filter sections if searching
+            const sectionsToRender = Object.entries(article.sections)
+              .map(([key, section]) => {
+                if (!isSearching || !section.rows) {
+                  return [key, section] as const
+                }
+                const filteredRows = section.rows.filter(row =>
+                  Object.values(row).some(val => val?.toLowerCase?.().includes(query))
+                )
+                return [key, { ...section, rows: filteredRows }] as const
+              })
+              .filter(([, section]) => !isSearching || !section.rows || section.rows.length > 0)
+
+            return sectionsToRender.map(([key, section]) => {
+              // Glossary explicit IDs take precedence; all other titled sections get auto-generated IDs
+              const glossaryIdMap: Record<string, string> = {
+                'promptingTechniques': 'prompting-techniques',
+                'aiSystemArchitectures': 'ai-system-architectures',
+                'modelBehaviorLimitations': 'model-behavior',
+                'componentsInfrastructure': 'components-infrastructure',
+                'optimizationPerformance': 'optimization-performance',
+                'safetySecurity': 'safety-security',
+                'agentTooling': 'agent-tooling',
+                'useCases': 'use-cases',
+                'emergingConcepts': 'emerging-concepts',
+              }
+              const sectionId = glossaryIdMap[key]
+                ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined)
+              return (
+                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} />
+              )
+            })
+          })()}
         </article>
 
         {/* Footer CTA */}
