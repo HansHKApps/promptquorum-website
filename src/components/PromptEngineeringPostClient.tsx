@@ -352,6 +352,25 @@ function GlossaryTermCard({ row, lang, pathIds }: { row: { [key: string]: string
         </div>
       )}
 
+      {/* Use cases */}
+      {row['Use cases'] && (
+        <div className="flex flex-wrap gap-1 mt-1 mb-1">
+          {row['Use cases'].split(',').map(uc => uc.trim()).filter(Boolean).map(uc => (
+            <span key={uc} className="inline-flex items-center gap-1 text-xs bg-primary/5 text-text-secondary border border-primary/10 px-2 py-0.5 rounded-full">
+              <span aria-hidden="true">💼</span> {uc}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {/* Anti-patterns / common mistakes */}
+      {row['Anti-patterns'] && (
+        <div className="bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 text-xs text-amber-800 mt-1 mb-1">
+          <span className="font-semibold">⚠ Common mistake: </span>
+          {row['Anti-patterns']}
+        </div>
+      )}
+
       {/* When to use */}
       {row['When to use'] && (
         <p className="text-xs text-text-secondary mb-1">
@@ -386,6 +405,18 @@ function LearningPathCard({ path }: { path: LearningPath }) {
         </span>
       </div>
       <p className="text-sm text-text-secondary leading-relaxed mb-4">{path.description}</p>
+
+      {/* Use cases in practice */}
+      {path.useCases.length > 0 && (
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {path.useCases.map(uc => (
+            <span key={uc} className="text-xs bg-primary/8 text-text-secondary border border-primary/15 px-2 py-0.5 rounded-full">
+              {uc}
+            </span>
+          ))}
+        </div>
+      )}
+
       <ol className="space-y-1.5">
         {path.terms.map((term, i) => {
           const anchor = `term-${term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`

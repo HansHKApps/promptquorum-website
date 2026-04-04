@@ -19,6 +19,7 @@ export interface LearningPath {
     levelBadge: string         // level pill inside card
   }
   terms: string[]              // ordered — exact row['Term'] values from glossary
+  useCases: string[]           // 3-5 real-world applications for this path
 }
 
 export interface TrendingTerm {
@@ -58,6 +59,7 @@ export const LEARNING_PATHS: LearningPath[] = [
       'Hallucination',
       'Output formatting prompt',
     ],
+    useCases: ['Customer service chatbots', 'Content drafting assistants', 'Internal Q&A tools', 'Developer code review'],
   },
   {
     id: 'rag-mastery',
@@ -83,6 +85,7 @@ export const LEARNING_PATHS: LearningPath[] = [
       'Context window',
       'Prompt Injection',
     ],
+    useCases: ['Enterprise knowledge bases', 'Customer support bots', 'Legal document Q&A', 'Medical reference lookup'],
   },
   {
     id: 'agent-orchestration',
@@ -110,6 +113,7 @@ export const LEARNING_PATHS: LearningPath[] = [
       'Agent Orchestration',
       'Reflection agent',
     ],
+    useCases: ['Autonomous research agents', 'Code generation pipelines', 'Multi-step data analysis', 'AI-powered workflows'],
   },
   {
     id: 'reasoning-mastery',
@@ -133,6 +137,7 @@ export const LEARNING_PATHS: LearningPath[] = [
       'Step-back prompting',
       'Automatic Prompt Engineer (APE)',
     ],
+    useCases: ['Math tutoring systems', 'Legal reasoning tools', 'Complex debugging assistants', 'Scientific analysis'],
   },
   {
     id: 'fine-tuning-alignment',
@@ -156,6 +161,7 @@ export const LEARNING_PATHS: LearningPath[] = [
       'Hallucination',
       'Evals (evaluation suite)',
     ],
+    useCases: ['Domain-specific chatbots', 'Brand voice enforcement', 'Medical/legal specialization', 'Safety-critical systems'],
   },
   {
     id: 'evaluation-production',
@@ -179,6 +185,7 @@ export const LEARNING_PATHS: LearningPath[] = [
       'A/B Prompt Test',
       'Prompt Versioning',
     ],
+    useCases: ['CI/CD prompt regression testing', 'Quality monitoring dashboards', 'A/B prompt experiments', 'Model selection frameworks'],
   },
   {
     id: 'safety-security',
@@ -202,6 +209,7 @@ export const LEARNING_PATHS: LearningPath[] = [
       'Alignment',
       'Hallucination',
     ],
+    useCases: ['High-stakes deployment reviews', 'Red-teaming AI products', 'Compliance verification', 'Enterprise AI security'],
   },
 ]
 
@@ -243,4 +251,24 @@ for (const path of LEARNING_PATHS) {
  */
 export function getTermPaths(termName: string): string[] {
   return TERM_TO_PATH_IDS.get(termName.toLowerCase()) ?? []
+}
+
+// =============================================================================
+// FILTER HELPERS: Map skill levels and domains to learning paths
+// =============================================================================
+
+export const DOMAIN_TO_PATH: Record<string, string> = {
+  'agents': 'agent-orchestration',
+  'rag': 'rag-mastery',
+  'safety': 'safety-security',
+  'reasoning': 'reasoning-mastery',
+  'fine-tuning': 'fine-tuning-alignment',
+  'evaluation': 'evaluation-production',
+  'coding': 'foundations',
+}
+
+export const LEVEL_TO_PATHS: Record<string, string[]> = {
+  'beginner': ['foundations'],
+  'intermediate': ['rag-mastery', 'reasoning-mastery', 'evaluation-production', 'safety-security'],
+  'advanced': ['agent-orchestration', 'fine-tuning-alignment'],
 }
