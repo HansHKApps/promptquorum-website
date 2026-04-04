@@ -168,10 +168,10 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     },
     ...(slug === 'prompt-engineering-glossary' && {
       hasPart: [
-        { '@type': 'WebPageElement', name: 'Core Prompting Concepts', cssSelector: '#core-concepts' },
+        { '@type': 'WebPageElement', name: 'Core Prompting Concepts', cssSelector: '#core-prompting' },
         { '@type': 'WebPageElement', name: 'Agents & Orchestration', cssSelector: '#agents-orchestration' },
         { '@type': 'WebPageElement', name: 'Safety & Alignment', cssSelector: '#safety-alignment' },
-        { '@type': 'WebPageElement', name: 'Evaluation & Testing', cssSelector: '#evaluation-testing' },
+        { '@type': 'WebPageElement', name: 'Evals & Testing', cssSelector: '#evals-testing' },
         { '@type': 'WebPageElement', name: 'Advanced Techniques', cssSelector: '#advanced-techniques' },
         { '@type': 'WebPageElement', name: 'Metrics & Production', cssSelector: '#metrics-production' },
       ],
@@ -209,7 +209,8 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
       return section.rows.map((row) => ({
         '@type': 'DefinedTerm',
         name: row['Term'] || '',
-        description: row['What it means'] || '',
+        description: (row['What it means'] || '').replace(/\*\*/g, ''),
+        url: `${canonicalUrl}#term-${(row['Term'] || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
         inDefinedTermSet: canonicalUrl,
       }))
     }),

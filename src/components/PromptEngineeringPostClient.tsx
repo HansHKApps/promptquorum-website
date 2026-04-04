@@ -17,63 +17,48 @@ interface Props {
 const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
   en: {
     jumpToSection: 'Jump to section',
-    promptingTechniques: 'Prompting Techniques',
-    aiSystemArchitectures: 'System Architectures',
-    modelBehaviorLimitations: 'Model Behavior',
-    componentsInfrastructure: 'Components',
-    optimizationPerformance: 'Optimization',
-    safetySecurity: 'Safety & Security',
-    agentTooling: 'Agent Concepts',
-    useCases: 'Use Cases',
-    emergingConcepts: 'Emerging',
+    corePrompting: 'Core Prompting',
+    agentsOrchestration: 'Agents & Orchestration',
+    safetyAlignment: 'Safety & Alignment',
+    evalsTesting: 'Evals & Testing',
+    advancedTechniques: 'Advanced Techniques',
+    metricsProduction: 'Metrics & Production',
   },
   de: {
     jumpToSection: 'Zu Abschnitt springen',
-    promptingTechniques: 'Prompting-Techniken',
-    aiSystemArchitectures: 'System-Architekturen',
-    modelBehaviorLimitations: 'Modellverhalten',
-    componentsInfrastructure: 'Komponenten',
-    optimizationPerformance: 'Optimierung',
-    safetySecurity: 'Sicherheit',
-    agentTooling: 'Agent-Konzepte',
-    useCases: 'Anwendungsfälle',
-    emergingConcepts: 'Aufstrebend',
+    corePrompting: 'Kern-Prompting',
+    agentsOrchestration: 'Agenten & Orchestrierung',
+    safetyAlignment: 'Sicherheit & Ausrichtung',
+    evalsTesting: 'Bewertungen & Tests',
+    advancedTechniques: 'Erweiterte Techniken',
+    metricsProduction: 'Metriken & Produktion',
   },
   fr: {
     jumpToSection: 'Aller à la section',
-    promptingTechniques: 'Techniques de prompting',
-    aiSystemArchitectures: 'Architectures système',
-    modelBehaviorLimitations: 'Comportement du modèle',
-    componentsInfrastructure: 'Composants',
-    optimizationPerformance: 'Optimisation',
-    safetySecurity: 'Sécurité',
-    agentTooling: 'Concepts d\'agent',
-    useCases: 'Cas d\'usage',
-    emergingConcepts: 'Émergent',
+    corePrompting: 'Prompting principal',
+    agentsOrchestration: 'Agents & Orchestration',
+    safetyAlignment: 'Sécurité & Alignement',
+    evalsTesting: 'Évaluations & Tests',
+    advancedTechniques: 'Techniques avancées',
+    metricsProduction: 'Métriques & Production',
   },
   ja: {
     jumpToSection: 'セクションにジャンプ',
-    promptingTechniques: 'プロンプティング技術',
-    aiSystemArchitectures: 'システムアーキテクチャ',
-    modelBehaviorLimitations: 'モデル動作',
-    componentsInfrastructure: 'コンポーネント',
-    optimizationPerformance: '最適化',
-    safetySecurity: 'セキュリティ',
-    agentTooling: 'エージェント概念',
-    useCases: 'ユースケース',
-    emergingConcepts: '新興',
+    corePrompting: 'コアプロンプティング',
+    agentsOrchestration: 'エージェント & オーケストレーション',
+    safetyAlignment: 'セキュリティ & アライメント',
+    evalsTesting: '評価 & テスト',
+    advancedTechniques: '高度な技術',
+    metricsProduction: 'メトリクス & 本番環境',
   },
   zh: {
     jumpToSection: '跳转到部分',
-    promptingTechniques: '提示工程技术',
-    aiSystemArchitectures: '系统架构',
-    modelBehaviorLimitations: '模型行为',
-    componentsInfrastructure: '组件',
-    optimizationPerformance: '优化',
-    safetySecurity: '安全',
-    agentTooling: '代理概念',
-    useCases: '用例',
-    emergingConcepts: '新兴',
+    corePrompting: '核心提示',
+    agentsOrchestration: '代理 & 编排',
+    safetyAlignment: '安全 & 对齐',
+    evalsTesting: '评估 & 测试',
+    advancedTechniques: '高级技术',
+    metricsProduction: '指标 & 生产',
   },
 }
 
@@ -300,7 +285,55 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
   })
 }
 
-function SectionBlock({ section, colors, id, lang }: { section: PESection; colors: { dot: string; badge: string }; id?: string; lang: Language }) {
+function GlossaryTermCard({ row, lang }: { row: { [key: string]: string }; lang: Language }) {
+  const termId = `term-${(row['Term'] || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
+  return (
+    <div id={termId} className="border border-primary/15 rounded-xl p-5 mb-3 hover:border-primary/30 transition-colors">
+      {/* Term name */}
+      <h3 className="font-bold text-text-primary text-base mb-2">{row['Term']}</h3>
+
+      {/* Answer-first definition */}
+      <div className="text-sm text-text-secondary leading-relaxed mb-3">
+        {renderInlineLinks(row['What it means'] ?? '', lang)}
+      </div>
+
+      {/* Example callout box */}
+      {row['Example'] && (
+        <div className="bg-primary/5 border border-primary/15 rounded-lg px-4 py-3 text-sm text-text-secondary mb-3">
+          <span className="font-semibold text-text-primary">Example: </span>
+          <span className="font-mono text-xs">{row['Example']}</span>
+        </div>
+      )}
+
+      {/* Related terms */}
+      {row['Related'] && (
+        <p className="text-xs text-text-secondary mb-1">
+          <span className="font-medium">Related: </span>
+          {renderInlineLinks(row['Related'], lang)}
+        </p>
+      )}
+
+      {/* When to use */}
+      {row['When to use'] && (
+        <p className="text-xs text-text-secondary mb-1">
+          {renderInlineLinks(row['When to use'], lang)}
+        </p>
+      )}
+
+      {/* 2026 note */}
+      {row['2026 note'] && (
+        <p className="text-xs text-text-secondary/60 italic mb-1">{row['2026 note']}</p>
+      )}
+
+      {/* Sources */}
+      <p className="text-xs text-text-secondary/50 mt-2 pt-2 border-t border-primary/10">
+        {renderInlineLinks(row['Sources & references'] ?? '', lang)}
+      </p>
+    </div>
+  )
+}
+
+function SectionBlock({ section, colors, id, lang, isGlossary }: { section: PESection; colors: { dot: string; badge: string }; id?: string; lang: Language; isGlossary?: boolean }) {
   return (
     <div className="mt-8" id={id}>
       {section.title && !section.isTldr && (
@@ -373,32 +406,41 @@ function SectionBlock({ section, colors, id, lang }: { section: PESection; color
         </ol>
       )}
 
-      {/* Table */}
-      {section.rows && section.columns && (
-        <div className="overflow-x-auto my-6">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr className="border-b-2 border-primary/20">
-                {section.columns.map((col) => (
-                  <th key={col} className="text-left p-3 font-bold text-text-primary bg-primary/5">
-                    {col}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {section.rows.map((row, i) => (
-                <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors">
-                  {section.columns!.map((col) => (
-                    <td key={col} className="p-3 text-text-secondary">
-                      {renderInlineLinks(row[col] ?? '—', lang)}
-                    </td>
+      {/* Glossary: render as rich cards instead of table */}
+      {isGlossary && section.rows ? (
+        <div className="space-y-0 mt-4">
+          {section.rows.map((row, i) => (
+            <GlossaryTermCard key={i} row={row} lang={lang} />
+          ))}
+        </div>
+      ) : (
+        /* Regular table for non-glossary content */
+        section.rows && section.columns && (
+          <div className="overflow-x-auto my-6">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="border-b-2 border-primary/20">
+                  {section.columns.map((col) => (
+                    <th key={col} className="text-left p-3 font-bold text-text-primary bg-primary/5">
+                      {col}
+                    </th>
                   ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {section.rows.map((row, i) => (
+                  <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors">
+                    {section.columns!.map((col) => (
+                      <td key={col} className="p-3 text-text-secondary">
+                        {renderInlineLinks(row[col] ?? '—', lang)}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )
       )}
 
       {/* Code block */}
@@ -620,15 +662,12 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{JUMP_SECTION_LABELS[lang].jumpToSection}</p>
             <div className="flex flex-wrap gap-2">
               {[
-                { id: '#prompting-techniques', key: 'promptingTechniques' },
-                { id: '#ai-system-architectures', key: 'aiSystemArchitectures' },
-                { id: '#model-behavior', key: 'modelBehaviorLimitations' },
-                { id: '#components-infrastructure', key: 'componentsInfrastructure' },
-                { id: '#optimization-performance', key: 'optimizationPerformance' },
-                { id: '#safety-security', key: 'safetySecurity' },
-                { id: '#agent-tooling', key: 'agentTooling' },
-                { id: '#use-cases', key: 'useCases' },
-                { id: '#emerging-concepts', key: 'emergingConcepts' },
+                { id: '#core-prompting', key: 'corePrompting' },
+                { id: '#agents-orchestration', key: 'agentsOrchestration' },
+                { id: '#safety-alignment', key: 'safetyAlignment' },
+                { id: '#evals-testing', key: 'evalsTesting' },
+                { id: '#advanced-techniques', key: 'advancedTechniques' },
+                { id: '#metrics-production', key: 'metricsProduction' },
               ].map((link) => (
                 <a
                   key={link.id}
@@ -680,20 +719,17 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             return sectionsToRender.map(([key, section]) => {
               // Glossary explicit IDs take precedence; all other titled sections get auto-generated IDs
               const glossaryIdMap: Record<string, string> = {
-                'promptingTechniques': 'prompting-techniques',
-                'aiSystemArchitectures': 'ai-system-architectures',
-                'modelBehaviorLimitations': 'model-behavior',
-                'componentsInfrastructure': 'components-infrastructure',
-                'optimizationPerformance': 'optimization-performance',
-                'safetySecurity': 'safety-security',
-                'agentTooling': 'agent-tooling',
-                'useCases': 'use-cases',
-                'emergingConcepts': 'emerging-concepts',
+                'corePrompting': 'core-prompting',
+                'agentsOrchestration': 'agents-orchestration',
+                'safetyAlignment': 'safety-alignment',
+                'evalsTesting': 'evals-testing',
+                'advancedTechniques': 'advanced-techniques',
+                'metricsProduction': 'metrics-production',
               }
               const sectionId = glossaryIdMap[key]
                 ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined)
               return (
-                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} />
+                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} isGlossary={slug === 'prompt-engineering-glossary'} />
               )
             })
           })()}
