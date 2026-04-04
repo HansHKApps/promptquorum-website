@@ -1019,6 +1019,138 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
   },
 
+  'local-llm-on-laptop': {
+    en: {
+      theme: 'Getting Started',
+      title: 'How to Run Local LLMs on a Laptop: Performance, Thermals, and Model Selection',
+      seoTitle: 'Running Local LLMs on a Laptop',
+      intro: 'Running local LLMs on a laptop is practical with 8 GB of RAM and a modern CPU or Apple Silicon chip. The main constraints are RAM (limits model size), thermal throttling (reduces sustained speed), and battery drain (30–60% of battery per hour under load). The right model and quantization settings make the difference between a usable and an unusable experience.',
+      metaDescription: 'Run local LLMs on a laptop: which models work, RAM requirements, thermal throttling fixes, battery tips, and quantization settings for 8 GB and 16 GB machines.',
+      publishDate: '2026-04-04',
+      readTime: '8 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM laptop',
+      toc: [
+        { label: 'Key Takeaways', anchor: '#key-takeaways' },
+        { label: 'Can You Run a Local LLM on a Laptop?', anchor: '#can-you-run-a-local-llm-on-a-laptop' },
+        { label: '8 GB RAM vs 16 GB RAM: What Is the Difference?', anchor: '#8gb-vs-16gb-ram' },
+        { label: 'Best Models for Laptops', anchor: '#best-models-for-laptops' },
+        { label: 'Apple Silicon vs Windows Laptop', anchor: '#apple-silicon-vs-windows-laptop' },
+        { label: 'How to Handle Thermal Throttling', anchor: '#how-to-handle-thermal-throttling' },
+        { label: 'Battery Drain During Local Inference', anchor: '#battery-drain' },
+        { label: 'Quantization Tips for Laptops', anchor: '#quantization-tips' },
+        { label: 'Common Questions', anchor: '#common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'A 3B or 7B model at Q4_K_M quantization runs usably on any modern laptop with 8 GB RAM.',
+            'Apple Silicon MacBooks (M1, M2, M3, M4) outperform most Windows laptops for local inference due to unified memory and Metal GPU acceleration — an M3 MacBook Pro runs a 7B model at 50–80 tok/sec.',
+            'Thermal throttling reduces speed by 20–40% after 10–15 minutes of sustained generation. Use a laptop stand and disable Turbo Boost to maintain steady speed.',
+            'Battery drain: expect 30–60% of battery per hour during active inference on most laptops. Plug in for extended sessions.',
+            'On 8 GB RAM Windows/Linux laptops: use Q4_K_M models up to 7B. On 16 GB RAM: Q4_K_M models up to 13B, or Q5_K_M for 7B.',
+          ],
+        },
+        canYouRun: {
+          title: 'Can You Run a Local LLM on a Laptop?',
+          content: [
+            'Yes — with the right model size. A laptop with 8 GB RAM running a 7B model at Q4_K_M quantization produces 10–25 tokens/sec on CPU and 50–80 tokens/sec on Apple Silicon. This is slow compared to cloud APIs, but fast enough for interactive use.',
+            'The practical ceiling on most 8 GB laptops is a 7B model. A 13B model at Q4_K_M requires ~9 GB of RAM — technically possible on 16 GB machines but leaves little headroom for the OS and other applications.',
+            'For [what are local LLMs](/local-llms/what-are-local-llms) and a full explanation of RAM requirements, see the dedicated guide.',
+          ],
+        },
+        ram8vs16: {
+          title: '8 GB RAM vs 16 GB RAM Laptop: What Is the Practical Difference?',
+          rows: [
+            { 'Scenario': 'Maximum model size', '8 GB RAM': '7B at Q4_K_M (~4.5 GB)', '16 GB RAM': '13B at Q4_K_M (~9 GB)' },
+            { 'Scenario': 'Model while browser open', '8 GB RAM': '3B–7B (tight)', '16 GB RAM': '7B–13B comfortably' },
+            { 'Scenario': 'Recommended first model', '8 GB RAM': 'llama3.2:3b or mistral:7b', '16 GB RAM': 'llama3.1:8b or qwen2.5:14b' },
+            { 'Scenario': 'Simultaneous apps', '8 GB RAM': 'Close browser before loading 7B', '16 GB RAM': 'Normal multitasking + 7B model' },
+          ],
+          columns: ['Scenario', '8 GB RAM', '16 GB RAM'],
+        },
+        bestModels: {
+          title: 'Best Local LLM Models for Laptops',
+          content: 'These models are specifically selected for laptop constraints — balancing quality, RAM use, and sustained generation speed:',
+          rows: [
+            { 'Model': 'llama3.2:3b', 'RAM': '2.5 GB', 'Speed (CPU)': '25–45 tok/s', 'Best For': '8 GB laptops, quick tasks' },
+            { 'Model': 'phi3.5', 'RAM': '3 GB', 'Speed (CPU)': '20–35 tok/s', 'Best For': '8 GB laptops, reasoning/coding' },
+            { 'Model': 'mistral:7b', 'RAM': '4.5 GB', 'Speed (CPU)': '10–20 tok/s', 'Best For': '8–16 GB, general use' },
+            { 'Model': 'qwen2.5:7b', 'RAM': '4.7 GB', 'Speed (CPU)': '10–18 tok/s', 'Best For': '8–16 GB, multilingual, coding' },
+            { 'Model': 'llama3.1:8b', 'RAM': '5.5 GB', 'Speed (CPU)': '8–15 tok/s', 'Best For': '16 GB laptops, best quality at size' },
+          ],
+          columns: ['Model', 'RAM', 'Speed (CPU)', 'Best For'],
+        },
+        appleSilicon: {
+          title: 'Apple Silicon vs Windows Laptop: Which Is Better for Local LLMs?',
+          content: [
+            'Apple Silicon MacBooks (M1 through M4) are the best consumer laptops for local LLM inference. The unified memory architecture means GPU and CPU share the same memory pool — an M3 MacBook Pro with 18 GB of memory can run a 13B model entirely in GPU memory, achieving 50–80 tok/sec.',
+            'Windows laptops with discrete NVIDIA GPUs can be faster if VRAM is sufficient (8 GB+). An NVIDIA RTX 4060 laptop GPU (8 GB VRAM) runs a 7B model at 60–90 tok/sec — comparable to Apple M3 Pro. The downside is higher battery drain and heat generation.',
+            'Windows laptops running on integrated Intel Iris Xe or AMD Radeon integrated graphics use CPU inference only, resulting in 8–20 tok/sec for 7B models.',
+          ],
+          rows: [
+            { 'Laptop Type': 'Apple M3 Pro (18 GB)', 'Speed (7B)': '50–80 tok/s', 'Battery Drain': 'Moderate', 'Max Model': '~13B' },
+            { 'Laptop Type': 'Apple M2 (8 GB)', 'Speed (7B)': '30–50 tok/s', 'Battery Drain': 'Moderate', 'Max Model': '~7B' },
+            { 'Laptop Type': 'NVIDIA RTX 4060 laptop (8 GB VRAM)', 'Speed (7B)': '60–90 tok/s', 'Battery Drain': 'High', 'Max Model': '~7B (GPU), ~13B (CPU offload)' },
+            { 'Laptop Type': 'Intel i7 + Iris Xe (16 GB RAM)', 'Speed (7B)': '8–15 tok/s', 'Battery Drain': 'Moderate', 'Max Model': '~13B' },
+            { 'Laptop Type': 'AMD Ryzen 7 + integrated GPU (16 GB)', 'Speed (7B)': '10–18 tok/s', 'Battery Drain': 'Moderate', 'Max Model': '~13B' },
+          ],
+          columns: ['Laptop Type', 'Speed (7B)', 'Battery Drain', 'Max Model'],
+        },
+        thermals: {
+          title: 'How to Handle Thermal Throttling on a Laptop',
+          content: [
+            'Thermal throttling occurs when the CPU or GPU reaches its temperature limit and reduces clock speed to cool down. For local LLM inference, this typically kicks in after 10–15 minutes of sustained generation, reducing speed by 20–40%.',
+          ],
+          items: [
+            '**Use a laptop stand with airflow clearance** — raising the laptop 2–3 cm improves exhaust airflow and reduces throttling onset from 10 to 20+ minutes.',
+            '**Disable Intel Turbo Boost / AMD Precision Boost** — running at base clock speed produces steady performance without thermal spikes. On macOS, install `cpufreq` or use the "Low Power" mode in Battery settings.',
+            '**Limit generation batch size** — avoid regenerating very long responses. Break long tasks into shorter prompts.',
+            '**Use Q4_K_M over Q8_0** — lower quantization requires less computation per token, producing less heat at the cost of marginal quality.',
+          ],
+        },
+        battery: {
+          title: 'How Much Battery Does Running a Local LLM Use?',
+          content: [
+            'Battery drain during local inference is significant. Active CPU inference on a 7B model draws 15–25 W on a typical laptop CPU, reducing battery life to 2–3 hours from a full charge on a 60 Wh battery.',
+            'Apple Silicon is notably more efficient. An M3 MacBook Pro running a 7B model consumes approximately 12–18 W during inference, giving 3–4 hours of active generation from a full charge.',
+            'For extended sessions, plug in. If you need battery-efficient local inference, use a 3B model at Q4_K_M — it draws 6–10 W and extends battery life to 5–6 hours on most laptops.',
+          ],
+        },
+        quantization: {
+          title: 'Which Quantization Level Should You Use on a Laptop?',
+          content: 'Quantization reduces model precision to lower RAM and compute requirements. For laptops, Q4_K_M is the recommended default:',
+          rows: [
+            { 'Quantization': 'Q2_K', 'RAM vs Full': '~25%', 'Quality Loss': 'High — noticeable degradation', 'Use Case': 'Extremely low RAM only' },
+            { 'Quantization': 'Q3_K_S', 'RAM vs Full': '~35%', 'Quality Loss': 'Moderate', 'Use Case': 'Under 4 GB RAM' },
+            { 'Quantization': 'Q4_K_M', 'RAM vs Full': '~45%', 'Quality Loss': 'Low — recommended default', 'Use Case': 'Most laptops, best balance' },
+            { 'Quantization': 'Q5_K_M', 'RAM vs Full': '~55%', 'Quality Loss': 'Minimal', 'Use Case': '16 GB RAM laptops' },
+            { 'Quantization': 'Q8_0', 'RAM vs Full': '~80%', 'Quality Loss': 'Negligible', 'Use Case': '32 GB RAM or GPU with 8+ GB VRAM' },
+          ],
+          columns: ['Quantization', 'RAM vs Full', 'Quality Loss', 'Use Case'],
+        },
+        faqSection: {
+          title: 'Common Questions About Running Local LLMs on Laptops',
+          faqs: [
+            {
+              q: 'Will running a local LLM damage my laptop over time?',
+              a: 'No — modern CPUs and GPUs are designed to handle sustained high loads safely via thermal throttling. Running inference for hours at a time is equivalent to video encoding or gaming. A laptop stand and adequate ventilation prevent excessive heat buildup. Battery cycle count increases with prolonged plugged-in charging, which is a normal wear pattern.',
+            },
+            {
+              q: 'Can I run a local LLM on a 4 GB RAM laptop?',
+              a: 'Barely. A 2B model like Gemma 2 2B requires ~1.7 GB of RAM for the model, but the OS needs 2–3 GB simultaneously. On 4 GB total RAM, you will likely experience swap usage which makes inference 5–10× slower. The practical minimum for a usable experience is 8 GB.',
+            },
+            {
+              q: 'Does my laptop need a dedicated GPU to run local LLMs?',
+              a: 'No. All major local LLM tools (Ollama, LM Studio, GPT4All) run on CPU only. A dedicated GPU significantly speeds up inference, but 3B–7B models are usable at 10–30 tok/sec on CPU alone. See [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) for CPU-optimized model recommendations.',
+            },
+          ],
+        },
+      },
+    },
+  },
+
   'local-llms-vs-cloud-apis': {
     en: {
       theme: 'Getting Started',
