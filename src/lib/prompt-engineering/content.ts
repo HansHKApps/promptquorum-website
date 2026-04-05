@@ -205,10 +205,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Eine Prompt-Bibliothek aufbauen: Sparen Sie Zeit und skalieren Sie (2026)', intro: 'Eine Prompt-Bibliothek ist eine zentrale, durchsuchbare Sammlung getesteter Prompts mit klaren Metadaten, damit Ihr Team wiederverwenden kann, was funktioniert, statt Anweisungen in jedem Chat neu zu erfinden. Gut gemacht, verhält sie sich wie ein gemeinsames "KI-Playbook": Leute greifen eine bewährte Vorlage für eine Aufgabe, passen ein paar Eingaben an und erhalten konsistente Ergebnisse über Modelle und Projekte hinweg.', publishDate: '2026-03-24', readTime: '10 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Créer une bibliothèque de prompts : Gagnez du temps et mettez à l\'échelle (2026)', intro: 'Une bibliothèque de prompts est une collection centrale et consultable de prompts testés avec des métadonnées claires pour que votre équipe puisse réutiliser ce qui fonctionne au lieu de réinventer les instructions à chaque conversation. Bien faite, elle fonctionne comme un "playbook IA" partagé: les gens récupèrent un modèle éprouvé pour une tâche, adaptent quelques entrées et obtiennent des résultats cohérents entre les modèles et les projets.', publishDate: '2026-03-24', readTime: '10 min de lecture', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'プロンプトライブラリの構築: 時間を節約し、スケール化する (2026)', intro: 'プロンプトライブラリは、テストされたプロンプトの中央集約的で検索可能なコレクションであり、明確なメタデータを持つため、チームは指示を再発明する代わりに機能するものを再利用できます。うまく行われると、共有の"AIプレイブック"として機能します。人々はタスク用に実証済みのテンプレートを取得し、いくつかの入力を適応させ、モデルとプロジェクト全体で一貫した結果を得られます。', publishDate: '2026-03-24', readTime: '10分で読める', sections: {} },
+    zh: { theme: 'Fundamentals', title: '构建提示词库: 节省时间并实现规模化 (2026)', intro: '提示词库是经过测试的提示词的中央可搜索集合，具有明确的元数据，以便您的团队可以重用有效的方法，而不是在每次聊天中重新发明指令。运作良好时，它就像一个共享的"AI剧本": 人们为任务获取经过验证的模板，调整几个输入，并在模型和项目中获得一致的结果。', publishDate: '2026-03-24', readTime: '阅读约10分钟', sections: {} },
   },
 
   'what-is-prompt-engineering': {
