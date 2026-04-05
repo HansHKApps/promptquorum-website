@@ -1,26 +1,37 @@
 import type { Metadata } from 'next'
 import { BlogIndexClient } from '@/components/BlogIndexClient'
 import { generateAlternates } from '@/lib/hreflang'
-
-export const metadata: Metadata = {
-  title: 'Prompt Engineering Guides: AI Models, Optimization & Local LLM Techniques | PromptQuorum',
-  description: 'Prompt engineering guides covering multi-model dispatch, hallucination detection, RAG, local LLMs, and AI model comparison. 12 research-backed articles for AI developers.',
-  alternates: generateAlternates('/blog'),
-  openGraph: {
-    title: 'Prompt Engineering Guides | PromptQuorum',
-    description: "Still testing one AI model at a time? These guides show you how to compare responses across 25+ models, catch hallucinations, and write prompts that actually work in production.",
-    images: [{ url: '/og-image.png', alt: 'PromptQuorum Blog — Prompt Engineering Guides' }],
-    type: 'website',
-    siteName: 'PromptQuorum',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    description: 'Prompt engineering guides 📚 → multi-model dispatch, hallucination detection, RAG. 12 articles for AI developers. Free.',
-  },
-}
+import { translations } from '@/translations'
 
 interface PageProps {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  // Extract language from searchParams
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: `${t.blogTitle} | PromptQuorum`,
+    description: t.blogSubtitle,
+    alternates: generateAlternates('/blog'),
+    openGraph: {
+      title: `${t.blogTitle} | PromptQuorum`,
+      description: t.blogSubtitle,
+      images: [{ url: '/og-image.png', alt: `${t.blogTitle} — PromptQuorum Blog` }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.blogTitle,
+      description: t.blogSubtitle,
+    },
+  }
 }
 
 export default async function BlogPage({ searchParams }: PageProps) {
