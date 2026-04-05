@@ -18132,6 +18132,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'LlamaIndex docs: Workflow integration',
             'OpenAI cookbook: Prompt engineering for production workflows'
           ]
+        },
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            { q: 'How do I turn a working prompt into a repeatable workflow?', a: 'Steps: (1) document the prompt, (2) define inputs/outputs, (3) add error handling, (4) version control, (5) integrate with system, (6) test with real data. Time: 1-2 weeks to move from prototype to production.' },
+            { q: 'What infrastructure do I need for production prompts?', a: 'Minimal: API endpoint (OpenAI, Anthropic) + caching + logging. Better: version control (git), testing (Promptfoo), monitoring (LangSmith), rate limiting. Enterprise: add compliance (audit logs, data residency).' },
+            { q: 'How do I handle prompt failures in production?', a: 'Strategies: (1) fallback to previous version, (2) alert on-call, (3) auto-retry with different model, (4) return degraded result. Implement circuit breaker: fail fast, don\'t retry endlessly.' },
+            { q: 'Can I A/B test prompts in production?', a: 'Yes. Route percentage of traffic to new prompt, compare metrics (quality, cost, latency). Tools: feature flags + Braintrust/PromptQuorum logging. Duration: 1-4 weeks for statistical significance.' },
+            { q: 'How do I monitor prompt performance after deployment?', a: 'Tools: LangSmith (logging + evals), PromptLayer (cost tracking), custom dashboards (Grafana). Metrics: accuracy, latency, error rate, cost per query. Alert threshold: 5% drop from baseline.' },
+            { q: 'What\'s the cost of running prompts at scale?', a: 'GPT-4o: $0.06/1k input tokens. Claude: $0.003/1k input. Depends on input size and volume. Example: 100k queries/day × 500 tokens × $0.00006 = $3,000/month. Use caching to reduce cost 50%+.' }
+          ]
         }
       }
     },
@@ -18248,6 +18259,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'PromptQuorum content workflow case study, April 2026',
             'Brand voice guidelines from 5+ marketing teams, shared via industry research'
           ]
+        },
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            { q: 'How can content teams use prompt engineering?', a: 'Use cases: (1) generate outlines, (2) draft sections, (3) rewrite for tone/style, (4) summarize long pieces, (5) SEO optimization. Workflow: human writes → AI assists → human edits → publish.' },
+            { q: 'How do I ensure AI-generated content matches brand voice?', a: 'Prompt techniques: (1) provide brand voice examples (tone, vocabulary), (2) include reference articles, (3) use persona prompting (\'write as [journalist/expert]\'), (4) test with real writers. Expect 2-3 iterations.' },
+            { q: 'What tools are best for content creation workflows?', a: 'Tools: PromptQuorum (multi-draft comparison), Braintrust (A/B testing), LM Studio (local privacy). Workflow: template prompts → multi-model outputs → human selection → final edit.' },
+            { q: 'How do I measure content quality improvement with AI assistance?', a: 'Metrics: time-to-draft (faster?), revision rounds (fewer?), reader engagement (higher?), SEO performance (better rankings?). Track before/after using AI. Expected: 40-60% faster first draft.' },
+            { q: 'Can AI help with content SEO?', a: 'Yes. Prompt engineering for SEO: (1) keyword integration, (2) meta descriptions, (3) heading structure, (4) internal linking suggestions. Tools: none specialized; use PromptQuorum + manual review.' },
+            { q: 'How do I handle AI-generated content legally/ethically?', a: 'Disclose: \'Written with AI assistance\' if required by publication. Verify: fact-check claims, cite sources properly. Originality: AI content is not copyrightable until human edits; edit substantively. Follow your publication\'s policy.' }
+          ]
         }
       }
     },
@@ -18363,6 +18385,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'GitHub Copilot best practices guide',
             'OpenAI code generation documentation',
             'Anthropic Claude for code guide'
+          ]
+        },
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            { q: 'How can developers use prompt engineering in daily work?', a: 'Use cases: (1) code generation (copilot-style), (2) debugging (explain error), (3) documentation (generate docstrings), (4) testing (generate test cases), (5) refactoring suggestions. Tools: Cursor, VSCode + Continue, GitHub Copilot.' },
+            { q: 'What\'s the best prompt engineering workflow for code?', a: 'Workflow: (1) write context (code snippet + requirement), (2) ask AI for implementation, (3) review output carefully, (4) test before merging, (5) iterate. Never commit unreviewed AI code.' },
+            { q: 'How do I make sure AI-generated code is secure?', a: 'Practices: (1) security-specific prompts (\'generate secure X, not vulnerable to Y\'), (2) code review mandatory, (3) dependency scanning (check for known vulns), (4) test edge cases. Example: \'Generate a secure API endpoint that validates all inputs.\'' },
+            { q: 'Which model is best for code generation?', a: 'Claude 3.5 Sonnet: best for complex code and explanations. GPT-4o: good for quick code. Smaller models: acceptable for simple tasks. Test on your codebase; quality varies by complexity.' },
+            { q: 'Can I use AI to help refactor legacy code?', a: 'Yes. Prompt: \'Refactor this [language] code to [target pattern]. Explain the changes.\' Preview refactoring before applying. Test thoroughly; AI sometimes misses context.' },
+            { q: 'How do I integrate prompt engineering into CI/CD?', a: 'Tools: GitHub Actions + Braintrust for prompt-based tests. Example: generate test cases → run them → alert if coverage drops. Cost: minutes of API calls per build.' }
           ]
         }
       }
@@ -18490,6 +18523,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Zendesk AI workflows guide',
             'Gorgias support automation case study'
           ]
+        },
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            { q: 'How can support teams use prompt engineering?', a: 'Use cases: (1) auto-generate responses from FAQ, (2) categorize tickets, (3) draft reply templates, (4) suggest solutions, (5) escalate vs. auto-respond decision. Workflow: customer query → AI draft → human review → send.' },
+            { q: 'How do I ensure consistent quality in AI-assisted support replies?', a: 'Techniques: (1) detailed system prompt (tone, guardrails), (2) examples of good/bad responses, (3) approval queue for AI drafts, (4) metrics tracking (customer satisfaction, time-to-resolve). Expect 80%+ quality after tuning.' },
+            { q: 'What\'s the best way to handle sensitive customer data in support prompts?', a: 'Rules: (1) never include PII in prompts, (2) sanitize inputs (redact customer name, email), (3) local-only processing if available, (4) audit logging. Use Ollama or local LLMs for on-premise deployment if compliance-critical.' },
+            { q: 'Can AI improve support team efficiency?', a: 'Metrics: (1) response time (reduce from hours to minutes), (2) resolution rate (more first-contact resolutions), (3) ticket volume (automate simple queries). Expected: 30-50% faster response time, 20-30% fewer escalations.' },
+            { q: 'How do I set up a support chatbot with prompt engineering?', a: 'Approach: (1) define scope (FAQ only? or all queries?), (2) build knowledge base, (3) write system prompt with tone/guardrails, (4) set escalation triggers, (5) monitor and iterate. Tools: PromptQuorum API, LangChain, or custom setup.' },
+            { q: 'What\'s the risk of over-automating support?', a: 'Risks: (1) customers frustrated by chatbots, (2) complex issues escalate repeatedly, (3) brand tone inconsistency. Mitigation: (1) easy escalation path, (2) human handoff visible, (3) regular feedback loops.' }
+          ]
         }
       }
     },
@@ -18614,6 +18658,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'PromptQuorum framework comparison guide, 2026',
             'CRAFT, Co-STAR, SPECS original research papers',
             'Team surveys from 10+ organizations on framework adoption'
+          ]
+        },
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            { q: 'What should a prompt engineering framework define?', a: 'Framework should cover: (1) prompt template structure, (2) required sections (system prompt, examples, constraints), (3) testing standards, (4) documentation template, (5) approval process, (6) deployment checklist.' },
+            { q: 'Should all team prompts follow the same framework?', a: 'Yes for consistency and maintainability. But allow flexibility for niche use cases. Start strict; relax rules as team grows. Example: production prompts = strict framework, experiments = loose framework.' },
+            { q: 'How do I get the team to use a framework?', a: 'Make it easy: (1) provide templates, (2) automate checks (tests fail if framework violated), (3) show benefits (faster iteration, fewer bugs), (4) lead by example. Enforce via CI/CD, not policing.' },
+            { q: 'Can frameworks help with multi-language prompts?', a: 'Yes. Framework template: system prompt (same across languages) + language-specific examples + validation tests in each language. Store as: prompts/en.yaml, prompts/fr.yaml, etc.' },
+            { q: 'How often should we update the framework?', a: 'Quarterly review of framework vs. practice. Update when: (1) 3+ people suggest change, (2) new tool becomes standard, (3) framework becomes bottleneck. Change process: propose → vote → document → retrain team.' },
+            { q: 'What\'s the relationship between frameworks (CRAFT, CO-STAR) and our team framework?', a: 'Prompt frameworks (CRAFT, CO-STAR) are writing templates. Team framework is organizational: how you store, version, test, approve prompts. Both are needed; they complement each other.' }
           ]
         }
       }
@@ -18749,6 +18804,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'GitHub Actions documentation',
             'PromptFoo open-source setup guide',
             'Small team DevOps practices adapted for prompts'
+          ]
+        },
+        faq: {
+          title: 'FAQ',
+          faqs: [
+            { q: 'What\'s the minimum setup to get started with prompt engineering in a small team?', a: 'Minimum: (1) OpenAI/Anthropic API key, (2) shared document (Notion) or git repo for prompts, (3) weekly sync on what works/doesn\'t work, (4) one person owns prompt library. Cost: $100-200/month.' },
+            { q: 'Do small teams need a prompt management tool?', a: 'Not essential to start. Use git + Notion. Add a tool (Braintrust, PromptQuorum) when: (1) 5+ people, (2) 20+ prompts, (3) testing becomes critical. Transition: export from Notion → import to tool.' },
+            { q: 'What\'s the best way to learn prompt engineering as a team?', a: 'Approach: (1) weekly experiments (each person tests one technique), (2) document findings, (3) share results, (4) adopt winners. Time: 1-2 hours/week per person. Resources: OpenAI guides, this documentation, hands-on experimentation.' },
+            { q: 'How do small teams avoid \'prompt debt\' (losing prompts, duplicates)?', a: 'Prevention: (1) all prompts in one place (git/Notion), (2) naming convention (domain-technique-version), (3) monthly cleanup (remove old, merge duplicates), (4) owner for each prompt.' },
+            { q: 'What metrics should small teams track?', a: 'Start simple: (1) which prompts get reused, (2) which fail most, (3) which save most time, (4) team satisfaction. Tools: spreadsheet or simple dashboard. Advance: move to Braintrust/LangSmith once critical.' },
+            { q: 'How do I justify investment in prompt engineering tools for a small team?', a: 'ROI calculation: (1) time saved (hours/week × hourly rate), (2) quality improvement (fewer errors = fewer fixes), (3) tool cost. Example: 5 hours saved/week × $100/hr = $2,000/week value. Tools cost $50-500/month = 10-100x ROI.' }
           ]
         }
       }
