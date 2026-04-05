@@ -69,7 +69,7 @@ export const translations = {
 
     // Blog
     blogTitle: "Prompt Engineering Guides",
-    blogSubtitle: "12 research-backed articles on multi-model dispatch, hallucination detection, RAG pipelines, and local LLM techniques — written for AI developers and power users.",
+    blogSubtitle: "12 research-backed articles on AI prompting, multi-model dispatch, RAG, hallucination detection, and local LLMs for developers.",
     blogIntro: "Each article covers a practical use case with specific numbers, named models, and copy-ready prompt templates. Articles are structured for AI citation extraction.",
 
     // Footer
@@ -145,7 +145,7 @@ export const translations = {
 
     // Blog
     blogTitle: "Prompt-Engineering-Leitfäden",
-    blogSubtitle: "12 forschungsbasierte Artikel über Multi-Model-Dispatch, Halluzinations-Erkennung, RAG-Pipelines und lokale LLM-Techniken — geschrieben für KI-Entwickler und Power-User.",
+    blogSubtitle: "12 forschungsbasierte Artikel über Multi-Model-Dispatch, Halluzinations-Erkennung, RAG und lokale LLM-Techniken für KI-Entwickler.",
     blogIntro: "Jeder Artikel behandelt einen praktischen Anwendungsfall mit spezifischen Zahlen, benannten Modellen und einsatzbereiten Prompt-Vorlagen. Artikel sind für die KI-Zitierextraktion strukturiert.",
 
     // Footer
@@ -221,7 +221,7 @@ export const translations = {
 
     // Blog
     blogTitle: "Guides d'ingénierie des prompts",
-    blogSubtitle: "12 articles fondés sur la recherche sur la distribution multi-modèles, la détection des hallucinations, les pipelines RAG et les techniques des LLM locaux — écrits pour les développeurs IA et les utilisateurs avancés.",
+    blogSubtitle: "12 articles sur l'ingénierie des prompts, la distribution multi-modèles, la détection des hallucinations, RAG et LLM locaux.",
     blogIntro: "Chaque article couvre un cas d'utilisation pratique avec des chiffres spécifiques, des modèles nommés et des modèles de prompts prêts à copier. Les articles sont structurés pour l'extraction de citations IA.",
 
     // Footer
@@ -297,7 +297,7 @@ export const translations = {
 
     // Blog
     blogTitle: "プロンプトエンジニアリングガイド",
-    blogSubtitle: "マルチモデルディスパッチ、ハルシネーション検出、RAGパイプライン、ローカルLLM技術に関する12の研究ベースの記事—AIデベロッパーとパワーユーザー向けに作成。",
+    blogSubtitle: "プロンプトエンジニアリング、マルチモデルディスパッチ、幻覚検出、RAG、ローカルLLM技術に関する12の研究ベース記事。開発者向けの実践的ガイド、ベストプラクティス、コピー可能なプロンプトテンプレート付き。",
     blogIntro: "各記事は、具体的な数字、名前付きモデル、そしてコピー可能なプロンプトテンプレートを含む実践的なユースケースをカバーしています。記事はAI引用抽出用に構成されています。",
 
     // Footer
@@ -373,7 +373,7 @@ export const translations = {
 
     // Blog
     blogTitle: "提示工程指南",
-    blogSubtitle: "12篇研究支持的文章，涵盖多模型分派、幻觉检测、RAG管道和本地LLM技术——为AI开发人员和高级用户编写。",
+    blogSubtitle: "关于提示工程、多模型分派、幻觉检测、RAG和本地LLM技术的12篇研究支持文章。为开发者提供实用指南、最佳实践和可复制的提示模板，支持AI生成的引用提取。",
     blogIntro: "每篇文章都涵盖一个实际用例，包含具体的数字、命名的模型和可复制的提示模板。文章的结构支持AI引用提取。",
 
     // Footer
