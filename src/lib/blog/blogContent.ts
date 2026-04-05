@@ -11,6 +11,8 @@ export interface BlogSection {
     href: string
     description?: string
   }
+  isTldr?: boolean
+  faqs?: Array<{ q: string; a: string }>
 }
 
 export interface BlogPost {
@@ -20,6 +22,11 @@ export interface BlogPost {
   publishDate: string
   readTime: string
   sections: Record<string, BlogSection>
+  metaDescription?: string
+  educationalLevel?: string
+  faqSchema?: Record<string, unknown>
+  howToSchema?: Record<string, unknown>
+  itemListSchema?: Record<string, unknown>
 }
 
 export const blogContent: Record<string, Record<Language, BlogPost>> = {

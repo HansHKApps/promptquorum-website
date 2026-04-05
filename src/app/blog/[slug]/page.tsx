@@ -234,6 +234,24 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(scholarlyArticleSchema) }}
       />
+      {post.faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(post.faqSchema) }}
+        />
+      )}
+      {post.howToSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(post.howToSchema) }}
+        />
+      )}
+      {post.itemListSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(post.itemListSchema) }}
+        />
+      )}
       <BlogPostClient post={post} slug={slug} initialLang={selectedLang} />
     </>
   )

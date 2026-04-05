@@ -154,6 +154,41 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
                     </a>
                   </div>
                 )}
+
+                {/* TL;DR Callout */}
+                {section.isTldr && section.items && section.items.length > 0 && (
+                  <div className="my-8 p-6 border-l-4 border-primary bg-primary/5 rounded-r-lg">
+                    <div className="flex gap-3">
+                      <span className="text-2xl font-bold text-primary flex-shrink-0">⚡</span>
+                      <div className="w-full">
+                        <h3 className="font-bold text-text-primary mb-3">{section.title}</h3>
+                        <ul className="space-y-2">
+                          {section.items.map((item, idx) => (
+                            <li key={idx} className="text-text-secondary text-sm flex gap-2">
+                              <span className="text-primary font-bold flex-shrink-0">✓</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* FAQ Section */}
+                {section.faqs && section.faqs.length > 0 && (
+                  <div className="my-8 space-y-4">
+                    {section.faqs.map((faq, idx) => (
+                      <details key={idx} className="p-4 border border-text-tertiary rounded-lg cursor-pointer hover:bg-primary/5 transition-colors">
+                        <summary className="font-bold text-text-primary flex justify-between items-center">
+                          {faq.q}
+                          <span className="text-primary text-lg ml-2">+</span>
+                        </summary>
+                        <p className="text-text-secondary mt-3 text-sm leading-relaxed">{faq.a}</p>
+                      </details>
+                    ))}
+                  </div>
+                )}
               </section>
             ))}
           </div>
