@@ -13,24 +13,32 @@ This checklist is used to reaudit already-published articles against the full GE
 ## Full Audit (15 minutes per article)
 
 ### 1. Metadata & SEO
-- [ ] Title: 50–65 characters, answer-first phrasing
-- [ ] Meta description: 150–160 characters, ends with CTA footer
+- [ ] Title: 50–65 characters (tool flags at 65), answer-first phrasing
+- [ ] Meta description: 150–160 characters, ends with "Free beta — April 2026." or similar CTA footer
+- [ ] og:title present and under 60 characters
+- [ ] og:description present and under 160 characters
+- [ ] twitter:title present and under 60 characters
 - [ ] SEO title: Present (if title is long) or absent (if title is short)
 - [ ] JSON-LD schema: Appropriate schema type (Article, HowTo, FAQPage, TechArticle)
 - [ ] Breadcrumbs: Present and correctly structured
 
 ### 2. Structure & Formatting
-- [ ] H2 titles: All are questions or direct answers
+- [ ] H2 titles: All are questions or direct answers (no "Label: Question" pattern)
   - ✓ "What Is a Local LLM?" 
   - ✓ "How Do You Install Ollama?"
   - ✓ "Which Models Are Best for Coding?"
+  - ✗ "Getting Started: How Do You Install?" (label prefix fails)
   - ✗ "Installing Ollama" (missing question format)
+- [ ] H2 count logged — note total number of H2s on page
 - [ ] TLDR section: Present at top, bulleted, 5–8 items
 - [ ] Table of contents: Present, all H2s listed
 - [ ] Code blocks: Language specified, examples runnable
 - [ ] Tables: Columns named, content scannable
 
 ### 3. Content Quality
+- [ ] Word count logged — note actual count
+- [ ] Reading time logged — note in minutes
+- [ ] Internal link count logged — note total number
 - [ ] Intro: Direct answer first, then explanation (answer-first structure)
 - [ ] Every claim: Verifiable (no "best", "leading", "revolutionary")
 - [ ] Bullet lists: Used for 3+ items (not paragraphs)
@@ -42,25 +50,26 @@ This checklist is used to reaudit already-published articles against the full GE
 ### 4. Required Sections (for all article types)
 
 #### Key Takeaways (TLDR)
-- [ ] Present and clearly marked
+- [ ] **TLDR/Key Takeaways present** — PASS/FAIL (tool checks explicitly)
 - [ ] 5–8 bullet points
 - [ ] Covers main learnings from article
 
 #### Common Questions (FAQ)
+- [ ] **FAQ section present** — PASS/FAIL (tool checks explicitly)
 - [ ] Present (unless article < 5 sections)
 - [ ] 5–8 Q&A pairs
 - [ ] Questions are actual user questions (not rhetorical)
 - [ ] Answers are concise (1–2 paragraphs)
 
 #### Related Reading
-- [ ] Present (all articles)
+- [ ] **Related Reading present** — PASS/FAIL (tool checks explicitly)
 - [ ] 4+ internal links
 - [ ] Links are to relevant article slugs with `/` separator
 - [ ] Descriptive anchor text (not "click here")
 - [ ] Format: `[Title](/path/to/article) — Description`
 
 #### Sources
-- [ ] Present (all articles)
+- [ ] **Sources present** — PASS/FAIL (tool checks explicitly)
 - [ ] 3+ citations
 - [ ] Mix of authoritative sources (research papers, official docs, reputable news)
 - [ ] Format: `Label — URL` or markdown links
