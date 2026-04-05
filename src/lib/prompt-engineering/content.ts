@@ -3676,7 +3676,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
-        faq: {
+        faqSection: {
           title: 'Frequently Asked Questions',
           faqs: [
             {
@@ -9189,7 +9189,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '[How to Reduce AI Hallucinations](/prompt-engineering/how-to-reduce-ai-hallucinations) — verification workflows for AI-generated content in academic settings',
           ],
         },
-        faq: {
+        faqSection: {
           title: 'Frequently Asked Questions',
           faqs: [
             {
@@ -9901,6 +9901,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           },
         ],
       },
+      metaDescription: 'How to control AI output format, tone, and length with prompts, and which techniques prevent unwanted formatting across models. Free beta — April 2026.',
+      educationalLevel: 'Intermediate',
       sections: {
 
         definition: {
@@ -10264,6 +10266,52 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
       },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Train AI to Write in Your Brand Voice',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Define Your Brand Voice',
+            text: 'Write a 500–1000 word voice guide: tone, vocabulary, values, style rules, and audience expectations.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Collect Writing Examples',
+            text: 'Gather 5–10 examples of your own writing (emails, social posts, product copy) that exemplify your voice.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Embed Examples in Prompts',
+            text: 'Include your voice guide and 2–3 examples in the system prompt: "Here is our voice guide... Here are examples..."',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test and Score Outputs',
+            text: 'Generate 5–10 samples. Score each for tone consistency, vocabulary match, and values alignment on a 1–5 scale.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Refine and Iterate',
+            text: 'If scores are low, clarify your voice guide and add more specific examples. Re-test.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Brand voice AI is training a language model to write in your unique style: tone, vocabulary, values, perspective.' },
+          { '@type': 'ListItem', position: 2, name: 'Prompt engineering (fast, cheap) works better than fine-tuning (slow, expensive) for most brand voice use cases.' },
+          { '@type': 'ListItem', position: 3, name: 'Effective brand voice requires explicit voice guide (500+ words) + 5+ writing examples, not just descriptions.' },
+          { '@type': 'ListItem', position: 4, name: 'Different models interpret voice differently — test GPT-4o, Claude, Gemini to find the best fit for your brand.' },
+          { '@type': 'ListItem', position: 5, name: 'Consistency metrics: measure tone (1–5), vocabulary match (1–5), values alignment (yes/no) on generated samples.' },
+          { '@type': 'ListItem', position: 6, name: 'Combine prompt engineering with style guides: explicit rules + examples = highest consistency.' },
+          { '@type': 'ListItem', position: 7, name: 'Use brand voice AI for social, emails, product copy, support responses — anywhere scale and consistency matter.' },
+          { '@type': 'ListItem', position: 8, name: 'Use PromptQuorum to test and deploy brand voice across multiple models in parallel.' },
+        ],
+      },
     },
 
     de: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -10476,6 +10524,52 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Build AI Code Quality Checks',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Identify Common AI Code Failures',
+            text: 'List the bugs your AI generator makes most: logic errors, security gaps, API misuse, performance issues.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Write Check Prompts',
+            text: 'Create 3–5 prompts that test for each failure type. Example: "Does this function handle empty lists? Will it SQL-inject?"',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test on Both AI Code and Human Code',
+            text: 'Run your checks on code you know is good and code you know is bad. Refine checks to match reality.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Validate Across Multiple Models',
+            text: 'Test the same code check on GPT-4o, Claude, Gemini. If all 3 agree, pass; if any disagree, human review.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Integrate into CI/CD',
+            text: 'Wire quality checks into your pull request pipeline: generate code → validate → merge only if checks pass.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'AI quality checks run after AI generates code and before deployment, catching AI-specific errors linters miss.' },
+          { '@type': 'ListItem', position: 2, name: 'Common AI code failures: hallucinated functions, off-by-one errors, SQL injection, weak crypto, logic bugs, API misuse.' },
+          { '@type': 'ListItem', position: 3, name: 'Static linters catch ~60% of errors; AI checks catch another ~25%; human review finds the rest.' },
+          { '@type': 'ListItem', position: 4, name: 'Multi-model validation: run the same check on GPT-4o, Claude, Gemini — if all agree, confidence is ~95%.' },
+          { '@type': 'ListItem', position: 5, name: 'Combine prompt engineering + rule-based checks: explicit constraints + AI validation = highest catch rate.' },
+          { '@type': 'ListItem', position: 6, name: 'AI quality checks add 5–10% to generation latency but save 20–40% on debugging and bug fixes.' },
+          { '@type': 'ListItem', position: 7, name: 'Common mistakes: skipping type hints, not testing edge cases, trusting one model, over-constraining checks.' },
+          { '@type': 'ListItem', position: 8, name: 'Use PromptQuorum to deploy quality checks across multiple models in parallel for reliable validation gates.' },
+        ],
       },
     },
 
@@ -12856,6 +12950,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Techniques',
       title: 'Prompt Chaining: How to Break Big Tasks Into Winning Steps',
       intro: 'Prompt chaining is a technique where you break a complex task into multiple smaller prompts and feed the output of one step into the next. This lets you build reliable multi-step workflows instead of relying on a single, overly complicated prompt.',
+      metaDescription: 'How to teach AI your brand voice, create style guides it can follow, and produce consistent branded content across models. Free beta — April 2026.',
+      educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '8 min read',
       schema: {
@@ -13065,6 +13161,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Techniques',
       title: 'Persona Prompting: Give Your AI a Role and Watch It Improve',
       intro: 'Persona prompting is the practice of defining a clear role, worldview, and behavior for an AI model so it consistently answers like a specific expert or character across many prompts and sessions.',
+      metaDescription: 'How to use AI models as effective teaching assistants, tutors, and course designers, with research-backed prompting strategies. Free beta — April 2026.',
+      educationalLevel: 'Beginner',
       publishDate: '2026-03-26',
       readTime: '10 min read',
       schema: {
@@ -14106,6 +14204,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Techniques',
       title: 'Tree of Thought & ReAct: Advanced Reasoning for Hard Problems',
       intro: 'Tree-of-Thought and ReAct prompting are two advanced reasoning techniques: Tree-of-Thought explores multiple possible solution paths like a decision tree, while ReAct interleaves reasoning with explicit "actions" such as searching or retrieving information. Both aim to make complex problem-solving more reliable and transparent.',
+      metaDescription: 'How to teach AI your brand voice, create style guides it can follow, and produce consistent branded content across models. Free beta — April 2026.',
+      educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '8 min read',
       schema: {
@@ -14507,6 +14607,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'RAG Explained: How to Ground AI Answers in Real Data',
       intro: 'Retrieval-Augmented Generation (RAG) is an approach where a language model first retrieves relevant documents from a knowledge source and then uses those documents to generate an answer. As of April 2026, RAG is one of the most effective techniques for grounding AI responses in real data instead of relying only on what the model memorized during training.',
       metaDescription: 'What Retrieval-Augmented Generation (RAG) is, why it reduces hallucination in LLMs, how it works step-by-step, and how to implement RAG in production systems. Free beta — April 2026.',
+      educationalLevel: 'Intermediate',
+      metaDescription: 'How to teach AI your brand voice, create style guides it can follow, and produce consistent branded content across models. Free beta — April 2026.',
       educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '8 min read',
