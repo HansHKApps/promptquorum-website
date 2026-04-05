@@ -13083,7 +13083,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         faqs: [
           { q: 'What is Chain-of-Thought prompting?', a: 'Chain-of-Thought (CoT) prompting asks the model to show its reasoning steps before arriving at a final answer. Instead of jumping to a conclusion, the model "thinks aloud," which improves accuracy and makes reasoning transparent.' },
           { q: 'How much does CoT improve accuracy?', a: 'In PromptQuorum testing, CoT improved accuracy by 7–23% on logic puzzles and multi-step math. Improvement varies by task: highest on reasoning tasks, minimal on simple classification.' },
-          { q: 'What is zero-shot CoT?', a: 'Zero-shot CoT is asking "Let's think step by step" without showing examples. Surprisingly effective on many tasks. Works because the instruction itself primes the model to decompose problems.' },
+          { q: 'What is zero-shot CoT?', a: "Zero-shot CoT is asking \"Let's think step by step\" without showing examples. Surprisingly effective on many tasks. Works because the instruction itself primes the model to decompose problems." },
           { q: 'What is few-shot CoT?', a: 'Few-shot CoT shows 2–5 examples with reasoning steps worked out, then asks the model to follow the same pattern for a new problem. More reliable than zero-shot on specialized tasks.' },
           { q: 'When should I use CoT vs just asking for the answer?', a: 'Use CoT when accuracy matters more than speed (reasoning takes tokens). Use direct answers for simple factual lookups, classification (yes/no), or when reasoning steps are not meaningful.' },
           { q: 'Does CoT work with all models?', a: 'Yes. CoT works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, Llama, Mistral, and other LLMs. Newer models show larger improvements, but all models benefit.' },
@@ -13094,7 +13094,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       commonMistakes: {
         title: 'Common Mistakes',
         items: [
-          'Using CoT on tasks where it doesn't help: simple factual lookups, yes/no classification, or tasks without meaningful reasoning steps',
+          "Using CoT on tasks where it doesn"t help: simple factual lookups, yes/no classification, or tasks without meaningful reasoning steps',
           'Few-shot examples that show bad reasoning: the model learns from examples, so showing sloppy or circular logic sets a bad pattern',
           'Forgetting to instruct the model to show reasoning in the output (just asking for the final answer negates the CoT benefit)',
           'Using CoT on every task: adds 2–5x tokens cost; use selectively on high-stakes or complex reasoning only'
@@ -13702,11 +13702,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         commonMistakes: {
           title: 'Common Mistakes',
           items: [
-            'Using only negatives without positive instructions — models don't know what to do.',
+            "Using only negatives without positive instructions — models don"t know what to do.',
             'Vague negatives ("no bad content") — too broad to enforce; use specific rules instead.',
             'Too many negatives piled on — confuses models and paradoxically increases violations.',
             'Not testing negatives — what works for GPT-4o may fail for Claude or Gemini.',
-            'Negative prompts triggering the opposite behavior — mentioning "don't be biased" can sometimes emphasize bias.',
+            "Negative prompts triggering the opposite behavior — mentioning \"don"t be biased" can sometimes emphasize bias.',
           ],
         },
         relatedReading: {
@@ -14074,7 +14074,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'Common Mistakes',
           items: [
             'Using self-consistency on simple tasks (overkill) — overhead outweighs any accuracy gain.',
-            'Using too few samples (< 3) — not enough voting power; accuracy doesn't improve significantly.',
+            "Using too few samples (< 3) — not enough voting power; accuracy doesn"t improve significantly.',
             'Using self-consistency on non-deterministic tasks — where multiple valid answers exist, majority voting breaks down.',
             'Not parsing reasoning paths correctly — leads to wrong "most common" answer.',
             'Ignoring token cost — a 5x cost might not be justified for a 2% accuracy gain.',
@@ -14477,8 +14477,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'Common Mistakes',
           items: [
             'Using ToT/ReAct on simple tasks (overkill) — overhead outweighs any benefit.',
-            'Not providing clear branch-evaluation criteria for ToT — model doesn't know how to score paths.',
-            'Using ReAct without real tool access — model can't actually call APIs or search; defeats the purpose.',
+            "Not providing clear branch-evaluation criteria for ToT — model doesn"t know how to score paths.',
+            "Using ReAct without real tool access — model can"t actually call APIs or search; defeats the purpose.',
             'Allowing unlimited branching in ToT — model gets lost exploring too many paths; constrain to 3–5 branches max.',
             'Ignoring token cost — ReAct with many tool calls or ToT with deep trees can get expensive fast.',
           ],
@@ -14935,7 +14935,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.',
             'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.',
             'Schema-in-prompt technique works across all models but requires explicit schema definition.',
-            'Always validate parsed output — don't assume the model will strictly follow schema.',
+            "Always validate parsed output — don"t assume the model will strictly follow schema.',
             'Use structured output when downstream code needs to parse or dispatch results automatically.',
             'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).',
             'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.',
@@ -14978,7 +14978,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'No example schema in prompt — model guesses structure instead of following your format.',
             'Trusting output without parsing — always wrap JSON.parse() in try/catch.',
             'Nesting too deeply — simplify schema to 2–3 levels for model reliability.',
-            'Missing required field markers — don't assume optional fields won't appear.',
+            "Missing required field markers — don"t assume optional fields won't appear.',
           ],
         },
         relatedReading: {
