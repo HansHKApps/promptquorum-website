@@ -11808,10 +11808,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Frameworks', title: 'The APE Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '7 Min. Lesezeit', sections: {} },
-    fr: { theme: 'Frameworks', title: 'The APE Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '7 min de lecture', sections: {} },
-    ja: { theme: 'Frameworks', title: 'The APE Framework', intro: '', publishDate: '2026-03-24', readTime: '7分で読める', sections: {} },
-    zh: { theme: 'Frameworks', title: 'The APE Framework', intro: '', publishDate: '2026-03-24', readTime: '阅读约7分钟', sections: {} },
+    de: { theme: 'Frameworks', title: 'Das APE-Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Le framework APE (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'APEフレームワーク（2026）', intro: '', publishDate: '2026-03-24', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'APE框架（2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约6分钟', sections: {} },
   },
 
   'craft-framework': {
@@ -11934,10 +11934,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Frameworks', title: 'The CRAFT Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '7 Min. Lesezeit', sections: {} },
-    fr: { theme: 'Frameworks', title: 'The CRAFT Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '7 min de lecture', sections: {} },
-    ja: { theme: 'Frameworks', title: 'The CRAFT Framework', intro: '', publishDate: '2026-03-24', readTime: '7分で読める', sections: {} },
-    zh: { theme: 'Frameworks', title: 'The CRAFT Framework', intro: '', publishDate: '2026-03-24', readTime: '阅读约7分钟', sections: {} },
+    de: { theme: 'Frameworks', title: 'Das CRAFT-Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Le framework CRAFT (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'CRAFTフレームワーク（2026）', intro: '', publishDate: '2026-03-24', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'CRAFT框架（2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约6分钟', sections: {} },
   },
 
   'co-star-framework': {
