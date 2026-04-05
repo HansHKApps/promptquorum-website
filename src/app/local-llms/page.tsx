@@ -68,12 +68,12 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
         {
           '@type': 'Question',
           name: 'Can local LLMs match cloud models like GPT-4o?',
-          acceptedAnswer': { '@type': 'Answer', text: 'Llama 4, DeepSeek V4, and Qwen3.5 perform similarly to GPT-4 on many tasks (coding, reasoning). GPT-5 and Claude 4.6 still excel on complex, multi-step reasoning. Test on your specific workload to compare.' }
+          acceptedAnswer: { '@type': 'Answer', text: 'Llama 4, DeepSeek V4, and Qwen3.5 perform similarly to GPT-4 on many tasks (coding, reasoning). GPT-5 and Claude 4.6 still excel on complex, multi-step reasoning. Test on your specific workload to compare.' }
         },
         {
           '@type': 'Question',
           name: 'How do I fine-tune a local model?',
-          acceptedAnswer': { '@type': 'Answer', text: 'Fine-tuning local models requires: labeled training data (500+ examples), QLoRA framework for efficient training, 24GB+ VRAM (or use cloud GPU), and 1–4 hours of training time. LoRA adapters let you fine-tune without full retraining.' }
+          acceptedAnswer: { '@type': 'Answer', text: 'Fine-tuning local models requires: labeled training data (500+ examples), QLoRA framework for efficient training, 24GB+ VRAM (or use cloud GPU), and 1–4 hours of training time. LoRA adapters let you fine-tune without full retraining.' }
         }
       ]
     },

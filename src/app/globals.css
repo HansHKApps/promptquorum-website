@@ -80,3 +80,44 @@
     }
   }
 }
+
+/* Glossary table styling */
+@layer components {
+  .glossary-table {
+    @apply w-full text-sm border-collapse;
+  }
+
+  .glossary-table thead tr {
+    @apply border-b border-primary/20 bg-primary/5;
+  }
+
+  .glossary-table th {
+    @apply px-4 py-3 text-left font-bold text-text-primary text-xs uppercase tracking-wider;
+  }
+
+  .glossary-table tbody tr {
+    @apply border-b border-primary/10 transition-colors hover:bg-primary/5;
+  }
+
+  .glossary-table tbody tr:nth-child(2n) {
+    @apply bg-white;
+  }
+
+  .glossary-table tbody tr:nth-child(2n+1) {
+    @apply bg-surface/50;
+  }
+
+  .glossary-table td {
+    @apply px-4 py-3 text-text-secondary;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .glossary-table td:first-child {
+    @apply font-semibold text-primary whitespace-nowrap;
+  }
+
+  .glossary-table td:last-child {
+    @apply text-xs text-text-secondary/70;
+  }
+}

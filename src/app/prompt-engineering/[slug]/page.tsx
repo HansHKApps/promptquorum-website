@@ -87,9 +87,24 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   // Use metaDescription for OG/Twitter when available, otherwise fall back to intro
   const metaDesc = (article as PEArticle & { metaDescription?: string }).metaDescription ?? article.intro
 
+  // Glossary-specific overrides for maximum CTR + keyword density
+  const isGlossary = slug === 'prompt-engineering-glossary'
+  const finalDesc = isGlossary
+    ? 'Essential glossary: 100 prompt engineering terms with definitions, real-world examples, and 400+ citations. Core concepts, agents, safety, RAG, evaluation. Free beta.'
+    : metaDesc
+  const finalOgImage = isGlossary
+    ? 'https://www.promptquorum.com/og-glossary-mindmap-2026.png'
+    : ogImageUrl
+  const finalTitle = isGlossary
+    ? 'Prompt Engineering Glossary: 100 Terms Defined for 2026'
+    : pageTitle
+
   return {
-    title: `${pageTitle} | PromptQuorum`,
-    description: metaDesc,
+    title: `${finalTitle} | PromptQuorum`,
+    description: finalDesc,
+    ...(isGlossary && {
+      keywords: ['prompt engineering glossary', 'AI terms', 'LLM glossary', 'Chain-of-Thought', 'RAG definition', 'prompt injection', 'function calling', 'few-shot prompting', 'temperature AI', 'context window'],
+    }),
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -102,20 +117,20 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       },
     },
     openGraph: {
-      title: article.title,
-      description: metaDesc,
+      title: isGlossary ? 'Prompt Engineering Glossary: 100 Essential Terms (2026)' : article.title,
+      description: finalDesc,
       url: canonicalUrl,
       type: 'article',
       siteName: 'PromptQuorum',
-      images: [{ url: ogImageUrl, width: 1200, height: 630 }],
+      images: [{ url: finalOgImage, width: 1200, height: 630, alt: isGlossary ? 'Prompt Engineering Glossary Mind Map 2026 — 100 Essential Terms' : article.title }],
       publishedTime: article.publishDate,
       modifiedTime: article.dateModified ?? article.publishDate,
     },
     twitter: {
       card: 'summary_large_image',
       site: '@promptquorum',
-      title: article.title,
-      description: metaDesc,
+      title: isGlossary ? 'Prompt Engineering Glossary (100 Terms)' : article.title,
+      description: isGlossary ? 'Chain-of-Thought • RAG • Few-shot • Agents • Temperature • Token Limits. 100 searchable, cited, expert definitions.' : finalDesc,
     },
   }
 }
@@ -228,23 +243,73 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     ],
   }
 
-  // Generate DefinedTermSet schema for glossary
+  // Generate enhanced @graph schema for glossary (DefinedTermSet + FAQPage + SearchAction)
   const definedTermSetSchema = slug === 'prompt-engineering-glossary' ? {
     '@context': 'https://schema.org',
-    '@type': 'DefinedTermSet',
-    name: article.title,
-    description: article.intro,
-    url: canonicalUrl,
-    definedTerm: Object.values(article.sections).flatMap((section) => {
-      if (!section.rows) return []
-      return section.rows.map((row) => ({
-        '@type': 'DefinedTerm',
-        name: row['Term'] || '',
-        description: (row['What it means'] || '').replace(/\*\*/g, ''),
-        url: `${canonicalUrl}#term-${(row['Term'] || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
-        inDefinedTermSet: canonicalUrl,
-      }))
-    }),
+    '@graph': [
+      {
+        '@type': 'DefinedTermSet',
+        '@id': `${canonicalUrl}#termset`,
+        name: 'Prompt Engineering Glossary 2026',
+        description: 'As of April 2026: 100 essential terms for prompt engineering, AI agents, safety, evaluation, and production workflows — with definitions, examples, and citations.',
+        url: canonicalUrl,
+        inLanguage: 'en',
+        datePublished: '2026-03-28',
+        dateModified: '2026-04-05',
+        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        definedTerm: [
+          ...Object.values(article.sections).flatMap((section) => {
+            if (!section.rows) return []
+            return section.rows.map((row) => {
+              const termSlug = (row['Term'] || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+              return {
+                '@type': 'DefinedTerm',
+                name: row['Term'] || '',
+                description: (row['What it means'] || '').replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
+                url: `${canonicalUrl}#term-${termSlug}`,
+                inDefinedTermSet: { '@id': `${canonicalUrl}#termset` },
+              }
+            })
+          }),
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${canonicalUrl}#faq`,
+        mainEntity: [
+          { '@type': 'Question', name: 'What is the difference between zero-shot and few-shot prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Zero-shot asks the model without examples. Few-shot provides 2–5 examples of desired input-output pairs. Few-shot produces better results for specific formats or specialized tasks; zero-shot is faster and cheaper for general tasks.' } },
+          { '@type': 'Question', name: 'What is Chain-of-Thought prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-Thought (CoT) asks the model to explain reasoning step-by-step before answering. It significantly improves accuracy on multi-step problems like math and logic. Trade-off: uses 2–5× more tokens than a direct answer.' } },
+          { '@type': 'Question', name: 'What is RAG (Retrieval-Augmented Generation)?', acceptedAnswer: { '@type': 'Answer', text: 'RAG retrieves relevant documents from a knowledge base and inserts them into the prompt, allowing models to ground answers in current, authoritative data rather than training data alone. Use RAG for private documents, real-time data, or specialized knowledge.' } },
+          { '@type': 'Question', name: 'What is prompt injection and how do I prevent it?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt injection is an attack where user input overrides system instructions. Prevent it by: (1) validating inputs strictly, (2) separating user data from instructions with delimiters, (3) using guardrails to filter malicious patterns, (4) never exposing system prompts to user-accessible fields.' } },
+          { '@type': 'Question', name: 'How does temperature affect AI output quality?', acceptedAnswer: { '@type': 'Answer', text: 'Temperature (0.0–2.0) controls randomness. Low values (0.0–0.3) produce deterministic, factual outputs ideal for coding or extraction. High values (0.7–1.0) produce creative, varied outputs for brainstorming. Use low temp for production; high temp for ideation.' } },
+          { '@type': 'Question', name: 'What is the difference between RAG and fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'RAG retrieves current external data at inference time — fast, cheap, no retraining. Fine-tuning retrains model weights on your data — expensive, requires labeled data, but better for task-specific behavior. RAG + prompt engineering covers 90% of use cases without fine-tuning costs.' } },
+          { '@type': 'Question', name: 'What is function calling in LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Function calling lets an LLM request execution of external code or APIs (e.g., database queries, web search, math) during inference. The model specifies the function name and arguments; your application executes it and returns the result. This is the foundation of agentic behavior.' } },
+          { '@type': 'Question', name: 'How do I reduce AI hallucinations?', acceptedAnswer: { '@type': 'Answer', text: 'Reduce hallucinations by: (1) using RAG to ground answers in real data, (2) lowering temperature to 0.0–0.3, (3) asking the model to cite sources, (4) using structured output with JSON mode, (5) adding verification steps with function calling, (6) running the same prompt across multiple models.' } },
+          { '@type': 'Question', name: 'What is the difference between Chain-of-Thought and Tree-of-Thought?', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-Thought (CoT): single linear reasoning path, step-by-step. Tree-of-Thought (ToT): explores multiple reasoning branches and evaluates paths before selecting the best answer. ToT is more thorough but costs 2–3× more tokens than CoT.' } },
+          { '@type': 'Question', name: 'What is a context window and how does it affect prompting?', acceptedAnswer: { '@type': 'Answer', text: 'A context window is the maximum number of tokens an LLM can process in one request (e.g., 128K or 200K tokens). Larger windows let you include full documents without truncation. Context engineering is the practice of strategically filling that window with the most relevant information.' } },
+          { '@type': 'Question', name: 'What is the difference between system prompt and user prompt?', acceptedAnswer: { '@type': 'Answer', text: 'System prompt: persistent instructions that set the model\'s behavior, role, and output format for the entire conversation. User prompt: the specific task or question per turn. System sets "how to behave"; user specifies "what to do now". Both must be optimized for production use.' } },
+          { '@type': 'Question', name: 'What is agentic behavior in AI?', acceptedAnswer: { '@type': 'Answer', text: 'Agentic behavior means the model autonomously loops through: decide → call tool → observe result → decide again, until a goal is achieved. Agents combine planning (decompose task), execution (tools), memory (state), and termination conditions. All major frontier models support this in 2026.' } },
+          { '@type': 'Question', name: 'What is prompt engineering vs context engineering?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt engineering: crafting instructions, examples, and constraints in the prompt. Context engineering: deciding what goes into the entire context window — system prompt, memory, retrieved documents, tool outputs, conversation history. Context engineering is the more comprehensive 2026 practice.' } },
+          { '@type': 'Question', name: 'What is RLHF?', acceptedAnswer: { '@type': 'Answer', text: 'RLHF (Reinforcement Learning from Human Feedback) trains AI models by having humans rank model outputs, then using those rankings to adjust model weights toward preferred behavior. It is used by OpenAI (GPT), Anthropic (Claude), and Google (Gemini) to align models with human values.' } },
+          { '@type': 'Question', name: 'How should I choose between frontier AI models for my use case?', acceptedAnswer: { '@type': 'Answer', text: 'Test your actual workload across models. GPT-5.x: general reasoning, code. Claude 4.6 Sonnet: long-context analysis, safety. Gemini 3 Pro: multimodal tasks. DeepSeek V4: 70% cheaper. Llama 4: free, runs locally. Grok 4.1: real-time web access. Use PromptQuorum to dispatch one prompt to all models and compare.' } },
+        ],
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
+          { '@type': 'ListItem', position: 2, name: 'Prompt Engineering', item: 'https://www.promptquorum.com/prompt-engineering' },
+          { '@type': 'ListItem', position: 3, name: 'Glossary: 100 Key Terms', item: canonicalUrl },
+        ],
+      },
+      {
+        '@type': 'SearchAction',
+        target: { '@type': 'EntryPoint', urlTemplate: `${canonicalUrl}?search={search_term_string}` },
+        'query-input': 'required name=search_term_string',
+      },
+    ],
   } : null
 
   // Generate LearningResource schemas for each learning path

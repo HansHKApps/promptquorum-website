@@ -8,6 +8,7 @@ import { peContent, type PESection } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { LEARNING_PATHS, TRENDING_TERMS_2026, getTermPaths, DOMAIN_TO_PATH, LEVEL_TO_PATHS, type LearningPath } from '@/lib/prompt-engineering/learningPaths'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { GlossaryComparisonTable } from '@/components/GlossaryComparisonTable'
 
 interface Props {
   slug: string
@@ -869,6 +870,9 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             </ul>
           </section>
         )}
+
+        {/* Commonly Confused Terms table — glossary only */}
+        {slug === 'prompt-engineering-glossary' && <GlossaryComparisonTable />}
 
         {/* Glossary search */}
         {slug === 'prompt-engineering-glossary' && article.sections && (
