@@ -4,7 +4,7 @@ import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
   title: 'Prompt Engineering Guide — 80 Articles on PromptQuorum',
-  description: 'Prompt engineering fundamentals, frameworks (CRAFT, CO-STAR), techniques, tools, evaluation, and team governance. 80 guides for optimizing AI output quality. Free beta — April 2026.',
+  description: 'Prompt engineering fundamentals, frameworks (CRAFT, CO-STAR), techniques, tools, evaluation, governance, workflows, and guides. Free beta — April 2026.',
   alternates: generateAlternates('/prompt-engineering'),
   openGraph: {
     type: 'website',
