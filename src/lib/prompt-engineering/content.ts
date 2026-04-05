@@ -53,6 +53,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'A prompt library is a central, searchable collection of tested prompts with clear metadata so your team can reuse what works instead of reinventing instructions in every chat. Done well, it behaves like a shared "AI playbook": people grab a proven template for a task, adapt a few inputs, and get consistent results across models and projects.',
       publishDate: '2026-03-24',
       readTime: '10 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Building a Prompt Library',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -8180,6 +8182,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI coding assistants reduce time spent on code generation, debugging, and documentation by 30–75% when used with structured prompts and human review. In 2026, 41% of all code written globally is AI-generated or AI-assisted — making prompt quality the single most important variable in the output you receive.',
       publishDate: '2026-03-22',
       readTime: '15 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'AI-Assisted Code Writing',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -8498,6 +8502,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI-powered research tools reduce literature review time from weeks to hours — but the average AI model hallucinates 9.2% of the time on general knowledge questions, making verification workflows mandatory, not optional. In 2026, 75% of global knowledge workers use AI tools regularly. The researchers who get the most from AI treat it as a structured workflow — specific tools for discovery, extraction, synthesis, and verification — not as a single chatbot they ask one question.',
       publishDate: '2026-03-23',
       readTime: '9 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'AI-Powered Research',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -8837,6 +8843,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Generative Engine Optimization (GEO) is the practice of structuring content so that AI-powered search engines — including ChatGPT, Google AI Overviews, Perplexity, Claude, and Microsoft Copilot — retrieve, cite, and recommend your content when answering user questions. GEO does not replace traditional SEO; it adds a second optimization layer for a search landscape where AI assistants handle over 40% of search interactions and nearly 60% of all searches now end without a single click.',
       publishDate: '2026-03-23',
       readTime: '8 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'SEO & AI Integration',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -9157,6 +9165,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI tutoring systems outperform traditional active learning classrooms — a peer-reviewed randomized controlled trial from Harvard University found students using an AI tutor learned more than twice as much in 49 minutes compared to 60 minutes of classroom instruction. In 2026, 85% of teachers and 86% of students in the US used AI during the 2024—25 school year — adoption rates higher than any other industry globally.',
       publishDate: '2026-03-23',
       readTime: '8 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Teaching with AI',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -9498,6 +9508,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI-powered extraction and summarisation reduces document review time by 60—80% while achieving hallucination rates as low as 0.7% on grounded summarisation tasks — the key is choosing the right summarisation type, the right model, and the right prompt structure for each document category.',
       publishDate: '2026-03-23',
       readTime: '8 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Information Extraction & Summarization',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -9839,6 +9851,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI code review tools detect 42–48% of real-world runtime bugs in automated reviews — more than double the sub-20% detection rate of traditional static analysis tools — while reducing code review time by 40% and cutting production bugs by 62%. In 2026, 84% of developers now use AI tools and 41% of all new code is AI-generated, creating a feedback loop where AI that writes code must also review it.',
       publishDate: '2026-03-24',
       readTime: '11 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'AI-Powered Code Review',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -10113,6 +10127,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Before native structured output capabilities existed, models scored below 40% on complex JSON schema compliance; with constrained decoding — used by OpenAI\'s `strict: true` mode and Anthropic\'s Strict Tool Use Mode — JSON Schema compliance reaches 100%, guaranteed at the token level. Output control is the single most important engineering variable between a prototype that works 80% of the time and a production system that works reliably.',
       publishDate: '2026-03-24',
       readTime: '10 min read',
+      primaryTerm: 'Controlling AI Output',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -10386,6 +10401,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'A well-trained brand voice AI lets you generate and review content at scale without losing the tone, style, and personality that make your brand recognizable. Used correctly, it becomes an extension of your brand team: it learns from your best copy, applies those patterns across every channel, and flags anything that sounds off-brand before customers ever see it.',
       publishDate: '2026-03-24',
       readTime: '8 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Brand Voice & AI',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -10658,6 +10675,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'AI-generated code fails traditional quality gates at scale: a large share of AI-written programs contain exploitable vulnerabilities, and a non-trivial fraction of AI-suggested packages or APIs simply do not exist. To keep these hallucinations and AI-specific failure modes out of production, build quality checks must evolve from generic "tests + coverage" gates into AI-aware pipelines that detect unreal APIs, fake dependencies, and confident-but-wrong logic before merge.',
       publishDate: '2026-03-24',
       readTime: '10 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Building Quality Checks with AI',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -13570,6 +13589,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Zero shot prompting uses no examples in the prompt and relies entirely on the model\'s pre-training, while few shot prompting embeds a handful of examples so the model can imitate a desired pattern.',
       publishDate: '2026-03-26',
       readTime: '6 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Zero-Shot vs Few-Shot Prompting',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -13767,6 +13788,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Constrained prompting is a technique where you tell the model not just what to do, but also what it must and must not do, so outputs stay inside clearly defined boundaries. This is essential when you need reliable formats, safe content, or strict compliance with internal rules.',
       publishDate: '2026-03-26',
       readTime: '6 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Constrained Prompting',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -13954,9 +13977,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Chain-of-Thought: Show AI Reasoning (2026)',
       intro: 'Chain-of-thought prompting is a technique where you explicitly ask the model to show its reasoning steps instead of jumping straight to the final answer. As of April 2026, CoT is one of the most reliable techniques for improving accuracy across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and all other language models.',
       metaDescription: 'What Chain-of-Thought prompting is, why it improves LLM accuracy on reasoning tasks across all models, and how to write effective CoT prompts. Free beta — April 2026.',
-      educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '7 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Chain-of-Thought Prompting',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -14182,9 +14206,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Prompt Chaining: Break Big Tasks Into Steps (2026)',
       intro: 'Prompt chaining is a technique where you break a complex task into multiple smaller prompts and feed the output of one step into the next. This lets you build reliable multi-step workflows instead of relying on a single, overly complicated prompt.',
       metaDescription: 'How to teach AI your brand voice, create style guides it can follow, and produce consistent branded content across models. Free beta — April 2026.',
-      educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '8 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Prompt Chaining',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -14309,9 +14334,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Persona Prompting: Give Your AI a Role (2026)',
       intro: 'Persona prompting is the practice of defining a clear role, worldview, and behavior for an AI model so it consistently answers like a specific expert or character across many prompts and sessions.',
       metaDescription: 'How to use AI models as effective teaching assistants, tutors, and course designers, with research-backed prompting strategies. Free beta — April 2026.',
-      educationalLevel: 'Beginner',
       publishDate: '2026-03-26',
       readTime: '10 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Persona Prompting',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -14593,6 +14619,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Negative prompting is a technique where you tell the model what it must avoid—content, style, structure, or behaviors—so outputs stay inside clear boundaries. It acts as a "guardrail layer" on top of your normal instructions.',
       publishDate: '2026-03-26',
       readTime: '6 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Negative Prompting',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -14873,6 +14901,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Self-consistency prompting is a technique where you ask the model to generate multiple reasoning paths for the same task and then aggregate the results, instead of trusting a single answer. This increases reliability on complex reasoning problems.',
       publishDate: '2026-03-26',
       readTime: '7 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'Self-Consistency Prompting',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -15243,9 +15273,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Tree of Thought & ReAct: Advanced Reasoning (2026)',
       intro: 'Tree-of-Thought and ReAct prompting are two advanced reasoning techniques: Tree-of-Thought explores multiple possible solution paths like a decision tree, while ReAct interleaves reasoning with explicit "actions" such as searching or retrieving information. Both aim to make complex problem-solving more reliable and transparent.',
       metaDescription: 'How to teach AI your brand voice, create style guides it can follow, and produce consistent branded content across models. Free beta — April 2026.',
-      educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '8 min read',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'Tree of Thought & ReAct',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -15645,9 +15676,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'RAG Explained: Ground AI in Real Data (2026)',
       intro: 'Retrieval-Augmented Generation (RAG) is an approach where a language model first retrieves relevant documents from a knowledge source and then uses those documents to generate an answer. As of April 2026, RAG is one of the most effective techniques for grounding AI responses in real data instead of relying only on what the model memorized during training.',
       metaDescription: 'What Retrieval-Augmented Generation (RAG) is, why it reduces hallucination in LLMs, how it works step-by-step, and how to implement RAG in production systems. Free beta — April 2026.',
-      educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '8 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'RAG (Retrieval-Augmented Generation)',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -15852,9 +15884,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Structured Output & JSON: Return Usable Data (2026)',
       intro: 'Structured output and JSON mode are techniques for getting language models to produce machine-readable results instead of free-form text. As of April 2026, these techniques are essential when you want to plug AI directly into applications, dashboards, or automation workflows across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models.',
       metaDescription: 'What structured output and JSON mode are, how to write prompts that return valid JSON reliably, and when to use them in production. Free beta — April 2026.',
-      educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '7 min read',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Structured Output & JSON Mode',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
