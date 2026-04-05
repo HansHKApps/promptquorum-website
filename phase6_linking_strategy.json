@@ -1,0 +1,324 @@
+{
+  "linking_strategy": {
+    "description": "Strategic internal linking for 52 prompt engineering articles. Links are organized by content relationships, not generic.",
+    "groups": {
+      "fundamentals": [
+        "what-is-prompt-engineering",
+        "prompt-engineering-history",
+        "prompt-building-blocks",
+        "how-llms-actually-work",
+        "context-windows-explained",
+        "tokens-costs-limits"
+      ],
+      "techniques": [
+        "zero-shot-vs-few-shot",
+        "constrained-prompting",
+        "chain-of-thought-prompting",
+        "persona-prompting",
+        "prompt-chaining",
+        "negative-prompting",
+        "self-consistency-prompting",
+        "tree-of-thought-react",
+        "rag-explained",
+        "structured-output-json-mode"
+      ],
+      "use_topics": [
+        "write-better-code-with-ai",
+        "ai-powered-research",
+        "seo-meets-ai",
+        "teaching-with-ai",
+        "extract-and-summarise",
+        "ai-code-review",
+        "your-brand-voice-ai",
+        "build-quality-checks",
+        "control-the-output"
+      ],
+      "frameworks": [
+        "which-framework-to-use",
+        "craft-framework",
+        "co-star-framework",
+        "specs-framework",
+        "risen-framework"
+      ],
+      "comparisons": [
+        "prompt-engineering-vs-fine-tuning",
+        "prompt-engineering-vs-rag",
+        "gpt-claude-gemini-which-model",
+        "braintrust-vs-prompthub-vs-vellum"
+      ],
+      "evaluation": [
+        "how-to-evaluate-prompt-quality",
+        "prompt-evaluation-metrics",
+        "how-to-test-prompts-across-models",
+        "how-to-reduce-prompt-brittleness",
+        "prompt-review-workflow-teams"
+      ],
+      "governance": [
+        "prompt-version-control",
+        "prompt-documentation-templates",
+        "prompt-governance-production",
+        "prompt-security-tools",
+        "prompt-audit-regression"
+      ],
+      "tools": [
+        "best-pe-tools-2026",
+        "best-prompt-optimization-tools-teams",
+        "best-prompt-testing-tools",
+        "best-prompt-management-platforms",
+        "best-prompt-engineering-ides"
+      ],
+      "workflows": [
+        "prompts-to-repeatable-workflows",
+        "prompt-framework-for-teams",
+        "pe-for-content-teams",
+        "pe-for-developers-workflow",
+        "pe-for-support-operations",
+        "pe-setup-small-teams"
+      ]
+    },
+    "link_patterns": {
+      "zero-shot-vs-few-shot": [
+        "what-is-prompt-engineering",
+        "chain-of-thought-prompting",
+        "prompt-building-blocks",
+        "how-to-evaluate-prompt-quality",
+        "how-llms-actually-work"
+      ],
+      "constrained-prompting": [
+        "control-the-output",
+        "structured-output-json-mode",
+        "zero-shot-vs-few-shot",
+        "how-to-reduce-prompt-brittleness"
+      ],
+      "chain-of-thought-prompting": [
+        "zero-shot-vs-few-shot",
+        "tree-of-thought-react",
+        "how-llms-actually-work",
+        "self-consistency-prompting",
+        "craft-framework"
+      ],
+      "persona-prompting": [
+        "your-brand-voice-ai",
+        "prompt-building-blocks",
+        "which-framework-to-use"
+      ],
+      "prompt-chaining": [
+        "chain-of-thought-prompting",
+        "prompts-to-repeatable-workflows",
+        "control-the-output",
+        "how-to-reduce-prompt-brittleness"
+      ],
+      "negative-prompting": [
+        "constrained-prompting",
+        "prompt-building-blocks",
+        "how-to-reduce-prompt-brittleness"
+      ],
+      "self-consistency-prompting": [
+        "chain-of-thought-prompting",
+        "tree-of-thought-react",
+        "how-to-evaluate-prompt-quality"
+      ],
+      "tree-of-thought-react": [
+        "chain-of-thought-prompting",
+        "self-consistency-prompting",
+        "how-llms-actually-work",
+        "prompt-chaining"
+      ],
+      "rag-explained": [
+        "how-llms-actually-work",
+        "tokens-costs-limits",
+        "prompt-engineering-vs-rag",
+        "extract-and-summarise",
+        "best-prompt-testing-tools"
+      ],
+      "structured-output-json-mode": [
+        "control-the-output",
+        "constrained-prompting",
+        "how-to-reduce-prompt-brittleness",
+        "best-tools-structured-output"
+      ],
+      "write-better-code-with-ai": [
+        "how-llms-actually-work",
+        "chain-of-thought-prompting",
+        "ai-code-review",
+        "pe-for-developers-workflow",
+        "prompt-engineering-vs-fine-tuning"
+      ],
+      "ai-powered-research": [
+        "extract-and-summarise",
+        "rag-explained",
+        "how-to-evaluate-prompt-quality",
+        "ai-hallucinations-how-to-stop"
+      ],
+      "seo-meets-ai": [
+        "how-to-evaluate-prompt-quality",
+        "your-brand-voice-ai",
+        "prompt-building-blocks"
+      ],
+      "teaching-with-ai": [
+        "persona-prompting",
+        "chain-of-thought-prompting",
+        "your-brand-voice-ai"
+      ],
+      "extract-and-summarise": [
+        "rag-explained",
+        "how-to-reduce-prompt-brittleness",
+        "structured-output-json-mode",
+        "prompt-evaluation-metrics"
+      ],
+      "ai-code-review": [
+        "write-better-code-with-ai",
+        "pe-for-developers-workflow",
+        "prompt-evaluation-metrics"
+      ],
+      "your-brand-voice-ai": [
+        "persona-prompting",
+        "pe-for-content-teams",
+        "which-framework-to-use",
+        "control-the-output"
+      ],
+      "build-quality-checks": [
+        "how-to-evaluate-prompt-quality",
+        "best-prompt-testing-tools",
+        "prompt-governance-production"
+      ],
+      "control-the-output": [
+        "constrained-prompting",
+        "structured-output-json-mode",
+        "how-to-reduce-prompt-brittleness",
+        "prompt-building-blocks"
+      ],
+      "prompt-engineering-vs-fine-tuning": [
+        "what-is-prompt-engineering",
+        "how-llms-actually-work",
+        "best-pe-tools-2026"
+      ],
+      "prompt-engineering-vs-rag": [
+        "rag-explained",
+        "how-llms-actually-work",
+        "extract-and-summarise"
+      ],
+      "gpt-claude-gemini-which-model": [
+        "how-to-test-prompts-across-models",
+        "prompt-engineering-vs-fine-tuning",
+        "how-llms-actually-work"
+      ],
+      "how-to-evaluate-prompt-quality": [
+        "prompt-evaluation-metrics",
+        "how-to-test-prompts-across-models",
+        "best-prompt-testing-tools",
+        "how-to-reduce-prompt-brittleness"
+      ],
+      "prompt-evaluation-metrics": [
+        "how-to-evaluate-prompt-quality",
+        "best-prompt-testing-tools",
+        "prompt-review-workflow-teams"
+      ],
+      "how-to-test-prompts-across-models": [
+        "how-to-evaluate-prompt-quality",
+        "gpt-claude-gemini-which-model",
+        "best-prompt-testing-tools"
+      ],
+      "how-to-reduce-prompt-brittleness": [
+        "how-to-evaluate-prompt-quality",
+        "chain-of-thought-prompting",
+        "constrained-prompting",
+        "prompt-building-blocks"
+      ],
+      "prompt-review-workflow-teams": [
+        "prompt-governance-production",
+        "prompt-version-control",
+        "best-prompt-testing-tools",
+        "how-to-evaluate-prompt-quality"
+      ],
+      "prompt-version-control": [
+        "prompt-documentation-templates",
+        "prompt-governance-production",
+        "prompts-to-repeatable-workflows"
+      ],
+      "prompt-documentation-templates": [
+        "prompt-version-control",
+        "prompt-governance-production",
+        "build-a-prompt-library"
+      ],
+      "prompt-governance-production": [
+        "prompt-version-control",
+        "prompt-review-workflow-teams",
+        "prompt-security-tools",
+        "prompts-to-repeatable-workflows"
+      ],
+      "prompt-security-tools": [
+        "prompt-governance-production",
+        "prompt-audit-regression",
+        "control-the-output"
+      ],
+      "prompt-audit-regression": [
+        "prompt-governance-production",
+        "how-to-evaluate-prompt-quality",
+        "how-to-test-prompts-across-models"
+      ],
+      "best-pe-tools-2026": [
+        "best-prompt-optimization-tools-teams",
+        "best-prompt-testing-tools",
+        "best-prompt-management-platforms",
+        "best-prompt-engineering-ides"
+      ],
+      "best-prompt-optimization-tools-teams": [
+        "best-prompt-testing-tools",
+        "prompt-evaluation-metrics",
+        "how-to-evaluate-prompt-quality"
+      ],
+      "best-prompt-testing-tools": [
+        "best-prompt-optimization-tools-teams",
+        "how-to-evaluate-prompt-quality",
+        "prompt-evaluation-metrics"
+      ],
+      "best-prompt-management-platforms": [
+        "prompt-version-control",
+        "prompt-documentation-templates",
+        "build-a-prompt-library"
+      ],
+      "best-prompt-engineering-ides": [
+        "best-pe-tools-2026",
+        "write-better-code-with-ai",
+        "prompt-version-control"
+      ],
+      "prompts-to-repeatable-workflows": [
+        "prompt-chaining",
+        "prompt-governance-production",
+        "prompt-evaluation-metrics",
+        "best-prompt-testing-tools"
+      ],
+      "prompt-framework-for-teams": [
+        "which-framework-to-use",
+        "craft-framework",
+        "co-star-framework",
+        "prompt-documentation-templates"
+      ],
+      "pe-for-content-teams": [
+        "your-brand-voice-ai",
+        "control-the-output",
+        "prompts-to-repeatable-workflows",
+        "best-prompt-testing-tools"
+      ],
+      "pe-for-developers-workflow": [
+        "write-better-code-with-ai",
+        "prompt-version-control",
+        "best-prompt-testing-tools",
+        "prompt-governance-production"
+      ],
+      "pe-for-support-operations": [
+        "your-brand-voice-ai",
+        "control-the-output",
+        "prompts-to-repeatable-workflows",
+        "how-to-evaluate-prompt-quality"
+      ],
+      "pe-setup-small-teams": [
+        "prompt-version-control",
+        "best-prompt-testing-tools",
+        "best-pe-tools-2026",
+        "which-framework-to-use"
+      ]
+    }
+  }
+}
