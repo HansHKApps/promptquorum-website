@@ -203,7 +203,75 @@ to detect injections that attempt to alter response format.
 
 ---
 
-## Rule 2d: H2 and H3 Heading Rules for AI Search Engines
+## Rule 2d: CTR Optimization — Title Tags and Meta Descriptions
+
+**CTR (Click-Through Rate) optimization ensures your content appears compellingly in search results and AI chat responses.** Every article needs a strong title tag (for Google SERPs and AI citations) and a meta description (for preview text under search results and in AI summaries).
+
+These are mandatory for all new articles and existing articles should be updated on edit.
+
+### Title Tag Rules
+
+Title tags appear in Google search results, browser tabs, and AI engine citations. Google truncates titles longer than 60 characters, so every character counts.
+
+| Rule | Guideline | Why It Matters |
+|------|-----------|---|
+| **Include a number** | "8 Structural Limits of LLMs" beats "Structural Limits of LLMs" | Numbered titles get 15–30% higher CTR. Numbers signal concrete, actionable content. |
+| **Add the year for evergreen content** | "Chain-of-Thought Prompting (2026)" | Year signals freshness and relevance, increasing CTR 15–30% on informational queries. |
+| **Use a colon to split keyword from hook** | "Chain-of-Thought Prompting: Make AI Show Its Reasoning" (not "How to Use Chain-of-Thought Prompting") | Colon structure makes both keyword and benefit scannable in SERP. "How to" phrasing buries the technique. |
+| **Max 60 characters** | Count every character including spaces. Test in Google Preview. | Anything longer truncates and becomes unclickable. |
+| **Never start with "The" or "A"** | Start with the keyword. "Multi-Model AI Comparison: How to..." (not "The Guide to Multi-Model...") | Articles and determiners waste prime characters that could hook the searcher. |
+| **Use statement titles for informational pages** | "8 Ways to Reduce LLM Hallucinations" (not "How do you reduce hallucinations?") | Statement titles work for informational search intent. Question titles are for FAQ-intent queries only (e.g., "What is GPT-4o?"). |
+
+**Examples:**
+
+| ❌ Wrong | ✅ Right | Issue |
+|---|---|---|
+| How to Use Prompt Injection | Prompt Injection: Attack Vectors & Defenses | Buries technique, unclear benefit |
+| Limit Context Windows | 5 Ways to Optimize Context Windows (2026) | Missing number and year; unclear scope |
+| Tips for Writing Prompts | Effective Prompting: 12 Techniques That Work (2026) | Weak verb; no number or year |
+| Understanding Hallucinations | LLM Hallucinations: Why They Happen & How to Fix | Direct benefit; keyword-first structure |
+
+---
+
+### Meta Description Rules
+
+The meta description is the 2–3 line preview snippet under your title in Google results and in AI chat summaries. It must make someone click.
+
+| Rule | Guideline | Why It Matters |
+|------|-----------|---|
+| **Specific result or data point in line 1** | "38 of 40 prompts produced on-format output using..." beats "Learn how single-step prompting works" | Concrete results prove value. Vague descriptions (Learn how, Discover) waste space and bore searchers. |
+| **Include primary keyword naturally** | Keyword should appear in first 1–2 sentences, not forced | Natural inclusion helps Google match queries; forced keywords reduce CTR. |
+| **End with implicit call to action — a tension or gap** | "Here's what most guides miss." or "The fix is one line." | Tension creates curiosity. Incomplete statements pull clicks. |
+| **Max 155 characters** | Write to exactly 150 chars to be safe; test in Google Preview | Anything longer truncates. AI engines truncate differently per platform. |
+| **Never use "In this article we will..."** | Delete these sentences; they waste all 155 characters on preamble | Immediate payoff, not editorial setup. |
+| **Never repeat title word-for-word** | Title: "8 Ways..."; Description should NOT start with "8 Ways..." | Duplication wastes space. Use the description to add new information. |
+
+**Examples:**
+
+| ❌ Wrong | ✅ Right | Issue |
+|---|---|---|
+| In this article we will explore how prompt injection works and how to defend against it. | Prompt injection exploits the fact that LLMs can't distinguish instructions from user data. Here's how to defend your system. | Preamble wastes space; right version is specific and actionable |
+| Learn effective techniques for writing better prompts using AI. | 12 prompt techniques tested across GPT-4o, Claude, and Gemini. See which ones reduce hallucination by 40%+. | Vague verb; right version has specific results and models |
+| This guide covers how to use different AI models together. | Compare AI models side-by-side: see which excels at reasoning, coding, long contexts, and cost. One tool, five models. | No benefit stated; right version shows the specific payoff |
+
+---
+
+### CTR Optimization Checklist
+
+- [ ] Title tag is max 60 characters (including spaces)
+- [ ] Title includes a number (preferred) or year (for evergreen content)
+- [ ] Title uses colon structure if possible (keyword: benefit)
+- [ ] Title starts with keyword, not "The" or "A"
+- [ ] Meta description is 140–155 characters
+- [ ] Meta description opens with a specific result, metric, or fact
+- [ ] Meta description includes the primary keyword naturally (not forced)
+- [ ] Meta description ends with a tension or gap ("here's what most miss", "the fix is...", etc.)
+- [ ] Meta description does NOT repeat the title
+- [ ] Meta description does NOT start with "In this article..."
+
+---
+
+## Rule 2e: H2 and H3 Heading Rules for AI Search Engines
 
 H2 and H3 tags are semantic signals to Google, Perplexity, ChatGPT, Gemini, and Bing Copilot. These rules ensure headings match real search queries and maximize AI engine citation extraction.
 
