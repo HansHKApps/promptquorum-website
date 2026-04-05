@@ -1,26 +1,32 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
 import { HowItWorksPageClient } from '@/components/HowItWorksPageClient'
 import { generateAlternates } from '@/lib/hreflang'
 
-export const metadata: Metadata = {
-  title: 'How Multi-Model AI Dispatch & Consensus Works | PromptQuorum',
-  description: 'How PromptQuorum works: write structured prompts with 9 frameworks, optimize with your own LLM, dispatch simultaneously to 25+ AI services, then run 13 types of consensus analysis — Hallucination Detection, Contradiction Detection, Best Answer Selection, and more.',
-  alternates: generateAlternates('/how-it-works'),
-  openGraph: {
-    type: 'website',
-    url: 'https://www.promptquorum.com/how-it-works',
-    siteName: 'PromptQuorum',
-    title: 'How Multi-Model AI Dispatch & Consensus Works | PromptQuorum',
-    description: 'Write one prompt, dispatch to 25+ AI models simultaneously, then run Quorum analysis — Hallucination Detection, Contradiction Detection, Best Answer Selection, and 10 more analysis types.',
-    images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 630, alt: 'PromptQuorum — One Prompt. Every Model. One Verdict.' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@promptquorum',
-    title: 'How Multi-Model AI Dispatch & Consensus Works | PromptQuorum',
-    description: 'Write one prompt, dispatch to 25+ AI models simultaneously, then run Quorum analysis — Hallucination Detection, Contradiction Detection, Best Answer Selection, and more.',
-    images: ['https://www.promptquorum.com/og-image.png'],
-  },
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.howItWorksMetaTitle,
+    description: t.howItWorksMetaDescription,
+    alternates: generateAlternates('/how-it-works'),
+    openGraph: {
+      title: t.howItWorksMetaTitle,
+      description: t.howItWorksMetaDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.howItWorksMetaTitle,
+      description: t.howItWorksMetaDescription,
+    },
+  }
 }
 
 interface PageProps {

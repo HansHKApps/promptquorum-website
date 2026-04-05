@@ -1,15 +1,33 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
+import { generateAlternates } from '@/lib/hreflang'
 import { LandingPageServer } from '@/components/LandingPageServer'
 import { ConfirmedToast } from '@/components/ConfirmedToast'
 
-export const metadata: Metadata = {
-  description: 'Dispatch one prompt to 25+ AI models simultaneously. Compare responses, detect hallucinations, and get consensus. Free to use with your API key.',
-  openGraph: {
-    description: "Stop testing one AI model at a time. PromptQuorum sends your prompt to 25+ models at once — GPT-4o, Claude, Gemini, Mistral, Llama, DeepSeek — and surfaces which answers agree. Hallucination detection included.",
-  },
-  twitter: {
-    description: 'One prompt → 25+ AI models → consensus answer 🤖 Compare GPT-4o, Claude, Gemini in parallel. Hallucination detection built in. Free — BYOK.',
-  },
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.homeMetaTitle,
+    description: t.homeMetaDescription,
+    alternates: generateAlternates('/'),
+    openGraph: {
+      title: t.homeMetaTitle,
+      description: t.homeMetaDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.homeMetaTitle,
+      description: t.homeMetaDescription,
+    },
+  }
 }
 
 interface PageProps {

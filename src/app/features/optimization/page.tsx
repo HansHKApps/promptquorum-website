@@ -1,14 +1,37 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
+import { generateAlternates } from '@/lib/hreflang'
 import { OptimizationShowcase } from '@/components/OptimizationShowcase'
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'Prompt Optimization Results | PromptQuorum',
-  description: 'See how PromptQuorum optimizes and refines your prompts. Review quality assessments, version history, and improvement suggestions.',
-  openGraph: {
-    title: 'Prompt Optimization Results | PromptQuorum',
-    description: 'See how PromptQuorum optimizes and refines your prompts. Review quality assessments, version history, and improvement suggestions.',
-  },
+interface PageProps {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.featuresOptimizationMetaTitle,
+    description: t.featuresOptimizationMetaDescription,
+    alternates: generateAlternates('/features/optimization'),
+    openGraph: {
+      title: t.featuresOptimizationMetaTitle,
+      description: t.featuresOptimizationMetaDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.featuresOptimizationMetaTitle,
+      description: t.featuresOptimizationMetaDescription,
+    },
+  }
 }
 
 export default function OptimizationPage() {

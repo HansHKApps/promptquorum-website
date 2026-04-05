@@ -72,6 +72,38 @@ export const translations = {
     blogSubtitle: "12 research-backed articles on AI prompting, multi-model dispatch, RAG, hallucination detection, and local LLMs for developers.",
     blogIntro: "Each article covers a practical use case with specific numbers, named models, and copy-ready prompt templates. Articles are structured for AI citation extraction.",
 
+    // SEO Meta Tags — Group A
+    homeMetaTitle: "PromptQuorum — One Prompt. 25+ AI Models. Consensus.",
+    homeMetaDescription: "Dispatch one prompt to 25+ AI models simultaneously. Compare responses, detect hallucinations, and get consensus. Free with your API key or local LLM.",
+    featuresMetaTitle: "Features: AI Dispatch, Frameworks & Consensus | PromptQuorum",
+    featuresMetaDescription: "PromptQuorum dispatches prompts to 25+ AI providers using 9 frameworks (CO-STAR, CRAFT, RISEN) and runs consensus analysis. Free with your API key.",
+    howItWorksMetaTitle: "How PromptQuorum Works: 4-Stage AI Pipeline",
+    howItWorksMetaDescription: "PromptQuorum's four-stage pipeline optimizes your prompt, dispatches to 25+ AI models simultaneously, then runs consensus scoring to surface the best answer.",
+    faqMetaTitle: "PromptQuorum FAQ: Pricing, Privacy & AI Providers",
+    faqMetaDescription: "26 answers about PromptQuorum: multi-model dispatch, consensus scoring, 9 prompt frameworks, local LLM support, BYOM privacy model, and getting started.",
+
+    // SEO Meta Tags — Group B
+    promptEngineeringHubTitle: "Prompt Engineering Hub: 80 Guides | PromptQuorum",
+    promptEngineeringHubDescription: "80 research-backed articles on prompt engineering techniques, frameworks (CO-STAR, CRAFT, RISEN), tools, evaluation, governance, and workflows for developers.",
+    localLlmsHubTitle: "Local LLMs 2026: Run AI Models Offline | PromptQuorum",
+    localLlmsHubDescription: "Complete guides to running local AI models with Ollama, LM Studio, and open-source models (Llama, Qwen, DeepSeek). Hardware requirements, benchmarks, setup.",
+    compareMetaTitle: "PromptQuorum vs. Competitors: Feature Comparison (2026)",
+    compareMetaDescription: "Compare PromptQuorum with Poe, LM Arena, OpenMark, and AiZolo: dispatch, consensus, local LLM support, API key control, framework library.",
+    frameworksMetaTitle: "Prompt Frameworks: CO-STAR, CRAFT, RISEN & More",
+    frameworksMetaDescription: "Complete guides to 9 prompt engineering frameworks: CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, RTF, Google Prompt, and Single Prompt Line.",
+
+    // SEO Meta Tags — Group C
+    featuresOptimizationMetaTitle: "Prompt Optimization Results | PromptQuorum",
+    featuresOptimizationMetaDescription: "See how PromptQuorum optimizes your prompts: quality assessments, version history, improvement suggestions, and detailed refinement metrics.",
+    featuresQuorumMetaTitle: "Quorum: Multi-Model Consensus Analysis | PromptQuorum",
+    featuresQuorumMetaDescription: "Collect responses from multiple AI models, analyze consensus patterns, identify key differences, and synthesize insights across providers.",
+    downloadMetaTitle: "Download PromptQuorum for Mac & Windows | Free",
+    downloadMetaDescription: "Download PromptQuorum desktop app for macOS and Windows. Dispatch to 25+ AI models, run consensus analysis, work offline with local LLMs.",
+    aboutMetaTitle: "About PromptQuorum — Built by Hans Kuepper",
+    aboutMetaDescription: "PromptQuorum is built by Hans Kuepper, an independent developer focused on privacy-first AI tools. Learn about the mission, product, and philosophy.",
+    privacyMetaTitle: "Privacy Policy | PromptQuorum",
+    privacyMetaDescription: "Privacy Policy for PromptQuorum. Learn how we collect, use, and protect your data, your GDPR rights, and how to contact us with data requests.",
+
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Built with care for AI power users.",
   },
@@ -147,6 +179,38 @@ export const translations = {
     blogTitle: "Prompt-Engineering-Leitfäden",
     blogSubtitle: "12 forschungsbasierte Artikel über Multi-Model-Dispatch, Halluzinations-Erkennung, RAG und lokale LLM-Techniken für KI-Entwickler.",
     blogIntro: "Jeder Artikel behandelt einen praktischen Anwendungsfall mit spezifischen Zahlen, benannten Modellen und einsatzbereiten Prompt-Vorlagen. Artikel sind für die KI-Zitierextraktion strukturiert.",
+
+    // SEO Meta Tags — Group A
+    homeMetaTitle: "PromptQuorum — Ein Prompt. 25+ KI-Modelle. Konsens.",
+    homeMetaDescription: "Senden Sie einen Prompt gleichzeitig an 25+ KI-Modelle. Vergleichen Sie Antworten, erkennen Sie Halluzinationen und erhalten Sie einen Konsens. Kostenlos mit Ihrem API-Key.",
+    featuresMetaTitle: "Funktionen: KI-Versand, Frameworks & Konsens | PromptQuorum",
+    featuresMetaDescription: "PromptQuorum sendet Prompts an 25+ KI-Anbieter mit 9 Frameworks (CO-STAR, CRAFT, RISEN) und führt Konsensanalyse durch. Kostenlos mit eigenem API-Key.",
+    howItWorksMetaTitle: "So funktioniert PromptQuorum: 4-Stufen-Pipeline",
+    howItWorksMetaDescription: "PromptQuorums vierstufige Pipeline optimiert Ihren Prompt, sendet ihn an 25+ KI-Modelle gleichzeitig und führt Konsensscoring durch.",
+    faqMetaTitle: "PromptQuorum FAQ: Preise, Datenschutz & KI-Anbieter",
+    faqMetaDescription: "26 Antworten zu PromptQuorum: Multi-Model-Versand, Konsensscoring, 9 Prompt-Frameworks, lokaler LLM-Support, Datenschutz-Modell.",
+
+    // SEO Meta Tags — Group B
+    promptEngineeringHubTitle: "Prompt-Engineering-Hub: 80 Leitfäden | PromptQuorum",
+    promptEngineeringHubDescription: "80 forschungsbasierte Artikel zu Prompt-Engineering-Techniken, Frameworks (CO-STAR, CRAFT, RISEN), Tools, Bewertung und Workflows für Entwickler.",
+    localLlmsHubTitle: "Lokale LLMs 2026: KI-Modelle offline ausführen | PromptQuorum",
+    localLlmsHubDescription: "Vollständige Anleitungen zum Ausführen lokaler KI-Modelle mit Ollama, LM Studio und Open-Source-Modellen. Hardware-Anforderungen, Benchmarks, Setup.",
+    compareMetaTitle: "PromptQuorum vs. Konkurrenz: Vergleich 2026",
+    compareMetaDescription: "Vergleichen Sie PromptQuorum mit Poe, LM Arena und OpenMark: Versand, Konsens, lokaler LLM-Support, API-Key-Kontrolle.",
+    frameworksMetaTitle: "Prompt-Frameworks: CO-STAR, CRAFT, RISEN & mehr",
+    frameworksMetaDescription: "Vollständige Anleitungen zu 9 Prompt-Engineering-Frameworks: CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, RTF und mehr.",
+
+    // SEO Meta Tags — Group C
+    featuresOptimizationMetaTitle: "Prompt-Optimierungsergebnisse | PromptQuorum",
+    featuresOptimizationMetaDescription: "Sehen Sie, wie PromptQuorum Ihre Prompts optimiert: Qualitätsbewertungen, Versionsverlauf, Verbesserungsvorschläge.",
+    featuresQuorumMetaTitle: "Quorum: Multi-Model-Konsensanalyse | PromptQuorum",
+    featuresQuorumMetaDescription: "Sammeln Sie Antworten von mehreren KI-Modellen, analysieren Sie Konsensmuster und synthetisieren Sie Erkenntnisse.",
+    downloadMetaTitle: "PromptQuorum für Mac & Windows herunterladen",
+    downloadMetaDescription: "Laden Sie die PromptQuorum-Desktop-App herunter. Versand an 25+ KI-Modelle, Konsensanalyse, Offline-Betrieb mit lokalen LLMs.",
+    aboutMetaTitle: "Über PromptQuorum — Entwickelt von Hans Kuepper",
+    aboutMetaDescription: "PromptQuorum wurde von Hans Kuepper entwickelt, ein unabhängiger Entwickler mit Fokus auf datenschutzorientierte KI-Tools.",
+    privacyMetaTitle: "Datenschutzrichtlinie | PromptQuorum",
+    privacyMetaDescription: "Datenschutzrichtlinie für PromptQuorum. Erfahren Sie, wie wir Ihre Daten sammeln, nutzen und schützen. GDPR-Rechte.",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Mit Sorgfalt entwickelt fuer KI-Power-User.",
@@ -224,6 +288,38 @@ export const translations = {
     blogSubtitle: "12 articles sur l'ingénierie des prompts, la distribution multi-modèles, la détection des hallucinations, RAG et LLM locaux.",
     blogIntro: "Chaque article couvre un cas d'utilisation pratique avec des chiffres spécifiques, des modèles nommés et des modèles de prompts prêts à copier. Les articles sont structurés pour l'extraction de citations IA.",
 
+    // SEO Meta Tags — Group A
+    homeMetaTitle: "PromptQuorum — Un Prompt. 25+ Modèles IA. Consensus.",
+    homeMetaDescription: "Envoyez un prompt à 25+ modèles IA simultanément. Comparez les réponses, détectez les hallucinations et obtenez un consensus. Gratuit avec votre clé API.",
+    featuresMetaTitle: "Fonctionnalités: Envoi Multi-IA, Frameworks & Consensus",
+    featuresMetaDescription: "PromptQuorum envoie des prompts à 25+ fournisseurs IA avec 9 frameworks (CO-STAR, CRAFT, RISEN) et analyse le consensus. Gratuit avec votre clé API.",
+    howItWorksMetaTitle: "Comment fonctionne PromptQuorum: Pipeline en 4 étapes",
+    howItWorksMetaDescription: "Le pipeline en 4 étapes de PromptQuorum optimise votre prompt, l'envoie à 25+ modèles IA simultanément et exécute la notation du consensus.",
+    faqMetaTitle: "FAQ PromptQuorum: Tarification, Confidentialité & Fournisseurs",
+    faqMetaDescription: "26 réponses sur PromptQuorum: dispatch multi-modèles, consensus, 9 frameworks, support LLM local, modèle de confidentialité.",
+
+    // SEO Meta Tags — Group B
+    promptEngineeringHubTitle: "Hub d'ingénierie des prompts: 80 Guides | PromptQuorum",
+    promptEngineeringHubDescription: "80 articles sur les techniques d'ingénierie des prompts, frameworks (CO-STAR, CRAFT, RISEN), outils, évaluation et workflows.",
+    localLlmsHubTitle: "LLMs locaux 2026: Exécutez les modèles IA hors ligne",
+    localLlmsHubDescription: "Guides complets pour exécuter des modèles IA locaux avec Ollama, LM Studio et modèles open-source. Configurations matérielles, benchmarks.",
+    compareMetaTitle: "PromptQuorum vs concurrents: Comparaison des fonctionnalités",
+    compareMetaDescription: "Comparez PromptQuorum avec Poe, LM Arena et OpenMark: dispatch, consensus, support LLM local, contrôle des clés API.",
+    frameworksMetaTitle: "Frameworks de prompts: CO-STAR, CRAFT, RISEN & plus",
+    frameworksMetaDescription: "Guides complets de 9 frameworks d'ingénierie des prompts: CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, RTF et autres.",
+
+    // SEO Meta Tags — Group C
+    featuresOptimizationMetaTitle: "Résultats d'optimisation des prompts | PromptQuorum",
+    featuresOptimizationMetaDescription: "Voyez comment PromptQuorum optimise vos prompts: évaluations de qualité, historique des versions, suggestions d'amélioration.",
+    featuresQuorumMetaTitle: "Quorum: Analyse du consensus multi-modèles | PromptQuorum",
+    featuresQuorumMetaDescription: "Collectez les réponses de plusieurs modèles IA, analysez les schémas de consensus et synthétisez les insights.",
+    downloadMetaTitle: "Télécharger PromptQuorum pour Mac & Windows | Gratuit",
+    downloadMetaDescription: "Téléchargez l'application de bureau PromptQuorum. Dispatch à 25+ modèles IA, analyse de consensus, hors ligne avec LLMs locaux.",
+    aboutMetaTitle: "À propos de PromptQuorum — Créé par Hans Kuepper",
+    aboutMetaDescription: "PromptQuorum est créé par Hans Kuepper, développeur indépendant axé sur les outils IA respectueux de la confidentialité.",
+    privacyMetaTitle: "Politique de confidentialité | PromptQuorum",
+    privacyMetaDescription: "Politique de confidentialité pour PromptQuorum. Découvrez comment nous collectons, utilisons et protégeons vos données.",
+
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. Developpe avec soin pour les experts IA.",
   },
@@ -300,6 +396,38 @@ export const translations = {
     blogSubtitle: "プロンプトエンジニアリング、マルチモデルディスパッチ、幻覚検出、RAG、ローカルLLM技術に関する12の研究ベース記事。開発者向けの実践的ガイド、ベストプラクティス、コピー可能なプロンプトテンプレート付き。",
     blogIntro: "各記事は、具体的な数字、名前付きモデル、そしてコピー可能なプロンプトテンプレートを含む実践的なユースケースをカバーしています。記事はAI引用抽出用に構成されています。",
 
+    // SEO Meta Tags — Group A
+    homeMetaTitle: "PromptQuorum — ワンプロンプト。25+ AIモデル。コンセンサス。",
+    homeMetaDescription: "1つのプロンプトを25+ AIモデルに同時に送信します。回答を比較し、幻覚を検出し、コンセンサスを取得します。APIキーで無料。",
+    featuresMetaTitle: "機能: AI分発、フレームワーク & コンセンサス | PromptQuorum",
+    featuresMetaDescription: "PromptQuorumは25+ のAIプロバイダーに9つのフレームワーク(CO-STAR、CRAFT、RISEN)を使用してプロンプトを送信し、コンセンサス分析を実行します。",
+    howItWorksMetaTitle: "PromptQuorumの仕組み: 4段階のAIパイプライン",
+    howItWorksMetaDescription: "PromptQuorumの4段階パイプラインはプロンプトを最適化し、25+ のAIモデルに同時に送信し、コンセンサススコアリングを実行します。",
+    faqMetaTitle: "PromptQuorum FAQ: 価格、プライバシー & AIプロバイダー",
+    faqMetaDescription: "PromptQuorumについての26の回答: マルチモデルディスパッチ、コンセンサススコアリング、9つのプロンプトフレームワーク、ローカルLLMサポート。",
+
+    // SEO Meta Tags — Group B
+    promptEngineeringHubTitle: "プロンプトエンジニアリングハブ: 80ガイド | PromptQuorum",
+    promptEngineeringHubDescription: "プロンプトエンジニアリングの技法、フレームワーク(CO-STAR、CRAFT、RISEN)、ツール、評価、ワークフローに関する80の研究ベース記事。",
+    localLlmsHubTitle: "ローカルLLMs 2026: AIモデルをオフライン実行 | PromptQuorum",
+    localLlmsHubDescription: "Ollama、LM Studio、オープンソースモデルを使用してローカルAIモデルを実行するための完全ガイド。ハードウェア要件、ベンチマーク。",
+    compareMetaTitle: "PromptQuorum vs 競合他社: 機能比較 (2026)",
+    compareMetaDescription: "PromptQuorumをPoe、LM Arena、OpenMarkと比較: ディスパッチ、コンセンサス、ローカルLLMサポート、APIキーコントロール。",
+    frameworksMetaTitle: "プロンプトフレームワーク: CO-STAR、CRAFT、RISENなど",
+    frameworksMetaDescription: "9つのプロンプトエンジニアリングフレームワークへの完全ガイド: CO-STAR、CRAFT、RISEN、TRACE、APE、SPECS、RTFなど。",
+
+    // SEO Meta Tags — Group C
+    featuresOptimizationMetaTitle: "プロンプト最適化結果 | PromptQuorum",
+    featuresOptimizationMetaDescription: "PromptQuorumがプロンプトをどのように最適化するか見てください: 品質評価、バージョン履歴、改善提案。",
+    featuresQuorumMetaTitle: "Quorum: マルチモデルコンセンサス分析 | PromptQuorum",
+    featuresQuorumMetaDescription: "複数のAIモデルから回答を収集し、コンセンサスパターンを分析し、インサイトを統合します。",
+    downloadMetaTitle: "PromptQuorum for Mac & Windows をダウンロード | 無料",
+    downloadMetaDescription: "PromptQuorumデスクトップアプリをダウンロード。25+ AIモデルへのディスパッチ、コンセンサス分析、ローカルLLMでのオフライン動作。",
+    aboutMetaTitle: "PromptQuorumについて — Hans Kuepper が開発",
+    aboutMetaDescription: "PromptQuorumはプライバシー第一のAIツールを開発する独立開発者Hans Kuepperが開発しました。",
+    privacyMetaTitle: "プライバシーポリシー | PromptQuorum",
+    privacyMetaDescription: "PromptQuorumのプライバシーポリシー。データの収集、使用、保護方法、GDPR権について学びます。",
+
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. AIパワーユーザー向けに丁寧に開発。",
   },
@@ -375,6 +503,38 @@ export const translations = {
     blogTitle: "提示工程指南",
     blogSubtitle: "关于提示工程、多模型分派、幻觉检测、RAG和本地LLM技术的12篇研究支持文章。为开发者提供实用指南、最佳实践和可复制的提示模板，支持AI生成的引用提取。",
     blogIntro: "每篇文章都涵盖一个实际用例，包含具体的数字、命名的模型和可复制的提示模板。文章的结构支持AI引用提取。",
+
+    // SEO Meta Tags — Group A
+    homeMetaTitle: "PromptQuorum — 一个提示。25+ AI模型。共识。",
+    homeMetaDescription: "同时将一个提示发送到25+ AI模型。比较响应、检测幻觉并获得共识。使用您的API密钥免费。",
+    featuresMetaTitle: "功能: AI分发、框架 & 共识 | PromptQuorum",
+    featuresMetaDescription: "PromptQuorum使用9个框架(CO-STAR、CRAFT、RISEN)向25+ AI提供商分发提示，并运行共识分析。使用您的API密钥免费。",
+    howItWorksMetaTitle: "PromptQuorum如何工作: 4阶段AI管道",
+    howItWorksMetaDescription: "PromptQuorum的4阶段管道优化您的提示，同时分发到25+ AI模型，然后运行共识评分。",
+    faqMetaTitle: "PromptQuorum常见问题: 定价、隐私 & AI提供商",
+    faqMetaDescription: "关于PromptQuorum的26个答案: 多模型分发、共识评分、9个提示框架、本地LLM支持。",
+
+    // SEO Meta Tags — Group B
+    promptEngineeringHubTitle: "提示工程中心: 80个指南 | PromptQuorum",
+    promptEngineeringHubDescription: "关于提示工程技术、框架(CO-STAR、CRAFT、RISEN)、工具、评估和工作流的80篇研究文章。",
+    localLlmsHubTitle: "本地LLMs 2026: 离线运行AI模型 | PromptQuorum",
+    localLlmsHubDescription: "使用Ollama、LM Studio和开源模型运行本地AI模型的完整指南。硬件要求、基准测试、设置。",
+    compareMetaTitle: "PromptQuorum vs 竞争对手: 功能对比 (2026)",
+    compareMetaDescription: "将PromptQuorum与Poe、LM Arena和OpenMark进行比较: 分发、共识、本地LLM支持、API密钥控制。",
+    frameworksMetaTitle: "提示框架: CO-STAR、CRAFT、RISEN等",
+    frameworksMetaDescription: "9个提示工程框架的完整指南: CO-STAR、CRAFT、RISEN、TRACE、APE、SPECS、RTF等。",
+
+    // SEO Meta Tags — Group C
+    featuresOptimizationMetaTitle: "提示优化结果 | PromptQuorum",
+    featuresOptimizationMetaDescription: "查看PromptQuorum如何优化您的提示: 质量评估、版本历史、改进建议。",
+    featuresQuorumMetaTitle: "Quorum: 多模型共识分析 | PromptQuorum",
+    featuresQuorumMetaDescription: "从多个AI模型收集响应、分析共识模式并合成见解。",
+    downloadMetaTitle: "下载PromptQuorum Mac & Windows | 免费",
+    downloadMetaDescription: "下载PromptQuorum桌面应用。分发到25+ AI模型、运行共识分析、使用本地LLM离线工作。",
+    aboutMetaTitle: "关于PromptQuorum — 由Hans Kuepper开发",
+    aboutMetaDescription: "PromptQuorum由专注于隐私优先AI工具的独立开发者Hans Kuepper开发。",
+    privacyMetaTitle: "隐私政策 | PromptQuorum",
+    privacyMetaDescription: "PromptQuorum隐私政策。了解我们如何收集、使用和保护您的数据以及您的GDPR权利。",
 
     // Footer
     footerCopyright: "(c) 2026 PromptQuorum. 为AI高级用户精心打造。",

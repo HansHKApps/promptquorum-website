@@ -1,14 +1,37 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
+import { generateAlternates } from '@/lib/hreflang'
 import { QuorumShowcase } from '@/components/QuorumShowcase'
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'Quorum — Multi-Model Consensus Analysis | PromptQuorum',
-  description: 'Collect responses from multiple AI models, analyze consensus patterns, identify key differences, and synthesize insights across LLMs.',
-  openGraph: {
-    title: 'Quorum — Multi-Model Consensus Analysis | PromptQuorum',
-    description: 'Collect responses from multiple AI models, analyze consensus patterns, identify key differences, and synthesize insights across LLMs.',
-  },
+interface PageProps {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.featuresQuorumMetaTitle,
+    description: t.featuresQuorumMetaDescription,
+    alternates: generateAlternates('/features/quorum'),
+    openGraph: {
+      title: t.featuresQuorumMetaTitle,
+      description: t.featuresQuorumMetaDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.featuresQuorumMetaTitle,
+      description: t.featuresQuorumMetaDescription,
+    },
+  }
 }
 
 export default function QuorumPage() {

@@ -1,27 +1,36 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
+import { generateAlternates } from '@/lib/hreflang'
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy | PromptQuorum',
-  description: 'Privacy Policy for PromptQuorum. Learn how we collect, use, and protect your data, your rights under GDPR, and how to contact us with data requests.',
-  alternates: {
-    canonical: 'https://www.promptquorum.com/privacy',
-  },
-  robots: 'noindex, follow',
-  openGraph: {
-    type: 'website',
-    url: 'https://www.promptquorum.com/privacy',
-    siteName: 'PromptQuorum',
-    title: 'Privacy Policy | PromptQuorum',
-    description: 'Privacy Policy for PromptQuorum. Learn how we collect, use, and protect your data, your rights under GDPR, and how to contact us with data requests.',
-    images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 630, alt: 'PromptQuorum — One Prompt. Every Model. One Verdict.' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@promptquorum',
-    title: 'Privacy Policy | PromptQuorum',
-    description: 'Privacy Policy for PromptQuorum. Learn how we collect, use, and protect your data, your rights under GDPR, and how to contact us with data requests.',
-    images: ['https://www.promptquorum.com/og-image.png'],
-  },
+interface PageProps {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.privacyMetaTitle,
+    description: t.privacyMetaDescription,
+    alternates: generateAlternates('/privacy'),
+    robots: 'noindex, follow',
+    openGraph: {
+      title: t.privacyMetaTitle,
+      description: t.privacyMetaDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.privacyMetaTitle,
+      description: t.privacyMetaDescription,
+    },
+  }
 }
 
 const EFFECTIVE_DATE = '15 March 2026'

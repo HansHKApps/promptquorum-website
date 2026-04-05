@@ -1,11 +1,35 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
+import { generateAlternates } from '@/lib/hreflang'
 
-export const metadata: Metadata = {
-  title: 'Download PromptQuorum — Multi-Model AI Dispatch for Mac & Windows',
-  description: 'Download PromptQuorum desktop app for macOS and Windows. Dispatch prompts to 25+ AI models simultaneously, run consensus analysis, and work fully offline with local LLMs. Free, no account required.',
-  alternates: {
-    canonical: 'https://www.promptquorum.com/download',
-  },
+interface PageProps {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.downloadMetaTitle,
+    description: t.downloadMetaDescription,
+    alternates: generateAlternates('/download'),
+    openGraph: {
+      title: t.downloadMetaTitle,
+      description: t.downloadMetaDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.downloadMetaTitle,
+      description: t.downloadMetaDescription,
+    },
+  }
 }
 
 export default function DownloadPage() {

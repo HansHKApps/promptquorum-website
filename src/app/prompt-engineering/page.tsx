@@ -1,26 +1,32 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
 import { PromptEngineeringHub } from '@/components/PromptEngineeringHub'
 import { generateAlternates } from '@/lib/hreflang'
 
-export const metadata: Metadata = {
-  title: 'Prompt Engineering Guide — 80 Articles on PromptQuorum',
-  description: 'Prompt engineering fundamentals, frameworks (CRAFT, CO-STAR), techniques, tools, evaluation, governance, workflows, and guides. Free beta — April 2026.',
-  alternates: generateAlternates('/prompt-engineering'),
-  openGraph: {
-    type: 'website',
-    url: 'https://www.promptquorum.com/prompt-engineering',
-    siteName: 'PromptQuorum',
-    title: 'Prompt Engineering Guide — 80 Articles on PromptQuorum',
-    description: 'Fundamentals, frameworks, techniques, tools, evaluation, governance, and workflows for writing better AI prompts.',
-    images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 630, alt: 'PromptQuorum Prompt Engineering Guide' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@promptquorum',
-    title: 'Prompt Engineering Guide — 80 Articles',
-    description: 'Fundamentals, frameworks, techniques, tools, evaluation, governance, and workflows for better AI prompts.',
-    images: ['https://www.promptquorum.com/og-image.png'],
-  },
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.promptEngineeringHubTitle,
+    description: t.promptEngineeringHubDescription,
+    alternates: generateAlternates('/prompt-engineering'),
+    openGraph: {
+      title: t.promptEngineeringHubTitle,
+      description: t.promptEngineeringHubDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.promptEngineeringHubTitle,
+      description: t.promptEngineeringHubDescription,
+    },
+  }
 }
 
 interface PageProps {

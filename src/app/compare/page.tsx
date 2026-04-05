@@ -1,17 +1,32 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
 import { ComparePageClient } from '@/components/ComparePageClient'
 import { generateAlternates } from '@/lib/hreflang'
 
-export const metadata: Metadata = {
-  title: 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo — Multi-LLM Tools Compared (2026)',
-  description: 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo: compare simultaneous dispatch, consensus scoring, local LLM support, and API key control in 2026.',
-  alternates: generateAlternates('/compare'),
-  openGraph: {
-    title: 'PromptQuorum vs Poe vs LM Arena vs OpenMark vs AiZolo — Multi-LLM Tools Compared',
-    description: 'The definitive 2026 comparison of multi-LLM tools. Simultaneous dispatch, consensus scoring, local LLM support, and pricing — all in one table.',
-    url: 'https://www.promptquorum.com/compare',
-    type: 'article',
-  },
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.compareMetaTitle,
+    description: t.compareMetaDescription,
+    alternates: generateAlternates('/compare'),
+    openGraph: {
+      title: t.compareMetaTitle,
+      description: t.compareMetaDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.compareMetaTitle,
+      description: t.compareMetaDescription,
+    },
+  }
 }
 
 interface PageProps {

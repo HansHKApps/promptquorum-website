@@ -1,18 +1,32 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
 import { FeaturesPageClient } from '@/components/FeaturesPageClient'
 import { generateAlternates } from '@/lib/hreflang'
 
-export const metadata: Metadata = {
-  title: '9 Prompt Frameworks, Multi-Model Dispatch & Consensus Analysis | PromptQuorum',
-  description: 'As of April 2026: PromptQuorum features 9 frameworks, dispatch to 25+ AI providers, 13 consensus analysis types, hallucination detection, and offline local LLM support.',
-  openGraph: {
-    description: "PromptQuorum gives you 9 structured frameworks to write better prompts, dispatches to 25+ AI models in parallel, then runs 13 Quorum analysis types to find the best answer. No tab-switching needed.",
-  },
-  twitter: {
-    card: 'summary_large_image',
-    description: 'Write better prompts 🔧 → 9 frameworks + 25+ model dispatch + 13 consensus analysis types. Compare GPT-4o, Claude, Gemini simultaneously.',
-  },
-  alternates: generateAlternates('/features'),
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.featuresMetaTitle,
+    description: t.featuresMetaDescription,
+    alternates: generateAlternates('/features'),
+    openGraph: {
+      title: t.featuresMetaTitle,
+      description: t.featuresMetaDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.featuresMetaTitle,
+      description: t.featuresMetaDescription,
+    },
+  }
 }
 
 interface PageProps {

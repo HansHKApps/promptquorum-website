@@ -1,23 +1,32 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
 import { FAQPageClient } from '@/components/FAQPageClient'
 import { generateAlternates } from '@/lib/hreflang'
 
-export const metadata: Metadata = {
-  title: 'FAQ — Multi-Model AI Dispatch, Consensus Scoring & Prompt Frameworks | PromptQuorum',
-  description: '26 answers about PromptQuorum: how multi-model dispatch works, consensus scoring, hallucination detection, 9 prompt frameworks (CO-STAR, CRAFT, RISEN), local LLM support, BYOM privacy model, and getting started.',
-  openGraph: {
-    title: 'PromptQuorum FAQ | Frameworks, Privacy & Multi-Model Dispatch',
-    description: "26 questions answered: how multi-model dispatch works, what Quorum consensus scoring detects, all 9 prompt frameworks explained, and how API keys stay private in your browser only.",
-    images: [{ url: '/og-image.png', alt: 'PromptQuorum FAQ' }],
-    type: 'website',
-    url: 'https://www.promptquorum.com/faq',
-    siteName: 'PromptQuorum',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    description: '26 answers about PromptQuorum 📋 → 9 frameworks, 25+ model dispatch, local LLMs, hallucination detection, BYOK privacy. Free.',
-  },
-  alternates: generateAlternates('/faq'),
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.faqMetaTitle,
+    description: t.faqMetaDescription,
+    alternates: generateAlternates('/faq'),
+    openGraph: {
+      title: t.faqMetaTitle,
+      description: t.faqMetaDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.faqMetaTitle,
+      description: t.faqMetaDescription,
+    },
+  }
 }
 
 interface PageProps {

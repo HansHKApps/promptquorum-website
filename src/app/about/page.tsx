@@ -1,27 +1,36 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
+import { generateAlternates } from '@/lib/hreflang'
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'About | PromptQuorum — Built by Hans Kuepper',
-  description: 'PromptQuorum is built by Hans Kuepper, an independent developer focused on privacy-first AI tools. Learn about the mission, the product, and how to get in touch.',
-  alternates: {
-    canonical: 'https://www.promptquorum.com/about',
-  },
-  openGraph: {
-    type: 'profile',
-    url: 'https://www.promptquorum.com/about',
-    siteName: 'PromptQuorum',
-    title: 'About PromptQuorum — Built by Hans Kuepper',
-    description: 'PromptQuorum is built by Hans Kuepper, an independent developer focused on privacy-first AI tools. Learn about the mission, the product, and how to get in touch.',
-    images: [{ url: 'https://www.promptquorum.com/og-image.png', width: 1200, height: 630, alt: 'PromptQuorum — One Prompt. Every Model. One Verdict.' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@promptquorum',
-    title: 'About PromptQuorum — Built by Hans Kuepper',
-    description: 'PromptQuorum is built by Hans Kuepper, an independent developer focused on privacy-first AI tools.',
-    images: ['https://www.promptquorum.com/og-image.png'],
-  },
+interface PageProps {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.aboutMetaTitle,
+    description: t.aboutMetaDescription,
+    alternates: generateAlternates('/about'),
+    openGraph: {
+      title: t.aboutMetaTitle,
+      description: t.aboutMetaDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.aboutMetaTitle,
+      description: t.aboutMetaDescription,
+    },
+  }
 }
 
 export default function AboutPage() {

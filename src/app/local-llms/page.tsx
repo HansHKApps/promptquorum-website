@@ -1,23 +1,32 @@
 import type { Metadata } from 'next'
+import { translations } from '@/translations'
 import { LocalLLMsHub } from '@/components/LocalLLMsHub'
 import { generateAlternates } from '@/lib/hreflang'
 
-export const metadata: Metadata = {
-  title: 'Local LLMs 2026: How to Run AI Models Offline | PromptQuorum',
-  description: 'Run open-source models locally (Llama 4, Qwen3.5, DeepSeek) with Ollama, LM Studio. Hardware requirements, benchmarks, fine-tuning, RAG. As of April 2026.',
-  openGraph: {
-    title: 'Local LLMs 2026: Complete Guide | PromptQuorum',
-    description: "Stop paying for AI APIs. Run Llama 4, Qwen3.5, DeepSeek, and 70B+ models locally on your own hardware — full privacy, offline capable, zero usage limits.",
-    images: [{ url: '/og-image.png', alt: 'PromptQuorum — Local LLMs 2026 Guide' }],
-    type: 'website',
-    siteName: 'PromptQuorum',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Run AI Offline: Local LLMs Guide 2026',
-    description: 'Run AI offline 🖥️ → Ollama, LM Studio, 70B models on your own hardware. 58 guides. Full privacy, zero API costs.',
-  },
-  alternates: generateAlternates('/local-llms'),
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  const sp = await searchParams
+  const lang = (sp?.lang as string) || 'en'
+  const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
+  const selectedLang = validLangs.includes(lang) ? lang : 'en'
+  const t = translations[selectedLang as keyof typeof translations]
+
+  return {
+    title: t.localLlmsHubTitle,
+    description: t.localLlmsHubDescription,
+    alternates: generateAlternates('/local-llms'),
+    openGraph: {
+      title: t.localLlmsHubTitle,
+      description: t.localLlmsHubDescription,
+      images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
+      type: 'website',
+      siteName: 'PromptQuorum',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.localLlmsHubTitle,
+      description: t.localLlmsHubDescription,
+    },
+  }
 }
 
 interface PageProps {
