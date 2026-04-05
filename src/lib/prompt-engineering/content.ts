@@ -284,15 +284,15 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           content: [
             'Every effective prompt is assembled from some combination of these seven elements. You rarely need all seven at once — the skill is knowing which ones to include for a given task.',
             'A 2024 survey of prompting techniques (Schulhoff et al., "The Prompt Report", arXiv:2406.06608) catalogued over 58 discrete techniques used in production AI systems — all are structured variations of these seven building blocks applied in different combinations.',
-            'For a deeper breakdown with examples of each element in action, see [Fundamentals: The 5 Building Blocks Every Prompt Needs].',
+            'For a deeper breakdown with examples of each element in action, see [The 5 Building Blocks Every Prompt Needs](/prompt-engineering/prompt-building-blocks).',
           ],
           items: [
             '**Objective:** The task or question, stated precisely — what you want the model to produce',
             '**Context:** Background information the model needs to answer correctly — who is asking, what the output is for, what constraints apply',
             '**Instructions:** Specific steps or rules the model should follow — "list in order of importance", "write in second person", "use only the provided data"',
-            '**Examples:** 1–3 sample input/output pairs that demonstrate the exact format or style you want (few-shot prompting)',
+            '**Examples:** 1–3 sample input/output pairs that demonstrate the exact format or style you want — a technique called [few-shot prompting](/prompt-engineering/zero-shot-vs-few-shot)',
             '**Constraints:** Explicit limits on what the model should NOT do — forbidden topics, banned phrases, length caps, style restrictions',
-            '**Output format:** How the answer should be structured — bullet list, JSON object, Markdown table, numbered steps, plain paragraph',
+            '**Output format:** How the answer should be structured — bullet list, JSON object, Markdown table, numbered steps, plain paragraph. For machine-readable results, see [structured output and JSON mode](/prompt-engineering/structured-output-json-mode).',
             '**Role / persona:** A defined expertise or perspective for the model to adopt — "Act as a senior data analyst" or "You are a concise technical writer"',
           ],
         },
@@ -315,12 +315,15 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         techniques: {
           title: 'Common Prompt Engineering Techniques',
+          content: [
+            'Beyond the seven core building blocks, there are dozen+ specialized techniques that improve output for specific categories of tasks. These techniques are all combinations of the building blocks, applied strategically:',
+          ],
           tableFormat: true,
           items: [
             '| Technique | Best For | Example |',
             '|---|---|---|',
             '| Few-shot prompting | Teaching through examples | Providing 2–3 sample input/output pairs |',
-            '| Chain-of-thought | Logic and multi-step tasks | "Think step-by-step before answering" |',
+            '| [Chain-of-thought](/prompt-engineering/chain-of-thought-prompting) | Logic and multi-step tasks | "Think step-by-step before answering" |',
             '| Role-prompting | Domain-specific expertise | "Act as a marketing copywriter" |',
             '| Constraint-based | Limiting output style | "Write in exactly 150 words, no technical jargon" |',
             '| Negative prompting | Avoiding specific behaviors | "Do not use buzzwords or clichés" |',
@@ -328,7 +331,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '| Structured output | Machine-readable results | "Respond in JSON format with these fields..." |',
             '| Prompt chaining | Multi-step workflows | Breaking one complex task into 3–4 sequential prompts |',
             '| Tree-of-thought | Exploring multiple paths | "Consider 3 different approaches before choosing" |',
-            '| RAG (Retrieval-Augmented Generation) | Grounding in facts | Attaching recent documents before prompting |',
+            '| [RAG (Retrieval-Augmented Generation)](/prompt-engineering/rag-explained) | Grounding in facts | Attaching recent documents before prompting |',
             '| Persona-based | Different communication styles | "Explain like I am a 10-year-old" |',
           ],
         },
@@ -2440,7 +2443,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         block1Link: {
-          content: 'To understand how role prompting evolved as models became more capable of following instructions, see [Fundamentals: From GPT-2 to Today: How Prompt Engineering Evolved].',
+          content: 'To understand how role prompting evolved as models became more capable of following instructions, see [How Prompt Engineering Evolved](/prompt-engineering/prompt-engineering-history).',
         },
 
         block2: {
@@ -2458,7 +2461,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         block2Link: {
-          content: 'Instructions interact directly with whether you provide examples — see [Techniques: Zero-Shot vs. Few-Shot: Which Approach Gets Better Results?] for when each approach works best.',
+          content: 'Instructions interact directly with whether you provide examples — see [Zero-Shot vs. Few-Shot](/prompt-engineering/zero-shot-vs-few-shot) for when each approach works best.',
         },
 
         block3: {
@@ -2495,7 +2498,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         block4Links: {
-          content: 'For the technique of using exclusions to shape output, see [Techniques: Negative Prompting: Tell the AI What NOT to Do]. For why unconstrained prompts hallucinate more, see [Fundamentals: AI Hallucinations: Why AI Makes Things Up — and How to Stop Them].',
+          content: 'For why unconstrained prompts hallucinate more, see [AI Hallucinations: Why AI Makes Things Up — and How to Stop Them](/prompt-engineering/ai-hallucinations-how-to-stop).',
         },
 
         block5: {
@@ -2513,7 +2516,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         block5Link: {
-          content: 'For a full guide to JSON mode and structured output across different models, see [Techniques: Structured Output & JSON Mode: Get AI to Return Usable Data].',
+          content: 'For a full guide to JSON mode and structured output across different models, see [Structured Output & JSON Mode](/prompt-engineering/structured-output-json-mode).',
         },
 
         template: {
@@ -2549,7 +2552,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
 
         frameworksLinks: {
-          content: 'PromptQuorum includes 9 built-in frameworks that pre-fill these blocks in different configurations depending on the task type. For framework-specific guides, see [Frameworks: Which Prompt Framework Should You Use?], [Frameworks: CRAFT Framework], and [Frameworks: CO-STAR Framework].',
+          content: 'PromptQuorum includes 9 built-in frameworks that pre-fill these blocks in different configurations depending on the task type. For framework-specific guides, see [Which Prompt Framework Should You Use?](/prompt-engineering/which-framework-to-use), [CRAFT Framework](/prompt-engineering/craft-framework), and [CO-STAR Framework](/prompt-engineering/co-star-framework).',
         },
 
         mistakes: {
@@ -6838,7 +6841,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         whyForgets: { title: 'Why AI "Forgets"', content: ['**When the total tokens in a conversation (system prompt + chat history + user input + tools + expected output) exceed the context window, older parts are truncated, summarised, or dropped entirely.**', 'This is not memory loss like human forgetfulness. The model is not "thinking and then forgetting." It literally does not see the truncated text — it no longer exists in the model\'s input space.', '**Common symptoms of hitting the context limit:**'], items: ['The AI ignores or contradicts an instruction you gave 30 messages ago', 'In a long creative story, the model forgets character names, details, or constraints you established earlier', 'In a research chat spanning many turns, facts get mixed up or the model reinvents information', 'The AI suddenly shifts tone or violates your original constraints without explanation'] },
         whatHappens: { title: 'What\'s Actually Happening', content: 'Most chat interfaces use one of these strategies:', numberedItems: ['**Drop oldest messages** — The most recent N messages fit in the window; older ones are discarded entirely', '**Summarise earlier conversation** — The system compresses early messages into a brief recap ("Earlier, you discussed X, Y, Z…") to preserve context', '**Pin system/developer prompts** — The system message stays fixed while user messages rotate out'] },
         whatHappensNote: { content: 'All of these preserve the "gist" but lose specific details. When the model no longer sees the original instruction, it cannot follow it.' },
-        hallucinations: { title: 'Context Windows and Hallucinations', content: ['**Context overload amplifies hallucinations because the model fills gaps with plausible guesses when the original information is no longer visible.**', 'Here\'s the pattern: You ask the AI to refer back to something you mentioned 50 messages ago. But that message has rotated out of the context window. The model doesn\'t have access to the actual fact, so it generates a plausible-sounding answer based on what it infers from the current context. Result: fabrication.', 'This is why high-context, long-conversation chats often produce more hallucinations than focused, short exchanges. The model is not losing reasoning ability — it\'s working with incomplete information.', '**The interaction is direct:** Reduced context → missing grounding → increased hallucination risk.', 'This effect compounds with higher temperature and top-p settings, which already increase randomness. See [Fundamentals: Temperature and Top-P: Control AI Creativity] for how parameter tuning interacts with hallucination.'] },
+        hallucinations: { title: 'Context Windows and Hallucinations', content: ['**Context overload amplifies hallucinations because the model fills gaps with plausible guesses when the original information is no longer visible.**', 'Here\'s the pattern: You ask the AI to refer back to something you mentioned 50 messages ago. But that message has rotated out of the context window. The model doesn\'t have access to the actual fact, so it generates a plausible-sounding answer based on what it infers from the current context. Result: fabrication.', 'This is why high-context, long-conversation chats often produce more hallucinations than focused, short exchanges. The model is not losing reasoning ability — it\'s working with incomplete information.', '**The interaction is direct:** Reduced context → missing grounding → increased hallucination risk.', 'This effect compounds with higher temperature and top-p settings, which already increase randomness. See [Temperature and Top-P](/prompt-engineering/temperature-and-top-p) for how parameter tuning interacts with hallucination.'] },
         promptDesign: { title: 'How Prompt Design Helps You Stay Within the Window', content: '**Structuring your prompts strategically lets you accomplish more within a fixed context budget.**' },
         promptDesignStrategies: { content: ['**Front-load critical instructions.** Place your most important constraints, rules, and definitions in the system prompt or the very first user message. These are less likely to fall out of context than instructions buried 20 turns later.', '**Avoid repetition.** If you\'ve already explained something once, don\'t paste it again. Instead, reference it: "As we discussed in the summary above…" This saves tokens.', '**Recap explicitly.** Ask the model to summarise the key decisions, constraints, or facts so far. Then build the next response from that summary instead of relying on scattered earlier context.', '**Keep turns focused.** A single, multi-topic monologue uses context inefficiently. Break it into separate, tightly scoped exchanges.'] },
         contextTable: { rows: [{ 'Habit': 'Repeating long context on every turn', 'Context Impact': '🔴 High waste' }, { 'Habit': 'Front-loading instructions in system prompt', 'Context Impact': '🟢 Efficient' }, { 'Habit': 'Asking for explicit recaps before continuing', 'Context Impact': '🟢 Preserves focus' }, { 'Habit': 'Referencing earlier points instead of re-pasting', 'Context Impact': '🟢 Saves tokens' }, { 'Habit': 'Single monologue with 5 unrelated questions', 'Context Impact': '🔴 Confuses focus' }, { 'Habit': '5 separate, focused exchanges', 'Context Impact': '🟢 Clear, efficient' }], tableFormat: true },
@@ -6855,7 +6858,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         recipe4: { title: 'Recipe 4: Local LLM with Limited VRAM', content: '**Goal:** Run a local model effectively without crashes.', numberedItems: ['Start with a conservative context window (8k–16k) for your model\'s VRAM.', 'In PromptQuorum\'s settings, note the VRAM requirement at that window size.', 'Run your task. If you hit overflow, summarise the conversation and restart from the summary.', 'If you never approach the limit, slowly increase the context window and re-test.', 'Find your model\'s "right-sized" context window for your hardware and tasks.'] },
         commonMistakes: { title: 'Common Mistakes with Context Windows', items: ['"The model remembers all my previous chats." It doesn\'t. Each new conversation starts with zero context from past chats. Even within one chat, once your exchange exceeds the context window, it\'s gone.', '"I\'ll just paste the same long context on every turn." This wastes tokens and doesn\'t help — the model still can\'t reason over 300 pages effectively. Instead, summarise and reference the summary.', '"I\'ll mix five different projects in one long conversation." Each project competes for tokens. When context fills, details get truncated. Use separate conversations per project.', '"The AI is bad at reasoning — must be temperature or top-p." Maybe. But first, check context window. If the model no longer sees the original constraint, it\'s not a parameter problem; it\'s missing information.', '"I\'ll max out the context window on my local LLM." Then you run out of VRAM, the process crashes, and inference falls back to slow CPU mode. Set context to match your hardware instead.', '"The app warned me about overflow, but I sent it anyway." Trust the warning. Overflow leads to silent truncation, hidden hallucinations, and wasted tokens. Summarise first.'] },
         faq: { title: 'FAQ', faqs: [{ q: 'Does the model remember my previous chats?', a: 'No. Each new conversation session starts with zero history. The model only sees tokens within the current context window. If you want to reference a previous chat, you must copy relevant parts into the current conversation.' }, { q: 'Why did the AI ignore an instruction I gave 20 messages ago?', a: 'That instruction likely fell out of the context window. The model no longer sees it, so it can\'t follow it. Solution: Repeat critical instructions in your system prompt or ask the model to recap and re-embed the instruction mid-conversation.' }, { q: 'Is a bigger context window always better?', a: 'No. A larger window lets you include more content, but it also increases cost (more tokens to process) and, for local models, VRAM usage. Choose a context window that matches your task: 4k for simple Q&A, 32k for long conversations, 128k+ for document analysis. Bigger is not "better" — *appropriate* is better.' }, { q: 'How do I know when I\'ve hit the context limit?', a: 'The model\'s responses shift tone, contradict earlier instructions, or lose track of details you set earlier. Use PromptQuorum\'s context overflow check before sending — it warns you if you\'re approaching the limit.' }, { q: 'How does context window size affect VRAM for local models?', a: 'Larger context windows use more VRAM roughly proportionally: doubling the context window roughly doubles VRAM usage. A 7B model at 4k context ≈ 14GB VRAM; at 32k context ≈ 28GB VRAM. Check PromptQuorum\'s VRAM calculator to know your hardware\'s ceiling.' }, { q: 'Can tools like PromptQuorum prevent context overflow?', a: 'Yes. PromptQuorum checks your prompt\'s token count, your configured context window, and your model\'s actual limit, then warns you before you send if overflow is likely. You can then trim or summarise before continuing.' }, { q: 'Do different models handle long context differently?', a: 'Yes. Claude 4.6 Sonnet maintains focus across 200k tokens well. GPT-4o is solid at 128k. Smaller models (e.g., LLaMA 3.1 7B) sometimes lose reasoning coherence beyond 8k–16k, even if their context window is technically larger. The safest approach: test your specific model and task.' }] },
-        relatedReading: { title: 'Related Reading', items: ['[Fundamentals: The 5 Building Blocks Every Prompt Needs] — how to structure prompts before context becomes a constraint', '[Fundamentals: AI Hallucinations: Why AI Makes Things Up] — why missing context increases hallucination risk', '[Techniques: RAG Explained: How to Ground AI Answers in Real Data] — how to handle truly large document sets with retrieval instead of raw context'] },
+        relatedReading: { title: 'Related Reading', items: ['[How LLMs Actually Work](/prompt-engineering/how-llms-actually-work) — understand how context windows fit into model architecture', '[Token Costs & Limits](/prompt-engineering/tokens-costs-limits) — how context size affects cost and API pricing', '[RAG Explained](/prompt-engineering/rag-explained) — how to handle truly large document sets with retrieval instead of raw context'] },
         sources: { title: 'Sources', items: ['[OpenAI, 2024. "API reference: Models and context windows"](https://platform.openai.com/docs/models) — official documentation on token limits and pricing per model', '[Anthropic, 2024. "Claude model context windows and token costs"](https://docs.anthropic.com/en/docs/about-claude/models/overview) — Claude\'s 200k context window and March 2026 Opus 4.6 1M context announcement', '[Raffel et al., 2020. "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"](https://arxiv.org/abs/1910.10683) — foundational research on context window effects in transformers'] },
       },
     },
@@ -11149,7 +11152,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'Key Takeaways',
           isTldr: true,
           items: [
-            'Open-source (Llama, Mistral, Gemma): run locally, full control, lower per-token cost, but require infrastructure & management',
+            'Open-source (Llama, Mistral, Gemma): run locally via [Ollama](/local-llms/how-to-install-ollama), full control, lower per-token cost, but require infrastructure & management',
             'Proprietary (GPT-4o, Claude, Gemini): superior capability, fastest inference, pay-per-token, but data sent to provider servers',
             'Cost trade-off: open-source saves on tokens but costs on GPU/servers. Proprietary saves on ops but costs per-query.',
             'PromptQuorum supports both: dispatch the same prompt to open-source (local Ollama) and proprietary (OpenAI, Anthropic, Google) in parallel',
@@ -11173,10 +11176,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Related Reading',
         items: [
-          '/prompt-engineering/gpt-claude-gemini-which-model',
-          '/prompt-engineering/prompt-engineering-vs-fine-tuning',
-          '/prompt-engineering/how-llms-actually-work',
-          '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting'
+          '[GPT, Claude, or Gemini: Which Model?](/prompt-engineering/gpt-claude-gemini-which-model)',
+          '[Prompt Engineering vs Fine-Tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning)',
+          '[Local LLMs: What Are They?](/local-llms/what-are-local-llms)',
+          '[Token Costs & Limits](/prompt-engineering/tokens-costs-limits)'
         ]
       },
       sources: {
