@@ -8488,10 +8488,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-22', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-22', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-22', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-22', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Schreiben Besserer Code With AI: Prompts & Tools (2026) (2026)', intro: '', publishDate: '2026-03-22', readTime: '15 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Écrivez meilleur code With AI: Prompts & Tools (2026) (2026)', intro: '', publishDate: '2026-03-22', readTime: '15 min de lecture', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'Write Better Code With AI: Prompts & Tools （2026）', intro: '', publishDate: '2026-03-22', readTime: '15 分で読める', sections: {} },
+    zh: { theme: 'Fundamentals', title: 'Write Better Code With AI: Prompts & Tools （2026）', intro: '', publishDate: '2026-03-22', readTime: '15 分钟', sections: {} },
   },
 
   'ai-powered-research': {
@@ -8829,10 +8829,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    fr: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    ja: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    de: { theme: 'Use Cases', title: 'SEO trifft auf KI: How Generative SEO Works (2026)', intro: '', publishDate: '2026-03-23', readTime: '8 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Use Cases', title: 'SEO rencontre IA: How Generative SEO Works (2026)', intro: '', publishDate: '2026-03-23', readTime: '8 min de lecture', sections: {} },
+    ja: { theme: 'Use Cases', title: 'SEO Meets AI: How Generative SEO Works （2026）', intro: '', publishDate: '2026-03-23', readTime: '8分で読める', sections: {} },
+    zh: { theme: 'Use Cases', title: 'SEO Meets AI: How Generative SEO Works （2026）', intro: '', publishDate: '2026-03-23', readTime: '阅读约8分钟', sections: {} },
   },
 
   'seo-meets-ai': {
@@ -9151,10 +9151,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    fr: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    ja: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    de: { theme: 'Use Cases', title: 'SEO trifft auf KI: How Generative SEO Works (2026)', intro: '', publishDate: '2026-03-23', readTime: '8 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Use Cases', title: 'SEO rencontre IA: How Generative SEO Works (2026)', intro: '', publishDate: '2026-03-23', readTime: '8 min de lecture', sections: {} },
+    ja: { theme: 'Use Cases', title: 'SEO Meets AI: How Generative SEO Works （2026）', intro: '', publishDate: '2026-03-23', readTime: '8分で読める', sections: {} },
+    zh: { theme: 'Use Cases', title: 'SEO Meets AI: How Generative SEO Works （2026）', intro: '', publishDate: '2026-03-23', readTime: '阅读约8分钟', sections: {} },
   },
 
   'teaching-with-ai': {
@@ -9494,10 +9494,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    fr: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    ja: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    de: { theme: 'Use Cases', title: 'SEO trifft auf KI: How Generative SEO Works (2026)', intro: '', publishDate: '2026-03-23', readTime: '8 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Use Cases', title: 'SEO rencontre IA: How Generative SEO Works (2026)', intro: '', publishDate: '2026-03-23', readTime: '8 min de lecture', sections: {} },
+    ja: { theme: 'Use Cases', title: 'SEO Meets AI: How Generative SEO Works （2026）', intro: '', publishDate: '2026-03-23', readTime: '8分で読める', sections: {} },
+    zh: { theme: 'Use Cases', title: 'SEO Meets AI: How Generative SEO Works （2026）', intro: '', publishDate: '2026-03-23', readTime: '阅读约8分钟', sections: {} },
   },
 
   'extract-and-summarise': {
@@ -9837,10 +9837,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Extrahieren & Zusammenfassen With KI: Prompts & Werkzeuge (2026)', intro: '', publishDate: '2026-03-23', readTime: '8 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Extraire et Résumer With IA: Prompts & Tools (2026)', intro: '', publishDate: '2026-03-23', readTime: '8 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Extract & Summarize With AI: Prompts & Tools （2026）', intro: '', publishDate: '2026-03-23', readTime: '8分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Extract & Summarize With AI: Prompts & Tools （2026）', intro: '', publishDate: '2026-03-23', readTime: '阅读约8分钟', sections: {} },
   },
 
   'ai-code-review': {
@@ -10114,10 +10114,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       },
     },
 
-    de: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Use Cases', title: 'KI Code-Überprüfung: Werkzeuge & Verification (2026)', intro: '', publishDate: '2026-03-24', readTime: '11 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Use Cases', title: 'IA Examen du code: Tools & Verification (2026)', intro: '', publishDate: '2026-03-24', readTime: '11 min de lecture', sections: {} },
+    ja: { theme: 'Use Cases', title: 'AI Code Review: Tools & Verification （2026）', intro: '', publishDate: '2026-03-24', readTime: '11分で読める', sections: {} },
+    zh: { theme: 'Use Cases', title: 'AI Code Review: Tools & Verification （2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约11分钟', sections: {} },
   },
 
   'control-the-output': {
@@ -10387,10 +10387,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       },
     },
 
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Ausgabe kontrollieren: Schema & Eingeschränktes Decoding (2026)', intro: '', publishDate: '2026-03-24', readTime: '10 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Contrôler la sortie: Schema & Constrained Decoding (2026)', intro: '', publishDate: '2026-03-24', readTime: '10 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Control Output: Schema & Constrained Decoding （2026）', intro: '', publishDate: '2026-03-24', readTime: '10分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Control Output: Schema & Constrained Decoding （2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约10分钟', sections: {} },
   },
 
   'your-brand-voice-ai': {
@@ -10661,10 +10661,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       },
     },
 
-    de: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Use Cases', title: 'KI Code-Überprüfung: Werkzeuge & Verification (2026)', intro: '', publishDate: '2026-03-24', readTime: '11 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Use Cases', title: 'IA Examen du code: Tools & Verification (2026)', intro: '', publishDate: '2026-03-24', readTime: '11 min de lecture', sections: {} },
+    ja: { theme: 'Use Cases', title: 'AI Code Review: Tools & Verification （2026）', intro: '', publishDate: '2026-03-24', readTime: '11分で読める', sections: {} },
+    zh: { theme: 'Use Cases', title: 'AI Code Review: Tools & Verification （2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约11分钟', sections: {} },
   },
 
   'build-quality-checks': {
@@ -10990,10 +10990,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       },
     },
 
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Qualitätsprüfungen With KI: Detect Hallucinations (2026)', intro: '', publishDate: '2026-03-24', readTime: '10 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Vérifications de qualité With IA: Detect Hallucinations (2026)', intro: '', publishDate: '2026-03-24', readTime: '10 min de lecture', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'Quality Checks With AI: Detect Hallucinations （2026）', intro: '', publishDate: '2026-03-24', readTime: '10分で読める', sections: {} },
+    zh: { theme: 'Fundamentals', title: 'Quality Checks With AI: Detect Hallucinations （2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约10分钟', sections: {} },
   },
 
   'how-llms-actually-work': {
@@ -11006,10 +11006,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       metaDescription: 'Large language models predict the next word based on patterns in training data. Understand tokens, transformers, attention, and why prompts matter for output.',
       sections: {},
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Wie LLMs Actually Work: Complete Technical Guide (2026)', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'How LLMs Actually Work: Complete Technical Guide (2026)', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'How LLMs Actually Work: Complete Technical Guide （2026）', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    zh: { theme: 'Fundamentals', title: 'How LLMs Actually Work: Complete Technical Guide （2026）', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
   },
 
   'prompt-injection-and-security': {
@@ -11021,10 +11021,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       readTime: 'Coming soon',
       sections: {},
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Prompt-Einspritzung & Sicherheit (2026)', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Prompt Injection & Security (2026)', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'Prompt Injection & Security', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    zh: { theme: 'Fundamentals', title: 'Prompt Injection & Security', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
   },
 
   'ai-limitations-what-llms-cant-do': {
@@ -11143,10 +11143,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ]
       },
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'KI-Limitierungen — Was LLMs nicht können (2026)', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Limitations de l\'IA — Ce que les LLM ne peuvent pas faire (2026)', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'AIの制限 — LLMができないこと（2026）', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    zh: { theme: 'Fundamentals', title: 'AI的局限 — LLM不能做的事（2026）', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
   },
 
   'open-source-vs-proprietary-llms': {
@@ -11272,10 +11272,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ]
       }
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Open Source vs Proprietäre LLMs: Cost, Control, and Capability Kompromisse (2026)', intro: '', publishDate: '2026-03-24', readTime: '8 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Open Source vs Proprietary LLMs: Cost, Control, and Capability Trade-Offs (2026)', intro: '', publishDate: '2026-03-24', readTime: '8 min de lecture', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'Open Source vs Proprietary LLMs: Cost, Control, and Capability Trade-Offs', intro: '', publishDate: '2026-03-24', readTime: '8分で読める', sections: {} },
+    zh: { theme: 'Fundamentals', title: 'Open Source vs Proprietary LLMs: Cost, Control, and Capability Trade-Offs', intro: '', publishDate: '2026-03-24', readTime: '阅读约8分钟', sections: {} },
   },
 
   'geopolitics-and-ai': {
@@ -11287,10 +11287,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       readTime: 'Coming soon',
       sections: {},
     },
-    de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Fundamentals', title: 'Geopolitics and KI (2026)', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    fr: { theme: 'Fundamentals', title: 'Geopolitics and IA (2026)', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    ja: { theme: 'Fundamentals', title: 'Geopolitics and AI', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
+    zh: { theme: 'Fundamentals', title: 'Geopolitics and AI', intro: '', publishDate: '2026-03-24', readTime: 'Coming soon', sections: {} },
   },
 
   'which-framework-to-use': {
@@ -11525,10 +11525,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ]
       }
     },
-    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
   },
 
   'single-prompt-method': {
@@ -11692,10 +11692,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ]
       }
     },
-    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Frameworks', title: 'The Einfach Step Prompt Method (2026)', intro: '', publishDate: '2026-03-24', readTime: '8 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'The Single Step Prompt Method (2026)', intro: '', publishDate: '2026-03-24', readTime: '8 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'The Single Step Prompt Method', intro: '', publishDate: '2026-03-24', readTime: '8分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'The Single Step Prompt Method', intro: '', publishDate: '2026-03-24', readTime: '阅读约8分钟', sections: {} },
   },
 
   'ape-framework': {
@@ -11808,10 +11808,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Frameworks', title: 'The APE Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '7 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'The APE Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '7 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'The APE Framework', intro: '', publishDate: '2026-03-24', readTime: '7分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'The APE Framework', intro: '', publishDate: '2026-03-24', readTime: '阅读约7分钟', sections: {} },
   },
 
   'craft-framework': {
@@ -11934,10 +11934,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Frameworks', title: 'The CRAFT Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '7 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'The CRAFT Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '7 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'The CRAFT Framework', intro: '', publishDate: '2026-03-24', readTime: '7分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'The CRAFT Framework', intro: '', publishDate: '2026-03-24', readTime: '阅读约7分钟', sections: {} },
   },
 
   'co-star-framework': {
@@ -12078,10 +12078,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Frameworks', title: 'The CO-STAR Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '8 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'The CO-STAR Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '8 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'The CO-STAR Framework', intro: '', publishDate: '2026-03-24', readTime: '8分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'The CO-STAR Framework', intro: '', publishDate: '2026-03-24', readTime: '阅读约8分钟', sections: {} },
   },
 
   'specs-framework': {
@@ -12312,10 +12312,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ]
       },
     },
-    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
   },
 
   'risen-framework': {
@@ -12576,10 +12576,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
   },
 
   'trace-framework': {
@@ -12820,10 +12820,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
   },
 
   'google-prompting-guide': {
@@ -13044,10 +13044,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
   },
 
   'rtf-framework': {
@@ -13303,10 +13303,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
   },
 
   'build-your-own-framework': {
@@ -13575,10 +13575,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
-    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
   },
 
   'zero-shot-vs-few-shot': {
@@ -13785,10 +13785,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       },
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '阅读约6分钟', sections: {} },
   },
 
   'constrained-prompting': {
@@ -13987,10 +13987,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Eingeschränktes Prompting: Limit Model Behavior (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Constrained Prompting: Limit Model Behavior (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Constrained Prompting: Limit Model Behavior （2026）', intro: '', publishDate: '2026-03-26', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Constrained Prompting: Limit Model Behavior （2026）', intro: '', publishDate: '2026-03-26', readTime: '阅读约6分钟', sections: {} },
   },
 
   'chain-of-thought-prompting': {
@@ -14216,10 +14216,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '阅读约6分钟', sections: {} },
   },
 
   'prompt-chaining': {
@@ -14355,10 +14355,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Prompt-Verkettung: Break Big Tasks Into Steps (2026)', intro: '', publishDate: '2026-03-26', readTime: '8 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Prompt Chaining: Break Big Tasks Into Steps (2026)', intro: '', publishDate: '2026-03-26', readTime: '8 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Prompt Chaining: Break Big Tasks Into Steps （2026）', intro: '', publishDate: '2026-03-26', readTime: '8分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Prompt Chaining: Break Big Tasks Into Steps （2026）', intro: '', publishDate: '2026-03-26', readTime: '阅读约8分钟', sections: {} },
   },
 
   'persona-prompting': {
@@ -14638,10 +14638,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ]
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '阅读约6分钟', sections: {} },
   },
 
   'negative-prompting': {
@@ -14920,10 +14920,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '阅读约6分钟', sections: {} },
   },
 
   'self-consistency-prompting': {
@@ -15294,10 +15294,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '阅读约6分钟', sections: {} },
   },
 
   'tree-of-thought-react': {
@@ -15697,10 +15697,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
           },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '阅读约6分钟', sections: {} },
   },
 
   'rag-explained': {
@@ -15905,10 +15905,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ]
       }
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '阅读约6分钟', sections: {} },
   },
 
   'structured-output-json-mode': {
@@ -16195,10 +16195,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       },
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)', intro: '', publishDate: '2026-03-26', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Techniques', title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide （2026）', intro: '', publishDate: '2026-03-26', readTime: '阅读约6分钟', sections: {} },
   },
 
   'prompt-engineering-glossary': {
