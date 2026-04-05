@@ -8176,6 +8176,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Fundamentals',
       title: 'Write Better Code With AI: Prompts & Tools (2026)',
+      metaDescription: 'Use AI to write better code: prompts for debugging, refactoring, testing, and optimization. Learn patterns that work across models.',
       intro: 'AI coding assistants reduce time spent on code generation, debugging, and documentation by 30–75% when used with structured prompts and human review. In 2026, 41% of all code written globally is AI-generated or AI-assisted — making prompt quality the single most important variable in the output you receive.',
       publishDate: '2026-03-22',
       readTime: '15 min read',
@@ -8493,6 +8494,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Use Cases',
       title: 'AI-Powered Research: Tools & Verification (2026)',
+      metaDescription: 'AI accelerates research: literature review, data synthesis, hypothesis generation. Learn tools, verify hallucinations, workflows.',
       intro: 'AI-powered research tools reduce literature review time from weeks to hours — but the average AI model hallucinates 9.2% of the time on general knowledge questions, making verification workflows mandatory, not optional. In 2026, 75% of global knowledge workers use AI tools regularly. The researchers who get the most from AI treat it as a structured workflow — specific tools for discovery, extraction, synthesis, and verification — not as a single chatbot they ask one question.',
       publishDate: '2026-03-23',
       readTime: '9 min read',
@@ -8831,6 +8833,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Use Cases',
       title: 'SEO Meets AI: How Generative SEO Works (2026)',
+      metaDescription: 'GEO (Generative Engine Optimization) replaces traditional SEO. Learn how to optimize content for AI search engines and ChatGPT.',
       intro: 'Generative Engine Optimization (GEO) is the practice of structuring content so that AI-powered search engines — including ChatGPT, Google AI Overviews, Perplexity, Claude, and Microsoft Copilot — retrieve, cite, and recommend your content when answering user questions. GEO does not replace traditional SEO; it adds a second optimization layer for a search landscape where AI assistants handle over 40% of search interactions and nearly 60% of all searches now end without a single click.',
       publishDate: '2026-03-23',
       readTime: '8 min read',
@@ -9150,6 +9153,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Use Cases',
       title: 'Teaching With AI: Classroom Prompts & Workflows (2026)',
+      metaDescription: 'AI transforms education: personalized lesson planning, student engagement, assessment grading. Classroom prompts and workflows.',
       intro: 'AI tutoring systems outperform traditional active learning classrooms — a peer-reviewed randomized controlled trial from Harvard University found students using an AI tutor learned more than twice as much in 49 minutes compared to 60 minutes of classroom instruction. In 2026, 85% of teachers and 86% of students in the US used AI during the 2024—25 school year — adoption rates higher than any other industry globally.',
       publishDate: '2026-03-23',
       readTime: '8 min read',
@@ -9490,6 +9494,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Techniques',
       title: 'Extract & Summarize With AI: Prompts & Tools (2026)',
+      metaDescription: 'Extract and summarize text with AI: techniques for accurate summaries, key insight extraction, and structured data from documents.',
       intro: 'AI-powered extraction and summarisation reduces document review time by 60—80% while achieving hallucination rates as low as 0.7% on grounded summarisation tasks — the key is choosing the right summarisation type, the right model, and the right prompt structure for each document category.',
       publishDate: '2026-03-23',
       readTime: '8 min read',
@@ -9830,6 +9835,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Use Cases',
       title: 'AI Code Review: Tools & Verification (2026)',
+      metaDescription: 'AI code review tools automate feedback on correctness, performance, security. Learn tools, spot hallucinations, verification workflows.',
       intro: 'AI code review tools detect 42–48% of real-world runtime bugs in automated reviews — more than double the sub-20% detection rate of traditional static analysis tools — while reducing code review time by 40% and cutting production bugs by 62%. In 2026, 84% of developers now use AI tools and 41% of all new code is AI-generated, creating a feedback loop where AI that writes code must also review it.',
       publishDate: '2026-03-24',
       readTime: '11 min read',
@@ -10376,6 +10382,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Use Cases',
       title: 'Your Brand Voice in AI: Consistency & Control (2026)',
+      metaDescription: 'Train AI to speak in your brand voice: tone consistency, personality, values. Guides for tone prompts and brand-specific fine-tuning.',
       intro: 'A well-trained brand voice AI lets you generate and review content at scale without losing the tone, style, and personality that make your brand recognizable. Used correctly, it becomes an extension of your brand team: it learns from your best copy, applies those patterns across every channel, and flags anything that sounds off-brand before customers ever see it.',
       publishDate: '2026-03-24',
       readTime: '8 min read',
@@ -10647,6 +10654,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Fundamentals',
       title: 'Quality Checks With AI: Detect Hallucinations (2026)',
+      metaDescription: 'Build AI-aware quality checks: detect hallucinations, fabricated dependencies, false claims. Guardrails for production systems.',
       intro: 'AI-generated code fails traditional quality gates at scale: a large share of AI-written programs contain exploitable vulnerabilities, and a non-trivial fraction of AI-suggested packages or APIs simply do not exist. To keep these hallucinations and AI-specific failure modes out of production, build quality checks must evolve from generic "tests + coverage" gates into AI-aware pipelines that detect unreal APIs, fake dependencies, and confident-but-wrong logic before merge.',
       publishDate: '2026-03-24',
       readTime: '10 min read',
@@ -13558,6 +13566,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Techniques',
       title: 'Zero-Shot vs. Few-Shot Prompting: Complete Guide (2026)',
+      metaDescription: 'Zero-shot prompting uses no examples; few-shot provides examples. Learn when to use each technique and how it affects AI output quality.',
       intro: 'Zero shot prompting uses no examples in the prompt and relies entirely on the model\'s pre-training, while few shot prompting embeds a handful of examples so the model can imitate a desired pattern.',
       publishDate: '2026-03-26',
       readTime: '6 min read',
@@ -13754,6 +13763,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Techniques',
       title: 'Constrained Prompting: Limit Model Behavior (2026)',
+      metaDescription: 'Constrained prompting limits model behavior through explicit rules, formats, and boundaries. Learn how to control AI output precisely.',
       intro: 'Constrained prompting is a technique where you tell the model not just what to do, but also what it must and must not do, so outputs stay inside clearly defined boundaries. This is essential when you need reliable formats, safe content, or strict compliance with internal rules.',
       publishDate: '2026-03-26',
       readTime: '6 min read',
@@ -14579,6 +14589,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Techniques',
       title: 'Negative Prompting: Tell AI What NOT to Do (2026)',
+      metaDescription: 'Negative prompting tells AI what NOT to do. Learn this powerful technique to reduce hallucinations and control unwanted outputs.',
       intro: 'Negative prompting is a technique where you tell the model what it must avoid—content, style, structure, or behaviors—so outputs stay inside clear boundaries. It acts as a "guardrail layer" on top of your normal instructions.',
       publishDate: '2026-03-26',
       readTime: '6 min read',
@@ -14858,6 +14869,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Techniques',
       title: 'Self-Consistency: AI Self-Check Method (2026)',
+      metaDescription: 'Self-consistency prompting generates multiple responses and selects the most common answer. Boost reliability without retraining.',
       intro: 'Self-consistency prompting is a technique where you ask the model to generate multiple reasoning paths for the same task and then aggregate the results, instead of trusting a single answer. This increases reliability on complex reasoning problems.',
       publishDate: '2026-03-26',
       readTime: '7 min read',
