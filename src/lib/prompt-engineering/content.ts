@@ -212,7 +212,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   'what-is-prompt-engineering': {
     en: {
       theme: 'Fundamentals',
-      title: 'What Is Prompt Engineering? — PromptQuorum Guide',
+      title: 'What Is Prompt Engineering? — PromptQuorum Guide (2026)',
       intro: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs like GPT-4o, [Claude](https://docs.anthropic.com), and Gemini. Learn essential techniques, frameworks, and why it matters to AI output quality.',
       publishDate: '2026-03-01',
       readTime: '10 min read',
@@ -2390,7 +2390,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   'prompt-building-blocks': {
     en: {
       theme: 'Fundamentals',
-      title: 'The 5 Building Blocks Every Prompt Needs',
+      title: '5 Building Blocks Every Prompt Needs: A Complete Guide (2026)',
       intro: 'The 5 building blocks every prompt needs: Role & Context, Task, Input & Examples, Constraints, and Output Format. How to use each one.',
       publishDate: '2026-03-01',
       readTime: '8 min read',
@@ -5597,7 +5597,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   'prompt-for-speed': {
     en: {
       theme: 'Fundamentals',
-      title: 'Faster AI Answers: How to Prompt for Speed',
+      title: 'Faster AI Answers: How to Prompt for Speed & Accuracy (2026)',
       intro: 'Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency. Most AI answers bloat because of vague prompts, not slow models.',
       publishDate: '2026-03-22',
       readTime: '9 min read',
@@ -6868,7 +6868,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   'prompt-with-images': {
     en: {
       theme: 'Fundamentals',
-      title: 'Beyond Text: How to Prompt With Images',
+      title: 'Prompting With Images: Guide & Best Practices (2026)',
       intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 4.6 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.',
       publishDate: '2026-03-25',
       readTime: '12 min read',
@@ -10959,7 +10959,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
   'how-llms-actually-work': {
     en: {
       theme: 'Fundamentals',
-      title: 'How LLMs Actually Work',
+      title: 'How LLMs Actually Work: Complete Technical Guide (2026)',
       intro: 'Coming soon — a deep dive into how large language models process tokens, generate predictions, and why understanding the architecture makes you a better prompt engineer.',
       publishDate: '2026-03-24',
       readTime: 'Coming soon',
