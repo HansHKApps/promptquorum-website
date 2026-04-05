@@ -11525,10 +11525,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ]
       }
     },
-    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
-    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
-    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
-    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
+    de: { theme: 'Frameworks', title: 'Welches Prompt-Framework ist das richtige für Sie? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Quel framework de prompt choisir? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'どのPromptフレームワークを使うべきか？（2026）', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: '应该选择哪种提示词框架？（2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
   },
 
   'single-prompt-method': {
@@ -11692,10 +11692,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ]
       }
     },
-    de: { theme: 'Frameworks', title: 'The Einfach Step Prompt Method (2026)', intro: '', publishDate: '2026-03-24', readTime: '8 Min. Lesezeit', sections: {} },
-    fr: { theme: 'Frameworks', title: 'The Single Step Prompt Method (2026)', intro: '', publishDate: '2026-03-24', readTime: '8 min de lecture', sections: {} },
-    ja: { theme: 'Frameworks', title: 'The Single Step Prompt Method', intro: '', publishDate: '2026-03-24', readTime: '8分で読める', sections: {} },
-    zh: { theme: 'Frameworks', title: 'The Single Step Prompt Method', intro: '', publishDate: '2026-03-24', readTime: '阅读约8分钟', sections: {} },
+    de: { theme: 'Frameworks', title: 'Die Single-Step-Prompt-Methode (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'La méthode du prompt en une étape (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'シングルステッププロンプト法（2026）', intro: '', publishDate: '2026-03-24', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: '单步提示词方法（2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约6分钟', sections: {} },
   },
 
   'ape-framework': {
@@ -12078,10 +12078,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Frameworks', title: 'The CO-STAR Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '8 Min. Lesezeit', sections: {} },
-    fr: { theme: 'Frameworks', title: 'The CO-STAR Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '8 min de lecture', sections: {} },
-    ja: { theme: 'Frameworks', title: 'The CO-STAR Framework', intro: '', publishDate: '2026-03-24', readTime: '8分で読める', sections: {} },
-    zh: { theme: 'Frameworks', title: 'The CO-STAR Framework', intro: '', publishDate: '2026-03-24', readTime: '阅读约8分钟', sections: {} },
+    de: { theme: 'Frameworks', title: 'Das CO-STAR-Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Le framework CO-STAR (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'CO-STARフレームワーク（2026）', intro: '', publishDate: '2026-03-24', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'CO-STAR框架（2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约6分钟', sections: {} },
   },
 
   'specs-framework': {
@@ -12312,10 +12312,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ]
       },
     },
-    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
-    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
-    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
-    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
+    de: { theme: 'Frameworks', title: 'Das SPECS-Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Le framework SPECS (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'SPECSフレームワーク（2026）', intro: '', publishDate: '2026-03-24', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'SPECS框架（2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约6分钟', sections: {} },
   },
 
   'risen-framework': {
@@ -12576,10 +12576,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
-    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
-    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
-    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
+    de: { theme: 'Frameworks', title: 'Das RISEN-Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Le framework RISEN (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'RISENフレームワーク（2026）', intro: '', publishDate: '2026-03-24', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'RISEN框架（2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约6分钟', sections: {} },
   },
 
   'trace-framework': {
@@ -12820,10 +12820,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
-    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
-    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
-    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
+    de: { theme: 'Frameworks', title: 'Das TRACE-Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Le framework TRACE (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'TRACEフレームワーク（2026）', intro: '', publishDate: '2026-03-24', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'TRACE框架（2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约6分钟', sections: {} },
   },
 
   'google-prompting-guide': {
@@ -13303,10 +13303,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         ],
       },
     },
-    de: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 Min. Lesezeit', sections: {} },
-    fr: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use? (2026)', intro: '', publishDate: '2026-03-24', readTime: '9 min de lecture', sections: {} },
-    ja: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '9分で読める', sections: {} },
-    zh: { theme: 'Frameworks', title: 'Which Prompt Framework Should You Use?', intro: '', publishDate: '2026-03-24', readTime: '阅读约9分钟', sections: {} },
+    de: { theme: 'Frameworks', title: 'Das RTF-Framework (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Frameworks', title: 'Le framework RTF (2026)', intro: '', publishDate: '2026-03-24', readTime: '6 min de lecture', sections: {} },
+    ja: { theme: 'Frameworks', title: 'RTFフレームワーク（2026）', intro: '', publishDate: '2026-03-24', readTime: '6分で読める', sections: {} },
+    zh: { theme: 'Frameworks', title: 'RTF框架（2026）', intro: '', publishDate: '2026-03-24', readTime: '阅读约6分钟', sections: {} },
   },
 
   'build-your-own-framework': {
