@@ -10522,8 +10522,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Coming soon — understanding the hard boundaries of large language models, where they fail, and how to design systems that account for these limitations.',
       publishDate: '2026-03-24',
       readTime: 'Coming soon',
-,
-      tldr: {
+      sections: {
         title: 'Key Takeaways',
         isTldr: true,
         items: [
@@ -10543,7 +10542,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           'Assuming LLMs can fact-check themselves: they cannot. Always validate outputs against authoritative sources.',
           'Sending sensitive data to proprietary APIs: open-source models run locally are safer for classified or HIPAA data.',
           'Using LLMs for high-stakes decisions without human review: cost of error is too high; always require approval.',
-          'Treating hallucinations as "bugs": they're fundamental to how LLMs work. Design systems around this limitation (RAG, validation, review).',
+          'Treating hallucinations as bugs: they\'re fundamental to how LLMs work. Design systems around this limitation (RAG, validation, review).',
           'Overestimating vision capability: GPT-4o and Claude analyze images well, but small text, handwriting, and abstract diagrams still fail.'
         ]
       },
@@ -10622,8 +10621,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       educationalLevel: 'Intermediate',
       publishDate: '2026-03-24',
       readTime: '8 min read',
-,
-      tldr: {
+      sections: {
         title: 'Key Takeaways',
         isTldr: true,
         items: [
@@ -10869,10 +10867,6 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
-,
-      metaDescription: 'What the Single Step Prompt Method is, the 5 building blocks, and when to use it. Free beta — April 2026.',
-      educationalLevel: 'Beginner',
-,
       tldr: {
         title: 'Key Takeaways',
         isTldr: true,
@@ -11636,7 +11630,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
-    },,
+    },
       tldr: {
         title: 'Key Takeaways',
         isTldr: true,
@@ -11645,7 +11639,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           'SPECS forces you to define inputs, outputs, and rules upfront, reducing ambiguity and improving consistency across models',
           'PromptQuorum testing: SPECS produced 97% valid JSON with structure intact; without SPECS, only 55% of outputs were usable',
           'Use SPECS for: data extraction, JSON generation, structured reports, code generation, form filling, multi-field outputs',
-          'Don't use SPECS for: creative writing, ideation, open-ended exploration, or tasks where format flexibility is valued',
+          'Do not use SPECS for: creative writing, ideation, open-ended exploration, or tasks where format flexibility is valued',
           'EU AI Act Article 11: SPECS satisfies documentation requirements by explicitly specifying system inputs and expected outputs',
           'SPECS vs CO-STAR: SPECS is more rigid and specification-heavy; CO-STAR is more flexible for reasoning tasks',
           'PromptQuorum includes SPECS as a built-in framework with auto-fill for scope, constraints, and step definitions'
@@ -11654,7 +11648,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       faqSection: {
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What does SPECS stand for?', a: 'Scope (what you're doing), Purpose (why), Examples (input/output pairs), Constraints (rules and limits), and Steps (how to proceed). These five elements make prompts concrete and machine-readable.' },
+          { q: 'What does SPECS stand for?', a: 'Scope (what you\'re doing), Purpose (why), Examples (input/output pairs), Constraints (rules and limits), and Steps (how to proceed). These five elements make prompts concrete and machine-readable.' },
           { q: 'When should I use SPECS?', a: 'Use SPECS when you need predictable, structured outputs: JSON, CSV, forms, checklists, code, or any task where format matters as much as content.' },
           { q: 'How is SPECS different from CO-STAR?', a: 'CO-STAR emphasizes Context and flexibility for complex, multi-faceted tasks. SPECS emphasizes Specification and rigidity for structured outputs. Choose based on whether you need flexibility or predictability.' },
           { q: 'Can SPECS work with creative tasks?', a: 'Not ideally. SPECS is optimized for structured outputs. For creative writing, use CRAFT or other frameworks that prioritize voice and style over format.' },
@@ -11673,7 +11667,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           'Vague Constraints: saying "be concise" is ineffective. Say "max 50 words" or "max 3 items per field."',
           'Skipping Scope: not explaining what the task is. Always define "You are generating [output] from [input] for [purpose]."',
           'Over-specifying Steps: if scope and constraints are clear, steps are often redundant. Avoid step-by-step when examples suffice.',
-          'Not validating output: SPECS reduces errors but doesn't eliminate them. Always check JSON validity, field count, and data types.'
+          'Not validating output: SPECS reduces errors but does not eliminate them. Always check JSON validity, field count, and data types.'
         ]
       },
       relatedReading: {
@@ -12273,6 +12267,98 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Save both zero shot and few shot versions as templates, then compare accuracy, latency, and token costs across models over time.',
           ],
         },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is the difference between JSON Mode and schema validation?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use structured output with open-source models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I define a schema in a prompt?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What if the model returns invalid JSON?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is structured output slower or more expensive?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Ensure Structured Output from Language Models',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Define Your Output Schema',
+            text: 'Create a JSON schema showing required fields, types, and nesting structure. Example: {user_id: number, sentiment: string, items: []}.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Include Schema in Your Prompt',
+            text: 'Add the schema explicitly to system or user message. For API JSON Mode, state "Return ONLY valid JSON." For prompt-based, include an example.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test with Your Target Model',
+            text: 'Run the prompt 5–10 times. Check for consistent field order, missing fields, type mismatches, or syntax errors.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Implement Parsing and Validation',
+            text: 'Wrap JSON.parse() in try/catch. Validate each field type and presence before downstream processing.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Handle Failures with Retry Logic',
+            text: 'On invalid JSON or missing fields, re-prompt with correction instructions. Log failures to improve schema clarity.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.' },
+          { '@type': 'ListItem', position: 2, name: 'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.' },
+          { '@type': 'ListItem', position: 3, name: 'Schema-in-prompt technique works across all models but requires explicit schema definition.' },
+          { '@type': 'ListItem', position: 4, name: 'Always validate parsed output — don't assume the model will strictly follow schema.' },
+          { '@type': 'ListItem', position: 5, name: 'Use structured output when downstream code needs to parse or dispatch results automatically.' },
+          { '@type': 'ListItem', position: 6, name: 'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).' },
+          { '@type': 'ListItem', position: 7, name: 'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.' },
+          { '@type': 'ListItem', position: 8, name: 'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.' },
+        ],
+      },
       },
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -12369,9 +12455,193 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Save constrained prompts as templates for recurring tasks, ensuring your team always uses the same validated patterns.',
           ],
         },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is the difference between JSON Mode and schema validation?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use structured output with open-source models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I define a schema in a prompt?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What if the model returns invalid JSON?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is structured output slower or more expensive?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Ensure Structured Output from Language Models',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Define Your Output Schema',
+            text: 'Create a JSON schema showing required fields, types, and nesting structure. Example: {user_id: number, sentiment: string, items: []}.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Include Schema in Your Prompt',
+            text: 'Add the schema explicitly to system or user message. For API JSON Mode, state "Return ONLY valid JSON." For prompt-based, include an example.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test with Your Target Model',
+            text: 'Run the prompt 5–10 times. Check for consistent field order, missing fields, type mismatches, or syntax errors.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Implement Parsing and Validation',
+            text: 'Wrap JSON.parse() in try/catch. Validate each field type and presence before downstream processing.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Handle Failures with Retry Logic',
+            text: 'On invalid JSON or missing fields, re-prompt with correction instructions. Log failures to improve schema clarity.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.' },
+          { '@type': 'ListItem', position: 2, name: 'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.' },
+          { '@type': 'ListItem', position: 3, name: 'Schema-in-prompt technique works across all models but requires explicit schema definition.' },
+          { '@type': 'ListItem', position: 4, name: 'Always validate parsed output — don't assume the model will strictly follow schema.' },
+          { '@type': 'ListItem', position: 5, name: 'Use structured output when downstream code needs to parse or dispatch results automatically.' },
+          { '@type': 'ListItem', position: 6, name: 'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).' },
+          { '@type': 'ListItem', position: 7, name: 'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.' },
+          { '@type': 'ListItem', position: 8, name: 'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.' },
+        ],
+      },
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is constrained prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Constrained prompting is defining explicit output boundaries (format, content, tone, length) in your prompt to prevent unwanted outputs. Example: "Max 2 paragraphs, no marketing language, JSON format only."',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How does constrained prompting differ from negative prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Constrained prompting sets format/structure rules (max length, output type). Negative prompting forbids specific content ("don't mention competitors"). Use both: constraints on structure, negatives on content.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What are examples of good constraint syntax?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Format: "Return as JSON." Length: "Max 100 words." Tone: "Professional, no slang." Behavior: "Do not cite sources older than 2023." Structure: "Three sections: summary, risks, actions."',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I use constrained prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use when: output feeds downstream code (parsing/dispatch), you need guaranteed format, tokens/cost matter, or consistency across users is critical. Less needed for exploratory chat.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I validate that constraints worked?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Test the prompt 5+ times with varied inputs. Check: format matches spec, length is within bounds, content respects negatives, output parses without errors. Log failures to refine constraints.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Apply Constraints in Prompts',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Define Output Boundaries',
+            text: 'List all constraints: format (JSON/bullets), length (max words), tone (formal/casual), content rules (no slang, no affiliates), and structure (sections required).',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'State Constraints Explicitly',
+            text: 'Add constraint statements early in your prompt. Example: "Return JSON only. Max 100 words per summary. Formal tone. No marketing claims without citations."',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Provide Examples',
+            text: 'Show 1–2 examples of outputs that pass your constraints. Models learn format and scope from examples faster than description.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test and Measure',
+            text: 'Run the prompt 10+ times with varied inputs. Measure: % of outputs matching format, length distribution, tone consistency. Log failures.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Refine and Iterate',
+            text: 'If constraints fail, simplify them (fewer rules), add examples, or reword for clarity. Some constraints conflict — prioritize and test.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Constrained prompting defines explicit output boundaries (format, content, tone, length) to prevent unwanted outputs.' },
+          { '@type': 'ListItem', position: 2, name: 'Format constraints: "Return as JSON" or "Return as bullets." Content constraints: "No marketing language" or "No data older than 2024."' },
+          { '@type': 'ListItem', position: 3, name: 'Constraint syntax matters: vague ("be concise") fails; specific ("max 100 words") succeeds.' },
+          { '@type': 'ListItem', position: 4, name: 'Structure constraints define sections, required fields, or hierarchy. Behavior constraints define what the model must not do.' },
+          { '@type': 'ListItem', position: 5, name: 'Test constraints with varied inputs — what works for simple queries may fail on edge cases.' },
+          { '@type': 'ListItem', position: 6, name: 'Over-constraining creates brittle prompts. Use constraints where they matter; leave room for flexibility elsewhere.' },
+          { '@type': 'ListItem', position: 7, name: 'Constrained prompting differs from negative prompting: constraints set format/structure; negatives forbid specific content.' },
+          { '@type': 'ListItem', position: 8, name: 'Use PromptQuorum's constraint field to enforce rules consistently across multiple models.' },
+        ],
+      },
+          de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -12382,7 +12652,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Techniques',
       title: 'Chain-of-Thought Prompting: Make AI Show Its Reasoning',
       intro: 'Chain-of-thought prompting is a technique where you explicitly ask the model to show its reasoning steps instead of jumping straight to the final answer. As of April 2026, CoT is one of the most reliable techniques for improving accuracy across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and all other language models.',
-      metaDescription: 'What Chain-of-Thought prompting is, why it improves LLM accuracy, and how to write effective CoT prompts. Free beta — April 2026.',
+      metaDescription: 'What Chain-of-Thought prompting is, why it improves LLM accuracy on reasoning tasks across all models, and how to write effective CoT prompts. Free beta — April 2026.',
       educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '7 min read',
@@ -12481,6 +12751,98 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'This turns chain-of-thought prompting from a one-off trick into a repeatable part of your decision-making process.',
           ],
         },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is the difference between JSON Mode and schema validation?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use structured output with open-source models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I define a schema in a prompt?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What if the model returns invalid JSON?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is structured output slower or more expensive?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Ensure Structured Output from Language Models',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Define Your Output Schema',
+            text: 'Create a JSON schema showing required fields, types, and nesting structure. Example: {user_id: number, sentiment: string, items: []}.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Include Schema in Your Prompt',
+            text: 'Add the schema explicitly to system or user message. For API JSON Mode, state "Return ONLY valid JSON." For prompt-based, include an example.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test with Your Target Model',
+            text: 'Run the prompt 5–10 times. Check for consistent field order, missing fields, type mismatches, or syntax errors.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Implement Parsing and Validation',
+            text: 'Wrap JSON.parse() in try/catch. Validate each field type and presence before downstream processing.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Handle Failures with Retry Logic',
+            text: 'On invalid JSON or missing fields, re-prompt with correction instructions. Log failures to improve schema clarity.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.' },
+          { '@type': 'ListItem', position: 2, name: 'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.' },
+          { '@type': 'ListItem', position: 3, name: 'Schema-in-prompt technique works across all models but requires explicit schema definition.' },
+          { '@type': 'ListItem', position: 4, name: 'Always validate parsed output — don't assume the model will strictly follow schema.' },
+          { '@type': 'ListItem', position: 5, name: 'Use structured output when downstream code needs to parse or dispatch results automatically.' },
+          { '@type': 'ListItem', position: 6, name: 'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).' },
+          { '@type': 'ListItem', position: 7, name: 'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.' },
+          { '@type': 'ListItem', position: 8, name: 'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.' },
+        ],
+      },
       },
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -12897,7 +13259,99 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           'Anthropic, 2024. "System Prompts and Personas." https://docs.anthropic.com'
         ]
       }
-    },
+    },      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is persona prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Persona prompting is explicitly defining a role, worldview, and behavior for an AI model so it answers consistently like a specific expert or character across conversations. Example: "You are a senior software architect with 20 years of experience in cloud infrastructure."',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I define a strong persona?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Include: role/title ("senior data scientist"), years of experience, domain expertise, communication style ("direct and concise"), and values/biases ("pragmatic, favors tested solutions over novel ones").',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does persona prompting work with all models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, but effectiveness varies. GPT-4o and Claude respond more consistently to personas than smaller models. Test your persona across your target models to measure consistency.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What makes a persona effective?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Specificity: clear, memorable details. Consistency: the same traits should inform all responses. Alignment: the persona should match your actual task (e.g., don't ask a lawyer to code-review unless they're a "lawyer-engineer").',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use multiple personas in one prompt?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, but carefully. Example: "You are a designer reviewing a developer's proposal." Works best when roles complement each other. Too many personas can confuse the model.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Design and Test Personas',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Define the Role and Expertise',
+            text: 'Choose a specific role: "senior cloud architect," "user experience designer," "medical researcher." Be specific about seniority, domain, and years of experience.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Add Communication Style and Values',
+            text: 'Describe how the persona speaks: "direct and concise," "beginner-friendly," "academic." Include values: "prefers proven solutions over experimental ones."',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Embed the Persona in Your Prompt',
+            text: 'Example system prompt: "You are a senior architect with expertise in distributed systems. You are pragmatic, favor tested solutions, and communicate clearly to non-experts."',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test Consistency Across Responses',
+            text: 'Ask the same question 5+ times. Check: Does tone match the persona? Are answers consistent in style and expertise level?',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test Across Models and Refine',
+            text: 'Try the persona on different models (GPT-4o, Claude, Gemini). Refine persona details if consistency drops. Log which models respond best to your persona.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Persona prompting is the practice of defining a clear role, worldview, and behavior for an AI model so it consistently answers like a specific expert or character across conversations.' },
+          { '@type': 'ListItem', position: 2, name: 'Strong personas include: specific role/title, years of experience, domain expertise, communication style, and underlying values or biases.' },
+          { '@type': 'ListItem', position: 3, name: 'Personas improve consistency: the model answers "in character" across follow-up questions, maintaining expertise level and tone.' },
+          { '@type': 'ListItem', position: 4, name: 'Test personas across your target models — effectiveness varies. GPT-4o and Claude are more responsive to personas than smaller models.' },
+          { '@type': 'ListItem', position: 5, name: 'Specificity beats vagueness: "senior architect" works; "smart person" doesn't. Include memorable details.' },
+          { '@type': 'ListItem', position: 6, name: 'Effective personas must be consistent: all responses should feel like they come from the same person with the same worldview.' },
+          { '@type': 'ListItem', position: 7, name: 'Combine personas with other techniques: persona + few-shot examples = powerful; persona + CoT = better reasoning.' },
+          { '@type': 'ListItem', position: 8, name: 'Use PromptQuorum to test persona consistency across multiple models simultaneously.' },
+        ],
+      },
+      
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -13016,8 +13470,259 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'By treating negative prompting as part of your prompt architecture, PromptQuorum helps you convert past mistakes into durable, reusable constraints.',
           ],
         },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is the difference between JSON Mode and schema validation?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use structured output with open-source models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I define a schema in a prompt?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What if the model returns invalid JSON?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is structured output slower or more expensive?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
+            },
+          },
+        ],
       },
-    },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Ensure Structured Output from Language Models',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Define Your Output Schema',
+            text: 'Create a JSON schema showing required fields, types, and nesting structure. Example: {user_id: number, sentiment: string, items: []}.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Include Schema in Your Prompt',
+            text: 'Add the schema explicitly to system or user message. For API JSON Mode, state "Return ONLY valid JSON." For prompt-based, include an example.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test with Your Target Model',
+            text: 'Run the prompt 5–10 times. Check for consistent field order, missing fields, type mismatches, or syntax errors.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Implement Parsing and Validation',
+            text: 'Wrap JSON.parse() in try/catch. Validate each field type and presence before downstream processing.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Handle Failures with Retry Logic',
+            text: 'On invalid JSON or missing fields, re-prompt with correction instructions. Log failures to improve schema clarity.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.' },
+          { '@type': 'ListItem', position: 2, name: 'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.' },
+          { '@type': 'ListItem', position: 3, name: 'Schema-in-prompt technique works across all models but requires explicit schema definition.' },
+          { '@type': 'ListItem', position: 4, name: 'Always validate parsed output — don't assume the model will strictly follow schema.' },
+          { '@type': 'ListItem', position: 5, name: 'Use structured output when downstream code needs to parse or dispatch results automatically.' },
+          { '@type': 'ListItem', position: 6, name: 'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).' },
+          { '@type': 'ListItem', position: 7, name: 'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.' },
+          { '@type': 'ListItem', position: 8, name: 'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.' },
+        ],
+      },
+      },
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'Negative prompting forbids specific content, tone, or behavior the model must avoid.',
+            'Must-not instructions work best when paired with must (positive) instructions to prevent confusion.',
+            'Examples: "Don't mention competitors," "No medical advice," "Avoid marketing language," "No code in output."',
+            'Effective negative prompts are specific ("Max 100 words") not vague ("Be concise").',
+            'Too many negatives confuse models — use 1–3 primary constraints; avoid piling on negatives.',
+            'Combine negative prompting with constrained prompting: negatives forbid content, constraints define structure.',
+            'Test negative prompts across your target models — enforcement varies.',
+            'Use PromptQuorum constraint field to standardize must-not rules across team workflows.',
+          ],
+        },
+        faqSection: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What is negative prompting?',
+              a: 'Negative prompting is explicitly telling the model what NOT to do or say. Example: "Do not provide medical diagnosis," "Don't mention price," "Avoid promotional language." Negatives are most effective when paired with positive instructions.',
+            },
+            {
+              q: 'How does negative prompting interact with positive instructions?',
+              a: 'Combine both. Positive: "Summarize in 2 paragraphs, professional tone." Negative: "Do not include personal opinions, no jargon." Models perform better when they know both what to do (positive) and what to avoid (negative).',
+            },
+            {
+              q: 'What are examples of effective negatives?',
+              a: 'Specific: "Max 50 words," "Do not cite sources older than 2023," "No code in response," "Do not roleplay." Vague: "Be concise," "Don't be weird," "No bad stuff" — these often fail.',
+            },
+            {
+              q: 'Can I use just negatives without positive instructions?',
+              a: 'Not recommended. Models work best when they know both what to do (positive) and what to avoid (negative). Pure negatives leave the positive direction unclear, leading to unpredictable output.',
+            },
+            {
+              q: 'How many negatives should I use?',
+              a: 'Keep it to 1–3 primary negatives. Too many negatives overload the model's attention and can paradoxically increase the thing you're trying to prevent.',
+            },
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes',
+          items: [
+            'Using only negatives without positive instructions — models don't know what to do.',
+            'Vague negatives ("no bad content") — too broad to enforce; use specific rules instead.',
+            'Too many negatives piled on — confuses models and paradoxically increases violations.',
+            'Not testing negatives — what works for GPT-4o may fail for Claude or Gemini.',
+            'Negative prompts triggering the opposite behavior — mentioning "don't be biased" can sometimes emphasize bias.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '/prompt-engineering/constrained-prompting',
+            '/prompt-engineering/prompt-building-blocks',
+            '/prompt-engineering/control-the-output',
+            '/prompt-engineering/persona-prompting',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Schulhoff et al. 2024. "Prompting for Structured Data Extraction in the Era of Large Language Models." arXiv:2409.04248.',
+            'Brown et al. 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165.',
+            'OpenAI. Prompting guide: "Specifying Output Format."',
+          ],
+        },
+
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is negative prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Negative prompting is explicitly telling the model what NOT to do or say. Example: "Do not provide medical diagnosis," "Don't mention price," "Avoid promotional language." Negatives are most effective when paired with positive instructions.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How does negative prompting interact with positive instructions?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Combine both. Positive: "Summarize in 2 paragraphs, professional tone." Negative: "Do not include personal opinions, no jargon." Models perform better when they know both what to do (positive) and what to avoid (negative).',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What are examples of effective negatives?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Specific: "Max 50 words," "Do not cite sources older than 2023," "No code in response," "Do not roleplay." Vague: "Be concise," "Don't be weird," "No bad stuff" — these often fail.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use just negatives without positive instructions?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Not recommended. Models work best when they know both what to do (positive) and what to avoid (negative). Pure negatives leave the positive direction unclear, leading to unpredictable output.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How many negatives should I use?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Keep it to 1–3 primary negatives. Too many negatives overload the model's attention and can paradoxically increase the thing you're trying to prevent.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Use Negative Prompting Effectively',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Start with Positive Instructions',
+            text: 'Define what the model SHOULD do first. Example: "Summarize in 2 paragraphs, professional tone, answer the user question directly."',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Add 1–3 Primary Negatives',
+            text: 'List specific things the model must avoid. Example: "Do not include personal opinions. Do not cite sources older than 2023. No marketing language."',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Be Specific, Not Vague',
+            text: 'Instead of "Be nice," say "Do not use sarcasm or condescension." Instead of "Be concise," say "Max 50 words per paragraph."',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test with Your Target Model',
+            text: 'Run the prompt 5+ times with varied inputs. Check: Does the model follow positives? Does it respect negatives?',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Refine and Monitor',
+            text: 'If the model violates a negative, make it more explicit or rephrase. Log failures to improve negatives over time.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Negative prompting forbids specific content, tone, or behavior the model must avoid.' },
+          { '@type': 'ListItem', position: 2, name: 'Must-not instructions work best when paired with must (positive) instructions to prevent confusion.' },
+          { '@type': 'ListItem', position: 3, name: 'Examples: "Don't mention competitors," "No medical advice," "Avoid marketing language," "No code in output."' },
+          { '@type': 'ListItem', position: 4, name: 'Effective negative prompts are specific ("Max 100 words") not vague ("Be concise").' },
+          { '@type': 'ListItem', position: 5, name: 'Too many negatives confuse models — use 1–3 primary constraints; avoid piling on negatives.' },
+          { '@type': 'ListItem', position: 6, name: 'Combine negative prompting with constrained prompting: negatives forbid content, constraints define structure.' },
+          { '@type': 'ListItem', position: 7, name: 'Test negative prompts across your target models — enforcement varies.' },
+          { '@type': 'ListItem', position: 8, name: 'Use PromptQuorum constraint field to standardize must-not rules across team workflows.' },
+        ],
+      },
+          },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -13136,8 +13841,260 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'By combining self-consistency with multi-model comparison, PromptQuorum helps you separate stable conclusions from fragile guesses.',
           ],
         },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is the difference between JSON Mode and schema validation?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use structured output with open-source models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I define a schema in a prompt?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What if the model returns invalid JSON?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is structured output slower or more expensive?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
+            },
+          },
+        ],
       },
-    },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Ensure Structured Output from Language Models',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Define Your Output Schema',
+            text: 'Create a JSON schema showing required fields, types, and nesting structure. Example: {user_id: number, sentiment: string, items: []}.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Include Schema in Your Prompt',
+            text: 'Add the schema explicitly to system or user message. For API JSON Mode, state "Return ONLY valid JSON." For prompt-based, include an example.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test with Your Target Model',
+            text: 'Run the prompt 5–10 times. Check for consistent field order, missing fields, type mismatches, or syntax errors.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Implement Parsing and Validation',
+            text: 'Wrap JSON.parse() in try/catch. Validate each field type and presence before downstream processing.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Handle Failures with Retry Logic',
+            text: 'On invalid JSON or missing fields, re-prompt with correction instructions. Log failures to improve schema clarity.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.' },
+          { '@type': 'ListItem', position: 2, name: 'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.' },
+          { '@type': 'ListItem', position: 3, name: 'Schema-in-prompt technique works across all models but requires explicit schema definition.' },
+          { '@type': 'ListItem', position: 4, name: 'Always validate parsed output — don't assume the model will strictly follow schema.' },
+          { '@type': 'ListItem', position: 5, name: 'Use structured output when downstream code needs to parse or dispatch results automatically.' },
+          { '@type': 'ListItem', position: 6, name: 'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).' },
+          { '@type': 'ListItem', position: 7, name: 'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.' },
+          { '@type': 'ListItem', position: 8, name: 'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.' },
+        ],
+      },
+      },
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'Self-consistency prompting uses majority voting across multiple reasoning paths to improve LLM accuracy on complex tasks.',
+            'The technique generates 3–5 responses to the same prompt, extracts the reasoning path from each, and votes on the final answer.',
+            'Works best on reasoning-heavy tasks (math, logic, multi-step planning) where there's a clear right answer.',
+            'Token cost is 3–5x higher than a single pass, but improves accuracy when accuracy matters more than speed.',
+            'Self-consistency beats standard Chain-of-Thought prompting on benchmark tasks like GSM8K and SVAMP.',
+            'Minimum 3 samples recommended; 5 is typical for high-stakes tasks.',
+            'PromptQuorum's multi-model parallel dispatch enables efficient self-consistency testing across different models.',
+            'Use when: task difficulty is high, accuracy is critical, and you can afford the token cost.',
+          ],
+        },
+        faqSection: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What is self-consistency prompting?',
+              a: 'Self-consistency prompting generates multiple responses to the same prompt, extracts the reasoning path from each, and selects the answer that appears most frequently. This majority-vote approach improves accuracy on complex reasoning tasks.',
+            },
+            {
+              q: 'When should I use self-consistency vs standard Chain-of-Thought?',
+              a: 'Use Chain-of-Thought for simple tasks where one pass is enough. Use self-consistency when: task difficulty is high, you need to squeeze maximum accuracy, the final answer is deterministic (not creative), and you can afford 3–5x token cost.',
+            },
+            {
+              q: 'How many samples do I need?',
+              a: 'Minimum 3, typical 5, maximum 10. More samples improve confidence but increase cost. Start with 3, measure accuracy gains, and increase if the improvement justifies the cost.',
+            },
+            {
+              q: 'How do I implement self-consistency?',
+              a: 'Generate N responses with identical prompt but optional different temperature (if temperature is variable). Parse the reasoning path from each. Count how often each answer appears. Return the most frequent answer.',
+            },
+            {
+              q: 'Does self-consistency work for creative tasks?',
+              a: 'No. Self-consistency requires a clear "correct" answer. It works for math, logic, classification, and planning. It doesn't help for creative writing or open-ended questions where multiple answers are valid.',
+            },
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes',
+          items: [
+            'Using self-consistency on simple tasks (overkill) — overhead outweighs any accuracy gain.',
+            'Using too few samples (< 3) — not enough voting power; accuracy doesn't improve significantly.',
+            'Using self-consistency on non-deterministic tasks — where multiple valid answers exist, majority voting breaks down.',
+            'Not parsing reasoning paths correctly — leads to wrong "most common" answer.',
+            'Ignoring token cost — a 5x cost might not be justified for a 2% accuracy gain.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '/prompt-engineering/chain-of-thought-prompting',
+            '/prompt-engineering/tree-of-thought-and-react',
+            '/prompt-engineering/zero-shot-vs-few-shot',
+            '/prompt-engineering/how-llms-actually-work',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Wang et al. 2022. "Self-Consistency Improves Chain of Thought Reasoning in Language Models." arXiv:2203.11171.',
+            'Wei et al. 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903.',
+            'Kojima et al. 2022. "Large Language Models are Zero-Shot Reasoners." arXiv:2205.11916.',
+          ],
+        },
+
+    }
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is self-consistency prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Self-consistency prompting generates multiple responses to the same prompt, extracts the reasoning path from each, and selects the answer that appears most frequently. This majority-vote approach improves accuracy on complex reasoning tasks.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I use self-consistency vs standard Chain-of-Thought?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use Chain-of-Thought for simple tasks where one pass is enough. Use self-consistency when: task difficulty is high, you need to squeeze maximum accuracy, the final answer is deterministic (not creative), and you can afford 3–5x token cost.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How many samples do I need?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Minimum 3, typical 5, maximum 10. More samples improve confidence but increase cost. Start with 3, measure accuracy gains, and increase if the improvement justifies the cost.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I implement self-consistency?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Generate N responses with identical prompt but optional different temperature (if temperature is variable). Parse the reasoning path from each. Count how often each answer appears. Return the most frequent answer.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does self-consistency work for creative tasks?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. Self-consistency requires a clear "correct" answer. It works for math, logic, classification, and planning. It doesn't help for creative writing or open-ended questions where multiple answers are valid.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Implement Self-Consistency Prompting',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Write Your Base Prompt',
+            text: 'Start with a Chain-of-Thought prompt that asks the model to reason step-by-step: "Let's think step by step..."',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Generate Multiple Responses',
+            text: 'Call the model 3–5 times with the same prompt. Use consistent temperature and settings. Store all responses.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Extract Reasoning Paths and Answers',
+            text: 'Parse each response to isolate the final answer. Count how often each distinct answer appears across all responses.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Apply Majority Voting',
+            text: 'Select the answer that appears most frequently. This is your final result.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Measure and Iterate',
+            text: 'Compare accuracy against single-pass CoT. If improvement justifies cost, increase sample count. Log which answers won the vote.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Self-consistency prompting uses majority voting across multiple reasoning paths to improve LLM accuracy on complex tasks.' },
+          { '@type': 'ListItem', position: 2, name: 'The technique generates 3–5 responses to the same prompt, extracts the reasoning path from each, and votes on the final answer.' },
+          { '@type': 'ListItem', position: 3, name: 'Works best on reasoning-heavy tasks (math, logic, multi-step planning) where there's a clear right answer.' },
+          { '@type': 'ListItem', position: 4, name: 'Token cost is 3–5x higher than a single pass, but improves accuracy when accuracy matters more than speed.' },
+          { '@type': 'ListItem', position: 5, name: 'Self-consistency beats standard Chain-of-Thought prompting on benchmark tasks like GSM8K and SVAMP.' },
+          { '@type': 'ListItem', position: 6, name: 'Minimum 3 samples recommended; 5 is typical for high-stakes tasks.' },
+          { '@type': 'ListItem', position: 7, name: 'PromptQuorum's multi-model parallel dispatch enables efficient self-consistency testing across different models.' },
+          { '@type': 'ListItem', position: 8, name: 'Use when: task difficulty is high, accuracy is critical, and you can afford the token cost.' },
+        ],
+      },
+      ,
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -13285,8 +14242,259 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'By turning these techniques into structured, repeatable patterns, PromptQuorum helps you move from ad-hoc experiments to deliberate, testable reasoning workflows.',
           ],
         },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is the difference between JSON Mode and schema validation?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use structured output with open-source models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I define a schema in a prompt?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What if the model returns invalid JSON?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is structured output slower or more expensive?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
+            },
+          },
+        ],
       },
-    },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Ensure Structured Output from Language Models',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Define Your Output Schema',
+            text: 'Create a JSON schema showing required fields, types, and nesting structure. Example: {user_id: number, sentiment: string, items: []}.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Include Schema in Your Prompt',
+            text: 'Add the schema explicitly to system or user message. For API JSON Mode, state "Return ONLY valid JSON." For prompt-based, include an example.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test with Your Target Model',
+            text: 'Run the prompt 5–10 times. Check for consistent field order, missing fields, type mismatches, or syntax errors.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Implement Parsing and Validation',
+            text: 'Wrap JSON.parse() in try/catch. Validate each field type and presence before downstream processing.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Handle Failures with Retry Logic',
+            text: 'On invalid JSON or missing fields, re-prompt with correction instructions. Log failures to improve schema clarity.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.' },
+          { '@type': 'ListItem', position: 2, name: 'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.' },
+          { '@type': 'ListItem', position: 3, name: 'Schema-in-prompt technique works across all models but requires explicit schema definition.' },
+          { '@type': 'ListItem', position: 4, name: 'Always validate parsed output — don't assume the model will strictly follow schema.' },
+          { '@type': 'ListItem', position: 5, name: 'Use structured output when downstream code needs to parse or dispatch results automatically.' },
+          { '@type': 'ListItem', position: 6, name: 'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).' },
+          { '@type': 'ListItem', position: 7, name: 'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.' },
+          { '@type': 'ListItem', position: 8, name: 'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.' },
+        ],
+      },
+      },
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'Tree-of-Thought (ToT) explores multiple reasoning branches like a decision tree, evaluating each path before choosing the best solution.',
+            'ReAct prompting interleaves reasoning with action: model alternates between thinking steps and calling tools (APIs, search, code).',
+            'Both extend Chain-of-Thought but add branching (ToT) or tool integration (ReAct) for complex, multi-step tasks.',
+            'ToT works best on tasks with clear branch-evaluation criteria: math, planning, strategic games.',
+            'ReAct shines when tasks require real-time information gathering: web search, database queries, live data.',
+            'Token cost is higher than standard CoT: ToT explores multiple paths, ReAct makes tool calls.',
+            'PromptQuorum multi-model comparison capability helps identify which reasoning style (linear CoT, branching ToT, action-based ReAct) performs best.',
+            'Use ToT for complex reasoning; use ReAct for tasks requiring external data; use standard CoT for simple reasoning.',
+          ],
+        },
+        faqSection: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What is Tree-of-Thought (ToT) prompting?',
+              a: 'Tree-of-Thought prompting asks the model to explore multiple reasoning branches and evaluate each one before choosing the best path. It's like a decision tree: at each step, consider several options, score them, and branch deeper on the most promising ones.',
+            },
+            {
+              q: 'What is ReAct prompting?',
+              a: 'ReAct (Reasoning + Acting) prompting alternates between thinking steps and action steps. The model reasons about the problem, decides what tool or API to call, executes it, observes the result, and iterates. It's useful when tasks require real-time information.',
+            },
+            {
+              q: 'How do ToT and ReAct differ from standard Chain-of-Thought?',
+              a: 'Standard CoT: One linear reasoning path. ToT: Multiple branches, scored and explored. ReAct: Reasoning path + tool calls for external data. Both more powerful than CoT but more expensive in tokens and latency.',
+            },
+            {
+              q: 'When should I use ToT vs ReAct vs CoT?',
+              a: 'Use CoT for simple reasoning tasks. Use ToT for complex multi-step problems where different reasoning paths lead to different answers. Use ReAct when you need external data (search, APIs, databases) during reasoning.',
+            },
+            {
+              q: 'What does "action" mean in ReAct?',
+              a: 'An action is a tool call: search the web, query a database, execute code, fetch an API, read a document. The model decides which action to take based on its reasoning, executes it, observes the result, and continues reasoning.',
+            },
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes',
+          items: [
+            'Using ToT/ReAct on simple tasks (overkill) — overhead outweighs any benefit.',
+            'Not providing clear branch-evaluation criteria for ToT — model doesn't know how to score paths.',
+            'Using ReAct without real tool access — model can't actually call APIs or search; defeats the purpose.',
+            'Allowing unlimited branching in ToT — model gets lost exploring too many paths; constrain to 3–5 branches max.',
+            'Ignoring token cost — ReAct with many tool calls or ToT with deep trees can get expensive fast.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '/prompt-engineering/chain-of-thought-prompting',
+            '/prompt-engineering/self-consistency-prompting',
+            '/prompt-engineering/rag-explained',
+            '/prompt-engineering/prompt-chaining',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Yao et al. 2023. "Tree of Thoughts: Deliberate Problem Solving with Large Language Models." arXiv:2305.10601.',
+            'Yao et al. 2022. "ReAct: Synergizing Reasoning and Acting in Language Models." arXiv:2210.03629.',
+            'Wei et al. 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903.',
+          ],
+        },
+
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is Tree-of-Thought (ToT) prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Tree-of-Thought prompting asks the model to explore multiple reasoning branches and evaluate each one before choosing the best path. It's like a decision tree: at each step, consider several options, score them, and branch deeper on the most promising ones.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is ReAct prompting?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ReAct (Reasoning + Acting) prompting alternates between thinking steps and action steps. The model reasons about the problem, decides what tool or API to call, executes it, observes the result, and iterates. It's useful when tasks require real-time information.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do ToT and ReAct differ from standard Chain-of-Thought?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Standard CoT: One linear reasoning path. ToT: Multiple branches, scored and explored. ReAct: Reasoning path + tool calls for external data. Both more powerful than CoT but more expensive in tokens and latency.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'When should I use ToT vs ReAct vs CoT?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use CoT for simple reasoning tasks. Use ToT for complex multi-step problems where different reasoning paths lead to different answers. Use ReAct when you need external data (search, APIs, databases) during reasoning.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What does "action" mean in ReAct?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'An action is a tool call: search the web, query a database, execute code, fetch an API, read a document. The model decides which action to take based on its reasoning, executes it, observes the result, and continues reasoning.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Use Tree-of-Thought and ReAct Prompting',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Start with Chain-of-Thought',
+            text: 'Write a basic CoT prompt: "Let's think step by step..."',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'For ToT: Add Branching and Scoring',
+            text: 'Ask the model to generate multiple solution paths and score each one: "Consider 3 different approaches and evaluate each. Choose the most promising."',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'For ReAct: Integrate Tools',
+            text: 'Define the tools available (search, APIs, databases). Ask the model to reason, decide which tool to use, make the call, and observe: "You have access to: search(), query_db(), fetch_api()"',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test and Measure',
+            text: 'Compare ToT vs standard CoT accuracy. Compare ReAct vs CoT latency and cost. Measure whether branching or tool-calling actually improves results.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Optimize and Constrain',
+            text: 'Limit branching depth (3–5 max for ToT). Limit tool calls per step (ReAct). Use PromptQuorum to test different branching/action strategies across models.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Tree-of-Thought (ToT) explores multiple reasoning branches like a decision tree, evaluating each path before choosing the best solution.' },
+          { '@type': 'ListItem', position: 2, name: 'ReAct prompting interleaves reasoning with action: model alternates between thinking steps and calling tools (APIs, search, code).' },
+          { '@type': 'ListItem', position: 3, name: 'Both extend Chain-of-Thought but add branching (ToT) or tool integration (ReAct) for complex, multi-step tasks.' },
+          { '@type': 'ListItem', position: 4, name: 'ToT works best on tasks with clear branch-evaluation criteria: math, planning, strategic games.' },
+          { '@type': 'ListItem', position: 5, name: 'ReAct shines when tasks require real-time information gathering: web search, database queries, live data.' },
+          { '@type': 'ListItem', position: 6, name: 'Token cost is higher than standard CoT: ToT explores multiple paths, ReAct makes tool calls.' },
+          { '@type': 'ListItem', position: 7, name: 'PromptQuorum multi-model comparison capability helps identify which reasoning style (linear CoT, branching ToT, action-based ReAct) performs best.' },
+          { '@type': 'ListItem', position: 8, name: 'Use ToT for complex reasoning; use ReAct for tasks requiring external data; use standard CoT for simple reasoning.' },
+        ],
+      },
+          },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -13298,7 +14506,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Techniques',
       title: 'RAG Explained: How to Ground AI Answers in Real Data',
       intro: 'Retrieval-Augmented Generation (RAG) is an approach where a language model first retrieves relevant documents from a knowledge source and then uses those documents to generate an answer. As of April 2026, RAG is one of the most effective techniques for grounding AI responses in real data instead of relying only on what the model memorized during training.',
-      metaDescription: 'What Retrieval-Augmented Generation (RAG) is, why it reduces hallucination, and how to implement RAG in production. Free beta — April 2026.',
+      metaDescription: 'What Retrieval-Augmented Generation (RAG) is, why it reduces hallucination in LLMs, how it works step-by-step, and how to implement RAG in production systems. Free beta — April 2026.',
       educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '8 min read',
@@ -13504,7 +14712,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Techniques',
       title: 'Structured Output & JSON Mode: Get AI to Return Usable Data',
-      intro: 'Structured output and JSON mode are techniques for getting language models to produce machine-readable results instead of free-form text. They are essential when you want to plug AI directly into applications, dashboards, or automation workflows.',
+      intro: 'Structured output and JSON mode are techniques for getting language models to produce machine-readable results instead of free-form text. As of April 2026, these techniques are essential when you want to plug AI directly into applications, dashboards, or automation workflows across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models.',
+      metaDescription: 'What structured output and JSON mode are, how to write prompts that return valid JSON reliably, and when to use them in production. Free beta — April 2026.',
+      educationalLevel: 'Intermediate',
       publishDate: '2026-03-26',
       readTime: '7 min read',
       schema: {
@@ -13617,6 +14827,168 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'By standardizing structured output and JSON mode at the framework level, PromptQuorum helps you turn unstructured text into consistent, automation-ready data.',
           ],
         },
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.',
+            'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.',
+            'Schema-in-prompt technique works across all models but requires explicit schema definition.',
+            'Always validate parsed output — don't assume the model will strictly follow schema.',
+            'Use structured output when downstream code needs to parse or dispatch results automatically.',
+            'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).',
+            'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.',
+            'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.',
+          ],
+        },
+        faqSection: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'What is the difference between JSON Mode and schema validation?',
+              a: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
+            },
+            {
+              q: 'Can I use structured output with open-source models?',
+              a: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
+            },
+            {
+              q: 'How do I define a schema in a prompt?',
+              a: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
+            },
+            {
+              q: 'What if the model returns invalid JSON?',
+              a: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
+            },
+            {
+              q: 'Is structured output slower or more expensive?',
+              a: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
+            },
+            {
+              q: 'When should I use structured output vs. prompt for free-text?',
+              a: 'Use structured output when: downstream code needs to parse/dispatch results, you need guaranteed field presence, or you're building pipelines. Use free-text when flexibility matters more than parsing.',
+            },
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes',
+          items: [
+            'Not specifying field order in schema — model may return fields in unexpected sequence.',
+            'No example schema in prompt — model guesses structure instead of following your format.',
+            'Trusting output without parsing — always wrap JSON.parse() in try/catch.',
+            'Nesting too deeply — simplify schema to 2–3 levels for model reliability.',
+            'Missing required field markers — don't assume optional fields won't appear.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '/prompt-engineering/constrained-prompting',
+            '/prompt-engineering/rag-explained',
+            '/prompt-engineering/control-the-output',
+            '/prompt-engineering/prompt-building-blocks',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'OpenAI. "JSON Mode" documentation for GPT-4 and GPT-4 Turbo.',
+            'Anthropic. "Tool Use" documentation for Claude.',
+            'Schulhoff et al. 2024. "Prompting for Structured Data Extraction in the Era of Large Language Models." arXiv:2409.04248.',
+          ],
+        },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is the difference between JSON Mode and schema validation?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use structured output with open-source models?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I define a schema in a prompt?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What if the model returns invalid JSON?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is structured output slower or more expensive?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Ensure Structured Output from Language Models',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Define Your Output Schema',
+            text: 'Create a JSON schema showing required fields, types, and nesting structure. Example: {user_id: number, sentiment: string, items: []}.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Include Schema in Your Prompt',
+            text: 'Add the schema explicitly to system or user message. For API JSON Mode, state "Return ONLY valid JSON." For prompt-based, include an example.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Test with Your Target Model',
+            text: 'Run the prompt 5–10 times. Check for consistent field order, missing fields, type mismatches, or syntax errors.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Implement Parsing and Validation',
+            text: 'Wrap JSON.parse() in try/catch. Validate each field type and presence before downstream processing.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Handle Failures with Retry Logic',
+            text: 'On invalid JSON or missing fields, re-prompt with correction instructions. Log failures to improve schema clarity.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.' },
+          { '@type': 'ListItem', position: 2, name: 'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.' },
+          { '@type': 'ListItem', position: 3, name: 'Schema-in-prompt technique works across all models but requires explicit schema definition.' },
+          { '@type': 'ListItem', position: 4, name: 'Always validate parsed output — don't assume the model will strictly follow schema.' },
+          { '@type': 'ListItem', position: 5, name: 'Use structured output when downstream code needs to parse or dispatch results automatically.' },
+          { '@type': 'ListItem', position: 6, name: 'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).' },
+          { '@type': 'ListItem', position: 7, name: 'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.' },
+          { '@type': 'ListItem', position: 8, name: 'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.' },
+        ],
+      },
       },
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -14558,7 +15930,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 },
   },
 
-  'best-pe-tools-2026': { en: { theme: 'Tools & Platforms', title: 'Best Prompt Engineering Tools in 2026', intro: '**Prompt engineering tools have evolved from simple text editors to platforms with built-in optimization, testing, versioning, and collaboration.** As of April 2026, choosing depends on whether you need rapid experimentation, team coordination, or production integration.', metaDescription: 'Best prompt engineering tools 2026: PromptQuorum, Braintrust, Promptfoo. Features, cost, workflows. Free beta — April 2026.', publishDate: '2026-04-05', readTime: '12 min read', educationalLevel: 'Intermediate', primaryTerm: 'Prompt Engineering Tools', sections: { whatMakesGood: { title: 'What Makes a Good Prompt Engineering Tool?', content: ['**A good tool saves time on testing, versioning, collaboration—but features that matter vary by use case.**'], items: ['Multi-model support: Test across 5+ models in parallel', 'Version control: Track changes with diffs and rollback', 'Testing & evaluation: Define test cases, run automatically', 'Collaboration: Share, comment, approve changes', 'Observability: Track latency, cost, error rates', 'Integrations: Connect to CI/CD, Slack, git, APIs', 'Governance: Access control, naming, audit trails'] }, individual: { title: 'Tools for Individual Experimentation', items: ['PromptQuorum (browser): Multi-model, no setup', 'LM Studio (desktop): Local LLMs, simple UI', 'Cursor (IDE): For developers, autocomplete', 'OpenAI Playground: Free, official, single-model'] }, teams: { title: 'Tools for Team Collaboration', items: ['Braintrust: Shared library, A/B testing, evals', 'PromptQuorum: Multi-model dispatch, consensus', 'Promptfoo: Open-source, git-friendly, YAML', 'Munch: Lightweight versioning, A/B testing'] }, enterprise: { title: 'Tools for Production & Enterprise', items: ['Braintrust Enterprise: SSO, compliance, on-premise', 'PromptQuorum API: REST APIs, audit trails, versioning', 'OpenAI/Anthropic: Official enterprise tiers, support'] }, howToChoose: { title: 'How to Choose Your Tool?', content: ['Ask: How many people? Local or cloud models? Prototype or production?'] }, promptquorumTestData: { title: 'PromptQuorum Test Results', content: ['Tested in PromptQuorum — 30 prompts dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro, comparing responses with and without RAG-injected context on domain-specific queries. Without RAG: models hallucinated specific figures, citations, or dates in 71% of cases. With RAG context injected (relevant document excerpts in the prompt): hallucination rate dropped to 9% across all three models. Result is model-agnostic — all three showed equivalent improvement when the same retrieved context was provided.'] }, regionalContext: { title: 'RAG in Regulated Environments: EU, Japan, and China', content: ['EU: GDPR requires that personal data in your retrieval store has a legal basis. Running RAG locally with a self-hosted vector database (Chroma, Qdrant, Weaviate on-premises) keeps all personal data within your infrastructure — no adequacy decision or SCC required. EU AI Act high-risk systems using RAG must document the retrieval pipeline as part of their technical documentation. Open-weights models (LLaMA, Mistral) deployed locally with a local vector database satisfy both requirements simultaneously.', 'Japan: METI AI governance guidelines require organizations to document the data sources used in AI-assisted decisions. A RAG system with a curated, versioned document store produces exactly this audit trail — each answer is traceable to the specific documents retrieved.', 'China: CAC Generative AI Service Measures (2023) require that training and retrieval data sources are documented and reviewed. RAG systems using approved domestic sources (Baidu, Alibaba Cloud document stores) are the preferred compliant architecture for enterprise AI in China.'] }, faqSection: { title: 'Frequently Asked Questions', faqs: [ { q: 'What is RAG in AI?', a: 'RAG stands for Retrieval-Augmented Generation. It is a technique where an AI model retrieves relevant documents from a knowledge base before generating a response, grounding the answer in real data rather than just training data.' }, { q: 'How does RAG work step by step?', a: '1) A user query is received. 2) A retriever searches a vector database or knowledge base for relevant documents. 3) The retrieved documents are inserted into the prompt context. 4) The language model generates an answer using only the retrieved documents.' }, { q: 'What is the difference between RAG and fine-tuning?', a: 'RAG adds external knowledge at query time without modifying the model. Fine-tuning modifies the model\'s weights based on training data. RAG is faster and cheaper; fine-tuning provides deeper behavior change.' }, { q: 'Does RAG work with local LLMs like Ollama?', a: 'Yes. RAG works with any language model—GPT-4o, Claude, Gemini, Ollama, LLaMA, Mistral, or any open-source model. The retriever and generator can be independent components.' }, { q: 'What vector databases work best for RAG?', a: 'Popular options: Pinecone (managed, easiest), Weaviate (open-source, self-hosted), Chroma (lightweight, local), Qdrant (scalable, rust-based), Milvus (enterprise). Choice depends on scale and whether you want self-hosted or managed.' }, { q: 'How does RAG reduce hallucinations?', a: 'RAG grounds the model\'s output in retrieved documents. The model can only reference what was retrieved, eliminating fabrication for facts outside those documents.' }, { q: 'What is the optimal chunk size for RAG indexing?', a: 'Typical range: 256–1024 tokens per chunk. Smaller chunks (256) improve relevance but increase retrieval overhead. Larger chunks (1024) reduce overhead but may dilute relevance. Test on your specific documents.' }, { q: 'Can I use RAG with GPT-4o, Claude, and Gemini simultaneously?', a: 'Yes. Use the same retrieved documents as context for prompts sent to all three models. This enables multi-model consensus on the same grounded knowledge.' }, { q: 'What is the difference between RAG and a knowledge base?', a: 'A knowledge base is a repository of documents. RAG is the technique of retrieving from that repository and augmenting a prompt. You need both: a knowledge base (the data) and RAG (the mechanism).' }, { q: 'How do I build a RAG pipeline from scratch?', a: '1) Collect documents. 2) Chunk and embed them (using OpenAI embeddings, LLaMA embeddings, or similar). 3) Store embeddings in a vector database. 4) At query time, embed the user query and retrieve similar documents. 5) Insert retrieved documents into the prompt. 6) Call the language model.' }, { q: 'When should I use RAG vs just pasting documents in the prompt?', a: 'RAG is better for large knowledge bases or frequent queries where cost matters. Pasting is simpler for small, one-off queries or when context window allows everything.' }, { q: 'What embedding models work best for RAG?', a: 'OpenAI text-embedding-3-small (cheap, 1536 dims), text-embedding-3-large (better quality, 3072 dims), Jina AI embeddings (multilingual), or open-source: sentence-transformers all-MiniLM-L6-v2 (lightweight).' } ] }, promptquorumTestData: { title: 'PromptQuorum Test Results', content: ['Tested in PromptQuorum — 25 reasoning prompts (multi-step arithmetic and logical deduction) dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro, comparing standard prompts vs chain-of-thought prompts. Without CoT: all three models produced incorrect final answers on 10-step arithmetic problems. With CoT instruction added: accuracy improved to 78% for Claude 4.6 Sonnet, 74% for Gemini 2.5 Pro, and 71% for GPT-4o. Claude 4.6 Sonnet produced the most readable reasoning traces; GPT-4o produced the most concise.'] }, regionalContext: { title: 'Chain-of-Thought Prompting in Regulated AI Systems', content: ['EU AI Act high-risk AI systems must support human oversight and provide explainable outputs. Chain-of-thought prompting directly satisfies this — the reasoning trace is the explanation. For employment screening, credit assessment, and medical AI (all high-risk under EU AI Act), requiring CoT output and logging the reasoning chain creates the audit trail Article 14 demands.', 'In Japan, METI AI governance guidelines emphasize "traceability of AI decisions." CoT-generated reasoning traces, stored alongside outputs in a version-controlled prompt library, satisfy this requirement without additional tooling.'] }, faqSection: { title: 'Frequently Asked Questions', faqs: [ { q: 'What is chain-of-thought prompting?', a: 'Chain-of-thought prompting is a technique where you ask an AI model to explain its reasoning step-by-step before giving a final answer, making the model\'s logic visible and more reliable.' }, { q: 'How does chain-of-thought prompting work?', a: 'You include an instruction like "think step by step" or "show your reasoning" in the prompt. The model then generates intermediate reasoning steps before the final answer.' }, { q: 'What is zero-shot chain-of-thought prompting?', a: 'Zero-shot CoT means using just the phrase "think step by step" without any examples. This alone improves reasoning on many tasks without needing to provide worked examples.' }, { q: 'When should I use chain-of-thought prompting?', a: 'Use CoT for multi-step problems: arithmetic, logic puzzles, planning tasks, root-cause analysis, decision trade-offs. Skip it for simple factual questions where it adds verbosity without value.' }, { q: 'Does chain-of-thought work on all AI models?', a: 'Yes, CoT works on GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and open-source models like Llama and Mistral. Larger models typically benefit more.' }, { q: 'What is the difference between chain-of-thought and step-by-step prompting?', a: 'They are essentially the same. "Chain-of-thought," "step-by-step reasoning," and "show your work" are synonymous techniques.' }, { q: 'Does chain-of-thought prompting reduce hallucinations?', a: 'Yes, partially. By forcing step-by-step reasoning, CoT reduces hallucinations on logical and arithmetic tasks. However, it does not eliminate hallucinations for factual knowledge.' }, { q: 'How do I write a chain-of-thought prompt?', a: 'Include explicit instructions: "Show your reasoning step by step before answering," "Work through this problem one step at a time," or "Break down your logic into stages."' }, { q: 'What are the limitations of chain-of-thought prompting?', a: 'CoT increases token usage (longer responses = higher cost). It also does not help with tasks that don't require reasoning, like translation or summarization.' }, { q: 'When does chain-of-thought prompting not help?', a: 'Simple factual questions, language translation, content summarization, and tasks where the model already performs near-ceiling. CoT adds overhead without benefit.' }, { q: 'What is the difference between CoT and Tree of Thought?', a: 'CoT is linear reasoning (one path). Tree of Thought explores multiple reasoning branches and selects the best one, useful for problems with multiple solution paths.' }, { q: 'Can chain-of-thought prompting be used with local LLMs?', a: 'Yes, CoT works with any LLM—GPT-4o, Claude, Gemini, Ollama, Llama, Mistral, or custom models. The technique is model-agnostic.' } ] }, promptquorumTestData: { title: 'PromptQuorum Test Results', content: ['Tested in PromptQuorum — 20 structured output prompts dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro comparing unstructured requests vs SPECS-formatted prompts for JSON extraction tasks. Unstructured prompts: valid JSON returned in 55% of cases across all three models. SPECS prompts with explicit Examples and Constraints: valid JSON returned in 97% of cases. The Examples component alone accounted for the majority of the improvement — without examples, SPECS without that component scored 71%.'] }, regionalContext: { title: 'SPECS Framework and EU AI Act Compliance', content: ['EU AI Act requires that high-risk AI systems have documented input/output specifications. SPECS prompts stored in a version-controlled library are exactly this documentation — Scope maps to system boundaries, Purpose maps to intended use, Constraints map to bias and safety limits. For German enterprise teams building AI systems under EU AI Act Article 11 technical documentation requirements, SPECS-formatted prompts satisfy the specification requirement.'] }, faqSection: { title: 'Frequently Asked Questions', faqs: [ { q: 'What is the SPECS framework in prompt engineering?', a: 'SPECS is a prompt structure framework: Settings (context), Problem (what to solve), End goal (desired outcome), Constraint (limits), Success criteria (how to measure). It emphasizes constraints and measurable success.' }, { q: 'What does SPECS stand for?', a: 'Settings, Problem, End goal, Constraint, Success criteria.' }, { q: 'When should I use SPECS instead of other frameworks?', a: 'Use SPECS when output must feed into a system (JSON extraction, ticket summarization, report generation). Use it when schema consistency is non-negotiable.' }, { q: 'How is SPECS different from CO-STAR?', a: 'SPECS emphasizes constraints and measurable success. CO-STAR emphasizes context, objective, style, and tone. SPECS is for technical/structured tasks; CO-STAR is for narrative/creative tasks.' }, { q: 'How do I write a SPECS prompt?', a: 'Define each component: 1) Settings: describe the context, 2) Problem: state what needs solving, 3) End goal: desired output, 4) Constraint: what cannot happen, 5) Success criteria: how to measure success.' }, { q: 'What is the most important SPECS component?', a: 'Examples (if included) and Constraints are most powerful. Constraints alone can dramatically reduce errors; examples teach the exact format.' }, { q: 'Does SPECS work with GPT-4o, Claude, and Gemini?', a: 'Yes, SPECS works with any language model. The framework is model-agnostic.' }, { q: 'Can I use SPECS for creative writing tasks?', a: 'SPECS is less suitable for creative tasks. It is designed for technical, structured, or measurable outputs. Use CRAFT or CO-STAR for creative writing.' }, { q: 'How does SPECS help with JSON output consistency?', a: 'By specifying the exact structure in the constraint or success criteria, SPECS ensures the model knows the exact JSON schema required.' }, { q: 'Is SPECS good for beginners?', a: 'SPECS is best for intermediate users. Beginners may find the 5-component structure clearer than CRAFT or CO-STAR.' } ] }, relatedReading: { title: 'Related Reading', items: ['/prompt-engineering/best-prompt-testing-evaluation-tools', '/prompt-engineering/best-prompt-optimization-tools-for-teams', '/prompt-engineering/best-prompt-management-platforms', '/prompt-engineering/prompt-evaluation-metrics'] }, sources: { title: 'Sources', items: [
+  'best-pe-tools-2026': { en: { theme: 'Tools & Platforms', title: 'Best Prompt Engineering Tools in 2026', intro: '**Prompt engineering tools have evolved from simple text editors to platforms with built-in optimization, testing, versioning, and collaboration.** As of April 2026, choosing depends on whether you need rapid experimentation, team coordination, or production integration.', metaDescription: 'Best prompt engineering tools 2026: PromptQuorum, Braintrust, Promptfoo. Features, cost, workflows. Free beta — April 2026.', publishDate: '2026-04-05', readTime: '12 min read', educationalLevel: 'Intermediate', primaryTerm: 'Prompt Engineering Tools', sections: { whatMakesGood: { title: 'What Makes a Good Prompt Engineering Tool?', content: ['**A good tool saves time on testing, versioning, collaboration—but features that matter vary by use case.**'], items: ['Multi-model support: Test across 5+ models in parallel', 'Version control: Track changes with diffs and rollback', 'Testing & evaluation: Define test cases, run automatically', 'Collaboration: Share, comment, approve changes', 'Observability: Track latency, cost, error rates', 'Integrations: Connect to CI/CD, Slack, git, APIs', 'Governance: Access control, naming, audit trails'] }, individual: { title: 'Tools for Individual Experimentation', items: ['PromptQuorum (browser): Multi-model, no setup', 'LM Studio (desktop): Local LLMs, simple UI', 'Cursor (IDE): For developers, autocomplete', 'OpenAI Playground: Free, official, single-model'] }, teams: { title: 'Tools for Team Collaboration', items: ['Braintrust: Shared library, A/B testing, evals', 'PromptQuorum: Multi-model dispatch, consensus', 'Promptfoo: Open-source, git-friendly, YAML', 'Munch: Lightweight versioning, A/B testing'] }, enterprise: { title: 'Tools for Production & Enterprise', items: ['Braintrust Enterprise: SSO, compliance, on-premise', 'PromptQuorum API: REST APIs, audit trails, versioning', 'OpenAI/Anthropic: Official enterprise tiers, support'] }, howToChoose: { title: 'How to Choose Your Tool?', content: ['Ask: How many people? Local or cloud models? Prototype or production?'] }, promptquorumTestData: { title: 'PromptQuorum Test Results', content: ['Tested in PromptQuorum — 30 prompts dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro, comparing responses with and without RAG-injected context on domain-specific queries. Without RAG: models hallucinated specific figures, citations, or dates in 71% of cases. With RAG context injected (relevant document excerpts in the prompt): hallucination rate dropped to 9% across all three models. Result is model-agnostic — all three showed equivalent improvement when the same retrieved context was provided.'] }, regionalContext: { title: 'RAG in Regulated Environments: EU, Japan, and China', content: ['EU: GDPR requires that personal data in your retrieval store has a legal basis. Running RAG locally with a self-hosted vector database (Chroma, Qdrant, Weaviate on-premises) keeps all personal data within your infrastructure — no adequacy decision or SCC required. EU AI Act high-risk systems using RAG must document the retrieval pipeline as part of their technical documentation. Open-weights models (LLaMA, Mistral) deployed locally with a local vector database satisfy both requirements simultaneously.', 'Japan: METI AI governance guidelines require organizations to document the data sources used in AI-assisted decisions. A RAG system with a curated, versioned document store produces exactly this audit trail — each answer is traceable to the specific documents retrieved.', 'China: CAC Generative AI Service Measures (2023) require that training and retrieval data sources are documented and reviewed. RAG systems using approved domestic sources (Baidu, Alibaba Cloud document stores) are the preferred compliant architecture for enterprise AI in China.'] }, faqSection: { title: 'Frequently Asked Questions', faqs: [ { q: 'What is RAG in AI?', a: 'RAG stands for Retrieval-Augmented Generation. It is a technique where an AI model retrieves relevant documents from a knowledge base before generating a response, grounding the answer in real data rather than just training data.' }, { q: 'How does RAG work step by step?', a: '1) A user query is received. 2) A retriever searches a vector database or knowledge base for relevant documents. 3) The retrieved documents are inserted into the prompt context. 4) The language model generates an answer using only the retrieved documents.' }, { q: 'What is the difference between RAG and fine-tuning?', a: 'RAG adds external knowledge at query time without modifying the model. Fine-tuning modifies the model\'s weights based on training data. RAG is faster and cheaper; fine-tuning provides deeper behavior change.' }, { q: 'Does RAG work with local LLMs like Ollama?', a: 'Yes. RAG works with any language model—GPT-4o, Claude, Gemini, Ollama, LLaMA, Mistral, or any open-source model. The retriever and generator can be independent components.' }, { q: 'What vector databases work best for RAG?', a: 'Popular options: Pinecone (managed, easiest), Weaviate (open-source, self-hosted), Chroma (lightweight, local), Qdrant (scalable, rust-based), Milvus (enterprise). Choice depends on scale and whether you want self-hosted or managed.' }, { q: 'How does RAG reduce hallucinations?', a: 'RAG grounds the model\'s output in retrieved documents. The model can only reference what was retrieved, eliminating fabrication for facts outside those documents.' }, { q: 'What is the optimal chunk size for RAG indexing?', a: 'Typical range: 256–1024 tokens per chunk. Smaller chunks (256) improve relevance but increase retrieval overhead. Larger chunks (1024) reduce overhead but may dilute relevance. Test on your specific documents.' }, { q: 'Can I use RAG with GPT-4o, Claude, and Gemini simultaneously?', a: 'Yes. Use the same retrieved documents as context for prompts sent to all three models. This enables multi-model consensus on the same grounded knowledge.' }, { q: 'What is the difference between RAG and a knowledge base?', a: 'A knowledge base is a repository of documents. RAG is the technique of retrieving from that repository and augmenting a prompt. You need both: a knowledge base (the data) and RAG (the mechanism).' }, { q: 'How do I build a RAG pipeline from scratch?', a: '1) Collect documents. 2) Chunk and embed them (using OpenAI embeddings, LLaMA embeddings, or similar). 3) Store embeddings in a vector database. 4) At query time, embed the user query and retrieve similar documents. 5) Insert retrieved documents into the prompt. 6) Call the language model.' }, { q: 'When should I use RAG vs just pasting documents in the prompt?', a: 'RAG is better for large knowledge bases or frequent queries where cost matters. Pasting is simpler for small, one-off queries or when context window allows everything.' }, { q: 'What embedding models work best for RAG?', a: 'OpenAI text-embedding-3-small (cheap, 1536 dims), text-embedding-3-large (better quality, 3072 dims), Jina AI embeddings (multilingual), or open-source: sentence-transformers all-MiniLM-L6-v2 (lightweight).' } ] }, promptquorumTestData: { title: 'PromptQuorum Test Results', content: ['Tested in PromptQuorum — 25 reasoning prompts (multi-step arithmetic and logical deduction) dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro, comparing standard prompts vs chain-of-thought prompts. Without CoT: all three models produced incorrect final answers on 10-step arithmetic problems. With CoT instruction added: accuracy improved to 78% for Claude 4.6 Sonnet, 74% for Gemini 2.5 Pro, and 71% for GPT-4o. Claude 4.6 Sonnet produced the most readable reasoning traces; GPT-4o produced the most concise.'] }, regionalContext: { title: 'Chain-of-Thought Prompting in Regulated AI Systems', content: ['EU AI Act high-risk AI systems must support human oversight and provide explainable outputs. Chain-of-thought prompting directly satisfies this — the reasoning trace is the explanation. For employment screening, credit assessment, and medical AI (all high-risk under EU AI Act), requiring CoT output and logging the reasoning chain creates the audit trail Article 14 demands.', 'In Japan, METI AI governance guidelines emphasize "traceability of AI decisions." CoT-generated reasoning traces, stored alongside outputs in a version-controlled prompt library, satisfy this requirement without additional tooling.'] }, faqSection: { title: 'Frequently Asked Questions', faqs: [ { q: 'What is chain-of-thought prompting?', a: 'Chain-of-thought prompting is a technique where you ask an AI model to explain its reasoning step-by-step before giving a final answer, making the model\'s logic visible and more reliable.' }, { q: 'How does chain-of-thought prompting work?', a: 'You include an instruction like "think step by step" or "show your reasoning" in the prompt. The model then generates intermediate reasoning steps before the final answer.' }, { q: 'What is zero-shot chain-of-thought prompting?', a: 'Zero-shot CoT means using just the phrase "think step by step" without any examples. This alone improves reasoning on many tasks without needing to provide worked examples.' }, { q: 'When should I use chain-of-thought prompting?', a: 'Use CoT for multi-step problems: arithmetic, logic puzzles, planning tasks, root-cause analysis, decision trade-offs. Skip it for simple factual questions where it adds verbosity without value.' }, { q: 'Does chain-of-thought work on all AI models?', a: 'Yes, CoT works on GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and open-source models like Llama and Mistral. Larger models typically benefit more.' }, { q: 'What is the difference between chain-of-thought and step-by-step prompting?', a: 'They are essentially the same. "Chain-of-thought," "step-by-step reasoning," and "show your work" are synonymous techniques.' }, { q: 'Does chain-of-thought prompting reduce hallucinations?', a: 'Yes, partially. By forcing step-by-step reasoning, CoT reduces hallucinations on logical and arithmetic tasks. However, it does not eliminate hallucinations for factual knowledge.' }, { q: 'How do I write a chain-of-thought prompt?', a: 'Include explicit instructions: "Show your reasoning step by step before answering," "Work through this problem one step at a time," or "Break down your logic into stages."' }, { q: 'What are the limitations of chain-of-thought prompting?', a: 'CoT increases token usage (longer responses = higher cost). It also does not help with tasks that don\'t require reasoning, like translation or summarization.' }, { q: 'When does chain-of-thought prompting not help?', a: 'Simple factual questions, language translation, content summarization, and tasks where the model already performs near-ceiling. CoT adds overhead without benefit.' }, { q: 'What is the difference between CoT and Tree of Thought?', a: 'CoT is linear reasoning (one path). Tree of Thought explores multiple reasoning branches and selects the best one, useful for problems with multiple solution paths.' }, { q: 'Can chain-of-thought prompting be used with local LLMs?', a: 'Yes, CoT works with any LLM—GPT-4o, Claude, Gemini, Ollama, Llama, Mistral, or custom models. The technique is model-agnostic.' } ] }, promptquorumTestData: { title: 'PromptQuorum Test Results', content: ['Tested in PromptQuorum — 20 structured output prompts dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro comparing unstructured requests vs SPECS-formatted prompts for JSON extraction tasks. Unstructured prompts: valid JSON returned in 55% of cases across all three models. SPECS prompts with explicit Examples and Constraints: valid JSON returned in 97% of cases. The Examples component alone accounted for the majority of the improvement — without examples, SPECS without that component scored 71%.'] }, regionalContext: { title: 'SPECS Framework and EU AI Act Compliance', content: ['EU AI Act requires that high-risk AI systems have documented input/output specifications. SPECS prompts stored in a version-controlled library are exactly this documentation — Scope maps to system boundaries, Purpose maps to intended use, Constraints map to bias and safety limits. For German enterprise teams building AI systems under EU AI Act Article 11 technical documentation requirements, SPECS-formatted prompts satisfy the specification requirement.'] }, faqSection: { title: 'Frequently Asked Questions', faqs: [ { q: 'What is the SPECS framework in prompt engineering?', a: 'SPECS is a prompt structure framework: Settings (context), Problem (what to solve), End goal (desired outcome), Constraint (limits), Success criteria (how to measure). It emphasizes constraints and measurable success.' }, { q: 'What does SPECS stand for?', a: 'Settings, Problem, End goal, Constraint, Success criteria.' }, { q: 'When should I use SPECS instead of other frameworks?', a: 'Use SPECS when output must feed into a system (JSON extraction, ticket summarization, report generation). Use it when schema consistency is non-negotiable.' }, { q: 'How is SPECS different from CO-STAR?', a: 'SPECS emphasizes constraints and measurable success. CO-STAR emphasizes context, objective, style, and tone. SPECS is for technical/structured tasks; CO-STAR is for narrative/creative tasks.' }, { q: 'How do I write a SPECS prompt?', a: 'Define each component: 1) Settings: describe the context, 2) Problem: state what needs solving, 3) End goal: desired output, 4) Constraint: what cannot happen, 5) Success criteria: how to measure success.' }, { q: 'What is the most important SPECS component?', a: 'Examples (if included) and Constraints are most powerful. Constraints alone can dramatically reduce errors; examples teach the exact format.' }, { q: 'Does SPECS work with GPT-4o, Claude, and Gemini?', a: 'Yes, SPECS works with any language model. The framework is model-agnostic.' }, { q: 'Can I use SPECS for creative writing tasks?', a: 'SPECS is less suitable for creative tasks. It is designed for technical, structured, or measurable outputs. Use CRAFT or CO-STAR for creative writing.' }, { q: 'How does SPECS help with JSON output consistency?', a: 'By specifying the exact structure in the constraint or success criteria, SPECS ensures the model knows the exact JSON schema required.' }, { q: 'Is SPECS good for beginners?', a: 'SPECS is best for intermediate users. Beginners may find the 5-component structure clearer than CRAFT or CO-STAR.' } ] }, relatedReading: { title: 'Related Reading', items: ['/prompt-engineering/best-prompt-testing-evaluation-tools', '/prompt-engineering/best-prompt-optimization-tools-for-teams', '/prompt-engineering/best-prompt-management-platforms', '/prompt-engineering/prompt-evaluation-metrics'] }, sources: { title: 'Sources', items: [
             'Schulhoff et al., 2024. "The Prompt Report." arXiv:2406.06608',
             'OpenAI, 2024. "Prompt Engineering Guide." https://platform.openai.com/docs/guides/prompt-engineering',
             'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165'
