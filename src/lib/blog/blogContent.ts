@@ -2672,9 +2672,156 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
     en: {
       category: 'AI Tools & Features',
       title: 'Quorum: The AI Model Comparison Tool That Detects Hallucinations and Finds Consensus',
-      intro: 'Stop trusting a single AI model. Learn why comparing multiple models side-by-side reveals hidden biases, detects hallucinations, and gives you better answers.',
+      intro: 'As of April 2026: Stop trusting a single AI model. Learn why comparing multiple models side-by-side reveals hidden biases, detects hallucinations, and gives you better answers.',
       publishDate: 'Published March 14, 2026',
       readTime: '11 min read',
+      metaDescription: 'PromptQuorum: Dispatch prompts to GPT-5.x, Claude 4.6, Gemini 3 Pro, Llama 4 in parallel. Compare results. Free beta — April 2026.',
+      educationalLevel: 'Beginner',
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is Quorum?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Quorum is PromptQuorum\'s analysis engine that lets you compare responses from multiple AI models side-by-side. Send one prompt to ChatGPT, Claude, Gemini, and 25+ other models at once. Quorum analyzes all responses to find consensus and detect hallucinations.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How does Quorum detect hallucinations?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'When multiple models disagree on a fact, Quorum flags the contradiction. Hallucinations are often model-specific: one model hallucinates while others give factually consistent answers. Quorum highlights these discrepancies.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What models does PromptQuorum support?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'As of April 2026: OpenAI GPT-5.x, Anthropic Claude 4.6, Google Gemini 3 Pro, Meta Llama 4, Mistral, and 20+ open-source and commercial models.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I export Quorum results?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. Export in multiple formats: JSON (for integration), CSV (for analysis), HTML (for sharing), PDF (for reports), or plain text.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How much does PromptQuorum cost?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PromptQuorum is in free beta (April 2026). Sign up at promptquorum.com. After beta, pricing will scale with API usage (pay as you go).',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use Quorum for production workloads?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. During beta, workloads are free. Recommended for evaluating which models work best for your use case before committing to production.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Use PromptQuorum to Compare AI Models',
+        step: [
+          {
+            '@type': 'HowToStep',
+            name: 'Sign Up',
+            text: 'Go to promptquorum.com and create a free account. Verify your email. You\'re ready to use Quorum.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Write Your Prompt',
+            text: 'Enter a prompt or question in the prompt editor. Be specific: include context, constraints, and desired output format.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Select Models',
+            text: 'Choose which models to query (ChatGPT, Claude, Gemini, Llama, etc.). You can select all or a specific subset.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Dispatch and Wait',
+            text: 'Click "Dispatch" to send your prompt to all selected models in parallel. Responses arrive within seconds.',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Analyze Results',
+            text: 'Use Quorum\'s analysis tools: Consensus (what all models agree on), Contradictions (where they disagree), Hallucinations (likely false claims).',
+          },
+          {
+            '@type': 'HowToStep',
+            name: 'Export and Use',
+            text: 'Export results in your preferred format (JSON, CSV, HTML, PDF). Use the best response or synthesize insights from multiple models.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Dispatch Feature',
+            description: 'Send the same prompt to multiple AI models in parallel. Get all responses simultaneously.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Consensus Analysis',
+            description: 'Automatically identify facts that all models agree on. High confidence results.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Contradiction Detection',
+            description: 'Flag where models disagree. Helps identify unreliable or hallucinated content.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Hallucination Flag',
+            description: 'When one model gives a unique answer while others agree, Quorum highlights the likely hallucination.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Export Options',
+            description: 'JSON, CSV, HTML, PDF, plain text. Integrate results into workflows and reports.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'Cost Optimization',
+            description: 'Compare model pricing and quality. Choose the most cost-effective model for your task.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 7,
+            name: 'Model Support',
+            description: 'ChatGPT (GPT-5.x), Claude 4.6, Gemini 3 Pro, Llama 4, Mistral, and 20+ others.',
+          },
+          {
+            '@type': 'ListItem',
+            position: 8,
+            name: 'Free Beta',
+            description: 'April 2026 beta: All features free. After beta, pay-as-you-go pricing.',
+          },
+        ],
+      },
       sections: {
         problem: {
           title: 'The Single Model Problem',
@@ -2955,6 +3102,60 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             '4. Run contradiction detection and synthesis',
             '5. See how different the answers actually are',
             'Once you experience Quorum, you\'ll never go back to trusting a single model for important questions.',
+          ],
+        },
+        tldr: {
+          title: 'Quick Summary',
+          isTldr: true,
+          items: [
+            'Quorum compares responses from multiple AI models side-by-side.',
+            'Detects hallucinations when one model disagrees with others.',
+            'Finds consensus: Facts that all models agree on have high confidence.',
+            'Supports 25+ models: ChatGPT, Claude, Gemini, Llama, Mistral, and more.',
+            'Analysis tools: Synthesis, comparison, quality scoring, recommendations.',
+            'Contradiction detection flags where models disagree.',
+            'Confidence analysis measures how strongly models agree.',
+            'Export formats: JSON, CSV, HTML, PDF, plain text.',
+          ],
+        },
+        faqSection: {
+          title: 'Frequently Asked Questions',
+          faqs: [
+            { q: 'What is Quorum?', a: 'Quorum is PromptQuorum\'s analysis engine that lets you compare responses from multiple AI models side-by-side. Send one prompt to ChatGPT, Claude, Gemini, and 25+ other models at once. Quorum analyzes all responses to find consensus and detect hallucinations.' },
+            { q: 'How does Quorum detect hallucinations?', a: 'When multiple models disagree on a fact, Quorum flags the contradiction. Hallucinations are often model-specific: one model hallucinates while others give factually consistent answers. Quorum highlights these discrepancies.' },
+            { q: 'What models does PromptQuorum support?', a: 'As of April 2026: OpenAI GPT-5.x, Anthropic Claude 4.6, Google Gemini 3 Pro, Meta Llama 4, Mistral, and 20+ open-source and commercial models.' },
+            { q: 'Can I export Quorum results?', a: 'Yes. Export in multiple formats: JSON (for integration), CSV (for analysis), HTML (for sharing), PDF (for reports), or plain text.' },
+            { q: 'How much does PromptQuorum cost?', a: 'PromptQuorum is in free beta (April 2026). Sign up at promptquorum.com. After beta, pricing will scale with API usage (pay as you go).' },
+            { q: 'Can I use Quorum for production workloads?', a: 'Yes. During beta, workloads are free. Recommended for evaluating which models work best for your use case before committing to production.' },
+          ],
+        },
+        commonMistakes: {
+          title: 'Common Mistakes',
+          items: [
+            'Mistake 1: Trusting a single model without verification. Always compare for important decisions.',
+            'Mistake 2: Ignoring contradiction detection. When models disagree, something is wrong. Investigate.',
+            'Mistake 3: Not using enough models. 3-4 models give weak consensus. Use 10+ for high confidence.',
+            'Mistake 4: Confusing confidence with correctness. Consensus doesn\'t guarantee truth (all models can hallucinate together).',
+            'Mistake 5: Over-relying on synthesis. For controversial topics, read the comparison view instead.',
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '/prompt-engineering/ai-model-comparison',
+            '/prompt-engineering/prompt-optimization',
+            '/prompt-engineering/local-ai-vs-cloud',
+            '/prompt-engineering/how-ai-models-are-trained',
+          ],
+        },
+        sources: {
+          title: 'Sources & Citations',
+          items: [
+            'PromptQuorum Official: https://promptquorum.com',
+            'Hallucination Detection in LLMs: https://arxiv.org/abs/2305.04765',
+            'OpenAI GPT-5.x Model Card: https://openai.com/models',
+            'Consensus in Multi-Model Systems: https://paperswithcode.com',
+            'Anthropic Claude Constitutional AI: https://arxiv.org/abs/2212.04092',
           ],
         },
       },
