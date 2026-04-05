@@ -142,3 +142,4 @@ Writers do not need to create or manage og:images; they are handled automaticall
 - Use default exports — named exports only
 - Omit JSON-LD schema markup on new pages
 - Add a client component that renders multilingual content without passing `initialLang` from the server page (see Language / i18n section above)
+- **Use `export const metadata` (static) on any page that supports `?lang=` parameter** — always use `export async function generateMetadata({ searchParams })` instead, so crawlers see correct language metadata on all language URLs. This rule prevents the systematic English-only metadata issue (see commit 1d685040).
