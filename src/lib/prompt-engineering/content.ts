@@ -3730,9 +3730,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Related Reading',
           items: [
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational concepts behind structuring prompts',
-            '[Multi-Model Consensus Scoring](/prompt-engineering/consensus-scoring) — how comparing models detects disagreements and unreliability',
-            '[Self-Critique Prompting Techniques](/prompt-engineering/self-critique-prompting) — how to get models to catch their own errors',
+            '[Context Windows: Why AI Forgets](/prompt-engineering/context-windows-explained) — understand how context limits increase hallucination risk',
+            '[RAG Explained: Grounding in Real Data](/prompt-engineering/rag-explained) — system-level strategy to eliminate hallucinations through document retrieval',
+            '[5 Building Blocks of Prompts](/prompt-engineering/prompt-building-blocks) — how to structure prompts to reduce hallucination risk',
+            '[Consensus Scoring: Detect AI Unreliability](/prompt-engineering/consensus-scoring) — how multi-model consensus detects hallucinations',
+            '[Self-Critique Prompting](/prompt-engineering/self-critique-prompting) — techniques to get models to catch their own errors',
           ],
         },
 
@@ -4952,9 +4954,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         relatedReading: {
           content: [
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — why prompt structure matters more than parameters',
-            '[The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — how to structure prompts before tuning parameters',
-            '[AI Hallucinations: Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — why lower temperature doesn\'t eliminate hallucinations',
+            '[Prompt Engineering Fundamentals](/prompt-engineering/what-is-prompt-engineering) — why structure matters more than parameters',
+            '[5 Building Blocks of Prompts](/prompt-engineering/prompt-building-blocks) — structure before tuning',
+            '[AI Hallucinations & How to Stop Them](/prompt-engineering/ai-hallucinations-how-to-stop) — why lower temperature alone doesn\'t eliminate hallucinations',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — reasoning technique alternative to temperature tuning',
+            '[Model Comparison: GPT, Claude, Gemini](/prompt-engineering/gpt-claude-gemini-which-model) — how different models respond to the same parameters',
           ],
         },
 
@@ -5842,9 +5846,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
         relatedReading: {
           content: [
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundation of all prompt design',
-            '[The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — role, task, examples, constraints, format',
-            '[Prompt Chaining: How to Break Big Tasks Into Winning Steps](/prompt-engineering/prompt-chaining) — split complex work into focused steps',
+            '[Prompt Engineering Fundamentals](/prompt-engineering/what-is-prompt-engineering) — the foundation of all prompt design',
+            '[5 Building Blocks of Prompts](/prompt-engineering/prompt-building-blocks) — role, task, examples, constraints, format',
+            '[Prompt Chaining: Breaking Big Tasks Into Steps](/prompt-engineering/prompt-chaining) — split complex work into focused steps',
+            '[Structured Output & JSON Mode](/prompt-engineering/structured-output-json-mode) — format controls answer length',
+            '[Token Costs & Limits](/prompt-engineering/tokens-costs-limits) — optimize token efficiency and cost',
           ],
         },
 
@@ -7232,9 +7238,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Related Reading',
           items: [
-            '[Fundamentals: Faster AI Answers: How to Prompt for Speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — prompt efficiency directly reduces token costs',
-            '[Fundamentals: GPT, Claude or Gemini? How to Pick the Right Model](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — model selection is the biggest cost lever',
-            '[Fundamentals: Context Windows Explained: Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets) — context windows limit how much history you can include before hitting token or length caps'
+            '[Faster AI Answers: Prompt Optimization](/prompt-engineering/prompt-for-speed) — reduce token usage through prompt structure',
+            '[Model Comparison: GPT, Claude, Gemini](/prompt-engineering/gpt-claude-gemini-which-model) — compare token pricing and performance',
+            '[Context Windows: Why AI Forgets](/prompt-engineering/context-windows-explained) — understand context limits and token budgets',
+            '[5 Building Blocks of Prompts](/prompt-engineering/prompt-building-blocks) — structure before optimization',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — reasoning chains and token cost trade-offs'
           ]
         },
         sources: {
@@ -7462,10 +7470,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Related Reading',
         items: [
-          '[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the pillar definition and core concepts',
-          '[Fundamentals: The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — structure that applies to both system and user prompts',
-          '[Fundamentals: Faster AI Answers: How to Prompt for Speed](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed) — optimize user prompts for efficiency',
-          '[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — multi-step workflows where each step has its own prompts',
+          '[Prompt Engineering Fundamentals](/prompt-engineering/what-is-prompt-engineering) — core concepts',
+          '[5 Building Blocks of Prompts](/prompt-engineering/prompt-building-blocks) — structure for system and user',
+          '[Faster AI Answers](/prompt-engineering/prompt-for-speed) — optimize for efficiency',
+          '[Prompt Chaining](/prompt-engineering/prompt-chaining) — multi-step workflows',
+          '[Context Windows](/prompt-engineering/context-windows-explained) — system prompt impact on context'
         ],
       },
 
@@ -8148,10 +8157,11 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         relatedReading: {
           title: 'Related Reading',
           items: [
-            '[Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — understand token pricing, rate limits, and cost optimization',
-            '[Fundamentals: System Prompt vs User Prompt: What\'s the Difference](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — how system prompts define model behavior across models',
-            '[Fundamentals: Which Prompt Framework Should You Use?](/prompt-engineering/which-prompt-framework-should-you-use) — frameworks work across models; choose one that fits your task',
-            '[Techniques: Prompt Chaining](/prompt-engineering/prompt-chaining) — multi-step workflows where different models can handle different steps',
+            '[Token Costs & Limits](/prompt-engineering/tokens-costs-limits) — pricing, rate limits, cost optimization',
+            '[System Prompt vs User Prompt](/prompt-engineering/system-prompt-vs-user-prompt) — behavior definition across models',
+            '[Which Framework Should You Use?](/prompt-engineering/which-framework-to-use) — frameworks work across all models',
+            '[Prompt Chaining](/prompt-engineering/prompt-chaining) — distribute tasks across models',
+            '[Open Source vs Proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) — trade-offs by deployment model'
           ],
         },
       },
