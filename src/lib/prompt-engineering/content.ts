@@ -24579,25 +24579,26 @@ zh: {
   'prompt-engineering-glossary': {
     en: {
       theme: 'Fundamentals',
-      title: 'Prompt Engineering Glossary: 100 Key Terms',
-      intro: 'Concise definitions of the 100 most important prompt engineering terms — from tokens and context windows to agent orchestration, RAG, and evaluation metrics.',
+      title: 'Prompt Engineering Glossary: 500 Key Terms',
+      intro: 'Concise definitions of the 500 most important prompt engineering terms — from tokens and context windows to agent orchestration, RAG, and evaluation metrics.',
+      metaDescription: 'Definitions of 500 prompt engineering terms — from tokens and context windows to agent orchestration, RAG, RLHF, and evaluation metrics. Reference guide for all skill levels.',
       publishDate: '2026-03-28',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
       sections: {
         intro: {
           content: [
-            '**This glossary covers the 100 most important terms in prompt engineering, from foundational concepts to agent orchestration and evaluation frameworks.** Each entry includes a concise practical definition written for developers and AI practitioners, plus a primary reference link for deeper reading.',
-            'Terms are organized into six groups: Core Prompting Concepts, Agents & Orchestration, Safety & Alignment, Evaluation & Testing, Advanced Techniques, and Metrics & Production. Use the tables as a quick reference or follow the links for implementation details.',
+            '**This glossary covers the 500 most important terms in prompt engineering, from foundational concepts to agent orchestration and evaluation frameworks.** Each entry includes a concise practical definition written for developers and AI practitioners, plus a primary reference link for deeper reading.',
+            'Terms are organized into six groups: Core Prompting Concepts, Agents & Orchestration, Safety & Alignment, Evaluation & Testing, Advanced Techniques, and Metrics & Production. Use the searchable tables as a quick reference or follow the links for implementation details.',
           ],
         },
         keyTakeaways: {
           isTldr: true,
           items: [
-            '100 terms organized into 6 sections: Core Concepts, Agents, Safety, Evaluation, Advanced Techniques, and Metrics & Production',
+            '500 terms organized into 6 sections: Core Concepts, Agents, Safety, Evaluation, Advanced Techniques, and Metrics & Production',
             'Each term includes a practical definition and 1–3 primary source citations for E-E-A-T validation',
             'Covers foundational techniques (CoT, RAG, few-shot) through 2026 agentic patterns (multi-agent, handoff, GraphRAG)',
-            '15 glossary terms link directly to dedicated PromptQuorum Prompt Engineering hub articles for deeper exploration',
+            'Search filter to find terms by name and jump navigation to quickly locate relevant sections',
             'FAQPage schema + DefinedTermSet schema for answer extraction by Google, Claude, Perplexity, and other AI engines',
           ],
         },
@@ -24770,21 +24771,21 @@ zh: {
     },
     de: {
   theme: 'Fundamentals',
-  title: 'Prompt Engineering Glossar: 100 Wesentliche Begriffe',
-  intro: 'Prägnante Definitionen der 100 wichtigsten Prompt-Engineering-Begriffe — von Tokens und Kontextfenstern bis zur Agent-Orchestrierung, RAG und Evaluierungsmetriken.',
+  title: 'Prompt Engineering Glossar: 500 Wesentliche Begriffe',
+  intro: 'Prägnante Definitionen der 500 wichtigsten Prompt-Engineering-Begriffe — von Tokens und Kontextfenstern bis zur Agent-Orchestrierung, RAG und Evaluierungsmetriken.',
   publishDate: '2026-03-28',
   readTime: '12 min Lesezeit',
   sections: {
     intro: {
       content: [
-        '**Dieses Glossar umfasst die 100 wichtigsten Begriffe im Prompt Engineering, von grundlegenden Konzepten bis zur Agent-Orchestrierung und Evaluierungs-Frameworks.** Jeder Eintrag enthält eine prägnante praktische Definition für Entwickler und KI-Praktiker, plus einen primären Referenz-Link für tiefere Lektüre.',
-        'Begriffe sind in sechs Gruppen organisiert: Kernkonzepte des Prompting, Agenten & Orchestrierung, Sicherheit & Ausrichtung, Evaluierung & Testing, Fortgeschrittene Techniken und Metriken & Produktion. Nutze die Tabellen als schnelle Referenz oder folge den Links für Implementierungsdetails.',
+        '**Dieses Glossar umfasst die 500 wichtigsten Begriffe im Prompt Engineering, von grundlegenden Konzepten bis zur Agent-Orchestrierung und Evaluierungs-Frameworks.** Jeder Eintrag enthält eine prägnante praktische Definition für Entwickler und KI-Praktiker, plus einen primären Referenz-Link für tiefere Lektüre.',
+        'Begriffe sind in sechs Gruppen organisiert: Kernkonzepte des Prompting, Agenten & Orchestrierung, Sicherheit & Ausrichtung, Evaluierung & Testing, Fortgeschrittene Techniken und Metriken & Produktion. Nutze die durchsuchbaren Tabellen als schnelle Referenz oder folge den Links für Implementierungsdetails.',
       ],
     },
     keyTakeaways: {
       isTldr: true,
       items: [
-        '100 Begriffe organisiert in 6 Abschnitten: Kernkonzepte, Agenten, Sicherheit, Evaluierung, Fortgeschrittene Techniken und Metriken & Produktion',
+        '500 Begriffe organisiert in 6 Abschnitten: Kernkonzepte, Agenten, Sicherheit, Evaluierung, Fortgeschrittene Techniken und Metriken & Produktion',
         'Jeder Begriff beinhaltet eine praktische Definition und 1-3 primäre Quellenangaben für E-E-A-T-Validierung',
         'Umfasst grundlegende Techniken (CoT, RAG, Few-Shot) bis hin zu agentic Patterns 2026 (Multi-Agent, Handoff, GraphRAG)',
         '15 Glossarbegriffe verlinken direkt zu dedizierten PromptQuorum Prompt-Engineering-Hub-Artikeln für vertieftes Verständnis',
@@ -24960,21 +24961,21 @@ zh: {
 },
     fr: {
   theme: 'Fundamentals',
-  title: 'Glossaire de l\'ingénierie de prompt : 100 termes essentiels',
-  intro: 'Définitions concises des 100 termes les plus importants de l\'ingénierie de prompt — des tokens et fenêtres de contexte à l\'orchestration d\'agents, RAG et métriques d\'évaluation.',
+  title: 'Glossaire de l\'ingénierie de prompt : 500 termes essentiels',
+  intro: 'Définitions concises des 500 termes les plus importants de l\'ingénierie de prompt — des tokens et fenêtres de contexte à l\'orchestration d\'agents, RAG et métriques d\'évaluation.',
   publishDate: '2026-03-28',
   readTime: '12 min de lecture',
   sections: {
     intro: {
       content: [
-        '**Ce glossaire couvre les 100 termes les plus importants en ingénierie de prompt, des concepts fondamentaux à l\'orchestration d\'agents et aux frameworks d\'évaluation.** Chaque entrée inclut une définition pratique concise écrite pour les développeurs et praticiens IA, plus un lien de référence principal pour une lecture plus approfondie.',
-        'Les termes sont organisés en six groupes : Concepts fondamentaux de prompting, Agents & Orchestration, Sécurité & Alignement, Évaluation & Testing, Techniques avancées et Métriques & Production. Utilisez les tables comme référence rapide ou suivez les liens pour les détails d\'implémentation.',
+        '**Ce glossaire couvre les 500 termes les plus importants en ingénierie de prompt, des concepts fondamentaux à l\'orchestration d\'agents et aux frameworks d\'évaluation.** Chaque entrée inclut une définition pratique concise écrite pour les développeurs et praticiens IA, plus un lien de référence principal pour une lecture plus approfondie.',
+        'Les termes sont organisés en six groupes : Concepts fondamentaux de prompting, Agents & Orchestration, Sécurité & Alignement, Évaluation & Testing, Techniques avancées et Métriques & Production. Utilisez les tables consultables comme référence rapide ou suivez les liens pour les détails d\'implémentation.',
       ],
     },
     keyTakeaways: {
       isTldr: true,
       items: [
-        '100 termes organisés en 6 sections : Concepts fondamentaux, Agents, Sécurité, Évaluation, Techniques avancées et Métriques & Production',
+        '500 termes organisés en 6 sections : Concepts fondamentaux, Agents, Sécurité, Évaluation, Techniques avancées et Métriques & Production',
         'Chaque terme inclut une définition pratique et 1–3 citations source primaires pour la validation E-E-A-T',
         'Couvre les techniques fondamentales (CoT, RAG, Few-Shot) jusqu\'aux patterns agentic 2026 (multi-agent, handoff, GraphRAG)',
         '15 termes du glossaire se lient directement aux articles dédiés du hub d\'ingénierie de prompt PromptQuorum pour une exploration approfondie',
@@ -25150,8 +25151,8 @@ zh: {
 },
         ja: {
   theme: 'Fundamentals',
-  title: 'プロンプトエンジニアリング用語集：100の主要な用語',
-  intro: 'プロンプトエンジニアリングの100の最も重要な用語の簡潔な定義 — トークンとコンテキストウィンドウからエージェントオーケストレーション、RAG、評価メトリクスまで。',
+  title: 'プロンプトエンジニアリング用語集：500の主要な用語',
+  intro: 'プロンプトエンジニアリングの500の最も重要な用語の簡潔な定義 — トークンとコンテキストウィンドウからエージェントオーケストレーション、RAG、評価メトリクスまで。',
   publishDate: '2026-03-28',
   readTime: '12分で読める',
   sections: {
@@ -25340,8 +25341,8 @@ zh: {
 },
     zh: {
       theme: 'Fundamentals',
-      title: '提示工程词汇表：100个关键术语',
-      intro: '100个最重要的提示工程术语的简明定义——从令牌和上下文窗口到代理编排、RAG和评估指标。',
+      title: '提示工程词汇表：500个关键术语',
+      intro: '500个最重要的提示工程术语的简明定义——从令牌和上下文窗口到代理编排、RAG和评估指标。',
       publishDate: '2026-03-28',
       readTime: '12分钟阅读',
       sections: {
