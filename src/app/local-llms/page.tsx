@@ -3,7 +3,7 @@ import { LocalLLMsHub } from '@/components/LocalLLMsHub'
 import { generateAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
-  title: 'Local LLMs 2026: Complete Guide to Running AI Models Offline | PromptQuorum',
+  title: 'Local LLMs 2026: How to Run AI Models Offline | PromptQuorum',
   description: 'Run open-source models locally (Llama 4, Qwen3.5, DeepSeek) with Ollama, LM Studio. Hardware requirements, benchmarks, fine-tuning, RAG. As of April 2026.',
   openGraph: {
     title: 'Local LLMs 2026: Complete Guide | PromptQuorum',
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    title: 'Run AI Offline: Local LLMs Guide 2026',
     description: 'Run AI offline 🖥️ → Ollama, LM Studio, 70B models on your own hardware. 58 guides. Full privacy, zero API costs.',
   },
   alternates: generateAlternates('/local-llms'),
