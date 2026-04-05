@@ -13094,7 +13094,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       commonMistakes: {
         title: 'Common Mistakes',
         items: [
-          "Using CoT on tasks where it doesn"t help: simple factual lookups, yes/no classification, or tasks without meaningful reasoning steps',
+          "Using CoT on tasks where it doesn't help: simple factual lookups, yes/no classification, or tasks without meaningful reasoning steps",
           'Few-shot examples that show bad reasoning: the model learns from examples, so showing sloppy or circular logic sets a bad pattern',
           'Forgetting to instruct the model to show reasoning in the output (just asking for the final answer negates the CoT benefit)',
           'Using CoT on every task: adds 2–5x tokens cost; use selectively on high-stakes or complex reasoning only'
@@ -13132,7 +13132,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         name: 'How to Use Chain-of-Thought Prompting',
         step: [
           { '@type': 'HowToStep', position: '1', name: 'Identify the task type', text: 'CoT helps most with reasoning: logic puzzles, math, causal analysis, multi-step decisions. Less helpful for simple factual lookup or classification.' },
-          { '@type': 'HowToStep', position: '2', name: 'Choose zero-shot or few-shot', text: 'Start with zero-shot: "Let's think step by step." If that's not precise enough, add 2–5 few-shot examples with your preferred reasoning style.' },
+          { '@type': 'HowToStep', position: '2', name: 'Choose zero-shot or few-shot', text: "Start with zero-shot: \"Let's think step by step.\" If that's not precise enough, add 2–5 few-shot examples with your preferred reasoning style." },
           { '@type': 'HowToStep', position: '3', name: 'Write the final instruction', text: 'End with "What is the answer?" or "Provide your final answer." This signals the model to output a conclusion after showing reasoning.' },
           { '@type': 'HowToStep', position: '4', name: 'Test across models', text: 'Run the same CoT prompt on GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. Accuracy may vary; pick the best performer for production.' },
           { '@type': 'HowToStep', position: '5', name: 'Monitor token usage and cost', text: 'CoT increases tokens by 2–5x. For high-volume or long-document tasks, this cost may outweigh accuracy gains. Use selectively.' }
@@ -13145,7 +13145,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: '1', name: 'Decomposition', description: 'CoT breaks problems into steps, making multi-step reasoning visible and reducing errors.' },
           { '@type': 'ListItem', position: '2', name: 'Accuracy improvement', description: 'PromptQuorum testing: 7–23% accuracy gains on logic and math tasks; lower gains on retrieval or classification.' },
           { '@type': 'ListItem', position: '3', name: 'Cost trade-off', description: 'CoT increases token usage 2–5x because the model must write reasoning. Higher cost for better reasoning on complex tasks.' },
-          { '@type': 'ListItem', position: '4', name: 'Zero-shot variant', description: 'Asking "Let's think step by step" works without examples on many tasks, enabling CoT without example engineering.' }
+          { '@type': 'ListItem', position: '4', name: 'Zero-shot variant', description: "Asking \"Let's think step by step\" works without examples on many tasks, enabling CoT without example engineering." }
         ]
       }
     },
@@ -13314,7 +13314,6 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
-    },,
       tldr: {
         title: 'Key Takeaways',
         isTldr: true,
@@ -13336,7 +13335,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           'Using vague constraints: "be concise" fails. Say "max 200 tokens" or "B1 English level" — numbers are more portable.',
           'Not testing across models: personas work differently on Claude vs GPT-4o. Always test on your chosen models first.',
           'Ignoring uncertainty handling: models make things up. Add "If <80% confident, ask before answering" to reduce hallucination.',
-          'Treating personas as static: personas change per task. Don't use the same finance persona for HR or legal tasks.'
+          "Treating personas as static: personas change per task. Don't use the same finance persona for HR or legal tasks."
         ]
       },
       relatedReading: {
@@ -13355,8 +13354,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompt Engineering." arXiv:2406.06608',
           'Anthropic, 2024. "System Prompts and Personas." https://docs.anthropic.com'
         ]
-      }
-    },      faqSchema: {
+      },
+      faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
@@ -13389,7 +13388,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             name: 'What makes a persona effective?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Specificity: clear, memorable details. Consistency: the same traits should inform all responses. Alignment: the persona should match your actual task (e.g., don't ask a lawyer to code-review unless they're a "lawyer-engineer").',
+              text: "Specificity: clear, memorable details. Consistency: the same traits should inform all responses. Alignment: the persona should match your actual task (e.g., don't ask a lawyer to code-review unless they're a \"lawyer-engineer\").",
             },
           },
           {
@@ -13397,7 +13396,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             name: 'Can I use multiple personas in one prompt?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes, but carefully. Example: "You are a designer reviewing a developer's proposal." Works best when roles complement each other. Too many personas can confuse the model.',
+              text: "Yes, but carefully. Example: \"You are a designer reviewing a developer's proposal.\" Works best when roles complement each other. Too many personas can confuse the model.",
             },
           },
         ],
@@ -13442,13 +13441,13 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 2, name: 'Strong personas include: specific role/title, years of experience, domain expertise, communication style, and underlying values or biases.' },
           { '@type': 'ListItem', position: 3, name: 'Personas improve consistency: the model answers "in character" across follow-up questions, maintaining expertise level and tone.' },
           { '@type': 'ListItem', position: 4, name: 'Test personas across your target models — effectiveness varies. GPT-4o and Claude are more responsive to personas than smaller models.' },
-          { '@type': 'ListItem', position: 5, name: 'Specificity beats vagueness: "senior architect" works; "smart person" doesn't. Include memorable details.' },
+          { '@type': 'ListItem', position: 5, name: "Specificity beats vagueness: \"senior architect\" works; \"smart person\" doesn't. Include memorable details." },
           { '@type': 'ListItem', position: 6, name: 'Effective personas must be consistent: all responses should feel like they come from the same person with the same worldview.' },
           { '@type': 'ListItem', position: 7, name: 'Combine personas with other techniques: persona + few-shot examples = powerful; persona + CoT = better reasoning.' },
           { '@type': 'ListItem', position: 8, name: 'Use PromptQuorum to test persona consistency across multiple models simultaneously.' },
         ],
       },
-      
+    },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -13666,7 +13665,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           items: [
             'Negative prompting forbids specific content, tone, or behavior the model must avoid.',
             'Must-not instructions work best when paired with must (positive) instructions to prevent confusion.',
-            'Examples: "Don't mention competitors," "No medical advice," "Avoid marketing language," "No code in output."',
+            "Examples: \"Don't mention competitors,\" \"No medical advice,\" \"Avoid marketing language,\" \"No code in output.\"",
             'Effective negative prompts are specific ("Max 100 words") not vague ("Be concise").',
             'Too many negatives confuse models — use 1–3 primary constraints; avoid piling on negatives.',
             'Combine negative prompting with constrained prompting: negatives forbid content, constraints define structure.',
@@ -13679,7 +13678,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           faqs: [
             {
               q: 'What is negative prompting?',
-              a: 'Negative prompting is explicitly telling the model what NOT to do or say. Example: "Do not provide medical diagnosis," "Don't mention price," "Avoid promotional language." Negatives are most effective when paired with positive instructions.',
+              a: "Negative prompting is explicitly telling the model what NOT to do or say. Example: \"Do not provide medical diagnosis,\" \"Don't mention price,\" \"Avoid promotional language.\" Negatives are most effective when paired with positive instructions.",
             },
             {
               q: 'How does negative prompting interact with positive instructions?',
@@ -13687,7 +13686,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             },
             {
               q: 'What are examples of effective negatives?',
-              a: 'Specific: "Max 50 words," "Do not cite sources older than 2023," "No code in response," "Do not roleplay." Vague: "Be concise," "Don't be weird," "No bad stuff" — these often fail.',
+              a: "Specific: \"Max 50 words,\" \"Do not cite sources older than 2023,\" \"No code in response,\" \"Do not roleplay.\" Vague: \"Be concise,\" \"Don't be weird,\" \"No bad stuff\" — these often fail.",
             },
             {
               q: 'Can I use just negatives without positive instructions?',
@@ -13695,18 +13694,18 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             },
             {
               q: 'How many negatives should I use?',
-              a: 'Keep it to 1–3 primary negatives. Too many negatives overload the model's attention and can paradoxically increase the thing you're trying to prevent.',
+              a: "Keep it to 1–3 primary negatives. Too many negatives overload the model's attention and can paradoxically increase the thing you're trying to prevent.",
             },
           ],
         },
         commonMistakes: {
           title: 'Common Mistakes',
           items: [
-            "Using only negatives without positive instructions — models don"t know what to do.',
+            "Using only negatives without positive instructions — models don't know what to do.",
             'Vague negatives ("no bad content") — too broad to enforce; use specific rules instead.',
             'Too many negatives piled on — confuses models and paradoxically increases violations.',
             'Not testing negatives — what works for GPT-4o may fail for Claude or Gemini.',
-            "Negative prompts triggering the opposite behavior — mentioning \"don"t be biased" can sometimes emphasize bias.',
+            "Negative prompts triggering the opposite behavior — mentioning \"don't be biased" can sometimes emphasize bias.",
           ],
         },
         relatedReading: {
@@ -14074,7 +14073,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'Common Mistakes',
           items: [
             'Using self-consistency on simple tasks (overkill) — overhead outweighs any accuracy gain.',
-            "Using too few samples (< 3) — not enough voting power; accuracy doesn"t improve significantly.',
+            "Using too few samples (< 3) — not enough voting power; accuracy doesn't improve significantly.",
             'Using self-consistency on non-deterministic tasks — where multiple valid answers exist, majority voting breaks down.',
             'Not parsing reasoning paths correctly — leads to wrong "most common" answer.',
             'Ignoring token cost — a 5x cost might not be justified for a 2% accuracy gain.',
@@ -14477,8 +14476,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           title: 'Common Mistakes',
           items: [
             'Using ToT/ReAct on simple tasks (overkill) — overhead outweighs any benefit.',
-            "Not providing clear branch-evaluation criteria for ToT — model doesn"t know how to score paths.',
-            "Using ReAct without real tool access — model can"t actually call APIs or search; defeats the purpose.',
+            "Not providing clear branch-evaluation criteria for ToT — model doesn't know how to score paths.",
+            "Using ReAct without real tool access — model can't actually call APIs or search; defeats the purpose.",
             'Allowing unlimited branching in ToT — model gets lost exploring too many paths; constrain to 3–5 branches max.',
             'Ignoring token cost — ReAct with many tool calls or ToT with deep trees can get expensive fast.',
           ],
@@ -14935,7 +14934,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.',
             'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.',
             'Schema-in-prompt technique works across all models but requires explicit schema definition.',
-            "Always validate parsed output — don"t assume the model will strictly follow schema.',
+            "Always validate parsed output — don't assume the model will strictly follow schema.",
             'Use structured output when downstream code needs to parse or dispatch results automatically.',
             'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).',
             'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.',
@@ -14978,7 +14977,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'No example schema in prompt — model guesses structure instead of following your format.',
             'Trusting output without parsing — always wrap JSON.parse() in try/catch.',
             'Nesting too deeply — simplify schema to 2–3 levels for model reliability.',
-            "Missing required field markers — don"t assume optional fields won't appear.',
+            "Missing required field markers — don't assume optional fields won't appear.",
           ],
         },
         relatedReading: {
