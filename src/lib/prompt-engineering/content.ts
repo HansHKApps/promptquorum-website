@@ -29,7 +29,7 @@ export interface PEArticle {
   publishDate: string
   dateModified?: string
   readTime: string
-  metaDescription?: string
+  metaDescription?: string  // 150–160 chars for Google SERP preview
   educationalLevel?: string
   primaryTerm?: string
   sections: Record<string, PESection>
@@ -216,6 +216,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs like GPT-4o, [Claude](https://docs.anthropic.com), and Gemini. Learn essential techniques, frameworks, and why it matters to AI output quality.',
       publishDate: '2026-03-01',
       readTime: '10 min read',
+      metaDescription: 'Prompt engineering is designing inputs to get reliable outputs from GPT-4o, Claude, Gemini. Learn 7 core elements, frameworks (CRAFT, CO-STAR), and techniques.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1435,6 +1436,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'The history of prompt engineering from GPT-3 and few-shot prompting in 2020 to context design in 2026. Key milestones, papers, and turning points.',
       publishDate: '2026-03-01',
       readTime: '10 min read',
+      metaDescription: 'From GPT-2 to GPT-4o: how prompt engineering evolved as AI improved. Learn how techniques changed across generations, why context matters now, and what\'s next.',
       sections: {
 
         definition: {
@@ -2392,6 +2394,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'The 5 building blocks every prompt needs: Role & Context, Task, Input & Examples, Constraints, and Output Format. How to use each one.',
       publishDate: '2026-03-01',
       readTime: '8 min read',
+      metaDescription: '7 core elements every prompt needs: objective, context, instructions, examples, constraints, format, and role. Learn which combinations work best for your task.',
       sections: {
 
         definition: {
@@ -3446,6 +3449,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Large language models confidently produce false information. These errors—called hallucinations—range from invented citations to fabricated facts presented with complete authority. Understanding why they happen and how to detect and reduce them is essential for anyone using LLMs in real work.',
       publishDate: '2026-03-22',
       readTime: '12 min read',
+      metaDescription: 'Why AI makes things up: learn 6 proven techniques to stop hallucinations — grounding, constraints, verification, and retrieval-augmented generation (RAG).',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -4736,6 +4740,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Temperature and top-p control how adventurous or conservative an AI\'s word choices are. By tuning these settings, you trade off creativity versus reliability—higher values produce surprising, varied outputs; lower values produce safe, predictable ones.',
       publishDate: '2026-03-22',
       readTime: '10 min read',
+      metaDescription: 'Control AI creativity with temperature (0.0–1.0) and top-p sampling. Lower values = factual outputs; higher values = creative. Learn when to use each.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -5596,6 +5601,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency. Most AI answers bloat because of vague prompts, not slow models.',
       publishDate: '2026-03-22',
       readTime: '9 min read',
+      metaDescription: 'How to get faster AI answers: reduce latency, use shorter prompts, choose efficient models. Techniques for speed without sacrificing quality or accuracy.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -6801,6 +6807,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts to stay within limits, and how to manage context windows across cloud and local models.',
       publishDate: '2026-03-22',
       readTime: '11 min read',
+      metaDescription: 'Why do AIs forget? Context windows limit how much text models can process at once. GPT-4o: 128k tokens; Claude: 200k. Learn how context affects outputs.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -6865,6 +6872,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 4.6 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.',
       publishDate: '2026-03-25',
       readTime: '12 min read',
+      metaDescription: 'How to prompt with images: multimodal AI understands text and images together. GPT-4o, Claude, and Gemini support vision. Learn structure and best practices.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -6993,6 +7001,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Every AI API call is measured and billed in tokens — the unit that controls both what the model can process and how much you pay. Understanding tokens is the foundation of efficient, cost-effective prompting.',
       publishDate: '2026-03-22',
       readTime: '13 min read',
+      metaDescription: 'Token economics explained: GPT-4o costs $5/$15 per 1M tokens. Longer prompts = higher costs. Learn to count tokens, estimate costs, and optimize for ROI.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -7248,6 +7257,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     intro: 'System prompts define how an AI model thinks and behaves throughout an entire session; user prompts define what it does right now. Learn the difference, when to use each, how they interact, and why PromptQuorum shows you both.',
     publishDate: '2026-03-22',
     readTime: '8 min read',
+      metaDescription: 'System prompts set AI behavior globally; user prompts are single requests. Understand how they interact, why system context matters, and governance patterns.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -7753,6 +7763,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'No single AI model is best for every task. GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, and Baidu ERNIE each win on different tasks, geographies, and budgets. This guide gives you a practical decision framework — not another benchmark list.',
       publishDate: '2026-03-23',
       readTime: '12 min read',
+      metaDescription: 'Compare AI models: GPT-4o excels at reasoning, Claude at coding, Gemini at handling long contexts. Learn which excels at different tasks and when to benchmark.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -10952,6 +10963,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Coming soon — a deep dive into how large language models process tokens, generate predictions, and why understanding the architecture makes you a better prompt engineer.',
       publishDate: '2026-03-24',
       readTime: 'Coming soon',
+      metaDescription: 'Large language models predict the next word based on patterns in training data. Understand tokens, transformers, attention, and why prompts matter for output.',
       sections: {},
     },
     de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -10982,6 +10994,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Coming soon — understanding the hard boundaries of large language models, where they fail, and how to design systems that account for these limitations.',
       publishDate: '2026-03-24',
       readTime: 'Coming soon',
+      metaDescription: 'What LLMs cannot do: access the internet, update knowledge after training, or guarantee accuracy. Learn the real limitations and when to use humans instead.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -11101,10 +11114,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       theme: 'Fundamentals',
       title: 'Open Source vs Proprietary LLMs: Cost, Control, and Capability Trade-Offs',
       intro: 'Open-source models like Llama 3.2 and Mistral let you run locally and customize freely. Proprietary models like GPT-4o and Claude 4.6 Sonnet offer superior capability and speed. As of April 2026, the best choice depends on your infrastructure, budget, and data privacy requirements.',
-      metaDescription: 'Open-source vs proprietary LLMs: cost, customization, privacy, performance. Decision framework and comparison table. Free beta — April 2026.',
       educationalLevel: 'Intermediate',
       publishDate: '2026-03-24',
       readTime: '8 min read',
+      metaDescription: 'Trade-offs: proprietary models (GPT-4o, Claude) offer better quality; open-source (Llama, Qwen) offer privacy and cost savings. Choose based on your use case.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
