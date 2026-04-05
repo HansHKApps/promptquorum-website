@@ -8,12 +8,14 @@ export function generateAlternates(path: string) {
 
   return {
     canonical: `${BASE}${path}`,
-    languages: Object.fromEntries(
-      LANGS.map(lang => [
-        lang,
-        lang === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${lang}`,
-      ])
-    ),
-    'x-default': `${BASE}${path}`,
+    languages: {
+      ...Object.fromEntries(
+        LANGS.map(lang => [
+          lang,
+          lang === 'en' ? `${BASE}${path}` : `${BASE}${path}?lang=${lang}`,
+        ])
+      ),
+      'x-default': `${BASE}${path}`,
+    },
   }
 }
