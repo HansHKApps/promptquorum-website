@@ -198,10 +198,10 @@ export default function AboutPage() {
               For press enquiries, partnership proposals, or feedback:
             </p>
             <a
-              href="mailto:promptquorum@gmail.com"
+              href="mailto:hello@promptquorum.com"
               className="text-primary hover:text-primary/80 font-medium"
             >
-              promptquorum@gmail.com
+              hello@promptquorum.com
             </a>
           </section>
 

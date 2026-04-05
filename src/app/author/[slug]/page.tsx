@@ -229,7 +229,7 @@ export default async function AuthorPage({ params }: AuthorPageProps) {
             </p>
             <div className="space-y-2">
               <p className="text-text-primary">
-                Email: <a href="mailto:promptquorum@gmail.com" className="text-primary hover:text-primary/80 font-medium">promptquorum@gmail.com</a>
+                Email: <a href="mailto:hello@promptquorum.com" className="text-primary hover:text-primary/80 font-medium">hello@promptquorum.com</a>
               </p>
               <p className="text-text-primary">
                 Twitter: <a href="https://x.com/HansKuepperAPPs" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 font-medium">@HansKuepperAPPs</a>

@@ -77,7 +77,7 @@ export default function NotFound() {
           <Link href="/" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
           <Link href="/about" className="text-primary hover:text-primary/80 font-medium text-sm">About</Link>
           <Link href="/blog" className="text-primary hover:text-primary/80 font-medium text-sm">Blog</Link>
-          <a href="mailto:promptquorum@gmail.com" className="text-primary hover:text-primary/80 font-medium text-sm">Contact</a>
+          <a href="mailto:hello@promptquorum.com" className="text-primary hover:text-primary/80 font-medium text-sm">Contact</a>
         </div>
 
       </div>

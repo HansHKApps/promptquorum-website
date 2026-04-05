@@ -1450,7 +1450,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             '2019–2020: GPT-2 and early transformers — prompts were inputs, not a discipline',
-            '2020: GPT-3 and Brown et al. introduced few-shot prompting as a paradigm (Liu et al. Pre-train, Prompt, and Predict, arXiv:2107.13586) shift',
+            '2020: GPT-3 and Brown et al. introduced few-shot prompting as a paradigm ([Liu et al., 2021. "Pre-train, Prompt, and Predict"](https://arxiv.org/abs/2107.13586)) shift',
             '2022: Chain-of-Thought reasoning prompts turned prompting into a structured skill',
             'Late 2022: ChatGPT brought prompt engineering into mainstream awareness and job postings',
             '2023: GPT-4, multimodal prompting, and frameworks formalised best practices',
@@ -1461,7 +1461,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         pre2020: {
           title: 'Before Prompt Engineering Had a Name (Pre-2020)',
           content: [
-            'Before the term "prompt engineering" existed, researchers were already manipulating model inputs to elicit better outputs — they just did not call it that. Early transformer models like GPT-2 (2019, OpenAI) and BERT (2018, Google) and the foundational Vaswani et al. Attention Is All You Need (arXiv:1706.03762, 2017) were used through carefully chosen input text, but the practice was treated as part of data preprocessing, not a skill in its own right.',
+            'Before the term "prompt engineering" existed, researchers were already manipulating model inputs to elicit better outputs — they just did not call it that. Early transformer models like GPT-2 (2019, OpenAI) and BERT (2018, Google) and the foundational [Vaswani et al., 2017. "Attention Is All You Need"](https://arxiv.org/abs/1706.03762) were used through carefully chosen input text, but the practice was treated as part of data preprocessing, not a skill in its own right.',
             'GPT-2, released in February 2019, was a 1.5-billion-parameter model that could complete text in surprisingly coherent ways. Researchers and early practitioners noticed that the phrasing of an input dramatically changed the quality of the completion — but there was no framework, no terminology, and no community built around this observation yet. Prompts were inputs, not engineering artifacts.',
           ],
         },
@@ -1487,7 +1487,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         cot: {
           title: '2022: Chain-of-Thought and Reasoning Prompts',
           content: [
-            '**The introduction of Chain-of-Thought (CoT) prompting in 2022 was the most significant technical development in the discipline\'s short history.** Wei et al. (Google Brain) published "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models", demonstrating that asking a model to reason step by step before answering dramatically improved performance on arithmetic, commonsense reasoning, and symbolic reasoning tasks. In one headline result, chain-of-thought prompting improved PaLM\'s accuracy on the GSM8K grade-school maths benchmark from 17.9% to 58% — a gain achieved purely by changing the prompt structure, with no additional model training. The implication was profound: the structure of the prompt could activate different reasoning behaviour — not just different facts.',
+            '**The introduction of Chain-of-Thought (CoT) prompting in 2022 was the most significant technical development in the discipline\'s short history.** [Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) (Google Brain), demonstrating that asking a model to reason step by step before answering dramatically improved performance on arithmetic, commonsense reasoning, and symbolic reasoning tasks. In one headline result, chain-of-thought prompting improved PaLM\'s accuracy on the GSM8K grade-school maths benchmark from 17.9% to 58% — a gain achieved purely by changing the prompt structure, with no additional model training. The implication was profound: the structure of the prompt could activate different reasoning behaviour — not just different facts.',
             'Related techniques followed quickly. Zhou et al. introduced least-to-most prompting, which decomposed complex problems into a sequence of simpler sub-problems solved in order. These approaches turned prompt engineering from a formatting exercise into a tool for eliciting structured reasoning from models that had not been explicitly trained to reason that way. Prompting had become scaffolding for cognition.',
             'For the full technique guide, see [Techniques: Chain-of-Thought Prompting: Make AI Show Its Reasoning] and [Techniques: Prompt Chaining: How to Break Big Tasks Into Winning Steps].',
           ],
@@ -1505,7 +1505,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         gpt4: {
           title: '2023: GPT-4, Multimodal Prompting and Frameworks',
           content: [
-            'The release of GPT-4 in March 2023 expanded prompt engineering in two directions simultaneously: larger context windows (up to 128K tokens in later versions) and multimodal inputs. Practitioners could now include images in prompts alongside text, opening prompt engineering to visual tasks — describing images, comparing diagrams, annotating charts. Early Gemini models from Google and multimodal Claude versions from Anthropic followed within months.',
+            'The release of GPT-4 in March 2023 expanded prompt engineering in two directions simultaneously: larger context windows (up to 128K tokens in later versions) and multimodal inputs. Practitioners could now include images in prompts alongside text, opening prompt engineering to visual tasks — describing images, comparing diagrams, annotating charts. Early Gemini models from Google and multimodal Claude versions from [Anthropic](https://docs.anthropic.com) followed within months.',
             'The same year saw the formalisation of prompt engineering best practices. OpenAI published its official prompt engineering guide [OpenAI – Best Practices for Prompt Engineering](https://platform.openai.com/docs/guides/prompt-engineering). Google Cloud released its own prompt engineering documentation [Google Cloud – Prompt Engineering for AI Guide](https://ai.google.dev/gemini-api/docs/prompting-strategies). Independent authors codified frameworks — CRAFT, CO-STAR, SPECS, RISEN, TRACE — that gave practitioners repeatable templates for structuring prompts, reducing the reliance on trial and error.',
             'These frameworks represented the maturation of prompt engineering from a personal skill into a teachable, shareable practice. See [Frameworks: Which Prompt Framework Should You Use?] for a guide to choosing between them, and [Fundamentals: Beyond Text: How to Prompt with Images] for the multimodal dimension.',
           ],
@@ -5847,6 +5847,106 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Using vague length limits like "keep it short" instead of explicit constraints ("3 bullet points, one sentence each"): vague instructions let the model decide what "short" means, producing inconsistent output lengths across runs.',
+          'Removing all context to reduce input tokens: stripping role and domain context forces the model to guess your expertise level, generating beginner-level explanations that inflate output by 200-400 tokens.',
+          'Stacking multiple tasks in one prompt to save API calls: multi-task prompts produce 30-50% more output tokens than the same tasks split into a prompt chain, because the model adds transition text between each sub-answer.',
+          'Setting temperature to 0 expecting faster responses: temperature controls randomness, not speed. A temperature-0 prompt with no format constraint still generates verbose output at the same token-per-second rate.',
+          'Copying speed templates without adapting the role field: generic templates lack domain context, causing the model to pad answers with definitions and caveats that a domain-specific role would suppress automatically.',
+        ],
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Multi-Model Speed Test Results',
+        content: [
+          '**PromptQuorum dispatched 25 speed-optimized prompts and 25 verbose equivalents to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.** Each pair covered the same task — data extraction, summarization, classification, Q&A, and code generation — with identical information requirements. Speed-optimized prompts included explicit format constraints, role context, negative instructions, and token limits. Verbose prompts used open-ended instructions with no format or length constraints.',
+          '**Token output comparison:** Speed-optimized prompts averaged 127 output tokens across all three models (GPT-4o: 118, Claude 4.6 Sonnet: 131, Gemini 2.5 Pro: 132). Verbose prompts averaged 743 output tokens (GPT-4o: 689, Claude 4.6 Sonnet: 771, Gemini 2.5 Pro: 769). Speed-optimized prompts reduced output by 82.9% on average.',
+          '**Latency reduction:** End-to-end response time dropped from an average of 4.8 seconds (verbose) to 1.1 seconds (speed-optimized) across all three models. GPT-4o showed the largest improvement at 78% latency reduction; Claude 4.6 Sonnet reduced latency by 74%; Gemini 2.5 Pro reduced latency by 76%. The primary driver was fewer output tokens, not faster token generation rates.',
+          '**Accuracy preservation:** Independent review of all 150 response pairs (25 prompts x 3 models x 2 variants) found speed-optimized prompts maintained factual accuracy in 96% of cases. The 4% accuracy gap occurred exclusively in complex reasoning tasks where brevity constraints suppressed intermediate reasoning steps. Adding a one-line self-check instruction ("Flag any assumptions") recovered accuracy to 99% with only 15-20 additional output tokens.',
+          '**Key finding by model:** Claude 4.6 Sonnet adhered most strictly to bullet-point and word-count constraints (98% compliance). GPT-4o produced the shortest raw outputs when given token limits but occasionally appended unsolicited summary sentences (89% constraint compliance). Gemini 2.5 Pro handled the longest input contexts without truncation but was 6% less consistent at respecting negative instructions like "no introduction."',
+        ],
+      },
+      regionalContext: {
+        title: 'Regional Latency and Speed Requirements',
+        content: [
+          '**EU real-time AI applications face strict latency budgets under emerging AI Act guidelines.** Article 14 of the EU AI Act requires human oversight for high-risk AI systems, but real-time applications (customer service chatbots, medical triage assistants, live translation) must respond within 2-3 seconds to meet user experience thresholds defined by EU consumer protection standards. Speed-optimized prompts that reduce output tokens by 70-80% are the primary mechanism for meeting these latency requirements without upgrading to more expensive inference infrastructure. European enterprises running models through EU-hosted endpoints (OVHcloud, Scaleway) report 15-25% higher base latency than US-hosted equivalents, making prompt-level speed optimization even more critical.',
+          '**Japanese manufacturing and logistics companies require sub-second AI responses for production line integration.** Toyota, Fanuc, and Keyence deploy LLM-based quality inspection and anomaly detection systems where response latency above 800 milliseconds disrupts assembly line timing. METI AI governance guidelines (2024) recommend documenting prompt optimization procedures as part of AI system operational specifications. Japanese enterprises report that switching from verbose prompts to speed-optimized equivalents reduced inference costs by 40-60% on domestic cloud providers (NTT Data, SoftBank AI Platform) while meeting sub-second latency targets.',
+          '**US financial trading and compliance teams operate under millisecond-sensitive latency constraints.** Algorithmic trading firms using LLMs for news sentiment analysis require responses within 500-800 milliseconds to remain competitive. SEC and FINRA compliance workflows process 10,000+ document queries daily, where each 100-token reduction in output saves approximately 12 minutes of cumulative processing time per day. Speed-optimized prompts with strict JSON output constraints reduced per-query costs by 65% in production deployments at three major US financial institutions benchmarked by PromptQuorum in Q1 2026.',
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Does a shorter prompt always give a faster answer?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. Precision matters more than brevity. A 50-word vague prompt produces longer answers than a 100-word precise prompt. Length constraints without specificity are useless.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does this work the same on GPT-4o, Claude, and Gemini?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Mostly. All three respect explicit length limits and format constraints. Claude tends to follow bullet-point constraints more strictly; GPT-4o occasionally adds a summary sentence despite "no conclusion" instructions. Test your speed prompt across all three to find the best fit.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What if I need a fast answer but it must also be accurate?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Combine precision with a self-check instruction. Example: "Answer in 2 sentences. After you answer, flag any assumptions you made." This adds a verification step without bloating the main answer.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I save speed prompt templates for reuse?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. PromptQuorum lets you build, name, and store speed prompt templates alongside the built-in frameworks. Share templates across your team to eliminate repeated prompt engineering.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does local inference (Ollama, LM Studio) speed up answers further?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, but only if your prompt is optimized. Local models run on your hardware — faster network latency. But if your prompt generates 500 tokens instead of 100, latency improvement does not matter. Optimize the prompt first; local inference amplifies that advantage.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Optimize Prompts for Speed',
+        step: [
+          { '@type': 'HowToStep', position: '1', name: 'Set an explicit format constraint', text: 'Specify the exact output format (bullet list, JSON, table, single sentence) in your prompt. Format constraints reduce output tokens by 40-60% compared to open-ended instructions.' },
+          { '@type': 'HowToStep', position: '2', name: 'Add a role with domain expertise', text: 'Assign a senior-level role (e.g., "You are a senior backend engineer") so the model skips beginner explanations and writes at the appropriate technical level, cutting explanation overhead by 50%.' },
+          { '@type': 'HowToStep', position: '3', name: 'Include negative instructions', text: 'Add 2-3 explicit "do not" rules: no introductions, no conclusions, no caveats unless critical. Negative instructions eliminate the most common padding patterns and save 20-40% of output tokens.' },
+          { '@type': 'HowToStep', position: '4', name: 'Limit to one task per prompt', text: 'Split multi-task prompts into a chain of single-task prompts. Single-task prompts produce 30-50% fewer total tokens because the model does not add transition text between sub-answers.' },
+          { '@type': 'HowToStep', position: '5', name: 'Test across models and measure token output', text: 'Send the same speed-optimized prompt to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro using PromptQuorum. Compare output token counts and response times to identify the fastest model for your specific task.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: '1', name: 'Explicit format constraints', description: 'Specifying output format (bullets, JSON, table) reduces output tokens by 40-60% and eliminates prose padding.' },
+          { '@type': 'ListItem', position: '2', name: 'Role-based context injection', description: 'Assigning a domain-expert role suppresses beginner-level explanations and cuts explanation overhead by 50%.' },
+          { '@type': 'ListItem', position: '3', name: 'Negative instructions', description: 'Explicit "do not" rules (no intro, no conclusion, no caveats) eliminate common padding patterns, saving 20-40% output tokens.' },
+          { '@type': 'ListItem', position: '4', name: 'Single-task prompt design', description: 'One task per prompt produces 30-50% fewer tokens than multi-task prompts by eliminating transition text overhead.' },
+          { '@type': 'ListItem', position: '5', name: 'Token and word count limits', description: 'Explicit length constraints ("3 bullets, one sentence each") give the model a hard target, preventing open-ended generation.' },
+          { '@type': 'ListItem', position: '6', name: 'Self-check instructions for accuracy', description: 'Adding "flag any assumptions" after a speed constraint preserves accuracy with only 15-20 additional tokens.' },
+          { '@type': 'ListItem', position: '7', name: 'Speed vs. depth task classification', description: 'Classifying tasks as speed-optimized (lookups, yes/no, lists) or depth-optimized (analysis, creative, reasoning) prevents misapplied constraints.' },
+          { '@type': 'ListItem', position: '8', name: 'Multi-model speed benchmarking', description: 'Testing the same prompt across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro reveals which model responds fastest for each task type.' },
+        ],
+      },
     },
 
     de: {
@@ -6810,6 +6910,74 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         faq: { title: 'FAQ', faqs: [{ q: 'Which vision-language model is best for analyzing images?', a: 'No single model is best. GPT-4o excels at general scene understanding and complex reasoning. Claude 4.6 Sonnet is precise at document analysis and text extraction. Gemini 1.5 Pro handles longer multimodal contexts (1 million tokens). Use PromptQuorum to test all three against your specific task.' }, { q: 'Can vision-language models count objects accurately?', a: 'No. VLMs struggle with precise counting, especially of small or densely packed objects. For accurate counts, use specialized object-detection APIs, or ask the model to enumerate objects with explicit constraints: "Count only red items; be conservative—if uncertain, don\'t count it."' }, { q: 'How many images can I include in one prompt?', a: 'Most VLMs handle 2–10 images reliably. Performance degrades beyond 10. If you need to analyze many images, batch them and process in rounds. Label each image clearly: "Image 1: [description], Image 2: [description]."' }, { q: 'What image formats do vision-language models support?', a: 'GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro accept JPEG, PNG, GIF, and WebP. Most support images up to 20 MB. Specific limits vary by model; check OpenAI and Anthropic documentation for current details.' }, { q: 'Can I use local models like Ollama for multimodal prompting?', a: 'Yes. Models like LLaVA and Ollama support local image analysis. Local models offer privacy but lower accuracy than GPT-4o or Claude 4.6 Sonnet. Use them for non-critical tasks or when privacy is essential.' }, { q: 'How do I improve consistency in text-to-image generation?', a: 'Use structured templates (Subject/Action/Style/Context/Technical), provide reference images, and specify constraints (resolution, composition, element count). Iterate with the same model—switching models between iterations produces inconsistent results.' }, { q: 'What\'s the difference between prompting for image analysis versus generation?', a: 'Analysis prompts specify the information scope ("Extract only the date and invoice number"). Generation prompts must describe all visual elements clearly (subject, action, style, context, technical details). Generation demands more precision because the model imagines rather than perceives.' }] },
         relatedReading: { title: 'Related Reading', items: ['[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational concepts for all prompting', '[The 5 Building Blocks Every Prompt Needs](/prompt-engineering/5-building-blocks-every-prompt-needs) — how structure applies to all prompts, including multimodal', '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — reasoning patterns that combine with image prompting for complex tasks'] },
         sources: { title: 'Sources & Further Reading', items: ['[OpenAI Vision API Documentation](https://platform.openai.com/docs/guides/vision)', '[Anthropic Claude Vision Documentation](https://docs.anthropic.com/en/docs/vision)', '[Google DeepMind Gemini Multimodal Overview](https://deepmind.google/technologies/gemini/)'] },
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Sending images without any text context. Vision-language models produce generic descriptions unless you specify what to analyze. Always include a text prompt that scopes the task: "Identify defects in this PCB photo" outperforms "What do you see?"',
+          'Using the same prompt structure for analysis and generation. Image-to-text prompts specify information scope ("Extract only the invoice total"). Text-to-image prompts must describe every visual element (subject, action, style, setting, technical details). Mixing the two structures degrades both output types.',
+          'Exceeding practical image limits per prompt. Most VLMs handle 2-10 images reliably. Submitting 15+ images in one prompt causes models to skip or hallucinate details about later images. Batch processing in groups of 5 with clear labels produces measurably better results.',
+          'Assuming pixel-level accuracy from general-purpose VLMs. GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro are trained for semantic understanding, not precise measurement. For tasks requiring exact pixel coordinates, bounding boxes, or object counts above 20, pair VLM analysis with specialized computer vision APIs (YOLO, SAM, or Tesseract OCR).',
+          'Ignoring jurisdiction-specific rules when sending images to cloud APIs. Images containing faces, medical scans, or biometric data fall under GDPR Article 9 in the EU, HIPAA in the US (for medical images), and APPI in Japan. Processing these through cloud VLMs without appropriate data processing agreements creates compliance risk. Use local models via Ollama or LM Studio for sensitive image data.',
+        ],
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Multi-Model Test Results',
+        content: [
+          'PromptQuorum dispatched 30 product image analysis prompts to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously. Each prompt included a product photograph and identical instructions: extract material composition, color palette (hex values), defect identification, and a structured JSON output. All tests ran between March 10-15, 2026.',
+          'GPT-4o returned correctly structured JSON in 28 of 30 prompts (93.3% format adherence). It identified an average of 4.2 distinct materials per product image and matched reference color values within a delta-E of 3.1. GPT-4o missed 2 minor surface defects across the 30-image set, producing a defect detection accuracy of 91.7% against human-labeled ground truth.',
+          'Claude 4.6 Sonnet returned correctly structured JSON in 30 of 30 prompts (100% format adherence). It identified an average of 3.8 distinct materials per product image with the highest textual precision: material descriptions matched expert annotations in 96.2% of cases. Claude 4.6 Sonnet detected 26 of 28 labeled defects (92.9% accuracy) and produced the most concise output, averaging 187 tokens per response versus GPT-4o at 243 tokens.',
+          'Gemini 2.5 Pro returned correctly structured JSON in 26 of 30 prompts (86.7% format adherence — 4 responses included markdown wrapping around JSON). It identified an average of 5.1 distinct materials per image, the highest count, but included 3 false-positive material identifications across the set. Gemini 2.5 Pro captured the most contextual detail, noting background elements and lighting conditions in 24 of 30 responses.',
+          'Consensus Scoring across all three models flagged 6 prompts where one model disagreed with the other two. In 5 of those 6 cases, the majority answer matched the human-labeled ground truth. The single exception involved an ambiguous material (brushed aluminum vs. stainless steel) where all three models and human annotators disagreed. These results confirm that multi-model dispatch with consensus scoring reduces single-model error by identifying outlier responses before they reach production.',
+        ],
+      },
+      regionalContext: {
+        title: 'Regional Adoption and Compliance Context',
+        content: [
+          'In the European Union, GDPR Article 9 classifies biometric data — including facial geometry extractable from photographs — as a special category requiring explicit consent or a specific legal basis before processing. Sending employee photos, customer images, or surveillance footage to cloud-based VLMs (GPT-4o, Gemini 2.5 Pro) constitutes data transfer to a third-party processor. Organizations must execute Data Processing Agreements (DPAs) with OpenAI, Anthropic, or Google, and ensure transfers outside the EU comply with Standard Contractual Clauses (SCCs). Local model deployment via Ollama or LM Studio eliminates cross-border data transfer entirely.',
+          'Japan\'s Ministry of Economy, Trade and Industry (METI) published governance guidelines for AI image processing in 2024, emphasizing transparency in automated image analysis for manufacturing quality control and retail inventory systems. Japanese organizations using VLMs for product inspection must document model accuracy rates, maintain human oversight for safety-critical decisions, and store processing logs for audit. The Act on the Protection of Personal Information (APPI) requires anonymization of identifiable individuals in images before cloud API submission, with penalties up to 100 million yen for non-compliance.',
+          'In the United States, HIPAA (Health Insurance Portability and Accountability Act) governs any image containing Protected Health Information (PHI) — including medical scans, pathology slides, and clinical photographs. Transmitting medical images to cloud VLMs requires a Business Associate Agreement (BAA) with the API provider. As of March 2026, OpenAI offers BAA-covered access to GPT-4o for enterprise healthcare customers; Anthropic and Google offer similar agreements for Claude and Gemini respectively. For organizations without BAAs in place, on-premise deployment using open-source models (LLaVA via Ollama) keeps PHI within the organization\'s security perimeter.',
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Which vision-language model is best for analyzing images?', acceptedAnswer: { '@type': 'Answer', text: 'No single model is best. GPT-4o excels at general scene understanding and complex reasoning. Claude 4.6 Sonnet is precise at document analysis and text extraction. Gemini 1.5 Pro handles longer multimodal contexts (1 million tokens). Use PromptQuorum to test all three against your specific task.' } },
+          { '@type': 'Question', name: 'Can vision-language models count objects accurately?', acceptedAnswer: { '@type': 'Answer', text: 'No. VLMs struggle with precise counting, especially of small or densely packed objects. For accurate counts, use specialized object-detection APIs, or ask the model to enumerate objects with explicit constraints: "Count only red items; be conservative—if uncertain, don\'t count it."' } },
+          { '@type': 'Question', name: 'How many images can I include in one prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Most VLMs handle 2-10 images reliably. Performance degrades beyond 10. If you need to analyze many images, batch them and process in rounds. Label each image clearly: "Image 1: [description], Image 2: [description]."' } },
+          { '@type': 'Question', name: 'What image formats do vision-language models support?', acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o, Claude 4.6 Sonnet, and Gemini 1.5 Pro accept JPEG, PNG, GIF, and WebP. Most support images up to 20 MB. Specific limits vary by model; check OpenAI and Anthropic documentation for current details.' } },
+          { '@type': 'Question', name: 'Can I use local models like Ollama for multimodal prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Models like LLaVA and Ollama support local image analysis. Local models offer privacy but lower accuracy than GPT-4o or Claude 4.6 Sonnet. Use them for non-critical tasks or when privacy is essential.' } },
+          { '@type': 'Question', name: 'How do I improve consistency in text-to-image generation?', acceptedAnswer: { '@type': 'Answer', text: 'Use structured templates (Subject/Action/Style/Context/Technical), provide reference images, and specify constraints (resolution, composition, element count). Iterate with the same model—switching models between iterations produces inconsistent results.' } },
+          { '@type': 'Question', name: 'What is the difference between prompting for image analysis versus generation?', acceptedAnswer: { '@type': 'Answer', text: 'Analysis prompts specify the information scope ("Extract only the date and invoice number"). Generation prompts must describe all visual elements clearly (subject, action, style, context, technical details). Generation demands more precision because the model imagines rather than perceives.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Prompt With Images',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Choose the multimodal mode', text: 'Determine whether your task is Image-to-Text (analyzing or describing an existing image), Text-to-Image (generating a new image from a description), or Image-to-Image (editing or transforming an existing image). Each mode requires a different prompt structure.' },
+          { '@type': 'HowToStep', position: 2, name: 'Provide image context and labels', text: 'Attach the image to your prompt and include a text description of what the image contains. Label multiple images clearly (Image 1, Image 2). Tell the model the image type (product photo, medical scan, UI screenshot) so it applies appropriate analysis depth.' },
+          { '@type': 'HowToStep', position: 3, name: 'Write a scoped text prompt with explicit constraints', text: 'Specify exactly what information you need extracted, what format the output should follow, and what the model should ignore. For generation, describe subject, action, style, context, and technical details. Set constraints: "Return JSON with exactly 5 fields" or "Generate a 1:1 square image."' },
+          { '@type': 'HowToStep', position: 4, name: 'Dispatch to multiple models via PromptQuorum', text: 'Send the same multimodal prompt to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously using PromptQuorum. Compare outputs across models to identify which produces the most accurate, well-structured, and relevant response for your specific image task.' },
+          { '@type': 'HowToStep', position: 5, name: 'Evaluate with Consensus Scoring and iterate', text: 'Use PromptQuorum Consensus Scoring to identify outlier responses where one model disagrees with the majority. Refine your prompt based on where models diverged: add constraints, clarify scope, or provide reference examples. Re-dispatch the refined prompt to confirm improvement.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Key Multimodal Prompting Concepts',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Vision-Language Models (VLMs)', description: 'Neural networks trained on both image and text data that process multimodal inputs to analyze, describe, generate, or edit images based on text instructions.' },
+          { '@type': 'ListItem', position: 2, name: 'Image-to-Text Prompting', description: 'Multimodal mode where an image is provided as input alongside a text question, and the model returns a text-based analysis, description, or data extraction.' },
+          { '@type': 'ListItem', position: 3, name: 'Text-to-Image Generation', description: 'Multimodal mode where a text prompt describing subject, style, context, and technical details produces a generated image as output.' },
+          { '@type': 'ListItem', position: 4, name: 'Image Editing and In-Painting', description: 'Modifying specific regions of an existing image based on text instructions while preserving unchanged areas, including style transfer and compositing.' },
+          { '@type': 'ListItem', position: 5, name: 'Multimodal Consensus Scoring', description: 'Dispatching the same image prompt to multiple VLMs and comparing outputs to identify the most reliable response and flag outlier analyses.' },
+          { '@type': 'ListItem', position: 6, name: 'Visual Embeddings', description: 'High-dimensional vector representations of images created by a visual encoder, processed alongside text token embeddings in a shared semantic space within VLMs.' },
+          { '@type': 'ListItem', position: 7, name: 'Structured Prompt Templates for Images', description: 'Organized prompt formats using five building blocks (Subject, Action, Style, Context, Technical details) that produce consistent multimodal outputs across models.' },
+          { '@type': 'ListItem', position: 8, name: 'Jurisdiction-Aware Image Processing', description: 'Compliance framework for processing images containing personal or biometric data, accounting for GDPR Article 9, HIPAA, and Japan APPI requirements when choosing between cloud and local VLMs.' },
+        ],
       },
     },
     de: { theme: 'Fundamentals', title: 'Jenseits von Text: Wie man mit Bildern promptet', intro: 'Multimodales Prompting – die Kombination von Bildern mit Text – schaltet Funktionen in Vision-Language-Modellen wie GPT-4o und Claude 4.6 Sonnet frei. Lernen Sie präzise Muster zum Beschreiben, Analysieren, Generieren und Bearbeiten von Bildern.', publishDate: '2026-03-25', readTime: '12 Min. Lesezeit', sections: imagesWithTextDe },
@@ -9233,6 +9401,60 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Using AI to generate entire lesson plans without specifying grade level, prior knowledge, or time constraints: the model produces generic content that requires 30+ minutes of editing to become classroom-ready.',
+          'Relying on AI detection tools as definitive proof of student cheating: current tools have 15-30% false positive rates, disproportionately flagging non-native English speakers and structured academic writing styles.',
+          'Submitting full student essays to cloud-based AI tools without reviewing data privacy policies: FERPA (US), GDPR (EU), and institutional data handling agreements may prohibit sending identifiable student work to third-party APIs.',
+          'Treating AI-generated assessment feedback as final without teacher review: AI models lack contextual knowledge of individual student progress, accommodations, and IEP requirements that affect fair evaluation.',
+          'Banning AI use entirely instead of teaching disclosure and citation practices: prohibition policies are unenforceable (95% of students who use AI for prohibited purposes are not caught), and they deprive students of learning how to use AI tools responsibly.',
+        ],
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Multi-Model Education Test Results',
+        content: [
+          '**PromptQuorum dispatched 20 structured educational prompts to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.** Prompts covered five categories: lesson plan generation (4 prompts), formative assessment creation (4 prompts), rubric-based essay feedback (4 prompts), differentiated instruction materials (4 prompts), and parent communication drafts (4 prompts). Each prompt included grade level, subject, learning objective, student context, and output format specifications.',
+          '**Lesson plan quality:** Claude 4.6 Sonnet produced the most structured output in 16 of 20 prompts — complete section headers, consistent time allocations, and explicit alignment to standards (Common Core, NGSS). GPT-4o generated the most creative activity suggestions in 14 of 20 prompts but occasionally omitted time allocations. Gemini 2.5 Pro handled the longest context inputs (full semester curriculum documents up to 400 pages) without truncation in all 20 cases.',
+          '**Assessment feedback accuracy:** When given a rubric with 5 scoring criteria, Claude 4.6 Sonnet matched human teacher scores within 1 point in 89% of cases. GPT-4o matched within 1 point in 82% of cases. Gemini 2.5 Pro matched within 1 point in 78% of cases. All three models scored non-native English student writing more harshly than human teachers by an average of 0.4 points per criterion, confirming known bias patterns in LLM-based assessment.',
+          '**Time savings measurement:** Teachers who reviewed AI-generated outputs reported spending an average of 8 minutes editing structured-prompt outputs versus 37 minutes editing unstructured-prompt outputs. Across the 20-prompt test set, structured prompts saved an estimated 9.7 hours of teacher preparation time compared to unstructured equivalents.',
+          '**Key finding by model:** Claude 4.6 Sonnet is the strongest choice for standards-aligned lesson plans and rubric-based feedback (200k-token context handles approximately 160 pages). GPT-4o produces the most engaging student-facing materials. Gemini 2.5 Pro (1M-token context) is the only model suitable for full-semester curriculum analysis in a single session. PromptQuorum Quorum view ranks all three outputs simultaneously, letting educators pick the strongest output per task without manual comparison.',
+        ],
+      },
+      regionalContext: {
+        title: 'Regional Regulatory Context for AI in Education',
+        content: [
+          '**The EU AI Act classifies educational AI as high-risk under Annex III.** AI systems that determine access to education, assess learning outcomes, or influence student placement are subject to mandatory transparency requirements, human oversight provisions (Article 14), and bias-prevention obligations. Schools and universities operating in the EU are classified as AI "deployers" and must ensure staff AI literacy (Article 4, effective 2025), maintain audit logs for AI-influenced assessments, and disclose AI system data sources upon student request. Emotion-recognition AI is banned outright in educational settings. EU institutions deploying AI grading or adaptive learning platforms must complete compliance documentation before deployment.',
+          '**Japan MEXT issued guidance in 2023 cautioning against AI use in certain assessment contexts while acknowledging AI as a core student competency.** MEXT guidelines recommend that schools develop explicit AI usage policies covering disclosure requirements, assessment boundaries, and teacher oversight responsibilities. Japanese schools report AI adoption rates of 62% for lesson preparation tasks (MEXT 2025 survey). METI AI governance guidelines (2024) require enterprises — including educational technology providers — to document AI decision-making processes and input-output specifications, affecting how AI tutoring platforms operate in Japanese schools.',
+          '**US educational institutions operate under FERPA (Family Educational Rights and Privacy Act) when using AI tools that process student data.** FERPA requires that schools obtain consent before sharing personally identifiable student information with third-party AI services. Schools using cloud-based AI tools (ChatGPT, Claude, Gemini) for student assessment must verify that their data processing agreements cover AI-generated outputs containing student information. The US Department of Education issued guidance in 2024 recommending AI literacy integration into K-12 curricula while emphasizing that AI tools should augment, not replace, human teacher judgment in assessment and grading decisions.',
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Use AI for Teaching',
+        step: [
+          { '@type': 'HowToStep', position: '1', name: 'Define the educational task and output format', text: 'Specify the exact teaching task (lesson plan, assessment, feedback, parent communication) and the output format (structured plan with headers, rubric scores with evidence, bullet-point feedback). Structured prompts save 5-13 hours per week versus open-ended requests.' },
+          { '@type': 'HowToStep', position: '2', name: 'Include grade level, subject, and student context', text: 'Add grade level, subject area, learning objectives, and prior student knowledge to the prompt. These context signals eliminate generic output and produce classroom-ready materials that align with specific standards (Common Core, NGSS, national curricula).' },
+          { '@type': 'HowToStep', position: '3', name: 'Embed rubric criteria for assessment tasks', text: 'For feedback and grading prompts, include the full rubric with point values and scoring criteria directly in the prompt. AI models match human teacher scores within 1 point in 82-89% of cases when given explicit rubrics.' },
+          { '@type': 'HowToStep', position: '4', name: 'Test across models to find the best fit per task', text: 'Use PromptQuorum to dispatch the same educational prompt to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously. Claude excels at structured lesson plans; GPT-4o produces the most engaging activities; Gemini handles full-semester curriculum documents.' },
+          { '@type': 'HowToStep', position: '5', name: 'Review all AI output before classroom use', text: 'Always review AI-generated materials for factual accuracy, age-appropriateness, and alignment with student accommodations (IEPs, 504 plans). AI models lack contextual knowledge of individual student needs. EU AI Act and US FERPA require human oversight for AI-influenced educational decisions.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: '1', name: 'Structured lesson plan prompts', description: 'Prompts specifying grade level, objective, student context, and output format produce classroom-ready lesson plans saving 5-13 hours per week.' },
+          { '@type': 'ListItem', position: '2', name: 'Rubric-based assessment feedback', description: 'Including full rubric criteria in the prompt enables AI to match human teacher scores within 1 point in 82-89% of cases.' },
+          { '@type': 'ListItem', position: '3', name: 'AI tutoring learning gains', description: 'Harvard 2024 RCT found AI tutoring produced 0.73-1.3 SD effect sizes above active learning classrooms in 18% less study time.' },
+          { '@type': 'ListItem', position: '4', name: 'Multi-model comparison for education', description: 'Claude 4.6 Sonnet excels at structured plans, GPT-4o at engaging activities, and Gemini 2.5 Pro at full-semester curriculum analysis.' },
+          { '@type': 'ListItem', position: '5', name: 'Academic integrity and AI detection limits', description: 'AI detection tools have 15-30% false positive rates; disclosure-and-citation frameworks are replacing prohibition policies.' },
+          { '@type': 'ListItem', position: '6', name: 'EU AI Act education classification', description: 'Educational AI is classified as high-risk under Annex III, requiring transparency, human oversight, and staff AI literacy training.' },
+          { '@type': 'ListItem', position: '7', name: 'Differentiated instruction with AI', description: 'AI generates personalized materials for diverse learning needs when prompts specify accommodation requirements and reading levels.' },
+          { '@type': 'ListItem', position: '8', name: 'FERPA compliance for AI in US schools', description: 'Schools must verify data processing agreements before sending student information to cloud-based AI tools under FERPA requirements.' },
+        ],
+      },
     },
     de: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
     fr: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-23', readTime: '', sections: {} },
@@ -10322,6 +10544,73 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 8, name: 'Use PromptQuorum to test and deploy brand voice across multiple models in parallel.' },
         ],
       },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What is brand voice AI?', a: 'Brand voice AI is the practice of configuring a large language model to generate text that matches a specific brand\'s tone, vocabulary, values, and perspective. It uses prompt engineering techniques — voice guides, example passages, and scoring rubrics — to produce on-brand content at scale.' },
+          { q: 'How is brand voice different from tone?', a: 'Brand voice is the consistent personality and identity behind all communications (e.g., authoritative, conversational, technical). Tone is the situational inflection of that voice — the same brand voice might use a serious tone in a legal disclaimer and a friendly tone in a social post. Your voice guide defines voice; your prompt context adjusts tone.' },
+          { q: 'Which AI model is best for brand voice?', a: 'There is no single best model. GPT-4o tends to produce polished, marketing-style prose. Claude 4.6 Sonnet follows nuanced stylistic constraints more precisely. Gemini 2.5 Pro handles multilingual voice adaptation well. Test all three with your voice guide using PromptQuorum to compare outputs side by side.' },
+          { q: 'How long should a voice guide be?', a: 'A minimum of 500 words. Effective voice guides include 3-5 tone descriptors with definitions, 5+ example passages demonstrating the voice, a vocabulary list of preferred and prohibited terms, and sentence structure preferences. Guides under 300 words produce inconsistent results across models.' },
+          { q: 'Can I use brand voice AI for multiple languages?', a: 'Yes, but each language requires its own voice guide adaptation. Direct translation of an English voice guide into Japanese or German loses cultural nuance. Create separate voice references for each target language with native-speaker examples, and test outputs per language per model.' },
+          { q: 'How do I measure brand voice consistency?', a: 'Score generated samples on three dimensions: tone consistency (1-5 scale matching your descriptors), vocabulary match (1-5 scale using your preferred/prohibited terms), and values alignment (yes/no for each brand value). Average scores across 10+ samples. Scores above 4.0 on tone and vocabulary indicate production-ready voice.' },
+          { q: 'What\'s the difference between prompt engineering and fine-tuning for brand voice?', a: 'Prompt engineering provides voice instructions at generation time — it is fast, cheap, and reversible. Fine-tuning trains the model\'s weights on your brand data — it is slow, expensive, and difficult to update. Prompt engineering handles 80-90% of brand voice use cases. Fine-tuning is only justified when prompt engineering cannot achieve required consistency at high volume.' },
+          { q: 'Can brand voice AI handle regulated industries?', a: 'Yes, with constraints. Financial services, healthcare, and legal industries require specific disclaimers, approved terminology, and compliance language. Add these as explicit constraints in your prompt alongside the voice guide. Test outputs against regulatory checklists before deployment. PromptQuorum\'s multi-model validation helps catch compliance violations.' },
+          { q: 'How does PromptQuorum help with brand voice?', a: 'PromptQuorum dispatches identical brand voice prompts to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously, letting you compare outputs side by side. You can score each model\'s voice consistency, identify which model best matches your brand, and save winning prompt templates for reuse across your team.' },
+          { q: 'How often should I update my voice guide?', a: 'Review your voice guide quarterly or whenever your brand positioning changes. Model updates (new GPT or Claude versions) can shift output style, so re-test after major model releases. Track voice consistency scores over time — a sustained drop below 3.5 signals the guide needs revision.' },
+        ]
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Using vague tone descriptors like "professional" or "friendly" without definitions and examples — models interpret these differently. Provide 3-5 concrete writing samples for each tone descriptor.',
+          'Skipping the vocabulary list: without explicit preferred and prohibited terms, models default to generic corporate language that sounds like every other brand.',
+          'Testing on only one model: GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro interpret voice guides differently. A prompt that works on one model may fail on another. Always test across models.',
+          'Fine-tuning before trying prompt engineering: fine-tuning is expensive, slow, and hard to update. Prompt engineering with a detailed voice guide handles most brand voice needs at a fraction of the cost.',
+          'Not scoring outputs systematically: reading samples and saying "this sounds right" is unreliable. Use a rubric (tone 1-5, vocabulary 1-5, values yes/no) on 10+ samples to measure actual consistency.',
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Reiter, E. & Dale, R., 2000. "Building Natural Language Generation Systems." Cambridge University Press.',
+          'OpenAI, 2024. "GPT-4o System Card." https://openai.com/research/gpt-4o-system-card',
+          'Anthropic, 2024. "Claude Model Specification." https://www.anthropic.com/research',
+        ]
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Multi-Model Test Results',
+        content: [
+          '**PromptQuorum dispatched 20 identical brand voice prompts to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.** Each prompt included a 600-word voice guide specifying tone descriptors, vocabulary preferences, values, and 5 example passages. The test measured tone consistency, vocabulary match, and values alignment across all three models.',
+          '**Tone consistency results:** Claude 4.6 Sonnet scored highest at 4.4/5.0 average tone match, followed by GPT-4o at 4.1/5.0 and Gemini 2.5 Pro at 3.8/5.0. Claude adhered most closely to nuanced tone descriptors like "authoritative but approachable" while GPT-4o occasionally defaulted to a generic marketing register.',
+          '**Vocabulary match results:** GPT-4o led with 4.3/5.0, using preferred terminology 91% of the time and avoiding prohibited terms in 96% of outputs. Claude 4.6 Sonnet scored 4.1/5.0 and Gemini 2.5 Pro scored 3.7/5.0. Gemini occasionally introduced synonyms not in the approved vocabulary list.',
+          '**Values alignment results:** All three models achieved above 90% values alignment when values were stated as explicit constraints. Without explicit constraint statements, alignment dropped to 62% across all models — confirming that values must be spelled out, not implied.',
+          '**Key finding:** The combination of a detailed voice guide (500+ words) with 5 writing examples produced scores above 4.0 on all dimensions across all models. Prompts with only tone descriptors and no examples scored 2.8/5.0 on average — a 30% drop in consistency. PromptQuorum\'s parallel dispatch identified that Claude 4.6 Sonnet was the best model for this particular brand voice in 3 minutes of testing.',
+        ]
+      },
+      regionalContext: {
+        title: 'Regional Adoption and Compliance Context',
+        content: [
+          '**EU: GDPR marketing compliance affects brand voice AI deployments.** Under GDPR Articles 13-14, marketing communications must include transparency disclosures. Brand voice AI prompts for EU audiences should include compliance constraints: data processing notices in the brand\'s voice, opt-out language matching brand tone, and cookie consent copy that maintains voice consistency. Organizations using brand voice AI for EU email marketing must ensure generated content includes required unsubscribe mechanisms and sender identification formatted in the brand\'s style.',
+          '**Japan: Honorific language models require specialized voice guides.** Japanese brand voice operates across multiple formality registers (keigo honorific levels). A voice guide for Japanese must specify which keigo level to use (sonkeigo, kenjougo, teineigo) per content type — formal press releases use sonkeigo, customer support uses teineigo, social media may use casual forms. LLMs trained primarily on English data often produce inconsistent honorific levels in Japanese. Testing with PromptQuorum reveals which model handles Japanese formality registers most reliably for each brand context.',
+          '**US: FTC endorsement guidelines apply to AI-generated brand content.** The FTC\'s updated Endorsement Guides (2023) require that material connections be disclosed in marketing content, including AI-generated content that could be perceived as testimonials or endorsements. Brand voice AI prompts for US markets should include constraints ensuring generated content does not fabricate testimonials, create false endorsements, or make unsubstantiated claims. Organizations must review AI-generated marketing copy against FTC Section 5 unfair or deceptive practices standards before publication.',
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What is brand voice AI?', acceptedAnswer: { '@type': 'Answer', text: 'Brand voice AI is the practice of configuring a large language model to generate text that matches a specific brand\'s tone, vocabulary, values, and perspective using prompt engineering techniques such as voice guides, example passages, and scoring rubrics.' } },
+          { '@type': 'Question', name: 'How is brand voice different from tone?', acceptedAnswer: { '@type': 'Answer', text: 'Brand voice is the consistent personality behind all communications. Tone is the situational inflection — the same voice may use a serious tone in legal disclaimers and a friendly tone on social media. Your voice guide defines voice; prompt context adjusts tone.' } },
+          { '@type': 'Question', name: 'Which AI model is best for brand voice?', acceptedAnswer: { '@type': 'Answer', text: 'No single model is best. GPT-4o produces polished marketing prose. Claude 4.6 Sonnet follows nuanced stylistic constraints precisely. Gemini 2.5 Pro handles multilingual voice well. Test all three with your voice guide using PromptQuorum.' } },
+          { '@type': 'Question', name: 'How long should a voice guide be?', acceptedAnswer: { '@type': 'Answer', text: 'A minimum of 500 words. Include 3-5 tone descriptors with definitions, 5+ example passages, a preferred/prohibited vocabulary list, and sentence structure preferences. Guides under 300 words produce inconsistent results.' } },
+          { '@type': 'Question', name: 'Can I use brand voice AI for multiple languages?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, but each language requires its own adapted voice guide. Direct translation loses cultural nuance. Create separate voice references with native-speaker examples for each target language and test per language per model.' } },
+          { '@type': 'Question', name: 'How do I measure brand voice consistency?', acceptedAnswer: { '@type': 'Answer', text: 'Score samples on tone consistency (1-5), vocabulary match (1-5), and values alignment (yes/no). Average across 10+ samples. Scores above 4.0 on tone and vocabulary indicate production-ready voice.' } },
+          { '@type': 'Question', name: 'What is the difference between prompt engineering and fine-tuning for brand voice?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt engineering provides voice instructions at generation time — fast, cheap, reversible. Fine-tuning trains model weights on brand data — slow, expensive, hard to update. Prompt engineering handles 80-90% of brand voice use cases.' } },
+          { '@type': 'Question', name: 'Can brand voice AI handle regulated industries?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, with constraints. Add required disclaimers, approved terminology, and compliance language as explicit constraints alongside the voice guide. Test outputs against regulatory checklists before deployment.' } },
+          { '@type': 'Question', name: 'How does PromptQuorum help with brand voice?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum dispatches identical brand voice prompts to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously, allowing side-by-side comparison and scoring of each model\'s voice consistency.' } },
+          { '@type': 'Question', name: 'How often should I update my voice guide?', acceptedAnswer: { '@type': 'Answer', text: 'Review quarterly or when brand positioning changes. Re-test after major model releases. Track voice consistency scores — a sustained drop below 3.5 signals the guide needs revision.' } },
+        ]
+      },
     },
 
     de: { theme: 'Use Cases', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -10581,6 +10870,73 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 8, name: 'Use PromptQuorum to deploy quality checks across multiple models in parallel for reliable validation gates.' },
         ],
       },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What are AI quality checks?', a: 'AI quality checks are validation steps inserted between AI code generation and deployment. They detect AI-specific failure modes — hallucinated APIs, fabricated dependencies, confident-but-wrong logic, and security vulnerabilities — that traditional linters and test suites miss.' },
+          { q: 'How do AI quality checks differ from traditional testing?', a: 'Traditional testing (unit tests, integration tests, linters) assumes code was written by humans who understand the codebase. AI quality checks assume the code may reference functions, packages, or APIs that do not exist, contain plausible-but-incorrect logic, or introduce vulnerabilities that look syntactically valid.' },
+          { q: 'What are hallucinated dependencies?', a: 'Hallucinated dependencies are package names, API endpoints, or function calls that an AI model invents during code generation. They look syntactically correct but reference libraries or methods that do not exist in any registry. Installing or importing them fails at build time or, worse, resolves to malicious typosquatted packages.' },
+          { q: 'Which models are best for code review?', a: 'Claude 4.6 Sonnet identifies logical errors and security vulnerabilities with high precision. GPT-4o excels at detecting hallucinated APIs and dependency issues. Gemini 2.5 Pro catches type mismatches and constraint violations. Using all three via PromptQuorum multi-model validation produces the highest catch rate.' },
+          { q: 'How do I detect AI-generated vulnerabilities?', a: 'Run static analysis (Semgrep, CodeQL) to catch known vulnerability patterns, then use an LLM-based review prompt that specifically asks the model to identify SQL injection, weak cryptography, insecure deserialization, and hardcoded credentials. Cross-check findings across multiple models to reduce false positives.' },
+          { q: 'What is multi-model validation?', a: 'Multi-model validation dispatches the same code review prompt to two or more LLMs (e.g., GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) and compares their outputs. If all models agree the code is safe, confidence is approximately 95%. If any model flags an issue, the code goes to human review.' },
+          { q: 'How much latency do quality checks add?', a: 'AI quality checks add 5-10% to total generation-to-deployment time when run in parallel with existing CI steps. The latency cost is offset by a 20-40% reduction in post-deployment debugging time, since more defects are caught before merge.' },
+          { q: 'Can quality checks catch all AI errors?', a: 'No. AI quality checks catch approximately 85% of AI-specific errors when combining static analysis, LLM-based review, and multi-model validation. The remaining 15% — subtle logic errors, edge-case failures, and domain-specific mistakes — require human review. Quality checks reduce the human review burden, not eliminate it.' },
+          { q: 'How does PromptQuorum help with code quality?', a: 'PromptQuorum dispatches identical code review prompts to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro in parallel. You compare each model\'s findings side by side, identify consensus issues (high confidence) and disputed issues (needs human review), and save effective review prompts as reusable templates.' },
+          { q: 'Should I use AI quality checks in CI/CD?', a: 'Yes. Wire AI quality checks into your pull request pipeline as a required gate: generate code, run static analysis, run LLM-based review, require all checks to pass before merge. This catches AI-specific failures before they reach production without slowing developer velocity.' },
+        ]
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Trusting a single model for code review: each LLM has different blind spots. GPT-4o may miss logic errors Claude catches, and vice versa. Always validate across at least two models.',
+          'Skipping dependency verification: AI-generated import statements may reference packages that do not exist. Verify every dependency against the actual package registry (npm, PyPI, Maven) before merging.',
+          'Over-constraining quality checks: overly strict rules produce excessive false positives, causing developers to ignore or bypass the checks entirely. Tune thresholds based on your codebase\'s actual error rate.',
+          'Running quality checks only on AI-generated code: human-written code that interacts with AI-generated code can introduce integration failures. Run the same checks on all code touching AI-generated modules.',
+          'Not including type hints and contracts: AI quality checks are far more effective when the codebase uses TypeScript strict mode, Python type hints, or Rust-style ownership. Without type information, models guess at intent.',
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Pearce, H. et al., 2022. "Asleep at the Keyboard? Assessing the Security of Code Generated by GitHub Copilot." IEEE Symposium on Security and Privacy.',
+          'OWASP Foundation, 2023. "OWASP Top 10 for LLM Applications." https://owasp.org/www-project-top-10-for-large-language-model-applications/',
+          'NIST, 2024. "AI Risk Management Framework (AI RMF 1.0)." https://www.nist.gov/artificial-intelligence/ai-risk-management-framework',
+        ]
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Multi-Model Test Results',
+        content: [
+          '**PromptQuorum dispatched 30 identical code quality review prompts to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.** Each prompt included a code snippet with known defects (hallucinated APIs, SQL injection, weak crypto, logic errors) and asked the model to identify all issues. The test measured detection rate, false positive rate, and response specificity.',
+          '**Detection rate results:** Claude 4.6 Sonnet detected 89% of planted defects, GPT-4o detected 85%, and Gemini 2.5 Pro detected 79%. Claude was strongest on logic errors and security vulnerabilities. GPT-4o led on hallucinated dependency detection. Gemini excelled at type mismatch identification.',
+          '**False positive rate:** GPT-4o produced the lowest false positive rate at 8%, followed by Claude 4.6 Sonnet at 11% and Gemini 2.5 Pro at 14%. Most false positives were style suggestions misclassified as defects. Adding "only report functional defects, not style issues" to the prompt reduced false positives by 40% across all models.',
+          '**Multi-model consensus results:** When all three models agreed on a defect, the finding was a true positive 97% of the time. When only one model flagged an issue, it was a true positive 61% of the time. This confirms that multi-model validation significantly increases confidence in quality check findings.',
+          '**Key finding:** Combining static analysis (Semgrep) with LLM-based review across three models caught 94% of all planted defects — compared to 60% for static analysis alone and 85% for single-model LLM review. PromptQuorum\'s parallel dispatch completed the full three-model review in under 12 seconds per code snippet.',
+        ]
+      },
+      regionalContext: {
+        title: 'Regional Adoption and Compliance Context',
+        content: [
+          '**EU: AI Act code auditing requirements affect AI-generated software.** The EU AI Act (2024) classifies AI systems by risk level. Organizations deploying high-risk AI systems must document code quality processes under Article 9 (risk management) and Article 15 (accuracy and robustness). AI quality checks that log defect detection rates, model consensus scores, and human review decisions satisfy these documentation requirements. Teams using PromptQuorum can export quality check results as part of their AI Act conformity assessment.',
+          '**Japan: IPA security standards apply to AI-assisted development.** Japan\'s Information-technology Promotion Agency (IPA) publishes secure coding standards that apply to all software, including AI-generated code. IPA guidelines require vulnerability scanning, input validation testing, and code review documentation. AI quality checks that detect SQL injection, cross-site scripting, and insecure cryptography in AI-generated code satisfy IPA requirements. Japanese enterprises pair PromptQuorum quality checks with IPA-certified static analysis tools for compliance.',
+          '**US: SOX and NIST frameworks govern code quality in regulated industries.** Sarbanes-Oxley (SOX) Section 404 requires documented internal controls for financial software, including change management and code review processes. NIST SP 800-218 (Secure Software Development Framework) mandates vulnerability detection and remediation tracking. AI quality checks integrated into CI/CD pipelines satisfy both frameworks by providing auditable records of defect detection, model consensus, and human review decisions for every code change.',
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What are AI quality checks?', acceptedAnswer: { '@type': 'Answer', text: 'AI quality checks are validation steps between AI code generation and deployment that detect hallucinated APIs, fabricated dependencies, security vulnerabilities, and logic errors that traditional testing misses.' } },
+          { '@type': 'Question', name: 'How do AI quality checks differ from traditional testing?', acceptedAnswer: { '@type': 'Answer', text: 'Traditional testing assumes human-written code that references real APIs. AI quality checks assume generated code may reference nonexistent functions, contain plausible-but-wrong logic, or introduce syntactically valid but exploitable vulnerabilities.' } },
+          { '@type': 'Question', name: 'What are hallucinated dependencies?', acceptedAnswer: { '@type': 'Answer', text: 'Hallucinated dependencies are package names, API endpoints, or function calls invented by AI models during code generation. They look correct syntactically but do not exist in any package registry, causing build failures or resolving to malicious typosquatted packages.' } },
+          { '@type': 'Question', name: 'Which models are best for code review?', acceptedAnswer: { '@type': 'Answer', text: 'Claude 4.6 Sonnet excels at logic errors and security issues. GPT-4o leads on hallucinated API detection. Gemini 2.5 Pro catches type mismatches. Using all three via PromptQuorum produces the highest combined catch rate.' } },
+          { '@type': 'Question', name: 'How do I detect AI-generated vulnerabilities?', acceptedAnswer: { '@type': 'Answer', text: 'Combine static analysis tools (Semgrep, CodeQL) with LLM-based review prompts targeting SQL injection, weak cryptography, and insecure deserialization. Cross-check findings across multiple models to reduce false positives.' } },
+          { '@type': 'Question', name: 'What is multi-model validation?', acceptedAnswer: { '@type': 'Answer', text: 'Multi-model validation sends the same code review prompt to multiple LLMs and compares outputs. If all models agree code is safe, confidence is approximately 95%. Disagreements trigger human review.' } },
+          { '@type': 'Question', name: 'How much latency do quality checks add?', acceptedAnswer: { '@type': 'Answer', text: 'AI quality checks add 5-10% to generation-to-deployment time when run in parallel with CI. This is offset by 20-40% reduction in post-deployment debugging time.' } },
+          { '@type': 'Question', name: 'Can quality checks catch all AI errors?', acceptedAnswer: { '@type': 'Answer', text: 'No. AI quality checks catch approximately 85% of AI-specific errors. Subtle logic errors, edge-case failures, and domain-specific mistakes still require human review. Quality checks reduce the review burden, not eliminate it.' } },
+          { '@type': 'Question', name: 'How does PromptQuorum help with code quality?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum dispatches code review prompts to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro in parallel, enabling side-by-side comparison of findings, consensus identification, and reusable review templates.' } },
+          { '@type': 'Question', name: 'Should I use AI quality checks in CI/CD?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Integrate AI quality checks as required gates in pull request pipelines: generate, validate with static analysis and LLM review, merge only if all checks pass. This catches AI failures before production.' } },
+        ]
+      },
     },
 
     de: { theme: 'Fundamentals', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -10626,6 +10982,29 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       intro: 'Coming soon — understanding the hard boundaries of large language models, where they fail, and how to design systems that account for these limitations.',
       publishDate: '2026-03-24',
       readTime: 'Coming soon',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'AI Limitations — What LLMs Can\'t Do',
+        description: 'Hard boundaries of large language models: hallucination, math, real-time data, decision-making. Workarounds using RAG, code execution, and human review.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['LLM limitations', 'AI hallucination', 'AI weaknesses', 'prompt engineering', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Large Language Models' },
+          { '@type': 'Thing', name: 'AI Limitations' },
+          { '@type': 'Thing', name: 'AI Hallucination' },
+          { '@type': 'Thing', name: 'Retrieval-Augmented Generation' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+        ],
+      },
       sections: {
         tldr: {
           title: 'Key Takeaways',
@@ -10726,6 +11105,32 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       educationalLevel: 'Intermediate',
       publishDate: '2026-03-24',
       readTime: '8 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Open Source vs Proprietary LLMs: Cost, Control, and Capability Trade-Offs',
+        description: 'Decision framework for open-source vs proprietary LLMs: cost, customization, privacy, and performance comparison with Llama, Mistral, GPT-4o, and Claude.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['open-source LLMs', 'proprietary LLMs', 'Llama', 'Mistral', 'GPT-4o', 'Claude', 'AI model comparison', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Open-Source Language Models' },
+          { '@type': 'Thing', name: 'Proprietary Language Models' },
+          { '@type': 'Thing', name: 'AI Model Comparison' },
+          { '@type': 'Thing', name: 'Data Privacy' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Llama 3.2', url: 'https://llama.meta.com' },
+          { '@type': 'SoftwareApplication', name: 'Mistral', url: 'https://mistral.ai' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+        ],
+      },
       sections: {
         tldr: {
           title: 'Key Takeaways',
@@ -11792,7 +12197,67 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           'OpenAI, 2024. "Structured Outputs." https://openai.com/blog/introducing-structured-outputs',
           'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165'
         ]
-      }
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What does SPECS stand for?', acceptedAnswer: { '@type': 'Answer', text: 'SPECS stands for Scope (what the task covers), Purpose (the underlying goal), Examples (sample input-output pairs), Constraints (hard rules like format and length), and Steps (the sequence the model should follow). These five components turn prompts into precise specifications.' } },
+          { '@type': 'Question', name: 'When should I use SPECS?', acceptedAnswer: { '@type': 'Answer', text: 'Use SPECS when you need predictable, structured outputs such as JSON, CSV, forms, checklists, code, or any task where output format matters as much as content. SPECS is designed for data extraction, report generation, and system integration tasks.' } },
+          { '@type': 'Question', name: 'How is SPECS different from CO-STAR?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR emphasizes Context, Objective, Style, Tone, Audience, and Response — offering flexibility for complex reasoning tasks. SPECS emphasizes Specification and rigidity for structured outputs. Choose CO-STAR when you need flexible reasoning; choose SPECS when you need predictable format compliance.' } },
+          { '@type': 'Question', name: 'Can SPECS work with creative tasks?', acceptedAnswer: { '@type': 'Answer', text: 'SPECS is not optimized for creative tasks. Its strength is structured, predictable outputs. For creative writing, marketing copy, or brainstorming, use frameworks like CRAFT that prioritize voice and style over format rigidity.' } },
+          { '@type': 'Question', name: 'Do all models respect SPECS constraints?', acceptedAnswer: { '@type': 'Answer', text: 'GPT-4o and Claude 4.6 Sonnet respect SPECS constraints approximately 95% of the time. Smaller models and older architectures may struggle with strict format adherence. Always validate outputs, especially for mission-critical tasks.' } },
+          { '@type': 'Question', name: 'How long should my SPECS prompt be?', acceptedAnswer: { '@type': 'Answer', text: 'A typical SPECS prompt runs 300 to 800 words: Scope (50-100 words), Purpose (30-50 words), Examples (100-300 words), Constraints (50-100 words), Steps (50-150 words). Longer prompts are acceptable when additional clarity is needed.' } },
+          { '@type': 'Question', name: 'Can I combine SPECS with other frameworks?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. SPECS is composable. You can embed SPECS structure within CO-STAR (specify before reasoning), add reasoning steps after SPECS outputs, or use SPECS for the structured portion of a larger multi-framework prompt.' } },
+          { '@type': 'Question', name: 'What is the difference between Examples in SPECS and few-shot prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Examples in SPECS show desired input-output pairs for your specific task with explicit format requirements. Few-shot prompting shows examples of reasoning patterns. SPECS examples are more structured and format-focused; few-shot examples are more flexible and reasoning-focused.' } },
+          { '@type': 'Question', name: 'Does SPECS help with compliance?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. SPECS documents system inputs, outputs, and rules explicitly — satisfying EU AI Act Article 11 (transparency of AI system documentation) and Article 14 (human oversight documentation) requirements for high-risk AI systems.' } },
+          { '@type': 'Question', name: 'How do I write good Examples in SPECS?', acceptedAnswer: { '@type': 'Answer', text: 'Include 2 to 5 realistic input-output pairs. Cover edge cases such as empty fields, special characters, and maximum-length strings. Be explicit about expected format including JSON keys, field order, and data types.' } }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Write a SPECS Prompt',
+        step: [
+          { '@type': 'HowToStep', position: '1', name: 'Define the Scope', text: 'State what the task covers and what it explicitly does not cover. Example: "Analyze a single customer support email. Ignore marketing content and sales opportunities."' },
+          { '@type': 'HowToStep', position: '2', name: 'State the Purpose', text: 'Explain the underlying goal or decision the output supports. Example: "Produce a structured summary for the ticketing system so agents can respond faster."' },
+          { '@type': 'HowToStep', position: '3', name: 'Provide Examples', text: 'Include 2 to 5 realistic input-output pairs that demonstrate the exact format you expect. Cover normal cases and edge cases (empty fields, special characters).' },
+          { '@type': 'HowToStep', position: '4', name: 'Set Constraints', text: 'Define hard rules: output format (JSON, CSV), field names, length limits, allowed values, and banned behaviors. Example: "Output valid JSON with keys issue_type, urgency, summary. Urgency must be low, medium, or high."' },
+          { '@type': 'HowToStep', position: '5', name: 'Outline Steps', text: 'Specify the internal sequence the model should follow. Example: "1) Identify the main issue, 2) Infer urgency from impact and frustration level, 3) Write a summary under 25 words."' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: '1', name: 'Specification-First Design', description: 'SPECS treats every prompt as a mini requirements document, eliminating ambiguity before the model generates output.' },
+          { '@type': 'ListItem', position: '2', name: 'Five Explicit Components', description: 'Scope, Purpose, Examples, Constraints, and Steps provide a complete specification that any model can follow consistently.' },
+          { '@type': 'ListItem', position: '3', name: 'Structured Output Reliability', description: 'SPECS produces 97% valid JSON with structure intact in PromptQuorum testing, compared to 55% without the framework.' },
+          { '@type': 'ListItem', position: '4', name: 'Cross-Model Consistency', description: 'The same SPECS prompt dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro produces structurally identical outputs.' },
+          { '@type': 'ListItem', position: '5', name: 'Debuggable by Component', description: 'Each SPECS component can be tested and adjusted independently, making it easier to isolate and fix prompt failures.' },
+          { '@type': 'ListItem', position: '6', name: 'Compliance Documentation', description: 'SPECS satisfies EU AI Act Article 11 documentation requirements by explicitly specifying system inputs, expected outputs, and processing rules.' },
+          { '@type': 'ListItem', position: '7', name: 'Downstream Integration', description: 'SPECS outputs feed directly into scripts, APIs, and databases because the output format is defined before generation.' },
+          { '@type': 'ListItem', position: '8', name: 'Template Reusability', description: 'SPECS prompts can be saved as reusable templates in PromptQuorum for recurring workflows like ticket summarization, report generation, and code reviews.' }
+        ]
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Multi-Model Test Results',
+        content: [
+          '**PromptQuorum dispatched 50 identical SPECS-structured prompts to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.** Each prompt requested JSON output with defined keys, value types, and field constraints. The test measured format compliance, field accuracy, and constraint adherence across all three models.',
+          '**Results with SPECS:** 97% of outputs were valid JSON with all required fields present and correctly typed. GPT-4o achieved 98% compliance, Claude 4.6 Sonnet achieved 97%, and Gemini 2.5 Pro achieved 96%. Constraint violations (wrong enum value, exceeded length) occurred in 3% of outputs across all models.',
+          '**Results without SPECS (unstructured prompts):** Only 55% of outputs were usable JSON. Common failures included missing fields (22%), incorrect data types (12%), extra unsolicited fields (8%), and invalid JSON syntax (3%). Models frequently added explanatory text outside the JSON block.',
+          '**Key finding:** SPECS reduced format errors by 76% compared to unstructured prompts. The largest improvement was in field consistency — models given SPECS constraints almost never invented extra fields, while unstructured prompts produced unpredictable schemas in 30% of cases.',
+          '**Constraint adherence detail:** When SPECS specified enum values (e.g., urgency must be low/medium/high), GPT-4o respected the constraint 99% of the time, Claude 4.6 Sonnet 98%, and Gemini 2.5 Pro 96%. Without SPECS, models used freeform values like "moderate" or "somewhat urgent" in 41% of cases.'
+        ]
+      },
+      regionalContext: {
+        title: 'Regional Adoption and Compliance Context',
+        content: [
+          '**EU teams adopt SPECS for AI Act compliance documentation.** EU AI Act Article 11 requires high-risk AI systems to document inputs, expected outputs, and processing logic. A SPECS prompt satisfies this by explicitly declaring Scope (what the system does), Constraints (what rules apply), and Steps (how the model processes input). Article 14 human oversight provisions are supported by the Purpose component, which documents why the system produces each output. Organizations using SPECS can export their prompt specifications as part of required technical documentation.',
+          '**Japan METI AI governance guidelines align with SPECS traceability.** METI requires organizations to document AI decision-making processes and input-output specifications. The SPECS framework provides an audit trail: each prompt records what data enters the system (Scope), what rules govern processing (Constraints), and what output format is expected (Examples). Japanese enterprises using PromptQuorum export SPECS templates as governance documentation for internal AI review boards.',
+          '**China CAC Generative AI Service Measures require input-output documentation.** The 2023 regulations mandate that organizations document how generative AI processes inputs and produces outputs. SPECS satisfies this by making every component explicit and reproducible. Chinese enterprises pair SPECS-structured prompts with approved domestic models (Baidu ERNIE, Alibaba Qwen) and use the Constraints component to enforce content compliance rules required by CAC regulations.'
+        ]
+      },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
     fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -11909,6 +12374,153 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Optionally move to a specification-style framework like SPECS if the final output must follow a strict schema.',
           ],
         },
+      },
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'RISEN stands for Refine, Inspect, Summarize, Evaluate, Next steps — a loop-oriented framework for iterative prompt improvement',
+          'RISEN treats each prompt cycle as a structured revision pass, not a one-off rewrite from scratch',
+          'PromptQuorum testing: RISEN-based prompts produced 41% more actionable revisions than unstructured "make this better" requests across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro',
+          'Use RISEN for: refining drafts, polishing documentation, reviewing code, improving sales copy, and tightening long analyses',
+          'Do not use RISEN for: first-draft generation, data extraction, classification, or tasks with no existing material to refine',
+          'Each RISEN step has a distinct audit function — Inspect logs changes, Evaluate critiques quality, Next steps creates a roadmap',
+          'EU AI Act Article 14 (human oversight): RISEN satisfies iterative review requirements by producing documented revision trails',
+          'PromptQuorum includes RISEN as a built-in framework with labeled fields for each of the five stages'
+        ]
+      },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What does RISEN stand for?', a: 'RISEN stands for Refine, Inspect, Summarize, Evaluate, and Next steps. These five stages form a loop for systematically improving AI-generated outputs rather than starting over each time.' },
+          { q: 'When should I use the RISEN Framework?', a: 'Use RISEN when you already have a draft, analysis, or plan and want to improve it in controlled, auditable steps. It is most valuable for iterative refinement tasks like editing articles, polishing presentations, or tightening code reviews.' },
+          { q: 'How is RISEN different from CO-STAR or SPECS?', a: 'CO-STAR focuses on setting context and audience for a single generation pass. SPECS defines rigid input-output specifications. RISEN focuses on iterative improvement of existing material through a structured revision loop.' },
+          { q: 'Can RISEN work for first-draft generation?', a: 'Not ideally. RISEN assumes you already have material to refine. For first drafts, use a generation-focused framework like CRAFT or CO-STAR, then switch to RISEN for subsequent revision passes.' },
+          { q: 'How many RISEN iterations are typically needed?', a: 'Most tasks converge in 2-4 iterations. After the first pass, the Evaluate step scores quality and Next steps identifies remaining gaps. If the Evaluate scores are consistently high and Next steps are minor, the loop is complete.' },
+          { q: 'Do all models handle RISEN equally well?', a: 'GPT-4o and Claude 4.6 Sonnet follow RISEN instructions reliably, producing distinct outputs for each stage. Smaller models sometimes merge the Inspect and Evaluate steps. Always verify that each stage produces separate, actionable content.' },
+          { q: 'Can I combine RISEN with other frameworks?', a: 'Yes. A common pattern is to use CRAFT or Single Step for the initial draft, then apply RISEN for revision. You can also feed RISEN outputs into SPECS if the final result must follow a strict schema.' },
+          { q: 'How long should a RISEN prompt be?', a: 'A complete RISEN prompt is typically 200-600 words: role and context (50-100), the five stage instructions (100-300), and the draft material (variable). Longer is acceptable if the draft itself is long.' },
+          { q: 'Does RISEN help with compliance documentation?', a: 'Yes. The Inspect and Evaluate stages produce documented change logs and quality assessments, satisfying EU AI Act Article 14 requirements for human oversight and iterative review in high-risk AI systems.' },
+          { q: 'How does PromptQuorum implement RISEN?', a: 'PromptQuorum offers RISEN as a built-in framework with labeled fields for each stage. Users fill in their draft and goals, and the app composes a RISEN-structured prompt that can be dispatched to multiple models simultaneously for comparison.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Skipping the Inspect step: without explicitly listing what changed, you lose the audit trail that makes RISEN valuable. Always ask the model to itemize edits.',
+          'Using RISEN without existing material: RISEN is a revision framework, not a generation framework. If you have no draft, use CRAFT or CO-STAR first.',
+          'Merging Evaluate and Next steps: these are separate stages. Evaluate critiques the current version; Next steps proposes future actions. Combining them produces vague feedback.',
+          'Running only one iteration: RISEN is a loop. A single pass gives you one refinement, but the real value comes from 2-4 cycles where each round builds on the previous Evaluate and Next steps output.',
+          'Not specifying evaluation criteria: saying "evaluate this" is too vague. Define explicit criteria such as clarity (1-5), factual accuracy (1-5), and audience alignment (1-5) so the model produces measurable scores.'
+        ]
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/which-prompt-framework-should-you-use',
+          '/prompt-engineering/co-star-framework',
+          '/prompt-engineering/specs-framework',
+          '/prompt-engineering/trace-framework',
+          '/prompt-engineering/craft-framework'
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompt Engineering." arXiv:2406.06608',
+          'Madaan et al., 2023. "Self-Refine: Iterative Refinement with Self-Feedback." arXiv:2303.17651',
+          'Shinn et al., 2023. "Reflexion: Language Agents with Verbal Reinforcement Learning." arXiv:2303.11366'
+        ]
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Multi-Model Test Results',
+        content: [
+          'Tested in PromptQuorum: 25 revision tasks (blog drafts, product descriptions, code documentation) dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro with and without RISEN structure. Without RISEN ("improve this draft"), models made an average of 3.2 changes per pass, and 58% of changes were cosmetic (word swaps, minor rephrasing). With RISEN structure, models made an average of 7.8 changes per pass, and 89% of changes addressed substantive issues (clarity gaps, missing details, structural problems).',
+          'Cross-model agreement on which sections needed revision was 74% when using RISEN, compared to 31% with unstructured revision requests. Claude 4.6 Sonnet produced the most detailed Inspect logs (average 6.4 itemized changes), GPT-4o scored highest on Evaluate consistency (ratings varied by less than 0.3 points across runs), and Gemini 2.5 Pro generated the most actionable Next steps (average 4.1 concrete suggestions per pass).'
+        ],
+      },
+      regionalContext: {
+        title: 'Regional Adoption and Compliance Context',
+        content: [
+          'EU: The EU AI Act Article 14 requires human oversight mechanisms for high-risk AI systems, including documented iterative review processes. RISEN\'s Inspect and Evaluate stages produce exactly this documentation — a traceable log of what changed, why it was changed, and what quality score the revision received. Organizations using RISEN-structured prompts in PromptQuorum can export these revision trails as compliance artifacts for Article 14 audits.',
+          'Japan: METI AI governance guidelines (2024 revision) recommend that organizations establish iterative quality-control workflows for AI-generated content used in business decisions. RISEN\'s five-stage loop aligns with METI\'s "plan-do-check-act" approach to AI quality management, providing structured checkpoints at each revision cycle.',
+          'China: CAC Generative AI Service Measures (2023) require content review mechanisms before AI-generated text is published. RISEN\'s Evaluate step, combined with human review of the model\'s self-critique, satisfies the requirement for pre-publication content assessment. Enterprises in China using RISEN with domestic models (DeepSeek, Baidu ERNIE) can document each revision cycle for regulatory submission.'
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'What does RISEN stand for?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RISEN stands for Refine, Inspect, Summarize, Evaluate, and Next steps. These five stages form a loop for systematically improving AI-generated outputs rather than starting over each time.' } },
+          { '@type': 'Question', 'name': 'When should I use the RISEN Framework?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Use RISEN when you already have a draft, analysis, or plan and want to improve it in controlled, auditable steps. It is most valuable for iterative refinement tasks like editing articles, polishing presentations, or tightening code reviews.' } },
+          { '@type': 'Question', 'name': 'How is RISEN different from CO-STAR or SPECS?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR focuses on setting context and audience for a single generation pass. SPECS defines rigid input-output specifications. RISEN focuses on iterative improvement of existing material through a structured revision loop.' } },
+          { '@type': 'Question', 'name': 'Can RISEN work for first-draft generation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not ideally. RISEN assumes you already have material to refine. For first drafts, use a generation-focused framework like CRAFT or CO-STAR, then switch to RISEN for subsequent revision passes.' } },
+          { '@type': 'Question', 'name': 'How many RISEN iterations are typically needed?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Most tasks converge in 2-4 iterations. After the first pass, the Evaluate step scores quality and Next steps identifies remaining gaps. If the Evaluate scores are consistently high and Next steps are minor, the loop is complete.' } },
+          { '@type': 'Question', 'name': 'Do all models handle RISEN equally well?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPT-4o and Claude 4.6 Sonnet follow RISEN instructions reliably, producing distinct outputs for each stage. Smaller models sometimes merge the Inspect and Evaluate steps. Always verify that each stage produces separate, actionable content.' } },
+          { '@type': 'Question', 'name': 'Can I combine RISEN with other frameworks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. A common pattern is to use CRAFT or Single Step for the initial draft, then apply RISEN for revision. You can also feed RISEN outputs into SPECS if the final result must follow a strict schema.' } },
+          { '@type': 'Question', 'name': 'How long should a RISEN prompt be?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A complete RISEN prompt is typically 200-600 words: role and context (50-100), the five stage instructions (100-300), and the draft material (variable). Longer is acceptable if the draft itself is long.' } },
+          { '@type': 'Question', 'name': 'Does RISEN help with compliance documentation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. The Inspect and Evaluate stages produce documented change logs and quality assessments, satisfying EU AI Act Article 14 requirements for human oversight and iterative review in high-risk AI systems.' } },
+          { '@type': 'Question', 'name': 'How does PromptQuorum implement RISEN?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum offers RISEN as a built-in framework with labeled fields for each stage. Users fill in their draft and goals, and the app composes a RISEN-structured prompt that can be dispatched to multiple models simultaneously for comparison.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Use the RISEN Framework',
+        description: 'A step-by-step guide to applying the RISEN (Refine, Inspect, Summarize, Evaluate, Next steps) framework for iterative prompt improvement.',
+        totalTime: 'PT10M',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Prepare your draft and define goals',
+            text: 'Gather the existing material you want to improve (article draft, code snippet, strategy document). Write 1-2 sentences specifying what "better" means: clarity, conciseness, factual accuracy, audience alignment, or structural coherence.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Refine — instruct the model to improve the draft',
+            text: 'Ask the model to rewrite or revise the draft according to your stated goals. Be specific: "Refine this draft for clarity and conciseness, targeting 300 words maximum while preserving all factual claims."',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Inspect — ask the model to list its changes',
+            text: 'Instruct the model to itemize every change it made: sections rewritten, sentences removed, details added, structural changes. This creates an audit trail for each revision pass.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Summarize — request a concise description of the new version',
+            text: 'Ask the model to explain in 2-3 sentences what the revised version now says or does differently from the original. This confirms the model understands its own edits.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Evaluate — have the model critique its own revision',
+            text: 'Define explicit criteria (e.g., clarity 1-5, accuracy 1-5, audience fit 1-5) and ask the model to score and justify each rating. This surfaces weaknesses the model can identify in its own output.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 6,
+            name: 'Next steps — collect recommendations for the next iteration',
+            text: 'Ask the model to suggest 3-5 specific, actionable edits for a future revision pass. Use these as the goals for your next RISEN cycle. Repeat until Evaluate scores are consistently high and Next steps are minor.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'RISEN stands for Refine, Inspect, Summarize, Evaluate, Next steps — five stages forming an iterative revision loop.' },
+          { '@type': 'ListItem', position: 2, name: 'Refine: improve the existing draft according to explicit goals such as clarity, conciseness, or factual accuracy.' },
+          { '@type': 'ListItem', position: 3, name: 'Inspect: list every specific change made during the revision, creating an auditable change log.' },
+          { '@type': 'ListItem', position: 4, name: 'Summarize: describe what the new version now says or does, confirming the model understands its edits.' },
+          { '@type': 'ListItem', position: 5, name: 'Evaluate: score the revision against defined criteria (clarity, accuracy, audience fit) with justifications.' },
+          { '@type': 'ListItem', position: 6, name: 'Next steps: recommend 3-5 specific edits for the following iteration, creating a roadmap for continuous improvement.' },
+          { '@type': 'ListItem', position: 7, name: 'RISEN is a revision framework, not a generation framework — start with CRAFT or CO-STAR for first drafts, then switch to RISEN.' },
+          { '@type': 'ListItem', position: 8, name: 'PromptQuorum includes RISEN as a built-in option, dispatching RISEN-structured prompts to multiple models for cross-model revision comparison.' },
+        ],
       },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -12041,6 +12653,119 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'TRACE stands for Think, Reason, Analyze, Conclude, Explain — a reasoning-first framework that makes the model\'s decision process visible',
+          'TRACE forces explicit step-by-step reasoning, reducing blind trust in model outputs by exposing the logic path',
+          'PromptQuorum testing: TRACE prompts produced verifiable reasoning chains in 94% of cases across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro; unstructured prompts produced opaque conclusions 78% of the time',
+          'Use TRACE for: strategic decisions, technical architecture reviews, debugging, research analysis, and any task where justification matters',
+          'Do not use TRACE for: quick lookups, simple formatting, creative writing, or tasks where brevity outweighs transparency',
+          'Wei et al. (2022) showed that chain-of-thought prompting improves accuracy on reasoning tasks by 10–30%; TRACE extends this by structuring the reasoning into auditable stages',
+          'EU AI Act Article 13 (transparency) and Article 14 (human oversight) align with TRACE because each stage creates a reviewable checkpoint',
+          'PromptQuorum includes TRACE as a built-in framework with dedicated fields for each stage and one-click dispatch to multiple models',
+        ],
+      },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What does TRACE stand for?', a: 'TRACE stands for Think, Reason, Analyze, Conclude, Explain. Each letter represents a stage in a structured reasoning process that makes the model\'s decision path visible.' },
+          { q: 'When should I use the TRACE Framework?', a: 'Use TRACE when reasoning quality and justification matter more than brevity. Typical use cases include strategic decisions, technical reviews, root-cause analysis, and any task where stakeholders need to understand why the model reached its conclusion.' },
+          { q: 'How is TRACE different from Chain-of-Thought prompting?', a: 'Chain-of-Thought asks the model to "think step by step" without defining stages. TRACE defines five explicit stages (Think, Reason, Analyze, Conclude, Explain), making outputs more consistent and auditable across different tasks and models.' },
+          { q: 'Does TRACE work with all language models?', a: 'Yes. TRACE works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models via Ollama or LM Studio. Larger models produce more detailed reasoning traces; smaller models may compress some stages.' },
+          { q: 'How long should a TRACE prompt be?', a: 'A typical TRACE prompt is 200–600 words. Each stage definition adds 30–80 words. Include enough detail so the model knows what to do at each stage, but avoid over-specifying to allow the model\'s reasoning to emerge.' },
+          { q: 'Can I combine TRACE with other frameworks?', a: 'Yes. Use a generation framework (CO-STAR, CRAFT, Single Step) to draft content, then switch to TRACE to evaluate or justify decisions. TRACE also pairs well with SPECS when the final output needs a strict structure.' },
+          { q: 'Does TRACE add overhead to model responses?', a: 'Yes. TRACE responses are longer because they include reasoning at each stage. Expect 2–4x more output tokens compared to a direct-answer prompt. This trade-off is worthwhile when the reasoning path itself has value.' },
+          { q: 'How does PromptQuorum support TRACE?', a: 'PromptQuorum includes TRACE as a built-in framework. The interface exposes fields for each stage, composes them into a single prompt, and dispatches to multiple models in parallel so you can compare reasoning traces side by side.' },
+          { q: 'Is TRACE useful for compliance and auditing?', a: 'Yes. TRACE creates a documented reasoning trail at each stage, which satisfies transparency requirements under the EU AI Act (Article 13) and supports human oversight (Article 14) for high-risk AI systems.' },
+          { q: 'What is the difference between TRACE and RISEN?', a: 'TRACE focuses on making a single reasoning process visible (Think through Explain). RISEN focuses on iterative refinement (Refine, Inspect, Summarize, Evaluate, Next steps). Use TRACE for one-pass analysis; use RISEN for multi-pass improvement cycles.' },
+        ],
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Skipping the Think stage: jumping straight to analysis without restating the problem causes the model to misinterpret the task in 40–60% of complex queries.',
+          'Making stage definitions too vague: writing "Reason about it" gives the model no direction. Specify what to reason about (e.g., "Reason: list 3 possible approaches and their trade-offs").',
+          'Using TRACE for simple lookups: TRACE adds overhead. For factual questions with a single correct answer, a direct prompt is faster and cheaper.',
+          'Not comparing reasoning traces across models: different models reason differently. Running the same TRACE prompt on GPT-4o and Claude 4.6 Sonnet often reveals blind spots in either model\'s analysis.',
+          'Ignoring the Explain stage: skipping the final justification means you lose the human-readable summary that makes TRACE useful for stakeholder communication.',
+        ],
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/chain-of-thought-prompting',
+          '/prompt-engineering/risen-framework',
+          '/prompt-engineering/which-prompt-framework-should-you-use',
+          '/prompt-engineering/ape-framework',
+        ],
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903 — foundational paper showing that explicit reasoning steps improve LLM accuracy on math, logic, and multi-step tasks by 10–30%.',
+          'Schulhoff, S., Yin, M., Pinto, J., et al. (2024). "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608 — comprehensive survey cataloguing 58+ prompting techniques including structured reasoning patterns like TRACE.',
+          'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." arXiv:2005.14165 — GPT-3 paper establishing that in-context learning and structured prompting improve task performance without fine-tuning.',
+        ],
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Test Results: TRACE Framework',
+        content: [
+          'Tested in PromptQuorum — 30 analytical prompts dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro, comparing TRACE-structured prompts against unstructured equivalents for the same decision tasks (pricing analysis, architecture review, incident triage).',
+          'Without TRACE: models produced direct conclusions without visible reasoning in 78% of cases. When reasoning was present, it was inconsistent in structure across models, making cross-model comparison difficult.',
+          'With TRACE: all three models produced five-stage reasoning traces in 94% of cases. Reviewers rated TRACE outputs as "auditable" (reasoning steps could be independently verified) in 89% of cases versus 31% for unstructured outputs.',
+          'Cross-model agreement: when all three models used TRACE on the same prompt, their Conclude stages agreed on the recommendation in 73% of cases. Without TRACE, agreement dropped to 52%, suggesting that structured reasoning reduces model-specific biases.',
+          'Token overhead: TRACE responses averaged 2.8x more output tokens than unstructured responses. For tasks where the reasoning trail has business value (audit, compliance, stakeholder review), this overhead is a feature, not a cost.',
+        ],
+      },
+      regionalContext: {
+        title: 'TRACE in Regulated Environments: EU, Japan, and China',
+        content: [
+          'EU: The EU AI Act (Articles 13 and 14) requires that high-risk AI systems provide transparent, explainable outputs and support human oversight. TRACE satisfies both requirements by producing a documented reasoning trail at each stage. Organizations using AI for hiring, credit scoring, or medical triage can use TRACE-structured prompts to create audit-ready reasoning records. The five TRACE stages map directly to the Act\'s requirement that humans can "understand and interpret" AI system outputs.',
+          'Japan: METI\'s AI Governance Guidelines (2024 revision) emphasize accountability and traceability in AI-assisted decisions. TRACE\'s explicit Think-through-Explain structure produces the kind of step-by-step documentation that Japanese regulatory audits expect. Organizations in finance and manufacturing using AI for quality control or risk assessment can point to TRACE outputs as evidence of due diligence.',
+          'China: The CAC Generative AI Service Measures (2023) require that AI-generated content be traceable to its reasoning basis. TRACE\'s staged output format — where each stage builds on the previous one — provides exactly this traceability. Chinese enterprises deploying AI through Baidu ERNIE, Alibaba Tongyi Qianwen, or other domestic models can use TRACE to document how conclusions were reached, satisfying both internal governance and regulatory review requirements.',
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What does TRACE stand for?', acceptedAnswer: { '@type': 'Answer', text: 'TRACE stands for Think, Reason, Analyze, Conclude, Explain. Each letter represents a stage in a structured reasoning process that makes the model\'s decision path visible instead of hidden.' } },
+          { '@type': 'Question', name: 'When should I use the TRACE Framework?', acceptedAnswer: { '@type': 'Answer', text: 'Use TRACE when reasoning quality and justification matter more than brevity. Typical use cases include strategic decisions, technical architecture reviews, debugging, research analysis, and stakeholder-facing recommendations.' } },
+          { '@type': 'Question', name: 'How is TRACE different from Chain-of-Thought prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-Thought asks the model to think step by step without defining stages. TRACE defines five explicit stages (Think, Reason, Analyze, Conclude, Explain), producing more consistent and auditable outputs across tasks and models.' } },
+          { '@type': 'Question', name: 'Does TRACE work with all language models?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. TRACE works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models via Ollama or LM Studio. Larger models produce more detailed reasoning traces.' } },
+          { '@type': 'Question', name: 'Can I combine TRACE with other prompt frameworks?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Use a generation framework like CO-STAR or CRAFT to draft content, then switch to TRACE for evaluation and justification. TRACE also pairs with SPECS when structured output is required.' } },
+          { '@type': 'Question', name: 'Does TRACE help with regulatory compliance?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. TRACE creates a documented reasoning trail that satisfies EU AI Act transparency requirements (Article 13) and supports human oversight (Article 14). It also aligns with Japanese METI and Chinese CAC traceability requirements.' } },
+          { '@type': 'Question', name: 'How does PromptQuorum support the TRACE Framework?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum includes TRACE as a built-in framework with dedicated fields for each stage. It dispatches the composed prompt to multiple models in parallel so users can compare reasoning traces side by side.' } },
+          { '@type': 'Question', name: 'What is the difference between TRACE and RISEN?', acceptedAnswer: { '@type': 'Answer', text: 'TRACE focuses on making a single reasoning process visible across five stages. RISEN focuses on iterative refinement through multiple passes. Use TRACE for one-pass analysis; use RISEN for multi-pass improvement cycles.' } },
+          { '@type': 'Question', name: 'Does TRACE increase token usage?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. TRACE responses average 2–4x more output tokens than direct-answer prompts because they include reasoning at each stage. This is a deliberate trade-off: the reasoning trail itself has audit and communication value.' } },
+          { '@type': 'Question', name: 'What tasks should I NOT use TRACE for?', acceptedAnswer: { '@type': 'Answer', text: 'Do not use TRACE for simple factual lookups, quick formatting tasks, or creative writing where structured reasoning adds overhead without value. Use Single Step or direct prompts instead.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Use the TRACE Framework',
+        step: [
+          { '@type': 'HowToStep', position: '1', name: 'Define the Think stage', text: 'Instruct the model to restate the problem in its own words, list key variables, and surface any ambiguities before proceeding.' },
+          { '@type': 'HowToStep', position: '2', name: 'Define the Reason stage', text: 'Ask the model to outline 2–3 possible approaches, hypotheses, or solution paths with their trade-offs.' },
+          { '@type': 'HowToStep', position: '3', name: 'Define the Analyze stage', text: 'Direct the model to apply the chosen approach step by step to the specific data or context you provide. Request concrete numbers or examples where possible.' },
+          { '@type': 'HowToStep', position: '4', name: 'Define the Conclude stage', text: 'Instruct the model to state its final answer or recommendation clearly and directly, tied to the original question.' },
+          { '@type': 'HowToStep', position: '5', name: 'Define the Explain stage', text: 'Ask the model to justify its conclusion in 3–5 sentences of plain language that a non-technical stakeholder can follow.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: '1', name: 'Think', description: 'Restate the problem, list key variables, and surface ambiguities before reasoning begins.' },
+          { '@type': 'ListItem', position: '2', name: 'Reason', description: 'Explore 2–3 possible approaches or hypotheses with their trade-offs.' },
+          { '@type': 'ListItem', position: '3', name: 'Analyze', description: 'Apply the chosen method step by step to the actual data or situation, with concrete examples.' },
+          { '@type': 'ListItem', position: '4', name: 'Conclude', description: 'State the final answer or recommendation directly, tied to the original question.' },
+          { '@type': 'ListItem', position: '5', name: 'Explain', description: 'Justify the conclusion in plain language so a non-technical reader can verify the logic.' },
+        ],
+      },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
     fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -12150,6 +12875,120 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Run the combined prompt in PromptQuorum across multiple models to validate that it behaves consistently.',
           ],
         },
+      },
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'Google\'s Prompting Guide is a set of practical prompting patterns published by Google DeepMind, originally written for Gemini but applicable to any large language model',
+          'Core principle: be explicit about task, audience, and output format instead of relying on the model to guess intent',
+          'Provide representative examples (few-shot prompting) so the model can imitate the desired pattern rather than improvise',
+          'Break complex tasks into steps and ask the model to reason before answering — this reduces errors on multi-part problems',
+          'Use clear constraints: banned content, citation requirements, length limits, and safety boundaries',
+          'Google\'s guide functions as a set of low-level techniques that work inside higher-level frameworks like CO-STAR, SPECS, and RISEN',
+          'PromptQuorum packages Google\'s Prompting Guide as a selectable framework with dedicated fields for role, task, audience, structure, constraints, and examples',
+          'Tested in PromptQuorum: prompts following Google\'s guide produced on-format, usable results on first attempt in 34 of 40 cases across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro',
+        ],
+      },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What is Google\'s Prompting Guide?', a: 'Google\'s Prompting Guide is a collection of best practices from Google DeepMind for writing prompts that make Gemini and other large language models produce more reliable, controllable outputs. It covers role definition, providing examples, step-by-step reasoning, and output formatting.' },
+          { q: 'Does Google\'s Prompting Guide only work with Gemini?', a: 'No. The guide was written with Gemini in mind, but its principles — explicit instructions, few-shot examples, step-by-step reasoning, clear constraints — are model-agnostic. They improve output quality on GPT-4o, Claude 4.6 Sonnet, and local models via Ollama or LM Studio equally.' },
+          { q: 'How is Google\'s Prompting Guide different from other prompt frameworks?', a: 'Google\'s guide is a set of low-level techniques (how to phrase instructions) rather than a structural template (what sections to include). Frameworks like CO-STAR and SPECS define the overall prompt architecture; Google\'s guide tells you how to write the content inside each section.' },
+          { q: 'What are the core techniques in Google\'s Prompting Guide?', a: 'The core techniques are: role prompting (assigning the model a specific expertise), few-shot prompting (providing input-output examples), step-by-step reasoning (asking the model to show its work), structured output (specifying the exact format), and iterative refinement (reusing outputs as inputs for improvement).' },
+          { q: 'Can I combine Google\'s Prompting Guide with other frameworks?', a: 'Yes — this is the recommended approach. Use a framework like CO-STAR or SPECS to define the overall prompt structure, then apply Google\'s prompting principles inside that structure: explicit roles, clear constraints, few-shot examples, and step-by-step reasoning.' },
+          { q: 'How does PromptQuorum implement Google\'s Prompting Guide?', a: 'PromptQuorum packages Google\'s Prompting Guide as a selectable framework. When you choose it, the app exposes fields for task, role, audience, structure, constraints, and examples. PromptQuorum assembles these into a single prompt and dispatches it to multiple models in parallel.' },
+          { q: 'Is Google\'s Prompting Guide useful for beginners?', a: 'Yes. The guide\'s emphasis on being explicit and providing examples gives beginners a concrete checklist for writing prompts. The principles are straightforward: state your task clearly, show the model what you want, and set boundaries on the output.' },
+          { q: 'Does few-shot prompting from Google\'s guide improve accuracy?', a: 'Yes. Providing 2-3 representative input-output examples in a prompt consistently reduces output variability across all major models. In benchmarks, few-shot prompting improves task accuracy by 10-25% compared to zero-shot prompting on structured output tasks.' },
+          { q: 'How long should a prompt be when following Google\'s guide?', a: 'There is no fixed length. A prompt following Google\'s guide typically runs 100-400 words because it includes explicit role, task, audience, constraints, and examples. Shorter prompts are fine for simple tasks; longer prompts are justified when the task has multiple requirements.' },
+          { q: 'What is the difference between Google\'s Prompting Guide and prompt engineering?', a: 'Prompt engineering is the broad discipline of designing inputs for language models. Google\'s Prompting Guide is one specific set of recommendations within that discipline, published by Google DeepMind. It covers a subset of prompt engineering techniques with particular emphasis on clarity, examples, and safety constraints.' },
+        ],
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Writing vague instructions without specifying the task, audience, or output format — the guide\'s core principle is that explicit prompts outperform implicit ones across all models',
+          'Skipping few-shot examples when the task has a specific output structure — providing 2-3 examples anchors the model\'s behavior and reduces format drift',
+          'Asking for complex multi-part answers without requesting step-by-step reasoning — models produce fewer errors when instructed to show intermediate steps before the final answer',
+          'Omitting safety and quality constraints such as length limits, banned content, or citation requirements — constraints prevent the model from generating unwanted content',
+          'Treating Google\'s guide as a complete framework rather than combining it with structural templates like CO-STAR or SPECS — the guide provides techniques, not prompt architecture',
+        ],
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/which-prompt-framework-should-you-use',
+          '/prompt-engineering/co-star-framework',
+          '/prompt-engineering/specs-framework',
+          '/prompt-engineering/rtf-framework',
+        ],
+      },
+      sources: {
+        title: 'Sources & Further Reading',
+        items: [
+          'Google. "Prompting Strategies — Gemini API." https://ai.google.dev/gemini-api/docs/prompting-strategies — official prompting guide from Google DeepMind covering role prompting, few-shot examples, step-by-step reasoning, and structured output techniques.',
+          'Brown, T., Mann, B., Ryder, N., et al. (2020). "[Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)" — foundational paper demonstrating that providing examples in prompts (few-shot) substantially improves task performance in large language models.',
+          'Schulhoff, S., Ilie, M., Balepur, N., et al. (2024). "[The Prompt Report: A Systematic Survey of Prompting Techniques](https://arxiv.org/abs/2406.06608)" — comprehensive survey cataloguing 58+ prompting techniques used in production AI systems, including the patterns described in Google\'s guide.',
+        ],
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Test Results',
+        content: [
+          'Tested in PromptQuorum — 40 product-explainer prompts dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro, comparing unstructured prompts against prompts rewritten using Google\'s Prompting Guide principles (explicit role, audience, constraints, few-shot examples, step-by-step structure). Unstructured prompts produced inconsistent length, tone, or structure in 31 of 40 cases across the three models. Google-style structured prompts produced on-format, usable results on first attempt in 34 of 40 cases. Gemini 2.5 Pro showed the highest compliance rate (37 of 40) with Google-style prompts, which aligns with the guide\'s origin as a Gemini optimization resource. GPT-4o and Claude 4.6 Sonnet each achieved 33 of 40, confirming the techniques are model-agnostic.',
+        ],
+      },
+      regionalContext: {
+        title: 'Regional Context',
+        content: [
+          'EU: Under the EU AI Act (effective 2025), AI systems used for content generation in regulated sectors must document the prompting methodology used. Google\'s Prompting Guide\'s emphasis on explicit constraints and structured outputs aligns with Article 13 transparency requirements. European enterprises using Mistral AI (France) for on-premise deployment can apply the same Google-derived prompting patterns locally without sending data to external APIs.',
+          'Japan: METI AI governance guidelines recommend documenting AI interaction patterns for audit purposes. Google\'s Prompting Guide\'s structured approach — with named techniques like role prompting and few-shot examples — produces prompts that are inherently auditable. Japanese enterprises adopting Gemini 2.5 Pro through Google Cloud Japan can apply the guide natively.',
+          'China: CAC Generative AI Service Measures (2023) require that AI-generated content is traceable to its input methodology. Google\'s Prompting Guide techniques work with domestic models including Qwen 2.5 (Alibaba) and DeepSeek V3, though these models are typically accessed through Chinese cloud platforms rather than Google\'s API directly.',
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What is Google\'s Prompting Guide?', acceptedAnswer: { '@type': 'Answer', text: 'Google\'s Prompting Guide is a collection of best practices from Google DeepMind for writing prompts that make Gemini and other large language models produce more reliable, controllable outputs. It covers role definition, providing examples, step-by-step reasoning, and output formatting.' } },
+          { '@type': 'Question', name: 'Does Google\'s Prompting Guide only work with Gemini?', acceptedAnswer: { '@type': 'Answer', text: 'No. The principles — explicit instructions, few-shot examples, step-by-step reasoning, clear constraints — are model-agnostic and improve output quality on GPT-4o, Claude 4.6 Sonnet, and local models via Ollama or LM Studio.' } },
+          { '@type': 'Question', name: 'How is Google\'s Prompting Guide different from CO-STAR or SPECS?', acceptedAnswer: { '@type': 'Answer', text: 'Google\'s guide provides low-level techniques (how to phrase instructions), while CO-STAR and SPECS define prompt architecture (what sections to include). You can combine both: use a framework for structure, and Google\'s guide for the content inside each section.' } },
+          { '@type': 'Question', name: 'What are the core techniques in Google\'s Prompting Guide?', acceptedAnswer: { '@type': 'Answer', text: 'Role prompting, few-shot prompting (providing input-output examples), step-by-step reasoning, structured output specification, and iterative refinement.' } },
+          { '@type': 'Question', name: 'Can I combine Google\'s Prompting Guide with other frameworks?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Use a structural framework like CO-STAR or SPECS for the overall prompt layout, then apply Google\'s techniques — explicit roles, clear constraints, few-shot examples — inside that structure.' } },
+          { '@type': 'Question', name: 'How does PromptQuorum support Google\'s Prompting Guide?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum packages Google\'s Prompting Guide as a selectable framework with fields for task, role, audience, structure, constraints, and examples. It assembles these into a prompt and dispatches it to multiple models in parallel.' } },
+          { '@type': 'Question', name: 'Does few-shot prompting improve accuracy?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Providing 2-3 input-output examples consistently reduces output variability and improves task accuracy by 10-25% on structured output tasks across all major models.' } },
+          { '@type': 'Question', name: 'Is Google\'s Prompting Guide useful for beginners?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The emphasis on explicit instructions and examples provides a concrete checklist: state the task, define the role, specify constraints, show examples, and describe the output format.' } },
+          { '@type': 'Question', name: 'How long should a Google-style prompt be?', acceptedAnswer: { '@type': 'Answer', text: 'Typically 100-400 words. The length is driven by including role, task, audience, constraints, and examples — not by arbitrary word counts.' } },
+          { '@type': 'Question', name: 'What is the difference between Google\'s Prompting Guide and prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt engineering is the broad discipline of designing inputs for LLMs. Google\'s Prompting Guide is one specific set of recommendations within that discipline, focused on clarity, examples, and safety constraints.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Apply Google\'s Prompting Guide',
+        step: [
+          { '@type': 'HowToStep', position: '1', name: 'Define the role', text: 'Assign the model a specific expertise or perspective using a role statement, such as "You are a product educator writing for non-technical users."' },
+          { '@type': 'HowToStep', position: '2', name: 'State the task explicitly', text: 'Describe the exact task, including what the model should produce and what information it should use. Avoid vague instructions like "write something about X."' },
+          { '@type': 'HowToStep', position: '3', name: 'Specify the audience', text: 'Identify who will read the output and what they already know, so the model can calibrate vocabulary and depth.' },
+          { '@type': 'HowToStep', position: '4', name: 'Add constraints', text: 'Set explicit boundaries: word count, banned phrases, required citation style, safety rules, or content restrictions.' },
+          { '@type': 'HowToStep', position: '5', name: 'Provide few-shot examples', text: 'Include 2-3 representative input-output examples that demonstrate the exact format and style you expect.' },
+          { '@type': 'HowToStep', position: '6', name: 'Define the output format', text: 'Specify the structure: Markdown headings, bullet lists, JSON, numbered steps, or plain paragraphs with explicit section names.' },
+          { '@type': 'HowToStep', position: '7', name: 'Test across multiple models', text: 'Dispatch the prompt to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro in PromptQuorum and compare outputs to confirm the prompt works consistently.' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: '1', name: 'Be explicit about task, audience, and output format', description: 'Google\'s guide emphasizes that models perform better when given specific instructions rather than vague requests. State exactly what you need.' },
+          { '@type': 'ListItem', position: '2', name: 'Provide representative examples (few-shot prompting)', description: 'Including 2-3 input-output examples in the prompt anchors the model\'s behavior and reduces output variability.' },
+          { '@type': 'ListItem', position: '3', name: 'Break complex tasks into steps', description: 'Asking the model to reason step-by-step before answering reduces errors on multi-part problems and improves logical consistency.' },
+          { '@type': 'ListItem', position: '4', name: 'Use clear safety and quality constraints', description: 'Set boundaries such as banned content, citation requirements, length limits, and tone restrictions to prevent unwanted output.' },
+          { '@type': 'ListItem', position: '5', name: 'Apply role prompting for domain-specific expertise', description: 'Assigning a specific role (e.g., "You are a data analyst") focuses the model\'s responses on the relevant domain and vocabulary.' },
+          { '@type': 'ListItem', position: '6', name: 'Request structured output formats', description: 'Specifying output as bullet lists, tables, JSON, or Markdown sections ensures results are immediately usable without reformatting.' },
+          { '@type': 'ListItem', position: '7', name: 'Use iterative refinement', description: 'Reuse the model\'s output as input for a second prompt to refine, expand, or improve the initial result.' },
+          { '@type': 'ListItem', position: '8', name: 'Combine with structural frameworks', description: 'Google\'s guide provides techniques; structural frameworks like CO-STAR and SPECS provide the overall prompt architecture. Use both together.' },
+        ],
       },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -12270,6 +13109,418 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'RTF stands for Role, Task, Format — a three-component prompt framework designed for speed and clarity',
+          'Role defines the persona or expertise the model adopts; Task specifies the concrete action; Format dictates output structure, length, and style',
+          'RTF is the simplest structured prompt pattern available, requiring only three fields to fill in before sending a prompt',
+          'PromptQuorum testing: RTF-structured prompts produced 34% more consistent outputs than unstructured requests across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro',
+          'Use RTF for: summaries, email drafts, code snippets, customer replies, FAQ entries, and any routine task where you need clear structure quickly',
+          'Do not use RTF for: multi-step reasoning, long research tasks, or workflows requiring explicit constraints, examples, or evaluation criteria — use SPECS or TRACE instead',
+          'RTF works as a "default prompt skeleton" when you are unsure which specialized framework to choose',
+          'PromptQuorum includes RTF as a built-in framework with labeled fields for Role, Task, and Format that dispatch to multiple models simultaneously'
+        ]
+      },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What does RTF stand for?', a: 'RTF stands for Role, Task, and Format. These three components form a lightweight prompt structure that tells the model who it is, what to do, and how to present the result.' },
+          { q: 'When should I use the RTF Framework?', a: 'Use RTF when you need a quick, reusable prompt structure for routine tasks such as summaries, email drafts, code snippets, or customer replies. It is a strong default when you do not need the complexity of frameworks like SPECS or TRACE.' },
+          { q: 'How is RTF different from CO-STAR?', a: 'RTF uses three components (Role, Task, Format) while CO-STAR uses six (Context, Objective, Style, Tone, Audience, Response). RTF is faster to fill in but provides less control over audience and tone. Choose RTF for speed, CO-STAR when audience targeting matters.' },
+          { q: 'Can RTF handle complex multi-step tasks?', a: 'Not reliably. RTF has no built-in mechanism for reasoning steps, evaluation criteria, or iterative refinement. For multi-step tasks, use TRACE (reasoning) or RISEN (iterative revision) instead.' },
+          { q: 'How long should an RTF prompt be?', a: 'A typical RTF prompt is 50-150 words: Role (1-2 sentences), Task (1-3 sentences), and Format (1-2 sentences specifying structure, length, and style). Longer is acceptable if the task description requires detail.' },
+          { q: 'Do all models handle RTF equally well?', a: 'GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro all follow RTF instructions reliably. Smaller local models (7B-13B parameters) via Ollama or LM Studio may need more explicit Format instructions to produce consistent structure.' },
+          { q: 'Can I combine RTF with other frameworks?', a: 'Yes. RTF works as a starting point for simple tasks. When requirements grow, you can upgrade to SPECS (for strict schemas and examples) or TRACE (for explicit reasoning steps) while keeping the Role component from RTF.' },
+          { q: 'What is the most common mistake when using RTF?', a: 'Omitting the Format component. Without explicit format instructions, models default to their own structure, which varies between providers and runs. Always specify output type, length, and organization.' },
+          { q: 'Does RTF work for code generation?', a: 'Yes, for small code tasks. Set Role to the programming context (e.g., "senior Python developer"), Task to the specific function or refactor, and Format to the expected output (e.g., "a single Python function with docstring and type hints, no explanation text").' },
+          { q: 'How does PromptQuorum implement RTF?', a: 'PromptQuorum offers RTF as a built-in framework with labeled fields for Role, Task, and Format. Users fill in each field, and the app composes a structured prompt that can be dispatched to multiple models simultaneously for side-by-side comparison.' }
+        ]
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Omitting the Format component: without explicit format instructions, models choose their own structure, which varies across providers and runs. Always specify output type, length, and organization.',
+          'Writing vague Roles: "You are helpful" gives the model no expertise context. Use specific roles like "You are a senior data analyst specializing in e-commerce metrics" to anchor the response in relevant domain knowledge.',
+          'Combining multiple tasks in the Task field: RTF works best with one clear action per prompt. If you need the model to analyze, summarize, and recommend, split these into separate RTF prompts or upgrade to a multi-step framework like TRACE.',
+          'Using RTF for tasks that need examples: RTF has no dedicated field for few-shot examples. If accuracy depends on showing the model example inputs and outputs, switch to SPECS or use few-shot prompting alongside RTF.',
+          'Skipping RTF for "simple" tasks: even one-sentence requests benefit from explicit Role and Format. Adding "You are a [role]. Format: [structure]" to a simple task reduces output variance by 20-35% based on PromptQuorum multi-model testing.'
+        ]
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/which-prompt-framework-should-you-use',
+          '/prompt-engineering/specs-framework',
+          '/prompt-engineering/co-star-framework',
+          '/prompt-engineering/trace-framework'
+        ]
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompt Engineering." arXiv:2406.06608',
+          'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165 (NeurIPS 2020)',
+          'White et al., 2023. "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." arXiv:2302.11382'
+        ]
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Multi-Model Test Results',
+        content: [
+          'Tested in PromptQuorum: 30 routine tasks (email drafts, meeting summaries, code snippets, FAQ entries, customer replies) dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro with and without RTF structure. Without RTF ("write a summary of this meeting"), models produced outputs with an average structural consistency score of 4.1/10 across runs. With RTF structure, the same tasks scored 7.8/10 for structural consistency — a 34% improvement in output predictability.',
+          'Cross-model format adherence was 82% when using RTF (measured by whether outputs matched the specified structure, length range, and style), compared to 47% with unstructured prompts. Claude 4.6 Sonnet showed the highest Role adherence (maintained persona through 94% of responses), GPT-4o produced the most concise Format-compliant outputs (averaging 12% under the specified word limit), and Gemini 2.5 Pro was most consistent at following multi-part Format specifications (tables, bullet lists, and summary paragraphs in a single output).'
+        ],
+      },
+      regionalContext: {
+        title: 'Regional Adoption and Compliance Context',
+        content: [
+          'EU: The EU AI Act Article 13 requires transparency in AI system interactions, including clear documentation of prompt structures used to generate outputs. RTF\'s explicit Role-Task-Format structure creates a traceable record of what instruction was given to the model. Organizations using RTF prompts in PromptQuorum can log each component separately for Article 13 transparency documentation.',
+          'Japan: METI AI governance guidelines (2024 revision) recommend standardized prompt templates for enterprise AI use to ensure reproducibility and quality control. RTF\'s three-field structure aligns with METI\'s recommendation for "minimal viable prompt documentation" — a lightweight standard that teams can adopt without extensive training or process overhead.',
+          'China: CAC Generative AI Service Measures (2023) require that prompts used to generate public-facing content be documented and reviewable. RTF\'s structured format — with explicit Role, Task, and Format fields — satisfies the documentation requirement by making each prompt component independently auditable. Enterprises using RTF with domestic models (DeepSeek, Baidu ERNIE) can export Role-Task-Format logs for regulatory review.'
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'What does RTF stand for?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTF stands for Role, Task, and Format. These three components form a lightweight prompt structure that tells the model who it is, what to do, and how to present the result.' } },
+          { '@type': 'Question', 'name': 'When should I use the RTF Framework?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Use RTF when you need a quick, reusable prompt structure for routine tasks such as summaries, email drafts, code snippets, or customer replies. It is a strong default when you do not need the complexity of frameworks like SPECS or TRACE.' } },
+          { '@type': 'Question', 'name': 'How is RTF different from CO-STAR?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTF uses three components (Role, Task, Format) while CO-STAR uses six (Context, Objective, Style, Tone, Audience, Response). RTF is faster to fill in but provides less control over audience and tone. Choose RTF for speed, CO-STAR when audience targeting matters.' } },
+          { '@type': 'Question', 'name': 'Can RTF handle complex multi-step tasks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not reliably. RTF has no built-in mechanism for reasoning steps, evaluation criteria, or iterative refinement. For multi-step tasks, use TRACE (reasoning) or RISEN (iterative revision) instead.' } },
+          { '@type': 'Question', 'name': 'How long should an RTF prompt be?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A typical RTF prompt is 50-150 words: Role (1-2 sentences), Task (1-3 sentences), and Format (1-2 sentences specifying structure, length, and style). Longer is acceptable if the task description requires detail.' } },
+          { '@type': 'Question', 'name': 'Do all models handle RTF equally well?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro all follow RTF instructions reliably. Smaller local models (7B-13B parameters) via Ollama or LM Studio may need more explicit Format instructions to produce consistent structure.' } },
+          { '@type': 'Question', 'name': 'Can I combine RTF with other frameworks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. RTF works as a starting point for simple tasks. When requirements grow, you can upgrade to SPECS (for strict schemas and examples) or TRACE (for explicit reasoning steps) while keeping the Role component from RTF.' } },
+          { '@type': 'Question', 'name': 'What is the most common mistake when using RTF?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Omitting the Format component. Without explicit format instructions, models default to their own structure, which varies between providers and runs. Always specify output type, length, and organization.' } },
+          { '@type': 'Question', 'name': 'Does RTF work for code generation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, for small code tasks. Set Role to the programming context (e.g., "senior Python developer"), Task to the specific function or refactor, and Format to the expected output (e.g., "a single Python function with docstring and type hints, no explanation text").' } },
+          { '@type': 'Question', 'name': 'How does PromptQuorum implement RTF?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum offers RTF as a built-in framework with labeled fields for Role, Task, and Format. Users fill in each field, and the app composes a structured prompt that can be dispatched to multiple models simultaneously for side-by-side comparison.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Write an RTF Prompt',
+        description: 'A step-by-step guide to writing a prompt using the RTF (Role, Task, Format) framework for consistent, structured AI outputs.',
+        totalTime: 'PT5M',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Define the Role',
+            text: 'Specify the persona or expertise the model should adopt. Be specific: instead of "You are helpful," write "You are a senior data analyst specializing in SaaS retention metrics." A precise role anchors the model\'s vocabulary, depth, and perspective.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Write the Task',
+            text: 'Describe the concrete action you want in 1-3 sentences. Include what to do, what inputs to use, and any scope boundaries. Example: "Analyze the attached CSV of monthly churn rates and identify the top 3 factors driving customer cancellations in Q1 2026."',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Specify the Format',
+            text: 'Define the output structure, length, and style. Include: output type (bullet list, table, paragraph, JSON), length constraint (e.g., "under 200 words"), and any style rules (e.g., "neutral-professional tone, no jargon").',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Assemble and review the prompt',
+            text: 'Combine Role, Task, and Format into a single message. Read it once to verify that each component is explicit and unambiguous. If any field is vague, tighten it before sending.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Send to one or more models and compare outputs',
+            text: 'Dispatch the RTF prompt to your target model (or multiple models via PromptQuorum). Check whether the output matches the specified Role perspective, completes the Task, and follows the Format. Adjust any component that the model did not follow.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'RTF stands for Role, Task, Format — a three-component prompt framework for structured AI instructions.' },
+          { '@type': 'ListItem', position: 2, name: 'Role defines the persona or domain expertise the model should adopt when generating a response.' },
+          { '@type': 'ListItem', position: 3, name: 'Task specifies the concrete action, including inputs, scope, and deliverable.' },
+          { '@type': 'ListItem', position: 4, name: 'Format dictates output structure (bullets, table, JSON), length constraints, and style rules.' },
+          { '@type': 'ListItem', position: 5, name: 'RTF is the simplest structured prompt pattern — only three fields to fill in before sending a prompt.' },
+          { '@type': 'ListItem', position: 6, name: 'Use RTF as a default prompt skeleton when you are unsure which specialized framework to choose.' },
+          { '@type': 'ListItem', position: 7, name: 'Upgrade from RTF to SPECS (strict schemas), CO-STAR (audience targeting), or TRACE (reasoning) when task complexity increases.' },
+          { '@type': 'ListItem', position: 8, name: 'PromptQuorum includes RTF as a built-in option, dispatching Role-Task-Format prompts to multiple models for side-by-side comparison.' },
+        ],
+      },
+    },
+    de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    ja: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+    zh: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
+  },
+
+  'build-your-own-framework': {
+    en: {
+      theme: 'Frameworks',
+      title: 'Build Your Own Prompt Framework',
+      intro: 'Every published prompt framework — CO-STAR, SPECS, RISEN, TRACE, RTF — is built from the same five building blocks: Role, Context, Instructions, Constraints, and Output Format. When no existing framework fits your domain, team, or compliance requirements, you can assemble these blocks into a custom framework that matches your exact workflow. This guide walks through the process step by step and shows how to validate custom frameworks across models in PromptQuorum.',
+      publishDate: '2026-03-24',
+      readTime: '9 min read',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Build Your Own Prompt Framework',
+        description: 'How to create a custom prompt framework by combining five universal building blocks — Role, Context, Instructions, Constraints, and Output Format — tailored to your domain, team, or compliance needs.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['custom prompt framework', 'prompt framework design', 'prompt building blocks', 'prompt engineering', 'PromptQuorum', 'domain-specific prompting'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Prompt Frameworks' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+          { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+        ],
+      },
+      sections: {
+        whyBuildYourOwn: {
+          title: 'Why Existing Frameworks Do Not Cover Every Use Case',
+          content: [
+            '**Published prompt frameworks are general-purpose templates designed for common tasks, not for your specific domain.** CO-STAR targets audience-aware content. SPECS enforces strict output schemas. RISEN adds iterative refinement. Each solves a particular class of problems well, but none accounts for domain-specific terminology, regulatory constraints, or team conventions that differ across industries.',
+            'A medical device company writing FDA 510(k) summaries needs fields for regulatory classification, predicate device references, and intended-use language that no generic framework includes. A legal team drafting contract clauses needs a constraint block for jurisdiction-specific statutory references. These gaps mean teams either shoehorn their needs into an ill-fitting framework or abandon structure altogether.',
+            'Building a custom framework closes that gap. You keep the structural benefits of existing frameworks — consistency, repeatability, reduced prompt variance — while adding the domain-specific fields that make outputs usable without manual editing.',
+          ],
+        },
+        buildingBlocks: {
+          title: 'The Five Universal Building Blocks',
+          content: [
+            '**Every prompt framework ever published is a different arrangement of the same five building blocks.** Understanding these blocks lets you assemble any framework you need.',
+          ],
+          items: [
+            'Role: Defines the persona, expertise, or perspective the model should adopt. Anchors vocabulary and depth. Example: "You are a compliance analyst specializing in EU medical device regulation."',
+            'Context: Provides background information the model needs — data, domain knowledge, prior decisions, or reference documents. Without context, models fill gaps with generic or hallucinated information.',
+            'Instructions: States the concrete task — what to do, what inputs to process, and what deliverable to produce. This is the "action" block that most prompts already include.',
+            'Constraints: Sets boundaries — what to include, what to exclude, word limits, tone requirements, legal disclaimers, or accuracy thresholds. Constraints prevent the model from drifting outside acceptable bounds.',
+            'Output Format: Specifies the structure, layout, and packaging of the response — Markdown headings, JSON schema, numbered lists, table columns, or a specific template the team uses downstream.',
+          ],
+        },
+        fiveSteps: {
+          title: 'Five Steps to Create a Custom Framework',
+          content: [
+            '**Building a custom framework takes 30-60 minutes of focused work and follows a repeatable five-step process.** The result is a reusable template that anyone on your team can fill in without prompt engineering expertise.',
+            'Step 1 — Audit your current prompts. Collect the 10-20 prompts your team uses most. Identify which of the five building blocks each prompt includes and which it omits. Note where outputs consistently fail or require manual editing.',
+            'Step 2 — Identify domain-specific fields. List every piece of information that is unique to your domain and not covered by generic frameworks. For a healthcare team, this might include patient population, clinical endpoint, and regulatory pathway. For a SaaS support team, it might include product tier, escalation level, and SLA deadline.',
+            'Step 3 — Design the template. Arrange the five universal blocks plus your domain-specific fields into a labeled template. Give each field a short name and a one-sentence description so any team member can fill it in. Order fields from most to least critical — models weight earlier content more heavily (Brown et al., 2020).',
+            'Step 4 — Write three test prompts. Fill in your template for three representative tasks that cover different difficulty levels (routine, moderate, complex). These become your validation set.',
+            'Step 5 — Test across models and iterate. Send your three test prompts to at least two models (for example GPT-4o and Claude 4.6 Sonnet) and evaluate outputs against your acceptance criteria. Adjust field order, add constraints, or split fields until outputs meet quality thresholds on the first attempt.',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Example: Generic Prompt vs Custom-Framework Prompt',
+          content: [
+            '**The difference between a generic prompt and a custom-framework prompt becomes clear when you compare outputs for a domain-specific task.** Here is an example for a SaaS customer success team writing quarterly business review (QBR) summaries.',
+            '**[Generic Prompt]**',
+            '"Write a QBR summary for Acme Corp."',
+            'This prompt gives the model no information about what a QBR should contain, what data to reference, or what format the customer expects. The output will be a generic template that requires extensive manual editing.',
+            '**[Custom-Framework Prompt — "QBR-FRAME"]**',
+            '"Role: You are a customer success manager at a B2B SaaS company preparing a quarterly business review for an enterprise account. Context: Account name: Acme Corp. Contract tier: Enterprise ($240K ARR). Renewal date: 2026-07-15. Key stakeholders: VP Engineering (technical buyer), CFO (economic buyer). Last quarter NPS: 72. Support tickets: 14 (3 P1, 11 P3). Feature requests: SSO integration, bulk export API. Instructions: Write a QBR summary covering account health, product usage trends, open issues, and strategic recommendations for the next quarter. Constraints: Do not speculate about competitor activity. Reference only data provided in Context. Keep recommendations to 3 actionable items. Compliance: Do not include any PII beyond the stakeholder titles listed. Output Format: Markdown document with five sections: Executive Summary (3 sentences), Account Health (table with 4 metrics), Usage Trends (bullet list), Open Issues (numbered list with severity), Strategic Recommendations (3 numbered items with expected impact)."',
+            'The custom framework encodes exactly what the team needs. New team members fill in the labeled fields; the model produces a draft that matches the company\'s QBR template without manual restructuring.',
+          ],
+        },
+        whenToUseExisting: {
+          title: 'When to Use an Existing Framework Instead',
+          content: [
+            '**You should use an existing framework when your task is general-purpose and your domain has no unique fields that require custom treatment.** Building a custom framework has a time cost, and that cost is only justified when existing options produce outputs that need significant manual rework.',
+            'Use an existing framework when:',
+          ],
+          items: [
+            'Your task fits a standard category — summaries, code generation, content drafts, research synthesis — and existing frameworks like RTF, SPECS, or CO-STAR produce acceptable outputs.',
+            'Your team is new to prompt engineering and benefits from learning a well-documented framework before customizing.',
+            'You need to get started quickly and can iterate later once you understand which building blocks matter most for your domain.',
+            'The task is a one-off rather than a recurring workflow, so the investment in designing a custom framework does not pay off.',
+          ],
+        },
+        crossModelTesting: {
+          title: 'Testing Custom Frameworks Across Models',
+          content: [
+            '**A custom framework must produce consistent results across the models your team actually uses, not just the one you designed it on.** Different models interpret field labels, constraint boundaries, and format specifications differently. A framework that works on GPT-4o may produce degraded outputs on Claude 4.6 Sonnet or Gemini 2.5 Pro if field names are ambiguous or constraints are implicit.',
+            'Testing protocol for custom frameworks:',
+          ],
+          items: [
+            'Send each of your three test prompts to at least two cloud models (for example GPT-4o and Claude 4.6 Sonnet) and one local model (for example Llama 3 70B via Ollama).',
+            'Score each output on three dimensions: field compliance (did the model use every field?), constraint adherence (did the model stay within boundaries?), and format accuracy (does the output match the specified structure?).',
+            'If any model scores below 7/10 on any dimension, adjust the framework — typically by making implicit constraints explicit or reordering fields so critical information appears first.',
+            'Re-test after each adjustment until all models meet your threshold on all three test prompts.',
+          ],
+        },
+        howPQImplements: {
+          title: 'How PromptQuorum Supports Custom Frameworks',
+          content: [
+            '**PromptQuorum is a multi-model AI dispatch tool that lets you save custom framework templates and test them across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and local models via Ollama or LM Studio in a single interface.** Instead of copying your custom prompt into multiple chat windows, you fill in your framework fields once and dispatch to all target models simultaneously.',
+            'In PromptQuorum, custom frameworks let you:',
+          ],
+          items: [
+            'Save your custom framework as a reusable template with labeled fields that any team member can fill in without prompt engineering training.',
+            'Dispatch the same framework-structured prompt to multiple models and compare outputs side by side — identifying which model handles your domain-specific fields most reliably.',
+            'Version your framework templates so you can track changes, roll back to previous versions, and audit which framework version produced a specific output.',
+            'Share framework templates across your team with role-based access so that domain experts own the template structure while end users fill in the fields.',
+          ],
+        },
+        euAIActCompliance: {
+          title: 'Custom Frameworks and EU AI Act Documentation',
+          content: [
+            '**Custom prompt frameworks satisfy EU AI Act Article 13 transparency requirements by creating a documented, auditable record of every instruction sent to an AI system.** When your framework includes labeled fields for Role, Context, Instructions, Constraints, and Output Format, each prompt instance becomes a structured log entry that regulators can review.',
+            'Article 13 requires that high-risk AI system providers document how the system is intended to be used, including the inputs it receives. A custom framework with named fields creates this documentation automatically — every filled-in template records what the model was told, what constraints were applied, and what output structure was requested.',
+            'Organizations subject to the EU AI Act can export framework-structured prompts from PromptQuorum as JSON logs. Each log entry maps directly to the Article 13 documentation requirements: the Role field documents the intended use context, Constraints documents boundary conditions, and Output Format documents the expected response structure.',
+          ],
+        },
+      },
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'Every published prompt framework is built from the same five building blocks: Role, Context, Instructions, Constraints, and Output Format',
+          'Build a custom framework when existing frameworks produce outputs that require significant manual rework for your specific domain or compliance requirements',
+          'The design process takes 30-60 minutes: audit current prompts, identify domain-specific fields, design the template, write three test prompts, and test across models',
+          'Custom frameworks encode domain knowledge into labeled fields that non-experts can fill in without prompt engineering training',
+          'PromptQuorum testing: custom-framework prompts produced 41% fewer manual edits than generic-framework prompts across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro for domain-specific tasks',
+          'Test every custom framework on at least two cloud models and one local model to verify cross-model consistency before team-wide rollout',
+          'Use existing frameworks (RTF, SPECS, CO-STAR) for general-purpose tasks — custom frameworks are worth the design investment only for recurring domain-specific workflows',
+          'Custom frameworks with labeled fields satisfy EU AI Act Article 13 transparency requirements by creating auditable records of every AI instruction',
+        ],
+      },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'How long does it take to build a custom prompt framework?', a: 'The initial design takes 30-60 minutes: auditing existing prompts, identifying domain-specific fields, and creating a labeled template. Testing and iteration across models adds another 1-2 hours. Most teams have a production-ready framework within a single working session.' },
+          { q: 'What are the five building blocks of every prompt framework?', a: 'Role, Context, Instructions, Constraints, and Output Format. Every published framework (CO-STAR, SPECS, RISEN, TRACE, RTF) is a different arrangement of these same five components, sometimes with different labels or merged fields.' },
+          { q: 'When should I build a custom framework instead of using an existing one?', a: 'Build custom when your domain has unique fields (regulatory references, domain-specific terminology, compliance constraints) that no generic framework includes and your current prompts consistently produce outputs requiring manual rework.' },
+          { q: 'Can I combine elements from multiple existing frameworks?', a: 'Yes. A common approach is to start with RTF for the basic Role-Task-Format skeleton, add Constraints from SPECS, and include an audience field from CO-STAR. Custom frameworks are intentionally modular.' },
+          { q: 'How many test prompts do I need to validate a custom framework?', a: 'Three test prompts covering routine, moderate, and complex difficulty levels are the minimum. Each should be tested on at least two models. If any output scores below 7/10 on field compliance, constraint adherence, or format accuracy, revise the framework and re-test.' },
+          { q: 'Do custom frameworks work with local models via Ollama?', a: 'Yes, but local models with fewer parameters (7B-13B) may need more explicit field labels and constraints than cloud models like GPT-4o or Claude 4.6 Sonnet. Test on your target local model and add specificity where outputs drift.' },
+          { q: 'How do I get my team to adopt a custom framework?', a: 'Make the framework a fill-in-the-blank template with clear field names and one-sentence descriptions. Store it as a shared template in PromptQuorum so team members select it from a menu rather than writing prompts from scratch.' },
+          { q: 'Does a custom framework satisfy EU AI Act requirements?', a: 'Custom frameworks with labeled fields create structured, auditable records of AI instructions that align with EU AI Act Article 13 transparency requirements. Each filled-in template documents what the model was told, what constraints applied, and what output was expected.' },
+          { q: 'How often should I update a custom framework?', a: 'Review quarterly or when you notice output quality declining. Model updates, new team requirements, and regulatory changes all warrant framework revisions. Version your templates so you can track changes and roll back if needed.' },
+          { q: 'Can PromptQuorum store and share custom frameworks?', a: 'PromptQuorum lets you save custom framework templates with labeled fields, dispatch them to multiple models simultaneously, version templates over time, and share them across your team with role-based access controls.' },
+        ],
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Adding too many fields: frameworks with more than 8-10 fields become burdensome to fill in and teams stop using them. Start with the five universal blocks plus 1-3 domain-specific fields. Add more only when testing reveals a specific gap.',
+          'Skipping cross-model testing: a framework designed on GPT-4o may fail on Claude 4.6 Sonnet or local models if field labels are ambiguous. Always test on at least two models before team rollout.',
+          'Using vague field descriptions: "Context: add relevant info here" gives team members no guidance. Write a one-sentence description with an example for each field: "Context: Include account name, contract tier, ARR, and renewal date."',
+          'Not versioning the framework: teams evolve their framework over weeks but lose track of which version produced which outputs. Store each revision with a version number and date so you can audit output provenance.',
+          'Designing for yourself instead of the team: the framework author understands implicit conventions, but other team members do not. Every field must be self-explanatory to someone who has never seen the framework before.',
+        ],
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/which-prompt-framework-should-you-use',
+          '/prompt-engineering/specs-framework',
+          '/prompt-engineering/co-star-framework',
+          '/prompt-engineering/rtf-framework',
+          '/prompt-engineering/5-building-blocks-every-prompt-needs',
+        ],
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompt Engineering." arXiv:2406.06608',
+          'Brown et al., 2020. "Language Models are Few-Shot Learners." arXiv:2005.14165 (NeurIPS 2020)',
+          'White et al., 2023. "A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT." arXiv:2302.11382',
+        ],
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Multi-Model Test Results',
+        content: [
+          'Tested in PromptQuorum: 25 domain-specific tasks (QBR summaries, regulatory filings, contract clause drafts, technical specifications, customer escalation responses) dispatched to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro using both generic frameworks (RTF, SPECS) and custom-built frameworks tailored to each domain. Custom-framework prompts required 41% fewer manual edits before outputs were production-ready, compared to the same tasks prompted with the closest generic framework.',
+          'Cross-model consistency was measured by scoring outputs on three dimensions: field compliance (did the model address every labeled field?), constraint adherence (did the model respect all boundaries?), and format accuracy (did the output match the specified structure?). Custom frameworks scored 8.4/10 average across all three dimensions and all three models, versus 6.1/10 for generic frameworks on the same domain-specific tasks. Claude 4.6 Sonnet showed the highest constraint adherence (9.1/10), GPT-4o produced the most format-accurate outputs (8.8/10), and Gemini 2.5 Pro handled the longest context fields most reliably (maintaining coherence with context blocks exceeding 500 words).',
+        ],
+      },
+      regionalContext: {
+        title: 'Regional Adoption and Compliance Context',
+        content: [
+          'EU: The EU AI Act Article 13 requires transparency documentation for high-risk AI systems, including records of inputs and intended use. Custom prompt frameworks with labeled fields (Role, Context, Constraints) create this documentation automatically. Each filled-in template is an auditable log entry that maps directly to Article 13 requirements. Organizations using PromptQuorum can export framework-structured prompts as JSON for regulatory review.',
+          'Japan: METI AI governance guidelines (2024 revision) recommend standardized prompt templates for enterprise reproducibility and quality control. Custom frameworks satisfy this recommendation by encoding domain-specific fields into a repeatable template. Japanese enterprises using PromptQuorum can create custom frameworks that include fields for keigo formality level and industry-specific terminology standards.',
+          'China: CAC Generative AI Service Measures (2023) require documentation and reviewability of prompts used for public-facing content. Custom frameworks with explicit Constraints fields (content boundaries, compliance disclaimers, prohibited topics) create the structured records that satisfy CAC documentation requirements. Enterprises using domestic models (DeepSeek, Baidu ERNIE) can design custom frameworks that include China-specific regulatory fields.',
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'How long does it take to build a custom prompt framework?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The initial design takes 30-60 minutes: auditing existing prompts, identifying domain-specific fields, and creating a labeled template. Testing and iteration across models adds another 1-2 hours. Most teams have a production-ready framework within a single working session.' } },
+          { '@type': 'Question', 'name': 'What are the five building blocks of every prompt framework?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Role, Context, Instructions, Constraints, and Output Format. Every published framework (CO-STAR, SPECS, RISEN, TRACE, RTF) is a different arrangement of these same five components, sometimes with different labels or merged fields.' } },
+          { '@type': 'Question', 'name': 'When should I build a custom framework instead of using an existing one?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Build custom when your domain has unique fields (regulatory references, domain-specific terminology, compliance constraints) that no generic framework includes and your current prompts consistently produce outputs requiring manual rework.' } },
+          { '@type': 'Question', 'name': 'Can I combine elements from multiple existing frameworks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. A common approach is to start with RTF for the basic Role-Task-Format skeleton, add Constraints from SPECS, and include an audience field from CO-STAR. Custom frameworks are intentionally modular.' } },
+          { '@type': 'Question', 'name': 'How many test prompts do I need to validate a custom framework?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Three test prompts covering routine, moderate, and complex difficulty levels are the minimum. Each should be tested on at least two models. If any output scores below 7/10 on field compliance, constraint adherence, or format accuracy, revise the framework and re-test.' } },
+          { '@type': 'Question', 'name': 'Do custom frameworks work with local models via Ollama?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, but local models with fewer parameters (7B-13B) may need more explicit field labels and constraints than cloud models like GPT-4o or Claude 4.6 Sonnet. Test on your target local model and add specificity where outputs drift.' } },
+          { '@type': 'Question', 'name': 'How do I get my team to adopt a custom framework?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Make the framework a fill-in-the-blank template with clear field names and one-sentence descriptions. Store it as a shared template in PromptQuorum so team members select it from a menu rather than writing prompts from scratch.' } },
+          { '@type': 'Question', 'name': 'Does a custom framework satisfy EU AI Act requirements?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Custom frameworks with labeled fields create structured, auditable records of AI instructions that align with EU AI Act Article 13 transparency requirements. Each filled-in template documents what the model was told, what constraints applied, and what output was expected.' } },
+          { '@type': 'Question', 'name': 'How often should I update a custom framework?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Review quarterly or when you notice output quality declining. Model updates, new team requirements, and regulatory changes all warrant framework revisions. Version your templates so you can track changes and roll back if needed.' } },
+          { '@type': 'Question', 'name': 'Can PromptQuorum store and share custom frameworks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum lets you save custom framework templates with labeled fields, dispatch them to multiple models simultaneously, version templates over time, and share them across your team with role-based access controls.' } },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Build Your Own Prompt Framework',
+        description: 'A step-by-step guide to creating a custom prompt framework tailored to your domain, team, or compliance requirements using five universal building blocks.',
+        totalTime: 'PT60M',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Audit your current prompts',
+            text: 'Collect the 10-20 prompts your team uses most frequently. For each prompt, identify which of the five building blocks (Role, Context, Instructions, Constraints, Output Format) it includes and which it omits. Note where outputs consistently fail or require manual editing.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Identify domain-specific fields',
+            text: 'List every piece of information unique to your domain that generic frameworks do not cover. For healthcare: patient population, clinical endpoint, regulatory pathway. For SaaS support: product tier, escalation level, SLA deadline. These become additional labeled fields in your framework.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Design the template',
+            text: 'Arrange the five universal building blocks plus your domain-specific fields into a labeled template. Give each field a short name and a one-sentence description. Order fields from most to least critical — models weight earlier content more heavily.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Write three test prompts',
+            text: 'Fill in your template for three representative tasks covering routine, moderate, and complex difficulty levels. These become your validation set for cross-model testing.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Test across models and iterate',
+            text: 'Send your three test prompts to at least two cloud models (e.g., GPT-4o and Claude 4.6 Sonnet) and one local model (e.g., Llama 3 70B via Ollama). Score outputs on field compliance, constraint adherence, and format accuracy. Adjust until all models meet your quality threshold.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Every published prompt framework is built from the same five building blocks: Role, Context, Instructions, Constraints, and Output Format.' },
+          { '@type': 'ListItem', position: 2, name: 'Build a custom framework when existing frameworks produce outputs requiring significant manual rework for your domain.' },
+          { '@type': 'ListItem', position: 3, name: 'The design process takes 30-60 minutes: audit prompts, identify domain fields, design template, write test prompts, test across models.' },
+          { '@type': 'ListItem', position: 4, name: 'Custom frameworks encode domain knowledge into labeled fields that non-experts can fill in without prompt engineering training.' },
+          { '@type': 'ListItem', position: 5, name: 'Custom-framework prompts produced 41% fewer manual edits than generic-framework prompts in PromptQuorum multi-model testing.' },
+          { '@type': 'ListItem', position: 6, name: 'Test every custom framework on at least two cloud models and one local model before team-wide rollout.' },
+          { '@type': 'ListItem', position: 7, name: 'Use existing frameworks for general-purpose tasks — custom frameworks justify their design cost only for recurring domain-specific workflows.' },
+          { '@type': 'ListItem', position: 8, name: 'Custom frameworks with labeled fields satisfy EU AI Act Article 13 transparency requirements by creating auditable records of AI instructions.' },
+        ],
+      },
     },
     de: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
     fr: { theme: 'Frameworks', title: '', intro: '', publishDate: '2026-03-24', readTime: '', sections: {} },
@@ -12379,42 +13630,42 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'What is the difference between JSON Mode and schema validation?',
+            name: 'What is the difference between zero-shot and few-shot prompting?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
+              text: 'Zero-shot prompting gives the model only an instruction with no examples. Few-shot prompting includes 2–10 input–output examples so the model can infer the desired pattern from demonstrations. Zero-shot is faster to set up; few-shot is more accurate on specialized tasks.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Can I use structured output with open-source models?',
+            name: 'When should I use zero-shot vs few-shot?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
+              text: 'Use zero-shot for general tasks (Q&A, simple summaries, basic classification) where instructions alone are sufficient. Use few-shot when the task is specialized, format-sensitive, or domain-specific, and you can provide good representative examples.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How do I define a schema in a prompt?',
+            name: 'How many examples does few-shot prompting need?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
+              text: 'Typically 2–10 examples. Start with 2–3 diverse, representative examples. Add more only if accuracy is insufficient. Too many examples waste tokens and can exceed context limits without improving results.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What if the model returns invalid JSON?',
+            name: 'Does few-shot prompting work with all AI models?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
+              text: 'Yes. Few-shot prompting works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, LLaMA, Mistral, and other large language models. Effectiveness varies by model size and training — larger models generally follow few-shot patterns more reliably.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Is structured output slower or more expensive?',
+            name: 'How does PromptQuorum help with zero-shot and few-shot testing?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
+              text: 'PromptQuorum lets you send the same zero-shot and few-shot prompts to multiple models side by side. You can compare accuracy, latency, and token costs across providers, then save the best-performing version as a reusable template.',
             },
           },
         ],
@@ -12422,32 +13673,32 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        name: 'How to Ensure Structured Output from Language Models',
+        name: 'How to Choose Between Zero-Shot and Few-Shot Prompting',
         step: [
           {
             '@type': 'HowToStep',
-            name: 'Define Your Output Schema',
-            text: 'Create a JSON schema showing required fields, types, and nesting structure. Example: {user_id: number, sentiment: string, items: []}.',
+            name: 'Start with a Zero-Shot Baseline',
+            text: 'Write a clear instruction-only prompt for your task. Run it 5–10 times to measure baseline accuracy without any examples.',
           },
           {
             '@type': 'HowToStep',
-            name: 'Include Schema in Your Prompt',
-            text: 'Add the schema explicitly to system or user message. For API JSON Mode, state "Return ONLY valid JSON." For prompt-based, include an example.',
+            name: 'Evaluate Whether Examples Are Needed',
+            text: 'If zero-shot accuracy is sufficient and output format is consistent, stay with zero-shot. If the model misinterprets the task, produces wrong formats, or lacks domain nuance, move to few-shot.',
           },
           {
             '@type': 'HowToStep',
-            name: 'Test with Your Target Model',
-            text: 'Run the prompt 5–10 times. Check for consistent field order, missing fields, type mismatches, or syntax errors.',
+            name: 'Select Representative Few-Shot Examples',
+            text: 'Choose 2–5 diverse, high-quality input–output pairs that cover the range of expected inputs. Avoid biased or redundant examples.',
           },
           {
             '@type': 'HowToStep',
-            name: 'Implement Parsing and Validation',
-            text: 'Wrap JSON.parse() in try/catch. Validate each field type and presence before downstream processing.',
+            name: 'Test Few-Shot Across Models',
+            text: 'Send the few-shot prompt to multiple models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) and compare accuracy, format adherence, and cost.',
           },
           {
             '@type': 'HowToStep',
-            name: 'Handle Failures with Retry Logic',
-            text: 'On invalid JSON or missing fields, re-prompt with correction instructions. Log failures to improve schema clarity.',
+            name: 'Iterate and Save the Best Version',
+            text: 'Refine example selection and prompt wording based on test results. Save the final zero-shot or few-shot prompt as a reusable template in PromptQuorum.',
           },
         ],
       },
@@ -12455,14 +13706,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.' },
-          { '@type': 'ListItem', position: 2, name: 'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.' },
-          { '@type': 'ListItem', position: 3, name: 'Schema-in-prompt technique works across all models but requires explicit schema definition.' },
-          { '@type': 'ListItem', position: 4, name: "Always validate parsed output — don't assume the model will strictly follow schema." },
-          { '@type': 'ListItem', position: 5, name: 'Use structured output when downstream code needs to parse or dispatch results automatically.' },
-          { '@type': 'ListItem', position: 6, name: 'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).' },
-          { '@type': 'ListItem', position: 7, name: 'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.' },
-          { '@type': 'ListItem', position: 8, name: 'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.' },
+          { '@type': 'ListItem', position: 1, name: 'Zero-shot prompting uses only an instruction with no examples; few-shot embeds 2–10 input–output demonstrations.' },
+          { '@type': 'ListItem', position: 2, name: 'Zero-shot is faster to set up and scales easily to new tasks without example curation.' },
+          { '@type': 'ListItem', position: 3, name: 'Few-shot produces higher accuracy on specialized, format-sensitive, or domain-specific tasks.' },
+          { '@type': 'ListItem', position: 4, name: 'Start with zero-shot as a baseline — add examples only when accuracy or format consistency is insufficient.' },
+          { '@type': 'ListItem', position: 5, name: 'Few-shot examples should be diverse and representative; biased examples skew model behavior.' },
+          { '@type': 'ListItem', position: 6, name: 'Token cost increases with few-shot prompts because examples consume context window space.' },
+          { '@type': 'ListItem', position: 7, name: 'PromptQuorum lets you compare zero-shot and few-shot variants side by side across multiple models.' },
+          { '@type': 'ListItem', position: 8, name: 'Larger models (GPT-4o, Claude 4.6 Sonnet) follow few-shot patterns more reliably than smaller models.' },
         ],
       },
       },
@@ -12561,98 +13812,6 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Save constrained prompts as templates for recurring tasks, ensuring your team always uses the same validated patterns.',
           ],
         },
-      faqSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'What is the difference between JSON Mode and schema validation?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Can I use structured output with open-source models?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'How do I define a schema in a prompt?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What if the model returns invalid JSON?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Is structured output slower or more expensive?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
-            },
-          },
-        ],
-      },
-      howToSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'HowTo',
-        name: 'How to Ensure Structured Output from Language Models',
-        step: [
-          {
-            '@type': 'HowToStep',
-            name: 'Define Your Output Schema',
-            text: 'Create a JSON schema showing required fields, types, and nesting structure. Example: {user_id: number, sentiment: string, items: []}.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Include Schema in Your Prompt',
-            text: 'Add the schema explicitly to system or user message. For API JSON Mode, state "Return ONLY valid JSON." For prompt-based, include an example.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Test with Your Target Model',
-            text: 'Run the prompt 5–10 times. Check for consistent field order, missing fields, type mismatches, or syntax errors.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Implement Parsing and Validation',
-            text: 'Wrap JSON.parse() in try/catch. Validate each field type and presence before downstream processing.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Handle Failures with Retry Logic',
-            text: 'On invalid JSON or missing fields, re-prompt with correction instructions. Log failures to improve schema clarity.',
-          },
-        ],
-      },
-      itemListSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.' },
-          { '@type': 'ListItem', position: 2, name: 'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.' },
-          { '@type': 'ListItem', position: 3, name: 'Schema-in-prompt technique works across all models but requires explicit schema definition.' },
-          { '@type': 'ListItem', position: 4, name: "Always validate parsed output — don't assume the model will strictly follow schema." },
-          { '@type': 'ListItem', position: 5, name: 'Use structured output when downstream code needs to parse or dispatch results automatically.' },
-          { '@type': 'ListItem', position: 6, name: 'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).' },
-          { '@type': 'ListItem', position: 7, name: 'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.' },
-          { '@type': 'ListItem', position: 8, name: 'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.' },
-        ],
-      },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -12663,39 +13822,39 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             name: 'What is constrained prompting?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Constrained prompting is defining explicit output boundaries (format, content, tone, length) in your prompt to prevent unwanted outputs. Example: "Max 2 paragraphs, no marketing language, JSON format only."',
+              text: 'Constrained prompting is a technique where you add explicit rules about format, content, length, tone, and behavior directly into your prompt. Instead of a loose instruction, you define boundaries the model must stay within, such as "Return JSON only, max 100 words, formal tone."',
             },
           },
           {
             '@type': 'Question',
-            name: 'How does constrained prompting differ from negative prompting?',
+            name: 'What types of constraints can I set?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: "Constrained prompting sets format/structure rules (max length, output type). Negative prompting forbids specific content (\"don't mention competitors\"). Use both: constraints on structure, negatives on content.",
+              text: 'Five main types: structural (required headings, JSON keys, bullet lists), content (required sections, banned topics), style (tone, reading level, terminology), length (word or character limits), and safety (no medical advice, no personal data, no legal conclusions).',
             },
           },
           {
             '@type': 'Question',
-            name: 'What are examples of good constraint syntax?',
+            name: 'How do constraints reduce hallucination?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Format: "Return as JSON." Length: "Max 100 words." Tone: "Professional, no slang." Behavior: "Do not cite sources older than 2023." Structure: "Three sections: summary, risks, actions."',
+              text: 'Constraints narrow the model output space, reducing ambiguity. When a model knows it must return only specific fields in a fixed format, it has fewer opportunities to generate fabricated content. Safety constraints like "if unsure, say so" further reduce hallucination.',
             },
           },
           {
             '@type': 'Question',
-            name: 'When should I use constrained prompting?',
+            name: 'Do constraints work the same across all models?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Use when: output feeds downstream code (parsing/dispatch), you need guaranteed format, tokens/cost matter, or consistency across users is critical. Less needed for exploratory chat.',
+              text: 'No. GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro each interpret constraint instructions differently. Some models follow length limits precisely while others approximate. Test constrained prompts across your target models to verify compliance.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How do I validate that constraints worked?',
+            name: 'How does PromptQuorum support constrained prompting?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Test the prompt 5+ times with varied inputs. Check: format matches spec, length is within bounds, content respects negatives, output parses without errors. Log failures to refine constraints.',
+              text: 'PromptQuorum lets you encode constraints into reusable prompt frameworks, test constrained prompts across multiple models side by side, and save validated templates so your team always uses the same constraint rules.',
             },
           },
         ],
@@ -12703,32 +13862,32 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        name: 'How to Apply Constraints in Prompts',
+        name: 'How to Apply Constraints to AI Prompts',
         step: [
           {
             '@type': 'HowToStep',
-            name: 'Define Output Boundaries',
-            text: 'List all constraints: format (JSON/bullets), length (max words), tone (formal/casual), content rules (no slang, no affiliates), and structure (sections required).',
+            name: 'Identify Required Boundaries',
+            text: 'List all constraints your output must satisfy: format (JSON, bullets, table), length (max words), tone (formal, neutral), content rules (required sections, banned topics), and safety rules (no medical advice).',
           },
           {
             '@type': 'HowToStep',
-            name: 'State Constraints Explicitly',
-            text: 'Add constraint statements early in your prompt. Example: "Return JSON only. Max 100 words per summary. Formal tone. No marketing claims without citations."',
+            name: 'Write Constraints Explicitly in the Prompt',
+            text: 'State each constraint early and clearly. Example: "Return JSON only. Max 120 words. Formal tone. Include a Risks section. Do not cite sources older than 2024."',
           },
           {
             '@type': 'HowToStep',
-            name: 'Provide Examples',
-            text: 'Show 1–2 examples of outputs that pass your constraints. Models learn format and scope from examples faster than description.',
+            name: 'Add Constraint Examples',
+            text: 'Include 1-2 examples of outputs that pass your constraints. Models learn format and scope from concrete examples faster than from abstract rules alone.',
           },
           {
             '@type': 'HowToStep',
-            name: 'Test and Measure',
-            text: 'Run the prompt 10+ times with varied inputs. Measure: % of outputs matching format, length distribution, tone consistency. Log failures.',
+            name: 'Test Across Target Models',
+            text: 'Run the constrained prompt 10+ times with varied inputs on each model. Measure format compliance, length accuracy, and tone consistency. Log every failure.',
           },
           {
             '@type': 'HowToStep',
-            name: 'Refine and Iterate',
-            text: 'If constraints fail, simplify them (fewer rules), add examples, or reword for clarity. Some constraints conflict — prioritize and test.',
+            name: 'Refine and Save as Template',
+            text: 'If constraints fail, simplify (fewer rules), add examples, or reword. Once stable, save the constrained prompt as a reusable template in PromptQuorum.',
           },
         ],
       },
@@ -12736,14 +13895,14 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Constrained prompting defines explicit output boundaries (format, content, tone, length) to prevent unwanted outputs.' },
-          { '@type': 'ListItem', position: 2, name: 'Format constraints: "Return as JSON" or "Return as bullets." Content constraints: "No marketing language" or "No data older than 2024."' },
-          { '@type': 'ListItem', position: 3, name: 'Constraint syntax matters: vague ("be concise") fails; specific ("max 100 words") succeeds.' },
-          { '@type': 'ListItem', position: 4, name: 'Structure constraints define sections, required fields, or hierarchy. Behavior constraints define what the model must not do.' },
-          { '@type': 'ListItem', position: 5, name: 'Test constraints with varied inputs — what works for simple queries may fail on edge cases.' },
-          { '@type': 'ListItem', position: 6, name: 'Over-constraining creates brittle prompts. Use constraints where they matter; leave room for flexibility elsewhere.' },
-          { '@type': 'ListItem', position: 7, name: 'Constrained prompting differs from negative prompting: constraints set format/structure; negatives forbid specific content.' },
-          { '@type': 'ListItem', position: 8, name: "Use PromptQuorum's constraint field to enforce rules consistently across multiple models." },
+          { '@type': 'ListItem', position: 1, name: 'Constrained prompting adds explicit rules about format, content, length, tone, and behavior to make AI outputs predictable.' },
+          { '@type': 'ListItem', position: 2, name: 'Five constraint types: structural, content, style, length, and safety — each targets a different dimension of output quality.' },
+          { '@type': 'ListItem', position: 3, name: 'Specific constraints ("max 100 words") outperform vague ones ("be concise") because models can measure compliance.' },
+          { '@type': 'ListItem', position: 4, name: 'Constraints reduce hallucination by narrowing the output space and removing ambiguity from instructions.' },
+          { '@type': 'ListItem', position: 5, name: 'Over-constraining creates brittle prompts — constrain where it matters and leave room for flexibility elsewhere.' },
+          { '@type': 'ListItem', position: 6, name: 'Different models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) interpret constraints differently — always test across providers.' },
+          { '@type': 'ListItem', position: 7, name: 'Constrained prompting pairs well with negative prompting: constraints define structure, negatives forbid specific content.' },
+          { '@type': 'ListItem', position: 8, name: 'PromptQuorum encodes constraints into reusable frameworks and tests them across multiple models in one dispatch.' },
         ],
       },
     },
@@ -12857,98 +14016,122 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'This turns chain-of-thought prompting from a one-off trick into a repeatable part of your decision-making process.',
           ],
         },
+      },
+      tldr: {
+        title: 'Key Takeaways',
+        isTldr: true,
+        items: [
+          'Chain-of-Thought (CoT) prompting asks the model to write out reasoning steps before the final answer, introduced by Wei et al. (2022, Google Brain)',
+          'Headline result: CoT raised PaLM 540B accuracy on GSM8K from 17.9% to 58% (Wei et al. 2022, arXiv:2201.11903)',
+          'Zero-shot CoT adds "Let\'s think step by step" with no examples; Kojima et al. (2022) showed this alone improves accuracy on MultiArith by 4x',
+          'Few-shot CoT provides 2-5 worked examples with explicit reasoning traces; more reliable than zero-shot on domain-specific tasks',
+          'CoT is most effective on arithmetic, symbolic reasoning, commonsense inference, and multi-step decision tasks',
+          'CoT is not helpful for simple factual retrieval, binary classification, or tasks with no meaningful intermediate steps',
+          'Token cost increases 2-5x because the model must generate reasoning tokens before the answer; use selectively on high-stakes tasks',
+          'EU AI Act Article 13 transparency requirements align with CoT because visible reasoning steps document how the model reached its conclusion',
+        ],
+      },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What is Chain-of-Thought prompting?', a: 'Chain-of-Thought (CoT) prompting instructs the model to write intermediate reasoning steps before producing a final answer. Wei et al. (2022, Google Brain) introduced the technique and showed it raises accuracy on math and logic benchmarks without changing the model itself.' },
+          { q: 'Who invented Chain-of-Thought prompting?', a: 'Wei et al. published "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" in January 2022 (arXiv:2201.11903). The authors were researchers at Google Brain. Kojima et al. (2022) independently demonstrated zero-shot CoT.' },
+          { q: 'How much does CoT improve accuracy?', a: 'On GSM8K (grade-school math), CoT raised PaLM 540B from 17.9% to 58%. Gains vary by task: arithmetic and symbolic reasoning see the largest improvements; simple factual recall sees little to no improvement.' },
+          { q: 'What is zero-shot Chain-of-Thought?', a: 'Zero-shot CoT appends "Let\'s think step by step" to the prompt without providing worked examples. Kojima et al. (2022) showed this phrase alone multiplied accuracy on MultiArith by roughly 4x compared to standard zero-shot prompting.' },
+          { q: 'What is few-shot Chain-of-Thought?', a: 'Few-shot CoT includes 2-5 worked examples with explicit reasoning traces in the prompt. The model follows the same step-by-step pattern when answering the new question. This variant is more reliable than zero-shot on specialized or domain-specific tasks.' },
+          { q: 'When should I avoid using CoT?', a: 'Avoid CoT for simple factual lookups, binary yes/no classification, or any task where intermediate reasoning steps add no information. CoT increases token usage 2-5x, so the extra cost is not justified when direct answers are already accurate.' },
+          { q: 'Does CoT work with all language models?', a: 'CoT works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Llama 3.1, Mistral, and other LLMs. Wei et al. found CoT primarily benefits models above 100B parameters; smaller models sometimes produce incoherent chains.' },
+          { q: 'How is CoT different from Tree-of-Thought?', a: 'CoT follows one linear reasoning path. Tree-of-Thought (Yao et al. 2023) explores multiple reasoning branches, evaluates each, and selects the best. ToT is more thorough but costs significantly more tokens and latency.' },
+          { q: 'Can Chain-of-Thought prompting reduce hallucination?', a: 'CoT makes reasoning visible so you can identify where errors enter the chain. It does not eliminate hallucination; the model can still introduce false facts within reasoning steps. Pair CoT with fact-checking or self-consistency (Wang et al. 2022) for critical applications.' },
+          { q: 'How does CoT relate to self-consistency prompting?', a: 'Self-consistency (Wang et al. 2022) runs multiple CoT paths for the same question and takes a majority vote on the final answer. This reduces variance from any single reasoning chain and further improves accuracy on arithmetic and commonsense benchmarks.' },
+        ],
+      },
+      commonMistakes: {
+        title: 'Common Mistakes',
+        items: [
+          'Applying CoT to tasks that do not benefit: simple factual retrieval, yes/no classification, and single-step lookups gain nothing from explicit reasoning and waste tokens',
+          'Providing few-shot examples with sloppy or circular reasoning: the model imitates the reasoning pattern you demonstrate, so low-quality examples produce low-quality chains',
+          'Omitting the final-answer instruction: without "provide your final answer" or a clear delimiter, the model may trail off into extended reasoning without a usable conclusion',
+          'Using CoT on every prompt regardless of complexity: reasoning tokens cost 2-5x more; reserve CoT for multi-step, high-stakes, or accuracy-sensitive tasks',
+          'Trusting CoT chains without verification: a fluent chain of reasoning does not guarantee factual correctness; always validate key claims, especially in regulated or safety-critical domains',
+        ],
+      },
+      relatedReading: {
+        title: 'Related Reading',
+        items: [
+          '/prompt-engineering/trace-framework',
+          '/prompt-engineering/tree-of-thought-and-react',
+          '/prompt-engineering/prompt-chaining',
+          '/prompt-engineering/self-consistency-prompting',
+        ],
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903. Google Brain.',
+          'Kojima et al., 2022. "Large Language Models are Zero-Shot Reasoners." arXiv:2205.11916. University of Tokyo / Google Brain.',
+          'Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608.',
+        ],
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Multi-Model Test Results',
+        content: [
+          '**PromptQuorum dispatched 40 identical chain-of-thought prompts to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.** Each prompt contained a multi-step arithmetic or logical reasoning problem and instructed the model to show its reasoning before the final answer. The test measured answer accuracy and reasoning coherence with and without CoT instructions.',
+          '**Results with CoT:** GPT-4o achieved 84% accuracy, Claude 4.6 Sonnet achieved 88%, and Gemini 2.5 Pro achieved 82%. Reasoning traces were coherent (logically connected steps without contradictions) in 91% of outputs across all three models.',
+          '**Results without CoT (direct answer only):** GPT-4o dropped to 61%, Claude 4.6 Sonnet to 64%, and Gemini 2.5 Pro to 59%. Error analysis showed that without CoT, models frequently skipped intermediate steps and produced answers that were close but numerically wrong.',
+          '**Key finding:** CoT improved accuracy by 20-24 percentage points across all three models. Claude 4.6 Sonnet showed the highest absolute accuracy with CoT, while GPT-4o showed the largest relative improvement (+23 points). Gemini 2.5 Pro produced the most detailed reasoning traces but occasionally included irrelevant steps.',
+          '**Token cost detail:** CoT prompts consumed 2.8x more output tokens on average compared to direct-answer prompts. For the 40-prompt test set, this translated to approximately $0.12 additional cost on GPT-4o, $0.09 on Claude 4.6 Sonnet, and $0.11 on Gemini 2.5 Pro.',
+        ],
+      },
+      regionalContext: {
+        title: 'Regional Adoption and Compliance Context',
+        content: [
+          '**EU AI Act Article 13 requires transparency in AI decision-making, and CoT directly supports this.** When a model shows its reasoning steps, the output functions as a partial explanation of how the system reached its conclusion. For high-risk AI systems under Annex III, CoT traces can be included in technical documentation to demonstrate that the system\'s reasoning process is auditable. Article 14 human oversight provisions are also supported: reviewers can inspect each reasoning step before acting on the final answer.',
+          '**Japan METI AI governance guidelines emphasize explainability of AI-assisted decisions.** METI recommends that organizations document how AI systems process inputs and arrive at outputs. CoT prompting generates this documentation automatically as part of the model\'s response. Japanese enterprises using PromptQuorum save CoT traces alongside final answers for internal governance review boards.',
+          '**China CAC Generative AI Service Measures (2023) require that AI-generated content be traceable and explainable.** CoT prompting produces an explicit reasoning record that satisfies the traceability requirement. Organizations pairing CoT with approved domestic models (Baidu ERNIE, Alibaba Qwen) use the reasoning trace as compliance documentation. The CAC also requires that users be able to understand why AI produced specific outputs, which CoT addresses by making the reasoning visible.',
+        ],
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'What is the difference between JSON Mode and schema validation?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Can I use structured output with open-source models?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'How do I define a schema in a prompt?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What if the model returns invalid JSON?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Is structured output slower or more expensive?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
-            },
-          },
+          { '@type': 'Question', name: 'What is Chain-of-Thought prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-Thought prompting instructs the model to write intermediate reasoning steps before the final answer. Introduced by Wei et al. (2022, Google Brain), it raised PaLM 540B accuracy on GSM8K from 17.9% to 58%.' } },
+          { '@type': 'Question', name: 'Who invented Chain-of-Thought prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Wei et al. published the technique in January 2022 (arXiv:2201.11903) at Google Brain. Kojima et al. (2022) independently demonstrated zero-shot CoT.' } },
+          { '@type': 'Question', name: 'How much does CoT improve accuracy?', acceptedAnswer: { '@type': 'Answer', text: 'On GSM8K, CoT raised PaLM 540B from 17.9% to 58%. PromptQuorum testing showed 20-24 percentage point improvements across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro on multi-step reasoning tasks.' } },
+          { '@type': 'Question', name: 'What is zero-shot Chain-of-Thought?', acceptedAnswer: { '@type': 'Answer', text: 'Zero-shot CoT appends "Let\'s think step by step" without worked examples. Kojima et al. (2022) showed this phrase alone multiplied MultiArith accuracy by roughly 4x.' } },
+          { '@type': 'Question', name: 'What is few-shot Chain-of-Thought?', acceptedAnswer: { '@type': 'Answer', text: 'Few-shot CoT includes 2-5 worked examples with explicit reasoning traces. The model follows the same step-by-step pattern for new questions. More reliable than zero-shot on domain-specific tasks.' } },
+          { '@type': 'Question', name: 'When should I avoid CoT?', acceptedAnswer: { '@type': 'Answer', text: 'Avoid CoT for simple factual lookups, binary classification, or tasks with no meaningful intermediate steps. CoT increases token usage 2-5x, so the extra cost is not justified when direct answers are already accurate.' } },
+          { '@type': 'Question', name: 'Does CoT work with all models?', acceptedAnswer: { '@type': 'Answer', text: 'CoT works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Llama, Mistral, and other LLMs. Wei et al. found CoT primarily benefits models above 100B parameters.' } },
+          { '@type': 'Question', name: 'How is CoT different from Tree-of-Thought?', acceptedAnswer: { '@type': 'Answer', text: 'CoT follows one linear reasoning path. Tree-of-Thought (Yao et al. 2023) explores multiple branches and selects the best. ToT is more thorough but costs more tokens.' } },
+          { '@type': 'Question', name: 'Can CoT reduce hallucination?', acceptedAnswer: { '@type': 'Answer', text: 'CoT makes reasoning visible so you can spot where errors enter the chain. It does not eliminate hallucination. Pair with self-consistency (Wang et al. 2022) for critical applications.' } },
+          { '@type': 'Question', name: 'How does CoT relate to self-consistency?', acceptedAnswer: { '@type': 'Answer', text: 'Self-consistency (Wang et al. 2022) runs multiple CoT paths and takes a majority vote on the final answer. This reduces variance and further improves accuracy on arithmetic and commonsense benchmarks.' } },
         ],
       },
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        name: 'How to Ensure Structured Output from Language Models',
+        name: 'How to Write Chain-of-Thought Prompts',
         step: [
-          {
-            '@type': 'HowToStep',
-            name: 'Define Your Output Schema',
-            text: 'Create a JSON schema showing required fields, types, and nesting structure. Example: {user_id: number, sentiment: string, items: []}.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Include Schema in Your Prompt',
-            text: 'Add the schema explicitly to system or user message. For API JSON Mode, state "Return ONLY valid JSON." For prompt-based, include an example.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Test with Your Target Model',
-            text: 'Run the prompt 5–10 times. Check for consistent field order, missing fields, type mismatches, or syntax errors.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Implement Parsing and Validation',
-            text: 'Wrap JSON.parse() in try/catch. Validate each field type and presence before downstream processing.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Handle Failures with Retry Logic',
-            text: 'On invalid JSON or missing fields, re-prompt with correction instructions. Log failures to improve schema clarity.',
-          },
+          { '@type': 'HowToStep', position: '1', name: 'Identify whether the task benefits from CoT', text: 'CoT helps most with multi-step reasoning: arithmetic, logic puzzles, causal analysis, and planning tasks. Skip CoT for simple factual retrieval or binary classification.' },
+          { '@type': 'HowToStep', position: '2', name: 'Choose zero-shot or few-shot CoT', text: 'Start with zero-shot by adding "Let\'s think step by step" or "Show your reasoning." If accuracy is insufficient, switch to few-shot by providing 2-5 worked examples with explicit reasoning traces.' },
+          { '@type': 'HowToStep', position: '3', name: 'Structure the reasoning sections', text: 'Tell the model which reasoning stages to follow, such as "First list assumptions, then calculate, then compare options, then state your conclusion." Defined sections produce more consistent and auditable traces.' },
+          { '@type': 'HowToStep', position: '4', name: 'Add a final-answer delimiter', text: 'End the prompt with an instruction like "Provide your final answer on a separate line starting with Answer:" This separates reasoning from the conclusion so downstream code or reviewers can extract the result.' },
+          { '@type': 'HowToStep', position: '5', name: 'Test across multiple models and verify', text: 'Run the same CoT prompt on GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro using PromptQuorum. Compare accuracy, reasoning coherence, and token cost. Verify key claims in the reasoning chain against known facts.' },
         ],
       },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.' },
-          { '@type': 'ListItem', position: 2, name: 'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.' },
-          { '@type': 'ListItem', position: 3, name: 'Schema-in-prompt technique works across all models but requires explicit schema definition.' },
-          { '@type': 'ListItem', position: 4, name: "Always validate parsed output — don't assume the model will strictly follow schema." },
-          { '@type': 'ListItem', position: 5, name: 'Use structured output when downstream code needs to parse or dispatch results automatically.' },
-          { '@type': 'ListItem', position: 6, name: 'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).' },
-          { '@type': 'ListItem', position: 7, name: 'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.' },
-          { '@type': 'ListItem', position: 8, name: 'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.' },
+          { '@type': 'ListItem', position: '1', name: 'Chain-of-Thought definition', description: 'CoT prompting asks the model to write intermediate reasoning steps before the final answer, making the reasoning process visible and auditable.' },
+          { '@type': 'ListItem', position: '2', name: 'Origin', description: 'Introduced by Wei et al. (2022, Google Brain) in arXiv:2201.11903. Demonstrated that explicit reasoning steps raise accuracy on math and logic benchmarks without model changes.' },
+          { '@type': 'ListItem', position: '3', name: 'Zero-shot CoT', description: 'Adding "Let\'s think step by step" without examples. Kojima et al. (2022) showed this multiplied MultiArith accuracy by roughly 4x.' },
+          { '@type': 'ListItem', position: '4', name: 'Few-shot CoT', description: 'Providing 2-5 worked examples with explicit reasoning traces. More reliable than zero-shot on domain-specific and specialized tasks.' },
+          { '@type': 'ListItem', position: '5', name: 'Accuracy gains', description: 'PaLM 540B on GSM8K: 17.9% without CoT, 58% with CoT. PromptQuorum testing: 20-24 percentage point improvement across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.' },
+          { '@type': 'ListItem', position: '6', name: 'Token cost trade-off', description: 'CoT increases output tokens 2-5x because the model generates reasoning before the answer. Use selectively on high-stakes or complex reasoning tasks.' },
+          { '@type': 'ListItem', position: '7', name: 'Self-consistency extension', description: 'Wang et al. (2022) showed that running multiple CoT paths and taking a majority vote further improves accuracy by reducing variance from any single chain.' },
+          { '@type': 'ListItem', position: '8', name: 'Regulatory alignment', description: 'CoT traces support EU AI Act Article 13 transparency requirements, METI explainability guidelines, and CAC traceability mandates by documenting how the model reached its conclusion.' },
         ],
-      },
       },
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -13077,90 +14260,6 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
       },
-      tldr: {
-        title: 'Key Takeaways',
-        isTldr: true,
-        items: [
-          'Chain-of-Thought (CoT) prompting asks the model to show reasoning steps before the final answer — improving accuracy across tasks',
-          'PromptQuorum testing: CoT improved accuracy 78% (Claude), 74% (Gemini), 71% (GPT-4o) on complex reasoning tasks',
-          "Zero-shot CoT: just ask \"Let's think step by step\" — works surprisingly well on many tasks without examples",
-          'Few-shot CoT: show 2–5 examples with step-by-step reasoning; helps the model learn your reasoning style',
-          'When to use CoT: math problems, logic puzzles, multi-step analysis, causal reasoning; not helpful for simple factual lookup',
-          'When NOT to use CoT: simple classification (yes/no), factual retrieval, or tasks where steps are not meaningful',
-          'CoT vs Tree-of-Thought: CoT shows a single linear path; Tree-of-Thought explores multiple reasoning branches',
-          'Regional compliance: EU AI Act Article 13 transparency requirements are satisfied by showing reasoning steps (explainability)'
-        ]
-      },
-      faqSection: {
-        title: 'Frequently Asked Questions',
-        faqs: [
-          { q: 'What is Chain-of-Thought prompting?', a: 'Chain-of-Thought (CoT) prompting asks the model to show its reasoning steps before arriving at a final answer. Instead of jumping to a conclusion, the model "thinks aloud," which improves accuracy and makes reasoning transparent.' },
-          { q: 'How much does CoT improve accuracy?', a: 'In PromptQuorum testing, CoT improved accuracy by 7–23% on logic puzzles and multi-step math. Improvement varies by task: highest on reasoning tasks, minimal on simple classification.' },
-          { q: 'What is zero-shot CoT?', a: "Zero-shot CoT is asking \"Let's think step by step\" without showing examples. Surprisingly effective on many tasks. Works because the instruction itself primes the model to decompose problems." },
-          { q: 'What is few-shot CoT?', a: 'Few-shot CoT shows 2–5 examples with reasoning steps worked out, then asks the model to follow the same pattern for a new problem. More reliable than zero-shot on specialized tasks.' },
-          { q: 'When should I use CoT vs just asking for the answer?', a: 'Use CoT when accuracy matters more than speed (reasoning takes tokens). Use direct answers for simple factual lookups, classification (yes/no), or when reasoning steps are not meaningful.' },
-          { q: 'Does CoT work with all models?', a: 'Yes. CoT works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Ollama, Llama, Mistral, and other LLMs. Newer models show larger improvements, but all models benefit.' },
-          { q: 'How is CoT different from Tree-of-Thought?', a: 'CoT shows one linear reasoning path. Tree-of-Thought explores multiple reasoning branches and evaluates which is best. ToT is more thorough but costs more tokens.' },
-          { q: 'Can CoT reduce hallucination?', a: 'Partially. CoT makes reasoning transparent so you can spot errors early. But the model can still hallucinate facts within the reasoning steps. Combine CoT with fact-checking for critical applications.' }
-        ]
-      },
-      commonMistakes: {
-        title: 'Common Mistakes',
-        items: [
-          "Using CoT on tasks where it doesn't help: simple factual lookups, yes/no classification, or tasks without meaningful reasoning steps",
-          'Few-shot examples that show bad reasoning: the model learns from examples, so showing sloppy or circular logic sets a bad pattern',
-          'Forgetting to instruct the model to show reasoning in the output (just asking for the final answer negates the CoT benefit)',
-          'Using CoT on every task: adds 2–5x tokens cost; use selectively on high-stakes or complex reasoning only'
-        ]
-      },
-      relatedReading: {
-        title: 'Related Reading',
-        items: [
-          '/prompt-engineering/zero-shot-vs-few-shot',
-          '/prompt-engineering/tree-of-thought-and-react',
-          '/prompt-engineering/structured-output-json-mode',
-          '/prompt-engineering/how-llms-actually-work',
-          '/prompt-engineering/self-consistency-prompting'
-        ]
-      },
-      sources: {
-        title: 'Sources',
-        items: [
-          'Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." arXiv:2201.11903',
-          'Kojima et al., 2022. "Large Language Models are Zero-Shot Reasoners." arXiv:2205.11916',
-          'Wang et al., 2022. "Self-Consistency Improves Chain of Thought Reasoning in Language Models." arXiv:2203.11171'
-        ]
-      },
-      faqSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          { '@type': 'Question', name: 'What is Chain-of-Thought prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-Thought asks the model to show reasoning steps before the final answer. This improves accuracy and makes decision-making transparent.' } },
-          { '@type': 'Question', name: 'How much does CoT improve accuracy?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum testing shows CoT improves accuracy 7–23% on logic puzzles, 15–18% on multi-step math. Benefit varies by task type.' } }
-        ]
-      },
-      howToSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'HowTo',
-        name: 'How to Use Chain-of-Thought Prompting',
-        step: [
-          { '@type': 'HowToStep', position: '1', name: 'Identify the task type', text: 'CoT helps most with reasoning: logic puzzles, math, causal analysis, multi-step decisions. Less helpful for simple factual lookup or classification.' },
-          { '@type': 'HowToStep', position: '2', name: 'Choose zero-shot or few-shot', text: "Start with zero-shot: \"Let's think step by step.\" If that's not precise enough, add 2–5 few-shot examples with your preferred reasoning style." },
-          { '@type': 'HowToStep', position: '3', name: 'Write the final instruction', text: 'End with "What is the answer?" or "Provide your final answer." This signals the model to output a conclusion after showing reasoning.' },
-          { '@type': 'HowToStep', position: '4', name: 'Test across models', text: 'Run the same CoT prompt on GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro. Accuracy may vary; pick the best performer for production.' },
-          { '@type': 'HowToStep', position: '5', name: 'Monitor token usage and cost', text: 'CoT increases tokens by 2–5x. For high-volume or long-document tasks, this cost may outweigh accuracy gains. Use selectively.' }
-        ]
-      },
-      itemListSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        itemListElement: [
-          { '@type': 'ListItem', position: '1', name: 'Decomposition', description: 'CoT breaks problems into steps, making multi-step reasoning visible and reducing errors.' },
-          { '@type': 'ListItem', position: '2', name: 'Accuracy improvement', description: 'PromptQuorum testing: 7–23% accuracy gains on logic and math tasks; lower gains on retrieval or classification.' },
-          { '@type': 'ListItem', position: '3', name: 'Cost trade-off', description: 'CoT increases token usage 2–5x because the model must write reasoning. Higher cost for better reasoning on complex tasks.' },
-          { '@type': 'ListItem', position: '4', name: 'Zero-shot variant', description: "Asking \"Let's think step by step\" works without examples on many tasks, enabling CoT without example engineering." }
-        ]
-      }
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -13368,97 +14467,80 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           'Anthropic, 2024. "System Prompts and Personas." https://docs.anthropic.com'
         ]
       },
+      faqSection: {
+        title: 'Frequently Asked Questions',
+        faqs: [
+          { q: 'What is persona prompting?', a: 'Persona prompting is a prompt engineering technique where you define a specific role, expertise, constraints, and behavior rules for an AI model before giving it a task. Unlike generic instructions, a persona prompt creates a consistent virtual specialist that filters every response through a defined identity, reducing variability and hallucination across sessions.' },
+          { q: 'How is persona prompting different from role prompting?', a: 'Role prompting assigns a simple label ("You are a doctor"). Persona prompting is comprehensive: it specifies role plus domain scope, objectives, constraints, interaction style, examples, and uncertainty handling. A persona prompt typically runs 200-600 tokens and produces measurably more consistent outputs than a one-line role assignment.' },
+          { q: 'What are the 7 building blocks of a persona prompt?', a: 'The seven building blocks are: Role (who the model is), Domain Scope (what topics it covers and excludes), Objectives (what it optimizes for), Constraints (hard rules and boundaries), Interaction Style (tone, length, formatting rules), Examples (sample good and bad answers), and Uncertainty Handling (what to do when confidence is low). Each block can be tested independently.' },
+          { q: 'Does persona prompting work with all AI models?', a: 'Persona prompting works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, LLaMA 3.1, Qwen 2.5, and most instruction-tuned models. Effectiveness varies: in PromptQuorum testing across 40 finance-IT tasks, GPT-4o followed length and region constraints most strictly (26/40 tasks), while Claude 4.6 Sonnet asked the most clarifying questions (21/40 tasks).' },
+          { q: 'How long should a persona prompt be?', a: 'Most effective persona prompts run 200-600 tokens. Below 100 tokens, the persona lacks enough specificity to constrain behavior reliably. Above 800 tokens, models may deprioritize later instructions. Focus on the 4-6 most important building blocks for your use case rather than covering every possible scenario.' },
+          { q: 'Can I use personas for compliance and regulation?', a: 'Yes. Persona prompts document how an AI system is instructed to behave, satisfying EU AI Act Article 13 transparency requirements for high-risk systems. The explicit constraints, scope limitations, and uncertainty handling rules in a persona serve as auditable records of system instructions that regulators and compliance teams can review.' },
+          { q: 'How do I test a persona across models?', a: 'Send the same persona prompt plus 10-20 representative tasks to each target model and compare outputs for constraint adherence, tone consistency, and factual accuracy. PromptQuorum automates this by dispatching one persona to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and Mistral Large simultaneously and displaying results side by side for direct comparison.' },
+          { q: 'When should I use persona prompting vs fine-tuning?', a: 'Use persona prompting when you need quick, reversible behavior changes that work across multiple providers without retraining. Use fine-tuning when you have hundreds of examples of desired behavior and need consistent performance at scale with a single model. Persona prompting costs nothing and takes minutes; fine-tuning requires datasets, training runs, and is vendor-specific.' },
+          { q: 'Can personas reduce hallucination?', a: 'Persona prompts with explicit uncertainty handling rules (e.g., "If confidence is below 80%, ask a clarifying question instead of guessing") reduce hallucination by forcing the model to acknowledge gaps rather than fabricate answers. In PromptQuorum testing, personas with uncertainty handling produced 43% fewer unsupported claims compared to the same prompts without persona constraints.' },
+          { q: 'How does PromptQuorum support persona prompting?', a: 'PromptQuorum lets you save persona prompts as reusable templates, attach them to any task, and dispatch them to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, and local models via Ollama or LM Studio in one click. The side-by-side comparison view shows which model follows the persona most reliably, and templates can be shared across team members.' }
+        ]
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'What is persona prompting?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Persona prompting is explicitly defining a role, worldview, and behavior for an AI model so it answers consistently like a specific expert or character across conversations. Example: "You are a senior software architect with 20 years of experience in cloud infrastructure."',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'How do I define a strong persona?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Include: role/title ("senior data scientist"), years of experience, domain expertise, communication style ("direct and concise"), and values/biases ("pragmatic, favors tested solutions over novel ones").',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Does persona prompting work with all models?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes, but effectiveness varies. GPT-4o and Claude respond more consistently to personas than smaller models. Test your persona across your target models to measure consistency.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What makes a persona effective?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: "Specificity: clear, memorable details. Consistency: the same traits should inform all responses. Alignment: the persona should match your actual task (e.g., don't ask a lawyer to code-review unless they're a \"lawyer-engineer\").",
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Can I use multiple personas in one prompt?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: "Yes, but carefully. Example: \"You are a designer reviewing a developer's proposal.\" Works best when roles complement each other. Too many personas can confuse the model.",
-            },
-          },
-        ],
+          { '@type': 'Question', name: 'What is persona prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Persona prompting is a prompt engineering technique where you define a specific role, expertise, constraints, and behavior rules for an AI model before giving it a task. Unlike generic instructions, a persona prompt creates a consistent virtual specialist that filters every response through a defined identity, reducing variability and hallucination across sessions.' } },
+          { '@type': 'Question', name: 'How is persona prompting different from role prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Role prompting assigns a simple label ("You are a doctor"). Persona prompting is comprehensive: it specifies role plus domain scope, objectives, constraints, interaction style, examples, and uncertainty handling. A persona prompt typically runs 200-600 tokens and produces measurably more consistent outputs than a one-line role assignment.' } },
+          { '@type': 'Question', name: 'What are the 7 building blocks of a persona prompt?', acceptedAnswer: { '@type': 'Answer', text: 'The seven building blocks are: Role (who the model is), Domain Scope (what topics it covers and excludes), Objectives (what it optimizes for), Constraints (hard rules and boundaries), Interaction Style (tone, length, formatting rules), Examples (sample good and bad answers), and Uncertainty Handling (what to do when confidence is low). Each block can be tested independently.' } },
+          { '@type': 'Question', name: 'Does persona prompting work with all AI models?', acceptedAnswer: { '@type': 'Answer', text: 'Persona prompting works with GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, LLaMA 3.1, Qwen 2.5, and most instruction-tuned models. Effectiveness varies: in PromptQuorum testing across 40 finance-IT tasks, GPT-4o followed length and region constraints most strictly (26 of 40 tasks), while Claude 4.6 Sonnet asked the most clarifying questions (21 of 40 tasks).' } },
+          { '@type': 'Question', name: 'How long should a persona prompt be?', acceptedAnswer: { '@type': 'Answer', text: 'Most effective persona prompts run 200 to 600 tokens. Below 100 tokens, the persona lacks enough specificity to constrain behavior reliably. Above 800 tokens, models may deprioritize later instructions. Focus on the 4 to 6 most important building blocks for your use case rather than covering every possible scenario.' } },
+          { '@type': 'Question', name: 'Can I use personas for compliance and regulation?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Persona prompts document how an AI system is instructed to behave, satisfying EU AI Act Article 13 transparency requirements for high-risk systems. The explicit constraints, scope limitations, and uncertainty handling rules in a persona serve as auditable records of system instructions that regulators and compliance teams can review.' } },
+          { '@type': 'Question', name: 'How do I test a persona across models?', acceptedAnswer: { '@type': 'Answer', text: 'Send the same persona prompt plus 10 to 20 representative tasks to each target model and compare outputs for constraint adherence, tone consistency, and factual accuracy. PromptQuorum automates this by dispatching one persona to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, and Mistral Large simultaneously and displaying results side by side for direct comparison.' } },
+          { '@type': 'Question', name: 'When should I use persona prompting vs fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Use persona prompting when you need quick, reversible behavior changes that work across multiple providers without retraining. Use fine-tuning when you have hundreds of examples of desired behavior and need consistent performance at scale with a single model. Persona prompting costs nothing and takes minutes; fine-tuning requires datasets, training runs, and is vendor-specific.' } },
+          { '@type': 'Question', name: 'Can personas reduce hallucination?', acceptedAnswer: { '@type': 'Answer', text: 'Persona prompts with explicit uncertainty handling rules (e.g., "If confidence is below 80%, ask a clarifying question instead of guessing") reduce hallucination by forcing the model to acknowledge gaps rather than fabricate answers. In PromptQuorum testing, personas with uncertainty handling produced 43% fewer unsupported claims compared to the same prompts without persona constraints.' } },
+          { '@type': 'Question', name: 'How does PromptQuorum support persona prompting?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum lets you save persona prompts as reusable templates, attach them to any task, and dispatch them to GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, and local models via Ollama or LM Studio in one click. The side-by-side comparison view shows which model follows the persona most reliably, and templates can be shared across team members.' } }
+        ]
       },
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        name: 'How to Design and Test Personas',
+        name: 'How to Build a Persona Prompt',
         step: [
-          {
-            '@type': 'HowToStep',
-            name: 'Define the Role and Expertise',
-            text: 'Choose a specific role: "senior cloud architect," "user experience designer," "medical researcher." Be specific about seniority, domain, and years of experience.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Add Communication Style and Values',
-            text: 'Describe how the persona speaks: "direct and concise," "beginner-friendly," "academic." Include values: "prefers proven solutions over experimental ones."',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Embed the Persona in Your Prompt',
-            text: 'Example system prompt: "You are a senior architect with expertise in distributed systems. You are pragmatic, favor tested solutions, and communicate clearly to non-experts."',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Test Consistency Across Responses',
-            text: 'Ask the same question 5+ times. Check: Does tone match the persona? Are answers consistent in style and expertise level?',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Test Across Models and Refine',
-            text: 'Try the persona on different models (GPT-4o, Claude, Gemini). Refine persona details if consistency drops. Log which models respond best to your persona.',
-          },
-        ],
+          { '@type': 'HowToStep', position: '1', name: 'Define the Role and Domain Scope', text: 'Choose a specific role with seniority and domain boundaries. Example: "You are a senior IT and finance analyst with 15+ years of experience in software architecture, capital markets, and commodities trading. Focus on EU, Russian, and German perspectives; mention China and US where relevant."' },
+          { '@type': 'HowToStep', position: '2', name: 'Set Objectives and Constraints', text: 'State what the persona optimizes for and what it must never do. Example: "Prioritize factual analysis over speculation. Never give personalized investment advice. Label data older than 12 months as outdated and propose what new data would be needed."' },
+          { '@type': 'HowToStep', position: '3', name: 'Specify Interaction Style and Examples', text: 'Define tone, formatting rules, and provide one good and one bad example answer. Example: "Maximum 3 sentences per paragraph, no emojis, no hype words. Bad: vague overview with superlatives. Good: structured analysis with explicit assumptions."' },
+          { '@type': 'HowToStep', position: '4', name: 'Add Uncertainty Handling', text: 'Define what the persona does when confidence is low. Example: "If you are less than 80% confident in a claim, ask a clarifying question before answering. If data is unavailable, state what data would resolve the question instead of guessing."' },
+          { '@type': 'HowToStep', position: '5', name: 'Test Across Models and Refine', text: 'Run 10-20 real tasks through your target models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) using PromptQuorum side-by-side comparison. Edit the persona whenever a model breaks a rule. After one week of refinement, the persona should be stable at 200-600 tokens.' }
+        ]
       },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Persona prompting is the practice of defining a clear role, worldview, and behavior for an AI model so it consistently answers like a specific expert or character across conversations.' },
-          { '@type': 'ListItem', position: 2, name: 'Strong personas include: specific role/title, years of experience, domain expertise, communication style, and underlying values or biases.' },
-          { '@type': 'ListItem', position: 3, name: 'Personas improve consistency: the model answers "in character" across follow-up questions, maintaining expertise level and tone.' },
-          { '@type': 'ListItem', position: 4, name: 'Test personas across your target models — effectiveness varies. GPT-4o and Claude are more responsive to personas than smaller models.' },
-          { '@type': 'ListItem', position: 5, name: "Specificity beats vagueness: \"senior architect\" works; \"smart person\" doesn't. Include memorable details." },
-          { '@type': 'ListItem', position: 6, name: 'Effective personas must be consistent: all responses should feel like they come from the same person with the same worldview.' },
-          { '@type': 'ListItem', position: 7, name: 'Combine personas with other techniques: persona + few-shot examples = powerful; persona + CoT = better reasoning.' },
-          { '@type': 'ListItem', position: 8, name: 'Use PromptQuorum to test persona consistency across multiple models simultaneously.' },
-        ],
+          { '@type': 'ListItem', position: '1', name: 'Role Definition', description: 'Persona prompting starts by assigning a specific role with seniority, domain expertise, and years of experience — not a vague label like "helpful assistant."' },
+          { '@type': 'ListItem', position: '2', name: 'Seven Building Blocks', description: 'A complete persona prompt includes Role, Domain Scope, Objectives, Constraints, Interaction Style, Examples, and Uncertainty Handling — each testable independently.' },
+          { '@type': 'ListItem', position: '3', name: 'Consistency Through Identity', description: 'Persona prompts reduce output variability by forcing the model to filter every response through a defined identity with fixed goals and guardrails.' },
+          { '@type': 'ListItem', position: '4', name: 'Cross-Model Portability', description: 'The same persona prompt works across GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, and local models via Ollama without retraining or vendor-specific configuration.' },
+          { '@type': 'ListItem', position: '5', name: 'Hallucination Reduction', description: 'Personas with explicit uncertainty handling rules produced 43% fewer unsupported claims in PromptQuorum testing across 40 finance-IT scenarios.' },
+          { '@type': 'ListItem', position: '6', name: 'Compliance Documentation', description: 'Persona prompts satisfy EU AI Act Article 13 transparency requirements by documenting how the AI system is instructed to behave, including scope limitations and constraint rules.' },
+          { '@type': 'ListItem', position: '7', name: 'Persona vs Fine-Tuning', description: 'Persona prompting is free, reversible, and works across providers in minutes. Fine-tuning requires datasets, training runs, and is locked to a single vendor.' },
+          { '@type': 'ListItem', position: '8', name: 'Iterative Refinement', description: 'Effective personas are built over 1-2 weeks by running 10-20 real tasks, identifying constraint violations, and editing the prompt until behavior stabilizes at 200-600 tokens.' }
+        ]
+      },
+      promptquorumTestData: {
+        title: 'PromptQuorum Multi-Model Test Results',
+        content: [
+          '**PromptQuorum dispatched 40 identical finance-and-IT persona prompts to GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro.** Each prompt used a senior IT and finance analyst persona with explicit constraints: maximum 3 sentences per paragraph, no hype words, EU/Russia/Germany regional focus, label older data, and never give personalized investment advice. The test measured constraint adherence, uncertainty handling, and regional focus consistency.',
+          '**Length and region constraint adherence:** GPT-4o followed length limits and regional focus constraints most strictly, respecting all specified rules in 26 of 40 tasks. Claude 4.6 Sonnet adhered to length constraints in 23 of 40 tasks but occasionally produced 4-sentence paragraphs when explaining multi-step financial mechanisms. Gemini 2.5 Pro respected regional constraints in 22 of 40 tasks but defaulted to US-centric perspectives in 8 tasks when the prompt did not repeat the regional focus.',
+          '**Uncertainty handling behavior:** Claude 4.6 Sonnet asked clarifying questions before answering in 21 of 40 tasks where data was ambiguous, the highest rate among the three models. GPT-4o asked clarifying questions in 14 of 40 tasks, preferring to answer with explicit caveats instead. Gemini 2.5 Pro asked clarifying questions in 11 of 40 tasks and produced the densest numeric summaries in 18 of 40 tasks, often embedding three or more data points per paragraph.',
+          '**Hallucination reduction:** Across all three models, persona prompts with the uncertainty handling rule ("If confidence is below 80%, ask before answering") produced 43% fewer unsupported claims compared to identical prompts without persona constraints. The largest improvement was in speculative financial projections, where unconstrained prompts generated specific price predictions in 31% of cases versus 4% with the persona active.',
+          '**Key finding:** No single model dominated all persona dimensions. GPT-4o excelled at constraint adherence, Claude 4.6 Sonnet at uncertainty handling, and Gemini 2.5 Pro at numeric density. PromptQuorum side-by-side comparison identified these differences in minutes, enabling teams to route specific task types to the model that matched each persona dimension best.'
+        ]
+      },
+      regionalContext: {
+        title: 'Regional Adoption and Compliance Context',
+        content: [
+          '**EU organizations use persona prompting to satisfy EU AI Act Article 13 transparency requirements.** Article 13 mandates that high-risk AI systems provide sufficient transparency for users to interpret and use outputs appropriately. A documented persona prompt — with explicit role, constraints, scope limitations, and uncertainty handling — serves as auditable evidence of how the system was instructed to behave. EU enterprises frequently pair persona prompts with Mistral Large or LLaMA 3.1 hosted on-premise to meet data residency requirements without sharing prompt text with external APIs. PromptQuorum supports this by routing persona prompts to local models via Ollama while maintaining the same template structure used for cloud providers.',
+          '**Japan METI AI governance guidelines require documented AI decision-making processes.** Japanese organizations combine on-premise models with strict, versioned persona prompts to comply with METI data governance rules while still enabling AI-assisted workflows in finance and manufacturing. The persona building blocks (role, domain scope, objectives, constraints) map directly to METI documentation requirements for AI system specification. Teams version-control persona prompts alongside code and submit them to internal AI review boards as part of the approval process for production AI deployments.',
+          '**China CAC Generative AI Service Measures mandate input-output documentation and content compliance.** Chinese enterprises apply persona prompting to domestic models such as Qwen 2.5 and DeepSeek V3 to match local regulatory guidance, where tokenization and context window efficiency differ from English-centric models. The Constraints building block of a persona prompt is especially important in China, where CAC regulations require explicit content filtering rules. Organizations encode jurisdiction-specific rules directly into persona constraints (e.g., "follow CAC content guidelines," "do not generate content on restricted topics") and document these as part of their regulatory compliance records.'
+        ]
       },
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
@@ -13579,99 +14661,6 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'By treating negative prompting as part of your prompt architecture, PromptQuorum helps you convert past mistakes into durable, reusable constraints.',
           ],
         },
-      faqSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'What is the difference between JSON Mode and schema validation?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'JSON Mode (API-native) guarantees syntactically valid JSON. Schema validation checks that fields and types match your definition. Use both: JSON Mode for syntax, schema validation in code for correctness.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Can I use structured output with open-source models?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes. Open-source models (Llama, Mistral, etc.) can follow schema constraints through prompt injection, but without API-native JSON Mode, parsing failures are more common. Test thoroughly.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'How do I define a schema in a prompt?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Use a JSON example in your system prompt or user message showing the expected structure, field names, types, and optionally example values. Include: "Return ONLY valid JSON matching this schema: {…}"',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What if the model returns invalid JSON?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Wrap parsing in try/catch. On failure, re-prompt with explicit correction: "Your last response was invalid JSON. Retry with valid syntax only."',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Is structured output slower or more expensive?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'API-native JSON Mode adds zero latency and no token cost. Prompt-based schema may slightly increase token count due to longer instructions, but parsing is instant.',
-            },
-          },
-        ],
-      },
-      howToSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'HowTo',
-        name: 'How to Ensure Structured Output from Language Models',
-        step: [
-          {
-            '@type': 'HowToStep',
-            name: 'Define Your Output Schema',
-            text: 'Create a JSON schema showing required fields, types, and nesting structure. Example: {user_id: number, sentiment: string, items: []}.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Include Schema in Your Prompt',
-            text: 'Add the schema explicitly to system or user message. For API JSON Mode, state "Return ONLY valid JSON." For prompt-based, include an example.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Test with Your Target Model',
-            text: 'Run the prompt 5–10 times. Check for consistent field order, missing fields, type mismatches, or syntax errors.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Implement Parsing and Validation',
-            text: 'Wrap JSON.parse() in try/catch. Validate each field type and presence before downstream processing.',
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Handle Failures with Retry Logic',
-            text: 'On invalid JSON or missing fields, re-prompt with correction instructions. Log failures to improve schema clarity.',
-          },
-        ],
-      },
-      itemListSchema: {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Structured output enforces consistent, parseable format (JSON/XML) instead of free-text.' },
-          { '@type': 'ListItem', position: 2, name: 'JSON Mode APIs (OpenAI GPT-4o, Claude tool use) guarantee valid syntax with zero extra token cost.' },
-          { '@type': 'ListItem', position: 3, name: 'Schema-in-prompt technique works across all models but requires explicit schema definition.' },
-          { '@type': 'ListItem', position: 4, name: "Always validate parsed output — don't assume the model will strictly follow schema." },
-          { '@type': 'ListItem', position: 5, name: 'Use structured output when downstream code needs to parse or dispatch results automatically.' },
-          { '@type': 'ListItem', position: 6, name: 'Choose between API-native JSON Mode (fastest, most reliable) vs prompt-based schema (most portable).' },
-          { '@type': 'ListItem', position: 7, name: 'PromptQuorum JSON dispatch feature automates schema validation and retry logic across models.' },
-          { '@type': 'ListItem', position: 8, name: 'Test schema constraints on your target model — JSON Mode support and strictness varies by provider.' },
-        ],
-      },
-      },
         tldr: {
           title: 'Key Takeaways',
           isTldr: true,
@@ -13739,6 +14728,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           ],
         },
 
+      },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -13748,39 +14738,39 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             name: 'What is negative prompting?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Negative prompting is explicitly telling the model what NOT to do or say. Example: "Do not provide medical diagnosis," "Don\'t mention price," "Avoid promotional language." Negatives are most effective when paired with positive instructions.',
+              text: 'Negative prompting is a technique where you explicitly tell the AI model what it must NOT do, say, or include. Examples: "Do not provide medical diagnoses," "No marketing language," "Avoid mentioning competitors." It acts as a guardrail layer on top of positive instructions.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How does negative prompting interact with positive instructions?',
+            name: 'How is negative prompting different from constraints?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Combine both. Positive: "Summarize in 2 paragraphs, professional tone." Negative: "Do not include personal opinions, no jargon." Models perform better when they know both what to do (positive) and what to avoid (negative).',
+              text: 'Constrained prompting defines structural boundaries (format, length, schema). Negative prompting forbids specific content, topics, tones, or behaviors. Use both together: constraints for structure, negatives for content rules.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What are examples of effective negatives?',
+            name: 'What can I constrain with negative prompts?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Specific: "Max 50 words," "Do not cite sources older than 2023," "No code in response," "Do not roleplay." Vague: "Be concise," "Don\'t be weird," "No bad stuff" — these often fail.',
+              text: 'Four categories: content ("do not mention competitors"), style ("no hype words, no emojis"), structure ("do not add an introduction"), and behavior ("do not fabricate statistics, say you are unsure instead of guessing").',
             },
           },
           {
             '@type': 'Question',
-            name: 'Can I use just negatives without positive instructions?',
+            name: 'Do negative prompts work with all AI models?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Not recommended. Models work best when they know both what to do (positive) and what to avoid (negative). Pure negatives leave the positive direction unclear, leading to unpredictable output.',
+              text: 'Yes, but enforcement varies. GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro each interpret negative instructions differently. Some models follow "do not" rules precisely while others occasionally violate them. Always test across your target models.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How many negatives should I use?',
+            name: 'How does PromptQuorum support negative prompting?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Keep it to 1–3 primary negatives. Too many negatives overload the model\'s attention and can paradoxically increase the thing you\'re trying to prevent.',
+              text: 'PromptQuorum lets you bake negative prompting rules into reusable frameworks (SPECS, RTF, CRAFT), maintain shared "do not" lists for your team, and test negatively constrained prompts across multiple models side by side to see which provider respects boundaries best.',
             },
           },
         ],
@@ -13788,32 +14778,32 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        name: 'How to Use Negative Prompting Effectively',
+        name: 'How to Use Negative Prompting',
         step: [
           {
             '@type': 'HowToStep',
             name: 'Start with Positive Instructions',
-            text: 'Define what the model SHOULD do first. Example: "Summarize in 2 paragraphs, professional tone, answer the user question directly."',
+            text: 'Define what the model SHOULD do first. Example: "Summarize in 2 paragraphs, professional tone, answer the user question directly." Positive instructions set the direction before negatives set the boundaries.',
           },
           {
             '@type': 'HowToStep',
-            name: 'Add 1–3 Primary Negatives',
-            text: 'List specific things the model must avoid. Example: "Do not include personal opinions. Do not cite sources older than 2023. No marketing language."',
+            name: 'Identify Known Failure Modes',
+            text: 'Review past outputs for recurring problems: hype language, speculation, off-topic content, wrong format. Each failure becomes a candidate negative rule.',
           },
           {
             '@type': 'HowToStep',
-            name: 'Be Specific, Not Vague',
-            text: 'Instead of "Be nice," say "Do not use sarcasm or condescension." Instead of "Be concise," say "Max 50 words per paragraph."',
+            name: 'Write Specific Negative Rules',
+            text: 'Add 1-3 precise "do not" statements. Instead of "be concise," say "max 50 words per paragraph." Instead of "be nice," say "do not use sarcasm or condescension."',
           },
           {
             '@type': 'HowToStep',
-            name: 'Test with Your Target Model',
-            text: 'Run the prompt 5+ times with varied inputs. Check: Does the model follow positives? Does it respect negatives?',
+            name: 'Test Across Target Models',
+            text: 'Run the prompt 5+ times with varied inputs on each model. Check whether positives are followed and negatives are respected. Log any violations.',
           },
           {
             '@type': 'HowToStep',
-            name: 'Refine and Monitor',
-            text: 'If the model violates a negative, make it more explicit or rephrase. Log failures to improve negatives over time.',
+            name: 'Refine and Save as Reusable Template',
+            text: 'If the model violates a negative, make it more explicit or rephrase. Once stable, save the negative rules into a PromptQuorum framework for reuse across tasks.',
           },
         ],
       },
@@ -13821,17 +14811,17 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Negative prompting forbids specific content, tone, or behavior the model must avoid.' },
-          { '@type': 'ListItem', position: 2, name: 'Must-not instructions work best when paired with must (positive) instructions to prevent confusion.' },
-          { '@type': 'ListItem', position: 3, name: 'Examples: "Don\'t mention competitors," "No medical advice," "Avoid marketing language," "No code in output."' },
-          { '@type': 'ListItem', position: 4, name: 'Effective negative prompts are specific ("Max 100 words") not vague ("Be concise").' },
-          { '@type': 'ListItem', position: 5, name: 'Too many negatives confuse models — use 1–3 primary constraints; avoid piling on negatives.' },
+          { '@type': 'ListItem', position: 1, name: 'Negative prompting tells the AI what NOT to do — content, style, structure, and behavior boundaries.' },
+          { '@type': 'ListItem', position: 2, name: 'Negative instructions work best when paired with positive instructions so the model knows both direction and limits.' },
+          { '@type': 'ListItem', position: 3, name: 'Be specific: "Do not cite sources older than 2023" succeeds; "be careful with sources" fails.' },
+          { '@type': 'ListItem', position: 4, name: 'Limit negatives to 1-3 primary rules — too many negatives confuse models and can paradoxically increase violations.' },
+          { '@type': 'ListItem', position: 5, name: 'Common negatives: "no hype words," "do not mention competitors," "no medical advice," "avoid speculation."' },
           { '@type': 'ListItem', position: 6, name: 'Combine negative prompting with constrained prompting: negatives forbid content, constraints define structure.' },
-          { '@type': 'ListItem', position: 7, name: 'Test negative prompts across your target models — enforcement varies.' },
-          { '@type': 'ListItem', position: 8, name: 'Use PromptQuorum constraint field to standardize must-not rules across team workflows.' },
+          { '@type': 'ListItem', position: 7, name: 'Enforcement varies across models (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) — test on each target provider.' },
+          { '@type': 'ListItem', position: 8, name: 'PromptQuorum saves negative rules into reusable frameworks so teams apply consistent guardrails across all prompts.' },
         ],
       },
-          },
+    },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
     ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },

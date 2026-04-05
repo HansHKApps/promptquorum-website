@@ -75,7 +75,7 @@ export function GET() {
       <guid isPermaLink="true">${BASE}/blog/${slug}</guid>
       <description><![CDATA[${description}]]></description>
       <pubDate>${pubDate}</pubDate>
-      <author>promptquorum@gmail.com (Hans Kuepper)</author>
+      <author>hello@promptquorum.com (Hans Kuepper)</author>
     </item>`).join('')
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -85,8 +85,8 @@ export function GET() {
     <link>${BASE}/blog</link>
     <description>Practical guides on prompt engineering, multi-model AI comparison, consensus scoring, and privacy-first AI workflows.</description>
     <language>en</language>
-    <managingEditor>promptquorum@gmail.com (Hans Kuepper)</managingEditor>
-    <webMaster>promptquorum@gmail.com (Hans Kuepper)</webMaster>
+    <managingEditor>hello@promptquorum.com (Hans Kuepper)</managingEditor>
+    <webMaster>hello@promptquorum.com (Hans Kuepper)</webMaster>
     <lastBuildDate>Sat, 22 Mar 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="${BASE}/feed.xml" rel="self" type="application/rss+xml"/>
     <image>

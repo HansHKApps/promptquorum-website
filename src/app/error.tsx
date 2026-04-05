@@ -45,7 +45,7 @@ export default function Error({
 
         <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
           <Link href="/" className="text-primary hover:text-primary/80 font-medium text-sm">← Home</Link>
-          <a href="mailto:promptquorum@gmail.com" className="text-primary hover:text-primary/80 font-medium text-sm">Report this issue</a>
+          <a href="mailto:hello@promptquorum.com" className="text-primary hover:text-primary/80 font-medium text-sm">Report this issue</a>
         </div>
 
       </div>

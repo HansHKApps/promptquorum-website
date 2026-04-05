@@ -490,7 +490,7 @@ export function LandingPageServer({ initialLang }: { initialLang?: import('@/hoo
               <span>•</span>
               <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
               <span>•</span>
-              <a href="mailto:promptquorum@gmail.com" className="hover:text-primary transition-colors">promptquorum@gmail.com</a>
+              <a href="mailto:hello@promptquorum.com" className="hover:text-primary transition-colors">hello@promptquorum.com</a>
             </div>
           </div>
         </div>

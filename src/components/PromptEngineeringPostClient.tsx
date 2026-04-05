@@ -280,6 +280,8 @@ const EXTERNAL_CITATIONS: Record<string, string> = {
   'Google Cloud – Prompt Engineering for AI Guide': 'https://cloud.google.com/discover/what-is-prompt-engineering',
   'Prompt engineering as a new 21st century skill – Frontiers': 'https://www.frontiersin.org/articles/10.3389/feduc.2023.1209897/full',
   'McKinsey 2024 State of AI': 'https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024',
+  'Prompt Engineering from 2020 to 2025 – AI Supremacy': 'https://www.ai-supremacy.com/p/prompt-engineering-from-2020-to-2025',
+  'The Evolution of Prompt Engineering to Context Design – 2026': 'https://www.sdggroup.com/en-ae/insights/blog/the-evolution-of-prompt-engineering-to-context-design-in-2026',
 }
 
 // Render inline link placeholders like [Techniques: Chain-of-Thought Prompting]
