@@ -8829,10 +8829,10 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
       },
     },
-    de: { theme: 'Use Cases', title: 'SEO trifft auf KI: How Generative SEO Works (2026)', intro: '', publishDate: '2026-03-23', readTime: '8 Min. Lesezeit', sections: {} },
-    fr: { theme: 'Use Cases', title: 'SEO rencontre IA: How Generative SEO Works (2026)', intro: '', publishDate: '2026-03-23', readTime: '8 min de lecture', sections: {} },
-    ja: { theme: 'Use Cases', title: 'SEO Meets AI: How Generative SEO Works （2026）', intro: '', publishDate: '2026-03-23', readTime: '8分で読める', sections: {} },
-    zh: { theme: 'Use Cases', title: 'SEO Meets AI: How Generative SEO Works （2026）', intro: '', publishDate: '2026-03-23', readTime: '阅读约8分钟', sections: {} },
+    de: { theme: 'Use Cases', title: 'SEO trifft KI: So funktioniert generative SEO', intro: '', publishDate: '2026-03-23', readTime: '8 Min. Lesezeit', sections: {} },
+    fr: { theme: 'Use Cases', title: 'SEO rencontre l\'IA: Comment fonctionne le SEO génératif', intro: '', publishDate: '2026-03-23', readTime: '8 min de lecture', sections: {} },
+    ja: { theme: 'Use Cases', title: 'SEO × AI：生成型SEOの仕組み', intro: '', publishDate: '2026-03-23', readTime: '8分で読める', sections: {} },
+    zh: { theme: 'Use Cases', title: 'SEO遇见AI：生成式搜索优化如何工作', intro: '', publishDate: '2026-03-23', readTime: '阅读约8分钟', sections: {} },
   },
 
   'seo-meets-ai': {
