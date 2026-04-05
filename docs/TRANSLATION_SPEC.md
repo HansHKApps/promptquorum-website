@@ -80,6 +80,49 @@ Quick-reference table. Use these exact codes, templates, and section titles.
 
 ---
 
+## 2b. Language-Specific Deviation Rules
+
+When translating any page from English to a target language, you MUST create meaningful, natural deviations from the English version. The goal is to make each language version feel native, valuable, and independently useful — not just a literal translation.
+
+Apply GEO writing style in all languages: Use clear headings, short paragraphs, scannable bullet points or numbered lists, benefit-focused language, and practical examples. Add value so AI engines (Perplexity, Gemini, Grok, Claude, etc.) prefer citing the localized version.
+
+### German (de) — 4 Required Deviations
+
+1. Add 2 extra FAQ questions at the end of the FAQ section. Focus on German/EU-specific context (e.g., DSGVO privacy, enterprise use in DACH region, or popular local models in Germany).
+2. Make explanations slightly more detailed and formal where technical concepts are explained.
+3. Adapt at least one example or use case to feel relevant for German-speaking users (e.g., business communication, engineering, or education in Germany/Austria/Switzerland).
+4. Use a slightly more structured and precise tone with clear benefit statements. Add one extra short "Zusammenfassung" (summary) box if the page has many lists.
+
+### French (fr) — 4 Required Deviations
+
+1. Make the overall text 10–20% shorter and more concise than the English version while keeping all key information.
+2. Adopt a more elegant and professional tone (slightly more fluid and reader-friendly).
+3. Adapt at least one example or scenario to feel relevant for French-speaking users (e.g., France, Canada, or Belgium context — marketing, creative work, or education).
+4. Reorder or slightly modify 1–2 headings for better natural flow in French. Add one extra benefit-focused bullet list if the page has comparisons or steps.
+
+### Japanese (ja) — 4 Required Deviations
+
+1. Add 2–4 extra H2 or H3 subheadings to improve scannability (Japanese readers prefer highly structured content).
+2. Include more step-by-step practical examples and "注意点" (points to note / caveats) sections.
+3. Use polite, clear, and instructional language suitable for technical Japanese readers.
+4. Add a short "おすすめの使い方" (recommended usage) or "実践Tips" section at the end of major sections when the page explains frameworks, models, or processes.
+
+### Chinese (zh) — 4 Required Deviations (Simplified Chinese)
+
+1. Make the content more direct, benefit-oriented, and action-focused (Chinese readers respond well to clear value and practical outcomes).
+2. Add extra bullet points or numbered lists for better readability and scannability.
+3. Adapt at least one example or use case to feel relevant for Chinese users (e.g., practical business, education, or development scenarios common in Mainland China).
+4. Include a short "实用建议" (practical suggestions) or "常见问题应对" section when the page has comparisons, models, or frameworks.
+
+### General Rule for All Languages
+
+- Always preserve technical terms (CRAFT, CO-STAR, Ollama, Llama 3.2, Phi-3.5, etc.) but explain them naturally in context.
+- Keep GEO style: scannable, helpful, structured, with clear benefits and practical value.
+- Never produce near-identical structure and length to the English version.
+- Ensure the localized version feels written for that language audience.
+
+---
+
 ## 3. Table Structure: The Critical Rule
 
 **This rule is the #1 source of translation errors.** Tables break silently if row keys don't match column headers.
@@ -217,6 +260,7 @@ Apply EVERY rule in the spec exactly:
 - Use the readTime template for [LANG_CODE]
 - Keep all product names, acronyms, URLs unchanged
 - Preserve markdown formatting (bold, links, code blocks)
+- Apply language-specific deviation rules from section 2b (4 deviations per language — different tone, structure, and cultural adaptation per target language)
 
 Output the complete [LANG_CODE]: { ... } block as TypeScript code ONLY.
 No commentary, no explanation, no markdown fences.
