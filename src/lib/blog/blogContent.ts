@@ -5234,6 +5234,8 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       intro: 'The LLM Prompt Tools market reached $456M in 2024 (projected $1,018M by 2031). Independent comparison of 17 tools across 6 groups — pricing, features, and acquisition data. March 2026.',
       publishDate: 'Published March 2026',
       readTime: '15 min read',
+      metaDescription: 'Compare frontier AI models (GPT-5.x, Claude 4.6, Gemini 3 Pro, DeepSeek V4) across reasoning, cost, speed, multimodal, deployment. Includes 170+ evaluation prompts. Free beta — April 2026.',
+      educationalLevel: 'Intermediate',
       sections: {
         downloadReport: {
           downloadCta: {
@@ -5489,9 +5491,11 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
     en: {
       category: 'AI Model Comparison',
       title: 'Frontier AI Models and Prompt Library: GPT-5.x, Claude 4.6, Gemini 3 Pro, and Beyond',
-      intro: 'Frontier AI models represent the cutting edge of large language model development. This guide compares GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 across reasoning, cost, speed, and real-world task performance — with 170+ evaluation prompts for your own testing.',
+      intro: 'As of April 2026, frontier AI models represent the cutting edge of large language model development. This guide compares GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 across reasoning, cost, speed, and real-world task performance — with 170+ evaluation prompts for your own testing.',
       publishDate: 'Published March 24, 2026',
       readTime: '15 min read',
+      metaDescription: 'Compare frontier AI models (GPT-5.x, Claude 4.6, Gemini 3 Pro, DeepSeek V4) across reasoning, cost, speed, multimodal, deployment. Includes 170+ evaluation prompts. Free beta — April 2026.',
+      educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
           title: 'What Are Frontier AI Models?',
@@ -5678,17 +5682,15 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             '**Safety & Alignment (15 prompts)** — Edge cases, refusal behavior, jailbreak resistance.',
           ],
         },
-        faq: {
+        faqSection: {
           title: 'Frequently Asked Questions',
-          content: [
-            'What is the best frontier model in March 2026?',
-            'There is no universally "best" model — the choice depends on your task. GPT-5.x excels at reasoning and code. Claude 4.6 Sonnet dominates long-context analysis. Gemini 3 Pro handles multimodal tasks. Use PromptQuorum to test multiple models on your specific task and measure quality, speed, and cost.',
-            'Which frontier model is cheapest?',
-            'DeepSeek V4 at $0.27/$1.1 per 1M tokens is 60–70% cheaper than GPT-5.x ($20/$80) and Claude 4.6 Sonnet ($3/$15). Llama 4 is free (open-source, local deployment). Trade-off: lower cost models sometimes have lower quality for specialized reasoning tasks.',
-            'What is the difference between GPT-5.x and Claude 4.6 Sonnet?',
-            'GPT-5.x: Excels at reasoning, code, analysis. 200k context. $20/$80 pricing. Multi-modal (image, video). Claude 4.6 Sonnet: Stronger at long-context tasks, research. 200k context. Cheaper at $3/$15. Excellent safety alignment. No video support. For most tasks, test both — results vary by domain.',
-            'Which frontier model supports local/offline deployment?',
-            'Llama 4 (open-source, runs via Ollama, LM Studio, Jan AI) supports full local deployment. All other frontier models require cloud API access. If privacy and data residency are critical, Llama 4 is the only frontier option.',
+          isTldr: false,
+          faqs: [
+            { q: 'What is the best frontier model in March 2026?', a: 'There is no universally "best" model — the choice depends on your task. GPT-5.x excels at reasoning and code. Claude 4.6 Sonnet dominates long-context analysis. Gemini 3 Pro handles multimodal tasks. Use PromptQuorum to test multiple models on your specific task and measure quality, speed, and cost.' },
+            { q: 'Which frontier model is cheapest?', a: 'DeepSeek V4 at $0.27/$1.1 per 1M tokens is 60–70% cheaper than GPT-5.x ($20/$80) and Claude 4.6 Sonnet ($3/$15). Llama 4 is free (open-source, local deployment). Trade-off: lower cost models sometimes have lower quality for specialized reasoning tasks.' },
+            { q: 'What is the difference between GPT-5.x and Claude 4.6 Sonnet?', a: 'GPT-5.x: Excels at reasoning, code, analysis. 200k context. $20/$80 pricing. Multi-modal (image, video). Claude 4.6 Sonnet: Stronger at long-context tasks, research. 200k context. Cheaper at $3/$15. Excellent safety alignment. No video support. For most tasks, test both — results vary by domain.' },
+            { q: 'Which frontier model supports local/offline deployment?', a: 'Llama 4 (open-source, runs via Ollama, LM Studio, Jan AI) supports full local deployment. All other frontier models require cloud API access. If privacy and data residency are critical, Llama 4 is the only frontier option.' },
+            { q: 'Should I use the same frontier model for all tasks?', a: 'No — different models excel at different tasks. Use PromptQuorum to dispatch your prompt to multiple frontier models and compare outputs. Cost, speed, and quality all vary by task. Testing your actual workload is more reliable than benchmarks.' },
           ],
         },
         relatedReading: {
@@ -5697,26 +5699,19 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
             'Continue your research on AI models and prompt optimization:',
           ],
           items: [
-            '[Compare AI Models Side-by-Side](/blog/ai-model-comparison) — Multi-model comparison methodology and decision framework',
+            '[AI Model Comparison Guide](/prompt-engineering/gpt-claude-gemini-which-model) — Multi-model comparison methodology and decision framework',
             '[What Is AI Consensus Scoring?](/blog/what-is-ai-consensus-scoring) — How PromptQuorum aggregates responses across models',
-            '[Prompt Optimization Techniques](/blog/prompt-optimization) — Structured refinement methods that improve outputs across all models',
+            '[Prompt Optimization Best Practices](/prompt-engineering/fundamentals-of-prompt-optimization) — Structured refinement methods that improve outputs across all models',
             '[Prompt Engineering Hub](/prompt-engineering) — 50+ articles on frameworks, techniques, and optimization strategies',
+            '[Zero-Shot vs Few-Shot Prompting](/prompt-engineering/zero-shot-vs-few-shot) — When to use examples vs direct instructions',
           ],
         },
-        resources: {
-          title: 'Official Model Documentation',
-          content: [
-            'Verify specifications and pricing directly from vendors:',
-          ],
+        sources: {
           items: [
-            'OpenAI GPT-5.x documentation — https://platform.openai.com/docs/',
-            'Anthropic Claude 4.6 documentation — https://docs.anthropic.com/',
-            'Google Gemini 3 Pro documentation — https://ai.google.dev/',
-            'Meta Llama 4 repository — https://github.com/meta-llama/llama',
-            'DeepSeek V4 API — https://platform.deepseek.com/',
-            'Mistral Large 3 documentation — https://docs.mistral.ai/',
-            'Alibaba Qwen3 documentation — https://github.com/QwenLM/Qwen',
-            'xAI Grok 4.1 documentation — https://x.ai/api/',
+            'OpenAI GPT-5.x — https://platform.openai.com/docs/',
+            'Anthropic Claude 4.6 Sonnet — https://docs.anthropic.com/',
+            'Google Gemini 3 Pro — https://ai.google.dev/',
+            'Meta Llama 4 — https://github.com/meta-llama/llama',
           ],
         },
       },
