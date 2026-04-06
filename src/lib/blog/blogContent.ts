@@ -6115,8 +6115,8 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       title: 'What Is AI Consensus Scoring? How PromptQuorum Detects Agreement Across Models',
       intro: 'Consensus scoring analyses responses from multiple AI models and measures where they agree, where they diverge, and what that pattern tells you about the reliability of an answer.',
       publishDate: 'Published March 17, 2026',
-      seoTitle: 'What Is AI Consensus Scoring & Why It Reduces Hallucinations',
-      metaDescription: 'Learn how consensus scoring works and why it produces more reliable answers than single-model prompting.',
+      seoTitle: 'AI Consensus Scoring: Multi-Model Agreement (2026)',
+      metaDescription: 'Consensus scoring explained: multi-model voting reduces hallucinations. Use PromptQuorum to compare models and trust reliable AI outputs.',
       readTime: '6 min read',
       sections: {
         problem: {
