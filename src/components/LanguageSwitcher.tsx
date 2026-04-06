@@ -4,8 +4,12 @@ import { useState } from 'react'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '../translations'
 
-export function LanguageSwitcher() {
-  const currentLang = useLang() as Language
+interface LanguageSwitcherProps {
+  initialLang?: Language
+}
+
+export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
+  const currentLang = useLang(initialLang) as Language
   const [isOpen, setIsOpen] = useState(false)
 
   const languages: { code: Language; name: string; flag: string }[] = [

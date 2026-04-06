@@ -5,6 +5,7 @@ import { LanguageSwitcherWrapper } from './LanguageSwitcherWrapper'
 import { useWaitlist } from '@/context/WaitlistContext'
 import { useState } from 'react'
 import { useLang } from '@/hooks/useLang'
+import type { Language } from '../translations'
 
 const NAV_LABELS: Record<string, Record<string, string>> = {
   compare: {
@@ -112,7 +113,7 @@ function HeaderInner() {
 
         {/* Language Switcher + Mobile Menu */}
         <div className="flex items-center gap-3">
-          <LanguageSwitcherWrapper />
+          <LanguageSwitcherWrapper initialLang={lang as Language} />
 
           {/* Mobile Menu Button */}
           <button

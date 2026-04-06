@@ -1,7 +1,12 @@
 'use client'
 
 import { LanguageSwitcher } from './LanguageSwitcher'
+import type { Language } from '../translations'
 
-export function LanguageSwitcherWrapper() {
-  return <LanguageSwitcher />
+interface LanguageSwitcherWrapperProps {
+  initialLang?: Language
+}
+
+export function LanguageSwitcherWrapper({ initialLang }: LanguageSwitcherWrapperProps) {
+  return <LanguageSwitcher initialLang={initialLang} />
 }
