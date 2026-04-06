@@ -28899,7 +28899,11 @@ zh: {
         },
 
     },
-zh: {
+zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成功的步骤', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+  },
+
+  'prompt-chaining-old-zh-broken': {
+    zh: {
         category: '提示词工程',
         title: '提示词链接完全指南：多步骤AI工作流的5种方法（2026版）',
         intro: '学习如何通过链接提示词来构建复杂的AI工作流。将复杂任务分解为可靠的多步骤序列，获得更高质量、可重复的结果。',
@@ -29252,78 +29256,6 @@ zh: {
               },
             ],
           },
-
-          schema: {
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: '提示词链接完全指南：多步骤AI工作流的5种方法（2026版）',
-            description: '掌握提示词链接技术：将复杂AI任务分解为多步骤工作流。学习5种方法、最佳实践和工业界实例。提高输出质量和可靠性。',
-            image: 'https://promptquorum.ai/og/prompt-chaining-zh.png',
-            author: {
-              '@type': 'Organization',
-              name: 'PromptQuorum',
-            },
-            datePublished: '2026-04-01',
-            dateModified: '2026-04-06',
-            publisher: {
-              '@type': 'Organization',
-              name: 'PromptQuorum',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://promptquorum.ai/logo.svg',
-              },
-            },
-            educationalLevel: 'Intermediate',
-            articleBody: '提示词链接是一种将复杂的AI任务分解为一系列互相连接的提示词的技术...',
-            keywords: ['提示词链接', 'AI工作流', '提示工程', '多步骤提示', 'PromptQuorum', 'LLM'],
-          },
-
-          faqSchema: {
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: '提示词链接与单个复杂提示有什么区别？',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: '单个复杂提示要求模型一次处理所有任务，容易出错且难以调试。链接提示词将任务分解为小步骤，每步都有明确的输入和输出。这提高了可靠性和可维护性。',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: '链接提示词会增加成本吗？',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: '多个提示意味着多次API调用，可能增加成本。但通过聪明的设计（并行步骤、小模型用于简单任务、缓存策略），往往能抵消这一成本。质量提升也能减少重做次数，最终降低总体成本。',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: '多少步骤才算"太多"？',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: '没有固定规则。5-7步通常是平衡点。超过10步，考虑是否可以合并。关键是每一步都产生明确的价值。',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: '如果某一步失败怎么办？',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: '这取决于步骤的重要性。关键步骤应该有重试逻辑或备选路径。非关键步骤可以跳过，使用默认值继续。设计时明确定义每个步骤的失败处理。',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: '是否可以混合不同的AI模型？',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: '完全可以。不同步骤适合不同模型。推理任务用Claude 4.6，代码生成用GPT-5.x，简单任务用较小模型。混合使用能优化质量和成本。',
-                },
-              },
-            ],
-          },
         },
       },
   },
@@ -29652,6 +29584,10 @@ zh: {
         },
       },
     },
+    de: { theme: 'Techniques', title: 'Persona-Prompting: Geben Sie Ihrer KI eine Rolle', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: { theme: 'Techniques', title: 'Persona Prompting: Donnez un Rôle à Votre IA', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    ja: { theme: 'Techniques', title: 'ペルソナ・プロンプティング：AIに役割を与える', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    zh: { theme: 'Techniques', title: '人物角色提示：给AI分配角色', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
   },
 
   'negative-prompting': {
