@@ -32650,23 +32650,26 @@ fr: {
   'structured-output-json-mode': {
     en: {
       theme: 'Techniques',
-      title: 'Structured Output & JSON Mode: Get AI to Return Usable Data',
-      intro: 'Structured output and JSON mode transform loose language model outputs into reliable, machine-readable formats that integrate seamlessly with databases, APIs, and automation workflows. Learn how to design prompts that enforce valid JSON and predictable schemas—essential for production AI systems.',
+      title: 'Structured Output in LLMs: JSON Mode, Examples, and When to Use It',
+      intro: 'Structured output and JSON mode transform loose language model outputs into reliable, machine-readable formats that integrate seamlessly with databases, APIs, and automation workflows. Learn how to design prompts that enforce valid JSON, compare JSON mode vs function calling vs schema prompting, and decide which method fits your use case.',
       publishDate: '2026-03-26',
       dateModified: '2026-04-05',
       readTime: '10 min read',
-      seoTitle: 'Structured Output & JSON Mode: Guide to Machine-Readable AI Responses',
-      metaDescription: 'Master structured output and JSON mode in prompts. Learn how to design schemas, enforce valid JSON, compare model compliance, and avoid common mistakes in production systems.',
+      seoTitle: 'Structured Output & JSON Mode in LLMs: When to Use, Examples, and Comparison',
+      metaDescription: 'Learn when to use structured output vs JSON mode vs function calling. Compare JSON compliance by model, see real examples, and master schema design for APIs, automation, and data pipelines.',
       educationalLevel: 'Intermediate',
       toc: [
         { label: 'What Structured Output Is', anchor: '#what-structured-output-is' },
         { label: 'What JSON Mode Is', anchor: '#what-json-mode-is' },
         { label: 'Why Structured Output and JSON Mode Matter', anchor: '#why-structured-output-and-json-mode-matter' },
         { label: 'Model Comparison: JSON Compliance by Provider', anchor: '#model-comparison-json-compliance-by-provider' },
+        { label: 'JSON Mode vs Function Calling vs Schema Prompting', anchor: '#json-mode-vs-function-calling-vs-schema-prompting' },
         { label: 'Example: Free Text vs Structured JSON', anchor: '#example-free-text-vs-structured-json' },
         { label: 'Best Practices for Structured Output and JSON Mode', anchor: '#best-practices-for-structured-output-and-json-mode' },
         { label: 'Structured Output in Regulated Environments', anchor: '#structured-output-in-regulated-environments' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'When to Use JSON Mode vs Alternatives', anchor: '#when-to-use-json-mode-vs-alternatives' },
+        { label: 'When Should You Use Structured Output?', anchor: '#when-should-you-use-structured-output' },
         { label: 'How to Use Structured Output and JSON Mode', anchor: '#how-to-use-structured-output-and-json-mode' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Frequently Asked Questions', anchor: '#frequently-asked-questions' },
@@ -32816,6 +32819,11 @@ fr: {
         ],
       },
       sections: {
+        definition: {
+          content: [
+            '**Structured output is a method of forcing language models to return data in a predefined format (such as JSON), enabling reliable parsing, automation, and integration into software systems.** It differs from free-form text by enforcing strict field names, data types, and schemas that downstream tools can process without manual cleanup.',
+          ],
+        },
         keyTakeaways: {
           isTldr: true,
           content: [
@@ -32877,6 +32885,17 @@ fr: {
         debuggingBenefit: {
           content: [
             'They also make prompts easier to debug. If the structure is broken, you know the problem is in the prompt or schema, not in some vague "quality" dimension.',
+          ],
+        },
+        jsonVsFunctionCalling: {
+          title: 'JSON Mode vs Function Calling vs Schema Prompting',
+          content: [
+            '**Three methods exist for getting structured output from LLMs. Each has different strengths and weaknesses:**',
+          ],
+          items: [
+            '**JSON Mode**: Model outputs valid JSON only. Best for: data extraction, classification, summarization. Constraint: limited to output format, no tool execution.',
+            '**Function Calling**: Model selects which function to call and provides arguments in JSON. Best for: API integration, tool use, agentic workflows. Constraint: requires pre-defined function schemas.',
+            '**Schema Prompting**: Explicit instructions + examples asking model to follow a schema. Best for: flexibility, open-source models, custom formats. Constraint: ~80–85% reliability, no API-level guarantee.',
           ],
         },
         example: {
@@ -32947,6 +32966,29 @@ fr: {
             '**Failing to validate output**: Assuming the model will always return valid JSON leads to parsing errors in production. Always validate and handle parse failures gracefully.',
             '**Not handling edge cases**: Fields that might be missing, ambiguous, or out-of-range must have defined fallback behavior (null, empty string, or default value).',
             '**Testing on easy inputs only**: Real-world data is messy. Test your schema on edge cases: incomplete emails, special characters, mixed languages, very long inputs.',
+          ],
+        },
+        whenToUseJsonMode: {
+          title: 'When to Use JSON Mode vs Alternatives',
+          content: [
+            '**Choose JSON mode when you need strict schema enforcement and deterministic output. Avoid it when creativity and open-ended reasoning matter.**',
+          ],
+          items: [
+            '**✓ Use JSON Mode**: Strict schema required, automation pipelines, API integration, data extraction, classification tasks, deterministic outputs, production systems requiring validation.',
+            '**✗ Avoid JSON Mode**: Creative writing, open-ended reasoning, brainstorming, essays, code generation (function calling is better), philosophical questions, narrative content.',
+            '**Alternative: Use Function Calling** when you need tool integration and agentic workflows (model selects which function to call).',
+            '**Alternative: Use Schema Prompting** when you need flexibility, work with open-source models, or don\'t need API-level guarantees.',
+          ],
+        },
+        whenToUseStructuredOutput: {
+          title: 'When Should You Use Structured Output?',
+          content: [
+            '**Structured output shines in three main scenarios. Use it when you need deterministic, machine-readable results:**',
+          ],
+          items: [
+            '**APIs and Integrations**: Plug LLM output directly into downstream systems (databases, CRMs, dashboards). Structured output prevents parsing errors and manual cleanup. Example: extract customer data from emails and write to CRM.',
+            '**Automation and Workflows**: Trigger actions based on model output fields (priority, urgency, category). JSON mode ensures reliable field extraction for conditional logic. Example: route support tickets by urgency level.',
+            '**Data Pipelines**: Process bulk data (documents, emails, logs) at scale. Consistent schemas enable batch processing, validation, and error handling. Example: extract metadata from 10,000 research papers into a searchable database.',
           ],
         },
         howToStart: {
