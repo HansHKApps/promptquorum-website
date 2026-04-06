@@ -25748,24 +25748,34 @@ zh: {
     fr: {
   theme: 'Fundamentals',
   title: 'Glossaire de l\'ingénierie de prompt : 500 termes essentiels',
-  intro: 'Définitions concises des 500 termes les plus importants de l\'ingénierie de prompt — des tokens et fenêtres de contexte à l\'orchestration d\'agents, RAG et métriques d\'évaluation.',
+  intro: 'Référence complète des 500 termes les plus importants en ingénierie de prompt — de la théorie des tokens aux architectures d\'agents et métriques d\'évaluation — rédigée pour développeurs et praticiens IA francophones.',
   publishDate: '2026-03-28',
+  seoTitle: 'Glossaire ingénierie de prompt 2026 : 500+ termes en français',
+  metaDescription: 'Glossaire A–Z complet de l\'ingénierie de prompt et de l\'IA — définitions claires, exemples pratiques, et ressources pour développeurs et praticiens français.',
   readTime: '12 min de lecture',
   sections: {
     intro: {
       content: [
-        '**Ce glossaire couvre les 500 termes les plus importants en ingénierie de prompt, des concepts fondamentaux à l\'orchestration d\'agents et aux frameworks d\'évaluation.** Chaque entrée inclut une définition pratique concise écrite pour les développeurs et praticiens IA, plus un lien de référence principal pour une lecture plus approfondie.',
-        'Les termes sont organisés en six groupes : Concepts fondamentaux de prompting, Agents & Orchestration, Sécurité & Alignement, Évaluation & Testing, Techniques avancées et Métriques & Production. Utilisez les tables consultables comme référence rapide ou suivez les liens pour les détails d\'implémentation.',
+        '**Ce glossaire couvre les 500 termes les plus importants en ingénierie de prompt**, depuis les concepts fondamentaux jusqu\'aux patterns multi-agents 2026. Chaque entrée propose une définition pratique rigoureuse et des références primaires pour approfondir.',
+        'Les termes sont organisés en six catégories : **Concepts fondamentaux**, **Agents & Orchestration**, **Sécurité & Alignement**, **Évaluation & Testing**, **Techniques avancées** et **Métriques & Production**. Utilisez les tables comme référence rapide ou explorez les articles dédiés du PromptQuorum Hub pour les implémentations en production.',
+      ],
+    },
+    keyBenefits: {
+      title: 'Avantages clés',
+      items: [
+        '**Pour les entreprises françaises** : explications adaptées aux contextes réglementaires français (conformité DSGVO, cadre IA EU), avec des cas d\'usage pour Capgemini, Thales, LVMH, Orange et collectivités',
+        '**Pour les équipes Canada/Belgique** : définitions et notes contextualisées pour organisations francophones nord-américaines et européennes',
+        '**Pour la recherche académique** : couvre les fondamentaux (Chain-of-Thought, RAG) et les avancées 2026 (multi-agent, GraphRAG, orchestration distribuée)',
       ],
     },
     keyTakeaways: {
       isTldr: true,
       items: [
-        '500 termes organisés en 6 sections : Concepts fondamentaux, Agents, Sécurité, Évaluation, Techniques avancées et Métriques & Production',
-        'Chaque terme inclut une définition pratique et 1–3 citations source primaires pour la validation E-E-A-T',
-        'Couvre les techniques fondamentales (CoT, RAG, Few-Shot) jusqu\'aux patterns agentic 2026 (multi-agent, handoff, GraphRAG)',
-        '15 termes du glossaire se lient directement aux articles dédiés du hub d\'ingénierie de prompt PromptQuorum pour une exploration approfondie',
-        'Schéma FAQPage + schéma DefinedTermSet pour l\'extraction de réponses par Google, Claude, Perplexity et autres moteurs IA',
+        '500 termes en 6 sections : Concepts fondamentaux, Agents, Sécurité, Évaluation, Techniques avancées, Métriques & Production',
+        'Chaque terme : définition pratique + 1–3 sources primaires pour validation E-E-A-T et confiance',
+        'Techniques fondamentales (CoT, RAG, Few-Shot) et patterns 2026 (multi-agent, GraphRAG, agentic orchestration)',
+        '15 termes avec liens directs aux articles dédiés PromptQuorum pour exploration approfondie',
+        'Schémas FAQPage + DefinedTermSet pour extraction de réponses par Google, Claude, Perplexity et autres moteurs IA',
       ],
     },
     corePrompting: {
@@ -25930,6 +25940,18 @@ zh: {
         {
           q: 'Qu\'est-ce qu\'une fenêtre de contexte en IA?',
           a: 'Une fenêtre de contexte est le nombre maximum de tokens que le modèle peut considérer simultanément, y compris le prompt système, l\'historique de conversation et les documents récupérés. Lorsque les limites de contexte sont dépassées, les parties antérieures ou intermédiaires du contexte sont tronquées ou ignorées. Comprendre la taille de la fenêtre de contexte est crucial pour gérer les coûts et latences, car les contextes plus longs sont plus chers et plus lents à traiter.',
+        },
+        {
+          q: 'Comment l\'ingénierie de prompt s\'applique-t-elle aux contextes réglementaires français (DSGVO, AI Act)?',
+          a: 'En France et Europe, l\'ingénierie de prompt doit respecter la DSGVO pour la gestion des données personnelles et le cadre AI Act pour les systèmes à risque. Cela signifie : éviter d\'injecter données sensibles sans consentement (RAG sécurisé), documenter les prompts système pour auditabilité, tester les biais (un défi particulier pour les modèles multilingues), et maintenir des logs détaillés des décisions assistées par IA. Les organisations françaises comme Orange, Capgemini et Thales structurent leurs prompts pour assurer traçabilité et conformité.',
+        },
+        {
+          q: 'Quels modèles souverains ou alternatifs fonctionnent bien avec l\'ingénierie de prompt en français?',
+          a: 'Plusieurs alternatives aux modèles américains offrent une meilleure conformité et souveraineté : Mistral 7B/Medium (France, optimisé pour français), Llama 3 via Ollama (auto-hébergement), et Claude via API (Anthropic respecte DSGVO). Pour les organisations privilégiant la souveraineté, des modèles quantifiés (4-bit QLoRA) permettent auto-hébergement sur GPU standard. L\'ingénierie de prompt reste identique : structure, contexte, examples — seul change le modèle cible.',
+        },
+        {
+          q: 'Comment former une équipe française à l\'ingénierie de prompt efficacement?',
+          a: 'L\'ingénierie de prompt se maîtrise par la pratique itérative, pas par théorie seule. Commencez par : (1) conceptualisez (rôle, tâche, format), (2) écrivez un prompt initial, (3) testez sur plusieurs modèles (GPT-4, Claude, Mistral), (4) analysez les erreurs, (5) raffiniz par Few-Shot ou Chain-of-Thought. Les équipes françaises bénéficient d\'une formation axée sur des cas d\'usage réels (génération juridique, support client multilingue, analyse de données publiques) plutôt que de tutoriels abstraits.',
         },
       ],
     },
