@@ -24534,9 +24534,450 @@ zh: {
       },
     },
     de: { theme: 'Frameworks', title: 'The TRACE Framework', intro: '', publishDate: '2026-03-24', readTime: '8 min read', educationalLevel: 'Intermediate', sections: {} },
-    fr: { theme: 'Frameworks', title: 'The TRACE Framework', intro: '', publishDate: '2026-03-24', readTime: '8 min read', educationalLevel: 'Intermediate', sections: {} },
-    ja: { theme: 'Frameworks', title: 'The TRACE Framework', intro: '', publishDate: '2026-03-24', readTime: '8 min read', educationalLevel: 'Intermediate', sections: {} },
-    zh: { theme: 'Frameworks', title: 'The TRACE Framework', intro: '', publishDate: '2026-03-24', readTime: '8 min read', educationalLevel: 'Intermediate', sections: {} },
+    fr: {
+      theme: 'Frameworks',
+      title: 'Le Framework TRACE',
+      intro: 'Le Framework TRACE demande aux modèles de Penser, Raisonner, Analyser, Conclure et Expliquer pour rendre visibles leurs processus de décision. Plutôt que de présenter uniquement une réponse finale, TRACE force le modèle à montrer son raisonnement étape par étape. PromptQuorum propose TRACE comme option directement accessible pour tous les utilisateurs.',
+      publishDate: '2026-03-24',
+      readTime: '7 min de lecture',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Framework TRACE',
+      metaDescription: 'Framework TRACE (Penser, Raisonner, Analyser, Conclure, Expliquer) pour visualiser le raisonnement des modèles IA. Quand l\'utiliser et comment l\'appliquer.',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Le Framework TRACE',
+        description: 'Comment fonctionne le Framework TRACE (Penser, Raisonner, Analyser, Conclure, Expliquer), quand l\'utiliser, et comment PromptQuorum l\'intègre.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['Framework TRACE', 'raisonnement IA', 'frameworks de prompts', 'ingénierie des prompts', 'PromptQuorum', 'modèles de langage'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Ingénierie des prompts' },
+          { '@type': 'Thing', name: 'Frameworks de prompts' },
+          { '@type': 'Thing', name: 'Modèles de langage volumineux' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        ],
+        teaches: 'Comment structurer des prompts pour forcer un modèle IA à montrer son raisonnement détaillé plutôt que juste sa réponse finale',
+        assesses: 'Capacité à évaluer la qualité du raisonnement d\'un modèle, identifier les faiblesses logiques, et justifier des décisions basées sur ce raisonnement explicite',
+      },
+      sections: {
+        whatIsTRACE: {
+          title: 'Qu\'est-ce que le Framework TRACE',
+          content: [
+            '**Le Framework TRACE force les modèles à montrer leur travail plutôt que de simplement donner une réponse finale.** C\'est particulièrement utile pour les tâches où vous avez besoin de comprendre comment le modèle a raisonné.',
+            'Les cinq étapes du Framework TRACE sont :',
+          ],
+          items: [
+            'Penser : Clarifier et reformuler le problème.',
+            'Raisonner : Explorer différentes approches.',
+            'Analyser : Appliquer la méthode choisie aux données.',
+            'Conclure : Donner une réponse claire et directe.',
+            'Expliquer : Justifier la conclusion en langage simple.',
+          ],
+        },
+        whyTRACEMatters: {
+          title: 'Pourquoi le Framework TRACE importe',
+          content: [
+            '**Le Framework TRACE réduit la confiance aveugle envers les modèles en rendant le raisonnement explicite.** Vous pouvez ainsi détecter les erreurs de logique ou les fausses hypothèses plus facilement.',
+          ],
+          items: [
+            'Prises de décision critiques basées sur les outputs du modèle.',
+            'Comparaison du raisonnement entre différents modèles.',
+            'Documentation du processus pour justifier les choix auprès des parties prenantes.',
+          ],
+        },
+        fiveStages: {
+          title: 'Les cinq étapes du Framework TRACE en détail',
+          content: [
+            '**Un bon prompt TRACE définit précisément ce que le modèle doit faire à chaque étape.** Vous pouvez regrouper ces étapes en un seul message ou les séparer selon vos besoins.',
+          ],
+          items: [
+            'Penser : Clarifier la tâche, lister les variables clés, identifier les ambiguïtés.',
+            'Raisonner : Esquisser les méthodes possibles, énumérer les compromis.',
+            'Analyser : Appliquer la méthode étape par étape aux données réelles.',
+            'Conclure : Fournir une réponse directe liée à la question.',
+            'Expliquer : Résumer la logique en langage clair, en mettant l\'accent sur le « pourquoi ».',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Exemple : Mauvais vs bon prompt TRACE',
+          content: [
+            '**La valeur du Framework TRACE devient claire en comparant une demande générique à une demande structurée pour la même tâche.**',
+            '**[Mauvais prompt]**',
+            '"Lequel de ces deux plans tarifaires est le meilleur ?"',
+            '**[Bon prompt TRACE]**',
+            '"Tu es un expert en tarification SaaS. Applique le processus TRACE. Penser : Reformule le problème et liste les facteurs clés (revenus, taux de churn, perception client). Raisonner : Propose 2–3 méthodes pour comparer les plans. Analyser : Applique la méthode préférée aux données. Conclure : Quel plan recommandes-tu et pour quel segment ? Expliquer : En 3–5 phrases, justifie ta recommandation pour un PDG non-technique. Données : [insérer ici]"',
+            'Le prompt TRACE ne dit pas simplement « Le plan A est meilleur » ; il montre comment le modèle a pensé aux compromis.',
+          ],
+        },
+        whenToUse: {
+          title: 'Quand utiliser le Framework TRACE',
+          content: [
+            '**Utilisez TRACE quand la qualité du raisonnement prime sur la brièveté, notamment pour les décisions stratégiques, l\'analyse technique ou la validation.** TRACE ajoute de la complexité, mais elle se justifie quand les erreurs coûtent cher.',
+          ],
+          items: [
+            'Évaluation de stratégies, d\'architectures, ou de compromis.',
+            'Révision de changements de code ou débogage.',
+            'Analyse de données, de métriques ou de feedback.',
+            'Recommandations justifiées pour des parties prenantes.',
+          ],
+        },
+        howPQImplements: {
+          title: 'Comment PromptQuorum intègre le Framework TRACE',
+          content: [
+            '**PromptQuorum est un outil de dispatch multi-modèles qui intègre TRACE comme option directement accessible.** Vous composez vos étapes TRACE et PromptQuorum les envoie aux modèles de votre choix.',
+            'Vous pouvez :',
+          ],
+          items: [
+            'Remplir chaque étape TRACE tout en gardant la structure cohérente.',
+            'Envoyer le même prompt TRACE à multiple modèles en parallèle et comparer leur raisonnement.',
+            'Sauvegarder les templates TRACE pour réutilisation et partage d\'équipe.',
+          ],
+        },
+        combiningTRACE: {
+          title: 'Combiner TRACE avec d\'autres frameworks',
+          content: [
+            '**Associez TRACE à d\'autres frameworks en alignant chacun à une phase de votre workflow : TRACE pour le raisonnement, autres pour la génération.** Par exemple :',
+          ],
+          items: [
+            'Utiliser Single Step ou CO-STAR pour générer du contenu initial.',
+            'Passer à TRACE pour valider la logique et les assomptions.',
+            'Finir optionnellement avec SPECS pour formater le résultat selon un schéma strict.',
+          ],
+        },
+        howToStart: {
+          title: 'Comment utiliser le Framework TRACE',
+          numberedItems: [
+            '**Tâche : Définissez clairement ce que vous demandez.** Exemple : « Explique comment la récursion fonctionne en Fibonacci. »',
+            '**Demande : Posez une question ou fournissez les données.** Exemple : « Trace l\'exécution de fib(5) étape par étape. »',
+            '**Action : Demandez au modèle de montrer son travail.** Exemple : « Montre chaque appel de fonction, la valeur retournée, et quels appels proviennent de chaque niveau. »',
+            '**Clarification : Ajoutez des contraintes.** Exemple : « Formate comme un arbre montrant les relations d\'appels. »',
+            '**Examen : Demandez l\'auto-évaluation.** Exemple : « Pourquoi cette approche devient-elle lente ? Comment l\'optimiser ? »',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Quelle est la différence entre TRACE et RISEN ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE force le modèle à montrer son raisonnement en détail. RISEN améliore progressivement un brouillon existant. Utilisez TRACE pour comprendre la logique ; utilisez RISEN pour affiner un résultat.' } },
+          { '@type': 'Question', 'name': 'Puis-je combiner TRACE avec d\'autres frameworks ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Absolument. Utilisez un framework génératif d\'abord, puis TRACE pour valider le raisonnement, puis optionnellement SPECS pour le formatage final.' } },
+          { '@type': 'Question', 'name': 'TRACE fonctionne-t-il pour tous les types de tâches ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE excelle pour les tâches où le raisonnement et la justification importent : décisions stratégiques, analyses, debugging. Pour les tâches simples et rapides, TRACE ajoute de la complexité inutile.' } },
+          { '@type': 'Question', 'name': 'Comment éviter que TRACE ne rende les réponses trop longues ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Soyez précis dans vos étapes TRACE. Demandez : « Donne chaque étape en 1–2 phrases max. » Cela force le modèle à être concis tout en montrant son travail.' } },
+          { '@type': 'Question', 'name': 'TRACE aide-t-il à détecter les erreurs du modèle ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. En rendant le raisonnement explicite, TRACE vous permet de repérer les fausses assomptions, les sauts logiques, ou les calculs incorrects que vous auriez ratés avec une réponse finale seule.' } },
+          { '@type': 'Question', 'name': 'Y a-t-il une différence entre TRACE et Chain-of-Thought ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thought est une technique générale de montrer le travail. TRACE est une structure spécifique à 5 étapes : Penser, Raisonner, Analyser, Conclure, Expliquer. TRACE est plus guidée et reproductible.' } },
+        ],
+      },
+    },
+    ja: {
+      theme: 'Frameworks',
+      title: 'TRACEフレームワーク',
+      intro: 'TRACEフレームワークは、モデルの思考プロセスを5つのステップ（考える→推論する→分析する→結論を出す→説明する）で可視化するプロンプト構造です。最終的な答えだけでなく、その過程を詳しく見ることができるため、判断やロジックの信頼性が大幅に向上します。PromptQuorumではTRACEフレームワークをネイティブに統合しており、すべてのユーザーが直接利用できます。',
+      publishDate: '2026-03-24',
+      readTime: '8分で読める',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'TRACEフレームワーク',
+      metaDescription: 'TRACEフレームワーク（考える・推論する・分析する・結論を出す・説明する）でAIの思考を可視化。いつ使うべきか、どう活用するか。',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'TRACEフレームワーク',
+        description: 'TRACEフレームワーク（考える・推論する・分析する・結論を出す・説明する）の仕組み、活用場面、PromptQuorumでの実装方法。',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['TRACEフレームワーク', 'プロンプトフレームワーク', 'プロンプト・エンジニアリング', '推論', 'PromptQuorum', '大規模言語モデル'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'プロンプト・エンジニアリング' },
+          { '@type': 'Thing', name: 'プロンプトフレームワーク' },
+          { '@type': 'Thing', name: '大規模言語モデル' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        ],
+        teaches: 'TRACEフレームワークの5段階（考える→推論→分析→結論→説明）を使ってAIの思考プロセスを明示的に引き出す方法',
+        assesses: 'AIモデルの推論品質を評価できる能力、論理的な欠陥を特定する力、推論の妥当性に基づいて判断できる技術',
+      },
+      sections: {
+        whatIsTRACE: {
+          title: 'TRACEフレームワークとは',
+          content: [
+            '**TRACEフレームワークは、AIモデルに「どう考えたのか」を詳しく説明させるプロンプト構造です。** 最終的な答えだけでは分からない思考プロセスが可視化されるため、判断の信頼度が著しく向上します。',
+            '5つのステップの構成：',
+          ],
+          items: [
+            '考える（Think）：問題を読み直して、理解を深める',
+            '推論する（Reason）：複数のアプローチを考える',
+            '分析する（Analyze）：選んだアプローチを具体的に進める',
+            '結論を出す（Conclude）：最終的な答えを明確に述べる',
+            '説明する（Explain）：結論の理由を分かりやすく伝える',
+          ],
+        },
+        whyTRACEMatters: {
+          title: 'なぜTRACEが重要なのか',
+          content: [
+            '**TRACEは思考プロセスを透明にすることで、AIの出力に対する盲信を減らします。** 各ステップを見ることで、不正確な理解や論理的な穴を早期に発見できます。',
+          ],
+          items: [
+            'ビジネス判断や技術判断をAI出力に基づいて下す場合',
+            '複数のモデル間で推論の質を比較する必要がある場合',
+            '判断理由を関係者に説明・報告する必要がある場合',
+          ],
+        },
+        fiveStages: {
+          title: 'TRACEの5段階を詳しく解説',
+          content: [
+            '**良いTRACEプロンプトは、各ステップで「何をすべきか」を明確に定義し、モデルが一貫した思考プロセスを辿るようにします。** 一度のメッセージで全ステップを実行させることも、段階ごとに分割することもできます。',
+            '各段階の詳細：',
+          ],
+          items: [
+            '考える：タスクを明確にし、重要な変数を列挙し、曖昧な点を洗い出す',
+            '推論する：考えられる方法や仮説、トレードオフをスケッチする',
+            '分析する：選んだ方法を実際のデータに段階的に適用する',
+            '結論を出す：質問に対して直接的かつ明確な答えを与える',
+            '説明する：結論の根拠を簡潔に、「なぜ」に重点を置いて説明する',
+          ],
+        },
+        badVsGoodExample: {
+          title: '実例：TRACEなし vs TRACEあり',
+          content: [
+            '**同じ質問に対して、TRACEなしとTRACEありのプロンプトを比較すると、その価値が明確になります。**',
+            '**【通常のプロンプト】**',
+            '"この2つの料金プランのどちらが良い？"',
+            '**【TRACEプロンプト】**',
+            '"SaaS価格戦略の専門家として、TRACEプロセスを適用してください。考える：問題を述べ直し、重要な要因をリストアップ（収益、解約率、顧客認識など）してください。推論する：2～3の比較方法を提案してください（分岐点分析、昇級経路、公正さなど）。分析する：選んだ方法をデータに適用し、具体的な数字や例を示してください。結論を出す：どのプランをお勧めしますか？ どのセグメント向けですか？説明する：非技術者向けに、3～5文で推奨理由を説明してください。データ：【ここに挿入】"',
+            'TRACEプロンプトは「プランAが良い」と言うだけでなく、モデルがトレードオフをどう考えたかが分かります。',
+          ],
+        },
+        whenToUseJapanese: {
+          title: 'TRACEを使うべき場面と注意点',
+          content: [
+            '**TRACEは推論の質が重要な場面で活躍します。特に金融・医療・経営判断など、誤りのコストが高い領域では欠かせません。** 注意点としては、モデルが冗長になりやすい傾向があります。',
+          ],
+          items: [
+            '戦略評価、アーキテクチャ判断、トレードオフ分析など複雑な判断',
+            'コード変更レビュー、バグ調査、難しい技術問題のデバッグ',
+            'データ分析、指標解釈、ユーザーフィードバック分析',
+            '管理職や利害関係者に対する意思決定の根拠説明',
+          ],
+        },
+        howPQImplements: {
+          title: 'PromptQuorumでのTRACE実装',
+          content: [
+            '**PromptQuorumはマルチモデルのAIディスパッチツールで、TRACEフレームワークをネイティブに統合しています。** 同じTRACEプロンプトを複数モデルに並行実行して、推論スタイルの違いを比較できます。',
+          ],
+          items: [
+            '構造化されたフィールドでTRACEの各段階を入力',
+            '同じプロンプトをGPT-4o、Claude、Gemini等に並行送信して推論を比較',
+            'TRACEテンプレートを保存して、同じ種類の判断に再利用',
+          ],
+        },
+        recommendedApproaches: {
+          title: 'おすすめの使い方とベストプラクティス',
+          content: [
+            '**TRACEを最大限活用するには、各段階を短くすること、複数人レビューを組み込むこと、具体的な評価基準を用意することが効果的です。**',
+          ],
+          items: [
+            '各段階を1～2文に限定して、モデルが冗長になるのを防ぐ',
+            '複数人が異なる段階をレビューして、多角的な視点を確保',
+            '「精度7/10以上、論理的矛盾がないこと」など、評価基準を事前に明確化',
+            'TRACEの出力を記録して、推論パターンや改善点を学習',
+          ],
+        },
+        combiningTRACE: {
+          title: '他のフレームワークとの組み合わせ',
+          content: [
+            '**TRACEは他の生成型フレームワークと組み合わせることで、初期生成から最終判定まで一貫した品質を確保できます。**',
+          ],
+          items: [
+            'Single StepやCO-STARで初期内容を生成 → TRACEで推論を検証',
+            'TRACEで判断の根拠を明確化 → SPECSで最終フォーマット統一',
+            'RISENで複数回改稿 → TRACEで最終的なロジック検証',
+          ],
+        },
+        howToStart: {
+          title: 'TRACEフレームワークの実践ガイド',
+          numberedItems: [
+            '**タスク定義：モデルが何をすべきか明確に。** 例：「再帰的なフィボナッチ関数の動き方を説明してください。」',
+            '**データ提供：具体的な質問や入力を与える。** 例：「fib(5)の実行を段階的にトレースしてください。」',
+            '**作業依頼：「考え方を見せる」ことを明示的に指示。** 例：「各関数呼び出し、返り値、呼び出し関係を示してください。」',
+            '**制約追加：フォーマットや長さに制限を加える。** 例：「ツリー形式で関数呼び出しの関係を図解し、重複呼び出しを強調してください。」',
+            '**自己評価要求：モデル自身の出力を吟味させる。** 例：「なぜこのアプローチは遅くなるのか？ どう最適化できるか？」',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'TRACEとRISENはどう違う？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACEは思考プロセスを見える化します。RISENは既存の出力を段階的に改善します。論理を理解したい → TRACE、品質を高めたい → RISEN。' } },
+          { '@type': 'Question', 'name': 'TRACEで回答が長くなりすぎないようにするには？', 'acceptedAnswer': { '@type': 'Answer', 'text': '各段階を1～2文に制限してください。例：「各ステップを最大2文で答えてください」と指示することで、簡潔さと透明性のバランスが取れます。' } },
+          { '@type': 'Question', 'name': 'すべての質問にTRACEを使うべき？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。推論と正当化が重要な複雑な判断に向いています。単純な質問や短い回答が必要な場合、TRACEはオーバーヘッドになります。' } },
+          { '@type': 'Question', 'name': 'TRACEはモデル間で推論品質の差を見つけるのに役立つ？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。GPT-4o、Claude、Geminiなど同じTRACEプロンプトを複数モデルに送れば、推論スタイルと精度の違いが明確に見えます。' } },
+          { '@type': 'Question', 'name': 'TRACEはエラーを検出するのに本当に効果的？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。思考プロセスが見える化されるため、誤った前提や論理的な飛躍を早期に発見できます。最終答だけでは気づかない誤りが露呈します。' } },
+          { '@type': 'Question', 'name': '日本の企業で財務判断やコンプライアンス判定にTRACEを使う際の注意点は？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'クラウドAPIで機密データを扱う場合は、データ保護方針を確認してください。機密情報はOllama・LM Studioなど自社環境のモデルを使用し、PromptQuorum経由で実行することをお勧めします。' } },
+        ],
+      },
+    },
+    zh: {
+      theme: 'Frameworks',
+      title: 'TRACE框架',
+      intro: 'TRACE框架通过5个步骤（思考→推理→分析→结论→解释）强制AI模型展示完整的推理过程，而不是仅给出最终答案。你可以看清模型怎样思考、在哪里可能出错、以及为什么得出这个结论。PromptQuorum原生集成了TRACE框架，所有用户都可以直接使用。',
+      publishDate: '2026-03-24',
+      readTime: '8分钟阅读',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'TRACE框架',
+      metaDescription: '使用TRACE框架（思考、推理、分析、结论、解释）来审视AI模型的完整推理过程。适用场景和实战指南。',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'TRACE框架',
+        description: 'TRACE框架（思考、推理、分析、结论、解释）的工作原理、适用场景、以及PromptQuorum中的实现方式。',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['TRACE框架', '提示词框架', '提示词工程', '推理', 'PromptQuorum', '大语言模型'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: '提示词工程' },
+          { '@type': 'Thing', name: '提示词框架' },
+          { '@type': 'Thing', name: '大语言模型' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        ],
+        teaches: '如何使用TRACE框架的5个步骤（思考→推理→分析→结论→解释）让AI模型的推理过程完全透明',
+        assesses: '能否评估AI推理的质量、识别逻辑漏洞、基于可解释的推理做出关键决策的能力',
+      },
+      sections: {
+        whatIsTRACE: {
+          title: 'TRACE框架是什么',
+          content: [
+            '**TRACE框架强制AI模型展示它的思考过程，而不是只给出最终答案。** 这在你需要理解模型是如何得出结论的场景中特别有用。',
+            'TRACE的5个步骤是：',
+          ],
+          items: [
+            '思考（Think）：重新阐述问题，理清关键信息',
+            '推理（Reason）：探索多种可能的方法',
+            '分析（Analyze）：将选定的方法应用到具体数据',
+            '结论（Conclude）：给出明确清晰的最终答案',
+            '解释（Explain）：用易懂的语言说明为什么是这个答案',
+          ],
+        },
+        whyTRACEMatters: {
+          title: '为什么TRACE很重要',
+          content: [
+            '**TRACE通过让推理过程透明，减少对AI输出的盲目信任。** 看得到每一步，你就能发现假设有误、逻辑跳跃或隐藏的错误。',
+          ],
+          items: [
+            '你需要基于AI输出做出重要的商业或技术决策',
+            '你需要比较不同模型的推理方式',
+            '你需要向利益相关者证明和解释这个决策',
+          ],
+        },
+        fiveStages: {
+          title: 'TRACE的5个步骤详解',
+          content: [
+            '**好的TRACE提示词会明确定义每个步骤，确保模型的推理过程一致且可复现。** 你可以在一个长提示词中包含所有步骤，也可以分步发送。',
+          ],
+          items: [
+            '思考：明确任务、列出关键变量、指出有歧义的地方',
+            '推理：概述可能的方法、权衡关系、解决方案路径',
+            '分析：逐步将选定方法应用到实际数据',
+            '结论：直接回答问题、提出建议',
+            '解释：用简洁清晰的语言解释「为什么」',
+          ],
+        },
+        badVsGoodExample: {
+          title: '对比：普通提示词 vs TRACE提示词',
+          content: [
+            '**把通用提示词和TRACE结构提示词应用在同一任务上，差别一目了然。**',
+            '**【普通提示词】**',
+            '"这两个定价方案哪个更好？"',
+            '**【TRACE提示词】**',
+            '"你是SaaS定价策略专家。使用TRACE过程来分析。思考：重新阐述问题，列出关键要素（收入、流失率、客户感知等）。推理：提出2～3种比较方案的方法（盈亏平衡分析、升级路径、感知公平性等）。分析：将选定的方法逐步应用到我提供的数据。展示具体数字和例子。结论：明确推荐哪个方案，适用于哪些客户群体。解释：用3～5句话，用非技术人员能理解的语言解释你的推荐。数据：【在此插入】"',
+            'TRACE不只是说「方案A更好」；它展示了模型对权衡的完整思考。',
+          ],
+        },
+        whenToUse: {
+          title: '何时使用TRACE框架',
+          content: [
+            '**当推理质量比速度更重要时，就该用TRACE。** 特别是在商业判断、技术决策、风险评估等误差代价高的场景，TRACE是必备工具。',
+          ],
+          items: [
+            '评估战略选项、技术架构、权衡取舍',
+            '审查复杂代码变更、调试棘手问题',
+            '分析研究发现、数据指标、用户反馈',
+            '制定可向管理层和客户解释的建议',
+          ],
+        },
+        practicalTips: {
+          title: '实用建议：如何高效使用TRACE',
+          content: [
+            '**要让TRACE发挥最大效力，你需要控制每步长度、加入多人审查、设置明确的评估标准。** 这几个实践方法特别有效：',
+          ],
+          items: [
+            '限制每个步骤为1～2句话：防止模型输出变得冗长，同时保持推理的透明度',
+            '分阶段由不同的人审查：思考阶段由初级分析师，推理阶段由资深顾问，结论由决策者确认，能大幅提升客观性',
+            '提前定义「好答案」的标准：精确性8/10、逻辑严密无矛盾、行动可执行等，避免主观评判',
+            '记录TRACE输出历史：积累不同问题的推理模式，找出改进方向，建立内部知识库',
+            '和其他框架组合：先用CO-STAR初稿，再用TRACE验证逻辑，最后用SPECS定型格式',
+            '多模型对比：同一个TRACE任务发送给通义千问、文心一言、混元，看谁推理最严密、最可靠',
+          ],
+        },
+        howPQImplements: {
+          title: 'PromptQuorum中的TRACE实现',
+          content: [
+            '**PromptQuorum是一个多模型分发平台，原生集成了TRACE框架。** 你可以结构化地输入TRACE的5个步骤，然后并行发送给多个模型，对比它们的推理方式和结论质量。',
+          ],
+          items: [
+            '用结构化字段输入TRACE的每个步骤，确保一致性',
+            '同时发送给GPT-4o、Claude、Gemini等模型，看谁推理最可靠',
+            '保存TRACE模板，对同类问题快速复用',
+          ],
+        },
+        combineTRACEWithOthers: {
+          title: '和其他框架的搭配',
+          content: [
+            '**TRACE最好和其他框架组合，形成「生成→验证→定型」的完整工作流。**',
+          ],
+          items: [
+            '初稿生成：用Single Step或CO-STAR快速生成初版',
+            '逻辑验证：用TRACE深入审视推理是否严密、假设是否合理',
+            '最终定型：如果输出需要特定格式（JSON、表格等），用SPECS来标准化',
+          ],
+        },
+        howToStart: {
+          title: '如何开始使用TRACE框架',
+          numberedItems: [
+            '**定义任务：清楚地说明你要模型做什么。** 例：「解释递归函数在计算fib(5)时的执行过程」',
+            '**提供输入：给出具体的数据或问题。** 例：「逐步显示fib(5)的执行过程」',
+            '**要求展示过程：明确要求「展示工作过程」。** 例：「显示每一步函数调用、返回值、调用关系」',
+            '**加约束：指定格式或长度限制。** 例：「用树形图展示函数调用关系，标注重复调用」',
+            '**自我评估：要求模型反思自己的答案。** 例：「为什么这个方法变慢？怎样优化？」',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'TRACE和RISEN框架有什么区别？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE让模型展示思考过程。RISEN是逐步改进现有输出。需要理解推理→TRACE，需要提高质量→RISEN。' } },
+          { '@type': 'Question', 'name': '如何防止TRACE让答案变得太长？', 'acceptedAnswer': { '@type': 'Answer', 'text': '每个步骤限制在1～2句话。例如加上「每步最多2句话」的指示，能在保留推理透明度的同时保持简洁。' } },
+          { '@type': 'Question', 'name': '能用TRACE来检测AI的错误吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能，而且非常有效。看到思考过程后，你能发现错误的前提、逻辑跳跃或计算错误——这些在只看最终答案时是看不到的。' } },
+          { '@type': 'Question', 'name': 'TRACE适合所有类型的问题吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不是。TRACE适合推理和论证很重要的复杂问题：决策、分析、战略。简单问题用TRACE会增加不必要的开销。' } },
+          { '@type': 'Question', 'name': '在国内用TRACE框架评估金融或风险决策有什么注意事项？', 'acceptedAnswer': { '@type': 'Answer', 'text': '如果涉及敏感的财务或客户数据，避免用云API（OpenAI、Google等会在境外处理数据）。改用本地模型（Ollama、LM Studio）或符合《数据安全法》的国内方案。' } },
+          { '@type': 'Question', 'name': 'TRACE能帮助比较不同AI模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能。同一个TRACE任务发给通义千问、文心一言、混元，能清楚看到它们推理风格的差异、严密程度、可靠性的区别。' } },
+          { '@type': 'Question', 'name': '企业多人协作时，TRACE怎样分工最有效？', 'acceptedAnswer': { '@type': 'Answer', 'text': '思考阶段→初级分析师，推理阶段→资深专家，分析→技术人员，结论→决策者。分工不但提高效率，还能从多角度增进洞察。' } },
+          { '@type': 'Question', 'name': 'TRACE和Chain-of-Thought有什么不同？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thought是泛指「逐步展示推理」的技术。TRACE是一个结构化的5步框架，更可控、更适合复现。如果你需要标准化和可重复性，TRACE更好。' } },
+        ],
+      },
+    },
   },
   'google-prompting-guide': {
     en: {
