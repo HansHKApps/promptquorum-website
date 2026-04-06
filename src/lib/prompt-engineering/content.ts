@@ -23889,7 +23889,7 @@ zh: {
     fr: {
       theme: 'Frameworks',
       title: 'Le Framework RISEN',
-      intro: 'Le Framework RISEN est une structure itérative de prompt qui structure la génération d\'IA autour de cinq étapes : Revisiter, Inspecter, Synthétiser, Évaluer et Nexus. Plutôt que de recommencer un prompt de zéro, vous rafinez systématiquement les résultats du modèle pour une meilleure qualité à chaque étape. PromptQuorum intègre nativement le Framework RISEN comme option directement accessible dans l\'application.',
+      intro: 'Le Framework RISEN est une structure itérative de prompt qui structure la génération d\'IA autour de cinq étapes : Refine (Affiner), Inspect (Inspecter), Summarize (Synthétiser), Evaluate (Évaluer) et Next steps (Prochaines étapes). Plutôt que de recommencer un prompt de zéro, vous rafinez systématiquement les résultats du modèle pour une meilleure qualité à chaque étape. PromptQuorum intègre nativement le Framework RISEN comme option directement accessible dans l\'application.',
       publishDate: '2026-03-24',
       readTime: '7 min de lecture',
       educationalLevel: 'Intermediate',
@@ -24018,11 +24018,11 @@ zh: {
         howToStart: {
           title: 'Comment utiliser le Framework RISEN',
           numberedItems: [
-            '**Refine (Affiner) : Améliorez le brouillon existant selon vos objectifs (clarté, structure, exactitude).** Exemple : \'Tu es un expert en architecture logicielle avec 15 ans d\'expérience. Affine ce texte pour clarté et structure.\'',
-            '**Inspect (Inspecter) : Identifiez tous les changements concrets — sections réécrites, détails ajoutés, problèmes résolus.** Exemple : \'Liste tous les changements que tu as faits dans cette révision.\'',
-            '**Summarize (Synthétiser) : Donnez une explication concise de ce que la version révisée réalise maintenant.** Exemple : \'Résume le brouillon amélioré en 2–3 phrases.\'',
-            '**Evaluate (Évaluer) : Critiquiez le résultat à la lumière de critères explicites tels que le ton, l\'exactitude et la pertinence de l\'audience.** Exemple : \'Note cette révision sur la clarté (1–5), l\'exactitude (1–5), et l\'utilité (1–5).\'',
-            '**Next steps (Prochaines étapes) : Recommandez des modifications supplémentaires ou des actions de suivi pour la prochaine itération.** Exemple : \'Devons-nous élargir la section architecture ? Ajouter un glossaire ?\'',
+            '**Refine (Affiner) :** Commencez avec votre brouillon, résultat ou plan existant. Donnez-le au modèle avec des instructions claires pour l\'améliorer vers un objectif spécifique — clarté, précision, concision ou pertinence pour l\'audience. Exemple : « Réécrivez cette description de produit pour la clarté. Ciblez 120–160 mots. Gardez tous les détails factuels. »',
+            '**Inspect (Inspecter) :** Demandez au modèle de lister chaque changement spécifique qu\'il a effectué. Exigez des descriptions d\'édits concrètes, pas des résumés vagues. Exemple : « Listez 5–7 édits spécifiques que vous avez effectués. Pour chacun, déclarez ce que vous avez changé et pourquoi. »',
+            '**Summarize (Synthétiser) :** Demandez au modèle une explication concise de ce que la nouvelle version dit ou réalise maintenant — pas une répétition du contenu lui-même, mais une description au niveau méta. Exemple : « En 2–3 phrases, expliquez ce sur quoi la version mise à jour met maintenant l\'accent et ce qui a changé dans son orientation. »',
+            '**Evaluate (Évaluer) :** Demandez au modèle de noter la sortie révisée selon des critères explicites sur une échelle 1–5 avec une justification d\'une phrase par critère. Exemple : « Notez la nouvelle version sur la clarté (1–5), la persuasion (1–5) et l\'alignement avec l\'audience B2B (1–5). Justifiez chaque note en une phrase. »',
+            '**Next steps (Prochaines étapes) :** Demandez au modèle de recommander 3 améliorations ciblées pour la prochaine itération afin que vous ayez toujours une direction claire. Exemple : « Suggérez 3 édits spécifiques que je pourrais demander dans un futur prompt pour améliorer davantage cette sortie. »',
           ],
         },
       },
@@ -24688,7 +24688,7 @@ zh: {
     fr: {
       theme: 'Frameworks',
       title: 'Le Framework TRACE',
-      intro: 'Le Framework TRACE demande aux modèles de Penser, Raisonner, Analyser, Conclure et Expliquer pour rendre visibles leurs processus de décision. Plutôt que de présenter uniquement une réponse finale, TRACE force le modèle à montrer son raisonnement étape par étape. PromptQuorum propose TRACE comme option directement accessible pour tous les utilisateurs.',
+      intro: 'Le Framework TRACE demande aux modèles de Think (Réfléchir), Reason (Raisonner), Analyze (Analyser), Conclude (Conclure) et Explain (Expliquer) pour rendre visibles leurs processus de décision. Plutôt que de présenter uniquement une réponse finale, TRACE force le modèle à montrer son raisonnement étape par étape. PromptQuorum propose TRACE comme option directement accessible pour tous les utilisateurs.',
       publishDate: '2026-03-24',
       readTime: '7 min de lecture',
       educationalLevel: 'Intermediate',
@@ -24803,11 +24803,11 @@ zh: {
         howToStart: {
           title: 'Comment utiliser le Framework TRACE',
           numberedItems: [
-            '**Think (Penser) : Reformulez le problème dans vos propres termes et listez les variables clés.** Exemple : « Clarifiez la tâche, listez les variables clés et identifiez les ambiguïtés. »',
-            '**Reason (Raisonner) : Proposez 2–3 approches possibles et pesez les compromis.** Exemple : « Esquissez les méthodes possibles, énumérez les compromis et les chemins de solution. »',
-            '**Analyze (Analyser) : Appliquez votre approche choisie étape par étape aux données réelles.** Exemple : « Appliquez la méthode choisie étape par étape aux données réelles avec des exemples concrets. »',
-            '**Conclude (Conclure) : Énoncez votre réponse ou recommandation directe clairement.** Exemple : « Fournissez une réponse directe liée à la question. »',
-            '**Explain (Expliquer) : Justifiez votre conclusion en 2–3 phrases en langage simple qu\'un lecteur non technique peut suivre.** Exemple : « Résumez la logique en langage clair, en mettant l\'accent sur le « pourquoi » derrière la réponse. »',
+            '**Think (Réfléchir) :** Demandez au modèle de reformuler le problème dans ses propres termes et de signaler les ambiguïtés avant de tenter une réponse. Exemple : « Avant de répondre, reformulez ce que je vous demande. Listez les variables clés et les suppositions que vous faites. »',
+            '**Reason (Raisonner) :** Demandez au modèle de proposer 2–3 approches possibles ou hypothèses et leurs compromis avant de s\'engager sur l\'une d\'elles. Exemple : « Proposez 2–3 façons d\'aborder ce problème. Pour chacune, énoncez brièvement les avantages et les inconvénients. »',
+            '**Analyze (Analyser) :** Demandez au modèle d\'appliquer son approche choisie étape par étape aux données ou au contexte réel que vous avez fourni. Montrez des chiffres ou des exemples concrets si possible. Exemple : « Appliquez votre approche préférée à la situation spécifique que j\'ai décrite. Montrez chaque étape. »',
+            '**Conclude (Conclure) :** Demandez au modèle d\'énoncer la réponse finale ou la recommandation directement et clairement en une phrase. Exemple : « Énoncez votre recommandation clairement. Si pertinent, précisez les conditions ou segments auxquels elle s\'applique. »',
+            '**Explain (Expliquer) :** Demandez au modèle de justifier la conclusion en langage simple qu\'un non-spécialiste peut comprendre. Exemple : « Expliquez pourquoi en 3–5 phrases. Évitez le jargon. Écrivez comme si vous l\'expliquiez à un cadre senior sans connaissances techniques. »',
           ],
         },
       },
