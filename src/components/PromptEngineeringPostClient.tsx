@@ -765,6 +765,19 @@ const POST_UI: Record<string, Record<string, string>> = {
     ja: 'プロンプトエンジニアリング',
     zh: '提示词工程',
   },
+  levelLabel: {
+    en: 'Level', de: 'Niveau', fr: 'Niveau', ja: 'レベル', zh: '级别',
+  },
+  audienceLabel: {
+    en: 'Audience', de: 'Zielgruppe', fr: 'Public', ja: '対象読者', zh: '目标读者',
+  },
+}
+
+const LEVEL_DISPLAY: Record<string, Record<string, string>> = {
+  Beginner: { en: 'Beginner', de: 'Einsteiger', fr: 'Débutant', ja: '初級', zh: '初级' },
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级' },
+  Advanced: { en: 'Advanced', de: 'Experte', fr: 'Avancé', ja: '上級', zh: '高级' },
+  Technical: { en: 'Technical', de: 'Technisch', fr: 'Technique', ja: '技術', zh: '技术' },
 }
 
 // Map language codes to their locale strings for date formatting
@@ -841,9 +854,25 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
 
         {/* Article intro paragraph */}
         {article.intro && (
-          <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl article-intro">
+          <p className="text-lg text-text-secondary leading-relaxed mb-4 max-w-2xl article-intro">
             {renderInlineLinks(article.intro, lang)}
           </p>
+        )}
+
+        {/* Audience & difficulty signal (Rule 29) */}
+        {article.educationalLevel && (
+          <aside className="flex flex-wrap gap-2 mb-6 text-sm" aria-label="Article difficulty and audience">
+            <span className="inline-flex items-center gap-1.5 bg-primary/8 border border-primary/20 rounded-md px-3 py-1 font-medium text-primary">
+              <span className="text-text-secondary font-normal">{POST_UI.levelLabel[lang] ?? POST_UI.levelLabel['en']}:</span>
+              {LEVEL_DISPLAY[article.educationalLevel]?.[lang] ?? LEVEL_DISPLAY[article.educationalLevel]?.['en'] ?? article.educationalLevel}
+            </span>
+            {article.audience && (
+              <span className="inline-flex items-center gap-1.5 border border-gray-200 rounded-md px-3 py-1 text-text-secondary">
+                <span className="font-medium text-text-primary">{POST_UI.audienceLabel[lang] ?? POST_UI.audienceLabel['en']}:</span>
+                {article.audience}
+              </span>
+            )}
+          </aside>
         )}
 
         {/* Top 20 Most Important Terms Section (Glossary Only) */}

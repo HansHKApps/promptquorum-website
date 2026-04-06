@@ -402,6 +402,9 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
   const educationalLevel = (article as PEArticle & { educationalLevel?: string }).educationalLevel
     ?? (enArticle as PEArticle & { educationalLevel?: string })?.educationalLevel
 
+  const audience = (article as PEArticle & { audience?: string }).audience
+    ?? (enArticle as PEArticle & { audience?: string })?.audience
+
   const learningResourceSchema = educationalLevel ? {
     '@context': 'https://schema.org',
     '@type': 'LearningResource',
@@ -410,6 +413,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     url: canonicalUrl,
     inLanguage: selectedLang,
     educationalLevel,
+    ...(audience && { audience: { '@type': 'Audience', audienceType: audience } }),
     learningResourceType: 'Article',
     ...(Array.isArray((article.schema as any)?.teaches) && { teaches: (article.schema as any).teaches }),
     ...(Array.isArray((article.schema as any)?.assesses) && { assesses: (article.schema as any).assesses }),

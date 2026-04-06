@@ -39,7 +39,8 @@ export interface PEArticle {
   recipesHowToSchema?: Record<string, unknown>
   softwareSchema?: Record<string, unknown>
   itemListSchema?: Record<string, unknown>
-  educationalLevel?: string  // 'Beginner' | 'Intermediate' | 'Advanced'
+  educationalLevel?: string  // 'Beginner' | 'Intermediate' | 'Advanced' | 'Technical'
+  audience?: string          // Specific job role or use case, e.g. 'Developers building with LLMs'
   primaryTerm?: string       // Key concept this article defines, e.g., 'Prompt Engineering'
   toc?: { label: string; anchor: string }[]  // Table of contents entries (label + anchor ID)
 }

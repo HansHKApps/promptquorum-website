@@ -20,6 +20,10 @@ This checklist is used to reaudit already-published articles against the full GE
 - [ ] twitter:title present and under 60 characters
 - [ ] SEO title: Present (if title is long) or absent (if title is short)
 - [ ] JSON-LD schema: Appropriate schema type (Article, HowTo, FAQPage, TechArticle)
+- [ ] `educationalLevel` set in article data (`Beginner` / `Intermediate` / `Advanced` / `Technical`)
+- [ ] `audience` field set — specific job role or use case (not "AI users" or "Everyone")
+- [ ] `LearningResource` schema emitted: includes `educationalLevel` + `audience.audienceType`
+- [ ] Audience badge visible below intro paragraph (Level + Audience, SSR-rendered)
 - [ ] Breadcrumbs: Present and correctly structured
 
 ### 2. Structure & Formatting
@@ -211,6 +215,9 @@ The audit report should be:
 | Vague claim ("best", "leading") | Replace with specific data: "72% HumanEval score" |
 | No Related Reading section | Add 4+ internal links with descriptions |
 | Table without column headers | Add explicit `columns: []` field or header row |
+| Missing `educationalLevel` | Add `educationalLevel: 'Beginner'` (or Intermediate/Advanced/Technical) to article data |
+| Missing `audience` field | Add `audience: 'Developers building with LLMs'` — must be a specific job role or use case |
+| Audience badge not visible | Check `article.educationalLevel` is set; badge renders automatically when field is present |
 | Passive voice | Rewrite: "Models can be run" → "You can run models" |
 | Paragraph >3 sentences | Split into two paragraphs |
 
@@ -223,6 +230,8 @@ An article **passes reaudit** when:
 - ✓ All required sections present (TLDR, FAQ, Related Reading, Sources)
 - ✓ Content is answer-first, no marketing language
 - ✓ Date signal present ("As of April 2026")
+- ✓ `educationalLevel` and `audience` fields set; badge renders below intro
+- ✓ `LearningResource` schema includes `educationalLevel` + `audience.audienceType`
 - ✓ build passes with 0 TypeScript errors
 - ✓ No broken internal links (all `/local-llms/` or `/prompt-engineering/` slugs are valid)
 
