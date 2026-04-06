@@ -29291,26 +29291,24 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
         whatIsPersonaPrompting: {
           title: 'Qu\'est-ce que le Persona Prompting',
           content: [
-            '**Le persona prompting est une méthode structurée pour spécifier exactement qui GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro ou tout autre modèle doit incarner, comment il doit penser et quelles limites il doit respecter avant même de voir votre vraie question.** Un prompt persona inclut généralement une description de rôle, une expertise métier, un ton, des règles décisionnelles et des contraintes explicites, de sorte que le modèle se comporte de manière prévisible au lieu d\'improviser à chaque interaction. Bien exécuté, le persona prompting réduit les hallucinations parce que l\'IA filtre les décisions à travers une « identité » cohérente avec des objectifs et des garde-fous définis.',
-            '**En une phrase :** Le persona prompting transforme un modèle de langage généraliste en expert virtuel réutilisable en fixant son rôle, ses objectifs et ses limites avant que vous posiez vos questions.',
-            'Le persona prompting diffère des simples « prompts de style » comme « répondre comme un professeur bienveillant ». Un vrai persona prompt définit non seulement le ton, mais aussi le périmètre des connaissances (finance, cybersécurité ou droit de l\'UE par exemple), les priorités décisionnelles (atténuation des risques, créativité, rapidité) et comment gérer l\'incertitude. Cette structure rend les personas particulièrement utiles dans les secteurs comme l\'architecture IT, la gestion de portefeuille ou les workflows de conformité où les réponses incohérentes sont coûteuses.',
-            'PromptQuorum est un outil de dispatch multi-modèle qui vous permet de tester le même prompt persona simultanément avec GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large et des modèles locaux via Ollama ou LM Studio pour découvrir quel modèle suit le persona de manière la plus fiable.',
+            '**Le persona prompting est une méthode structurée pour spécifier qui une IA doit incarner, comment penser et quelles limites respecter.** Un prompt persona inclut une description de rôle, une expertise métier, un ton et des règles explicites. Cela rend le modèle prévisible au lieu d\'improviser, et réduit les hallucinations en filtrant les décisions à travers une « identité » cohérente.',
+            '**En une phrase :** Le persona prompting transforme un modèle généraliste en expert virtuel réutilisable en fixant rôle, objectifs et limites.',
+            'Le persona prompting diffère des simples prompts de style. Un vrai persona prompt définit le périmètre des connaissances, les priorités décisionnelles et la gestion de l\'incertitude. Cela le rend particulièrement utile pour l\'architecture IT, la gestion de portefeuille ou les workflows de conformité où les réponses incohérentes coûtent cher.',
+            'PromptQuorum vous permet de tester le même prompt persona simultanément avec GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large et des modèles locaux pour découvrir quel modèle suit le persona le plus fidèlement.',
           ],
         },
         whyItMatters: {
           title: 'Pourquoi le Persona Prompting est Essentiel',
           content: [
-            '**Le persona prompting est crucial parce qu\'il donne un comportement stable à des modèles fondamentalement probabilistes, ce qui est critique pour l\'ingénierie logicielle, l\'analyse financière et les workflows de conformité.** Les grands modèles de langage comme GPT-4o et LLaMA 3.1 génèrent une formulation différente à chaque passage, mais un persona robuste restreint ce comportement à un point de vue et un style décisionnel cohérents. Cela rend les résultats plus faciles à valider, à documenter et à examiner en équipe.',
-            '**Autrement dit :** Sans persona, vous parlez à « le modèle » et espérez un bon résultat ; avec un persona, vous avez un conversation avec « le même expert » chaque jour et vous savez à peu près comment il réagira.',
-            'Pour les équipes IT et développement, le persona prompting permet de créer des agents distincts comme « Code reviewer sécurisé », « SRE DevOps » ou « Assistant pour la documentation d\'architecture », chacun avec des règles explicites sur les frameworks, la journalisation et les standards de documentation. En finance, les personas peuvent imposer des hypothèses conservatrices, des divulgations claires des risques et des contraintes adaptées aux marchés de l\'UE, des États-Unis ou de la Chine. Cette séparation aide aussi dans les environnements réglementés où les auditeurs veulent voir les règles explicites qui ont gouverné les résultats assistés par l\'IA.',
-            'D\'un point de vue GEO (Generative Engine Optimization), les prompts persona sont des entités précieuses en eux-mêmes : les systèmes de recherche IA peuvent identifier « persona analyste SEO », « persona conformité EU AI Act » ou « persona trader macro » comme des outils distincts s\'ils sont décrits avec précision et cohérence.',
+            '**Le persona prompting stabilise des modèles intrinsèquement probabilistes, ce qui est crucial pour l\'ingénierie logicielle, la finance et la conformité.** Un persona robuste restreint le comportement à un point de vue et un style décisionnel cohérents, rendant les résultats plus faciles à valider et à examiner en équipe.',
+            '**Autrement dit :** Sans persona, vous espérez un bon résultat ; avec un persona, vous parlez chaque jour au même expert qui répond de manière prévisible.',
+            'Pour IT et développement, créez des agents distincts comme « Code reviewer sécurisé » ou « SRE DevOps » avec des règles explicites. En finance, imposez des hypothèses conservatrices et des risques clairs adaptés aux marchés EU, USA ou Chine. Les environnements réglementés apprécient que les règles gouvernant les résultats IA soient documentées de manière explicite.',
           ],
         },
         buildingBlocks: {
           title: 'Les Sept Éléments Fondamentaux d\'un Persona Solide',
           content: [
-            '**Un persona prompt solide comprend toujours au minimum cinq éléments : rôle, champ de connaissances, objectifs, contraintes et règles d\'interaction.** L\'ajout d\'exemples explicites et la gestion de l\'incertitude (que faire quand le modèle est hésitant) renforcent la fiabilité. Ces composants rendent le persona lisible par les humains et extractible par les machines pour des outils comme PromptQuorum et les pipelines RAG.',
-            'Les sept éléments d\'un persona prompt sont : rôle, champ d\'expertise, objectifs, contraintes, style d\'interaction, exemples et gestion de l\'incertitude.',
+            '**Un persona prompt solide inclut sept éléments : rôle, champ de connaissances, objectifs, contraintes, style d\'interaction, exemples et gestion de l\'incertitude.** Ces composants rendent le persona lisible par les humains et extractible par les machines pour des outils comme PromptQuorum et les pipelines RAG.',
           ],
           items: [
             'Rôle : « Vous êtes un architecte cloud senior avec 10+ ans d\'expérience en Kubernetes et en zéro confiance réseau. »',
@@ -29324,18 +29322,15 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
         },
         numericThresholds: {
           content: [
-            'Les prompts persona qui encodent des seuils numériques (par exemple « 80 pour cent de confiance », « jamais plus de 300 tokens dans une réponse » ou « expliquez au niveau anglais B1 ») sont plus faciles à suivre pour les modèles que les instructions purement qualitatives. Les modèles comme GPT-4o et Claude 4.6 Sonnet réagissent particulièrement bien aux limites explicites de tokens, de température et de longueur parce qu\'ils correspondent directement aux paramètres de décodage internes.',
-            'PromptQuorum vous permet d\'attacher le même bloc persona à plusieurs prompts sur différents fournisseurs, réutilisant ainsi le même « analyste financier averse au risque » quand vous questionnez GPT-4o, Gemini 2.5 Pro et LLaMA 3.1 sans copier-coller.',
+            'Les seuils numériques (« 80% de confiance », « max 300 tokens », « niveau anglais B1 ») sont plus faciles à suivre pour les modèles. GPT-4o et Claude réagissent bien aux limites explicites de tokens, température et longueur car elles correspondent aux paramètres de décodage internes.',
           ],
         },
         techExample: {
           title: 'Exemple : Un Persona Technique pour l\'IT et la Finance',
           content: [
-            '**Un persona pratique pour l\'IT et la finance définit un profil de risque conservateur, des frontières de stack technique claires et des règles strictes pour citer les sources ou les hypothèses.** Cette approche est utile si vous analysez les investissements infrastructure, les protocoles crypto ou les risques macro et voulez que l\'IA reste factuelle et prudente. La même structure fonctionne pour les perspectives transfrontalières couvrant les marchés EU, russe, chinois et américain où la régulation et la disponibilité des données diffèrent.',
-            '**[Mauvais Persona Prompt]**',
-            '« Vous êtes une IA utile. Expliquez les sujets tech et finance simplement et soyez sympathique. »',
-            '**[Bon Persona Prompt]**',
-            '« Vous êtes un analyste IT et finance senior avec 15+ ans d\'expérience en architecture logicielle, marchés financiers et trading de matières premières. Concentrez-vous sur l\'analyse factuelle, évitez le battage, et séparez toujours les données de l\'interprétation. Utilisez un anglais clair, maximum 3 phrases par paragraphe et pas d\'emojis. Quand les preuves sont faibles ou plus anciennes que 12 mois, étiquetez-les explicitement comme « plus anciennes » et proposez quelles nouvelles données seraient nécessaires. Priorisez les perspectives EU, russe et allemande pour la régulation ; mentionnez la Chine et les États-Unis où pertinent. Ne donnez jamais de conseils d\'investissement personnalisés ; décrivez plutôt les scénarios, les mécanismes et les facteurs de risque. »',
+            '**Un persona IT-finance définit un profil de risque conservateur, des frontières techniques claires et des règles strictes pour citer les sources.** Cette approche est utile pour analyser les investissements infrastructure ou les risques macro en restant factuel.',
+            '**[Mauvais Persona]** « Vous êtes une IA utile. Expliquez les sujets tech et finance simplement et soyez sympathique. »',
+            '**[Bon Persona]** « Vous êtes un analyste IT-finance avec 15+ ans d\'expérience en architecture logicielle et marchés financiers. Concentrez-vous sur l\'analyse factuelle, séparez données et interprétation. Max 3 phrases par paragraphe, pas d\'emojis. Étiquetez explicitement les données anciennes (>12 mois). Priorisez les perspectives EU-allemandes pour la régulation. Ne donnez jamais de conseils d\'investissement personnalisés ; décrivez les scénarios et facteurs de risque. »',
           ],
         },
         techExampleBreakdown: {
@@ -29358,7 +29353,7 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
         howToBuild: {
           title: 'Comment Construire Votre Propre Persona',
           content: [
-            '**Vous pouvez construire un persona robuste en cinq étapes : définir le métier, choisir les contraintes, ajouter les exemples, tester sur les modèles et affiner selon les erreurs.** Traitez la conception de persona comme un processus itératif : vous commencez avec une description de rôle simple et vous la renforcez chaque fois que l\'IA déraille. Après une semaine d\'utilisation réelle, ce raffinement produit généralement un persona compact et réutilisable de moins de 400–600 tokens que votre équipe peut partager.',
+            '**Construisez un persona robuste en cinq étapes : définir le métier, choisir les contraintes, ajouter les exemples, tester et affiner.** Traitez-le comme un processus itératif. Après une semaine d\'utilisation réelle, vous obtenez généralement un persona compact et réutilisable de 400–600 tokens.',
           ],
           numberedItems: [
             'Définissez le métier : « Ce persona est pour le cas d\'usage X : par exemple, revue de code multi-modèles, planification de scénarios macroéconomiques ou résumé de nouvelles conscient du risque. »',
@@ -29370,14 +29365,14 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
         },
         buildNote: {
           content: [
-            'La pratique du prompt engineering montre que les exemples concrets améliorent considérablement l\'adhérence aux instructions complexes, surtout avec des modèles comme GPT-4o où l\'apprentissage en contexte peut émuler de nouveaux comportements sans fine-tuning. En pratique, ajouter un seul bloc de contraste « mauvaise réponse vs bonne réponse » réduit souvent les erreurs de format de plus de moitié dans les workflows quotidiens.',
-            'La vue côte à côte de PromptQuorum vous aide à affiner les personas plus vite parce que vous voyez sur un seul écran comment différents modèles interprètent le même persona. Si Claude 4.6 Sonnet continue à poser des questions de suivi tandis que GPT-4o répond immédiatement, cela signale que vous devez peut-être ajuster la gestion de l\'incertitude ou ajouter une règle sur quand poser des questions de clarification.',
+            'Les exemples concrets améliorent l\'adhérence aux instructions complexes. Ajouter un seul bloc de contraste « mauvaise vs bonne réponse » réduit souvent les erreurs de format de plus de moitié.',
+            'La vue côte à côte de PromptQuorum vous aide à affiner les personas car vous voyez comment différents modèles les interprètent. Si Claude pose des questions tandis que GPT-4o répond immédiatement, ajustez la gestion de l\'incertitude.',
           ],
         },
         vsFineTuning: {
           title: 'Persona Prompting vs Fine-Tuning vs Prompts Système',
           content: [
-            '**Le persona prompting est une alternative légère au fine-tuning et à la configuration système quand vous voulez des changements de comportement sans entraîner un modèle personnalisé.** Au lieu de modifier des poids ou de construire un wrapper API personnalisé, vous encodez le comportement en texte qui fonctionne chez n\'importe quel fournisseur : OpenAI, Anthropic, Google DeepMind, Mistral AI ou déploiements locaux via Ollama et LM Studio. Cela rend les personas portables entre les fournisseurs et à l\'épreuve du temps alors que des modèles comme LLaMA 3.1 ou Qwen 2.5 évoluent.',
+            '**Le persona prompting est une alternative légère au fine-tuning quand vous voulez des changements de comportement sans entraîner un modèle.** Vous encodez le comportement en texte qui fonctionne chez tous les fournisseurs, ce qui rend les personas portables et durables.',
             'Comparaisons clés :',
           ],
           items: [
@@ -29388,7 +29383,7 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
         },
         regionalApproaches: {
           content: [
-            'Les entreprises francophones privilégient le persona prompting combiné à des modèles locaux comme Mistral Large ou LLaMA 3.1 hébergés sur site pour respecter les exigences EU AI Act et de résidence des données sans partager les prompts avec des API externes. En France, en Belgique et au Canada, les organisations appliquent de plus en plus le persona prompting à des modèles comme Qwen 2.5 ou DeepSeek V3 pour correspondre aux attentes locales de conformité et de normes linguistiques.',
+            'Les entreprises francophones combinant le persona prompting avec des modèles locaux (Mistral Large, LLaMA 3.1) hébergés sur site respectent les exigences EU AI Act et de résidence des données. En France, Belgique et Canada, les organisations utilisent de plus en plus le persona prompting pour la conformité et les normes linguistiques locales.',
           ],
         },
         pqBridges: {
@@ -29404,8 +29399,7 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
         keySnippets: {
           title: 'Blocs Clés à Réutiliser',
           content: [
-            '**En un phrase :** Un persona prompt est une spécification réutilisable de rôle, valeurs, contraintes et style qui fait que les grands modèles de langage se comportent comme des experts virtuels cohérents au lieu de chatbots génériques.',
-            'Points clés à retenir :',
+            '**Un persona prompt est une spécification réutilisable qui rend les LLMs des experts virtuels cohérents au lieu de chatbots génériques.**',
           ],
           items: [
             'Le persona prompting change seulement les instructions, donc c\'est bon marché et réversible.',
@@ -29421,11 +29415,11 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
         howToStart: {
           title: 'Comment Commencer avec le Persona Prompting',
           numberedItems: [
-            '**Choisissez un persona qui correspond à votre style de résultat désiré.** Pour la copie marketing : « Vous êtes un copywriter créatif. » Pour la documentation technique : « Vous êtes un ingénieur principal. » Pour l\'accessibilité : « Vous écrivez pour des utilisateurs non-techniques. »',
-            '**Décrivez le persona avec des traits spécifiques pertinents pour votre tâche.** Au lieu de « sympathique », dites : « Vous expliquez les concepts techniques avec des analogies, utilisez des phrases courtes, évitez le jargon et priorisez la clarté sur l\'exhaustivité. »',
-            '**Combinez persona avec la clarté de la tâche.** Exemple : « Vous êtes un rédacteur technique spécialisé dans rendre les systèmes complexes accessibles aux non-experts. Écrivez une explication de 500 mots sur le fonctionnement de la limitation de débit API. »',
-            '**Utilisez les personas pour contrôler le ton et le style sans micromanager chaque détail.** Un persona apporte des conventions implicites et des priorités. « Architecte logiciel » suggère une pensée structurée ; « journaliste » suggère une narration basée sur les faits.',
-            '**Testez les choix de persona en exécutant le même prompt avec différents personas et en comparant les résultats.** Générez le même contenu en tant que « marketeur casual » vs. « consultant professionnel. » Voyez quel ton correspond mieux à votre marque ou votre cas d\'usage.',
+            '**Choisissez un persona aligné à votre objectif.** Copywriter créatif pour le marketing, ingénieur principal pour la documentation technique.',
+            '**Décrivez le persona avec des traits spécifiques.** Plutôt que « sympathique », dites : « Expliquez avec des analogies, phrases courtes, évitez le jargon. »',
+            '**Combinez persona et clarté de tâche.** Exemple : « Rédacteur technique. Écrivez une explication de 500 mots sur la limitation de débit API. »',
+            '**Utilisez les personas pour le ton et le style.** Un persona apporte des conventions implicites : « Architecte » suggère la structure, « journaliste » suggère la factualité.',
+            '**Testez les choix de persona.** Exécutez le même prompt avec différents personas et comparez les résultats pour voir ce qui correspond à votre marque.',
           ],
         },
       },
