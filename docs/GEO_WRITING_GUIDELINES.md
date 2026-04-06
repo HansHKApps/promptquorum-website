@@ -18,6 +18,62 @@ When our pages follow these rules, AI systems cite and quote the site when users
 
 ---
 
+## Step 0: Choose Your Audience Level Before Writing
+
+**Before writing a single sentence, decide which audience level the article targets. This decision determines search volume, conversion rate, and PromptQuorum revenue.**
+
+PromptQuorum's paying users are people who actively use LLM APIs and build with prompts. Casual ChatGPT users are traffic but not buyers. The four levels have fundamentally different revenue profiles:
+
+| Level | Who is searching | Search volume | PromptQuorum conversion | Use for |
+|-------|-----------------|---------------|------------------------|---------|
+| **Beginner** | No prior AI tool knowledge. Searching: "what is prompt engineering", "what is an LLM" | Highest | Low — they use free chat UIs, not APIs | Glossary entries, foundational definitions |
+| **Intermediate** | Uses ChatGPT or Claude actively. Searching: "how to write better prompts", "few-shot examples", "prompt templates" | High | **High** — actively experimenting, likely to try tools | **Default for most articles** |
+| **Advanced** | Uses LLM APIs, building workflows. Searching: "RAG vs fine-tuning", "structured output production", "multi-model comparison" | Medium | **Highest** — direct PromptQuorum buyers | Power-user topics, production workflows |
+| **Technical** | Researchers, ML engineers. Searching: "attention mechanism explained", "token probability math" | Low | Low — researchers, not typical tool buyers | Only when subject genuinely requires it |
+
+### The decision rule
+
+**Answer these three questions:**
+
+1. **What is the reader's current LLM workflow?**
+   - No LLM usage yet → Beginner
+   - Uses ChatGPT/Claude daily but no API → Intermediate
+   - Calls APIs, builds prompts programmatically → Advanced
+   - Writes model architecture code / reads papers → Technical
+
+2. **What does the primary keyword signal?**
+   - `what-is-*`, `*-explained`, `*-glossary`, `*-basics` → Beginner
+   - `how-to-*`, `*-prompting`, `*-examples`, `*-templates`, `*-mode` → Intermediate
+   - `*-vs-*` (production tradeoffs), `*-workflow`, `*-optimization`, `*-injection` → Advanced
+   - `how-*-actually-work`, `*-architecture`, `*-token-math` → Technical
+
+3. **Does this reader benefit from PromptQuorum today?**
+   - No (not using tools yet) → Beginner — write for funnel entry, link aggressively to Intermediate
+   - Yes, likely to try it → Intermediate or Advanced — this is the revenue-generating audience
+
+### Default: write Intermediate
+
+When in doubt, write Intermediate. It covers the largest audience that converts. Intermediate articles explain *how to do something*, not just *what something is*.
+
+Only go Beginner if the topic is genuinely a definition or concept with no hands-on angle. Only go Advanced if the topic assumes the reader already implements prompts in production. Only go Technical if the content genuinely requires code, math, or model architecture knowledge — most "technical-sounding" topics can and should be written as Advanced.
+
+### Set these fields in content.ts
+
+Every article must set both fields before publishing:
+
+```ts
+educationalLevel: 'Intermediate',   // Beginner | Intermediate | Advanced | Technical
+audience: 'Developers building with LLMs, prompt engineers',  // specific job role
+```
+
+The `audience` string must name a **specific job role or use case**, not a broad group:
+- ❌ "AI users", "Everyone", "People interested in AI"
+- ✅ "Developers building with LLMs", "Marketers using ChatGPT daily", "Data scientists optimizing LLM pipelines"
+
+These fields power the visible badge below the article intro (reader signal) and the `LearningResource` schema (Google/AI signal).
+
+---
+
 ## Rule 1: Answer First
 
 **The direct answer belongs in the first sentence of every section.**
