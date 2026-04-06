@@ -6,6 +6,31 @@ Load this file as your primary reference when translating. It eliminates the nee
 
 ---
 
+## FRAMEWORK ACRONYM RULE — Mandatory for ALL Languages
+
+> **Prompt engineering framework names are proper nouns and must NEVER be translated.**
+> The acronym letters and their English component words must always be preserved.
+>
+> **Correct format in all non-EN languages:**
+> `R — Refine (German/French/Japanese/Chinese equivalent)`
+>
+> **Examples:**
+> - RISEN: `R — Refine (Verfeinern)` | `I — Inspect (Prüfen)` | `S — Summarize (Zusammenfassen)` | `E — Evaluate (Bewerten)` | `N — Next steps (Nächste Schritte)`
+> - TRACE: `T — Think (Denken)` | `R — Reason (Schlussfolgern)` | `A — Analyze (Analysieren)` | `C — Conclude (Schlussfolgern)` | `E — Explain (Erklären)`
+> - SPECS: `S — Scope (Umfang)` | `P — Purpose (Zweck)` | `E — Examples (Beispiele)` | `C — Constraints (Einschränkungen)` | `S — Specification (Spezifikation)`
+> - CO-STAR: `C — Context (Kontext)` | `O — Objective (Ziel)` | `S — Style (Stil)` | `T — Tone (Ton)` | `A — Audience (Zielgruppe)` | `R — Response (Antwort)`
+>
+> **NEVER:**
+> - Translate only to target language and lose the English term (❌ "Nexus" instead of "Next steps")
+> - Change the letter the acronym stands for (❌ "Revise" for R when source says "Refine")
+> - Invent new words that don't match the original (❌ "Revisiter" without stating it's "Refine")
+>
+> **Framework names are always kept in English:**
+> RISEN, TRACE, SPECS, RTF, CO-STAR, CRAFT, APE, Single Step Prompt Method
+> These are proper nouns. Never translate the name itself.
+
+---
+
 ## ZERO ENGLISH RULE — Non-negotiable
 
 > A DE, FR, JA, or ZH page must contain **no English text** — visible or search-engine-facing.
@@ -67,10 +92,13 @@ Quick-reference table. Use these exact codes, templates, and section titles.
 
 ### Always Keep in English / Unchanged
 
-- **URL paths:** All internal links `/prompt-engineering/...` — only update the link text (before the parentheses); append `?lang=XX` to the URL (see section 4)
-- **Product/model names:** `GPT-4o`, `Claude 4.6 Sonnet`, `Gemini 2.5 Pro`, `Ollama`, `DeepSeek`, `Mistral`, `LLaMA`, `DALL-E`, `Anthropic Claude`
-- **Org/standard names:** `OWASP`, `NIST`, `BSI`, `Anthropic`, `OpenAI`, `PromptQuorum`, `Google`, `Meta`, `Cohere`
-- **Technical acronyms:** `RAG`, `RLHF`, `RLAIF`, `LLM`, `DistilBERT`, `Base64`, `ROT13`, `BPE`, `DPO`, `SFT`, `Constitutional AI`, `SSRF`, `XSS`, `API`, `SDK`, `IDE`, `GPT`, `LoRA`, `QLoRA`, `ViT`
+- **URL paths:** All internal links `/prompt-engineering/...` — only update the link text; append `?lang=XX` to the URL (see section 4). Never translate slug paths.
+  - ✅ Correct: `/prompt-engineering/risen-framework?lang=de`
+  - ❌ Wrong: `/de/prompt-engineering/risen-framework` or `/prompt-engineering/risen-framework-de`
+- **Product/model names:** `GPT-4o`, `Claude 4.6 Sonnet`, `Gemini 2.5 Pro`, `Ollama`, `DeepSeek`, `Mistral`, `LLaMA`, `Qwen 2.5`, `Phi-4`, `DALL-E`, `Anthropic Claude`
+- **Framework names (proper nouns):** `RISEN`, `TRACE`, `SPECS`, `RTF`, `CO-STAR`, `CRAFT`, `APE`, `Single Step Prompt Method` — never translate these
+- **Org/standard names:** `OWASP`, `NIST`, `BSI`, `Google DeepMind`, `Anthropic`, `OpenAI`, `PromptQuorum`, `Google`, `Meta`, `Cohere`
+- **Technical acronyms/terms (keep in English, may add translation in parentheses):** `RAG`, `RLHF`, `RLAIF`, `LLM`, `DistilBERT`, `Base64`, `ROT13`, `BPE`, `DPO`, `SFT`, `Constitutional AI`, `SSRF`, `XSS`, `API`, `SDK`, `IDE`, `GPT`, `LoRA`, `QLoRA`, `ViT`, `prompt`, `prompt engineering`, `token`, `context window`, `fine-tuning`, `inference`, `endpoint`, `deployment`, `JSON`, `schema`
 - **Schema fields:** `schema.@context`, `schema.@type`, `author`, `publisher`, `mentions`, `about`, `speakable` objects (structure unchanged)
 - **Dates:** `publishDate`, `dateModified` — keep **exact same ISO date** as English source (do not localize format)
 - **Boolean flags:** `isTldr`, `tableFormat`, `theme` (values unchanged)
@@ -119,6 +147,72 @@ Apply GEO writing style in all languages: Use clear headings, short paragraphs, 
 - Always preserve technical terms (CRAFT, CO-STAR, Ollama, Llama 3.2, Phi-3.5, etc.) but explain them naturally in context.
 - Keep GEO style: scannable, helpful, structured, with clear benefits and practical value.
 - Never produce near-identical structure and length to the English version.
+
+---
+
+## SOURCE CONSISTENCY RULE
+
+> If the EN source page has conflicting definitions, contradictions, or multiple incompatible interpretations of the same concept (e.g., two different acronym definitions on the same page), **do not translate until the EN source is fixed.**
+>
+> **Flag the conflict** and wait for the corrected EN version before generating translations. Translating conflicting content creates downstream maintenance nightmares.
+>
+> **Example:** If RISEN is defined as Refine/Inspect/Summarize/Evaluate/Next-steps in the body but Role/Instruction/Steps/End-goal/Narrow-down in the `howToStart` section, stop and request EN clarification first.
+
+---
+
+## FORMALITY RULES by Language
+
+Use these formality levels consistently throughout:
+
+- **DE (German):** Sie-form throughout (never du-form). Professional, structured, explicit.
+- **FR (French):** Vous-form throughout (never tu-form). Elegant, fluent, reader-friendly.
+- **JA (Japanese):** Polite form (です/ます). Appropriate keigo for business/technical content. Structured and deferential tone.
+- **ZH (Chinese):** Formal written Chinese (书面语). No slang, colloquial forms, or internet speak. Professional and clear.
+
+---
+
+## FRAMEWORK PAGE RULES (RISEN, TRACE, SPECS, RTF, CO-STAR, CRAFT, APE, Single Step)
+
+Apply these rules in addition to the language-specific deviation rules above:
+
+### German (de) – Framework Pages
+
+1. Use professional yet accessible DACH business tone (Sie-form).
+2. Add a dedicated "Praxis in der DACH-Region" or "DACH-Kontext" section with examples from German/Austrian/Swiss companies or compliance processes.
+3. Include 2–3 extra practical tips focused on enterprise use: compliance, documentation, team workflows, DSGVO/BSI considerations.
+4. Add a "Zusammenfassung" (summary) box at the end of the main explanation.
+
+### French (fr) – Framework Pages
+
+1. Adopt an elegant, clear, and slightly more formal French tone (Vous-form).
+2. Add an "Applications en France et pays francophones" section with relevant examples: marketing, public sector, creative industries, large enterprises.
+3. Make explanations 10–15% more concise than English without losing information.
+4. Add one extra benefit-focused bullet list in the "Why use this framework" or "How to use" section.
+
+### Japanese (ja) – Framework Pages
+
+1. Increase structure significantly: Add 3–5 extra H2/H3 subheadings (e.g., "フレームワークの詳細", "実践例", "注意点").
+2. Add a "実践Tips" (Practical Tips) section with 5–6 bullet points.
+3. Add a "注意点" (Caveats / Points to Note) subsection for potential pitfalls or considerations when using the framework.
+4. Include Japan-specific usage notes: Japanese companies, development teams, education context, QA culture.
+5. Use polite, instructional, and well-organized Japanese (です/ます) suitable for technical readers.
+
+### Chinese (zh) – Framework Pages (Simplified)
+
+1. Use direct, benefit-driven, and action-oriented language (书面语 formal style).
+2. Expand the "中国企业实际应用" or "实用建议" section with concrete examples from Alibaba, Tencent, Huawei, ByteDance, Baidu, etc.
+3. Add more numbered lists and bullet points for steps, tips, and practical guidance.
+4. Include "注意事项" (Important Notes) for common mistakes or compliance issues relevant to the Chinese market (MLPS, CAC, 数据安全法, data localization).
+5. Emphasize practical outcomes and cost/efficiency benefits common in Chinese developer and enterprise culture.
+
+---
+
+## GENERAL BEST PRACTICE FOR ALL NON-ENGLISH FRAMEWORKS
+
+- Make the explanation feel like it was originally written in the target language (not a translation).
+- Emphasize practical usage and real-world application **more** than the English version.
+- Add at least one localized "real-world example" relevant to the target market.
+- Use clear, benefit-oriented language with strong scannability: short paragraphs, bullet points, numbered steps.
 - Ensure the localized version feels written for that language audience.
 
 ---
