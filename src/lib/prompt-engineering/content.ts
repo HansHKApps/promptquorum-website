@@ -28380,8 +28380,177 @@ zh: {
         },
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-fr: {
+    de: {
+      theme: 'Techniques',
+      title: 'Negative Prompting: Der KI sagen, was sie NICHT tun soll',
+      intro: 'Negative Prompting ist eine Technik, bei der Sie dem Modell explizit mitteilen, was es vermeiden soll – Inhalte, Stil, Struktur oder Verhalten – damit die Ausgaben innerhalb klarer Grenzen bleiben. Sie fungiert als "Schutzschicht" über Ihren normalen Anweisungen.',
+      publishDate: '2026-03-26',
+      readTime: '6 Min. Lesezeit',
+      metaDescription: 'Negative Prompting ermöglicht präzise Kontrolle über KI-Ausgaben durch explizite Verbote. Lernen Sie, Guardrails zu setzen und Markenrichtlinien zu sichern.',
+      primaryTerm: 'Negative Prompting',
+      seoTitle: 'Negative Prompting: KI-Guardrails gezielt einsetzen',
+      educationalLevel: 'Intermediate',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Negative Prompting: Der KI sagen, was sie NICHT tun soll',
+        description: 'Was Negative Prompting ist, warum es wichtig ist, und wie Sie explizite „Nicht"-Regeln einsetzen, um KI-Ausgaben sicher und markenkonform zu halten.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['Negative Prompting', 'Prompt Engineering', 'Guardrails', 'KI-Kontrolle', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Große Sprachmodelle' },
+          { '@type': 'Thing', name: 'Sicherheitsrichtlinien' },
+        ],
+      },
+      sections: {
+        whatIsNegativePrompting: {
+          title: 'Was Negative Prompting ist',
+          content: [
+            '**Negative Prompting bedeutet, dass Sie Ihren Prompts explizite „Nicht"-Regeln hinzufügen, parallel zu dem, was das Modell tun soll.** Statt nur die gewünschte Ausgabe zu beschreiben, geben Sie auch unerwünschte Themen, Tonalität, Formate oder häufige Fehler an.',
+            'Diese negativen Anweisungen können verbotene Begriffe, unzulässige Inhaltskategorien, Themen, die tabu sind, oder einfach Stile abdecken, die Sie nicht möchten (beispielsweise „keine Witze", „keine Emojis" oder „Hype-Wörter vermeiden"). Je klarer die „Nicht"-Regeln, desto einfacher ist es für das Modell, die Vorgaben einzuhalten.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Warum Negative Prompting wichtig ist',
+          content: [
+            '**Negative Prompting ist wichtig, weil reale Ausgaben nicht nur durch Ziele, sondern durch Grenzen eingeschränkt sind – Marke, Recht, Sicherheit und Qualitätsstandards.** Ein gutes Ergebnis ist oft „korrekt und innerhalb der Grenzen", nicht nur „nützlich".',
+            'Negative Anweisungen helfen Ihnen:',
+          ],
+          items: [
+            'Spezifische Fehlermuster verhindern, die Sie bereits gesehen haben, wie Überverkauf, Spekulation oder unerwünschte Haftungsausschlüsse.',
+            'Marken- und Tonalitätsregeln direkt im Prompt durchsetzen, beispielsweise Fachjargon oder verbotene Adjektive vermeiden.',
+            'Manuelle Nachbearbeitung reduzieren, da viele häufige Korrektionen durch klare „Nicht"-Vorgaben vorweggenommen werden können.',
+          ],
+        },
+        useNote: {
+          content: [
+            'Richtig eingesetzt, wandelt Negative Prompting frühere Fehler in wiederverwendbare Schutzvorschriften um.',
+          ],
+        },
+        whatYouCanConstrain: {
+          title: 'Was Sie mit negativen Prompts einschränken können',
+          content: [
+            '**Sie können Negative Prompting auf Inhalte, Stil, Struktur und Verhalten anwenden.** Das Ziel ist, spezifisch genug zu sein, damit das Modell genau weiß, was es vermeiden soll.',
+            'Häufige negative Einschränkungen:',
+          ],
+          items: [
+            'Inhalte: „Keine medizinischen Ratschläge", „keine Nennung von Konkurrenten", „keine Rechtsberatung".',
+            'Stil: „Keine Hype-Wörter wie „revolutionär" oder „spielverändernd"", „keine Emojis", „Sarkasmus vermeiden".',
+            'Struktur: „Keine Einleitung", „keine nummerierten Listen", „kein Fazit".',
+            'Verhalten: „Keine erfundenen Statistiken", „falls unsicher, sagen Sie, dass Sie unsicher sind, statt zu spekulieren".',
+          ],
+        },
+        combiningNote: {
+          content: [
+            'Die Kombination von positiven und negativen Anweisungen ergibt eine viel präzisere Prompt-Spezifikation.',
+          ],
+        },
+        example: {
+          title: 'Beispiel: Ohne und mit Negative Prompting',
+          content: [
+            '**Die Wirkung von Negative Prompting wird deutlich, wenn Sie einen generischen Prompt mit einem vergleichen, der explizite „Nicht"-Regeln enthält.** Hier ist ein Beispiel für eine Produktbeschreibung.',
+            '**[Schlechter Prompt]**',
+            '"Schreiben Sie eine Produktbeschreibung für unser neues Analytics-Dashboard."',
+            '**[Guter Prompt]**',
+            '"Sie sind ein B2B-Produkt-Manager. Aufgabe: Schreiben Sie eine Produktbeschreibung für unser neues Analytics-Dashboard, ausgerichtet auf Betriebsleiter. Einschränkungen (Negative Prompting): Verwenden Sie keine Hype-Wörter wie „revolutionär", „disruptiv" oder „spielverändernd". Erwähnen Sie keine Konkurrenten und vergleichen Sie uns nicht mit anderen Tools. Versprechen Sie keine zukünftigen Funktionen; beschreiben Sie nur das, was heute existiert. Halten Sie sich auf 180 Wörter. Ausgabeformat: 1 kurzer Absatz für die Übersicht, gefolgt von 3 Aufzählungspunkten für wichtigste Vorteile."',
+            'Die „gute" Version kodiert bekannte Fallstricke (Hype, Spekulation, Vergleiche) direkt in die Anweisungen und reduziert die Notwendigkeit für manuelle Überarbeitungen.',
+          ],
+        },
+        germanContextExample: {
+          title: 'Beispiel: Negative Prompting in der deutschen Geschäftskommunikation',
+          content: [
+            'In der deutschsprachigen Unternehmenskommunikation, insbesondere in regulierten Branchen wie Finanzdienstleistungen und Versicherungen, ist Negative Prompting ein entscheidender Kontrollfaktor. Ein Beispiel aus dem DACH-Raum:',
+            '**[Anwendungsfall]**',
+            'Sie sind ein deutsches Versicherungsunternehmen und nutzen KI zur Erstellung von Kundenschreiben. Wichtig: Die Texte müssen DSGVO-konform sein, dürfen keine Rechtsberatung implizieren, und müssen die formale „Sie"-Ansprache wahren. Negative Prompting würde hier heißen: „Verwenden Sie keine informellen Ausdrücke, keine Garantien für zukünftige Schadensersatzansprüche, und keine Phrasen, die eine Rechtsberatung suggerieren." Dies stellt sicher, dass automatisierte Texte regulatorischen Anforderungen entsprechen – ein wesentlicher Unterschied gegenüber englischsprachigen Märkten mit lockereren Anforderungen.',
+          ],
+        },
+        whenToUse: {
+          title: 'Wann Sie Negative Prompting verwenden sollten',
+          content: [
+            '**Sie sollten Negative Prompting einsetzen, wenn Sie klare Beispiele dafür haben, was Sie niemals wieder sehen möchten.** Es ist besonders hilfreich in wiederholbaren Arbeitsabläufen, in denen dieselben Fehler immer wieder auftreten.',
+            'Typische Anwendungsfälle:',
+          ],
+          items: [
+            'Kundenkommunikation, wo Ton, Aussagen und Versprechen innerhalb strikter Richtlinien bleiben müssen.',
+            'Regulierte Kontexte (Finanz, Gesundheit, Recht), in denen bestimmte Arten von Ratschlägen oder Formulierungen vermieden werden müssen.',
+            'Interne Dokumentation oder Berichte, die keine vertraulichen Details, personenbezogenen Daten oder Spekulationen enthalten dürfen.',
+            'Öffentliche Inhalte, bei denen Sie sensible Themen, politische Meinungen oder kontroverse Sprache vermeiden möchten.',
+          ],
+        },
+        productionNote: {
+          content: [
+            'Für schnelle, risikoarme Experimente können Sie Negative Prompting einfach halten. Mit der Zeit und bei der Vorbereitung von Prompts für Produktionsarbeitsabläufe wächst Ihre Liste der „Nicht"-Regeln in der Regel.',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Negative Prompting in PromptQuorum',
+          content: [
+            '**PromptQuorum ist ein Multi-Modell-KI-Dispatching-Tool, bei dem Negative Prompting in wiederverwendbare Frameworks eingebettet werden kann, statt sie jedes Mal neu zu schreiben.** Sie können Standard-Negativbeschränkungen einmalig definieren und an viele Aufgaben anhängen.',
+            'In PromptQuorum können Sie:',
+          ],
+          items: [
+            'Negative-Prompting-Blöcke (beispielsweise „verbotene Begriffe", „unzulässige Inhalte", „Stilbeschränkungen") in Frameworks wie SPECS, RTF oder CRAFT hinzufügen, damit sie immer angewendet werden.',
+            'Geteilte Listen von „Nicht"-Regeln für Ihre Marke oder Ihr Team führen und so Konsistenz über alle Prompts und Modelle hinweg sichern.',
+            'Denselben Prompt mit Negativbeschränkungen auf verschiedenen Modellen ausführen, um zu sehen, welcher Anbieter Ihre Grenzen am besten einhält.',
+          ],
+        },
+        pqConversion: {
+          content: [
+            'Indem Sie Negative Prompting als Teil Ihrer Prompt-Architektur behandeln, hilft Ihnen PromptQuorum, frühere Fehler in dauerhafte, wiederverwendbare Einschränkungen umzuwandeln.',
+          ],
+        },
+        howToStart: {
+          title: 'Wie Sie mit Negative Prompting beginnen',
+          numberedItems: [
+            '**Identifizieren Sie, was Sie NICHT in der Ausgabe wollen: spezifische Wörter, Töne, Stile oder Ansätze.** Beispiel: „Verwenden Sie keine Marketing-Buzzwords. Machen Sie keine Versprechen. Erwähnen Sie keine Konkurrenten."',
+            '**Formulieren Sie Negativvorgaben explizit mit „darf nicht", „muss nicht", „niemals"-Sprache.** Weiche Negativvorgaben wie „vermeiden Sie nach Möglichkeit" sind weniger wirksam. Seien Sie direkt: „Verwenden Sie niemals die Worte „disruptiv", „spielverändernd" oder „KI-gestützt"."',
+            '**Geben Sie Negativbeispiele: zeigen Sie dem Modell, was Sie explizit NICHT wollen.** Beispiel: „Schreiben Sie nicht so: „Freisetzen Sie explosives Wachstum mit unserer KI-Lösung." Schreiben Sie nicht so: „Unsere hochmoderne Plattform nutzt Machine Learning." Schreiben Sie so: [gutes Beispiel einfügen]."',
+            '**Kombinieren Sie positive und negative Vorgaben.** Sagen Sie nicht nur, was zu vermeiden ist – geben Sie auch an, was stattdessen zu tun ist. Beispiel: „Verwenden Sie keine Hype-Sprache. Konzentrieren Sie sich stattdessen auf spezifische, messbare Vorteile."',
+            '**Verwenden Sie Negative Prompting sparsam – es kann das Modell manchmal verwirren.** Positive Vorgaben („schreiben Sie klar und technisch") funktionieren oft besser als schwere Negativvorgaben („seien Sie nicht vage, vereinfachen Sie nicht, weichen Sie nicht aus"). Balancieren Sie beide Ansätze.',
+          ],
+        },
+        zusammenfassung: {
+          title: 'Zusammenfassung: Negative Prompting in drei Schritten',
+          content: [
+            '| **Schritt** | **Aktion** | **Beispiel** |',
+            '|---|---|---|',
+            '| 1. Grenzen definieren | Listen Sie auf, was Sie NICHT wollen | „Keine Hype-Wörter, keine Konkurrenzerwähnungen" |',
+            '| 2. Explizit machen | Nutzen Sie klare Negativformulierungen | „Verwenden Sie niemals den Begriff \'revolutionär\'." |',
+            '| 3. Mit positiven Vorgaben kombinieren | Sagen Sie auch, WAS Sie wollen | „Stattdessen: Fokus auf messbare Vorteile" |',
+          ],
+        },
+        faqSection: {
+          title: 'Häufig gestellte Fragen (FAQ)',
+          faqs: [
+            {
+              q: 'Wie unterscheidet sich Negative Prompting von anderen Prompt-Engineering-Techniken wie SPECS oder RTF?',
+              a: 'Negative Prompting ist ein Baustein INNERHALB von Frameworks wie SPECS oder RTF, nicht ein Ersatz dafür. SPECS umfasst Scope, Purpose, Examples, Constraints und Specification – Negative Prompting ist eine Taktik im Constraints-Teil. RTF (Role, Task, Format) strukturiert den Prompt, während Negative Prompting Grenzen innerhalb dieser Struktur setzt. Optimal nutzen Sie Negative Prompting als Teil eines umfassenden Frameworks.',
+            },
+            {
+              q: 'Kann zu viel Negative Prompting das Modell verwirren?',
+              a: 'Ja. Wenn Sie eine sehr lange Liste von „Nicht"-Regeln schreiben, kann das Modell dazu neigen, die Anweisungen zu überinterpreteren oder sich auf die Vermeidung zu konzentrieren, statt auf die positiven Ziele hinzuarbeiten. Best Practice: halten Sie die Negativliste kurz (3–5 Hauptregeln) und kombinieren Sie sie mit klaren positiven Anweisungen. Testen Sie mit Ihrem spezifischen Modell.',
+            },
+            {
+              q: 'Funktioniert Negative Prompting gleich gut mit allen LLM-Anbietern (OpenAI, Anthropic, Ollama)?',
+              a: 'Die Grundlogik funktioniert überall, aber die Effektivität variiert. OpenAI GPT-4o und Anthropic Claude befolgen explizite Negativvorgaben meist konsistent. Kleinere oder lokale Modelle (Ollama, Mistral) können weniger zuverlässig sein. PromptQuorum ermöglicht es Ihnen, denselben Prompt über mehrere Modelle hinweg zu testen – ideal, um zu sehen, wer Ihre Grenzen am besten einhält.',
+            },
+            {
+              q: 'Ist Negative Prompting DSGVO-konform und sicher für regulierte Industrien in Deutschland?',
+              a: 'Negative Prompting selbst ist ein Sicherheitsmechanismus und kann dazu beitragen, DSGVO-Compliance und andere regulatorische Anforderungen zu unterstützen (z. B. „keine personenbezogenen Daten", „keine Rechtsberatung"). Es ersetzt jedoch nicht die organisatorische Compliance-Struktur. In regulierten Branchen wie Finanzdienstleistungen oder Gesundheit sollten Negative Prompts als Teil einer größeren Datenschutz- und Audit-Strategie behandelt werden, nicht als eigenständige Sicherheitsmaßnahme.',
+            },
+            {
+              q: 'Wie integriere ich Negative Prompting mit lokalen oder selbstgehosteten Modellen wie Ollama?',
+              a: 'Ollama und ähnliche lokale Modelle unterstützen Negative Prompting genauso wie API-basierte Modelle – syntaktisch ändert sich nichts. Allerdings: kleinere lokale Modelle (z. B. 7B Parameter) sind weniger zuverlässig darin, explizite Negativvorgaben zu befolgen als größere Modelle (70B+). Testen Sie, welche Modellgröße in Ihrer Umgebung ausreichende Konsistenz bietet. PromptQuorum kann über lokale APIs mit Ollama integriert werden, um Ergebnisse zu vergleichen.',
+            },
+          ],
+        },
+      },
+    },
+    fr: {
       theme: 'Techniques',
       title: 'Chaînage de Prompts : Comment Décomposer les Tâches Complexes en Étapes Gagnantes',
       intro: 'Le chaînage de prompts est une technique où vous décomposez une tâche complexe en plusieurs prompts plus petits et alimentez la sortie d\'une étape dans la suivante. Cela vous permet de construire des workflows fiables multi-étapes au lieu de dépendre d\'un seul prompt excessivement compliqué.',
@@ -29612,9 +29781,217 @@ zh: {
       },
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    fr: {
+      theme: 'Techniques',
+      title: 'Guidage Négatif : Dire à l\'IA Ce qu\'Elle NE Doit PAS Faire',
+      intro: 'Le guidage négatif est une technique permettant de définir explicitement ce que le modèle doit éviter—contenu, tonalité, structure ou comportements—pour maintenir les résultats dans des limites claires. Il fonctionne comme une « couche de protection » s\'ajoutant à vos instructions standard.',
+      publishDate: '2026-03-26',
+      readTime: '5 min de lecture',
+      metaDescription: 'Guide complet du guidage négatif : définition, enjeux, et application des règles « ne pas faire » pour maîtriser les sorties IA en respect des contraintes de marque et de conformité.',
+      primaryTerm: 'Guidage Négatif',
+      seoTitle: 'Guidage Négatif : Maîtriser les Sorties IA avec des Règles Explicites',
+      educationalLevel: 'Intermediate',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Guidage Négatif : Dire à l\'IA Ce qu\'Elle NE Doit PAS Faire',
+        description: 'Définition, enjeux et mise en œuvre du guidage négatif pour maintenir les sorties IA dans des limites de sécurité, de conformité et d\'alignement de marque.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['guidage négatif', 'ingénierie des invites', 'garde-fous', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Ingénierie des Invites' },
+          { '@type': 'Thing', name: 'Modèles de Langage de Grande Taille' },
+          { '@type': 'Thing', name: 'Garde-fous Numériques' },
+        ],
+      },
+      sections: {
+        whatIsNegativePrompting: {
+          title: 'Qu\'est-ce que le Guidage Négatif ?',
+          content: [
+            '**Le guidage négatif consiste à ajouter des règles explicites « ne pas faire » à vos invites, aux côtés de ce que vous souhaitez obtenir du modèle.** Au lieu de décrire uniquement le résultat attendu, vous précisez également les sujets, tonalités, formats ou erreurs à éviter.',
+            'Ces instructions négatives peuvent porter sur des termes interdits, des catégories de contenu prohibées, des opinions hors limites, ou simplement des styles indésirables (par exemple « pas de blagues », « pas d\'emojis », « éviter le langage marketing »). Plus vos règles « ne pas faire » sont explicites, plus il est aisé pour le modèle de rester aligné.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Pourquoi le Guidage Négatif Compte',
+          content: [
+            '**Le guidage négatif importe parce que les résultats concrètes sont limités non seulement par les objectifs, mais par les contraintes—de marque, légales, de sécurité et de qualité.** Un bon résultat est souvent « exact ET conforme aux limites », pas simplement « utile ».',
+            'Le guidage négatif vous permet :',
+          ],
+          items: [
+            'Prévenir les défaillances spécifiques déjà observées : surpromodon, spéculation, mentions inutiles de mises en garde.',
+            'Imposer les règles de marque et de tonalité directement dans l\'invite, en évitant le jargon ou les adjectifs proscrits.',
+            'Réduire l\'édition manuelle, car nombre de corrections courantes peuvent être anticipées par un guidage explicite « ne pas faire ».',
+          ],
+        },
+        useNote: {
+          content: [
+            'Bien mis en œuvre, le guidage négatif transforme les erreurs antérieures en garde-fous réutilisables et durables.',
+          ],
+        },
+        whatYouCanConstrain: {
+          title: 'Ce Que Vous Pouvez Maîtriser avec le Guidage Négatif',
+          content: [
+            '**Vous pouvez appliquer le guidage négatif au contenu, à la tonalité, à la structure et au comportement.** L\'objectif est d\'être assez spécifique pour que le modèle sache exactement quoi éviter.',
+            'Contraintes négatives courantes :',
+          ],
+          items: [
+            'Contenu : « Ne pas inclure de conseils médicaux », « ne pas mentionner les concurrents », « ne pas émettre de conclusions juridiques ».',
+            'Tonalité : « Ne pas utiliser de termes accrocheurs comme « révolutionnaire » ou « disruptif » », « pas d\'emojis », « éviter le sarcasme ».',
+            'Structure : « Ne pas ajouter d\'introduction », « ne pas utiliser de listes numérotées », « ne pas inclure de conclusion ».',
+            'Comportement : « Ne pas inventer de statistiques », « en cas d\'incertitude, reconnaître l\'incertitude au lieu de deviner ».',
+          ],
+        },
+        combiningNote: {
+          content: [
+            'L\'association d\'instructions positives et négatives vous offre une spécification d\'invite bien plus rigoureuse.',
+          ],
+        },
+        example: {
+          title: 'Exemple : Sans vs Avec Guidage Négatif',
+          content: [
+            '**L\'effet du guidage négatif apparaît clairement en comparant une invite générique à une invite qui encode des règles explicites « ne pas faire ». Voici un exemple adapté au contexte français.**',
+            '**[Invite Faible]**',
+            '« Rédige une description de produit pour notre nouveau tableau de bord analytique. »',
+            '**[Bonne Invite]**',
+            '« Tu es un responsable produit B2B. Tâche : Rédige une description de produit pour notre nouveau tableau de bord analytique destinée aux directeurs d\'exploitation en France. Contraintes (guidage négatif) : Ne pas utiliser de termes marketing comme « révolutionnaire », « disruptif » ou « innovant ». Ne pas mentionner les concurrents. Ne pas promouvoir de fonctionnalités futures ; décrire uniquement ce qui existe aujourd\'hui. Ne pas dépasser 180 mots. Format : 1 paragraphe court pour la présentation générale, suivi de 3 points clés pour les avantages. »',
+            'Cette « bonne » version encode les écueils connus (marketing, spéculation, comparaisons) directement dans les instructions, réduisant le besoin de correction manuelle.',
+          ],
+        },
+        whenToUse: {
+          title: 'Quand Utiliser le Guidage Négatif',
+          content: [
+            '**Utilisez le guidage négatif dès que vous avez des exemples clairs de ce que vous ne voulez jamais revoir.** C\'est particulièrement utile dans les workflows répétables où les mêmes erreurs réapparaissent.',
+            'Cas d\'usage typiques :',
+          ],
+          items: [
+            'Communication client où la tonalité, les affirmations et les promesses doivent respecter des directives strictes.',
+            'Contextes réglementés (finance, santé, droit) où certains types de conseils ou de formulations doivent être évités.',
+            'Documentation interne ou rapports ne devant pas contenir de détails confidentiels, de données personnelles ou de spéculation.',
+            'Contenu public où vous souhaitez éviter les sujets sensibles, les opinions politiques ou le langage controversé.',
+          ],
+        },
+        productionNote: {
+          content: [
+            'Pour les expériences rapides et peu risquées, le guidage négatif peut rester léger. À mesure que les invites deviennent opérationnelles, votre liste de règles « ne pas faire » s\'étend généralement.',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Guidage Négatif dans PromptQuorum',
+          content: [
+            '**PromptQuorum est un outil de dispatch multi-modèles où le guidage négatif peut être intégré dans des cadres réutilisables au lieu d\'être réécrit à chaque fois.** Vous définissez les contraintes négatives standard une seule fois et les attachez à de nombreuses tâches.',
+            'Avec PromptQuorum, vous pouvez :',
+          ],
+          items: [
+            'Ajouter des blocs de guidage négatif (« termes interdits », « contenu défendu », « restrictions de style ») aux cadres tels que SPECS (S — Portée | P — Objet | E — Exemples | C — Contraintes | S — Spécification), RTF (R — Rôle | T — Tâche | F — Format) ou CRAFT pour qu\'ils s\'appliquent systématiquement.',
+            'Maintenir des listes partagées de règles « ne pas faire » pour votre marque ou équipe, garantissant des garde-fous cohérents sur toutes les invites et modèles.',
+            'Exécuter la même invite avec contraintes négatives sur différents modèles pour voir lequel s\'aligne le mieux à vos limites.',
+          ],
+        },
+        pqConversion: {
+          content: [
+            'En traitant le guidage négatif comme part intégrante de votre architecture d\'invites, PromptQuorum vous aide à convertir les erreurs passées en contraintes durables et réutilisables.',
+          ],
+        },
+        howToStart: {
+          title: 'Comment Mettre en Œuvre le Guidage Négatif',
+          numberedItems: [
+            '**Identifiez ce que vous ne voulez pas dans la sortie : mots spécifiques, tonalités, styles ou approches.** Exemple : « Ne pas utiliser de termes marketing. Ne pas faire de promesses. Ne pas référencer les concurrents. »',
+            '**Exprimez les interdictions explicitement en utilisant « ne pas », « ne doit pas » ou « jamais ». Les formulations douces comme « éviter si possible » sont moins efficaces. Soyez direct : « Ne jamais utiliser les mots « disruptif », « révolutionnaire » ou « basé sur l\'IA ». »**',
+            '**Fournissez des exemples négatifs : montrez au modèle ce que vous ne voulez explicitement pas.** Exemple : « N\'écris pas comme ceci : « Décupler votre croissance avec notre solution IA. » N\'écris pas ainsi : « Notre plateforme de pointe utilise l\'apprentissage machine. » Écris plutôt : [exemple positif]. »',
+            '**Combinez guidage positif et négatif.** Ne dites pas seulement ce à éviter—dites aussi ce à faire. Exemple : « Ne pas utiliser de langage marketing. Concentrez-vous sur les avantages spécifiques et mesurables. »',
+            '**Utilisez le guidage négatif avec modération—il peut parfois dérouter le modèle.** Le guidage positif (« écris de manière claire et technique ») fonctionne souvent mieux que de lourdes interdictions (« ne sois pas vague, ne simplifie pas, ne omets rien »). Équilibrez les deux approches.',
+          ],
+        },
+      },
+    },
+    ja: {
+      theme: 'Techniques',
+      title: 'ネガティブプロンプティング：AIに「やってはいけないこと」を教える',
+      intro: 'ネガティブプロンプティングは、モデルが避けるべきもの—コンテンツ、文体、構造、振る舞い—を明示的に指定し、出力を明確な境界内に保つ手法です。通常の指示の上に「ガードレール層」として機能します。',
+      seoTitle: 'ネガティブプロンプティング：AIの出力を制御する明示的なルール設計',
+      metaDescription: 'ネガティブプロンプティングの完全ガイド：定義、重要性、および「してはいけない」ルールの実装方法で、ブランドとコンプライアンス制約内でAI出力を管理します。',
+      publishDate: '2026-03-26',
+      readTime: '5分で読める',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'ネガティブプロンプティング',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'ネガティブプロンプティング：AIに「やってはいけないこと」を教える',
+        description: 'ネガティブプロンプティングの定義、実装方法、および安全で準拠し、ブランド整合的なAI出力を維持するための戦略。',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['ネガティブプロンプティング', 'プロンプトエンジニアリング', 'ガードレール', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'プロンプトエンジニアリング' },
+          { '@type': 'Thing', name: '大規模言語モデル' },
+          { '@type': 'Thing', name: 'ガードレール' },
+        ],
+      },
+      sections: {
+        whatIsNegativePrompting: { title: 'ネガティブプロンプティングとは', content: ['**ネガティブプロンプティングとは、モデルに望む出力を説明するのと同時に、明示的な「してはいけない」ルールをプロンプトに追加することです。** 目的の出力のみを記述するのではなく、避けるべきテーマ、文体、形式、または誤りも指定します。', 'これらのネガティブ指示は、禁止フレーズ、禁止コンテンツカテゴリー、禁止意見、または不要な文体（例えば「冗談なし」「絵文字なし」「マーケティング用語を避ける」）をカバーできます。「してはいけない」ルールが明確であるほど、モデルが整合性を保つことが容易になります。'] },
+        whyItMatters: { title: 'なぜネガティブプロンプティングが重要なのか', content: ['**ネガティブプロンプティングが重要な理由は、実世界の出力が目標だけではなく、制約—ブランド、法律、安全性、品質の制約—によって制限されるからです。** 良い結果とは、単に「有用」ではなく、「正確でかつ境界内に収まっている」ことが多いです。', 'ネガティブ指示は以下のことを可能にします：'], items: ['既に見た特定の失敗パターン、例えば過度な売上予測、推測、または不要な免責事項を防止する。', 'ブランドと文体ルールをプロンプトに直接適用し、専門用語や禁止表現を避ける。', '手動による編集を減らす。多くの一般的な修正は、明確な「してはいけない」ガイダンスで事前に防ぐことができます。'] },
+        useNote: { content: ['適切に使用すれば、ネガティブプロンプティングは過去の誤りを再利用可能なガードレールに変えます。'] },
+        whatYouCanConstrain: { title: 'ネガティブプロンプトで制約できるもの', content: ['**ネガティブプロンプティングは、コンテンツ、文体、構造、振る舞いに適用できます。** 目標は、モデルが正確に何を避けるべきかを理解するのに十分な具体性です。', '一般的なネガティブ制約：'], items: ['コンテンツ：「医療的アドバイスを含めない」「競合他社に言及しない」「法的結論を出さない」。', '文体：「「革新的」や「ゲームチェンジャー」などのハイプワードを使用しない」「絵文字なし」「皮肉を避ける」。', '構造：「導入セクションを追加しない」「番号付きリストを使用しない」「結論を含めない」。', '振る舞い：「統計情報を捏造しない」「不確実な場合は推測する代わりに不確実であることを述べる」。'] },
+        combiningNote: { content: ['ポジティブとネガティブの指示を組み合わせることで、プロンプト仕様がはるかに厳密になります。'] },
+        example: { title: '例：ネガティブプロンプティング適用前後の比較', content: ['**ネガティブプロンプティングの効果は、汎用プロンプトと明示的な「してはいけない」ルールを含むプロンプトを比較するとはっきり見えます。** 以下は製品説明の例です。', '**[不十分なプロンプト]**', '「新しい分析ダッシュボードの製品説明を書いてください。」', '**[優れたプロンプト]**', '「あなたはB2Bの製品マーケターです。タスク：運用責任者向けの新しい分析ダッシュボードの製品説明を書いてください。制約（ネガティブプロンプティング）：「革新的」「破壊的」「ゲームチェンジャー」などのハイプワードを使用しないでください。競合他社に言及したり、他のツールと比較したりしないでください。今存在するもののみを説明し、将来の機能を約束しないでください。180語以下に収めてください。出力形式：概要用の短い段落1つ、その後、主な利点について3つの箇条書きを続けてください。」', '「優れた」バージョンは、既知の落とし穴（ハイプ、推測、比較）を指示に直接エンコードし、手動クリーンアップの必要性を減らします。'] },
+        whenToUse: { title: 'ネガティブプロンプティングをいつ使うか', content: ['**二度と見たくないものについて明確な例がある場合は、ネガティブプロンプティングを使うべきです。** これは、同じ誤りが繰り返し現れる反復的なワークフローで特に有効です。', '典型的なユースケース：'], items: ['トーン、主張、約束が厳しいガイドラインを守る必要がある顧客コミュニケーション。', '特定の種類のアドバイスまたは文言を避ける必要がある規制環境（金融、医療、法律）。', '機密情報、個人データ、または推測を含めてはいけない内部ドキュメントまたはレポート。', 'センシティブなトピック、政治的意見、または論争的な言語を避けたい公開向けコンテンツ。'] },
+        productionNote: { content: ['低リスクの迅速な実験の場合、ネガティブプロンプティングは控えめに保つことができます。プロンプトが本番ワークフローに成熟するにつれて、「してはいけない」ルールのリストは通常拡大します。'] },
+        inPromptQuorum: { title: 'PromptQuorumにおけるネガティブプロンプティング', content: ['**PromptQuorumはマルチモデルAIディスパッチツールであり、ネガティブプロンプティングを毎回書き直す代わりに再利用可能なフレームワークに組み込むことができます。** 標準的なネガティブ制約を一度定義し、多くのタスクに適用できます。', 'PromptQuorumでは、以下のことができます：'], items: ['ネガティブプロンプティングブロック（例えば「禁止フレーズ」「禁止コンテンツ」「スタイル制限」）をSPECS（S—スコープ | P—目的 | E—例 | C—制約 | S—仕様）、RTF（R—ロール | T—タスク | F—フォーマット）、またはCRAFTのようなフレームワークに追加し、それらが常に適用されるようにする。', 'ブランドまたはチーム向けの「してはいけない」ルールの共有リストを保持し、すべてのプロンプトとモデル全体で一貫したガードレールを確保する。', '同じネガティブ制約されたプロンプトを異なるモデルで実行し、どのプロバイダーがあなたの境界に最も準拠しているかを確認する。'] },
+        pqConversion: { content: ['ネガティブプロンプティングをプロンプトアーキテクチャの一部として扱うことで、PromptQuorumは過去の誤りを耐久性のある再利用可能な制約に変えるのに役立ちます。'] },
+        advancedConsiderations: { title: '注意点：ネガティブプロンプティングの落とし穴', content: ['**ネガティブプロンプティングは強力ですが、過度に使用すると裏目に出る場合があります。** 以下の落とし穴に注意してください：'], items: ['過度な制約：ネガティブルールが多すぎると、モデルが混乱し、不完全または矛盾した出力を生成する可能性があります。', 'あいまい性：「してはいけない」ルールが不明確な場合、モデルは意図した方法で解釈できない場合があります。具体的かつ例を示してください。', 'ポジティブとのバランス：ネガティブプロンプティングのみに依存しないでください。常にポジティブガイダンス（やるべきこと）と組み合わせてください。'] },
+        implementationStrategy: { title: '実践Tips：効果的なネガティブプロンプティング戦略', content: ['**ネガティブプロンプティングを最大限に活用するには、戦略的なアプローチが必要です。** 以下は実装のベストプラクティスです：'], items: ['段階的に追加：最小限のルールセットから始め、実際の出力を見ながら必要な制約を追加します。', 'テンプレート化：チーム全体で再利用できる標準的なネガティブ制約セットを作成し、一貫性を確保します。', 'テストと検証：フレームワークに新しいネガティブルールを追加する際は、複数のモデルでテストして動作確認します。', 'ドキュメント化：各ネガティブルールが存在する理由を記録し、将来の参照と維持管理を容易にします。'] },
+        howToStart: { title: 'ネガティブプロンプティングの使い方', numberedItems: ['**出力で見たくない具体的な単語、文体、スタイル、またはアプローチを特定します。** 例：「マーケティング用語を使用しない。約束をしない。競合他社を参照しない。」', '**「してはいけない」「すべきではない」「絶対に～しない」という明示的な言語を使用します。** 「可能なら避ける」などの柔らかい表現は効果が薄いです。直接的に：「「破壊する」「ゲームチェンジ」「AI対応」という単語を決して使用しないでください。」', '**ネガティブな例を提供します：モデルに明示的に望まない内容を示します。** 例：「こう書かないでください：「AIソリューションで爆発的な成長をアンロック。」こう書かないでください：「当社の最先端プラットフォームは機械学習を使用しています。」代わりにこう書いてください：[ポジティブな例を提供]。」', '**ポジティブとネガティブのガイダンスを組み合わせます。** 何を避けるかを言うだけでなく、何をすべきかも言ってください。例：「ハイプ言語を使用しないでください。代わりに、具体的で測定可能な利点に焦点を当ててください。」', '**ネガティブプロンプティングは控えめに使用します—モデルを混乱させることもあります。** ポジティブガイダンス（「明確で専門的に書く」）は、重いネガティブ（「あいまいであってはいけない、簡略化してはいけない、詳細を省略してはいけない」）より効果的です。両方のアプローチをバランスさせてください。'] },
+      },
+    },
+    zh: {
+      theme: 'Techniques',
+      title: '消极提示法：告诉AI不要做什么',
+      intro: '消极提示法是一种提示工程技术，通过明确指定模型应该避免的内容、风格、结构或行为，确保AI输出保持在明确的边界范围内。它充当您正常指令之上的"安全保护层"。',
+      publishDate: '2026-03-26',
+      readTime: '阅读约5分钟',
+      metaDescription: '掌握消极提示法：如何使用明确的禁止规则维持AI输出在品牌、合规和质量边界内。',
+      primaryTerm: '消极提示法',
+      seoTitle: '消极提示法：用明确禁止规则控制AI输出',
+      educationalLevel: 'Intermediate',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: '消极提示法：告诉AI不要做什么',
+        description: '消极提示法的定义、重要性及实施方法，帮助您在安全、合规和品牌对齐的边界内维持AI输出质量。',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['消极提示法', '提示工程', '安全防护', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: '提示工程' },
+          { '@type': 'Thing', name: '大语言模型' },
+          { '@type': 'Thing', name: '安全防护' },
+        ],
+      },
+      sections: {
+        whatIsNegativePrompting: { title: '什么是消极提示法', content: ['**消极提示法是指在提示中添加明确的"不要做"规则，与您期望模型执行的内容并行。** 与其仅描述目标输出，您还需指定不要涉及的主题、语气、格式或常见错误。', '这些负面指令可涵盖：禁用词汇、不能涉及的内容类别、禁区观点或您不需要的特定风格（例如"不要使用笑话""不要用emoji"或"避免营销用语"）。消极规则越清晰，模型越容易保持对齐。'] },
+        whyItMatters: { title: '为什么消极提示法很重要', content: ['**消极提示法很重要，因为现实中的AI输出不仅受目标限制，更受品牌、法律、安全和质量约束的限制。** 一个好的结果通常是"准确且符合边界"，而不仅仅是"有用"。', '消极提示法帮助您：'], items: ['防止已经出现过的特定问题，如过度销售、臆断或不必要的免责声明。', '直接在提示中执行品牌和语气规则，例如避免行业术语或禁用形容词。', '减少人工编辑需求，因为许多常见修正都可通过明确的"不要"指导预先排除。'] },
+        useNote: { content: ['正确使用消极提示法，可以将过去的错误转化为可复用的防护机制。'] },
+        whatYouCanConstrain: { title: '消极提示法可以约束的内容类型', content: ['**您可以将消极提示法应用于内容、语气、结构和行为。** 关键是要足够具体，让模型清楚地知道要避免什么。', '常见的负面约束：'], items: ['内容：不能提供医学建议、不能提及竞争对手、不能给出法律结论。', '语气：不能使用"革命性""颠覆性"等夸大词汇、禁用emoji、避免讽刺语气。', '结构：不能添加前言部分、不能使用序号列表、不能包含总结。', '行为：不能编造数据统计、不能凭空猜测——当不确定时应明确表示。'] },
+        combiningNote: { content: ['将正面和负面指导结合，可以显著提高提示的精确性和有效性。'] },
+        example: { title: '案例：不使用vs使用消极提示法的对比', content: ['**通过对比通用提示与编码明确"不要"规则的提示，消极提示法的效果就变得清晰了。** 以下是一个针对中国市场的产品描述案例。', '**【弱提示】**', '"为我们的新分析仪表板写一份产品描述。"', '**【好提示】**', '"您是一名B2B产品营销经理，面向国内大中型企业服务。任务：为我们的新数据分析仪表板撰写产品描述，目标受众是互联网和制造业的运营总监。约束条件（消极提示）：不能使用"革命性""突破性""AI赋能"等营销夸大词汇。不能提及竞争对手或进行产品对比。不能承诺未来功能——仅描述现有功能。字数不超过180字。格式要求：1个简洁概览段落+3个核心优势要点。"', '这个"好"提示版本将已知陷阱（营销言语、过度承诺、产品对标）直接编码进指令中，大幅减少了人工修改的必要。'] },
+        whenToUse: { title: '何时使用消极提示法', content: ['**当您有明确的例子说明绝对不想看到的输出时，就应该使用消极提示法。** 它在需要重复执行、容易出现相同错误的工作流中特别有效。', '典型应用场景：'], items: ['客户沟通——语气、声明和承诺必须遵守严格规范。', '受管制领域（金融、医疗、法律）——必须避免特定类型的建议或措辞。', '内部文档或报告——不能包含机密内容、个人数据或未经证实的观点。', '对外内容——需避免敏感话题、政治观点或争议性表述。'] },
+        productionNote: { content: ['对于快速、低风险的试验，消极提示法可保持简洁。随着提示逐步进入生产环境，您的"不要"规则列表通常会不断扩展。'] },
+        inPromptQuorum: { title: 'PromptQuorum中的消极提示法', content: ['**PromptQuorum是一个多模型AI调度工具，可将消极提示法内置于可复用的框架中，而无需每次重新编写。** 您可以定义一次标准的负面约束，然后将其附加到多个任务中。', 'PromptQuorum让您能够：'], items: ['向SPECS（范围-目标-案例-约束-说明）、RTF或CRAFT等框架添加消极提示模块（如"禁用词""禁止内容""风格限制"），确保始终应用这些规则。', '为您的品牌或团队维护共享的"不要"规则列表，确保所有提示和模型中的防护机制保持一致。', '在不同模型上运行相同的负面约束提示，查看哪个模型最好地遵守您的边界限制。'] },
+        pqConversion: { content: ['通过将消极提示法视为提示架构的组成部分，PromptQuorum帮助您将过往错误转化为持久可复用的约束条件。'] },
+        practicalSuggestions: { title: '实用建议：在中国商业环境中的应用', content: ['消极提示法在国内商业场景中特别有价值。以下是几个务实的建议，帮助您在SaaS、电商、金融科技和供应链等领域有效应用：'], items: ['在SaaS销售描述中：禁用"最先进""全球领先"等绝对化表述。使用"支持""可以帮助"等更保守的措辞，符合国内消费者预期。', '在电商文案中：不能涉及"包治百病"等医疗声称、避免"国外品质"暗示、禁用虚假折扣承诺。', '在金融内容中：不能给出个人投资建议、避免"稳赚不赔"表述、必须清晰标注风险信息。', '在供应链和企业服务中：不能夸大效率提升比例（如"提升300%"）、避免未经验证的案例数字、明确标注假设条件。', '在API文档和开发者指南中：禁止模糊的技术描述、要求所有性能声明必须附带基准数据、避免与开源项目的不当对标。'] },
+        howToStart: { title: '如何开始使用消极提示法', numberedItems: ['**第一步：列出您不要的具体内容——特定词汇、语气、风格或做法。** 例如：不使用营销术语、不做虚假承诺、不提及竞争对手品牌。', '**第二步：用明确的禁止性语言表述规则——"不要""必须不""永远不要"。** 模糊的表述如"尽量避免"效果较差。应该直接说："永远不要使用"颠覆""改变游戏规则"或"AI赋能"这样的词。"', '**第三步：提供反面案例——展示给模型看您明确不要什么样的输出。** 例如："不要这样写：\'用我们的AI方案突飞猛进。\'不要这样：\'我们的尖端平台采用机器学习。\'应该这样：[给出正面范文]。"', '**第四步：正负指导相结合——不仅说要避免什么，还要说做什么。** 例如："不要用营销语言。改为专注于具体、可量化的业务收益。"', '**第五步：适度使用消极提示——过多的禁止规则可能混淆模型。** 正面指导（"用清晰、专业的技术语言"）通常比严苛的禁令（"不要含糊、不要简化、不要遗漏细节"）更有效。要在两者之间找到平衡。'] },
+        implementationChecklist: { title: '实施清单：确保消极提示法有效执行', content: ['为了确保消极提示法真正有效，建议按照以下清单逐项检查：'], items: ['□ 列出过去出现过至少2-3次的具体错误或不符合预期的输出。', '□ 将这些错误翻译成明确的"不要"规则，用中文直接、无歧义地表述。', '□ 对每条规则提供至少一个反面例子（错误的做法）和一个正面例子（正确的做法）。', '□ 在提示中同时包含3-5条正面指导（您期望看到的做法）。', '□ 在生产前用2-3个实际工作任务测试这些规则，验证模型的遵守程度。', '□ 定期回顾输出结果，如发现新的错误模式，及时补充和更新"不要"规则。'] },
+      },
+    },
   },
 
   'self-consistency-prompting': {
