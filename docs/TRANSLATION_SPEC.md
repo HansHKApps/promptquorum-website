@@ -690,5 +690,128 @@ chmod +x scripts/validate-translation.sh
 
 ---
 
-**Last updated:** 2026-04-02
-**Next review:** After completion of geopolitics-and-ai translations (all 5 languages)
+## Section 10 — Framework Acronym Rules (mandatory — all languages)
+
+Added 2026-04-06 · Based on translation audit of risen-framework and trace-framework.
+
+### 10.1 — The Core Rule
+
+Prompt engineering framework acronym component words MUST be preserved in English in all translations. The acronym letters are defined by the English words and must not be lost.
+
+**Required format in all non-EN languages:**
+```
+Letter — English term (Target language translation)
+```
+
+**NEVER:**
+- Translate component words without keeping the English term
+- Invent replacement words (e.g., "Nexus" for "Next steps")
+- Change the letter the component stands for
+
+### 10.2 — RISEN Components by Language
+
+| Component | EN | DE | FR | JA | ZH |
+|---|---|---|---|---|---|
+| R | Refine | Refine (Verfeinern) | Refine (Affiner) | Refine（修正・洗練） | Refine（修正/优化） |
+| I | Inspect | Inspect (Prüfen) | Inspect (Inspecter) | Inspect（検査） | Inspect（检查） |
+| S | Summarize | Summarize (Zusammenfassen) | Summarize (Synthétiser) | Summarize（要約） | Summarize（总结） |
+| E | Evaluate | Evaluate (Bewerten) | Evaluate (Évaluer) | Evaluate（評価） | Evaluate（评估） |
+| N | Next steps | Next steps (Nächste Schritte) | Next steps (Prochaines étapes) | Next steps（次のステップ） | Next steps（下一步） |
+
+### 10.3 — TRACE Components by Language
+
+| Component | EN | DE | FR | JA | ZH |
+|---|---|---|---|---|---|
+| T | Think | Think (Denken) | Think (Réfléchir) | Think（考える） | Think（思考） |
+| R | Reason | Reason (Schlussfolgern) | Reason (Raisonner) | Reason（推論） | Reason（推理） |
+| A | Analyze | Analyze (Analysieren) | Analyze (Analyser) | Analyze（分析） | Analyze（分析） |
+| C | Conclude | Conclude (Fazit) | Conclude (Conclure) | Conclude（結論） | Conclude（结论） |
+| E | Explain | Explain (Erklären) | Explain (Expliquer) | Explain（説明） | Explain（解释） |
+
+### 10.4 — Other Framework Components
+
+These frameworks follow the same rule — keep English component words, add translation in parentheses:
+
+**SPECS:** S — Scope · P — Purpose · E — Examples · C — Constraints · S — Steps
+
+**RTF:** R — Role · T — Task · F — Format
+
+**CO-STAR:** C — Context · O — Objective · S — Style · T — Tone · A — Audience · R — Response
+
+**CRAFT:** C — Context · R — Role · A — Audience · F — Format · T — Tone
+
+**APE:** A — Action · P — Purpose · E — Expectation
+
+### 10.5 — Framework Names (never translate)
+
+These are proper nouns. Use them in all languages without translation:
+
+RISEN, TRACE, SPECS, RTF, CO-STAR, CRAFT, APE, Single Step Method,
+Chain-of-Thought (CoT), Tree of Thought (ToT), ReAct, RAG
+
+### 10.6 — Model Names (never translate)
+
+GPT-4o, GPT-4o Mini, Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.6 Haiku,
+Gemini 2.5 Pro, Gemini 2.5 Flash, LLaMA 3.1, LLaMA 3.3, Mistral Large,
+Mistral Small, Qwen 2.5, DeepSeek V3, DeepSeek-R1, Phi-4, Phi-4 Mini,
+Gemma 3, Ollama, LM Studio, llama.cpp
+
+### 10.7 — Technical Terms (keep in English)
+
+These terms are industry-standard in all languages. Do not translate:
+
+prompt, prompt engineering, token, context window, fine-tuning, inference,
+embedding, quantization, VRAM, API, JSON, schema, RAG, LoRA, QLoRA, GGUF,
+safetensors, vector database, hallucination (may add translation in parentheses on first use)
+
+---
+
+## Section 11 — Source Consistency Rule
+
+**Before generating or updating any translation, confirm:**
+
+1. The EN source page has ONE consistent acronym definition
+2. The How-to steps match the body text acronym definition
+3. No conflicting definitions exist on the same page
+
+**If conflicting definitions exist in the EN source, DO NOT translate. Fix the EN source first, then generate translations from the corrected version.**
+
+---
+
+## Section 12 — Localization Section Rule
+
+Every non-EN page MUST contain ONE section with market-specific context, placed BEFORE the FAQ section. Do not add if it already exists.
+
+| Language | Section title | Required references |
+|---|---|---|
+| DE | "Im DACH-Kontext" or similar | Germany, Austria, Switzerland, DSGVO, BSI guidelines, German Mittelstand |
+| FR | "Considérations pour les utilisateurs francophones" or similar | France, Belgium, Switzerland (FR), CNIL, RGPD |
+| JA | "日本ユーザーのための活用ポイント" or similar | Japan, METI AI Governance, keigo requirements, Japanese enterprise workflow |
+| ZH | "中国企业的应用方案" or similar | China, CAC, 数据安全法, 网络安全法, major Chinese tech companies |
+
+---
+
+## Section 13 — Internal Link and Hreflang Rules
+
+**Internal links in translated pages must use the base English slug with lang param:**
+```
+CORRECT: /prompt-engineering/risen-framework?lang=de
+WRONG:   /de/prompt-engineering/risen-framework
+WRONG:   /prompt-engineering/risen-framework (without lang param)
+```
+
+**Hreflang — every translated page must include all 6 tags:**
+```
+hreflang="en"        → https://www.promptquorum.com/[slug]
+hreflang="de"        → https://www.promptquorum.com/[slug]?lang=de
+hreflang="fr"        → https://www.promptquorum.com/[slug]?lang=fr
+hreflang="ja"        → https://www.promptquorum.com/[slug]?lang=ja
+hreflang="zh"        → https://www.promptquorum.com/[slug]?lang=zh
+hreflang="x-default" → https://www.promptquorum.com/[slug]
+```
+All URLs must be absolute. Relative URLs in hreflang are invalid.
+
+---
+
+**Last updated:** 2026-04-06
+**Next review:** After next translation batch
