@@ -25726,6 +25726,41 @@ zh: {
       ],
     },
 
+    häufigeFallstricke: {
+      title: 'Häufige Fallstricke: Was Sie vermeiden sollten',
+      content: [
+        '**Halluzination ohne Grounding:** LLMs erfinden frei Fakten. In kritischen Bereichen (Jura, Medizin, Finanzen) führt das zu Fehlern, die teuer sind. Nutzen Sie RAG mit verifizierten Quellen und aktivieren Sie Fact-Checking-Schritte im Prompt.',
+        '',
+        '**Prompt-Injection ignorieren:** Benutzer können System-Prompts überschreiben, wenn Sie nicht achtsam sind. Jede Benutzer-Input muss sanitized und validiert werden. Besonders kritisch bei Kundenschnittstellen.',
+        '',
+        '**Kontextfenster Grenzen unterschätzen:** Deutsche Fachtexte brauchen oft mehr Tokens als Englisch. 128K-Fenster klingt riesig, füllt sich aber schnell. Planen Sie aktiv mit größeren Fenster-Modellen oder Chunking-Strategien.',
+        '',
+        '**Keine Fehleranalyse:** "Der Prompt funktioniert nicht" reicht nicht. Dokumentieren Sie, welche Prompts bei welchen Input-Varianten fehlschlagen. Chain-of-Thought hilft, Reasoning-Fehler zu debuggen.',
+      ],
+    },
+
+    faq: {
+      title: 'Häufig gestellte Fragen zum Thema Prompt Engineering im DACH-Raum',
+      faqs: [
+        {
+          q: 'Wie halte ich Prompt Engineering DSGVO-konform ein?',
+          a: 'Die DSGVO regelt den Umgang mit Personendaten. Konkret: (1) Verwenden Sie für Verarbeitung personenbezogener Daten keine unkontrollierten Cloud-LLMs ohne Datenschutzfolgenabschätzung (sind meist nicht DSGVO-konform). (2) Setzen Sie lokale Modelle (Ollama) ein oder nutzen Sie Anbieter mit Datenverarbeitungsverträgen (wie Anthropic für Claude). (3) Dokumentieren Sie jeden Prompt, der mit Kundendaten arbeitet. (4) Regelmäßige Audits: Wer hat Zugriff? Welche Daten fließen? Können Nutzer ihre Daten löschen? (5) Informieren Sie Betroffene transparent, dass KI eingesetzt wird.',
+        },
+        {
+          q: 'Welche Modelle sind sicher für deutsche Unternehmen?',
+          a: 'Das hängt vom Datenschutz-Level ab: (1) **Cloud mit Datenschutzvertrag:** Claude (Anthropic) oder GPT-4o (wenn Sie Microsoft oder OpenAI Datenschutzverträge abschließen). (2) **Vollständig privat:** Mistral 7B, LLaMA 3 über Ollama auf eigenen Servern. (3) **Deutsche Alternativen:** Firmen wie Aleph Alpha arbeiten an DSGVO-konformen Lösungen. (4) **Regel:** Je sensibler die Daten, desto lokaler die Lösung. Deutsche Firmen wählen oft ein Hybrid-Modell: Cloud für nicht-kritische Use-Cases, lokal für sensible Daten.',
+        },
+        {
+          q: 'Wie bereite ich mein Team im Unternehmen auf Prompt Engineering vor?',
+          a: 'Erfolgreiches Prompt Engineering im Enterprise braucht systematisches Training: (1) **Theoretische Grundlagen (2–3 h):** Chain-of-Thought, Few-Shot, RAG, Evaluierung. (2) **Praktische Übungen (1–2 Tage):** Prompts für echte Use-Cases schreiben, mehrere Modelle testen (GPT-4o, Claude, Mistral), Fehler analysieren. (3) **Best Practices dokumentieren:** Templates für Standard-Aufgaben, Leitlinien für Datenschutz, Prompt-Versionierung. (4) **Iterative Kultur:** Prompts sind nicht "Final" — Review, Feedback, Improvement cycles. (5) **Tools:** PromptQuorum oder ähnliche Plattformen helfen, Prompts zu verwalten, zu versionieren und zu evaluieren. Deutsche IT-Teams profitieren von konkreten Case-Studies (z. B. Kundenservice-Automatisierung bei Siemens).',
+        },
+        {
+          q: 'Was bedeutet der EU AI Act konkret für mein Prompt-Engineering?',
+          a: 'Der EU AI Act klassifiziert Anwendungen in Risiko-Kategorien. Für Prompt Engineering heißt das: (1) **Niedriges Risiko (Kundensupport, Content-Generation):** Minimale Anforderungen. (2) **Hohes Risiko (HR-Screening, Kreditvergabe, Strafjustiz):** Dokumentation, Testberichte, Transparenzpflichten gegenüber Nutzern. (3) **Verboten:** Emotionserkennung, Biometrische Identifikation in öffentlichen Räumen. Für High-Risk-Systeme müssen Sie zeigen: Welche Prompts verwenden Sie? Wie wurde das Modell getestet? Welche Bias-Tests liefen? Das bedeutet: (a) Dokumentieren Sie alles. (b) Testpläne schreiben, um Diskriminierung zu vermeiden. (c) Transparenz gegenüber Nutzern ("Diese Entscheidung wurde von einer KI unterstützt"). Startet 2025/2026 — beginnen Sie jetzt mit Compliance-Planung.',
+        },
+      ],
+    },
+
     corePrompting: {
       title: 'Kernkonzepte: Grundlagen für effektives Prompt Engineering',
       columns: ['Begriff', 'Bedeutung', 'Quellenangaben'],
