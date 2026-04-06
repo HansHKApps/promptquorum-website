@@ -25861,10 +25861,600 @@ zh: {
         },
       },
     },
-    de: { theme: 'Frameworks', title: 'The RTF Framework', intro: '', publishDate: '2026-03-24', readTime: '6 min read', educationalLevel: 'Intermediate', sections: {} },
-    fr: { theme: 'Frameworks', title: 'The RTF Framework', intro: '', publishDate: '2026-03-24', readTime: '6 min read', educationalLevel: 'Intermediate', sections: {} },
-    ja: { theme: 'Frameworks', title: 'The RTF Framework', intro: '', publishDate: '2026-03-24', readTime: '6 min read', educationalLevel: 'Intermediate', sections: {} },
-    zh: { theme: 'Frameworks', title: 'The RTF Framework', intro: '', publishDate: '2026-03-24', readTime: '6 min read', educationalLevel: 'Intermediate', sections: {} },
+    de: {
+  theme: 'Frameworks',
+  title: 'Das RTF-Framework',
+  intro: 'Das RTF-Framework ist eine Prompt-Struktur, die sich auf Rolle, Aufgabe und Format konzentriert, sodass Sie Modellen eine vollständige Anweisung in einer kompakten Nachricht geben können. PromptQuorum bietet das RTF-Framework als integrierte Option an, die jeder Benutzer auswählen und auf alle unterstützten Modelle anwenden kann.',
+  publishDate: '2026-03-24',
+  readTime: '6 min Lesezeit',
+  educationalLevel: 'Intermediate',
+  metaDescription: 'Das RTF-Framework (Rolle, Aufgabe, Format) erklärt: Wie es funktioniert, wann Sie es verwenden sollten und wie PromptQuorum RTF als integrierte Option bietet.',
+  primaryTerm: 'RTF-Framework',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Das RTF-Framework',
+    description: 'Das RTF-Framework (Rolle, Aufgabe, Format) erklärt: Wie es funktioniert, wann Sie es verwenden sollten und wie PromptQuorum RTF als integrierte Option bietet.',
+    datePublished: '2026-03-24',
+    dateModified: '2026-03-24',
+    keywords: ['RTF-Framework', 'Rolle Aufgabe Format', 'Prompt-Frameworks', 'Prompt Engineering', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Prompt Engineering' },
+      { '@type': 'Thing', name: 'Prompt-Frameworks' },
+      { '@type': 'Thing', name: 'Large Language Models' },
+    ],
+    mentions: [
+      { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+      { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+      { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+      { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+      { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+    ],
+  },
+  sections: {
+    whatIsRTF: {
+      title: 'Das RTF-Framework verstehen',
+      content: [
+        '**Das RTF-Framework ist ein dreiteiliges Prompt-Muster, das dem Modell mitteilt, wer es ist, was es tun soll und wie die Antwort genau aussehen sollte.** Statt eine lockere Frage zu stellen, geben Sie Rolle, Aufgabe und Format explizit an. Dies funktioniert über GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokale Modelle, die Sie über Ollama oder LM Studio ausführen.',
+        'Das RTF-Framework ist bewusst minimal strukturiert. Mit nur drei Feldern ist es leicht zu merken, schnell auszufüllen und flexibel genug für viele tägliche Aufgaben. Sie können es als „Standard-Prompt-Grundgerüst" verwenden, wenn Sie sich nicht sicher sind, welches spezialisierte Framework Sie verwenden sollten.',
+      ],
+    },
+    threeComponents: {
+      title: 'Die drei Komponenten des RTF-Frameworks',
+      content: [
+        '**Ein starker RTF-Prompt definiert alle drei Komponenten klar, sodass das Modell keine Unklarheiten über seine Aufgabe hat.** Sie können sie als beschriftete Zeilen oder als einen Satz schreiben, der alle drei Teile enthält.',
+        'Typische Definitionen:',
+      ],
+      items: [
+        'R — Role (Rolle): Die Perspektive oder das Fachwissen, das das Modell annehmen soll (zum Beispiel „Sie sind ein leitender Datenanalyst").',
+        'T — Task (Aufgabe): Die konkrete Aktion, die Sie möchten, beschrieben in ein oder zwei Sätzen.',
+        'F — Format (Format): Die Struktur, Länge und den Stil der Ausgabe (zum Beispiel „3 Aufzählungspunkte plus eine 2-Satz-Zusammenfassung").',
+      ],
+    },
+    whyRTFIsUseful: {
+      title: 'Warum das RTF-Framework nützlich ist',
+      content: [
+        '**Das RTF-Framework ist nützlich, weil es Ihnen die meisten Vorteile komplexerer Frameworks mit fast keinem Overhead bietet.** Es zwingt Sie, drei Entscheidungen zu treffen—wer, was und wie—bevor Sie den Prompt senden.',
+        'Praktische Vorteile sind:',
+      ],
+      items: [
+        'Schnellere Prompt-Erstellung als Multi-Section-Frameworks für Routineaufgaben.',
+        'Bessere Konsistenz über Modelle und Läufe hinweg, da das Format immer explizit ist.',
+        'Einfaches Onboarding für Teamkollegen, die RTF in wenigen Minuten lernen und überall wiederverwenden können.',
+      ],
+    },
+    badVsGoodExample: {
+      title: 'Beispiel: Schlechter vs. guter RTF-Prompt',
+      content: [
+        '**Der Unterschied zwischen einer unstrukturierten Anfrage und einem RTF-basierten Prompt wird klar, wenn Sie dieselbe Aufgabe auf beide Arten schreiben.** Hier ist ein Beispiel für die Zusammenfassung eines Meetings.',
+        '**[Schlechter Prompt]**',
+        '"Fassen Sie dieses Meeting zusammen."',
+        '**[Guter Prompt]**',
+        '"Rolle: Sie sind ein Operations Manager, der ein Project-Status-Meeting für die Geschäftsführung zusammenfasst. Aufgabe: Lesen Sie das Protokoll und identifizieren Sie die im Meeting besprochenen Schlüsselbeschlüsse, offenen Risiken und nächsten Schritte. Format: Geben Sie eine Markdown-Zusammenfassung mit drei Abschnitten aus (`Beschlüsse`, `Risiken`, `Nächste Schritte`). Verwenden Sie unter jedem Abschnitt 3–5 Aufzählungspunkte. Halten Sie die Gesamtzusammenfassung unter 250 Wörtern."',
+        'Die RTF-Version teilt dem Modell genau mit, wie es über den Inhalt nachdenken soll und wie es das Ergebnis so gestaltet, dass andere es sofort nutzen können.',
+      ],
+    },
+    whenToUse: {
+      title: 'Wann das RTF-Framework zu verwenden ist',
+      content: [
+        '**Sie sollten das RTF-Framework verwenden, wenn Sie ein einfaches, wiederverwendbares Muster möchten, das trotzdem Klarheit und Struktur erzwingt.** Es ist eine starke Standardwahl, wenn Sie keine langen Spezifikationen oder mehrstufige Reasoning-Traces benötigen.',
+        'Typische Anwendungsfälle sind:',
+      ],
+      items: [
+        'Kurze Berichte, Zusammenfassungen und Überblicke für E-Mails oder Chat.',
+        'Entwurf von Antworten an Kunden oder interne Interessengruppen mit klarer Struktur.',
+        'Generierung von kleinen Code-Snippets oder Umgestaltungen mit einem angegebenen Output-Format.',
+        'Schnelle Inhalte wie Produkt-Blurbs, FAQ-Einträge oder einfache Checklisten.',
+      ],
+    },
+    howPQImplements: {
+      title: 'Wie PromptQuorum das RTF-Framework implementiert',
+      content: [
+        '**PromptQuorum ist ein Multi-Model-AI-Dispatch-Tool, das das RTF-Framework als eine seiner integrierten Prompt-Strukturen enthält, sodass Benutzer Role–Task–Format-Prompting konsistent anwenden können.** Wenn Sie die RTF-Option in PromptQuorum auswählen, stellt die Benutzeroberfläche Felder für Rolle, Aufgabe und Format bereit und fügt sie zu einer einzigen wohlgeformten Anweisung zusammen.',
+        'In PromptQuorum ermöglicht Ihnen das RTF-Framework:',
+      ],
+      items: [
+        'Rolle, Aufgabe und Format einmal ausfüllen und denselben strukturierten Prompt an mehrere Modelle wie GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro und lokale Modelle senden, die über Ollama oder LM Studio konfiguriert sind.',
+        'RTF-Prompts als Vorlagen für wiederkehrende Workflows speichern—zum Beispiel „wöchentliche Status-Zusammenfassung", „Kunden-Antwort-Entwurf" oder „Bug-Bericht-Zusammenfassung".',
+        'RTF-Vorlagen über Ihr Team hinweg teilen, sodass auch Nicht-Experten Prompts erstellen können, die konsistente, strukturierte Ausgaben erzeugen.',
+      ],
+    },
+    combiningRTF: {
+      title: 'RTF mit anderen Frameworks kombinieren',
+      content: [
+        '**Sie sollten das RTF-Framework mit anderen Frameworks kombinieren, indem Sie RTF als leichte Standardwahl behandeln und zu schwereren Frameworks wechseln, wenn die Anforderungen zunehmen.** Ein praktisches Muster ist:',
+      ],
+      items: [
+        'Beginnen Sie mit RTF für die meisten neuen Aufgaben, bei denen Sie nur schnelle klare Struktur benötigen.',
+        'Wechseln Sie zu SPECS, wenn Sie strikte Schemas, Beispiele und Einschränkungen benötigen.',
+        'Verwenden Sie TRACE oder APE, wenn Sie explizite Reasoning-Schritte vor der endgültigen Antwort möchten.',
+        'Verwenden Sie kreative Frameworks wie CRAFT, wenn Publikum und Ton zentral sind.',
+      ],
+    },
+    howToStart: {
+      title: 'So verwenden Sie das RTF-Framework (Rolle, Aufgabe, Format)',
+      numberedItems: [
+        '**R — Role (Rolle): Definieren Sie, wen der KI spielt.** Beispiel: \'Sie sind ein Product Manager in einem B2B-SaaS-Unternehmen.\'',
+        '**T — Task (Aufgabe): Geben Sie an, was der KI tun soll.** Beispiel: \'Schreiben Sie Produktanforderungen für eine neue Analytics-Dashboard-Funktion.\'',
+        '**F — Format (Format): Geben Sie die Struktur und den Stil der Ausgabe an.** Beispiel: \'Geben Sie als PRD-Dokument mit Abschnitten aus: Überblick, Ziele, Benutzer-Personas, Schlüsselfunktionen, Erfolgskennzahlen, Zeitplan. Verwenden Sie professionelle, klare Sprache.\'',
+        '**Kombinieren Sie RTF mit Einschränkungen für bessere Kontrolle.** Beispiel: \'RTF: Role = Product Manager, Task = Write PRD, Format = Markdown document. Constraints: 2000 words max, focus on enterprise users, no buzzwords.\'',
+        '**Testen Sie RTF-Prompts an Beispielaufgaben, um Klarheit zu gewährleisten, bevor Sie sie wiederholt verwenden.** Das RTF-Framework ist einfach—überprüfen Sie, dass Ihre Rolle-, Aufgaben- und Format-Entscheidungen tatsächlich die erforderliche Ausgabe erzeugen.',
+      ],
+    },
+    zusammenfassung: {
+      title: 'Zusammenfassung: RTF-Framework Essentials',
+      content: [
+        '**Das RTF-Framework ist ein schlankes, effektives Muster für strukturierte Prompts.** Es erfordert drei Entscheidungen (Rolle, Aufgabe, Format), garantiert aber Klarheit und Konsistenz über alle Modelle hinweg. Verwenden Sie es als Ihre Standard-Wahl, wenn Sie keine speziellen Frameworks benötigen—und kombinieren Sie es mit SPECS, TRACE oder CRAFT, wenn die Anforderungen komplexer werden.',
+      ],
+    },
+    dachKontext: {
+      title: 'RTF-Framework im DACH-Kontext',
+      content: [
+        '**Das RTF-Framework ist für Unternehmen und Teams im deutschsprachigen Raum besonders wertvoll, da es präzise Anforderungsformulierung erzwingt.**',
+        'Typische Anwendungen im DACH-Raum:',
+      ],
+      items: [
+        'Technische Dokumentation und Spezifikationen (z. B. Anforderungslisten für Softwareentwickler in Deutschland, Österreich oder der Schweiz).',
+        'Compliance-Dokumentation: RTF hilft, DSGVO-konforme, präzise Anforderungen zu formulieren, die Ihrer Datenschutz-Dokumentation entsprechen.',
+        'Unternehmenskommunikation: Deutsche Unternehmen schätzen strukturierte, präzise Kommunikation—RTF erzwingt dies zwangsweise.',
+        'Integration mit lokalen LLMs: RTF funktioniert hervorragend mit lokalen Modellen wie Mistral oder DeepSeek, die in DACH-Infrastrukturen gehostet werden.',
+      ],
+    },
+  },
+},
+    fr: {
+  theme: 'Frameworks',
+  title: 'Le Framework RTF',
+  intro: 'Le Framework RTF est une structure de prompt qui se concentre sur le Rôle, la Tâche et le Format pour donner aux modèles une instruction complète en un seul message compact. PromptQuorum inclut le Framework RTF comme option intégrée que tout utilisateur peut sélectionner et appliquer à tous les modèles supportés.',
+  publishDate: '2026-03-24',
+  readTime: '6 min de lecture',
+  educationalLevel: 'Intermediate',
+  metaDescription: 'Le Framework RTF (Rôle, Tâche, Format) expliqué : son fonctionnement, quand l\'utiliser, et comment PromptQuorum l\'offre comme option intégrée.',
+  primaryTerm: 'Framework RTF',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Le Framework RTF',
+    description: 'Le Framework RTF (Rôle, Tâche, Format) expliqué : son fonctionnement, quand l\'utiliser, et comment PromptQuorum l\'offre comme option intégrée.',
+    datePublished: '2026-03-24',
+    dateModified: '2026-03-24',
+    keywords: ['Framework RTF', 'Rôle Tâche Format', 'frameworks de prompt', 'prompt engineering', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Prompt Engineering' },
+      { '@type': 'Thing', name: 'Frameworks de Prompt' },
+      { '@type': 'Thing', name: 'Large Language Models' },
+    ],
+    mentions: [
+      { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+      { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+      { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+      { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+      { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+    ],
+  },
+  sections: {
+    whatIsRTF: {
+      title: 'Ce qu\'est le Framework RTF',
+      content: [
+        '**Le Framework RTF est un modèle de prompt en trois parties qui indique au modèle qui il est, ce qu\'il doit faire et comment la réponse doit exactement ressembler.** Au lieu d\'envoyer une question vague, vous spécifiez le Rôle, la Tâche et le Format explicitement. Cela fonctionne sur GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et les modèles locaux exécutés via Ollama ou LM Studio.',
+        'Le Framework RTF est intentionnellement minimaliste. Avec seulement trois champs, il est facile à retenir, rapide à remplir et flexible pour la plupart des tâches quotidiennes. Vous pouvez l\'utiliser comme « squelette de prompt par défaut » quand vous ne savez pas quel framework spécialisé utiliser.',
+      ],
+    },
+    threeComponents: {
+      title: 'Les trois composants du Framework RTF',
+      content: [
+        '**Un prompt RTF solide définit clairement chacun des trois composants pour qu\'il n\'y ait aucune ambiguïté sur le travail du modèle.** Vous pouvez les écrire comme des lignes étiquetées ou comme une phrase unique qui contient toujours les trois parties.',
+        'Définitions typiques :',
+      ],
+      items: [
+        'R — Rôle (Rôle) : La perspective ou l\'expertise que le modèle doit adopter (par exemple « Vous êtes un analyste de données senior »).',
+        'T — Tâche (Tâche) : L\'action concrète que vous souhaitez, décrite en une ou deux phrases.',
+        'F — Format (Format) : La structure, la longueur et le style de la sortie (par exemple « 3 points de liste plus un résumé de 2 phrases »).',
+      ],
+    },
+    whyRTFIsUseful: {
+      title: 'Pourquoi le Framework RTF est utile',
+      content: [
+        '**Le Framework RTF est utile car il vous offre la plupart des avantages des frameworks plus complexes avec presque aucune surcharge.** Il vous force à prendre trois décisions—qui, quoi, comment—avant d\'envoyer votre prompt.',
+        'Les avantages pratiques incluent :',
+      ],
+      items: [
+        'Rédaction plus rapide de prompts que les frameworks multi-sections pour les tâches routinières.',
+        'Meilleure cohérence entre les modèles et les exécutions, car le format est toujours explicite.',
+        'Intégration facile des collègues qui peuvent apprendre RTF en quelques minutes et l\'utiliser partout.',
+      ],
+    },
+    badVsGoodExample: {
+      title: 'Exemple : prompt RTF mauvais et bon',
+      content: [
+        '**La différence entre une demande non structurée et un prompt basé sur RTF devient claire quand vous écrivez la même tâche des deux façons.** Voici un exemple de résumé de réunion.',
+        '**[Mauvais Prompt]**',
+        '"Résumez cette réunion."',
+        '**[Bon Prompt]**',
+        '"Rôle : Vous êtes un directeur des opérations résumant une réunion de statut de projet pour la direction générale. Tâche : Lisez la transcription et identifiez les décisions clés, les risques ouverts et les prochaines étapes discutés lors de la réunion. Format : Produisez un résumé Markdown avec trois sections (`Décisions`, `Risques`, `Prochaines étapes`). Sous chaque section, utilisez 3–5 points de liste. Gardez le résumé total sous 250 mots."',
+        'La version RTF indique au modèle exactement comment penser au contenu et comment structurer le résultat afin que d\'autres puissent l\'utiliser immédiatement.',
+      ],
+    },
+    whenToUse: {
+      title: 'Quand utiliser le Framework RTF',
+      content: [
+        '**Vous devez utiliser le Framework RTF quand vous voulez un modèle simple, réutilisable qui impose toujours clarté et structure.** C\'est un choix par défaut solide quand vous n\'avez pas besoin de longues spécifications ou de traces de raisonnement multi-étapes.',
+        'Les cas d\'usage typiques incluent :',
+      ],
+      items: [
+        'Rapports courts, résumés et synthèses pour e-mail ou chat.',
+        'Brouillon de réponses aux clients ou aux parties prenantes internes avec structure claire.',
+        'Génération de petits extraits de code ou de refactorisations avec un format de sortie spécifié.',
+        'Contenus rapides comme des résumés de produits, des entrées FAQ ou de simples listes de contrôle.',
+      ],
+    },
+    howPQImplements: {
+      title: 'Comment PromptQuorum implémente le Framework RTF',
+      content: [
+        '**PromptQuorum est un outil d\'envoi multi-modèles IA qui inclut le Framework RTF comme l\'une de ses structures de prompt intégrées afin que les utilisateurs puissent appliquer le prompting Rôle–Tâche–Format de manière cohérente.** Quand vous choisissez l\'option RTF dans PromptQuorum, l\'interface expose des champs pour Rôle, Tâche et Format et les assemble en une instruction unique bien formée.',
+        'Dans PromptQuorum, le Framework RTF vous permet :',
+      ],
+      items: [
+        'Remplir Rôle, Tâche et Format une fois et envoyer le même prompt structuré à plusieurs modèles comme GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro et des modèles locaux configurés via Ollama ou LM Studio.',
+        'Enregistrer les prompts RTF comme modèles pour les flux de travail récurrents—par exemple « résumé de statut hebdomadaire », « brouillon de réponse client » ou « résumé de rapport de bogue ».',
+        'Partager les modèles RTF à travers votre équipe afin que même les non-experts puissent créer des prompts qui produisent des résultats cohérents et structurés.',
+      ],
+    },
+    combiningRTF: {
+      title: 'Combiner RTF avec d\'autres frameworks',
+      content: [
+        '**Vous devez combiner le Framework RTF avec d\'autres frameworks en traitant RTF comme votre choix par défaut léger et en basculant vers des frameworks plus lourds quand les contraintes augmentent.** Un modèle pratique est :',
+      ],
+      items: [
+        'Commencez par RTF pour la plupart des nouvelles tâches où vous avez juste besoin de structure claire rapidement.',
+        'Passez à SPECS quand vous avez besoin de schémas stricts, d\'exemples et de contraintes.',
+        'Utilisez TRACE ou APE quand vous voulez des étapes de raisonnement explicites avant la réponse finale.',
+        'Utilisez des frameworks créatifs comme CRAFT quand l\'audience et le ton sont centraux.',
+      ],
+    },
+    howToStart: {
+      title: 'Comment utiliser le Framework RTF (Rôle, Tâche, Format)',
+      numberedItems: [
+        '**R — Rôle : Définissez qui l\'IA joue.** Exemple : \'Vous êtes un responsable produit dans une entreprise SaaS B2B.\'',
+        '**T — Tâche : Indiquez ce que l\'IA doit faire.** Exemple : \'Écrivez les exigences produit pour une nouvelle fonctionnalité de tableau de bord analytique.\'',
+        '**F — Format : Spécifiez la structure et le style de la sortie.** Exemple : \'Retournez en tant que document PRD avec sections : Vue d\'ensemble, Objectifs, Personas Utilisateur, Fonctionnalités clés, Métriques de Succès, Calendrier. Utilisez un langage professionnel et clair.\'',
+        '**Combinez RTF avec des contraintes pour un meilleur contrôle.** Exemple : \'RTF: Role = Product Manager, Task = Write PRD, Format = Markdown document. Constraints: 2000 words max, focus on enterprise users, no buzzwords.\'',
+        '**Testez les prompts RTF sur des tâches exemples pour assurer la clarté avant de les utiliser régulièrement.** RTF est un framework simple—validez que vos choix de rôle, tâche et format produisent effectivement la sortie dont vous avez besoin.',
+      ],
+    },
+    avantagesCles: {
+      title: 'Avantages clés du Framework RTF',
+      content: [
+        '**Le Framework RTF offre simplicité, rapidité et cohérence sans sacrifier la clarté.** Voici pourquoi les équipes francophones—en France, en Belgique, en Suisse et au Canada—l\'apprécient particulièrement :',
+      ],
+      items: [
+        'Rédaction de prompt plus rapide : Trois champs seulement, pas de longues sections ou de formats complexes.',
+        'Cohérence cross-modèle : Le même RTF produit des résultats structurés sur GPT-4o, Claude, Gemini et les modèles locaux.',
+        'Intégration d\'équipe facile : Les collègues non-techniques peuvent apprendre RTF en quelques minutes.',
+        'Réutilisabilité : Enregistrez vos meilleurs prompts RTF comme modèles et utilisez-les pour des tâches similaires.',
+      ],
+    },
+  },
+},
+    ja: {
+  theme: 'Frameworks',
+  title: 'RTFフレームワーク',
+  intro: 'RTFフレームワークは、ロール、タスク、フォーマットに焦点を当てたプロンプト構造であり、モデルに1つのコンパクトなメッセージで完全な指示を与えることができます。PromptQuorumは、任意のユーザーが選択して、サポートされているすべてのモデルに適用できる組み込みオプションとしてRTFフレームワークを含めています。',
+  publishDate: '2026-03-24',
+  readTime: '6分で読める',
+  educationalLevel: 'Intermediate',
+  metaDescription: 'RTFフレームワーク（ロール、タスク、フォーマット）の解説：仕組み、使うべき時、PromptQuorumが組み込みオプションとして提供する方法。',
+  primaryTerm: 'RTFフレームワーク',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'RTFフレームワーク',
+    description: 'RTFフレームワーク（ロール、タスク、フォーマット）の解説：仕組み、使うべき時、PromptQuorumが組み込みオプションとして提供する方法。',
+    datePublished: '2026-03-24',
+    dateModified: '2026-03-24',
+    keywords: ['RTFフレームワーク', 'ロールタスクフォーマット', 'プロンプトフレームワーク', 'プロンプトエンジニアリング', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Prompt Engineering' },
+      { '@type': 'Thing', name: 'Prompt Frameworks' },
+      { '@type': 'Thing', name: 'Large Language Models' },
+    ],
+    mentions: [
+      { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+      { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+      { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+      { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+      { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+    ],
+  },
+  sections: {
+    whatIsRTF: {
+      title: 'RTFフレームワークとは何か',
+      content: [
+        '**RTFフレームワークは、モデルに対して「誰であるか」「何をすべきか」「答えがどのように見えるべきか」を示す3部構成のプロンプトパターンです。** ぼんやりした質問を送る代わりに、ロール、タスク、フォーマットを明示的に指定します。これはGPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、およびOllamaまたはLM Studioを介して実行するローカルモデルに対して機能します。',
+        'RTFフレームワークは意図的に最小限に設計されています。3つのフィールドだけなので、覚えやすく、素早く入力でき、多くの日常的なタスクに十分な柔軟性があります。特化したフレームワークを使うべきかどうか不明な場合は、「デフォルトプロンプトスケルトン」として使用できます。',
+      ],
+    },
+    threeComponentsOverview: {
+      title: 'RTFの3つの構成要素概要',
+      content: [
+        'RTFフレームワークはシンプルですが、3つの重要な部分で構成されています。各部分を理解することで、効果的なプロンプトを作成できます。',
+      ],
+    },
+    threeComponents: {
+      title: 'RTFフレームワークの3つの構成要素詳細',
+      content: [
+        '**強力なRTFプロンプトは3つの構成要素を明確に定義し、モデルが自分の役割について曖昧性がないようにします。** ラベルのついた行として、または3つの部分をすべて含む1つの文として書くことができます。',
+        '典型的な定義：',
+      ],
+      items: [
+        'R — ロール（役割）：モデルが採用すべき視点または専門知識（例：「あなたは上級データアナリストです」）。',
+        'T — タスク（課題）：あなたが望む具体的なアクション、1～2文で説明される。',
+        'F — フォーマット（形式）：出力の構造、長さ、スタイル（例：「3つの箇条書き項目と2文の要約」）。',
+      ],
+    },
+    whyRTFIsUseful: {
+      title: 'RTFフレームワークが有用な理由',
+      content: [
+        '**RTFフレームワークは有用です。なぜなら、より複雑なフレームワークのほとんどの利点をほぼ無負荷で提供するからです。** これにより、プロンプトを送信する前に、3つの決定—誰が、何を、どのように—を強制します。',
+        '実用的な利点には：',
+      ],
+      items: [
+        'ルーチンワークの場合、複数セクションのフレームワークよりもプロンプト作成が速い。',
+        'フォーマットが常に明示的であるため、モデルと実行間での一貫性が向上。',
+        'チームメンバーがRTFを数分で学び、どこでも再利用できるため、オンボーディングが簡単。',
+      ],
+    },
+    badVsGoodExample: {
+      title: '例：RTFプロンプトの悪い例と良い例',
+      content: [
+        '**構造化されていないリクエストとRTFベースのプロンプトの違いは、同じタスクを両方の方法で書くと明確になります。** ここに会議を要約する例があります。',
+        '**[悪いプロンプト]**',
+        '"この会議を要約してください。"',
+        '**[良いプロンプト]**',
+        '"ロール：あなたはシニアリーダーシップのためのプロジェクトステータス会議を要約するオペレーションマネージャーです。タスク：トランスクリプトを読んで、会議で議論された主要な決定、未解決のリスク、および次のステップを特定します。フォーマット：3つのセクション（`決定`、`リスク`、`次のステップ`）を持つMarkdown要約を出力します。各セクションの下に、3～5個の箇条書き項目を使用します。合計要約を250語未満に保ちます。"',
+        'RTFバージョンは、モデルにコンテンツについてどのように考えるべきか、また他の人がすぐに使用できるようにどのように結果をパッケージ化するべきかを正確に指示します。',
+      ],
+    },
+    whenToUse: {
+      title: 'RTFフレームワークをいつ使うべきか',
+      content: [
+        '**明確さと構造を強制しながら、シンプルで再利用可能なパターンが必要な場合は、RTFフレームワークを使用すべきです。** これは長い仕様や複数ステップの推論トレースが不要な場合の強力なデフォルトです。',
+        '典型的なユースケース：',
+      ],
+      items: [
+        'メールやチャット用の短いレポート、要約、概要。',
+        '顧問または内部ステークホルダーへの明確な構造のあるレスポンスの作成。',
+        '指定された出力フォーマットの小さなコードスニペットまたはリファクタリングの生成。',
+        '製品の説明文、FAQエントリ、簡単なチェックリストなどの迅速なコンテンツピース。',
+      ],
+    },
+    howPQImplements: {
+      title: 'PromptQuorumがRTFフレームワークを実装する方法',
+      content: [
+        '**PromptQuorumはマルチモデルAI派遣ツールであり、RTFフレームワークを組み込みプロンプト構造の1つとして含めているため、ユーザーはロール・タスク・フォーマットプロンプティングを一貫した方法で適用できます。** PromptQuorum内でRTFオプションを選択すると、インターフェースはロール、タスク、フォーマットのフィールドを公開し、それらを単一のよく形成された指示に組み立てます。',
+        'PromptQuorumでは、RTFフレームワークは次を可能にします：',
+      ],
+      items: [
+        'ロール、タスク、フォーマットを一度入力して、GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro、およびOllamaまたはLM Studioを介して構成されたローカルモデルなどの複数のモデルに同じ構造化されたプロンプトを送信。',
+        'RTFプロンプトを定期的なワークフローのテンプレートとして保存（例：「週次ステータスサマリー」、「カスタマーレプライドラフト」、「バグレポートサマリー」）。',
+        'チームディメンション全体でRTFテンプレートを共有して、非専門家でも一貫性のある構造化された出力を生成するプロンプトを作成できるようにする。',
+      ],
+    },
+    combiningRTF: {
+      title: 'RTFを他のフレームワークと組み合わせる',
+      content: [
+        '**RTFフレームワークを他のフレームワークと組み合わせるには、RTFを軽量デフォルトとして扱い、制約が増加したときに重いフレームワークに切り替える必要があります。** 実践的なパターンは次のとおりです：',
+      ],
+      items: [
+        'ほとんどの新しいタスク用にRTFで開始します。そこでは迅速に明確な構造を必要とします。',
+        '厳密なスキーマ、例、制約が必要な場合はSPECSに移動。',
+        '最終的な答えの前に明示的な推論ステップが必要な場合はTRACEまたはAPEを使用。',
+        'オーディエンスとトーンが中央の場合は、CRAFTなどの創造的なフレームワークを使用。',
+      ],
+    },
+    howToStart: {
+      title: 'RTFフレームワークの使い方：5ステップガイド',
+      numberedItems: [
+        '**R — ロール：AIが演じるべき人物を定義します。** 例：\'あなたはB2B SaaS企業のプロダクトマネージャーです。\'',
+        '**T — タスク：AIが何をすべきかを述べてください。** 例：\'新しい分析ダッシュボード機能のプロダクト要件を書いてください。\'',
+        '**F — フォーマット：出力の構造とスタイルを指定してください。** 例：\'概要、目標、ユーザーペルソナ、主要機能、成功メトリクス、タイムライン：概要、目標、ユーザーペルソナ、主要機能、成功メトリクス、タイムラインをセクションとしたPRDドキュメントとして返します。専門的で明確な言語を使用します。\'',
+        '**制約を加えてコントロールを強化します。** 例：\'RTF：Role = Product Manager、Task = Write PRD、Format = Markdown document。Constraints: 2000 words max、focus on enterprise users、no buzzwords.\'',
+        '**RTFプロンプトをサンプルタスクでテストしてから定期的に使用します。** RTFはシンプルなフレームワークです—ロール、タスク、フォーマットの選択が実際に必要な出力を生成することを検証します。',
+      ],
+    },
+    practicalTips: {
+      title: 'RTFフレームワークの実践Tips',
+      content: [
+        'RTFフレームワークを最大限に活用するための実用的なテクニックと推奨事項：',
+      ],
+      items: [
+        'ロール選択をシンプルに：「上級データアナリスト」は「初級ジュニアデータサイエンティスト」よりも良い。具体的で認識可能な専門知識を選択。',
+        'タスクは明確で測定可能に：「記事を書く」ではなく「SEOブログ記事を書く、1500語、H2見出し3つ以上」。',
+        'フォーマットは出力を形作る：モデルはフォーマット指定で出力構造を正確に把握します。',
+        'テンプレートを作成して再利用：「顧客対応ドラフト」「週次レポート」「コード要件定義」など、繰り返されるタスク用のRTFテンプレートを作成。',
+        'モデル間で一貫性をテスト：同じRTFプロンプトをGPT-4oとClaudeで実行して、出力が期待どおりであることを確認。',
+      ],
+    },
+    cautions: {
+      title: '注意点：RTFを使う際の留意事項',
+      content: [
+        'RTFフレームワークは強力ですが、いくつかの注意が必要です：',
+      ],
+      items: [
+        '複雑な推論が必要な場合は不十分：複数のステップを解く前に考える必要がある場合は、TRACE を検討。',
+        'ロールの曖昧性を避ける：「エキスパート」は不明確。「マーケティング主任で3年の経験」の方がよい。',
+        'フォーマットは細かすぎてはいけない：「1段落、5文、テキスト幅60文字未満」のような過度に詳細な指定は反効果。',
+        '更新されたプロンプトをテスト：ロール、タスク、フォーマットを変更したら、再度テストして結果品質を確認。',
+      ],
+    },
+  },
+},
+    zh: {
+  theme: 'Frameworks',
+  title: 'RTF框架',
+  intro: 'RTF框架是一种专注于角色、任务和格式的提示词结构，让你能够在一条简洁的信息中向模型提供完整的指令。PromptQuorum将RTF框架作为内置选项包括在内，任何用户都可以选择它并将其应用于所有支持的模型。',
+  publishDate: '2026-03-24',
+  readTime: '阅读约6分钟',
+  educationalLevel: 'Intermediate',
+  metaDescription: 'RTF框架（角色、任务、格式）解释：它的工作原理、何时使用以及PromptQuorum如何将其作为内置选项提供。',
+  primaryTerm: 'RTF框架',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'RTF框架',
+    description: 'RTF框架（角色、任务、格式）解释：它的工作原理、何时使用以及PromptQuorum如何将其作为内置选项提供。',
+    datePublished: '2026-03-24',
+    dateModified: '2026-03-24',
+    keywords: ['RTF框架', '角色任务格式', '提示框架', '提示工程', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Prompt Engineering' },
+      { '@type': 'Thing', name: 'Prompt Frameworks' },
+      { '@type': 'Thing', name: 'Large Language Models' },
+    ],
+    mentions: [
+      { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      { '@type': 'SoftwareApplication', name: 'GPT-4o', url: 'https://openai.com' },
+      { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet', url: 'https://www.anthropic.com' },
+      { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+      { '@type': 'SoftwareApplication', name: 'Ollama', url: 'https://ollama.com' },
+      { '@type': 'SoftwareApplication', name: 'LM Studio', url: 'https://lmstudio.ai' },
+    ],
+  },
+  sections: {
+    whatIsRTF: {
+      title: 'RTF框架是什么',
+      content: [
+        '**RTF框架是一个三部分提示词模式，告诉模型它是谁、应该做什么，以及答案应该确切地如何显示。** 不是发送含糊的问题，而是明确指定角色、任务和格式。它在GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro和通过Ollama或LM Studio运行的本地模型上都有效。',
+        'RTF框架设计得有意简洁。只有三个字段，易于记住、快速填写，并且对许多日常任务都足够灵活。当你不确定应使用哪个专门框架时，可以将其作为"默认提示词框架"使用。',
+      ],
+    },
+    threeComponentsOverview: {
+      title: 'RTF框架的三部分结构',
+      content: [
+        'RTF框架的强大之处在于它的简洁性和有效性。理解这三个部分是掌握框架的关键。',
+      ],
+    },
+    threeComponents: {
+      title: '详细解析：RTF的三个核心组件',
+      content: [
+        '**强大的RTF提示词清晰地定义三个组件，使模型对其工作没有任何歧义。** 你可以将它们写成标记行，或写成仍包含所有三个部分的单个句子。',
+        '典型定义：',
+      ],
+      items: [
+        'R — 角色（Role）：模型应采用的视角或专业知识（例如"你是一位资深数据分析师"）。',
+        'T — 任务（Task）：你想要的具体行动，用一到两句话描述。',
+        'F — 格式（Format）：输出的结构、长度和风格（例如"3个要点加一个2句话的总结"）。',
+      ],
+    },
+    whyRTFIsUseful: {
+      title: 'RTF框架为什么有用',
+      content: [
+        '**RTF框架之所以有用，是因为它提供了更复杂框架的大多数优点，几乎没有额外开销。** 它在你发送提示词之前强制你做出三个决策—谁、什么和如何。',
+        '实际优势包括：',
+      ],
+      items: [
+        '对日常工作来说，提示词编写速度快于多部分框架。',
+        '由于格式始终明确，在模型和运行之间获得更好的一致性。',
+        '团队成员可以在几分钟内学习RTF并在任何地方重复使用，轻松入门。',
+      ],
+    },
+    badVsGoodExample: {
+      title: '实例：不好的vs优秀的RTF提示词',
+      content: [
+        '**非结构化请求和基于RTF的提示词之间的差异在你用两种方式写同一任务时变得明显。** 这是一个会议总结的例子。',
+        '**[不好的提示词]**',
+        '"总结这个会议。"',
+        '**[优秀的提示词]**',
+        '"角色：你是一名运营经理，正在为高管总结项目状态会议。任务：阅读记录并识别会议中讨论的关键决策、未解决的风险和后续步骤。格式：输出一个包含三个部分的Markdown总结（`决策`、`风险`、`后续步骤`）。在每个部分下，使用3-5个要点。总结保持在250字以下。"',
+        'RTF版本确切地告诉模型如何思考内容，以及如何打包结果使其他人可以立即使用。',
+      ],
+    },
+    whenToUse: {
+      title: '何时使用RTF框架',
+      content: [
+        '**当你希望有一个简单、可重复使用的模式，同时仍然强制清晰和结构时，应该使用RTF框架。** 当你不需要长规范或多步推理跟踪时，这是一个强大的默认选择。',
+        '典型用例包括：',
+      ],
+      items: [
+        '电子邮件或聊天的简短报告、总结和摘要。',
+        '起草给客户或内部利益相关者的回复，带清晰的结构。',
+        '生成指定输出格式的小代码片段或重构。',
+        '产品描述、常见问题条目或简单清单等快速内容。',
+      ],
+    },
+    howPQImplements: {
+      title: 'PromptQuorum如何实现RTF框架',
+      content: [
+        '**PromptQuorum是一个多模型AI调度工具，它将RTF框架作为其内置提示词结构之一包括在内，因此用户可以以一致的方式应用角色-任务-格式提示词。** 当你在PromptQuorum中选择RTF选项时，界面会为角色、任务和格式公开字段，并将它们组装成单个格式良好的指令。',
+        'PromptQuorum中的RTF框架让你能够：',
+      ],
+      items: [
+        '一次性填写角色、任务和格式，并将相同的结构化提示词发送到多个模型，如GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro和通过Ollama或LM Studio配置的本地模型。',
+        '将RTF提示词保存为模板以供重复工作流使用—例如"周报状态总结"、"客户回复草稿"或"错误报告摘要"。',
+        '在团队中共享RTF模板，使即使是非专家也能创建产生一致、结构化输出的提示词。',
+      ],
+    },
+    combiningRTF: {
+      title: '将RTF与其他框架组合',
+      content: [
+        '**你应该通过将RTF视为轻量级默认选项并在约束增加时切换到更重的框架，来将RTF框架与其他框架结合使用。** 一个实用的模式是：',
+      ],
+      items: [
+        '对于大多数你只需要快速清晰结构的新任务，从RTF开始。',
+        '当你需要严格的架构、示例和约束时转到SPECS。',
+        '当你想要最终答案前的明确推理步骤时，使用TRACE或APE。',
+        '当受众和语气是中心时，使用CRAFT等创意框架。',
+      ],
+    },
+    howToStart: {
+      title: '如何使用RTF框架：5步实施指南',
+      numberedItems: [
+        '**R — 角色：定义AI应该扮演的人物。** 例如：\'你是一家B2B SaaS公司的产品经理。\'',
+        '**T — 任务：说明AI应该做什么。** 例如：\'为新的分析仪表板功能编写产品需求。\'',
+        '**F — 格式：指定输出的结构和风格。** 例如：\'作为PRD文档返回，包含部分：概览、目标、用户角色、关键功能、成功指标、时间表。使用专业、清晰的语言。\'',
+        '**将RTF与约束相结合以获得更好的控制。** 例如：\'RTF: Role = Product Manager、Task = Write PRD、Format = Markdown document。Constraints: 2000 words max、focus on enterprise users、no buzzwords.\'',
+        '**在重复使用之前，在示例任务上测试RTF提示词以确保清晰。** RTF是一个简单框架—验证你的角色、任务和格式选择确实产生你需要的输出。',
+      ],
+    },
+    practicalAdvice: {
+      title: '实用建议：最大化RTF框架的效果',
+      content: [
+        '以下是如何在实际工作中有效使用RTF框架的建议：',
+      ],
+      items: [
+        '保持角色具体：选择"资深Python开发工程师"而非"开发者"。具体的头衔和经验水平产生更好的结果。',
+        '任务应该清晰可衡量：不只是"写代码"，而是"用Python写一个递归函数来计算最长子串，带注释和单元测试"。',
+        '格式驱动结构：模型会严格遵循格式指定，产生可预测的结构。充分利用这一点。',
+        '创建可复用模板：为重复的任务保存RTF模板。"客户支持邮件"、"代码审查反馈"、"项目提案"—建立库。',
+        '跨模型验证：同一RTF提示词在GPT-4o、Claude和Gemini上应该产生类似结构和质量的输出。',
+      ],
+    },
+    importantNotes: {
+      title: '注意事项：使用RTF时的关键考虑',
+      content: [
+        '使用RTF框架时需要注意以下几点：',
+      ],
+      items: [
+        '复杂推理：如果任务涉及多步推理或需要在得出结论前思考，考虑使用TRACE框架。',
+        '避免角色歧义：不要用"专家"这样的词。使用"拥有5年数据科学经验的初创公司首席数据官"。',
+        '格式不应过度具体：过度详细的格式（"恰好5段，每段50个字"）会限制模型并产生不自然的输出。',
+        '定期更新和测试：修改提示词时，在生产使用之前用样本任务重新测试。',
+        '中文用户注意：使用中文时确保角色和任务都用简洁的中文表达，避免冗长的句子。',
+      ],
+    },
+  },
+},
   },
 
   'zero-shot-vs-few-shot': {
@@ -25978,10 +26568,528 @@ zh: {
         },
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: {
+  theme: 'Techniques',
+  title: 'Zero-Shot vs. Few-Shot Prompting',
+  intro: 'Zero-Shot Prompting stellt dem Modell kein Beispiel zur Verfügung und verlässt sich vollständig auf das Vorwissen des Modells, während Few-Shot Prompting einige Beispiele einbettet, damit das Modell ein gewünschtes Muster nachahmen kann.',
+  publishDate: '2026-03-26',
+  readTime: '6 min Lesezeit',
+  educationalLevel: 'Intermediate',
+  primaryTerm: 'Zero-Shot und Few-Shot Prompting',
+  metaDescription: 'Zero-Shot vs. Few-Shot Prompting: Vergleich der beiden Techniken, Anwendungsfälle und wie PromptQuorum Ihnen bei der Wahl hilft.',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Zero-Shot vs. Few-Shot Prompting',
+    description: 'Ein praktischer Vergleich von Zero-Shot und Few-Shot Prompting, wann Sie jede Technik verwenden sollten, und wie PromptQuorum Ihnen hilft, die richtige Strategie auszuwählen.',
+    datePublished: '2026-03-26',
+    dateModified: '2026-03-26',
+    keywords: ['Zero-Shot Prompting', 'Few-Shot Prompting', 'Prompt Engineering', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+  },
+  sections: {
+    whatIsZeroShot: {
+      title: 'Was Zero-Shot Prompting ist',
+      content: [
+        '**Zero-Shot Prompting beauftragt das Modell, eine Aufgabe nur mit einer klaren Anweisung und ohne Beispiele zu lösen.** Das Modell verlässt sich auf sein Allgemeinwissen und seine Fähigkeiten zur Befolgung von Anweisungen, die während des Vortrainings und der Ausrichtung erlernt wurden.',
+        'Zero-Shot ist schnell zu implementieren, da Sie keine Beispielpaare entwerfen oder kuratieren müssen. Es funktioniert gut für breite Aufgaben wie allgemeine Fragen und Antworten, einfache Klassifizierung, Zusammenfassung oder unkomplizierte Übersetzung, wobei die Anweisungen allein normalerweise ausreichen.',
+      ],
+    },
+    whatIsFewShot: {
+      title: 'Was Few-Shot Prompting ist',
+      content: [
+        '**Few-Shot Prompting fügt der Anweisung eine kleine Anzahl von Ein-/Ausgabebeispielen hinzu, damit das Modell das Aufgabenmuster aus konkreten Demonstrationen ableiten kann.** In der Praxis bedeutet Few-Shot normalerweise zwei bis zehn Beispiele.',
+        'Diese Beispiele wirken wie ein Mini-Trainingsdatensatz im Prompt und leiten das Modell an, wie es mehrdeutige Aufgaben, spezialisierte Formate oder domänenspezifische Sprache interpretieren sollte. Few-Shot Prompting ist besonders hilfreich, wenn Sie einen bestimmten Stil, ein bestimmtes Schema oder ein nuanciertes Verhalten benötigen, das allgemeine Anweisungen nicht erfassen.',
+      ],
+    },
+    keyDifferences: {
+      title: 'Hauptunterschiede: Zero-Shot vs. Few-Shot',
+      content: [
+        '**Zero-Shot und Few-Shot Prompting unterscheiden sich hauptsächlich im Einrichtungsaufwand, der Genauigkeit bei spezifischen Aufgaben und der Skalierbarkeit über viele Anwendungsfälle hinweg.** Beide stützen sich auf dasselbe zugrunde liegende Modell, tauschen aber den Aufwand für das Beispieldesign gegen eine bessere Aufgabenausrichtung aus.',
+      ],
+      columns: ['Dimension', 'Zero-Shot', 'Few-Shot'],
+      rows: [
+        { 'Dimension': 'Beispiele im Prompt', 'Zero-Shot': 'Keine', 'Few-Shot': '2–10+ repräsentative Beispiele' },
+        { 'Dimension': 'Einrichtungsgeschwindigkeit', 'Zero-Shot': 'Sehr schnell; keine Beispielkuratierung erforderlich', 'Few-Shot': 'Langsamer; Beispiele müssen ausgewählt und gepflegt werden' },
+        { 'Dimension': 'Datenanforderungen', 'Zero-Shot': 'Keine beschrifteten Beispiele erforderlich', 'Few-Shot': 'Erfordert mindestens einige beschriftete Beispiele' },
+        { 'Dimension': 'Genauigkeit bei engen Aufgaben', 'Zero-Shot': 'Oft niedriger oder allgemeiner', 'Few-Shot': 'Typischerweise höher und konsistenter in spezifischen Domänen' },
+        { 'Dimension': 'Skalierbarkeit über Aufgaben hinweg', 'Zero-Shot': 'Hochgradig skalierbar, einfach neue Aufgaben hinzufügen', 'Few-Shot': 'Weniger skalierbar; jede Aufgabe benötigt möglicherweise ihre eigenen Beispiele' },
+      ],
+    },
+    whenToUseZeroShot: {
+      title: 'Wann man Zero-Shot verwendet',
+      content: [
+        '**Sie sollten Zero-Shot Prompting verwenden, wenn Sie Geschwindigkeit benötigen, keine beschrifteten Beispiele haben und Ihre Aufgabe angemessen allgemein ist.** Dieses Muster funktioniert gut als erster Durchgang oder Grundlinie.',
+        'Typische Zero-Shot Szenarien:',
+      ],
+      items: [
+        'Allgemeine Fragen und Antworten, einfache Zusammenfassungen und grundlegende Stimmungsklassifizierung.',
+        'Schnelle Experimente, wenn Sie die Aufgabenform noch erforschen.',
+        'Neue Domänen oder Sprachen, bei denen Ihnen kuratierte Beispiele fehlen.',
+      ],
+    },
+    whenToUseFewShot: {
+      title: 'Wann man Few-Shot verwendet',
+      content: [
+        '**Sie sollten Few-Shot Prompting verwenden, wenn die Aufgabe spezialisiert, format-empfindlich oder riskant ist und Sie gute Beispiele bereitstellen können.** In diesen Fällen verbessern Beispiele die Zuverlässigkeit gegenüber reinen Anweisungen erheblich.',
+        'Häufige Few-Shot Szenarien:',
+      ],
+      items: [
+        'Domänenspezifische Klassifizierung oder Extraktion (Recht, Medizin, Finanzen), bei denen präzise Beschriftungen und Formulierung wichtig sind.',
+        'Aufgaben mit strikten Schemas, beispielsweise das Extrahieren von strukturiertem JSON aus ungeordnetem Text.',
+        'Mehrsprachige oder Lokalisierungsaufgaben, bei denen einige Beispiele pro Sprache helfen, Redewendungen und Stil zu handhaben.',
+      ],
+    },
+    example: {
+      title: 'Beispiel: Zero-Shot vs. Few-Shot Prompt',
+      content: [
+        '**Der praktische Unterschied zwischen Zero-Shot und Few-Shot erscheint klar, wenn Sie Prompts für dieselbe Aufgabe vergleichen.** Hier klassifizieren wir Support-Tickets nach Absicht.',
+        '**[Schlechter Prompt – Unstrukturiert]**',
+        '"Schauen Sie sich dieses Support-Ticket an und sagen Sie mir, worum es geht."',
+        '**[Zero-Shot Prompt]**',
+        '"Klassifizieren Sie das folgende Support-Ticket in eine dieser Kategorien: `billing_issue`, `login_problem`, `feature_request`, `bug_report` oder `other`. Ticket: "Ich habe heute dreimal versucht, mein Passwort zurückzusetzen, und der Link sagt immer, dass er abgelaufen ist." Geben Sie nur den Kategorienamen aus."',
+        '**[Few-Shot Prompt]**',
+        '"Klassifizieren Sie jedes Support-Ticket in eine dieser Kategorien: `billing_issue`, `login_problem`, `feature_request`, `bug_report` oder `other`. Geben Sie nur den Kategorienamen aus. Beispiel 1: Ticket: "Sie haben mich diesen Monat zweimal für dasselbe Abonnement berechnet." Etikett: `billing_issue` Beispiel 2: Ticket: "Jedes Mal, wenn ich auf \'Report exportieren\' klicke, passiert nichts, auch nicht nach dem Aktualisieren der Seite." Etikett: `bug_report` Beispiel 3: Ticket: "Könnten Sie den Export von Reports direkt zu Google Sheets unterstützen?" Etikett: `feature_request` Klassifizieren Sie nun dieses Ticket: "Ich habe heute dreimal versucht, mein Passwort zurückzusetzen, und der Link sagt immer, dass er abgelaufen ist."',
+        'Die Few-Shot Version zeigt das Muster explizit, was normalerweise die Klassifizierungsqualität für nuancierte oder verrauschte Tickets verbessert.',
+      ],
+    },
+    howPQHelps: {
+      title: 'Wie PromptQuorum Ihnen bei der Wahl hilft',
+      content: [
+        '**PromptQuorum ist ein Multi-Model-AI-Dispatch-Tool, mit dem Sie Zero-Shot- und Few-Shot-Prompts an mehreren Anbietern an einem Ort testen können.** Sie können denselben Anweisungs-Only-Prompt und denselben beispielerweiterten Prompt nebeneinander an Modelle wie GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro senden.',
+        'Innerhalb von PromptQuorum können Sie:',
+      ],
+      items: [
+        'Beginnen Sie mit Zero-Shot Prompts mit Frameworks wie Single Step, RTF oder CO-STAR für schnelle Grundlagen.',
+        'Upgrade auf Few-Shot Prompts durch Einbettung repräsentativer Beispiele in Frameworks wie SPECS oder Googles Prompting Guide, wenn Sie strengere Kontrolle benötigen.',
+        'Speichern Sie sowohl Zero-Shot- als auch Few-Shot-Versionen als Vorlagen und vergleichen Sie dann Genauigkeit, Latenz und Token-Kosten über verschiedene Modelle im Laufe der Zeit.',
+      ],
+    },
+    howToStart: {
+      title: 'Wie man zwischen Zero-Shot und Few-Shot Prompting wählt',
+      numberedItems: [
+        '**Beginnen Sie für routinemäßige, unkomplizierte Aufgaben mit Zero-Shot (keine Beispiele).** Beispiel: "Klassifizieren Sie diese Bewertung als positiv oder negativ." Wenn die Genauigkeit ausreichend ist, ist Zero-Shot schneller und billiger.',
+        '**Wenn die Zero-Shot Leistung schlecht ist (< 80% Genauigkeit oder Qualität), fügen Sie 2–5 Few-Shot Beispiele hinzu.** Zeigen Sie dem Modell 2–3 positive und 2–3 negative Bewertungen mit korrekten Etiketten. Few-Shot lehrt durch Beispiele.',
+        '**Für Aufgaben mit subtilen Unterscheidungen oder seltenen Mustern fügen Sie 5–10 Beispiele hinzu (Few-Shot+).** Wenn Ihre Aufgabe die Erkennung von Sarkasmus, schädlicher Voreingenommenheit oder domänenspezifischer Nuance erfordert, helfen mehr Beispiele.',
+        '**Wählen Sie Beispiele aus, die die Bandbreite der Eingaben abdecken, die Sie erwarten.** Wenn Sie Produktbewertungen klassifizieren, fügen Sie enthusiastische, lauwarme und negative Beispiele ein. Zeigen Sie nicht nur einfache Fälle.',
+        '**Messen Sie den Few-Shot Nutzen an einem Test-Set, bevor Sie sich in der Produktion danach entscheiden.** Führen Sie denselben Prompt mit 0 Beispielen und 5 Beispielen auf 50 Test-Fällen aus. Wenn Few-Shot 10+ Prozentpunkte Genauigkeit hinzufügt, fügen Sie Beispiele ein. Wenn der Gewinn < 5% ist, bleiben Sie bei Zero-Shot.',
+      ],
+    },
+    zusatzfragen: {
+      title: 'Häufige Fragen zu Zero-Shot vs. Few-Shot in der DACH-Region',
+      faqs: [
+        {
+          q: 'Wie verwalten wir Few-Shot Beispiele in unternehmensweiten Workflows in Deutschland?',
+          a: 'Deutsche Unternehmen sollten Few-Shot Beispiele zentral in Versionskontrollen speichern und dokumentieren. Erstellen Sie eine Beispieldatenbank mit beschrifteten Eingaben und erwarteten Ausgaben. Dies ist wichtig für Compliance (DSGVO), Reproduzierbarkeit und Team-Onboarding. PromptQuorum unterstützt Template-Speicherung über Modelle hinweg, was für großformatige Enterprise-Deployments in der DACH-Region nützlich ist.',
+        },
+        {
+          q: 'Gibt es Datenschutz- oder Compliance-Implikationen bei der Verwendung von Few-Shot mit Kundenbeispielen?',
+          a: 'Ja. Wenn Ihre Few-Shot Beispiele reale Kundendaten enthalten, unterliegen sie DSGVO-Anforderungen. Verwenden Sie anonymisierte oder synthetische Beispiele, um Datenschutzverletzungen zu vermeiden. Dokumentieren Sie, wie Beispiele erfasst, gespeichert und angewendet werden. Dies ist eine kritische Kontrollpunkt für deutsche Unternehmen und Behörden.',
+        },
+      ],
+    },
+    zusammenfassung: {
+      title: 'Zusammenfassung',
+      content: [
+        '**Zusammengefasst:** Zero-Shot Prompting bietet Geschwindigkeit und Skalierbarkeit für breite Aufgaben. Few-Shot Prompting bietet höhere Genauigkeit und Kontrolle für spezialisierte, format-empfindliche oder riskante Aufgaben. Beginnen Sie mit Zero-Shot, und upgraden Sie auf Few-Shot, wenn die Leistung unter Ihren Zielen liegt. PromptQuorum macht das Testen und Vergleichen über Modelle hinweg einfach.',
+      ],
+    },
+  },
+},
+    fr: {
+  theme: 'Techniques',
+  title: 'Zero-Shot vs. Few-Shot Prompting',
+  intro: 'Le Zero-Shot Prompting ne fournit aucun exemple et repose entièrement sur les connaissances préexistantes du modèle, tandis que le Few-Shot Prompting intègre quelques exemples pour que le modèle puisse imiter un motif souhaité.',
+  publishDate: '2026-03-26',
+  readTime: '6 min de lecture',
+  educationalLevel: 'Intermediate',
+  primaryTerm: 'Zero-Shot et Few-Shot Prompting',
+  metaDescription: 'Zero-Shot vs. Few-Shot Prompting : comparaison, cas d\'utilisation et comment PromptQuorum vous aide à choisir la bonne stratégie.',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Zero-Shot vs. Few-Shot Prompting',
+    description: 'Une comparaison pratique du Zero-Shot et Few-Shot Prompting, quand utiliser chacun, et comment PromptQuorum vous aide à choisir la bonne stratégie.',
+    datePublished: '2026-03-26',
+    dateModified: '2026-03-26',
+    keywords: ['Zero-Shot Prompting', 'Few-Shot Prompting', 'ingénierie des prompts', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+  },
+  sections: {
+    whatIsZeroShot: {
+      title: 'Qu\'est-ce que le Zero-Shot Prompting',
+      content: [
+        '**Le Zero-Shot Prompting demande au modèle de résoudre une tâche avec une instruction claire et aucun exemple.** Le modèle s\'appuie sur ses connaissances générales et ses capacités de suivi d\'instructions acquises lors de la pré-formation et de l\'alignement.',
+        'Zero-Shot est rapide à mettre en place car vous n\'avez pas besoin de concevoir ou de curationner des paires d\'exemples. Il fonctionne bien pour les tâches générales comme les questions-réponses génériques, la classification simple, la résumé ou la traduction directe, où les instructions seules suffisent généralement.',
+      ],
+    },
+    whatIsFewShot: {
+      title: 'Qu\'est-ce que le Few-Shot Prompting',
+      content: [
+        '**Le Few-Shot Prompting ajoute un petit nombre d\'exemples entrée-sortie à l\'instruction pour que le modèle puisse déduire le motif de la tâche à partir de démonstrations concrètes.** En pratique, Few-Shot signifie généralement entre deux et dix exemples.',
+        'Ces exemples agissent comme un mini-ensemble d\'entraînement dans le prompt, guidant la façon dont le modèle devrait interpréter les tâches ambiguës, les formats spécialisés ou le langage spécifique au domaine. Few-Shot est particulièrement utile lorsque vous avez besoin d\'un style spécifique, d\'un schéma ou d\'un comportement nuancé que les instructions génériques ne capturent pas.',
+      ],
+    },
+    keyDifferences: {
+      title: 'Principales différences : Zero-Shot vs. Few-Shot',
+      content: [
+        '**Le Zero-Shot et le Few-Shot Prompting diffèrent principalement par l\'effort de configuration, la précision sur les tâches spécifiques et l\'évolutivité sur plusieurs cas d\'usage.** Les deux reposent sur le même modèle sous-jacent, mais échangent l\'effort de conception d\'exemples pour un meilleur alignement des tâches.',
+      ],
+      columns: ['Dimension', 'Zero-Shot', 'Few-Shot'],
+      rows: [
+        { 'Dimension': 'Exemples dans le prompt', 'Zero-Shot': 'Aucun', 'Few-Shot': '2–10+ exemples représentatifs' },
+        { 'Dimension': 'Vitesse de configuration', 'Zero-Shot': 'Très rapide; pas de curation d\'exemples', 'Few-Shot': 'Plus lent; les exemples doivent être sélectionnés et maintenus' },
+        { 'Dimension': 'Exigences en matière de données', 'Zero-Shot': 'Aucun exemple étiqueté requis', 'Few-Shot': 'Nécessite au moins quelques exemples étiquetés' },
+        { 'Dimension': 'Précision sur les tâches étroites', 'Zero-Shot': 'Souvent plus faible ou plus générique', 'Few-Shot': 'Généralement plus haute et plus cohérente sur les domaines spécifiques' },
+        { 'Dimension': 'Évolutivité entre tâches', 'Zero-Shot': 'Hautement évolutif, facile d\'ajouter de nouvelles tâches', 'Few-Shot': 'Moins évolutif; chaque tâche peut nécessiter ses propres exemples' },
+      ],
+    },
+    whenToUseZeroShot: {
+      title: 'Quand utiliser Zero-Shot',
+      content: [
+        '**Vous devez utiliser le Zero-Shot Prompting lorsque vous avez besoin de rapidité, que vous n\'avez pas d\'exemples étiquetés et que votre tâche est raisonnablement générale.** Ce motif fonctionne bien comme première approche ou référence.',
+        'Scénarios typiques de Zero-Shot:',
+      ],
+      items: [
+        'Questions-réponses générales, résumés simples et classification d\'opinions de base.',
+        'Expérimentation rapide lorsque vous explorez encore la forme de la tâche.',
+        'Nouveaux domaines ou langues où vous n\'avez pas d\'exemples curés.',
+      ],
+    },
+    whenToUseFewShot: {
+      title: 'Quand utiliser Few-Shot',
+      content: [
+        '**Vous devez utiliser le Few-Shot Prompting lorsque la tâche est spécialisée, sensible au format ou à haut risque, et que vous pouvez fournir de bons exemples.** Dans ces cas, les exemples améliorent considérablement la fiabilité par rapport aux instructions pures.',
+        'Scénarios courants de Few-Shot:',
+      ],
+      items: [
+        'Classification ou extraction spécifique au domaine (juridique, médical, financier) où les étiquettes précises et la formulation comptent.',
+        'Tâches avec des schémas stricts, comme l\'extraction de JSON structuré à partir de texte désordonné.',
+        'Tâches multilingues ou de localisation où quelques exemples par langue aident à gérer les idiomes et le style.',
+      ],
+    },
+    example: {
+      title: 'Exemple : Prompt Zero-Shot vs. Few-Shot',
+      content: [
+        '**La différence pratique entre Zero-Shot et Few-Shot apparaît clairement lorsque vous comparez les prompts pour la même tâche.** Ici, nous classons les tickets d\'assistance par intention.',
+        '**[Mauvais prompt – Non structuré]**',
+        '"Regardez ce ticket d\'assistance et dites-moi de quoi il s\'agit."',
+        '**[Prompt Zero-Shot]**',
+        '"Classez le ticket d\'assistance suivant dans l\'une de ces catégories: `billing_issue`, `login_problem`, `feature_request`, `bug_report` ou `other`. Ticket: "J\'ai essayé de réinitialiser mon mot de passe trois fois aujourd\'hui et le lien dit toujours qu\'il a expiré." Sortez uniquement le nom de la catégorie."',
+        '**[Prompt Few-Shot]**',
+        '"Classez chaque ticket d\'assistance dans l\'une de ces catégories: `billing_issue`, `login_problem`, `feature_request`, `bug_report` ou `other`. Sortez uniquement le nom de la catégorie. Exemple 1: Ticket: "Vous m\'avez facturé deux fois ce mois-ci pour le même abonnement." Étiquette: `billing_issue` Exemple 2: Ticket: "Chaque fois que je clique sur \'exporter un rapport\', rien ne se passe, même après avoir actualisé la page." Étiquette: `bug_report` Exemple 3: Ticket: "Pourriez-vous ajouter le support pour exporter les rapports directement vers Google Sheets?" Étiquette: `feature_request` Classez maintenant ce ticket: "J\'ai essayé de réinitialiser mon mot de passe trois fois aujourd\'hui et le lien dit toujours qu\'il a expiré."',
+        'La version Few-Shot montre explicitement le motif, ce qui améliore généralement la qualité de la classification pour les tickets nuancés ou bruyants.',
+      ],
+    },
+    howPQHelps: {
+      title: 'Comment PromptQuorum vous aide',
+      content: [
+        '**PromptQuorum est un outil de dispatch multi-modèle qui vous permet de tester les prompts Zero-Shot et Few-Shot chez plusieurs fournisseurs en un seul endroit.** Vous pouvez envoyer le même prompt basé sur les instructions et le même prompt augmenté par des exemples côte à côte aux modèles comme GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro.',
+        'Dans PromptQuorum, vous pouvez:',
+      ],
+      items: [
+        'Démarrez avec des prompts Zero-Shot utilisant des frameworks comme Single Step, RTF ou CO-STAR pour des références rapides.',
+        'Passez aux prompts Few-Shot en intégrant des exemples représentatifs dans des frameworks comme SPECS ou le Prompting Guide de Google lorsque vous avez besoin d\'un contrôle plus strict.',
+        'Enregistrez les versions Zero-Shot et Few-Shot comme modèles, puis comparez la précision, la latence et les coûts de tokens sur les modèles au fil du temps.',
+      ],
+    },
+    howToStart: {
+      title: 'Comment choisir entre Zero-Shot et Few-Shot',
+      numberedItems: [
+        '**Pour les tâches routinières et simples, commencez par Zero-Shot (aucun exemple).** Exemple: "Classez cet avis comme positif ou négatif." Si la précision est suffisante, Zero-Shot est plus rapide et moins cher.',
+        '**Lorsque la performance Zero-Shot est mauvaise (< 80% de précision ou de qualité), ajoutez 2–5 exemples Few-Shot.** Montrez au modèle 2–3 avis positifs et 2–3 avis négatifs avec les bonnes étiquettes. Few-Shot enseigne par l\'exemple.',
+        '**Pour les tâches avec des distinctions subtiles ou des motifs rares, ajoutez 5–10 exemples (Few-Shot+).** Si votre tâche nécessite de détecter l\'ironie, les biais nuisibles ou la nuance spécifique au domaine, plus d\'exemples aident.',
+        '**Choisissez des exemples qui couvrent la plage des entrées que vous attendez.** Si vous classez les avis sur les produits, incluez des exemples enthousiastes, tièdes et négatifs. Ne montrez pas seulement les cas faciles.',
+        '**Mesurez le bénéfice Few-Shot sur un ensemble de test avant de vous y engager en production.** Exécutez le même prompt avec 0 exemples et 5 exemples sur 50 cas de test. Si Few-Shot ajoute 10+ points de pourcentage de précision, incluez des exemples. Si le gain est < 5%, restez avec Zero-Shot.',
+      ],
+    },
+    considerationsLocales: {
+      title: 'Considérations pour les marchés francophones',
+      content: [
+        'En France, en Belgique et au Canada francophone, les équipes préfèrent souvent des workflows structurés et documentés. Lors de la mise en œuvre de Few-Shot Prompting dans des contextes professionnels francophones, documentez clairement vos stratégies d\'exemples et vos seuils de précision. Cela facilite l\'adoption et l\'audit dans les organisations régies par des réglementations strictes.',
+      ],
+    },
+    avantagesComparatifs: {
+      title: 'Avantages comparatifs et cas limites',
+      content: [
+        '**Avantage Zero-Shot:** Idéal pour les prototypes rapides, les nouvelles langues ou domaines, et les cas où vous n\'avez pas de données étiquetées.',
+        '**Avantage Few-Shot:** Supérieur pour les tâches sensibles (classification juridique, extraction médicale), les formats stricts (JSON structuré) et les nuances multilingues.',
+        '**Cas limite:** Si votre domaine est très spécialisé et que Few-Shot avec 5–10 exemples n\'améliore toujours pas la précision, envisagez le fine-tuning d\'un modèle sur des centaines d\'exemples (dépassant Few-Shot).',
+      ],
+    },
+  },
+},
+    ja: {
+  theme: 'Techniques',
+  title: 'ゼロショット vs. フューショットプロンプティング',
+  intro: 'ゼロショットプロンプティングはプロンプトに例を含めず、モデルの事前学習に完全に依存しますが、フューショットプロンプティングは複数の例を埋め込んで、モデルが望ましいパターンを模倣できるようにします。',
+  publishDate: '2026-03-26',
+  readTime: '6分で読める',
+  educationalLevel: '中級',
+  primaryTerm: 'ゼロショットおよびフューショットプロンプティング',
+  metaDescription: 'ゼロショットとフューショットプロンプティングの実践的な比較。それぞれを使う時機、そしてPromptQuorumでどのように正しい戦略を選択するかを学びます。',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'ゼロショット vs. フューショットプロンプティング',
+    description: 'ゼロショットとフューショットプロンプティングの実践的な比較、それぞれを使う時機、およびPromptQuorumがどのように選択を支援するかを説明しています。',
+    datePublished: '2026-03-26',
+    dateModified: '2026-03-26',
+    keywords: ['ゼロショットプロンプティング', 'フューショットプロンプティング', 'プロンプトエンジニアリング', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+  },
+  sections: {
+    whatIsZeroShot: {
+      title: 'ゼロショットプロンプティングとは何か',
+      content: [
+        '**ゼロショットプロンプティングは、プロンプト内の例を使わず、明確な指示だけでモデルにタスクを解かせる手法です。** モデルは、事前学習とアラインメント中に学習した一般的な知識と指示実行能力に依存します。',
+        'ゼロショットは設定が迅速です。例のペアを設計・厳選する必要がないため、汎用的なタスク（一般的なQ&A、簡単な分類、要約、素直な翻訳など）で指示だけで十分な場合に適しています。',
+      ],
+    },
+    whatIsFewShot: {
+      title: 'フューショットプロンプティングとは何か',
+      content: [
+        '**フューショットプロンプティングは、少数の入出力例を指示に追加して、モデルが具体的なデモンストレーションからタスクパターンを推測できるようにする手法です。** 実際には、フューショットはふつう2～10個の例を意味します。',
+        'これらの例はプロンプト内のミニトレーニングセットのように機能し、モデルが曖昧なタスク・特殊な形式・ドメイン固有の言語をどのように解釈すべきかをガイドします。フューショットプロンプティングは、汎用的な指示では十分ではない特定のスタイル・スキーマ・細かい動作が必要な場合に特に有効です。',
+      ],
+    },
+    whatIsZeroShotExplained: {
+      title: 'ゼロショットの仕組み',
+      content: [
+        'ゼロショットでは、モデルは単純な指示だけで与えられたタスクを実行します。モデルが参考にできる例がないため、タスク説明の明確さが極めて重要です。効果的なゼロショットプロンプトは、期待される出力形式・制約・コンテキストを明示的に規定します。',
+      ],
+    },
+    whatIsFewShotExplained: {
+      title: 'フューショットの仕組み',
+      content: [
+        'フューショットでは、指示の後に具体的な例を提供します。モデルはこれらの例のパターンを認識し、同様のタスクに適用します。このアプローチは、データの形式・出力スタイル・専門用語がモデルの学習データに頻繁に出現しない場合に特に効果的です。',
+      ],
+    },
+    keyDifferences: {
+      title: 'キーの違い：ゼロショット vs. フューショット',
+      content: [
+        '**ゼロショットとフューショットプロンプティングは、主にセットアップの努力・特定タスクの精度・多くのユースケース間のスケーラビリティが異なります。** 両者は同じ基盤モデルに依存していますが、例設計の努力とより良いタスク整合性をトレードオフしています。',
+      ],
+      columns: ['側面', 'ゼロショット', 'フューショット'],
+      rows: [
+        { '側面': 'プロンプト内の例', 'ゼロショット': 'なし', 'フューショット': '2～10個以上の代表的な例' },
+        { '側面': 'セットアップ速度', 'ゼロショット': '非常に高速；例の厳選が不要', 'フューショット': '遅い；例を選択・維持する必要がある' },
+        { '側面': 'データ要件', 'ゼロショット': 'ラベル付き例は不要', 'フューショット': '少なくとも数個のラベル付き例が必要' },
+        { '側面': '狭いタスクでの精度', 'ゼロショット': '低いか、より汎用的なことが多い', 'フューショット': '特定のドメインで通常、より高く一貫性がある' },
+        { '側面': 'タスク間のスケーラビリティ', 'ゼロショット': '高いスケーラビリティ；新しいタスクの追加が容易', 'フューショット': 'スケーラビリティが低い；各タスクが独自の例を必要とすることがある' },
+      ],
+    },
+    whenToUseZeroShot: {
+      title: 'ゼロショットを使う場合',
+      content: [
+        '**スピードが必要で、ラベル付き例がなく、タスクがかなり一般的な場合はゼロショットプロンプティングを使うべきです。** このパターンは最初の試行やベースラインとして機能します。',
+        '典型的なゼロショットの場面：',
+      ],
+      items: [
+        '一般的なQ&A、簡単な要約、基本的なセンチメント分類。',
+        'タスクの形が見えてくるまでの素早い実験。',
+        'ラベル付き例がない新しいドメインや言語。',
+      ],
+    },
+    whenToUseFewShot: {
+      title: 'フューショットを使う場合',
+      content: [
+        '**タスクが専門的で、形式に敏感か、リスクが高く、良い例を提供できる場合、フューショットプロンプティングを使うべきです。** このような場合、例は純粋な指示よりも信頼性を大幅に向上させます。',
+        '一般的なフューショット の場面：',
+      ],
+      items: [
+        'ドメイン固有の分類・抽出（法務・医療・金融）で、正確なラベル付けと単語選択が重要。',
+        'JSONの構造化抽出など、厳密なスキーマを持つタスク。',
+        'マルチリンガルやローカライゼーションのタスク。言語ごとの数例が慣用句やスタイルの処理に役立つ。',
+      ],
+    },
+    example: {
+      title: '例：ゼロショット vs. フューショットプロンプト',
+      content: [
+        '**ゼロショットとフューショットの実践的な違いは、同じタスクのプロンプトを比較すると明らかです。** ここでは、サポートチケットを目的別に分類します。',
+        '**[悪いプロンプト – 非構造的]**',
+        '"このサポートチケットを見て、それが何についてであるか教えてください。"',
+        '**[ゼロショットプロンプト]**',
+        '"以下のサポートチケットを次のいずれかのカテゴリに分類してください：`billing_issue`、`login_problem`、`feature_request`、`bug_report`、または `other`。チケット：「今日3回パスワードをリセットしようとしましたが、リンクはいつも期限切れと言っています。」カテゴリ名だけを出力してください。"',
+        '**[フューショットプロンプト]**',
+        '"各サポートチケットを次のいずれかのカテゴリに分類してください：`billing_issue`、`login_problem`、`feature_request`、`bug_report`、または `other`。カテゴリ名だけを出力してください。例1：チケット：「同じサブスクリプションで今月2回請求されました。」ラベル：`billing_issue` 例2：チケット：「\'レポートをエクスポート\'をクリックしても何も起こりません。ページを更新した後でも。」ラベル：`bug_report` 例3：チケット：「Google Sheetsにレポートを直接エクスポートするサポートを追加してもらえますか？」ラベル：`feature_request` では、このチケットを分類してください：「今日3回パスワードをリセットしようとしましたが、リンクはいつも期限切れと言っています。」',
+        'フューショット版は明示的にパターンを示すため、通常、ニュアンスの多いまたは雑音のあるチケットの分類品質が向上します。',
+      ],
+    },
+    注意点: {
+      title: '注意点：よくある落とし穴',
+      content: [
+        'ゼロショットとフューショットを選択する際に注意すべき点があります。',
+      ],
+      items: [
+        '不適切な例を提供すると、フューショットは実際にパフォーマンスを低下させます。例の質はセットアップ時間を正当化する必要があります。',
+        'ゼロショットは簡単ですが、タスク記述の曖昧さはモデルの推測を増加させ、精度を低下させます。',
+        'フューショット例の数を増やしても、精度向上が必ずしも続くわけではありません。通常、2～5個の良質な例で十分です。',
+        'モデルによってゼロショット vs. フューショットの反応が異なる場合があります。GPT-4oはゼロショットで堅牢ですが、Gemini 2.5 Proはいくつかのドメインでフューショットの恩恵をより受けることがあります。',
+      ],
+    },
+    howPQHelps: {
+      title: 'PromptQuorumがどのように選択を支援するか',
+      content: [
+        '**PromptQuorumは、複数のプロバイダー間でゼロショットとフューショットプロンプトをテストできるマルチモデルAIディスパッチツールです。** 指示のみのプロンプトと例を拡張したプロンプトの両方を、GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proなどのモデルに並行して送信できます。',
+        'PromptQuorum内では、以下を実行できます：',
+      ],
+      items: [
+        'Single Step、RTF、CO-STARなどのフレームワークを使用して、迅速にベースラインのゼロショットプロンプトを開始。',
+        'SPECSやGoogleのプロンプティングガイドなどのフレームワーク内に代表的な例を埋め込むことで、フューショットプロンプトにアップグレード。より厳密な制御が必要な場合。',
+        'ゼロショット版とフューショット版の両方をテンプレートとして保存し、時間の経過とともにモデル間で精度・レイテンシー・トークンコストを比較。',
+      ],
+    },
+    実践Tips: {
+      title: '実践Tips：効果的な使用方法',
+      content: [
+        'ゼロショットとフューショットの効果を最大化するための実践的なアドバイスです。',
+      ],
+      items: [
+        '最初は常にゼロショットで開始してください。セットアップが高速で、多くのシンプルなタスクで十分です。',
+        'ゼロショットの精度が60～70%以下の場合は、フューショットを試してください。',
+        '例を選択する際は、テストデータセットのエッジケースを代表するもの選んでください。簡単なケースだけを示すと、モデルは難しい場合に失敗します。',
+        '本番環境に導入する前に、テストセット上でゼロショット対フューショットのパフォーマンス差を測定してください。',
+      ],
+    },
+    howToStart: {
+      title: 'ゼロショットとフューショットの選択方法',
+      numberedItems: [
+        '**日常的でシンプルなタスクの場合は、ゼロショット（例なし）で開始してください。** 例：「このレビューをポジティブまたはネガティブとして分類する」。精度が十分であれば、ゼロショットはより高速で安価です。',
+        '**ゼロショットのパフォーマンスが悪い場合（精度<80％または品質が低い）、2～5個のフューショット例を追加してください。** モデルに2～3個のポジティブなレビューと2～3個のネガティブなレビューを正しいラベル付けで表示します。フューショットは例で教えます。',
+        '**細かい違いや珍しいパターンを含むタスクの場合、5～10個の例（フューショット+）を追加してください。** 皮肉・有害なバイアス・ドメイン固有のニュアンスの検出が必要な場合、より多くの例が役立ちます。',
+        '**期待される入力の範囲をカバーする例を選択してください。** 商品レビューを分類する場合、熱狂的・ぬるい・否定的な例を含めてください。簡単なケースだけを表示しないでください。',
+        '**本番環境にコミットする前に、テストセット上でフューショットの恩恵を測定してください。** 0個の例と5個の例で同じプロンプトを50個のテストケースで実行します。フューショットが精度を10ポイント以上改善すれば、例を含めます。改善が5％未満であれば、ゼロショットを維持してください。',
+      ],
+    },
+  },
+},
+    zh: {
+  theme: 'Techniques',
+  title: '零样本 vs. 少样本提示',
+  intro: '零样本提示在提示中不使用任何示例，完全依赖模型的预训练，而少样本提示嵌入少量示例，使模型能够模仿所需的模式。',
+  publishDate: '2026-03-26',
+  readTime: '阅读约6分钟',
+  educationalLevel: '中级',
+  primaryTerm: '零样本和少样本提示',
+  metaDescription: '零样本和少样本提示的实用对比。学习每种方法的适用场景，以及PromptQuorum如何帮助您选择正确的策略。',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: '零样本 vs. 少样本提示',
+    description: '零样本和少样本提示的实用对比，何时使用每种方法，以及PromptQuorum如何帮助您进行选择。',
+    datePublished: '2026-03-26',
+    dateModified: '2026-03-26',
+    keywords: ['零样本提示', '少样本提示', '提示工程', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+  },
+  sections: {
+    whatIsZeroShot: {
+      title: '什么是零样本提示',
+      content: [
+        '**零样本提示要求模型仅使用清晰的指令完成任务，不需要提示中的示例。** 模型依赖于在预训练和对齐过程中学习的一般知识和遵循指令的能力。',
+        '零样本快速易用，因为您不需要设计或精选示例对。对于广泛的任务（如通用问答、简单分类、摘要或直接翻译），仅凭指令通常足以实现良好结果。',
+      ],
+    },
+    whatIsFewShot: {
+      title: '什么是少样本提示',
+      content: [
+        '**少样本提示在指令中添加少量输入-输出示例，使模型能够从具体演示推断任务模式。** 实际上，少样本通常意味着 2 至 10 个示例。',
+        '这些示例像提示内的迷你训练集一样工作，指导模型应如何解释模糊的任务、专门的格式或特定领域的语言。当您需要特定的风格、结构或通用指令无法表达的细微行为时，少样本提示特别有效。',
+      ],
+    },
+    keyDifferences: {
+      title: '关键差异：零样本 vs. 少样本',
+      content: [
+        '**零样本和少样本提示主要在设置工作量、特定任务的准确性和跨多个使用场景的可扩展性上有所不同。** 两者都依赖于相同的基础模型，但在示例设计工作和更好的任务对齐之间进行权衡。',
+      ],
+      columns: ['维度', '零样本', '少样本'],
+      rows: [
+        { '维度': '提示中的示例', '零样本': '无', '少样本': '2-10+ 个代表性示例' },
+        { '维度': '设置速度', '零样本': '非常快速；不需要示例精选', '少样本': '较慢；示例必须经过选择和维护' },
+        { '维度': '数据要求', '零样本': '无需标记示例', '少样本': '至少需要几个标记示例' },
+        { '维度': '特定任务的准确性', '零样本': '通常较低或更通用', '少样本': '在特定领域通常更高、更一致' },
+        { '维度': '任务间的可扩展性', '零样本': '高度可扩展，易于添加新任务', '少样本': '可扩展性较低；每个任务可能需要自己的示例' },
+      ],
+    },
+    whenToUseZeroShot: {
+      title: '何时使用零样本',
+      content: [
+        '**当您需要速度、没有标记示例且任务相当通用时，应使用零样本提示。** 此模式可用作初始尝试或基线。',
+        '典型的零样本场景：',
+      ],
+      items: [
+        '通用问答、简单摘要和基本情感分类。',
+        '当您仍在探索任务性质时的快速实验。',
+        '您缺乏精选示例的新领域或语言。',
+      ],
+    },
+    whenToUseFewShot: {
+      title: '何时使用少样本',
+      content: [
+        '**当任务专业、对格式敏感或风险较高，且您能提供优质示例时，应使用少样本提示。** 在这些情况下，示例会显著提高纯指令的可靠性。',
+        '常见的少样本场景：',
+      ],
+      items: [
+        '特定领域的分类或提取（法律、医疗、金融），其中精确的标签和措辞至关重要。',
+        '具有严格结构的任务，如从杂乱文本中提取结构化 JSON。',
+        '多语言或本地化任务，其中每种语言的几个示例有助于处理习语和风格。',
+      ],
+    },
+    example: {
+      title: '示例：零样本 vs. 少样本提示',
+      content: [
+        '**当您为同一任务比较提示时，零样本和少样本之间的实际差异变得清晰可见。** 这里我们按意图对支持工单进行分类。',
+        '**[糟糕的提示 – 无结构]**',
+        '"看一下这个支持工单，告诉我它的内容。"',
+        '**[零样本提示]**',
+        '"将以下支持工单分类为以下其中一个类别：`billing_issue`、`login_problem`、`feature_request`、`bug_report` 或 `other`。工单：\"我今天尝试重置密码三次，链接总是说已过期。\" 仅输出类别名称。"',
+        '**[少样本提示]**',
+        '"将每个支持工单分类为以下其中一个类别：`billing_issue`、`login_problem`、`feature_request`、`bug_report` 或 `other`。仅输出类别名称。示例1：工单：\"您本月对同一订阅收费了两次。\" 标签：`billing_issue` 示例2：工单：\"无论我点击\'导出报告\'还是刷新页面，都没有反应。\" 标签：`bug_report` 示例3：工单：\"您能否添加将报告直接导出到 Google Sheets 的支持？\" 标签：`feature_request` 现在分类这个工单：\"我今天尝试重置密码三次，链接总是说已过期。\"',
+        '少样本版本明确显示模式，通常可改进对微妙或嘈杂工单的分类质量。',
+      ],
+    },
+    howPQHelps: {
+      title: 'PromptQuorum 如何帮助您选择',
+      content: [
+        '**PromptQuorum 是一款多模型 AI 分派工具，让您在一个地方跨多个提供商测试零样本和少样本提示。** 您可以将相同的仅指令提示和相同的示例增强提示并行发送到 GPT-4o、Claude 4.6 Sonnet 和 Gemini 2.5 Pro 等模型。',
+        '在 PromptQuorum 中，您可以：',
+      ],
+      items: [
+        '使用 Single Step、RTF 或 CO-STAR 等框架快速使用零样本提示。',
+        '通过在 SPECS 或谷歌提示指南等框架内嵌入代表性示例来升级为少样本提示，以获得更严格的控制。',
+        '将零样本和少样本版本作为模板保存，然后随时间推移比较模型间的准确性、延迟和令牌成本。',
+      ],
+    },
+    实用建议: {
+      title: '实用建议：最大化效果',
+      content: [
+        '以下是充分利用零样本和少样本提示的实际建议。',
+      ],
+      items: [
+        '总是从零样本开始。它快速易用，对许多简单任务足够。',
+        '当零样本精度低于 70% 时，尝试少样本。',
+        '选择示例时，选择代表您数据中边界情况的样本。',
+        '在生产环境中部署前测试性能差异。',
+        '比较不同模型间的零样本 vs. 少样本性能——GPT-4o 可能在零样本中表现出色，而 Gemini 2.5 Pro 可能从少样本获益更多。',
+      ],
+    },
+    howToStart: {
+      title: '如何在零样本和少样本间选择',
+      numberedItems: [
+        '**对于日常、直接的任务，从零样本开始（无示例）。** 示例："将此评论分类为正面或负面。" 如果准确性足够，零样本更快更便宜。',
+        '**当零样本性能不佳时（准确性 <80% 或质量较低），添加 2-5 个少样本示例。** 向模型展示 2-3 个正面和 2-3 个负面评论，带正确标签。少样本通过示例教学。',
+        '**对于具有细微差别或罕见模式的任务，添加 5-10 个示例（少样本+）。** 如果您的任务需要检测讽刺、有害偏见或特定领域的细微差别，更多示例会有所帮助。',
+        '**选择跨越您期望输入范围的示例。** 如果您分类产品评论，包括热情的、平静的和负面的示例。不要只展示简单案例。',
+        '**在生产提交前测试测试集上的少样本益处。** 使用 0 个示例和 5 个示例对 50 个测试案例运行相同提示。如果少样本增加 10+ 个百分点的准确性，包含示例。如果收益 <5%，坚持零样本。',
+      ],
+    },
+  },
+},
   },
 
   'constrained-prompting': {
