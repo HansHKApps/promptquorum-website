@@ -32824,19 +32824,26 @@ fr: {
             '**Structured output is a method of forcing language models to return data in a predefined format (such as JSON), enabling reliable parsing, automation, and integration into software systems.** It differs from free-form text by enforcing strict field names, data types, and schemas that downstream tools can process without manual cleanup.',
           ],
         },
+        exampleBlock: {
+          content: [
+            'Here is a simple example of structured output in JSON format:',
+          ],
+          codeBlock: '{\n  "task": "summarize",\n  "title": "Quick AI Guide",\n  "summary": "This article explains structured output and JSON mode.",\n  "key_points": ["JSON enforces format", "Reduces parsing errors", "Enables automation"],\n  "audience_level": "intermediate",\n  "confidence": 0.95\n}',
+          codeLanguage: 'json',
+        },
         keyTakeaways: {
           isTldr: true,
           content: [
-            '**Master structured output and JSON mode in 7 key points:**',
+            '**Key Takeaways — What You Need to Know About Structured Output:**',
           ],
           items: [
-            'Structured output means designing prompts to return data in fixed formats (lists, tables, or JSON) instead of free-form text.',
-            'JSON mode enforces valid JSON output and is natively supported by OpenAI GPT-4o, Anthropic Claude, and Google Gemini; older models require prompt-based enforcement.',
-            'Define schemas explicitly with field names, data types, and constraints; examples are more effective than descriptions.',
-            'Common mistakes include ambiguous schemas, missing examples, failing to validate output, and not handling edge cases.',
-            'In regulated environments (EU, Japan, China), structured output improves data governance, audit trails, and compliance documentation.',
-            'Validate JSON output before using it downstream: check syntax, required fields, and data types.',
-            'Structured output scales across models—define once, test across providers, and document any model-specific adjustments.',
+            '**Improves Reliability**: Structured output reduces parsing errors and manual data cleanup by enforcing strict schemas.',
+            '**Enables Automation**: JSON mode triggers conditional logic based on extracted fields (priority, category, urgency).',
+            '**API-Ready**: Direct integration with databases, CRMs, and business systems without reformatting.',
+            '**Model Dependent**: Native JSON mode available in GPT-4o, Claude, Gemini; older/open-source models need prompt engineering.',
+            '**Best for Deterministic Tasks**: APIs, automation, data pipelines. Avoid for creative writing or open-ended reasoning.',
+            '**Requires Validation**: Always parse and validate JSON output before downstream use.',
+            '**Scales Across Models**: Define schema once; test and document differences across OpenAI, Anthropic, Google, and open-source providers.',
           ],
         },
         whatIsStructured: {
