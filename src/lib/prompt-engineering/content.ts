@@ -29071,7 +29071,7 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
         },
       },
     },
-    de: {
+        de: {
       theme: 'Techniques',
       title: 'Persona-Prompting: Geben Sie Ihrer KI eine konsistente Rolle und Persönlichkeit',
       intro: 'Persona-Prompting ist die strukturierte Praxis, ein KI-Modell mit einer klaren Rolle, einer eindeutigen Weltanschauung und vordefinierten Verhaltensweisen auszustatten, damit es zuverlässig und konsistent wie ein bestimmter Experte oder eine Fachperson antwortet.',
@@ -29261,15 +29261,7 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
         },
       },
     },
-    
-    // FRENCH (FR) TRANSLATION - persona-prompting
-    fr: {
-      theme: 'Techniques',
-      title: 'Persona Prompting : Donnez un Rôle Cohérent à Votre IA',
-      intro: 'Le persona prompting est la pratique structurée d\'attribuer une IA à un rôle clair, une vision du monde et des comportements prédéfinis pour qu\'elle réponde de manière fiable et cohérente comme un expert spécifique ou un professionnel.',
-      publishDate: '2026-03-26',
-      readTime: '9 min de lecture',
-      educationalLevel: 'Intermediate',
+
     fr: {
       theme: 'Techniques',
       title: 'Persona Prompting : Donnez un Rôle Cohérent à Votre IA',
@@ -29624,7 +29616,7 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
         },
       },
     },
-    
+
     zh: {
       theme: 'Techniques',
       title: '人物角色提示：给AI分配角色，提升工作效率',
@@ -29821,7 +29813,6 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
       },
     }
   },
-},
 
   'negative-prompting': {
     en: {
