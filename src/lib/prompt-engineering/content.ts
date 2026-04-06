@@ -23708,11 +23708,11 @@ zh: {
         howToStart: {
           title: 'How to Use the RISEN Framework',
           numberedItems: [
-            '**Refine: Improve the existing draft according to your goals (clarity, structure, correctness).** Example: \'You are a senior content writer. Refine this draft for clarity and structure.\'',
-            '**Inspect: Identify every concrete change you made — sections rewritten, details added, issues fixed.** Example: \'List all changes made in this revision.\'',
-            '**Summarize: Provide a concise explanation of what the revised version now achieves.** Example: \'Summarize the improved draft in 2–3 sentences.\'',
-            '**Evaluate: Critique the result against explicit criteria such as tone, accuracy, and audience alignment.** Example: \'Rate this revision on clarity (1–5), accuracy (1–5), and usefulness (1–5).\'',
-            '**Next steps: Recommend further edits or follow-up actions for the next iteration.** Example: \'What should I improve in the next round?\'',
+            '**Refine:** Start with your existing draft, output, or plan. Give it to the model with clear instructions to improve it toward a specific goal — clarity, accuracy, conciseness, or audience alignment. Example: "Rewrite this product description for clarity. Target 120–160 words. Keep all factual details."',
+            '**Inspect:** Ask the model to list every specific change it made. Require concrete edit descriptions, not vague summaries. Example: "List 5–7 specific edits you made. For each one, state what you changed and why."',
+            '**Summarize:** Ask the model for a concise explanation of what the new version now says or achieves — not a repeat of the content itself, but a meta-level description. Example: "In 2–3 sentences, explain what the updated version now emphasizes and what changed in its focus."',
+            '**Evaluate:** Ask the model to rate the revised output against explicit criteria on a 1–5 scale with one-sentence justification per criterion. Example: "Rate the new version on clarity (1–5), persuasiveness (1–5), and B2B audience alignment (1–5). Justify each rating in one sentence."',
+            '**Next steps:** Ask the model to recommend 3 focused improvements for the next iteration so you always have a clear direction. Example: "Suggest 3 specific edits I could request in a future prompt to further improve this output."',
           ],
         },
       },
@@ -24523,11 +24523,11 @@ zh: {
         howToStart: {
           title: 'How to Use the TRACE Framework',
           numberedItems: [
-            '**Think: Restate the problem in your own words and list the key variables.** Example: \'Clarify the task, list key variables, and surface any ambiguities.\'',
-            '**Reason: Propose 2–3 possible approaches and weigh the trade-offs.** Example: \'Outline potential methods, trade-offs, or solution paths.\'',
-            '**Analyze: Apply your chosen approach step by step to the actual data or code.** Example: \'Apply the chosen method step by step to the actual inputs with concrete examples.\'',
-            '**Conclude: State your direct answer or recommendation clearly.** Example: \'Provide a direct answer or recommendation tied to the question.\'',
-            '**Explain: Justify your conclusion in 2–3 plain-language sentences a non-technical reader can follow.** Example: \'Summarize the logic in plain language, focusing on the "why" behind the answer.\'',
+            '**Think:** Ask the model to restate the problem in its own words and surface any ambiguities before attempting an answer. Example: "Before answering, restate what I am asking. List the key variables and any assumptions you are making."',
+            '**Reason:** Ask the model to outline 2–3 possible approaches or hypotheses and their trade-offs before committing to one. Example: "Propose 2–3 ways to approach this problem. For each, briefly state the pros and cons."',
+            '**Analyze:** Ask the model to apply its chosen approach step-by-step to the actual data or context you provided. Show numbers or concrete examples where possible. Example: "Apply your preferred approach to the specific situation I gave you. Show each step."',
+            '**Conclude:** Ask the model to state the final answer or recommendation directly and clearly in one sentence. Example: "State your recommendation clearly. If relevant, specify which conditions or segments it applies to."',
+            '**Explain:** Ask the model to justify the conclusion in plain language that a non-technical stakeholder can follow. Example: "Explain why in 3–5 sentences. Avoid jargon. Write as if explaining to a senior manager with no technical background."',
           ],
         },
       },
