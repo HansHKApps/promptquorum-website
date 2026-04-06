@@ -28750,8 +28750,8 @@ zh: {
           ],
         },
       },
-    },,
-ja: {
+    },
+    ja: {
         theme: 'Techniques',
         title: 'プロンプトチェーニング：複雑なタスクを成功する段階に分ける方法',
         intro: 'プロンプトチェーニングは、複雑なタスクを複数の小さなプロンプトに分割し、1つのステップの出力を次のステップに流し込む手法です。これにより、1つの過度に複雑なプロンプトに頼るのではなく、信頼できる多段階ワークフローを構築できます。',
@@ -29326,7 +29326,6 @@ zh: {
           },
         },
       },
-,
   },
 
   'persona-prompting': {
@@ -29652,7 +29651,7 @@ zh: {
           ],
         },
       },
-    },,
+    },
   },
 
   'negative-prompting': {
@@ -30200,8 +30199,8 @@ fr: {
         pqClosing: { content: ['En combinant le Self-Consistency avec la comparaison multi-modèle, PromptQuorum vous aide à distinguer les conclusions stables des suppositions fragiles.'] },
         howToStart: { title: 'Comment Utiliser le Self-Consistency Prompting', numberedItems: ['**Pour les tâches de raisonnement complexe : générez plusieurs sorties (5–10) du même prompt avec différentes graines aléatoires.** Posez au modèle la même question 5 fois. Vous obtiendrez 5 réponses différentes.', '**Analysez les sorties pour trouver des modèles cohérents (le « consensus »).** Si 4 réponses sur 5 s\'accordent sur une réponse, ce consensus est votre signal de confiance. Si les 5 divergent, la tâche est ambiguë ou le prompt doit être affiné.', '**Utilisez le Self-Consistency pour détecter les hallucinations dans les tâches de recherche et de connaissance.** Si vous demandez « Quelle est la plus grande ville de France ? » et 3 réponses disent « Paris » tandis que 2 disent « Lyon », le consensus (Paris) est votre réponse. Si vous voyez des villes aléatoires différentes, le modèle hallucine.', '**Définissez la Température (T) plus haute (0,7–1,0) pour encourager des sorties diverses.** Les températures basses (T = 0) produisent la même sortie déterministe à chaque fois, ce qui contredit l\'objectif. Le Self-Consistency a besoin de variation pour trouver le consensus.', '**Implémentez le Self-Consistency dans les pipelines de production où le coût le permet.** Exécuter 5–10 fois plus de générations est coûteux, mais pour les décisions critiques (conseils médicaux, recommandations financières, synthèse de recherche), le signal de consensus justifie le coût.'] },
       },
-    },,
-ja: {
+    },
+    ja: {
       theme: 'Techniques',
       title: 'セルフコンシステンシープロンプティング：AIに自分の仕事を確認させる',
       intro: 'セルフコンシステンシープロンプティングは、モデルに同じタスクに対して複数の推論パスを生成させ、その結果を集約するという技法です。単一の答えを信頼する代わりに、複数の回答を生成することで、複雑な推論問題の信頼性を大幅に向上させます。',
@@ -30227,7 +30226,7 @@ ja: {
         cautions: { title: '注意点：セルフコンシステンシー導入時の考慮事項', content: ['セルフコンシステンシープロンプティングは強力な技法ですが、実装時にいくつかの注意が必要です。'], items: ['**コスト増加：** 5～10倍の生成実行は計算コストが増加します。本番環境では、信頼性の利益がコスト増加を正当化する場合にのみ使用してください。', '**遅延の増加：** 複数のモデル実行は処理時間を増加させます。リアルタイムアプリケーションでは慎重に検討してください。', '**プロンプトエンジニアリングが必須：** セルフコンシステンシーに頼る前に、プロンプト自体を十分に最適化することが重要です。不適切なプロンプトは、複数回実行しても改善されません。'] },
         howToStart: { title: 'セルフコンシステンシープロンプティングの使用方法', numberedItems: ['**複雑な推論タスクについて、複数の出力（5～10）を同じプロンプトから異なるランダムシードで生成します。** モデルに同じ質問を5回尋ねます。5つの異なる応答が得られます。', '**出力を分析して、一貫したパターン（「コンセンサス」）を見つけます。** 5つの応答中4つが答えに同意した場合、その同意があなたの信頼シグナルです。すべての5つが異なる場合、タスクは曖昧であるか、プロンプトが改善が必要です。', '**セルフコンシステンシーを使用して、研究および知識タスクで幻覚を検出します。** 「フランスの首都は何ですか？」と尋ねる場合、3つの応答が「パリ」と言い、2つが「リヨン」と言う場合、コンセンサス（パリ）が答えです。異なる都市を見かけた場合、モデルは幻覚を起こしています。', '**温度（T）を高く設定（0.7～1.0）して、多様な出力を促進します。** 低い温度（T = 0）は毎回同じ確定的な出力を生成し、目的を損ないます。セルフコンシステンシーはコンセンサスを見つけるために変動が必要です。', '**コストが許容される場合は、本番パイプラインでセルフコンシステンシーを実装します。** 5～10倍の生成実行は高価ですが、重要な決定（医療アドバイス、財務推奨、研究合成）については、コンセンサスシグナルがコストを正当化します。'] },
       },
-    },,
+    },
     zh: {
       theme: 'Techniques',
       title: '自洽一致性提示：让AI自己检查答案的准确性',
