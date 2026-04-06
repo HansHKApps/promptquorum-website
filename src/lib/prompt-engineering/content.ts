@@ -9852,17 +9852,35 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Use Cases',
       title: 'AI-Powered Research: Tools, Hallucination Rates, and Verification Workflows',
-      intro: 'AI-powered research tools reduce literature review time from weeks to hours — but the average AI model hallucinates 9.2% of the time on general knowledge questions, making verification workflows mandatory, not optional. In 2026, 75% of global knowledge workers use AI tools regularly. The researchers who get the most from AI treat it as a structured workflow — specific tools for discovery, extraction, synthesis, and verification — not as a single chatbot they ask one question.',
+      intro: 'AI research tools reduce literature review time from weeks to hours — but introduce a critical risk: hallucinated citations that pass peer review. GPTZero confirmed 100+ fabricated references in NeurIPS 2025 papers that cleared multi-reviewer scrutiny. As of April 2026, the reliable workflow routes each research stage to the right tool (Elicit for extraction, Consensus for synthesis, scite.ai for verification) and cross-checks factual claims across at least two independent models before trusting them.',
       publishDate: '2026-03-23',
+      dateModified: '2026-04-05',
       readTime: '9 min read',
+      seoTitle: 'AI-Powered Research: Tools, Hallucination Rates & Verification Workflows (2026)',
+      metaDescription: 'Master AI research tools (Elicit, Consensus, scite.ai) while avoiding 9.2% hallucination rates. Learn citation verification, multi-model cross-checking, and structured research workflows.',
       educationalLevel: 'Beginner',
+      toc: [
+        { label: 'What AI-Powered Research Actually Does', anchor: '#what-it-does' },
+        { label: 'The Right Tool for Each Research Stage', anchor: '#right-tool' },
+        { label: 'The Hallucination Problem in Research AI', anchor: '#hallucination' },
+        { label: 'How to Verify AI Research Outputs', anchor: '#verification' },
+        { label: 'Prompt Engineering for Research Tasks', anchor: '#prompt-engineering' },
+        { label: 'The Research Prompt Framework', anchor: '#prompt-framework' },
+        { label: 'Temperature Settings for Research', anchor: '#temperature' },
+        { label: 'Context Window Limits by Model', anchor: '#context-window' },
+        { label: 'Global and Regional Research AI Context', anchor: '#regional' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'AI-Powered Research: Tools, Hallucination Rates, and Verification Workflows',
         description: 'AI-powered research tools reduce literature review time from weeks to hours — but hallucination rates of 9.2% make verification workflows mandatory. Covers Elicit, Consensus, Perplexity, scite.ai, multi-model cross-checking, and prompt frameworks for research.',
         datePublished: '2026-03-23',
-        dateModified: '2026-03-23',
+        dateModified: '2026-04-05',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
@@ -9894,6 +9912,43 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Claude 4.6 Sonnet' },
           { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro' },
           { '@type': 'Organization', name: 'PromptQuorum' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Use AI for Research With Verified Outputs',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Use Perplexity to map topic landscape',
+            text: 'Start with Perplexity AI for exploratory research and topic mapping across both academic and web sources.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Use Elicit to find papers and extract data',
+            text: 'Use Elicit to semantically search 138M+ papers and extract structured data tables from PDFs.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Use Consensus to check scientific agreement',
+            text: 'Use Consensus to synthesize evidence and evaluate scientific consensus on your core hypothesis.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Cross-check claims across multiple models',
+            text: 'Run your research question through GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro simultaneously to detect hallucinations.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Use scite.ai to verify citations are not retracted',
+            text: 'Use scite.ai to confirm your key citations have not been retracted or contradicted by subsequent research.',
+          },
         ],
       },
       faqSchema: {
@@ -9940,22 +9995,77 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               text: 'Yes. European researchers must comply with EU AI Act transparency requirements for AI-assisted work. Chinese institutions primarily use Qwen 2.5 (Alibaba) and DeepSeek V3, which have faster token processing for CJK-language literature. Japanese researchers under METI data governance guidelines often use Ollama-based local models — LLaMA 3.1 7B runs locally with 8GB RAM, with no data leaving the institution\'s infrastructure.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'What temperature should I use for AI research tasks?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Set temperature to 0.0–0.1 for citation generation — deterministic output minimizes token variation that could corrupt an author name or DOI. Use 0.1–0.3 for summarization where natural phrasing matters. Reserve 0.7–0.9 only for hypothesis brainstorming where diverse output is the goal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is Elicit and how does it work?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Elicit is an AI research assistant that uses semantic search across 138M+ academic papers and 545,000 clinical trials. Unlike keyword search, it matches papers by conceptual similarity. Its core feature is structured data extraction — pulling methodology, sample size, and outcomes directly from PDF full text into a comparison table.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can AI research tools access papers behind paywalls?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Most AI research tools (Elicit, Consensus, Semantic Scholar) use open-access paper databases. They cannot access papers behind institutional paywalls unless you upload the PDFs directly. NotebookLM (Google) and Elicit both support PDF uploads for source-grounded Q&A on papers you have access to.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I detect a hallucinated citation?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Run the citation through Google Scholar or PubMed. Check that the author names, journal, volume, year, and DOI all match exactly. Use scite.ai to confirm the paper has citation activity — zero citations on a supposedly influential paper is a red flag. Cross-check with a second AI model: if it returns different author or journal details, both versions require manual verification.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is Perplexity AI reliable for academic research?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Perplexity AI is reliable for exploratory research — mapping a topic, identifying key researchers, and finding relevant sources to investigate further. It is not reliable as a final citation source because it searches the web including non-peer-reviewed sources. Use Perplexity for discovery, then verify any specific claim using Elicit, Semantic Scholar, or direct database lookup before citing.',
+            },
+          },
         ],
       },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'AI-Powered Research: Key Topics',
-        'description': 'Core concepts for conducting effective research with AI tools',
+        'name': 'AI Research Tools Comparison 2026',
+        'description': 'Comparing AI research tools for discovery, extraction, synthesis, and citation verification',
+        'numberOfItems': 6,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'What AI-Powered Research Does', 'description': 'Using LLMs and semantic search to accelerate literature discovery, synthesis, and citation checking' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'The Right Tool for Each Research Stage', 'description': 'Comparing Elicit, Consensus, Perplexity, scite.ai, and NotebookLM for different research tasks' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'AI Hallucination and Verification Workflows', 'description': 'Understanding hallucination rates and implementing verification strategies for citations and facts' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Multi-Model Fact-Checking with PromptQuorum', 'description': 'Using multiple models simultaneously to cross-check facts and reduce hallucination errors' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'RAG, Context Windows, and Long Documents', 'description': 'How context windows and Retrieval-Augmented Generation enable processing large research corpora' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Elicit', 'description': '138M+ papers. Structured data extraction from PDFs. Free tier: 5,000 credits/month.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Consensus', 'description': '~200M papers. Evidence synthesis with Consensus Meter (Yes/No/Possibly). Free limited tier.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Semantic Scholar', 'description': '200M+ papers. Paper discovery, citation graphs, TLDR summaries. Fully free.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Perplexity AI', 'description': 'Web + academic. Real-time cited answers, broad exploration. Free limited tier.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'scite.ai', 'description': '1.2B+ citation statements. Supporting/contradicting/mentioning analysis. Free limited tier.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'NotebookLM', 'description': 'Uploaded documents. Source-grounded Q&A on your own files. Free/Plus tier.' },
         ],
       },
       sections: {
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'AI research tools reduce literature review time from weeks to hours — but require structured, stage-specific workflows to produce accurate outputs',
+            'Average AI hallucination rate is 9.2% for general knowledge; 18.7% for legal; 48% for OpenAI o4-mini on PersonQA — no model is immune',
+            'Use Elicit for structured data extraction, Consensus for evidence synthesis, Perplexity for exploration, scite.ai for citation verification',
+            'Multi-model cross-checking (GPT-4o + Claude 4.6 Sonnet + Gemini 2.5 Pro) detects hallucinations that single-model workflows miss',
+            'Set Temperature (T) to 0.0—0.2 for citation generation; use 0.7—0.9 only for hypothesis brainstorming',
+            'Gemini 2.5 Pro\'s 1M-token context window is the only current model capable of processing 800+ academic pages in a single session',
+            '100+ hallucinated citations passed peer review in NeurIPS 2025 — AI research verification is not optional',
+          ],
+        },
         definition: {
           title: 'What AI-Powered Research Actually Does',
           content: [
@@ -9967,7 +10077,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         toolComparison: {
           title: 'The Right Tool for Each Research Stage',
           content: [
-            '**No single AI research tool handles every research stage well — the highest-quality workflows route each task to the tool best designed for it.**',
+            '**As of April 2026, no single AI research tool handles every research stage well — the highest-quality workflows route each task to the tool best designed for it.**',
             'Elicit (elicit.com) uses semantic search across 138M+ academic papers and 545,000 clinical trials to extract structured data directly from PDFs — methodologies, sample sizes, outcomes — without requiring keyword matches. Consensus (consensus.app) searches ~200 million papers and returns a "Consensus Meter" summarizing scientific agreement (Yes / No / Possibly) on a specific question. Perplexity AI provides the fastest general-purpose cited answers across both the open web and academic literature, making it optimal for exploratory phases.',
           ],
           columns: ['Tool', 'Database', 'Primary Function', 'Free Tier'],
@@ -10019,7 +10129,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         hallucinationRisk: {
           title: 'The Hallucination Problem in Research AI',
           content: [
-            '**AI systems hallucinate citations and fabricate statistics — and these errors survive peer review.** GPTZero analyzed 4,841 papers accepted by NeurIPS 2025 (the top machine learning conference, acceptance rate 24.52%) and found 100+ confirmed hallucinated citations across 53 papers, all of which had passed multi-reviewer peer review.',
+            '**As of April 2026, AI systems hallucinate citations and fabricate statistics — and these errors survive peer review.** GPTZero analyzed 4,841 papers accepted by NeurIPS 2025 (the top machine learning conference, acceptance rate 24.52%) and found 100+ confirmed hallucinated citations across 53 papers, all of which had passed multi-reviewer peer review.',
             'Hallucination rates vary sharply by domain and task complexity:',
           ],
           columns: ['Domain', 'Hallucination Rate'],
@@ -10056,7 +10166,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         },
         promptFramework: {
           title: 'The Research Prompt Framework',
-          content: ['Use this structure for any AI research task:'],
+          content: [
+            'Use this structure for any AI research task:',
+          ],
           items: [
             '**Role** — "You are a systematic review researcher specializing in [field]."',
             '**Scope** — "Analyze only peer-reviewed papers published between 2020 and 2026."',
@@ -10064,14 +10176,19 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             '**Citation requirement** — "Cite every claim with author, year, and journal. If you cannot find a verified citation, say \'unverified\' rather than generating one."',
             '**Output format** — "Return results as a structured table: Claim | Source | Year | Confidence (High/Medium/Low)."',
           ],
+        },
+        promptBadExample: {
+          content: [
+            '**Bad Prompt:** Open-ended questions without role or citation requirements produce hallucinated statistics:',
+          ],
           blockquote: 'What is the research on AI hallucinations?',
         },
         promptGoodExample: {
-          title: '[Good Prompt Example]',
-          blockquote: 'You are a systematic review researcher. Summarize the current scientific consensus on AI hallucination rates across domains (medical, legal, general knowledge). Cite only peer-reviewed papers or official model evaluation reports published 2023—2026. Format results as: Domain | Hallucination Rate | Study | Year. If a specific rate is not verified, label it \'estimated\' and flag it.',
+          title: 'Good Prompt Example',
           content: [
-            'The structured prompt produces a verifiable output table. The open prompt produces a confident paragraph that may contain fabricated statistics.',
+            '**Good Prompt:** The structured version below produces a verifiable output table. The open prompt above produces a confident paragraph that may contain fabricated statistics.',
           ],
+          blockquote: 'You are a systematic review researcher. Summarize the current scientific consensus on AI hallucination rates across domains (medical, legal, general knowledge). Cite only peer-reviewed papers or official model evaluation reports published 2023—2026. Format results as: Domain | Hallucination Rate | Study | Year. If a specific rate is not verified, label it \'estimated\' and flag it.',
         },
         parameters: {
           title: 'Temperature Settings for Research',
@@ -10138,25 +10255,28 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Japanese universities operating under METI data governance guidelines frequently deploy **Ollama** with LLaMA 3.1 models locally — LLaMA 3.1 7B requires 8GB RAM for local inference, producing zero external API calls and meeting strict data residency standards for sensitive research.',
           ],
         },
-        tldr: {
-          title: 'Key Takeaways',
-          isTldr: true,
+        commonMistakes: {
+          title: 'Common Mistakes in AI-Assisted Research',
+          content: [
+            '**Avoid these frequent errors when using AI tools for research:**',
+          ],
           items: [
-            'AI research tools reduce literature review time from weeks to hours — but require structured, stage-specific workflows to produce accurate outputs',
-            'Average AI hallucination rate is 9.2% for general knowledge; 18.7% for legal; 48% for OpenAI o4-mini on PersonQA — no model is immune',
-            'Use Elicit for structured data extraction, Consensus for evidence synthesis, Perplexity for exploration, scite.ai for citation verification',
-            'Multi-model cross-checking (GPT-4o + Claude 4.6 Sonnet + Gemini 2.5 Pro) detects hallucinations that single-model workflows miss',
-            'Set Temperature (T) to 0.0—0.2 for citation generation; use 0.7—0.9 only for hypothesis brainstorming',
-            'Gemini 2.5 Pro\'s 1M-token context window is the only current model capable of processing 800+ academic pages in a single session',
-            '100+ hallucinated citations passed peer review in NeurIPS 2025 — AI research verification is not optional',
+            '**Using AI to generate citations rather than verify them:** AI tools should find and surface citations from real databases (Elicit, Semantic Scholar, Google Scholar), not generate citation text from memory. Any citation the model writes from memory rather than retrieves from a database must be verified before use.',
+            '**Ignoring temperature settings:** Default temperature on most AI platforms (0.7–1.0) is designed for creative tasks. For citation generation and factual research, temperature above 0.2 increases hallucination risk. Set temperature to 0.0–0.1 for any task where a single wrong token changes an author name or DOI.',
+            '**Processing too many papers in one context window:** Models lose recall accuracy as context fills up. Even Gemini 2.5 Pro\'s 1M-token window shows degraded retrieval of details from the middle of long contexts. For systematic reviews over 50 papers, use a RAG pipeline rather than direct context injection.',
+            '**Single-model research workflows:** Using only one model for both generation and verification eliminates the statistical benefit of cross-checking. If a model hallucinates a citation, it will typically hallucinate it consistently across prompts. Use at least two independent models for any claim that will be cited in published work.',
+            '**Skipping scite.ai for citation verification:** A citation can be real but also retracted, contradicted, or superseded. Google Scholar confirms a paper exists; scite.ai shows whether subsequent literature has supported or contradicted it. Use scite.ai for any citation on which a key argument depends.',
           ],
         },
         relatedReading: {
           title: 'Related Reading',
           items: [
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational definition of structured AI instructions',
-            '[How to Reduce AI Hallucinations](/prompt-engineering/how-to-reduce-ai-hallucinations) — techniques for grounding model outputs in verified facts',
-            '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p) — how randomness parameters affect factual accuracy',
+            '[RAG Explained](/prompt-engineering/rag-explained) — the retrieval architecture powering Elicit, Consensus, and all production research AI tools',
+            '[AI Limitations — What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — why hallucination is structural, not a fixable bug',
+            '[Prompt Injection & Security](/prompt-engineering/prompt-injection-and-security) — indirect injection risks when feeding scraped web content into research pipelines',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — structured reasoning for systematic analysis tasks that require traceable logic',
+            '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — how randomness parameters affect factual accuracy in citation generation',
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational definition of structured AI instructions',
           ],
         },
         howToStart: {
@@ -10191,6 +10311,26 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             {
               q: 'Does AI research assistance work differently outside the US?',
               a: 'Yes. European researchers must comply with EU AI Act transparency requirements for AI-assisted work. Chinese institutions primarily use Qwen 2.5 (Alibaba) and DeepSeek V3, which have faster token processing for CJK-language literature. Japanese researchers under METI data governance guidelines often use Ollama-based local models — LLaMA 3.1 7B runs locally with 8GB RAM, with no data leaving the institution\'s infrastructure.',
+            },
+            {
+              q: 'What temperature should I use for AI research tasks?',
+              a: 'Set temperature to 0.0–0.1 for citation generation — deterministic output minimizes token variation that could corrupt an author name or DOI. Use 0.1–0.3 for summarization where natural phrasing matters. Reserve 0.7–0.9 only for hypothesis brainstorming where diverse output is the goal.',
+            },
+            {
+              q: 'What is Elicit and how does it work?',
+              a: 'Elicit is an AI research assistant that uses semantic search across 138M+ academic papers and 545,000 clinical trials. Unlike keyword search, it matches papers by conceptual similarity. Its core feature is structured data extraction — pulling methodology, sample size, and outcomes directly from PDF full text into a comparison table without requiring keyword matches.',
+            },
+            {
+              q: 'Can AI research tools access papers behind paywalls?',
+              a: 'Most AI research tools (Elicit, Consensus, Semantic Scholar) use open-access paper databases. They cannot access papers behind institutional paywalls unless you upload the PDFs directly. NotebookLM (Google) and Elicit both support PDF uploads for source-grounded Q&A on papers you have access to.',
+            },
+            {
+              q: 'How do I detect a hallucinated citation?',
+              a: 'Run the citation through Google Scholar or PubMed. Check that the author names, journal, volume, year, and DOI all match exactly. Use scite.ai to confirm the paper has citation activity — zero citations on a supposedly influential paper is a red flag. Cross-check with a second AI model: if it returns different author or journal details, both versions require manual verification.',
+            },
+            {
+              q: 'Is Perplexity AI reliable for academic research?',
+              a: 'Perplexity AI is reliable for exploratory research — mapping a topic, identifying key researchers, and finding relevant sources to investigate further. It is not reliable as a final citation source because it searches the web including non-peer-reviewed sources. Use Perplexity for discovery, then verify any specific claim using Elicit, Semantic Scholar, or direct database lookup before citing.',
             },
           ],
         },
