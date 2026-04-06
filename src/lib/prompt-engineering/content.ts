@@ -24533,7 +24533,159 @@ zh: {
         },
       },
     },
-    de: { theme: 'Frameworks', title: 'The TRACE Framework', intro: '', publishDate: '2026-03-24', readTime: '8 min read', educationalLevel: 'Intermediate', sections: {} },
+    de: {
+      theme: 'Frameworks',
+      title: 'Das TRACE Framework',
+      intro: 'Das TRACE Framework ist eine Prompt-Struktur, die Modelle auffordert, zu denken (Think), zu begründen (Reason), zu analysieren (Analyze), zu schlussfolgern (Conclude) und zu erklären (Explain), damit ihr interner Entscheidungsprozess sichtbar wird. Statt nur die finale Antwort zu präsentieren, zwingt TRACE das Modell, seinen Gedankenprozess Schritt für Schritt zu offenbaren. PromptQuorum bietet TRACE als native Option an, die alle Benutzer direkt nutzen können.',
+      publishDate: '2026-03-24',
+      readTime: '8 min Lesezeit',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'TRACE Framework',
+      metaDescription: 'Das TRACE Framework (Think, Reason, Analyze, Conclude, Explain) für transparente Modellreasoning. Wann und wie anwenden.',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Das TRACE Framework',
+        description: 'Wie das TRACE Framework (Think, Reason, Analyze, Conclude, Explain) funktioniert, wann es sinnvoll ist, und wie PromptQuorum es nativ anbietet.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['TRACE Framework', 'Think Reason Analyze Conclude Explain', 'Prompt Frameworks', 'Prompt Engineering', 'Reasoning Prompts', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Prompt Frameworks' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        ],
+        teaches: 'Wie man das TRACE Framework (Denken, Begründen, Analysieren, Schlussfolgern, Erklären) nutzt, um Modellreasoning transparent zu machen',
+        assesses: 'Fähigkeit zur Bewertung von Reasoning-Qualität, Identifikation von logischen Schwächen, Treffen von Entscheidungen basierend auf explizitem Reasoning',
+      },
+      sections: {
+        whatIsTRACE: {
+          title: 'Was das TRACE Framework ist',
+          content: [
+            '**Das TRACE Framework ist ein Reasoning-fokussiertes Prompt-Muster, das große Sprachmodelle dazu zwingt, ihre Arbeitsschritte zu zeigen, nicht nur die Antwort.** Es ist speziell für Aufgaben konzipiert, wo es auf den Weg ankommt, wie das Modell zu einem Ergebnis kam—etwa bei technischen Analysen, Strategien oder komplexem Troubleshooting.',
+            'Die fünf Schritte des TRACE Framework sind:',
+          ],
+          items: [
+            'Think: Das Problem in eigenen Worten umformulieren und interpretieren.',
+            'Reason: Mögliche Ansätze oder Hypothesen erkunden.',
+            'Analyze: Diese Ansätze auf die konkreten Daten oder Situation anwenden.',
+            'Conclude: Die endgültige Antwort oder Empfehlung klar formulieren.',
+            'Explain: Die Schlussfolgerung so begründen, dass Menschen sie schnell verstehen.',
+          ],
+        },
+        whyTRACEMatters: {
+          title: 'Warum das TRACE Framework wichtig ist',
+          content: [
+            '**Das TRACE Framework ist wertvoll, weil es blindes Vertrauen in Modell-Outputs reduziert, indem es den Reasoning-Pfad explizit macht.** Wenn das Modell jeden Schritt erklärt, können Sie Missverständnisse, schwache Annahmen oder Lücken in der Logik früh erkennen.',
+            'Das ist besonders nützlich, wenn:',
+          ],
+          items: [
+            'Sie geschäftliche oder technische Entscheidungen auf Basis von Modell-Outputs treffen.',
+            'Sie vergleichen möchten, wie verschiedene Modelle über dasselbe Problem nachdenken.',
+            'Sie einen Nachweis haben möchten, den Sie Teamkollegen oder Stakeholdern vorzeigen können, um eine Entscheidung zu rechtfertigen.',
+          ],
+        },
+        fiveStages: {
+          title: 'Die fünf TRACE Schritte im Detail',
+          content: [
+            '**Ein guter TRACE Prompt sagt dem Modell genau, was es in jedem Stadium tun soll, damit die Reasoning-Spur über Tasks und Modelle hinweg konsistent ist.** Sie können dies in eine Nachricht packen und die Schritte trotzdem klar halten.',
+            'Typische Definitionen der Stadien:',
+          ],
+          items: [
+            'Think: Die Task klären, Schlüsselvariablen auflisten, Unklarheiten aufdecken.',
+            'Reason: Potenzielle Methoden, Kompromisse oder Lösungswege skizzieren.',
+            'Analyze: Die gewählte Methode Schritt für Schritt auf tatsächliche Eingaben anwenden.',
+            'Conclude: Eine direkter Antwort oder Empfehlung geben, die an die Frage gebunden ist.',
+            'Explain: Die Logik in einfacher Sprache zusammenfassen, mit Fokus auf das „Warum" hinter der Antwort.',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Beispiel: Schlechter vs. guter TRACE Prompt',
+          content: [
+            '**Der Vorteil des TRACE Framework wird deutlich, wenn Sie eine allgemeine Anfrage mit einer TRACE-basierten Anfrage für dieselbe Task vergleichen.** Hier ist ein einfaches Beispiel zur Auswahl zwischen zwei Preismodellen.',
+            '**[Schlechter Prompt]**',
+            '"Welches dieser zwei Preismodelle ist besser?"',
+            '**[Guter Prompt]**',
+            '"Du bist ein SaaS-Pricing-Analyst. Nutze den TRACE-Prozess für diese Entscheidung. Think: Formuliere das Problem neu und liste die Schlüsselfaktoren auf, die wichtig sind (z.B. Umsatz, Churn-Risiko, Kundenwelche). Reason: Schlage 2–3 mögliche Wege vor, die beiden Preismodelle zu vergleichen (z.B. Break-Even-Analyse, Upgrade-Pfad, wahrgenommene Fairness). Analyze: Wende deine bevorzugte Vergleichsmethode Schritt für Schritt auf die Daten an, die ich bereitstelle. Zeige Zahlen oder konkrete Beispiele wo möglich. Conclude: Sage klar, welches Preismodell du empfiehlst und für welche Kundensegmente, falls relevant. Explain: In 3–5 Sätzen, begründe deine Empfehlung in einfacher Sprache, die ein nicht-technischer Stakeholder versteht. Daten: [hier einfügen]"',
+            'Die TRACE-Version sagt dir nicht einfach „Modell A ist besser"; sie zeigt dir, wie das Modell über die Kompromisse nachgedacht hat.',
+          ],
+        },
+        whenToUse: {
+          title: 'Wann das TRACE Framework nutzen',
+          content: [
+            '**Du solltest das TRACE Framework nutzen, wenn deine Hauptsorge Reasoning-Qualität und Begründung statt maximaler Kürze ist.** TRACE fügt Overhead hinzu verglichen mit einer einzeiligen Antwort, zahlt sich aber aus, wenn Fehler teuer sind.',
+          ],
+          items: [
+            'Bewertung strategischer Optionen, Kompromisse oder technischer Architekturen.',
+            'Überprüfung komplexer Code-Änderungen oder Debugging schwieriger Probleme.',
+            'Analyse von Forschungsergebnissen, Metriken oder Nutzerfeedback zum Ziehen von Schlussfolgerungen.',
+            'Erstellung nachvollziehbarer Empfehlungen, die Sie mit Managern oder Kunden teilen können.',
+          ],
+        },
+        dachConsiderations: {
+          title: 'TRACE im DACH-Kontext: Enterprise und Governance',
+          content: [
+            '**Für deutschsprachige Organisationen (DACH: Deutschland, Österreich, Schweiz) bietet das TRACE Framework spezifische Vorteile in unternehmensinternen Analyse- und Compliance-Prozessen.** Im DACH-Raum wird formale Dokumentation und strikte Nachvollziehbarkeit hochgeschätzt—besonders im Finanz- und Compliance-Umfeld.',
+            'Besondere Anwendungsfälle:',
+          ],
+          items: [
+            'Risikoanalysen und Due-Diligence-Prozesse: TRACE dokumentiert den vollständigen Entscheidungsweg für interne und externe Audits.',
+            'Regulatory Compliance: Für Banken, Versicherer und regulierte Unternehmen ist die Transparenz des KI-Reasoning oft gesetzliche Anforderung. TRACE erfüllt diese.',
+            'Technische Architektur-Reviews: Deutsche und Schweizer Ingenieurteams nutzen TRACE für nachvollziehbare Entscheidungen bei kritischen Systemen.',
+            'Datenschutz und DSGVO: Wenn KI in Entscheidungen involviert ist, die personenbezogene Daten betreffen, muss der Entscheidungsweg nachvollziehbar sein—TRACE leistet dies.',
+          ],
+        },
+        howPQImplements: {
+          title: 'Wie PromptQuorum das TRACE Framework implementiert',
+          content: [
+            '**PromptQuorum ist ein Multi-Model-AI-Dispatch-Tool, das das TRACE Framework als eine seiner integrierten Prompt-Strukturen anbietet, damit Benutzer Reasoning-First-Prompts über mehrere Modelle hinweg mit einem Klick ausführen können.** Wenn Sie TRACE in PromptQuorum wählen, stellt die Schnittstelle Felder bereit, die zu den Framework-Schritten passen, und komponiert sie automatisch in eine einzelne, wiederverwendbare Anweisung.',
+            'In PromptQuorum können Sie:',
+          ],
+          items: [
+            'Task-spezifischen Kontext einfügen, während die App die TRACE-Struktur konsistent hält.',
+            'Denselben TRACE-basierten Prompt an mehrere Modelle parallel senden, ihre Reasoning-Spuren vergleichen und sehen, welcher Anbieter am besten mit deinen Erwartungen übereinstimmt.',
+            'TRACE-Templates für wiederkehrende Analysen—wie „Feature-Tradeoff-Review" oder „Incident-Postmortem-Analyse"—speichern und teamübergreifend teilen.',
+          ],
+        },
+        combiningTRACE: {
+          title: 'TRACE mit anderen Frameworks kombinieren',
+          content: [
+            '**Du solltest das TRACE Framework mit anderen Frameworks kombinieren, indem du jedes einer Phase deines Workflows zuordnest: TRACE für Reasoning, andere für Entwurf oder Formatierung.** Ein praktisches Muster ist:',
+          ],
+          items: [
+            'Nutze ein generierungsorientiertes Framework (etwa Single Step, CO-STAR oder CRAFT) um Inhalte oder Optionen zu entwerfen.',
+            'Wechsle zu TRACE, wenn du Wahlmöglichkeiten analysieren, Annahmen validieren oder eine Entscheidung begründen musst.',
+            'Optional beende mit einem Spezifikations-Framework (etwa SPECS), wenn das Endergebnis einer strikten Struktur oder einem Schema entsprechen muss.',
+          ],
+        },
+        howToStart: {
+          title: 'Wie das TRACE Framework nutzen',
+          numberedItems: [
+            '**Task: Definiere, was das Modell tun soll.** Beispiel: \'Erkläre, wie die rekursive Fibonacci-Funktion funktioniert.\'',
+            '**Request: Stelle eine spezifische Frage oder gebe Input.** Beispiel: \'Trace die Ausführung von fib(5) Schritt für Schritt.\'',
+            '**Action: Instruiere das Modell, „Arbeit zu zeigen"—die Logik tracen, nicht nur Schlussfolgerungen.** Beispiel: \'Zeige jeden Funktionsaufruf, den Rückgabewert auf jeder Ebene und welche Aufrufe von jeder Ebene gemacht werden.\'',
+            '**Clarify: Füge Beschränkungen oder Anforderungen hinzu.** Beispiel: \'Formatiere als Baum, der Funktionsaufrufs-Beziehungen zeigt. Hebe die redundanten Aufrufe hervor, die Rekursion ineffizient machen.\'',
+            '**Examine: Frage das Modell auf, seine eigene Ausgabe zu bewerten oder Folgefragen zu beantworten.** Beispiel: \'Warum wird dieser Ansatz langsam? Wie könnte man es optimieren?\' Dies stellt sicher, dass Tiefe vorhanden ist.',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Unterscheidet sich TRACE vom RISEN Framework?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. TRACE betont explizites Reasoning und den Begründungspfad. RISEN fokussiert auf iterative Verbesserung bestehender Entwürfe. Nutze TRACE, wenn du verstehen musst, wie das Modell denkt; nutze RISEN, wenn du einen Entwurf schrittweise verfeinern möchtest.' } },
+          { '@type': 'Question', 'name': 'Kann ich TRACE in einem einzigen langen Prompt verwenden oder sollte ich mehrere Prompts senden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Beide Ansätze funktionieren. Ein einziger langer Prompt ist schneller; mehrere aufeinanderfolgende Prompts ermöglichen es dir, bei Bedarf zu pausieren und Feedback zu geben. Für maximale Kontrolle und Transparenz senden viele Benutzer die TRACE-Schritte separat, was auch die Token-Kosten sichtbar macht.' } },
+          { '@type': 'Question', 'name': 'Wie integriere ich TRACE in meine bestehenden Prompt-Workflows?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum speichert TRACE-Prompts als Templates. Du kannst ein Template für einen bestimmten Workflow erstellen (z.B. „Feature-Trade-off-Review"), es mit deinem Team teilen und es jedes Mal abrufen, wenn du einen ähnlichen Analyse-Prozess durchführen musst. Dies spart Zeit und stellt Konsistenz sicher.' } },
+          { '@type': 'Question', 'name': 'Ist TRACE für Anfänger in Prompt Engineering geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Obwohl TRACE für fortgeschrittene Reasoning-Workflows konzipiert wurde, ist die Struktur (Think–Reason–Analyze–Conclude–Explain) intuitiv und anfängerfreundlich. PromptQuorums vorausgefüllte Felder machen es noch einfacher.' } },
+          { '@type': 'Question', 'name': 'Welche Compliance-Aspekte gelten bei TRACE-Anwendung in regulierten Umgebungen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'In Banken, Versicherungen und anderen regulierten Branchen macht TRACE KI-Entscheidungen nachvollziehbar—wichtig für Compliance und Audits. Bei DSGVO-Bezug müssen personenbezogene Daten sicher behandelt werden; nutze lokale Modelle (Ollama, LM Studio) statt Cloud-APIs für sensible Daten.' } },
+        ],
+      },
+    },
     fr: {
       theme: 'Frameworks',
       title: 'Le Framework TRACE',
@@ -25095,7 +25247,129 @@ zh: {
         },
       },
     },
-    de: { theme: 'Frameworks', title: "Google's Prompting Guide", intro: '', publishDate: '2026-03-24', readTime: '7 min read', educationalLevel: 'Intermediate', sections: {} },
+    de: {
+      theme: 'Frameworks',
+      title: 'Google Prompting Guide',
+      intro: 'Google Prompting Guide ist eine Sammlung praktischer Empfehlungen von Google DeepMind für das Schreiben von Prompts, die Modelle wie Gemini 2.5 Pro zuverlässiger, steuerbarer und hilfreicher in realen Anwendungen machen. Die Anleitung überträgt Forschung in konkrete, nicht-technische Regeln. PromptQuorum bietet diese Anleitung als Framework an, das Benutzer direkt über alle unterstützten Modelle hinweg anwenden können.',
+      publishDate: '2026-03-24',
+      readTime: '6 min Lesezeit',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Google Prompting Guide',
+      metaDescription: 'Google Prompting Guide: 5 Kernprinzipien für klare, strukturierte Prompts. Klarheit, Beispiele, Rollen, Beschränkungen.',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Google Prompting Guide',
+        description: 'Wie der Google Prompting Guide funktioniert, seine Kernmethoden, und wie PromptQuorum ihn als wiederverwendbares Framework über mehrere KI-Modelle anbietet.',
+        datePublished: '2026-03-24',
+        dateModified: '2026-03-24',
+        keywords: ['Google Prompting Guide', 'Prompt Best Practices', 'Gemini 2.5 Pro', 'Prompt Frameworks', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Prompt Frameworks' },
+          { '@type': 'Thing', name: 'Large Language Models' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Google DeepMind', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 2.5 Pro', url: 'https://deepmind.google' },
+          { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        ],
+        teaches: 'Wie man die 5 Kernprinzipien des Google Prompting Guide (Klarheit, Beschränkungen, Beispiele, Rollen, Struktur) anwendet, um Prompts präzise und wiederholbar zu schreiben',
+        assesses: 'Fähigkeit, Prompts klar zu strukturieren, relevant Beispiele zu liefern, Rollen und Beschränkungen zu definieren, und die Qualität von Modell-Outputs zu bewerten',
+      },
+      sections: {
+        whatIsGoogle: {
+          title: 'Was der Google Prompting Guide ist',
+          content: [
+            '**Der Google Prompting Guide ist eine Sammlung von Mustern und Best Practices zum Prompting von Gemini und anderen großen Sprachmodellen, fokussiert auf Spezifität, Struktur und Sicherheit.** Der Guide übersetzt Forschung von Google DeepMind in konkrete Regeln, die Nicht-Experten verwenden können. Er behandelt, wie man Rollen definiert, Kontext bereitstellt, Outputs einschränkt und mit Tasks wie Reasoning, Coding und Datenextraktion umgeht.',
+            'In der Praxis funktioniert der Guide wie ein Katalog von Prompt-Rezepten. Jedes Rezept zeigt, wie man Anweisungen formuliert, was zu vermeiden ist, und wie man Beispiele hinzufügt, damit das Verhalten des Modells vorhersehbarer wird. Diese Muster funktionieren nicht nur für Gemini 2.5 Pro, sondern auch für Modelle wie GPT-4o und Claude 4.6 Sonnet, weil die zugrunde liegenden Prinzipien generell sind.',
+          ],
+        },
+        corePrinciples: {
+          title: 'Kernprinzipien im Google Prompting Guide',
+          content: [
+            '**Die Kernprinzipien im Google Prompting Guide drehen sich um Klarheit, Beschränkung und iterative Verfeinerung statt cleverer Formulierungen.** Der Schwerpunkt liegt darauf, dem Modell genau zu sagen, was man will, auf eine Weise, die leicht zu bewerten ist.',
+            'Häufige Themen sind:',
+          ],
+          items: [
+            'Sei explizit über Task, Zielgruppe und Output-Format, statt dich auf das Modell zu verlassen, es zu erraten.',
+            'Gib repräsentative Beispiele an, damit das Modell das Muster imitieren kann.',
+            'Zerlege komplexe Tasks in Schritte und fordere das Modell auf, vorher zu begründen.',
+            'Nutze klare Sicherheits- und Qualitätsbeschränkungen, wie verbotene Inhalte, Zitieranforderungen oder Längenlimits.',
+          ],
+        },
+        techniques: {
+          title: 'Techniken im Google Prompting Guide',
+          content: [
+            '**Der Google Prompting Guide hebt eine Reihe von wiederkehrenden Techniken hervor, die man über Domänen hinweg anwenden kann, von Forschung zu Coding zu Produktkopie.** Während Naming und Schwerpunkt zwischen Versionen variieren können, sind die zugrunde liegenden Ideen konsistent.',
+          ],
+          items: [
+            'Rollen-Prompting: Das Modell auffordern, „als" ein spezifischer Experte zu agieren (z.B. Datenanalyst oder Produktmanager).',
+            'Schritt-für-Schritt-Reasoning: Zwischenschritte oder Erklärungen vor der finalen Antwort anfordern.',
+            'Few-Shot Prompting: Mehrere Input–Output-Beispiele liefern, um Verhalten zu verankern.',
+            'Strukturierte Ausgabe: Antworten in definierten Formaten wie Bullet-Listen, Tabellen oder JSON anfordern.',
+            'Iterative Verfeinerung: Die eigene Ausgabe des Modells als Input für Überarbeitung und Verbesserung wiederverwenden.',
+          ],
+        },
+        badVsGoodExample: {
+          title: 'Beispiel: Schlechter vs. guter Prompt mit Googles Guide',
+          content: [
+            '**Die Auswirkung von Google-Style-Prompting sieht man am besten, wenn man einen unstrukturierten Prompt mit einem Prompt vergleicht, der diese Prinzipien für dieselbe Task befolgt.** Hier ist ein einfaches Beispiel für einen Produkterklärer.',
+            '**[Schlechter Prompt]**',
+            '"Erkläre unsere neue KI-Funktion für Benutzer."',
+            '**[Guter Prompt]**',
+            '"Du bist ein Produktedukator, der für nicht-technische Benutzer schreibt. Task: Erkläre unsere neue KI-Funktion, die automatisch wöchentliche Kundensupport-Tickets in einen einseitigen Report für Manager zusammenfasst. Zielgruppe: Beschäftigte Support-Führungskräfte mit limitiertem technischem Hintergrund. Anforderungen: Nutze einfache Sprache mit kurzen Sätzen. Strukturiere die Antwort mit einer Intro, 3 Bullet Points für Hauptvorteile und einem kurzen abschließenden Absatz. Nutze keine Hype-Wörter wie \'revolutionär\' oder \'spielverändernd\'. Halte die Erklärung zwischen 250 und 300 Worten. Output: Markdown mit H2-Überschriften für jeden Abschnitt."',
+            'Diese „gute" Version folgt Googles Empfehlungen, indem sie Rolle, Zielgruppe, Struktur, Beschränkungen und Format auf eine Weise definiert, die jedes modernes Modell befolgen kann.',
+          ],
+        },
+        howPQImplements: {
+          title: 'Wie PromptQuorum den Google Prompting Guide implementiert',
+          content: [
+            '**PromptQuorum ist ein Multi-Model-AI-Dispatch-Tool, das Googles Prompting Guide als wiederverwendbares Framework paketiert, damit Benutzer diese Best Practices anwenden können, ohne sie auswendig zu lernen.** Wenn du den Google Prompting Guide Framework in PromptQuorum auswählst, zeigt die App Felder an, die den Kernideen des Guide entsprechen—Task, Rolle, Zielgruppe, Struktur, Beschränkungen und Beispiele—und kombiniert sie in einen einzigen hochwertigen Prompt.',
+            'In PromptQuorum kannst du:',
+          ],
+          items: [
+            'Guide-ausgerichtete Felder einmal ausfüllen und den resultierenden Prompt an Gemini 2.5 Pro, GPT-4o, Claude 4.6 Sonnet und lokale Modelle via Ollama oder LM Studio parallel senden.',
+            'Google-Style-Prompt-Templates für wiederkehrende Workflows wie Erklärer, Code-Reviews und strukturierte Zusammenfassungen speichern.',
+            'Vergleichen, wie verschiedene Modelle reagieren, wenn sie von derselben Google-abgeleiteten Struktur geleitet werden, dann den Anbieter auswählen, der am besten zu jeder Task passt.',
+          ],
+        },
+        usingWithOthers: {
+          title: 'Google\'s Guide mit anderen Frameworks verwenden',
+          content: [
+            '**Du solltest Googles Prompting Guide als eine Reihe von Low-Level-Techniken behandeln, die mit höherwertigen Frameworks wie Single Step, CO-STAR, SPECS, RISEN und TRACE zusammenarbeiten.** Der Guide sagt dir, wie du Anweisungen formulierst; die Frameworks sagen dir, wie du ganze Workflows strukturierst.',
+          ],
+          items: [
+            'Nutze ein Framework (z.B. CO-STAR oder SPECS), um die Gesamtstruktur der Task zu definieren.',
+            'Wende Googles Prompting-Prinzipien in dieser Struktur an: explizite Rollen, klare Beschränkungen, Few-Shot-Beispiele und Schritt-für-Schritt-Reasoning wenn nötig.',
+            'Führe den kombinierten Prompt in PromptQuorum über mehrere Modelle aus, um zu validieren, dass er sich konsistent verhält.',
+          ],
+        },
+        howToStart: {
+          title: 'Wie du Googles Prompting Best Practices folgst',
+          numberedItems: [
+            '**Sei klar und spezifisch: vermeide vage Anweisungen.** Statt \'Erzähl mir von KI,\' frag \'Erkläre, wie Große Sprachmodelle (LLMs) Text generieren, mit technischem Detail passend für Informatik-Studenten.\'',
+            '**Gib Beispiele des gewünschten Output-Formats.** Zeige eine Beispielantwort oder Code-Beispiel, das das Modell nachahmen sollte. Beispiele lehren besser als Beschreibungen.',
+            '**Gib dem Modell eine \'Rolle\' zum Spielen, wenn es hilft.** Beispiel: \'Du bist ein Finanzberater. Erkläre Tax-Loss Harvesting einem vermögenden Privatperson.\' Rollen leiten Ton und Detaillevel.',
+            '**Nutze Schritt-für-Schritt-Reasoning für komplexe Tasks.** Fordere das Modell auf, \'schritt für schritt zu denken\' bevor es antwortet. Dies zwingt zu Überlegung und fängt Fehler ein.',
+            '**Teste deinen Prompt auf varied Eingaben, bevor du ihn im Großen einsetzt.** Ein Prompt, der auf einem Beispiel funktioniert, kann bei Edge-Cases fehlschlagen. Validiere über diverse Szenarien.',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Ist der Google Guide auf Gemini beschränkt?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Die Prinzipien sind generell und funktionieren mit GPT-4o, Claude und allen modernen Modellen. Gemini ist das Primär-Beispiel, aber die Ideen sind universell.' } },
+          { '@type': 'Question', 'name': 'Kann ich den Google Guide mit anderen Frameworks kombinieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Absolut, und das ist empfohlen. Nutze ein hochrangiges Framework (CO-STAR, SPECS) um die Struktur zu definieren, dann wende Googles Prompting-Prinzipien darin an.' } },
+          { '@type': 'Question', 'name': 'Funktioniert der Google Guide für alle Art von Tasks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der Guide passt zu den meisten Tasks, außer den sehr einfachen, die keine Struktur brauchen. Für komplexe, mehrstufige Workflows kombiniere ihn mit umfassenderen Frameworks.' } },
+          { '@type': 'Question', 'name': 'Muss ich immer ein Beispiel in meinem Prompt zeigen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht obligatorisch, aber stark empfohlen für komplexe oder kreative Tasks. Für simple Tasks reicht eine klare Beschreibung oft aus.' } },
+          { '@type': 'Question', 'name': 'Welche DSGVO- und Datenschutz-Überlegungen gelten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Wenn du sensible Daten handhabst, vermeide Cloud-APIs. Nutze lokal gehostete Modelle (Ollama, LM Studio) über PromptQuorum oder stelle sicher, dass der API-Anbieter DSGVO-konform ist.' } },
+        ],
+      },
+    },
     fr: {
       theme: 'Frameworks',
       title: 'Guide Google pour la Rédaction de Prompts',
