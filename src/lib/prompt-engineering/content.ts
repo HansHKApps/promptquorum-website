@@ -28381,9 +28381,783 @@ zh: {
       },
     },
     de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+fr: {
+      theme: 'Techniques',
+      title: 'Chaînage de Prompts : Comment Décomposer les Tâches Complexes en Étapes Gagnantes',
+      intro: 'Le chaînage de prompts est une technique où vous décomposez une tâche complexe en plusieurs prompts plus petits et alimentez la sortie d\'une étape dans la suivante. Cela vous permet de construire des workflows fiables multi-étapes au lieu de dépendre d\'un seul prompt excessivement compliqué.',
+      publishDate: '2026-03-26',
+      seoTitle: 'Guide du Chaînage de Prompts 2026 : Comment Construire des Workflows IA Complexes',
+      metaDescription: 'Guide complet du chaînage de prompts pour workflows IA multi-étapes. Apprenez techniques, exemples concrets et bonnes pratiques pour GPT-4o et LLaMA.',
+      readTime: '6 min de lecture',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Chaînage de Prompts',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Chaînage de Prompts : Comment Décomposer les Tâches Complexes en Étapes Gagnantes',
+        description: 'Ce qu\'est le chaînage de prompts, pourquoi cela importe, et comment concevoir des workflows IA multi-étapes plus faciles à contrôler et réutiliser.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['chaînage de prompts', 'prompt engineering', 'workflows IA', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Modèles de Langage' },
+          { '@type': 'Thing', name: 'Workflows IA' },
+        ],
+      },
+      sections: {
+        whatIsPromptChaining: {
+          title: 'Ce Qu\'est le Chaînage de Prompts',
+          content: [
+            '**Le chaînage de prompts signifie connecter plusieurs prompts afin que chacun exécute une sous-tâche ciblée et transmette son résultat au suivant.** Au lieu de demander au modèle de « tout faire à la fois », vous créez une séquence telle que « analyser → structurer → générer → réviser ».',
+            'Chaque étape a une entrée claire, un format de sortie clair et une responsabilité étroite. La chaîne dans son ensemble se comporte davantage comme un pipeline ou un workflow que comme un chat, ce qui la rend plus facile à déboguer, maintenir et réutiliser.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Pourquoi le Chaînage de Prompts Importe',
+          content: [
+            '**Le chaînage de prompts importe parce que la plupart des tâches réelles sont trop complexes ou fragiles pour qu\'un seul prompt les gère bien.** Lorsque vous séparez la compréhension, la planification, la génération et la vérification en étapes distinctes, vous réduisez les erreurs et gagnez en contrôle.',
+            'Les bénéfices incluent :',
+          ],
+          items: [
+            'Une meilleure précision, car chaque étape est optimisée pour une fonction spécifique.',
+            'Un débogage plus facile, car vous pouvez voir exactement où la chaîne se rompt.',
+            'Une meilleure réutilisabilité, car les étapes individuelles (comme « résumer l\'entrée » ou « extraire les entités ») peuvent être partagées entre différents workflows.',
+          ],
+        },
+        additionalBenefit: {
+          content: [
+            'Pour les équipes, les chaînes de prompts deviennent des blocs de construction dans des systèmes IA plus grands plutôt que des conversations ponctuelles.',
+          ],
+        },
+        typicalPatterns: {
+          title: 'Modèles Typiques de Chaînage de Prompts',
+          content: [
+            '**La plupart des chaînes de prompts utilisent quelques modèles récurrents que vous pouvez adapter à vos propres workflows.** La structure exacte dépend de votre objectif, mais la logique reste similaire.',
+            'Les modèles courants incluent :',
+          ],
+          items: [
+            'Analyser → Planifier → Rédiger → Affiner : Pour rédiger des articles, des rapports ou des stratégies.',
+            'Extraire → Transformer → Résumer : Pour traiter les documents bruts, les journaux ou les tickets.',
+            'Classifier → Router → Générer : Pour trier les entrées et les envoyer à des prompts spécialisés.',
+            'Générer → Critiquer → Améliorer : Pour l\'affinement itératif de la copie, du code ou des conceptions.',
+          ],
+        },
+        chainImplementation: {
+          content: [
+            'Vous pouvez implémenter ces chaînes de manière synchrone (étape par étape dans une seule session) ou sous forme de travaux séparés orchestrés par votre application.',
+          ],
+        },
+        example: {
+          title: 'Exemple : Un Seul Prompt vs Chaîne de Prompts',
+          content: [
+            '**La valeur du chaînage de prompts est la plus facile à voir lorsque vous comparez un seul prompt complexe avec une courte chaîne s\'attaquant à la même tâche.** Voici un exemple pour produire un journal des modifications face aux clients.',
+            '**[Mauvais Prompt]**',
+            '« Lisez ces notes de publication et écrivez un journal des modifications convivial pour nos utilisateurs. »',
+            '**[Bonne Chaîne de Prompts]**',
+            '**Étape 1 – Extraire les modifications**',
+            '« Vous êtes un ingénieur de publication. Extrayez tous les changements visibles par l\'utilisateur des notes de publication brutes et listez-les sous forme de points regroupés par domaine de fonctionnalité. »',
+            '**Étape 2 – Classifier l\'impact**',
+            '« Vous êtes un responsable produit. Pour chaque point, étiquetez-le comme « correction de bug », « amélioration » ou « nouvelle fonctionnalité », et ajoutez une note interne courte sur pourquoi c\'est important. »',
+            '**Étape 3 – Générer le journal des modifications**',
+            '« Vous êtes un rédacteur de succès client. En utilisant la liste étiquetée, écrivez un email de journal des modifications face aux utilisateurs avec un court paragraphe d\'introduction et 3 à 6 points. Concentrez-vous sur les avantages, pas les détails internes. »',
+            'En chaînant ces étapes, vous rendez chaque prompt plus simple, plus testable et plus réutilisable.',
+          ],
+        },
+        whenToUse: {
+          title: 'Quand Utiliser le Chaînage de Prompts',
+          content: [
+            '**Vous devriez utiliser le chaînage de prompts chaque fois qu\'une tâche se décompose naturellement en étapes qui peuvent échouer ou changer indépendamment.** Si vous vous trouvez à écrire un très long prompt fragile avec plusieurs conditions « si », c\'est généralement un signe que vous avez besoin d\'une chaîne.',
+            'Les cas d\'utilisation typiques incluent :',
+          ],
+          items: [
+            'Pipelines de production de contenu (recherche → plan → brouillon → édition).',
+            'Pipelines de données (ingérer → nettoyer → extraire → enrichir → résumer).',
+            'Support à la décision (rassembler les faits → générer des options → évaluer les compromis → recommander).',
+            'Workflows de produits comme l\'intégration, l\'automatisation du support et la génération de documents.',
+          ],
+        },
+        whenSinglePrompt: {
+          content: [
+            'Pour les petites tâches ponctuelles, un seul prompt est généralement suffisant. Pour tout ce que vous vous attendez à exécuter de manière répétée ou à grande échelle, le chaînage offre plus de contrôle.',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Chaînage de Prompts dans PromptQuorum',
+          content: [
+            '**PromptQuorum est un outil d\'envoi IA multi-modèle qui s\'adapte naturellement au chaînage de prompts car vous pouvez standardiser chaque étape et l\'exécuter sur plusieurs modèles.** Au lieu d\'un seul prompt monolithique, vous définissez une série de prompts soutenus par des frameworks et les connectez dans votre workflow.',
+            'Avec PromptQuorum, vous pouvez :',
+          ],
+          items: [
+            'Utiliser différents frameworks à différentes étapes—par exemple, SPECS pour l\'extraction structurée, TRACE pour le raisonnement et CRAFT pour la copie finale.',
+            'Exécuter les étapes clés en parallèle sur plusieurs modèles (tels que GPT-4o, Claude 4.6 Sonnet et Gemini 2.5 Pro) pour comparer comment chacun gère l\'extraction, la planification ou la génération.',
+            'Enregistrer chaque étape en tant que modèle afin que les chaînes soient faciles à reconstruire, modifier ou partager avec votre équipe.',
+          ],
+        },
+        pqClosing: {
+          content: [
+            'En traitant le chaînage de prompts comme un modèle de première classe, PromptQuorum vous aide à transformer les tâches complexes et multi-étapes en workflows IA cohérents et maintenables.',
+          ],
+        },
+
+        errorHandling: {
+          title: 'Gestion des Erreurs dans les Chaînes de Prompts',
+          content: [
+            '**Un avantage du chaînage de prompts est que vous pouvez identifier et gérer les erreurs à chaque étape, plutôt que de découvrir un résultat final cassé après avoir investi beaucoup de temps.** Si l\'étape 2 génère un classement mal formé, vous le savez immédiatement au lieu que cela n\'affecte la génération étape 3.',
+            'Bonnes pratiques pour la gestion des erreurs :',
+          ],
+          items: [
+            'Valider la sortie de chaque étape avant de passer à la suivante.',
+            'Ajouter des points de contrôle où un humain peut réviser avant de continuer.',
+            'Enregistrer les défaillances et analyser les modèles pour améliorer les prompts.',
+            'Implémenter des stratégies de secours (par exemple, réessayer avec un modèle différent ou simplifier la tâche).',
+          ],
+        },
+        bestPractices: {
+          title: 'Bonnes Pratiques pour le Chaînage de Prompts',
+          content: [
+            '**Le chaînage de prompts fonctionne mieux lorsque chaque étape est clairement définie, indépendante et testable.** Voici comment optimiser vos chaînes :',
+            'Optimisez chaque prompt indépendamment avant de le chaîner. Ne supposez pas que les prompts fonctionneront ensemble jusqu\'à ce que vous les ayez testés.',
+            'Documentez le format de sortie attendu de chaque étape afin que l\'étape suivante sache quoi faire avec les données.',
+            'Utilisez des délimiteurs clairs (comme JSON) pour structurer les sorties intermédiaires.',
+            'Testez la chaîne entière avec des données réelles avant de la déployer.',
+          ],
+        },
+        vsFineTuning: {
+          title: 'Chaînage de Prompts vs Ajustement Fin',
+          content: [
+            '**Le chaînage de prompts s\'attaque à la complexité en la décomposant en étapes gérables, tandis que l\'ajustement fin entraîne un modèle à mieux comprendre un type de tâche particulier.** Ils ne sont pas concurrents—vous pouvez utiliser les deux ensemble.',
+            'Considérez le chaînage quand :',
+          ],
+          items: [
+            'Vous avez une tâche multi-étapes que vous pouvez décomposer en étapes logiques.',
+            'Chaque étape bénéficie d\'une incitation claire et d\'une validation.',
+            'Vous voulez que la chaîne soit réutilisable sur plusieurs modèles.',
+            'L\'ajustement fin quand : Un modèle sous-performe systématiquement sur un type de tâche et vous avez des données d\'entraînement d\'exemple.',
+          ],
+        },
+        vsSystemPrompt: {
+          title: 'Chaînage de Prompts vs Incitation Système',
+          content: [
+            '**Une incitation système définit le comportement global du modèle une seule fois (par exemple, « vous êtes toujours un expert en Python »), tandis que le chaînage divise une tâche en plusieurs étapes avec des incitations individuelles.** Vous pouvez utiliser les deux : une incitation système stable plus un chaînage pour la tâche elle-même.',
+            'Utilisez une incitation système pour définir la personnalité et les limites globales du modèle.',
+            'Utilisez le chaînage pour décomposer les tâches complexes en étapes contrôlables.',
+          ],
+        },
+        howToStart: {
+          title: 'Comment Commencer avec le Chaînage de Prompts',
+          numberedItems: [
+            '**Décomposez votre tâche complexe en sous-tâches séquentielles, chacune résolue par un prompt séparé.** Exemple pour « écrire et publier un article de blog » : (1) Générer un plan, (2) Écrire les sections, (3) Vérifier les faits, (4) Optimiser pour le SEO, (5) Formater pour la publication.',
+            '**Alimentez la sortie d\'un prompt en tant qu\'entrée au suivant.** Le plan de l\'étape 1 guide la rédaction des sections à l\'étape 2. Le brouillon de l\'étape 2 est vérifié à l\'étape 3. Ce flux séquentiel réduit les hallucinations.',
+            '**Optimisez chaque prompt indépendamment avant de les chaîner.** Affinez le prompt 1 jusqu\'à ce qu\'il génère de bons plans, puis affinez le prompt 2 jusqu\'à ce qu\'il écrive de bonnes sections en fonction d\'un plan. Testez chaque étape séparément.',
+            '**Utilisez des points de contrôle intermédiaires où un humain peut réviser avant de continuer.** Après générer un plan, révisez-le avant d\'écrire les sections. Après vérification des faits, signalez les affirmations qui échouent à la vérification. Cela empêche les erreurs de se propager.',
+            '**Documentez la structure de la chaîne et les dépendances.** Créez un diagramme ou un organigramme montrant : Étape 1 → Étape 2 → Étape 3, et quelles sorties alimentent quelles entrées. Cela rend le pipeline clair et maintenable.',
+          ],
+        },
+        faqSections: {
+          faqs: [
+            {
+              q: 'Comment savez-vous si vous avez besoin d\'un chaînage de prompts ou d\'un seul prompt complexe ?',
+              a: 'Écrivez le prompt. Si c\'est plus de 500 tokens et contient plusieurs « si » ou étapes logiques, vous avez probablement besoin d\'un chaînage. Un bon test : pouvez-vous tester chaque étape indépendamment ? Si oui, c\'est un bon candidat pour le chaînage.'
+            },
+            {
+              q: 'Quel est le nombre idéal d\'étapes dans une chaîne de prompts ?',
+              a: 'La plupart des chaînes productives ont 3 à 5 étapes. Au-delà de 7 étapes, vous avez généralement trop de complexité et vous devriez réfléchir à simplifier ou à fusionner des étapes.'
+            },
+            {
+              q: 'Pouvez-vous mettre en parallèle les étapes d\'une chaîne de prompts ?',
+              a: 'Oui, si les étapes sont indépendantes. Par exemple, si l\'étape 2 et l\'étape 3 ont toutes deux besoin de la sortie de l\'étape 1 mais pas l\'une de l\'autre, exécutez-les ensemble. PromptQuorum supporte cela nativement.'
+            },
+            {
+              q: 'Que se passe-t-il si une étape de ma chaîne échoue ?',
+              a: 'Ajoutez la validation à chaque étape. Vérifiez que la sortie a le format correct avant de la passer à l\'étape suivante. Documentez les conditions d\'échec et implémentez une stratégie de secours (réessayer, router vers un modèle différent ou escalader vers un humain).'
+            },
+            {
+              q: 'Le chaînage de prompts fonctionne-t-il avec les modèles locaux comme Ollama ou LLaMA 3.1 ?',
+              a: 'Oui. Le chaînage de prompts est indépendant du modèle. Vous pouvez chaîner des prompts sur GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro ou n\'importe quel modèle local qui prend en charge les prompts texte.'
+            },
+          ],
+        },
+      },
+    },,
+ja: {
+        theme: 'Techniques',
+        title: 'プロンプトチェーニング：複雑なタスクを成功する段階に分ける方法',
+        intro: 'プロンプトチェーニングは、複雑なタスクを複数の小さなプロンプトに分割し、1つのステップの出力を次のステップに流し込む手法です。これにより、1つの過度に複雑なプロンプトに頼るのではなく、信頼できる多段階ワークフローを構築できます。',
+        publishDate: '2026-03-26',
+        seoTitle: 'プロンプトチェーニング完全ガイド2026：複雑なAIワークフローを構築する方法',
+        metaDescription: 'プロンプトチェーニングの手法を学んで、強力な多段階AIワークフローを作成しましょう。実例と実践的なベストプラクティスを紹介します。',
+        readTime: '8分で読める',
+        educationalLevel: 'Intermediate',
+        primaryTerm: 'プロンプトチェーニング',
+        schema: {
+          '@context': 'https://schema.org',
+          '@type': 'TechArticle',
+          headline: 'プロンプトチェーニング：複雑なタスクを成功する段階に分ける方法',
+          description: 'プロンプトチェーニングとは何か、なぜ重要か、制御しやすく再利用可能な多段階AIワークフローを設計する方法について解説します。',
+          datePublished: '2026-03-26',
+          dateModified: '2026-03-26',
+          keywords: ['プロンプトチェーニング', 'プロンプトエンジニアリング', 'AIワークフロー', 'PromptQuorum'],
+          author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+          publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+          about: [
+            { '@type': 'Thing', name: 'Prompt Engineering' },
+            { '@type': 'Thing', name: 'Large Language Models' },
+            { '@type': 'Thing', name: 'AI Workflows' },
+          ],
+        },
+        sections: {
+          whatIsPromptChaining: {
+            title: 'プロンプトチェーニングとは',
+            content: [
+              '**プロンプトチェーニングとは、複数のプロンプトをつなぎ合わせて、それぞれが集中した小さなサブタスクを実行し、その結果を次に渡す手法です。** モデルに「すべてを一度にやってほしい」と指示するのではなく、「分析 → 構造化 → 生成 → レビュー」のような順序を作ります。',
+              '各ステップには明確な入力、明確な出力フォーマット、狭い責任範囲があります。チェーン全体は会話というより、パイプラインやワークフローのように機能するため、デバッグ、保守、再利用がより簡単になります。',
+            ],
+          },
+          whyItMatters: {
+            title: 'プロンプトチェーニングが重要な理由',
+            content: [
+              '**プロンプトチェーニングが重要な理由は、ほとんどの実世界タスクは複雑すぎたり脆いため、単一のプロンプトでは適切に処理できないからです。** 理解、計画、生成、検査を異なるステップに分けることで、エラーを減らし、制御を得られます。',
+              '主な利点は以下の通りです：',
+            ],
+            items: [
+              '各ステップが特定の機能のために最適化されているため、精度が向上します。',
+              'チェーンが どこで壊れるかを正確に見ることができるため、トラブルシューティングがより簡単です。',
+              '「入力を要約する」や「エンティティを抽出する」などの個別ステップを異なるワークフロー全体で共有できるため、再利用性が高まります。',
+            ],
+          },
+          additionalBenefit: {
+            title: 'チーム向けの追加メリット',
+            content: [
+              'チームにとって、プロンプトチェーンは一度限りの会話ではなく、より大きなAIシステムの構成要素になります。',
+            ],
+          },
+          typicalPatterns: {
+            title: '一般的なプロンプトチェーンパターン',
+            content: [
+              '**ほとんどのプロンプトチェーンは、独自のワークフローに適応できる数個の繰り返しパターンを使用しています。** 正確な構造は目標によって異なりますが、ロジックは類似しています。',
+              '一般的なパターン：',
+            ],
+            items: [
+              '分析 → 計画 → 下書き → 洗練：記事、レポート、戦略の作成用。',
+              '抽出 → 変換 → 要約：生のドキュメント、ログ、チケットの処理用。',
+              '分類 → ルーティング → 生成：入力の優先順位付けと特別なプロンプトへの送信用。',
+              '生成 → 批評 → 改善：コピー、コード、デザインの反復的な改善用。',
+            ],
+          },
+          chainImplementation: {
+            title: 'チェーンの実装方法',
+            content: [
+              'これらのチェーンは同期的に（単一セッション内でステップバイステップで）実装することも、アプリケーションによってオーケストレーションされた独立したジョブとして実装することもできます。',
+            ],
+          },
+          example: {
+            title: '例：単一プロンプト対プロンプトチェーン',
+            content: [
+              '**プロンプトチェーニングの価値は、単一の複雑なプロンプトと同じ仕事に対応する短いチェーンを比較するとき、最も簡単に理解できます。** 以下は、顧客向けチェンジログを作成する例です。',
+              '**[悪いプロンプト]**',
+              '「このリリースノートを読んで、ユーザー向けの親しみやすいチェンジログを書いてください。」',
+              '**[良いプロンプトチェーン]**',
+              '**ステップ 1 – 変更内容を抽出する**',
+              '「あなたはリリースエンジニアです。生のリリースノートからすべてのユーザー表示可能な変更を抽出し、機能領域でグループ化した箇条書きリストとしてリストアップしてください。」',
+              '**ステップ 2 – 影響を分類する**',
+              '「あなたはプロダクトマネージャーです。各箇条書きに対して、`バグ修正`、`改善`、または`新機能`とラベル付けし、その重要性についての短い内部メモを追加してください。」',
+              '**ステップ 3 – チェンジログを生成する**',
+              '「あなたはカスタマーサクセスライターです。ラベル付けされたリストを使用して、短い導入段落と3～6個の箇条書きを含む、ユーザー向けのチェンジログメールを書いてください。内部の詳細ではなく、利点に焦点を当ててください。」',
+              'これらのステップをチェーンすることで、各プロンプトをより単純で、より検証可能で、より再利用可能にします。',
+            ],
+          },
+          whenToUse: {
+            title: 'プロンプトチェーニングを使うべき場合',
+            content: [
+              '**タスクが自然に、独立して失敗または変更する可能性のあるステージに分解される場合は常に、プロンプトチェーニングを使う必要があります。** 多くの「場合」条件を含む、非常に長く脆いプロンプトを書いている場合は、通常、チェーンが必要なサインです。',
+              '典型的なユースケース：',
+            ],
+            items: [
+              'コンテンツ制作パイプライン（調査 → アウトライン → 下書き → 編集）。',
+              'データパイプライン（取り込み → クリーニング → 抽出 → 充実 → 要約）。',
+              '意思決定支援（事実を集める → オプションを生成 → トレードオフを評価 → 推奨）。',
+              'オンボーディング、サポート自動化、ドキュメント生成などのプロダクトワークフロー。',
+            ],
+          },
+          whenSinglePrompt: {
+            title: '単一プロンプトが十分な場合',
+            content: [
+              '小さな一度限りのタスクの場合は、通常、単一のプロンプトで十分です。繰り返し実行したり大規模に実行したりすることが予想されるものについては、チェーニングはより多くの制御を提供します。',
+            ],
+          },
+          注意点: {
+            title: '注意点：チェーニングの落とし穴を避ける',
+            content: [
+              'プロンプトチェーニングを実装する際に注意する必要がある点があります。各ステップの出力フォーマットが明確に定義されていないと、次のステップが入力を理解できず、エラーが累積される可能性があります。また、チェーン内のあるステップが失敗すると、後続のすべてのステップが影響を受けるため、各ステップの入出力の検証が重要です。',
+            ],
+          },
+          bestPractices: {
+            title: '実践的なベストプラクティス：成功するための使い方',
+            content: [
+              'プロンプトチェーニングを最大限に活用するために、以下のベストプラクティスに従うことをお勧めします。まず、各ステップの責任を明確に定義し、そのステップのみに焦点を当てるようにします。次に、中間チェックポイントを設けて、進め方の前に人間が検証できるようにします。最後に、チェーンの構造と依存関係を文書化して、チーム全体で保守と改善が簡単になるようにします。',
+            ],
+          },
+          inPromptQuorum: {
+            title: 'PromptQuorumでのプロンプトチェーニング',
+            content: [
+              '**PromptQuorumは、各ステップを標準化して複数のモデル全体で実行できるため、プロンプトチェーニングに自然に適合する多モデルAIディスパッチツールです。** 単一の一枚岩プロンプトではなく、フレームワークに支えられた一連のプロンプトを定義し、ワークフロー内で接続します。',
+              'PromptQuorumを使用することで、以下のことができます：',
+            ],
+            items: [
+              '異なるステージで異なるフレームワークを使用します。例えば、構造化された抽出にはSPECS、推論にはTRACE、最終コピーにはCRAFTを使用します。',
+              'GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Proなどのモデル間で主要なステップを並列で実行して、各モデルが抽出、計画、または生成をどのように処理するかを比較します。',
+              '各ステップをテンプレートとして保存して、チェーンを簡単に再構築、修正、またはチームと共有できるようにします。',
+            ],
+          },
+          pqClosing: {
+            content: [
+              'プロンプトチェーニングを第一級のパターンとして扱うことで、PromptQuorumは複雑な多段階タスクを一貫性のある保守可能なAIワークフローに変換するのを支援します。',
+            ],
+          },
+          howToStart: {
+            title: 'プロンプトチェーニングの使い始め方',
+            numberedItems: [
+              '**複雑なタスクを順序立てたサブタスクに分割し、各タスクを個別のプロンプトで解決します。** ブログ記事を「書いて公開する」例：（1）アウトラインを生成する、（2）セクションを書く、（3）クレームをファクトチェックする、（4）SEOのために最適化する、（5）公開用にフォーマットする。',
+              '**1つのプロンプトの出力を次のプロンプトの入力として渡します。** ステップ1のアウトラインはステップ2のセクション作成を導きます。ステップ2の下書きはステップ3でファクトチェックされます。この順序立ったフローは幻覚を減らします。',
+              '**チェーニングする前に各プロンプトを独立して最適化します。** プロンプト1がよいアウトラインを生成するまで調整し、次にプロンプト2がアウトラインを与えられてセクションをよく書くまで調整します。各ステップを個別にテストします。',
+              '**人間が先に進む前に確認できる中間チェックポイントを使用します。** アウトラインを生成したら、セクションを書く前に確認します。ファクトチェック後、検証に失敗したクレームにフラグを付けます。これはエラーが累積されるのを防ぎます。',
+              '**チェーンの構造と依存関係を文書化します。** ステップ1 → ステップ2 → ステップ3 を示し、どの出力がどの入力に流し込まれるかを示すダイアグラムまたはフローチャートを作成します。これによりパイプラインが明確で保守可能になります。',
+            ],
+          },
+        },
+
+    },
+zh: {
+        category: '提示词工程',
+        title: '提示词链接完全指南：多步骤AI工作流的5种方法（2026版）',
+        intro: '学习如何通过链接提示词来构建复杂的AI工作流。将复杂任务分解为可靠的多步骤序列，获得更高质量、可重复的结果。',
+        seoTitle: '提示词链接：多步骤AI工作流完全指南 | 2026',
+        publishDate: '发布于 2026年4月',
+        readTime: '阅读约8分钟',
+        metaDescription: '掌握提示词链接技术：将复杂AI任务分解为多步骤工作流。学习5种方法、最佳实践和工业界实例。提高输出质量和可靠性。',
+        educationalLevel: 'Intermediate',
+
+        sections: {
+          whatIsPromptChaining: {
+            title: '什么是提示词链接？',
+            content: [
+              '提示词链接是一种将复杂的AI任务分解为一系列互相连接的提示词的技术。与其向AI模型提出一个庞大、混乱的问题，不如将问题分解为按逻辑顺序排列的多个小步骤。每一步的输出成为下一步的输入。',
+              '简单类比：想象从北京到上海的旅程。你可以一次性说"帮我规划最优路线"，但获得的信息较少。更好的做法是：先确定交通方式（飞行、铁路、驾车），然后根据选择获得具体的出发时间、价格比较、预订步骤。链接提示词就是这样逐步细化问题的过程。',
+              '提示词链接的核心价值：提高准确性、增强可控性、减少错误、改善输出质量。',
+            ],
+            isTldr: false,
+          },
+
+          whyChaining: {
+            title: '为什么提示词链接如此重要？',
+            content: [
+              '现代AI模型在处理单一、明确的指令时表现最佳。当任务变得复杂时，单一提示往往导致输出质量下降、遗漏步骤或产生不一致的结果。提示词链接通过以下方式解决这些问题：',
+            ],
+            items: [
+              '降低认知负荷：AI每次处理一个明确的子任务，而非多个相互关联的需求',
+              '改善推理质量：每一步都获得明确的上下文和约束条件',
+              '提高可重复性：结构化的流程意味着相同输入产生相同输出',
+              '便于调试：当输出不符合预期时，可以精确定位在哪一步出现问题',
+              '支持条件分支：可根据中间结果调整后续步骤',
+              '扩展复杂性：可处理原本超出单一模型能力的任务',
+            ],
+          },
+
+          keyPrinciples: {
+            title: '提示词链接的5个核心原则',
+            content: [
+              '成功的链接提示词基于五个关键原则。遵循这些原则能显著提高工作流的可靠性：',
+            ],
+            items: [
+              '1. 明确划分：每个提示都应承担一个清晰的、可定义的职责。避免混杂多个目标。',
+              '2. 上下文传递：每一步的输出必须包含后续步骤所需的全部信息。测试信息完整性。',
+              '3. 质量检查：在关键步骤之间添加验证逻辑。例如，确认数据完整性后再继续。',
+              '4. 错误处理：定义当某一步失败时的回退路径或重试策略。',
+              '5. 可扩展性：设计链条时应考虑处理不同规模的输入（长文档、多个变量等）。',
+            ],
+          },
+
+          methodOne: {
+            title: '方法1：顺序链接 (Sequential Chaining)',
+            content: [
+              '最简单也最常见的链接方法。每个提示依次执行，前一个的输出直接流向下一个。',
+            ],
+          },
+
+          methodOneExample: {
+            title: '实例：编写和优化中文营销文案',
+            content: [
+              '场景：为中国电子商务企业撰写产品描述。',
+              '',
+              '步骤1 - 研究阶段：',
+              '提示："分析这款智能家居产品的核心特性。列出主要功能、目标用户、竞争优势。输出为结构化列表。"',
+              '输出：功能列表、用户画像、差异化优势',
+              '',
+              '步骤2 - 初稿创作：',
+              '提示："基于这些特性，用简洁、说服力强的中文撰写产品描述。面向年龄25-45岁的城市上班族。语言风格：专业、信任感强、突出便利性。字数：150-200字。"',
+              '输出：产品描述初稿',
+              '',
+              '步骤3 - 质量审核：',
+              '提示："评估这份描述是否准确、清晰、有说服力。指出任何过度承诺或不清楚的部分。评分1-10。"',
+              '输出：评分和改进建议',
+              '',
+              '步骤4 - 优化迭代：',
+              '提示："根据反馈，改进这份描述。确保每个句子都增加价值。删除冗余。保持原字数范围。"',
+              '输出：最终优化文案',
+            ],
+          },
+
+          methodOneWhy: {
+            title: '为什么有效',
+            content: [
+              '顺序链接将一个复杂任务（写+优化营销文案）分解为四个简单步骤。每一步都有明确的输入和输出。中间检查步骤（第3步）确保初稿质量，避免对低质量内容进行优化。这种线性方法适合大多数内容创作和分析任务。',
+            ],
+          },
+
+          methodTwo: {
+            title: '方法2：并行链接 (Parallel Chaining)',
+            content: [
+              '在某些场景中，多个步骤可以同时执行，而非依次进行。适用于独立的分支任务。',
+            ],
+          },
+
+          methodTwoExample: {
+            title: '实例：全方位产品评估',
+            content: [
+              '场景：分析竞争产品的多个维度。',
+              '',
+              '并行任务A（功能分析）：',
+              '"列出产品X的所有核心功能和技术规格。"',
+              '',
+              '并行任务B（用户体验分析）：',
+              '"描述产品X的用户界面设计、易用性、学习曲线。"',
+              '',
+              '并行任务C（成本与定价分析）：',
+              '"研究产品X的定价策略、成本-收益比、市场竞争力。"',
+              '',
+              '汇聚步骤：',
+              '"综合这三份分析，生成一份全面的竞争对手评估报告。结构：功能对比、UX评分、定价策略分析、PromptQuorum优势总结。"',
+            ],
+          },
+
+          methodTwoWhy: {
+            title: '为什么有效',
+            content: [
+              '并行执行节约时间。三个独立分析可同时进行，而非顺序执行。最后的汇聚步骤整合结果，创建统一的观点。这种方法适合需要多角度评估的任务。',
+            ],
+          },
+
+          methodThree: {
+            title: '方法3：条件链接 (Conditional Chaining)',
+            content: [
+              '基于中间结果，路由流向不同的后续步骤。使链条具有适应性和灵活性。',
+            ],
+          },
+
+          methodThreeExample: {
+            title: '实例：客户反馈分类与响应',
+            content: [
+              '步骤1 - 分类：',
+              '"分析这条客户反馈。分类为以下之一：表扬、功能建议、缺陷报告、计费问题、其他。输出仅一个分类。"',
+              '',
+              '步骤2 - 条件路由：',
+              '如果分类 = "缺陷报告"，执行路径A（技术团队响应）',
+              '如果分类 = "计费问题"，执行路径B（财务团队响应）',
+              '如果分类 = "表扬"，执行路径C（感谢回复）',
+              '',
+              '路径A示例（缺陷报告）：',
+              '"撰写一份技术支持回复。承认问题、解释根本原因（如果已知）、提供解决步骤、预期解决时间。保持专业、同情的语气。"',
+              '',
+              '路径B示例（计费问题）：',
+              '"撰写一份账单查询响应。确认客户账户状态、说明费用来源、提供解决选项（退款、信用、订阅调整）。"',
+            ],
+          },
+
+          methodThreeWhy: {
+            title: '为什么有效',
+            content: [
+              '不同类型的反馈需要不同的处理方法。条件链接自动将反馈路由到适当的响应模板，减少人工分类，确保客户得到相关、合适的回复。',
+            ],
+          },
+
+          methodFour: {
+            title: '方法4：递归链接 (Recursive Chaining)',
+            content: [
+              '同一提示被多次应用，每次处理输出的一部分，直到完成完整任务。对于迭代改进特别有效。',
+            ],
+          },
+
+          methodFourExample: {
+            title: '实例：代码审查和改进',
+            content: [
+              '初始代码：[Python函数代码]',
+              '',
+              '第1轮（代码质量）：',
+              '"审查这段代码的可读性、效率和安全性。提出3-5项具体改进。"',
+              '输出：改进建议',
+              '',
+              '第2轮（应用第1轮建议）：',
+              '"根据这些改进建议重写代码。"',
+              '输出：改进后的代码v1',
+              '',
+              '第3轮（文档和测试）：',
+              '"为这段代码添加：docstring说明、边界情况处理、单元测试用例。"',
+              '输出：完善的代码v2',
+              '',
+              '第4轮（最终检查）：',
+              '"这段代码是否生产级别可用？列出任何仍需解决的问题。"',
+              '输出：最终状态报告',
+            ],
+          },
+
+          methodFourWhy: {
+            title: '为什么有效',
+            content: [
+              '代码改进不是一次性过程。递归链接通过多轮迭代，逐步提升代码质量。每一轮针对特定方面（质量 → 实现 → 文档 → 最终检查）。这确保没有遗漏改进机会。',
+            ],
+          },
+
+          methodFive: {
+            title: '方法5：树形链接 (Tree-based Chaining)',
+            content: [
+              '组织结构复杂的任务为分支树。每个节点代表一个提示，分支代表不同的探索路径。',
+            ],
+          },
+
+          methodFiveExample: {
+            title: '实例：战略研究报告',
+            content: [
+              '根节点：',
+              '"为中国市场的AI应用提出3个潜在机遇。"',
+              '',
+              '分支1 - 机遇A深度研究：',
+              '"分析金融科技中的AI应用机遇。市场规模、竞争格局、技术障碍、时间表。"',
+              '',
+              '分支2 - 机遇B深度研究：',
+              '"分析医疗健康中的AI应用机遇。市场规模、监管环境、技术可行性、时间表。"',
+              '',
+              '分支3 - 机遇C深度研究：',
+              '"分析制造业AI应用机遇。市场规模、投资需求、技术挑战、时间表。"',
+              '',
+              '汇总节点：',
+              '"根据这三个分支研究，撰写Executive Summary。推荐最具吸引力的机遇。解释原因。"',
+            ],
+          },
+
+          methodFiveWhy: {
+            title: '为什么有效',
+            content: [
+              '战略决策需要多角度探索。树形结构允许深度研究多个选项，然后在顶部汇总。这确保没有遗漏重要考虑因素，最终建议基于全面分析。',
+            ],
+          },
+
+          bestPractices: {
+            title: '最佳实践',
+            content: [
+              '为了最大化链接提示词的效果，遵循这些经过验证的做法：',
+            ],
+            items: [
+              '明确约束：每个提示都应说明输出格式、长度、语气。示例："输出为JSON格式，包含keys: title, analysis, recommendations。" 或 "用3-5个句子回答，语言简洁、技术性。"',
+              '设置检查点：在关键步骤之间添加验证提示。例如："这份数据是否完整？是否有明显的错误或遗漏？"',
+              '文档传递：确保每一步明确知道它从哪里获得输入、应该产生什么输出。写出这些关系。',
+              '模板化：将成功的链条保存为可复用模板。参数化变量部分（如产品名称、行业、受众）。',
+              '测试变体：相同任务的不同链条结构（顺序 vs 并行 vs 条件）可能产生不同质量。测试并记录最佳组合。',
+              '错误处理：明确说明如果某一步失败该怎么做。例如："如果无法找到数据，使用已知的替代信息并标注为估计值。"',
+            ],
+          },
+
+          commonChallenges: {
+            title: '常见问题与解决方案',
+            content: [
+              '提示词链接中常见的陷阱及其解决办法：',
+            ],
+            faqs: [
+              {
+                q: '信息丢失：早期步骤的重要信息在后续步骤中被遗忘或改变。',
+                a: '确保每个提示明确要求传递必要信息。使用JSON或结构化格式保留数据结构。添加"参考原始上下文"的提醒。',
+              },
+              {
+                q: '链条过长：太多步骤导致延迟，且错误累积。',
+                a: '评估是否可以合并步骤。通常5-7步是平衡的。超过这个数量，考虑使用并行链接。',
+              },
+              {
+                q: '输出不一致：相同输入偶尔产生不同输出，破坏下游步骤。',
+                a: '增加约束性。明确指定格式、长度、结构。添加"保持一致"的提醒。在关键步骤前设置温度参数为较低值。',
+              },
+              {
+                q: '上下文窗口溢出：长链条的累积输出超过模型的上下文限制。',
+                a: '定期压缩中间结果。与其传递完整输出，不如摘取关键信息。使用"总结为3个要点"来减少体积。',
+              },
+              {
+                q: '成本增加：多个API调用导致成本快速上升。',
+                a: '评估实际需要的步骤。可以在开发中使用更小的模型原型，部署时再升级。或使用混合策略：简单步骤用小模型，复杂步骤用大模型。',
+              },
+            ],
+          },
+
+          implementationGuide: {
+            title: '在PromptQuorum中实施链接提示词',
+            content: [
+              'PromptQuorum简化了多步骤工作流的管理和执行。以下是实施链接提示词的步骤：',
+            ],
+            items: [
+              '步骤1 - 定义工作流：在PromptQuorum中创建新工作流。命名步骤，定义它们的依赖关系。',
+              '步骤2 - 配置输入/输出：为每个步骤明确输入源（用户输入、前一步输出等）和输出目标。',
+              '步骤3 - 选择模型：为每个步骤选择合适的AI模型。复杂推理任务选GPT-5.x或Claude 4.6；简单任务可用更小模型。',
+              '步骤4 - 测试工作流：运行样本数据。检查每一步的输出。验证后续步骤能正确处理该输出。',
+              '步骤5 - 添加条件和分支：如需条件路由，配置分支规则。例如："如果步骤2的评分>7，进行步骤4A；否则步骤4B"。',
+              '步骤6 - 部署和监控：部署到生产环境。监控执行时间、错误率、成本。定期评估和优化。',
+            ],
+          },
+
+          realWorldApplications: {
+            title: '实际应用场景',
+            content: [
+              '以下是提示词链接在各行业中的具体应用：',
+            ],
+            items: [
+              '内容创作：研究 → 初稿 → 编辑 → SEO优化 → 最终检查',
+              '数据分析：数据清洗 → 模式识别 → 假设生成 → 统计验证 → 报告生成',
+              '客户服务：工单分类 → 情感分析 → 路由 → 响应生成 → 质量审核',
+              '代码开发：需求分析 → 代码生成 → 测试用例创建 → 代码审查 → 文档生成',
+              '市场研究：竞争分析 → 趋势识别 → 战略建议 → 风险评估 → Executive Summary',
+              '法律文件审查：合规性检查 → 风险识别 → 修订建议 → 最终批准',
+            ],
+          },
+
+          advancedTechniques: {
+            title: '进阶技巧',
+            content: [
+              '掌握基础后，这些高级技巧可进一步提升效果：',
+            ],
+            items: [
+              '动态提示：根据前一步的结果动态调整后续提示的措辞。例如：如果第1步检测到复杂问题，第2步自动使用更深入的分析框架。',
+              '反馈循环：允许人类审查者在链条中途介入，基于他们的反馈调整后续步骤。',
+              '模型选择优化：使用较小、较快的模型进行初步步骤，保留大模型用于最终关键步骤。',
+              '批处理：不是逐个处理项目，而是批量处理相似项（如100个产品描述），可节约成本。',
+              '缓存策略：缓存频繁使用的系统提示或上下文，减少重复输入。',
+              '并行执行优化：识别可同时进行的步骤，调度它们并行运行以最小化总延迟。',
+            ],
+          },
+
+          conclusion: {
+            title: '总结',
+            content: [
+              '提示词链接是驾驭AI能力的关键技术。通过将复杂任务分解为清晰、顺序的步骤，你可以：',
+              '• 显著提高输出质量和一致性',
+              '• 减少错误和遗漏',
+              '• 构建可复用、可维护的AI工作流',
+              '• 处理原本超出单一提示范围的任务',
+              '',
+              '无论是内容创作、数据分析、客户服务还是代码开发，链接提示词都适用。从简单的顺序链条开始，随着经验增长，探索条件、并行和树形链接。',
+              '',
+              '立即在PromptQuorum中尝试。创建你的第一个多步骤工作流，体验提示词链接如何转变你的AI使用方式。',
+            ],
+          },
+
+          faqSection: {
+            title: '常见问题',
+            faqs: [
+              {
+                q: '提示词链接与单个复杂提示有什么区别？',
+                a: '单个复杂提示要求模型一次处理所有任务，容易出错且难以调试。链接提示词将任务分解为小步骤，每步都有明确的输入和输出。这提高了可靠性和可维护性。',
+              },
+              {
+                q: '链接提示词会增加成本吗？',
+                a: '多个提示意味着多次API调用，可能增加成本。但通过聪明的设计（并行步骤、小模型用于简单任务、缓存策略），往往能抵消这一成本。质量提升也能减少重做次数，最终降低总体成本。',
+              },
+              {
+                q: '多少步骤才算"太多"？',
+                a: '没有固定规则。5-7步通常是平衡点。超过10步，考虑是否可以合并。关键是每一步都产生明确的价值。',
+              },
+              {
+                q: '如果某一步失败怎么办？',
+                a: '这取决于步骤的重要性。关键步骤应该有重试逻辑或备选路径。非关键步骤可以跳过，使用默认值继续。设计时明确定义每个步骤的失败处理。',
+              },
+              {
+                q: '是否可以混合不同的AI模型？',
+                a: '完全可以。不同步骤适合不同模型。推理任务用Claude 4.6，代码生成用GPT-5.x，简单任务用较小模型。混合使用能优化质量和成本。',
+              },
+            ],
+          },
+
+          schema: {
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: '提示词链接完全指南：多步骤AI工作流的5种方法（2026版）',
+            description: '掌握提示词链接技术：将复杂AI任务分解为多步骤工作流。学习5种方法、最佳实践和工业界实例。提高输出质量和可靠性。',
+            image: 'https://promptquorum.ai/og/prompt-chaining-zh.png',
+            author: {
+              '@type': 'Organization',
+              name: 'PromptQuorum',
+            },
+            datePublished: '2026-04-01',
+            dateModified: '2026-04-06',
+            publisher: {
+              '@type': 'Organization',
+              name: 'PromptQuorum',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://promptquorum.ai/logo.svg',
+              },
+            },
+            educationalLevel: 'Intermediate',
+            articleBody: '提示词链接是一种将复杂的AI任务分解为一系列互相连接的提示词的技术...',
+            keywords: ['提示词链接', 'AI工作流', '提示工程', '多步骤提示', 'PromptQuorum', 'LLM'],
+          },
+
+          faqSchema: {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '提示词链接与单个复杂提示有什么区别？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '单个复杂提示要求模型一次处理所有任务，容易出错且难以调试。链接提示词将任务分解为小步骤，每步都有明确的输入和输出。这提高了可靠性和可维护性。',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '链接提示词会增加成本吗？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '多个提示意味着多次API调用，可能增加成本。但通过聪明的设计（并行步骤、小模型用于简单任务、缓存策略），往往能抵消这一成本。质量提升也能减少重做次数，最终降低总体成本。',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '多少步骤才算"太多"？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '没有固定规则。5-7步通常是平衡点。超过10步，考虑是否可以合并。关键是每一步都产生明确的价值。',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '如果某一步失败怎么办？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '这取决于步骤的重要性。关键步骤应该有重试逻辑或备选路径。非关键步骤可以跳过，使用默认值继续。设计时明确定义每个步骤的失败处理。',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '是否可以混合不同的AI模型？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '完全可以。不同步骤适合不同模型。推理任务用Claude 4.6，代码生成用GPT-5.x，简单任务用较小模型。混合使用能优化质量和成本。',
+                },
+              },
+            ],
+          },
+        },
+      },
+,
   },
 
   'persona-prompting': {
