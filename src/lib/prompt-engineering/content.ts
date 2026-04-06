@@ -30061,7 +30061,156 @@ zh: {
         },
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: {
+  theme: 'Techniques',
+  title: 'Negatives Prompting: Der KI Sagen, Was Sie NICHT Tun Soll',
+  intro: 'Negatives Prompting ist eine Technik, um explizit zu definieren, was das Modell vermeiden sollte—Inhalte, Ton, Struktur oder Verhalten—um die Ergebnisse in klaren Grenzen zu halten. Es funktioniert als „Schutzschicht" oberhalb Ihrer Standard-Anweisungen.',
+  publishDate: '2026-03-26',
+  readTime: '6 min Lesezeit',
+  metaDescription: 'Kompletter Leitfaden zum Negatives Prompting: Definition, Bedeutung und Anwendung expliziter „Nicht-Tun"-Regeln zur Kontrolle von KI-Ausgaben in Brand- und Compliance-Grenzen.',
+  primaryTerm: 'Negatives Prompting',
+  seoTitle: 'Negatives Prompting: KI-Ausgaben mit expliziten Regeln kontrollieren',
+  educationalLevel: 'Intermediate',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Negatives Prompting: Der KI Sagen, Was Sie NICHT Tun Soll',
+    description: 'Definition, Bedeutung und Implementierung des Negatives Prompting zur Wahrung von Sicherheits-, Compliance- und Brand-Alignment-Grenzen bei KI-Ausgaben.',
+    datePublished: '2026-03-26',
+    dateModified: '2026-03-26',
+    keywords: ['Negatives Prompting', 'Prompt-Engineering', 'Schutzmaßnahmen', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Prompt-Engineering' },
+      { '@type': 'Thing', name: 'Große Sprachmodelle' },
+      { '@type': 'Thing', name: 'Digitale Schutzmaßnahmen' },
+    ],
+  },
+  sections: {
+    whatIsNegativePrompting: {
+      title: 'Was ist Negatives Prompting?',
+      content: [
+        '**Negatives Prompting bedeutet, explizite „Nicht-Tun"-Regeln zu Ihren Prompts hinzuzufügen, parallel zu dem, was Sie vom Modell erwarten.** Anstatt nur das gewünschte Ergebnis zu beschreiben, legen Sie auch fest, welche Themen, Töne, Formate oder Fehler zu vermeiden sind.',
+        'Diese negativen Anweisungen können verbotene Begriffe, unzulässige Inhaltskategorien, tabuisierte Meinungen oder einfach unerwünschte Stile abdecken (beispielsweise „keine Witze", „keine Emojis", „keine Marketingsprache"). Je expliziter Ihre „Nicht-Tun"-Regeln, desto leichter bleibt das Modell ausgerichtet.',
+      ],
+    },
+    whyItMatters: {
+      title: 'Warum Negatives Prompting Wichtig Ist',
+      content: [
+        '**Negatives Prompting ist wichtig, weil reale Ausgaben nicht nur durch Ziele, sondern durch Grenzen begrenzt werden—Brand-, rechtliche, Sicherheits- und Qualitätsgrenzen.** Ein gutes Ergebnis ist oft „korrekt UND an die Grenzen gebunden", nicht einfach „nützlich".',
+        'Negatives Prompting ermöglicht es Ihnen:',
+      ],
+      items: [
+        'Spezifische bereits beobachtete Fehler zu verhindern: Überverkauf, Spekulation, unnötige Haftungsausschlüsse.',
+        'Brand- und Tonregeln direkt im Prompt zu erzwingen, indem Sie Fachjargon oder verbotene Adjektive vermeiden.',
+        'Manuelle Überarbeitung zu reduzieren, da viele häufige Korrektionen durch explizites negatives Prompting vorweggenommen werden können.',
+      ],
+    },
+    useNote: {
+      content: [
+        'Richtig umgesetzt wandelt Negatives Prompting frühere Fehler in wiederverwendbare und dauerhafte Schutzmaßnahmen um.',
+      ],
+    },
+    whatYouCanConstrain: {
+      title: 'Was Sie Mit Negativem Prompting Einschränken Können',
+      content: [
+        '**Sie können Negatives Prompting auf Inhalte, Ton, Struktur und Verhalten anwenden.** Das Ziel ist, spezifisch genug zu sein, damit das Modell genau weiß, was zu vermeiden ist.',
+        'Übliche negative Einschränkungen:',
+      ],
+      items: [
+        'Inhalt: „Keine medizinischen Ratschläge einschließen", „keine Mitbewerber erwähnen", „keine Rechtsmeinung abgeben".',
+        'Ton: „Keine Hype-Begriffe wie \'revolutionär\' oder \'disruptiv\'", „keine Emojis", „Sarkasmus vermeiden".',
+        'Struktur: „Keine Einleitung hinzufügen", „keine nummerierten Listen verwenden", „keine Schlussfolgerung einschließen".',
+        'Verhalten: „Keine erfundenen Statistiken erfinden", „bei Unsicherheit, Unsicherheit zugeben statt zu raten".',
+      ],
+    },
+    combiningNote: {
+      content: [
+        'Die Kombination positiver und negativer Anweisungen ergibt eine viel straffere Prompt-Spezifikation.',
+      ],
+    },
+    zusammenfassung: {
+      title: 'Zusammenfassung: Negatives Prompting im Überblick',
+      content: [
+        'Negatives Prompting ist eine grundlegende Technik zur Steuerung von KI-Ausgaben durch explizite „Nicht-Tun"-Regeln. Im Gegensatz zu positiven Anweisungen (die sagen, was zu tun ist) definieren negative Anweisungen, was zu vermeiden ist—und sind oft genau so wirksam. In der Praxis arbeiten positive und negative Prompts zusammen: Sie geben Kontext und Ziele vor, während negative Grenzen setzen. Für regelmäßig wiederholte Aufgaben (Kundenkommunikation, interne Berichte, öffentliche Inhalte) kann Negatives Prompting dazu beitragen, Fehler zu verhindern, bevor sie entstehen. Mit PromptQuorum können Sie diese Regeln einmal definieren und über alle Modelle und Aufgaben hinweg anwenden.',
+      ],
+    },
+    example: {
+      title: 'Beispiel: Ohne und Mit Negativem Prompting',
+      content: [
+        '**Die Auswirkung des Negatives Prompting wird deutlich, wenn Sie einen generischen Prompt mit einem vergleichen, der explizite „Nicht-Tun"-Regeln enthält. Hier ist ein Beispiel aus dem deutschen Geschäftskontext.**',
+        '**[Schwacher Prompt]**',
+        '„Schreibe eine Produktbeschreibung für unser neues Analyse-Dashboard für unsere deutschen Kunden."',
+        '**[Besserer Prompt]**',
+        '„Sie sind ein B2B-Produktmanager für deutschsprachige Märkte. Aufgabe: Schreiben Sie eine Produktbeschreibung für unser neues Analyse-Dashboard, das auf Betriebsleiter in DACH-Unternehmen abzielt. Einschränkungen (Negatives Prompting): Verwenden Sie keine Marketing-Begriffe wie \'revolutionär\', \'disruptiv\' oder \'bahnbrechend\'. Erwähnen Sie keine Konkurrenzprodukte und vergleichen Sie uns nicht mit anderen Tools. Versprechen Sie keine zukünftigen Funktionen; beschreiben Sie nur, was heute existiert. Bleiben Sie unter 180 Wörtern. Format: 1 kurzer Absatz für die Übersicht, gefolgt von 3 Stichpunkten für die wichtigsten Vorteile."',
+        'Diese „bessere" Version kodiert bekannte Fallstricke (Überverkauf, Spekulation, Vergleiche) direkt in den Anweisungen ein und reduziert den Bedarf für manuelle Überarbeitung.',
+      ],
+    },
+    whenToUse: {
+      title: 'Wann Negatives Prompting Verwenden',
+      content: [
+        '**Verwenden Sie Negatives Prompting, wenn Sie klare Beispiele haben, was Sie nie wieder sehen möchten.** Es ist besonders nützlich in wiederholbaren Workflows, wo die gleichen Fehler immer wieder auftauchen.',
+        'Typische Anwendungsfälle:',
+      ],
+      items: [
+        'Kundenkommunikation, wo Ton, Aussagen und Zusagen an strenge Richtlinien gebunden sein müssen.',
+        'Regulierte Kontexte (Finanzen, Gesundheit, Recht), wo bestimmte Arten von Ratschlägen oder Formulierungen vermieden werden müssen.',
+        'Interne Dokumentation oder Berichte, die keine vertraulichen Details, persönliche Daten oder Spekulationen enthalten dürfen.',
+        'Öffentliche Inhalte, wo Sie sensible Themen, politische Meinungen oder kontroverse Sprache vermeiden möchten.',
+        'Compliance-Dokumentation und Regulatory Filings in DACH-Unternehmen, wo gesetzliche und normative Vorgaben in jedes Wort eingearbeitet werden müssen.',
+      ],
+    },
+    productionNote: {
+      content: [
+        'Bei schnellen, risikoarmen Experimenten können Sie Negatives Prompting leicht halten. Wenn Prompts in produktive Workflows übergehen, wächst die Liste der „Nicht-Tun"-Regeln normalerweise.',
+      ],
+    },
+    inPromptQuorum: {
+      title: 'Negatives Prompting in PromptQuorum',
+      content: [
+        '**PromptQuorum ist ein Multi-Modell-Dispatch-Tool, bei dem Negatives Prompting in wiederverwendbare Frameworks integriert werden kann, statt es jedes Mal neu zu schreiben.** Sie definieren Standard-Negative-Constraints einmal und können sie auf viele Aufgaben anwenden.',
+        'Mit PromptQuorum können Sie:',
+      ],
+      items: [
+        'Negative-Prompting-Blöcke (z.B. „verbotene Begriffe", „unzulässiger Inhalt", „Stilbeschränkungen") zu Frameworks wie SPECS (S — Umfang | P — Zweck | E — Beispiele | C — Constraints | S — Spezifikation), RTF (R — Rolle | T — Aufgabe | F — Format) oder CRAFT hinzufügen, damit sie sich automatisch anwenden.',
+        'Gemeinsame Listen von „Nicht-Tun"-Regeln für Ihre Brand oder Ihr Team pflegen und konsistente Schutzmaßnahmen über alle Prompts und Modelle hinweg sicherstellen.',
+        'Denselben negativ constraints Prompt über verschiedene Modelle hinweg ausführen, um zu sehen, welcher Provider sich am besten an Ihre Grenzen hält.',
+      ],
+    },
+    pqConversion: {
+      content: [
+        'Wenn Sie Negatives Prompting als Teil Ihrer Prompt-Architektur behandeln, hilft Ihnen PromptQuorum, vergangene Fehler in dauerhafte, wiederverwendbare Constraints umzuwandeln.',
+      ],
+    },
+    howToStart: {
+      title: 'Wie Sie Negatives Prompting Einsetzen',
+      numberedItems: [
+        '**Identifizieren Sie, was Sie in der Ausgabe nicht sehen möchten: spezifische Wörter, Töne, Stile oder Ansätze.** Beispiel: „Verwenden Sie keine Marketing-Begriffe. Machen Sie keine Zusagen. Referenzieren Sie keine Konkurrenten."',
+        '**Drücken Sie Negative explizit aus, indem Sie „nicht", „darf nicht" oder „niemals" verwenden.** Weiche Formulierungen wie „versuchen zu vermeiden" sind weniger wirksam. Seien Sie direkt: „Verwenden Sie niemals die Wörter \'disruptiv\', \'revolutionär\' oder \'KI-gesteuert\'."',
+        '**Geben Sie negative Beispiele an: zeigen Sie dem Modell, was Sie explizit nicht möchten.** Beispiel: „Schreiben Sie nicht so: \'Exponentielles Wachstum mit unserer KI-Lösung.\' Schreiben Sie nicht so: \'Unsere Spitzenplattform nutzt maschinelles Lernen.\' Schreiben Sie stattdessen: [positives Beispiel]."',
+        '**Kombinieren Sie positive und negative Anleitung.** Sagen Sie nicht nur, was zu vermeiden ist—sagen Sie auch, was stattdessen zu tun ist. Beispiel: „Verwenden Sie keine Marketing-Sprache. Konzentrieren Sie sich auf spezifische, messbare Vorteile."',
+        '**Verwenden Sie Negatives Prompting sparsam—es kann das Modell manchmal verwirren.** Positive Anleitung („schreiben Sie klar und technisch") funktioniert oft besser als schweres negatives Prompting („sei nicht vage, vereinfache nicht, lass keine Details weg"). Balancieren Sie beide Ansätze.',
+      ],
+    },
+    zusatzFaqs: {
+      title: 'Häufig Gestellte Fragen zum Negatives Prompting in DACH',
+      content: [
+        'Zwei zusätzliche Fragen zu DSGVO-Compliance und Enterprise-Herausforderungen:',
+      ],
+      faqs: [
+        {
+          q: 'Wie stelle ich sicher, dass mein Negatives Prompting datenschutzkonform ist?',
+          a: 'DSGVO-Konformität bei Negatives Prompting bedeutet, dass Sie sensible personenbezogene Daten nicht in die negativen Regeln selbst einbeziehen sollten. Verwenden Sie stattdessen abstrakte Kategorien (z.B. „entfernen Sie alle Kundennamen und E-Mail-Adressen" statt „niemals Max Mustermann@example.de erwähnen"). Dokumentieren Sie Ihre negativen Constraints und deren Zweck in Ihrer Datenschutzerklärung. Wenn Sie PromptQuorum verwenden, stellen Sie sicher, dass Logs mit sensiblen Daten entsprechend geschützt sind.',
+        },
+        {
+          q: 'Welche Herausforderungen gibt es beim Negatives Prompting in DACH-Unternehmen?',
+          a: 'DACH-Unternehmen (Deutschland, Österreich, Schweiz) stehen vor besonderen Herausforderungen: (1) Rechtliche Anforderungen sind streng und regional unterschiedlich—Negatives Prompting muss diese nuanciert erfassen. (2) Compliance-Dokumentation ist umfangreich; die Constraints müssen revisionssicher sein. (3) Sprachliche Präzision ist kritisch—German-speaking Nutzer erwarten exakte Formulierungen, keine Vereinfachungen. (4) Große Enterprise-Organisationen benötigen zentrale Templates für Constraints, um konsistente Standards über Teams hinweg zu gewährleisten. PromptQuorum adressiert diese durch wiederverwendbare Constraint-Sets und Audit-Trails.',
+        },
+      ],
+    },
+  },
+},
     fr: {
       theme: 'Techniques',
       title: 'Guidage Négatif : Dire à l\'IA Ce qu\'Elle NE Doit PAS Faire',
