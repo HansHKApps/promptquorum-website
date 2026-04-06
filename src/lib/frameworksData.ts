@@ -11,6 +11,8 @@ export type Framework = {
   badge?: string
   related: string[]
   faq: { q: string; a: string }[]
+  seoTitle?: string
+  metaDescription?: string
 }
 
 export const FRAMEWORKS: Framework[] = [
@@ -19,6 +21,8 @@ export const FRAMEWORKS: Framework[] = [
     name: 'CO-STAR',
     expansion: 'Context · Objective · Style · Tone · Audience · Response',
     tagline: 'The Singapore GPT-4 competition winner. Maximum control over voice, audience, and output format.',
+    seoTitle: 'CO-STAR Prompt Framework: Full Guide with Templates 2026',
+    metaDescription: 'Master the CO-STAR framework with practical templates and real-world examples for better AI outputs.',
     complexity: 'Medium',
     badge: 'Won Singapore GPT-4 Competition',
     fields: [
@@ -56,6 +60,8 @@ export const FRAMEWORKS: Framework[] = [
     name: 'CRAFT',
     expansion: 'Context · Role · Action · Format · Target',
     tagline: 'Role-based framing with a clear target audience. Great for marketing, copywriting, and creative work.',
+    seoTitle: 'CRAFT Prompt Framework: Complete Guide with Examples 2026',
+    metaDescription: 'Master the CRAFT framework (Context, Role, Action, Format, Tone) with real examples and templates for better prompts.',
     complexity: 'Medium',
     fields: [
       { name: 'Context', description: 'Background the AI needs — what project, product, or situation this relates to.' },

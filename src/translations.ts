@@ -85,8 +85,8 @@ export const translations = {
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt Engineering Hub: 80 Guides | PromptQuorum",
     promptEngineeringHubDescription: "80 research-backed articles on prompt engineering techniques, frameworks (CO-STAR, CRAFT, RISEN), tools, evaluation, governance, and workflows for developers.",
-    localLlmsHubTitle: "Local LLMs 2026: Run AI Models Offline | PromptQuorum",
-    localLlmsHubDescription: "Complete guides to running local AI models with Ollama, LM Studio, and open-source models (Llama, Qwen, DeepSeek). Hardware requirements, benchmarks, setup.",
+    localLlmsHubTitle: "Local LLMs 2026: Complete Guide to Running AI Privately | PromptQuorum",
+    localLlmsHubDescription: "Best local LLMs, tools, and setup guides for 2026. Compare Ollama, LM Studio, and more for private, cost-free AI.",
     compareMetaTitle: "PromptQuorum vs. Competitors: Feature Comparison (2026)",
     compareMetaDescription: "Compare PromptQuorum with Poe, LM Arena, OpenMark, and AiZolo: dispatch, consensus, local LLM support, API key control, framework library.",
     frameworksMetaTitle: "Prompt Frameworks: CO-STAR, CRAFT, RISEN & More",

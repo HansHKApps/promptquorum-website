@@ -33,10 +33,12 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
 
   const post = blogContent[postId][selectedLang] || blogContent[postId]['en']
   const canonicalUrl = `https://www.promptquorum.com/blog/${slug}`
+  const pageTitle = (post as any).seoTitle ?? post.title
+  const metaDesc = (post as any).metaDescription ?? post.intro
 
   return {
-    title: `${post.title} | PromptQuorum Blog`,
-    description: post.intro,
+    title: `${pageTitle} | PromptQuorum Blog`,
+    description: metaDesc,
     alternates: {
       canonical: canonicalUrl,
       languages: {

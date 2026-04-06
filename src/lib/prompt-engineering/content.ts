@@ -25,6 +25,7 @@ export interface PEArticle {
   theme: string
   title: string
   intro: string
+  seoTitle?: string          // Overrides title in <title> tag for SERP CTR optimisation
   metaDescription?: string   // 150–160 char SEO-optimised description for meta tag (falls back to intro if absent)
   publishDate: string
   dateModified?: string
@@ -213,7 +214,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Fundamentals',
       title: 'What Is Prompt Engineering? — PromptQuorum Guide',
+            seoTitle: 'What Is Prompt Engineering in 2026? Complete Beginner Guide',
       intro: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs like GPT-4o, Claude, and Gemini. Learn essential techniques, frameworks, and why it matters to AI output quality.',
+            metaDescription: 'Simple explanation of prompt engineering, why it still matters, and how to use it effectively with modern LLMs and local models.',
       publishDate: '2026-03-01',
       readTime: '10 min read',
       educationalLevel: 'Beginner',
@@ -1434,7 +1437,9 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
     en: {
       theme: 'Fundamentals',
       title: 'From GPT-2 to Today: How Prompt Engineering Evolved',
+            seoTitle: 'History of Prompt Engineering: Evolution & Key Milestones 2022–2026',
       intro: 'The history of prompt engineering from GPT-3 and few-shot prompting in 2020 to context design in 2026. Key milestones, papers, and turning points.',
+            metaDescription: 'Complete timeline of how prompt engineering evolved from basic prompts to advanced frameworks and local LLM optimization in 2026.',
       publishDate: '2026-03-01',
       readTime: '10 min read',
       educationalLevel: 'Beginner',
@@ -3496,6 +3501,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'AI Hallucinations: Why AI Makes Things Up — and How to Stop Them',
       intro: 'Large language models confidently produce false information. These errors—called hallucinations—range from invented citations to fabricated facts presented with complete authority. Understanding why they happen and how to detect and reduce them is essential for anyone using LLMs in real work.',
       publishDate: '2026-03-22',
+      seoTitle: 'Why AI Hallucinates & How to Reduce It in 2026 (Local LLMs Included)',
+      metaDescription: 'Understand why LLMs hallucinate and learn proven prompting techniques to minimize errors. Special section on local LLMs and PromptQuorum consensus scoring.',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'AI Hallucination',
@@ -4800,6 +4807,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Temperature and Top-P: Control AI Creativity',
       intro: 'Temperature and top-p control how adventurous or conservative an AI\'s word choices are. By tuning these settings, you trade off creativity versus reliability—higher values produce surprising, varied outputs; lower values produce safe, predictable ones.',
       publishDate: '2026-03-22',
+      seoTitle: 'Temperature and Top-p Explained: Control AI Creativity in 2026',
+      metaDescription: 'Clear guide to temperature and top-p settings. Learn how to balance creativity vs accuracy in ChatGPT, Claude, and local LLMs.',
       readTime: '10 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Temperature and Top-P Sampling',
@@ -6790,6 +6799,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Context Windows Explained: Why AI Forgets (and What to Do)',
       intro: 'LLMs don\'t have long-term memory — they only "see" a sliding window of recent tokens. Learn why AI forgets context, how to structure prompts to stay within limits, and how to manage context windows across cloud and local models.',
       publishDate: '2026-03-22',
+      seoTitle: 'Context Windows Explained: Why AI Forgets & How to Fix It 2026',
+      metaDescription: 'Learn what context windows are, why LLMs forget information, and practical techniques to maximize context in ChatGPT, Claude, Gemini, and local LLMs like Ollama.',
       readTime: '11 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'Context Window',
@@ -6867,6 +6878,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Beyond Text: How to Prompt With Images',
       intro: 'Multimodal prompting—combining images with text—unlocks capabilities in vision-language models like GPT-4o and Claude 4.6 Sonnet. Learn precise patterns for describing, analyzing, generating, and editing images.',
       publishDate: '2026-03-25',
+      seoTitle: 'Prompting with Images 2026: How to Use Vision Models Effectively',
+      metaDescription: 'Master multimodal prompting with images in GPT-4o, Claude, Gemini and local vision models.',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
       schema: {
@@ -6939,6 +6952,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Tokens, Costs & Limits: The Economics of AI Prompting',
       intro: 'Every AI API call is measured and billed in tokens — the unit that controls both what the model can process and how much you pay. Understanding tokens is the foundation of efficient, cost-effective prompting.',
       publishDate: '2026-03-22',
+      seoTitle: 'AI Prompting Costs & Token Limits Explained 2026',
+      metaDescription: 'Complete guide to tokens, costs, and context limits across major models including local LLMs.',
       readTime: '13 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'LLM Tokens',
@@ -7765,6 +7780,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'GPT, Claude or Gemini: How to Pick the Right AI Model',
       intro: 'No single AI model is best for every task. GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, DeepSeek, and Baidu ERNIE each win on different tasks, geographies, and budgets. This guide gives you a practical decision framework — not another benchmark list.',
       publishDate: '2026-03-23',
+      seoTitle: 'GPT vs Claude vs Gemini 2026: Which Model Should You Use?',
+      metaDescription: 'Honest comparison of GPT-4o, Claude 3.5, Gemini 2.0 and when to choose each. Includes local LLM alternatives.',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
       schema: {
@@ -10718,6 +10735,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Extract and Summarise With AI',
       intro: 'AI-powered extraction and summarisation reduces document review time by 60—80% while achieving hallucination rates as low as 0.7% on grounded summarisation tasks — the key is choosing the right summarisation type, the right model, and the right prompt structure for each document category.',
       publishDate: '2026-03-23',
+      seoTitle: 'How to Extract and Summarize Documents with AI Prompts 2026',
+      metaDescription: 'Best prompting techniques for accurate document extraction and summarization using local LLMs and cloud models.',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
       schema: {
@@ -11082,6 +11101,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'AI Code Review: Tools, Hallucination Rates, and Verification Workflows',
       intro: 'AI code review tools detect 42–48% of real-world runtime bugs in automated reviews — more than double the sub-20% detection rate of traditional static analysis tools — while reducing code review time by 40% and cutting production bugs by 62%. In 2026, 84% of developers now use AI tools and 41% of all new code is AI-generated, creating a feedback loop where AI that writes code must also review it.',
       publishDate: '2026-03-24',
+      seoTitle: 'AI Code Review 2026: Best Tools & Prompts for Faster Reviews',
+      metaDescription: 'Use AI for smarter code reviews with practical prompts. Compare local LLM options vs cloud models for private and accurate code analysis.',
       readTime: '11 min read',
       educationalLevel: 'Beginner',
       schema: {
@@ -13497,6 +13518,8 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
       title: 'Prompt Injection & Security: How to Defend AI Systems',
       intro: 'Prompt injection — embedding malicious instructions in user input or documents to override system-prompt controls — is OWASP LLM #1. Learn attack types, jailbreaking differences, and 5 layered defenses.',
       publishDate: '2026-03-30',
+      seoTitle: 'Prompt Injection Attacks 2026: How to Protect Your AI Prompts',
+      metaDescription: 'Learn common prompt injection techniques and proven defense strategies for safe prompting with local and cloud LLMs.',
       dateModified: '2026-03-30',
       readTime: '10 min read',
       schema: {
@@ -15459,8 +15482,9 @@ def wrap_retrieved_context(doc_text: str, user_query: str) -> str:
       theme: 'Fundamentals',
       title: 'AI Limitations — What LLMs Can\'t Do',
       intro: 'Large language models cannot access real-time data, verify their own outputs, or reason reliably through multi-step logic. Understanding these structural limits is the prerequisite for writing prompts that produce reliable results. This guide covers the eight hard limits that apply to every LLM — OpenAI GPT-4o, Anthropic Claude 4.6 Sonnet, Google Gemini 2.5 Pro, and open-source alternatives alike.',
-      metaDescription: 'The 8 structural limits of LLMs in 2026 — knowledge cutoffs, hallucination, no real-world actions — plus proven prompting workarounds and PromptQuorum test results.',
       publishDate: '2026-03-24',
+      seoTitle: 'AI Limitations 2026: What LLMs Still Can\'t Do (And How to Work Around It)',
+      metaDescription: 'Realistic look at current LLM limitations and practical strategies to overcome them using better prompting and local LLMs.',
       dateModified: '2026-04-01',
       readTime: '11 min read',
       educationalLevel: 'Intermediate',
@@ -19770,8 +19794,9 @@ zh: {
       theme: 'Policy & Compliance',
       title: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
       intro: 'The US, China, and European Union are pursuing incompatible visions of AI governance — the US prioritizes competitiveness, China emphasizes state control, and the EU builds a rights-based legal framework. For organizations deploying AI, these differences translate into concrete compliance obligations, procurement constraints, and data residency requirements that apply regardless of where the organization is headquartered.',
-      metaDescription: 'AI geopolitics explained: EU AI Act enforcement, US vs China AI strategy, and global AI regulation risks. What organizations deploying AI need to know in 2026.',
       publishDate: '2026-04-01',
+      seoTitle: 'Geopolitics and AI 2026: US vs China vs EU Race Explained',
+      metaDescription: 'Discover how US, China, and EU AI regulations, investments, and chip wars shape prompt engineering and local LLMs in 2026. Practical guide with key takeaways for developers.',
       dateModified: '2026-04-02',
       readTime: '16 min read',
       educationalLevel: 'Intermediate',
@@ -21858,6 +21883,8 @@ zh: {
       title: 'Which Prompt Framework Should You Use?',
       intro: 'The right prompt framework depends on your task, your experience level, and whether you are optimizing for creativity, precision, or reliable reasoning. PromptQuorum makes this choice easier by including multiple frameworks, an automatic selector, and a custom framework builder directly in the app.',
       publishDate: '2026-03-24',
+      seoTitle: 'Which Prompt Framework Should You Use in 2026? CRAFT vs CO-STAR vs Others',
+      metaDescription: 'Clear comparison of popular prompt frameworks to help you choose the right one for your needs.',
       readTime: '9 min read',
       educationalLevel: 'Intermediate',
       schema: {
@@ -27359,6 +27386,8 @@ zh: {
       title: 'Prompt Chaining: How to Break Big Tasks Into Winning Steps',
       intro: 'Prompt chaining is a technique where you break a complex task into multiple smaller prompts and feed the output of one step into the next. This lets you build reliable multi-step workflows instead of relying on a single, overly complicated prompt.',
       publishDate: '2026-03-26',
+      seoTitle: 'Prompt Chaining Guide 2026: How to Build Complex AI Workflows',
+      metaDescription: 'Learn prompt chaining techniques to create powerful multi-step AI workflows. Real examples and best practices for local and cloud LLMs.',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Prompt Chaining',
@@ -27803,6 +27832,8 @@ zh: {
       title: 'Self-Consistency Prompting: Let the AI Check Its Own Work',
       intro: 'Self-consistency prompting is a technique where you ask the model to generate multiple reasoning paths for the same task and then aggregate the results, instead of trusting a single answer. This increases reliability on complex reasoning problems.',
       publishDate: '2026-03-26',
+      seoTitle: 'Self-Consistency Prompting: How to Get More Reliable AI Answers',
+      metaDescription: 'Improve AI reliability using self-consistency prompting. Step-by-step guide with examples for complex reasoning tasks.',
       readTime: '7 min read',
       schema: {
         '@context': 'https://schema.org',
@@ -28357,8 +28388,9 @@ zh: {
       theme: 'Fundamentals',
       title: 'Prompt Engineering Glossary: 500 Key Terms',
       intro: 'Concise definitions of the 500 most important prompt engineering terms — from tokens and context windows to agent orchestration, RAG, and evaluation metrics.',
-      metaDescription: 'Definitions of 500 prompt engineering terms — from tokens and context windows to agent orchestration, RAG, RLHF, and evaluation metrics. Reference guide for all skill levels.',
       publishDate: '2026-03-28',
+      seoTitle: 'Prompt Engineering Glossary 2026: 500+ Terms Clearly Explained',
+      metaDescription: 'Comprehensive A–Z glossary of prompt engineering, local LLM, and AI terms with clear definitions and examples — the ultimate reference guide.',
       readTime: '12 min read',
       educationalLevel: 'Beginner',
       sections: {

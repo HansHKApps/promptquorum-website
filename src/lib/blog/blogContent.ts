@@ -19,6 +19,7 @@ export interface BlogPost {
   category: string
   title: string
   intro: string
+  seoTitle?: string
   publishDate: string
   readTime: string
   sections: Record<string, BlogSection>
@@ -4334,8 +4335,9 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       title: 'Automatic Prompt Optimization: Your Guide to the 8 Refinement Tools',
       intro: 'As of April 2026: Automatic prompt optimization is AI-powered transformation that restructures rough, unclear prompts into professional, structured versions in seconds. PromptQuorum\'s optimization engine improves prompt quality scores from an average of 48% (manual) to 82% (auto-optimized) while reducing optimization time from 20-30 minutes to 2-3 minutes.',
       publishDate: 'Published March 14, 2026',
+      seoTitle: 'Prompt Optimization Guide 2026: 6 Levers to Get Better AI Results',
       readTime: '12 min read',
-      metaDescription: 'Optimize prompts with frameworks, techniques, evaluation metrics. Chain-of-thought, few-shot, constraints. Free beta — April 2026.',
+            metaDescription: 'Master prompt optimization techniques to improve AI output quality by 20–40%. Step-by-step guide with real examples and tips for local LLMs.',
       educationalLevel: 'Intermediate',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -6113,6 +6115,8 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       title: 'What Is AI Consensus Scoring? How PromptQuorum Detects Agreement Across Models',
       intro: 'Consensus scoring analyses responses from multiple AI models and measures where they agree, where they diverge, and what that pattern tells you about the reliability of an answer.',
       publishDate: 'Published March 17, 2026',
+      seoTitle: 'What Is AI Consensus Scoring & Why It Reduces Hallucinations',
+      metaDescription: 'Learn how consensus scoring works and why it produces more reliable answers than single-model prompting.',
       readTime: '6 min read',
       sections: {
         problem: {
@@ -6258,6 +6262,8 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       title: 'PromptQuorum vs AskQuorum AI — What\'s the Difference?',
       intro: 'Two tools, similar names, very different products. Here\'s a clear breakdown of what PromptQuorum and AskQuorum AI each do, who they\'re built for, and why they\'re not the same thing.',
       publishDate: 'Published March 17, 2026',
+      seoTitle: 'PromptQuorum vs AskQuorum 2026: Honest Comparison & Which to Choose',
+      metaDescription: 'Detailed comparison of PromptQuorum and AskQuorum. Features, privacy, local LLM support, and final recommendation for prompt engineers.',
       readTime: '4 min read',
       sections: {
         overview: {

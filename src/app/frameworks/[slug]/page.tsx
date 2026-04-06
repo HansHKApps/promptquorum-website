@@ -12,9 +12,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const fw = getFramework(slug)
   if (!fw) return {}
+  const fwTitle = (fw as any).seoTitle ?? `${fw.name} Prompt Framework — Fields, Examples & When To Use It | PromptQuorum`
+  const fwDesc = (fw as any).metaDescription ?? `${fw.expansion}. ${fw.tagline} See all fields, a real example, and when to use ${fw.name} vs other prompt frameworks.`
   return {
-    title: `${fw.name} Prompt Framework — Fields, Examples & When To Use It | PromptQuorum`,
-    description: `${fw.expansion}. ${fw.tagline} See all fields, a real example, and when to use ${fw.name} vs other prompt frameworks.`,
+    title: fwTitle,
+    description: fwDesc,
     alternates: generateAlternates(`/frameworks/${fw.slug}`),
     openGraph: {
       type: 'article',
