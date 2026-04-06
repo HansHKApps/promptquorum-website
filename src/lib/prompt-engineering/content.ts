@@ -9375,26 +9375,46 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
 
   'write-better-code-with-ai': {
     en: {
-      theme: 'Fundamentals',
-      title: 'Write Better Code With AI',
-      intro: 'AI coding assistants reduce time spent on code generation, debugging, and documentation by 30–75% when used with structured prompts and human review. In 2026, 41% of all code written globally is AI-generated or AI-assisted — making prompt quality the single most important variable in the output you receive.',
+      theme: 'Use Cases',
+      title: 'How to Write Better Code With AI: Prompts, Models, and Security in 2026',
+      intro: 'AI coding tools reduce development time by 30–75% — but only when the developer writes structured prompts, not casual questions. The model\'s output quality is directly determined by how explicitly you specify role, constraints, and expected output. As of April 2026, Claude 4.6 Sonnet leads on backend code and bug tracing, GPT-4o leads on algorithm design, and LLaMA 3.1 via Ollama runs entirely on your own hardware. AI still introduces security vulnerabilities in 45% of generated code — making review and linting non-negotiable before deployment.',
       publishDate: '2026-03-22',
+      dateModified: '2026-04-05',
       readTime: '15 min read',
+      seoTitle: 'Write Better Code With AI: Prompts, Models & Security (2026)',
+      metaDescription: 'Master AI code generation with structured prompts, model comparison, and security workflows. Learn temperature settings, local models, and how to avoid 45% of hallucinations.',
       educationalLevel: 'Beginner',
+      toc: [
+        { label: 'The Direct Answer: Prompt Quality Determines Code Quality', anchor: '#the-direct-answer-prompt-quality-determines-code-quality' },
+        { label: 'Which AI Model to Use for Coding Tasks', anchor: '#which-ai-model-to-use-for-coding-tasks' },
+        { label: 'How to Write Prompts That Produce Better Code', anchor: '#how-to-write-prompts-that-produce-better-code' },
+        { label: 'Chain-of-Thought Prompting for Debugging', anchor: '#chain-of-thought-prompting-for-debugging' },
+        { label: 'Inject Coding Rules as Persistent Instructions', anchor: '#inject-coding-rules-as-persistent-instructions' },
+        { label: 'AI Coding Tools: A Practical Comparison', anchor: '#ai-coding-tools-a-practical-comparison' },
+        { label: 'The Security Problem: What AI Gets Wrong', anchor: '#the-security-problem-what-ai-gets-wrong' },
+        { label: 'Temperature and Context Window: Parameters That Affect Code Quality', anchor: '#temperature-and-context-window-parameters-that-affect-code-quality' },
+        { label: 'Global and Regional AI Coding Context', anchor: '#global-and-regional-ai-coding-context' },
+        { label: 'Common Mistakes When Using AI for Code', anchor: '#common-mistakes-when-using-ai-for-code' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Frequently Asked Questions', anchor: '#frequently-asked-questions' },
+        { label: 'Sources & Further Reading', anchor: '#sources--further-reading' },
+      ],
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Write Better Code With AI',
-        description: 'Guide to using AI coding assistants effectively — which models to use, how to structure prompts, and how to avoid security vulnerabilities in AI-generated code.',
+        headline: 'How to Write Better Code With AI: Prompts, Models, and Security in 2026',
+        description: 'Master AI code generation with structured prompts, model comparison, and security workflows. Learn temperature settings, local models, and how to avoid 45% of hallucinations.',
         datePublished: '2026-03-22',
-        dateModified: '2026-03-22',
-        author: { '@type': 'Organization', name: 'PromptQuorum' },
+        dateModified: '2026-04-05',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         keywords: 'AI coding, prompt engineering, code generation, Claude, GPT-4o, Gemini, security vulnerabilities, temperature, context window',
         about: [
-          { '@type': 'Thing', name: 'Prompt Engineering' },
-          { '@type': 'Thing', name: 'Code Generation' },
-          { '@type': 'Thing', name: 'AI Models' },
+          { '@type': 'Thing', name: 'AI code generation' },
+          { '@type': 'Thing', name: 'Prompt engineering' },
+          { '@type': 'Thing', name: 'Code security' },
+          { '@type': 'Thing', name: 'GitHub Copilot' },
+          { '@type': 'Thing', name: 'Claude Code' },
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-4o' },
@@ -9408,6 +9428,43 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
         },
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Write Prompts That Produce Better Code',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Define the role',
+            text: 'Specify your role: "You are a senior Python backend engineer" or "You are a React specialist." Role definition anchors the model\'s expertise.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'State the objective',
+            text: 'Define what you want: "Write a REST API endpoint" or "Debug this function." Be specific about the task.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Specify constraints',
+            text: 'List requirements: "Use FastAPI. No external validation libraries. Handle missing fields with HTTP 422."',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Define output format',
+            text: 'Specify what to return: "Return only the Python code. No prose explanation."',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'List edge cases to handle',
+            text: 'Describe edge cases: "Handle empty strings and null values in all fields. Reject invalid JSON."',
+          },
+        ],
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -9453,22 +9510,75 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
               text: 'No. AI tools are trained primarily on English-language codebases, meaning Python and JavaScript receive the strongest support. For Japanese (kanji/kana), Chinese, or other CJK-heavy projects, Qwen 2.5 (Alibaba) or DeepSeek V3 provide faster token processing because their tokenizers handle CJK scripts at a better ratio than Western-trained models.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'What temperature should I use for AI code generation?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Set temperature to 0.1–0.2 for production code generation. This produces deterministic, conservative output with minimal random variation. Use temperature 0.7–0.9 only when brainstorming algorithmic approaches where you want diverse options to evaluate — not when writing code that will be deployed.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What are hallucinated dependencies in AI coding?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Hallucinated dependencies are package or library names that the model recommends but do not actually exist. Research found that AI models recommend non-existent libraries 20% of the time. Attackers exploit this via slopsquatting — registering the hallucinated package name with malicious code. Always verify any AI-suggested package on PyPI or npm before installing.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I use AI coding tools with local LLMs for privacy?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. LLaMA 3.1 7B running via Ollama on a machine with 8GB RAM produces zero external API calls. All inference happens on your hardware. This is suitable for codebases containing proprietary algorithms, credentials in source files, or any code that cannot leave your infrastructure. Quality is lower than GPT-4o or Claude for complex tasks but acceptable for boilerplate and simple functions.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I write a system prompt for AI coding tools?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Define four things in your system prompt: (1) the technical role ("senior Python backend engineer"), (2) the tech stack and forbidden libraries, (3) code style rules ("TypeScript strict mode, no any types"), (4) output format ("return only code, no prose"). Persist this as a project-level rule in Cursor, Claude Code, or your IDE\'s AI settings so it applies across all sessions.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Does GitHub Copilot or Cursor produce fewer bugs?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Cursor produces fewer format errors at ~10–15% hallucination rate versus Copilot\'s ~15–20%, primarily because Cursor uses project-level RAG indexing to understand your existing codebase. For single-file boilerplate tasks the gap is small. For multi-file refactoring where architectural consistency matters, Cursor\'s codebase context produces measurably fewer integration errors.',
+            },
+          },
         ],
       },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'AI Code Generation: Key Topics',
-        'description': 'Core concepts for writing better code with AI assistance',
+        'name': 'AI Coding Tools Comparison 2026',
+        'description': 'Comparing hallucination rates, architecture awareness, and best use cases for AI coding assistants',
+        'numberOfItems': 5,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Prompt Quality Determines Code Quality', 'description': 'How structured prompts and clear specifications produce better code outcomes' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Which Model to Use for Coding Tasks', 'description': 'Comparing Claude, GPT-4o, Gemini, and local models across different coding scenarios' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Prompt Structure for Code Generation', 'description': 'How to write prompts with role, objective, constraints, format, and edge cases' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Chain-of-Thought for Debugging', 'description': 'Using CoT prompting to trace errors step-by-step and improve code correctness' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Security in AI-Generated Code', 'description': 'Common vulnerabilities in AI-generated code and review workflows' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'GitHub Copilot', 'description': '15–20% hallucination rate. File-level context. Best for individual developers and boilerplate.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Cursor', 'description': '10–15% hallucination rate. Project-level RAG indexing. Best for teams wanting AI-native IDE.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Claude Code', 'description': 'Lower hallucination on structured tasks. Full codebase context. Best for backend and multi-file refactoring.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Devin', 'description': 'Variable hallucination. Autonomous task execution. Best for autonomous ticket-to-PR pipelines.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Qwen Code', 'description': 'Variable hallucination. Local deployment capable. Best for research and full infrastructure control.' },
         ],
       },
       sections: {
+        tldr: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            'AI reduces coding time by 30–75% — but only when prompts are structured with role, objective, constraints, output format, and edge cases',
+            'Claude 4.6 Sonnet (Anthropic) leads on backend code, API design, and bug tracing; GPT-4o (OpenAI) leads on algorithm design and multi-step reasoning',
+            'Chain-of-Thought (CoT) prompting — "reason step by step before producing code" — makes the model\'s logic inspectable and reduces debugging errors',
+            'AI introduces security vulnerabilities in 45% of generated code; always run security linters before deployment',
+            'Set Temperature (T) to 0.1–0.2 for production code; use 0.7–0.9 only for exploratory algorithmic brainstorming',
+            'LLaMA 3.1 7B via Ollama runs locally with 8GB RAM — zero data leaves your machine, suitable for privacy-sensitive codebases',
+          ],
+        },
         directAnswer: {
           title: 'The Direct Answer: Prompt Quality Determines Code Quality',
           content: [
@@ -9480,7 +9590,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         modelComparison: {
           title: 'Which AI Model to Use for Coding Tasks',
           content: [
-            '**Different models excel at different coding tasks — routing your prompt to the right model reduces errors and token costs.**',
+            '**As of April 2026, different models excel at different coding tasks — routing your prompt to the right model reduces errors and token costs.**',
             'Claude 4.6 Sonnet (Anthropic) dominates backend code generation, API design, database schemas, and multi-file refactoring. GPT-4o (OpenAI) leads for creative algorithmic solutions and complex step-by-step reasoning. Gemini 2.5 Pro (Google DeepMind) handles the longest documents with its 2-million-token context window — useful for codebase-wide analysis.',
           ],
           tableFormat: true,
@@ -9592,7 +9702,7 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
         security: {
           title: 'The Security Problem: What AI Gets Wrong',
           content: [
-            '**AI generates code with security vulnerabilities in 45% of cases — a rate that has not improved as models have become more capable.** A 2025 Veracode report found that when given a choice between a secure and insecure implementation, generative AI models chose the insecure option 45% of the time. Academic research confirms this pattern: over 40% of AI-generated code solutions contain security flaws.',
+            '**As of April 2026, AI generates code with security vulnerabilities in 45% of cases — a rate that has not improved as models have become more capable.** A 2025 Veracode report found that when given a choice between a secure and insecure implementation, generative AI models chose the insecure option 45% of the time. Academic research confirms this pattern: over 40% of AI-generated code solutions contain security flaws.',
             'The three most critical failure categories:',
           ],
           items: [
@@ -9643,24 +9753,28 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             'Japanese enterprises operating under METI data governance guidelines often prefer **Ollama**-based local model deployment. LLaMA 3.1 7B, running locally via Ollama, requires 8GB RAM and produces zero external API calls — meeting strict data residency requirements.',
           ],
         },
-        tldr: {
-          title: 'Key Takeaways',
-          isTldr: true,
+        commonMistakes: {
+          title: 'Common Mistakes When Using AI for Code',
+          content: [
+            '**Avoid these frequent errors when working with AI coding tools:**',
+          ],
           items: [
-            'AI reduces coding time by 30–75% — but only when prompts are structured with role, objective, constraints, output format, and edge cases',
-            'Claude 4.6 Sonnet (Anthropic) leads on backend code, API design, and bug tracing; GPT-4o (OpenAI) leads on algorithm design and multi-step reasoning',
-            'Chain-of-Thought (CoT) prompting — "reason step by step before producing code" — makes the model\'s logic inspectable and reduces debugging errors',
-            'AI introduces security vulnerabilities in 45% of generated code; always run security linters before deployment',
-            'Set Temperature (T) to 0.1–0.2 for production code; use 0.7–0.9 only for exploratory algorithmic brainstorming',
-            'LLaMA 3.1 7B via Ollama runs locally with 8GB RAM — zero data leaves your machine, suitable for privacy-sensitive codebases',
+            '**Treating AI output as ready-to-deploy:** AI generates plausible-looking code, not verified code. Security vulnerabilities appear in 45% of AI-generated code. Every output requires developer review and security linting before deployment.',
+            '**Vague prompts for complex tasks:** "Write a login system" produces insecure defaults. "Write a JWT-based authentication endpoint in FastAPI, using bcrypt for password hashing, returning 401 on invalid credentials, and handling database connection errors with 500" produces usable code. Specificity is the variable.',
+            '**Ignoring the temperature setting:** Default temperature on most platforms is 0.7–1.0 — correct for creative writing, wrong for code. Set temperature to 0.1–0.2 for production code generation on every session.',
+            '**Accepting hallucinated package names:** AI recommends non-existent libraries 20% of the time. Before running pip install or npm install on any AI-suggested package, verify it exists on PyPI or npm and check the download count. Low download counts on a recently-created package are a red flag for slopsquatting.',
+            '**Not providing existing code context:** AI generates code that conflicts with your architecture when it cannot see your existing patterns. Paste relevant existing files or interfaces into the prompt before asking for new implementations.',
           ],
         },
         relatedReading: {
           title: 'Related Reading',
           items: [
-            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the foundational definition of prompt engineering',
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) — step-by-step reasoning for logic and debugging tasks',
-            '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p) — how randomness parameters affect every model output',
+            '[AI Code Review: Tools, Hallucination Rates, and Verification Workflows](/prompt-engineering/ai-code-review) — systematic review workflows for AI-generated code',
+            '[Temperature and Top-P Explained](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — how randomness parameters affect every model output',
+            '[Prompt Injection & Security](/prompt-engineering/prompt-injection-and-security) — security risks in AI-assisted development workflows',
+            '[Persona Prompting](/prompt-engineering/persona-prompting) — how role definitions like "senior Python engineer" change model output quality',
+            '[What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — foundational definition and core concepts',
           ],
         },
         howToStart: {
@@ -9695,6 +9809,26 @@ export const peContent: Record<string, Record<Language, PEArticle>> = {
             {
               q: 'Does AI coding assistance work the same way in all programming languages?',
               a: 'No. AI tools are trained primarily on English-language codebases, meaning Python and JavaScript receive the strongest support. For Japanese (kanji/kana), Chinese, or other CJK-heavy projects, Qwen 2.5 (Alibaba) or DeepSeek V3 provide faster token processing because their tokenizers handle CJK scripts at a better ratio than Western-trained models.',
+            },
+            {
+              q: 'What temperature should I use for AI code generation?',
+              a: 'Set temperature to 0.1–0.2 for production code generation. This produces deterministic, conservative output with minimal random variation. Use temperature 0.7–0.9 only when brainstorming algorithmic approaches where you want diverse options to evaluate — not when writing code that will be deployed.',
+            },
+            {
+              q: 'What are hallucinated dependencies in AI coding?',
+              a: 'Hallucinated dependencies are package or library names that the model recommends but do not actually exist. Research found that AI models recommend non-existent libraries 20% of the time. Attackers exploit this via slopsquatting — registering the hallucinated package name with malicious code. Always verify any AI-suggested package on PyPI or npm before installing.',
+            },
+            {
+              q: 'Can I use AI coding tools with local LLMs for privacy?',
+              a: 'Yes. LLaMA 3.1 7B running via Ollama on a machine with 8GB RAM produces zero external API calls. All inference happens on your hardware. This is suitable for codebases containing proprietary algorithms, credentials in source files, or any code that cannot leave your infrastructure. Quality is lower than GPT-4o or Claude for complex tasks but acceptable for boilerplate and simple functions.',
+            },
+            {
+              q: 'How do I write a system prompt for AI coding tools?',
+              a: 'Define four things in your system prompt: (1) the technical role ("senior Python backend engineer"), (2) the tech stack and forbidden libraries, (3) code style rules ("TypeScript strict mode, no any types"), (4) output format ("return only code, no prose"). Persist this as a project-level rule in Cursor, Claude Code, or your IDE\'s AI settings so it applies across all sessions.',
+            },
+            {
+              q: 'Does GitHub Copilot or Cursor produce fewer bugs?',
+              a: 'Cursor produces fewer format errors at ~10–15% hallucination rate versus Copilot\'s ~15–20%, primarily because Cursor uses project-level RAG indexing to understand your existing codebase. For single-file boilerplate tasks the gap is small. For multi-file refactoring where architectural consistency matters, Cursor\'s codebase context produces measurably fewer integration errors.',
             },
           ],
         },
