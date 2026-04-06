@@ -31325,7 +31325,69 @@ fr: {
         },
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: {
+  theme: 'Techniques',
+  title: 'Tree-of-Thought und ReAct: Fortgeschrittene Reasoning-Techniken für komplexe Probleme',
+  intro: 'Tree-of-Thought und ReAct sind zwei fortgeschrittene Reasoning-Techniken für komplexe Problemlösungen: Tree-of-Thought erkundet mehrere mögliche Lösungswege wie einen Entscheidungsbaum, während ReAct Reasoning mit expliziten "Aktionen" wie Suchen oder Abrufen von Informationen verschachtelt. Beide Techniken zielen darauf ab, komplexe Problemlösungen zuverlässiger und transparenter zu gestalten.',
+  publishDate: '2026-03-26',
+  readTime: '8 min Lesezeit',
+  metaDescription: 'Tree-of-Thought und ReAct: Fortgeschrittene Reasoning-Techniken zur Verbesserung der Zuverlässigkeit und Transparenz bei komplexen Aufgaben. Praktische Anwendung und PromptQuorum-Integration.',
+  primaryTerm: 'Tree-of-Thought und ReAct',
+  seoTitle: 'Tree-of-Thought und ReAct: Reasoning-Techniken für komplexe Probleme',
+  educationalLevel: 'Intermediate',
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Tree-of-Thought und ReAct: Fortgeschrittene Reasoning-Techniken für komplexe Probleme',
+    description: 'Wie Tree-of-Thought und ReAct funktionieren und wann Sie diese Techniken einsetzen, um komplexe Probleme zuverlässiger zu lösen.',
+    datePublished: '2026-03-26',
+    dateModified: '2026-03-26',
+    keywords: ['Tree-of-Thought', 'ReAct', 'Prompt Engineering', 'Reasoning', 'PromptQuorum'],
+    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+    about: [
+      { '@type': 'Thing', name: 'Prompt Engineering' },
+      { '@type': 'Thing', name: 'Große Sprachmodelle' },
+      { '@type': 'Thing', name: 'Reasoning-Techniken' },
+    ],
+  },
+  sections: {
+    whatIsTreeOfThought: {
+      title: 'Was ist Tree-of-Thought?',
+      content: [
+        '**Tree-of-Thought ist eine Prompt-Technik, die das Modell dazu auffordert, mehrere mögliche Lösungswege wie die Äste eines Entscheidungsbaums zu erkunden, bevor es sich auf eine Antwort einigt.** Anstatt linear von Anfang bis Ende zu denken, "verzweigt sich" das Modell und evaluiert verschiedene Wege, um das beste Ergebnis zu finden. Dies ist besonders wertvoll bei Problemen, die mehrere mögliche Lösungsrouten haben oder bei denen der erste Instinkt nicht optimal ist.',
+        'Tree-of-Thought unterscheidet sich von Chain-of-Thought (das einen linearen Gedankenpfad folgt) dadurch, dass es explizit mehrere Kandidaten-Lösungen gleichzeitig evaluiert. Dies macht die KI weniger anfällig für schnelle, fehlerhafte Entscheidungen und verbessert die Qualität bei Aufgaben wie mathematischen Problemen, Puzzle-Lösung und strategischer Planung.',
+      ],
+    },
+    whatIsReAct: {
+      title: 'Was ist ReAct?',
+      content: [
+        '**ReAct (Reasoning + Acting) ist ein Prompt-Muster, bei dem das Modell zwischen Reasoning (Denken über das Problem) und Acting (Durchführung von Aktionen wie API-Aufrufe, Datenbankabfragen oder Web-Suches) wechselt.** Das Modell sagt, was es tun will, führt die Aktion durch, beobachtet das Ergebnis und verwendet diese neuen Informationen für weitere Reasoning-Schritte.',
+        'ReAct ermöglicht es Modellen, über statische Trainingsdaten hinauszugehen, indem sie zur Laufzeit Informationen abrufen. Dies ist besonders wertvoll für Aufgaben, die aktuelle Daten benötigen, oder wenn das Modell externe Systeme (APIs, Datenbanken, Suchmaschinen) aufrufen muss, um eine Aufgabe zu lösen.',
+      ],
+    },
+    zusammenfassung: {
+      title: 'Zusammenfassung: Tree-of-Thought und ReAct im Überblick',
+      content: [
+        'Tree-of-Thought und ReAct sind komplementäre Techniken zur Verbesserung von LLM-Ausgaben. Tree-of-Thought hilft bei Problemen, die mehrere Lösungswege benötigen und gründliche Evaluierung profitieren. ReAct ermöglicht es Modellen, über ihre Trainungsdaten hinauszugehen, indem sie Informationen zur Laufzeit abrufen und Funktionen aufrufen. Für DACH-Unternehmen sind diese Techniken besonders wertvoll in regulierten Kontexten (Bankwesen, Versicherungen, Compliance), wo dokumentierte Entscheidungswege und Zugriff auf aktuelle Daten kritisch sind. Mit PromptQuorum können Sie beide Techniken über mehrere Modelle hinweg testen und optimieren.',
+      ],
+    },
+    zusatzFaqs: {
+      title: 'Häufig gestellte Fragen für DACH-Unternehmen',
+      content: ['Zwei zusätzliche Fragen zu deutschen Anwendungsfällen und Enterprise-Integration:'],
+      faqs: [
+        {
+          q: 'Welche deutschen Anwendungsfälle profitieren am meisten von Tree-of-Thought?',
+          a: 'Deutsche Unternehmen profitieren besonders: (1) **Finanzanalyse** — Mehrere Szenarien gegen Basel-III und Solvency-II-Anforderungen bewerten. (2) **Engineering-Entscheidungen** — Mehrere technische Optionen evaluieren. (3) **Compliance und Risiko-Bewertung** — DSGVO-, EU-AI-Act- und regulatorische Anforderungen bewerten. (4) **Supply Chain Optimierung** — Mehrere Logistik-Strategien bewerten.',
+        },
+        {
+          q: 'Wie setze ich ReAct mit deutschen Enterprise-APIs um?',
+          a: 'ReAct-Implementierung erfordert: Verbinden Sie mit SAP, Oracle oder anderen ERP-Systemen über HTTPS mit OAuth. Nutzen Sie lokale Datenbanken statt Cloud-APIs für DSGVO. Loggen Sie ReAct-Schritte für Compliance. Verwenden Sie lokale Modelle (Mistral, LLaMA) für sensitive Daten. Implementieren Sie Role-Based Access Control.',
+        },
+      ],
+    },
+  },
+},
   },
 
   'rag-explained': {
