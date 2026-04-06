@@ -1,0 +1,6 @@
+{
+  "buildCommand": "node build-with-fix.js",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "nodejs": "20.x"
+}
