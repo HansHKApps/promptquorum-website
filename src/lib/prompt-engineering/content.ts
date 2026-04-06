@@ -29821,6 +29821,7 @@ zh: { theme: 'Techniques', title: '提示词链接：将复杂任务分解为成
       },
     }
   },
+},
 
   'negative-prompting': {
     en: {
