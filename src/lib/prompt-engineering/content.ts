@@ -28555,10 +28555,161 @@ zh: {
         },
       },
     },
-    de: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    fr: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    ja: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
-    zh: { theme: 'Techniques', title: '', intro: '', publishDate: '2026-03-26', readTime: '', sections: {} },
+    de: {
+      theme: 'Techniques',
+      title: 'Prompt-Verkettung: Wie Sie komplexe Aufgaben in Gewinnerschritte aufteilen',
+      intro: 'Prompt-Verkettung ist eine Technik, bei der Sie eine komplexe Aufgabe in mehrere kleinere Prompts aufteilen und die Ausgabe eines Schritts in den nächsten einspeisen. Dies ermöglicht es Ihnen, zuverlässige mehrstufige Workflows zu erstellen, anstatt sich auf einen einzigen, überforderten Prompt zu verlassen.',
+      publishDate: '2026-03-26',
+      seoTitle: 'Prompt-Verkettung Leitfaden 2026: Komplexe KI-Workflows aufbauen',
+      metaDescription: 'Erlernen Sie Prompt-Verkettungstechniken zur Erstellung leistungsstarker mehrstufiger KI-Workflows. Praktische Beispiele und Best Practices für lokale und Cloud-LLMs.',
+      readTime: '8 min Lesezeit',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Prompt-Verkettung',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Prompt-Verkettung: Wie Sie komplexe Aufgaben in Gewinnerschritte aufteilen',
+        description: 'Was Prompt-Verkettung ist, warum sie wichtig ist, und wie Sie mehrstufige KI-Workflows designen, die leichter zu kontrollieren und wiederzuverwenden sind.',
+        datePublished: '2026-03-26',
+        dateModified: '2026-03-26',
+        keywords: ['Prompt-Verkettung', 'Prompt Engineering', 'KI-Workflows', 'PromptQuorum'],
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        about: [
+          { '@type': 'Thing', name: 'Prompt Engineering' },
+          { '@type': 'Thing', name: 'Große Sprachmodelle' },
+          { '@type': 'Thing', name: 'KI-Workflows' },
+        ],
+      },
+      sections: {
+        whatIsPromptChaining: {
+          title: 'Was Prompt-Verkettung ist',
+          content: [
+            '**Prompt-Verkettung bedeutet, mehrere Prompts zu verbinden, sodass jeder eine fokussierte Teilaufgabe erfüllt und sein Ergebnis weitergeben kann.** Anstatt das Modell zu bitten, „alles auf einmal zu machen", erstellen Sie eine Sequenz wie „analysieren → strukturieren → generieren → überprüfen".',
+            'Jeder Schritt hat eine klare Eingabe, ein klares Ausgabeformat und eine enge Verantwortung. Die gesamte Kette verhält sich eher wie eine Pipeline oder ein Workflow als wie ein Chat, was das Debuggen, die Wartung und die Wiederverwendung vereinfacht.',
+          ],
+        },
+        whyItMatters: {
+          title: 'Warum Prompt-Verkettung wichtig ist',
+          content: [
+            '**Prompt-Verkettung ist wichtig, weil die meisten realen Aufgaben zu komplex oder brüchig sind, um von einem einzigen Prompt gut bewältigt zu werden.** Wenn Sie Verständnis, Planung, Generierung und Überprüfung in unterschiedliche Schritte aufteilen, reduzieren Sie Fehler und gewinnen Kontrolle.',
+            'Die Vorteile umfassen:',
+          ],
+          items: [
+            'Bessere Genauigkeit, da jeder Schritt für eine spezifische Funktion optimiert ist.',
+            'Einfacheres Troubleshooting, da Sie genau sehen können, wo eine Kette bricht.',
+            'Höhere Wiederverwendbarkeit, da einzelne Schritte (wie „Eingabe zusammenfassen" oder „Entitäten extrahieren") über verschiedene Workflows hinweg geteilt werden können.',
+          ],
+        },
+        additionalBenefit: {
+          content: [
+            'Für Teams werden Prompt-Ketten zu Bausteinen in größeren KI-Systemen, anstatt nur einmalige Konversationen zu sein.',
+          ],
+        },
+        typicalPatterns: {
+          title: 'Typische Prompt-Verkettungsmuster',
+          content: [
+            '**Die meisten Prompt-Verkettungen verwenden ein paar wiederkehrende Muster, die Sie an Ihre eigenen Workflows anpassen können.** Die genaue Struktur hängt von Ihrem Ziel ab, aber die Logik bleibt ähnlich.',
+            'Häufige Muster sind:',
+          ],
+          items: [
+            'Analysieren → Planen → Entwurf → Verfeinern: Zum Schreiben von Artikeln, Berichten oder Strategien.',
+            'Extrahieren → Transformieren → Zusammenfassen: Zur Verarbeitung von Rohdokumenten, Protokollen oder Tickets.',
+            'Klassifizieren → Weiterleiten → Generieren: Zur Triage von Eingaben und deren Weiterleitung an spezialisierte Prompts.',
+            'Generieren → Kritisieren → Verbessern: Zur iterativen Verfeinerung von Texten, Code oder Designs.',
+          ],
+        },
+        chainImplementation: {
+          content: [
+            'Sie können diese Ketten synchron (Schritt für Schritt in einer einzigen Sitzung) oder als separate Jobs implementieren, die Ihre Anwendung orchestriert.',
+          ],
+        },
+        example: {
+          title: 'Beispiel: Einzelner Prompt vs. Prompt-Verkettung',
+          content: [
+            '**Der Wert von Prompt-Verkettung ist am leichtesten zu sehen, wenn Sie einen einzigen komplexen Prompt mit einer kurzen Kette, die die gleiche Aufgabe erfüllt, vergleichen.** Hier ist ein Beispiel für die Erstellung eines benutzerfreundlichen Changelogs für Kunden im deutschsprachigen Raum (Deutschland, Österreich, Schweiz).',
+            '**[Schlechter Prompt]**',
+            '"Lesen Sie diese Release Notes und schreiben Sie ein freundliches Changelog für unsere Nutzer."',
+            '**[Gute Prompt-Verkettung]**',
+            '**Schritt 1 – Änderungen extrahieren**',
+            '"Sie sind ein Release Engineer. Extrahieren Sie alle sichtbaren Änderungen aus den Raw Release Notes und listen Sie sie als Bulletpoints gruppiert nach Funktionsbereichen auf."',
+            '**Schritt 2 – Auswirkungen klassifizieren**',
+            '"Sie sind ein Product Manager. Kennzeichnen Sie jeden Bulletpoint als `Fehlerbehebung`, `Verbesserung` oder `neue Funktion`, und fügen Sie einen kurzen internen Hinweis hinzu, warum dies wichtig ist."',
+            '**Schritt 3 – Changelog generieren**',
+            '"Sie sind ein Kundenerfolgschreiber. Schreiben Sie auf Basis der gekennzeichneten Liste eine kundenfreundliche Changelog-E-Mail mit einem kurzen Einleitungsparagraph und 3–6 Bulletpoints. Konzentrieren Sie sich auf Vorteile, nicht auf interne Details."',
+            'Durch das Verketten dieser Schritte machen Sie jeden Prompt einfacher, testbarer und wiederverwendbarer.',
+          ],
+        },
+        whenToUse: {
+          title: 'Wann Sie Prompt-Verkettung verwenden sollten',
+          content: [
+            '**Sie sollten Prompt-Verkettung verwenden, wenn eine Aufgabe sich natürlich in Phasen aufteilen lässt, die unabhängig fehlschlagen oder sich ändern können.** Wenn Sie feststellen, dass Sie einen sehr langen, brüchigen Prompt mit vielen „Wenn"-Bedingungen schreiben, ist das normalerweise ein Zeichen dafür, dass Sie eine Kette benötigen.',
+            'Typische Anwendungsfälle:',
+          ],
+          items: [
+            'Content-Production-Pipelines (Recherche → Gliederung → Entwurf → Bearbeitung).',
+            'Daten-Pipelines (Einlesen → Bereinigung → Extraktion → Anreicherung → Zusammenfassung).',
+            'Entscheidungsunterstützung (Fakten sammeln → Optionen generieren → Kompromisse evaluieren → empfehlen).',
+            'Produkt-Workflows wie Onboarding, Support-Automatisierung und Dokumentengenerierung.',
+          ],
+        },
+        whenSinglePrompt: {
+          content: [
+            'Für kleine, einmalige Aufgaben ist ein einzelner Prompt meist ausreichend. Für alles, das Sie wiederholt oder in größerem Maßstab ausführen möchten, bietet Verkettung mehr Kontrolle.',
+          ],
+        },
+        inPromptQuorum: {
+          title: 'Prompt-Verkettung in PromptQuorum',
+          content: [
+            '**PromptQuorum ist ein Multi-Modell-KI-Dispatch-Tool, das sich natürlich mit Prompt-Verkettung kombiniert, da Sie jeden Schritt standardisieren und über mehrere Modelle hinweg ausführen können.** Anstatt einen einzelnen monolithischen Prompt zu haben, definieren Sie eine Serie von Framework-gestützten Prompts und verbinden sie in Ihrem Workflow.',
+            'Mit PromptQuorum können Sie:',
+          ],
+          items: [
+            'Unterschiedliche Frameworks in verschiedenen Phasen verwenden—zum Beispiel SPECS für strukturierte Extraktion, TRACE für Reasoning und CRAFT für finalen Text.',
+            'Wichtige Schritte parallel über Modelle hinweg ausführen (wie GPT-4o, Claude 4.6 Sonnet und Gemini 2.5 Pro) um zu vergleichen, wie jedes Extraktion, Planung oder Generierung handhabt.',
+            'Jeden Schritt als Vorlage speichern, damit Ketten einfach neu aufgebaut, modifiziert oder mit Ihrem Team geteilt werden können.',
+          ],
+        },
+        pqClosing: {
+          content: [
+            'Indem Sie Prompt-Verkettung als erstklassiges Muster behandeln, hilft PromptQuorum Ihnen, komplexe mehrstufige Aufgaben in konsistente, wartbare KI-Workflows zu verwandeln.',
+          ],
+        },
+
+        howToStart: {
+          title: 'So verwenden Sie Prompt-Verkettung',
+          numberedItems: [
+            '**Teilen Sie Ihre komplexe Aufgabe in sequenzielle Teilaufgaben auf, die jeweils durch einen separaten Prompt gelöst werden.** Beispiel für „einen Blogartikel schreiben und veröffentlichen": (1) Gliederung generieren, (2) Abschnitte schreiben, (3) Ansprüche überprüfen, (4) Für SEO optimieren, (5) Zur Veröffentlichung formatieren.',
+            '**Speisen Sie die Ausgabe eines Prompts als Eingabe für den nächsten ein.** Die Gliederung aus Schritt 1 leitet das Schreiben von Abschnitten in Schritt 2. Der Entwurf aus Schritt 2 wird in Schritt 3 überprüft. Dieser sequenzielle Fluss reduziert Halluzinationen.',
+            '**Optimieren Sie jeden Prompt unabhängig, bevor Sie sie verketten.** Tunen Sie Prompt 1, bis er gute Gliederungen generiert, dann Prompt 2, bis er gute Abschnitte basierend auf einer Gliederung schreibt. Testen Sie jeden Schritt separat.',
+            '**Verwenden Sie zwischenzeitliche Kontrollpunkte, an denen ein Mensch vor dem Fortfahren überprüfen kann.** Nach der Generierung einer Gliederung überprüfen Sie diese vor dem Schreiben von Abschnitten. Nach der Überprüfung kennzeichnen Sie Ansprüche, die nicht überprüft werden konnten. Dies verhindert, dass Fehler sich ausbreiten.',
+            '**Dokumentieren Sie die Kettenstruktur und Abhängigkeiten.** Erstellen Sie ein Diagramm oder Flowchart, das zeigt: Schritt 1 → Schritt 2 → Schritt 3, und welche Ausgaben in welche Eingaben einfließen. Dies macht die Pipeline klar und wartbar.',
+          ],
+        },
+
+        faqSection: {
+          title: 'Häufig gestellte Fragen zu Prompt-Verkettung',
+          faqs: [
+            {
+              q: 'Wie viele Schritte sollte eine Prompt-Verkettung haben?',
+              a: 'Es gibt keine festgelegte Anzahl, aber in der Praxis funktionieren 3–6 Schritte für die meisten Workflows am besten. Weniger als 3 Schritte bedeutet oft, dass Sie nicht weit genug aufgeteilt haben; mehr als 6 Schritte können den Overhead erhöhen und Fehler von einem Schritt zum nächsten verstärken. Die goldene Regel: Teilen Sie auf, bis jeder Schritt von einer Person an einem Nachmittag manuell durchgeführt werden könnte.',
+            },
+            {
+              q: 'Kann ich Prompt-Verkettung mit lokalen Modellen wie Ollama oder LM Studio verwenden?',
+              a: 'Ja, absolut. Prompt-Verkettung funktioniert mit jedem Modell—GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, oder lokalen Modellen wie LLaMA 3.1 und Qwen 2.5 über Ollama oder LM Studio. Der Vorteil von PromptQuorum ist, dass Sie Ihre gesamte Kette auf mehreren Modellen gleichzeitig testen können, um zu sehen, welches am konsistentesten ist.',
+            },
+            {
+              q: 'Was ist mit DSGVO und Datenschutz bei mehrstufigen Workflows?',
+              a: 'In Deutschland, Österreich und der Schweiz müssen Sie sicherstellen, dass personenbezogene Daten nur erforderlichenfalls in jeden Schritt einfließen. Best Practice: Verwenden Sie Daten-Anonymisierung oder Pseudonymisierung vor dem ersten Schritt, und halten Sie die Zwischenergebnisse in Ihrer kontrollierten Umgebung (nicht über öffentliche APIs), wenn sensible Informationen beteiligt sind. Bei Enterprise-Anwendungen sollten Sie lokale Modelle über Ollama oder LM Studio in Betracht ziehen, um Datenschutz zu gewährleisten.',
+            },
+            {
+              q: 'Wie kann ich Fehler in einer Prompt-Verkettung entdecken und beheben?',
+              a: 'Überprüfung bei jedem Schritt ist der Schlüssel. Testen Sie jede Phase Ihrer Kette in Isolation mit Testdaten, bevor Sie die ganze Kette verbinden. Nutzen Sie PromptQuorum, um Zwischenergebnisse zu speichern und wiederherzustellen. Wenn eine Phase fehlschlägt, können Sie genau sehen, wo das Problem liegt. Zusätzlich: Implementieren Sie explizite Fehlerschwellen (z.B. „Wenn Konfidenz < 70%, Anfrage an menschliche Überprüfung eskalieren") in kritischen Phasen.',
+            },
+          ],
+        },
+      },
+    },,
   },
 
   'negative-prompting': {
