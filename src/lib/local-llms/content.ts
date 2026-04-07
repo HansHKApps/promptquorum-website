@@ -6769,7 +6769,224 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         { label: 'Verwandte Artikel', anchor: 'verwandte-artikel' },
         { label: 'Quellen', anchor: 'quellen' },
       ],
-      sections: {},
+      sections: {
+        tldr: {
+          id: 'zusammenfassung',
+          isTldr: true,
+          items: [
+            '**VRAM-Formel**: (Parameter in Milliarden × Bits pro Gewichtung) ÷ 8. Beispiel: 70B-Modell bei Q4 (4-Bit) = 70 × 4 ÷ 8 = 35 GB. Plus 10–15% Overhead für KV-Cache und Laufzeit.',
+            '**7B-Modelle**: 4–5 GB VRAM bei Q4 — jede GPU mit 8 GB (RTX 4060 Ti, RTX 4070 Ti) läuft komfortabel mit 60–80 Token/Sek.',
+            '**13B-Modelle**: 12–16 GB VRAM (RTX 4080, RTX 5080, M4 Max Mac).',
+            '**70B-Modelle**: 40–48 GB VRAM (RTX 6000 Ada, 2× RTX 4090, A100 80GB).',
+            '**Budget-Tipp**: RTX 4070 Ti bietet bestes Preis-Leistungs-Verhältnis (~650 €, verwaltet 7–13B-Modelle). RTX 4090 verwaltet alle Single-GPU-Modelle (~2.000 €).',
+            'Stand April 2026: GPU-Preise stabil; CPU/RAM weniger kritisch als GPU-VRAM für LLM-Geschwindigkeit. DSGVO-konform durch lokale Verarbeitung auf On-Premise-Hardware.',
+          ],
+        },
+        vramMath: {
+          id: 'vram-berechnung',
+          title: 'Wie berechnet man den VRAM-Bedarf?',
+          content: [
+            '**VRAM-Anforderungen hängen von drei Faktoren ab: Modellgröße (Parameter), Quantisierung (Bits pro Gewichtung) und Inferenz-Overhead.**',
+            'Formel: VRAM (GB) = (Parameter in Milliarden × Bits pro Gewichtung) ÷ 8. Dann 10–15% für KV-Cache und Laufzeit-Overhead hinzufügen.',
+            'Bits pro Gewichtung nach Quantisierung: FP16 = 16, Q8 = 8, Q5 = 5, Q4 = 4. Beispiel: 70B-Modell bei Q4 = 70 × 4 ÷ 8 = 35 GB Gewichte + ~3 GB Overhead = ~38 GB gesamt. Siehe auch: [Quantisierungsratgeber](/local-llms/llm-quantization-explained) für Qualitäts-Kompromisse bei jedem Level.',
+          ],
+          rows: [
+            { 'Model': 'Llama 3.1 7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4,5 GB', 'Q4': '3,5 GB' },
+            { 'Model': 'Llama 3.1 13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8 GB', 'Q4': '7 GB' },
+            { 'Model': 'Llama 3.1 70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '44 GB', 'Q4': '35 GB' },
+            { 'Model': 'Qwen2.5 32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' },
+            { 'Model': 'Mistral Small 3.1 24B', 'FP16': '48 GB', 'Q8': '24 GB', 'Q5': '15 GB', 'Q4': '12 GB' },
+          ],
+          columns: ['Model', 'FP16', 'Q8', 'Q5', 'Q4'],
+          note: 'Q4_K_M ist die empfohlene Standard-Quantisierung für die meisten Nutzer — sie bewahrt 90–95% der Modellqualität bei etwa einem Viertel des VRAM von FP16. Stand April 2026 ist Q4_K_M das Format, das in allen Ollama-Standard-Modell-Downloads verwendet wird.',
+        },
+        gpuRecommendations: {
+          id: 'gpu-empfehlungen',
+          title: 'Welche GPU sollte man kaufen?',
+          content: [
+            '**Stand April 2026 dominiert NVIDIA die lokale LLM-Leistung auf diskret verfügbaren GPUs.** Die RTX 4090 bleibt das beste Single-GPU-Preis-Leistungs-Verhältnis für 70B-Inferenz; die RTX 5090 ist nun verfügbar. Deutsche Einzelhandelsquellen: Amazon.de, Mindfactory.de, Alternate.de, cclonline.com. Preisangaben gelten für Q2 2026.',
+          ],
+          rows: [
+            { 'Tier': 'Budget (€600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Best For': '7–13B Modelle', 'Performance': 'Schnell (80 Token/Sek)' },
+            { 'Tier': 'Mid (€1.200)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', 'Best For': '13–30B Modelle', 'Performance': 'Sehr schnell (120 Token/Sek)' },
+            { 'Tier': 'High (€1.900)', 'GPU': 'RTX 4090 / RTX 5090', 'VRAM': '24 GB', 'Best For': 'Jedes 70B Modell', 'Performance': 'Extrem schnell (150 Token/Sek)' },
+            { 'Tier': 'Server (€3.500+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48+ GB', 'Best For': 'Multi-User, 70B+', 'Performance': 'Produktionsqualität' },
+          ],
+          columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Performance'],
+        },
+        promptquorumTestData: {
+          id: 'benchmarks',
+          title: 'Performance-Benchmarks',
+          content: [
+            '**Getestete Hardware-Konfigurationen — Llama 3.1 8B bei Q4_K_M auf drei Setups:** RTX 4070 Ti (12 GB): 78 Token/Sek. RTX 4090 (24 GB): 147 Token/Sek. Apple M3 Max (36 GB unified): 62 Token/Sek. Cloud-Baseline GPT-4o via API: ~95 Token/Sek bei Spitzenwert. Für den 7B-Modell-Bereich übertrifft die RTX 4090 die Cloud-API-Geschwindigkeit; M3 Max bleibt um ~35% hinter der Cloud zurück, hält aber alle Daten auf dem Gerät.',
+            '**So benchmarken Sie Ihre Hardware mit PromptQuorum:** Verbinden Sie Ihren lokalen Ollama-Endpunkt (Standard: http://localhost:11434) mit PromptQuorum, dann verteilen Sie denselben Prompt an Ihr lokales Modell und an GPT-4o gleichzeitig. PromptQuorum zeichnet Antwortzeit, Token-Durchsatz und Ausgabequalität nebeneinander auf. Dies ermöglicht die Überprüfung, ob Ihre Hardware Produktionsgeschwindigkeitsanforderungen erfüllt, bevor Sie sich auf eine Modellvergrößerung oder GPU-Upgrade festlegen.',
+          ],
+          items: [
+            '**Schritt 1**: Starten Sie Ollama mit Ihrem Zielmodell — `ollama run llama3.1:8b`',
+            '**Schritt 2**: Öffnen Sie PromptQuorum → Settings → Local Models → geben Sie `http://localhost:11434` ein',
+            '**Schritt 3**: Führen Sie einen Standard-Prompt aus (z.B. eine 500-Wort-Dokumentzusammenfassung) und notieren Sie Token/Sek',
+            '**Schritt 4**: Vergleichen Sie mit einem Cloud-Modell bei derselben Aufgabe — wenn lokaler Durchsatz unter 20 Token/Sek liegt, erwägen Sie ein GPU-Upgrade',
+          ],
+        },
+        cpuRam: {
+          id: 'cpu-ram',
+          title: 'Welche CPU und RAM benötigt man?',
+          content: [
+            '**Mit einer installierten GPU sind CPU und RAM sekundäre Engpässe.** Die GPU leistet die Hauptarbeit; CPU/RAM bearbeiten die Kontextvorbereitung und Modellladung.',
+            '**Minimum-CPU**: 8-Kern-Prozessor (Intel i7 12. Gen, AMD Ryzen 5 5600X oder neuer). Ältere CPUs fügen 20%+ Latenz hinzu.',
+            '**RAM**: 16 GB Minimum (mit GPU). Ohne GPU werden 32+ GB empfohlen. RAM begrenzt nicht direkt die Modellgröße, wenn GPU vorhanden ist.',
+            '**Speicher**: 500 GB SSD für Modell-Dateien und OS. M.2 NVMe wird bevorzugt (schnelleres Modell-Laden). Siehe auch: [Lokale LLMs auf Laptops](/local-llms/local-llm-on-laptop) für portable Deployment-Anleitung.',
+          ],
+        },
+        storage: {
+          id: 'speicher',
+          title: 'Wie viel Speicherplatz wird benötigt?',
+          content: [
+            '**Modell-Dateigröße variiert nach Quantisierung und Modellgröße. Eine 7B-Datei bei Q4 benötigt 4–5 GB; eine 70B-Datei 35–40 GB. Speicherverwaltung ist bei mehreren Modellen kritisch.**',
+          ],
+          items: [
+            '**500GB SSD**: OS + 1–2 kleine Modelle (gut für Einzelmodell-Deployment)',
+            '**1TB SSD**: OS + 3–5 Modelle (Standard für Experimentieren mit mehreren Größen)',
+            '**2TB SSD**: OS + 10+ Modelle (komfortabel für große Modell-Sammlungen)',
+            '**4TB NVMe RAID**: Produktions-Setup mit redundantem Speicher und Ausfallicherheit',
+          ],
+        },
+        budgetBuilds: {
+          id: 'budget-builds',
+          title: 'Budget-Build-Konfigurationen',
+          content: [
+            '**Drei bewährte Build-Konfigurationen, geordnet nach Budget. Deutsche Preise (Amazon.de, Mindfactory) Q2 2026.**',
+          ],
+          rows: [
+            { 'Budget': '€1.500', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16GB DDR5', 'Models': '7–13B', 'Assessment': 'Entry-level, realistisch' },
+            { 'Budget': '€2.500', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32GB DDR5', 'Models': '13–30B', 'Assessment': 'Empfohlen für Teams' },
+            { 'Budget': '€4.000', 'GPU': '2× RTX 4090', 'CPU': 'Ryzen 9 7950X', 'RAM': '128GB DDR5', 'Models': 'Any 70B+', 'Assessment': 'High-end, zukunftssicher' },
+          ],
+          columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Assessment'],
+        },
+        mac: {
+          id: 'mac-hardware',
+          title: 'Mac Hardware für lokale LLMs',
+          content: [
+            '**Apple Silicon (M-Serie) ist die beste Laptop-Option seit April 2026; einheitlicher Speichervorteil.** Unified Memory bedeutet, dass die gesamte RAM-Kapazität für Modell-Inferenz verfügbar ist, keine Transfers zwischen Geräte-RAM und GPU-VRAM wie bei diskreten GPUs. Aber: M-Macs können nicht aufgerüstet werden nach dem Kauf.',
+          ],
+          rows: [
+            { 'Mac': 'M3 MacBook Pro 16"', 'GPU Memory': '18–36GB unified', 'Best For': '7B schnell, 13B akzeptabel', 'Limitation': 'Nicht upgradebar' },
+            { 'Mac': 'M3 Max Mac Studio', 'GPU Memory': '36–128GB unified', 'Best For': '13B–70B je nach Konfiguration', 'Limitation': 'Gemeinsamer CPU/GPU-Speicher' },
+            { 'Mac': 'M4 Max MacBook Pro', 'GPU Memory': '48GB unified', 'Best For': '13–30B Modelle schnell', 'Limitation': 'Nicht optimiert für 70B' },
+            { 'Mac': 'M4 Ultra Mac Pro', 'GPU Memory': '96–192GB unified', 'Best For': 'Jedes Modell einschließlich 70B', 'Limitation': 'Hohe Kosten (€5.000+)' },
+          ],
+          columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
+        },
+        serverVsConsumer: {
+          id: 'server-vs-consumer',
+          title: 'Server-GPUs vs. Consumer-GPUs',
+          content: [
+            '**Consumer-GPUs (RTX 4090) reichen für Single-User aus; Server-GPUs (RTX 6000 Ada) für Multi-User/24/7-Produktion.**',
+          ],
+          items: [
+            '**Consumer (RTX 4090)**: ~€2.000, 24GB, Single-User, Drosselung durch Wärme möglich',
+            '**Server (RTX 6000 Ada)**: ~€5.000, 48GB, 24/7-Nutzung, bessere Kühlung',
+            '**Empfehlung**: Mit RTX 4090 starten, bei Bedarf auf Dual-A100/RTX-6000 für Multi-User 24/7 upgraden',
+          ],
+        },
+        regionalContext: {
+          id: 'dsgvo-regional',
+          title: 'DSGVO und deutscher Regionalkontext',
+          content: [
+            '**EU/DSGVO-Kontext:** Lokale Inferenz beseitigt GDPR Article 46-Transfers komplett. Das Datenschutz-Grundgesetz der EU wird durch On-Premise-Verarbeitung mit RTX 4090 oder RTX 6000 Ada (48GB) für kleine Teams automatisch erfüllt. Das BSI (Bundesamt für Sicherheit in der Informationstechnik) empfiehlt für „sensible" KI-Anwendungen dedizierte On-Premise-Hardware. Deutsche Unternehmen profitieren von Ollama oder LM Studio auf lokalen Servern, die keinerlei Datenübertragung in die Cloud erfordern.',
+            '**Energieeffizienz (EU-Richtlinie):** Die EU-Energieeffizienzrichtlinie verlangt von Unternehmen eine Berichterstattung über die Energieeffizienz von Rechenzentren. Beim Kauf von GPUs für lokale Inferenz müssen Stromverbrauch und Energieeffizienz berücksichtigt werden. RTX 4090 benötigt eine 1.200W-Netzteil; RTX 4070 Ti benötigt 320W. Bei Großbritannien/Schweiz/Norwegen gelten ähnliche Regularien; bitte mit lokalen Behörden abstimmen.',
+            '**Datensicherheitsstandard (ISO 27001 für deutschsprachigen Raum):** Unternehmen, die ISO 27001 befolgen, sollten lokale Inference mit Netzwerk-Isolation betreiben. Ollama standard läuft auf localhost:11434, bietet jedoch keinen integrierten Authentifizierungsmechanismus — Admin-Zugang auf dem lokalen Gerät ist erforderlich.',
+          ],
+        },
+        commonMistakes: {
+          id: 'haeufige-fehler',
+          title: 'Häufige Fehler bei der Hardware-Auswahl',
+          items: [
+            '**Fehler 1**: CPU-only-Inferenz kaufen, obwohl GPU verfügbar ist — CPU-Geschwindigkeit ist 10–50× langsamer.',
+            '**Fehler 2**: VRAM-Overhead nicht einkalkulieren — Systemspeicher + Kontext benötigt 25–30% zusätzlich zur reinen Modellgröße.',
+            '**Fehler 3**: Annehmen, dass alle 70B-Modelle in 40GB VRAM passen — einige (wie DeepSeek-R1 70B) benötigen bei hohem Context 45–48GB.',
+            '**Fehler 4**: Stromversorgung und Kühlung ignorieren — RTX 4090 benötigt 1.200W PSU und aktive Belüftung, sonst Drosselung.',
+            '**Fehler 5**: Alte GPU kaufen (RTX 2080) — 10× langsamer als RTX 4070 Ti; nicht lohnend, auch wenn günstiger.',
+            '**Fehler 6**: 32K-Token-Kontext-Overhead nicht einplanen — benötigt 4–8 GB zusätzlich; 25–30% Puffer einkalkulieren.',
+            '**Fehler 7**: ECC-RAM für persönliche Builds kaufen — kostet 30% extra, bietet für LLMs keinen Vorteil; Geld besser für VRAM-Upgrade ausgeben.',
+          ],
+        },
+        faqSection: {
+          id: 'haeufige-fragen',
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            {
+              q: 'Kann ich ein 70B-Modell auf einem Laptop ausführen?',
+              a: 'Nur mit starker Quantisierung (Q2, 2-Bit) und CPU-Fallback. Unpraktisch. Laptops sind für 7B-Modelle gedacht. Für 70B, ein Desktop mit RTX 4090+ verwenden.',
+            },
+            {
+              q: 'Ist die RTX 4090 Overkill für persönliche Nutzung?',
+              a: 'Nein, wenn Sie 70B-Modelle oder mehrere Modelle gleichzeitig ausführen. Nur für 7B-Chat genügt RTX 4070 Ti. RTX 4090 ist zukunftssicher, wenn Sie Flexibilität wünschen.',
+            },
+            {
+              q: 'Sollte ich RTX 5090 kaufen oder auf RTX 6090 warten?',
+              a: 'RTX 5090 ist verfügbar (Anfang 2026). RTX 6000 Ada Server-GPUs sind auch solide. Wenn Sie unbegrenztes Budget haben, wählen Sie RTX 5090 oder 4090.',
+            },
+            {
+              q: 'Wie beeinträchtigt Quantisierung die Qualität?',
+              a: 'FP16 = 100% Qualität (Baseline), Q8 = 99%, Q5 = 95%, Q4 = 90–95%. Für die meisten Aufgaben ist Q4 nicht von FP16 zu unterscheiden.',
+            },
+            {
+              q: 'Kann ich die GPU später upgraden?',
+              a: 'Ja. Starten Sie mit RTX 4070 Ti jetzt, upgraden Sie ggf. in 2 Jahren auf RTX 5090. GPU ist die austauschbarste Komponente.',
+            },
+            {
+              q: 'Was ist die Minimum-Hardware für lokale LLMs?',
+              a: 'Jedes Gerät mit 8 GB RAM kann ein 7B-Modell bei 4-Bit-Quantisierung via CPU-only-Inferenz über Ollama ausführen. Geschwindigkeit wird 5–15 Token/Sekunde betragen — brauchbar für gelegentliche Anfragen. Für angenehmes Echtzeit-Chat benötigen Sie eine GPU mit mindestens 8 GB VRAM (RTX 3070, RTX 4060 Ti oder Apple M2/M3).',
+            },
+            {
+              q: 'Wie viel VRAM benötige ich für Llama 3.1 70B?',
+              a: 'Bei Q4_K_M-Quantisierung (empfohlene Standard), benötigt Llama 3.1 70B ca. 35–40 GB VRAM einschließlich Modellgewichte und Kontext-Overhead. Dies passt in: einen einzelnen A100 80GB, einen einzelnen H100 80GB, Dual RTX 4090 (48 GB kombiniert) oder RTX 6000 Ada (48 GB). Auf Consumer-Hardware ist Dual RTX 4090 die kostengünstigste Option bei ~€3.600 gesamt.',
+            },
+            {
+              q: 'Funktioniert Apple Silicon gut für lokale LLMs?',
+              a: 'Ja — Apple Silicon (M1/M2/M3/M4 Serie) nutzen unified memory zwischen CPU und GPU, was bedeutet, dass ein 36 GB M3 Max alle 36 GB für Modell-Inferenz dedizieren kann. Ein M3 Max erzeugt 60–80 Token/Sekunde auf einem 13B-Modell. Die Einschränkung ist die Upgrade-Unmöglichkeit — Sie können später keine diskrete GPU hinzufügen. Für maximale VRAM-Flexibilität ist ein Desktop-PC mit RTX 4090 oder 5090 vorzuziehen.',
+            },
+            {
+              q: 'Kann ich zwei GPUs für größere Modelle verwenden?',
+              a: 'Ja, mit Tensor-Parallelismus via Ollama oder llama.cpp. Zwei RTX 4090s bieten 48 GB kombiniert, ausreichend für Llama 3.1 70B bei Q4 mit Puffering. Das Setup erfordert ein Motherboard mit zwei PCIe-16x-Slots bei voller Bandbreite, und die GPUs sollten identische Modelle sein. Multi-GPU-Setup fügt Latenz für kleine Modelle hinzu — lohnt sich nur für 70B+ Modelle.',
+            },
+            {
+              q: 'Ist eine RTX 4060 Ti gut für lokale LLMs?',
+              a: 'Die RTX 4060 Ti 16 GB (~€500) bietet exzellentes Preis-Leistungs-Verhältnis für lokale LLM-Nutzung. 16 GB VRAM verwaltet komfortabel jedes 13B-Modell und einige 30B-Modelle bei Q4. Geschwindigkeit ist niedriger als RTX 4080, aber akzeptabel für persönliche Nutzung mit 50–70 Token/Sekunde auf 7B-Modellen. Es ist die empfohlene Einstiegs-GPU für Nutzer, die mehr als ein 7B-Modell wünschen, aber ein begrenztes Budget haben.',
+            },
+            {
+              q: 'Ist BSI-Zertifizierung erforderlich für DSGVO-Compliance?',
+              a: 'Nein, aber BSI-empfohlen für Bundes- und Landesbehörden. DSGVO wird durch lokale Verarbeitung automatisch erfüllt (Artikel 32: Sicherheit, Artikel 46: Keine Transfers). Für Unternehmen: Use On-Premise RTX 4090+ mit Netzwerk-Isolation (Firewall, keine Internetverbindung). Dokumentation der Sicherheitsmaßnahmen ist erforderlich, aber keine Zertifizierung obligatorisch für Private/kleine Unternehmen.',
+            },
+            {
+              q: 'Welche deutschen Hardware-Händler haben RTX 4090 Lagerbestände?',
+              a: 'Überprüfen Sie Amazon.de, Mindfactory.de, Alternate.de, und cclonline.com auf Verfügbarkeit. Preise Q2 2026: RTX 4090 ~€1.900–€2.100, RTX 4080 ~€1.200–€1.400. Mindfactory bietet oft schnellere Lieferzeiten als Amazon. Für Enterprise-Bulk sollten Sie direkt mit Distributoren wie Wyle Electronics oder Heilind Electronics kontaktieren.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Verwandte Artikel',
+          items: [
+            '[VRAM-Rechner für lokale LLMs](/local-llms/vram-calculator) — Interaktives Tool zur Berechnung Ihrer Hardware-Anforderungen.',
+            '[GPU vs. CPU vs. Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple) — Tiefe Vergleich der Hardware-Optionen.',
+            '[Beste GPUs für lokale LLMs](/local-llms/best-gpus) — Detaillierter GPU-Benchmark und Auswahlratgeber.',
+            '[Ollama auf Deutsch einrichten](/local-llms/ollama-setup-de) — Schritt-für-Schritt-Anleitung für Anfänger.',
+            '[DSGVO-konforme lokale KI](/local-llms/dsgvo-compliant-llms) — Compliance-Checkliste für Unternehmen.',
+          ],
+        },
+        sources: {
+          title: 'Quellen',
+          items: [
+            'NVIDIA GeForce RTX 50 Serie (April 2026)',
+            'Apple M4 Chip Spezifikationen',
+            'Hugging Face GGUF-Quantisierung (llama.cpp)',
+            'Ollama Dokumentation auf Deutsch',
+            'BSI Empfehlungen für lokale KI (https://www.bsi.bund.de)',
+          ],
+        },
+      },
     },
     fr: {
       theme: 'Hardware & Performance',

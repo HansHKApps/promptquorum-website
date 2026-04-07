@@ -320,11 +320,10 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
   }
 
-  // Fall back to English if translation has empty sections
+  // Use language data if it exists, otherwise fall back to English
   const langData = articleData[lang]
   const enData = articleData['en']!
-  const hasTranslation = langData && Object.keys(langData.sections).length > 0
-  const article = hasTranslation ? langData : enData
+  const article = (langData ?? enData)
   const colors = THEME_COLORS[article.theme] ?? THEME_COLORS['Getting Started']
 
   return (
