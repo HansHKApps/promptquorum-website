@@ -1766,14 +1766,14 @@ print(response.choices[0].message.content)`,
       },
     },
     zh: {
-      theme: 'Getting Started',
+      theme: '入门',
       title: '如何安装 LM Studio：macOS、Windows 和 Linux 的桌面应用设置指南',
       seoTitle: 'LM Studio 2026 安装 – 完整指南',
       intro: 'LM Studio 是一个免费的桌面应用程序，可以不需要终端命令就运行本地 LLM。从 lmstudio.ai 下载安装程序，打开应用，按名称搜索模型，单击下载，然后开始聊天 - 整个过程在 5 分钟内完成。截至 2026 年 4 月，LM Studio 在 macOS（Apple Silicon 和 Intel）、Windows 10+ 和 Linux（AppImage）上运行，支持 Hugging Face 500,000 多个模型库中的任何 GGUF 量化模型。它包括内置聊天 UI、localhost:1234 上的 OpenAI 兼容本地服务器，以及 Apple Metal、NVIDIA CUDA 和 AMD ROCm 的自动 GPU 加速。',
       metaDescription: 'LM Studio 的分步安装和第一个模型设置指南。本地 LLM 清晰 GUI、与 Ollama 对比。',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
-      readTime: '7 分钟阅读时间',
+      readTime: '阅读约7分钟',
       educationalLevel: 'Beginner',
       primaryTerm: 'LM Studio',
       toc: [
@@ -1797,6 +1797,7 @@ print(response.choices[0].message.content)`,
       sections: {
         tldr: {
           isTldr: true,
+          title: '核心要点',
           items: [
             '从 lmstudio.ai 下载 LM Studio - 可在 macOS（Apple Silicon + Intel）、Windows 和 Linux（AppImage）上使用。',
             '最低要求：8GB RAM。推荐：7B 模型使用 16GB RAM。Apple Silicon Mac 默认使用 GPU 加速。',
@@ -1931,7 +1932,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
-          title: '相关阅读',
+          title: '延伸阅读',
           items: [
             '[什么是本地 LLM？](/local-llms/what-are-local-llms?lang=zh) — 核心概念和组件',
             '[运行您的第一个本地 LLM](/local-llms/run-first-local-llm?lang=zh) — 安装后的后续步骤',
