@@ -527,13 +527,317 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
     de: {
       theme: 'Getting Started',
-      title: 'Ollama installieren: Schritt-für-Schritt-Anleitung',
-      seoTitle: 'Ollama installieren 2026 – Schritt-für-Schritt-Anleitung',
-      intro: 'Ollama lässt sich in weniger als 2 Minuten auf macOS, Windows und Linux installieren. Nach der Installation lädt ein einziger Befehl ein Modell aus der Ollama-Bibliothek herunter und startet es.',
-      metaDescription: 'Ollama einfach und schnell unter Windows, Mac und Linux installieren. Erste lokale Modelle in Minuten starten.',
+      title: 'Ollama installieren: Vollständige Einrichtungsanleitung für macOS, Windows und Linux',
+      seoTitle: 'Ollama installieren 2026 – Vollständige Anleitung',
+      intro: 'Ollama ist eine leichte Inference-Engine, die große Sprachmodelle lokal mit einem einzigen Befehl ausführt. Nach einer 2-Minuten-Installation lädt `ollama pull llama3.2:3b` ein 2-GB-Modell herunter, und `ollama run llama3.2` öffnet eine Chat-Schnittstelle. Ollama kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API auf `localhost:11434` in einer einzigen Anwendung ohne Python-Umgebung, ohne Konfigurationsdateien und ohne erforderliche GPU zum Starten. Ab April 2026 unterstützt Ollama über 200 Modelle einschließlich Meta Llama 3.2, Qwen2.5, Mistral und DeepSeek und stellt seine API für jeden OpenAI-SDK ohne Codeänderungen bereit.',
+      metaDescription: 'Ollama installiert sich in weniger als 2 Minuten auf macOS, Windows oder Linux. Das Ausführen Ihres ersten Modells erfordert einen einzigen Befehl — hier ist die Schritt-für-Schritt-Anleitung.',
       publishDate: '2026-04-04',
+      dateModified: '2026-04-05',
       readTime: '8 min Lesezeit',
-      sections: {},
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Ollama',
+      toc: [
+        { label: 'Wichtigste Erkenntnisse', anchor: 'key-takeaways' },
+        { label: 'Was ist Ollama?', anchor: 'what-is-ollama' },
+        { label: 'Installation auf macOS', anchor: 'install-on-macos' },
+        { label: 'Installation auf Windows', anchor: 'install-on-windows' },
+        { label: 'Installation auf Linux', anchor: 'install-on-linux' },
+        { label: 'Ihr erstes Modell herunterladen und ausführen', anchor: 'pull-and-run-your-first-model' },
+        { label: 'Mit welchem Modell sollte ich anfangen?', anchor: 'which-model-to-start-with' },
+        { label: 'Verifizieren Sie, dass Ollama funktioniert', anchor: 'verify-ollama-is-working' },
+        { label: 'Nützliche Ollama-Befehle', anchor: 'useful-ollama-commands' },
+        { label: 'Fehlerbehebung', anchor: 'troubleshooting' },
+        { label: 'Regionale Einsatzszenarien', anchor: 'regional-context' },
+        { label: 'Häufige Fehler', anchor: 'common-mistakes' },
+        { label: 'Weiterführende Literatur', anchor: 'related-reading' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Quellen', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Zusammenfassung',
+          isTldr: true,
+          items: [
+            'macOS: Laden Sie die .dmg-Datei von ollama.com herunter, oder führen Sie `brew install ollama` aus — dann `ollama run llama3.2` zum Chatten.',
+            'Windows: Laden Sie das Installationsprogramm von ollama.com/download herunter. Ollama wird als Hintergrunddienst im Systembereich ausgeführt.',
+            'Linux: Ein einzelner curl-Befehl installiert alles — `curl -fsSL https://ollama.com/install.sh | sh`.',
+            'Mindestanforderungen: 4 GB RAM für ein 3B-Modell, 8 GB RAM für ein 7B-Modell. Keine GPU erforderlich zum Starten.',
+            'Ollama stellt eine OpenAI-kompatible REST-API auf `http://localhost:11434` bereit — jede OpenAI-SDK-App kann sie ohne Codeänderungen verwenden.',
+          ],
+        },
+        whatIsOllama: {
+          id: 'what-is-ollama',
+          title: 'Was ist Ollama und warum sollte ich es nutzen?',
+          content: [
+            'Ollama ist eine Open-Source-Inference-Engine, die große Sprachmodelle lokal ausführt. Sie kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API in einer einzigen leichten Anwendung. Keine Python, keine Conda-Umgebung und kein CUDA-Setup erforderlich.',
+            'Ollama betreut eine kuratierte Modellbibliothek (ollama.com/library) mit Ein-Befehl-Downloads für Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 und über 100 weitere Modelle. Ein Modell wird einmal heruntergeladen und auf der Festplatte zwischengespeichert — nachfolgende Ausführungen starten in unter 5 Sekunden.',
+            'Für Alternativen zu Ollama siehe [Local-LLM-One-Click-Installer](/local-llms/local-llm-one-click-installers?lang=de). Zum Vergleich von Ollama und LM Studio siehe [So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de).',
+          ],
+          blockquote: 'In einem Satz: Ollama ist ein Tool zum Herunterladen und lokalen Ausführen von Open-Source-Sprachmodellen (wie Mistral oder Llama 2) auf Ihrem Computer mit nur einem Befehl.',
+        },
+        installMac: {
+          id: 'install-on-macos',
+          title: 'Wie installiert man Ollama auf macOS?',
+          content: 'Es gibt zwei Methoden. Der Installer-Download ist schneller; Homebrew ist besser, wenn Sie Software mit brew verwalten.',
+          numberedItems: [
+            'Gehen Sie zu ollama.com/download und klicken Sie auf „Download für macOS".',
+            'Öffnen Sie die heruntergeladene Ollama.dmg-Datei und ziehen Sie Ollama in Ihren Anwendungsordner.',
+            'Starten Sie Ollama über die Anwendungen. Ein Llama-Symbol erscheint in der Menüleiste — Ollama wird jetzt als Hintergrunddienst ausgeführt.',
+            'Öffnen Sie das Terminal und führen Sie Ihr erstes Modell aus: `ollama run llama3.2`',
+            'Das Modell wird heruntergeladen (~2 GB für llama3.2:3b) und eine Chat-Eingabeaufforderung wird angezeigt. Geben Sie eine Nachricht ein und drücken Sie die Eingabetaste.',
+          ],
+          blockquote: 'In einem Satz: Ollama wird auf macOS als Hintergrunddienst ausgeführt — sobald es installiert und gestartet ist, wird die lokale API auf `http://localhost:11434` auf Modellanforderungen überwacht.',
+        },
+        installMacBrew: {
+          title: 'Wie installiert man Ollama auf macOS mit Homebrew?',
+          codeBlock: 'brew install ollama\n\n# Starten Sie den Ollama-Dienst\nollama serve &\n\n# Ziehen Sie ein Modell herunter und führen Sie es aus\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        installWindows: {
+          id: 'install-on-windows',
+          title: 'Wie installiert man Ollama auf Windows?',
+          numberedItems: [
+            'Gehen Sie zu ollama.com/download und klicken Sie auf „Download für Windows".',
+            'Führen Sie das heruntergeladene OllamaSetup.exe-Installationsprogramm aus. Ollama wird in %LOCALAPPDATA%\\Programs\\Ollama installiert.',
+            'Ollama wird automatisch gestartet und als Systembereich-Symbol angezeigt.',
+            'Öffnen Sie PowerShell oder Eingabeaufforderung und führen Sie aus: `ollama run llama3.2`',
+            'Das Modell wird beim ersten Ausführen heruntergeladen. Nachfolgende Ausführungen verwenden das zwischengespeicherte Modell.',
+          ],
+        },
+        installWindowsNote: {
+          title: 'Wie aktiviert man GPU-Unterstützung unter Windows?',
+          content: 'Ollama unter Windows erkennt automatisch und nutzt NVIDIA-GPUs (CUDA 11.3+) und AMD-GPUs (ROCm 6+). Wenn Sie eine NVIDIA-RTX-Karte haben, wird Ollama Modellebenen automatisch in den VRAM verschieben — keine manuelle Konfiguration erforderlich. Zum Verifizieren, dass die GPU verwendet wird, führen Sie `ollama run llama3.2` aus und überprüfen Sie den Task Manager → GPU auf Aktivität.',
+        },
+        installLinux: {
+          id: 'install-on-linux',
+          title: 'Wie installiert man Ollama auf Linux?',
+          content: 'Ein einzelner Befehl installiert Ollama auf jeder Linux-Distribution:',
+          codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+          codeLanguage: 'bash',
+        },
+        installLinuxService: {
+          title: 'Wie führt man Ollama als systemd-Dienst auf Linux aus?',
+          content: 'Das Installationsskript registriert Ollama automatisch als systemd-Dienst. So verwalten Sie ihn:',
+          codeBlock: '# Dienststatus überprüfen\nsystemctl status ollama\n\n# Starten / Stoppen / Neustarten\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# Protokolle anzeigen\njournalctl -u ollama -f',
+          codeLanguage: 'bash',
+        },
+        firstModel: {
+          id: 'pull-and-run-your-first-model',
+          title: 'Wie zieht man sein erstes Modell in Ollama herunter und führt es aus?',
+          content: 'Führen Sie nach der Installation von Ollama diesen Befehl aus, um ein Modell herunterzuladen und zu starten:',
+          codeBlock: '# Ziehen Sie ein Modell herunter (speichern Sie es unter ~/.ollama/models)\nollama pull llama3.2\n\n# Führen Sie es interaktiv aus\nollama run llama3.2\n\n# Oder herunterladen und in einem Schritt ausführen\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        recommendedModels: {
+          id: 'which-model-to-start-with',
+          title: 'Mit welchem Modell sollte ich anfangen?',
+          content: 'Für einen ersten Durchlauf decken diese drei Modelle verschiedene Hardware-Profile ab:',
+          rows: [
+            { 'Modell': 'llama3.2:3b', 'Download-Größe': '~2 GB', 'Benötigter RAM': '4 GB', 'Am besten für': 'Erster Test — auf jeder Maschine' },
+            { 'Modell': 'llama3.1:8b', 'Download-Größe': '~4,7 GB', 'Benötigter RAM': '8 GB', 'Am besten für': 'Allgemeine Nutzung auf den meisten Laptops' },
+            { 'Modell': 'phi3:mini', 'Download-Größe': '~2,3 GB', 'Benötigter RAM': '4 GB', 'Am besten für': 'Schnelle Antworten, niedriger RAM' },
+          ],
+          columns: ['Modell', 'Download-Größe', 'Benötigter RAM', 'Am besten für'],
+        },
+        verify: {
+          id: 'verify-ollama-is-working',
+          title: 'Wie überprüft man, ob Ollama funktioniert?',
+          content: 'Testen Sie die REST-API direkt, um zu bestätigen, dass Ollama läuft und verfügbar ist:',
+          codeBlock: '# Überprüfen Sie, ob Ollama läuft\ncurl http://localhost:11434\n# Erwartet: "Ollama is running"\n\n# Heruntergeladene Modelle auflisten\nollama list\n\n# Senden Sie eine Eingabeaufforderung über die API (OpenAI-kompatibel)\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "Was ist 2+2?",\n  "stream": false\n}\'',
+          codeLanguage: 'bash',
+        },
+        commands: {
+          id: 'useful-ollama-commands',
+          title: 'Welche Ollama-Befehle sind am nützlichsten?',
+          rows: [
+            { 'Befehl': 'ollama list', 'Funktion': 'Zeige alle heruntergeladenen Modelle und ihre Größen' },
+            { 'Befehl': 'ollama pull <model>', 'Funktion': 'Laden Sie ein Modell herunter, ohne es auszuführen' },
+            { 'Befehl': 'ollama rm <model>', 'Funktion': 'Löschen Sie ein Modell von der Festplatte' },
+            { 'Befehl': 'ollama ps', 'Funktion': 'Zeige Modelle, die derzeit im Speicher geladen sind' },
+            { 'Befehl': 'ollama show <model>', 'Funktion': 'Zeige Modelldetails (Parameter, Vorlage, Lizenz)' },
+            { 'Befehl': 'ollama serve', 'Funktion': 'Starten Sie den Ollama-Server manuell (falls nicht als Dienst ausgeführt)' },
+          ],
+          columns: ['Befehl', 'Funktion'],
+        },
+        troubleshooting: {
+          id: 'troubleshooting',
+          title: 'Wie behebe ich häufige Probleme bei der Installation von Ollama?',
+          faqs: [
+            {
+              q: 'Ollama sagt „could not connect to ollama app, is it running?" (Fehler: Keine Verbindung zur Ollama-App möglich. Läuft sie?)',
+              a: 'Ollama wird nicht als Hintergrunddienst ausgeführt. Auf macOS: Öffnen Sie die Ollama-App über Anwendungen. Unter Linux: Führen Sie `systemctl start ollama` oder `ollama serve` in einem Terminal aus. Unter Windows: Starten Sie Ollama über das Startmenü.',
+            },
+            {
+              q: 'Der Modell-Download ist sehr langsam oder hängt fest',
+              a: 'Modell-Downloads sind groß (2–47 GB). Wenn der Download stecken bleibt, drücken Sie Strg+C und führen Sie `ollama pull <model>` erneut aus — Ollama setzt partielle Downloads fort. Verwenden Sie für schnellere Downloads eine kabelgebundene Verbindung statt WLAN.',
+            },
+            {
+              q: 'Ich erhalte die Fehlermeldung „error: model requires more system memory" (Fehler: Modell benötigt mehr Systemspeicher)',
+              a: 'Das Modell ist zu groß für Ihren verfügbaren RAM. Versuchen Sie eine kleinere Quantisierung: `ollama run llama3.1:8b-instruct-q4_0` statt der Standard-Q4_K_M. Oder wechseln Sie zu einem kleineren Modell wie `llama3.2:3b`. Siehe [Die besten anfänglichen Local-LLM-Modelle](/local-llms/best-beginner-local-llm-models?lang=de) für RAM-abgestimmte Empfehlungen.',
+            },
+            {
+              q: 'Ollama läuft, aber meine GPU wird nicht verwendet',
+              a: 'Unter Windows überprüfen Sie, ob Ihr NVIDIA-Treiber Version 452.39 oder höher ist. Unter Linux bestätigen Sie, dass das NVIDIA-Container-Toolkit installiert ist (`nvidia-smi` sollte GPU-Informationen zurückgeben). Ollama versetzt Ebenen automatisch in den GPU-Speicher, wenn VRAM verfügbar ist — führen Sie `ollama ps` aus, nachdem Sie ein Modell gestartet haben, um die GPU-Auslastung anzusehen.',
+            },
+            {
+              q: 'Wo werden Ollama-Modelldateien gespeichert?',
+              a: 'Modelle werden unter ~/.ollama/models auf macOS und Linux gespeichert. Unter Windows ist der Standardpfad C:\\Users\\<benutzername>\\.ollama\\models. Sie können den Speicherort ändern, indem Sie die Umgebungsvariable OLLAMA_MODELS festlegen, bevor Sie den Dienst starten.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'Was sollte ich nach der Installation von Ollama tun?',
+          content: 'Sobald Ollama ausgeführt wird, ist der nächste Schritt [Führen Sie Ihr erstes lokales LLM aus](/local-llms/run-first-local-llm?lang=de), um das Prompting, die Kontextlänge und die erwartete Geschwindigkeit der lokalen Inference zu verstehen. Um das beste Modell für Ihre Hardware auszuwählen, siehe [Die besten anfänglichen Local-LLM-Modelle](/local-llms/best-beginner-local-llm-models?lang=de). Wenn Sie eine grafische Chat-Schnittstelle dem Terminal vorziehen, wird in [So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de) die Desktop-App-Alternative behandelt.',
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Regionale Einsatzszenarien und Compliance-Kontext',
+          content: [
+            '**EU / DSGVO**: Ollama, das lokal vor Ort ausgeführt wird, bedeutet, dass persönliche Daten die Infrastruktur der Organisation nie verlassen. Die DSGVO Artikel 5 (Datensparsamkeit) ist standardmäßig erfüllt, da die Inference auf Ihrer Maschine stattfindet. Deutsche Datenschutzbehörden und die französische CNIL empfehlen die lokale LLM-Bereitstellung zur Verarbeitung von Mitarbeiter- oder Kundendaten. Das Binden von Ollama an `localhost` (die Standardeinstellung) stellt sicher, dass kein externer Netzwerkzugriff erfolgt.',
+            '**Japan / METI**: Japans METI-KI-Governance-Richtlinien verlangen eine Dokumentation, wo KI-Inference stattfindet. Organisationen können Ollama vor Ort bereitstellen, um die Datenschutzbestimmungen einzuhalten, insbesondere in den Bereichen Finanzdienstleistungen, Gesundheitswesen und Fertigung. Lokale Bereitstellung mit Ollama wird als datenschutzfreundlicher Ansatz anerkannt, der den APPI-Anforderungen (Gesetz zum Schutz persönlicher Informationen) entspricht.',
+            '**China / CAC**: Die Interim-Maßnahmen der Cyberspace-Verwaltung Chinas für generative KI-Dienste (2023) regulieren KI-Services, die chinesischen Nutzern angeboten werden. Eine lokal laufende Ollama-Bereitstellung, die vollständig auf-Site läuft, liegt außerhalb der CAC-Anbieter-Definition und reduziert die Compliance-Belastung für Unternehmensanwendungsfälle erheblich, die mit sensiblen Daten arbeiten.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Quellen',
+          items: [
+            '[Offizielle Ollama-Dokumentation](https://ollama.com) — Installationsanleitung und API-Dokumentation',
+            '[Ollama GitHub-Repository](https://github.com/ollama/ollama) — Quellcode, Probleme und Versionshinweise',
+            '[Ollama-Modellbibliothek](https://ollama.com/library) — Vollständige Liste der verfügbaren Modelle mit Download-Links',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Was sind häufige Fehler bei der Installation von Ollama?',
+          items: [
+            'Nicht überprüfen, ob Ollama als Hintergrunddienst läuft, bevor Sie erwarten, dass die API antwortet. Unter macOS überprüfen Sie, ob das Llama-Symbol in der Menüleiste angezeigt wird. Unter Linux führen Sie `systemctl status ollama` aus. Unter Windows überprüfen Sie den Systembereich.',
+            'Versuchen, Modelle auszuführen, die größer sind als der verfügbare RAM, ohne Speicheranforderungen zuerst zu überprüfen. Ein 7B-Modell mit Q4-Quantisierung benötigt ~4–5 GB VRAM. Multiplizieren Sie immer die Modelldateigröße mit 1,2, um den benötigten RAM zu schätzen.',
+            'GPU-Erkennung ignorieren — Ollama unterstützt NVIDIA und AMD, benötigt aber aktuelle Treiber. Unter Windows überprüfen Sie die NVIDIA-Treiberversion 452.39+ mit `nvidia-smi`. Unter Linux bestätigen Sie, dass das NVIDIA-Container-Toolkit installiert ist.',
+            'VRAM (GPU-Speicher) mit System-RAM verwechseln. Ollama kann auf CPU laufen, aber GPU-Beschleunigung ist 5–10× schneller. Wenn Sie eine diskrete GPU haben, aber die Inference langsam ist, kann Ollama aufgrund fehlender oder veralteter GPU-Treiber auf CPU zurückfallen.',
+            'Nicht verstehen, dass Modell-Downloads zwischengespeichert werden. Beim ersten Ausführen benötigt `ollama pull llama3.2` 5–10 Minuten für einen 2-GB-Download. Nachfolgende Ausführungen verwenden das zwischengespeicherte Modell und starten in unter 5 Sekunden.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Weiterführende Literatur',
+          items: [
+            '[Was sind Local LLMs?](/local-llms/what-are-local-llms?lang=de) — Definition und Kernkonzepte',
+            '[Führen Sie Ihr erstes lokales LLM aus](/local-llms/run-first-local-llm?lang=de) — Nächster Schritt nach der Installation',
+            '[Die besten anfänglichen Local-LLM-Modelle](/local-llms/best-beginner-local-llm-models?lang=de) — Modellempfehlungen nach Hardware',
+            '[Local-LLM-One-Click-Installer](/local-llms/local-llm-one-click-installers?lang=de) — Alternative Tools zu Ollama',
+            '[So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de) — GUI-Alternative für Anfänger',
+            '[Ollama vs. LM Studio](/local-llms/ollama-vs-lm-studio?lang=de) — Detaillierter Vergleich von CLI vs. GUI-Ansätzen',
+          ],
+        },
+        faq: {
+          id: 'faq',
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'Ist Ollama kostenlos?',
+              a: 'Ja, Ollama ist kostenlos und Open-Source unter der MIT-Lizenz. Es gibt keine Nutzungsbeschränkungen, keine erforderlichen API-Schlüssel, und die gesamte Inference läuft lokal auf Ihrem Computer.',
+            },
+            {
+              q: 'Funktioniert Ollama unter Windows?',
+              a: 'Ja. Ollama hat seit 2024 ein natives Windows-Installationsprogramm. Laden Sie es von ollama.com herunter. Es unterstützt NVIDIA-GPUs über CUDA und AMD-GPUs über ROCm unter Windows.',
+            },
+            {
+              q: 'Wie viel RAM brauche ich, um Ollama auszuführen?',
+              a: 'Mindestens 8 GB RAM für 3B–7B-Modelle bei Q4-Quantisierung. 16 GB RAM verwaltet 7B-Modelle komfortabel und 13B-Modelle bei Q4. 32 GB+ RAM wird für 34B-Modelle mit nur CPU empfohlen.',
+            },
+            {
+              q: 'Wie aktualisiere ich Ollama auf die neueste Version?',
+              a: 'Auf macOS wird Ollama automatisch aktualisiert. Unter Windows laden Sie das neueste Installationsprogramm von ollama.com herunter und führen es aus. Unter Linux führen Sie das Installationsskript erneut aus: curl -fsSL https://ollama.com/install.sh | sh',
+            },
+            {
+              q: 'Kann ich Ollama über das OpenAI-SDK ohne Codeänderungen nutzen?',
+              a: 'Ja. Legen Sie base_url auf http://localhost:11434/v1 im OpenAI-SDK fest und übergeben Sie einen beliebigen String als API-Schlüssel. Die REST-API von Ollama ist vollständig OpenAI-kompatibel, sodass jede für GPT oder Claude geschriebene Anwendung Ihr lokales Modell nutzen kann.',
+            },
+            {
+              q: 'Warum ist meine Ollama-Inference langsam (unter 5 Token/Sek)?',
+              a: 'Das Modell wird wahrscheinlich auf der CPU statt auf der GPU ausgeführt. Überprüfen Sie mit ollama ps, dass das Modell geladen ist. Wenn die GPU-Auslastung 0% ist, überprüfen Sie, dass Ihre GPU-Treiber installiert und aktuell sind. Auf NVIDIA: nvidia-smi sollte Ihre GPU anzeigen. Auf AMD: rocm-smi. Auf Mac: Metal-GPU-Beschleunigung ist auf Apple Silicon automatisch.',
+            },
+            {
+              q: 'Kann Ollama mehrere Modelle gleichzeitig ausführen?',
+              a: 'Ollama kann ein Modell gleichzeitig pro Prozess ausführen. Sie können jedoch mehrere Instanzen von Ollama auf verschiedenen Ports ausführen (z. B. OLLAMA_HOST=localhost:11434 und OLLAMA_HOST=localhost:11435), um mehrere Modelle parallel zu bedienen. Dies erfordert mehr RAM.',
+            },
+            {
+              q: 'Was ist der Unterschied zwischen ollama pull und ollama run?',
+              a: 'ollama pull lädt ein Modell aus der Ollama-Bibliothek herunter, ohne es in den Speicher zu laden. ollama run lädt das Modell herunter (falls nicht zwischengespeichert) und startet sofort eine Chat-Sitzung. Um ein Modell über die API ohne die Chat-Schnittstelle zu verwenden, führen Sie zuerst pull durch und fragen dann die API ab.',
+            },
+            {
+              q: 'Ist ein lokales LLM mit Ollama DSGVO-konform?',
+              a: 'Nicht automatisch. Ein lokales LLM verarbeitet Daten lokal, aber DSGVO-Konformität erfordert zusätzlich: Festplattenverschlüsselung, Zugriffskontrolle, Verarbeitungsverzeichnis und ggf. Auftragsverarbeitungsverträge. Lokale Verarbeitung mit Ollama ist ein wichtiger Schritt, aber kein vollständiger DSGVO-Nachweis. Konsultieren Sie Ihren Datenschutzbeauftragten (DSB) zur Compliance.',
+            },
+            {
+              q: 'Kann ich Ollama im deutschen Mittelstand produktiv einsetzen?',
+              a: 'Ja. Viele mittelständische Unternehmen nutzen Ollama lokal für interne Dokumentenverarbeitung, Code-Review und Datenanalyse. Wichtig: Binden Sie Ollama auf localhost (Standardeinstellung), aktivieren Sie Festplattenverschlüsselung für sensible Daten, und prüfen Sie Ihre Compliance-Anforderungen (besonders bei Kundendaten). Mit diesen Maßnahmen ist Ollama ein kostengünstiger Weg zu KI im Betrieb, ohne Cloud-Abhängigkeiten.',
+            },
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Ollama installieren 2026 – Vollständige Anleitung',
+        'description': 'Ollama installiert sich in weniger als 2 Minuten auf macOS, Windows oder Linux. Das Ausführen Ihres ersten Modells erfordert einen einzigen Befehl — hier ist die Schritt-für-Schritt-Anleitung.',
+        'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['Ollama-Installation', 'Ollama installieren', 'Ollama macOS', 'Ollama Windows', 'Ollama Linux', 'lokales LLM-Setup', 'llama.cpp', 'OpenAI-kompatible API'],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', 'h2', '.key-takeaways'] }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Wie man Ollama 2026 installiert',
+        'description': 'Schritt-für-Schritt-Anleitung zur Installation von Ollama unter macOS, Windows und Linux.',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Laden Sie Ollama herunter', 'text': 'Besuchen Sie ollama.com und laden Sie das Installationsprogramm für Ihr Betriebssystem herunter (macOS-App, Windows-Installer oder Linux curl-Befehl).' },
+          { '@type': 'HowToStep', 'name': 'Installieren Sie Ollama', 'text': 'Führen Sie das macOS-/Windows-Installationsprogramm aus, oder führen Sie unter Linux aus: curl -fsSL https://ollama.com/install.sh | sh' },
+          { '@type': 'HowToStep', 'name': 'Ziehen Sie Ihr erstes Modell herunter', 'text': 'Führen Sie im Terminal aus: ollama pull llama3.2:3b (für 8 GB RAM) oder ollama pull qwen2.5:7b (für 16 GB RAM).' },
+          { '@type': 'HowToStep', 'name': 'Führen Sie das Modell aus', 'text': 'Starten Sie einen Chat: ollama run llama3.2:3b' },
+          { '@type': 'HowToStep', 'name': 'Überprüfen Sie die Installation', 'text': 'Testen Sie die REST-API: curl http://localhost:11434. Erwartete Antwort: "Ollama is running"' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Ist Ollama kostenlos?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, Ollama ist kostenlos und Open-Source unter der MIT-Lizenz. Es gibt keine Nutzungsbeschränkungen, keine erforderlichen API-Schlüssel, und die gesamte Inference läuft lokal auf Ihrem Computer.' } },
+          { '@type': 'Question', name: 'Funktioniert Ollama unter Windows?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Ollama hat seit 2024 ein natives Windows-Installationsprogramm. Laden Sie es von ollama.com herunter. Es unterstützt NVIDIA-GPUs über CUDA und AMD-GPUs über ROCm unter Windows.' } },
+          { '@type': 'Question', name: 'Wie viel RAM brauche ich, um Ollama auszuführen?', acceptedAnswer: { '@type': 'Answer', text: 'Mindestens 8 GB RAM für 3B–7B-Modelle bei Q4-Quantisierung. 16 GB RAM verwaltet 7B-Modelle komfortabel und 13B-Modelle bei Q4. 32 GB+ RAM wird für 34B-Modelle mit nur CPU empfohlen.' } },
+          { '@type': 'Question', name: 'Wie aktualisiere ich Ollama auf die neueste Version?', acceptedAnswer: { '@type': 'Answer', text: 'Auf macOS wird Ollama automatisch aktualisiert. Unter Windows laden Sie das neueste Installationsprogramm von ollama.com herunter und führen es aus. Unter Linux führen Sie das Installationsskript erneut aus: curl -fsSL https://ollama.com/install.sh | sh' } },
+          { '@type': 'Question', name: 'Kann ich Ollama über das OpenAI-SDK ohne Codeänderungen nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Legen Sie base_url auf http://localhost:11434/v1 im OpenAI-SDK fest und übergeben Sie einen beliebigen String als API-Schlüssel. Die REST-API von Ollama ist vollständig OpenAI-kompatibel, sodass jede für GPT oder Claude geschriebene Anwendung Ihr lokales Modell nutzen kann.' } },
+          { '@type': 'Question', name: 'Warum ist meine Ollama-Inference langsam (unter 5 Token/Sek)?', acceptedAnswer: { '@type': 'Answer', text: 'Das Modell wird wahrscheinlich auf der CPU statt auf der GPU ausgeführt. Überprüfen Sie mit ollama ps, dass das Modell geladen ist. Wenn die GPU-Auslastung 0% ist, überprüfen Sie, dass Ihre GPU-Treiber installiert und aktuell sind. Auf NVIDIA: nvidia-smi sollte Ihre GPU anzeigen. Auf AMD: rocm-smi. Auf Mac: Metal-GPU-Beschleunigung ist auf Apple Silicon automatisch.' } },
+          { '@type': 'Question', name: 'Kann Ollama mehrere Modelle gleichzeitig ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama kann ein Modell gleichzeitig pro Prozess ausführen. Sie können jedoch mehrere Instanzen von Ollama auf verschiedenen Ports ausführen (z. B. OLLAMA_HOST=localhost:11434 und OLLAMA_HOST=localhost:11435), um mehrere Modelle parallel zu bedienen. Dies erfordert mehr RAM.' } },
+          { '@type': 'Question', name: 'Was ist der Unterschied zwischen ollama pull und ollama run?', acceptedAnswer: { '@type': 'Answer', text: 'ollama pull lädt ein Modell aus der Ollama-Bibliothek herunter, ohne es in den Speicher zu laden. ollama run lädt das Modell herunter (falls nicht zwischengespeichert) und startet sofort eine Chat-Sitzung. Um ein Modell über die API ohne die Chat-Schnittstelle zu verwenden, führen Sie zuerst pull durch und fragen dann die API ab.' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Ollama installieren: Vollständige Einrichtungsanleitung für macOS, Windows und Linux',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'macOS: Laden Sie die .dmg-Datei von ollama.com herunter, oder führen Sie `brew install ollama` aus — dann `ollama run llama3.2` zum Chatten.' },
+          { '@type': 'ListItem', position: 2, name: 'Windows: Laden Sie das Installationsprogramm von ollama.com/download herunter. Ollama wird als Hintergrunddienst im Systembereich ausgeführt.' },
+          { '@type': 'ListItem', position: 3, name: 'Linux: Ein einzelner curl-Befehl installiert alles — `curl -fsSL https://ollama.com/install.sh | sh`.' },
+          { '@type': 'ListItem', position: 4, name: 'Mindestanforderungen: 4 GB RAM für ein 3B-Modell, 8 GB RAM für ein 7B-Modell. Keine GPU erforderlich zum Starten.' },
+          { '@type': 'ListItem', position: 5, name: 'Ollama stellt eine OpenAI-kompatible REST-API auf `http://localhost:11434` bereit — jede OpenAI-SDK-App kann sie ohne Codeänderungen verwenden.' },
+        ],
+      },
     },
   },
 
