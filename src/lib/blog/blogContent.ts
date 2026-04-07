@@ -25,6 +25,7 @@ export interface BlogPost {
   sections: Record<string, BlogSection>
   metaDescription?: string
   educationalLevel?: string
+  heroImage?: string
   faqSchema?: Record<string, unknown>
   howToSchema?: Record<string, unknown>
   itemListSchema?: Record<string, unknown>
@@ -38,6 +39,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       intro: 'Master the top prompt frameworks and learn which one works best for your use case.',
       publishDate: 'Published March 14, 2026',
       readTime: '8 min read',
+      heroImage: '/images/prompt-frameworks-hero.png',
       sections: {
         intro: {
           title: 'What is a Prompt Framework?',
@@ -271,6 +273,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       intro: 'Meistern Sie die Top-Prompt-Frameworks und erfahren Sie, welcher für Ihren Anwendungsfall am besten geeignet ist.',
       publishDate: 'Veröffentlicht 14. März 2026',
       readTime: '8 min Lesezeit',
+      heroImage: '/images/prompt-frameworks-hero.png',
       sections: {
         intro: {
           title: 'Was ist ein Prompt Framework?',
@@ -504,6 +507,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       intro: 'Maîtrisez les meilleurs frameworks de prompts et apprenez lequel convient le mieux à votre cas d\'utilisation.',
       publishDate: 'Publié le 14 mars 2026',
       readTime: '8 min de lecture',
+      heroImage: '/images/prompt-frameworks-hero.png',
       sections: {
         intro: {
           title: 'Qu\'est-ce qu\'un framework de prompt?',
@@ -737,6 +741,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       intro: '主要なプロンプトフレームワークをマスターし、ユースケースに最適なものを学びましょう。',
       publishDate: '2026年3月14日公開',
       readTime: '8分で読む',
+      heroImage: '/images/prompt-frameworks-hero.png',
       sections: {
         intro: {
           title: 'プロンプトフレームワークとは何か？',
@@ -970,6 +975,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       intro: '掌握顶级提示词框架，学习哪一个最适合您的用例。',
       publishDate: '发布于2026年3月14日',
       readTime: '8分钟阅读',
+      heroImage: '/images/prompt-frameworks-hero.png',
       sections: {
         intro: {
           title: '什么是提示词框架？',

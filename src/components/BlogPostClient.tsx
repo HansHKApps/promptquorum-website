@@ -69,6 +69,19 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
             </div>
           </div>
 
+          {/* Hero Image */}
+          {post.heroImage && (
+            <div className="my-8">
+              <img
+                src={post.heroImage}
+                alt="Illustration of prompt engineering frameworks and structured prompting systems"
+                width={1200}
+                height={675}
+                className="w-full rounded-lg border border-primary/20 shadow-sm"
+              />
+            </div>
+          )}
+
           {/* Sections */}
           <div className="mt-12 space-y-8">
             {Object.entries(post.sections).map(([key, section]) => (
