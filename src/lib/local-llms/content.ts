@@ -4446,6 +4446,251 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ],
       },
     },
+    ja: {
+      theme: 'Best Models',
+      title: 'Qwen vs. Llama vs. Mistral：どのローカルLLMモデルファミリーを使うべき？',
+      seoTitle: 'Qwen vs Llama vs Mistral 2026：最高のLocal LLM？',
+      intro: 'Qwen2.5、Meta Llama 3.x、Mistralは、2026年のローカル推論における3つの支配的なオープンウェイトモデルファミリーです。Qwen2.5はコーディングで先導——72Bで87% HumanEval、Llama 3.3の88%、Mistral 7Bの39%に対して。Qwen2.5はまた29言語をネイティブにサポートします。Llama 3.3 70Bは英語の一般的な推論（82% MMLU）で先導します。Mistral Small 3.1 24Bはわずか14 GB RAMでほぼ70B品質を提供——3つのファミリーの中で最高の品質対RAM比。正しい選択は、タスクタイプ、言語、利用可能なVRAM次第です。',
+      metaDescription: 'Qwen、Llama 3.2、Mistralのローカル使用の詳細な比較。速度、品質、VRAM消費、PromptQuorumとの並列テスト。',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-07',
+      readTime: '9分読込',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Qwen vs Llama vs Mistral',
+      toc: [
+        { label: '重要なポイント', anchor: 'key-takeaways' },
+        { label: 'モデルファミリー概要', anchor: 'model-family-overview' },
+        { label: 'ベンチマーク比較', anchor: 'benchmark-comparison' },
+        { label: 'Qwen2.5：強み と弱み', anchor: 'qwen2-5' },
+        { label: 'Llama 3.x：強み と弱み', anchor: 'llama-3' },
+        { label: 'Mistral：強み と弱み', anchor: 'mistral' },
+        { label: 'タスク別にはどのファミリーが勝つ？', anchor: 'which-family-wins-by-task' },
+        { label: 'サイズ別比較', anchor: 'size-for-size-comparison' },
+        { label: '始める方法', anchor: 'how-to-get-started' },
+        { label: '地域的コンテキスト', anchor: 'regional-context' },
+        { label: 'よくある質問', anchor: 'faq' },
+        { label: '一般的な誤り', anchor: 'common-mistakes' },
+        { label: '関連読書', anchor: 'related-reading' },
+        { label: 'ソース', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**コーディング**：Qwen2.5はすべてのサイズで勝つ——72Bで87% HumanEval、32Bで79%、7Bで72%。',
+            '**一般的推論**：Llama 3.3 70BとQwen2.5 72Bはほぼ同等；Llama 3.xは英語が強く、Qwenは多言語が強い。',
+            '**効率（RAM 1 GBあたりの品質）**：Mistral Small 3.1 24Bはわずか14 GB RAMでほぼ70B品質を提供。',
+            '**英語以外の言語**：Qwen2.5は29言語をネイティブにサポート；LlamaとMistralは主に英語最適化。',
+            '**8 GB RAMの初心者**：Llama 3.2 3BまたはMistral 7Bは最も文書化され、コミュニティに支持された選択肢。',
+          ],
+        },
+        overview: {
+          title: 'モデルファミリー概要：Qwen、Llama、Mistral',
+          rows: [
+            { 'ファミリー': 'Qwen2.5', '開発者': 'Alibaba', '利用可能なサイズ': '0.5B、1.5B、3B、7B、14B、32B、72B', 'ライセンス': 'Apache 2.0（ほとんど）' },
+            { 'ファミリー': 'Llama 3.x', '開発者': 'Meta', '利用可能なサイズ': '1B、3B、8B、70B', 'ライセンス': 'Llama Community（カスタム）' },
+            { 'ファミリー': 'Mistral', '開発者': 'Mistral AI', '利用可能なサイズ': '7B、Small 3.1（24B）、Large（123B）', 'ライセンス': 'Apache 2.0（7B、Small）' },
+          ],
+          columns: ['ファミリー', '開発者', '利用可能なサイズ', 'ライセンス'],
+        },
+        benchmarks: {
+          title: 'ベンチマーク比較：Qwen2.5 vs Llama 3.x vs Mistral',
+          rows: [
+            { 'モデル': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'MATH': '83%', 'RAM (Q4_K_M)': '43 GB' },
+            { 'モデル': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'MATH': '77%', 'RAM (Q4_K_M)': '40 GB' },
+            { 'モデル': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'HumanEval': '74%', 'MATH': '65%', 'RAM (Q4_K_M)': '14 GB' },
+            { 'モデル': 'Qwen2.5 32B', 'MMLU': '83%', 'HumanEval': '79%', 'MATH': '79%', 'RAM (Q4_K_M)': '20 GB' },
+            { 'モデル': 'Qwen2.5 14B', 'MMLU': '79%', 'HumanEval': '75%', 'MATH': '70%', 'RAM (Q4_K_M)': '9 GB' },
+            { 'モデル': 'Llama 3.1 8B', 'MMLU': '73%', 'HumanEval': '72%', 'MATH': '51%', 'RAM (Q4_K_M)': '5.5 GB' },
+            { 'モデル': 'Mistral 7B v0.3', 'MMLU': '64%', 'HumanEval': '39%', 'MATH': '28%', 'RAM (Q4_K_M)': '4.5 GB' },
+            { 'モデル': 'Qwen2.5 7B', 'MMLU': '74%', 'HumanEval': '72%', 'MATH': '52%', 'RAM (Q4_K_M)': '4.7 GB' },
+          ],
+          columns: ['モデル', 'MMLU', 'HumanEval', 'MATH', 'RAM (Q4_K_M)'],
+        },
+        qwen: {
+          title: 'Qwen2.5：コーディング、数学、非英語言語に最適',
+          content: [
+            'AlibabaのQwen2.5は、構造化出力タスク用の最強のモデルファミリーです。比較可能なすべてのサイズティアでHumanEvalを先導します（70Bを除く、Llama 3.3が1%上回る）。各サイズでMATHスコアはLlamaより6～10ポイント高い。',
+            '**強み**：コーディング（Python、JavaScript、SQL）、数学的推論、29言語ネイティブサポート、JSONモード、Function Calling、[すべてのサイズで128Kコンテキストウィンドウ](/local-llms/local-llm-hardware-guide-2026)。',
+            '**弱み**：英語の指示スタイルはLlamaやMistralより自然でない場合があります；一部のユーザーは英語での創造的なライティングの流暢性が低いと報告；Alibaba発祥はオープンウェイトにもかかわらず一部の企業ユーザーにとってデータ処理の懸念を提起。',
+          ],
+        },
+        llama: {
+          title: 'Llama 3.x：一般的な英語タスクとエコシステムサポートに最適',
+          content: [
+            'MetaのLlama 3.xファミリーは最も広くサポートされているオープンウェイトモデルシリーズです。他のどのファミリーよりもLlamaに対するより多くのツール、ファインチューン、量子化、コミュニティガイドが存在します。Llama 3.3 70Bは一般的な英語ベンチマークのすべての競合他社と同等かそれ以上です。',
+            '**強み**：最も幅広いエコシステムサポート（すべてのツールがLlamaをサポート）、最高の英語創造的なライティング、強い指示追従、3.1/3.2/3.3バリアントで128Kコンテキスト、コミュニティテスト済みの信頼性。',
+            '**弱み**：基本的な機能を超えた多言語ネイティブサポートなし；Llama 3.2 3Bは同じパラメータ数であるにもかかわらずQwen2.5 3BおよびPhi-4 Miniのコーディングと数学で遅い。',
+          ],
+        },
+        mistral: {
+          title: 'Mistral：最高の効率と最強の7B級の歴史',
+          content: [
+            'Mistral AIはこの比較で最もパラメータ効率の良いモデルを生産します。Mistral Small 3.1は24Bで70Bクラスに近いベンチマークスコアを提供しながら、わずか14 GB RAMしか必要としません——この比較のどのモデルよりも最高の品質対RAM比。',
+            '**強み**：最高の品質対RAM比（Small 3.1）、強いFunction CallingとTool使用、主要モデルでの清潔なApache 2.0ライセンス、GDPR敏感な使用ケース向けのヨーロッパ発祥。',
+            '**弱み**：Mistral 7B v0.3はベンチマークでQwen2.5 7BおよびLlama 3.1 8Bに上回られるようになった；Qwenやllamaより少ないサイズオプション。',
+          ],
+        },
+        byTask: {
+          title: 'タスク別にはどのモデルファミリーが勝つ？',
+          rows: [
+            { 'タスク': 'Python / JavaScriptコーディング', '勝者': 'Qwen2.5', '理由': 'すべてのサイズティアで最高のHumanEval' },
+            { 'タスク': '一般的なQ&A（英語）', '勝者': 'Llama 3.3 / Qwen2.5（同等）', '理由': 'どちらも70Bで82～84% MMLU達成' },
+            { 'タスク': '数学的推論', '勝者': 'Qwen2.5', '理由': '72Bで83% MATHはLlama 3.3 70Bの77%対' },
+            { 'タスク': '非英語言語', '勝者': 'Qwen2.5', '理由': '29ネイティブ言語；LlamaとMistralは英語優先' },
+            { 'タスク': '創造的なライティング（英語）', '勝者': 'Llama 3.x', '理由': 'より自然な英語生成スタイル' },
+            { 'タスク': '16 GB RAMでの品質', '勝者': 'Mistral Small 3.1', '理由': '14 GB RAMでほぼ70B品質' },
+            { 'タスク': '初心者の最初のモデル', '勝者': 'Llama 3.2 3B', '理由': '最も文書化されて、最も多くのコミュニティサポート' },
+          ],
+          columns: ['タスク', '勝者', '理由'],
+        },
+        sizeBySizeComparison: {
+          title: 'サイズ別比較：どのファミリーが各スケールで優れているか？',
+          content: [
+            '**3B～4Bクラス**：Qwen2.5 3Bおよび[Phi-4 Mini 3.8B](/local-llms/best-beginner-local-llm-models)はLlama 3.2 3Bをコーディングと数学で上回る。一般的な英語使用の場合、Llama 3.2 3Bはより信頼性が高い。',
+            '**7B～8Bクラス**：Qwen2.5 7BおよびLlama 3.1 8Bの両方がMistral 7B v0.3を大幅に上回る。Qwen2.5 7Bはコーディングで先導；Llama 3.1 8Bは英語指示追従で先導。',
+            '**14B～24Bクラス**：Qwen2.5 14BとMistral Small 3.1 24Bが主な選択肢。Mistral Small 3.1は全体的により強いですがより多くのRAMが必要。Qwen2.5 14Bはより低いRAMでコーディングと多言語に優れている。',
+            '**70B～72Bクラス**：Llama 3.3 70BとQwen2.5 72Bは2026年で最高のローカル実行可能なモデル。コーディングと多言語にはQwen2.5 72Bを選択；英語優先の一般的なタスクにはLlama 3.3 70Bを選択。',
+          ],
+        },
+        gettingStarted: {
+          title: '各ファミリーで始める方法',
+          content: ['macOS、WindowsまたはLinuxで[Ollama](/local-llms/how-to-install-ollama)をインストール（単一コマンド）し、1ステップで任意のモデルをプル。'],
+          codeBlock: '# Qwen2.5ファミリー\nollama run qwen2.5:7b\nollama run qwen2.5:14b\nollama run qwen2.5:72b\n\n# Llama 3.xファミリー\nollama run llama3.2:3b\nollama run llama3.1:8b\nollama run llama3.3:70b\n\n# Mistralファミリー\nollama run mistral          # 7B\nollama run mistral-small3.1 # 24B',
+          codeLanguage: 'bash',
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            '**Qwen2.5 Technical Report**（Alibaba DAMO Academy、2024）— arXiv:2412.15115 — コーディング、数学、多言語タスク全体の全サイズバリアントに対するベンチマークデータ。',
+            '**Llama 3 Model Card**（Meta AI、2024）— ai.meta.com/blog/meta-llama-3 — Llama 3.3 70B仕様、評価結果、ライセンス条件。',
+            '**Mistral 7B Technical Paper**（Mistral AI、2023）— arXiv:2310.06825 — オリジナルMistralアーキテクチャ、スライディングウィンドウ注意、初期ベンチマークデータ。',
+            '**Open LLM Leaderboard**（Hugging Face、2026）— huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard — すべてのオープンモデルに対するリアルタイムMMUL、HumanEval、およびMATHベンチマークランキング。',
+          ],
+        },
+        commonMistakes: {
+          title: '模型ファミリー選択時の一般的な誤り',
+          items: [
+            '異なるパラメータ数のモデルを比較——Qwen 32B対Llama 70Bはりんご対りんご比較ではない。',
+            'ワークロードが多言語の場合、多言語ベンチマークを無視する。',
+            '最新のモデルバージョンが常に最高と仮定——時々古い量子化はより良いコミュニティサポートを持つ。',
+            'ライセンス要件を見落とす——Llamaモデルはカスタムllama Community Licenseを使用し、700M月間アクティブユーザー以上の使用を制限；スケール展開前に確認。',
+            '1つのベンチマークのみでテスト——MMLUは知識、HumanEvalはコーディング、MATHは推論を測定。1つのベンチマークで先導するモデルは別のベンチマークで遅い場合があります。',
+          ],
+        },
+        relatedReading: {
+          title: '関連読書',
+          items: [
+            '[最高のLocal LLMs 2026](/local-llms/best-local-llms-2026) — 現在の最高のモデルの全体的なランキング',
+            '[最高の初心者Local LLMモデル](/local-llms/best-beginner-local-llm-models) — 新しいユーザーのための基礎モデル',
+            '[Ollamaをインストール方法](/local-llms/how-to-install-ollama) — 任意のモデルで始める',
+            '[LLM量子化説明](/local-llms/llm-quantization-explained) — モデルフォーマットの理解',
+            '[コーディング用の最高のLocal LLMs](/local-llms/best-local-llms-for-coding) — コーディング最適化モデル比較',
+            '[多言語Local LLMs](/local-llms/multilingual-local-llms) — 非英語モデルサポート',
+          ],
+        },
+        regionalContext: {
+          title: '地域的コンテキスト：EU/GDPR、日本、中国',
+          content: [
+            '**EU/GDPR**：Mistralモデルはフランスの下のEU管轄で製造され、GDPR Article 5要件適合を満たすクリアなデータプロベナンストレイルを与える。Meta Llamaモデルはmodel cardで訓練データの血統を開示。Qwen2.5はAlibaba（中国発祥）により製造されており、いくつかのEUデータ保護当局はGDPR Chapter Vの下でクロスボーダー転送レビューのためにフラグ。規制EUインダストリーの場合、MistralまたはON-PREMISESデプロイメント付きllamaが最もリスク低い選択肢。',
+            '**日本（METI AIガバナンス）**：2024年のMETI AIガバナンスガイドラインは、Enterprise展開のためにモデルプロベナンスと性能ベンチマークをドキュメント化することを組織に奨励。出版された技術レポート（Qwen、Llama、MistralはすべてarXivペーパーを持つ）を持つモデルはこのドキュメンテーション要件を満たす。Qwenのネイティブ日本語トークン化（29の支持言語の1つ）は日本語NLPタスクの好ましい選択肢である。',
+            '**中国（CAC Interim Measures）**：2023年中国のCyberspace Administration（CAC）Generative AIサービスの中間措置は中国ユーザーに提供されるAIサービスの登録が必要。完全にオンプレミスで実行されるモデル（QwenつまりLlamaやOllamaを通じたMistral）は公開フェイシングプロバイダー定義の外にあり、CAC登録は不要。Qwen2.5の中国語言語性能は3つのファミリーの中で最高。',
+          ],
+        },
+        faq: {
+          title: 'よくある質問',
+          faqs: [
+            { q: 'コーディングに最適なのはどれ：Qwen、Llama、Mistral？', a: 'Qwen2.5はすべてのサイズティアでコーディングベンチマークをリード。Qwen2.5 72Bは87% HumanEvalスコア；Llama 3.3 70Bは88%スコア；Mistral 7B v0.3は39%スコア。7Bクラスの場合、Qwen2.5 7B（72% HumanEval）はMistral 7B（39%）を大幅に上回り、Llama 3.1 8B（72%）と一致。' },
+            { q: '最も多くの言語をサポートするLocal LLMはどれですか？', a: 'Qwen2.5は、アラビア語、日本語、韓国語、中国語、すべての主要ヨーロッパ言語を含む29言語をネイティブにサポート。Llama 3.2は公式に8言語をサポート。Mistralモデルは主に英語と主要ヨーロッパ言語に焦点を当てる。' },
+            { q: '8 GB RAMでどのモデルを選ぶべき？', a: '8 GB RAMで、一般的なタスクの場合はLlama 3.2 3B（Q4、〜2 GB）またはコーディングの場合はQwen2.5 7B（Q4、〜4.7 GB）を使用。どちらも8 GB RAMのCPUで15～25トークン/秒で実行。以下でインストール：ollama pull llama3.2:3b またはollama pull qwen2.5:7b。' },
+            { q: 'Qwen2.5は70Bスケールでllama 3.3より優れていますか？', a: '全体的にほぼ同等。Qwen2.5 72Bは数学（83%対77%）と多言語タスクで先導。Llama 3.3 70Bはhumaneval（88%対87%）で先導。ほとんどのベンチマークで差は1～6%以内。コーディングと多言語にはQwen2.5を選択；英語優先の一般的なタスクにはLlama 3.3を選択。' },
+            { q: 'VRAMが限られている場合、最も効率的なLocal LLMは？', a: 'Mistral Small 3.1 24Bが最も効率的：わずか14 GB RAMで79% MMLUおよび74% HumanEval——ほぼ70Bクラス品質をVRAM費用の約35%で達成。' },
+            { q: 'Qwen2.5はコーディングタスク用のGPT-4を置き換えることができますか？', a: '多くの標準コーディングタスク（Python、JavaScript、SQL生成）では、Qwen2.5 72B（87% HumanEval）は標準ベンチマークでGPT-4oの5～10%以内で実行。複雑なマルチファイル再構成の場合、クラウドモデルはまだ利点を保持。' },
+            { q: 'Mistral 7Bは2026年で使う価値がありますか？', a: 'わずか4～5 GB VRAMしかないシステムの場合、Mistral 7Bは使用可能なオプションのままです。ただし、Qwen2.5 7BおよびLlama 3.1 8Bの両方がMistral 7B v0.3を同様のVRAMが必要でもすべての主要ベンチマークで上回る。Mistral 7Bの主な利点は今日はその長く確立されたコミュニティサポートとツール統合。' },
+            { q: 'Llama Community Licenseの制限は何ですか？', a: 'MetaのLlama Community Licenseは700百万月間アクティブユーザー以下の商用使用のために無料。その閾値の上、Metaを使用した別の商用契約が必要。ほとんどのユースケース、この限度は問題ではない。' },
+            { q: 'これらのモデルを完全にオフラインで実行できますか？', a: 'はい。すべての3ファミリー（Qwen、Llama、Mistral）は1回限りのモデルダウンロード後、OllamaまたはLM Studioを通じて完全にオフラインで実行。APIキー不要、テレメトリなし、推論に必要な他のインターネット接続。' },
+            { q: 'どのモデルファミリーが最も簡単に始めることができますか？', a: 'Llama 3.2 3Bは最大のコミュニティと最も多くの初心者チュートリアルを持つ。以下で実行：ollama run llama3.2:3b（8 GB RAM必須、GPU不要）。すべてのメジャーLocal LLMツール（Ollama、LM Studio、OpenWebUI）はデフォルトでLlamaモデルをサポート。' },
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Qwen vs Llama vs Mistral 2026：最高のLocal LLM？',
+        'description': 'Qwen、Llama 3.2、Mistralのローカル使用の詳細な比較。速度、品質、VRAM消費、PromptQuorumとの並列テスト。',
+        'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral?lang=ja',
+        'inLanguage': 'ja',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'isPartOf': {
+          '@type': 'CreativeWork',
+          'name': 'Qwen vs Llama vs Mistral',
+          'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral'
+        },
+        'proficiencyLevel': 'Intermediate',
+        'keywords': ['Qwen vs Llama', 'Qwen vs Mistral', 'bestes Local LLM 2026', 'Local LLM comparison', 'Llama 3.2 vs Qwen'],
+        'about': [
+          { '@type': 'SoftwareApplication', 'name': 'Qwen2.5', 'description': 'Alibabaオープンウェイトモデルファミリー、29言語サポートとリードコーディングベンチマーク。' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.x', 'description': 'Metaオープンウェイトモデルファミリーおよび最も幅広いエコシステムサポート。' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral', 'description': 'フランスのAI企業モデルファミリー、パラメータ効率で知られている。' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', 'h2', '.key-takeaways'] },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'コーディングに最適なのはどれ：Qwen、Llama、Mistral？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5はすべてのサイズティアでコーディングベンチマークをリード。Qwen2.5 72Bは87% HumanEvalスコア；Llama 3.3 70Bは88%スコア；Mistral 7B v0.3は39%スコア。7Bクラスの場合、Qwen2.5 7B（72% HumanEval）はMistral 7B（39%）を大幅に上回り、Llama 3.1 8B（72%）と一致。' } },
+          { '@type': 'Question', name: '最も多くの言語をサポートするLocal LLMはどれですか？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5は、アラビア語、日本語、韓国語、中国語、すべての主要ヨーロッパ言語を含む29言語をネイティブにサポート。Llama 3.2は公式に8言語をサポート。Mistralモデルは主に英語と主要ヨーロッパ言語に焦点を当てる。' } },
+          { '@type': 'Question', name: '8 GB RAMでどのモデルを選ぶべき？', acceptedAnswer: { '@type': 'Answer', text: '8 GB RAMで、一般的なタスクの場合はLlama 3.2 3B（Q4、〜2 GB）またはコーディングの場合はQwen2.5 7B（Q4、〜4.7 GB）を使用。どちらも8 GB RAMのCPUで15～25トークン/秒で実行。以下でインストール：ollama pull llama3.2:3b またはollama pull qwen2.5:7b。' } },
+          { '@type': 'Question', name: 'Qwen2.5は70Bスケールでllama 3.3より優れていますか？', acceptedAnswer: { '@type': 'Answer', text: '全体的にほぼ同等。Qwen2.5 72Bは数学（83%対77%）と多言語タスクで先導。Llama 3.3 70Bはhumaneval（88%対87%）で先導。ほとんどのベンチマークで差は1～6%以内。コーディングと多言語にはQwen2.5を選択；英語優先の一般的なタスクにはLlama 3.3を選択。' } },
+          { '@type': 'Question', name: 'VRAMが限られている場合、最も効率的なLocal LLMは？', acceptedAnswer: { '@type': 'Answer', text: 'Mistral Small 3.1 24Bが最も効率的：わずか14 GB RAMで79% MMLUおよび74% HumanEval——ほぼ70Bクラス品質をVRAM費用の約35%で達成。' } },
+          { '@type': 'Question', name: 'Qwen2.5はコーディングタスク用のGPT-4を置き換えることができますか？', acceptedAnswer: { '@type': 'Answer', text: '多くの標準コーディングタスク（Python、JavaScript、SQL生成）では、Qwen2.5 72B（87% HumanEval）は標準ベンチマークでGPT-4oの5～10%以内で実行。複雑なマルチファイル再構成の場合、クラウドモデルはまだ利点を保持。' } },
+          { '@type': 'Question', name: 'Mistral 7Bは2026年で使う価値がありますか？', acceptedAnswer: { '@type': 'Answer', text: 'わずか4～5 GB VRAMしかないシステムの場合、Mistral 7Bは使用可能なオプションのままです。ただし、Qwen2.5 7BおよびLlama 3.1 8Bの両方がMistral 7B v0.3を同様のVRAMが必要でもすべての主要ベンチマークで上回る。Mistral 7Bの主な利点は今日はその長く確立されたコミュニティサポートとツール統合。' } },
+          { '@type': 'Question', name: 'Llama Community Licenseの制限は何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'MetaのLlama Community Licenseは700百万月間アクティブユーザー以下の商用使用のために無料。その閾値の上、Metaを使用した別の商用契約が必要。ほとんどのユースケース、この限度は問題ではない。' } },
+          { '@type': 'Question', name: 'これらのモデルを完全にオフラインで実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。すべての3ファミリー（Qwen、Llama、Mistral）は1回限りのモデルダウンロード後、OllamaまたはLM Studioを通じて完全にオフラインで実行。APIキー不要、テレメトリなし、推論に必要な他のインターネット接続。' } },
+          { '@type': 'Question', name: 'どのモデルファミリーが最も簡単に始めることができますか？', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.2 3Bは最大のコミュニティと最も多くの初心者チュートリアルを持つ。以下で実行：ollama run llama3.2:3b（8 GB RAM必須、GPU不要）。すべてのメジャーLocal LLMツール（Ollama、LM Studio、OpenWebUI）はデフォルトでLlamaモデルをサポート。' } }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Local LLMの使用のためにQwen、Llama、Mistralの間で選択方法',
+        'description': 'タスク、言語、ハードウェアに基づいて正しいオープンウェイトモデルファミリーを選択するためのステップバイステップガイド。',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'プライマリタスク定義', 'text': 'メインユースケースがコーディング、多言語テキスト、英語一般的なQ&A、または創造的なライティングかどうかを識別。Qwen2.5はコーディングと多言語で勝つ；Llama 3.xは英語の一般的なタスクで勝つ。' },
+          { '@type': 'HowToStep', 'name': '利用可能なVRAM確認', 'text': 'GPU VRAMまたはシステムRAMを測定。8 GBは7Bモデルを処理；16 GBは13～14Bモデルを処理；Q4量子化で70Bモデルには40+ GB必須。' },
+          { '@type': 'HowToStep', 'name': 'Ollamaをインストールトップ候補をプル', 'text': 'Ollama install（macOS/Linux/Windows上で単一コマンド）。chosen model：ollama pull qwen2.5:7b（coding）またはollama pull llama3.2:3b（general）をプル。実行：ollama run <model>。' },
+          { '@type': 'HowToStep', 'name': '実際のタスクでテスト', 'text': '実際のワークロードから5～10の代表的なpromptを実行。出力品質、速度、指示追従を比較。ベンチマークスコアのみに頼らない。' },
+          { '@type': 'HowToStep', 'name': 'ユースケースのためにライセンス確認', 'text': 'ライセンスが適切かどうかを確認：Qwen2.5とMistral 7B/Smallはapache 2.0（permissive）を使用。Llamaモデルはllama Community License（700M MAU下の無料、上で契約が必須）を使用。' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Qwen2.5 vs Llama 3.x vs Mistral：ベンチマーク比較 2026',
+        numberOfItems: 8,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Qwen2.5 72B — MMLU: 84%, HumanEval: 87%, MATH: 83%, RAM: 43 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 2, name: 'Llama 3.3 70B — MMLU: 82%, HumanEval: 88%, MATH: 77%, RAM: 40 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 3, name: 'Mistral Small 3.1 24B — MMLU: 79%, HumanEval: 74%, MATH: 65%, RAM: 14 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 4, name: 'Qwen2.5 32B — MMLU: 83%, HumanEval: 79%, MATH: 79%, RAM: 20 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 5, name: 'Qwen2.5 14B — MMLU: 79%, HumanEval: 75%, MATH: 70%, RAM: 9 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 6, name: 'Llama 3.1 8B — MMLU: 73%, HumanEval: 72%, MATH: 51%, RAM: 5.5 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 7, name: 'Mistral 7B v0.3 — MMLU: 64%, HumanEval: 39%, MATH: 28%, RAM: 4.5 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 8, name: 'Qwen2.5 7B — MMLU: 74%, HumanEval: 72%, MATH: 52%, RAM: 4.7 GB (Q4_K_M)' },
+        ],
+      },
+    },
   },
 
   'best-local-llms-for-coding': {
