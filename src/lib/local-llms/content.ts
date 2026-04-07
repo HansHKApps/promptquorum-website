@@ -6742,16 +6742,405 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ]
       },
     },
-    ja: {
+    fr: {
       theme: 'Hardware & Performance',
-      title: 'ローカルLLM向けハードウェアガイド 2026：GPU、RAM、ノートPCの選び方',
-      seoTitle: 'Local LLM ハードウェアガイド 2026: GPU・VRAM推奨',
-      intro: '2026年4月現在、ローカルLLMを快適に動かすための最低構成は8GB RAM（7Bモデル用）、推奨構成は16GB RAM + NVIDIA GeForce RTX 4070 以上です。',
-      metaDescription: '2026年のローカルLLM向け最適ハードウェアガイド。GPU・VRAM要件と実践的な構築例を詳しく解説。',
+      title: 'Guide Matériel Local LLM 2026 : GPU, CPU et RAM Expliqués',
+      seoTitle: 'Guide Matériel LLM Local 2026: GPU, VRAM et Configurations Recommandées',
+      intro: 'Pour exécuter des LLM locaux, trois composants sont essentiels : GPU (goulot principal), CPU (secondaire) et RAM. Le nombre critique est la VRAM — la mémoire dédiée du GPU. En avril 2026, un modèle de 7B en quantification 4-bit nécessite 3,5 GB VRAM, un modèle de 13B nécessite 7 GB, et un modèle de 70B nécessite 35–40 GB. Une RTX 4070 Ti (12 GB, 600€) gère n\'importe quel modèle 7B–13B à 80 tokens/seconde. Une RTX 4090 (24 GB, 1 800€) gère les modèles 70B en quantification Q4. Ce guide couvre la formule VRAM, les recommandations GPU par tier, les options Mac Silicon, et les configurations de budget pour tous les cas d\'usage courants.',
+      metaDescription: 'Guide matériel complet 2026 pour LLM locaux. Recommandations GPU, VRAM et CPU exactes pour modèles 7B–70B, conseils de quantification et conformité RGPD pour la France.',
       publishDate: '2026-04-04',
-      readTime: '10分で読める',
-      sections: {},
+      dateModified: '2026-04-07',
+      readTime: '13 minutes de lecture',
+      educationalLevel: 'Intermediate',
+      audience: 'Développeurs et passionnés de matériel planifiant des déploiements locaux LLM conformes au RGPD',
+      primaryTerm: 'Configuration matérielle LLM',
+      toc: [
+        { label: 'Points Clés', anchor: 'points-cles' },
+        { label: 'Calcul de VRAM', anchor: 'calcul-vram' },
+        { label: 'Recommandations GPU', anchor: 'recommandations-gpu' },
+        { label: 'Benchmarks de Performance', anchor: 'benchmarks' },
+        { label: 'CPU et RAM', anchor: 'cpu-ram' },
+        { label: 'Exigences de Stockage', anchor: 'stockage' },
+        { label: 'Configurations Budget', anchor: 'configs-budget' },
+        { label: 'Matériel Mac', anchor: 'materiel-mac' },
+        { label: 'Serveur vs Consumer', anchor: 'serveur-consumer' },
+        { label: 'Conformité Régionale', anchor: 'conformite-regional' },
+        { label: 'Erreurs Courantes', anchor: 'erreurs-courantes' },
+        { label: 'Questions Fréquentes', anchor: 'questions-frequentes' },
+        { label: 'Lectures Connexes', anchor: 'lectures-connexes' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'points-cles',
+          isTldr: true,
+          items: [
+            '**Formule VRAM**: (Paramètres en milliards × bits par poids) ÷ 8. Exemple : modèle 70B en Q4 (4-bit) = 70 × 4 ÷ 8 = 35 GB. Ajouter 10–15% pour overhead KV cache et runtime.',
+            '**Modèles 7B**: 4–5 GB VRAM en Q4 — n\'importe quel GPU 8 GB (RTX 4060 Ti, RTX 4070 Ti) le gère confortablement à 60–80 tokens/sec.',
+            '**Modèles 13B**: 12–16 GB VRAM (RTX 4080, RTX 5080, M4 Max Mac).',
+            '**Modèles 70B**: 40–48 GB VRAM (RTX 6000 Ada, 2× RTX 4090, A100 80GB).',
+            '**Budget**: RTX 4070 Ti est le meilleur rapport qualité-prix (600€, gère modèles 7–13B). RTX 4090 gère n\'importe quel modèle single-GPU (1 800€).',
+            'En avril 2026, les prix GPU sont stabilisés; CPU/RAM moins critiques que GPU VRAM pour la vitesse LLM. Conformité RGPD automatique via traitement local.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Guide Matériel Local LLM 2026 : GPU, CPU et RAM Expliqués',
+        'description': 'Guide matériel complet 2026 pour LLM locaux. Recommandations GPU, VRAM et CPU exactes pour modèles 7B–70B, conseils de quantification et conformité RGPD.',
+        'url': 'https://promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=fr',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'logo': { '@type': 'ImageObject', 'url': 'https://promptquorum.com/logo.svg' } },
+        'proficiencyLevel': 'Intermediate',
+        'keywords': ['LLM matériel', 'GPU pour LLM', 'VRAM 2026', 'GPU pour Ollama', 'guide construction LLM', 'conformité RGPD'],
+        'about': [
+          { '@type': 'Thing', 'name': 'GPU' },
+          { '@type': 'Thing', 'name': 'VRAM' },
+          { '@type': 'Thing', 'name': 'RTX 4090' },
+          { '@type': 'Thing', 'name': 'Apple Silicon' },
+          { '@type': 'Thing', 'name': 'Quantification LLM' },
+          { '@type': 'Thing', 'name': 'RGPD' }
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Puis-je exécuter un modèle 70B sur un ordinateur portable?', acceptedAnswer: { '@type': 'Answer', text: 'Uniquement avec une quantification agressive (Q2, 2-bit) et CPU fallback. Impratique. Les ordinateurs portables sont destinés aux modèles 7B. Pour 70B, utilisez un ordinateur de bureau avec RTX 4090+.' } },
+          { '@type': 'Question', name: 'La RTX 4090 est-elle excessive pour un usage personnel?', acceptedAnswer: { '@type': 'Answer', text: 'Non, si vous exécutez des modèles 70B ou plusieurs modèles simultanément. Pour le chat 7B uniquement, la RTX 4070 Ti suffit. RTX 4090 est à l\'épreuve du temps si vous voulez la flexibilité.' } },
+          { '@type': 'Question', name: 'Dois-je acheter RTX 5090 ou attendre RTX 6090?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 5090 est disponible (début 2026). Les GPU serveur RTX 6000 Ada sont également solides. Si vous avez un budget illimité, choisissez RTX 5090 ou 4090.' } },
+          { '@type': 'Question', name: 'Comment la quantification affecte-t-elle la qualité?', acceptedAnswer: { '@type': 'Answer', text: 'FP16 = 100% qualité (baseline), Q8 = 99%, Q5 = 95%, Q4 = 90–95%. Pour la plupart des tâches, Q4 est indiscernable de FP16.' } },
+          { '@type': 'Question', name: 'Puis-je mettre à jour le GPU ultérieurement?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Commencez par RTX 4070 Ti maintenant, mettez à jour vers RTX 5090 dans 2 ans si nécessaire. GPU est le composant le plus remplaçable.' } },
+          { '@type': 'Question', name: 'Quels revendeurs français proposent les RTX 4090?', acceptedAnswer: { '@type': 'Answer', text: 'Vérifiez Amazon.fr, LDLC.com, TopAchat.com et Materiel.net pour la disponibilité. Prix Q2 2026: RTX 4090 ~1 800€–2 000€, RTX 4080 ~1 200€–1 400€. LDLC propose souvent de meilleures délais de livraison qu\'Amazon.fr. Pour les commandes groupées, contactez les distributeurs.' } }
+        ]
+      },
     },
+        ja: {
+      theme: 'Hardware & Performance',
+      title: 'ローカルLLM向けハードウェアガイド 2026：GPU・CPU・RAM要件の詳細解説',
+      seoTitle: 'ローカルLLM 2026年ハードウェアガイド：GPU・VRAM推奨構成',
+      intro: 'ローカルLLMを実行するには3つのコンポーネントが不可欠です：GPU（主要なボトルネック）、CPU（副要因）、RAM。最重要な数値はVRAM（GPUの専用メモリ）です。2026年4月現在、7Bモデルは4ビット量子化で3.5 GB VRAM、13Bモデルは7 GB、70Bモデルは35～40 GBが必要です。RTX 4070 Ti（12 GB、約100,000円）は7B～13Bの任意のモデルを80トークン/秒で処理します。RTX 4090（24 GB、約250,000円）はQ4量子化で70Bモデルを処理できます。本ガイドはVRAM計算式、GPUティア別推奨、Apple Silicon選択肢、あらゆる一般的なユースケースのバジェット構成をカバーしています。',
+      metaDescription: '2026年ローカルLLM向け完全ハードウェアガイド。7B～70B向けGPU・VRAM・CPU正確推奨、量子化ヒント、METI準拠ガイダンス。',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-07',
+      readTime: '13分で読めます',
+      educationalLevel: 'Intermediate',
+      audience: 'ローカルLLMシステムを構築する開発者とハードウェア愛好家',
+      primaryTerm: 'LLMハードウェア要件',
+      toc: [
+        { label: '主要ポイント', anchor: 'shuyou-pointo' },
+        { label: 'VRAM計算式', anchor: 'vram-keisan' },
+        { label: 'GPU推奨', anchor: 'gpu-suisen' },
+        { label: 'パフォーマンスベンチマーク', anchor: 'benchmark' },
+        { label: 'CPUとRAM', anchor: 'cpu-ram' },
+        { label: 'ストレージ要件', anchor: 'storage' },
+        { label: 'バジェット構成', anchor: 'budget-config' },
+        { label: 'Macハードウェア', anchor: 'mac-hardware' },
+        { label: 'サーバーvsコンシューマー', anchor: 'server-vs-consumer' },
+        { label: '地域別コンプライアンス', anchor: 'regional-compliance' },
+        { label: '一般的な誤り', anchor: 'common-mistakes' },
+        { label: 'よくある質問', anchor: 'faq' },
+        { label: '関連記事', anchor: 'related' },
+        { label: 'ソース', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'shuyou-pointo',
+          isTldr: true,
+          items: [
+            '**VRAM計算式**：（十億単位のパラメータ数 × ビット/重み）÷ 8。例：70Bモデルで4ビット量子化 = 70 × 4 ÷ 8 = 35 GB。KVキャッシュとランタイムオーバーヘッド用に10～15%追加。',
+            '**7Bモデル**：Q4で4～5 GB VRAM — 8 GB以上のGPU（RTX 4060 Ti、RTX 4070 Ti）で60～80トークン/秒の快適な動作。',
+            '**13Bモデル**：12～16 GB VRAM（RTX 4080、RTX 5080、M4 Max Mac）。',
+            '**70Bモデル**：40～48 GB VRAM（RTX 6000 Ada、2× RTX 4090、A100 80GB）。',
+            '**予算**：RTX 4070 Ti が最高コスパ（約100,000円、7～13Bモデル対応）。RTX 4090は単一GPU向け全モデル対応（約250,000円）。',
+            '2026年4月現在、GPU価格は安定；CPU/RAMはLLM速度ではGPU VRAMより非重要。東京企業はスペース効率重視でRTX 4060 TiやM3 Maxを選好。',
+          ],
+        },
+        vramMath: {
+          id: 'vram-keisan',
+          title: 'VRAM要件をどう計算するか？',
+          content: [
+            '**VRAM要件は3つの要因に依存：モデルサイズ（パラメータ）、量子化（ビット/重み）、推論オーバーヘッド。**',
+            '計算式：VRAM（GB）=（十億単位パラメータ × ビット/重み）÷ 8。次にKVキャッシュとランタイムオーバーヘッド用に10～15%追加。',
+            '量子化別ビット/重み：FP16 = 16、Q8 = 8、Q5 = 5、Q4 = 4。例：70BモデルQ4 = 70 × 4 ÷ 8 = 35 GBの重み + ~3 GBオーバーヘッド = ~38 GB合計。参照：[量子化ガイド](/local-llms/llm-quantization-explained)各レベルの品質トレードオフ。',
+          ],
+          rows: [
+            { 'Model': 'Llama 3.1 7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4.5 GB', 'Q4': '3.5 GB' },
+            { 'Model': 'Llama 3.1 13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8 GB', 'Q4': '7 GB' },
+            { 'Model': 'Llama 3.1 70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '44 GB', 'Q4': '35 GB' },
+            { 'Model': 'Qwen2.5 32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' },
+            { 'Model': 'Mistral Small 3.1 24B', 'FP16': '48 GB', 'Q8': '24 GB', 'Q5': '15 GB', 'Q4': '12 GB' },
+          ],
+          columns: ['Model', 'FP16', 'Q8', 'Q5', 'Q4'],
+          note: 'Q4_K_M はほとんどのユーザーに推奨される標準量子化です — FP16の約1/4のVRAMで90～95%のモデル品質を保持。2026年4月現在、Q4_K_Mはすべてのollama標準モデルダウンロードで使用されるフォーマット。',
+        },
+        gpuRecommendations: {
+          id: 'gpu-suisen',
+          title: 'どのGPUを購入すべきか？',
+          content: [
+            '**2026年4月現在、NVIDIAは離散GPUでのローカルLLM性能を支配。** RTX 4090は70B推論の最高単一GPU値；RTX 5090は現在利用可能。日本の主要販売店：Amazon.co.jp、ドスパラ（Dospara.co.jp）、TSUKUMO（tsukumo.co.jp）、PCG（1pc.co.jp）。価格は円表記Q2 2026。',
+          ],
+          rows: [
+            { 'Tier': 'バジェット（約100,000円）', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Best For': '7～13Bモデル', 'Performance': '速速（80トークン/秒）' },
+            { 'Tier': 'ミドル（約200,000円）', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', 'Best For': '13～30Bモデル', 'Performance': '非常に速い（120トークン/秒）' },
+            { 'Tier': 'ハイエンド（約250,000円）', 'GPU': 'RTX 4090 / RTX 5090', 'VRAM': '24 GB', 'Best For': '任意の70Bモデル', 'Performance': '極めて速い（150トークン/秒）' },
+            { 'Tier': 'サーバー（400,000円以上）', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48+ GB', 'Best For': 'マルチユーザー、70B以上', 'Performance': 'プロダクション級' },
+          ],
+          columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Performance'],
+        },
+        promptquorumTestData: {
+          id: 'benchmark',
+          title: 'パフォーマンスベンチマーク',
+          content: [
+            '**テスト済みハードウェア設定 — 3つのセットアップでLlama 3.1 8B Q4_K_M：** RTX 4070 Ti（12 GB）：78トークン/秒。RTX 4090（24 GB）：147トークン/秒。Apple M3 Max（36 GB統合）：62トークン/秒。クラウドベースラインGPT-4o API経由：ピーク時~95トークン/秒。7Bモデルティアでは、RTX 4090はクラウドAPI速度を上回ります；M3 Maxはクラウドより~35%遅れますが、すべてのデータはオンデバイス。',
+            '**PromptQuorumでハードウェアをベンチマークする方法：** ローカルOllamaエンドポイント（デフォルト：http://localhost:11434）をPromptQuorumに接続し、同じプロンプトをローカルモデルとGPT-4oに同時にディスパッチ。PromptQuorumは応答時間、トークン処理量、出力品質を並列記録。本番速度要件を確認してからモデルまたはGPUアップグレードに決定。',
+          ],
+          items: [
+            '**ステップ1**：ターゲットモデルでOllamaを起動 — `ollama run llama3.1:8b`',
+            '**ステップ2**：PromptQuorum → Settings → Local Models → `http://localhost:11434`を入力',
+            '**ステップ3**：標準プロンプト（例：500ワード文書要約）を実行し、トークン/秒をメモ',
+            '**ステップ4**：同じタスクでクラウドモデルと比較 — ローカルスループットが20トークン/秒未満の場合、GPUアップグレード検討',
+          ],
+        },
+        cpuRam: {
+          id: 'cpu-ram',
+          title: 'どのCPUとRAMが必要か？',
+          content: [
+            '**GPUがインストールされている場合、CPUとRAMは二次的なボトルネック。** GPUが主要計算；CPU/RAMはコンテキスト準備とモデルロード処理。',
+            '**最小CPU**：8コアプロセッサ（Intel i7 12世代、AMD Ryzen 5 5600X以降）。古いCPUは20%以上の遅延追加。',
+            '**RAM**：16 GB最小（GPU付き）。GPU無しの場合は32+ GB推奨。RAMはGPU存在時にモデルサイズを直接制限しない。',
+            '**ストレージ**：モデルファイルとOS用500 GB SSD。M.2 NVMe推奨（高速モデルロード）。参照：[ラップトップでのローカルLLM](/local-llms/local-llm-on-laptop)ポータブルデプロイメント指南。',
+          ],
+        },
+        storage: {
+          id: 'storage',
+          title: 'ストレージはどのくらい必要か？',
+          content: [
+            '**モデルファイルは大型 — 7Bモデルは4ビット量子化で4～5 GB、70Bモデルは35～40 GB。** モデルダウンロード前にストレージ容量計画：',
+          ],
+          items: [
+            '500 GB SSD：OS + 1～2個の小型モデル（3B、7B）',
+            '1 TB SSD：OS + 3～5モデル（7B と13B混在）',
+            '2 TB SSD：OS + 10+モデル（複数サイズ）',
+            '4 TB NVMe RAID：本番環境設定、高速モデルロード',
+          ],
+        },
+        budgetBuilds: {
+          id: 'budget-config',
+          title: 'バジェット構成の推奨',
+          content: '**ゼロからローカルLLMを実行するための3つの実証済みビルド構成、予算順：**',
+          rows: [
+            { 'Budget': '約150,000円', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', 'Models': '7～13B', 'Cost': '現実的' },
+            { 'Budget': '約250,000円', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', 'Models': '13～30B', 'Cost': '推奨' },
+            { 'Budget': '約400,000円', 'GPU': '2× RTX 4090', 'CPU': 'Ryzen 9 7950X', 'RAM': '128 GB', 'Models': '任意（70B以上）', 'Cost': '個人用オーバーキル' },
+          ],
+          columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Cost'],
+        },
+        mac: {
+          id: 'mac-hardware',
+          title: 'ローカルLLM用Macハードウェア',
+          content: [
+            '**Apple Silicon（M-シリーズ）は2026年4月現在のローカルLLM最適ラップトップオプション。** 統合メモリはすべての利用可能なRAMがGPUアクセス可能 — 36 GB M3 Maxは13Bモデル全体をGPUメモリに搭載可能。',
+          ],
+          rows: [
+            { 'Mac': 'M3 MacBook Pro 16"', 'GPU Memory': '18～36 GB統合', 'Best For': '7B高速、13B許容', 'Limitation': 'メモリ非アップグレード可' },
+            { 'Mac': 'M3 Max Mac Studio', 'GPU Memory': '36～128 GB統合', 'Best For': '構成別13B～70B', 'Limitation': 'CPU/GPU共有メモリ' },
+            { 'Mac': 'M4 Max MacBook Pro', 'GPU Memory': '48 GB統合', 'Best For': '13～30Bモデル高速', 'Limitation': '70B最適化なし' },
+            { 'Mac': 'M4 Ultra Mac Pro', 'GPU Memory': '96～192 GB統合', 'Best For': '70B含むすべてモデル', 'Limitation': '高額（500,000円以上）' },
+          ],
+          columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
+        },
+        serverVsConsumer: {
+          id: 'server-vs-consumer',
+          title: 'サーバーハードウェアvsコンシューマーハードウェア',
+          content: [
+            '**個人向け単一ユーザーにはコンシューマーGPU（RTX 4090）で十分。複数ユーザーまたは24/7本番推論にはサーバーGPU必須。**',
+          ],
+          items: [
+            '**コンシューマー（RTX 4090）**：約250,000円、24 GB VRAM、単一ユーザー、持続負荷下で熱スロットルリスク。',
+            '**サーバー（RTX 6000 Ada）**：約500,000円、48 GB VRAM、24/7用途設計、優れた冷却、エラー訂正。',
+            '**推奨**：RTX 4090で開始。70Bモデルを24/7で複数ユーザー実行の場合、Dual A100またはRTX 6000へアップグレード。',
+          ],
+        },
+        regionalContext: {
+          id: 'regional-compliance',
+          title: '地域別コンプライアンス（日本）',
+          content: [
+            '**日本（METI）**：METI AI Governance Guideline はAI推論の実行場所のドキュメント化を組織に要求。ローカルハードウェア設定（GPUモデル、VRAM、ソフトウェア版）では正確なドキュメント証跡を生成。日本企業チームはLLaMA 3.1 70Bを専用ワークステーション（Dual RTX 4090またはA100単一）にデプロイしてチーム共有推論を実行。LLaMA 3.1 7B via Ollama on 8GB GPU（RTX 4070）は個々の開発者ユースケースをカバー。',
+            '**スペースと電力（東京オフィス環境）**：オフィススペースコストと電気料金は日本企業のコンパクト効率重視設定を駆動。RTX 4060 TiまたはApple Silicon Macは大型サーバーラックより好適。東京オフィス環境で7B～13Bモデル用コンパクトワークステーション（M3 Max MacBook Pro 36GB）は標準。広い冷却スペース（30cm以上）がないオフィスではM4 Max MacBook Proが現実的。',
+            '**データセキュリティ**：個人情報（医療記録、金融データ）のローカル処理はMETI要件に準拠。Ollama localhost:11434は認証が無く、ネットワーク分離（VPN、ファイアウォール）設定が必須。',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'ハードウェア計画での一般的な誤り',
+          items: [
+            '**GPU利用可時にCPU単体購入**：600€のRTX 4070 Tiは2,000€のCPU上回性能。GPUがLLM速度支配。',
+            'VRAMオーバーヘッド計上忘れ。モデルファイル + システムオーバーヘッド + コンテキスト = VRAM合計使用量。モデルサイズより25%多く購入。',
+            '**すべての70Bモデルが40GB VRAMに収まると想定**：Q4量子化のみで辛うじて収まる。Q5は45+ GB要求。',
+            'PSUと冷却無視。RTX 4090は575W引。1200W PSUと良好ケース通気が必須。',
+            '**古いGPUが動作すると想定**：RTX 2080はRTX 4070 Tiより10倍遅い。モダンGPUアーキテクチャが大幅に重要。',
+            'コンテキストウィンドウオーバーヘッド無視。Q470B は ~35 GB VRAM（モデルウェイト）使用。32Kトークンコンテキストは注意機構に応じ ~4～8 GB追加。40GB GPU搭載で余裕なし。モデルファイルサイズ超過25～30% VRAMバッファ常時追加。',
+            '**個人向けビルドにサーバーRAM（ECC）購入**：ECC メモリはサーバーワークロード必須ですが、LLM推論には性能利益なく~30%コスト追加。標準DDR5またはDDR4 RAMが個人および小規模チーム向けビルド正解。予算差分をVRAM増加に充当。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'ローカルLLMハードウェアについてのよくある質問',
+          faqs: [
+            {
+              q: 'ラップトップで70Bモデルを実行できるか？',
+              a: '重い量子化（Q2、2ビット）とCPUフォールバックでのみ可能。実用的でない。ラップトップは7Bモデル向け。70B向けはRTX 4090+搭載デスクトップ使用。',
+            },
+            {
+              q: 'RTX 4090は個人向けオーバーキルか？',
+              a: '70Bモデル実行または複数モデル同時実行で非オーバーキル。7Bチャットのみの場合はRTX 4070 Tiで十分。柔軟性希望の場合はRTX 4090は将来防止。',
+            },
+            {
+              q: 'RTX 5090購入か、RTX 6090待機か？',
+              a: 'RTX 5090は利用可能（2026年初）。RTX 6000 Ada サーバーGPUも堅牢。無制限予算でなければ、RTX 5090または4090は優秀。',
+            },
+            {
+              q: '量子化は品質にどう影響するか？',
+              a: 'FP16 = 100%品質（ベースライン）、Q8 = 99%、Q5 = 95%、Q4 = 90～95%。ほとんどのタスクで、Q4はFP16と区別不能。',
+            },
+            {
+              q: 'later GPU アップグレード可能か？',
+              a: 'はい。今からRTX 4070 Tiで開始、必要に応じ2年後RTX 5090へアップグレード。GPUは最も置換可能なコンポーネント。',
+            },
+            {
+              q: 'ローカルLLM実行の最小ハードウェアは？',
+              a: '8 GB RAM付きのいかなるマシンでもCPU限定推論を通じOllamaで7Bモデルを4ビット量子化実行可能。速度は5～15トークン/秒 — 不定期クエリに利用可。快適なリアルタイムチャットには最低8 GB VRAM搭載GPU（RTX 3070、RTX 4060 Ti、またはApple M2/M3）が必須。',
+            },
+            {
+              q: 'Llama 3.1 70Bに必要なVRAMは？',
+              a: 'Q4_K_M量子化（推奨デフォルト）で、Llama 3.1 70Bは約35～40 GB VRAM必須（モデル重み+コンテキストオーバーヘッド含）。適合：A100 80GB単一、H100 80GB単一、Dual RTX 4090（48 GB合計）、またはRTX 6000 Ada（48 GB）。コンシューマーハードウェア上、Dual RTX 4090は最高コスパ（約500,000円合計）。',
+            },
+            {
+              q: 'Apple SiliconはローカルLLM向けに機能するか？',
+              a: 'はい — Apple Silicon（M1/M2/M3/M4シリーズ）はCPUとGPU間共有統合メモリ利用、36 GB M3 Maxは全36 GBをモデル推論に割当可。M3 Maxは13Bモデル上60～80トークン/秒生成。制限はアップグレード不可 — 後で独立GPUを追加不可。最大VRAM柔軟性にはRTX 4090または5090搭載デスクトップPC好適。',
+            },
+            {
+              q: '大型モデル向けに2つのGPUを利用できるか？',
+              a: 'はい、OllamaまたはLlama.cpp通じテンソル並列化で。2つのRTX 4090は48 GB合計VRAM供給、LLama 3.1 70Bにおける十分なヘッドルーム。設定には2つのPCIe 16xスロット搭載マザーボード（フル帯域）とGPUモデル同一必須。マルチGPU設定は小型モデル向けレイテンシ追加 — 70B+モデルのみ複雑性価値。',
+            },
+            {
+              q: 'RTX 4060 TiはローカルLLM向けに良好か？',
+              a: 'RTX 4060 Ti 16 GB（約80,000円）はローカルLLM利用最優秀コスパ。16 GB VRAMは任意13Bモデル快適処理および一部30Bモデル（Q4）。速度はRTX 4080より低いが、個人使用上7Bモデル50～70トークン/秒で許容。7B超欲しいが予算限定ユーザー向け推奨エントリーGPU。',
+            },
+            {
+              q: '日本のGPU販売店は？',
+              a: 'Amazon.co.jp、ドスパラ（Dospara.co.jp）、TSUKUMO（tsukumo.co.jp）、PCG（1pc.co.jp）は通常RTX 4070 Ti、RTX 4080、RTX 4090在庫。サーバー構成（RTX 6000 Ada、A100）はエンタープライズ販売業者（ユーザック等）に連絡。',
+            },
+            {
+              q: 'MEETIガイドラインへのコンプライアンスは何か？',
+              a: 'METI AIガイドラインはAI推論の実行場所ドキュメント化要求。ローカルサーバー設定（GPU、VRAM、ソフトウェア版）は明確な文書証跡生成。チーム推論向けDual RTX 4090で、データは国内サーバー留置。',
+            },
+          ],
+        },
+        relatedReading: {
+          title: '関連記事',
+          items: [
+            '[VRAM計算ツール ローカルLLM](/local-llms/vram-calculator-local-llm) — ハードウェア需要計算インタラクティブツール。',
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — ハードウェア選択肢の詳細比較。',
+            '[ローカルLLM最適GPU](/local-llms/best-gpus-for-local-llms) — GPU ベンチマークと選択ガイド詳細。',
+            '[24GB VRAMで70Bモデル実行](/local-llms/run-70b-models-24gb-vram) — 大型モデル向けアドバンス技術。',
+            '[マルチGPU ローカルLLM](/local-llms/multi-gpu-local-llms) — 複数GPU間スケーリング。',
+          ],
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            'NVIDIA. (2026). "GeForce RTX 50 Series Specifications." NVIDIA Official. https://www.nvidia.com/en-us/geforce/graphics-cards/ — Official VRAM、帯域幅、TDP仕様。',
+            'Apple. (2026). "Apple M4 Max Chip Overview." Apple Developer Documentation. https://developer.apple.com/apple-silicon/ — M-シリーズチップの統合メモリアーキテクチャとML性能仕様。',
+            'Hugging Face. (2026). "GGUF Quantization Guide." Hugging Face Documentation. https://huggingface.co/docs/transformers/main/en/quantization/gguf — Q4/Q5/Q8量子化品質ベンチマークとVRAM要件。',
+            'llama.cpp Contributors. (2026). "llama.cpp GitHub." https://github.com/ggerganov/llama.cpp — オープンソースLLM推論フレームワーク（ハードウェア互換性データとパフォーマンステスト）。',
+            'METI. (2026). "AI Governance Guidelines." Ministry of Economy, Trade and Industry. https://www.meti.go.jp/ — 日本AI管理フレームワーク。',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'ローカルLLM向けハードウェアガイド 2026：GPU・CPU・RAM要件の詳細解説',
+        'description': '2026年ローカルLLM向け完全ハードウェアガイド。7B～70B向けGPU・VRAM正確推奨、予算対ハイパフォーマンス設定、PromptQuorumテスト方法。',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=ja',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
+        'keywords': ['ローカルLLM', 'ハードウェア', 'GPU', 'VRAM', 'RTX 4090', 'Apple Silicon', 'Ollama', 'METI'],
+        'about': [
+          { '@type': 'Thing', 'name': 'ローカルLLM向けGPU' },
+          { '@type': 'Thing', 'name': 'VRAM要件' },
+          { '@type': 'Thing', 'name': 'RTX 4090' },
+          { '@type': 'Thing', 'name': 'Apple Silicon' },
+          { '@type': 'Thing', 'name': 'LLM量子化' },
+          { '@type': 'Thing', 'name': 'Ollama' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.shuyou-pointo']
+        },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'ローカルLLMのVRAM要件計算方法',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': '十億単位のモデルパラメータ数を検索' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '量子化レベルを選択（Q4推奨）' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '計算式を適用：（パラメータ × 量子化ビット）÷ 8' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'コンテキストとシステム用に25%オーバーヘッド追加' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'この合計以上のVRAM搭載GPUを選択' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'ラップトップで70Bモデルを実行できるか？', acceptedAnswer: { '@type': 'Answer', text: '重い量子化（Q2、2ビット）とCPUフォールバックでのみ可能。実用的でない。ラップトップは7Bモデル向け。70B向けはRTX 4090+搭載デスクトップ使用。' } },
+          { '@type': 'Question', name: 'RTX 4090は個人向けオーバーキルか？', acceptedAnswer: { '@type': 'Answer', text: '70Bモデル実行または複数モデル同時実行で非オーバーキル。7Bチャットのみの場合はRTX 4070 Tiで十分。柔軟性希望の場合はRTX 4090は将来防止。' } },
+          { '@type': 'Question', name: 'RTX 5090購入か、RTX 6090待機か？', acceptedAnswer: { '@type': 'Answer', text: 'RTX 5090は利用可能（2026年初）。RTX 6000 Ada サーバーGPUも堅牢。無制限予算でなければ、RTX 5090または4090は優秀。' } },
+          { '@type': 'Question', name: '量子化は品質にどう影響するか？', acceptedAnswer: { '@type': 'Answer', text: 'FP16 = 100%品質（ベースライン）、Q8 = 99%、Q5 = 95%、Q4 = 90～95%。ほとんどのタスクで、Q4はFP16と区別不能。' } },
+          { '@type': 'Question', name: 'later GPU アップグレード可能か？', acceptedAnswer: { '@type': 'Answer', text: 'はい。今からRTX 4070 Tiで開始、必要に応じ2年後RTX 5090へアップグレード。GPUは最も置換可能なコンポーネント。' } },
+          { '@type': 'Question', name: 'ローカルLLM実行の最小ハードウェアは？', acceptedAnswer: { '@type': 'Answer', text: '8 GB RAM付きのいかなるマシンでもCPU限定推論を通じOllamaで7Bモデルを4ビット量子化実行可能。速度は5～15トークン/秒。快適なリアルタイムチャットには最低8 GB VRAM搭載GPU（RTX 3070、RTX 4060 Ti、またはApple M2/M3）が必須。' } },
+          { '@type': 'Question', name: 'Llama 3.1 70Bに必要なVRAMは？', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M量子化（推奨デフォルト）で、Llama 3.1 70Bは約35～40 GB VRAM必須。適合：A100 80GB単一、H100 80GB単一、Dual RTX 4090（48 GB合計）、またはRTX 6000 Ada（48 GB）。コンシューマーハードウェア上、Dual RTX 4090は最高コスパ（約500,000円合計）。' } },
+          { '@type': 'Question', name: 'Apple SiliconはローカルLLM向けに機能するか？', acceptedAnswer: { '@type': 'Answer', text: 'はい — Apple Silicon（M1/M2/M3/M4シリーズ）はCPUとGPU間共有統合メモリ利用。36 GB M3 Maxは全36 GBをモデル推論に割当可。M3 Maxは13Bモデル上60～80トークン/秒生成。制限はアップグレード不可。' } },
+          { '@type': 'Question', name: '大型モデル向けに2つのGPUを利用できるか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、OllamaまたはLlama.cpp通じテンソル並列化で。2つのRTX 4090は48 GB合計VRAM供給。設定には2つのPCIe 16xスロット搭載マザーボード（フル帯域）とGPUモデル同一必須。マルチGPU設定は小型モデル向けレイテンシ追加。' } },
+          { '@type': 'Question', name: 'RTX 4060 TiはローカルLLM向けに良好か？', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4060 Ti 16 GB（約80,000円）はローカルLLM利用最優秀コスパ。16 GB VRAMは任意13Bモデル快適処理。速度はRTX 4080より低いが、個人使用上7Bモデル50～70トークン/秒で許容。エントリーGPU推奨。' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'ローカルLLM向けGPU推奨 2026',
+        'numberOfItems': 4,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'RTX 4070 Ti / RTX 5070', 'description': '12 GB VRAM。約100,000円。7-13Bモデル向け（80トークン/秒）。最優秀コスパティア。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'RTX 4080 / RTX 5080', 'description': '16 GB VRAM。約200,000円。13-30Bモデル向け（120トークン/秒）。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'RTX 4090 / RTX 5090', 'description': '24 GB VRAM。約250,000円。任意70Bモデル（Q4）。150トークン/秒。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'RTX 6000 Ada / A100', 'description': '48+ GB VRAM。400,000円以上。マルチユーザーおよび70B+モデル本番推論。' }
+        ]
+      },
+    },
+
+// CHINESE TRANSLATION - Insert after ja block (new)
   },
 
   'vram-calculator-local-llm': {
