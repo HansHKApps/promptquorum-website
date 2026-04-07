@@ -7729,13 +7729,19 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Local LLM Hardware Guide 2026: GPU, CPU, and RAM Requirements Explained',
-        'description': 'Complete 2026 hardware guide for running local LLMs. GPU and VRAM recommendations for 7B–70B models, budget vs high-performance setups, and how to test performance with PromptQuorum.',
+        'headline': 'Local LLM Hardware Guide 2026: GPUs, VRAM, RAM & Real Performance Benchmarks',
+        'description': 'Complete hardware guide for running local LLMs in 2026. Compare GPUs, VRAM requirements, RAM, and real-world benchmarks for optimal performance.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026',
-        'datePublished': '2026-04-04',
-        'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'inLanguage': 'en',
+        'datePublished': '2026-01-01',
+        'dateModified': '2026-04-01',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'isPartOf': {
+          '@type': 'CreativeWork',
+          'name': 'Local LLM Hardware Guide 2026',
+          'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026'
+        },
         'proficiencyLevel': 'Intermediate',
         'keywords': ['local LLM hardware', 'GPU for LLM', 'VRAM requirements 2026', 'best GPU for Ollama', 'LLM build guide'],
         'about': [
