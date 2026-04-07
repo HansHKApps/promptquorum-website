@@ -227,7 +227,8 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
 
         {/* Hero */}
         <div className="py-16 border-b border-primary/20 mb-16">
-          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">Local LLMs</p>
+          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Local LLMs</p>
+          <p className="text-xs text-text-secondary mb-4">Updated <time dateTime="2026-04-07">April 2026</time></p>
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             {HUB_HERO_TITLE[lang] ?? HUB_HERO_TITLE['en']}
           </h1>
@@ -237,7 +238,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
 
           {/* Key Takeaways */}
           {lang === 'en' && (
-            <div className="mb-10 bg-primary/3 border border-primary/15 rounded-xl p-5">
+            <div className="key-takeaways mb-10 bg-primary/3 border border-primary/15 rounded-xl p-5">
               <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Key Takeaways</p>
               <ul className="space-y-2">
                 {[
@@ -330,6 +331,14 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
                 {
                   q: 'What is the best local LLM for coding in 2026?',
                   a: 'Qwen2.5-Coder 7B is the top performer for code completion and review on consumer hardware (8 GB VRAM). DeepSeek-Coder V2 Lite is the strongest alternative. For CPU-only setups, Phi-3.5 Mini offers the best coding quality under 4 GB RAM.'
+                },
+                {
+                  q: 'Can I run a local LLM without a GPU?',
+                  a: 'Yes. Any modern CPU can run 3B–7B models at Q4 quantization using Ollama (CPU mode) or LM Studio. Typical CPU inference speed: 2–8 tokens/sec on a modern laptop CPU, compared to 20–50 tokens/sec on an RTX 4060. 7B Q4 requires ~5 GB RAM (not VRAM). For CPU-only setups, Phi-3.5 Mini (3.8B) and Llama 3.2 3B offer the best quality-to-speed ratio.'
+                },
+                {
+                  q: 'How do I update local LLM models when new versions are released?',
+                  a: 'Ollama: run `ollama pull <model-name>` again — it downloads only changed layers. LM Studio: open the model browser, find the updated version, and download it. Old GGUF files are not automatically removed — delete them manually from ~/.ollama/models (Ollama) or ~/Library/Application Support/LM Studio/models (macOS) to free disk space. Model updates from Meta, Alibaba, and Mistral typically arrive within 24–48 hours of official release.'
                 },
               ].map((faq, i) => (
                 <div key={i} className="border-b border-primary/15 pb-4 last:border-0">
