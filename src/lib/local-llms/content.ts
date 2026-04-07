@@ -40,6 +40,7 @@ export interface LLMArticle {
   tableSchema?: Record<string, unknown>
   itemListSchema?: Record<string, unknown>
   educationalLevel?: string
+  audience?: string
   primaryTerm?: string
   toc?: { label: string; anchor: string }[]
 }
@@ -6446,25 +6447,27 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Intermediate',
+      audience: 'Developers and hardware enthusiasts planning local LLM builds',
       primaryTerm: 'LLM hardware requirements',
       toc: [
-        { label: 'Key Takeaways', anchor: '#key-takeaways' },
-        { label: 'VRAM Math for Any Model', anchor: '#vram-math' },
-        { label: 'GPU Recommendations', anchor: '#gpu-recommendations' },
-        { label: 'Performance Benchmarks', anchor: '#performance-benchmarks' },
-        { label: 'CPU and RAM', anchor: '#cpu-ram' },
-        { label: 'Storage Requirements', anchor: '#storage' },
-        { label: 'Budget Builds', anchor: '#budget-builds' },
-        { label: 'Mac Hardware', anchor: '#mac-hardware' },
-        { label: 'Server vs Consumer', anchor: '#server-vs-consumer' },
-        { label: 'Regional Compliance', anchor: '#regional-compliance' },
-        { label: 'Common Mistakes', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
-        { label: 'Related Reading', anchor: '#related-reading' },
-        { label: 'Sources', anchor: '#sources' },
+        { label: 'Key Takeaways', anchor: 'key-takeaways' },
+        { label: 'VRAM Math for Any Model', anchor: 'vram-math' },
+        { label: 'GPU Recommendations', anchor: 'gpu-recommendations' },
+        { label: 'Performance Benchmarks', anchor: 'performance-benchmarks' },
+        { label: 'CPU and RAM', anchor: 'cpu-ram' },
+        { label: 'Storage Requirements', anchor: 'storage' },
+        { label: 'Budget Builds', anchor: 'budget-builds' },
+        { label: 'Mac Hardware', anchor: 'mac-hardware' },
+        { label: 'Server vs Consumer', anchor: 'server-vs-consumer' },
+        { label: 'Regional Compliance', anchor: 'regional-compliance' },
+        { label: 'Common Mistakes', anchor: 'common-mistakes' },
+        { label: 'Common Questions', anchor: 'common-questions' },
+        { label: 'Related Reading', anchor: 'related-reading' },
+        { label: 'Sources', anchor: 'sources' },
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
           isTldr: true,
           items: [
             '**VRAM math**: (Model size in GB) ÷ Quantization = VRAM needed. Example: 70B model at 4-bit = 70 ÷ 8 = 8.75 GB.',
@@ -6476,9 +6479,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         vramMath: {
+          id: 'vram-math',
           title: 'How Do You Calculate VRAM Requirements?',
           content: [
-            'VRAM requirements depend on three factors: model size (parameters), quantization (bits per weight), and inference mode.',
+            '**VRAM requirements depend on three factors: model size (parameters), quantization (bits per weight), and inference mode.**',
             '**Formula:**',
             '```\nVRAM (GB) = (Model Size × Quantization Bits) ÷ 8\n```',
             '**Quantization values:** FP16 = 16 bits, Q8 = 8 bits, Q5 = 5 bits, Q4 = 4 bits. Link to [Ollama](/local-llms/how-to-install-ollama) for model management and [quantization](/local-llms/llm-quantization-explained) for detailed explanation.',
@@ -6494,10 +6498,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           note: 'Q4_K_M is the recommended default quantization for most users — it preserves 90–95% of model quality at roughly one-quarter the VRAM of FP16. As of April 2026, Q4_K_M is the format used in all Ollama default model downloads.',
         },
         gpuRecommendations: {
+          id: 'gpu-recommendations',
           title: 'What GPU Should You Buy?',
           content: [
-            'As of April 2026, NVIDIA dominates local LLM performance. Here are tier recommendations:',
-            'As of April 2026, the RTX 5090 is available and the RTX 4090 remains the best value for 70B inference on a single GPU.',
+            '**As of April 2026, NVIDIA dominates local LLM performance on discrete GPUs.** The RTX 4090 remains the best single-GPU value for 70B inference; the RTX 5090 is now available for higher throughput.',
           ],
           rows: [
             { 'Tier': 'Budget ($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Best For': '7–13B models', 'Performance': 'Fast (80 tokens/sec)' },
@@ -6508,24 +6512,27 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Performance'],
         },
         promptquorumTestData: {
+          id: 'performance-benchmarks',
           title: 'Performance Benchmarks',
           content: [
-            'Tested across hardware configurations — Llama 3.1 8B at Q4_K_M dispatched via PromptQuorum on three setups: RTX 4070 Ti (12 GB): 78 tokens/sec. RTX 4090 (24 GB): 147 tokens/sec. Apple M3 Max (36 GB unified): 62 tokens/sec. Cloud baseline GPT-4o via API: ~95 tokens/sec at peak. For the 7B model tier, RTX 4090 outperforms cloud API speed; M3 Max lags cloud by ~35% but keeps all data on-device.',
+            '**Tested hardware configurations — Llama 3.1 8B at Q4_K_M on three setups:** RTX 4070 Ti (12 GB): 78 tokens/sec. RTX 4090 (24 GB): 147 tokens/sec. Apple M3 Max (36 GB unified): 62 tokens/sec. Cloud baseline GPT-4o via API: ~95 tokens/sec at peak. For the 7B model tier, RTX 4090 outperforms cloud API speed; M3 Max lags cloud by ~35% but keeps all data on-device.',
           ],
         },
         cpuRam: {
+          id: 'cpu-ram',
           title: 'What CPU and RAM Do You Need?',
           content: [
-            'With a GPU, CPU and RAM are secondary. The GPU does the heavy lifting; CPU/RAM handle context preparation.',
+            '**With a GPU installed, CPU and RAM are secondary bottlenecks.** The GPU does the heavy lifting; CPU/RAM handle context preparation and model loading.',
             '**Minimum CPU**: 8-core processor (Intel i7 12th gen, AMD Ryzen 5 5600X, or newer). Older CPUs add 20%+ latency.',
             '**RAM**: 16 GB minimum (with GPU). If running without GPU, 32+ GB recommended. RAM does not directly limit model size when GPU is present.',
             '**Storage**: 500 GB SSD for model files and OS. M.2 NVMe is preferred (faster model loading). See also: [local LLMs on a laptop](/local-llms/local-llm-on-laptop) for portable deployment guidance.',
           ],
         },
         storage: {
+          id: 'storage',
           title: 'How Much Storage Do You Need?',
           content: [
-            'Model files are large. A 7B model at 4-bit quantization is 4–5 GB. Plan accordingly:',
+            '**Model files are large — a 7B model at 4-bit quantization is 4–5 GB, and a 70B model is 35–40 GB.** Plan storage capacity before downloading models:',
           ],
           items: [
             '500 GB SSD: OS + 1–2 small models (3B, 7B)',
@@ -6535,8 +6542,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         budgetBuilds: {
+          id: 'budget-builds',
           title: 'Budget Build Recommendations',
-          content: 'Building a local LLM machine from scratch:',
+          content: '**Three proven build configurations for running local LLMs from scratch, ordered by budget:**',
           rows: [
             { 'Budget': '$1500 (entry)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', 'Models': '7–13B', 'Cost': 'Realistic' },
             { 'Budget': '$2500 (solid)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', 'Models': '13–30B', 'Cost': 'Recommended' },
@@ -6545,9 +6553,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Cost'],
         },
         mac: {
+          id: 'mac-hardware',
           title: 'Mac Hardware for Local LLMs',
           content: [
-            '[Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) (M-series) is surprisingly good for local LLMs. M3/M4 Max and Pro handle 7–13B models well.',
+            '**[Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) (M-series) is the best laptop option for local LLMs as of April 2026.** Unified memory means all available RAM is accessible to the GPU — an M3 Max with 36 GB can load a 13B model entirely in GPU memory.',
           ],
           rows: [
             { 'Mac': 'M3 MacBook Pro 16"', 'GPU Memory': '18–36 GB unified', 'Best For': '7B models fast, 13B acceptable', 'Limitation': 'Cannot upgrade memory' },
@@ -6558,9 +6567,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
         },
         serverVsConsumer: {
+          id: 'server-vs-consumer',
           title: 'Server Hardware vs Consumer Hardware',
           content: [
-            'For production deployment, server-grade hardware is recommended:',
+            '**For single-user personal use, consumer GPUs (RTX 4090) are sufficient. For multi-user or 24/7 production inference, server GPUs are required.**',
           ],
           items: [
             '**Consumer (RTX 4090)**: ~$1800, 24 GB VRAM, single-user, prone to thermal throttling under sustained load.',
@@ -6569,6 +6579,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         regionalContext: {
+          id: 'regional-compliance',
           title: 'Regional Compliance',
           content: [
             '**EU / GDPR**: Running LLMs on local hardware eliminates the GDPR Article 46 transfer mechanism requirement that applies to cloud API calls. For EU organizations processing personal data — medical records, legal documents, financial data — local inference on an RTX 4090 or Mac Studio is the architecturally correct solution. German BSI guidelines recommend local inference for AI systems processing sensitive personal data. An on-premise server with dual RTX 4090 or an RTX 6000 Ada (48 GB VRAM) handles 70B model inference for small teams without any data leaving the building.',
@@ -6577,6 +6588,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes in Hardware Planning',
           items: [
             '**Buying CPU-only when GPU is available.** A $600 RTX 4070 Ti will outperform a $2000 CPU. GPU dominates LLM speed.',
@@ -6589,6 +6601,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'common-questions',
           title: 'Common Questions About Local LLM Hardware',
           faqs: [
             {
