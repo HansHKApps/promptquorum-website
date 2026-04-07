@@ -1714,9 +1714,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Getting Started',
       title: 'How Do You Run Local LLMs on a Laptop: Performance, Thermals, and Model Selection',
-            seoTitle: 'Run Local LLMs on a Laptop: Performance & Models 2026',
+      seoTitle: 'Run Local LLMs on Laptop 2026: Low VRAM Guide',
       intro: 'Running local LLMs on a laptop is practical in 2026 with the right model size and quantization. Any laptop with 8 GB RAM runs a 7B model at Q4_K_M quantization — 10–25 tok/sec on Windows CPU, 50–80 tok/sec on Apple Silicon M3. The three real constraints are RAM (limits maximum model size), thermal throttling (reduces speed 20–40% after 10–15 minutes sustained load), and battery drain (30–60% per hour under active inference). As of April 2026, Apple Silicon MacBooks are the best laptop option for local LLM inference — unified memory lets the GPU use all available RAM, and Apple\'s Metal acceleration outperforms most Windows laptop discrete GPUs per watt.',
-            metaDescription: 'Any laptop with 8 GB RAM runs a 7B local LLM. Thermal throttling cuts speed 20–40% after 10 minutes — here\'s how to prevent it and pick the right model.',
+      metaDescription: 'Practical guide to running powerful local LLMs on laptops with limited VRAM. Quantization tricks, best models, real performance tips, and how to test them directly with PromptQuorum.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '8 min read',
@@ -1980,9 +1980,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         de: {
       theme: 'Getting Started',
       title: 'Lokale LLMs auf Laptops ausführen: Performance, Wärmemanagement und Modellwahl',
-      seoTitle: 'Local LLMs auf Laptop ausführen: Performance & Modelle 2026',
+      seoTitle: 'Local LLMs auf Laptop 2026: Low-VRAM Guide',
       intro: 'Lokale LLMs auf einem Laptop sind 2026 mit der richtigen Modellgröße und Quantisierung praktisch einsetzbar. Jeder Laptop mit 8 GB RAM kann ein 7B-Modell in Q4_K_M-Quantisierung ausführen — 10–25 Token/Sek. auf Windows-CPU, 50–80 Token/Sek. auf Apple Silicon M3. Die drei echten Beschränkungen sind RAM (begrenzt maximale Modellgröße), Thermal Throttling (reduziert Geschwindigkeit um 20–40% nach 10–15 Minuten kontinuierlicher Last) und Akkulaufzeit (30–60% pro Stunde während aktiver Inferenz). Ab April 2026 sind Apple Silicon MacBooks die beste Laptop-Option für lokale LLM-Inferenz — der vereinheitlichte Speicher ermöglicht es der GPU, das gesamte verfügbare RAM zu nutzen, und Apples Metal-Beschleunigung übertrifft die meisten Windows-Laptop-Discrete-GPUs pro Watt.',
-      metaDescription: 'Jeder Laptop mit 8 GB RAM kann ein 7B Local LLM ausführen. Thermal Throttling reduziert die Geschwindigkeit um 20–40% nach 10 Minuten — so verhindern Sie es und wählen das richtige Modell.',
+      metaDescription: 'Praktischer Guide: Starke Local LLMs auf Laptops mit wenig VRAM betreiben. Quantisierung-Tricks, beste Modelle, echte Performance-Tipps und direkter Test mit PromptQuorum.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-07',
       readTime: '8 Min. Lesezeit',
@@ -2245,9 +2245,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     fr: {
       theme: 'Getting Started',
       title: 'Comment exécuter des Local LLMs sur un ordinateur portable: Performance, Thermique et Sélection de modèle',
-      seoTitle: 'Exécuter des Local LLMs sur un Laptop: Performance & Modèles 2026',
+      seoTitle: 'Local LLMs sur Laptop 2026 : Guide VRAM Limitée',
       intro: 'Exécuter des Local LLMs sur un ordinateur portable est pratique en 2026 avec la bonne taille de modèle et la quantification. N\'importe quel ordinateur portable avec 8 GB de RAM peut exécuter un modèle 7B en quantification Q4_K_M — 10–25 token/sec sur CPU Windows, 50–80 token/sec sur Apple Silicon M3. Les trois vraies contraintes sont la RAM (limite la taille maximale du modèle), l\'étranglement thermique (réduit la vitesse de 20–40% après 10–15 minutes de charge continue) et l\'autonomie de la batterie (30–60% par heure lors d\'une inférence active). À partir d\'avril 2026, les MacBooks Apple Silicon sont la meilleure option d\'ordinateur portable pour l\'inférence Local LLM — la mémoire unifiée permet au GPU d\'utiliser toute la RAM disponible, et l\'accélération Metal d\'Apple surpasse la plupart des GPU discrets d\'ordinateurs portables Windows par watt.',
-      metaDescription: 'N\'importe quel ordinateur portable avec 8 GB de RAM peut exécuter un Local LLM 7B. L\'étranglement thermique réduit la vitesse de 20–40% après 10 minutes — voici comment l\'éviter et choisir le bon modèle.',
+      metaDescription: 'Guide pratique pour exécuter des Local LLMs puissants sur ordinateur portable avec peu de VRAM. Astuces de quantification, meilleurs modèles et test des performances avec PromptQuorum.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-07',
       readTime: '8 min de lecture',
@@ -2510,9 +2510,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ja: {
       theme: 'Getting Started',
       title: 'ノートパソコンでローカルLLMを動かす方法：パフォーマンス、発熱管理、モデル選択',
-      seoTitle: 'ノートパソコンでLocal LLMを動かす 2026',
+      seoTitle: 'ノートPCでLocal LLMを動かす 2026：低VRAM対応ガイド',
       intro: '2026年、適切なモデルサイズと量子化があれば、ノートパソコンでローカルLLMを実行することは現実的です。8GBのRAMを備えたどのノートパソコンでも、Q4_K_M量子化で7Bモデルを実行できます—Windows CPUで10–25トークン/秒、Apple Silicon M3で50–80トークン/秒。3つの真の制約は、RAM（最大モデルサイズを制限）、サーマルスロットリング（継続的な負荷後10–15分で速度を20–40%削減）、およびバッテリー消費量（アクティブな推論時に1時間あたり30–60%）です。2026年4月現在、Apple Silicon MacBookはローカルLLM推論向けの最良のノートパソコンオプションです—統合メモリによってGPUはすべての利用可能なRAMを使用でき、AppleのMetal加速はほとんどのWindowsノートパソコン専用GPUをワットあたりで上回ります。',
-      metaDescription: '8GBのRAMを備えたどのノートパソコンでも7Bローカルサーバーを実行できます。サーマルスロットリングは10分後に速度を20–40%削減します—その方法と適切なモデルを選択する方法。',
+      metaDescription: 'VRAMが少ないノートPCで高性能Local LLMを動かす実践ガイド。量子化テクニック、おすすめモデル、実測性能とPromptQuorumでの比較方法を詳しく解説。',
       publishDate: '2026-04-04',
       dateModified: '2026-04-07',
       readTime: '8分で読める',
@@ -2772,6 +2772,270 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       },
     },
 
+    zh: {
+      theme: 'Getting Started',
+      title: '如何在笔记本上运行本地LLM：性能、散热和型号选择',
+      seoTitle: '笔记本运行 Local LLM 2026：低显存实用指南',
+      intro: '2026年，使用合适的模型大小和量化，在笔记本电脑上运行本地LLM是切实可行的。任何配备8GB RAM的笔记本电脑都可以以Q4_K_M量化运行7B模型 — Windows CPU上10–25令牌/秒，Apple Silicon M3上50–80令牌/秒。三个真正的限制是RAM（限制最大模型大小）、热节流（在10–15分钟持续负载后将速度降低20–40%）和电池消耗（活跃推理期间每小时30–60%）。截至2026年4月，Apple Silicon MacBook是本地LLM推理的最佳笔记本电脑选择 — 统一内存允许GPU使用所有可用RAM，Apple的Metal加速超过了大多数Windows笔记本离散GPU的每瓦性能。',
+      metaDescription: '笔记本电脑运行 Local LLM 完整指南。低显存解决方案、量化技巧、最佳模型推荐，以及用 PromptQuorum 测试真实性能的方法。',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-07',
+      readTime: '8分钟阅读',
+      educationalLevel: 'Beginner',
+      primaryTerm: '笔记本电脑本地LLM',
+      toc: [
+        { label: '关键要点', anchor: 'key-points' },
+        { label: '您可以在笔记本上运行本地LLM吗？', anchor: 'can-run' },
+        { label: '8GB RAM vs 16GB RAM', anchor: 'ram-comparison' },
+        { label: '笔记本电脑最佳模型', anchor: 'best-models' },
+        { label: 'Apple Silicon vs Windows笔记本', anchor: 'apple-vs-windows' },
+        { label: '如何处理热节流', anchor: 'thermal-management' },
+        { label: '本地推理期间的电池消耗', anchor: 'battery-drain' },
+        { label: '笔记本电脑量子化技巧', anchor: 'quantization-tips' },
+        { label: '地区合规性', anchor: 'regional-compliance' },
+        { label: '常见错误', anchor: 'common-mistakes' },
+        { label: '相关资源', anchor: 'related-resources' },
+        { label: '常见问题', anchor: 'faq' },
+        { label: '来源', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Q4_K_M量化的3B或7B模型在任何配有8GB RAM的现代笔记本电脑上都可以实用地运行。',
+            'Apple Silicon MacBook（M1、M2、M3、M4）由于统一内存和Metal GPU加速，在本地推理中超过大多数Windows笔记本 — M3 MacBook Pro以50–80令牌/秒运行7B模型。',
+            '热节流在10–15分钟的持续生成后将速度降低20–40%。使用笔记本电脑支架并禁用Turbo Boost以保持稳定的速度。',
+            '电池消耗：在大多数笔记本电脑上，活跃推理期间预计每小时30–60%的电池。对于较长的会话，请插入。',
+            '在8GB RAM Windows/Linux笔记本电脑上：使用Q4_K_M型号至7B。在16GB RAM上：Q4_K_M型号至13B，或7B的Q5_K_M。',
+          ],
+        },
+        canYouRun: {
+          title: '您可以在笔记本上运行本地LLM吗？',
+          content: [
+            '是的 — 使用合适的模型大小。配有8GB RAM的笔记本电脑以Q4_K_M量化运行7B模型，在CPU上产生10–25令牌/秒，在Apple Silicon上产生50–80令牌/秒。与云API相比这很慢，但足够快用于交互式使用。',
+            '大多数8GB笔记本电脑的实际上限是7B模型。Q4_K_M中的13B模型需要约9GB RAM — 在16GB机器上在技术上可行，但为操作系统和其他应用程序留下的余地很少。',
+            '对于[什么是本地LLM](/local-llms/what-are-local-llms)和RAM要求的完整说明，请参阅专用指南。',
+          ],
+          blockquote: '笔记本电脑上的本地LLM是在CPU或RAM上运行的模型文件 — 没有互联网，没有API，令牌根据硬件在10–80令牌/秒本地生成。',
+          blockquoteSource: '一句话总结',
+        },
+        ram8vs16: {
+          title: '8GB RAM vs 16GB RAM笔记本电脑：实际区别是什么？',
+          rows: [
+            { '场景': '最大模型大小', '8GB RAM': 'Q4_K_M（〜4.5GB）的7B', '16GB RAM': 'Q4_K_M（〜9GB）的13B' },
+            { '场景': '浏览器打开时的模型', '8GB RAM': '3B–7B（紧张）', '16GB RAM': '7B–13B舒适' },
+            { '场景': '推荐的第一个模型', '8GB RAM': 'llama3.2:3b或mistral:7b', '16GB RAM': 'llama3.1:8b或qwen2.5:14b' },
+            { '场景': '同时应用程序', '8GB RAM': '在加载7B之前关闭浏览器', '16GB RAM': '正常多任务+ 7B模型' },
+          ],
+          columns: ['场景', '8GB RAM', '16GB RAM'],
+        },
+        bestModels: {
+          title: '笔记本电脑最佳本地LLM模型是什么？',
+          content: '这些模型专门为笔记本电脑限制而选择 — 平衡质量、RAM使用和持续生成速度。安装[Ollama](/local-llms/how-to-install-ollama)以使用单个命令运行这些模型中的任何一个：',
+          rows: [
+            { '模型': 'llama3.2:3b', 'RAM': '2.5GB', '速度（CPU）': '25–45令牌/秒', '最佳适配': '8GB笔记本电脑，快速任务' },
+            { '模型': 'phi3.5', 'RAM': '3GB', '速度（CPU）': '20–35令牌/秒', '最佳适配': '8GB笔记本电脑，推理/编码' },
+            { '模型': 'mistral:7b', 'RAM': '4.5GB', '速度（CPU）': '10–20令牌/秒', '最佳适配': '8–16GB，通用用途' },
+            { '模型': 'qwen2.5:7b', 'RAM': '4.7GB', '速度（CPU）': '10–18令牌/秒', '最佳适配': '8–16GB，多语言、编码' },
+            { '模型': 'llama3.1:8b', 'RAM': '5.5GB', '速度（CPU）': '8–15令牌/秒', '最佳适配': '16GB笔记本电脑，这个大小最好的品质' },
+          ],
+          columns: ['模型', 'RAM', '速度（CPU）', '最佳适配'],
+        },
+        appleSilicon: {
+          title: 'Apple Silicon vs Windows笔记本：哪个对本地LLM更好？',
+          content: [
+            '截至2026年4月，Apple Silicon MacBook（M1至M4）是本地LLM推理的最佳消费级笔记本电脑。[统一内存](/local-llms/gpu-vs-cpu-vs-apple-silicon)架构意味着GPU和CPU共享同一内存池 — 配有18GB内存的M3 MacBook Pro可以完全在GPU内存中运行13B模型，达到50–80令牌/秒。',
+            '带有离散NVIDIA GPU的Windows笔记本电脑如果VRAM足够（8GB以上）可能更快。NVIDIA RTX 4060笔记本电脑GPU（8GB VRAM）以60–90令牌/秒运行7B模型 — 可与Apple M3 Pro相比。缺点是更高的电池消耗和更多的热量生成。',
+            '运行Intel Iris Xe或AMD Radeon集成显卡的Windows笔记本电脑仅使用CPU推理，对7B模型产生8–20令牌/秒。',
+          ],
+          rows: [
+            { '笔记本电脑类型': 'Apple M3 Pro（18GB）', '速度（7B）': '50–80令牌/秒', '电池消耗': '适中', '最大模型': '~13B' },
+            { '笔记本电脑类型': 'Apple M2（8GB）', '速度（7B）': '30–50令牌/秒', '电池消耗': '适中', '最大模型': '~7B' },
+            { '笔记本电脑类型': 'NVIDIA RTX 4060笔记本电脑（8GB VRAM）', '速度（7B）': '60–90令牌/秒', '电池消耗': '高', '最大模型': '~7B（GPU）、~13B（CPU卸载）' },
+            { '笔记本电脑类型': 'Intel i7 + Iris Xe（16GB RAM）', '速度（7B）': '8–15令牌/秒', '电池消耗': '适中', '最大模型': '~13B' },
+            { '笔记本电脑类型': 'AMD Ryzen 7 +集成GPU（16GB）', '速度（7B）': '10–18令牌/秒', '电池消耗': '适中', '最大模型': '~13B' },
+          ],
+          columns: ['笔记本电脑类型', '速度（7B）', '电池消耗', '最大模型'],
+        },
+        thermals: {
+          title: '如何处理笔记本电脑上的热节流？',
+          content: [
+            '热节流发生在CPU或GPU达到其温度极限并降低时钟速度以冷却时。对于本地LLM推理，这通常在10–15分钟的持续生成后发生，速度降低20–40%。',
+          ],
+          items: [
+            '**使用带气流间隙的笔记本电脑支架** — 将笔记本电脑抬起2–3厘米可改善排气气流，并将节流开始时间从10延迟到20+分钟。',
+            '**禁用Intel Turbo Boost / AMD Precision Boost** — 在基础时钟速度下运行会产生稳定的性能，没有热峰值。在macOS上，安装`cpufreq`或在电池设置中使用"低功耗"模式。',
+            '**限制生成批次大小** — 避免重新生成非常长的响应。将长任务分解成更短的提示。',
+            '**使用Q4_K_M而不是Q8_0** — 较低的量化需要每个令牌的计算量较少，产生较少的热量，代价是边际质量。',
+          ],
+          blockquote: '热节流是当CPU超过约95°C时自动降低CPU时钟速度 — 它在10–15分钟的持续生成后将本地LLM推理速度降低20–40%。',
+          blockquoteSource: '一句话总结',
+        },
+        battery: {
+          title: '运行本地LLM消耗多少电池？',
+          content: [
+            '本地推理期间的电池消耗是重大的。7B模型上的活跃CPU推理在典型笔记本电脑CPU上消耗15–25W，将60Wh电池的电池寿命从完全充电时间缩短至2–3小时。',
+            'Apple Silicon明显更高效。运行7B模型的M3 MacBook Pro在推理期间消耗约12–18W，在完全充电时提供3–4小时的活跃生成。',
+            '对于较长的会话，请插入。如果您需要电池高效的本地推理，请在Q4_K_M中使用3B模型 — 它消耗6–10W，并在大多数笔记本电脑上将电池寿命延长至5–6小时。',
+          ],
+        },
+        quantization: {
+          title: '在笔记本电脑上应该使用哪个量化级别？',
+          content: '[量化](/local-llms/llm-quantization-explained)降低模型精度以降低RAM和计算要求。对于笔记本电脑，Q4_K_M是推荐的默认值：',
+          rows: [
+            { '量化': 'Q2_K', '与全精度相比的RAM': '~25%', '质量损失': '高 — 明显降级', '用例': '仅极低的RAM' },
+            { '量化': 'Q3_K_S', '与全精度相比的RAM': '~35%', '质量损失': '适中', '用例': 'RAM低于4GB' },
+            { '量化': 'Q4_K_M', '与全精度相比的RAM': '~45%', '质量损失': '低 — 推荐的默认值', '用例': '大多数笔记本电脑，最佳平衡' },
+            { '量化': 'Q5_K_M', '与全精度相比的RAM': '~55%', '质量损失': '最小', '用例': '16GB RAM笔记本电脑' },
+            { '量化': 'Q8_0', '与全精度相比的RAM': '~80%', '质量损失': '可以忽略不计', '用例': '32GB RAM或GPU配8GB以上VRAM' },
+          ],
+          columns: ['量化', '与全精度相比的RAM', '质量损失', '用例'],
+        },
+        regionalContext: {
+          title: '在笔记本电脑上运行本地LLM如何保护您的隐私？',
+          content: [
+            '**中国（数据安全法）** ：中国《数据安全法》限制某些数据类别离开经批准的基础设施。在笔记本电脑上运行Qwen2.5 7B本地（通过Ollama）满足个人用例的此要求 — Qwen2.5在相同硬件上处理中文内容比西方训练的模型令牌高效30–40%。',
+            '**数据主权** ：在笔记本电脑上本地运行LLM可确保所有数据保持在设备上。推理文本、上下文、输出都存储在本地。这满足《数据安全法》对受管制数据处理的合规性要求。',
+            '**隐私最大化** ：与网络隔离的笔记本电脑上的本地推理是处理个人信息（医疗数据、财务记录）的最佳隐私配置。没有云同步、没有API调用、没有外部处理 — 完全数据隐私。',
+          ],
+        },
+        commonMistakes: {
+          title: '在笔记本电脑上运行本地LLM时的常见错误',
+          items: [
+            '**在不关闭其他应用程序的情况下在8GB RAM上加载7B模型** ：Q4_K_M的7B模型使用约4.5GB。macOS或Windows本身通常使用3–4GB RAM。在8GB机器上，加载7B模型同时打开浏览器和多个选项卡会导致内存压力、交换使用以及速度低至2–5令牌/秒。在8GB RAM笔记本电脑上加载超过3B的模型之前，请关闭浏览器和不必要的应用程序。',
+            '**当Q4_K_M足够时使用Q8_0** ：Q8_0将RAM要求加倍，与Q4_K_M相比对大多数对话任务的质量收益可以忽略不计。在RAM受限且热负载较高的笔记本电脑上，除非您有32GB以上并在GPU上运行模型，否则Q4_K_M始终是更好的选择。',
+            '**在没有支架的情况下运行长生成会话** ：在平坦的桌子上进行20分钟以上的持续推理会导致大多数笔记本电脑在15分钟内的热节流。15美元的笔记本电脑支架将底座抬起2–3厘米，无需任何其他更改，可将无节流运行时间从10延长到20+分钟。',
+            '**期望笔记本电脑速度与云API速度相匹配** ：GPT-4o通过API产生80–150令牌/秒。8GB笔记本电脑上的7B模型在CPU上产生10–25令牌/秒。这是4–15倍的速度差异。对于交互式使用，笔记本电脑推理很好。对于批处理大型文档，云API在低容量下更快且更便宜。',
+            '**根据参数数而不是RAM适配选择模型大小** ：13B模型听起来比7B模型更好 — 但在16GB笔记本电脑上运行浏览器时，Q4_K_M中的13B仅仅勉强适应。Q5_K_M（更高的量化质量）中的7B模型运行更快，通常会产生比为内存而战的Q4_K_M中13B模型更好的结果。',
+          ],
+        },
+        relatedReading: {
+          title: '相关资源',
+          items: [
+            '[什么是本地LLM？](/local-llms/what-are-local-llms) — 关于本地推理如何工作以及哪些硬件组件重要的基础指南',
+            '[如何安装Ollama](/local-llms/how-to-install-ollama) — macOS、Windows和Linux的完整设置指南，带有笔记本电脑特定的配置说明',
+            '[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models) — 按RAM层级的模型建议，包括为笔记本电脑使用优化的3B和7B模型',
+            '[GPU与CPU与Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — 与笔记本电脑硬件选择相关的推理架构的详细比较',
+            '[本地LLM与云API](/local-llms/local-llms-vs-cloud-apis) — 成本和速度比较，可帮助您决定何时笔记本电脑推理是正确的选择',
+            '[LLM量化解释](/local-llms/llm-quantization-explained) — 关于内存受限笔记本电脑环境的Q4/Q5/Q8量化权衡的完整指南',
+          ],
+        },
+        faqSection: {
+          title: '关于在笔记本电脑上运行本地LLM的常见问题',
+          faqs: [
+            {
+              q: '运行本地LLM会随着时间推移损伤我的笔记本电脑吗？',
+              a: '否 — 现代CPU和GPU设计可通过热节流安全地处理持续的高负荷。运行推理数小时等同于视频编码或游戏。笔记本电脑支架和适当的通风可防止过度热量积聚。通过插电充电增加的电池周期数是正常的磨损。',
+            },
+            {
+              q: '我可以在4GB RAM笔记本电脑上运行本地LLM吗？',
+              a: '勉强。Gemma 2 2B之类的2B模型需要约1.7GB RAM用于模型，但操作系统同时需要2–3GB。在4GB总RAM下，您可能会经历交换使用，使推理速度降低5–10倍。实际最小值是8GB。',
+            },
+            {
+              q: '我的笔记本电脑需要专用GPU来运行本地LLM吗？',
+              a: '否。所有主要的本地LLM工具（Ollama、LM Studio、GPT4All）仅在CPU上运行。专用GPU显著加速推理，但3B–7B模型可在10–30令牌/秒的CPU单独上使用。参见[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models)。',
+            },
+            {
+              q: '运行本地LLM的最快笔记本电脑是什么？',
+              a: '截至2026年4月，Apple MacBook Pro M4 Max（48GB统一内存）是本地LLM推理的最快消费级笔记本电脑。它在13B模型上达到80–120令牌/秒，可以在Q4_K_M处运行30B模型。对于Windows笔记本电脑，RTX 4090笔记本电脑GPU（16GB VRAM）在7B模型上产生100–130令牌/秒，但消耗更多功率并产生更多热量。',
+            },
+            {
+              q: '我如何知道我的笔记本电脑是否进行热节流？',
+              a: '在macOS上：打开Activity Monitor → Window → CPU使用历史记录。在持续生成期间CPU频率的突然下降表示节流。在Windows上：使用HWiNFO64实时监视CPU/GPU温度和时钟速度。节流通常在CPU温度超过95–100°C时发生。',
+            },
+            {
+              q: '我可以在电池电力上运行本地LLM吗？',
+              a: '是的，但速度和持续时间降低。在电池模式下，macOS自动限制CPU/GPU电源提取，相比插电性能降低推理速度20–35%。MacBook M3 Pro上的7B模型在推理期间消耗约12–18W — 从完全充电时预计3–4小时的活跃生成，然后下降至20%。对于电池高效的会话，使用3B模型（6–10W）。',
+            },
+            {
+              q: '8GB RAM笔记本电脑最好的型号大小是什么？',
+              a: 'Q4_K_M中的7B模型是在运行浏览器或其他应用程序打开时运行8GB RAM笔记本电脑的实际最大值。仅对于关闭所有其他应用程序的模型，9B模型可能适合。推荐的标准是多任务处理的llama3.2:3b或当您可以关闭浏览器时品质的mistral:7b。',
+            },
+            {
+              q: 'Ollama在笔记本电脑上自动使用GPU吗？',
+              a: '是的。Ollama自动检测并使用可用的GPU加速。在Apple Silicon上，它使用Metal GPU加速。在NVIDIA笔记本电脑上，它使用CUDA。在AMD笔记本电脑上，它使用ROCm（在Linux上需要一些额外设置）。您可以通过启动模型后运行`ollama ps`来验证GPU是否被使用 — 它显示层是否加载到GPU或CPU。',
+            },
+          ],
+        },
+        sources: {
+          title: '来源',
+          items: [
+            'Apple. (2026). "Apple M4 Max芯片概述。" Apple开发者。https://developer.apple.com/apple-silicon/ — 统一内存架构、ML性能基准和功率效率规范。',
+            'Ollama. (2026). "Ollama文档。" https://ollama.com/docs — CPU/GPU推理配置、CUDA/Metal加速和上下文长度设置。',
+            'llama.cpp贡献者。(2026). "llama.cpp性能基准。" https://github.com/ggerganov/llama.cpp — 硬件配置和量化级别的令牌吞吐量数据。',
+            'Hugging Face. (2026). "GGUF量化指南。" https://huggingface.co/docs/transformers/main/en/quantization/gguf — Q2/Q4/Q5/Q8质量与内存权衡，包括基准结果。',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '如何在笔记本上运行本地LLM：性能、散热和型号选择',
+        'description': '如何在具有有限VRAM的笔记本电脑上运行强大的本地LLM。量化技巧、最佳模型、性能技巧和Apple Silicon vs Windows比较。',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=zh',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['笔记本电脑本地LLM', '在笔记本上运行LLM', '低VRAM模型', 'Ollama笔记本电脑', '笔记本电脑量子化'],
+        'about': [
+          { '@type': 'Thing', 'name': '笔记本电脑上的本地LLM' },
+          { '@type': 'Thing', 'name': 'Apple Silicon推理' },
+          { '@type': 'Thing', 'name': '热节流' },
+          { '@type': 'Thing', 'name': 'LLM量化' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'RAM要求' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '如何在运行本地LLM的笔记本电脑上减少热节流',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': '使用带气流间隙的笔记本电脑支架' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '禁用Turbo Boost以保持稳定的时钟速度' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '限制生成批次大小' },
+          { '@type': 'HowToStep', 'position': 4, 'name': '使用Q4_K_M量化来减少热' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: '运行本地LLM会随着时间推移损伤笔记本电脑吗？', acceptedAnswer: { '@type': 'Answer', text: '否 — 现代CPU和GPU设计可安全处理持续的高负荷。笔记本电脑支架和适当的通风可防止过度热量积聚。' } },
+          { '@type': 'Question', name: '我可以在4GB RAM笔记本电脑上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '勉强。2B模型需要约1.7GB RAM，操作系统需要2–3GB。在4GB总RAM下，交换使用使推理速度降低5–10倍。' } },
+          { '@type': 'Question', name: '我的笔记本电脑需要专用GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '否。所有主要的本地LLM工具仅在CPU上运行。专用GPU加速推理，但3B–7B模型可在10–30令牌/秒的CPU单独上使用。' } },
+          { '@type': 'Question', name: '运行本地LLM的最快笔记本电脑是什么？', acceptedAnswer: { '@type': 'Answer', text: '截至2026年4月，Apple MacBook Pro M4 Max（48GB统一内存）是最快的。它在13B模型上达到80–120令牌/秒。' } },
+          { '@type': 'Question', name: '我如何知道笔记本电脑是否进行热节流？', acceptedAnswer: { '@type': 'Answer', text: '在macOS上：打开Activity Monitor → Window → CPU使用历史。在持续生成期间CPU频率的突然下降表示节流。' } },
+          { '@type': 'Question', name: '我可以在电池电力上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，但速度和持续时间降低。macOS限制CPU/GPU电源提取，相比插电性能降低推理速度20–35%。' } },
+          { '@type': 'Question', name: '8GB RAM笔记本电脑最好的型号大小是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M中的7B是实际最大值。推荐的标准是多任务处理的llama3.2:3b。' } },
+          { '@type': 'Question', name: 'Ollama在笔记本电脑上自动使用GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。Ollama自动检测并使用可用的GPU加速。通过启动模型后运行`ollama ps`来验证。' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '笔记本电脑最佳本地LLM模型 2026',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:3b', 'description': '2.5GB RAM。25–45令牌/秒CPU。8GB笔记本电脑、快速任务最佳。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'phi3.5', 'description': '3GB RAM。20–35令牌/秒CPU。8GB笔记本电脑、推理/编码最佳。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'mistral:7b', 'description': '4.5GB RAM。10–20令牌/秒CPU。8–16GB通用用途最佳。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen2.5:7b', 'description': '4.7GB RAM。10–18令牌/秒CPU。8–16GB多语言编码最佳。' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'llama3.1:8b', 'description': '5.5GB RAM。8–15令牌/秒CPU。16GB笔记本电脑这个大小最好的品质。' }
+        ]
+      },
+    },
 
   },
 
