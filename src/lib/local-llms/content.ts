@@ -401,6 +401,16 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'HowToStep', 'name': 'Connect PromptQuorum', 'text': 'Connect PromptQuorum to your Ollama instance to compare responses from multiple local models side by side.' }
         ]
       },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Is Ollama free to use?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, Ollama is free and open-source under the MIT license. There are no usage limits, no API keys required, and all inference runs locally on your machine.' } },
+          { '@type': 'Question', name: 'Does Ollama work on Windows?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Ollama has a native Windows installer as of 2024. Download it from ollama.com. It supports NVIDIA GPUs via CUDA and AMD GPUs via ROCm on Windows.' } },
+          { '@type': 'Question', name: 'How much RAM do I need to run Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Minimum 8GB RAM for 3B–7B models at Q4 quantization. 16GB RAM handles 7B models comfortably and 13B models at Q4. 32GB+ RAM is recommended for 34B models running CPU-only.' } },
+          { '@type': 'Question', name: 'How do I update Ollama to the latest version?', acceptedAnswer: { '@type': 'Answer', text: 'On macOS, Ollama auto-updates. On Windows, download and run the latest installer from ollama.com. On Linux, re-run the install script: curl -fsSL https://ollama.com/install.sh | sh' } }
+        ]
+      },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -616,6 +626,15 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'HowToStep', 'name': 'Browse and download a model', 'text': 'Use the built-in model browser to download a model (e.g., Llama 3.2 3B for 8GB RAM).' },
           { '@type': 'HowToStep', 'name': 'Start a chat session', 'text': 'Click the model and start a chat session inside LM Studio.' },
           { '@type': 'HowToStep', 'name': 'Enable local server (optional)', 'text': 'Go to the Local Server tab and start the server on port 1234 to connect external tools.' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Is LM Studio free to use?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, LM Studio is free for personal and research use. A commercial license is required for business use. All core features including model download, chat, and local server are available in the free version.' } },
+          { '@type': 'Question', name: 'What models does LM Studio support?', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio supports any GGUF-format model from Hugging Face, including Llama 3.2, Qwen 2.5, Mistral, Phi-3.5, Gemma 2, and DeepSeek. The built-in browser shows compatible models sorted by VRAM requirement.' } },
+          { '@type': 'Question', name: 'Does LM Studio work completely offline?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. After installing LM Studio and downloading a model, all inference runs locally with no internet connection. Only the initial model download requires internet access.' } }
         ]
       },
       itemListSchema: {
@@ -1367,6 +1386,15 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
         ]
       },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Why is my local LLM generating text very slowly?', acceptedAnswer: { '@type': 'Answer', text: 'Slow generation usually means the model is running on CPU instead of GPU. Check Ollama logs with ollama logs or LM Studio\'s performance panel. Ensure your GPU driver is installed and the model fits within VRAM. Use a smaller or more quantized model if VRAM is exceeded.' } },
+          { '@type': 'Question', name: 'How do I fix out-of-memory errors when loading a model?', acceptedAnswer: { '@type': 'Answer', text: 'Out-of-memory errors occur when the model exceeds available VRAM. Switch to a lower quantization level (Q4 instead of Q8), use a smaller model variant (7B instead of 13B), or enable GPU+CPU split inference in Ollama with OLLAMA_NUM_GPU=1.' } },
+          { '@type': 'Question', name: 'Ollama is not detecting my NVIDIA GPU — how do I fix this?', acceptedAnswer: { '@type': 'Answer', text: 'Reinstall the NVIDIA CUDA driver (version 525+) and restart Ollama. Verify GPU detection with nvidia-smi in terminal. On Windows, ensure Ollama is running as administrator. On Linux, add your user to the video and render groups.' } }
+        ]
+      },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -1570,6 +1598,16 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
           { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Can I run local LLMs on a laptop with 8GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. With 8GB RAM, use Q4 quantized 3B models (e.g., Llama 3.2 3B, Phi-3.5 Mini). Ollama and LM Studio both support 8GB RAM setups. Expect 3–8 tokens/second on modern laptops.' } },
+          { '@type': 'Question', name: 'Is MacBook or Windows laptop better for local LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Apple Silicon MacBooks (M1/M2/M3) outperform most Windows laptops for local LLMs due to unified memory architecture. An M2 MacBook Pro with 16GB handles 7B models at 20–30 tokens/second. Windows laptops need a discrete GPU for comparable performance.' } },
+          { '@type': 'Question', name: 'Does thermal throttling affect local LLM performance on laptops?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Most laptops throttle under sustained inference load after 10–15 minutes, reducing speed by 20–40%. Use a laptop cooling pad, set performance mode in power settings, and prefer shorter inference sessions to minimize throttling.' } },
+          { '@type': 'Question', name: 'How much does running a local LLM drain a laptop battery?', acceptedAnswer: { '@type': 'Answer', text: 'Running a local LLM uses 15–35W on most laptops, reducing battery life by 50–70% compared to idle. Apple Silicon is more efficient. For battery-constrained use, prefer quantized 3B models and plug in when possible.' } }
         ]
       },
       itemListSchema: {
@@ -1780,6 +1818,15 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'HowToStep', 'name': 'Modellquellen verifizieren', 'text': 'Laden Sie Modelle nur von Hugging Face oder der offiziellen Ollama-Bibliothek. SHA256-Prüfsummen für sensitive Daten verifizieren.' },
           { '@type': 'HowToStep', 'name': 'Festplattenverschlüsselung aktivieren', 'text': 'Vollständige Festplattenverschlüsselung für DSGVO-konforme Setups mit regulierten Daten aktivieren.' },
           { '@type': 'HowToStep', 'name': 'Zugriffskontrolle konfigurieren', 'text': 'Authentifizierung für den Ollama-API-Endpunkt in Produktionsumgebungen einrichten.' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Ist ein lokales LLM automatisch DSGVO-konform?', acceptedAnswer: { '@type': 'Answer', text: 'Nicht automatisch. Ein lokales LLM verarbeitet Daten lokal, aber DSGVO-Konformität erfordert zusätzlich: Festplattenverschlüsselung, Zugriffskontrolle, Verarbeitungsverzeichnis und ggf. Auftragsverarbeitungsverträge. Lokale Verarbeitung ist ein wichtiger Schritt, aber kein vollständiger DSGVO-Nachweis.' } },
+          { '@type': 'Question', name: 'Kann ein lokales LLM auf meine lokalen Dateien zugreifen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Ollama und LM Studio haben standardmäßig keinen Zugriff auf das Dateisystem. Sie verarbeiten nur die Texteingaben, die Sie im Chat oder per API senden. Kein automatischer Dateizugriff, kein Surfen im Internet.' } },
+          { '@type': 'Question', name: 'Was ist das sicherste Setup für ein lokales LLM in Unternehmen?', acceptedAnswer: { '@type': 'Answer', text: 'Das sicherste Setup: Ollama nur auf localhost binden (kein OLLAMA_HOST=0.0.0.0), Festplattenverschlüsselung aktivieren, Modelle nur von verifizierten Quellen laden (Hugging Face + SHA256-Check), Telemetrie in LM Studio deaktivieren und Zugriffsprotokollierung einrichten.' } }
         ]
       }
     },
@@ -2295,6 +2342,16 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'SoftwareApplication', 'name': 'Mistral' },
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Which is better for coding: Qwen, Llama, or Mistral?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder outperforms Llama 3.2 and Mistral on most coding benchmarks in 2026. Qwen2.5-Coder 7B scores higher than Llama 3.1 70B on HumanEval. Use Qwen for code generation, debugging, and code review tasks.' } },
+          { '@type': 'Question', name: 'Which local LLM supports the most languages?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen 2.5 supports 29 languages including Arabic, Japanese, Korean, and all major European languages. Llama 3.2 supports 8 languages. Mistral models focus primarily on English and major European languages.' } },
+          { '@type': 'Question', name: 'Which model should a beginner choose with 8GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.2 3B is the best starting point for 8GB RAM systems. It runs at full Q4 in under 4GB VRAM, responds quickly, and follows instructions reliably. Download it with: ollama pull llama3.2:3b' } },
+          { '@type': 'Question', name: 'Which local LLM is most efficient for low-resource setups?', acceptedAnswer: { '@type': 'Answer', text: 'Mistral 7B offers the best efficiency per parameter, with fast inference and low memory usage. It consistently outperforms larger models on reasoning tasks per GB of VRAM, making it ideal for constrained setups.' } }
         ]
       },
       itemListSchema: {
@@ -4834,6 +4891,15 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
           { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
         ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'L\'API d\'Ollama est-elle compatible avec le SDK OpenAI?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Ollama expose une API REST sur http://localhost:11434/v1 qui est entièrement compatible avec le SDK OpenAI en Python et JavaScript. Changez simplement base_url et utilisez n\'importe quel nom de modèle Ollama.' } },
+          { '@type': 'Question', name: 'Faut-il une clé API pour utiliser Ollama en local?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Ollama ne requiert aucune clé API pour un usage local. Lors de l\'utilisation du SDK OpenAI avec Ollama, passez api_key="ollama" (valeur fictive requise par le SDK mais ignorée par Ollama).' } },
+          { '@type': 'Question', name: 'LM Studio est-il aussi compatible avec l\'API OpenAI?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. LM Studio démarre un serveur local sur le port 1234 qui implémente l\'API OpenAI. Utilisez base_url="http://localhost:1234/v1" dans votre code. Tous les modèles chargés dans LM Studio sont accessibles via cette API.' } }
+        ]
       }
     },
   },
@@ -5656,6 +5722,15 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'HowToStep', 'name': 'Test prompts with PromptQuorum', 'text': 'Compare coding prompt responses across multiple local models using PromptQuorum to find the best fit for your workflow.' }
         ]
       },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Is using a local LLM in VS Code faster than GitHub Copilot?', acceptedAnswer: { '@type': 'Answer', text: 'Not necessarily. GitHub Copilot uses optimized cloud infrastructure and typically responds faster. Local LLMs in VS Code via Continue.dev are slower but offer complete privacy, no usage limits, and work without internet access.' } },
+          { '@type': 'Question', name: 'Can I use local LLMs in VS Code without internet?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Once you install Continue.dev and download a model through Ollama or LM Studio, the entire coding assistant works offline. No data leaves your machine.' } },
+          { '@type': 'Question', name: 'What is the best local model for code completion in VS Code?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 7B is the top-performing local model for code completion in 2026. It outperforms DeepSeek-Coder 6.7B on most coding benchmarks and fits comfortably in 8GB VRAM. For systems with only 4GB VRAM, Phi-3.5 Mini is a capable fallback.' } }
+        ]
+      },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -6016,6 +6091,16 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
           { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What GPU do I need to run a 7B local LLM?', acceptedAnswer: { '@type': 'Answer', text: 'An NVIDIA RTX 3060 12GB or RTX 4060 8GB is sufficient for 7B models at Q4 quantization. AMD RX 7900 XTX works with ROCm on Linux. Apple Silicon M1/M2 handles 7B models natively via Metal.' } },
+          { '@type': 'Question', name: 'How much VRAM do I need for a 70B model?', acceptedAnswer: { '@type': 'Answer', text: 'A 70B model at Q4 quantization requires approximately 40GB VRAM. This requires either dual NVIDIA RTX 4090s (48GB combined), an NVIDIA A100 80GB, or Apple M2 Ultra with 192GB unified memory.' } },
+          { '@type': 'Question', name: 'Can I run local LLMs without a GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, CPU-only inference works with Ollama and LM Studio, but is 5–20x slower than GPU inference. For usable speeds on CPU, use Q4 quantized 3B–7B models and a modern multi-core CPU with at least 16GB RAM.' } },
+          { '@type': 'Question', name: 'What is the best budget GPU for local LLMs in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The NVIDIA RTX 4070 12GB offers the best price-performance ratio for local LLMs in 2026, handling 7B models at full speed and 13B models at Q4 quantization. The RTX 4060 Ti 16GB is a close alternative with more VRAM.' } }
         ]
       },
       itemListSchema: {
@@ -10342,6 +10427,17 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**US GPU procurement benefits from direct manufacturer relationships and competitive pricing.** Enterprise customers access NVIDIA support and volume discounts. Consumer GPUs (RTX 4060 to 4090) are widely available for small teams. PromptQuorum enables benchmarking on candidate GPUs before large purchases.',
           ],
         },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'How much VRAM do I need for a 7B local LLM?', acceptedAnswer: { '@type': 'Answer', text: 'A 7B model at Q4 quantization requires approximately 4–5GB VRAM. An 8GB GPU (e.g., RTX 4060, RTX 3060 8GB) handles 7B models with room for KV cache. With Q8 quantization, you need 7–8GB VRAM.' } },
+          { '@type': 'Question', name: 'How much VRAM do I need for a 70B model?', acceptedAnswer: { '@type': 'Answer', text: 'A 70B model at Q4 quantization requires approximately 40GB VRAM. Options include dual RTX 4090s (48GB combined), an A100 80GB, or Apple M2 Ultra with 192GB unified memory. Q2 quantization can reduce this to ~20GB with quality tradeoffs.' } },
+          { '@type': 'Question', name: 'Does quantization significantly reduce VRAM requirements?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Quantization has a large impact: a 7B model uses 14GB at FP16, 7–8GB at Q8, and 4–5GB at Q4. Q4 is the standard recommendation for a balance of quality and memory efficiency. Q2 reduces VRAM further but noticeably reduces output quality.' } },
+          { '@type': 'Question', name: 'Should I add extra VRAM overhead beyond the model size?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Add 1–2GB for KV cache and system overhead. For a 7B Q4 model using 4.5GB, target an 8GB GPU. For a 13B Q4 model using 8GB, target a 10–12GB GPU. Running at 95%+ VRAM capacity causes slowdowns.' } },
+          { '@type': 'Question', name: 'How much VRAM do 13B and 34B models need?', acceptedAnswer: { '@type': 'Answer', text: 'A 13B model at Q4 requires 7–9GB VRAM (fits in RTX 3060 12GB or RTX 4070). A 34B model at Q4 requires 20–24GB VRAM, requiring dual GPUs or a high-end workstation GPU like the RTX 6000 Ada.' } }
+        ]
       },
     },
   },
