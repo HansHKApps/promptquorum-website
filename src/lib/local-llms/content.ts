@@ -2242,7 +2242,272 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       },
     },
 
-    ja: {
+    fr: {
+      theme: 'Getting Started',
+      title: 'Comment exécuter des Local LLMs sur un ordinateur portable: Performance, Thermique et Sélection de modèle',
+      seoTitle: 'Exécuter des Local LLMs sur un Laptop: Performance & Modèles 2026',
+      intro: 'Exécuter des Local LLMs sur un ordinateur portable est pratique en 2026 avec la bonne taille de modèle et la quantification. N\'importe quel ordinateur portable avec 8 GB de RAM peut exécuter un modèle 7B en quantification Q4_K_M — 10–25 token/sec sur CPU Windows, 50–80 token/sec sur Apple Silicon M3. Les trois vraies contraintes sont la RAM (limite la taille maximale du modèle), l\'étranglement thermique (réduit la vitesse de 20–40% après 10–15 minutes de charge continue) et l\'autonomie de la batterie (30–60% par heure lors d\'une inférence active). À partir d\'avril 2026, les MacBooks Apple Silicon sont la meilleure option d\'ordinateur portable pour l\'inférence Local LLM — la mémoire unifiée permet au GPU d\'utiliser toute la RAM disponible, et l\'accélération Metal d\'Apple surpasse la plupart des GPU discrets d\'ordinateurs portables Windows par watt.',
+      metaDescription: 'N\'importe quel ordinateur portable avec 8 GB de RAM peut exécuter un Local LLM 7B. L\'étranglement thermique réduit la vitesse de 20–40% après 10 minutes — voici comment l\'éviter et choisir le bon modèle.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-07',
+      readTime: '8 min de lecture',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Local LLM ordinateur portable',
+      toc: [
+        { label: 'Résumé clé', anchor: 'resume-cle' },
+        { label: 'Pouvez-vous exécuter un Local LLM sur un ordinateur portable?', anchor: 'peux-executer' },
+        { label: '8 GB RAM vs 16 GB RAM', anchor: '8gb-vs-16gb-ram' },
+        { label: 'Meilleurs modèles pour ordinateurs portables', anchor: 'meilleurs-modeles' },
+        { label: 'Apple Silicon vs Ordinateur portable Windows', anchor: 'apple-vs-windows' },
+        { label: 'Comment gérer l\'étranglement thermique', anchor: 'gerer-thermique' },
+        { label: 'Autonomie de la batterie lors de l\'inférence locale', anchor: 'autonomie-batterie' },
+        { label: 'Conseils de quantification pour ordinateurs portables', anchor: 'conseils-quantification' },
+        { label: 'Contexte régional', anchor: 'contexte-regional' },
+        { label: 'Erreurs courantes', anchor: 'erreurs-courantes' },
+        { label: 'Lectures complémentaires', anchor: 'lectures-complementaires' },
+        { label: 'Questions fréquemment posées', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Un modèle 3B ou 7B en quantification Q4_K_M fonctionne de manière utilisable sur n\'importe quel ordinateur portable moderne avec 8 GB de RAM.',
+            'Les MacBooks Apple Silicon (M1, M2, M3, M4) surpassent la plupart des ordinateurs portables Windows pour l\'inférence locale grâce à la mémoire unifiée et à l\'accélération GPU Metal — un MacBook Pro M3 exécute un modèle 7B à 50–80 token/sec.',
+            'L\'étranglement thermique réduit la vitesse de 20–40% après 10–15 minutes de génération continue. Utilisez un support d\'ordinateur portable et désactivez Turbo Boost pour maintenir une vitesse régulière.',
+            'Autonomie de la batterie: attendez-vous à 30–60% de batterie par heure lors d\'une inférence active sur la plupart des ordinateurs portables. Connectez-vous pour les sessions prolongées.',
+            'Sur les ordinateurs portables Windows/Linux avec 8 GB de RAM: utilisez les modèles Q4_K_M jusqu\'à 7B. Avec 16 GB de RAM: modèles Q4_K_M jusqu\'à 13B, ou Q5_K_M pour 7B.',
+          ],
+        },
+        canYouRun: {
+          title: 'Pouvez-vous exécuter un Local LLM sur un ordinateur portable?',
+          content: [
+            'Oui — avec la bonne taille de modèle. Un ordinateur portable avec 8 GB de RAM exécutant un modèle 7B en quantification Q4_K_M produit 10–25 token/sec sur CPU et 50–80 token/sec sur Apple Silicon. C\'est lent par rapport aux API cloud, mais assez rapide pour une utilisation interactive.',
+            'Le plafond pratique sur la plupart des ordinateurs portables 8 GB est un modèle 7B. Un modèle 13B en Q4_K_M nécessite environ 9 GB de RAM — techniquement possible sur les machines 16 GB mais laisse peu de marge pour l\'OS et les autres applications.',
+            'Pour [ce que sont les Local LLMs](/local-llms/what-are-local-llms) et une explication complète des exigences en RAM, consultez le guide dédié.',
+          ],
+          blockquote: 'Un Local LLM sur un ordinateur portable est un fichier de modèle exécuté sur votre CPU ou RAM — pas d\'internet, pas d\'API, tokens générés localement à 10–80 token/sec selon le matériel.',
+          blockquoteSource: 'En une phrase',
+        },
+        ram8vs16: {
+          title: '8 GB RAM vs 16 GB RAM Ordinateur portable: Quelle est la différence pratique?',
+          rows: [
+            { 'Scénario': 'Taille maximale du modèle', '8 GB RAM': '7B à Q4_K_M (~4,5 GB)', '16 GB RAM': '13B à Q4_K_M (~9 GB)' },
+            { 'Scénario': 'Modèle avec navigateur ouvert', '8 GB RAM': '3B–7B (serré)', '16 GB RAM': '7B–13B confortable' },
+            { 'Scénario': 'Premier modèle recommandé', '8 GB RAM': 'llama3.2:3b ou mistral:7b', '16 GB RAM': 'llama3.1:8b ou qwen2.5:14b' },
+            { 'Scénario': 'Applications simultanées', '8 GB RAM': 'Fermez le navigateur avant de charger 7B', '16 GB RAM': 'Multitâche normal + modèle 7B' },
+          ],
+          columns: ['Scénario', '8 GB RAM', '16 GB RAM'],
+        },
+        bestModels: {
+          title: 'Quels sont les meilleurs modèles Local LLM pour ordinateurs portables?',
+          content: 'Ces modèles sont spécifiquement sélectionnés pour les contraintes d\'ordinateur portable — équilibrant la qualité, l\'utilisation de RAM et la vitesse de génération continue. Installez [Ollama](/local-llms/how-to-install-ollama) pour exécuter l\'un de ces modèles avec une seule commande:',
+          rows: [
+            { 'Modèle': 'llama3.2:3b', 'RAM': '2,5 GB', 'Vitesse (CPU)': '25–45 token/s', 'Meilleur pour': 'Ordinateurs portables 8 GB, tâches rapides' },
+            { 'Modèle': 'phi3.5', 'RAM': '3 GB', 'Vitesse (CPU)': '20–35 token/s', 'Meilleur pour': 'Ordinateurs portables 8 GB, reasoning/coding' },
+            { 'Modèle': 'mistral:7b', 'RAM': '4,5 GB', 'Vitesse (CPU)': '10–20 token/s', 'Meilleur pour': '8–16 GB, utilisation générale' },
+            { 'Modèle': 'qwen2.5:7b', 'RAM': '4,7 GB', 'Vitesse (CPU)': '10–18 token/s', 'Meilleur pour': '8–16 GB, multilingue, coding' },
+            { 'Modèle': 'llama3.1:8b', 'RAM': '5,5 GB', 'Vitesse (CPU)': '8–15 token/s', 'Meilleur pour': 'Ordinateurs portables 16 GB, meilleure qualité à cette taille' },
+          ],
+          columns: ['Modèle', 'RAM', 'Vitesse (CPU)', 'Meilleur pour'],
+        },
+        appleSilicon: {
+          title: 'Apple Silicon vs Ordinateur portable Windows: Lequel est meilleur pour les Local LLMs?',
+          content: [
+            'À partir d\'avril 2026, les MacBooks Apple Silicon (M1 à M4) sont les meilleurs ordinateurs portables grand public pour l\'inférence Local LLM. L\'architecture [mémoire unifiée](/local-llms/gpu-vs-cpu-vs-apple-silicon) signifie que le GPU et le CPU partagent le même pool de mémoire — un MacBook Pro M3 avec 18 GB de mémoire peut exécuter un modèle 13B entièrement dans la mémoire GPU, atteignant 50–80 token/sec.',
+            'Les ordinateurs portables Windows avec GPU NVIDIA discrets peuvent être plus rapides si la VRAM est suffisante (8 GB+). Un GPU ordinateur portable NVIDIA RTX 4060 (8 GB VRAM) exécute un modèle 7B à 60–90 token/sec — comparable à Apple M3 Pro. L\'inconvénient est une consommation électrique plus élevée et une génération de chaleur plus importante.',
+            'Les ordinateurs portables Windows exécutant un graphique intégré Intel Iris Xe ou AMD Radeon utilisent uniquement l\'inférence CPU, ce qui se traduit par 8–20 token/sec pour les modèles 7B.',
+          ],
+          rows: [
+            { 'Type d\'ordinateur portable': 'Apple M3 Pro (18 GB)', 'Vitesse (7B)': '50–80 token/s', 'Consommation batterie': 'Modérée', 'Modèle max': '~13B' },
+            { 'Type d\'ordinateur portable': 'Apple M2 (8 GB)', 'Vitesse (7B)': '30–50 token/s', 'Consommation batterie': 'Modérée', 'Modèle max': '~7B' },
+            { 'Type d\'ordinateur portable': 'NVIDIA RTX 4060 ordinateur portable (8 GB VRAM)', 'Vitesse (7B)': '60–90 token/s', 'Consommation batterie': 'Élevée', 'Modèle max': '~7B (GPU), ~13B (déchargement CPU)' },
+            { 'Type d\'ordinateur portable': 'Intel i7 + Iris Xe (16 GB RAM)', 'Vitesse (7B)': '8–15 token/s', 'Consommation batterie': 'Modérée', 'Modèle max': '~13B' },
+            { 'Type d\'ordinateur portable': 'AMD Ryzen 7 + GPU intégré (16 GB)', 'Vitesse (7B)': '10–18 token/s', 'Consommation batterie': 'Modérée', 'Modèle max': '~13B' },
+          ],
+          columns: ['Type d\'ordinateur portable', 'Vitesse (7B)', 'Consommation batterie', 'Modèle max'],
+        },
+        thermals: {
+          title: 'Comment gérer l\'étranglement thermique sur un ordinateur portable?',
+          content: [
+            'L\'étranglement thermique se produit lorsque le CPU ou le GPU atteint sa limite de température et réduit la vitesse d\'horloge pour refroidir. Pour l\'inférence Local LLM, cela se produit généralement après 10–15 minutes de génération continue, réduisant la vitesse de 20–40%.',
+          ],
+          items: [
+            '**Utilisez un support d\'ordinateur portable avec dégagement d\'air** — surélever l\'ordinateur portable de 2–3 cm améliore le flux d\'échappement et réduit le début de l\'étranglement de 10 à 20+ minutes.',
+            '**Désactivez Intel Turbo Boost / AMD Precision Boost** — fonctionner à la vitesse d\'horloge de base produit des performances régulières sans pics thermiques. Sur macOS, installez `cpufreq` ou utilisez le mode "Économie d\'énergie" dans les paramètres de batterie.',
+            '**Limitez la taille du lot de génération** — évitez de régénérer les très longues réponses. Divisez les tâches longues en invites plus courtes.',
+            '**Utilisez Q4_K_M plutôt que Q8_0** — la quantification inférieure nécessite moins de calcul par token, produisant moins de chaleur au prix d\'une qualité marginale.',
+          ],
+          blockquote: 'L\'étranglement thermique est la réduction automatique de la vitesse d\'horloge du CPU lorsqu\'il dépasse environ 95°C — il réduit la vitesse d\'inférence Local LLM de 20–40% après 10–15 minutes de génération continue.',
+          blockquoteSource: 'En une phrase',
+        },
+        battery: {
+          title: 'Combien de batterie consomme un Local LLM?',
+          content: [
+            'La consommation de batterie lors de l\'inférence locale est importante. L\'inférence CPU active sur un modèle 7B consomme 15–25 W sur un CPU ordinateur portable typique, réduisant l\'autonomie de la batterie à 2–3 heures à partir d\'une charge complète sur une batterie 60 Wh.',
+            'Apple Silicon est nettement plus efficace. Un MacBook Pro M3 exécutant un modèle 7B consomme environ 12–18 W lors de l\'inférence, offrant 3–4 heures de génération active à partir d\'une charge complète.',
+            'Pour les sessions prolongées, connectez-vous. Si vous avez besoin d\'une inférence locale économe en batterie, utilisez un modèle 3B en Q4_K_M — il consomme 6–10 W et prolonge l\'autonomie de la batterie à 5–6 heures sur la plupart des ordinateurs portables.',
+          ],
+        },
+        quantization: {
+          title: 'Quel niveau de quantification devez-vous utiliser sur un ordinateur portable?',
+          content: '[Quantification](/local-llms/llm-quantization-explained) réduit la précision du modèle pour réduire les exigences en RAM et en calcul. Pour les ordinateurs portables, Q4_K_M est le standard recommandé:',
+          rows: [
+            { 'Quantification': 'Q2_K', 'RAM vs Complète': '~25%', 'Perte de qualité': 'Élevée — dégradation notable', 'Cas d\'usage': 'Seulement RAM extrêmement faible' },
+            { 'Quantification': 'Q3_K_S', 'RAM vs Complète': '~35%', 'Perte de qualité': 'Modérée', 'Cas d\'usage': 'Sous 4 GB RAM' },
+            { 'Quantification': 'Q4_K_M', 'RAM vs Complète': '~45%', 'Perte de qualité': 'Basse — standard recommandé', 'Cas d\'usage': 'Plupart des ordinateurs portables, meilleur équilibre' },
+            { 'Quantification': 'Q5_K_M', 'RAM vs Complète': '~55%', 'Perte de qualité': 'Minimale', 'Cas d\'usage': 'Ordinateurs portables 16 GB RAM' },
+            { 'Quantification': 'Q8_0', 'RAM vs Complète': '~80%', 'Perte de qualité': 'Négligeable', 'Cas d\'usage': '32 GB RAM ou GPU avec 8+ GB VRAM' },
+          ],
+          columns: ['Quantification', 'RAM vs Complète', 'Perte de qualité', 'Cas d\'usage'],
+        },
+        regionalContext: {
+          title: 'Comment exécuter des Local LLMs sur un ordinateur portable protège-t-il votre confidentialité?',
+          content: [
+            '**UE / RGPD**: Un ordinateur portable exécutant des Local LLMs est la configuration d\'IA la plus respectueuse de la vie privée disponible. Aucun texte de demande, contexte ou résultat ne quitte l\'appareil — les mécanismes de transfert RGPD Article 46 ne sont pas requis. Pour les professionnels français traitant des données personnelles (médicale, juridique, financière), un MacBook Pro M3 ou M4 avec 18–36 GB de mémoire unifiée est la configuration recommandée pour l\'inférence locale avec contenu sensible. La CNIL recommande l\'inférence locale pour les systèmes d\'IA traitant les données personnelles sensibles dans les contextes professionnels.',
+            '**France (RGPD + LPD)**: La Loi Informatique et Libertés française exige le traitement des données personnelles en France ou dans des zones à protections équivalentes. Un ordinateur portable exécutant Ollama localement satisfait cette exigence pour l\'utilisation professionnelle individuelle — toute l\'inférence reste sur l\'appareil, sans traitement par serveurs externes. Les professionnels français préfèrent couramment Llama 3.1 7B via Ollama sur MacBooks M-series pour le traitement de documents sensibles sans sortie de données.',
+            '**Conformité régionale**: Pour les entreprises françaises, l\'exécution d\'inférence locale sur des ordinateurs portables isolés du réseau satisfait les exigences de souveraineté des données pour le traitement des données personnelles conformément au RGPD et à la Loi Informatique et Libertés.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs courantes lors de l\'exécution de Local LLMs sur un ordinateur portable',
+          items: [
+            '**Chargement d\'un modèle 7B sur 8 GB RAM sans fermer les autres applications**: Un modèle 7B en Q4_K_M utilise environ 4,5 GB. macOS ou Windows utilisent généralement 3–4 GB de RAM eux-mêmes. Sur une machine 8 GB, le chargement d\'un modèle 7B avec un navigateur et plusieurs onglets ouverts cause une pression mémoire, une utilisation d\'échange et des vitesses aussi basses que 2–5 token/sec. Fermez le navigateur et les applications inutiles avant de charger les modèles au-dessus de 3B sur les ordinateurs portables 8 GB RAM.',
+            '**Utilisation de Q8_0 sur un ordinateur portable lorsque Q4_K_M est suffisant**: Q8_0 double l\'exigence RAM par rapport à Q4_K_M avec un gain de qualité négligeable pour la plupart des tâches de conversation. Sur un ordinateur portable avec RAM limitée et charge thermique supérieure, Q4_K_M est toujours le meilleur choix sauf si vous avez 32+ GB et exécutez le modèle sur GPU.',
+            '**Exécution de sessions de génération longues sans support**: L\'inférence continue pendant 20+ minutes sur un bureau plat cause l\'étranglement thermique sur la plupart des ordinateurs portables en 15 minutes. Un support d\'ordinateur portable de 15 euros qui relève la base de 2–3 cm prolonge le temps de fonctionnement sans étranglement de 10 à 20+ minutes sans autres modifications.',
+            '**S\'attendre à ce que les vitesses d\'ordinateur portable correspondent aux vitesses d\'API cloud**: GPT-4o via API produit 80–150 token/sec. Un modèle 7B sur un ordinateur portable 8 GB produit 10–25 token/sec sur CPU. C\'est une différence de vitesse 4–15×. Pour l\'utilisation interactive, l\'inférence d\'ordinateur portable est acceptable. Pour le traitement par lot de gros documents, les API cloud sont plus rapides et moins chères à faible volume.',
+            '**Choisir la taille du modèle en fonction du nombre de paramètres plutôt que de l\'ajustement de RAM**: Un modèle 13B semble meilleur qu\'un modèle 7B — mais sur un ordinateur portable 16 GB avec navigateur en cours d\'exécution, le 13B en Q4_K_M s\'adapte à peine. Le modèle 7B en Q5_K_M (quantification de qualité supérieure) fonctionne plus rapidement et produit souvent de meilleurs résultats qu\'un modèle 13B en Q4_K_M luttant pour la mémoire.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lectures complémentaires',
+          items: [
+            '[Qu\'est-ce que les Local LLMs?](/local-llms/what-are-local-llms) — guide fondamental sur le fonctionnement de l\'inférence locale et les composants matériels importants',
+            '[Comment installer Ollama](/local-llms/how-to-install-ollama) — guide d\'installation complet pour macOS, Windows et Linux avec des notes de configuration spécifiques aux ordinateurs portables',
+            '[Meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models) — recommandations de modèles par tier RAM incluant les modèles 3B et 7B optimisés pour l\'utilisation d\'ordinateur portable',
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — comparaison détaillée des architectures d\'inférence pertinentes pour la sélection du matériel d\'ordinateur portable',
+            '[Local LLMs vs API cloud](/local-llms/local-llms-vs-cloud-apis) — comparaison des coûts et de la vitesse pour vous aider à décider quand l\'inférence d\'ordinateur portable est le bon choix',
+            '[Quantification LLM expliquée](/local-llms/llm-quantization-explained) — guide complet des compromis de quantification Q4/Q5/Q8 pour les environnements d\'ordinateur portable à mémoire limitée',
+          ],
+        },
+        faqSection: {
+          title: 'Questions fréquemment posées sur l\'exécution de Local LLMs sur ordinateurs portables',
+          faqs: [
+            {
+              q: 'L\'exécution d\'un Local LLM endommagera-t-elle mon ordinateur portable au fil du temps?',
+              a: 'Non — les CPU et GPU modernes sont conçus pour gérer en toute sécurité les charges élevées continues via l\'étranglement thermique. L\'exécution de l\'inférence pendant des heures est équivalente à l\'encodage vidéo ou aux jeux. Un support d\'ordinateur portable et une ventilation adéquate préviennent l\'accumulation excessive de chaleur. Le nombre de cycles de batterie augmente avec les recharges prolongées branchées, ce qui est un modèle d\'usure normal.',
+            },
+            {
+              q: 'Puis-je exécuter un Local LLM sur un ordinateur portable 4 GB RAM?',
+              a: 'À peine. Un modèle 2B comme Gemma 2 2B nécessite environ 1,7 GB de RAM pour le modèle, mais l\'OS a besoin de 2–3 GB simultanément. Sur 4 GB de RAM total, vous connaîtrez probablement une utilisation d\'échange ce qui rend l\'inférence 5–10× plus lente. Le minimum pratique pour une expérience utilisable est 8 GB.',
+            },
+            {
+              q: 'Mon ordinateur portable a-t-il besoin d\'un GPU dédié pour exécuter des Local LLMs?',
+              a: 'Non. Tous les principaux outils Local LLM (Ollama, LM Studio, GPT4All) fonctionnent uniquement sur CPU. Un GPU dédié accélère considérablement l\'inférence, mais les modèles 3B–7B sont utilisables à 10–30 token/sec uniquement sur CPU. Voir [Meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models) pour les recommandations de modèles optimisés CPU.',
+            },
+            {
+              q: 'Quel est l\'ordinateur portable le plus rapide pour exécuter des Local LLMs?',
+              a: 'À partir d\'avril 2026, Apple MacBook Pro M4 Max (48 GB mémoire unifiée) est l\'ordinateur portable grand public le plus rapide pour l\'inférence Local LLM. Il atteint 80–120 token/sec sur un modèle 13B et peut exécuter des modèles 30B à Q4_K_M. Pour les ordinateurs portables Windows, un GPU ordinateur portable RTX 4090 (16 GB VRAM) produit 100–130 token/sec sur des modèles 7B mais consomme considérablement plus d\'énergie et génère plus de chaleur.',
+            },
+            {
+              q: 'Comment savoir si mon ordinateur portable fait l\'étranglement thermique?',
+              a: 'Sur macOS: ouvrez Activity Monitor → Window → Historique d\'utilisation CPU. Une chute soudaine de la fréquence CPU lors d\'une génération continue indique l\'étranglement. Sur Windows: utilisez HWiNFO64 pour surveiller en temps réel les températures et vitesses d\'horloge du CPU/GPU. L\'étranglement se produit généralement lorsque la température du CPU dépasse 95–100°C.',
+            },
+            {
+              q: 'Puis-je exécuter un Local LLM avec l\'alimentation par batterie?',
+              a: 'Oui, mais la vitesse et la durée sont réduites. En mode batterie, macOS limite automatiquement la consommation d\'énergie du CPU/GPU, réduisant la vitesse d\'inférence de 20–35% par rapport aux performances branchées. Un modèle 7B sur un MacBook M3 Pro consomme environ 12–18 W lors de l\'inférence — attendez-vous à 3–4 heures de génération active à partir d\'une charge complète avant de tomber à 20%. Pour les sessions économes en batterie, utilisez un modèle 3B (6–10 W).',
+            },
+            {
+              q: 'Quelle est la meilleure taille de modèle pour un ordinateur portable 8 GB RAM?',
+              a: 'Un modèle 7B en Q4_K_M est le maximum pratique pour les ordinateurs portables 8 GB RAM lors de l\'exécution avec un navigateur ou d\'autres applications ouvertes. Pour juste le modèle avec toutes les autres applications fermées, un modèle 9B peut tenir. Le standard recommandé est llama3.2:3b pour le multitâche ou mistral:7b pour la qualité lorsque vous pouvez fermer le navigateur.',
+            },
+            {
+              q: 'Ollama utilise-t-il automatiquement le GPU sur un ordinateur portable?',
+              a: 'Oui. Ollama détecte et utilise automatiquement l\'accélération GPU disponible. Sur Apple Silicon, il utilise l\'accélération GPU Metal. Sur les ordinateurs portables NVIDIA, il utilise CUDA. Sur les ordinateurs portables AMD, il utilise ROCm (avec une configuration supplémentaire sur Linux). Vous pouvez vérifier que le GPU est utilisé en exécutant `ollama ps` après le démarrage d\'un modèle — cela montre si les couches sont chargées vers GPU ou CPU.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Apple. (2026). "Apple M4 Max Chip Overview." Apple Developer. https://developer.apple.com/apple-silicon/ — Architecture mémoire unifiée, benchmarks de performance ML et spécifications d\'efficacité énergétique.',
+            'Ollama. (2026). "Ollama Documentation." https://ollama.com/docs — Configuration d\'inférence CPU/GPU, accélération CUDA/Metal et paramètres de longueur de contexte.',
+            'llama.cpp Contributors. (2026). "llama.cpp Performance Benchmarks." https://github.com/ggerganov/llama.cpp — Données de débit de tokens sur les configurations matérielles et les niveaux de quantification.',
+            'Hugging Face. (2026). "GGUF Quantization Guide." https://huggingface.co/docs/transformers/main/en/quantization/gguf — Compromis de qualité Q2/Q4/Q5/Q8 vs mémoire avec résultats de benchmarks.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Comment exécuter des Local LLMs sur un ordinateur portable: Performance, Thermique et Sélection de modèle',
+        'description': 'Comment exécuter des Local LLMs puissants sur des ordinateurs portables avec VRAM limité. Astuces de quantification, meilleurs modèles, conseils de performance et comparaisons Apple Silicon vs Windows.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=fr',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['Local LLM ordinateur portable', 'exécuter LLM sur ordinateur portable', 'modèles faible VRAM', 'Ollama ordinateur portable', 'quantification pour ordinateurs portables'],
+        'about': [
+          { '@type': 'Thing', 'name': 'Local LLM sur ordinateur portable' },
+          { '@type': 'Thing', 'name': 'Inférence Apple Silicon' },
+          { '@type': 'Thing', 'name': 'Étranglement thermique' },
+          { '@type': 'Thing', 'name': 'Quantification LLM' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'Exigences RAM' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Comment réduire l\'étranglement thermique sur un ordinateur portable exécutant des Local LLMs',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Utilisez un support d\'ordinateur portable avec dégagement d\'air' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Désactivez Turbo Boost pour maintenir une vitesse d\'horloge régulière' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Limitez la taille du lot de génération' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Utilisez la quantification Q4_K_M pour réduire la chaleur' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'L\'exécution d\'un Local LLM endommagera-t-elle mon ordinateur portable au fil du temps?', acceptedAnswer: { '@type': 'Answer', text: 'Non — les CPU et GPU modernes gèrent les charges élevées continues en toute sécurité. Un support d\'ordinateur portable et une ventilation adéquate préviennent l\'accumulation excessive de chaleur.' } },
+          { '@type': 'Question', name: 'Puis-je exécuter un Local LLM sur un ordinateur portable 4 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'À peine. Un modèle 2B nécessite environ 1,7 GB de RAM, l\'OS a besoin de 2–3 GB simultanément. Avec 4 GB au total, l\'utilisation d\'échange rendra l\'inférence 5–10× plus lente.' } },
+          { '@type': 'Question', name: 'Mon ordinateur portable a-t-il besoin d\'un GPU dédié?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Tous les principaux outils Local LLM fonctionnent uniquement sur CPU. Un GPU dédié accélère l\'inférence, mais les modèles 3B–7B sont utilisables à 10–30 token/sec uniquement sur CPU.' } },
+          { '@type': 'Question', name: 'Quel est l\'ordinateur portable le plus rapide?', acceptedAnswer: { '@type': 'Answer', text: 'À partir d\'avril 2026, Apple MacBook Pro M4 Max (48 GB mémoire unifiée) est le plus rapide. Il atteint 80–120 token/sec sur un modèle 13B.' } },
+          { '@type': 'Question', name: 'Comment savoir si mon ordinateur portable fait l\'étranglement thermique?', acceptedAnswer: { '@type': 'Answer', text: 'Sur macOS: ouvrez Activity Monitor → Window → Historique d\'utilisation CPU. Une chute soudaine indique l\'étranglement.' } },
+          { '@type': 'Question', name: 'Puis-je exécuter avec l\'alimentation par batterie?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, mais la vitesse et la durée sont réduites. macOS limite automatiquement la consommation d\'énergie, réduisant la vitesse de 20–35%.' } },
+          { '@type': 'Question', name: 'Quelle est la meilleure taille de modèle pour 8 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'Un modèle 7B en Q4_K_M est le maximum pratique. Le standard recommandé est llama3.2:3b pour le multitâche.' } },
+          { '@type': 'Question', name: 'Ollama utilise-t-il automatiquement le GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Ollama détecte et utilise automatiquement l\'accélération GPU. Vous pouvez vérifier en exécutant `ollama ps`.' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Meilleurs modèles Local LLM pour ordinateurs portables 2026',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:3b', 'description': '2,5 GB RAM. 25–45 token/s CPU. Meilleur pour ordinateurs portables 8 GB et tâches rapides.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'phi3.5', 'description': '3 GB RAM. 20–35 token/s CPU. Meilleur pour ordinateurs portables 8 GB, reasoning et coding.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'mistral:7b', 'description': '4,5 GB RAM. 10–20 token/s CPU. Meilleur pour utilisation générale 8–16 GB.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen2.5:7b', 'description': '4,7 GB RAM. 10–18 token/s CPU. Meilleur pour multilingue et coding sur 8–16 GB.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'llama3.1:8b', 'description': '5,5 GB RAM. 8–15 token/s CPU. Meilleure qualité à cette taille pour ordinateurs portables 16 GB.' }
+        ]
+      },
+    },
+
+        ja: {
       theme: 'Getting Started',
       title: 'ノートPCでローカルLLMを動かす方法：パフォーマンス、発熱、モデル選択',
       seoTitle: 'ノートPCでLocal LLMを動かす方法 2026',
