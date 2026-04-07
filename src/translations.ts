@@ -86,7 +86,7 @@ export const translations = {
     promptEngineeringHubTitle: "Prompt Engineering Hub: 80 Guides | PromptQuorum",
     promptEngineeringHubDescription: "80 research-backed articles on prompt engineering techniques, frameworks (CO-STAR, CRAFT, RISEN), tools, evaluation, governance, and workflows for developers.",
     localLlmsHubTitle: "Local LLMs 2026: Run AI Privately with Ollama & LM Studio",
-    localLlmsHubDescription: "Complete guide to running local LLMs privately in 2026. Compare Ollama, LM Studio, hardware, quantization, and how PromptQuorum helps you test and compare your local models instantly.",
+    localLlmsHubDescription: "Run open-source models locally — Llama 4, Qwen3.5, DeepSeek — with Ollama or LM Studio. 8 GB RAM runs a 7B model. Zero API costs. Full privacy. 88 guides updated April 2026.",
     compareMetaTitle: "PromptQuorum vs. Competitors: Feature Comparison (2026)",
     compareMetaDescription: "Compare PromptQuorum with Poe, LM Arena, OpenMark, and AiZolo: dispatch, consensus, local LLM support, API key control, framework library.",
     frameworksMetaTitle: "Prompt Frameworks: CO-STAR, CRAFT, RISEN & More",

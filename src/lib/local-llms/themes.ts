@@ -9,7 +9,7 @@ export const llmThemes: LLMTheme[] = [
   {
     id: 'getting-started',
     title: 'Getting Started',
-    description: 'Zero-to-running in under 10 minutes. OS-specific installation guides, first-model walkthroughs, and a privacy-first setup checklist for beginners.',
+    description: 'Zero-to-running in under 10 minutes. OS-specific installation guides, first-model walkthroughs, and a privacy-first setup checklist for beginners. Ollama installs with a single command on macOS, Windows, and Linux. For 8 GB RAM, start with Llama 3.2 3B (Q4, ~2 GB) using `ollama pull llama3.2:3b`.',
     articleKeys: [
       'what-are-local-llms',
       'local-llms-vs-cloud-apis',
@@ -27,7 +27,7 @@ export const llmThemes: LLMTheme[] = [
   {
     id: 'best-models',
     title: 'Models by Use Case',
-    description: 'Model reviews, benchmark comparisons, use-case winners, and quantization guides for Llama 4, Qwen3.5, DeepSeek, Gemma 4, and 70B+ models.',
+    description: 'Model reviews, benchmark comparisons, use-case winners, and quantization guides for Llama 4, Qwen3.5, DeepSeek, Gemma 4, and 70B+ models. Qwen2.5-Coder leads coding benchmarks; Mistral 7B is fastest for RAM-constrained setups. Every review includes exact VRAM requirements and benchmark scores versus GPT-4o.',
     articleKeys: [
       'best-local-llms-2026',
       'qwen-vs-llama-vs-mistral',
@@ -50,7 +50,7 @@ export const llmThemes: LLMTheme[] = [
   {
     id: 'tools-interfaces',
     title: 'Tools & Interfaces',
-    description: 'Software showdowns, GUI comparisons, API setups, and front-end guides — Ollama, LM Studio, OpenWebUI, vLLM, llama.cpp, and more.',
+    description: 'Software showdowns, GUI comparisons, API setups, and front-end guides — Ollama, LM Studio, OpenWebUI, vLLM, llama.cpp, and more. Ollama exposes an OpenAI-compatible REST API at `localhost:11434` — drop-in replacement for cloud SDKs with no code changes. LM Studio adds a GUI and model browser for non-technical users.',
     articleKeys: [
       'ollama-vs-lm-studio',
       'best-local-llm-frontends',
@@ -72,7 +72,7 @@ export const llmThemes: LLMTheme[] = [
   {
     id: 'hardware-performance',
     title: 'Hardware & Performance',
-    description: 'Real hardware recommendations, VRAM math, GPU benchmarks, quantization trade-offs, and optimization tricks for RTX 5090, 4090, Mac Silicon, and budget builds.',
+    description: 'Real hardware recommendations, VRAM math, GPU benchmarks, quantization trade-offs, and optimization tricks for RTX 5090, 4090, Mac Silicon, and budget builds. RTX 4060 (8 GB VRAM, ~$300) runs 7B models at 30+ tokens/sec. Apple Silicon M2 handles 7B–13B natively via Metal with no discrete GPU required.',
     articleKeys: [
       'local-llm-hardware-guide-2026',
       'vram-calculator-local-llm',
@@ -90,7 +90,7 @@ export const llmThemes: LLMTheme[] = [
   {
     id: 'advanced-techniques',
     title: 'Advanced Techniques & Applications',
-    description: 'Beyond basic chat — local RAG pipelines, LoRA fine-tuning, LangGraph agents, coding workflows, multimodal models, and custom model creation.',
+    description: 'Beyond basic chat — local RAG pipelines, LoRA fine-tuning, LangGraph agents, coding workflows, multimodal models, and custom model creation. Local RAG with Ollama + ChromaDB answers questions over private documents without cloud transfer. LoRA fine-tuning requires 500+ labeled examples and 24 GB+ VRAM; cloud GPU rental is a cost-effective alternative.',
     articleKeys: [
       'local-rag-2026',
       'fine-tuning-local-llms-lora',
@@ -107,7 +107,7 @@ export const llmThemes: LLMTheme[] = [
   {
     id: 'enterprise',
     title: 'Enterprise',
-    description: 'On-prem deployment, air-gapped setups, GDPR/HIPAA compliance, multi-user scaling, and private RAG for organizations requiring full data sovereignty.',
+    description: 'On-prem deployment, air-gapped setups, GDPR/HIPAA compliance, multi-user scaling, and private RAG for organizations requiring full data sovereignty. Air-gapped setups bind Ollama to `localhost` with no external network access. GDPR compliance requires network isolation, full-disk encryption, and access logging — all covered in these guides.',
     articleKeys: [
       'why-enterprises-use-local-llms',
       'on-prem-air-gapped-local-llm',

@@ -12,7 +12,7 @@ function navHref(path: string, lang: string) {
 }
 
 const HUB_HERO_TITLE: Record<string, string> = {
-  en: 'The complete guide to running AI models locally in 2026.',
+  en: 'Local LLMs: The Complete Guide to Running AI Models on Your Own Hardware (2026)',
   de: 'Der vollständige Leitfaden zum lokalen Betrieb von KI-Modellen im Jahr 2026.',
   fr: 'Le guide complet pour exécuter des modèles IA localement en 2026.',
   ja: '2026年にAIモデルをローカルで実行するための完全ガイド。',
@@ -20,7 +20,7 @@ const HUB_HERO_TITLE: Record<string, string> = {
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
-  en: 'Local LLMs give you full privacy, zero API costs, and offline capability. These guides cover everything from first installation to 70B model fine-tuning, hardware selection, and enterprise deployment — with exact commands, VRAM numbers, and benchmark data.',
+  en: '8 GB RAM runs a 7B model locally — no API key, no monthly cost, full privacy. 40 GB VRAM handles 70B models (Llama 4, DeepSeek V3) at production quality. Ollama and LM Studio install in under 10 minutes on macOS, Windows, and Linux. Open-source models including Llama 4, Qwen3.5, DeepSeek, and Mistral match GPT-4 on most coding and reasoning benchmarks. These 88 guides cover hardware selection, quantization, RAG pipelines, fine-tuning, and enterprise deployment — with exact commands, VRAM numbers, and benchmark data.',
   de: 'Lokale LLMs bieten vollständige Privatsphäre, keine API-Kosten und Offline-Fähigkeit. Diese Leitfäden decken alles ab — von der ersten Installation bis zum Fine-Tuning von 70B-Modellen, Hardware-Auswahl und Enterprise-Deployment.',
   fr: 'Les LLMs locaux offrent une confidentialité totale, zéro coût API et une capacité hors ligne. Ces guides couvrent tout, de la première installation au fine-tuning de modèles 70B, la sélection matérielle et le déploiement entreprise.',
   ja: 'ローカルLLMは完全なプライバシー、APIコストゼロ、オフライン機能を提供します。これらのガイドは、最初のインストールから70BモデルのファインチューニングW、ハードウェア選択、エンタープライズデプロイまでをカバーします。',
@@ -168,6 +168,11 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
   const href = navHref(`/local-llms/${articleKey}`, lang)
   const hasContent = !!(LLM_SLUG_TO_KEY[articleKey] && llmContent[LLM_SLUG_TO_KEY[articleKey]])
 
+  // Future-proof: if no content, don't render the card
+  if (!hasContent) {
+    return null
+  }
+
   return (
     <Link
       href={href}
@@ -176,9 +181,6 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
       <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${dot}`} />
       <span className="text-text-primary text-sm font-medium leading-snug group-hover:text-primary transition-colors flex-1">
         {title}
-        {!hasContent && (
-          <span className="ml-2 text-xs font-normal text-text-muted opacity-60">· soon</span>
-        )}
       </span>
     </Link>
   )
@@ -187,6 +189,10 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
 function ThemeSection({ theme, lang }: { theme: LLMTheme; lang: Language }) {
   const colors = THEME_COLORS[theme.id] ?? { badge: 'bg-gray-50 text-gray-700 border-gray-200', dot: 'bg-gray-400' }
   const label = THEME_LABELS[theme.id]?.[lang] ?? THEME_LABELS[theme.id]?.['en'] ?? theme.title
+
+  // Filter to articles with content
+  const liveArticles = theme.articleKeys.filter(key => !!(LLM_SLUG_TO_KEY[key] && llmContent[LLM_SLUG_TO_KEY[key]]))
+  const hasContent = liveArticles.length > 0
 
   return (
     <section id={theme.id} className="mb-16">
@@ -197,11 +203,17 @@ function ThemeSection({ theme, lang }: { theme: LLMTheme; lang: Language }) {
       </div>
       <h2 className="text-xl sm:text-2xl font-bold text-text-primary mb-3">{label}</h2>
       <p className="text-text-secondary text-sm mb-6 max-w-2xl">{theme.description}</p>
-      <div className="grid sm:grid-cols-2 gap-3">
-        {theme.articleKeys.map(key => (
-          <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} />
-        ))}
-      </div>
+      {hasContent ? (
+        <div className="grid sm:grid-cols-2 gap-3">
+          {liveArticles.map(key => (
+            <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} />
+          ))}
+        </div>
+      ) : (
+        <div className="text-text-secondary text-sm p-4 bg-primary/5 rounded-lg border border-primary/15">
+          <p>More guides coming soon. <Link href={navHref('/local-llms#getting-started', lang)} className="text-primary hover:underline">Start with Getting Started</Link>.</p>
+        </div>
+      )}
     </section>
   )
 }
@@ -222,6 +234,29 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed mb-10">
             {HUB_HERO_DESC[lang] ?? HUB_HERO_DESC['en']}
           </p>
+
+          {/* Key Takeaways */}
+          {lang === 'en' && (
+            <div className="mb-10 bg-primary/3 border border-primary/15 rounded-xl p-5">
+              <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Key Takeaways</p>
+              <ul className="space-y-2">
+                {[
+                  '8 GB RAM is enough to run a 7B model locally (Ollama or LM Studio, under 10 min setup)',
+                  '40 GB VRAM runs 70B models (Llama 4, DeepSeek V3) at full quality',
+                  'Q4 quantization halves VRAM requirements with minimal quality loss — 7B model fits in 4–5 GB VRAM',
+                  'Llama 4, Qwen3.5, DeepSeek, and Mistral match GPT-4 on most coding and reasoning benchmarks',
+                  'Zero API costs after hardware purchase — no usage limits, no vendor lock-in',
+                  'All data stays on your machine — no telemetry, no cloud storage, GDPR-ready',
+                  'LoRA fine-tuning requires 500+ labeled examples and 24 GB+ VRAM (or cloud GPU for training)',
+                ].map((bullet, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
+                    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2" />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* Quick-nav pills */}
           <div className="flex flex-wrap gap-2">
@@ -257,6 +292,82 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
         {llmThemes.map(theme => (
           <ThemeSection key={theme.id} theme={theme} lang={lang} />
         ))}
+
+        {/* FAQ Section (EN only) */}
+        {lang === 'en' && (
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-8">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              {[
+                {
+                  q: 'What is a local LLM?',
+                  a: 'A large language model (e.g., Llama 4, Qwen3.5, DeepSeek) that runs on your own hardware instead of a cloud API. You get full privacy, offline capability, no usage limits, and zero API costs after hardware purchase.'
+                },
+                {
+                  q: 'How much VRAM do I need for a local LLM?',
+                  a: '8 GB VRAM runs 7B models at Q4 quantization. 16 GB handles 13B models comfortably. 40 GB+ (e.g., dual RTX 4090s or A100) is required for 70B models. Apple Silicon unified memory counts as VRAM.'
+                },
+                {
+                  q: 'What is the difference between Ollama and LM Studio?',
+                  a: 'Ollama is a CLI tool that runs models via simple terminal commands and exposes an OpenAI-compatible API at `localhost:11434`. LM Studio provides a desktop GUI, model browser, and built-in chat interface. Both support the same models.'
+                },
+                {
+                  q: 'Can local LLMs match cloud models like GPT-4o?',
+                  a: 'On coding and reasoning tasks, Llama 4, DeepSeek V3, and Qwen3.5 score within 5–10% of GPT-4o on standard benchmarks (MMLU, HumanEval). Claude Opus 4.6 and GPT-5 maintain an edge on complex multi-step tasks.'
+                },
+                {
+                  q: 'How do I fine-tune a local model?',
+                  a: 'Fine-tuning requires 500+ labeled training examples, the QLoRA framework (reduces VRAM requirement via 4-bit quantization), 24 GB+ VRAM (or a cloud GPU rental), and 1–4 hours of training time for a 7B model.'
+                },
+                {
+                  q: 'What is the minimum hardware to run a local LLM in 2026?',
+                  a: 'Minimum: 8 GB RAM and any modern CPU (runs 3B–7B models at 2–5 tokens/sec). Recommended: a GPU with 8 GB+ VRAM (RTX 3060 or newer) for 20–40 tokens/sec on 7B models.'
+                },
+                {
+                  q: 'Are local LLMs free to use?',
+                  a: 'Yes. Ollama and LM Studio are free and open-source. The models themselves (Llama, Mistral, Qwen, DeepSeek) are available under open-source licenses at no cost. The only cost is your hardware.'
+                },
+                {
+                  q: 'What is the best local LLM for coding in 2026?',
+                  a: 'Qwen2.5-Coder 7B is the top performer for code completion and review on consumer hardware (8 GB VRAM). DeepSeek-Coder V2 Lite is the strongest alternative. For CPU-only setups, Phi-3.5 Mini offers the best coding quality under 4 GB RAM.'
+                },
+              ].map((faq, i) => (
+                <div key={i} className="border-b border-primary/15 pb-4 last:border-0">
+                  <h3 className="text-sm font-semibold text-text-primary mb-2">{faq.q}</h3>
+                  <p className="text-sm text-text-secondary">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Regional Context Section (EN only) */}
+        {lang === 'en' && (
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-text-primary mb-8">Compliance & Regional Context</h2>
+            <div className="space-y-6">
+              {[
+                {
+                  region: 'EU / GDPR',
+                  text: 'Local LLMs process all data on-premises. When combined with full-disk encryption and access logging, on-premises inference satisfies GDPR Article 28 (no data processor agreement needed if data never leaves the machine). Ollama binds to `localhost` by default — no external exposure.'
+                },
+                {
+                  region: 'Japan / APPI',
+                  text: 'Japan\'s Act on the Protection of Personal Information (APPI) restricts cross-border data transfer for personal data. Local LLMs eliminate cross-border transfer entirely. METI\'s 2024 AI governance guidelines encourage privacy-preserving AI — local deployment is aligned with these recommendations.'
+                },
+                {
+                  region: 'China / CAC',
+                  text: 'The Cyberspace Administration of China\'s Interim Measures for Generative AI Services (2023) require AI providers offering services to Chinese users to register. Local LLMs running entirely on-premises are outside the CAC\'s public-facing provider definition, significantly reducing compliance burden for enterprise deployments.'
+                },
+              ].map((item, i) => (
+                <div key={i} className="bg-primary/5 border border-primary/15 rounded-lg p-4">
+                  <h3 className="text-sm font-semibold text-text-primary mb-2">{item.region}</h3>
+                  <p className="text-sm text-text-secondary">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Back nav */}
         <div className="pt-8 border-t border-primary/20">
