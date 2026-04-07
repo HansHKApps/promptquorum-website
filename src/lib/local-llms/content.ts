@@ -6441,7 +6441,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Hardware & Performance',
       title: 'Local LLM Hardware Guide 2026: GPU, CPU, and RAM Requirements Explained',
-            seoTitle: 'Local LLM Hardware Guide 2026: GPU, VRAM & Best Builds',
+      seoTitle: 'Local LLM Hardware Guide 2026: GPU, VRAM & Best Builds',
       intro: 'Running local LLMs requires understanding three components: GPU (primary bottleneck), CPU (secondary), and RAM. The critical number is VRAM — the GPU\'s dedicated memory. As of April 2026, a 7B model at 4-bit quantization needs 3.5 GB VRAM, a 13B model needs 7 GB, and a 70B model needs 35–40 GB. An RTX 4070 Ti (12 GB, $600) handles any 7B–13B model at 80 tokens/second. An RTX 4090 (24 GB, $1,800) handles 70B models at Q4 quantization. This guide covers the VRAM formula, GPU tier recommendations, Mac Silicon options, and budget build configurations for every common use case.',
             metaDescription: 'Complete 2026 hardware guide for running local LLMs. GPU and VRAM recommendations for 7B–70B models, budget vs high-performance setups, and how to test performance with PromptQuorum.',
       publishDate: '2026-04-04',
@@ -6470,11 +6470,11 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            '**VRAM math**: (Model size in GB) ÷ Quantization = VRAM needed. Example: 70B model at 4-bit = 70 ÷ 8 = 8.75 GB.',
-            '**7B models**: 8 GB VRAM (RTX 4070 Ti, RTX 5080, M3 Max Mac).',
-            '**13B models**: 12–16 GB VRAM (RTX 4080, RTX 5090, M4 Max Mac).',
+            '**VRAM formula**: (Parameters in billions × bits per weight) ÷ 8. Example: 70B model at Q4 (4-bit) = 70 × 4 ÷ 8 = 35 GB. Add 10–15% overhead for KV cache and runtime.',
+            '**7B models**: 4–5 GB VRAM at Q4 — any GPU with 8 GB (RTX 4060 Ti, RTX 4070 Ti) runs it comfortably at 60–80 tokens/sec.',
+            '**13B models**: 12–16 GB VRAM (RTX 4080, RTX 5080, M4 Max Mac).',
             '**70B models**: 40–48 GB VRAM (RTX 6000 Ada, 2× RTX 4090, A100 80GB).',
-            '**Budget**: RTX 4070 is best value ($600, handles 7–13B models). RTX 4090 handles any single-GPU model ($1800).',
+            '**Budget**: RTX 4070 Ti is best value ($600, handles 7–13B models). RTX 4090 handles any single-GPU model ($1800).',
             'As of April 2026, GPU prices have stabilized; CPU/RAM are less critical than GPU VRAM for LLM speed.',
           ],
         },
@@ -6482,10 +6482,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           id: 'vram-math',
           title: 'How Do You Calculate VRAM Requirements?',
           content: [
-            '**VRAM requirements depend on three factors: model size (parameters), quantization (bits per weight), and inference mode.**',
-            '**Formula:**',
-            '```\nVRAM (GB) = (Model Size × Quantization Bits) ÷ 8\n```',
-            '**Quantization values:** FP16 = 16 bits, Q8 = 8 bits, Q5 = 5 bits, Q4 = 4 bits. Link to [Ollama](/local-llms/how-to-install-ollama) for model management and [quantization](/local-llms/llm-quantization-explained) for detailed explanation.',
+            '**VRAM requirements depend on three factors: model size (parameters), quantization (bits per weight), and inference overhead.**',
+            'Formula: VRAM (GB) = (Parameters in billions × bits per weight) ÷ 8. Then add 10–15% for KV cache and runtime overhead.',
+            'Bits per weight by quantization: FP16 = 16, Q8 = 8, Q5 = 5, Q4 = 4. Example: 70B model at Q4 = 70 × 4 ÷ 8 = 35 GB weights + ~3 GB overhead = ~38 GB total. See [quantization guide](/local-llms/llm-quantization-explained) for quality trade-offs at each level.',
           ],
           rows: [
             { 'Model': 'Llama 3.1 7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4.5 GB', 'Q4': '3.5 GB' },
