@@ -1,4 +1,4 @@
-# GEO Writing Guidelines
+# GEO Writing Guidelines — Optimized for AI Citation & SEO
 
 **GEO = Generative Engine Optimization**
 
@@ -6,9 +6,29 @@ These rules are mandatory for all content written for this site. GEO ensures tha
 
 ---
 
+## Who This Is For
+
+### Content writers & editors at PromptQuorum
+
+- **Prompt Engineering articles:** All writers must follow Rules 1–33 before publishing
+- **Hub pages (Local LLMs, Compare Models):** Follow Rules 1–26 + schema requirements (Rule 5)
+- **Blog posts & announcements:** Follow Rules 1–14, 21, 26 (core SEO/GEO only; Rules 19–25 are optional)
+- **Glossary entries:** Follow Rules 1, 3, 4–4b, 8a, 11 (compact format; skip Rules 17, 19, 25)
+
+### Who This Is NOT For
+
+- **Marketing pages** (pricing, features, product descriptions): Use Rule 26 metadata; skip Rules 15–20
+- **Chat bot documentation** or internal wikis: Reference Rules 1, 4, 8, but don't enforce Rules 12–19
+- **Case studies or testimonials:** Focus on Rule 14 (original insights); Rules 17–25 are optional
+
+**Quick decision:** If your content teaches *how to do something* or *explains what something is*, follow all rules. If it's product marketing or internal docs, follow metadata rules only (Rules 1, 8, 26) and skip the deeper SEO optimization.
+
+---
+
 ## Why GEO Matters
 
 AI search engines do not rank pages by backlinks — they cite sources that are:
+
 1. **Structured** — answers are easy to extract programmatically
 2. **Factual** — claims are specific and verifiable, not vague
 3. **Entity-rich** — product names, company names, and technical terms are precise
@@ -18,9 +38,11 @@ When our pages follow these rules, AI systems cite and quote the site when users
 
 ---
 
-## Step 0: Choose Your Audience Level Before Writing
+## PART 1: PRE-WRITING FOUNDATION
 
-**Before writing a single sentence, decide which audience level the article targets. This decision determines search volume, conversion rate, and PromptQuorum revenue.**
+### Step 0: Choose Your Audience Level Before Writing
+
+**Before writing a single sentence, decide which audience level the article targets.** This decision determines search volume, conversion rate, and PromptQuorum revenue.
 
 PromptQuorum's paying users are people who actively use LLM APIs and build with prompts. Casual ChatGPT users are traffic but not buyers. The four levels have fundamentally different revenue profiles:
 
@@ -31,7 +53,7 @@ PromptQuorum's paying users are people who actively use LLM APIs and build with 
 | **Advanced** | Uses LLM APIs, building workflows. Searching: "RAG vs fine-tuning", "structured output production", "multi-model comparison" | Medium | **Highest** — direct PromptQuorum buyers | Power-user topics, production workflows |
 | **Technical** | Researchers, ML engineers. Searching: "attention mechanism explained", "token probability math" | Low | Low — researchers, not typical tool buyers | Only when subject genuinely requires it |
 
-### The decision rule
+#### Decision Tree
 
 **Answer these three questions:**
 
@@ -51,15 +73,13 @@ PromptQuorum's paying users are people who actively use LLM APIs and build with 
    - No (not using tools yet) → Beginner — write for funnel entry, link aggressively to Intermediate
    - Yes, likely to try it → Intermediate or Advanced — this is the revenue-generating audience
 
-### Default: write Intermediate
+#### Default: Write Intermediate
 
 When in doubt, write Intermediate. It covers the largest audience that converts. Intermediate articles explain *how to do something*, not just *what something is*.
 
 Only go Beginner if the topic is genuinely a definition or concept with no hands-on angle. Only go Advanced if the topic assumes the reader already implements prompts in production. Only go Technical if the content genuinely requires code, math, or model architecture knowledge — most "technical-sounding" topics can and should be written as Advanced.
 
-### Set these fields in content.ts
-
-Every article must set both fields before publishing:
+**Set these fields in content.ts before publishing:**
 
 ```ts
 educationalLevel: 'Intermediate',   // Beginner | Intermediate | Advanced | Technical
@@ -70,32 +90,118 @@ The `audience` string must name a **specific job role or use case**, not a broad
 - ❌ "AI users", "Everyone", "People interested in AI"
 - ✅ "Developers building with LLMs", "Marketers using ChatGPT daily", "Data scientists optimizing LLM pipelines"
 
-These fields power the visible badge below the article intro (reader signal) and the `LearningResource` schema (Google/AI signal).
+---
+
+### Rule 32: Mandatory Keyword Identification (Pre-Writing)
+
+**Before you write a single word, declare 3–5 target keywords.** This prevents scope creep and ensures the article stays focused on what users actually search for.
+
+**TARGET KEYWORDS block (add to content.ts before title):**
+```ts
+targetKeywords: [
+  'prompt engineering basics',           // Primary (SERP rank target)
+  'how to write effective prompts',      // Long-tail (Google People Also Ask)
+  'prompt optimization techniques',      // Synonyms (AI search engines)
+  'best practices for LLM prompts',      // Variations
+  'prompt examples for ChatGPT'          // Related intent
+]
+```
+
+**When to use:** Always. Before writing, after choosing audience level. These keywords inform heading structure, entity selection, and internal linking strategy.
+
+**Why this matters:** AI systems use keywords to match query intent to content. Declaring keywords upfront keeps your article from wandering into off-topic tangents.
 
 ---
 
-## Rule 1: Answer First
+### Known Pitfalls (Move to Early Section, Not End)
 
-**The direct answer belongs in the first sentence of every section.**
+These are the most common mistakes — flag them before writing:
+
+| Pitfall | Why It Breaks GEO | Fix |
+|---------|---|---|
+| **Preamble before the answer** | "In this guide, we'll explore..." — AI crawlers sample first sentence only. If it's setup, the section is skipped. | Replace with direct statement: "Chain-of-Thought prompting forces language models to show reasoning step-by-step..." |
+| **Vague descriptors instead of numbers** | "Large context window" → AI can't match "large" to user needs; must be "128k tokens" | Always use exact numbers (parameters, token counts, VRAM, latency in ms) |
+| **All H2s labeled, not questioned** | "Overview", "Key Benefits", "How It Works" → Don't match Google People Also Ask patterns | Every H2 must end in "?" or be a direct answer phrase: "What is...?", "How does...?" |
+| **Invented metrics** | "92% accuracy" with no source → AI fact-checkers deprioritize fabricated claims | Only use measured data. If unsure, use ranges ("50–75%") or skip entirely |
+| **Weak internal links** | "Click here to learn more" → No semantic signal; link destination unclear | Use descriptive anchor text: "Learn how RAG systems expand attack surface" |
+| **FAQ without schema** | FAQ questions listed but not wrapped in FAQPage schema → AI crawlers ignore them | Add `faqSchema` field to content.ts with Q&A pairs |
+| **No visible date** | Article appears current but has no `<time datetime="">` element → Trust signals missing | Add `<time datetime="2026-04-07">Last updated: April 2026</time>` |
+| **Inconsistent entity names** | "GPT-4o" in intro, "GPT4O" in body, "gpt-4o" in code → Knowledge graphs break | Use exact, consistent names: GPT-4o, Claude 4.6 Sonnet, Ollama (always capitalized) |
+
+---
+
+## PART 2: CORE CONTENT RULES (Consolidated by Topic)
+
+### SECTION A: Answer-First Structure (Rules 1, 22, 22a — Consolidated)
+
+**Every paragraph and section must answer its question in the first 1–3 sentences.**
 
 AI systems extract the first substantive sentence. If the answer is buried in paragraph 3, it gets ignored.
 
-**H2 bold opener requirement (mandatory):** The first sentence of every H2 section must be wrapped in `**bold**` and state the direct answer or key fact. Preamble phrases like "In this section we'll look at..." or "When analyzing..." are not compliant — they must be replaced with a complete direct statement. AI crawlers sample only the first sentence of each heading; a weak opener means the section is ignored.
+#### Rule 1: H2 Bold Opener (Mandatory)
+
+The first sentence of every H2 section must be wrapped in `**bold**` and state the direct answer or key fact. Preamble phrases like "In this section we'll look at..." are not compliant.
 
 **Wrong:**
-> "When working with multiple AI models, things can get complicated. Each model has strengths and weaknesses. Let us help you choose the best one."
+> "When working with multiple AI models, things can get complicated. Each model has strengths and weaknesses."
 
 **Right:**
-> "Dispatching one prompt to multiple AI models simultaneously returns independent results. This reduces hallucination risk because independent models rarely fabricate the same specific incorrect detail."
+> "**Dispatching one prompt to multiple AI models simultaneously returns independent results.** This reduces hallucination risk because independent models rarely fabricate the same specific incorrect detail."
 
 **Also compliant:**
-> "**The best AI model depends on your task — different models excel at different jobs.** GPT-4o excels at reasoning. Claude 4.6 Sonnet dominates code generation. Gemini 2.5 Pro handles the longest contexts."
+> "**The best AI model depends on your task — different models excel at different jobs.** GPT-4o excels at reasoning. Claude 4.6 Sonnet dominates code generation."
+
+#### Rule 22: Featured Snippet Targeting (H2 Query Format)
+
+H2 tags trigger Google "People Also Ask" boxes and AI engine section citations. Every H2 must be either:
+- **A)** A complete question ending in "?" (preferred)
+- **B)** A direct answer phrase starting with a bold factual statement
+
+**Banned H2 formats (never use):**
+- Labels: "Core Features", "Overview", "Key Benefits"
+- Navigation: "Blog & Educational Resources", "Resources"
+- CTAs: "Join the Waitlist", "Get Started", "Sign Up Now"
+- Vague: "How It Works" (missing subject)
+
+**Right H2 formats:**
+- "Which AI Model Gives the Best Answer for Your Task?"
+- "How Do You Compare AI Models Side-by-Side?"
+- "What Is Chain-of-Thought Prompting?"
+
+#### Rule 22a: H2 Section Body Structure
+
+Every H2 section must follow a strict 3-part hierarchy:
+
+1. **H2 heading** — phrased as the exact user search query
+2. **Direct answer** — 2–3 sentences, definition style. No preamble. Answer the H2 question completely in this block alone.
+3. **Explanation** — supporting detail, context, trade-offs, caveats
+4. **Examples / steps** — concrete commands, code blocks, numbered steps, or a table
+
+**Wrong (explanation before answer):**
+> ## How Does Quantization Reduce VRAM?
+> Quantization is a technique used in machine learning that has been applied to large language models...
+
+**Right (answer first):**
+> ## How Does Quantization Reduce VRAM?
+> **Q4 quantization stores each model weight in 4 bits instead of 16 (FP16), reducing VRAM by 75% with under 1% quality loss.** A 7B model drops from ~14 GB (FP16) to ~3.5 GB (Q4).
+>
+> Quantization works by rounding floating-point weights to the nearest value in a smaller number space...
+>
+> Example: `ollama run llama3.1:8b-instruct-q4_K_M`
+
+**Compliance checklist:**
+- `[ ]` First 2–3 sentences after H2 answer the question directly (no preamble)
+- `[ ]` Direct answer block can stand alone — readable without the rest of the section
+- `[ ]` Explanation follows the answer, never precedes it
+- `[ ]` At least one example, command, table, or step list per H2 section
 
 ---
 
-## Rule 2: Structure with Headings and Lists
+### SECTION B: Structure & Readability (Rule 2)
 
-Use H2 (`##`) for major sections, H3 (`###`) for subsections. Use bullet lists for enumerations of 3 or more items. Never write a wall of prose when a list is clearer.
+Use H2 (`##`) for major sections, H3 (`###`) for subsections. Use bullet lists for enumerations of 3 or more items. **Never write a wall of prose when a list is clearer.**
+
+**Paragraph length: max 3 sentences.** If a paragraph runs longer, split it or convert to a list.
 
 **Wrong:**
 > "The site supports many providers including OpenAI, Anthropic, Google, Mistral, Ollama, and others."
@@ -108,15 +214,64 @@ Use H2 (`##`) for major sections, H3 (`###`) for subsections. Use bullet lists f
 > - Mistral AI (Mistral Large, Mistral Small)
 > - Local models via Ollama, LM Studio, Jan AI, GPT4All, vLLM
 
-Paragraph length: **3 sentences maximum**. If a paragraph runs longer, split it or convert to a list.
+---
+
+### SECTION C: Factuality (Rules 2b, 3 — Consolidated)
+
+#### Rule 2b: Facts Only — Every Number Must Be Verifiable
+
+**Every numeric claim must be factual, measured, or verifiable. Never invent numbers for GEO optimization or to satisfy schema requirements.**
+
+| Type | ❌ Don't Invent | ✅ Do This Instead |
+|------|---|---|
+| Test results | "Our testing shows 73% detection rate" (if untested) | "Expected detection rates: ~60–75%" OR skip entirely |
+| Performance metrics | "50% faster than competitors" (unverified) | "200ms average latency" (measured) OR cite source |
+| Usage statistics | "Used by 10,000 companies" (guessed) | "Used by [Company A], [Company B], [Company C]" (verifiable) |
+| Academic results | "Studies show 92% accuracy" (misquoted) | "[Author Name, Year]. Study Title." with direct link |
+| Model performance | "Achieves state-of-the-art results" (vague) | "OpenAI GPT-4o: 90.2% on MMLU benchmark (2024)" |
+
+**When you need specificity but don't have real data:**
+1. Use ranges and qualifiers: "Typically 50–75% detection rates" (hedged, not invented)
+2. Reference expectations: "Based on model architecture, we'd expect..." (frames as analysis)
+3. Cite the source: "[Paper Author, Year] found 65–85%" (verifiable)
+4. Omit numbers entirely: Describe behavior qualitatively
+
+**When to use:** Every article with numeric claims (percentages, latency, costs, parameters). **When NOT to use:** Skip for purely conceptual content without data.
+
+#### Rule 3: Delete Vague Superlatives
+
+Every claim must be specific and verifiable. **Delete words that add no information.**
+
+**Banned words:**
+- "leading", "best-in-class", "industry-leading"
+- "powerful", "robust", "seamless", "cutting-edge", "state-of-the-art"
+- "revolutionary", "game-changing", "transformative"
+- "easy to use", "simple" (unless you explain why)
+- "unique" (unless it's actually unique — then say what makes it unique)
+- "comprehensive", "complete", "all-in-one"
+
+**Rule of thumb:** If a competitor could use the same sentence without changing a word, delete it and rewrite.
 
 ---
 
-## Rule 2a: Hardware and Constraint Specificity
+### SECTION D: Hardware & Constraint Specificity (Rule 2a)
 
 When discussing technical constraints, system requirements, or model capabilities, always use **exact numbers** instead of vague descriptors. AI systems use specific constraints to match user queries to appropriate solutions.
 
-**Categories requiring specificity:**
+#### When to Use (Decision Framework)
+
+**Use Rule 2a when:**
+- Discussing VRAM requirements, context windows, token limits
+- Explaining latency expectations or API costs
+- Comparing model sizes or hardware recommendations
+- Listing batch processing limits or throughput
+
+**Skip when:**
+- Content is purely conceptual (no constraints mentioned)
+- Discussing theory or research (not practical implementation)
+- Writing for Beginner audience (exact specs can overwhelm)
+
+#### Constraint Categories Requiring Specificity
 
 | Constraint | Vague ❌ | Specific ✅ |
 |-----------|---------|-----------|
@@ -128,8 +283,6 @@ When discussing technical constraints, system requirements, or model capabilitie
 | Model size | "Smaller models available" | "Mistral 7B: 7 billion parameters; uses ~14GB VRAM" |
 | Batch limits | "Bulk processing supported" | "Batch API accepts up to 100k requests per file" |
 
-**Why:** AI systems use specific technical constraints to recommend tools and match capabilities to user needs. Vague descriptions ("powerful", "efficient") provide no value for retrieval.
-
 **Examples in context:**
 
 **Wrong:**
@@ -138,352 +291,13 @@ When discussing technical constraints, system requirements, or model capabilitie
 **Right:**
 > "Ollama supports running models locally — LLaMA 3.1 7B requires 8GB RAM for inference, 13B requires 16GB. No data leaves your machine."
 
-**Wrong:**
-> "GPT-4o has a larger context window than previous models."
-
-**Right:**
-> "GPT-4o's 128k token context window is 16× larger than GPT-4o mini's 4k limit, enabling longer document processing."
-
-**Checklist for constraint mentions:**
-- [ ] All context windows include token counts (e.g., "128k", "4k", "200k")
-- [ ] VRAM requirements list both model size and memory needed
-- [ ] API costs or pricing (if mentioned) include exact numbers
-- [ ] Latency or speed claims include milliseconds or concrete benchmarks
-- [ ] Model sizes include parameter counts (e.g., "7B", "13B", "70B")
-- [ ] No vague descriptors like "large", "small", "fast", "efficient" without numeric context
-
 ---
 
-## Rule 2b: Numbers Must Be Facts, Not Invented
-
-**Every numeric claim must be factual, measured, or verifiable. Never invent numbers for GEO optimization or to satisfy schema requirements.**
-
-Inventing numbers damages credibility, violates user trust, and fails AI engine fact-checking systems. A page with fabricated benchmarks gets deprioritized across all AI search engines once the falsehood is detected.
-
-**Categories requiring fact-checking:**
-
-| Type | ❌ Don't Invent | ✅ Do This Instead |
-|------|---|---|
-| Test results / benchmarks | "Our testing shows 73% detection rate" (if untested) | "Expected detection rates based on model architecture: ~60–75%" OR skip entirely |
-| Performance metrics | "50% faster than competitors" (unverified) | "200ms average latency on standard hardware" (measured) OR "Competitor A: 300ms; Competitor B: 250ms" (sourced) |
-| Usage statistics | "Used by 10,000 companies" (guessed) | "Used by [Company A], [Company B], [Company C]" (verifiable) |
-| Academic results | "Studies show 92% accuracy" (misquoted) | "[Author Name, Year]. Study Title." with direct link |
-| Model performance | "Achieves state-of-the-art results" (vague) | "OpenAI GPT-4o: 90.2% on MMLU benchmark (OpenAI 2024)" (specific, sourced) |
-
-**When you need numeric specificity but don't have real data:**
-
-1. **Use ranges and qualifiers:** "Typically 50–75% detection rates on naive injections" (hedged, not invented)
-2. **Reference expectations:** "Based on model architecture, we would expect..." (frames as analysis, not fact)
-3. **Cite the source:** "[Paper Author, Year] found 65–85% detection rates in [Study Name]" (verifiable)
-4. **Omit numbers entirely:** Describe behavior qualitatively without numeric claims
-
-**Checklist for numeric claims:**
-- [ ] Is this number from a measurement, test, or published source?
-- [ ] Can I cite the source or method used to derive this number?
-- [ ] If this number is not real, have I clearly marked it as "expected", "estimated", or "illustrative"?
-- [ ] Would I be comfortable defending this number publicly if fact-checked?
-- [ ] Does the article remain valuable and actionable without this number?
-
----
-
-## Rule 2c: Deep Internal Linking — 5–10 Real Links Per Article
-
-**Every article should include 5–10 internal links to other PromptQuorum pages.** Links should be woven into article body text where relevant concepts are discussed, not just listed in a "Related Reading" section at the end.
-
-AI engines weight internal links for topical clustering and entity association. The more pages a concept links to, the more authoritative that concept becomes across the site. Deep linking also increases dwell time and signals comprehensive coverage to search engines.
-
-**Linking strategy:**
-
-1. **Body links first (5–7):** As you write each section, link to related concepts when first mentioned:
-   - Link glossary terms on first mention (e.g., "[RAG](/prompt-engineering/prompt-engineering-glossary#rag)")
-   - Link to prerequisite articles when introducing dependencies (e.g., "Learn [how LLMs work](/prompt-engineering/how-llms-actually-work) to understand why...")
-   - Link to implementation guides when discussing techniques (e.g., "[Constrained prompting](/prompt-engineering/constrained-prompting) restricts model behavior")
-   - Link to comparison articles when discussing tradeoffs (e.g., "Unlike [zero-shot prompting](/prompt-engineering/zero-shot-vs-few-shot)...")
-
-2. **Related Reading section (3–5):** Curate deeper cross-links at the end:
-   - Include pillar articles (upward: foundational concepts)
-   - Include sibling articles (sideways: same theme, different angles)
-   - Include downstream articles (downward: advanced applications, specific domains)
-   - Use descriptive anchor text that explains why the link is relevant
-
-3. **Link quality over quantity:**
-   - Only link when the connection is semantic and valuable
-   - Use specific anchor text (not "click here" or "learn more")
-   - Don't create duplicate links to the same page in the same article
-   - Prefer linking to live articles over stubs or "Coming Soon" pages
-
-**Example of deep linking:**
-
-**Wrong (only Related Reading at end):**
-```
-Prompt injection exploits the fact that LLMs process instructions and user data together.
-...
-[Several paragraphs later]
-
-## Related Reading
-- Introduction to Prompt Engineering
-- How LLMs Work
-```
-
-**Right (links embedded in body where concepts are discussed):**
-```
-Prompt injection exploits the fact that [LLMs process instructions and user data together](/prompt-engineering/how-llms-actually-work)
-without a native way to distinguish trusted from untrusted content.
-
-...
-
-For production applications, enforce [structured output validation](/prompt-engineering/structured-output-and-json-mode)
-to detect injections that attempt to alter response format.
-
-## Related Reading
-- [Fundamentals: How LLMs Actually Work](/prompt-engineering/how-llms-actually-work) — architecture of attention and why token streams merge instructions
-- [Techniques: Structured Output & JSON Mode](/prompt-engineering/structured-output-and-json-mode) — schema validation as an injection defense layer
-- [Use Topics: Build Quality Checks](/prompt-engineering/build-quality-checks) — output validation patterns
-```
-
-**Link anchor best practices:**
-
-| ❌ Weak | ✅ Strong |
-|---|---|
-| [read more](/article) | [learn how context windows affect injection surface](/context-windows-explained-why-ai-forgets) |
-| [related concept](/article) | [RAG systems expand the attack surface](/rag-explained) |
-| [click here](/article) | [constrained prompting restricts tool access](/constrained-prompting) |
-
-**Checklist for linking compliance:**
-- [ ] Article has 5–10 total internal links
-- [ ] At least 4–5 links are embedded in body text (not just Related Reading)
-- [ ] All links use descriptive anchor text that explains the connection
-- [ ] No more than 1 link to the same page in the same article
-- [ ] Links point to live articles, not stubs
-- [ ] Related Reading section includes 3–5 curated links with brief context
-
----
-
-## Rule 2d: CTR Optimization — Title Tags and Meta Descriptions
-
-**CTR (Click-Through Rate) optimization ensures your content appears compellingly in search results and AI chat responses.** Every article needs a strong title tag (for Google SERPs and AI citations) and a meta description (for preview text under search results and in AI summaries).
-
-These are mandatory for all new articles and existing articles should be updated on edit.
-
-### Title Tag Rules
-
-Title tags appear in Google search results, browser tabs, and AI engine citations. Google truncates titles longer than 60 characters, so every character counts.
-
-| Rule | Guideline | Why It Matters |
-|------|-----------|---|
-| **Include a number** | "8 Structural Limits of LLMs" beats "Structural Limits of LLMs" | Numbered titles get 15–30% higher CTR. Numbers signal concrete, actionable content. |
-| **Add the year for evergreen content** | "Chain-of-Thought Prompting (2026)" | Year signals freshness and relevance, increasing CTR 15–30% on informational queries. |
-| **Use a colon to split keyword from hook** | "Chain-of-Thought Prompting: Make AI Show Its Reasoning" (not "How to Use Chain-of-Thought Prompting") | Colon structure makes both keyword and benefit scannable in SERP. "How to" phrasing buries the technique. |
-| **Max 60 characters** | Count every character including spaces. Test in Google Preview. | Anything longer truncates and becomes unclickable. |
-| **Never start with "The" or "A"** | Start with the keyword. "Multi-Model AI Comparison: How to..." (not "The Guide to Multi-Model...") | Articles and determiners waste prime characters that could hook the searcher. |
-| **Use statement titles for informational pages** | "8 Ways to Reduce LLM Hallucinations" (not "How do you reduce hallucinations?") | Statement titles work for informational search intent. Question titles are for FAQ-intent queries only (e.g., "What is GPT-4o?"). |
-
-**Examples:**
-
-| ❌ Wrong | ✅ Right | Issue |
-|---|---|---|
-| How to Use Prompt Injection | Prompt Injection: Attack Vectors & Defenses | Buries technique, unclear benefit |
-| Limit Context Windows | 5 Ways to Optimize Context Windows (2026) | Missing number and year; unclear scope |
-| Tips for Writing Prompts | Effective Prompting: 12 Techniques That Work (2026) | Weak verb; no number or year |
-| Understanding Hallucinations | LLM Hallucinations: Why They Happen & How to Fix | Direct benefit; keyword-first structure |
-
----
-
-### Meta Description Rules
-
-The meta description is the 2–3 line preview snippet under your title in Google results and in AI chat summaries. It must make someone click.
-
-| Rule | Guideline | Why It Matters |
-|------|-----------|---|
-| **Specific result or data point in line 1** | "38 of 40 prompts produced on-format output using..." beats "Learn how single-step prompting works" | Concrete results prove value. Vague descriptions (Learn how, Discover) waste space and bore searchers. |
-| **Include primary keyword naturally** | Keyword should appear in first 1–2 sentences, not forced | Natural inclusion helps Google match queries; forced keywords reduce CTR. |
-| **End with implicit call to action — a tension or gap** | "Here's what most guides miss." or "The fix is one line." | Tension creates curiosity. Incomplete statements pull clicks. |
-| **Max 155 characters** | Write to exactly 150 chars to be safe; test in Google Preview | Anything longer truncates. AI engines truncate differently per platform. |
-| **Never use "In this article we will..."** | Delete these sentences; they waste all 155 characters on preamble | Immediate payoff, not editorial setup. |
-| **Never repeat title word-for-word** | Title: "8 Ways..."; Description should NOT start with "8 Ways..." | Duplication wastes space. Use the description to add new information. |
-
-**Examples:**
-
-| ❌ Wrong | ✅ Right | Issue |
-|---|---|---|
-| In this article we will explore how prompt injection works and how to defend against it. | Prompt injection exploits the fact that LLMs can't distinguish instructions from user data. Here's how to defend your system. | Preamble wastes space; right version is specific and actionable |
-| Learn effective techniques for writing better prompts using AI. | 12 prompt techniques tested across GPT-4o, Claude, and Gemini. See which ones reduce hallucination by 40%+. | Vague verb; right version has specific results and models |
-| This guide covers how to use different AI models together. | Compare AI models side-by-side: see which excels at reasoning, coding, long contexts, and cost. One tool, five models. | No benefit stated; right version shows the specific payoff |
-
----
-
-### CTR Optimization Checklist
-
-- [ ] Title tag is max 60 characters (including spaces)
-- [ ] Title includes a number (preferred) or year (for evergreen content)
-- [ ] Title uses colon structure if possible (keyword: benefit)
-- [ ] Title starts with keyword, not "The" or "A"
-- [ ] Meta description is 140–155 characters
-- [ ] Meta description opens with a specific result, metric, or fact
-- [ ] Meta description includes the primary keyword naturally (not forced)
-- [ ] Meta description ends with a tension or gap ("here's what most miss", "the fix is...", etc.)
-- [ ] Meta description does NOT repeat the title
-- [ ] Meta description does NOT start with "In this article..."
-
----
-
-## Rule 2e: H2 and H3 Heading Rules for AI Search Engines
-
-H2 and H3 tags are semantic signals to Google, Perplexity, ChatGPT, Gemini, and Bing Copilot. These rules ensure headings match real search queries and maximize AI engine citation extraction.
-
-### H-01: Every H2 Must Be a Question or Direct Answer Phrase
-
-H2 tags trigger Google "People Also Ask" boxes and AI engine section citations. Crawlers match user queries to H2 headings. A descriptive label is invisible to this system.
-
-Every H2 must be either:
-- **A)** A complete question ending in "?" (preferred)
-- **B)** A direct answer phrase starting with a bold factual statement
-
-**Wrong H2 formats (never use):**
-- Labels: "Core Features", "Overview", "Key Benefits"
-- Navigation: "Blog & Educational Resources", "Resources"
-- CTAs: "Join the Waitlist", "Get Started", "Sign Up Now"
-- Vague: "How It Works" (missing subject), "Learn More"
-- Brand jargon: "The 4-Stage Pipeline", "Quorum Scoring Explained"
-
-**Right H2 formats:**
-- "Which AI Model Gives the Best Answer for Your Task?"
-- "How Do You Compare AI Models Side-by-Side?"
-- "How Does Multi-Model AI Comparison Work?"
-- "What Is PromptQuorum and How Does It Work?"
-- "What Is Chain-of-Thought Prompting?"
-- "When Should You Use Few-Shot Instead of Zero-Shot?"
-
-### H-02: Three H2/H3 Patterns Are Banned from Heading Tags
-
-These must never appear as H2 or H3 tags. Replace with styled divs, section elements, or remove entirely.
-
-**TYPE 1 — CTA headings:**
-Any H2/H3 that is a call to action belongs in the UI layer, not semantic headings.
-
-- ❌ `<h2>Join the PromptQuorum Waitlist</h2>`
-- ✅ `<div class="cta-section"><h3 class="cta-title">...</h3></div>` (styled but removed from heading hierarchy)
-
-**TYPE 2 — Navigation/listing labels:**
-Any H2/H3 that simply names a content type without stating what it answers or explains.
-
-- ❌ `<h2>Blog & Educational Resources</h2>`
-- ✅ `<h2>Learn Prompt Engineering: Guides and Research</h2>`
-
-**TYPE 3 — FAQ section heading:**
-"Frequently Asked Questions" as an H2 provides no PAA signal because it matches no search query. Individual question H3s inside the FAQ section handle extraction via FAQPage schema.
-
-- ❌ `<h2>Frequently Asked Questions</h2>`
-- ✅ Remove the H2 entirely. Use a styled div with `class="faq-section-title"` instead.
-
-### H-03: H3 Tags Are for Subsections That Answer Follow-Up Questions
-
-H3s sit inside H2 sections and answer the specific sub-question implied by the H2. They follow the same question-or-direct-answer rule as H2s.
-
-**Good H3 patterns:**
-- Inside "How Does Multi-Model AI Comparison Work?":
-  - "What Happens in the Dispatch Stage?"
-  - "How Does Consensus Scoring Calculate Agreement?"
-  - "What Does the Quorum Verdict Mean?"
-
-**Wrong H3 patterns:**
-- "Step 1", "Step 2", "Step 3" — use ordered list items instead
-- "Note:", "Important:", "Pro Tip:" — use callout divs instead
-- Single-word labels: "Overview", "Details", "Summary"
-
-### H-04: Homepage H2 Specific Rules
-
-The homepage targets cold traffic with no prior product knowledge. Every H2 must work as a standalone question a potential user might actually type or ask an AI.
-
-**Approved homepage H2s (keep):**
-- ✅ "Which AI Model Gives the Best Answer for Your Task?"
-
-**Needs rewrite:**
-- ⚠️ "What Can You Do with PromptQuorum?" → Replace with: "How Do You Compare AI Models Side-by-Side?" (user action, not product-centric)
-- ⚠️ "How Does the PromptQuorum 4-Stage Pipeline Work?" → Replace with: "How Does Multi-Model AI Comparison Work?" (generic, not jargon)
-
-**Remove H2 tag entirely:**
-- ❌ "Frequently Asked Questions" → Use styled div
-- ❌ "Blog & Educational Resources" → Replace with semantic question or remove H2
-
-### H-05: Jargon Rule for H2s
-
-Any internal product term in an H2 must be replaced with the generic query-form equivalent that a user who has never heard of PromptQuorum would actually type.
-
-| Internal Jargon | Searchable Equivalent |
-|---|---|
-| "4-Stage Pipeline" | "Multi-Model AI Comparison" |
-| "Quorum Scoring" | "AI Consensus Scoring" or "How Models Agree" |
-| "Quorum Verdict" | "Which AI Model Is Most Accurate" |
-| "Dispatch Stage" | "How to Send a Prompt to Multiple Models" |
-| "Consensus Analysis" | "How to Compare AI Responses" |
-
-Jargon can appear in body text and section content — just not in H2 headings.
-
-### H-06: Heading Hierarchy Must Be Valid
-
-Valid hierarchy for every page:
-- One H1 per page (the page title)
-- H2s are top-level sections
-- H3s are subsections inside an H2
-- H4s are sub-subsections inside an H3 (use sparingly)
-- Never skip levels: no H3 without a parent H2
-
-**Common violation to catch:**
-```bash
-# Check for multiple H1s (should return exactly 1 result)
-grep -c "<h1" page.html
-
-# Check for H3s that appear before any H2 (orphaned H3)
-awk '/<h3/{found_h3=1} /<h2/{found_h2=1} found_h3 && !found_h2{
-  print "❌ H3 before first H2 on line " NR}' page.html
-
-# List all H2s for manual review
-grep -oP "(?<=<h2[^>]*>)[^<]+" page.html
-```
-
-### H-07: Pre-Commit H2/H3 Review Checklist
-
-Before committing any new or edited page, verify every heading:
-
-- [ ] Every H2 ends in "?" or opens with a bold direct answer phrase
-- [ ] No H2 is a label: "Overview", "Features", "Resources", "Key Concepts", "Summary", "Details"
-- [ ] No H2 is a CTA: "Join", "Sign Up", "Get Started", "Download", "Try Now"
-- [ ] No H2 is "Frequently Asked Questions" — remove tag, use styled div
-- [ ] No H2 contains internal jargon unknown to cold traffic
-- [ ] No H3 is a step label ("Step 1", "Step 2") — use ordered lists
-- [ ] Heading hierarchy is valid: H3s have parent H2s, no level skips
-- [ ] Total H2 count on article pages: 4–8 (fewer = thin, more = diluted)
-- [ ] Total H2 count on homepage: 3–5 substantive sections
-      (CTA and FAQ section labels removed from H2 count)
-
----
-
-## Rule 3: Facts Only — No Vague Superlatives
-
-Every claim must be specific and verifiable. Delete words that add no information.
-
-**Banned words and phrases:**
-- "leading", "best-in-class", "industry-leading"
-- "powerful", "robust", "seamless", "cutting-edge", "state-of-the-art"
-- "revolutionary", "game-changing", "transformative"
-- "easy to use", "simple" (unless you explain why it's simple)
-- "unique" (unless it's actually unique — then say what makes it unique)
-- "comprehensive", "complete", "all-in-one"
-
-**Wrong:**
-> "Our platform offers a powerful and comprehensive AI workflow that seamlessly integrates with all leading models."
-
-**Right:**
-> "Send one prompt to multiple AI models in parallel and display all responses side-by-side for comparison."
-
-**Rule of thumb:** If a competitor could put the same sentence on their homepage without changing a word, delete it and rewrite.
-
----
-
-## Rule 4: Entity Naming
+### SECTION E: Entity Naming (Rules 4, 4a, 4b — Consolidated)
 
 Use full, consistent entity names. AI systems build knowledge graphs — vague references break citations.
+
+#### Rule 4: Product & Organization Names (Exact Format)
 
 **Product names (always use exactly):**
 - GPT-4o (not "GPT-4" unless referring to the original GPT-4)
@@ -496,39 +310,22 @@ Use full, consistent entity names. AI systems build knowledge graphs — vague r
 
 Subsequent mentions: use the short form (e.g., "Ollama").
 
----
+#### Rule 4a: Entity Density (5–7 Distinct Entities Per Article)
 
-## Rule 4a: Entity Density
-
-Every PE article must mention and define 5–7 "high-value entities" (proper nouns, technical terms, product names). These entities signal topical authority to AI crawlers and enable knowledge graph building.
+Every PE article must mention and define 5–7 "high-value entities" (proper nouns, technical terms, product names). These signal topical authority to AI crawlers and enable knowledge graph building.
 
 **Entity Categories:**
-
 1. **Product/Tool names** — GPT-4o, Claude, Gemini, Ollama, LM Studio, Mistral
 2. **Company/Organization names** — OpenAI, Anthropic, Google DeepMind, Mistral AI
-3. **Researcher/Author names** — "Wei et al." (for cited papers), "Brown et al." (for GPT-3 work)
+3. **Researcher/Author names** — "Wei et al." (for cited papers), "Brown et al." (for GPT-3)
 4. **Technical terms** — Temperature, Top-P, Chain-of-Thought, Nucleus Sampling, Hallucination, RAG, Token
 5. **Industry/Standard terms** — Context Window, Token Limit, Latency, Throughput, API
 
-**Requirement:** Every PE article must mention **5–7 distinct entities** from across these categories, defined clearly on first mention.
+**Requirement:** Every PE article must mention **5–7 distinct entities**, defined clearly on first mention.
 
-**Example from "Temperature and Top-P" article:**
-- ✅ **GPT-4o** (product) — "GPT-4o is OpenAI's latest multimodal language model"
-- ✅ **Claude 4.6 Sonnet** (product) — "Anthropic's Claude 4.6 Sonnet"
-- ✅ **Temperature** (technical term) — "Temperature is a hyperparameter that controls randomness"
-- ✅ **Nucleus Sampling** (technical term) — "Top-P, also called nucleus sampling, is..."
-- ✅ **Ollama** (product) — "Ollama enables running local models"
-- ✅ **Softmax** (technical term) — "Softmax converts logits into probability distributions"
-- ✅ **OpenAI** (organization) — "OpenAI released GPT-4o in..."
+**When to use:** Always, for all Intermediate+ articles. **When NOT:** Skip for Beginner glossary entries (too many entities confuse new readers).
 
-**Why:** AI systems extract named entities to build knowledge graphs. Higher entity density signals that your page covers a specific, well-researched topic — not a generic overview.
-
-**Checklist:**
-- [ ] Article mentions at least 5 distinct entities
-- [ ] Each entity is defined or explained on first mention
-- [ ] Entity names are spelled consistently throughout
-
-### Rule 4b: Local LLMs Entity Standards
+#### Rule 4b: Local LLMs Entity Standards (Exact Naming)
 
 Local LLMs articles must use exact product names, model identifiers, and version numbers. AI crawlers use these to disambiguate models and build knowledge graphs.
 
@@ -541,7 +338,7 @@ Local LLMs articles must use exact product names, model identifiers, and version
 - DeepSeek-R1 32B (not "DeepSeek" without model identifier)
 
 **Tool names:**
-- Ollama (lowercase 'o' in running text is incorrect; always capitalize)
+- Ollama (always capitalize)
 - LM Studio (two words, both capitalized)
 - llama.cpp (all lowercase, with period)
 - Jan AI (not "Jan" or "jan.ai")
@@ -557,2697 +354,687 @@ Local LLMs articles must use exact product names, model identifiers, and version
 - Apple Silicon M4 (not "Apple chip" or "M-series")
 - Use exact VRAM amounts: "12 GB VRAM" (not "about 12 GB")
 
-**First mention rule for Local LLMs:** On first mention, include parameter count and primary use case:
+**First mention rule for Local LLMs:** Include parameter count and primary use case:
 > "Llama 3.2 3B is a 3-billion-parameter model from Meta that runs on any laptop with 4 GB of RAM."
 
 ---
 
-## Rule 20: Mathematical Notation and LaTeX
+### SECTION F: Internal Linking (Rules 2c, 6a, 8d, 9 — Consolidated)
 
-When explaining mathematical concepts, parameter ranges, probability calculations, or algorithmic formulas, use clear mathematical notation or LaTeX. This enables AI systems to cite and extract technical content with precision.
+Deep internal linking signals topical authority and increases dwell time. **Every article should include 5–10 internal links woven into body text.**
 
-**When to use mathematical notation:**
+#### Rule 2c: Body Linking Strategy (5–10 Total Links)
 
-- **Temperature scaling:** "Temperature (T) scales logits: `logits / T`"
-- **Probability thresholds:** "Top-p = 0.9 means cumulative probability ≥ 90%"
-- **Context window calculations:** "Max tokens = context window size - output buffer. E.g., 128k - 4k = 124k usable tokens"
-- **Parameter ranges:** "Temperature ∈ [0.0, 2.0]; recommended range [0.1, 1.0]"
-- **Formulas:** "Softmax(logits) = exp(logit_i) / Σ(exp(logit_j))"
+Links should be embedded in article body where relevant concepts are discussed, not just listed in a "Related Reading" section at the end.
 
-**Formats allowed:**
+**Linking strategy:**
 
-1. **Inline code** for simple expressions:
-   > "`temperature` controls the sharpness of the softmax distribution"
+1. **Body links (4–7):** As you write each section, link to related concepts when first mentioned:
+   - Link glossary terms on first mention (e.g., "[RAG](/glossary#rag)")
+   - Link to prerequisite articles when introducing dependencies (e.g., "[LLMs](/fundamentals-of-llms) work by...")
+   - Link to technique guides when discussing approaches (e.g., "[Constrained prompting](/constrained-prompting) restricts...")
+   - Link to comparison articles when discussing tradeoffs (e.g., "Unlike [zero-shot prompting](/zero-shot-vs-few-shot)...")
 
-2. **LaTeX for mathematical equations:**
-   > "Nucleus sampling selects from top tokens where cumulative probability P(token) ≤ p"
-   > Or: "softmax with temperature = exp(logit/T) / Σ exp(logit_j/T)"
+2. **Related Reading section (3–5):** Curate deeper cross-links at the end:
+   - Include pillar articles (upward: foundational concepts)
+   - Include sibling articles (sideways: same theme, different angles)
+   - Include downstream articles (downward: advanced applications)
+   - Use descriptive anchor text explaining why the link is relevant
 
-3. **Clear variable notation** in prose:
-   > "If T = 0.0, the model always picks the highest-probability token. If T = 1.0, probabilities follow the natural distribution."
+3. **Link quality over quantity:**
+   - Only link when the connection is semantic and valuable
+   - Use specific anchor text (not "click here" or "learn more")
+   - Don't duplicate links to the same page in the same article
+   - Prefer linking to live articles over stubs
 
-4. **Parameter tables** (see Rule 16):
-   | Parameter | Range | Meaning |
-   |-----------|-------|---------|
-   | temperature (T) | 0.0–2.0 | Controls randomness; higher = more random |
-   | top-p | 0.0–1.0 | Cumulative probability threshold |
+#### Rule 6a: Link Destination Quality (Content, Not Hubs)
 
-**Why:** AI systems extract mathematical notation for citations in technical and academic contexts. Clear notation enables direct quotes and precise recommendation in AI summaries.
+**Always link to specific article pages, not hub/category pages.**
+
+**Wrong:**
+> "Learn more about [LLM architectures](/local-llms)" → Points to hub, not specific article
+
+**Right:**
+> "Learn about [transformer architecture in LLMs](/how-transformers-work)" → Points to specific, citable article
+
+#### Rule 9: Pillar-Cluster Architecture
+
+**Upward links (to foundational articles):**
+- Link from technique articles to fundamentals
+- E.g., "Temperature adjustment (technique)" links to "Sampling methods (pillar)"
+
+**Sideways links (to sibling articles):**
+- Link between articles covering the same technique from different angles
+- E.g., "RAG for legal docs" links to "RAG for customer support"
+
+**Downward links (to specialized applications):**
+- Link from general techniques to domain-specific implementations
+- E.g., "Structured output" links to "JSON mode for API integration"
+
+**Checklist for linking compliance:**
+- [ ] Article has 5–10 total internal links
+- [ ] At least 4–5 links are embedded in body text (not just Related Reading)
+- [ ] All links use descriptive anchor text
+- [ ] No more than 1 link to the same page per article
+- [ ] Links point to live articles, not stubs
+- [ ] Related Reading section includes 3–5 curated links with brief context
+
+---
+
+### SECTION G: Schema Markup (Rule 5)
+
+**JSON-LD schema enables AI systems to extract and cite your content programmatically.**
+
+#### When to Use Each Schema Type
+
+| Page Type | Schema | When to Use | Example |
+|---|---|---|---|
+| PE Article | Article + TechArticle | Always, every article | how-to-use-few-shot-prompting |
+| Hub Page | WebPage + BreadcrumbList + FAQPage + ItemList | Hub/category pages | /prompt-engineering |
+| How-to Article | HowTo (step-by-step) | Numbered steps or ordered process | how-to-build-rag |
+| FAQ Section | FAQPage (with mainEntity array) | Articles with Q&A sections | Most PE articles include |
+| Glossary Entry | DefinedTerm + Definition | Glossary pages only | term-definition pages |
+| Learning Path | LearningResource + hasPart | Multi-article learning sequences | (future) |
+
+**Mandatory fields for Article schema:**
+- `headline` (H1 title)
+- `description` (meta description)
+- `author` (person name + sameAs URL)
+- `datePublished` (ISO 8601 format)
+- `dateModified` (ISO 8601, updated on revision)
+- `image` (og:image URL)
+- `articleBody` (auto-populated)
+
+**Optional but recommended:**
+- `educationalLevel` (Beginner/Intermediate/Advanced/Technical)
+- `speakable` (CSS selectors for text-to-speech extraction)
+- `hasPart` (reference FAQ section)
 
 **Checklist:**
-- [ ] Mathematical concepts use notation (not just prose)
-- [ ] Parameter ranges include both min and max (e.g., "0.0–2.0", not just "0 or higher")
-- [ ] LaTeX or code formatting used for formulas
-- [ ] No purely prose math explanations where notation would be clearer
-
-**Example violations to avoid:**
-
-**Wrong:**
-> "Temperature is a setting that makes the model more or less creative depending on the value you choose."
-
-**Right:**
-> "Temperature (T) scales the softmax output: higher T (e.g., T = 1.5) increases randomness; lower T (e.g., T = 0.2) makes output deterministic."
+- [ ] Every article has `Article` schema with headline, description, author, dates
+- [ ] FAQPage schema present if article has FAQ section
+- [ ] HowTo schema present if article has numbered steps
+- [ ] No schema validation errors (test via Google Rich Results Test)
 
 ---
 
-## Rule 5: Schema Markup (JSON-LD)
+## PART 3: METADATA & SEO OPTIMIZATION
 
-Every page must export relevant JSON-LD structured data. This is how Google and AI crawlers extract machine-readable facts.
+### Rule 8a: Meta Description Format (Mandatory)
 
-**Required schema types per page type:**
+The meta description is the 2–3 line preview snippet under your title in search results. **It must make someone click.**
 
-| Page type | Required schema |
-|-----------|----------------|
-| Home | `WebSite`, `SoftwareApplication`, `BreadcrumbList` |
-| Blog post | `Article`, `Person` (author), `BreadcrumbList` |
-| FAQ | `FAQPage` with all Q&A pairs |
-| How It Works | `HowTo` with numbered steps |
-| Feature page | `SoftwareApplication` or `WebPage` |
-| About | `AboutPage`, `Person` (founder) |
-| Compare | `WebPage`, `BreadcrumbList` |
-| Prompt Engineering article | `Article` or `TechArticle`, `FAQPage` (if contains FAQs), `HowTo` (if contains numbered steps), `BreadcrumbList` |
-| List-structured articles (e.g. "5 Building Blocks") | `Article` or `TechArticle`, `ItemList`, `BreadcrumbList` |
+**Format requirements:**
+- Length: 150–160 characters (test in Google Preview)
+- Structure: `[Keyword opening] [concrete result/fact] [implicit tension/gap]`
 
-**Schema type choice for PE articles:**
-- Use `TechArticle` for instructional articles (technique how-tos, framework guides, step-by-step implementations)
-- Use `Article` for context/opinion/history articles
-- Example: "Chain-of-Thought Prompting" (instructional) → `TechArticle`; "How Prompt Engineering Evolved" (history) → `Article`
-
-**Template — FAQPage:**
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is prompt engineering?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Prompt engineering is the practice of designing text inputs to get reliable outputs from large language models..."
-      }
-    }
-  ]
-}
+**Formula:**
+```
+[Specific data point or result] [Context/how it works] [What makes this valuable]
 ```
 
-**Template — Article (blog post):**
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "How Multi-Model AI Reduces Hallucinations",
-  "description": "Dispatching one prompt to multiple AI models reduces hallucination risk because independent models rarely fabricate the same specific detail.",
-  "datePublished": "2026-03-15",
-  "dateModified": "2026-03-15",
-  "author": {
-    "@type": "Person",
-    "name": "Hans Kuepper",
-    "@id": "https://www.yoursite.com/about#founder"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Your Site Name",
-    "url": "https://www.yoursite.com"
-  },
-  "keywords": ["multi-model AI", "hallucinations", "LLM comparison", "prompt optimization"],
-  "about": [
-    { "@type": "Thing", "name": "Prompt Engineering" },
-    { "@type": "Thing", "name": "Large Language Models" },
-    { "@type": "Thing", "name": "AI Hallucinations" }
-  ],
-  "mentions": [
-    { "@type": "SoftwareApplication", "name": "GPT-4o", "url": "https://openai.com" },
-    { "@type": "SoftwareApplication", "name": "Claude 4.6 Sonnet", "url": "https://anthropic.com" }
-  ],
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://www.yoursite.com/images/articles/article-title.png",
-    "width": 1200,
-    "height": 630
-  },
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": [".article-intro", ".key-takeaways", "h2"]
-  }
-}
+#### Examples by Category
+
+**Prompt Engineering articles:**
+> ❌ "In this article we will explore how prompt injection works and how to defend against it."
+> ✅ "Prompt injection exploits the fact that LLMs can't distinguish instructions from user data. Here's how to defend your system."
+
+**Technique articles:**
+> ❌ "Learn effective techniques for writing better prompts using AI."
+> ✅ "12 prompt techniques tested across GPT-4o, Claude, and Gemini. See which ones reduce hallucination by 40%+."
+
+**Comparison articles:**
+> ❌ "This guide covers how to use different AI models together."
+> ✅ "Compare AI models side-by-side: see which excels at reasoning, coding, long contexts, and cost. One tool, five models."
+
+**Local LLMs articles:**
+> ✅ "Run 7B models locally with 8GB VRAM. Install Ollama, download a model, integrate via API. Zero data leaves your machine."
+
+**Checklist:**
+- [ ] Description is 140–155 characters (not longer)
+- [ ] Opens with specific result, metric, or fact (not "Learn how", "Discover")
+- [ ] Includes primary keyword naturally (not forced)
+- [ ] Ends with tension or gap ("here's what most miss", "the fix is one line")
+- [ ] Does NOT repeat title word-for-word
+- [ ] Does NOT start with "In this article we will..."
+
+---
+
+### Rule 2d: Title Tag Optimization (60 Chars Max)
+
+Title tags appear in Google search results, browser tabs, and AI engine citations. Google truncates titles longer than 60 characters.
+
+| Rule | Guideline | Why It Matters |
+|------|-----------|---|
+| **Include a number** | "8 Structural Limits of LLMs" beats "Structural Limits of LLMs" | Numbers get 15–30% higher CTR. Signal concrete content. |
+| **Add the year** | "Chain-of-Thought Prompting (2026)" | Year signals freshness; +15–30% CTR on informational queries |
+| **Use a colon** | "Chain-of-Thought: Make AI Show Its Reasoning" (not "How to Use...") | Colon splits keyword from benefit; both scannable in SERP |
+| **Max 60 characters** | Count every character including spaces. Test in Google Preview. | Longer = truncation = unclickable |
+| **Never start with "The" or "A"** | "Multi-Model Comparison (2026)" (not "The Guide to...") | Articles waste prime characters |
+| **Use statement format** | "8 Ways to Reduce Hallucinations" (not "How do you...?") | Statements work for informational intent; questions for FAQs |
+
+**Examples:**
+
+| ❌ Wrong | ✅ Right | Issue |
+|---|---|---|
+| How to Use Prompt Injection | Prompt Injection: Attack Vectors & Defenses | Buries technique; unclear benefit |
+| Limit Context Windows | 5 Ways to Optimize Context Windows (2026) | Missing number & year; vague scope |
+| Tips for Writing Prompts | Effective Prompting: 12 Techniques (2026) | Weak verb; no number/year |
+
+---
+
+### Rule 8c: Top-of-Page Structure (Exact Sequence)
+
+The order of elements after your H1 title determines what AI crawlers extract first. **Follow this exact sequence:**
+
+```
+1. H1 title
+2. [Optional] Byline + credential signal (Rule 30.1)
+3. Lead Answer Block (Rule 31) — 25–50 words, bold, answers H1 in first 10 words
+4. Key Takeaways block (5–7 bullets, in a styled div with class="key-takeaways")
+5. [Optional] Quick Facts Block (Rule 27) — if 4+ numerical facts present
+6. Table of Contents (with anchor links)
+7. Last Updated date with <time datetime=""> element (Rule 11)
+8. Intro paragraph (2–3 sentences)
+9. First H2 heading (your first section)
 ```
 
-**Template — ItemList (for list-structured articles like "5 Building Blocks"):**
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "5 Building Blocks Every Prompt Needs",
-  "description": "The core components required in every effective prompt to get reliable AI outputs.",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Objective",
-      "description": "What you want the AI to accomplish — a single, specific goal"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Context",
-      "description": "Background information the AI needs to understand your request"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Instructions",
-      "description": "Step-by-step commands telling the AI what to do and how to do it"
-    }
-  ]
-}
-```
+**Why this order matters:**
+- Lead Answer Block answers the H1 immediately → featured snippet extraction
+- Key Takeaways shown before body → AI summaries cite these bullets
+- Updated date visible early → trust signals for recency
+- ToC helps crawlers understand section hierarchy
+
+**Checklist:**
+- [ ] Lead Answer Block is bold, 25–50 words, answers H1 in first 10 words
+- [ ] Key Takeaways block has 5–7 bullets and class="key-takeaways"
+- [ ] Quick Facts block present only if 4+ numerical facts
+- [ ] ToC includes all H2 anchors (use single `#` not `##` for markdown)
+- [ ] `<time datetime="">` element present with ISO 8601 date
+- [ ] Intro paragraph is max 3 sentences
 
 ---
 
-## Rule 6a: Internal Links Point to Content, Not Hubs
-
-**Every internal link must point to a page with substantive content, NOT a hub or gateway page with only further links.**
-
-**Wrong:**
-> "For more information, see [our resources](/prompt-engineering)." — points to hub page with only navigation links
-
-**Right:**
-> "Learn how to compare AI model performance with [our model comparison guide](/articles/gpt-claude-gemini-comparison)." — points to actual article with detailed content
-
-**Rule of thumb:**
-- ✅ Link to articles, guides, how-tos, tutorials, case studies
-- ❌ Don't link to listing pages, hubs, or disambiguation pages
-- ✅ Use descriptive anchor text that tells the reader what content they'll find
-- ❌ Don't use generic anchors like "Learn more" or "See our guide"
-- ✅ Can link to pages outside /prompt-engineering (e.g., /blog/, /features/, /how-it-works/)
-- ❌ Don't link to nav/landing pages without substantive content
-
-**If there's no single article to link to:**
-- Remove the link entirely, OR
-- Mention the topic by name without a link (e.g., "See our guides on prompt optimization" instead of "[prompt optimization](/hub)")
-
----
-
-## Rule 7: Semantic Completeness
-
-Each section must answer its question completely without requiring the reader to have read previous sections.
-
-**Wrong** (assumes context):
-> "As mentioned above, this approach reduces errors significantly."
-
-**Right:**
-> "Dispatching to multiple AI models reduces hallucination errors because independent models rarely fabricate the same specific incorrect fact."
-
-FAQ entries in particular must be self-contained — AI systems extract individual Q&A pairs in isolation.
-
----
-
-## Rule 8: Meta Tags and Page Titles
-
-Every page needs:
-- `<title>`: Format: `[Specific Topic] | [Benefit]`
-  - Good: `"How Multi-Model AI Reduces Hallucinations | Complete Guide"`
-  - Bad: `"Blog Post | Our Site"`
-- `<meta name="description">`: 150–160 characters. Answer-first. Include the primary keyword.
-- `<link rel="canonical">`: Always set to the canonical URL.
-- Open Graph tags: `og:title`, `og:description`, `og:image`, `og:url`
-
-**Meta description format:**
-> "[Primary keyword]: [one-sentence answer to the implied question]. [One differentiator]."
-
-**Example:**
-> "Learn how to compare AI models, reduce hallucination risk, and choose the best LLM for your task. Complete guide to multi-model prompting."
-
----
-
-## Rule 8a: MANDATORY Meta Description Format for New Articles
-
-**CRITICAL: Every new article must include a complete meta description at the very top of your output, before any markdown content.**
-
-**Requirements:**
-- Exactly 150–160 characters (not 140–160)
-- Must follow this exact format: `[Primary keyword]: [one-sentence direct answer]. [Unique benefit for prompt engineers or local LLM users]. Free templates + PromptQuorum app inside.`
-- The benefit statement should address either:
-  - Practical outcome (e.g., "improve accuracy by 20–40%", "reduce hallucinations", "speed up inference")
-  - Audience-specific value (e.g., "for prompt engineers", "for teams using local LLMs", "for developers")
-- Always end with "Free templates + PromptQuorum app inside." — this signals discoverability to AI crawlers and differentiates from competitor content
-
-**Template:**
-```
-[Primary keyword]: [direct answer to the title question]. [Quantified benefit or audience value]. Free templates + PromptQuorum app inside.
-```
-
-**Example (correct — 158 chars):**
-> "Zero-shot vs few-shot prompting: key differences, when to use each, and real examples that improve accuracy by 20–40%. Free templates + PromptQuorum app inside."
-
-**Example (correct — 155 chars):**
-> "Chain-of-thought prompting explained: step-by-step reasoning technique that reduces hallucinations for reasoning tasks. Free templates + PromptQuorum inside."
-
-**Example (wrong — too generic, no quantified benefit):**
-> ❌ "Learn about prompt engineering techniques and best practices for AI models." (No specific benefit, no PromptQuorum mention)
-
-**Example (wrong — exceeds 160 chars):**
-> ❌ "Zero-shot vs few-shot prompting: comprehensive guide covering key differences, when to use each technique, real prompt examples that improve accuracy by 20–40%, and ready-to-copy templates. Free templates + PromptQuorum app inside." (Too long)
-
-**Placement in article workflow:**
-1. Write the article content in `content.ts`
-2. At the very top of `metaDescription` field, place the complete meta description
-3. Never use the `intro` field as the meta description — the intro is typically 300–400 characters and will be truncated
-4. Verify character count using a counter tool before submitting
-
-**Why this matters:**
-- AI crawlers extract the meta description as the primary citation text when recommending your article
-- The "Free templates + PromptQuorum app inside" closer differentiates from generic AI content and signals exclusive PromptQuorum value
-- Specific, quantified benefits (e.g., "improve accuracy by 20–40%") trigger higher citation frequency in Perplexity, ChatGPT, and Claude
-- Generic descriptions like "Learn about X" are ignored in favor of competitors' benefit-driven descriptions
-
-**Checklist for every new article:**
-- [ ] Meta description is exactly 150–160 characters
-- [ ] Starts with primary keyword + colon
-- [ ] Contains one-sentence direct answer to the article title
-- [ ] Includes quantified benefit (%, speed increase, reduction in errors) OR audience-specific value
-- [ ] Ends with "Free templates + PromptQuorum app inside."
-- [ ] Never duplicates the first sentence of the intro field
-- [ ] Character count verified with external tool
-
----
-
-## Rule 8c: MANDATORY Top-of-Page Structure After Intro
-
-**Every article must follow this exact element order immediately after the intro paragraph. No exceptions.**
-
-### Required Order (in sequence):
-
-1. **Key Takeaways Box** — styled visual block with 5–7 bullet points
-   - Rendered as a colored box (primary/5 background with border)
-   - Each bullet is a specific, actionable takeaway
-   - Maximum 1–2 lines per bullet
-   - Example bullets:
-     - "Zero-shot costs zero tokens for setup; few-shot requires 1–5 examples upfront"
-     - "Few-shot improves accuracy by 20–40% on reasoning tasks; zero-shot better for summarization"
-     - "Use few-shot when model hasn't seen your task pattern before"
-
-2. **Clickable Table of Contents (TOC)** — immediate after Key Takeaways
-   - Styled as a navigation box with list of linked section headings
-   - Every H2 in the article gets an entry
-   - Format: `[Section Title](#anchor)` as markdown links
-   - Example:
-     ```
-     ## Contents
-     - [What Is Zero-Shot Prompting?](#zero-shot)
-     - [What Is Few-Shot Prompting?](#few-shot)
-     - [Zero-Shot vs Few-Shot: Direct Comparison](#comparison)
-     - [When to Use Zero-Shot](#when-zero)
-     - [When to Use Few-Shot](#when-few)
-     ```
-
-3. **"Last Updated + Sources" Info Box** — immediately after TOC
-   - Displays: "Last updated: [Month Year]" with semantic `<time>` element
-   - Displays: "Sources: [N] peer-reviewed sources"
-   - Keep both pieces of info visible without JavaScript
-   - Example rendering:
-     ```
-     Last updated: March 2026 · Sources: 4 peer-reviewed papers · Read time: 8 min
-     ```
-
-### Why This Matters:
-
-- **Key Takeaways first:** AI crawlers extract the TL;DR immediately. Placing it first ensures summary extraction is accurate and complete.
-- **TOC second:** Enables semantic navigation for users and helps search engines understand article structure. AI systems weight TOC presence for E-E-A-T signals.
-- **Last Updated box third:** Recency signals matter for AI citations. Visible, machine-readable dates (using `<time>`) boost citation frequency.
-- **Sequence:** This specific order mimics how Perplexity, ChatGPT, and Claude structure summaries — match that UX to get cited more often.
-
-### Technical Implementation in content.ts:
-
-In the content data structure, this maps to:
-
-```typescript
-sections: {
-  // Auto-rendered: Key Takeaways box (isTldr: true)
-  keyTakeaways: {
-    isTldr: true,
-    items: [
-      "Bullet 1 with specific fact",
-      "Bullet 2 with specific fact",
-      // ... 4–6 items total
-    ]
-  },
-  
-  // Auto-rendered: Table of Contents (from toc array)
-  // The TOC is auto-generated from H2 section titles
-  
-  // Auto-rendered: Last Updated box
-  // Uses publishDate / dateModified field + sources count
-  
-  // First substantive H2 section starts here
-  definition: {
-    title: "What Is [Topic]?",
-    content: "..."
-  },
-  // ... rest of sections
-}
-```
-
-### Checklist for Every New Article:
-
-- [ ] Key Takeaways box is the first element after intro paragraph
-- [ ] Key Takeaways contains 5–7 specific, actionable bullets
-- [ ] Table of Contents is the second element after intro
-- [ ] TOC includes every H2 heading from the article
-- [ ] TOC links are clickable anchors (e.g., `#zero-shot`, `#few-shot`)
-- [ ] "Last Updated + Sources" box is the third element after intro
-- [ ] Last Updated uses semantic `<time datetime="YYYY-MM-DD">` element
-- [ ] Sources count is accurate and visible
-- [ ] All three elements render without JavaScript
-- [ ] No other elements (ads, CTAs, unrelated content) appear between intro and Key Takeaways
-
----
-
-## Rule 8d: Internal Linking with Anchor Text
-
-Link anchor text must describe the destination, not be generic.
-
-**Wrong:** "Click here to learn more" / "read this article" / "see our features"
-
-**Right:** "how multi-model comparison reduces AI hallucinations" / "compare GPT-4o vs Claude 4.6 Sonnet" / "set up and use Ollama locally"
-
-Use 2–4 internal links per page. Link to the most relevant deep page, not just the homepage.
-
----
-
-## Rule 9: Pillar-Cluster Internal Linking Architecture
-
-Every prompt engineering article must follow a three-direction linking pattern to signal a clear content hierarchy and topical clusters to AI systems.
-
-**Upward link (to the pillar page):**
-Every PE article must link once to the main pillar: `/prompt-engineering/what-is-prompt-engineering`
-- Use semantic anchor text: "see the full definition of prompt engineering" or "for the fundamentals of prompt engineering"
-- Place this link early (first or second section) or in the Key Takeaways
-
-**Sideways links (within the same theme/column):**
-Every PE article must link to at least 2 sibling articles in the same theme column:
-- Example: A Fundamentals article (e.g. "Context Windows Explained") links to 2+ other Fundamentals articles (e.g. "AI Hallucinations", "Tokens & Costs")
-- Anchor text example: "learn how few-shot prompting works with GPT-3 patterns"
-
-**Downward links (to articles in other theme columns):**
-Every PE article must link to at least 1 article from a different theme column:
-- Example: A Fundamentals article links to one Frameworks article and/or one Techniques article
-- Anchor text example: "the CO-STAR framework is a structured way to apply these principles"
-
-**Mandatory Related Reading block:**
-At the end of every PE article (before the FAQ section), add a "## Related Reading" section:
-```markdown
-## Related Reading
-- [What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — the pillar definition; foundational concepts all prompts require
-- [Chain-of-Thought Prompting: Make AI Show Its Reasoning](/prompt-engineering/chain-of-thought-prompting) — step-by-step reasoning for logic tasks
-- [CO-STAR Framework: Structured Prompting for Complex Tasks](/prompt-engineering/co-star-framework) — a structured template for complex prompts
-- [Building Quality Checks Into Your Prompts](/prompt-engineering/build-quality-checks) — validation patterns for any technique
-```
-
-**Rules for Related Reading (MANDATORY):**
-- **Minimum 4 internal links** as a bullet list (not exactly 3)
-- **Maximum 6 internal links**
-- **Anchor text must be the full article H1 title**, not shortened or slug-style labels
-  - ✅ Correct: `[Chain-of-Thought Prompting: Make AI Show Its Reasoning]`
-  - ❌ Wrong: `[Chain-of-Thought Prompting]` (incomplete; missing the descriptor)
-- Must include at least 1 link from a different theme column (to signal cross-cluster navigation)
-- Include at least 1 link to the pillar page (`what-is-prompt-engineering`)
-- Brief 1–3 sentence description after each link, preceded by `—`
-- Each link should explain why it's relevant to the current article
-
----
-
-## Rule 10: External Sources and Further Reading
-
-Every PE article must cite 2–3 high-authority external sources to ground claims in peer-reviewed research or official documentation. This increases credibility and citation frequency in AI overviews.
-
-**Authority tiers (use in order of preference):**
-1. **Peer-reviewed academic papers** — arXiv, ACL Anthology, NeurIPS, ICML proceedings
-2. **Official documentation** — OpenAI, Anthropic, Google DeepMind, Hugging Face official blogs
-3. **Authoritative news outlets** — Reuters, Bloomberg, The Guardian, Financial Times, Nikkei, Handelsblatt
-
-**Do NOT link to:**
-- Personal blogs, Medium posts by unknown authors, unvetted sources, paywalled content
-- Competing AI products or services (OpenAI blog, Anthropic blog, Google AI blog — link to their arXiv papers or neutral third-party coverage instead)
-- Any URL that resolves to another /prompt-engineering article on this site — external citations must be genuinely external
-
-**Format:**
-- Every source citation MUST be a hyperlinked URL, not plain text.
-- Use Markdown link format: `[Author, Year. "Title"](URL)` — description
-- Cite using author/org and year: `[Brown et al., 2020. "Language Models are Few-Shot Learners"](https://arxiv.org/abs/2005.14165)` or `[OpenAI, 2023. "..."]`
-- Verify every external URL resolves to the correct page before publishing — dead links lose all citation value
-- Keep the sources section short — 2–3 sources max, not a formal bibliography
-
-**Example (CORRECT — with working links):**
-```markdown
-### Sources
-- [Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — the paper that proved step-by-step reasoning improves output quality
-- [Schulhoff et al., 2024. "The Prompt Report: A Systematic Survey of Prompting Techniques"](https://arxiv.org/abs/2406.06608) — catalogues 58+ discrete prompting techniques
-- [OpenAI, 2024. "Techniques for Production LLM Applications"](https://platform.openai.com/docs/guides/prompt-engineering) — official guidance on prompt optimization
-```
-
-**What NOT to do (plain text, no links):**
-```markdown
-### Sources
-❌ Wei et al., 2022. "Chain-of-Thought Prompting..." (arXiv:2201.11903)
-❌ Brown et al., 2020 demonstrated...
-```
-
----
-
-## Rule 10a: All Internal Links Must Be Visible and Clickable
-
-Every internal link in PE article content must be rendered as clickable, underlined hyperlinks in the final published page. Links must not be:
-- Hidden or removed from display
-- Converted to plain text
-- Excluded from rendering
-- Disabled or non-functional
-
-**Technical requirement:** Links in Related Reading, Sources, and other article sections must appear as interactive `<a>` elements (or Next.js `<Link>` components) with proper href attributes. Tests must verify that all markdown-formatted links `[text](url)` render as visible hyperlinks.
-
-**Why this matters:** AI crawlers extract links to understand content relationships and cite referenced articles. Broken, missing, or hidden links prevent AI systems from discovering related content and reduce citation distribution.
-
-**Format:** Use standard Markdown link syntax in content:
-```markdown
-[Article Title](/prompt-engineering/slug) — brief description
-[External Source](https://example.com) — description
-```
-
-**Before publishing, verify:**
-- [ ] All internal links (to other PE articles) render as clickable hyperlinks
-- [ ] All external links (to sources, references) render as clickable hyperlinks
-- [ ] No links appear as plain text with brackets
-- [ ] Related Reading section lists are fully visible
-- [ ] Sources section links are fully visible
-
----
-
-## Rule 21: GEO + SEO Rules for New PromptQuorum Pages
-
-These rules apply to all new PromptQuorum pages (Prompt Engineering articles, blog posts, feature pages). They are designed to maximize both Generative Engine Optimization (GEO) and classic SEO.
-
-### 21.1 Answer-First Intros With Clear Outcome
-
-- The first paragraph must:
-  - Clearly state what the page is about in one sentence.
-  - Name the primary audience (for example "AI engineers", "solo developers", "enterprise teams").
-  - State what the reader will walk away with (for example "a checklist", "a framework", "ready-to-use prompt templates", "comparison tables").
-- Recommended intro pattern:
-  - "This guide explains [topic] for [audience] and gives you [output] you can copy into GPT-4o, Claude, Gemini, or local LLMs."
-
-### 21.2 Query-Mirroring in Titles, Headings, and Intros
-
-- Every new page must be written around 1–2 realistic user queries in natural language (for example "what is prompt optimization", "ai code review", "what is a context window", "prompt optimization techniques").
-- At least one target query must appear:
-  - In the `<title>` tag.
-  - In the H1 or first H2.
-  - Once in the first paragraph.
-- When a section targets a specific question, its first sentence must contain that question phrasing and immediately answer it.
-
-### 21.2a Keyword Targeting Strategy: Avoiding Weak Keyword Coverage
-
-**Problem:** Articles written for humans often omit explicit keyword targeting, causing search engines to be unsure what query the page should rank for. This dilutes ranking potential and lowers citation frequency in AI engines.
-
-**Solution:** Identify 3–5 target keyword phrases upfront. Write the article explicitly around those phrases using this checklist:
-
-**Keyword Identification (do this before writing):**
-- Primary keyword: The broadest, most-searched term (e.g., "prompt optimization")
-- 2–4 long-tail variants: More specific phrasing of the same concept (e.g., "how to optimize prompts", "prompt optimization techniques", "improve AI prompts")
-- 1 foundational keyword: Broader concept the article explains (e.g., "prompt engineering fundamentals")
-
-**Keyword Placement Checklist (mandatory):**
-
-| Element | Requirement | Example |
-|---------|-------------|---------|
-| Title tag | Includes primary keyword OR first long-tail variant | "How to Optimize Prompts: Prompt Optimization Techniques & Best Practices" ✅ NOT "Fundamentals of Prompt Optimization" (too generic) ❌ |
-| H1 / First H2 | Explicitly uses the primary or first long-tail keyword | "**What Is Prompt Optimization?**" OR "**Prompt Optimization Techniques: Advanced Methods**" ✅ |
-| Intro (first paragraph) | Mentions primary keyword once + at least one long-tail variant | Intro mentions: "Prompt optimization techniques", "how to optimize prompts", "improve AI prompts" ✅ |
-| Section headings | At least 1–2 section titles use long-tail keyword variants | Sections: "How to Measure Prompt Quality", "Prompt Optimization Techniques", "Optimizing Prompts for Local LLMs" ✅ |
-| FAQ questions | At least 2 FAQ questions use keyword variants | FAQ: "What is the most common prompt optimization mistake?", "Can prompt optimization reduce hallucinations?" ✅ |
-| Schema keywords array | All 3–5 target keywords appear in `keywords[]` | `["prompt optimization", "prompt optimization techniques", "how to optimize prompts", "improve AI prompts", "prompt engineering fundamentals"]` ✅ |
-
-**Keyword Dilution Trap (avoid):**
-
-| ❌ Diluted | ✅ Focused |
-|-----------|----------|
-| Keywords: `["prompt optimization", "prompt engineering", "LLM", "AI", "machine learning", "neural networks"]` — 6 unrelated concepts | Keywords: `["prompt optimization", "prompt optimization techniques", "how to optimize prompts", "improve AI prompts"]` — 4 related variants |
-| Title: "AI and Machine Learning: Everything About Prompts" | Title: "How to Optimize Prompts: Prompt Optimization Techniques" |
-| Intro: Mentions 8 different topics (context windows, fine-tuning, RAG, tokens, etc.) | Intro: Focuses on the 3-5 target keywords and their variations |
-
-**Why this matters:**
-- Google uses keyword presence to determine topical authority — if your page mentions "prompt optimization" once but then drifts into "fine-tuning", "RAG", and "model architecture", Google does not know what the page is *about*.
-- AI engines (ChatGPT, Claude, Perplexity) weight keyword density and placement when deciding which pages to cite for a user's query.
-- Weak keyword coverage = lower ranking + fewer AI citations + less traffic.
-
-**Checklist for keyword targeting compliance:**
-- [ ] Identified 3–5 target keyword phrases before writing
-- [ ] Primary keyword appears in title
-- [ ] At least one long-tail variant appears in first paragraph
-- [ ] Section headings include 1–2 keyword variants
-- [ ] FAQ questions use keyword variants
-- [ ] Schema `keywords` array lists all 3–5 target keywords
-- [ ] No keyword dilution — all keywords relate to the same topic
-- [ ] Keyword presence is explicit and natural (not forced repetition)
-
----
-
-### 21.3 SERP- and LLM-Facing Snippet Blocks
-
-- Each new article must include at least one snippet block designed to be quoted directly by search and LLMs.
-- Formats:
-  - "In one sentence: [single-sentence, self-contained definition/answer]."
-  - Or "In plain terms: [2–3 sentence explanation that works on its own]."
-- Place the snippet block near the top (intro or first H2).
-- The snippet must be understandable without reading any other part of the page.
-
-### 21.4 Long-Tail Question Sections
-
-- For broad topics (for example "prompt optimization", "context windows", "AI hallucinations", "AI code review", "what is prompt engineering"), each new page must include at least one dedicated section that answers a specific long-tail question in full.
-- Use the long-tail as the section heading where possible:
-  - Examples: "What is a context window?", "Prompt optimization techniques", "AI prompts for code review".
-- In that section:
-  - Answer the question directly in the first sentence.
-  - Keep the answer self-contained (no "as mentioned above").
-  - Use at most 2–3 short paragraphs and lists where helpful.
-
-### 21.5 Regional Notes (Russia, Germany/EU, US, China, Japan)
-
-- Where a topic touches regulation, model availability, or deployment choices, include a short "Regional note" that:
-  - Mentions Germany/EU where EU AI Act or data residency is relevant.
-  - Mentions Russia or CIS where local model use or access differs.
-  - Optionally mentions US, China, or Japan if they have distinct models (for example Mistral in EU, Qwen/DeepSeek in China) or deployment norms (on-prem vs cloud).
-- Keep these notes factual and concise (one or two sentences).
-
-### 21.6 FAQ Requirements for Broad Topics
-
-- Any new page that covers a broad concept must include an FAQ with **minimum 6 questions, maximum 8**.
-- The FAQ must cover at least 3 of these 5 types:
-  - Definitional ("What is X?").
-  - Comparative ("X vs Y", "Is X better than Y?").
-  - Quantitative ("How many…?", "How long…?", "How much does it cost?").
-  - Procedural ("How do I…?", "What steps…?").
-  - Disambiguation ("Is X the same as Y?", "Does X still apply when…?").
-- Each FAQ answer:
-  - Starts with a direct answer in the first sentence.
-  - Is 2–3 sentences maximum.
-  - Is fully self-contained.
-
-### 21.9 Comparison ("X vs Y") Handling
-
-- When a new page includes or targets "X vs Y" queries (for example "poe.com vs lmarena.ai", "CRAFT vs CO-STAR", "GPT-4o vs Claude 4.6 Sonnet"):
-  - Use the exact "X vs Y" phrase once near the top in a clear sentence.
-  - Add a small Markdown comparison table (2–5 rows, 3–4 columns) as per Rule 16.
-- The first sentence of the comparison section must state:
-  - What is being compared.
-  - The main axis of comparison (for example cost, latency, accuracy, use case fit).
-
-### 21.10 Classic SEO Items (Titles, Meta, Internal Links, Schema)
-
-For every new page, the content must be written so that these standard SEO elements can be set correctly:
-
-- Title tag:
-  - Answer-first.
-  - Includes at least one natural-language query phrase.
-  - Stays under ~60 characters where possible.
-- Meta description:
-  - 150–160 characters.
-  - States the main question and the main benefit of the article in one or two sentences.
-- Internal links:
-  - One "upward" link to the main "What Is Prompt Engineering?" pillar where relevant.
-  - At least two "sideways" links to sibling articles within the same theme.
-  - At least one "downward" link to a framework or technique page.
-  - Anchor text must describe the destination (no "click here").
-- Structured data and dates:
-  - Article/TechArticle schema with `keywords`, `about`, `mentions`, and `image`.
-  - FAQPage schema where FAQs exist.
-  - Visible "Last updated: [Month Year]" in a `<time datetime="YYYY-MM-DD">` element near the top.
-
-All other existing GEO rules (answer-first H2s, short paragraphs, entity density, numeric specificity, snippet blocks) continue to apply.
-- [ ] Build passes with no TypeScript errors in content structure
-
----
-
-## Rule 22: Featured Snippet Targeting — H2 Query-Driven Format & Answer Box Structure
-
-**Problem:** Articles written for humans often use descriptive H2 labels ("Key Terms", "Overview", "Core Concepts") instead of question-format headings. This is invisible to Google's "People Also Ask" extractor and AI citation systems, which match user queries to H2 questions.
-
-**Solution:** Make all H2s explicitly query-driven. Use these patterns:
-
-**Query-Format H2 Requirements:**
-
-1. **Every major section heading must be phrased as a question OR lead with a direct answer phrase.** Descriptive labels like "Key Definitions", "Core Concepts", "Overview" are not compliant with GEO rules for featured snippet targeting.
-
-| ❌ Descriptive (not compliant) | ✅ Query-driven (compliant) |
-|---|---|
-| Key Definitions | What Do These Terms Mean? |
-| Overview | What Is This? / How Does This Work? |
-| Core Concepts | What Are the Core Concepts? |
-| Tools and Resources | What Tools Should I Use? |
-| Key Takeaways | TL;DR (use `isTldr: true` instead) |
-
-2. **The first H2 after TL;DR must be "What Is [Topic]?"** — the definition section. This H2 must immediately follow the TL;DR block and contain a bold 1-sentence definition of the primary concept.
-
-**Correct example structure:**
-```
-## Key Takeaways (rendered as styled box, no H2 tag due to isTldr: true)
-
-## What Is Prompt Optimization?
-**[Direct 1-sentence definition in bold]**
-
-[Supporting paragraphs]
-```
-
-3. **TL;DR H2s are suppressed.** When `isTldr: true`, the section heading is NOT output as a crawlable `<h2>` — this is intentional (prevents duplicate H2/styled-box conflict). Writers must compensate: the section immediately after the TL;DR must carry the keyword signal.
-
-4. **Answer-box content structure:** For maximum featured snippet extraction, each H2 section should follow:
-   - H2: Question format ("What Is X?", "How Do You X?", "Why Does X Matter?")
-   - First sentence: `**[Direct answer to the H2 question, bold, 1 sentence]**`
-   - 2–4 supporting sentences
-   - Optional: table, list, code block, or screenshot
-
-**Checklist for H2 compliance:**
-- `[ ]` No descriptive labels as H2s ("Key Terms", "Overview", "Definitions")
-- `[ ]` Every H2 is phrased as a question or direct statement
-- `[ ]` First H2 after TL;DR is "What Is [Topic]?" with bold definition
-- `[ ]` No critical keyword-bearing sections use `isTldr: true`
-- `[ ]` FAQ questions use natural user language (not academic phrasing)
-
-**Why this matters:**
-- Google's "People Also Ask" extractor matches user search queries to H2 headings that are phrased as questions
-- AI systems (ChatGPT Search, Perplexity, Claude Browse) match query intent to question-format headings
-- Descriptive labels like "Key Terms" are visible to humans but invisible to query matchers
-- Weak H2 formatting = lower featured snippet extraction = fewer AI citations
-
----
-
-## Rule 22a: H2 Section Body Structure — Direct Answer First, Then Explanation
-
-**Every H2 section must follow a strict 3-part hierarchy.** AI crawlers and featured snippet extractors sample the first 2–3 sentences of each section. If those sentences are preamble or context, the section is skipped.
-
-**Required structure for every H2 section:**
-
-1. **H2 heading** — phrased as the exact user search query (see Rule 22)
-2. **Direct answer** — 2–3 sentences, definition style. No preamble. Answer the H2 question completely in this block alone.
-3. **Explanation** — supporting detail, context, trade-offs, caveats.
-4. **Examples / steps** — concrete commands, code blocks, numbered steps, or a table.
-
-**Wrong (explanation before answer):**
-> ## How Does Quantization Reduce VRAM?
-> Quantization is a technique used in machine learning that has been applied to large language models...
-
-**Right (answer first):**
-> ## How Does Quantization Reduce VRAM?
-> **Q4 quantization stores each model weight in 4 bits instead of 16 (FP16), reducing VRAM by 75% with under 1% quality loss.** A 7B model drops from ~14 GB (FP16) to ~3.5 GB (Q4). This is the single most impactful setting for running larger models on consumer hardware.
->
-> Quantization works by rounding floating-point weights to the nearest value in a smaller number space...
->
-> Example: `ollama run llama3.1:8b-instruct-q4_K_M`
-
-**Why:** AI systems extract featured snippets from the first 2–3 sentences of a section. A definition-style opening answers the query immediately, satisfies the "direct answer" extraction pattern used by Perplexity, ChatGPT Browse, and Google AI Overviews, and signals the section is authoritative.
-
-**Compliance checklist:**
-- `[ ]` First 2–3 sentences after H2 answer the question directly (no preamble)
-- `[ ]` Direct answer block can stand alone — readable without the rest of the section
-- `[ ]` Explanation follows the answer, never precedes it
-- `[ ]` At least one example, command, table, or step list per H2 section
-
----
-
-## Rule 11: Visible Last-Updated Date
+### Rule 11: Visible Last-Updated Date
 
 Every PE article must display a visible publication or last-modified date near the top of the page. AI crawlers increasingly weight recency when selecting sources for citations.
 
-**Format:** "Last updated: [Month Year]" (e.g. "Last updated: March 2026")
+**Format:** "Last updated: [Month Year]" (e.g. "Last updated: April 2026")
 
-**HTML requirement:** Render the date using a semantic `<time>` element with a machine-readable `datetime` attribute. This corroborates the schema `dateModified` and improves citation reliability:
-
+**HTML requirement:** Render using semantic `<time>` element with `datetime` attribute:
 ```html
-<time datetime="2026-03-15">Last updated: March 2026</time>
+<time datetime="2026-04-07">Last updated: April 2026</time>
 ```
 
-Plain text dates alone are insufficient — the `<time>` element with a valid ISO 8601 `datetime` attribute is required for schema validation.
+Plain text dates alone are insufficient — the `<time>` element with valid ISO 8601 `datetime` attribute is required for schema validation.
 
 **When to update the date:**
-- Update after substantive content changes: new stats, new FAQ entry, rewritten section, added examples
-- Do NOT update for cosmetic edits: punctuation fixes, minor rephrasing, typo corrections
-
-**Placement:** Display at the top of the article (below the title, above the intro) or in the Key Takeaways section.
-
-**In content.ts:** The `publishDate` field displays this. Use the format "Last updated: March 2026" once an article has been revised; initial publication can use "Published March 2026".
+- After substantive content changes (new stats, new FAQ entry, rewritten section, added examples)
+- NOT for minor typo fixes or formatting changes
+- Update `dateModified` in schema to match
 
 ---
 
-## Rule 12: LLM Snippet Blocks
+## PART 4: ADVANCED CONTENT OPTIMIZATION
 
-Each PE article must include 2–3 "snippet blocks" — short, standalone passages that an LLM can extract and quote verbatim. Snippet blocks must be clearly demarcated and self-contained.
+### Rule 31: Lead Answer Block (Canonical Definition)
 
-**Format A — One-sentence definition box:**
-```
-In one sentence: Prompt engineering is the practice of designing text inputs to get reliable, accurate outputs from large language models.
-```
+Every article needs a **lead answer block** immediately after the byline and before Key Takeaways. This is the 25–50 word definition that answers your H1 title completely.
 
-Or use "In plain terms:" for a slightly longer explanation:
+**Format:**
 ```
-In plain terms: A prompt is not just a question — it is a structured instruction that tells an AI model exactly what to produce, in what format, and under what constraints.
+[Topic] is [definition of what it is and primary use]. [One benefit or consequence].
 ```
 
-**Format B — Compare/contrast bullets (max 3 items, one line each):**
-```
-Prompt engineering vs. fine-tuning:
-- Prompt engineering changes the input; fine-tuning changes the model
-- Prompt engineering requires no training; fine-tuning requires a labelled dataset
-- Prompt engineering is reversible in seconds; fine-tuning takes hours and compute budget
-```
-
-**Format C — Compact definitive list:**
-```
-The seven building blocks of a prompt are: objective, context, instructions, examples, constraints, output format, and role.
-```
-- Each item gets exactly one line — no additional prose around it
-- Use a bold heading or H3 to signal this is a reference block
-
-**Placement within articles:**
-- Near the top (in or before the Key Takeaways box)
-- As the opening sentence of major sections
-- Within FAQ entries (each answer should be a self-contained snippet)
-- In the Related Reading section
-
-**Why:** Snippet blocks make your content easier for AI systems to quote, extract, and reuse. They also improve readability for human readers.
-
----
-
-## Rule 13: Global and Regional Perspective
-
-Where an article addresses regulation, market adoption, model availability, or technical best practices, include at least one non-US perspective. This ensures global coverage and signals to AI systems that your content is internationally aware.
-
-**Priority regions: EU, China, Japan**
-
-**When to include regional perspective:**
-
-- **Regulation:** Mention EU AI Act, China's Interim Measures for Generative AI (2023), or Japan's AI governance (METI)
-- **Market leaders:** EU — Mistral AI (France); China — Baidu ERNIE, Alibaba Qwen, DeepSeek; Japan — Preferred Networks, SoftBank AI
-- **Local model ecosystems:** "Chinese enterprises widely use Qwen 2.5 and DeepSeek V3 as open-source alternatives to GPT-series models"
-- **Language-specific prompting:** "Japanese and Chinese prompt engineering differs from English — kanji/kana token ratios affect context window efficiency"
-- **Infrastructure:** "Japanese enterprises often prefer on-premise model deployment under METI data residency guidelines"
-
-**Guideline:** A single factual sentence per region is sufficient. Do not add padding or forced perspectives. Only include regional details where they are genuinely relevant to the topic.
-
-**Examples:**
-- ✅ "Mistral AI, developed by a French team, is widely used in Europe due to strong regulatory alignment with the EU AI Act"
-- ✅ "Chinese models like Qwen 2.5 have faster token processing for CJK languages, making them preferable for multi-language prompts"
-- ✅ "Japanese enterprises must consider METI's data governance guidelines when storing model outputs"
-- ❌ "Prompt engineering is used around the world, including in Japan." (generic, adds no information)
-
----
-
-## Rule 14: Original Insights and Testing
-
-Every PE article should contain at least one piece of original data, finding, or insight not available from external sources. This helps establish the site as a primary source, not just an explainer of existing research.
-
-**Options for every article:**
-- Site-specific testing results (e.g., "We tested this prompt across GPT-4o, Claude 4.6 Sonnet, and Gemini 2.5 Pro — all three models agreed that chain-of-thought prompting outperformed zero-shot on this reasoning task")
-- Original insight about technique performance (based on running real tests across models)
-- A benchmark comparison unique to the site's testing methodology
-
-**Numeric data required:** Any testing finding must include at least one numeric figure — sample size, count, or percentage. "GPT-4o was best" is insufficient. "GPT-4o returned the most structured output in 22 of 30 tests" is compliant.
-
-**Optional callout label:** You may include a label like `**Testing results — 50 coding prompts across three models:**` to help indexers attribute the finding.
-
-**Placement:** Inside a dedicated section or as a callout box within body text. Label it clearly if included.
-
-**Example:**
-> Testing across 50 coding prompts on three models: GPT-4o produced the most readable code in 42 of 50 cases. Claude 4.6 Sonnet achieved highest code efficiency (smallest token count) in 38 of 50. Gemini 2.5 Pro handled complex multi-file projects best in 31 of 50.
-
-**Why:** Original testing results establish credibility and position the site as an authoritative source. This is higher-leverage than merely citing external research.
-
----
-
-## Rule 15: Structured Prompt Examples
-
-Every prompt example in any article must use explicit `[Bad Prompt]` / `[Good Prompt]` (or equivalent) labelling with Markdown blockquotes or code blocks.
-
-**Required format:**
-
-```
-**[Bad Prompt]**
-> "Write me something about marketing."
-
-**[Good Prompt]**
-> "You are a B2B SaaS copywriter. Write a 150-word LinkedIn post for a fintech startup announcing a new API integration. Tone: professional but conversational. Do not use the word 'revolutionary'."
-```
-
-**Rules:**
-- Always use blockquotes (`>`) or fenced code blocks (` ``` `) — never embed prompt text in regular paragraph prose
-- Always label explicitly: `[Bad Prompt]`, `[Good Prompt]`, `[Improved]`, `[With Context]`, etc.
-- Include at least one before/after pair per article where a technique is demonstrated
-- Labels must be bolded and placed on the line immediately above the blockquote
-
-**Why:** RAG systems extract structured content preferentially. Explicit labels make it unambiguous what a snippet is, reducing the risk of misquotation.
-
----
-
-## Rule 16: Markdown Tables for Data
-
-Use Markdown tables — not prose or bullet lists — for chronologies, feature comparisons, model comparisons, and technique comparisons.
-
-**Use a table when:**
-- 3+ items are compared on 2+ attributes
-- A timeline contains 3+ dated events
-- Listing frameworks/techniques with their use cases
-- Comparing two approaches (e.g. prompting vs fine-tuning)
-
-**Required table format:**
-```markdown
-| Framework | Best for | Example use case |
-|-----------|----------|-----------------|
-| CRAFT | Creative writing | Brand voice copy for a fintech startup |
-| CO-STAR | Complex instructions | Multi-step research summaries with citations |
-| SPECS | Factual analysis | Structured reports from raw data |
-```
-
-**Rules:**
-- Header row required always
-- Column names: Title case, 1–3 words each
-- Cell content: sentence fragment or short phrase — no full paragraphs
-- Add 1 framing sentence before the table in prose
-
-**Why:** RAG models prioritise table content for structured information extraction. Tables are machine-readable; prose is not.
-
----
-
-## Rule 17: Mandatory Callout Boxes (Visual Highlight Blocks)
-
-**Every article must use highlighted callout boxes for key content.** Callout boxes improve scannability for humans and make content more extractable for AI crawlers.
-
-### When to Use Callout Boxes (Required):
-
-1. **Every prompt template** — All `[Bad Prompt]` / `[Good Prompt]` pairs
-2. **Every important tip or insight** — Critical best practices, common mistakes, warnings
-3. **Every "In one sentence" / "In plain terms" snippet** — Definition blocks, snippet extracts
-4. **Copy-paste ready templates** — Any prompt users should use directly
-5. **Original testing results** — Findings, benchmarks, performance data
-
-### Callout Box Format:
-
-Use Markdown blockquote styling with bold headers:
-
-```markdown
-> **[Label]**  
-> Content goes here
-```
-
-**Examples:**
-
-```markdown
-> **[Good Prompt Template]**  
-> You are an expert data analyst. Analyze this dataset and extract the top 5 trends. Format your response as a numbered list with specific numbers and percentages.
-```
-
-```markdown
-> **[Pro Tip]**  
-> Few-shot prompting works best when your examples match your use case exactly. Generic examples hurt performance more than help.
-```
-
-```markdown
-> **[In one sentence]**  
-> Chain-of-thought prompting forces the model to show step-by-step reasoning, which reduces hallucinations on logic-heavy tasks.
-```
-
-```markdown
-> **[Important: Common Mistake]**  
-> Developers often reuse zero-shot prompts for new tasks. Each task requires either zero-shot refinement OR few-shot examples. Mixing them causes output instability.
-```
-
-```markdown
-> **[Testing Result]**  
-> Across 50 customer service prompts: few-shot prompting reduced response hallucinations by 35–42% compared to zero-shot.
-```
-
-### Minimum Callout Box Requirements by Article Length:
-
-- **≤500 words:** Minimum 2 callout boxes (prompt templates or key tips)
-- **501–1500 words:** Minimum 5 callout boxes (mix of templates, tips, and snippets)
-- **1500+ words (pillar articles):** Minimum 8 callout boxes
-- **Articles with 5+ prompt examples:** Every prompt example MUST be in a callout box
-
-### Callout Box Labels (Standard Ones):
-
-| Label | When to Use |
-|-------|------------|
-| `[Good Prompt Template]` | Copy-paste ready, correct prompt to use |
-| `[Bad Prompt]` / `[Bad Example]` | Anti-pattern to avoid |
-| `[Pro Tip]` | Actionable insight that improves results |
-| `[Common Mistake]` | Frequent error users make (with fix) |
-| `[Important]` | Critical information for success |
-| `[In one sentence]` | Concise definition for AI extraction |
-| `[In plain terms]` | Non-technical explanation |
-| `[Testing Result]` | Original data / benchmark finding |
-| `[Copy-Paste Ready]` | Template users can use directly |
-| `[Warning]` | Gotchas, limitations, or risks |
-| `[Advanced]` | For experienced practitioners only |
-
-### Why Callouts Matter:
-
-- **Human readability:** Callout boxes break up text walls and make key points scannable
-- **AI extraction:** LLM RAG systems prioritize highlighted blocks when building summaries
-- **Citation trigger:** Articles with 5+ callout boxes get cited 2–3× more often in Perplexity and ChatGPT summaries
-- **Clip-ability:** Users and educators share callout content on social media more frequently (higher reach)
-- **E-E-A-T signal:** Structured, highlighted expert tips signal expertise to Google and AI crawlers
-
-### Placement Checklist:
-
-- [ ] First callout box appears in Key Takeaways or first H2 section
-- [ ] At least 1 callout per 300–400 words of content
-- [ ] Callout boxes use consistent bold label format
-- [ ] Every prompt example is in a callout (none in regular prose)
-- [ ] Testing results and original insights are in callout boxes
-- [ ] Pro tips and warnings are visually highlighted
-- [ ] Total callout count matches minimum requirement for article length
-
----
-
-## Rule 18: No H1/H2 Duplication
-
-Every article's first H2 (or main section heading) must NOT repeat the H1 title verbatim or near-verbatim.
-
-**Wrong:**
-```
-# What Is Prompt Engineering?
-
-## What Is Prompt Engineering?   ← duplicate
-```
-
-**Right:**
-```
-# What Is Prompt Engineering?
-
-## The Direct Answer   ← or any non-duplicate heading
-```
-
-**Rules:**
-- The H1 is the article title (set in content.ts as `title`)
-- The first H2 section is its own heading — use a descriptive label that adds information, not repeats the title
-- Allowed: H2 that references a keyword from H1 but in a different grammatical form (e.g. H1: "What Is Prompt Engineering?" → H2: "Prompt Engineering: The Core Definition")
-- Never use the exact title as both H1 and the opening H2
-
-**Why:** AI crawlers treat H1 as the article entity name and H2 as section topics. Duplicating them produces redundant signals and can suppress the H2 from being extracted as a standalone answer. This impacts AI citation frequency.
-
----
-
-## Rule 18a: Question-Format H2s (Required for GEO + "People Also Ask")
-
-**Every major section heading (H2) must be phrased as a question OR lead with a direct answer phrase.** This is the primary trigger for Google "People Also Ask" boxes and AI engine section citations.
-
-**Why this matters:** Google extracts H2 questions + the first sentence as standalone answers. AI systems (Perplexity, ChatGPT Search, Grok) match user queries to the nearest question-format heading when building citations. A descriptive label like "Core Building Blocks" is invisible to this system. A question like "What Are the 5 Building Blocks Every Prompt Needs?" is directly matchable.
-
-**Question-format H2 examples:**
-
-| Section topic | Wrong ❌ | Right ✅ |
-|---|---|---|
-| Intro/definition | "What Is Prompt Engineering" | "What Is Prompt Engineering?" (must end with `?`) |
-| Defense steps | "How to Defend Against Injection" | "How Do You Defend Against Prompt Injection?" |
-| Comparison | "Direct vs Indirect Injection" | "What Is the Difference Between Direct and Indirect Prompt Injection?" |
-| Context | "Global Regulatory Landscape" | "Which Countries Regulate LLM Security in 2026?" |
-| Checklist | "Security Checklist" | "What Should Be on Every LLM Security Checklist?" |
-
-**Allowed non-question formats** (when the section is a reference block, not a conceptual answer):
-- TL;DR / Key Takeaways blocks
-- Related Reading sections
-- Sources sections
-- Security checklists (list format, not prose)
-- FAQ sections (already question-format by definition)
-
-**FAQ phrasing rule (sub-rule):** FAQ questions must mirror how users actually search — natural language, conversational. Check phrasing against Google Autocomplete or "People Also Ask" for the topic before finalizing.
-
-**Wrong FAQ question:** "Can prompt injection attacks be prevented?"  
-**Right FAQ question:** "Is it possible to fully prevent prompt injection?"
-
-**Rule:** Every new article section title set in `content.ts` as `sections[*].title` must be reviewed against this rule before publish. All 5 language versions of the title must also use question format.
-
----
-
-## Rule 19: FAQ Type Diversity
-
-Every FAQ section must include questions from at least 3 of the following 5 question types. Do not write all FAQs as basic definitional questions.
-
-**The 5 FAQ types:**
-
-1. **Definitional** — "What is X?" / "What does X mean?"
-   - Example: "What is chain-of-thought prompting?"
-
-2. **Comparative** — "X vs Y", "What's the difference between X and Y?"
-   - Example: "Is chain-of-thought prompting better than zero-shot prompting?"
-
-3. **Quantitative** — "How many...", "How long...", "How much does it cost?"
-   - Example: "How much does prompt engineering improve output quality?"
-
-4. **Procedural** — "How do I...", "What steps..."
-   - Example: "How do I apply chain-of-thought prompting in practice?"
-
-5. **Disambiguation** — "Is X the same as Y?", "Does X still apply when...?"
-   - Example: "Is prompt engineering still relevant with GPT-4o?"
-
-**Rules (MANDATORY):**
-- **Minimum: 6 FAQ entries per article**, covering at least 3 of the 5 types above
-- **Maximum: 8 FAQ entries** — beyond this, the FAQ becomes noise
-- Never write 6+ FAQs that are all definitional — vary the types
-- Comparative and disambiguation questions are especially high-value for AI citation (they answer follow-up questions AI systems are likely to be asked)
-- **Exception:** The `fundamentals-of-prompt-optimization` article requires minimum 19 FAQ entries (this is the only article with this requirement)
-
-**Why:** AI systems generate diverse follow-up questions. If your FAQ only covers basic definitions, it answers only one query type. Comparative and quantitative questions trigger direct citation in AI summaries far more often than "What is X?" questions.
-
----
-
-## Rule 25: Mandatory Common Mistakes Section (Frameworks, Techniques, Security)
-
-**Every article in Frameworks, Techniques, or Security categories must include a "Common Mistakes" section.**
-
-**Placement in article:** After core how-to content, before Related Reading.
-
-**H2 format (question-form, MANDATORY):**
-- `"What Are the Most Common [Topic] Mistakes?"`
-- OR `"What Should You Avoid When Using [Topic]?"`
-
-**Content format per mistake:**
-
-```markdown
-**Mistake: [Specific name of the mistake].**
-[One sentence describing what goes wrong.] → **Fix:** [One-sentence remedy.]
-```
+**Requirements:**
+- Wrap entire definition in `**bold**`
+- Max 50 words (count every word)
+- Answer the H1 in the first 10 words
+- Standalone (readable without the rest of the article)
+- Use present tense
 
 **Example:**
 
-```markdown
-## What Are the Most Common Few-Shot Prompting Mistakes?
+> **Prompt engineering is the practice of designing and refining instructions (prompts) given to language models to achieve specific outputs.** Effective prompt engineering reduces hallucinations, improves accuracy, and enables non-technical users to build AI applications without coding.
 
-**Mistake: Using generic examples that don't match your task.**
-The model learns from examples, so a generic few-shot example reduces accuracy. → **Fix:** Use 2–5 real examples from your actual use case domain.
-
-**Mistake: Putting examples in the wrong order.**
-LLMs are sensitive to example order, with later examples weighted more heavily. → **Fix:** Place your best examples last, ordered by similarity to the test input.
-```
-
-**Rules:**
-- **Minimum 3 mistakes, maximum 5** per section
-- Each mistake must be **specific and actionable** — not generic (❌ "using the wrong prompt", ✅ "using generic examples that don't match your task")
-- Each fix must be **one sentence the reader can apply immediately** (implementation-ready)
-- No mistake may repeat a point already made in the FAQ section
-- Mistakes should address real pain points, not theoretical edge cases
-
-**Why:** Common Mistakes sections answer follow-up questions at critical decision points. They increase article citation frequency by 25–40% because they address "what NOT to do" queries explicitly.
+**Why:** Featured snippet extractors pull the first 25–50 word definition from an article to use in AI summaries and search previews. A weak definition means your content gets skipped for competitors' definitions.
 
 ---
 
-## Page-Type Templates
+### Rule 27: Quick Facts Block (If 4+ Numerical Facts)
 
-### Landing Page Section
+**Triggered by:** Articles with 4 or more numerical facts (token counts, costs, latency, parameter counts, percentages, VRAM requirements).
 
-```
-## [Specific benefit headline — answer-first]
+**What counts as a "fact":**
+- Token count (e.g., "128k tokens", "4k output limit")
+- Pricing (e.g., "$5/1M tokens", "free tier")
+- Latency (e.g., "500ms average", "2 tokens/sec")
+- Parameter count (e.g., "7B parameters", "70B model")
+- VRAM requirement (e.g., "8GB VRAM", "16GB+")
+- Accuracy percentage (e.g., "92% on MMLU")
 
-[One-sentence direct answer to the section's implied question.]
+**Does NOT count:**
+- Adjectives ("fast", "efficient", "large")
+- Comparisons without numbers ("faster than competitors")
+- Relative statements ("most powerful")
 
-[2–3 sentences of explanation with specific facts.]
-
-[Bullet list if 3+ items are being enumerated]
-- Item with specific detail
-- Item with specific detail
-- Item with specific detail
-```
-
-### Blog Post Structure
-
-```
-# [Specific, keyword-rich H1 title]
-
-**[Lead Answer Block — 30–50 words, bold. Answers the H1 question directly.
-Primary keyword in first 10 words. No preamble. No hedging.]**
-
-## Key Takeaways
-- [Specific, actionable fact]
-- [Specific, actionable fact]
-- [Specific, actionable fact]
-- [Specific, actionable fact]
-- [Specific, actionable fact]
-(5–7 bullets total — placed BEFORE the first H2, not after content)
-
-## Contents
-- [What Is [Topic]?](#what-is-topic)
-- [First major point](#first-point)
-- [Second major point](#second-point)
-- [Common Mistakes](#common-mistakes)
-- [Related Reading](#related-reading)
-- [FAQ](#faq)
-- [Sources](#sources)
-
-[Last Updated: Month Year · Sources: N peer-reviewed papers]
-
-## What Is [Topic]?
-**[Bold one-sentence definition — the direct answer to the H2 question.]**
-
-[Supporting paragraphs]
-
-## [First major point as a question — "How Does X Work?"]
-**[Bold direct answer sentence.]**
-
-[Body content]
-
-## [Second major point — question format]
-**[Bold direct answer sentence.]**
-
-[Body content]
-
-## [Comparison table if applicable — include id="comparison-[a]-vs-[b]"]
-
-## [Regional context paragraph]
-
-## What Are the Most Common [Topic] Mistakes?
-(Frameworks/Techniques/Security articles only — Rule 25)
-
-## Related Reading
-- [Full H1 title of article 1](/prompt-engineering/slug) — why it's relevant
-- [Full H1 title of article 2](/prompt-engineering/slug) — why it's relevant
-- [Full H1 title of article 3](/prompt-engineering/slug) — why it's relevant
-- [Full H1 title of article 4](/prompt-engineering/slug) — why it's relevant
-(Minimum 4 links, full H1 title as anchor text)
-
-## Frequently Asked Questions
-
-### [Question as a user would ask it]
-[Direct answer in 2–3 sentences]
-
-### [Next question]
-[Direct answer]
-```
-
-### FAQ Entry
+**Format:** Styled box after Key Takeaways, before ToC
 
 ```
-Q: [Exact question a user would type into a search bar]
-A: [Direct answer in the first sentence. Supporting detail in sentence 2. Optional: where to find it / how to do it in sentence 3.]
+## Quick Facts
+
+- **Context window:** GPT-4o: 128k tokens (16× larger than GPT-4o mini)
+- **API costs:** $5/1M input tokens; $15/1M output tokens
+- **Latency:** 500–800ms average response time
+- **VRAM requirement:** 8GB for 7B models; 16GB for 13B
 ```
+
+**When to skip:** If article has fewer than 4 numeric facts, omit this section entirely.
 
 ---
 
-## Rule 26: Unseen Technical & On-Page Signals (SERP, GEO & AEO 2026)
+### Rule 13: Global and Regional Perspective
 
-Every page must optimise the invisible elements that Google, AI engines (ChatGPT, Perplexity, Grok, Gemini, Claude), and social platforms read before they ever see the visible content. These signals determine click-through rate, rich results, AI citations, and E-E-A-T.
+**When to use:** Articles discussing regulations, model availability, data residency, or deployment constraints. **When to skip:** Purely conceptual topics (no geographic variation).
 
-### 26.1 Meta Title & Meta Description
-
-**Title tag format:** `[Primary keyword] | [Clear benefit] | PromptQuorum`
-- Keep under 60 characters total
-- Include primary keyword at the start
-- Include clear benefit statement
-- Example: `"Zero-Shot vs Few-Shot Prompting | When to Use Each | PromptQuorum"`
-
-**Meta description (MANDATORY):** 150–160 characters maximum
-- Format: `"[Primary keyword]: [one-sentence direct answer]. [Unique benefit for prompt engineers or local LLM users]. Free templates + PromptQuorum app inside."`
-- Example: `"Zero-shot vs few-shot prompting explained: key differences, when to use each, and real examples that improve accuracy 20–40%. Free templates inside PromptQuorum."`
-- Must match the rule set in Rule 8a exactly
-- Never duplicate the first sentence of the intro field
-- Character count verified before publishing
-
-### 26.2 Canonical & Hreflang Tags
-
-- **Canonical tag:** Always include a `<link rel="canonical">` tag pointing to the English version (or the primary language version)
-- **Hreflang tags:** Auto-generated via layout.tsx — no manual action needed. Verify they appear in page source with all 5 languages + x-default
-
-### 26.3 Schema Markup (JSON-LD)
-
-Every page must include valid JSON-LD schema for:
-
-| Schema Type | When Required | Fields |
-|---|---|---|
-| Article or TechArticle | Every article | headline, author, datePublished, dateModified, keywords, about, mentions |
-| FAQPage | If FAQ section exists | mainEntity with 6+ questions and answers |
-| HowTo | If numbered process exists | steps with step name, instructions |
-| BreadcrumbList | Every page | itemListElement with name and URL |
-| Person | Author information | name, image, URL (Hans Kuepper) |
-| speakable | Every article | cssSelector targeting `.key-takeaways` and H2 sections |
-
-**Validation:** Use Google's Rich Results Test (search.google.com/test/rich-results) to verify before publishing. Zero errors allowed.
-
-### 26.4 Open Graph & Social Tags
-
-Every page must include:
-- `og:title` — matches meta title exactly
-- `og:description` — matches meta description exactly (150–160 chars)
-- `og:image` — auto-generated by Rule 23 (language-specific OG images)
-- `og:url` — absolute URL with canonical version
-- `twitter:card` — set to `summary_large_image`
-
-**Important:** og:title and og:description must match the meta title and meta description exactly. No separate social copy.
-
-### 26.5 Images & Visuals (4–6 minimum per article)
-
-Every article must include 4–6 custom images:
-
-1. **Infographic for every comparison table** — visual representation of table data
-2. **Flowchart for any process or framework** — decision trees, step-by-step processes
-3. **Before/after visuals for prompt examples** — showing bad prompt vs good prompt
-4. **PromptQuorum app screenshot** — when relevant to the topic (showing the feature in action)
-5. **Supporting visuals** — icons, timelines, maps, diagrams as needed
-
-**Rules:**
-- Every Markdown table must also exist as a separate custom image
-- File naming: `keyword-rich-name-2026.png` (lowercase, dashes, include year)
-- Alt text: Always descriptive and keyword-rich (e.g., "Comparison table of zero-shot vs few-shot prompting: accuracy, token usage, setup time")
-- Dimensions: Minimum 1200×630px for optimal social sharing
-- Format: PNG or WebP (no JPEG for infographics)
-
-### 26.6 Top-of-Page Structure (Exact Order)
-
-After the intro paragraph, the page must start with this exact order (see Rule 8c):
-
-1. **Key Takeaways box** — 5–7 bullets, styled, first visible element
-2. **Clickable Table of Contents** — anchor links to every H2 section
-3. **Last Updated + Sources box** — prominent placement right after TOC
-
-No other elements may appear between intro and Key Takeaways.
-
-### 26.7 Author Bio / E-E-A-T Block
-
-At the bottom of every article (before final FAQ if needed), add a visible author bio block:
-
-```html
-<div class="author-bio">
-  <img src="/images/authors/hans-kuepper.jpg" alt="Hans Kuepper, founder of PromptQuorum">
-  <p>Written by <strong>Hans Kuepper</strong>, founder of PromptQuorum. 8+ years building AI tools and prompt systems for enterprise and local LLM users.</p>
-  <a href="https://linkedin.com/in/hanskuepper" target="_blank">LinkedIn</a> | 
-  <a href="https://twitter.com/hanskuepper" target="_blank">Twitter</a>
-</div>
-```
-
-**Why:** AI systems use author credentials to calculate E-E-A-T. Visible author info increases citation frequency by 30–50%.
-
-### 26.8 Callout Boxes (see Rule 17)
-
-Use highlighted callout boxes (blockquotes with bold labels) for:
-- Every prompt template (`[Bad Prompt]` / `[Good Prompt]`)
-- Every important tip or CTA (`[Pro Tip]`, `[Common Mistake]`, `[Warning]`)
-- "In one sentence:" and "In plain terms:" blocks
-
-Minimum callout requirement: 5 per article if 500+ words (see Rule 17 for full requirements).
-
-### 26.9 Table-to-Image Rule
-
-Every comparison or data table must appear in two forms:
-
-1. **Markdown/HTML table** — for direct readability and SEO text
-2. **Custom image version** — for AI visual citation and social sharing
-
-**Why:** AI systems cite both table formats. A table that exists only in Markdown is missed by visual RAG systems. Dual-format ensures maximum citation coverage.
-
-**Implementation:**
-- Create table in Markdown first
-- Design matching infographic/image second
-- Embed image below the table with caption
-- Alt text on image must describe table structure and data
-
-### 26.10 Comparison Table Anchor IDs
-
-Every comparison table must have an HTML anchor ID in kebab-case format:
-
-```html
-<div id="comparison-[entity-a]-vs-[entity-b]">
-```
-
-**When required:** Any article whose H1 contains "vs", "or", or compares two named entities. Any intentional comparison table within any article.
+**Minimum for Global/Regional articles:**
+- 1–2 sentences per relevant region (EU, China, Japan, others)
+- Focus on differences that affect the reader (regulation, availability, cost, data residency)
 
 **Examples:**
-- `"Zero-Shot vs. Few-Shot Prompting"` → `id="comparison-zero-shot-vs-few-shot"`
-- `"GPT, Claude or Gemini: How to Pick the Right AI Model"` → `id="comparison-gpt-claude-gemini"`
 
-**Why:** Without an anchor ID, the table cannot rank as a standalone featured result for "[X] vs [Y]" queries and cannot be deep-linked from AI citations.
+**EU perspective (if applicable):**
+> "EU users must comply with GDPR data residency requirements — data cannot be processed in US-based APIs without Privacy Shield equivalence. Ollama and LM Studio enable local processing to meet GDPR Article 5 requirements."
+
+**China perspective (if applicable):**
+> "Model availability in mainland China is restricted; users must register with CAC (Cyberspace Administration of China) for public APIs. Alibaba Qwen and ByteDance models are available domestically without restrictions."
+
+**Japan perspective (if applicable):**
+> "Japan's APPI (Act on Protection of Personal Information) requires user consent for data processing. Many Japanese companies use on-premises deployment or local LLMs to avoid API data transfers."
 
 ---
 
-## Rule 27: Quick Facts Block (Required When 4+ Numerical Facts Present)
+### Rule 14: Original Insights and Testing
 
-Any article with **4 or more distinct numerical facts** (token counts, pricing, VRAM, latency, parameter counts, benchmark scores) must include a "Quick Facts" block.
+Every article should include at least **one original data point with a numeric figure** based on actual testing or measurement.
 
-**Placement:** After the Key Takeaways block, before the first H2.
+**What counts as "original":**
+- Your own testing across 2+ models (e.g., "We tested prompt injection defenses on 5 prompts across GPT-4o, Claude, and Gemini")
+- Your own benchmarks (e.g., "Measured latency: 640ms for GPT-4o mini vs. 520ms for Claude 3.5 Haiku")
+- Your own survey or observation (e.g., "Of 100 developers surveyed, 65% reported hallucination issues in production")
+
+**What does NOT count:**
+- Anecdotal observations ("seems like this works")
+- Vague claims ("testing shows improvement")
+- Sourced benchmarks from papers or vendor docs (cite these, don't claim as original)
+
+**Format:** Include in article body with clear sourcing:
+> "We tested 20 prompts across GPT-4o and Claude 4.6 Sonnet using the PromptQuorum benchmark suite. Chain-of-Thought prompting reduced factual errors by 35% on coding tasks but showed no improvement on summarization."
+
+**When to skip:** Glossary entries and conceptual articles with no testing angle.
+
+---
+
+### Rule 12: LLM Snippet Blocks (In One Sentence / In Plain Terms)
+
+These are short, standalone explanations placed strategically throughout the article to help AI text-to-speech and summary systems extract clear definitions.
+
+#### Rule 12a: "In One Sentence" Block (Technical Precision)
+
+**Use for:** Technical or precise definitions where accuracy matters
+
+```
+### In One Sentence
+Temperature controls the softmax distribution sharpness: lower T produces deterministic output; higher T increases randomness.
+```
+
+#### Rule 12b: "In Plain Terms" Block (Accessibility)
+
+**Use for:** Analogies or non-technical explanations for general audiences
+
+```
+### In Plain Terms
+Temperature is like the creativity dial on a model. Turn it down to 0 for consistent, predictable answers. Turn it up to 2 for wild, creative responses.
+```
+
+**Minimum per article:** At least 2 snippet blocks (1 per major section or 1 per 800 words)
+
+**When to use:** Always, for Intermediate articles. **When to skip:** Technical articles for researchers (pure code/math doesn't need "plain terms").
+
+---
+
+### Rule 15: Structured Prompt Examples
+
+Show both bad and good prompts with clear labels. This helps users understand the improvement.
 
 **Format:**
 
 ```markdown
-**Quick Facts**
-- [Entity]: [Exact number + unit] ([date if time-sensitive])
-- [Entity]: [Exact number + unit] — [one comparison reference]
+### Bad Prompt
+> "Write me a prompt about prompt engineering."
+
+### Good Prompt
+> "Write a 150-word article outline for someone new to prompt engineering. Include: what it is, why it matters, and 3 techniques. Assume zero AI experience."
+```
+
+**Why:** Comparison helps readers understand what makes a prompt effective. AI systems cite these examples as concrete use cases.
+
+**Minimum:** Every how-to or technique article needs at least 1 bad → good example pair.
+
+---
+
+### Rule 17: Mandatory Callout Boxes (Visual Highlights)
+
+Callout boxes break up text and highlight key concepts. They're required for articles > 500 words.
+
+| Article Length | Minimum Callout Boxes |
+|---|---|
+| ≤ 500 words | 0 (optional) |
+| 501–1,500 words | 5 minimum |
+| 1,501–3,000 words | 8 minimum |
+| 3,000+ words | 10+ minimum |
+
+**Types of callout boxes:**
+
+1. **⚠️ Warning** — Common mistakes or pitfalls
+2. **💡 Pro Tip** — Advanced technique or optimization
+3. **🔍 Did You Know?** — Interesting fact or trivia
+4. **📌 Key Point** — Critical concept to remember
+5. **🛠️ Best Practice** — Recommended approach
+
+**Format (Markdown):**
+```markdown
+> ⚠️ **Common Mistake:** Increasing temperature without also setting `top_p`. This can produce nonsensical output.
+>
+> **Fix:** Use temperature + top_p together for controlled randomness.
+```
+
+**Checklist:**
+- [ ] Article has minimum callout boxes per length
+- [ ] Each callout adds new information (not repetition)
+- [ ] Icons/emoji used consistently
+- [ ] No more than 1 callout per 150 words (avoid cluttering)
+
+---
+
+### Rule 16: Markdown Tables for Data
+
+Use tables for 3+ comparisons, dated events, or complex data. Tables are highly extractable by AI systems.
+
+**When to use:**
+- Comparing 3+ models or tools (columns: tool, cost, context window, VRAM)
+- Historical timeline of releases or versions
+- Parameter ranges for different settings (temperature, top_p, etc.)
+- Feature comparison matrix
+
+**Example (model comparison):**
+
+| Model | Parameter Count | Context Window | API Cost (1M tokens) | Best For |
+|---|---|---|---|---|
+| GPT-4o | 100B+ (estimated) | 128k tokens | $5 input / $15 output | Reasoning + long documents |
+| Claude 4.6 Sonnet | 100B+ (estimated) | 200k tokens | $3 input / $15 output | Code generation + long context |
+| Gemini 2.5 Pro | 100B+ (estimated) | 1M tokens | $1.25 input / $5 output | Longest context |
+| Mistral Large | 123B | 32k tokens | $2 input / $6 output | Cost-effective reasoning |
+
+---
+
+### Rule 20: Mathematical Notation
+
+When explaining math, parameter ranges, or formulas, use clear notation or LaTeX.
+
+**When to use:**
+- Temperature scaling: "Temperature (T) scales logits: `logits / T`"
+- Probability thresholds: "Top-p = 0.9 means cumulative probability ≥ 90%"
+- Parameter ranges: "Temperature ∈ [0.0, 2.0]; recommended [0.1, 1.0]"
+- Formulas: "Softmax(logits) = exp(logit_i) / Σ(exp(logit_j))"
+
+**Formats allowed:**
+1. Inline code: "`temperature` controls sharpness"
+2. LaTeX: "softmax with temperature = exp(logit/T) / Σ exp(logit_j/T)"
+3. Variable notation: "If T = 0, always pick highest token. If T = 1.0, use natural distribution."
+4. Parameter tables with ranges
+
+**Why:** AI systems extract mathematical notation for technical citations. Clear notation enables precise quotes in academic contexts.
+
+---
+
+## PART 5: COMPLIANCE & ENFORCEMENT
+
+### Rule 25: Mandatory Common Mistakes Section
+
+**Required for:** Framework articles, techniques, security content
+**Optional for:** Conceptual/historical/glossary content
+
+**Minimum:** 3–5 mistakes with fixes
+
+**Structure:**
+
+```markdown
+## Common Mistakes
+
+### Mistake 1: [Specific incorrect approach]
+**Problem:** [What goes wrong]
+**Fix:** [Correct approach with example]
+
+### Mistake 2: [Another common error]
+**Problem:** [Consequence]
+**Fix:** [Correct practice]
 ```
 
 **Example:**
+
 ```markdown
-**Quick Facts**
-- GPT-4o context: 128,000 tokens
-- Claude 4.6 Sonnet context: 200,000 tokens — 1.56× larger than GPT-4o
-- Gemini 2.5 Pro context: 2,000,000 tokens (April 2026)
-- LLaMA 3.1 7B local VRAM: 8GB minimum
-- GPT-4o pricing: $5 input / $15 output per 1M tokens (April 2026)
-```
+## Common Mistakes
 
-**Rules:**
-- Numbers only — no qualitative claims (❌ "very fast", ✅ "200ms latency")
-- Every fact must include a unit: tokens, GB, ms, $/1M tokens, %, seconds
-- Time-sensitive facts must include date in parentheses: `(April 2026)`
-- All numbers must satisfy Rule 2b (verified, never invented)
-- Comparison references are optional but recommended where they add context
-- Maximum 6 facts per block
+### Mistake 1: Using Temperature Without Top-P
+**Problem:** High temperature alone produces incoherent output because all low-probability tokens are still possible.
+**Fix:** Pair temperature with `top_p=0.9` to restrict sampling to high-probability tokens, maintaining quality.
+```
 
 ---
 
-## Rule 28: Inline Date References in Body Text
+### Rule 19: FAQ Type Diversity (Min 6–8 Questions)
 
-**Any article with time-sensitive facts must include at least 2 inline date references in prose** — separate from and in addition to the `<time>` element in the page header.
+**Required for:** PE articles, how-to guides, tools, frameworks
+**Optional for:** Glossary entries, brief guides
 
-**Articles that MUST include inline dates (trigger categories):**
-- Model specs (context windows, VRAM, parameter counts)
-- Pricing ($X/1M tokens, $X/month, etc.)
-- API limits (rate limits, batch sizes, max requests)
-- Regulatory deadlines (EU AI Act, China AIGC rules, NIST frameworks, etc.)
-- Benchmark results (MMLU scores, HumanEval, ARC performance)
-- Model comparisons ("X vs Y" articles)
-- Temperature and sampling parameter guidance (varies by model version)
+FAQ sections must cover **at least 3 of these 5 types:**
 
-**Required patterns (use at least 2 per article):**
-- `"As of [Month Year], [fact]..."`
-- `"[Model/regulation] released in [Month Year]..."`
-- `"(correct as of [Month Year])"`
-- `"Updated [Month Year]: [changed fact]..."`
+1. **Definitional:** "What is X?" — clarifies concepts
+2. **Comparative:** "When should I use X vs Y?" — addresses decision-making
+3. **Quantitative:** "How much does X cost / take / require?" — answers specific numbers
+4. **Procedural:** "How do I do X?" — step-by-step guidance
+5. **Disambiguation:** "Is X the same as Y?" — clarifies confusion
 
-**Examples (correct):**
-```markdown
-As of April 2026, GPT-4o pricing is $5 input / $15 output per 1M tokens.
+**Recommended mix for typical article:**
+- 2 definitional (concepts readers might misunderstand)
+- 1 comparative (when to use this vs. alternatives)
+- 1 quantitative (cost, time, resources)
+- 1 procedural (how to implement)
+- 1 disambiguation (common confusions)
 
-Claude 4.6 Sonnet was released in early 2024 and handles 200k token contexts.
+**Total:** 6–8 Q&A pairs per article
 
-The EU AI Act's GPAI rules took effect in August 2025.
-
-Temperature behavior differs by model (correct as of April 2026).
-
-Updated April 2026: Gemini 2.5 Pro now supports 2M token contexts, up from 1M previously.
-```
-
-**Why:** Articles with no dates in body text score lower on GEO freshness evaluation even when schema `dateModified` is current. AI crawlers reading body text (not just headers) treat inline dates as evidence of continuous fact-checking and currency checks. Without body-level dates, crawlers cannot verify that claims are still accurate as of today.
+**Checklist:**
+- [ ] FAQ section has 6–8 questions
+- [ ] At least 3 of the 5 types are covered
+- [ ] Each Q&A is 2–4 sentences (concise)
+- [ ] Questions phrased in natural user language (not academic)
+- [ ] FAQPage schema present in content.ts
 
 ---
 
-## Rule 29: Audience & Difficulty Level Signal
+### Rule 30.1: Top Byline with Credential Signal
 
-**Every article must display a one-line audience and difficulty signal placed directly below the intro paragraph, before the Key Takeaways box.**
+**Place immediately after intro paragraph, before Key Takeaways**
 
-**Rendering:** Display as small styled metadata, NOT as an H2 heading. Use semantic HTML or subtle styling (smaller font, muted color).
-
-**Required format:**
+**Format:**
 ```
-Level: [Beginner | Intermediate | Advanced | Technical]
-Audience: [Specific job role or use case, e.g., "Developers building with LLMs", "Marketers using ChatGPT", "AI researchers"]
+By [Author Name], [Credential/Role] at PromptQuorum | [Link to author profile or sameAs URL]
 ```
-
-**Level definitions:**
-
-| Level | Definition | Example articles |
-|-------|-----------|---|
-| Beginner | No prior AI knowledge required | "What Is Prompt Engineering?" |
-| Intermediate | Basic LLM familiarity assumed | "Few-Shot Prompting", "Temperature & Top-P" |
-| Advanced | Assumes working prompt engineering knowledge | "RAG Explained", "Prompt Injection Defense" |
-| Technical | Code, math notation, or model architecture knowledge required | "How LLMs Actually Work", "Token Economics" |
-
-**Audience specificity rule (MANDATORY):**
-- ❌ Wrong: "AI users", "Everyone", "People interested in AI"
-- ✅ Right: "Developers building with LLMs", "Marketers using ChatGPT", "Data scientists optimizing LLM pipelines", "Content teams producing AI-assisted copy"
-- ✅ Right: "Enterprise teams evaluating LLM vendors", "Prompt engineers at scale", "Researchers studying model behavior"
-
-The audience description must name a **specific job role or use case** — the reader should immediately know if this article is for them.
-
-**Schema requirement:** The Article schema must include `educationalLevel` and `audience` fields:
-```json
-{
-  "educationalLevel": "Intermediate",
-  "audience": { "@type": "Audience", "audienceType": "Developers building with LLMs, prompt engineers" }
-}
-```
-
-**Rules:**
-- Audience must be specific — names a job role, team type, or use case
-- This signal is separate from the audience mention in the intro paragraph (Rule 21.1) — both are required
-- Render without JavaScript (SSR visible)
-- Placement must be immediately after intro, before Key Takeaways box
-- Render without JavaScript (SSR visible)
-
----
-
-## Rule 30: Author Byline with Credential Signal
-
-**Every article byline must include a credential signal — not just name and organization.**
-
-**Required format:**
-```
-By [Name] · [Credential signal] · PromptQuorum
-```
-
-**Valid credential signals (use the most specific true claim):**
-- "Tested 1,200+ prompts across 25 models"
-- "Prompt engineering researcher, Frankfurt"
-- "Built PromptQuorum, a multi-model AI dispatch tool"
-
-**Schema requirement:** The `author` field must include `sameAs` with at least 2 social profile URLs:
-```json
-{
-  "author": {
-    "@type": "Person",
-    "name": "Hans Kuepper",
-    "url": "https://www.promptquorum.com/about/hans-kuepper",
-    "sameAs": ["https://linkedin.com/in/hanskuepper", "https://x.com/hanskuepper"]
-  }
-}
-```
-
-**Rules:**
-- Must be factually accurate — never invent credentials
-- Author name must link to author bio page
-- `sameAs` with minimum 2 social URLs is required in schema
-
-### Rule 30.1: Top Byline Credential Signal (Below H1)
-
-**In addition to the bottom author bio block, every article must display a credential signal in a top byline placed below the H1, inside or immediately after the intro paragraph.**
-
-This top byline targets AI crawler E-E-A-T signals (Expertise, Authoritativeness, Trustworthiness). The bottom bio block targets human readers.
-
-**Required format:**
-```
-By [Author Name](/about) · [Credential signal] · PromptQuorum
-```
-
-**Valid credential signals (use the most specific truthful claim):**
-- "Tested 1,200+ prompts across 25 models"
-- "Founder of PromptQuorum, multi-model AI dispatch tool"
-- "Prompt engineering researcher, Frankfurt"
-
-**Rules:**
-- Author name MUST link to `/about` page
-- Never invent credentials — use only verifiable claims
-- This top byline is **separate and required in addition to** the bottom HTML bio block (Rule 30)
-- Render at SSR (server-side) — visible in page source without JavaScript
-- Placement: immediately after intro paragraph, before Key Takeaways box
-
----
-
-## Rule 31: Lead Answer Block — Canonical Definition
-
-**The "Lead Answer Block" is the canonical term for three previously inconsistent labels in this guide:**
-- "Executive Summary" (Structure Template)
-- "bold opening sentence" (Pre-Publish Checklist)
-- "SERP- and LLM-Facing Snippet Block" (Rule 21.3)
-
-When this guide uses any of those deprecated terms, apply the Lead Answer Block definition:
-
-**Definition:** A **25–50 word, bold paragraph** placed immediately after the H1, before the Key Takeaways block. It answers the H1 question directly in 1–2 sentences using the primary keyword.
-
-**Rules:**
-- No preamble ("In this article..."). No hedging ("It depends...").
-- The reader must be able to read only this block and have a complete answer to the article title question.
-- Primary keyword must appear within the first 10 words.
-- Must be bold (`**bold text here**`)
 
 **Example:**
-> **Few-shot prompting sends 2–5 examples alongside the task to teach the model your desired format or style. Unlike zero-shot prompting, it adds context cost but reduces hallucinations by 25–40% on formatting and reasoning tasks.**
+```
+By Sarah Chen, Machine Learning Researcher at PromptQuorum | [LinkedIn](https://linkedin.com/in/sarahchen)
+```
+
+**Purpose:** 
+- Establishes author authority early (before reader dives into content)
+- Signals to AI crawlers that content is written by a credible person, not generated
+- Improves E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) score
+
+**Optional additions:**
+- Publication date badge: "Published April 7, 2026"
+- Reading time: "7 min read"
 
 ---
 
-## Rule 32: MANDATORY Pre-Writing Keyword Identification
+### Rule 29: Audience & Difficulty Level Signal
 
-**Before writing a single word of any new article, you must identify and declare your target keywords. This step is non-negotiable.**
-
-### Required Output at the Very Top of Every Article Draft:
-
-```
-TARGET KEYWORDS:
-- Primary: [keyword]
-- Long-tail 1: [keyword]
-- Long-tail 2: [keyword]
-- Long-tail 3: [keyword]  (optional, add up to 5 total)
+**Required fields in content.ts:**
+```ts
+educationalLevel: 'Intermediate',  // Beginner | Intermediate | Advanced | Technical
+audience: 'Developers building with LLMs'  // specific job role, not broad group
 ```
 
-### Rules:
-
-1. **Identify exactly 3–5 target keyword phrases** — no more, no fewer
-2. **Primary keyword must appear in:**
-   - Title tag (`<title>`)
-   - H1
-   - First paragraph (intro)
-   - At least one H2 heading
-3. **Long-tail variants (2–4):** More specific phrasings of the same concept
-   - They should all relate to the same topic (no keyword dilution — see Rule 21.2a)
-   - At least 1 long-tail must appear in the first paragraph
-
-### Example output:
-
+**Visible display:** Shows as a badge below article title
 ```
-TARGET KEYWORDS:
-- Primary: few-shot prompting
-- Long-tail 1: how to use few-shot prompting
-- Long-tail 2: few-shot vs zero-shot examples
-- Long-tail 3: few-shot prompting templates
+🎓 Intermediate | For: Developers building with LLMs
 ```
 
-### What counts as a valid primary keyword:
-- ✅ A natural-language query a user would type into Google or ChatGPT
-- ✅ 2–4 words, specific to the article topic
-- ❌ A vague category term ("prompt engineering", "AI prompting") without context
-- ❌ A product name alone ("GPT-4o") without a query intent
-
-### Why this is mandatory:
-- Starting without declared keywords causes keyword drift — the article covers the topic but doesn't rank for any specific query
-- Declaring keywords upfront forces every H2, FAQ question, and intro sentence to target the same query intent
-- The keywords declared here feed directly into the `keywords[]` array in the article's JSON-LD schema
+**Why:** 
+- Helps readers self-select appropriate difficulty level
+- Powers `LearningResource` schema for Google
+- Signals content specificity to AI crawlers
 
 ---
 
-## Rule 33: Mandatory Snippet Blocks & Schema Validation Sign-off
+### Rule 28: Inline Date References (Time-Sensitive Content)
 
-### Snippet Blocks (required in every article):
+**Required for:** Articles about model releases, pricing, availability, current events
 
-**Every article must include at minimum:**
-- One "In one sentence:" or "In plain terms:" block **in the intro section** (before or within the first H2)
-- One snippet block **in every major section** (H2) where a new concept is defined or introduced
-
-**Formats:**
+**Format:** "As of [Month Year]" placed in context:
 
 ```markdown
-> **In one sentence:** Few-shot prompting sends 2–5 examples alongside the task to reduce output variability by 25–40%.
+As of April 2026, GPT-4o supports 128k token context window, compared to GPT-4 Turbo's 128k limit.
 ```
 
-```markdown
-> **In plain terms:** Instead of just asking the AI a question, you show it 2–3 examples of what a good answer looks like first.
-```
+**Minimum:** At least 2 "As of" references per article discussing current information
 
-**Rules:**
-- Snippet blocks must be **self-contained** — the reader must understand the sentence without reading the rest of the article
-- Use `>` blockquote formatting so they are visually distinct
-- Never use "as mentioned above" or any cross-references inside a snippet block
-- Must be bold-labeled: `**In one sentence:**` or `**In plain terms:**`
-
-### Schema Validation Sign-off (required at the end of every article output):
-
-At the end of every article draft output, include this exact line:
-
-```
-Schema validated – ready for Google Rich Results Test and AI citation.
-```
-
-This signals that:
-- JSON-LD schema is present and complete for the article type
-- FAQPage, HowTo, BreadcrumbList schemas are included where applicable
-- `speakable` property targets `.key-takeaways` and H2 sections
-- The article is ready to be verified against the Google Rich Results Test
-
-**Why:** Adding this sign-off creates a forcing function to check schema completeness before publishing. Articles missing schema sign-off should not be published without a schema review.
+**Why:** Dates signal to AI crawlers which facts are current and which may be stale. Critical for citations.
 
 ---
 
-## Pre-Publish Checklist (UPDATED — 2026 SERP/GEO/AEO)
+### Master Pre-Publish Checklist
 
-Run this updated checklist before publishing any new page or blog post:
+Use this checklist before committing any new or edited article:
 
-### Technical & On-Page Signals (Rule 26 — New)
+#### Content & Structure
+- [ ] H1 title is 50–65 characters (SERP-safe)
+- [ ] First H2 after ToC is not a repetition of H1
+- [ ] Every H2 ends in "?" or is a direct answer phrase (not a label)
+- [ ] Every H2's first sentence is bold and answers the question
+- [ ] All paragraphs are max 3 sentences
+- [ ] Article includes 5–10 internal links (4–7 in body, 3–5 in Related Reading)
+- [ ] All internal links use descriptive anchor text
+- [ ] No more than 1 link per page to the same destination
 
-- [ ] Meta title written (under 60 chars): `[Primary keyword] | [Benefit] | PromptQuorum`
-- [ ] Meta description written (150–160 chars exact): `[Keyword]: [Answer]. [Benefit]. Free templates + PromptQuorum app inside.`
-- [ ] Canonical tag set to English/primary language version
-- [ ] Article or TechArticle JSON-LD schema included (headline, author, datePublished, dateModified, keywords, about, mentions)
-- [ ] FAQPage schema included (if FAQ exists) with 6+ Q&A pairs
-- [ ] HowTo schema included (if numbered process exists)
-- [ ] BreadcrumbList schema included with correct itemListElement
-- [ ] Person schema for author (Hans Kuepper) included
-- [ ] speakable property targeting `.key-takeaways` and H2 sections
-- [ ] Schema validated using Google Rich Results Test (zero errors)
-- [ ] OG tags present: og:title (matches meta title), og:description (matches meta description), og:image (auto-generated), og:url, twitter:card=summary_large_image
-- [ ] 4–6 custom images planned with keyword-rich file names (e.g., `keyword-rich-name-2026.png`)
-- [ ] Every data table also exists as a custom image (table-to-image rule)
-- [ ] Alt text written for all images (descriptive + keyword-rich)
-- [ ] Author bio block placed at bottom (visible, with image + credentials + links)
-
-### Page Structure (Rule 26.6)
-
-- [ ] Key Takeaways box is the first element after intro (no other elements before it)
-- [ ] Clickable Table of Contents present with anchor links to all H2s
-- [ ] Last Updated + Sources box placed immediately after TOC
-- [ ] All three elements render without JavaScript (SSR visible)
-
-### Callout Boxes (Rule 26.8)
-
-- [ ] Minimum 5 callout boxes if article is 500+ words
-- [ ] Every prompt template is in a `[Bad Prompt]` / `[Good Prompt]` callout
-- [ ] Every pro tip/warning/insight is in a highlighted callout box
-- [ ] All "In one sentence" / "In plain terms" blocks are callouts
-- [ ] Callout box labels are bolded and use standard format
-
-### Original Content Standards (Rules 1–25)
-
-Run this before publishing any new page or blog post:
-
-- [ ] First sentence of every section answers the section's question directly
-- [ ] No vague superlatives (powerful, seamless, best, leading, etc.)
-- [ ] All entity names spelled correctly and consistently
-- [ ] Paragraphs are ≤3 sentences
-- [ ] Lists used for enumerations of 3+ items
-- [ ] JSON-LD schema markup included and valid
-- [ ] Meta title is specific and keyword-rich (not generic)
-- [ ] Meta description is 150–160 chars, answer-first
-- [ ] Canonical URL set
-- [ ] Internal links use descriptive anchor text (not "click here")
-- [ ] FAQ entries are self-contained (no "as mentioned above")
-- [ ] No broken or placeholder links
-- [ ] No mention — direct or implied — that content was AI-generated or AI-assisted
-
-**Additional for Prompt Engineering articles:**
-- [ ] Article links up to `/prompt-engineering/what-is-prompt-engineering` (pillar link)
-- [ ] Article links sideways to 2+ sibling articles in same theme column
-- [ ] Article links down to 1+ article in a different theme column
-- [ ] "Related reading" block present at end of article (minimum 4 internal links, full H1 title as anchor text)
-- [ ] 2–3 external source links included (peer-reviewed papers or official docs preferred) — MUST be hyperlinked URLs in Markdown format, not plain text — no competitor product links (Rule 10)
-- [ ] Visible last-updated date present near top of article with `<time datetime="">` HTML element (Rule 11)
-- [ ] 2–3 LLM snippet blocks present (definition box, compare/contrast, or compact list)
-- [ ] Non-US perspective included where topic applies (EU/China/Japan)
-- [ ] Article contains at least 1 original insight or testing data point (Rule 14)
-- [ ] Prompt examples use [Bad Prompt]/[Good Prompt] labelling with blockquotes or code blocks (Rule 15)
-- [ ] Chronologies, comparisons, and feature lists use Markdown tables (Rule 16)
-- [ ] Article schema includes keywords, about, mentions, image, and speakable fields (Rule 5)
-- [ ] Instructional articles use TechArticle schema; context/history articles use Article (Rule 5)
-- [ ] List-structured articles include ItemList schema (Rule 5)
-- [ ] First H2 does not duplicate the H1 title verbatim or near-verbatim (Rule 18)
-- [ ] All major H2s are query-driven: no "Key Terms", "Overview", or "Key Definitions" headings without question format (Rule 18a + Rule 22)
-- [ ] "What Is [Topic]?" section is the first non-TL;DR H2 in the article (Rule 22)
-- [ ] Featured snippet structure: H2 question + first bold sentence = extractable answer for Google (Rule 22)
-- [ ] FAQ section covers at least 3 of 5 question types: definitional, comparative, quantitative, procedural, disambiguation (Rule 19)
-- [ ] Mathematical concepts use notation or LaTeX, not just prose (Rule 20)
-- [ ] Article mentions and defines 5–7 high-value entities (products, companies, technical terms) (Rule 4a/Rule 21)
-- [ ] All technical constraints use exact numbers: context window in tokens, VRAM in GB, costs in $/1M tokens, latency in ms (Rule 2a)
-- [ ] **OG image is auto-generated** — No manual work needed. System creates language-specific social sharing images (all 5 languages) with article title, intro, and site branding for each language variant (Rule 23)
-
----
-
-## Rule 23: Social Sharing Images (OG Images)
-
-**All articles automatically generate language-specific Open Graph images for social sharing. No writer action needed.**
-
-When an article is published:
-- A unique og:image is automatically created with the article title, intro, and site branding
-- The og:image is generated for all 5 languages (`en`, `de`, `fr`, `ja`, `zh`)
-- When a reader shares the article on Twitter, LinkedIn, Facebook, etc., their language variant shows the appropriate language version
-- Images are cached for 24 hours to ensure performance
-
-Writers do not need to create, upload, or manage images — the system handles this automatically. Just write the article content, and social sharing previews are generated in all languages.
-
----
-
-## Rule 24: Current LLM Model Versions
-
-**Always reference the latest released version of AI models. Update all model references across the website when new versions become available.**
-
-LLM model versions change frequently. Using outdated model names (e.g., Claude 4.6 Sonnet instead of Claude 4.6 Sonnet) reduces credibility and confuses readers about current capabilities.
-
-**Current model names as of March 2026:**
-
-| Vendor | Current Version | Do NOT Use |
-|--------|-----------------|-----------|
-| Anthropic | Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.5 Haiku | Claude 4.6 Sonnet, Claude 4.6 Opus, Claude 4.5 Haiku |
-| OpenAI | GPT-4o | GPT-4o, GPT-4o mini (in most contexts) |
-| Google | Gemini 2.5 Pro, Gemini 2.5 Flash | Gemini 1.0 (if used) |
-| Open source | LLaMA 3.1, Mistral Large | LLaMA 3.1, Mistral 7B (in most contexts) |
-
-**When to update model names across the site:**
-- When a major new model version is released (e.g., Claude 4.6 → Claude 5.0)
-- When comparing models: use the **latest version** of each vendor's model for fair comparison
-- In **pricing examples:** always reference the current model's pricing
-- In **capability claims:** always reference the current version so claims remain accurate
-
-**Exception — Historical or Educational Context:**
-If an article discusses **how prompt engineering has evolved**, it is acceptable to reference older models as examples of "older models" — but make the version explicitly clear: "Claude 4.6 Sonnet (released 2024, now superseded)" or "GPT-4o (predecessor to GPT-4o)."
-
-**Implementation:**
-- Use search/replace to update model names site-wide when versions change
-- Update in all languages (en, de, fr, ja, zh) simultaneously
-- Add a note to the article's `dateModified` field when model versions are updated
-- Update pricing tables to reflect current pricing
-
-**Why this matters for GEO:**
-AI readers cite articles that reflect the current state of the technology. Articles citing outdated models are less likely to be cited as authoritative sources. Keeping model versions current ensures the site is cited as a current, reliable reference.
-
----
-
-## Common Violations to Avoid
-
-| Violation | Example | Fix |
-|-----------|---------|-----|
-| Buried lede | "AI is complex. Here's how we help." | Lead with the specific benefit |
-| Vague claim | "Our tool is powerful" | "Send prompts to multiple models for comparison" |
-| Generic CTA | "Learn more" | "Compare GPT-4o vs Claude 4.6 Sonnet" |
-| Missing schema | Page with no JSON-LD | Add FAQPage, Article, or HowTo schema |
-| Inconsistent naming | "GPT4", "gpt-4", "GPT 4" | Always: "GPT-4o" (or the exact model name) |
-| Context-dependent | "As we explained above…" | Restate the relevant fact |
-| Paragraph walls | 6-sentence paragraph | Split at 3 sentences or convert to list |
-| AI disclosure | "This article was written by AI" / "Co-Authored-By: Claude" | Never disclose. All content publishes as site editorial. |
-| Missing pillar link | Fundamentals article with no link to "What Is Prompt Engineering?" | Add one upward semantic link to the pillar |
-| Generic related reading | "See also: our other articles" | Use named, descriptive links with brief descriptions |
-| Unsourced claims | "Chain-of-Thought improved accuracy by 40%" (no citation) | Add link to Wei et al. 2022 paper or official docs |
-| US-only framing | "All major AI providers" (lists only OpenAI, Anthropic, Google) | Add Mistral, Qwen, DeepSeek, or regional context |
-| Snippet-free prose | Long paragraph with no extractable definition or list | Add "In one sentence:", compare/contrast bullets, or compact list |
-| No original data | Article explains chain-of-thought with only academic citations | Add original testing comparing chain-of-thought vs zero-shot across 3 models |
-| Unstructured prompt examples | Prompt written inline in a paragraph without labels | Use `[Bad Prompt]` / `[Good Prompt]` blockquote format |
-| Prose instead of table | "CRAFT is good for creative writing, CO-STAR is better for complex tasks…" | Convert to a 3-column Markdown table with frameworks, use cases, and examples |
-| Competitor links | Citing "OpenAI's best practices" with a link to openai.com/blog | Link to academic papers or neutral third-party coverage instead |
-| Competitor link in citations | Citing "OpenAI's blog post" with a link to openai.com/blog | Link to the arXiv paper or neutral third-party coverage instead (Rule 10) |
-| Internal link as external citation | "Source: [Our guide to chain-of-thought prompting](/prompt-engineering/...)" | External citations must be genuinely external, not internal links (Rule 10) |
-| H1/H2 duplication | H1: "What Is Prompt Engineering?" → first H2: "What Is Prompt Engineering?" | Change H2 to a descriptive, non-duplicate heading (Rule 18) |
-| FAQ type uniformity | All 5 FAQs are "What is X?" definitional questions | Add at least 1 comparative and 1 disambiguation question (Rule 19) |
-| Plain text date only | "Last updated: March 2026" in plain paragraph text | Wrap in `<time datetime="2026-03-01">Last updated: March 2026</time>` (Rule 11) |
-| Vague mathematical language | "Temperature controls how creative the model is" | Use notation: "Temperature (T) scales softmax; T ∈ [0.0, 2.0]" (Rule 20) |
-| Prose-only math formulas | Long paragraph explaining softmax calculation | Use LaTeX or notation: "softmax(logit_i) = exp(logit_i) / Σ exp(logit_j)" (Rule 20) |
-| Low entity density | Article mentions only 2–3 entities (GPT-4o, Claude, temperature) | Expand to 5–7: add Ollama, OpenAI, Anthropic, Top-P, Nucleus Sampling (Rule 21/Rule 4a) |
-| Entity inconsistency | "GPT 4", "gpt-4o", "GPT-4" all used in same article | Always use exact: "GPT-4o" (Rule 4/Rule 21) |
-| Vague constraint language | "Large context window support" / "Significant memory requirements" | Specify: "128k token context" / "16GB VRAM for 13B models" (Rule 22/Rule 2a) |
-| Missing constraint details | "GPT-4o has better performance" (no metrics) | "GPT-4o with 128k context processes longer documents; 15× more tokens than GPT-4o mini's 4k" (Rule 22/Rule 2a) |
-| Unspecified technical limits | "Supports batch processing" | "Batch API accepts up to 100k requests per file; completes in 24 hours" (Rule 22/Rule 2a) |
-
----
-
-## Post-Writing Compliance Check (Mandatory)
-
-**CRITICAL: Before publishing any article, run a GEO compliance audit against these checklist items.**
-
-After you finish writing content, always:
-
-### 1. Verify Bold Openers (Rule 1)
-- [ ] Every H2 section starts with a **bold** direct answer or key fact
-- [ ] No preamble phrases like "In this section we'll look at..." or "When analyzing..."
-- [ ] Bold opener is a complete statement, not a fragment
-
-### 2. Search for Banned Words (Rule 3)
-Run grep/search for these words in your article:
-- [ ] "powerful" / "powerfully"
-- [ ] "seamless" / "seamlessly"
-- [ ] "leading" / "leadership"
-- [ ] "revolutionary" / "game-changing" / "transformative"
-- [ ] "cutting-edge" / "state-of-the-art"
-- [ ] "unique" (unless explained: "unique because...")
-- [ ] "comprehensive" / "complete" / "all-in-one"
-- [ ] "best-in-class" / "industry-leading"
-- [ ] "easy to use" / "simple" (unless explained why)
-
-**Replace with:** Specific, verifiable claims. Examples:
-- Instead of "powerful reasoning" → "excels at step-by-step problem-solving"
-- Instead of "seamless integration" → "native integration with Google Workspace"
-- Instead of "leading multimodal" → "strongest multimodal capabilities"
-
-### 3. Entity Density Check (Rule 4a)
+#### Metadata
+- [ ] Meta description is 140–160 characters
+- [ ] Meta description opens with specific fact/result (not "Learn how")
+- [ ] Meta description does NOT repeat the title
+- [ ] Meta description includes primary keyword
+- [ ] All entity names are exact and consistent (GPT-4o, Claude 4.6 Sonnet, etc.)
 - [ ] Article mentions 5–7 distinct high-value entities
-- [ ] Each entity is named consistently (use exact product names)
-- [ ] First mention includes a one-line description
-- [ ] All entity names match official product names exactly
 
-### 4. Section Self-Containment (Rule 6)
-- [ ] Search for "as mentioned above" or "as we discussed" — delete and restate the fact instead
-- [ ] Each section answers its question completely without requiring prior context
-- [ ] FAQ entries are especially critical: each Q&A pair must stand alone
+#### Top-of-Page Sequence
+- [ ] Lead Answer Block is bold, 25–50 words, answers H1 in first 10 words
+- [ ] Key Takeaways block has 5–7 bullets and class="key-takeaways"
+- [ ] Quick Facts block present (if 4+ numerical facts)
+- [ ] Table of Contents with all H2 anchors (single `#` not `##`)
+- [ ] Visible last-updated date with `<time datetime="">` element
 
-### 5. Schema & Metadata Check (Rule 5)
-- [ ] TechArticle schema present (datePublished, author, keywords, mentions)
-- [ ] If list-structured, ItemList supplementalSchema included
-- [ ] If has FAQs, FAQPage schema auto-generated from faq.faqs array
-- [ ] All mentions include valid "@type" (Thing, SoftwareApplication, etc.)
+#### Content Quality
+- [ ] Every numeric claim is factual, measured, or sourced (never invented)
+- [ ] No vague superlatives (powerful, seamless, revolutionary, etc.)
+- [ ] Article includes at least 1 original insight with numeric data
+- [ ] Regional context included (if applicable: EU, China, Japan)
+- [ ] At least 2 "In One Sentence" or "In Plain Terms" snippet blocks
+- [ ] Minimum callout boxes present (5 for 500–1500 words, 8 for 1500–3000 words)
+- [ ] Prompt examples include both "Bad Prompt" and "Good Prompt" labels (if applicable)
+- [ ] All data presented in tables (if 3+ comparisons)
 
-### How to Run the Audit
+#### FAQ & Common Mistakes
+- [ ] FAQ section has 6–8 questions covering 3+ of 5 types
+- [ ] Common Mistakes section present (min 3–5 for how-to/techniques)
+- [ ] FAQ questions phrased in natural user language
+- [ ] Each FAQ answer is 2–4 sentences
 
-**Automated checks (recommended):**
-```bash
-# Search for banned words
-grep -i "powerful\|seamless\|leading\|revolutionary\|cutting-edge" article.md
+#### Schema & Technical
+- [ ] Article schema includes: headline, description, author, datePublished, dateModified
+- [ ] FAQPage schema present with mainEntity array (if FAQ section exists)
+- [ ] HowTo schema present (if numbered steps exist)
+- [ ] All URLs are valid and live (no "Coming Soon" links)
+- [ ] No schema validation errors (test via Google Rich Results Test)
 
-# Check for context-dependent language
-grep -i "as mentioned\|as discussed\|above\|earlier" article.md
+#### Audience & Credentials
+- [ ] Audience level set (Beginner/Intermediate/Advanced/Technical)
+- [ ] Audience role is specific job title (not "AI users")
+- [ ] Top byline present with credential signal
+- [ ] Bottom author bio present with sameAs URL
 
-# Verify bold openers in each section
-grep "^## " article.md | while read line; do
-  section=$(echo $line | sed 's/## //')
-  echo "Checking: $section"
-done
-```
-
-**Manual review:**
-1. Read the first sentence of every H2 section — is it bold and complete?
-2. Search the full article for banned words
-3. Count distinct entity mentions (minimum 5)
-4. Check each FAQ entry works standalone (copy it to a fresh document, does it make sense?)
-
-**If audit fails:**
-- DO NOT publish
-- Fix the violations
-- Re-run the audit
-- Only publish after 100% compliance
-
----
-
-## MANDATORY PRE-PUBLISH CHECKLIST
-
-**This checklist must be 100% complete before any article or page is published. No exceptions.**
-
-### SCHEMA (check in `<head>` via page source)
-
-- [ ] Article or TechArticle JSON-LD present with: headline, author, datePublished, dateModified, keywords array (all named entities), about array (3-5 Things), isPartOf linking to hub URL, articleSection matching breadcrumb category
-- [ ] FAQPage JSON-LD with minimum 6 mainEntity items
-- [ ] HowTo JSON-LD if page contains any numbered step-by-step section
-- [ ] ItemList JSON-LD if page contains any comparison table or numbered list of 5+ items
-- [ ] speakable property targeting .key-takeaways and h1 + p
-- [ ] BreadcrumbList JSON-LD matching visible breadcrumb
-- [ ] TechArticle used (not Article) for: security, architecture, inference, code generation, API, schema, or evaluation content
-- [ ] DefinedTermSet used for any glossary or term-definition page
-
-### CONTENT STRUCTURE (visible in rendered HTML)
-
-- [ ] Lead Answer Block in first paragraph — bold, 30–50 words, direct answer to the page title question (see Rule 31)
-- [ ] Top byline with credential signal: "By [Author](/about) · [credential] · PromptQuorum" placed after Lead Answer Block, before Key Takeaways (see Rule 30.1)
-- [ ] Top byline author name links to `/about` page
-- [ ] Key Takeaways block (class="key-takeaways") with 5-7 bullets placed AFTER the intro paragraph, BEFORE the first H2
-- [ ] Jump navigation if page has 4+ sections
-- [ ] Every H2 section opens with a bolded one-sentence direct answer
-- [ ] At least one comparison table with proper HTML `<table>` tags
-- [ ] Related Reading section with minimum 4 internal links to correct slugs
-- [ ] Sources & Further Reading section with minimum 3 external citations linking to primary sources (arxiv, official docs, gov sites) — NEVER link to internal /prompt-engineering hub as an external citation
-- [ ] FAQ section visible in rendered HTML with minimum 6 Q&A pairs (NOT hidden behind JavaScript toggles — must be SSR rendered)
-- [ ] Global/Regional context paragraph covering EU, China/Asia, and Japan with named models (Mistral for EU, Qwen/DeepSeek for China, LLaMA via Ollama for Japan METI)
-- [ ] `<time datetime="YYYY-MM-DD">` wrapping the visible date element
-
-### INTERNAL LINKING
-
-- [ ] Every technical term used in the article that has a glossary entry links to /prompt-engineering/prompt-engineering-glossary#term-name on first use
-- [ ] Every technique mentioned that has a dedicated PE article links to that article on first use
-- [ ] Article links to at least 1 Fundamentals, 1 Techniques or Frameworks, and 1 Use Topics page
-
-### EXTERNAL CITATIONS
-
-- [ ] Minimum 3 primary source citations with author, year, title, and URL
-- [ ] No citation links pointing to /prompt-engineering (the hub) — these must be real external URLs
-- [ ] Preferred citation domains: arxiv.org, docs.anthropic.com, platform.openai.com, ai.google.dev, owasp.org, nist.gov, promptingguide.ai, learnprompting.org, nature.com, acm.org
-- [ ] If citing a named researcher or paper, include year: "Wei et al. (2022)"
-
-### FACTUAL ACCURACY
-
-- [ ] GPT-4o pricing: $5 input / $15 output per 1M tokens (NOT $15/$60)
-- [ ] Claude 4.6 Sonnet context window: 200,000 tokens
-- [ ] Gemini 2.5 Pro context window: 2,000,000 tokens (NOT 1M)
-- [ ] GPT-4o context window: 128,000 tokens
-- [ ] LLaMA 3.1 7B local RAM requirement: 8GB
-- [ ] All model names use exact spelling: GPT-4o (not GPT4o), Claude 4.6 Sonnet (not Claude 4), Gemini 2.5 Pro
-
-### TITLE AND META
-
-- [ ] H1 title is a question or contains a colon — never a raw slug
-- [ ] Hub card title matches H1 exactly (no slug-format rendering)
-- [ ] Breadcrumb category matches articleSection in schema: Fundamentals | Frameworks | Techniques | Use Cases | Security
-- [ ] Page categorized as "Techniques" not "Fundamentals" for: security, injection, jailbreak, RAG, output validation content
-- [ ] `metaDescription` field is set (150–160 chars, NOT the full `intro`). Do NOT omit this — the `intro` field is typically 300–400 chars and will be truncated by search engines. Required fields: primary keyword, year, key topics, differentiator (number of items, research citations, etc.). Never duplicate the first sentence of `intro`.
+#### Final Review
+- [ ] `npm run build` passes with 0 errors
+- [ ] Headings follow H2 > H3 > H4 hierarchy (no skips, single H1)
+- [ ] All markdown formatting valid (no unclosed backticks, mismatched quotes)
+- [ ] No hardcoded text (all strings use translations)
+- [ ] No broken internal links (test by visiting each)
+- [ ] At least 2 "As of [Month Year]" date references (if current content)
 
 ---
 
-## Content Quality Standards
+## FINAL VERDICT: Decision Framework
 
-### Depth Requirements
+### Use This Guide When...
 
-- Minimum 1,500 words (target 2,500+ for pillar pages)
-- At least 2 HTML comparison tables
-- At least 1 bad prompt / good prompt example pair
-- At least 1 code block for technical/security pages
-- Named researcher or paper for any technique with academic origin
-
-### Structure Template (use this order every time)
-
-1. **H1 title**
-2. **Lead Answer Block** (25–50 words, bold, answers H1 directly — see Rule 31)
-3. **Top byline with credential signal** (By [Author](/about) · [credential] · PromptQuorum — see Rule 30.1)
-4. **Key Takeaways block** (5–7 bullets — BEFORE the first H2, always)
-5. **Quick Facts block** (if article has 4+ numerical facts — see Rule 27)
-6. **Audience & Level signal** (Level: / Audience: — see Rule 29)
-7. **First H2: "What Is [Topic]?"** (bold one-sentence definition)
-8. **Core content sections** (each H2 opens with bold answer)
-9. **Comparison table** (if applicable, with anchor id — see Rule 26.10)
-10. **Global/Regional context section**
-11. **Common Mistakes section** (Frameworks/Techniques/Security articles — see Rule 25)
-12. **Related Reading** (min 4 links, full H1 titles as anchor text — see Rule 9)
-13. **FAQ section** (min 6, max 8 entries, SSR rendered — see Rule 19)
-14. **Sources & Further Reading** (min 3 external citations)
-15. **Author bio block** (with credential signal — see Rule 30)
-
-### AEO Answer Patterns (citation-triggering)
-
-These patterns get cited by Perplexity, ChatGPT, Claude, and Grok:
-- Open every section with the direct answer before explanation
-- Use "In one sentence:" pattern for key definitions
-- Use "In plain terms:" for analogies
-- Numbered lists for steps, bullet lists for features
-- Blockquotes for direct paper citations: > "quote" — Author et al., Year
-
----
-
-## Known Bugs — Never Repeat
-
-These bugs have been found and fixed. The guide must prevent recurrence:
-
-### 1. EXTERNAL CITATION LOOP
-Never use /prompt-engineering as the href for external citations. Always use the real external URL.
-
-**BAD:**  `[Brown et al. 2020](/prompt-engineering)`
-**GOOD:** `[Brown et al. 2020](https://arxiv.org/abs/2005.14165)`
-
-### 2. SLUG TITLES IN HUB
-Hub card titles must match H1 exactly.
-
-**BAD:**  "Context Windows Explained Why Ai Forgets"
-**GOOD:** "Context Windows Explained: Why AI Forgets"
-
-### 3. HIDDEN FAQ CONTENT
-FAQ answers must render in SSR HTML.
-
-**BAD:**  FAQ answers hidden behind JavaScript accordion toggles
-**GOOD:** Full Q&A text visible in page source without JS execution
-
-### 4. BLOG LISTING GAPS
-Every new blog post must be added to the blog listing array in the same PR as the article itself.
-
-Check: /blog must show same count as total blog articles in content.ts
-
-### 5. GMAIL FOOTER
-Footer contact must use hello@promptquorum.com
-
-**BAD:**  `promptquorum@gmail.com`
-**GOOD:** `hello@promptquorum.com`
-
-### 6. PRICING ERRORS
-GPT-4o is $5/$15 per 1M tokens (not $15/$60). Search every new article for "$60" and "$15 input" before publish.
-
-**BAD:**  "GPT-4o: $15 input / $60 output per million tokens"
-**GOOD:** "GPT-4o: $5 input / $15 output per 1M tokens"
-
-### 7. TIME ELEMENT
-Every article date must use:
-`<time datetime="2026-MM-DD">Last updated: Month Year</time>`
-
-Not plain text.
-
-### 8. BROKEN RELATED READING SLUGS
-Before publish, verify every Related Reading URL returns 200 (not 404).
-
-**BAD:**  `/prompt-engineering/how-to-reduce-ai-hallucinations` (404)
-**GOOD:** `/prompt-engineering/ai-hallucinations-why-ai-makes-things-up`
-
-**BAD:**  `/prompt-engineering/temperature-and-top-p` (404)
-**GOOD:** `/prompt-engineering/temperature-and-top-p-control-ai-creativity`
-
-**BAD:**  `/prompt-engineering/how-to-write-a-system-prompt` (404)
-**GOOD:** `/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference`
-
-### 9. CATEGORY MISMATCH
-Security/injection content must use articleSection: "Techniques" and breadcrumb "Techniques", not "Fundamentals".
-
-### 10. COMPARE PAGE NAV LABEL
-Use "Compare Tools" consistently everywhere. Not "Compare Models" on some pages.
-
----
-
-## Pages Still Needing Fixes
-
-Run these fixes as priority before May launch:
-
-### CRITICAL
-
-- `/blog`: Add ai-consensus-scoring, promptquorum-vs-askquorum, what-is-ai-consensus-scoring to blog listing array
-- `/prompt-engineering/how-prompt-engineering-evolved`: Fix all 8 external citation URLs (currently loop to /prompt-engineering)
-- `/prompt-engineering/frontier-models-prompt-library`: Add minimum 5 real prompts per category (currently 0)
-
-### HIGH
-
-- `/prompt-engineering/rag-explained`: Full rewrite to new format (currently 60/100 — old template, no FAQ, no Sources, no regional context)
-- `/prompt-engineering/persona-prompting`: Add FAQ, Key Takeaways, Sources sections (currently 72/100)
-- `/prompt-engineering/chain-of-thought-prompting`: Add Wei et al. 2022 citation, FAQ section, Related Reading
-- `/prompt-engineering/specs-framework`: Expand title tag, add ItemList schema on 5 components, fix APE description
-
-### MEDIUM
-
-- `/`: Fix FAQ SSR rendering — answers must be visible without JS
-- `/`: Update footer email promptquorum@gmail.com → hello@promptquorum.com
-- `/prompt-engineering`: Fix 4 hub card slug titles
-- `/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting`: Add ItemList schema on pricing table
-- All pages: Add `<time datetime="">` to date elements
-
----
-
-## GEO Score Targets
-
-**Current site score:** 95/100 GEO · 87/100 AEO · 88/100 SEO
-
-**Target by May 1 launch:** 97/100 GEO · 93/100 AEO · 90/100 SEO
-
-### Pages at or above 90/100 (maintain)
-
-- prompt-injection-and-security: 97/100
-- prompt-engineering-glossary: 94/100  
-- how-llms-actually-work: 94/100
-- seo-meets-ai: 92/100
-- how-prompt-engineering-evolved: 91/100
-- what-is-prompt-engineering: 91/100
-- ai-powered-research: 91/100
-- extract-and-summarise: 90/100
-
-### Pages below 90/100 (fix before May)
-
-- frontier-models-prompt-library: 63/100
-- specs-framework: 63/100
-- chain-of-thought-prompting: 65/100
-- rag-explained: 60/100
-- persona-prompting: 72/100
-
----
-
-## SECTION 6: MULTILINGUAL REQUIREMENTS
-
-PromptQuorum serves 5 languages: EN, DE, FR, JA, ZH.
-Every page must correctly signal language variants to 
-Google and AI crawlers.
-
-### HREFLANG — MANDATORY (already implemented in layout.tsx)
-
-The following 6 hreflang tags are auto-generated for every 
-page via layout.tsx. No per-article action required — 
-verify they render correctly when adding new page types 
-(new routes, new static pages outside the PE hub).
-
-**Required tags on every page:**
-```
-<link rel="alternate" hreflang="en" href="[full URL]?lang=en" />
-<link rel="alternate" hreflang="de" href="[full URL]?lang=de" />
-<link rel="alternate" hreflang="fr" href="[full URL]?lang=fr" />
-<link rel="alternate" hreflang="ja" href="[full URL]?lang=ja" />
-<link rel="alternate" hreflang="zh" href="[full URL]?lang=zh" />
-<link rel="alternate" hreflang="x-default" href="[full URL]" />
-```
-
-### CONTENT TRANSLATION STATUS
-
-- **EN:** ✅ All pages — source language, fully published
-- **DE:** 🔄 In progress — translate before App Store launch (Aug 2026)
-- **JA:** 🔄 In progress — priority: Local LLM section (Ollama audience)
-- **FR:** ⏳ Planned Q3 2026
-- **ZH:** ⏳ Planned Q3 2026
-
-### TRANSLATION CHECKLIST — when publishing a translated page
-
-- [ ] Body content is in the target language (not English)
-- [ ] H1 title is translated
-- [ ] Key Takeaways block is translated
-- [ ] FAQ section is translated
-- [ ] Meta description is translated and under 160 chars
-- [ ] `<html lang="XX">` attribute matches the language code
-- [ ] hreflang tags are already present via layout.tsx
-- [ ] Do NOT translate: model names (GPT-4o, Claude, LLaMA), benchmark names (MMLU, HumanEval), code blocks, organization names, URLs
-
-### TRANSLATION QUALITY CHECKLIST — Critical Issues to Avoid
-
-**Issue 1: Grammatical Errors in Body Text (E-E-A-T Risk)**
-- [ ] Zero untranslated English words in target language content (e.g., "Most Optimierung" is WRONG—should be "Meiste Optimierung" or "Optimierungen scheitern meistens")
-- [ ] Native speaker review for colloquialisms and grammar
-- [ ] All contractions and abbreviations localized (e.g., "GPT-4o's 128k context" → "GPT-4o's 128K Kontext" in German, not mixed)
-- [ ] Technical terms use correct gender and case (German: "die Ausgabeformat" ❌, "das Ausgabeformat" ✅)
-- [ ] No literal translations of idioms ("thinking outside the box" → use local idiom equivalent, not word-for-word)
-
-**Issue 2: FAQ Completeness (AEO Impact)**
-- [ ] Target language has ALL FAQs from English version (not a subset)
-- [ ] Count: English = 19 FAQs minimum for fundamentals-of-prompt-optimization
-- [ ] Each FAQ answer is self-contained and citable in isolation (no "see above" references)
-- [ ] FAQ titles are questions phrased naturally in the target language (German: "Was ist..." / "Wie funktioniert...")
-
-**Issue 3: Required Sections Must Translate** 
-- [ ] `definition` section (H2: "What Is [Topic]?") — always present
-- [ ] `faq` section with minimum 19 Q&A pairs
-- [ ] `sources` section with links (must include Brown et al. 2020 for prompt optimization articles)
-- [ ] `relatedReading` section with links
-- [ ] `Regulatory Compliance` section (critical for German DACH market — EU AI Act context)
-- [ ] `Languages & Regions` table (9-language region table with localized term for the topic)
-- [ ] `keyTerms` or `definitionBoxes` glossary section with anchor links
-
-**Issue 4: Table of Contents Completeness**
-- [ ] `toc` array exists with all section anchors
-- [ ] Count: 19 TOC entries minimum for fundamentals-of-prompt-optimization
-- [ ] All anchors are valid (generated from H2 titles using kebab-case)
-- [ ] No broken anchor links in body
-
-**Issue 5: Source Attribution (Credibility)**
-- [ ] Minimum 4 sources for academic/research articles
-- [ ] Brown et al. 2020 included for prompt optimization content (must have clickable link)
-- [ ] Sources formatted with title + URL: `[Title](URL) — description`
-- [ ] All URLs are absolute (https://...), not relative
-
-**Issue 6: No Mixed Language in Body Content**
-- [ ] Product/model names in English (GPT-4o, Claude, Gemini, Ollama, LM Studio) — correct
-- [ ] Benchmark names in English (MMLU, HumanEval) — correct
-- [ ] Technical acronyms preserved (RAG, CoT, JSON, API) — correct
-- [ ] But explanatory text fully translated (e.g., "RAG is Retrieval-Augmented Generation" → German: "RAG ist Retrieval-Augmented Generation" ✅, but surrounding prose must be 100% German)
-
-**Issue 7: Structural Element Translations**
-- [ ] H2 section titles are translated naturally (not word-for-word from English)
-- [ ] Code examples and JSON structures remain in English
-- [ ] Constraint examples translated (e.g., "Do not use jargon" → "Verwende keine Fachjargon" in German)
-- [ ] Quoted research findings translated, source citations preserved
-
-**Automated Validation Rules (add to pre-commit hook):**
-
-```bash
-# Before committing a translation, run this validation:
-Translation_Validation() {
-  local file="$1"
-  local lang="$2"
-  
-  # Rule 1: No English words in target language (except model names, URLs, code)
-  # Check for common English words in German/French/Japanese sections
-  grep -E "Most |the |and |or |is " "$file" | grep -v "GPT-4o|Claude|Gemini|https://|'@type'" && \
-    echo "❌ ERROR: Untranslated English detected. Check $lang section for mixed language."
-  
-  # Rule 2: FAQ count match English minimum
-  faq_count=$(grep -c '{ q: ' "$file" | tail -1)
-  [ "$faq_count" -lt 19 ] && echo "❌ ERROR: $lang has $faq_count FAQs. English minimum is 19."
-  
-  # Rule 3: Required sections exist
-  required_sections=("definition" "faq" "sources" "relatedReading")
-  for section in "${required_sections[@]}"; do
-    grep -q "$section:" "$file" || echo "❌ ERROR: Missing $section in $lang"
-  done
-  
-  # Rule 4: Sources include Brown et al. 2020
-  grep -q "Brown et al" "$file" || echo "⚠️  WARNING: Brown et al. 2020 missing from sources"
-  
-  # Rule 5: ToC array completeness
-  toc_count=$(grep -c '{ label:' "$file")
-  [ "$toc_count" -lt 19 ] && echo "⚠️  WARNING: $lang ToC has only $toc_count entries. English has 19."
-  
-  echo "✅ Validation complete for $lang"
-}
-```
-
----
-
-### KNOWN BUGS TO NEVER REPEAT
-
-- **NEVER** serve English body content under a non-English lang param — Google ignores hreflang if content language doesn't match declared language
-- **NEVER** use relative URLs in hreflang tags — must be full absolute URLs with `https://www.promptquorum.com`
-- **NEVER** let `?lang=` params stack (`?lang=en&lang=de`) — strip existing lang param before building alternates
-- **ALWAYS** include `x-default` pointing to base URL without lang param — this is the fallback for users in countries not covered by the 5 languages
-- **NEVER** translate product names, model names (GPT-4o, Claude 4.6 Sonnet, Gemini, Ollama, LM Studio, LLaMA), or benchmark names (MMLU, HumanEval, ARC)
-- **NEVER** have fewer FAQs in translation than in English — completeness is a quality signal to AI crawlers
-- **NEVER** omit the Regulatory Compliance section in German/DACH languages — EU AI Act context is critical for German enterprises
-- **NEVER** mix English and target language in body text (except for untranslatable proper nouns like model names)
-
-### NEW ROUTE CHECKLIST
-
-When adding a new route type (new static page, new section):
-- [ ] Confirm layout.tsx hreflang generation covers the new route
-- [ ] Test by viewing page source and searching for `hreflang`
-- [ ] Verify all 6 tags appear with correct absolute URLs
-
----
-
-## META COPY STYLE RULES BY CHANNEL
-
-**Three distinct meta fields, three distinct audiences, three distinct styles.** Every page must populate all three with channel-optimized content. Identical or interchangeable fields are a compliance failure.
-
----
-
-### RULE COPY-01: Google Search Meta Descriptions (150–160 characters)
-
-**Channel focus:** Searcher scanning results  
-**Opening:** Keyword-first for scan matching  
-**Tone:** Direct benefit statement  
-**Ending:** CTA or outcome signal  
-**Length:** 150–160 characters (tight constraint enables full display without truncation)
-
-**Format template:**
-```
-[KEYWORD] [BENEFIT/OUTCOME]. [SPECIFICITY or ACTION]. [CTA or signal]
-```
-
-**Examples:**
-
-| Page | Meta Description |
+| Situation | Do This |
 |---|---|
-| "How RAG Works" | "RAG retrieval-augmented generation improves LLM accuracy by fetching external documents before responding. Learn how chunking, embeddings, and ranking work together." (158 chars) |
-| "Fine-Tuning Guide" | "Fine-tuning customizes AI models on domain-specific data. Reduce hallucinations, enforce output format, achieve legal/medical specialization. Start with 100+ examples." (161 chars) |
-| "Model Comparison" | "Compare GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro: context windows, costs, latency, reasoning quality. Choose the best model for your task. Free comparison." (161 chars) |
+| Writing a new PE article | Follow ALL rules (1–33). Pre-publish checklist is your sign-off. |
+| Editing an existing article | Follow rules 1–14, 21, 26 (core SEO). Update Rule 11 (date) and Rule 8a (meta). Rules 15–25 are optional unless specifically broken. |
+| Writing a hub page (Local LLMs, Compare Models) | Follow rules 1–26 + Rule 5 (schema). Rules 15–25 are optional. |
+| Writing glossary entries | Follow rules 1, 3, 4–4b, 8a, 11 only. Skip rules 15–25. |
+| Writing blog posts or announcements | Follow rules 1–14, 21, 26 (metadata). Skip rules 15–19 (schema is optional). |
+| Rapid content or short-form | Apply at minimum: Rule 1 (answer first), Rule 3 (no vague language), Rule 8a (meta), Rule 26 (schema). |
 
-**Common mistakes:**
-- ❌ Repeating the H1 title word-for-word  
-- ❌ Omitting the keyword entirely (forces reader to infer relevance)  
-- ❌ Ending with generic phrases like "Learn more" without specificity  
-- ❌ Using vague benefits ("powerful", "efficient") instead of measurable outcomes  
+### Quick Audit (1 minute)
 
----
+Ask yourself:
+1. Does the intro paragraph answer the H1 title in 10 words? (Rule 31)
+2. Does every H2 end in "?" or start with bold answer? (Rules 1, 22)
+3. Are all numbers factual or sourced? (Rule 2b)
+4. Are internal links descriptive and valuable? (Rules 2c, 6a)
+5. Does the meta description make you click? (Rule 8a)
+6. Is the last-updated date visible and current? (Rule 11)
 
-### RULE COPY-02: Social og:description Fields (140–180 characters)
-
-**Channel focus:** Scroller in social feed deciding whether to click  
-**Opening:** Problem or hook statement (no keyword obsession)  
-**Tone:** Conversational, conversational, story-like  
-**Ending:** Curiosity or promise  
-**Length:** 140–180 characters (Pinterest, Facebook, LinkedIn previews tolerate variation)
-
-**Format template:**
-```
-[PROBLEM/HOOK]. [INSIGHT or PROMISE]. [CURIOSITY GAP]
-```
-
-**Examples:**
-
-| Page | og:description |
-|---|---|
-| "How RAG Works" | "Your AI keeps hallucinating answers that don't exist. RAG changes the game — it grounds responses in real documents. Here's why it works and how to implement it." (161 chars) |
-| "Fine-Tuning Guide" | "Off-the-shelf models give mediocre results for specialized domains. Fine-tuning teaches models your rules. Medical, legal, code generation — see what's possible." (162 chars) |
-| "Model Comparison" | "Picking the right AI model shouldn't require three spreadsheets. We benchmarked GPT-4o, Claude Sonnet, Gemini Pro on reasoning, speed, and cost. Here's what won." (162 chars) |
-
-**Common mistakes:**
-- ❌ Copying the meta description verbatim  
-- ❌ Keyword-stuffing (feels spammy in social context)  
-- ❌ Missing the human element (no problem, no story, just facts)  
-- ❌ Overly long sentences (40+ char sentences get truncated in previews)  
+If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix before publishing.
 
 ---
 
-### RULE COPY-03: Twitter / X Descriptions (100–130 characters)
+## Consolidated Cross-Reference Index
 
-**Channel focus:** Rapid scanner, short attention span  
-**Opening:** Immediate hook or punchline  
-**Tone:** Punchy, emoji-friendly, arrow-styled  
-**Ending:** Social proof or stat  
-**Length:** 100–130 characters (strict, matches tweet context)
-
-**Format template:**
-```
-[HOOK] → [BENEFIT]. [STAT or SOCIAL PROOF]
-```
-
-**Examples:**
-
-| Page | twitterDescription |
-|---|---|
-| "How RAG Works" | "RAG fixes AI hallucinations 🎯 Ground LLMs in real docs. Reduce false answers by 95%. Read the guide." (103 chars) |
-| "Fine-Tuning Guide" | "Fine-tune your AI → 10x better results. Medical, legal, code-specific models that actually know your domain. (129 chars) |
-| "Model Comparison" | "GPT-4o vs Claude vs Gemini → benchmarked. Speed vs. quality vs. cost. Pick your winner. 📊 (94 chars) |
-
-**Common mistakes:**
-- ❌ Twitter descriptions longer than 130 chars (get cut off mid-word)  
-- ❌ Missing hook or emoji (blends into feed noise)  
-- ❌ Repeating both previous descriptions (3 identical fields = zero differentiation)  
-- ❌ Using URLs in the description (Twitter handles URLs separately)  
+| Topic | Primary Rule | See Also |
+|---|---|---|
+| H2/H3 structure | Rules 1, 22, 22a | Rule 2e (hierarchy) |
+| Entity naming | Rules 4, 4a, 4b | Rule 21.3 (density scoring) |
+| Internal linking | Rules 2c, 6a, 8d, 9 | Rule 10a (visibility) |
+| Metadata | Rules 8a, 8d | Rule 2d (title), Rule 26 (technical) |
+| Schema markup | Rule 5 | Rule 26.3 (technical signals) |
+| Callout boxes | Rule 17 | Rule 26.8 (visual signals) |
+| Dates | Rule 11, 28 | Rule 8c (top-of-page sequence) |
+| Lead answer block | Rule 31 | Rules 1, 22a (answer-first) |
+| FAQ & common mistakes | Rules 19, 25 | Rule 5 (FAQPage schema) |
+| Numbers & facts | Rules 2a, 2b, 14, 27 | Rule 26.1 (specificity) |
 
 ---
 
-### RULE COPY-04: Zero Tolerance for Field Duplication
-
-**Rule:** metaDescription, ogDescription, and twitterDescription must be completely distinct. Word overlap < 20%.
-
-**Enforcement:**
-- Audit every page: if two fields share > 3 consecutive words, refactor one
-- Copyedit checklist: [ ] Meta ≠ og ≠ twitter (audit word overlap)
-- Violations: fail pre-flight review, require revision before merging
-
-**Why:** AI systems and search engines see all three fields. Identical content signals low effort. Distinct fields show intentional channel optimization.
-
----
-
-### RULE COPY-05: Quick Reference Table
-
-| Rule | Length | Opening | Tone | Ending | Example |
-|---|---|---|---|---|---|
-| **COPY-01 (Meta)** | 150–160 ch | Keyword-first | Direct benefit | CTA / outcome | "RAG improves LLM accuracy by fetching external documents. Learn how chunking and ranking work together." |
-| **COPY-02 (og:)** | 140–180 ch | Problem/hook | Conversational | Curiosity gap | "Your AI keeps hallucinating. RAG grounds responses in real docs. Here's why it works." |
-| **COPY-03 (Twitter)** | 100–130 ch | Hook + emoji | Punchy, →arrow | Stat / proof | "RAG fixes hallucinations 🎯 → 10x better. Reduce false answers by 95%." |
-
----
-
-### RULE COPY-06: Homepage Reference Implementation
-
-**Canonical example:** PromptQuorum homepage (`/`)
-
-```markdown
-metaDescription (156 chars):
-"PromptQuorum dispatches prompts to multiple AI models simultaneously. Get independent results from GPT-4o, Claude, Gemini in one API call. Reduce hallucination risk."
-
-ogDescription (172 chars):
-"Stop picking one AI model. PromptQuorum runs your prompts across GPT-4o, Claude, Gemini, Mistral simultaneously — get consensus answers, reduce hallucinations, compare quality instantly."
-
-twitterDescription (118 chars):
-"Prompt → multiple AI models → consensus answers 🤖 Compare GPT-4o, Claude, Gemini in one API call. Reduce hallucinations. Try free."
-```
-
-**Analysis:**
-- Meta: Keyword ("PromptQuorum") + benefit (simultaneous dispatch) + outcome (reduces hallucination) → scannable, benefit-driven
-- og: Problem ("stop picking one") + hook (consensus) + social proof (multiple models, instant comparison) → story-like, shareable
-- Twitter: Hook (→arrow) + emoji + stat (one API call) + CTA (try free) → scannable, social-native
-
-Apply this pattern to every page: **distinct opening, distinct tone, distinct benefit**.
-
----
-
-## MANDATORY WRITE-TIME REQUIREMENTS — Full Compliance Checklist
-
-**Do not output any article draft until every item below is satisfied. This checklist is the final gate before a PromptQuorum article is considered ready to publish.**
-
-### 1. Pre-Writing (before any content)
-
-- [ ] `TARGET KEYWORDS:` block written at the very top of the draft (Rule 32)
-- [ ] Primary keyword identified (will appear in title, H1, first paragraph, at least one H2)
-- [ ] 3–5 long-tail variants identified
-
-### 2. Top of Output (meta + images, before article body)
-
-- [ ] Meta description written (150–160 chars exact, Rule 8a format)
-- [ ] 4–6 images described with keyword-rich file names (`keyword-rich-name-2026.png`) and alt text (Rule 26.5)
-- [ ] Every data/comparison table described as a custom image (Rule 26.9)
-
-### 3. Article Body (in order)
-
-- [ ] Lead Answer Block first (25–50 words, bold, answers H1 directly — Rule 31)
-- [ ] Key Takeaways box immediately after intro (5–7 bullets — Rule 8c)
-- [ ] Clickable Table of Contents with anchor links to every H2 (Rule 8c)
-- [ ] Last Updated + Sources box right after TOC (Rule 8c)
-- [ ] Every major section has an "In one sentence:" or "In plain terms:" snippet block (Rule 33)
-- [ ] Callout boxes used for all prompt templates, tips, and CTAs (Rule 17 / Rule 26.8)
-- [ ] Common Mistakes section included (Frameworks/Techniques/Security articles — Rule 25)
-- [ ] Comparison table includes anchor ID `id="comparison-[a]-vs-[b]"` (Rule 26.10)
-- [ ] Minimum 2 inline date references in body text for time-sensitive facts (Rule 28)
-- [ ] Quick Facts block included if 4+ numerical facts (Rule 27)
-- [ ] Audience & Level signal present below intro, before Key Takeaways (Rule 29)
-- [ ] Audience description is specific — names a job role or use case, not generic "AI users" (Rule 29)
-
-### 4. Bottom of Article
-
-- [ ] Related Reading section (min 4 links, full H1 title as anchor text — Rule 9)
-- [ ] FAQ section (min 6, max 8 entries, SSR rendered — Rule 19)
-- [ ] Sources section (min 3 external citations, hyperlinked, no internal links — Rule 10)
-- [ ] Expanded author bio block (with credential signal — Rule 30)
-
-### 5. Schema & Technical
-
-- [ ] Full Article or TechArticle schema included (datePublished, author with sameAs, keywords, about, mentions, speakable)
-- [ ] FAQPage schema included (if FAQ section exists)
-- [ ] HowTo schema included (if numbered steps exist)
-- [ ] BreadcrumbList schema included
-- [ ] `educationalLevel` and `audience` fields in schema (Rule 29)
-- [ ] Draft ends with: `Schema validated – ready for Google Rich Results Test and AI citation.` (Rule 33)
-
-
----
-
-## === CONTENT GENERATION ENFORCEMENT PROTOCOL ===
-
-This protocol is MANDATORY for every new article written for
-promptquorum.com. It applies to all sections: /prompt-engineering/,
-/local-llms/, /blog/, and all future sections.
-
-The protocol has two phases. Both must complete before any article
-is considered done. Writing prose is PHASE 2. PHASE 1 must happen
-first. This order cannot be reversed.
-
----
-
-### PHASE 1 — SCAFFOLD BEFORE YOU WRITE
-
-Before writing a single sentence of article content, produce the
-following scaffold and show it explicitly. Do not begin prose until
-the scaffold is approved or confirmed complete.
-
-Fill every field. Empty fields are not permitted.
-
-```
-ARTICLE SCAFFOLD
-
-Page URL slug: [e.g. /local-llms/how-to-install-ollama]
-H1 title (max 60 chars without | PromptQuorum): []
-Page title with brand (max 60 chars total): [] | PromptQuorum
-Meta description (150–160 chars exactly): []
-OG description (140–180 chars, different from meta): []
-Twitter description (100–130 chars, different from both): []
-
-Lead Answer Block (25–50 words, will be bolded): []
-
-Key Takeaways (5–7 bullets, specific facts with numbers): []
-
-Level: [Beginner / Intermediate / Advanced / Technical]
-Audience: [specific, not "AI users"]
-
-H2 list (every H2 must end in ? or be direct answer phrase):
-1. []
-2. []
-3. []
-[continue]
-
-Comparison tables planned (list topics): []
-Table anchor IDs (id="comparison-x-vs-y" format): []
-
-Common Mistakes section title (question format): []
-Common Mistakes (3–5, each with fix): []
-
-FAQ questions (minimum 6, covering 3+ of the 5 types):
-Type coverage: [ ] Definitional [ ] Comparative [ ] Quantitative
-              [ ] Procedural [ ] Disambiguation
-1. [] (type: )
-2. [] (type: )
-3. [] (type: )
-4. [] (type: )
-5. [] (type: )
-6. [] (type: )
-
-External sources (minimum 3, with URLs):
-1. [] — []
-2. [] — []
-3. [] — []
-
-Regional context sentence (EU/Germany/Japan/China): []
-
-Inline date signals planned (minimum 2 "As of [Month Year]"): []
-
-HowTo schema needed? [yes/no] — section title if yes: []
-```
-
-Only after this scaffold is complete does article writing begin.
-The scaffold becomes the article's contract. Every item in the
-scaffold must appear in the final article.
-
----
-
-### PHASE 2 — POST-WRITE SELF-AUDIT
-
-Immediately after completing the article, before outputting the
-final version, run this audit and fix every ❌ before delivering.
-
-**H2 FORMAT CHECK** — Every H2 must end in ? or be a direct answer phrase. Flag any H2 that:
-- starts with "How to" (change to "How Do You")
-- is a label: Overview, Resources, Features, Summary, etc.
-- is a CTA: Join, Sign Up, Download, Get Started
-- is "Common Questions" or "Frequently Asked Questions"
-
-**FAQ COUNT CHECK** — Minimum 6 FAQ questions. Fewer = ❌
-
-**SOURCES SECTION CHECK** — Must have a Sources section with minimum 3 external citations with URLs. Missing = ❌
-
-**COMMON MISTAKES CHECK** — Required for Getting Started, Framework, Technique, and Comparison articles. Missing = ❌
-
-**META DESCRIPTION** — Must be 150–160 characters exactly. ❌ if outside this range.
-
-**LEAD ANSWER BLOCK** — First paragraph after intro must be wrapped in **bold**. ❌ if absent.
-
-**REGIONAL CONTEXT** — At least one EU/Japan/China reference where relevant. ❌ if absent and the topic is globally relevant.
-
-**INLINE DATE SIGNALS** — Minimum 2 "As of [Month Year]" phrases for time-sensitive facts. ❌ if fewer.
-
-**BANNED WORDS** — Scan for: powerful, seamless, leading, revolutionary, cutting-edge, comprehensive, best-in-class, game-changing, transformative. ❌ if any found.
-
-**TOC ANCHOR FORMAT** — All TOC links must use single `#anchor` not `##anchor`. ❌ if double-hash found.
-
-**THREE DESCRIPTION FIELDS DISTINCT** — metaDescription ≠ ogDescription ≠ twitterDescription. ❌ if any two are identical.
-
----
-
-### HARD STOPS — DO NOT DELIVER THE ARTICLE IF ANY OF THESE ARE TRUE
-
-These are non-negotiable blocking conditions:
-
-- ❌ STOP: Sources section is missing
-- ❌ STOP: FAQ has fewer than 6 questions
-- ❌ STOP: Any H2 uses "How to" instead of "How Do You"
-- ❌ STOP: Lead Answer Block is not bolded
-- ❌ STOP: Meta description is not 150–160 characters
-- ❌ STOP: ogDescription is identical to metaDescription
-- ❌ STOP: TOC links use ## instead of #
-- ❌ STOP: Common Mistakes section is absent on Techniques/Frameworks/Getting Started articles
-
-When a hard stop condition is found, fix it and re-audit before delivering. Do not note the issue and deliver anyway.
-
----
-
-### KNOWN TEMPLATE BUG — ALWAYS FIX
-
-Every article in every section currently has TOC links formatted as `(##anchor-name)` with double hash. The correct format is `(#anchor-name)` with a single hash.
-
-When writing or editing any article, scan all TOC links and correct any `##` to `#` before delivery. This applies to all sections including /prompt-engineering/ and /local-llms/.
-
-This is a known template defect, not a per-article decision.
-
----
-
-### SECTION-SPECIFIC COMMON MISTAKES REQUIREMENTS
-
-- **Getting Started articles** (/local-llms/, /prompt-engineering/ fundamentals): Common Mistakes section required, minimum 3 entries.
-- **Framework articles**: Common Mistakes section required, minimum 3 entries.
-- **Technique articles**: Common Mistakes section required, minimum 3 entries.
-- **Comparison articles** (containing "vs" in URL or H1): Common Mistakes section required. Also: main comparison table must have anchor ID in format `id="comparison-x-vs-y"`.
-- **Glossary and reference pages**: Common Mistakes not required.
-- **Blog posts**: Common Mistakes optional but recommended.
-
-=== END CONTENT GENERATION ENFORCEMENT PROTOCOL ===
-
----
-
-## === APPLYING THE ENFORCEMENT PROTOCOL TO EXISTING ARTICLES ===
-
-When editing or auditing an article that already exists (rather than writing from scratch), use this adapted workflow:
-
-### Phase 1 — Gap Audit (replaces Scaffold)
-
-Before changing any prose, run the Post-Write Audit checklist against the existing article. Identify every ❌. Produce a gap list:
-
-```
-EXISTING ARTICLE GAP AUDIT: [article title]
-
-H2 format issues: []
-FAQ count: [] (minimum 6 required)
-Sources section: [present / missing]
-Common Mistakes section: [present / missing]
-Meta description length: [] chars (need 150–160)
-Lead Answer Block bolded: [yes / no]
-Regional context: [present / missing]
-Inline date signals: [] found (need ≥2)
-Banned words: []
-TOC anchor format (## bug): [present / clean]
-Three description fields distinct: [yes / no]
-```
-
-### Phase 2 — Targeted Fixes Only
-
-Apply only the fixes needed to clear the ❌ items. Do not rewrite sections that are already compliant. Do not add new sections not listed in the gap audit. The rule is: fix what is broken, leave what is working.
-
-For TOC anchor bugs (## → #): fix all instances in the article in one pass.
-
-For missing Sources: add a Sources section at the bottom with minimum 3 external citations. Do not invent URLs — use known authoritative sources relevant to the article topic.
-
-For missing Common Mistakes: add a section with minimum 3 concrete mistakes and their fixes. Base the mistakes on the most common errors for that topic — do not add generic advice.
-
-For insufficient FAQ: add questions to reach 6 minimum. Cover any FAQ types (Definitional, Comparative, Quantitative, Procedural, Disambiguation) not already present.
-
-### Do Not Do When Editing Existing Articles
-
-- Do not rewrite compliant sections to add variety or freshness
-- Do not change heading text unless it violates H-01 to H-07 rules
-- Do not add sections not called for by the gap audit
-- Do not alter metaDescription if it is already 150–160 chars and answer-first
-- Do not change publishDate — only update dateModified
-
----
-
-## SECTION 7: LOCAL LLMs SECTION REQUIREMENTS
-
-All articles in the `/local-llms/` section must follow these additional requirements on top of the base GEO rules above.
-
-### 7.1 Article Structure
-
-Every Local LLMs article must include these sections inside `sections: {}`:
-
-1. **tldr** (isTldr: true) — 4–6 bullet points summarizing the article's key facts
-2. **Content sections** — 3–8 topic-specific sections with `title` and `content` properties
-3. **faqSection** — Minimum 4 FAQs (faqs array with q/a pairs). The page auto-generates FAQPage schema from these.
-4. **commonMistakes** — 3–5 concrete mistakes with specific fixes (not generic advice)
-5. **relatedReading** — 3–5 internal links to other `/local-llms/` articles
-6. **sources** — 3+ external sources (documentation links, GitHub repos, benchmark data)
-7. **regionalContext** — 3 paragraphs covering EU/GDPR, Japan/METI, and US/HIPAA-SOX-NIST implications
-
-### 7.2 Schema Requirements
-
-- **faqSchema**: Auto-generated by the page from `faqSection.faqs` entries. No manual definition needed unless you want to override.
-- **howToSchema**: Auto-generated from the first `numberedItems` section. Add `numberedItems` to step-by-step guides.
-- **itemListSchema**: MUST be defined explicitly as a top-level property of the `en:` block (not inside sections). Include 4–8 ListItem entries derived from the tldr items.
-- **TechArticle schema**: Optional. The page generates a generic Article schema by default.
-
-### 7.3 Entity Naming (extends Rule 4b)
-
-Local LLMs articles must follow Rule 4b entity standards. On every article:
-- Name at least 3 specific models with parameter counts (e.g., "Llama 3.2 3B", "Mistral 7B v0.3")
-- Name at least 1 inference tool (Ollama, LM Studio, llama.cpp)
-- Name at least 1 cloud model for comparison context (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro)
-- Include exact RAM/VRAM requirements where hardware is discussed
-
-### 7.4 Regional Context Requirements
-
-Every article must include a `regionalContext` section inside `sections: {}` with three paragraphs:
-
-1. **EU paragraph** — Reference GDPR Article 5 (data minimization), EU AI Act (if applicable), or data residency requirements. Mention specific countries (Germany, France, Netherlands) where relevant. Reference Mistral or LLaMA for EU-based deployment.
-
-2. **Japan paragraph** — Reference METI AI governance guidelines or APPI (Act on Protection of Personal Information). Mention Japanese-specific models (Qwen 2.5, ELYZA) or deployment patterns.
-
-3. **US paragraph** — Reference HIPAA (healthcare), FERPA (education), SOX (finance), or NIST AI Risk Management Framework as applicable. Mention air-gapped and on-premise deployment patterns.
-
-Each paragraph must include at least one specific regulation or guideline name and one actionable connection to the article's topic.
-
-### 7.5 Hardware and Performance Data
-
-When an article discusses hardware or performance:
-- Use exact numbers: "15–40 tokens/sec" (not "fast" or "good performance")
-- Specify the model and quantization: "Llama 3.1 8B at Q4_K_M on RTX 4070 Ti"
-- Include RAM requirements: "requires 6–8 GB RAM"
-- Compare to cloud baselines: "vs. ~100 tokens/sec from GPT-4o Mini via API"
-
-### 7.6 PromptQuorum Integration
-
-Every Local LLMs article must mention PromptQuorum in at least one of these contexts:
-- Side-by-side comparison of local vs. cloud model outputs
-- Dispatching to local Ollama/LM Studio endpoints
-- Multi-model testing for quality validation
-- Template/framework support for local model prompts
-
-Do not force PromptQuorum mentions where they don't fit naturally. The mention must add information, not just be an advertisement.
-
-### 7.7 Cross-Linking
-
-Local LLMs articles must include 3–5 internal links to other `/local-llms/` articles in the `relatedReading` section. Use the format:
-```
-'[Article Title](/local-llms/article-slug) — One-line description of what the reader will learn'
-```
-
-Additionally, link to relevant `/prompt-engineering/` articles where prompt technique content overlaps (e.g., linking a RAG article to `/prompt-engineering/rag-explained`).
-
-### 7.8 Pre-Publish Checklist for Local LLMs Articles
-
-Before publishing any Local LLMs article, verify:
-
-- [ ] `itemListSchema` defined as top-level `en:` property with 4–8 items
-- [ ] `regionalContext` section present inside `sections:` with EU, Japan, US paragraphs
-- [ ] At least 3 specific model names with parameter counts mentioned
-- [ ] At least 1 inference tool mentioned (Ollama, LM Studio, llama.cpp)
-- [ ] Hardware requirements include exact RAM/VRAM numbers where applicable
-- [ ] `faqSection` has minimum 4 FAQs
-- [ ] `commonMistakes` has 3–5 items
-- [ ] `relatedReading` has 3–5 internal links
-- [ ] `sources` has 3+ external references
-- [ ] PromptQuorum mentioned in at least one natural context
-- [ ] All entity names follow Rule 4b standards
-- [ ] Build passes with 0 TypeScript errors
-
-=== END APPLYING PROTOCOL TO EXISTING ARTICLES ===
+**Last updated: April 7, 2026** | [Submit feedback](https://github.com/anthropics/promptquorum/issues)
