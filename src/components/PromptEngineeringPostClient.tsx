@@ -575,6 +575,17 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
         </div>
       )}
 
+      {/* Regular content paragraphs */}
+      {section.content && !section.isTldr && (
+        <div className="space-y-4">
+          {(Array.isArray(section.content) ? section.content : [section.content]).map((para, i) => (
+            <p key={i} className="text-text-secondary leading-relaxed">
+              {renderInlineLinks(para, lang)}
+            </p>
+          ))}
+        </div>
+      )}
+
       {/* Blockquote content */}
       {section.blockquote && (
         <blockquote className="border-l-4 border-primary/40 bg-primary/5 pl-5 py-3 my-6 text-text-secondary">
@@ -585,17 +596,6 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
             </footer>
           )}
         </blockquote>
-      )}
-
-      {/* Regular content paragraphs */}
-      {section.content && !section.isTldr && (
-        <div className="space-y-4">
-          {(Array.isArray(section.content) ? section.content : [section.content]).map((para, i) => (
-            <p key={i} className="text-text-secondary leading-relaxed">
-              {renderInlineLinks(para, lang)}
-            </p>
-          ))}
-        </div>
       )}
 
       {/* Bullet list */}
@@ -612,7 +612,7 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
 
       {/* Numbered list */}
       {section.numberedItems && (
-        <ol className="space-y-4 my-4">
+        <ol className="list-none space-y-4 my-4">
           {section.numberedItems.map((item, i) => (
             <li key={i} className="flex gap-4 text-text-secondary">
               <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white ${colors.dot.replace('bg-', 'bg-').replace('-400', '-500')}`}>
