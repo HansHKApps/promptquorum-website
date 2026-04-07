@@ -6515,6 +6515,13 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: 'Performance Benchmarks',
           content: [
             '**Tested hardware configurations — Llama 3.1 8B at Q4_K_M on three setups:** RTX 4070 Ti (12 GB): 78 tokens/sec. RTX 4090 (24 GB): 147 tokens/sec. Apple M3 Max (36 GB unified): 62 tokens/sec. Cloud baseline GPT-4o via API: ~95 tokens/sec at peak. For the 7B model tier, RTX 4090 outperforms cloud API speed; M3 Max lags cloud by ~35% but keeps all data on-device.',
+            '**How to benchmark your hardware with PromptQuorum:** Connect your local Ollama endpoint (default: http://localhost:11434) to PromptQuorum, then dispatch the same prompt to your local model and to GPT-4o simultaneously. PromptQuorum records response time, token throughput, and output quality side-by-side. This lets you verify whether your hardware meets production speed requirements before committing to a larger model or GPU upgrade.',
+          ],
+          items: [
+            '**Step 1**: Start Ollama with your target model — `ollama run llama3.1:8b`',
+            '**Step 2**: Open PromptQuorum → Settings → Local Models → enter `http://localhost:11434`',
+            '**Step 3**: Run a standard prompt (e.g., a 500-word document summarization) and note tokens/sec',
+            '**Step 4**: Compare against a cloud model at the same task — if local throughput is below 20 tokens/sec, consider a GPU upgrade',
           ],
         },
         cpuRam: {
