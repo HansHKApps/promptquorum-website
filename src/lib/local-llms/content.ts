@@ -6441,9 +6441,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Hardware & Performance',
       title: 'Local LLM Hardware Guide 2026: GPU, CPU, and RAM Requirements Explained',
-      seoTitle: 'Local LLM Hardware Guide 2026: GPU, VRAM & Best Builds',
+      seoTitle: 'Local LLM Hardware Guide 2026: GPU, VRAM & Best Setups',
       intro: 'Running local LLMs requires understanding three components: GPU (primary bottleneck), CPU (secondary), and RAM. The critical number is VRAM — the GPU\'s dedicated memory. As of April 2026, a 7B model at 4-bit quantization needs 3.5 GB VRAM, a 13B model needs 7 GB, and a 70B model needs 35–40 GB. An RTX 4070 Ti (12 GB, $600) handles any 7B–13B model at 80 tokens/second. An RTX 4090 (24 GB, $1,800) handles 70B models at Q4 quantization. This guide covers the VRAM formula, GPU tier recommendations, Mac Silicon options, and budget build configurations for every common use case.',
-            metaDescription: 'Complete 2026 hardware guide for running local LLMs. GPU and VRAM recommendations for 7B–70B models, budget vs high-performance setups, and how to test performance with PromptQuorum.',
+      metaDescription: 'Complete 2026 hardware guide for running local LLMs. Exact GPU, VRAM and CPU recommendations for 7B–70B models, quantization tips, and how to test real performance with PromptQuorum.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Intermediate',
