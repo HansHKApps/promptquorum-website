@@ -1400,7 +1400,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Troubleshooting Local LLM Setup: Fix the 10 Most Common Errors',
       seoTitle: 'Local LLM Troubleshooting 2026: Fix Ollama & LM Studio Errors',
       intro: 'The 10 most common local LLM setup errors fall into four categories: memory errors (not enough RAM or VRAM), hardware detection failures (GPU not found), server errors (connection refused, port conflicts), and output quality issues (garbled text, mid-response stops). As of April 2026, most errors are fixable in under 5 minutes with the right diagnostic command. This guide covers each error with the exact command to diagnose it, the most likely cause, and the specific fix — for Ollama, LM Studio, and llama.cpp on NVIDIA, AMD, and Apple Silicon.',
-      metaDescription: 'Solve common local LLM problems fast: slow speed, VRAM errors, crashes, model loading issues. Practical fixes for Ollama, LM Studio, and more.',
+      metaDescription: 'Most local LLM setup errors are fixed in under 5 minutes. Out-of-memory crashes, GPU detection failures, CUDA errors, garbled output — exact commands and fixes for each.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '9 min read',
@@ -1438,7 +1438,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         error1: {
           id: 'error-1',
-          title: 'Error 1: "Not Enough Memory" / Out-of-Memory Crash',
+          title: 'How Do You Fix "Not Enough Memory" Errors?',
           content: '**The model requires more RAM than is available.** This is the most common error for first-time users.',
           items: [
             '**Check available RAM**: on macOS/Linux run `free -h`, on Windows open Task Manager → Performance → Memory.',
@@ -1454,7 +1454,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         error2: {
           id: 'error-2',
-          title: 'Error 2: GPU Is Not Being Used (Running on CPU Only)',
+          title: 'Why Is Your GPU Not Being Used by Ollama?',
           content: [
             '**Verify your GPU is visible to the system before debugging the LLM tool:**',
           ],
@@ -1472,7 +1472,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         error3: {
           id: 'error-3',
-          title: 'Error 3: Inference Is Very Slow (Under 5 Tokens/sec)',
+          title: 'Why Is Local LLM Inference Very Slow (Under 5 tok/sec)?',
           content: '**If generation is under 5 tokens/sec, the model is running on CPU only, or you are running too large a model for your hardware.**',
           items: [
             '**Confirm whether GPU is active**: run `ollama ps` while a model is loaded. The output shows how many layers are on GPU vs CPU.',
@@ -1480,6 +1480,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Increase [GPU layers](/local-llms/local-llm-hardware-guide-2026) in Ollama**: set `OLLAMA_GPU_LAYERS=999` to push all layers to GPU (Ollama will cap at what fits in VRAM).',
             '**Use a faster quantization**: Q4_K_M is the fastest quantization that maintains acceptable quality. Q8_0 is higher quality but ~30% slower.',
           ],
+          blockquote: 'Under 5 tok/sec on a 7B model means the model is running on CPU only — GPU offloading is not active, even if you have NVIDIA or AMD hardware.',
+          blockquoteSource: 'In One Sentence',
         },
         error3Code: {
           title: 'How Do You Set GPU Layers in Ollama?',
@@ -1488,14 +1490,14 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         error4: {
           id: 'error-4',
-          title: 'Error 4: "Connection Refused" When Calling the API',
+          title: 'How Do You Fix "Connection Refused" Errors in Ollama?',
           content: '**The Ollama server is not running.** The API at `localhost:11434` only responds when the Ollama service is active.',
           codeBlock: '# Start Ollama manually\nollama serve\n\n# On Linux — restart the systemd service\nsystemctl restart ollama\n\n# Verify it is running\ncurl http://localhost:11434\n# Expected: "Ollama is running"',
           codeLanguage: 'bash',
         },
         error5: {
           id: 'error-5',
-          title: 'Error 5: "Model Not Found" Error',
+          title: 'How Do You Fix "Model Not Found" Errors?',
           content: [
             '**This error means the model name in your command does not match any downloaded model.**',
           ],
@@ -1504,14 +1506,14 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         error6: {
           id: 'error-6',
-          title: 'Error 6: Corrupted Model File',
+          title: 'How Do You Fix a Corrupted Local LLM Model File?',
           content: '**If a model download was interrupted, the cached file may be incomplete.** Ollama does not always detect partial downloads.',
           codeBlock: '# Remove the corrupted model\nollama rm llama3.2\n\n# Re-pull it\nollama pull llama3.2\n\n# For LM Studio: delete the model file manually\n# Default location: ~/.cache/lm-studio/models/',
           codeLanguage: 'bash',
         },
         error7: {
           id: 'error-7',
-          title: 'Error 7: CUDA / ROCm Initialization Errors',
+          title: 'How Do You Fix CUDA and ROCm Initialization Errors?',
           content: '**CUDA and ROCm errors typically mean a driver/library version mismatch.**',
           items: [
             '**"CUDA driver version is insufficient"**: update NVIDIA drivers. The minimum for llama.cpp is CUDA 11.3 / driver 450.80.',
@@ -1522,23 +1524,25 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         error8: {
           id: 'error-8',
-          title: 'Error 8: Garbled, Repetitive, or Nonsensical Output',
+          title: 'Why Is Your Local LLM Producing Garbled or Repetitive Output?',
           content: [
             '**Garbled output almost always means you are using a base model instead of the instruct/chat variant, or the wrong prompt template is being applied.**',
-            'Base models (e.g., `llama3.1:8b`) are not fine-tuned for conversation and produce raw completions that look like garbled text when prompted with a question. Always use the [instruct variant](/local-llms/best-beginner-local-llm-models): `llama3.1:8b-instruct`.',
+            'Base models (e.g., `llama3.1:8b`) are not fine-tuned for conversation and produce raw completions that look like garbled text when prompted with a question. Always use the instruct variant: `llama3.1:8b-instruct`.',
             'In Ollama, the default tag for most models already points to the instruct variant. If you downloaded from Hugging Face manually, confirm the filename includes "Instruct" or "chat".',
           ],
+          blockquote: 'Garbled output from a local LLM almost always means you are using a base model, not an instruct model — they have completely different prompt templates and expectations.',
+          blockquoteSource: 'In One Sentence',
         },
         error9: {
           id: 'error-9',
-          title: 'Error 9: "Address Already in Use" — Port Conflict',
+          title: 'How Do You Fix "Address Already in Use" Port Conflicts?',
           content: '**Another process is using the port that Ollama or LM Studio needs.**',
           codeBlock: '# Find what is using port 11434 (Ollama)\nlsof -i :11434\n\n# Kill it by PID\nkill -9 <PID>\n\n# Or change Ollama\'s port\nexport OLLAMA_HOST=0.0.0.0:11435\nollama serve',
           codeLanguage: 'bash',
         },
         error10: {
           id: 'error-10',
-          title: 'Error 10: Model Stops Generating Mid-Response',
+          title: 'Why Does Your Local LLM Stop Generating Mid-Response?',
           content: '**Mid-response stops are caused by hitting the context length limit or a generation parameter set too low.**',
           items: [
             '**Increase num_predict**: this parameter sets the maximum number of tokens to generate. Default is often 128. Increase it: in Ollama, add `PARAMETER num_predict 2048` to a Modelfile.',
@@ -1548,7 +1552,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         regionalContext: {
           id: 'regional-context',
-          title: 'Local LLM Troubleshooting in EU, Japan, and China',
+          title: 'How Does Your Region Affect Local LLM Troubleshooting?',
           content: [
             '**EU / GDPR** — EU professionals running local LLMs for GDPR-compliant data processing should verify zero external connections after setup. Run `netstat -an | grep ESTABLISHED` on Linux/macOS after starting Ollama — no external IP addresses should appear in the output for Ollama processes. The only connections should be to localhost (127.0.0.1). If external connections appear, a plugin or extension may be phoning home. German BSI guidelines recommend verifying data flows with a packet capture tool (Wireshark) before processing sensitive personal data in any AI tool.',
             '**Japan (METI)** — METI AI Governance Guidelines require documenting the AI inference environment. For troubleshooting logs: Ollama logs to `journalctl -u ollama` on Linux systems. Save these logs with the model name, version, and hardware configuration as part of your AI governance documentation. Japanese enterprise teams commonly maintain a model registry document that includes the Ollama version, model file hash, and hardware spec for each deployment.',
@@ -1557,7 +1561,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         commonMistakes: {
           id: 'common-mistakes',
-          title: 'Common Mistakes When Troubleshooting',
+          title: 'What Are the Most Common Local LLM Troubleshooting Mistakes?',
           items: [
             'Assuming OOM (out-of-memory) errors mean hardware failure — usually just means you need a smaller model or quantization.',
             'Not checking system load — inference speed degrades significantly if other applications are consuming CPU/GPU.',
@@ -1607,20 +1611,12 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               a: 'The model hit the context length limit or the num_predict token limit. In Ollama: create a Modelfile with `PARAMETER num_predict 2048` to increase the generation limit. For context exhaustion, start a fresh conversation or switch to a model with larger context (Llama 3.2 supports 128K tokens).',
             },
             {
-              q: 'How do I know if Ollama is using my GPU?',
-              a: 'Run `ollama ps` after starting a model. The output shows the model name, size, and how many layers are loaded to GPU vs CPU. If GPU layers show 0, the model is running entirely on CPU. On macOS, Activity Monitor → GPU tab shows Metal usage during inference.',
-            },
-            {
               q: 'How do I fix "address already in use" port errors?',
               a: 'Another process is using Ollama\'s port (11434). Run `lsof -i :11434` on macOS/Linux to find the process PID, then `kill -9 <PID>` to stop it. Or change Ollama\'s port: set environment variable `OLLAMA_HOST=0.0.0.0:11435` before starting Ollama.',
             },
             {
               q: 'How do I fix a corrupted Ollama model?',
               a: 'Run `ollama rm <modelname>` to delete the corrupted file, then `ollama pull <modelname>` to re-download it. If the same model keeps corrupting, check available disk space (`df -h`) — incomplete downloads due to full disks cause corruption.',
-            },
-            {
-              q: 'Does Ollama work on AMD GPUs?',
-              a: 'Yes, via ROCm on Linux. Install ROCm 5.7+, then restart Ollama. For RX 6000-series: set `HSA_OVERRIDE_GFX_VERSION=10.3.0`. For RX 7000-series: set `HSA_OVERRIDE_GFX_VERSION=11.0.0`. AMD GPU support on Windows via DirectML is experimental as of April 2026. Apple Silicon uses Metal — no ROCm required.',
             },
           ],
         },
