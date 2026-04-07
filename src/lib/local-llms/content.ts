@@ -1545,82 +1545,168 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Check for stop tokens**: some Modelfiles include stop sequences that terminate generation early. Review the system prompt and template for unexpected stop patterns.',
           ],
         },
-        moreTroubleshooting: {
-          title: 'Where Can You Find More Help?',
-          content: 'For hardware-specific issues on laptops (thermal throttling, battery drain), see [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop). For security and privacy configuration questions, see the [Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist). The Ollama GitHub issues page (github.com/ollama/ollama/issues) and the r/LocalLLaMA subreddit are the most active community resources for model-specific bugs.',
-        },
-        sources: {
-          title: 'Sources',
-          items: [
-            '**NVIDIA CUDA Toolkit Compatibility** — Official version mapping for GPU support',
-            '**llama.cpp Issues** — Community discussion of common inference errors',
-            '**Ollama Troubleshooting Guide** — Official documentation for error resolution',
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Local LLM Troubleshooting in EU, Japan, and China',
+          content: [
+            '**EU / GDPR** — EU professionals running local LLMs for GDPR-compliant data processing should verify zero external connections after setup. Run `netstat -an | grep ESTABLISHED` on Linux/macOS after starting Ollama — no external IP addresses should appear in the output for Ollama processes. The only connections should be to localhost (127.0.0.1). If external connections appear, a plugin or extension may be phoning home. German BSI guidelines recommend verifying data flows with a packet capture tool (Wireshark) before processing sensitive personal data in any AI tool.',
+            '**Japan (METI)** — METI AI Governance Guidelines require documenting the AI inference environment. For troubleshooting logs: Ollama logs to `journalctl -u ollama` on Linux systems. Save these logs with the model name, version, and hardware configuration as part of your AI governance documentation. Japanese enterprise teams commonly maintain a model registry document that includes the Ollama version, model file hash, and hardware spec for each deployment.',
+            '**China** — Organizations using Qwen2.5 or DeepSeek models under China\'s Data Security Law (数据安全法) should confirm local inference via `ollama ps` after starting a model — verify the model is loaded and no cloud fallback is active. Qwen2.5 models from Ollama\'s library use the same llama.cpp backend as Western models — the same troubleshooting steps apply to all GGUF models regardless of origin.',
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes When Troubleshooting',
           items: [
             'Assuming OOM (out-of-memory) errors mean hardware failure — usually just means you need a smaller model or quantization.',
             'Not checking system load — inference speed degrades significantly if other applications are consuming CPU/GPU.',
             'Ignoring GPU driver version mismatches — NVIDIA CUDA requires specific driver versions for each CUDA version.',
+            '**Reinstalling Ollama or LM Studio before checking the simplest fix first:** Most errors are caused by the model being too large for available RAM, or the server not running. Check `ollama ps` (is the model loaded?) and `free -h` (is RAM available?) before any reinstall. Reinstalling rarely fixes configuration or hardware detection issues.',
+            '**Confusing base models with instruct models:** Base model files (e.g., "llama-3.1-8b.gguf") produce token completions, not chat responses. Instruct model files (e.g., "llama-3.1-8b-instruct.gguf") are fine-tuned for conversation. Garbled or repetitive output when asking a question is almost always the base vs instruct confusion. In Ollama, the default tag (`ollama run llama3.1:8b`) already points to the instruct variant.',
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and setup',
             '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — GUI-based alternative',
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations',
             '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) — Laptop-specific optimization',
+            '[What Are Local LLMs?](/local-llms/what-are-local-llms) — Foundational guide explaining RAM, VRAM, and inference engine concepts referenced in this guide',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — GPU and RAM requirements to avoid out-of-memory errors before they happen',
+          ],
+        },
+        faq: {
+          id: 'faq',
+          title: 'Frequently Asked Questions',
+          faqs: [
+            {
+              q: 'Why is Ollama saying "connection refused"?',
+              a: 'Ollama is not running as a service. On Linux: run `systemctl start ollama` or `ollama serve` in a terminal. On macOS: open the Ollama app from Applications. On Windows: launch Ollama from the Start menu. Verify with `curl http://localhost:11434` — expected response: "Ollama is running."',
+            },
+            {
+              q: 'Why is my GPU not being used by Ollama?',
+              a: 'Three causes: (1) GPU drivers too old — NVIDIA requires driver 452.39+ on Windows, 525+ on Linux; (2) CUDA/ROCm not installed — run `nvidia-smi` to confirm; (3) model fits in CPU RAM so Ollama defaults to CPU. Set `OLLAMA_GPU_LAYERS=999` and restart Ollama to force GPU offloading.',
+            },
+            {
+              q: 'How do I fix "not enough memory to load model"?',
+              a: 'Switch to a smaller quantization: replace Q8_0 with Q4_K_M (halves RAM requirement), or use a smaller model parameter count. If running 13B fails on 16 GB, try 7B. If 7B fails on 8 GB, try 3B. Rule of thumb: model file size × 1.2 = minimum free RAM required.',
+            },
+            {
+              q: 'Why is my model generating garbled or repetitive text?',
+              a: 'You are using a base model instead of an instruct model. Base models complete text; instruct models answer questions. In Ollama, ensure the model tag includes "instruct" or use the default tag which points to instruct by default. From Hugging Face, only download files with "Instruct" or "chat" in the filename.',
+            },
+            {
+              q: 'How do I fix CUDA errors on NVIDIA?',
+              a: 'Update NVIDIA drivers to the latest version. Run `nvidia-smi` — if it fails, drivers are not installed correctly. Run `nvcc --version` — the CUDA version must be 11.3 or higher. For "no kernel image available" errors, your GPU architecture (Maxwell/Pascal) is not supported by recent CUDA builds — use CPU inference instead or upgrade the GPU.',
+            },
+            {
+              q: 'Why does my model stop generating mid-response?',
+              a: 'The model hit the context length limit or the num_predict token limit. In Ollama: create a Modelfile with `PARAMETER num_predict 2048` to increase the generation limit. For context exhaustion, start a fresh conversation or switch to a model with larger context (Llama 3.2 supports 128K tokens).',
+            },
+            {
+              q: 'How do I know if Ollama is using my GPU?',
+              a: 'Run `ollama ps` after starting a model. The output shows the model name, size, and how many layers are loaded to GPU vs CPU. If GPU layers show 0, the model is running entirely on CPU. On macOS, Activity Monitor → GPU tab shows Metal usage during inference.',
+            },
+            {
+              q: 'How do I fix "address already in use" port errors?',
+              a: 'Another process is using Ollama\'s port (11434). Run `lsof -i :11434` on macOS/Linux to find the process PID, then `kill -9 <PID>` to stop it. Or change Ollama\'s port: set environment variable `OLLAMA_HOST=0.0.0.0:11435` before starting Ollama.',
+            },
+            {
+              q: 'How do I fix a corrupted Ollama model?',
+              a: 'Run `ollama rm <modelname>` to delete the corrupted file, then `ollama pull <modelname>` to re-download it. If the same model keeps corrupting, check available disk space (`df -h`) — incomplete downloads due to full disks cause corruption.',
+            },
+            {
+              q: 'Does Ollama work on AMD GPUs?',
+              a: 'Yes, via ROCm on Linux. Install ROCm 5.7+, then restart Ollama. For RX 6000-series: set `HSA_OVERRIDE_GFX_VERSION=10.3.0`. For RX 7000-series: set `HSA_OVERRIDE_GFX_VERSION=11.0.0`. AMD GPU support on Windows via DirectML is experimental as of April 2026. Apple Silicon uses Metal — no ROCm required.',
+            },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Sources',
+          items: [
+            '**NVIDIA. (2026). "CUDA Compatibility and Driver Requirements."** https://docs.nvidia.com/deploy/cuda-compatibility/ — Official CUDA version to driver version mapping and minimum hardware requirements.',
+            '**Ollama Contributors. (2026). "Ollama Troubleshooting and GPU Setup." GitHub Issues.** https://github.com/ollama/ollama/issues — Community-sourced fixes for GPU detection, CUDA errors, and performance issues.',
+            '**llama.cpp Contributors. (2026). "llama.cpp FAQ and Troubleshooting." GitHub Wiki.** https://github.com/ggerganov/llama.cpp/wiki — Inference backend troubleshooting including ROCm, Metal, and CUDA configuration.',
           ],
         },
       },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Local LLM Troubleshooting 2026: Fix Ollama & LM Studio Errors',
+        'headline': 'Troubleshooting Local LLM Setup: Fix the 10 Most Common Errors',
         'description': 'Solve common local LLM problems fast: slow speed, VRAM errors, crashes, model loading issues. Practical fixes for Ollama, LM Studio, and more.',
         'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'proficiencyLevel': 'Beginner',
-        'keywords': ['local LLM troubleshooting', 'Ollama errors', 'LM Studio errors', 'LLM VRAM error', 'model loading fix'],
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama troubleshooting' },
+          { '@type': 'Thing', 'name': 'Local LLM setup' },
+          { '@type': 'Thing', 'name': 'CUDA error' },
+          { '@type': 'Thing', 'name': 'GPU detection' },
+          { '@type': 'Thing', 'name': 'LM Studio errors' },
+          { '@type': 'Thing', 'name': 'Out of memory LLM' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'keywords': ['local LLM troubleshooting', 'Ollama errors', 'LM Studio errors', 'LLM VRAM error', 'model loading fix', 'CUDA error local LLM', 'GPU not detected Ollama'],
         'mentions': [
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
-          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
-        ]
+          { '@type': 'SoftwareApplication', 'name': 'llama.cpp' },
+        ],
+        'isPartOf': { '@type': 'WebPage', 'name': 'Local LLMs Guide', 'url': 'https://www.promptquorum.com/local-llms' },
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'How to Diagnose and Fix Local LLM Setup Errors',
+        'description': 'The 10 most common local LLM setup errors fall into four categories: memory errors, hardware detection failures, server errors, and output quality issues.',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Check available RAM with free -h', 'text': 'Run free -h on Linux/macOS or open Task Manager on Windows to confirm how much RAM is free before loading a model.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Verify GPU detection with nvidia-smi', 'text': 'Run nvidia-smi (NVIDIA) or rocm-smi (AMD) to confirm the GPU is visible to the OS and drivers are installed.' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Confirm Ollama is running with curl localhost:11434', 'text': 'Run curl http://localhost:11434 — if you get "connection refused", start the Ollama service with ollama serve.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Check loaded model and GPU layers with ollama ps', 'text': 'Run ollama ps while a model is loaded to see how many layers are on GPU vs CPU. 0 GPU layers means CPU-only inference.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Switch to smaller quantization if OOM', 'text': 'If you get out-of-memory errors, switch from Q8_0 to Q4_K_M — this halves RAM requirements while maintaining acceptable quality.' },
+        ],
       },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'Why is my local LLM generating text very slowly?', acceptedAnswer: { '@type': 'Answer', text: 'Slow generation usually means the model is running on CPU instead of GPU. Check Ollama logs with ollama logs or LM Studio\'s performance panel. Ensure your GPU driver is installed and the model fits within VRAM. Use a smaller or more quantized model if VRAM is exceeded.' } },
-          { '@type': 'Question', name: 'How do I fix out-of-memory errors when loading a model?', acceptedAnswer: { '@type': 'Answer', text: 'Out-of-memory errors occur when the model exceeds available VRAM. Switch to a lower quantization level (Q4 instead of Q8), use a smaller model variant (7B instead of 13B), or enable GPU+CPU split inference in Ollama with OLLAMA_NUM_GPU=1.' } },
-          { '@type': 'Question', name: 'Ollama is not detecting my NVIDIA GPU — how do I fix this?', acceptedAnswer: { '@type': 'Answer', text: 'Reinstall the NVIDIA CUDA driver (version 525+) and restart Ollama. Verify GPU detection with nvidia-smi in terminal. On Windows, ensure Ollama is running as administrator. On Linux, add your user to the video and render groups.' } }
-        ]
+          { '@type': 'Question', name: 'Why is Ollama saying "connection refused"?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama is not running as a service. On Linux: run systemctl start ollama or ollama serve in a terminal. On macOS: open the Ollama app from Applications. On Windows: launch Ollama from the Start menu. Verify with curl http://localhost:11434 — expected response: "Ollama is running."' } },
+          { '@type': 'Question', name: 'Why is my GPU not being used by Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Three causes: (1) GPU drivers too old — NVIDIA requires driver 452.39+ on Windows, 525+ on Linux; (2) CUDA/ROCm not installed — run nvidia-smi to confirm; (3) model fits in CPU RAM so Ollama defaults to CPU. Set OLLAMA_GPU_LAYERS=999 and restart Ollama to force GPU offloading.' } },
+          { '@type': 'Question', name: 'How do I fix "not enough memory to load model"?', acceptedAnswer: { '@type': 'Answer', text: 'Switch to a smaller quantization: replace Q8_0 with Q4_K_M (halves RAM requirement), or use a smaller model parameter count. If running 13B fails on 16 GB, try 7B. If 7B fails on 8 GB, try 3B. Rule of thumb: model file size × 1.2 = minimum free RAM required.' } },
+          { '@type': 'Question', name: 'Why is my model generating garbled or repetitive text?', acceptedAnswer: { '@type': 'Answer', text: 'You are using a base model instead of an instruct model. Base models complete text; instruct models answer questions. In Ollama, ensure the model tag includes "instruct" or use the default tag which points to instruct by default.' } },
+          { '@type': 'Question', name: 'How do I fix CUDA errors on NVIDIA?', acceptedAnswer: { '@type': 'Answer', text: 'Update NVIDIA drivers to the latest version. Run nvidia-smi — if it fails, drivers are not installed correctly. Run nvcc --version — the CUDA version must be 11.3 or higher. For "no kernel image available" errors, your GPU architecture is not supported by recent CUDA builds.' } },
+          { '@type': 'Question', name: 'Why does my model stop generating mid-response?', acceptedAnswer: { '@type': 'Answer', text: 'The model hit the context length limit or the num_predict token limit. In Ollama: create a Modelfile with PARAMETER num_predict 2048 to increase the generation limit. For context exhaustion, start a fresh conversation or switch to a model with larger context (Llama 3.2 supports 128K tokens).' } },
+          { '@type': 'Question', name: 'How do I know if Ollama is using my GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Run ollama ps after starting a model. The output shows the model name, size, and how many layers are loaded to GPU vs CPU. If GPU layers show 0, the model is running entirely on CPU.' } },
+          { '@type': 'Question', name: 'How do I fix "address already in use" port errors?', acceptedAnswer: { '@type': 'Answer', text: 'Another process is using Ollama\'s port (11434). Run lsof -i :11434 on macOS/Linux to find the process PID, then kill -9 <PID> to stop it. Or change Ollama\'s port: set environment variable OLLAMA_HOST=0.0.0.0:11435 before starting Ollama.' } },
+          { '@type': 'Question', name: 'How do I fix a corrupted Ollama model?', acceptedAnswer: { '@type': 'Answer', text: 'Run ollama rm <modelname> to delete the corrupted file, then ollama pull <modelname> to re-download it. If the same model keeps corrupting, check available disk space (df -h) — incomplete downloads due to full disks cause corruption.' } },
+          { '@type': 'Question', name: 'Does Ollama work on AMD GPUs?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, via ROCm on Linux. Install ROCm 5.7+, then restart Ollama. For RX 6000-series: set HSA_OVERRIDE_GFX_VERSION=10.3.0. For RX 7000-series: set HSA_OVERRIDE_GFX_VERSION=11.0.0. AMD GPU support on Windows via DirectML is experimental as of April 2026. Apple Silicon uses Metal — no ROCm required.' } },
+        ],
       },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        name: 'Troubleshooting Local LLM Setup: Fix the 10 Most Common Errors',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Out of memory: switch to a smaller quantization (Q4_K_M → Q3_K_S) or a smaller model.' },
-          { '@type': 'ListItem', position: 2, name: 'GPU not detected on NVIDIA: update drivers to 525+ on Linux, 452+ on Windows. Run `nvidia-smi` to confirm.' },
-          { '@type': 'ListItem', position: 3, name: 'Very slow inference: you are running on CPU only. Enable GPU offloading in Ollama with the `OLLAMA_GPU_LAYERS` env var.' },
-          { '@type': 'ListItem', position: 4, name: 'Connection refused: Ollama is not running. Start it with `ollama serve` or restart the service.' },
-          { '@type': 'ListItem', position: 5, name: 'Garbled output: wrong prompt template. Use the instruct variant of the model, not the base variant.' },
+        'name': '10 Most Common Local LLM Setup Errors',
+        'numberOfItems': 10,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Out of Memory', 'item': { '@type': 'Thing', 'name': 'Out of Memory', 'description': 'Model requires more RAM than available. Fix: switch to Q4_K_M or smaller model.' } },
+          { '@type': 'ListItem', 'position': 2, 'name': 'GPU Not Detected', 'item': { '@type': 'Thing', 'name': 'GPU Not Detected', 'description': 'Drivers outdated or CUDA/ROCm missing. Fix: update NVIDIA driver to 525+ on Linux.' } },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Very Slow Inference', 'item': { '@type': 'Thing', 'name': 'Very Slow Inference', 'description': 'Model running on CPU only. Fix: set OLLAMA_GPU_LAYERS=999.' } },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Connection Refused', 'item': { '@type': 'Thing', 'name': 'Connection Refused', 'description': 'Ollama server not running. Fix: run ollama serve or systemctl start ollama.' } },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Model Not Found', 'item': { '@type': 'Thing', 'name': 'Model Not Found', 'description': 'Model name mismatch. Fix: run ollama list and use exact model name.' } },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Corrupted Model File', 'item': { '@type': 'Thing', 'name': 'Corrupted Model File', 'description': 'Interrupted download. Fix: ollama rm then ollama pull.' } },
+          { '@type': 'ListItem', 'position': 7, 'name': 'CUDA / ROCm Errors', 'item': { '@type': 'Thing', 'name': 'CUDA / ROCm Errors', 'description': 'Driver version mismatch. Fix: update to CUDA 11.3+ / ROCm 5.7+.' } },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Garbled Output', 'item': { '@type': 'Thing', 'name': 'Garbled Output', 'description': 'Using base model instead of instruct. Fix: use instruct variant.' } },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Port Already in Use', 'item': { '@type': 'Thing', 'name': 'Port Already in Use', 'description': 'Port 11434 occupied. Fix: kill conflicting process or change OLLAMA_HOST.' } },
+          { '@type': 'ListItem', 'position': 10, 'name': 'Model Stops Mid-Response', 'item': { '@type': 'Thing', 'name': 'Model Stops Mid-Response', 'description': 'Context or num_predict limit hit. Fix: add PARAMETER num_predict 2048 to Modelfile.' } },
         ],
-        regionalContext: {
-          title: 'Regional Adoption and Compliance Context',
-          content: [
-            '**EU organizations adopt local LLMs to satisfy GDPR Article 5 data minimization requirements.** Running inference on-premise means no personal data leaves the organization\\\' infrastructure. German Datenschutz authorities and French CNIL recommend local AI deployment for processing employee or customer data. PromptQuorum supports this by routing prompts to local Ollama endpoints alongside cloud models for side-by-side comparison.',
-            '**Japan METI AI governance guidelines require documented data handling for AI systems.** Japanese enterprises deploy local LLMs on-premise to comply with data residency rules, particularly in financial services and manufacturing. Organizations use local models for internal document processing and pair them with PromptQuorum to validate outputs against cloud models.',
-            '**US organizations in regulated industries use local LLMs for HIPAA, FERPA, and SOX compliance.** Healthcare providers process patient records locally to avoid transmitting protected health information to external APIs. Financial institutions run local models in air-gapped environments. PromptQuorum enables teams to benchmark local models against cloud alternatives.',
-          ],
-        },
       },
     },
     fr: {
