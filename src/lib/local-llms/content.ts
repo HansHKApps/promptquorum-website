@@ -1977,6 +1977,271 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ]
       },
     },
+        de: {
+      theme: 'Getting Started',
+      title: 'Lokale LLMs auf Laptops ausführen: Performance, Wärmemanagement und Modellwahl',
+      seoTitle: 'Local LLMs auf Laptop ausführen: Performance & Modelle 2026',
+      intro: 'Lokale LLMs auf einem Laptop sind 2026 mit der richtigen Modellgröße und Quantisierung praktisch einsetzbar. Jeder Laptop mit 8 GB RAM kann ein 7B-Modell in Q4_K_M-Quantisierung ausführen — 10–25 Token/Sek. auf Windows-CPU, 50–80 Token/Sek. auf Apple Silicon M3. Die drei echten Beschränkungen sind RAM (begrenzt maximale Modellgröße), Thermal Throttling (reduziert Geschwindigkeit um 20–40% nach 10–15 Minuten kontinuierlicher Last) und Akkulaufzeit (30–60% pro Stunde während aktiver Inferenz). Ab April 2026 sind Apple Silicon MacBooks die beste Laptop-Option für lokale LLM-Inferenz — der vereinheitlichte Speicher ermöglicht es der GPU, das gesamte verfügbare RAM zu nutzen, und Apples Metal-Beschleunigung übertrifft die meisten Windows-Laptop-Discrete-GPUs pro Watt.',
+      metaDescription: 'Jeder Laptop mit 8 GB RAM kann ein 7B Local LLM ausführen. Thermal Throttling reduziert die Geschwindigkeit um 20–40% nach 10 Minuten — so verhindern Sie es und wählen das richtige Modell.',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-07',
+      readTime: '8 Min. Lesezeit',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Local LLM Laptop',
+      toc: [
+        { label: 'Zusammenfassung', anchor: 'zusammenfassung' },
+        { label: 'Können Sie ein Local LLM auf einem Laptop ausführen?', anchor: 'laptop-moglich' },
+        { label: '8 GB RAM vs 16 GB RAM', anchor: '8gb-vs-16gb-ram' },
+        { label: 'Beste Modelle für Laptops', anchor: 'beste-modelle' },
+        { label: 'Apple Silicon vs Windows-Laptop', anchor: 'apple-vs-windows' },
+        { label: 'Thermal Throttling verhindern', anchor: 'thermal-throttling' },
+        { label: 'Akkulaufzeit bei lokaler Inferenz', anchor: 'akkulaufzeit' },
+        { label: 'Quantisierung für Laptops', anchor: 'quantisierung' },
+        { label: 'Regionale Compliance', anchor: 'regionale-compliance' },
+        { label: 'Häufige Fehler', anchor: 'haufige-fehler' },
+        { label: 'Weiterführende Ressourcen', anchor: 'weiterführende-ressourcen' },
+        { label: 'Häufig gestellte Fragen', anchor: 'faq' },
+        { label: 'Quellen', anchor: 'quellen' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Ein 3B- oder 7B-Modell in Q4_K_M-Quantisierung läuft auf jedem modernen Laptop mit 8 GB RAM nutzbar.',
+            'Apple Silicon MacBooks (M1, M2, M3, M4) übertreffen die meisten Windows-Laptops bei lokaler Inferenz aufgrund von vereinheitlichtem Speicher und Metal-GPU-Beschleunigung — ein M3 MacBook Pro führt ein 7B-Modell mit 50–80 Token/Sek. aus.',
+            'Thermal Throttling reduziert die Geschwindigkeit um 20–40% nach 10–15 Minuten kontinuierlicher Generierung. Verwenden Sie einen Laptop-Ständer und deaktivieren Sie Turbo Boost, um eine gleichmäßige Geschwindigkeit beizubehalten.',
+            'Akkulaufzeit: Erwarten Sie 30–60% Batterie pro Stunde während aktiver Inferenz auf den meisten Laptops. Schließen Sie das Gerät an, wenn Sie längere Sitzungen durchführen.',
+            'Auf 8 GB RAM Windows/Linux-Laptops: Verwenden Sie Q4_K_M-Modelle bis zu 7B. Bei 16 GB RAM: Q4_K_M-Modelle bis zu 13B oder Q5_K_M für 7B.',
+          ],
+        },
+        canYouRun: {
+          title: 'Können Sie ein Local LLM auf einem Laptop ausführen?',
+          content: [
+            'Ja — mit der richtigen Modellgröße. Ein Laptop mit 8 GB RAM, auf dem ein 7B-Modell in Q4_K_M-Quantisierung ausgeführt wird, erzeugt 10–25 Token/Sek. auf CPU und 50–80 Token/Sek. auf Apple Silicon. Dies ist langsam im Vergleich zu Cloud-APIs, aber schnell genug für interaktive Nutzung.',
+            'Die praktische Obergrenze auf den meisten 8-GB-Laptops ist ein 7B-Modell. Ein 13B-Modell in Q4_K_M benötigt etwa 9 GB RAM — technisch möglich auf 16-GB-Maschinen, hinterlässt aber wenig Spielraum für OS und andere Anwendungen.',
+            'Für [Was sind lokale LLMs](/local-llms/what-are-local-llms) und eine vollständige Erklärung der RAM-Anforderungen, siehe den entsprechenden Leitfaden.',
+          ],
+          blockquote: 'Ein Local LLM auf einem Laptop ist eine Modelldatei, die auf Ihrer CPU oder Ihrem RAM läuft — kein Internet, keine API, Token werden lokal mit 10–80 Token/Sek. generiert, abhängig von der Hardware.',
+          blockquoteSource: 'In einem Satz',
+        },
+        ram8vs16: {
+          title: '8 GB RAM vs 16 GB RAM Laptop: Was ist der praktische Unterschied?',
+          rows: [
+            { 'Szenario': 'Maximale Modellgröße', '8 GB RAM': '7B bei Q4_K_M (~4,5 GB)', '16 GB RAM': '13B bei Q4_K_M (~9 GB)' },
+            { 'Szenario': 'Modell mit Browser offen', '8 GB RAM': '3B–7B (eng)', '16 GB RAM': '7B–13B komfortabel' },
+            { 'Szenario': 'Empfohlenes erstes Modell', '8 GB RAM': 'llama3.2:3b oder mistral:7b', '16 GB RAM': 'llama3.1:8b oder qwen2.5:14b' },
+            { 'Szenario': 'Mehrere Apps gleichzeitig', '8 GB RAM': 'Browser vor dem Laden von 7B schließen', '16 GB RAM': 'Normales Multitasking + 7B-Modell' },
+          ],
+          columns: ['Szenario', '8 GB RAM', '16 GB RAM'],
+        },
+        bestModels: {
+          title: 'Was sind die besten Local LLM-Modelle für Laptops?',
+          content: 'Diese Modelle sind speziell für Laptop-Beschränkungen ausgewählt — Qualität, RAM-Verbrauch und kontinuierliche Generierungsgeschwindigkeit im Gleichgewicht. Installieren Sie [Ollama](/local-llms/how-to-install-ollama) um jedes dieser Modelle mit einem einzigen Befehl auszuführen:',
+          rows: [
+            { 'Modell': 'llama3.2:3b', 'RAM': '2,5 GB', 'Geschwindigkeit (CPU)': '25–45 Token/s', 'Beste für': '8 GB Laptops, schnelle Aufgaben' },
+            { 'Modell': 'phi3.5', 'RAM': '3 GB', 'Geschwindigkeit (CPU)': '20–35 Token/s', 'Beste für': '8 GB Laptops, Reasoning/Coding' },
+            { 'Modell': 'mistral:7b', 'RAM': '4,5 GB', 'Geschwindigkeit (CPU)': '10–20 Token/s', 'Beste für': '8–16 GB, allgemeine Nutzung' },
+            { 'Modell': 'qwen2.5:7b', 'RAM': '4,7 GB', 'Geschwindigkeit (CPU)': '10–18 Token/s', 'Beste für': '8–16 GB, mehrsprachig, Coding' },
+            { 'Modell': 'llama3.1:8b', 'RAM': '5,5 GB', 'Geschwindigkeit (CPU)': '8–15 Token/s', 'Beste für': '16 GB Laptops, beste Qualität bei dieser Größe' },
+          ],
+          columns: ['Modell', 'RAM', 'Geschwindigkeit (CPU)', 'Beste für'],
+        },
+        appleSilicon: {
+          title: 'Apple Silicon vs Windows-Laptop: Was ist besser für lokale LLMs?',
+          content: [
+            'Ab April 2026 sind Apple Silicon MacBooks (M1 bis M4) die besten Consumer-Laptops für lokale LLM-Inferenz. Die [vereinheitlichte Speicher](/local-llms/gpu-vs-cpu-vs-apple-silicon) Architektur bedeutet, dass GPU und CPU den gleichen Speicherpool nutzen — ein M3 MacBook Pro mit 18 GB Speicher kann ein 13B-Modell vollständig im GPU-Speicher ausführen und erreicht 50–80 Token/Sek.',
+            'Windows-Laptops mit diskreten NVIDIA-GPUs können schneller sein, wenn der VRAM ausreichend ist (8 GB+). Eine NVIDIA RTX 4060 Laptop-GPU (8 GB VRAM) führt ein 7B-Modell mit 60–90 Token/Sek. aus — vergleichbar mit Apple M3 Pro. Der Nachteil ist höherer Batterieverbrauch und Wärmeerzeugung.',
+            'Windows-Laptops mit integrierter Intel Iris Xe oder AMD Radeon Grafik verwenden nur CPU-Inferenz, was zu 8–20 Token/Sek. für 7B-Modelle führt.',
+          ],
+          rows: [
+            { 'Laptop-Typ': 'Apple M3 Pro (18 GB)', 'Geschwindigkeit (7B)': '50–80 Token/s', 'Batterieverbrauch': 'Moderat', 'Max. Modell': '~13B' },
+            { 'Laptop-Typ': 'Apple M2 (8 GB)', 'Geschwindigkeit (7B)': '30–50 Token/s', 'Batterieverbrauch': 'Moderat', 'Max. Modell': '~7B' },
+            { 'Laptop-Typ': 'NVIDIA RTX 4060 Laptop (8 GB VRAM)', 'Geschwindigkeit (7B)': '60–90 Token/s', 'Batterieverbrauch': 'Hoch', 'Max. Modell': '~7B (GPU), ~13B (CPU Offload)' },
+            { 'Laptop-Typ': 'Intel i7 + Iris Xe (16 GB RAM)', 'Geschwindigkeit (7B)': '8–15 Token/s', 'Batterieverbrauch': 'Moderat', 'Max. Modell': '~13B' },
+            { 'Laptop-Typ': 'AMD Ryzen 7 + integrierte GPU (16 GB)', 'Geschwindigkeit (7B)': '10–18 Token/s', 'Batterieverbrauch': 'Moderat', 'Max. Modell': '~13B' },
+          ],
+          columns: ['Laptop-Typ', 'Geschwindigkeit (7B)', 'Batterieverbrauch', 'Max. Modell'],
+        },
+        thermals: {
+          title: 'Wie verhindern Sie Thermal Throttling auf einem Laptop?',
+          content: [
+            'Thermal Throttling tritt auf, wenn die CPU oder GPU ihre Temperaturgrenze erreicht und die Taktgeschwindigkeit reduziert, um abzukühlen. Bei der lokalen LLM-Inferenz geschieht dies normalerweise nach 10–15 Minuten kontinuierlicher Generierung und reduziert die Geschwindigkeit um 20–40%.',
+          ],
+          items: [
+            '**Verwenden Sie einen Laptop-Ständer mit Luftzirkulation** — Das Anheben des Laptops um 2–3 cm verbessert die Abluftströmung und verzögert das Thermal Throttling von 10 auf 20+ Minuten.',
+            '**Deaktivieren Sie Intel Turbo Boost / AMD Precision Boost** — Das Laufen mit der Basis-Taktgeschwindigkeit erzeugt eine gleichmäßige Leistung ohne thermische Spitzen. Unter macOS installieren Sie `cpufreq` oder verwenden Sie den Modus "Niedriger Stromverbrauch" in den Batterie-Einstellungen.',
+            '**Begrenzen Sie die Generierungs-Batch-Größe** — Vermeiden Sie die Regenerierung sehr langer Antworten. Teilen Sie lange Aufgaben in kürzere Prompts auf.',
+            '**Verwenden Sie Q4_K_M statt Q8_0** — niedrigere Quantisierung erfordert weniger Berechnung pro Token und erzeugt weniger Wärme auf Kosten von marginaler Qualität.',
+          ],
+          blockquote: 'Thermal Throttling ist die automatische Reduzierung der CPU-Taktgeschwindigkeit, wenn sie ~95°C überschreitet — es reduziert die Geschwindigkeit der lokalen LLM-Inferenz um 20–40% nach 10–15 Minuten kontinuierlicher Generierung.',
+          blockquoteSource: 'In einem Satz',
+        },
+        battery: {
+          title: 'Wie viel Akku verbraucht ein Local LLM?',
+          content: [
+            'Der Batterieverschleiß während der lokalen Inferenz ist erheblich. Aktive CPU-Inferenz bei einem 7B-Modell zieht 15–25 W auf einer typischen Laptop-CPU, was die Akkulaufzeit bei einer 60-Wh-Batterie auf 2–3 Stunden bei vollständiger Ladung reduziert.',
+            'Apple Silicon ist deutlich effizienter. Ein M3 MacBook Pro mit einem 7B-Modell verbraucht während der Inferenz etwa 12–18 W und ermöglicht 3–4 Stunden aktive Generierung bei vollständiger Ladung.',
+            'Für längere Sitzungen, schließen Sie das Gerät an. Wenn Sie batterieeffiziente lokale Inferenz benötigen, verwenden Sie ein 3B-Modell mit Q4_K_M — es zieht 6–10 W und verlängert die Akkulaufzeit auf den meisten Laptops auf 5–6 Stunden.',
+          ],
+        },
+        quantization: {
+          title: 'Welche Quantisierungsstufe sollten Sie auf einem Laptop verwenden?',
+          content: '[Quantisierung](/local-llms/llm-quantization-explained) reduziert die Modellgenauigkeit, um RAM- und Berechnungsanforderungen zu senken. Für Laptops ist Q4_K_M der empfohlene Standard:',
+          rows: [
+            { 'Quantisierung': 'Q2_K', 'RAM vs. Vollversion': '~25%', 'Qualitätsverlust': 'Hoch — merkliche Verschlechterung', 'Anwendungsfall': 'Nur bei extrem wenig RAM' },
+            { 'Quantisierung': 'Q3_K_S', 'RAM vs. Vollversion': '~35%', 'Qualitätsverlust': 'Moderat', 'Anwendungsfall': 'Unter 4 GB RAM' },
+            { 'Quantisierung': 'Q4_K_M', 'RAM vs. Vollversion': '~45%', 'Qualitätsverlust': 'Niedrig — empfohlener Standard', 'Anwendungsfall': 'Die meisten Laptops, beste Balance' },
+            { 'Quantisierung': 'Q5_K_M', 'RAM vs. Vollversion': '~55%', 'Qualitätsverlust': 'Minimal', 'Anwendungsfall': '16 GB RAM Laptops' },
+            { 'Quantisierung': 'Q8_0', 'RAM vs. Vollversion': '~80%', 'Qualitätsverlust': 'Vernachlässigbar', 'Anwendungsfall': '32 GB RAM oder GPU mit 8+ GB VRAM' },
+          ],
+          columns: ['Quantisierung', 'RAM vs. Vollversion', 'Qualitätsverlust', 'Anwendungsfall'],
+        },
+        regionalContext: {
+          title: 'Wie schützt das Ausführen lokaler LLMs auf einem Laptop Ihre Datenschutz?',
+          content: [
+            '**EU / DSGVO**: Ein Laptop, auf dem lokale LLMs ausgeführt werden, ist die datenschutzfreundlichste KI-Konfiguration, die es gibt. Kein Prompt-Text, Kontext oder Output verlässt das Gerät — DSGVO-Artikel-46-Transfermechanismen sind nicht erforderlich. Für EU-Fachleute, die mit Personendaten umgehen (medizinisch, rechtlich, finanziell), ist ein MacBook Pro M3 oder M4 mit 18–36 GB vereinheitlichtem Speicher die empfohlene Konfiguration für lokale Inferenz bei sensiblem Inhalt. Das deutsche BSI empfiehlt lokale Inferenz für KI-Systeme, die sensible Personendaten in professionellen Kontexten verarbeiten.',
+            '**Japan (METI)**: Die METI-AI-Governance-Richtlinien verlangen von Organisationen, zu dokumentieren, wo KI-Inferenz stattfindet. Ein Laptop, auf dem Ollama lokal läuft, erfüllt diese Anforderung für die individuelle berufliche Nutzung — alle Inferenzen sind auf das Gerät und die Modellversion zurückzuführen. Japanische Fachleute verwenden üblicherweise LLaMA 3.1 7B über Ollama auf M-Series MacBooks für das Verarbeiten sensibler Dokumente ohne Datenaustritt.',
+            '**China**: Chinas Datensicherheitsgesetz (数据安全法) beschränkt bestimmte Datenkategorien daran, genehmigte Infrastrukturen zu verlassen. Ein Laptop, auf dem Qwen2.5 7B lokal über Ollama läuft, erfüllt diese Anforderung für individuelle Anwendungsfälle — Qwen2.5 verarbeitet chinesische Spracheninhalte 30–40% token-effizienter als von Westen trainierte Modelle auf derselben Hardware.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Häufige Fehler beim Ausführen lokaler LLMs auf einem Laptop',
+          items: [
+            '**Laden eines 7B-Modells auf 8 GB RAM ohne Schließen anderer Apps:** Ein 7B-Modell bei Q4_K_M nutzt etwa 4,5 GB. macOS oder Windows verwenden normalerweise 3–4 GB RAM selbst. Auf einer 8-GB-Maschine führt das Laden eines 7B-Modells mit einem Browser und mehreren offenen Tabs zu Speicherdruck, Swap-Nutzung und Geschwindigkeiten so niedrig wie 2–5 Token/Sek. Schließen Sie den Browser und unnötige Apps, bevor Sie Modelle über 3B auf 8-GB-RAM-Laptops laden.',
+            '**Verwendung von Q8_0 auf einem Laptop, wenn Q4_K_M ausreichend ist:** Q8_0 verdoppelt die RAM-Anforderung gegenüber Q4_K_M mit vernachlässigbarem Qualitätsgewinn für die meisten Gesprächsaufgaben. Auf einem Laptop mit begrentem RAM und höherer Wärmelast ist Q4_K_M immer die bessere Wahl, es sei denn, Sie haben 32+ GB und führen das Modell auf GPU aus.',
+            '**Ausführung langer Generierungssitzungen ohne Ständer:** Kontinuierliche Inferenz über 20+ Minuten auf einem flachen Schreibtisch verursacht Thermal Throttling auf den meisten Laptops innerhalb von 15 Minuten. Ein 15-Euro-Laptop-Ständer, der die Basis um 2–3 cm anhebt, verlängert die drosselungsfreie Laufzeit von 10 auf 20+ Minuten ohne weitere Änderungen.',
+            '**Erwarten, dass Laptop-Geschwindigkeiten mit Cloud-API-Geschwindigkeiten übereinstimmen:** GPT-4o über API erzeugt 80–150 Token/Sek. Ein 7B-Modell auf einem 8-GB-Laptop erzeugt 10–25 Token/Sek. auf CPU. Dies ist ein 4–15-facher Geschwindigkeitsunterschied. Für interaktive Nutzung ist Laptop-Inferenz in Ordnung. Für Batch-Verarbeitung großer Dokumente sind Cloud-APIs schneller und günstiger bei niedrigem Volumen.',
+            '**Wahl der Modellgröße basierend auf Parameterzahl statt RAM-Passfähigkeit:** Ein 13B-Modell klingt besser als ein 7B-Modell — aber auf einem 16-GB-Laptop mit laufendem Browser passt das 13B-Modell bei Q4_K_M gerade noch. Das 7B-Modell bei Q5_K_M (höhere Quantisierungsqualität) läuft schneller und produziert oft bessere Ergebnisse als ein 13B-Modell bei Q4_K_M, das um Speicher kämpft.',
+          ],
+        },
+        relatedReading: {
+          title: 'Weiterführende Ressourcen',
+          items: [
+            '[Was sind lokale LLMs?](/local-llms/what-are-local-llms) — Grundlagenleitfaden zum Verständnis, wie lokale Inferenz funktioniert und welche Hardware-Komponenten wichtig sind',
+            '[So installieren Sie Ollama](/local-llms/how-to-install-ollama) — vollständiger Einrichtungsleitfaden für macOS, Windows und Linux mit Laptop-spezifischen Konfigurationshinweisen',
+            '[Beste Anfänger Local LLM-Modelle](/local-llms/best-beginner-local-llm-models) — Modellempfehlungen nach RAM-Tier einschließlich 3B- und 7B-Modellen, die für Laptop-Nutzung optimiert sind',
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — Detaillierter Vergleich von Inferenz-Architekturen, die für die Auswahl von Laptop-Hardware relevant sind',
+            '[Lokale LLMs vs Cloud-APIs](/local-llms/local-llms-vs-cloud-apis) — Kosten- und Geschwindigkeitsvergleich, um zu entscheiden, wann Laptop-Inferenz die richtige Wahl ist',
+            '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — Vollständiger Leitfaden zu Q4/Q5/Q8-Quantisierungs-Kompromissen für speicherbegrenzte Laptop-Umgebungen',
+          ],
+        },
+        faqSection: {
+          title: 'Häufig gestellte Fragen zum Ausführen lokaler LLMs auf Laptops',
+          faqs: [
+            {
+              q: 'Wird das Ausführen eines Local LLM meinen Laptop über die Zeit hinweg beschädigen?',
+              a: 'Nein — moderne CPUs und GPUs sind für die sichere Handhabung kontinuierlicher hoher Lasten über Thermal Throttling ausgelegt. Das Ausführen von Inferenz stundenlang ist gleichbedeutend mit Videokodierung oder Gaming. Ein Laptop-Ständer und angemessene Belüftung verhindern übermäßige Wärmeentwicklung. Die Akkuzyklenzahl erhöht sich mit längeren eingesteckten Ladevorgängen, was ein normales Verschleißmuster ist.',
+            },
+            {
+              q: 'Kann ich ein Local LLM auf einem 4-GB-RAM-Laptop ausführen?',
+              a: 'Kaum. Ein 2B-Modell wie Gemma 2 2B benötigt etwa 1,7 GB RAM für das Modell, aber das OS benötigt gleichzeitig 2–3 GB. Bei 4 GB Gesamt-RAM werden Sie wahrscheinlich Swap-Nutzung erleben, die Inferenz 5–10× langsamer macht. Das praktische Minimum für eine brauchbare Erfahrung ist 8 GB.',
+            },
+            {
+              q: 'Benötigt mein Laptop eine dedizierte GPU, um lokale LLMs auszuführen?',
+              a: 'Nein. Alle großen Local LLM-Tools (Ollama, LM Studio, GPT4All) laufen nur auf CPU. Eine dedizierte GPU beschleunigt die Inferenz erheblich, aber 3B–7B-Modelle sind mit 10–30 Token/Sek. nur auf CPU nutzbar. Siehe [Beste Anfänger Local LLM-Modelle](/local-llms/best-beginner-local-llm-models) für CPU-optimierte Modellempfehlungen.',
+            },
+            {
+              q: 'Was ist der schnellste Laptop zum Ausführen lokaler LLMs?',
+              a: 'Ab April 2026 ist das Apple MacBook Pro M4 Max (48 GB vereinheitlichter Speicher) der schnellste Consumer-Laptop für lokale LLM-Inferenz. Es erreicht 80–120 Token/Sek. bei einem 13B-Modell und kann 30B-Modelle bei Q4_K_M ausführen. Für Windows-Laptops erzeugt eine RTX 4090 Laptop-GPU (16 GB VRAM) 100–130 Token/Sek. bei 7B-Modellen, verbraucht aber erheblich mehr Energie und erzeugt mehr Wärme.',
+            },
+            {
+              q: 'Wie erkenne ich, ob mein Laptop Thermal Throttling macht?',
+              a: 'Auf macOS: öffnen Sie Activity Monitor → Fenster → CPU-Nutzungs-Verlauf. Ein plötzlicher Rückgang der CPU-Frequenz während kontinuierlicher Generierung weist auf Drosslung hin. Auf Windows: verwenden Sie HWiNFO64 zur Echtzeitüberwachung von CPU/GPU-Temperaturen und Taktgeschwindigkeiten. Drosslung tritt normalerweise auf, wenn die CPU-Temperatur 95–100°C überschreitet.',
+            },
+            {
+              q: 'Kann ich ein Local LLM mit Batteriestrom ausführen?',
+              a: 'Ja, aber Geschwindigkeit und Dauer sind reduziert. Im Akkubetrieb limitiert macOS automatisch den CPU/GPU-Stromverbrauch, wodurch die Inferenzgeschwindigkeit um 20–35% im Vergleich zum angesteckten Betrieb reduziert wird. Ein 7B-Modell auf einem MacBook M3 Pro verbraucht etwa 12–18W während der Inferenz — erwarten Sie 3–4 Stunden aktive Generierung bei vollständiger Ladung, bevor es auf 20% fällt. Verwenden Sie für akkueffiziente Sitzungen ein 3B-Modell (6–10W).',
+            },
+            {
+              q: 'Was ist die beste Modellgröße für einen 8-GB-RAM-Laptop?',
+              a: 'Ein 7B-Modell mit Q4_K_M ist das praktische Maximum für 8-GB-RAM-Laptops im Betrieb mit Browser oder anderen Apps. Nur für das Modell mit allen anderen Apps geschlossen kann ein 9B-Modell passen. Der empfohlene Standard ist llama3.2:3b für Multitasking oder mistral:7b für Qualität, wenn Sie den Browser schließen können.',
+            },
+            {
+              q: 'Nutzt Ollama automatisch die GPU auf einem Laptop?',
+              a: 'Ja. Ollama erkennt verfügbare GPU-Beschleunigung automatisch und nutzt sie. Auf Apple Silicon nutzt es Metal-GPU-Beschleunigung. Auf NVIDIA-Laptops nutzt es CUDA. Auf AMD-Laptops nutzt es ROCm (mit einiger zusätzlicher Einrichtung auf Linux). Sie können überprüfen, ob GPU verwendet wird, indem Sie nach dem Starten eines Modells `ollama ps` ausführen — es zeigt, ob Schichten zu GPU oder CPU geladen werden.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Quellen',
+          items: [
+            'Apple. (2026). "Apple M4 Max Chip Übersicht." Apple Developer. https://developer.apple.com/apple-silicon/ — Vereinheitlichte Speicher-Architektur, ML-Leistungsbenchmarks und Stromeffizienz-Spezifikationen.',
+            'Ollama. (2026). "Ollama Dokumentation." https://ollama.com/docs — CPU/GPU-Inferenz-Konfiguration, CUDA/Metal-Beschleunigung und Kontextlängen-Einstellungen.',
+            'llama.cpp Mitwirkende. (2026). "llama.cpp Performance-Benchmarks." https://github.com/ggerganov/llama.cpp — Token-Durchsatzdaten über Hardware-Konfigurationen und Quantisierungsstufen.',
+            'Hugging Face. (2026). "GGUF-Quantisierungs-Leitfaden." https://huggingface.co/docs/transformers/main/en/quantization/gguf — Q2/Q4/Q5/Q8-Qualität vs Speicher-Kompromisse mit Benchmark-Ergebnissen.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Wie man lokale LLMs auf einem Laptop ausführt: Performance, Wärmemanagement und Modellwahl',
+        'description': 'Wie man leistungsstarke lokale LLMs auf Laptops mit begrentem VRAM ausführt. Quantisierungstricks, beste Modelle, Leistungstipps und Apple Silicon vs Windows-Vergleiche.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=de',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['Local LLM Laptop', 'LLM auf Laptop ausführen', 'Low VRAM Modelle', 'Ollama Laptop', 'Quantisierung für Laptops'],
+        'about': [
+          { '@type': 'Thing', 'name': 'Local LLM auf Laptop' },
+          { '@type': 'Thing', 'name': 'Apple Silicon Inferenz' },
+          { '@type': 'Thing', 'name': 'Thermal Throttling' },
+          { '@type': 'Thing', 'name': 'LLM-Quantisierung' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'RAM-Anforderungen' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Wie man Thermal Throttling auf einem Laptop mit lokalem LLM-Betrieb reduziert',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Verwenden Sie einen Laptop-Ständer mit Luftzirkulation' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Deaktivieren Sie Turbo Boost, um eine gleichmäßige Taktgeschwindigkeit zu halten' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Begrenzen Sie die Generierungs-Batch-Größe' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Verwenden Sie Q4_K_M-Quantisierung, um Wärme zu reduzieren' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Wird das Ausführen eines Local LLM meinen Laptop über die Zeit hinweg beschädigen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — moderne CPUs und GPUs sind für die sichere Handhabung kontinuierlicher hoher Lasten ausgelegt. Ein Laptop-Ständer und angemessene Belüftung verhindern übermäßige Wärmeentwicklung.' } },
+          { '@type': 'Question', name: 'Kann ich ein Local LLM auf einem 4-GB-RAM-Laptop ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Kaum. Ein 2B-Modell benötigt etwa 1,7 GB RAM für das Modell, das OS benötigt 2–3 GB gleichzeitig. Bei 4 GB Gesamt-RAM wird Swap-Nutzung Inferenz 5–10× langsamer machen.' } },
+          { '@type': 'Question', name: 'Benötigt mein Laptop eine dedizierte GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Alle großen Local LLM-Tools laufen nur auf CPU. Eine dedizierte GPU beschleunigt die Inferenz erheblich, aber 3B–7B-Modelle sind mit 10–30 Token/Sek. nur auf CPU nutzbar.' } },
+          { '@type': 'Question', name: 'Was ist der schnellste Laptop?', acceptedAnswer: { '@type': 'Answer', text: 'Ab April 2026 ist das Apple MacBook Pro M4 Max (48 GB vereinheitlichter Speicher) der schnellste Consumer-Laptop für lokale LLM-Inferenz. Es erreicht 80–120 Token/Sek. bei einem 13B-Modell.' } },
+          { '@type': 'Question', name: 'Wie erkenne ich Thermal Throttling?', acceptedAnswer: { '@type': 'Answer', text: 'Auf macOS: öffnen Sie Activity Monitor → Fenster → CPU-Nutzungs-Verlauf. Ein plötzlicher Rückgang der CPU-Frequenz weist auf Drosslung hin.' } },
+          { '@type': 'Question', name: 'Kann ich mit Batteriestrom ein Local LLM ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, aber Geschwindigkeit und Dauer sind reduziert. Im Akkubetrieb limitiert macOS automatisch CPU/GPU-Stromverbrauch, wodurch Inferenzgeschwindigkeit um 20–35% reduziert wird.' } },
+          { '@type': 'Question', name: 'Was ist die beste Modellgröße für 8 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'Ein 7B-Modell mit Q4_K_M ist das praktische Maximum für 8-GB-RAM-Laptops. Der empfohlene Standard ist llama3.2:3b für Multitasking.' } },
+          { '@type': 'Question', name: 'Nutzt Ollama automatisch die GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Ollama erkennt verfügbare GPU-Beschleunigung automatisch. Sie können überprüfen, ob GPU verwendet wird, indem Sie `ollama ps` ausführen.' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Beste Local LLM-Modelle für Laptops 2026',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:3b', 'description': '2,5 GB RAM. 25–45 Token/s CPU. Beste für 8 GB Laptops und schnelle Aufgaben.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'phi3.5', 'description': '3 GB RAM. 20–35 Token/s CPU. Beste für 8 GB Laptops, Reasoning und Coding.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'mistral:7b', 'description': '4,5 GB RAM. 10–20 Token/s CPU. Beste für 8–16 GB allgemeine Nutzung.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen2.5:7b', 'description': '4,7 GB RAM. 10–18 Token/s CPU. Beste für mehrsprachig und Coding auf 8–16 GB.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'llama3.1:8b', 'description': '5,5 GB RAM. 8–15 Token/s CPU. Beste Qualität bei dieser Größe für 16 GB Laptops.' }
+        ]
+      },
+    },
+
     ja: {
       theme: 'Getting Started',
       title: 'ノートPCでローカルLLMを動かす方法：パフォーマンス、発熱、モデル選択',
