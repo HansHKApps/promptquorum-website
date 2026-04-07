@@ -244,6 +244,11 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
               ))}
             </tbody>
           </table>
+          {section.note && (
+            <p className="text-sm text-text-secondary leading-relaxed mt-4 italic">
+              {renderInlineLinks(section.note, lang)}
+            </p>
+          )}
         </div>
       )}
 
