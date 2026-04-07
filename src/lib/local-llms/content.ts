@@ -1404,7 +1404,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       dateModified: '2026-04-05',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
-      audience: 'Developers and hobbyists setting up local LLMs on their own hardware',
       primaryTerm: 'local LLM troubleshooting',
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
