@@ -1241,6 +1241,39 @@ All other existing GEO rules (answer-first H2s, short paragraphs, entity density
 
 ---
 
+## Rule 22a: H2 Section Body Structure — Direct Answer First, Then Explanation
+
+**Every H2 section must follow a strict 3-part hierarchy.** AI crawlers and featured snippet extractors sample the first 2–3 sentences of each section. If those sentences are preamble or context, the section is skipped.
+
+**Required structure for every H2 section:**
+
+1. **H2 heading** — phrased as the exact user search query (see Rule 22)
+2. **Direct answer** — 2–3 sentences, definition style. No preamble. Answer the H2 question completely in this block alone.
+3. **Explanation** — supporting detail, context, trade-offs, caveats.
+4. **Examples / steps** — concrete commands, code blocks, numbered steps, or a table.
+
+**Wrong (explanation before answer):**
+> ## How Does Quantization Reduce VRAM?
+> Quantization is a technique used in machine learning that has been applied to large language models...
+
+**Right (answer first):**
+> ## How Does Quantization Reduce VRAM?
+> **Q4 quantization stores each model weight in 4 bits instead of 16 (FP16), reducing VRAM by 75% with under 1% quality loss.** A 7B model drops from ~14 GB (FP16) to ~3.5 GB (Q4). This is the single most impactful setting for running larger models on consumer hardware.
+>
+> Quantization works by rounding floating-point weights to the nearest value in a smaller number space...
+>
+> Example: `ollama run llama3.1:8b-instruct-q4_K_M`
+
+**Why:** AI systems extract featured snippets from the first 2–3 sentences of a section. A definition-style opening answers the query immediately, satisfies the "direct answer" extraction pattern used by Perplexity, ChatGPT Browse, and Google AI Overviews, and signals the section is authoritative.
+
+**Compliance checklist:**
+- `[ ]` First 2–3 sentences after H2 answer the question directly (no preamble)
+- `[ ]` Direct answer block can stand alone — readable without the rest of the section
+- `[ ]` Explanation follows the answer, never precedes it
+- `[ ]` At least one example, command, table, or step list per H2 section
+
+---
+
 ## Rule 11: Visible Last-Updated Date
 
 Every PE article must display a visible publication or last-modified date near the top of the page. AI crawlers increasingly weight recency when selecting sources for citations.
