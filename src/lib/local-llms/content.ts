@@ -8048,6 +8048,42 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
       },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Local LLM Hardware Guide 2026: GPUs, VRAM, RAM & Performance Benchmarks',
+        'description': 'Kompletter Hardware-Guide für Local LLMs 2026. Vergleiche GPUs, VRAM-Anforderungen, RAM und reale Performance-Benchmarks.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=de',
+        'inLanguage': 'de',
+        'datePublished': '2026-01-01',
+        'dateModified': '2026-04-01',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'isPartOf': {
+          '@type': 'CreativeWork',
+          'name': 'Local LLM Hardware Guide 2026',
+          'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026'
+        },
+        'proficiencyLevel': 'Intermediate',
+        'keywords': ['local LLM hardware', 'GPU for LLM', 'VRAM requirements 2026', 'best GPU for Ollama', 'LLM build guide'],
+        'about': [
+          { '@type': 'Thing', 'name': 'GPU for local LLMs' },
+          { '@type': 'Thing', 'name': 'VRAM requirements' },
+          { '@type': 'Thing', 'name': 'RTX 4090' },
+          { '@type': 'Thing', 'name': 'Apple Silicon' },
+          { '@type': 'Thing', 'name': 'LLM quantization' },
+          { '@type': 'Thing', 'name': 'Ollama' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
     },
     fr: {
       theme: 'Hardware & Performance',
@@ -8094,13 +8130,19 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Guide Matériel Local LLM 2026 : GPU, CPU et RAM Expliqués',
-        'description': 'Guide matériel complet 2026 pour LLM locaux. Recommandations GPU, VRAM et CPU exactes pour modèles 7B–70B, conseils de quantification et conformité RGPD.',
-        'url': 'https://promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=fr',
-        'datePublished': '2026-04-04',
-        'dateModified': '2026-04-07',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'logo': { '@type': 'ImageObject', 'url': 'https://promptquorum.com/logo.svg' } },
+        'headline': 'Guide Hardware Local LLM 2026 : GPU, VRAM, RAM et benchmarks de performance',
+        'description': 'Guide complet du matériel pour exécuter des Local LLMs en 2026. Comparaison des GPU, VRAM, RAM et performances réelles.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=fr',
+        'inLanguage': 'fr',
+        'datePublished': '2026-01-01',
+        'dateModified': '2026-04-01',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'isPartOf': {
+          '@type': 'CreativeWork',
+          'name': 'Local LLM Hardware Guide 2026',
+          'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026'
+        },
         'proficiencyLevel': 'Intermediate',
         'keywords': ['LLM matériel', 'GPU pour LLM', 'VRAM 2026', 'GPU pour Ollama', 'guide construction LLM', 'conformité RGPD'],
         'about': [
@@ -8378,13 +8420,19 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'ローカルLLM向けハードウェアガイド 2026：GPU・CPU・RAM要件の詳細解説',
-        'description': '2026年ローカルLLM向け完全ハードウェアガイド。7B～70B向けGPU・VRAM正確推奨、予算対ハイパフォーマンス設定、PromptQuorumテスト方法。',
+        'headline': 'Local LLM ハードウェアガイド 2026：GPU・VRAM・RAMと実測性能比較',
+        'description': '2026年版Local LLMのためのハードウェア完全ガイド。GPU、VRAM、RAMの要件と実測ベンチマークを詳しく解説。',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=ja',
-        'datePublished': '2026-04-04',
-        'dateModified': '2026-04-07',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'inLanguage': 'ja',
+        'datePublished': '2026-01-01',
+        'dateModified': '2026-04-01',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'isPartOf': {
+          '@type': 'CreativeWork',
+          'name': 'Local LLM Hardware Guide 2026',
+          'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026'
+        },
         'proficiencyLevel': 'Intermediate',
         'keywords': ['ローカルLLM', 'ハードウェア', 'GPU', 'VRAM', 'RTX 4090', 'Apple Silicon', 'Ollama', 'METI'],
         'about': [
