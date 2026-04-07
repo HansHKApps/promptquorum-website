@@ -2509,14 +2509,270 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
 
         ja: {
       theme: 'Getting Started',
-      title: 'ノートPCでローカルLLMを動かす方法：パフォーマンス、発熱、モデル選択',
-      seoTitle: 'ノートPCでLocal LLMを動かす方法 2026',
-      intro: 'ローカルLLMは8GBのRAMと最新のCPUまたはApple Siliconチップがあれば、ノートPCで実用的に動作します。',
-      metaDescription: 'VRAMが少ないノートPCでも高性能なLocal LLMを動かす実践ガイド。量子化テクニックとPromptQuorum活用法。',
+      title: 'ノートパソコンでローカルLLMを動かす方法：パフォーマンス、発熱管理、モデル選択',
+      seoTitle: 'ノートパソコンでLocal LLMを動かす 2026',
+      intro: '2026年、適切なモデルサイズと量子化があれば、ノートパソコンでローカルLLMを実行することは現実的です。8GBのRAMを備えたどのノートパソコンでも、Q4_K_M量子化で7Bモデルを実行できます—Windows CPUで10–25トークン/秒、Apple Silicon M3で50–80トークン/秒。3つの真の制約は、RAM（最大モデルサイズを制限）、サーマルスロットリング（継続的な負荷後10–15分で速度を20–40%削減）、およびバッテリー消費量（アクティブな推論時に1時間あたり30–60%）です。2026年4月現在、Apple Silicon MacBookはローカルLLM推論向けの最良のノートパソコンオプションです—統合メモリによってGPUはすべての利用可能なRAMを使用でき、AppleのMetal加速はほとんどのWindowsノートパソコン専用GPUをワットあたりで上回ります。',
+      metaDescription: '8GBのRAMを備えたどのノートパソコンでも7Bローカルサーバーを実行できます。サーマルスロットリングは10分後に速度を20–40%削減します—その方法と適切なモデルを選択する方法。',
       publishDate: '2026-04-04',
+      dateModified: '2026-04-07',
       readTime: '8分で読める',
-      sections: {},
+      educationalLevel: 'Beginner',
+      primaryTerm: 'ノートパソコン向けローカルLLM',
+      toc: [
+        { label: '重要なポイント', anchor: 'key-points' },
+        { label: 'ノートパソコンでローカルLLMを実行できますか？', anchor: 'can-run' },
+        { label: '8GB RAM vs 16GB RAM', anchor: 'ram-comparison' },
+        { label: 'ノートパソコン向けのベストモデル', anchor: 'best-models' },
+        { label: 'Apple Silicon vs Windowsノートパソコン', anchor: 'apple-vs-windows' },
+        { label: 'サーマルスロットリングを処理する方法', anchor: 'thermal-management' },
+        { label: 'ローカル推論時のバッテリー消費', anchor: 'battery-drain' },
+        { label: 'ノートパソコン向けの量子化のヒント', anchor: 'quantization-tips' },
+        { label: '地域別コンプライアンス', anchor: 'regional-compliance' },
+        { label: '一般的な間違い', anchor: 'common-mistakes' },
+        { label: '関連するリソース', anchor: 'related-resources' },
+        { label: 'よくある質問', anchor: 'faq' },
+        { label: 'ソース', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Q4_K_M量子化の3Bまたは7Bモデルは、8GBのRAMを備えたどのモダンノートパソコンでも実用的に実行されます。',
+            'Apple Silicon MacBook（M1、M2、M3、M4）は統合メモリとMetal GPU加速のため、ほとんどのWindowsノートパソコンをローカル推論で上回ります—M3 MacBook Proは50–80トークン/秒で7Bモデルを実行します。',
+            'サーマルスロットリングは継続的な生成後10–15分で速度を20–40%削減します。ノートパソコンスタンドを使用し、Turbo Boostを無効化して、安定した速度を維持してください。',
+            'バッテリー消費量：ほとんどのノートパソコンでアクティブな推論中、毎時30–60%のバッテリーを予想してください。長いセッションは接続してください。',
+            '8GB RAM Windows/Linuxノートパソコン：7Bまでのq4_k_mモデルを使用。16GB RAM：13Bまでのq4_k_mモデル、または7Bの場合はq5_k_m。',
+          ],
+        },
+        canYouRun: {
+          title: 'ノートパソコンでローカルLLMを実行できますか？',
+          content: [
+            'はい—適切なモデルサイズで。8GBのRAMを搭載したノートパソコンがQ4_K_M量子化で7Bモデルを実行する場合、CPUで10–25トークン/秒、Apple Siliconで50–80トークン/秒を生成します。これはクラウドAPIと比較して遅いですが、対話的な使用には十分な速度です。',
+            'ほとんどの8GBノートパソコンの実用的な上限は7Bモデルです。Q4_K_MでのQ4_K_Mモデルは約9GBのRAMが必要です—16GBマシンでは技術的に可能ですが、OSと他のアプリケーションの余裕がほとんどありません。',
+            '[ローカルLLMとは何か](/local-llms/what-are-local-llms)とRAM要件の完全な説明については、専用ガイドを参照してください。',
+          ],
+          blockquote: 'ノートパソコン上のローカルLLMはCPUまたはRAMで実行されるモデルファイル—インターネットなし、APIなし、ハードウェアに応じてローカルで10–80トークン/秒で生成されるトークン。',
+          blockquoteSource: '一言で言うと',
+        },
+        ram8vs16: {
+          title: '8GB RAM vs 16GB RAMノートパソコン：実用的な違いは何ですか？',
+          rows: [
+            { 'シナリオ': '最大モデルサイズ', '8GB RAM': 'Q4_K_M（〜4.5GB）の7B', '16GB RAM': 'Q4_K_M（〜9GB）の13B' },
+            { 'シナリオ': 'ブラウザを開いたモデル', '8GB RAM': '3B–7B（タイト）', '16GB RAM': '7B–13B快適' },
+            { 'シナリオ': '推奨される最初のモデル', '8GB RAM': 'llama3.2:3bまたはmistral:7b', '16GB RAM': 'llama3.1:8bまたはqwen2.5:14b' },
+            { 'シナリオ': '同時アプリケーション', '8GB RAM': '7Bをロードする前にブラウザを閉じます', '16GB RAM': '通常のマルチタスク+ 7Bモデル' },
+          ],
+          columns: ['シナリオ', '8GB RAM', '16GB RAM'],
+        },
+        bestModels: {
+          title: 'ノートパソコン向けのベストローカルLLMモデルは何ですか？',
+          content: 'これらのモデルはノートパソコンの制約用に特別に選択されています—品質、RAM使用量、および継続的な生成速度のバランスをとっています。[Ollama](/local-llms/how-to-install-ollama)をインストールして、これらのいずれかを単一のコマンドで実行します：',
+          rows: [
+            { 'モデル': 'llama3.2:3b', 'RAM': '2.5GB', 'Speed (CPU)': '25–45トークン/秒', '最適な用途': '8GBノートパソコン、クイックタスク' },
+            { 'モデル': 'phi3.5', 'RAM': '3GB', 'Speed (CPU)': '20–35トークン/秒', '最適な用途': '8GBノートパソコン、推論/コーディング' },
+            { 'モデル': 'mistral:7b', 'RAM': '4.5GB', 'Speed (CPU)': '10–20トークン/秒', '最適な用途': '8–16GB、一般的な用途' },
+            { 'モデル': 'qwen2.5:7b', 'RAM': '4.7GB', 'Speed (CPU)': '10–18トークン/秒', '最適な用途': '8–16GB、多言語、コーディング' },
+            { 'モデル': 'llama3.1:8b', 'RAM': '5.5GB', 'Speed (CPU)': '8–15トークン/秒', '最適な用途': '16GBノートパソコン、最高の品質' },
+          ],
+          columns: ['モデル', 'RAM', 'Speed (CPU)', '最適な用途'],
+        },
+        appleSilicon: {
+          title: 'Apple Silicon vs Windowsノートパソコン：ローカルLLMに最適なのはどちらですか？',
+          content: [
+            '2026年4月現在、Apple Silicon MacBook（M1からM4）はローカルLLM推論向けの最高のコンシューマーノートパソコンです。[統合メモリ](/local-llms/gpu-vs-cpu-vs-apple-silicon)アーキテクチャは、GPUとCPUが同じメモリプールを共有することを意味します—18GBのメモリを備えたM3 MacBook ProはGPUメモリ全体で13Bモデルを実行でき、50–80トークン/秒を実現できます。',
+            'VRAMが十分（8GB以上）な場合、専用NVIDIAグラフィックス搭載のWindowsノートパソコンがより高速になる可能性があります。NVIDIA RTX 4060ノートパソコンGPU（8GB VRAM）は60–90トークン/秒で7Bモデルを実行します—Apple M3 Proと同等です。欠点は、バッテリー消費量が多く、熱が多く生成されます。',
+            'Intel Iris XeまたはAMD Radeon統合グラフィックス搭載のWindowsノートパソコンはCPU推論のみを使用し、7Bモデルで8–20トークン/秒になります。',
+          ],
+          rows: [
+            { 'ノートパソコンタイプ': 'Apple M3 Pro（18GB）', 'Speed (7B)': '50–80トークン/秒', 'バッテリー消費': '中程度', '最大モデル': '~13B' },
+            { 'ノートパソコンタイプ': 'Apple M2（8GB）', 'Speed (7B)': '30–50トークン/秒', 'バッテリー消費': '中程度', '最大モデル': '~7B' },
+            { 'ノートパソコンタイプ': 'NVIDIA RTX 4060ノートパソコン（8GB VRAM）', 'Speed (7B)': '60–90トークン/秒', 'バッテリー消費': '高い', '最大モデル': '~7B（GPU）、~13B（CPUオフロード）' },
+            { 'ノートパソコンタイプ': 'Intel i7 + Iris Xe（16GB RAM）', 'Speed (7B)': '8–15トークン/秒', 'バッテリー消費': '中程度', '最大モデル': '~13B' },
+            { 'ノートパソコンタイプ': 'AMD Ryzen 7 +統合GPU（16GB）', 'Speed (7B)': '10–18トークン/秒', 'バッテリー消費': '中程度', '最大モデル': '~13B' },
+          ],
+          columns: ['ノートパソコンタイプ', 'Speed (7B)', 'バッテリー消費', '最大モデル'],
+        },
+        thermals: {
+          title: 'ノートパソコンでサーマルスロットリングをどのように処理しますか？',
+          content: [
+            'サーマルスロットリングは、CPUまたはGPUが温度制限に達し、冷却するためにクロック速度を低下させるときに発生します。ローカルLLM推論の場合、これは通常、継続的な生成後10–15分で発生し、速度を20–40%削減します。',
+          ],
+          items: [
+            '**エアフロー間隙のあるノートパソコンスタンドを使用します**—ノートパソコンを2–3cm持ち上げると、排気気流が向上し、スロットリングの開始が10から20+分に遅延します。',
+            '**Intel Turbo Boost / AMD Precision Boostを無効にします**—ベースクロック速度で実行すると、サーマルスパイクのない安定した性能が得られます。macOSでは、`cpufreq`をインストールするか、バッテリー設定の「低電力」モードを使用します。',
+            '**生成バッチサイズを制限します**—非常に長い応答の再生成を避けます。長いタスクを短い入力に分割します。',
+            '**Q8_0ではなくQ4_K_Mを使用します**—低い量子化にはトークンあたりの計算が少なくなり、限界品質で熱が少なくなります。',
+          ],
+          blockquote: 'サーマルスロットリングはCPUが約95°Cを超えるときに自動的にクロック速度を低下させるCPU—継続的な生成後10–15分でローカルLLM推論速度を20–40%削減します。',
+          blockquoteSource: '一言で言うと',
+        },
+        battery: {
+          title: 'ローカルLLMはどのくらいのバッテリーを消費しますか？',
+          content: [
+            'ローカル推論中のバッテリー消費量は非常に多いです。7BモデルでのアクティブなCPU推論は、一般的なノートパソコンCPUで15–25Wを引き出し、60Wh バッテリーのフル充電からバッテリー寿命を2–3時間に削減します。',
+            'Apple Siliconは著しく効率的です。M3 MacBook Proで7Bモデルを実行する場合、推論中に約12–18Wを消費し、フル充電から3–4時間のアクティブな生成を提供します。',
+            '長いセッションの場合は接続してください。バッテリー効率の良いローカル推論が必要な場合は、Q4_K_MでのQ4_K_M 3Bモデルを使用します—それは6–10Wを引き出し、ほとんどのノートパソコンのバッテリー寿命を5–6時間に延長します。',
+          ],
+        },
+        quantization: {
+          title: 'ノートパソコンでどの量子化レベルを使用する必要がありますか？',
+          content: '[量子化](/local-llms/llm-quantization-explained)はモデル精度を削減して、RAMと計算要件を削減します。ノートパソコンの場合、Q4_K_Mは推奨デフォルトです：',
+          rows: [
+            { '量子化': 'Q2_K', 'RAM vs Full': '~25%', '品質損失': '高い—顕著な低下', '用途': '極めて低いRAMのみ' },
+            { '量子化': 'Q3_K_S', 'RAM vs Full': '~35%', '品質損失': '中程度', '用途': 'RAM 4GB未満' },
+            { '量子化': 'Q4_K_M', 'RAM vs Full': '~45%', '品質損失': '低い—推奨デフォルト', '用途': 'ほとんどのノートパソコン、最適なバランス' },
+            { '量子化': 'Q5_K_M', 'RAM vs Full': '~55%', '品質損失': '最小限', '用途': '16GB RAMノートパソコン' },
+            { '量子化': 'Q8_0', 'RAM vs Full': '~80%', '品質損失': '無視できる', '用途': '32GB RAM、またはGPU搭載8GB以上のVRAM' },
+          ],
+          columns: ['量子化', 'RAM vs Full', '品質損失', '用途'],
+        },
+        regionalContext: {
+          title: 'ノートパソコンでローカルLLMを実行することはプライバシーをどのように保護しますか？',
+          content: [
+            '**日本（METI）**：METI AIガバナンスガイドラインは、AI推論が実行される場所をドキュメント化することを組織に要求します。ノートパソコンでローカルに実行されるOllama設定は、個々の専門的な使用のためにこの要件を満たします—すべての推論はデバイスと特定のモデルバージョンにトレーサブルです。日本の専門家は、機密文書の処理のため、M Seriesマック上のOllamaを通じてLLaMA 3.1 7Bを一般的に使用します。',
+            '**プライバシーと合法性**：ノートパソコンでローカルLLMを実行すると、デバイスからデータが出ません。推論テキスト、コンテキスト、出力はすべてローカルに保存されます。これはMETI AI管理フレームワークの遵守とデータ主権要件を満たします。',
+            '**オフライン処理**：ネットワーク分離されたノートパソコンでのローカル推論は、個人情報（医療データ、財務記録）の処理のための最高のプライバシー構成です。',
+          ],
+        },
+        commonMistakes: {
+          title: 'ノートパソコンでローカルLLMを実行するときの一般的な間違い',
+          items: [
+            '**他のアプリを閉じずに8GB RAMで7Bモデルを読み込む**：Q4_K_Mの7Bモデルは約4.5GBを使用します。macOSまたはWindowsは通常3–4GB RAMを自分で使用します。8GBマシンでは、ブラウザとタブが複数開くと、メモリプレッシャー、スワップ使用、および2–5トークン/秒程度の速度が発生します。8GB RAMノートパソコンで3B以上のモデルをロードする前に、ブラウザと不要なアプリを閉じます。',
+            '**Q4_K_Mが十分な場合はQ8_0を使用する**：Q8_0はQ4_K_Mと比較してRAM要件を2倍にし、ほとんどの会話タスクでは無視できる品質獲得です。RAMが限定され、熱負荷が高いノートパソコンでは、32GB以上があり、GPUでモデルを実行していない限り、Q4_K_Mは常に最適な選択肢です。',
+            '**スタンドなしで長い生成セッションを実行する**：フラットなデスク上で20分以上継続推論すると、ほとんどのノートパソコンで15分以内にサーマルスロットリングが発生します。ベースを2–3cm上げるノートパソコンスタンド（15ユーロ）は、他の変更なしにスロットリング自由な実行時を10から20+分に延長します。',
+            '**ノートパソコンの速度がクラウドAPI速度と一致することを期待する**：GPT-4o経由API 80–150トークン/秒を生成します。8GBノートパソコンの7Bモデル CPUで10–25トークン/秒を生成します。これは4–15倍の速度差です。対話的な用途では、ノートパソコン推論は問題ありません。バッチ処理大型ドキュメント用には、クラウドAPIが低ボリュームでより高速で安価です。',
+            '**RAMフィットの代わりにパラメータ数に基づいてモデルサイズを選択する**：13Bモデルは7Bモデルよりも優れた音声です—しかし16GBノートパソコンでブラウザが実行されている場合、Q4_K_MでのQ4_K_Mはぎりぎり収まります。Q5_K_M（より高い量子化品質）の7Bモデルがより高速に実行され、メモリのために闘っている13B Q4_K_Mモデルよりも多くの場合より良い結果を生成します。',
+          ],
+        },
+        relatedReading: {
+          title: '関連するリソース',
+          items: [
+            '[ローカルLLMとは何ですか？](/local-llms/what-are-local-llms)—ローカル推論がどのように機能し、どのハードウェアコンポーネントが重要かについての基本ガイド',
+            '[Ollamaをインストール方法](/local-llms/how-to-install-ollama)—macOS、Windows、Linuxの完全なセットアップガイド（ノートパソコン固有の構成メモ付き）',
+            '[初心者向けのベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models)—RAMティア別のモデルの推奨事項（ノートパソコン使用用に最適化された3B および7Bモデルを含む）',
+            '[GPUvs CPUvs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon)—ノートパソコンハードウェア選択に関連する推論アーキテクチャの詳細な比較',
+            '[ローカルLLMs vs クラウドAPI](/local-llms/local-llms-vs-cloud-apis)—ノートパソコン推論がいつ正しい選択であるかを決定するのに役立つコストと速度の比較',
+            '[LLM量子化説明](/local-llms/llm-quantization-explained)—メモリ制約のあるノートパソコン環境向けのQ4/Q5/Q8量子化トレードオフの完全なガイド',
+          ],
+        },
+        faqSection: {
+          title: 'ノートパソコンでのローカルLLM実行に関するよくある質問',
+          faqs: [
+            {
+              q: 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？',
+              a: 'いいえ—最新のCPUおよびGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。推論を数時間実行することはビデオエンコーディングやゲームに相当します。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。バッテリーサイクル数は長時間のプラグイン充電で増加し、これは通常の摩耗パターンです。',
+            },
+            {
+              q: '4GB RAMノートパソコンでローカルLLMを実行できますか？',
+              a: 'ほぼ。Gemma 2 2Bのような2Bモデルは、モデル用に約1.7GB RAMが必要ですが、OSは同時に2–3GB必要です。合計4GBでは、スワップ使用により推論が5–10倍遅くなります。実用的な最小値は8GBです。',
+            },
+            {
+              q: 'ノートパソコンはローカルLLMを実行するために専用GPUを必要とますか？',
+              a: 'いいえ。すべての主要なローカルLLMツール（Ollama、LM Studio、GPT4All）はCPUのみで実行されます。専用GPUはウォーム推論を大幅に加速しますが、3B–7Bモデルは10–30トークン/秒でCPU単独で使用可能です。[初心者向けのベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models)を参照してください。',
+            },
+            {
+              q: 'ローカルLLMを実行するための最速のノートパソコンは何ですか？',
+              a: '2026年4月現在、Apple MacBook Pro M4 Max（48GB統合メモリ）はローカルLLM推論のための最速のコンシューマーノートパソコンです。13BモデルでB80–120トークン/秒を達成でき、Q4_K_Mで30Bモデルを実行できます。Windowsノートパソコンの場合、RTX 4090ノートパソコンGPU（16GB VRAM）は7Bモデルで100–130トークン/秒を生成しますが、かなり多くの電力を消費し、より多くの熱を生成します。',
+            },
+            {
+              q: 'ノートパソコンがサーマルスロットリングしているかどうかを知るにはどうすればよいですか？',
+              a: 'macOSで：Activity Monitor→Window→CPU使用履歴を開きます。継続生成中のCPU周波数の急激な低下はスロットリングを示します。Windowsで：HWiNFO64を使用してCPU/GPUの温度とクロック速度をリアルタイムで監視します。スロットリングは通常、CPUの温度が95–100°Cを超えるときに発生します。',
+            },
+            {
+              q: 'バッテリー電力でローカルLLMを実行できますか？',
+              a: 'はい、ただし速度と期間は削減されます。バッテリーモードでは、macOSは自動的にCPU/GPU電力出力を制限し、プラグイン性能と比較して推論速度を20–35%削減します。MacBook M3 Proの7Bモデルは推論中に約12–18Wを引き出します—フル充電から3–4時間のアクティブな生成を期待してください。バッテリー効率的なセッションには、3Bモデル（6–10W）を使用してください。',
+            },
+            {
+              q: '8GB RAMノートパソコンに最適なモデルサイズは何ですか？',
+              a: 'Q4_K_Mの7Bモデルは、ブラウザまたは他のアプリが開いた状態で実行する8GB RAMノートパソコンの実用的な最大値です。すべての他のアプリがクローズされただけのモデル、9Bモデルが収まる場合があります。推奨される標準はマルチタスク用のllama3.2:3b、またはブラウザを閉じることができる場合の品質用のmistral:7bです。',
+            },
+            {
+              q: 'Ollamaはノートパソコンで自動的にGPUを使用しますか？',
+              a: 'はい。Ollamaは利用可能なGPU加速を自動的に検出して使用します。Apple Siliconでは、Metal GPU加速を使用します。NVIDIAノートパソコンではCUDAを使用します。AMDノートパソコンではROCmを使用します。GPUが使用されているかを確認するには、モデルを開始後に`ollama ps`を実行します—レイヤーがGPUまたはCPUに読み込まれているかどうかが表示されます。',
+            },
+          ],
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            'Apple. (2026). "Apple M4 Max Chipの概要。" Appleデベロッパー。https://developer.apple.com/apple-silicon/ —統合メモリアーキテクチャ、MLパフォーマンスベンチマーク、および電力効率仕様。',
+            'Ollama. (2026). "Ollama文書。" https://ollama.com/docs —CPU/GPU推論構成、CUDA/Metal加速、およびコンテキスト長設定。',
+            'llama.cpp の貢献者。(2026). "llama.cpppパフォーマンスベンチマーク。" https://github.com/ggerganov/llama.cpp —ハードウェア構成と量子化レベル全体のトークンスループットデータ。',
+            'Hugging Face. (2026). "GGUF量子化ガイド。" https://huggingface.co/docs/transformers/main/en/quantization/gguf — Q2/Q4/Q5/Q8品質 vs メモリトレードオフ（ベンチマーク結果付き）。',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'ノートパソコンでローカルLLMを動かす方法：パフォーマンス、発熱管理、モデル選択',
+        'description': 'ノートパソコンでVRAMが限定されている強力なローカルLLMを実行する方法。量子化トリック、ベストモデル、パフォーマンステクニック、およびApple Silicon vs Windows比較。',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=ja',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['ノートパソコン向けローカルLLM', 'ノートパソコンでLLMを実行', '低VRAM モデル', 'Ollamaノートパソコン', 'ノートパソコン向けの量子化'],
+        'about': [
+          { '@type': 'Thing', 'name': 'ノートパソコンのローカルLLM' },
+          { '@type': 'Thing', 'name': 'Apple Silicon推論' },
+          { '@type': 'Thing', 'name': 'サーマルスロットリング' },
+          { '@type': 'Thing', 'name': 'LLM量子化' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'RAM要件' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'ノートパソコンでローカルLLMを実行しているときにサーマルスロットリングを削減する方法',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'エアフロー間隙のあるノートパソコンスタンドを使用' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Turbo Boostを無効にして、安定したクロック速度を維持' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '生成バッチサイズを制限' },
+          { '@type': 'HowToStep', 'position': 4, 'name': '熱を削減するためにQ4_K_M量子化を使用' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ—最新のCPUとGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。' } },
+          { '@type': 'Question', name: '4GB RAMノートパソコンでローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'ほぼ。2Bモデルは約1.7GB RAMが必要で、OSは2–3GB必要です。4GB合計では、スワップ使用により推論が5–10倍遅くなります。' } },
+          { '@type': 'Question', name: 'ノートパソコンはローカルLLM用に専用GPUを必要とますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。すべての主要なローカルLLMツールはCPU単独で実行されます。専用GPUは推論を加速しますが、3B–7Bモデルは10–30トークン/秒でCPU単独で使用可能です。' } },
+          { '@type': 'Question', name: 'ローカルLLMを実行するための最速のノートパソコンは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年4月現在、Apple MacBook Pro M4 Max（48GB統合メモリ）が最速です。13BモデルでB80–120トークン/秒を達成できます。' } },
+          { '@type': 'Question', name: 'ノートパソコンがサーマルスロットリングしているかどうかを知るにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'macOSで：Activity Monitor→Window→CPU使用履歴を開きます。CPUの周波数の急激な低下はスロットリングを示します。' } },
+          { '@type': 'Question', name: 'バッテリー電力でローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、ただし速度と期間は削減されます。macOSは自動的にCPU/GPU電力出力を制限し、推論速度を20–35%削減します。' } },
+          { '@type': 'Question', name: '8GB RAMノートパソコンに最適なモデルサイズは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_Mの7Bモデルが実用的な最大です。推奨される標準はマルチタスク用のllama3.2:3bです。' } },
+          { '@type': 'Question', name: 'Ollamaはノートパソコンで自動的にGPUを使用しますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Ollamaは利用可能なGPU加速を自動的に検出して使用します。GPUが使用されているかを確認するには`ollama ps`を実行してください。' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'ノートパソコン向けベストローカルLLMモデル 2026',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:3b', 'description': '2.5GB RAM。25–45トークン/秒CPU。8GBノートパソコン、クイックタスク向けベスト。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'phi3.5', 'description': '3GB RAM。20–35トークン/秒CPU。8GBノートパソコン、推論/コーディング向けベスト。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'mistral:7b', 'description': '4.5GB RAM。10–20トークン/秒CPU。8–16GB一般使用向けベスト。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen2.5:7b', 'description': '4.7GB RAM。10–18トークン/秒CPU。8–16GB多言語コーディング向けベスト。' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'llama3.1:8b', 'description': '5.5GB RAM。8–15トークン/秒CPU。16GBノートパソコンこのサイズでベスト品質。' }
+        ]
+      },
     },
+
+
   },
 
   'local-llm-security-privacy-checklist': {
