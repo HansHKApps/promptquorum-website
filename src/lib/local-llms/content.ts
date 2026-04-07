@@ -387,6 +387,20 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
       },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'How to Install Ollama 2026',
+        'description': 'Easy Ollama installation for Windows, Mac, and Linux. Get your first local LLM running in minutes with troubleshooting and PromptQuorum integration.',
+        'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Download Ollama', 'text': 'Visit ollama.com and download the installer for your OS (macOS app, Windows installer, or Linux curl command).' },
+          { '@type': 'HowToStep', 'name': 'Install Ollama', 'text': 'Run the macOS/Windows installer, or on Linux run: curl -fsSL https://ollama.com/install.sh | sh' },
+          { '@type': 'HowToStep', 'name': 'Pull your first model', 'text': 'In a terminal run: ollama pull llama3.2:3b (for 8GB RAM) or ollama pull qwen2.5:7b (for 16GB RAM).' },
+          { '@type': 'HowToStep', 'name': 'Run the model', 'text': 'Start a chat: ollama run llama3.2:3b' },
+          { '@type': 'HowToStep', 'name': 'Connect PromptQuorum', 'text': 'Connect PromptQuorum to your Ollama instance to compare responses from multiple local models side by side.' }
+        ]
+      },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -589,6 +603,20 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations by hardware',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'How to Install LM Studio 2026',
+        'description': 'Step-by-step LM Studio installation and first model setup. Clean UI for local LLMs and direct comparison with PromptQuorum.',
+        'url': 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Download LM Studio', 'text': 'Visit lmstudio.ai and download the installer for your OS (macOS, Windows, or Linux).' },
+          { '@type': 'HowToStep', 'name': 'Install and open LM Studio', 'text': 'Run the installer and launch LM Studio.' },
+          { '@type': 'HowToStep', 'name': 'Browse and download a model', 'text': 'Use the built-in model browser to download a model (e.g., Llama 3.2 3B for 8GB RAM).' },
+          { '@type': 'HowToStep', 'name': 'Start a chat session', 'text': 'Click the model and start a chat session inside LM Studio.' },
+          { '@type': 'HowToStep', 'name': 'Enable local server (optional)', 'text': 'Go to the Local Server tab and start the server on port 1234 to connect external tools.' }
+        ]
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1321,6 +1349,24 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
       },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Local LLM Troubleshooting 2026: Fix Ollama & LM Studio Errors',
+        'description': 'Solve common local LLM problems fast: slow speed, VRAM errors, crashes, model loading issues. Practical fixes for Ollama, LM Studio, and more.',
+        'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-04',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['local LLM troubleshooting', 'Ollama errors', 'LM Studio errors', 'LLM VRAM error', 'model loading fix'],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
@@ -1360,7 +1406,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'How Do You Run Local LLMs on a Laptop: Performance, Thermals, and Model Selection',
             seoTitle: 'Run Local LLMs on Laptop 2026: Low VRAM Guide',
       intro: 'Running local LLMs on a laptop is practical with 8 GB of RAM and a modern CPU or Apple Silicon chip. The main constraints are RAM (limits model size), thermal throttling (reduces sustained speed), and battery drain (30–60% of battery per hour under load). The right model and quantization settings make the difference between a usable and an unusable experience.',
-            metaDescription: 'How to run powerful local LLMs on laptops with limited VRAM. Quantization tricks, best models, performance tips, and compare results directly in PromptQuorum.',
+            metaDescription: 'How to run powerful local LLMs on laptops with limited VRAM. Quantization tricks, best models, performance tips, and how to compare results directly in PromptQuorum.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -1507,6 +1553,24 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) — Performance and error fixes',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Run Local LLMs on Laptop 2026: Low VRAM Guide',
+        'description': 'How to run powerful local LLMs on laptops with limited VRAM. Quantization tricks, best models, performance tips, and how to compare results directly in PromptQuorum.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-04',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['local LLM laptop', 'run LLM on laptop', 'low VRAM models', 'Ollama laptop', 'quantization for laptops'],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1691,6 +1755,33 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
       },
+    },
+    de: {
+      theme: 'Getting Started',
+      title: 'Local LLM Security & Privacy Checkliste',
+      seoTitle: 'Local LLM Security & Privacy Checklist 2026',
+      intro: 'Das Betreiben eines lokalen LLM hält Ihre Prompts von Servern Dritter fern, macht Ihr Setup aber nicht automatisch privat oder sicher. Ab April 2026 behandelt die 12-Punkte-Checkliste unten Modellherkunft, Netzwerkisolation, Telemetrieeinstellungen, Festplattenverschlüsselung und Zugriffskontrolle — das Minimum für ein wirklich privates Local-LLM-Setup.',
+      metaDescription: 'Vollständige Checkliste für sichere und DSGVO-konforme Local LLMs. Datenschutz, Isolation und Best Practices für Unternehmen.',
+      publishDate: '2026-04-04',
+      readTime: '8 min',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'local LLM privacy',
+      sections: {},
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Local LLM Security & Privacy Checklist 2026',
+        'description': 'Vollständige Checkliste für sichere und DSGVO-konforme Local LLMs. Datenschutz, Isolation und Best Practices für Unternehmen.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-security-privacy-checklist',
+        'inLanguage': 'de',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Netzwerkisolierung prüfen', 'text': 'Stellen Sie sicher, dass Ollama nur auf localhost gebunden ist und nicht über OLLAMA_HOST=0.0.0.0 exponiert wird.' },
+          { '@type': 'HowToStep', 'name': 'Telemetrie deaktivieren', 'text': 'Deaktivieren Sie anonyme Nutzungsdaten in LM Studio (Einstellungen → Datenschutz) und GPT4All (Einstellungen → Telemetrie).' },
+          { '@type': 'HowToStep', 'name': 'Modellquellen verifizieren', 'text': 'Laden Sie Modelle nur von Hugging Face oder der offiziellen Ollama-Bibliothek. SHA256-Prüfsummen für sensitive Daten verifizieren.' },
+          { '@type': 'HowToStep', 'name': 'Festplattenverschlüsselung aktivieren', 'text': 'Vollständige Festplattenverschlüsselung für DSGVO-konforme Setups mit regulierten Daten aktivieren.' },
+          { '@type': 'HowToStep', 'name': 'Zugriffskontrolle konfigurieren', 'text': 'Authentifizierung für den Ollama-API-Endpunkt in Produktionsumgebungen einrichten.' }
+        ]
+      }
     },
   },
 
@@ -2185,6 +2276,26 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Understanding model formats',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Qwen vs Llama vs Mistral 2026: Best Local LLM?',
+        'description': 'Detailed comparison of Qwen, Llama 3.2, and Mistral for local use. Speed, quality, VRAM usage, and how to test them side-by-side with PromptQuorum.',
+        'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-04',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['Qwen vs Llama', 'Qwen vs Mistral', 'best local LLM 2026', 'local LLM comparison', 'Llama 3.2 vs Qwen'],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -4695,6 +4806,36 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
       },
     },
+    fr: {
+      theme: 'Tools & Interfaces',
+      title: 'API OpenAI-Compatible avec Local LLMs',
+      seoTitle: 'API OpenAI Compatible avec Local LLMs 2026',
+      intro: 'Ollama, vLLM, et LM Studio exposent tous des API REST qui imitent la structure de l\'API OpenAI. Cela signifie que vous pouvez utiliser la bibliothèque OpenAI Python officielle, le client Node.js, ou n\'importe quel outil compatible avec OpenAI en changeant simplement l\'URL de base vers localhost.',
+      metaDescription: 'Exécutez des LLMs locaux avec une API compatible OpenAI (Ollama, LM Studio). Solution privée et gratuite pour remplacer les services cloud.',
+      publishDate: '2026-04-04',
+      readTime: '10 min',
+      educationalLevel: 'Beginner to Advanced',
+      primaryTerm: 'OpenAI-compatible API',
+      sections: {},
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'API OpenAI Compatible avec Local LLMs 2026',
+        'description': 'Exécutez des LLMs locaux avec une API compatible OpenAI (Ollama, LM Studio). Solution privée et gratuite pour remplacer les services cloud.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api',
+        'inLanguage': 'fr',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-04',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'keywords': ['API OpenAI compatible', 'local LLM API', 'Ollama API', 'LM Studio API', 'remplacer OpenAI'],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
+      }
+    },
   },
 
   'lm-studio-advanced-features': {
@@ -5381,7 +5522,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Local LLMs With VS Code and Cursor: Setup and Best Practices',
       seoTitle: 'Local LLMs with VS Code & Cursor 2026',
       intro: 'VS Code and Cursor (an AI-first code editor) can both use local LLMs for code completions and suggestions, via Continue.dev extension (VS Code) or direct integration (Cursor). As of April 2026, local code completions are practical for 7B–13B models and require 8–16 GB RAM. This guide covers setup, best models, and performance tuning.',
-      metaDescription: 'How to use local LLMs inside VS Code and Cursor for private, fast code assistance.',
+      metaDescription: 'How to use local LLMs inside VS Code and Cursor for private, fast code assistance with PromptQuorum integration.',
       publishDate: '2026-04-04',
       readTime: '10 min read',
       educationalLevel: 'Intermediate',
@@ -5501,6 +5642,19 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Qwen2.5-Coder — github.com/QwenLM/Qwen2.5-Coder',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'How to Use Local LLMs with VS Code and Cursor 2026',
+        'description': 'How to use local LLMs inside VS Code and Cursor for private, fast code assistance with PromptQuorum integration.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Install Continue.dev for VS Code', 'text': 'Install the Continue extension from the VS Code marketplace and configure it to point to your local Ollama server.' },
+          { '@type': 'HowToStep', 'name': 'Configure Cursor with local LLM', 'text': 'In Cursor settings, set the AI provider to your local Ollama endpoint (http://localhost:11434).' },
+          { '@type': 'HowToStep', 'name': 'Select a coding model', 'text': 'Use Qwen2.5-Coder 7B or DeepSeek-Coder for best local code completion results.' },
+          { '@type': 'HowToStep', 'name': 'Test prompts with PromptQuorum', 'text': 'Compare coding prompt responses across multiple local models using PromptQuorum to find the best fit for your workflow.' }
+        ]
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -5679,7 +5833,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Local LLM Hardware Guide 2026: GPU, CPU, and RAM Requirements Explained',
             seoTitle: 'Local LLM Hardware Guide 2026: GPU, VRAM & Best Builds',
       intro: 'Running local LLMs requires understanding three components: GPU (optional but recommended), CPU, and RAM. As of April 2026, a 7B-parameter model needs 8 GB RAM minimum, while a 70B model needs 40+ GB. This guide covers real hardware recommendations for RTX 5090, 4090, Mac Silicon, and budget builds, plus VRAM math to calculate requirements for any model size.',
-            metaDescription: 'Full hardware guide for local LLMs in 2026. GPU and VRAM recommendations for 7B–70B models, budget vs high-performance setups, and how to test performance with PromptQuorum.',
+            metaDescription: 'Complete 2026 hardware guide for running local LLMs. GPU and VRAM recommendations for 7B–70B models, budget vs high-performance setups, and how to test performance with PromptQuorum.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Intermediate',
@@ -5845,6 +5999,24 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Model Quantization Benchmarks — huggingface.co/docs/transformers',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Local LLM Hardware Guide 2026: GPU, VRAM & Best Builds',
+        'description': 'Complete 2026 hardware guide for running local LLMs. GPU and VRAM recommendations for 7B–70B models, budget vs high-performance setups, and how to test performance with PromptQuorum.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-04',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
+        'keywords': ['local LLM hardware', 'GPU for LLM', 'VRAM requirements 2026', 'best GPU for Ollama', 'LLM build guide'],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -10006,9 +10178,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'GPU Buying Guides',
       title: 'How Much VRAM Do You Need for Local LLMs?',
-      seoTitle: 'VRAM Calculator: How Much GPU Memory for Local LLMs?',
+      seoTitle: 'How Much VRAM Do You Need for Local LLMs 2026?',
       intro: '**For 7B models, you need 8GB VRAM; for 13B–22B, 12–16GB; for 70B, 24GB minimum.** As of April 2026, these numbers assume Q4 (4-bit) quantization. Full-precision (FP32) models need 2–3× more VRAM and are rarely practical on consumer GPUs. The formula is: Model size (billions) × 2 bytes (FP32) ÷ quantization factor.',
-      metaDescription: 'How much VRAM for local LLMs? 7B (8GB), 13B (12GB), 70B (24GB). VRAM calculator, quantization impact, overhead. Setup, configuration, and optimization. Free beta — April 2026.',
+      metaDescription: 'Exact VRAM requirements for 7B, 13B, 34B and 70B models. Quantization impact and real-world testing with PromptQuorum.',
       publishDate: '2026-04-05',
       readTime: '7 min',
       educationalLevel: 'Beginner',
@@ -10130,6 +10302,24 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'llama.cpp project GitHub: quantization levels (Q4, Q5, Q8) and memory calculations',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'How Much VRAM Do You Need for Local LLMs 2026?',
+        'description': 'Exact VRAM requirements for 7B, 13B, 34B and 70B models. Quantization impact and real-world testing with PromptQuorum.',
+        'url': 'https://www.promptquorum.com/local-llms/how-much-vram-local-llm',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['VRAM requirements LLM', 'how much VRAM for LLM', 'GPU memory local LLM', '7B model VRAM', '70B model VRAM', 'quantization VRAM'],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
       itemListSchema: {
         '@context': 'https://schema.org',

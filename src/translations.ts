@@ -86,7 +86,7 @@ export const translations = {
     promptEngineeringHubTitle: "Prompt Engineering Hub: 80 Guides | PromptQuorum",
     promptEngineeringHubDescription: "80 research-backed articles on prompt engineering techniques, frameworks (CO-STAR, CRAFT, RISEN), tools, evaluation, governance, and workflows for developers.",
     localLlmsHubTitle: "Local LLMs 2026: Run AI Privately with Ollama & LM Studio",
-    localLlmsHubDescription: "Complete 2026 guide to running local LLMs privately. Compare Ollama, LM Studio, hardware needs, quantization, and how PromptQuorum lets you test and compare your local models instantly.",
+    localLlmsHubDescription: "Complete guide to running local LLMs privately in 2026. Compare Ollama, LM Studio, hardware, quantization, and how PromptQuorum helps you test and compare your local models instantly.",
     compareMetaTitle: "PromptQuorum vs. Competitors: Feature Comparison (2026)",
     compareMetaDescription: "Compare PromptQuorum with Poe, LM Arena, OpenMark, and AiZolo: dispatch, consensus, local LLM support, API key control, framework library.",
     frameworksMetaTitle: "Prompt Frameworks: CO-STAR, CRAFT, RISEN & More",
