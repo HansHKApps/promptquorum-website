@@ -7385,8 +7385,32 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ]
       },
     },
-
-// CHINESE TRANSLATION - Insert after ja block (new)
+    zh: {
+      theme: 'Hardware & Performance',
+      title: 'Local LLM 硬件指南 2026：GPU、显存与最佳配置',
+      seoTitle: 'Local LLM 硬件指南 2026：GPU、显存与最佳配置',
+      metaDescription: '2026年完整 Local LLM 硬件指南。7B至70B模型的GPU和显存推荐、量化技巧、预算配置方案，以及如何用PromptQuorum测试真实性能。',
+      intro: '',
+      publishDate: '2026-04-04',
+      readTime: '12 min read',
+      educationalLevel: 'Beginner to Intermediate',
+      primaryTerm: 'Local LLM 硬件配置',
+      toc: [],
+      sections: {},
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Local LLM 硬件指南 2026：GPU、显存与最佳配置',
+        'description': '2026年完整 Local LLM 硬件指南。7B至70B模型的GPU和显存推荐、量化技巧、预算配置方案，以及如何用PromptQuorum测试真实性能。',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026?lang=zh',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Intermediate',
+        'keywords': ['Local LLM', '硬件配置', 'GPU', '显存', 'RTX 4090', 'Apple Silicon', 'Ollama'],
+      },
+    },
   },
 
   'vram-calculator-local-llm': {
