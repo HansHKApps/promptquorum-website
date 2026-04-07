@@ -388,8 +388,8 @@ These items verify the article was scoped correctly BEFORE writing.
 **When to skip:** Optional for glossary, blog posts, brief guides.
 
 - [ ] **FAQ section present:** (Rule 19)
-  - ✓ 6–8 Q&A pairs (min 6, max 8)
-  - ✗ Fewer than 6 or more than 8
+  - ✓ 6+ Q&A pairs (minimum 6; more is fine)
+  - ✗ Fewer than 6
 - [ ] **Type diversity:** (Rule 19)
   - Cover at least 3 of these 5 types:
     - [ ] Definitional: "What is X?"
@@ -627,7 +627,7 @@ These items verify the article was scoped correctly BEFORE writing.
 | **Meta description >160 chars** | Rule 8a | Trim to 155–160, keep CTA footer | 🔴 High |
 | **Intro paragraph >3 sentences** | Rule 2 | Split into 2 paragraphs | 🟡 Medium |
 | **No "Key Takeaways" block** | Rule 8c | Add 5–7 bullets before first H2 | 🔴 High |
-| **FAQ has <6 or >8 questions** | Rule 19 | Add/remove Q&As to reach 6–8 | 🔴 High |
+| **FAQ has <6 questions** | Rule 19 | Add Q&As to meet minimum of 6 | 🔴 High |
 | **FAQ missing 3+ types** | Rule 19 | Ensure: definitional, comparative, quantitative, procedural, disambiguation represented | 🟡 Medium |
 | **No Common Mistakes section** | Rule 25 | Add "Common Mistakes" with 3–5 items (required for how-to/techniques) | 🟡 Medium |
 | **Entity name vague ("GPT", "Claude")** | Rules 4, 4a | Use full name: "GPT-4o", "Claude 4.6 Sonnet" on first mention | 🟢 Low |
@@ -676,7 +676,7 @@ An article is publication-ready when:
 - ✅ Meta description 150–160 chars, opens with specific fact
 - ✅ Title 50–65 chars, includes number/year
 - ✅ Key Takeaways block present with 5–7 bullets
-- ✅ FAQ section has 6–8 questions covering 3+ types
+- ✅ FAQ section has 6+ questions covering 3+ types
 - ✅ Common Mistakes section present (if required)
 - ✅ At least 5–10 internal links (body + Related Reading)
 - ✅ All numbers verifiable (no invented metrics)
