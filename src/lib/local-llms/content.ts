@@ -1992,15 +1992,16 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   'local-llm-security-privacy-checklist': {
     en: {
       theme: 'Getting Started',
-      title: 'Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup',
+      title: 'Local LLM Security Checklist: 12 Steps to Safe Setup',
       seoTitle: 'Local LLM Security & Privacy Checklist 2026',
       intro: 'Running a local LLM keeps your prompts off third-party servers — but it does not automatically make your setup private or secure. Three data flows can still leak information: application telemetry from the inference tool, model files downloaded from untrusted sources, and the Ollama API being exposed on the network without authentication. As of April 2026, this 12-item checklist covers model provenance, network isolation, telemetry settings, disk encryption, and access controls — the minimum required for a genuinely private and secure local LLM setup on macOS, Windows, or Linux.',
-      metaDescription: 'Complete checklist to keep your local LLMs private and secure. Data protection, model safety, and best practices for private AI.',
+      metaDescription: '12-item security checklist for local LLMs: block telemetry, verify models, isolate networks, encrypt disks. GDPR/Japan/China compliance. 2026.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'local LLM privacy',
+      audience: 'Security-conscious developers and non-technical users setting up private AI systems',
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
         { label: 'Why Local LLMs Are Not Automatically Private', anchor: 'why-not-private' },
@@ -2037,12 +2038,15 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         checklist: {
-          title: 'The 12-Item Local LLM Security and Privacy Checklist',
+          title: 'What Are the 12 Essential Security Steps for Local LLMs?',
           numberedItems: [
             '**Download models only from trusted sources** — Hugging Face (huggingface.co) and the Ollama library (ollama.com/library) are the two primary trusted sources. Avoid random GitHub releases or torrent sites.',
             '**Verify model checksums for sensitive use** — Hugging Face shows SHA256 hashes for each model file. Compare with `sha256sum <model_file>` before loading.',
             '**Disable telemetry in your inference tool** — see the Telemetry Settings section below for tool-specific instructions.',
             '**Confirm Ollama is bound to localhost only** — run `curl http://localhost:11434` from another device. If it responds, Ollama is exposed. Fix: set `OLLAMA_HOST=127.0.0.1:11434`.',
+            '',
+            '⚠️ **CRITICAL**: If Ollama is exposed on the network without authentication, any device on your Wi-Fi can query your models and potentially extract sensitive information from prompts or context windows. Always run `curl http://<your-machine-ip>:11434` from a different machine to test. If it responds, your models are network-accessible — fix immediately by setting `OLLAMA_HOST=127.0.0.1:11434`.',
+            '',
             '**Enable full-disk encryption** — on macOS: System Settings → Privacy & Security → FileVault. On Windows: Settings → Privacy & Security → Device encryption. This protects model weights and chat logs if the device is lost.',
             '**Store sensitive chat logs in an encrypted folder** — LM Studio saves chat history to `~/Library/Application Support/LM Studio/` (macOS). Encrypt this folder or disable history in settings.',
             '**Review installed extensions and plugins** — Open WebUI and Jan AI support third-party extensions that may have their own network access. Audit what is installed.',
@@ -2054,7 +2058,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         modelProvenance: {
-          title: 'Where to Download Local LLM Model Weights Safely',
+          title: 'Where Should You Download Local LLM Models Safely?',
           content: [
             'Model weights are large binary files. A malicious GGUF file could exploit vulnerabilities in the parser used by llama.cpp. As of 2026, no widespread GGUF-based malware has been confirmed, but the attack surface exists.',
           ],
@@ -2082,7 +2086,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Tool', 'Telemetry Default', 'How to Disable'],
         },
         regionalContext: {
-          title: 'Regional Context: EU, Japan, China',
+          title: 'What Compliance Rules Apply in the EU, Japan, and China?',
           content: [
             '**EU / GDPR**',
             'Local LLM inference eliminates the third-party data processor relationship that cloud AI APIs create under GDPR Article 28. When inference runs locally, the model provider (Meta, Alibaba, Mistral) never processes your data — no Data Processing Agreement is required. For EU organizations handling personal data, the privacy-relevant checklist items are: (1) telemetry disabled in the inference tool, (2) full-disk encryption enabled via FileVault or BitLocker, (3) Ollama bound to localhost only, (4) model weights downloaded from verified sources.',
@@ -2096,10 +2100,12 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '',
             '**China**',
             'China\'s Data Security Law (数据安全法) and Personal Information Protection Law (PIPL) require that certain data categories not leave approved infrastructure. Local inference with Qwen2.5 or DeepSeek models fully satisfies this requirement — all processing stays on device. CAC Generative AI Service Measures (2023) require that AI inference environments be documented and auditable — the local setup with versioned model files satisfies this by design.',
+            '',
+            '💡 **Compliance Note**: Local LLM inference eliminates the third-party data processor relationship created by cloud AI APIs. However, HIPAA, GDPR, and other regulations require additional controls: full-disk encryption, access logging, and documented procedures. Use this checklist as a foundation, but conduct a full compliance assessment with legal counsel before processing regulated data.',
           ],
         },
         faqSection: {
-          title: 'Frequently Asked Questions',
+          title: 'FAQ: Local LLM Security Questions',
           faqs: [
             {
               q: 'Can a local LLM access my files or the internet?',
@@ -2153,7 +2159,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         commonMistakes: {
-          title: 'Common Mistakes in Local LLM Security',
+          title: 'What Are Common Security Mistakes in Local LLM Setups?',
           items: [
             'Downloading models from untrusted sources without verifying checksums or model provenance.',
             'Assuming privacy is automatic — check for telemetry, update checking, or sync features in your chosen tool.',
@@ -2177,8 +2183,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup',
-        dateModified: '2026-04-05',
+        headline: 'Local LLM Security Checklist: 12 Steps to Safe Setup',
+        description: '12-item security checklist for local LLMs: block telemetry, verify models, isolate networks, encrypt disks. GDPR/Japan/China compliance. 2026.',
+        dateModified: '2026-04-07',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         proficiencyLevel: 'Intermediate',
         about: [
