@@ -225,7 +225,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'How Do You Install Ollama: Complete Setup Guide for macOS, Windows, and Linux',
             seoTitle: 'How to Install Ollama: macOS, Windows and Linux Guide (2026)',
       intro: 'Ollama is a lightweight inference engine that runs large language models locally with a single command. After a 2-minute installation, `ollama pull llama3.2:3b` downloads a 2 GB model, and `ollama run llama3.2` opens a chat interface. Ollama packages model management, the llama.cpp inference backend, and an OpenAI-compatible REST API at `localhost:11434` into a single application with no Python environment, no configuration files, and no GPU required to start. As of April 2026, Ollama supports 200+ models including Meta Llama 3.2, Qwen2.5, Mistral, and DeepSeek, and exposes its API to any OpenAI SDK without code changes.',
-            metaDescription: 'Easy Ollama installation for Windows, Mac, and Linux. Get your first local LLM running in minutes with troubleshooting and PromptQuorum integration.',
+            metaDescription: 'Ollama installs in under 2 minutes on macOS, Windows, or Linux. Running your first model requires one command — here is the step-by-step guide.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '8 min read',
@@ -268,10 +268,11 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Ollama maintains a curated model library (ollama.com/library) with one-command downloads for Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5, and 100+ other models. A model is downloaded once and cached on disk — subsequent runs start in under 5 seconds.',
             'For alternatives to Ollama, see [Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers). To compare Ollama with LM Studio, see [How to Install LM Studio](/local-llms/how-to-install-lm-studio).',
           ],
+          blockquote: 'In One Sentence: Ollama is a tool that downloads and runs open-source language models (like Mistral or Llama 2) locally on your computer with a single command.',
         },
         installMac: {
           id: 'install-on-macos',
-          title: 'How Do You Install Ollama on macOS',
+          title: 'How Do You Install Ollama on macOS?',
           content: 'There are two methods. The installer download is faster; Homebrew is better if you manage software with brew.',
           numberedItems: [
             'Go to ollama.com/download and click "Download for macOS".',
@@ -280,6 +281,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Open Terminal and run your first model: `ollama run llama3.2`',
             'The model downloads (~2 GB for llama3.2:3b) and a chat prompt appears. Type a message and press Enter.',
           ],
+          blockquote: 'In One Sentence: Ollama runs as a background service on macOS — once installed and started, the local API listens on `http://localhost:11434` for model requests.',
         },
         installMacBrew: {
           title: 'How Do You Install Ollama on macOS with Homebrew?',
@@ -288,7 +290,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         installWindows: {
           id: 'install-on-windows',
-          title: 'How Do You Install Ollama on Windows',
+          title: 'How Do You Install Ollama on Windows?',
           numberedItems: [
             'Go to ollama.com/download and click "Download for Windows".',
             'Run the downloaded OllamaSetup.exe installer. Ollama installs to %LOCALAPPDATA%\\Programs\\Ollama.',
@@ -303,7 +305,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         installLinux: {
           id: 'install-on-linux',
-          title: 'How Do You Install Ollama on Linux',
+          title: 'How Do You Install Ollama on Linux?',
           content: 'A single command installs Ollama on any Linux distribution:',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
@@ -316,7 +318,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         firstModel: {
           id: 'pull-and-run-your-first-model',
-          title: 'How Do You Pull and Run Your First Model in Ollama',
+          title: 'How Do You Pull and Run Your First Model in Ollama?',
           content: 'After installing Ollama, run this command to download and start a model:',
           codeBlock: '# Pull a model (downloads to ~/.ollama/models)\nollama pull llama3.2\n\n# Run it interactively\nollama run llama3.2\n\n# Or pull and run in one step\nollama run llama3.2',
           codeLanguage: 'bash',
@@ -334,7 +336,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         verify: {
           id: 'verify-ollama-is-working',
-          title: 'How Do You Verify Ollama Is Working',
+          title: 'How Do You Verify Ollama Is Working?',
           content: 'Test the REST API directly to confirm Ollama is running and accessible:',
           codeBlock: '# Check Ollama is running\ncurl http://localhost:11434\n# Expected: "Ollama is running"\n\n# List downloaded models\nollama list\n\n# Send a prompt via API (OpenAI-compatible)\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "What is 2+2?",\n  "stream": false\n}\'',
           codeLanguage: 'bash',
@@ -452,20 +454,12 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               a: 'The model is likely running on CPU instead of GPU. Verify with ollama ps that the model is loaded. If GPU utilization is 0%, check that your GPU drivers are installed and up to date. On NVIDIA: nvidia-smi should show your GPU. On AMD: rocm-smi. On Mac: Metal GPU acceleration is automatic on Apple Silicon.',
             },
             {
-              q: 'Do I need to restart Ollama after pulling a new model?',
-              a: 'No. Models are cached on disk in ~/.ollama/models. Once downloaded, you can switch between models instantly by running ollama run <model>. No restart required.',
-            },
-            {
               q: 'Can Ollama run multiple models simultaneously?',
               a: 'Ollama can run one model at a time per process. However, you can run multiple instances of Ollama on different ports (e.g., OLLAMA_HOST=localhost:11434 and OLLAMA_HOST=localhost:11435) to serve multiple models in parallel. This requires more RAM.',
             },
             {
               q: 'What is the difference between ollama pull and ollama run?',
               a: 'ollama pull downloads a model from the Ollama library without loading it into memory. ollama run downloads the model (if not cached) and immediately starts a chat session. To use a model via the API without the chat interface, pull it first and then query the API.',
-            },
-            {
-              q: 'Where are my Ollama models stored?',
-              a: 'On macOS and Linux: ~/.ollama/models. On Windows: C:\\Users\\<username>\\.ollama\\models. You can change the storage location by setting the OLLAMA_MODELS environment variable before starting the service. Each model\'s files are stored in subdirectories named after the model.',
             },
           ],
         },
@@ -474,7 +468,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'How to Install Ollama: macOS, Windows and Linux Guide (2026)',
-        'description': 'Easy Ollama installation for Windows, Mac, and Linux. Get your first local LLM running in minutes with troubleshooting and PromptQuorum integration.',
+        'description': 'Ollama installs in under 2 minutes on macOS, Windows, or Linux. Running your first model requires one command — here is the step-by-step guide.',
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-05',
@@ -514,10 +508,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'Question', name: 'How do I update Ollama to the latest version?', acceptedAnswer: { '@type': 'Answer', text: 'On macOS, Ollama auto-updates. On Windows, download and run the latest installer from ollama.com. On Linux, re-run the install script: curl -fsSL https://ollama.com/install.sh | sh' } },
           { '@type': 'Question', name: 'Can I use Ollama via the OpenAI SDK without code changes?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Set base_url to http://localhost:11434/v1 in the OpenAI SDK and pass any string as the API key. Ollama\'s REST API is fully OpenAI-compatible, so any application written for GPT or Claude can use your local model.' } },
           { '@type': 'Question', name: 'Why is my Ollama inference slow (under 5 tokens/sec)?', acceptedAnswer: { '@type': 'Answer', text: 'The model is likely running on CPU instead of GPU. Verify with ollama ps that the model is loaded. If GPU utilization is 0%, check that your GPU drivers are installed and up to date. On NVIDIA: nvidia-smi should show your GPU. On AMD: rocm-smi. On Mac: Metal GPU acceleration is automatic on Apple Silicon.' } },
-          { '@type': 'Question', name: 'Do I need to restart Ollama after pulling a new model?', acceptedAnswer: { '@type': 'Answer', text: 'No. Models are cached on disk in ~/.ollama/models. Once downloaded, you can switch between models instantly by running ollama run <model>. No restart required.' } },
           { '@type': 'Question', name: 'Can Ollama run multiple models simultaneously?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama can run one model at a time per process. However, you can run multiple instances of Ollama on different ports (e.g., OLLAMA_HOST=localhost:11434 and OLLAMA_HOST=localhost:11435) to serve multiple models in parallel. This requires more RAM.' } },
-          { '@type': 'Question', name: 'What is the difference between ollama pull and ollama run?', acceptedAnswer: { '@type': 'Answer', text: 'ollama pull downloads a model from the Ollama library without loading it into memory. ollama run downloads the model (if not cached) and immediately starts a chat session. To use a model via the API without the chat interface, pull it first and then query the API.' } },
-          { '@type': 'Question', name: 'Where are my Ollama models stored?', acceptedAnswer: { '@type': 'Answer', text: 'On macOS and Linux: ~/.ollama/models. On Windows: C:\\Users\\<username>\\.ollama\\models. You can change the storage location by setting the OLLAMA_MODELS environment variable before starting the service. Each model\'s files are stored in subdirectories named after the model.' } }
+          { '@type': 'Question', name: 'What is the difference between ollama pull and ollama run?', acceptedAnswer: { '@type': 'Answer', text: 'ollama pull downloads a model from the Ollama library without loading it into memory. ollama run downloads the model (if not cached) and immediately starts a chat session. To use a model via the API without the chat interface, pull it first and then query the API.' } }
         ]
       },
       itemListSchema: {
@@ -6115,16 +6107,13 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Local LLMs With VS Code and Cursor: Setup and Best Practices',
       seoTitle: 'Local LLMs with VS Code & Cursor 2026',
       intro: 'VS Code and Cursor (an AI-first code editor) can both use local LLMs for code completions and suggestions, via Continue.dev extension (VS Code) or direct integration (Cursor). As of April 2026, local code completions are practical for 7B–13B models and require 8–16 GB RAM. This guide covers setup, best models, and performance tuning.',
-      metaDescription: 'How to use local LLMs inside VS Code and Cursor for private, fast code assistance with PromptQuorum integration.',
+      metaDescription: 'Local LLMs in VS Code & Cursor: Setup guide for Continue.dev and Ollama. Best models (Qwen2.5-Coder 7B, Llama Code 13B) and performance tuning for 2026.',
       publishDate: '2026-04-04',
       readTime: '10 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'local code completion',
       toc: [
-        { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'VS Code + Continue.dev', anchor: '#vscode-continue' },
-        { label: 'Cursor Editor', anchor: '#cursor-editor' },
-        { label: 'Best Models for Code', anchor: '#best-models' },
         { label: 'Performance and VRAM', anchor: '#performance' },
         { label: 'Advanced Configuration', anchor: '#advanced' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
@@ -6159,6 +6148,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         bestModels: {
           title: 'Which Models Are Best for Code?',
+          content: [
+            '⚠️ **VRAM Rule**: Always have 2–3 GB more free VRAM than the model requires. A 7B model at Q4 (4.7 GB) needs 8 GB total VRAM when running in VS Code or Cursor.',
+          ],
           rows: [
             { 'Model': 'Qwen2.5-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'Best balance, fastest' },
             { 'Model': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'General coding' },
@@ -6172,6 +6164,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: 'What Latency and VRAM Should You Expect?',
           content: [
             'Completion latency (time to first token) is critical for IDE experience. As of April 2026, here are typical numbers:',
+            '⚠️ **Latency Reality Check**: Local completions are 2–10× slower than cloud. Use local for private work; use cloud (Copilot, Claude) for time-sensitive coding.',
+            '💡 **Performance Tuning**: Reduce `contextLength` from 2048 to 1024 tokens to cut latency in half. Trade-off: fewer lines of context for suggestions.',
           ],
           rows: [
             { 'Hardware': 'RTX 4090 GPU', 'Model': 'Qwen2.5-Coder 7B', 'Latency': '0.3–0.5 seconds', 'Throughput': '150 tokens/sec' },
@@ -6180,15 +6174,20 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Hardware': '8-core CPU only', 'Model': 'Qwen2.5-Coder 7B', 'Latency': '5–10 seconds', 'Throughput': '3 tokens/sec' },
           ],
           columns: ['Hardware', 'Model', 'Latency', 'Throughput'],
+          note: '**Note on Performance Data**: Latency and throughput measured with Qwen2.5-Coder 7B Q4_K_M format, batch size = 1, on fresh system (no background tasks). Your actual performance depends on OS, VRAM availability, quantization format, and concurrent load.',
         },
         advanced: {
-          title: 'Advanced Configuration for Code Completions',
-          content: 'Fine-tune the experience with these settings:',
+          title: 'How Do You Configure Code Completions for Performance?',
+          content: [
+            'Fine-tune the experience with these settings:',
+            '⚠️ **Warning**: On 8GB machines with 13B models, completions may take 5–10 seconds, making the IDE feel unresponsive. Stick with 7B models for snappy performance.',
+            '💡 **Pro Tip**: Increase `debounceWaitMs` to 400–500 ms to reduce flickering and avoid showing incomplete suggestions.',
+          ],
           codeBlock: '# config.json advanced settings\n{\n  "tabAutocompleteModel": {\n    "contextLength": 2048,     # How much code context to send\n    "maxTokens": 50            # Max tokens per completion\n  },\n  "completionOptions": {\n    "maxContextTokens": 1024,\n    "maxSuggestionsCount": 5,\n    "debounceWaitMs": 200      # Wait before showing completions (ms)\n  },\n  # For faster inference, use smaller context:\n  "models": [{\n    "contextLength": 1024      # Smaller context = faster\n  }]\n}\n\n# For best speed on 8GB machines:\n# - Use 7B model (not 13B)\n# - Set maxTokens to 30\n# - Set debounceWaitMs to 500 (less flickering)',
           codeLanguage: 'json',
         },
         commonMistakes: {
-          title: 'Common Mistakes With Local Code Completions',
+          title: 'What Are Common Mistakes When Setting Up Local Code Completions?',
           items: [
             '**Not tuning debounce latency.** If completions feel "laggy", increase debounceWaitMs (e.g., to 400 ms) to avoid showing incomplete suggestions.',
             '**Using a model too large for your VRAM.** A 13B model + editor overhead can use 12+ GB. On 8GB machines, stick with 7B models.',
@@ -6197,7 +6196,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          title: 'Common Questions About Local Code Completions',
+          title: 'FAQ: Local Code Completions',
           faqs: [
             {
               q: 'Is local code completion faster than cloud?',
@@ -6253,9 +6252,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'Is using a local LLM in VS Code faster than GitHub Copilot?', acceptedAnswer: { '@type': 'Answer', text: 'Not necessarily. GitHub Copilot uses optimized cloud infrastructure and typically responds faster. Local LLMs in VS Code via Continue.dev are slower but offer complete privacy, no usage limits, and work without internet access.' } },
-          { '@type': 'Question', name: 'Can I use local LLMs in VS Code without internet?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Once you install Continue.dev and download a model through Ollama or LM Studio, the entire coding assistant works offline. No data leaves your machine.' } },
-          { '@type': 'Question', name: 'What is the best local model for code completion in VS Code?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 7B is the top-performing local model for code completion in 2026. It outperforms DeepSeek-Coder 6.7B on most coding benchmarks and fits comfortably in 8GB VRAM. For systems with only 4GB VRAM, Phi-3.5 Mini is a capable fallback.' } }
+          { '@type': 'Question', name: 'Is local code completion faster than cloud?', acceptedAnswer: { '@type': 'Answer', text: 'No. Cloud completions (GitHub Copilot) are faster due to optimized servers. Local completions have higher latency but zero cost and zero privacy risk.' } },
+          { '@type': 'Question', name: 'Can I use local completions with other IDEs (PyCharm, Neovim)?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, but setup varies. PyCharm has an Ollama plugin. For Neovim, use cmp-ollama (completion plugin). Always check the IDE community for integrations.' } },
+          { '@type': 'Question', name: 'Can I use cloud models in Continue or Cursor?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Configure Continue to use OpenAI, Claude, or Gemini. You can also mix (local for fast, cloud for complex code).' } },
+          { '@type': 'Question', name: 'Does local code completion work offline?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. If you have pulled the model in Ollama, completions work entirely offline.' } }
         ]
       },
       itemListSchema: {
