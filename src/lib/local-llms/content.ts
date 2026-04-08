@@ -10145,10 +10145,14 @@ print(response.choices[0].message.content)`,
         relatedReading: {
           title: 'Related Reading',
           items: [
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — Setup guide.',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — Detailed comparison.',
-            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — API documentation.',
-            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) — Inference engines.',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — Complete setup guide for macOS, Windows, and Linux.',
+            '[How Much VRAM for Local LLMs](/local-llms/how-much-vram-local-llm) — Hardware requirements and VRAM planning for different model sizes.',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — GPU, CPU, and RAM recommendations for optimal performance.',
+            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) — Model comparison and quality benchmarks to help you choose.',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Specialized model rankings for code completions.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — Feature comparison between the two most popular tools.',
+            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — How to expose your local model as an API.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) — Alternative inference engines and their tradeoffs.',
           ],
         },
         sources: {
