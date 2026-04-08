@@ -355,6 +355,62 @@ Before finalizing any decision-heavy page, verify:
 
 ---
 
+#### Rule 22c: Content Ratio — Shift from Explanation-Heavy to Decision-Dense
+
+**Current problem:** Most pages are 70–80% explanation, 20–30% decision. This hurts AI citation and conversion.
+
+**Target ratio:** 50–60% explanation, 40–50% decision.
+
+**What counts as explanation:**
+- Context, background, history
+- How something works
+- Features and capabilities
+- Definitions and concepts
+- Why something matters
+
+**What counts as decision content:**
+- Explicit recommendations ("Use X if...")
+- "Best choice" blocks with reasoning
+- Use case segmentation ("For beginners: Y", "For production: Z")
+- "When to use / when NOT to use" sections
+- Comparison tables tied to decisions
+- Final verdict blocks
+- "If unsure, do this" guidance
+- Trade-off analysis with clear picks
+
+**How to shift the balance:**
+
+| Type | Too Much Explanation | Better Balance |
+|------|-----|-----|
+| Feature explanation | "Temperature controls the randomness of output by scaling logits, and logits are..." | "Temperature controls output randomness: 0 = predictable, 2 = creative. Use 0.5–1.0 for most tasks. Avoid >1.5 for factual work." |
+| Product capability | "LM Studio is a desktop application that provides a graphical interface for running models locally..." | "Use LM Studio if: you want a GUI, need one-click installation, or prefer no terminal. Don't use if: you need API scalability (use vLLM), require fine-tuning (use RunwayML), or need multi-user serving." |
+| Technical context | "Quantization is the process of reducing the precision of weights in neural networks..." | "Quantization reduces file size & memory by 75% (4x faster inference) with <2% quality loss. Use Q4 for most tasks. Use Q5 if you need higher accuracy. Use Q8 only for final-answer generation." |
+
+**Enforcement checklist:**
+
+Before publishing, count:
+- [ ] Number of "Use X if..." statements: **Min 5+ explicit recommendations per 1000 words**
+- [ ] Number of decision-heavy sections (headers with "Use", "When", "Best", "Choose"): **Min 3+ per 2000 words**
+- [ ] Ratio of decision bullets to explanation paragraphs: **Should be 1:1 or higher** (not 1:5)
+- [ ] Any section >200 words without a decision statement: **Trim or add recommendation**
+- [ ] Final section includes "If unsure, use X": **Required**
+
+**Red flags (revise before publishing):**
+- ❌ More than 2 consecutive paragraphs without a recommendation
+- ❌ Comparison section without a "pick this" statement for each option
+- ❌ Feature list without "when you'd use this feature"
+- ❌ Example section that doesn't end with "when to apply this"
+- ❌ Title says "How to" or "Best" but content is pure explanation
+
+**Green flags (you're on track):**
+- ✅ Bolded decision blocks every 200–300 words
+- ✅ At least 1 "When NOT to use" per major section
+- ✅ Comparison table with a "pick this" row or summary
+- ✅ Final 10% of page is pure decision (verdict, next steps)
+- ✅ Reader can answer "what should I do?" after reading H2 sections only
+
+---
+
 ### SECTION B: Structure & Readability (Rule 2)
 
 Use H2 (`##`) for major sections, H3 (`###`) for subsections. Use bullet lists for enumerations of 3 or more items. **Never write a wall of prose when a list is clearer.**
