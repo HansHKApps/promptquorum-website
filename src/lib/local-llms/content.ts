@@ -17824,7 +17824,6 @@ print(response.choices[0].message.content)`,
           ],
         },
       },
-      itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Best Budget GPUs for Local LLMs', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'RTX 3060 12GB is the best overall budget pick.' }] },
     },
     de: {
       theme: 'GPU Buying Guides',
