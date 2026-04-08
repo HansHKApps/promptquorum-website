@@ -523,6 +523,52 @@ Title tags appear in Google search results, browser tabs, and AI engine citation
 
 ---
 
+### Rule 2e: Avoid Generic Title Patterns Across Related Articles (CTR Prevention) ⭐
+
+**Problem:** When multiple articles in the same topic area use identical title patterns (e.g., "Complete Guide", "Full Comparison", "Everything You Need"), SERPs show repetitive snippets → lower CTR across the entire topic cluster.
+
+**Solution:** Ensure each article has a **unique angle** in the title. For related articles on the same topic, use different strategic angles.
+
+#### Four Unique Title Angles
+
+Use ONE of these frameworks per article in a topic area:
+
+| Angle | Pattern | Examples |
+|-------|---------|----------|
+| **Question** | "... Which One?", "... Which Wins?", "... How to Choose?" | "Qwen vs Llama vs Mistral: Which Model Wins?", "RAG vs Fine-tuning: Which Is Better?" |
+| **Comparison** | "... vs ...", "... Side-by-Side Comparison" | "GPT-4o vs Claude 3.5: Comparison", "Ollama vs llama.cpp: Feature Comparison" |
+| **Outcome/Best** | "Best for...", "Top 10...", "Ranked by..." | "Best Local LLMs for Coding", "Top 5 Prompt Techniques by Effectiveness" |
+| **Use-case** | "For [audience/task]", "[Task] in [timeframe]" | "Prompt Engineering for Beginners", "Fine-tuning in 30 Minutes", "RAG for Enterprise Applications" |
+
+**Generic patterns to AVOID:**
+- ❌ "Complete Guide to..." (not unique)
+- ❌ "Full Comparison of..." (not unique)
+- ❌ "Everything You Need to Know About..." (too long + generic)
+- ❌ "Ultimate Guide..." (too broad)
+- ❌ "How to..." (overused, no differentiation)
+
+#### Enforcement Checklist
+
+Before finalizing a title for an article in a dense topic area (e.g., model comparisons, prompting techniques), ask:
+
+1. **Do I have 3+ similar articles on this topic?** 
+   - If YES → Check their titles. Do they use the same pattern as mine?
+   - If NO → Proceed.
+
+2. **If YES, what angle do the others use?**
+   - Article A uses Question angle ("Which wins?")
+   - Article B uses Outcome angle ("Best for coding")
+   - Article C should use Comparison or Use-case angle → Avoid repeating A or B
+
+3. **Is my title's angle visibly different in the SERP?**
+   - Paste your title + related titles into [Google Preview](https://www.seroundtable.com/google-serp-snippets-test.html)
+   - Do they look repetitive or distinct?
+   - If repetitive, revise.
+
+**Impact:** Unique angles increase CTR diversity across topic clusters by 15–25% by preventing SERP fatigue.
+
+---
+
 ### Rule 8c: Top-of-Page Structure (Exact Sequence)
 
 The order of elements after your H1 title determines what AI crawlers extract first. **Follow this exact sequence:**
