@@ -813,5 +813,297 @@ All URLs must be absolute. Relative URLs in hreflang are invalid.
 
 ---
 
-**Last updated:** 2026-04-06
-**Next review:** After next translation batch
+---
+
+## Section 14 — Translation Style Instructions: Decision Framework
+
+**Purpose:** Formalize the per-language style rules, regional context requirements, and technical implementation patterns so that **every translation decision is guided by explicit criteria**, not aesthetic preference.
+
+### 14.1 — When to Use Which Approach
+
+| Scenario | Approach | Why | Tool/Location |
+|----------|----------|-----|----------------|
+| **Single article, <15 sections** | Direct Edit | Fast, minimal file churn | Read file → Edit tool → build → commit |
+| **Single article, 15–30 sections** | Single-Pass Agent | Balanced speed/safety, one coherent pass | Agent prompt (section 7) → Edit tool → build → commit |
+| **Single article, 30+ sections** | Batch Approach | Incremental safety, early error detection, clear commits | Batch 1–5 (Edit) → Build → Batch 6–10 (Edit) → Build → commit |
+| **Multiple simultaneous articles** | Worktree per Language | Isolation from file formatter conflicts, parallel work | `git worktree add` → feature branch → batch edits → merge to main |
+| **Large insertion (500+ lines) hitting auto-formatter** | Worktree + Smaller Edits | Reduces formatter interference window, smaller diffs | Worktree + 2–3 edits instead of 1 giant edit |
+| **All 4 languages for 1 article (Full Localization)** | Sequential per-Language Worktrees | Avoids cross-language confusion, clear commit history | `/geo-translation` slash command (GEO_Translation workflow) |
+
+### 14.2 — Per-Language Style Rules (Decision Matrix)
+
+| Attribute | DE (German) | FR (French) | JA (Japanese) | ZH (Chinese) |
+|-----------|------------|-----------|-------------|------------|
+| **Formality** | Sie-form (formal, all audience) | Vous-form (formal address) | です/ます (polite, professional) | Direct benefit-first, professional |
+| **Length vs EN** | +15–20% (longer, structured) | –10–15% (concise, elegant) | –20% (telegraphic, short sentences) | ≈ EN length (benefit-driven, comprehensive) |
+| **Code-Switching** | VRAM, Q4_K_M, API stay EN | VRAM, Q4_K_M, API stay EN | VRAM, Q4_K_M, Ollama stay EN | VRAM, Ollama, API stay EN |
+| **readTime Format** | `"10 Min. Lesezeit"` | `"10 min de lecture"` | `"10分で読める"` | `"阅读约10分钟"` |
+| **Decimal Notation** | Keep `.` (tech standard) | Keep `.` (tech standard) | No change (code blocks only) | No change (code blocks only) |
+| **Extra FAQs** | +2 (DSGVO + Mittelstand) | +0 (match EN count) | +2 (METI + Enterprise) | +2 (Data Security + Compliance) |
+| **Regional Context** | DSGVO + BSI-Grundschutz + DACH | CNIL + RGPD (1 sentence) | METI 2024 + East Asia data sovereignty | Data Security Law 2021 + PIPL + CAC |
+| **Schema author** | Person (Hans Kuepper) | Person (Hans Kuepper) | Organization (PromptQuorum) | Organization (PromptQuorum) |
+| **regionalContext section** | Expand before FAQs | Add before FAQs | Restructure existing + add METI | Completely rewrite |
+
+### 14.3 — Regional Context Requirements (Detail by Language)
+
+#### 🇩🇪 GERMAN (DE)
+
+**Style principle:** Formal, depth-first. German readers expect comprehensive explanations and structured argument flow.
+
+**Regional context:**
+- **DSGVO Article 28:** Cover Auftragsverarbeiter requirements, local inference as compliant architecture
+- **BSI-Grundschutz-Kataloge:** Reference German Federal Office for Information Security guidelines
+- **DACH context:** Germany, Austria, Switzerland enterprise standards
+- **Regulatory mention:** Local inference reduces data export risk under DSGVO Article 28
+
+**Extra FAQs (2, always):**
+1. **"Muss ich bei der Verwendung von [Product] die DSGVO beachten?"** — DSGVO Article 28, Auftragsverarbeiter, local inference compliance
+2. **"Ist [Product] für den deutschen Mittelstand geeignet?"** — SME use cases, German IT security standards, BSI recommendations
+
+**Decimal notation rule:** Keep `.` in prose (4.5 GB → 4,5 GB is WRONG for tech content; 4.5 GB stays 4.5 GB)
+
+#### 🇫🇷 FRENCH (FR)
+
+**Style principle:** Formal, concise. French style favors elegance and brevity over encyclopedic detail.
+
+**Regional context:**
+- **CNIL:** Single sentence about CNIL recommending local AI for sensitive professional data
+- **RGPD:** General reference (not article-specific)
+- **Benefit-first:** Emphasize data sovereignty for finance/legal/healthcare
+
+**Extra FAQs:** None (FR always matches EN count exactly)
+
+**Decimal notation rule:** Keep `.` unchanged (standard for French tech writing)
+
+**Length target:** 10–15% shorter than EN (not by deleting, but by restructuring for elegance)
+
+#### 🇯🇵 JAPANESE (JA)
+
+**Style principle:** Polite, telegraphic. Short sentences, です/ます form throughout, intentional code-switching for technical terms.
+
+**Regional context:**
+- **METI AI Governance 2024:** Reference Ministry of Economy, Trade and Industry AI governance guidelines
+- **Data sovereignty:** East Asia data residency requirements (Japan, Malaysia, Singapore, Korea)
+- **Enterprise security:** Japanese enterprise security standards (not just US/EU)
+- Replace EU/China discussion with **East Asia combined section** (regional data frameworks)
+
+**Extra FAQs (2, always):**
+1. **"ローカル LLM デプロイメントで METI AI ガバナンスをどう適用するか？"** — METI guidelines, local inference compliance, Japanese enterprise workflow
+2. **"ローカル推論でエンタープライズセキュリティをどう確保するか？"** — Japanese security standards, data residency, enterprise data flows
+
+**Code-switching rule:** VRAM, Q4_K_M, Ollama, Python, API, GGUF stay English (standard in JA technical writing)
+
+**Schema author:** Organization (PromptQuorum) — JA convention
+
+**Fix: itemListSchema.itemListElement** names/descriptions — translate from EN (known inconsistency)
+
+#### 🇨🇳 CHINESE (ZH)
+
+**Style principle:** Benefit-focused, direct. Enterprise-oriented, simplified Chinese (not Traditional).
+
+**Regional context (COMPLETELY REWRITE, do not translate EN):**
+- **中国（数据安全法）:** Data Security Law 2021, CAC regulations, local inference as compliant architecture
+- **亚太地区（数据跨境）:** Cross-border data frameworks, MLAI compliance (PIPL)
+- **企业部署:** Finance/medical/legal regulatory compliance, major Chinese tech companies (Alibaba, Tencent, Baidu context)
+
+**Extra FAQs (2, always):**
+1. **"使用 [Product] 需要遵守数据安全法吗？"** — Data Security Law, CAC requirements, local inference for sensitive data
+2. **"本地推理如何满足企业合规要求？"** — Enterprise compliance frameworks, financial/medical/legal use cases
+
+**Schema author:** Organization (PromptQuorum) — ZH convention
+
+**Fix: itemListSchema.itemListElement** names/descriptions — translate from EN (known inconsistency)
+
+**Fix: schema.about[]** and **schema.speakable** — include (known omission)
+
+### 14.4 — FAQ Management Rules
+
+| Rule | DE | FR | JA | ZH | Notes |
+|------|----|----|----|----|-------|
+| Base FAQs (from EN) | 3 | 3 | 3 | 3 | Always translate the EN FAQs |
+| Locale-specific FAQs | +2 | 0 | +2 | +2 | Added AFTER base FAQs, before closing |
+| DSGVO-focused | 1 | — | — | — | German SME/compliance focus |
+| METI-focused | — | — | 1 | — | Japanese government AI governance |
+| Data law-focused | — | — | — | 1 | Chinese data security law |
+| Enterprise security | 1 | — | 1 | 1 | All except FR emphasize enterprise use |
+| Total FAQ count | 5 | 3 | 5 | 5 | FR matches EN; others add locale-specific |
+
+**Implementation:**
+1. Translate base FAQs from EN (all languages)
+2. Generate 2 locale-specific FAQs ONLY for DE, JA, ZH
+3. Add faqSchema entries for all locale-specific FAQs (inLanguage: XX)
+4. Verify count: `grep -c '{ q: ' translated_block` matches table above
+
+### 14.5 — Schema Markup Requirements (All Languages)
+
+Every translated article MUST include:
+
+#### Required Schemas
+- **TechArticle** (or LearningResource if educationalLevel set): 
+  - `url: "https://www.promptquorum.com/[path]?lang=XX"` (append ?lang parameter)
+  - `inLanguage: 'XX'` (e.g., 'de', 'fr', 'ja', 'zh')
+  - `author: { '@type': 'Person', 'name': 'Hans Kuepper' }` (normalize: DE/ZH use Organization convention)
+  - `datePublished` and `dateModified`: match EN source (ISO format, unchanged)
+
+- **HowToSchema** (if present in EN):
+  - `inLanguage: 'XX'`
+  - All `step[].name` and `step[].text` translated
+  - `url` with `?lang=XX`
+
+- **FAQSchema** (if present in EN or new for locale-specific FAQs):
+  - `inLanguage: 'XX'`
+  - All questions/answers in target language
+  - Include locale-specific FAQ entries
+  - `mainEntity[].name` translated
+
+- **ItemListSchema** (if present in EN):
+  - `inLanguage: 'XX'`
+  - `itemListElement[].name` and `.description` translated
+  - `url` with `?lang=XX`
+
+#### Schema Fixes by Language
+
+| Schema | DE | FR | JA | ZH | Fix |
+|--------|----|----|----|----|-----|
+| author | ✓ Normalize | ✓ Normalize | Organization | Organization | Ensure Person (EN/DE/FR) or Organization (JA/ZH) |
+| inLanguage | ✅ Add | ✅ Add | ✅ Add | ✅ Add | Always present |
+| url params | ✅ Add ?lang= | ✅ Add ?lang= | ✅ Add ?lang= | ✅ Add ?lang= | Internal links only |
+| about[] | ✓ Exist | ✓ Exist | **Add if missing** | **Add if missing** | Structured { '@type': 'Thing', 'name' } objects |
+| speakable | ✓ Exist | ✓ Exist | **Add if missing** | **Add if missing** | For voice search |
+
+### 14.6 — Internal Link Convention (All Languages)
+
+**Rule:** Every `/local-llms/`, `/prompt-engineering/`, `/blog/` markdown link in translated content must include `?lang=XX`.
+
+**Pattern:**
+```typescript
+// EN (no lang param needed)
+'[Link text](/prompt-engineering/example)'
+
+// DE (append ?lang=de)
+'[Link text](/prompt-engineering/example?lang=de)'
+
+// FR (append ?lang=fr)
+'[Link text](/prompt-engineering/example?lang=fr)'
+
+// JA (append ?lang=ja)
+'[Link text](/prompt-engineering/example?lang=ja)'
+
+// ZH (append ?lang=zh)
+'[Link text](/prompt-engineering/example?lang=zh)'
+```
+
+**Validation:**
+- Search translated block for `[` to find all markdown links
+- Each link should have `?lang=XX` appended
+- External URLs (https://) are unchanged
+
+### 14.7 — File Insertion Strategy (Size-Based Decision)
+
+| Translation Size | Insertion Strategy | Tool | Notes |
+|-----------------|-------------------|------|-------|
+| <100 lines | Single Edit | Edit tool | One insertion point, one old_string/new_string |
+| 100–400 lines | Single Edit with extended context | Edit tool | Larger old_string to ensure uniqueness |
+| 400–700 lines | Worktree + Single Edit | Worktree | Isolates from file formatter, one Edit call in worktree |
+| 700+ lines | Batch approach (section 7b) | Edit tool | Break into 2–3 logical batches |
+| **File auto-formatter error recurs** | Worktree + Smaller Edits | Worktree | 2–3 smaller edits instead of 1 giant edit |
+
+**Auto-Formatter Conflict Resolution:**
+- **Symptom:** "File has been modified since read" error during Edit on large translations
+- **Root cause:** Formatter runs as file system watch, invalidates string match between read and edit
+- **Solution:** Use worktree to isolate from auto-formatter, OR break into smaller 200–300 line edits
+
+### 14.8 — Verification Checklist Before Committing
+
+Run this checklist for every translated language:
+
+```
+## [ Language Code ] Translation Verification
+
+### Meta & Structure
+- [ ] `title` translated naturally (not word-for-word)
+- [ ] `seoTitle` 50–58 characters in target language
+- [ ] `metaDescription` 140–160 characters in target language
+- [ ] `intro` 45–50 words, bolded
+- [ ] `readTime` uses correct format (section 14.2 table)
+- [ ] `primaryTerm` translated and matches schema.teaches[] topic
+
+### Content Completeness
+- [ ] All section titles translated
+- [ ] All prose paragraphs translated (no EN prose visible)
+- [ ] All bullet points translated
+- [ ] All numbered lists translated
+- [ ] All table cells translated (keys AND values)
+- [ ] All blockquotes fully translated — no English blockquotes on non-EN pages
+
+### Regional Context
+- [ ] regionalContext section present BEFORE FAQ
+- [ ] Includes required regulatory references (DSGVO/CNIL/METI/Data Security Law)
+- [ ] Structured in 2–3 subsections per language requirement
+- [ ] No generic boilerplate (specific regulatory detail, not template)
+
+### FAQ & Schemas
+- [ ] FAQ count matches section 14.4 table
+- [ ] Base FAQs translated
+- [ ] Locale-specific FAQs present (DE, JA, ZH)
+- [ ] faqSchema updated with all FAQ entries + inLanguage: XX
+- [ ] howToSchema present if EN has it, all steps translated, inLanguage: XX
+- [ ] itemListSchema present if EN has it, all items translated, inLanguage: XX
+- [ ] All schema URLs include ?lang=XX (internal links only)
+
+### Links & References
+- [ ] All internal links have ?lang=XX appended
+- [ ] All external links unchanged (https://...)
+- [ ] All markdown formatting preserved (**bold**, `code`, etc.)
+- [ ] Product names kept in English (GPT-4o, Claude, Ollama, etc.)
+- [ ] Framework names kept in English (RISEN, TRACE, RTF, etc.)
+- [ ] Technical acronyms kept in English (VRAM, API, JSON, etc.)
+
+### Language Signals (E-E-A-T)
+- [ ] Zero untranslated English words in body text (except product names, code)
+- [ ] No mixed-language sentences
+- [ ] Grammar and vocabulary native to target language (not literal translation)
+- [ ] Tone matches language profile (formal for DE/FR, polite for JA, benefit-first for ZH)
+
+### Build & Browser Check
+- [ ] `npm run build` returns 0 errors
+- [ ] Article renders at `[slug]?lang=XX` URL
+- [ ] Page title (H1) shows in target language in browser
+- [ ] Meta description in DevTools shows target language
+- [ ] Internal links click through to `?lang=XX` versions
+```
+
+**Before committing:**
+```bash
+npm run build                    # Must pass with 0 errors
+npm run dev                      # Start server
+# Visit: http://localhost:3000/[article-path]?lang=XX
+# Check: H1, first paragraph, meta tags all in target language
+# Check: Click internal link → URL includes ?lang=XX
+```
+
+### 14.9 — Commit Message Convention (All Languages)
+
+```
+feat: Add [LANGUAGE] ([Full Language Name]) translation for [article-slug]
+```
+
+**Examples:**
+```
+feat: Add German (Deutsch) translation for lm-studio-advanced-features
+feat: Add French (Français) translation for lm-studio-advanced-features
+feat: Add Japanese (日本語) translation for lm-studio-advanced-features
+feat: Add Chinese (中文) translation for lm-studio-advanced-features
+```
+
+**For batch translations (30+ sections):**
+```
+feat: Add [LANGUAGE] translation for [slug] (Batches 1–5)
+feat: Complete [LANGUAGE] translation for [slug] (Batches 6–10)
+```
+
+---
+
+**Last updated:** 2026-04-08
+**Sections added:** 14 (Translation Style Instructions — Decision Framework)
+**Next review:** After JA/ZH translations for lm-studio-advanced-features complete
