@@ -69,7 +69,7 @@ export const translations = {
 
     // Blog
     blogTitle: "Prompt Engineering Guides",
-    blogSubtitle: "12 research-backed articles on AI prompting, multi-model dispatch, RAG, hallucination detection, and local LLMs for developers.",
+    blogSubtitle: "12 research-backed articles on prompt engineering, multi-model dispatch, hallucination detection, RAG, and local LLM techniques for developers.",
     blogIntro: "Each article covers a practical use case with specific numbers, named models, and copy-ready prompt templates. Articles are structured for AI citation extraction.",
 
     // SEO Meta Tags — Group A
@@ -177,7 +177,7 @@ export const translations = {
 
     // Blog
     blogTitle: "Prompt-Engineering-Leitfäden",
-    blogSubtitle: "12 forschungsbasierte Artikel über Multi-Model-Dispatch, Halluzinations-Erkennung, RAG und lokale LLM-Techniken für KI-Entwickler.",
+    blogSubtitle: "12 forschungsbasierte Artikel über Prompt-Engineering, Multi-Model-Dispatch, Halluzinations-Erkennung, RAG und lokale LLM-Techniken für Entwickler.",
     blogIntro: "Jeder Artikel behandelt einen praktischen Anwendungsfall mit spezifischen Zahlen, benannten Modellen und einsatzbereiten Prompt-Vorlagen. Artikel sind für die KI-Zitierextraktion strukturiert.",
 
     // SEO Meta Tags — Group A
@@ -285,7 +285,7 @@ export const translations = {
 
     // Blog
     blogTitle: "Guides d'ingénierie des prompts",
-    blogSubtitle: "12 articles sur l'ingénierie des prompts, la distribution multi-modèles, la détection des hallucinations, RAG et LLM locaux.",
+    blogSubtitle: "12 articles basés sur la recherche sur l'ingénierie des prompts, la distribution multi-modèles, la détection des hallucinations, RAG et LLM locaux.",
     blogIntro: "Chaque article couvre un cas d'utilisation pratique avec des chiffres spécifiques, des modèles nommés et des modèles de prompts prêts à copier. Les articles sont structurés pour l'extraction de citations IA.",
 
     // SEO Meta Tags — Group A
