@@ -26129,10 +26129,10 @@ print(response.choices[0].message.content)`,
         'gpu': {
           title: 'Which GPU Should You Choose?',
           content: [
-            '**RTX 4070 (recommended):** 12GB VRAM, $350–450 used. Runs Llama 3.1 70B (Q4) at 120 tok/sec. Best value for $1K budget.',
+            '**RTX 4070 (recommended):** 12GB VRAM, $350–450 used. Runs 8B models at 120–150 tok/sec and 13B models at 80–100 tok/sec at Q4 quantization. Best value for $1K budget. (70B models require 35GB+ VRAM.)',
             '**RTX 4070 Super:** 12GB VRAM, $450–550 used. 10–15% faster than 4070. Worth it if you find one at $450.',
             '**RTX 3090 (alternative):** 24GB VRAM, $400–600 used. Slightly slower than 4070 per token, but larger context window support.',
-            '**Avoid:** RTX 3080 10GB (too small VRAM), RTX 4060 12GB (too slow), anything <12GB for 70B models.',
+            '**Avoid:** RTX 3080 10GB (too small VRAM), RTX 4060 12GB (too slow), anything <12GB for models larger than 13B.',
           ],
         },
         'assembly': {
