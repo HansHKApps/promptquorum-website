@@ -100,7 +100,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       },
     },
     openGraph: {
-      title: article.title,
+      title: pageTitle,
       description: metaDesc,
       url: canonicalUrl,
       type: 'article',
@@ -112,7 +112,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     twitter: {
       card: 'summary_large_image',
       site: '@promptquorum',
-      title: article.title,
+      title: pageTitle,
       description: metaDesc,
     },
   }

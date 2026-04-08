@@ -117,7 +117,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       },
     },
     openGraph: {
-      title: isGlossary ? 'Prompt Engineering Glossary: 100 Essential Terms (2026)' : article.title,
+      title: isGlossary ? 'Prompt Engineering Glossary: 100 Essential Terms (2026)' : finalTitle,
       description: finalDesc,
       url: canonicalUrl,
       type: 'article',
@@ -129,7 +129,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     twitter: {
       card: 'summary_large_image',
       site: '@promptquorum',
-      title: isGlossary ? 'Prompt Engineering Glossary (100 Terms)' : article.title,
+      title: isGlossary ? 'Prompt Engineering Glossary (100 Terms)' : finalTitle,
       description: isGlossary ? 'Chain-of-Thought • RAG • Few-shot • Agents • Temperature • Token Limits. 100 searchable, cited, expert definitions.' : finalDesc,
     },
   }

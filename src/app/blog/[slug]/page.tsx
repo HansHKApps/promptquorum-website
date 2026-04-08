@@ -51,16 +51,16 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       },
     },
     openGraph: {
-      title: post.title,
-      description: post.intro,
+      title: pageTitle,
+      description: metaDesc,
       url: canonicalUrl,
       type: 'article',
       publishedTime: post.publishDate,
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
-      description: post.intro,
+      title: pageTitle,
+      description: metaDesc,
     },
   }
 }
