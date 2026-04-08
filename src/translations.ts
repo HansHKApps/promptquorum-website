@@ -74,7 +74,7 @@ export const translations = {
 
     // SEO Meta Tags — Group A
     homeMetaTitle: "PromptQuorum — One Prompt. 25+ AI Models. Consensus.",
-    homeMetaDescription: "Dispatch one prompt to 25+ AI models simultaneously. Compare responses, detect hallucinations, and get consensus. Free with your API key or local LLM.",
+    homeMetaDescription: "Compare responses from 25+ AI models with one prompt. Detect hallucinations, get consensus insights, and choose the best answer. Free with your API key.",
     featuresMetaTitle: "Features: AI Dispatch, Frameworks & Consensus | PromptQuorum",
     featuresMetaDescription: "PromptQuorum dispatches prompts to 25+ AI providers using 9 frameworks (CO-STAR, CRAFT, RISEN) and runs consensus analysis. Free with your API key.",
     howItWorksMetaTitle: "How PromptQuorum Works: 4-Stage AI Pipeline",
@@ -182,7 +182,7 @@ export const translations = {
 
     // SEO Meta Tags — Group A
     homeMetaTitle: "PromptQuorum — Ein Prompt. 25+ KI-Modelle. Konsens.",
-    homeMetaDescription: "Senden Sie einen Prompt gleichzeitig an 25+ KI-Modelle. Vergleichen Sie Antworten, erkennen Sie Halluzinationen und erhalten Sie einen Konsens. Kostenlos mit Ihrem API-Key.",
+    homeMetaDescription: "Senden Sie einen Prompt an 25+ KI-Modelle. Vergleichen Sie Antworten, erkennen Sie Halluzinationen und erhalten Sie Konsens. Kostenlos mit Ihrem API-Key.",
     featuresMetaTitle: "Funktionen: KI-Versand, Frameworks & Konsens | PromptQuorum",
     featuresMetaDescription: "PromptQuorum sendet Prompts an 25+ KI-Anbieter mit 9 Frameworks (CO-STAR, CRAFT, RISEN) und führt Konsensanalyse durch. Kostenlos mit eigenem API-Key.",
     howItWorksMetaTitle: "So funktioniert PromptQuorum: 4-Stufen-Pipeline",
