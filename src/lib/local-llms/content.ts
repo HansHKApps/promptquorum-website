@@ -16912,6 +16912,47 @@ print(response.choices[0].message.content)`,
         sources: { title: '参考資料', items: ['NVIDIA CUDA ドキュメント', 'Ollama ドキュメント'] },
       },
       schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2026年にローカルLLMを実行するのに必要なVRAMはどのくらい?', inLanguage: 'ja' },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'ローカルLLMのVRAM要件を計算する方法',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'モデルパラメータ数(十億単位)を確認' },
+          { '@type': 'HowToStep', position: 2, name: 'ほとんどのユーザーの場合はQ4量子化を選択' },
+          { '@type': 'HowToStep', position: 3, name: '公式を適用: (パラメータ × ビット) ÷ 8' },
+          { '@type': 'HowToStep', position: 4, name: 'KVキャッシュとランタイムオーバーヘッドに10-15%を加算' },
+          { '@type': 'HowToStep', position: 5, name: 'VRAM以上のGPUを選択' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'モデルサイズ別VRAM要件2026',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '3Bモデル', description: 'Q4: 1.8 GB。Q8: 3 GB。FP32: 12 GB。推奨: 8GB GPU。' },
+          { '@type': 'ListItem', position: 2, name: '7Bモデル', description: 'Q4: 3.5 GB。Q8: 7 GB。FP32: 28 GB。推奨: 8GB GPU。' },
+          { '@type': 'ListItem', position: 3, name: '13Bモデル', description: 'Q4: 7 GB。Q8: 13 GB。FP32: 52 GB。推奨: 12-16GB GPU。' },
+          { '@type': 'ListItem', position: 4, name: '22Bモデル', description: 'Q4: 11 GB。Q8: 22 GB。FP32: 88 GB。推奨: 16GB GPU。' },
+          { '@type': 'ListItem', position: 5, name: '70Bモデル', description: 'Q4: 35 GB。Q8: 70 GB。FP32: 280 GB。推奨: デュアルRTX 4090。' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: '6GB GPUでMistral 7Bを実行できますか?', acceptedAnswer: { '@type': 'Answer', text: 'Q4でギリギリです。実際のところ、いいえ。最低8GBを購入してください。6GBではOOMエラーが発生します。' } },
+          { '@type': 'Question', name: '7BモデルのファインチューニングにはどのくらいのVRAMが必要ですか?', acceptedAnswer: { '@type': 'Answer', text: 'LoRA用: 12–16GB。フルファインチューニング: 28GB以上。ファインチューニングはオプティマイザー状態(モデルVRAMの2-4倍)が必要です。' } },
+          { '@type': 'Question', name: 'Llama 3 13Bに12GBで十分ですか?', acceptedAnswer: { '@type': 'Answer', text: 'Q4ではギリギリです。Q5またはQ8では、いいえ。12GBはぎりぎりです。16GBが快適です。' } },
+          { '@type': 'Question', name: '70Bモデルに24GBが必要ですか?', acceptedAnswer: { '@type': 'Answer', text: 'Q4ではい。Q5以上では、いいえ。より高い量子化(Q5、Q8)は70Bに32GB以上が必要です。' } },
+          { '@type': 'Question', name: 'バッチサイズを増やすと単一推論のVRAMが減りますか?', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。単一推論は常にbatch=1 VRAMを使用します。バッチサイズはスループット(マルチユーザーシナリオ)にのみ役立ちます。' } },
+          { '@type': 'Question', name: '精度に最適な量子化は何ですか?', acceptedAnswer: { '@type': 'Answer', text: 'Q8はほぼ知覚できないロスです。Q5は~2%ロス。Q4は~1%ロス。ほとんどの場合、Q4がスイートスポットです。' } },
+          { '@type': 'Question', name: 'VRAMの一部をCPU RAMにオフロードできますか?', acceptedAnswer: { '@type': 'Answer', text: 'はい、レイヤー分割を使用します。Llama.cppとOllamaがサポートしています。パフォーマンスは30-50%低下します。' } },
+          { '@type': 'Question', name: 'ローカルLLM実行の最小VRAMは?', acceptedAnswer: { '@type': 'Answer', text: '3B Q4なら4GB VRAM。実用的な最小値は8GB VRAM + 7B Q4。6GB以下では、ほとんどの7Bモデルでは不十分です。' } },
+          { '@type': 'Question', name: 'Apple Silicon VRAMはGPU VRAMと同じですか?', acceptedAnswer: { '@type': 'Answer', text: 'Apple Siliconは共有メモリを使用します。M3 18GB = GPU 18GB VRAM。MacBook Pro M3 18GBはLlama 3 13B Q4(~7GB) + オーバーヘッドを実行できます。' } },
+          { '@type': 'Question', name: '異なる量子化レベルで7Bには何GBのVRAMが必要ですか?', acceptedAnswer: { '@type': 'Answer', text: '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~4.5GB。7B Q4: ~5GB(3.5GBモデル + 1.5GBオーバーヘッド)。6GBはきついです、8GBが快適です。' } }
+        ]
+      },
     },
     zh: {
       theme: 'GPU Buying Guides',
@@ -16951,6 +16992,47 @@ print(response.choices[0].message.content)`,
         sources: { title: '参考资源', items: ['NVIDIA CUDA文档', 'Ollama文档'] },
       },
       schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2026年运行本地LLM需要多少显存?', inLanguage: 'zh' },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: '如何计算任何本地LLM的显存要求',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: '查找模型参数数量(以十亿为单位)' },
+          { '@type': 'HowToStep', position: 2, name: '对大多数用户选择Q4量化' },
+          { '@type': 'HowToStep', position: 3, name: '应用公式: (参数 × 位数) ÷ 8' },
+          { '@type': 'HowToStep', position: 4, name: '为KV缓存和运行时开销添加10-15%' },
+          { '@type': 'HowToStep', position: 5, name: '选择显存等于或超过总数的GPU' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '按模型大小的显存要求2026',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '3B模型', description: 'Q4: 1.8 GB。Q8: 3 GB。FP32: 12 GB。推荐: 8GB GPU。' },
+          { '@type': 'ListItem', position: 2, name: '7B模型', description: 'Q4: 3.5 GB。Q8: 7 GB。FP32: 28 GB。推荐: 8GB GPU。' },
+          { '@type': 'ListItem', position: 3, name: '13B模型', description: 'Q4: 7 GB。Q8: 13 GB。FP32: 52 GB。推荐: 12-16GB GPU。' },
+          { '@type': 'ListItem', position: 4, name: '22B模型', description: 'Q4: 11 GB。Q8: 22 GB。FP32: 88 GB。推荐: 16GB GPU。' },
+          { '@type': 'ListItem', position: 5, name: '70B模型', description: 'Q4: 35 GB。Q8: 70 GB。FP32: 280 GB。推荐: 双RTX 4090。' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: '我可以在6GB GPU上运行Mistral 7B吗?', acceptedAnswer: { '@type': 'Answer', text: '勉强,Q4显存紧张。实际上不行。至少买8GB。6GB会导致OOM错误。' } },
+          { '@type': 'Question', name: '微调7B模型需要多少显存?', acceptedAnswer: { '@type': 'Answer', text: 'LoRA: 12–16GB。全微调: 28GB以上。微调需要优化器状态(模型显存的2-4倍),而不仅仅是推理。' } },
+          { '@type': 'Question', name: '12GB足以运行Llama 3 13B吗?', acceptedAnswer: { '@type': 'Answer', text: 'Q4勉强足够。Q5或Q8则不够。12GB很紧张。16GB才舒适。' } },
+          { '@type': 'Question', name: '70B模型需要24GB吗?', acceptedAnswer: { '@type': 'Answer', text: 'Q4需要。Q5以上则不需要。更高量子化(Q5、Q8)的70B需要32GB以上。' } },
+          { '@type': 'Question', name: '增加批大小会减少单次推理的显存吗?', acceptedAnswer: { '@type': 'Answer', text: '不会。单次推理始终使用batch=1显存。批大小只有助于吞吐量(多用户场景)。' } },
+          { '@type': 'Question', name: '精度最好的量化方式是什么?', acceptedAnswer: { '@type': 'Answer', text: 'Q8几乎无法感知的损失。Q5大约2%损失。Q4大约1%损失。对大多数人来说,Q4是最好的折中。' } },
+          { '@type': 'Question', name: '我可以将部分显存卸载到CPU RAM吗?', acceptedAnswer: { '@type': 'Answer', text: '可以,通过层分割。Llama.cpp和Ollama都支持。性能会下降30-50%。' } },
+          { '@type': 'Question', name: '运行本地LLM的最小显存是多少?', acceptedAnswer: { '@type': 'Answer', text: '3B Q4需要4GB显存。实用最小值是8GB显存+ 7B Q4。低于6GB的话,大多数7B模型会导致内存溢出。' } },
+          { '@type': 'Question', name: 'Apple Silicon显存与GPU显存的工作方式相同吗?', acceptedAnswer: { '@type': 'Answer', text: 'Apple Silicon使用统一内存。M3 18GB = GPU 18GB显存。MacBook Pro M3 18GB可以运行Llama 3 13B Q4(~7GB) + 开销。' } },
+          { '@type': 'Question', name: '7B模型在不同量化级别需要多少显存?', acceptedAnswer: { '@type': 'Answer', text: '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~4.5GB。7B Q4: ~5GB(3.5GB模型+ 1.5GB开销)。6GB太紧张,8GB比较舒适。' } }
+        ]
+      },
     },
 
   },
