@@ -195,6 +195,164 @@ Every H2 section must follow a strict 3-part hierarchy:
 - `[ ]` Explanation follows the answer, never precedes it
 - `[ ]` At least one example, command, table, or step list per H2 section
 
+#### Rule 22b: Decision-Driven Content Framework (For Guides, Comparisons, How-To Articles)
+
+Pages involving tools, models, setups, or comparisons must be structured **specifically for decisions**, not just explanations. Convert every article from "What is this?" into "What should I do?"
+
+**The 7-Layer Decision Framework:**
+
+##### 1. Direct Answer Block (First 100–150 words)
+
+Within the first 150 words, provide a standalone answer that fully responds to the core query and makes sense if extracted without surrounding context.
+
+**Example (Correct):**
+> "**Use LM Studio if you want a free, no-terminal interface for running local models on consumer hardware.** LM Studio bundles popular models (Llama, Qwen, Mistral) with one-click installation, built-in quantization presets, and an OpenAI-compatible API. Best for: beginners, testing, lightweight inference. Not for: production systems requiring LoRA fine-tuning or batch inference optimization."
+
+**Example (Wrong):**
+> "LM Studio is a software application that allows you to run local language models. Local language models are models that run on your computer rather than on remote servers. There are many benefits to running models locally..."
+
+##### 2. Best Choice / Recommendation Block (If Multiple Options Exist)
+
+For any comparison or decision point, explicitly state the best choice per use case.
+
+**Format:**
+```
+🏆 Best Choice
+- Best overall: [Option A] — [reason]
+- Best for [specific use case]: [Option B] — [reason]
+- Best for [specific use case]: [Option C] — [reason]
+- Budget option: [Option D] — [reason]
+```
+
+**Rules:**
+- Be explicit — no hedging ("it depends" → explain instead)
+- Cover 3–4 options minimum (if fewer exist, that's fine)
+- Include reasoning tied to real trade-offs, not opinions
+
+##### 3. Use Case Segmentation: "Who Should Use This?"
+
+Clarify exactly who should use what. Convert vague audiences into specific personas.
+
+**Format:**
+```
+🧭 Who Should Use This?
+- Beginners (learning LLMs) → [Recommendation]
+- Intermediate developers → [Recommendation]
+- Advanced users (production) → [Recommendation]
+- Budget-conscious teams → [Recommendation]
+
+❌ Who Should NOT Use This?
+- If [situation], use [alternative] instead
+- If [constraint], avoid [this option]
+```
+
+**Rules:**
+- Be specific about constraints (budget, hardware, skill level, use case)
+- Always include at least one "NOT" case
+- Link recommendations to earlier "Best Choice" section
+
+##### 4. When to Use / When NOT to Use (Decision Boundary)
+
+Convert explanations into explicit decision boundaries.
+
+**Format:**
+```
+✅ When to Use [Topic]
+- [Specific situation] → recommended
+- [Constraint] is acceptable → yes
+- [Outcome] is your goal → use this
+
+❌ When NOT to Use [Topic]
+- If [situation], use [alternative] instead
+- If [constraint] is critical, avoid this
+- If [outcome] is required, skip this
+```
+
+**Rules:**
+- Avoid generic statements ("depends on your use case")
+- Focus on real trade-offs and constraints
+- Make it actionable — readers should decide in <30 seconds
+
+##### 5. Comparison Layer (If Applicable)
+
+If the page discusses multiple options, include a structured comparison.
+
+**Option A:**
+- Use a side-by-side table (Option A vs B vs C)
+- Format: `| Option | Best For | Key Strength | Key Weakness | Price/Cost |`
+- Focus on decision criteria, not similarity
+
+**Option B:**
+- Bulleted pros/cons for each option
+- Organize by decision-relevant categories (not by "pros" then "cons")
+
+**Example (Table):**
+| Feature | LM Studio | Ollama | vLLM |
+|---------|-----------|--------|------|
+| Best for | Beginners, GUI users | Terminal users, scripts | Production API servers |
+| Ease of setup | 5 min GUI | 2 min CLI | 20 min + Docker |
+| Quantization support | All presets | 4 major formats | Q4, Q5 only |
+| OpenAI API | ✅ Built-in | ✅ Built-in | ✅ Built-in |
+| Price | Free | Free | Free |
+
+##### 6. Final Verdict (One Clear Conclusion)
+
+End decision-heavy sections with a **single, actionable recommendation**, not a restatement.
+
+**Format:**
+```
+**Final Verdict**
+- Use [Option A] if [situation] — [concrete next step]
+- Use [Option B] if [situation] — [concrete next step]
+- If unsure, start with [safest option] and move up
+```
+
+**Rules:**
+- No repetition of earlier sections
+- Must help the reader decide *immediately* and take action
+- Include a "if unsure" path
+
+##### 7. Extractability: Make Content AI-Friendly
+
+Ensure key decision sections can be quoted by AI systems without context.
+
+**Rules:**
+- Keep bold answer blocks to 1–3 sentences
+- Use bullet points for decision criteria (not prose paragraphs)
+- Avoid long paragraphs in critical recommendation sections
+- Every comparison should fit in one screen (~15 lines max)
+- Avoid forward references ("as discussed earlier") — each section should be self-contained
+
+##### 8. Decision Density Over Length
+
+Prioritize decisiveness. Do NOT add more explanation without adding new decisions.
+
+**Wrong approach:**
+> "There are many ways to use LM Studio. You can use it for development, testing, research, prototyping, and more. Each of these has benefits and drawbacks..."
+
+**Right approach:**
+> "Use LM Studio for: development (3–5x faster iteration), testing (no API costs), research (reproducibility). Do NOT use for: production serving (use vLLM), fine-tuning at scale (use RunwayML)."
+
+##### 9. Self-Check Before Publishing (Mandatory)
+
+Before finalizing any decision-heavy page, verify:
+
+```
+✅ Checklist
+- Does the page answer the main question in the first 100 words?
+- Can a reader decide within 30 seconds without scrolling?
+- Are all recommendations explicit and verifiable?
+- Are "best choice" sections tied to real use cases, not opinions?
+- Can key sections (recommendations, comparisons) be quoted by AI systems?
+- Is there at least one "when NOT to use" section?
+- If multiple options exist, are they in a table or clear bullets?
+
+⚠️ If ANY of these is unchecked:
+👉 Revise before publishing
+```
+
+**Core Principle:** Every page must answer **"What should I do?"** — not just "What is this?"
+
 ---
 
 ### SECTION B: Structure & Readability (Rule 2)
