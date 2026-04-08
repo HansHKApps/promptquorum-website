@@ -10178,6 +10178,8 @@ print(response.choices[0].message.content)`,
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-08',
         mainEntity: [
           {
             '@type': 'Question',
@@ -10210,6 +10212,8 @@ print(response.choices[0].message.content)`,
         '@type': 'HowTo',
         name: 'How to Configure GPU Memory and Context Window in LM Studio',
         description: 'Step-by-step guide to optimizing GPU memory allocation, context length, API setup, batch inference, and benchmarking in LM Studio.',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-08',
         step: [
           {
             '@type': 'HowToStep',
@@ -10247,6 +10251,8 @@ print(response.choices[0].message.content)`,
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         name: 'LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-08',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio has advanced settings in the Settings → Server tab (GPU options, context length).' },
           { '@type': 'ListItem', position: 2, name: 'GPU memory can be manually set from 10% to 100% of VRAM — lower values free up GPU for other apps.' },
