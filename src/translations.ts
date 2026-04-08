@@ -186,9 +186,9 @@ export const translations = {
     featuresMetaTitle: "Funktionen: KI-Versand, Frameworks & Konsens | PromptQuorum",
     featuresMetaDescription: "PromptQuorum sendet Prompts an 25+ KI-Anbieter mit 9 Frameworks (CO-STAR, CRAFT, RISEN) und führt Konsensanalyse durch. Kostenlos mit eigenem API-Key.",
     howItWorksMetaTitle: "So funktioniert PromptQuorum: 4-Stufen-Pipeline",
-    howItWorksMetaDescription: "PromptQuorums vierstufige Pipeline optimiert Ihren Prompt, sendet ihn an 25+ KI-Modelle gleichzeitig und führt Konsensscoring durch.",
+    howItWorksMetaDescription: "PromptQuorums vierstufige Pipeline optimiert Ihren Prompt, sendet ihn an 25+ KI-Modelle gleichzeitig und führt Konsensscoring durch, um die beste Antwort zu finden.",
     faqMetaTitle: "PromptQuorum FAQ: Preise, Datenschutz & KI-Anbieter",
-    faqMetaDescription: "26 Antworten zu PromptQuorum: Multi-Model-Versand, Konsensscoring, 9 Prompt-Frameworks, lokaler LLM-Support, Datenschutz-Modell.",
+    faqMetaDescription: "26 Antworten zu PromptQuorum: Multi-Model-Versand, Konsensscoring, 9 Prompt-Frameworks, lokaler LLM-Support, BYOM Datenschutz-Modell und erste Schritte.",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt-Engineering-Hub: 80 Leitfäden | PromptQuorum",
@@ -206,7 +206,7 @@ export const translations = {
     featuresQuorumMetaTitle: "Quorum: Multi-Model-Konsensanalyse | PromptQuorum",
     featuresQuorumMetaDescription: "Sammeln Sie Antworten von mehreren KI-Modellen, analysieren Sie Konsensmuster und synthetisieren Sie Erkenntnisse.",
     downloadMetaTitle: "PromptQuorum für Mac & Windows herunterladen",
-    downloadMetaDescription: "Laden Sie die PromptQuorum-Desktop-App herunter. Versand an 25+ KI-Modelle, Konsensanalyse, Offline-Betrieb mit lokalen LLMs.",
+    downloadMetaDescription: "Laden Sie die PromptQuorum-Desktop-App kostenlos herunter. Versand an 25+ KI-Modelle, Konsensanalyse, Offline-Betrieb mit lokalen LLMs.",
     aboutMetaTitle: "Über PromptQuorum — Entwickelt von Hans Kuepper",
     aboutMetaDescription: "PromptQuorum wurde von Hans Kuepper entwickelt, ein unabhängiger Entwickler mit Fokus auf datenschutzorientierte KI-Tools.",
     privacyMetaTitle: "Datenschutzrichtlinie | PromptQuorum",
@@ -295,8 +295,8 @@ export const translations = {
     featuresMetaDescription: "PromptQuorum envoie des prompts à 25+ fournisseurs IA avec 9 frameworks (CO-STAR, CRAFT, RISEN) et analyse le consensus. Gratuit avec votre clé API.",
     howItWorksMetaTitle: "Comment fonctionne PromptQuorum: Pipeline en 4 étapes",
     howItWorksMetaDescription: "Le pipeline en 4 étapes de PromptQuorum optimise votre prompt, l'envoie à 25+ modèles IA simultanément et exécute la notation du consensus.",
-    faqMetaTitle: "FAQ PromptQuorum: Tarification, Confidentialité & Fournisseurs",
-    faqMetaDescription: "26 réponses sur PromptQuorum: dispatch multi-modèles, consensus, 9 frameworks, support LLM local, modèle de confidentialité.",
+    faqMetaTitle: "PromptQuorum FAQ: Tarifs, Confidentialité & Fournisseurs",
+    faqMetaDescription: "26 réponses sur PromptQuorum: dispatch multi-modèles, consensus, 9 frameworks, support LLM local, modèle de confidentialité BYOM et premiers pas.",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Hub d'ingénierie des prompts: 80 Guides | PromptQuorum",
@@ -314,7 +314,7 @@ export const translations = {
     featuresQuorumMetaTitle: "Quorum: Analyse du consensus multi-modèles | PromptQuorum",
     featuresQuorumMetaDescription: "Collectez les réponses de plusieurs modèles IA, analysez les schémas de consensus et synthétisez les insights.",
     downloadMetaTitle: "Télécharger PromptQuorum pour Mac & Windows | Gratuit",
-    downloadMetaDescription: "Téléchargez l'application de bureau PromptQuorum. Dispatch à 25+ modèles IA, analyse de consensus, hors ligne avec LLMs locaux.",
+    downloadMetaDescription: "Téléchargez l'application de bureau PromptQuorum gratuitement. Dispatch à 25+ modèles IA, analyse de consensus, hors ligne avec LLMs locaux.",
     aboutMetaTitle: "À propos de PromptQuorum — Créé par Hans Kuepper",
     aboutMetaDescription: "PromptQuorum est créé par Hans Kuepper, développeur indépendant axé sur les outils IA respectueux de la confidentialité.",
     privacyMetaTitle: "Politique de confidentialité | PromptQuorum",
