@@ -182,15 +182,26 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
       }).filter(Boolean)
     : []
 
-  // Use article.schema if defined; otherwise fallback to generic Article schema
+  // Map educationalLevel → TechArticle proficiencyLevel (computed here for articleSchema; also used below for learningResourceSchema)
+  const peEnArticle = peContent[key]['en']
+  const peEdLevel = (article as PEArticle & { educationalLevel?: string }).educationalLevel
+    ?? (peEnArticle as PEArticle & { educationalLevel?: string })?.educationalLevel
+  const peLevelMap: Record<string, string> = { Beginner: 'Beginner', Intermediate: 'Intermediate', Advanced: 'Expert', Technical: 'Expert' }
+  const peProficiencyLevel = peEdLevel ? (peLevelMap[peEdLevel] ?? peEdLevel) : undefined
+  const peAboutTopics = ((article as any).aboutTopics ?? (peEnArticle as any)?.aboutTopics) as string[] | undefined
+  const peHowToName = ((article as any).howToName ?? (peEnArticle as any)?.howToName) as string | undefined
+
+  // Use article.schema if defined; otherwise fallback to generic TechArticle schema
   const articleSchema = article.schema || {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'TechArticle',
     headline: article.title,
     description: article.intro,
-    datePublished: '2026-03-01',
-    dateModified: article.publishDate || '2026-03-28',
+    datePublished: article.publishDate || '2026-03-01',
+    dateModified: (article as any).dateModified ?? article.publishDate ?? '2026-03-28',
     url: canonicalUrl,
+    ...(peProficiencyLevel && { proficiencyLevel: peProficiencyLevel }),
+    ...(peAboutTopics?.length && { about: peAboutTopics.map((t: string) => ({ '@type': 'Thing', name: t })) }),
     author: {
       '@type': 'Person',
       name: 'Hans Kuepper',
@@ -381,7 +392,7 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
       ? {
           '@context': 'https://schema.org',
           '@type': 'HowTo',
-          name: howToSectionData.title ?? article.title,
+          name: peHowToName ?? howToSectionData.title ?? article.title,
           description: article.intro,
           step: howToSectionData.numberedItems.map((step, i) => {
             const cleanText = step.replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1').replace(/\[([^\]]+)\]/g, '$1').trim()
@@ -397,13 +408,12 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
         }
       : null
 
-  // LearningResource schema for educational articles
-  const enArticle = peContent[key]['en']
-  const educationalLevel = (article as PEArticle & { educationalLevel?: string }).educationalLevel
-    ?? (enArticle as PEArticle & { educationalLevel?: string })?.educationalLevel
+  // LearningResource schema for educational articles (reuse peEnArticle + peEdLevel computed above)
+  const enArticle = peEnArticle
+  const educationalLevel = peEdLevel
 
   const audience = (article as PEArticle & { audience?: string }).audience
-    ?? (enArticle as PEArticle & { audience?: string })?.audience
+    ?? (peEnArticle as PEArticle & { audience?: string })?.audience
 
   const learningResourceSchema = educationalLevel ? {
     '@context': 'https://schema.org',

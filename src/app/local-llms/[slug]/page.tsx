@@ -156,6 +156,13 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
   const article = (llmContent[key][selectedLang] ?? llmContent[key]['en'])!
   const canonicalUrl = `https://www.promptquorum.com/local-llms/${slug}`
 
+  // Map educationalLevel → TechArticle proficiencyLevel
+  const llmEdLevel = (article as any).educationalLevel ?? (llmContent[key]['en'] as any)?.educationalLevel
+  const llmLevelMap: Record<string, string> = { Beginner: 'Beginner', Intermediate: 'Intermediate', Advanced: 'Expert', Technical: 'Expert' }
+  const llmProficiencyLevel = llmEdLevel ? (llmLevelMap[llmEdLevel] ?? llmEdLevel) : undefined
+  const llmAboutTopics = ((article as any).aboutTopics ?? (llmContent[key]['en'] as any)?.aboutTopics) as string[] | undefined
+  const llmHowToName = ((article as any).howToName ?? (llmContent[key]['en'] as any)?.howToName) as string | undefined
+
   // Use article.schema if defined; otherwise fallback to generic TechArticle schema
   const articleSchema = (article as any).schema || {
     '@context': 'https://schema.org',
@@ -163,8 +170,10 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
     headline: article.title,
     description: article.intro,
     datePublished: article.publishDate,
-    dateModified: article.dateModified ?? article.publishDate,
+    dateModified: (article as any).dateModified ?? article.publishDate,
     url: canonicalUrl,
+    ...(llmProficiencyLevel && { proficiencyLevel: llmProficiencyLevel }),
+    ...(llmAboutTopics?.length && { about: llmAboutTopics.map((t: string) => ({ '@type': 'Thing', name: t })) }),
     author: {
       '@type': 'Person',
       name: 'Hans Kuepper',
@@ -214,7 +223,7 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
   const howToSchema = article.howToSchema ?? (howToSection ? {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: article.title,
+    name: llmHowToName ?? article.title,
     description: article.intro,
     step: howToSection.numberedItems!.map((step, i) => ({
       '@type': 'HowToStep',

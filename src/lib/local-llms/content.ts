@@ -42,6 +42,8 @@ export interface LLMArticle {
   educationalLevel?: string
   audience?: string
   primaryTerm?: string
+  aboutTopics?: string[]     // 3 topic entities for TechArticle schema about[] array
+  howToName?: string         // Custom HowTo schema name (overrides auto-generated name)
   toc?: { label: string; anchor: string }[]
 }
 
@@ -230,6 +232,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       dateModified: '2026-04-05',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
+      aboutTopics: ['Ollama', 'Local LLM', 'llama.cpp'],
+      howToName: 'How to Install Ollama',
       primaryTerm: 'Ollama',
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
@@ -1794,6 +1798,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       dateModified: '2026-04-05',
       readTime: '7 min read',
       educationalLevel: 'Beginner',
+      aboutTopics: ['LM Studio', 'Local LLM', 'GGUF'],
+      howToName: 'How to Install LM Studio',
       primaryTerm: 'LM Studio',
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
@@ -3831,6 +3837,8 @@ print(response.choices[0].message.content)`,
       dateModified: '2026-04-05',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
+      aboutTopics: ['Ollama', 'llama.cpp', 'GPU acceleration'],
+      howToName: 'How to Diagnose Local LLM Errors',
       primaryTerm: 'local LLM troubleshooting',
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
@@ -4216,6 +4224,8 @@ print(response.choices[0].message.content)`,
       dateModified: '2026-04-05',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
+      aboutTopics: ['Local LLM laptop', 'Apple Silicon', 'Thermal throttling'],
+      howToName: 'How to Reduce Thermal Throttling',
       primaryTerm: 'local LLM laptop',
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
@@ -5549,7 +5559,9 @@ print(response.choices[0].message.content)`,
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '8 min read',
-      educationalLevel: 'Beginner',
+      educationalLevel: 'Intermediate',
+      aboutTopics: ['Local LLM security', 'GDPR compliance', 'Privacy'],
+      howToName: '12-Item Local LLM Security Checklist',
       primaryTerm: 'local LLM privacy',
       audience: 'Security-conscious developers and non-technical users setting up private AI systems',
       toc: [
@@ -6208,6 +6220,8 @@ print(response.choices[0].message.content)`,
       dateModified: '2026-04-05',
       readTime: '9 min read',
       educationalLevel: 'Intermediate',
+      aboutTopics: ['Qwen2.5', 'Llama 3.3', 'Mistral Small 3.1'],
+      howToName: 'How to Try Each Family with Ollama',
       primaryTerm: 'Qwen vs Llama vs Mistral',
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
@@ -9751,6 +9765,8 @@ print(response.choices[0].message.content)`,
       publishDate: '2026-04-04',
       readTime: '10 min read',
       educationalLevel: 'Intermediate',
+      aboutTopics: ['Ollama API', 'OpenAI-compatible API', 'Local LLM'],
+      howToName: 'How to Connect Python to Ollama API',
       primaryTerm: 'OpenAI-compatible API',
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
@@ -11645,6 +11661,8 @@ print(response.choices[0].message.content)`,
       publishDate: '2026-04-04',
       readTime: '10 min read',
       educationalLevel: 'Intermediate',
+      aboutTopics: ['Continue.dev', 'Cursor IDE', 'VS Code'],
+      howToName: 'How to Set Up Continue.dev',
       primaryTerm: 'local code completion',
       toc: [
         { label: 'VS Code + Continue.dev', anchor: 'vscode-continue' },
@@ -11748,6 +11766,22 @@ print(response.choices[0].message.content)`,
               q: 'Does local code completion work offline?',
               a: 'Yes. If you have pulled the model in Ollama, completions work entirely offline.',
             },
+            {
+              q: 'How much VRAM do I need for local code completions?',
+              a: 'Minimum 8 GB VRAM for practical local code completions. A 7B model at Q4 quantization uses 4.7 GB VRAM, but you need 2–3 GB headroom for the IDE and OS — so 8 GB is the real floor. For 13B models (higher quality, 74% HumanEval), 16 GB VRAM is required. On Apple Silicon, unified memory works: 16 GB M-series handles 7B models comfortably, 32 GB handles 13B models.',
+            },
+            {
+              q: 'Which is better for local code completions: VS Code with Continue.dev or Cursor?',
+              a: 'Cursor is simpler to set up — built-in Ollama support with no extension needed. VS Code with Continue.dev is more flexible — you can mix local and cloud models and configure context length, debounce, and completion behavior per-project. Choose Cursor if you want a ready-to-use AI IDE. Choose Continue.dev if you need fine-grained control or already have a VS Code workflow you want to keep.',
+            },
+            {
+              q: 'How do I reduce latency for local code completions?',
+              a: 'Three settings have the largest impact: (1) reduce contextLength from 2048 to 1024 tokens in config.json — cuts latency roughly in half at the cost of less surrounding code context; (2) increase debounceWaitMs to 400–500 ms — prevents the model from triggering on every keystroke and reduces flickering; (3) reduce maxTokens to 30 — limits completion length for faster responses. On GPU, 7B models at Q4 produce completions in 0.3–1.5 seconds. On CPU-only machines, latency is 5–10 seconds — GPU is required for a usable experience.',
+            },
+            {
+              q: 'Do local code completion models support Python, JavaScript, TypeScript, and other languages?',
+              a: 'Yes. Qwen2.5-Coder 7B (72% HumanEval), Llama Code 13B (74% HumanEval), and DeepSeek-Coder 6.7B (68% HumanEval) all support Python, JavaScript, TypeScript, Go, Rust, Java, C++, and most major languages. HumanEval scores are Python-centric benchmarks — real-world performance on TypeScript and Go is slightly lower. For project-specific completions, Continue.dev supports codebase indexing: it indexes your repository so the model has context about your custom functions and types, improving completion relevance.',
+            },
           ],
         },
         relatedReading: {
@@ -11790,7 +11824,11 @@ print(response.choices[0].message.content)`,
           { '@type': 'Question', name: 'Is local code completion faster than cloud?', acceptedAnswer: { '@type': 'Answer', text: 'No. Cloud completions (GitHub Copilot) are faster due to optimized servers. Local completions have higher latency but zero cost and zero privacy risk.' } },
           { '@type': 'Question', name: 'Can I use local completions with other IDEs (PyCharm, Neovim)?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, but setup varies. PyCharm has an Ollama plugin. For Neovim, use cmp-ollama (completion plugin). Always check the IDE community for integrations.' } },
           { '@type': 'Question', name: 'Can I use cloud models in Continue or Cursor?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Configure Continue to use OpenAI, Claude, or Gemini. You can also mix (local for fast, cloud for complex code).' } },
-          { '@type': 'Question', name: 'Does local code completion work offline?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. If you have pulled the model in Ollama, completions work entirely offline.' } }
+          { '@type': 'Question', name: 'Does local code completion work offline?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. If you have pulled the model in Ollama, completions work entirely offline.' } },
+          { '@type': 'Question', name: 'How much VRAM do I need for local code completions?', acceptedAnswer: { '@type': 'Answer', text: 'Minimum 8 GB VRAM for practical local code completions. A 7B model at Q4 quantization uses 4.7 GB VRAM, but you need 2–3 GB headroom for the IDE and OS — so 8 GB is the real floor. For 13B models, 16 GB VRAM is required. On Apple Silicon, 16 GB M-series handles 7B models comfortably, 32 GB handles 13B models.' } },
+          { '@type': 'Question', name: 'Which is better for local code completions: VS Code with Continue.dev or Cursor?', acceptedAnswer: { '@type': 'Answer', text: 'Cursor is simpler to set up — built-in Ollama support with no extension needed. VS Code with Continue.dev is more flexible — you can mix local and cloud models and configure context length, debounce, and completion behavior per-project. Choose Cursor for a ready-to-use AI IDE; choose Continue.dev for fine-grained control.' } },
+          { '@type': 'Question', name: 'How do I reduce latency for local code completions?', acceptedAnswer: { '@type': 'Answer', text: 'Three settings have the largest impact: (1) reduce contextLength from 2048 to 1024 tokens — cuts latency roughly in half; (2) increase debounceWaitMs to 400–500 ms to reduce flickering; (3) reduce maxTokens to 30 for faster responses. On GPU, 7B models at Q4 produce completions in 0.3–1.5 seconds. CPU-only machines have 5–10 second latency — GPU is required for a usable experience.' } },
+          { '@type': 'Question', name: 'Do local code completion models support Python, JavaScript, TypeScript, and other languages?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Qwen2.5-Coder 7B, Llama Code 13B, and DeepSeek-Coder 6.7B all support Python, JavaScript, TypeScript, Go, Rust, Java, C++, and most major languages. For project-specific completions, Continue.dev supports codebase indexing so the model has context about your custom functions and types.' } }
         ]
       },
       itemListSchema: {
@@ -12662,6 +12700,8 @@ print(response.choices[0].message.content)`,
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Intermediate',
+      aboutTopics: ['Local LLM hardware', 'VRAM requirements', 'GPU selection'],
+      howToName: 'How to Calculate VRAM Requirements',
       audience: 'Developers and hardware enthusiasts planning local LLM builds',
       primaryTerm: 'LLM hardware requirements',
       toc: [
@@ -18686,6 +18726,8 @@ print(response.choices[0].message.content)`,
       publishDate: '2026-04-05',
       readTime: '7 min',
       educationalLevel: 'Beginner',
+      aboutTopics: ['VRAM requirements', 'GPU memory', 'Local LLM'],
+      howToName: 'How to Calculate VRAM Requirements',
       primaryTerm: 'VRAM Requirements',
       audience: 'Developers and hardware enthusiasts evaluating GPUs for local LLM inference',
       toc: [
