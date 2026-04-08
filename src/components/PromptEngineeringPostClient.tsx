@@ -1082,6 +1082,15 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
           )
         })()}
 
+        {/* Key Takeaways — rendered before ToC per GEO ordering rule */}
+        {(() => {
+          const tldrEntry = Object.entries(article.sections).find(([, s]) => s.isTldr)
+          if (!tldrEntry) return null
+          const [tldrKey, tldrSection] = tldrEntry
+          const sectionId = 'key-takeaways'
+          return <SectionBlock key={tldrKey} section={tldrSection} colors={colors} id={sectionId} lang={lang} />
+        })()}
+
         {/* Table of Contents */}
         {(article as any).toc && (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
@@ -1126,6 +1135,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
 
             // Filter sections by search query and active path filters
             const sectionsToRender = Object.entries(article.sections)
+              .filter(([, section]) => !section.isTldr) // Key Takeaways rendered before ToC
               .map(([key, section]) => {
                 if (!section.rows) {
                   return [key, section] as const
