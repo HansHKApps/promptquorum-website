@@ -207,7 +207,7 @@ function SectionBlock({ section, colors, id, lang }: { section: LLMSection; colo
 
       {/* Numbered list */}
       {section.numberedItems && (
-        <ol className="space-y-4 my-4">
+        <ol className="list-none space-y-4 my-4">
           {section.numberedItems.map((item, i) => (
             <li key={i} className="flex gap-4 text-text-secondary">
               <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white ${colors.dot.replace('bg-', 'bg-').replace('-400', '-500')}`}>
