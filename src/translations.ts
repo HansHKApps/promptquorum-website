@@ -88,7 +88,7 @@ export const translations = {
     localLlmsHubTitle: "Local LLMs 2026: Run AI Offline with Ollama & LM Studio",
     localLlmsHubDescription: "Complete 2026 guide to private local LLM deployment. Compare Ollama vs LM Studio, VRAM requirements, quantization techniques, and instantly test your models with PromptQuorum.",
     compareMetaTitle: "PromptQuorum vs. Competitors: Feature Comparison (2026)",
-    compareMetaDescription: "Compare PromptQuorum with Poe, LM Arena, OpenMark, and AiZolo: dispatch, consensus, local LLM support, API key control, framework library.",
+    compareMetaDescription: "Compare PromptQuorum with Poe, LM Arena, OpenMark, and AiZolo: multi-model dispatch, consensus scoring, local LLM support, API control, 9 frameworks.",
     frameworksMetaTitle: "Prompt Frameworks: CO-STAR, CRAFT, RISEN & More",
     frameworksMetaDescription: "Complete guides to 9 prompt engineering frameworks: CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, RTF, Google Prompt, and Single Prompt Line.",
 
@@ -196,7 +196,7 @@ export const translations = {
     localLlmsHubTitle: "Local LLMs 2026: Privat mit Ollama & LM Studio",
     localLlmsHubDescription: "Vollständiger 2026-Leitfaden zu Local LLMs. Vergleich Ollama vs LM Studio, Hardware-Anforderungen, Quantisierungstechniken und wie Sie Ihre Modelle mit PromptQuorum testen.",
     compareMetaTitle: "PromptQuorum vs. Konkurrenz: Vergleich 2026",
-    compareMetaDescription: "Vergleichen Sie PromptQuorum mit Poe, LM Arena und OpenMark: Versand, Konsens, lokaler LLM-Support, API-Key-Kontrolle.",
+    compareMetaDescription: "Vergleichen Sie PromptQuorum mit Poe, LM Arena und OpenMark: Multi-Model-Versand, Konsensanalyse, lokaler LLM-Support, API-Kontrolle, 9 Frameworks.",
     frameworksMetaTitle: "Prompt-Frameworks: CO-STAR, CRAFT, RISEN & mehr",
     frameworksMetaDescription: "Vollständige Anleitungen zu 9 Prompt-Engineering-Frameworks: CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, RTF und mehr.",
 
@@ -304,7 +304,7 @@ export const translations = {
     localLlmsHubTitle: "Local LLMs 2026 : Exécutez l'IA en privé",
     localLlmsHubDescription: "Guide complet 2026 pour les LLMs locaux. Comparez Ollama vs LM Studio, exigences matérielles, techniques de quantification et testez vos modèles avec PromptQuorum instantanément.",
     compareMetaTitle: "PromptQuorum vs concurrents: Comparaison des fonctionnalités",
-    compareMetaDescription: "Comparez PromptQuorum avec Poe, LM Arena et OpenMark: dispatch, consensus, support LLM local, contrôle des clés API.",
+    compareMetaDescription: "Comparez PromptQuorum avec Poe, LM Arena et OpenMark: multi-modèle dispatch, consensus, LLM local, contrôle API, 9 frameworks intégrés.",
     frameworksMetaTitle: "Frameworks de prompts: CO-STAR, CRAFT, RISEN & plus",
     frameworksMetaDescription: "Guides complets de 9 frameworks d'ingénierie des prompts: CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, RTF et autres.",
 
