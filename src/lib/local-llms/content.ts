@@ -3060,7 +3060,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       theme: 'ベストモデル',
       title: '2026年 最高のローカルLLM：タスク・ハードウェア・品質で評価したトップモデル',
       seoTitle: '2026年 最高のローカルLLM',
-      intro: '2026年の最高のローカルLLMは、Meta Llama 3.3 70B（総合性能）、Qwen2.5 72B（コード・多言語）、Mistral Small 3.1（7Bクラス最高）、Google Gemma 3 9B（中級性能）、Microsoft Phi-4 Mini（4GB RAM以下対応）です。2026年4月現在、このランキングはMMLE、HumanEval、MATHベンチマークスコアに基づいています。',
+      intro: '2026年の最高のローカルLLMは、Meta Llama 3.3 70B（総合性能）、Qwen2.5 72B（コード・多言語）、Mistral Small 3.1（7Bクラス最高）、Google Gemma 3 9B（中級性能）、Microsoft Phi-4 Mini（4GB RAM以下対応）です。2026年4月現在、このランキングはMMU、HumanEval、MATHベンチマークスコアに基づいています。',
       metaDescription: '2026年の最高ローカルLLMランキング：Llama 3.3 70B（総合最高、MMLU 82%）、Qwen2.5 72B（コード HumanEval 87%、29言語）、Mistral Small 3.1（16GB）、Gemma 3 9B（8GB）、Phi-4 Mini（4GB）。',
       publishDate: '2026-04-04',
       readTime: '10分で読める',
