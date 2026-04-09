@@ -221,6 +221,153 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
       },
     },
+    de: {
+      theme: 'Erste Schritte',
+      title: 'Was sind lokale LLMs? Wie die Ausführung von KI-Modellen auf Ihrer eigenen Hardware funktioniert',
+      seoTitle: 'Was sind lokale LLMs? Vorteile, Risiken & Einstieg 2026',
+      intro: 'Ein lokales LLM ist ein KI-Sprachmodell, das vollständig auf Ihrer eigenen Hardware ausgeführt wird — keine Internetverbindung, keine API-Aufrufe, keine Daten, die Ihren Computer verlassen. Sie laden die Modellgewichte als Datei herunter, führen eine Inferenz-Engine wie Ollama oder LM Studio aus, und das Modell antwortet ausschließlich von Ihrer CPU oder GPU. Ab April 2026 sind die praktischsten Modelle für Anfänger Llama 3.2 3B und Phi-3 Mini.',
+      metaDescription: 'Klare Erklärung lokaler LLMs: vollständige Privatsphäre, keine Kosten, Offline-Nutzung. Vergleichen Sie Vor- und Nachteile und erfahren Sie, wie Sie mit Ollama und LM Studio beginnen.',
+      publishDate: '2026-04-04',
+      readTime: '8 Min. Lesezeit',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'lokales LLM',
+      toc: [
+        { label: 'Wichtigste Erkenntnisse', anchor: 'key-takeaways' },
+        { label: 'Was ist ein lokales LLM?', anchor: 'what-is-a-local-llm' },
+        { label: 'Wie funktioniert ein lokales LLM?', anchor: 'how-does-a-local-llm-work' },
+        { label: 'Welche Hardware benötigen Sie?', anchor: 'what-hardware-do-you-need' },
+        { label: 'Lokales LLM vs Cloud-API: Wo ist der Unterschied?', anchor: 'local-llm-vs-cloud-api' },
+        { label: 'Welche Modellformate werden verwendet?', anchor: 'which-model-formats-are-used' },
+        { label: 'Wann sollten Sie ein lokales LLM verwenden?', anchor: 'when-should-you-use-a-local-llm' },
+        { label: 'Häufig gestellte Fragen', anchor: 'common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Ein lokales LLM wird auf Ihrer eigenen CPU oder GPU ausgeführt — keine Internetverbindung, keine API-Kosten, keine Daten an Dritte.',
+            'Drei Komponenten sind erforderlich: die Modelldatei (GGUF- oder safetensors-Format), eine Inferenz-Engine (Ollama, LM Studio oder llama.cpp) und optional eine Chat-Schnittstelle.',
+            'Minimale Hardware: 8 GB RAM für ein 7B-Parametern-Modell mit 4-Bit-Quantisierung. 16 GB RAM eignet sich gut für die meisten alltäglichen Modelle.',
+            'Lokale Modelle sind auf Consumer-Hardware langsamer als Cloud-APIs — ein 7B-Modell auf einem modernen Laptop erzeugt 15–40 Tokens/Sek., vs. ~100 Tokens/Sek. von GPT-4o Mini über API.',
+            'Best-Practice-Anwendungsfälle: Verarbeitung sensibler Daten, Offline-Arbeit, null wiederkehrende Kosten und Verständnis der LLM-Funktionsweise.',
+          ],
+        },
+        whatIsLocalLlm: {
+          title: 'Was ist ein lokales LLM?',
+          content: [
+            'Ein lokales LLM (großes Sprachmodell) ist ein KI-Modell, das auf Hardware unter Ihrer Kontrolle ausgeführt wird — Ihrem Laptop, Desktop oder lokalen Server. Die Modellgewichte werden als Datei auf Ihrem Datenträger gespeichert, und alle Verarbeitungsvorgänge erfolgen auf Ihrer eigenen CPU oder GPU. Keine Prompt-Texte oder Antwortdaten werden an externe Server übertragen.',
+            'Der Begriff \"lokal\" unterscheidet diese Modelle von Cloud-Diensten wie OpenAI GPT-4o, Anthropic Claude 4.6 oder Google Gemini 2.5 Pro, die Ihre Prompts auf entfernten Servern verarbeiten und Ergebnisse über das Internet zurückgeben.',
+            'Lokale LLMs reichen von kleinen 1B-Parametern-Modellen, die auf einem Telefon laufen, bis zu 70B-Parametern-Modellen, die eine Workstation mit 48 GB VRAM benötigen. Die am häufigsten verwendeten Anfänger-Modelle — Meta Llama 3.2 3B, Microsoft Phi-3 Mini und Google Gemma 2 2B — laufen auf jedem Laptop mit 8 GB RAM.',
+          ],
+        },
+        howItWorks: {
+          title: 'Wie funktioniert ein lokales LLM?',
+          content: [
+            'Das Ausführen eines lokalen LLM umfasst drei zusammenwirkende Schichten: die Modelldatei, die Inferenz-Engine und die Schnittstelle.',
+            '**Die Modelldatei** enthält die Gewichte des neuronalen Netzes — die gelernten numerischen Werte, die definieren, wie das Modell Text verarbeitet und generiert. Für die lokale Verwendung werden diese Gewichte fast immer im GGUF-Format (ein vom llama.cpp-Projekt entwickeltes komprimiertes Format) oder im safetensors-Format gespeichert. Ein auf 4-Bit-Präzision quantisiertes 7B-Parametern-Modell ist auf der Festplatte etwa 4,5 GB groß.',
+            '**Die Inferenz-Engine** liest die Modelldatei und führt die erforderlichen Matrixberechnungen durch, um Tokens zu generieren. Die beliebtesten Engines sind [Ollama](/local-llms/how-to-install-ollama?lang=de) (wird als Hintergrunddienst mit OpenAI-kompatibler API ausgeführt), [LM Studio](/local-llms/how-to-install-lm-studio?lang=de) (eine Desktop-Anwendung mit integrierter Chat-UI) und llama.cpp (die zugrunde liegende C++-Bibliothek, auf der die meisten anderen Tools aufgebaut sind).',
+            '**Die Schnittstelle** ist der Ort, an dem Sie mit dem Modell interagieren — ein Terminal, eine Web-UI oder ein API-Endpunkt. Viele Tools wie Ollama stellen eine REST-API auf `http://localhost:11434` bereit, damit Sie jede OpenAI-kompatible Anwendung mit Ihrem lokalen Modell verbinden können.',
+          ],
+        },
+        hardware: {
+          title: 'Welche Hardware benötigen Sie zum Ausführen eines lokalen LLM?',
+          content: 'Die Hardware-Anforderungen hängen vollständig davon ab, welches Modell Sie ausführen möchten und wie schnell Sie Antworten benötigen.',
+          rows: [
+            { 'Modellgröße': '1B–3B Parameter', 'RAM erforderlich': '4–6 GB', 'Geschwindigkeit (CPU)': '20–60 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.2 1B, Phi-3 Mini 3.8B' },
+            { 'Modellgröße': '7B–8B Parameter', 'RAM erforderlich': '6–8 GB', 'Geschwindigkeit (CPU)': '10–30 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.1 8B, Mistral 7B' },
+            { 'Modellgröße': '13B–14B Parameter', 'RAM erforderlich': '10–12 GB', 'Geschwindigkeit (CPU)': '5–15 Tokens/Sek.', 'Beispielmodelle': 'Llama 2 13B, Qwen2.5 14B' },
+            { 'Modellgröße': '32B–34B Parameter', 'RAM erforderlich': '20–24 GB', 'Geschwindigkeit (CPU)': '2–6 Tokens/Sek.', 'Beispielmodelle': 'Qwen2.5 32B, DeepSeek-R1 32B' },
+            { 'Modellgröße': '70B+ Parameter', 'RAM erforderlich': '40–48 GB', 'Geschwindigkeit (CPU)': '1–3 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.3 70B, Qwen2.5 72B' },
+          ],
+          columns: ['Modellgröße', 'RAM erforderlich', 'Geschwindigkeit (CPU)', 'Beispielmodelle'],
+        },
+        hardwareGpu: {
+          title: 'Macht eine GPU ein lokales LLM schneller?',
+          content: 'GPU-Beschleunigung verbessert die Geschwindigkeit dramatisch. Eine NVIDIA RTX 4070 Ti (12 GB VRAM) führt ein 7B-Modell mit 80–120 Tokens/Sek. aus — 4–8× schneller als nur CPU-Modus. Apple Silicon Macs (M1, M2, M3, M4, M5) verwenden einheitlichen Speicher und erreichen auf 7B-Modellen 40–80 Tokens/Sek. ohne diskrete GPU. Für Laptop-Benutzer siehe [Wie man lokale LLMs auf einem Laptop ausführt](/local-llms/local-llm-on-laptop?lang=de) für Hardware-spezifische Tipps.',
+        },
+        vsCloud: {
+          title: 'Worin besteht der Unterschied zwischen lokalen LLMs und Cloud-APIs?',
+          content: 'Der Kern-Kompromiss ist Datenschutz und Kosten vs. Fähigkeit und Geschwindigkeit. Siehe den vollständigen Vergleich unter [Lokale LLMs vs. Cloud-APIs](/local-llms/local-llms-vs-cloud-apis?lang=de).',
+          rows: [
+            { 'Faktor': 'Datenschutz', 'Lokales LLM': 'Vollständig — Daten verlassen nie Ihren Computer', 'Cloud-API': 'Daten werden auf Anbieter-Servern verarbeitet' },
+            { 'Faktor': 'Kosten', 'Lokales LLM': '0 € pro Token nach Hardware-Kosten', 'Cloud-API': '0,15 €–15 € pro 1 Mio. Tokens je nach Modell' },
+            { 'Faktor': 'Geschwindigkeit', 'Lokales LLM': '10–120 Tokens/Sek. auf Consumer-Hardware', 'Cloud-API': '50–200 Tokens/Sek., variiert je nach Last' },
+            { 'Faktor': 'Modellqualität', 'Lokales LLM': 'Gut — wettbewerbsfähig bei 70B-Skalierung', 'Cloud-API': 'Das beste verfügbare (GPT-4o, Claude 4.6 Opus)' },
+            { 'Faktor': 'Einrichtungszeit', 'Lokales LLM': '5–15 Minuten mit Ollama oder LM Studio', 'Cloud-API': '2–5 Minuten für einen API-Schlüssel' },
+            { 'Faktor': 'Offline-Nutzung', 'Lokales LLM': 'Ja — funktioniert ohne Internet', 'Cloud-API': 'Nein — erfordert aktive Verbindung' },
+          ],
+          columns: ['Faktor', 'Lokales LLM', 'Cloud-API'],
+        },
+        modelFormats: {
+          title: 'Welche Modellformate werden für lokale LLMs verwendet?',
+          content: [
+            '**GGUF** (GPT-Generated Unified Format) ist das dominante Format für lokale Inferenz. Entwickelt vom llama.cpp-Projekt, GGUF-Dateien enthalten alle Modell-Metadaten und unterstützen mehrere Quantisierungsstufen in einer einzelnen Datei. Wenn Sie `ollama pull llama3.2` ausführen, lädt Ollama intern eine GGUF-Datei herunter.',
+            '**Safetensors** ist ein Format von Hugging Face, das hauptsächlich mit PyTorch-basierten Inferenz-Tools wie Transformers und vLLM verwendet wird. Es ist häufiger in Forschung und Server-Deployments.',
+            '**Quantisierung** reduziert die Modellgenauigkeit, um RAM-Anforderungen zu senken. Ein 7B-Modell mit vollständiger FP16-Präzision benötigt ~14 GB RAM. Bei Q4_K_M-Quantisierung (4-Bit) benötigt das gleiche Modell ~4,5 GB mit minimalem Qualitätsverlust. Die meisten Anfänger-Leitfäden verwenden Q4_K_M oder Q5_K_M.',
+          ],
+        },
+        whenToUse: {
+          title: 'Wann sollten Sie ein lokales LLM statt einer Cloud-API verwenden?',
+          items: [
+            '**Verarbeitung sensibler Daten** — medizinische Unterlagen, Rechtsdokumente, Finanzdaten oder jegliche personenbezogene Daten (PII), die Ihre Infrastruktur nicht verlassen dürfen.',
+            '**Beseitigung von API-Kosten** — hochvolumige Batch-Verarbeitung, bei der sich pro-Token Cloud-Kosten schnell summieren. Ein lokal laufendes 7B-Modell kostet nach der Hardware-Anschaffung 0 € pro Abfrage.',
+            '**Offline- oder abgekoppelte Umgebungen** — Feldarbeit, sichere Einrichtungen oder Anwendungen, die ohne Internetverbindung funktionieren müssen.',
+            '**Lernen und Experimentieren** — Verständnis der LLM-Funktionsweise, Testen von Prompts ohne Kostenbedenken oder Erstellung lokaler KI-gestützter Tools.',
+            '**Anwendungen mit niedriger Latenz** — wenn die Netzwerk-Roundtrip-Zeit inakzeptabel ist und ein kleineres lokales Modell schnell genug für die Aufgabe ist.',
+          ],
+        },
+        faqSection: {
+          title: 'Häufig gestellte Fragen zu lokalen LLMs',
+          faqs: [
+            {
+              q: 'Kann ein lokales LLM die Qualität von GPT-4o erreichen?',
+              a: 'Nein — nicht auf aktueller Consumer-Hardware. GPT-4o und Claude 4.6 Opus übertreffen jedes lokal ausführbare Modell bei komplexer Argumentation, Code-Generierung und Befolgung von Anweisungen-Benchmarks. Für Zusammenfassungen, Übersetzungen und alltägliche Schreibaufgaben produziert jedoch ein gut quantisiertes 13B–34B-Modell Ergebnisse, die schwer von Top-Modellen zu unterscheiden sind.',
+            },
+            {
+              q: 'Brauche ich eine GPU, um ein lokales LLM auszuführen?',
+              a: 'Nein. Alle großen Inferenz-Engines (Ollama, LM Studio, llama.cpp) laufen nur auf CPU. Eine GPU beschleunigt die Ausführung erheblich — eine NVIDIA RTX 4060 (8 GB VRAM) führt ein 7B-Modell mit 60–90 Tokens/Sek. aus vs. 10–20 Tokens/Sek. auf CPU. Apple Silicon Macs nutzen standardmäßig GPU-beschleunigte einheitliche Speicherung und eignen sich gut für lokale LLMs ohne diskrete GPU.',
+            },
+            {
+              q: 'Wo lade ich lokale LLM-Modelle herunter?',
+              a: 'Die drei Hauptquellen sind: Ollamas Modellbibliothek (ollama.com/library) für einfache Ein-Befehl-Downloads, Hugging Face (huggingface.co) für die volle Palette von GGUF- und safetensors-Modellen, und LM Studios integrierter Modellbrowser, der direkt Hugging Face durchsucht. Siehe [Ollama installieren](/local-llms/how-to-install-ollama?lang=de) und [LM Studio installieren](/local-llms/how-to-install-lm-studio?lang=de) für Setup-Leitfäden.',
+            },
+            {
+              q: 'Ist die Ausführung eines lokalen LLM privat?',
+              a: 'Ja — mit Vorbehalten. Die Modell-Inferenz selbst ist vollständig lokal. Jedoch können einige auf lokalen LLMs basierende Anwendungen Daten an externe Server senden. Überprüfen Sie immer, ob die Schnittstelle oder Plugin-Schicht, die Sie verwenden, Telemetrie oder Cloud-Synchronisierung aktiviert hat. Siehe die [Sicherheits- und Datenschutz-Checkliste für lokale LLMs](/local-llms/local-llm-security-privacy-checklist?lang=de) für einen vollständigen Audit-Leitfaden.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'Wie starten Sie mit lokalen LLMs?',
+          content: 'Der schnellste Weg zum Ausführen Ihres ersten lokalen LLM ist [Ollama installieren](/local-llms/how-to-install-ollama?lang=de) — ein einzelner Befehl installiert die Engine und lädt ein Modell in unter 5 Minuten auf macOS, Windows oder Linux. Wenn Sie eine grafische Schnittstelle bevorzugen, führt Sie [LM Studio installieren](/local-llms/how-to-install-lm-studio?lang=de) durch das Desktop-App-Setup. Um auszuwählen, mit welchem ​​Modell Sie beginnen, siehe [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models?lang=de).',
+        },
+        sources: {
+          title: 'Quellen',
+          items: [
+            '**llama.cpp — GitHub** — Die grundlegende C++-Bibliothek zum Ausführen quantisierter Modelle lokal',
+            '**Hugging Face — Model Hub** — Repository mit 100.000+ GGUF-, safetensors- und anderen Modellformaten',
+            '**Ollama Model Library** — Kurierte Liste von vorquantisierten Modellen, die per One-Click-Download verfügbar sind',
+          ],
+        },
+        commonMistakes: {
+          title: 'Häufige Fehler beim Einstieg',
+          items: [
+            'Die Annahme, dass alle lokalen Modelle gleich privat sind — einige Schnittstellen oder Quantisierungen können noch immer Daten protokollieren.',
+            'Das Ausführen von Modellen, die für verfügbaren RAM zu groß sind, was zu schwerem Slowdown durch Festplattenspeicher führt.',
+            'Nicht verstehen, dass die Modellqualität drastisch variiert — nicht alle lokalen Modelle erreichen GPT-4o auf komplexen Aufgaben.',
+          ],
+        },
+        relatedReading: {
+          title: 'Weiterführende Literatur',
+          items: [
+            '[Ollama installieren](/local-llms/how-to-install-ollama?lang=de) — Schritt-für-Schritt-Setup und erster Modell-Durchlauf',
+            '[LM Studio installieren](/local-llms/how-to-install-lm-studio?lang=de) — Desktop-App-Alternative mit grafischer Schnittstelle',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models?lang=de) — RAM-gekoppelte Modellempfehlungen',
+            '[Lokale LLMs vs. Cloud-APIs](/local-llms/local-llms-vs-cloud-apis?lang=de) — Vollständiger Vergleich von Kompromissen',
+          ],
+        },
+      },
+    },
   },
 
   'how-to-install-ollama': {
