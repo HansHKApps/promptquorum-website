@@ -470,12 +470,15 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               q: 'ローカルLLMはGPT-4o の品質に達するか？',
               a: '現在のコンシューマー機ではいいえ。GPT-4oとClaude 4.6 Opusは複雑な推論、コード生成、命令遵守ベンチマークで勝ります。しかし要約、翻訳、日常的な文章作成では、量子化された13B～34Bモデルは最先端モデルと区別が難しい結果を出します。',
             },
+            {
               q: 'ローカルLLM実行にGPUは必須？',
               a: 'いいえ。Ollama、LM Studio、llama.cpp はCPU のみで動作します。GPUは大幅な高速化：NVIDIA RTX 4060（8GB VRAM）＝60～90 tok/sec vs 10～20 tok/sec CPU のみ。Apple Silicon Mac（M1～M5）は統合メモリの GPU加速がデフォルトで、専用GPU なしでも最適です。',
             },
+            {
               q: 'ローカルLLMモデルはどこからダウンロード？',
               a: '3つの主要ソース：1. Ollama（ollama.com/library、ワンコマンドダウンロード）、2. Hugging Face（huggingface.co、GGUF＋safetensors）、3. LM Studio内蔵ブラウザ（Hugging Face検索）。[Ollama インストール](/local-llms/how-to-install-ollama?lang=ja)と[LM Studio インストール](/local-llms/how-to-install-lm-studio?lang=ja)をご覧ください。',
             },
+            {
               q: 'ローカルLLM実行は プライベート？',
               a: '基本的にははい。モデル推論自体は完全ローカル。ただしローカルLLM上に構築されたアプリケーションがデータを外部に送信する可能性。インターフェースやプラグインレイヤーがテレメトリやクラウド同期を有効にしていないか確認を。[ローカルLLM セキュリティ・プライバシーチェックリスト](/local-llms/local-llm-security-privacy-checklist?lang=ja)をご覧ください。',
             },
