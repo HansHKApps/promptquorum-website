@@ -854,20 +854,31 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Ollama exposes an OpenAI-compatible REST API at `http://localhost:11434` — any OpenAI SDK app can use it without code changes.',
           ],
         },
+        quickFacts: {
+          id: 'quick-facts',
+          items: [
+            '**Installation time:** Under 2 minutes on any OS',
+            '**Minimum RAM:** 4 GB (3B models) / 8 GB (7B models)',
+            '**Download sizes:** 2–47 GB depending on model (cached on disk)',
+            '**Available models:** 200+ open-source models from Meta, Mistral 7B, Qwen, Phi, Llama, and more',
+            '**API endpoint:** `http://localhost:11434` (OpenAI-compatible)',
+            '**No GPU required:** Runs on CPU; GPU support optional for faster inference',
+          ],
+        },
         whatIsOllama: {
           id: 'what-is-ollama',
           title: 'What Is Ollama and Why Use It?',
           content: [
             'Ollama is an open-source inference engine that runs large language models locally. It packages model management, the llama.cpp inference backend, and an OpenAI-compatible REST API into a single lightweight application. No Python, no conda environment, and no CUDA setup is required.',
-            'Ollama maintains a curated model library (ollama.com/library) with one-command downloads for Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5, and 100+ other models. A model is downloaded once and cached on disk — subsequent runs start in under 5 seconds.',
+            'Ollama maintains a curated model library (ollama.com/library) with one-command downloads for Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral 7B, Qwen2.5, and 100+ other models. A model is downloaded once and cached on disk — subsequent runs start in under 5 seconds.',
             'For alternatives to Ollama, see [Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers). To compare Ollama with LM Studio, see [How to Install LM Studio](/local-llms/how-to-install-lm-studio).',
           ],
-          blockquote: 'In One Sentence: Ollama is a tool that downloads and runs open-source language models (like Mistral or Llama 2) locally on your computer with a single command.',
+          blockquote: 'In One Sentence: Ollama is a tool that downloads and runs open-source language models (like Mistral 7B or Llama 3.1) locally on your computer with a single command.',
         },
         installMac: {
           id: 'install-on-macos',
           title: 'How Do You Install Ollama on macOS?',
-          content: 'There are two methods. The installer download is faster; Homebrew is better if you manage software with brew.',
+          content: '**Download the .dmg file from ollama.com or use Homebrew — both methods take under 2 minutes.** The installer download is faster; Homebrew is better if you manage software with brew.',
           numberedItems: [
             'Go to ollama.com/download and click "Download for macOS".',
             'Open the downloaded Ollama.dmg file and drag Ollama to your Applications folder.',
@@ -1015,8 +1026,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[Run Your First Local LLM](/local-llms/run-first-local-llm) — Next step after installation',
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations by hardware',
             '[Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers) — Alternative tools to Ollama',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — GUI alternative for non-technical users',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — Detailed comparison of CLI vs GUI approaches',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — GUI alternative; full CLI vs GUI comparison available',
           ],
         },
         faq: {
@@ -1124,7 +1134,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Ollama installieren: Vollständige Einrichtungsanleitung für macOS, Windows und Linux',
       seoTitle: 'Ollama installieren 2026 – Vollständige Anleitung',
       intro: 'Ollama ist eine leichte Inference-Engine, die große Sprachmodelle lokal mit einem einzigen Befehl ausführt. Nach einer 2-Minuten-Installation lädt `ollama pull llama3.2:3b` ein 2-GB-Modell herunter, und `ollama run llama3.2` öffnet eine Chat-Schnittstelle. Ollama kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API auf `localhost:11434` in einer einzigen Anwendung ohne Python-Umgebung, ohne Konfigurationsdateien und ohne erforderliche GPU zum Starten. Ab April 2026 unterstützt Ollama über 200 Modelle einschließlich Meta Llama 3.2, Qwen2.5, Mistral und DeepSeek und stellt seine API für jeden OpenAI-SDK ohne Codeänderungen bereit.',
-      metaDescription: 'Ollama in unter 2 Minuten auf macOS, Windows oder Linux installieren. Ein einziger Befehl startet Ihr erstes Modell — vollständiger Schritt-für-Schritt-Leitfaden.',
+      metaDescription: 'Ollama in unter 2 Minuten auf macOS, Windows oder Linux installieren. Ein Befehl startet Ihr erstes Modell. Zugriff auf 200+ Open-Source-Modelle lokal.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '8 min Lesezeit',
@@ -2380,10 +2390,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   'how-to-install-lm-studio': {
     en: {
       theme: 'Getting Started',
-      title: 'How Do You Install LM Studio: Desktop App Setup Guide for macOS, Windows, and Linux',
-      seoTitle: 'LM Studio: Free GUI for Running Local LLMs 2026',
-      intro: 'LM Studio is a free desktop application for running local LLMs without any terminal commands. Download the installer from lmstudio.ai, open the app, search for a model by name, click download, and start chatting — the entire process takes under 5 minutes. As of April 2026, LM Studio runs on macOS (Apple Silicon and Intel), Windows 10+, and Linux (AppImage), and supports any GGUF-quantized model from Hugging Face\'s 500,000+ model library. It includes a built-in chat UI, an OpenAI-compatible local server on localhost:1234, and automatic GPU acceleration for Apple Metal, NVIDIA CUDA, and AMD ROCm.',
-      metaDescription: 'Run local LLMs with zero terminal commands. Download, search models, chat in 5 minutes. Supports NVIDIA CUDA, AMD ROCm, Apple Metal. Complete setup guide.',
+      title: 'LM Studio Installation Guide 2026: Free Local LLM GUI',
+      seoTitle: 'LM Studio Installation Guide 2026: Free Local LLM GUI',
+      intro: '**LM Studio is a free desktop application for running local LLMs without any terminal commands.** Download from lmstudio.ai, search for a model by name, click download, and start chatting — the entire process takes under 5 minutes. As of April 2026, it supports GGUF-quantized models from Hugging Face, runs on macOS/Windows/Linux, and includes automatic GPU acceleration for Apple Metal, NVIDIA CUDA, and AMD ROCm.',
+      metaDescription: 'Run local LLMs with zero terminal commands in 5 minutes. Supports NVIDIA CUDA, AMD ROCm, Apple Metal GPU acceleration. Complete LM Studio setup guide.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '7 min read',
@@ -2406,7 +2416,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         { label: 'Regional Context', anchor: 'regional-context' },
         { label: 'Common Mistakes', anchor: 'common-mistakes' },
         { label: 'Related Reading', anchor: 'related-reading' },
-        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Frequently Asked Questions', anchor: 'faq' },
         { label: 'Sources', anchor: 'sources' },
       ],
       sections: {
@@ -2439,7 +2449,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Spec', 'Minimum', 'Recommended'],
         },
         download: {
-          title: 'How Do You Download and Install LM Studio',
+          title: 'How Do You Download and Install LM Studio?',
           numberedItems: [
             'Go to lmstudio.ai and click the download button for your OS.',
             'macOS: Open the .dmg file and drag LM Studio to Applications. On first launch, approve the security prompt in System Preferences → Privacy & Security.',
@@ -2449,7 +2459,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         findModel: {
-          title: 'How Do You Find and Download a Model in LM Studio',
+          title: 'How Do You Find and Download a Model in LM Studio?',
           content: 'Use the Search tab (magnifying glass icon in the left sidebar) to find models:',
           numberedItems: [
             'Click the Search tab in the left sidebar.',
@@ -2460,7 +2470,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         firstChat: {
-          title: 'How Do You Start Chatting with a Model in LM Studio',
+          title: 'How Do You Start Chatting with a Model in LM Studio?',
           numberedItems: [
             'Click the Chat tab (speech bubble icon) in the left sidebar.',
             'At the top of the chat window, click the model selector dropdown and choose your downloaded model.',
@@ -2470,7 +2480,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         modelSettings: {
-          title: 'How Do You Adjust Model Settings in LM Studio',
+          title: 'How Do You Adjust Model Settings in LM Studio?',
           content: 'The right panel in the Chat tab exposes key inference parameters:',
           items: [
             '**Temperature** (default 0.8): controls response randomness. Lower values (0.1–0.4) produce more focused, predictable output. Higher values (0.8–1.2) produce more varied, creative output.',
@@ -2480,7 +2490,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         localServer: {
-          title: 'How Do You Enable the LM Studio Local Server',
+          title: 'How Do You Enable the LM Studio Local Server?',
           content: 'LM Studio includes a local server that mimics the OpenAI API. Any application that works with OpenAI can use your local model through this server:',
           numberedItems: [
             'Click the Local Server tab (the "<->" icon) in the left sidebar.',
@@ -2528,7 +2538,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         regionalContext: {
-          title: 'LM Studio for Privacy-Sensitive Use Cases',
+          title: 'Which Regions Require Privacy-First LLM Deployment?',
           content: [
             '**EU / GDPR**: LM Studio running local models is the most privacy-preserving AI configuration available for desktop users. No prompt text, context, or output is transmitted outside the device — GDPR Article 46 transfer mechanisms do not apply. For EU professionals handling personal data (legal documents, medical notes, financial analysis), LM Studio on a MacBook M-series or Windows workstation with a discrete GPU provides a fully compliant local inference environment. German BSI guidelines recommend local inference for AI systems processing sensitive personal data. LM Studio\'s GUI makes this setup accessible to non-technical professionals who cannot use terminal tools like Ollama.',
             '**Japan (METI)**: METI AI Governance Guidelines require documenting where AI inference occurs. LM Studio maintains a local model cache at a fixed path on disk — all inference is traceable to the device, model file, and version. Japanese enterprise teams use LM Studio as a zero-egress document analysis tool for sensitive regulatory and compliance work.',
@@ -2557,7 +2567,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          title: 'FAQ',
+          title: 'Frequently Asked Questions',
           faqs: [
             {
               q: 'LM Studio says "Not enough memory to load model"',
