@@ -4438,6 +4438,178 @@ print(response.choices[0].message.content)`,
         },
       },
     },
+    ja: {
+      theme: 'はじめに',
+      title: '初めてのローカルLLM : 10分で始めるガイド',
+      seoTitle: '初めてのローカルLLM : 10分で始めるガイド 2026',
+      intro: '**Ollamaを使えば、初めてのローカルLLM実行は10分以下です。** Ollamaをインストール、1つのコマンドでモデルをプル、ターミナルでチャット開始 — APIキー不要、アカウント不要、初回ダウンロード後はインターネット接続不要。2026年4月時点で、最速の初心者向けモデルはLlama 3.2 3B（モダンノートPC CPU上で25–45トークン/秒）です。',
+      metaDescription: 'Ollamaで初めてのローカルLLMを10分で実行するガイド。セットアップが簡単でPromptQuorumでの即座なテストが可能です。',
+      publishDate: '2026-04-04',
+      readTime: '11分で読める',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'ローカルLLM',
+      toc: [
+        { label: '重要ポイント', anchor: 'key-takeaways' },
+        { label: 'ステップ1 : Ollamaをインストール', anchor: 'step-1-install-ollama' },
+        { label: 'ステップ1 : Ollamaを確認', anchor: 'step-1-detail-verify-ollama' },
+        { label: 'ステップ2 : 最初のモデルを選択', anchor: 'step-2-choose-your-first-model' },
+        { label: 'ステップ3 : モデルをダウンロード', anchor: 'step-3-pull-the-model' },
+        { label: 'ステップ3 : ダウンロードの進捗', anchor: 'step-3-progress-download' },
+        { label: 'ステップ4 : モデルを実行してチャット', anchor: 'step-4-run-and-chat' },
+        { label: 'ステップ4 : 最初の会話', anchor: 'step-4-chat-example' },
+        { label: '期待値 : 速度、品質、パフォーマンス', anchor: 'what-to-expect' },
+        { label: 'ターミナルを超えて', anchor: 'beyond-the-terminal' },
+        { label: 'よくある質問', anchor: 'common-questions' },
+        { label: '最初の実行後の一般的なエラー', anchor: 'common-mistakes' },
+        { label: '関連する記事', anchor: 'related-reading' },
+        { label: 'ソース', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '最速方法 : Ollama インストール → `ollama run llama3.2` 実行 → ターミナルでチャット。総時間 : 高速接続で5分未満。',
+            '8GB RAM マシン向け : `llama3.2:3b`（2GB ダウンロード）または `phi3:mini`（2.3GB）から始めます。どちらもモダンノートパソコンで動作します。',
+            'CPU上で15–40トークン/秒、ミッドレンジGPUまたはApple Siliconで60–120トークン/秒を想定してください。',
+            '最初の応答はクラウドAPIより遅く感じるかもしれません — ローカルモデルは速度と引き換えにプライバシーとゼロコストを提供します。',
+            '初回モデルダウンロード後、すべてオフラインで動作します。後続セッションではインターネット接続不要。',
+          ],
+        },
+        step1: {
+          title: 'ステップ1 : Ollamaのインストール方法',
+          content: 'Ollamaはローカルランタイムを実行する最速の方法です。1つのコマンドまたは2分のダウンロードでインストール :',
+          codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: ollama.com/download からインストーラーをダウンロード',
+          codeLanguage: 'bash',
+        },
+        step1Detail: {
+          title: 'Ollamaが実行中か確認する方法',
+          content: 'インストール後、Ollamaがアクティブか確認 :',
+          codeBlock: 'curl http://localhost:11434\n# 期待される出力 : Ollama is running',
+          codeLanguage: 'bash',
+        },
+        step2: {
+          title: 'ステップ2 : どのモデルを選ぶか',
+          content: '利用可能なRAMに基づいてモデルを選択してください。迷った場合は `llama3.2:3b` から始めてください — 4GB RAMのマシンでも動作し、有用な出力を生成します :',
+          rows: [
+            { 'RAM容量': '4 GB', '推奨モデル': 'llama3.2:1b', 'ダウンロードサイズ': '~1.3 GB', '理由': '最小限の使用可能なLlamaモデル' },
+            { 'RAM容量': '8 GB', '推奨モデル': 'llama3.2:3b', 'ダウンロードサイズ': '~2 GB', '理由': '初心者向けの最適な品質/サイズ比' },
+            { 'RAM容量': '8–16 GB', '推奨モデル': 'llama3.1:8b', 'ダウンロードサイズ': '~4.7 GB', '理由': '強力な汎用モデル' },
+            { 'RAM容量': '16+ GB', '推奨モデル': 'mistral:7b または qwen2.5:7b', 'ダウンロードサイズ': '~4–5 GB', '理由': '競争力のある品質、高速推論' },
+          ],
+          columns: ['RAM容量', '推奨モデル', 'ダウンロードサイズ', '理由'],
+        },
+        step3: {
+          title: 'ステップ3 : モデルをプルする方法',
+          content: '`ollama pull` でモデルをダウンロードします。モデルは `~/.ollama/models` に保存され、1回だけダウンロードが必要です :',
+          codeBlock: 'ollama pull llama3.2\n\n# または特定サイズのバリアントをプル\nollama pull llama3.2:3b\nollama pull llama3.1:8b',
+          codeLanguage: 'bash',
+        },
+        step3Progress: {
+          title: 'ダウンロードはどのように見えるか',
+          content: 'Ollamaはターミナルにダウンロード進捗を表示します。`llama3.2:3b` モデルは一般的なブロードバンド接続で2–5分かかります。モデルは圧縮して保存されます — 2GBのダウンロードはディスク上で約2.3GBに展開されます。',
+          blockquote: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess',
+          blockquoteSource: 'モデルプル中のOllamaターミナル出力',
+        },
+        step4: {
+          title: 'ステップ4 : モデルを実行して最初のプロンプトを送信',
+          content: 'インタラクティブチャットセッションを開始 :',
+          codeBlock: 'ollama run llama3.2\n\n# Ollamaはモデルをロードしてプロンプトを表示 :\n>>> Send a message (/? for help)',
+          codeLanguage: 'bash',
+        },
+        step4Chat: {
+          title: '最初の会話',
+          content: 'メッセージを入力してEnterキーを押します。モデルはトークンごとに応答をストリーム :',
+          codeBlock: '>>> ローカルLLMとは何ですか？\n\nローカルLLM（大規模言語モデル）は、あなた自身のハードウェア上で\n完全に実行されるAIモデルです — ノートパソコン、デスクトップ、\nまたはサーバー。ChatGPTやClaudeなどのクラウドサービスとは異なり、\nローカルLLMはすべてをローカルで処理します...',
+          codeLanguage: 'text',
+        },
+        whatToExpect: {
+          title: '期待値 : 速度、品質、パフォーマンス',
+          content: [
+            '**速度はハードウェアにより異なります。** 2023年ノートパソコン（GPU なし）上 : 3B モデルで 15–25 トークン/秒、8B モデルで 8–15 トークン/秒を想定します。Apple M3 Pro 上 : 8B で 50–80 トークン/秒。NVIDIA RTX 4070 Ti 上 : 8B で 90–130 トークン/秒。最初の応答はモデル読み込み時間を含みます（5–30秒）。同じセッション内の後続応答は高速です。',
+            '`llama3.2:3b` からの**品質**は複雑なタスクではGPT-4oやClaude 4.6 Sonnetより顕著に低くなります。要約、シンプルQ&A、コード説明では出力は有用です。マルチステップ推論や長文作成には8BまたはI13Bモデルをアップグレードしてください。',
+            '**コンテキストウィンドウ** : `llama3.2:3b` はOllamでデフォルトで128Kトークンをサポートします。実際には、単一会話で約16Kトークン後に品質が低下します。',
+            '**最初の応答遅延** : `ollama run` 後の最初の応答にはモデル読み込み時間が含まれます（5–30秒）。同じセッション内の後続応答は高速です。',
+          ],
+        },
+        beyondTerminal: {
+          title: 'ターミナルを超えてローカルLLMを使用する方法',
+          content: 'Ollamaターミナルチャットはテストに便利ですが、ほとんどの実際の使用例はより良いインターフェースが必要です :',
+          items: [
+            '**Open WebUI** : Ollamaの完全装備のWebUI。Docker で実行 : `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main`。http://localhost:3000 でアクセス。',
+            '**LM Studio** : デスクトップGUIを好む場合、[LM Studioをインストール](/local-llms/how-to-install-lm-studio?lang=ja) は完全なセットアップをカバーします。LM Studio の組み込みチャットはポーランド語で、会話履歴をサポートします。',
+            '**API統合** : `localhost:11434` のOllama APIはOpenAI SDKと互換性があります。OpenAI ベース URLを受け入れるあらゆるアプリケーションはローカルモデルに接続できます。',
+            '**VS Code / Cursor** : Continue.dev のような拡張機能はOllamaに接続し、エディター内に直接ローカルAIコーディング支援を提供します。',
+          ],
+        },
+        faqSection: {
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: 'モデルの応答が非常に遅い — これは正常ですか？',
+              a: 'CPU のみのハードウェアでは、7B モデルの場合 8–20 トークン/秒は正常です。各トークンは約 0.75 単語です。10 トークン/秒では、100 語の応答は約 13 秒かかります。推論を加速するには、より小さいモデル（8B ではなく 3B）を使用し、互換 GPU がある場合は GPU オフロードを有効にするか、Q4_K_M 量化レベルを使用します（最速です）。',
+            },
+            {
+              q: '2つのモデルを同時に実行できますか？',
+              a: '十分な RAM があれば、Ollama は複数のモデルを同時にロードできます。デフォルトでは、Ollama は 5 分の非アクティブ後にモデルをアンロードします。OLLAMA_KEEP_ALIVE 環境変数で変更できます。2 つの 7B モデルを同時に実行するには約 16GB RAM が必要です。',
+            },
+            {
+              q: 'Ollama をバックグラウンドで実行を停止する方法',
+              a: 'macOS : メニュー バーの llama アイコンをクリックして終了を選択。Linux : `systemctl stop ollama` を実行。Windows : システム トレイ アイコンを右クリックして終了を選択。Ollama がログイン時に起動するのを防ぐには、スタートアップ項目から削除します。',
+            },
+          ],
+        },
+        nextSteps: {
+          title: '最初の実行後の次のステップ',
+          content: 'ローカルLLMが機能するようになったので、何ができるか探索してください。どのモデルがハードウェアに最適か理解するには、[初心者向け最適なローカルLLMモデル](/local-llms/best-beginner-local-llm-models?lang=ja) を参照してください。ラップトップ固有のパフォーマンスヒントについては、[ラップトップでローカルLLMを実行する方法](/local-llms/local-llm-on-laptop?lang=ja) を参照してください。プライバシーとセキュリティのベストプラクティスについては、[ローカルLLMセキュリティ・プライバシーチェックリスト](/local-llms/local-llm-security-privacy-checklist?lang=ja) を参照してください。',
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            '**Ollamaモデルライブラリドキュメント** — モデルと仕様の公式リスト',
+            '**トークン予測ベンチマーク** — ハードウェア全体のコミュニティパフォーマンスデータ',
+            '**Llama 3.2 モデルカード** — 公式仕様とパフォーマンスメトリクス',
+          ],
+        },
+        commonMistakes: {
+          title: '最初の実行後の一般的なエラー',
+          items: [
+            'トークン数と速度を混同 — 7B モデルが 20 トークン/秒で 100 トークンを生成する場合、5 秒かかります（すぐではありません）。',
+            'システムが他のタスクで忙しい間に推論を実行し、有効なトークン/秒を大幅に削減。',
+            'コンテキスト ウィンドウ制限を確認しない — ほとんどの初心者向けモデルは2K–8Kトークン（最先端モデルの100K+ではなく）をサポート。',
+          ],
+        },
+        relatedReading: {
+          title: '関連する記事',
+          items: [
+            '[Ollamaをインストール](/local-llms/how-to-install-ollama?lang=ja) — インストールとセットアップ',
+            '[LM Studioをインストール](/local-llms/how-to-install-lm-studio?lang=ja) — GUIの代替案',
+            '[初心者向け最適なローカルLLMモデル](/local-llms/best-beginner-local-llm-models?lang=ja) — ハードウェア向けモデルの推奨',
+            '[ローカルLLMとは](/local-llms/what-are-local-llms?lang=ja) — コア概念と機能',
+          ],
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '初めてのローカルLLM実行 : インストールから最初の応答まで10分',
+        inLanguage: 'ja',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '最速方法 : Ollama インストール → `ollama run llama3.2` 実行 → ターミナルでチャット。総時間 : 高速接続で5分未満。' },
+          { '@type': 'ListItem', position: 2, name: '8GB RAM マシン向け : `llama3.2:3b`（2GB ダウンロード）または `phi3:mini`（2.3GB）から始めます。どちらもモダンノートパソコンで動作します。' },
+          { '@type': 'ListItem', position: 3, name: 'CPU上で15–40トークン/秒、ミッドレンジGPUまたはApple Siliconで60–120トークン/秒を想定してください。' },
+          { '@type': 'ListItem', position: 4, name: '最初の応答はクラウドAPIより遅く感じるかもしれません — ローカルモデルは速度と引き換えにプライバシーとゼロコストを提供します。' },
+          { '@type': 'ListItem', position: 5, name: '初回モデルダウンロード後、すべてオフラインで動作します。後続セッションではインターネット接続不要。' },
+        ],
+        regionalContext: {
+          title: '地域の導入とコンプライアンス背景',
+          content: [
+            '**日本企業がローカルLLMをMETI AI ガバナンス 2024 に準拠するため展開しています。** 特に金融サービスと製造業において、データ居住要件を遵守するためにオンプレミスで展開します。組織はローカルモデルを社内文書処理に使用し、PromptQuorumと組み合わせてクラウドモデルに対する出力を検証します。METI のAI ガバナンス枠組みはエンタープライズ展開で明示的な記録保持を要求します。',
+            '**アジア太平洋地域の組織がローカルLLMを地域データ規制に準拠するため導入しています。** 多くのASEAN国はデータローカライゼーション要件を持ち、ローカル推論はデータレジデンシーを保証します。SingaporeのPDP（個人データ保護法）、インドネシアのPDP、タイのPDP準拠を必要とする組織はローカルモデルをサーバーに展開します。PromptQuorumは複数の地域展開をサポートします。',
+            '**世界の規制対象産業の組織は、ローカルLLMをコンプライアンスに使用しています。** 医療提供者は患者レコードをローカルで処理してHIPAA準拠を確認します。金融機関はSOX準拠のためエアギャップ環境でモデルを実行します。PromptQuorumはチームがローカルモデルを代替案と比較することを可能にします。',
+          ],
+        },
+      },
+    },
   },
 
   'best-beginner-local-llm-models': {
