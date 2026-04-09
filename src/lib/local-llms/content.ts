@@ -816,7 +816,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       theme: 'Getting Started',
       title: 'How Do You Install Ollama: Complete Setup Guide for macOS, Windows, and Linux',
             seoTitle: 'Install Ollama: macOS, Windows, Linux Guide (2026)',
-      intro: 'Ollama is a lightweight inference engine that runs large language models locally with a single command. After a 2-minute installation, `ollama pull llama3.2:3b` downloads a 2 GB model, and `ollama run llama3.2` opens a chat interface. Ollama packages model management, the llama.cpp inference backend, and an OpenAI-compatible REST API at `localhost:11434` into a single application with no Python environment, no configuration files, and no GPU required to start. As of April 2026, Ollama supports 200+ models including Meta Llama 3.2, Qwen2.5, Mistral, and DeepSeek, and exposes its API to any OpenAI SDK without code changes.',
+      intro: '**Ollama is a lightweight inference engine that runs large language models locally with a single command** — no Python, no GPU required, and minimal setup. This guide covers installation on macOS, Windows, and Linux, plus how to run your first model from Ollama\'s library of 200+ open-source models.',
             metaDescription: 'Install Ollama in under 2 minutes on macOS, Windows, or Linux. Run your first model with one command — complete step-by-step guide.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
@@ -1133,7 +1133,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       theme: 'Getting Started',
       title: 'Ollama installieren: Vollständige Einrichtungsanleitung für macOS, Windows und Linux',
       seoTitle: 'Ollama installieren 2026 – Vollständige Anleitung',
-      intro: 'Ollama ist eine leichte Inference-Engine, die große Sprachmodelle lokal mit einem einzigen Befehl ausführt. Nach einer 2-Minuten-Installation lädt `ollama pull llama3.2:3b` ein 2-GB-Modell herunter, und `ollama run llama3.2` öffnet eine Chat-Schnittstelle. Ollama kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API auf `localhost:11434` in einer einzigen Anwendung ohne Python-Umgebung, ohne Konfigurationsdateien und ohne erforderliche GPU zum Starten. Ab April 2026 unterstützt Ollama über 200 Modelle einschließlich Meta Llama 3.2, Qwen2.5, Mistral und DeepSeek und stellt seine API für jeden OpenAI-SDK ohne Codeänderungen bereit.',
+      intro: '**Ollama ist eine leichte Inference-Engine, die große Sprachmodelle lokal mit einem einzigen Befehl ausführt** — kein Python, keine GPU erforderlich, minimale Einrichtung. Dieses Handbuch behandelt die Installation auf macOS, Windows und Linux sowie das Ausführen des ersten Modells aus Ollamahs Bibliothek von über 200 Open-Source-Modellen.',
       metaDescription: 'Ollama in unter 2 Minuten auf macOS, Windows oder Linux installieren. Ein Befehl startet Ihr erstes Modell. Zugriff auf 200+ Open-Source-Modelle lokal.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
@@ -1183,7 +1183,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installMac: {
           id: 'install-on-macos',
           title: 'Wie installiert man Ollama auf macOS?',
-          content: 'Es gibt zwei Methoden. Der Installer-Download ist schneller; Homebrew ist besser, wenn Sie Software mit brew verwalten.',
+          content: '**Laden Sie die .dmg-Datei von ollama.com herunter oder verwenden Sie Homebrew — beide Methoden dauern weniger als 2 Minuten.** Der Installer-Download ist schneller; Homebrew ist besser, wenn Sie Software mit brew verwalten.',
           numberedItems: [
             'Gehen Sie zu ollama.com/download und klicken Sie auf „Download für macOS".',
             'Öffnen Sie die heruntergeladene Ollama.dmg-Datei und ziehen Sie Ollama in Ihren Anwendungsordner.',
@@ -1201,6 +1201,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installWindows: {
           id: 'install-on-windows',
           title: 'Wie installiert man Ollama auf Windows?',
+          content: '**Laden Sie das Installationsprogramm von ollama.com/download herunter und führen Sie es aus — Installation dauert weniger als 2 Minuten.**',
           numberedItems: [
             'Gehen Sie zu ollama.com/download und klicken Sie auf „Download für Windows".',
             'Führen Sie das heruntergeladene OllamaSetup.exe-Installationsprogramm aus. Ollama wird in %LOCALAPPDATA%\\Programs\\Ollama installiert.',
@@ -1216,7 +1217,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installLinux: {
           id: 'install-on-linux',
           title: 'Wie installiert man Ollama auf Linux?',
-          content: 'Ein einzelner Befehl installiert Ollama auf jeder Linux-Distribution:',
+          content: '**Ein einzelner Befehl installiert Ollama auf jeder Linux-Distribution in wenigen Sekunden:**',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -1229,7 +1230,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         firstModel: {
           id: 'pull-and-run-your-first-model',
           title: 'Wie zieht man sein erstes Modell in Ollama herunter und führt es aus?',
-          content: 'Führen Sie nach der Installation von Ollama diesen Befehl aus, um ein Modell herunterzuladen und zu starten:',
+          content: '**Nach der Installation von Ollama führen Sie diese Befehle aus, um ein Modell herunterzuladen und sofort mit dem Chatten zu beginnen:**',
           codeBlock: '# Ziehen Sie ein Modell herunter (speichern Sie es unter ~/.ollama/models)\nollama pull llama3.2\n\n# Führen Sie es interaktiv aus\nollama run llama3.2\n\n# Oder herunterladen und in einem Schritt ausführen\nollama run llama3.2',
           codeLanguage: 'bash',
         },
@@ -3886,10 +3887,10 @@ print(response.choices[0].message.content)`,
   'run-first-local-llm': {
     en: {
       theme: 'Getting Started',
-      title: 'How Do You Run Your First Local LLM: From Install to First Response in 10 Minutes',
-      seoTitle: 'Run Your First Local LLM in 5 Minutes (2026)',
-      intro: 'Running your first local LLM takes under 10 minutes with Ollama. Install Ollama, run one command to pull a model, and start chatting in your terminal — no API key, no account, and no internet connection after the initial download. As of April 2026, the fastest beginner model is Llama 3.2 3B at 25–45 tokens/sec on a modern laptop CPU.',
-      metaDescription: 'Beginner-friendly guide to run your first local LLM with Ollama or LM Studio. Fast setup and how to test it immediately in PromptQuorum.',
+      title: 'Run Your First Local LLM: A 10-Minute Beginner Guide',
+      seoTitle: 'Run Your First Local LLM: A 10-Minute Beginner Guide',
+      intro: '**Running your first local LLM takes under 10 minutes with Ollama.** Install Ollama, run one command to pull a model, and start chatting in your terminal — no API key, no account, and no internet connection after the initial download. As of April 2026, the fastest beginner model is Llama 3.2 3B at 25–45 tokens/sec on a modern laptop CPU.',
+      metaDescription: 'Beginner-friendly guide to run your first local LLM with Ollama or LM Studio in 10 minutes. Fast setup and immediate testing with PromptQuorum.',
       publishDate: '2026-04-04',
       readTime: '7 min read',
       educationalLevel: 'Beginner',
@@ -3963,9 +3964,9 @@ print(response.choices[0].message.content)`,
           codeLanguage: 'text',
         },
         whatToExpect: {
-          title: 'What to Expect: Speed, Quality, and Limitations',
+          title: 'What Should You Expect: Speed, Quality, and Performance Limits?',
           content: [
-            '**Speed** varies by hardware. On a 2023 laptop (no GPU): expect 15–25 tokens/sec for a 3B model and 8–15 tokens/sec for an 8B model. On Apple M3 Pro: 50–80 tokens/sec for 8B. On NVIDIA RTX 4070 Ti: 90–130 tokens/sec for 8B.',
+            '**Speed varies by hardware.** On a 2023 laptop (no GPU): expect 15–25 tokens/sec for a 3B model and 8–15 tokens/sec for an 8B model. On Apple M3 Pro: 50–80 tokens/sec for 8B. On NVIDIA RTX 4070 Ti: 90–130 tokens/sec for 8B. First responses take 5–30 seconds as the model loads; subsequent responses in the same session are faster.',
             '**Quality** from `llama3.2:3b` is noticeably lower than GPT-4o or Claude 4.6 Sonnet on complex tasks. For summarization, simple Q&A, and code explanation, the output is useful. For multi-step reasoning or long-form writing, upgrade to an 8B or 13B model.',
             '**Context window**: `llama3.2:3b` supports 128K tokens by default in Ollama. In practice, quality degrades after ~16K tokens in a single conversation.',
             '**First response delay**: the first response after `ollama run` includes model loading time (5–30 seconds). Subsequent responses in the same session are faster.',
