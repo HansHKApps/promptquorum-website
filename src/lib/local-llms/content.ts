@@ -3,6 +3,7 @@ import type { Language } from '@/lib/blog/blogContent'
 // ─── Section & Article types (mirrors PESection / PEArticle) ─────────────────
 
 export interface LLMSection {
+  id?: string
   title?: string
   content?: string | string[]
   blockquote?: string
@@ -19,6 +20,7 @@ export interface LLMSection {
   imagePlaceholder?: boolean
   codeBlock?: string
   codeLanguage?: string
+  note?: string
 }
 
 export interface LLMArticle {
