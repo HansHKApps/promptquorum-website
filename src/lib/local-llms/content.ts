@@ -4610,6 +4610,178 @@ print(response.choices[0].message.content)`,
         },
       },
     },
+    zh: {
+      theme: '入门',
+      title: '运行首个本地LLM : 10分钟快速入门指南',
+      seoTitle: '运行首个本地LLM : 2026年完整指南',
+      intro: '**使用Ollama，运行首个本地LLM只需10分钟以内。** 安装Ollama、一条命令拉取模型、终端开始聊天 — 无需API密钥、无需账户、初始下载后无需互联网连接。截至2026年4月，最快的初学者模型是Llama 3.2 3B（现代笔记本CPU上可达25–45令牌/秒）。',
+      metaDescription: '使用Ollama快速运行首个本地LLM的指南。10分钟内完成设置，立即使用PromptQuorum进行测试。',
+      publishDate: '2026-04-04',
+      readTime: '阅读约11分钟',
+      educationalLevel: 'Beginner',
+      primaryTerm: '本地LLM',
+      toc: [
+        { label: '核心要点', anchor: 'key-takeaways' },
+        { label: '步骤1 : 安装Ollama', anchor: 'step-1-install-ollama' },
+        { label: '步骤1 : 验证Ollama', anchor: 'step-1-detail-verify-ollama' },
+        { label: '步骤2 : 选择首个模型', anchor: 'step-2-choose-your-first-model' },
+        { label: '步骤3 : 下载模型', anchor: 'step-3-pull-the-model' },
+        { label: '步骤3 : 下载进度', anchor: 'step-3-progress-download' },
+        { label: '步骤4 : 运行并聊天', anchor: 'step-4-run-and-chat' },
+        { label: '步骤4 : 首次对话', anchor: 'step-4-chat-example' },
+        { label: '期望值 : 速度、质量、性能', anchor: 'what-to-expect' },
+        { label: '超越终端', anchor: 'beyond-the-terminal' },
+        { label: '常见问题', anchor: 'common-questions' },
+        { label: '首次运行后常见错误', anchor: 'common-mistakes' },
+        { label: '推荐阅读', anchor: 'related-reading' },
+        { label: '资源', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '最快方法 : 安装Ollama → 运行 `ollama run llama3.2` → 在终端聊天。总耗时 : 网速快时不到5分钟。',
+            '8GB RAM机器 : 从 `llama3.2:3b`（2GB下载）或 `phi3:mini`（2.3GB）开始。两者都可在任何现代笔记本上运行。',
+            'CPU上预期15–40令牌/秒，中档GPU或Apple Silicon上60–120令牌/秒。',
+            '首个响应可能比云API更慢 — 本地模型用隐私和零成本换取速度。',
+            '初始模型下载后，一切都离线运行。后续会话无需互联网连接。',
+          ],
+        },
+        step1: {
+          title: '步骤1 : 如何安装Ollama',
+          content: 'Ollama是运行本地LLM最快的方式。一条命令或2分钟的下载即可安装 :',
+          codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: 从ollama.com/download下载安装程序',
+          codeLanguage: 'bash',
+        },
+        step1Detail: {
+          title: '如何验证Ollama正在运行',
+          content: '安装后，确认Ollama是否活跃 :',
+          codeBlock: 'curl http://localhost:11434\n# 期望输出 : Ollama is running',
+          codeLanguage: 'bash',
+        },
+        step2: {
+          title: '步骤2 : 选择哪个模型',
+          content: '根据可用RAM选择模型。不确定时，从 `llama3.2:3b` 开始 — 在4GB RAM机器上运行并产生有用输出 :',
+          rows: [
+            { 'RAM容量': '4 GB', '推荐模型': 'llama3.2:1b', '下载大小': '~1.3 GB', '原因': '最小可用的Llama模型' },
+            { 'RAM容量': '8 GB', '推荐模型': 'llama3.2:3b', '下载大小': '~2 GB', '原因': '初学者最优质量/体积比' },
+            { 'RAM容量': '8–16 GB', '推荐模型': 'llama3.1:8b', '下载大小': '~4.7 GB', '原因': '强大的通用模型' },
+            { 'RAM容量': '16+ GB', '推荐模型': 'mistral:7b 或 qwen2.5:7b', '下载大小': '~4–5 GB', '原因': '竞争力的质量，快速推理' },
+          ],
+          columns: ['RAM容量', '推荐模型', '下载大小', '原因'],
+        },
+        step3: {
+          title: '步骤3 : 如何拉取模型',
+          content: '使用 `ollama pull` 下载模型。模型保存在 `~/.ollama/models` 中，只需下载一次 :',
+          codeBlock: 'ollama pull llama3.2\n\n# 或拉取特定大小的变体\nollama pull llama3.2:3b\nollama pull llama3.1:8b',
+          codeLanguage: 'bash',
+        },
+        step3Progress: {
+          title: '下载的样子',
+          content: 'Ollama在终端显示下载进度。在典型的宽带连接上， `llama3.2:3b` 模型需要2–5分钟。模型压缩存储 — 2GB的下载在磁盘上展开至约2.3GB。',
+          blockquote: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess',
+          blockquoteSource: '模型拉取期间的Ollama终端输出',
+        },
+        step4: {
+          title: '步骤4 : 如何运行模型并发送首个提示',
+          content: '启动交互式聊天会话 :',
+          codeBlock: 'ollama run llama3.2\n\n# Ollama加载模型并显示提示 :\n>>> Send a message (/? for help)',
+          codeLanguage: 'bash',
+        },
+        step4Chat: {
+          title: '首次对话',
+          content: '键入消息并按Enter。模型逐令牌流式传输响应 :',
+          codeBlock: '>>> 什么是本地LLM？\n\n本地LLM（大型语言模型）是完全在您自己的硬件上运行的AI模型\n— 笔记本、桌面或服务器。与ChatGPT或Claude等云服务不同，\n本地LLM在本地处理所有内容，不向外部服务器发送数据...',
+          codeLanguage: 'text',
+        },
+        whatToExpect: {
+          title: '期望值 : 速度、质量、性能',
+          content: [
+            '**速度因硬件而异。** 2023年笔记本（无GPU）上 : 3B模型预期15–25令牌/秒，8B模型预期8–15令牌/秒。Apple M3 Pro上 : 8B为50–80令牌/秒。NVIDIA RTX 4070 Ti上 : 8B为90–130令牌/秒。首个响应包括模型加载时间（5–30秒）。同一会话中的后续响应更快。',
+            '`llama3.2:3b` 的**质量**在复杂任务上明显低于GPT-4o或Claude 4.6 Sonnet。对于摘要、简单Q&A和代码解释，输出很有用。对于多步推理或长文本创作，升级到8B或13B模型。',
+            '**上下文窗口** : `llama3.2:3b` 在Ollama中默认支持128K令牌。实际上，单个对话中约16K令牌后质量会下降。',
+            '**首个响应延迟** : `ollama run` 后的首个响应包括模型加载时间（5–30秒）。同一会话中的后续响应更快。',
+          ],
+        },
+        beyondTerminal: {
+          title: '如何在终端之外使用本地LLM',
+          content: 'Ollama终端聊天对测试很有用，但大多数实际用例需要更好的界面 :',
+          items: [
+            '**Open WebUI** : Ollama的全功能Web UI。用Docker运行 : `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main`。在http://localhost:3000访问。',
+            '**LM Studio** : 如果偏好桌面GUI，[安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) 涵盖完整设置。LM Studio的内置聊天功能精美且支持对话历史。',
+            '**API集成** : `localhost:11434` 处的Ollama API与OpenAI SDK兼容。任何接受OpenAI基URL的应用都可以连接到您的本地模型。',
+            '**VS Code / Cursor** : Continue.dev等扩展连接到Ollama，直接在编辑器中提供本地AI代码辅助。',
+          ],
+        },
+        faqSection: {
+          title: '常见问题',
+          faqs: [
+            {
+              q: '模型响应非常慢 — 这正常吗？',
+              a: '在纯CPU硬件上，7B模型的8–20令牌/秒是正常的。每个令牌约0.75个单词。在10令牌/秒时，100个单词的响应需要约13秒。要加快推理，使用更小的模型（3B而非8B），如果有兼容GPU则启用GPU卸载，或使用Q4_K_M量化级别（最快的）。',
+            },
+            {
+              q: '能同时运行两个模型吗？',
+              a: '如果有足够的RAM，Ollama可以同时加载多个模型。默认情况下，Ollama在5分钟不活动后卸载模型。您可以用OLLAMA_KEEP_ALIVE环境变量更改此行为。同时运行两个7B模型需要约16GB RAM。',
+            },
+            {
+              q: '如何停止Ollama在后台运行',
+              a: 'macOS : 点击菜单栏中的llama图标并选择退出。Linux : 运行 `systemctl stop ollama`。Windows : 右键单击系统托盘图标并选择退出。要防止Ollama在登录时启动，将其从启动项中移除。',
+            },
+          ],
+        },
+        nextSteps: {
+          title: '首次运行后的下一步',
+          content: '现在您有了一个工作的本地LLM，探索它能做什么。要了解哪些模型最适合您的硬件，请参阅[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models?lang=zh)。有关笔记本特定的性能提示，请参阅[如何在笔记本上运行本地LLM](/local-llms/local-llm-on-laptop?lang=zh)。有关隐私和安全最佳实践，请参阅[本地LLM安全与隐私检查清单](/local-llms/local-llm-security-privacy-checklist?lang=zh)。',
+        },
+        sources: {
+          title: '资源',
+          items: [
+            '**Ollama模型库文档** — 模型和规格的官方列表',
+            '**令牌预测基准** — 硬件上的社区性能数据',
+            '**Llama 3.2模型卡** — 官方规格和性能指标',
+          ],
+        },
+        commonMistakes: {
+          title: '首次运行后常见错误',
+          items: [
+            '混淆令牌数与速度 — 7B模型以20令牌/秒生成100个令牌需要5秒，不是立刻。',
+            '系统忙于其他任务时运行推理，大幅降低有效令牌/秒。',
+            '不检查上下文窗口限制 — 大多数初学者模型支持2K–8K令牌，而非最先进模型的100K+。',
+          ],
+        },
+        relatedReading: {
+          title: '推荐阅读',
+          items: [
+            '[安装Ollama](/local-llms/how-to-install-ollama?lang=zh) — 安装和设置',
+            '[安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) — GUI替代方案',
+            '[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models?lang=zh) — 针对您硬件的模型推荐',
+            '[什么是本地LLM](/local-llms/what-are-local-llms?lang=zh) — 核心概念和运作方式',
+          ],
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '运行首个本地LLM : 从安装到首个响应10分钟内',
+        inLanguage: 'zh',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '最快方法 : 安装Ollama → 运行 `ollama run llama3.2` → 在终端聊天。总耗时 : 网速快时不到5分钟。' },
+          { '@type': 'ListItem', position: 2, name: '8GB RAM机器 : 从 `llama3.2:3b`（2GB下载）或 `phi3:mini`（2.3GB）开始。两者都可在任何现代笔记本上运行。' },
+          { '@type': 'ListItem', position: 3, name: 'CPU上预期15–40令牌/秒，中档GPU或Apple Silicon上60–120令牌/秒。' },
+          { '@type': 'ListItem', position: 4, name: '首个响应可能比云API更慢 — 本地模型用隐私和零成本换取速度。' },
+          { '@type': 'ListItem', position: 5, name: '初始模型下载后，一切都离线运行。后续会话无需互联网连接。' },
+        ],
+        regionalContext: {
+          title: '中国企业采用与数据合规',
+          content: [
+            '**中国企业为遵守《2021年数据安全法》而部署本地LLM。** 该法要求敏感数据在中国境内处理，禁止将个人信息和关键业务数据传输到海外服务器。金融机构（银行、证券公司）、医疗提供者（医院、制药公司）和政府部门在隔离网络中运行本地模型以确保数据主权。Qwen2.5 7B因其出色的中文性能而成为首选。PromptQuorum支持本地部署与云模型的并行测试，以验证输出质量。',
+            '**亚太地区组织为遵守区域数据驻留框架而采用本地LLM。** 新加坡《个人数据保护法》、印度尼西亚《个人数据保护法》和泰国《个人数据保护法》均要求数据在本地处理。ASEAN国家的金融科技企业和医疗提供者部署本地推理以满足多国合规要求。跨境数据传输被限制或禁止，本地推理成为必需。PromptQuorum支持多地区部署的无缝集成。',
+            '**全球受管制行业企业使用本地LLM实现合规。** 医疗保健提供者在本地处理患者记录以满足HIPAA要求。金融机构在隔离环境中运行本地模型以满足SOX合规。律师事务所在本地处理机密客户数据以满足数据保护责任。PromptQuorum使团队能够基准测试本地模型与云替代方案的成本和性能权衡。',
+          ],
+        },
+      },
+    },
   },
 
   'best-beginner-local-llm-models': {
