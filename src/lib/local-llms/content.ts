@@ -3108,7 +3108,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'メインの制約はハードウェアです。Q4_K_M量子化には約40GBのRAMが必要です。これはほとんどのコンシューマー向けノートパソコンを除外します。Mac Studio M2 Ultra（64GB以上）、高性能ワークステーション（64GB RAM）、またはOllamaのレイヤーオフロード機能を使ってGPUとシステムRAMに分散させて実行するのに適しています。',
           ],
           rows: [
-            { '仕様': 'MMULスコア', '値': '82%' },
+            { '仕様': 'MMUスコア', '値': '82%' },
             { '仕様': 'HumanEvalスコア', '値': '88%' },
             { '仕様': 'RAM要件（Q4_K_M）', '値': '約40GB' },
             { '仕様': 'コンテキストウィンドウ', '値': '128Kトークン' },
@@ -3123,7 +3123,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '英語以外のコンテンツを処理するチームまたは多言語アプリケーション構築しているチームの場合、Qwen2.5 72BはLlama 3.3 70Bよりも推奨される選択肢です。言語固有のベンチマークについては、[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=ja)を参照してください。',
           ],
           rows: [
-            { '仕様': 'MMULスコア', '値': '84%' },
+            { '仕様': 'MMUスコア', '値': '84%' },
             { '仕様': 'HumanEvalスコア', '値': '87%' },
             { '仕様': 'RAM要件（Q4_K_M）', '値': '約43GB' },
             { '仕様': '対応言語', '値': 'ネイティブ対応29言語' },
@@ -3138,7 +3138,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Mistral Small 3.1は、7Bモデルを実行してきたユーザーで、40GB RAM の70Bモデルを必要としない品質向上を求めるユーザー向けの推奨アップグレードパスです。',
           ],
           rows: [
-            { '仕様': 'MMULスコア', '値': '79%' },
+            { '仕様': 'MMUスコア', '値': '79%' },
             { '仕様': 'HumanEvalスコア', '値': '74%' },
             { '仕様': 'RAM要件（Q4_K_M）', '値': '約14GB' },
             { '仕様': 'コンテキストウィンドウ', '値': '128Kトークン' },
@@ -3153,7 +3153,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Gemma 3 9Bはマルチモーダルバリアントでビジョン（画像入力）をサポートしています。コンシューマーハードウェアで画像を処理できるローカル実行可能モデルの数少ない一つです。テキストのみのタスクでは標準バリアントを使用します。',
           ],
           rows: [
-            { '仕様': 'MMULスコア', '値': '73%' },
+            { '仕様': 'MMUスコア', '値': '73%' },
             { '仕様': 'HumanEvalスコア', '値': '68%' },
             { '仕様': 'RAM要件（Q4_K_M）', '値': '約6GB' },
             { '仕様': 'コンテキストウィンドウ', '値': '128Kトークン' },
@@ -3168,7 +3168,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Phi-4 Miniは、4～8GB RAMのマシンや、最大品質より応答速度が重要なあらゆる状況向けの推奨モデルです。その推論性能は同じハードウェアティアのLlama 3.2 3Bを大幅に上回ります。',
           ],
           rows: [
-            { '仕様': 'MMULスコア', '値': '68%' },
+            { '仕様': 'MMUスコア', '値': '68%' },
             { '仕様': 'HumanEvalスコア', '値': '70%' },
             { '仕様': 'RAM要件（Q4_K_M）', '値': '約2.5GB' },
             { '仕様': 'コンテキストウィンドウ', '値': '128Kトークン' },
