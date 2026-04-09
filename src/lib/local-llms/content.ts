@@ -1484,6 +1484,884 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
       },
     },
+
+  de: {
+    theme: 'Getting Started',
+    title: 'Checkliste für Sicherheit und Datenschutz bei lokalen LLMs: 12 Schritte zu einem sicheren Setup',
+    seoTitle: 'Checkliste Sicherheit & Datenschutz lokale LLMs',
+    intro: 'Das Ausführen eines lokalen LLMs hält Ihre Prompts von den Servern Dritter fern, macht Ihr Setup aber nicht automatisch privat oder sicher. Ab April 2026 deckt die folgende 12-Punkte-Checkliste Modellherkunft, Netzwerkisolation, Telemetrie-Einstellungen, Festplattenverschlüsselung und Zugriffskontrolle ab — das Minimum, das für ein wirklich privates lokales LLM-Setup erforderlich ist.',
+    metaDescription: 'Checkliste für lokale LLM-Sicherheit und Datenschutz: 12 Schritte zu Modellherkunft, Telemetrie, Netzwerkisolation, Festplattenverschlüsselung. Kostenlos Beta — April 2026.',
+    publishDate: '2026-04-04',
+    readTime: '8 min Lesezeit',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'Datenschutz bei lokalen LLMs',
+    toc: [
+      { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
+      { label: 'Warum lokale LLMs nicht automatisch privat sind', anchor: '#why-not-automatically-private' },
+      { label: 'Die 12-Punkte-Sicherheitscheckliste', anchor: '#the-12-item-checklist' },
+      { label: 'Modellherkunft: Sichere Download-Quellen', anchor: '#model-provenance' },
+      { label: 'Netzwerkisolation: Ausgehende Verbindungen blockieren', anchor: '#network-isolation' },
+      { label: 'Telemetrie-Einstellungen nach Tool', anchor: '#telemetry-settings' },
+      { label: 'Häufige Fragen', anchor: '#common-questions' },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'Lokale Inferenz hält Prompt-Daten von den Servern Dritter fern. Die verbleibenden Risiken sind: Telemetrie des Inferenz-Tools, Modelldateien aus nicht vertrauenswürdigen Quellen und die Ollama-API, die im Netzwerk verfügbar gemacht wird.',
+          'Ollama bindet sich standardmäßig an localhost — es ist nicht von anderen Geräten aus erreichbar, es sei denn, Sie setzen explizit OLLAMA_HOST=0.0.0.0.',
+          'Deaktivieren Sie Analytics in LM Studio (Einstellungen → Datenschutz → „Anonyme Nutzungsdaten senden" deaktivieren) und GPT4All (Einstellungen → Telemetrie deaktivieren).',
+          'Laden Sie Modellgewichte nur von Hugging Face (huggingface.co) oder aus der offiziellen Ollama-Bibliothek herunter. Überprüfen Sie SHA256-Prüfsummen für sensible Bereitstellungen.',
+          'Für regulierte Daten (HIPAA, DSGVO, rechtliche Privilegien): Aktivieren Sie Vollverschlüsselung der Festplatte, verwenden Sie einen isolierten Computer und überprüfen Sie alle installierten Erweiterungen.',
+        ],
+      },
+      whyNotAutoPrivate: {
+        title: 'Warum sind lokale LLMs nicht automatisch privat?',
+        content: [
+          'Die Modell-Inferenz selbst ist privat — Ihre Prompts werden niemals an die Server des Modellanbieters gesendet. Aber drei weitere Datenflüsse können zu Informationslecks führen:',
+        ],
+        items: [
+          '**Anwendungs-Telemetrie**: LM Studio, GPT4All und einige andere Tools erfassen standardmäßig anonyme Nutzungsanalysen. Diese können Sitzungszahlen, verwendete Modellnamen und Leistungsmetriken enthalten.',
+          '**Modell-Download-Quellen**: Bösartige GGUF-Dateien können Code enthalten, der sich beim Laden von Modellen in anfälligen Inferenz-Engines ausführt. Eine ungeprüfte Modelldatei ist ein Supply-Chain-Risiko.',
+          '**Netzwerk-Exposition**: Die Ollama-API ist für jeden Prozess auf Ihrem Computer zugänglich. Bei Fehlkonfiguration mit `OLLAMA_HOST=0.0.0.0` wird sie für Ihr gesamtes Netzwerk ohne Authentifizierung erreichbar.',
+        ],
+      },
+      checklist: {
+        title: 'Die 12-Punkte-Checkliste für Sicherheit und Datenschutz bei lokalen LLMs',
+        numberedItems: [
+          '**Laden Sie Modelle nur aus vertrauenswürdigen Quellen herunter** — Hugging Face (huggingface.co) und die Ollama-Bibliothek (ollama.com/library) sind die zwei primären vertrauenswürdigen Quellen. Vermeiden Sie zufällige GitHub-Releases oder Torrent-Seiten.',
+          '**Überprüfen Sie Modell-Prüfsummen für sensible Anwendungen** — Hugging Face zeigt SHA256-Hashes für jede Modelldatei. Vergleichen Sie mit `sha256sum <model_file>` vor dem Laden.',
+          '**Deaktivieren Sie Telemetrie in Ihrem Inferenz-Tool** — siehe den Abschnitt Telemetrie-Einstellungen unten für Tool-spezifische Anweisungen.',
+          '**Bestätigen Sie, dass Ollama nur an localhost gebunden ist** — führen Sie `curl http://localhost:11434` von einem anderen Gerät aus. Falls eine Antwort kommt, ist Ollama verfügbar gemacht. Behebung: setzen Sie `OLLAMA_HOST=127.0.0.1:11434`.',
+          '**Aktivieren Sie die Vollverschlüsselung der Festplatte** — unter macOS: Systemeinstellungen → Datenschutz & Sicherheit → FileVault. Unter Windows: Einstellungen → Datenschutz & Sicherheit → Geräteverschlüsselung. Dies schützt Modellgewichte und Chat-Protokolle, falls das Gerät verloren geht.',
+          '**Speichern Sie sensible Chat-Protokolle in einem verschlüsselten Ordner** — LM Studio speichert Chat-Verlauf in `~/Library/Application Support/LM Studio/` (macOS). Verschlüsseln Sie diesen Ordner oder deaktivieren Sie Verlauf in den Einstellungen.',
+          '**Überprüfen Sie installierte Erweiterungen und Plugins** — Open WebUI und Jan AI unterstützen Drittanbieter-Erweiterungen, die möglicherweise eigenen Netzwerkzugriff haben. Überprüfen Sie, was installiert ist.',
+          '**Verwenden Sie ein dediziertes Benutzerkonto für LLM-Arbeiten** — trennt Modelldateien, Chat-Verlauf und API-Schlüssel von Ihrem Hauptbenutzerprofil.',
+          '**Machen Sie die lokale API nicht im Internet verfügbar** — leiten Sie Ollama oder LM Studio niemals ohne Authentifizierungs-Middleware zu einer öffentlichen IP-Adresse weiter.',
+          '**Überprüfen Sie System-Prompts in jeder App, die lokale LLMs nutzt** — Browser-Erweiterungen und Produktivitäts-Tools, die lokale LLMs integrieren, können System-Prompts enthalten, die Daten an ihre eigenen Server neben dem lokalen Inferenz-Aufruf senden.',
+          '**Halten Sie Inferenz-Tools aktuell** — Ollama, LM Studio und llama.cpp veröffentlichen Sicherheits-Patches. Führen Sie `brew upgrade ollama` (macOS) aus oder laden Sie regelmäßig das neueste Installer herunter.',
+          '**Für Netzwerk-isolierte oder regulierte Umgebungen**: Deaktivieren Sie automatische Modell-Updates, entfernen Sie Ollama aus den Autostart-Elementen und dokumentieren Sie, welche Modellversionen für die Verwendung genehmigt sind.',
+        ],
+      },
+      zusammenfassung: {
+        title: 'Zusammenfassung: Kernpunkte für DSGVO-Compliance bei lokalen LLMs',
+        items: [
+          '**Lokal verarbeitete Daten** — da Prompts Ihren Computer nicht verlassen, fungiert die lokale Maschine als Datenverarbeiter, nicht Ollama oder LM Studio. Dennoch müssen Sie überprüfen, ob Telemetrie deaktiviert ist.',
+          '**BSI C5-Anforderungen** — für Bundesbehörden-Daten: Vollverschlüsselung (AES-256), Zugriffskontrolle, Audit-Logging und Netzwerk-Isolation. Alle 12 Schritte dieser Checkliste adressieren diese Punkte.',
+          '**Datenschutz-Folgenabschätzung erforderlich** — wenn Sie personenbezogene Daten verarbeiten (DSGVO Art. 35), dokumentieren Sie, dass Sie Ollama nutzen, Netzwerk-Isolation aktiviert ist und kein Cloud-Speicher verwendet wird.',
+        ],
+      },
+      modelProvenance: {
+        title: 'Wo Sie lokale LLM-Modellgewichte sicher herunterladen',
+        content: [
+          'Modellgewichte sind große Binärdateien. Eine bösartige GGUF-Datei könnte Schwachstellen im von llama.cpp verwendeten Parser ausnutzen. Ab 2026 wurde keine weit verbreitete GGUF-basierte Malware bestätigt, aber die Angriffsfläche existiert.',
+        ],
+        items: [
+          '**Hugging Face** (huggingface.co): die primäre Quelle für offene Modelle. Jede Datei hat einen verifizierten SHA256-Hash. Halten Sie sich an Modelle von bekannten Verlegern (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
+          '**Ollama-Bibliothek** (ollama.com/library): Ollama verifiziert Modell-Hashes vor dem Speichern. über `ollama pull` abgerufene Modelle sind sicher.',
+          '**LM Studio-Modellbrowser**: durchsucht Hugging Face direkt. Die gleichen Vertrauensregeln gelten — überprüfen Sie das Verleger-Konto.',
+          '**Vermeiden Sie**: anonyme Datei-Freigabe-Seiten, Discord-Datei-Drops und jede Quelle, die keinen verifizierbaren Hash bereitstellt.',
+        ],
+      },
+      networkIsolation: {
+        title: 'Wie Sie ausgehende Verbindungen von lokalen LLMs blockieren',
+        content: 'Für maximalen Datenschutz bei sensiblen Workloads verwenden Sie eine Firewall-Regel, um zu verhindern, dass das Inferenz-Tool nach dem Modell-Download ausgehende Verbindungen macht:',
+        codeBlock: '# macOS — Ollama ausgehend mit pf Firewall blockieren\n# Fügen Sie zu /etc/pf.conf hinzu:\nblock out proto tcp from any to any user ollama\n\n# Linux — blockieren mit ufw\nsudo ufw deny out from any to any app ollama\n\n# Oder verwenden Sie Little Snitch (macOS) / OpenSnitch (Linux)\n# für anwendungsspezifische Netzwerkkontrolle mit GUI',
+        codeLanguage: 'bash',
+      },
+      telemetry: {
+        title: 'Wie Sie Telemetrie in lokalen LLM-Tools deaktivieren',
+        rows: [
+          { 'Tool': 'Ollama', 'Telemetrie Standard': 'Keine erfasst', 'Überprüfung': 'github.com/ollama/ollama — kein Analytics-Code' },
+          { 'Tool': 'LM Studio', 'Telemetrie Standard': 'Anonyme Analytics aktiviert', 'Deaktivieren': 'Einstellungen → Datenschutz → „Anonyme Nutzungsdaten senden" deaktivieren' },
+          { 'Tool': 'Jan AI', 'Telemetrie Standard': 'Keine — explizit deaktiviert', 'Überprüfung': 'Open Source — überprüfen Sie github.com/janhq/jan' },
+          { 'Tool': 'GPT4All', 'Telemetrie Standard': 'Nur Opt-in beim ersten Start', 'Ändern': 'Einstellungen → Datenschutz → Nutzungs-Analytics deaktivieren' },
+        ],
+        columns: ['Tool', 'Telemetrie Standard', 'Überprüfung/Deaktivieren'],
+      },
+      faqSection: {
+        title: 'Häufige Sicherheitsfragen zu lokalen LLMs',
+        faqs: [
+          {
+            q: 'Kann ein lokales LLM auf meine Dateien oder das Internet zugreifen?',
+            a: 'Nein — das Modell selbst ist eine statische Datei, die Text generiert. Es hat keine Fähigkeit, Ihr Dateisystem zu lesen oder Netzwerkanfragen zu stellen. Das Inferenz-Tool, das das Modell ausführt (Ollama, LM Studio), hat jedoch normalen Betriebssystem-Zugriff. Einige Tools haben Funktionen, die Dateien lesen — wie GPT4Alls LocalDocs oder LM Studios Datei-Anhang-Funktion. Diese Funktionen sind optional und ausdrücklich dokumentiert.',
+          },
+          {
+            q: 'Ist es sicher, ein lokales LLM mit HIPAA-geschützten Daten zu verwenden?',
+            a: 'Lokale Inferenz eliminiert das Risiko der Datenverarbeitung durch Dritte, das Cloud-APIs schaffen. HIPAA-Compliance erfordert jedoch mehr als private Inferenz — Sie benötigen Vollverschlüsselung, Zugriffskontrolle, Audit-Logging und eine Datenverarbeitungsvereinbarung, falls ein Softwareanbieter auf geschützte Gesundheitsinformationen zugreifen könnte. Die Verwendung von Ollama mit aktiviertem FileVault und deaktivierter Telemetrie ist ein angemessener Startpunkt, aber formale HIPAA-Compliance erfordert eine vollständige Risikobewertung.',
+          },
+          {
+            q: 'Sendet Ollama meine Prompts irgendwohin?',
+            a: 'Nein. Ollama ist Open Source (github.com/ollama/ollama) und enthält keinen Telemetrie- oder Datenerfassungs-Code. Prompts werden lokal von llama.cpp verarbeitet und niemals übertragen. Die einzige ausgehende Netzwerkaktivität von Ollama sind Modell-Downloads von ollama.com, wenn Sie `ollama pull` ausführen.',
+          },
+          {
+            q: 'Kann ich Ollama in einem Unternehmen mit BSI C5-Anforderungen einsetzen?',
+            a: 'Ja, mit korrekter Konfiguration. Aktivieren Sie Vollverschlüsselung (AES-256) für die Systemfestplatte, deaktivieren Sie alle Telemetrie, blockieren Sie ausgehende Verbindungen mit einer Firewall und isolieren Sie das Gerät vom Internet. Dokumentieren Sie diese Konfiguration in Ihrer Datenschutz-Folgenabschätzung. Siehe Punkt 12 der Checkliste für air-gapped Umgebungen.',
+          },
+          {
+            q: 'Wie überprüfe ich, dass LM Studio die Telemetrie wirklich deaktiviert hat?',
+            a: 'Nutzen Sie ein Tool wie Wireshark oder Little Snitch, um den Netzwerkverkehr von LM Studio zu überwachen. Mit deaktivierter Telemetrie sollten Sie keine Verbindungen zu Analysediensten (mixpanel.com, sentry.io, etc.) sehen.',
+          },
+          {
+            q: 'Sind SHA256-Hashes allein ausreichend, um GGUF-Dateien zu überprüfen?',
+            a: 'SHA256-Hashes bestätigen, dass eine heruntergeladene Datei mit der erwarteten Datei übereinstimmt. Sie verhindern nicht, dass eine legitime Modelldatei bösartig ist. Für maximale Sicherheit: laden Sie nur von Hugging Face oder ollama.com herunter, überprüfen Sie, dass der Publisher-Account etabliert ist, und überprüfen Sie den Hash.',
+          },
+        ],
+      },
+      sources: {
+        title: 'Quellen',
+        items: [
+          '**OWASP Top 10 für KI** — Sicherheitsüberlegungen für Modell-Bereitstellung',
+          '**Hugging Face Model Card Spezifikationen** — Modellherkunfts- und Lizenzierungsstandards',
+          '**VeraCrypt Festplattenverschlüsselung** — Open-Source-Vollverschlüsselungs-Tool',
+        ],
+      },
+      commonMistakes: {
+        title: 'Häufige Fehler bei der Sicherheit lokaler LLMs',
+        items: [
+          'Herunterladen von Modellen aus nicht vertrauenswürdigen Quellen ohne Überprüfung von Prüfsummen oder Modellherkunft.',
+          'Annahme, dass Datenschutz automatisch ist — überprüfen Sie auf Telemetrie, Update-Checks oder Sync-Funktionen in Ihrem gewählten Tool.',
+          'Nichtchlüssel lokaler LLMs nicht vom Netzwerk isolieren — bösartige Prompts können Modelle ausnutzen, um Daten zu exfiltrieren.',
+        ],
+      },
+      relatedReading: {
+        title: 'Verwandte Lektüre',
+        items: [
+          '[Was sind lokale LLMs?](/local-llms/what-are-local-llms?lang=de) — Kernkonzepte und -komponenten',
+          '[Lokale LLMs vs. Cloud-APIs](/local-llms/local-llms-vs-cloud-apis?lang=de) — Datenschutz-Kompromisse',
+          '[Wie man Ollama installiert](/local-llms/how-to-install-ollama?lang=de) — Installation und Setup',
+          '[Wie man lokale LLMs auf einem Laptop ausführt](/local-llms/local-llm-on-laptop?lang=de) — Sichere Laptop-Konfiguration',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/local-llms/local-llm-security-privacy-checklist?lang=de',
+      'inLanguage': 'de',
+      'headline': 'Checkliste für Sicherheit und Datenschutz bei lokalen LLMs: 12 Schritte zu einem sicheren Setup',
+      'description': 'Checkliste für lokale LLM-Sicherheit und Datenschutz: 12 Schritte zu Modellherkunft, Telemetrie, Netzwerkisolation, Festplattenverschlüsselung. Kostenlos Beta — April 2026.',
+      'datePublished': '2026-04-04',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'keywords': 'lokale LLM Sicherheit, Datenschutz, DSGVO, Checkliste, Verschlüsselung, Ollama',
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      'name': 'Lokale LLM Sicherheit: 12-Schritte-Checkliste',
+      'step': [
+        {
+          '@type': 'HowToStep',
+          'name': 'Modelle nur aus vertrauenswürdigen Quellen herunterladen',
+          'text': 'Laden Sie Modelle von Hugging Face oder der Ollama-Bibliothek herunter. Vermeiden Sie GitHub-Releases und Torrents.'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'SHA256-Prüfsummen überprüfen',
+          'text': 'Vergleichen Sie SHA256-Hashes von Hugging Face mit lokalen Dateien mit dem sha256sum-Befehl.'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'Telemetrie deaktivieren',
+          'text': 'Deaktivieren Sie Telemetrie in LM Studio und GPT4All über die Einstellungen.'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'Ollama-Bindung überprüfen',
+          'text': 'Führen Sie curl http://localhost:11434 aus. Falls Ollama antwortet, ist es verfügbar gemacht. Setzen Sie OLLAMA_HOST=127.0.0.1:11434.'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'Festplattenverschlüsselung aktivieren',
+          'text': 'Aktivieren Sie FileVault (macOS) oder Device Encryption (Windows).'
+        },
+      ]
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Kann ein lokales LLM auf meine Dateien oder das Internet zugreifen?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Nein — das Modell selbst ist eine statische Datei. Das Inferenz-Tool (Ollama, LM Studio) hat normalen OS-Zugriff, aber das Modell selbst kann nicht auf Dateien oder das Internet zugreifen, es sei denn, das Tool stellt explizit diese Funktionen bereit.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Ist es sicher, ein lokales LLM mit HIPAA-Daten zu verwenden?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Lokale Inferenz mit Vollverschlüsselung und Telemetrie-Deaktivierung ist ein guter Anfang, erfordert aber eine vollständige HIPAA-Compliance-Bewertung.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Sendet Ollama meine Prompts irgendwohin?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Nein. Ollama ist Open Source und enthält keinen Telemetrie-Code. Die einzige ausgehende Aktivität ist das Herunterladen von Modellen von ollama.com.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kann ich Ollama mit BSI C5-Anforderungen einsetzen?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Ja, mit Vollverschlüsselung, deaktivierter Telemetrie, Firewall-Isolation und Netzwerk-Isolierung.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Wie überprüfe ich, dass LM Studio Telemetrie wirklich deaktiviert hat?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Nutzen Sie Wireshark oder Little Snitch, um den Netzwerkverkehr zu überwachen. Es sollten keine Verbindungen zu Analysediensten vorhanden sein.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Sind SHA256-Hashes allein ausreichend zur Überprüfung?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'SHA256-Hashes bestätigen Datei-Integrität. Laden Sie nur von Hugging Face oder ollama.com herunter und überprüfen Sie den Publisher-Account.'
+          }
+        },
+      ]
+    },
+  },
+
+  fr: {
+    theme: 'Getting Started',
+    title: 'Liste de Contrôle Sécurité et Confidentialité des LLM Locaux : 12 Étapes pour une Configuration Sûre',
+    seoTitle: 'Liste de Contrôle Sécurité & Confidentialité LLM Locaux',
+    intro: 'Exécuter un LLM local garde vos invites hors des serveurs tiers, mais ne rend pas votre configuration automatiquement privée ou sécurisée. En avril 2026, cette liste de 12 points couvre la provenance du modèle, l\'isolation réseau, les paramètres de télémétrie, le chiffrement de disque et les contrôles d\'accès — le strict nécessaire pour une configuration LLM locale véritablement privée.',
+    metaDescription: 'Liste de contrôle sécurité LLM local : 12 étapes pour provenance, télémétrie, isolation réseau, chiffrement disque. Gratuit bêta — avril 2026.',
+    publishDate: '2026-04-04',
+    readTime: '8 min de lecture',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'confidentialité LLM local',
+    toc: [
+      { label: 'Points Clés', anchor: '#key-takeaways' },
+      { label: 'Pourquoi les LLM Locaux Ne Sont Pas Automatiquement Privés', anchor: '#why-not-automatically-private' },
+      { label: 'Liste de Contrôle de Sécurité en 12 Points', anchor: '#the-12-item-checklist' },
+      { label: 'Provenance du Modèle : Téléchargements Sécurisés', anchor: '#model-provenance' },
+      { label: 'Isolation Réseau : Bloquer les Connexions Sortantes', anchor: '#network-isolation' },
+      { label: 'Paramètres de Télémétrie par Outil', anchor: '#telemetry-settings' },
+      { label: 'Questions Courantes', anchor: '#common-questions' },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'L\'inférence locale garde les données d\'invites hors des serveurs tiers. Les risques subsistants : télémétrie de l\'outil, fichiers de modèles non fiables, API Ollama exposée au réseau.',
+          'Ollama se lie à localhost par défaut — inaccessible depuis d\'autres appareils sauf si vous définissez OLLAMA_HOST=0.0.0.0.',
+          'Désactivez l\'analytique : LM Studio (Paramètres → Confidentialité → dé-cocher « Envoyer les données d\'utilisation ») et GPT4All (Paramètres → désactiver télémétrie).',
+          'Téléchargez les poids uniquement de Hugging Face (huggingface.co) ou Ollama library. Vérifiez les empreintes SHA256 pour les déploiements sensibles.',
+          'Données régulées (RGPD, confidentialité légale) : chiffrement complet du disque, machine isolée, audit des extensions.',
+        ],
+      },
+      whyNotAutoPrivate: {
+        title: 'Pourquoi les LLM Locaux Ne Sont Pas Automatiquement Privés ?',
+        content: [
+          'L\'inférence du modèle est privée — vos invites ne partent jamais aux serveurs du fournisseur. Trois autres flux de données risquent des fuites :',
+        ],
+        items: [
+          '**Télémétrie applicative** : LM Studio, GPT4All collectent par défaut des analyses d\'utilisation anonymes, incluant comptages de sessions et métriques de performance.',
+          '**Sources de téléchargement** : fichiers GGUF malveillants exploitent des failles dans llama.cpp. Fichier non vérifié = risque de chaîne d\'approvisionnement.',
+          '**Exposition réseau** : serveur Ollama accessible à tout processus. Mal configuré avec `OLLAMA_HOST=0.0.0.0`, il devient accessible à tout le réseau sans authentification.',
+        ],
+      },
+      checklist: {
+        title: 'Liste de Contrôle de Sécurité et Confidentialité en 12 Points',
+        numberedItems: [
+          '**Téléchargez depuis sources fiables** — Hugging Face (huggingface.co) et Ollama library (ollama.com/library). Évitez GitHub et torrents.',
+          '**Vérifiez les empreintes pour opérations sensibles** — Hugging Face affiche SHA256. Comparez avec `sha256sum <model_file>`.',
+          '**Désactivez télémétrie** — voir section Télémétrie ci-dessous.',
+          '**Confirmez Ollama sur localhost** — testez `curl http://localhost:11434` d\'un autre appareil. Si réponse, définissez `OLLAMA_HOST=127.0.0.1:11434`.',
+          '**Activez chiffrement complet disque** — macOS : Paramètres → Confidentialité & Sécurité → FileVault. Windows : Paramètres → Confidentialité & Sécurité → Device encryption.',
+          '**Stockez logs sensibles chiffrés** — LM Studio : `~/Library/Application Support/LM Studio/` (macOS). Chiffrez ou désactivez l\'historique.',
+          '**Auditez extensions** — Open WebUI et Jan AI supportent tiers : audit du réseau.',
+          '**Compte utilisateur dédié** — isole fichiers, historique, clés API.',
+          '**Ne pas exposer l\'API localement** — jamais de port-forward sans middleware auth.',
+          '**Auditez les system prompts** — extensions et outils intégrés peuvent envoyer ailleurs.',
+          '**Maintenez à jour** — Ollama, LM Studio, llama.cpp. Exécutez `brew upgrade ollama` régulièrement.',
+          '**Environnements air-gapped** : désactivez mises à jour modèles, supprimez Ollama du démarrage, documentez versions approuvées.',
+        ],
+      },
+      modelProvenance: {
+        title: 'Sources Fiables pour Télécharger les Poids de Modèles',
+        content: [
+          'Poids de modèles : fichiers binaires volumineux. GGUF malveillant exploite failles llama.cpp. 2026 : pas de malware GGUF confirmé, mais surface d\'attaque existe.',
+        ],
+        items: [
+          '**Hugging Face** (huggingface.co) : source primaire. Hash SHA256 vérifié. Préférez éditeurs établis (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
+          '**Ollama library** (ollama.com/library) : Ollama vérifie hashes. Modèles via `ollama pull` sûrs.',
+          '**LM Studio browser** : recherche Hugging Face directement. Mêmes règles — vérifiez compte éditeur.',
+          '**Évitez** : partage anon, Discord drops, sources sans hash vérifiable.',
+        ],
+      },
+      networkIsolation: {
+        title: 'Comment Bloquer les Connexions Sortantes',
+        content: 'Confidentialité maximale : règle firewall pour isoler l\'outil après téléchargement du modèle :',
+        codeBlock: '# macOS — bloquer Ollama avec pf firewall\n# Ajouter à /etc/pf.conf :\nblock out proto tcp from any to any user ollama\n\n# Linux — bloquer avec ufw\nsudo ufw deny out from any to any app ollama\n\n# Ou utiliser Little Snitch (macOS) / OpenSnitch (Linux)\n# pour contrôle par application avec interface',
+        codeLanguage: 'bash',
+      },
+      telemetry: {
+        title: 'Comment Désactiver la Télémétrie',
+        rows: [
+          { 'Outil': 'Ollama', 'Télémétrie Défaut': 'Aucune', 'Vérification': 'github.com/ollama/ollama — pas de code analytics' },
+          { 'Outil': 'LM Studio', 'Télémétrie Défaut': 'Analytics anon activée', 'Désactiver': 'Paramètres → Confidentialité → décocher « Données d\'utilisation »' },
+          { 'Outil': 'Jan AI', 'Télémétrie Défaut': 'Aucune — explicitement désactivée', 'Vérification': 'Open source — auditez github.com/janhq/jan' },
+          { 'Outil': 'GPT4All', 'Télémétrie Défaut': 'Opt-in au premier lancement', 'Modifier': 'Paramètres → Confidentialité → désactiver analytics' },
+        ],
+        columns: ['Outil', 'Télémétrie Défaut', 'Vérification/Désactiver'],
+      },
+      faqSection: {
+        title: 'Questions Courantes sur la Sécurité des LLM Locaux',
+        faqs: [
+          {
+            q: 'Un LLM local peut-il accéder à mes fichiers ou Internet ?',
+            a: 'Non — le modèle est fichier statique générant du texte. Accès fichiers/réseau impossible sauf si l\'outil l\'offre explicitement (GPT4All LocalDocs, attachements LM Studio).',
+          },
+          {
+            q: 'Est-ce sûr avec données régulées (RGPD, santé) ?',
+            a: 'Inférence locale supprime le risque tiers. Mais conformité requiert chiffrement complet, logs d\'audit, contrôles accès. Inférence locale est point de départ, audit complet nécessaire.',
+          },
+          {
+            q: 'Ollama envoie-t-il mes invites quelque part ?',
+            a: 'Non. Ollama open source (github.com/ollama/ollama), pas de code télémétrie. Invites traités localement par llama.cpp. Seule activité sortante : téléchargements modèles ollama.com.',
+          },
+        ],
+      },
+      sources: {
+        title: 'Sources',
+        items: [
+          '**OWASP Top 10 pour IA** — Considérations sécurité déploiement',
+          '**Spécifications Hugging Face Model Card** — Standards provenance et licensing',
+          '**VeraCrypt Chiffrement Disque** — Outil chiffrement complet open-source',
+        ],
+      },
+      commonMistakes: {
+        title: 'Erreurs Courantes en Sécurité LLM Local',
+        items: [
+          'Télécharger depuis sources non fiables sans vérifier checksums ou provenance.',
+          'Supposer confidentialité automatique — vérifiez télémétrie, updates, sync dans votre outil.',
+          'Ne pas isoler LLMs du réseau — invites malveillantes exploitent pour exfiltrer.',
+        ],
+      },
+      relatedReading: {
+        title: 'Lectures Connexes',
+        items: [
+          '[Que Sont les LLM Locaux ?](/local-llms/what-are-local-llms?lang=fr) — Concepts fondamentaux',
+          '[LLM Locaux vs APIs Cloud](/local-llms/local-llms-vs-cloud-apis?lang=fr) — Compromis confidentialité',
+          '[Comment Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) — Installation et setup',
+          '[Exécuter LLM Locaux sur Laptop](/local-llms/local-llm-on-laptop?lang=fr) — Configuration laptop sûre',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/local-llms/local-llm-security-privacy-checklist?lang=fr',
+      'inLanguage': 'fr',
+      'headline': 'Liste de Contrôle Sécurité et Confidentialité des LLM Locaux : 12 Étapes pour une Configuration Sûre',
+      'description': 'Liste de contrôle sécurité LLM local : 12 étapes pour provenance, télémétrie, isolation réseau, chiffrement disque. Gratuit bêta — avril 2026.',
+      'datePublished': '2026-04-04',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'keywords': 'sécurité LLM local, confidentialité, RGPD, chiffrement, Ollama',
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      'name': 'Sécurité LLM Local : Liste 12 Étapes',
+      'step': [
+        {
+          '@type': 'HowToStep',
+          'name': 'Télécharger depuis sources fiables',
+          'text': 'Téléchargez de Hugging Face ou Ollama library. Évitez GitHub et torrents.'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'Vérifier empreintes SHA256',
+          'text': 'Comparez SHA256 Hugging Face avec fichiers locales via sha256sum.'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'Désactiver télémétrie',
+          'text': 'Désactivez via Paramètres dans LM Studio et GPT4All.'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'Vérifier liaison Ollama',
+          'text': 'Testez curl http://localhost:11434. Si répond, définissez OLLAMA_HOST=127.0.0.1:11434.'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'Activer chiffrement disque',
+          'text': 'Activez FileVault (macOS) ou Device Encryption (Windows).'
+        },
+      ]
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Un LLM local peut-il accéder à mes fichiers ou Internet ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Non — le modèle est fichier statique. Accès fichiers/réseau impossible sauf si l\'outil l\'offre explicitement.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Est-ce sûr avec données régulées ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Inférence locale + chiffrement + logs audit = bon début, mais audit complet obligatoire pour conformité réglementaire.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Ollama envoie-t-il mes invites ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Non. Open source, pas de télémétrie. Seule sortie : téléchargements modèles ollama.com.'
+          }
+        },
+      ]
+    },
+  },
+
+  ja: {
+    theme: 'Getting Started',
+    title: 'ローカルLLMセキュリティ&プライバシーチェックリスト：12ステップで安全なセットアップを実現',
+    seoTitle: 'ローカルLLM セキュリティ&プライバシーチェックリスト',
+    intro: 'ローカルLLMの実行はプロンプトをサードパーティサーバーから遠ざけますが、セットアップが自動的にプライベートまたは安全になるわけではありません。2026年4月現在、以下の12項目チェックリストはモデルの出所、ネットワーク分離、テレメトリ設定、ディスク暗号化、およびアクセス制御をカバーしています。これは真のプライベートなローカルLLMセットアップに最低限必要なものです。',
+    metaDescription: 'ローカルLLMセキュリティ＆プライバシーチェックリスト：12ステップ、モデル出所、テレメトリ、ネットワーク分離、ディスク暗号化。フリーベータ版 — 2026年4月',
+    publishDate: '2026-04-04',
+    readTime: '8分で読める',
+    educationalLevel: 'Beginner',
+    primaryTerm: 'ローカルLLM プライバシー',
+    toc: [
+      { label: '重要なポイント', anchor: '#key-takeaways' },
+      { label: 'ローカルLLMが自動的にプライベートでない理由', anchor: '#why-not-automatically-private' },
+      { label: '12項目のセキュリティチェックリスト', anchor: '#the-12-item-checklist' },
+      { label: 'モデル出所：安全なダウンロード方法', anchor: '#model-provenance' },
+      { label: 'ネットワーク分離：アウトバウンド接続をブロック', anchor: '#network-isolation' },
+      { label: 'ツール別テレメトリ設定', anchor: '#telemetry-settings' },
+      { label: 'よくある質問', anchor: '#common-questions' },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          'ローカル推論はプロンプトデータをサードパーティサーバーから遠ざけます。残りのリスク：推論ツールのテレメトリ、信頼できないモデルファイル、ネットワークに公開されたOllama API。',
+          'Ollamaはデフォルトでlocalhostにバインドされます。明示的にOLLAMA_HOST=0.0.0.0を設定しない限り、他のデバイスからはアクセスできません。',
+          'テレメトリを無効化：LM Studio（設定 → プライバシー → 「匿名データ送信」をオフ）およびGPT4All（設定 → テレメトリをオフ）',
+          'モデルウェイトはHugging Face（huggingface.co）またはOllama公式ライブラリからのみダウンロードしてください。本番環境ではSHA256チェックサムを確認してください。',
+          '規制対象データ（HIPAA、GDPR、法的特権）：ディスク全体暗号化を有効にし、ネットワーク分離されたマシンを使用し、すべてのインストール拡張機能を監査します。',
+        ],
+      },
+      whyNotAutoPrivate: {
+        title: 'ローカルLLMが自動的にプライベートでない理由',
+        content: [
+          'モデル推論自体はプライベートです。プロンプトはモデルプロバイダーのサーバーに送信されません。しかし、他の3つのデータフローが情報漏洩を引き起こす可能性があります：',
+        ],
+        items: [
+          '**アプリケーションテレメトリ**：LM Studio、GPT4Allおよびその他のツールはデフォルトで匿名の使用分析を収集します。セッション数、使用されたモデル名、パフォーマンスメトリクスが含まれる場合があります。',
+          '**モデルダウンロード出所**：悪意のあるGGUFファイルは、llama.cppの脆弱な推論エンジン内でモデル読み込み時に実行されるコードを含む可能性があります。未検証のモデルファイルはサプライチェーンリスクです。',
+          '**ネットワーク公開**：OllamaのAPIサーバーはマシン上のすべてのプロセスからアクセス可能です。`OLLAMA_HOST=0.0.0.0`で不適切に設定されると、認証なしにネットワーク全体からアクセス可能になります。',
+        ],
+      },
+      checklist: {
+        title: 'ローカルLLMセキュリティ＆プライバシー12項目チェックリスト',
+        numberedItems: [
+          '**信頼できるソースからのみモデルをダウンロード**：Hugging Face（huggingface.co）およびOllamaライブラリ（ollama.com/library）が主要な信頼できるソースです。ランダムなGitHubリリースやトレントサイトは避けてください。',
+          '**センシティブ用途ではモデルチェックサムを確認**：Hugging Faceは各モデルファイルのSHA256ハッシュを表示します。読み込む前に`sha256sum <model_file>`と比較してください。',
+          '**推論ツールのテレメトリを無効化**：以下のテレメトリ設定セクションでツール固有の手順を参照してください。',
+          '**Ollamaがlocalhostのみにバインドされていることを確認**：別のデバイスから`curl http://localhost:11434`を実行してください。応答がある場合、Ollamaは公開されています。修正：`OLLAMA_HOST=127.0.0.1:11434`を設定してください。',
+          '**ディスク全体暗号化を有効化**：macOS：システム設定 → プライバシーとセキュリティ → FileVault。Windows：設定 → プライバシーとセキュリティ → デバイス暗号化。デバイス紛失時にモデルウェイトとチャットログを保護します。',
+          '**センシティブなチャットログを暗号化フォルダに保存**：LM StudioはチャットログをmacOSの`~/Library/Application Support/LM Studio/`に保存します。このフォルダを暗号化するか、設定で履歴を無効にしてください。',
+          '**インストール済み拡張機能とプラグインを確認**：Open WebUIおよびJan AIはサードパーティ拡張機能をサポートしており、これらは独自のネットワークアクセスを持つ場合があります。何がインストールされているかを監査してください。',
+          '**LLM作業用に専用ユーザーアカウントを使用**：モデルファイル、チャット履歴、APIキーをメインユーザープロフィールから分離します。',
+          '**ローカルAPIをインターネットに公開しない**：認証ミドルウェアを追加せずに、OllamaまたはLM Studioをパブリックいアドレスにポートフォワードしないでください。',
+          '**ローカルLLMを使用するアプリケーションのシステムプロンプトを監査**：ブラウザ拡張機能と生産性ツールがローカルLLMを統合している場合、システムプロンプトにローカル推論呼び出しと共に自分たちのサーバーにデータを送信するプロンプトが含まれる可能性があります。',
+          '**推論ツールを最新の状態に保つ**：Ollama、LM Studio、llama.cppはセキュリティパッチをリリースします。定期的に`brew upgrade ollama`（macOS）を実行するか、最新のインストーラーを再度ダウンロードしてください。',
+          '**ネットワーク分離または規制環境向け**：自動モデル更新を無効化し、Ollamaをスタートアップアイテムから削除し、どのモデルバージョンが使用承認されているかを文書化してください。',
+        ],
+      },
+      jikkoTips: {
+        title: '注意点と実践的なセキュリティ設定のおすすめ',
+        content: '以下の実装を行うことで、セキュリティをさらに強化できます：',
+        items: [
+          '**ファイアウォール設定の確認**：マシンの既存ファイアウォール設定を確認し、Ollamaがlocalhostのみにバインドされていることを検証してください。',
+          '**定期的なセキュリティ監査**：月に1回は、インストール済みツール、アクティブな接続、システムログを確認してください。',
+          '**バックアップとリカバリー計画**：暗号化されたモデルファイルとチャットログの定期バックアップを別の暗号化ドライブに保存してください。',
+          '**アップデート管理**：自動更新を可能な限り手動に変更し、各更新前に変更ログを確認してください。',
+          '**ネットワークモニタリング**：Wiresharkのようなツールを定期的に使用して、予期しないネットワーク接続がないことを確認してください。',
+        ],
+      },
+      modelProvenance: {
+        title: 'ローカルLLMモデルウェイトの安全なダウンロード場所',
+        content: 'モデルウェイトは大きなバイナリファイルです。悪意のあるGGUFファイルはllama.cppで使用されるパーサーの脆弱性を悪用する可能性があります。2026年現在、広く確認されたGGUFベースのマルウェアはありませんが、攻撃面は存在します。',
+        items: [
+          '**Hugging Face**（huggingface.co）：オープンモデルの主要ソース。各ファイルは検証されたSHA256ハッシュを持ちます。Meta、Google、Microsoft、Mistral AI、Qwen/Alibabaなどの著名なパブリッシャーのモデルに固執してください。',
+          '**Ollamaライブラリ**（ollama.com/library）：Ollamaは保存前にモデルハッシュを検証します。`ollama pull`でプルされたモデルは安全です。',
+          '**LM Studioモデルブラウザ**：Hugging Faceを直接検索します。同じ信頼ルールが適用されます。パブリッシャーアカウントを確認してください。',
+          '**回避**：匿名ファイル共有サイト、Discordファイルドロップ、検証可能なハッシュを提供していないソース。',
+        ],
+      },
+      networkIsolation: {
+        title: 'ローカルLLMからのアウトバウンド接続をブロックする方法',
+        content: 'センシティブなワークロードで最大限のプライバシーを確保するには、ファイアウォールルールを使用してモデルダウンロード後の推論ツールが引き起こすアウトバウンド接続を防ぎます：',
+        codeBlock: '# macOS — pfファイアウォールでOllamaのアウトバウンドをブロック\n# /etc/pf.confに追加：\nblock out proto tcp from any to any user ollama\n\n# Linux — ufwでブロック\nsudo ufw deny out from any to any app ollama\n\n# またはLittle Snitch（macOS）/OpenSnitch（Linux）を使用\n# GUIで単位プリケーションごとのネットワーク制御が可能',
+        codeLanguage: 'bash',
+      },
+      telemetry: {
+        title: 'ローカルLLMツールでテレメトリを無効化する方法',
+        rows: [
+          { 'ツール': 'Ollama', 'テレメトリデフォルト': 'なし', '確認方法': 'github.com/ollama/ollama — アナリティクスコードなし' },
+          { 'ツール': 'LM Studio', 'テレメトリデフォルト': '匿名アナリティクス有効', '無効化方法': '設定 → プライバシー → 「匿名使用データを送信」のチェックを外す' },
+          { 'ツール': 'Jan AI', 'テレメトリデフォルト': 'なし—明示的に無効', '確認方法': 'オープンソース — github.com/janhq/janを監査' },
+          { 'ツール': 'GPT4All', 'テレメトリデフォルト': '初回起動時のオプトインのみ', '変更方法': '設定 → プライバシー → 使用分析を無効化' },
+        ],
+        columns: ['ツール', 'テレメトリデフォルト', '確認/無効化方法'],
+      },
+      faqSection: {
+        title: 'ローカルLLMについてのよくあるセキュリティ質問',
+        faqs: [
+          {
+            q: 'ローカルLLMはファイルやインターネットにアクセスできますか？',
+            a: 'いいえ。モデル自体はテキストを生成する静的ファイルです。ファイルシステムを読み込むまたはネットワークリクエストを行う機能はありません。ただし、モデルを実行する推論ツール（Ollama、LM Studio）は通常のOS レベルアクセスを持ちます。GPT4AllのLocalDocsやLM Studioのファイル添付機能など、ファイルを読み込む機能を含むツールもあります。これらの機能はオプトインで、明示的に文書化されています。',
+          },
+          {
+            q: 'HIPAA対象データでローカルLLMを使用しても安全ですか？',
+            a: 'ローカル推論はクラウドAPIが引き起こすサードパーティデータプロセッサーリスクを排除します。ただし、HIPAA準拠には、プライベート推論以上のものが必要です。完全なディスク暗号化、アクセス制御、監査ログ、およびソフトウェアベンダーがPHI（保護された健康情報）にアクセスする可能性がある場合の業務提携契約が必要です。FileVaultを有効にしてテレメトリを無効にしたOllamaの使用は合理的な出発点ですが、正式なHIPAA準拠には完全なリスク評価が必要です。',
+          },
+          {
+            q: 'Ollamaはプロンプトをどこか別の場所に送信しますか？',
+            a: 'いいえ。Ollamaはオープンソース（github.com/ollama/ollama）で、テレメトリまたはデータ収集コードは含まれていません。プロンプトはllama.cppで局所的に処理され、送信されることはありません。Ollamaからのアウトバウンドネットワークアクティビティはollama.comからのモデルダウンロード（`ollama pull`を実行する場合）のみです。',
+          },
+        ],
+      },
+      sources: {
+        title: 'ソース',
+        items: [
+          '**OWASP AI トップ10** — モデル展開に関するセキュリティ考慮事項',
+          '**Hugging Face Model Card仕様** — モデル出所およびライセンス基準',
+          '**VeraCrypt ディスク暗号化** — オープンソースの完全ディスク暗号化ツール',
+        ],
+      },
+      commonMistakes: {
+        title: 'ローカルLLMセキュリティの一般的な誤解',
+        items: [
+          'チェックサムまたはモデル出所を確認せずに信頼できないソースからモデルをダウンロードすること。',
+          'プライバシーが自動的なものと仮定すること。選択したツールでテレメトリ、アップデートチェック、または同期機能を確認してください。',
+          'ローカルLLMをネットワークから分離しないこと。悪意のあるプロンプトはモデルを悪用してデータを横領する可能性があります。',
+        ],
+      },
+      relatedReading: {
+        title: '関連する読み物',
+        items: [
+          '[ローカルLLMとは？](/local-llms/what-are-local-llms?lang=ja) — コア概念とコンポーネント',
+          '[ローカルLLMとクラウドAPI](/local-llms/local-llms-vs-cloud-apis?lang=ja) — プライバシー上の考慮事項',
+          '[Ollamaをインストールする方法](/local-llms/how-to-install-ollama?lang=ja) — インストールとセットアップ',
+          '[ラップトップでローカルLLMを実行する](/local-llms/local-llm-on-laptop?lang=ja) — セキュアなラップトップ構成',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/local-llms/local-llm-security-privacy-checklist?lang=ja',
+      'inLanguage': 'ja',
+      'headline': 'ローカルLLMセキュリティ&プライバシーチェックリスト：12ステップで安全なセットアップを実現',
+      'description': 'ローカルLLMセキュリティ＆プライバシーチェックリスト：12ステップ、モデル出所、テレメトリ、ネットワーク分離、ディスク暗号化。フリーベータ版 — 2026年4月',
+      'datePublished': '2026-04-04',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'keywords': 'ローカルLLM セキュリティ、プライバシー、チェックリスト、暗号化、Ollama',
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      'name': 'ローカルLLM セキュリティ： 12ステップチェックリスト',
+      'step': [
+        {
+          '@type': 'HowToStep',
+          'name': '信頼できるソースからモデルをダウンロード',
+          'text': 'Hugging FaceまたはOllamaライブラリからダウンロードしてください。GitHubリリースやトレントサイトは避けてください。'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'SHA256チェックサムを確認',
+          'text': 'Hugging FaceのSHA256とローカルファイルを、sha256sum <file>コマンドで比較してください。'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'テレメトリを無効化',
+          'text': 'LM StudioおよびGPT4Allの設定からテレメトリをオフにしてください。'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'Ollama バインディングを確認',
+          'text': '別のデバイスからcurl http://localhost:11434を実行。応答がある場合はOLLAMA_HOST=127.0.0.1:11434を設定。'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': 'ディスク暗号化を有効化',
+          'text': 'macOSはFileVault、WindowsはDevice Encryptionを有効にしてください。'
+        },
+      ]
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'ローカルLLMはファイルやインターネットにアクセスできますか？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'いいえ。モデルは静的ファイルです。推論ツール（Ollama、LM Studio）は通常のOSアクセスを持ちますが、モデル自体にはアクセス機能がありません。'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'HIPAA対象データで安全ですか？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'ローカル推論は出発点です。ただし、HIPAA準拠には完全ディスク暗号化、アクセス制御、監査ログが必要です。'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Ollamaはプロンプトを送信しますか？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'いいえ。オープンソース（テレメトリなし）。唯一のアウトバウンド：ollama.comからのモデルダウンロード。'
+          }
+        },
+      ]
+    },
+  },
+
+  zh: {
+    theme: 'Getting Started',
+    title: '本地LLM安全与隐私检查清单：12个步骤实现安全设置',
+    seoTitle: '本地LLM安全与隐私检查清单',
+    intro: '运行本地LLM可将您的提示保留在您的机器上，远离第三方服务器。但这并不意味着您的设置自动具有隐私性或安全性。截至2026年4月，以下12项检查清单涵盖了模型来源、网络隔离、遥测设置、磁盘加密和访问控制——这是真正实现私密本地LLM设置的最低要求。',
+    metaDescription: '本地LLM安全与隐私检查清单：12步骤涵盖模型来源、遥测、网络隔离、磁盘加密。免费测试版 — 2026年4月',
+    publishDate: '2026-04-04',
+    readTime: '阅读约8分钟',
+    educationalLevel: 'Beginner',
+    primaryTerm: '本地LLM隐私',
+    toc: [
+      { label: '关键要点', anchor: '#key-takeaways' },
+      { label: '为什么本地LLM不自动保护隐私', anchor: '#why-not-automatically-private' },
+      { label: '12项安全检查清单', anchor: '#the-12-item-checklist' },
+      { label: '模型来源：安全下载位置', anchor: '#model-provenance' },
+      { label: '网络隔离：阻止出站连接', anchor: '#network-isolation' },
+      { label: '按工具分类的遥测设置', anchor: '#telemetry-settings' },
+      { label: '常见问题', anchor: '#common-questions' },
+    ],
+    sections: {
+      tldr: {
+        isTldr: true,
+        items: [
+          '本地推理将提示数据保留在您的机器上，远离第三方服务器。剩余风险：推理工具的遥测、来自不可信来源的模型文件、Ollama API暴露在网络上。',
+          'Ollama默认绑定到localhost——除非您明确设置OLLAMA_HOST=0.0.0.0，否则无法从其他设备访问。',
+          '禁用遥测：LM Studio（设置 → 隐私 → 关闭"发送匿名使用数据"）和GPT4All（设置 → 禁用遥测）。',
+          '仅从Hugging Face（huggingface.co）或官方Ollama库下载模型权重。对于敏感部署，请验证SHA256校验和。',
+          '对于受管制的数据（HIPAA、GDPR、法律特权）：启用完全磁盘加密、使用网络隔离的机器，并审计所有安装的扩展。',
+        ],
+      },
+      whyNotAutoPrivate: {
+        title: '为什么本地LLM不自动保护隐私？',
+        content: [
+          '模型推理本身是私密的——您的提示永远不会发送到模型提供商的服务器。但是，其他三个数据流可能导致信息泄露：',
+        ],
+        items: [
+          '**应用程序遥测**：LM Studio、GPT4All和其他一些工具默认收集匿名使用分析。这可能包括会话计数、使用的模型名称和性能指标。',
+          '**模型下载来源**：恶意GGUF文件可能包含在易受攻击的推理引擎中加载模型时执行的代码。未验证的模型文件是供应链风险。',
+          '**网络暴露**：Ollama的API服务器可被您机器上的任何进程访问。如果使用`OLLAMA_HOST=0.0.0.0`错误配置，整个网络都可以在没有认证的情况下访问它。',
+        ],
+      },
+      checklist: {
+        title: '本地LLM安全与隐私12项检查清单',
+        numberedItems: [
+          '**仅从可信来源下载模型** ——Hugging Face（huggingface.co）和Ollama库（ollama.com/library）是两个主要可信来源。避免随机GitHub发布或种子网站。',
+          '**对敏感用途验证模型校验和** ——Hugging Face显示每个模型文件的SHA256哈希。加载前与`sha256sum <model_file>`比较。',
+          '**禁用推理工具中的遥测** ——参见下面的遥测设置部分了解工具特定说明。',
+          '**确认Ollama仅绑定到localhost** ——从另一台设备运行`curl http://localhost:11434`。如果响应，Ollama已暴露。修复：设置`OLLAMA_HOST=127.0.0.1:11434`。',
+          '**启用完全磁盘加密** ——macOS：系统设置 → 隐私与安全 → FileVault。Windows：设置 → 隐私与安全 → 设备加密。这保护模型权重和聊天记录，防止设备丢失。',
+          '**在加密文件夹中存储敏感聊天记录** ——LM Studio将聊天历史保存到macOS的`~/Library/Application Support/LM Studio/`。加密此文件夹或在设置中禁用历史。',
+          '**查看已安装的扩展和插件** ——Open WebUI和Jan AI支持第三方扩展，这些扩展可能有自己的网络访问。审查已安装的内容。',
+          '**为LLM工作使用专用用户账户** ——将模型文件、聊天历史和API密钥与主用户配置文件分离。',
+          '**不要向互联网公开本地API** ——在不添加身份验证中间件的情况下，不要将Ollama或LM Studio端口转发到公网IP地址。',
+          '**审计使用本地LLM的任何应用中的系统提示** ——集成本地LLM的浏览器扩展和生产力工具可能包含系统提示，这些提示可能连同本地推理调用一起向其自己的服务器发送数据。',
+          '**保持推理工具最新** ——Ollama、LM Studio和llama.cpp发布安全补丁。定期运行`brew upgrade ollama`（macOS）或重新下载最新安装程序。',
+          '**对于网络隔离或受管制的环境**：禁用自动模型更新、从启动项中移除Ollama，并记录哪些模型版本被批准使用。',
+        ],
+      },
+      shijianBuildao: {
+        title: '实用建议：数据安全合规部署',
+        content: '中国企业和政府机构需要满足《数据安全法》（DSL）和《个人信息保护法》（PIPL）。以下建议可帮助您实现合规：',
+        items: [
+          '**本地数据处理**：使用Ollama确保所有数据处理都在您的机器上本地进行，避免传输到美国云服务器（符合数据本地化要求）。',
+          '**中文模型选择**：使用Qwen 2.5或本地化模型，这些模型由中国企业提供，您对代码和数据处理流程有完全控制。',
+          '**审计和合规记录**：为每个Ollama部署维护部署日期、模型版本和访问日志的文档。',
+          '**网络隔离部署**：对于包含商业秘密或个人数据的工作，使用本指南第12点——完全网络隔离的机器。',
+          '**加密和密钥管理**：启用AES-256磁盘加密，并将加密密钥存储在与模型分离的安全位置。',
+        ],
+      },
+      modelProvenance: {
+        title: '在哪里安全下载本地LLM模型权重',
+        content: '模型权重是大型二进制文件。恶意GGUF文件可能利用llama.cpp使用的解析器中的漏洞。截至2026年，虽然尚未确认广泛的基于GGUF的恶意软件，但攻击面存在。',
+        items: [
+          '**Hugging Face**（huggingface.co）：开源模型的主要来源。每个文件都有经验证的SHA256哈希。坚持来自知名发布者的模型（Meta、Google、Microsoft、Mistral AI、Qwen/阿里巴巴）。',
+          '**Ollama库**（ollama.com/library）：Ollama在存储前验证模型哈希。通过`ollama pull`拉取的模型是安全的。',
+          '**LM Studio模型浏览器**：直接搜索Hugging Face。相同的信任规则适用——检查发布者账户。',
+          '**避免**：匿名文件共享网站、Discord文件下载和任何不提供可验证哈希的来源。',
+        ],
+      },
+      networkIsolation: {
+        title: '如何阻止来自本地LLM的出站连接',
+        content: '为了在敏感工作负载上获得最大隐私，使用防火墙规则来防止推理工具在下载模型后建立出站连接：',
+        codeBlock: '# macOS — 使用pf防火墙阻止Ollama出站\n# 添加到/etc/pf.conf：\nblock out proto tcp from any to any user ollama\n\n# Linux — 使用ufw阻止\nsudo ufw deny out from any to any app ollama\n\n# 或使用Little Snitch（macOS）/ OpenSnitch（Linux）\n# 用于具有GUI的单应用网络控制',
+        codeLanguage: 'bash',
+      },
+      telemetry: {
+        title: '如何禁用本地LLM工具中的遥测',
+        rows: [
+          { '工具': 'Ollama', '遥测默认': '不收集', '验证方式': '检查github.com/ollama/ollama — 没有分析代码' },
+          { '工具': 'LM Studio', '遥测默认': '匿名分析已启用', '禁用方式': '设置 → 隐私 → 取消勾选"发送匿名使用数据"' },
+          { '工具': 'Jan AI', '遥测默认': '无 — 明确禁用', '验证方式': '开源 — 审计github.com/janhq/jan' },
+          { '工具': 'GPT4All', '遥测默认': '首次启动时仅选择性加入', '修改方式': '设置 → 隐私 → 禁用使用分析' },
+        ],
+        columns: ['工具', '遥测默认', '验证/禁用方式'],
+      },
+      faqSection: {
+        title: '关于本地LLM的常见安全问题',
+        faqs: [
+          {
+            q: '本地LLM可以访问我的文件或互联网吗？',
+            a: '不能。模型本身是生成文本的静态文件。它无法读取文件系统或发出网络请求。但是，运行模型的推理工具（Ollama、LM Studio）拥有正常的操作系统级访问。一些工具包含读取文件的功能——例如GPT4All的LocalDocs或LM Studio的文件附加功能。这些功能是可选的并且明确记录。',
+          },
+          {
+            q: '使用本地LLM处理HIPAA数据安全吗？',
+            a: '本地推理消除了云API创建的第三方数据处理器风险。但是，HIPAA合规需要的不仅仅是私密推理——您需要完全磁盘加密、访问控制、审计日志，以及如果任何软件供应商可能访问PHI，则需要业务关联协议。使用启用FileVault和禁用遥测的Ollama是一个合理的起点，但正式的HIPAA合规需要完整的风险评估。',
+          },
+          {
+            q: 'Ollama是否将我的提示发送到任何地方？',
+            a: '不会。Ollama是开源的（github.com/ollama/ollama），不包含任何遥测或数据收集代码。提示由llama.cpp在本地处理，永远不会传输。Ollama唯一的出站网络活动是在您运行`ollama pull`时从ollama.com下载模型。',
+          },
+        ],
+      },
+      sources: {
+        title: '来源',
+        items: [
+          '**OWASP AI安全指南** — 模型部署的安全考虑',
+          '**Hugging Face Model Card规范** — 模型来源和许可标准',
+          '**VeraCrypt磁盘加密** — 开源全磁盘加密工具',
+        ],
+      },
+      commonMistakes: {
+        title: '本地LLM安全中的常见错误',
+        items: [
+          '从不可信来源下载模型，而不验证校验和或模型来源。',
+          '假设隐私是自动的——检查所选工具中的遥测、更新检查或同步功能。',
+          '未能将本地LLM与网络隔离——恶意提示可以利用模型来泄露数据。',
+        ],
+      },
+      relatedReading: {
+        title: '相关阅读',
+        items: [
+          '[什么是本地LLM？](/local-llms/what-are-local-llms?lang=zh) — 核心概念和组件',
+          '[本地LLM vs 云API](/local-llms/local-llms-vs-cloud-apis?lang=zh) — 隐私权衡',
+          '[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh) — 安装和设置',
+          '[在笔记本上运行本地LLM](/local-llms/local-llm-on-laptop?lang=zh) — 安全的笔记本配置',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'url': 'https://www.promptquorum.com/local-llms/local-llm-security-privacy-checklist?lang=zh',
+      'inLanguage': 'zh',
+      'headline': '本地LLM安全与隐私检查清单：12个步骤实现安全设置',
+      'description': '本地LLM安全与隐私检查清单：12步骤涵盖模型来源、遥测、网络隔离、磁盘加密。免费测试版 — 2026年4月',
+      'datePublished': '2026-04-04',
+      'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+      'keywords': '本地LLM安全、隐私、数据安全法、加密、Ollama',
+    },
+    howToSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      'name': '本地LLM安全：12步检查清单',
+      'step': [
+        {
+          '@type': 'HowToStep',
+          'name': '仅从可信来源下载模型',
+          'text': '从Hugging Face或Ollama库下载。避免GitHub发布和种子网站。'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': '验证SHA256校验和',
+          'text': '将Hugging Face SHA256与本地文件使用sha256sum命令进行比较。'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': '禁用遥测',
+          'text': '通过设置在LM Studio和GPT4All中禁用遥测。'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': '检查Ollama绑定',
+          'text': '从另一台设备运行curl http://localhost:11434。如果响应，设置OLLAMA_HOST=127.0.0.1:11434。'
+        },
+        {
+          '@type': 'HowToStep',
+          'name': '启用磁盘加密',
+          'text': '在macOS上启用FileVault或在Windows上启用Device Encryption。'
+        },
+      ]
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '本地LLM可以访问我的文件或互联网吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '不能。模型是静态文件。推理工具（Ollama、LM Studio）拥有正常的操作系统访问权限，但模型本身无法访问文件或互联网。'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '使用本地LLM处理敏感数据安全吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '本地推理加上完全磁盘加密是好的开始。但合规需要完整的风险评估。'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Ollama是否发送我的提示？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '不会。开源（无遥测代码）。唯一的出站：从ollama.com下载模型。'
+          }
+        },
+      ]
+    },
+  },
   },
 
   'local-llm-limitations': {

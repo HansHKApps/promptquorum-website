@@ -3,6 +3,7 @@ import type { Language } from '@/lib/blog/blogContent'
 // ─── Section & Article types (mirrors PESection / PEArticle) ─────────────────
 
 export interface LLMSection {
+  id?: string
   title?: string
   content?: string | string[]
   blockquote?: string
@@ -19,6 +20,7 @@ export interface LLMSection {
   imagePlaceholder?: boolean
   codeBlock?: string
   codeLanguage?: string
+  note?: string
 }
 
 export interface LLMArticle {
@@ -1802,15 +1804,701 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
       },
     },
+    fr: {
+      theme: 'Meilleurs modèles',
+      title: 'Meilleurs LLMs locaux 2026 : Top modèles classés par tâche, matériel et qualité',
+      seoTitle: 'Meilleurs LLMs locaux 2026 : Llama 3.3, Qwen2.5, Mistral',
+      intro: 'Les meilleurs LLMs locaux en 2026 sont Meta Llama 3.3 70B (meilleur global), Qwen2.5 72B (meilleur code et multilingue), Mistral Small 3.1 (meilleure classe 7B), Google Gemma 3 9B (meilleure gamme intermédiaire) et Microsoft Phi-4 Mini (meilleur sous 4 GB RAM). En avril 2026, ce classement est basé sur les scores de référence MMLU, HumanEval et MATH.',
+      metaDescription: 'Meilleurs LLMs locaux 2026 : Llama 3.3 70B (global), Qwen2.5 72B (code), Mistral Small 3.1 (16 GB). Benchmarks et exigences VRAM.',
+      publishDate: '2026-04-04',
+      readTime: '10 min de lecture',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'meilleurs LLMs locaux 2026',
+      toc: [
+        { label: 'Points clés', anchor: 'key-takeaways' },
+        { label: 'Comment nous avons classé ces modèles', anchor: 'how-we-ranked' },
+        { label: '#1 Llama 3.3 70B — Best Overall', anchor: 'llama-3-3-70b' },
+        { label: '#2 Qwen2.5 72B — Best for Coding', anchor: 'qwen2-5-72b' },
+        { label: '#3 Mistral Small 3.1 — Best 7B Class', anchor: 'mistral-small-3-1' },
+        { label: '#4 Gemma 3 9B — Best Mid-Range', anchor: 'gemma-3-9b' },
+        { label: '#5 Phi-4 Mini — Best Under 4 GB RAM', anchor: 'phi-4-mini' },
+        { label: 'Comparaison complète des benchmarks', anchor: 'full-benchmark-comparison' },
+        { label: 'Quel modèle devriez-vous utiliser?', anchor: 'which-model-should-you-use' },
+        { label: 'Contexte régional', anchor: 'regional-context' },
+        { label: 'Questions fréquemment posées', anchor: 'common-questions' },
+        { label: 'Erreurs courantes', anchor: 'common-mistakes' },
+        { label: 'Lectures recommandées', anchor: 'related-reading' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Best Overall**: Meta Llama 3.3 70B — correspond à GPT-4 (2023) sur MMLU (82 %), nécessite 40 GB RAM avec Q4_K_M.',
+            '**Best Coding**: Qwen2.5 72B — 87 % sur HumanEval, supporte 29 langues, fenêtre de contexte 128K.',
+            '**Best 7B-classe**: Mistral Small 3.1 24B — suivi d\'instructions forte, contexte 128K, fonctionne sur 16 GB RAM.',
+            '**Best gamme intermédiaire (16 GB RAM)**: Google Gemma 3 9B — meilleur ratio qualité-RAM dans la classe 9B.',
+            '**Best petit modèle**: Microsoft Phi-4 Mini 3.8B — performance de raisonnement au-dessus de sa classe de paramètres, fonctionne sur 4 GB RAM.',
+          ],
+        },
+        howWeRanked: {
+          title: 'Comment ces modèles ont été classés',
+          content: [
+            'Les classements sont basés sur trois références : MMLU (test de connaissances sur 57 sujets, plus élevé = meilleure intelligence générale), HumanEval (génération de code Python, plus élevé = meilleure capacité de codage) et MATH (problèmes de mathématiques compétitives, plus élevé = raisonnement plus fort). Les scores proviennent de documents publiés et du Leaderboard Open LLM à partir de Q1 2026.',
+            'Les exigences matérielles sont calculées pour la quantification Q4_K_M — le paramètre standard pour débuter qui équilibre la qualité et l\'utilisation de RAM. Pour une introduction à la quantification, consultez [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr).',
+            'Tous les modèles sont disponibles via Ollama. Pour l\'installation, consultez [How to Install Ollama](/local-llms/how-to-install-ollama?lang=fr).',
+          ],
+        },
+        llama33: {
+          title: '#1 Meta Llama 3.3 70B — Best Overall LLM local 2026',
+          content: [
+            'Meta Llama 3.3 70B est le meilleur modèle de poids ouvert disponible pour l\'inférence locale en 2026. Il marque 82 % sur MMLU, 88 % sur HumanEval et 77 % sur MATH — égalant ou surpassant GPT-4 (2023) sur les trois benchmarks. La fenêtre de contexte 128K traite les longs documents et les conversations étendues.',
+            'La principale contrainte est le matériel : la quantification Q4_K_M nécessite environ 40 GB de RAM. Cela exclut la plupart des ordinateurs portables grand public. Il fonctionne bien sur un Mac Studio M2 Ultra (64+ GB), une station de travail haut de gamme avec 64 GB RAM, ou réparti sur une GPU et RAM système à l\'aide du décalage de couche d\'Ollama.',
+          ],
+          rows: [
+            { 'Spécification': 'Score MMLU', 'Valeur': '82 %' },
+            { 'Spécification': 'Score HumanEval', 'Valeur': '88 %' },
+            { 'Spécification': 'RAM requise (Q4_K_M)', 'Valeur': '~40 GB' },
+            { 'Spécification': 'Fenêtre de contexte', 'Valeur': '128K tokens' },
+            { 'Spécification': 'Commande Ollama', 'Valeur': 'ollama run llama3.3:70b' },
+          ],
+          columns: ['Spécification', 'Valeur'],
+        },
+        qwen25_72: {
+          title: '#2 Qwen2.5 72B — Best for Coding et tâches multilingues',
+          content: [
+            'Qwen2.5 72B d\'Alibaba correspond à Llama 3.3 70B sur les benchmarks généraux et le surpasse dans le code : 87 % HumanEval contre 88 % pour Llama 3.3. Il supporte 29 langues nativement (y compris le chinois, le japonais, le coréen, l\'arabe) et utilise une fenêtre de contexte 128K. Le mode JSON et l\'appel de fonction sont intégrés.',
+            'Pour les équipes traitant du contenu non-anglais ou construisant des applications multilingues, Qwen2.5 72B est le choix recommandé par rapport à Llama 3.3 70B. Consultez [Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=fr) pour les benchmarks spécifiques aux langues.',
+          ],
+          rows: [
+            { 'Spécification': 'Score MMLU', 'Valeur': '84 %' },
+            { 'Spécification': 'Score HumanEval', 'Valeur': '87 %' },
+            { 'Spécification': 'RAM requise (Q4_K_M)', 'Valeur': '~43 GB' },
+            { 'Spécification': 'Langues', 'Valeur': '29 supportées nativement' },
+            { 'Spécification': 'Commande Ollama', 'Valeur': 'ollama run qwen2.5:72b' },
+          ],
+          columns: ['Spécification', 'Valeur'],
+        },
+        mistralSmall: {
+          title: '#3 Mistral Small 3.1 24B — Best 7B-classe pour 16 GB RAM',
+          content: [
+            'Mistral Small 3.1 est un modèle de 24B paramètres qui rentre dans 16 GB RAM avec quantification Q4_K_M (~14 GB). Il marque 79 % sur MMLU et 74 % sur HumanEval — nettement au-dessus de tout vrai modèle 7B. La fenêtre de contexte 128K est standard pour les versions Mistral 2025+.',
+            'Mistral Small 3.1 est le chemin de mise à niveau recommandé pour les utilisateurs qui ont exécuté des modèles 7B et veulent une meilleure qualité sans les 40 GB RAM d\'un modèle 70B.',
+          ],
+          rows: [
+            { 'Spécification': 'Score MMLU', 'Valeur': '79 %' },
+            { 'Spécification': 'Score HumanEval', 'Valeur': '74 %' },
+            { 'Spécification': 'RAM requise (Q4_K_M)', 'Valeur': '~14 GB' },
+            { 'Spécification': 'Fenêtre de contexte', 'Valeur': '128K tokens' },
+            { 'Spécification': 'Commande Ollama', 'Valeur': 'ollama run mistral-small3.1' },
+          ],
+          columns: ['Spécification', 'Valeur'],
+        },
+        gemma3: {
+          title: '#4 Google Gemma 3 9B — Best gamme intermédiaire pour 8–16 GB RAM',
+          content: [
+            'Gemma 3 9B est le modèle de poids ouvert de Google dans la classe de paramètres 9B. Il marque 73 % sur MMLU et 68 % sur HumanEval, le plaçant au-dessus de tous les modèles 7B et en faisant la meilleure option pour les utilisateurs avec 8 GB RAM qui veulent un cran au-dessus de la qualité 7B standard.',
+            'Gemma 3 9B supporte la vision (entrée d\'image) dans sa variante multimodale — ce qui en fait l\'un des rares modèles exécutables localement qui peuvent traiter les images sur du matériel grand public. Les tâches texte uniquement utilisent la variante standard.',
+          ],
+          rows: [
+            { 'Spécification': 'Score MMLU', 'Valeur': '73 %' },
+            { 'Spécification': 'Score HumanEval', 'Valeur': '68 %' },
+            { 'Spécification': 'RAM requise (Q4_K_M)', 'Valeur': '~6 GB' },
+            { 'Spécification': 'Fenêtre de contexte', 'Valeur': '128K tokens' },
+            { 'Spécification': 'Commande Ollama', 'Valeur': 'ollama run gemma3:9b' },
+          ],
+          columns: ['Spécification', 'Valeur'],
+        },
+        phi4mini: {
+          title: '#5 Microsoft Phi-4 Mini 3.8B — Best sous 4 GB RAM',
+          content: [
+            'Microsoft Phi-4 Mini 3.8B atteint 68 % sur MMLU — ce qui correspond aux modèles deux fois plus grands — par l\'entraînement sur des données de raisonnement synthétique de haute qualité. Il nécessite seulement ~2.5 GB RAM avec Q4_K_M et s\'exécute à 30–50 tokens/seconde sur n\'importe quelle CPU moderne.',
+            'Phi-4 Mini est le modèle recommandé pour les machines avec 4–8 GB RAM ou toute situation où la vitesse de réponse importe plus que la qualité maximale. Sa performance de raisonnement surpasse nettement Llama 3.2 3B au même niveau matériel.',
+          ],
+          rows: [
+            { 'Spécification': 'Score MMLU', 'Valeur': '68 %' },
+            { 'Spécification': 'Score HumanEval', 'Valeur': '70 %' },
+            { 'Spécification': 'RAM requise (Q4_K_M)', 'Valeur': '~2.5 GB' },
+            { 'Spécification': 'Fenêtre de contexte', 'Valeur': '128K tokens' },
+            { 'Spécification': 'Commande Ollama', 'Valeur': 'ollama run phi4-mini' },
+          ],
+          columns: ['Spécification', 'Valeur'],
+        },
+        fullBenchmark: {
+          title: 'Comparaison complète des benchmarks : Top 5 LLMs locaux 2026',
+          rows: [
+            { 'Modèle': 'Llama 3.3 70B', 'MMLU': '82 %', 'HumanEval': '88 %', 'RAM': '40 GB', 'Best For': 'Qualité globale' },
+            { 'Modèle': 'Qwen2.5 72B', 'MMLU': '84 %', 'HumanEval': '87 %', 'RAM': '43 GB', 'Best For': 'Code, multilingue' },
+            { 'Modèle': 'Mistral Small 3.1 24B', 'MMLU': '79 %', 'HumanEval': '74 %', 'RAM': '14 GB', 'Best For': 'Machines 16 GB RAM' },
+            { 'Modèle': 'Gemma 3 9B', 'MMLU': '73 %', 'HumanEval': '68 %', 'RAM': '6 GB', 'Best For': 'Gamme intermédiaire 8–16 GB' },
+            { 'Modèle': 'Phi-4 Mini 3.8B', 'MMLU': '68 %', 'HumanEval': '70 %', 'RAM': '2.5 GB', 'Best For': 'RAM faible, vitesse rapide' },
+          ],
+          columns: ['Modèle', 'MMLU', 'HumanEval', 'RAM', 'Best For'],
+        },
+        whichModel: {
+          title: 'Quel LLM local devriez-vous utiliser en 2026?',
+          items: [
+            '**4–8 GB RAM**: Phi-4 Mini 3.8B (`ollama run phi4-mini`) — meilleur raisonnement avec peu de RAM.',
+            '**8 GB RAM**: Gemma 3 9B (`ollama run gemma3:9b`) — meilleure qualité disponible à ce niveau.',
+            '**16 GB RAM**: Mistral Small 3.1 24B — grand saut de qualité par rapport aux modèles 7B.',
+            '**40+ GB RAM (station de travail)**: Llama 3.3 70B ou Qwen2.5 72B — qualité à la limite.',
+            '**Tâches de code à n\'importe quelle échelle**: Qwen2.5 de la plus grande taille que votre matériel permet — consultez [Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=fr).',
+            '**Langues non-anglaises**: Qwen2.5 — consultez [Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=fr).',
+          ],
+        },
+        regionalContext: {
+          title: 'Quelles régions régulent le déploiement des LLMs locaux?',
+          content: [
+            '**Les organisations de l\'UE priorisent la minimisation des données de l\'article 5 du RGPD.** Le Règlement général sur la protection des données et la Loi de l\'UE sur l\'IA émergente exigent une documentation de modèle transparente et la traçabilité des données pour les systèmes traitant des données personnelles. Les modèles avec des ensembles de données d\'entraînement publiés (Meta Llama, Mistral) satisfont mieux les exigences d\'audit que les modèles avec des pipelines d\'entraînement opaques. L\'inférence locale élimine le transfert de données vers des serveurs externes.',
+            '**Les autorités de protection des données françaises (CNIL) recommandent les LLMs locaux lors de la gestion de données professionnelles sensibles.** Pour la manipulation de données financières, médicales ou juridiques, la CNIL conseille l\'inférence locale pour minimiser les risques de conformité et maintenir la souveraineté des données.',
+            '**Le cadre de gouvernance de l\'IA du METI au Japon nécessite une documentation du modèle pour les systèmes d\'entreprise.** Le ministère de l\'Économie, du Commerce et de l\'Industrie mandate que les organisations maintiennent des cartes de modèles détaillées, des benchmarks de performance et une documentation sur la manipulation des données pour chaque système d\'IA en production. Les modèles supportant la tokenisation japonaise et l\'encodage de caractères (Qwen2.5, ELYZA) sont priorisés pour le traitement du langage naturel interne en japonais.',
+            '**Les industries réglementées aux États-Unis (santé, finance, gouvernement) exigent l\'inférence uniquement locale.** Les entités couvertes par la HIPAA évitent les API cloud pour les données des patients. Les institutions financières en vertu de la GLBA et de la SOX utilisent des modèles locaux isolés par air-gap pour l\'analyse des transactions. Les agences fédérales vérifient que les licences de modèle de poids ouvert (Apache 2.0, Llama Community License) permettent l\'utilisation gouvernementale.',
+          ],
+        },
+        faqSection: {
+          title: 'Questions fréquemment posées sur le choix des LLMs locaux',
+          faqs: [
+            { q: 'Dois-je utiliser Llama ou Qwen pour mon cas d\'usage?', a: 'Pour le code : Qwen2.5 (scores HumanEval plus élevés à chaque taille). Pour les connaissances générales anglaises : Llama 3.3 (suivi d\'instructions plus forte). Pour les langues non-anglaises : Qwen2.5 (29 langues natives). Pour l\'efficacité (qualité par GB) : Mistral Small 3.1.' },
+            { q: 'À quelle fréquence ces classements changent-ils?', a: 'De nouveaux modèles de poids ouverts sont publiés mensuellement. Ce classement est à partir d\'avril 2026 et reflète les benchmarks publiés de Q1 2026. Vérifiez le Leaderboard Open LLM toutes les quelques semaines pour les mises à jour.' },
+            { q: 'Ai-je besoin d\'une GPU pour exécuter ces modèles localement?', a: 'Non. Tous les modèles s\'exécutent sur du matériel uniquement CPU, mais une GPU (NVIDIA, AMD ou Apple Silicon) est fortement recommandée pour la vitesse. L\'accélération GPU rend les réponses 3–10 fois plus rapides. Sur CPU : attendez-vous à 15–40 tokens/seconde; sur GPU : 60–150+ tokens/seconde.' },
+            { q: 'Qu\'est-ce que la quantification Q4_K_M et pourquoi est-ce standard?', a: 'La quantification Q4_K_M compresse les poids du modèle à une précision de 4 bits, réduisant les exigences de VRAM d\'environ 75 % avec une perte de qualité minimale (baisse de précision de 2-4 %). C\'est le format standard dans Ollama et équilibre la qualité et l\'utilisation de RAM mieux que les précisions supérieures.' },
+            { q: 'Puis-je affiner ces modèles sur mes propres données?', a: 'Oui, tous les modèles ici sont de poids ouvert et supportent l\'affinage. Outils courants : LoRA (efficace en paramètres), QLoRA (efficace en mémoire GPU) et affinage complet. Pour un tutoriel, consultez [Local LLM Fine-Tuning Guide](/local-llms/fine-tuning-local-llms?lang=fr).' },
+            { q: 'Quel modèle dois-je utiliser si je n\'ai que 4 GB RAM?', a: 'Microsoft Phi-4 Mini 3.8B avec Q4_K_M (~2.5 GB) ou Qwen2.5 1.5B avec Q4_K_M (~1 GB). Les deux s\'exécutent à une vitesse utilisable (30–50 tokens/seconde) sur des CPUs modernes. Pour une meilleure qualité avec 4 GB, envisagez une GPU.' },
+            { q: 'Comment référencer ces modèles sur ma tâche spécifique?', a: 'Créez un petit ensemble de test de 10-50 exemples pertinents pour votre tâche. Exécutez chaque modèle sur votre ensemble de test et comparez les résultats. Utilisez des métriques comme BLEU (pour la traduction), correspondance exacte (pour la Q&A) ou notation personnalisée basée sur vos exigences.' },
+            { q: 'Y a-t-il une différence entre Llama 3.1, 3.2 et 3.3?', a: 'Llama 3.1 était la première version 2025. Llama 3.2 a ajouté le support de la vision et amélioré le suivi d\'instructions. Llama 3.3 70B (sorti début 2026) a amélioré le raisonnement et les mathématiques. Pour de nouveaux projets, utilisez 3.3 70B si disponible; 3.1 8B ou 3.2 3B pour du matériel plus petit.' },
+            { q: 'Puis-je combiner plusieurs modèles (ensemble)?', a: 'Oui. Des outils comme LM Studio et Ollama vous permettent d\'exécuter plusieurs modèles et de comparer les résultats. Utilisez le vote par consensus pour les tâches factuelles (le vote à la majorité gagne) ou sélectionnez le modèle qui fonctionne le mieux sur votre type de tâche spécifique.' },
+            { q: 'Qu\'est-ce que le Leaderboard Open LLM et devrais-je le faire confiance?', a: 'Le Leaderboard Open LLM (huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) fait référence les modèles de poids ouverts sur MMLU, ARC, HellaSwag, TruthfulQA, MATH et GSM8K. C\'est le classement public le plus cité. Remarque : la performance du leaderboard se corrèle avec, mais ne garantit pas, la performance des tâches réelles.' },
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs courantes lors du choix de modèles 2026',
+          items: [
+            'Choix basé uniquement sur les benchmarks — la performance réelle sur votre tâche peut être nettement différente. Testez toujours les modèles sur votre cas d\'usage spécifique.',
+            'Ne pas tester les résultats du modèle sur votre cas d\'usage spécifique avant le déploiement en production.',
+            'Oublier de vérifier les restrictions de licence pour l\'utilisation commerciale — la Llama Community License et Apache 2.0 ont des restrictions différentes.',
+            'Supposer qu\'un modèle plus grand est toujours meilleur — les modèles quantisés plus petits (4 bits) surpassent souvent les modèles plus grands non quantisés en pratique.',
+            'Ne pas mettre à jour votre liste de modèles locaux régulièrement — les nouvelles versions de modèles (Llama 3.3, Qwen2.5) deviennent disponibles mensuellement et améliorent la performance.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lectures recommandées',
+          items: [
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models?lang=fr) — Modèles de base pour les nouveaux utilisateurs',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama?lang=fr) — Installation et configuration de modèle',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=fr) — Comparaisons de modèles optimisés pour le code',
+            '[Local LLM Limitations](/local-llms/local-llm-limitations?lang=fr) — Comprendre les contraintes du modèle',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — Exigences en RAM, GPU et quantification',
+            '[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=fr) — Benchmarks de performance en langage non-anglais',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**Hugging Face Open LLM Leaderboard** — [huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — Classements de benchmarks en temps réel pour les modèles de poids ouvert',
+            '**Ollama Model Library** — [ollama.com/library](https://ollama.com/library) — Modèles disponibles avec tailles de téléchargement et commandes Ollama',
+            '**Meta Llama 3.3 Model Card** — [meta.com/research](https://meta.com/research) — Spécifications officielles et détails de benchmark',
+            '**Qwen2.5 Release Announcement** — [huggingface.co/Qwen/Qwen2.5-72B](https://huggingface.co/Qwen/Qwen2.5-72B) — Carte de modèle officielle Alibaba et capacités',
+          ],
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'fr',
+        name: 'Meilleurs LLMs locaux 2026 : Top modèles classés par tâche, matériel et qualité',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '**Best Overall**: Meta Llama 3.3 70B — correspond à GPT-4 (2023) sur MMLU (82 %), nécessite 40 GB RAM avec Q4_K_M.' },
+          { '@type': 'ListItem', position: 2, name: '**Best Coding**: Qwen2.5 72B — 87 % sur HumanEval, supporte 29 langues, fenêtre de contexte 128K.' },
+          { '@type': 'ListItem', position: 3, name: '**Best 7B-classe**: Mistral Small 3.1 24B — suivi d\'instructions forte, contexte 128K, fonctionne sur 16 GB RAM.' },
+          { '@type': 'ListItem', position: 4, name: '**Best gamme intermédiaire (16 GB RAM)**: Google Gemma 3 9B — meilleur ratio qualité-RAM dans la classe 9B.' },
+          { '@type': 'ListItem', position: 5, name: '**Best petit modèle**: Microsoft Phi-4 Mini 3.8B — performance de raisonnement au-dessus de sa classe de paramètres, fonctionne sur 4 GB RAM.' },
+        ],
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/local-llms/best-local-llms-2026?lang=fr',
+        'inLanguage': 'fr',
+        headline: 'Meilleurs LLMs locaux 2026 : Llama 3.3, Qwen2.5, Mistral',
+        description: 'Meilleurs LLMs locaux 2026 : Llama 3.3 70B (global), Qwen2.5 72B (code), Mistral Small 3.1 (16 GB), Gemma 3 9B (gamme intermédiaire). Benchmarks et exigences VRAM.',
+        dateModified: '2026-04-04',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Beginner',
+        about: [
+          { '@type': 'Thing', name: 'Llama 3.3' },
+          { '@type': 'Thing', name: 'Qwen2.5' },
+          { '@type': 'Thing', name: 'Mistral' },
+          { '@type': 'Thing', name: 'Local LLM Benchmarks' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+    },
+    ja: {
+      theme: 'ベストモデル',
+      title: '2026年 最高のローカルLLM：タスク・ハードウェア・品質で評価したトップモデル',
+      seoTitle: '2026年 最高のローカルLLM',
+      intro: '2026年の最高のローカルLLMは、Meta Llama 3.3 70B（総合性能）、Qwen2.5 72B（コード・多言語）、Mistral Small 3.1（7Bクラス最高）、Google Gemma 3 9B（中級性能）、Microsoft Phi-4 Mini（4GB RAM以下対応）です。2026年4月現在、このランキングはMMLE、HumanEval、MATHベンチマークスコアに基づいています。',
+      metaDescription: '2026年 最高のローカルLLM：Llama 3.3 70B、Qwen2.5 72B、Mistral Small 3.1、Gemma 3 9B、Phi-4 Mini。ベンチマークとVRAM要件。',
+      publishDate: '2026-04-04',
+      readTime: '10分で読める',
+      educationalLevel: 'Beginner',
+      primaryTerm: '2026年 最高のローカルLLM',
+      toc: [
+        { label: '重要ポイント', anchor: 'key-takeaways' },
+        { label: 'これらのモデルがどのように評価されたか', anchor: 'how-we-ranked' },
+        { label: '#1 Llama 3.3 70B — 総合性能最高', anchor: 'llama-3-3-70b' },
+        { label: '#2 Qwen2.5 72B — コード性能最高', anchor: 'qwen2-5-72b' },
+        { label: '#3 Mistral Small 3.1 — 7Bクラス最高', anchor: 'mistral-small-3-1' },
+        { label: '#4 Gemma 3 9B — 中級性能最高', anchor: 'gemma-3-9b' },
+        { label: '#5 Phi-4 Mini — 4GB RAM以下最高', anchor: 'phi-4-mini' },
+        { label: 'ベンチマーク完全比較', anchor: 'full-benchmark-comparison' },
+        { label: '2026年にどのローカルLLMを使うべきか', anchor: 'which-model-should-you-use' },
+        { label: '地域別コンテキスト', anchor: 'regional-context' },
+        { label: 'よくある質問', anchor: 'common-questions' },
+        { label: 'よくある間違い', anchor: 'common-mistakes' },
+        { label: '関連する読み物', anchor: 'related-reading' },
+        { label: 'ソース', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**総合性能最高**: Meta Llama 3.3 70B — MMLU 82%でGPT-4（2023）に相当。Q4_K_Mで40GB RAM必要。',
+            '**コード性能最高**: Qwen2.5 72B — HumanEval 87%。29言語対応。コンテキストウィンドウ128K。',
+            '**7Bクラス最高**: Mistral Small 3.1 24B — 命令追従性能強。コンテキスト128K。16GB RAMで動作。',
+            '**中級性能最高（16GB RAM）**: Google Gemma 3 9B — 9Bクラスで最高の品質対RAM比。',
+            '**小規模モデル最高**: Microsoft Phi-4 Mini 3.8B — パラメータ数以上の推論性能。4GB RAMで動作。',
+          ],
+        },
+        howWeRanked: {
+          title: 'これらのモデルがどのように評価されたか',
+          content: [
+            'ランキングは3つのベンチマークに基づいています：MMLU（57分野の知識テスト。スコアが高いほど一般知能が優秀）、HumanEval（Pythonコード生成。スコアが高いほどコード能力が優秀）、MATH（競技数学の問題。スコアが高いほど推論力が強い）。スコアは公開論文とOpen LLM Leaderboardから2026年Q1時点で取得しました。',
+            'ハードウェア要件はQ4_K_M量子化で計算しています。これは品質とRAM使用量のバランスをとる標準的な初心者向け設定です。量子化の入門については、[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja)を参照してください。',
+            'すべてのモデルはOllamaで利用可能です。インストール方法については、[How to Install Ollama](/local-llms/how-to-install-ollama?lang=ja)を参照してください。',
+          ],
+        },
+        llama33: {
+          title: '#1 Meta Llama 3.3 70B — 2026年の総合性能最高のローカルLLM',
+          content: [
+            'Meta Llama 3.3 70Bは、2026年にローカル推論で利用可能な最高のオープンウェイトモデルです。MMLU 82%、HumanEval 88%、MATH 77%を達成しており、3つのベンチマークすべてでGPT-4（2023）に相当するか上回ります。128Kのコンテキストウィンドウで長文書や拡張会話に対応します。',
+            'メインの制約はハードウェアです。Q4_K_M量子化には約40GBのRAMが必要です。これはほとんどのコンシューマー向けノートパソコンを除外します。Mac Studio M2 Ultra（64GB以上）、高性能ワークステーション（64GB RAM）、またはOllamaのレイヤーオフロード機能を使ってGPUとシステムRAMに分散させて実行するのに適しています。',
+          ],
+          rows: [
+            { '仕様': 'MMULスコア', '値': '82%' },
+            { '仕様': 'HumanEvalスコア', '値': '88%' },
+            { '仕様': 'RAM要件（Q4_K_M）', '値': '約40GB' },
+            { '仕様': 'コンテキストウィンドウ', '値': '128Kトークン' },
+            { '仕様': 'Ollamaコマンド', '値': 'ollama run llama3.3:70b' },
+          ],
+          columns: ['仕様', '値'],
+        },
+        qwen25_72: {
+          title: '#2 Qwen2.5 72B — コード・多言語タスク最高',
+          content: [
+            'Alibabaの Qwen2.5 72Bは、一般的なベンチマークではLlama 3.3 70Bと同等で、コード性能では上回ります：HumanEval 87%対Llama 3.3の88%。29言語をネイティブ対応しています（中国語、日本語、韓国語、アラビア語を含む）。128Kのコンテキストウィンドウを使用します。JSONモードと関数呼び出しが組み込まれています。',
+            '英語以外のコンテンツを処理するチームまたは多言語アプリケーション構築しているチームの場合、Qwen2.5 72BはLlama 3.3 70Bよりも推奨される選択肢です。言語固有のベンチマークについては、[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=ja)を参照してください。',
+          ],
+          rows: [
+            { '仕様': 'MMULスコア', '値': '84%' },
+            { '仕様': 'HumanEvalスコア', '値': '87%' },
+            { '仕様': 'RAM要件（Q4_K_M）', '値': '約43GB' },
+            { '仕様': '対応言語', '値': 'ネイティブ対応29言語' },
+            { '仕様': 'Ollamaコマンド', '値': 'ollama run qwen2.5:72b' },
+          ],
+          columns: ['仕様', '値'],
+        },
+        mistralSmall: {
+          title: '#3 Mistral Small 3.1 24B — 16GB RAM向け7Bクラス最高',
+          content: [
+            'Mistral Small 3.1は、Q4_K_M量子化で16GB RAMに収まる24Bパラメータモデルです（約14GB）。MMLU 79%、HumanEval 74%を達成しており、本物の7Bモデルよりも大幅に優秀です。128KコンテキストウィンドウはMistral 2025以降のリリースで標準です。',
+            'Mistral Small 3.1は、7Bモデルを実行してきたユーザーで、40GB RAM の70Bモデルを必要としない品質向上を求めるユーザー向けの推奨アップグレードパスです。',
+          ],
+          rows: [
+            { '仕様': 'MMULスコア', '値': '79%' },
+            { '仕様': 'HumanEvalスコア', '値': '74%' },
+            { '仕様': 'RAM要件（Q4_K_M）', '値': '約14GB' },
+            { '仕様': 'コンテキストウィンドウ', '値': '128Kトークン' },
+            { '仕様': 'Ollamaコマンド', '値': 'ollama run mistral-small3.1' },
+          ],
+          columns: ['仕様', '値'],
+        },
+        gemma3: {
+          title: '#4 Google Gemma 3 9B — 8～16GB RAM向け中級性能最高',
+          content: [
+            'Gemma 3 9BはGoogleの9Bパラメータクラスのオープンウェイトモデルです。MMLU 73%、HumanEval 68%を達成しており、すべての7Bモデルを上回り、8GB RAMで標準的な7Bより上の品質を望むユーザーにとって最適なオプションです。',
+            'Gemma 3 9Bはマルチモーダルバリアントでビジョン（画像入力）をサポートしています。コンシューマーハードウェアで画像を処理できるローカル実行可能モデルの数少ない一つです。テキストのみのタスクでは標準バリアントを使用します。',
+          ],
+          rows: [
+            { '仕様': 'MMULスコア', '値': '73%' },
+            { '仕様': 'HumanEvalスコア', '値': '68%' },
+            { '仕様': 'RAM要件（Q4_K_M）', '値': '約6GB' },
+            { '仕様': 'コンテキストウィンドウ', '値': '128Kトークン' },
+            { '仕様': 'Ollamaコマンド', '値': 'ollama run gemma3:9b' },
+          ],
+          columns: ['仕様', '値'],
+        },
+        phi4mini: {
+          title: '#5 Microsoft Phi-4 Mini 3.8B — 4GB RAM以下最高',
+          content: [
+            'Microsoft Phi-4 Mini 3.8BはMMLA 68%を達成しており、これはサイズの2倍のモデルに相当します。高品質な合成推論データで訓練しました。Q4_K_M量子化で約2.5GBのRAMのみ必要で、最新のノートパソコンCPUで毎秒30～50トークンの速度で動作します。',
+            'Phi-4 Miniは、4～8GB RAMのマシンや、最大品質より応答速度が重要なあらゆる状況向けの推奨モデルです。その推論性能は同じハードウェアティアのLlama 3.2 3Bを大幅に上回ります。',
+          ],
+          rows: [
+            { '仕様': 'MMULスコア', '値': '68%' },
+            { '仕様': 'HumanEvalスコア', '値': '70%' },
+            { '仕様': 'RAM要件（Q4_K_M）', '値': '約2.5GB' },
+            { '仕様': 'コンテキストウィンドウ', '値': '128Kトークン' },
+            { '仕様': 'Ollamaコマンド', '値': 'ollama run phi4-mini' },
+          ],
+          columns: ['仕様', '値'],
+        },
+        fullBenchmark: {
+          title: '2026年トップ5ローカルLLMの完全なベンチマーク比較',
+          rows: [
+            { 'モデル': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'RAM': '40GB', '最適な用途': '総合性能' },
+            { 'モデル': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'RAM': '43GB', '最適な用途': 'コード、多言語' },
+            { 'モデル': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'HumanEval': '74%', 'RAM': '14GB', '最適な用途': '16GB RAM対応' },
+            { 'モデル': 'Gemma 3 9B', 'MMLU': '73%', 'HumanEval': '68%', 'RAM': '6GB', '最適な用途': '8～16GB 中級' },
+            { 'モデル': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2.5GB', '最適な用途': '低RAM、高速' },
+          ],
+          columns: ['モデル', 'MMLU', 'HumanEval', 'RAM', '最適な用途'],
+        },
+        whichModel: {
+          title: '2026年にどのローカルLLMを使うべきか',
+          items: [
+            '**4～8GB RAM**: Phi-4 Mini 3.8B（`ollama run phi4-mini`）— 低RAM下での最高推論性能。',
+            '**8GB RAM**: Gemma 3 9B（`ollama run gemma3:9b`）— このティアで利用可能な最高品質。',
+            '**16GB RAM**: Mistral Small 3.1 24B — 7Bモデルより大幅な品質向上。',
+            '**40GB以上RAM（ワークステーション）**: Llama 3.3 70BまたはQwen2.5 72B — 最先端の品質。',
+            '**コード作成タスク（すべてのスケール）**: ハードウェアが許す最大サイズのQwen2.5。詳細は[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=ja)を参照。',
+            '**英語以外の言語**: Qwen2.5。詳細は[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=ja)を参照。',
+          ],
+        },
+        regionalContext: {
+          title: 'ローカルLLM使用の地域別規制コンテキスト',
+          content: [
+            '**日本の企業はMETI AI統治ガイドラインを順守するためローカルLLMを導入しています。** 金融サービス、製造、医療業界の日本企業は、AIシステムのデータ処理方法をドキュメント化する必要があります。ローカルLLMは内部文書処理で個人データがシステムの外に出ることを防ぎ、METI AI Governance 2024の要件を満たします。特に大企業は、エアギャップネットワーク上でローカルモデルを実行して、データ処理の監視と記録を維持しています。',
+            '**東アジア・アジア太平洋地域の企業はデータレジデンシー法規に対応するためにローカルLLMを使用しています。** シンガポール、オーストラリア、韓国の金融・医療企業は、個人データのクラウド移送に関する法的制限に直面しており、ローカル推論で対応しています。ASEAN地域では、データクロスボーダー移転規制がますます厳しくなっており、ローカルホスティングが標準実装となっています。',
+            '**大規模企業のエンタープライズ展開では、規制コンプライアンスとデータセキュリティがローカルLLM採用の主要な要因です。** 銀行、病院、法律事務所は、API呼び出しによる外部データ送信を回避するため、オンプレミスやプライベートクラウドでローカルモデルを実行しています。監査可能性、データ所有権の保持、規制当局への説明責任がすべてローカル推論の選択を推進しています。',
+          ],
+        },
+        faqSection: {
+          title: 'よくある質問',
+          faqs: [
+            { q: 'ローカルLLMを実行するための最小RAMは？', a: '4GB RAMでllama3.2:1bを実用的な速度で実行できます。8GB RAMで3B～7Bモデルを利用可能にします。4GB未満では、ほとんどのモデルが読み込みに失敗するか、実用的でない速度で実行されます。モデルを選択する前にご自身の利用可能なRAMを確認してください。Ollamaのモデルライブラリには各バリアントのRAM要件が記載されています。' },
+            { q: 'OllamaはGPUなしで動作しますか？', a: 'はい。OllamaはCPUのみのハードウェアで動作します。GPUを使用すると速度が大幅に向上します（3～10倍高速）が、必須ではありません。8コアのラップトップCPUでは、llama3.2:3bは毎秒15～25トークンで動作します。遅いですが実用的です。NVIDIA GPUをお持ちの場合、Ollamaは自動的にCUDAを検出し、レイヤーをオフロードします。' },
+            { q: '新しいバージョンがリリースされた後、モデルを更新するには？', a: '`ollama pull modelname`を再度実行してください。Ollamaは変更されたレイヤーのみをダウンロードするため、通常、更新は元のダウンロードより高速です。インストール済みのモデルとそのバージョンハッシュを確認するには、`ollama list`を実行してください。' },
+            { q: 'セットアップ後、インターネット接続なしでOllamaを実行できますか？', a: 'はい。モデルをダウンロードした後、Ollamaは完全にオフラインで動作します。モデルファイルは`~/.ollama/models`に保存されます。このフォルダをエアギャップマシンにコピーしてOllamaを実行できます。推論にはアウトバウンド接続は不要です。' },
+            { q: '`ollama run`と`ollama pull`の違いは？', a: '`ollama pull`はセッションを開始せずにモデルをダウンロードします。`ollama run`は必要に応じてモデルをダウンロードし、すぐにインタラクティブチャットを開始します。`pull`を使用する場合：モデルを事前ダウンロードする場合、`run`を使用する場合：すぐに使用したい場合。両方のコマンドは同じモデルタグ形式（例：`llama3.2:3b`）を受け入れます。' },
+            { q: 'もう使わないモデルを削除するには？', a: '`ollama rm modelname`を実行します（例：`ollama rm llama3.2:3b`）。これは`~/.ollama/models`からモデルファイルを削除します。インストール済みのモデルとそのサイズをすべて確認するには、最初に`ollama list`を実行してください。' },
+            { q: '仕事用コンピュータでOllamaを使用しても安全ですか？', a: 'Ollamaはお使いのマシン全体で実行され、セットアップ後はプロンプトや回答を外部サーバーに送信しません。初期モデルダウンロードにはインターネットアクセスが必要です。仕事用マシンではITポリシーでローカル推論サーバーの実行が許可されているか確認してください。Ollamaはデフォルトでlocalhost（127.0.0.1）にバインドされており、ネットワークに公開されていません。' },
+            { q: 'どのくらい速くローカルLLMから応答が得られますか？', a: '速度はモデルサイズとハードウェアに依存します。Phi-4 Mini（4GB RAM）は毎秒30～50トークン、Llama 3.3 70B（40GB RAM）は毎秒5～15トークンです。トークン出力時間：OpenAI APIは典型的には毎秒50～100トークン。ローカルCPU推論は遅いですが、遅延がなく、プライバシー保護、またはオフライン動作の場合に価値があります。' },
+            { q: 'ローカルLLMはOpenAI APIのドロップイン置き換えになりますか？', a: 'いいえ。OpenAI APIは毎秒数百トークンを提供し、大規模エンタープライズ展開に対応しています。ローカルLLMは遅いですが、コスト無料、プライバシー保護、カスタマイズ可能、オフラインで動作します。「APIドロップイン置き換え」ではなく、「別の選択肢」と考えてください。詳細については、[API vs Local LLMs](/local-llms/api-vs-local-llms?lang=ja)を参照してください。' },
+            { q: 'ローカルでGPT-4レベルの性能を達成できますか？', a: 'はい。Llama 3.3 70BはMMLA 82%でGPT-4（2023）と一致します。ただし、40GBのVRAM/RAMが必要です。8GB以下のマシンでは、GPT-3.5レベル（Mistral Small、Gemma 3）またはそれ以下の性能になります。ハードウェア要件と期待される品質のバランスをとる必要があります。' },
+          ],
+        },
+        commonMistakes: {
+          title: 'よくある間違い',
+          items: [
+            'ベンチマークスコアのみで選択する — 実際のパフォーマンスはあなたのタスクで大きく異なる可能性があります。',
+            'モデル出力を展開前に特定のユースケースでテストしない。',
+            '商用利用のライセンス制限を確認し忘れる。',
+          ],
+        },
+        relatedReading: {
+          title: '関連する読み物',
+          items: [
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models?lang=ja) — 新規ユーザー向け基礎モデル',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama?lang=ja) — インストールとモデルセットアップ',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=ja) — コード最適化モデルの比較',
+            '[Local LLM Limitations](/local-llms/local-llm-limitations?lang=ja) — モデルの制約を理解する',
+            '[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=ja) — 言語別ベンチマークと多言語モデル',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — GPUとRAM選択ガイド',
+          ],
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            '**Hugging Face Open LLM Leaderboard** — リアルタイムベンチマークランキング',
+            '**Ollama Model Library** — 利用可能なモデルとダウンロードサイズ',
+            '**Model Release Announcements** — 公式モデルカードと機能',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/local-llms/best-local-llms-2026?lang=ja',
+        'inLanguage': 'ja',
+        headline: '2026年 最高のローカルLLM：タスク・ハードウェア・品質で評価したトップモデル',
+        description: '2026年の最高のローカルLLM：Llama 3.3 70B（総合性能）、Qwen2.5 72B（コード・多言語）、Mistral Small 3.1（7Bクラス）。ベンチマークとVRAM要件。',
+        dateModified: '2026-04-04',
+        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Beginner',
+        about: [
+          { '@type': 'Thing', name: 'Ollama' },
+          { '@type': 'Thing', name: 'ローカルLLM' },
+          { '@type': 'Thing', name: 'Llama 3.3' },
+          { '@type': 'Thing', name: 'Qwen2.5' },
+          { '@type': 'Thing', name: 'Mistral Small' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'ja',
+        name: '2026年の最高のローカルLLMモデル',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Llama 3.3 70B', description: '総合性能最高。MMLU 82%、HumanEval 88%。40GB RAM必要。' },
+          { '@type': 'ListItem', position: 2, name: 'Qwen2.5 72B', description: 'コード・多言語最高。HumanEval 87%。29言語対応。43GB RAM。' },
+          { '@type': 'ListItem', position: 3, name: 'Mistral Small 3.1', description: '16GB RAM向け7Bクラス最高。MMLU 79%、14GB RAM必要。' },
+          { '@type': 'ListItem', position: 4, name: 'Gemma 3 9B', description: '8～16GB RAM中級性能最高。MMLU 73%。約6GB RAM。' },
+          { '@type': 'ListItem', position: 5, name: 'Phi-4 Mini 3.8B', description: '4GB RAM以下最高。推論性能優秀。約2.5GB RAM。' },
+        ],
+      },
+    },
+    zh: {
+      theme: '最佳模型',
+      title: '2026年最佳本地大语言模型：按任务、硬件和质量排名的顶级模型',
+      seoTitle: '2026年最佳本地大语言模型',
+      intro: '2026年最佳的本地大语言模型是Meta Llama 3.3 70B（综合性能最佳）、Qwen2.5 72B（代码和多语言最佳）、Mistral Small 3.1（7B级最佳）、Google Gemma 3 9B（中档性能最佳）和Microsoft Phi-4 Mini（4GB RAM以下最佳）。截至2026年4月，此排名基于MMLU、HumanEval和MATH基准测试成绩。',
+      metaDescription: '2026年最佳本地大模型：Llama 3.3 70B、Qwen2.5 72B、Mistral Small 3.1、Gemma 3 9B、Phi-4 Mini。基准测试和VRAM要求。',
+      publishDate: '2026-04-04',
+      readTime: '阅读约10分钟',
+      educationalLevel: 'Beginner',
+      primaryTerm: '2026年最佳本地大语言模型',
+      toc: [
+        { label: '核心要点', anchor: 'key-takeaways' },
+        { label: '这些模型如何被评估', anchor: 'how-we-ranked' },
+        { label: '#1 Llama 3.3 70B — 综合性能最佳', anchor: 'llama-3-3-70b' },
+        { label: '#2 Qwen2.5 72B — 代码和多语言最佳', anchor: 'qwen2-5-72b' },
+        { label: '#3 Mistral Small 3.1 — 7B级最佳', anchor: 'mistral-small-3-1' },
+        { label: '#4 Gemma 3 9B — 中档性能最佳', anchor: 'gemma-3-9b' },
+        { label: '#5 Phi-4 Mini — 4GB RAM以下最佳', anchor: 'phi-4-mini' },
+        { label: '完整基准测试对比', anchor: 'full-benchmark-comparison' },
+        { label: '2026年应该使用哪个本地大模型', anchor: 'which-model-should-you-use' },
+        { label: '地区背景', anchor: 'regional-context' },
+        { label: '常见问题', anchor: 'common-questions' },
+        { label: '常见错误', anchor: 'common-mistakes' },
+        { label: '相关阅读', anchor: 'related-reading' },
+        { label: '信息来源', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**综合性能最佳**：Meta Llama 3.3 70B — MMLU 82%相当于GPT-4（2023）。Q4_K_M量化需要40GB RAM。',
+            '**代码性能最佳**：Qwen2.5 72B — HumanEval 87%。支持29种语言。128K上下文窗口。',
+            '**7B级最佳**：Mistral Small 3.1 24B — 指令跟随能力强。128K上下文。16GB RAM即可运行。',
+            '**中档性能最佳（16GB RAM）**：Google Gemma 3 9B — 9B级中质量对RAM比最优。',
+            '**小型模型最佳**：Microsoft Phi-4 Mini 3.8B — 推理性能超过参数规模。4GB RAM即可运行。',
+          ],
+        },
+        howWeRanked: {
+          title: '这些模型如何被评估',
+          content: [
+            '排名基于三个基准测试：MMLU（57个领域的知识测试，得分越高代表一般智能越强）、HumanEval（Python代码生成，得分越高代表编码能力越强）和MATH（竞技数学问题，得分越高代表推理能力越强）。分数来自已发布的论文和截至2026年Q1的Open LLM排行榜。',
+            '硬件要求按Q4_K_M量化计算——这是平衡质量和RAM使用的标准初学者设置。有关量化的入门知识，请参阅[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh)。',
+            '所有模型都可通过Ollama获得。有关安装说明，请参阅[How to Install Ollama](/local-llms/how-to-install-ollama?lang=zh)。',
+          ],
+        },
+        llama33: {
+          title: '#1 Meta Llama 3.3 70B — 2026年综合性能最佳的本地大模型',
+          content: [
+            'Meta Llama 3.3 70B是2026年可用于本地推理的最佳开源权重模型。它在MMLU上得分82%、HumanEval上得分88%、MATH上得分77%——与GPT-4（2023）在三个基准测试上相当或超越。128K的上下文窗口可处理长文档和扩展对话。',
+            '主要限制是硬件：Q4_K_M量化需要约40GB的RAM。这排除了大多数消费级笔记本电脑。它在Mac Studio M2 Ultra（64GB以上）、高端工作站（64GB RAM）或使用Ollama的图层卸载功能分散在GPU和系统RAM上时运行良好。',
+          ],
+          rows: [
+            { '规格': 'MMLU得分', '值': '82%' },
+            { '规格': 'HumanEval得分', '值': '88%' },
+            { '规格': 'RAM要求（Q4_K_M）', '值': '约40GB' },
+            { '规格': '上下文窗口', '值': '128K标记' },
+            { '规格': 'Ollama命令', '值': 'ollama run llama3.3:70b' },
+          ],
+          columns: ['规格', '值'],
+        },
+        qwen25_72: {
+          title: '#2 Qwen2.5 72B — 代码和多语言任务最佳',
+          content: [
+            'Alibaba的Qwen2.5 72B在一般基准测试上与Llama 3.3 70B相当，在代码上超越它：HumanEval 87%对Llama 3.3的88%。它原生支持29种语言（包括中文、日文、韩文、阿拉伯文），并使用128K上下文窗口。JSON模式和函数调用内置。',
+            '对于处理非英文内容或构建多语言应用的团队，Qwen2.5 72B是相比Llama 3.3 70B的推荐选择。有关特定语言的基准测试，请参阅[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=zh)。',
+          ],
+          rows: [
+            { '规格': 'MMLU得分', '值': '84%' },
+            { '规格': 'HumanEval得分', '值': '87%' },
+            { '规格': 'RAM要求（Q4_K_M）', '值': '约43GB' },
+            { '规格': '支持语言', '值': '原生支持29种语言' },
+            { '规格': 'Ollama命令', '值': 'ollama run qwen2.5:72b' },
+          ],
+          columns: ['规格', '值'],
+        },
+        mistralSmall: {
+          title: '#3 Mistral Small 3.1 24B — 16GB RAM的7B级最佳',
+          content: [
+            'Mistral Small 3.1是一个24B参数模型，在Q4_K_M量化下可容纳16GB RAM（约14GB）。它在MMLU上得分79%，HumanEval上得分74%——明显优于任何真正的7B模型。128K上下文窗口是Mistral 2025+版本的标准配置。',
+            'Mistral Small 3.1是为运行过7B模型的用户推荐的升级路径，他们希望提高质量但不需要70B模型的40GB RAM。',
+          ],
+          rows: [
+            { '规格': 'MMLU得分', '值': '79%' },
+            { '规格': 'HumanEval得分', '值': '74%' },
+            { '规格': 'RAM要求（Q4_K_M）', '值': '约14GB' },
+            { '规格': '上下文窗口', '值': '128K标记' },
+            { '规格': 'Ollama命令', '值': 'ollama run mistral-small3.1' },
+          ],
+          columns: ['规格', '值'],
+        },
+        gemma3: {
+          title: '#4 Google Gemma 3 9B — 8～16GB RAM中档性能最佳',
+          content: [
+            'Gemma 3 9B是Google的9B参数级开源权重模型。它在MMLU上得分73%，HumanEval上得分68%，超过所有7B模型，是拥有8GB RAM且需要超越标准7B质量的用户的最佳选择。',
+            'Gemma 3 9B在多模态变体中支持视觉（图像输入）——使其成为可在消费级硬件上处理图像的少数可本地运行的模型之一。仅文本任务使用标准变体。',
+          ],
+          rows: [
+            { '规格': 'MMLU得分', '值': '73%' },
+            { '规格': 'HumanEval得分', '值': '68%' },
+            { '规格': 'RAM要求（Q4_K_M）', '值': '约6GB' },
+            { '规格': '上下文窗口', '值': '128K标记' },
+            { '规格': 'Ollama命令', '值': 'ollama run gemma3:9b' },
+          ],
+          columns: ['规格', '值'],
+        },
+        phi4mini: {
+          title: '#5 Microsoft Phi-4 Mini 3.8B — 4GB RAM以下最佳',
+          content: [
+            'Microsoft Phi-4 Mini 3.8B在MMLU上得分68%——相当于参数数量两倍的模型——通过在高质量合成推理数据上训练实现。Q4_K_M量化下仅需约2.5GB RAM，在任何现代笔记本CPU上以每秒30-50个标记的速度运行。',
+            'Phi-4 Mini是拥有4-8GB RAM的机器或响应速度比最大质量更重要的任何情况下的推荐模型。其推理性能明显超过同等硬件级别的Llama 3.2 3B。',
+          ],
+          rows: [
+            { '规格': 'MMLU得分', '值': '68%' },
+            { '规格': 'HumanEval得分', '值': '70%' },
+            { '规格': 'RAM要求（Q4_K_M）', '值': '约2.5GB' },
+            { '规格': '上下文窗口', '值': '128K标记' },
+            { '规格': 'Ollama命令', '值': 'ollama run phi4-mini' },
+          ],
+          columns: ['规格', '值'],
+        },
+        fullBenchmark: {
+          title: '2026年5大本地大模型完整基准测试对比',
+          rows: [
+            { '模型': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'RAM': '40GB', '最佳用途': '综合性能' },
+            { '模型': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'RAM': '43GB', '最佳用途': '代码、多语言' },
+            { '模型': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'HumanEval': '74%', 'RAM': '14GB', '最佳用途': '16GB RAM机器' },
+            { '模型': 'Gemma 3 9B', 'MMLU': '73%', 'HumanEval': '68%', 'RAM': '6GB', '最佳用途': '8～16GB中档' },
+            { '模型': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2.5GB', '最佳用途': '低RAM、高速' },
+          ],
+          columns: ['模型', 'MMLU', 'HumanEval', 'RAM', '最佳用途'],
+        },
+        whichModel: {
+          title: '2026年应该使用哪个本地大语言模型',
+          items: [
+            '**4～8GB RAM**：Phi-4 Mini 3.8B（`ollama run phi4-mini`）——低RAM下的最佳推理。',
+            '**8GB RAM**：Gemma 3 9B（`ollama run gemma3:9b`）——此等级可用的最高质量。',
+            '**16GB RAM**：Mistral Small 3.1 24B——相比7B模型质量大幅提升。',
+            '**40GB以上RAM（工作站）**：Llama 3.3 70B或Qwen2.5 72B——最前沿的质量。',
+            '**任何规模的代码任务**：Qwen2.5，选择硬件允许的最大尺寸——详见[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=zh)。',
+            '**非英文语言**：Qwen2.5——详见[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=zh)。',
+          ],
+        },
+        regionalContext: {
+          title: '本地大模型使用的地区背景',
+          content: [
+            '**中国企业采用本地大模型满足《数据安全法》要求。** 中国于2021年颁布的《数据安全法》要求企业对个人信息和生产数据的处理方式进行分级保护。在金融、制造、医疗和政府部门工作的企业部署本地大模型以避免个人数据或机密信息经由API外传。本地推理完全绕过外部API调用，使企业能够完全控制数据流和访问日志，符合中国数据保护要求。Qwen2.5特别适合中国企业，因为它原生支持中文，并由中国公司Alibaba维护。',
+            '**亚太地区企业因数据驻留法规采用本地大模型。** 新加坡、澳大利亚、韩国和东盟国家对个人数据跨境转移设置了法律限制。新加坡的PDPA（个人数据保护法）和澳大利亚的Privacy Act限制向海外传输敏感信息。本地LLM部署已成为这些地区金融、医疗和政府机构的标准做法。企业在本地或区域数据中心上运行模型，以确保完全遵守数据驻留框架。亚太地区合规性倾向于本地基础设施而非第三方云服务。',
+            '**大型企业的部署战略通常将合规性和数据所有权放在首位。** 金融机构、医疗机构和律师事务所部署本地大模型以维持对客户数据的完全控制。银行必须遵守支付卡行业标准（PCI DSS）和反洗钱法规，这些标准禁止通过互联网将支付信息发送到外部API。医疗机构必须遵守各国的医疗隐私法规，防止患者信息外传。法律事务所处理机密信息，需要确保与律师-委托人保密性兼容的处理流程。在所有情况下，本地推理消除了外部API依赖关系，使企业能够审计、记录和验证每个模型调用，满足监管机构的要求。',
+          ],
+        },
+        faqSection: {
+          title: '常见问题',
+          faqs: [
+            { q: '运行本地大模型需要的最低RAM是多少？', a: '4GB RAM可以以可用速度运行llama3.2:1b。8GB RAM使3B和7B模型可用。低于4GB时，大多数模型将无法加载或运行速度太慢而无法使用。选择模型之前检查可用RAM。Ollama模型库为每个变体列出RAM要求。' },
+            { q: 'Ollama需要GPU吗？', a: '不需要。Ollama在CPU专用硬件上运行。GPU大幅提高速度（快3-10倍），但不是必需的。在8核笔记本CPU上，llama3.2:3b以15-25个标记/秒的速度运行——缓慢但可用。如果您有NVIDIA GPU，Ollama会自动检测CUDA并自动卸载图层。' },
+            { q: '发布新版本后如何更新模型？', a: '再次运行`ollama pull modelname`。Ollama仅下载更改的图层，所以更新通常比原始下载更快。要查看您拥有的模型及其版本哈希，请运行`ollama list`。' },
+            { q: '设置后可以在没有互联网连接的情况下运行Ollama吗？', a: '可以。下载模型后，Ollama完全离线运行。模型文件存储在`~/.ollama/models`。您可以将此文件夹复制到隔离的机器并在那里运行Ollama——推理不需要出站连接。' },
+            { q: '`ollama run`和`ollama pull`之间有什么区别？', a: '`ollama pull`下载模型而不启动会话。`ollama run`根据需要下载模型并立即打开交互式聊天。使用`pull`时：预先下载模型。使用`run`时：立即使用。两个命令接受相同的模型标签格式（例如`llama3.2:3b`）。' },
+            { q: '我如何删除我不再需要的模型？', a: '运行`ollama rm modelname`（例如`ollama rm llama3.2:3b`）。这从`~/.ollama/models`删除模型文件。要查看所有已安装模型及其大小，请首先运行`ollama list`。' },
+            { q: '在工作电脑上使用Ollama安全吗？', a: 'Ollama完全在您的本地机器上运行，设置后不会向外部服务器发送提示或回复。初始模型下载需要互联网访问。在工作机器上检查IT政策是否允许运行本地推理服务器——Ollama默认绑定到localhost（127.0.0.1），不会暴露到您的网络。' },
+            { q: '本地大模型的响应速度有多快？', a: '速度取决于模型大小和硬件。Phi-4 Mini（4GB RAM）运行速度为30-50个标记/秒，Llama 3.3 70B（40GB RAM）运行速度为5-15个标记/秒。OpenAI API通常提供50-100个标记/秒。本地CPU推理较慢，但零延迟、隐私保护，并且当需要离线操作时有价值。' },
+            { q: '本地大模型能成为OpenAI API的拖放式替代品吗？', a: '不能。OpenAI API提供每秒数百个标记，支持大规模企业部署。本地大模型速度较慢但成本免费、隐私保护、可定制且离线工作。将其视为"替代选项"而不是"直接替代品"。详见[API vs Local LLMs](/local-llms/api-vs-local-llms?lang=zh)。' },
+            { q: '我能在本地实现GPT-4级的性能吗？', a: '可以。Llama 3.3 70B在MMLU上达到82%，与GPT-4（2023）相当。但这需要40GB VRAM/RAM。在8GB以下的机器上，您将获得GPT-3.5级别（Mistral Small、Gemma 3）或更低的性能。您需要在硬件要求和预期质量之间平衡。' },
+          ],
+        },
+        commonMistakes: {
+          title: '常见错误',
+          items: [
+            '仅基于基准测试进行选择——实际性能在您的任务中可能差异显著。',
+            '未在特定用例上部署前测试模型输出。',
+            '忘记检查商业使用的许可证限制。',
+          ],
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models?lang=zh) — 新用户的基础模型',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama?lang=zh) — 安装和模型设置',
+            '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=zh) — 代码优化模型对比',
+            '[Local LLM Limitations](/local-llms/local-llm-limitations?lang=zh) — 理解模型约束',
+            '[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=zh) — 语言特定基准和多语言模型',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) — GPU和RAM选择指南',
+          ],
+        },
+        sources: {
+          title: '信息来源',
+          items: [
+            '**Hugging Face Open LLM排行榜** — 实时基准排名',
+            '**Ollama模型库** — 可用模型和下载大小',
+            '**模型发布公告** — 官方模型卡和功能',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/local-llms/best-local-llms-2026?lang=zh',
+        'inLanguage': 'zh',
+        headline: '2026年最佳本地大语言模型：按任务、硬件和质量排名的顶级模型',
+        description: '2026年最佳本地大语言模型：Llama 3.3 70B（综合性能）、Qwen2.5 72B（代码和多语言）、Mistral Small 3.1（7B级）。基准测试和VRAM要求。',
+        dateModified: '2026-04-04',
+        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Beginner',
+        about: [
+          { '@type': 'Thing', name: 'Ollama' },
+          { '@type': 'Thing', name: '本地大语言模型' },
+          { '@type': 'Thing', name: 'Llama 3.3' },
+          { '@type': 'Thing', name: 'Qwen2.5' },
+          { '@type': 'Thing', name: 'Mistral Small' },
+        ],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'zh',
+        name: '2026年最佳本地大语言模型',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Llama 3.3 70B', description: '综合性能最佳。MMLU 82%，HumanEval 88%。需要40GB RAM。' },
+          { '@type': 'ListItem', position: 2, name: 'Qwen2.5 72B', description: '代码和多语言最佳。HumanEval 87%。支持29种语言。需要43GB RAM。' },
+          { '@type': 'ListItem', position: 3, name: 'Mistral Small 3.1', description: '16GB RAM的7B级最佳。MMLU 79%。需要14GB RAM。' },
+          { '@type': 'ListItem', position: 4, name: 'Gemma 3 9B', description: '8～16GB RAM中档最佳。MMLU 73%。约需6GB RAM。' },
+          { '@type': 'ListItem', position: 5, name: 'Phi-4 Mini 3.8B', description: '4GB RAM以下最佳。推理性能优秀。约需2.5GB RAM。' },
+        ],
+      },
+    },
   },
 
   'qwen-vs-llama-vs-mistral': {
     en: {
       theme: 'Best Models',
-      title: 'Qwen vs Llama vs Mistral: Which Local LLM Model Family Should You Use?',
-      seoTitle: 'Qwen vs Llama vs Mistral',
-      intro: 'Qwen2.5, Meta Llama 3.x, and Mistral are the three dominant open-weight model families for local inference. As of April 2026, Qwen2.5 leads on coding and multilingual tasks. Llama 3.x leads on general reasoning at 70B scale. Mistral leads on efficiency — delivering strong 7B-class performance in smaller packages. The right family depends on your task, language, and hardware.',
-      metaDescription: 'Qwen vs Llama vs Mistral compared: benchmark scores, RAM requirements, coding ability, multilingual support, and which model family to Free beta — April 2026.',
+      title: 'Qwen vs Llama vs Mistral: Which Model Family?',
+      seoTitle: 'Qwen vs Llama vs Mistral: Model Family Comparison',
+      intro: 'Qwen2.5, Meta Llama 3.x, and Mistral are the three dominant open-weight model families for local inference in 2026. Qwen2.5 excels at coding and multilingual tasks; Llama 3.x at general reasoning; Mistral at efficiency. The choice depends on your task, language, and hardware constraints.',
+      metaDescription: 'Compare Qwen2.5, Llama 3.x, and Mistral on coding, multilingual support, efficiency, and VRAM requirements. Choose the right local LLM family for your task.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
@@ -1862,7 +2550,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         qwen: {
           title: 'Qwen2.5: Best for Coding, Math, and Non-English Languages',
           content: [
-            'Qwen2.5 from Alibaba is the strongest model family for structured output tasks. It leads HumanEval at every comparable size tier except 70B (where Llama 3.3 edges it by 1%). Its MATH scores are 6–10 percentage points above Llama at each size.',
+            '**Qwen2.5 from Alibaba is the strongest model family for structured output tasks.** It leads HumanEval at every comparable size tier except 70B (where Llama 3.3 edges it by 1%). Its MATH scores are 6–10 percentage points above Llama at each size.',
             '**Strengths**: coding (Python, JavaScript, SQL), mathematical reasoning, 29-language native support, JSON mode, function calling, 128K context window across all sizes.',
             '**Weaknesses**: English instruction-following style can feel less natural than Llama or Mistral; some users report less fluent creative writing in English. The Alibaba origin raises data-handling concerns for some enterprise users despite open weights.',
           ],
@@ -1870,7 +2558,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         llama: {
           title: 'Llama 3.x: Best for General English Tasks and Ecosystem Support',
           content: [
-            'Meta\'s Llama 3.x family is the most widely supported open-weight model series. More tools, fine-tunes, quantizations, and community guides exist for Llama than any other family. Llama 3.3 70B matches or beats all competitors on general English benchmarks.',
+            '**Meta\'s Llama 3.x family is the most widely supported open-weight model series.** More tools, fine-tunes, quantizations, and community guides exist for Llama than any other family. Llama 3.3 70B matches or beats all competitors on general English benchmarks.',
             '**Strengths**: widest ecosystem support (every tool supports Llama), best English creative writing, strong instruction-following, 128K context on 3.1/3.2/3.3 variants, community-tested reliability.',
             '**Weaknesses**: no native multilingual support beyond basic functionality; Llama 3.2 3B lags Qwen2.5 3B and Phi-4 Mini on coding and math despite same parameter count.',
           ],
@@ -1878,7 +2566,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         mistral: {
           title: 'Mistral: Best Efficiency and Strongest 7B-Class History',
           content: [
-            'Mistral AI produces the most parameter-efficient models in this comparison. Mistral Small 3.1 at 24B delivers benchmark scores close to the 70B class while requiring only 14 GB RAM — the best quality-per-RAM ratio of any model in this comparison.',
+            '**Mistral AI produces the most parameter-efficient models in this comparison.** Mistral Small 3.1 at 24B delivers benchmark scores close to the 70B class while requiring only 14 GB RAM — the best quality-per-RAM ratio of any model in this comparison.',
             '**Strengths**: best quality-to-RAM ratio (Small 3.1), strong function calling and tool use, clean Apache 2.0 licence on key models, European provenance for GDPR-sensitive use cases.',
             '**Weaknesses**: Mistral 7B v0.3 is now outperformed on benchmarks by Qwen2.5 7B and Llama 3.1 8B; fewer size options than Qwen or Llama.',
           ],
