@@ -1170,6 +1170,17 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Ollama stellt eine OpenAI-kompatible REST-API auf `http://localhost:11434` bereit — jede OpenAI-SDK-App kann sie ohne Codeänderungen verwenden.',
           ],
         },
+        quickFacts: {
+          id: 'quick-facts',
+          items: [
+            '**Installationszeit:** Unter 2 Minuten auf jedem Betriebssystem',
+            '**Minimum RAM:** 4 GB (3B-Modelle) / 8 GB (7B-Modelle)',
+            '**Download-Größen:** 2–47 GB je nach Modell (auf der Festplatte zwischengespeichert)',
+            '**Verfügbare Modelle:** 200+ Open-Source-Modelle von Meta, Mistral 7B, Qwen, Phi, Llama und mehr',
+            '**API-Endpoint:** `http://localhost:11434` (OpenAI-kompatibel)',
+            '**Keine GPU erforderlich:** Läuft auf CPU; GPU-Unterstützung optional für schnellere Inference',
+          ],
+        },
         whatIsOllama: {
           id: 'what-is-ollama',
           title: 'Was ist Ollama und warum sollte ich es nutzen?',
@@ -1237,7 +1248,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         recommendedModels: {
           id: 'which-model-to-start-with',
           title: 'Mit welchem Modell sollte ich anfangen?',
-          content: 'Für einen ersten Durchlauf decken diese drei Modelle verschiedene Hardware-Profile ab:',
+          content: '**Für einen ersten Durchlauf decken diese drei Modelle verschiedene Hardware-Profile und Geschwindigkeitsanforderungen ab:**',
           rows: [
             { 'Modell': 'llama3.2:3b', 'Download-Größe': '~2 GB', 'Benötigter RAM': '4 GB', 'Am besten für': 'Erster Test — auf jeder Maschine' },
             { 'Modell': 'llama3.1:8b', 'Download-Größe': '~4,7 GB', 'Benötigter RAM': '8 GB', 'Am besten für': 'Allgemeine Nutzung auf den meisten Laptops' },
@@ -1248,7 +1259,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         verify: {
           id: 'verify-ollama-is-working',
           title: 'Wie überprüft man, ob Ollama funktioniert?',
-          content: 'Testen Sie die REST-API direkt, um zu bestätigen, dass Ollama läuft und verfügbar ist:',
+          content: '**Testen Sie die REST-API direkt mit curl-Befehlen, um zu bestätigen, dass Ollama läuft und erreichbar ist:**',
           codeBlock: '# Überprüfen Sie, ob Ollama läuft\ncurl http://localhost:11434\n# Erwartet: "Ollama is running"\n\n# Heruntergeladene Modelle auflisten\nollama list\n\n# Senden Sie eine Eingabeaufforderung über die API (OpenAI-kompatibel)\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "Was ist 2+2?",\n  "stream": false\n}\'',
           codeLanguage: 'bash',
         },
@@ -1333,7 +1344,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[Die besten anfänglichen Local-LLM-Modelle](/local-llms/best-beginner-local-llm-models?lang=de) — Modellempfehlungen nach Hardware',
             '[Local-LLM-One-Click-Installer](/local-llms/local-llm-one-click-installers?lang=de) — Alternative Tools zu Ollama',
             '[So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de) — GUI-Alternative für Anfänger',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=de) — Detaillierter Vergleich von CLI vs. GUI-Ansätzen',
           ],
         },
         faq: {
@@ -1448,7 +1458,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       theme: 'Getting Started',
       title: 'Installation d\'Ollama : Guide complet de configuration pour macOS, Windows et Linux',
       seoTitle: 'Installer Ollama 2026: macOS, Windows, Linux',
-      intro: 'Ollama est un moteur d\'inférence léger qui exécute de grands modèles de langage localement avec une seule commande. Après une installation de 2 minutes, `ollama pull llama3.2:3b` télécharge un modèle de 2 Go, et `ollama run llama3.2` ouvre une interface de chat. Ollama combine la gestion de modèles, le backend d\'inférence llama.cpp et une API REST compatible OpenAI sur `localhost:11434` dans une seule application sans environnement Python, sans fichiers de configuration et sans GPU requis pour commencer. En avril 2026, Ollama supporte plus de 200 modèles incluant Meta Llama 3.2, Qwen2.5, Mistral et DeepSeek, et expose son API à tout SDK OpenAI sans modifications de code.',
+      intro: '**Ollama est un moteur d\'inférence léger qui exécute de grands modèles de langage localement avec une seule commande** — pas de Python, pas de GPU requis, configuration minimale. Ce guide couvre l\'installation sur macOS, Windows et Linux, ainsi que comment exécuter votre premier modèle à partir de la bibliothèque de 200+ modèles open-source d\'Ollama.',
       metaDescription: 'Installer Ollama en moins de 2 minutes sur macOS, Windows ou Linux. Exécutez votre premier modèle avec un seul commande — guide complet étape par étape.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
@@ -1485,6 +1495,17 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Ollama expose une API REST compatible OpenAI sur `http://localhost:11434` — toute application SDK OpenAI peut l\'utiliser sans modifications de code.',
           ],
         },
+        quickFacts: {
+          id: 'quick-facts',
+          items: [
+            '**Temps d\'installation :** Moins de 2 minutes sur n\'importe quel système d\'exploitation',
+            '**RAM minimum :** 4 Go (modèles 3B) / 8 Go (modèles 7B)',
+            '**Tailles de téléchargement :** 2–47 Go selon le modèle (mis en cache sur le disque)',
+            '**Modèles disponibles :** 200+ modèles open-source de Meta, Mistral 7B, Qwen, Phi, Llama et plus',
+            '**Point d\'accès API :** `http://localhost:11434` (compatible OpenAI)',
+            '**Pas de GPU requis :** S\'exécute sur CPU ; support GPU optionnel pour une inférence plus rapide',
+          ],
+        },
         whatIsOllama: {
           id: 'what-is-ollama',
           title: 'Qu\'est-ce qu\'Ollama et pourquoi l\'utiliser ?',
@@ -1498,7 +1519,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installMac: {
           id: 'install-on-macos',
           title: 'Comment installer Ollama sur macOS ?',
-          content: 'Il y a deux méthodes. Le téléchargement du programme d\'installation est plus rapide ; Homebrew est mieux si vous gérez les logiciels avec brew.',
+          content: '**Téléchargez le fichier .dmg depuis ollama.com ou utilisez Homebrew — les deux méthodes prennent moins de 2 minutes.** Le téléchargement du programme d\'installation est plus rapide ; Homebrew est mieux si vous gérez les logiciels avec brew.',
           numberedItems: [
             'Allez sur ollama.com/download et cliquez sur « Télécharger pour macOS ».',
             'Ouvrez le fichier Ollama.dmg téléchargé et glissez Ollama vers votre dossier Applications.',
@@ -1516,6 +1537,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installWindows: {
           id: 'install-on-windows',
           title: 'Comment installer Ollama sur Windows ?',
+          content: '**Téléchargez le programme d\'installation depuis ollama.com/download et exécutez-le — installation en moins de 2 minutes.**',
           numberedItems: [
             'Allez sur ollama.com/download et cliquez sur « Télécharger pour Windows ».',
             'Exécutez le programme d\'installation OllamaSetup.exe téléchargé. Ollama s\'installe dans %LOCALAPPDATA%\\Programs\\Ollama.',
@@ -1531,7 +1553,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installLinux: {
           id: 'install-on-linux',
           title: 'Comment installer Ollama sur Linux ?',
-          content: 'Une seule commande installe Ollama sur toute distribution Linux :',
+          content: '**Une seule commande installe Ollama sur toute distribution Linux en quelques secondes :**',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -1544,14 +1566,14 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         firstModel: {
           id: 'pull-and-run-your-first-model',
           title: 'Comment télécharger et exécuter votre premier modèle dans Ollama ?',
-          content: 'Après l\'installation d\'Ollama, exécutez cette commande pour télécharger et démarrer un modèle :',
+          content: '**Après l\'installation d\'Ollama, exécutez ces commandes pour télécharger un modèle et commencer à discuter immédiatement :**',
           codeBlock: '# Télécharger un modèle (stockage dans ~/.ollama/models)\nollama pull llama3.2\n\n# L\'exécuter de manière interactive\nollama run llama3.2\n\n# Ou télécharger et exécuter en une étape\nollama run llama3.2',
           codeLanguage: 'bash',
         },
         recommendedModels: {
           id: 'which-model-to-start-with',
           title: 'Quel modèle utiliser pour commencer ?',
-          content: 'Pour un premier passage, ces trois modèles couvrent différents profils matériels :',
+          content: '**Pour un premier passage, ces trois modèles couvrent différents profils matériels et exigences de vitesse :**',
           rows: [
             { 'Modèle': 'llama3.2:3b', 'Taille du téléchargement': '~2 Go', 'RAM requise': '4 Go', 'Meilleur pour': 'Premier test — toute machine' },
             { 'Modèle': 'llama3.1:8b', 'Taille du téléchargement': '~4,7 Go', 'RAM requise': '8 Go', 'Meilleur pour': 'Utilisation générale sur la plupart des ordinateurs portables' },
@@ -1562,7 +1584,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         verify: {
           id: 'verify-ollama-is-working',
           title: 'Comment vérifier qu\'Ollama fonctionne ?',
-          content: 'Testez l\'API REST directement pour confirmer qu\'Ollama s\'exécute et est accessible :',
+          content: '**Testez l\'API REST directement avec des commandes curl pour confirmer qu\'Ollama s\'exécute et est accessible :**',
           codeBlock: '# Vérifier qu\'Ollama s\'exécute\ncurl http://localhost:11434\n# Attendu: "Ollama is running"\n\n# Lister les modèles téléchargés\nollama list\n\n# Envoyer une invite via l\'API (compatible OpenAI)\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "Qu\'est-ce que 2+2 ?",\n  "stream": false\n}\'',
           codeLanguage: 'bash',
         },
@@ -1647,7 +1669,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[Les meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models?lang=fr) — Recommandations de modèles par matériel',
             '[Installateurs Local LLM en un clic](/local-llms/local-llm-one-click-installers?lang=fr) — Outils alternatifs à Ollama',
             '[Installation de LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) — Alternative GUI pour les débutants',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) — Comparaison détaillée des approches CLI vs GUI',
           ],
         },
         faq: {
@@ -1762,7 +1783,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       theme: 'はじめに',
       title: 'Ollama のインストール方法：macOS、Windows、Linux の完全なセットアップガイド',
       seoTitle: 'Ollama をインストール: macOS、Windows、Linux ガイド (2026)',
-      intro: 'Ollama は、単一のコマンドで大規模言語モデルをローカルで実行する軽量推論エンジンです。2 分のインストール後、`ollama pull llama3.2:3b` は 2 GB のモデルをダウンロードし、`ollama run llama3.2` はチャット インターフェースを開きます。Ollama は、モデル管理、llama.cpp 推論バックエンド、および OpenAI 互換の REST API を `localhost:11434` に結合しており、Python 環境、構成ファイル、開始時の GPU は不要です。2026 年 4 月現在、Ollama は Meta Llama 3.2、Qwen2.5、Mistral、DeepSeek を含む 200 を超えるモデルをサポートし、その API を任意の OpenAI SDK にコード変更なしで公開しています。',
+      intro: '**Ollama は大規模言語モデルをローカルで実行する軽量推論エンジンです** — Python、GPU 不要、最小限のセットアップ。このガイドでは、macOS、Windows、Linux へのインストール、および Ollama の 200 以上のオープンソースモデルライブラリから最初のモデルを実行する方法について説明します。',
       metaDescription: '2 分以内に Ollama をインストール。1 つのコマンドで最初のモデルを実行——完全なステップバイステップガイド。',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
@@ -1799,6 +1820,17 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Ollama は `http://localhost:11434` で OpenAI 互換の REST API を公開 - コード変更なしで任意の OpenAI SDK アプリが使用できます。',
           ],
         },
+        quickFacts: {
+          id: 'quick-facts',
+          items: [
+            '**インストール時間:** すべてのオペレーティングシステムで 2 分未満',
+            '**最小 RAM:** 4 GB (3B モデル) / 8 GB (7B モデル)',
+            '**ダウンロード サイズ:** モデルに応じて 2～47 GB (ディスクにキャッシュ)',
+            '**利用可能なモデル:** Meta、Mistral 7B、Qwen、Phi、Llama などから 200 以上のオープンソース モデル',
+            '**API エンドポイント:** `http://localhost:11434` (OpenAI 互換)',
+            '**GPU は不要:** CPU で実行、GPU サポートはオプション (推論高速化)',
+          ],
+        },
         whatIsOllama: {
           id: 'what-is-ollama',
           title: 'Ollama とは何か、そしてなぜ使用するのか？',
@@ -1812,7 +1844,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installMac: {
           id: 'install-on-macos',
           title: 'Ollama を macOS にインストールするにはどうすればよいですか？',
-          content: '2 つの方法があります。インストーラー ダウンロードの方が速いです。Homebrew は brew でソフトウェアを管理する場合に適しています。',
+          content: '**ollama.com から .dmg ファイルをダウンロードするか、Homebrew を使用してください — どちらの方法でも 2 分未満です。** インストーラー ダウンロードの方が速いです。Homebrew は brew でソフトウェアを管理する場合に適しています。',
           numberedItems: [
             'ollama.com/download にアクセスし、「macOS 用ダウンロード」をクリック。',
             'ダウンロードした Ollama.dmg ファイルを開き、Ollama をアプリケーション フォルダにドラッグ。',
@@ -1830,6 +1862,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installWindows: {
           id: 'install-on-windows',
           title: 'Ollama を Windows にインストールするにはどうすればよいですか？',
+          content: '**ollama.com/download からインストーラーをダウンロードして実行してください — インストール時間は 2 分未満です。**',
           numberedItems: [
             'ollama.com/download にアクセスし、「Windows 用ダウンロード」をクリック。',
             'ダウンロードした OllamaSetup.exe インストーラーを実行。Ollama は %LOCALAPPDATA%\\Programs\\Ollama にインストール。',
@@ -1845,7 +1878,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installLinux: {
           id: 'install-on-linux',
           title: 'Ollama を Linux にインストールするにはどうすればよいですか？',
-          content: '1 つのコマンドで任意の Linux ディストリビューションに Ollama をインストール:',
+          content: '**1 つのコマンドで任意の Linux ディストリビューションに Ollama をインストール(数秒で完了):**',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -1858,14 +1891,14 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         firstModel: {
           id: 'pull-and-run-your-first-model',
           title: 'Ollama で最初のモデルをダウンロードして実行するにはどうすればよいですか？',
-          content: 'Ollama のインストール後、このコマンドを実行してモデルをダウンロードして起動:',
+          content: '**Ollama のインストール後、これらのコマンドを実行してモデルをダウンロードし、すぐにチャットを開始します:**',
           codeBlock: '# モデルをダウンロード（~/.ollama/models に保存）\nollama pull llama3.2\n\n# 対話的に実行\nollama run llama3.2\n\n# または 1 ステップでダウンロードして実行\nollama run llama3.2',
           codeLanguage: 'bash',
         },
         recommendedModels: {
           id: 'which-model-to-start-with',
           title: '最初に使用すべきモデルはどれか？',
-          content: '初回実行では、これらの 3 つのモデルはさまざまなハードウェア プロファイルに対応:',
+          content: '**初回実行では、これらの 3 つのモデルはさまざまなハードウェア プロファイルと速度要件に対応:**',
           rows: [
             { 'モデル': 'llama3.2:3b', 'ダウンロード サイズ': '~2 GB', '必要な RAM': '4 GB', '用途': '初回テスト - すべてのマシン' },
             { 'モデル': 'llama3.1:8b', 'ダウンロード サイズ': '~4.7 GB', '必要な RAM': '8 GB', '用途': 'ほとんどのノートパソコンで一般的に使用' },
@@ -1876,7 +1909,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         verify: {
           id: 'verify-ollama-is-working',
           title: 'Ollama が動作していることを確認するにはどうすればよいですか？',
-          content: 'REST API を直接テストして、Ollama が実行され、アクセス可能であることを確認:',
+          content: '**curl コマンドで REST API を直接テストして、Ollama が実行され、アクセス可能であることを確認します:**',
           codeBlock: '# Ollama が実行中であることを確認\ncurl http://localhost:11434\n# 期待: "Ollama is running"\n\n# ダウンロードされたモデルをリスト\nollama list\n\n# API 経由でプロンプトを送信（OpenAI 互換）\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "2+2 は何ですか？",\n  "stream": false\n}\'',
           codeLanguage: 'bash',
         },
@@ -1961,7 +1994,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[初心者向けの最高のローカル LLM モデル](/local-llms/best-beginner-local-llm-models?lang=ja) - ハードウェアごとのモデル推奨',
             '[Local LLM ワンクリック インストーラー](/local-llms/local-llm-one-click-installers?lang=ja) - Ollama への代替ツール',
             '[LM Studio のインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) - 初心者向けの GUI 代替',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=ja) - CLI vs GUI アプローチの詳細比較',
           ],
         },
         faq: {
@@ -2076,7 +2108,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       theme: '入门',
       title: '如何安装 Ollama：macOS、Windows 和 Linux 完整设置指南',
       seoTitle: '安装 Ollama: macOS、Windows、Linux 指南 (2026)',
-      intro: 'Ollama 是一个轻量级推理引擎，使用单一命令在本地运行大型语言模型。安装 2 分钟后，`ollama pull llama3.2:3b` 下载 2 GB 模型，`ollama run llama3.2` 打开聊天界面。Ollama 将模型管理、llama.cpp 推理后端和 OpenAI 兼容的 REST API 整合到 `localhost:11434` 的单一应用程序中，无需 Python 环境、配置文件和 GPU。截至 2026 年 4 月，Ollama 支持 200 多个模型，包括 Meta Llama 3.2、Qwen2.5、Mistral 和 DeepSeek，并将其 API 公开给任何 OpenAI SDK，无需代码修改。',
+      intro: '**Ollama 是一个轻量级推理引擎，使用单一命令在本地运行大型语言模型** — 无需 Python、无需 GPU、最小化设置。本指南介绍如何在 macOS、Windows 和 Linux 上安装 Ollama，以及如何从 Ollama 200 多个开源模型库中运行第一个模型。',
       metaDescription: '在 2 分钟内安装 Ollama。一条命令运行第一个模型——完整分步指南。',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
@@ -2113,6 +2145,17 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Ollama 在 `http://localhost:11434` 公开 OpenAI 兼容的 REST API — 任何 OpenAI SDK 应用都可以无代码修改地使用它。',
           ],
         },
+        quickFacts: {
+          id: 'quick-facts',
+          items: [
+            '**安装时间:** 任何操作系统上都不超过 2 分钟',
+            '**最低 RAM:** 4 GB（3B 模型）/ 8 GB（7B 模型）',
+            '**下载大小:** 2～47 GB，具体取决于模型（缓存在磁盘上）',
+            '**可用模型:** Meta、Mistral 7B、Qwen、Phi、Llama 等 200 多个开源模型',
+            '**API 端点:** `http://localhost:11434`（OpenAI 兼容）',
+            '**无需 GPU:** 在 CPU 上运行；GPU 支持是可选的（用于更快推理）',
+          ],
+        },
         whatIsOllama: {
           id: 'what-is-ollama',
           title: '什么是 Ollama，为什么使用它？',
@@ -2126,7 +2169,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installMac: {
           id: 'install-on-macos',
           title: '如何在 macOS 上安装 Ollama？',
-          content: '有两种方法。安装程序下载更快；如果使用 brew 管理软件，Homebrew 更好。',
+          content: '**从 ollama.com 下载 .dmg 文件或使用 Homebrew — 两种方法都耗时不到 2 分钟。** 安装程序下载更快；如果使用 brew 管理软件，Homebrew 更好。',
           numberedItems: [
             '访问 ollama.com/download 并点击"macOS 下载"。',
             '打开下载的 Ollama.dmg 文件并将 Ollama 拖到应用程序文件夹。',
@@ -2144,6 +2187,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installWindows: {
           id: 'install-on-windows',
           title: '如何在 Windows 上安装 Ollama？',
+          content: '**从 ollama.com/download 下载安装程序并运行 — 安装耗时不到 2 分钟。**',
           numberedItems: [
             '访问 ollama.com/download 并点击"Windows 下载"。',
             '运行下载的 OllamaSetup.exe 安装程序。Ollama 安装到 %LOCALAPPDATA%\\Programs\\Ollama。',
@@ -2159,7 +2203,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         installLinux: {
           id: 'install-on-linux',
           title: '如何在 Linux 上安装 Ollama？',
-          content: '一个命令在任何 Linux 发行版上安装 Ollama：',
+          content: '**一个命令在任何 Linux 发行版上安装 Ollama（几秒钟内完成）:**',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -2172,14 +2216,14 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         firstModel: {
           id: 'pull-and-run-your-first-model',
           title: '如何在 Ollama 中下载并运行第一个模型？',
-          content: 'Ollama 安装后，运行此命令下载并启动模型：',
+          content: '**Ollama 安装后，运行这些命令下载模型并立即开始聊天:**',
           codeBlock: '# 拉取模型（保存到 ~/.ollama/models）\nollama pull llama3.2\n\n# 以交互方式运行\nollama run llama3.2\n\n# 或在一步中拉取并运行\nollama run llama3.2',
           codeLanguage: 'bash',
         },
         recommendedModels: {
           id: 'which-model-to-start-with',
           title: '应该从哪个模型开始？',
-          content: '对于初次运行，这三个模型涵盖不同的硬件配置：',
+          content: '**对于初次运行，这三个模型涵盖不同的硬件配置和速度需求:**',
           rows: [
             { '模型': 'llama3.2:3b', '下载大小': '~2 GB', '所需 RAM': '4 GB', '最适合': '初次测试 — 任何机器' },
             { '模型': 'llama3.1:8b', '下载大小': '~4.7 GB', '所需 RAM': '8 GB', '最适合': '大多数笔记本电脑的一般使用' },
@@ -2190,7 +2234,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         verify: {
           id: 'verify-ollama-is-working',
           title: '如何验证 Ollama 正常工作？',
-          content: '直接测试 REST API 以确认 Ollama 正在运行并可访问：',
+          content: '**使用 curl 命令直接测试 REST API 以确认 Ollama 正在运行并可访问:**',
           codeBlock: '# 检查 Ollama 是否运行\ncurl http://localhost:11434\n# 预期："Ollama is running"\n\n# 列出下载的模型\nollama list\n\n# 通过 API 发送提示（OpenAI 兼容）\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "2+2 是多少？",\n  "stream": false\n}\'',
           codeLanguage: 'bash',
         },
@@ -2275,7 +2319,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[初学者最佳本地 LLM 模型](/local-llms/best-beginner-local-llm-models?lang=zh) - 按硬件推荐模型',
             '[Local LLM 一键安装程序](/local-llms/local-llm-one-click-installers?lang=zh) - Ollama 的替代工具',
             '[如何安装 LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) - 初学者 GUI 替代方案',
-            '[Ollama 与 LM Studio 的对比](/local-llms/how-to-install-lm-studio?lang=zh) - CLI 与 GUI 方法的详细比较',
           ],
         },
         faq: {
