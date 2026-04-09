@@ -368,6 +368,297 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
       },
     },
+    ja: {
+      theme: 'はじめに',
+      title: 'ローカルLLMとは？自分のハードウェアでAIモデルを実行する方法',
+      seoTitle: 'ローカルLLM 2026：メリット・デメリット・入門ガイド',
+      intro: 'ローカルLLM（大規模言語モデル）とは、あなたのハードウェア上で完全に実行されるAIモデルです。インターネット接続不要、API呼び出しなし、データは一切外に出ません。モデルの重みをダウンロードしてOllamaやLM Studioなどの推論エンジンを実行すれば、あなたのCPUまたはGPUから直接応答が得られます。2026年4月現在、初心者向けの実用的なモデルはLlama 3.2 3BおよびPhi-3 Miniです。',
+      metaDescription: 'ローカルLLM：完全なプライバシー、コストゼロ、オフライン利用。メリット・デメリットを比較、OllamaとLM Studioで今すぐ始める。',
+      publishDate: '2026-04-04',
+      readTime: '8分読了',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'ローカルLLM',
+      toc: [
+        { label: '主要ポイント', anchor: 'key-takeaways' },
+        { label: 'ローカルLLMとは？', anchor: 'what-is-a-local-llm' },
+        { label: 'ローカルLLMはどう動く？', anchor: 'how-does-a-local-llm-work' },
+        { label: '必要なハードウェアは？', anchor: 'what-hardware-do-you-need' },
+        { label: 'ローカルLLM vs クラウドAPI：違いは？', anchor: 'local-llm-vs-cloud-api' },
+        { label: 'モデル形式は？', anchor: 'which-model-formats-are-used' },
+        { label: 'いつローカルLLMを使うべき？', anchor: 'when-should-you-use-a-local-llm' },
+        { label: 'よくある質問', anchor: 'common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'ローカルLLM＝自分のCPU/GPUで実行、API費用ゼロ、データ外部送信なし。',
+            '3つの要素：モデルファイル（GGUFまたはsafetensors形式）、推論エンジン（Ollama、LM Studio、llama.cpp）、オプションでチャットUI。',
+            '最小要件：7Bパラメータモデルで4ビット量子化時8GB RAM。通常は16GB あれば十分。',
+            'コンシューマー機では遅い：ローカル7B＝15～40トークン/秒 vs GPT-4o Mini API＝約100トークン/秒。',
+            'ベストユースケース：機密データ処理、オフライン作業、継続費用ゼロ、LLM理解。',
+          ],
+        },
+        whatIsLocalLlm: {
+          title: 'ローカルLLMとは何か',
+          content: [
+            'ローカルLLM（大規模言語モデル）は、あなたが制御するハードウェア上で実行されるAIモデルです。ノートパソコン、デスクトップ、またはオンプレミスサーバーでも構いません。モデルの重みはファイルとしてディスク上に保存され、すべての処理はあなた自身のCPUまたはGPU上で行われます。プロンプトテキストもレスポンスデータも外部サーバーに送信されません。',
+            'こうしたモデルを「ローカル」と呼ぶのは、GPT-4o、Claude 4.6、Gemini 2.5 Proなどのクラウドサービスとの違いを強調するためです。これらクラウドサービスはプロンプトをリモートサーバーで処理してインターネット経由で結果を返します。',
+            'ローカルLLMは多様です。電話で動作する1Bパラメータモデルから、48GB VRAM を要する70Bパラメータモデルまで。初心者向けの一般的なモデル—Meta Llama 3.2 3B、Microsoft Phi-3 Mini、Google Gemma 2 2B—はいずれも8GB RAMのノートパソコンで動作します。',
+          ],
+        },
+        howItWorks: {
+          title: 'ローカルLLMはどう動くか',
+          content: [
+            'ローカルLLM実行には3層が協働します：モデルファイル、推論エンジン、インターフェース。',
+            '**モデルファイル**：ニューラルネットワークの重み（学習された数値）を含みます。ローカル用途ではほぼ常にGGUF形式（llama.cpp プロジェクト開発、圧縮）またはsafetensors形式で保存されます。4ビット精度に量子化した7Bパラメータモデルはディスク上でおよそ4.5GB。',
+            '**推論エンジン**：モデルファイルを読み込み、トークン生成に必要な行列計算を実行します。最も人気のあるエンジン：[Ollama](/local-llms/how-to-install-ollama?lang=ja)（バックグラウンドサービス、OpenAI互換API）、[LM Studio](/local-llms/how-to-install-lm-studio?lang=ja)（デスクトップアプリ、統合チャットUI）、llama.cpp（多くのツールの基礎となるC++ライブラリ）。',
+            '**インターフェース**：モデルとやり取りする場所です。ターミナル、ウェブUI、APIエンドポイント。Ollama などは `http://localhost:11434` に REST API を公開するため、OpenAI互換のアプリケーションをローカルモデルに接続できます。',
+          ],
+        },
+        hardware: {
+          title: 'ローカルLLM実行に必要なハードウェア',
+          content: '必要なハードウェアは、どのモデルを実行したいか、どのくらいの速度が必要かで決まります。',
+          rows: [
+            { 'モデルサイズ': '1B～3B パラメータ', 'RAM': '4～6GB', '速度 (CPU)': '20～60 tok/sec', '例': 'Llama 3.2 1B, Phi-3 Mini' },
+            { 'モデルサイズ': '7B～8B パラメータ', 'RAM': '6～8GB', '速度 (CPU)': '10～30 tok/sec', '例': 'Llama 3.1 8B, Mistral 7B' },
+            { 'モデルサイズ': '13B～14B パラメータ', 'RAM': '10～12GB', '速度 (CPU)': '5～15 tok/sec', '例': 'Llama 2 13B, Qwen2.5 14B' },
+            { 'モデルサイズ': '32B～34B パラメータ', 'RAM': '20～24GB', '速度 (CPU)': '2～6 tok/sec', '例': 'Qwen2.5 32B, DeepSeek-R1' },
+            { 'モデルサイズ': '70B以上', 'RAM': '40～48GB', '速度 (CPU)': '1～3 tok/sec', '例': 'Llama 3.3 70B, Qwen2.5 72B' },
+          ],
+          columns: ['モデルサイズ', 'RAM', '速度 (CPU)', '例'],
+        },
+        hardwareGpu: {
+          title: 'GPUはローカルLLMを高速化する？',
+          content: 'はい、劇的に改善します。NVIDIA RTX 4070 Ti（12GB VRAM）は7Bモデルを80～120トークン/秒で実行（CPU のみの4～8倍高速）。Apple Silicon Mac（M1、M2、M3、M4、M5）は統合メモリを使用し、専用GPUなしで7Bモデルで40～80トークン/秒を達成します。ラップトップユーザー向けに、[ラップトップでローカルLLMを実行](/local-llms/local-llm-on-laptop?lang=ja)でハードウェア固有のアドバイスをご覧ください。',
+        },
+        vsCloud: {
+          title: 'ローカルLLMとクラウドAPI：何が違うか',
+          content: 'トレードオフの関係：プライバシー＋コスト vs 機能＋速度。詳しくは[ローカルLLM vs クラウドAPI](/local-llms/local-llms-vs-cloud-apis?lang=ja)をご覧ください。',
+          rows: [
+            { '項目': 'プライバシー', 'ローカルLLM': '完全—データは絶対に外に出ない', 'クラウドAPI': 'プロバイダーのサーバーで処理' },
+            { '項目': 'コスト', 'ローカルLLM': 'ハードウェア代後は$0/トークン', 'クラウドAPI': '$0.15～15/100万トークン' },
+            { '項目': '速度', 'ローカルLLM': 'コンシューマー機で10～120 tok/sec', 'クラウドAPI': '50～200 tok/sec（負荷による）' },
+            { '項目': 'モデル品質', 'ローカルLLM': '良好—70Bスケールで競争力あり', 'クラウドAPI': '最良（GPT-4o、Claude 4.6 Opus）' },
+            { '項目': 'セットアップ', 'ローカルLLM': 'OllamaやLM Studioで5～15分', 'クラウドAPI': 'APIキー取得で2～5分' },
+            { '項目': 'オフライン', 'ローカルLLM': 'はい—インターネット不要', 'クラウドAPI': 'いいえ—接続が必須' },
+          ],
+          columns: ['項目', 'ローカルLLM', 'クラウドAPI'],
+        },
+        modelFormats: {
+          title: 'ローカルLLMのモデル形式は？',
+          content: [
+            '**GGUF**（GPT-Generated Unified Format）：ローカル推論の標準形式。llama.cpp プロジェクトが開発し、1つのファイルで複数の量子化レベルをサポート。`ollama pull llama3.2`を実行すると、Ollamaは内部でGGUF ファイルをダウンロードします。',
+            '**Safetensors**：Hugging Face の形式、PyTorchベースの推論ツール（transformers、vLLM）で主に使用。研究やサーバーデプロイで一般的。',
+            '**量子化**：モデルの精度を低下させてRAM要件を削減。7B FP16フル精度＝～14GB RAM。7B Q4_K_M量子化（4ビット）＝～4.5GB、品質低下は最小限。初心者ガイドはQ4_K_MまたはQ5_K_M使用。',
+          ],
+        },
+        whenToUse: {
+          title: 'いつローカルLLMを使う？',
+          items: [
+            '**機密データ処理**—医療記録、法的書類、財務データ、個人識別情報（PII）が外部に流出してはならない場合。',
+            '**API費用削減**—高ボリュームバッチ処理でクラウドコストが蓄積する場合。ローカル7Bはハードウェア代後$0/クエリ。',
+            '**オフラインまたは隔離環境**—現場作業、セキュアな施設、インターネット接続不可の運用。',
+            '**学習と実験**—LLM内部動作の理解、コスト懸念なしのプロンプトテスト、ローカルAIツール構築。',
+            '**低遅延アプリケーション**—ネットワーク往復時間が受け入れられず、小規模なローカルモデルで十分な場合。',
+          ],
+        },
+        faqSection: {
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: 'ローカルLLMはGPT-4o の品質に達するか？',
+              a: '現在のコンシューマー機ではいいえ。GPT-4oとClaude 4.6 Opusは複雑な推論、コード生成、命令遵守ベンチマークで勝ります。しかし要約、翻訳、日常的な文章作成では、量子化された13B～34Bモデルは最先端モデルと区別が難しい結果を出します。',
+            },
+              q: 'ローカルLLM実行にGPUは必須？',
+              a: 'いいえ。Ollama、LM Studio、llama.cpp はCPU のみで動作します。GPUは大幅な高速化：NVIDIA RTX 4060（8GB VRAM）＝60～90 tok/sec vs 10～20 tok/sec CPU のみ。Apple Silicon Mac（M1～M5）は統合メモリの GPU加速がデフォルトで、専用GPU なしでも最適です。',
+            },
+              q: 'ローカルLLMモデルはどこからダウンロード？',
+              a: '3つの主要ソース：1. Ollama（ollama.com/library、ワンコマンドダウンロード）、2. Hugging Face（huggingface.co、GGUF＋safetensors）、3. LM Studio内蔵ブラウザ（Hugging Face検索）。[Ollama インストール](/local-llms/how-to-install-ollama?lang=ja)と[LM Studio インストール](/local-llms/how-to-install-lm-studio?lang=ja)をご覧ください。',
+            },
+              q: 'ローカルLLM実行は プライベート？',
+              a: '基本的にははい。モデル推論自体は完全ローカル。ただしローカルLLM上に構築されたアプリケーションがデータを外部に送信する可能性。インターフェースやプラグインレイヤーがテレメトリやクラウド同期を有効にしていないか確認を。[ローカルLLM セキュリティ・プライバシーチェックリスト](/local-llms/local-llm-security-privacy-checklist?lang=ja)をご覧ください。',
+            },
+          ],
+        },
+        nextSteps: {
+          title: '最初のローカルLLM実行の道筋',
+          content: '最速路：[Ollama をインストール](/local-llms/how-to-install-ollama?lang=ja)—1コマンド、macOS/Windows/Linux で5分以内。GUIを好む場合：[LM Studio をインストール](/local-llms/how-to-install-lm-studio?lang=ja)がデスクトップアプリセットアップをガイド。モデル選択は[初心者向けベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models?lang=ja)をご覧ください。',
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            '**llama.cpp — GitHub** : ローカル量子化モデル実行の基礎 C++ ライブラリ',
+            '**Hugging Face — モデルハブ** : 100,000 以上の GGUF、safetensors その他形式リポジトリ',
+            '**Ollama モデルライブラリ** : ワンクリックダウンロード可能な事前量子化モデル一覧',
+          ],
+        },
+        commonMistakes: {
+          title: '初心者の一般的な誤り',
+          items: [
+            'すべてのローカルLLMが等しくプライベートだと想定—インターフェースや量子化によってはデータをログ記録する可能性。',
+            'RAM容量を超えるモデル実行→ディスク スワップ→著しい遅延。',
+            'モデル品質の差異を理解していない—すべてのローカルモデルが複雑タスクでGPT-4oに対抗できるわけではありません。',
+          ],
+        },
+        relatedReading: {
+          title: '関連読み物',
+          items: [
+            '[Ollama をインストール](/local-llms/how-to-install-ollama?lang=ja) : セットアップと最初のモデル',
+            '[LM Studio をインストール](/local-llms/how-to-install-lm-studio?lang=ja) : GUIアプリの代替',
+            '[初心者向けベストローカルLLM](/local-llms/best-beginner-local-llm-models?lang=ja) : RAM 対応モデル推奨',
+            '[ローカルLLM vs クラウドAPI](/local-llms/local-llms-vs-cloud-apis?lang=ja) : 完全比較',
+          ],
+        },
+      },
+    },
+    zh: {
+      theme: '入门',
+      title: '什么是本地LLM？在自己的硬件上运行AI模型的方法',
+      seoTitle: '本地LLM 2026：优势、风险和入门指南',
+      intro: '本地LLM（大型语言模型）是在您自己的硬件上完全运行的AI模型。无需互联网连接，无需API调用，数据永远不会离开您的机器。下载模型权重，运行推理引擎如Ollama或LM Studio，从您的CPU或GPU获取直接响应。2026年4月，初学者最实用的模型是Llama 3.2 3B和Phi-3 Mini。',
+      metaDescription: '本地LLM：完全隐私、零成本、离线使用。比较优劣，用Ollama和LM Studio立即开始。',
+      publishDate: '2026-04-04',
+      readTime: '7分钟',
+      educationalLevel: 'Beginner',
+      primaryTerm: '本地LLM',
+      toc: [
+        { label: '要点摘要', anchor: 'key-takeaways' },
+        { label: '什么是本地LLM？', anchor: 'what-is-a-local-llm' },
+        { label: '本地LLM怎样工作？', anchor: 'how-does-a-local-llm-work' },
+        { label: '需要什么硬件？', anchor: 'what-hardware-do-you-need' },
+        { label: '本地LLM与云API：有何不同？', anchor: 'local-llm-vs-cloud-api' },
+        { label: '使用什么模型格式？', anchor: 'which-model-formats-are-used' },
+        { label: '何时使用本地LLM？', anchor: 'when-should-you-use-a-local-llm' },
+        { label: '常见问题', anchor: 'common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '1. 本地LLM = 在您的CPU/GPU上运行，无API成本，无数据分享。',
+            '2. 三个要素：模型文件（GGUF或safetensors格式）、推理引擎（Ollama、LM Studio、llama.cpp）、可选聊天界面。',
+            '3. 最低要求：7B参数模型4位量化时8GB RAM。16GB可应对大多数日常模型。',
+            '4. 消费者硬件上较慢：本地7B=15-40tokens/秒 vs GPT-4o Mini API=约100tokens/秒。',
+            '5. 最佳用途：敏感数据处理、离线工作、零持续成本、理解LLM。',
+          ],
+        },
+        whatIsLocalLlm: {
+          title: '什么是本地LLM',
+          content: [
+            '本地LLM（大型语言模型）是在您控制的硬件上运行的AI模型。可以是笔记本、台式机或本地服务器。模型权重存储为磁盘文件，所有处理在您自己的CPU或GPU上进行。无数据发送到外部服务器。',
+            '"本地"一词区分这些模型与OpenAI GPT-4o、Anthropic Claude 4.6、Google Gemini 2.5 Pro等云服务，云服务在远程服务器处理您的提示并通过互联网返回结果。',
+            '本地LLM种类丰富：从运行在手机上的1B参数模型到需要48GB VRAM的70B参数模型。初学者常用：Meta Llama 3.2 3B、Microsoft Phi-3 Mini、Google Gemma 2 2B（全部可在8GB RAM笔记本上运行）。',
+          ],
+        },
+        howItWorks: {
+          title: '本地LLM如何工作',
+          content: [
+            '三层协作：模型文件、推理引擎、界面。',
+            '**模型文件**：包含神经网络权重（学习的数值）。本地使用几乎总是采用GGUF格式（llama.cpp项目开发、压缩）或safetensors格式。4位精度的7B参数模型约4.5GB磁盘空间。',
+            '**推理引擎**：读取模型文件、执行token生成所需的矩阵计算。最受欢迎的引擎：[Ollama](/local-llms/how-to-install-ollama?lang=zh)（后台服务、OpenAI兼容API）、[LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)（桌面应用、内置聊天UI）、llama.cpp（大多数工具的基础C++库）。',
+            '**界面**：与模型交互的地方。终端、网页UI或API端点。Ollama在`http://localhost:11434`公开REST API，连接任何OpenAI兼容应用到本地模型。',
+          ],
+        },
+        hardware: {
+          title: '运行本地LLM需要什么硬件',
+          content: '硬件要求取决于您要运行哪个模型以及需要的速度。',
+          rows: [
+            { '模型大小': '1B–3B参数', 'RAM需求': '4–6 GB', '速度(CPU)': '20–60 tokens/秒', '示例模型': 'Llama 3.2 1B, Phi-3 Mini' },
+            { '模型大小': '7B–8B参数', 'RAM需求': '6–8 GB', '速度(CPU)': '10–30 tokens/秒', '示例模型': 'Llama 3.1 8B, Mistral 7B' },
+            { '模型大小': '13B–14B参数', 'RAM需求': '10–12 GB', '速度(CPU)': '5–15 tokens/秒', '示例模型': 'Llama 2 13B, Qwen2.5 14B' },
+            { '模型大小': '32B–34B参数', 'RAM需求': '20–24 GB', '速度(CPU)': '2–6 tokens/秒', '示例模型': 'Qwen2.5 32B, DeepSeek-R1 32B' },
+            { '模型大小': '70B+参数', 'RAM需求': '40–48 GB', '速度(CPU)': '1–3 tokens/秒', '示例模型': 'Llama 3.3 70B, Qwen2.5 72B' },
+          ],
+          columns: ['模型大小', 'RAM需求', '速度(CPU)', '示例模型'],
+        },
+        hardwareGpu: {
+          title: 'GPU是否加快本地LLM',
+          content: '是的，大幅加快。NVIDIA RTX 4070 Ti（12GB VRAM）运行7B模型80–120 tokens/秒（仅CPU的4–8倍）。Apple Silicon Mac（M1、M2、M3、M4、M5）使用统一内存达到7B模型40–80 tokens/秒，无独立GPU。笔记本用户见[在笔记本上运行本地LLM](/local-llms/local-llm-on-laptop?lang=zh)获取硬件特定建议。',
+        },
+        vsCloud: {
+          title: '本地LLM与云API的区别',
+          content: '核心权衡：隐私+成本 vs 能力+速度。完整比较见[本地LLM vs 云API](/local-llms/local-llms-vs-cloud-apis?lang=zh)。',
+          rows: [
+            { '因素': '隐私', '本地LLM': '完全—数据永不离开您的机器', '云API': '在提供商服务器上处理' },
+            { '因素': '成本', '本地LLM': '硬件后$0/token', '云API': '按token计费（$0.15–15/100万tokens）' },
+            { '因素': '速度', '本地LLM': '消费者硬件10–120 tokens/秒', '云API': '50–200 tokens/秒（负载变化）' },
+            { '因素': '模型质量', '本地LLM': '好—70B规模有竞争力', '云API': '最好（GPT-4o、Claude 4.6 Opus）' },
+            { '因素': '设置时间', '本地LLM': 'Ollama或LM Studio 5–15分钟', '云API': '获取API密钥2–5分钟' },
+            { '因素': '离线使用', '本地LLM': '是—无需互联网', '云API': '否—需要活跃连接' },
+          ],
+          columns: ['因素', '本地LLM', '云API'],
+        },
+        modelFormats: {
+          title: '本地LLM使用什么模型格式',
+          content: [
+            '**GGUF**（GPT-Generated Unified Format）：本地推理的标准格式。由llama.cpp项目开发，一个文件中支持多个量化级别。`ollama pull llama3.2`内部下载GGUF文件。',
+            '**Safetensors**：Hugging Face格式，主要用于PyTorch推理工具（transformers、vLLM）。在研究和服务器部署中更常见。',
+            '**量子化**：降低模型精度以减少RAM需求。7B FP16全精度约14GB RAM。7B Q4_K_M量子化（4位）约4.5GB，品质损失最小。初学者指南使用Q4_K_M或Q5_K_M。',
+          ],
+        },
+        whenToUse: {
+          title: '何时使用本地LLM',
+          items: [
+            '1. **处理敏感数据**—医疗记录、法律文件、财务数据、个人身份信息（PII）不能离开基础设施。',
+            '2. **消除API成本**—高容量批处理，云成本累积。本地7B硬件后成本为零。',
+            '3. **离线或隔离环境**—现场工作、安全设施或必须无互联网运行的应用。',
+            '4. **学习和实验**—理解LLM内部运作、无成本顾虑的提示测试、本地AI工具开发。',
+            '5. **低延迟应用**—网络往返时间不可接受且较小本地模型足够的任务。',
+          ],
+        },
+        faqSection: {
+          title: '常见问题',
+          faqs: [
+            {
+              q: '本地LLM能达到GPT-4o的质量吗？',
+              a: '消费者硬件上不能。GPT-4o和Claude 4.6 Opus在复杂推理、代码生成、指令遵循基准上更优。但13B–34B良好量化的模型在摘要、翻译和日常写作中表现与前沿模型难以区分。',
+            },
+            {
+              q: '运行本地LLM需要GPU吗？',
+              a: '不需要。Ollama、LM Studio、llama.cpp全在CPU上运行。GPU大幅加快：NVIDIA RTX 4060（8GB VRAM）60–90 tokens/秒 vs CPU 10–20 tokens/秒。Apple Silicon Mac（M1–M5）默认GPU加速统一内存，无独立GPU也最优。',
+            },
+            {
+              q: '本地LLM模型从何处下载？',
+              a: '三个主要来源：1. Ollama（ollama.com/library，单命令下载）2. Hugging Face（huggingface.co，GGUF+safetensors）3. LM Studio内置浏览器（直接搜索Hugging Face）。见[安装Ollama](/local-llms/how-to-install-ollama?lang=zh)和[安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)。',
+            },
+            {
+              q: '运行本地LLM隐私吗？',
+              a: '基本是。模型推理本身完全本地。但基于本地LLM的应用可能向外部发送数据。检查使用的界面或插件层是否启用了遥测或云同步。见[本地LLM安全隐私检查清单](/local-llms/local-llm-security-privacy-checklist?lang=zh)完整审核指南。',
+            },
+          ],
+        },
+        nextSteps: {
+          title: '开始使用本地LLM',
+          content: '最快途径：[安装Ollama](/local-llms/how-to-install-ollama?lang=zh)—单条命令，macOS/Windows/Linux 5分钟内。偏好GUI：[安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)带您完成桌面应用设置。选择模型：见[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models?lang=zh)。',
+        },
+        sources: {
+          title: '资源',
+          items: [
+            '1. **llama.cpp — GitHub** : 本地运行量化模型的基础C++库',
+            '2. **Hugging Face — Model Hub** : 100,000+个GGUF、safetensors等格式库',
+            '3. **Ollama Model Library** : 预量化模型，单击下载',
+          ],
+        },
+        commonMistakes: {
+          title: '入门常见错误',
+          items: [
+            '1. 假设所有本地LLM隐私级别相等—某些界面或量化可能仍记录数据。',
+            '2. 运行过大模型—RAM不足→磁盘交换→严重变慢。',
+            '3. 不理解模型质量差异—并非所有本地模型在复杂任务上与GPT-4o匹敌。',
+          ],
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[安装Ollama](/local-llms/how-to-install-ollama?lang=zh) : 设置和第一个模型',
+            '[安装LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) : GUI替代方案',
+            '[初学者最佳本地LLM](/local-llms/best-beginner-local-llm-models?lang=zh) : RAM匹配推荐',
+            '[本地LLM vs 云API](/local-llms/local-llms-vs-cloud-apis?lang=zh) : 完整比较',
+          ],
+        },
+      },
+    },
     de: {
       theme: 'Erste Schritte',
       title: 'Was sind lokale LLMs? Wie die Ausführung von KI-Modellen auf Ihrer eigenen Hardware funktioniert',
