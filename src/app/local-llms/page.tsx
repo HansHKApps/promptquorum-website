@@ -39,12 +39,16 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
+  const langSuffix = selectedLang === 'en' ? '' : `?lang=${selectedLang}`
+  const canonicalUrl = `https://www.promptquorum.com/local-llms${langSuffix}`
+
   const jsonLd = [
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: 'Local LLMs 2026: Complete Guide to Running AI Models Offline',
-      url: 'https://www.promptquorum.com/local-llms',
+      url: canonicalUrl,
+      'inLanguage': selectedLang,
       datePublished: '2026-04-01',
       dateModified: '2026-04-07',
       description: 'As of April 2026: 88 guides on local LLMs covering Ollama, LM Studio, hardware requirements, model benchmarks, fine-tuning, local RAG, and enterprise deployment.',

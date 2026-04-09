@@ -85,7 +85,7 @@ export const translations = {
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt Engineering Hub: 80 Guides | PromptQuorum",
     promptEngineeringHubDescription: "80 research-backed articles on prompt engineering techniques, frameworks (CO-STAR, CRAFT, RISEN), tools, evaluation, governance, and workflows for developers.",
-    localLlmsHubTitle: "Local LLMs 2026: Run AI Offline with Ollama & LM Studio",
+    localLlmsHubTitle: "Local LLMs 2026: Run Offline with Ollama & LM Studio",
     localLlmsHubDescription: "Deploy local LLMs privately: compare Ollama vs LM Studio, VRAM requirements, quantization techniques. Instantly test your models with PromptQuorum.",
     compareMetaTitle: "PromptQuorum vs. Competitors: Feature Comparison (2026)",
     compareMetaDescription: "Compare PromptQuorum with Poe, LM Arena, OpenMark, and AiZolo: multi-model dispatch, consensus scoring, local LLM support, API control, 9 frameworks.",
@@ -193,7 +193,7 @@ export const translations = {
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt-Engineering-Hub: 80 Leitfäden | PromptQuorum",
     promptEngineeringHubDescription: "80 forschungsbasierte Artikel zu Prompt-Engineering-Techniken, Frameworks (CO-STAR, CRAFT, RISEN), Tools, Bewertung und Workflows für Entwickler.",
-    localLlmsHubTitle: "Local LLMs 2026: Privat mit Ollama & LM Studio",
+    localLlmsHubTitle: "Lokale LLMs 2026: Mit Ollama & LM Studio privat",
     localLlmsHubDescription: "Deployen Sie private LLMs: Ollama vs LM Studio, Hardware-Anforderungen, Quantisierungstechniken. Testen Sie Ihre Modelle sofort mit PromptQuorum.",
     compareMetaTitle: "PromptQuorum vs. Konkurrenz: Vergleich 2026",
     compareMetaDescription: "Vergleichen Sie PromptQuorum mit Poe, LM Arena und OpenMark: Multi-Model-Versand, Konsensanalyse, lokaler LLM-Support, API-Kontrolle, 9 Frameworks.",
@@ -301,7 +301,7 @@ export const translations = {
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Hub d'ingénierie des prompts: 80 Guides | PromptQuorum",
     promptEngineeringHubDescription: "80 articles basés sur la recherche sur les techniques d'ingénierie des prompts, frameworks (CO-STAR, CRAFT, RISEN), outils, évaluation et workflows.",
-    localLlmsHubTitle: "Local LLMs 2026 : Exécutez l'IA en privé",
+    localLlmsHubTitle: "Local LLMs 2026 : Exécutez votre IA en privé",
     localLlmsHubDescription: "Déployez les LLMs en privé: comparez Ollama vs LM Studio, exigences matérielles, techniques de quantification. Testez vos modèles avec PromptQuorum.",
     compareMetaTitle: "PromptQuorum vs concurrents: Comparaison des fonctionnalités",
     compareMetaDescription: "Comparez PromptQuorum avec Poe, LM Arena et OpenMark: multi-modèle dispatch, consensus, LLM local, contrôle API, 9 frameworks intégrés.",
