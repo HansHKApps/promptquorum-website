@@ -6831,18 +6831,24 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: [],
+        mainEntity: [
+          { '@type': 'Question', name: 'Welches ist das kleinste lokale LLM, das nützliche Ausgaben produziert?', acceptedAnswer: { '@type': 'Answer', text: 'Ab April 2026 ist das praktische Minimum für nützliche Ausgaben ein 3B-Modell bei Q4_K_M-Quantisierung. Modelle unter 2B-Parametern haben Schwierigkeiten mit mehrstufigen Anweisungen.' } },
+          { '@type': 'Question', name: 'Kann ein 3B-Modell auf einem Telefon ausgeführt werden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Llama 3.2 1B und 3B sind für Mobile-Bereitstellung konzipiert. iOS über MLC LLM, Android-Unterstützung verfügbar. Snapdragon 8 Gen 3 oder Apple A17 Pro erzeugen 15–30 tok/sec.' } },
+          { '@type': 'Question', name: 'Sind kleine Modelle gut für Zusammenfassungen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Zusammenfassung ist einer der stärksten Anwendungsfälle. Gemma 2 2B und Llama 3.2 3B erzeugen zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern.' } },
+          { '@type': 'Question', name: 'Wie viel schneller ist ein 2B-Modell als ein 7B-Modell auf der CPU?', acceptedAnswer: { '@type': 'Answer', text: 'Etwa 2–3× schneller. Gemma 2 2B erzeugt 40–60 tok/sec vs. 10–20 tok/sec für Mistral 7B auf demselben Laptop-CPU.' } },
+          { '@type': 'Question', name: 'Welches kleine Modell ist am besten für Nicht-Englisch-Sprachen?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 3B unterstützt nativ 29 Sprachen darunter Chinesisch, Japanisch, Koreanisch und Arabisch. Gemma 2 2B und Phi-4 Mini sind Englisch-optimiert.' } },
+        ],
       },
       sections: {},
     },
     fr: {
       theme: 'Best Models',
-      seoTitle: 'Meilleurs petits LLMs locaux 2026 : modèles sub-4B évalués',
+      seoTitle: 'Meilleurs petits LLMs locaux 2026 : modèles sub-4B',
       metaDescription: 'Meilleurs petits LLMs locaux 2026 : Phi-4 Mini 3.8B (68% MMLU), Gemma 2 2B (plus rapide), Qwen2.5 3B (codage), Llama 3.2 3B. RAM 4–8 GB.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'Meilleurs petits LLMs locaux 2026 : modèles sub-4B évalués',
+        headline: 'Meilleurs petits LLMs locaux 2026 : modèles sub-4B',
         description: 'Meilleurs petits LLMs locaux 2026 : Phi-4 Mini 3.8B (68% MMLU), Gemma 2 2B (plus rapide), Qwen2.5 3B (codage), Llama 3.2 3B. RAM 4–8 GB.',
         datePublished: '2026-04-04',
         dateModified: '2026-04-10',
@@ -6855,19 +6861,25 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: [],
+        mainEntity: [
+          { '@type': 'Question', name: 'Quel est le plus petit LLM local qui produit des résultats utiles ?', acceptedAnswer: { '@type': 'Answer', text: 'En avril 2026, le minimum pratique pour une sortie utile est un modèle 3B à quantification Q4_K_M. Les modèles sous 2B paramètres ont du mal avec les instructions multi-étapes.' } },
+          { '@type': 'Question', name: 'Un modèle 3B peut-il fonctionner sur un téléphone ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — Llama 3.2 1B et 3B sont conçus pour le déploiement mobile. iOS via MLC LLM, support Android disponible. Snapdragon 8 Gen 3 ou Apple A17 Pro produisent 15–30 tok/sec.' } },
+          { '@type': 'Question', name: 'Les petits modèles sont-ils bons pour la synthèse ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — la synthèse est l\'un des meilleurs cas d\'usage. Gemma 2 2B et Llama 3.2 3B produisent de manière fiable des résumés précis de textes jusqu\'à ~4 000 mots.' } },
+          { '@type': 'Question', name: 'Combien de fois plus rapide est un modèle 2B qu\'un modèle 7B sur CPU ?', acceptedAnswer: { '@type': 'Answer', text: 'Environ 2–3 fois plus rapide. Gemma 2 2B génère 40–60 tok/sec vs 10–20 tok/sec pour Mistral 7B sur le même CPU portable.' } },
+          { '@type': 'Question', name: 'Quel petit modèle est le meilleur pour les langues autres que l\'anglais ?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 3B supporte 29 langues dont le chinois, le japonais, le coréen et l\'arabe. Gemma 2 2B et Phi-4 Mini sont optimisés pour l\'anglais.' } },
+        ],
       },
       sections: {},
     },
     ja: {
       theme: 'Best Models',
       seoTitle: '最高の小型ローカル LLM 2026: Sub-4B モデル評価',
-      metaDescription: '最高の小型ローカル LLM 2026: Phi-4 Mini 3.8B (68% MMLU)、Gemma 2 2B (最速)、Qwen2.5 3B (コーディング)、Llama 3.2 3B。4–8 GB RAM。',
+      metaDescription: '2026年最高の小型ローカルLLM: Phi-4 Mini 3.8B (68% MMLU最強推論)、Gemma 2 2B (最速CPU推論40-60トークン/秒)、Qwen2.5 3B (最高コーディング)、Llama 3.2 3B。4–8 GB RAM。',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: '最高の小型ローカル LLM 2026: Sub-4B モデル評価',
-        description: '最高の小型ローカル LLM 2026: Phi-4 Mini 3.8B (68% MMLU)、Gemma 2 2B (最速)、Qwen2.5 3B (コーディング)、Llama 3.2 3B。4–8 GB RAM。',
+        description: '2026年最高の小型ローカルLLM: Phi-4 Mini 3.8B (68% MMLU最強推論)、Gemma 2 2B (最速CPU推論40-60トークン/秒)、Qwen2.5 3B (最高コーディング)、Llama 3.2 3B。4–8 GB RAM。',
         datePublished: '2026-04-04',
         dateModified: '2026-04-10',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models?lang=ja',
@@ -6879,19 +6891,25 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: [],
+        mainEntity: [
+          { '@type': 'Question', name: 'ローカルLLMの中で有用な出力を産み出す最小のモデルは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年4月現在、実用的な最小値はQ4_K_M量子化での3Bモデルです。2B未満のパラメータを持つモデルは、複数ステップの指示に苦労しています。' } },
+          { '@type': 'Question', name: '3Bモデルはスマートフォンで実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Llama 3.2 1BおよびLlama 3.2 3Bはモバイルデバイスでの実行用に設計されています。iOSはMLC LLMを通じて、Androidもサポートされています。Snapdragon 8 Gen 3またはApple A17 Proで15–30トークン/秒を生成します。' } },
+          { '@type': 'Question', name: '小型モデルは要約に適していますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。要約は最強の使用例の1つです。Gemma 2 2BおよびLlama 3.2 3Bは最大約4000語までのテキストの正確な要約を確実に生成できます。' } },
+          { '@type': 'Question', name: '2Bモデルはやり7Bモデルと比べてCPUでどの位速いですか？', acceptedAnswer: { '@type': 'Answer', text: 'おおよそ2~3倍速いです。Gemma 2 2Bは40-60トークン/秒を生成し、同じノートパソコンCPUでのMistral 7Bは10-20トークン/秒です。' } },
+          { '@type': 'Question', name: '英語以外の言語に最適な小型モデルはどれですか？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 3Bは中国語、日本語、韓国語、アラビア語を含む29言語をネイティブでサポートしています。Gemma 2 2BおよびPhi-4 Miniは英語最適化です。' } },
+        ],
       },
       sections: {},
     },
     zh: {
       theme: 'Best Models',
       seoTitle: '最佳小型本地 LLM 2026：Sub-4B 模型评价',
-      metaDescription: '最佳小型本地 LLM 2026：Phi-4 Mini 3.8B (68% MMLU)、Gemma 2 2B (最快)、Qwen2.5 3B (编码)、Llama 3.2 3B。4–8 GB RAM。',
+      metaDescription: '2026年最佳小型本地LLM排名: Phi-4 Mini 3.8B (68% MMLU最强推理)、Gemma 2 2B (最快CPU推论40-60令牌/秒)、Qwen2.5 3B (最佳编码)、Llama 3.2 3B。需要4–8 GB RAM。',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: '最佳小型本地 LLM 2026：Sub-4B 模型评价',
-        description: '最佳小型本地 LLM 2026：Phi-4 Mini 3.8B (68% MMLU)、Gemma 2 2B (最快)、Qwen2.5 3B (编码)、Llama 3.2 3B。4–8 GB RAM。',
+        description: '2026年最佳小型本地LLM排名: Phi-4 Mini 3.8B (68% MMLU最强推理)、Gemma 2 2B (最快CPU推论40-60令牌/秒)、Qwen2.5 3B (最佳编码)、Llama 3.2 3B。需要4–8 GB RAM。',
         datePublished: '2026-04-04',
         dateModified: '2026-04-10',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models?lang=zh',
@@ -6903,7 +6921,13 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: [],
+        mainEntity: [
+          { '@type': 'Question', name: '能产生有用输出的最小本地LLM是什么？', acceptedAnswer: { '@type': 'Answer', text: '截至2026年4月，实用的最小值是Q4_K_M量化的3B模型。少于2B参数的模型在多步骤指令方面遇到困难。' } },
+          { '@type': 'Question', name: '3B模型能在手机上运行吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。Llama 3.2 1B和3B专为移动设备部署而设计。iOS通过MLC LLM，Android也有支持。Snapdragon 8 Gen 3或Apple A17 Pro产生15–30令牌/秒。' } },
+          { '@type': 'Question', name: '小模型适合总结吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。总结是最强的用途之一。Gemma 2 2B和Llama 3.2 3B能够可靠地产生最多约4000字的文本的准确摘要。' } },
+          { '@type': 'Question', name: '2B模型在CPU上比7B模型快多少？', acceptedAnswer: { '@type': 'Answer', text: '大约快2–3倍。Gemma 2 2B在同一笔记本电脑CPU上产生40–60令牌/秒，而Mistral 7B产生10–20令牌/秒。' } },
+          { '@type': 'Question', name: '哪个小模型最适合英语以外的语言？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 3B原生支持29种语言，包括中文、日文、韩文和阿拉伯文。Gemma 2 2B和Phi-4 Mini主要针对英文优化。' } },
+        ],
       },
       sections: {},
     },
@@ -6914,7 +6938,7 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
       theme: 'Best Models',
       title: '70B Local LLM Guide: Consumer Hardware Setup 2026',
       seoTitle: '70B Local LLMs on Consumer Hardware: RAM, GPU, Setup 2026',
-      intro: 'Running a 70B parameter model locally requires 40–48 GB of RAM at Q4_K_M quantization. This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading. As of April 2026, Llama 3.3 70B and Qwen2.5 72B are the two primary 70B models available.',
+      intro: 'Running a 70B parameter model locally requires 40–48 GB of RAM at [Q4_K_M quantization](/local-llms/quantization-guide). This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading. As of April 2026, Llama 3.3 70B and Qwen2.5 72B are the two primary 70B models available.',
       metaDescription: 'Run 70B local LLMs on consumer hardware: RAM requirements, GPU options, layer offloading, and quantization. What you need for Llama 3.3 Free beta — April 2026.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-10',
@@ -6943,7 +6967,14 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: [],
+        mainEntity: [
+          { '@type': 'Question', 'name': 'What is the cheapest hardware that can run a 70B model usably?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'As of April 2026, a used Mac Studio M2 Ultra (64 GB unified memory) for ~$2,000 is the cheapest path to 70B inference at 25+ tok/sec. A new machine equivalent would be the M3 Max MacBook Pro 64 GB (~$3,500). An NVIDIA RTX 4090 desktop build (24 GB VRAM + 32 GB RAM) costs ~$3,000–$4,000 total but produces slower inference due to layer offloading.' } },
+          { '@type': 'Question', 'name': 'Can I run a 70B model on two GPUs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — llama.cpp and Ollama support multi-GPU inference on NVIDIA hardware. Two RTX 4090s (48 GB total VRAM) fit a Q4_K_M 70B model entirely in VRAM. Ollama handles multi-GPU automatically when multiple GPUs are present. Tensor parallelism in llama.cpp (`--tensor-split`) controls how layers are distributed.' } },
+          { '@type': 'Question', 'name': 'How does 70B local quality compare to GPT-4o?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen2.5 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-4o (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-4o on most tasks.' } },
+          { '@type': 'Question', 'name': 'Does Ollama support running 70B models automatically?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Running `ollama run llama3.3:70b` downloads and runs the model with automatic GPU layer offloading. Ollama detects available VRAM and system RAM, offloads as many layers as possible to GPU, and runs the rest on CPU. No manual configuration is required for basic use.' } },
+          { '@type': 'Question', 'name': 'How much electricity does running a 70B model use?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A Mac Studio M2 Ultra running 70B inference draws approximately 30–50 W. An NVIDIA RTX 4090 desktop under load draws 350–450 W. At $0.15 per kWh, continuous 70B inference on an RTX 4090 costs approximately $0.05–0.07 per hour. Apple Silicon is 7–10× more energy-efficient for this workload.' } },
+          { '@type': 'Question', 'name': 'Are 70B models worth it compared to 13B models for everyday tasks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For complex reasoning, long-document analysis, and nuanced writing, yes — the quality difference is noticeable. For simple summarization, Q&A, and classification, a 13B or even 7B model produces nearly identical output. Run both on your specific use case with PromptQuorum to quantify the quality difference before investing in 70B hardware.' } },
+        ],
       },
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -7012,7 +7043,7 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
         appleSilicon: {
           title: 'Why Is Apple Silicon the Best Consumer Option for 70B Models?',
           content: [
-            '**Apple Silicon uses unified memory — the CPU and GPU share the same physical memory pool.** An M3 Max MacBook Pro with 64 GB of unified memory can run a 70B model at Q4_K_M entirely on GPU, achieving 20–30 tok/sec with no layer offloading overhead.',
+            '**Apple Silicon uses [unified memory](/local-llms/apple-silicon-unified-memory) — the CPU and GPU share the same physical memory pool.** An M3 Max MacBook Pro with 64 GB of unified memory can run a 70B model at Q4_K_M entirely on GPU, achieving 20–30 tok/sec with no layer offloading overhead.',
             'On NVIDIA hardware, the GPU and system RAM are separate. A 24 GB VRAM GPU can only hold ~60% of a Q4_K_M 70B model; the remaining layers run on CPU, creating a memory bandwidth bottleneck that reduces speed to 10–18 tok/sec.',
             'As of April 2026, the Mac Studio M2 Ultra (64 GB, ~$2,000 refurbished) is the most cost-effective path to [70B local inference](/local-llms/?lang=en) at usable speed. A new M3 Max MacBook Pro 64 GB costs approximately $3,500.',
           ],
@@ -7023,7 +7054,7 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
         },
         nvidiaOffload: {
           title: 'How Does NVIDIA GPU + Layer Offloading Work for 70B Models?',
-          content: '**Ollama and llama.cpp support splitting a model across GPU VRAM and system RAM.** Layers loaded in VRAM run at GPU speed; layers in system RAM run at CPU speed:',
+          content: '**Ollama and llama.cpp support [layer offloading](/local-llms/gpu-layer-offloading) — splitting a model across GPU VRAM and system RAM.** Layers loaded in VRAM run at GPU speed; layers in system RAM run at CPU speed:',
           codeBlock: '# Ollama automatically offloads as many layers as fit in VRAM\n# To explicitly control layers:\nollama run llama3.3:70b\n\n# Check how many layers are on GPU:\nollama ps\n# Output shows: llama3.3:70b  ...  23/80 GPU layers\n\n# For llama.cpp directly:\n./llama-cli -m llama-3.3-70b-q4_k_m.gguf \\\n  -ngl 40   # number of layers to offload to GPU\n  --ctx-size 4096',
           codeLanguage: 'bash',
         },
@@ -7142,7 +7173,7 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
               a: 'On [MMLU and HumanEval](/local-llms/llm-benchmarks?lang=en) benchmarks, Llama 3.3 70B (82%, 88%) and Qwen2.5 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-4o (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-4o on most tasks.',
             },
             {
-              q: 'Does Ollama support running 70B models automatically?',
+              q: 'Does [Ollama](/local-llms/ollama-installation-guide) support running 70B models automatically?',
               a: 'Yes. Running `ollama run llama3.3:70b` downloads and runs the model with automatic GPU layer offloading. Ollama detects available VRAM and system RAM, offloads as many layers as possible to GPU, and runs the rest on CPU. No manual configuration is required for basic use.',
             },
             {
