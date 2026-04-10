@@ -6656,7 +6656,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   'llm-quantization-explained': {
     en: {
       theme: 'Best Models',
-      title: 'LLM Quantization Explained: How Q4_K_M, Q8_0, and GGUF Formats Work',
+      title: 'LLM Quantization Explained: Q4_K_M, Q8_0, GGUF Formats',
       seoTitle: 'LLM Quantization Explained 2026: Q4_K_M vs RAM Trade-offs',
       intro: 'LLM quantization reduces model weight precision from 32-bit or 16-bit floats to 4-bit or 8-bit integers, cutting RAM requirements by 50–75% with minimal quality loss. Q4_K_M is the standard recommended quantization for local inference — it reduces a 7B model from ~14 GB to ~4.5 GB while retaining 97–99% of the original model quality on standard benchmarks.',
       metaDescription: 'LLM quantization: Q4_K_M reduces 7B models from 14 GB to 4.5 GB with 1–3% quality loss. Compare Q3_K_S, Q5_K_M, Q8_0 quantizations, GGUF format, and RAM savings per model size 2026.',
@@ -6668,7 +6668,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        headline: 'LLM Quantization Explained: How Q4_K_M, Q8_0, and GGUF Formats Work',
+        headline: 'LLM Quantization Explained: Q4_K_M, Q8_0, GGUF Formats',
         description: 'LLM quantization: Q4_K_M reduces 7B models from 14 GB to 4.5 GB with 1–3% quality loss. Compare Q3_K_S, Q5_K_M, Q8_0 quantizations, GGUF format, and RAM savings per model size 2026.',
         datePublished: '2026-04-04',
         dateModified: '2026-04-10',
@@ -6898,6 +6898,17 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               q: 'Is there a quality difference between Q4_K_M models from different providers on Hugging Face?',
               a: 'The quantization algorithm is standardized in llama.cpp, so Q4_K_M quantizations of the same base model should be nearly identical regardless of who created the GGUF file. However, some providers apply additional adjustments (imatrix quantization) that improve quality. Files described as "imat" or "importance matrix" quantized are generally higher quality at the same bit count.',
             },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading',
+          items: [
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Download quantized GGUF models with Ollama defaults to Q4_K_M automatically',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — 4GB to 16GB quantization recommendations for beginner hardware',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — RAM requirements for each quantization level across GPU tiers',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — Download and switch between Q4_K_M, Q5_K_M, Q8_0 variants visually',
+            '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — Benchmark scores for Llama, Mistral, Qwen at each quantization level',
+            '[Ollama vs LM Studio 2026](/local-llms/ollama-vs-lm-studio) — How both tools download and run quantized models differently',
           ],
         },
         sources: {
