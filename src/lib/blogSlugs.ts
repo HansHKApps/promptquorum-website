@@ -11,6 +11,7 @@ export const SLUG_TO_POST_ID = {
   'what-is-ai-consensus-scoring': 'whatIsConsensusScoring',
   'prompt-optimization-market-overview-2026': 'promptToolsMarket2026',
   'frontier-models-prompt-library': 'frontierModelsPromptLibrary',
+  'geopolitics-and-ai': 'geopolitics-and-ai',
 } as const
 
 export type BlogSlug = keyof typeof SLUG_TO_POST_ID
