@@ -82,7 +82,7 @@
     <!-- Healthcare -->
     <rect x="290" y="85" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
     <text x="400" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">
-      Healthcare & Finance
+      Healthcare &amp; Finance
     </text>
     <text x="300" y="125" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
       FDA, FTC oversight
@@ -97,7 +97,7 @@
     <!-- Employment -->
     <rect x="290" y="190" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
     <text x="400" y="210" font-family="system-ui, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">
-      Employment & Housing
+      Employment &amp; Housing
     </text>
     <text x="300" y="230" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
       EEOC, HUD rules
@@ -158,7 +158,7 @@
     <!-- Content Regulation -->
     <rect x="560" y="195" width="220" height="110" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
     <text x="670" y="215" font-family="system-ui, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">
-      Content & Security
+      Content &amp; Security
     </text>
     <text x="570" y="235" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
       • Political messages,

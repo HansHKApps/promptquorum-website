@@ -54,7 +54,7 @@
     <text x="230" y="110" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">AI Act</text>
     <text x="230" y="128" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">Negotiated</text>
     <text x="230" y="143" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">Final agreement on</text>
-    <text x="230" y="156" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">risk tiers & rules</text>
+    <text x="230" y="156" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle" font-weight="500">risk tiers &amp; rules</text>
   </g>
 
   <!-- China -->

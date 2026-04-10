@@ -82,7 +82,7 @@
     <!-- Healthcare -->
     <rect x="290" y="85" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
     <text x="400" y="105" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">
-      Gesundheit & Finanzen
+      Gesundheit &amp; Finanzen
     </text>
     <text x="300" y="122" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
       FDA, FTC Übersicht
@@ -97,7 +97,7 @@
     <!-- Employment -->
     <rect x="290" y="190" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
     <text x="400" y="210" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">
-      Beschäftigung & Wohnen
+      Beschäftigung &amp; Wohnen
     </text>
     <text x="300" y="227" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
       EEOC, HUD Regeln
@@ -112,7 +112,7 @@
     <!-- Tech Sector -->
     <rect x="290" y="295" width="220" height="150" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
     <text x="400" y="315" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">
-      Technologie & Sonstiges
+      Technologie &amp; Sonstiges
     </text>
     <text x="300" y="332" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
       Größtenteils freiwillig
@@ -159,7 +159,7 @@
     <!-- Content Regulation -->
     <rect x="560" y="195" width="220" height="110" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
     <text x="670" y="215" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">
-      Inhalt & Sicherheit
+      Inhalt &amp; Sicherheit
     </text>
     <text x="570" y="232" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
       • Politische Nachrichten,
