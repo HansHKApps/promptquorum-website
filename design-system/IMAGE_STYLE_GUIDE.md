@@ -2,6 +2,24 @@
 
 Guidelines for creating images and SVGs that match the PromptQuorum website design system.
 
+## Brand Principles
+
+### PromptQuorum Brand Identity
+
+PromptQuorum is a **modern, sophisticated AI tool** focused on prompt dispatch and consensus. The visual identity should reflect:
+
+- **Professional elegance** — Not playful or casual
+- **Technical credibility** — Diagrams and explanations that technical users trust
+- **Innovation & clarity** — Modern aesthetic, clear communication
+- **Light & accessible** — Always prioritize readability and accessibility
+- **Purpose-driven** — Every image serves the article's educational goal
+
+### Voice in Imagery
+- **Educational, not decorative** — Images teach, illustrate, and reinforce content
+- **Accurate & truthful** — Reflect real-world constraints and capabilities
+- **Inclusive** — Accessible to all users (color contrast, text size, alt text)
+- **Premium quality** — Consistent with PromptQuorum's brand positioning
+
 ## Color Palette
 
 Always use colors from the website's design system:
@@ -32,14 +50,21 @@ Always use colors from the website's design system:
 - **Never** use dark backgrounds (#0f172a, #1e293b, etc.)
 
 ### Text
+
+#### Sizing Rules
 - **Heading font size:** 18–22px, font-weight: 700
 - **Body text:** 13–14px, font-weight: 500–600
-- **Monospace text:** 14–16px for code/terminal
+- **Monospace text (code/terminal):** 14–16px
+- **Labels & annotations:** 11–13px (never below 11px)
+- **⚠️ CRITICAL: Minimum text size:** The smallest text in an image **must never be smaller than the article body text** (13px). All text, including labels and captions, must be readable at a glance.
+
+#### Text Styling
 - **Text color:** 
   - Primary text: #1C1B1F
   - Secondary text: #49454F
   - Muted text: #79747E
 - **Letter spacing:** 0.3–0.5px for readability
+- **Font weight:** Increase weight (600–700) for smaller text to maintain readability
 
 ### Borders & Strokes
 - **Border color:** #E8DEF8 (light lavender)
@@ -64,6 +89,41 @@ Always use colors from the website's design system:
 - Use rose (#7D5260) for secondary/alternative icons
 - Size: appropriate to context (12–24px for inline, 48–64px for prominent)
 - Stroke width: 1.5–2px
+
+## Content & Relevance Rules
+
+### Article Connection (Critical)
+
+**Every image must directly relate to the article content — never use generic symbols or decorations.**
+
+#### Requirements:
+1. **Show, don't abstract** — If explaining how thermal throttling works, show a *real scenario* (laptop with stand), not a generic thermometer icon
+2. **Illustrate the exact concept** — The image should teach the same thing as the surrounding text
+3. **Include contextual details** — Add labels, measurements, and real-world constraints that match the article
+4. **Reinforce understanding** — Readers should gain new insight from the image beyond just seeing a pretty picture
+
+#### Examples:
+
+✅ **Good:** "Ollama Terminal" image shows actual terminal output with real command, model loading feedback, and speed metrics — readers see exactly what running a local LLM looks like
+
+✅ **Good:** "Apple Silicon Unified Memory" diagram shows CPU/GPU cores, shared memory pool, and contrast with Windows discrete GPU — teaches the architectural difference that makes Apple faster
+
+✅ **Good:** "Laptop Stand" shows side-by-side before/after with airflow arrows and throttling time measurements — explains *why* the stand helps and by how much
+
+❌ **Bad:** A generic laptop icon with no context  
+❌ **Bad:** Abstract memory visualization with no real-world numbers  
+❌ **Bad:** Thermal image that doesn't connect to the article's throttling discussion
+
+### Placement Rules
+
+- **Image placement:** Appears *after* content paragraphs that introduce the concept (user understands context first)
+- **Reinforcement:** Image solidifies understanding of what was just read
+- **Caption:** One sentence that ties the image directly to the article topic (not generic description)
+
+Example caption (from Picture 2):
+> "Apple Silicon unified memory lets the GPU access the full RAM pool — a 13B model fits entirely in GPU memory on an 18 GB M3 Pro."
+
+This caption directly reinforces the article's claim about why Apple Silicon is better for local LLMs.
 
 ## SVG-Specific Guidelines
 
@@ -145,6 +205,73 @@ Always use colors from the website's design system:
 - Use sufficient color contrast (WCAG AA minimum)
 - Don't rely on color alone to convey information (use labels, patterns)
 - Include text labels for all key elements
+
+## Data Accuracy & Sourcing
+
+### For Technical Diagrams & Numbers
+- **Verify all metrics** — Any speed numbers, RAM requirements, or technical specs must be accurate as of the article date
+- **Source real data** — Base diagrams on actual benchmarks, not assumptions
+- **Include measurement units** — Always label: "GB", "tokens/s", "°C", "min", etc.
+- **Be precise** — If an article says "50–80 tok/s", show that range, not a generic representation
+
+### Examples in Current Images:
+- Picture 1: "22.4 tokens/sec" — specific, measurable
+- Picture 2: "18 GB" unified memory on M3 Pro — accurate specification
+- Picture 4: "10 min → 20+ min" — quantified improvement from using a stand
+
+## Performance & Optimization
+
+### File Size Guidelines
+- Target: **Under 8KB per SVG**
+- Max: **15KB** (compress if exceeding)
+- Check file size: `ls -lh public/images/your-image.svg`
+
+### Optimization Tips
+- Use 2 decimal places for coordinates (not 10)
+- Remove unused `<defs>` and filters
+- Combine similar styled elements
+- Minimize text node repetition
+- Use CSS classes instead of inline styles for repeated patterns
+
+### Rendering Performance
+- Avoid complex filters on large elements
+- Keep shadow effects subtle (low `flood-opacity`)
+- Limit number of nested groups
+- Test zoom/scale responsiveness in browser
+
+## Localization Considerations
+
+### For Multi-Language Support
+- **Text in SVGs:** Currently **not translated** — use English only, or plan for separate SVG versions per language
+- **Numbers & units:** Use universal conventions (not locale-specific)
+- **Icons & symbols:** Avoid culture-specific imagery that won't translate
+- **Future note:** If SVGs are translated, content.ts will need language-specific image paths
+
+Current approach: Images are language-agnostic and reused across all language versions of articles.
+
+## Creation & Tools
+
+### Recommended Tools
+- **Figma** — Best for designing + exporting clean SVG
+- **Adobe Illustrator** — Professional option, good SVG export
+- **Affinity Designer** — Lightweight alternative
+- **Sketch** — Good for UI-style diagrams
+- **Code editor** — For manual SVG refinement (VS Code with SVG preview extension)
+
+### Best Practices for Exporting SVG
+1. Use "Save as SVG" (not "Export")
+2. Remove unnecessary metadata and groups
+3. Disable automatic ID generation (causes bloat)
+4. Export with default settings, then manually clean up in code editor
+5. Test in browser before committing
+
+### Manual SVG Cleanup
+After exporting, review:
+- Remove `<metadata>`, `<defs>` clutter
+- Consolidate similar styled elements
+- Use meaningful element IDs (not auto-generated)
+- Keep `viewBox` consistent
+- Verify colors match brand palette
 
 ## Common Mistakes to Avoid
 
