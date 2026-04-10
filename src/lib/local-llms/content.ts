@@ -5290,12 +5290,14 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'What Is a "Small" Local LLM?', anchor: '#what-is-small-llm' },
+        { label: 'Which Model Should You Use?', anchor: '#model-selection-guide' },
         { label: '#1 Phi-4 Mini 3.8B — Best Reasoning', anchor: '#phi-4-mini' },
         { label: '#2 Gemma 2 2B — Fastest on CPU', anchor: '#gemma-2-2b' },
         { label: '#3 Qwen2.5 3B — Best for Coding', anchor: '#qwen2-5-3b' },
         { label: '#4 Llama 3.2 3B — Best General Use', anchor: '#llama-3-2-3b' },
         { label: '#5 Llama 3.2 1B — Absolute Minimum', anchor: '#llama-3-2-1b' },
         { label: 'Full Comparison Table', anchor: '#comparison-table' },
+        { label: 'Quantization Guide', anchor: '#quantization-guide' },
         { label: 'Regional Context', anchor: '#regional-context' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
         { label: 'Related Reading', anchor: '#related-reading' },
@@ -5370,6 +5372,11 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'The quality gap between a 3B and 7B model is significant — roughly equivalent to the gap between GPT-3.5 Mini and GPT-3.5 Turbo. For users with 8 GB RAM, a 7B model at Q4_K_M is almost always the better choice if the machine has headroom. See [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) for 7B recommendations.',
           ],
         },
+        modelSelectionGuide: {
+          title: 'Which Model Should You Use? Quick Decision Guide',
+          image: '/images/small-llm-decision-tree-mockup.svg',
+          imageCaption: 'Decision tree: choose by priority (reasoning, speed, or coding). Default to Llama 3.2 3B if unsure.',
+        },
         phi4mini: {
           title: 'Phi-4 Mini 3.8B — Best Reasoning Performance in the Sub-4B Class',
           content: [
@@ -5438,6 +5445,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         comparisonTable: {
           title: 'Full Comparison: Best Small Local LLMs Under 4B Parameters',
+          image: '/images/small-llm-performance-tier-mockup.svg',
+          imageCaption: 'Performance tiers: MMLU and HumanEval scores show Phi-4 Mini leads on reasoning and coding, Gemma 2 is fastest on CPU, Qwen2.5 excels at coding.',
           rows: [
             { 'Model': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2.5 GB', 'Context': '128K', 'Best For': 'Reasoning, coding' },
             { 'Model': 'Qwen2.5 3B', 'MMLU': '62%', 'HumanEval': '65%', 'RAM': '2 GB', 'Context': '128K', 'Best For': 'Coding, multilingual' },
@@ -5462,6 +5471,11 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Running a base model instead of the instruct variant:** Base models (e.g., `llama3.2:3b-text`) are pre-fine-tuning checkpoints trained to predict the next token in text. They do not follow instructions. When you ask a base model "What is 2+2?", it may complete the sentence as a quiz rather than answer "4". Always use the instruct variant: `llama3.2:3b` (Ollama defaults to instruct for named models).',
             '**Expecting 7B model quality from a 3B model:** A 3B model at 68% MMLU (Phi-4 Mini) performs similarly to a 2023-era GPT-3.5 Mini on general tasks. Complex reasoning chains, long-form writing, and nuanced code generation will produce noticeably lower quality than a 7B model. If output quality is insufficient, upgrade to a 7B model — the RAM difference is ~2 GB (2.5 GB → 4.5 GB).',
           ],
+        },
+        quantizationGuide: {
+          title: 'Understanding Quantization: RAM vs Quality Trade-off',
+          image: '/images/small-llm-quantization-tradeoff-mockup.svg',
+          imageCaption: 'Quantization trade-off: Q4_K_M (2.5 GB, -0.5% quality) is the recommended default. Q8_0 uses 3.8 GB with no quality gain. Q3_K_M (1.8 GB, -1.8% loss) for extreme RAM constraints.',
         },
         relatedReading: {
           title: 'Related Reading',
@@ -7362,14 +7376,17 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       primaryTerm: 'LLM quantization',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
-        { label: 'What Is LLM Quantization?', anchor: '#what-is-llm-quantization' },
+        { label: 'What Is LLM Quantization?', anchor: '#what-is-quantization' },
         { label: 'How Do Q4_K_M, Q5_K_M, and Q8_0 Differ?', anchor: '#quantization-levels' },
-        { label: 'What Is GGUF Format?', anchor: '#what-is-gguf-format' },
+        { label: 'What Is GGUF Format?', anchor: '#gguf-format' },
         { label: 'RAM Savings by Quantization Level', anchor: '#ram-savings' },
         { label: 'How Much Quality Do You Lose?', anchor: '#quality-loss' },
         { label: 'Which Quantization Should You Use?', anchor: '#which-quantization' },
+        { label: 'Regional Context', anchor: '#regional-context' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Sources', anchor: '#sources' },
       ],
       sections: {
         tldr: {
@@ -7387,7 +7404,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           content: [
             'A large language model stores its learned knowledge as billions of numerical weights. By default, these are stored as 16-bit floating-point numbers (FP16) — two bytes per weight. A 7B model has 7 billion weights, so the FP16 file size is approximately 14 GB.',
             'Quantization replaces these 16-bit floats with lower-precision integers. At 4-bit quantization, each weight uses 0.5 bytes instead of 2 — cutting memory to ~3.5 GB for the weights alone. With metadata overhead, a quantized 7B model at Q4_K_M is approximately 4.5 GB.',
-            'This matters for local inference because consumer hardware has limited RAM. Without quantization, a 7B model requires 16 GB of RAM to run. With Q4_K_M quantization, the same model runs on 6 GB of RAM, making it accessible on most modern laptops.',
+            'This matters for local inference because consumer hardware has limited RAM. Without quantization, a 7B model requires 16 GB of RAM to run. With Q4_K_M quantization, the same model runs on 6 GB of RAM, making it accessible on [most modern laptops](/local-llms/local-llm-on-laptop?lang=en).',
           ],
         },
         quantizationLevels: {
@@ -7408,7 +7425,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           content: [
             'GGUF (GPT-Generated Unified Format) is the file format used to store quantized LLM weights for local inference. It was created by the llama.cpp project and replaces the older GGML format.',
             'A GGUF file contains: the quantized model weights, all model metadata (architecture, tokenizer, context length), and a format version number. This self-contained design means a single `.gguf` file is everything needed to run the model — no separate tokenizer files, no configuration JSON.',
-            'As of April 2026, GGUF is the standard format for Ollama, LM Studio, Jan AI, and GPT4All. When you run `ollama pull llama3.1:8b`, Ollama downloads a GGUF file internally. When LM Studio shows model file sizes, those are GGUF file sizes.',
+            'As of April 2026, GGUF is the standard format for Ollama, LM Studio, Jan AI, and GPT4All. When you run [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama?lang=en), Ollama downloads a GGUF file internally. When LM Studio shows model file sizes, those are GGUF file sizes.',
             'The quantization level is part of the filename: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` is a Q4_K_M quantized GGUF of Llama 3.1 8B.',
           ],
         },
@@ -7439,7 +7456,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         whichQuantization: {
           title: 'Which Quantization Level Should You Use?',
           items: [
-            '**4–8 GB RAM available**: Q4_K_M — the default and best balance for constrained hardware.',
+            '**4–8 GB RAM available**: Q4_K_M — the [best balance for constrained hardware](/local-llms/best-beginner-local-llm-models?lang=en).',
             '**8–16 GB RAM available**: Q5_K_M or Q6_K — better quality with comfortable RAM headroom.',
             '**16+ GB RAM available**: Q8_0 — near-lossless quality, no reason to use lower quantization.',
             '**GPU with 24+ GB VRAM**: Q8_0 or Q6_K at the model sizes that fit in VRAM.',
@@ -7449,19 +7466,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         commonMistakes: {
           title: 'What Are the Common Mistakes with LLM Quantization?',
-          faqs: [
-            {
-              q: 'Downloading Q4_0 instead of Q4_K_M',
-              a: 'Q4_0 is an older quantization method that uses the same 4 bits per weight but without the K-Quant improvements. Q4_K_M is 5–8% better quality at the same RAM footprint. When both are available on Hugging Face, always choose Q4_K_M. Ollama\'s default pull already uses Q4_K_M for models in its library.',
-            },
-            {
-              q: 'Assuming higher quantization always means worse quality',
-              a: 'The numbers are counterintuitive: higher Q number = more bits = better quality. Q8_0 is better than Q4_K_M. Q5_K_M is better than Q4_K_M. The "higher = better quality" rule applies within the same model. Comparing across models is different — a Q4_K_M 70B model will outperform a Q8_0 7B model on most tasks.',
-            },
-            {
-              q: 'Not checking RAM headroom before loading a model',
-              a: 'The model size is not the only RAM consumer. The OS, browser, and other applications also use RAM. On an 8 GB machine, a 4.5 GB Q4_K_M 7B model leaves only 3.5 GB for everything else — which is tight. Close browsers before loading 7B models on 8 GB machines. As a rule: the model file size + 2 GB OS overhead + 1 GB headroom = minimum required RAM.',
-            },
+          items: [
+            '**Downloading Q4_0 instead of Q4_K_M** — Q4_0 is an older quantization method without K-Quant improvements. Q4_K_M is 5–8% better quality at the same RAM footprint. When both are available, always choose Q4_K_M.',
+            '**Assuming higher quantization always means worse quality** — Higher Q number = more bits = better quality. Q8_0 is better than Q4_K_M. Q5_K_M is better than Q4_K_M. A Q4_K_M 70B model will outperform a Q8_0 7B model on most tasks.',
+            '**Not checking RAM headroom before loading a model** — The model size is not the only RAM consumer. OS, browser, and other applications use RAM too. On an 8 GB machine, a 4.5 GB Q4_K_M 7B model leaves only 3.5 GB for everything else. Rule: model file size + 2 GB OS overhead + 1 GB headroom = minimum required RAM.',
           ],
         },
         faqSection: {

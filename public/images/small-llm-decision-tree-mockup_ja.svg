@@ -1,0 +1,93 @@
+<svg viewBox="0 0 1000 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="900" fill="#f8f6ff"/>
+
+  <!-- Title -->
+  <text x="500" y="55" font-size="36" font-weight="bold" text-anchor="middle" fill="#2d1b4e">
+    どのローカルLLMを使うべき？
+  </text>
+  <text x="500" y="95" font-size="20" text-anchor="middle" fill="#666">
+    クイック決定ガイド
+  </text>
+
+  <!-- START box -->
+  <rect x="300" y="120" width="400" height="70" fill="#6750a4" rx="8"/>
+  <text x="500" y="170" font-size="18" font-weight="bold" fill="white" text-anchor="middle">
+    優先順位を選択
+  </text>
+
+  <!-- Lines down -->
+  <line x1="500" y1="190" x2="500" y2="230" stroke="#333" stroke-width="2"/>
+  <line x1="150" y1="230" x2="850" y2="230" stroke="#333" stroke-width="2"/>
+
+  <!-- Three branches down -->
+  <line x1="150" y1="230" x2="150" y2="280" stroke="#333" stroke-width="2"/>
+  <line x1="500" y1="230" x2="500" y2="280" stroke="#333" stroke-width="2"/>
+  <line x1="850" y1="230" x2="850" y2="280" stroke="#333" stroke-width="2"/>
+
+  <!-- Branch 1: Reasoning -->
+  <rect x="10" y="280" width="280" height="100" fill="#f0f4ff" stroke="#4f46e5" stroke-width="2" rx="8"/>
+  <text x="150" y="310" font-size="16" font-weight="bold" fill="#2d1b4e" text-anchor="middle">推論が必要？</text>
+  <text x="150" y="335" font-size="14" fill="#666" text-anchor="middle">(数学、論理、複雑)</text>
+  <line x1="150" y1="380" x2="150" y2="420" stroke="#4f46e5" stroke-width="2"/>
+
+  <!-- Phi-4 Mini box -->
+  <rect x="10" y="420" width="280" height="120" fill="#fff5f7" stroke="#f0a6d6" stroke-width="2" rx="8"/>
+  <text x="150" y="450" font-size="16" font-weight="bold" fill="#2d1b4e" text-anchor="middle">Phi-4 Mini 3.8B</text>
+  <text x="150" y="475" font-size="14" fill="#333" text-anchor="middle">68% MMLU • 70% HumanEval</text>
+  <text x="150" y="500" font-size="14" fill="#333" text-anchor="middle">30-50 tok/s • 2.5 GB RAM</text>
+  <text x="150" y="530" font-size="14" font-weight="bold" fill="#22c55e" text-anchor="middle">✓ 最高の推論</text>
+
+  <!-- Branch 2: Speed -->
+  <rect x="360" y="280" width="280" height="100" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2" rx="8"/>
+  <text x="500" y="310" font-size="16" font-weight="bold" fill="#2d1b4e" text-anchor="middle">速度が必要？</text>
+  <text x="500" y="335" font-size="14" fill="#666" text-anchor="middle">(リアルタイム応答)</text>
+  <line x1="500" y1="380" x2="500" y2="420" stroke="#0ea5e9" stroke-width="2"/>
+
+  <!-- Gemma 2 box -->
+  <rect x="360" y="420" width="280" height="120" fill="#fef2f2" stroke="#ef4444" stroke-width="2" rx="8"/>
+  <text x="500" y="450" font-size="16" font-weight="bold" fill="#2d1b4e" text-anchor="middle">Gemma 2 2B</text>
+  <text x="500" y="475" font-size="14" fill="#333" text-anchor="middle">52% MMLU • 1.7 GB RAM</text>
+  <text x="500" y="500" font-size="14" fill="#333" text-anchor="middle">40-60 tok/s (最速)</text>
+  <text x="500" y="530" font-size="14" font-weight="bold" fill="#f97316" text-anchor="middle">✓ CPU最速</text>
+
+  <!-- Branch 3: Coding -->
+  <rect x="710" y="280" width="280" height="100" fill="#fffbf0" stroke="#fbbf24" stroke-width="2" rx="8"/>
+  <text x="850" y="310" font-size="16" font-weight="bold" fill="#2d1b4e" text-anchor="middle">コーディング必要？</text>
+  <text x="850" y="335" font-size="14" fill="#666" text-anchor="middle">(プログラミング、コード生成)</text>
+  <line x1="850" y1="380" x2="850" y2="420" stroke="#fbbf24" stroke-width="2"/>
+
+  <!-- Qwen2.5 box -->
+  <rect x="710" y="420" width="280" height="120" fill="#fffbf0" stroke="#fbbf24" stroke-width="2" rx="8"/>
+  <text x="850" y="450" font-size="16" font-weight="bold" fill="#2d1b4e" text-anchor="middle">Qwen2.5 3B</text>
+  <text x="850" y="475" font-size="14" fill="#333" text-anchor="middle">62% MMLU • 65% HumanEval</text>
+  <text x="850" y="500" font-size="14" fill="#333" text-anchor="middle">関数呼び出し • 2 GB RAM</text>
+  <text x="850" y="530" font-size="14" font-weight="bold" fill="#eab308" text-anchor="middle">✓ 最高のコーディング</text>
+
+  <!-- Default recommendation box -->
+  <rect x="80" y="600" width="840" height="140" fill="#f0fdf4" stroke="#22c55e" stroke-width="3" rx="8"/>
+  <text x="500" y="635" font-size="18" font-weight="bold" fill="#2d1b4e" text-anchor="middle">
+    迷ったら Llama 3.2 3B (デフォルト)
+  </text>
+  <text x="500" y="665" font-size="14" fill="#333" text-anchor="middle">
+    • 58% MMLU, 60% HumanEval • 2.5 GB RAM • 128K コンテキスト
+  </text>
+  <text x="500" y="690" font-size="14" fill="#333" text-anchor="middle">
+    • 最高のコミュニティサポート • 最多のファインチューン
+  </text>
+  <text x="500" y="715" font-size="14" fill="#333" text-anchor="middle">
+    • 一般的なチャットと日常のタスク向けベスト
+  </text>
+  <text x="500" y="740" font-size="15" font-weight="bold" fill="#22c55e" text-anchor="middle">
+    ollama run llama3.2:3b
+  </text>
+
+  <!-- Footer note -->
+  <text x="500" y="810" font-size="14" fill="#666" text-anchor="middle">
+    極度のRAM制約？ Llama 3.2 1B (1.3 GBのみ) を使用 — 低い品質を受け入れる
+  </text>
+
+  <text x="500" y="860" font-size="13" text-anchor="middle" fill="#999">
+    Q4_K_M量子化 • 最新ノートパソコンのCPU速度 • 2026年4月
+  </text>
+</svg>
