@@ -5534,7 +5534,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       theme: 'Best Models',
       title: 'Beste kleine lokale LLMs 2026 : Sub-4B-Modelle für RAM-arme Maschinen',
       seoTitle: 'Beste kleine lokale LLMs 2026: Sub-4B Modelle Vergleich',
-      metaDescription: 'Top Sub-4B Modelle für 4–8 GB RAM in 2026: Phi-4 Mini (68% MMLU), Gemma 2 (schnellste), Qwen2.5 (Codierung), Llama 3.2. Vollständiger Vergleich mit DSGVO-Kontext.',
+      metaDescription: 'Best Sub-4B Modelle für 4–8 GB RAM in 2026: Phi-4 Mini (68% MMLU), Gemma 2 (schnellste), Qwen2.5 (Codierung), Llama 3.2. Vollständiger Vergleich.',
       intro: 'Kleine lokale LLMs (1B–4B Parameter) laufen auf Maschinen mit 4–8 GB RAM und erzeugen 30–70 Token/Sek auf CPU — schnell genug für Echtzeit-Chat. Die besten kleinen Modelle in 2026 sind Microsoft Phi-4 Mini 3.8B (bestes Reasoning), Google Gemma 2 2B (schnellste), Qwen2.5 3B (beste Codierung) und Meta Llama 3.2 3B (beste allgemeine Nutzung).',
       publishDate: '2026-04-04',
       readTime: '8 min',
@@ -5634,8 +5634,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     ja: {
       theme: 'Best Models',
       title: '最高の小規模ローカルLLM 2026：低RAM向けSub-4Bモデル',
-      seoTitle: '2026年最高の小規模ローカルLLM：ベンチマーク徹底比較ガイド',
-      metaDescription: '4～8GB RAM向けトップ5つの小規模ローカルLLMモデルの2026年ベンチマーク完全比較：Phi-4 Mini（68% MMLU）、Gemma 2（最速）、Qwen2.5（コーディング）、Llama 3.2（汎用）。日本企業向けMETI完全対応。',
+      seoTitle: '2026年の最高の小規模ローカルLLM：ベンチマーク完全比較ガイド',
+      metaDescription: '4～8GB RAM向けトップ5つの最高の小規模ローカルLLMモデルの2026年完全ベンチマーク徹底比較：Phi-4 Mini（68% MMLU）、Gemma 2（最高速度）、Qwen2.5（コーディング最適）、Llama 3.2（汎用推奨）。日本企業向けMETI対応ガイド。',
       intro: '小規模ローカルLLM（1B～4Bパラメータ）は4～8GB RAMのマシンで動作し、CPU上で30～70トークン/秒を生成します。リアルタイムチャットに十分な速度です。2026年の最高の小規模モデルはMicrosoft Phi-4 Mini 3.8B（最高の推論）、Google Gemma 2 2B（最速）、Qwen2.5 3B（最高のコーディング）、Meta Llama 3.2 3B（最高の汎用）です。',
       publishDate: '2026-04-04',
       readTime: '8分',
@@ -5854,8 +5854,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     zh: {
       theme: 'Best Models',
       title: '2026年最佳小型本地LLM：低RAM机器的Sub-4B模型',
-      seoTitle: '2026年最佳小型本地LLM：5大模型排名性能指标完整对比',
-      metaDescription: '2026年4-8GB RAM最佳5大小型本地LLM模型完整排名对比指南：Phi-4 Mini（68% MMLU）、Gemma 2（最快速度）、Qwen2.5（编码最优）、Llama 3.2（通用型）。中国《数据安全法》完全合规部署方案。',
+      seoTitle: '2026年最佳的小型本地LLM模型：5大排名性能完整对比',
+      metaDescription: '2026年4-8GB RAM最佳5大小型本地LLM模型的完整排名对比分析详细指南：Phi-4 Mini（68% MMLU）、Gemma 2（最快速度）、Qwen2.5（编码最优）、Llama 3.2（通用型）。中国《数据安全法》完全合规部署方案。',
       intro: '小型本地LLM（1B–4B参数）在4–8GB RAM的机器上运行，在CPU上生成30–70个令牌/秒——足够用于实时聊天。2026年最好的小型模型是Microsoft Phi-4 Mini 3.8B（最佳推理）、Google Gemma 2 2B（最快）、Qwen2.5 3B（最佳编码）和Meta Llama 3.2 3B（最佳通用用途）。',
       publishDate: '2026-04-04',
       readTime: '8分钟',
@@ -6909,6 +6909,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     nvidiaOffload: {
       title: 'NVIDIA GPU + レイヤーオフロードはどのように70Bモデルで機能しますか？',
       content: 'Ollama と llama.cpp はモデルを GPU VRAM とシステムRAM に分割することをサポートします。VRAM に読み込まれたレイヤーは GPU 速度で実行され、システムRAM のレイヤーは CPU 速度で実行されます：',
+      image: '/images/70b-layer-offloading.svg',
+      imageCaption: 'Layer offloading architecture: RTX 4090 GPU (24 GB) holds ~60% of layers (1–48) at 10–18 tok/sec, while system RAM (32 GB) holds remaining layers (49–80) running at CPU speed (2–5 tok/sec), achieving 10–18 tok/sec overall.',
       codeBlock: '# Ollama は自動的に VRAM に収まるだけ多くのレイヤーをオフロードします\n# レイヤーを明示的に制御するには：\nollama run llama3.3:70b\n\n# GPU上にあるレイヤー数を確認：\nollama ps\n# 出力は以下を示します：llama3.3:70b  ...  23/80 GPU layers\n\n# llama.cpp 直接：\n./llama-cli -m llama-3.3-70b-q4_k_m.gguf \\\n  -ngl 40   # オフロードするレイヤー数\n  --ctx-size 4096',
       codeLanguage: 'bash',
     },
@@ -7055,6 +7057,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       content: [
         'Q4_K_M 量化的 70B 模型需要约 40-43 GB 的内存可供推理引擎访问。这些内存可以来自 GPU VRAM、统一系统内存 (Apple Silicon)、系统 RAM，或通过层卸载技术的组合。',
       ],
+      image: '/images/70b-hardware-comparison.svg',
+      imageCaption: 'Hardware comparison: Apple Silicon M3 Max achieves 25–35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10–18 tok/sec, and CPU-only 70B inference produces just 1–3 tok/sec.',
       rows: [
         { '硬件': 'Apple M3 Max (64 GB 统一内存)', '能运行 70B？': '是 — 完整 GPU', '速度 (70B Q4)': '20-30 tok/秒', '说明': '最佳消费级笔记本选项' },
         { '硬件': 'Apple M2 Ultra (64 GB 统一内存)', '能运行 70B？': '是 — 完整 GPU', '速度 (70B Q4)': '25-35 tok/秒', '说明': 'Mac Studio 基础配置' },
@@ -7067,6 +7071,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
     ramByQuant: {
       title: '70B 模型在各量化等级需要多少内存？',
+      image: '/images/70b-quantization-tradeoff.svg',
+      imageCaption: 'Quantization trade-off curve: Q4_K_M (recommended) requires 40–43 GB RAM with only 1–3% quality loss versus FP16, balancing practicality and performance for consumer hardware.',
       rows: [
         { '量化等级': 'FP16 (完整精度)', '需要内存': '约 140 GB', '质量': '参考质量', '实用性': '否 — 仅服务器' },
         { '量化等级': 'Q8_0', '需要内存': '约 70 GB', '质量': '接近无损', '实用性': '仅 Mac Ultra 192 GB' },
@@ -7088,6 +7094,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     nvidiaOffload: {
       title: 'NVIDIA GPU + 层卸载技术如何为 70B 模型工作？',
       content: 'Ollama 和 llama.cpp 支持跨 GPU VRAM 和系统 RAM 分割模型。加载在 VRAM 中的层以 GPU 速度运行；系统 RAM 中的层以 CPU 速度运行：',
+      image: '/images/70b-layer-offloading.svg',
+      imageCaption: 'Layer offloading architecture: RTX 4090 GPU (24 GB) holds ~60% of layers (1–48) at 10–18 tok/sec, while system RAM (32 GB) holds remaining layers (49–80) running at CPU speed (2–5 tok/sec), achieving 10–18 tok/sec overall.',
       codeBlock: '# Ollama 自动卸载尽可能多的层到 VRAM\n# 显式控制层数：\nollama run llama3.3:70b\n\n# 检查多少层在 GPU 上：\nollama ps\n# 输出显示：llama3.3:70b  ...  23/80 GPU layers\n\n# 直接使用 llama.cpp：\n./llama-cli -m llama-3.3-70b-q4_k_m.gguf \\\n  -ngl 40   # 卸载到 GPU 的层数\n  --ctx-size 4096',
       codeLanguage: 'bash',
     },
