@@ -778,7 +778,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
       },
     },
-P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）、Mistral Small 3.1 24B（16GB以下）、Fimbulvetr等。基于叙事连贯性评价。',
+    zh: {
+      theme: 'Best Models',
+      seoTitle: '如何安装 Ollama 本地 LLM 推理引擎 2026',
+      metaDescription: 'Ollama 安装指南 2026：macOS (DMG 或 Brew)、Windows 安装程序、Linux curl 一行命令。支持 200+ 模型，OpenAI 兼容 API。',
       publishDate: '2026-04-04',
       readTime: '阅读约8分钟',
       educationalLevel: 'Beginner',
