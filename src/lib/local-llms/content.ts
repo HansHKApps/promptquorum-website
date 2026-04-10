@@ -10453,6 +10453,21 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'As of April 2026, GPU prices have stabilized; CPU/RAM are less critical than GPU VRAM for LLM speed.',
           ],
         },
+        leadAnswer: {
+          isLead: true,
+          content: 'Running local 7B models requires 8 GB VRAM (RTX 4070 Ti, $600). Running 70B models requires 40 GB VRAM (RTX 4090 or dual GPU setup, $3000+). VRAM is calculated by: (Model Size × Quantization Bits) ÷ 8. CPU and RAM are secondary; GPU VRAM is the bottleneck. Best value is $2500 mid-range (RTX 4080 + 32 GB RAM) for 13–30B models.',
+        },
+        quickFacts: {
+          title: 'Quick Facts',
+          items: [
+            '7B model needs 8 GB VRAM minimum (RTX 4070 Ti, 12GB VRAM, ~$600)',
+            '13B model needs 16 GB VRAM (RTX 4080, 16GB VRAM, ~$1200)',
+            '70B model needs 40+ GB VRAM (RTX 4090, 24GB + need 2× GPUs, or A100 80GB server)',
+            'VRAM calculator: (Model Size GB ÷ 8 for 4-bit quantization) = VRAM needed',
+            'GPU choice matters 10× more than CPU; CPU/RAM secondary with GPU present',
+            'Best consumer value: $2500 RTX 4080 build; best single-GPU unlimited: $1800 RTX 4090',
+          ],
+        },
         vramMath: {
           title: 'How Do You Calculate VRAM Requirements?',
           content: [
@@ -10507,7 +10522,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         budgetBuilds: {
           title: 'Budget Build Recommendations',
-          content: 'Building a local LLM machine from scratch:',
+          content: '**Best value: $2500 mid-range build with RTX 4080, i7 14700K, 32 GB RAM handles 13–30B models.** Entry-level ($1500) with RTX 4070 Ti handles 7–13B. High-end ($4000+) with dual RTX 4090s handles any 70B model but is overkill for personal use.',
           rows: [
             { 'Budget': '$1500 (entry)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', 'Models': '7–13B', 'Cost': 'Realistic' },
             { 'Budget': '$2500 (solid)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', 'Models': '13–30B', 'Cost': 'Recommended' },
