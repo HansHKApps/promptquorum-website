@@ -13,6 +13,7 @@ export interface LLMSection {
   rows?: Array<{ [key: string]: string }>
   columns?: string[]
   faqs?: Array<{ q: string; a: string }>
+  snippets?: Array<{ [key: string]: string }>
   isTldr?: boolean
   tableFormat?: boolean
   image?: string
