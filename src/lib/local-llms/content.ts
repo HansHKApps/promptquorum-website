@@ -506,6 +506,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
       },
     },
+    de: { theme: 'Erste Schritte', title: 'Ollama', seoTitle: 'Ollama', intro: 'Installation.', metaDescription: 'Installieren.', publishDate: '2026-04-04', readTime: '8 min', educationalLevel: 'Beginner', primaryTerm: 'Ollama', sections: { tldr: { isTldr: true, items: ['Ollama.'] } } },
+    fr: { theme: 'Premiers pas', title: 'Ollama', seoTitle: 'Ollama', intro: 'Installation.', metaDescription: 'Installer.', publishDate: '2026-04-04', readTime: '8 min', educationalLevel: 'Beginner', primaryTerm: 'Ollama', sections: { tldr: { isTldr: true, items: ['Ollama.'] } } },
+    ja: { theme: 'はじめに', title: 'Ollama', seoTitle: 'Ollama', intro: 'インストール.', metaDescription: 'インストール.', publishDate: '2026-04-04', readTime: '8分', educationalLevel: 'Beginner', primaryTerm: 'Ollama', sections: { tldr: { isTldr: true, items: ['Ollama'] } } },
+    zh: { theme: '入门', title: 'Ollama', seoTitle: 'Ollama', intro: '安装.', metaDescription: '安装.', publishDate: '2026-04-04', readTime: '8分钟', educationalLevel: 'Beginner', primaryTerm: 'Ollama', sections: { tldr: { isTldr: true, items: ['Ollama'] } } }
   },
 
   'how-to-install-lm-studio': {
