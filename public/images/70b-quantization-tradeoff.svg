@@ -1,0 +1,138 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="35"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="22"
+    font-weight="700"
+    fill="#1C1B1F"
+    text-anchor="middle">
+    70B Quantization: RAM vs Quality Trade-off
+  </text>
+
+  <!-- Y-axis label (Quality) -->
+  <text x="20" y="80"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    Quality
+  </text>
+
+  <!-- X-axis label (RAM) -->
+  <text x="700" y="480"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    RAM Required →
+  </text>
+
+  <!-- Grid lines and axes -->
+  <line x1="60" y1="80" x2="60" y2="440" stroke="#E8DEF8" stroke-width="2"/>
+  <line x1="60" y1="440" x2="760" y2="440" stroke="#E8DEF8" stroke-width="2"/>
+
+  <!-- Grid reference lines -->
+  <line x1="60" y1="380" x2="760" y2="380" stroke="#E8DEF8" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="60" y1="320" x2="760" y2="320" stroke="#E8DEF8" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="60" y1="260" x2="760" y2="260" stroke="#E8DEF8" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="60" y1="200" x2="760" y2="200" stroke="#E8DEF8" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="60" y1="140" x2="760" y2="140" stroke="#E8DEF8" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Y-axis labels (Quality) -->
+  <text x="50" y="445" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">Low</text>
+  <text x="50" y="210" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">Med</text>
+  <text x="50" y="85" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">High</text>
+
+  <!-- X-axis labels (RAM GB) -->
+  <text x="80" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">22 GB</text>
+  <text x="200" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">30 GB</text>
+  <text x="320" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">40 GB</text>
+  <text x="440" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">50 GB</text>
+  <text x="560" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">70 GB</text>
+  <text x="680" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">140 GB</text>
+
+  <!-- Points on the curve (quality decreases as bits decrease, but at lower RAM) -->
+  <!-- Q2_K: 22GB, lowest quality -->
+  <circle cx="80" cy="420" r="6" fill="#E67C73" stroke="#1C1B1F" stroke-width="1.5"/>
+  <text x="80" y="435"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#E67C73"
+    text-anchor="middle">
+    Q2_K
+  </text>
+
+  <!-- Q3_K_S: 30GB, moderate quality -->
+  <circle cx="200" cy="340" r="6" fill="#F4B400" stroke="#1C1B1F" stroke-width="1.5"/>
+  <text x="200" y="355"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#F4B400"
+    text-anchor="middle">
+    Q3_K_S
+  </text>
+
+  <!-- Q4_K_M: 40GB, good quality (RECOMMENDED) -->
+  <circle cx="320" cy="240" r="8" fill="#6750A4" stroke="#1C1B1F" stroke-width="2"/>
+  <text x="320" y="258"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="13"
+    font-weight="700"
+    fill="#6750A4"
+    text-anchor="middle">
+    Q4_K_M ★
+  </text>
+
+  <!-- Q5_K_M: 50GB, very good quality -->
+  <circle cx="440" cy="180" r="6" fill="#34A853" stroke="#1C1B1F" stroke-width="1.5"/>
+  <text x="440" y="195"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#34A853"
+    text-anchor="middle">
+    Q5_K_M
+  </text>
+
+  <!-- Q8_0: 70GB, near lossless -->
+  <circle cx="560" cy="130" r="6" fill="#34A853" stroke="#1C1B1F" stroke-width="1.5"/>
+  <text x="560" y="145"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#34A853"
+    text-anchor="middle">
+    Q8_0
+  </text>
+
+  <!-- FP16: 140GB, reference quality -->
+  <circle cx="680" cy="100" r="6" fill="#79747E" stroke="#1C1B1F" stroke-width="1.5"/>
+  <text x="680" y="115"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#79747E"
+    text-anchor="middle">
+    FP16
+  </text>
+
+  <!-- Connecting curve -->
+  <path d="M 80 420 Q 200 340 320 240 T 560 130 Q 620 115 680 100"
+    stroke="#6750A4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Legend box at bottom -->
+  <rect x="60" y="475" width="700" height="15" fill="none"/>
+
+  <text x="70" y="487"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="600"
+    fill="#49454F">
+    ★ Q4_K_M recommended for consumer hardware — best balance of quality (1–3% loss vs FP16) and practicality
+  </text>
+</svg>

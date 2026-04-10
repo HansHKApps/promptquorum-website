@@ -5672,7 +5672,184 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'Question', name: '日本語で小規模LLMを実行するにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'Ollamaでモデルをダウンロードします：`ollama pull qwen2.5:3b`または`ollama pull llama3.2:3b`。`ollama run qwen2.5:3b`で日本語で会話を始めます。特別な設定パラメータは不要です — モデルは自動的に高品質の日本語テキストを生成します。' } },
         ],
       },
-      sections: {},
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**小規模スケールでの最高の推論**: Phi-4 Mini 3.8B — 68% MMLU、70% HumanEval、4 GB RAMで動作。',
+            '**CPUで最速**: Gemma 2 2B — 最新のノートパソコンのCPUで40～60トークン/秒、1.7 GB RAM。',
+            '**最高の小規模コーディングモデル**: Qwen2.5 3B — ~2 GB RAMで65% HumanEval。',
+            '**最高の汎用3Bモデル**: Llama 3.2 3B — 最も多くのコミュニティサポート、128Kコンテキスト、2.5 GB RAM。',
+            '2026年4月現在、2B以下のモデルはプロフェッショナルなタスクに適した出力品質を生成しません。実務では3B以上を使用してください。',
+          ],
+        },
+        whatIsSmall: {
+          title: '「小規模」ローカルLLMとは何か、そしていつ使うべきか？',
+          content: [
+            '小規模ローカルLLMは、通常、40億未満のパラメータを持つモデルとして定義されます。Q4_K_M量子化では、これらのモデルは1.5～3 GBのRAMを必要とします。これは、4～8 GBの総メモリを持つエントリーレベルノートパソコンの制約内です。',
+            '2026年4月現在、小規模モデルは以下に適しています：クイック要約、シンプルなQ&A、コードスニペット説明、短いテキストの翻訳、分類タスク。複数ステップの推論、複雑なコード生成、長い一貫した文書の作成には適していません。',
+            '3Bモデルと7Bモデル間の品質ギャップは重大です。GPT-3.5 MiniとGPT-3.5 Turbo間のギャップとほぼ同等です。8 GB RAMを持つユーザーの場合、マシンに余裕があれば、Q4_K_Mの7Bモデルがほぼ常に良い選択です。7B推奨については、[最高の初心者向けローカルLLMモデル](/local-llms/best-beginner-local-llm-models)を参照してください。',
+          ],
+        },
+        phi4mini: {
+          title: 'Phi-4 Mini 3.8B — Sub-4Bクラスで最高の推論パフォーマンス',
+          content: [
+            'Microsoft Phi-4 MiniはMMLA68%、HumanEval70%を達成します。これらのスコアは2025年より前にリリースされた多くの7Bモデルを上回っています。これが可能な理由は、Phi-4 Miniが広いウェブテキストではなく、推論と問題解決に焦点を当てた管理されたシンセティックデータセットで訓練されたためです。',
+            '2026年4月現在、Phi-4 Miniは、主に推論（数学、論理、段階的説明）またはコード支援が必要で、4～6 GB RAMのハードウェアを持つユーザーに推奨される選択肢です。',
+          ],
+          rows: [
+            { 'Spec': 'MMLU', 'Value': '68%' },
+            { 'Spec': 'HumanEval', 'Value': '70%' },
+            { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2.5 GB' },
+            { 'Spec': 'コンテキスト', 'Value': '128Kトークン' },
+            { 'Spec': 'CPU速度', 'Value': '30～50トークン/秒' },
+            { 'Spec': 'Ollamaコマンド', 'Value': 'ollama run phi4-mini' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        gemma2: {
+          title: 'Gemma 2 2B — CPUで最速の小規模ローカルLLM',
+          content: [
+            'Google Gemma 2 2Bは、モダンノートパソコンのCPUで40～60トークン/秒を生成します。この品質帯域内のモデルの中で最速です。1.7 GB RAMのフットプリントにより、4 GBマシン上のOSと他のアプリケーション用に十分なメモリが残ります。',
+            '推論タスクではPhi-4 MiniまたはLlama 3.2 3Bより品質が低いです。8Kコンテキストウィンドウ（Phi-4 MiniとLlama 3.2の128Kに対して）は、より長い文書の実用的な制限です。応答速度が出力の深さより重要な場合、Gemma 2 2Bが正しい選択です。',
+          ],
+          rows: [
+            { 'Spec': 'MMLU', 'Value': '52%' },
+            { 'Spec': 'RAM (Q4_K_M)', 'Value': '~1.7 GB' },
+            { 'Spec': 'コンテキスト', 'Value': '8Kトークン' },
+            { 'Spec': 'CPU速度', 'Value': '40～60トークン/秒' },
+            { 'Spec': 'Ollamaコマンド', 'Value': 'ollama run gemma2:2b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        qwen25_3b: {
+          title: 'Qwen2.5 3B — コーディングタスク向けの最高の小規模モデル',
+          content: [
+            'Qwen2.5 3BはHumanEvalで65%のスコアを獲得し、Llama 3.2 3Bより5ポイント高く、3Bスケールでのコーディングタスクに最適です。JSONモードと関数呼び出しサポートを含み、29言語をネイティブに処理します。',
+            '英語での非コーディングタスクについては、Llama 3.2 3BとPhi-4 Miniはより自然なプロスを生成します。コーディングまたは多言語出力が主なユースケースの場合、特にQwen2.5 3Bを選択してください。',
+          ],
+          rows: [
+            { 'Spec': 'MMLU', 'Value': '62%' },
+            { 'Spec': 'HumanEval', 'Value': '65%' },
+            { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2 GB' },
+            { 'Spec': 'コンテキスト', 'Value': '128Kトークン' },
+            { 'Spec': 'CPU速度', 'Value': '25～40トークン/秒' },
+            { 'Spec': 'Ollamaコマンド', 'Value': 'ollama run qwen2.5:3b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        llama32_3b: {
+          title: 'Llama 3.2 3B — 最高の汎用小規模モデル',
+          content: [
+            'Meta Llama 3.2 3Bは、最も広くドキュメント化され、コミュニティがサポートする3Bモデルです。MMLU58%、HumanEval60%のスコアは、両方でPhi-4 Miniを若干下回りますが、最も広いツールサポート、最も利用可能なファインチューン、最大のコミュニティガイドコレクションを備えています。',
+            '128Kコンテキストウィンドウは、より大きなLlama 3.xモデルと同じで、中程度の長さの文書の要約に適しています。最初の小規模モデルとして、Llama 3.2 3Bは予測可能な動作と広範なドキュメンテーションのため、最も安全な選択のままです。',
+          ],
+          rows: [
+            { 'Spec': 'MMLU', 'Value': '58%' },
+            { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2.5 GB' },
+            { 'Spec': 'コンテキスト', 'Value': '128Kトークン' },
+            { 'Spec': 'CPU速度', 'Value': '25～45トークン/秒' },
+            { 'Spec': 'Ollamaコマンド', 'Value': 'ollama run llama3.2:3b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        llama32_1b: {
+          title: 'Llama 3.2 1B — 有用な出力のための絶対最小値',
+          content: 'Llama 3.2 1Bはわずか1.3 GBのRAMを必要とし、CPUで60～90トークン/秒を生成します。最も高速なローカル実行可能モデルです。出力品質は限界的です：非常にシンプルな分類とキーワード抽出を処理しますが、一貫した複数文の応答に苦労します。2026年4月現在、RAMが本当に制約（3 GB未満）である場合、またはツール統合をテストする場合のみ、Llama 3.2 1Bを使用してください。',
+        },
+        comparisonTable: {
+          title: '完全比較：4B未満の最高の小規模ローカルLLM',
+          rows: [
+            { 'モデル': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2.5 GB', 'コンテキスト': '128K', '最適用途': '推論、コーディング' },
+            { 'モデル': 'Qwen2.5 3B', 'MMLU': '62%', 'HumanEval': '65%', 'RAM': '2 GB', 'コンテキスト': '128K', '最適用途': 'コーディング、多言語' },
+            { 'モデル': 'Llama 3.2 3B', 'MMLU': '58%', 'HumanEval': '60%', 'RAM': '2.5 GB', 'コンテキスト': '128K', '最適用途': '汎用、最初のモデル' },
+            { 'モデル': 'Gemma 2 2B', 'MMLU': '52%', 'HumanEval': '38%', 'RAM': '1.7 GB', 'コンテキスト': '8K', '最適用途': '速度、非常に低いRAM' },
+            { 'モデル': 'Llama 3.2 1B', 'MMLU': '32%', 'HumanEval': '28%', 'RAM': '1.3 GB', 'コンテキスト': '128K', '最適用途': '絶対最小RAM' },
+          ],
+          columns: ['モデル', 'MMLU', 'HumanEval', 'RAM', 'コンテキスト', '最適用途'],
+        },
+        regionalContext: {
+          title: '地域別の小規模ローカルLLM',
+          content: [
+            '**日本（METI）：** 小規模モデルティアでの日本語タスクについては、この比較の唯一のモデルであるネイティブな日本語トークン化はQwen2.5 3Bです。Llama 3.2 3Bは日本語を処理しますが、トークン効率は低くなります。RAM制約の下での日本語要約または翻訳の場合：`ollama run qwen2.5:3b`。小規模モデルの速度の利点は日本企業の使用に特に関連しています。CPUで25～40トークン/秒は、標準的な職場ハードウェア上のチャットインターフェースに適切なリアルタイム応答を提供します。日本の独立系企業向けMETIガイダンスに準拠した小規模モデルの実装については、Ollama経由のローカル展開がすべてのテキスト処理をオンデバイスに保つため推奨されます。',
+            '**中国：** Qwen2.5 3B（Alibaba、Apache 2.0）は、中国語の小規模モデル展開の自然な選択です。ネイティブな中国語トークン化により、同等のパラメータ数のLlamaより30～40%効率的に中国語テキストを処理します。IoTおよび中国のデータセキュリティ法（数据安全法）下でのエッジ展開の場合：`ollama run qwen2.5:3b`は4 GB RAMを備えた任意のLinuxデバイスで動作し、外部APIコールなしですべてのテキストをオンデバイスで処理します。',
+            '**その他の地域：** 英語ユースケースの場合、Phi-4 Mini 3.8BはCPUベースのシステムで最高の推論品質を提供します。コストの最適化と速度が重要な場合、Gemma 2 2Bはスケールできる推論基盤を最小限のメモリで提供します。',
+          ],
+        },
+        commonMistakes: {
+          title: '小規模ローカルLLMを実行する場合の一般的な誤り',
+          items: [
+            '**Q4_K_Mの代わりにQ8_0量子化を使用する：** Q8_0は、小規模での品質改善がわずかなため、Q4_K_Mのほぼ2倍のRAMを必要とします。Llama 3.2 3BモデルのQ8_0は~3.8 GB RAMが必要で、Q4_K_Mでは~2.5 GBです。4 GBマシンではQ8_0はスワップ使用をトリガーし、推論を3～5倍遅くする可能性があります。Sub-4BモデルではデフォルトとしてQ4_K_Mを常に使用してください。',
+            '**命令バリアント代わりにベースモデルを実行する：** ベースモデル（例：`llama3.2:3b-text`）は、テキスト内の次のトークンを予測するようにトレーニングされた事前ファインチューニングチェックポイントです。指示に従いません。ベースモデルに「2+2は何ですか？」と聞くと、「4」と答える代わりにクイズとして文を完成させるかもしれません。常に命令バリアントを使用してください：`llama3.2:3b`（Ollamaは名前付きモデルのデフォルトで命令を使用）。',
+            '**3Bモデルから7Bモデルの品質を期待する：** 68% MMLU（Phi-4 Mini）の3Bモデルは、一般的なタスクで2023年のGPT-3.5 Miniと同様にパフォーマンスします。複雑な推論チェーン、長文の作成、微妙なコード生成は、7Bモデルより顕著に低い品質を生成します。出力品質が不十分な場合は、7Bモデルにアップグレードしてください。RAMの差は~2 GB（2.5 GB → 4.5 GB）です。',
+          ],
+        },
+        relatedReading: {
+          title: '関連資料',
+          items: [
+            '[最高の初心者向けローカルLLMモデル](/local-llms/best-beginner-local-llm-models) — 8 GB RAMが利用可能で、品質が3Bからステップアップする必要がある場合の7B推奨',
+            '[最初のローカルLLMを実行する](/local-llms/run-first-local-llm) — Ollamaを使用して10分未満でこのページの任意のモデルをプルして実行するステップバイステップガイド',
+            '[ノートパソコン上のローカルLLM](/local-llms/local-llm-on-laptop) — RAM制約の下での持続的な推論のための熱管理とバッテリー管理',
+            '[LLM量子化の説明](/local-llms/llm-quantization-explained) — Q4_K_Mがデフォルトである理由と、極端なRAM制約のためにQ3_K_Mを考慮する場合',
+            '[最高のローカルコーディング用LLM](/local-llms/best-local-llms-for-coding) — Qwen2.5 3Bが複雑なタスクに十分でない場合の7B+スケールのコード固有モデル',
+            '[ローカルLLMセットアップのトラブルシューティング](/local-llms/troubleshooting-local-llm-setup) — RAM制約マシンで一般的なOOMエラー、遅い推論、モデルロードの失敗を修正',
+          ],
+        },
+        faqSection: {
+          title: '小規模ローカルLLMモデルについてのよくある質問',
+          faqs: [
+            {
+              q: '有用な出力を生成する最小のローカルLLMは何ですか？',
+              a: '2026年4月現在、有用な出力の実用的な最小値はQ4_K_M量子化での3Bモデルです。2B以下のパラメータを持つモデル（Llama 3.2 1B、Gemma 2 2B）は一貫した単一文を生成しますが、複数ステップの指示と複雑な推論に苦労しています。要約やシンプルなQ&Aなどのタスクの場合、Gemma 2 2Bは使用可能です。より複雑な場合は、3Bモデルから始めてください。',
+            },
+            {
+              q: '3Bモデルを電話で実行できますか？',
+              a: 'はい — Llama 3.2 1Bと3Bは、オンデバイスのモバイル展開用に設計されています。Metaは、iOS（MLC LLM経由）およびAndroid向けの最適化されたビルドを提供します。モダンフォン（Snapdragon 8 Gen 3またはApple A17 Pro）での推論は、1Bモデルで15～30トークン/秒を生成します。LM StudioとOllamaは現在iOSまたはAndroidで動作しません。モバイルには別のフレームワークが必要です。',
+            },
+            {
+              q: '小規模モデルは要約に適していますか？',
+              a: 'はい — 要約は小規模モデルの最強のユースケースの1つです。Gemma 2 2BとLlama 3.2 3Bは、~4,000語までのテキスト（品質出力の実用的なコンテキスト制限）の正確な要約を確実に生成します。より長い文書の場合は、Phi-4 MiniまたはLlama 3.2 3B（両方で128Kトークン）のような大きなコンテキストウィンドウを持つモデルを使用してください。',
+            },
+            {
+              q: '2Bモデルは同じハードウェアで7Bモデルより何倍速いですか？',
+              a: 'CPU上で約2～3倍速いです。Gemma 2 2Bは同じノートパソコンのCPUでMistral 7Bより40～60トークン/秒対10～20トークン/秒を生成します。GPUではスピード利点は狭くなります。スピード差はCPUのみのマシンで最も顕著です。',
+            },
+            {
+              q: '小規模モデルは関数呼び出しをサポートしていますか？',
+              a: 'いくつかサポートしています。Qwen2.5 3Bは関数呼び出しとJSONモードをサポートしています。Llama 3.2 3Bは基本的なツール使用をサポートしています。Gemma 2 2Bは関数呼び出しをサポートしていません。構造化された出力に依存するパイプラインを構築する前に、モデルのドキュメントを確認してください。',
+            },
+            {
+              q: '英語以外の言語に最適な小規模モデルはどれですか？',
+              a: 'Qwen2.5 3Bは、中国語、日本語、韓国語、アラビア語を含む29言語をネイティブにサポートしています。Gemma 2 2BとPhi-4 Miniは主に英語最適化されています。小規模モデルスケールでの非英語タスクの場合、Qwen2.5 3Bが明確な選択肢です。[多言語ローカルLLM](/local-llms/multilingual-local-llms)で完全な言語比較を参照してください。',
+            },
+            {
+              q: '日常的なタスクでのPhi-4 MiniとLlama 3.2 3Bの違いは何ですか？',
+              a: 'Phi-4 Miniはほぼ同じRAM（各2.5 GB）で推論、数学、コーディングでLlama 3.2 3Bを上回ります（68%対58% MMLU、70%対60% HumanEval）。日常的なタスク — Q&A、要約、シンプルな説明 — では、品質ギャップは顕著ですが劇的ではありません。Llama 3.2 3Bはより広いコミュニティサポートとより多くのファインチューンが利用可能です。構造化された推論にはPhi-4 Miniを選択し、汎用チャットと互換性にはLlama 3.2 3Bを選択してください。',
+            },
+            {
+              q: '2つの小規模モデルを同時に実行できますか？',
+              a: 'はい、合計RAMが許可する場合。Q4_K_Mで2つの3Bモデルは~5 GB組み合わされて使用します。リーンなOSを備えた8 GBマシンでは実行可能です。Ollamaはデフォルトでプロセスごとに一度に1つのモデルをロードします。異なるポート（OLLAMA_HOST=:11434とOLLAMA_HOST=:11435）で2つのOllamaインスタンスを実行して、2つのモデルを並行して提供してください。これは出力をA/Bテストするのに役立ちます。',
+            },
+            {
+              q: '小規模モデルはRAG（検索拡張生成）に機能しますか？',
+              a: 'シンプルなRAGの場合ははい。Llama 3.2 3BとPhi-4 Miniは、取得した文書チャンク上の質問に確実に答えることができます。複数ホップの推論が必要な大規模な知識ベース上のRAGの場合、7B+モデルはより一貫してパフォーマンスします。GPT4AllのLocalDocsフィーチャーはドキュメントQ&Aに3Bモデルを使用し、個人ドキュメント集合に対してうまく動作します。',
+            },
+            {
+              q: 'Phi-4 MiniはコーディングでLlama 3.2 3Bより優れていますか？',
+              a: 'はい。Phi-4 Miniはこのスケールで意味のある10ポイントギャップでLlama 3.2 3Bの60%対70% HumanEvalスコアを達成します。4～6 GB RAMマシンでのコーディング支援の場合、Phi-4 Miniが推奨される選択肢です。多言語コーディング（非Python）の場合、65% HumanEvalのQwen2.5 3Bはphi-4 Miniと競争力があり、関数呼び出しもサポートしています。',
+            },
+          ],
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            'Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space（MMLUとHumanEvalスコア）',
+            'Microsoft Phi-4技術レポート — microsoft.com/en-us/research/publication/phi-4-technical-report/',
+            'Meta Llama 3.2モデルカード — huggingface.co/meta-llama/Llama-3.2-3B-Instruct',
+            'Google Gemma 2技術レポート — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf',
+          ],
+        },
+      },
     },
     zh: {
       theme: 'Best Models',
@@ -5715,7 +5892,184 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'Question', name: '我如何用中文运行小型LLM？', acceptedAnswer: { '@type': 'Answer', text: '使用Ollama下载模型：`ollama pull qwen2.5:3b`或`ollama pull llama3.2:3b`。使用`ollama run qwen2.5:3b`开始中文对话。无需特殊配置参数——模型自动生成高质量中文文本。' } },
         ],
       },
-      sections: {},
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**小规模规模的最佳推理**: Phi-4 Mini 3.8B — 68% MMLU，70% HumanEval，运行于4 GB RAM。',
+            '**CPU上最快**: Gemma 2 2B — 任何现代笔记本电脑CPU上40–60令牌/秒，1.7 GB RAM。',
+            '**最好的小规模编码模型**: Qwen2.5 3B — 〜2 GB RAM下65% HumanEval。',
+            '**最好的通用3B模型**: Llama 3.2 3B — 最多社区支持，128K上下文，2.5 GB RAM。',
+            '截至2026年4月，2B以下的模型无法生成适合专业任务的输出质量。对于实际工作，使用3B或更大的模型。',
+          ],
+        },
+        whatIsSmall: {
+          title: '什么是"小型"本地LLM，何时应该使用它？',
+          content: [
+            '小型本地LLM通常定义为参数少于40亿的模型。在Q4_K_M量化下，这些模型需要1.5–3 GB的RAM，完全在具有4–8 GB总内存的入门级笔记本电脑的约束范围内。',
+            '截至2026年4月，小型模型适合：快速摘要、简单问答、代码片段解释、短文本翻译和分类任务。不适合多步推理、复杂代码生成或长篇一致的文档编写。',
+            '3B模型和7B模型之间的质量差距很大，大致相当于GPT-3.5 Mini和GPT-3.5 Turbo之间的差距。对于拥有8 GB RAM的用户，如果机器有余量，Q4_K_M的7B模型几乎总是更好的选择。有关7B建议，请参阅[最佳初学者本地LLM模型](/local-llms/best-beginner-local-llm-models)。',
+          ],
+        },
+        phi4mini: {
+          title: 'Phi-4 Mini 3.8B — Sub-4B类中最佳推理性能',
+          content: [
+            'Microsoft Phi-4 Mini在MMLU上达到68%，在HumanEval上达到70%，这些得分超过了许多2025年之前发布的7B模型。之所以可能，是因为Phi-4 Mini在专注于推理和问题解决的精选合成数据集上进行了训练，而不是广泛的网络文本。',
+            '截至2026年4月，Phi-4 Mini是需要推理（数学、逻辑、分步解释）或在4–6 GB RAM硬件上进行编码协助的用户的推荐选择。',
+          ],
+          rows: [
+            { 'Spec': 'MMLU', 'Value': '68%' },
+            { 'Spec': 'HumanEval', 'Value': '70%' },
+            { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2.5 GB' },
+            { 'Spec': '上下文', 'Value': '128K令牌' },
+            { 'Spec': 'CPU速度', 'Value': '30–50令牌/秒' },
+            { 'Spec': 'Ollama命令', 'Value': 'ollama run phi4-mini' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        gemma2: {
+          title: 'Gemma 2 2B — CPU上最快的小型本地LLM',
+          content: [
+            'Google Gemma 2 2B在现代笔记本电脑CPU上生成40–60令牌/秒，是该质量层级内最快的模型。其1.7 GB RAM占用空间在4 GB机器上为OS和其他应用程序留下充足的内存。',
+            '在推理任务上的质量低于Phi-4 Mini或Llama 3.2 3B。8K上下文窗口（相对于Phi-4 Mini和Llama 3.2的128K）对于较长的文档是实际限制。当响应速度比输出深度更重要时，Gemma 2 2B是正确的选择。',
+          ],
+          rows: [
+            { 'Spec': 'MMLU', 'Value': '52%' },
+            { 'Spec': 'RAM (Q4_K_M)', 'Value': '~1.7 GB' },
+            { 'Spec': '上下文', 'Value': '8K令牌' },
+            { 'Spec': 'CPU速度', 'Value': '40–60令牌/秒' },
+            { 'Spec': 'Ollama命令', 'Value': 'ollama run gemma2:2b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        qwen25_3b: {
+          title: 'Qwen2.5 3B — 编码任务的最佳小型模型',
+          content: [
+            'Qwen2.5 3B在HumanEval上得分65%，比Llama 3.2 3B高5个百分点，使其成为3B规模编码任务的最佳选择。它支持JSON模式和函数调用，并原生处理29种语言。',
+            '对于英文的非编码任务，Llama 3.2 3B和Phi-4 Mini会产生更自然的散文。特别是在编码或多语言输出是主要用例时，选择Qwen2.5 3B。',
+          ],
+          rows: [
+            { 'Spec': 'MMLU', 'Value': '62%' },
+            { 'Spec': 'HumanEval', 'Value': '65%' },
+            { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2 GB' },
+            { 'Spec': '上下文', 'Value': '128K令牌' },
+            { 'Spec': 'CPU速度', 'Value': '25–40令牌/秒' },
+            { 'Spec': 'Ollama命令', 'Value': 'ollama run qwen2.5:3b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        llama32_3b: {
+          title: 'Llama 3.2 3B — 最好的通用小型模型',
+          content: [
+            'Meta Llama 3.2 3B是最广泛记录的、社区支持最多的3B模型。它在MMLU上得分58%，在HumanEval上得分60%，在两者上都略低于Phi-4 Mini，但拥有最广泛的工具支持、最多可用的微调和最大的社区指南集合。',
+            '128K上下文窗口与更大的Llama 3.x模型相同，适合总结中等长度的文档。作为第一个小型模型，Llama 3.2 3B因其可预测的行为和广泛的文档记录而仍然是最安全的选择。',
+          ],
+          rows: [
+            { 'Spec': 'MMLU', 'Value': '58%' },
+            { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2.5 GB' },
+            { 'Spec': '上下文', 'Value': '128K令牌' },
+            { 'Spec': 'CPU速度', 'Value': '25–45令牌/秒' },
+            { 'Spec': 'Ollama命令', 'Value': 'ollama run llama3.2:3b' },
+          ],
+          columns: ['Spec', 'Value'],
+        },
+        llama32_1b: {
+          title: 'Llama 3.2 1B — 任何有用输出的绝对最小值',
+          content: 'Llama 3.2 1B仅需1.3 GB RAM，在CPU上生成60–90令牌/秒，是最快的本地运行模型。输出质量是边界的：它处理非常简单的分类和关键词提取，但在连贯的多句响应上苦恼。截至2026年4月，仅在RAM是真正约束（可用3 GB以下）或测试工具集成时使用Llama 3.2 1B。',
+        },
+        comparisonTable: {
+          title: '完整比较：4B以下最好的小型本地LLM',
+          rows: [
+            { '模型': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2.5 GB', '上下文': '128K', '最适合': '推理、编码' },
+            { '模型': 'Qwen2.5 3B', 'MMLU': '62%', 'HumanEval': '65%', 'RAM': '2 GB', '上下文': '128K', '最适合': '编码、多语言' },
+            { '模型': 'Llama 3.2 3B', 'MMLU': '58%', 'HumanEval': '60%', 'RAM': '2.5 GB', '上下文': '128K', '最适合': '通用、首个模型' },
+            { '模型': 'Gemma 2 2B', 'MMLU': '52%', 'HumanEval': '38%', 'RAM': '1.7 GB', '上下文': '8K', '最适合': '速度、非常低RAM' },
+            { '模型': 'Llama 3.2 1B', 'MMLU': '32%', 'HumanEval': '28%', 'RAM': '1.3 GB', '上下文': '128K', '最适合': '绝对最小RAM' },
+          ],
+          columns: ['模型', 'MMLU', 'HumanEval', 'RAM', '上下文', '最适合'],
+        },
+        regionalContext: {
+          title: '按地区的小型本地LLM',
+          content: [
+            '**中国（数据安全法）：** Qwen2.5 3B（阿里巴巴，Apache 2.0）是中文小型模型部署的自然选择。原生中文标记化以相当的参数数与Llama相比，处理普通话文本的效率提高30–40%。对于IoT和中国《数据安全法》（数据安全法）下的边缘部署：`ollama run qwen2.5:3b`在配备4 GB RAM的任何Linux设备上运行，并在设备上处理所有文本，不进行外部API调用。本地Ollama部署保持所有文本处理在设备上，符合《数据安全法》对数据驻留和非跨境传输的要求。',
+            '**日本：** 对于小型模型层的日文任务，此比较中唯一的原生日文标记化是Qwen2.5 3B。Llama 3.2 3B处理日文但标记效率较低。对于RAM约束下的日文摘要或翻译：`ollama run qwen2.5:3b`。小型模型的速度优势对日本企业使用特别相关：CPU上25–40令牌/秒为标准办公硬件上的聊天界面提供适当的实时响应。',
+            '**其他地区：** 对于英文用例，Phi-4 Mini 3.8B在基于CPU的系统上提供最佳推理质量。当成本优化和速度很重要时，Gemma 2 2B以最小的内存提供可扩展的推理基础。',
+          ],
+        },
+        commonMistakes: {
+          title: '运行小型本地LLM时的常见错误',
+          items: [
+            '**使用Q8_0量化而不是Q4_K_M：** Q8_0需要Q4_K_M的几乎两倍RAM，质量改进最少。Llama 3.2 3B模型在Q8_0下需要~3.8 GB RAM对比Q4_K_M下的~2.5 GB。在4 GB机器上，Q8_0可能触发交换使用并使推理速度降低3–5倍。对于Sub-4B模型，始终使用Q4_K_M作为默认值。',
+            '**运行基础模型而不是指令变体：** 基础模型（例如`llama3.2:3b-text`）是预先微调的检查点，经训练用于预测文本中的下一个令牌。它们不遵循指令。当您问基础模型"2+2是什么？"时，它可能将句子作为测验完成而不是回答"4"。始终使用指令变体：`llama3.2:3b`（Ollama对命名模型默认为指令）。',
+            '**期望从3B模型获得7B模型质量：** 68% MMLU（Phi-4 Mini）的3B模型在一般任务上的表现与2023年代的GPT-3.5 Mini相似。复杂推理链、长篇写作和细微代码生成将产生明显低于7B模型的质量。如果输出质量不足，升级到7B模型——RAM差异约为2 GB（2.5 GB → 4.5 GB）。',
+          ],
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[最佳初学者本地LLM模型](/local-llms/best-beginner-local-llm-models) — 当8 GB RAM可用且质量需要从3B升级时的7B推荐',
+            '[运行您的第一个本地LLM](/local-llms/run-first-local-llm) — 使用Ollama在10分钟内拉取和运行此页面上任何模型的分步指南',
+            '[笔记本电脑上的本地LLM](/local-llms/local-llm-on-laptop) — 在RAM约束下进行持续推理的热管理和电池管理',
+            '[LLM量化解释](/local-llms/llm-quantization-explained) — 为什么Q4_K_M是默认值以及何时为极端RAM约束考虑Q3_K_M',
+            '[最佳本地编码LLM](/local-llms/best-local-llms-for-coding) — 当Qwen2.5 3B不足以完成复杂任务时的7B+规模编码特定模型',
+            '[本地LLM设置故障排除](/local-llms/troubleshooting-local-llm-setup) — 修复RAM约束机器上常见的OOM错误、缓慢推理和模型加载失败',
+          ],
+        },
+        faqSection: {
+          title: '关于小型本地LLM模型的常见问题',
+          faqs: [
+            {
+              q: '生成有用输出的最小本地LLM是什么？',
+              a: '截至2026年4月，有用输出的实际最小值是Q4_K_M量化下的3B模型。2B以下参数的模型生成连贯的单句但在多步骤指令和复杂推理上苦恼。对于摘要和简单问答等任务，Gemma 2 2B是可用的。对于更复杂的任务，从3B模型开始。',
+            },
+            {
+              q: '我可以在电话上运行3B模型吗？',
+              a: '可以——Llama 3.2 1B和3B专为设备上移动部署而设计。Meta为iOS（通过MLC LLM）和Android提供优化的构建。在现代手机上的推理为1B模型生成15–30令牌/秒。LM Studio和Ollama目前不在iOS或Android上运行——移动需要单独的框架。',
+            },
+            {
+              q: '小型模型适合摘要吗？',
+              a: '是的——摘要是小型模型最强的用例之一。Gemma 2 2B和Llama 3.2 3B可靠地生成高达〜4,000字的文本的准确摘要。对于较长的文档，使用具有大上下文窗口的模型，如Phi-4 Mini或Llama 3.2 3B（均128K令牌）。',
+            },
+            {
+              q: '2B模型在相同硬件上比7B模型快多少倍？',
+              a: '在CPU上大约快2–3倍。Gemma 2 2B在同一笔记本电脑CPU上生成40–60令牌/秒对Mistral 7B的10–20令牌/秒。在GPU上，速度优势缩小。速度差在仅CPU的机器上最明显。',
+            },
+            {
+              q: '小型模型支持函数调用吗？',
+              a: '有些支持。Qwen2.5 3B支持函数调用和JSON模式。Llama 3.2 3B有基本的工具使用支持。Gemma 2 2B不支持函数调用。在构建依赖于结构化输出的管道之前检查模型文档。',
+            },
+            {
+              q: '英文以外的语言最好的小型模型是什么？',
+              a: 'Qwen2.5 3B原生支持29种语言，包括中文、日文、韩文和阿拉伯文。Gemma 2 2B和Phi-4 Mini主要是英文优化的。对于小型模型规模的非英文任务，Qwen2.5 3B是明确的选择。有关完整的语言比较，请参阅[多语言本地LLM](/local-llms/multilingual-local-llms)。',
+            },
+            {
+              q: '日常任务中Phi-4 Mini和Llama 3.2 3B之间的区别是什么？',
+              a: 'Phi-4 Mini以几乎相同的RAM（每个2.5 GB）在推理、数学和编码上超过Llama 3.2 3B（68%对58% MMLU，70%对60% HumanEval）。对于日常任务——问答、摘要、简单解释——质量差距明显但不引人注目。Llama 3.2 3B拥有更广泛的社区支持和更多可用的微调。为结构化推理选择Phi-4 Mini；为通用聊天和兼容性选择Llama 3.2 3B。',
+            },
+            {
+              q: '我可以同时运行两个小型模型吗？',
+              a: '可以，如果总RAM允许的话。两个3B模型在Q4_K_M下组合使用〜5 GB——在具有精益OS的8 GB机器上可行。Ollama默认按进程一次加载一个模型。在不同的端口（OLLAMA_HOST=:11434和OLLAMA_HOST=:11435）上运行两个Ollama实例以并行提供两个模型。这对于A/B测试输出很有用。',
+            },
+            {
+              q: '小型模型适合RAG（检索增强生成）吗？',
+              a: '对于简单RAG是的。Llama 3.2 3B和Phi-4 Mini可以可靠地回答检索到的文档块上的问题。对于需要多跳推理的大型知识库上的RAG，7B+模型执行更加一致。GPT4All的LocalDocs功能为文档问答使用3B模型，对个人文档集合效果很好。',
+            },
+            {
+              q: 'Phi-4 Mini在编码上比Llama 3.2 3B更好吗？',
+              a: '是的。Phi-4 Mini在此规模达到60%对70% HumanEval得分，与Llama 3.2 3B相比有意义的10点差距。对于4–6 GB RAM机器上的编码协助，Phi-4 Mini是推荐选择。对于多语言编码（非Python），65% HumanEval的Qwen2.5 3B与Phi-4 Mini竞争，同时也支持函数调用。',
+            },
+          ],
+        },
+        sources: {
+          title: '来源',
+          items: [
+            'Hugging Face Open LLM排行榜 — open-llm-leaderboard.hf.space（MMLU和HumanEval得分）',
+            'Microsoft Phi-4技术报告 — microsoft.com/en-us/research/publication/phi-4-technical-report/',
+            'Meta Llama 3.2模型卡 — huggingface.co/meta-llama/Llama-3.2-3B-Instruct',
+            'Google Gemma 2技术报告 — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf',
+          ],
+        },
+      },
     },
   },
 
@@ -5757,6 +6111,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           content: [
             'A 70B model at Q4_K_M quantization requires approximately 40–43 GB of memory that is accessible to the inference engine. This can come from GPU VRAM, unified system memory (Apple Silicon), system RAM, or a combination via layer offloading.',
           ],
+          image: '/images/70b-hardware-comparison.svg',
+          imageCaption: 'Hardware comparison: Apple Silicon M3 Max achieves 25–35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10–18 tok/sec, and CPU-only 70B inference produces just 1–3 tok/sec.',
           rows: [
             { 'Hardware': 'Apple M3 Max (64 GB unified)', 'Can Run 70B?': 'Yes — full GPU', 'Speed (70B Q4)': '20–30 tok/sec', 'Notes': 'Best consumer laptop option' },
             { 'Hardware': 'Apple M2 Ultra (64 GB unified)', 'Can Run 70B?': 'Yes — full GPU', 'Speed (70B Q4)': '25–35 tok/sec', 'Notes': 'Mac Studio baseline config' },
@@ -5769,6 +6125,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         ramByQuant: {
           title: 'How Much RAM Does a 70B Model Need at Each Quantization Level?',
+          image: '/images/70b-quantization-tradeoff.svg',
+          imageCaption: 'Quantization trade-off curve: Q4_K_M (recommended) requires 40–43 GB RAM with only 1–3% quality loss versus FP16, balancing practicality and performance for consumer hardware.',
           rows: [
             { 'Quantization': 'FP16 (full precision)', 'RAM Required': '~140 GB', 'Quality': 'Reference quality', 'Practical?': 'No — server only' },
             { 'Quantization': 'Q8_0', 'RAM Required': '~70 GB', 'Quality': 'Near-lossless', 'Practical?': 'Mac Ultra 192 GB only' },
@@ -5790,6 +6148,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         nvidiaOffload: {
           title: 'How Does NVIDIA GPU + Layer Offloading Work for 70B Models?',
           content: 'Ollama and llama.cpp support splitting a model across GPU VRAM and system RAM. Layers loaded in VRAM run at GPU speed; layers in system RAM run at CPU speed:',
+          image: '/images/70b-layer-offloading.svg',
+          imageCaption: 'Layer offloading architecture: RTX 4090 GPU (24 GB) holds ~60% of layers (1–48) at 10–18 tok/sec, while system RAM (32 GB) holds remaining layers (49–80) running at CPU speed (2–5 tok/sec), achieving 10–18 tok/sec overall.',
           codeBlock: '# Ollama automatically offloads as many layers as fit in VRAM\n# To explicitly control layers:\nollama run llama3.3:70b\n\n# Check how many layers are on GPU:\nollama ps\n# Output shows: llama3.3:70b  ...  23/80 GPU layers\n\n# For llama.cpp directly:\n./llama-cli -m llama-3.3-70b-q4_k_m.gguf \\\n  -ngl 40   # number of layers to offload to GPU\n  --ctx-size 4096',
           codeLanguage: 'bash',
         },

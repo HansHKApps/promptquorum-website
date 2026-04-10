@@ -1,0 +1,362 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="800" height="450" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="35"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="22"
+    font-weight="700"
+    fill="#1C1B1F"
+    text-anchor="middle">
+    70B Model Hardware Options
+  </text>
+
+  <!-- Card 1: Apple Silicon -->
+  <rect x="40" y="70" width="220" height="360" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2" rx="8"/>
+
+  <text x="150" y="105"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="18"
+    font-weight="700"
+    fill="#6750A4"
+    text-anchor="middle">
+    Apple Silicon
+  </text>
+
+  <text x="150" y="135"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="13"
+    font-weight="600"
+    fill="#1C1B1F"
+    text-anchor="middle">
+    M3 Max / M2 Ultra
+  </text>
+
+  <line x1="50" y1="145" x2="250" y2="145" stroke="#E8DEF8" stroke-width="1"/>
+
+  <text x="50" y="170"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    RAM (unified):
+  </text>
+  <text x="240" y="170"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#6750A4"
+    text-anchor="end">
+    64 GB
+  </text>
+
+  <text x="50" y="195"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    Speed (70B Q4):
+  </text>
+  <text x="240" y="195"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#6750A4"
+    text-anchor="end">
+    25–35 tok/s
+  </text>
+
+  <text x="50" y="220"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    Offloading:
+  </text>
+  <text x="240" y="220"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#34A853"
+    text-anchor="end">
+    Not needed
+  </text>
+
+  <text x="50" y="245"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    Cost:
+  </text>
+  <text x="240" y="245"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#1C1B1F"
+    text-anchor="end">
+    $3,500
+  </text>
+
+  <text x="50" y="280"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✓ Full GPU acceleration
+  </text>
+  <text x="50" y="300"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✓ Unified memory
+  </text>
+  <text x="50" y="320"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✓ Energy efficient
+  </text>
+  <text x="50" y="340"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✓ Best option
+  </text>
+
+  <!-- Card 2: NVIDIA GPU -->
+  <rect x="290" y="70" width="220" height="360" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2" rx="8"/>
+
+  <text x="400" y="105"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="18"
+    font-weight="700"
+    fill="#7D5260"
+    text-anchor="middle">
+    NVIDIA GPU
+  </text>
+
+  <text x="400" y="135"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="13"
+    font-weight="600"
+    fill="#1C1B1F"
+    text-anchor="middle">
+    RTX 4090 + RAM
+  </text>
+
+  <line x1="300" y1="145" x2="500" y2="145" stroke="#E8DEF8" stroke-width="1"/>
+
+  <text x="300" y="170"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    VRAM + RAM:
+  </text>
+  <text x="490" y="170"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#7D5260"
+    text-anchor="end">
+    24 + 32 GB
+  </text>
+
+  <text x="300" y="195"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    Speed (70B Q4):
+  </text>
+  <text x="490" y="195"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#7D5260"
+    text-anchor="end">
+    10–18 tok/s
+  </text>
+
+  <text x="300" y="220"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    Offloading:
+  </text>
+  <text x="490" y="220"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#F4B400"
+    text-anchor="end">
+    Required
+  </text>
+
+  <text x="300" y="245"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    Cost:
+  </text>
+  <text x="490" y="245"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#1C1B1F"
+    text-anchor="end">
+    $3,500
+  </text>
+
+  <text x="300" y="280"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✓ Mature ecosystem
+  </text>
+  <text x="300" y="300"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✓ NVIDIA optimization
+  </text>
+  <text x="300" y="320"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✗ Lower speed
+  </text>
+  <text x="300" y="340"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✗ Higher power
+  </text>
+
+  <!-- Card 3: CPU Only -->
+  <rect x="540" y="70" width="220" height="360" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2" rx="8"/>
+
+  <text x="650" y="105"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="18"
+    font-weight="700"
+    fill="#E67C73"
+    text-anchor="middle">
+    CPU Only
+  </text>
+
+  <text x="650" y="135"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="13"
+    font-weight="600"
+    fill="#1C1B1F"
+    text-anchor="middle">
+    High-Core CPU
+  </text>
+
+  <line x1="550" y1="145" x2="750" y2="145" stroke="#E8DEF8" stroke-width="1"/>
+
+  <text x="550" y="170"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    RAM:
+  </text>
+  <text x="740" y="170"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#E67C73"
+    text-anchor="end">
+    64 GB
+  </text>
+
+  <text x="550" y="195"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    Speed (70B Q4):
+  </text>
+  <text x="740" y="195"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#E67C73"
+    text-anchor="end">
+    1–3 tok/s
+  </text>
+
+  <text x="550" y="220"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    Offloading:
+  </text>
+  <text x="740" y="220"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#E67C73"
+    text-anchor="end">
+    N/A
+  </text>
+
+  <text x="550" y="245"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#49454F">
+    Cost:
+  </text>
+  <text x="740" y="245"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="12"
+    font-weight="700"
+    fill="#1C1B1F"
+    text-anchor="end">
+    $500
+  </text>
+
+  <text x="550" y="280"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✓ Budget option
+  </text>
+  <text x="550" y="300"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✗ Very slow
+  </text>
+  <text x="550" y="320"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✗ Batch only
+  </text>
+  <text x="550" y="340"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="11"
+    font-weight="500"
+    fill="#79747E">
+    ✗ Not interactive
+  </text>
+</svg>
