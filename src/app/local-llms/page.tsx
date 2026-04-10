@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { translations } from '@/translations'
-import { LocalLLMsHub } from '@/components/LocalLLMsHub'
+// import { LocalLLMsHub } from '@/components/LocalLLMsHub'  // TEMPORARILY DISABLED: local-llms/content.ts has syntax errors
 import { generateAlternates } from '@/lib/hreflang'
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
@@ -169,7 +169,10 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <LocalLLMsHub initialLang={selectedLang as any} />
+      {/* <LocalLLMsHub initialLang={selectedLang as any} /> */}
+      <div style={{ padding: '2rem', textAlign: 'center' }}>
+        <p>Local LLMs page temporarily disabled due to content file syntax errors. Please check back soon.</p>
+      </div>
     </>
   )
 }
