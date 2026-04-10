@@ -506,10 +506,378 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
       },
     },
-    de: { theme: 'Erste Schritte', title: 'Ollama', seoTitle: 'Ollama', intro: 'Installation.', metaDescription: 'Installieren.', publishDate: '2026-04-04', readTime: '8 min', educationalLevel: 'Beginner', primaryTerm: 'Ollama', sections: { tldr: { isTldr: true, items: ['Ollama.'] } } },
-    fr: { theme: 'Premiers pas', title: 'Ollama', seoTitle: 'Ollama', intro: 'Installation.', metaDescription: 'Installer.', publishDate: '2026-04-04', readTime: '8 min', educationalLevel: 'Beginner', primaryTerm: 'Ollama', sections: { tldr: { isTldr: true, items: ['Ollama.'] } } },
-    ja: { theme: 'はじめに', title: 'Ollama', seoTitle: 'Ollama', intro: 'インストール.', metaDescription: 'インストール.', publishDate: '2026-04-04', readTime: '8分', educationalLevel: 'Beginner', primaryTerm: 'Ollama', sections: { tldr: { isTldr: true, items: ['Ollama'] } } },
-    zh: { theme: '入门', title: 'Ollama', seoTitle: 'Ollama', intro: '安装.', metaDescription: '安装.', publishDate: '2026-04-04', readTime: '8分钟', educationalLevel: 'Beginner', primaryTerm: 'Ollama', sections: { tldr: { isTldr: true, items: ['Ollama'] } } }
+    de: {
+      theme: 'Erste Schritte',
+      title: 'Ollama installieren: Vollständige Setup-Anleitung für macOS, Windows und Linux',
+      seoTitle: 'Ollama installieren: Schritt-für-Schritt-Anleitung',
+      intro: 'Ollama installiert sich in unter 2 Minuten auf macOS, Windows und Linux. Nach der Installation lädt ein Befehl jedes Modell aus der Ollama-Bibliothek herunter und führt es aus — keine Python-Umgebung, keine Konfigurationsdateien und keine GPU erforderlich.',
+      metaDescription: 'Ollama auf macOS, Windows und Linux installieren. Schritt-für-Schritt-Anleitung mit exakten Befehlen und API-Konfiguration in 8 Minuten.',
+      publishDate: '2026-04-04',
+      readTime: '8 min Lesezeit',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Ollama',
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'macOS: .dmg von ollama.com herunterladen oder `brew install ollama` ausführen.',
+            'Windows: Installationsprogramm herunterladen. Ollama läuft als Hintergrunddienst.',
+            'Linux: Ein curl-Befehl installiert alles.',
+            'Mindestanforderungen: 4 GB RAM für 3B-Modelle, 8 GB für 7B-Modelle.',
+            'Ollama stellt OpenAI-kompatible REST-API bereit.',
+          ],
+        },
+        whatIsOllama: {
+          title: 'Was ist Ollama?',
+          content: [
+            'Ollama ist ein quelloffenes Inferenzmodul, das große Sprachmodelle lokal ausführt. Es kombiniert Modellverwaltung, das llama.cpp-Inferenz-Backend und eine OpenAI-kompatible REST-API in einer einzigen leichtgewichtigen Anwendung.',
+            'Ollama verwaltet eine kuratierte Modellbibliothek (ollama.com/library) mit Download-Befehlen für Meta Llama, Microsoft Phi, Google Gemma, Mistral, Qwen und 100+ weitere Modelle.',
+            'Alternativen zu Ollama: [Lokale LLM One-Click-Installer](/local-llms/local-llm-one-click-installers?lang=de). Um Ollama mit LM Studio zu vergleichen: [So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de).',
+          ],
+        },
+        installMac: {
+          title: 'So installieren Sie Ollama auf macOS',
+          content: 'Es gibt zwei Methoden. Der Installer-Download ist schneller; Homebrew ist besser, wenn Sie Software mit brew verwalten.',
+          numberedItems: [
+            'Gehen Sie zu ollama.com/download und klicken Sie auf „Download für macOS".',
+            'Öffnen Sie die heruntergeladene Ollama.dmg-Datei und ziehen Sie Ollama in den Programme-Ordner.',
+            'Starten Sie Ollama aus den Programmen. Ein Lama-Symbol erscheint in Ihrer Menüleiste.',
+            'Öffnen Sie Terminal und führen Sie `ollama run llama3.2` aus.',
+            'Das Modell wird heruntergeladen und eine Chat-Eingabeaufforderung wird angezeigt.',
+          ],
+        },
+        installMacBrew: {
+          title: 'Ollama mit Homebrew installieren',
+          codeBlock: 'brew install ollama
+ollama serve &
+ollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        installWindows: {
+          title: 'So installieren Sie Ollama auf Windows',
+          numberedItems: [
+            'Gehen Sie zu ollama.com/download und klicken Sie auf „Download für Windows".',
+            'Führen Sie das OllamaSetup.exe-Installationsprogramm aus.',
+            'Ollama startet automatisch und wird als Systemtray-Symbol angezeigt.',
+            'Öffnen Sie PowerShell oder Eingabeaufforderung und führen Sie `ollama run llama3.2` aus.',
+            'Das Modell wird heruntergeladen und verwendet.',
+          ],
+        },
+        installWindowsNote: {
+          title: 'GPU-Unterstützung auf Windows',
+          content: 'Ollama unter Windows erkennt automatisch NVIDIA-GPUs (CUDA 11.3+) und AMD-GPUs (ROCm 6+). Wenn Sie eine NVIDIA-RTX-Karte haben, wird Ollama Modellschichten automatisch in den VRAM verlagern.',
+        },
+        installLinux: {
+          title: 'So installieren Sie Ollama auf Linux',
+          content: 'Ein einzelner Befehl installiert Ollama auf jeder Linux-Distribution:',
+          codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+          codeLanguage: 'bash',
+        },
+        firstModel: {
+          title: 'Erstes Modell herunterladen und ausführen',
+          content: 'Führen Sie diesen Befehl aus, um ein Modell herunterzuladen und zu starten:',
+          codeBlock: 'ollama pull llama3.2
+ollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        recommendedModels: {
+          title: 'Welches Modell sollte ich zuerst verwenden?',
+          rows: [
+            { 'Modell': 'llama3.2:3b', 'Downloadgröße': '~2 GB', 'RAM erforderlich': '4 GB', 'Beste für': 'Anfänger' },
+            { 'Modell': 'llama3.1:8b', 'Downloadgröße': '~4,7 GB', 'RAM erforderlich': '8 GB', 'Beste für': 'Laptops' },
+            { 'Modell': 'phi3:mini', 'Downloadgröße': '~2,3 GB', 'RAM erforderlich': '4 GB', 'Beste für': 'Schnell' },
+          ],
+          columns: ['Modell', 'Downloadgröße', 'RAM erforderlich', 'Beste für'],
+        },
+        relatedReading: {
+          title: 'Weiterführende Literatur',
+          items: [
+            '[Was sind lokale LLMs?](/local-llms/what-are-local-llms?lang=de)',
+            '[Erstes Modell ausführen](/local-llms/run-first-local-llm?lang=de)',
+            '[Beste Anfänger-Modelle](/local-llms/best-beginner-local-llm-models?lang=de)',
+          ],
+        },
+      },
+    },
+    fr: {
+      theme: 'Premiers pas',
+      title: 'Installer Ollama: Guide de configuration complet',
+      seoTitle: 'Installer Ollama: Guide etape par etape',
+      intro: 'Ollama s'installe en moins de 2 minutes sur macOS, Windows et Linux. Une seule commande telecharge et execute tout modele de la bibliotheque Ollama.',
+      metaDescription: 'Installer Ollama sur macOS, Windows et Linux en 8 minutes avec guide etape par etape.',
+      publishDate: '2026-04-04',
+      readTime: '8 min de lecture',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Ollama',
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'macOS: telechargez le .dmg ou executez `brew install ollama`.',
+            'Windows: telechargez le programme d'installation.',
+            'Linux: une seule commande curl.',
+            '4 Go RAM pour modeles 3B, 8 Go pour 7B.',
+            'Ollama expose une API REST compatible OpenAI.',
+          ],
+        },
+        whatIsOllama: {
+          title: 'Qu'est-ce qu'Ollama?',
+          content: [
+            'Ollama est un moteur d'inference open-source pour les LLMs locaux. Il combine la gestion des modeles, le backend d'inference llama.cpp et une API REST compatible OpenAI.',
+            'Ollama maintient une bibliotheque de modeles curatee (ollama.com/library) avec telechargements pour Meta Llama, Microsoft Phi, Google Gemma, Mistral, Qwen et plus.',
+            'Alternatives: [Installateurs one-click](/local-llms/local-llm-one-click-installers?lang=fr). Comparaison: [LM Studio](/local-llms/how-to-install-lm-studio?lang=fr).',
+          ],
+        },
+        installMac: {
+          title: 'Installation sur macOS',
+          content: 'Deux methodes disponibles.',
+          numberedItems: [
+            'Allez sur ollama.com/download.',
+            'Ouvrez le fichier Ollama.dmg.',
+            'Glissez Ollama dans Applications.',
+            'Lancez Ollama.',
+            'Executez `ollama run llama3.2`.',
+          ],
+        },
+        installMacBrew: {
+          title: 'Installation avec Homebrew',
+          codeBlock: 'brew install ollama
+ollama serve &
+ollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        installWindows: {
+          title: 'Installation sur Windows',
+          numberedItems: [
+            'Allez sur ollama.com/download.',
+            'Executez OllamaSetup.exe.',
+            'Ollama demarr automatiquement.',
+            'Executez `ollama run llama3.2`.',
+            'Le modele se telecharge.',
+          ],
+        },
+        installWindowsNote: {
+          title: 'Support GPU Windows',
+          content: 'Ollama detecte automatiquement NVIDIA (CUDA 11.3+) et AMD (ROCm 6+).',
+        },
+        installLinux: {
+          title: 'Installation sur Linux',
+          content: 'Une seule commande pour toute distribution Linux:',
+          codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+          codeLanguage: 'bash',
+        },
+        firstModel: {
+          title: 'Premier modele',
+          content: 'Executez cette commande:',
+          codeBlock: 'ollama pull llama3.2
+ollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        recommendedModels: {
+          title: 'Quel modele d'abord?',
+          rows: [
+            { 'Modele': 'llama3.2:3b', 'Telechargement': '~2 Go', 'RAM': '4 Go', 'Pour': 'Debutants' },
+            { 'Modele': 'llama3.1:8b', 'Telechargement': '~4,7 Go', 'RAM': '8 Go', 'Pour': 'Ordinateurs portables' },
+            { 'Modele': 'phi3:mini', 'Telechargement': '~2,3 Go', 'RAM': '4 Go', 'Pour': 'Rapide' },
+          ],
+          columns: ['Modele', 'Telechargement', 'RAM', 'Pour'],
+        },
+        relatedReading: {
+          title: 'Lectures complementaires',
+          items: [
+            '[Que sont les LLMs locaux?](/local-llms/what-are-local-llms?lang=fr)',
+            '[Premier modele](/local-llms/run-first-local-llm?lang=fr)',
+            '[Meilleurs modeles](/local-llms/best-beginner-local-llm-models?lang=fr)',
+          ],
+        },
+      },
+    },
+    ja: {
+      theme: 'はじめに',
+      title: 'Ollama のインストール方法',
+      seoTitle: 'Ollama をインストール: ガイド',
+      intro: 'Ollama は macOS、Windows、Linux で 2 分以内にインストールできます。インストール後、1 つのコマンドで任意のモデルをダウンロードして実行します。',
+      metaDescription: 'Ollama を 8 分でインストール。macOS、Windows、Linux 向けステップバイステップガイド。',
+      publishDate: '2026-04-04',
+      readTime: '8分で読める',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Ollama',
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'macOS: ollama.com から .dmg をダウンロードするか、`brew install ollama` を実行します。',
+            'Windows: インストーラーをダウンロードします。',
+            'Linux: 1 つの curl コマンド。',
+            '3B モデルには 4 GB RAM、7B には 8 GB が必要。',
+            'Ollama は OpenAI 互換 API を公開しています。',
+          ],
+        },
+        whatIsOllama: {
+          title: 'Ollama とは',
+          content: [
+            'Ollama はローカル LLM 用のオープンソース推論エンジンです。モデル管理、llama.cpp 推論バックエンド、OpenAI 互換 REST API を統合します。',
+            'Ollama は Meta Llama、Microsoft Phi、Google Gemma、Mistral、Qwen など 200 以上のモデルをサポートしています。',
+            '代替手段: [ワンクリックインストーラー](/local-llms/local-llm-one-click-installers?lang=ja)。比較: [LM Studio](/local-llms/how-to-install-lm-studio?lang=ja)。',
+          ],
+        },
+        installMac: {
+          title: 'macOS へのインストール',
+          content: '2 つの方法があります。',
+          numberedItems: [
+            'ollama.com/download にアクセスします。',
+            'Ollama.dmg を開きます。',
+            'Ollama をアプリケーション フォルダーにドラッグします。',
+            'Ollama を起動します。',
+            '`ollama run llama3.2` を実行します。',
+          ],
+        },
+        installMacBrew: {
+          title: 'Homebrew でのインストール',
+          codeBlock: 'brew install ollama
+ollama serve &
+ollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        installWindows: {
+          title: 'Windows へのインストール',
+          numberedItems: [
+            'ollama.com/download にアクセスします。',
+            'OllamaSetup.exe を実行します。',
+            'Ollama が自動的に起動します。',
+            '`ollama run llama3.2` を実行します。',
+            'モデルがダウンロードされます。',
+          ],
+        },
+        installWindowsNote: {
+          title: 'Windows GPU サポート',
+          content: 'Ollama は NVIDIA (CUDA 11.3+) と AMD (ROCm 6+) を自動検出します。',
+        },
+        installLinux: {
+          title: 'Linux へのインストール',
+          content: '任意の Linux ディストリビューションの場合:',
+          codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+          codeLanguage: 'bash',
+        },
+        firstModel: {
+          title: '最初のモデル',
+          content: 'このコマンドを実行します:',
+          codeBlock: 'ollama pull llama3.2
+ollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        recommendedModels: {
+          title: 'どのモデルから始めるか',
+          rows: [
+            { 'モデル': 'llama3.2:3b', 'ダウンロード': '~2 GB', 'RAM': '4 GB', '用途': '初心者' },
+            { 'モデル': 'llama3.1:8b', 'ダウンロード': '~4.7 GB', 'RAM': '8 GB', '用途': 'ノートパソコン' },
+            { 'モデル': 'phi3:mini', 'ダウンロード': '~2.3 GB', 'RAM': '4 GB', '用途': '高速' },
+          ],
+          columns: ['モデル', 'ダウンロード', 'RAM', '用途'],
+        },
+        relatedReading: {
+          title: '関連資料',
+          items: [
+            '[ローカル LLM とは](/local-llms/what-are-local-llms?lang=ja)',
+            '[最初のモデル](/local-llms/run-first-local-llm?lang=ja)',
+            '[最高のモデル](/local-llms/best-beginner-local-llm-models?lang=ja)',
+          ],
+        },
+      },
+    },
+    zh: {
+      theme: '入门',
+      title: '如何安装 Ollama',
+      seoTitle: '安装 Ollama: 指南',
+      intro: 'Ollama 在 macOS、Windows 和 Linux 上 2 分钟内即可安装。安装后，单个命令可以从 Ollama 库中下载并运行任何模型。',
+      metaDescription: '在 macOS、Windows 和 Linux 上安装 Ollama。8 分钟内完成分步指南。',
+      publishDate: '2026-04-04',
+      readTime: '阅读约8分钟',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Ollama',
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'macOS: 从 ollama.com 下载 .dmg 或运行 `brew install ollama`。',
+            'Windows: 下载安装程序。',
+            'Linux: 单条 curl 命令。',
+            '3B 模型需要 4 GB RAM，7B 需要 8 GB。',
+            'Ollama 公开 OpenAI 兼容 API。',
+          ],
+        },
+        whatIsOllama: {
+          title: '什么是 Ollama？',
+          content: [
+            'Ollama 是本地 LLM 的开源推理引擎。它集成模型管理、llama.cpp 推理后端和 OpenAI 兼容 REST API。',
+            'Ollama 支持 Meta Llama、Microsoft Phi、Google Gemma、Mistral、Qwen 等 200 多个模型。',
+            '替代品: [一键安装程序](/local-llms/local-llm-one-click-installers?lang=zh)。比较: [LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)。',
+          ],
+        },
+        installMac: {
+          title: 'macOS 安装',
+          content: '有两种方法。',
+          numberedItems: [
+            '访问 ollama.com/download。',
+            '打开 Ollama.dmg。',
+            '将 Ollama 拖到 Applications。',
+            '启动 Ollama。',
+            '运行 `ollama run llama3.2`。',
+          ],
+        },
+        installMacBrew: {
+          title: 'Homebrew 安装',
+          codeBlock: 'brew install ollama
+ollama serve &
+ollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        installWindows: {
+          title: 'Windows 安装',
+          numberedItems: [
+            '访问 ollama.com/download。',
+            '运行 OllamaSetup.exe。',
+            'Ollama 自动启动。',
+            '运行 `ollama run llama3.2`。',
+            '模型下载。',
+          ],
+        },
+        installWindowsNote: {
+          title: 'Windows GPU 支持',
+          content: 'Ollama 自动检测 NVIDIA (CUDA 11.3+) 和 AMD (ROCm 6+)。',
+        },
+        installLinux: {
+          title: 'Linux 安装',
+          content: '任何 Linux 发行版:',
+          codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+          codeLanguage: 'bash',
+        },
+        firstModel: {
+          title: '第一个模型',
+          content: '运行此命令:',
+          codeBlock: 'ollama pull llama3.2
+ollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        recommendedModels: {
+          title: '首先使用哪个模型？',
+          rows: [
+            { '模型': 'llama3.2:3b', '下载': '~2 GB', 'RAM': '4 GB', '用于': '初学者' },
+            { '模型': 'llama3.1:8b', '下载': '~4.7 GB', 'RAM': '8 GB', '用于': '笔记本' },
+            { '模型': 'phi3:mini', '下载': '~2.3 GB', 'RAM': '4 GB', '用于': '快速' },
+          ],
+          columns: ['模型', '下载', 'RAM', '用于'],
+        },
+        relatedReading: {
+          title: '延伸阅读',
+          items: [
+            '[什么是本地 LLM](/local-llms/what-are-local-llms?lang=zh)',
+            '[第一个模型](/local-llms/run-first-local-llm?lang=zh)',
+            '[最佳模型](/local-llms/best-beginner-local-llm-models?lang=zh)',
+          ],
+        },
+      },
+    }
   },
 
   'how-to-install-lm-studio': {
@@ -3640,9 +4008,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     ja: {
       theme: 'ベストモデル',
       title: '2026年 最高のローカルLLM：タスク・ハードウェア・品質で評価したトップモデル',
-      seoTitle: '2026年 最高のローカルLLM',
+      seoTitle: '2026年最高のローカルLLM：Llama、Qwen、Mistral比較',
       intro: '2026年の最高のローカルLLMは、Meta Llama 3.3 70B（総合性能）、Qwen2.5 72B（コード・多言語）、Mistral Small 3.1（7Bクラス最高）、Google Gemma 3 9B（中級性能）、Microsoft Phi-4 Mini（4GB RAM以下対応）です。2026年4月現在、このランキングはMMU、HumanEval、MATHベンチマークスコアに基づいています。',
-      metaDescription: '2026年の最高ローカルLLMランキング：Llama 3.3 70B（総合最高、MMLU 82%）、Qwen2.5 72B（コード HumanEval 87%、29言語）、Mistral Small 3.1（16GB）、Gemma 3 9B（8GB）、Phi-4 Mini（4GB）。',
+      metaDescription: '2026年最高のローカルLLMランキング：Llama 3.3 70B（MMLU 82%、40GB）、Qwen2.5 72B（HumanEval 87%、29言語）、Mistral 24B、Gemma 3 9B、Phi-4 Mini。',
       publishDate: '2026-04-04',
       readTime: '10分で読める',
       educationalLevel: 'Beginner',
@@ -3868,9 +4236,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     zh: {
       theme: '最佳模型',
       title: '2026年最佳本地大语言模型：按任务、硬件和质量排名的顶级模型',
-      seoTitle: '2026年最佳本地大语言模型',
+      seoTitle: '2026最佳本地LLM：Llama、Qwen、Mistral对比排名',
       intro: '2026年最佳的本地大语言模型是Meta Llama 3.3 70B（综合性能最佳）、Qwen2.5 72B（代码和多语言最佳）、Mistral Small 3.1（7B级最佳）、Google Gemma 3 9B（中档性能最佳）和Microsoft Phi-4 Mini（4GB RAM以下最佳）。截至2026年4月，此排名基于MMLU、HumanEval和MATH基准测试成绩。',
-      metaDescription: '2026本地LLM排名：Llama 3.3 70B（综合最佳MMLU 82%、40GB）、Qwen2.5 72B（代码最佳HumanEval 87%、29种语言、43GB）、Mistral 24B（16GB）、Gemma 3 9B（8GB）、Phi-4 Mini（4GB）基准测试。',
+      metaDescription: '2026最佳本地LLM排名：Llama 3.3 70B（MMLU 82%、40GB）、Qwen2.5 72B（代码最佳、87%、29语言）、Mistral 24B、Gemma 3 9B、Phi-4 Mini。基准评分。',
       publishDate: '2026-04-04',
       readTime: '阅读约10分钟',
       educationalLevel: 'Beginner',
