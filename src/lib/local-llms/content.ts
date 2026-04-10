@@ -6468,7 +6468,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
 
                         {
               q: 'What is layer offloading and why does it matter for 70B models?',
-              a: 'Layer offloading splits a model's neural network layers between GPU VRAM and system RAM. Layers in VRAM run at GPU speed (fast). Layers in RAM run at CPU speed (slow). For a 70B model on an RTX 4090 (24 GB VRAM), approximately 60% of layers fit in VRAM and 40% overflow to RAM. This hybrid approach achieves 10–18 tok/sec — much faster than all-CPU inference at 1–3 tok/sec. Ollama handles this automatically; run `ollama ps` to see how many layers are on GPU.',
+              a: 'Layer offloading splits a model\'s neural network layers between GPU VRAM and system RAM. Layers in VRAM run at GPU speed (fast). Layers in RAM run at CPU speed (slow). For a 70B model on an RTX 4090 (24 GB VRAM), approximately 60% of layers fit in VRAM and 40% overflow to RAM. This hybrid approach achieves 10–18 tok/sec — much faster than all-CPU inference at 1–3 tok/sec. Ollama handles this automatically; run `ollama ps` to see how many layers are on GPU.',
             },
             {
               q: 'Is the NVIDIA DGX Spark worth it for 70B inference?',
