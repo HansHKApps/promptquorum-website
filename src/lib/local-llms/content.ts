@@ -5684,6 +5684,51 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       seoTitle: 'Best Small Local LLMs 2026: Sub-4B Models Ranked',
       intro: 'Small local LLMs (1B–4B parameters) run on machines with 4–8 GB RAM and produce 30–70 tokens/sec on CPU — fast enough for real-time chat. The best small models in 2026 are Microsoft Phi-4 Mini 3.8B (best reasoning), Google Gemma 2 2B (fastest), Qwen2.5 3B (best coding), and Meta Llama 3.2 3B (best general use).',
       metaDescription: 'Best small local LLMs 2026: Phi-4 Mini 3.8B (68% MMLU), Gemma 2 2B (fastest), Qwen2.5 3B (coding), Llama 3.2 3B. Runs on 4–8 GB RAM.',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        headline: 'Small Local LLM Models: Best Sub-4B Models for Low RAM Machines in 2026',
+        description: 'Best small local LLMs 2026: Phi-4 Mini 3.8B (68% MMLU), Gemma 2 2B (fastest), Qwen2.5 3B (coding), Llama 3.2 3B. Runs on 4–8 GB RAM.',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-10',
+        'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models?lang=en',
+        'inLanguage': 'en',
+        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        proficiencyLevel: 'Beginner',
+        about: [
+          { '@type': 'Thing', name: 'Phi-4 Mini' },
+          { '@type': 'Thing', name: 'Gemma 2' },
+          { '@type': 'Thing', name: 'Qwen2.5' },
+          { '@type': 'Thing', name: 'Llama 3.2' },
+          { '@type': 'Thing', name: 'Small LLM' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Best Small Local LLMs 2026 — Sub-4B Models Ranked',
+        numberOfItems: 5,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Phi-4 Mini 3.8B', description: 'MMLU 68%, HumanEval 70%. 2.5 GB RAM. Best reasoning. ollama run phi4-mini' },
+          { '@type': 'ListItem', position: 2, name: 'Gemma 2 2B', description: 'MMLU 52%. 1.7 GB RAM. Fastest CPU inference. ollama run gemma2:2b' },
+          { '@type': 'ListItem', position: 3, name: 'Qwen2.5 3B', description: 'HumanEval 65%, MMLU 62%. 2 GB RAM. Best for coding. ollama run qwen2.5:3b' },
+          { '@type': 'ListItem', position: 4, name: 'Llama 3.2 3B', description: 'MMLU 58%, HumanEval 60%. 2.5 GB RAM. Best general use. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', position: 5, name: 'Llama 3.2 1B', description: 'MMLU 32%, HumanEval 28%. 1.3 GB RAM. Absolute minimum. ollama run llama3.2:1b' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'What is the smallest local LLM that produces useful output?', acceptedAnswer: { '@type': 'Answer', text: 'As of April 2026, the practical minimum for useful output is a 3B model at Q4_K_M quantization. Models below 2B parameters struggle with multi-step instructions.' } },
+          { '@type': 'Question', name: 'Can a 3B model run on a phone?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — Llama 3.2 1B and 3B are designed for mobile. iOS via MLC LLM, Android support available. Snapdragon 8 Gen 3 or Apple A17 Pro produce 15–30 tok/sec.' } },
+          { '@type': 'Question', name: 'Are small models good for summarization?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — summarization is one of the strongest use cases. Gemma 2 2B and Llama 3.2 3B reliably produce accurate summaries up to ~4,000 words.' } },
+          { '@type': 'Question', name: 'How much faster is a 2B model than a 7B model on CPU?', acceptedAnswer: { '@type': 'Answer', text: 'Approximately 2–3× faster. Gemma 2 2B generates 40–60 tok/sec vs 10–20 tok/sec for Mistral 7B on same laptop CPU.' } },
+          { '@type': 'Question', name: 'Which small model is best for non-English languages?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 3B supports 29 languages including Chinese, Japanese, Korean, and Arabic. Gemma 2 2B and Phi-4 Mini are English-optimized.' } },
+        ],
+      },
+
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -5708,13 +5753,13 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Fastest on CPU**: Gemma 2 2B — 40–60 tok/sec on any modern laptop, 1.7 GB RAM.',
             '**Best small coding model**: Qwen2.5 3B — 65% HumanEval at ~2 GB RAM.',
             '**Best general-purpose 3B**: Llama 3.2 3B — most community support, 128K context, 2.5 GB RAM.',
-            'As of April 2026, no sub-2B model produces output quality suitable for professional tasks. Use 3B+ for real work.',
+            'As of April 2026, no sub-2B model produces output quality suitable for professional tasks. Use 3B+ for real work. See [How to Install Ollama](/local-llms/how-to-install-ollama) for quick setup.',
           ],
         },
         whatIsSmall: {
           title: 'What Is a "Small" Local LLM and When Should You Use One?',
           content: [
-            'A small local LLM is typically defined as a model with fewer than 4 billion parameters. At Q4_K_M quantization, these models require 1.5–3 GB of RAM — well within the constraints of entry-level laptops with 4–8 GB total memory.',
+            'A small local LLM is typically defined as a model with fewer than 4 billion parameters. At [Q4_K_M quantization](/local-llms/quantization-guide), these models require 1.5–3 GB of RAM — well within the constraints of entry-level laptops with 4–8 GB total memory.',
             'As of April 2026, small models are appropriate for: quick summarization, simple Q&A, code snippet explanation, translation of short texts, and classification tasks. They are not suitable for multi-step reasoning, complex code generation, or writing long-form coherent documents.',
             'The quality gap between a 3B and 7B model is significant — roughly equivalent to the gap between GPT-3.5 Mini and GPT-3.5 Turbo. For users with 8 GB RAM, a 7B model at Q4_K_M is almost always the better choice if the machine has headroom. See [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) for 7B recommendations.',
           ],
@@ -5722,7 +5767,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         phi4mini: {
           title: 'Phi-4 Mini 3.8B — Best Reasoning Performance in the Sub-4B Class',
           content: [
-            'Microsoft Phi-4 Mini achieves 68% on MMLU and 70% on HumanEval — scores that exceed many 7B models released before 2025. This is possible because Phi-4 Mini was trained on a curated synthetic dataset focused on reasoning and problem-solving, rather than broad web text.',
+            '**Microsoft Phi-4 Mini achieves 68% on MMLU and 70% on HumanEval — scores that exceed many 7B models released before 2025. This is possible because Phi-4 Mini was trained on a curated synthetic dataset focused on reasoning and problem-solving, rather than broad web text.',
             'As of April 2026, Phi-4 Mini is the recommended choice for users who primarily need reasoning (math, logic, step-by-step explanations) or coding assistance on hardware with 4–6 GB RAM.',
           ],
           rows: [
@@ -5738,7 +5783,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         gemma2: {
           title: 'Gemma 2 2B — Fastest Small Local LLM on CPU',
           content: [
-            'Google Gemma 2 2B generates 40–60 tokens/sec on a modern laptop CPU — the fastest of any model at this quality tier. Its 1.7 GB RAM footprint leaves ample memory for the OS and other applications on a 4 GB machine.',
+            '**Google Gemma 2 2B generates 40–60 tokens/sec on a modern laptop CPU — the fastest of any model at this quality tier. Its 1.7 GB RAM footprint leaves ample memory for the OS and other applications on a 4 GB machine.',
             'Quality is lower than Phi-4 Mini or Llama 3.2 3B on reasoning tasks. The 8K context window (vs. 128K on Phi-4 Mini and Llama 3.2) is a practical limitation for longer documents. Gemma 2 2B is the right choice when response speed matters more than output depth.',
           ],
           rows: [
@@ -5753,7 +5798,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         qwen25_3b: {
           title: 'Qwen2.5 3B — Best Small Model for Coding Tasks',
           content: [
-            'Qwen2.5 3B scores 65% on HumanEval — 5 percentage points above Llama 3.2 3B — making it the best choice for coding tasks at the 3B scale. It includes JSON mode and function calling support, and natively handles 29 languages.',
+            '**Qwen2.5 3B scores 65% on HumanEval — 5 percentage points above Llama 3.2 3B — making it the best choice for coding tasks at the 3B scale. It includes JSON mode and function calling support, and natively handles 29 languages.',
             'For non-coding tasks in English, Llama 3.2 3B and Phi-4 Mini produce more natural prose. Choose Qwen2.5 3B specifically when coding or multilingual output is the primary use case.',
           ],
           rows: [
@@ -5768,8 +5813,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         llama32_3b: {
           title: 'Llama 3.2 3B — Best General-Purpose Small Model',
           content: [
-            'Meta Llama 3.2 3B is the most widely documented and community-supported 3B model. It scores 58% on MMLU and 60% on HumanEval — slightly below Phi-4 Mini on both — but has the widest tool support, the most fine-tunes available, and the largest collection of community guides.',
-            'The 128K context window is the same as larger Llama 3.x models, making it suitable for summarizing medium-length documents. For a first small model, Llama 3.2 3B remains the safest choice due to predictable behavior and extensive documentation.',
+            '**Meta Llama 3.2 3B is the most widely documented and community-supported 3B model. It scores 58% on MMLU and 60% on HumanEval — slightly below Phi-4 Mini on both — but has the widest tool support, the most fine-tunes available, and the largest collection of community guides.',
+            'The 128K context window is the same as larger Llama 3.x models, making it suitable for summarizing medium-length documents. For a first small model, Llama 3.2 3B remains the safest choice due to predictable behavior and extensive documentation. See [Ollama installation guide](/local-llms/how-to-install-ollama) to run it.',
           ],
           rows: [
             { 'Spec': 'MMLU', 'Value': '58%' },
@@ -5800,7 +5845,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           faqs: [
             {
               q: 'Using Q8_0 quantization instead of Q4_K_M',
-              a: 'Q8_0 requires nearly double the RAM of Q4_K_M for minimal quality improvement at small scale. A Llama 3.2 3B model at Q8_0 needs ~3.8 GB RAM vs ~2.5 GB for Q4_K_M. On a 4 GB machine, Q8_0 may trigger swap usage and make inference 3–5× slower. Always use Q4_K_M as the default for sub-4B models.',
+              a: 'Q8_0 requires nearly double the RAM compared to [Q4_K_M quantization](/local-llms/quantization-guide) for minimal quality improvement at small scale. A Llama 3.2 3B model at Q8_0 needs ~3.8 GB RAM vs ~2.5 GB for Q4_K_M. On a 4 GB machine, Q8_0 may trigger swap usage and make inference 3–5× slower. Always use Q4_K_M as the default for sub-4B models.',
             },
             {
               q: 'Running a base model instead of the instruct variant',
@@ -5821,7 +5866,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             },
             {
               q: 'Can a 3B model run on a phone?',
-              a: 'Yes — Llama 3.2 1B and 3B are specifically designed for on-device mobile deployment. Meta provides optimized builds for iOS (via MLC LLM) and Android. Inference on a modern phone (Snapdragon 8 Gen 3 or Apple A17 Pro) produces 15–30 tok/sec for 1B models. LM Studio and Ollama do not currently run on iOS or Android — mobile requires separate frameworks.',
+              a: 'Yes — Llama 3.2 1B and 3B are specifically designed for [on-device mobile deployment](/local-llms/mobile-llm-deployment). Meta provides optimized builds for iOS (via MLC LLM) and Android. Inference on a modern phone (Snapdragon 8 Gen 3 or Apple A17 Pro) produces 15–30 tok/sec for 1B models. LM Studio and Ollama do not currently run on iOS or Android — mobile requires separate frameworks.',
             },
             {
               q: 'Are small models good for summarization?',
