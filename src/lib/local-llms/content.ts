@@ -618,11 +618,11 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         whatIsOllama: {
-          title: 'Qu'est-ce qu'Ollama?',
+          title: "Qu'est-ce qu'Ollama?",
           content: [
-            'Ollama est un moteur d'inference open-source pour les LLMs locaux. Il combine la gestion des modeles, le backend d'inference llama.cpp et une API REST compatible OpenAI.',
-            'Ollama maintient une bibliotheque de modeles curatee (ollama.com/library) avec telechargements pour Meta Llama, Microsoft Phi, Google Gemma, Mistral, Qwen et plus.',
-            'Alternatives: [Installateurs one-click](/local-llms/local-llm-one-click-installers?lang=fr). Comparaison: [LM Studio](/local-llms/how-to-install-lm-studio?lang=fr).',
+            "Ollama est un moteur d'inference open-source pour les LLMs locaux. Il combine la gestion des modeles, le backend d'inference llama.cpp et une API REST compatible OpenAI.",
+            "Ollama maintient une bibliotheque de modeles curatee (ollama.com/library) avec telechargements pour Meta Llama, Microsoft Phi, Google Gemma, Mistral, Qwen et plus.",
+            "Alternatives: [Installateurs one-click](/local-llms/local-llm-one-click-installers?lang=fr). Comparaison: [LM Studio](/local-llms/how-to-install-lm-studio?lang=fr).",
           ],
         },
         installMac: {
