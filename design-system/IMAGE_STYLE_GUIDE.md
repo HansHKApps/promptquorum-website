@@ -277,6 +277,123 @@ The website uses JSON-LD schema markup. For proper AEO:
 - SVGs themselves (visual, no text) work across all languages
 - Alt text translation improves GEO/AEO for non-English markets
 
+## Multi-Language Support (5 Languages)
+
+PromptQuorum supports **5 languages:** en, de, fr, ja, zh
+
+### Language Requirements for Images
+
+#### Current State
+- Images: **Shared across all languages** (language-agnostic)
+- Image captions: **English only** (in content.ts `imageCaption`)
+- Text in SVGs: **English only**
+
+#### Future Target
+- **Images should be translated/localized** where text appears in the SVG
+- **Separate SVG files per language** for text-heavy diagrams
+- **Captions translated** to all 5 languages
+- **Ensure text fits** within image bounds for each language
+
+### When to Create Language-Specific Images
+
+#### Keep One Version (No Translation Needed)
+- ✅ Purely visual diagrams without text (architectural blocks, arrows, shapes)
+- ✅ Numbers and metrics (these are universal: "18 GB", "50–80 tok/s")
+- ✅ Code/terminal output (code is language-independent)
+- ✅ Icons and symbols with clear meaning
+
+#### Create Language-Specific Versions
+- ❌ Terminal windows with English commands → Create separate versions
+- ❌ Labels and annotations → Localize for each language
+- ❌ UI mockups with English text → Create localized variants
+- ❌ Instructions or explanatory text in images
+
+### File Naming for Localized Images
+
+**Pattern:** `{name}-{language}.svg`
+
+Examples:
+```
+ollama-terminal-en.svg    → English version
+ollama-terminal-de.svg    → German version
+ollama-terminal-fr.svg    → French version
+ollama-terminal-ja.svg    → Japanese version
+ollama-terminal-zh.svg    → Chinese (Simplified) version
+
+apple-silicon-unified-memory.svg  → Keep single version (visual only)
+laptop-stand-airflow.svg           → Keep single version (visual only)
+```
+
+### Text Sizing for Different Languages
+
+Different languages have different space requirements:
+
+| Language | Average Word Length | Text Width | Font Size | Notes |
+|----------|-------------------|-----------|-----------|-------|
+| **en** | 4.7 chars | Standard | 14–16px | Baseline |
+| **de** | 5.8 chars | +20–30% wider | 13–15px | Longer words (Thermal-Drosseln) |
+| **fr** | 5.1 chars | +10–15% wider | 14–15px | Moderate |
+| **ja** | 2–3 chars per word | Compact | 12–14px | Vertical space needed, each character is wider |
+| **zh** | 2–3 chars per word | Compact | 12–14px | Similar to Japanese, dense writing |
+
+**Rule:** Always test text layout in each language. German will need wider bounds, Japanese/Chinese may need smaller font or adjusted spacing.
+
+### Implementation: Localized Images in content.ts
+
+```typescript
+// For language-agnostic images (one version)
+canYouRun: {
+  title: '...',
+  content: [...],
+  image: '/images/ollama-terminal.svg',  // Single file for all languages
+  imageCaption: 'Ollama running Mistral...',  // English caption
+},
+
+// For localized images (separate files per language)
+// Future: If translated, use logic like:
+// image: `/images/ollama-terminal-${lang}.svg`
+// imageCaption: imageCaption[lang]  // Translated captions
+```
+
+### Translated Caption Examples
+
+**Picture 1 (Ollama Terminal):**
+- **en:** "Ollama running Mistral 7B on a MacBook — 22 tokens/sec on CPU at Q4_K_M quantization."
+- **de:** "Ollama führt Mistral 7B auf einem MacBook aus — 22 Token/Sekunde auf CPU bei Q4_K_M-Quantisierung."
+- **fr:** "Ollama exécutant Mistral 7B sur un MacBook — 22 tokens/sec sur CPU avec quantification Q4_K_M."
+- **ja:** "MacBookでOllamaがMistral 7Bを実行中 — Q4_K_M量子化でCPUの場合は22トークン/秒。"
+- **zh:** "在MacBook上运行Ollama和Mistral 7B — CPU下Q4_K_M量化时为22个令牌/秒。"
+
+### Checklist for Multilingual Images
+
+When creating or updating images for multi-language support:
+
+- [ ] **English version created** with readable text (baseline)
+- [ ] **German text tested** — Does it fit? May need 20–30% more width
+- [ ] **French text tested** — Similar width to English
+- [ ] **Japanese/Chinese tested** — Does vertical space fit? Font size appropriate?
+- [ ] **Captions translated** to all 5 languages in content.ts
+- [ ] **SVG files named** with language code: `{name}-{lang}.svg`
+- [ ] **content.ts updated** with language-specific image paths (if needed)
+- [ ] **Tested on mobile** — Ensure text is readable on smaller screens
+- [ ] **Alt text translated** — Captions serve as alt text, so translation is critical for AEO
+
+### Best Practices
+
+1. **Start with English** — Design image with en, then adapt for other languages
+2. **Extra space** — Leave 30–40% margin for German text expansion
+3. **Font weight** — Increase for smaller languages (ja/zh) to maintain readability
+4. **Number consistency** — Keep numbers (GB, tok/s) in English, don't translate
+5. **Test early** — Create prototypes in all 5 languages before finalizing
+6. **Consistent styling** — All language versions should have same colors, layout, branding
+
+### Tools for Translation
+
+- Use professional translation service or bilingual team members
+- **NOT** Google Translate (can produce inaccurate technical terms)
+- Verify with native speakers for accuracy and naturalness
+- Keep technical terms consistent with article translation
+
 ## Data Accuracy & Sourcing
 
 ### For Technical Diagrams & Numbers
