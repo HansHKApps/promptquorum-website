@@ -42,24 +42,24 @@
   <line x1="60" y1="140" x2="760" y2="140" stroke="#E8DEF8" stroke-width="1" stroke-dasharray="3,3"/>
 
   <!-- Y-axis labels (Quality) -->
-  <text x="50" y="445" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">Low</text>
-  <text x="50" y="210" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">Med</text>
-  <text x="50" y="85" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">High</text>
+  <text x="50" y="445" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#79747E">Low</text>
+  <text x="50" y="210" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#79747E">Med</text>
+  <text x="50" y="85" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#79747E">High</text>
 
   <!-- X-axis labels (RAM GB) -->
-  <text x="80" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">22 GB</text>
-  <text x="200" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">30 GB</text>
-  <text x="320" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">40 GB</text>
-  <text x="440" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">50 GB</text>
-  <text x="560" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">70 GB</text>
-  <text x="680" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">140 GB</text>
+  <text x="80" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#79747E">22 GB</text>
+  <text x="200" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#79747E">30 GB</text>
+  <text x="320" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#79747E">40 GB</text>
+  <text x="440" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#79747E">50 GB</text>
+  <text x="560" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#79747E">70 GB</text>
+  <text x="680" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#79747E">140 GB</text>
 
   <!-- Points on the curve (quality decreases as bits decrease, but at lower RAM) -->
   <!-- Q2_K: 22GB, lowest quality -->
   <circle cx="80" cy="420" r="6" fill="#E67C73" stroke="#1C1B1F" stroke-width="1.5"/>
   <text x="80" y="435"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="12"
+    font-size="14"
     font-weight="700"
     fill="#E67C73"
     text-anchor="middle">
@@ -70,7 +70,7 @@
   <circle cx="200" cy="340" r="6" fill="#F4B400" stroke="#1C1B1F" stroke-width="1.5"/>
   <text x="200" y="355"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="12"
+    font-size="14"
     font-weight="700"
     fill="#F4B400"
     text-anchor="middle">
@@ -81,7 +81,7 @@
   <circle cx="320" cy="240" r="8" fill="#6750A4" stroke="#1C1B1F" stroke-width="2"/>
   <text x="320" y="258"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="13"
+    font-size="15"
     font-weight="700"
     fill="#6750A4"
     text-anchor="middle">
@@ -92,7 +92,7 @@
   <circle cx="440" cy="180" r="6" fill="#34A853" stroke="#1C1B1F" stroke-width="1.5"/>
   <text x="440" y="195"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="12"
+    font-size="14"
     font-weight="700"
     fill="#34A853"
     text-anchor="middle">
@@ -103,7 +103,7 @@
   <circle cx="560" cy="130" r="6" fill="#34A853" stroke="#1C1B1F" stroke-width="1.5"/>
   <text x="560" y="145"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="12"
+    font-size="14"
     font-weight="700"
     fill="#34A853"
     text-anchor="middle">
@@ -114,7 +114,7 @@
   <circle cx="680" cy="100" r="6" fill="#79747E" stroke="#1C1B1F" stroke-width="1.5"/>
   <text x="680" y="115"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="12"
+    font-size="14"
     font-weight="700"
     fill="#79747E"
     text-anchor="middle">
@@ -130,7 +130,7 @@
 
   <text x="70" y="487"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="11"
+    font-size="13"
     font-weight="600"
     fill="#49454F">
     ★ Q4_K_M recommended for consumer hardware — best balance of quality (1–3% loss vs FP16) and practicality

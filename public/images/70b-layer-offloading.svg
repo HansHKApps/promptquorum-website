@@ -56,7 +56,7 @@
 
   <text x="190" y="235"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="11"
+    font-size="13"
     font-weight="500"
     fill="#79747E"
     text-anchor="middle">
@@ -65,7 +65,7 @@
 
   <text x="190" y="255"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="11"
+    font-size="13"
     font-weight="600"
     fill="#34A853"
     text-anchor="middle">
@@ -126,7 +126,7 @@
 
   <text x="610" y="235"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="11"
+    font-size="13"
     font-weight="500"
     fill="#79747E"
     text-anchor="middle">
@@ -135,7 +135,7 @@
 
   <text x="610" y="255"
     font-family="system-ui, -apple-system, sans-serif"
-    font-size="11"
+    font-size="13"
     font-weight="600"
     fill="#F4B400"
     text-anchor="middle">
