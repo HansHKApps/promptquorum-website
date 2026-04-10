@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#79747E"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <rect x="30" y="20" width="740" height="360" rx="12" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="400" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Exigences RAM — LLMs locaux pour écriture créative</text>
+  <text x="210" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#79747E" text-anchor="start" letter-spacing="0.5">MODÈLE</text>
+  <text x="590" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#79747E" text-anchor="start" letter-spacing="0.5">CATÉGORIE</text>
+  <line x1="50" y1="92" x2="750" y2="92" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <g id="row-llama70">
+    <text x="50" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F">Llama 3.3 70B</text>
+    <text x="50" y="151" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F">Q4_K_M</text>
+    <rect x="210" y="118" width="370" height="28" rx="6" fill="#F7F2FA"/>
+    <rect x="210" y="118" width="370" height="28" rx="6" fill="#6750A4"/>
+    <text x="380" y="137" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">40 GB RAM</text>
+    <rect x="598" y="120" width="100" height="24" rx="12" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="648" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">Meilleure prose</text>
+  </g>
+
+  <g id="row-mistral">
+    <text x="50" y="213" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F">Mistral Small 3.1 24B</text>
+    <text x="50" y="231" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F">Q4_K_M</text>
+    <rect x="210" y="198" width="370" height="28" rx="6" fill="#F7F2FA"/>
+    <rect x="210" y="198" width="140" height="28" rx="6" fill="#7D5260"/>
+    <text x="290" y="217" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">14 GB</text>
+    <rect x="598" y="200" width="100" height="24" rx="12" fill="#F7EDEF" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="648" y="216" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#7D5260" text-anchor="middle">Niveau 16 GB</text>
+  </g>
+
+  <g id="row-llama8">
+    <text x="50" y="293" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#1C1B1F">Llama 3.1 8B</text>
+    <text x="50" y="311" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F">Q4_K_M</text>
+    <rect x="210" y="278" width="370" height="28" rx="6" fill="#F7F2FA"/>
+    <rect x="210" y="278" width="56" height="28" rx="6" fill="#79747E"/>
+    <text x="238" y="297" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">6 GB</text>
+    <rect x="598" y="280" width="100" height="24" rx="12" fill="#F4F4F4" stroke="#79747E" stroke-width="1.5"/>
+    <text x="648" y="296" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#49454F" text-anchor="middle">Niveau entrée</text>
+  </g>
+
+  <line x1="210" y1="330" x2="580" y2="330" stroke="#E8DEF8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="210" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#79747E" text-anchor="middle">0 GB</text>
+  <text x="302" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#79747E" text-anchor="middle">10 GB</text>
+  <text x="394" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#79747E" text-anchor="middle">20 GB</text>
+  <text x="487" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#79747E" text-anchor="middle">30 GB</text>
+  <text x="580" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#79747E" text-anchor="middle">40 GB</text>
+
+  <line x1="302" y1="326" x2="302" y2="334" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="394" y1="326" x2="394" y2="334" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="487" y1="326" x2="487" y2="334" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="580" y1="326" x2="580" y2="334" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="400" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#79747E" text-anchor="middle">Tous les modèles en quantification Q4_K_M via Ollama ou LM Studio</text>
+</svg>
