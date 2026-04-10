@@ -6,6 +6,7 @@ import type { BlogPost, Language } from '@/lib/blog/blogContent'
 import { blogMetadata } from '@/lib/blog/blogTranslations'
 import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { FrameworkWheel } from '@/components/FrameworkWheel'
 
 // Helper to convert "Published Month DD, YYYY" to ISO date format "YYYY-MM-DD"
 function getDateISO(dateStr: string): string {
@@ -69,18 +70,20 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
             </div>
           </div>
 
-          {/* Hero Image */}
-          {post.heroImage && (
+          {/* Hero Component or Image */}
+          {post.heroComponent === 'FrameworkWheel' ? (
+            <FrameworkWheel />
+          ) : post.heroImage ? (
             <div className="my-8">
               <img
                 src={post.heroImage}
-                alt="Illustration of prompt engineering frameworks and structured prompting systems"
+                alt="Article illustration"
                 width={1200}
                 height={675}
                 className="w-full rounded-lg border border-primary/20 shadow-sm"
               />
             </div>
-          )}
+          ) : null}
 
           {/* Sections */}
           <div className="mt-12 space-y-8">
