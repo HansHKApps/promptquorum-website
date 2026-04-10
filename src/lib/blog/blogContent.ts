@@ -4345,9 +4345,9 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       title: 'Automatic Prompt Optimization: Your Guide to the 8 Refinement Tools',
       intro: 'As of April 2026: Automatic prompt optimization is AI-powered transformation that restructures rough, unclear prompts into professional, structured versions in seconds. PromptQuorum\'s optimization engine improves prompt quality scores from an average of 48% (manual) to 82% (auto-optimized) while reducing optimization time from 20-30 minutes to 2-3 minutes.',
       publishDate: 'Published March 14, 2026',
-      seoTitle: 'Prompt Optimization 2026: The 8 Refinement Tools for Better AI',
+      seoTitle: 'Prompt Optimization 2026: 8 Tools to Boost AI Output',
       readTime: '12 min read',
-            metaDescription: 'Optimize prompts with 8 refinement techniques to improve AI output by 20–40%. Learn automatic optimization, real examples, and step-by-step implementation guide.',
+            metaDescription: 'Master 8 refinement techniques to optimize prompts: add context, clarity, structure, and constraints. Improve quality from 48% to 82% in 2–3 minutes.',
       educationalLevel: 'Intermediate',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -4893,9 +4893,9 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       title: 'Automatische Prompt-Optimierung: Ihr Leitfaden zu den 8 Verfeinerungswerkzeugen',
       intro: 'Verbringen Sie keine 30 Minuten damit, einen einzelnen Prompt zu perfektionieren. Erfahren Sie, wie PromptQuorum grobe Ideen in Sekunden in professionelle Prompts umwandelt.',
       publishDate: 'Veröffentlicht 14. März 2026',
-      seoTitle: 'Prompt-Optimierung 2026: 8 Verbesserungswerkzeuge für bessere KI-Ergebnisse',
+      seoTitle: 'Prompt-Optimierung 2026: 8 Techniken für bessere KI',
       readTime: '12 Min. Lesedauer',
-      metaDescription: 'Optimieren Sie Prompts mit 8 Verfeinerungstechniken, um KI-Output um 20–40% zu verbessern. Automatische Optimierung mit praktischen Beispielen und Schritt-für-Schritt-Anleitung.',
+      metaDescription: 'Beherrschen Sie 8 Verfeinerungstechniken zur Prompt-Optimierung: Kontext, Klarheit, Struktur und Einschränkungen. Verbessern Sie die Qualität von 48 % auf 82 %.',
       sections: {
         theProblem: {
           title: 'Das Problem: Warum manuelle Optimierung scheitert',
@@ -4912,9 +4912,9 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       title: 'Optimisation Automatique : Votre Guide des 8 Outils',
       intro: 'Arrêtez de passer 30 minutes à perfectionner un seul prompt. PromptQuorum transforme les idées brutes en prompts professionnels en secondes.',
       publishDate: 'Publié le 14 mars 2026',
-      seoTitle: 'Optimisation des Prompts 2026 : 8 Outils d\'Amélioration pour l\'IA',
+      seoTitle: 'Optimisation des Prompts 2026: 8 Techniques Éprouvées',
       readTime: '12 min de lecture',
-      metaDescription: 'Optimisez les prompts avec 8 techniques de raffinement pour améliorer la qualité de 20–40%. Apprentissage sur l\'optimisation automatique, exemples réels et guide complet.',
+      metaDescription: 'Maîtrisez 8 techniques de raffinement pour optimiser les prompts : contexte, clarté, structure et contraintes. Augmentez la qualité de 48 % à 82 %.',
       sections: {
         theProblem: {
           title: 'Le Problème',
@@ -4931,9 +4931,9 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       title: '自動プロンプト最適化：8つのツールガイド',
       intro: '30分かけて単一のプロンプトを完璧にするのをやめてください。PromptQuorumが粗い考えを専門的なプロンプトに変えます。',
       publishDate: '2026年3月14日公開',
-      seoTitle: 'プロンプト最適化2026：8つの改善ツールでAI精度アップ',
+      seoTitle: 'プロンプト最適化2026：品質を48％から82％へ向上させる8つの技術',
       readTime: '12分で読める',
-      metaDescription: 'プロンプトを8つの改善テクニックで最適化し、AI出力品質を20～40%向上。自動最適化、実例、ステップバイステップガイドで、効率的なプロンプト設計を習得します。',
+      metaDescription: '8つの改善テクニックでプロンプトを最適化：コンテキスト、明確性、構造、制約。品質を48％から82％に向上させ、2～3分で完了。実例とステップバイステップガイド付き。',
       sections: {
         theProblem: {
           title: '問題',
@@ -4950,9 +4950,9 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       title: '自动提示词优化：8个工具指南',
       intro: '停止花费30分钟完善单个提示词。PromptQuorum将粗略想法转变为专业提示词。',
       publishDate: '发布于 2026 年 3 月 14 日',
-      seoTitle: '提示词优化2026：8个工具提升AI输出质量',
+      seoTitle: '提示词优化2026：8种技巧提升AI输出质量',
       readTime: '12 分钟阅读',
-      metaDescription: '用8种优化技巧改进提示词，将AI输出质量提升20-40%。学习自动优化方法、真实案例和分步实施指南，快速掌握高效提示词设计的关键。',
+      metaDescription: '掌握8种优化技巧：增加背景、清晰度、结构和约束条件。将提示词质量从48％提升到82％，仅需2～3分钟。包含真实案例和完整指南。',
       sections: {
         theProblem: {
           title: '问题',
