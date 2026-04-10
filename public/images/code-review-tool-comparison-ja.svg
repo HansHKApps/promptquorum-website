@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    AI コードレビュー ツール
+  </text>
+  
+  <!-- Header row -->
+  <text x="130" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="700">GitHub Copilot</text>
+  <text x="280" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="700">ChatGPT</text>
+  <text x="430" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="700">PromptQuorum</text>
+  <text x="580" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="700">Cursor</text>
+  
+  <!-- Feature rows with checkmarks/X -->
+  <!-- Multi-model -->
+  <text x="60" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">マルチモデル</text>
+  <text x="130" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle">✗</text>
+  <text x="280" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle">✗</text>
+  <text x="430" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">✓</text>
+  <text x="580" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle">✗</text>
+  
+  <!-- Custom prompts -->
+  <text x="60" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">カスタムプロンプト</text>
+  <text x="130" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle">✗</text>
+  <text x="280" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">✓</text>
+  <text x="430" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">✓</text>
+  <text x="580" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">✓</text>
+  
+  <!-- Structured output -->
+  <text x="60" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">構造化出力</text>
+  <text x="130" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle">✗</text>
+  <text x="280" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle">✗</text>
+  <text x="430" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">✓</text>
+  <text x="580" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle">✗</text>
+  
+  <!-- Cost -->
+  <text x="60" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">コスト</text>
+  <text x="130" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">$10/mo</text>
+  <text x="280" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">$20/mo</text>
+  <text x="430" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6750A4" text-anchor="middle" font-weight="700">Pay-per-use</text>
+  <text x="580" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">$20/mo</text>
+  
+  <!-- Bottom note -->
+  <rect x="60" y="300" width="680" height="80" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="400" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle" font-weight="700">PromptQuorum Advantage</text>
+  <text x="400" y="345" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
+    Dispatches to GPT-4o + Claude simultaneously — two models
+  </text>
+  <text x="400" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
+    catch different bug classes than any single model alone.
+  </text>
+</svg>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    4个安全类别
+  </text>
+  
+  <!-- Quadrant 1: Injection (top-left) -->
+  <rect x="40" y="70" width="350" height="150" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="215" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">注入</text>
+  <text x="215" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">SQL注入、XSS、命令注入模式</text>
+  
+  <!-- Quadrant 2: Auth (top-right) -->
+  <rect x="410" y="70" width="350" height="150" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+  <text x="585" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">认证缺陷</text>
+  <text x="585" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">身份验证、授权、会话处理</text>
+  
+  <!-- Quadrant 3: Secrets (bottom-left) -->
+  <rect x="40" y="240" width="350" height="150" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+  <text x="215" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">硬编码密钥</text>
+  <text x="215" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">API密钥、密码、凭证在代码中</text>
+  
+  <!-- Quadrant 4: Logic (bottom-right) -->
+  <rect x="410" y="240" width="350" height="150" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="585" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">逻辑错误</text>
+  <text x="585" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">业务逻辑缺陷、竞态条件</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    4つのセキュリティ カテゴリ
+  </text>
+  
+  <!-- Quadrant 1: Injection (top-left) -->
+  <rect x="40" y="70" width="350" height="150" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="215" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">インジェクション</text>
+  <text x="215" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">SQLインジェクション、XSS、コマンドインジェクション</text>
+  
+  <!-- Quadrant 2: Auth (top-right) -->
+  <rect x="410" y="70" width="350" height="150" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+  <text x="585" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">認証 欠陥</text>
+  <text x="585" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">認証、認可、セッション管理</text>
+  
+  <!-- Quadrant 3: Secrets (bottom-left) -->
+  <rect x="40" y="240" width="350" height="150" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+  <text x="215" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">ハードコード シークレット</text>
+  <text x="215" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">APIキー、パスワード、認証情報がコード内</text>
+  
+  <!-- Quadrant 4: Logic (bottom-right) -->
+  <rect x="410" y="240" width="350" height="150" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="585" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">ロジック エラー</text>
+  <text x="585" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">ビジネスロジック欠陥、レース条件</text>
+</svg>
