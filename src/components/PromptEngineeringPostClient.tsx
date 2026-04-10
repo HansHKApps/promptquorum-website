@@ -812,8 +812,8 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
   }
 
-  // Fall back to English if translation has empty sections
-  const hasTranslation = articleData[lang] && Object.keys(articleData[lang].sections).length > 0
+  // Fall back to English if translation has fewer than 10 sections (incomplete translation)
+  const hasTranslation = articleData[lang] && Object.keys(articleData[lang].sections).length >= 10
   const article = hasTranslation ? articleData[lang] : articleData['en']
   const colors = THEME_COLORS[article.theme] ?? THEME_COLORS['Fundamentals']
 
