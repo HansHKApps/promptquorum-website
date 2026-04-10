@@ -1,0 +1,196 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    AI Risk Classification: Three Regulatory Models
+  </text>
+
+  <!-- EU Risk-Based Tiers (Left) -->
+  <g id="eu-tiers">
+    <!-- Label -->
+    <text x="130" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇪🇺 EU AI Act
+    </text>
+
+    <!-- Prohibited Risk -->
+    <rect x="20" y="85" width="220" height="85" rx="6" fill="#FFEBEE" stroke="#D32F2F" stroke-width="2.5"/>
+    <text x="130" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#D32F2F" text-anchor="middle" font-weight="700">
+      Prohibited Risk
+    </text>
+    <text x="30" y="125" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Subliminal manipulation
+    </text>
+    <text x="30" y="143" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Exploit vulnerable persons
+    </text>
+    <text x="30" y="161" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      = Banned outright
+    </text>
+
+    <!-- High Risk -->
+    <rect x="20" y="180" width="220" height="85" rx="6" fill="#FFF3E0" stroke="#F57C00" stroke-width="2.5"/>
+    <text x="130" y="200" font-family="system-ui, sans-serif" font-size="14" fill="#F57C00" text-anchor="middle" font-weight="700">
+      High Risk
+    </text>
+    <text x="30" y="220" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Hiring/employment
+    </text>
+    <text x="30" y="238" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Facial recognition
+    </text>
+    <text x="30" y="256" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      = Heavy requirements
+    </text>
+
+    <!-- Limited Risk -->
+    <rect x="20" y="275" width="220" height="85" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="2.5"/>
+    <text x="130" y="295" font-family="system-ui, sans-serif" font-size="14" fill="#388E3C" text-anchor="middle" font-weight="700">
+      Limited Risk
+    </text>
+    <text x="30" y="315" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Chatbots, LLMs
+    </text>
+    <text x="30" y="333" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Disclosure required
+    </text>
+    <text x="30" y="351" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      = Transparency rules
+    </text>
+
+    <!-- Minimal Risk -->
+    <rect x="20" y="370" width="220" height="75" rx="6" fill="#F0F4C3" stroke="#AFB42B" stroke-width="2.5"/>
+    <text x="130" y="390" font-family="system-ui, sans-serif" font-size="14" fill="#AFB42B" text-anchor="middle" font-weight="700">
+      Minimal Risk
+    </text>
+    <text x="30" y="410" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Spam filters, analytics
+    </text>
+    <text x="30" y="428" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      = Few restrictions
+    </text>
+  </g>
+
+  <!-- US Sectoral Approach (Center) -->
+  <g id="us-approach">
+    <!-- Label -->
+    <text x="400" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇺🇸 US Sectoral
+    </text>
+
+    <!-- Healthcare -->
+    <rect x="290" y="85" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">
+      Healthcare & Finance
+    </text>
+    <text x="300" y="125" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      FDA, FTC oversight
+    </text>
+    <text x="300" y="143" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      Accuracy, fairness
+    </text>
+    <text x="300" y="161" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      requirements exist
+    </text>
+
+    <!-- Employment -->
+    <rect x="290" y="190" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="210" font-family="system-ui, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">
+      Employment & Housing
+    </text>
+    <text x="300" y="230" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      EEOC, HUD rules
+    </text>
+    <text x="300" y="248" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      Bias audits, disclosure
+    </text>
+    <text x="300" y="266" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      in some states
+    </text>
+
+    <!-- Tech Sector -->
+    <rect x="290" y="295" width="220" height="150" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="315" font-family="system-ui, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">
+      Tech, Content, Other
+    </text>
+    <text x="300" y="335" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      Mostly voluntary
+    </text>
+    <text x="300" y="353" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      standards (NIST RMF,
+    </text>
+    <text x="300" y="371" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      ISO 42001)
+    </text>
+    <text x="300" y="389" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+    </text>
+    <text x="300" y="407" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      FTC acts only if
+    </text>
+    <text x="300" y="425" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      unfair/deceptive
+    </text>
+  </g>
+
+  <!-- China Algorithm Governance (Right) -->
+  <g id="china-approach">
+    <!-- Label -->
+    <text x="670" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle" font-weight="700">
+      🇨🇳 China Algorithm
+    </text>
+
+    <!-- CAC Controlled -->
+    <rect x="560" y="85" width="220" height="100" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">
+      CAC-Controlled
+    </text>
+    <text x="570" y="125" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Recommendation
+    </text>
+    <text x="570" y="143" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      algorithms (social,
+    </text>
+    <text x="570" y="161" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      video, search)
+    </text>
+
+    <!-- Content Regulation -->
+    <rect x="560" y="195" width="220" height="110" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="215" font-family="system-ui, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">
+      Content & Security
+    </text>
+    <text x="570" y="235" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Political messages,
+    </text>
+    <text x="570" y="253" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      false info scrutiny
+    </text>
+    <text x="570" y="271" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Data localization
+    </text>
+
+    <!-- Emerging LLM Rules -->
+    <rect x="560" y="315" width="220" height="130" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="335" font-family="system-ui, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">
+      LLM Requirements
+    </text>
+    <text x="570" y="355" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • CAC pre-approval
+    </text>
+    <text x="570" y="373" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • Value alignment
+    </text>
+    <text x="570" y="391" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      tests required
+    </text>
+    <text x="570" y="409" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">
+      • State control = priority
+    </text>
+  </g>
+
+  <!-- Bottom insight -->
+  <text x="400" y="485" font-family="system-ui, sans-serif" font-size="13" fill="#49454F" text-anchor="middle" font-weight="600">
+    EU: Rule-based (same rules everywhere) | US: Market-based (sector-specific) | China: Control-based (state approval required)
+  </text>
+</svg>

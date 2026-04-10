@@ -1,0 +1,173 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    三种竞争的AI监管愿景
+  </text>
+
+  <!-- EU Region -->
+  <g id="eu-region">
+    <!-- Box -->
+    <rect x="40" y="70" width="220" height="320" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Flag/Region indicator -->
+    <rect x="60" y="85" width="180" height="45" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="150" y="117" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇪🇺 EU
+    </text>
+
+    <!-- Approach -->
+    <text x="60" y="150" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">
+      基于权利
+    </text>
+    <text x="60" y="166" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      法律框架
+    </text>
+
+    <!-- Key focus -->
+    <text x="60" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      主要焦点:
+    </text>
+    <text x="60" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      基本权利
+    </text>
+    <text x="60" y="224" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      消费者保护
+    </text>
+
+    <!-- Key law -->
+    <text x="60" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      关键法律:
+    </text>
+    <text x="60" y="263" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      欧盟AI法案(2024)
+    </text>
+
+    <!-- Penalties -->
+    <text x="60" y="287" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      最高罚款:
+    </text>
+    <text x="60" y="302" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" font-weight="700">
+      €35M 或 收入的7%
+    </text>
+
+    <!-- Brussels Effect -->
+    <rect x="50" y="320" width="200" height="35" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="150" y="341" font-family="system-ui, sans-serif" font-size="10" fill="#6750A4" text-anchor="middle" font-weight="700">
+      全球影响: "布鲁塞尔效应"
+    </text>
+  </g>
+
+  <!-- US Region -->
+  <g id="us-region">
+    <!-- Box -->
+    <rect x="290" y="70" width="220" height="320" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Flag/Region indicator -->
+    <rect x="310" y="85" width="180" height="45" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="117" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇺🇸 US
+    </text>
+
+    <!-- Approach -->
+    <text x="310" y="150" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">
+      创新优先
+    </text>
+    <text x="310" y="166" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      分行业方法
+    </text>
+
+    <!-- Key focus -->
+    <text x="310" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      主要焦点:
+    </text>
+    <text x="310" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      竞争力
+    </text>
+    <text x="310" y="224" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      监管从轻
+    </text>
+
+    <!-- Key law -->
+    <text x="310" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      主要框架:
+    </text>
+    <text x="310" y="263" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      NIST AI RMF(自愿)
+    </text>
+
+    <!-- Penalties -->
+    <text x="310" y="287" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      联邦AI法:
+    </text>
+    <text x="310" y="302" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" font-weight="700">
+      无(仅分行业)
+    </text>
+
+    <!-- FTC enforcement -->
+    <rect x="300" y="320" width="200" height="35" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="400" y="341" font-family="system-ui, sans-serif" font-size="10" fill="#6750A4" text-anchor="middle" font-weight="700">
+      通过FTC执行(不公平行为)
+    </text>
+  </g>
+
+  <!-- China Region -->
+  <g id="china-region">
+    <!-- Box -->
+    <rect x="540" y="70" width="220" height="320" rx="8" fill="#FEF7FF" stroke="#7D5260" stroke-width="2.5"/>
+
+    <!-- Flag/Region indicator -->
+    <rect x="560" y="85" width="180" height="45" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2"/>
+    <text x="650" y="117" font-family="system-ui, sans-serif" font-size="20" fill="#7D5260" text-anchor="middle" font-weight="700">
+      🇨🇳 中国
+    </text>
+
+    <!-- Approach -->
+    <text x="560" y="150" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">
+      国家主导
+    </text>
+    <text x="560" y="166" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      控制优先策略
+    </text>
+
+    <!-- Key focus -->
+    <text x="560" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      主要焦点:
+    </text>
+    <text x="560" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      国家安全
+    </text>
+    <text x="560" y="224" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      国家控制
+    </text>
+
+    <!-- Key law -->
+    <text x="560" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      关键机构:
+    </text>
+    <text x="560" y="263" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      CAC(网络空间管理)
+    </text>
+
+    <!-- Penalties -->
+    <text x="560" y="287" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      最高罚款:
+    </text>
+    <text x="560" y="302" font-family="system-ui, sans-serif" font-size="11" fill="#7D5260" font-weight="700">
+      ¥100K 每次违反
+    </text>
+
+    <!-- Made in China 2025 -->
+    <rect x="550" y="320" width="200" height="35" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="650" y="341" font-family="system-ui, sans-serif" font-size="10" fill="#7D5260" text-anchor="middle" font-weight="700">
+      战略: "中国制造2025"
+    </text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="415" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
+    这些相互矛盾的愿景塑造了全球AI部署、数据驻留和采购决策。
+  </text>
+</svg>

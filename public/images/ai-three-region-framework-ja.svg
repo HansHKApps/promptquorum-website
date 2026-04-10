@@ -1,0 +1,173 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    3つの競合するAI規制ビジョン
+  </text>
+
+  <!-- EU Region -->
+  <g id="eu-region">
+    <!-- Box -->
+    <rect x="40" y="70" width="220" height="320" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Flag/Region indicator -->
+    <rect x="60" y="85" width="180" height="45" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="150" y="117" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇪🇺 EU
+    </text>
+
+    <!-- Approach -->
+    <text x="60" y="150" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">
+      権利ベース
+    </text>
+    <text x="60" y="166" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      法的枠組み
+    </text>
+
+    <!-- Key focus -->
+    <text x="60" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      主な焦点:
+    </text>
+    <text x="60" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      基本的人権
+    </text>
+    <text x="60" y="224" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      消費者保護
+    </text>
+
+    <!-- Key law -->
+    <text x="60" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      主要法:
+    </text>
+    <text x="60" y="263" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      EU AI Act（2024）
+    </text>
+
+    <!-- Penalties -->
+    <text x="60" y="287" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      最大罰金:
+    </text>
+    <text x="60" y="302" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" font-weight="700">
+      €35M または収益の7%
+    </text>
+
+    <!-- Brussels Effect -->
+    <rect x="50" y="320" width="200" height="35" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="150" y="341" font-family="system-ui, sans-serif" font-size="10" fill="#6750A4" text-anchor="middle" font-weight="700">
+      グローバル影響: 「ブリュッセル効果」
+    </text>
+  </g>
+
+  <!-- US Region -->
+  <g id="us-region">
+    <!-- Box -->
+    <rect x="290" y="70" width="220" height="320" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Flag/Region indicator -->
+    <rect x="310" y="85" width="180" height="45" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="117" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇺🇸 US
+    </text>
+
+    <!-- Approach -->
+    <text x="310" y="150" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">
+      イノベーション優先
+    </text>
+    <text x="310" y="166" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      セクターアプローチ
+    </text>
+
+    <!-- Key focus -->
+    <text x="310" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      主な焦点:
+    </text>
+    <text x="310" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      競争力
+    </text>
+    <text x="310" y="224" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      軽い規制
+    </text>
+
+    <!-- Key law -->
+    <text x="310" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      主要枠組み:
+    </text>
+    <text x="310" y="263" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      NIST AI RMF（任意）
+    </text>
+
+    <!-- Penalties -->
+    <text x="310" y="287" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      連邦AI法:
+    </text>
+    <text x="310" y="302" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" font-weight="700">
+      なし（セクターのみ）
+    </text>
+
+    <!-- FTC enforcement -->
+    <rect x="300" y="320" width="200" height="35" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="400" y="341" font-family="system-ui, sans-serif" font-size="10" fill="#6750A4" text-anchor="middle" font-weight="700">
+      FTCを通じて施行（不公正な慣行）
+    </text>
+  </g>
+
+  <!-- China Region -->
+  <g id="china-region">
+    <!-- Box -->
+    <rect x="540" y="70" width="220" height="320" rx="8" fill="#FEF7FF" stroke="#7D5260" stroke-width="2.5"/>
+
+    <!-- Flag/Region indicator -->
+    <rect x="560" y="85" width="180" height="45" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2"/>
+    <text x="650" y="117" font-family="system-ui, sans-serif" font-size="20" fill="#7D5260" text-anchor="middle" font-weight="700">
+      🇨🇳 中国
+    </text>
+
+    <!-- Approach -->
+    <text x="560" y="150" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">
+      国家主導
+    </text>
+    <text x="560" y="166" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      コントロール優先
+    </text>
+
+    <!-- Key focus -->
+    <text x="560" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      主な焦点:
+    </text>
+    <text x="560" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      国家安全保障
+    </text>
+    <text x="560" y="224" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      国家管理
+    </text>
+
+    <!-- Key law -->
+    <text x="560" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      主要機関:
+    </text>
+    <text x="560" y="263" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">
+      CAC（サイバー管理）
+    </text>
+
+    <!-- Penalties -->
+    <text x="560" y="287" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">
+      最大罰金:
+    </text>
+    <text x="560" y="302" font-family="system-ui, sans-serif" font-size="11" fill="#7D5260" font-weight="700">
+      ¥100K（違反ごと）
+    </text>
+
+    <!-- Made in China 2025 -->
+    <rect x="550" y="320" width="200" height="35" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="650" y="341" font-family="system-ui, sans-serif" font-size="10" fill="#7D5260" text-anchor="middle" font-weight="700">
+      戦略: 「Made in China 2025」
+    </text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="415" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
+    これらの矛盾したビジョンが、グローバルなAI展開、データレジデンシー、調達を形成する。
+  </text>
+</svg>

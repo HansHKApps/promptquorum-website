@@ -1,0 +1,173 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Three Competing AI Regulatory Visions
+  </text>
+
+  <!-- EU Region -->
+  <g id="eu-region">
+    <!-- Box -->
+    <rect x="40" y="70" width="220" height="320" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Flag/Region indicator -->
+    <rect x="60" y="85" width="180" height="45" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="150" y="117" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇪🇺 EU
+    </text>
+
+    <!-- Approach -->
+    <text x="60" y="150" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" font-weight="700">
+      Rights-Based
+    </text>
+    <text x="60" y="168" font-family="system-ui, sans-serif" font-size="13" fill="#49454F" font-weight="600">
+      Legal Framework
+    </text>
+
+    <!-- Key focus -->
+    <text x="60" y="200" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">
+      Primary Focus:
+    </text>
+    <text x="60" y="218" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      Fundamental rights
+    </text>
+    <text x="60" y="234" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      Consumer protection
+    </text>
+
+    <!-- Key law -->
+    <text x="60" y="260" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">
+      Key Law:
+    </text>
+    <text x="60" y="278" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      EU AI Act (2024)
+    </text>
+
+    <!-- Penalties -->
+    <text x="60" y="305" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">
+      Max Penalty:
+    </text>
+    <text x="60" y="323" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">
+      €35M or 7% revenue
+    </text>
+
+    <!-- Brussels Effect -->
+    <rect x="50" y="345" width="200" height="35" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="150" y="366" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" text-anchor="middle" font-weight="700">
+      Global impact: "Brussels Effect"
+    </text>
+  </g>
+
+  <!-- US Region -->
+  <g id="us-region">
+    <!-- Box -->
+    <rect x="290" y="70" width="220" height="320" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Flag/Region indicator -->
+    <rect x="310" y="85" width="180" height="45" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="117" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇺🇸 US
+    </text>
+
+    <!-- Approach -->
+    <text x="310" y="150" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" font-weight="700">
+      Innovation-First
+    </text>
+    <text x="310" y="168" font-family="system-ui, sans-serif" font-size="13" fill="#49454F" font-weight="600">
+      Sectoral Approach
+    </text>
+
+    <!-- Key focus -->
+    <text x="310" y="200" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">
+      Primary Focus:
+    </text>
+    <text x="310" y="218" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      Competitiveness
+    </text>
+    <text x="310" y="234" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      Light regulation
+    </text>
+
+    <!-- Key law -->
+    <text x="310" y="260" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">
+      Key Framework:
+    </text>
+    <text x="310" y="278" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      NIST AI RMF (voluntary)
+    </text>
+
+    <!-- Penalties -->
+    <text x="310" y="305" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">
+      Federal AI Law:
+    </text>
+    <text x="310" y="323" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">
+      None (sectoral only)
+    </text>
+
+    <!-- FTC enforcement -->
+    <rect x="300" y="345" width="200" height="35" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="400" y="366" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" text-anchor="middle" font-weight="700">
+      Enforced via FTC (unfair practices)
+    </text>
+  </g>
+
+  <!-- China Region -->
+  <g id="china-region">
+    <!-- Box -->
+    <rect x="540" y="70" width="220" height="320" rx="8" fill="#FEF7FF" stroke="#7D5260" stroke-width="2.5"/>
+
+    <!-- Flag/Region indicator -->
+    <rect x="560" y="85" width="180" height="45" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2"/>
+    <text x="650" y="117" font-family="system-ui, sans-serif" font-size="20" fill="#7D5260" text-anchor="middle" font-weight="700">
+      🇨🇳 China
+    </text>
+
+    <!-- Approach -->
+    <text x="560" y="150" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" font-weight="700">
+      State-Directed
+    </text>
+    <text x="560" y="168" font-family="system-ui, sans-serif" font-size="13" fill="#49454F" font-weight="600">
+      Control-First Strategy
+    </text>
+
+    <!-- Key focus -->
+    <text x="560" y="200" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">
+      Primary Focus:
+    </text>
+    <text x="560" y="218" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      National security
+    </text>
+    <text x="560" y="234" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      State control
+    </text>
+
+    <!-- Key law -->
+    <text x="560" y="260" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">
+      Key Agency:
+    </text>
+    <text x="560" y="278" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+      CAC (Cyberspace Admin)
+    </text>
+
+    <!-- Penalties -->
+    <text x="560" y="305" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">
+      Max Penalty:
+    </text>
+    <text x="560" y="323" font-family="system-ui, sans-serif" font-size="12" fill="#7D5260" font-weight="700">
+      ¥100K per violation
+    </text>
+
+    <!-- Made in China 2025 -->
+    <rect x="550" y="345" width="200" height="35" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="650" y="366" font-family="system-ui, sans-serif" font-size="11" fill="#7D5260" text-anchor="middle" font-weight="700">
+      Strategy: "Made in China 2025"
+    </text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="415" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
+    These incompatible visions shape global AI deployment, data residency, and procurement decisions for all organizations.
+  </text>
+</svg>
