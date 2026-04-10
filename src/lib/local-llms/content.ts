@@ -6832,6 +6832,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     '@type': 'Article',
     headline: '如何在消费级硬件上运行 70B 本地大模型 (2026)',
     description: '70B 本地大模型运行指南：内存需求、GPU 选项、层卸载技术和量化方案。了解 Llama 3.3 在消费级硬件上的部署方案。',
+    url: 'https://www.promptquorum.com/local-llms/70b-models-consumer-hardware?lang=zh',
     author: {
       '@type': 'Organization',
       name: 'PromptQuorum',
