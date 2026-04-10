@@ -1,0 +1,60 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: system-ui, sans-serif; font-size: 16px; font-weight: 600; fill: #1C1B1F; }
+      .model-label { font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #FFFFFF; }
+      .metric-label { font-family: system-ui, sans-serif; font-size: 12px; fill: #1C1B1F; }
+      .value-label { font-family: system-ui, sans-serif; font-size: 11px; fill: #666666; }
+      .arrow-line { stroke: #E8DEF8; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="40" y="35" class="title">Creative Writing Quality Spectrum</text>
+
+  <!-- Spectrum line -->
+  <line x1="80" y1="100" x2="720" y2="100" stroke="#E8DEF8" stroke-width="3"/>
+
+  <!-- 8B Node -->
+  <circle cx="140" cy="100" r="18" fill="#B5A7D0"/>
+  <text x="140" y="108" class="model-label" text-anchor="middle">8B</text>
+
+  <!-- 24B Node -->
+  <circle cx="400" cy="100" r="18" fill="#8B6BB8"/>
+  <text x="400" y="108" class="model-label" text-anchor="middle">24B</text>
+
+  <!-- 70B Node -->
+  <circle cx="660" cy="100" r="18" fill="#6750A4"/>
+  <text x="660" y="108" class="model-label" text-anchor="middle">70B</text>
+
+  <!-- Story Length Row -->
+  <text x="40" y="160" class="metric-label" font-weight="600">Story Length:</text>
+  <text x="140" y="160" class="value-label" text-anchor="middle">500 words</text>
+  <text x="400" y="160" class="value-label" text-anchor="middle">1K–2K words</text>
+  <text x="660" y="160" class="value-label" text-anchor="middle">1K–3K words</text>
+
+  <!-- Narrative Coherence Row -->
+  <text x="40" y="210" class="metric-label" font-weight="600">Coherence:</text>
+  <text x="140" y="210" class="value-label" text-anchor="middle">Short bursts</text>
+  <text x="400" y="210" class="value-label" text-anchor="middle">Moderate</text>
+  <text x="660" y="210" class="value-label" text-anchor="middle">Sustained</text>
+
+  <!-- Style Range Row -->
+  <text x="40" y="260" class="metric-label" font-weight="600">Style Range:</text>
+  <text x="140" y="260" class="value-label" text-anchor="middle">Narrow</text>
+  <text x="400" y="260" class="value-label" text-anchor="middle">Moderate</text>
+  <text x="660" y="260" class="value-label" text-anchor="middle">Widest</text>
+
+  <!-- Fine-tunes Row -->
+  <text x="40" y="310" class="metric-label" font-weight="600">Fine-tunes:</text>
+  <text x="140" y="310" class="value-label" text-anchor="middle">Limited</text>
+  <text x="400" y="310" class="value-label" text-anchor="middle">Growing</text>
+  <text x="660" y="310" class="value-label" text-anchor="middle">Extensive</text>
+
+  <!-- Arrow indicators -->
+  <path d="M 80 130 L 720 130" class="arrow-line" stroke-dasharray="4,4"/>
+  <polygon points="720,130 710,125 715,135" fill="#E8DEF8"/>
+</svg>

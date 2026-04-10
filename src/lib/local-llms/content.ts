@@ -4485,6 +4485,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Long-form coherence test**: ask for a 1,000-word short story with a specific twist ending. Does the model plant the setup naturally and deliver the payoff?',
             '**Dialogue test**: write a scene with two characters with different speech patterns. Does each character sound distinct, or does the dialogue feel uniform?',
           ],
+          image: 'creative-writing-model-comparison.svg',
+          imageCaption: 'Creative writing local LLM comparison: Llama 3.3 70B (40GB, best prose), Mistral 24B (14GB, 16GB tier), Llama 3.1 8B (6GB, entry tier).',
         },
         llama33: {
           title: '#1 Meta Llama 3.3 70B — Best Prose Quality Locally',
@@ -4500,6 +4502,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Spec': 'Ollama command', 'Value': 'ollama run llama3.3:70b' },
           ],
           columns: ['Spec', 'Value'],
+          image: 'creative-writing-quality-spectrum.svg',
+          imageCaption: 'Local LLM creative writing quality spectrum: 8B handles 500-word stories, 24B up to 2K words, 70B sustains 1K–3K word scenes with widest style range.',
         },
         mistralSmall: {
           title: '#2 Mistral Small 3.1 24B — Best Creative Writing for 16 GB RAM',
@@ -4537,6 +4541,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Break long tasks into sections**: for a 3,000-word chapter, generate it in 500-word sections. This keeps the model within its reliable coherence range.',
             '**Compare local vs cloud outputs**: use [PromptQuorum](/) to send the same creative prompt to your local Ollama model and cloud models simultaneously — useful for calibrating when local quality is sufficient.',
           ],
+          image: 'creative-writing-temperature-guide.svg',
+          imageCaption: 'LLM temperature guide for creative writing: 0.7 default is too flat, 0.9–1.05 optimal for fiction, above 1.1 produces incoherent output.',
         },
         faqSection: {
           title: 'Common Questions About Local LLMs for Creative Writing',
@@ -4620,6 +4626,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Long-Form-Kohärenz-Test**: Bitten Sie um eine 1.000-Wort-Kurzgeschichte mit spezifischem Twist-Ending. Pflanzt das Modell das Setup natürlich und liefert es die Auflösung?',
             '**Dialog-Test**: Schreiben Sie eine Szene mit zwei Charakteren mit unterschiedlichen Sprechmustern. Klingt jeder Charakter unterschiedlich oder wirkt der Dialog einheitlich?',
           ],
+          image: 'creative-writing-model-comparison.svg',
+          imageCaption: 'Kreatives Schreiben LLM-Vergleich: Llama 3.3 70B (40GB, beste Prosa), Mistral 24B (14GB, 16GB-Tier), Llama 3.1 8B (6GB, Einstieg).',
         },
         llama33: {
           title: '#1 Meta Llama 3.3 70B — beste Prosaqualität im lokalen Bereich',
@@ -4635,6 +4643,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run llama3.3:70b' },
           ],
           columns: ['Spec', 'Value'],
+          image: 'creative-writing-quality-spectrum.svg',
+          imageCaption: 'Qualitätsspektrum für kreatives Schreiben: 8B bis 500 Wörter, 24B bis 2K Wörter, 70B hält 1K–3K Wort-Szenen mit breitstem Stilbereich.',
         },
         mistralSmall: {
           title: '#2 Mistral Small 3.1 24B — beste kreative Schreibqualität für 16 GB RAM',
@@ -4672,6 +4682,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Zerlegen Sie lange Aufgaben in Abschnitte**: für ein 3.000-Wort-Kapitel generieren Sie es in 500-Wort-Abschnitten. Dies hält das Modell in seinem zuverlässigen Kohärenzbereich.',
             '**Vergleichen Sie lokale und Cloud-Ausgaben**: verwenden Sie [PromptQuorum](/) um denselben kreativen Prompt an Ihr lokales Ollama-Modell und Cloud-Modelle gleichzeitig zu senden — nützlich zum Kalibrieren, wenn lokale Qualität ausreichend ist.',
           ],
+          image: 'creative-writing-temperature-guide.svg',
+          imageCaption: 'Temperatur-Leitfaden für kreatives Schreiben: 0,7 Standard zu flach, 0,9–1,05 optimal für Fiktion, über 1,1 inkohärente Ausgabe.',
         },
         faqSection: {
           title: 'Häufig gestellte Fragen zu lokalen LLMs für kreatives Schreiben',
@@ -4777,6 +4789,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Test cohérence long format**: demandez une histoire 1000 mots avec fin surprise. Logique narrative solide?',
             '**Test dialogue**: deux personnages différents. Voix distinctes ou uniformes?',
           ],
+          image: 'creative-writing-model-comparison.svg',
+          imageCaption: 'Comparaison LLMs créatifs: Llama 3.3 70B (40GB, meilleure prose), Mistral 24B (14GB, niveau 16GB), Llama 3.1 8B (6GB, entrée).',
         },
         llama33: {
           title: '#1 Llama 3.3 70B — meilleure prose localement',
@@ -4792,6 +4806,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Spec': 'Ollama', 'Value': 'ollama run llama3.3:70b' },
           ],
           columns: ['Spec', 'Value'],
+          image: 'creative-writing-quality-spectrum.svg',
+          imageCaption: 'Spectre qualité LLM créatif: 8B jusqu\'à 500 mots, 24B 2K mots, 70B soutient scènes 1K–3K mots avec plus large plage stylistique.',
         },
         mistralSmall: {
           title: '#2 Mistral Small 3.1 24B — meilleur 16 GB RAM',
@@ -4829,6 +4845,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Tâches sections**: chapitre 3K mots → 6 sections 500 mots. Maintient cohérence fiable.',
             '**Compare local/cloud**: [PromptQuorum](/) même prompt local + cloud simultané.',
           ],
+          image: 'creative-writing-temperature-guide.svg',
+          imageCaption: 'Guide température LLM créatif: 0,7 trop plat, 0,9–1,05 optimal fiction, au-dessus 1,1 sortie incohérente.',
         },
         faqSection: {
           title: 'Questions fréquentes',
@@ -4927,6 +4945,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**長編一貫性テスト**: 特定のツイストエンディングで1000語の短編を要求します。モデルは自然にセットアップを配置し、報酬を提供していますか？',
             '**会話テスト**: 異なるスピーチパターンを持つ2つのキャラクターを使用してシーンを書きます。各キャラクターは異なって聞こえますか？',
           ],
+          image: 'creative-writing-model-comparison.svg',
+          imageCaption: '創作文章ローカルLLM比較: Llama 3.3 70B(40GB、最高品質)、Mistral 24B(14GB、16GBクラス)、Llama 3.1 8B(6GB、入門クラス)。',
         },
         llama33: {
           title: '#1 Meta Llama 3.3 70B - ローカルで最高の散文品質',
@@ -4942,6 +4962,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Spec': 'Ollama コマンド', 'Value': 'ollama run llama3.3:70b' },
           ],
           columns: ['Spec', 'Value'],
+          image: 'creative-writing-quality-spectrum.svg',
+          imageCaption: '創作文章品質スペクトラム: 8Bは500語まで、24Bは2K語まで、70Bは1K–3K語シーンを維持し最広スタイル範囲。',
         },
         mistralSmall: {
           title: '#2 Mistral Small 3.1 24B - 16GB RAM向け最高の創作文章',
@@ -4982,6 +5004,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**長いタスクを複数のセクションに分割**: 3,000語のチャプターについては、500語のセクションで生成します。',
             '**ローカルとクラウド出力を比較**: [PromptQuorum](/)を使用して同じ創作プロンプトを送信します。',
           ],
+          image: 'creative-writing-temperature-guide.svg',
+          imageCaption: '創作文章の温度ガイド: 0.7デフォルトは単調すぎ、0.9–1.05がフィクション最適、1.1超で出力が不安定。',
         },
         faqSection: {
           title: 'ローカルLLMの創作文章についてよくある質問',
@@ -5080,6 +5104,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**长篇连贯性测试**：要求写一篇1000字的短篇故事，有特定的反转结局。模型是否自然地铺垫设置并交付转折？',
             '**对话测试**：写一个包含两个有不同讲话模式角色的场景。每个角色听起来是否不同，还是对话显得单调？',
           ],
+          image: 'creative-writing-model-comparison.svg',
+          imageCaption: '创意写作本地LLM对比: Llama 3.3 70B（40GB，最佳散文）、Mistral 24B（14GB，16GB级）、Llama 3.1 8B（6GB，入门级）。',
         },
         llama33: {
           title: '#1 Meta Llama 3.3 70B - 本地最佳散文质量',
@@ -5095,6 +5121,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Spec': 'Ollama命令', 'Value': 'ollama run llama3.3:70b' },
           ],
           columns: ['Spec', 'Value'],
+          image: 'creative-writing-quality-spectrum.svg',
+          imageCaption: '创意写作质量谱: 8B处理500字故事，24B支持2K字，70B维持1K–3K字场景，风格范围最广。',
         },
         mistralSmall: {
           title: '#2 Mistral Small 3.1 24B - 16GB RAM最佳创意写作',
@@ -5133,6 +5161,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**将长任务分解为各部分**：对于3000字章节，分500字部分生成。这使模型保持在其可靠连贯性范围内。',
             '**比较本地和云输出**：使用[PromptQuorum](/)同时向本地Ollama模型和云模型发送相同的创意提示。有助于判断本地质量何时足够。',
           ],
+          image: 'creative-writing-temperature-guide.svg',
+          imageCaption: '创意写作LLM温度指南: 0.7默认太单调，0.9–1.05最适合小说，超过1.1输出不连贯。',
         },
         faqSection: {
           title: '关于本地LLM创意写作的常见问题',

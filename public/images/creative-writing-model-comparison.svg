@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bar-bg { fill: #E8DEF8; }
+      .bar-llama70 { fill: #6750A4; }
+      .bar-mistral { fill: #8B6BB8; }
+      .bar-llama8 { fill: #B5A7D0; }
+      .model-label { font-family: system-ui, sans-serif; font-size: 14px; font-weight: 500; fill: #1C1B1F; }
+      .value-label { font-family: system-ui, sans-serif; font-size: 13px; fill: #FFFFFF; font-weight: 500; }
+      .tier-label { font-family: system-ui, sans-serif; font-size: 13px; fill: #6750A4; font-weight: 500; }
+      .title { font-family: system-ui, sans-serif; font-size: 16px; font-weight: 600; fill: #1C1B1F; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="40" y="35" class="title">Creative Writing LLM Comparison (RAM)</text>
+
+  <!-- Llama 3.3 70B Row -->
+  <text x="40" y="100" class="model-label">Llama 3.3 70B</text>
+  <rect x="180" y="85" width="390" height="28" class="bar-bg" rx="4"/>
+  <rect x="180" y="85" width="390" height="28" class="bar-llama70" rx="4"/>
+  <text x="350" y="105" class="value-label">40GB RAM</text>
+  <text x="590" y="105" class="tier-label">Best Prose</text>
+
+  <!-- Mistral Small 24B Row -->
+  <text x="40" y="180" class="model-label">Mistral 24B</text>
+  <rect x="180" y="165" width="390" height="28" class="bar-bg" rx="4"/>
+  <rect x="180" y="165" width="273" height="28" class="bar-mistral" rx="4"/>
+  <text x="310" y="185" class="value-label">14GB RAM</text>
+  <text x="590" y="185" class="tier-label">16GB Tier</text>
+
+  <!-- Llama 3.1 8B Row -->
+  <text x="40" y="260" class="model-label">Llama 3.1 8B</text>
+  <rect x="180" y="245" width="390" height="28" class="bar-bg" rx="4"/>
+  <rect x="180" y="245" width="117" height="28" class="bar-llama8" rx="4"/>
+  <text x="240" y="265" class="value-label">6GB</text>
+  <text x="590" y="265" class="tier-label">Entry Tier</text>
+
+  <!-- Scale reference line -->
+  <line x1="180" y1="320" x2="570" y2="320" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="180" y="345" style="font-family: system-ui, sans-serif; font-size: 11px; fill: #999999;">0GB</text>
+  <text x="540" y="345" style="font-family: system-ui, sans-serif; font-size: 11px; fill: #999999;">40GB</text>
+</svg>
