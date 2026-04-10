@@ -1,0 +1,12 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">8GB vs 16GB RAM比较</text>
+  <rect x="50" y="70" width="300" height="280" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2"/>
+  <text x="200" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#7D5260" text-anchor="middle" font-weight="700">8GB RAM
+(慢速7B)</text>
+  <text x="200" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Slower tokens/sec</text>
+  <rect x="450" y="70" width="300" height="280" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="600" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6750A4" text-anchor="middle" font-weight="700">16GB RAM
+(全速13B)</text>
+  <text x="600" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Full Q4 quantization</text>
+</svg>

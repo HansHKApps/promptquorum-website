@@ -1,0 +1,16 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">バッテリーパフォーマンスのトレードオフ</text>
+  <text x="100" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">CPU-only</text>
+  <rect x="60" y="110" width="80" height="60" rx="4" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="100" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">15W</text>
+  <text x="100" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">5h battery</text>
+  <text x="400" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">GPU Partial</text>
+  <rect x="360" y="110" width="80" height="60" rx="4" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+  <text x="400" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">30W</text>
+  <text x="400" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">3h battery</text>
+  <text x="680" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">Full GPU</text>
+  <rect x="640" y="110" width="80" height="60" rx="4" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+  <text x="680" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">45W</text>
+  <text x="680" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#49454F" text-anchor="middle">1.5h battery</text>
+</svg>
