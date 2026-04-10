@@ -13,6 +13,9 @@ export interface BlogSection {
   }
   isTldr?: boolean
   faqs?: Array<{ q: string; a: string }>
+  image?: string
+  imageCaption?: string
+  imagePlaceholder?: boolean
 }
 
 export interface BlogPost {
