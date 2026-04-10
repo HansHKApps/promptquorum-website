@@ -6521,12 +6521,12 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
     zh: {
       theme: 'Best Models',
       seoTitle: '创意写作最佳本地 LLM 2026',
-      metaDescription: '创意写作最佳本地 LLM 2026：Llama 3.3 70B（散文质量）、Mistral Small 3.1 24B（16GB以下）、专业微调模型。',
+      metaDescription: '2026年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）、Mistral Small 3.1 24B（16GB以下）、Fimbulvetr等。基于叙事连贯性评价。',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: '创意写作最佳本地 LLM 2026',
-        description: '创意写作最佳本地 LLM 2026：Llama 3.3 70B（散文质量）、Mistral Small 3.1 24B（16GB以下）、专业微调模型。',
+        description: '2026年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）、Mistral Small 3.1 24B（16GB以下）、Fimbulvetr等。基于叙事连贯性评价。',
         datePublished: '2026-04-04',
         dateModified: '2026-04-10',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-creative-writing?lang=zh',
@@ -7013,7 +7013,7 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
           content: [
             '**Apple Silicon uses unified memory — the CPU and GPU share the same physical memory pool.** An M3 Max MacBook Pro with 64 GB of unified memory can run a 70B model at Q4_K_M entirely on GPU, achieving 20–30 tok/sec with no layer offloading overhead.',
             'On NVIDIA hardware, the GPU and system RAM are separate. A 24 GB VRAM GPU can only hold ~60% of a Q4_K_M 70B model; the remaining layers run on CPU, creating a memory bandwidth bottleneck that reduces speed to 10–18 tok/sec.',
-            'As of April 2026, the Mac Studio M2 Ultra (64 GB, ~$2,000 refurbished) is the most cost-effective path to 70B local inference at usable speed. A new M3 Max MacBook Pro 64 GB costs approximately $3,500.',
+            'As of April 2026, the Mac Studio M2 Ultra (64 GB, ~$2,000 refurbished) is the most cost-effective path to [70B local inference](/local-llms/?lang=en) at usable speed. A new M3 Max MacBook Pro 64 GB costs approximately $3,500.',
           ],
         },
         callout1: {
@@ -7134,11 +7134,11 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
             },
             {
               q: 'Can I run a 70B model on two GPUs?',
-              a: 'Yes — llama.cpp and Ollama support multi-GPU inference on NVIDIA hardware. Two RTX 4090s (48 GB total VRAM) fit a Q4_K_M 70B model entirely in VRAM. Ollama handles multi-GPU automatically when multiple GPUs are present. Tensor parallelism in llama.cpp (`--tensor-split`) controls how layers are distributed.',
+              a: 'Yes — llama.cpp and Ollama support multi-GPU inference on NVIDIA hardware. Two RTX 4090s (48 GB total [VRAM](/local-llms/gpu-memory-explained?lang=en)) fit a Q4_K_M 70B model entirely in VRAM. Ollama handles multi-GPU automatically when multiple GPUs are present. Tensor parallelism in llama.cpp (`--tensor-split`) controls how layers are distributed.',
             },
             {
               q: 'How does 70B local quality compare to GPT-4o?',
-              a: 'On MMLU and HumanEval benchmarks, Llama 3.3 70B (82%, 88%) and Qwen2.5 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-4o (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-4o on most tasks.',
+              a: 'On [MMLU and HumanEval](/local-llms/llm-benchmarks?lang=en) benchmarks, Llama 3.3 70B (82%, 88%) and Qwen2.5 72B (84%, 87%) match or slightly exceed GPT-4 (2023) scores. GPT-4o (2024) scores higher on reasoning-heavy tasks. For general instruction-following, summarization, and code generation, 70B local models are competitive with GPT-4o on most tasks.',
             },
             {
               q: 'Does Ollama support running 70B models automatically?',
