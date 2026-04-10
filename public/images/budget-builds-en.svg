@@ -1,0 +1,86 @@
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="380" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Build Configurations by Budget
+  </text>
+
+  <!-- Entry Level Build -->
+  <g id="entry-level">
+    <rect x="40" y="70" width="220" height="280" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+
+    <text x="150" y="100" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle" font-weight="700">
+      Entry Level
+    </text>
+    <text x="150" y="125" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      $1500
+    </text>
+
+    <line x1="50" y1="135" x2="250" y2="135" stroke="#E8DEF8" stroke-width="1.5"/>
+
+    <text x="60" y="160" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">GPU: RTX 4070 Ti</text>
+    <text x="60" y="180" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">CPU: i7 13700</text>
+    <text x="60" y="200" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">RAM: 16 GB DDR5</text>
+    <text x="60" y="220" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">Storage: 512 GB NVMe</text>
+
+    <text x="60" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">Run:</text>
+    <text x="60" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">7–13B models</text>
+
+    <text x="150" y="330" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">Great start</text>
+  </g>
+
+  <!-- Mid Level Build -->
+  <g id="mid-level">
+    <rect x="290" y="55" width="220" height="295" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="3"/>
+
+    <text x="400" y="95" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle" font-weight="700">
+      Solid Build
+    </text>
+    <text x="400" y="120" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      $2500
+    </text>
+
+    <line x1="300" y1="130" x2="500" y2="130" stroke="#6750A4" stroke-width="1.5"/>
+
+    <text x="310" y="160" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">GPU: RTX 4080</text>
+    <text x="310" y="180" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">CPU: i7 14700K</text>
+    <text x="310" y="200" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">RAM: 32 GB DDR5</text>
+    <text x="310" y="220" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">Storage: 1 TB NVMe</text>
+
+    <text x="310" y="255" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">Run:</text>
+    <text x="310" y="275" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">13–30B models</text>
+
+    <text x="400" y="335" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">Recommended ⭐</text>
+  </g>
+
+  <!-- High-End Build -->
+  <g id="high-end">
+    <rect x="540" y="70" width="220" height="280" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+
+    <text x="650" y="100" font-family="system-ui, sans-serif" font-size="18" fill="#6750A4" text-anchor="middle" font-weight="700">
+      High-End
+    </text>
+    <text x="650" y="125" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      $4000
+    </text>
+
+    <line x1="550" y1="135" x2="750" y2="135" stroke="#E8DEF8" stroke-width="1.5"/>
+
+    <text x="560" y="160" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">GPU: 2× RTX 4090</text>
+    <text x="560" y="180" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">CPU: Ryzen 9 7950X</text>
+    <text x="560" y="200" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">RAM: 128 GB DDR5</text>
+    <text x="560" y="220" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">Storage: 4 TB NVMe</text>
+
+    <text x="560" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">Run:</text>
+    <text x="560" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">Any model (70B+)</text>
+
+    <text x="650" y="330" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">Overkill</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="375" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
+    Mid-level build offers best bang-for-buck. Start here unless you need 70B models immediately.
+  </text>
+</svg>
