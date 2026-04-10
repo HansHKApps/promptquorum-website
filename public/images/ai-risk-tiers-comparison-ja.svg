@@ -1,0 +1,197 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    AIリスク分類: 3つの規制モデル
+  </text>
+
+  <!-- EU Risk-Based Tiers (Left) -->
+  <g id="eu-tiers">
+    <!-- Label -->
+    <text x="130" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇪🇺 EU AI法
+    </text>
+
+    <!-- Prohibited Risk -->
+    <rect x="20" y="85" width="220" height="85" rx="6" fill="#FFEBEE" stroke="#D32F2F" stroke-width="2.5"/>
+    <text x="130" y="105" font-family="system-ui, sans-serif" font-size="13" fill="#D32F2F" text-anchor="middle" font-weight="700">
+      禁止リスク
+    </text>
+    <text x="30" y="123" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 潜在的操作
+    </text>
+    <text x="30" y="138" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 脆弱者の搾取
+    </text>
+    <text x="30" y="153" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      = 禁止
+    </text>
+
+    <!-- High Risk -->
+    <rect x="20" y="180" width="220" height="85" rx="6" fill="#FFF3E0" stroke="#F57C00" stroke-width="2.5"/>
+    <text x="130" y="200" font-family="system-ui, sans-serif" font-size="13" fill="#F57C00" text-anchor="middle" font-weight="700">
+      高リスク
+    </text>
+    <text x="30" y="218" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 採用・雇用
+    </text>
+    <text x="30" y="233" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 顔認識
+    </text>
+    <text x="30" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      = 厳格な要件
+    </text>
+
+    <!-- Limited Risk -->
+    <rect x="20" y="275" width="220" height="85" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="2.5"/>
+    <text x="130" y="295" font-family="system-ui, sans-serif" font-size="13" fill="#388E3C" text-anchor="middle" font-weight="700">
+      限定的リスク
+    </text>
+    <text x="30" y="313" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • チャットボット, LLM
+    </text>
+    <text x="30" y="328" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 開示が必要
+    </text>
+    <text x="30" y="343" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      = 透明性ルール
+    </text>
+
+    <!-- Minimal Risk -->
+    <rect x="20" y="370" width="220" height="75" rx="6" fill="#F0F4C3" stroke="#AFB42B" stroke-width="2.5"/>
+    <text x="130" y="390" font-family="system-ui, sans-serif" font-size="13" fill="#AFB42B" text-anchor="middle" font-weight="700">
+      最小リスク
+    </text>
+    <text x="30" y="408" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • スパムフィルタ, 分析
+    </text>
+    <text x="30" y="423" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      = 少ない制限
+    </text>
+  </g>
+
+  <!-- US Sectoral Approach (Center) -->
+  <g id="us-approach">
+    <!-- Label -->
+    <text x="400" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇺🇸 米国セクター
+    </text>
+
+    <!-- Healthcare -->
+    <rect x="290" y="85" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="105" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">
+      医療 & 金融
+    </text>
+    <text x="300" y="122" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      FDA, FTC監督
+    </text>
+    <text x="300" y="137" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      精度、公平性
+    </text>
+    <text x="300" y="152" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      の要件
+    </text>
+
+    <!-- Employment -->
+    <rect x="290" y="190" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="210" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">
+      雇用 & 住宅
+    </text>
+    <text x="300" y="227" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      EEOC, HUD規則
+    </text>
+    <text x="300" y="242" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      バイアス監査、一部
+    </text>
+    <text x="300" y="257" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      開示
+    </text>
+
+    <!-- Tech Sector -->
+    <rect x="290" y="295" width="220" height="150" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="315" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">
+      テック、コンテンツ他
+    </text>
+    <text x="300" y="332" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      ほぼ任意
+    </text>
+    <text x="300" y="347" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      標準 (NIST RMF,
+    </text>
+    <text x="300" y="362" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      ISO 42001)
+    </text>
+    <text x="300" y="387" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      FTCは不公正な
+    </text>
+    <text x="300" y="402" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      行為の場合のみ
+    </text>
+    <text x="300" y="417" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      対応
+    </text>
+  </g>
+
+  <!-- China Algorithm Governance (Right) -->
+  <g id="china-approach">
+    <!-- Label -->
+    <text x="670" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle" font-weight="700">
+      🇨🇳 中国アルゴリズム
+    </text>
+
+    <!-- CAC Controlled -->
+    <rect x="560" y="85" width="220" height="100" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="105" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">
+      CAC管理
+    </text>
+    <text x="570" y="122" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • レコメンデーション
+    </text>
+    <text x="570" y="137" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      アルゴ(SNS,
+    </text>
+    <text x="570" y="152" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      動画, 検索)
+    </text>
+
+    <!-- Content Regulation -->
+    <rect x="560" y="195" width="220" height="110" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="215" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">
+      コンテンツ & 安全
+    </text>
+    <text x="570" y="232" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 政治メッセージ,
+    </text>
+    <text x="570" y="247" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      偽情報の精査
+    </text>
+    <text x="570" y="262" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • データのローカライズ
+    </text>
+
+    <!-- Emerging LLM Rules -->
+    <rect x="560" y="315" width="220" height="130" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="335" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">
+      LLM要件
+    </text>
+    <text x="570" y="352" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • CAC事前承認
+    </text>
+    <text x="570" y="367" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 値の整合性
+    </text>
+    <text x="570" y="382" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      テスト必須
+    </text>
+    <text x="570" y="397" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 国家統制 = 優先
+    </text>
+  </g>
+
+  <!-- Bottom insight -->
+  <text x="400" y="485" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+    EU: ルールベース | US: 市場ベース | 中国: 統制ベース
+  </text>
+</svg>

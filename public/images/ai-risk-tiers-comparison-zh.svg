@@ -1,0 +1,197 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    AI风险分类: 三种监管模型
+  </text>
+
+  <!-- EU Risk-Based Tiers (Left) -->
+  <g id="eu-tiers">
+    <!-- Label -->
+    <text x="130" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇪🇺 欧盟AI法
+    </text>
+
+    <!-- Prohibited Risk -->
+    <rect x="20" y="85" width="220" height="85" rx="6" fill="#FFEBEE" stroke="#D32F2F" stroke-width="2.5"/>
+    <text x="130" y="105" font-family="system-ui, sans-serif" font-size="13" fill="#D32F2F" text-anchor="middle" font-weight="700">
+      禁止风险
+    </text>
+    <text x="30" y="123" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 潜意识操纵
+    </text>
+    <text x="30" y="138" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 利用弱势群体
+    </text>
+    <text x="30" y="153" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      = 被禁止
+    </text>
+
+    <!-- High Risk -->
+    <rect x="20" y="180" width="220" height="85" rx="6" fill="#FFF3E0" stroke="#F57C00" stroke-width="2.5"/>
+    <text x="130" y="200" font-family="system-ui, sans-serif" font-size="13" fill="#F57C00" text-anchor="middle" font-weight="700">
+      高风险
+    </text>
+    <text x="30" y="218" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 招聘/就业
+    </text>
+    <text x="30" y="233" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 人脸识别
+    </text>
+    <text x="30" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      = 严格要求
+    </text>
+
+    <!-- Limited Risk -->
+    <rect x="20" y="275" width="220" height="85" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="2.5"/>
+    <text x="130" y="295" font-family="system-ui, sans-serif" font-size="13" fill="#388E3C" text-anchor="middle" font-weight="700">
+      有限风险
+    </text>
+    <text x="30" y="313" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 聊天机器人, LLM
+    </text>
+    <text x="30" y="328" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 需要披露
+    </text>
+    <text x="30" y="343" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      = 透明性规则
+    </text>
+
+    <!-- Minimal Risk -->
+    <rect x="20" y="370" width="220" height="75" rx="6" fill="#F0F4C3" stroke="#AFB42B" stroke-width="2.5"/>
+    <text x="130" y="390" font-family="system-ui, sans-serif" font-size="13" fill="#AFB42B" text-anchor="middle" font-weight="700">
+      最小风险
+    </text>
+    <text x="30" y="408" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 垃圾邮件过滤、分析
+    </text>
+    <text x="30" y="423" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      = 限制少
+    </text>
+  </g>
+
+  <!-- US Sectoral Approach (Center) -->
+  <g id="us-approach">
+    <!-- Label -->
+    <text x="400" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      🇺🇸 美国分行业
+    </text>
+
+    <!-- Healthcare -->
+    <rect x="290" y="85" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="105" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">
+      医疗保健 & 金融
+    </text>
+    <text x="300" y="122" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      FDA, FTC 监督
+    </text>
+    <text x="300" y="137" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      准确性、公平性
+    </text>
+    <text x="300" y="152" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      要求
+    </text>
+
+    <!-- Employment -->
+    <rect x="290" y="190" width="220" height="95" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="210" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">
+      就业 & 住房
+    </text>
+    <text x="300" y="227" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      EEOC、HUD 规则
+    </text>
+    <text x="300" y="242" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      偏见审计、部分州
+    </text>
+    <text x="300" y="257" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      披露
+    </text>
+
+    <!-- Tech Sector -->
+    <rect x="290" y="295" width="220" height="150" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="315" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">
+      科技、内容等
+    </text>
+    <text x="300" y="332" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      大多为自愿性
+    </text>
+    <text x="300" y="347" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      标准 (NIST RMF,
+    </text>
+    <text x="300" y="362" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      ISO 42001)
+    </text>
+    <text x="300" y="387" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      FTC 仅在不公平
+    </text>
+    <text x="300" y="402" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      /欺骗行为时
+    </text>
+    <text x="300" y="417" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      行动
+    </text>
+  </g>
+
+  <!-- China Algorithm Governance (Right) -->
+  <g id="china-approach">
+    <!-- Label -->
+    <text x="670" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle" font-weight="700">
+      🇨🇳 中国算法
+    </text>
+
+    <!-- CAC Controlled -->
+    <rect x="560" y="85" width="220" height="100" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="105" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">
+      CAC 管理
+    </text>
+    <text x="570" y="122" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 推荐算法
+    </text>
+    <text x="570" y="137" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      (社交、视频、
+    </text>
+    <text x="570" y="152" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      搜索)
+    </text>
+
+    <!-- Content Regulation -->
+    <rect x="560" y="195" width="220" height="110" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="215" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">
+      内容 & 安全
+    </text>
+    <text x="570" y="232" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 政治信息、虚假
+    </text>
+    <text x="570" y="247" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      信息审查
+    </text>
+    <text x="570" y="262" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 数据本地化
+    </text>
+
+    <!-- Emerging LLM Rules -->
+    <rect x="560" y="315" width="220" height="130" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="670" y="335" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">
+      LLM 要求
+    </text>
+    <text x="570" y="352" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • CAC 预先批准
+    </text>
+    <text x="570" y="367" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 价值观对齐
+    </text>
+    <text x="570" y="382" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      测试必需
+    </text>
+    <text x="570" y="397" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
+      • 国家控制 = 优先
+    </text>
+  </g>
+
+  <!-- Bottom insight -->
+  <text x="400" y="485" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+    欧盟: 规则驱动 | 美国: 市场驱动 | 中国: 控制驱动
+  </text>
+</svg>

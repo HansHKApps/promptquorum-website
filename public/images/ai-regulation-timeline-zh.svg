@@ -1,0 +1,124 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="480" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="450" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    全球AI监管时间表: 2022–2026
+  </text>
+
+  <!-- Center timeline line -->
+  <line x1="80" y1="280" x2="870" y2="280" stroke="#E8DEF8" stroke-width="3"/>
+
+  <!-- Year markers -->
+  <text x="130" y="320" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" text-anchor="middle" font-weight="700">2022</text>
+  <circle cx="130" cy="280" r="6" fill="#6750A4"/>
+
+  <text x="260" y="320" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" text-anchor="middle" font-weight="700">2023</text>
+  <circle cx="260" cy="280" r="6" fill="#6750A4"/>
+
+  <text x="390" y="320" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" text-anchor="middle" font-weight="700">2024</text>
+  <circle cx="390" cy="280" r="6" fill="#6750A4"/>
+
+  <text x="520" y="320" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" text-anchor="middle" font-weight="700">2025</text>
+  <circle cx="520" cy="280" r="6" fill="#6750A4"/>
+
+  <text x="650" y="320" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" text-anchor="middle" font-weight="700">2026</text>
+  <circle cx="650" cy="280" r="6" fill="#6750A4"/>
+
+  <!-- 2022 Events -->
+  <!-- EU -->
+  <g>
+    <line x1="130" y1="280" x2="100" y2="180" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="20" y="90" width="160" height="85" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="100" y="110" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">欧盟AI法案</text>
+    <text x="100" y="127" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="600">提议</text>
+    <text x="100" y="141" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">基于风险</text>
+    <text x="100" y="153" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">框架</text>
+  </g>
+
+  <!-- US -->
+  <g>
+    <line x1="130" y1="280" x2="160" y2="380" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="100" y="385" width="120" height="80" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="160" y="403" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">拜登行政令</text>
+    <text x="160" y="420" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="600">执行命令</text>
+    <text x="160" y="435" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">AI安全</text>
+  </g>
+
+  <!-- 2023 Events -->
+  <!-- EU -->
+  <g>
+    <line x1="260" y1="280" x2="230" y2="180" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="150" y="90" width="160" height="85" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="230" y="110" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">AI法案</text>
+    <text x="230" y="127" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">协商</text>
+    <text x="230" y="141" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">最终同意</text>
+    <text x="230" y="153" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">风险等级</text>
+  </g>
+
+  <!-- China -->
+  <g>
+    <line x1="260" y1="280" x2="290" y2="380" stroke="#7D5260" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="230" y="385" width="120" height="80" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="290" y="403" font-family="system-ui, sans-serif" font-size="12" fill="#7D5260" text-anchor="middle" font-weight="700">CAC规则</text>
+    <text x="290" y="420" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="600">推荐算法</text>
+    <text x="290" y="435" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">规则</text>
+  </g>
+
+  <!-- 2024 Events -->
+  <!-- EU -->
+  <g>
+    <line x1="390" y1="280" x2="360" y2="180" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="280" y="90" width="160" height="85" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="360" y="110" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">🎯 欧盟AI法案</text>
+    <text x="360" y="127" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">正式通过</text>
+    <text x="360" y="141" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">实施开始</text>
+    <text x="360" y="153" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">2025年1月+</text>
+  </g>
+
+  <!-- US -->
+  <g>
+    <line x1="390" y1="280" x2="420" y2="380" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="360" y="385" width="120" height="80" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="420" y="403" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">NIST RMF</text>
+    <text x="420" y="420" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="600">1.1版本发布</text>
+    <text x="420" y="435" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">自愿框架</text>
+  </g>
+
+  <!-- 2025 Events -->
+  <!-- EU -->
+  <g>
+    <line x1="520" y1="280" x2="490" y2="180" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="410" y="90" width="160" height="85" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="490" y="110" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">🎯 实施</text>
+    <text x="490" y="127" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">分阶段开始</text>
+    <text x="490" y="141" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">禁止AI被禁</text>
+    <text x="490" y="153" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">2025年1月</text>
+  </g>
+
+  <!-- China -->
+  <g>
+    <line x1="520" y1="280" x2="550" y2="380" stroke="#7D5260" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="490" y="385" width="120" height="80" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="550" y="403" font-family="system-ui, sans-serif" font-size="12" fill="#7D5260" text-anchor="middle" font-weight="700">LLM规则</text>
+    <text x="550" y="420" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="600">强化中</text>
+    <text x="550" y="435" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">更严格的控制</text>
+  </g>
+
+  <!-- 2026 Events -->
+  <!-- US -->
+  <g>
+    <line x1="650" y1="280" x2="680" y2="380" stroke="#6750A4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <rect x="620" y="385" width="120" height="80" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="680" y="403" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">可能</text>
+    <text x="680" y="420" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="600">AI立法</text>
+    <text x="680" y="435" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" text-anchor="middle" font-weight="500">仍然不确定</text>
+  </g>
+
+  <!-- Bottom legend -->
+  <rect x="80" y="450" width="740" height="20" rx="4" fill="#F7F2FA"/>
+  <text x="90" y="464" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+    🇪🇺 欧盟以规定性规则领导 | 🇺🇸 美国采取分行业+自愿方法 | 🇨🇳 中国实施国家AI控制
+  </text>
+</svg>

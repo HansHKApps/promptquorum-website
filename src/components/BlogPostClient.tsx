@@ -112,6 +112,22 @@ function BlogPostClientContent({ post, slug, initialLang }: BlogPostClientProps)
                   </div>
                 )}
 
+                {/* Image with caption */}
+                {section.image && (
+                  <figure className="my-8">
+                    <img
+                      src={section.image}
+                      alt={section.imageCaption || 'Article illustration'}
+                      className="w-full rounded-lg border border-primary/20 shadow-sm"
+                    />
+                    {section.imageCaption && (
+                      <figcaption className="text-sm text-text-secondary mt-3 text-center italic">
+                        {section.imageCaption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )}
+
                 {/* Items: bullet list */}
                 {section.items && section.items.length > 0 && (
                   <ul className="space-y-2 my-4">
