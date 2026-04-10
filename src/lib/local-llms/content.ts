@@ -611,7 +611,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           isTldr: true,
           items: [
             'macOS: telechargez le .dmg ou executez `brew install ollama`.',
-            'Windows: telechargez le programme d'installation.',
+            'Windows: telechargez le programme d\'installation.',
             'Linux: une seule commande curl.',
             '4 Go RAM pour modeles 3B, 8 Go pour 7B.',
             'Ollama expose une API REST compatible OpenAI.',
