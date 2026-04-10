@@ -6134,7 +6134,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       intro: 'Consensus scoring analyses responses from multiple AI models and measures where they agree, where they diverge, and what that pattern tells you about the reliability of an answer.',
       publishDate: 'Published March 17, 2026',
       seoTitle: 'AI Consensus Scoring: Multi-Model Agreement (2026)',
-      metaDescription: 'Consensus scoring explained: multi-model voting reduces hallucinations. Use PromptQuorum to compare models and trust reliable AI outputs.',
+      metaDescription: 'Consensus scoring explained: multi-model voting reduces hallucinations. Learn how PromptQuorum detects agreement and ensures reliable AI outputs.',
       readTime: '6 min read',
       sections: {
         problem: {
@@ -6280,8 +6280,8 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       title: 'PromptQuorum vs AskQuorum AI — What\'s the Difference?',
       intro: 'Two tools, similar names, very different products. Here\'s a clear breakdown of what PromptQuorum and AskQuorum AI each do, who they\'re built for, and why they\'re not the same thing.',
       publishDate: 'Published March 17, 2026',
-      seoTitle: 'PromptQuorum vs AskQuorum 2026: Honest Comparison & Which to Choose',
-      metaDescription: 'Detailed comparison of PromptQuorum and AskQuorum. Features, privacy, local LLM support, and final recommendation for prompt engineers.',
+      seoTitle: 'PromptQuorum vs AskQuorum: Honest Comparison & Recommendation',
+      metaDescription: 'PromptQuorum vs AskQuorum: detailed feature comparison, privacy policies, local LLM support, and final recommendation for your workflow.',
       readTime: '4 min read',
       sections: {
         overview: {
