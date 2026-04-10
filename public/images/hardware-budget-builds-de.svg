@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Lokale LLM Budget-Build-Stufen
+  </text>
+  
+  <!-- Tier 1 -->
+  <rect x="80" y="80" width="180" height="240" fill="#E8DEF8" rx="8" stroke="#E8DEF8" stroke-width="2"/>
+  <text x="170" y="120" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">€400</text>
+  <text x="170" y="200" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">Nur 7B</text>
+  <text x="170" y="280" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Basic local LLM</text>
+  
+  <!-- Tier 2 -->
+  <rect x="310" y="60" width="180" height="280" fill="#C8B8F0" rx="8" stroke="#D2B8E0" stroke-width="2"/>
+  <text x="400" y="110" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">€650</text>
+  <text x="400" y="190" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">13B Modell</text>
+  <text x="400" y="280" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Popular choice</text>
+  <path d="M 390 30 L 410 30 L 400 50 Z" fill="#F4B400"/>
+  
+  <!-- Tier 3 -->
+  <rect x="540" y="80" width="180" height="240" fill="#6750A4" rx="8" stroke="#5D3F95" stroke-width="2"/>
+  <text x="630" y="120" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">€1200+</text>
+  <text x="630" y="200" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">30B Modell</text>
+  <text x="630" y="280" font-family="system-ui, sans-serif" font-size="11" fill="#E8DEF8" text-anchor="middle">Pro option</text>
+</svg>

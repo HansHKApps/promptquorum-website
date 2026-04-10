@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    GPU-Vergleich für lokale LLMs
+  </text>
+  
+  <!-- Table header -->
+  <rect x="60" y="50" width="680" height="30" fill="#E8DEF8" rx="6"/>
+  <text x="80" y="70" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">GPU</text>
+  <text x="200" y="70" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">VRAM</text>
+  <text x="320" y="70" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">Preis (Gebraucht)</text>
+  <text x="500" y="70" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">VRAM/\$</text>
+  
+  <!-- Table rows -->
+  <line x1="60" y1="120" x2="740" y2="120" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="80" y="116" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">RTX 3060</text>
+  <text x="200" y="116" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">12 GB</text>
+  <text x="320" y="116" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">€200</text>
+  <text x="500" y="116" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">Gut</text>
+  <line x1="60" y1="150" x2="740" y2="150" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="80" y="146" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">RX 6700 XT</text>
+  <text x="200" y="146" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">12 GB</text>
+  <text x="320" y="146" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">€160</text>
+  <text x="500" y="146" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">Best</text>
+  <line x1="60" y1="180" x2="740" y2="180" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="80" y="176" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">RTX 3090</text>
+  <text x="200" y="176" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">24 GB</text>
+  <text x="320" y="176" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">€400</text>
+  <text x="500" y="176" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">Best+</text>
+  <line x1="60" y1="210" x2="740" y2="210" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="80" y="206" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">RTX 4090</text>
+  <text x="200" y="206" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">24 GB</text>
+  <text x="320" y="206" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F">€1400</text>
+  <text x="500" y="206" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="600">Schlecht</text>
+</svg>
