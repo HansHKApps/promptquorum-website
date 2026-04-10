@@ -39,6 +39,7 @@ export interface LLMArticle {
   faqSchema?: Record<string, unknown>
   tableSchema?: Record<string, unknown>
   itemListSchema?: Record<string, unknown>
+  speakableSchema?: Record<string, unknown>
   educationalLevel?: string
   primaryTerm?: string
   toc?: { label: string; anchor: string }[]
@@ -205,7 +206,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'How Do You Install Ollama: Complete Setup Guide for macOS, Windows, and Linux',
       seoTitle: 'How to Install Ollama: Setup Guide for macOS, Windows, Linux',
       intro: 'Ollama installs in under 2 minutes on macOS, Windows, and Linux. After installation, one command downloads and runs any model from the Ollama library — no Python environment, no configuration files, and no GPU required to get started. As of April 2026, Ollama supports 200+ models including Meta Llama 3.3, Qwen2.5, and Mistral.',
-      metaDescription: 'How to install Ollama on macOS, Windows, and Linux. Step-by-step guide with exact commands, first model walkthrough, and Free beta — April 2026.',
+      metaDescription: 'How to install Ollama on macOS, Windows, and Linux. Step-by-step guide with exact commands, first model walkthrough, and API configuration in 8 minutes.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -223,6 +224,126 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/api/og/how-to-install-ollama', width: 1200, height: 630 },
+        proficiencyLevel: 'Beginner',
+        about: [
+          { '@type': 'Thing', name: 'Ollama' },
+          { '@type': 'Thing', name: 'Local LLM installation' },
+          { '@type': 'Thing', name: 'Model management' },
+          { '@type': 'Thing', name: 'OpenAI-compatible API' },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Install Ollama',
+        description: 'Step-by-step installation guide for Ollama on macOS, Windows, and Linux.',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Download Ollama',
+            text: 'Go to ollama.com/download and download the installer for your operating system.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Install the Application',
+            text: 'Run the installer and follow the on-screen prompts. Ollama will be installed as a background service.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Verify Installation',
+            text: 'Open a terminal and run `ollama --version` to confirm Ollama is installed.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Download a Model',
+            text: 'Run `ollama pull llama3.2` to download and cache your first model.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Run Your First Model',
+            text: 'Execute `ollama run llama3.2` to start chatting with the model in your terminal.',
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Is Ollama free?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, Ollama is free and open-source. There are no subscription fees or API charges.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Do I need a GPU to run Ollama?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No, Ollama works on CPU alone. A GPU accelerates inference but is not required.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the minimum RAM needed?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Minimum 4 GB RAM for a 3B-parameter model. 8 GB RAM is recommended for 7B models.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do I use Ollama with OpenAI-compatible applications?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ollama exposes an OpenAI-compatible API at http://localhost:11434/v1. Use any string as the API key.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I run multiple models simultaneously?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ollama loads one model at a time by default due to RAM constraints. Use tools like LM Studio for multiple models.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is my data private when using Ollama?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, all inference runs locally on your hardware. No data is sent to external servers.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What models does Ollama support?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ollama supports 200+ models including Meta Llama, Mistral, Qwen, Gemma, Phi, and more.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How much disk space do models require?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Model sizes range from 2 GB (3B models) to 47 GB (70B models). Allocate at least 50 GB free disk space.',
+            },
+          },
+        ],
+      },
+      speakableSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPageElement',
+        cssSelector: '.article-intro',
       },
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
