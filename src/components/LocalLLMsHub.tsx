@@ -613,8 +613,8 @@ function slugToTitle(slug: string): string {
 // Returns the article title from content, or a readable fallback from the slug
 function getArticleTitle(articleKey: string, lang: Language): string {
   const contentKey = LLM_SLUG_TO_KEY[articleKey]
-  if (contentKey && llmContent[contentKey]?.[lang]) return llmContent[contentKey][lang].title
-  if (contentKey && llmContent[contentKey]?.en)     return llmContent[contentKey].en.title
+  if (contentKey && llmContent[contentKey]?.[lang]?.title) return llmContent[contentKey][lang].title
+  if (contentKey && llmContent[contentKey]?.en?.title)     return llmContent[contentKey].en.title
   return slugToTitle(articleKey)
 }
 

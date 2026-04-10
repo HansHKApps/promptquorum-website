@@ -25,13 +25,13 @@ export interface LLMSection {
 
 export interface LLMArticle {
   theme: string
-  title: string
-  intro: string
+  title?: string
+  intro?: string
   metaDescription?: string
   seoTitle?: string
-  publishDate: string
+  publishDate?: string
   dateModified?: string
-  readTime: string
+  readTime?: string
   sections: Record<string, LLMSection>
   schema?: Record<string, unknown>
   supplementalSchema?: Record<string, unknown>
@@ -1489,6 +1489,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'The practical ceiling on most 8 GB laptops is a 7B model. A 13B model at Q4_K_M requires ~9 GB of RAM — technically possible on 16 GB machines but leaves little headroom for the OS and other applications.',
             'For [what are local LLMs](/local-llms/what-are-local-llms) and a full explanation of RAM requirements, see the dedicated guide.',
           ],
+          image: '/images/ollama-terminal.svg',
+          imageCaption: 'Ollama running Mistral 7B on a MacBook — 22 tokens/sec on CPU at Q4_K_M quantization.',
         },
         ram8vs16: {
           title: '8 GB RAM vs 16 GB RAM Laptop: What Is the Practical Difference?',
@@ -1527,6 +1529,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Laptop Type': 'AMD Ryzen 7 + integrated GPU (16 GB)', 'Speed (7B)': '10–18 tok/s', 'Battery Drain': 'Moderate', 'Max Model': '~13B' },
           ],
           columns: ['Laptop Type', 'Speed (7B)', 'Battery Drain', 'Max Model'],
+          image: '/images/apple-silicon-unified-memory.svg',
+          imageCaption: 'Apple Silicon unified memory lets the GPU access the full RAM pool — a 13B model fits entirely in GPU memory on an 18 GB M3 Pro.',
         },
         thermals: {
           title: 'How Do You Handle Thermal Throttling on a Laptop',
@@ -1539,6 +1543,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Limit generation batch size** — avoid regenerating very long responses. Break long tasks into shorter prompts.',
             '**Use Q4_K_M over Q8_0** — lower quantization requires less computation per token, producing less heat at the cost of marginal quality.',
           ],
+          image: '/images/laptop-stand-airflow.svg',
+          imageCaption: 'Raising a laptop 2–3 cm on a stand improves exhaust airflow and delays throttling onset from 10 to 20+ minutes.',
         },
         battery: {
           title: 'How Much Battery Does Running a Local LLM Use?',
@@ -1681,6 +1687,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ]
       },
     },
+    // NOTE: When translating sections for de, fr, ja, zh — include the same images from the English sections:
+    // canYouRun: { ..., image: '/images/ollama-terminal.svg', imageCaption: '...' }
+    // appleSilicon: { ..., image: '/images/apple-silicon-unified-memory.svg', imageCaption: '...' }
+    // thermals: { ..., image: '/images/laptop-stand-airflow.svg', imageCaption: '...' }
     de: {
       theme: 'Erste Schritte',
       title: 'Wie führe ich lokale LLMs auf einem Laptop aus: Leistung, Thermalmanagement und Modellauswahl',

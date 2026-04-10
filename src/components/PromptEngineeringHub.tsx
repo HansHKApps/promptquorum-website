@@ -208,10 +208,10 @@ const THEME_LABELS: Record<string, Record<string, string>> = {
 // Get translated article title from content or fallback
 function getArticleTitle(articleKey: string, lang: Language): string {
   const contentKey = PE_SLUG_TO_KEY[articleKey]
-  if (contentKey && peContent[contentKey]?.[lang]) {
+  if (contentKey && peContent[contentKey]?.[lang]?.title) {
     return peContent[contentKey][lang].title
   }
-  if (contentKey && peContent[contentKey]?.en) {
+  if (contentKey && peContent[contentKey]?.en?.title) {
     return peContent[contentKey].en.title
   }
   // Fallback: capitalize slug if no content found
