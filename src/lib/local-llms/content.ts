@@ -6569,7 +6569,7 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
         'inLanguage': 'en',
         author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        proficiencyLevel: 'Beginner',
+        educationalLevel: 'Beginner',
         about: [
           { '@type': 'Thing', name: 'Phi-4 Mini' },
           { '@type': 'Thing', name: 'Gemma 2' },
@@ -6634,13 +6634,14 @@ P26年创意写作最佳本地LLM前5名：Llama 3.3 70B（最佳散文质量）
         },
         quickFacts: {
           title: 'Quick Facts: Small Local LLM Specs at a Glance',
-          items: [
-            '**Phi-4 Mini 3.8B**: 68% MMLU, 70% HumanEval, 2.5 GB RAM, 30–50 tok/sec, best for reasoning',
-            '**Gemma 2 2B**: 52% MMLU, fastest (40–60 tok/sec), 1.7 GB RAM, limited context (8K)',
-            '**Qwen2.5 3B**: 65% HumanEval (best coding), 2 GB RAM, 29-language support, 25–40 tok/sec',
-            '**Llama 3.2 3B**: 58% MMLU, best community support, 128K context, 2.5 GB RAM, safest first choice',
-            '**Llama 3.2 1B**: 60–90 tok/sec (fastest), 1.3 GB RAM, minimal quality — use only if RAM-constrained',
+          rows: [
+            { 'Model': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2.5 GB', 'Speed': '30–50 tok/sec', 'Best For': 'Reasoning' },
+            { 'Model': 'Qwen2.5 3B', 'MMLU': '62%', 'HumanEval': '65%', 'RAM': '2 GB', 'Speed': '25–40 tok/sec', 'Best For': 'Coding' },
+            { 'Model': 'Llama 3.2 3B', 'MMLU': '58%', 'HumanEval': '60%', 'RAM': '2.5 GB', 'Speed': '25–45 tok/sec', 'Best For': 'General use' },
+            { 'Model': 'Gemma 2 2B', 'MMLU': '52%', 'HumanEval': '38%', 'RAM': '1.7 GB', 'Speed': '40–60 tok/sec', 'Best For': 'Speed' },
+            { 'Model': 'Llama 3.2 1B', 'MMLU': '32%', 'HumanEval': '28%', 'RAM': '1.3 GB', 'Speed': '60–90 tok/sec', 'Best For': 'Minimal RAM' },
           ],
+          columns: ['Model', 'MMLU', 'HumanEval', 'RAM', 'Speed', 'Best For'],
         },
         whatIsSmall: {
           title: 'What Is a "Small" Local LLM and When Should You Use One?',
