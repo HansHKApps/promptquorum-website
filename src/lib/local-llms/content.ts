@@ -7668,6 +7668,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Model': 'Qwen2.5 32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' },
           ],
           columns: ['Model', 'FP16 (best quality)', 'Q8 (excellent)', 'Q5 (good)', 'Q4 (good, smallest)'],
+          image: '/images/vram-formula-calculator-en.svg',
+          imageCaption: 'VRAM calculator showing the formula (Model Size × Bits) ÷ 8, with examples: 7B Q4 = 3.5 GB, 13B Q5 = 8.1 GB, 70B Q4 = 35 GB. Q4 is the recommended sweet spot for most hardware.',
         },
         gpuRecommendations: {
           title: 'What GPU Should You Buy?',
@@ -7679,6 +7681,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Tier': 'Server ($3000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48+ GB', 'Best For': 'Multi-user, 70B+', 'Performance': 'Production-grade' },
           ],
           columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Performance'],
+          image: '/images/gpu-tier-comparison-en.svg',
+          imageCaption: 'GPU tier recommendations: $600 RTX 4070 Ti (12GB, 7–13B models), $1200 RTX 4080 (16GB, 13–30B), $1800 RTX 4090 (24GB, any 70B model), $3000+ server GPUs for production. GPU choice matters 10× more than CPU.',
         },
         cpuRam: {
           title: 'What CPU and RAM Do You Need?',
@@ -7710,6 +7714,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Budget': '$4000 (high-end)', 'GPU': '2× RTX 4090', 'CPU': 'Ryzen 9 7950X', 'RAM': '128 GB', 'Models': 'Any (70B+)', 'Cost': 'Overkill for personal' },
           ],
           columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Cost'],
+          image: '/images/budget-builds-en.svg',
+          imageCaption: 'Three build configurations: $1500 entry-level (RTX 4070 Ti, i7 13700, 16GB) for 7–13B models, $2500 solid build (RTX 4080, i7 14700K, 32GB) for 13–30B, $4000 high-end (2× RTX 4090, Ryzen 9, 128GB) for any model. Mid-level offers best value.',
         },
         mac: {
           title: 'Mac Hardware for Local LLMs',
@@ -7722,6 +7728,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Mac': 'M4 Max (coming 2026)', 'GPU Memory': '40+ GB unified', 'Best For': '13–30B models', 'Limitation': 'Not optimized for 70B' },
           ],
           columns: ['Mac', 'GPU Memory', 'Best For', 'Limitation'],
+          image: '/images/mac-hardware-comparison-en.svg',
+          imageCaption: 'Mac hardware comparison: M3 MacBook Pro 16" (18GB, 7B fast, 13B slow), M3 Max Studio (36GB, 13B good), M4 Max coming 2026 (40+ GB, 13–30B). Unified memory advantage, but RTX 4090 still better for 70B.',
         },
         serverVsConsumer: {
           title: 'Server Hardware vs Consumer Hardware',
@@ -7733,6 +7741,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Server (RTX 6000 Ada)**: ~$5000, 48 GB VRAM, designed for 24/7 use, better cooling, error correction.',
             '**Recommendation**: Start with RTX 4090. If running 70B models 24/7 for multiple users, upgrade to dual A100 or RTX 6000.',
           ],
+          image: '/images/server-vs-consumer-en.svg',
+          imageCaption: 'Consumer vs server hardware: RTX 4090 ($1800, 24GB, single-user, part-time) vs RTX 6000 Ada ($5000+, 48GB, multi-user, 24/7 duty). Start with consumer hardware; upgrade to server-grade only if running production services.',
         },
         commonMistakes: {
           title: 'Common Mistakes in Hardware Planning',
