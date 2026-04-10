@@ -565,12 +565,15 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 my-4 key-takeaways">
           <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{SECTION_HEADER_LABELS[lang].keyTakeaways}</p>
           <ul className="space-y-2">
-            {section.items.map((item, i) => (
-              <li key={i} className="flex gap-3 text-text-secondary text-sm">
-                <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-1.5 ${colors.dot}`} />
-                <span>{renderInlineLinks(item, lang)}</span>
-              </li>
-            ))}
+            {section.items.map((item, i) => {
+              const itemText = typeof item === 'string' ? item : `[${item.title}](${item.url})`;
+              return (
+                <li key={i} className="flex gap-3 text-text-secondary text-sm">
+                  <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-1.5 ${colors.dot}`} />
+                  <span>{renderInlineLinks(itemText, lang)}</span>
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}
@@ -601,12 +604,15 @@ function SectionBlock({ section, colors, id, lang, isGlossary, termPathMap }: { 
       {/* Bullet list */}
       {!section.isTldr && section.items && (
         <ul className="space-y-3 my-4">
-          {section.items.map((item, i) => (
-            <li key={i} className="flex gap-3 text-text-secondary">
-              <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${colors.dot}`} />
-              <span className="leading-relaxed">{renderInlineLinks(item)}</span>
-            </li>
-          ))}
+          {section.items.map((item, i) => {
+            const itemText = typeof item === 'string' ? item : `[${item.title}](${item.url})`;
+            return (
+              <li key={i} className="flex gap-3 text-text-secondary">
+                <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${colors.dot}`} />
+                <span className="leading-relaxed">{renderInlineLinks(itemText)}</span>
+              </li>
+            );
+          })}
         </ul>
       )}
 
