@@ -14,6 +14,7 @@ export interface LLMSection {
   columns?: string[]
   faqs?: Array<{ q: string; a: string }>
   snippets?: Array<{ [key: string]: string }>
+  examples?: Array<{ [key: string]: string }>
   isTldr?: boolean
   tableFormat?: boolean
   image?: string
