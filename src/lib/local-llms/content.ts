@@ -7353,7 +7353,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Best Models',
       title: 'LLM Quantization Explained: How Q4_K_M, Q8_0, and GGUF Formats Work',
-      seoTitle: 'LLM Quantization Explained',
+      seoTitle: 'Quantization Guide: Q4_K_M, Q8_0, GGUF Explained',
       intro: 'LLM quantization reduces model weight precision from 32-bit or 16-bit floats to 4-bit or 8-bit integers, cutting RAM requirements by 50–75% with minimal quality loss. Q4_K_M is the standard recommended quantization for local inference — it reduces a 7B model from ~14 GB to ~4.5 GB while retaining 97–99% of the original model quality on standard benchmarks.',
       metaDescription: 'LLM quantization explained: how Q4_K_M, Q8_0, and GGUF work, RAM savings vs quality tradeoffs, and which quantization to use for your Free beta — April 2026.',
       publishDate: '2026-04-04',
