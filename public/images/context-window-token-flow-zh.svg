@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    上下文窗口 Token 流
+  </text>
+  
+  <!-- Left: New tokens entering -->
+  <g>
+    <text x="80" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6750A4" font-weight="700">新 Token</text>
+    <rect x="40" y="120" width="80" height="40" rx="4" fill="#6750A4" stroke="#6750A4" stroke-width="1"/>
+    <text x="80" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="600">→</text>
+  </g>
+  
+  <!-- Arrow -->
+  <line x1="130" y1="140" x2="180" y2="140" stroke="#6750A4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Context window box -->
+  <rect x="180" y="110" width="440" height="60" rx="4" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="410" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">活跃 Token</text>
+  <text x="410" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">(Fixed Context Window)</text>
+  
+  <!-- Arrow out -->
+  <line x1="620" y1="140" x2="670" y2="140" stroke="#6750A4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Right: Forgotten tokens falling -->
+  <g>
+    <text x="720" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#7D5260" font-weight="700">遗忘 Token</text>
+    <rect x="680" y="120" width="80" height="40" rx="4" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="720" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle" font-weight="600">✗</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#6750A4"/>
+    </marker>
+  </defs>
+  
+  <!-- Bottom explanation -->
+  <rect x="60" y="280" width="680" height="80" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="400" y="305" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle" font-weight="700">How Context Windows Work</text>
+  <text x="400" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
+    When the context window fills, new tokens push old ones out. The model cannot see forgotten tokens.
+  </text>
+  <text x="400" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
+    This is why long conversations need summarization or context trimming.
+  </text>
+</svg>

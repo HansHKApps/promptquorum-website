@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Optimisation Prompt
+  </text>
+  
+  <!-- Left: Bloated before -->
+  <g>
+    <text x="200" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#7D5260" font-weight="700">Before (Bloated) ✗</text>
+    <rect x="60" y="85" width="280" height="220" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2"/>
+    <text x="200" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="600">Redundant instructions</text>
+    <text x="200" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">repeated context from</text>
+    <text x="200" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">earlier turns, format hints</text>
+    <text x="200" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">on every message, full</text>
+    <text x="200" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">chat history included</text>
+    <text x="200" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#7D5260" text-anchor="middle" font-weight="700">~850 tokens</text>
+  </g>
+  
+  <!-- Arrow between -->
+  <line x1="360" y1="195" x2="420" y2="195" stroke="#6750A4" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="390" y="185" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6750A4" text-anchor="middle" font-weight="700">Trim</text>
+  
+  <!-- Right: Optimized after -->
+  <g>
+    <text x="600" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6750A4" font-weight="700">After (Optimized) ✓</text>
+    <rect x="460" y="85" width="280" height="220" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="600" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="600">Summary of past turns</text>
+    <text x="600" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">instead of full history,</text>
+    <text x="600" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">concise single prompt</text>
+    <text x="600" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">instruction, only relevant</text>
+    <text x="600" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">context included</text>
+    <text x="600" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">~420 tokens</text>
+  </g>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#6750A4"/>
+    </marker>
+  </defs>
+  
+  <!-- Bottom note -->
+  <text x="400" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+    50% token reduction = 50% faster response, same quality
+  </text>
+</svg>

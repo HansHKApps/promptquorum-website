@@ -1,0 +1,32 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Tailles Fenêtre Contextuelle (2026)
+  </text>
+  
+  <!-- Bar 1: GPT-4o 128K -->
+  <rect x="60" y="80" width="130" height="240" rx="4" fill="#6750A4" stroke="#6750A4" stroke-width="1"/>
+  <text x="125" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="700">GPT-4o</text>
+  <text x="125" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">128K</text>
+  
+  <!-- Bar 2: Claude 3 200K -->
+  <rect x="210" y="40" width="130" height="280" rx="4" fill="#6750A4" stroke="#6750A4" stroke-width="1"/>
+  <text x="275" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="700">Claude 3</text>
+  <text x="275" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">200K</text>
+  
+  <!-- Bar 3: Gemini 1M (tallest) -->
+  <rect x="360" y="0" width="130" height="320" rx="4" fill="#E8DEF8" stroke="#6750A4" stroke-width="2.5"/>
+  <text x="425" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="700">Gemini 1.5</text>
+  <text x="425" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">1M</text>
+  
+  <!-- Bar 4: Llama 128K -->
+  <rect x="510" y="80" width="130" height="240" rx="4" fill="#6750A4" stroke="#6750A4" stroke-width="1"/>
+  <text x="575" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="700">Llama 3.1</text>
+  <text x="575" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">128K</text>
+  
+  <!-- Bar 5: Mistral 32K (shortest) -->
+  <rect x="660" y="200" width="130" height="120" rx="4" fill="#6750A4" stroke="#6750A4" stroke-width="1"/>
+  <text x="725" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle" font-weight="700">Mistral</text>
+  <text x="725" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6750A4" text-anchor="middle" font-weight="700">32K</text>
+</svg>
