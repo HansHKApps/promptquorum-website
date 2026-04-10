@@ -1,60 +1,181 @@
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <style>
-      .title { font-family: system-ui, sans-serif; font-size: 16px; font-weight: 600; fill: #1C1B1F; }
-      .model-label { font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #FFFFFF; }
-      .metric-label { font-family: system-ui, sans-serif; font-size: 12px; fill: #1C1B1F; }
-      .value-label { font-family: system-ui, sans-serif; font-size: 11px; fill: #666666; }
-      .arrow-line { stroke: #E8DEF8; stroke-width: 2; fill: none; }
-    </style>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow-right" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#6750A4"/>
+    </marker>
   </defs>
 
   <!-- Background -->
   <rect width="800" height="400" fill="#FFFFFF"/>
 
+  <!-- Card container -->
+  <rect x="30" y="20" width="740" height="360" rx="12" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="2" filter="url(#shadow)"/>
+
   <!-- Title -->
-  <text x="40" y="35" class="title">Creative Writing Quality Spectrum</text>
+  <text x="400" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Creative Writing Quality by Model Size
+  </text>
 
-  <!-- Spectrum line -->
-  <line x1="80" y1="100" x2="720" y2="100" stroke="#E8DEF8" stroke-width="3"/>
+  <!-- Direction label -->
+  <text x="400" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#79747E" text-anchor="middle" letter-spacing="0.3">
+    8 GB entry → 16 GB mid-range → 40 GB best prose
+  </text>
 
-  <!-- 8B Node -->
-  <circle cx="140" cy="100" r="18" fill="#B5A7D0"/>
-  <text x="140" y="108" class="model-label" text-anchor="middle">8B</text>
+  <!-- Connecting arrow line -->
+  <line x1="110" y1="210" x2="686" y2="210" stroke="#E8DEF8" stroke-width="3" marker-end="url(#arrow-right)"/>
 
-  <!-- 24B Node -->
-  <circle cx="400" cy="100" r="18" fill="#8B6BB8"/>
-  <text x="400" y="108" class="model-label" text-anchor="middle">24B</text>
+  <!-- ── CARD 1: Llama 3.1 8B ── -->
+  <g id="card-8b">
+    <rect x="50" y="105" width="185" height="215" rx="10" fill="#F7F2FA" stroke="#79747E" stroke-width="2"/>
+    <!-- Size badge -->
+    <rect x="120" y="95" width="45" height="24" rx="12" fill="#79747E"/>
+    <text x="142" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      8B
+    </text>
+    <!-- Model name -->
+    <text x="142" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+      Llama 3.1 8B
+    </text>
+    <text x="142" y="163" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F" text-anchor="middle">
+      ~6 GB RAM
+    </text>
+    <!-- Divider -->
+    <line x1="70" y1="175" x2="215" y2="175" stroke="#E8DEF8" stroke-width="1.5"/>
+    <!-- Metrics -->
+    <text x="80" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Story length
+    </text>
+    <text x="215" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="end">
+      500 words
+    </text>
+    <text x="80" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Coherence
+    </text>
+    <text x="215" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="end">
+      Short bursts
+    </text>
+    <text x="80" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Style range
+    </text>
+    <text x="215" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="end">
+      Narrow
+    </text>
+    <text x="80" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Fine-tunes
+    </text>
+    <text x="215" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="end">
+      Limited
+    </text>
+    <!-- Bottom label -->
+    <rect x="68" y="286" width="149" height="22" rx="5" fill="#F0F0F0"/>
+    <text x="142" y="301" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#49454F" text-anchor="middle">
+      Entry — 8 GB machines
+    </text>
+  </g>
 
-  <!-- 70B Node -->
-  <circle cx="660" cy="100" r="18" fill="#6750A4"/>
-  <text x="660" y="108" class="model-label" text-anchor="middle">70B</text>
+  <!-- ── CARD 2: Mistral Small 24B ── -->
+  <g id="card-24b">
+    <rect x="305" y="105" width="185" height="215" rx="10" fill="#FEF7FF" stroke="#7D5260" stroke-width="2"/>
+    <!-- Size badge -->
+    <rect x="375" y="95" width="45" height="24" rx="12" fill="#7D5260"/>
+    <text x="397" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      24B
+    </text>
+    <!-- Model name -->
+    <text x="397" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+      Mistral Small 24B
+    </text>
+    <text x="397" y="163" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F" text-anchor="middle">
+      ~14 GB RAM
+    </text>
+    <!-- Divider -->
+    <line x1="325" y1="175" x2="470" y2="175" stroke="#E8DEF8" stroke-width="1.5"/>
+    <!-- Metrics -->
+    <text x="335" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Story length
+    </text>
+    <text x="470" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="end">
+      1K–2K words
+    </text>
+    <text x="335" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Coherence
+    </text>
+    <text x="470" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="end">
+      Moderate
+    </text>
+    <text x="335" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Style range
+    </text>
+    <text x="470" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="end">
+      Moderate
+    </text>
+    <text x="335" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Fine-tunes
+    </text>
+    <text x="470" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="end">
+      Growing
+    </text>
+    <!-- Bottom label -->
+    <rect x="323" y="286" width="149" height="22" rx="5" fill="#F7EDEF"/>
+    <text x="397" y="301" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#7D5260" text-anchor="middle">
+      Best — 16 GB machines
+    </text>
+  </g>
 
-  <!-- Story Length Row -->
-  <text x="40" y="160" class="metric-label" font-weight="600">Story Length:</text>
-  <text x="140" y="160" class="value-label" text-anchor="middle">500 words</text>
-  <text x="400" y="160" class="value-label" text-anchor="middle">1K–2K words</text>
-  <text x="660" y="160" class="value-label" text-anchor="middle">1K–3K words</text>
+  <!-- ── CARD 3: Llama 3.3 70B ── -->
+  <g id="card-70b">
+    <rect x="560" y="105" width="185" height="215" rx="10" fill="#F3EEFF" stroke="#6750A4" stroke-width="2.5"/>
+    <!-- Size badge -->
+    <rect x="630" y="95" width="45" height="24" rx="12" fill="#6750A4"/>
+    <text x="652" y="112" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      70B
+    </text>
+    <!-- Model name -->
+    <text x="652" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+      Llama 3.3 70B
+    </text>
+    <text x="652" y="163" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F" text-anchor="middle">
+      ~40 GB RAM
+    </text>
+    <!-- Divider -->
+    <line x1="580" y1="175" x2="725" y2="175" stroke="#6750A4" stroke-width="1" opacity="0.3"/>
+    <!-- Metrics -->
+    <text x="590" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Story length
+    </text>
+    <text x="725" y="198" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="end">
+      1K–3K words
+    </text>
+    <text x="590" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Coherence
+    </text>
+    <text x="725" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="end">
+      Sustained
+    </text>
+    <text x="590" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Style range
+    </text>
+    <text x="725" y="246" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="end">
+      Widest ✓
+    </text>
+    <text x="590" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">
+      Fine-tunes
+    </text>
+    <text x="725" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="end">
+      Extensive ✓
+    </text>
+    <!-- Bottom label -->
+    <rect x="578" y="286" width="149" height="22" rx="5" fill="#E8DEF8"/>
+    <text x="652" y="301" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">
+      Best prose quality
+    </text>
+  </g>
 
-  <!-- Narrative Coherence Row -->
-  <text x="40" y="210" class="metric-label" font-weight="600">Coherence:</text>
-  <text x="140" y="210" class="value-label" text-anchor="middle">Short bursts</text>
-  <text x="400" y="210" class="value-label" text-anchor="middle">Moderate</text>
-  <text x="660" y="210" class="value-label" text-anchor="middle">Sustained</text>
-
-  <!-- Style Range Row -->
-  <text x="40" y="260" class="metric-label" font-weight="600">Style Range:</text>
-  <text x="140" y="260" class="value-label" text-anchor="middle">Narrow</text>
-  <text x="400" y="260" class="value-label" text-anchor="middle">Moderate</text>
-  <text x="660" y="260" class="value-label" text-anchor="middle">Widest</text>
-
-  <!-- Fine-tunes Row -->
-  <text x="40" y="310" class="metric-label" font-weight="600">Fine-tunes:</text>
-  <text x="140" y="310" class="value-label" text-anchor="middle">Limited</text>
-  <text x="400" y="310" class="value-label" text-anchor="middle">Growing</text>
-  <text x="660" y="310" class="value-label" text-anchor="middle">Extensive</text>
-
-  <!-- Arrow indicators -->
-  <path d="M 80 130 L 720 130" class="arrow-line" stroke-dasharray="4,4"/>
-  <polygon points="720,130 710,125 715,135" fill="#E8DEF8"/>
+  <!-- Bottom note -->
+  <text x="400" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#79747E" text-anchor="middle">
+    Community fine-tunes (Fimbulvetr-11B, Midnight-Rose-70B) add specialized fiction capabilities at each tier
+  </text>
 </svg>
