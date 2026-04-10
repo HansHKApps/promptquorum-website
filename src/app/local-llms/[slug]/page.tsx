@@ -105,7 +105,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       url: canonicalUrl,
       type: 'article',
       siteName: 'PromptQuorum',
-      images: [{ url: ogImageUrl, width: 1200, height: 630 }],
+      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: article.title }],
       publishedTime: article.publishDate,
       modifiedTime: article.dateModified ?? article.publishDate,
     },

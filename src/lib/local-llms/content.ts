@@ -549,9 +549,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Getting Started',
       title: 'How Do You Run Your First Local LLM: From Install to First Response in 10 Minutes',
-      seoTitle: 'Run Your First Local LLM',
+      seoTitle: 'Run Your First Local LLM in 10 Minutes (Step-by-Step)',
       intro: 'Running your first local LLM takes under 10 minutes with Ollama. Install Ollama, run one command to pull a model, and start chatting in your terminal — no API key, no account, and no internet connection after the initial download. As of April 2026, the fastest beginner model is Llama 3.2 3B at 25–45 tokens/sec on a modern laptop CPU.',
-      metaDescription: 'Run your first local LLM in under 10 minutes using Ollama. Complete walkthrough: install, pull a model, first prompt, and what to Free beta — April 2026.',
+      metaDescription: 'Run your first local LLM in under 10 minutes using Ollama. Complete walkthrough: install, pull a model, first prompt. Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '7 min read',
       educationalLevel: 'Beginner',
@@ -690,6 +690,146 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
       },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Run Your First Local LLM in 10 Minutes (Step-by-Step)',
+        'description': 'Run your first local LLM in under 10 minutes using Ollama. Complete walkthrough: install, pull a model, first prompt. Free beta — April 2026.',
+        'url': 'https://www.promptquorum.com/local-llms/run-first-local-llm?lang=en',
+        'inLanguage': 'en',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'How to Run Your First Local LLM in 10 Minutes',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Install Ollama', 'text': 'Download and install Ollama from ollama.ai. Verify installation with `ollama --version`.' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Choose Your First Model', 'text': 'Select a beginner model based on your hardware: Llama 3.2 3B (4GB RAM), Phi 2.5 (8GB), or Mistral 7B (16GB).' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Pull the Model', 'text': 'Run `ollama pull llama3.2:3b` to download the model. Wait for completion.' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Run and Chat', 'text': 'Execute `ollama run llama3.2:3b` to start the model and begin chatting in your terminal.' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Test with Your First Prompt', 'text': 'Type your first prompt (e.g., "Hello, what is an LLM?") and press Enter. Observe the response time and quality.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'The model response is very slow — is this normal?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, unless you have a GPU. On CPU: expect 2–10 tokens/sec depending on your processor. On GPU (NVIDIA with CUDA): expect 20–100 tokens/sec. Performance improves with model quantization (Q4_K_M format) and hardware upgrades.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run two models at the same time?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, but both will share your RAM/VRAM. Running two 7B models requires ~30GB RAM total. Ollama loads one at a time by default; you can load another in a separate terminal window, but performance will degrade.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I stop Ollama from running in the background?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama runs as a service by default. Stop it with `sudo systemctl stop ollama` (Linux), kill the Ollama process (macOS), or use Task Manager (Windows). Restart with `ollama serve` in the terminal.'
+            }
+          },
+        ]
+      },
+    },
+    de: {
+      theme: 'Erste Schritte',
+      title: 'Führe dein erstes lokales LLM aus: Von Installation bis erste Antwort in 10 Minuten',
+      seoTitle: 'Führe dein erstes lokales LLM in 10 Minuten aus (Schritt-für-Schritt)',
+      intro: 'Dein erstes lokales LLM mit Ollama auszuführen dauert weniger als 10 Minuten. Installiere Ollama, führe einen Befehl aus, um ein Modell zu laden, und beginne, in deinem Terminal zu chatten — kein API-Schlüssel, kein Konto und keine Internetverbindung nach dem initialen Download erforderlich. Ab April 2026 ist das schnellste Anfängermodell Llama 3.2 3B mit 25–45 Tokens/Sekunde auf einer modernen Laptop-CPU.',
+      metaDescription: 'Führe dein erstes lokales LLM in weniger als 10 Minuten mit Ollama aus. Vollständige Anleitung: Installation, Modell laden, erste Eingabe. Kostenlos — April 2026.',
+      publishDate: '2026-04-04',
+      readTime: '7 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'lokales LLM',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Führe dein erstes lokales LLM in 10 Minuten aus (Schritt-für-Schritt)',
+        'description': 'Führe dein erstes lokales LLM in weniger als 10 Minuten mit Ollama aus. Vollständige Anleitung: Installation, Modell laden, erste Eingabe. Kostenlos — April 2026.',
+        'url': 'https://www.promptquorum.com/local-llms/run-first-local-llm?lang=de',
+        'inLanguage': 'de',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      sections: {},
+    },
+    fr: {
+      theme: 'Premiers pas',
+      title: 'Exécutez votre premier LLM local: de l\'installation à la première réponse en 10 minutes',
+      seoTitle: 'Exécutez votre premier LLM local en 10 minutes (Étape par étape)',
+      intro: 'Exécuter votre premier LLM local avec Ollama prend moins de 10 minutes. Installez Ollama, exécutez une commande pour charger un modèle, et commencez à discuter dans votre terminal — pas de clé API, pas de compte, et pas de connexion Internet après le téléchargement initial. En avril 2026, le modèle débutant le plus rapide est Llama 3.2 3B à 25–45 tokens/sec sur une CPU portable moderne.',
+      metaDescription: 'Exécutez votre premier LLM local en moins de 10 minutes avec Ollama. Guide complet: installation, téléchargement du modèle, première entrée. Gratuit — avril 2026.',
+      publishDate: '2026-04-04',
+      readTime: '7 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'LLM local',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Exécutez votre premier LLM local en 10 minutes (Étape par étape)',
+        'description': 'Exécutez votre premier LLM local en moins de 10 minutes avec Ollama. Guide complet: installation, téléchargement du modèle, première entrée. Gratuit — avril 2026.',
+        'url': 'https://www.promptquorum.com/local-llms/run-first-local-llm?lang=fr',
+        'inLanguage': 'fr',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      sections: {},
+    },
+    ja: {
+      theme: '入門',
+      title: '初めてのローカルLLM：インストールから最初の回答まで10分',
+      seoTitle: '初めてのローカルLLMを10分で実行（ステップバイステップ）',
+      intro: 'Ollamaを使用して初めてのローカルLLMを実行するには10分以下かかります。Ollamaをインストールし、1つのコマンドを実行してモデルをロードし、ターミナルでチャットを開始します。APIキー、アカウント、初期ダウンロード後のインターネット接続は不要です。2026年4月時点で、最速の初心者向けモデルはLlama 3.2 3Bで、モダンノートパソコンのCPUで25～45トークン/秒です。',
+      metaDescription: 'Ollamaを使用して初めてのローカルLLMを10分以内で実行します。完全なガイド：インストール、モデルのロード、最初のプロンプト。無料—2026年4月。',
+      publishDate: '2026-04-04',
+      readTime: '7 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'ローカルLLM',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '初めてのローカルLLMを10分で実行（ステップバイステップ）',
+        'description': 'Ollamaを使用して初めてのローカルLLMを10分以内で実行します。完全なガイド：インストール、モデルのロード、最初のプロンプト。無料—2026年4月。',
+        'url': 'https://www.promptquorum.com/local-llms/run-first-local-llm?lang=ja',
+        'inLanguage': 'ja',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      sections: {},
+    },
+    zh: {
+      theme: '入门',
+      title: '运行您的第一个本地LLM：从安装到首个响应仅需10分钟',
+      seoTitle: '在10分钟内运行您的第一个本地LLM（分步指南）',
+      intro: '使用Ollama运行您的第一个本地LLM只需不到10分钟。安装Ollama，运行一个命令加载模型，然后在您的终端中开始聊天——无需API密钥、账户，初始下载后也无需互联网连接。截至2026年4月，最快的初学者模型是Llama 3.2 3B，在现代笔记本电脑CPU上可达25-45个令牌/秒。',
+      metaDescription: '使用Ollama在10分钟内运行您的第一个本地LLM。完整指南：安装、加载模型、首个提示。免费——2026年4月。',
+      publishDate: '2026-04-04',
+      readTime: '7 min read',
+      educationalLevel: 'Beginner',
+      primaryTerm: '本地LLM',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '在10分钟内运行您的第一个本地LLM（分步指南）',
+        'description': '使用Ollama在10分钟内运行您的第一个本地LLM。完整指南：安装、加载模型、首个提示。免费——2026年4月。',
+        'url': 'https://www.promptquorum.com/local-llms/run-first-local-llm?lang=zh',
+        'inLanguage': 'zh',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      sections: {},
     },
   },
 

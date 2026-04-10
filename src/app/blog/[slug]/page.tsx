@@ -33,6 +33,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
 
   const post = blogContent[postId][selectedLang] || blogContent[postId]['en']
   const canonicalUrl = `https://www.promptquorum.com/blog/${slug}`
+  const ogImageUrl = post.heroImage || `https://www.promptquorum.com/api/og/blog/${slug}?lang=${selectedLang}`
   const pageTitle = (post as any).seoTitle ?? post.title
   const metaDesc = (post as any).metaDescription ?? post.intro
 
@@ -56,6 +57,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       url: canonicalUrl,
       type: 'article',
       publishedTime: post.publishDate,
+      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
