@@ -6410,9 +6410,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         { label: 'Common Questions', anchor: '#common-questions' },
       ],
       sections: {
-        leadAnswer: {
-          isLead: true,
-          content: '**Small local LLMs (1B–4B parameters) are best evaluated by actual use case testing, not benchmarks.** The top choices in 2026 are Phi-4 Mini 3.8B for reasoning (68% MMLU), Gemma 2 2B for speed (40–60 tok/sec), Qwen2.5 3B for coding (65% HumanEval), and Llama 3.2 3B for general use (most community support).',
+        leadAnswer: {          content: '**Small local LLMs (1B–4B parameters) are best evaluated by actual use case testing, not benchmarks.** The top choices in 2026 are Phi-4 Mini 3.8B for reasoning (68% MMLU), Gemma 2 2B for speed (40–60 tok/sec), Qwen2.5 3B for coding (65% HumanEval), and Llama 3.2 3B for general use (most community support).',
         },
         tldr: {
           isTldr: true,
@@ -6758,9 +6756,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'As of April 2026, a 70B model locally matches GPT-4 (2023) quality and is the only consumer-accessible path to that quality tier without cloud costs.',
           ],
         },
-        leadAnswer: {
-          isLead: true,
-          content: 'To run a 70B model on consumer hardware in 2026, you need either Apple Silicon with 64 GB unified memory, NVIDIA GPU with 24 GB VRAM plus 32 GB system RAM, or a CPU-only machine with 64 GB RAM for offline batch processing. Quality matches GPT-4 (2023); speed depends on hardware.',
+        leadAnswer: {          content: 'To run a 70B model on consumer hardware in 2026, you need either Apple Silicon with 64 GB unified memory, NVIDIA GPU with 24 GB VRAM plus 32 GB system RAM, or a CPU-only machine with 64 GB RAM for offline batch processing. Quality matches GPT-4 (2023); speed depends on hardware.',
         },
         quickFacts: {
           title: 'Quick Facts',
@@ -7203,9 +7199,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'GGUF is the file format that stores quantized models for llama.cpp, Ollama, and LM Studio.',
           ],
         },
-        leadAnswer: {
-          isLead: true,
-          content: 'Quantization reduces model size by converting 16-bit weights to 4–8-bit integers. Q4_K_M, the standard quantization, reduces a 7B model from 14 GB to 4.5 GB with only 1–3% quality loss. GGUF is the file format. Q4_K_M balances quality and RAM for consumer hardware running on Ollama, LM Studio, or llama.cpp.',
+        leadAnswer: {          content: 'Quantization reduces model size by converting 16-bit weights to 4–8-bit integers. Q4_K_M, the standard quantization, reduces a 7B model from 14 GB to 4.5 GB with only 1–3% quality loss. GGUF is the file format. Q4_K_M balances quality and RAM for consumer hardware running on Ollama, LM Studio, or llama.cpp.',
         },
         quickFacts: {
           title: 'Quick Facts',
@@ -7649,9 +7643,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'As of April 2026, no locally-runnable model matches GPT-4o or Claude 4.6 Sonnet quality in Japanese or Korean for complex tasks. Qwen2.5 is the best available locally.',
           ],
         },
-        leadAnswer: {
-          isLead: true,
-          content: 'Qwen2.5 is the strongest multilingual local LLM in 2026, supporting 29 languages natively. For European languages (German, French, Spanish), Mistral and Llama 3.x are competitive. For Asian languages (Japanese, Korean, Chinese), Qwen2.5 significantly outperforms all alternatives. For Arabic, Qwen2.5 and Gemma 3 are best. Local multilingual inference avoids cloud API costs and ensures data privacy.',
+        leadAnswer: {          content: 'Qwen2.5 is the strongest multilingual local LLM in 2026, supporting 29 languages natively. For European languages (German, French, Spanish), Mistral and Llama 3.x are competitive. For Asian languages (Japanese, Korean, Chinese), Qwen2.5 significantly outperforms all alternatives. For Arabic, Qwen2.5 and Gemma 3 are best. Local multilingual inference avoids cloud API costs and ensures data privacy.',
         },
         quickFacts: {
           title: 'Quick Facts',
