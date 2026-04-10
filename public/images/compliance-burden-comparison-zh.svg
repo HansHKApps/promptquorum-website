@@ -1,0 +1,73 @@
+
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="480" fill="#FFFFFF"/>
+  <text x="450" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">合规负担: 成本、复杂性和时间表</text>
+  <rect x="280" y="50" width="340" height="25" rx="4" fill="#FEF7FF" stroke="#6750A4" stroke-width="1"/>
+  <text x="300" y="67" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">针对全球部署生成式AI的企业</text>
+  <g id="eu-compliance">
+    <rect x="50" y="100" width="220" height="35" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="160" y="123" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">🇪🇺 欧盟合规</text>
+    <rect x="50" y="150" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="60" y="172" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">估计成本:</text>
+    <text x="60" y="191" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">€500K – €2M+</text>
+    <text x="60" y="208" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">法律、技术合规、</text>
+    <text x="60" y="221" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">审计、治理团队</text>
+    <rect x="50" y="235" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="60" y="257" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">复杂度:</text>
+    <text x="60" y="276" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">非常高 🔴</text>
+    <text x="60" y="293" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">规定性规则、</text>
+    <text x="60" y="306" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">技术标准</text>
+    <rect x="50" y="320" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="60" y="342" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">时间表:</text>
+    <text x="60" y="361" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">6–12 个月</text>
+    <text x="60" y="378" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">分阶段已进行</text>
+    <text x="60" y="391" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">(2025年1月执行)</text>
+    <rect x="50" y="405" width="220" height="45" rx="6" fill="#FFEBEE" stroke="#D32F2F" stroke-width="1.5"/>
+    <text x="160" y="420" font-family="system-ui, sans-serif" font-size="11" fill="#D32F2F" text-anchor="middle" font-weight="700">风险</text>
+    <text x="160" y="437" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="500">不合规: €35M罚款</text>
+  </g>
+  <g id="us-compliance">
+    <rect x="340" y="100" width="220" height="35" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="450" y="123" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">🇺🇸 美国合规</text>
+    <rect x="340" y="150" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="350" y="172" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">估计成本:</text>
+    <text x="350" y="191" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">$50K – $300K</text>
+    <text x="350" y="208" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">NIST RMF采用、</text>
+    <text x="350" y="221" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">部门级法律审查</text>
+    <rect x="340" y="235" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="350" y="257" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">复杂度:</text>
+    <text x="350" y="276" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">中等 🟡</text>
+    <text x="350" y="293" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">自愿框架、无单一标准</text>
+    <text x="350" y="306" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500"></text>
+    <rect x="340" y="320" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="350" y="342" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">时间表:</text>
+    <text x="350" y="361" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">2–4 个月</text>
+    <text x="350" y="378" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">无硬性期限、</text>
+    <text x="350" y="391" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">持续监督</text>
+    <rect x="340" y="405" width="220" height="45" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="1.5"/>
+    <text x="450" y="420" font-family="system-ui, sans-serif" font-size="11" fill="#388E3C" text-anchor="middle" font-weight="700">优势</text>
+    <text x="450" y="437" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="500">轻手段、创新友好</text>
+  </g>
+  <g id="china-compliance">
+    <rect x="630" y="100" width="220" height="35" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="740" y="123" font-family="system-ui, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle" font-weight="700">🇨🇳 中国合规</text>
+    <rect x="630" y="150" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="640" y="172" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">估计成本:</text>
+    <text x="640" y="191" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" font-weight="700">€200K – €1M+</text>
+    <text x="640" y="208" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">批准流程、政府关系、</text>
+    <text x="640" y="221" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">合规人员</text>
+    <rect x="630" y="235" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="640" y="257" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">复杂度:</text>
+    <text x="640" y="276" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" font-weight="700">非常高 🔴</text>
+    <text x="640" y="293" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">需要CAC批准、</text>
+    <text x="640" y="306" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">标准不透明</text>
+    <rect x="630" y="320" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="640" y="342" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">时间表:</text>
+    <text x="640" y="361" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" font-weight="700">3–12+ 个月</text>
+    <text x="640" y="378" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">批准不确定、</text>
+    <text x="640" y="391" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">无保障</text>
+    <rect x="630" y="405" width="220" height="45" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="740" y="420" font-family="system-ui, sans-serif" font-size="11" fill="#7D5260" text-anchor="middle" font-weight="700">风险</text>
+    <text x="740" y="437" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="500">可能被拒绝、规则变化</text>
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="480" fill="#FFFFFF"/>
+  <text x="450" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">コンプライアンス負担: コスト、複雑さ、スケジュール</text>
+  <rect x="280" y="50" width="340" height="25" rx="4" fill="#FEF7FF" stroke="#6750A4" stroke-width="1"/>
+  <text x="300" y="67" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" font-weight="700">生成AIをグローバルに展開する企業向け</text>
+  <g id="eu-compliance">
+    <rect x="50" y="100" width="220" height="35" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="160" y="123" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">🇪🇺 EU対応</text>
+    <rect x="50" y="150" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="60" y="172" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">推定コスト:</text>
+    <text x="60" y="191" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">€500K – €2M+</text>
+    <text x="60" y="208" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">法的/技術的対応、監査、</text>
+    <text x="60" y="221" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">ガバナンスチーム</text>
+    <rect x="50" y="235" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="60" y="257" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">複雑さ:</text>
+    <text x="60" y="276" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">非常に高い 🔴</text>
+    <text x="60" y="293" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">規定的なルール、</text>
+    <text x="60" y="306" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">技術基準</text>
+    <rect x="50" y="320" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="60" y="342" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">スケジュール:</text>
+    <text x="60" y="361" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">6–12ヶ月</text>
+    <text x="60" y="378" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">既に実装中</text>
+    <text x="60" y="391" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">(2025年1月施行)</text>
+    <rect x="50" y="405" width="220" height="45" rx="6" fill="#FFEBEE" stroke="#D32F2F" stroke-width="1.5"/>
+    <text x="160" y="420" font-family="system-ui, sans-serif" font-size="11" fill="#D32F2F" text-anchor="middle" font-weight="700">リスク</text>
+    <text x="160" y="437" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="500">非対応: €35M罰金</text>
+  </g>
+  <g id="us-compliance">
+    <rect x="340" y="100" width="220" height="35" rx="6" fill="#EDE7F6" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="450" y="123" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">🇺🇸 US対応</text>
+    <rect x="340" y="150" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="350" y="172" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">推定コスト:</text>
+    <text x="350" y="191" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">$50K – $300K</text>
+    <text x="350" y="208" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">NIST RMF採用、</text>
+    <text x="350" y="221" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">部門別法的レビュー</text>
+    <rect x="340" y="235" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="350" y="257" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">複雑さ:</text>
+    <text x="350" y="276" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">中程度 🟡</text>
+    <text x="350" y="293" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">自主的枠組み、</text>
+    <text x="350" y="306" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">単一基準なし</text>
+    <rect x="340" y="320" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+    <text x="350" y="342" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">スケジュール:</text>
+    <text x="350" y="361" font-family="system-ui, sans-serif" font-size="13" fill="#6750A4" font-weight="700">2–4ヶ月</text>
+    <text x="350" y="378" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">期限なし、</text>
+    <text x="350" y="391" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">継続的監視</text>
+    <rect x="340" y="405" width="220" height="45" rx="6" fill="#E8F5E9" stroke="#388E3C" stroke-width="1.5"/>
+    <text x="450" y="420" font-family="system-ui, sans-serif" font-size="11" fill="#388E3C" text-anchor="middle" font-weight="700">メリット</text>
+    <text x="450" y="437" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="500">軽い手のひら、イノベーション重視</text>
+  </g>
+  <g id="china-compliance">
+    <rect x="630" y="100" width="220" height="35" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="740" y="123" font-family="system-ui, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle" font-weight="700">🇨🇳 中国対応</text>
+    <rect x="630" y="150" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="640" y="172" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">推定コスト:</text>
+    <text x="640" y="191" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" font-weight="700">€200K – €1M+</text>
+    <text x="640" y="208" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">承認プロセス、</text>
+    <text x="640" y="221" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">政府関係、対応</text>
+    <rect x="630" y="235" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="640" y="257" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">複雑さ:</text>
+    <text x="640" y="276" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" font-weight="700">非常に高い 🔴</text>
+    <text x="640" y="293" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">CAC承認が必須、</text>
+    <text x="640" y="306" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">基準は不透明</text>
+    <rect x="630" y="320" width="220" height="70" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="640" y="342" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">スケジュール:</text>
+    <text x="640" y="361" font-family="system-ui, sans-serif" font-size="13" fill="#7D5260" font-weight="700">3–12+ ヶ月</text>
+    <text x="640" y="378" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">承認は不確実、</text>
+    <text x="640" y="391" font-family="system-ui, sans-serif" font-size="10" fill="#49454F" font-weight="500">保証なし</text>
+    <rect x="630" y="405" width="220" height="45" rx="6" fill="#F7F2FA" stroke="#7D5260" stroke-width="1.5"/>
+    <text x="740" y="420" font-family="system-ui, sans-serif" font-size="11" fill="#7D5260" text-anchor="middle" font-weight="700">リスク</text>
+    <text x="740" y="437" font-family="system-ui, sans-serif" font-size="10" fill="#1C1B1F" text-anchor="middle" font-weight="500">却下可能、規則変更</text>
+  </g>
+</svg>
