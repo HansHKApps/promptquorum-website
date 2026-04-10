@@ -548,9 +548,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         installMacBrew: {
           title: 'Ollama mit Homebrew installieren',
-          codeBlock: 'brew install ollama
-ollama serve &
-ollama run llama3.2',
+          codeBlock: 'brew install ollama\n\n# Start service\nollama serve &',
           codeLanguage: 'bash',
         },
         installWindows: {
@@ -576,8 +574,7 @@ ollama run llama3.2',
         firstModel: {
           title: 'Erstes Modell herunterladen und ausführen',
           content: 'Führen Sie diesen Befehl aus, um ein Modell herunterzuladen und zu starten:',
-          codeBlock: 'ollama pull llama3.2
-ollama run llama3.2',
+          codeBlock: 'ollama pull llama3.2\nollama run llama3.2',
           codeLanguage: 'bash',
         },
         recommendedModels: {
@@ -641,9 +638,7 @@ ollama run llama3.2',
         },
         installMacBrew: {
           title: 'Installation avec Homebrew',
-          codeBlock: 'brew install ollama
-ollama serve &
-ollama run llama3.2',
+          codeBlock: 'brew install ollama\nollama serve &\nollama run llama3.2',
           codeLanguage: 'bash',
         },
         installWindows: {
@@ -669,8 +664,7 @@ ollama run llama3.2',
         firstModel: {
           title: 'Premier modele',
           content: 'Executez cette commande:',
-          codeBlock: 'ollama pull llama3.2
-ollama run llama3.2',
+          codeBlock: 'ollama pull llama3.2\nollama run llama3.2',
           codeLanguage: 'bash',
         },
         recommendedModels: {
@@ -734,9 +728,7 @@ ollama run llama3.2',
         },
         installMacBrew: {
           title: 'Homebrew でのインストール',
-          codeBlock: 'brew install ollama
-ollama serve &
-ollama run llama3.2',
+          codeBlock: 'brew install ollama\nollama serve &\nollama run llama3.2',
           codeLanguage: 'bash',
         },
         installWindows: {
@@ -762,8 +754,7 @@ ollama run llama3.2',
         firstModel: {
           title: '最初のモデル',
           content: 'このコマンドを実行します:',
-          codeBlock: 'ollama pull llama3.2
-ollama run llama3.2',
+          codeBlock: 'ollama pull llama3.2\nollama run llama3.2',
           codeLanguage: 'bash',
         },
         recommendedModels: {
@@ -827,9 +818,7 @@ ollama run llama3.2',
         },
         installMacBrew: {
           title: 'Homebrew 安装',
-          codeBlock: 'brew install ollama
-ollama serve &
-ollama run llama3.2',
+          codeBlock: 'brew install ollama\nollama serve &\nollama run llama3.2',
           codeLanguage: 'bash',
         },
         installWindows: {
@@ -855,8 +844,7 @@ ollama run llama3.2',
         firstModel: {
           title: '第一个模型',
           content: '运行此命令:',
-          codeBlock: 'ollama pull llama3.2
-ollama run llama3.2',
+          codeBlock: 'ollama pull llama3.2\nollama run llama3.2',
           codeLanguage: 'bash',
         },
         recommendedModels: {
@@ -2008,6 +1996,10 @@ ollama run llama3.2',
             { 'Scenario': 'Simultaneous apps', '8 GB RAM': 'Close browser before loading 7B', '16 GB RAM': 'Normal multitasking + 7B model' },
           ],
           columns: ['Scenario', '8 GB RAM', '16 GB RAM'],
+          image: '/images/laptop-ram-comparison-en.svg',
+          imageCaption: 'Image for ram8vs16',
+          image: '/images/laptop-best-models-en.svg',
+          imageCaption: 'Image for bestModels',
         },
         bestModels: {
           title: 'Best Local LLM Models for Laptops',
@@ -4519,7 +4511,9 @@ ollama run llama3.2',
             { 'Model': 'Qwen2.5 32B', 'MMLU': '83%', 'HumanEval': '79%', 'MATH': '79%', 'RAM (Q4_K_M)': '20 GB' },
             { 'Model': 'Qwen2.5 14B', 'MMLU': '79%', 'HumanEval': '75%', 'MATH': '70%', 'RAM (Q4_K_M)': '9 GB' },
             { 'Model': 'Llama 3.1 8B', 'MMLU': '73%', 'HumanEval': '72%', 'MATH': '51%', 'RAM (Q4_K_M)': '5.5 GB' },
-            { 'Model': 'Mistral 7B v0.3', 'MMLU': '64%', 'HumanEval': '39%', 'MATH': '28%', 'RAM (Q4_K_M)': '4.5 GB' },
+            { 'Model': 'Mistral 7B v0.3', 'MMLU': '64%', 'HumanEval': '39%', 'MATH': '28%', 'RAM (Q4_K_M)': '4.5 GB'               image: '/images/qwen-llama-mistral-benchmarks-en.svg',
+              imageCaption: 'Image for benchmarks',
+              },
             { 'Model': 'Qwen2.5 7B', 'MMLU': '74%', 'HumanEval': '72%', 'MATH': '52%', 'RAM (Q4_K_M)': '4.7 GB' },
           ],
           columns: ['Model', 'MMLU', 'HumanEval', 'MATH', 'RAM (Q4_K_M)'],
@@ -4555,7 +4549,9 @@ ollama run llama3.2',
             { 'Task': 'General Q&A (English)', 'Winner': 'Llama 3.3 / Qwen2.5 (tied)', 'Why': 'Both score 82–84% MMLU at 70B' },
             { 'Task': 'Mathematical reasoning', 'Winner': 'Qwen2.5', 'Why': '83% MATH at 72B vs 77% for Llama 3.3 70B' },
             { 'Task': 'Non-English languages', 'Winner': 'Qwen2.5', 'Why': '29 native languages; Llama and Mistral are English-primary' },
-            { 'Task': 'Creative writing (English)', 'Winner': 'Llama 3.x', 'Why': 'More natural English generation style' },
+            { 'Task': 'Creative writing (English)', 'Winner': 'Llama 3.x', 'Why': 'More natural English generation style'               image: '/images/qwen-llama-mistral-tasks-en.svg',
+              imageCaption: 'Image for byTask',
+              },
             { 'Task': 'Quality on 16 GB RAM', 'Winner': 'Mistral Small 3.1', 'Why': 'Near-70B quality at 14 GB RAM' },
             { 'Task': 'Beginner first model', 'Winner': 'Llama 3.2 3B', 'Why': 'Best documented, most community support' },
           ],
@@ -4565,7 +4561,9 @@ ollama run llama3.2',
           title: 'How Do Models Compare at the Same Scale?',
           content: [
             '**3B–4B class**: Qwen2.5 3B and Phi-4 Mini 3.8B outperform Llama 3.2 3B on coding and math. For general English use, Llama 3.2 3B is more reliable.',
-            '**7B–8B class**: Qwen2.5 7B and Llama 3.1 8B both significantly outperform Mistral 7B v0.3. Qwen2.5 7B leads on [coding](/local-llms/best-local-llms-for-coding); Llama 3.1 8B leads on English instruction-following.',
+            '**7B–8B class**: Qwen2.5 7B and Llama 3.1 8B both significantly outperform Mistral 7B v0.3. Qwen2.5 7B leads on [coding](/local-llms/best-local-llms-for-coding); Llama 3.1 8B leads on English instruction-following.',              image: '/images/qwen-llama-mistral-speed-en.svg',
+              imageCaption: 'Image for sizeBySizeComparison',
+              
             '**14B–24B class**: Qwen2.5 14B and Mistral Small 3.1 24B are the primary options. Mistral Small 3.1 is stronger overall despite requiring more RAM. Qwen2.5 14B is better for coding and multilingual at lower RAM.',
             '**70B–72B class**: Llama 3.3 70B and Qwen2.5 72B are the best locally-runnable models in 2026. Choose Qwen2.5 72B for coding and multilingual; choose Llama 3.3 70B for English-first general tasks.',
           ],
@@ -6176,7 +6174,7 @@ ollama run llama3.2',
       title: 'Small Local LLM Models: Best Sub-4B Models for Low RAM Machines in 2026',
       seoTitle: 'Best Small Local LLMs 2026: Sub-4B Models Ranked',
       intro: 'Small local LLMs (1B–4B parameters) run on machines with 4–8 GB RAM and produce 30–70 tokens/sec on CPU — fast enough for real-time chat. The best small models in 2026 are Microsoft Phi-4 Mini 3.8B (best reasoning), Google Gemma 2 2B (fastest), Qwen2.5 3B (best coding), and Meta Llama 3.2 3B (best general use).',
-      metaDescription: 'Best small local LLMs 2026: Phi-4 Mini 3.8B (68% MMLU), Gemma 2 2B (fastest), Qwen2.5 3B (coding), Llama 3.2 3B. Runs on 4–8 GB RAM.',
+      metaDescription: 'Best small local LLMs 2026: Phi-4 Mini 3.8B (68% MMLU, fastest reasoning), Gemma 2 2B, Qwen2.5 3B (coding), Llama 3.2 3B. 4–8 GB RAM.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -7999,6 +7997,8 @@ ollama run llama3.2',
             'Ollama exposes a REST API at `http://localhost:11434/v1` that mirrors OpenAI\'s API exactly.',
             'Use the OpenAI Python library: change `api_key="openai"` to `api_key="ollama"` and `base_url="http://localhost:11434/v1"`.',
             'Same approach in Node.js: OpenAI SDK, point to localhost:11434.',
+          image: '/images/openai-api-compatibility-diagram-en.svg',
+          imageCaption: 'Image for whatIsOpenAI',
             'The OpenAI-compatible API is identical across Ollama, vLLM, and LM Studio — no code changes needed to switch providers.',
             'As of April 2026, streaming (streaming responses token-by-token) and function calling both work with local models via this API.',
           ],
@@ -8008,6 +8008,8 @@ ollama run llama3.2',
           content: [
             'OpenAI-compatible means the API endpoint returns responses in the same format as OpenAI\'s API. This allows any library or tool built for OpenAI to work with local models by pointing to a different URL.',
             'Example: The OpenAI Python library sends requests like this:',
+          image: '/images/ollama-endpoint-setup-en.svg',
+          imageCaption: 'Image for ollamaEndpoint',
             '```\nPOST /chat/completions\n{\n  "model": "gpt-4o",\n  "messages": [...],\n  "temperature": 0.7\n}\n```',
             'Ollama\'s API accepts the exact same request at `localhost:11434/v1/chat/completions` and returns the response in OpenAI\'s format:',
             '```\n{\n  "choices": [{\"message\": {\"content\": \"...\"}}],\n  "usage\": {\"prompt_tokens\": 10, \"completion_tokens\": 20}\n}\n```',
@@ -8016,6 +8018,8 @@ ollama run llama3.2',
         },
         ollamaEndpoint: {
           title: 'What Is Ollama\'s API Endpoint?',
+          image: '/images/openai-compatible-python-code-en.svg',
+          imageCaption: 'Image for pythonOpenAI',
           content: 'When you run `ollama serve`, Ollama starts a REST API at `http://localhost:11434`. The OpenAI-compatible endpoints are:',
           items: [
             '**Chat completions:** `POST http://localhost:11434/v1/chat/completions` — matches `/chat/completions` from OpenAI.',
@@ -12714,6 +12718,8 @@ ollama run llama3.2',
           title: 'What GPU Budget Should You Allocate?',
           content: [
             'For a functional local LLM rig, plan for **$700–1,000 total system cost**, with **GPU = 30–40% of that budget** (~$250–400).',
+          image: '/images/budget-gpu-price-vram-en.svg',
+          imageCaption: 'Image for which-budget-gpus',
             'A $250 GPU paired with a $100 CPU creates bottlenecks. A $2,000 GPU with a $30 motherboard wastes money.',
             'As of April 2026, the performance-per-dollar peak is in the $250–350 range (RTX 3060–4070 Super used).',
           ],
