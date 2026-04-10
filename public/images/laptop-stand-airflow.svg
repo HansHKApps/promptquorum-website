@@ -1,28 +1,28 @@
 <svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="800" height="350" fill="#0f172a"/>
+  <rect width="800" height="350" fill="#FFFFFF"/>
 
   <!-- Title -->
-  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#e2e8f0" text-anchor="middle">
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
     Thermal Management with Laptop Stand
   </text>
 
   <!-- Desk surface -->
-  <line x1="0" y1="280" x2="800" y2="280" stroke="#334155" stroke-width="2"/>
+  <line x1="0" y1="280" x2="800" y2="280" stroke="#E8DEF8" stroke-width="3"/>
 
   <!-- LEFT: Without stand (comparison) -->
   <g id="without-stand">
     <!-- Laptop flat on desk -->
-    <rect x="40" y="220" width="160" height="100" rx="4" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+    <rect x="40" y="220" width="160" height="100" rx="4" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
     <!-- Screen representation -->
-    <rect x="50" y="230" width="140" height="60" rx="2" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <rect x="50" y="230" width="140" height="60" rx="2" fill="#E8DEF8" stroke="#6750A4" stroke-width="1"/>
     <!-- Heat indicator -->
-    <ellipse cx="120" cy="270" rx="50" ry="20" fill="#dc2626" opacity="0.4"/>
-    <text x="120" y="276" font-family="system-ui, sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle" font-weight="600">
+    <ellipse cx="120" cy="270" rx="50" ry="20" fill="#7D5260" opacity="0.3"/>
+    <text x="120" y="276" font-family="system-ui, sans-serif" font-size="11" fill="#7D5260" text-anchor="middle" font-weight="700">
       HEAT
     </text>
     <!-- No airflow -->
-    <text x="120" y="330" font-family="system-ui, sans-serif" font-size="10" fill="#ef4444" text-anchor="middle" font-weight="600">
+    <text x="120" y="330" font-family="system-ui, sans-serif" font-size="12" fill="#7D5260" text-anchor="middle" font-weight="700">
       Throttles at ~10 min
     </text>
   </g>
@@ -31,78 +31,78 @@
   <g id="with-stand">
     <!-- Stand structure (two angled supports) -->
     <!-- Left support -->
-    <line x1="450" y1="240" x2="530" y2="280" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+    <line x1="450" y1="240" x2="530" y2="280" stroke="#6750A4" stroke-width="7" stroke-linecap="round"/>
     <!-- Right support -->
-    <line x1="640" y1="240" x2="560" y2="280" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+    <line x1="640" y1="240" x2="560" y2="280" stroke="#6750A4" stroke-width="7" stroke-linecap="round"/>
     <!-- Top bar -->
-    <line x1="450" y1="240" x2="640" y2="240" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+    <line x1="450" y1="240" x2="640" y2="240" stroke="#6750A4" stroke-width="4" stroke-linecap="round"/>
 
     <!-- Laptop tilted on stand -->
     <g transform="translate(545, 200) rotate(-15)">
-      <rect x="-75" y="-50" width="160" height="100" rx="4" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+      <rect x="-75" y="-50" width="160" height="100" rx="4" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
       <!-- Screen -->
-      <rect x="-65" y="-40" width="140" height="60" rx="2" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <rect x="-65" y="-40" width="140" height="60" rx="2" fill="#E8DEF8" stroke="#6750A4" stroke-width="1"/>
     </g>
 
     <!-- Airflow arrows - cool air entering from underneath -->
     <defs>
       <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-        <polygon points="0 0, 10 3, 0 6" fill="#06b6d4"/>
+        <polygon points="0 0, 10 3, 0 6" fill="#6750A4"/>
       </marker>
-      <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-        <polygon points="0 0, 10 3, 0 6" fill="#f59e0b"/>
+      <marker id="arrowhead-warm" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+        <polygon points="0 0, 10 3, 0 6" fill="#7D5260"/>
       </marker>
     </defs>
 
-    <!-- Cool air in (blue) -->
-    <path d="M 480 290 Q 490 275 510 260" stroke="#06b6d4" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)" stroke-linecap="round"/>
-    <path d="M 520 290 Q 530 275 550 260" stroke="#06b6d4" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)" stroke-linecap="round"/>
-    <path d="M 560 290 Q 570 275 590 260" stroke="#06b6d4" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)" stroke-linecap="round"/>
+    <!-- Cool air in (violet) -->
+    <path d="M 480 290 Q 490 275 510 260" stroke="#6750A4" stroke-width="3" fill="none" marker-end="url(#arrowhead)" stroke-linecap="round"/>
+    <path d="M 520 290 Q 530 275 550 260" stroke="#6750A4" stroke-width="3" fill="none" marker-end="url(#arrowhead)" stroke-linecap="round"/>
+    <path d="M 560 290 Q 570 275 590 260" stroke="#6750A4" stroke-width="3" fill="none" marker-end="url(#arrowhead)" stroke-linecap="round"/>
 
-    <!-- Hot air out (orange, from rear) -->
-    <path d="M 560 180 Q 570 160 590 140" stroke="#f59e0b" stroke-width="2.5" fill="none" marker-end="url(#arrowhead-red)" stroke-linecap="round"/>
-    <path d="M 580 185 Q 595 165 620 140" stroke="#f59e0b" stroke-width="2.5" fill="none" marker-end="url(#arrowhead-red)" stroke-linecap="round"/>
+    <!-- Hot air out (rose, from rear) -->
+    <path d="M 560 180 Q 570 160 590 140" stroke="#7D5260" stroke-width="3" fill="none" marker-end="url(#arrowhead-warm)" stroke-linecap="round"/>
+    <path d="M 580 185 Q 595 165 620 140" stroke="#7D5260" stroke-width="3" fill="none" marker-end="url(#arrowhead-warm)" stroke-linecap="round"/>
 
     <!-- Elevation measurement -->
-    <line x1="430" y1="240" x2="430" y2="280" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2"/>
-    <line x1="420" y1="240" x2="440" y2="240" stroke="#cbd5e1" stroke-width="1"/>
-    <line x1="420" y1="280" x2="440" y2="280" stroke="#cbd5e1" stroke-width="1"/>
-    <text x="410" y="262" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="end" font-weight="500">
+    <line x1="430" y1="240" x2="430" y2="280" stroke="#49454F" stroke-width="1.5" stroke-dasharray="2,2"/>
+    <line x1="420" y1="240" x2="440" y2="240" stroke="#49454F" stroke-width="1.5"/>
+    <line x1="420" y1="280" x2="440" y2="280" stroke="#49454F" stroke-width="1.5"/>
+    <text x="400" y="262" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" text-anchor="end" font-weight="600">
       2–3 cm
     </text>
 
     <!-- Heat gradient (reduced) -->
-    <ellipse cx="550" cy="245" rx="40" ry="15" fill="#f59e0b" opacity="0.2"/>
-    <text x="550" y="250" font-family="system-ui, sans-serif" font-size="9" fill="#fcd34d" text-anchor="middle" font-weight="600">
+    <ellipse cx="550" cy="245" rx="40" ry="15" fill="#7D5260" opacity="0.2"/>
+    <text x="550" y="251" font-family="system-ui, sans-serif" font-size="11" fill="#7D5260" text-anchor="middle" font-weight="700">
       Cooler
     </text>
 
     <!-- Result -->
-    <text x="545" y="330" font-family="system-ui, sans-serif" font-size="10" fill="#10b981" text-anchor="middle" font-weight="600">
+    <text x="545" y="330" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700">
       Throttles at ~20+ min ✓
     </text>
   </g>
 
   <!-- Center divider -->
-  <line x1="400" y1="50" x2="400" y2="340" stroke="#334155" stroke-width="1" opacity="0.5"/>
+  <line x1="400" y1="50" x2="400" y2="340" stroke="#E8DEF8" stroke-width="2" opacity="0.7"/>
 
   <!-- Side labels -->
-  <text x="120" y="365" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" font-weight="600">
+  <text x="120" y="365" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle" font-weight="700">
     Without Stand
   </text>
-  <text x="545" y="365" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" font-weight="600">
+  <text x="545" y="365" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle" font-weight="700">
     With Stand
   </text>
 
   <!-- Legend for airflow -->
   <g id="legend">
-    <line x1="50" y1="55" x2="80" y2="55" stroke="#06b6d4" stroke-width="2.5"/>
-    <text x="85" y="60" font-family="system-ui, sans-serif" font-size="9" fill="#06b6d4" font-weight="500">
+    <line x1="50" y1="60" x2="85" y2="60" stroke="#6750A4" stroke-width="3"/>
+    <text x="95" y="66" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
       Cool air in
     </text>
 
-    <line x1="220" y1="55" x2="250" y2="55" stroke="#f59e0b" stroke-width="2.5"/>
-    <text x="255" y="60" font-family="system-ui, sans-serif" font-size="9" fill="#f59e0b" font-weight="500">
+    <line x1="240" y1="60" x2="275" y2="60" stroke="#7D5260" stroke-width="3"/>
+    <text x="285" y="66" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="600">
       Hot air out
     </text>
   </g>
