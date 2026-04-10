@@ -199,12 +199,83 @@ This caption directly reinforces the article's claim about why Apple Silicon is 
 - Minimize precision in coordinates (2 decimal places)
 - Remove unused elements and attributes
 
-## Accessibility
+## Accessibility & SEO/GEO/AEO Optimization
 
-- Always include descriptive `alt` text in `content.ts` as `imageCaption`
-- Use sufficient color contrast (WCAG AA minimum)
-- Don't rely on color alone to convey information (use labels, patterns)
+### Alt Text & Captions (Critical for SEO/GEO/AEO)
+
+All images MUST have descriptive captions in `content.ts` as `imageCaption`. This serves multiple purposes:
+
+#### Purpose:
+- **Accessibility (WCAG)** — Screen readers and visually impaired users
+- **SEO** — Google Images, search results, indexing
+- **GEO** — Geographic optimization for AI crawlers (Perplexity, ChatGPT Browse)
+- **AEO** — AI Engine Optimization for LLM crawlers and embeddings
+
+#### Alt Text Rules:
+1. **Descriptive, not generic** — ❌ "image" or "diagram" | ✅ "Apple Silicon unified memory diagram showing M3 Pro with 18GB shared access to GPU"
+2. **Include key metrics** — If the image shows numbers, include them: "50–80 tokens/sec", "18 GB memory", "10 minute improvement"
+3. **Answer the "why"** — Explain what insight the reader gains: "why Apple Silicon is faster" not just "Apple chip"
+4. **Technical accuracy** — Use correct terminology that matches the article
+5. **Concise but complete** — One sentence (80–120 characters recommended)
+
+#### Example Alt Texts (from current images):
+
+✅ **Good:**
+> "Apple Silicon unified memory diagram showing M3 Pro GPU accessing full 18GB pool versus Windows RTX 4060 limited to 8GB VRAM"
+
+✅ **Good:**
+> "Laptop stand thermal management showing 2–3cm elevation delaying throttling from 10 minutes to 20+ minutes with airflow visualization"
+
+✅ **Good:**
+> "Terminal window running Ollama with Mistral 7B model at 22.4 tokens/sec on CPU using Q4_K_M quantization"
+
+❌ **Bad:**
+> "Picture of Apple and Windows comparison"
+
+❌ **Bad:**
+> "Laptop diagram"
+
+#### Implementation in content.ts:
+```typescript
+canYouRun: {
+  title: '...',
+  content: [...],
+  image: '/images/ollama-terminal.svg',
+  // This caption serves as both visible caption AND alt text for SEO/AEO
+  imageCaption: 'Ollama running Mistral 7B on a MacBook — 22 tokens/sec on CPU at Q4_K_M quantization.',
+},
+```
+
+### Color Contrast & Accessibility
+
+- Use sufficient color contrast (WCAG AA minimum: 4.5:1 for text)
+- Don't rely on color alone to convey information (use labels, patterns, text)
 - Include text labels for all key elements
+- Test contrast with tools: [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+
+### SEO/GEO Keywords in Alt Text
+
+When writing `imageCaption` (which serves as alt text):
+- Include **primary keyword** from article title (e.g., "local LLM", "thermal throttling")
+- Include **secondary keywords** relevant to the section (e.g., "Apple Silicon", "M3 Pro", "tokens/sec")
+- Use **natural language**, not keyword stuffing
+- Example: "Apple Silicon M3 Pro unified memory architecture showing GPU access to full 18GB for running local LLM models"
+
+### Structured Data for Images
+
+The website uses JSON-LD schema markup. For proper AEO:
+- Images are referenced in article `schema` metadata
+- Alt text is picked up by AI crawlers (Perplexity, ChatGPT, Claude, etc.)
+- Ensure `imageCaption` is semantic and accurate for AI understanding
+
+### Multi-Language & AEO Considerations
+
+**Current approach:** Images are language-agnostic; captions are English only.
+
+**For future translation:**
+- If articles are translated to de/fr/ja/zh, consider translating image captions too
+- SVGs themselves (visual, no text) work across all languages
+- Alt text translation improves GEO/AEO for non-English markets
 
 ## Data Accuracy & Sourcing
 
