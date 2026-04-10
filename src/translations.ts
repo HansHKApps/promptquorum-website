@@ -77,8 +77,8 @@ export const translations = {
     homeMetaDescription: "Compare responses from 25+ AI models with one prompt. Detect hallucinations, get consensus insights, and choose the best answer. Free with your API key.",
     featuresMetaTitle: "Features: AI Dispatch, Frameworks & Consensus | PromptQuorum",
     featuresMetaDescription: "PromptQuorum dispatches prompts to 25+ AI providers using 9 frameworks (CO-STAR, CRAFT, RISEN) and runs consensus analysis. Free with your API key.",
-    howItWorksMetaTitle: "How PromptQuorum Works: 4-Stage AI Pipeline",
-    howItWorksMetaDescription: "PromptQuorum's four-stage pipeline optimizes your prompt, dispatches to 25+ AI models simultaneously, then runs consensus scoring to surface the best answer.",
+    howItWorksMetaTitle: "How PromptQuorum Works: Optimize, Dispatch & Score 2026",
+    howItWorksMetaDescription: "PromptQuorum's 4-stage pipeline optimizes your prompt, dispatches to 25+ AI models simultaneously, then runs consensus scoring for the best answer.",
     faqMetaTitle: "PromptQuorum FAQ: Pricing, Privacy & AI Providers",
     faqMetaDescription: "26 answers about PromptQuorum: multi-model dispatch, consensus scoring, 9 prompt frameworks, local LLM support, BYOM privacy model, and getting started.",
 
@@ -185,10 +185,10 @@ export const translations = {
     homeMetaDescription: "Senden Sie einen Prompt an 25+ KI-Modelle. Vergleichen Sie Antworten, erkennen Sie Halluzinationen und erhalten Sie Konsens. Kostenlos mit Ihrem API-Key.",
     featuresMetaTitle: "Funktionen: KI-Versand, Frameworks & Konsens | PromptQuorum",
     featuresMetaDescription: "PromptQuorum sendet Prompts an 25+ KI-Anbieter mit 9 Frameworks (CO-STAR, CRAFT, RISEN) und führt Konsensanalyse durch. Kostenlos mit eigenem API-Key.",
-    howItWorksMetaTitle: "So funktioniert PromptQuorum: 4-Stufen-Pipeline",
-    howItWorksMetaDescription: "PromptQuorums vierstufige Pipeline optimiert Ihren Prompt, sendet ihn an 25+ KI-Modelle gleichzeitig und führt Konsensscoring durch, um die beste Antwort zu finden.",
+    howItWorksMetaTitle: "Wie PromptQuorum funktioniert: 4-Stufen-Pipeline 2026",
+    howItWorksMetaDescription: "PromptQuorums 4-Stufen-Pipeline optimiert Prompts, sendet an 25+ KI-Modelle und führt Konsensscoring durch, um die beste Antwort zu finden.",
     faqMetaTitle: "PromptQuorum FAQ: Preise, Datenschutz & KI-Anbieter",
-    faqMetaDescription: "26 Antworten zu PromptQuorum: Multi-Model-Versand, Konsensscoring, 9 Prompt-Frameworks, lokaler LLM-Support, BYOM Datenschutz-Modell und erste Schritte.",
+    faqMetaDescription: "26 Antworten zu PromptQuorum: Multi-Model-Versand, Konsensscoring, 9 Prompt-Frameworks, lokaler LLM-Support, BYOM Datenschutz und erste Schritte.",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt-Engineering-Hub: 80 Leitfäden | PromptQuorum",

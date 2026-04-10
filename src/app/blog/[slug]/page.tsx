@@ -220,12 +220,50 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
     }),
   }
 
+  // JSON-LD: ImageObject + ItemList for FrameworkWheel (if heroComponent is FrameworkWheel)
+  let frameworkWheelSchemas: Record<string, unknown>[] = []
+  if (post.heroComponent === 'FrameworkWheel') {
+    const imageSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'ImageObject',
+      name: '8 Prompt Engineering Frameworks Wheel',
+      description: 'A wheel diagram showing 8 prompt engineering frameworks (CRAFT, CO-STAR, APE, RISEN, TRACE, RTF, SPECS, Single-Prompt) arranged around a central Prompt node.',
+      url: `https://www.promptquorum.com/blog/${slug}#framework-wheel`,
+    }
+
+    const frameworksList = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: '8 Prompt Engineering Frameworks',
+      description: 'A comprehensive list of the main prompt engineering frameworks and their uses.',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'CRAFT', url: 'https://www.promptquorum.com/frameworks/craft', description: 'Context, Role, Action, Format, Target. Best for marketing and creative content.' },
+        { '@type': 'ListItem', position: 2, name: 'CO-STAR', url: 'https://www.promptquorum.com/frameworks/co-star', description: 'Context, Objective, Style, Tone, Audience, Response. Comprehensive structured approach.' },
+        { '@type': 'ListItem', position: 3, name: 'APE', url: 'https://www.promptquorum.com/frameworks/ape', description: 'Action, Parameter, Example. Concise framework for specific tasks.' },
+        { '@type': 'ListItem', position: 4, name: 'RISEN', url: 'https://www.promptquorum.com/frameworks/risen', description: 'Role, Intention, Scenario, Expectation, Notation. Best for role-playing and personas.' },
+        { '@type': 'ListItem', position: 5, name: 'TRACE', url: 'https://www.promptquorum.com/frameworks/trace', description: 'Task, Request, Action, Context, Example. Step-by-step instruction framework.' },
+        { '@type': 'ListItem', position: 6, name: 'RTF', url: 'https://www.promptquorum.com/frameworks/rtf', description: 'Role, Task, Format. Lightweight framework for rapid prompting.' },
+        { '@type': 'ListItem', position: 7, name: 'SPECS', url: 'https://www.promptquorum.com/frameworks/specs', description: 'Setting, Problem, Expectation, Constraints, Success Criteria. Goal-oriented prompting.' },
+        { '@type': 'ListItem', position: 8, name: 'Single-Prompt', url: 'https://www.promptquorum.com/frameworks/single-prompt-line', description: 'One-shot, unstructured prompting for simple requests.' },
+      ],
+    }
+
+    frameworkWheelSchemas = [imageSchema, frameworksList]
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      {frameworkWheelSchemas.map((schema, i) => (
+        <script
+          key={`framework-schema-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}

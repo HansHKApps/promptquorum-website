@@ -6,6 +6,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import { llmContent, type LLMSection } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 
 interface Props {
   slug: string
@@ -366,6 +367,11 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
           <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl article-intro">
             {renderInlineLinks(article.intro, lang)}
           </p>
+        )}
+
+        {/* Hero Component or Image */}
+        {(article as any).heroComponent === 'LLMImageSelector' && (
+          <LLMImageSelector />
         )}
 
         {/* Table of Contents */}
