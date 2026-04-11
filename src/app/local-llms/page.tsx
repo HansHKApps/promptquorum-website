@@ -63,12 +63,13 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
-        { '@type': 'ListItem', position: 2, name: 'Local LLMs', item: 'https://www.promptquorum.com/local-llms' },
+        { '@type': 'ListItem', position: 2, name: 'Local LLMs', item: canonicalUrl },
       ],
     },
     {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+      'inLanguage': selectedLang,
       mainEntity: [
         {
           '@type': 'Question',
@@ -126,6 +127,7 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
       '@context': 'https://schema.org',
       '@type': 'SiteNavigationElement',
       'name': 'Local LLMs Hub Navigation',
+      'inLanguage': selectedLang,
       'hasPart': [
         { '@type': 'SiteNavigationElement', name: 'Getting Started', url: 'https://www.promptquorum.com/local-llms#getting-started' },
         { '@type': 'SiteNavigationElement', name: 'Models by Use Case', url: 'https://www.promptquorum.com/local-llms#best-models' },
@@ -142,6 +144,7 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
     {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
+      'inLanguage': selectedLang,
       name: 'Best Local LLM Models 2026',
       numberOfItems: 5,
       itemListElement: [
@@ -155,6 +158,8 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
     {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
+      'inLanguage': selectedLang,
+      'totalTime': 'PT15M',
       name: 'How to Install and Run a Local LLM',
       step: [
         { '@type': 'HowToStep', name: 'Check hardware requirements', text: 'Verify you have sufficient VRAM: 8GB for 7B models, 16GB for 13B, 48GB+ for 70B models.' },
