@@ -10895,7 +10895,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'FAQ',
           faqs: [
             {
@@ -11046,7 +11045,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          id: 'faq',
           id: 'faq',
           title: '多语言本地LLM常见问题',
           faqs: [
@@ -11402,7 +11400,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'Common Questions About Open Source Models on Ollama',
           faqs: [
             {
@@ -11676,7 +11673,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'Common Questions About Local LLM Model Updates in 2026',
           faqs: [
             {
@@ -11820,7 +11816,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          id: 'faq',
           id: 'faq',
           title: 'What Are Common Questions About Local LLMs vs Cloud APIs?',
           faqs: [
@@ -11983,7 +11978,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          id: 'faq',
           id: 'faq',
           title: 'Common Questions: Ollama vs LM Studio',
           faqs: [
@@ -12170,7 +12164,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          id: 'faq',
           id: 'faq',
           title: 'Common Questions About Local LLM Frontends',
           faqs: [
@@ -12370,7 +12363,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'Common Questions About Inference Engines',
           faqs: [
             {
@@ -12525,7 +12517,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'Common Questions About Local LLM APIs',
           faqs: [
             {
@@ -12667,7 +12658,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3–5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-3.5 Mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
         relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) — 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) — Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) — Codierungs-Modelle bei 7B+ wenn Qwen2.5 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) — OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
         faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja — Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15–30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android — mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja — Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2–3× schneller auf CPU. Gemma 2 2B generiert 40–60 tok/sek vs 10–20 tok/sek für Mistral 7B. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen2.5 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen2.5 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen2.5 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert — auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B — aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4–6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen2.5 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
-          id: 'faq',
         sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report — microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card — huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
       },
     },
@@ -12896,7 +12886,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'Common Questions About LM Studio Advanced Features',
           faqs: [
             {
@@ -12963,7 +12952,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3–5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-3.5 Mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
         relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) — 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) — Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) — Codierungs-Modelle bei 7B+ wenn Qwen2.5 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) — OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
         faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja — Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15–30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android — mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja — Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2–3× schneller auf CPU. Gemma 2 2B generiert 40–60 tok/sek vs 10–20 tok/sek für Mistral 7B. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen2.5 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen2.5 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen2.5 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert — auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B — aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4–6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen2.5 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
-          id: 'faq',
         sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report — microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card — huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
       },
     },
@@ -13140,7 +13128,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'Common Questions About Ollama Commands',
           faqs: [
             {
@@ -13296,7 +13283,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'Common Questions About Local RAG',
           faqs: [
             {
@@ -13447,7 +13433,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'Common Questions About Desktop vs Web UI',
           faqs: [
             {
@@ -13580,7 +13565,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'Common Questions About Local Code Completions',
           faqs: [
             {
@@ -13710,7 +13694,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          id: 'faq',
           id: 'faq',
           title: 'Common Questions About Headless Deployments',
           faqs: [
@@ -13894,7 +13877,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          id: 'faq',
           id: 'faq',
           title: 'Common Questions About Local LLM Hardware',
           faqs: [
@@ -15229,7 +15211,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'Common Questions About Local RAG',
           faqs: [
             {
@@ -15384,7 +15365,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          id: 'faq',
           id: 'faq',
           title: 'Common Questions About LoRA Fine-Tuning',
           faqs: [
@@ -15549,7 +15529,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          id: 'faq',
           id: 'faq',
           title: 'Common Questions About Local Agents',
           faqs: [
@@ -16496,7 +16475,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'What Are Common Questions From Enterprise Leaders?',
           faqs: [
             {
@@ -16668,7 +16646,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'Common Questions About Air-Gapped Systems',
           faqs: [
             {
@@ -16825,7 +16802,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          id: 'faq',
           id: 'faq',
           title: 'What Are Common Questions About Enterprise Compliance?',
           faqs: [
@@ -16986,7 +16962,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         faqSection: {
           id: 'faq',
-          id: 'faq',
           title: 'What Are Common Questions About Scaling Local LLMs?',
           faqs: [
             {
@@ -17146,7 +17121,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          id: 'faq',
           id: 'faq',
           title: 'What Are Common Questions About Corporate RAG?',
           faqs: [
@@ -19940,7 +19914,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3–5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-3.5 Mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
         relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) — 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) — Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) — Codierungs-Modelle bei 7B+ wenn Qwen2.5 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) — OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
         faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja — Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15–30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android — mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja — Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2–3× schneller auf CPU. Gemma 2 2B generiert 40–60 tok/sek vs 10–20 tok/sek für Mistral 7B. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen2.5 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen2.5 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen2.5 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert — auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B — aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4–6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen2.5 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
-          id: 'faq',
         sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report — microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card — huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
       },
     },
@@ -20193,7 +20166,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3–5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-3.5 Mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
         relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) — 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) — Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) — Codierungs-Modelle bei 7B+ wenn Qwen2.5 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) — OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
         faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja — Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15–30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android — mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja — Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2–3× schneller auf CPU. Gemma 2 2B generiert 40–60 tok/sek vs 10–20 tok/sek für Mistral 7B. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen2.5 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen2.5 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen2.5 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert — auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B — aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4–6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen2.5 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
-          id: 'faq',
         sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report — microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card — huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
       },
     },
