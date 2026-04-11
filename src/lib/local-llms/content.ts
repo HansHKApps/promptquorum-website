@@ -648,7 +648,11 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         { label: 'Step 4: Run and Chat', anchor: '#step-4-run-and-chat' },
         { label: 'What to Expect: Speed and Quality', anchor: '#what-to-expect' },
         { label: 'Beyond the Terminal', anchor: '#beyond-the-terminal' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Regional Context', anchor: '#regional-context' },
+        { label: 'Common Questions', anchor: '#faq' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
       ],
       sections: {
         tldr: {
@@ -844,6 +848,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         'name': 'How to Run Your First Local LLM in 10 Minutes',
+        'inLanguage': 'en',
+        'totalTime': 'PT10M',
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Install Ollama', 'text': 'Download and install Ollama from ollama.ai. Verify installation with `ollama --version`.' },
           { '@type': 'HowToStep', 'position': 2, 'name': 'Choose Your First Model', 'text': 'Select a beginner model based on your hardware: Llama 3.2 3B (4GB RAM), Phi 2.5 (8GB), or Mistral 7B (16GB).' },
@@ -855,13 +861,14 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
             'name': 'The model response is very slow — is this normal?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes, unless you have a GPU. On CPU: expect 2–10 tokens/sec depending on your processor. On GPU (NVIDIA with CUDA): expect 20–100 tokens/sec. Performance improves with model quantization (Q4_K_M format) and hardware upgrades.'
+              'text': 'On CPU-only hardware, 8–20 tokens/sec is normal for a 7B model. Each token is roughly 0.75 words. At 10 tokens/sec, a 100-word response takes about 13 seconds. To speed up inference, use a smaller model (3B instead of 8B), enable GPU offloading if you have a compatible GPU, or use quantization level Q4_K_M which is the fastest common setting.'
             }
           },
           {
@@ -869,7 +876,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'name': 'Can I run two models at the same time?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes, but both will share your RAM/VRAM. Running two 7B models requires ~30GB RAM total. Ollama loads one at a time by default; you can load another in a separate terminal window, but performance will degrade.'
+              'text': 'Ollama can keep multiple models loaded simultaneously if you have enough RAM. By default, Ollama unloads a model after 5 minutes of inactivity. You can change this with the OLLAMA_KEEP_ALIVE environment variable. Running two 7B models simultaneously requires ~16 GB of RAM.'
             }
           },
           {
@@ -877,9 +884,78 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'name': 'How do I stop Ollama from running in the background?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ollama runs as a service by default. Stop it with `sudo systemctl stop ollama` (Linux), kill the Ollama process (macOS), or use Task Manager (Windows). Restart with `ollama serve` in the terminal.'
+              'text': 'On macOS: click the llama icon in the menu bar and select Quit. On Linux: run `systemctl stop ollama`. On Windows: right-click the system tray icon and select Quit. To prevent Ollama from starting on login, remove it from your startup items.'
             }
           },
+          {
+            '@type': 'Question',
+            'name': 'What is the easiest way to run a local LLM for the first time?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Install Ollama (ollama.com), run `ollama pull llama3.2:3b`, then run `ollama run llama3.2:3b`. That is all. Three commands, 2–5 minutes, and you have a working AI model on your machine with no internet needed after the initial download.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I know if my local LLM is working correctly?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Run `ollama ps` in the terminal. If the model is running, it will show in the list with its name, size, and memory usage. Send it a simple prompt like "What is 2+2?" — if it responds with "4", the model is working correctly.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does my computer need a GPU to run a local LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Local LLMs run on CPU. A GPU makes inference 5–10× faster, but CPU-only is fine for learning and for many real use cases. Modern laptops with Apple M1/M2, AMD Ryzen, or Intel 12th gen CPUs can run 3B–7B models at reasonable speeds (10–30 tokens/sec).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How much disk space does a local LLM take?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '`llama3.2:1b` is 1.3 GB, `llama3.2:3b` is 2 GB, `llama3.1:8b` is 4.7 GB. These are the compressed sizes as stored by Ollama. After loading into RAM for inference, the sizes differ (see [How Much VRAM for Local LLM](/local-llms/how-much-vram-local-llm) for details).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use my local LLM without an internet connection?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, completely. Download the model once with Ollama (requires internet), then run locally forever with zero internet. Perfect for private networks, airplanes, or completely offline environments.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How is a local LLM different from ChatGPT?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT runs on Anthropic\'s servers. Local LLMs run on your machine. Local = zero data leave your device, full privacy, no ongoing API costs. ChatGPT = better quality on complex tasks, requires internet and a paid subscription. Both have trade-offs.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the best first model to try with Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '`ollama pull llama3.2:3b` — it is 2 GB, runs on any modern laptop, produces competent answers, and is the starting point recommended by Ollama. After trying it, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) for alternatives based on your hardware.'
+            }
+          },
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'en',
+        'name': 'Best First Local LLM Models by RAM',
+        'numberOfItems': 4,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB RAM. 1.3 GB download. Smallest usable Llama model.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'llama3.2:3b', 'description': '8 GB RAM. 2 GB download. Best quality-to-size for beginners.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'llama3.1:8b', 'description': '8–16 GB RAM. 4.7 GB download. Strong general-purpose.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b or qwen2.5:7b', 'description': '16+ GB RAM. 4–5 GB download. Competitive quality.' },
         ]
       },
     },
