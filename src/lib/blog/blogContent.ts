@@ -2691,9 +2691,10 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       category: 'AI Tools & Features',
       title: 'Quorum: The AI Model Comparison Tool That Detects Hallucinations and Finds Consensus',
       intro: 'As of April 2026: Stop trusting a single AI model. Learn why comparing multiple models side-by-side reveals hidden biases, detects hallucinations, and gives you better answers.',
+      seoTitle: 'Detect AI Hallucinations: Multi-Model Consensus Guide',
       publishDate: 'Published March 14, 2026',
       readTime: '11 min read',
-      metaDescription: 'PromptQuorum: Dispatch prompts to GPT-5.x, Claude 4.6, Gemini 3 Pro, Llama 4 in parallel. Compare results. Free beta — April 2026.',
+      metaDescription: 'Stop trusting single AI models. Compare 25+ models side-by-side to detect hallucinations, find consensus, and make confident decisions. Free April 2026.',
       educationalLevel: 'Beginner',
       faqSchema: {
         '@context': 'https://schema.org',
@@ -3182,8 +3183,11 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       category: 'AI-Tools & Features',
       title: 'Quorum: Das KI-Modell-Vergleichstool, das Halluzinationen erkennt und Konsens findet',
       intro: 'Vertrauen Sie nicht mehr nur einem KI-Modell. Erfahren Sie, warum das Vergleichen mehrerer Modelle nebeneinander versteckte Vorurteile offenbart, Halluzinationen erkennt und bessere Antworten liefert.',
+      seoTitle: 'KI-Halluzinationen erkennen: Multi-Modell Konsens 2026',
       publishDate: 'Veröffentlicht 14. März 2026',
       readTime: '11 min Lesezeit',
+      metaDescription: 'Vergleichen Sie 25+ KI-Modelle nebeneinander. Erkennen Sie Halluzinationen, finden Sie Konsens und treffen Sie sichere Entscheidungen. Kostenlos im Beta.',
+      educationalLevel: 'Beginner',
       sections: {
         problem: {
           title: 'Das Problem mit einem einzelnen Modell',
@@ -3472,8 +3476,11 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       category: 'Outils et fonctionnalités IA',
       title: 'Quorum : L\'outil de comparaison de modèles IA qui détecte les hallucinations et trouve un consensus',
       intro: 'Arrêtez de faire confiance à un seul modèle IA. Découvrez pourquoi comparer plusieurs modèles côte à côte révèle les biais cachés, détecte les hallucinations et vous donne de meilleures réponses.',
+      seoTitle: 'Détecter les hallucinations IA : Guide du consensus',
       publishDate: 'Publié le 14 mars 2026',
       readTime: '11 min de lecture',
+      metaDescription: 'Comparez 25+ modèles IA côte à côte pour déterminer les hallucinations, trouver un consensus et prendre des décisions confiantes. Bêta gratuit 2026.',
+      educationalLevel: 'Beginner',
       sections: {
         problem: {
           title: 'Le problème du modèle unique',
@@ -3762,8 +3769,11 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       category: 'AIツール・機能',
       title: 'Quorum：幻覚を検出してコンセンサスを見つけるAIモデル比較ツール',
       intro: '単一のAIモデルへの信頼をやめてください。複数のモデルを並べて比較することで、隠された偏見を明らかにし、幻覚を検出し、より良い答えを得ることができる理由を学びます。',
+      seoTitle: 'AI幻覚検出ガイド：マルチモデルコンセンサス',
       publishDate: '2026年3月14日公開',
       readTime: '11分で読む',
+      metaDescription: '25以上のAIモデルを並べて比較してください。幻覚を検出し、コンセンサスを見つけ、自信を持って判断できます。2026年無料ベータ。詳細ガイド付き。',
+      educationalLevel: 'Beginner',
       sections: {
         problem: {
           title: '単一モデルの問題',
@@ -4052,8 +4062,11 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       category: 'AI工具和功能',
       title: 'Quorum：检测幻觉并找到共识的AI模型比较工具',
       intro: '停止信任单个AI模型。了解为什么并排比较多个模型会揭示隐藏的偏见、检测幻觉并为您提供更好的答案。',
+      seoTitle: 'AI幻觉检测完整指南：多模型共识算法2026',
       publishDate: '发布于2026年3月14日',
       readTime: '11分钟阅读',
+      metaDescription: '并排比较25+个AI模型。检测幻觉、找到共识、做出有信心的决定。4月2026免费测试。包含真实案例、FAQ、导出选项。',
+      educationalLevel: 'Beginner',
       sections: {
         problem: {
           title: '单一模型的问题',
