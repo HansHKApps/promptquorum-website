@@ -407,8 +407,8 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: よくある26個の質問に完全回答 - プロンプト最適化、マルチモデルコンセンサス、9つのフレームワーク、Ollama・LM Studioなどローカルモデル対応、BYOM型プライバシー、API連携、無料試用、日本語ドキュメント、カスタマーサポート。",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "プロンプトエンジニアリング 2026: 80ガイド | PromptQuorum",
-    promptEngineeringHubDescription: "プロンプトエンジニアリングの技法、フレームワーク(CO-STAR、CRAFT、RISEN)、ツール、評価、ワークフローに関する80の研究ベース記事。",
+    promptEngineeringHubTitle: "プロンプトエンジニアリング 2026：CO-STAR/CRAFT対応80ガイド | PromptQuorum",
+    promptEngineeringHubDescription: "GPT-4oとClaude 4.6 Sonnet対応、80本の研究ベース記事。CO-STAR、CRAFT、RISEN、TRACE等フレームワーク解説に加え、温度・Top-P設定、チェーンオブソート、few-shot学習、プロンプト評価まで幅広くカバーします。開発者・AIエンジニア向け。",
     localLlmsHubTitle: "Local LLMs 2026：Ollama & LM StudioでAI運用",
     localLlmsHubDescription: "2026年の完全ガイド。OllamaとLM Studioの比較、ハードウェア要件、量子化技法を解説。PromptQuorumで自分のローカルモデルをすぐにテスト・比較できます。",
     compareMetaTitle: "PromptQuorum vs 競合他社: マルチモデル機能比較 2026 年",
@@ -515,8 +515,8 @@ export const translations = {
     faqMetaDescription: "PromptQuorum常见问题：涵盖26个关键问答 - 包括提示词优化、多模型共识评分、9个提示框架、Ollama本地模型部署、LM Studio支持、BYOM隐私设计、API接口集成、免费试用计划、完整中文文档、多语言用户界面、专业技术支持、企业解决方案、价格对比、安全保障、用户案例。",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "提示工程中心 2026: 80个指南 | PromptQuorum",
-    promptEngineeringHubDescription: "关于提示工程技术、框架（CO-STAR、CRAFT、RISEN）、工具、评估和工作流的80篇研究文章，适合开发者和AI工程师学习。",
+    promptEngineeringHubTitle: "提示工程完整指南 2026：CO-STAR、CRAFT等80篇研究文章 | PromptQuorum",
+    promptEngineeringHubDescription: "80篇研究级别的提示工程文章，包括GPT-4o和Claude 4.6 Sonnet实测验证的CO-STAR、CRAFT、RISEN、TRACE等完整框架详解，温度与Top-P参数精细调优、思维链提示技术、few-shot学习方法以及提示词质量评估实践方案。适合开发者和AI工程师。",
     localLlmsHubTitle: "本地LLMs 2026：Ollama与LM Studio私有部署",
     localLlmsHubDescription: "2026完整指南：本地LLM部署、Ollama vs LM Studio对比、显存需求、量化技巧以及用PromptQuorum快速测试和对标你的模型。",
     compareMetaTitle: "PromptQuorum vs 竞争对手: 功能对比 (2026)",

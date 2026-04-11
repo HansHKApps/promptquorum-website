@@ -41,20 +41,22 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
   const langSuffix = selectedLang === 'en' ? '' : `?lang=${selectedLang}`
+  const t = translations[selectedLang as keyof typeof translations]
 
   const jsonLdSchemas = [
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      'name': 'Prompt Engineering Guide',
+      'name': t.promptEngineeringHubTitle,
       'url': `https://www.promptquorum.com/prompt-engineering${langSuffix}`,
       'inLanguage': selectedLang,
-      'description': 'Complete prompt engineering resource covering fundamentals, frameworks, techniques, and domain-specific guides.',
+      'description': t.promptEngineeringHubDescription,
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
+      'inLanguage': selectedLang,
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Prompt Engineering', 'item': `https://www.promptquorum.com/prompt-engineering${langSuffix}` },

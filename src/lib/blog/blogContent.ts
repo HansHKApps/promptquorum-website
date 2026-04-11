@@ -4908,7 +4908,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       publishDate: 'Veröffentlicht 14. März 2026',
       seoTitle: 'Prompt-Optimierung 2026: 8 Techniken für bessere KI',
       readTime: '12 Min. Lesedauer',
-      metaDescription: 'Beherrschen Sie 8 Verfeinerungstechniken zur Prompt-Optimierung: Kontext, Klarheit, Struktur und Einschränkungen. Verbessern Sie die Qualität von 48 % auf 82 %.',
+      metaDescription: 'Beherrschen Sie 8 Verfeinerungstechniken: Kontext, Klarheit, Struktur, Einschränkungen. Prompt-Qualität verbessert sich von 48 % auf 82 % in 2–3 Min.',
       sections: {
         theProblem: {
           title: 'Das Problem: Warum manuelle Optimierung scheitert',
@@ -4946,7 +4946,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       publishDate: '2026年3月14日公開',
       seoTitle: 'プロンプト最適化2026：品質を48％から82％へ向上させる8つの技術',
       readTime: '12分で読める',
-      metaDescription: '8つの改善テクニックでプロンプトを最適化：コンテキスト、明確性、構造、制約。品質を48％から82％に向上させ、2～3分で完了。実例とステップバイステップガイド付き。',
+      metaDescription: '8つの改善テクニックでプロンプトを最適化：コンテキスト、明確性、構造、制約。品質を48％から82％に向上、2～3分で完了。実例とガイド付き。',
       sections: {
         theProblem: {
           title: '問題',
@@ -4963,7 +4963,7 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       title: '自动提示词优化：8个工具指南',
       intro: '停止花费30分钟完善单个提示词。PromptQuorum将粗略想法转变为专业提示词。',
       publishDate: '发布于 2026 年 3 月 14 日',
-      seoTitle: '提示词优化2026：8种技巧提升AI输出质量',
+      seoTitle: '提示词优化2026：掌握8种精炼技巧，大幅提升AI输出质量',
       readTime: '12 分钟阅读',
       metaDescription: '掌握8种优化技巧：增加背景、清晰度、结构和约束条件。将提示词质量从48％提升到82％，仅需2～3分钟。包含真实案例和完整指南。',
       sections: {
