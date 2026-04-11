@@ -8331,6 +8331,323 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ],
       },
     },
+    ja: {
+      theme: 'ベストモデル',
+      title: 'LLM量子化の解説：Q4_K_M、Q8_0、GGUF形式の仕組み',
+      seoTitle: 'LLM量子化ガイド：Q4_K_M、Q8_0、GGUF解説',
+      intro: 'LLM量子化は、モデルの重み精度を32ビットまたは16ビット浮動小数点数から4ビットまたは8ビット整数に削減する技術です。RAMの必要量を50～75%削減しながら、品質低下を最小限に抑えることができます。Q4_K_Mは推奨される標準量子化で、7Bモデルを14GB程度から4.5GB程度に削減し、標準ベンチマークで元の品質の97～99%を保持します。',
+      metaDescription: 'LLM量子化の仕組み：Q4_K_M、Q8_0、GGUFの動作、RAM削減と品質トレードオフ、最適な量子化の選択方法を解説します。2026年4月。',
+      publishDate: '2026-04-04',
+      readTime: '9分で読める',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'LLM量子化',
+      toc: [
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: 'LLM量子化とは？', anchor: '#what-is-quantization' },
+        { label: 'Q4_K_M、Q5_K_M、Q8_0の違い', anchor: '#quantization-levels' },
+        { label: 'GGUF形式とは？', anchor: '#gguf-format' },
+        { label: '量子化レベル別のRAM削減量', anchor: '#ram-savings' },
+        { label: '実際にどの程度品質が低下するのか', anchor: '#quality-loss' },
+        { label: 'どの量子化レベルを選ぶべきか', anchor: '#which-quantization' },
+        { label: '地域別コンテキスト', anchor: '#regional-context' },
+        { label: 'よくある間違い', anchor: '#common-mistakes' },
+        { label: '関連記事', anchor: '#related-reading' },
+        { label: 'よくある質問', anchor: '#faq' },
+        { label: '参考資料', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '量子化はモデルの重みを32ビットから4～8ビットに圧縮し、VRAM使用量を50～75%削減する技術です。',
+            '**Q4_K_M**は標準推奨レベル — 品質とRAMのバランスが最適な一般的なユースケース向けです。',
+            '7Bモデルの例：FP16 = 約14GB RAM、Q4_K_M = 約4.5GB、Q8_0 = 約7GB。',
+            'Q4_K_MでのMMULベンチマーク品質低下は1～3% — 実際の用途ではほぼ無視できるレベルです。',
+            'GGUFはllama.cpp、Ollama、LM Studioなどが量子化モデルを保存するための標準ファイル形式です。',
+          ],
+        },
+        whatIs: {
+          title: 'LLM量子化とは何で、なぜ重要なのか',
+          content: [
+            '大規模言語モデルは数十億のニューラルネットワーク重みを学習済みの知識として保存しています。デフォルトではこれらは16ビット浮動小数点数（FP16）で格納されます — 重みあたり2バイトです。7Bモデルは70億の重みを持つため、FP16ファイルサイズは約14GBになります。',
+            '量子化はこれらの16ビット浮動小数点数をより低精度の整数に置き換えます。4ビット量子化では、各重みが2バイトではなく0.5バイトを使用します — メモリを約3.5GBまで削減します。メタデータオーバーヘッドを含めると、Q4_K_M量子化された7Bモデルは約4.5GBになります。',
+            'これはローカル推論に重要です。なぜなら、コンシューマーハードウェアのRAMは限定的だからです。量子化なしでは、7Bモデルを実行するのに16GBのRAMが必要です。Q4_K_M量子化を使用すると、同じモデルが6GBのRAMで実行でき、[ほとんどの現代的なラップトップで実行可能](/local-llms/local-llm-on-laptop?lang=ja)になります。',
+          ],
+        },
+        quantizationLevels: {
+          title: 'Q4_K_M、Q5_K_M、Q8_0などのレベルはどう異なるのか',
+          content: '量子化名はパターンに従います：Q{bits}_{variant}。ビット数は重みの精度を示し、バリアントは量子化の適用方法に影響します：',
+          rows: [
+            { 'レベル': 'Q2_K', 'ビット数': '2', 'RAM (7B)': '約2.7GB', '品質低下': '高', '使用場面': 'RAM < 4GB、品質低下を容認できる場合' },
+            { 'レベル': 'Q3_K_S', 'ビット数': '3', 'RAM (7B)': '約3.3GB', '品質低下': '中程度', '使用場面': 'RAM 4～5GB' },
+            { 'レベル': 'Q4_K_M', 'ビット数': '4', 'RAM (7B)': '約4.5GB', '品質低下': '低 (1～3%)', '使用場面': 'ほとんどのユーザーのデフォルト' },
+            { 'レベル': 'Q5_K_M', 'ビット数': '5', 'RAM (7B)': '約5.7GB', '品質低下': '最小 (<1%)', '使用場面': 'RAM 16GB、より高い品質を必要とする場合' },
+            { 'レベル': 'Q6_K', 'ビット数': '6', 'RAM (7B)': '約6.6GB', '品質低下': 'ほぼ無損失', '使用場面': 'RAM 16GB、コーディング/数学タスク' },
+            { 'レベル': 'Q8_0', 'ビット数': '8', 'RAM (7B)': '約7.7GB', '品質低下': '無視可能', '使用場面': 'RAM 16GB以上、最高品質を必要とする場合' },
+          ],
+          columns: ['レベル', 'ビット数', 'RAM (7B)', '品質低下', '使用場面'],
+        },
+        gguf: {
+          title: 'GGUF形式とは何で、量子化とどう関連するのか',
+          content: [
+            'GGUF（GPT-Generated Unified Format）は、ローカル推論用の量子化LLM重みを保存するためのファイル形式です。llama.cpプロジェクトによって作成され、古いGGML形式の置き換えです。',
+            'GGUFファイルには以下が含まれます：量子化されたモデルの重み、すべてのモデルメタデータ（アーキテクチャ、トークナイザー、コンテキスト長）、およびフォーマットバージョン番号。このスタンドアロン設計により、単一の`.gguf`ファイルがモデルを実行するために必要なすべてです — 別のトークナイザーファイルや設定JSONは不要です。',
+            '2026年4月の時点で、GGUFはOllama、LM Studio、Jan AI、GPT4Allの標準形式です。`ollama pull llama3.1:8b`を実行すると、Ollamaは内部的にGGUFファイルをダウンロードします。LM Studioがモデルファイルサイズを表示する場合、それはGGUFファイルサイズです。',
+            '量子化レベルはファイル名の一部です：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`はLlama 3.1 8BのQ4_K_M量子化GGUFです。',
+          ],
+        },
+        ramSavings: {
+          title: '異なるモデルサイズでの量子化によるRAM削減量',
+          rows: [
+            { 'モデルサイズ': '3B', 'FP16': '約6GB', 'Q8_0': '約3.8GB', 'Q4_K_M': '約2GB', 'Q3_K_S': '約1.6GB' },
+            { 'モデルサイズ': '7B', 'FP16': '約14GB', 'Q8_0': '約7.7GB', 'Q4_K_M': '約4.5GB', 'Q3_K_S': '約3.3GB' },
+            { 'モデルサイズ': '13B', 'FP16': '約26GB', 'Q8_0': '約14GB', 'Q4_K_M': '約8.5GB', 'Q3_K_S': '約6GB' },
+            { 'モデルサイズ': '34B', 'FP16': '約68GB', 'Q8_0': '約36GB', 'Q4_K_M': '約22GB', 'Q3_K_S': '約16GB' },
+            { 'モデルサイズ': '70B', 'FP16': '約140GB', 'Q8_0': '約70GB', 'Q4_K_M': '約40GB', 'Q3_K_S': '約30GB' },
+          ],
+          columns: ['モデルサイズ', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+        },
+        qualityLoss: {
+          title: '実際にどの程度の品質が低下するのか',
+          content: [
+            '量子化による品質低下は、完全精度モデルと量子化バージョンで同じベンチマークを実行し、スコアを比較することで測定されます。2026年4月の時点で、確立された知見は以下の通りです：',
+          ],
+          items: [
+            '**Q4_K_M対FP16**：MMULで1～3%の低下。FP16で73%のスコアを達成する7Bモデルは、Q4_K_Mで71～72%を達成します。実際のタスクでは、この差はほぼ無視できます。',
+            '**Q3_K_S対FP16**：5～10%の低下。複雑な推論と数学タスクで顕著です。FP16で数学問題を正しく解くモデルがQ3_K_Sで失敗することもあります。',
+            '**Q2_K対FP16**：15～25%の低下。すべてのタスクタイプで著しい品質低下。RAM制約が絶対的な場合のみ使用してください。',
+            '**Q8_0対FP16**：0.5%未満の低下 — 実際のすべての目的で本質的に同一です。',
+            'K_M変種（K-Quant Medium）は、同じビット数での古いQ4_0量子化よりも品質をより良く保持する混合精度アプローチを使用します。両方が利用可能な場合は、常にQ4_K_Mを好んでください。',
+          ],
+        },
+        whichQuantization: {
+          title: 'どの量子化レベルを選ぶべきか',
+          items: [
+            '**4～8GB RAMが利用可能**：Q4_K_M — [制限されたハードウェア向けの最善のバランス](/local-llms/best-beginner-local-llm-models?lang=ja)。',
+            '**8～16GB RAMが利用可能**：Q5_K_MまたはQ6_K — より良い品質と快適なRAMヘッドルーム。',
+            '**16GB以上のRAMが利用可能**：Q8_0 — ほぼロスレスの品質、より低い量子化を使う理由はありません。',
+            '**24GB以上のVRAMを搭載したGPU**：Q8_0またはQ6_K（VRAMに適合するモデルサイズ）。',
+            '**バッチ処理/夜間タスク**：Q4_K_M — 利用可能なRAMあたりのスループットとモデルサイズを最大化します。',
+            '**コーディングまたは数学タスク専用**：Q5_K_M以上を使用 — 量子化の影響は正確な数値および算法的推論で最も顕著です。',
+          ],
+        },
+        regionalContext: {
+          title: 'ローカルLLM量子化の地域別コンテキスト',
+          content: '量子化に関する考慮事項は、規制、主権、コンプライアンスフレームワークにより管轄権によって異なります：',
+          items: [
+            '**日本 (METI)**：日本の経済産業省（METI）は国内AI主権を推進しています。量子化されたQwen2.5およびLlamaモデルは、第三者による処理なしに日本のエンタープライズインフラストラクチャで実行されます。Q4_K_M量子化により、16GBのコーポレートサーバーで13B以上のモデルが実行可能になります。METIのAIガバナンス2024フレームワークは、エンタープライズ展開向けにローカル推論を推奨しています。',
+            '**アジア太平洋地域**：東アジア全体（中国、台湾、韓国）では、データ主権と規制遵守のためにローカル推論が優先されています。VRAM効率とコスト削減のため、量子化は重要な実装パターンです。',
+            '**グローバル**：コスト効率と推論速度のバランスを求める組織にとって、量子化は引き続き最良の選択肢です。',
+          ],
+        },
+        commonMistakes: {
+          title: 'LLM量子化でよくある間違い',
+          items: [
+            '**Q4_K_Mではなくq4_0をダウンロード** — Q4_0は古い量子化法で、K-Quant改善がありません。Q4_K_Mは同じRAMフットプリントで5～8%優れた品質です。両方が利用可能な場合は、常にQ4_K_Mを選択してください。',
+            '**より高い量子化は常により悪い品質を意味すると仮定** — より高いQ数=より多くのビット=より良い品質。Q8_0はQ4_K_Mより優れています。Q5_K_MはQ4_K_Mより優れています。Q4_K_M 70BモデルはほとんどのタスクでQ8_0 8Bモデルを上回ります。',
+            '**モデルを読み込む前にRAMヘッドルームをチェックしない** — モデルサイズは唯一のRAM消費者ではありません。OS、ブラウザ、その他のアプリケーションもRAMを使用します。8GBマシンでは、4.5GB Q4_K_M 7Bモデルは他のすべてに3.5GBしか残しません。ルール：モデルファイルサイズ + 2GB OSオーバーヘッド + 1GBヘッドルーム = 必要最小限RAM。',
+          ],
+        },
+        relatedReading: {
+          title: '関連記事',
+          items: [
+            '[ローカルLLMハードウェアガイド](/local-llms/local-llm-hardware-setup?lang=ja) — 量子化モデル実行のためのGPU、CPU、RAM要件。',
+            '[初心者向けベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models?lang=ja) — 量子化推奨事項付きで最初のモデルを選択。',
+            '[コンシューマーハードウェア向け小規模LLMモデル](/local-llms/small-local-llm-models?lang=ja) — 量子化で実行される3Bおよび7Bモデル。',
+            '[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja) — GGUF量子化モデルのダウンロードと実行。',
+            '[ラップトップでローカルLLMを実行](/local-llms/local-llm-on-laptop?lang=ja) — Q4_K_M推論の実践的セットアップ。',
+            '[ローカルLLMセットアップのトラブルシューティング](/local-llms/troubleshooting-local-llm-setup?lang=ja) — VRAMおよび量子化エラーのデバッグ。',
+          ],
+        },
+        faqSection: {
+          title: 'LLM量子化についてのよくある質問',
+          faqs: [
+            {
+              q: 'Ollamaは自動的に最適な量子化を使用しますか？',
+              a: 'はい — `ollama pull llama3.1:8b`を実行すると、Ollamaはデフォルトでq4_k_mバリアントをダウンロードします。特定の量子化を取得するには、タグを追加してください：`ollama pull llama3.1:8b-instruct-q5_K_M`。各モデルの利用可能な量子化タグはollama.com/libraryのモデルページに表示されます。',
+            },
+            {
+              q: '事前量子化バージョンをダウンロードするのではなく、モデルを自分で量子化できますか？',
+              a: 'はい — llama.cppには、GGUFファイルをサポートされている任意の量子化レベルに変換する`quantize`バイナリが含まれています。プロセスはモデルサイズに応じて5～30分かかります。ほとんどのユーザーはHugging Faceから事前量子化GGUFファイルをダウンロードすべきです。結果は同等だからです。',
+            },
+            {
+              q: '量子化はモデルのコンテキストウィンドウに影響しますか？',
+              a: 'いいえ — 量子化はモデル重み精度にのみ影響し、コンテキスト長には影響しません。Llama 3.1 8Bモデルは、Q4_K_Mに量子化されてもFP16で実行されても128Kトークンをサポートします。ただし、より長いコンテキストを処理するには、量子化に関わらずより多くのRAMが必要です — Q4_K_M 7Bモデルで64Kトークンコンテキストを処理すると、10GB以上のRAMが必要になることもあります。',
+            },
+            {
+              q: 'GGUF量子化とGPTQ量子化の違いは何ですか？',
+              a: 'GGUF（llama.cpp形式）とGPTQは2つの異なる量子化アプローチです。GGUFはK-QuantsとCPU/GPUの両方で実行されます。GPTQはGPUのみで、PyTorchが必要です。Ollama、LM Studio、またはJan AIでのローカル推論にはGGUFが正しい形式です。GPTQはAutoGPTQやvLLMなどのGPU指向推論フレームワークで使用されます。',
+            },
+            {
+              q: 'Hugging Faceの異なるプロバイダーからのQ4_K_Mモデルには品質の違いがありますか？',
+              a: '量子化アルゴリズムはllama.cppで標準化されているため、同じベースモデルのQ4_K_M量子化は、GGUFファイルを作成した人に関わらず、ほぼ同一である必要があります。ただし、一部のプロバイダーは追加の調整（imatrix量子化）を適用し、品質を向上させます。「imat」または「importance matrix」として説明されているファイルは、通常、同じビット数でより高い品質を持っています。',
+            },
+            {
+              q: 'imatrix量子化とは何ですか？',
+              a: 'Imatrix（重要度行列）量子化は、キャリブレーションデータを使用して、異なる精度レベルを異なる重みに割り当てます。予測に最も影響する重みはより多くのビットで量子化され、あまり重要でない重みはより少ないビットを使用します。結果：均一量子化と比較して、同じビット数でより良い品質。Qwen2.5 imatrix量子化は、標準Q4_K_Mより2～4%優れています。',
+            },
+            {
+              q: 'Q4_K_MとQ4_K_Sの違いは何ですか？',
+              a: '両方とも4ビット量子化ですが、K_M（中）とK_S（小）は量子化ブロックごとのメモリ割り当てが異なります。Q4_K_Mはより良い品質再構築のためにより多くのメタデータを使用します — 通常、7Bモデルで4.5～5GB。Q4_K_Sはより積極的です — K_Mと比較して300～400MB節約しますが、3～5%の品質低下があります。極度に制限されたハードウェア（<4GB RAM）でない限り、Q4_K_Mを使用してください。',
+            },
+            {
+              q: 'モデルを再ダウンロードせずに量子化レベルを切り替えることはできますか？',
+              a: 'いいえ — 量子化レベル間の切り替えには、異なるGGUFファイルをダウンロードするか、ベースモデル自体を再量子化する必要があります。モデルがQ4_K_Mに量子化されると、元のFP16モデルなしでQ5_K_Mに変換することはできません。ほとんどのユーザーは、希望する量子化レベルのHugging Faceから事前量子化GGUFファイルをダウンロードします。',
+            },
+            {
+              q: '量子化は推論速度にどのように影響しますか？',
+              a: '量子化は通常、4ビット重みの読み込みと処理が16ビット浮動小数点数より高速であるため、推論速度を10～40%向上させます。Q4_K_M 7Bモデルはコンシューマーの CPU上で約8～12 tok/sで実行されます。同じモデルをFP16で実行すると約1～2 tok/sです。量子化によるGPU性能向上はより小さい（5～15%高速化）です。GPUはすでにフロート演算に最適化されているためです。',
+            },
+            {
+              q: 'Ollamaはデフォルトでどの量子化レベルを使用しますか？',
+              a: 'Ollamaは、ライブラリ内のすべてのモデルでデフォルトでQ4_K_Mを使用します。`ollama pull llama3.1:8b`を実行すると、Q4_K_Mバリアントをダウンロードしています。このデフォルトは、ほとんどのユーザーの品質とRAM要件のバランスをよく取ります。別の量子化を取得するには、タグを追加してください：`ollama pull llama3.1:8b:q5_k_m`または`ollama pull llama3.1:8b:q8_0`。',
+            },
+          ],
+        },
+        sources: {
+          title: '参考資料',
+          items: [
+            'llama.cpp量子化ドキュメント — github.com/ggerganov/llama.cpp/blob/master/examples/quantize/README.md',
+            'K-Quants技術討議 — github.com/ggerganov/llama.cpp/pull/1684（元のK-Quant PR）',
+            'GGUF形式仕様 — github.com/ggerganov/ggml/blob/master/docs/gguf.md',
+            'Open LLM Leaderboard量子化ベンチマーク — huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'LLM量子化の解説：Q4_K_M、Q8_0、GGUF形式の仕組み',
+        'description': 'LLM量子化は、モデルの重み精度を32ビットまたは16ビット浮動小数点数から4ビットまたは8ビット整数に削減する技術です。RAMの必要量を50～75%削減します。',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-04',
+        'url': 'https://www.promptquorum.com/local-llms/llm-quantization-explained?lang=ja',
+        'inLanguage': 'ja',
+        'proficiencyLevel': 'Intermediate',
+        'about': [
+          { '@type': 'Thing', 'name': 'LLM量子化' },
+          { '@type': 'Thing', 'name': 'Q4_K_M量子化' },
+          { '@type': 'Thing', 'name': 'GGUF形式' },
+          { '@type': 'Thing', 'name': 'モデル圧縮' },
+        ],
+        'author': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+          'url': 'https://www.promptquorum.com',
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+          'url': 'https://www.promptquorum.com',
+          'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' },
+        },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'LLM量子化レベル：RAM対品質',
+        'inLanguage': 'ja',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Q2_K',
+            'item': { '@type': 'Thing', 'name': 'Q2_K - 2ビット量子化、最高圧縮率、著しい品質低下' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Q3_K_S',
+            'item': { '@type': 'Thing', 'name': 'Q3_K_S - 3ビット量子化、中程度の品質低下、7B用4～5GB RAM' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Q4_K_M',
+            'item': { '@type': 'Thing', 'name': 'Q4_K_M - 4ビット量子化（推奨）、1～3%品質低下、7B用約4.5GB RAM' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'Q5_K_M',
+            'item': { '@type': 'Thing', 'name': 'Q5_K_M - 5ビット量子化、最小品質低下、7B用約5.7GB RAM' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 5,
+            'name': 'Q8_0',
+            'item': { '@type': 'Thing', 'name': 'Q8_0 - 8ビット量子化、無視可能な品質低下、7B用約7.7GB RAM' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 6,
+            'name': 'FP16',
+            'item': { '@type': 'Thing', 'name': 'FP16 - 16ビット完全精度、品質低下なし、7B用約14GB RAM' },
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ja',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Ollamaは自動的に最適な量子化を使用しますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい — `ollama pull llama3.1:8b`を実行すると、OllamaはデフォルトでQ4_K_Mバリアントをダウンロードします。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'モデルを自分で量子化できますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい — llama.cppには`quantize`バイナリが含まれており、GGUFファイルを任意のサポート対象量子化レベルに変換できます。' },
+          },
+          {
+            '@type': 'Question',
+            'name': '量子化はモデルのコンテキストウィンドウに影響しますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ — 量子化はモデル重み精度にのみ影響し、コンテキスト長には影響しません。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GGUF量子化とGPTQ量子化の違いは何ですか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUFはCPUとGPUで実行され、GPTQはGPUのみです。ローカル推論にはGGUFが正しい形式です。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Hugging Faceの異なるプロバイダーのQ4_K_Mモデルは品質が異なりますか？',
+            'accessedAnswer': { '@type': 'Answer', 'text': '量子化アルゴリズムは標準化されているため、同じベースモデルのQ4_K_M量子化はほぼ同一である必要があります。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'imatrix量子化とは何ですか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Imatrix量子化は、キャリブレーションデータを使用して異なる精度レベルを異なる重みに割り当てます。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q4_K_MとQ4_K_Sの違いは何ですか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '両方とも4ビット量子化ですが、Q4_K_M（中）はより多くのメタデータを使用してより良い品質を実現し、Q4_K_S（小）はより積極的で品質低下があります。' },
+          },
+          {
+            '@type': 'Question',
+            'name': '量子化レベルを切り替えるために再ダウンロードできますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ — 異なるGGUFファイルをダウンロードするか、ベースモデルを再量子化する必要があります。' },
+          },
+          {
+            '@type': 'Question',
+            'name': '量子化は推論速度にどのように影響しますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '量子化は通常、4ビット重みの処理が16ビットフロートより高速であるため、推論速度を10～40%向上させます。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollamaはデフォルトでどの量子化レベルを使用しますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'OllamaはデフォルトですべてのモデルにQ4_K_Mを使用します。このデフォルトは、ほとんどのユーザーの品質とRAM要件のバランスをよく取ります。' },
+          },
+        ],
+      },
+    },
   },
 
   'multilingual-local-llms': {
