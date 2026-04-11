@@ -1,0 +1,125 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    ローカルLLM VRAMカルキュレーター
+  </text>
+
+  <!-- Formula Section -->
+  <g id="formula-section">
+    <rect x="40" y="60" width="720" height="100" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="60" y="85" font-family="system-ui, sans-serif" font-size="15" fill="#6750A4" font-weight="700">
+      VRAM (GB) = (モデルサイズ × 量子化ビット数) ÷ 8
+    </text>
+    <text x="60" y="115" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" font-weight="600">
+      モデルサイズ：10億単位のパラメータ数（7B、13B、70B）
+    </text>
+    <text x="60" y="140" font-family="system-ui, sans-serif" font-size="14" fill="#49454F" font-weight="600">
+      量子化ビット：FP16（16ビット）、Q8（8ビット）、Q5（5ビット）、Q4（4ビット）
+    </text>
+  </g>
+
+  <!-- Examples Section -->
+  <g id="examples-section">
+    <text x="60" y="190" font-family="system-ui, sans-serif" font-size="18" fill="#1C1B1F" font-weight="700">
+      計算例：
+    </text>
+
+    <!-- Example 1: 7B Q4 -->
+    <g id="example1">
+      <rect x="55" y="210" width="200" height="80" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+      <text x="70" y="235" font-family="system-ui, sans-serif" font-size="15" fill="#6750A4" font-weight="700">
+        7Bモデル Q4
+      </text>
+      <text x="70" y="260" font-family="'SF Mono', monospace" font-size="13" fill="#1C1B1F" font-weight="600">
+        (7 × 4) ÷ 8 = 3.5 GB
+      </text>
+      <text x="70" y="282" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+        最適：ノートPC
+      </text>
+    </g>
+
+    <!-- Example 2: 13B Q5 -->
+    <g id="example2">
+      <rect x="300" y="210" width="200" height="80" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+      <text x="315" y="235" font-family="system-ui, sans-serif" font-size="15" fill="#6750A4" font-weight="700">
+        13Bモデル Q5
+      </text>
+      <text x="315" y="260" font-family="'SF Mono', monospace" font-size="13" fill="#1C1B1F" font-weight="600">
+        (13 × 5) ÷ 8 = 8.1 GB
+      </text>
+      <text x="315" y="282" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+        最適：デスクトップ
+      </text>
+    </g>
+
+    <!-- Example 3: 70B Q4 -->
+    <g id="example3">
+      <rect x="545" y="210" width="215" height="80" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+      <text x="560" y="235" font-family="system-ui, sans-serif" font-size="15" fill="#6750A4" font-weight="700">
+        70Bモデル Q4
+      </text>
+      <text x="560" y="260" font-family="'SF Mono', monospace" font-size="13" fill="#1C1B1F" font-weight="600">
+        (70 × 4) ÷ 8 = 35 GB
+      </text>
+      <text x="560" y="282" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">
+        サーバー / RTX 4090
+      </text>
+    </g>
+  </g>
+
+  <!-- Quantization Scale -->
+  <g id="quantization-scale">
+    <text x="60" y="325" font-family="system-ui, sans-serif" font-size="18" fill="#1C1B1F" font-weight="700">
+      品質 vs. VRAM消費量：
+    </text>
+
+    <!-- FP16 -->
+    <rect x="60" y="350" width="130" height="50" rx="5" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="125" y="373" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      FP16
+    </text>
+    <text x="125" y="392" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+      最高品質
+    </text>
+
+    <!-- Q8 -->
+    <rect x="210" y="350" width="130" height="50" rx="5" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="275" y="373" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      Q8
+    </text>
+    <text x="275" y="392" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+      品質99 %
+    </text>
+
+    <!-- Q5 -->
+    <rect x="360" y="350" width="130" height="50" rx="5" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+    <text x="425" y="373" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      Q5
+    </text>
+    <text x="425" y="392" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+      品質95 %
+    </text>
+
+    <!-- Q4 -->
+    <rect x="510" y="350" width="130" height="50" rx="5" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+    <text x="575" y="373" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      Q4
+    </text>
+    <text x="575" y="392" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+      品質90–95 %
+    </text>
+
+    <!-- Note -->
+    <text x="660" y="373" font-family="system-ui, sans-serif" font-size="12" fill="#7D5260" font-weight="600">
+      ← 推奨
+    </text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="415" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
+    システム・コンテキスト・余裕分として25 %のオーバーヘッドを追加
+  </text>
+</svg>
