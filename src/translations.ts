@@ -83,7 +83,7 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: 26 answers on prompt optimization, multi-model consensus, 9 frameworks, local LLM support (Ollama, LM Studio), BYOM privacy and free tier",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Prompt Engineering Hub: 80 Guides | PromptQuorum",
+    promptEngineeringHubTitle: "Prompt Engineering Hub 2026: 80 Guides | PromptQuorum",
     promptEngineeringHubDescription: "80 research-backed articles on prompt engineering techniques, frameworks (CO-STAR, CRAFT, RISEN), tools, evaluation, and workflows for developers.",
     localLlmsHubTitle: "Local LLMs 2026: Run Offline with Ollama & LM Studio",
     localLlmsHubDescription: "Deploy local LLMs privately: compare Ollama vs LM Studio, VRAM requirements, quantization techniques. Instantly test your models with PromptQuorum.",
@@ -191,7 +191,7 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: 26 Antworten zu Optimierung, Multi-Model-Consensus, 9 Frameworks, lokalem LLM-Support (Ollama, LM Studio), BYOM-Datenschutz und Zugang.",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Prompt-Engineering-Hub: 80 Leitfäden | PromptQuorum",
+    promptEngineeringHubTitle: "Prompt-Engineering-Hub 2026: 80 Leitfäden | PromptQuorum",
     promptEngineeringHubDescription: "80 forschungsbasierte Artikel zu Prompt-Engineering-Techniken, Frameworks (CO-STAR, CRAFT, RISEN), Tools, Bewertung und Workflows für Entwickler.",
     localLlmsHubTitle: "Lokale LLMs 2026: Ollama & LM Studio privat nutzen",
     localLlmsHubDescription: "Deployen Sie private LLMs: Ollama vs LM Studio, Hardware-Anforderungen, Quantisierungstechniken. Testen Sie Ihre Modelle sofort mit PromptQuorum.",
@@ -299,7 +299,7 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: 26 réponses sur optimisation, consensus multi-modèles, 9 frameworks, support LLM local (Ollama, LM Studio), BYOM et accès gratuit.",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "Hub d'ingénierie des prompts: 80 Guides | PromptQuorum",
+    promptEngineeringHubTitle: "Ingénierie de prompts 2026: 80 guides | PromptQuorum",
     promptEngineeringHubDescription: "80 articles basés sur la recherche sur les techniques d'ingénierie des prompts, frameworks (CO-STAR, CRAFT, RISEN), outils, évaluation et workflows.",
     localLlmsHubTitle: "Local LLMs 2026: Exécutez votre IA en privé facilement",
     localLlmsHubDescription: "Déployez les LLMs en privé: comparez Ollama vs LM Studio, exigences matérielles, techniques de quantification. Testez vos modèles avec PromptQuorum.",
@@ -407,7 +407,7 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: よくある26個の質問に完全回答 - プロンプト最適化、マルチモデルコンセンサス、9つのフレームワーク、Ollama・LM Studioなどローカルモデル対応、BYOM型プライバシー、API連携、無料試用、日本語ドキュメント、カスタマーサポート。",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "プロンプトエンジニアリングハブ: 80ガイド | PromptQuorum",
+    promptEngineeringHubTitle: "プロンプトエンジニアリングハブ 2026: 80ガイド | PromptQuorum",
     promptEngineeringHubDescription: "プロンプトエンジニアリングの技法、フレームワーク(CO-STAR、CRAFT、RISEN)、ツール、評価、ワークフローに関する80の研究ベース記事。",
     localLlmsHubTitle: "Local LLMs 2026：Ollama & LM StudioでAI運用",
     localLlmsHubDescription: "2026年の完全ガイド。OllamaとLM Studioの比較、ハードウェア要件、量子化技法を解説。PromptQuorumで自分のローカルモデルをすぐにテスト・比較できます。",
@@ -515,8 +515,8 @@ export const translations = {
     faqMetaDescription: "PromptQuorum常见问题：涵盖26个关键问答 - 包括提示词优化、多模型共识评分、9个提示框架、Ollama本地模型部署、LM Studio支持、BYOM隐私设计、API接口集成、免费试用计划、完整中文文档、多语言用户界面、专业技术支持、企业解决方案、价格对比、安全保障、用户案例。",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "提示工程中心: 80个指南 | PromptQuorum",
-    promptEngineeringHubDescription: "关于提示工程技术、框架(CO-STAR、CRAFT、RISEN)、工具、评估和工作流的80篇研究文章。",
+    promptEngineeringHubTitle: "提示工程中心 2026: 80个指南 | PromptQuorum",
+    promptEngineeringHubDescription: "关于提示工程技术、框架（CO-STAR、CRAFT、RISEN）、工具、评估和工作流的80篇研究文章，适合开发者和AI工程师学习。",
     localLlmsHubTitle: "本地LLMs 2026：Ollama与LM Studio私有部署",
     localLlmsHubDescription: "2026完整指南：本地LLM部署、Ollama vs LM Studio对比、显存需求、量化技巧以及用PromptQuorum快速测试和对标你的模型。",
     compareMetaTitle: "PromptQuorum vs 竞争对手: 功能对比 (2026)",
