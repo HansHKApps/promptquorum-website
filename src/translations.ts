@@ -295,8 +295,8 @@ export const translations = {
     featuresMetaDescription: "PromptQuorum envoie des prompts à 25+ fournisseurs IA avec 9 frameworks (CO-STAR, CRAFT, RISEN) et analyse le consensus. Gratuit avec votre clé API.",
     howItWorksMetaTitle: "Comment fonctionne PromptQuorum: Pipeline en 4 étapes",
     howItWorksMetaDescription: "Le pipeline en 4 étapes de PromptQuorum optimise votre prompt, l'envoie à 25+ modèles IA simultanément et exécute la notation du consensus.",
-    faqMetaTitle: "PromptQuorum FAQ: Tarifs, Confidentialité & Fournisseurs",
-    faqMetaDescription: "26 réponses sur PromptQuorum: dispatch multi-modèles, consensus, 9 frameworks, support LLM local, modèle de confidentialité BYOM et premiers pas.",
+    faqMetaTitle: "PromptQuorum FAQ: Prompts, Confidentialité & Tarifs",
+    faqMetaDescription: "PromptQuorum FAQ: 26 réponses sur optimisation, consensus multi-modèles, 9 frameworks, support LLM local (Ollama, LM Studio), BYOM et accès gratuit.",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Hub d'ingénierie des prompts: 80 Guides | PromptQuorum",
@@ -403,8 +403,8 @@ export const translations = {
     featuresMetaDescription: "PromptQuorumは25+ のAIプロバイダーに9つのフレームワーク(CO-STAR、CRAFT、RISEN)を使用してプロンプトを送信し、コンセンサス分析を実行します。",
     howItWorksMetaTitle: "PromptQuorumの仕組み: 4段階のAIパイプライン",
     howItWorksMetaDescription: "PromptQuorumの4段階パイプラインはプロンプトを最適化し、25+ のAIモデルに同時に送信し、コンセンサススコアリングを実行します。",
-    faqMetaTitle: "PromptQuorum FAQ: 価格、プライバシー & AIプロバイダー",
-    faqMetaDescription: "PromptQuorumについての26の回答: マルチモデルディスパッチ、コンセンサススコアリング、9つのプロンプトフレームワーク、ローカルLLMサポート。",
+    faqMetaTitle: "PromptQuorum FAQ 2026年版: マルチモデル最適化、プライバシー & 完全ガイド",
+    faqMetaDescription: "PromptQuorum FAQ: よくある26個の質問に完全回答 - プロンプト最適化、マルチモデルコンセンサス、9つのフレームワーク、Ollama・LM Studioなどローカルモデル対応、BYOM型プライバシー、API連携、無料試用、日本語ドキュメント、カスタマーサポート。",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "プロンプトエンジニアリングハブ: 80ガイド | PromptQuorum",
@@ -511,8 +511,8 @@ export const translations = {
     featuresMetaDescription: "PromptQuorum使用9个框架(CO-STAR、CRAFT、RISEN)向25+ AI提供商分发提示，并运行共识分析。使用您的API密钥免费。",
     howItWorksMetaTitle: "PromptQuorum如何工作: 4阶段AI管道",
     howItWorksMetaDescription: "PromptQuorum的4阶段管道优化您的提示，同时分发到25+ AI模型，然后运行共识评分。",
-    faqMetaTitle: "PromptQuorum常见问题: 定价、隐私 & AI提供商",
-    faqMetaDescription: "关于PromptQuorum的26个答案: 多模型分发、共识评分、9个提示框架、本地LLM支持。",
+    faqMetaTitle: "PromptQuorum 常见问题 2026: 本地多模型优化、隐私保护、完整定价与技术支持",
+    faqMetaDescription: "PromptQuorum常见问题：涵盖26个关键问答 - 包括提示词优化、多模型共识评分、9个提示框架、Ollama本地模型部署、LM Studio支持、BYOM隐私设计、API接口集成、免费试用计划、完整中文文档、多语言用户界面、专业技术支持、企业解决方案、价格对比、安全保障、用户案例。",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "提示工程中心: 80个指南 | PromptQuorum",
