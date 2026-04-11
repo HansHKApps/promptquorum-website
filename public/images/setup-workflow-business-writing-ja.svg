@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1000 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="1000" height="450" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="500" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="middle">ローカルライティングアシスタント設定フロー</text>
+
+  <!-- Step 1: Install Ollama -->
+  <circle cx="100" cy="200" r="45" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="100" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#6750A4" text-anchor="middle">1</text>
+
+  <text x="100" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">Ollama</text>
+  <text x="100" y="298" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">をインストール</text>
+  <text x="100" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">ollama.ai</text>
+
+  <!-- Arrow 1 -->
+  <line x1="145" y1="200" x2="225" y2="200" stroke="#6750A4" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 2: Pull Model -->
+  <circle cx="280" cy="200" r="45" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="280" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#6750A4" text-anchor="middle">2</text>
+
+  <text x="280" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">モデルを</text>
+  <text x="280" y="298" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">プル</text>
+  <text x="280" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">mistral-small3.1</text>
+
+  <!-- Arrow 2 -->
+  <line x1="325" y1="200" x2="405" y2="200" stroke="#6750A4" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 3: Install Continue -->
+  <circle cx="460" cy="200" r="45" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="460" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#6750A4" text-anchor="middle">3</text>
+
+  <text x="460" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">Continue</text>
+  <text x="460" y="298" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">をインストール</text>
+  <text x="460" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">VS Code拡張</text>
+
+  <!-- Arrow 3 -->
+  <line x1="505" y1="200" x2="585" y2="200" stroke="#6750A4" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 4: Create Prompt -->
+  <circle cx="640" cy="200" r="45" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="640" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#6750A4" text-anchor="middle">4</text>
+
+  <text x="640" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">カスタム</text>
+  <text x="640" y="298" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">プロンプト作成</text>
+  <text x="640" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">ブランドボイス付き</text>
+
+  <!-- Arrow 4 -->
+  <line x1="685" y1="200" x2="765" y2="200" stroke="#6750A4" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 5: Start Writing -->
+  <circle cx="820" cy="200" r="45" fill="#6750A4"/>
+  <text x="820" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+
+  <text x="820" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">執筆開始</text>
+  <text x="820" y="298" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">​</text>
+  <text x="820" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">エディタで Ctrl+K</text>
+
+  <!-- Bottom instructions -->
+  <text x="50" y="395" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E">① ollama.aiからOllamaをダウンロード・インストール • ② 実行: ollama run mistral-small3.1 • ③ VS CodeにContinue拡張をインストール</text>
+  <text x="50" y="415" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E">④ ブランドボイスサンプルをシステムプロンプトに追加 • ⑤ テキストを選択 → Ctrl+K → 指示を入力</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#6750A4"/>
+    </marker>
+  </defs>
+</svg>

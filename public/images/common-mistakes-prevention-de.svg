@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1000 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="1000" height="650" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="500" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="middle">Häufige Fehler und Lösungen</text>
+
+  <!-- Row 1: Using 70B Models -->
+  <rect x="40" y="70" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="115" r="20" fill="#D32F2F"/>
+  <text x="80" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">70B-Modelle für E-Mails</text>
+  <text x="115" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Große Modelle produzieren weitschweifige Ausgaben.</text>
+  <text x="115" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Langsam (30+ Sekunden), verschwenden Ressourcen.</text>
+  <text x="115" y="151" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Ungeeignet für schnelle Geschäftskorrespondenz.</text>
+
+  <rect x="520" y="70" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="115" r="20" fill="#388E3C"/>
+  <text x="560" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">Nutzen Sie 7B–24B-Modelle</text>
+  <text x="595" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Kleinere Modelle sind präzise und prägnant.</text>
+  <text x="595" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Schnell (5–15 Sekunden), ressourceneffizient.</text>
+  <text x="595" y="151" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Mistral Small 3.1 24B ideal für Geschäftsschreiben.</text>
+
+  <!-- Row 2: No Style Examples -->
+  <rect x="40" y="210" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="255" r="20" fill="#D32F2F"/>
+  <text x="80" y="262" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">Keine Markenstimmen-Beispiele</text>
+  <text x="115" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Modell rät Ihren Stil, verfehlt oft den Ton.</text>
+  <text x="115" y="273" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Ergebnisse sind generisch, wie ChatGPT.</text>
+  <text x="115" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Keine Konsistenz über E-Mails hinweg.</text>
+
+  <rect x="520" y="210" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="255" r="20" fill="#388E3C"/>
+  <text x="560" y="262" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">2–3 echte E-Mails bereitstellen</text>
+  <text x="595" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Fügen Sie echte, versendete E-Mails als Referenz ein.</text>
+  <text x="595" y="273" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Modell erlernt Ihren Ton, Wortschatz und Förmlichkeit.</text>
+  <text x="595" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Ergebnis entspricht automatisch Ihrer Markenstimme.</text>
+
+  <!-- Row 3: Trusting First Draft -->
+  <rect x="40" y="350" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="395" r="20" fill="#D32F2F"/>
+  <text x="80" y="402" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">Dem ersten Entwurf vertrauen</text>
+  <text x="115" y="395" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Modelle generieren grammatikalisch korrekt aber unpersönlich.</text>
+  <text x="115" y="413" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Wirkt oft formal oder unbeholfen ohne Überarbeitung.</text>
+  <text x="115" y="431" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Fehlt die menschliche Note für professionelle Korrespondenz.</text>
+
+  <rect x="520" y="350" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="395" r="20" fill="#388E3C"/>
+  <text x="560" y="402" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">1–2 Überarbeitungszyklen nutzen</text>
+  <text x="595" y="395" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Entwurf erstellen, dann mit Edit-Prompts verfeinern.</text>
+  <text x="595" y="413" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Prompts: „Fachjargon entfernen, einfacher schreiben."</text>
+  <text x="595" y="431" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Endergebnis ist poliert und professionell.</text>
+
+  <!-- Row 4: Missing Context Length -->
+  <rect x="40" y="490" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="535" r="20" fill="#D32F2F"/>
+  <text x="80" y="542" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="515" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">Standard-Kontextfenster (2K)</text>
+  <text x="115" y="535" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Ollama nutzt standardmäßig 2.048 Token Kontext.</text>
+  <text x="115" y="553" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Mehrseitige Angebote und Verträge werden gekürzt.</text>
+  <text x="115" y="571" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Modell verliert wichtigen Dokumentkontext.</text>
+
+  <rect x="520" y="490" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="535" r="20" fill="#388E3C"/>
+  <text x="560" y="542" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="515" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">Kontext auf 8K–32K erhöhen</text>
+  <text x="595" y="535" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">In Ollama Modelfile: PARAMETER num_ctx 8192 setzen.</text>
+  <text x="595" y="553" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Unterstützt 2–5-seitige Angebote ohne Kürzung.</text>
+  <text x="595" y="571" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">32K-Kontext für vollständige Vertragsreviews nutzen.</text>
+
+  <!-- Footer -->
+  <text x="500" y="630" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">Bewährte Praktiken: 7B–24B-Modelle, Markenstimmen-Beispiele, iterative Verfeinerung, angepasster Kontext.</text>
+</svg>
