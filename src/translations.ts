@@ -411,8 +411,8 @@ export const translations = {
     promptEngineeringHubDescription: "プロンプトエンジニアリングの技法、フレームワーク(CO-STAR、CRAFT、RISEN)、ツール、評価、ワークフローに関する80の研究ベース記事。",
     localLlmsHubTitle: "Local LLMs 2026：Ollama & LM StudioでAI運用",
     localLlmsHubDescription: "2026年の完全ガイド。OllamaとLM Studioの比較、ハードウェア要件、量子化技法を解説。PromptQuorumで自分のローカルモデルをすぐにテスト・比較できます。",
-    compareMetaTitle: "PromptQuorum vs 競合他社: 機能比較 (2026)",
-    compareMetaDescription: "PromptQuorumをPoe、LM Arena、OpenMarkと比較します。マルチモデル配信、コンセンサス分析、ローカルLLMサポート、APIコントロール、9つのプロンプトフレームワークを網羅。",
+    compareMetaTitle: "PromptQuorum vs 競合他社: マルチモデル機能比較 2026 年",
+    compareMetaDescription: "PromptQuorum と Poe・LM Arena・OpenMark を機能比較：複数 AI を同時配信、コンセンサス分析、ローカル LLM、API キー管理、9 つのプロンプトフレームワーク対応。",
     frameworksMetaTitle: "プロンプトフレームワーク: CO-STAR、CRAFT、RISENなど",
     frameworksMetaDescription: "9つのプロンプトエンジニアリングフレームワークへの完全ガイド: CO-STAR、CRAFT、RISEN、TRACE、APE、SPECS、RTFなど。",
 
