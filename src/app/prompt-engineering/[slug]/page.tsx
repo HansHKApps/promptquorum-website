@@ -72,6 +72,16 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     }
   }
 
+  // Type B stub: content entry exists but EN sections are empty
+  const enContent = peContent[key]?.['en']
+  if (!enContent || Object.keys(enContent.sections ?? {}).length === 0) {
+    return {
+      title: `${getTitleForSlug(slug)} — Coming Soon | PromptQuorum`,
+      description: 'This article is coming soon. Explore our Prompt Engineering hub in the meantime.',
+      robots: { index: false, follow: true },
+    }
+  }
+
   // Extract language from searchParams, default to 'en'
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'

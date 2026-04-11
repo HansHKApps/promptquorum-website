@@ -70,6 +70,16 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     }
   }
 
+  // Type B stub: content entry exists but EN sections are empty
+  const enContent = llmContent[key]?.['en']
+  if (!enContent || Object.keys(enContent.sections ?? {}).length === 0) {
+    return {
+      title: `${getTitleForSlug(slug)} — Coming Soon | PromptQuorum`,
+      description: 'This article is coming soon. Explore our Local LLMs hub in the meantime.',
+      robots: { index: false, follow: true },
+    }
+  }
+
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh']

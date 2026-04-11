@@ -2,11 +2,19 @@ import type { MetadataRoute } from 'next'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
+import { peContent } from '@/lib/prompt-engineering/content'
+import { llmContent } from '@/lib/local-llms/content'
 
 export const dynamic = 'force-static'
 
 const BASE = 'https://www.promptquorum.com'
 const LANGS = ['en', 'de', 'fr', 'ja', 'zh'] as const
+
+// Check if a content entry has real sections (not a stub)
+function hasRealContent(contentMap: Record<string, any>, key: string): boolean {
+  const en = contentMap[key]?.['en']
+  return !!en && Object.keys(en.sections ?? {}).length > 0
+}
 
 type Page = {
   path: string
@@ -31,12 +39,14 @@ const STATIC_PAGES: Page[] = [
 
 const PE_PAGES: Page[] = [
   { path: '/prompt-engineering', priority: 0.9, changefreq: 'weekly', lastmod: '2026-03-16' },
-  ...Object.keys(PE_SLUG_TO_KEY).map(slug => ({
-    path: `/prompt-engineering/${slug}`,
-    priority: 0.8,
-    changefreq: 'monthly' as const,
-    lastmod: '2026-03-16',
-  })),
+  ...Object.keys(PE_SLUG_TO_KEY)
+    .filter(slug => hasRealContent(peContent, PE_SLUG_TO_KEY[slug]))
+    .map(slug => ({
+      path: `/prompt-engineering/${slug}`,
+      priority: 0.8,
+      changefreq: 'monthly' as const,
+      lastmod: '2026-03-16',
+    })),
 ]
 
 const BLOG_PAGES: Page[] = [
@@ -64,12 +74,14 @@ const FRAMEWORK_PAGES: Page[] = [
 
 const LOCAL_LLM_PAGES: Page[] = [
   { path: '/local-llms', priority: 0.9, changefreq: 'weekly', lastmod: '2026-03-16' },
-  ...Object.keys(LLM_SLUG_TO_KEY).map(slug => ({
-    path: `/local-llms/${slug}`,
-    priority: 0.8,
-    changefreq: 'monthly' as const,
-    lastmod: '2026-03-16',
-  })),
+  ...Object.keys(LLM_SLUG_TO_KEY)
+    .filter(slug => hasRealContent(llmContent, LLM_SLUG_TO_KEY[slug]))
+    .map(slug => ({
+      path: `/local-llms/${slug}`,
+      priority: 0.8,
+      changefreq: 'monthly' as const,
+      lastmod: '2026-03-16',
+    })),
 ]
 
 const PAGES: Page[] = [...STATIC_PAGES, ...PE_PAGES, ...BLOG_PAGES, ...FRAMEWORK_PAGES, ...LOCAL_LLM_PAGES]
