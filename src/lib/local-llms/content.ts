@@ -8014,6 +8014,323 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ],
       },
     },
+    fr: {
+      theme: 'Meilleurs modèles',
+      title: 'Quantification LLM expliquée : Comment fonctionnent Q4_K_M, Q8_0 et les formats GGUF',
+      seoTitle: 'Quantification LLM expliquée: Q4_K_M, Q8_0, GGUF',
+      intro: 'La quantification LLM réduit les poids du modèle de nombres flottants 32 bits ou 16 bits à des entiers 4 bits ou 8 bits, économisant 50–75% de RAM avec une perte de qualité minimale. Q4_K_M est la quantification standard recommandée pour l\'inférence locale — elle réduit un modèle 7B de ~14 GB à ~4.5 GB tout en conservant 97–99% de la qualité originale du modèle sur les benchmarks standard.',
+      metaDescription: 'Quantification LLM expliquée: comment fonctionnent Q4_K_M, Q8_0 et GGUF, économies de RAM vs pertes de qualité et quelle quantification choisir. Avril 2026.',
+      publishDate: '2026-04-04',
+      readTime: '9 min de lecture',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Quantification LLM',
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Qu\'est-ce que la quantification LLM ?', anchor: '#what-is-quantization' },
+        { label: 'Différences entre Q4_K_M, Q5_K_M et Q8_0', anchor: '#quantization-levels' },
+        { label: 'Qu\'est-ce que le format GGUF ?', anchor: '#gguf-format' },
+        { label: 'Économies de RAM par niveau de quantification', anchor: '#ram-savings' },
+        { label: 'Quelle qualité perdez-vous ?', anchor: '#quality-loss' },
+        { label: 'Quelle quantification choisir ?', anchor: '#which-quantization' },
+        { label: 'Contexte régional', anchor: '#regional-context' },
+        { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+        { label: 'Lectures complémentaires', anchor: '#related-reading' },
+        { label: 'Questions fréquemment posées', anchor: '#faq' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'La quantification convertit les poids 16 bits en 4 bits ou 8 bits, réduisant la RAM de 50–75%.',
+            '**Q4_K_M** est le niveau standard recommandé — meilleur équilibre entre qualité et RAM pour le matériel grand public.',
+            'Un modèle 7B en FP16 = ~14 GB RAM. En Q4_K_M = ~4.5 GB. En Q8_0 = ~7 GB.',
+            'La perte de qualité en Q4_K_M est de 1–3% sur les benchmarks MMLU par rapport à FP16 — imperceptible dans la plupart des tâches pratiques.',
+            'GGUF est le format de fichier qui stocke les modèles quantifiés pour llama.cpp, Ollama et LM Studio.',
+          ],
+        },
+        whatIs: {
+          title: 'Qu\'est-ce que la quantification LLM et pourquoi est-elle importante ?',
+          content: [
+            'Un grand modèle de langage stocke ses connaissances sous forme de milliards de poids numériques. Par défaut, ils sont stockés sous forme de nombres flottants 16 bits (FP16) — deux octets par poids. Un modèle 7B a 7 milliards de poids, donc la taille du fichier FP16 est d\'environ 14 GB.',
+            'La quantification remplace ces flottants 16 bits par des entiers de précision inférieure. Avec la quantification 4 bits, chaque poids utilise 0.5 octet au lieu de 2 — réduisant la mémoire à ~3.5 GB pour les poids seuls. Avec la surcharge des métadonnées, un modèle 7B quantifié en Q4_K_M est d\'environ 4.5 GB.',
+            'C\'est important pour l\'inférence locale car le matériel grand public a une RAM limitée. Sans quantification, un modèle 7B nécessite 16 GB de RAM. Avec la quantification Q4_K_M, le même modèle s\'exécute sur 6 GB de RAM, le rendant accessible sur [la plupart des ordinateurs portables modernes](/local-llms/local-llm-on-laptop?lang=fr).',
+          ],
+        },
+        quantizationLevels: {
+          title: 'Comment Q4_K_M, Q5_K_M, Q8_0 et d\'autres niveaux diffèrent-ils ?',
+          content: 'Les noms de quantification suivent un schéma : Q{bits}_{variante}. Le nombre de bits est la précision des poids ; la variante affecte la façon dont la quantification est appliquée :',
+          rows: [
+            { 'Niveau': 'Q2_K', 'Bits': '2', 'RAM (7B)': '~2.7 GB', 'Perte de qualité': 'Élevée', 'Utilisation': 'RAM < 4 GB, perte de qualité acceptable' },
+            { 'Niveau': 'Q3_K_S', 'Bits': '3', 'RAM (7B)': '~3.3 GB', 'Perte de qualité': 'Modérée', 'Utilisation': 'RAM 4–5 GB' },
+            { 'Niveau': 'Q4_K_M', 'Bits': '4', 'RAM (7B)': '~4.5 GB', 'Perte de qualité': 'Faible (1–3%)', 'Utilisation': 'Par défaut pour la plupart des utilisateurs' },
+            { 'Niveau': 'Q5_K_M', 'Bits': '5', 'RAM (7B)': '~5.7 GB', 'Perte de qualité': 'Minimale (<1%)', 'Utilisation': '16 GB RAM, meilleure qualité désirée' },
+            { 'Niveau': 'Q6_K', 'Bits': '6', 'RAM (7B)': '~6.6 GB', 'Perte de qualité': 'Quasi sans perte', 'Utilisation': '16 GB RAM, tâches de codage/mathématiques' },
+            { 'Niveau': 'Q8_0', 'Bits': '8', 'RAM (7B)': '~7.7 GB', 'Perte de qualité': 'Négligeable', 'Utilisation': '16+ GB RAM, qualité maximale' },
+          ],
+          columns: ['Niveau', 'Bits', 'RAM (7B)', 'Perte de qualité', 'Utilisation'],
+        },
+        gguf: {
+          title: 'Qu\'est-ce que le format GGUF et comment se rapporte-t-il à la quantification ?',
+          content: [
+            'GGUF (GPT-Generated Unified Format) est le format de fichier utilisé pour stocker les poids LLM quantifiés pour l\'inférence locale. Il a été créé par le projet llama.cpp et remplace le format GGML plus ancien.',
+            'Un fichier GGUF contient : les poids du modèle quantifiés, toutes les métadonnées du modèle (architecture, tokenizer, longueur du contexte) et un numéro de version du format. Cette conception autonome signifie qu\'un seul fichier `.gguf` est tout ce qui est nécessaire pour exécuter le modèle — pas de fichiers tokenizer séparés, pas de JSON de configuration.',
+            'En avril 2026, GGUF est le format standard pour Ollama, LM Studio, Jan AI et GPT4All. Lorsque vous exécutez [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama?lang=fr), Ollama télécharge en interne un fichier GGUF. Lorsque LM Studio affiche les tailles de modèle, ce sont les tailles de fichier GGUF.',
+            'Le niveau de quantification fait partie du nom de fichier : `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` est une GGUF quantifiée en Q4_K_M de Llama 3.1 8B.',
+          ],
+        },
+        ramSavings: {
+          title: 'Combien de RAM la quantification économise-t-elle pour différentes tailles de modèles ?',
+          rows: [
+            { 'Taille du modèle': '3B', 'FP16': '~6 GB', 'Q8_0': '~3.8 GB', 'Q4_K_M': '~2 GB', 'Q3_K_S': '~1.6 GB' },
+            { 'Taille du modèle': '7B', 'FP16': '~14 GB', 'Q8_0': '~7.7 GB', 'Q4_K_M': '~4.5 GB', 'Q3_K_S': '~3.3 GB' },
+            { 'Taille du modèle': '13B', 'FP16': '~26 GB', 'Q8_0': '~14 GB', 'Q4_K_M': '~8.5 GB', 'Q3_K_S': '~6 GB' },
+            { 'Taille du modèle': '34B', 'FP16': '~68 GB', 'Q8_0': '~36 GB', 'Q4_K_M': '~22 GB', 'Q3_K_S': '~16 GB' },
+            { 'Taille du modèle': '70B', 'FP16': '~140 GB', 'Q8_0': '~70 GB', 'Q4_K_M': '~40 GB', 'Q3_K_S': '~30 GB' },
+          ],
+          columns: ['Taille du modèle', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+        },
+        qualityLoss: {
+          title: 'Quelle qualité perdez-vous vraiment avec la quantification ?',
+          content: [
+            'La perte de qualité de la quantification est mesurée en exécutant les mêmes benchmarks sur le modèle en précision complète et la version quantifiée, puis en comparant les scores. En avril 2026, les conclusions établies sont :',
+          ],
+          items: [
+            '**Q4_K_M vs FP16** : dégradation de 1–3% sur MMLU. Sur un modèle 7B marquant 73% en FP16, Q4_K_M marque 71–72%. Dans les tâches pratiques, cette différence est imperceptible.',
+            '**Q3_K_S vs FP16** : dégradation de 5–10%. Notable sur les tâches de raisonnement complexe et mathématiques. Un modèle qui résout correctement un problème mathématique en FP16 peut échouer en Q3_K_S.',
+            '**Q2_K vs FP16** : dégradation de 15–25%. Perte de qualité significative pour tous les types de tâches. Utilisez uniquement si la contrainte de RAM est absolue.',
+            '**Q8_0 vs FP16** : dégradation inférieure à 0.5% — pratiquement identique pour tous les objectifs pratiques.',
+            'Les variantes K_M (K-Quant Medium) utilisent une approche de précision mixte qui préserve mieux la qualité que la quantification Q4_0 plus ancienne au même nombre de bits. Préférez toujours Q4_K_M à Q4_0 lorsque les deux sont disponibles.',
+          ],
+        },
+        whichQuantization: {
+          title: 'Quel niveau de quantification devriez-vous utiliser ?',
+          items: [
+            '**4–8 GB de RAM disponibles** : Q4_K_M — le [meilleur équilibre pour le matériel limité](/local-llms/best-beginner-local-llm-models?lang=fr).',
+            '**8–16 GB de RAM disponibles** : Q5_K_M ou Q6_K — meilleure qualité avec un coussin de RAM confortable.',
+            '**16+ GB de RAM disponibles** : Q8_0 — qualité quasi sans perte, aucune raison d\'utiliser une quantification inférieure.',
+            '**GPU avec 24+ GB de VRAM** : Q8_0 ou Q6_K aux tailles de modèles qui s\'adaptent au VRAM.',
+            '**Traitement par lots / tâches nocturnes** : Q4_K_M — maximise le débit et la taille du modèle par RAM disponible.',
+            '**Tâches de codage ou mathématiques spécifiquement** : utilisez Q5_K_M ou supérieur — les effets de quantification sont plus visibles sur le raisonnement numérique et algorithmique précis.',
+          ],
+        },
+        regionalContext: {
+          title: 'Contexte régional pour la quantification LLM locale',
+          content: 'Les considérations de quantification varient selon la juridiction en raison des cadres réglementaires, de souveraineté et de conformité :',
+          items: [
+            '**UE/RGPD** — Les organisations opérant dans l\'UE préfèrent exécuter localement les modèles quantifiés pour éviter le transfert de données transfrontalier en vertu des articles 5 et 44 du RGPD. La quantification permet aux modèles 7B de s\'exécuter sur des appareils edge avec 6 GB de RAM, soutenant les principes RGPD de "minimisation des données". Pas besoin d\'API cloud pour l\'inférence. La CNIL (Commission Nationale de l\'Informatique et des Libertés) recommande l\'inférence locale lors du traitement de données professionnelles sensibles (données financières, médicales, juridiques).',
+            '**Japon/METI** — Le Ministère japonais de l\'économie, du commerce et de l\'industrie (METI) promeut la souveraineté de l\'IA intérieure. Les modèles quantifiés Qwen2.5 et Llama s\'exécutent sur l\'infrastructure d\'entreprise japonaise sans traitement tiers. La quantification Q4_K_M rend les modèles 13B+ viables sur les serveurs d\'entreprise 16 GB.',
+            '**Chine** — L\'exploitation locale est légalement requise pour la plupart des applications d\'IA en vertu de la réglementation CAC. La quantification soutient l\'exécution de grands modèles natifs chinois (Qwen2.5, Baichuan) sur du matériel national avec des coûts d\'infrastructure réduits. La quantification Q4_K_M et Q5_K_M permet la conformité on-premises locale.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Quelles sont les erreurs courantes avec la quantification LLM ?',
+          items: [
+            '**Télécharger Q4_0 au lieu de Q4_K_M** — Q4_0 est une méthode de quantification plus ancienne sans améliorations K-Quant. Q4_K_M est 5–8% meilleure qualité au même encombrement de RAM. Choisissez toujours Q4_K_M lorsque les deux sont disponibles.',
+            '**Supposer qu\'une quantification plus élevée signifie toujours une pire qualité** — Les chiffres sont contre-intuitifs : nombre Q plus élevé = plus de bits = meilleure qualité. Q8_0 est meilleur que Q4_K_M. Un modèle 70B Q4_K_M surpassera un modèle 7B Q8_0 sur la plupart des tâches.',
+            '**Ne pas vérifier l\'espace RAM avant de charger un modèle** — La taille du modèle n\'est pas le seul consommateur de RAM. L\'OS, le navigateur et les autres applications utilisent aussi RAM. Sur une machine 8 GB, un modèle 4.5 GB Q4_K_M 7B ne laisse que 3.5 GB pour le reste — ce qui est serré. Fermez les navigateurs avant de charger les modèles 7B sur les machines 8 GB. Règle : taille du fichier modèle + 2 GB surcharge OS + 1 GB marge = RAM requise minimum.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lectures complémentaires',
+          items: [
+            '[Guide du matériel LLM local](/local-llms/local-llm-hardware-setup?lang=fr) — Exigences GPU, CPU et RAM pour les modèles quantifiés.',
+            '[Meilleurs modèles LLM locaux pour débutants](/local-llms/best-beginner-local-llm-models?lang=fr) — Choisissez votre premier modèle avec recommandations de quantification.',
+            '[Petits modèles LLM pour matériel grand public](/local-llms/small-local-llm-models?lang=fr) — Modèles 3B et 7B qui s\'exécutent sur quantification.',
+            '[Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) — Télécharger et exécuter les modèles quantifiés GGUF.',
+            '[Exécuter un LLM local sur votre ordinateur portable](/local-llms/local-llm-on-laptop?lang=fr) — Installation pratique pour l\'inférence Q4_K_M.',
+            '[Dépannage du setup LLM local](/local-llms/troubleshooting-local-llm-setup?lang=fr) — Débogage des erreurs VRAM et quantification.',
+          ],
+        },
+        faqSection: {
+          title: 'Questions fréquemment posées sur la quantification LLM',
+          faqs: [
+            {
+              q: 'Ollama utilise-t-il automatiquement la meilleure quantification ?',
+              a: 'Oui — lorsque vous exécutez `ollama pull llama3.1:8b`, Ollama télécharge la variante Q4_K_M par défaut. Pour tirer une quantification spécifique, ajoutez le tag : `ollama pull llama3.1:8b-instruct-q5_K_M`. Les tags de quantification disponibles pour chaque modèle sont listés sur la page du modèle sur ollama.com/library.',
+            },
+            {
+              q: 'Puis-je quantifier un modèle moi-même au lieu de télécharger une version pré-quantifiée ?',
+              a: 'Oui — llama.cpp inclut un binaire `quantize` qui convertit les fichiers GGUF à n\'importe quel niveau de quantification pris en charge. Le processus prend 5–30 minutes selon la taille du modèle. La plupart des utilisateurs devraient télécharger les fichiers GGUF pré-quantifiés de Hugging Face plutôt que de quantifier eux-mêmes, car les résultats sont équivalents.',
+            },
+            {
+              q: 'La quantification affecte-t-elle la fenêtre de contexte du modèle ?',
+              a: 'Non — la quantification n\'affecte que la précision des poids du modèle, pas la longueur du contexte. Un modèle Llama 3.1 8B prend en charge 128K tokens, qu\'il soit quantifié en Q4_K_M ou exécuté en FP16. Cependant, traiter des contextes plus longs nécessite plus de RAM indépendamment de la quantification.',
+            },
+            {
+              q: 'Quelle est la différence entre la quantification GGUF et GPTQ ?',
+              a: 'GGUF (format llama.cpp) et GPTQ sont deux approches différentes. GGUF utilise K-Quants et s\'exécute sur CPU et GPU. GPTQ est uniquement GPU et nécessite PyTorch. Pour l\'inférence locale avec Ollama, LM Studio ou Jan AI, GGUF est le format correct. GPTQ est utilisé avec des frameworks d\'inférence GPU comme AutoGPTQ et vLLM.',
+            },
+            {
+              q: 'Y a-t-il une différence de qualité entre les modèles Q4_K_M de différents fournisseurs sur Hugging Face ?',
+              a: 'L\'algorithme de quantification est standardisé dans llama.cpp, donc les quantifications Q4_K_M du même modèle de base devraient être pratiquement identiques indépendamment du créateur du fichier GGUF. Cependant, certains fournisseurs appliquent des ajustements supplémentaires (quantification imatrix) qui améliorent la qualité.',
+            },
+            {
+              q: 'Qu\'est-ce que la quantification imatrix ?',
+              a: 'La quantification imatrix (matrice d\'importance) utilise les données d\'étalonnage pour assigner différents niveaux de précision aux poids selon leur importance pour la sortie du modèle. Les poids qui affectent le plus les prédictions sont quantifiés avec plus de bits ; les poids moins importants utilisent moins de bits. Résultat : meilleure qualité au même nombre de bits par rapport à la quantification uniforme.',
+            },
+            {
+              q: 'Quelle est la différence entre Q4_K_M et Q4_K_S ?',
+              a: 'Les deux sont une quantification 4 bits, mais K_M (Medium) et K_S (Small) diffèrent dans l\'allocation de mémoire par bloc de quantification. Q4_K_M utilise plus de métadonnées pour une meilleure reconstruction de qualité. Q4_K_S est plus agressif — économise 300–400 MB comparé à K_M mais avec perte de qualité 3–5%.',
+            },
+            {
+              q: 'Puis-je basculer entre les niveaux de quantification sans retélécharger le modèle ?',
+              a: 'Non — basculer entre les niveaux de quantification nécessite de télécharger un fichier GGUF différent ou de re-quantifier le modèle de base vous-même. Une fois qu\'un modèle est quantifié en Q4_K_M, vous ne pouvez pas le reconvertir en Q5_K_M sans le modèle FP16 original.',
+            },
+            {
+              q: 'Comment la quantification affecte-t-elle la vitesse d\'inférence ?',
+              a: 'La quantification augmente généralement la vitesse d\'inférence de 10–40% car charger et traiter les poids 4 bits est plus rapide que les flottants 16 bits. Un modèle 7B Q4_K_M s\'exécute à ~8–12 tok/s sur une CPU grand public ; le même modèle en FP16 s\'exécute à ~1–2 tok/s.',
+            },
+            {
+              q: 'Quel niveau de quantification Ollama utilise-t-il par défaut ?',
+              a: 'Ollama utilise par défaut Q4_K_M pour tous les modèles de sa bibliothèque. Lorsque vous exécutez `ollama pull llama3.1:8b`, vous téléchargez la variante Q4_K_M. Ce défaut équilibre bien la qualité et les exigences de RAM pour la plupart des utilisateurs. Pour tirer une quantification différente, ajoutez le tag : `ollama pull llama3.1:8b:q5_k_m` ou `ollama pull llama3.1:8b:q8_0`.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Documentation de quantification llama.cpp — github.com/ggerganov/llama.cpp/blob/master/examples/quantize/README.md',
+            'Discussion technique K-Quants — github.com/ggerganov/llama.cpp/pull/1684 (PR K-Quant original)',
+            'Spécification du format GGUF — github.com/ggerganov/ggml/blob/master/docs/gguf.md',
+            'Benchmarks de quantification Open LLM Leaderboard — huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Quantification LLM expliquée : Comment fonctionnent Q4_K_M, Q8_0 et les formats GGUF',
+        'description': 'La quantification LLM réduit les poids du modèle de nombres flottants 32 bits ou 16 bits à des entiers 4 bits ou 8 bits, économisant 50–75% de RAM avec une perte minimale.',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-04',
+        'url': 'https://www.promptquorum.com/local-llms/llm-quantization-explained?lang=fr',
+        'inLanguage': 'fr',
+        'proficiencyLevel': 'Intermediate',
+        'about': [
+          { '@type': 'Thing', 'name': 'Quantification LLM' },
+          { '@type': 'Thing', 'name': 'Quantification Q4_K_M' },
+          { '@type': 'Thing', 'name': 'Format GGUF' },
+          { '@type': 'Thing', 'name': 'Compression de modèle' },
+        ],
+        'author': {
+          '@type': 'Person',
+          'name': 'Hans Kuepper',
+          'url': 'https://www.promptquorum.com/about',
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+          'url': 'https://www.promptquorum.com',
+          'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' },
+        },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Niveaux de quantification LLM : Compromis RAM vs qualité',
+        'inLanguage': 'fr',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Q2_K',
+            'item': { '@type': 'Thing', 'name': 'Q2_K - Quantification 2 bits, compression maximale, perte de qualité significative' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Q3_K_S',
+            'item': { '@type': 'Thing', 'name': 'Q3_K_S - Quantification 3 bits, perte de qualité modérée, 4–5 GB RAM pour 7B' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Q4_K_M',
+            'item': { '@type': 'Thing', 'name': 'Q4_K_M - Quantification 4 bits (recommandée), perte de qualité 1–3%, 4.5 GB RAM pour 7B' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'Q5_K_M',
+            'item': { '@type': 'Thing', 'name': 'Q5_K_M - Quantification 5 bits, perte de qualité minimale, 5.7 GB RAM pour 7B' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 5,
+            'name': 'Q8_0',
+            'item': { '@type': 'Thing', 'name': 'Q8_0 - Quantification 8 bits, perte de qualité négligeable, 7.7 GB RAM pour 7B' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 6,
+            'name': 'FP16',
+            'item': { '@type': 'Thing', 'name': 'FP16 - Précision complète 16 bits, pas de perte de qualité, 14 GB RAM pour 7B' },
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'fr',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Ollama utilise-t-il automatiquement la meilleure quantification ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui — lorsque vous exécutez `ollama pull llama3.1:8b`, Ollama télécharge la variante Q4_K_M par défaut.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je quantifier un modèle moi-même ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui — llama.cpp inclut un binaire `quantize` qui convertit les fichiers GGUF.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La quantification affecte-t-elle la fenêtre de contexte du modèle ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Non — la quantification n\'affecte que la précision des poids du modèle, pas la longueur du contexte.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la différence entre GGUF et GPTQ ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF et GPTQ sont deux approches différentes. GGUF utilise K-Quants et s\'exécute sur CPU et GPU.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Y a-t-il une différence de qualité entre les modèles Q4_K_M ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'algorithme de quantification est standardisé, donc les quantifications Q4_K_M devraient être pratiquement identiques.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que la quantification imatrix ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'La quantification imatrix utilise les données d\'étalonnage pour assigner différents niveaux de précision aux poids.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la différence entre Q4_K_M et Q4_K_S ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Tous deux sont une quantification 4 bits mais Q4_K_M utilise plus de métadonnées pour une meilleure qualité.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je basculer entre les niveaux de quantification ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Non — basculer entre les niveaux nécessite de télécharger un fichier GGUF différent ou de re-quantifier.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment la quantification affecte-t-elle la vitesse d\'inférence ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'La quantification augmente généralement la vitesse d\'inférence de 10–40% car charger les poids 4 bits est plus rapide.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel niveau Ollama utilise-t-il par défaut ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama utilise par défaut Q4_K_M pour tous les modèles. Quand vous exécutez `ollama pull llama3.1:8b`, vous téléchargez Q4_K_M.' },
+          },
+        ],
+      },
+    },
   },
 
   'multilingual-local-llms': {
