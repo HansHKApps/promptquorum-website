@@ -1481,9 +1481,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Getting Started',
       title: 'How Do You Run Local LLMs on a Laptop: Performance, Thermals, and Model Selection',
-      seoTitle: 'Run Local LLMs on a Laptop: RAM, Speed, Thermal Throttling',
+      seoTitle: 'How to Run Local LLMs on Laptops: RAM, Speed, Thermals',
       intro: 'Running local LLMs on a laptop is practical with 8 GB of RAM and a modern CPU or Apple Silicon chip. The main constraints are RAM (limits model size), thermal throttling (reduces sustained speed), and battery drain (30–60% of battery per hour under load). The right model and quantization settings make the difference between a usable and an unusable experience.',
-      metaDescription: 'Run local LLMs on laptops: models that work, RAM requirements, thermal throttling fixes, battery optimization, quantization settings. Free beta — April 2026.',
+      metaDescription: 'Run 7B models on 8GB laptops. Practical RAM limits, thermal throttling fixes, battery optimization. Apple Silicon vs Windows. Q4_K_M quantization.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -1722,9 +1722,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     de: {
       theme: 'Erste Schritte',
       title: 'Wie führe ich lokale LLMs auf einem Laptop aus: Leistung, Thermalmanagement und Modellauswahl',
-      seoTitle: 'Führe lokale LLMs auf einem Laptop aus: RAM, Geschwindigkeit, Thermal-Drosseln',
+      seoTitle: 'Lokale LLMs auf Laptop: RAM, Tempo, thermisch',
       intro: 'Das Ausführen lokaler LLMs auf einem Laptop ist praktisch mit 8 GB RAM und einem modernen CPU oder Apple Silicon-Chip. Die wichtigsten Einschränkungen sind RAM (begrenzt die Modellgröße), Thermal-Drosseln (reduziert die Dauergeschwindigkeit) und Batterieentladung (30–60% Batterie pro Stunde unter Last). Das richtige Modell und die richtigen Quantisierungseinstellungen machen den Unterschied zwischen einer brauchbaren und einer unbrauchbaren Erfahrung.',
-      metaDescription: 'Führe lokale LLMs auf Laptops aus: welche Modelle funktionieren, RAM-Anforderungen, Thermal-Drosseln-Fixes, Batterieoptimierung, Quantisierungseinstellungen. Kostenlos — April 2026.',
+      metaDescription: '7B-Modelle auf 8GB-Laptops. Praktische RAM-Grenzen, Thermal-Fixes, Batterie-Tipps. Apple Silicon vs Windows. Q4_K_M-Quantisierung. Kostenlos.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -1758,9 +1758,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     fr: {
       theme: 'Premiers pas',
       title: 'Comment exécuter des LLM locaux sur un ordinateur portable: Performance, thermique et sélection de modèle',
-      seoTitle: 'Exécutez des LLM locaux sur un ordinateur portable: RAM, vitesse, limitation thermique',
+      seoTitle: 'LLM locaux sur laptop: RAM, vitesse, thermique',
       intro: 'L\'exécution de LLM locaux sur un ordinateur portable est pratique avec 8 GB de RAM et un processeur moderne ou une puce Apple Silicon. Les principales limitations sont la RAM (limite la taille du modèle), la limitation thermique (réduit la vitesse soutenue) et le drainage de la batterie (30-60% de batterie par heure sous charge). Le bon modèle et les bons paramètres de quantification font la différence entre une expérience utilisable et une expérience inutilisable.',
-      metaDescription: 'Exécutez des LLM locaux sur des ordinateurs portables: quels modèles fonctionnent, exigences RAM, correctifs de limitation thermique, optimisation de la batterie, paramètres de quantification. Gratuit — avril 2026.',
+      metaDescription: 'Modèles 7B sur laptops 8GB. Limites RAM pratiques, corrections thermiques, astuces batterie. Apple Silicon vs Windows. Quantification Q4_K_M. Gratuit.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -1780,9 +1780,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     ja: {
       theme: '入門',
       title: 'ノートパソコンでローカルLLMを実行する方法：パフォーマンス、熱管理、モデル選択',
-      seoTitle: 'ノートパソコンでローカルLLMを実行: RAM、速度、熱スロットリング',
+      seoTitle: 'ノートパソコンで動かすLLM：RAM・速度ガイド',
       intro: 'ノートパソコンでローカルLLMを実行することは、8GBのRAMと現代的なCPUまたはApple Siliconチップで実用的です。主な制約は、RAM（モデルサイズを制限）、熱スロットリング（持続速度を低下）、バッテリー消耗（負荷下で時間あたり30-60%）です。適切なモデルと量子化設定が、使用可能な経験と使用不可能な経験の違いを生み出します。',
-      metaDescription: 'ノートパソコンでローカルLLMを実行：どのモデルが機能するか、RAM要件、熱スロットリングの修正、バッテリー最適化、量子化設定。無料—2026年4月。',
+      metaDescription: '8GBノートで7Bモデルを実行。実用的なRAM制限、熱スロットリング対策、バッテリー最適化。Apple Silicon対Windows。Q4_K_M量子化で無料。',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -1802,9 +1802,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     zh: {
       theme: '入门',
       title: '如何在笔记本电脑上运行本地LLM：性能、散热和模型选择',
-      seoTitle: '在笔记本电脑上运行本地LLM：RAM、速度、热节流',
+      seoTitle: '笔记本运行本地LLM：RAM和速度完整指南',
       intro: '在笔记本电脑上运行本地LLM可实用，需要8GB RAM和现代CPU或Apple Silicon芯片。主要限制是RAM（限制模型大小）、热节流（降低持续速度）和电池耗电（负载下每小时30-60%）。正确的模型和量子化设置可以区分可用和不可用的体验。',
-      metaDescription: '在笔记本电脑上运行本地LLM：哪些模型可用、RAM要求、热节流修复、电池优化、量子化设置。免费—2026年4月。',
+      metaDescription: '8GB笔记本运行7B模型。实际RAM限制、散热节流解决方案、电池优化。Apple Silicon对比Windows。Q4_K_M量化设置。免费测试。',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -7419,6 +7419,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Level': 'Q8_0', 'Bits': '8', 'RAM (7B)': '~7.7 GB', 'Quality Loss': 'Negligible', 'Use When': '16+ GB RAM, maximum quality' },
           ],
           columns: ['Level', 'Bits', 'RAM (7B)', 'Quality Loss', 'Use When'],
+          image: 'quantization-levels-comparison-en.svg',
+          imageCaption: 'Quantization levels compared: from Q2_K (highest compression) to Q8_0 (highest quality). Q4_K_M is the recommended standard for most users.',
         },
         gguf: {
           title: 'What Is GGUF Format and How Does It Relate to Quantization?',
@@ -7428,6 +7430,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'As of April 2026, GGUF is the standard format for Ollama, LM Studio, Jan AI, and GPT4All. When you run [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama?lang=en), Ollama downloads a GGUF file internally. When LM Studio shows model file sizes, those are GGUF file sizes.',
             'The quantization level is part of the filename: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` is a Q4_K_M quantized GGUF of Llama 3.1 8B.',
           ],
+          image: 'gguf-format-structure-en.svg',
+          imageCaption: 'GGUF format contains quantized weights, model metadata (tokenizer, context length), and format version in a single self-contained file.',
         },
         ramSavings: {
           title: 'How Much RAM Does Quantization Save for Different Model Sizes?',
@@ -7439,6 +7443,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Model Size': '70B', 'FP16': '~140 GB', 'Q8_0': '~70 GB', 'Q4_K_M': '~40 GB', 'Q3_K_S': '~30 GB' },
           ],
           columns: ['Model Size', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+          image: 'ram-savings-by-model-size-en.svg',
+          imageCaption: 'RAM savings across model sizes: 3B through 70B models at FP16, Q8_0, Q4_K_M, and Q3_K_S quantization levels.',
         },
         qualityLoss: {
           title: 'How Much Quality Do You Actually Lose with Quantization?',
@@ -7734,6 +7740,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Ebene': 'Q8_0', 'Bits': '8', 'RAM (7B)': '~7,7 GB', 'Qualitätsverlust': 'Vernachlässigbar', 'Verwendung': '16+ GB RAM, maximale Qualität' },
           ],
           columns: ['Ebene', 'Bits', 'RAM (7B)', 'Qualitätsverlust', 'Verwendung'],
+          image: 'quantization-levels-comparison-de.svg',
+          imageCaption: 'Quantisierungsstufen im Vergleich: von Q2_K (höchste Komprimierung) bis Q8_0 (höchste Qualität). Q4_K_M ist der empfohlene Standard für die meisten Benutzer.',
         },
         gguf: {
           title: 'Was ist GGUF-Format und wie hängt es mit Quantisierung zusammen?',
@@ -7743,6 +7751,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Ab April 2026 ist GGUF das Standard-Format für Ollama, LM Studio, Jan AI und GPT4All. Wenn Sie [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama?lang=de) ausführen, lädt Ollama intern eine GGUF-Datei herunter. Wenn LM Studio Modellgrößen anzeigt, sind das GGUF-Dateigr öße.',
             'Die Quantisierungsstufe ist Teil des Dateinamens: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` ist eine Q4_K_M-quantisierte GGUF von Llama 3.1 8B.',
           ],
+          image: 'gguf-format-structure-de.svg',
+          imageCaption: 'GGUF-Format enthält quantisierte Gewichte, Modellmetadaten (Tokenizer, Kontextlänge) und Formatversion in einer eigenständigen Datei.',
         },
         ramSavings: {
           title: 'Wie viel RAM spart Quantisierung für verschiedene Modellgrößen?',
@@ -7754,6 +7764,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Modellgröße': '70B', 'FP16': '~140 GB', 'Q8_0': '~70 GB', 'Q4_K_M': '~40 GB', 'Q3_K_S': '~30 GB' },
           ],
           columns: ['Modellgröße', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+          image: 'ram-savings-by-model-size-de.svg',
+          imageCaption: 'RAM-Einsparungen über Modellgrößen: 3B bis 70B Modelle bei FP16, Q8_0, Q4_K_M und Q3_K_S Quantisierungsstufen.',
         },
         qualityLoss: {
           title: 'Wie viel Qualität verlieren Sie tatsächlich durch Quantisierung?',
