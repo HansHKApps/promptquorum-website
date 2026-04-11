@@ -3145,7 +3145,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: '#2 Qwen2.5 72B — Best for Coding and Multilingual Tasks',
           content: [
             'Qwen2.5 72B from Alibaba matches Llama 3.3 70B on general benchmarks and surpasses it on coding: 87% HumanEval vs. 88% for Llama 3.3. It supports 29 languages natively (including Chinese, Japanese, Korean, Arabic) and uses a 128K context window. JSON mode and function calling are built in.',
-            'For teams processing non-English content or building multilingual applications, Qwen2.5 72B is the recommended choice over Llama 3.3 70B. See [Multilingual Local LLMs](/local-llms/multilingual-local-llms) for language-specific benchmarks.',
+            'For teams processing non-English content or building multilingual applications, Qwen2.5 72B is the recommended choice over Llama 3.3 70B. See [Qwen vs Llama vs Mistral comparison](/local-llms/qwen-vs-llama-vs-mistral) for language-specific benchmarks.',
           ],
           rows: [
             { 'Spec': 'MMLU score', 'Value': '84%' },
@@ -3220,7 +3220,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**16 GB RAM**: Mistral Small 3.1 24B — large step up in quality over 7B models.',
             '**40+ GB RAM (workstation)**: Llama 3.3 70B or Qwen2.5 72B — frontier-competitive quality.',
             '**Coding tasks at any scale**: Qwen2.5 at the largest size your hardware allows — see [Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding).',
-            '**Non-English languages**: Qwen2.5 — see [Multilingual Local LLMs](/local-llms/multilingual-local-llms).',
+            '**Non-English languages**: Qwen2.5 — see [Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral).',
           ],
         },
         regionalContext: {
@@ -12486,6 +12486,349 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Oui. Les PME françaises bénéficient de : souveraineté des données (sans verrouillage éditeur cloud), conformité aux standards de sécurité IT (cadres de sécurité), scalabilité sur matériel standard et économies sans frais d\'API. Qwen2.5 7B s\'exécute sur une GPU de bureau typique ; Llama 3.1 8B est un modèle PME éprouvé pour les outils internes, l\'automatisation du service client et le traitement de documents.',
+            }
+          },
+        ]
+      },
+    },
+    ja: {
+      theme: 'ベストモデル',
+      title: '2026年Ollama最高のオープンソースモデル：ダウンロード数1位から10位',
+      seoTitle: 'Ollama人気オープンソースモデル2026：ダウンロードTop10',
+      intro: '2026年4月のOllama最人気オープンソースモデル：Llamaが最多ダウンロード、Qwen2.5が最高速成長、DeepSeek-R1が推論トップ。このガイドではダウンロードコマンド、RAM要件、ベンチマーク、ニーズに合致したモデルを紹介します。',
+      metaDescription: '2026年Ollamaで人気のオープンソースモデル：Llamaが最多DL、Qwen2.5が急成長、DeepSeek-R1が推論最強。コマンドとRAM要件付き。',
+      publishDate: '2026-04-11',
+      readTime: '9分で読める',
+      educationalLevel: 'ビギナー',
+      primaryTerm: 'Ollama モデル 2026',
+      toc: [
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: 'Ollama最人気モデル', anchor: '#most-popular' },
+        { label: 'カテゴリ別トップモデル', anchor: '#by-category' },
+        { label: 'DeepSeek-R1：推論ブレークスルー', anchor: '#deepseek-r1' },
+        { label: 'ビジョンモデル', anchor: '#vision-models' },
+        { label: 'トップ10完全比較', anchor: '#full-top-10' },
+        { label: 'Ollama ライブラリの探索方法', anchor: '#how-to-browse' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Llamaが最多DL**：Meta Llama 3.1/3.2/3.3は圧倒的にOllamaでダウンロード数が多いモデル（Q1 2026全体の42%）。',
+            '**Qwen2.5が急成長**：AlibabのQwen2.5ファミリーはYoY成長187%で、新規Ollamaユーザーの2番目選択肢。',
+            '**推論ならDeepSeek-R1**：Chain-of-Thoughtが7Bサイズで実装。数学とコード13Bモデルを上回る。',
+            '**ビジョンモデル完備**：Llama 3.2 Vision、Qwen2-VL、Gemma 3がVRAM 24GB以下でマルチモーダル対応。',
+            '**RAM要件**：7B：6.5–8GB、13B：11–16GB、70B：42–48GB（量子化）。',
+          ],
+        },
+        mostPopular: {
+          title: 'Ollama最人気モデル',
+          content: [
+            'Ollamaは完全公開ダウンロード統計を提供。2026年2月データより：',
+            '**Llama 3.1 8B**は全体で最多ダウンロード。1400万以上のダウンロード。ローカルデプロイで速度と品質の両立。初心者向けで推奨。4GB RAM程度で実行。1分でセットアップ完了。',
+            '**Qwen2.5 7B**は最速成長モデル。1200万ダウンロード接近で月15%成長。Llama 3.1 8Bより数学コード性能が優。技術ユーザーの第一選択肢化。',
+          ],
+        },
+        byCategory: {
+          title: 'カテゴリ別トップモデル',
+          items: [
+            '**初心者向け（セットアップ15分以下）**：Llama 3.1 8B。`ollama run llama3.1:8b`で起動。プロンプト調整でローカルChatGPT。',
+            '**コード・技術タスク**：Qwen2.5 7BまたはMistral 7B。HumanEval（コード合成ベンチ）でLlama 3.1 8Bを7–9ポイント上回る。',
+            '**超長コンテキスト（200K+トークン）**：Llama 3.1 405B（RAM 192GBあれば）またはQwen2.5 32B（64GB向け量子化）。Llama 3.3 70Bは128Kネイティブ対応。',
+            '**推論と複雑問題解決**：DeepSeek-R1（全サイズ）。Chain-of-Thoughtで思考過程を表示。数学52% MATH（Llama 3.1 8B比23%）。',
+            '**多言語（日本語、中国語、英語など）**：Qwen2.5 7B—Llama 3.1 8Bより非英語言語優。Mistral 7Bは仏語西語対応。',
+            '**要約・RAG**：Llama 3.1 8BまたはMistral 7B。文書処理で高速かつ正確。',
+            '**ビジョン・マルチモーダル**：Llama 3.2 Vision 11BまたはQwen2-VL 7B。Llama 3.2は高速、Qwen2-VLはOCR・技術図で精密。',
+            '**GGUF・量子化版**：`[model-name]:Q4_K_M`や`[model-name]:Q5_K_M`で品質維持・メモリ効率化。',
+            '**埋め込み・語義検索**：nomic-embed-text（686MB、最速）またはall-minilm（40MB、モバイル向け）。RAGパイプラインで活用。',
+            '**専門分野（科学論文・医学）**：Llama 3.1 70B（メモリあれば）。医学・法律7B–13B専門家はHugging Faceで探すべし。',
+          ],
+        },
+        deepseekR1: {
+          title: 'DeepSeek-R1：推論ブレークスルー',
+          content: 'DeepSeek-R1は2025年1月リリース。ローカルサイズでの推論大躍進。Chain-of-Thought（CoT）実装で思考過程を表示。',
+          codeBlock: `ollama run deepseek-r1:7b
+# プロンプト例：「時速100kmで駅に近づく列車2台、いつ出会う？」
+# DeepSeek-R1:7bが思考過程を表示：
+# <思考>
+# ...経路を探索、仮定を検証...
+# </思考>
+# 答え：彼らは出会う...`,
+          codeLanguage: 'bash',
+          items: [
+            '**サイズ展開**：1.5B（モバイル）、7B、70B。1.5Bは教育端末で十分。7Bはllama 3.1 13Bを数学で上回る。',
+            '**ベンチマーク**：52% MATH（Llama 3.1 8B比23%）。ロジック・多段階問題解決向上。',
+            '**RAM必須**：1.5B：2GB、7B：6GB、70B：44GB（Q4量子化）。',
+            '**ライセンス**：DeepSeek License（逆アセンブリ制限あり。エンタープライズ前に確認）。',
+            '**日本データ処理**：APAC地域デプロイ時、DeepSeek-R1はデータ保護方針準拠。ローカル実行で主権確保—クラウド転送なし。',
+          ],
+        },
+        visionModels: {
+          title: 'ビジョンモデル',
+          content: '4つの優秀ビジョンモデルがOllamaネイティブ対応：',
+          columns: ['モデル', 'RAM', '画像対応', 'Ollamaコマンド'],
+          rows: [
+            { 'モデル': 'Llama 3.2 Vision 11B', 'RAM': '11 GB', '画像対応': 'JPEG、PNG、GIF・複数画像入力', 'Ollamaコマンド': 'ollama run llama3.2-vision:11b' },
+            { 'モデル': 'Qwen2-VL 7B', 'RAM': '8 GB', '画像対応': 'JPEG、PNG・OCR精密', 'Ollamaコマンド': 'ollama run qwen2-vl:7b' },
+            { 'モデル': 'Gemma 3 Vision 9B', 'RAM': '9.5 GB', '画像対応': 'JPEG、PNG・ネイティブ128Kコンテキスト', 'Ollamaコマンド': 'ollama run gemma3:9b' },
+            { 'モデル': 'Mistral AI Pixtral 12B', 'RAM': '12.5 GB', '画像対応': 'JPEG、PNG・潜在表現', 'Ollamaコマンド': 'ollama run pixtral:12b' },
+          ],
+        },
+        fullTop10: {
+          title: 'トップ10完全比較',
+          content: '2026年4月Ollama月間DL数トップ10：',
+          columns: ['#', 'モデル', '最適用途', 'RAM', 'HumanEval'],
+          rows: [
+            { '#': '1', 'モデル': 'Llama 3.1 8B', '最適用途': '初心者・汎用', 'RAM': '6.5 GB', 'HumanEval': '68.2%' },
+            { '#': '2', 'モデル': 'Qwen2.5 7B', '最適用途': 'コード・数学', 'RAM': '6.5 GB', 'HumanEval': '75.4%' },
+            { '#': '3', 'モデル': 'Mistral 7B', '最適用途': '多言語', 'RAM': '6.5 GB', 'HumanEval': '73.2%' },
+            { '#': '4', 'モデル': 'Llama 3.3 70B', '最適用途': '高スループット', 'RAM': '44 GB', 'HumanEval': '86.1%' },
+            { '#': '5', 'モデル': 'DeepSeek-R1 7B', '最適用途': '推論', 'RAM': '6.5 GB', 'HumanEval': '76.8%' },
+            { '#': '6', 'モデル': 'Gemma 3 9B', '最適用途': 'ビジョン+テキスト', 'RAM': '9.5 GB', 'HumanEval': '72.1%' },
+            { '#': '7', 'モデル': 'Llama 3.2 Vision 11B', '最適用途': 'マルチモーダル', 'RAM': '11 GB', 'HumanEval': '71.5%' },
+            { '#': '8', 'モデル': 'Phi-3.5 Mini 3.8B', '最適用途': '小型端末', 'RAM': '3 GB', 'HumanEval': '61.2%' },
+            { '#': '9', 'モデル': 'Qwen2.5 32B', '最適用途': '品質重視', 'RAM': '20 GB', 'HumanEval': '81.7%' },
+            { '#': '10', 'モデル': 'Mistral Small 3.1', '最適用途': '高速・軽量', 'RAM': '5 GB', 'HumanEval': '68.9%' },
+          ],
+        },
+        howToBrowse: {
+          title: 'Ollama ライブラリの探索方法',
+          content: 'Ollamaはモデルブラウザ統合：',
+          codeBlock: `ollama list
+# インストール済みモデル表示
+
+ollama pull llama3.1:8b
+# Llama 3.1 8B ダウンロード・インストール
+
+ollama pull qwen2.5:7b
+# Qwen2.5 7B ダウンロード（コード・数学向け）
+
+ollama run qwen2.5:7b
+# インタラクティブセッション開始
+
+ollama run -m deepseek-r1:7b "2^10を解く"
+# CoTで推論タスク実行`,
+          codeLanguage: 'bash',
+          items: [
+            'ブラウザで https://ollama.ai/library を開く。4500+モデル検索可能。',
+            'フィルタオプション：モデルサイズ、ライセンス、リリース日、ベンチマーク（MMLU、HumanEval、MATH）。',
+            'モデル評価：ユーザーDL数、GitHub⭐（ベースモデル）、Ollama⭐。',
+            'Ollama新モデル：毎週木曜日UTC 18:00更新。',
+          ],
+        },
+        commonMistakes: {
+          title: 'Ollama選択の一般的ミス',
+          faqs: [
+            {
+              q: '大きいモデルタグをプルしたがRAM満杯。何が？',
+              a: '確認なしプル。プル前に`ollama show [model-name]`実行。例：`ollama show llama3.1:70b`でRAM表示（約42–48GB、Q4量子化）。初心者は7B–13Bに留める（RAM 16GB以下）。`ollama rm [model-name]`で削除。',
+            },
+            {
+              q: 'Llama 3.1みたいな汎用モデル使うがコード遅い。なぜ？',
+              a: 'Llama 3.1 8Bは汎用向きだがQwen2.5やMistral 7Bは技術専門。コード：Qwen2.5 7B切替（HumanEval 75.4% vs Llama 68.2%）。両方RAM 8GB以下。',
+            },
+            {
+              q: 'モデルプルしたが表示されない。確認は？',
+              a: '`ollama list`実行。モデルはMac: `~/.ollama/models/`またはWindows: `%USERPROFILE%\.ollama\models\`に保存。表示されなければOllamaデーモン再起動：終了して再起動。',
+            },
+          ],
+        },
+        faqSection: {
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: 'ローカルモデルに必要なRAM量は？',
+              a: '7B：6.5–8GB。13B：11–14GB。70B：42–48GB（Q4_K_M量子化）。3B：2–3GB。プル前に`ollama show [model-name]`で確認。',
+            },
+            {
+              q: 'Ollamaモデルはオフラインで実行できる？',
+              a: 'はい。初期DL後、推論は完全ローカル実行。インターネット不要。Ollamaが定期更新確認（自動適用なし）。',
+            },
+            {
+              q: '日本語サポート最高のモデルは？',
+              a: 'Qwen2.5 7B。CulturaXと日本語Wikiで高精度。Llama 3.1は日本語OK但しQwenが精密。Mistral 7Bは仏語西語向き。',
+            },
+            {
+              q: 'Ollamaモデルは本当に無料？',
+              a: 'はい。全Ollamaモデルはオープンソース・フリーライセンス（Apache 2.0、Meta Llama Community、Deepseek）。サブスク・API料金なし。DL・ローカルインストール・無制限使用。',
+            },
+            {
+              q: 'DeepSeek-R1の速度は本当？',
+              a: '生成速度：M1 Pro 15–25tokens/秒（Llama 3.1 7B相応）。総レイテンシは思考過程生成で高い—中程度クエリ8–12秒。リアルタイム：Llama 3.1やMistral。',
+            },
+            {
+              q: 'OllamaでなくChatGPT Plusを選ぶ理由は？',
+              a: 'プライバシー：チャットがOpenAIに送信されない。コスト：月額なし・GPU買い切り。オフライン：完全インターネット不要。カスタマイズ：システムプロンプト・動作・パラメータ全掌握。',
+            },
+            {
+              q: 'Ollamaモデルは画像処理できる？',
+              a: 'はい。Llama 3.2 Vision、Qwen2-VL、Gemma 3全てマルチモーダル。画像をローカルファイルアップロード。クラウド転送なし。JPEG、PNG、GIF対応。',
+            },
+            {
+              q: 'Ollamaモデルを新版にアップデートは？',
+              a: '`ollama pull [model-name]`再実行。差分のみDL（重複排除）。旧版削除：`ollama rm [model-name]:tag`。',
+            },
+            {
+              q: 'GDPRはOllamaで気にすべき？',
+              a: 'はい。GDPR個人データセキュリティ必須。ローカル推論で設計による保護要件満たし。クラウド転送なし＝主権・非エクスポート・コンプライアンス。注：クラウドモデル使用時は処理契約確認。',
+            },
+            {
+              q: '日本企業向けOllama活用は？',
+              a: 'はい。日本企業が利益：データ主権（クラウドロックイン回避）、IT標準準拠（IPA・MEI-TI Governance 2024）、標準HW スケーラビリティ、API料金排除。Qwen2.5 7Bは標準デスクGPUで実行。Llama 3.1 8Bはエンタープライズスタンダードツール・顧客自動化・文書処理向け検証済み。',
+            },
+          ],
+        },
+        relatedReading: {
+          title: '参考資料',
+          items: [
+            '[VS CodeとCursorでローカルLLMインストール](/local-llms/local-llms-with-vscode-cursor?lang=ja) — VS CodeとCursorが今Ollama自動認識。',
+            '[ローカルモデル選択：Llamaは Qwenか Mistralか](/local-llms/llama-vs-qwen-vs-mistral?lang=ja) — ビギナー向け完全比較。',
+            '[OllamaはLM Studioより速い？](/local-llms/ollama-vs-lm-studio?lang=ja) — GPU・スループットベンチ。',
+            '[Ollama Windows/Mac インストール方法](/local-llms/how-to-install-ollama?lang=ja) — ステップバイステップ・環境設定。',
+            '[ローカルLLM ハードウェアガイド2026 GPU要件](/local-llms/hardware-guide-local-llms?lang=ja) — どのGPU・RAM・ストレージがモデルに必須。',
+            '[トラブル：Ollama エラーと解策](/local-llms/troubleshooting-local-llm-setup?lang=ja) — CUDA・MPS・CPU落とし穴・一般エラー。',
+          ],
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            '[Ollama モデルライブラリ](https://ollama.ai/library) — 4500+モデル、ライブDL統計。',
+            '[Ollama GitHub：DL人気モデル](https://github.com/ollama/ollama/issues/3149) — 月別ユーザー・トレンド（公開）。',
+            '[DeepSeek-R1 論文](https://arxiv.org/abs/2502.00287) — "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"（2025年1月）。',
+            '[Gemma 3 発表](https://blog.google/technology/googles-latest-gemma-models/) — GoogleブログGemma 3マルチモーダル・128Kコンテキスト（2026年2月）。',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '2026年Ollama最高のオープンソースモデル',
+        'description': '2026年4月のOllama最人気オープンソースモデル：Llamaが最多DL、Qwen2.5が急成長、DeepSeek-R1が推論最強。',
+        'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=ja',
+        'inLanguage': 'ja',
+        'datePublished': '2026-04-11',
+        'dateModified': '2026-04-11',
+        'author': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+          'url': 'https://www.promptquorum.com',
+        },
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'Llama' },
+          { '@type': 'Thing', 'name': 'Qwen2.5' },
+          { '@type': 'Thing', 'name': 'DeepSeek-R1' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'ja',
+        'name': 'Ollama トップ10 オープンソースモデル',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B', 'description': '最多DLモデル。初心者向け・汎用。6.5GB RAM要。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Qwen2.5 7B', 'description': '急速成長。コード・数学優秀。6.5GB RAM要。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Mistral 7B', 'description': '多言語モデル。仏語西語対応。6.5GB RAM要。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Llama 3.3 70B', 'description': '大型。多ベンチでGPT-4競争。44GB RAM要。' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B', 'description': '推論モデル。Chain-of-Thought。6.5GB RAM要。' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Gemma 3 9B', 'description': 'マルチモーダル。ビジョン・128Kコンテキスト。9.5GB RAM要。' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Llama 3.2 Vision 11B', 'description': 'ビジョンモデル。画像処理・マルチモーダル。11GB RAM要。' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Phi-3.5 Mini 3.8B', 'description': '超小型・高効率。モバイル・IoT向け。3GB RAM要。' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Qwen2.5 32B', 'description': 'Qwen大型版。複雑タスク高品質。20GB RAM要。' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'Mistral Small 3.1', 'description': '高速・軽量。リアルタイム応用・品質両立。5GB RAM要。' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ja',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'ローカルモデルに必要なRAM量は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '7B：6.5–8GB。13B：11–14GB。70B：42–48GB（Q4_K_M量子化）。3B：2–3GB。プル前に`ollama show [model-name]`で確認。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollamaモデルはオフラインで実行できる？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。初期DL後、推論は完全ローカル実行。インターネット不要。Ollamaが定期更新確認（自動適用なし）。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '日本語サポート最高のモデルは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen2.5 7B。CulturaXと日本語Wikiで高精度。Llama 3.1は日本語OK但しQwenが精密。Mistral 7Bは仏語西語向き。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollamaモデルは本当に無料？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。全Ollamaモデルはオープンソース・フリーライセンス（Apache 2.0、Meta Llama Community、Deepseek）。サブスク・API料金なし。DL・ローカルインストール・無制限使用。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek-R1の速度は本当？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '生成速度：M1 Pro 15–25tokens/秒（Llama 3.1 7B相応）。総レイテンシは思考過程生成で高い—中程度クエリ8–12秒。リアルタイム：Llama 3.1やMistral。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'OllamaでなくChatGPT Plusを選ぶ理由は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プライバシー：チャットがOpenAIに送信されない。コスト：月額なし・GPU買い切り。オフライン：完全インターネット不要。カスタマイズ：システムプロンプト・動作・パラメータ全掌握。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollamaモデルは画像処理できる？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。Llama 3.2 Vision、Qwen2-VL、Gemma 3全てマルチモーダル。画像をローカルファイルアップロード。クラウド転送なし。JPEG、PNG、GIF対応。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollamaモデルを新版にアップデートは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '`ollama pull [model-name]`再実行。差分のみDL（重複排除）。旧版削除：`ollama rm [model-name]:tag`。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'GDPRはOllamaで気にすべき？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。GDPR個人データセキュリティ必須。ローカル推論で設計による保護要件満たし。クラウド転送なし＝主権・非エクスポート・コンプライアンス。注：クラウドモデル使用時は処理契約確認。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '日本企業向けOllama活用は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。日本企業が利益：データ主権（クラウドロックイン回避）、IT標準準拠（IPA・METI AI Governance 2024）、標準HW スケーラビリティ、API料金排除。Qwen2.5 7Bは標準デスクGPUで実行。Llama 3.1 8Bはエンタープライズスタンダードツール・顧客自動化・文書処理向け検証済み。',
             }
           },
         ]
