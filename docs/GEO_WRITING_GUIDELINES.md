@@ -1253,6 +1253,283 @@ Use this checklist before committing any new or edited article:
 
 ---
 
+## MANDATORY RULES: Schema, Links, Regional Context & Format
+
+### RULE: SCHEMA REQUIREMENTS (Rule 5 — Expanded)
+
+**Every page published MUST include all applicable JSON-LD schema types in the `<head>` before `npm run build`.**
+
+**Missing schema = automatic AEO/SEO failure regardless of content quality.**
+
+#### Required on ALL Pages: TechArticle Schema
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "[exact H1 text]",
+  "description": "[meta description]",
+  "datePublished": "[YYYY-MM-DD]",
+  "dateModified": "[YYYY-MM-DD]",
+  "author": {
+    "@type": "Person",
+    "name": "Hans Kuepper",
+    "url": "https://www.promptquorum.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PromptQuorum",
+    "url": "https://www.promptquorum.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.promptquorum.com/logo.svg"
+    }
+  },
+  "proficiencyLevel": "Beginner OR Intermediate OR Advanced",
+  "about": [
+    {"@type": "Thing", "name": "[primary topic]"},
+    {"@type": "Thing", "name": "[secondary topic]"},
+    {"@type": "Thing", "name": "[tool or model name]"}
+  ]
+}
+```
+
+#### Required on ALL Pages: Speakable Specification
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".article-intro"]
+  }
+}
+```
+
+**Add `className="article-intro"` to the first paragraph after H1 on every page.** This is the element speakable targets and the element Google/Perplexity/ChatGPT use as the canonical page summary.
+
+**Add `<time dateTime="YYYY-MM-DD">` wrapping the date string on every page:**
+```html
+<time dateTime="2026-04-07">Last updated: April 2026</time>
+```
+
+#### Required on ALL Pages: FAQPage Schema (Minimum 8 Questions)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "[question text — match H3 exactly]",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "[answer text — minimum 40 words]"
+      }
+    },
+    // repeat for all FAQ questions (minimum 8)
+  ]
+}
+```
+
+#### Required on Pages WITH Comparison Tables: ItemList Schema
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "[descriptive table name]",
+  "numberOfItems": [integer matching table rows],
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "[item name]",
+      "description": "[2–3 sentences: key specs, use case, command if applicable]"
+    }
+    // one entry per table row
+  ]
+}
+```
+
+#### Required on Pages WITH Step-by-Step Instructions: HowTo Schema
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "[How to ... title]",
+  "totalTime": "PT[N]M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "[step title — imperative verb]",
+      "text": "[step description]"
+    }
+    // 4–7 steps minimum
+  ]
+}
+```
+
+**Validation:**
+- After deployment, test at: https://search.google.com/test/rich-results
+- Page MUST show: FAQ, Article, BreadcrumbList (if applicable)
+- ❌ FAIL if rich results test returns **0 detected items**
+
+---
+
+### RULE: INTERNAL LINKS (Mandatory on Every Page)
+
+**Every page MUST have:**
+
+- Minimum **3 internal links in body text** (not counting Related Reading)
+- **Related Reading section with 5–6 links** (minimum 5)
+- **All slugs verified as live** before publish (no 404s, no "Coming Soon" placeholders)
+- **Zero broken links** to under-construction pages
+
+#### Anchor Text Rules (Critical)
+
+| ❌ WRONG | ✅ RIGHT |
+|---|---|
+| "click here" | "Learn how RAG systems expand attack surface" |
+| "here" | "See the full VRAM formula in the hardware guide" |
+| "read more" | "Read the official Ollama installation docs" |
+| "learn more" | "Understand how imatrix quantization improves quality" |
+| "related" | "[Model comparison: GPT-4o vs Claude 4.6](/compare)" |
+
+**Rule:** Anchor text MUST contain the target page's primary keyword or a clear description of what the user will find.
+
+#### Forbidden Link Targets
+
+Never link to these pages (they are "soon" / under construction):
+- `/local-llms/multilingual-local-llms`
+- `/local-llms/local-llm-gpu-buying-guide`
+- `/local-llms/best-local-llm-frontends`
+
+---
+
+### RULE: REGIONAL CONTEXT (Mandatory on /local-llms/* Pages)
+
+**Every page in `/local-llms/*` MUST include a regional context section** covering EU, Japan, and China.
+
+**Section requirements:**
+
+- **Placement:** After main content sections, before Common Mistakes
+- **Title:** `## [Topic]: Regional Context` OR `## [Topic] in EU, Japan, and China`
+- **Minimum coverage:** All 3 regions required (EU, Japan, China)
+- **Content per region:** Minimum 2–3 sentences with legal/regulatory reference
+
+#### EU Section (Mandatory)
+
+Include:
+- **GDPR article reference** (Articles 5, 44, or Data Processing Agreement)
+- **Germany-specific note** (German BSI/BfDI data protection authority where applicable)
+- **Compliance posture:** How local inference addresses GDPR data minimization principles
+- Example: "EU organizations prefer local inference to avoid cross-border data transfers under GDPR Articles 5 and 44."
+
+#### Japan Section (Mandatory)
+
+Include:
+- **METI AI governance reference** (Ministry of Economy, Trade and Industry AI sovereignty program)
+- **On-premises deployment note** for enterprise infrastructure
+- **Model availability:** Qwen2.5, Llama models available on domestic servers
+- Example: "Japan's METI promotes domestic AI sovereignty. Q4_K_M quantization enables 13B+ models on 16GB corporate servers."
+
+#### China Section (Mandatory)
+
+Include:
+- **Data Security Law reference** (数据安全法 — Data Security Law, or CAC regulations if relevant)
+- **Qwen2.5 / Baichuan recommendation** (Chinese-native models required for compliance)
+- **On-premises compliance:** Legal requirement for local operation under CAC rules
+- Example: "Local operation is legally required under CAC regulations. Quantization supports running Qwen2.5 on domestic hardware."
+
+**FAIL condition:**
+→ Section missing entirely  
+→ Fewer than 2 of 3 regions present  
+→ No legal/regulatory reference in any region  
+
+---
+
+### RULE: COMMON MISTAKES FORMAT (Rule 25 — Mandatory on How-To & Technique Articles)
+
+**Common Mistakes section MUST use bullet format, NOT H3 subheadings.**
+
+#### ✅ CORRECT FORMAT
+
+```markdown
+## Common Mistakes When Using Quantization
+
+- **Downloading Q4_0 instead of Q4_K_M:** Q4_0 is an older format without K-Quant improvements. Q4_K_M is 5–8% better quality at the same RAM footprint. When both are available, always choose Q4_K_M.
+
+- **Assuming higher quantization always means worse quality:** Higher Q number = more bits = better quality. Q8_0 is better than Q4_K_M. A Q4_K_M 70B model will outperform a Q8_0 7B model.
+
+- **Not checking RAM headroom:** Model file size isn't the only RAM consumer. Rule: model file size + 2 GB OS overhead + 1 GB headroom = minimum required RAM.
+```
+
+#### ❌ WRONG FORMAT
+
+```markdown
+## Common Mistakes When Using Quantization
+
+### Mistake 1: Wrong Quantization Format
+Explanation text...
+
+### Mistake 2: Quality Expectations
+Explanation text...
+```
+
+**Requirements:**
+- Minimum **3 mistakes** (recommended 5)
+- **Bold mistake title** as first element
+- **2+ sentence explanation** including correct behavior
+- **Bullet format** (no H3 subheadings — breaks AEO parsing)
+
+---
+
+### RULE: SOURCES & FURTHER READING FORMAT (Rule 10 — Mandatory on Every Page)
+
+**Every page MUST have a Sources section with real, clickable URLs.**
+
+#### ✅ CORRECT FORMAT
+
+```markdown
+## Sources
+
+- **llama.cpp Quantization Documentation**
+  https://github.com/ggerganov/llama.cpp/blob/master/examples/quantize/README.md
+  — Explains GGUF format, K-Quant variants, quantize binary tool.
+
+- **Open LLM Leaderboard**
+  https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard
+  — Real benchmarks (MMLU, HumanEval, MATH) for ranked models. Updated quarterly.
+
+- **Ollama Model Library**
+  https://ollama.com/library
+  — Official list of 500+ quantized GGUF models. Shows available quantization variants per model.
+```
+
+#### ❌ WRONG FORMAT
+
+```markdown
+## Sources
+
+- "Title only (no URL)"
+- "Generic description with no source URL"
+- Raw URL without context
+```
+
+**Requirements:**
+- Minimum **3 sources** per page
+- **Clickable URLs** (Markdown link format or full URL)
+- **Description:** 1 sentence explaining what the source provides
+- **Prefer:** Official documentation, GitHub repos, arXiv papers, official model cards, Hugging Face
+- **Avoid:** Blog posts, forums, aggregator sites (acceptable as supplementary only)
+
+---
+
 ## FINAL VERDICT: Decision Framework
 
 ### Use This Guide When...

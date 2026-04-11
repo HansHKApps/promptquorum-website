@@ -168,6 +168,52 @@ These items verify the article was scoped correctly BEFORE writing.
 - [ ] **No schema validation errors:** (Rule 5)
   - Test via: Google Rich Results Test (https://search.google.com/test/rich-results)
 
+#### **PASS/FAIL: Comprehensive Schema Checks**
+
+All 4 JSON-LD blocks MUST be present in `<head>` before `npm run build`. Missing any schema = automatic FAIL regardless of content quality.
+
+| Check | How to Verify | Pass Condition | Fail Condition |
+|---|---|---|---|
+| **FAQPage Schema** | View source → search `"@type": "FAQPage"` | Present in `<head>` with `mainEntity` array | Missing entirely OR fewer than 8 questions |
+| **TechArticle Schema** | View source → search `"@type": "TechArticle"` | Present in `<head>` with headline, datePublished, dateModified | Missing or incomplete fields |
+| **ItemList Schema** | View source → search `"@type": "ItemList"` | Present IF page has comparison table; `numberOfItems` matches actual rows | Missing when table exists OR count mismatch |
+| **Speakable Schema** | View source → search `"speakable"` | Present in TechArticle; targets `.article-intro` | Missing or wrong CSS selector |
+| **`<time datetime>` Element** | View source → search `datetime=` | Wraps date element with valid ISO 8601 format | Missing or malformed (e.g., `datetime=""`) |
+| **`className="article-intro"`** | View source → search `article-intro` | Applied to first paragraph after H1 | Missing or applied to wrong element |
+
+**Rich Results Validation:**
+- After deployment, validate at: https://search.google.com/test/rich-results
+- Page MUST show: FAQ (if FAQ section exists), Article, Breadcrumbs
+- ❌ FAIL if rich results test returns **0 detected items**
+
+**Per-Schema Details:**
+
+**FAQPage (if FAQ section exists):**
+- Minimum 8 Q&A pairs in `mainEntity` array
+- Each Q in natural language (e.g., "Can I quantize models myself?")
+- Each A minimum 40 words or 2–3 sentences
+- Match `mainEntity` questions to actual FAQ section headings
+
+**TechArticle (always):**
+- `@type`: "TechArticle"
+- `headline`: Must match H1 text exactly
+- `datePublished`: ISO 8601 format (e.g., "2026-04-04")
+- `dateModified`: ISO 8601 format (today or last edit date)
+- `author.name`: "Hans Kuepper"
+- `proficiencyLevel`: "Beginner" OR "Intermediate" OR "Advanced"
+- `about`: Array of 3+ topics/tools mentioned in article
+
+**ItemList (if comparison table exists):**
+- `@type`: "ItemList"
+- `numberOfItems`: Must equal actual table rows
+- `itemListElement`: Array with position, name, description per item
+- Each item description: 2–3 sentences including specs, use case, or command
+
+**Speakable (always):**
+- `@type`: "SpeakableSpecification"
+- `cssSelector`: `[".article-intro"]` (targets first paragraph after H1)
+- This is the element Google/Perplexity/ChatGPT use as canonical page summary
+
 ---
 
 ### PART 3: Metadata & SEO Optimization
