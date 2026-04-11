@@ -21882,9 +21882,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     en: {
       theme: 'Models by Use Case',
       title: 'Best Local LLMs for Code Review and Refactoring',
-      seoTitle: 'Best Local LLMs for Code Review: Models, Accuracy, Speed Comparison',
+      seoTitle: 'Best Local LLMs for Code Review 2026: Accuracy vs Speed',
       intro: '**For code review, Llama 3 70B and DeepSeek 67B outperform smaller models at catching subtle bugs and suggesting refactors.** As of April 2026, 7B models are too weak for serious review (miss 40% of issues); 13B is acceptable for lint-level feedback; 70B+ is required for architectural analysis. Trade-off: speed vs. accuracy.',
-      metaDescription: 'Best local LLMs for code review: Llama 3 70B, DeepSeek 67B, Mistral. Accuracy vs speed. Model comparison table. Free beta — April 2026.',
+      metaDescription: 'Llama 3 70B and DeepSeek 67B catch 85% of code review bugs. Mistral 7B reviews 500 lines in 10 sec. Model comparison for Python, SQL, C, APIs — April 2026.',
       publishDate: '2026-04-05',
       readTime: '8 min',
       educationalLevel: 'Intermediate',
