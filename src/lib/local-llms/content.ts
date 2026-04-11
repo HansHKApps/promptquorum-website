@@ -9155,27 +9155,512 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       },
     },
     de: {
-      theme: 'Beste Modelle',
-      title: 'Mehrsprachige lokale LLMs: Die besten Modelle für Nicht-Englisch-Sprachen 2026',
-      seoTitle: 'Beste mehrsprachige lokale LLMs 2026: Qwen2.5 vs Mistral',
-      intro: 'Qwen2.5 ist die stärkste mehrsprachige lokale LLM-Familie 2026 mit nativer Unterstützung für 29 Sprachen, einschließlich Chinesisch, Japanisch, Koreanisch, Arabisch und alle großen europäischen Sprachen. Für europäische Sprachen konkurrieren Mistral und Llama 3.x mit Qwen2.5. Für asiatische Sprachen (Japanisch, Koreanisch, Chinesisch) übertrifft Qwen2.5 alle Alternativen bei jeder vergleichbaren Modellgröße.',
-      metaDescription: 'Vergleich mehrsprachiger lokaler LLMs: Qwen2.5 dominiert asiatische Sprachen (15–25% besser als Llama bei JMT-bench). Mistral konkurrenzfähig für Europäisch. Benchmark-Vergleich — April 2026.',
-      publishDate: '2026-04-04',
+      theme: 'Einstieg',
+      title: 'Beste mehrsprachige lokale LLMs 2026: Qwen2.5 vs. Mistral',
+      seoTitle: 'Best Multilingual Local LLMs 2026: Qwen2.5 vs Mistral',
+      intro: 'Vergleich mehrsprachiger lokaler Sprachmodelle: Qwen2.5 7B dominiert asiatische Sprachen (Chinesisch, Japanisch, Koreanisch) mit 5-Stern-Bewertungen. Mistral 7B konkurriert bei europäischen Sprachen. Testen Sie schnell offline ohne API-Kosten.',
+      metaDescription: 'Mehrsprachige lokale LLMs 2026: Qwen2.5 7B beste für Chinesisch/Japanisch/Koreanisch. Mistral konkurriert bei Französisch/Deutsch. Vergleich mit Benchmarks.',
+      publishDate: '2025-12-10',
+      dateModified: '2026-04-11',
       readTime: '9 Min. Lesezeit',
-      educationalLevel: 'Beginner',
-      primaryTerm: 'mehrsprachiges lokales LLM',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Multilingual LLM',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
-        { label: 'Welche lokalen LLMs unterstützen tatsächlich mehrere Sprachen?', anchor: '#which-llms-support-multiple-languages' },
-        { label: 'Beste Modelle für europäische Sprachen', anchor: '#best-models-for-european-languages' },
-        { label: 'Beste Modelle für Japanisch, Koreanisch und Chinesisch', anchor: '#best-models-for-asian-languages' },
-        { label: 'Beste Modelle für Arabisch und nahöstliche Sprachen', anchor: '#best-models-for-arabic' },
-        { label: 'Wie man mehrsprachige Qualität bewertet', anchor: '#how-to-benchmark-multilingual-quality' },
-        { label: 'Vergleichstabelle für mehrsprachige Modelle', anchor: '#multilingual-comparison-table' },
-        { label: 'Häufige Fehler bei mehrsprachigen Modellen', anchor: '#common-mistakes' },
-        { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
+        { label: 'Zusammenfassung', anchor: 'tldr' },
+        { label: 'Welche Sprachen unterstützen lokale LLMs?', anchor: 'which-support' },
+        { label: 'Beste lokale LLMs für europäische Sprachen', anchor: 'european' },
+        { label: 'Beste lokale LLMs für asiatische Sprachen', anchor: 'asian' },
+        { label: 'Arabische Sprachunterstützung', anchor: 'arabic' },
+        { label: 'Benchmarking mehrsprachiger LLMs', anchor: 'how-to-benchmark' },
+        { label: 'Vergleichstabelle: Qwen2.5 vs. Llama vs. Mistral vs. Gemma', anchor: 'comparison-table' },
+        { label: 'Häufige Fehler bei mehrsprachigen LLMs', anchor: 'common-mistakes' },
+        { label: 'Häufig gestellte Fragen', anchor: 'faq' }
       ],
-      sections: {},
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Qwen2.5 7B** ist das beste lokale Modell für Chinesisch, Japanisch und Koreanisch (5 Sterne für Chinesisch, 4 Sterne für Japanisch/Koreanisch).',
+            '**Mistral 7B** und **Qwen2.5 7B** konkurrieren bei europäischen Sprachen (Französisch, Deutsch, Spanisch, Italienisch) mit jeweils 4 Sternen.',
+            '**Quantisierung mit Q4_K_M** reduziert VRAM-Anforderungen um 75 % mit minimalem Genauigkeitsverlust (<1 %) — essentiell für lokale Bereitstellung.',
+            '**Lokale Verarbeitung** (Ollama, llama.cpp) eliminiert API-Kosten und Latenz; ideal für Datenvertraulichkeit und DSGVO-Compliance.',
+            'Wählen Sie **Qwen2.5 für Asien**, **Mistral oder Qwen2.5 für Europa**, basierend auf Ihrem Hardware-Budget (8 GB VRAM für 7B-Modelle ausreichend).'
+          ],
+        },
+        whichSupport: {
+          title: 'Welche Sprachen unterstützen lokale LLMs?',
+          content: 'Alle modernen lokalen Sprachmodelle (Qwen2.5, Llama 3.1, Mistral, Gemma) unterstützen mindestens die Top-10-Sprachen nach Sprecherinnen- und Sprecherzahl. Die Unterstützungsqualität variiert jedoch stark: Qwen2.5 dominiert asiatische Sprachen, während Mistral und Llama bei europäischen Sprachen konkurrieren.',
+          columns: ['Sprachfamilie', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          rows: [
+            {
+              'Sprachfamilie': 'Chinesisch (alle Dialekte)',
+              'Qwen2.5 7B': '★★★★★ (5,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
+              'Mistral 7B': '★ (1,0)',
+              'Gemma 3 9B': '★★★ (3,0)'
+            },
+            {
+              'Sprachfamilie': 'Japanisch',
+              'Qwen2.5 7B': '★★★★ (4,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
+              'Mistral 7B': '★ (1,0)',
+              'Gemma 3 9B': '★★★ (3,0)'
+            },
+            {
+              'Sprachfamilie': 'Koreanisch',
+              'Qwen2.5 7B': '★★★★ (4,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
+              'Mistral 7B': '★ (1,0)',
+              'Gemma 3 9B': '★★★ (3,0)'
+            },
+            {
+              'Sprachfamilie': 'Französisch / Deutsch',
+              'Qwen2.5 7B': '★★★★ (4,0)',
+              'Llama 3.1 8B': '★★★ (3,0)',
+              'Mistral 7B': '★★★★ (4,0)',
+              'Gemma 3 9B': '★★★ (3,0)'
+            },
+            {
+              'Sprachfamilie': 'Spanisch / Italienisch',
+              'Qwen2.5 7B': '★★★★ (4,0)',
+              'Llama 3.1 8B': '★★★ (3,0)',
+              'Mistral 7B': '★★★ (3,0)',
+              'Gemma 3 9B': '★★★ (3,0)'
+            },
+            {
+              'Sprachfamilie': 'Arabisch (MSA)',
+              'Qwen2.5 7B': '★★★ (3,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
+              'Mistral 7B': '★ (1,0)',
+              'Gemma 3 9B': '★★★ (3,0)'
+            }
+          ]
+        },
+        european: {
+          title: 'Beste lokale LLMs für europäische Sprachen',
+          content: 'Bei europäischen Sprachen (Französisch, Deutsch, Spanisch, Italienisch) sind **Mistral 7B** und **Qwen2.5 7B** gleichwertig. Mistral hat einen Vorteil bei Französisch und Deutsch; Qwen2.5 ist bei Spanisch und Italienisch leicht besser. Beide benötigen nur 8 GB VRAM im Q4_K_M-Format.',
+          items: [
+            '**Mistral 7B für Französisch und Deutsch**: Mistral wurde mit französischen und deutschen Trainingsdaten trainiert und liefert native Präzision. Ideal für DSGVO-Compliance und französische Datenschutzauflagen (CNIL-konform bei lokaler Verarbeitung).',
+            '**Qwen2.5 7B für Spanisch und Italienisch**: Qwen2.5 bietet überlegene Qualität bei romanischen Sprachen. Mit Q4_K_M-Quantisierung läuft es auf einem MacBook Pro M2 oder Standard-Linux-GPU ohne Speicherprobleme.',
+            '**Llama 3.1 8B als Fallback**: Llama 3.1 8B ist ausreichend für europäische Sprachen (3-Stern-Bewertung), aber nicht optimal. Verwenden Sie es nur, wenn Qwen2.5 oder Mistral nicht verfügbar sind.',
+            '**DACH-Spezialisten (Deutsch/Österreich/Schweiz)**: Für deutschsprachige Unternehmen: Mistral 7B erfüllt BSI-Grundschutz-Anforderungen bei lokaler Verarbeitung. Keine Datentransfers zu US-Servern erforderlich.',
+            '**Quantisierung: Q4_K_M ist Standard**: Verwenden Sie immer **Q4_K_M** für 7B-Modelle bei europäischen Sprachen. VRAM-Anforderung: 8 GB. Genauigkeitsverlust: <0,5 % gegenüber fp16.',
+            '**Benchmarks: JMT-bench + MMLU**: Qwen2.5 und Mistral schneiden bei MMLU (Multiple-Choice-Wissenstests) mit 72–75 % Genauigkeit ab. Bei domänenspezifischen Tests (Recht, Medizin, Finanzen) sinken die Scores auf 55–70 %.'
+          ]
+        },
+        asian: {
+          title: 'Beste lokale LLMs für asiatische Sprachen',
+          content: 'Qwen2.5 7B dominiert asiatische Sprachen deutlich. Bei Chinesisch, Japanisch und Koreanisch erreicht es 4–5 Sterne, während Llama und Mistral 1–2 Sterne erhalten. Für Unternehmen in Japan, Südkorea oder China ist Qwen2.5 die einzige praktische Wahl.',
+          columns: ['Sprache', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B'],
+          rows: [
+            {
+              'Sprache': 'Chinesisch (vereinfacht & traditionell)',
+              'Qwen2.5 7B': '★★★★★ (5,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
+              'Mistral 7B': '★ (1,0)'
+            },
+            {
+              'Sprache': 'Japanisch (Hiragana, Kanji, Katakana)',
+              'Qwen2.5 7B': '★★★★ (4,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
+              'Mistral 7B': '★ (1,0)'
+            },
+            {
+              'Sprache': 'Koreanisch (Hangul)',
+              'Qwen2.5 7B': '★★★★ (4,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
+              'Mistral 7B': '★ (1,0)'
+            }
+          ]
+        },
+        arabic: {
+          title: 'Arabische Sprachunterstützung',
+          content: 'Arabisch ist für lokale Modelle eine Herausforderung. Qwen2.5 erreicht 3 Sterne bei Modernes Standardarabisch (MSA), während Llama und Mistral nur 1–2 Sterne erhalten. Dialektales Arabisch (Ägyptisch, Golf-Arabisch) wird von keinem 7B-Modell gut unterstützt; 13B-Modelle oder spezialisierte Modelle sind erforderlich. Für Unternehmen im Nahen Osten: Qwen2.5 7B ist das beste verfügbare kleine Modell, aber für Produktionsaufgaben sollten Sie 13B-Modelle in Betracht ziehen.'
+        },
+        howToBenchmark: {
+          title: 'Benchmarking mehrsprachiger LLMs',
+          content: 'Benchmarks wie MMLU und JMT-bench messen nur Englisch und Japanisch. Für echte Mehrsprachigkeit testen Sie mit realen Aufgaben: Dokumentzusammenfassung in Ihrer Zielsprache, Domain-spezifische Fragen (Recht, Medizin, Finanzen) und kulturelle Kontextualisierung. Hier sind bewährte Verfahren:',
+          numberedItems: [
+            'Erstellen Sie einen lokalen Test-Datensatz in Ihrer Zielsprache: Schreiben Sie 20–50 repräsentative Fragen in der Zielsprache (z. B. Chinesisch, Japanisch). Verwenden Sie domänenspezifische Terminologie (Medizin, Recht, Technik). Speichern Sie sie in einer JSON-Datei.',
+            'Führen Sie alle 4 Modelle gegen diesen Test-Datensatz aus: Quantisieren Sie jedes Modell mit Q4_K_M. Verwenden Sie Ollama oder llama.cpp, um sie lokal auszuführen. Vergleichen Sie Antwortqualität manuell oder mit Metriken (Ähnlichkeit zum Ground Truth).',
+            'Messen Sie Latenz und VRAM-Verbrauch: Notieren Sie die Inferenzzeit pro Anfrage und den Peak-VRAM-Verbrauch. Beispiel: Qwen2.5 7B (Q4_K_M) auf M2 Max = 400 ms Latenz, 8,2 GB VRAM.',
+            'Validieren Sie mit domänenspezifischen Benchmarks: Für Spezialanwendungen: Verwenden Sie JMT-bench für Japanisch, C-Eval für Chinesisch, MMLU für Englisch. Kombinieren Sie die Ergebnisse mit Ihren eigenen Tests.'
+          ]
+        },
+        comparisonTable: {
+          title: 'Vergleichstabelle: Qwen2.5 vs. Llama vs. Mistral vs. Gemma',
+          content: 'Diese Tabelle fasst die Sprachunterstützung zusammen. Bewertungen basieren auf JMT-bench (Japanisch), MMLU (allgemein) und sprachspezifischen Evaluierungen (2026).',
+          columns: ['Sprachgruppe', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          rows: [
+            {
+              'Sprachgruppe': 'Chinesisch (alle Dialekte)',
+              'Qwen2.5 7B': '★★★★★',
+              'Llama 3.1 8B': '★★',
+              'Mistral 7B': '★',
+              'Gemma 3 9B': '★★★'
+            },
+            {
+              'Sprachgruppe': 'Japanisch',
+              'Qwen2.5 7B': '★★★★',
+              'Llama 3.1 8B': '★★',
+              'Mistral 7B': '★',
+              'Gemma 3 9B': '★★★'
+            },
+            {
+              'Sprachgruppe': 'Koreanisch',
+              'Qwen2.5 7B': '★★★★',
+              'Llama 3.1 8B': '★★',
+              'Mistral 7B': '★',
+              'Gemma 3 9B': '★★★'
+            },
+            {
+              'Sprachgruppe': 'Französisch / Deutsch',
+              'Qwen2.5 7B': '★★★★',
+              'Llama 3.1 8B': '★★★',
+              'Mistral 7B': '★★★★',
+              'Gemma 3 9B': '★★★'
+            },
+            {
+              'Sprachgruppe': 'Spanisch / Italienisch',
+              'Qwen2.5 7B': '★★★★',
+              'Llama 3.1 8B': '★★★',
+              'Mistral 7B': '★★★',
+              'Gemma 3 9B': '★★★'
+            },
+            {
+              'Sprachgruppe': 'Arabisch (MSA)',
+              'Qwen2.5 7B': '★★★',
+              'Llama 3.1 8B': '★★',
+              'Mistral 7B': '★',
+              'Gemma 3 9B': '★★★'
+            }
+          ],
+          image: 'multilingual-llm-comparison-de.svg',
+          imageCaption: 'Mehrsprachige LLM-Vergleichstabelle 2026: Qwen2.5 7B dominiert alle asiatischen Sprachen (Chinesisch, Japanisch, Koreanisch mit 4–5 Sternen); Mistral 7B konkurriert bei französischen und deutschen Sprachen (4 Sterne). Bewertungen basieren auf JMT-bench, MMLU und sprachspezifischen Evaluierungen.'
+        },
+        commonMistakes: {
+          title: 'Häufige Fehler bei mehrsprachigen LLMs',
+          faqs: [
+            {
+              q: 'Warum funktioniert mein lokales LLM bei Chinesisch, aber nicht bei Japanisch?',
+              a: 'Sie verwenden wahrscheinlich Llama oder Mistral. Beide sind für asiatische Sprachen schlecht optimiert. Wechseln Sie zu Qwen2.5 7B. Es wurde explizit auf Chinesisch, Japanisch und Koreanisch trainiert.'
+            },
+            {
+              q: 'Soll ich Q4_K_M oder Q5_K_M verwenden?',
+              a: 'Verwenden Sie **Q4_K_M**, es sei denn, Sie haben >12 GB VRAM. Q4_K_M reduziert Speicher um 75 % gegenüber fp16 mit <0,5 % Genauigkeitsverlust. Q5_K_M ist unnötig für die meisten Aufgaben.'
+            },
+            {
+              q: 'Kann ich ein 7B-Modell bei 4 GB VRAM ausführen?',
+              a: 'Nein. Qwen2.5 7B (Q4_K_M) benötigt mindestens 8 GB. Verwenden Sie ein 3B-Modell (Phi-3, MobileLLM) für 4 GB VRAM. Oder verwenden Sie CPU-only-Inferenz (sehr langsam, nicht empfohlen).'
+            },
+            {
+              q: 'Warum ist die Qualität bei französischen/deutschen Aufgaben besser mit Mistral?',
+              a: 'Mistral wurde mit mehr französischen und deutschen Trainingsdaten trainiert. Für europäische Sprachen: Mistral und Qwen2.5 sind gleichwertig. Qwen2.5 ist bei asiatischen und romanischen Sprachen besser.'
+            },
+            {
+              q: 'Sollte ich fine-tune ein Modell für meine Sprache?',
+              a: 'Nur, wenn Sie >10.000 hochwertige Beispiele in Ihrer Sprache haben. Für die meisten Aufgaben ist Prompt-Engineering (Few-Shot-Beispiele in den Kontext geben) kostengünstiger und schneller.'
+            }
+          ]
+        },
+        faqSection: {
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            {
+              q: 'Was ist ein lokales LLM und warum sollte ich eines verwenden?',
+              a: 'Ein lokales LLM läuft auf Ihrer Maschine (MacBook, Linux-Desktop, Server) ohne Cloud-API. Vorteile: (1) Keine API-Kosten, (2) Datenschutz (keine Uploads zu OpenAI/Google), (3) Offline-Nutzung, (4) Anpassung via Fine-Tuning. Nachteil: Langsamere Inferenz, begrenzte Modellgröße (max. 13B auf Consumer-Hardware).'
+            },
+            {
+              q: 'Ist Ollama oder llama.cpp schneller?',
+              a: 'Sie haben ähnliche Geschwindigkeit. **Ollama** ist einsteigerfreundlich (CLI, Web-UI). **llama.cpp** ist direkter und schneller für High-Performance-Setup. Für Anfänger: Ollama. Für Experten: llama.cpp.'
+            },
+            {
+              q: 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-4o?',
+              a: 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-4o API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-4o $30–100.'
+            },
+            {
+              q: 'Kann ich ein 13B-Modell auf meinem Laptop ausführen?',
+              a: 'Nur mit Q4_K_M-Quantisierung und >16 GB RAM/VRAM. Qwen2.5 13B (Q4_K_M): ~12 GB VRAM erforderlich. Llama 3.1 70B: Nicht praktikabel auf Consumer-Hardware. Verwenden Sie 7B-Modelle für maximale Kompatibilität.'
+            },
+            {
+              q: 'Wie sicher sind lokale LLMs für sensible Daten?',
+              a: 'Sehr sicher. Lokal ausgeführte Modelle verlassen Ihre Maschine nicht. Wichtig: Deaktivieren Sie Telemetrie in Ollama (`OLLAMA_NUM_PARALLEL=1` env). Für Unternehmensanforderungen: Validieren Sie mit Ihrem Security-Team. DSGVO/CCPA-konform, da keine Daten zu Drittanbietern gesendet werden.'
+            },
+            {
+              q: 'Welches Modell sollte ich für Kodegenerierung in Python verwenden?',
+              a: 'Qwen2.5 7B oder Mistral 7B. Beide erreichen 85–90 % Erfolgsrate auf HumanEval (Python-Codierungsaufgaben). Für spezialisierte Code-Modelle: DeepSeek Coder 7B. Für größere Genauigkeit: Qwen2.5 32B (benötigt 20+ GB VRAM).'
+            },
+            {
+              q: 'Kann ich ein lokales LLM feinabstimmen, um besser in meiner Sprache zu arbeiten?',
+              a: 'Ja, aber nur mit >5.000 hochwertigen Beispielen. Dafür verwenden Sie: LoRA (Parameter-Efficient Fine-Tuning) oder Vollständiges Fine-Tuning. Tools: Ollama Extension, llama-cpp-python, Hugging Face Transformers. Für die meisten Aufgaben: Few-Shot-Prompting im Kontext ist kosteneffizienter.'
+            },
+            {
+              q: 'Wie kann ich die Quantisierung eines GGUF-Modells ändern?',
+              a: 'Verwenden Sie `llama.cpp`\'s `quantize` Dienstprogramm: `./quantize model.gguf model-q4_km.gguf Q4_K_M`. Das Original-Modell bleibt unverändert. Quantisierung dauert 5–20 Minuten je nach Modellgröße. Neues Modell speichern unter separatem Namen (`-q4_km` Suffix).'
+            },
+            {
+              q: 'Kann ein lokales LLM bei großen Batch-Verarbeitungen (100+ Anfragen) mit OpenAI konkurrieren?',
+              a: 'Bei Latenzanforderungen: Nein. OpenAI GPT-4o ist 5–10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
+            },
+            {
+              q: 'Sollte ich CPU- oder GPU-Inferenz verwenden?',
+              a: 'GPU immer, wenn verfügbar. GPU-Inferenz ist 10–50x schneller als CPU. Für CPU-only-Setups: Verwenden Sie quantisierte 3B-Modelle. Empfohlene GPU: NVIDIA (CUDA), AMD (ROCm), Apple (Metal für M-Series).'
+            },
+            {
+              q: 'Muss ich bei der Verwendung von lokalen LLMs die DSGVO beachten?',
+              a: 'Ja, aber Lokal ist DSGVO-konform. Wichtig: (1) Keine Datenübertragung zu US-Servern (API-frei), (2) Erfüllung von Artikel 28 (Datenverarbeitungsvertrag nicht erforderlich, wenn Sie der Verantwortliche sind), (3) BSI-Grundschutz-Kataloge: Lokale Ausführung erfüllt Anforderungen an Datenschutz und Vertraulichkeit. Empfehlung: Dokumentieren Sie die Sicherheitsmaßnahmen für Ihr Compliance-Team.'
+            },
+            {
+              q: 'Ist Qwen2.5 für den deutschen Mittelstand geeignet?',
+              a: 'Ja. Qwen2.5 ist ideal für KMUs und Mittelstandsunternehmen: (1) Kosteneffizient — keine API-Abonnements, (2) Datensicherheit — vollständige Kontrolle über Daten, (3) Hardware-Anforderungen — 8 GB VRAM reichen aus, (4) BSI-konform — erfüllt IT-Sicherheitsstandards ohne externe Abhängigkeiten. Anwendungsfälle: Dokumentenverarbeitung, Kundenservice-Bots, interne Recherchesysteme. Finanzdienstleister und Anwaltskanzleien können lokale LLMs zur DSGVO-Compliance nutzen.'
+            }
+          ]
+        },
+        relatedReading: {
+          title: 'Weiterführende Ressourcen',
+          items: [
+            '[Ollama installieren: Schritt-für-Schritt-Anleitung](/local-llms/how-to-install-ollama?lang=de) — Aktualisierte Anleitung für alle Plattformen (macOS, Linux, Windows).',
+            '[LM Studio vs. Ollama: Vergleich 2026](/local-llms/lm-studio-vs-ollama?lang=de) — Welches Tool ist für lokale Modelle besser?',
+            '[Lokale LLM-Hardware-Anforderungen 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — GPU/CPU/RAM-Anforderungen für Qwen2.5, Llama, Mistral.',
+            '[LLM-Quantisierung erklärt: Q4_K_M vs. Q5_K_M](/local-llms/llm-quantization-explained?lang=de) — Warum Q4_K_M Standard ist.',
+            '[Troubleshooting lokaler LLM-Setups](/local-llms/troubleshooting-local-llm-setup?lang=de) — Häufige Fehler und Lösungen (VRAM, Pfade, Quantisierungen).'
+          ]
+        },
+        sources: {
+          title: 'Quellen',
+          items: [
+            '[Qwen2.5-Dokumentation](https://huggingface.co/Qwen) — Offizielle Modellkarte, Benchmarks, Multilingual-Training-Details.',
+            '[Llama 3.1 Benchmarks](https://huggingface.co/meta-llama) — Meta-Dokumentation, MMLU-Scores (Englisch, Japanisch).',
+            '[Mistral 7B Modellkarte](https://huggingface.co/mistralai/Mistral-7B) — Training, Sprachunterstützung, Lizenzierung.',
+            '[JMT-Benchmark (Japanisch)](https://github.com/nlp-waseda/jmt-bench) — Japanisch-Textverständnis-Benchmark für lokale Modelle.',
+            '[Ollama Dokumentation](https://github.com/ollama/ollama) — CLI, Installation, Modell-Downloads, Anfragen zu lokalen LLMs.'
+          ]
+        }
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=de',
+        'inLanguage': 'de',
+        'headline': 'Beste mehrsprachige lokale LLMs 2026: Qwen2.5 vs. Mistral',
+        'description': 'Vergleich mehrsprachiger lokaler Sprachmodelle: Qwen2.5 7B dominiert asiatische Sprachen. Mistral konkurriert bei europäischen Sprachen. Benchmarks, Hardware-Anforderungen.',
+        'image': 'https://www.promptquorum.com/images/multilingual-llm-comparison-de.svg',
+        'datePublished': '2025-12-10',
+        'dateModified': '2026-04-11',
+        'author': {
+          '@type': 'Person',
+          'name': 'Hans Kuepper'
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+          'url': 'https://www.promptquorum.com'
+        },
+        'about': [
+          { '@type': 'Thing', 'name': 'Qwen2.5' },
+          { '@type': 'Thing', 'name': 'Llama 3.1' },
+          { '@type': 'Thing', 'name': 'Mistral 7B' },
+          { '@type': 'Thing', 'name': 'Gemma 3' }
+        ],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'llama.cpp' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'inLanguage': 'de',
+        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=de',
+        'name': 'Mehrsprachige lokale LLMs auswählen und verwenden',
+        'step': [
+          {
+            '@type': 'HowToStep',
+            'position': 1,
+            'name': 'Zielsprache identifizieren',
+            'text': 'Bestimmen Sie, in welcher Sprache oder welchen Sprachen Sie das Modell verwenden werden: Asiatisch (Chinesisch, Japanisch, Koreanisch), Europäisch (Französisch, Deutsch, Spanisch) oder Arabisch.'
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 2,
+            'name': 'Modell basierend auf Sprache auswählen',
+            'text': 'Wählen Sie Qwen2.5 7B für asiatische Sprachen, Mistral oder Qwen2.5 für europäische Sprachen.'
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 3,
+            'name': 'Quantisierung mit Q4_K_M durchführen',
+            'text': 'Laden Sie das GGUF-Modell herunter und quantisieren Sie es mit Q4_K_M für 8 GB VRAM-Kompatibilität.'
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 4,
+            'name': 'Mit Ollama oder llama.cpp ausführen',
+            'text': 'Starten Sie das Modell lokal mit Ollama oder llama.cpp und testen Sie mit Aufgaben in Ihrer Zielsprache.'
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 5,
+            'name': 'Qualität benchmarken',
+            'text': 'Evaluieren Sie die Antwortqualität mithilfe von domänenspezifischen Tests (JMT-bench für Japanisch, C-Eval für Chinesisch).'
+          }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'de',
+        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=de',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Was ist ein lokales LLM und warum sollte ich eines verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ein lokales LLM läuft auf Ihrer Maschine (MacBook, Linux-Desktop, Server) ohne Cloud-API. Vorteile: (1) Keine API-Kosten, (2) Datenschutz (keine Uploads zu OpenAI/Google), (3) Offline-Nutzung, (4) Anpassung via Fine-Tuning. Nachteil: Langsamere Inferenz, begrenzte Modellgröße (max. 13B auf Consumer-Hardware).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Ollama oder llama.cpp schneller?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sie haben ähnliche Geschwindigkeit. **Ollama** ist einsteigerfreundlich (CLI, Web-UI). **llama.cpp** ist direkter und schneller für High-Performance-Setup. Für Anfänger: Ollama. Für Experten: llama.cpp.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-4o?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-4o API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-4o $30–100.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich ein 13B-Modell auf meinem Laptop ausführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nur mit Q4_K_M-Quantisierung und >16 GB RAM/VRAM. Qwen2.5 13B (Q4_K_M): ~12 GB VRAM erforderlich. Llama 3.1 70B: Nicht praktikabel auf Consumer-Hardware. Verwenden Sie 7B-Modelle für maximale Kompatibilität.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie sicher sind lokale LLMs für sensible Daten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sehr sicher. Lokal ausgeführte Modelle verlassen Ihre Maschine nicht. Wichtig: Deaktivieren Sie Telemetrie in Ollama (`OLLAMA_NUM_PARALLEL=1` env). Für Unternehmensanforderungen: Validieren Sie mit Ihrem Security-Team. DSGVO/CCPA-konform, da keine Daten zu Drittanbietern gesendet werden.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Modell sollte ich für Kodegenerierung in Python verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen2.5 7B oder Mistral 7B. Beide erreichen 85–90 % Erfolgsrate auf HumanEval (Python-Codierungsaufgaben). Für spezialisierte Code-Modelle: DeepSeek Coder 7B. Für größere Genauigkeit: Qwen2.5 32B (benötigt 20+ GB VRAM).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich ein lokales LLM feinabstimmen, um besser in meiner Sprache zu arbeiten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, aber nur mit >5.000 hochwertigen Beispielen. Dafür verwenden Sie: LoRA (Parameter-Efficient Fine-Tuning) oder Vollständiges Fine-Tuning. Tools: Ollama Extension, llama-cpp-python, Hugging Face Transformers. Für die meisten Aufgaben: Few-Shot-Prompting im Kontext ist kosteneffizienter.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie kann ich die Quantisierung eines GGUF-Modells ändern?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Verwenden Sie `llama.cpp`\'s `quantize` Dienstprogramm: `./quantize model.gguf model-q4_km.gguf Q4_K_M`. Das Original-Modell bleibt unverändert. Quantisierung dauert 5–20 Minuten je nach Modellgröße. Neues Modell speichern unter separatem Namen (`-q4_km` Suffix).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ein lokales LLM bei großen Batch-Verarbeitungen (100+ Anfragen) mit OpenAI konkurrieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bei Latenzanforderungen: Nein. OpenAI GPT-4o ist 5–10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sollte ich CPU- oder GPU-Inferenz verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPU immer, wenn verfügbar. GPU-Inferenz ist 10–50x schneller als CPU. Für CPU-only-Setups: Verwenden Sie quantisierte 3B-Modelle. Empfohlene GPU: NVIDIA (CUDA), AMD (ROCm), Apple (Metal für M-Series).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung von lokalen LLMs die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, aber Lokal ist DSGVO-konform. Wichtig: (1) Keine Datenübertragung zu US-Servern (API-frei), (2) Erfüllung von Artikel 28 (Datenverarbeitungsvertrag nicht erforderlich, wenn Sie der Verantwortliche sind), (3) BSI-Grundschutz-Kataloge: Lokale Ausführung erfüllt Anforderungen an Datenschutz und Vertraulichkeit. Empfehlung: Dokumentieren Sie die Sicherheitsmaßnahmen für Ihr Compliance-Team.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Qwen2.5 für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Qwen2.5 ist ideal für KMUs und Mittelstandsunternehmen: (1) Kosteneffizient — keine API-Abonnements, (2) Datensicherheit — vollständige Kontrolle über Daten, (3) Hardware-Anforderungen — 8 GB VRAM reichen aus, (4) BSI-konform — erfüllt IT-Sicherheitsstandards ohne externe Abhängigkeiten. Anwendungsfälle: Dokumentenverarbeitung, Kundenservice-Bots, interne Recherchesysteme. Finanzdienstleister und Anwaltskanzleien können lokale LLMs zur DSGVO-Compliance nutzen.'
+            }
+          }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'de',
+        'url': 'https://www.promptquorum.com/local-llms/multilingual-local-llms?lang=de',
+        'name': 'Sprachvergleich für lokale Sprachmodelle',
+        'description': 'Vergleich von Sprachunterstützung in Qwen2.5, Llama, Mistral und Gemma für Chinesisch, Japanisch, Koreanisch, Französisch, Deutsch, Spanisch, Italienisch und Arabisch.',
+        'numberOfItems': 6,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Chinesisch (alle Dialekte)',
+            'description': 'Qwen2.5 7B dominiert mit 5 Sternen; Llama und Mistral unter 2 Sternen.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Japanisch',
+            'description': 'Qwen2.5 7B mit 4 Sternen führend; Llama und Mistral unter 2 Sternen.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Koreanisch',
+            'description': 'Qwen2.5 7B mit 4 Sternen führend; Llama und Mistral unter 2 Sternen.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'Französisch / Deutsch',
+            'description': 'Qwen2.5 und Mistral konkurrieren mit jeweils 4 Sternen; Llama und Gemma mit 3 Sternen.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 5,
+            'name': 'Spanisch / Italienisch',
+            'description': 'Qwen2.5, Mistral und Gemma mit 3–4 Sternen; Llama mit 3 Sternen.'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 6,
+            'name': 'Arabisch (MSA)',
+            'description': 'Qwen2.5 und Gemma mit 3 Sternen; Llama mit 2 Sternen, Mistral mit 1 Stern.'
+          }
+        ]
+      }
     },
     fr: {
       theme: 'Meilleurs modèles',
