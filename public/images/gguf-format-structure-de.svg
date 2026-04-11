@@ -1,0 +1,72 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    GGUF-Format-Struktur: Eigenständige Modelldatei
+  </text>
+  <rect x="80" y="60" width="640" height="350" fill="none" stroke="#6750A4" stroke-width="3" rx="8"/>
+  <text x="100" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#6750A4">
+    GGUF-Datei: Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf
+  </text>
+  <rect x="100" y="110" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
+  <text x="240" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">
+    Quantisierte Gewichte
+  </text>
+  <text x="240" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    8 Milliarden Parameter
+  </text>
+  <text x="240" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    4-Bit-Präzision (Q4_K_M)
+  </text>
+  <text x="240" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">
+    ~4,5 GB
+  </text>
+  <rect x="420" y="110" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
+  <text x="560" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">
+    Modellmetadaten
+  </text>
+  <text x="560" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    Architektur: Transformer
+  </text>
+  <text x="560" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    Kontextlänge: 8192 Token
+  </text>
+  <text x="560" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    Versteckte Größe: 4096
+  </text>
+  <rect x="100" y="220" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
+  <text x="240" y="245" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">
+    Tokenizer
+  </text>
+  <text x="240" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    Vokabular (128K Token)
+  </text>
+  <text x="240" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    Token-Zuordnungen
+  </text>
+  <text x="240" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    Kodierungsregeln
+  </text>
+  <rect x="420" y="220" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
+  <text x="560" y="245" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">
+    Format-Info
+  </text>
+  <text x="560" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    Formatversion: 3
+  </text>
+  <text x="560" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    Prüfsummen zur Integrität
+  </text>
+  <text x="560" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    Kompatibel mit CPU/GPU
+  </text>
+  <text x="400" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    ✓ Alles in EINER Datei — Keine weiteren Downloads erforderlich
+  </text>
+  <text x="400" y="410" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle"
+    ✓ Funktioniert mit Ollama, LM Studio, Jan AI, llama.cpp
+  </text>
+  <rect x="300" y="420" width="200" height="20" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="4"/>
+  <text x="400" y="434" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#6750A4" text-anchor="middle">
+    Dateigröße: ~4,5 GB
+  </text>
+</svg>

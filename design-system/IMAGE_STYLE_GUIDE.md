@@ -20,6 +20,60 @@ PromptQuorum is a **modern, sophisticated AI tool** focused on prompt dispatch a
 - **Inclusive** — Accessible to all users (color contrast, text size, alt text)
 - **Premium quality** — Consistent with PromptQuorum's brand positioning
 
+## Image Approval Process
+
+**All images must follow this 5-step approval workflow:**
+
+### Step 1: Create English Version
+- Design the image following all guidelines in this document
+- Use English labels, captions, and content
+- Verify: Brand colors, text size (≥13px), readability, alignment
+- File: Save as `{image-name}-en.svg`
+
+### Step 2: Present for Review
+- Show the English SVG to the reviewer/stakeholder
+- **Always provide FULL file path link** — format: `file:///Users/hanskuepper/promptquorum-website/public/images/{filename}`
+  - Example: `file:///Users/hanskuepper/promptquorum-website/public/images/quantization-levels-comparison-en.svg`
+  - Make it clickable in markdown: `[Open Image](file:///...)`
+- Include: Purpose (what concept it illustrates), placement in article, caption
+- Display in browser or as preview to verify rendering
+
+### Step 3: Get Approval or Request Changes
+**Reviewer response options:**
+- ✅ **"Approve"** → Proceed to Step 4
+- 🔄 **"Changes needed"** → Specify what to adjust:
+  - Text clarity, sizing, color, layout
+  - Content accuracy, messaging
+  - Alignment with article tone
+  
+**If changes requested:** Return to Step 1, update English version, repeat Step 2
+
+### Step 4: Final Approval on English Version
+- Incorporate all reviewer feedback
+- Confirm final English version meets all guidelines
+- Get sign-off: **"English approved for localization"**
+
+### Step 5: Create Multi-Language Variants
+- Create separate SVG files for each language: `-de.svg`, `-fr.svg`, `-ja.svg`, `-zh.svg`
+- Follow language-specific text sizing rules (see Multi-Language Support section)
+- Translate captions and labels using approved terminology
+- Verify text layout fits for each language
+- **Provide FULL file path links for each variant** when presenting:
+  - `file:///Users/hanskuepper/promptquorum-website/public/images/image-name-de.svg`
+  - `file:///Users/hanskuepper/promptquorum-website/public/images/image-name-fr.svg`
+  - `file:///Users/hanskuepper/promptquorum-website/public/images/image-name-ja.svg`
+  - `file:///Users/hanskuepper/promptquorum-website/public/images/image-name-zh.svg`
+- No additional approval needed per language (if English approved)
+
+**File naming pattern:**
+```
+image-name-en.svg    (English — approved baseline)
+image-name-de.svg    (German)
+image-name-fr.svg    (French)
+image-name-ja.svg    (Japanese)
+image-name-zh.svg    (Chinese Simplified)
+```
+
 ## Color Palette
 
 Always use colors from the website's design system:
