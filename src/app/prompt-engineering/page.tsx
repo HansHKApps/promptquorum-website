@@ -40,12 +40,15 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
+  const langSuffix = selectedLang === 'en' ? '' : `?lang=${selectedLang}`
+
   const jsonLdSchemas = [
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       'name': 'Prompt Engineering Guide',
-      'url': 'https://www.promptquorum.com/prompt-engineering',
+      'url': `https://www.promptquorum.com/prompt-engineering${langSuffix}`,
+      'inLanguage': selectedLang,
       'description': 'Complete prompt engineering resource covering fundamentals, frameworks, techniques, and domain-specific guides.',
       'isPartOf': { '@type': 'WebSite', 'url': 'https://www.promptquorum.com' },
     },
@@ -54,12 +57,13 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       '@type': 'BreadcrumbList',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.promptquorum.com' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Prompt Engineering', 'item': 'https://www.promptquorum.com/prompt-engineering' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Prompt Engineering', 'item': `https://www.promptquorum.com/prompt-engineering${langSuffix}` },
       ],
     },
     {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+      'inLanguage': selectedLang,
       'mainEntity': [
         {
           '@type': 'Question',
@@ -92,6 +96,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
       '@context': 'https://schema.org',
       '@type': 'HowTo',
       'name': 'How to Optimize Your Prompts for Better AI Results',
+      'inLanguage': selectedLang,
       'step': [
         { '@type': 'HowToStep', 'name': 'Define your task clearly', 'text': 'Write a specific, unambiguous description of what you want the AI to do.' },
         { '@type': 'HowToStep', 'name': 'Choose a framework', 'text': 'Select a prompt framework (CRAFT for creative, CO-STAR for complex, SPECS for structured) based on your output needs.' },
