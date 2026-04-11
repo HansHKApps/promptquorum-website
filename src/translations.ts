@@ -186,7 +186,7 @@ export const translations = {
     featuresMetaTitle: "Funktionen: KI-Versand, Frameworks & Konsens | PromptQuorum",
     featuresMetaDescription: "PromptQuorum sendet Prompts an 25+ KI-Anbieter mit 9 Frameworks (CO-STAR, CRAFT, RISEN) und führt Konsensanalyse durch. Kostenlos mit eigenem API-Key.",
     howItWorksMetaTitle: "Wie PromptQuorum funktioniert: 4-Stufen-Pipeline 2026",
-    howItWorksMetaDescription: "PromptQuorums 4-Stufen-Pipeline optimiert Prompts, sendet an 25+ KI-Modelle und führt Konsensscoring durch, um die beste Antwort zu finden.",
+    howItWorksMetaDescription: "PromptQuorums 4-Stufen-Pipeline optimiert Ihren Prompt, sendet ihn an 25+ KI-Modelle und führt Konsensscoring durch, um die beste Antwort zu finden.",
     faqMetaTitle: "PromptQuorum FAQ: Prompts, Datenschutz & Preismodell",
     faqMetaDescription: "PromptQuorum FAQ: 26 Antworten zu Optimierung, Multi-Model-Consensus, 9 Frameworks, lokalem LLM-Support (Ollama, LM Studio), BYOM-Datenschutz und Zugang.",
 
@@ -294,7 +294,7 @@ export const translations = {
     featuresMetaTitle: "Fonctionnalités: Envoi Multi-IA, Frameworks & Consensus",
     featuresMetaDescription: "PromptQuorum envoie des prompts à 25+ fournisseurs IA avec 9 frameworks (CO-STAR, CRAFT, RISEN) et analyse le consensus. Gratuit avec votre clé API.",
     howItWorksMetaTitle: "Comment fonctionne PromptQuorum: Pipeline en 4 étapes",
-    howItWorksMetaDescription: "Le pipeline en 4 étapes de PromptQuorum optimise votre prompt, l'envoie à 25+ modèles IA simultanément et exécute la notation du consensus.",
+    howItWorksMetaDescription: "Le pipeline en 4 étapes de PromptQuorum optimise votre prompt, l'envoie à 25+ modèles d'IA simultanément et exécute la notation du consensus.",
     faqMetaTitle: "PromptQuorum FAQ: Prompts, Confidentialité & Tarifs",
     faqMetaDescription: "PromptQuorum FAQ: 26 réponses sur optimisation, consensus multi-modèles, 9 frameworks, support LLM local (Ollama, LM Studio), BYOM et accès gratuit.",
 
@@ -407,7 +407,7 @@ export const translations = {
     faqMetaDescription: "PromptQuorum FAQ: よくある26個の質問に完全回答 - プロンプト最適化、マルチモデルコンセンサス、9つのフレームワーク、Ollama・LM Studioなどローカルモデル対応、BYOM型プライバシー、API連携、無料試用、日本語ドキュメント、カスタマーサポート。",
 
     // SEO Meta Tags — Group B
-    promptEngineeringHubTitle: "プロンプトエンジニアリングハブ 2026: 80ガイド | PromptQuorum",
+    promptEngineeringHubTitle: "プロンプトエンジニアリング 2026: 80ガイド | PromptQuorum",
     promptEngineeringHubDescription: "プロンプトエンジニアリングの技法、フレームワーク(CO-STAR、CRAFT、RISEN)、ツール、評価、ワークフローに関する80の研究ベース記事。",
     localLlmsHubTitle: "Local LLMs 2026：Ollama & LM StudioでAI運用",
     localLlmsHubDescription: "2026年の完全ガイド。OllamaとLM Studioの比較、ハードウェア要件、量子化技法を解説。PromptQuorumで自分のローカルモデルをすぐにテスト・比較できます。",
@@ -509,8 +509,8 @@ export const translations = {
     homeMetaDescription: "PromptQuorum支持将一个提示同时发送至25+个AI模型，并排比较ChatGPT、Claude、Gemini等主流模型的回答。自动检测幻觉，提供共识分析。使用API密钥免费。",
     featuresMetaTitle: "功能: AI分发、框架 & 共识 | PromptQuorum",
     featuresMetaDescription: "PromptQuorum使用9个框架(CO-STAR、CRAFT、RISEN)向25+ AI提供商分发提示，并运行共识分析。使用您的API密钥免费。",
-    howItWorksMetaTitle: "PromptQuorum如何工作: 4阶段AI管道",
-    howItWorksMetaDescription: "PromptQuorum的4阶段管道优化您的提示，同时分发到25+ AI模型，然后运行共识评分。",
+    howItWorksMetaTitle: "PromptQuorum如何工作2026: 4阶段AI工作流",
+    howItWorksMetaDescription: "PromptQuorum 4阶段工作流：优化提示词，同时一键分发至25+ AI模型并行运行，再用共识评分自动筛选最佳答案。",
     faqMetaTitle: "PromptQuorum 常见问题 2026: 本地多模型优化、隐私保护、完整定价与技术支持",
     faqMetaDescription: "PromptQuorum常见问题：涵盖26个关键问答 - 包括提示词优化、多模型共识评分、9个提示框架、Ollama本地模型部署、LM Studio支持、BYOM隐私设计、API接口集成、免费试用计划、完整中文文档、多语言用户界面、专业技术支持、企业解决方案、价格对比、安全保障、用户案例。",
 
