@@ -693,8 +693,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         step3Progress: {
           title: 'What the Download Looks Like',
           content: 'Ollama shows download progress in the terminal. A `llama3.2:3b` model takes 2–5 minutes on a typical broadband connection. The model is stored compressed — the 2 GB download expands to approximately 2.3 GB on disk.',
-          blockquote: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess',
-          blockquoteSource: 'Ollama terminal output during model pull',
+          codeBlock: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess',
+          codeLanguage: 'text',
         },
         step4: {
           title: 'Step 4: Run the Model and Send Your First Prompt',
@@ -727,6 +727,14 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**VS Code / Cursor**: extensions like Continue.dev connect to Ollama and provide local AI coding assistance directly in your editor.',
           ],
         },
+        regionalContext: {
+          title: 'Running Your First Local LLM: Regional Context',
+          content: [
+            '**EU / GDPR**: Running a local LLM with Ollama means no prompt data, context, or output leaves your machine — GDPR Article 46 transfer mechanisms do not apply. For EU professionals handling personal data, this is the privacy-preserving alternative to cloud AI APIs. Your first local model (llama3.2:3b) uses 2 GB of disk, generates zero external API calls, and satisfies German BSI data minimization guidelines by design.',
+            '**Japan (METI)**: METI AI Governance Guidelines require documenting where AI inference occurs. Your first Ollama setup creates a complete and auditable local environment: model files stored at ~/.ollama/models with version-specific filenames, no external API dependencies, and inference verifiable via `ollama ps`. Japanese professionals running Llama or Qwen2.5 locally can document the exact model version and hardware for METI compliance purposes.',
+            '**China**: For Chinese-language workflows, replace llama3.2:3b with qwen2.5:3b as your first model: `ollama pull qwen2.5:3b`. Qwen2.5 processes Chinese text 30–40% more token-efficiently than Llama, producing better results at the same hardware tier. The ollama pull and run commands are identical.',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: 'Common Questions When Running Your First Local LLM',
@@ -743,6 +751,34 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               q: 'How do I stop Ollama from running in the background?',
               a: 'On macOS: click the llama icon in the menu bar and select Quit. On Linux: run `systemctl stop ollama`. On Windows: right-click the system tray icon and select Quit. To prevent Ollama from starting on login, remove it from your startup items.',
             },
+            {
+              q: 'What is the easiest way to run a local LLM for the first time?',
+              a: 'Install Ollama (ollama.com), run `ollama pull llama3.2:3b`, then run `ollama run llama3.2:3b`. That is all. Three commands, 2–5 minutes, and you have a working AI model on your machine with no internet needed after the initial download.',
+            },
+            {
+              q: 'How do I know if my local LLM is working correctly?',
+              a: 'Run `ollama ps` in the terminal. If the model is running, it will show in the list with its name, size, and memory usage. Send it a simple prompt like "What is 2+2?" — if it responds with "4", the model is working correctly.',
+            },
+            {
+              q: 'Does my computer need a GPU to run a local LLM?',
+              a: 'No. Local LLMs run on CPU. A GPU makes inference 5–10× faster, but CPU-only is fine for learning and for many real use cases. Modern laptops with Apple M1/M2, AMD Ryzen, or Intel 12th gen CPUs can run 3B–7B models at reasonable speeds (10–30 tokens/sec).',
+            },
+            {
+              q: 'How much disk space does a local LLM take?',
+              a: '`llama3.2:1b` is 1.3 GB, `llama3.2:3b` is 2 GB, `llama3.1:8b` is 4.7 GB. These are the compressed sizes as stored by Ollama. After loading into RAM for inference, the sizes differ (see [How Much VRAM for Local LLM](/local-llms/how-much-vram-local-llm) for details).',
+            },
+            {
+              q: 'Can I use my local LLM without an internet connection?',
+              a: 'Yes, completely. Download the model once with Ollama (requires internet), then run locally forever with zero internet. Perfect for private networks, airplanes, or completely offline environments.',
+            },
+            {
+              q: 'How is a local LLM different from ChatGPT?',
+              a: 'ChatGPT runs on Anthropic\'s servers. Local LLMs run on your machine. Local = zero data leave your device, full privacy, no ongoing API costs. ChatGPT = better quality on complex tasks, requires internet and a paid subscription. Both have trade-offs.',
+            },
+            {
+              q: 'What is the best first model to try with Ollama?',
+              a: '`ollama pull llama3.2:3b` — it is 2 GB, runs on any modern laptop, produces competent answers, and is the starting point recommended by Ollama. After trying it, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) for alternatives based on your hardware.',
+            },
           ],
         },
         nextSteps: {
@@ -753,9 +789,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           id: 'sources',
           title: 'Sources',
           items: [
-            '**Ollama Model Library Documentation** — Official list of models and specifications',
-            '**Token Prediction Benchmarks** — Community performance data across hardware',
-            '**Llama 3.2 Model Card** — Official specifications and performance metrics',
+            '[**Ollama Model Library**](https://ollama.com/library) — Official list of downloadable models and their specifications',
+            '[**Ollama GitHub Repository**](https://github.com/ollama/ollama) — Open-source code, documentation, and issue tracking',
+            '[**Meta Llama 3.2 Model Card**](https://llama.meta.com/) — Official specifications, training data, and performance benchmarks',
           ],
         },
         commonMistakes: {
@@ -764,6 +800,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Confusing token count with speed — a 7B model generating 100 tokens at 20 tokens/sec takes 5 seconds, not instant.',
             'Running inference while the system is busy with other tasks, reducing effective tokens/sec significantly.',
             'Not checking context window limits — most beginner models support 2K–8K tokens, not the 100K+ of frontier models.',
+            'Expecting instant responses on first run — the first response includes model loading time (5–30 seconds). Subsequent responses in the same session are 2–5× faster.',
+            'Using the wrong model tag — `llama3.1:8b-text` is base text-completion mode and will loop/repeat endlessly. Use `-instruct` tags like `llama3.1:8b-instruct` for chat.',
           ],
         },
         relatedReading: {
@@ -773,6 +811,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — GUI alternative',
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations for your hardware',
             '[What Are Local LLMs?](/local-llms/what-are-local-llms) — Core concepts and how they work',
+            '[Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) — Fix slow inference, GPU not detected, and common errors',
+            '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — Connect running Ollama to Python and other applications',
           ],
         },
       },
@@ -784,7 +824,21 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         'url': 'https://www.promptquorum.com/local-llms/run-first-local-llm?lang=en',
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'Llama 3.2' },
+          { '@type': 'Thing', 'name': 'Local LLM' },
+          { '@type': 'Thing', 'name': 'AI Model Setup' },
+          { '@type': 'Thing', 'name': 'Terminal Commands' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', '#faq']
+        }
       },
       howToSchema: {
         '@context': 'https://schema.org',
