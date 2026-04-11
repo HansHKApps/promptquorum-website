@@ -13520,6 +13520,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         q12026: {
           title: 'Which Local LLM Models Were Released in Q1 2026?',
           content: 'As of April 2026, the notable open-weight model releases from January–April 2026. All models below are available in various quantization formats — see [quantization guide](/local-llms/llm-quantization-explained) for details on Q4 vs Q5 tradeoffs:',
+          image: '/images/q1-2026-model-releases-timeline-en.svg',
+          imageCaption: 'Q1 2026 local LLM releases timeline: Phi-4 Mini (January, 3.8B), Gemma 3 (February, vision-capable on all sizes), Llama 4 Scout (March, MoE architecture), and Mistral Small 3.2 (April). All released to Ollama within days of open-weight announcement.',
           rows: [
             { 'Model': 'Gemma 3 (all sizes)', 'Released': 'February 2026', 'Developer': 'Google', 'Key Feature': 'Vision on all sizes, 128K context, Apache 2.0', 'Ollama': 'ollama run gemma3:9b' },
             { 'Model': 'Llama 4 Scout (preview)', 'Released': 'March 2026', 'Developer': 'Meta', 'Key Feature': 'MoE architecture preview, 10M token context claimed', 'Ollama': 'Not yet available' },
@@ -13530,6 +13532,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         q42025: {
           title: 'Which Q4 2025 Models Are Still the Most Important in 2026?',
+          image: '/images/model-comparison-2026-en.svg',
+          imageCaption: 'April 2026 local LLM model comparison: Llama 3.3 70B leads at 82% MMLU with 42GB VRAM, Qwen2.5 7B provides best multilingual support at 74% MMLU and 5GB VRAM, Gemma 3 9B adds vision capabilities, DeepSeek-R1 7B specializes in reasoning tasks at 52% MATH. All runnable via Ollama.',
           rows: [
             { 'Model': 'Llama 3.3 70B', 'Released': 'December 2025', 'Key Specs': '82% MMLU, 88% HumanEval, 128K context', 'Still Relevant': 'Yes — best 70B option' },
             { 'Model': 'Phi-4 14B', 'Released': 'December 2024', 'Key Specs': '84% MMLU — above its size class', 'Still Relevant': 'Yes — strong 14B reasoning model' },
@@ -13555,6 +13559,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           content: [
             'The two-year improvement in locally-runnable model quality is substantial. As of April 2026, a 7B model (Qwen2.5 7B, 74% MMLU) matches the benchmark performance of a 13B model from early 2024. A 70B model (Llama 3.3 70B, 82% MMLU) matches GPT-4 (2023) performance — a model that required billion-dollar server infrastructure 3 years ago now runs on a Mac Studio. For hardware recommendations matching each model class, see [local LLM hardware guide 2026](/local-llms/local-llm-hardware-guide-2026).',
           ],
+          image: '/images/llm-quality-improvement-2024-2026-en.svg',
+          imageCaption: 'Local LLM quality improvement 2024–2026: 7B-class models improved from 64% MMLU (Mistral 7B, early 2024) to 74% (Qwen2.5 7B, April 2026). 70B-class improved from 75% (Llama 2 70B) to 82–84% (Llama 3.3 70B and Qwen2.5 72B). Every 18–24 months, local model quality advances by one model generation.',
           rows: [
             { 'Year': 'Early 2024', 'Best 7B MMLU': '~64% (Mistral 7B)', 'Best Local 70B MMLU': '~75% (Llama 2 70B)', 'Hardware Needed': '7B: 8 GB RAM; 70B: 48 GB RAM' },
             { 'Year': 'Late 2025', 'Best 7B MMLU': '~74% (Qwen2.5 7B)', 'Best Local 70B MMLU': '~82% (Llama 3.3 70B)', 'Hardware Needed': '7B: 5 GB RAM; 70B: 40 GB RAM' },

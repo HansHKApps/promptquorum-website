@@ -1,0 +1,136 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="800" height="450" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Local LLM Quality Improvement: 2024 to 2026
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#79747E" text-anchor="middle">
+    MMLU benchmark scores for 7B-class and 70B-class models
+  </text>
+
+  <!-- Y-axis label -->
+  <text x="15" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="middle" transform="rotate(-90 15 200)">
+    MMLU Score (%)
+  </text>
+
+  <!-- Grid lines and Y-axis labels -->
+  <line x1="60" y1="100" x2="750" y2="100" stroke="#E8DEF8" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="45" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="end">
+    85%
+  </text>
+
+  <line x1="60" y1="150" x2="750" y2="150" stroke="#E8DEF8" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="45" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="end">
+    75%
+  </text>
+
+  <line x1="60" y1="200" x2="750" y2="200" stroke="#E8DEF8" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="45" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="end">
+    65%
+  </text>
+
+  <line x1="60" y1="250" x2="750" y2="250" stroke="#E8DEF8" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="45" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="end">
+    55%
+  </text>
+
+  <!-- X-axis -->
+  <line x1="60" y1="300" x2="750" y2="300" stroke="#1C1B1F" stroke-width="1.5"/>
+
+  <!-- X-axis labels -->
+  <text x="200" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    Early 2024
+  </text>
+  <text x="400" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    Late 2025
+  </text>
+  <text x="600" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    April 2026
+  </text>
+
+  <!-- 7B-class line (violet) -->
+  <polyline points="200,236 400,162 600,162" stroke="#6750A4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 7B-class data points -->
+  <circle cx="200" cy="236" r="5" fill="#6750A4"/>
+  <text x="200" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">
+    64%
+  </text>
+  <text x="200" y="278" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#49454F" text-anchor="middle">
+    Mistral 7B
+  </text>
+
+  <circle cx="400" cy="162" r="5" fill="#6750A4"/>
+  <text x="400" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">
+    74%
+  </text>
+  <text x="400" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#49454F" text-anchor="middle">
+    Qwen2.5 7B
+  </text>
+
+  <circle cx="600" cy="162" r="5" fill="#6750A4"/>
+  <text x="600" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#6750A4" text-anchor="middle">
+    74%
+  </text>
+  <text x="600" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#49454F" text-anchor="middle">
+    Qwen2.5 7B
+  </text>
+
+  <!-- 70B-class line (rose) -->
+  <polyline points="200,188 400,132 600,110" stroke="#7D5260" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 70B-class data points -->
+  <circle cx="200" cy="188" r="5" fill="#7D5260"/>
+  <text x="200" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#7D5260" text-anchor="middle">
+    75%
+  </text>
+  <text x="200" y="226" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#49454F" text-anchor="middle">
+    Llama 2 70B
+  </text>
+
+  <circle cx="400" cy="132" r="5" fill="#7D5260"/>
+  <text x="400" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#7D5260" text-anchor="middle">
+    82%
+  </text>
+  <text x="400" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#49454F" text-anchor="middle">
+    Llama 3.3 70B
+  </text>
+
+  <circle cx="600" cy="110" r="5" fill="#7D5260"/>
+  <text x="600" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#7D5260" text-anchor="middle">
+    84%
+  </text>
+  <text x="600" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#49454F" text-anchor="middle">
+    Qwen2.5 72B
+  </text>
+
+  <!-- Legend -->
+  <line x1="80" y1="370" x2="100" y2="370" stroke="#6750A4" stroke-width="3"/>
+  <text x="110" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F">
+    7B-class models
+  </text>
+
+  <line x1="80" y1="400" x2="100" y2="400" stroke="#7D5260" stroke-width="3"/>
+  <text x="110" y="405" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F">
+    70B-class models
+  </text>
+
+  <!-- Key insight -->
+  <rect x="370" y="360" width="350" height="75" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="385" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">
+    Quality Gap Narrowing:
+  </text>
+  <text x="385" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#49454F">
+    A 7B model from 2026 (74% MMLU) matches
+  </text>
+  <text x="385" y="418" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#49454F">
+    a 13B model from early 2024. Every 18–24 months,
+  </text>
+  <text x="385" y="436" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#49454F">
+    local LLM quality advances by ~1 model generation.
+  </text>
+</svg>

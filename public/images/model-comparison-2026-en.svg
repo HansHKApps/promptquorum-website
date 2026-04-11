@@ -1,0 +1,127 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Major Local LLM Models — April 2026 Comparison
+  </text>
+
+  <!-- Table header background -->
+  <rect x="50" y="55" width="700" height="45" rx="8" fill="#E8DEF8"/>
+
+  <!-- Column headers -->
+  <text x="120" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    Model
+  </text>
+  <text x="240" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    Size
+  </text>
+  <text x="340" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    MMLU Score
+  </text>
+  <text x="470" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    VRAM (Q4)
+  </text>
+  <text x="600" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+    Key Strength
+  </text>
+
+  <!-- Row 1: Llama 3.3 70B -->
+  <rect x="50" y="110" width="700" height="50" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="143" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">
+    Llama 3.3 70B
+  </text>
+  <text x="240" y="143" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F" text-anchor="middle">
+    70B
+  </text>
+  <text x="340" y="143" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">
+    82%
+  </text>
+  <text x="470" y="143" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F" text-anchor="middle">
+    ~42 GB
+  </text>
+  <text x="600" y="143" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#49454F" text-anchor="middle">
+    Balanced performance
+  </text>
+
+  <!-- Row 2: Qwen2.5 7B -->
+  <rect x="50" y="170" width="700" height="50" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="203" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">
+    Qwen2.5 7B
+  </text>
+  <text x="240" y="203" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F" text-anchor="middle">
+    7B
+  </text>
+  <text x="340" y="203" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">
+    74%
+  </text>
+  <text x="470" y="203" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F" text-anchor="middle">
+    ~5 GB
+  </text>
+  <text x="600" y="203" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#49454F" text-anchor="middle">
+    Best multilingual
+  </text>
+
+  <!-- Row 3: Gemma 3 9B -->
+  <rect x="50" y="230" width="700" height="50" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="263" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">
+    Gemma 3 9B
+  </text>
+  <text x="240" y="263" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F" text-anchor="middle">
+    9B
+  </text>
+  <text x="340" y="263" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">
+    70%
+  </text>
+  <text x="470" y="263" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F" text-anchor="middle">
+    ~6 GB
+  </text>
+  <text x="600" y="263" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#49454F" text-anchor="middle">
+    Vision support
+  </text>
+
+  <!-- Row 4: DeepSeek-R1 7B -->
+  <rect x="50" y="290" width="700" height="50" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="323" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">
+    DeepSeek-R1 7B
+  </text>
+  <text x="240" y="323" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F" text-anchor="middle">
+    7B
+  </text>
+  <text x="340" y="323" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">
+    52% (MATH)
+  </text>
+  <text x="470" y="323" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F" text-anchor="middle">
+    ~5 GB
+  </text>
+  <text x="600" y="323" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#49454F" text-anchor="middle">
+    Reasoning tasks
+  </text>
+
+  <!-- Row 5: Phi-4 12B -->
+  <rect x="50" y="350" width="700" height="50" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="383" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">
+    Phi-4 12B
+  </text>
+  <text x="240" y="383" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F" text-anchor="middle">
+    12B
+  </text>
+  <text x="340" y="383" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34A853" text-anchor="middle">
+    72%
+  </text>
+  <text x="470" y="383" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#1C1B1F" text-anchor="middle">
+    ~7 GB
+  </text>
+  <text x="600" y="383" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#49454F" text-anchor="middle">
+    Memory efficient
+  </text>
+
+  <!-- Footer note -->
+  <text x="50" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E">
+    MMLU = General knowledge benchmark. VRAM = RAM needed at Q4 quantization. All models available in Ollama.
+  </text>
+  <text x="50" y="470" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E">
+    Desktop ideal: 7B–12B (4–8 GB). Server production: 70B models (40–50 GB).
+  </text>
+</svg>
