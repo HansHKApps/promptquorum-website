@@ -7419,6 +7419,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Level': 'Q8_0', 'Bits': '8', 'RAM (7B)': '~7.7 GB', 'Quality Loss': 'Negligible', 'Use When': '16+ GB RAM, maximum quality' },
           ],
           columns: ['Level', 'Bits', 'RAM (7B)', 'Quality Loss', 'Use When'],
+          image: 'quantization-levels-comparison-en.svg',
+          imageCaption: 'Quantization levels compared: from Q2_K (highest compression) to Q8_0 (highest quality). Q4_K_M is the recommended standard for most users.',
         },
         gguf: {
           title: 'What Is GGUF Format and How Does It Relate to Quantization?',
@@ -7428,6 +7430,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'As of April 2026, GGUF is the standard format for Ollama, LM Studio, Jan AI, and GPT4All. When you run [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama?lang=en), Ollama downloads a GGUF file internally. When LM Studio shows model file sizes, those are GGUF file sizes.',
             'The quantization level is part of the filename: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` is a Q4_K_M quantized GGUF of Llama 3.1 8B.',
           ],
+          image: 'gguf-format-structure-en.svg',
+          imageCaption: 'GGUF file structure: A self-contained file format combining quantized weights, model metadata, tokenizer, and format information. Compatible with Ollama, LM Studio, Jan AI, and GPT4All.',
         },
         ramSavings: {
           title: 'How Much RAM Does Quantization Save for Different Model Sizes?',
@@ -7439,6 +7443,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Model Size': '70B', 'FP16': '~140 GB', 'Q8_0': '~70 GB', 'Q4_K_M': '~40 GB', 'Q3_K_S': '~30 GB' },
           ],
           columns: ['Model Size', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+          image: 'ram-savings-by-model-size-en.svg',
+          imageCaption: 'RAM requirements by model size and quantization level. Q4_K_M reduces memory usage by 50–75% compared to FP16 with minimal quality loss.',
         },
         qualityLoss: {
           title: 'How Much Quality Do You Actually Lose with Quantization?',
@@ -7734,6 +7740,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Ebene': 'Q8_0', 'Bits': '8', 'RAM (7B)': '~7,7 GB', 'Qualitätsverlust': 'Vernachlässigbar', 'Verwendung': '16+ GB RAM, maximale Qualität' },
           ],
           columns: ['Ebene', 'Bits', 'RAM (7B)', 'Qualitätsverlust', 'Verwendung'],
+          image: 'quantization-levels-comparison-de.svg',
+          imageCaption: 'Quantisierungsstufen im Vergleich: von Q2_K (höchste Kompression) bis Q8_0 (höchste Qualität). Q4_K_M ist der Standard für die meisten Benutzer.',
         },
         gguf: {
           title: 'Was ist GGUF-Format und wie hängt es mit Quantisierung zusammen?',
@@ -7743,6 +7751,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Ab April 2026 ist GGUF das Standard-Format für Ollama, LM Studio, Jan AI und GPT4All. Wenn Sie [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama?lang=de) ausführen, lädt Ollama intern eine GGUF-Datei herunter. Wenn LM Studio Modellgrößen anzeigt, sind das GGUF-Dateigr öße.',
             'Die Quantisierungsstufe ist Teil des Dateinamens: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` ist eine Q4_K_M-quantisierte GGUF von Llama 3.1 8B.',
           ],
+          image: 'gguf-format-structure-de.svg',
+          imageCaption: 'GGUF-Dateistruktur: Ein eigenständiges Dateiformat, das quantisierte Gewichte, Modellmetadaten, Tokenizer und Formatinformationen kombiniert. Kompatibel mit Ollama, LM Studio, Jan AI und GPT4All.',
         },
         ramSavings: {
           title: 'Wie viel RAM spart Quantisierung für verschiedene Modellgrößen?',
@@ -7754,6 +7764,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Modellgröße': '70B', 'FP16': '~140 GB', 'Q8_0': '~70 GB', 'Q4_K_M': '~40 GB', 'Q3_K_S': '~30 GB' },
           ],
           columns: ['Modellgröße', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+          image: 'ram-savings-by-model-size-de.svg',
+          imageCaption: 'RAM-Anforderungen nach Modellgröße und Quantisierungsstufe. Q4_K_M spart 50–75% RAM im Vergleich zu FP16 mit minimalem Qualitätsverlust.',
         },
         qualityLoss: {
           title: 'Wie viel Qualität verlieren Sie tatsächlich durch Quantisierung?',
@@ -8069,6 +8081,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Niveau': 'Q8_0', 'Bits': '8', 'RAM (7B)': '~7.7 GB', 'Perte de qualité': 'Négligeable', 'Utilisation': '16+ GB RAM, qualité maximale' },
           ],
           columns: ['Niveau', 'Bits', 'RAM (7B)', 'Perte de qualité', 'Utilisation'],
+          image: 'quantization-levels-comparison-fr.svg',
+          imageCaption: 'Niveaux de quantification comparés : de Q2_K (compression maximale) à Q8_0 (qualité maximale). Q4_K_M est la norme recommandée pour la plupart des utilisateurs.',
         },
         gguf: {
           title: 'Qu\'est-ce que le format GGUF et comment se rapporte-t-il à la quantification ?',
@@ -8078,6 +8092,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'En avril 2026, GGUF est le format standard pour Ollama, LM Studio, Jan AI et GPT4All. Lorsque vous exécutez [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama?lang=fr), Ollama télécharge en interne un fichier GGUF. Lorsque LM Studio affiche les tailles de modèle, ce sont les tailles de fichier GGUF.',
             'Le niveau de quantification fait partie du nom de fichier : `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` est une GGUF quantifiée en Q4_K_M de Llama 3.1 8B.',
           ],
+          image: 'gguf-format-structure-fr.svg',
+          imageCaption: 'Structure du fichier GGUF : Un format de fichier autonome combinant les poids quantifiés, les métadonnées du modèle, le tokenizer et les informations de format. Compatible avec Ollama, LM Studio, Jan AI et GPT4All.',
         },
         ramSavings: {
           title: 'Combien de RAM la quantification économise-t-elle pour différentes tailles de modèles ?',
@@ -8089,6 +8105,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Taille du modèle': '70B', 'FP16': '~140 GB', 'Q8_0': '~70 GB', 'Q4_K_M': '~40 GB', 'Q3_K_S': '~30 GB' },
           ],
           columns: ['Taille du modèle', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+          image: 'ram-savings-by-model-size-fr.svg',
+          imageCaption: 'Exigences en RAM par taille de modèle et niveau de quantification. Q4_K_M réduit l\'utilisation mémoire de 50–75% par rapport à FP16 avec une perte de qualité minimale.',
         },
         qualityLoss: {
           title: 'Quelle qualité perdez-vous vraiment avec la quantification ?',
@@ -8386,6 +8404,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'レベル': 'Q8_0', 'ビット数': '8', 'RAM (7B)': '約7.7GB', '品質低下': '無視可能', '使用場面': 'RAM 16GB以上、最高品質を必要とする場合' },
           ],
           columns: ['レベル', 'ビット数', 'RAM (7B)', '品質低下', '使用場面'],
+          image: 'quantization-levels-comparison-ja.svg',
+          imageCaption: '量子化レベルの比較：Q2_K（最高圧縮率）からQ8_0（最高品質）まで。Q4_K_Mはほとんどのユーザーに推奨される標準です。',
         },
         gguf: {
           title: 'GGUF形式とは何で、量子化とどう関連するのか',
@@ -8395,6 +8415,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '2026年4月の時点で、GGUFはOllama、LM Studio、Jan AI、GPT4Allの標準形式です。`ollama pull llama3.1:8b`を実行すると、Ollamaは内部的にGGUFファイルをダウンロードします。LM Studioがモデルファイルサイズを表示する場合、それはGGUFファイルサイズです。',
             '量子化レベルはファイル名の一部です：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`はLlama 3.1 8BのQ4_K_M量子化GGUFです。',
           ],
+          image: 'gguf-format-structure-ja.svg',
+          imageCaption: 'GGUFファイル構造：量子化された重み、モデルメタデータ、トークナイザー、フォーマット情報を統合したスタンドアロンファイル形式。Ollama、LM Studio、Jan AI、GPT4Allと互換性があります。',
         },
         ramSavings: {
           title: '異なるモデルサイズでの量子化によるRAM削減量',
@@ -8406,6 +8428,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'モデルサイズ': '70B', 'FP16': '約140GB', 'Q8_0': '約70GB', 'Q4_K_M': '約40GB', 'Q3_K_S': '約30GB' },
           ],
           columns: ['モデルサイズ', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+          image: 'ram-savings-by-model-size-ja.svg',
+          imageCaption: 'モデルサイズと量子化レベル別のRAM要件。Q4_K_Mは品質低下を最小限に抑えながらFP16比で50～75%のメモリ削減を実現します。',
+        },
         },
         qualityLoss: {
           title: '実際にどの程度の品質が低下するのか',
@@ -8703,6 +8728,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { '级别': 'Q8_0', '位数': '8', 'RAM (7B)': '约7.7GB', '质量损失': '可忽略不计', '使用场景': '16GB+RAM，最高质量' },
           ],
           columns: ['级别', '位数', 'RAM (7B)', '质量损失', '使用场景'],
+          image: 'quantization-levels-comparison-zh.svg',
+          imageCaption: '量化级别比较：从Q2_K（最高压缩比）到Q8_0（最高质量）。Q4_K_M是大多数用户推荐的标准。',
         },
         gguf: {
           title: 'GGUF格式是什么及其与量化的关系',
@@ -8712,6 +8739,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '截至2026年4月，GGUF是Ollama、LM Studio、Jan AI和GPT4All的标准格式。运行`ollama pull llama3.1:8b`时，Ollama内部下载GGUF文件。LM Studio显示模型文件大小时，这些就是GGUF文件大小。',
             '量化级别是文件名的一部分：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`是Llama 3.1 8B的Q4_K_M量化GGUF。',
           ],
+          image: 'gguf-format-structure-zh.svg',
+          imageCaption: 'GGUF文件结构：一种自包含的文件格式，整合了量化权重、模型元数据、分词器和格式信息。兼容Ollama、LM Studio、Jan AI和GPT4All。',
         },
         ramSavings: {
           title: '不同模型大小的量化RAM节省',
@@ -8723,6 +8752,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { '模型大小': '70B', 'FP16': '约140GB', 'Q8_0': '约70GB', 'Q4_K_M': '约40GB', 'Q3_K_S': '约30GB' },
           ],
           columns: ['模型大小', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+          image: 'ram-savings-by-model-size-zh.svg',
+          imageCaption: '按模型大小和量化级别的RAM需求。Q4_K_M相比FP16节省50～75%的内存使用，质量损失最小。',
         },
         qualityLoss: {
           title: '实际会损失多少质量',
