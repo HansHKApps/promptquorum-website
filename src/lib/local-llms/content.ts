@@ -1192,9 +1192,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Getting Started',
       title: 'Troubleshooting Local LLM Setup: Fix the 10 Most Common Errors',
-      seoTitle: 'Debug Local LLMs 2026: Fix 10 Common Errors Fast',
+      seoTitle: 'Debug Local LLMs 2026: Fix 10 Common Setup Errors',
       intro: 'The most common local LLM setup errors are: out-of-memory crashes, GPU not being detected, very slow inference on CPU, model file corruption, and connection refused errors from the API server. As of April 2026, GPU detection issues are less common due to driver improvements, but they still occur.',
-      metaDescription: 'Fix the 10 most common local LLM setup errors: out-of-memory, GPU not detected, slow inference, connection refused, and model not found. Free beta — April 2026.',
+      metaDescription: 'Fix 10 common local LLM setup errors: out-of-memory, GPU not detected, slow inference, connection refused, and model not found. Free beta — April 2026.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
@@ -1400,7 +1400,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     de: {
       theme: 'Getting Started',
       seoTitle: 'Lokale LLMs debuggen 2026: 10 Fehler und Lösungen',
-      metaDescription: 'Behebe die 10 häufigsten Fehler bei der Einrichtung lokaler LLMs: Speichermangel, GPU nicht erkannt, langsame Inferenz, Verbindung verweigert und Modell nicht gefunden. Kostenlos — April 2026.',
+      metaDescription: 'Behebe 10 LLM-Fehler: Speichermangel, GPU nicht erkannt, langsame Inferenz, Verbindung verweigert und Modell nicht gefunden. Kostenlos — April 2026.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1430,7 +1430,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     fr: {
       theme: 'Getting Started',
       seoTitle: 'Déboguer les LLM locaux 2026: Corriger 10 erreurs',
-      metaDescription: 'Résolvez les 10 erreurs les plus courantes lors de la configuration de LLM locaux : mémoire insuffisante, GPU non détecté, inférence lente, connexion refusée et modèle introuvable. Gratuit — avril 2026.',
+      metaDescription: 'Résolvez 10 erreurs LLM locaux: mémoire insuffisante, GPU non détecté, inférence lente, connexion refusée et modèle introuvable. Gratuit — avril 2026.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1445,14 +1445,14 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
     ja: {
       theme: 'Getting Started',
-      seoTitle: 'ローカルLLMをデバッグ 2026: 10個の一般的なエラーを修正',
-      metaDescription: 'ローカルLLMのセットアップにおける10個の一般的なエラーを解決：メモリ不足、GPU未検出、推論遅延、接続拒否、モデル未検出。無料—2026年4月。',
+      seoTitle: '2026年ローカルLLM設定エラー修正：OOM・GPU未検出・接続拒否の解決策',
+      metaDescription: 'ローカルLLMの10種類のエラーを解決：OOMメモリ不足、GPU未検出、推論遅延、接続拒否、モデル未検出の修正方法。Ollama・LM Studio対応。無料—2026年4月。',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=ja',
         'inLanguage': 'ja',
-        'headline': 'ローカルLLMをデバッグ 2026: 10個の一般的なエラーを修正',
+        'headline': '2026年ローカルLLM設定エラー修正：OOM・GPU未検出・接続拒否の解決策',
         'description': 'ローカルLLMのセットアップにおける10個の一般的なエラーを解決：メモリ不足、GPU未検出、推論遅延、接続拒否、モデル未検出。無料—2026年4月。',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
@@ -1461,14 +1461,14 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     },
     zh: {
       theme: 'Getting Started',
-      seoTitle: '本地LLM调试 2026: 修复 10 个常见错误',
-      metaDescription: '解决本地LLM配置中的10个常见错误：内存不足、GPU未检测、推理缓慢、连接拒绝、模型未找到。免费—2026年4月。',
+      seoTitle: '本地LLM排错指南2026：OOM内存・GPU未检测・推理延迟全解决',
+      metaDescription: '解决本地LLM的10种常见错误：OOM内存溢出、GPU未检测、推理延迟、连接拒绝、模型未找到。附完整修复命令。Ollama和LM Studio适用。免费—2026年4月。',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=zh',
         'inLanguage': 'zh',
-        'headline': '本地LLM调试 2026: 修复 10 个常见错误',
+        'headline': '本地LLM排错指南2026：OOM内存・GPU未检测・推理延迟全解决',
         'description': '解决本地LLM配置中的10个常见错误：内存不足、GPU未检测、推理缓慢、连接拒绝、模型未找到。免费—2026年4月。',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
