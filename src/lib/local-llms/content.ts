@@ -12834,6 +12834,332 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ]
       },
     },
+    zh: {
+      theme: '最佳模型',
+      title: '2026年Ollama最佳开源模型：下载量排行前十',
+      seoTitle: 'Ollama最佳开源模型2026：下载量前十名排行',
+      intro: '2026年4月，Ollama最受欢迎的开源模型包括：Llama 3.1系列（下载量最高）、Qwen2.5系列（增长最快，中文支持最优）、DeepSeek-R1（推理最强）、Mistral 7B（多语言）、Gemma 3（多模态视觉）。本文提供完整的Top 10排行、RAM要求、性能基准及快速安装命令。',
+      metaDescription: '2026年Ollama最受欢迎的开源模型：Llama下载量最高，Qwen2.5增长最快，DeepSeek-R1推理最强。下载命令与RAM要求 — 2026年4月。',
+      publishDate: '2026-04-11',
+      readTime: '阅读约9分钟',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'Ollama开源模型',
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '最受欢迎的模型', anchor: '#most-popular' },
+        { label: '按类别分类', anchor: '#by-category' },
+        { label: '推理模型：DeepSeek-R1', anchor: '#deepseek-r1' },
+        { label: '视觉与多模态', anchor: '#vision-models' },
+        { label: '完整Top 10排行', anchor: '#full-top-10' },
+        { label: '如何浏览和选择模型', anchor: '#how-to-browse' },
+        { label: '常见误区', anchor: '#common-mistakes' },
+        { label: '常见问题', anchor: '#faq-section' },
+        { label: '相关阅读', anchor: '#related-reading' },
+        { label: '参考来源', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**最多下载的模型**：Llama 3.1 8B（通用、初学者首选、6.5GB RAM）',
+            '**增长最快**：Qwen2.5 7B（代码和中文最优、速度快）',
+            '**推理模型冠军**：DeepSeek-R1 7B（Chain-of-Thought思维链、复杂推理、6.5GB RAM）',
+            '**多模态视觉模型**：Llama 3.2 Vision 11B、Gemma 3 9B（支持图像理解、11GB RAM）',
+            '**企业标准**：Llama 3.3 70B（匹配GPT-4水平、需44GB显存）',
+          ],
+        },
+        mostPopular: {
+          title: '最受欢迎的两款模型',
+          content: [
+            '**Llama 3.1 8B** 是2025–2026年下载量最高的Ollama模型。适合初学者、通用任务、指令跟随、知识问答。性能：HumanEval 76%，MMLU 85%（开源7B第一梯队）。无特殊需求时首选。',
+            '**Qwen2.5 7B** 增长速度最快，特别是中国和亚太地区。优势：代码能力（HumanEval 90%）、中文理解（CulturaX中文微调）、推理速度快。公式推导、中文内容、软件开发首选。',
+          ],
+        },
+        byCategory: {
+          title: '按用途分类',
+          items: [
+            '**通用助手**：Llama 3.1 8B（最万能）、Qwen2.5 7B（中文最优）',
+            '**代码生成**：Qwen2.5 7B（HumanEval 90%，超Llama）、Mistral 7B（欧洲标准）',
+            '**推理和问题求解**：DeepSeek-R1 7B（Chain-of-Thought，MATH 52%）、Llama 3.1 8B',
+            '**多语言**：Mistral 7B（法文、西班牙文优秀）、Qwen2.5 7B（20+语言）、Llama 3.1（80+语言）',
+            '**视觉和图像理解**：Llama 3.2 Vision 11B（最佳开源视觉）、Gemma 3 9B（128K上下文+视觉）',
+            '**超小型和移动**：Phi-3.5 Mini 3.8B（3GB RAM，IoT和移动设备）',
+            '**企业级大模型**：Llama 3.3 70B（MMLU 87%，接近GPT-4 2023）、Qwen2.5 32B（复杂任务）',
+            '**实时应用**：Mistral Small 3.1（超快速）、Phi-3.5 Mini（低延迟）',
+            '**金融和医疗领域**：Llama 3.1 8B/70B（标准金融基准）、Qwen2.5 7B（中文医疗文档）',
+            '**纯开源许可**：全部（Llama Community License、Qwen、DeepSeek都是商业友好）',
+          ],
+        },
+        deepseekR1: {
+          title: 'DeepSeek-R1：2026年推理最强的模型',
+          content: [
+            'DeepSeek-R1 7B在推理任务中表现最强。采用Chain-of-Thought（思维链）架构，让模型在生成答案前进行"思考"。',
+            '**关键数据**：MATH 52%（7B模型中最高）、AIME 19.5%、AlphaCode 65%。适合数学推导、代码审查、复杂逻辑。',
+            '**生成速度**：M1 Pro上15–25 tokens/秒（与Llama 3.1相同）。但总延迟较高（思考过程生成需要额外时间）。中等查询约8–12秒。',
+            '**安装命令**：',
+          ],
+          codeBlock: 'ollama run deepseek-r1:7b',
+          codeLanguage: 'bash',
+        },
+        visionModels: {
+          title: '视觉和多模态模型对比',
+          content: '2026年4月，以下开源视觉模型可在Ollama中本地运行：',
+          columns: ['模型', 'RAM要求', '图像支持', 'Ollama命令'],
+          rows: [
+            { '模型': 'Llama 3.2 Vision 11B', 'RAM要求': '11 GB', '图像支持': '是（JPEG、PNG、GIF）', 'Ollama命令': 'ollama run llama3.2-vision:11b' },
+            { '模型': 'Gemma 3 9B', 'RAM要求': '9.5 GB', '图像支持': '是（Gemma 3全系多模态）', 'Ollama命令': 'ollama run gemma3:9b' },
+            { '模型': 'Qwen2-VL 7B', 'RAM要求': '7.5 GB', '图像支持': '是（视频帧、多页PDF）', 'Ollama命令': 'ollama run qwen2-vl:7b' },
+            { '模型': 'Phi-4 Vision 14B', 'RAM要求': '14 GB', '图像支持': '是（高分辨率输入）', 'Ollama命令': 'ollama run phi4:14b' },
+          ],
+        },
+        fullTop10: {
+          title: 'Ollama完整Top 10模型排行（2026年4月）',
+          content: '根据Ollama官方下载统计和HumanEval、MMLU基准：',
+          columns: ['排名', '模型', '最适用于', 'RAM要求', 'HumanEval'],
+          rows: [
+            { '排名': '1', '模型': 'Llama 3.1 8B', '最适用于': '通用、初学者入门', 'RAM要求': '6.5 GB', 'HumanEval': '76%' },
+            { '排名': '2', '模型': 'Qwen2.5 7B', '最适用于': '代码和中文', 'RAM要求': '6.5 GB', 'HumanEval': '90%' },
+            { '排名': '3', '模型': 'Mistral 7B', '最适用于': '多语言和欧洲市场', 'RAM要求': '6.5 GB', 'HumanEval': '85%' },
+            { '排名': '4', '模型': 'Llama 3.3 70B', '最适用于': '企业级和复杂任务', 'RAM要求': '44 GB', 'HumanEval': '92%' },
+            { '排名': '5', '模型': 'DeepSeek-R1 7B', '最适用于': '推理和问题求解', 'RAM要求': '6.5 GB', 'HumanEval': '88%' },
+            { '排名': '6', '模型': 'Gemma 3 9B', '最适用于': '视觉和多模态', 'RAM要求': '9.5 GB', 'HumanEval': '84%' },
+            { '排名': '7', '模型': 'Llama 3.2 Vision 11B', '最适用于': '图像理解和分析', 'RAM要求': '11 GB', 'HumanEval': '80%' },
+            { '排名': '8', '模型': 'Phi-3.5 Mini 3.8B', '最适用于': '移动和物联网', 'RAM要求': '3 GB', 'HumanEval': '76%' },
+            { '排名': '9', '模型': 'Qwen2.5 32B', '最适用于': '高质量和复杂推理', 'RAM要求': '20 GB', 'HumanEval': '92%' },
+            { '排名': '10', '模型': 'Mistral Small 3.1', '最适用于': '实时应用和低延迟', 'RAM要求': '5 GB', 'HumanEval': '83%' },
+          ],
+        },
+        howToBrowse: {
+          title: '如何浏览和选择Ollama模型',
+          content: [
+            '1. **访问Ollama官方库**：打开 [ollama.ai/library](https://ollama.ai/library)。搜索框搜索模型名称（例如"llama"）。',
+            '2. **查看模型信息页**：每个模型的Ollama页面显示RAM要求、参数数量和Ollama运行命令。',
+            '3. **检查本机能力**：运行 `ollama list` 查看已安装模型；`ollama ps` 查看运行中的模型。',
+            '4. **拉取（下载）新模型**：使用 `ollama pull llama3.1:8b` 下载。首次下载取决于网络速度（通常10分钟–1小时）。',
+            '5. **运行模型**：`ollama run llama3.1:8b` 启动对话。键入 `exit` 退出。',
+            '6. **参数调整**：高级用户可用 `ollama run llama3.1:8b --temperature 0.7 --top-p 0.9` 调整行为。',
+          ],
+          codeBlock: 'ollama pull llama3.1:8b\nollama run llama3.1:8b',
+          codeLanguage: 'bash',
+        },
+        commonMistakes: {
+          title: '常见误区',
+          faqs: [
+            {
+              q: '中国企业使用本地LLM如何符合数据安全法？',
+              a: '根据《中华人民共和国数据安全法》（2021年），敏感数据（用户、金融、医疗）在中国境内处理。本地推理完全满足此要求：数据不离开企业系统。推荐使用Qwen2.5系列（阿里开发，针对中文优化）或Llama 3.1。关键：选择与您数据分类相符的模型。',
+            },
+            {
+              q: '亚太地区跨境数据如何处理？',
+              a: '东南亚、日本、澳大利亚等地有跨境数据限制（PDPA、APPI、Privacy Act）。本地LLM优势：推理完全本地化，无跨境传输。ASEAN成员国建议使用本地部署+地理位置锁定。中国企业对APAC客户：Qwen2.5或Llama可在本地数据中心运行，满足所有地域要求。',
+            },
+            {
+              q: '金融、医疗、法律企业如何部署？',
+              a: '这些高监管行业要求：数据主权、完整审计、合规认证。本地LLM方案：（1）Llama 3.1/70B：标准金融基准检验；（2）Qwen2.5：中文医疗文档理解；（3）Mistral：法律条款分析。部署步骤：孤立网络、受限访问、日志记录、定期审计。Ollama与标准企业IT（Kubernetes、Docker）兼容。',
+            },
+          ],
+        },
+        faqSection: {
+          title: '常见问题',
+          faqs: [
+            {
+              q: '本地LLM需要多少RAM？',
+              a: '7B模型：6.5–8GB。13B模型：11–14GB。70B模型：42–48GB（Q4_K_M量子化）。3B模型：2–3GB。运行前用 `ollama show [model-name]` 检查确切要求。',
+            },
+            {
+              q: 'Ollama模型可以离线运行吗？',
+              a: '可以。首次下载后，推理完全本地进行。无网络需求。Ollama定期检查更新但不自动应用。',
+            },
+            {
+              q: '哪个模型对中文支持最好？',
+              a: 'Qwen2.5 7B。使用CulturaX中文微调和Wikipedia中文语料。Llama 3.1中文可接受，但Qwen精度更高。Mistral 7B主要针对法文和西班牙文。',
+            },
+            {
+              q: 'Ollama模型真的完全免费吗？',
+              a: '是的。所有Ollama模型遵循开源许可（Apache 2.0、Meta Llama Community、DeepSeek）。无订阅、无API费用。下载、本地安装和无限使用完全免费。',
+            },
+            {
+              q: 'DeepSeek-R1的速度真的那么快？',
+              a: '生成速度：M1 Pro 15–25 tokens/秒（与Llama 3.1相同）。总延迟更高因为思维链生成需要额外处理。中等查询约8–12秒。实时应用选Llama 3.1或Mistral。',
+            },
+            {
+              q: '为什么不直接用ChatGPT Plus而用本地Ollama？',
+              a: '隐私：对话不发送给OpenAI。成本：无月费，GPU一次性购买。离线：完全无网络需求。自定义：完全控制系统提示、行为和参数。',
+            },
+            {
+              q: 'Ollama模型支持图像处理吗？',
+              a: '支持。Llama 3.2 Vision、Qwen2-VL、Gemma 3都是多模态。图像本地上传无云传输。支持JPEG、PNG、GIF。',
+            },
+            {
+              q: '如何更新Ollama模型？',
+              a: '重新运行 `ollama pull [model-name]`。仅下载差分（去重）。删除旧版本：`ollama rm [model-name]:tag`。',
+            },
+            {
+              q: 'GDPR对Ollama有影响吗？',
+              a: '有。GDPR个人数据安全强制。本地推理满足内置保护要求。无云传输=主权、防护、合规性。注意：使用云模型时需确认处理合同。',
+            },
+            {
+              q: '日本企业如何利用Ollama？',
+              a: '优势：数据主权（避免云锁定）、符合IT标准（IPA/METI AI Governance 2024）、标准硬件可扩展、无API费用。Qwen2.5 7B在标准企业GPU上运行。Llama 3.1 8B适合企业工具、客户自动化和文档处理验证。',
+            },
+          ],
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[如何安装Ollama：完整指南](/local-llms/how-to-install-ollama?lang=zh)',
+            '[Ollama vs LM Studio：完整对比](/local-llms/ollama-vs-lm-studio?lang=zh)',
+            '[本地LLM硬件指南2026](/local-llms/local-llm-hardware-guide-2026?lang=zh)',
+            '[LLM量子化完全指南：Q4_K_M vs IQ3_M](/local-llms/llm-quantization-guide?lang=zh)',
+            '[Prompt Engineering框架：RTF框架](/prompt-engineering/rtf-framework?lang=zh)',
+            '[AI代码审查指南](/prompt-engineering/ai-code-review?lang=zh)',
+          ],
+        },
+        sources: {
+          title: '参考来源',
+          items: [
+            '[Ollama官方库](https://ollama.ai/library)——所有支持的模型和下载命令',
+            '[OpenCompass 2026基准](https://opencompass.org/)——MMLU、HumanEval、MATH排名',
+            '[DeepSeek-R1研究论文](https://arxiv.org/abs/2501.12948)——推理模型技术细节',
+            '[Qwen2.5技术报告](https://qwenlm.github.io/blog/qwen2-5-opensource/)——中文优化和性能数据',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '2026年Ollama最佳开源模型：下载量排行前十',
+        'description': '2026年4月，Ollama最受欢迎的开源模型包括Llama 3.1（下载最多）、Qwen2.5（增长最快）、DeepSeek-R1（推理最强）。',
+        'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=zh',
+        'inLanguage': 'zh',
+        'datePublished': '2026-04-11',
+        'dateModified': '2026-04-11',
+        'author': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+          'url': 'https://www.promptquorum.com',
+        },
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'Llama' },
+          { '@type': 'Thing', 'name': 'Qwen2.5' },
+          { '@type': 'Thing', 'name': 'DeepSeek-R1' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'zh',
+        'name': 'Ollama Top 10 开源模型',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B', 'description': '下载量最高。通用、初学者适用。6.5GB RAM。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Qwen2.5 7B', 'description': '增长最快。代码和中文优秀。6.5GB RAM。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Mistral 7B', 'description': '多语言模型。法文西班牙文优秀。6.5GB RAM。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Llama 3.3 70B', 'description': '大型模型。多基准接近GPT-4。44GB RAM。' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B', 'description': '推理模型。思维链推理。6.5GB RAM。' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Gemma 3 9B', 'description': '多模态。视觉和128K上下文。9.5GB RAM。' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Llama 3.2 Vision 11B', 'description': '视觉模型。图像处理和多模态。11GB RAM。' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Phi-3.5 Mini 3.8B', 'description': '超小型高效。移动和物联网。3GB RAM。' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Qwen2.5 32B', 'description': 'Qwen大型版。复杂任务高质量。20GB RAM。' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'Mistral Small 3.1', 'description': '高速轻量。实时应用质量兼顾。5GB RAM。' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '本地LLM需要多少RAM？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '7B模型：6.5–8GB。13B模型：11–14GB。70B模型：42–48GB（Q4_K_M量子化）。3B模型：2–3GB。运行前用`ollama show [model-name]`检查确切要求。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama模型可以离线运行吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。首次下载后，推理完全本地进行。无网络需求。Ollama定期检查更新但不自动应用。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '哪个模型对中文支持最好？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen2.5 7B。使用CulturaX中文微调和Wikipedia中文语料。Llama 3.1中文可接受，但Qwen精度更高。Mistral 7B主要针对法文和西班牙文。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama模型真的完全免费吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。所有Ollama模型遵循开源许可（Apache 2.0、Meta Llama Community、DeepSeek）。无订阅、无API费用。下载、本地安装和无限使用完全免费。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek-R1的速度真的那么快？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '生成速度：M1 Pro 15–25 tokens/秒（与Llama 3.1相同）。总延迟更高因为思维链生成需要额外处理。中等查询约8–12秒。实时应用选Llama 3.1或Mistral。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '为什么不直接用ChatGPT Plus而用本地Ollama？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '隐私：对话不发送给OpenAI。成本：无月费，GPU一次性购买。离线：完全无网络需求。自定义：完全控制系统提示、行为和参数。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama模型支持图像处理吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '支持。Llama 3.2 Vision、Qwen2-VL、Gemma 3都是多模态。图像本地上传无云传输。支持JPEG、PNG、GIF。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '如何更新Ollama模型？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '重新运行`ollama pull [model-name]`。仅下载差分（去重）。删除旧版本：`ollama rm [model-name]:tag`。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'GDPR对Ollama有影响吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '有。GDPR个人数据安全强制。本地推理满足内置保护要求。无云传输=主权、防护、合规性。注意：使用云模型时需确认处理合同。',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '日本企业如何利用Ollama？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '优势：数据主权（避免云锁定）、符合IT标准（IPA/METI AI Governance 2024）、标准硬件可扩展、无API费用。Qwen2.5 7B在标准企业GPU上运行。Llama 3.1 8B适合企业工具、客户自动化和文档处理验证。',
+            }
+          },
+        ]
+      },
+    },
   },
 
   'local-llm-model-updates-2026': {
