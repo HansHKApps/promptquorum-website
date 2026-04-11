@@ -146,6 +146,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Common Questions About Local LLMs',
           faqs: [
             {
@@ -171,6 +172,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           content: 'The fastest path to running your first local LLM is [How to Install Ollama](/local-llms/how-to-install-ollama) — a single command installs the engine and pulls a model in under 5 minutes on macOS, Windows, or Linux. If you prefer a graphical interface, [How to Install LM Studio](/local-llms/how-to-install-lm-studio) walks through the desktop app setup. To choose which model to start with, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models).',
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**llama.cpp — GitHub** — The foundational C++ library for running quantized models locally',
@@ -345,6 +347,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           content: 'Once Ollama is running, the next step is [Run Your First Local LLM](/local-llms/run-first-local-llm) to understand prompting, context length, and what to expect from local inference speed. To pick the best model for your hardware, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models). If you prefer a graphical chat interface over the terminal, [How to Install LM Studio](/local-llms/how-to-install-lm-studio) covers the desktop app alternative.',
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**Ollama Official Website** — Installation downloads and official documentation',
@@ -518,6 +521,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           content: 'With LM Studio running, try [Run Your First Local LLM](/local-llms/run-first-local-llm) to understand what response quality and speed to expect. For model recommendations matched to your hardware, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models). If you want to troubleshoot setup issues, see [Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup).',
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**LM Studio Official Website** — Downloads and documentation',
@@ -646,6 +650,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Common Questions When Running Your First Local LLM',
           faqs: [
             {
@@ -667,6 +672,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           content: 'Now that you have a working local LLM, explore what it can do. To understand which models perform best for your hardware, see [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models). For laptop-specific performance tips, see [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop). For privacy and security best practices, see the [Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist).',
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**Ollama Model Library Documentation** — Official list of models and specifications',
@@ -1000,6 +1006,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           content: 'All five models are available through Ollama with a single pull command. See [How to Install Ollama](/local-llms/how-to-install-ollama) for setup, then [Run Your First Local LLM](/local-llms/run-first-local-llm) for a step-by-step first-run walkthrough. If you are running on a laptop with limited RAM, [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) covers quantization and performance tuning for constrained hardware.',
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**Meta Llama 3.2 Model Card** — Official specifications and benchmarks for Llama models',
@@ -1160,6 +1167,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**Ollama Official** — Installation downloads and documentation',
@@ -1371,6 +1379,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           content: 'For hardware-specific issues on laptops (thermal throttling, battery drain), see [How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop). For security and privacy configuration questions, see the [Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist). The Ollama GitHub issues page (github.com/ollama/ollama/issues) and the r/LocalLLaMA subreddit are the most active community resources for model-specific bugs.',
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**NVIDIA CUDA Toolkit Compatibility** — Official version mapping for GPU support',
@@ -1595,6 +1604,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Quantization', 'RAM vs Full', 'Quality Loss', 'Use Case'],
         },
         faqSection: {
+          id: 'faq',
           title: 'Common Questions About Running Local LLMs on Laptops',
           faqs: [
             {
@@ -1612,6 +1622,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**Apple MLX Framework** — GPU acceleration for Apple Silicon Macs',
@@ -1911,6 +1922,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Tool', 'Telemetry Default', 'How to Confirm/Disable'],
         },
         faqSection: {
+          id: 'faq',
           title: 'Common Security Questions About Local LLMs',
           faqs: [
             {
@@ -1928,6 +1940,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**OWASP Top 10 for AI** — Security considerations for model deployment',
@@ -2942,6 +2955,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Common Questions About Local LLM Limitations',
           faqs: [
             {
@@ -2959,6 +2973,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**GPT-4o Technical Report** — Benchmark comparisons and capability analysis',
@@ -3160,6 +3175,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             {
@@ -3205,6 +3221,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**Hugging Face.** (2026). "Open LLM Leaderboard." [huggingface.co/spaces/open-llm-leaderboard](https://huggingface.co/spaces/open-llm-leaderboard) — Real-time MMLU, HumanEval, and MATH benchmark rankings across all open-weight models.',
@@ -3448,6 +3465,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions fréquemment posées sur le choix des LLMs locaux',
           faqs: [
             { q: 'Dois-je utiliser Llama ou Qwen pour mon cas d\'usage?', a: 'Pour le code : Qwen2.5 (scores HumanEval plus élevés à chaque taille). Pour les connaissances générales anglaises : Llama 3.3 (suivi d\'instructions plus forte). Pour les langues non-anglaises : Qwen2.5 (29 langues natives). Pour l\'efficacité (qualité par GB) : Mistral Small 3.1.' },
@@ -3484,6 +3502,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**Hugging Face Open LLM Leaderboard** — [huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) — Classements de benchmarks en temps réel pour les modèles de poids ouvert',
@@ -3677,6 +3696,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             { q: 'ローカルLLMを実行するための最小RAMは？', a: '4GB RAMでllama3.2:1bを実用的な速度で実行できます。8GB RAMで3B～7Bモデルを利用可能にします。4GB未満では、ほとんどのモデルが読み込みに失敗するか、実用的でない速度で実行されます。モデルを選択する前にご自身の利用可能なRAMを確認してください。Ollamaのモデルライブラリには各バリアントのRAM要件が記載されています。' },
@@ -3905,6 +3925,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '常见问题',
           faqs: [
             { q: '运行本地大模型需要的最低RAM是多少？', a: '4GB RAM可以以可用速度运行llama3.2:1b。8GB RAM使3B和7B模型可用。低于4GB时，大多数模型将无法加载或运行速度太慢而无法使用。选择模型之前检查可用RAM。Ollama模型库为每个变体列出RAM要求。' },
@@ -4100,6 +4121,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           codeLanguage: 'bash',
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '[Alibaba Qwen 2.5 Model Card](https://huggingface.co/Qwen/Qwen2.5-72B) — Multilingual and coding capability benchmarks on Hugging Face',
@@ -4127,6 +4149,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Is Qwen or Llama better for my use case?', a: 'For coding and multilingual tasks: Qwen2.5. For English reasoning and most documentation: Llama 3.x. For maximum quality per GB of RAM: Mistral Small 3.1. Test with sample prompts from your actual workload.' },
@@ -4470,6 +4493,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**DeepSeek Coder Model** — Official documentation and HumanEval benchmarks',
@@ -4601,6 +4625,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           imageCaption: 'LLM temperature guide for creative writing: 0.7 default is too flat, 0.9–1.05 optimal for fiction, above 1.1 produces incoherent output.',
         },
         faqSection: {
+          id: 'faq',
           title: 'Common Questions About Local LLMs for Creative Writing',
           faqs: [
             {
@@ -4614,6 +4639,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**Neural Story Generation Papers** — Academic research on narrative coherence',
@@ -4742,6 +4768,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           imageCaption: 'Temperatur-Leitfaden für kreatives Schreiben: 0,7 Standard zu flach, 0,9–1,05 optimal für Fiktion, über 1,1 inkohärente Ausgabe.',
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen zu lokalen LLMs für kreatives Schreiben',
           faqs: [
             {
@@ -4905,6 +4932,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           imageCaption: 'Guide température LLM créatif: 0,7 trop plat, 0,9–1,05 optimal fiction, au-dessus 1,1 sortie incohérente.',
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions fréquentes',
           faqs: [
             {
@@ -4918,6 +4946,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '**Papiers génération story IA** — Recherche cohérence narrative',
@@ -5064,6 +5093,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           imageCaption: '創作文章の温度ガイド: 0.7デフォルトは単調すぎ、0.9–1.05がフィクション最適、1.1超で出力が不安定。',
         },
         faqSection: {
+          id: 'faq',
           title: 'ローカルLLMの創作文章についてよくある質問',
           faqs: [
             {
@@ -5221,6 +5251,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           imageCaption: '创意写作LLM温度指南: 0.7默认太单调，0.9–1.05最适合小说，超过1.1输出不连贯。',
         },
         faqSection: {
+          id: 'faq',
           title: '关于本地LLM创意写作的常见问题',
           faqs: [
             {
@@ -5489,6 +5520,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Common Questions About Small Local LLM Models',
           faqs: [
             {
@@ -5534,6 +5566,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU and HumanEval scores)',
@@ -5810,6 +5843,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '小規模ローカルLLMモデルについてのよくある質問',
           faqs: [
             {
@@ -6030,6 +6064,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '关于小型本地LLM模型的常见问题',
           faqs: [
             {
@@ -6201,6 +6236,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Common Questions About Running 70B Models on Consumer Hardware',
           faqs: [
             {
@@ -6230,6 +6266,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'llama.cpp GPU Offloading Documentation — github.com/ggerganov/llama.cpp/blob/master/docs/backend/CUDA.md',
@@ -7500,6 +7537,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Common Questions About LLM Quantization',
           faqs: [
             {
@@ -7545,6 +7583,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'llama.cpp Quantization Documentation — github.com/ggerganov/llama.cpp/blob/master/examples/quantize/README.md',
@@ -7822,6 +7861,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen zur LLM-Quantisierung',
           faqs: [
             {
@@ -8164,6 +8204,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions fréquemment posées sur la quantification LLM',
           faqs: [
             {
@@ -8209,6 +8250,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Documentation de quantification llama.cpp — github.com/ggerganov/llama.cpp/blob/master/examples/quantize/README.md',
@@ -8488,6 +8530,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'LLM量子化についてのよくある質問',
           faqs: [
             {
@@ -8812,6 +8855,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: '关于大语言模型量化的常见问题',
           faqs: [
             {
@@ -9119,6 +9163,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
           title: 'Common Questions About Multilingual Local LLMs',
           faqs: [
             {
@@ -9144,6 +9189,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Qwen2.5 Technical Report — qwenlm.github.io/blog/qwen2.5/',
@@ -9364,6 +9410,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ]
         },
         faqSection: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             {
@@ -9872,6 +9919,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ]
         },
         faqSection: {
+          id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
             {
@@ -9927,6 +9975,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ]
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             '[Documentation Qwen2.5](https://huggingface.co/Qwen) — Fiche modèle officielle, benchmarks, détails d\'entraînement multilingue.',
@@ -10356,6 +10405,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ]
         },
         faqSection: {
+          id: 'faq',
           title: 'よくある質問',
           faqs: [
             {
@@ -10670,6 +10720,66 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'long context local LLM',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Long Context Local LLMs: Which Models Handle 32K, 128K Tokens Locally?',
+        'description': 'Most local LLM models in 2026 support 128K token context windows on paper, but practical usable context — where quality stays high — is typically 16K–32K tokens. Llama 3.1/3.2/3.3, Qwen2.5, and Mistral Small 3.1 all support 128K context. Processing full-length documents or books locally requires understanding RAM scaling and quality degradation at long ranges.',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-05',
+        'url': 'https://www.promptquorum.com/local-llms/long-context-local-llms',
+        'proficiencyLevel': 'Intermediate',
+        'about': [
+          { '@type': 'Thing', 'name': 'Long context LLM' },
+          { '@type': 'Thing', 'name': '128K context window' },
+          { '@type': 'Thing', 'name': 'KV cache' },
+          { '@type': 'Thing', 'name': 'Ollama context length' },
+          { '@type': 'Thing', 'name': 'Lost in the middle' },
+        ],
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+          'url': 'https://www.promptquorum.com',
+          'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' },
+        },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'isPartOf': {
+          '@type': 'WebPage',
+          'name': 'Local LLMs Guide',
+          'url': 'https://www.promptquorum.com/local-llms',
+        },
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'How to Set Context Length in Ollama',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Verify model supports long context with ollama show' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Create a Modelfile with PARAMETER num_ctx' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Run ollama create to register the custom model' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Verify context is active with ollama ps' },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Local LLMs Supporting 128K Context Window 2026',
+        'numberOfItems': 8,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B',          'description': '128K context. 32K practical limit. ollama run llama3.1:8b' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B',          'description': '128K context. 16K practical limit. ollama run llama3.2:3b' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 70B',         'description': '128K context. 64K practical limit. ollama run llama3.3:70b' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Qwen2.5 7B',            'description': '128K context. 32K practical limit. ollama run qwen2.5:7b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Qwen2.5 72B',           'description': '128K context. 64K practical limit. ollama run qwen2.5:72b' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Mistral Small 3.1 24B', 'description': '128K context. 32K practical limit. ollama run mistral-small3.1' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Gemma 2 2B',            'description': '8K context. 6K practical limit. ollama run gemma2:2b' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Mistral 7B v0.3',       'description': '32K context. 16K practical limit. ollama run mistral' },
+        ],
+      },
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'What Is Context Length?', anchor: '#what-is-context-length' },
@@ -10784,7 +10894,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
-          title: 'Common Questions About Long Context Local LLMs',
+          id: 'faq',
+          id: 'faq',
+          title: 'FAQ',
           faqs: [
             {
               q: 'Can I summarize an entire book with a local LLM?',
@@ -10813,6 +10925,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Lost in the Middle: How Language Models Use Long Contexts — arxiv.org/abs/2307.03172',
@@ -10933,6 +11046,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: '多语言本地LLM常见问题',
           faqs: [
             {
@@ -11286,6 +11401,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Open Source Models on Ollama',
           faqs: [
             {
@@ -11342,6 +11459,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Ollama Model Library — ollama.com/library',
@@ -11557,6 +11675,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Local LLM Model Updates in 2026',
           faqs: [
             {
@@ -11586,6 +11706,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Hugging Face Open LLM Leaderboard — huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard',
@@ -11699,6 +11820,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'What Are Common Questions About Local LLMs vs Cloud APIs?',
           faqs: [
             {
@@ -11860,6 +11983,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions: Ollama vs LM Studio',
           faqs: [
             {
@@ -11907,6 +12032,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Ollama Official GitHub — github.com/ollama/ollama',
@@ -12044,6 +12170,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Local LLM Frontends',
           faqs: [
             {
@@ -12079,6 +12207,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Open WebUI GitHub — github.com/open-webui/open-webui',
@@ -12240,6 +12369,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Inference Engines',
           faqs: [
             {
@@ -12275,6 +12406,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'llama.cpp GitHub — github.com/ggerganov/llama.cpp',
@@ -12392,6 +12524,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Local LLM APIs',
           faqs: [
             {
@@ -12427,6 +12561,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Ollama API Documentation — github.com/ollama/ollama/blob/main/docs/api.md',
@@ -12532,6 +12667,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3–5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-3.5 Mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
         relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) — 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) — Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) — Codierungs-Modelle bei 7B+ wenn Qwen2.5 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) — OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
         faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja — Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15–30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android — mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja — Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2–3× schneller auf CPU. Gemma 2 2B generiert 40–60 tok/sek vs 10–20 tok/sek für Mistral 7B. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen2.5 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen2.5 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen2.5 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert — auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B — aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4–6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen2.5 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
+          id: 'faq',
         sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report — microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card — huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
       },
     },
@@ -12759,6 +12895,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About LM Studio Advanced Features',
           faqs: [
             {
@@ -12785,6 +12923,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'LM Studio Documentation — lmstudio.ai/docs',
@@ -12824,6 +12963,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3–5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-3.5 Mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
         relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) — 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) — Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) — Codierungs-Modelle bei 7B+ wenn Qwen2.5 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) — OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
         faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja — Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15–30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android — mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja — Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2–3× schneller auf CPU. Gemma 2 2B generiert 40–60 tok/sek vs 10–20 tok/sek für Mistral 7B. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen2.5 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen2.5 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen2.5 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert — auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B — aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4–6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen2.5 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
+          id: 'faq',
         sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report — microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card — huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
       },
     },
@@ -12999,6 +13139,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Ollama Commands',
           faqs: [
             {
@@ -13029,6 +13171,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Ollama GitHub — github.com/ollama/ollama',
@@ -13152,6 +13295,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Local RAG',
           faqs: [
             {
@@ -13182,6 +13327,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'LlamaIndex Documentation — docs.llamaindex.ai',
@@ -13300,6 +13446,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Desktop vs Web UI',
           faqs: [
             {
@@ -13330,6 +13478,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'LM Studio — lmstudio.ai',
@@ -13430,6 +13579,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Local Code Completions',
           faqs: [
             {
@@ -13460,6 +13611,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Continue.dev — continue.dev',
@@ -13558,6 +13710,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Headless Deployments',
           faqs: [
             {
@@ -13588,6 +13742,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Ollama GitHub — github.com/ollama/ollama',
@@ -13739,6 +13894,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Local LLM Hardware',
           faqs: [
             {
@@ -13774,6 +13931,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'NVIDIA GPU Specifications — nvidia.com/en-us/geforce/graphics-cards/',
@@ -13899,6 +14057,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'GGUF Specification — github.com/ggerganov/ggml/blob/master/docs/gguf.md',
@@ -14027,6 +14186,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'NVIDIA GPU Specifications — nvidia.com/en-us/geforce',
@@ -14148,6 +14308,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'vLLM Documentation — docs.vllm.ai',
@@ -14266,6 +14427,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'vLLM Optimization Guide — docs.vllm.ai/en/dev_guide/performance_tuning.html',
@@ -14384,6 +14546,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'NVIDIA GPU Specifications — nvidia.com/en-us/geforce',
@@ -14510,6 +14673,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'llama.cpp Quantization — github.com/ggerganov/llama.cpp/blob/master/gguf-py/gguf/quants.py',
@@ -14619,6 +14783,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'NVIDIA GPU Power Specs — nvidia.com/en-us/geforce',
@@ -14726,6 +14891,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'vLLM Tensor Parallelism — docs.vllm.ai/en/serving/distributed_serving.html',
@@ -14822,6 +14988,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'MacBook Pro M3 Specs — apple.com/macbook-pro',
@@ -14922,6 +15089,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Apple A18 Chip — apple.com/iphone-16/specs',
@@ -15060,6 +15228,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Local RAG',
           faqs: [
             {
@@ -15094,6 +15264,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'LlamaIndex Documentation — docs.llamaindex.ai',
@@ -15213,6 +15384,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About LoRA Fine-Tuning',
           faqs: [
             {
@@ -15246,6 +15419,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'LoRA Paper (Hu et al.) — arxiv.org/abs/2106.09685',
@@ -15375,6 +15549,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Local Agents',
           faqs: [
             {
@@ -15404,6 +15580,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'LangGraph Documentation — github.com/langchain-ai/langgraph',
@@ -15516,6 +15693,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Chain-of-Thought Paper (Wei et al.) — arxiv.org/abs/2201.11903',
@@ -15626,6 +15804,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'GDPR Official Text — gdpr-info.eu',
@@ -15732,6 +15911,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'HumanEval Benchmark — github.com/openai/human-eval',
@@ -15839,6 +16019,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Llama 3.2 Vision Model Card — huggingface.co/meta-llama/Llama-3.2-11B-Vision',
@@ -15959,6 +16140,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'OpenAI API Pricing — openai.com/pricing',
@@ -16078,6 +16260,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Chinchilla Scaling Laws — arxiv.org/abs/2203.15556',
@@ -16179,6 +16362,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Hugging Face Model Hub — huggingface.co/models',
@@ -16311,6 +16495,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'What Are Common Questions From Enterprise Leaders?',
           faqs: [
             {
@@ -16345,6 +16531,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'GDPR Official Text — gdpr-info.eu',
@@ -16480,6 +16667,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'Common Questions About Air-Gapped Systems',
           faqs: [
             {
@@ -16514,6 +16703,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'NIST Cybersecurity Framework — nist.gov/cyberframework',
@@ -16635,6 +16825,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'What Are Common Questions About Enterprise Compliance?',
           faqs: [
             {
@@ -16673,6 +16865,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'GDPR Official Text — gdpr-info.eu',
@@ -16792,6 +16985,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'What Are Common Questions About Scaling Local LLMs?',
           faqs: [
             {
@@ -16830,6 +17025,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'Kubernetes Documentation — kubernetes.io/docs',
@@ -16950,6 +17146,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         faqSection: {
+          id: 'faq',
+          id: 'faq',
           title: 'What Are Common Questions About Corporate RAG?',
           faqs: [
             {
@@ -16988,6 +17186,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources',
           items: [
             'LlamaIndex Documentation — docs.llamaindex.ai',
@@ -19741,6 +19940,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3–5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-3.5 Mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
         relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) — 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) — Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) — Codierungs-Modelle bei 7B+ wenn Qwen2.5 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) — OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
         faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja — Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15–30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android — mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja — Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2–3× schneller auf CPU. Gemma 2 2B generiert 40–60 tok/sek vs 10–20 tok/sek für Mistral 7B. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen2.5 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen2.5 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen2.5 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert — auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B — aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4–6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen2.5 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
+          id: 'faq',
         sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report — microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card — huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
       },
     },
@@ -19993,6 +20193,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3–5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-3.5 Mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
         relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) — 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) — Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) — Codierungs-Modelle bei 7B+ wenn Qwen2.5 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) — OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
         faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja — Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15–30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android — mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja — Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2–3× schneller auf CPU. Gemma 2 2B generiert 40–60 tok/sek vs 10–20 tok/sek für Mistral 7B. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen2.5 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen2.5 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen2.5 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert — auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B — aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4–6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen2.5 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
+          id: 'faq',
         sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report — microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card — huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
       },
     },
