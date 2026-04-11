@@ -11044,9 +11044,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Best Models',
       title: 'Long Context Local LLMs: Which Models Handle 32K, 128K Tokens Locally?',
-      seoTitle: 'Long Context Local LLMs 2026: Models & RAM Requirements',
+      seoTitle: 'Long Context Local LLMs 2026: Which Models Work Best',
       intro: 'Most local LLM models in 2026 support 128K token context windows on paper, but practical usable context — where quality stays high — is typically 16K–32K tokens. Llama 3.1/3.2/3.3, Qwen2.5, and Mistral Small 3.1 all support 128K context. Processing full-length documents or books locally requires understanding RAM scaling and quality degradation at long ranges.',
-      metaDescription: 'Long context local LLMs: which models support 32K, 128K tokens locally, RAM requirements for long contexts, and practical limits before Free beta — April 2026.',
+      metaDescription: 'Llama 3.1, Qwen2.5, and Mistral support 128K token contexts locally. Compare RAM costs, practical limits up to 32K reliable, and when to use long context vs RAG.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-05',
       readTime: '8 min read',
@@ -11595,7 +11595,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     de: {
       theme: 'Best Models',
       title: 'Lokalmodelle mit langem Kontext 2026: Welche Modelle bewältigen 32K, 128K Token lokal?',
-      seoTitle: 'Lange Kontextfenster bei lokalen LLMs 2026: Modelle & RAM-Anforderungen',
+      seoTitle: 'Lange Kontexte bei lokalen LLMs 2026: Modelle & RAM',
       intro: 'Die meisten lokalen LLM-Modelle im Jahr 2026 unterstützen auf dem Papier Kontextfenster von 128K Token, aber der praktisch nutzbare Kontext — wo die Qualität hoch bleibt — liegt typischerweise bei 16K–32K Token. Llama 3.1/3.2/3.3, Qwen2.5 und Mistral Small 3.1 unterstützen alle 128K Kontext. Die Verarbeitung längerer Dokumente oder Bücher erfordert Verständnis für RAM-Skalierung und Qualitätsverschlechterung bei großen Bereichen.',
       metaDescription: 'Lokale LLMs mit langem Kontext: Welche Modelle 32K, 128K Token unterstützen, RAM-Anforderungen für lange Kontexte und praktische Limits — April 2026.',
       publishDate: '2026-04-04',
@@ -11607,7 +11607,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     fr: {
       theme: 'Best Models',
       title: 'LLMs locaux avec long contexte 2026 : Quels modèles gèrent 32K, 128K tokens localement ?',
-      seoTitle: 'LLMs locaux avec long contexte 2026 : Modèles et exigences RAM',
+      seoTitle: 'LLMs locaux long contexte 2026 : Modèles et comparaison',
       intro: 'La plupart des modèles LLM locaux en 2026 prennent en charge sur le papier des fenêtres de contexte de 128K tokens, mais le contexte utilisable pratique — où la qualité reste élevée — est généralement de 16K–32K tokens. Llama 3.1/3.2/3.3, Qwen2.5 et Mistral Small 3.1 prennent tous en charge le contexte 128K. Traiter des documents ou des livres longs localement nécessite de comprendre la mise à l\'échelle RAM et la dégradation de la qualité sur les longues plages.',
       metaDescription: 'LLMs locaux avec long contexte : quels modèles supportent 32K, 128K tokens, exigences RAM pour long contexte et limites pratiques — avril 2026.',
       publishDate: '2026-04-04',
