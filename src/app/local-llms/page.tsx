@@ -39,6 +39,7 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
+  const t = translations[selectedLang as keyof typeof translations]
   const langSuffix = selectedLang === 'en' ? '' : `?lang=${selectedLang}`
   const canonicalUrl = `https://www.promptquorum.com/local-llms${langSuffix}`
 
@@ -46,7 +47,7 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: 'Local LLMs 2026: Complete Guide to Running AI Models Offline',
+      name: t.localLlmsHubTitle,
       url: canonicalUrl,
       'inLanguage': selectedLang,
       datePublished: '2026-04-01',
@@ -61,6 +62,7 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
+      'inLanguage': selectedLang,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Local LLMs', item: canonicalUrl },
@@ -129,16 +131,16 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
       'name': 'Local LLMs Hub Navigation',
       'inLanguage': selectedLang,
       'hasPart': [
-        { '@type': 'SiteNavigationElement', name: 'Getting Started', url: 'https://www.promptquorum.com/local-llms#getting-started' },
-        { '@type': 'SiteNavigationElement', name: 'Models by Use Case', url: 'https://www.promptquorum.com/local-llms#best-models' },
-        { '@type': 'SiteNavigationElement', name: 'Tools & Interfaces', url: 'https://www.promptquorum.com/local-llms#tools-interfaces' },
-        { '@type': 'SiteNavigationElement', name: 'Hardware & Performance', url: 'https://www.promptquorum.com/local-llms#hardware-performance' },
-        { '@type': 'SiteNavigationElement', name: 'Advanced Techniques & Applications', url: 'https://www.promptquorum.com/local-llms#advanced-techniques' },
-        { '@type': 'SiteNavigationElement', name: 'Enterprise', url: 'https://www.promptquorum.com/local-llms#enterprise' },
-        { '@type': 'SiteNavigationElement', name: 'GPU Buying Guides', url: 'https://www.promptquorum.com/local-llms#gpu-buying-guides' },
-        { '@type': 'SiteNavigationElement', name: 'Hardware Setups', url: 'https://www.promptquorum.com/local-llms#hardware-setups' },
-        { '@type': 'SiteNavigationElement', name: 'Privacy & Business', url: 'https://www.promptquorum.com/local-llms#privacy-business' },
-        { '@type': 'SiteNavigationElement', name: 'Cost & Comparisons', url: 'https://www.promptquorum.com/local-llms#cost-comparisons' }
+        { '@type': 'SiteNavigationElement', name: 'Getting Started', url: `https://www.promptquorum.com/local-llms${langSuffix}#getting-started` },
+        { '@type': 'SiteNavigationElement', name: 'Models by Use Case', url: `https://www.promptquorum.com/local-llms${langSuffix}#best-models` },
+        { '@type': 'SiteNavigationElement', name: 'Tools & Interfaces', url: `https://www.promptquorum.com/local-llms${langSuffix}#tools-interfaces` },
+        { '@type': 'SiteNavigationElement', name: 'Hardware & Performance', url: `https://www.promptquorum.com/local-llms${langSuffix}#hardware-performance` },
+        { '@type': 'SiteNavigationElement', name: 'Advanced Techniques & Applications', url: `https://www.promptquorum.com/local-llms${langSuffix}#advanced-techniques` },
+        { '@type': 'SiteNavigationElement', name: 'Enterprise', url: `https://www.promptquorum.com/local-llms${langSuffix}#enterprise` },
+        { '@type': 'SiteNavigationElement', name: 'GPU Buying Guides', url: `https://www.promptquorum.com/local-llms${langSuffix}#gpu-buying-guides` },
+        { '@type': 'SiteNavigationElement', name: 'Hardware Setups', url: `https://www.promptquorum.com/local-llms${langSuffix}#hardware-setups` },
+        { '@type': 'SiteNavigationElement', name: 'Privacy & Business', url: `https://www.promptquorum.com/local-llms${langSuffix}#privacy-business` },
+        { '@type': 'SiteNavigationElement', name: 'Cost & Comparisons', url: `https://www.promptquorum.com/local-llms${langSuffix}#cost-comparisons` }
       ]
     },
     {
