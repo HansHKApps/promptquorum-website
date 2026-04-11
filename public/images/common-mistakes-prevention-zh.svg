@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1000 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="1000" height="650" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="500" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="middle">常见错误和解决方案</text>
+
+  <!-- Row 1: Using 70B Models -->
+  <rect x="40" y="70" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="115" r="20" fill="#D32F2F"/>
+  <text x="80" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">邮件使用 70B 模型</text>
+  <text x="115" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">大型模型生成冗长的详细输出。</text>
+  <text x="115" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">速度慢（30 秒以上），浪费计算资源。</text>
+  <text x="115" y="151" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">不适合快速商业邮件往来。</text>
+
+  <rect x="520" y="70" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="115" r="20" fill="#388E3C"/>
+  <text x="560" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">使用 7B～24B 模型</text>
+  <text x="595" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">较小模型准确、简洁。</text>
+  <text x="595" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">快速（5～15 秒），资源高效。</text>
+  <text x="595" y="151" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Mistral Small 3.1 24B 最适合商业写作。</text>
+
+  <!-- Row 2: No Style Examples -->
+  <rect x="40" y="210" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="255" r="20" fill="#D32F2F"/>
+  <text x="80" y="262" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">缺少品牌声音示例</text>
+  <text x="115" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">模型猜测风格，往往错过语气。</text>
+  <text x="115" y="273" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">结果通用化，类似 ChatGPT 风格。</text>
+  <text x="115" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">邮件之间没有一致性。</text>
+
+  <rect x="520" y="210" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="255" r="20" fill="#388E3C"/>
+  <text x="560" y="262" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">提供 2～3 封示例邮件</text>
+  <text x="595" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">在系统提示中包含已发送的真实邮件作为参考。</text>
+  <text x="595" y="273" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">模型学习您的语气、措辞和形式。</text>
+  <text x="595" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">输出自动匹配您的品牌声音。</text>
+
+  <!-- Row 3: Trusting First Draft -->
+  <rect x="40" y="350" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="395" r="20" fill="#D32F2F"/>
+  <text x="80" y="402" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">信任初稿</text>
+  <text x="115" y="395" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">模型生成语法正确但不够个性化的文本。</text>
+  <text x="115" y="413" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">未经修改听起来正式或生硬。</text>
+  <text x="115" y="431" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">缺少专业通信所需的人情味。</text>
+
+  <rect x="520" y="350" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="395" r="20" fill="#388E3C"/>
+  <text x="560" y="402" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">使用 1～2 个修改周期</text>
+  <text x="595" y="395" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">先草稿，再用编辑提示语进行修改。</text>
+  <text x="595" y="413" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">提示语："删除行话，使用简单词汇，提高清晰度"</text>
+  <text x="595" y="431" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">最终输出精致专业。</text>
+
+  <!-- Row 4: Missing Context Length -->
+  <rect x="40" y="490" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="535" r="20" fill="#D32F2F"/>
+  <text x="80" y="542" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="515" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">默认上下文窗口（2K）</text>
+  <text x="115" y="535" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Ollama 默认 2,048 令牌上下文窗口。</text>
+  <text x="115" y="553" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">多页提案和合同被截断。</text>
+  <text x="115" y="571" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">模型丢失重要文档上下文。</text>
+
+  <rect x="520" y="490" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="535" r="20" fill="#388E3C"/>
+  <text x="560" y="542" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="515" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">增加上下文到 8K～32K</text>
+  <text x="595" y="535" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">在 Ollama Modelfile 中设置：PARAMETER num_ctx 8192</text>
+  <text x="595" y="553" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">支持 2～5 页提案不被截断。</text>
+  <text x="595" y="571" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">完整合同审查使用 32K 上下文。</text>
+
+  <!-- Footer -->
+  <text x="500" y="630" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">最佳实践：7B～24B 模型、品牌声音示例、迭代修改、适应性上下文。</text>
+</svg>

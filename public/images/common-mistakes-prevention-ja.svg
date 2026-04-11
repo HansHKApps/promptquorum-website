@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1000 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="1000" height="650" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="500" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="middle">よくある間違いと対策</text>
+
+  <!-- Row 1: Using 70B Models -->
+  <rect x="40" y="70" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="115" r="20" fill="#D32F2F"/>
+  <text x="80" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">メール送信に70Bモデル</text>
+  <text x="115" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">大規模モデルは冗長で詳細な出力を生成します。</text>
+  <text x="115" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">遅い（30秒以上）、リソースを浪費します。</text>
+  <text x="115" y="151" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">迅速なビジネスメールに不向き。</text>
+
+  <rect x="520" y="70" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="115" r="20" fill="#388E3C"/>
+  <text x="560" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">7B～24Bモデルを使用</text>
+  <text x="595" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">小規模モデルは正確で簡潔です。</text>
+  <text x="595" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">高速（5～15秒）、リソース効率的です。</text>
+  <text x="595" y="151" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Mistral Small 3.1 24B がビジネス文章に最適。</text>
+
+  <!-- Row 2: No Style Examples -->
+  <rect x="40" y="210" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="255" r="20" fill="#D32F2F"/>
+  <text x="80" y="262" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">ブランドボイス例なし</text>
+  <text x="115" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">モデルはスタイルを推測し、トーンを逃します。</text>
+  <text x="115" y="273" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">結果は ChatGPT のような汎用的なもの。</text>
+  <text x="115" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">メール間で一貫性がありません。</text>
+
+  <rect x="520" y="210" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="255" r="20" fill="#388E3C"/>
+  <text x="560" y="262" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">2～3件のサンプルメール提供</text>
+  <text x="595" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">実際に送信されたメールを参照として含めます。</text>
+  <text x="595" y="273" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">モデルはトーン、語彙、形式性を習得します。</text>
+  <text x="595" y="291" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">出力は自動的にブランドボイスと一致します。</text>
+
+  <!-- Row 3: Trusting First Draft -->
+  <rect x="40" y="350" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="395" r="20" fill="#D32F2F"/>
+  <text x="80" y="402" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">初稿を信頼する</text>
+  <text x="115" y="395" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">モデルは文法的に正しいが非個人的なテキストを生成。</text>
+  <text x="115" y="413" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">修正なしでは形式的または不器用に聞こえます。</text>
+  <text x="115" y="431" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">プロの通信に人間らしさがありません。</text>
+
+  <rect x="520" y="350" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="395" r="20" fill="#388E3C"/>
+  <text x="560" y="402" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">1～2回の推敲サイクル利用</text>
+  <text x="595" y="395" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">まず下書き、次に編集プロンプトで洗練させます。</text>
+  <text x="595" y="413" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">プロンプト: 「専門用語を削除、シンプルに書く」</text>
+  <text x="595" y="431" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">最終出力は洗練され、専門的です。</text>
+
+  <!-- Row 4: Missing Context Length -->
+  <rect x="40" y="490" width="420" height="120" fill="#FFE8E8" rx="8" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="80" cy="535" r="20" fill="#D32F2F"/>
+  <text x="80" y="542" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✕</text>
+  <text x="115" y="515" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#D32F2F">デフォルト文脈ウィンドウ（2K）</text>
+  <text x="115" y="535" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Ollama はデフォルト 2,048 トークン コンテキスト。</text>
+  <text x="115" y="553" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">複数ページの提案と契約が切り詰められます。</text>
+  <text x="115" y="571" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">モデルが重要なドキュメント文脈を失う。</text>
+
+  <rect x="520" y="490" width="420" height="120" fill="#E8F5E9" rx="8" stroke="#388E3C" stroke-width="2"/>
+  <circle cx="560" cy="535" r="20" fill="#388E3C"/>
+  <text x="560" y="542" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="595" y="515" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#388E3C">文脈を 8K～32K に増加</text>
+  <text x="595" y="535" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">Ollama Modelfile: PARAMETER num_ctx 8192 を設定。</text>
+  <text x="595" y="553" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">2～5 ページの提案を切り詰めなしで対応。</text>
+  <text x="595" y="571" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F">完全な契約レビュー には 32K 文脈を使用。</text>
+
+  <!-- Footer -->
+  <text x="500" y="630" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">ベストプラクティス: 7B～24B モデル、ブランドボイス例、反復的な推敲、適応的な文脈。</text>
+</svg>
