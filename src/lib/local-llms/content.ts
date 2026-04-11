@@ -9098,6 +9098,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Language Group': 'Arabic (MSA)', 'Qwen2.5 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral 7B': '★', 'Gemma 3 9B': '★★★' },
           ],
           columns: ['Language Group', 'Qwen2.5 7B', 'Llama 3.1 8B', 'Mistral 7B', 'Gemma 3 9B'],
+          image: 'multilingual-llm-comparison-en.svg',
+          imageCaption: 'Multilingual LLM comparison 2026: Qwen2.5 7B leads across all Asian languages (Chinese, Japanese, Korean with ★★★★–★★★★★ ratings). Mistral 7B matches Qwen2.5 on European languages (French/German). Star ratings (1–5) reflect 2026 benchmarks.',
         },
         commonMistakes: {
           title: 'What Are the Common Mistakes When Using Multilingual Local LLMs?',

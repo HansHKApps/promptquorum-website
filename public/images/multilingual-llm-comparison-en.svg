@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- White background -->
+  <rect width="800" height="450" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-size="22" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">
+    Multilingual Local LLM Comparison 2026
+  </text>
+
+  <!-- Column headers -->
+  <text x="120" y="65" font-size="13" font-weight="600" text-anchor="middle" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Language Group</text>
+  <text x="280" y="65" font-size="13" font-weight="600" text-anchor="middle" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Qwen2.5 7B</text>
+  <text x="420" y="65" font-size="13" font-weight="600" text-anchor="middle" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Llama 3.1 8B</text>
+  <text x="560" y="65" font-size="13" font-weight="600" text-anchor="middle" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Mistral 7B</text>
+  <text x="700" y="65" font-size="13" font-weight="600" text-anchor="middle" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">Gemma 3 9B</text>
+
+  <!-- Row 1: Chinese -->
+  <rect x="20" y="80" width="200" height="40" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="107" font-size="13" font-weight="500" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">Chinese (any dialect)</text>
+
+  <rect x="240" y="80" width="80" height="40" fill="#6750A4" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="280" y="107" font-size="16" font-weight="700" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif">★★★★★</text>
+
+  <rect x="380" y="80" width="80" height="40" fill="#E8DEF8" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="420" y="107" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★</text>
+
+  <rect x="520" y="80" width="80" height="40" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="560" y="107" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★</text>
+
+  <rect x="660" y="80" width="80" height="40" fill="#C4B8E2" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="700" y="107" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★★</text>
+
+  <!-- Row 2: Japanese -->
+  <rect x="20" y="125" width="200" height="40" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="152" font-size="13" font-weight="500" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">Japanese</text>
+
+  <rect x="240" y="125" width="80" height="40" fill="#9B89C9" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="280" y="152" font-size="16" font-weight="700" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif">★★★★</text>
+
+  <rect x="380" y="125" width="80" height="40" fill="#E8DEF8" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="420" y="152" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★</text>
+
+  <rect x="520" y="125" width="80" height="40" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="560" y="152" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★</text>
+
+  <rect x="660" y="125" width="80" height="40" fill="#C4B8E2" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="700" y="152" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★★</text>
+
+  <!-- Row 3: Korean -->
+  <rect x="20" y="170" width="200" height="40" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="197" font-size="13" font-weight="500" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">Korean</text>
+
+  <rect x="240" y="170" width="80" height="40" fill="#9B89C9" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="280" y="197" font-size="16" font-weight="700" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif">★★★★</text>
+
+  <rect x="380" y="170" width="80" height="40" fill="#E8DEF8" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="420" y="197" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★</text>
+
+  <rect x="520" y="170" width="80" height="40" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="560" y="197" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★</text>
+
+  <rect x="660" y="170" width="80" height="40" fill="#C4B8E2" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="700" y="197" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★★</text>
+
+  <!-- Row 4: French/German -->
+  <rect x="20" y="215" width="200" height="40" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="242" font-size="13" font-weight="500" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">French / German</text>
+
+  <rect x="240" y="215" width="80" height="40" fill="#9B89C9" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="280" y="242" font-size="16" font-weight="700" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif">★★★★</text>
+
+  <rect x="380" y="215" width="80" height="40" fill="#C4B8E2" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="420" y="242" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★★</text>
+
+  <rect x="520" y="215" width="80" height="40" fill="#9B89C9" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="560" y="242" font-size="16" font-weight="700" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif">★★★★</text>
+
+  <rect x="660" y="215" width="80" height="40" fill="#C4B8E2" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="700" y="242" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★★</text>
+
+  <!-- Row 5: Spanish/Italian -->
+  <rect x="20" y="260" width="200" height="40" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="287" font-size="13" font-weight="500" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">Spanish / Italian</text>
+
+  <rect x="240" y="260" width="80" height="40" fill="#9B89C9" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="280" y="287" font-size="16" font-weight="700" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif">★★★★</text>
+
+  <rect x="380" y="260" width="80" height="40" fill="#C4B8E2" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="420" y="287" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★★</text>
+
+  <rect x="520" y="260" width="80" height="40" fill="#C4B8E2" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="560" y="287" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★★</text>
+
+  <rect x="660" y="260" width="80" height="40" fill="#C4B8E2" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="700" y="287" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★★</text>
+
+  <!-- Row 6: Arabic -->
+  <rect x="20" y="305" width="200" height="40" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="120" y="332" font-size="13" font-weight="500" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">Arabic (MSA)</text>
+
+  <rect x="240" y="305" width="80" height="40" fill="#C4B8E2" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="280" y="332" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★★</text>
+
+  <rect x="380" y="305" width="80" height="40" fill="#E8DEF8" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="420" y="332" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★</text>
+
+  <rect x="520" y="305" width="80" height="40" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="560" y="332" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★</text>
+
+  <rect x="660" y="305" width="80" height="40" fill="#C4B8E2" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="700" y="332" font-size="16" font-weight="700" text-anchor="middle" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">★★★</text>
+
+  <!-- Footer note -->
+  <text x="20" y="385" font-size="12" font-weight="500" fill="#79747E" font-family="system-ui, -apple-system, sans-serif">
+    ★ Rating scale (1–5): Qwen2.5 dominates Asian languages; Mistral competitive on European languages.
+  </text>
+  <text x="20" y="405" font-size="12" font-weight="500" fill="#79747E" font-family="system-ui, -apple-system, sans-serif">
+    Ratings based on 2026 benchmarks: JMT-bench (Japanese), MMLU (general), language-specific evaluations.
+  </text>
+</svg>
