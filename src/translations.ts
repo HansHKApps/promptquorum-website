@@ -79,8 +79,8 @@ export const translations = {
     featuresMetaDescription: "PromptQuorum dispatches prompts to 25+ AI providers using 9 frameworks (CO-STAR, CRAFT, RISEN) and runs consensus analysis. Free with your API key.",
     howItWorksMetaTitle: "How PromptQuorum Works: Optimize, Dispatch & Score 2026",
     howItWorksMetaDescription: "PromptQuorum's 4-stage pipeline optimizes your prompt, dispatches to 25+ AI models simultaneously, then runs consensus scoring for the best answer.",
-    faqMetaTitle: "PromptQuorum FAQ: Multi-Model Prompts, Privacy & Pricing",
-    faqMetaDescription: "PromptQuorum FAQ: 26 answers on prompt optimization, multi-model consensus, 9 frameworks, local LLM support (Ollama, LM Studio), BYOM privacy and free tier",
+    faqMetaTitle: "PromptQuorum FAQ: Pricing, Privacy & AI Providers",
+    faqMetaDescription: "26 answers about PromptQuorum: multi-model dispatch, consensus scoring, 9 prompt frameworks, local LLM support, BYOM privacy model, and getting started.",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt Engineering Hub: 80 Guides | PromptQuorum",
@@ -187,8 +187,8 @@ export const translations = {
     featuresMetaDescription: "PromptQuorum sendet Prompts an 25+ KI-Anbieter mit 9 Frameworks (CO-STAR, CRAFT, RISEN) und führt Konsensanalyse durch. Kostenlos mit eigenem API-Key.",
     howItWorksMetaTitle: "Wie PromptQuorum funktioniert: 4-Stufen-Pipeline 2026",
     howItWorksMetaDescription: "PromptQuorums 4-Stufen-Pipeline optimiert Prompts, sendet an 25+ KI-Modelle und führt Konsensscoring durch, um die beste Antwort zu finden.",
-    faqMetaTitle: "PromptQuorum FAQ: Prompts, Datenschutz & Preismodell",
-    faqMetaDescription: "PromptQuorum FAQ: 26 Antworten zu Optimierung, Multi-Model-Consensus, 9 Frameworks, lokalem LLM-Support (Ollama, LM Studio), BYOM-Datenschutz und Zugang.",
+    faqMetaTitle: "PromptQuorum FAQ: Preise, Datenschutz & KI-Anbieter",
+    faqMetaDescription: "26 Antworten zu PromptQuorum: Multi-Model-Versand, Konsensscoring, 9 Prompt-Frameworks, lokaler LLM-Support, BYOM Datenschutz und erste Schritte.",
 
     // SEO Meta Tags — Group B
     promptEngineeringHubTitle: "Prompt-Engineering-Hub: 80 Leitfäden | PromptQuorum",
