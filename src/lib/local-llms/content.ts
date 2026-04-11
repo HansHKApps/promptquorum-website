@@ -10992,12 +10992,24 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               a: 'For document search and retrieval tasks, RAG (retrieval-augmented generation) is often more effective than feeding entire documents as context. RAG retrieves the 3–5 most relevant chunks from a large document set and provides only those to the model. This uses 4K–8K tokens of context and avoids the "lost in the middle" problem. Tools like GPT4All LocalDocs and LlamaIndex implement local RAG.',
             },
             {
-              q: 'Does the EU AI Act affect how I can use long-context AI for document processing?',
-              a: 'The EU AI Act (effective February 2025) classifies AI systems processing personal data at scale as potentially high-risk. Local inference is not exempt, but it eliminates the third-party data processor risk. For legal document analysis or medical record summarization in the EU, running a local long-context model keeps data on-premises and under your control.',
+              q: 'What is the KV cache and why does it grow with context length?',
+              a: 'The KV cache (key-value cache) stores attention states for every token processed in the context window. Each token requires a fixed amount of memory for its key and value vectors — so a 32K context requires 8× more KV cache memory than a 4K context. This is why a 7B model at Q4_K_M needs ~6 GB for 4K context but ~9 GB for 32K context. The model weights stay the same — only the KV cache grows.',
             },
             {
               q: 'Can local models handle 1M token contexts like Gemini 2.5 Pro?',
               a: 'No — as of April 2026, no locally-runnable model supports 1M token contexts. Gemini 2.5 Pro\'s 1M token window requires Google\'s TPU infrastructure. Locally, 128K is the maximum supported by current consumer hardware. For tasks requiring 1M+ token contexts, cloud APIs remain the only practical option.',
+            },
+            {
+              q: 'What is the "lost in the middle" problem and how do I avoid it?',
+              a: 'Research shows LLMs reliably retrieve information from the beginning and end of the context window, but miss details from the middle. For a 128K context, content placed at the 40K–80K token mark is most likely to be ignored. To avoid this: either keep important information at the start of the prompt, use RAG to retrieve only relevant chunks, or process long documents in overlapping 16K–32K sections.',
+            },
+            {
+              q: 'How do I check what context length Ollama is using?',
+              a: 'Run `ollama show <model>` — the output lists the parameters including num_ctx. If it shows 2048, Ollama is using the default, not the model\'s full context window. To change it persistently, create a Modelfile with PARAMETER num_ctx 32768 and run ollama create <name> -f Modelfile. Check active sessions with ollama ps.',
+            },
+            {
+              q: 'Is long context or RAG better for document question-answering?',
+              a: 'RAG is usually more effective and RAM-efficient than long context for document Q&A. RAG retrieves 3–5 relevant chunks (4K–8K tokens total) from a large corpus and avoids the "lost in the middle" problem. Long context is better when the model needs to understand the entire document structure or when exact ordering and relationships between sections matter. For most practical document Q&A, start with RAG.',
             },
           ],
         },
@@ -11784,7 +11796,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
             'Öffnen Sie https://ollama.ai/library in einem Webbrowser für die vollständige searchable Bibliothek aller 4.500+ Modelle.',
             'Filteroptionen: Modellgröße, Lizenz, Veröffentlichungsdatum, Benchmarks (MMLU, HumanEval, MATH).',
             'Ratings pro Modell: Nutzer-Downloads, GitHub-Sterne (für das Basis-Modell), Ollama-Sterne.',
-            'Neue Modelle: Ollamá's Bibliothek wird wöchentlich aktualisiert (Donnerstags, UTC 18:00).',
+            'Neue Modelle: Ollamá\'s Bibliothek wird wöchentlich aktualisiert (Donnerstags, UTC 18:00).',
           ],
         },
         commonMistakes: {
