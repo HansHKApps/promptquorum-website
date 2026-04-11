@@ -8035,6 +8035,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       intro: 'La quantification LLM réduit les poids du modèle de nombres flottants 32 bits ou 16 bits à des entiers 4 bits ou 8 bits, économisant 50–75% de RAM avec une perte de qualité minimale. Q4_K_M est la quantification standard recommandée pour l\'inférence locale — elle réduit un modèle 7B de ~14 GB à ~4.5 GB tout en conservant 97–99% de la qualité originale du modèle sur les benchmarks standard.',
       metaDescription: 'Quantification LLM expliquée : Q4_K_M, Q8_0, GGUF comparés, économies RAM, pertes qualité et meilleur choix pour vos besoins 2026.',
       publishDate: '2026-04-04',
+      dateModified: '2026-04-05',
       readTime: '9 min de lecture',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Quantification LLM',
@@ -8358,6 +8359,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       intro: 'LLM量子化は、モデルの重み精度を32ビットまたは16ビット浮動小数点数から4ビットまたは8ビット整数に削減する技術です。RAMの必要量を50～75%削減しながら、品質低下を最小限に抑えることができます。Q4_K_Mは推奨される標準量子化で、7Bモデルを14GB程度から4.5GB程度に削減し、標準ベンチマークで元の品質の97～99%を保持します。',
       metaDescription: 'LLM量子化の仕組み：Q4_K_M、Q8_0、GGUFの動作、RAM削減と品質トレードオフ、最適な量子化の選択方法を解説します。2026年4月。',
       publishDate: '2026-04-04',
+      dateModified: '2026-04-05',
       readTime: '9分で読める',
       educationalLevel: 'Intermediate',
       primaryTerm: 'LLM量子化',
@@ -8680,7 +8682,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       seoTitle: '本地LLM量化指南2026',
       intro: 'LLM量化通过将模型权重精度从32位或16位浮点数降低到4位或8位整数，将RAM需求减少50-75%，质量损失最小。Q4_K_M是本地推理的标准推荐量化级别——它将7B模型从约14GB减少到约4.5GB，同时在标准基准上保持97-99%的原始模型质量。',
       metaDescription: 'LLM量化详解：Q4_K_M、Q8_0和GGUF工作原理，VRAM节省vs质量权衡，为您的硬件选择最佳量化。企业本地LLM部署2026年指南。',
-      publishDate: '2026-04-02',
+      publishDate: '2026-04-04',
+      dateModified: '2026-04-05',
       readTime: '阅读约7分钟',
       educationalLevel: 'Beginner',
       primaryTerm: 'quantization',
@@ -15538,13 +15541,64 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'GPU Buying Guides',
       title: 'Best AMD GPUs for Local LLMs',
-      seoTitle: 'Best AMD GPUs for Local LLMs: RX 6800 XT, 7900 XTX, Radeon Pro',
+      seoTitle: 'Best AMD GPUs for Local LLMs 2026: RX 7900 XTX',
       intro: '**AMD RX 6800 XT and RX 7900 XTX are solid NVIDIA alternatives, offering 15–20% better compute-per-dollar, but suffer from weaker ONNX Runtime and vLLM driver support.** As of April 2026, AMD ROCm (HIP) has matured, but compatibility layers add friction. NVIDIA CUDA is still the path of least resistance for local LLMs. Use AMD only if you find a great used deal or already own AMD hardware.',
-      metaDescription: 'Best AMD GPUs for local LLMs: RX 6800 XT, 7900 XTX, Radeon Pro. ROCm setup, vLLM support, NVIDIA vs AMD. Free beta — April 2026.',
+      metaDescription: 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. ROCm setup, vLLM performance, cost-per-TFLOP analysis. When to buy AMD over CUDA. April 2026.',
       publishDate: '2026-04-05',
       readTime: '7 min',
       educationalLevel: 'Intermediate',
       primaryTerm: 'AMD GPU',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Best AMD GPUs for Local LLMs 2026: RX 7900 XTX',
+        'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. ROCm setup, vLLM performance, cost-per-TFLOP analysis. When to buy AMD over CUDA. April 2026.',
+        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=en',
+        'inLanguage': 'en',
+        'datePublished': '2026-04-05',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Should I buy AMD RX 6800 XT or NVIDIA RTX 3080 for local LLMs?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 3080 if you value simplicity (CUDA "just works"). RX 6800 XT if you want 25% better value and don\'t mind 5–10 hours ROCm setup.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is AMD RX 7900 XTX better than RTX 4090?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Similar speed, same VRAM (24GB). RX 7900 XTX is $200–300 cheaper used ($450–550 vs. $1,000–1,300). ROCm setup is the trade-off.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use AMD GPUs with Ollama?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Technically yes, but expect buggy behavior. CPU fallback is common. Use vLLM or llama.cpp instead for AMD.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What\'s the best AMD path for local LLMs in 2026?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama.cpp (HIP backend) + Text Generation WebUI. Both have solid AMD support. Avoid Ollama.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do I need Ubuntu for AMD ROCm, or does Windows work?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Windows support exists (HIP on Windows), but it\'s newer and buggier. Ubuntu is the recommended path.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is RX 6700 or 6750 good for 7B models?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'RX 6700 (12GB) works but is 20% slower than RX 6800 XT. Only buy if <$250. Otherwise, stretch to 6800 XT.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I mix AMD and NVIDIA GPUs in one system?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Theoretically yes, but management is a nightmare. Each GPU needs its own CUDA/HIP runtime. Not recommended.' }
+          }
+        ]
+      },
       toc: [
         { label: 'TLDR', anchor: '#tldr' },
         { label: 'Which AMD GPUs Are Actually Worth Using?', anchor: '#which-amd' },
