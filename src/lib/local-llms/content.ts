@@ -8648,6 +8648,323 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ],
       },
     },
+    zh: {
+      theme: '最佳模型',
+      title: '大语言模型量化详解：Q4_K_M、Q8_0、GGUF格式的工作原理',
+      seoTitle: '大语言模型量化指南：Q4_K_M、Q8_0、GGUF详解',
+      intro: '大语言模型量化是一种将模型权重精度从32位或16位浮点数降低到4位或8位整数的技术，可将RAM需求减少50～75%，同时保持最小的质量损失。Q4_K_M是推荐的标准量化方案——它将7B模型从约14GB降低到约4.5GB，同时在标准基准测试中保持97～99%的原始模型质量。',
+      metaDescription: '深入讲解大语言模型量化技术：Q4_K_M、Q8_0、GGUF工作原理、RAM节省与质量权衡、量化级别选择指南。2026年4月更新。',
+      publishDate: '2026-04-04',
+      readTime: '阅读约9分钟',
+      educationalLevel: 'Intermediate',
+      primaryTerm: '大语言模型量化',
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '什么是大语言模型量化？', anchor: '#what-is-quantization' },
+        { label: 'Q4_K_M、Q5_K_M、Q8_0有何区别？', anchor: '#quantization-levels' },
+        { label: 'GGUF格式是什么？', anchor: '#gguf-format' },
+        { label: '不同量化级别的RAM节省', anchor: '#ram-savings' },
+        { label: '实际会损失多少质量？', anchor: '#quality-loss' },
+        { label: '应该选择哪种量化级别？', anchor: '#which-quantization' },
+        { label: '地域背景', anchor: '#regional-context' },
+        { label: '常见错误', anchor: '#common-mistakes' },
+        { label: '相关阅读', anchor: '#related-reading' },
+        { label: '常见问题', anchor: '#faq' },
+        { label: '参考资料', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '量化将模型权重从32位压缩到4～8位，RAM使用量减少50～75%。',
+            '**Q4_K_M**是标准推荐级别——质量与RAM的最佳平衡，适用于消费级硬件。',
+            '7B模型示例：FP16 = 约14GB RAM、Q4_K_M = 约4.5GB、Q8_0 = 约7GB。',
+            'Q4_K_M的MMLU基准质量损失为1～3%，与FP16相比——在大多数实际任务中难以察觉。',
+            'GGUF是llama.cpp、Ollama和LM Studio用于存储量化模型的文件格式。',
+          ],
+        },
+        whatIs: {
+          title: '什么是大语言模型量化及其为何重要',
+          content: [
+            '大型语言模型将学习到的知识存储为数十亿个数值权重。默认情况下，这些以16位浮点数（FP16）的形式存储——每个权重两个字节。一个7B模型有70亿个权重，因此FP16文件大小约为14GB。',
+            '量化用低精度整数替换这些16位浮点数。在4位量化中，每个权重使用0.5字节而不是2字节——将内存仅对权重本身减少到约3.5GB。加上元数据开销，Q4_K_M量化的7B模型大约为4.5GB。',
+            '这对本地推理很重要，因为消费级硬件的RAM有限。不使用量化，7B模型需要16GB RAM来运行。使用Q4_K_M量化，同一模型在6GB RAM上运行，使其可在[大多数现代笔记本电脑](/local-llms/local-llm-on-laptop?lang=zh)上使用。',
+          ],
+        },
+        quantizationLevels: {
+          title: 'Q4_K_M、Q5_K_M、Q8_0等级有何区别',
+          content: '量化名称遵循模式：Q{bits}_{variant}。比特数是权重精度；变体影响量化的应用方式：',
+          rows: [
+            { '级别': 'Q2_K', '位数': '2', 'RAM (7B)': '约2.7GB', '质量损失': '高', '使用场景': 'RAM < 4GB，接受质量下降' },
+            { '级别': 'Q3_K_S', '位数': '3', 'RAM (7B)': '约3.3GB', '质量损失': '中等', '使用场景': 'RAM 4～5GB' },
+            { '级别': 'Q4_K_M', '位数': '4', 'RAM (7B)': '约4.5GB', '质量损失': '低 (1～3%)', '使用场景': '大多数用户的默认选择' },
+            { '级别': 'Q5_K_M', '位数': '5', 'RAM (7B)': '约5.7GB', '质量损失': '最小 (<1%)', '使用场景': '16GB RAM，需要更高质量' },
+            { '级别': 'Q6_K', '位数': '6', 'RAM (7B)': '约6.6GB', '质量损失': '近乎无损', '使用场景': '16GB RAM，编码/数学任务' },
+            { '级别': 'Q8_0', '位数': '8', 'RAM (7B)': '约7.7GB', '质量损失': '可忽略不计', '使用场景': '16GB+RAM，最高质量' },
+          ],
+          columns: ['级别', '位数', 'RAM (7B)', '质量损失', '使用场景'],
+        },
+        gguf: {
+          title: 'GGUF格式是什么及其与量化的关系',
+          content: [
+            'GGUF（GPT生成统一格式）是用于本地推理存储量化LLM权重的文件格式。由llama.cpp项目创建，取代了较旧的GGML格式。',
+            'GGUF文件包含：量化的模型权重、所有模型元数据（架构、分词器、上下文长度）和格式版本号。这种自包含设计意味着单个`.gguf`文件是运行模型所需的全部内容——无需单独的分词器文件，无需配置JSON。',
+            '截至2026年4月，GGUF是Ollama、LM Studio、Jan AI和GPT4All的标准格式。运行`ollama pull llama3.1:8b`时，Ollama内部下载GGUF文件。LM Studio显示模型文件大小时，这些就是GGUF文件大小。',
+            '量化级别是文件名的一部分：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`是Llama 3.1 8B的Q4_K_M量化GGUF。',
+          ],
+        },
+        ramSavings: {
+          title: '不同模型大小的量化RAM节省',
+          rows: [
+            { '模型大小': '3B', 'FP16': '约6GB', 'Q8_0': '约3.8GB', 'Q4_K_M': '约2GB', 'Q3_K_S': '约1.6GB' },
+            { '模型大小': '7B', 'FP16': '约14GB', 'Q8_0': '约7.7GB', 'Q4_K_M': '约4.5GB', 'Q3_K_S': '约3.3GB' },
+            { '模型大小': '13B', 'FP16': '约26GB', 'Q8_0': '约14GB', 'Q4_K_M': '约8.5GB', 'Q3_K_S': '约6GB' },
+            { '模型大小': '34B', 'FP16': '约68GB', 'Q8_0': '约36GB', 'Q4_K_M': '约22GB', 'Q3_K_S': '约16GB' },
+            { '模型大小': '70B', 'FP16': '约140GB', 'Q8_0': '约70GB', 'Q4_K_M': '约40GB', 'Q3_K_S': '约30GB' },
+          ],
+          columns: ['模型大小', 'FP16', 'Q8_0', 'Q4_K_M', 'Q3_K_S'],
+        },
+        qualityLoss: {
+          title: '实际会损失多少质量',
+          content: [
+            '量化导致的质量损失通过在完全精度模型和量化版本上运行相同基准并比较分数来衡量。截至2026年4月，既定的发现是：',
+          ],
+          items: [
+            '**Q4_K_M对FP16**：MMLU上1～3%的性能下降。在FP16上得分73%的7B模型，在Q4_K_M上得分71～72%。在实际任务中，此差异难以察觉。',
+            '**Q3_K_S对FP16**：5～10%的性能下降。在复杂推理和数学任务中明显。在FP16上正确解决数学问题的模型在Q3_K_S上可能失败。',
+            '**Q2_K对FP16**：15～25%的性能下降。在所有任务类型中质量损失显著。仅在RAM限制绝对时使用。',
+            '**Q8_0对FP16**：性能下降不足0.5%——实际上对所有实际目的而言相同。',
+            'K_M变体（K-Quant中等）使用混合精度方法，在相同比特数下比旧的Q4_0量化更好地保持质量。当两者都可用时，始终选择Q4_K_M而不是Q4_0。',
+          ],
+        },
+        whichQuantization: {
+          title: '应该选择哪种量化级别',
+          items: [
+            '**4～8GB RAM可用**：Q4_K_M——[受限硬件的最佳平衡](/local-llms/best-beginner-local-llm-models?lang=zh)。',
+            '**8～16GB RAM可用**：Q5_K_M或Q6_K——更好的质量和充足的RAM余量。',
+            '**16GB+RAM可用**：Q8_0——接近无损质量，没有理由使用更低的量化。',
+            '**24GB+VRAM的GPU**：Q8_0或Q6_K（适合VRAM的模型大小）。',
+            '**批处理/夜间任务**：Q4_K_M——在可用RAM上最大化吞吐量和模型大小。',
+            '**专门用于编码或数学任务**：使用Q5_K_M或更高——量化影响在精确数值和算法推理上最为明显。',
+          ],
+        },
+        regionalContext: {
+          title: '本地LLM量化的地域背景',
+          content: '量化的考量因地区而异，涉及法规、主权和合规框架：',
+          items: [
+            '**中国（数据安全法）**：中国2021年《数据安全法》要求大多数AI应用实现本地运行。量化支持在国内硬件上运行大型中文原生模型（Qwen2.5、百川），降低基础设施成本。Q4_K_M和Q5_K_M量化在8GB～16GB GPU上实现了符合《数据安全法》的合规部署。金融机构、医疗组织和政府部门使用量化模型来满足数据驻留要求。',
+            '**亚太地区（跨境数据）**：东南亚和亚太地区各国实施严格的数据驻留框架。量化降低了部署成本，使组织能够在国内服务器上合规地运行多语言模型。新加坡、印度尼西亚和泰国的金融和医疗组织优先采用本地量化模型以避免跨境数据传输。',
+            '**企业部署（金融/医疗/法律）**：银行、医院和律师事务所使用量化模型处理敏感数据。Q4_K_M和Q5_K_M量化使这些组织能够在符合GDPR、HIPAA和本地数据保护法的本地服务器上部署LLM。成本和合规性是驱动力，量化通过减少硬件投资和消除云提供商数据处理依赖来解决两者。',
+          ],
+        },
+        commonMistakes: {
+          title: '大语言模型量化中的常见错误',
+          items: [
+            '**下载Q4_0而不是Q4_K_M**——Q4_0是不具有K-Quant改进的较旧量化方法。Q4_K_M在相同RAM占用下质量好5～8%。当两者都可用时，始终选择Q4_K_M。',
+            '**假设更高的量化始终意味着更差的质量**——更高的Q数=更多位=更好的质量。Q8_0优于Q4_K_M。Q5_K_M优于Q4_K_M。Q4_K_M 70B模型在大多数任务上优于Q8_0 8B模型。',
+            '**在加载模型前不检查RAM余量**——模型大小不是唯一的RAM消费者。操作系统、浏览器和其他应用也消耗RAM。在8GB机器上，4.5GB Q4_K_M 7B模型仅为其他所有内容留下3.5GB。规则：模型文件大小 + 2GB OS开销 + 1GB余量 = 最小所需RAM。',
+          ],
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[本地LLM硬件指南](/local-llms/local-llm-hardware-setup?lang=zh)——运行量化模型的GPU、CPU和RAM要求。',
+            '[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models?lang=zh)——选择您的第一个模型附带量化建议。',
+            '[消费级硬件小型LLM模型](/local-llms/small-local-llm-models?lang=zh)——在量化上运行的3B和7B模型。',
+            '[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh)——下载并运行GGUF量化模型。',
+            '[在笔记本电脑上运行本地LLM](/local-llms/local-llm-on-laptop?lang=zh)——Q4_K_M推理实践设置。',
+            '[本地LLM设置故障排除](/local-llms/troubleshooting-local-llm-setup?lang=zh)——调试VRAM和量化错误。',
+          ],
+        },
+        faqSection: {
+          title: '关于大语言模型量化的常见问题',
+          faqs: [
+            {
+              q: 'Ollama会自动使用最佳量化吗？',
+              a: '是的——运行`ollama pull llama3.1:8b`时，Ollama默认下载Q4_K_M变体。要获取特定量化，请附加标签：`ollama pull llama3.1:8b-instruct-q5_K_M`。每个模型的可用量化标签列在ollama.com/library上的模型页面上。',
+            },
+            {
+              q: '我可以自己量化模型而不是下载预先量化的版本吗？',
+              a: '可以——llama.cpp包含一个`quantize`二进制文件，将GGUF文件转换为任何支持的量化级别。该过程根据模型大小需要5～30分钟。大多数用户应该从Hugging Face下载预先量化的GGUF文件，因为结果是等效的。',
+            },
+            {
+              q: '量化会影响模型的上下文窗口吗？',
+              a: '不会——量化仅影响模型权重精度，不影响上下文长度。Llama 3.1 8B模型支持128K代币，无论是量化到Q4_K_M还是在FP16下运行。但是，处理更长的上下文需要更多RAM，不管量化如何——用Q4_K_M 7B模型处理64K代币上下文可能需要10GB+RAM。',
+            },
+            {
+              q: 'GGUF和GPTQ量化有什么区别？',
+              a: 'GGUF（llama.cpp格式）和GPTQ是两种不同的量化方法。GGUF使用K-Quants并在CPU和GPU上运行。GPTQ仅在GPU上运行且需要PyTorch。对于Ollama、LM Studio或Jan AI的本地推理，GGUF是正确的格式。GPTQ用于AutoGPTQ和vLLM等GPU专注推理框架。',
+            },
+            {
+              q: 'Hugging Face上不同提供者的Q4_K_M模型质量有区别吗？',
+              a: '量化算法在llama.cpp中是标准化的，所以同一基础模型的Q4_K_M量化无论谁创建GGUF文件都应该几乎相同。但是，一些提供者应用了额外的调整（imatrix量化）来改进质量。标记为"imat"或"importance matrix"量化的文件通常在相同比特数下质量更高。',
+            },
+            {
+              q: '什么是imatrix量化？',
+              a: 'Imatrix（重要性矩阵）量化使用校准数据为不同权重分配不同的精度级别，基于其对模型输出的重要性。最影响预测的权重用更多位量化；不太重要的权重使用更少的位。结果：与均匀量化相比，相同比特数的质量更好。Qwen2.5 imatrix量化比标准Q4_K_M好2～4%。',
+            },
+            {
+              q: 'Q4_K_M和Q4_K_S有什么区别？',
+              a: '两者都是4位量化，但K_M（中等）和K_S（小）在每个量化块的内存分配上有所不同。Q4_K_M使用更多元数据以获得更好的质量重构——通常对7B模型为4.5～5GB。Q4_K_S更激进——与K_M相比节省300～400MB，但有3～5%的质量损失。除非在极度受限硬件（<4GB RAM）上，否则使用Q4_K_M。',
+            },
+            {
+              q: '我可以在不重新下载模型的情况下切换量化级别吗？',
+              a: '不可以——切换量化级别需要下载不同的GGUF文件或自己重新量化基础模型。一旦模型被量化为Q4_K_M，如果没有原始FP16模型，您就无法将其转换回Q5_K_M。大多数用户从Hugging Face为其所需的量化级别下载预先量化的GGUF文件。',
+            },
+            {
+              q: '量化如何影响推理速度？',
+              a: '量化通常增加推理速度10～40%，因为加载和处理4位权重比16位浮点数更快。Q4_K_M 7B模型在消费级CPU上以约8～12 tok/s运行；相同模型在FP16下以约1～2 tok/s运行。量化对GPU性能的提升较小（快5～15%），因为GPU已经为浮点运算优化。',
+            },
+            {
+              q: 'Ollama默认使用哪种量化级别？',
+              a: 'Ollama默认为其库中的所有模型使用Q4_K_M。运行`ollama pull llama3.1:8b`时，您正在下载Q4_K_M变体。此默认为大多数用户很好地平衡了质量和RAM要求。要拉取不同的量化，请附加标签：`ollama pull llama3.1:8b:q5_k_m`或`ollama pull llama3.1:8b:q8_0`。',
+            },
+          ],
+        },
+        sources: {
+          title: '参考资料',
+          items: [
+            'llama.cpp量化文档 — github.com/ggerganov/llama.cpp/blob/master/examples/quantize/README.md',
+            'K-Quants技术讨论 — github.com/ggerganov/llama.cpp/pull/1684（原始K-Quant PR）',
+            'GGUF格式规范 — github.com/ggerganov/ggml/blob/master/docs/gguf.md',
+            'Open LLM Leaderboard量化基准 — huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': '大语言模型量化详解：Q4_K_M、Q8_0、GGUF格式的工作原理',
+        'description': '大语言模型量化是一种将模型权重精度从32位或16位浮点数降低到4位或8位整数的技术，可将RAM需求减少50～75%。',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-04',
+        'url': 'https://www.promptquorum.com/local-llms/llm-quantization-explained?lang=zh',
+        'inLanguage': 'zh',
+        'proficiencyLevel': 'Intermediate',
+        'about': [
+          { '@type': 'Thing', 'name': '大语言模型量化' },
+          { '@type': 'Thing', 'name': 'Q4_K_M量化' },
+          { '@type': 'Thing', 'name': 'GGUF格式' },
+          { '@type': 'Thing', 'name': '模型压缩' },
+        ],
+        'author': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+          'url': 'https://www.promptquorum.com',
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'PromptQuorum',
+          'url': 'https://www.promptquorum.com',
+          'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' },
+        },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '大语言模型量化级别：RAM对质量',
+        'inLanguage': 'zh',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Q2_K',
+            'item': { '@type': 'Thing', 'name': 'Q2_K - 2位量化，最高压缩率，显著质量损失' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Q3_K_S',
+            'item': { '@type': 'Thing', 'name': 'Q3_K_S - 3位量化，中等质量损失，7B为4～5GB RAM' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Q4_K_M',
+            'item': { '@type': 'Thing', 'name': 'Q4_K_M - 4位量化（推荐），1～3%质量损失，7B约4.5GB RAM' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 4,
+            'name': 'Q5_K_M',
+            'item': { '@type': 'Thing', 'name': 'Q5_K_M - 5位量化，最小质量损失，7B约5.7GB RAM' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 5,
+            'name': 'Q8_0',
+            'item': { '@type': 'Thing', 'name': 'Q8_0 - 8位量化，可忽略不计的质量损失，7B约7.7GB RAM' },
+          },
+          {
+            '@type': 'ListItem',
+            'position': 6,
+            'name': 'FP16',
+            'item': { '@type': 'Thing', 'name': 'FP16 - 16位完全精度，无质量损失，7B约14GB RAM' },
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Ollama会自动使用最佳量化吗？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '是的——运行`ollama pull llama3.1:8b`时，Ollama默认下载Q4_K_M变体。' },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以自己量化模型吗？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '可以——llama.cpp包含一个`quantize`二进制文件，可将GGUF文件转换为任何支持的量化级别。' },
+          },
+          {
+            '@type': 'Question',
+            'name': '量化会影响上下文窗口吗？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '不会——量化仅影响模型权重精度，不影响上下文长度。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GGUF和GPTQ量化有什么区别？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF在CPU和GPU上运行，而GPTQ仅在GPU上运行。对于本地推理，GGUF是正确的格式。' },
+          },
+          {
+            '@type': 'Question',
+            'name': '不同提供者的Q4_K_M模型质量有区别吗？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '量化算法是标准化的，所以同一基础模型的Q4_K_M量化应该几乎相同。' },
+          },
+          {
+            '@type': 'Question',
+            'name': '什么是imatrix量化？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Imatrix量化使用校准数据为不同权重分配不同的精度级别，基于其对模型输出的重要性。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q4_K_M和Q4_K_S有什么区别？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '两者都是4位量化，但Q4_K_M（中等）使用更多元数据以获得更好质量，而Q4_K_S（小）更激进。' },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以在不重新下载的情况下切换量化吗？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '不可以——切换量化级别需要下载不同的GGUF文件或重新量化基础模型。' },
+          },
+          {
+            '@type': 'Question',
+            'name': '量化如何影响推理速度？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '量化通常增加推理速度10～40%，因为处理4位权重比16位浮点数更快。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama默认使用哪种量化？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama默认为其库中的所有模型使用Q4_K_M。' },
+          },
+        ],
+      },
+    },
   },
 
   'multilingual-local-llms': {
