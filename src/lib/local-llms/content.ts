@@ -10666,21 +10666,26 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       intro: 'Most local LLM models in 2026 support 128K token context windows on paper, but practical usable context — where quality stays high — is typically 16K–32K tokens. Llama 3.1/3.2/3.3, Qwen2.5, and Mistral Small 3.1 all support 128K context. Processing full-length documents or books locally requires understanding RAM scaling and quality degradation at long ranges.',
       metaDescription: 'Long context local LLMs: which models support 32K, 128K tokens locally, RAM requirements for long contexts, and practical limits before Free beta — April 2026.',
       publishDate: '2026-04-04',
+      dateModified: '2026-04-05',
       readTime: '8 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'long context local LLM',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
-        { label: 'What Is Context Length and Why Does It Matter?', anchor: '#what-is-context-length' },
-        { label: 'Which Local LLMs Support 128K Tokens?', anchor: '#which-local-llms-support-128k' },
-        { label: 'How Much RAM Does Long Context Use?', anchor: '#how-much-ram-for-long-context' },
-        { label: 'Practical vs Theoretical Context Length', anchor: '#practical-vs-theoretical' },
-        { label: 'Long Context Benchmark Comparison', anchor: '#long-context-benchmark' },
-        { label: 'Common Mistakes with Long Context', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'What Is Context Length?', anchor: '#what-is-context-length' },
+        { label: 'Which Models Support 128K?', anchor: '#models-128k' },
+        { label: 'How Much RAM Does Long Context Use?', anchor: '#ram-long-context' },
+        { label: 'Practical vs Theoretical Context', anchor: '#practical-context' },
+        { label: 'How to Set Context Length in Ollama', anchor: '#set-context-ollama' },
+        { label: 'Regional Context', anchor: '#regional-context' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Sources', anchor: '#sources' },
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
           isTldr: true,
           items: [
             'Most Llama 3.x, Qwen2.5, and Mistral Small models support 128K token context windows as of April 2026.',
@@ -10688,9 +10693,11 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**Practical quality limit**: most 7B–8B models maintain reliable quality up to 16K–32K tokens. Beyond 32K, information from the beginning of the context may be "lost" or ignored.',
             'RAM for long context scales with context length: a 7B model at Q4_K_M with 128K context needs ~12–16 GB RAM vs ~6 GB for 4K context.',
             'For truly long documents (100K+ tokens), cloud models (Gemini 2.5 Pro at 1M tokens) remain significantly more practical than local inference.',
+            'Ollama defaults to 2048 tokens of context — not 128K. Always set num_ctx explicitly in a Modelfile or use --ctx at runtime to access long context.',
           ],
         },
         whatIsContext: {
+          id: 'what-is-context-length',
           title: 'What Is Context Length and Why Does It Matter for Local LLMs?',
           content: [
             'Context length is the maximum number of tokens a model can process in a single inference call — the combined size of the input (your document, conversation history, system prompt) and the output (the model\'s response). One token ≈ 0.75 words in English; 128K tokens ≈ 96,000 words.',
@@ -10699,6 +10706,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         which128k: {
+          id: 'models-128k',
           title: 'Which Local LLMs Support 128K Token Context in 2026?',
           rows: [
             { 'Model': 'Llama 3.1 8B', 'Context Window': '128K', 'Practical Limit': '~32K reliable', 'Ollama Command': 'ollama run llama3.1:8b' },
@@ -10713,6 +10721,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Model', 'Context Window', 'Practical Limit', 'Ollama Command'],
         },
         ramForLongContext: {
+          id: 'ram-long-context',
           title: 'How Much RAM Does Long Context Processing Require?',
           content: [
             'RAM usage scales with both model size and context length. The KV cache (key-value cache) stores attention states for all processed tokens — this grows linearly with context length.',
@@ -10727,6 +10736,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Model', '4K Context', '32K Context', '128K Context'],
         },
         practicalVsTheoretical: {
+          id: 'practical-context',
           title: 'Why Is Practical Context Length Shorter Than the Advertised Maximum?',
           content: [
             'LLMs trained with RoPE positional encodings (used by Llama, Qwen, Mistral) can technically process tokens up to their maximum context length, but quality degrades in a known pattern called the "lost in the middle" effect.',
@@ -10735,26 +10745,42 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         contextSettings: {
+          id: 'set-context-ollama',
           title: 'How Do You Set Context Length in Ollama',
           content: 'Ollama defaults to 2048 tokens of context unless configured otherwise. To use a model\'s full context window:',
           codeBlock: '# Set context length at runtime\nollama run llama3.1:8b --ctx 32768\n\n# Or create a custom model with a Modelfile\ncat << EOF > Modelfile\nFROM llama3.1:8b\nPARAMETER num_ctx 32768\nEOF\nollama create llama3.1-32k -f Modelfile\nollama run llama3.1-32k',
           codeLanguage: 'bash',
         },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Long Context Local LLMs: Regional Context',
+          content: [
+            '**EU / GDPR + AI Act:** The EU AI Act (effective February 2025) classifies AI systems processing personal data at scale as potentially high-risk. Long-context local inference for legal document analysis, medical record summarization, or HR document processing sits in this risk tier. Running locally eliminates the third-party data processor risk under GDPR Article 28 — no data leaves the organization.',
+            'For German BSI compliance on AI systems processing sensitive documents locally: the recommended configuration is a 7B model at Q4_K_M with 32K context (fits in 9–10 GB RAM on a standard workstation). This provides reliable quality on documents up to 50 pages while keeping all data on-premises. Llama 3.1 8B and Mistral Small 3.1 are the recommended EU compliance choices for long-context document processing.',
+            'For French CNIL guidelines on AI and personal data: local inference via Ollama with no external API calls satisfies the requirement that personal data not be processed by third-party AI providers without a valid legal basis.',
+            '**Japan (METI):** Japanese documents require 1.5–2× more tokens than equivalent English documents due to tokenizer differences. A 50-page Japanese report may consume 25K–35K tokens — within the reliable range of Qwen2.5 7B (32K practical limit) but requiring explicit context configuration in Ollama: PARAMETER num_ctx 32768. For Japanese legal and financial documents, Qwen2.5 14B at Q4_K_M with 32K context (~12 GB RAM) provides the best quality-per-RAM for Japanese long-context processing. Qwen2.5\'s native Japanese tokenizer processes Japanese text 30–40% more efficiently than Llama.',
+            '**China:** Under China\'s Data Security Law (数据安全法), processing sensitive documents through cloud APIs requires additional regulatory compliance. Local long-context inference via Qwen2.5 (Alibaba) keeps all document content on-premises. For Chinese enterprise document processing, Qwen2.5 72B with 32K context on a local workstation (~45 GB RAM) provides near-cloud quality at full data sovereignty. Qwen2.5\'s native Chinese tokenizer makes it 30–40% more token-efficient than Llama for Chinese-language documents.',
+          ],
+        },
         commonMistakes: {
-          title: 'What Are the Common Mistakes with Long Context Local LLMs?',
-          faqs: [
-            {
-              q: 'Assuming 128K context works as well as 4K context',
-              a: 'It does not. The "lost in the middle" effect means information presented 30K–80K tokens ago is retrieved less reliably than information at the start or end of the context. For critical document analysis, chunk long documents into 16K–32K sections and process each separately rather than feeding an entire 100K document at once.',
-            },
-            {
-              q: 'Not increasing Ollama\'s default context size',
-              a: 'Ollama defaults to 2048 tokens of context regardless of the model\'s maximum. A conversation that exceeds 2048 tokens will truncate earlier messages. Always set `num_ctx` explicitly when using long-context features: add `PARAMETER num_ctx 32768` to your Modelfile or use `--ctx` at runtime.',
-            },
-            {
-              q: 'Running long context on insufficient RAM',
-              a: 'Loading a 7B model with 128K context on 8 GB RAM (total) will cause severe swap usage. The model weights (~4.5 GB) plus the 128K KV cache (~8+ GB) exceed 8 GB total. Either reduce context length to 32K (fits in ~9 GB) or use a machine with 16+ GB RAM for long-context inference.',
-            },
+          id: 'common-mistakes',
+          title: 'Common Mistakes with Long Context Local LLMs',
+          items: [
+            '**Assuming 128K context works as well as 4K:** The "lost in the middle" effect means information presented 30K–80K tokens ago is retrieved less reliably than information at the start or end. For critical document analysis, chunk long documents into 16K–32K sections and process each separately rather than feeding an entire 100K document at once.',
+            '**Not increasing Ollama\'s default context size:** Ollama defaults to 2048 tokens of context regardless of the model\'s maximum. A conversation exceeding 2048 tokens will truncate earlier messages. Always set num_ctx explicitly: add PARAMETER num_ctx 32768 to your Modelfile or use --ctx at runtime.',
+            '**Running long context on insufficient RAM:** A 7B model with 128K context on 8 GB RAM total causes severe swap usage. Model weights (~4.5 GB) plus 128K KV cache (~8+ GB) exceed 8 GB. Reduce context to 32K (fits ~9 GB) or use 16+ GB RAM for 128K context inference.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Related Reading',
+          items: [
+            '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — how Q4_K_M affects RAM at different context lengths and which quantization to use',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — RAM and GPU requirements for running 128K context models on consumer hardware',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — complete setup guide including Modelfile configuration for custom context lengths',
+            '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — full model rankings including context window details for every model in the list',
+            '[Local LLM on a Laptop](/local-llms/local-llm-on-laptop) — practical RAM management for long-context inference on constrained laptop hardware',
+            '[Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) — fix OOM errors caused by insufficient RAM for long context KV cache',
           ],
         },
         faqSection: {
@@ -11286,6 +11312,33 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               q: 'How often does the Ollama library get updated with new models?',
               a: 'The Ollama team adds new models within days to weeks of major releases. Meta Llama 3.3 appeared in the Ollama library within 3 days of its December 2025 release. Follow the Ollama GitHub repository (github.com/ollama/ollama) or the Ollama Twitter/X account for new model announcements.',
             },
+            {
+              q: 'What is the difference between `ollama pull` and `ollama run`?',
+              a: '`ollama pull` downloads the model file to local storage (one-time operation). `ollama run` starts an interactive session immediately after pulling, or reuses the already-pulled model if available. You can pull once and run multiple times without re-downloading.',
+            },
+            {
+              q: 'Can I run multiple models simultaneously on the same machine?',
+              a: 'Yes, if your hardware has sufficient VRAM. Use separate terminal windows or shell sessions — one window runs `ollama run llama2` while another runs `ollama run mistral`. Ollama automatically manages VRAM sharing. Monitor `nvidia-smi` or system activity to avoid overload.',
+            },
+            {
+              q: 'How do I update a model to the latest version?',
+              a: '`ollama pull [model-name]` checks for updates and downloads the latest version if available. To revert or use specific versions, use version tags: `ollama pull llama3.1:8b` or `ollama pull llama3.1:8b-instruct-q4_K_M`. Check available versions with `ollama show [model-name]`.',
+            },
+            {
+              q: 'Are open source models on Ollama truly free to use commercially?',
+              a: 'Most are, but not all. Llama 3.x (Meta Llama Community Licence) restricts commercial use above 700M monthly active users. Mistral 7B, Qwen2.5, and Gemma 3 use Apache 2.0 (fully commercial-friendly). Always verify the licence before enterprise deployment — check the model\'s Hugging Face page or Ollama library entry.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Related Reading & Resources',
+          items: [
+            '[How to Install Ollama: Complete Setup Guide](/local-llms/how-to-install-ollama?lang=en)',
+            '[Best Multilingual Local LLMs 2026: Qwen2.5 vs Llama vs Mistral](/local-llms/multilingual-local-llms?lang=en)',
+            '[Local LLM Hardware Guide 2026: GPU, CPU, RAM Requirements](/local-llms/local-llm-hardware-guide-2026?lang=en)',
+            '[Open WebUI vs Ollama: Which Should You Use?](/local-llms/open-webui-vs-ollama?lang=en)',
+            '[How to Optimize Local LLM Performance: Quantization & Caching](/local-llms/optimize-local-llm-performance?lang=en)',
+            '[Local LLMs vs Cloud APIs: Which Should You Use in 2026?](/local-llms/local-llms-vs-cloud-apis?lang=en)',
           ],
         },
         sources: {
@@ -11297,6 +11350,123 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'Ollama GitHub — github.com/ollama/ollama',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Best Open Source Models on Ollama 2026: Top 10 Ranked',
+        'description': 'Top open source Ollama models 2026: most downloaded, best for coding and reasoning. Download commands, RAM requirements, and benchmarks — April 2026.',
+        'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=en',
+        'inLanguage': 'en',
+        'datePublished': '2026-04-04',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Top 10 Open Source Models on Ollama',
+        'description': 'The most downloaded and highest-performing open source models available via Ollama',
+        'inLanguage': 'en',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:3b', 'description': 'Most popular overall, best-supported first model for general chat. 2.5 GB RAM.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'llama3.1:8b', 'description': 'Best balance of quality and RAM for 8 GB machines. General chat, 72% HumanEval.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'qwen2.5:7b', 'description': 'Fastest-growing model family. Multilingual (29 languages), coding support, 72% HumanEval.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen2.5-coder:7b', 'description': 'Specialized for coding. 72% HumanEval, FIM support, 128K context.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'deepseek-r1:7b', 'description': 'Best reasoning and math model. Chain-of-thought reasoning, 52% MATH score.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'mistral:7b', 'description': 'European origin, efficient inference. EU-preferred for GDPR, 39% HumanEval.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'mistral-small3.1', 'description': 'Best quality on 16 GB hardware. Near-70B quality at 14 GB RAM, 74% HumanEval.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'gemma2:2b', 'description': 'Fastest CPU inference. Lightweight at 1.7 GB RAM, 40-60 tokens/sec on CPU.' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'llama3.2-vision:11b', 'description': 'Best multimodal. Processes images with text prompts locally, 8 GB RAM.' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'phi4-mini', 'description': 'Reasoning in 4 GB RAM. 70% HumanEval, best 3.8B model for logic and problem-solving.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'en',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'How many models are in the Ollama library?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'As of April 2026, the Ollama library contains approximately 200+ curated models with official support. Hugging Face hosts thousands of additional GGUF models that can be loaded via Ollama using custom Modelfiles.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use models from Hugging Face directly in Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Download a GGUF file from Hugging Face and create a Modelfile: `FROM ./model.gguf`. Then run `ollama create mymodel -f Modelfile`. This works for any GGUF file including fine-tunes and models not in the official Ollama library.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which Ollama model is best for building a local chatbot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For a general-purpose local chatbot: `llama3.1:8b` on 8 GB RAM machines, `mistral-small3.1` on 16 GB RAM. For a coding assistant chatbot: `qwen2.5-coder:7b`. Pair with Open WebUI for a web-based interface that connects to Ollama\'s API at localhost:11434.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Are all Ollama models truly open source?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Not all. The Ollama library includes models with varying licences. Llama 3.x uses the Meta Llama Community Licence (not OSI-approved open source — restricts commercial use above 700M monthly active users). Mistral 7B, Qwen2.5, and Gemma 3 are Apache 2.0 (fully open source). Always check the licence before commercial deployment.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which embedding model should I use with Ollama for RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '`nomic-embed-text` is the standard choice — a 137M parameter model that generates 768-dimensional embeddings, runs at milliseconds per document, and is specifically designed for retrieval tasks. Pull it with `ollama pull nomic-embed-text`. Use with Open WebUI\'s built-in RAG, LangChain\'s OllamaEmbeddings, or LlamaIndex.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How often does the Ollama library get updated with new models?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The Ollama team adds new models within days to weeks of major releases. Meta Llama 3.3 appeared in the Ollama library within 3 days of its December 2025 release. Follow the Ollama GitHub repository (github.com/ollama/ollama) or the Ollama Twitter/X account for new model announcements.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between `ollama pull` and `ollama run`?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '`ollama pull` downloads the model file to local storage (one-time operation). `ollama run` starts an interactive session immediately after pulling, or reuses the already-pulled model if available. You can pull once and run multiple times without re-downloading.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run multiple models simultaneously on the same machine?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, if your hardware has sufficient VRAM. Use separate terminal windows or shell sessions — one window runs `ollama run llama2` while another runs `ollama run mistral`. Ollama automatically manages VRAM sharing. Monitor `nvidia-smi` or system activity to avoid overload.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I update a model to the latest version?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '`ollama pull [model-name]` checks for updates and downloads the latest version if available. To revert or use specific versions, use version tags: `ollama pull llama3.1:8b` or `ollama pull llama3.1:8b-instruct-q4_K_M`. Check available versions with `ollama show [model-name]`.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Are open source models on Ollama truly free to use commercially?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Most are, but not all. Llama 3.x (Meta Llama Community Licence) restricts commercial use above 700M monthly active users. Mistral 7B, Qwen2.5, and Gemma 3 use Apache 2.0 (fully commercial-friendly). Always verify the licence before enterprise deployment — check the model\'s Hugging Face page or Ollama library entry.',
+            }
+          },
+        ]
       },
     },
   },
