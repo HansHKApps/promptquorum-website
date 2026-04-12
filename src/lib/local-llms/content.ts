@@ -15818,7 +15818,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       title: 'LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning',
       seoTitle: 'LM Studio Advanced Features 2026: GPU, API, Fine-Tuning',
       intro: 'LM Studio is primarily a chat app, but it also includes advanced features for developers: GPU memory configuration, context window adjustment, OpenAI-compatible API, and integration with fine-tuning tools. As of April 2026, LM Studio is expanding beyond chat to support professional workflows like LoRA fine-tuning and batch inference.',
-      metaDescription: 'LM Studio advanced features: GPU optimization, context window, API, LoRA fine-tuning, and batch inference. Developer guide for production workflows. Free beta — April 2026.',
+      metaDescription: 'LM Studio advanced features: GPU optimization, context window, API, and batch inference. Developer guide for local LLM production workflows. 2026.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Advanced',
@@ -15827,11 +15827,24 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'LM Studio Advanced Features 2026: GPU, API, Fine-Tuning',
-        'description': 'LM Studio advanced features: GPU optimization, context window, API, LoRA fine-tuning, and batch inference. Developer guide for production workflows. Free beta — April 2026.',
+        'description': 'LM Studio advanced features: GPU optimization, context window, API, and batch inference. Developer guide for local LLM production workflows. 2026.',
         'url': 'https://www.promptquorum.com/local-llms/lm-studio-advanced-features?lang=en',
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'LM Studio' },
+          { '@type': 'Thing', 'name': 'GPU optimization' },
+          { '@type': 'Thing', 'name': 'LoRA fine-tuning' },
+          { '@type': 'Thing', 'name': 'local LLM inference' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Advanced',
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -15849,21 +15862,57 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'What is the impact of increasing context window?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Longer context allows models to "remember" more of the conversation, but it increases VRAM usage and latency. A 2K context uses ~2× the VRAM of 512-token context. Test and measure before expanding.' }
+            'name': 'What is the impact of increasing the context window in LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Longer context allows models to remember more conversation history, but increases VRAM usage and latency. A 2K context uses ~2× the VRAM of a 512-token context. Benchmark after each change.' }
           },
           {
             '@type': 'Question',
-            'name': 'Should I use 100% GPU acceleration?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Not always. Use 100% for maximum speed if you only run LM Studio. Reduce to 50–75% if you need headroom for browsers, IDEs, or other GPU tasks. Measure inference speed at different levels.' }
+            'name': 'Should I use 100% GPU acceleration in LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Not always. Use 100% for maximum speed if only running LM Studio. Reduce to 50–75% if you need VRAM headroom for browsers, IDEs, or other GPU tasks. Measure inference speed at each level.' }
           },
           {
             '@type': 'Question',
             'name': 'How do I use LM Studio as a backend for other apps?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Enable Local API in Settings. It exposes OpenAI-compatible endpoints at localhost:1234. Point any OpenAI-compatible client (Python SDK, Node.js, web apps) to this URL instead of OpenAI\'s API.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Enable Local Server in Settings. It exposes OpenAI-compatible endpoints at localhost:1234. Point any OpenAI SDK (Python, Node.js) to this URL as base_url to use local models.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does LM Studio support LoRA fine-tuning?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'As of April 2026, LoRA fine-tuning is not built into LM Studio. Use Unsloth or llama.cpp training scripts for fine-tuning. LM Studio can load and run LoRA adapter files from disk.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I run batch inference in LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Use the LM Studio Local API with a loop. Send multiple POST requests to /v1/chat/completions with different prompts. LM Studio processes each request sequentially as of April 2026.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I benchmark my model speed in LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio shows tokens/sec in the status bar during inference. The Performance tab provides latency metrics, VRAM usage, and generation speed. Run a long prompt to get stable benchmarks.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I adjust temperature and top-p in LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Click the Settings icon (gear) on the chat panel to access temperature, top-p, top-k, and repeat penalty sliders. Temperature 0.7 is default; lower values give more deterministic output.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I load a custom GGUF model in LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Download the .gguf file manually and place it in your LM Studio models directory (~/.lmstudio/models on macOS/Linux). LM Studio scans this folder and lists custom models in the model selector.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What LM Studio settings improve speed for coding tasks?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Use Q4_K_M quantization for fastest inference. Set context window to 4K (enough for code files). Enable 100% GPU offload. Use a model with strong coding support (Qwen2.5-Coder, DeepSeek-Coder).' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I disable chat history in LM Studio for testing?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Click "New Chat" to start fresh. For API-based testing, omit previous messages from the messages array and only send a system prompt + user message. This simulates zero-context inference.' }
           }
         ]
       },
@@ -22902,6 +22951,86 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             'llama.cpp backend: shared foundation for both apps',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'LM Studio vs Jan AI 2026: Features, Speed, UI Comparison',
+        'description': 'LM Studio vs Jan AI: Feature comparison, speed, UI, API support. Which local LLM desktop app is better? April 2026 review.',
+        'url': 'https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai?lang=en',
+        'inLanguage': 'en',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'LM Studio' },
+          { '@type': 'Thing', 'name': 'Jan AI' },
+          { '@type': 'Thing', 'name': 'local LLM desktop app' },
+          { '@type': 'Thing', 'name': 'llama.cpp' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'en',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Which should I choose for my first local LLM — LM Studio or Jan AI?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio. It has a simpler UI, faster setup, and built-in model discovery from Hugging Face. Jan AI is better if you want to experiment with plugins and extensibility.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use LM Studio API with VS Code Copilot?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Start the LM Studio Local Server, copy the endpoint URL (localhost:1234), and paste it into VS Code Copilot extension settings as the base URL.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Jan AI\'s plugin system production-ready?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Jan AI plugins are suitable for experimentation. For production inference, use a dedicated backend like vLLM or Ollama CLI. Desktop apps are not designed for production workloads.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do I need both LM Studio and Jan AI?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Pick one. Both offer GUI chat and an OpenAI-compatible API. LM Studio is sufficient for most users. Only run both if you need to compare specific features.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How much RAM do LM Studio and Jan AI use?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Base app: 500MB–1GB each. With a 7B model loaded: 8–12GB total (model weights + app overhead). Jan AI is slightly heavier due to its plugin runtime.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run LM Studio and Jan AI simultaneously?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, on different ports. LM Studio defaults to port 1234; Jan AI defaults to 1337. Both can run at the same time, but it doubles VRAM usage if both models are loaded.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Jan AI truly open-source?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Jan AI is MIT-licensed and available on GitHub (janhq/jan). LM Studio is proprietary (free for personal use but closed-source). This makes Jan AI more auditable for privacy-sensitive deployments.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which app is faster — LM Studio or Jan AI?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Neither is meaningfully faster than the other. Both use llama.cpp as the inference backend. Speed is determined by your GPU, model size, and quantization level — not the app layer.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does Jan AI support AMD GPUs?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, through llama.cpp HIP backend. AMD ROCm support improved in 2025. LM Studio also supports AMD ROCm on Linux. Both require ROCm-compatible drivers (Ubuntu recommended).' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use Jan AI for local RAG (Retrieval-Augmented Generation)?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Jan AI includes a knowledge base plugin for local RAG. Upload documents and Jan AI indexes them for context. LM Studio does not include RAG as of April 2026.' }
+          }
+        ]
       },
     },
   },
