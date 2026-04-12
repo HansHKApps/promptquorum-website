@@ -1945,6 +1945,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Scenario', '8 GB RAM', '16 GB RAM'],
         },
         bestModels: {
+          id: 'best-models',
           title: 'Best Local LLM Models for Laptops',
           content: 'These models are specifically selected for laptop constraints — balancing quality, RAM use, and sustained generation speed:',
           rows: [
@@ -1957,6 +1958,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           columns: ['Model', 'RAM', 'Speed (CPU)', 'Best For'],
         },
         appleSilicon: {
+          id: 'apple-vs-windows',
           title: 'Apple Silicon vs Windows Laptop: Which Is Better for Local LLMs?',
           content: [
             'Apple Silicon MacBooks (M1 through M4) are the best consumer laptops for local LLM inference. The unified memory architecture means GPU and CPU share the same memory pool — an M3 MacBook Pro with 18 GB of memory can run a 13B model entirely in GPU memory, achieving 50–80 tok/sec.',
@@ -1975,6 +1977,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           imageCaption: 'Apple Silicon unified memory lets the GPU access the full RAM pool — a 13B model fits entirely in GPU memory on an 18 GB M3 Pro.',
         },
         thermals: {
+          id: 'thermals',
           title: 'How Do You Handle Thermal Throttling on a Laptop',
           content: [
             'Thermal throttling occurs when the CPU or GPU reaches its temperature limit and reduces clock speed to cool down. For local LLM inference, this typically kicks in after 10–15 minutes of sustained generation, reducing speed by 20–40%.',
@@ -1989,6 +1992,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           imageCaption: 'Raising a laptop 2–3 cm on a stand improves exhaust airflow and delays throttling onset from 10 to 20+ minutes.',
         },
         battery: {
+          id: 'battery-drain',
           title: 'How Much Battery Does Running a Local LLM Use?',
           content: [
             'Battery drain during local inference is significant. Active CPU inference on a 7B model draws 15–25 W on a typical laptop CPU, reducing battery life to 2–3 hours from a full charge on a 60 Wh battery.',
@@ -1997,6 +2001,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         quantization: {
+          id: 'quantization-tips',
           title: 'Which Quantization Level Should You Use on a Laptop?',
           content: 'Quantization reduces model precision to lower RAM and compute requirements. For laptops, Q4_K_M is the recommended default:',
           rows: [
@@ -2007,6 +2012,16 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             { 'Quantization': 'Q8_0', 'RAM vs Full': '~80%', 'Quality Loss': 'Negligible', 'Use Case': '32 GB RAM or GPU with 8+ GB VRAM' },
           ],
           columns: ['Quantization', 'RAM vs Full', 'Quality Loss', 'Use Case'],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Regional Context: Privacy and Compliance for Laptop Inference',
+          content: [
+            '**European Union (GDPR):** Running a local LLM on a laptop means all inference happens on-device — no data leaves the machine. This satisfies GDPR Article 25 (data protection by design) and eliminates the need for data processing agreements. Professionals in legal, medical, and finance sectors in the EU can process sensitive client data locally without cloud API compliance overhead.',
+            '**Germany (DSGVO / BSI):** BSI-Grundschutz-Kataloge (IT-Grundschutz) recommends local processing for data classified as "vertraulich" (confidential). Laptop-based inference meets these requirements for Mittelstand companies that cannot justify enterprise cloud contracts.',
+            '**Japan (APPI):** Japan\'s Act on Protection of Personal Information (APPI, amended 2022) imposes strict rules on transferring personal data overseas. Local LLM inference on a laptop eliminates cross-border transfer risk entirely, making it suitable for Japanese enterprises handling customer data under APPI.',
+            '**United States:** No federal AI data law as of April 2026, but sector-specific rules apply — HIPAA for healthcare (local inference avoids BAA requirements), FERPA for education, and state-level privacy laws (CCPA in California). Local laptop inference is the safest option for regulated industries.',
+          ],
         },
         faqSection: {
           id: 'faq',
@@ -2024,6 +2039,34 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               q: 'Does my laptop need a dedicated GPU to run local LLMs?',
               a: 'No. All major local LLM tools (Ollama, LM Studio, GPT4All) run on CPU only. A dedicated GPU significantly speeds up inference, but 3B–7B models are usable at 10–30 tok/sec on CPU alone. See [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) for CPU-optimized model recommendations.',
             },
+            {
+              q: 'What is the fastest local LLM I can run on an 8 GB MacBook?',
+              a: 'On an 8 GB MacBook with Apple Silicon (M1, M2, M3), the fastest practical model is llama3.2:3b at Q4_K_M — expect 60–100 tok/sec via Metal GPU. For quality at speed, mistral:7b runs at 30–50 tok/sec on an M2 8 GB with the full model in unified memory.',
+            },
+            {
+              q: 'How do I reduce thermal throttling on a laptop during LLM inference?',
+              a: 'Three steps: (1) Use a laptop stand with 2–3 cm of airflow clearance under the machine. (2) Disable Turbo Boost on Intel or AMD Precision Boost — running at base clock speed eliminates thermal spikes. (3) Use Q4_K_M quantization instead of Q8_0 to reduce per-token compute and heat output.',
+            },
+            {
+              q: 'Can I run a local LLM on a Chromebook?',
+              a: 'Only on Chromebooks with Linux (Crostini) enabled. Most Chromebooks have 4–8 GB RAM and weak CPUs — you can run a 2B–3B model at Q4_K_M, but expect 5–15 tok/sec. Chromebooks without Linux support cannot run local LLMs.',
+            },
+            {
+              q: 'Is Apple Silicon better than an NVIDIA laptop GPU for local LLMs?',
+              a: 'It depends on VRAM. An M3 Pro (18 GB unified memory) outperforms an NVIDIA RTX 4060 laptop (8 GB VRAM) for 13B models because the full model fits in fast memory. For 7B models, both are comparable — 50–80 tok/sec on M3 Pro vs 60–90 tok/sec on RTX 4060. Apple Silicon wins on battery efficiency (12–18 W vs 25–45 W).',
+            },
+            {
+              q: 'What happens if the model is too large for my laptop RAM?',
+              a: 'Ollama and LM Studio will use swap memory (disk-backed RAM). Inference slows to 1–5 tok/sec instead of 10–30 tok/sec, and the laptop fan runs at full speed due to constant memory pressure. The fix: use a smaller model or a lower quantization level (Q4_K_M instead of Q8_0).',
+            },
+            {
+              q: 'How long does battery last when running local LLMs on a laptop?',
+              a: 'On a typical 60 Wh battery: a 7B model on CPU draws 15–25 W — giving 2–3 hours of active inference. Apple Silicon is more efficient (12–18 W), giving 3–4 hours. A 3B model draws 6–10 W and extends battery to 5–6 hours. For day-long use, plug in.',
+            },
+            {
+              q: 'Do I need an internet connection to run a local LLM on a laptop?',
+              a: 'No. After downloading the model (which requires internet), inference is fully offline. The model runs entirely on the laptop CPU or GPU. This makes local LLMs useful for travel, secure environments, or locations with unreliable connectivity.',
+            },
           ],
         },
         sources: {
@@ -2036,69 +2079,62 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes When Running LLMs on Laptops',
           items: [
-            'Not enabling GPU acceleration on Apple Silicon Macs, which dramatically improves speed.',
-            'Running models too large for laptop thermal design limits, causing throttling and poor performance.',
-            'Assuming all models are battery-efficient — large models drain a 8-hour battery in under 2 hours.',
+            'Not enabling GPU acceleration on Apple Silicon Macs — the default Ollama installation uses Metal automatically, but LM Studio requires enabling GPU in settings. Without GPU, throughput drops from 50–80 tok/sec to 10–20 tok/sec.',
+            'Running models too large for the laptop\'s thermal design limit — a 13B model on an 8 GB laptop will swap to disk, reducing speed to 1–3 tok/sec and causing sustained heat output that triggers throttling.',
+            'Assuming all models are battery-efficient — a 7B model running on CPU draws 15–25 W continuously. On a 60 Wh battery, that\'s 2–3 hours of active inference from full charge. Use a 3B model (6–10 W) for battery-sensitive work.',
+            'Using the default 2,048-token context window in Ollama — multi-page documents get truncated. Set `num_ctx 8192` in your Modelfile for document-heavy tasks.',
+            'Not using Q4_K_M as the default quantization — Q8_0 uses almost twice the RAM with minimal quality improvement on laptop hardware. Q4_K_M is the correct default for 8–16 GB systems.',
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Small models optimized for laptops',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation guide',
             '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — GUI-based installer',
             '[Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) — Performance and error fixes',
+            '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Q4_K_M vs Q8_0 vs Q5_K_M in depth',
+            '[Small Local LLM Models Under 4 GB](/local-llms/small-local-llm-models) — 3B models for 8 GB laptops',
           ],
         },
       },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Run Local LLMs on a Laptop: RAM, Speed, Thermal Throttling',
-        'description': 'Run local LLMs on laptops: models that work, RAM requirements, thermal throttling fixes, battery optimization, quantization settings. Free beta — April 2026.',
+        'headline': 'How to Run Local LLMs on a Laptop: RAM, Thermals, and Model Selection',
+        'description': 'Run local LLMs on laptops with 8 GB RAM. Covers best models (llama3.2:3b, mistral:7b, qwen2.5:7b), thermal throttling fixes, battery optimization, and Q4_K_M quantization settings.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=en',
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'about': [
+          { '@type': 'Thing', 'name': 'local LLM laptop' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'Q4_K_M quantization' },
+          { '@type': 'Thing', 'name': 'Apple Silicon' },
+          { '@type': 'Thing', 'name': 'thermal throttling' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Best Local LLM Models for Laptops',
+        'name': 'Best Local LLM Models for Laptops 2026',
+        'numberOfItems': 5,
         'itemListElement': [
-          {
-            '@type': 'ListItem',
-            'position': 1,
-            'name': 'Llama 3.2 3B',
-            'description': 'Fastest on CPU. 4GB RAM. 25–45 tok/sec on CPU, 60–100 tok/sec on integrated GPU. Perfect for getting started.'
-          },
-          {
-            '@type': 'ListItem',
-            'position': 2,
-            'name': 'Phi 2.5 7B',
-            'description': 'Balanced quality and speed. 8GB RAM. 10–20 tok/sec on CPU. Good multilingual support.'
-          },
-          {
-            '@type': 'ListItem',
-            'position': 3,
-            'name': 'Mistral 7B',
-            'description': 'High quality per parameter. 16GB RAM. 8–15 tok/sec on CPU. Strong function calling and reasoning.'
-          },
-          {
-            '@type': 'ListItem',
-            'position': 4,
-            'name': 'Qwen2.5 7B',
-            'description': 'Excellent coding and math. 8GB RAM (Q4 quantization). 10–18 tok/sec on CPU.'
-          },
-          {
-            '@type': 'ListItem',
-            'position': 5,
-            'name': 'DeepSeek-Coder 6.7B',
-            'description': 'Best for programming. 8GB RAM. 12–20 tok/sec. Faster than Mistral on coding tasks.'
-          }
-        ]
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:3b', 'description': '3B model. 2.5 GB RAM. 25–45 tok/sec on CPU, 60–100 tok/sec on Apple Silicon. Best starting model for 8 GB laptops.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'phi3.5', 'description': '3.8B model. 3 GB RAM. 20–35 tok/sec on CPU. Best reasoning and coding for under 4 GB RAM.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'mistral:7b', 'description': '7B model. 4.5 GB RAM. 10–20 tok/sec on CPU. Best general-purpose model for 8–16 GB laptops.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen2.5:7b', 'description': '7B model. 4.7 GB RAM. 10–18 tok/sec on CPU. Best for multilingual tasks and coding on 8–16 GB laptops.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'llama3.1:8b', 'description': '8B model. 5.5 GB RAM. 8–15 tok/sec on CPU. Best quality at size for 16 GB laptops.' },
+        ],
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -5209,9 +5245,27 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           image: '/images/creative-writing-temperature-guide-en.svg',
           imageCaption: 'LLM temperature guide for creative writing: 0.7 default is too flat, 0.9–1.05 optimal for fiction, above 1.1 produces incoherent output.',
         },
+        promptExamples: {
+          id: 'prompt-examples',
+          title: 'Bad Prompt vs Good Prompt',
+          items: [
+            '❌ "Write a fantasy story" → ✅ "Write a 500-word fantasy scene where a smuggler negotiates with a dragon over ancient artifacts. Use sensory details and make the dialog tense."',
+            '❌ "Write something interesting" → ✅ "Write a 300-word opening scene of a heist gone wrong. The protagonist discovers their partner betrayed them mid-mission. Use short, punchy sentences to match the pace."',
+            '❌ "Write a mystery" → ✅ "Continue this detective scene: [previous text]. The detective realizes the suspect is lying based on one detail. Show—do not tell—how she catches the inconsistency."',
+            '❌ "Make it more interesting" → ✅ "Rewrite the previous paragraph to feel more like noir fiction: sparse dialogue, cynical internal monologue, specific sensory details (sounds, smells, textures)."',
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Creative Writing with Local LLMs: Regional Context',
+          content: [
+            '**Europe (GDPR & Data Residency)**: The GDPR requires sensitive personal data (character backstories, fictional content for publication) to remain within EU borders when processed. Running local models on EU-based hardware ensures compliance. LM Studio and Ollama deployed on German, French, or Austrian servers meet Article 28 processor agreements without cloud dependency.',
+            '**Japan (Localization & Character Encoding)**: Japanese creative writing uses mixed scripts (hiragana, katakana, kanji), complex punctuation, and subtle spacing rules. Models fine-tuned on Japanese literature handle these patterns better than English-optimized models. LM Studio supports UTF-8 and Unicode; Ollama works with Japanese models like Shisa-7B-v1 and Weblab-10B.',
+            '**China (Content Policy & Model Access)**: Mainland China restricts cloud AI services and requires content moderation compliance. Running locally with Qwen2.5 or Qwen1.5 avoids geopolitical restrictions. Local deployment suits Chinese publishers, game developers, and enterprises managing proprietary story IP.',
+          ],
+        },
         faqSection: {
           id: 'faq',
-          title: 'Common Questions About Local LLMs for Creative Writing',
           faqs: [
             {
               q: 'Can a local LLM replace a writing assistant like Claude or GPT-4o for fiction?',
@@ -5221,32 +5275,69 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
               q: 'Does the model remember earlier parts of my story?',
               a: 'Only within the current context window. If your conversation history exceeds the model\'s context limit (typically 4K–128K tokens), earlier details are forgotten. For long projects, periodically provide a story summary at the start of each session to re-establish context.',
             },
+            {
+              q: 'Which local model produces the most vivid prose?',
+              a: 'Llama 3.3 70B with Q5_K_M quantization produces the most consistently vivid sensory detail and natural dialogue flow. Mistral Small 3.1 24B achieves 80–85% of this quality at 14 GB RAM vs 45 GB for 70B. Fimbulvetr-11B fine-tune on a 13B base model also excels at prose richness within smaller resource budgets.',
+            },
+            {
+              q: 'How do I handle inconsistencies in character voice across chapters?',
+              a: 'Provide a detailed character sheet (name, background, speech patterns, motivations) in your system prompt. For each new chapter, begin the session with: "You are writing as [Character]. Maintain the following voice and perspective..." Then paste the character sheet. This keeps coherence for 500–2,000 word sections.',
+            },
+            {
+              q: 'Is quantization (Q4, Q5, Q8) noticeable in creative writing?',
+              a: 'Yes, measurably. FP16 (full precision) and Q8 produce near-identical prose. Q5 introduces subtle flattening — fewer unique adjectives, slightly repetitive phrasing (5–10% of users notice). Q4 creates obvious quality loss: generic descriptions, missing sensory details. For fiction, Q5_K_M is minimum recommended; Q8_K_M is ideal.',
+            },
+            {
+              q: 'Can I fine-tune a local LLM on my own writing style?',
+              a: 'Yes. Collect 500–2,000 examples of your prose in .jsonl format (input/output pairs), then use Unsloth or Axolotl libraries on a 24 GB GPU to fine-tune a 13B model in 4–8 hours. Cost: ~$5–15 on cloud GPU. Result: a model that mimics your voice. LoRA (low-rank adaptation) fine-tuning is faster and cheaper than full fine-tuning.',
+            },
+            {
+              q: 'What\'s the difference between creative writing and creative *dialogue* quality?',
+              a: 'Dialogue requires tighter word economy and distinct character voices; prose requires sensory richness and narrative flow. Llama 3.3 70B excels at both. Smaller models (7B, 8B) often produce flat, generic dialogue. If dialogue-heavy fiction is your focus, prioritize models with strong instruction-following over prose quality; Mistral 7B dialoguequality rivals Llama 8B.',
+            },
+            {
+              q: 'How much context (tokens) do I need for a full novel outline?',
+              a: 'A detailed outline of a 80,000-word novel (plot, characters, chapters, conflicts) is typically 3,000–6,000 tokens. A 128K-context model (Llama 3.2, Phi-4) lets you load the entire outline + previous chapters in one session. For models with 4K–8K context, provide a rolling summary: previous chapter summary + outline of next 3 chapters.',
+            },
+            {
+              q: 'Do I need a GPU to run a creative-writing-optimized local LLM?',
+              a: 'No, but it dramatically speeds up generation. A 13B model on CPU (8-core): 10–15 tokens/sec. Same model on a 10GB GPU (RTX 3060): 80–100 tokens/sec. For iterative creative writing (testing variations, rewriting), GPU cuts session time from 2 hours to 15 minutes. CPU is viable for one-shot generation or outlining.',
+            },
+            {
+              q: 'Which local LLM is best for science fiction world-building?',
+              a: 'Llama 3.3 70B for consistency across 50+ page outlines. Qwen2.5 14B–32B for technical accuracy (physics, orbital mechanics, chemistry). Fimbulvetr-11B for rich descriptive world details. For budget-conscious setups, Mistral Small 3.1 24B balances world-coherence and resource use. Test all three on a sample world description before committing.',
+            },
           ],
         },
         sources: {
           id: 'sources',
           title: 'Sources',
           items: [
-            '**Neural Story Generation Papers** — Academic research on narrative coherence',
-            '**Mistral 7B for Creative Tasks** — Model documentation and creative benchmarks',
-            '**Llama 3.1 8B Creative Benchmark** — Evaluation on creative writing tasks',
+            '[Llama 3.3 Release Announcement](https://www.meta.com/research/) — Meta\'s official model paper with creative writing benchmark results',
+            '[Mistral AI Model Cards](https://mistral.ai/news/mistral-small-3-1/) — Mistral Small 3.1 specification and quantization guides',
+            '[The Fimbulvetr Project](https://huggingface.co/collections/Fimbulvetr) — Community-maintained creative writing fine-tunes collection',
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes in Creative Writing Prompting',
           items: [
-            'Using code-optimized models for creative tasks — creative models are tuned differently.',
-            'Expecting local models to generate novel, multi-novel narratives — they excel at short-form creative text.',
-            'Not adjusting temperature and sampling parameters for creative output.',
+            '**Generic prompts for specific goals**: "Write a story" produces generic output. Instead: "Write a 800-word opening scene of a heist. The protagonist discovers the vault is already empty. Show—do not tell—her emotional reaction through physical description."',
+            '**Ignoring quantization effects**: Running a 13B model in Q4 and expecting prose quality matching full-precision. Q4 noticeably flattens prose. Use Q5_K_M minimum for creative writing; Q8 for publishable quality.',
+            '**Neglecting temperature and sampling params**: Using default temperature (0.7–0.8) for creative tasks. Increase to 0.95–1.1 and set top_p to 0.85–0.9 for more varied, interesting prose. Too high (>1.2) produces incoherence.',
+            '**Forgetting context decay**: After 2,000–4,000 tokens in one conversation, even 70B models lose track of earlier character details. Periodically re-introduce character summaries or start fresh sessions.',
+            '**Treating local models like cloud models**: Cloud models like Claude 4 excel at long-form planning and multi-step tasks. Local models excel at scene-by-scene generation with strict prompts. Use local for execution, cloud for outlining.',
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — Overall ranking across use cases',
-            '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) — Performance optimization for writers',
-            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Foundation models for creative writing',
-            '[Local LLM Limitations](/local-llms/local-llm-limitations) — Understanding model constraints',
+            '[Best Local LLMs 2026](/local-llms/best-local-llms-2026?lang=en) — Overall ranking across all use cases',
+            '[How Much VRAM Do Local LLMs Need?](/local-llms/how-much-vram-local-llm?lang=en) — Calculate VRAM requirements for any model and quantization',
+            '[Local LLM Fine-Tuning Guide](/local-llms/fine-tuning-local-llms?lang=en) — How to fine-tune models on your writing style',
+            '[Ollama vs LM Studio Comparison](/local-llms/ollama-vs-lm-studio?lang=en) — Which tool is best for creative workflows',
+            '[Temperature and Sampling Parameters Explained](/local-llms/temperature-sampling-local-llm?lang=en) — Master creative output control',
           ],
         },
       },
@@ -22766,13 +22857,12 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'model-comparison': {
           title: 'Model Comparison Table',
           rows: [
-            { '0': 'Code Type', '1': 'Best Model', '2': 'Min RAM', '3': 'Reasoning' },
-            { '0': 'Security review (injection, XSS, CSRF)', '1': 'Llama 3.3 70B', '2': '40 GB', '3': 'Highest security pattern recognition' },
-            { '0': 'Algorithm + performance analysis', '1': 'DeepSeek-R1 14B', '2': '10 GB', '3': 'Chain-of-thought for O(n) analysis' },
-            { '0': 'Python code review', '1': 'Qwen2.5-Coder 32B', '2': '20 GB', '3': 'Highest HumanEval at accessible RAM' },
-            { '0': 'JavaScript/TypeScript', '1': 'Qwen2.5-Coder 7B', '2': '5 GB', '3': 'FIM support, strong TS type analysis' },
-            { '0': 'Quick lint-level feedback', '1': 'Llama 3.1 8B', '2': '6 GB', '3': 'Fast, acceptable for style review' },
-            { '0': 'Multi-file architectural review', '1': 'Llama 3.3 70B', '2': '40 GB', '3': '128K context handles full codebases' },
+            { 'Code Type': 'Security review (injection, XSS, CSRF)', 'Best Model': 'Llama 3.3 70B', 'Min RAM': '40 GB', 'Reasoning': 'Highest security pattern recognition' },
+            { 'Code Type': 'Algorithm + performance analysis', 'Best Model': 'DeepSeek-R1 14B', 'Min RAM': '10 GB', 'Reasoning': 'Chain-of-thought for O(n) analysis' },
+            { 'Code Type': 'Python code review', 'Best Model': 'Qwen2.5-Coder 32B', 'Min RAM': '20 GB', 'Reasoning': 'Highest HumanEval at accessible RAM' },
+            { 'Code Type': 'JavaScript/TypeScript', 'Best Model': 'Qwen2.5-Coder 7B', 'Min RAM': '5 GB', 'Reasoning': 'FIM support, strong TS type analysis' },
+            { 'Code Type': 'Quick lint-level feedback', 'Best Model': 'Llama 3.1 8B', 'Min RAM': '6 GB', 'Reasoning': 'Fast, acceptable for style review' },
+            { 'Code Type': 'Multi-file architectural review', 'Best Model': 'Llama 3.3 70B', 'Min RAM': '40 GB', 'Reasoning': '128K context handles full codebases' },
           ],
           columns: ['Code Type', 'Best Model', 'Min RAM', 'Reasoning'],
         },
@@ -22980,13 +23070,12 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'model-comparison': {
           title: 'Modellvergleichstabelle',
           rows: [
-            { '0': 'Code-Typ', '1': 'Bestes Modell', '2': 'Min. RAM', '3': 'Begründung' },
-            { '0': 'Sicherheitsüberprüfung (Injection, XSS, CSRF)', '1': 'Llama 3.3 70B', '2': '40 GB', '3': 'Höchste Sicherheitsmuster-Erkennung' },
-            { '0': 'Algorithmus- und Leistungsanalyse', '1': 'DeepSeek-R1 14B', '2': '10 GB', '3': 'Chain-of-Thought für O(n)-Analyse' },
-            { '0': 'Python-Code-Review', '1': 'Qwen2.5-Coder 32B', '2': '20 GB', '3': 'Höchster HumanEval bei zugänglichem RAM' },
-            { '0': 'JavaScript/TypeScript', '1': 'Qwen2.5-Coder 7B', '2': '5 GB', '3': 'FIM-Unterstützung, starke TS-Typanalyse' },
-            { '0': 'Schnelles Lint-Level-Feedback', '1': 'Llama 3.1 8B', '2': '6 GB', '3': 'Schnell, akzeptabel für Style-Review' },
-            { '0': 'Multi-File-Architektur-Review', '1': 'Llama 3.3 70B', '2': '40 GB', '3': '128K-Kontext bearbeitet ganze Codebasen' },
+            { 'Code-Typ': 'Sicherheitsüberprüfung (Injection, XSS, CSRF)', 'Bestes Modell': 'Llama 3.3 70B', 'Min. RAM': '40 GB', 'Begründung': 'Höchste Sicherheitsmuster-Erkennung' },
+            { 'Code-Typ': 'Algorithmus- und Leistungsanalyse', 'Bestes Modell': 'DeepSeek-R1 14B', 'Min. RAM': '10 GB', 'Begründung': 'Chain-of-Thought für O(n)-Analyse' },
+            { 'Code-Typ': 'Python-Code-Review', 'Bestes Modell': 'Qwen2.5-Coder 32B', 'Min. RAM': '20 GB', 'Begründung': 'Höchster HumanEval bei zugänglichem RAM' },
+            { 'Code-Typ': 'JavaScript/TypeScript', 'Bestes Modell': 'Qwen2.5-Coder 7B', 'Min. RAM': '5 GB', 'Begründung': 'FIM-Unterstützung, starke TS-Typanalyse' },
+            { 'Code-Typ': 'Schnelles Lint-Level-Feedback', 'Bestes Modell': 'Llama 3.1 8B', 'Min. RAM': '6 GB', 'Begründung': 'Schnell, akzeptabel für Style-Review' },
+            { 'Code-Typ': 'Multi-File-Architektur-Review', 'Bestes Modell': 'Llama 3.3 70B', 'Min. RAM': '40 GB', 'Begründung': '128K-Kontext bearbeitet ganze Codebasen' },
           ],
           columns: ['Code-Typ', 'Bestes Modell', 'Min. RAM', 'Begründung'],
         },
@@ -23198,13 +23287,12 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'model-comparison': {
           title: "Tableau de comparaison des modèles",
           rows: [
-            { '0': "Type de code", '1': "Meilleur modèle", '2': "RAM min.", '3': "Justification" },
-            { '0': "Revue sécurité (injection, XSS, CSRF)", '1': "Llama 3.3 70B", '2': "40 GB", '3': "Reconnaissance pattern sécurité la plus élevée" },
-            { '0': "Analyse algorithme + performance", '1': "DeepSeek-R1 14B", '2': "10 GB", '3': "Chaîne de pensée pour analyse O(n)" },
-            { '0': "Revue code Python", '1': "Qwen2.5-Coder 32B", '2': "20 GB", '3': "Meilleur score HumanEval à RAM accessible" },
-            { '0': "JavaScript/TypeScript", '1': "Qwen2.5-Coder 7B", '2': "5 GB", '3': "Support FIM, forte analyse type TypeScript" },
-            { '0': "Feedback lint-level rapide", '1': "Llama 3.1 8B", '2': "6 GB", '3': "Rapide, acceptable pour revue style" },
-            { '0': "Revue architecturale multi-fichiers", '1': "Llama 3.3 70B", '2': "40 GB", '3': "Contexte 128K traite codebases complets" },
+            { "Type de code": "Revue sécurité (injection, XSS, CSRF)", "Meilleur modèle": "Llama 3.3 70B", "RAM min.": "40 GB", "Justification": "Reconnaissance pattern sécurité la plus élevée" },
+            { "Type de code": "Analyse algorithme + performance", "Meilleur modèle": "DeepSeek-R1 14B", "RAM min.": "10 GB", "Justification": "Chaîne de pensée pour analyse O(n)" },
+            { "Type de code": "Revue code Python", "Meilleur modèle": "Qwen2.5-Coder 32B", "RAM min.": "20 GB", "Justification": "Meilleur score HumanEval à RAM accessible" },
+            { "Type de code": "JavaScript/TypeScript", "Meilleur modèle": "Qwen2.5-Coder 7B", "RAM min.": "5 GB", "Justification": "Support FIM, forte analyse type TypeScript" },
+            { "Type de code": "Feedback lint-level rapide", "Meilleur modèle": "Llama 3.1 8B", "RAM min.": "6 GB", "Justification": "Rapide, acceptable pour revue style" },
+            { "Type de code": "Revue architecturale multi-fichiers", "Meilleur modèle": "Llama 3.3 70B", "RAM min.": "40 GB", "Justification": "Contexte 128K traite codebases complets" },
           ],
           columns: ["Type de code", "Meilleur modèle", "RAM min.", "Justification"],
         },
