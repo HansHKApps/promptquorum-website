@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Prompt vs User Prompt | PromptQuorum</title>
+  <meta name="description" content="System prompts define how an AI model thinks for an entire session; user prompts define what it does right now. Learn the difference, API patterns, and design principles." />
+  <meta property="og:title" content="System Prompt vs User Prompt — PromptQuorum" />
+  <meta property="og:description" content="System prompts define how an AI model thinks for an entire session; user prompts define what it does right now. Learn the difference, API patterns, and design principles." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f5f5f5;
+      overflow: hidden;
+    }
+
+    .presentation-container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: white;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      border-bottom: 1px solid #e0e0e0;
+      background: #fafafa;
+      height: 64px;
+      flex-shrink: 0;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-left img {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-left span {
+      font-weight: 600;
+      font-size: 14px;
+      color: #333;
+      max-width: 400px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .header-links a {
+      font-size: 13px;
+      color: #6750a4;
+      text-decoration: none;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 2px;
+      transition: color 0.2s;
+    }
+
+    .header-links a:hover {
+      color: #5a47a3;
+      border-bottom-color: #6750a4;
+    }
+
+    .content-area {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 48px 64px;
+      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
+      background: white;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      overflow: hidden;
+    }
+
+    .slide.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .slide.title {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #6750a4 0%, #7c5fb8 100%);
+      color: white;
+    }
+
+    .slide.title .logo {
+      height: 48px;
+      width: auto;
+      margin-bottom: 24px;
+      opacity: 0.9;
+    }
+
+    .slide.title h1 {
+      font-size: 48px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .slide.title p {
+      font-size: 18px;
+      line-height: 1.4;
+      max-width: 600px;
+      opacity: 0.95;
+      margin-bottom: 8px;
+    }
+
+    .slide.title .link {
+      margin-top: 40px;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    .slide h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .slide p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #424242;
+      margin-bottom: 16px;
+    }
+
+    .slide ul {
+      list-style: none;
+      margin-top: 16px;
+    }
+
+    .slide li {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #424242;
+      margin-bottom: 12px;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .slide li:before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #6750a4;
+      font-weight: bold;
+    }
+
+    .slide ol {
+      margin-top: 16px;
+      padding-left: 24px;
+    }
+
+    .slide ol li {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #424242;
+      margin-bottom: 12px;
+      padding-left: 12px;
+      list-style-position: outside;
+    }
+
+    .slide table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+    .slide table th {
+      background: #f5f5f5;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      color: #333;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    .slide table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #e0e0e0;
+      color: #424242;
+    }
+
+    .slide .comparison-box {
+      background: #f5f5f5;
+      padding: 24px;
+      border-left: 4px solid #6750a4;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .slide .comparison-box strong {
+      color: #6750a4;
+      display: block;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .slide .comparison-box p {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    .slide-footer {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      font-size: 11px;
+      color: #999;
+    }
+
+    .slide-footer a {
+      color: #999;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .slide-footer a:hover {
+      color: #6750a4;
+      border-bottom-color: #6750a4;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      border-top: 1px solid #e0e0e0;
+      background: #fafafa;
+      height: 64px;
+      flex-shrink: 0;
+    }
+
+    .controls button {
+      padding: 8px 16px;
+      border: 1px solid #e0e0e0;
+      background: white;
+      color: #424242;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .controls button:hover:not(:disabled) {
+      background: #f5f5f5;
+      border-color: #bbb;
+    }
+
+    .controls button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .slide-counter {
+      font-size: 14px;
+      color: #666;
+      font-weight: 500;
+    }
+
+    @media print {
+      .header, .controls {
+        display: none;
+      }
+
+      .slide {
+        page-break-after: always;
+        position: static;
+        display: flex !important;
+        opacity: 1 !important;
+        width: 100%;
+        height: 100vh;
+        padding: 48px 64px;
+        page-break-inside: avoid;
+      }
+
+      .slide-footer {
+        display: block !important;
+      }
+    }
+
+    @page {
+      size: 16in 9in landscape;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">System Prompt vs User Prompt</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference">← Back to Article</a>
+        <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container">
+      <!-- Slides injected by JavaScript -->
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const CONTENT = {
+      en: {
+        title: 'System Prompt vs User Prompt: What\'s the Difference',
+        slides: [
+          {
+            type: 'title',
+            h1: 'System Prompt vs User Prompt',
+            subtitle: 'What\'s the Difference? 2026 Guide',
+            link: 'https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference'
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            intro: 'System vs. user prompts — the core differences:',
+            items: [
+              '<strong>System prompts:</strong> Define how the AI behaves for an entire session — set once, apply to all requests',
+              '<strong>User prompts:</strong> Define the specific task for each interaction — provided per-request',
+              '<strong>Impact ratio:</strong> ~70% of output quality comes from system design; ~30% from user input',
+              '<strong>Visibility:</strong> System prompts are usually hidden; user prompts are always visible to end users'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'The Core Difference',
+            line1: '<strong>System Prompt:</strong> The AI\'s permanent job description for the entire session',
+            line2: '<strong>User Prompt:</strong> Individual tasks within that job — one per request',
+            tip: 'Both are text. Both require careful design. Both affect output quality.'
+          },
+          {
+            type: 'list',
+            h2: 'Where They Live in the API Stack',
+            intro: 'Every LLM API — OpenAI, Anthropic, Google, Ollama — exposes two separate inputs:',
+            items: [
+              '<strong>Model layer:</strong> GPT-4o, Claude 4.6 Sonnet, Gemini, Llama 3.1 — all accept both system and user prompts',
+              '<strong>API layer:</strong> OpenAI API, Anthropic API, Google API, Ollama REST — system and user are separate fields',
+              '<strong>Application layer:</strong> ChatGPT, Claude.ai, Gemini, PromptQuorum — developers choose the system prompt',
+              '<strong>User interaction layer:</strong> Chat input from end users becomes the user prompt'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'System Prompt vs User Prompt at a Glance',
+            columns: ['Dimension', 'System Prompt', 'User Prompt'],
+            rows: [
+              { 'Dimension': 'Scope', 'System Prompt': 'Entire session', 'User Prompt': 'Single request' },
+              { 'Dimension': 'Set by', 'System Prompt': 'Developer/team', 'User Prompt': 'End user' },
+              { 'Dimension': 'Frequency', 'System Prompt': 'Once at start', 'User Prompt': 'Every request' },
+              { 'Dimension': 'Visibility', 'System Prompt': 'Usually hidden', 'User Prompt': 'Always visible' },
+              { 'Dimension': 'Contribution', 'System Prompt': '~70% of quality', 'User Prompt': '~30% of quality' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'What Makes an Effective System Prompt?',
+            intro: 'Five principles for system prompt design:',
+            items: [
+              '<strong>1. Explicit role:</strong> "You are a Python expert" — not just "Help with writing"',
+              '<strong>2. Constraints-first:</strong> List what the model must NOT do before what it should do',
+              '<strong>3. Format specification:</strong> Define output as JSON, Markdown, bullets, or plain text',
+              '<strong>4. Scope boundaries:</strong> "Answer API questions only" — prevent out-of-domain answers',
+              '<strong>5. Cross-model testing:</strong> Test on GPT-4o, Claude, and Gemini for consistency'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'System Prompt Example',
+            intro: 'Production-grade system prompt for a customer support chatbot:',
+            items: [
+              '<strong>Role:</strong> "You are a customer support specialist for a SaaS product"',
+              '<strong>Constraints:</strong> "Do not promise refunds, Do not share internal docs, Do not speculate"',
+              '<strong>Format:</strong> "Use numbered steps for procedures, bullet lists for options"',
+              '<strong>Style:</strong> "Be empathetic, clear, and solution-focused"',
+              '<strong>Scope:</strong> "Answer API, setup, troubleshooting, features, billing questions only"'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'What Is a User Prompt?',
+            intro: 'A user prompt is the per-request input — the specific task for this interaction:',
+            items: [
+              '<strong>Task or question:</strong> "Summarize this article" — the concrete request',
+              '<strong>Context:</strong> "For a B2B audience" or "For beginners" — who and what this is for',
+              '<strong>Instructions for this task:</strong> "In 200 words" or "With examples"',
+              '<strong>Examples (optional):</strong> "Here is a good example:" — teach the model the style',
+              '<strong>Local constraints:</strong> "Do not mention pricing" — specific to this request only'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'System Prompts Set the Guardrails',
+            line1: '<strong>Bad system prompt:</strong> Forces every user prompt to work harder',
+            line2: '<strong>Good system prompt:</strong> Makes every user prompt work better',
+            tip: 'A well-designed system prompt is reusable across 100 different user requests without degradation.'
+          },
+          {
+            type: 'list',
+            h2: 'Why PromptQuorum Shows You Hidden System Prompts',
+            intro: 'Hidden system prompts cause critical problems:',
+            items: [
+              '<strong>Trust issues:</strong> You don\'t know what instructions the model follows underneath',
+              '<strong>Debugging problems:</strong> Local LLMs return unexpected output but you can\'t diagnose why',
+              '<strong>Inconsistency:</strong> Same prompt on GPT-4o vs. Ollama gives different answers — why?',
+              '<strong>Compliance risk:</strong> Enterprise deployments need full transparency for audits'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'How to Write a System Prompt in 5 Steps',
+            items: [
+              '<strong>Define the role explicitly:</strong> "You are a B2B SaaS copywriter" — not just "helpful assistant"',
+              '<strong>Write constraints first:</strong> "Do not make up statistics" before listing what to do',
+              '<strong>Specify output format:</strong> JSON, Markdown, bullets, or plain text — not per-request',
+              '<strong>Set scope boundaries:</strong> "Answer API questions only" — define what you will refuse',
+              '<strong>Test across models:</strong> Try on GPT-4o, Claude, and Gemini — refine until consistent'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions',
+            faqs: [
+              {
+                q: 'Can a user prompt override a system prompt?',
+                a: 'Not directly. System prompts have structural precedence and are persistent. A user prompt cannot disable them, but poorly designed system prompts with vague constraints can be ignored if the user prompt strongly contradicts it.'
+              },
+              {
+                q: 'What happens if there is no system prompt?',
+                a: 'The model falls back to its default training behavior. GPT-4o, Claude, and Gemini have built-in baseline behavior (helpful, harmless, honest) when no system prompt is present. Results will be less consistent and less specialized.'
+              },
+              {
+                q: 'Do all LLMs use system prompts?',
+                a: 'Yes. All major LLMs — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, Ollama, LM Studio — support the system + user prompt pattern.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'See All System Prompts with PromptQuorum',
+            body: 'PromptQuorum includes a toggle to view hidden system prompts on every model — GPT-4o, Claude, Gemini, Ollama, LM Studio. Dispatch one prompt to multiple backends and see all instructions.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      de: {
+        title: 'System Prompt vs User Prompt: Der Unterschied',
+        slides: [
+          {
+            type: 'title',
+            h1: 'System Prompt vs User Prompt',
+            subtitle: 'Der Unterschied? 2026 Guide',
+            link: 'https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=de'
+          },
+          {
+            type: 'list',
+            h2: 'Wichtigste Erkenntnisse',
+            intro: 'System vs. User Prompts — die Kernunterschiede:',
+            items: [
+              '<strong>System Prompts:</strong> Definieren, wie die KI für eine gesamte Sitzung funktioniert — einmal festgelegt, für alle Anfragen',
+              '<strong>User Prompts:</strong> Definieren die spezifische Aufgabe für jede Interaktion — pro Anfrage gesendet',
+              '<strong>Qualitätsanteil:</strong> ~70% der Ausgabequalität stammt aus Systemdesign; ~30% aus Benutzereingaben',
+              '<strong>Sichtbarkeit:</strong> System Prompts sind normalerweise verborgen; User Prompts sind immer für Endnutzer sichtbar'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Der Kernunterschied',
+            line1: '<strong>System Prompt:</strong> Die permanente Jobbeschreibung der KI für die gesamte Sitzung',
+            line2: '<strong>User Prompt:</strong> Einzelne Aufgaben innerhalb dieses Arbeitsbereichs — eine pro Anfrage',
+            tip: 'Beide sind Text. Beide erfordern sorgfältiges Design. Beide beeinflussen die Ausgabequalität.'
+          },
+          {
+            type: 'list',
+            h2: 'Wo sie im API-Stack leben',
+            intro: 'Jede LLM-API — OpenAI, Anthropic, Google, Ollama — zeigt zwei separate Eingaben:',
+            items: [
+              '<strong>Modell-Layer:</strong> GPT-4o, Claude 4.6 Sonnet, Gemini, Llama 3.1 — alle akzeptieren beide Prompt-Typen',
+              '<strong>API-Layer:</strong> OpenAI API, Anthropic API, Google API, Ollama REST — System und User sind separate Felder',
+              '<strong>Applikations-Layer:</strong> ChatGPT, Claude.ai, Gemini, PromptQuorum — Entwickler wählen den System Prompt',
+              '<strong>Benutzer-Interaktions-Layer:</strong> Chat-Input von Endbenutzern wird zum User Prompt'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'System Prompt vs User Prompt auf einen Blick',
+            columns: ['Dimension', 'System Prompt', 'User Prompt'],
+            rows: [
+              { 'Dimension': 'Bereich', 'System Prompt': 'Gesamte Sitzung', 'User Prompt': 'Einzelne Anfrage' },
+              { 'Dimension': 'Festgelegt von', 'System Prompt': 'Entwickler/Team', 'User Prompt': 'Endbenutzer' },
+              { 'Dimension': 'Häufigkeit', 'System Prompt': 'Einmal am Anfang', 'User Prompt': 'Bei jeder Anfrage' },
+              { 'Dimension': 'Sichtbarkeit', 'System Prompt': 'Normalerweise verborgen', 'User Prompt': 'Immer sichtbar' },
+              { 'Dimension': 'Beitrag', 'System Prompt': '~70% Qualität', 'User Prompt': '~30% Qualität' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Was macht einen wirksamen System Prompt?',
+            intro: 'Fünf Prinzipien für System Prompt Design:',
+            items: [
+              '<strong>1. Explizite Rolle:</strong> "Du bist ein Python-Experte" — nicht nur "Hilf beim Schreiben"',
+              '<strong>2. Einschränkungen zuerst:</strong> Auflisten, was das Modell NICHT tun darf, bevor es auflisten darf',
+              '<strong>3. Format-Spezifikation:</strong> Ausgabe als JSON, Markdown, Bullets oder Klartext definieren',
+              '<strong>4. Scope-Grenzen:</strong> "Beantworte nur API-Fragen" — verhindere Out-of-Domain-Antworten',
+              '<strong>5. Cross-Modell-Tests:</strong> Auf GPT-4o, Claude und Gemini testen für Konsistenz'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'System Prompt Beispiel',
+            intro: 'Produktionsreifer System Prompt für einen KI-Support-Chatbot:',
+            items: [
+              '<strong>Rolle:</strong> "Du bist ein Kundenservice-Spezialist für ein SaaS-Produkt"',
+              '<strong>Einschränkungen:</strong> "Keine Rückerstattungsversprechen, Keine internen Dokumente, Nicht spekulieren"',
+              '<strong>Format:</strong> "Nummerierte Schritte für Verfahren, Aufzählungen für Optionen"',
+              '<strong>Stil:</strong> "Sei empathisch, klar und lösungsorientiert"',
+              '<strong>Scope:</strong> "Beantworte nur API, Setup, Fehlerbehebung, Funktionen und Abfragen"'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Was ist ein User Prompt?',
+            intro: 'Ein User Prompt ist die pro-Anfrage-Eingabe — die spezifische Aufgabe für diese Interaktion:',
+            items: [
+              '<strong>Aufgabe oder Frage:</strong> "Fasse diesen Artikel zusammen" — die konkrete Anfrage',
+              '<strong>Kontext:</strong> "Für ein B2B-Publikum" oder "Für Anfänger" — wer und wofür',
+              '<strong>Anweisungen für diese Aufgabe:</strong> "In 200 Worten" oder "Mit Beispielen"',
+              '<strong>Beispiele (optional):</strong> "Hier ist ein gutes Beispiel:" — lehre den Stil',
+              '<strong>Lokale Einschränkungen:</strong> "Erwähne keine Preise" — spezifisch für diese Anfrage'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'System Prompts setzen die Schutzvorrichtungen',
+            line1: '<strong>Schlechter System Prompt:</strong> Zwingt jeden User Prompt, härter zu arbeiten',
+            line2: '<strong>Guter System Prompt:</strong> Lässt jeden User Prompt besser funktionieren',
+            tip: 'Ein gut konzipierter System Prompt ist über 100 verschiedene User-Anfragen wiederverwendbar.'
+          },
+          {
+            type: 'list',
+            h2: 'Warum PromptQuorum versteckte System Prompts zeigt',
+            intro: 'Versteckte System Prompts verursachen kritische Probleme:',
+            items: [
+              '<strong>Vertrauensfragen:</strong> Du weißt nicht, welche Anweisungen das Modell befolgt',
+              '<strong>Debugging-Probleme:</strong> Lokale LLMs geben unerwartete Ausgaben, aber warum?',
+              '<strong>Inkonsistenz:</strong> Gleicher Prompt auf GPT-4o vs. Ollama gibt unterschiedliche Antworten',
+              '<strong>Compliance-Risiko:</strong> Unternehmensbereitstellungen benötigen volle Transparenz für Audits'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'System Prompt in 5 Schritten schreiben',
+            items: [
+              '<strong>Rolle explizit definieren:</strong> "Du bist ein B2B-SaaS-Copywriter" — nicht "hilfreicher Assistent"',
+              '<strong>Einschränkungen zuerst schreiben:</strong> "Erfinde keine Statistiken" vor dem, was zu tun ist',
+              '<strong>Ausgabeformat spezifizieren:</strong> JSON, Markdown, Bullets oder Klartext — nicht pro-Anfrage',
+              '<strong>Scope-Grenzen setzen:</strong> "Beantworte nur API-Fragen" — definiere, was du verweigerst',
+              '<strong>Über Modelle hinweg testen:</strong> Versuche GPT-4o, Claude und Gemini — verfeinere für Konsistenz'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen',
+            faqs: [
+              {
+                q: 'Kann ein User Prompt einen System Prompt überschreiben?',
+                a: 'Nicht direkt. System Prompts haben strukturelle Vorrangstellung und sind persistent. Ein User Prompt kann sie nicht deaktivieren, aber schlecht gestaltete System Prompts mit vagen Einschränkungen können ignoriert werden.'
+              },
+              {
+                q: 'Was passiert, wenn es keinen System Prompt gibt?',
+                a: 'Das Modell fällt auf sein Standard-Trainingsverhalten zurück. GPT-4o, Claude und Gemini haben eingebautes Basisverhalten (hilfreich, harmlos, ehrlich), wenn kein System Prompt vorhanden ist.'
+              },
+              {
+                q: 'Verwenden alle LLMs System Prompts?',
+                a: 'Ja. Alle großen LLMs — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, Ollama, LM Studio — unterstützen das System + User Prompt-Muster.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Alle System Prompts mit PromptQuorum sehen',
+            body: 'PromptQuorum enthält einen Toggle, um versteckte System Prompts auf jedem Modell anzuzeigen — GPT-4o, Claude, Gemini, Ollama, LM Studio. Versenden Sie einen Prompt an mehrere Backends und sehen Sie alle Anweisungen.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      fr: {
+        title: 'Prompt Système vs Prompt Utilisateur : Quelle est la Différence',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Prompt Système vs Prompt Utilisateur',
+            subtitle: 'Quelle est la Différence? Guide 2026',
+            link: 'https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=fr'
+          },
+          {
+            type: 'list',
+            h2: 'Points Clés',
+            intro: 'Prompts système vs. utilisateur — les différences fondamentales:',
+            items: [
+              '<strong>Prompts système:</strong> Définissent comment l\'IA se comporte pendant toute une session — défini une fois, s\'applique à toutes les demandes',
+              '<strong>Prompts utilisateur:</strong> Définissent la tâche spécifique pour chaque interaction — fourni par-demande',
+              '<strong>Ratio d\'impact:</strong> ~70% de la qualité de sortie provient de la conception du système; ~30% de l\'entrée utilisateur',
+              '<strong>Visibilité:</strong> Les prompts système sont généralement cachés; les prompts utilisateur sont toujours visibles pour les utilisateurs finaux'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'La Différence Fondamentale',
+            line1: '<strong>Prompt Système:</strong> La description de travail permanente de l\'IA pour toute la session',
+            line2: '<strong>Prompt Utilisateur:</strong> Les tâches individuelles dans cet emploi — une par demande',
+            tip: 'Les deux sont du texte. Les deux requièrent une conception soignée. Les deux affectent la qualité de sortie.'
+          },
+          {
+            type: 'list',
+            h2: 'Où ils vivent dans la pile API',
+            intro: 'Chaque API LLM — OpenAI, Anthropic, Google, Ollama — expose deux entrées séparées:',
+            items: [
+              '<strong>Couche modèle:</strong> GPT-4o, Claude 4.6 Sonnet, Gemini, Llama 3.1 — tous acceptent les deux types de prompts',
+              '<strong>Couche API:</strong> OpenAI API, Anthropic API, Google API, Ollama REST — système et utilisateur sont des champs séparés',
+              '<strong>Couche application:</strong> ChatGPT, Claude.ai, Gemini, PromptQuorum — les développeurs choisissent le prompt système',
+              '<strong>Couche interaction utilisateur:</strong> L\'entrée de chat des utilisateurs finaux devient le prompt utilisateur'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Prompt Système vs Prompt Utilisateur en Coup d\'Oeil',
+            columns: ['Dimension', 'Prompt Système', 'Prompt Utilisateur'],
+            rows: [
+              { 'Dimension': 'Portée', 'Prompt Système': 'Session entière', 'Prompt Utilisateur': 'Demande unique' },
+              { 'Dimension': 'Défini par', 'Prompt Système': 'Développeur/équipe', 'Prompt Utilisateur': 'Utilisateur final' },
+              { 'Dimension': 'Fréquence', 'Prompt Système': 'Une fois au départ', 'Prompt Utilisateur': 'À chaque demande' },
+              { 'Dimension': 'Visibilité', 'Prompt Système': 'Généralement caché', 'Prompt Utilisateur': 'Toujours visible' },
+              { 'Dimension': 'Contribution', 'Prompt Système': '~70% de qualité', 'Prompt Utilisateur': '~30% de qualité' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Qu\'est-ce qui rend un Prompt Système efficace?',
+            intro: 'Cinq principes pour la conception de prompts système:',
+            items: [
+              '<strong>1. Rôle explicite:</strong> "Vous êtes un expert Python" — pas seulement "Aidez à écrire"',
+              '<strong>2. Contraintes en premier:</strong> Énumérez ce que le modèle NE doit PAS faire avant ce qu\'il doit faire',
+              '<strong>3. Spécification de format:</strong> Définir la sortie comme JSON, Markdown, puces ou texte brut',
+              '<strong>4. Limites de portée:</strong> "Répondez uniquement aux questions sur les API" — empêchez les réponses hors domaine',
+              '<strong>5. Tests inter-modèles:</strong> Testez sur GPT-4o, Claude et Gemini pour la cohérence'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Exemple de Prompt Système',
+            intro: 'Prompt système prêt pour la production pour un chatbot de support client:',
+            items: [
+              '<strong>Rôle:</strong> "Vous êtes un spécialiste du support client pour un produit SaaS"',
+              '<strong>Contraintes:</strong> "Ne promettez pas de remboursements, Ne partagez pas de docs internes, Ne spéculez pas"',
+              '<strong>Format:</strong> "Utilisez des étapes numérotées pour les procédures, des listes à puces pour les options"',
+              '<strong>Style:</strong> "Soyez empathique, clair et axé sur la solution"',
+              '<strong>Portée:</strong> "Répondez uniquement aux questions sur les API, la configuration, le dépannage et la facturation"'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Qu\'est-ce qu\'un Prompt Utilisateur?',
+            intro: 'Un prompt utilisateur est l\'entrée par-demande — la tâche spécifique pour cette interaction:',
+            items: [
+              '<strong>Tâche ou question:</strong> "Résumez cet article" — la demande concrète',
+              '<strong>Contexte:</strong> "Pour un public B2B" ou "Pour les débutants" — qui et pour quoi',
+              '<strong>Instructions pour cette tâche:</strong> "En 200 mots" ou "Avec des exemples"',
+              '<strong>Exemples (optionnel):</strong> "Voici un bon exemple:" — enseignez le style',
+              '<strong>Contraintes locales:</strong> "Ne mentionnez pas les tarifs" — spécifique à cette demande uniquement'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Les Prompts Système définissent les garde-fous',
+            line1: '<strong>Mauvais prompt système:</strong> Force chaque prompt utilisateur à travailler plus dur',
+            line2: '<strong>Bon prompt système:</strong> Fait fonctionner chaque prompt utilisateur mieux',
+            tip: 'Un prompt système bien conçu est réutilisable sur 100 demandes utilisateur différentes sans dégradation.'
+          },
+          {
+            type: 'list',
+            h2: 'Pourquoi PromptQuorum affiche les Prompts Système cachés',
+            intro: 'Les prompts système cachés causent des problèmes critiques:',
+            items: [
+              '<strong>Problèmes de confiance:</strong> Vous ne savez pas quelles instructions le modèle suit',
+              '<strong>Problèmes de débogage:</strong> Les LLMs locaux donnent des résultats inattendus mais pourquoi?',
+              '<strong>Incohérence:</strong> Même prompt sur GPT-4o vs. Ollama donne des réponses différentes',
+              '<strong>Risque de conformité:</strong> Les déploiements d\'entreprise ont besoin d\'une transparence totale pour les audits'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Écrire un Prompt Système en 5 Étapes',
+            items: [
+              '<strong>Définir explicitement le rôle:</strong> "Vous êtes un copywriter SaaS B2B" — pas "assistant utile"',
+              '<strong>Écrire les contraintes en premier:</strong> "Ne fabriquez pas de statistiques" avant ce qu\'il faut faire',
+              '<strong>Spécifier le format de sortie:</strong> JSON, Markdown, puces ou texte brut — pas par-demande',
+              '<strong>Définir les limites de portée:</strong> "Répondez uniquement aux questions sur les API" — définissez ce que vous refusez',
+              '<strong>Tester sur les modèles:</strong> Essayez GPT-4o, Claude et Gemini — affinez pour la cohérence'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions Fréquemment Posées',
+            faqs: [
+              {
+                q: 'Un prompt utilisateur peut-il annuler un prompt système?',
+                a: 'Pas directement. Les prompts système ont la priorité structurelle et sont persistants. Un prompt utilisateur ne peut pas les désactiver, mais les prompts système mal conçus avec des contraintes vagues peuvent être ignorés si le prompt utilisateur les contredit fortement.'
+              },
+              {
+                q: 'Que se passe-t-il s\'il n\'y a pas de prompt système?',
+                a: 'Le modèle revient à son comportement d\'entraînement par défaut. GPT-4o, Claude et Gemini ont un comportement de base intégré (utile, inoffensif, honnête) lorsqu\'aucun prompt système n\'est présent.'
+              },
+              {
+                q: 'Tous les LLMs utilisent-ils des prompts système?',
+                a: 'Oui. Tous les principaux LLMs — GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro, Ollama, LM Studio — supportent le motif prompt système + utilisateur.'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Voir tous les Prompts Système avec PromptQuorum',
+            body: 'PromptQuorum inclut un bouton pour afficher les prompts système cachés sur chaque modèle — GPT-4o, Claude, Gemini, Ollama, LM Studio. Envoyez un prompt à plusieurs backends et voyez toutes les instructions.',
+            cta: 'Essayer PromptQuorum Gratuitement',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      ja: {
+        title: 'システムプロンプト vs ユーザープロンプト：違いは何か',
+        slides: [
+          {
+            type: 'title',
+            h1: 'システムプロンプト vs ユーザープロンプト',
+            subtitle: '違いは何ですか？2026 ガイド',
+            link: 'https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=ja'
+          },
+          {
+            type: 'list',
+            h2: '重要なポイント',
+            intro: 'システムプロンプト対ユーザープロンプト — 基本的な違い：',
+            items: [
+              '<strong>システムプロンプト：</strong> セッション全体にわたってAIの動作を定義 — 一度設定、すべてのリクエストに適用',
+              '<strong>ユーザープロンプト：</strong> 各インタラクションの特定のタスクを定義 — リクエストごとに提供',
+              '<strong>影響比：</strong> 出力品質の~70%はシステム設計から；~30%はユーザー入力から',
+              '<strong>可視性：</strong> システムプロンプトは通常非表示；ユーザープロンプトは常にエンドユーザーに表示'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '基本的な違い',
+            line1: '<strong>システムプロンプト：</strong> セッション全体のAIの永続的なジョブ説明',
+            line2: '<strong>ユーザープロンプト：</strong> そのジョブ内の個別タスク — リクエストごとに1つ',
+            tip: '両方ともテキストです。両方とも慎重な設計が必要です。両方が出力品質に影響を与えます。'
+          },
+          {
+            type: 'list',
+            h2: 'APIスタックのどこに存在するか',
+            intro: 'すべてのLLM API — OpenAI、Anthropic、Google、Ollama — 2つの個別入力を公開します：',
+            items: [
+              '<strong>モデル層：</strong> GPT-4o、Claude 4.6 Sonnet、Gemini、Llama 3.1 — すべてが両方のプロンプトタイプを受け入れる',
+              '<strong>API層：</strong> OpenAI API、Anthropic API、Google API、Ollama REST — システムとユーザーは個別フィールド',
+              '<strong>アプリケーション層：</strong> ChatGPT、Claude.ai、Gemini、PromptQuorum — 開発者がシステムプロンプトを選択',
+              '<strong>ユーザーインタラクション層：</strong> エンドユーザーのチャット入力がユーザープロンプトになる'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'システムプロンプト vs ユーザープロンプト 一目で',
+            columns: ['次元', 'システムプロンプト', 'ユーザープロンプト'],
+            rows: [
+              { '次元': 'スコープ', 'システムプロンプト': 'セッション全体', 'ユーザープロンプト': '単一リクエスト' },
+              { '次元': '設定者', 'システムプロンプト': '開発者/チーム', 'ユーザープロンプト': 'エンドユーザー' },
+              { '次元': '頻度', 'システムプロンプト': '開始時に1回', 'ユーザープロンプト': 'リクエストごと' },
+              { '次元': '可視性', 'システムプロンプト': '通常非表示', 'ユーザープロンプト': '常に表示' },
+              { '次元': '貢献', 'システムプロンプト': '〜70%品質', 'ユーザープロンプト': '〜30%品質' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '効果的なシステムプロンプトの条件は？',
+            intro: 'システムプロンプト設計の5つの原則：',
+            items: [
+              '<strong>1. 明示的な役割：</strong> 「あなたはPythonエキスパートです」 — 「書くのを手伝って」ではなく',
+              '<strong>2. 制約優先：</strong> モデルが何をすべきかの前に、何をすべきでないかをリストアップ',
+              '<strong>3. フォーマット指定：</strong> JSONとしての出力を定義、マークダウン、箇条書き、またはプレーンテキスト',
+              '<strong>4. スコープ境界：</strong> 「APIの質問にのみ答える」 — ドメイン外の回答を防ぐ',
+              '<strong>5. クロスモデルテスト：</strong> GPT-4o、Claude、Geminiでテスト — 一貫性のため改善'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'システムプロンプトの例',
+            intro: 'SaaS顧客サポートチャットボットのプロダクション対応システムプロンプト：',
+            items: [
+              '<strong>役割：</strong> 「あなたはSaaS製品のカスタマーサポートスペシャリストです」',
+              '<strong>制約：</strong> 「払い戻しを約束しない、内部ドキュメントを共有しない、推測しない」',
+              '<strong>フォーマット：</strong> 「手順は番号付きステップ、オプションは箇条書き」',
+              '<strong>スタイル：</strong> 「共感的、明確、解決策重視であること」',
+              '<strong>スコープ：</strong> 「API、セットアップ、トラブルシューティング、機能のみの質問に回答」'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'ユーザープロンプトとは？',
+            intro: 'ユーザープロンプトは、リクエストごとの入力 — このインタラクションの特定のタスク：',
+            items: [
+              '<strong>タスクまたは質問：</strong> 「この記事を要約して」 — 具体的なリクエスト',
+              '<strong>コンテキスト：</strong> 「B2B向け」または「初心者向け」 — 誰と何のためのもの',
+              '<strong>このタスクの指示：</strong> 「200語で」または「例を含めて」',
+              '<strong>例（オプション）：</strong> 「良い例はこれです：」 — スタイルをモデルに教える',
+              '<strong>ローカル制約：</strong> 「価格に触れない」 — このリクエストに限定'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'システムプロンプトがガードレールを設定',
+            line1: '<strong>悪いシステムプロンプト：</strong> すべてのユーザープロンプトがより努力することを強制',
+            line2: '<strong>良いシステムプロンプト：</strong> すべてのユーザープロンプトがよりうまく機能',
+            tip: '適切に設計されたシステムプロンプトは、100の異なるユーザーリクエスト全体で劣化なく再利用可能です。'
+          },
+          {
+            type: 'list',
+            h2: 'PromptQuorumが隠されたシステムプロンプトを表示する理由',
+            intro: '隠されたシステムプロンプトは重大な問題を引き起こします：',
+            items: [
+              '<strong>信頼の問題：</strong> モデルが従っている指示がわからない',
+              '<strong>デバッグ問題：</strong> ローカルLLMが予期しない出力 — なぜですか？',
+              '<strong>矛盾：</strong> GPT-4o対Ollamaで同じプロンプトで異なる回答',
+              '<strong>コンプライアンスリスク：</strong> エンタープライズデプロイメント監査の完全な透明性が必要'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5つのステップでシステムプロンプトを書く',
+            items: [
+              '<strong>役割を明示的に定義：</strong> 「あなたはB2B SaaS コピーライターです」 — 「有用なアシスタント」ではなく',
+              '<strong>制約を最初に書く：</strong> 「統計を作成しない」 — その前に何をすべきか',
+              '<strong>出力形式を指定：</strong> JSON、マークダウン、箇条書き、またはプレーンテキスト — リクエストごとではなく',
+              '<strong>スコープ境界を設定：</strong> 「APIの質問にのみ答える」 — 拒否することを定義',
+              '<strong>モデル間でテスト：</strong> GPT-4o、Claude、Geminiを試す — 一貫性のため改善'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              {
+                q: 'ユーザープロンプトはシステムプロンプトをオーバーライドできますか？',
+                a: '直接的には、いいえ。システムプロンプトは構造的優先順位があり、永続的です。ユーザープロンプトは無効にできませんが、曖昧な制約のある設計の悪いシステムプロンプトはユーザープロンプトが強く矛盾した場合に無視される可能性があります。'
+              },
+              {
+                q: 'システムプロンプトがない場合はどうなりますか？',
+                a: 'モデルはデフォルトのトレーニング動作にフォールバックします。GPT-4o、Claude、Geminiにはシステムプロンプトがない場合の組み込みベース動作（有用、無害、正直）があります。'
+              },
+              {
+                q: 'すべてのLLMがシステムプロンプトを使用していますか？',
+                a: 'はい。すべての主要LLM — GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、Ollama、LM Studio — はシステム+ユーザープロンプトパターンをサポート。'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'PromptQuorumですべてのシステムプロンプトを表示',
+            body: 'PromptQuorumにはすべてのモデルで隠されたシステムプロンプトを表示するトグル — GPT-4o、Claude、Gemini、Ollama、LM Studioが含まれています。複数のバックエンドにプロンプトを送り、すべての指示を表示します。',
+            cta: 'PromptQuorum無料試用',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+      zh: {
+        title: '系统提示 vs 用户提示：有什么区别',
+        slides: [
+          {
+            type: 'title',
+            h1: '系统提示 vs 用户提示',
+            subtitle: '有什么区别？2026 指南',
+            link: 'https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=zh'
+          },
+          {
+            type: 'list',
+            h2: '核心要点',
+            intro: '系统提示 vs. 用户提示 — 核心区别：',
+            items: [
+              '<strong>系统提示：</strong> 定义 AI 在整个会话中的行为方式 — 设置一次，应用于所有请求',
+              '<strong>用户提示：</strong> 为每次交互定义特定任务 — 每个请求提供一次',
+              '<strong>影响比例：</strong> ~70% 的输出质量来自系统设计；~30% 来自用户输入',
+              '<strong>可见性：</strong> 系统提示通常隐藏；用户提示始终对最终用户可见'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '基本区别',
+            line1: '<strong>系统提示：</strong> AI 在整个会话中的永久工作描述',
+            line2: '<strong>用户提示：</strong> 该工作中的单个任务 — 每个请求一次',
+            tip: '两者都是文本。两者都需要仔细设计。两者都影响输出质量。'
+          },
+          {
+            type: 'list',
+            h2: '它们在 API 堆栈中的位置',
+            intro: '每个 LLM API — OpenAI、Anthropic、Google、Ollama — 都公开两个单独的输入：',
+            items: [
+              '<strong>模型层：</strong> GPT-4o、Claude 4.6 Sonnet、Gemini、Llama 3.1 — 都接受两种提示类型',
+              '<strong>API 层：</strong> OpenAI API、Anthropic API、Google API、Ollama REST — 系统和用户是单独的字段',
+              '<strong>应用层：</strong> ChatGPT、Claude.ai、Gemini、PromptQuorum — 开发人员选择系统提示',
+              '<strong>用户交互层：</strong> 最终用户的聊天输入成为用户提示'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '系统提示 vs 用户提示 一览',
+            columns: ['维度', '系统提示', '用户提示'],
+            rows: [
+              { '维度': '范围', '系统提示': '整个会话', '用户提示': '单个请求' },
+              { '维度': '设置者', '系统提示': '开发者/团队', '用户提示': '最终用户' },
+              { '维度': '频率', '系统提示': '开始时一次', '用户提示': '每个请求' },
+              { '维度': '可见性', '系统提示': '通常隐藏', '用户提示': '始终可见' },
+              { '维度': '贡献', '系统提示': '~70% 质量', '用户提示': '~30% 质量' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '什么使系统提示有效？',
+            intro: '系统提示设计的五个原则：',
+            items: [
+              '<strong>1. 明确的角色：</strong> "你是一个 Python 专家" — 而不仅仅是"帮助写作"',
+              '<strong>2. 约束优先：</strong> 在列出应该做什么之前列出模型不应该做什么',
+              '<strong>3. 格式规范：</strong> 将输出定义为 JSON、Markdown、项目符号或纯文本',
+              '<strong>4. 范围边界：</strong> "仅回答 API 问题" — 防止超出域名的答案',
+              '<strong>5. 跨模型测试：</strong> 在 GPT-4o、Claude 和 Gemini 上测试以实现一致性'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '系统提示示例',
+            intro: '针对 SaaS 客户支持聊天机器人的生产级系统提示：',
+            items: [
+              '<strong>角色：</strong> "你是 SaaS 产品的客户支持专员"',
+              '<strong>约束：</strong> "不承诺退款、不共享内部文档、不推测"',
+              '<strong>格式：</strong> "程序使用编号步骤、选项使用项目符号"',
+              '<strong>风格：</strong> "同情、清晰、以解决方案为中心"',
+              '<strong>范围：</strong> "仅回答 API、设置、故障排除和计费问题"'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '什么是用户提示？',
+            intro: '用户提示是每个请求的输入 — 此交互的特定任务：',
+            items: [
+              '<strong>任务或问题：</strong> "总结这篇文章" — 具体的请求',
+              '<strong>背景：</strong> "用于 B2B 受众"或"用于初学者" — 针对谁和用于什么',
+              '<strong>此任务的说明：</strong> "200 字"或"带有示例"',
+              '<strong>示例（可选）：</strong> "这是一个好例子：" — 教导模型风格',
+              '<strong>本地约束：</strong> "不要提及价格" — 仅限于此请求'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '系统提示设置护栏',
+            line1: '<strong>糟糕的系统提示：</strong> 强制每个用户提示工作更努力',
+            line2: '<strong>好的系统提示：</strong> 让每个用户提示工作得更好',
+            tip: '设计良好的系统提示可在 100 个不同的用户请求中重复使用，不会降级。'
+          },
+          {
+            type: 'list',
+            h2: 'PromptQuorum 为什么显示隐藏的系统提示',
+            intro: '隐藏的系统提示会导致严重问题：',
+            items: [
+              '<strong>信任问题：</strong> 你不知道模型遵循什么指示',
+              '<strong>调试问题：</strong> 本地 LLM 返回意外输出 — 为什么？',
+              '<strong>不一致：</strong> 在 GPT-4o 和 Ollama 上相同的提示给出不同答案',
+              '<strong>合规性风险：</strong> 企业部署需要完全透明以进行审计'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5 个步骤编写系统提示',
+            items: [
+              '<strong>明确定义角色：</strong> "你是 B2B SaaS 文案写手" — 而不是"有用的助手"',
+              '<strong>首先编写约束：</strong> "不要编造统计数据"— 在列出应该做什么之前',
+              '<strong>指定输出格式：</strong> JSON、Markdown、项目符号或纯文本 — 而不是每个请求',
+              '<strong>设置范围边界：</strong> "仅回答 API 问题" — 定义你拒绝什么',
+              '<strong>跨模型测试：</strong> 尝试 GPT-4o、Claude 和 Gemini — 改进以实现一致性'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题',
+            faqs: [
+              {
+                q: '用户提示可以覆盖系统提示吗？',
+                a: '不能直接。系统提示具有结构优先权并且是持久的。用户提示无法禁用它们，但设计不良且约束模糊的系统提示如果用户提示强烈矛盾可能会被忽视。'
+              },
+              {
+                q: '如果没有系统提示会发生什么？',
+                a: '模型会回到其默认训练行为。GPT-4o、Claude 和 Gemini 在不存在系统提示时都有内置的基础行为（有用、无害、诚实）。'
+              },
+              {
+                q: '所有 LLM 都使用系统提示吗？',
+                a: '是的。所有主要 LLM — GPT-4o、Claude 4.6 Sonnet、Gemini 1.5 Pro、Ollama、LM Studio — 都支持系统 + 用户提示模式。'
+              }
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '使用 PromptQuorum 查看所有系统提示',
+            body: 'PromptQuorum 包含一个切换来查看每个模型上的隐藏系统提示 — GPT-4o、Claude、Gemini、Ollama、LM Studio。将一个提示发送到多个后端并查看所有说明。',
+            cta: '免费尝试 PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const articleUrl = 'https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=' + lang;
+      const footerLink = `<p class="slide-footer"><a href="${articleUrl}">← 返回文章</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+            <h1>${slide.h1}</h1>
+            <p>${slide.subtitle}</p>
+            <div class="link">${slide.link.split('/').pop().replace(/-/g, ' ')}</div>
+            ${footerLink}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p>${slide.intro}</p>`;
+          html += '<ul>';
+          slide.items.forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'table':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<table><tr>';
+          slide.columns.forEach(col => {
+            html += `<th>${col}</th>`;
+          });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => {
+              html += `<td>${row[col]}</td>`;
+            });
+            html += '</tr>';
+          });
+          html += '</table>';
+          html += footerLink;
+          break;
+
+        case 'comparison':
+          html = `
+            <h2>${slide.h2}</h2>
+            <div class="comparison-box">
+              <strong>${slide.line1}</strong>
+              <p>${slide.line2}</p>
+            </div>
+            <p style="margin-top: 30px; font-size: 15px; color: #6750a4;">${slide.tip}</p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<ol>';
+          slide.items.forEach((item, i) => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ol>';
+          html += footerLink;
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 18px; text-align: left;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px;">A: ${faq.a}</p></div>`;
+          });
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p>${slide.body}</p>
+            <a href="${slide.href}" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    // Update header
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href += `?lang=${lang}`;
+
+    // Render all slides
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    // Initialize navigation
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    // Print handlers
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>
