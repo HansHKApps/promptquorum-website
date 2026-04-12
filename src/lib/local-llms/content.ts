@@ -472,7 +472,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
       },
