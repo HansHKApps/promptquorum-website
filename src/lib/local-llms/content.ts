@@ -2607,9 +2607,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Getting Started',
       title: 'Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup',
-      seoTitle: 'Local LLM Security & Privacy Checklist',
+      seoTitle: 'Local LLM Security & Privacy Checklist: 12 Steps 2026',
       intro: 'Running a local LLM keeps your prompts off third-party servers, but it does not automatically make your setup private or secure. As of April 2026, the 12-item checklist below covers model provenance, network isolation, telemetry settings, disk encryption, and access controls — the minimum required for a genuinely private local LLM setup.',
-      metaDescription: 'Local LLM security and privacy checklist: 12 steps covering model provenance, telemetry, network isolation, disk encryption, and access Free beta — April 2026.',
+      metaDescription: '12-step checklist for local LLM privacy in 2026: model provenance, telemetry opt-out, network isolation, disk encryption, and access controls.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -2734,6 +2734,114 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) — Secure laptop configuration',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Local LLM Security and Privacy Checklist: 12 Steps to a Safe Setup',
+        'description': '12-step checklist for local LLM privacy in 2026: model provenance, telemetry opt-out, network isolation, disk encryption, and access controls.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llm-security-privacy-checklist?lang=en',
+        'inLanguage': 'en',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-04',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'local LLM privacy' },
+          { '@type': 'Thing', 'name': 'LLM security' },
+          { '@type': 'Thing', 'name': 'Ollama telemetry' },
+          { '@type': 'Thing', 'name': 'model provenance' },
+          { '@type': 'Thing', 'name': 'disk encryption' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'educationalLevel': 'Beginner',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'en',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Can a local LLM access my files or the internet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No — the model itself is a static file that generates text. It has no ability to read your file system or make network requests. However, the inference tool running the model (Ollama, LM Studio) has normal OS-level access. Some tools include features that do read files — such as GPT4All\'s LocalDocs or LM Studio\'s file attachment feature. These features are opt-in and explicitly documented.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is it safe to use a local LLM with HIPAA-covered data?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Local inference removes the third-party data processor risk that cloud APIs create. However, HIPAA compliance requires more than private inference — you need full-disk encryption, access controls, audit logging, and a Business Associate Agreement if any software vendor could access PHI. Using Ollama with FileVault enabled and telemetry disabled is a reasonable starting point, but formal HIPAA compliance requires a full risk assessment.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does Ollama send my prompts anywhere?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Ollama is open source (github.com/ollama/ollama) and contains no telemetry or data collection code. Prompts are processed locally by llama.cpp and never transmitted. The only outbound network activity from Ollama is model downloads from ollama.com when you run `ollama pull`.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is using a local LLM more private than using the OpenAI API?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, for prompt privacy. With a local LLM, your prompts never leave your machine. The OpenAI API sends prompts to OpenAI\'s servers for processing. OpenAI\'s API Terms of Service state that API input/output is not used to train models by default, but the data does transit their infrastructure. For sensitive or regulated data (medical, legal, financial), local inference is the more conservative choice.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I verify that a downloaded model file is safe?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Download models only from Hugging Face (huggingface.co) or the official Ollama library. On Hugging Face, each file shows a SHA256 hash — verify it with `sha256sum <model_file>` after downloading. Stick to models from known publishers: Meta, Google, Microsoft, Mistral AI, and Qwen/Alibaba. Avoid anonymous file shares or Discord file drops.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between privacy and security for local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Privacy means your prompts and outputs are not accessible to third parties. Security means your system is protected from threats. A local LLM can be private (no data leaves your machine) but insecure (model downloaded from an untrusted source, or Ollama API exposed on the network). Both must be addressed independently.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use a local LLM for GDPR-regulated data?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Local inference significantly reduces GDPR risk because data does not leave your infrastructure. However, you must still verify that the inference tool (Ollama, LM Studio) has telemetry disabled, that disk encryption is enabled, and that access controls are in place. For Article 35 DPIA requirements, document your data processing setup and confirm no personal data transits third-party servers.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does LM Studio send data to its servers?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio collects anonymous analytics by default (session counts, model names used, performance metrics). It does not send prompt content. To disable analytics: Settings → Privacy → uncheck "Send anonymous usage data". Model inference and chat logs stay local regardless of this setting.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I prevent Ollama from being accessed by other devices on my network?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'By default, Ollama binds to localhost (127.0.0.1:11434) and is not accessible from other devices. If you previously set OLLAMA_HOST=0.0.0.0 to allow network access, revert it: `export OLLAMA_HOST=127.0.0.1:11434`. Verify isolation by attempting to connect from another device on your network — it should fail.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which local LLM tool is best for maximum privacy?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Jan AI is the most privacy-focused tool: fully open source (MIT licence), zero telemetry, no account required, all data stored locally in plain JSON files. Ollama is second: open source, no telemetry code, binds to localhost by default. LM Studio collects anonymous analytics by default and requires opt-out in Settings.',
+            },
+          },
+        ],
       },
     },
 
@@ -16859,6 +16967,114 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
       },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Local LLMs With VS Code and Cursor: Setup and Best Practices',
+        'description': 'Use Ollama with VS Code via Continue.dev for local code completions — no API key needed. Best models, VRAM requirements, and Cursor integration for 2026.',
+        'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor?lang=en',
+        'inLanguage': 'en',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-04',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'local code completion' },
+          { '@type': 'Thing', 'name': 'Continue.dev' },
+          { '@type': 'Thing', 'name': 'VS Code' },
+          { '@type': 'Thing', 'name': 'Cursor editor' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'educationalLevel': 'Intermediate',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'en',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Is local code completion faster than cloud completion?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Cloud completions (GitHub Copilot) are faster due to optimized servers. Local completions have higher latency but zero cost and zero privacy risk.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use local completions with other IDEs like PyCharm or Neovim?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, but setup varies. PyCharm has an Ollama plugin. For Neovim, use cmp-ollama (completion plugin). Always check the IDE community for integrations.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use cloud models in Continue.dev or Cursor?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Configure Continue to use OpenAI, Claude, or Gemini. You can also mix (local for fast, cloud for complex code).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does local code completion work offline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. If you have pulled the model in Ollama, completions work entirely offline.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the minimum VRAM for usable local code completions?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '8 GB VRAM is the minimum for usable code completions with a 7B model at Q4_K_M quantization (~4.5 GB). With only 8 GB, you have little headroom. 12 GB or more is recommended for comfortable use with Qwen2.5-Coder 7B or Llama Code 7B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which model is best for code completions with Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen2.5-Coder 7B is the best balance of speed and quality, scoring 72% on HumanEval and requiring only 4.7 GB VRAM. For 16 GB+ VRAM, Llama Code 13B (74% HumanEval, 8.5 GB VRAM) improves quality further.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I set up Continue.dev in VS Code?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Install the Continue extension from the VS Code marketplace, then configure it to use Ollama: open the Continue sidebar, click the model selector, choose "Ollama" as provider, select your model (e.g., qwen2.5-coder:7b), and save. Continue will connect to Ollama at localhost:11434 automatically.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does Cursor support local LLMs natively?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Cursor supports custom OpenAI-compatible endpoints. Set the base URL to http://localhost:11434/v1 and enter any API key (Ollama does not require authentication). Select your Ollama model from the model dropdown and Cursor will route requests to your local model.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use local LLMs for code review and chat in VS Code?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Continue.dev provides both tab completion and an inline chat mode. Highlight code in your editor, press Cmd/Ctrl+I, and type a question or instruction. The local model responds within the editor context. This works for code review, refactoring suggestions, and explanation requests.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What happens if Ollama is not running when I open VS Code?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Continue.dev will display a connection error and completions will not appear. Start Ollama with `ollama serve` in a terminal before opening VS Code. On macOS, you can set Ollama to start automatically at login in the Ollama menu bar settings.',
+            },
+          },
+        ],
+      },
     },
   },
 
@@ -19582,9 +19798,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     en: {
       theme: 'Advanced Techniques',
       title: 'Fine-Tuning Local LLMs With LoRA: Adapt Models to Your Domain',
-      seoTitle: 'Fine-Tuning Local LLMs LoRA',
+      seoTitle: 'Fine-Tuning Local LLMs With LoRA: Domain Adaptation 2026',
       intro: 'Fine-tuning adapts a pre-trained model to your specific domain or task. LoRA (Low-Rank Adaptation) is the practical approach: add small adapter layers instead of retraining the entire model. A 7B model LoRA requires only 8 GB VRAM and 1–2 hours on consumer hardware. As of April 2026, LoRA fine-tuning is the standard for local model customization.',
-      metaDescription: 'Fine-tune local LLMs with LoRA: complete guide to domain adaptation, training data, evaluation. Build custom models. Free beta — April 2026.',
+      metaDescription: 'LoRA fine-tunes a 7B model with 8 GB VRAM in 1–2 hours using only adapter layers. Complete guide to training data, hyperparameters, and evaluation 2026.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Advanced',
@@ -19727,6 +19943,114 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             'Axolotl — github.com/OpenAccess-AI-Collective/axolotl',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Fine-Tuning Local LLMs With LoRA: Adapt Models to Your Domain',
+        'description': 'LoRA fine-tunes a 7B model with 8 GB VRAM in 1–2 hours using only adapter layers. Complete guide to training data, hyperparameters, and evaluation 2026.',
+        'url': 'https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora?lang=en',
+        'inLanguage': 'en',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-04',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'LoRA fine-tuning' },
+          { '@type': 'Thing', 'name': 'Low-Rank Adaptation' },
+          { '@type': 'Thing', 'name': 'model fine-tuning' },
+          { '@type': 'Thing', 'name': 'unsloth' },
+          { '@type': 'Thing', 'name': 'HuggingFace TRL' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'educationalLevel': 'Advanced',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'en',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'How much training data is needed for LoRA fine-tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Minimum 500 examples, optimal 1000–5000. Quality matters more than quantity. 100 high-quality examples beat 1000 low-quality examples.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I fine-tune a local LLM on a laptop?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Use 4-bit quantization and LoRA. A 7B model requires 8 GB VRAM, training takes 1–2 hours on CPU (slow) or 10–15 minutes on GPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I merge LoRA adapters into the base model?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use unsloth or HuggingFace Transformers: `model.merge_and_unload()`. This creates a single model file (~3–4 GB for 7B), ready for inference.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I combine multiple LoRA adapters?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, with restrictions. Stack adapters for sequential application, or use adapter composition techniques such as DoRA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is a fine-tuned model better than RAG for domain knowledge?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For most tasks, yes. Fine-tuned models understand domain concepts deeply. RAG is better when documents are large and change frequently.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is LoRA and how does it work?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LoRA (Low-Rank Adaptation) adds small trainable adapter layers to a frozen base model. Instead of updating all 7 billion parameters, LoRA trains only the adapter weights (typically 1–10 million parameters). This reduces VRAM requirements by 10–20× and training time from days to hours.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which tool is best for LoRA fine-tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Unsloth is the fastest option for consumer hardware — 2× faster than standard training with 70% less VRAM. HuggingFace TRL with PEFT is the most widely used option. Axolotl is best for advanced users who need configuration flexibility.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What file format do LoRA adapter weights use?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LoRA adapters are saved as safetensors files (e.g., adapter_model.safetensors) alongside an adapter_config.json. The total adapter size is typically 50–500 MB depending on rank (lora_r) and the number of layers adapted.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I distribute a LoRA fine-tuned model?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'You can distribute the LoRA adapter weights separately from the base model. Users must already have the base model downloaded. Check the base model\'s licence (Meta Llama is permissive for most uses; some models restrict commercial redistribution).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How long does LoRA fine-tuning take on consumer hardware?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'On an NVIDIA RTX 4090 (24 GB VRAM): 1,000 examples × 3 epochs = approximately 15–30 minutes. On an Apple M3 Pro (18 GB): approximately 2–4 hours. On CPU only: 8–24 hours depending on model size. Use GPU or Apple Silicon for practical training times.',
+            },
+          },
+        ],
       },
     },
   },
