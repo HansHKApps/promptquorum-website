@@ -1912,6 +1912,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
           isTldr: true,
           items: [
             'A 3B or 7B model at Q4_K_M quantization runs usably on any modern laptop with 8 GB RAM.',
@@ -1922,6 +1923,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         canYouRun: {
+          id: 'can-you-run',
           title: 'Can You Run a Local LLM on a Laptop?',
           content: [
             'Yes — with the right model size. A laptop with 8 GB RAM running a 7B model at Q4_K_M quantization produces 10–25 tokens/sec on CPU and 50–80 tokens/sec on Apple Silicon. This is slow compared to cloud APIs, but fast enough for interactive use.',
@@ -1932,6 +1934,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           imageCaption: 'Ollama running Mistral 7B on a MacBook — 22 tokens/sec on CPU at Q4_K_M quantization.',
         },
         ram8vs16: {
+          id: '8gb-vs-16gb',
           title: '8 GB RAM vs 16 GB RAM Laptop: What Is the Practical Difference?',
           rows: [
             { 'Scenario': 'Maximum model size', '8 GB RAM': '7B at Q4_K_M (~4.5 GB)', '16 GB RAM': '13B at Q4_K_M (~9 GB)' },
