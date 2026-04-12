@@ -267,6 +267,7 @@
                 display: block !important;
                 height: auto !important;
                 width: 100%;
+                counter-reset: page-counter;
             }
 
             .content-area {
@@ -291,6 +292,28 @@
                 margin: 0;
                 background: white;
                 color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
             }
 
             .slide h1, .slide h2, .slide p {
@@ -1177,7 +1200,7 @@
                     break;
             }
 
-            return `<div class="slide ${slide.type}">${html}</div>`;
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
         }
 
         const params = new URLSearchParams(window.location.search);
