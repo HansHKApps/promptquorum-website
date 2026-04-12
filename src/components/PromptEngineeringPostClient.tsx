@@ -1113,7 +1113,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors"
               >
-                ↓ Download PDF
+                ↓ Save as PDF
               </a>
             )}
             <div

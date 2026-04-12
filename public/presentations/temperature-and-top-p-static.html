@@ -82,8 +82,8 @@
         }
 
         .slide.title .logo {
-            width: 60px;
-            height: 60px;
+            width: 64px;
+            height: 64px;
             margin-bottom: 40px;
         }
 
@@ -149,18 +149,14 @@
         }
 
         .controls {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
             gap: 12px;
             align-items: center;
-            background: white;
+            justify-content: center;
             padding: 12px 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            z-index: 1000;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
         }
 
         button {
@@ -232,6 +228,32 @@
             overflow-y: auto;
         }
 
+        @media print {
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                height: auto;
+            }
+
+            .content-area {
+                overflow: visible;
+                height: auto;
+            }
+
+            .slide {
+                display: flex !important;
+                page-break-after: always;
+                height: 100vh;
+                padding: 40px;
+            }
+
+            body {
+                overflow: visible;
+            }
+        }
+
         @media (max-width: 768px) {
             .slide {
                 padding: 40px 24px;
@@ -253,11 +275,6 @@
                 font-size: 14px;
             }
 
-            .controls {
-                bottom: 10px;
-                padding: 10px 16px;
-            }
-
             button {
                 padding: 6px 12px;
                 font-size: 12px;
@@ -269,7 +286,7 @@
     <div class="presentation-container">
         <div class="header">
             <div class="header-left">
-                <strong style="color: #6750a4; font-size: 18px;">PQ</strong>
+                <img src="/logo.svg" alt="PromptQuorum" style="width: 28px; height: 28px;" />
                 Temperature & Top-P: Control AI Creativity
             </div>
             <div class="header-links">
@@ -281,10 +298,7 @@
         <div class="content-area">
             <!-- Slide 1: Title -->
             <div class="slide title active">
-                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100" height="100" rx="20" fill="#6750a4"/>
-                    <text x="50" y="55" font-size="48" font-weight="700" fill="white" text-anchor="middle">PQ</text>
-                </svg>
+                <img src="/logo.svg" alt="PromptQuorum" class="logo" />
                 <h1>Temperature & Top-P<br/>Control AI Creativity</h1>
                 <p>Master AI Output Randomness & Consistency</p>
                 <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
@@ -488,6 +502,13 @@
     </div>
 
     <script>
+        // Print to PDF: detect ?print=1 param and trigger print dialog
+        if (new URLSearchParams(window.location.search).get('print') === '1') {
+            window.addEventListener('load', () => {
+                window.print();
+            });
+        }
+
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const totalSlides = slides.length;
