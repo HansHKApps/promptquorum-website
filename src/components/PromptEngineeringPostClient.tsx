@@ -1106,22 +1106,18 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             <p className="text-sm text-text-muted mb-4">
               Prefer slides over reading? Click through this interactive presentation covering all key concepts, settings, and use cases — then download it for reference.
             </p>
-            {article.gammaDownloadUrl && (
-              <a
-                href={article.gammaDownloadUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors"
-              >
-                ↓ Save as PDF
-              </a>
-            )}
+            <a
+              href={`${article.gammaEmbedUrl}?lang=${lang}&print=1`}
+              className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors"
+            >
+              ↓ Save as PDF
+            </a>
             <div
               className="w-full rounded-xl overflow-hidden border border-primary/20 shadow-sm"
               style={{ height: 'min(80vh, max(600px, 56.25vw))' }}
             >
               <iframe
-                src={article.gammaEmbedUrl}
+                src={`${article.gammaEmbedUrl}?lang=${lang}`}
                 title="Temperature and Top-P: Control AI Creativity — PromptQuorum"
                 className="w-full h-full border-0"
                 allowFullScreen

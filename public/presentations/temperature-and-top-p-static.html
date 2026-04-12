@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Temperature & Top-P: Control AI Creativity | PromptQuorum</title>
-    <meta name="description" content="Interactive presentation on temperature and top-p parameters. Learn how to control AI output randomness and consistency across GPT-4o, Claude, Gemini." />
+    <meta name="description" content="Interactive presentation on temperature and top-p parameters. Learn how to control AI output randomness and consistency." />
     <meta property="og:title" content="Temperature & Top-P: Control AI Creativity — PromptQuorum" />
-    <meta property="og:description" content="Master AI output randomness with practical temperature and top-p settings for coding, summaries, and brainstorming." />
+    <meta property="og:description" content="Master AI output randomness with practical temperature and top-p settings." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity" />
 
     <style>
         * {
@@ -149,6 +148,51 @@
             background: #f7f2fa;
         }
 
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
         .controls {
             display: flex;
             gap: 12px;
@@ -189,46 +233,7 @@
             text-align: center;
         }
 
-        .header {
-            padding: 12px 20px;
-            border-bottom: 1px solid #e0e0e0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: white;
-            flex-shrink: 0;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #1c1b1f;
-        }
-
-        .header-links {
-            display: flex;
-            gap: 16px;
-        }
-
-        .header-links a {
-            font-size: 12px;
-            color: #6750a4;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .header-links a:hover {
-            color: #7d5260;
-        }
-
-        .content-area {
-            flex: 1;
-            overflow: hidden;
-        }
-
+        /* Print styles — A4 landscape with mm dimensions */
         @page {
             size: A4 landscape;
             margin: 0;
@@ -238,6 +243,7 @@
             html, body {
                 overflow: visible !important;
                 height: auto !important;
+                width: 100% !important;
             }
 
             .header, .controls {
@@ -259,10 +265,12 @@
                 display: flex !important;
                 page-break-after: always;
                 break-after: page;
-                width: 100%;
-                height: 100vh;
-                padding: 40px;
+                width: 297mm;
+                height: 210mm;
+                padding: 20mm 24mm;
                 box-sizing: border-box;
+                overflow: hidden;
+                margin: 0;
             }
 
             .slide:last-child {
@@ -273,23 +281,15 @@
 
         @media (max-width: 768px) {
             .slide {
-                padding: 40px 24px;
+                padding: 24px;
             }
 
             .slide h1 {
-                font-size: 36px;
-            }
-
-            .slide h2 {
                 font-size: 28px;
             }
 
-            .slide p {
-                font-size: 16px;
-            }
-
-            .slide ul li, .slide ol li {
-                font-size: 14px;
+            .slide h2 {
+                font-size: 22px;
             }
 
             button {
@@ -303,214 +303,19 @@
     <div class="presentation-container">
         <div class="header">
             <div class="header-left">
-                <img src="/logo.svg" alt="PromptQuorum" style="width: 28px; height: 28px;" />
-                Temperature & Top-P: Control AI Creativity
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Temperature & Top-P: Control AI Creativity</span>
             </div>
             <div class="header-links">
-                <a href="https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity">← Back to Article</a>
+                <a id="back-link" href="https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity">← Back to Article</a>
                 <a href="https://www.promptquorum.com">PromptQuorum.com</a>
             </div>
         </div>
 
-        <div class="content-area">
-            <!-- Slide 1: Title -->
-            <div class="slide title active">
-                <img src="/logo.svg" alt="PromptQuorum" class="logo" />
-                <h1>Temperature & Top-P<br/>Control AI Creativity</h1>
-                <p>Master AI Output Randomness & Consistency</p>
-                <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
-                    <a href="https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity">www.promptquorum.com — Temperature & Top-P Guide</a>
-                </p>
-            </div>
-
-            <!-- Slide 2: What Is Temperature? -->
-            <div class="slide">
-                <h2>What Is Temperature in AI?</h2>
-                <p><strong>Temperature is a knob that controls randomness.</strong></p>
-                <ul style="font-size: 22px; margin-top: 40px;">
-                    <li><strong>At 0.0:</strong> Always picks the most likely word → Identical output every time</li>
-                    <li><strong>At 1.0+:</strong> Considers riskier alternatives → Surprising & varied text</li>
-                </ul>
-            </div>
-
-            <!-- Slide 3: What Is Top-P? -->
-            <div class="slide">
-                <h2>What Is Top-P (Nucleus Sampling)?</h2>
-                <p><strong>Top-P controls how many word options the model considers at each step.</strong></p>
-                <ul style="font-size: 22px; margin-top: 40px;">
-                    <li><strong>At 0.1:</strong> Narrow & safe — only very top options</li>
-                    <li><strong>At 0.9:</strong> Looser & more varied — wider set of choices</li>
-                </ul>
-            </div>
-
-            <!-- Slide 4: Temperature vs Top-P -->
-            <div class="slide">
-                <h2>Temperature vs Top-P: Key Differences</h2>
-                <p style="margin-top: 40px; font-size: 28px;"><strong>Temperature</strong> = "How adventurous"</p>
-                <p style="font-size: 28px;"><strong>Top-P</strong> = "How many options to consider"</p>
-                <p style="margin-top: 40px; font-size: 22px; color: #6750a4;">💡 Pro tip: Tune ONE, keep the other at default</p>
-            </div>
-
-            <!-- Slide 5: Temperature Ranges -->
-            <div class="slide">
-                <h2>Temperature Ranges at a Glance</h2>
-                <table>
-                    <tr>
-                        <th>Range</th>
-                        <th>Behavior</th>
-                        <th>Best For</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Low (0.0–0.3)</strong></td>
-                        <td>Focused, repetitive, stable</td>
-                        <td>Code, data extraction</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Medium (0.4–0.7)</strong></td>
-                        <td>Balanced variation & stability</td>
-                        <td>Most general tasks</td>
-                    </tr>
-                    <tr>
-                        <td><strong>High (0.8–1.0+)</strong></td>
-                        <td>Creative, diverse, surprising</td>
-                        <td>Brainstorming, storytelling</td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Slide 6: Recommended Settings -->
-            <div class="slide">
-                <h2>Recommended Settings by Use Case</h2>
-                <table style="font-size: 14px;">
-                    <tr>
-                        <th>Use Case</th>
-                        <th>Temp</th>
-                        <th>Top-P</th>
-                    </tr>
-                    <tr>
-                        <td>Coding/Refactoring</td>
-                        <td>0.1–0.3</td>
-                        <td>0.95</td>
-                    </tr>
-                    <tr>
-                        <td>Summaries & Explanations</td>
-                        <td>0.4–0.6</td>
-                        <td>0.9</td>
-                    </tr>
-                    <tr>
-                        <td>Brainstorming & Creative</td>
-                        <td>0.7–1.0</td>
-                        <td>1.0</td>
-                    </tr>
-                    <tr>
-                        <td>Data Extraction</td>
-                        <td>0.0–0.2</td>
-                        <td>0.95</td>
-                    </tr>
-                    <tr>
-                        <td>Long-form Writing</td>
-                        <td>0.6–0.8</td>
-                        <td>0.9–1.0</td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Slide 7: Quick-Start Recipes -->
-            <div class="slide">
-                <h2>Quick-Start Recipes</h2>
-                <ul style="margin-top: 30px; text-align: left; font-size: 18px;">
-                    <li><strong>Safe Factual:</strong> T=0.2, Top-P=0.95 → Reliable, minimal hallucination</li>
-                    <li><strong>Balanced Default:</strong> T=0.5, Top-P=0.9 → Natural, stable</li>
-                    <li><strong>Creative Brainstorming:</strong> T=0.8, Top-P=1.0 → Diverse, surprising</li>
-                    <li><strong>Short-Answer:</strong> T=0.3, Top-P=0.95 → Fast, direct</li>
-                    <li><strong>Experimental:</strong> T=1.0, Top-P=1.0 → Unpredictable, max variation</li>
-                </ul>
-            </div>
-
-            <!-- Slide 8: Prompts Matter More -->
-            <div class="slide">
-                <h2>Prompts Matter More Than Settings</h2>
-                <p style="margin-top: 40px; font-size: 20px;"><strong>Same Prompt at Different Temperatures:</strong></p>
-                <p style="margin-top: 30px; font-style: italic; color: #6750a4;">Write a short product tagline for a productivity app. Under 10 words.</p>
-                <p style="margin-top: 30px; font-size: 22px;"><strong>At T=0.2:</strong> "Get more done in less time."</p>
-                <p style="font-size: 22px;"><strong>At T=0.8:</strong> "Chaos to clarity: where moments transform into momentum."</p>
-            </div>
-
-            <!-- Slide 9: When High Temperature Becomes Risky -->
-            <div class="slide">
-                <h2>When High Temperature Becomes Risky</h2>
-                <p style="margin-top: 40px; font-size: 20px;">Be conservative (T=0.0–0.5) for:</p>
-                <ul style="margin-top: 30px; font-size: 20px;">
-                    <li>Code that goes to production</li>
-                    <li>Health & medical advice</li>
-                    <li>Finance & legal analysis</li>
-                    <li>Safety-critical decisions</li>
-                </ul>
-            </div>
-
-            <!-- Slide 10: 7 Common Mistakes -->
-            <div class="slide">
-                <h2>7 Common Mistakes</h2>
-                <ol style="margin-top: 30px; font-size: 18px; text-align: left;">
-                    <li>Cranking both to max and expecting reliability</li>
-                    <li>Changing both knobs at once (can't isolate what helped)</li>
-                    <li>Trying to fix a bad prompt with sliders</li>
-                    <li>Forgetting models interpret values differently</li>
-                    <li>Testing only one output per setting</li>
-                    <li>Setting T=0 and expecting perfect correctness</li>
-                    <li>Ignoring top-p entirely because your provider ignores it</li>
-                </ol>
-            </div>
-
-            <!-- Slide 11: 5 Steps -->
-            <div class="slide">
-                <h2>5 Steps to Set Temperature Right</h2>
-                <ol style="margin-top: 30px; font-size: 20px; text-align: left;">
-                    <li><strong>Fix the prompt first.</strong> Write clear instructions.</li>
-                    <li><strong>Identify task type.</strong> Factual (0.0–0.3) or Creative (0.7–1.0)?</li>
-                    <li><strong>Leave top-p at default</strong> (0.9–1.0). Only adjust if you have a specific reason.</li>
-                    <li><strong>Run 3–5 test prompts</strong> at your target temperature.</li>
-                    <li><strong>Document your settings</strong> per use case.</li>
-                </ol>
-            </div>
-
-            <!-- Slide 12: Key FAQs -->
-            <div class="slide">
-                <h2>Key FAQs</h2>
-                <p style="margin-top: 40px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    <strong>Q: Adjust temperature or top-p first?</strong><br/>
-                    A: Temperature. Keep top-p at default (0.9–1.0) until you understand temperature.
-                </p>
-                <p style="margin-top: 30px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    <strong>Q: Can T=0 guarantee correctness?</strong><br/>
-                    A: No. Hallucinations come from training gaps, not random sampling. Lower temperature makes outputs consistent—but not always correct.
-                </p>
-            </div>
-
-            <!-- Slide 13: How PromptQuorum Helps -->
-            <div class="slide">
-                <h2>How PromptQuorum Helps</h2>
-                <ul style="margin-top: 30px; font-size: 20px; text-align: left;">
-                    <li><strong>Multi-model comparisons:</strong> Send one prompt at different settings across 25+ models</li>
-                    <li><strong>Framework-based structure:</strong> Ensure instructions are clear before tuning</li>
-                    <li><strong>Consensus scoring:</strong> Score hallucination risk & style consistency</li>
-                    <li><strong>Automatic recommendations:</strong> Get optimal temperature by task type</li>
-                </ul>
-            </div>
-
-            <!-- Slide 14: CTA -->
-            <div class="slide" style="background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);">
-                <h2 style="color: #6750a4;">Ready to Master Prompt Engineering?</h2>
-                <p style="margin-top: 30px; font-size: 24px; color: #49454f;">Test temperature, top-p, and 25+ models in one place.</p>
-                <p style="margin-top: 40px;">
-                    <a href="https://www.promptquorum.com" style="display: inline-block; padding: 16px 40px; background: #6750a4; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: 700; transition: background 0.2s;">
-                        Start Free
-                    </a>
-                </p>
-            </div>
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
         </div>
 
-        <!-- Navigation Controls -->
         <div class="controls">
             <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
             <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
@@ -519,25 +324,855 @@
     </div>
 
     <script>
-        // Print to PDF: detect ?print=1 param and trigger print dialog
-        if (new URLSearchParams(window.location.search).get('print') === '1') {
-            window.addEventListener('load', () => {
-                window.print();
-            });
+        // Content in 5 languages
+        const CONTENT = {
+            en: {
+                title: 'Temperature and Top-P: Control AI Creativity',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Temperature & Top-P\nControl AI Creativity',
+                        subtitle: 'Master AI Output Randomness & Consistency',
+                        link: 'https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Is Temperature in AI?',
+                        intro: 'Temperature is a knob that controls randomness.',
+                        items: [
+                            '<strong>At 0.0:</strong> Always picks the most likely word → Identical output every time',
+                            '<strong>At 1.0+:</strong> Considers riskier alternatives → Surprising & varied text'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Is Top-P (Nucleus Sampling)?',
+                        intro: 'Top-P controls how many word options the model considers at each step.',
+                        items: [
+                            '<strong>At 0.1:</strong> Narrow & safe — only very top options',
+                            '<strong>At 0.9:</strong> Looser & more varied — wider set of choices'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Temperature vs Top-P: Key Differences',
+                        line1: '<strong>Temperature</strong> = "How adventurous"',
+                        line2: '<strong>Top-P</strong> = "How many options to consider"',
+                        tip: '💡 Pro tip: Tune ONE, keep the other at default'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Temperature Ranges at a Glance',
+                        columns: ['Range', 'Behavior', 'Best For'],
+                        rows: [
+                            { Range: 'Low (0.0–0.3)', Behavior: 'Focused, repetitive, stable', 'Best For': 'Code, data extraction' },
+                            { Range: 'Medium (0.4–0.7)', Behavior: 'Balanced variation & stability', 'Best For': 'Most general tasks' },
+                            { Range: 'High (0.8–1.0+)', Behavior: 'Creative, diverse, surprising', 'Best For': 'Brainstorming, storytelling' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Recommended Settings by Use Case',
+                        columns: ['Use Case', 'Temp', 'Top-P'],
+                        rows: [
+                            { 'Use Case': 'Coding/Refactoring', Temp: '0.1–0.3', 'Top-P': '0.95' },
+                            { 'Use Case': 'Summaries & Explanations', Temp: '0.4–0.6', 'Top-P': '0.9' },
+                            { 'Use Case': 'Brainstorming & Creative', Temp: '0.7–1.0', 'Top-P': '1.0' },
+                            { 'Use Case': 'Data Extraction', Temp: '0.0–0.2', 'Top-P': '0.95' },
+                            { 'Use Case': 'Long-form Writing', Temp: '0.6–0.8', 'Top-P': '0.9–1.0' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quick-Start Recipes',
+                        intro: '',
+                        items: [
+                            '<strong>Safe Factual:</strong> T=0.2, Top-P=0.95 → Reliable, minimal hallucination',
+                            '<strong>Balanced Default:</strong> T=0.5, Top-P=0.9 → Natural, stable',
+                            '<strong>Creative Brainstorming:</strong> T=0.8, Top-P=1.0 → Diverse, surprising',
+                            '<strong>Short-Answer:</strong> T=0.3, Top-P=0.95 → Fast, direct',
+                            '<strong>Experimental:</strong> T=1.0, Top-P=1.0 → Unpredictable, max variation'
+                        ]
+                    },
+                    {
+                        type: 'example',
+                        h2: 'Prompts Matter More Than Settings',
+                        prompt: 'Write a short product tagline for a productivity app. Under 10 words.',
+                        output1: 'At T=0.2: "Get more done in less time."',
+                        output2: 'At T=0.8: "Chaos to clarity: where moments transform into momentum."'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'When High Temperature Becomes Risky',
+                        intro: 'Be conservative (T=0.0–0.5) for:',
+                        items: [
+                            'Code that goes to production',
+                            'Health & medical advice',
+                            'Finance & legal analysis',
+                            'Safety-critical decisions'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '7 Common Mistakes',
+                        intro: '',
+                        items: [
+                            'Cranking both to max and expecting reliability',
+                            'Changing both knobs at once (can\'t isolate what helped)',
+                            'Trying to fix a bad prompt with sliders',
+                            'Forgetting models interpret values differently',
+                            'Testing only one output per setting',
+                            'Setting T=0 and expecting perfect correctness',
+                            'Ignoring top-p entirely because your provider ignores it'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Steps to Set Temperature Right',
+                        intro: '',
+                        items: [
+                            '<strong>1. Fix the prompt first.</strong> Write clear instructions.',
+                            '<strong>2. Identify task type.</strong> Factual (0.0–0.3) or Creative (0.7–1.0)?',
+                            '<strong>3. Leave top-p at default</strong> (0.9–1.0). Only adjust if you have a specific reason.',
+                            '<strong>4. Run 3–5 test prompts</strong> at your target temperature.',
+                            '<strong>5. Document your settings</strong> per use case.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Key FAQs',
+                        faqs: [
+                            {
+                                q: 'Adjust temperature or top-p first?',
+                                a: 'Temperature. Keep top-p at default (0.9–1.0) until you understand temperature.'
+                            },
+                            {
+                                q: 'Can T=0 guarantee correctness?',
+                                a: 'No. Hallucinations come from training gaps, not random sampling. Lower temperature makes outputs consistent—but not always correct.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How PromptQuorum Helps',
+                        intro: '',
+                        items: [
+                            '<strong>Multi-model comparisons:</strong> Send one prompt at different settings across 25+ models',
+                            '<strong>Framework-based structure:</strong> Ensure instructions are clear before tuning',
+                            '<strong>Consensus scoring:</strong> Score hallucination risk & style consistency',
+                            '<strong>Automatic recommendations:</strong> Get optimal temperature by task type'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Ready to Master Prompt Engineering?',
+                        body: 'Test temperature, top-p, and 25+ models in one place.',
+                        cta: 'Start Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'Temperatur und Top-P: Kontrolliere die KI-Kreativität',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Temperatur & Top-P\nKontrolliere die KI-Kreativität',
+                        subtitle: 'Beherrsche KI-Ausgabe-Zufälligkeit & Konsistenz',
+                        link: 'https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was ist Temperatur in KI?',
+                        intro: 'Temperatur ist ein Regler, der Zufälligkeit kontrolliert.',
+                        items: [
+                            '<strong>Bei 0.0:</strong> Wählt immer das wahrscheinlichste Wort → Identische Ausgabe jedes Mal',
+                            '<strong>Bei 1.0+:</strong> Berücksichtigt riskantere Alternativen → Überraschender & vielfältiger Text'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was ist Top-P (Nucleus Sampling)?',
+                        intro: 'Top-P kontrolliert, wie viele Wortoptionen das Modell bei jedem Schritt berücksichtigt.',
+                        items: [
+                            '<strong>Bei 0.1:</strong> Eng & sicher — nur sehr obere Optionen',
+                            '<strong>Bei 0.9:</strong> Lockerer & vielfältiger — breitere Palette von Wahlen'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Temperatur vs. Top-P: Wichtigste Unterschiede',
+                        line1: '<strong>Temperatur</strong> = "Wie abenteuerlich"',
+                        line2: '<strong>Top-P</strong> = "Wie viele Optionen zu berücksichtigen"',
+                        tip: '💡 Pro-Tipp: Stelle EINE ein, halte die andere auf Standard'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Temperaturbereiche auf einen Blick',
+                        columns: ['Bereich', 'Verhalten', 'Am besten für'],
+                        rows: [
+                            { Bereich: 'Niedrig (0.0–0.3)', Verhalten: 'Fokussiert, repetitiv, stabil', 'Am besten für': 'Code, Datenextraktion' },
+                            { Bereich: 'Mittel (0.4–0.7)', Verhalten: 'Ausgewogene Variation & Stabilität', 'Am besten für': 'Meiste allgemeine Aufgaben' },
+                            { Bereich: 'Hoch (0.8–1.0+)', Verhalten: 'Kreativ, vielfältig, überraschend', 'Am besten für': 'Brainstorming, Storytelling' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Empfohlene Einstellungen nach Anwendungsfall',
+                        columns: ['Anwendungsfall', 'Temp', 'Top-P'],
+                        rows: [
+                            { Anwendungsfall: 'Kodierung/Refactoring', Temp: '0.1–0.3', 'Top-P': '0.95' },
+                            { Anwendungsfall: 'Zusammenfassungen & Erklärungen', Temp: '0.4–0.6', 'Top-P': '0.9' },
+                            { Anwendungsfall: 'Brainstorming & Kreativ', Temp: '0.7–1.0', 'Top-P': '1.0' },
+                            { Anwendungsfall: 'Datenextraktion', Temp: '0.0–0.2', 'Top-P': '0.95' },
+                            { Anwendungsfall: 'Langform-Schreiben', Temp: '0.6–0.8', 'Top-P': '0.9–1.0' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Schnellstart-Rezepte',
+                        intro: '',
+                        items: [
+                            '<strong>Sicherer Faktenmodus:</strong> T=0.2, Top-P=0.95 → Zuverlässig, minimal halluzinierend',
+                            '<strong>Ausgeglichener Standard:</strong> T=0.5, Top-P=0.9 → Natürlich, stabil',
+                            '<strong>Kreatives Brainstorming:</strong> T=0.8, Top-P=1.0 → Vielfältig, überraschend',
+                            '<strong>Kurz-Antwort-Modus:</strong> T=0.3, Top-P=0.95 → Schnell, direkt',
+                            '<strong>Experimenteller Modus:</strong> T=1.0, Top-P=1.0 → Unvorhersehbar, max Variation'
+                        ]
+                    },
+                    {
+                        type: 'example',
+                        h2: 'Prompts sind wichtiger als Einstellungen',
+                        prompt: 'Schreibe einen kurzen Produktslogan für eine Produktivitäts-App. Unter 10 Wörter.',
+                        output1: 'Bei T=0.2: "Mehr erreichen in weniger Zeit."',
+                        output2: 'Bei T=0.8: "Vom Chaos zur Klarheit: wo Momente zu Momentum werden."'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wenn hohe Temperatur riskant wird',
+                        intro: 'Sei konservativ (T=0.0–0.5) für:',
+                        items: [
+                            'Code, der in die Produktion geht',
+                            'Gesundheits- & medizinische Ratschläge',
+                            'Finanz- & Rechtsanalyse',
+                            'Sicherheitskritische Entscheidungen'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '7 häufige Fehler',
+                        intro: '',
+                        items: [
+                            'Beide auf Maximum drehen und Zuverlässigkeit erwarten',
+                            'Beide Regler gleichzeitig ändern (kann nicht isolieren, was geholfen hat)',
+                            'Versuchen, einen schlechten Prompt mit Schiebereglern zu beheben',
+                            'Vergessen, dass Modelle Werte unterschiedlich interpretieren',
+                            'Nur eine Ausgabe pro Einstellung testen',
+                            'T=0 setzen und perfekte Korrektheit erwarten',
+                            'Top-P komplett ignorieren, weil dein Provider es ignoriert'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Schritte zur richtigen Temperatur',
+                        intro: '',
+                        items: [
+                            '<strong>1. Behebe zuerst den Prompt.</strong> Schreibe klare Anweisungen.',
+                            '<strong>2. Identifiziere deinen Aufgabentyp.</strong> Faktisch (0.0–0.3) oder Kreativ (0.7–1.0)?',
+                            '<strong>3. Halte top-p auf Standard</strong> (0.9–1.0). Stelle nur ein, wenn du einen spezifischen Grund hast.',
+                            '<strong>4. Führe 3–5 Test-Prompts</strong> bei deiner Zieltemperatur aus.',
+                            '<strong>5. Dokumentiere deine Einstellungen</strong> pro Anwendungsfall.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Wichtige Häufig gestellte Fragen',
+                        faqs: [
+                            {
+                                q: 'Temperatur oder top-p zuerst einstellen?',
+                                a: 'Temperatur. Halte top-p auf Standard (0.9–1.0), bis du Temperatur verstehst.'
+                            },
+                            {
+                                q: 'Kann T=0 Korrektheit garantieren?',
+                                a: 'Nein. Halluzinationen stammen aus Trainingslücken, nicht zufälliger Stichprobenentnahme. Niedrigere Temperatur macht Ausgaben konsistent—aber nicht immer korrekt.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie PromptQuorum dir hilft',
+                        intro: '',
+                        items: [
+                            '<strong>Multi-Modell-Vergleiche:</strong> Sende einen Prompt bei verschiedenen Einstellungen über 25+ Modelle',
+                            '<strong>Framework-basierte Struktur:</strong> Stelle sicher, dass Anweisungen klar sind, bevor du abstimmst',
+                            '<strong>Konsens-Scoring:</strong> Bewerte Halluzinations-Risiko & Stil-Konsistenz',
+                            '<strong>Automatische Empfehlungen:</strong> Erhalte optimale Temperatur nach Aufgabentyp'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Bereit, Prompt Engineering zu beherrschen?',
+                        body: 'Teste Temperatur, Top-P und 25+ Modelle an einem Ort.',
+                        cta: 'Kostenlos starten',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Température et Top-P : Contrôle la créativité de l\'IA',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Température & Top-P\nContrôle la créativité de l\'IA',
+                        subtitle: 'Maîtrise l\'aléatoire et la cohérence de la sortie de l\'IA',
+                        link: 'https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Qu\'est-ce que la température en IA?',
+                        intro: 'La température est un bouton qui contrôle l\'aléatoire.',
+                        items: [
+                            '<strong>À 0.0 :</strong> Choisit toujours le mot le plus probable → Sortie identique à chaque fois',
+                            '<strong>À 1.0+ :</strong> Considère des alternatives plus risquées → Texte surprenant & varié'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Qu\'est-ce que Top-P (échantillonnage par noyau)?',
+                        intro: 'Top-P contrôle combien d\'options de mots le modèle considère à chaque étape.',
+                        items: [
+                            '<strong>À 0.1 :</strong> Étroit & sûr — seulement les très meilleures options',
+                            '<strong>À 0.9 :</strong> Plus lâche & varié — ensemble plus large de choix'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Température vs Top-P : Différences clés',
+                        line1: '<strong>Température</strong> = "Combien d\'audace"',
+                        line2: '<strong>Top-P</strong> = "Combien d\'options à considérer"',
+                        tip: '💡 Conseil pro : Règle UN, maintiens l\'autre par défaut'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Plages de température en un coup d\'œil',
+                        columns: ['Plage', 'Comportement', 'Idéal pour'],
+                        rows: [
+                            { Plage: 'Bas (0.0–0.3)', Comportement: 'Focalisé, répétitif, stable', 'Idéal pour': 'Code, extraction de données' },
+                            { Plage: 'Moyen (0.4–0.7)', Comportement: 'Variation équilibrée & stabilité', 'Idéal pour': 'La plupart des tâches' },
+                            { Plage: 'Haut (0.8–1.0+)', Comportement: 'Créatif, divers, surprenant', 'Idéal pour': 'Brainstorming, storytelling' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Paramètres recommandés par cas d\'utilisation',
+                        columns: ['Cas d\'utilisation', 'Temp', 'Top-P'],
+                        rows: [
+                            { 'Cas d\'utilisation': 'Codage/Refactorisation', Temp: '0.1–0.3', 'Top-P': '0.95' },
+                            { 'Cas d\'utilisation': 'Résumés & Explications', Temp: '0.4–0.6', 'Top-P': '0.9' },
+                            { 'Cas d\'utilisation': 'Brainstorming & Créatif', Temp: '0.7–1.0', 'Top-P': '1.0' },
+                            { 'Cas d\'utilisation': 'Extraction de données', Temp: '0.0–0.2', 'Top-P': '0.95' },
+                            { 'Cas d\'utilisation': 'Écriture longue', Temp: '0.6–0.8', 'Top-P': '0.9–1.0' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Recettes de démarrage rapide',
+                        intro: '',
+                        items: [
+                            '<strong>Mode factuel sûr :</strong> T=0.2, Top-P=0.95 → Fiable, hallucinations minimales',
+                            '<strong>Mode par défaut équilibré :</strong> T=0.5, Top-P=0.9 → Naturel, stable',
+                            '<strong>Brainstorming créatif :</strong> T=0.8, Top-P=1.0 → Divers, surprenant',
+                            '<strong>Mode réponse courte :</strong> T=0.3, Top-P=0.95 → Rapide, direct',
+                            '<strong>Mode expérimental :</strong> T=1.0, Top-P=1.0 → Imprévisible, variation max'
+                        ]
+                    },
+                    {
+                        type: 'example',
+                        h2: 'Les prompts comptent plus que les paramètres',
+                        prompt: 'Écris un court slogan de produit pour une application de productivité. Moins de 10 mots.',
+                        output1: 'À T=0.2 : "Fais plus en moins de temps."',
+                        output2: 'À T=0.8 : "Du chaos à la clarté : où les moments se transforment en élan."'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quand la créativité élevée devient risquée',
+                        intro: 'Sois prudent (T=0.0–0.5) pour:',
+                        items: [
+                            'Code qui va en production',
+                            'Conseils de santé & médicaux',
+                            'Analyse financière & juridique',
+                            'Décisions critiques pour la sécurité'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '7 erreurs courantes',
+                        intro: '',
+                        items: [
+                            'Monter les deux au maximum et s\'attendre à la fiabilité',
+                            'Changer les deux à la fois (ne peux pas isoler ce qui a aidé)',
+                            'Essayer de corriger un mauvais prompt avec des curseurs',
+                            'Oublier que les modèles interprètent les valeurs différemment',
+                            'Tester une seule sortie par paramètre',
+                            'Définir T=0 et s\'attendre à une correction parfaite',
+                            'Ignorer complètement top-p parce que ton fournisseur l\'ignore'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 étapes pour bien régler la température',
+                        intro: '',
+                        items: [
+                            '<strong>1. Répare d\'abord le prompt.</strong> Écris des instructions claires.',
+                            '<strong>2. Identifie ton type de tâche.</strong> Factuel (0.0–0.3) ou Créatif (0.7–1.0)?',
+                            '<strong>3. Laisse top-p par défaut</strong> (0.9–1.0). N\'ajuste que si tu as une raison spécifique.',
+                            '<strong>4. Exécute 3–5 prompts de test</strong> à ta température cible.',
+                            '<strong>5. Documente tes paramètres</strong> par cas d\'utilisation.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ essentielles',
+                        faqs: [
+                            {
+                                q: 'Régler la température ou top-p en premier?',
+                                a: 'Température. Garde top-p par défaut (0.9–1.0) jusqu\'à ce que tu comprennes la température.'
+                            },
+                            {
+                                q: 'T=0 peut-il garantir la correction?',
+                                a: 'Non. Les hallucinations proviennent de lacunes d\'entraînement, pas d\'échantillonnage aléatoire. Une température plus basse rend les sorties cohérentes—mais pas toujours correctes.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment PromptQuorum t\'aide',
+                        intro: '',
+                        items: [
+                            '<strong>Comparaisons multi-modèles :</strong> Envoie un prompt à différents paramètres sur 25+ modèles',
+                            '<strong>Structure basée sur les frameworks :</strong> Assure-toi que les instructions sont claires avant d\'ajuster',
+                            '<strong>Score de consensus :</strong> Note le risque d\'hallucination & la cohérence du style',
+                            '<strong>Recommandations automatiques :</strong> Obtiens une température optimale par type de tâche'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Prêt à maîtriser l\'ingénierie des prompts?',
+                        body: 'Teste la température, le top-p et 25+ modèles en un seul endroit.',
+                        cta: 'Commencer gratuitement',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: '温度とTop-P：AI創造性を制御する',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '温度 & Top-P\nAI創造性を制御する',
+                        subtitle: 'AI出力のランダム性と一貫性を習得する',
+                        link: 'https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'AIにおける温度とは何か？',
+                        intro: '温度はランダム性を制御するノブです。',
+                        items: [
+                            '<strong>0.0の場合：</strong> 常に最も可能性の高い単語を選択 → 毎回同じ出力',
+                            '<strong>1.0以上の場合：</strong> より危険な選択肢を検討 → 驚くべき多様なテキスト'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Top-P（ニュークレウスサンプリング）とは何か？',
+                        intro: 'Top-Pはモデルが各ステップで考慮する単語オプションの数を制御します。',
+                        items: [
+                            '<strong>0.1の場合：</strong> 狭い＆安全 — 最高のオプションのみ',
+                            '<strong>0.9の場合：</strong> より緩い＆多様 — より広い選択肢'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: '温度 vs Top-P：主な違い',
+                        line1: '<strong>温度</strong> = "どの程度冒険的か"',
+                        line2: '<strong>Top-P</strong> = "考慮する選択肢の数"',
+                        tip: '💡 Pro Tip：1つを調整し、もう1つはデフォルトのままにする'
+                    },
+                    {
+                        type: 'table',
+                        h2: '温度範囲一目でわかる',
+                        columns: ['範囲', '動作', '最適なケース'],
+                        rows: [
+                            { '範囲': '低（0.0–0.3）', '動作': 'フォーカス、反復的、安定', '最適なケース': 'コード、データ抽出' },
+                            { '範囲': '中（0.4–0.7）', '動作': 'バランスの取れた変動と安定性', '最適なケース': 'ほとんどの一般的なタスク' },
+                            { '範囲': '高（0.8–1.0+）', '動作': 'クリエイティブ、多様、驚くべき', '最適なケース': 'ブレーンストーミング、ストーリーテリング' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'ユースケース別の推奨設定',
+                        columns: ['ユースケース', '温度', 'Top-P'],
+                        rows: [
+                            { ユースケース: 'コーディング/リファクタリング', 温度: '0.1–0.3', 'Top-P': '0.95' },
+                            { ユースケース: '要約と説明', 温度: '0.4–0.6', 'Top-P': '0.9' },
+                            { ユースケース: 'ブレーンストーミング＆クリエイティブ', 温度: '0.7–1.0', 'Top-P': '1.0' },
+                            { ユースケース: 'データ抽出', 温度: '0.0–0.2', 'Top-P': '0.95' },
+                            { ユースケース: 'ロングフォーム執筆', 温度: '0.6–0.8', 'Top-P': '0.9–1.0' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'クイックスタートレシピ',
+                        intro: '',
+                        items: [
+                            '<strong>安全なファクトモード：</strong> T=0.2、Top-P=0.95 → 信頼できる、幻覚最小限',
+                            '<strong>バランスの取れたデフォルト：</strong> T=0.5、Top-P=0.9 → 自然、安定',
+                            '<strong>クリエイティブブレーンストーミング：</strong> T=0.8、Top-P=1.0 → 多様、驚くべき',
+                            '<strong>短答モード：</strong> T=0.3、Top-P=0.95 → 高速、直接',
+                            '<strong>実験モード：</strong> T=1.0、Top-P=1.0 → 予測不可能、最大変動'
+                        ]
+                    },
+                    {
+                        type: 'example',
+                        h2: 'プロンプトは設定より重要',
+                        prompt: '生産性アプリの短い製品タグラインを書く。10語以下。',
+                        output1: 'T=0.2の場合：「より少ない時間でより多くを達成する。」',
+                        output2: 'T=0.8の場合：「混乱から明確性へ：瞬間がモーメンタムに変わる場所。」'
+                    },
+                    {
+                        type: 'list',
+                        h2: '高い温度がリスクになる場合',
+                        intro: '以下の場合は保守的に（T=0.0–0.5）：',
+                        items: [
+                            '本番環境に送られるコード',
+                            '健康＆医療アドバイス',
+                            'ファイナンス＆法律分析',
+                            '安全性が重大な決定'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '7つの一般的なミステイク',
+                        intro: '',
+                        items: [
+                            '両方を最大にして信頼性を期待する',
+                            '両方のノブを同時に変更する（何が役立ったか分離できない）',
+                            '悪いプロンプトをスライダーで修正しようとする',
+                            'モデルは値を異なる方法で解釈することを忘れる',
+                            '設定ごとに1つの出力のみをテストする',
+                            'T=0を設定して完全な正確さを期待する',
+                            'プロバイダーがそれを無視しているため、top-pを完全に無視する'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '温度を正しく設定する5ステップ',
+                        intro: '',
+                        items: [
+                            '<strong>1. まずプロンプトを修正する。</strong> 明確な指示を書く。',
+                            '<strong>2. タスクタイプを特定する。</strong> 事実的（0.0–0.3）またはクリエイティブ（0.7–1.0）？',
+                            '<strong>3. top-pをデフォルトで保つ</strong>（0.9–1.0）。特定の理由がある場合のみ調整。',
+                            '<strong>4. 3～5個のテストプロンプトを実行</strong>目標温度で。',
+                            '<strong>5. ユースケース別に設定を文書化する。</strong>'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '重要なFAQ',
+                        faqs: [
+                            {
+                                q: '温度またはtop-pを最初に調整しますか？',
+                                a: '温度。温度を理解するまでtop-pをデフォルト（0.9–1.0）に保つ。'
+                            },
+                            {
+                                q: 'T=0は正確性を保証できますか？',
+                                a: 'いいえ。幻覚はランダムサンプリングではなく、トレーニングギャップから来ます。低い温度は出力を一貫させます—常に正確ではありません。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'PromptQuorumが支援する方法',
+                        intro: '',
+                        items: [
+                            '<strong>マルチモデル比較：</strong> 25以上のモデル全体で異なる設定で1つのプロンプトを送信',
+                            '<strong>フレームワークベースの構造：</strong> 調整前に指示が明確であることを確認',
+                            '<strong>コンセンサススコアリング：</strong> 幻覚リスク＆スタイルの一貫性をスコアリング',
+                            '<strong>自動推奨：</strong> タスクタイプ別に最適な温度を取得'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'プロンプトエンジニアリングをマスターする準備はできていますか？',
+                        body: '温度、top-p、25以上のモデルを1つの場所でテストします。',
+                        cta: '無料で開始',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: '温度和Top-P：控制AI创造力',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '温度 & Top-P\n控制AI创造力',
+                        subtitle: '掌握AI输出的随机性和一致性',
+                        link: 'https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'AI中的温度是什么？',
+                        intro: '温度是控制随机性的旋钮。',
+                        items: [
+                            '<strong>在0.0时：</strong> 总是选择最可能的单词 → 每次相同的输出',
+                            '<strong>在1.0+时：</strong> 考虑更多风险的替代方案 → 令人惊讶和多样的文本'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Top-P（核采样）是什么？',
+                        intro: 'Top-P控制模型在每一步考虑多少个单词选项。',
+                        items: [
+                            '<strong>在0.1时：</strong> 狭隘且安全 — 仅限最高选项',
+                            '<strong>在0.9时：</strong> 更灵活和多样 — 更广泛的选择'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: '温度与Top-P：关键区别',
+                        line1: '<strong>温度</strong> = "多冒险"',
+                        line2: '<strong>Top-P</strong> = "考虑多少个选项"',
+                        tip: '💡 专家提示：调整一个，保持另一个为默认'
+                    },
+                    {
+                        type: 'table',
+                        h2: '温度范围一览',
+                        columns: ['范围', '行为', '最适合'],
+                        rows: [
+                            { '范围': '低（0.0–0.3）', '行为': '聚焦、重复、稳定', '最适合': '代码、数据提取' },
+                            { '范围': '中（0.4–0.7）', '行为': '平衡的变异和稳定性', '最适合': '大多数常见任务' },
+                            { '范围': '高（0.8–1.0+）', '行为': '创意、多样、令人惊讶', '最适合': '头脑风暴、故事讲述' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '按用例推荐的设置',
+                        columns: ['用例', '温度', 'Top-P'],
+                        rows: [
+                            { '用例': '编码/重构', '温度': '0.1–0.3', 'Top-P': '0.95' },
+                            { '用例': '摘要和说明', '温度': '0.4–0.6', 'Top-P': '0.9' },
+                            { '用例': '头脑风暴和创意', '温度': '0.7–1.0', 'Top-P': '1.0' },
+                            { '用例': '数据提取', '温度': '0.0–0.2', 'Top-P': '0.95' },
+                            { '用例': '长篇写作', '温度': '0.6–0.8', 'Top-P': '0.9–1.0' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '快速启动配方',
+                        intro: '',
+                        items: [
+                            '<strong>安全事实模式：</strong> T=0.2、Top-P=0.95 → 可靠、最小幻觉',
+                            '<strong>平衡默认模式：</strong> T=0.5、Top-P=0.9 → 自然、稳定',
+                            '<strong>创意头脑风暴：</strong> T=0.8、Top-P=1.0 → 多样、令人惊讶',
+                            '<strong>短答模式：</strong> T=0.3、Top-P=0.95 → 快速、直接',
+                            '<strong>实验模式：</strong> T=1.0、Top-P=1.0 → 不可预测、最大变动'
+                        ]
+                    },
+                    {
+                        type: 'example',
+                        h2: '提示词比设置更重要',
+                        prompt: '为生产力应用写一个简短的产品标语。少于10个单词。',
+                        output1: 'T=0.2时："用更少的时间完成更多工作。"',
+                        output2: 'T=0.8时："从混乱到清晰：时刻转化为动力的地方。"'
+                    },
+                    {
+                        type: 'list',
+                        h2: '高温度何时变得危险',
+                        intro: '对以下情况保持保守态度（T=0.0–0.5）：',
+                        items: [
+                            '进入生产环境的代码',
+                            '健康和医疗建议',
+                            '财务和法律分析',
+                            '安全关键决策'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '7个常见错误',
+                        intro: '',
+                        items: [
+                            '将两者都调到最大并期望可靠性',
+                            '同时更改两个旋钮（无法隔离哪个有帮助）',
+                            '尝试用滑块修复不好的提示',
+                            '忘记模型对值的解释方式不同',
+                            '每个设置只测试一个输出',
+                            '将T设置为0并期望完全正确',
+                            '因为您的提供商忽略了top-p，所以完全忽略它'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '正确设置温度的5个步骤',
+                        intro: '',
+                        items: [
+                            '<strong>1. 先修复提示。</strong> 编写清晰的说明。',
+                            '<strong>2. 确定您的任务类型。</strong> 事实性（0.0–0.3）还是创意（0.7–1.0）？',
+                            '<strong>3. 保持top-p为默认值</strong>（0.9–1.0）。仅在有特定原因时调整。',
+                            '<strong>4. 在目标温度下运行3-5个测试提示。</strong>',
+                            '<strong>5. 按用例记录您的设置。</strong>'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题解答',
+                        faqs: [
+                            {
+                                q: '先调整温度还是top-p？',
+                                a: '温度。在理解温度之前保持top-p为默认值（0.9–1.0）。'
+                            },
+                            {
+                                q: 'T=0能保证正确性吗？',
+                                a: '否。幻觉来自训练数据差距，而非随机采样。低温度使输出一致——但不总是正确。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'PromptQuorum如何帮助',
+                        intro: '',
+                        items: [
+                            '<strong>多模型比较：</strong> 在25+个模型中以不同设置发送一个提示',
+                            '<strong>框架式结构：</strong> 确保说明在调整前清晰',
+                            '<strong>共识评分：</strong> 评分幻觉风险和风格一致性',
+                            '<strong>自动推荐：</strong> 按任务类型获得最佳温度'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '准备好掌握提示工程了吗？',
+                        body: '在一个地方测试温度、Top-P和25+个模型。',
+                        cta: '免费开始',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        // Utility: render slide to HTML
+        function renderSlide(slide) {
+            let html = '';
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}">${slide.link.split('/').pop().replace(/-/g, ' ')}</a>
+                        </p>
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p>${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1.2em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    break;
+
+                case 'comparison':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 40px; font-size: 1.5em;">${slide.line1}</p>
+                        <p style="font-size: 1.5em;">${slide.line2}</p>
+                        <p style="margin-top: 40px; font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+                    `;
+                    break;
+
+                case 'example':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 30px; font-style: italic; color: #6750a4; font-size: 1em;">${slide.prompt}</p>
+                        <p style="margin-top: 30px; font-size: 1.1em;"><strong>${slide.output1}</strong></p>
+                        <p style="font-size: 1.1em;"><strong>${slide.output2}</strong></p>
+                    `;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `
+                            <p style="margin-top: 20px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+                                <strong>Q: ${faq.q}</strong><br/>
+                                A: ${faq.a}
+                            </p>
+                        `;
+                    });
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2 style="color: #6750a4;">${slide.h2}</h2>
+                        <p style="margin-top: 30px; font-size: 1.2em;">${slide.body}</p>
+                        <p style="margin-top: 40px;">
+                            <a href="${slide.href}" style="display: inline-block; padding: 16px 40px; background: #6750a4; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: 700; transition: background 0.2s;">
+                                ${slide.cta}
+                            </a>
+                        </p>
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}">${html}</div>`;
         }
 
+        // Main script
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        // Update header
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        // Render slides
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        // Initialize slide navigation
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const totalSlides = slides.length;
-
         document.getElementById('totalSlides').textContent = totalSlides;
 
         function showSlide(n) {
-            if (n >= totalSlides) {
-                currentSlide = totalSlides - 1;
-            } else if (n < 0) {
-                currentSlide = 0;
-            }
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
 
             slides.forEach(slide => slide.classList.remove('active'));
             slides[currentSlide].classList.add('active');
@@ -557,6 +1192,13 @@
             if (e.key === 'ArrowLeft') changeSlide(-1);
             if (e.key === 'ArrowRight') changeSlide(1);
         });
+
+        // Print trigger
+        if (isPrint) {
+            window.addEventListener('load', () => {
+                window.print();
+            });
+        }
 
         showSlide(0);
     </script>
