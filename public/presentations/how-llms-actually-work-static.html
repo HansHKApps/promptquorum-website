@@ -340,9 +340,9 @@
         </div>
 
         <div class="controls">
-            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <button id="prevBtn" onclick="changeSlide(-1)"></button>
             <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
-            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+            <button id="nextBtn" onclick="changeSlide(1)"></button>
         </div>
     </div>
 
@@ -350,6 +350,8 @@
         const CONTENT = {
             en: {
                 title: 'How LLMs Actually Work: Tokens, Attention, and Inference',
+                prevBtn: '← Prev',
+                nextBtn: 'Next →',
                 slides: [
                     {
                         type: 'title',
@@ -498,6 +500,8 @@
             },
             de: {
                 title: 'Wie LLMs wirklich funktionieren: Tokens, Aufmerksamkeit und Inferenz',
+                prevBtn: '← Zurück',
+                nextBtn: 'Weiter →',
                 slides: [
                     {
                         type: 'title',
@@ -646,6 +650,8 @@
             },
             fr: {
                 title: 'Comment fonctionnent vraiment les LLMs : tokens, attention et inférence',
+                prevBtn: '← Précédent',
+                nextBtn: 'Suivant →',
                 slides: [
                     {
                         type: 'title',
@@ -794,6 +800,8 @@
             },
             ja: {
                 title: 'LLMは実際にどのように機能するか：トークン、注意、推論',
+                prevBtn: '← 前へ',
+                nextBtn: '次へ →',
                 slides: [
                     {
                         type: 'title',
@@ -942,6 +950,8 @@
             },
             zh: {
                 title: '大型语言模型实际如何工作：令牌、注意力与推理',
+                prevBtn: '← 上一页',
+                nextBtn: '下一页 →',
                 slides: [
                     {
                         type: 'title',
@@ -1176,6 +1186,10 @@
         document.getElementById('header-title').textContent = content.title;
         const backLink = document.getElementById('back-link');
         backLink.href += `?lang=${lang}`;
+
+        // Set translated button labels
+        document.getElementById('prevBtn').textContent = content.prevBtn || '← Prev';
+        document.getElementById('nextBtn').textContent = content.nextBtn || 'Next →';
 
         const container = document.getElementById('slides-container');
         content.slides.forEach(slide => {
