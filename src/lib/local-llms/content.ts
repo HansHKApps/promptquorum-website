@@ -26163,7 +26163,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'url': 'https://www.promptquorum.com/local-llms/local-llm-setup-for-teams?lang=en',
         'inLanguage': 'en',
         'datePublished': '2026-04-05',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }
       },
       howToSchema: {
         '@context': 'https://schema.org',
