@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Hallucinations: Why AI Makes Things Up | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation on AI hallucinations. Learn what they are, why LLMs hallucinate, and 6 proven techniques to reduce them. Multi-language deck." />
+    <meta property="og:title" content="AI Hallucinations: Why AI Makes Things Up — PromptQuorum" />
+    <meta property="og:description" content="Understand AI hallucinations, detect false outputs, and apply consensus scoring. 14-slide interactive deck in 5 languages." />
+    <meta property="og:type" content="website" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+            }
+
+            .slide h1, .slide h2, .slide p {
+                color: #1c1b1f !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">AI Hallucinations: Why AI Makes Things Up</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+    const CONTENT = {
+      en: {
+        title: 'AI Hallucinations: Why AI Makes Things Up — and How to Stop It',
+        slides: [
+          {type: 'title', h1: 'AI Hallucinations: Why AI Makes Things Up — and How to Stop It', subtitle: 'Large language models confidently produce false information. Understanding why hallucinations occur, how to detect them, and how to reduce them is essential for anyone using LLMs in real work.', link: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up'},
+          {type: 'list', h2: 'What Are AI Hallucinations?', items: ['<strong>AI Hallucination:</strong> A factually false or fabricated statement generated by an LLM with apparent confidence — wrong names, invented sources, impossible dates, fictitious URLs.', '<strong>Not uncertainty:</strong> Hallucinations are confident, detailed assertions about things that don\'t exist or events that never occurred — different from a model expressing doubt.', '<strong>In one sentence:</strong> Hallucinations are fluently false statements language models generate because they predict text patterns rather than retrieving facts from a reliable store.']},
+          {type: 'list', h2: 'Why LLMs Hallucinate: Core Mechanisms', items: ['<strong>Token prediction, not fact retrieval.</strong> Models predict plausible text continuations — coherence and truth are not the same thing.', '<strong>Training data gaps and expiry.</strong> Missing topics, recent events past the training cutoff, and narrow domain knowledge create voids.', '<strong>No explicit confidence mechanism.</strong> Models produce text without an internal signal saying "I am 30% certain of this claim."', '<strong>Pressure from prompts demanding answers.</strong> Prompts like "Explain everything about X" implicitly say: you must answer, even if uncertain.', '<strong>Limited context window.</strong> Long documents cause earlier details to fade — the model may invent what was said in a prior section.']},
+          {type: 'table', h2: '7 Types of Hallucinations', columns: ['Type', 'Example', 'Severity'], rows: [{Type: 'Invented Sources', Example: 'Citing a peer-reviewed paper that doesn\'t exist; fake author names', Severity: 'Very High'}, {Type: 'Wrong Facts (dates, numbers)', Example: 'Stating a historical event in the wrong year; incorrect biographical details', Severity: 'Very High'}, {Type: 'Fabricated URLs / Emails', Example: 'Providing a link that doesn\'t resolve or belong to the claimed organization', Severity: 'High'}, {Type: 'Context Loss', Example: 'Answering as if it understood prior context when it lost track', Severity: 'High'}, {Type: 'Role Drift', Example: 'Starting as one role (analyst), gradually shifting to another (storyteller)', Severity: 'Medium'}, {Type: 'Overconfident Generalization', Example: 'Stating "All X do Y" when only specific training examples show this', Severity: 'Medium'}, {Type: 'Internal Contradiction', Example: 'Stating opposite facts within the same response', Severity: 'Medium'}]},
+          {type: 'list', h2: 'Prompts That Increase Hallucination Risk', intro: 'Your prompts encourage or discourage hallucinations. The difference is measurable.', items: ['"Tell me everything about [topic]" — no limit, no permission to say "I don\'t know"', '"Make sure to include [many details]" — explicit pressure to fill space with invented information', '"Write as if you\'re a leading expert" — encourages confident assertions even for uncertain claims', '"Answer even if you\'re not completely sure" — removes the brake on hallucination']},
+          {type: 'list', h2: 'Prompts That Reduce Hallucination Risk', items: ['"You can say \'I don\'t know\' if you\'re unsure" — explicit permission to admit knowledge gaps', '"Use only information from the context below" — limits response to provided data, not invented knowledge', '"Separate facts from opinions. Mark uncertain claims [UNCERTAIN]" — forces the model to differentiate', '"Cite your source for any factual statement" — makes invented citations obviously visible', '"If you can\'t verify this claim, don\'t include it" — explicit constraint on unverified statements']},
+          {type: 'numbered', h2: '6 Techniques to Reduce Hallucinations', items: ['<strong>Give explicit permission to say "I don\'t know":</strong> Add: "If you are not certain, say \'I don\'t know\' rather than guessing." This alone eliminates a large class of confident fabrications.', '<strong>Ask for sources or evidence:</strong> Instruct the model to cite a source for each claim. Example: "After each fact, note either the source name or \'[unverified]\'"', '<strong>Add a self-critique step:</strong> Ask the model to review its own output before finalizing. Example: "Before answering, list any claims you are less than 90% confident in."', '<strong>Use negative instructions:</strong> Explicitly prohibit hallucination-prone behavior. Example: "Do not invent names, titles, or statistics."', '<strong>Require step-by-step reasoning:</strong> Chain-of-thought prompting forces the model to show its work, making errors detectable before they reach the final answer.', '<strong>Dispatch to multiple models with PromptQuorum:</strong> Send the same prompt to GPT-4o, Claude, and Gemini simultaneously. Facts confirmed by all three have high confidence.']},
+          {type: 'list', h2: 'System-Level Strategies', intro: 'Prompts alone aren\'t enough for high-stakes work. Add these tools and workflows.', items: ['<strong>Retrieval-Augmented Generation (RAG).</strong> Ground responses in a specific document or knowledge base — anchor answers in real data instead of training data.', '<strong>Tool calling and function use.</strong> Let the model call external functions for computations, database lookups, or fact-checking — eliminates the temptation to hallucinate.', '<strong>Human review and expert verification.</strong> For critical decisions — medical, legal, financial — always have a human verify AI-generated answers.', '<strong>Automated fact-checking workflows.</strong> Run model outputs through automated systems before showing them to users.']},
+          {type: 'list', h2: 'Multi-Model Consensus Detection', intro: 'A single model can hallucinate confidently. Multiple independent models often disagree on hallucinated claims.', items: ['If 5 models independently produce similar answers, that answer is far more likely to be correct than a single-model response.', 'If only 1 model claims something and 4 others don\'t mention it — that claim is highly suspect and warrants verification.', '<strong>Consensus Scoring:</strong> Send the same prompt to many models (GPT-4o, Claude, Gemini, Mistral, Llama 3, DeepSeek) and analyze where they agree and disagree.', '<strong>PromptQuorum Test:</strong> 15 hallucination-prone prompts — only 1 citation appeared across all three model responses (GPT-4o, Claude 4.6 Sonnet, Gemini 1.5 Pro).', 'PromptQuorum automates this: dispatch one prompt to 25+ AI models simultaneously and run consensus analysis on all responses.']},
+          {type: 'list', h2: 'When Hallucinations Are Most Dangerous', items: ['<strong>Medical and health decisions</strong> — wrong drug names, dosages, or symptom interpretations can harm patients', '<strong>Legal and compliance</strong> — invented case law, regulatory requirements, or precedents can lead to costly errors', '<strong>Financial advice</strong> — false market data, incorrect tax information, or fabricated performance metrics mislead high-stakes decisions', '<strong>Safety-critical systems</strong> — hallucinations in code review, architecture decisions, or security analysis can introduce vulnerabilities', '<strong>Public attribution</strong> — anything published under your name or brand must be fact-checked; hallucinations damage credibility']},
+          {type: 'numbered', h2: 'Pre-Send Checklist for Critical Prompts', items: ['Does the prompt explicitly allow "I don\'t know"?', 'Is there real context or data in the prompt?', 'Are constraints explicit? (state what the model must NOT do)', 'Is the output format structured? (separate Response / Reasoning / Evidence / Confidence)', 'Are you asking for sources for factual claims?', 'Is the task specific, not open-ended?', 'Have you asked the model to self-check for contradictions before submitting?', 'For high-risk decisions: are you cross-checking with multiple models?']},
+          {type: 'faq', h2: 'Frequently Asked Questions', faqs: [{q: 'Can hallucinations be completely eliminated?', a: 'No. Hallucinations are inherent to how language models work. You can reduce them significantly with good prompt design, RAG, and multi-model consensus, but complete elimination is not possible with current LLM architecture.'}, {q: 'Why does the model sound so confident when it\'s wrong?', a: 'Language models are trained to generate fluent, coherent text. Confidence is a byproduct of linguistic coherence. A false statement can be far more coherent than an honest admission of uncertainty.'}, {q: 'Do newer, larger models hallucinate less?', a: 'Larger models often hallucinate more on some tasks because they\'re better at generating plausible-sounding text, making false claims harder to detect.'}, {q: 'Does connecting a model to the internet remove hallucinations?', a: 'Partially. Real-time web access helps with current events and recent facts, but it doesn\'t solve the core problem: the model still invents details and misinterprets search results.'}]},
+          {type: 'list', h2: 'Key Takeaways', items: ['<strong>What hallucinations are:</strong> Confident false statements generated by LLMs that violate reality — invented sources, wrong facts, fabricated details — presented fluently.', '<strong>Why they occur:</strong> LLMs predict text patterns rather than retrieve facts; they lack a database to verify and have no internal confidence mechanism.', '<strong>How to detect them:</strong> Use consensus scoring (ask multiple models; agreement is a reliability signal), fact-check citations, verify claims independently.', '<strong>Consensus scoring:</strong> Dispatch the same prompt to 5+ independent models; claims appearing in only one or two responses are highly suspect.', '<strong>Mitigation strategies:</strong> Use RAG, set constraints, use multi-model consensus, and require human review for high-risk claims.']},
+          {type: 'cta', h2: 'Stop Guessing. Run Consensus.', body: 'Catch hallucinations before they cause damage. PromptQuorum dispatches your prompt to 25+ AI models simultaneously and surfaces where they agree — and where they don\'t.', cta: 'Try PromptQuorum Free', href: 'https://www.promptquorum.com'}
+        ]
+      },
+      de: {
+        title: 'KI-Halluzinationen: Warum KI Dinge erfindet — und wie man sie stoppt',
+        slides: [
+          {type: 'title', h1: 'KI-Halluzinationen: Warum KI Dinge erfindet — und wie man sie stoppt', subtitle: 'Große Sprachmodelle produzieren vertrauensvoll falsche Informationen. Das Verständnis, warum Halluzinationen auftreten, wie man sie erkennt und reduziert, ist für die praktische Arbeit mit LLMs unerlässlich.', link: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up'},
+          {type: 'list', h2: 'Was sind KI-Halluzinationen?', items: ['<strong>KI-Halluzination:</strong> Eine sachlich falsche oder erfundene Aussage, die von einem LLM mit anscheinender Sicherheit generiert wird. Das Modell produziert Text, der der Realität widerspricht.', '<strong>Nicht Unsicherheit:</strong> Halluzinationen zeichnen sich durch selbstsichere, detaillierte Aussagen über Dinge aus, die nicht existieren, oder über Ereignisse, die nie stattgefunden haben.', '<strong>In einem Satz:</strong> Halluzinationen sind flüssig formulierte falsche Aussagen, die Sprachmodelle erzeugen, weil sie Textmuster vorhersagen, anstatt Fakten aus einem zuverlässigen Speicher abzurufen.']},
+          {type: 'list', h2: 'Warum Sprachmodelle halluzinieren: Kernmechanismen', items: ['<strong>Token-Vorhersage, nicht Faktenabruf.</strong> Die Architektur des Modells ist auf Sprachgenerierung optimiert, nicht auf Faktenkontrolle.', '<strong>Lücken und Ablauf von Trainingsdaten.</strong> Modelle werden mit Daten trainiert, die ein spezifisches Enddatum haben. Informationslücken erzeugen Leerstellen.', '<strong>Kein expliziter Konfidenz-Mechanismus.</strong> Modelle generieren neben ihrer Ausgabe keinen Konfidenz-Score.', '<strong>Druck aus Aufforderungen, die Antworten fordern.</strong> Aufforderungen wie „Erkläre alles über [Thema]" kommunizieren implizit: du musst antworten, auch wenn unsicher.', '<strong>Begrenztes Kontextfenster und Informationsverlust.</strong> LLMs können nur eine begrenzte Menge an Kontext im Speicher halten.']},
+          {type: 'table', h2: 'Häufige Arten von Halluzinationen', columns: ['Typ', 'Beispiel', 'Schweregrad'], rows: [{Typ: 'Erfundene Quellen', Beispiel: 'Zitat eines nicht existierenden Fachjournals; erfundene Autorennamen', Schweregrad: 'Sehr hoch'}, {Typ: 'Falsche Fakten (Daten, Zahlen)', Beispiel: 'Ein historisches Ereignis im falschen Jahr nennen', Schweregrad: 'Sehr hoch'}, {Typ: 'Gefälschte URLs und E-Mails', Beispiel: 'Einen Link angeben, der nicht funktioniert', Schweregrad: 'Hoch'}, {Typ: 'Kontextverlust', Beispiel: 'Eine Frage beantworten, als würde das Modell verstehen, es verlor aber die Spur', Schweregrad: 'Hoch'}, {Typ: 'Rollenwechsel', Beispiel: 'Als Analyst beginnen und allmählich zum Geschichtenerzähler werden', Schweregrad: 'Mittel'}, {Typ: 'Überconfidente Verallgemeinerung', Beispiel: '"Alle X tun Y" sagen, wenn nur spezifische Beispiele das zeigen', Schweregrad: 'Mittel'}, {Typ: 'Innerer Widerspruch', Beispiel: 'Widersprüchliche Fakten innerhalb der gleichen Antwort feststellen', Schweregrad: 'Mittel'}]},
+          {type: 'list', h2: 'Prompts die das Halluzinationsrisiko erhöhen', intro: 'Ihre Prompts ermutigen oder entmutigen Halluzinationen. Der Unterschied ist messbar.', items: ['"Erzähle mir alles über [Thema]" — keine Grenzen, keine Erlaubnis zu sagen "Ich weiß nicht"', '"Stelle sicher, dass du [viele Details] einbeziehst" — expliziter Druck, Raum mit erfundenen Informationen zu füllen', '"Schreibe, als wärst du ein führender Experte" — ermutigt selbstsichere Aussagen, auch bei unsicheren Ansprüchen', '"Antworte, auch wenn du dir nicht völlig sicher bist" — entfernt die Bremse bei Halluzinationen']},
+          {type: 'list', h2: 'Prompts die das Halluzinationsrisiko reduzieren', items: ['"Du darfst sagen \'Ich weiß nicht\', wenn du unsicher bist" — explizite Erlaubnis, Wissenslücken zuzugeben', '"Verwende nur Informationen aus dem Kontext unten" — beschränkt die Antwort auf bereitgestellte Daten', '"Unterscheide Fakten von Meinungen. Markiere unsichere Aussagen [UNSICHER]" — zwingt das Modell zu differenzieren', '"Zitiere deine Quelle für jeden Faktnanspruch" — macht erfundene Zitate offensichtlich sichtbar', '"Wenn du diesen Anspruch nicht verifizieren kannst, beziehe ihn nicht ein" — explizite Einschränkung unverifizierten Aussagen']},
+          {type: 'numbered', h2: '6 Techniken zur Reduzierung von Halluzinationen', items: ['<strong>Explizite Erlaubnis zu sagen "Ich weiß nicht":</strong> Füge hinzu: "Wenn du nicht sicher bist, sag \'Ich weiß nicht\' anstatt zu raten."', '<strong>Nach Quellen oder Belegen fragen:</strong> Weise das Modell an, für jede Aussage eine Quelle zu nennen.', '<strong>Selbstkritik-Schritt hinzufügen:</strong> Bitte das Modell, seine eigene Ausgabe zu überprüfen.', '<strong>Negativanweisungen verwenden:</strong> Verbiete halluzinationsanfällige Verhaltensweisen explizit.', '<strong>Schrittweise Begründung verlangen:</strong> Chain-of-Thought-Prompting zwingt das Modell, seinen Gedankengang zu zeigen.', '<strong>Mehrere Modelle mit PromptQuorum nutzen:</strong> Sende den gleichen Prompt an GPT-4o, Claude und Gemini gleichzeitig.']},
+          {type: 'list', h2: 'Systemebenen-Strategien', intro: 'Prompts allein reichen für kritische Arbeit nicht aus. Füge diese Tools und Workflows hinzu.', items: ['<strong>Retrieval-Augmented Generation (RAG).</strong> Gebe dem Modell ein spezifisches Dokument oder eine Wissensdatenbank und fordere es auf, nur mit diesem Inhalt zu antworten.', '<strong>Tool Calling und Function Use.</strong> Lasse das Modell externe Funktionen für Berechnungen, Datenbankabfragen oder Faktenkontrolle aufrufen.', '<strong>Menschliche Überprüfung und Expertenverifikation.</strong> Für kritische Entscheidungen – medizinisch, rechtlich, finanziell – lasse immer einen Menschen KI-generierte Antworten verifizieren.', '<strong>Automatisierte Fakten-Überprüfungs-Workflows.</strong> Führe Modell-Ausgaben durch automatisierte Systeme durch, bevor du sie Nutzern zeigst.']},
+          {type: 'list', h2: 'Mehrere Modelle und Consensus-Erkennung', intro: 'Ein einzelnes Modell kann selbstsicher halluzinieren. Mehrere unabhängige Modelle sind sich oft uneinig über halluzinierte Aussagen.', items: ['Wenn fünf Modelle unabhängig ähnliche Antworten auf eine Frage geben, ist diese Antwort viel wahrscheinlicher korrekt.', 'Wenn nur 1 Modell etwas behauptet und 4 andere es nicht erwähnen — ist dieser Anspruch hochgradig verdächtig.', '<strong>Consensus Scoring:</strong> Den gleichen Prompt an viele Modelle senden (GPT-4o, Claude, Gemini, Mistral, Llama 3, DeepSeek).', '<strong>PromptQuorum Test:</strong> 15 halluzinationsanfällige Prompts — nur 1 Zitat erschien in allen drei Modell-Antworten.', 'PromptQuorum automatisiert dies: sende einen Prompt an 25+ KI-Modelle gleichzeitig.']},
+          {type: 'list', h2: 'Wenn Halluzinationen am gefährlichsten sind', items: ['<strong>Medizinische und Gesundheitsentscheidungen</strong> — falsche Arzneimittelnamen, Dosierungen können Patienten schaden', '<strong>Rechtliche und Compliance-Fragen</strong> — erfundene Rechtsprechung kann zu teuren Fehlern oder Verstößen führen', '<strong>Finanzielle Ratschläge</strong> — falsche Marktdaten führen hochriskante Entscheidungen fehlleitet', '<strong>Sicherheitskritische Systeme</strong> — Halluzinationen können Schwachstellen oder Bugs einführen', '<strong>Öffentliche Zuschreibung</strong> — alles, das unter deinem Namen veröffentlicht wird, muss überprüft werden']},
+          {type: 'numbered', h2: 'Checkliste vor dem Absenden kritischer Prompts', items: ['Erlaubt der Prompt explizit „Ich weiß nicht"?', 'Gibt es echten Kontext oder Daten im Prompt?', 'Sind Einschränkungen explizit?', 'Ist das Ausgabeformat strukturiert?', 'Fragst du nach Quellen?', 'Ist die Aufgabe spezifisch, nicht offenendlich?', 'Hast du das Modell aufgefordert zu selbst-überprüfen?', 'Für hochriskante Entscheidungen, überprüfst du quer?']},
+          {type: 'faq', h2: 'Häufig gestellte Fragen', faqs: [{q: 'Können Halluzinationen vollständig eliminiert werden?', a: 'Nein. Halluzinationen sind dem Funktionieren von Sprachmodellen eigen. Du kannst sie mit gutem Prompt-Design und Multi-Modell-Consensus erheblich reduzieren, aber vollständige Elimination ist nicht möglich.'}, {q: 'Warum klingt das Modell so selbstsicher, wenn es falsch ist?', a: 'Sprachmodelle sind darauf trainiert, flüssigen, kohärenten Text zu generieren. Selbstsicherheit ist ein Nebenprodukt sprachlicher Kohärenz.'}, {q: 'Halluzinieren neuere, größere Modelle weniger?', a: 'Größere Modelle halluzinieren oft mehr bei einigen Aufgaben, weil sie besser darin sind, plausibel klingende Text zu generieren.'}, {q: 'Entfernt das Verbinden eines Modells mit dem Internet Halluzinationen?', a: 'Teilweise. Echtzeit-Web-Zugang hilft bei aktuellen Ereignissen, löst aber nicht das Kernproblem.'}]},
+          {type: 'list', h2: 'Wichtigste Erkenntnisse', items: ['<strong>Was Halluzinationen sind:</strong> Von LLMs generierte selbstsichere falsche Aussagen, die der Realität widersprechen — erfundene Quellen, falsche Fakten.', '<strong>Warum sie auftreten:</strong> LLMs sagen Textmuster vorher, anstatt Fakten abzurufen; ihnen fehlt eine Datenbank zur Überprüfung.', '<strong>Wie man sie erkennt:</strong> Verwenden Sie Consensus Scoring, überprüfen Sie Zitate, verifizieren Sie Ansprüche unabhängig.', '<strong>Consensus Scoring:</strong> Senden Sie die gleiche Aufforderung an 5+ unabhängige Modelle.', '<strong>Minderungsstrategien:</strong> Verwenden Sie RAG, setzen Sie Einschränkungen, verwenden Sie Multi-Modell-Consensus.']},
+          {type: 'cta', h2: 'Hör auf zu raten. Lass den Consensus entscheiden.', body: 'Fange Halluzinationen, bevor sie Schaden anrichten. PromptQuorum sendet deinen Prompt gleichzeitig an 25+ KI-Modelle und zeigt auf, wo sie übereinstimmen.', cta: 'PromptQuorum kostenlos testen', href: 'https://www.promptquorum.com'}
+        ]
+      },
+      fr: {
+        title: 'Hallucinations IA: Pourquoi l\'IA Invente des Choses — et Comment les Arrêter',
+        slides: [
+          {type: 'title', h1: 'Hallucinations IA: Pourquoi l\'IA Invente des Choses — et Comment les Arrêter', subtitle: 'Les grands modèles de langage produisent confidentement des informations fausses. Comprendre pourquoi elles se produisent, comment les détecter et les réduire est essentiel pour utiliser les LLM dans un travail réel.', link: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up'},
+          {type: 'list', h2: 'Que sont les hallucinations IA?', items: ['<strong>Hallucination IA:</strong> Une déclaration factuellement fausse ou fabriquée générée par un LLM avec une confiance apparente. Le modèle produit du texte qui viole la réalité.', '<strong>Pas incertitude:</strong> Les hallucinations se caractérisent par des affirmations confiantes et détaillées sur des choses qui n\'existent pas ou sur des événements qui ne se sont jamais produits.', '<strong>En une phrase:</strong> Les hallucinations sont des déclarations fausses formulées couramment que les modèles de langage génèrent parce qu\'ils prédisent les modèles de texte plutôt que de récupérer les faits.']},
+          {type: 'list', h2: 'Pourquoi les modèles de langage hallucinent: Mécanismes fondamentaux', items: ['<strong>Prédiction du token, pas récupération des faits.</strong> L\'architecture du modèle est optimisée pour la génération de langage, pas la vérification des faits.', '<strong>Lacunes dans les données d\'entraînement et expiration.</strong> Les modèles s\'entraînent sur des données avec une date de fin spécifique. Les lacunes informatives créent des vides.', '<strong>Pas de mécanisme de confiance explicite.</strong> Les modèles ne génèrent pas un score de confiance aux côtés de chaque sortie.', '<strong>Pression des prompts exigeant une réponse.</strong> Les prompts comme \"Explique tout sur [sujet]\" communiquent implicitement: tu dois répondre.', '<strong>Fenêtre de contexte limitée et perte d\'information.</strong> Les LLM ne peuvent tenir qu\'une quantité finie de contexte en mémoire.']},
+          {type: 'table', h2: 'Types courants d\'hallucinations', columns: ['Type', 'Exemple', 'Gravité'], rows: [{Type: 'Sources inventées', Exemple: 'Citation d\'un article qui n\'existe pas; faux noms d\'auteurs', Gravité: 'Très élevée'}, {Type: 'Mauvais faits (dates, nombres)', Exemple: 'Énoncer un événement historique en mauvaise année', Gravité: 'Très élevée'}, {Type: 'URL et e-mails fabriqués', Exemple: 'Fournir un lien qui ne se résout pas', Gravité: 'Élevée'}, {Type: 'Perte de contexte', Exemple: 'Répondre comme si le modèle avait compris le contexte antérieur', Gravité: 'Élevée'}, {Type: 'Dérive de rôle', Exemple: 'Commencer dans un rôle, gradually passer à un autre', Gravité: 'Moyen'}, {Type: 'Généralisation trop confiante', Exemple: 'Déclarer "Tous les X font Y" quand seuls des exemples spécifiques le montrent', Gravité: 'Moyen'}, {Type: 'Contradiction interne', Exemple: 'Énoncer des faits opposés au sein de la même réponse', Gravité: 'Moyen'}]},
+          {type: 'list', h2: 'Prompts augmentant le risque d\'hallucination', intro: 'Vos prompts encouragent ou découragent les hallucinations. La différence est mesurable.', items: ['"Dis-moi tout sur [sujet]" – aucune limite, aucune permission de dire "je ne sais pas"', '"Assure-toi d\'inclure [de nombreux détails]" – pression explicite pour remplir l\'espace d\'informations inventées', '"Écris comme si tu étais un expert de premier plan" – encourage les affirmations confiantes', '"Réponds même si tu n\'es pas complètement sûr" – supprime le frein sur l\'hallucination']},
+          {type: 'list', h2: 'Prompts réduisant le risque d\'hallucination', items: ['"Tu peux dire \'Je ne sais pas\' si tu n\'es pas sûr" – permission explicite d\'admettre les lacunes de connaissances', '"Utilise uniquement les informations du contexte ci-dessous" – limite la réponse aux données fournies', '"Sépare les faits des opinions. Marque les affirmations incertaines [INCERTAIN]" – force le modèle à différencier', '"Cite ta source pour tout énoncé factuel" – rend les citations inventées manifestement visibles', '"Si tu ne peux pas vérifier cette affirmation, ne l\'inclus pas" – limite explicite sur les affirmations non vérifiées']},
+          {type: 'numbered', h2: '6 Techniques pour réduire les hallucinations', items: ['<strong>Permission explicite de dire "Je ne sais pas":</strong> Ajoutez: "Si tu n\'es pas sûr, dis \'Je ne sais pas\' plutôt que de deviner."', '<strong>Demander des sources ou des preuves:</strong> Demandez au modèle de citer une source pour chaque affirmation.', '<strong>Ajouter une étape d\'autocritique:</strong> Demandez au modèle de revoir sa sortie.', '<strong>Utiliser les instructions négatives:</strong> Interdisez explicitement les comportements générateurs de hallucinations.', '<strong>Exiger un raisonnement étape par étape:</strong> Le prompting Chain-of-Thought force le modèle à montrer son travail.', '<strong>Dispatcher vers plusieurs modèles avec PromptQuorum:</strong> Envoyez le même prompt à GPT-4o, Claude et Gemini simultanément.']},
+          {type: 'list', h2: 'Stratégies au niveau du système', intro: 'Les prompts seuls ne suffisent pas pour les travaux critiques. Ajoutez ces outils et flux de travail.', items: ['<strong>Retrieval-Augmented Generation (RAG).</strong> Donnez au modèle un document spécifique ou une base de connaissances et demandez-lui d\'utiliser uniquement ce contenu.', '<strong>Appel de fonction et utilisation de fonctions.</strong> Laissez le modèle appeler des fonctions externes pour les calculs, les recherches en base de données ou la vérification des faits.', '<strong>Examen humain et vérification par les experts.</strong> Pour les décisions critiques, laissez toujours un humain vérifier les réponses générées par l\'IA.', '<strong>Workflows de vérification automatisée des faits.</strong> Exécutez les résultats du modèle par des systèmes automatisés avant de les montrer aux utilisateurs.']},
+          {type: 'list', h2: 'Plusieurs modèles et détection du consensus', intro: 'Un seul modèle peut halluciner confidentement. Plusieurs modèles indépendants désaccordent souvent sur les affirmations hallucées.', items: ['Si cinq modèles produisent indépendamment des réponses similaires, cette réponse est beaucoup plus susceptible d\'être correcte.', 'Si seulement 1 modèle revendique quelque chose et 4 autres ne le mentionnent pas, cette réclamation est hautement suspecte.', '<strong>Consensus Scoring:</strong> Envoyez le même prompt à de nombreux modèles (GPT-4o, Claude, Gemini, Mistral, Llama 3, DeepSeek).', '<strong>Test PromptQuorum:</strong> 15 prompts sujets aux hallucinations — seulement 1 citation apparaissait dans tous les trois modèles.', 'PromptQuorum automatise cela: envoyez un prompt à 25+ modèles IA simultanément.']},
+          {type: 'list', h2: 'Quand les hallucinations sont les plus dangereuses', items: ['<strong>Décisions médicales et de santé</strong> – les mauvais noms de médicaments, dosages peuvent faire du mal aux patients', '<strong>Questions juridiques et de conformité</strong> – les jurisprudences inventées peuvent entraîner des erreurs coûteuses', '<strong>Conseils financiers</strong> – les fausses données de marché induisent en erreur les décisions à haut risque', '<strong>Systèmes critiques pour la sécurité</strong> – les hallucinations peuvent introduire des vulnérabilités', '<strong>Attribution publique</strong> – tout ce qui est publié sous votre nom doit être vérifié']},
+          {type: 'numbered', h2: 'Liste de contrôle avant d\'envoyer un prompt critique', items: ['Le prompt permet-il explicitement "Je ne sais pas"?', 'Y a-t-il un contexte ou des données réels dans le prompt?', 'Les contraintes sont-elles explicites?', 'Le format de sortie est-il structuré?', 'Demandez-vous des sources?', 'La tâche est-elle spécifique, pas ouverte?', 'Avez-vous demandé au modèle d\'auto-vérifier?', 'Pour les décisions à haut risque, vérifiez-vous entre eux?']},
+          {type: 'faq', h2: 'Foire aux questions', faqs: [{q: 'Les hallucinations peuvent-elles être complètement éliminées?', a: 'Non. Les hallucinations sont inhérentes à la façon dont les modèles de langage fonctionnent. Vous pouvez les réduire considérablement, mais l\'élimination complète n\'est pas possible.'}, {q: 'Pourquoi le modèle semble-t-il si confiant quand il se trompe?', a: 'Les modèles de langage sont entraînés pour générer du texte fluide et cohérent. La confiance est un sous-produit de la cohérence linguistique.'}, {q: 'Les modèles plus récents et plus grands hallucinent-ils moins?', a: 'Les plus grands modèles hallucinent souvent plus pour certaines tâches car ils sont meilleurs pour générer du texte plausible.'}, {q: 'Connecter un modèle à Internet supprime-t-il les hallucinations?', a: 'Partiellement. L\'accès Web en temps réel aide avec les événements actuels, mais il ne résout pas le problème fondamental.'}]},
+          {type: 'list', h2: 'Points clés', items: ['<strong>Ce que sont les hallucinations:</strong> Des déclarations fausses confiantes générées par les LLM qui violent la réalité.', '<strong>Pourquoi elles se produisent:</strong> Les LLM prédisent les modèles de texte plutôt que de récupérer les faits.', '<strong>Comment les détecter:</strong> Utilisez le consensus scoring, vérifiez les citations, vérifiez les affirmations indépendamment.', '<strong>Consensus scoring:</strong> Envoyez le même prompt à 5+ modèles indépendants.', '<strong>Stratégies d\'atténuation:</strong> Utilisez RAG, fournissez des sources explicites, utilisez le consensus multi-modèles.']},
+          {type: 'cta', h2: 'Arrêtez de deviner. Faites confiance au consensus.', body: 'Détectez les hallucinations avant qu\'elles ne causent des dommages. PromptQuorum envoie votre prompt à plus de 25 modèles IA simultanément et montre où ils s\'accordent.', cta: 'Essayez PromptQuorum gratuitement', href: 'https://www.promptquorum.com'}
+        ]
+      },
+      ja: {
+        title: 'AIハルシネーション：AIがなぜ物を作り出すのか — そしてそれを止める方法',
+        slides: [
+          {type: 'title', h1: 'AIハルシネーション：AIがなぜ物を作り出すのか — そしてそれを止める方法', subtitle: '大規模言語モデルは誤った情報を自信を持って生成します。ハルシネーションが発生する理由、検出方法、削減方法を理解することは、実際の作業でLLMを使用する誰にとっても重要です。', link: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up'},
+          {type: 'list', h2: 'AIハルシネーションとは何ですか？', items: ['<strong>AIハルシネーション：</strong>見かけの確信を持ってLLMによって生成された事実上の偽りまたは捏造されたステートメントです。モデルは不正な名前、架空の出典を使用して現実に違反するテキストを生成します。', '<strong>不確実性ではない：</strong>ハルシネーションは存在しないこと、または決して起こらなかったイベントについての自信を持った詳細な主張が特徴です。', '<strong>一文で：</strong>ハルシネーションは流暢な虚偽のステートメントであり、言語モデルが信頼できるストアから事実を検索するのではなくテキストパターンを予測するために生成します。']},
+          {type: 'list', h2: 'LLMがハルシネーションを起こす理由：コアメカニズム', items: ['<strong>トークン予測、事実検索ではない。</strong>モデルのアーキテクチャは言語生成用に最適化され、事実検証用には最適化されていません。', '<strong>トレーニングデータの隙間と有効期限。</strong>モデルは、特定の終了日付を持つデータでトレーニングされています。情報ギャップは空白を生み出します。', '<strong>明示的な信頼メカニズムがない。</strong>モデルは各出力の横に信頼スコアを生成しません。', '<strong>回答を要求するプロンプトからの圧力。</strong>「[トピック]について説明する」のようなプロンプトは「あなたが不確かであっても、あなたは答える必要があります」と暗黙的に伝えます。', '<strong>コンテキストウィンドウの制限と情報喪失。</strong>LLMは、メモリ内に有限の量のコンテキストのみを保持できます。']},
+          {type: 'table', h2: 'ハルシネーションの一般的なタイプ', columns: ['タイプ', '例', '深刻度'], rows: [{タイプ: '架空の出典', 例: 'ピアレビュー済みのペーパーへの引用が存在しない；偽の著者名', 深刻度: '非常に高い'}, {タイプ: '誤った事実（日付、数字）', 例: '歴史的なイベントを誤った年に述べる', 深刻度: '非常に高い'}, {タイプ: '偽造URL および電子メール', 例: 'リンクまたはメールアドレスを提供し、解決しない', 深刻度: '高い'}, {タイプ: 'コンテキスト損失', 例: 'モデルが以前のコンテキストを理解しているかのように答える', 深刻度: '高い'}, {タイプ: '役割ドリフト', 例: '1つの役割で始まり、徐々に別の役割に移行する', 深刻度: '中程度'}, {タイプ: '過信の一般化', 例: '特定のトレーニング例のみが示す場合、「すべてのXがYを行う」と述べる', 深刻度: '中程度'}, {タイプ: '内部矛盾', 例: '同じ応答内で対立する事実を述べる', 深刻度: '中程度'}]},
+          {type: 'list', h2: 'ハルシネーションリスクを増加させるプロンプト', intro: 'あなたのプロンプトはハルシネーションを奨励または落胆させます。違いは測定可能です。', items: ['「[トピック]についてすべてを教えてください」—制限なし、「わかりません」と言う許可なし', '「[多くの詳細]を含めることを確認してください」—発明された情報でスペースを埋めるための明示的な圧力', '「あたかも一流の専門家であるかのように書く」—不確かな請求でさえ、自信を持った主張を促す', '「確実でなくても答えてください」—ハルシネーションのブレーキを削除']},
+          {type: 'list', h2: 'ハルシネーションリスクを減らすプロンプト', items: ['「確実でない場合は、「わかりません」と言うことができます」—知識ギャップを認める明示的な許可', '「以下のコンテキストからの情報のみを使用してください」—応答を提供されたデータに制限', '「事実を意見から分離してください。不確かな請求に[不確かな]マークを付けてください」—モデルを区別するように強制', '「任意の事実上の主張について、あなたのソースを引用してください」—発明されたサイテーションを明らかに見える', '「この請求を確認できない場合は、それを含めないでください」—未検証のステートメントに明示的な制約']},
+          {type: 'numbered', h2: 'ハルシネーションを減らす6つのテクニック', items: ['<strong>「わかりません」と言う明示的な許可：</strong>追加：「確実でない場合は、推測するのではなく「わかりません」と言ってください」', '<strong>ソースまたは証拠を求める：</strong>各請求について出典を引用するようモデルに指示します。', '<strong>自己批判ステップを追加する：</strong>モデルに独自の出力を確認するよう依頼します。', '<strong>否定的指示を使用する：</strong>ハルシネーションを引き起こす行動を明示的に禁止します。', '<strong>段階的な推論を要求する：</strong>Chain-of-Thoughtプロンプティングはモデルに作業を見せることを強制します。', '<strong>PromptQuorumで複数のモデルにディスパッチ：</strong>同じプロンプトをGPT-4o、Claude、Geminiに同時に送信します。']},
+          {type: 'list', h2: 'システムレベル戦略', intro: 'プロンプトだけは高リスク作業には不十分です。これらのツールとワークフローを追加します。', items: ['<strong>Retrieval-Augmented Generation（RAG）。</strong>モデルに特定のドキュメント、ナレッジベース、またはデータセットを提供し、そのコンテンツのみを使用して回答するよう依頼します。', '<strong>ツール呼び出しと関数の使用。</strong>モデルが計算、データベースルックアップ、または事実確認のための外部関数を呼び出すことを許可します。', '<strong>人間のレビューと専門家検証。</strong>重大な決定については、常に人間（理想的には専門家）がAIで生成された回答を確認させてください。', '<strong>自動ファクトチェックワークフロー。</strong>自動システムを通じてモデル出力を実行してから、ユーザーに表示します。']},
+          {type: 'list', h2: '複数のモデルとコンセンサス検出', intro: '単一のモデルは自信を持ってハルシネーションできます。複数の独立したモデルはしばしば幻想的な請求について意見が異なります。', items: ['5つのモデルが独立して類似した回答を生成する場合、その答えは単一モデルの場合よりもはるかに正確である可能性があります。', '1つのモデルのみが何かを主張し、4つのモデルは言及しない場合、その請求は非常に疑わしく、検証を正当化します。', '<strong>コンセンサススコアリング：</strong>同じプロンプトを多くのモデル（GPT-4o、Claude、Gemini、Mistral、Llama 3、DeepSeek）に送信します。', '<strong>PromptQuorumテスト：</strong>15のハルシネーション傾向プロンプト—3つのモデル応答全体でのみ1つの引用が表示されました。', 'PromptQuorumはこれを自動化します：1つのプロンプトを25以上のAIモデルに同時に送信します。']},
+          {type: 'list', h2: 'ハルシネーションが最も危険な場合', items: ['<strong>医療および健康決定</strong> —誤った薬物名、用量は患者に害を及ぼす可能性があります', '<strong>法律およびコンプライアンス</strong> —作成された判例法は高額なエラーにつながる可能性があります', '<strong>財務アドバイス</strong> —虚偽の市場データは高リスク決定を誤ったります', '<strong>安全クリティカルシステム</strong> —ハルシネーションは脆弱性またはバグを導入できます', '<strong>公衆帰属</strong> —あなたの名前の下で公開されたもの、幻想は信頼性を傷つけることが確認する必要があります']},
+          {type: 'numbered', h2: '重要なプロンプトを送る前のチェックリスト', items: ['プロンプトは明示的に「わかりません」を許可しますか？', 'プロンプトに実際のコンテキストまたはデータはありますか？', '制約は明示的ですか？', '出力形式は構造化されていますか？', 'ソースを要求していますか？', 'タスクは具体的で、オープンエンドではありませんか？', 'モデルに自己確認を求めましたか？', '高リスク決定の場合は、交差チェックしていますか？']},
+          {type: 'faq', h2: 'よくある質問', faqs: [{q: 'ハルシネーションは完全に排除できますか？', a: 'いいえ。ハルシネーションはどの言語モデルが機能するか固有です。優れたプロンプト設計で大幅に削減できますが、完全除去は不可能です。'}, {q: 'モデルが間違っている場合、なぜそんなに自信を持っているようですか？', a: '言語モデルは流暢で一貫したテキストを生成するようにトレーニングされています。自信は言語的一貫性の副作用です。'}, {q: 'より新しく、より大きなモデルはハルシネーションが少ないですか？', a: 'より大きなモデルは、もっともらしく聞こえるテキストを生成するのが優れているため、いくつかのタスクでより多くハルシネーションします。'}, {q: 'モデルをインターネットに接続すると、ハルシネーションが削除されますか？', a: '一部。リアルタイムWebアクセスは現在のイベントと最近のファクトに役立ちますが、コアの問題を解決しません。'}]},
+          {type: 'list', h2: '重要なポイント', items: ['<strong>ハルシネーションとは何か：</strong>LLMによって生成された自信を持った偽のステートメントは、現実に違反しています。', '<strong>なぜ発生するのか：</strong>LLMはテキストパターンを予測し、事実を検索しない。', '<strong>検出方法：</strong>コンセンサススコアリングを使用し、引用を事実確認し、請求を独立して確認します。', '<strong>コンセンサススコアリング：</strong>同じプロンプトを5以上の独立モデルにディスパッチします。', '<strong>緩和戦略：</strong>RAG、明示的な出典、マルチモデルコンセンサスを使用します。']},
+          {type: 'cta', h2: '推測を止めて、コンセンサスを実行してください。', body: 'PromptQuorumはプロンプトを25以上のAIモデルに同時に送信し、同意する場所と同意しない場所を表示します。', cta: 'PromptQuorumを無料で試す', href: 'https://www.promptquorum.com'}
+        ]
+      },
+      zh: {
+        title: 'AI幻觉：为什么AI会编造东西——以及如何停止它们',
+        slides: [
+          {type: 'title', h1: 'AI幻觉：为什么AI会编造东西——以及如何停止它们', subtitle: '大型语言模型自信地产生错误信息。理解为什么会发生幻觉、如何检测和减少幻觉对于在实际工作中使用LLM的任何人都是必不可少的。', link: 'https://www.promptquorum.com/prompt-engineering/ai-hallucinations-why-ai-makes-things-up'},
+          {type: 'list', h2: '什么是AI幻觉？', items: ['<strong>AI幻觉：</strong>由LLM以明显的信心生成的事实上虚假或编造的陈述。该模型生成违反现实的文本。', '<strong>这与模型表达不确定性根本不同。</strong>幻觉的特点是对不存在的事物或从未发生过的事件进行自信的、详细的断言。', '<strong>一句话：</strong>幻觉是流利的虚假声明，语言模型产生，因为他们预测文本模式而不是从可靠的存储区检索事实。']},
+          {type: 'list', h2: '为什么语言模型产生幻觉：核心机制', items: ['<strong>令牌预测，而不是事实检索。</strong>模型的架构针对语言生成进行了优化，而不是事实检查。', '<strong>训练数据间隙和到期。</strong>模型在具有特定结束日期的数据上进行训练。信息间隙造成空隙。', '<strong>没有明确的信心机制。</strong>模型不会在每个输出旁生成置信度分数。', '<strong>来自要求答案的提示的压力。</strong>像"解释所有[主题]"的提示隐含地传达：你必须回答。', '<strong>有限的上下文窗口和信息丢失。</strong>LLM只能在内存中保持有限的上下文。']},
+          {type: 'table', h2: '常见的幻觉类型', columns: ['类型', '示例', '严重性'], rows: [{类型: '虚假来源', 示例: '引用不存在的同行评审论文;假作者名', 严重性: '非常高'}, {类型: '错误的事实（日期、数字）', 示例: '以错误的一年说出历史事件', 严重性: '非常高'}, {类型: '伪造的URL和电子邮件', 示例: '提供未解析的链接', 严重性: '高'}, {类型: '背景丧失', 示例: '回答一个问题，好像模型理解了早期的上下文', 严重性: '高'}, {类型: '角色漂移', 示例: '在一个角色中开始，逐渐转换为另一个', 严重性: '中等'}, {类型: '过度自信的概括', 示例: '陈述"所有X做Y"，当仅特定的培训示例显示这一点时', 严重性: '中等'}, {类型: '内部矛盾', 示例: '在同一响应中陈述相反的事实', 严重性: '中等'}]},
+          {type: 'list', h2: '增加幻觉风险的提示', intro: '您的提示鼓励或阻止幻觉。这种差异是可测量的。', items: ['"告诉我关于[主题]的一切"—没有限制，没有权限说"我不知道"', '"确保包含[许多细节]"—用虚构的信息填充空间的明确压力', '"写得好像你是一位领先的专家"—鼓励自信的陈述', '"即使你不完全确定也回答"—取消对幻觉的刹车']},
+          {type: 'list', h2: '降低幻觉风险的提示', items: ['"如果你不确定，你可以说"我不知道""—明确允许承认知识差距', '"仅使用以下上下文中的信息"—将响应限制为提供的数据', '"将事实与意见分开。用[不确定]标记不确定的索赔"—强制模型区分', '"为任何事实声明引用您的来源"—使虚构的引文明显可见', '"如果您无法验证此索赔，请勿包含它"—对未验证的陈述的明确约束']},
+          {type: 'numbered', h2: '减少幻觉的6种技术', items: ['<strong>明确允许说"我不知道"：</strong>在您的提示中添加："如果您不确定，请说\'我不知道\'而不是猜测。"', '<strong>要求来源或证据：</strong>指示模型为每个索赔引用来源。', '<strong>添加自我批评步骤：</strong>要求模型审查自己的输出。', '<strong>使用否定指令：</strong>明确禁止容易产生幻觉的行为。', '<strong>要求逐步推理：</strong>思维链提示迫使模型展示其工作。', '<strong>使用PromptQuorum分派到多个模型：</strong>同时将相同的提示发送给GPT-4o、Claude和Gemini。']},
+          {type: 'list', h2: '提示设计之外的系统级策略', intro: '提示本身对于高风险工作是不够的。添加这些工具和工作流。', items: ['<strong>检索增强生成（RAG）。</strong>为模型提供特定的文档、知识库或数据集，并要求其仅使用该内容回答。', '<strong>工具调用和函数使用。</strong>让模型调用外部函数进行计算、数据库查询或事实检查。', '<strong>人工审查和专家验证。</strong>对于关键决定，始终让人类（最好是专家）验证AI生成的答案。', '<strong>自动事实检查工作流程。</strong>在向用户显示模型输出之前，通过自动化系统运行模型输出。']},
+          {type: 'list', h2: '多个模型和共识检测', intro: '单个模型可以自信地幻觉。多个独立模型对幻觉索赔的意见经常不一致。', items: ['如果五个模型独立地向一个问题产生相似的答案，那么答案比单个模型答案的情况要远更正确。', '如果只有一个模型声称某些东西，而其他四个不提及，则该索赔高度可疑并需要验证。', '<strong>共识评分：</strong>将相同的提示分派给许多模型（GPT-4o、Claude、Gemini、Mistral、Llama 3、DeepSeek）。', '<strong>PromptQuorum共识测试：</strong>15个幻觉倾向的提示—只有1个引用出现在所有三个模型响应中。', 'PromptQuorum将其自动化：同时向25+个AI模型发送一个提示。']},
+          {type: 'list', h2: '幻觉最危险的时候', items: ['<strong>医疗和健康决定</strong> —错误的药物名称、给药或症状解释可能会伤害患者', '<strong>法律和合规</strong> —虚构的判例法、监管要求或先例可能导致昂贵的错误或违规', '<strong>财务建议</strong> —虚假的市场数据、不正确的税务信息或编造的性能指标误导了高风险决定', '<strong>安全关键系统</strong> —代码审查、架构决定或安全分析中的幻觉可能会引入漏洞', '<strong>公众归属</strong> —您的名字或品牌下发布的任何内容都必须进行事实检查']},
+          {type: 'numbered', h2: '发送关键提示前的实际清单', items: ['提示是否明确允许"我不知道"？', '提示中是否有真实的上下文或数据？', '约束是否明确？', '输出格式是否结构化？', '你在要求来源吗？', '任务是具体的，不是开放式的？', '您是否要求模型自我检查？', '对于高风险决定，您是否进行交叉检查？']},
+          {type: 'faq', h2: '常见问题解答', faqs: [{q: '幻觉能完全消除吗？', a: '否。幻觉本质上是语言模型工作的方式。您可以使用良好的提示设计、RAG等工具和多模型共识来显着减少它们。'}, {q: '当它错误时，模型为什么听起来那么自信？', a: '语言模型被训练为生成流利、连贯的文本。信心是语言连贯性的副产品。'}, {q: '更新更大的模型幻觉更少吗？', a: '由于他们更好地生成看似合理的文本，所以更大的模型对某些任务幻觉更多。'}, {q: '将模型连接到互联网会消除幻觉吗？', a: '部分。实时网络访问有助于当前事件和最近的事实，但它没有解决核心问题。'}]},
+          {type: 'list', h2: '关键要点', items: ['<strong>幻觉是什么：</strong>LLM产生的自信虚假声明违反现实—虚假来源、错误事实、编造细节。', '<strong>为什么发生：</strong>LLM预测文本模式而不是检索事实;他们缺乏数据库来验证。', '<strong>如何检测：</strong>使用共识评分，事实检查引文，独立验证索赔。', '<strong>共识评分：</strong>将相同的提示分派给5+个独立模型；仅在一个或两个响应中出现的索赔高度可疑。', '<strong>缓解策略：</strong>使用RAG，设置约束，使用多模型共识，对高风险索赔进行人工审查。']},
+          {type: 'cta', h2: '停止猜测。运行共识。', body: 'PromptQuorum同时将您的提示分派给25+个AI模型，并显示他们同意和不同意的地方。', cta: '免费试用PromptQuorum', href: 'https://www.promptquorum.com'}
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      switch (slide.type) {
+        case 'title':
+          html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p style="margin-top: 40px; font-size: 18px; color: #79747e;"><a href="${slide.link}">${slide.link.replace('https://www.', '')}</a></p>`;
+          break;
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p>${slide.intro}</p>`;
+          html += '<ul style="font-size: 1.1em; margin-top: 16px;">';
+          slide.items.forEach(item => { html += `<li>${item}</li>`; });
+          html += '</ul>';
+          break;
+        case 'table':
+          html = `<h2>${slide.h2}</h2><table><thead><tr>`;
+          slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+          html += '</tr></thead><tbody>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+            html += '</tr>';
+          });
+          html += '</tbody></table>';
+          break;
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2><ol style="font-size: 1.05em; margin-top: 16px; text-align: left; max-width: 640px;">`;
+          slide.items.forEach(item => { html += `<li style="margin-bottom: 10px;">${item}</li>`; });
+          html += '</ol>';
+          break;
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 18px; text-align: left; max-width: 680px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+          });
+          break;
+        case 'cta':
+          html = `<h2>${slide.h2}</h2><p style="max-width: 600px; margin: 20px auto;">${slide.body}</p><a href="${slide.href}" style="display: inline-block; margin-top: 24px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: 700;">${slide.cta}</a>`;
+          break;
+      }
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href += '?lang=' + lang;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => { container.innerHTML += renderSlide(slide); });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      else currentSlide = n;
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    if (isPrint) {
+      window.addEventListener('load', () => { window.print(); });
+    }
+
+    showSlide(0);
+    </script>
+</body>
+</html>
