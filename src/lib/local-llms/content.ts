@@ -794,7 +794,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
       },
@@ -1847,7 +1847,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
       },
@@ -5528,7 +5528,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
       },
       howToSchema: {
@@ -8878,7 +8878,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
       },
       itemListSchema: {
@@ -9180,7 +9180,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
       },
       itemListSchema: {
@@ -9516,7 +9516,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
       },
       itemListSchema: {
@@ -9841,7 +9841,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
       },
       itemListSchema: {
@@ -10157,7 +10157,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
       },
       itemListSchema: {
@@ -11972,7 +11972,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         },
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'isPartOf': {
           '@type': 'WebPage',
@@ -14435,7 +14435,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'proficiencyLevel': 'Intermediate',
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'about': [
           { '@type': 'Thing', 'name': 'Gemma 3' },
@@ -15843,7 +15843,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner to Advanced',
       },
@@ -21938,7 +21938,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
       },
@@ -22409,7 +22409,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
       },
@@ -22533,7 +22533,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Intermediate',
       },
@@ -23426,7 +23426,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner',
       },
