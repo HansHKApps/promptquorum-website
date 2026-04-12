@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature & Top-P: Control AI Creativity | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation on temperature and top-p parameters. Learn how to control AI output randomness and consistency across GPT-4o, Claude, Gemini." />
+    <meta property="og:title" content="Temperature & Top-P: Control AI Creativity — PromptQuorum" />
+    <meta property="og:description" content="Master AI output randomness with practical temperature and top-p settings for coding, summaries, and brainstorming." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #49454f;
+            line-height: 1.6;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 40px;
+        }
+
+        .slide.title p {
+            font-size: 28px;
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: 20px;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            font-size: 16px;
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 12px 16px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 40px 24px;
+            }
+
+            .slide h1 {
+                font-size: 36px;
+            }
+
+            .slide h2 {
+                font-size: 28px;
+            }
+
+            .slide p {
+                font-size: 16px;
+            }
+
+            .slide ul li, .slide ol li {
+                font-size: 14px;
+            }
+
+            .controls {
+                bottom: 10px;
+                padding: 10px 16px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <strong style="color: #6750a4; font-size: 18px;">PQ</strong>
+                Temperature & Top-P: Control AI Creativity
+            </div>
+            <div class="header-links">
+                <a href="https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <!-- Slide 1: Title -->
+            <div class="slide title active">
+                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100" height="100" rx="20" fill="#6750a4"/>
+                    <text x="50" y="55" font-size="48" font-weight="700" fill="white" text-anchor="middle">PQ</text>
+                </svg>
+                <h1>Temperature & Top-P<br/>Control AI Creativity</h1>
+                <p>Master AI Output Randomness & Consistency</p>
+                <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                    <a href="https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity">www.promptquorum.com — Temperature & Top-P Guide</a>
+                </p>
+            </div>
+
+            <!-- Slide 2: What Is Temperature? -->
+            <div class="slide">
+                <h2>What Is Temperature in AI?</h2>
+                <p><strong>Temperature is a knob that controls randomness.</strong></p>
+                <ul style="font-size: 22px; margin-top: 40px;">
+                    <li><strong>At 0.0:</strong> Always picks the most likely word → Identical output every time</li>
+                    <li><strong>At 1.0+:</strong> Considers riskier alternatives → Surprising & varied text</li>
+                </ul>
+            </div>
+
+            <!-- Slide 3: What Is Top-P? -->
+            <div class="slide">
+                <h2>What Is Top-P (Nucleus Sampling)?</h2>
+                <p><strong>Top-P controls how many word options the model considers at each step.</strong></p>
+                <ul style="font-size: 22px; margin-top: 40px;">
+                    <li><strong>At 0.1:</strong> Narrow & safe — only very top options</li>
+                    <li><strong>At 0.9:</strong> Looser & more varied — wider set of choices</li>
+                </ul>
+            </div>
+
+            <!-- Slide 4: Temperature vs Top-P -->
+            <div class="slide">
+                <h2>Temperature vs Top-P: Key Differences</h2>
+                <p style="margin-top: 40px; font-size: 28px;"><strong>Temperature</strong> = "How adventurous"</p>
+                <p style="font-size: 28px;"><strong>Top-P</strong> = "How many options to consider"</p>
+                <p style="margin-top: 40px; font-size: 22px; color: #6750a4;">💡 Pro tip: Tune ONE, keep the other at default</p>
+            </div>
+
+            <!-- Slide 5: Temperature Ranges -->
+            <div class="slide">
+                <h2>Temperature Ranges at a Glance</h2>
+                <table>
+                    <tr>
+                        <th>Range</th>
+                        <th>Behavior</th>
+                        <th>Best For</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Low (0.0–0.3)</strong></td>
+                        <td>Focused, repetitive, stable</td>
+                        <td>Code, data extraction</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medium (0.4–0.7)</strong></td>
+                        <td>Balanced variation & stability</td>
+                        <td>Most general tasks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>High (0.8–1.0+)</strong></td>
+                        <td>Creative, diverse, surprising</td>
+                        <td>Brainstorming, storytelling</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Slide 6: Recommended Settings -->
+            <div class="slide">
+                <h2>Recommended Settings by Use Case</h2>
+                <table style="font-size: 14px;">
+                    <tr>
+                        <th>Use Case</th>
+                        <th>Temp</th>
+                        <th>Top-P</th>
+                    </tr>
+                    <tr>
+                        <td>Coding/Refactoring</td>
+                        <td>0.1–0.3</td>
+                        <td>0.95</td>
+                    </tr>
+                    <tr>
+                        <td>Summaries & Explanations</td>
+                        <td>0.4–0.6</td>
+                        <td>0.9</td>
+                    </tr>
+                    <tr>
+                        <td>Brainstorming & Creative</td>
+                        <td>0.7–1.0</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>Data Extraction</td>
+                        <td>0.0–0.2</td>
+                        <td>0.95</td>
+                    </tr>
+                    <tr>
+                        <td>Long-form Writing</td>
+                        <td>0.6–0.8</td>
+                        <td>0.9–1.0</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Slide 7: Quick-Start Recipes -->
+            <div class="slide">
+                <h2>Quick-Start Recipes</h2>
+                <ul style="margin-top: 30px; text-align: left; font-size: 18px;">
+                    <li><strong>Safe Factual:</strong> T=0.2, Top-P=0.95 → Reliable, minimal hallucination</li>
+                    <li><strong>Balanced Default:</strong> T=0.5, Top-P=0.9 → Natural, stable</li>
+                    <li><strong>Creative Brainstorming:</strong> T=0.8, Top-P=1.0 → Diverse, surprising</li>
+                    <li><strong>Short-Answer:</strong> T=0.3, Top-P=0.95 → Fast, direct</li>
+                    <li><strong>Experimental:</strong> T=1.0, Top-P=1.0 → Unpredictable, max variation</li>
+                </ul>
+            </div>
+
+            <!-- Slide 8: Prompts Matter More -->
+            <div class="slide">
+                <h2>Prompts Matter More Than Settings</h2>
+                <p style="margin-top: 40px; font-size: 20px;"><strong>Same Prompt at Different Temperatures:</strong></p>
+                <p style="margin-top: 30px; font-style: italic; color: #6750a4;">Write a short product tagline for a productivity app. Under 10 words.</p>
+                <p style="margin-top: 30px; font-size: 22px;"><strong>At T=0.2:</strong> "Get more done in less time."</p>
+                <p style="font-size: 22px;"><strong>At T=0.8:</strong> "Chaos to clarity: where moments transform into momentum."</p>
+            </div>
+
+            <!-- Slide 9: When High Temperature Becomes Risky -->
+            <div class="slide">
+                <h2>When High Temperature Becomes Risky</h2>
+                <p style="margin-top: 40px; font-size: 20px;">Be conservative (T=0.0–0.5) for:</p>
+                <ul style="margin-top: 30px; font-size: 20px;">
+                    <li>Code that goes to production</li>
+                    <li>Health & medical advice</li>
+                    <li>Finance & legal analysis</li>
+                    <li>Safety-critical decisions</li>
+                </ul>
+            </div>
+
+            <!-- Slide 10: 7 Common Mistakes -->
+            <div class="slide">
+                <h2>7 Common Mistakes</h2>
+                <ol style="margin-top: 30px; font-size: 18px; text-align: left;">
+                    <li>Cranking both to max and expecting reliability</li>
+                    <li>Changing both knobs at once (can't isolate what helped)</li>
+                    <li>Trying to fix a bad prompt with sliders</li>
+                    <li>Forgetting models interpret values differently</li>
+                    <li>Testing only one output per setting</li>
+                    <li>Setting T=0 and expecting perfect correctness</li>
+                    <li>Ignoring top-p entirely because your provider ignores it</li>
+                </ol>
+            </div>
+
+            <!-- Slide 11: 5 Steps -->
+            <div class="slide">
+                <h2>5 Steps to Set Temperature Right</h2>
+                <ol style="margin-top: 30px; font-size: 20px; text-align: left;">
+                    <li><strong>Fix the prompt first.</strong> Write clear instructions.</li>
+                    <li><strong>Identify task type.</strong> Factual (0.0–0.3) or Creative (0.7–1.0)?</li>
+                    <li><strong>Leave top-p at default</strong> (0.9–1.0). Only adjust if you have a specific reason.</li>
+                    <li><strong>Run 3–5 test prompts</strong> at your target temperature.</li>
+                    <li><strong>Document your settings</strong> per use case.</li>
+                </ol>
+            </div>
+
+            <!-- Slide 12: Key FAQs -->
+            <div class="slide">
+                <h2>Key FAQs</h2>
+                <p style="margin-top: 40px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    <strong>Q: Adjust temperature or top-p first?</strong><br/>
+                    A: Temperature. Keep top-p at default (0.9–1.0) until you understand temperature.
+                </p>
+                <p style="margin-top: 30px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    <strong>Q: Can T=0 guarantee correctness?</strong><br/>
+                    A: No. Hallucinations come from training gaps, not random sampling. Lower temperature makes outputs consistent—but not always correct.
+                </p>
+            </div>
+
+            <!-- Slide 13: How PromptQuorum Helps -->
+            <div class="slide">
+                <h2>How PromptQuorum Helps</h2>
+                <ul style="margin-top: 30px; font-size: 20px; text-align: left;">
+                    <li><strong>Multi-model comparisons:</strong> Send one prompt at different settings across 25+ models</li>
+                    <li><strong>Framework-based structure:</strong> Ensure instructions are clear before tuning</li>
+                    <li><strong>Consensus scoring:</strong> Score hallucination risk & style consistency</li>
+                    <li><strong>Automatic recommendations:</strong> Get optimal temperature by task type</li>
+                </ul>
+            </div>
+
+            <!-- Slide 14: CTA -->
+            <div class="slide" style="background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);">
+                <h2 style="color: #6750a4;">Ready to Master Prompt Engineering?</h2>
+                <p style="margin-top: 30px; font-size: 24px; color: #49454f;">Test temperature, top-p, and 25+ models in one place.</p>
+                <p style="margin-top: 40px;">
+                    <a href="https://www.promptquorum.com" style="display: inline-block; padding: 16px 40px; background: #6750a4; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: 700; transition: background 0.2s;">
+                        Start Free
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) {
+                currentSlide = totalSlides - 1;
+            } else if (n < 0) {
+                currentSlide = 0;
+            }
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
