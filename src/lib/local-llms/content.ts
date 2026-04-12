@@ -528,9 +528,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Getting Started',
       title: 'How Do You Install LM Studio: Desktop App Setup Guide for macOS, Windows, and Linux',
-      seoTitle: 'How to Install LM Studio',
+      seoTitle: 'How to Install LM Studio 2026: GUI Setup in 5 Minutes',
       intro: 'LM Studio is a desktop application that lets you browse, download, and run local LLMs through a graphical interface — no terminal commands required. It runs on macOS, Windows, and Linux, and includes a built-in chat UI and an OpenAI-compatible local server. As of April 2026, LM Studio supports any GGUF-quantized model from Hugging Face.',
-      metaDescription: 'Install LM Studio on macOS, Windows, or Linux. Step-by-step guide covering download, first model setup, the built-in chat UI, and local Free beta — April 2026.',
+      metaDescription: 'Install LM Studio on macOS, Windows, or Linux: download, load a model, and start chatting in 5 minutes. No terminal needed. Beginner guide 2026.',
       publishDate: '2026-04-04',
       readTime: '7 min read',
       educationalLevel: 'Beginner',
@@ -701,13 +701,79 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio?lang=en',
         'inLanguage': 'en',
         'headline': 'How to Install LM Studio 2026: GUI Setup in 5 Minutes',
-        'description': 'LM Studio runs local LLMs via GUI — no terminal needed. Install on macOS, Windows, Linux, load your first model, and start chatting in under 5 minutes.',
+        'description': 'Install LM Studio on macOS, Windows, or Linux: download, load a model, and start chatting in 5 minutes. No terminal needed. Beginner guide 2026.',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-05',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'LM Studio' },
+          { '@type': 'Thing', 'name': 'local LLM installation' },
+          { '@type': 'Thing', 'name': 'GGUF model' },
+          { '@type': 'Thing', 'name': 'llama.cpp' },
+        ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways', 'h2']
+          'cssSelector': ['.article-intro', '.key-takeaways'],
         },
+        'educationalLevel': 'Beginner',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'en',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'How do I download LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Go to lmstudio.ai and click the download button for your OS. Available for macOS (Apple Silicon + Intel), Windows 10/11, and Linux (AppImage).' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What are the minimum requirements for LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Minimum: 8GB RAM, macOS 13.6, Windows 10, or Ubuntu 22.04. No GPU required — Apple Silicon Macs and NVIDIA/AMD GPUs are supported for acceleration.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I find and download models in LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Click the Search tab (magnifying glass) in the sidebar, search for a model name (e.g., "llama 3.1"), select a quantization level (Q4_K_M for 8GB RAM), and click the download arrow.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What quantization should I use in LM Studio with 8GB RAM?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M is the recommended quantization for 8GB RAM systems. It gives the best balance of model quality and memory usage for 7B models (~4.5GB file size).' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does LM Studio include an OpenAI-compatible API?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Enable the Local Server tab in LM Studio to start an OpenAI-compatible API at http://localhost:1234. Any OpenAI SDK app can connect using this URL as the base_url.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How is LM Studio different from Ollama?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio is GUI-first: browse models, manage settings, and chat through a visual interface. Ollama is CLI-first: faster to set up for developers, but requires terminal commands. Both use llama.cpp under the hood.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use LM Studio on Linux?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Download the .AppImage file from lmstudio.ai. Make it executable: chmod +x LM-Studio-*.AppImage and run it. No system installation is needed — it runs as a portable app.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is LM Studio free?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio is free for personal use. As of April 2026, it is developed by LM Studio, Inc. Commercial use requires a paid license. All downloaded models are free depending on their individual licenses.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I enable GPU acceleration in LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'On NVIDIA: ensure CUDA drivers are installed. On AMD: ROCm is required. On Apple Silicon: Metal is used automatically. Go to Settings → GPU in LM Studio to verify GPU is detected and layers are offloaded.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between Q4_K_M and Q5_K_M in LM Studio?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M uses 4-bit quantization (~4.5GB for 7B) with ~1% quality loss. Q5_K_M uses 5-bit (~5.7GB) with minimal loss. Use Q4_K_M for 8GB RAM; Q5_K_M or Q6_K for 16GB RAM systems.' }
+          }
+        ]
       },
     },
     de: {
