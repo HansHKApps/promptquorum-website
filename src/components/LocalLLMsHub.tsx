@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { llmThemes, type LLMTheme } from '@/lib/local-llms/themes'
 import { llmContent } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
+import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 
@@ -641,13 +642,29 @@ function ArticleCard({ articleKey, dot, lang }: { articleKey: string; dot: strin
   )
 }
 
+function ArticleComingSoon({ articleKey, lang }: { articleKey: string; lang: Language }) {
+  const title = getArticleTitle(articleKey, lang)
+  return (
+    <div className="flex items-start gap-3 bg-card border border-primary/10 rounded-xl p-4 opacity-50 cursor-default select-none">
+      <span className="flex-shrink-0 w-2 h-2 rounded-full mt-2 bg-gray-300" />
+      <span className="text-text-secondary text-sm font-medium leading-snug flex-1">
+        {title}
+        <span className="ml-2 text-xs font-normal opacity-60">· soon</span>
+      </span>
+    </div>
+  )
+}
+
 function ThemeSection({ theme, lang }: { theme: LLMTheme; lang: Language }) {
   const colors = THEME_COLORS[theme.id] ?? { badge: 'bg-gray-50 text-gray-700 border-gray-200', dot: 'bg-gray-400' }
   const label = THEME_LABELS[theme.id]?.[lang] ?? THEME_LABELS[theme.id]?.['en'] ?? theme.title
 
-  // Filter to articles with content
-  const liveArticles = theme.articleKeys.filter(key => !!(LLM_SLUG_TO_KEY[key] && llmContent[LLM_SLUG_TO_KEY[key]]))
-  const hasContent = liveArticles.length > 0
+  // Filter to articles: live ones (have content and not coming soon), and coming soon ones
+  const liveArticles = theme.articleKeys.filter(
+    key => !COMING_SOON_SLUGS.has(key) && !!(LLM_SLUG_TO_KEY[key] && llmContent[LLM_SLUG_TO_KEY[key]])
+  )
+  const soonArticles = theme.articleKeys.filter(key => COMING_SOON_SLUGS.has(key))
+  const hasContent = liveArticles.length > 0 || soonArticles.length > 0
 
   return (
     <section id={theme.id} className="mb-16">
@@ -664,6 +681,9 @@ function ThemeSection({ theme, lang }: { theme: LLMTheme; lang: Language }) {
         <div className="grid sm:grid-cols-2 gap-3">
           {liveArticles.map(key => (
             <ArticleCard key={key} articleKey={key} dot={colors.dot} lang={lang} />
+          ))}
+          {soonArticles.map(key => (
+            <ArticleComingSoon key={key} articleKey={key} lang={lang} />
           ))}
         </div>
       ) : (

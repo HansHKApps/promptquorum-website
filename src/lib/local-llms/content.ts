@@ -23767,9 +23767,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     ja: {
       theme: '用途別モデル',
       title: '2026年ビジネスライティング向けベストなローカルLLM: メール、提案、ブランドボイス',
-      seoTitle: 'ビジネスライティング向けベストなローカルLLM 2026',
+      seoTitle: '2026年ビジネスライティングベストLLM：Mistral・Qwen・Llama比較',
       intro: '**2026年4月時点で、ビジネスライティング向けベストなローカルLLMはMistral Small 3.1 24B（最も正確な出力、最良のトーン制御）、Qwen2.5 7B（最良の非英語ビジネスライティング）、Llama 3.1 8B（ブランドボイス例に最も適応可能）です。ビジネスライティングでは小さな7B–24Bモデルが70Bモデルを上回ります。より明確で正確な出力を冗長性なく生成します。**',
-      metaDescription: 'Mistral Small 3.1 24Bはメールとメモにリード。Qwen2.5 7Bは多言語対応に優秀。7B–24Bモデルが70B超。Ollama設定は10分。',
+      metaDescription: 'Mistral Small 3.1 24Bはメールとメモに最適。Qwen2.5 7Bは多言語対応に優秀。7B–24Bモデルが70Bを圧倒。プロンプト例と完全なセットアップガイド付き。',
       publishDate: '2026-04-05',
       readTime: '7分で読める',
       educationalLevel: 'Beginner',

@@ -5,6 +5,7 @@ import { LocalLLMsPostClient } from '@/components/LocalLLMsPostClient'
 import { llmContent } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { llmThemes } from '@/lib/local-llms/themes'
+import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 
 // Acronyms that must stay fully uppercase in slug-to-title fallbacks
 const SLUG_ACRONYMS: Record<string, string> = {
@@ -80,6 +81,15 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     }
   }
 
+  // Coming soon by editorial decision (full content exists but not yet public)
+  if (COMING_SOON_SLUGS.has(slug)) {
+    return {
+      title: `${getTitleForSlug(slug)} — Coming Soon | PromptQuorum`,
+      description: 'This article is coming soon. Explore our Local LLMs hub in the meantime.',
+      robots: { index: false, follow: true },
+    }
+  }
+
   const sp = await searchParams
   const lang = (sp?.lang as string) || 'en'
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh']
@@ -136,6 +146,30 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
 
   // Article not written yet — show coming soon page
   if (!llmContent[key]) {
+    const title = getTitleForSlug(slug)
+    return (
+      <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-primary/10 text-primary mb-8">
+            Coming Soon
+          </span>
+          <h1 className="text-3xl sm:text-4xl font-bold text-text-primary mb-6">{title}</h1>
+          <p className="text-text-secondary leading-relaxed mb-10 max-w-xl mx-auto">
+            This article is being written. Check back soon — or explore the other guides in the Local LLMs hub.
+          </p>
+          <Link
+            href="/local-llms"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
+          >
+            ← Back to Local LLMs
+          </Link>
+        </div>
+      </div>
+    )
+  }
+
+  // Coming soon by editorial decision
+  if (COMING_SOON_SLUGS.has(slug)) {
     const title = getTitleForSlug(slug)
     return (
       <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6">
