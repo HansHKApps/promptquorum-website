@@ -2393,7 +2393,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'Thing', 'name': 'Apple Silicon' },
           { '@type': 'Thing', 'name': 'thermal throttling' },
         ],
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2753,7 +2753,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'Thing', 'name': 'model provenance' },
           { '@type': 'Thing', 'name': 'disk encryption' },
         ],
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
         'educationalLevel': 'Beginner',
       },
       faqSchema: {
@@ -5455,7 +5455,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'Thing', 'name': 'HumanEval benchmark' },
           { '@type': 'Thing', 'name': 'Fill-in-the-middle' },
         ],
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -7483,7 +7483,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'llama.cpp' },
         ],
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -7575,7 +7575,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       { '@type': 'SoftwareApplication', 'name': 'Ollama' },
       { '@type': 'SoftwareApplication', 'name': 'llama.cpp' },
     ],
-    'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+    'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
   },
   howToSchema: {
     '@context': 'https://schema.org',
@@ -12447,7 +12447,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'SoftwareApplication', 'name': 'Ollama' },
           { '@type': 'SoftwareApplication', 'name': 'llama.cpp' },
         ],
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -14723,7 +14723,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'dateModified': '2026-04-05',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'proficiencyLevel': 'Intermediate',
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
         'about': [
           { '@type': 'Thing', 'name': 'Gemma 3' },
           { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
@@ -14936,7 +14936,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'dateModified': '2026-04-05',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'proficiencyLevel': 'Intermediate',
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
         'about': [
           { '@type': 'Thing', 'name': 'Gemma 3' },
           { '@type': 'Thing', 'name': 'Llama 3.3 70B' },
@@ -16985,7 +16985,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Thing', 'name': 'Cursor editor' },
           { '@type': 'Thing', 'name': 'Ollama' },
         ],
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
         'educationalLevel': 'Intermediate',
       },
       faqSchema: {
@@ -19962,7 +19962,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Thing', 'name': 'unsloth' },
           { '@type': 'Thing', 'name': 'HuggingFace TRL' },
         ],
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
         'educationalLevel': 'Advanced',
       },
       faqSchema: {
@@ -20658,7 +20658,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       title: 'Local vs Cloud Agents: When to Choose Each Approach',
       seoTitle: 'Local vs Cloud AI Agents',
       intro: 'Local agents run entirely on your hardware; cloud agents use APIs. As of April 2026, cloud agents are faster and more capable, but local agents are cheaper and private. This guide helps you choose based on latency, cost, privacy, and task complexity.',
-      metaDescription: 'Local vs cloud agents: speed, cost, privacy, capabilities. Decision framework for AI automation. Free beta — April 2026.',
+      metaDescription: 'Local vs cloud agents 2026: speed, cost, privacy, capabilities. Decision framework for choosing AI automation platforms.',
       publishDate: '2026-04-04',
       readTime: '10 min read',
       educationalLevel: 'Intermediate',
@@ -20779,7 +20779,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       title: 'Create Custom Local Models: Pre-Training and Domain Adaptation',
       seoTitle: 'Create Custom Local Models',
       intro: 'Creating custom models means either fine-tuning existing models (easier) or pre-training from scratch (expensive). As of April 2026, fine-tuning is practical for most organizations. Pre-training costs $50k–500k and requires 1,000+ GPUs. This guide covers both approaches.',
-      metaDescription: 'Create custom local AI models: pre-training, fine-tuning, domain adaptation, and practical approaches. Guide. Free beta — April 2026.',
+      metaDescription: 'Create custom local AI models 2026: pre-training, fine-tuning, domain adaptation. Practical approaches and frameworks.',
       publishDate: '2026-04-04',
       readTime: '12 min read',
       educationalLevel: 'Advanced',
@@ -24071,7 +24071,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Thing', 'name': 'DeepSeek-R1' },
           { '@type': 'Thing', 'name': 'vLLM code review' },
         ],
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -24286,7 +24286,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Thing', 'name': 'DeepSeek-R1' },
           { '@type': 'Thing', 'name': 'vLLM Code Review' },
         ],
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -24503,7 +24503,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Thing', 'name': 'DeepSeek-R1' },
           { '@type': 'Thing', 'name': 'vLLM code review' },
         ],
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -24816,7 +24816,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Thing', 'name': 'Markenstimmen-KI' },
         ],
         'proficiencyLevel': 'Beginner',
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -25024,7 +25024,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Thing', 'name': 'IA voix de marque' },
         ],
         'proficiencyLevel': 'Beginner',
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -25226,7 +25226,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Thing', 'name': 'ブランドボイスAI' },
         ],
         'proficiencyLevel': 'Beginner',
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -25428,7 +25428,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Thing', 'name': '品牌语音AI' },
         ],
         'proficiencyLevel': 'Beginner',
-        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -25744,7 +25744,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       title: 'Fastest Local LLMs for Low-End PCs',
       seoTitle: 'Fastest LLMs for Low-End PCs: Sub-8GB GPU, CPU Inference, Quantization',
       intro: '**On sub-8GB GPUs or CPU-only systems, Mistral 7B Q4, Phi 2.7B, and TinyLlama 1.1B are optimized for speed over quality.** As of April 2026, CPU inference is 5–10× slower than GPU, but viable for low-latency chat (no waiting). Quantization to Q2 or Q3 enables 3–4B models on 4GB VRAM with acceptable speed.',
-      metaDescription: 'Fastest local LLMs for low-end PCs: Mistral Q4, Phi 2.7B, CPU inference optimization. Sub-8GB GPU, CPU-only tips. Free beta — April 2026.',
+      metaDescription: 'Fastest local LLMs for low-end PCs 2026: Mistral Q4, Phi 2.7B, CPU inference. Sub-8GB GPU and CPU-only optimization tips.',
       publishDate: '2026-04-05',
       readTime: '8 min',
       educationalLevel: 'Beginner',
