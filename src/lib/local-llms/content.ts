@@ -932,7 +932,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'How Do You Run Your First Local LLM: From Install to First Response in 10 Minutes',
       seoTitle: 'Run Your First Local LLM in 10 Minutes (Step-by-Step)',
       intro: 'Running your first local LLM takes under 10 minutes with Ollama. Install Ollama, run one command to pull a model, and start chatting in your terminal — no API key, no account, and no internet connection after the initial download. As of April 2026, the fastest beginner model is Llama 3.2 3B at 25–45 tokens/sec on a modern laptop CPU.',
-      metaDescription: 'Run your first local LLM in under 10 minutes using Ollama. Complete walkthrough: install, pull a model, first prompt. Free beta — April 2026.',
+      metaDescription: 'Run your first local LLM in under 10 minutes with Ollama: install, pull a 3B model, and get a response — no API key or internet needed after download.',
       publishDate: '2026-04-04',
       readTime: '7 min read',
       heroComponent: 'LLMImageSelector',
@@ -1369,9 +1369,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Getting Started',
       title: 'Best Local LLM Models for Beginners in 2026: Ranked by RAM, Speed, and Quality',
-      seoTitle: 'Best Beginner Local LLM Models 2026',
+      seoTitle: 'Best Beginner Local LLM Models 2026: 5 Picks, 4–8 GB RAM',
       intro: 'The five best local LLM models for beginners in 2026 are Meta Llama 3.2 3B, Microsoft Phi-3.5 Mini, Google Gemma 2 2B, Mistral 7B v0.3, and Qwen2.5 7B. Each runs on consumer hardware with 4–8 GB of RAM and produces output quality suitable for everyday tasks.',
-      metaDescription: 'Best local LLM models for beginners in 2026. Ranked by RAM requirement, speed, and quality — with exact VRAM numbers and Ollama pull Free beta — April 2026.',
+      metaDescription: '5 best beginner local LLMs for 4–8 GB RAM: Llama 3.2 3B, Phi-3.5 Mini, Gemma 2 2B, Mistral 7B, and Qwen2.5 7B. Ranked by RAM, speed, and output quality.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
@@ -1823,7 +1823,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       title: 'Troubleshooting Local LLM Setup: Fix the 10 Most Common Errors',
       seoTitle: 'Debug Local LLMs 2026: Fix 10 Common Setup Errors',
       intro: 'The most common local LLM setup errors are: out-of-memory crashes, GPU not being detected, very slow inference on CPU, model file corruption, and connection refused errors from the API server. As of April 2026, GPU detection issues are less common due to driver improvements, but they still occur.',
-      metaDescription: 'Fix 10 common local LLM setup errors: out-of-memory, GPU not detected, slow inference, connection refused, and model not found. Free beta — April 2026.',
+      metaDescription: 'Fix 10 local LLM setup errors: out-of-memory, GPU not detected, slow inference, connection refused, model not found. Covers Ollama and llama.cpp.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
@@ -5250,9 +5250,9 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     en: {
       theme: 'Best Models',
       title: 'Best Local LLMs for Coding in 2026: Ranked by HumanEval, RAM, and Language Support',
-      seoTitle: 'Best Local LLMs for Coding 2026',
+      seoTitle: 'Best Local LLMs for Coding 2026: Top Models by HumanEval',
       intro: 'The best local LLMs for coding in 2026 are Qwen2.5-Coder 32B (87% HumanEval), DeepSeek-Coder V2 Lite (81%), and Qwen2.5-Coder 7B (72%). All three run locally via Ollama and outperform general-purpose models at the same parameter count on Python, JavaScript, and SQL generation tasks.',
-      metaDescription: 'Best local LLMs for coding in 2026: Qwen2.5-Coder 32B, DeepSeek-Coder V2, and Starcoder2 ranked by HumanEval score, RAM requirements, Free beta — April 2026.',
+      metaDescription: 'Best local LLMs for coding 2026: Qwen2.5-Coder 32B scores 87% HumanEval. DeepSeek-Coder V2 Lite at 81%, Qwen2.5-Coder 7B at 72%. Ollama setup included.',
       publishDate: '2026-04-04',
       readTime: '9 min read',
       educationalLevel: 'Beginner',
@@ -14981,9 +14981,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     en: {
       theme: 'Getting Started',
       title: 'Local LLMs vs Cloud APIs: Which Should You Use in 2026?',
-      seoTitle: 'Local LLMs vs Cloud APIs',
+      seoTitle: 'Local LLMs vs Cloud APIs 2026: Privacy, Cost, and Quality',
       intro: 'Local LLMs run on your own hardware with zero API costs and full data privacy. Cloud APIs like OpenAI GPT-4o and Anthropic Claude 4.6 deliver higher output quality and require no hardware setup. The right choice depends on your data sensitivity, budget, required model quality, and whether you need offline access.',
-      metaDescription: 'Local LLMs vs cloud APIs compared: privacy, cost, speed, quality, and setup. Decide which is right for your use case with a concrete Free beta — April 2026.',
+      metaDescription: 'Local LLMs vs cloud APIs in 2026: full comparison on privacy, cost, speed, quality, and setup. Decision framework with 8 factors for your use case.',
       publishDate: '2026-04-04',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
@@ -26413,7 +26413,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'url': 'https://www.promptquorum.com/local-llms/best-nas-storage-local-llm?lang=en',
         'inLanguage': 'en',
         'datePublished': '2026-04-05',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] }
       },
       itemListSchema: {
         '@context': 'https://schema.org',
