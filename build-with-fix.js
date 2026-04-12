@@ -49,8 +49,34 @@ async function pingSitemap() {
   }
 }
 
+async function validatePresentations() {
+  console.log('\n📋 Validating presentation files...\n')
+
+  const child = spawn('node', ['scripts/validate-presentations.js'], {
+    stdio: 'inherit'
+  })
+
+  return new Promise((resolve, reject) => {
+    child.on('close', (code) => {
+      if (code === 0) {
+        resolve()
+      } else {
+        reject(new Error('Presentation validation failed'))
+      }
+    })
+    child.on('error', reject)
+  })
+}
+
 async function main() {
   console.log('Starting build with validator fix...\n')
+
+  try {
+    await validatePresentations()
+  } catch (err) {
+    console.error('\n❌ Presentation validation failed. Please fix errors before building.\n')
+    process.exit(1)
+  }
 
   let maxAttempts = 5
   let attempt = 1
