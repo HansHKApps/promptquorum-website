@@ -1064,7 +1064,14 @@
     function renderSlide(slide) {
       let html = '';
       const articleUrl = 'https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference?lang=' + lang;
-      const footerLink = `<p class="slide-footer"><a href="${articleUrl}">← 返回文章</a></p>`;
+      const footerTexts = {
+        en: '← Back to Article',
+        de: '← Zurück zum Artikel',
+        fr: '← Retour à l\'Article',
+        ja: '← 記事に戻る',
+        zh: '← 返回文章'
+      };
+      const footerLink = `<p class="slide-footer"><a href="${articleUrl}">${footerTexts[lang] || footerTexts.en}</a></p>`;
 
       switch (slide.type) {
         case 'title':
