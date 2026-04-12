@@ -7009,6 +7009,8 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
       category: 'AI Policy & Regulation',
       title: 'Geopolitics of AI Regulation: EU vs US vs China (2026 Guide)',
       intro: 'Three incompatible regulatory visions for AI are now clashing globally. The EU enforces rights-based rules, the US prioritizes innovation, and China demands state control. This geopolitical divide reshapes AI deployment, data residency, and vendor strategy for every organization.',
+      seoTitle: 'AI Regulation Showdown: EU AI Act vs US vs China 2026',
+      metaDescription: 'EU enforces AI Act. US favors innovation. China demands state control. Compare regulatory frameworks, compliance costs, and vendor strategy implications.',
       publishDate: 'Published April 10, 2026',
       readTime: '12 min read',
       sections: {
