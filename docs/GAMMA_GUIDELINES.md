@@ -104,6 +104,99 @@ Include where relevant (EU/GDPR, Japan/METI, China/CAC):
 
 ---
 
+## ⚠️ Presentation SEO Rules (CRITICAL)
+
+**Iframe content is NOT indexed by Google or AI crawlers.** The presentation deck itself is invisible to search engines. You must provide indexable text alongside the presentation.
+
+### Text + Iframe Requirements
+
+Every presentation embed MUST be accompanied by one of:
+
+**a) Text transcript block below the iframe (recommended — fastest)**
+- Copy all slide text into a `<details>` expandable block or plain `<div>`
+- Position immediately below the iframe
+- This text IS indexed; the iframe is NOT
+- Example:
+  ```html
+  <iframe src="presentation.html"></iframe>
+  
+  <details>
+    <summary>Slide Transcript (Click to expand)</summary>
+    <p>Slide 1: Title + one-sentence definition</p>
+    <p>Slide 2: At a Glance — 3 key numbers...</p>
+    ...
+  </details>
+  ```
+
+**b) `<details>` expandable with all slide text**
+- Same as above, but structured as expandable sections
+- Preserves page layout while keeping all text visible to crawlers
+
+**c) Add presentation URL to sitemap + robots.txt**
+- If presentation is a standalone HTML file at `presentations/slug.html`
+- Add to `sitemap.xml` and allow in `robots.txt`
+- Less common; prefer option (a) or (b)
+
+### Presentation HTML Page Requirements
+
+The presentation file itself (`presentations/slug-en.html`) needs:
+
+```html
+<head>
+  <!-- Canonical link back to parent article -->
+  <link rel="canonical" href="https://www.promptquorum.com/prompt-engineering/temperature-and-top-p">
+  
+  <!-- Meta description with primary keyword -->
+  <meta name="description" content="Temperature and Top-P settings reference: interactive guide with examples and quick lookup table.">
+  
+  <!-- Rest of head... -->
+</head>
+```
+
+This tells Google: "This presentation is part of the parent article, not a standalone page."
+
+### CSS Visibility Rules
+
+**❌ NEVER use `display:none` to hide slide text:**
+```css
+.transcript { display: none; }  /* WRONG — Google still doesn't index it */
+```
+
+**✅ Use visually-offscreen CSS that Google still reads:**
+```css
+.transcript {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+```
+
+OR use `<details>` (cleaner, better UX):
+```html
+<details>
+  <summary>See Transcript</summary>
+  <!-- All text here IS indexed -->
+</details>
+```
+
+### PDF URL Format
+
+**❌ WRONG — Parameters are not indexed as standalone documents:**
+```
+https://www.promptquorum.com/presentations/temperature-and-top-p?print=1
+```
+
+**✅ RIGHT — Direct file URLs are indexed as PDFs:**
+```
+https://www.promptquorum.com/presentations/temperature-and-top-p.pdf
+```
+
+Google indexes PDFs as standalone documents. Use direct file URLs so the PDF is discoverable in Google's PDF search results and in AI crawlers.
+
+---
+
 ## GEO Compliance Requirements
 
 ### Meta & SEO
