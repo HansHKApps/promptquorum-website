@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokens, Costs & Limits: The Economics of AI Prompting | PromptQuorum</title>
+    <meta name="description" content="Every AI API call is measured and billed in tokens — the unit that controls both what the model can process and how much you pay." />
+    <meta property="og:title" content="Tokens, Costs & Limits: The Economics of AI Prompting — PromptQuorum" />
+    <meta property="og:description" content="Learn token costs, pricing, rate limits, and strategies to reduce LLM API spending by 30–50×." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles — A4 landscape with mm dimensions */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Tokens, Costs & Limits</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        // Content in 5 languages
+        const CONTENT = {
+            en: {
+                title: 'Tokens, Costs & Limits: The Economics of AI Prompting',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Tokens, Costs & Limits\nThe Economics of AI Prompting',
+                        subtitle: 'Master token usage, pricing, and cost optimization',
+                        link: 'https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Is a Token?',
+                        intro: 'A token is the smallest unit of text an AI model processes.',
+                        items: [
+                            '≈ 3–4 characters or ¾ of an English word',
+                            'Example: "ChatGPT" = 2 tokens, "Hello, how are you?" ≈ 5–6 tokens',
+                            'You are billed for every token in AND every token out',
+                            'Other languages tokenize 20–40% less efficiently than English'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How Token Counting Works',
+                        intro: 'Every element of your API call counts toward your bill.',
+                        items: [
+                            'System prompt: Counted on every API call (300-token prompt = ~$0.0015 per call)',
+                            'Full conversation history: Included on every request (re-billed each turn)',
+                            'Attached files & images: 100–2,000 tokens per file depending on size',
+                            'Model output: Counted in full at output rates (usually 2–5× higher than input)',
+                            '5-turn research conversation = 1,250 tokens. Turn 6 re-bills all 1,250 + new output'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'AI Model Pricing per Million Tokens 2026',
+                        columns: ['Model', 'Input ($/1M)', 'Output ($/1M)'],
+                        rows: [
+                            { Model: 'GPT-4o', 'Input ($/1M)': '$5.00', 'Output ($/1M)': '$15.00' },
+                            { Model: 'Claude 4.6 Sonnet', 'Input ($/1M)': '$3.00', 'Output ($/1M)': '$15.00' },
+                            { Model: 'Gemini 1.5 Pro', 'Input ($/1M)': '$3.50', 'Output ($/1M)': '$10.50' },
+                            { Model: 'GPT-4o mini', 'Input ($/1M)': '$0.15', 'Output ($/1M)': '$0.60' },
+                            { Model: 'Claude 4.5 Haiku', 'Input ($/1M)': '$0.25', 'Output ($/1M)': '$1.25' },
+                            { Model: 'Gemini 1.5 Flash', 'Input ($/1M)': '$0.075', 'Output ($/1M)': '$0.30' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Are Rate Limits?',
+                        intro: 'Rate limits prevent abuse and ensure fair resource allocation.',
+                        items: [
+                            'Requests per minute (RPM): Number of API calls in 60 seconds',
+                            'Tokens per minute (TPM): Total token throughput limit',
+                            'Free tier: 3–15 RPM, 40k–100k TPM',
+                            'Paid tier 1: 500 RPM, 200k–500k TPM',
+                            'Enterprise: 3,000+ RPM, millions of TPM'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How to Cut LLM API Costs 30–50×',
+                        intro: 'Tested: 500-token system prompt → 200-token = 18% savings. Same output quality.',
+                        items: [
+                            '<strong>Trim context aggressively:</strong> Don\'t repeat what model already knows',
+                            '<strong>Use explicit length constraints:</strong> "Answer in 3 bullets" or "Maximum 100 words"',
+                            '<strong>Avoid padding in prompts:</strong> Every filler word costs money',
+                            '<strong>Example cost impact:</strong> 42 extra tokens × 100 calls/day × 30 days × $0.005/1M = $0.63/month saved'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Choosing the Right Model for the Task',
+                        columns: ['Task Type', 'Best Model', 'Cost vs GPT-4o'],
+                        rows: [
+                            { 'Task Type': 'Simple classification', 'Best Model': 'GPT-4o mini or Haiku', 'Cost vs GPT-4o': '33× cheaper' },
+                            { 'Task Type': 'Short Q&A', 'Best Model': 'GPT-4o mini or Haiku', 'Cost vs GPT-4o': '10–33× cheaper' },
+                            { 'Task Type': 'Complex analysis / code', 'Best Model': 'GPT-4o or Claude 4.6 Sonnet', 'Cost vs GPT-4o': 'baseline' },
+                            { 'Task Type': 'Long-form writing', 'Best Model': 'Claude 4.6 Sonnet', 'Cost vs GPT-4o': 'baseline' },
+                            { 'Task Type': 'High-volume private workflows', 'Best Model': 'Ollama local', 'Cost vs GPT-4o': 'zero API cost' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Cost Recipes — Common Scenarios',
+                        intro: 'Use these templates as starting points.',
+                        items: [
+                            '<strong>Quick lookup:</strong> GPT-4o mini, ≤50 tokens system prompt, 1–2 sentence output',
+                            '<strong>5-turn research:</strong> Claude 4.6 Sonnet. Summarize every 5 turns to cut 70% of history tokens',
+                            '<strong>Batch processing:</strong> GPT-4o mini for filtering, escalate to GPT-4o only for final synthesis',
+                            '<strong>Privacy-sensitive:</strong> Ollama/LM Studio locally (zero API cost, accept lower quality)',
+                            '<strong>Model comparison:</strong> Send one prompt to 3 models simultaneously, pick cheapest that meets quality bar'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Local LLMs (Ollama) vs Cloud APIs',
+                        intro: 'Trade-offs: zero per-token API cost vs lower capability & latency.',
+                        items: [
+                            '<strong>Hardware costs:</strong> 8GB VRAM for 7B models, 16GB for 13B, 40GB+ for 70B',
+                            '<strong>Capability:</strong> Excellent at classification & summarization. Struggle with multi-step reasoning & code generation',
+                            '<strong>Latency:</strong> Cloud: 500ms–2s. Local consumer hardware: 2–10s',
+                            '<strong>When to use local:</strong> High-volume automation (1,000+ calls/day), GDPR-sensitive data, cost-critical',
+                            '<strong>When to use cloud:</strong> Latency-sensitive, tasks requiring reasoning, one-off analyses'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Common Mistakes That Spike Your Bill',
+                        intro: 'Avoid these token-wasting patterns.',
+                        items: [
+                            'Full conversation history on every call (pays 5,000 tokens again on turn 11)',
+                            'High-capability model for simple tasks (don\'t use GPT-4o for "extract date")',
+                            'No output length constraints ("tell me about X" = 500 tokens vs "summarize in 50 words" = 60)',
+                            'Long system prompts on every call (500-token prompt × 100 calls = 50k wasted tokens)',
+                            'High-resolution images without downscaling (500–2,000 tokens per image)',
+                            'Manual test calls instead of batching (20 variations cost 20× more)',
+                            'Switching models mid-conversation (re-sends all prior messages)'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'How to Cut LLM API Costs in 5 Steps',
+                        items: [
+                            '<strong>Match model to task complexity:</strong> Use GPT-4o mini or Claude Haiku for simple tasks',
+                            '<strong>Summarize conversation history every 5 turns:</strong> Prevents full re-billing on every call',
+                            '<strong>Cap output length explicitly:</strong> "Answer in 3 bullets" prevents verbose token-heavy responses',
+                            '<strong>Trim system prompts to essentials:</strong> Remove filler; every word re-billed on every API call',
+                            '<strong>Test local LLMs via Ollama:</strong> Zero per-token cost for high-volume private workflows'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Key FAQs',
+                        faqs: [
+                            {
+                                q: 'How many tokens is a typical article or report?',
+                                a: '1,000-word article ≈ 1,200–1,500 tokens. 10-page PDF ≈ 4,000–6,000 tokens. Single image ≈ 500–2,000 tokens.'
+                            },
+                            {
+                                q: 'Why is my bill higher than expected?',
+                                a: 'Likely causes: Full conversation history re-billed every turn, long system prompt, or using high-capability model for simple tasks. Summarize history after 5 turns, trim prompts, downgrade to cheaper model.'
+                            },
+                            {
+                                q: 'Can I cache my system prompt?',
+                                a: 'Yes. OpenAI & Anthropic offer prompt caching — 90% discount (OpenAI) or 10% discount (Anthropic) on cached tokens. Check your API docs for the caching header.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How PromptQuorum Helps You Manage Costs',
+                        intro: 'PromptQuorum makes token usage visible and actionable.',
+                        items: [
+                            '<strong>Backend LLM always visible:</strong> Optimize your prompt and run Quorum consensus analysis',
+                            '<strong>Multi-model comparison:</strong> Send one prompt at different settings across 25+ models',
+                            '<strong>Cost visibility:</strong> See exact token count (Backend and Frontend) per call',
+                            '<strong>Tested results:</strong> 20 identical research prompts on GPT-4o vs mini: 17/20 matched quality, 43× cost reduction'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Ready to Control Your AI Costs?',
+                        body: 'Optimize token usage, compare models, and reduce spending 30–50×.',
+                        cta: 'Start Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'Token, Kosten & Limits: Die Ökonomie des KI-Prompting',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Token, Kosten & Limits\nDie Ökonomie des KI-Prompting',
+                        subtitle: 'Token-Nutzung, Preisgestaltung und Kostenoptimierung meistern',
+                        link: 'https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was ist ein Token?',
+                        intro: 'Ein Token ist die kleinste Texteinheit, die ein KI-Modell verarbeitet.',
+                        items: [
+                            '≈ 3–4 Zeichen oder ¾ eines englischen Wortes',
+                            'Beispiel: "ChatGPT" = 2 Tokens, "Hallo, wie geht es dir?" ≈ 5–6 Tokens',
+                            'Sie zahlen für jeden eingehenden UND jeden ausgehenden Token',
+                            'Andere Sprachen benötigen 20–40% mehr Tokens als Englisch'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie Token-Zählung funktioniert',
+                        intro: 'Jedes Element Ihres API-Aufrufs zählt zur Rechnung.',
+                        items: [
+                            'System-Prompt: Gezählt bei jedem API-Aufruf (300-Token-Prompt ≈ $0,0015 pro Aufruf)',
+                            'Gesamte Gesprächsverlauf: In jeden Anfrage enthalten (bei jedem Zug neu berechnet)',
+                            'Angehängte Dateien & Bilder: 100–2.000 Tokens pro Datei',
+                            'Modellausgabe: Vollständig zu Output-Sätzen gezählt (normalerweise 2–5× höher)',
+                            '5-Zug-Gespräch = 1.250 Tokens. Zug 6 berechnet alle 1.250 + neue Ausgabe neu'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'KI-Modell-Preise pro Million Tokens 2026',
+                        columns: ['Modell', 'Input ($/1M)', 'Output ($/1M)'],
+                        rows: [
+                            { Modell: 'GPT-4o', 'Input ($/1M)': '$5,00', 'Output ($/1M)': '$15,00' },
+                            { Modell: 'Claude 4.6 Sonnet', 'Input ($/1M)': '$3,00', 'Output ($/1M)': '$15,00' },
+                            { Modell: 'Gemini 1.5 Pro', 'Input ($/1M)': '$3,50', 'Output ($/1M)': '$10,50' },
+                            { Modell: 'GPT-4o mini', 'Input ($/1M)': '$0,15', 'Output ($/1M)': '$0,60' },
+                            { Modell: 'Claude 4.5 Haiku', 'Input ($/1M)': '$0,25', 'Output ($/1M)': '$1,25' },
+                            { Modell: 'Gemini 1.5 Flash', 'Input ($/1M)': '$0,075', 'Output ($/1M)': '$0,30' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was sind Rate-Limits?',
+                        intro: 'Rate-Limits verhindern Missbrauch und gewährleisten faire Ressourcenzuweisung.',
+                        items: [
+                            'Anfragen pro Minute (RPM): Anzahl der API-Aufrufe in 60 Sekunden',
+                            'Tokens pro Minute (TPM): Gesamttoken-Durchsatz-Limit',
+                            'Kostenloses Tier: 3–15 RPM, 40k–100k TPM',
+                            'Bezahltes Tier 1: 500 RPM, 200k–500k TPM',
+                            'Enterprise: 3.000+ RPM, Millionen von TPM'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie man KI-API-Kosten um 30–50× senkt',
+                        intro: 'Getestet: 500-Token-Prompt → 200-Token = 18% Einsparung. Gleiche Ausgabequalität.',
+                        items: [
+                            '<strong>Kontext aggressiv trimmen:</strong> Wiederholen Sie nicht, was das Modell bereits weiß',
+                            '<strong>Explizite Längenbeschränkungen:</strong> "Antwort in 3 Bullets" oder "Höchstens 100 Wörter"',
+                            '<strong>Vermeiden Sie Auffüllungen in Prompts:</strong> Jedes Füllwort kostet Geld',
+                            '<strong>Kostenauswirkung beispielhaft:</strong> 42 Extra-Tokens × 100 Aufrufe/Tag × 30 Tage × $0,005/1M = $0,63/Monat gespart'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Das richtige Modell für die Aufgabe wählen',
+                        columns: ['Aufgabentyp', 'Bestes Modell', 'Kosten vs GPT-4o'],
+                        rows: [
+                            { Aufgabentyp: 'Einfache Klassifizierung', 'Bestes Modell': 'GPT-4o mini oder Haiku', 'Kosten vs GPT-4o': '33× billiger' },
+                            { Aufgabentyp: 'Kurze Q&A', 'Bestes Modell': 'GPT-4o mini oder Haiku', 'Kosten vs GPT-4o': '10–33× billiger' },
+                            { Aufgabentyp: 'Komplexe Analyse / Code', 'Bestes Modell': 'GPT-4o oder Claude 4.6 Sonnet', 'Kosten vs GPT-4o': 'Basislinie' },
+                            { Aufgabentyp: 'Längeres Schreiben', 'Bestes Modell': 'Claude 4.6 Sonnet', 'Kosten vs GPT-4o': 'Basislinie' },
+                            { Aufgabentyp: 'Hochvolumige private Workflows', 'Bestes Modell': 'Ollama lokal', 'Kosten vs GPT-4o': 'Keine API-Kosten' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Kostenrezepte — häufige Szenarien',
+                        intro: 'Verwenden Sie diese als Startpunkte.',
+                        items: [
+                            '<strong>Schnelle Nachschlag:</strong> GPT-4o mini, ≤50 Token Systemprompt, 1–2 Sätze Output',
+                            '<strong>5-Zug-Forschung:</strong> Claude 4.6 Sonnet. Fassen Sie alle 5 Züge zusammen, um 70% der Verlaufs-Tokens zu kürzen',
+                            '<strong>Batch-Verarbeitung:</strong> GPT-4o mini zum Filtern, nur zur finalen Synthese zu GPT-4o eskalieren',
+                            '<strong>Datenschutzsensibel:</strong> Ollama/LM Studio lokal (keine API-Kosten, akzeptieren Sie niedrigere Qualität)',
+                            '<strong>Modellvergleich:</strong> Einen Prompt an 3 Modelle senden, das günstigste auswählen, das die Qualitätsanforderung erfüllt'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Lokale LLMs (Ollama) vs Cloud APIs',
+                        intro: 'Kompromisse: Keine API-Kosten pro Token vs niedrigere Fähigkeit & Latenz.',
+                        items: [
+                            '<strong>Hardware-Kosten:</strong> 8 GB VRAM für 7B-Modelle, 16 GB für 13B, 40 GB+ für 70B',
+                            '<strong>Fähigkeit:</strong> Hervorragend bei Klassifizierung und Zusammenfassung. Kämpfen mit mehrstufigen Reasoning und Code-Generierung',
+                            '<strong>Latenz:</strong> Cloud: 500ms–2s. Lokale Verbraucherhardware: 2–10s',
+                            '<strong>Wann lokal verwenden:</strong> Hochvolumige Automation (1.000+ Aufrufe/Tag), DSGVO-sensible Daten, kostenkritisch',
+                            '<strong>Wann Cloud verwenden:</strong> Latenzsensitiv, Aufgaben mit Reasoning, einmalige Analysen'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Häufige Fehler, die Ihre Rechnung erhöhen',
+                        intro: 'Vermeiden Sie diese Token-verschwendenden Muster.',
+                        items: [
+                            'Gesamter Gesprächsverlauf bei jedem Aufruf (bezahlt 5.000 Tokens erneut bei Zug 11)',
+                            'Hochleistungsmodell für einfache Aufgaben (verwenden Sie nicht GPT-4o zum "Extrahieren von Datum")',
+                            'Keine Längenbeschränkungen für Ausgabe ("Erzähle mir von X" = 500 Tokens vs "Zusammenfassung in 50 Wörtern" = 60)',
+                            'Lange Systemprompts bei jedem Aufruf (500-Token-Prompt × 100 Aufrufe = 50k verschwendete Tokens)',
+                            'Hochauflösende Bilder ohne Herunterskalierung (500–2.000 Tokens pro Bild)',
+                            'Manuelle Test-Aufrufe statt Batching (20 Variationen kosten 20× mehr)',
+                            'Modell mitten im Gespräch wechseln (sendet alle vorherigen Nachrichten erneut)'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Wie man KI-API-Kosten in 5 Schritten senkt',
+                        items: [
+                            '<strong>Modell an Aufgabenkomplexität anpassen:</strong> Verwenden Sie GPT-4o mini oder Claude Haiku für einfache Aufgaben',
+                            '<strong>Gesprächsverlauf alle 5 Züge zusammenfassen:</strong> Verhindert vollständige Neuberechnung bei jedem Aufruf',
+                            '<strong>Ausgabelänge explizit begrenzen:</strong> "Antwort in 3 Bullets" verhindert ausführliche Token-intensive Antworten',
+                            '<strong>Systemprompts auf das Wesentliche trimmen:</strong> Entfernen Sie Füllwörter; jedes Wort wird bei jedem API-Aufruf neu berechnet',
+                            '<strong>Testen Sie lokale LLMs über Ollama:</strong> Keine Pro-Token-Kosten für hochvolumige private Workflows'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Wichtige FAQs',
+                        faqs: [
+                            {
+                                q: 'Wie viele Tokens hat ein typischer Artikel oder Bericht?',
+                                a: '1.000-Wort-Artikel ≈ 1.200–1.500 Tokens. 10-seitiges PDF ≈ 4.000–6.000 Tokens. Einzelnes Bild ≈ 500–2.000 Tokens.'
+                            },
+                            {
+                                q: 'Warum ist meine Rechnung höher als erwartet?',
+                                a: 'Wahrscheinliche Ursachen: Gesamter Gesprächsverlauf wird bei jedem Zug neu berechnet, langer Systemprompt oder Verwendung eines leistungsstarken Modells für einfache Aufgaben. Gesprächsverlauf nach 5 Zügen zusammenfassen, Prompts trimmen, zum billigeren Modell downgraden.'
+                            },
+                            {
+                                q: 'Kann ich meinen Systemprompt cachen?',
+                                a: 'Ja. OpenAI und Anthropic bieten Prompt Caching an — 90% Rabatt (OpenAI) oder 10% Rabatt (Anthropic) auf zwischengespeicherte Tokens. Siehe Ihre API-Dokumentation für den Caching-Header.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie PromptQuorum Ihnen hilft, Kosten zu senken',
+                        intro: 'PromptQuorum macht Token-Nutzung sichtbar und umsetzbar.',
+                        items: [
+                            '<strong>Backend-LLM immer sichtbar:</strong> Optimieren Sie Ihren Prompt und führen Sie Quorum-Konsens-Analyse durch',
+                            '<strong>Multi-Modell-Vergleich:</strong> Senden Sie einen Prompt mit unterschiedlichen Einstellungen über 25+ Modelle',
+                            '<strong>Kostensichtbarkeit:</strong> Sehen Sie exakte Token-Anzahl (Backend und Frontend) pro Aufruf',
+                            '<strong>Getestete Ergebnisse:</strong> 20 identische Forschungs-Prompts auf GPT-4o vs mini: 17/20 Qualität übereinstimmend, 43× Kostenreduktion'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Bereit, Ihre KI-Kosten zu kontrollieren?',
+                        body: 'Optimieren Sie Token-Nutzung, vergleichen Sie Modelle, reduzieren Sie Ausgaben um 30–50×.',
+                        cta: 'Kostenlos starten',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Tokens, Coûts et Limites : L\'économie du prompt engineering',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Tokens, Coûts & Limites\nL\'économie du prompt engineering',
+                        subtitle: 'Maîtrise l\'utilisation des tokens, tarification et optimisation des coûts',
+                        link: 'https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Qu\'est-ce qu\'un token?',
+                        intro: 'Un token est la plus petite unité de texte qu\'un modèle IA traite.',
+                        items: [
+                            '≈ 3–4 caractères ou ¾ d\'un mot anglais',
+                            'Exemple : "ChatGPT" = 2 tokens, "Bonjour, comment allez-vous?" ≈ 5–6 tokens',
+                            'Vous payez chaque token entrée ET chaque token sortie',
+                            'Les autres langues consomment 20–40% plus de tokens que l\'anglais'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment fonctionne le comptage des tokens',
+                        intro: 'Chaque élément de votre appel API compte sur votre facture.',
+                        items: [
+                            'Prompt système : Compté à chaque appel API (300 tokens ≈ $0,0015 par appel)',
+                            'Historique complet : Inclus à chaque requête (refacturisé à chaque tour)',
+                            'Fichiers attachés & images : 100–2.000 tokens par fichier selon la taille',
+                            'Sortie du modèle : Comptée intégralement aux tarifs de sortie (généralement 2–5× plus élevé)',
+                            'Conversation 5-tour = 1.250 tokens. Tour 6 refacturise tous les 1.250 + nouvelle sortie'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Tarification des modèles IA par million de tokens 2026',
+                        columns: ['Modèle', 'Entrée ($/1M)', 'Sortie ($/1M)'],
+                        rows: [
+                            { Modèle: 'GPT-4o', 'Entrée ($/1M)': '$5,00', 'Sortie ($/1M)': '$15,00' },
+                            { Modèle: 'Claude 4.6 Sonnet', 'Entrée ($/1M)': '$3,00', 'Sortie ($/1M)': '$15,00' },
+                            { Modèle: 'Gemini 1.5 Pro', 'Entrée ($/1M)': '$3,50', 'Sortie ($/1M)': '$10,50' },
+                            { Modèle: 'GPT-4o mini', 'Entrée ($/1M)': '$0,15', 'Sortie ($/1M)': '$0,60' },
+                            { Modèle: 'Claude 4.5 Haiku', 'Entrée ($/1M)': '$0,25', 'Sortie ($/1M)': '$1,25' },
+                            { Modèle: 'Gemini 1.5 Flash', 'Entrée ($/1M)': '$0,075', 'Sortie ($/1M)': '$0,30' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Qu\'est-ce que les limites de débit?',
+                        intro: 'Les limites de débit préviennent les abus et assurent une allocation équitable des ressources.',
+                        items: [
+                            'Requêtes par minute (RPM) : Nombre d\'appels API en 60 secondes',
+                            'Tokens par minute (TPM) : Limite de débit total des tokens',
+                            'Tier gratuit : 3–15 RPM, 40k–100k TPM',
+                            'Tier payant 1 : 500 RPM, 200k–500k TPM',
+                            'Entreprise : 3.000+ RPM, millions de TPM'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment réduire les coûts des API IA de 30–50×',
+                        intro: 'Testé : prompt 500-token → 200-token = 18% d\'économies. Même qualité de sortie.',
+                        items: [
+                            '<strong>Trimmer le contexte agressivement :</strong> Ne répétez pas ce que le modèle sait déjà',
+                            '<strong>Utiliser des contraintes de longueur explicites :</strong> "Répondre en 3 points" ou "Maximum 100 mots"',
+                            '<strong>Éviter le remplissage dans les prompts :</strong> Chaque mot superflu coûte de l\'argent',
+                            '<strong>Impact de coût exemple :</strong> 42 tokens supplémentaires × 100 appels/jour × 30 jours × $0,005/1M = $0,63/mois économisé'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Choisir le bon modèle pour la tâche',
+                        columns: ['Type de tâche', 'Meilleur modèle', 'Coût vs GPT-4o'],
+                        rows: [
+                            { 'Type de tâche': 'Classification simple', 'Meilleur modèle': 'GPT-4o mini ou Haiku', 'Coût vs GPT-4o': '33× moins cher' },
+                            { 'Type de tâche': 'Q&A court', 'Meilleur modèle': 'GPT-4o mini ou Haiku', 'Coût vs GPT-4o': '10–33× moins cher' },
+                            { 'Type de tâche': 'Analyse complexe / code', 'Meilleur modèle': 'GPT-4o ou Claude 4.6 Sonnet', 'Coût vs GPT-4o': 'référence' },
+                            { 'Type de tâche': 'Écriture long-forme', 'Meilleur modèle': 'Claude 4.6 Sonnet', 'Coût vs GPT-4o': 'référence' },
+                            { 'Type de tâche': 'Workflows privés haute-volume', 'Meilleur modèle': 'Ollama local', 'Coût vs GPT-4o': 'pas de coût API' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Recettes de coût — scénarios courants',
+                        intro: 'Utilisez-les comme points de départ.',
+                        items: [
+                            '<strong>Recherche rapide :</strong> GPT-4o mini, ≤50 tokens prompt système, 1–2 phrases de sortie',
+                            '<strong>Recherche 5-tour :</strong> Claude 4.6 Sonnet. Résumé tous les 5 tours pour réduire 70% des tokens historiques',
+                            '<strong>Traitement par batch :</strong> GPT-4o mini pour filtrer, escalader à GPT-4o seulement pour synthèse finale',
+                            '<strong>Sensible à la confidentialité :</strong> Ollama/LM Studio localement (pas de coût API, accepter qualité inférieure)',
+                            '<strong>Comparaison de modèles :</strong> Envoyer un prompt à 3 modèles simultanément, choisir le moins cher qui répond aux normes de qualité'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LLMs locaux (Ollama) vs APIs cloud',
+                        intro: 'Compromis : pas de coût par token vs capacité inférieure & latence.',
+                        items: [
+                            '<strong>Coûts matériel :</strong> 8 GB VRAM pour modèles 7B, 16 GB pour 13B, 40+ GB pour 70B',
+                            '<strong>Capacité :</strong> Excellent pour classification et résumé. Difficulté avec reasoning multi-étapes et génération de code',
+                            '<strong>Latence :</strong> Cloud : 500ms–2s. Matériel grand public local : 2–10s',
+                            '<strong>Quand utiliser local :</strong> Automation haute-volume (1.000+ appels/jour), données sensibles RGPD, critique pour les coûts',
+                            '<strong>Quand utiliser cloud :</strong> Latence sensible, tâches nécessitant reasoning, analyses ponctuelles'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Erreurs courantes qui augmentent votre facture',
+                        intro: 'Évitez ces modèles gaspilleurs de tokens.',
+                        items: [
+                            'Historique complet à chaque appel (paye 5.000 tokens à nouveau au tour 11)',
+                            'Modèle haute-capacité pour tâches simples (ne pas utiliser GPT-4o pour "extraire la date")',
+                            'Pas de contraintes de longueur de sortie ("parlez-moi de X" = 500 tokens vs "résumé en 50 mots" = 60)',
+                            'Prompts système longs à chaque appel (500-token × 100 appels = 50k tokens gaspillés)',
+                            'Images haute-résolution sans réduction d\'échelle (500–2.000 tokens par image)',
+                            'Appels de test manuels au lieu de batching (20 variations coûtent 20× plus)',
+                            'Changement de modèle en milieu de conversation (renvoie tous les messages précédents)'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Comment réduire les coûts des API IA en 5 étapes',
+                        items: [
+                            '<strong>Adapter le modèle à la complexité :</strong> Utilisez GPT-4o mini ou Claude Haiku pour tâches simples',
+                            '<strong>Résumer l\'historique chaque 5 tours :</strong> Évite refacturisation complète à chaque appel',
+                            '<strong>Limiter la longueur de sortie explicitement :</strong> "Répondre en 3 points" empêche réponses token-intensives',
+                            '<strong>Trimmer les prompts système à l\'essentiel :</strong> Chaque mot refacturisé à chaque appel API',
+                            '<strong>Tester les LLMs locaux via Ollama :</strong> Pas de coût par token pour workflows privés haute-volume'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQs essentielles',
+                        faqs: [
+                            {
+                                q: 'Combien de tokens pour un article ou rapport typique?',
+                                a: 'Article 1.000 mots ≈ 1.200–1.500 tokens. PDF 10 pages ≈ 4.000–6.000 tokens. Image unique ≈ 500–2.000 tokens.'
+                            },
+                            {
+                                q: 'Pourquoi ma facture est-elle plus haute que prévu?',
+                                a: 'Causes probables : L\'historique complet refacturisé à chaque tour, long prompt système, ou utilisation d\'un modèle haute-capacité pour tâches simples. Résumer après 5 tours, trimmer prompts, downgrader à modèle moins cher.'
+                            },
+                            {
+                                q: 'Puis-je mettre en cache mon prompt système?',
+                                a: 'Oui. OpenAI et Anthropic offrent caching de prompt — 90% de remise (OpenAI) ou 10% de remise (Anthropic) sur tokens en cache. Voir docs API pour en-tête caching.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment PromptQuorum aide à gérer les coûts',
+                        intro: 'PromptQuorum rend l\'utilisation des tokens visible et exploitable.',
+                        items: [
+                            '<strong>Backend LLM toujours visible :</strong> Optimiser votre prompt et exécuter analyse consensus Quorum',
+                            '<strong>Comparaison multi-modèles :</strong> Envoyer un prompt avec paramètres différents sur 25+ modèles',
+                            '<strong>Visibilité des coûts :</strong> Voir nombre exact de tokens (Backend et Frontend) par appel',
+                            '<strong>Résultats testés :</strong> 20 prompts recherche identiques GPT-4o vs mini : 17/20 qualité égale, réduction 43× des coûts'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Prêt à contrôler vos coûts IA?',
+                        body: 'Optimisez l\'utilisation des tokens, comparez modèles, réduisez dépenses 30–50×.',
+                        cta: 'Commencer gratuitement',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: 'トークン、コスト＆制限：AIプロンプティングの経済学',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'トークン、コスト & 制限\nAIプロンプティングの経済学',
+                        subtitle: 'トークン使用量、価格設定、コスト最適化をマスターする',
+                        link: 'https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'トークンとは何か?',
+                        intro: 'トークンはAIモデルが処理する最小のテキスト単位です。',
+                        items: [
+                            '≈ 3–4文字または英語の単語の¾',
+                            '例："ChatGPT" = 2トークン、"こんにちは、お元気ですか?" ≈ 5–6トークン',
+                            '入力トークンと出力トークンの両方に対して料金を支払います',
+                            '他の言語は英語より20–40%多くのトークンを必要とします'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'トークンカウント仕組み',
+                        intro: 'APIコールのすべての要素が請求額に計算されます。',
+                        items: [
+                            'システムプロンプト：すべてのAPIコールで計算（300トークン ≈ $0.0015/コール）',
+                            '完全な会話履歴：すべてのリクエストに含まれる（毎回再請求）',
+                            '添付ファイルと画像：ファイルあたり100–2.000トークン',
+                            'モデル出力：完全に出力レートで計算（通常入力の2–5倍）',
+                            '5ターン会話 = 1.250トークン。ターン6はすべての1.250 + 新しい出力を再請求'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'AIモデル価格（2026年百万トークンあたり）',
+                        columns: ['モデル', '入力 ($/1M)', '出力 ($/1M)'],
+                        rows: [
+                            { モデル: 'GPT-4o', '入力 ($/1M)': '$5.00', '出力 ($/1M)': '$15.00' },
+                            { モデル: 'Claude 4.6 Sonnet', '入力 ($/1M)': '$3.00', '出力 ($/1M)': '$15.00' },
+                            { モデル: 'Gemini 1.5 Pro', '入力 ($/1M)': '$3.50', '出力 ($/1M)': '$10.50' },
+                            { モデル: 'GPT-4o mini', '入力 ($/1M)': '$0.15', '出力 ($/1M)': '$0.60' },
+                            { モデル: 'Claude 4.5 Haiku', '入力 ($/1M)': '$0.25', '出力 ($/1M)': '$1.25' },
+                            { モデル: 'Gemini 1.5 Flash', '入力 ($/1M)': '$0.075', '出力 ($/1M)': '$0.30' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'レート制限とは?',
+                        intro: 'レート制限は悪用を防止し、リソースの公平な割り当てを確保します。',
+                        items: [
+                            '1分あたりのリクエスト（RPM）：60秒間のAPIコール数',
+                            '1分あたりのトークン数（TPM）：総スループット制限',
+                            '無料層：3–15 RPM、40k–100k TPM',
+                            '有料層1：500 RPM、200k–500k TPM',
+                            'エンタープライズ：3.000+ RPM、数百万TPM'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'AI API費用を30–50×削減する方法',
+                        intro: 'テスト済み：500トークンプロンプト → 200トークン = 18%削減。同じ出力品質。',
+                        items: [
+                            '<strong>コンテキストを積極的にトリミング：</strong>モデルが既に知っていることを繰り返さない',
+                            '<strong>明確な長さ制限を使用：</strong>"3つの箇条書きで答える"または"最大100語"',
+                            '<strong>プロンプトのパッドを避ける：</strong>すべての無駄な言葉がお金がかかります',
+                            '<strong>費用への影響例：</strong>42追加トークン × 100コール/日 × 30日 × $0.005/1M = $0.63/月節約'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'タスクに適したモデルを選択',
+                        columns: ['タスクタイプ', '最良モデル', 'GPT-4oと比較した費用'],
+                        rows: [
+                            { タスクタイプ: 'シンプルな分類', '最良モデル': 'GPT-4o miniまたはHaiku', 'GPT-4oと比較した費用': '33×安い' },
+                            { タスクタイプ: '短いQ&A', '最良モデル': 'GPT-4o miniまたはHaiku', 'GPT-4oと比較した費用': '10–33×安い' },
+                            { タスクタイプ: '複雑な分析/コード', '最良モデル': 'GPT-4oまたはClaude 4.6 Sonnet', 'GPT-4oと比較した費用': 'ベースライン' },
+                            { タスクタイプ: 'ロングフォーム執筆', '最良モデル': 'Claude 4.6 Sonnet', 'GPT-4oと比較した費用': 'ベースライン' },
+                            { タスクタイプ: 'ハイボリューム非公開ワークフロー', '最良モデル': 'Ollama ローカル', 'GPT-4oと比較した費用': 'APIコスト無料' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'コストレシピ — 一般的なシナリオ',
+                        intro: 'これらを開始点として使用してください。',
+                        items: [
+                            '<strong>クイック検索：</strong>GPT-4o mini、≤50トークンシステムプロンプト、1–2文の出力',
+                            '<strong>5ターン研究：</strong>Claude 4.6 Sonnet。5ターンごとに要約して履歴トークンを70%削減',
+                            '<strong>バッチ処理：</strong>フィルタリングにGPT-4o mini、最終合成にのみGPT-4oにエスカレート',
+                            '<strong>プライバシーに敏感：</strong>Ollama/LM Studioをローカルで使用（APIコスト無料、低品質を受け入れる）',
+                            '<strong>モデル比較：</strong>1つのプロンプトを3つのモデルに同時に送信、品質基準を満たす最も安いものを選択'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'ローカルLLM（Ollama）対クラウドAPI',
+                        intro: 'トレードオフ：トークンあたりのコスト無料対低い機能とレイテンシ。',
+                        items: [
+                            '<strong>ハードウェアコスト：</strong>7Bモデル用8GB VRAM、13B用16GB、70B用40GB以上',
+                            '<strong>機能：</strong>分類と要約で優秀。複数ステップの推論とコード生成で苦労',
+                            '<strong>レイテンシ：</strong>クラウド：500ms–2s。ローカルコンシューマハードウェア：2–10s',
+                            '<strong>ローカルを使う場合：</strong>ハイボリューム自動化（1,000+コール/日）、GDPR敏感データ、コスト重視',
+                            '<strong>クラウドを使う場合：</strong>レイテンシに敏感、推論が必要なタスク、一回限りの分析'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '請求書を跳ね上げる一般的な間違い',
+                        intro: 'これらのトークン浪費パターンを避けてください。',
+                        items: [
+                            'すべてのコールで完全な会話履歴（ターン11で5.000トークンを再度支払う）',
+                            'シンプルなタスクに高機能モデル（日付抽出にGPT-4oを使わない）',
+                            '出力長の制限なし（"Xについて教えてください" = 500トークン対"50語で要約" = 60）',
+                            'すべてのコールで長いシステムプロンプト（500トークン × 100コール = 50k浪費トークン）',
+                            'ダウンスケーリングなしの高解像度画像（画像あたり500–2.000トークン）',
+                            'バッチの代わりにマニュアルテストコール（20の変数は20倍のコスト）',
+                            '会話途中でのモデル切り替え（前のメッセージをすべて再送信）'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5ステップでAI APIコストを削減',
+                        items: [
+                            '<strong>タスク複雑さにモデルをマッチ：</strong>シンプルなタスクにはGPT-4o miniまたはClaude Haikuを使用',
+                            '<strong>5ターンごとに会話履歴を要約：</strong>コールごとに完全な再請求を防ぐ',
+                            '<strong>出力長を明確に制限：</strong>"3つの箇条書きで答える"は詳細なトークン重い応答を防ぐ',
+                            '<strong>システムプロンプトを本質にトリミング：</strong>すべての無駄な言葉を削除；すべてのAPIコールで再請求',
+                            '<strong>Ollama経由のローカルLLMをテスト：</strong>ハイボリューム非公開ワークフロー用のトークンあたりコスト無料'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '主なFAQ',
+                        faqs: [
+                            {
+                                q: '典型的な記事またはレポートのトークン数は?',
+                                a: '1.000語の記事 ≈ 1.200–1.500トークン。10ページのPDF ≈ 4.000–6.000トークン。単一画像 ≈ 500–2.000トークン。'
+                            },
+                            {
+                                q: '予想より請求額が高いのはなぜ?',
+                                a: '考えられる原因：完全な会話履歴がすべてのターンで再請求される、長いシステムプロンプト、またはシンプルなタスクに高機能モデルを使用。5ターン後に履歴を要約、プロンプトをトリミング、より安いモデルにダウングレード。'
+                            },
+                            {
+                                q: 'システムプロンプトをキャッシュできますか?',
+                                a: 'はい。OpenAIとAnthropicはプロンプトキャッシング — 90%割引（OpenAI）または10%割引（Anthropic）をキャッシュされたトークンで提供。APIドキュメントのキャッシングヘッダーを参照。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'PromptQuorumがコスト管理を支援する方法',
+                        intro: 'PromptQuorumはトークン使用量を可視化し、実行可能にします。',
+                        items: [
+                            '<strong>バックエンドLLM常に表示：</strong>プロンプトを最適化してQuorum合意分析を実行',
+                            '<strong>マルチモデル比較：</strong>1つのプロンプトを25+モデルの異なる設定で送信',
+                            '<strong>コスト可視化：</strong>コールあたりの正確なトークン数（バックエンドとフロントエンド）を表示',
+                            '<strong>テスト済み結果：</strong>20の同じ研究プロンプトをGPT-4o対miniで実行：17/20品質一致、43×コスト削減'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'AIコストを管理する準備はできていますか?',
+                        body: 'トークン使用量を最適化し、モデルを比較し、支出を30–50×削減します。',
+                        cta: '無料で開始',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: '令牌、成本和限制：AI提示的经济学',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '令牌、成本 & 限制\nAI提示的经济学',
+                        subtitle: '掌握令牌使用、定价和成本优化',
+                        link: 'https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '令牌是什么?',
+                        intro: '令牌是AI模型处理的最小文本单位。',
+                        items: [
+                            '≈ 3–4个字符或¾个英文单词',
+                            '示例："ChatGPT" = 2个令牌，"你好吗?" ≈ 5–6个令牌',
+                            '输入令牌和输出令牌都需要付费',
+                            '其他语言比英语需要20–40%更多令牌'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '令牌计数工作原理',
+                        intro: 'API调用的每个元素都计入账单。',
+                        items: [
+                            '系统提示：在每次API调用时计算（300个令牌 ≈ 每次调用$0.0015）',
+                            '完整对话历史：包含在每个请求中（每次重新计费）',
+                            '附加文件和图像：每个文件100–2.000个令牌',
+                            '模型输出：按输出费率完全计算（通常是输入的2–5倍）',
+                            '5轮对话 = 1.250个令牌。第6轮重新计费所有1.250 +新输出'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '2026年AI模型每百万令牌定价',
+                        columns: ['模型', '输入 ($/1M)', '输出 ($/1M)'],
+                        rows: [
+                            { 模型: 'GPT-4o', '输入 ($/1M)': '$5.00', '输出 ($/1M)': '$15.00' },
+                            { 模型: 'Claude 4.6 Sonnet', '输入 ($/1M)': '$3.00', '输出 ($/1M)': '$15.00' },
+                            { 模型: 'Gemini 1.5 Pro', '输入 ($/1M)': '$3.50', '输出 ($/1M)': '$10.50' },
+                            { 模型: 'GPT-4o mini', '输入 ($/1M)': '$0.15', '输出 ($/1M)': '$0.60' },
+                            { 模型: 'Claude 4.5 Haiku', '输入 ($/1M)': '$0.25', '输出 ($/1M)': '$1.25' },
+                            { 模型: 'Gemini 1.5 Flash', '输入 ($/1M)': '$0.075', '输出 ($/1M)': '$0.30' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '什么是速率限制?',
+                        intro: '速率限制防止滥用并确保公平的资源分配。',
+                        items: [
+                            '每分钟请求数（RPM）：60秒内的API调用次数',
+                            '每分钟令牌数（TPM）：总吞吐量限制',
+                            '免费层：3–15 RPM，40k–100k TPM',
+                            '付费层1：500 RPM，200k–500k TPM',
+                            '企业：3.000+ RPM，数百万TPM'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '如何降低AI API费用30–50倍',
+                        intro: '测试：500令牌提示 → 200令牌 = 18%节省。输出质量相同。',
+                        items: [
+                            '<strong>积极修剪上下文：</strong>不要重复模型已知的内容',
+                            '<strong>使用明确的长度限制：</strong>"用3个要点回答"或"最多100个单词"',
+                            '<strong>避免提示中的填充：</strong>每个不必要的词都要花钱',
+                            '<strong>成本影响示例：</strong>42个额外令牌 × 100次调用/天 × 30天 × $0.005/1M = 每月节省$0.63'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '为任务选择正确的模型',
+                        columns: ['任务类型', '最佳模型', '相对GPT-4o成本'],
+                        rows: [
+                            { 任务类型: '简单分类', '最佳模型': 'GPT-4o mini或Haiku', '相对GPT-4o成本': '便宜33倍' },
+                            { 任务类型: '简短问答', '最佳模型': 'GPT-4o mini或Haiku', '相对GPT-4o成本': '便宜10–33倍' },
+                            { 任务类型: '复杂分析/代码', '最佳模型': 'GPT-4o或Claude 4.6 Sonnet', '相对GPT-4o成本': '基准' },
+                            { 任务类型: '长篇写作', '最佳模型': 'Claude 4.6 Sonnet', '相对GPT-4o成本': '基准' },
+                            { 任务类型: '大容量私有工作流', '最佳模型': 'Ollama本地', '相对GPT-4o成本': '无API成本' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '成本配方 — 常见场景',
+                        intro: '将这些作为起点使用。',
+                        items: [
+                            '<strong>快速查找：</strong>GPT-4o mini，≤50令牌系统提示，1–2句输出',
+                            '<strong>5轮研究：</strong>Claude 4.6 Sonnet。每5轮汇总以减少70%的历史令牌',
+                            '<strong>批量处理：</strong>使用GPT-4o mini进行过滤，仅对最终合成升级到GPT-4o',
+                            '<strong>隐私敏感：</strong>本地运行Ollama/LM Studio（无API成本，接受较低质量）',
+                            '<strong>模型比较：</strong>同时向3个模型发送1个提示，选择满足质量标准的最便宜模型'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '本地LLM（Ollama）与云API',
+                        intro: '权衡：无每令牌API成本对低功能和延迟。',
+                        items: [
+                            '<strong>硬件成本：</strong>7B模型需8GB VRAM，13B需16GB，70B需40GB以上',
+                            '<strong>功能：</strong>在分类和汇总上表现出色。在多步推理和代码生成上困难',
+                            '<strong>延迟：</strong>云：500ms–2s。本地消费硬件：2–10s',
+                            '<strong>何时使用本地：</strong>大容量自动化（1.000+次调用/天），GDPR敏感数据，成本关键',
+                            '<strong>何时使用云：</strong>对延迟敏感，需要推理的任务，一次性分析'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '增加账单的常见错误',
+                        intro: '避免这些浪费令牌的模式。',
+                        items: [
+                            '每次调用都有完整对话历史（第11轮重新支付5.000令牌）',
+                            '对简单任务使用高功能模型（不要用GPT-4o"提取日期"）',
+                            '无输出长度约束（"告诉我X" = 500令牌对"50个词汇总" = 60）',
+                            '每次调用都有长系统提示（500令牌 × 100次调用 = 50k浪费令牌）',
+                            '未按比例缩小的高分辨率图像（每张500–2.000令牌）',
+                            '手动测试调用而不是批处理（20个变量成本增加20倍）',
+                            '在对话途中切换模型（重新发送所有之前的消息）'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5步降低AI API费用',
+                        items: [
+                            '<strong>将模型与任务复杂性匹配：</strong>对简单任务使用GPT-4o mini或Claude Haiku',
+                            '<strong>每5轮汇总对话历史：</strong>防止每次调用完整重新计费',
+                            '<strong>明确限制输出长度：</strong>"用3个要点回答"防止详细的令牌密集型响应',
+                            '<strong>将系统提示修剪至必需：</strong>删除填充词；每个词都在每次API调用时重新计费',
+                            '<strong>通过Ollama测试本地LLM：</strong>大容量私有工作流无每令牌成本'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '关键常见问题',
+                        faqs: [
+                            {
+                                q: '典型文章或报告的令牌数是多少?',
+                                a: '1.000字文章 ≈ 1.200–1.500令牌。10页PDF ≈ 4.000–6.000令牌。单个图像 ≈ 500–2.000令牌。'
+                            },
+                            {
+                                q: '为什么我的账单高于预期?',
+                                a: '可能原因：完整对话历史在每轮重新计费，长系统提示，或对简单任务使用高功能模型。每5轮汇总历史，修剪提示，降级到更便宜模型。'
+                            },
+                            {
+                                q: '我能缓存系统提示吗?',
+                                a: '是的。OpenAI和Anthropic提供提示缓存 — 90%折扣（OpenAI）或10%折扣（Anthropic）缓存令牌。检查API文档的缓存标头。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'PromptQuorum如何帮助管理成本',
+                        intro: 'PromptQuorum使令牌使用可见且可行动。',
+                        items: [
+                            '<strong>后端LLM始终可见：</strong>优化您的提示并运行Quorum共识分析',
+                            '<strong>多模型比较：</strong>在25+个模型上以不同设置发送一个提示',
+                            '<strong>成本可见性：</strong>查看每次调用的确切令牌数（后端和前端）',
+                            '<strong>测试结果：</strong>20个相同研究提示在GPT-4o对mini：17/20质量匹配，43倍成本降低'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '准备好控制您的AI成本?',
+                        body: '优化令牌使用，比较模型，降低支出30–50倍。',
+                        cta: '免费开始',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        // Utility: render slide to HTML
+        function renderSlide(slide) {
+            let html = '';
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}">${slide.link.split('/').pop().replace(/-/g, ' ')}</a>
+                        </p>
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p>${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1.2em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ol style="font-size: 1.1em; margin-top: 20px; text-align: left; max-width: 640px; margin-left: auto; margin-right: auto;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ol>';
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `
+                            <p style="margin-top: 20px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+                                <strong>Q: ${faq.q}</strong><br/>
+                                A: ${faq.a}
+                            </p>
+                        `;
+                    });
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2 style="color: #6750a4;">${slide.h2}</h2>
+                        <p style="margin-top: 30px; font-size: 1.2em;">${slide.body}</p>
+                        <p style="margin-top: 40px;">
+                            <a href="${slide.href}" style="display: inline-block; padding: 16px 40px; background: #6750a4; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: 700; transition: background 0.2s;">
+                                ${slide.cta}
+                            </a>
+                        </p>
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        // Main script
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        // Update header
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        // Render slides
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        // Initialize slide navigation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Print handlers — show all slides before browser's print layout, restore after
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        // Print trigger
+        if (isPrint) {
+            window.addEventListener('load', () => {
+                window.print();
+            });
+        }
+
+        showSlide(0);
+    </script>
+</body>
+</html>
