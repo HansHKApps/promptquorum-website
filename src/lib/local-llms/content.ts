@@ -16620,7 +16620,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     en: {
       theme: 'Hardware & Performance',
       title: 'Local LLM Hardware Guide 2026: GPU, CPU, and RAM Requirements Explained',
-      seoTitle: 'Local LLM Hardware Guide 2026: GPU VRAM Calculator & Benchmarks',
+      seoTitle: 'Local LLM Hardware Guide 2026: GPU & VRAM Requirements',
       intro: 'Running local LLMs requires understanding three components: GPU (optional but recommended), CPU, and RAM. As of April 2026, a 7B-parameter model needs 8 GB RAM minimum, while a 70B model needs 40+ GB. This guide covers real hardware recommendations for RTX 5090, 4090, Mac Silicon, and budget builds, plus VRAM math to calculate requirements for any model size.',
       metaDescription: 'Local LLM hardware guide: GPU, CPU, RAM requirements for 7B and 70B models. VRAM calculator, benchmarks, optimization. Free beta — April 2026.',
       publishDate: '2026-04-04',
@@ -16846,6 +16846,11 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': 'Should I buy RTX 5090 or wait for RTX 6090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090 is available (early 2026). RTX 6000 Ada server GPUs are also solid. Unless you have unlimited budget, RTX 5090 or 4090 are excellent.' } },
           { '@type': 'Question', 'name': 'How does quantization affect quality?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FP16 = 100% quality (baseline), Q8 = 99%, Q5 = 95%, Q4 = 90–95%. For most tasks, Q4 is indistinguishable from FP16.' } },
           { '@type': 'Question', 'name': 'Can I upgrade GPU later?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Start with RTX 4070 Ti now, upgrade to RTX 5090 in 2 years if needed. GPU is the most replaceable component.' } },
+          { '@type': 'Question', 'name': 'How much RAM do I need to run a 7B model locally?', 'acceptedAnswer': { '@type': 'Answer', 'text': '8 GB RAM is the absolute minimum for a 7B model. 16 GB is recommended for comfortable use alongside browser and OS. 32 GB gives headroom for larger context windows and multitasking.' } },
+          { '@type': 'Question', 'name': 'Can I run local LLMs on Apple Silicon (M1/M2/M3)?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Apple Silicon uses unified memory shared between CPU and GPU. M3 Max (128 GB) runs 70B models at 20+ tokens/sec. M2 Pro (16 GB) runs 7B models at 30–50 tokens/sec.' } },
+          { '@type': 'Question', 'name': 'What CPU is best for local LLMs without a GPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'High-core-count CPUs with large L3 cache: AMD Ryzen 9 7950X or Intel Core i9-14900K. Expect 5–15 tokens/sec for 7B models. CPU inference is 3–5× slower than GPU.' } },
+          { '@type': 'Question', 'name': 'Does storage speed affect local LLM performance?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, at model load time. NVMe SSD (3–7 GB/s) loads a 7B model in 2–5 seconds vs. 20–60 seconds on HDD. Inference speed after loading is unaffected by storage.' } },
+          { '@type': 'Question', 'name': 'Can I use multiple GPUs to run larger models?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, via tensor parallelism. Two RTX 3090s (24 GB each) provide 48 GB VRAM for 70B models at FP16. Ollama and llama.cpp support multi-GPU via --n-gpu-layers split across cards.' } },
         ],
       },
       itemListSchema: {
@@ -16867,7 +16872,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       title: 'Lokale LLM Hardware-Anforderungen 2026: GPU, CPU und RAM erklärt',
       seoTitle: 'Lokale LLM Hardware 2026: GPU VRAM-Rechner & Benchmarks',
       intro: 'Um lokale LLMs auszuführen, müssen Sie drei Komponenten verstehen: GPU (optional, aber empfohlen), CPU und RAM. Im April 2026 benötigt ein 7B-Parameter-Modell mindestens 8 GB RAM, während ein 70B-Modell 40+ GB benötigt. Dieser Leitfaden behandelt echte Hardware-Empfehlungen für RTX 5090, 4090, Mac Silicon und Budget-Builds sowie VRAM-Mathematik zur Berechnung der Anforderungen für jede Modellgröße.',
-      metaDescription: 'Lokale LLM Hardware-Anleitung: GPU-, CPU- und RAM-Anforderungen für 7B- und 70B-Modelle. VRAM-Rechner, Benchmarks, Optimierung. Kostenlos in Beta — April 2026.',
+      metaDescription: 'GPU-, CPU- und RAM-Anforderungen für 7B- und 70B-Modelle. VRAM-Rechner, RTX 4070–5090-Benchmarks und Optimierungstipps für lokale LLMs im Jahr 2026.',
       publishDate: '2026-04-04',
       readTime: '13 Min. Lesezeit',
       educationalLevel: 'Intermediate',
@@ -17110,7 +17115,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     fr: {
       theme: 'Hardware & Performance',
       title: 'Guide Matériel Local LLM 2026: GPU, CPU et RAM Expliqués',
-      seoTitle: 'Guide Matériel LLM Local 2026: Calculateur VRAM & Benchmarks',
+      seoTitle: 'Guide Matériel LLM 2026 : Prérequis GPU, VRAM et RAM',
       intro: 'Exécuter des LLM locaux nécessite de comprendre trois composants: GPU (facultatif mais recommandé), CPU et RAM. En avril 2026, un modèle 7B à paramètres a besoin d\'un minimum de 8 GB de RAM, tandis qu\'un modèle 70B a besoin de 40+ GB. Ce guide couvre les recommandations matérielles réelles pour RTX 5090, 4090, Mac Silicon et les builds économiques, ainsi que les mathématiques VRAM pour calculer les exigences pour n\'importe quelle taille de modèle.',
       metaDescription: 'Guide matériel local LLM: exigences GPU, CPU et RAM pour modèles 7B et 70B. Calculateur VRAM, benchmarks, optimisation. Gratuit en bêta — avril 2026.',
       publishDate: '2026-04-04',
@@ -21554,6 +21559,115 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             'llama.cpp project GitHub: quantization levels (Q4, Q5, Q8) and memory calculations',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Best Budget GPUs for Local LLM Inference Under $300',
+        'description': 'Best budget GPUs for local LLMs under $300: RTX 3060, RTX 4060 Ti, RTX 4070 Super. Full VRAM math, performance comparisons, and buying tips. Free beta — April 2026.',
+        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm?lang=en',
+        'inLanguage': 'en',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'NVIDIA GPU' },
+          { '@type': 'Thing', 'name': 'RTX 3060' },
+          { '@type': 'Thing', 'name': 'RTX 4060 Ti' },
+          { '@type': 'Thing', 'name': 'GPU VRAM' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2']
+        },
+        'educationalLevel': 'Beginner',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'What is the best budget GPU for local LLMs in 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 3060 12GB ($200–250 used) is the best overall budget pick. It balances VRAM capacity with cost, running 7B and 13B models smoothly at acceptable speeds.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run a 7B model on a 6GB GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Technically possible at Q4 quantization, but practically no. You will hit out-of-memory (OOM) errors. Buy at least 8GB VRAM for comfortable inference.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Should I buy a new GPU or used?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Used enterprise cards (RTX A2000, A4000) and older consumer cards (RTX 3060, 3080) offer 30–40% better value. New cards guarantee warranty. Budget-conscious buyers should look at used market.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How much VRAM do I need for a 13B model?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For Q4 quantization: 8–10GB is tight but works. Q5 or Q8: 12–16GB recommended. With system overhead, plan for at least 12GB total VRAM.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is DDR5 RAM important for local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. GPU VRAM matters far more than system RAM speed. DDR5 adds cost without measurable LLM speedup. Save money and use DDR4.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Should I buy an RTX 4060 Ti or RTX 3060?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4060 Ti is 35% faster per TFLOP but has only 8GB VRAM (vs. 12GB on used RTX 3060). For 7B models, 4060 Ti wins on speed. For 13B models, older 3060 12GB is more practical.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What CPU should I pair with a budget GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'An 8-core mid-range CPU (Ryzen 5 5600, i5 13th gen) is sufficient. CPU does not limit LLM inference speed when a GPU is present. Avoid bottleneck: do not buy a $1500 CPU with a $250 GPU.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use AMD GPUs instead of NVIDIA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AMD ROCm support is improving but still less reliable than CUDA. For budget buyers, NVIDIA CUDA offers simplicity and tool maturity. AMD is viable only if you find exceptional pricing or already own AMD hardware.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the total system cost for a budget local LLM setup?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Plan $700–1,000 total: GPU $250–400 (30–40% of budget), CPU $150–250, RAM $100–150, SSD $100, PSU + case $100–200. Balance all components to avoid bottlenecks.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Will GPU prices drop in 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Used market prices are volatile. New GPU launches typically drop used prices 10–20%. Budget buyers benefit from waiting 2–3 months after new GPU announcements. Monitor eBay and Proxibid for used listings.'
+            }
+          }
+        ]
       },
     },
   },
