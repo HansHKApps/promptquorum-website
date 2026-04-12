@@ -11317,6 +11317,84 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'ListItem', 'position': 8, 'name': 'Mistral 7B v0.3',       'description': '32K context. 16K practical limit. ollama run mistral' },
         ],
       },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Can I summarize an entire book with a local LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A typical 300-page book is 90,000–120,000 words — approximately 120K–160K tokens. This exceeds the practical reliable context of most 7B models and requires either a 70B model (64K reliable) or chunked processing. For 7B models, split the book into 20K-word chapters and summarize each, then summarize the chapter summaries.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How many pages of text fit in 32K tokens?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Approximately 50–70 pages of standard English text (250 words per page). A 32K token context holds a short novel, a full research paper with appendices, or a complete technical specification document.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does increasing context length slow down inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes — processing a 32K context takes approximately 3–4× longer than processing a 4K context on the same hardware, due to the quadratic scaling of attention computation. Generation speed (tokens per second) is not significantly affected, but the time to first token (TTFT) scales with input length.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which local LLM handles RAG better than long context?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For document search and retrieval tasks, RAG (retrieval-augmented generation) is often more effective than feeding entire documents as context. RAG retrieves the 3–5 most relevant chunks from a large document set and provides only those to the model. This uses 4K–8K tokens of context and avoids the "lost in the middle" problem. Tools like GPT4All LocalDocs and LlamaIndex implement local RAG.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the KV cache and why does it grow with context length?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The KV cache (key-value cache) stores attention states for every token processed in the context window. Each token requires a fixed amount of memory for its key and value vectors — so a 32K context requires 8× more KV cache memory than a 4K context. This is why a 7B model at Q4_K_M needs ~6 GB for 4K context but ~9 GB for 32K context. The model weights stay the same — only the KV cache grows.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can local models handle 1M token contexts like Gemini 2.5 Pro?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No — as of April 2026, no locally-runnable model supports 1M token contexts. Gemini 2.5 Pro\'s 1M token window requires Google\'s TPU infrastructure. Locally, 128K is the maximum supported by current consumer hardware. For tasks requiring 1M+ token contexts, cloud APIs remain the only practical option.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the "lost in the middle" problem and how do I avoid it?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Research shows LLMs reliably retrieve information from the beginning and end of the context window, but miss details from the middle. For a 128K context, content placed at the 40K–80K token mark is most likely to be ignored. To avoid this: either keep important information at the start of the prompt, use RAG to retrieve only relevant chunks, or process long documents in overlapping 16K–32K sections.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I check what context length Ollama is using?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Run `ollama show <model>` — the output lists the parameters including num_ctx. If it shows 2048, Ollama is using the default, not the model\'s full context window. To change it persistently, create a Modelfile with PARAMETER num_ctx 32768 and run ollama create <name> -f Modelfile. Check active sessions with ollama ps.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is long context or RAG better for document question-answering?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG is usually more effective and RAM-efficient than long context for document Q&A. RAG retrieves 3–5 relevant chunks (4K–8K tokens total) from a large corpus and avoids the "lost in the middle" problem. Long context is better when the model needs to understand the entire document structure or when exact ordering and relationships between sections matter. For most practical document Q&A, start with RAG.',
+            },
+          },
+        ],
+      },
       toc: [
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
         { label: 'What Is Context Length?', anchor: 'what-is-context-length' },
