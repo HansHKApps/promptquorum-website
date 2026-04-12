@@ -631,6 +631,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         'description': 'LM Studio runs local LLMs via GUI — no terminal needed. Install on macOS, Windows, Linux, load your first model, and start chatting in under 5 minutes.',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2']
+        },
       },
     },
     de: {
@@ -1613,7 +1617,11 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=en',
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2']
+        }
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -4697,6 +4705,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           { '@type': 'Thing', 'name': 'VRAM Requirements' },
           { '@type': 'Thing', 'name': 'Q4 Quantization' },
         ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2']
+        },
       },
       howToSchema: {
         '@context': 'https://schema.org',
@@ -17096,6 +17108,11 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': 'Sollte ich RTX 5090 kaufen oder auf RTX 6090 warten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090 ist verfügbar (Anfang 2026). RTX 6000 Ada Server-GPUs sind auch solide. Falls Sie kein unbegrenztes Budget haben, sind RTX 5090 oder 4090 ausgezeichnet.' } },
           { '@type': 'Question', 'name': 'Wie beeinflusst Quantisierung die Qualität?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FP16 = 100% Qualität (Basis), Q8 = 99%, Q5 = 95%, Q4 = 90–95%. Für die meisten Aufgaben ist Q4 nicht zu unterscheiden von FP16.' } },
           { '@type': 'Question', 'name': 'Kann ich GPU später aufrüsten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Beginnen Sie jetzt mit RTX 4070 Ti, rüsten Sie in 2 Jahren auf RTX 5090 auf, falls nötig. GPU ist die am meisten austauschbare Komponente.' } },
+          { '@type': 'Question', 'name': 'Wie viel RAM benötige ich für ein 7B-Modell?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mindestens 8 GB RAM sind erforderlich. 16 GB werden für komfortablen Betrieb neben Browser und OS empfohlen. 32 GB bieten Spielraum für größere Kontextfenster und Multitasking.' } },
+          { '@type': 'Question', 'name': 'Kann ich lokale LLMs auf Apple Silicon (M1/M2/M3) nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Apple Silicon nutzt einheitlichen Speicher für CPU und GPU. M3 Max (128 GB) führt 70B-Modelle mit 20+ Token/Sek. aus. M2 Pro (16 GB) erreicht 30–50 Token/Sek. für 7B-Modelle.' } },
+          { '@type': 'Question', 'name': 'Welche CPU eignet sich ohne GPU am besten für lokale LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CPUs mit vielen Kernen und großem L3-Cache: AMD Ryzen 9 7950X oder Intel Core i9-14900K. Erwarte 5–15 Token/Sek. für 7B-Modelle. CPU-Inferenz ist 3–5× langsamer als GPU.' } },
+          { '@type': 'Question', 'name': 'Beeinflusst die Speichergeschwindigkeit lokale LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja beim Laden. NVMe SSD (3–7 GB/s) lädt ein 7B-Modell in 2–5 Sekunden, eine HDD benötigt 20–60 Sekunden. Die Inferenzgeschwindigkeit nach dem Laden ist unabhängig vom Speicher.' } },
+          { '@type': 'Question', 'name': 'Kann ich mehrere GPUs für größere Modelle nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, über Tensor-Parallelismus. Zwei RTX 3090 (je 24 GB VRAM) ergeben 48 GB für 70B-FP16-Modelle. Ollama und llama.cpp unterstützen Multi-GPU über --n-gpu-layers.' } },
         ],
       },
       itemListSchema: {
@@ -17341,6 +17358,11 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': 'Dois-je acheter RTX 5090 ou attendre RTX 6090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090 est disponible (début 2026). GPUs serveur RTX 6000 Ada sont aussi solides. À moins budget illimité, RTX 5090 ou 4090 sont excellents.' } },
           { '@type': 'Question', 'name': 'Comment quantisation affecte-t-elle qualité?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FP16 = 100% qualité (baseline), Q8 = 99%, Q5 = 95%, Q4 = 90–95%. Pour plupart tâches, Q4 est indiscernable de FP16.' } },
           { '@type': 'Question', 'name': 'Puis-je augmenter GPU plus tard?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Commencez RTX 4070 Ti maintenant, augmentez RTX 5090 en 2 ans si besoin. GPU est composant plus remplaçable.' } },
+          { '@type': 'Question', 'name': 'Quelle quantité de RAM faut-il pour un modèle 7B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': '8 Go de RAM minimum pour un modèle 7B. 16 Go recommandés pour usage confortable avec navigateur et OS. 32 Go offrent de la marge pour les contextes longs et le multitâche.' } },
+          { '@type': 'Question', 'name': 'Peut-on utiliser des LLM locaux sur Apple Silicon (M1/M2/M3) ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. L'Apple Silicon utilise une mémoire unifiée partagée CPU/GPU. M3 Max (128 Go) fait tourner les modèles 70B à 20+ tokens/sec. M2 Pro (16 Go) atteint 30–50 tokens/sec pour un 7B.' } },
+          { '@type': 'Question', 'name': 'Quel CPU choisir sans GPU pour des LLM locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CPU multicœurs avec grand cache L3 : AMD Ryzen 9 7950X ou Intel Core i9-14900K. Attendez 5–15 tokens/sec pour un modèle 7B. L'inférence CPU est 3–5× plus lente que sur GPU.' } },
+          { '@type': 'Question', 'name': 'La vitesse du stockage affecte-t-elle les LLM locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, au chargement. Un SSD NVMe (3–7 Go/s) charge un modèle 7B en 2–5 secondes vs 20–60 secondes sur HDD. La vitesse d'inférence après chargement n'est pas affectée.' } },
+          { '@type': 'Question', 'name': 'Peut-on utiliser plusieurs GPU pour des modèles plus grands ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, via le tensor parallelism. Deux RTX 3090 (24 Go chacune) offrent 48 Go VRAM pour des modèles 70B en FP16. Ollama et llama.cpp supportent le multi-GPU via --n-gpu-layers.' } },
         ],
       },
       itemListSchema: {
@@ -17586,6 +17608,11 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': 'RTX 5090 を購入するか RTX 6090 を待つべきですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090 は利用可能 (2026 年初頭)。RTX 6000 Ada サーバー GPU も堅牢です。予算が無制限でない限り、RTX 5090 または 4090 は優れています。' } },
           { '@type': 'Question', 'name': '量子化は品質にどのように影響しますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FP16 = 100% 品質 (ベースライン)、Q8 = 99%、Q5 = 95%、Q4 = 90–95%。ほとんどのタスクでは、Q4 は FP16 と区別がつきません。' } },
           { '@type': 'Question', 'name': '後で GPU をアップグレードできますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。今は RTX 4070 Ti で開始し、必要に応じて 2 年後に RTX 5090 にアップグレード。GPU は最も交換可能なコンポーネント。' } },
+          { '@type': 'Question', 'name': '7Bモデルに必要なRAM容量は？', 'acceptedAnswer': { '@type': 'Answer', 'text': '最低8 GBのRAMが必要です。ブラウザとOSと並行した快適な動作には16 GBを推奨します。大きなコンテキストとマルチタスクには32 GBが理想的です。' } },
+          { '@type': 'Question', 'name': 'Apple Silicon（M1/M2/M3）でローカルLLMは動作しますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Apple SiliconはCPUとGPUで共有するユニファイドメモリを使用します。M3 Max（128 GB）は70Bモデルを毎秒20トークン以上で実行可能。M2 Pro（16 GB）なら7Bモデルを毎秒30〜50トークンで処理できます。' } },
+          { '@type': 'Question', 'name': 'GPUなしでローカルLLMに最適なCPUは？', 'acceptedAnswer': { '@type': 'Answer', 'text': '大きなL3キャッシュを持つ多コアCPUが最適です：AMD Ryzen 9 7950XやIntel Core i9-14900K。7Bモデルで毎秒5〜15トークン程度。CPU推論はGPUより3〜5倍遅くなります。' } },
+          { '@type': 'Question', 'name': 'ストレージ速度はLLMのパフォーマンスに影響しますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '起動時の読み込み速度に影響します。NVMe SSD（3〜7 GB/s）なら7Bモデルを2〜5秒で読み込めますが、HDDでは20〜60秒かかります。読み込み後の推論速度はストレージに依存しません。' } },
+          { '@type': 'Question', 'name': '複数のGPUで大きなモデルを実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、テンソル並列処理を使用して可能です。RTX 3090を2枚（各24 GB VRAM）で合計48 GBとなり、70BモデルをFP16で実行できます。OllamaとlllamaCPPは--n-gpu-layersでマルチGPUをサポートします。' } },
         ],
       },
       itemListSchema: {
@@ -17831,6 +17858,11 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': '我应该购买RTX 5090还是等待RTX 6090？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090可用 (2026年初)。RTX 6000 Ada服务器GPU也很强大。除非预算无限，RTX 5090或4090都很棒。' } },
           { '@type': 'Question', 'name': '量化如何影响质量？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FP16 = 100%质量 (基线)、Q8 = 99%、Q5 = 95%、Q4 = 90–95%。对于大多数任务，Q4与FP16无法区分。' } },
           { '@type': 'Question', 'name': '我可以稍后升级GPU吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。现在从RTX 4070 Ti开始，如需要可在2年后升级到RTX 5090。GPU是最可替换的组件。' } },
+          { '@type': 'Question', 'name': '运行7B模型需要多少RAM？', 'acceptedAnswer': { '@type': 'Answer', 'text': '最低需要8 GB RAM。推荐16 GB以便在浏览器和操作系统并行时舒适运行。32 GB则可处理更大上下文窗口和多任务操作。' } },
+          { '@type': 'Question', 'name': 'Apple Silicon（M1/M2/M3）可以运行本地LLM吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。Apple Silicon使用CPU和GPU共享的统一内存。M3 Max（128 GB）可以每秒20+个token运行70B模型。M2 Pro（16 GB）运行7B模型可达每秒30-50个token。' } },
+          { '@type': 'Question', 'name': '没有GPU时，哪款CPU最适合本地LLM？', 'acceptedAnswer': { '@type': 'Answer', 'text': '具有大L3缓存的多核CPU最佳：AMD Ryzen 9 7950X或Intel Core i9-14900K。7B模型预计每秒5-15个token。CPU推理比GPU慢3-5倍。' } },
+          { '@type': 'Question', 'name': '存储速度会影响本地LLM性能吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '会影响加载速度。NVMe SSD（3-7 GB/s）加载7B模型需2-5秒，HDD需20-60秒。模型加载到RAM后，推理速度不受存储速度影响。' } },
+          { '@type': 'Question', 'name': '能否使用多个GPU运行更大的模型？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，通过张量并行实现。两张RTX 3090（各24 GB VRAM）合计48 GB，可运行FP16格式的70B模型。Ollama和llama.cpp通过--n-gpu-layers支持多GPU分割。' } },
         ],
       },
       itemListSchema: {
@@ -21691,7 +21723,11 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=en',
         'inLanguage': 'en',
         'datePublished': '2026-04-05',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2']
+        }
       },
       faqSchema: {
         '@context': 'https://schema.org',
