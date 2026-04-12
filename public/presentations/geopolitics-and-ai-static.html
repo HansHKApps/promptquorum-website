@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Geopolitics: EU AI Act vs US vs China | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation on AI geopolitics. Learn how the EU AI Act, US strategy, and China's CAC regulations affect AI deployment worldwide." />
+    <meta property="og:title" content="AI Geopolitics: EU AI Act vs US vs China — PromptQuorum" />
+    <meta property="og:description" content="Master AI compliance across the EU, US, and China. Understand the Brussels Effect, CAC content filters, and prompt optimization by region." />
+    <meta property="og:type" content="website" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles — A4 landscape with mm dimensions */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+            }
+
+            .slide h1, .slide h2, .slide p {
+                color: #1c1b1f !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">AI Geopolitics: EU AI Act vs US vs China</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides injected by JS -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+    const CONTENT = {
+      en: {
+        title: 'AI Geopolitics: EU AI Act vs US vs China',
+        slides: [
+          {
+            type: 'title',
+            h1: 'AI Geopolitics Explained: EU AI Act vs US vs China',
+            subtitle: 'The US, China, and EU pursue incompatible AI governance visions. Compliance obligations, procurement constraints, and data residency rules depend on where you deploy.',
+            link: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai'
+          },
+          {
+            type: 'list',
+            h2: 'The 3-Way AI Race',
+            items: [
+              '<strong>US:</strong> Leads frontier models (GPT-4o, Claude, Gemini) + chip design. $67B private AI investment in 2023. No federal AI law — fast deployment, fragmented compliance.',
+              '<strong>China:</strong> Leads AI patent volume + facial recognition. DeepSeek R1 matched GPT-4o on benchmarks at ~$6M training cost (94% cheaper). State-directed infrastructure.',
+              '<strong>EU:</strong> Leads regulation — EU AI Act is the global reference framework. Mistral AI leads European models. Brussels Effect: EU rules apply globally.',
+              '<strong>Hardware:</strong> TSMC (Taiwan) manufactures ~90% of advanced chips. Nvidia holds ~80% AI training GPU share. US export controls restrict China\'s access to H100/H200.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '5 Geopolitical Dimensions of AI',
+            items: [
+              '<strong>1. Economy:</strong> AI drives productivity, automation, GDP growth. OECD projects AI adds $15.7T to global GDP by 2030.',
+              '<strong>2. Military:</strong> Autonomous weapons, battlefield intelligence, cyber operations at machine speed. US JAIC and China Military-Civil Fusion both prioritize AI.',
+              '<strong>3. Intelligence:</strong> NSA, GCHQ, and China\'s MSS use AI to process satellite imagery and signals at scale. AI-generated deepfakes are emerging influence tools.',
+              '<strong>4. Infrastructure:</strong> TSMC chip fabs, data centers, undersea cables, power grids — controlling these gives structural leverage.',
+              '<strong>5. Global Governance:</strong> Which regulatory framework becomes the global default? EU AI Act, US NIST, or China CAC? The Brussels Effect means the EU is already winning this dimension.'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Three Visions of AI Governance',
+            line1: 'US: Competitiveness first — innovation, no federal AI law, voluntary NIST framework',
+            line2: 'China: State control first — CAC regulations, content filters built into every API',
+            tip: 'EU: Rights-based legal framework — the Brussels Effect makes EU rules the global default'
+          },
+          {
+            type: 'table',
+            h2: 'Global AI Regulation: EU vs US vs China',
+            columns: ['Dimension', 'EU', 'US', 'China'],
+            rows: [
+              {'Dimension': 'Approach', 'EU': 'Rights-based, binding law', 'US': 'Sectoral, voluntary', 'China': 'State-directed, control-first'},
+              {'Dimension': 'Key Legislation', 'EU': 'EU AI Act (2024)', 'US': 'No federal AI law; NIST RMF (voluntary)', 'China': 'CAC Generative AI Measures (2023)'},
+              {'Dimension': 'Max Fine', 'EU': '€35M or 7% global revenue', 'US': 'No AI-specific fine', 'China': '¥100,000 per violation'},
+              {'Dimension': 'Enforcement', 'EU': 'EU AI Office + national authorities', 'US': 'FTC, FDA, CFPB, EEOC', 'China': 'Cyberspace Administration (CAC)'},
+              {'Dimension': 'Reach', 'EU': 'Brussels Effect — extraterritorial', 'US': 'Hardware export controls only', 'China': 'BRI AI exports + Great Firewall'}
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Prompt Optimization by Region',
+            columns: ['Region', 'Key Constraint', 'Best Model'],
+            rows: [
+              {'Region': 'European Union', 'Key Constraint': 'EU AI Act: disclose AI use. GDPR: no personal data without legal basis. High-risk AI needs human oversight.', 'Best Model': 'Mistral Large (EU-HQ) or local Ollama'},
+              {'Region': 'United States', 'Key Constraint': 'Sectoral: HIPAA (healthcare PHI), CCPA (CA personal data), FTC Act (no deceptive content)', 'Best Model': 'GPT-4o or Claude 4.6 Sonnet'},
+              {'Region': 'China', 'Key Constraint': 'CAC: political content blocked. API returns HTTP 200 with is_safe: 0 (not HTTP 4xx). PIPL: Chinese user data stays in China.', 'Best Model': 'Qwen 2.5 72B (self-hosted) or ERNIE 4.0'}
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'EU AI Act: 4 Risk Tiers',
+            items: [
+              '<strong>Unacceptable Risk (banned Aug 2024):</strong> Social scoring, real-time public biometrics, AI exploiting cognitive vulnerabilities, untargeted facial image scraping',
+              '<strong>High Risk:</strong> Hiring, credit, healthcare, law enforcement AI. Requires conformity assessments, transparency docs, human oversight, EU database registration.',
+              '<strong>Limited Risk:</strong> Chatbots and AI-generated content. Must disclose to users that they are interacting with AI.',
+              '<strong>Minimal Risk:</strong> Spam filters, video games, recommendation systems. No specific obligations beyond existing law.',
+              '<strong>GPAI Models (GPT-4o, Claude, Gemini):</strong> Must publish training data summaries, comply with EU copyright law, report serious incidents. From August 2025.',
+              '<strong>Fines:</strong> Up to €35M or 7% global revenue for prohibited practices; €15M or 3% for high-risk violations.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways for Prompt Engineers',
+            items: [
+              'Chinese AI APIs (DeepSeek, ERNIE 4.0, Qwen) filter at API level — political topics return HTTP 200 with <code>is_safe: 0</code>, not HTTP 4xx. Handle explicitly in application code.',
+              'Mistral models and local Ollama deployments satisfy EU AI Act data residency — prompts and outputs never leave your infrastructure.',
+              'GPT-4o and Claude 4.6 Sonnet are GPAI-compliant under the EU AI Act (from Aug 2025). Your obligation is at the application (deployer) level, not the model level.',
+              'Brussels Effect: prompts sent to US-hosted models for EU-facing products are subject to EU AI Act requirements — even if your company is not EU-based.',
+              'Multi-jurisdictional testing: dispatch the same prompt to Mistral (EU), GPT-4o (US), and Qwen (China) simultaneously to compare outputs across regulatory contexts. PromptQuorum supports this natively.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'AI Geopolitics: Key Data Points',
+            items: [
+              '<strong>US investment:</strong> $52B (CHIPS Act, 2022) for domestic semiconductor manufacturing + $200B for science R&D across 25 federal agencies.',
+              '<strong>China investment:</strong> ¥1 trillion ($140B) government-directed AI and semiconductor investment 2021–2025. Target: global AI leadership by 2030.',
+              '<strong>TSMC monopoly:</strong> Manufactures ~90% of advanced chips below 7nm. ASML (Netherlands) is sole EUV lithography machine manufacturer — a global chokepoint.',
+              '<strong>DeepSeek cost compression:</strong> 94% — GPT-4 estimated ~$100M training cost (2023) vs DeepSeek R1 reported ~$6M (Jan 2025). Export controls cannot permanently contain Chinese frontier AI.',
+              '<strong>EU AI Act coverage:</strong> 450 million consumers across 27 member states. GPAI systemic risk threshold: 10²⁵ training FLOPs.',
+              '<strong>Bletchley Declaration (Nov 2023):</strong> Signed by 28 nations including US, China, EU — broadest international AI safety consensus, though non-binding.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'EU AI Act Compliance Timeline',
+            items: [
+              'February 2025: EU AI Act entered into force. Prohibited practices ban phased in.',
+              'August 2025: GPAI model obligations apply — GPT-4o, Claude, Gemini must publish training data summaries and comply with EU copyright law.',
+              'August 2026: High-risk AI systems fully enforced — hiring, credit, healthcare, law enforcement AI requires conformity assessments.',
+              'August 2027: High-risk AI embedded in regulated products (medical devices, vehicles) fully enforced.',
+              'Ongoing: Brussels Effect — if your AI reaches any EU resident, the EU AI Act applies regardless of where you are headquartered.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Deploying AI in China: 6 Steps',
+            items: [
+              'Understand available models: GPT-4o and Claude are blocked in China. Available: Qwen 2.5 72B, ERNIE 4.0 (Baidu Qianfan API), Doubao (ByteDance), DeepSeek R1.',
+              'Plan for API content filters: CPC criticism, Taiwan/Tibet/Xinjiang independence, Tiananmen events blocked. Response is HTTP 200 with is_safe: 0 — not HTTP 4xx. Handle in code.',
+              'Complete CAC Security Assessment before any consumer-facing launch. Submit training data sources, content filter docs, sample outputs. Timeline: 45–90 days.',
+              'Deploy hybrid model: Qwen 2.5 72B on your own infrastructure (outside China) for international users; ERNIE 4.0 via Qianfan API for China segment under CAC registration.',
+              'Comply with PIPL (2021): Chinese user personal data must stay in China. Route all China-user traffic through Alibaba Cloud, Tencent Cloud, or Huawei Cloud.',
+              'Partner with a mainland China entity for consumer-facing products. Foreign companies cannot hold CAC registration directly.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Frequently Asked Questions',
+            faqs: [
+              { q: 'What is the EU AI Act?', a: 'World\'s first comprehensive AI law, passed March 2024 with 523 votes in favor. Classifies AI into 4 risk tiers. Full enforcement from August 2026. Fines up to €35M or 7% global revenue.' },
+              { q: 'Does the EU AI Act apply to companies outside the EU?', a: 'Yes — Brussels Effect. Any organization placing AI on the EU market or whose AI outputs are used in the EU must comply, regardless of headquarters location.' },
+              { q: 'What are the fines for violating the EU AI Act?', a: 'Up to €35M or 7% of global annual revenue for prohibited AI practices. High-risk AI violations: up to €15M or 3%. Incorrect information to authorities: up to €7.5M or 1%.' },
+              { q: 'How does US AI regulation differ from the EU?', a: 'US uses sectoral, voluntary approach. No federal AI law. Existing regulators (FTC, FDA, CFPB) apply their mandates to AI. Biden AI safety EO revoked Jan 2025 — replaced with competitiveness-focused plan.' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              'AI is a strategic national technology — the US, China, and EU compete for dominance.',
+              'Countries compete for three resources: compute (chips), AI talent, and training data.',
+              'The EU AI Act is the world\'s first binding AI law — fines reach €35M or 7% of global turnover.',
+              'The Brussels Effect: EU AI Act rules apply to any AI reaching EU users, worldwide.',
+              'The US has no federal AI law — sector regulators apply existing mandates to AI in their domains.',
+              'DeepSeek R1 matched GPT-4o on key benchmarks — GPU export controls have not stopped Chinese frontier AI.',
+              'TSMC in Taiwan fabricates the chips powering all frontier AI — a single geopolitical dependency.'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Test AI Across All Three Regulatory Regimes',
+            body: 'PromptQuorum lets you dispatch the same prompt to Mistral (EU-compliant), GPT-4o (US/GPAI), and Qwen (China-accessible) simultaneously — benchmark outputs across regulatory contexts in one click.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      de: {
+        title: 'KI-Geopolitik: EU AI Act vs. USA vs. China',
+        slides: [
+          {
+            type: 'title',
+            h1: 'KI-Geopolitik erklärt: EU AI Act vs. USA vs. China',
+            subtitle: 'Die USA, China und die EU verfolgen unvereinbare KI-Governance-Visionen. Compliance-Pflichten, Beschaffungsbeschränkungen und Datenspeicheranforderungen hängen davon ab, wo Sie einsetzen.',
+            link: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai'
+          },
+          {
+            type: 'list',
+            h2: 'Das KI-Dreieck: USA, China und EU',
+            items: [
+              '<strong>USA:</strong> Führt bei Frontier-Modellen (GPT-4o, Claude, Gemini) + Chip-Design. 67 Mrd. USD privates KI-Investment 2023. Kein Bundes-KI-Gesetz — schnelle Markteinführung, fragmentierte Compliance.',
+              '<strong>China:</strong> Führt bei KI-Patentvolumen + Gesichtserkennung. DeepSeek R1 entspricht GPT-4o bei Benchmarks für ~6 Mio. USD Training (94% günstiger). Staatlich gelenkter Aufbau.',
+              '<strong>EU:</strong> Führt bei Regulierung — EU AI Act ist globaler Referenzrahmen. Mistral AI führt europäische Modelle. Brüssel-Effekt: EU-Regeln gelten weltweit.',
+              '<strong>Hardware:</strong> TSMC (Taiwan) fertigt ~90% der fortschrittlichsten Chips. Nvidia hält ~80% KI-Trainings-GPU-Marktanteil. US-Exportkontrollen beschränken Chinas Zugang zu H100/H200.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '5 Geopolitische Dimensionen der KI',
+            items: [
+              '<strong>1. Wirtschaft:</strong> KI treibt Produktivität, Automatisierung, BIP-Wachstum. OECD: KI könnte bis 2030 15,7 Billionen USD zum globalen BIP beitragen.',
+              '<strong>2. Militär:</strong> Autonome Waffensysteme, Kampfgeheimdienstverarbeitung, Cyber-Operationen mit Maschinengeschwindigkeit. US JAIC und Chinas militärisch-zivile Fusion priorisieren KI.',
+              '<strong>3. Geheimdienst:</strong> NSA, GCHQ und Chinas MSS nutzen KI für Satellitenbildverarbeitung und Signalanalyse im großen Maßstab. KI-generierte Deepfakes sind aufkommende Einflusstools.',
+              '<strong>4. Infrastruktur:</strong> TSMC-Chipfabriken, Rechenzentren, Unterseekabel, Stromnetze — wer diese kontrolliert, hat strukturellen Hebel.',
+              '<strong>5. Globale Governance:</strong> Welcher Regulierungsrahmen wird globaler Standard? EU AI Act, US NIST oder Chinas CAC? Der Brüssel-Effekt bedeutet, die EU gewinnt diese Dimension bereits.'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Drei Visionen der KI-Governance',
+            line1: 'USA: Wettbewerbsfähigkeit zuerst — Innovation, kein Bundes-KI-Gesetz, freiwilliger NIST-Rahmen',
+            line2: 'China: Staatliche Kontrolle zuerst — CAC-Regulierungen, Inhaltsfilter in jeder API eingebaut',
+            tip: 'EU: Rechtsbasierter Rahmen — der Brüssel-Effekt macht EU-Regeln zum globalen Standard'
+          },
+          {
+            type: 'table',
+            h2: 'Globale KI-Regulierung: EU vs. USA vs. China',
+            columns: ['Dimension', 'EU', 'USA', 'China'],
+            rows: [
+              {'Dimension': 'Ansatz', 'EU': 'Rechtsbasiert, bindend', 'USA': 'Sektoral, freiwillig', 'China': 'Staatlich gelenkt, Kontrolle zuerst'},
+              {'Dimension': 'Schlüsselgesetz', 'EU': 'EU AI Act (2024)', 'USA': 'Kein Bundes-KI-Gesetz; NIST RMF (freiwillig)', 'China': 'CAC Generative KI-Maßnahmen (2023)'},
+              {'Dimension': 'Max. Bußgeld', 'EU': '35 Mio. EUR oder 7% Weltumsatz', 'USA': 'Kein KI-spezifisches Bußgeld', 'China': '100.000 CNY pro Verstoß'},
+              {'Dimension': 'Durchsetzung', 'EU': 'EU KI-Amt + nationale Behörden', 'USA': 'FTC, FDA, CFPB, EEOC', 'China': 'Cyberspace-Verwaltung (CAC)'},
+              {'Dimension': 'Reichweite', 'EU': 'Brüssel-Effekt — extraterritorial', 'USA': 'Nur Hardware-Exportkontrollen', 'China': 'BRI KI-Exporte + Große Firewall'}
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Prompt-Optimierung nach Region',
+            columns: ['Region', 'Wichtigste Einschränkung', 'Bestes Modell'],
+            rows: [
+              {'Region': 'Europäische Union', 'Wichtigste Einschränkung': 'EU AI Act: KI-Offenlegung erforderlich. DSGVO: keine personenbezogenen Daten ohne Rechtsgrundlage. Hochrisiko-KI braucht menschliche Aufsicht.', 'Bestes Modell': 'Mistral Large (EU-Sitz) oder lokales Ollama'},
+              {'Region': 'Vereinigte Staaten', 'Wichtigste Einschränkung': 'Sektoral: HIPAA (Gesundheitswesen), CCPA (Kalifornien), FTC Act (kein täuschender Inhalt)', 'Bestes Modell': 'GPT-4o oder Claude 4.6 Sonnet'},
+              {'Region': 'China', 'Wichtigste Einschränkung': 'CAC: Politische Inhalte blockiert. API gibt HTTP 200 mit is_safe: 0 zurück (nicht HTTP 4xx). PIPL: Chinesische Nutzerdaten bleiben in China.', 'Bestes Modell': 'Qwen 2.5 72B (selbst gehostet) oder ERNIE 4.0'}
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'EU AI Act: 4 Risikostufen',
+            items: [
+              '<strong>Inakzeptables Risiko (verboten ab Aug. 2024):</strong> Social Scoring, Echtzeit-Biometrie im öffentlichen Raum, KI die kognitive Schwächen ausnutzt, ungezielte Gesichtsbildererfassung',
+              '<strong>Hohes Risiko:</strong> Einstellung, Kredit, Gesundheitswesen, Strafverfolgung. Erfordert Konformitätsbewertungen, Dokumentation, menschliche Aufsicht, EU-Datenbankregistrierung.',
+              '<strong>Begrenztes Risiko:</strong> Chatbots und KI-generierte Inhalte. Nutzer müssen wissen, dass sie mit KI interagieren.',
+              '<strong>Minimales Risiko:</strong> Spam-Filter, Videospiele, Empfehlungssysteme. Keine spezifischen Pflichten außer geltendem Recht.',
+              '<strong>GPAI-Modelle (GPT-4o, Claude, Gemini):</strong> Müssen Trainingsdaten-Zusammenfassungen veröffentlichen, EU-Urheberrecht einhalten, schwerwiegende Vorfälle melden. Ab August 2025.',
+              '<strong>Bußgelder:</strong> Bis zu 35 Mio. EUR oder 7% Weltumsatz für verbotene Praktiken; 15 Mio. EUR oder 3% für Hochrisiko-Verstöße.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Kernaussagen für Prompt Engineers',
+            items: [
+              'Chinesische KI-APIs (DeepSeek, ERNIE 4.0, Qwen) filtern auf API-Ebene — politische Themen geben HTTP 200 mit <code>is_safe: 0</code> zurück, nicht HTTP 4xx. Im Anwendungscode explizit behandeln.',
+              'Mistral-Modelle und lokale Ollama-Implementierungen erfüllen EU AI Act Datenspeicheranforderungen — Prompts und Outputs verlassen nie Ihre Infrastruktur.',
+              'GPT-4o und Claude 4.6 Sonnet sind GPAI-konform unter dem EU AI Act (ab Aug. 2025). Ihre Pflicht liegt auf Anwendungsebene (Bereitsteller), nicht auf Modellebene.',
+              'Brüssel-Effekt: Prompts an US-gehostete Modelle für EU-Nutzer unterliegen EU AI Act-Anforderungen — auch wenn Ihr Unternehmen nicht in der EU ansässig ist.',
+              'Multi-Jurisdiktions-Test: Denselben Prompt gleichzeitig an Mistral (EU), GPT-4o (US) und Qwen (China) senden und Outputs über Regulierungskontexte vergleichen. PromptQuorum unterstützt dies nativ.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'KI-Geopolitik: Wichtige Datenpunkte',
+            items: [
+              '<strong>US-Investment:</strong> 52 Mrd. USD (CHIPS Act, 2022) für inländische Halbleiterfertigung + 200 Mrd. USD für Wissenschafts-F&E über 25 Bundesbehörden.',
+              '<strong>China-Investment:</strong> 1 Billion CNY (140 Mrd. USD) staatlich gelenkte KI- und Halbleiter-Investitionen 2021–2025. Ziel: Globale KI-Führung bis 2030.',
+              '<strong>TSMC-Monopol:</strong> Fertigt ~90% der fortschrittlichsten Chips unter 7nm. ASML (Niederlande) ist alleiniger EUV-Lithografiemaschinenhersteller — ein globaler Engpass.',
+              '<strong>DeepSeek Kostenkompression:</strong> 94% — GPT-4 geschätzte ~100 Mio. USD Trainingskosten (2023) vs. DeepSeek R1 ~6 Mio. USD (Jan. 2025). Exportkontrollen können chinesische KI nicht dauerhaft aufhalten.',
+              '<strong>EU AI Act Abdeckung:</strong> 450 Millionen Verbraucher in 27 Mitgliedstaaten. Systemrisiko-Schwellwert für GPAI-Modelle: 10²⁵ Trainings-FLOPs.',
+              '<strong>Bletchley-Erklärung (Nov. 2023):</strong> Von 28 Nationen unterzeichnet — breitester internationaler KI-Sicherheitskonsens, wenn auch nicht bindend.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'EU AI Act: Compliance-Zeitplan',
+            items: [
+              'Februar 2025: EU AI Act in Kraft getreten. Verbot verbotener Praktiken schrittweise eingeführt.',
+              'August 2025: GPAI-Modellpflichten gelten — GPT-4o, Claude, Gemini müssen Trainingsdaten-Zusammenfassungen veröffentlichen und EU-Urheberrecht einhalten.',
+              'August 2026: Hochrisiko-KI-Systeme vollständig durchgesetzt — Einstellungs-, Kredit-, Gesundheits- und Strafverfolgungs-KI erfordert Konformitätsbewertungen.',
+              'August 2027: Hochrisiko-KI in regulierten Produkten (Medizingeräte, Fahrzeuge) vollständig durchgesetzt.',
+              'Laufend: Brüssel-Effekt — wenn Ihre KI einen EU-Einwohner erreicht, gilt der EU AI Act, unabhängig von Ihrem Unternehmenssitz.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'KI in China einsetzen: 6 Schritte',
+            items: [
+              'Verfügbare Modelle verstehen: GPT-4o und Claude sind in China blockiert. Verfügbar: Qwen 2.5 72B, ERNIE 4.0 (Baidu Qianfan API), Doubao (ByteDance), DeepSeek R1.',
+              'API-Inhaltsfilter einplanen: KP-Kritik, Taiwan/Tibet/Xinjiang, Tiananmen blockiert. Antwort: HTTP 200 mit is_safe: 0 — nicht HTTP 4xx. Im Code behandeln.',
+              'CAC-Sicherheitsbewertung vor Verbraucher-Launch abschließen. Trainingsdaten, Inhaltsfilter-Dokumentation und Beispielausgaben einreichen. Zeitrahmen: 45–90 Tage.',
+              'Hybridmodell einsetzen: Qwen 2.5 72B auf eigener Infrastruktur (außerhalb Chinas) für internationale Nutzer; ERNIE 4.0 via Qianfan API für China-Segment unter CAC-Registrierung.',
+              'PIPL (2021) einhalten: Personenbezogene Daten chinesischer Nutzer müssen in China bleiben. Über Alibaba Cloud, Tencent Cloud oder Huawei Cloud routen.',
+              'Mit einem chinesischen Festland-Unternehmen für verbraucherorientierte Produkte zusammenarbeiten. Ausländische Unternehmen können CAC-Registrierung nicht direkt halten.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufig gestellte Fragen',
+            faqs: [
+              { q: 'Was ist der EU AI Act?', a: 'Weltweit erstes umfassendes KI-Gesetz, im März 2024 mit 523 Stimmen verabschiedet. Klassifiziert KI in 4 Risikostufen. Vollständige Durchsetzung ab August 2026. Bußgelder bis zu 35 Mio. EUR oder 7% des Weltumsatzes.' },
+              { q: 'Gilt der EU AI Act für Unternehmen außerhalb der EU?', a: 'Ja — Brüssel-Effekt. Jede Organisation, die KI auf dem EU-Markt anbietet oder deren KI-Outputs in der EU genutzt werden, muss sich anpassen, unabhängig vom Unternehmenssitz.' },
+              { q: 'Welche Bußgelder drohen bei EU AI Act-Verstößen?', a: 'Bis zu 35 Mio. EUR oder 7% des weltweiten Jahresumsatzes für verbotene Praktiken. Hochrisiko-Verstöße: bis zu 15 Mio. EUR oder 3%. Falsche Angaben an Behörden: bis zu 7,5 Mio. EUR oder 1%.' },
+              { q: 'Wie unterscheidet sich US-KI-Regulierung von der EU?', a: 'USA nutzen sektoralen, freiwilligen Ansatz. Kein Bundes-KI-Gesetz. Bestehende Regulierungsbehörden (FTC, FDA) wenden ihre Mandate auf KI an. Biden-KI-Sicherheitserlass im Januar 2025 aufgehoben.' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Kernaussagen',
+            items: [
+              'KI ist eine strategische Nationaltechnologie — USA, China und EU konkurrieren um Dominanz.',
+              'Länder konkurrieren um drei Ressourcen: Rechenleistung (Chips), KI-Talente und Trainingsdaten.',
+              'Der EU AI Act ist das erste verbindliche KI-Gesetz der Welt — Bußgelder bis 35 Mio. EUR oder 7% des Weltumsatzes.',
+              'Brüssel-Effekt: EU AI Act-Regeln gelten für jede KI, die EU-Nutzer weltweit erreicht.',
+              'Die USA haben kein Bundes-KI-Gesetz — Sektorregulierungsbehörden wenden bestehende Mandate auf KI an.',
+              'DeepSeek R1 entspricht GPT-4o bei Schlüsselbenchmarks — GPU-Exportkontrollen haben chinesische KI nicht gestoppt.',
+              'TSMC in Taiwan fertigt die Chips, die alle Frontier-KI antreiben — eine einzelne geopolitische Abhängigkeit.'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'KI über alle drei Regulierungsregimes testen',
+            body: 'PromptQuorum lässt Sie denselben Prompt gleichzeitig an Mistral (EU-konform), GPT-4o (US/GPAI) und Qwen (China-zugänglich) senden — Outputs über Regulierungskontexte auf Knopfdruck vergleichen.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      fr: {
+        title: 'Géopolitique et IA : EU AI Act vs États-Unis vs Chine',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Géopolitique et IA : Comment l\'UE, les États-Unis et la Chine rivalisent',
+            subtitle: 'Les États-Unis, la Chine et l\'UE poursuivent des visions incompatibles de la gouvernance IA. Les obligations de conformité dépendent de l\'endroit où vous déployez.',
+            link: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai'
+          },
+          {
+            type: 'list',
+            h2: 'La course IA à 3 acteurs',
+            items: [
+              '<strong>États-Unis :</strong> Dominent les modèles frontier (GPT-4o, Claude, Gemini) + conception de puces. 67 Md$ d\'investissement privé IA en 2023. Pas de loi IA fédérale — déploiement rapide, conformité fragmentée.',
+              '<strong>Chine :</strong> Dominent les brevets IA + la reconnaissance faciale. DeepSeek R1 équivalent à GPT-4o pour ~6 M$ de coût d\'entraînement (94% moins cher). Infrastructure dirigée par l\'État.',
+              '<strong>UE :</strong> Domine la réglementation — la loi IA de l\'UE est le cadre de référence mondial. Mistral AI mène les modèles européens. L\'effet Bruxelles : les règles européennes s\'appliquent mondialement.',
+              '<strong>Matériel :</strong> TSMC (Taïwan) fabrique ~90% des puces avancées. Nvidia détient ~80% du marché des GPU d\'entraînement IA. Les contrôles américains à l\'exportation limitent l\'accès chinois aux H100/H200.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '5 dimensions géopolitiques de l\'IA',
+            items: [
+              '<strong>1. Économie :</strong> L\'IA stimule la productivité, l\'automatisation, la croissance du PIB. L\'OCDE projette que l\'IA ajoutera 15,7 billions $ au PIB mondial d\'ici 2030.',
+              '<strong>2. Militaire :</strong> Armes autonomes, renseignement de champ de bataille, cyber-opérations à vitesse machine. Le JAIC américain et la Fusion Militaro-Civile chinoise priorisent l\'IA.',
+              '<strong>3. Renseignement :</strong> NSA, GCHQ et le MSS chinois utilisent l\'IA pour traiter les images satellites et les signaux à grande échelle. Les deepfakes IA deviennent des outils d\'influence.',
+              '<strong>4. Infrastructure :</strong> Fab TSMC, centres de données, câbles sous-marins, réseaux électriques — contrôler ces éléments donne un levier structurel.',
+              '<strong>5. Gouvernance mondiale :</strong> Quel cadre réglementaire devient le standard mondial ? Loi IA UE, NIST américain ou CAC chinois ? L\'effet Bruxelles signifie que l\'UE gagne déjà cette dimension.'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Trois visions de la gouvernance IA',
+            line1: 'États-Unis : Compétitivité d\'abord — innovation, pas de loi IA fédérale, cadre NIST volontaire',
+            line2: 'Chine : Contrôle de l\'État d\'abord — réglementations CAC, filtres de contenu intégrés dans chaque API',
+            tip: 'UE : Cadre juridique basé sur les droits — l\'effet Bruxelles fait des règles européennes la norme mondiale par défaut'
+          },
+          {
+            type: 'table',
+            h2: 'Chiffres clés : qui gagne la course IA ?',
+            columns: ['Métrique', 'États-Unis', 'Chine', 'UE'],
+            rows: [
+              {'Métrique': 'Investissements IA (2025)', 'États-Unis': '~100 Md$', 'Chine': '~50 Md$', 'UE': '~20 Md$'},
+              {'Métrique': 'Modèles fondamentaux', 'États-Unis': 'GPT-4o, Claude, Gemini, Llama', 'Chine': 'Qwen, ERNIE, DeepSeek R1', 'UE': 'Mistral AI, Aleph Alpha'},
+              {'Métrique': 'Puces IA', 'États-Unis': 'Monopole quasi-total (NVIDIA)', 'Chine': 'Huawei Ascend (substitut)', 'UE': 'Dépendance à l\'import'},
+              {'Métrique': 'Talent IA (PhD)', 'États-Unis': '~35% réserve mondiale', 'Chine': '~28%', 'UE': '~15%'}
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Optimiser les prompts selon la région',
+            columns: ['Région', 'Priorité', 'Approche prompt'],
+            rows: [
+              {'Région': 'Union Européenne', 'Priorité': 'Conformité + droits fondamentaux', 'Approche prompt': 'Inclure garde-fous contre la discrimination, transparence, auditabilité. Modèle : Mistral Large (France, UE) ou Ollama local.'},
+              {'Région': 'États-Unis', 'Priorité': 'Innovation + secteurs spécifiques', 'Approche prompt': 'Optimiser pour l\'efficacité et la créativité. Peu d\'obstacles généraux. Modèles : GPT-4o ou Claude 4.6 Sonnet.'},
+              {'Région': 'Chine', 'Priorité': 'Conformité idéologique + contrôle État', 'Approche prompt': 'Éviter sujets sensibles (politique, religion). Filtres CAC : HTTP 200 avec is_safe: 0. Modèle : Qwen 2.5 72B ou ERNIE 4.0.'}
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Loi IA de l\'UE : 4 niveaux de risque',
+            items: [
+              '<strong>Risque inacceptable (interdit déc. 2024) :</strong> Notation sociale, biométrie en temps réel dans espaces publics, IA exploitant des vulnérabilités cognitives, collecte non ciblée d\'images faciales.',
+              '<strong>Risque élevé :</strong> Embauche, crédit, santé, justice. Exige des évaluations de conformité, documentation, supervision humaine, enregistrement base de données UE.',
+              '<strong>Risque limité :</strong> Chatbots et contenu IA généré. Obligation de divulguer aux utilisateurs qu\'ils interagissent avec l\'IA.',
+              '<strong>Risque minimal :</strong> Filtres spam, jeux vidéo, systèmes de recommandation. Pas d\'obligations spécifiques au-delà du droit existant.',
+              '<strong>Modèles GPAI (GPT-4o, Claude, Gemini) :</strong> Doivent publier des résumés de données d\'entraînement, respecter le droit d\'auteur UE, signaler les incidents graves. Depuis août 2025.',
+              '<strong>Amendes :</strong> Jusqu\'à 35 M€ ou 7% du chiffre d\'affaires mondial pour pratiques interdites ; 15 M€ ou 3% pour violations à haut risque.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Ce que cela signifie pour les ingénieurs prompt',
+            items: [
+              'Les APIs IA chinoises (DeepSeek, ERNIE 4.0, Qwen) filtrent au niveau API — les sujets politiques retournent HTTP 200 avec <code>is_safe: 0</code>, pas HTTP 4xx. Gérer explicitement dans le code applicatif.',
+              'Les modèles Mistral et les déploiements Ollama locaux satisfont les exigences de résidence des données de la loi IA UE — les prompts et sorties ne quittent jamais votre infrastructure.',
+              'GPT-4o et Claude 4.6 Sonnet sont conformes GPAI sous la loi IA UE (depuis août 2025). Votre obligation est au niveau applicatif (déployeur), pas au niveau modèle.',
+              'Effet Bruxelles : les prompts envoyés à des modèles hébergés aux US pour des produits utilisés par des résidents UE sont soumis aux exigences de la loi IA UE.',
+              'Test multi-juridictions : envoyer le même prompt simultanément à Mistral (UE), GPT-4o (US) et Qwen (Chine) pour comparer les sorties. PromptQuorum supporte cela nativement.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Données clés sur la géopolitique IA',
+            items: [
+              '<strong>Investissement US :</strong> 52 Md$ (CHIPS Act, 2022) pour semi-conducteurs nationaux + 200 Md$ R&D scientifique sur 25 agences fédérales.',
+              '<strong>Investissement Chine :</strong> ~1 trillion CNY (140 Md$) investissement IA et semi-conducteurs dirigé par l\'État 2021–2025. Objectif : leadership IA mondial d\'ici 2030.',
+              '<strong>Monopole TSMC :</strong> Fabrique ~90% des puces avancées sous 7nm. ASML (Pays-Bas) seul fabricant de machines EUV — goulot d\'étranglement mondial.',
+              '<strong>Compression coût DeepSeek :</strong> 94% — GPT-4 estimé ~100 M$ coût entraînement (2023) vs DeepSeek R1 ~6 M$ (jan. 2025). Les contrôles à l\'exportation ne peuvent pas contenir l\'IA frontier chinoise.',
+              '<strong>EU AI Act :</strong> 450 millions de consommateurs dans 27 États membres. Seuil risque systémique GPAI : 10²⁵ FLOPs d\'entraînement.',
+              '<strong>Déclaration de Bletchley (nov. 2023) :</strong> Signée par 28 nations — consensus international IA le plus large, bien que non contraignant.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Calendrier de conformité : Loi IA UE',
+            items: [
+              'Février 2025 : Loi IA UE entrée en vigueur. Interdiction des pratiques interdites progressivement appliquée.',
+              'Août 2025 : Obligations GPAI — GPT-4o, Claude, Gemini doivent publier résumés de données d\'entraînement et respecter droit d\'auteur UE.',
+              'Août 2026 : Systèmes IA à haut risque entièrement applicables — IA pour embauche, crédit, santé, justice exige évaluations de conformité.',
+              'Août 2027 : IA à haut risque dans produits réglementés (dispositifs médicaux, véhicules) entièrement appliquée.',
+              'En continu : Effet Bruxelles — si votre IA atteint un seul résident UE, la loi IA UE s\'applique quel que soit votre siège social.'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Déployer l\'IA en Chine : 6 étapes',
+            items: [
+              'Comprendre les modèles disponibles : GPT-4o et Claude sont bloqués en Chine. Disponibles : Qwen 2.5 72B, ERNIE 4.0 (API Baidu Qianfan), Doubao (ByteDance), DeepSeek R1.',
+              'Planifier les filtres de contenu API : Critique du PCC, Taiwan/Tibet/Xinjiang, Tiananmen bloqués. Réponse : HTTP 200 avec is_safe: 0 (pas HTTP 4xx). Gérer dans le code.',
+              'Compléter l\'évaluation de sécurité CAC avant tout lancement grand public. Délai : 45–90 jours.',
+              'Déployer modèle hybride : Qwen 2.5 72B sur propre infrastructure (hors Chine) pour utilisateurs internationaux ; ERNIE 4.0 via API Qianfan pour segment Chine sous enregistrement CAC.',
+              'Respecter PIPL (2021) : données personnelles des utilisateurs chinois doivent rester en Chine. Router via Alibaba Cloud, Tencent Cloud ou Huawei Cloud.',
+              'S\'associer à une entité du continent chinois pour les produits grand public. Les entreprises étrangères ne peuvent pas détenir directement l\'enregistrement CAC.'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquemment posées',
+            faqs: [
+              { q: 'Qu\'est-ce que la loi IA de l\'UE ?', a: 'Premier cadre juridique IA complet au monde, adopté en mars 2024 avec 523 voix. Classe l\'IA en 4 niveaux de risque. Application complète à partir d\'août 2026. Amendes jusqu\'à 35 M€ ou 7% du CA mondial.' },
+              { q: 'La loi IA de l\'UE s\'applique-t-elle aux entreprises hors UE ?', a: 'Oui — effet Bruxelles. Toute organisation commercialisant de l\'IA dans l\'UE ou dont les sorties IA sont utilisées dans l\'UE doit se conformer, quel que soit son siège.' },
+              { q: 'Quelles sont les amendes pour violation de la loi IA de l\'UE ?', a: 'Jusqu\'à 35 M€ ou 7% du CA annuel mondial pour pratiques interdites. Violations IA à haut risque : jusqu\'à 15 M€ ou 3%. Informations incorrectes aux autorités : jusqu\'à 7,5 M€ ou 1%.' },
+              { q: 'Comment la réglementation IA américaine diffère-t-elle de l\'UE ?', a: 'Les US utilisent une approche sectorielle, volontaire. Pas de loi IA fédérale. Les régulateurs existants (FTC, FDA) appliquent leurs mandats à l\'IA. Décret Biden IA sécurité révoqué jan. 2025.' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Points clés',
+            items: [
+              'L\'IA est une technologie stratégique — les États-Unis, la Chine et l\'UE se disputent la domination.',
+              'Trois ressources décident du jeu : les puces, les talents IA et les données d\'entraînement.',
+              'La loi IA de l\'UE est le premier cadre contraignant — amendes jusqu\'à 35 M€ ou 7% du CA.',
+              'L\'effet Bruxelles : les règles UE deviennent normes mondiales car les entreprises mondiales s\'y conforment.',
+              'Les modèles chinois (DeepSeek R1) s\'améliorent rapidement malgré les contrôles à l\'exportation.',
+              'Les stratégies US et chinoises divergent radicalement : compétition d\'abord vs contrôle d\'État.',
+              'Les organisations doivent naviguer trois régimes : conformité UE, approche sectorielle US, restrictions chinoises.'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Tester l\'IA dans les trois régimes réglementaires',
+            body: 'PromptQuorum vous permet d\'envoyer le même prompt simultanément à Mistral (conforme UE), GPT-4o (US/GPAI) et Qwen (accessible en Chine) — comparez les sorties en un clic.',
+            cta: 'Essayer PromptQuorum gratuitement',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      ja: {
+        title: 'AI地政学：EU AI法 vs 米国 vs 中国',
+        slides: [
+          {
+            type: 'title',
+            h1: '地政学とAI：米国、中国、EUのAI支配競争解説',
+            subtitle: '米国、中国、EUはAIガバナンスに関して相反するビジョンを追求しており、コンプライアンス義務はどこに展開するかによって異なります。',
+            link: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai'
+          },
+          {
+            type: 'list',
+            h2: 'AI三大国の競争',
+            items: [
+              '<strong>米国：</strong>フロンティアモデル（GPT-4o、Claude、Gemini）とチップ設計でリード。2023年に670億ドルの民間AI投資。連邦AI法なし — 迅速な展開、断片化したコンプライアンス。',
+              '<strong>中国：</strong>AI特許量と顔認識でリード。DeepSeek R1は約600万ドルのトレーニングコスト（94%安）でGPT-4oに匹敵するベンチマークを達成。国家主導のインフラ整備。',
+              '<strong>EU：</strong>規制でリード — EU AI法はグローバルな参照フレームワーク。Mistral AIが欧州モデルを牽引。ブリュッセル効果：EU規制が世界に適用。',
+              '<strong>ハードウェア：</strong>TSMC（台湾）が先進チップの約90%を製造。Nvidiaが約80%のAIトレーニングGPU市場を保有。米国輸出規制が中国のH100/H200へのアクセスを制限。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'AIの5つの地政学的側面',
+            items: [
+              '<strong>1. 経済：</strong>AIは生産性、自動化、GDP成長を促進。OECDはAIが2030年までに世界GDPに15.7兆ドルを追加すると予測。',
+              '<strong>2. 軍事：</strong>自律兵器システム、戦場情報処理、機械速度でのサイバー作戦。米国JACと中国軍民融合戦略は両方ともAIを優先。',
+              '<strong>3. 情報収集：</strong>NSA、GCHQ、中国のMSSはAIを使って大規模な衛星画像と信号を処理。AIが生成したディープフェイクが新たな影響力ツールに。',
+              '<strong>4. インフラ：</strong>TSMCのチップ工場、データセンター、海底ケーブル、電力網 — これらを制御することで構造的なレバレッジを持つ。',
+              '<strong>5. グローバルガバナンス：</strong>どの規制フレームワークがグローバルデフォルトになるか？EU AI法、米国NIST、中国CAC？ブリュッセル効果はEUがすでにこの側面で勝っていることを意味する。'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '3つのAIガバナンスビジョン',
+            line1: '米国：競争力優先 — イノベーション、連邦AI法なし、任意のNISTフレームワーク',
+            line2: '中国：国家管理優先 — CAC規制、すべてのAPIに組み込まれたコンテンツフィルター',
+            tip: 'EU：権利ベースの法的フレームワーク — ブリュッセル効果がEU規制をグローバルデフォルトにする'
+          },
+          {
+            type: 'table',
+            h2: 'グローバルAI規制比較：EU vs 米国 vs 中国',
+            columns: ['項目', 'EU', '米国', '中国'],
+            rows: [
+              {'項目': 'アプローチ', 'EU': '権利ベース、拘束力あり', '米国': 'セクター別、任意', '中国': '国家主導、管理優先'},
+              {'項目': '主要法律', 'EU': 'EU AI法（2024年）', '米国': '連邦AI法なし；NIST RMF（任意）', '中国': 'CAC生成AI措置（2023年）'},
+              {'項目': '最高罰金', 'EU': '3500万ユーロまたは全世界売上の7%', '米国': 'AI特定罰金なし', '中国': '違反1件あたり10万元'},
+              {'項目': '執行機関', 'EU': 'EU AI事務所＋国家機関', '米国': 'FTC、FDA、CFPB、EEOC', '中国': '中国サイバースペース管理局（CAC）'},
+              {'項目': '適用範囲', 'EU': 'ブリュッセル効果 — 域外適用', '米国': 'ハードウェア輸出規制のみ', '中国': '一帯一路AI輸出＋グレートファイアウォール'}
+            ]
+          },
+          {
+            type: 'table',
+            h2: '地域別プロンプト最適化',
+            columns: ['地域', '主な制約', '推奨モデル'],
+            rows: [
+              {'地域': 'ヨーロッパ連合', '主な制約': 'EU AI法：AI開示必須。GDPR：法的根拠なしに個人データ不可。高リスクAIには人間の監視が必要。', '推奨モデル': 'Mistral Large（EU本社）またはローカルOllama'},
+              {'地域': 'アメリカ合衆国', '主な制約': 'セクター別：HIPAA（医療）、CCPA（カリフォルニア）、FTC法（欺瞞的コンテンツ禁止）', '推奨モデル': 'GPT-4oまたはClaude 4.6 Sonnet'},
+              {'地域': '中国', '主な制約': 'CAC：政治的コンテンツはAPIレベルでブロック。HTTP 200にis_safe: 0を返す（HTTP 4xxではない）。PIPL：中国ユーザーデータは中国内に保管必須。', '推奨モデル': 'Qwen 2.5 72B（自己ホスト）またはERNIE 4.0'}
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'EU AI法：4つのリスクティア',
+            items: [
+              '<strong>容認不可リスク（2024年8月から禁止）：</strong>ソーシャルスコアリング、公共空間でのリアルタイム生体認証、認知的脆弱性を悪用するAI、顔画像の無差別収集',
+              '<strong>高リスク：</strong>採用、信用、医療、法執行。適合性評価、文書化、人間の監視、EU登録が必要。',
+              '<strong>限定的リスク：</strong>チャットボットとAI生成コンテンツ。AIと対話していることをユーザーに開示する必要あり。',
+              '<strong>最小リスク：</strong>スパムフィルター、ビデオゲーム、レコメンドシステム。既存法以外の特定の義務なし。',
+              '<strong>GPAIモデル（GPT-4o、Claude、Gemini）：</strong>訓練データ要約の公開、EU著作権法の遵守、重大インシデント報告が必要。2025年8月から。',
+              '<strong>罰金：</strong>禁止行為は最大3500万ユーロまたは全世界売上の7%；高リスク違反は1500万ユーロまたは3%。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'プロンプトエンジニアのための重要なポイント',
+            items: [
+              '中国AI API（DeepSeek、ERNIE 4.0、Qwen）はAPIレベルでフィルタリング — 政治的トピックはHTTP 200に<code>is_safe: 0</code>を返す（HTTP 4xxではない）。アプリケーションコードで明示的に処理。',
+              'MistralモデルとローカルOllama実装はEU AI法のデータ常駐要件を満たす — プロンプトと出力はインフラを離れない。',
+              'GPT-4oとClaude 4.6 SonnetはEU AI法のGPAI準拠（2025年8月から）。義務はアプリケーション（デプロイヤー）レベルにあり、モデルレベルではない。',
+              'ブリュッセル効果：EU居住者向けサービスのために米国ホストモデルへ送るプロンプトはEU AI法要件に従う — 組織がEU内に本拠地を置いていない場合でも。',
+              'マルチ管轄区域テスト：同じプロンプトをMistral（EU）、GPT-4o（米国）、Qwen（中国）に同時送信し規制コンテキスト全体で出力を比較。PromptQuormはこれをネイティブにサポート。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'AI地政学：重要な数字',
+            items: [
+              '<strong>米国投資：</strong>CHIPS法（2022年）による520億ドルの半導体製造 + 25連邦機関の科学R&Dに2000億ドル。',
+              '<strong>中国投資：</strong>2021–2025年に1兆元（1400億ドル）の政府主導AI・半導体投資。目標：2030年までのグローバルAIリーダーシップ。',
+              '<strong>TSMCの独占：</strong>7nm以下の先進チップの約90%を製造。ASML（オランダ）はEUVリソグラフィー機器の唯一の製造業者 — グローバルなボトルネック。',
+              '<strong>DeepSeekのコスト圧縮：</strong>94% — GPT-4は約1億ドルのトレーニングコスト（2023年）対DeepSeek R1の約600万ドル（2025年1月）。輸出規制は中国フロンティアAIを永久に制限できない。',
+              '<strong>EU AI法カバレッジ：</strong>27加盟国の4億5000万消費者。GPAIモデルのシステムリスク閾値：トレーニング計算10²⁵ FLOPs。',
+              '<strong>ブレッチリー宣言（2023年11月）：</strong>米国、中国、EU加盟国を含む28カ国が署名 — 最も広範な国際AI安全コンセンサス（非拘束力）。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'EU AI法コンプライアンスタイムライン',
+            items: [
+              '2025年2月：EU AI法が発効。禁止行為への禁止が段階的に導入。',
+              '2025年8月：GPAI義務が適用 — GPT-4o、Claude、GeminiはEU著作権法の遵守と訓練データ要約の公開が必要。',
+              '2026年8月：高リスクAIシステムが完全施行 — 採用、信用、医療、法執行AIには適合性評価が必要。',
+              '2027年8月：規制製品（医療機器、車両）に組み込まれた高リスクAIが完全施行。',
+              '継続中：ブリュッセル効果 — AIがEU居住者に届く場合、本拠地に関わらずEU AI法が適用される。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '中国でAIを展開する：6つのステップ',
+            items: [
+              '利用可能なモデルを理解する：GPT-4oとClaudeは中国でブロック。利用可能：Qwen 2.5 72B、ERNIE 4.0（Baidu Qianfan API）、Doubao（ByteDance）、DeepSeek R1。',
+              'APIコンテンツフィルターを計画する：CPC批判、台湾/チベット/新疆、天安門事件はブロック。応答はHTTP 200にis_safe: 0（HTTP 4xxではない）。コードで処理。',
+              'コンシューマー向けローンチ前にCACセキュリティ評価を完了。訓練データ、コンテンツフィルタードキュメント、サンプル出力を提出。タイムライン：45–90日。',
+              'ハイブリッドモデルを展開：国際ユーザー用に自社インフラ（中国外）でQwen 2.5 72Bを；中国セグメントにはCAC登録下でERNIE 4.0をQianfan API経由で。',
+              'PIPL（2021年）を遵守：中国ユーザーの個人データは中国内に留める必要あり。Alibaba Cloud、Tencent Cloud、またはHuawei Cloud経由でルーティング。',
+              'コンシューマー向け製品には中国本土企業とパートナーシップを締結。外国企業は直接CAC登録を保持できない。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              { q: 'EU AI法とは何ですか？', a: '世界初の包括的なAI法で、2024年3月に523票の賛成で採択。AIを4つのリスクレベルに分類。完全施行は2026年8月から。罰金は最大3500万ユーロまたは世界売上の7%。' },
+              { q: 'EU AI法はEU外の企業にも適用されますか？', a: 'はい — ブリュッセル効果。EU市場でAIを提供する組織、またはAI出力がEU内で使用される組織は、本拠地に関わらずコンプライアンスが必要。' },
+              { q: 'EU AI法違反の罰金はいくらですか？', a: '禁止されたAI行為に対して最大3500万ユーロまたは全世界年間売上の7%。高リスクAI違反：最大1500万ユーロまたは3%。当局への虚偽情報：最大750万ユーロまたは1%。' },
+              { q: '米国のAI規制はEUとどう違いますか？', a: '米国はセクター別、任意のアプローチを採用。連邦AI法なし。既存の規制機関（FTC、FDA）がAIに既存の権限を適用。バイデン政権のAI安全に関する大統領令は2025年1月に撤回。' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '重要なポイント',
+            items: [
+              'AIは戦略的な国家技術 — 米国、中国、EUが支配権を競争している。',
+              '国々は3つのリソースを争奪：計算能力（チップ）、AIの才能、訓練データ。',
+              'EU AI法は世界初の拘束力のあるAI法 — 罰金は3500万ユーロまたは売上の7%。',
+              'ブリュッセル効果：EU AI法のルールは世界中のEUユーザーに届くあらゆるAIに適用される。',
+              '米国には連邦AI法がない — 規制当局が既存の権限をAIに適用している。',
+              'DeepSeek R1は主要ベンチマークでGPT-4oと同等 — GPU輸出規制は中国のAIを阻止していない。',
+              'TSMCはすべてのフロンティアAIを駆動するチップを製造 — 単一の地政学的依存。'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '3つの規制体制でAIをテストする',
+            body: 'PromptQuorumでMistral（EU準拠）、GPT-4o（米国/GPAI）、Qwen（中国アクセス可能）に同じプロンプトを同時送信 — ワンクリックで規制コンテキスト全体の出力を比較。',
+            cta: 'PromptQuorumを無料で試す',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      zh: {
+        title: 'AI地缘政治：欧盟AI法案 vs 美国 vs 中国',
+        slides: [
+          {
+            type: 'title',
+            h1: '地缘政治与AI：欧盟、美国和中国如何争夺AI主导权',
+            subtitle: '美国、中国和欧盟正在追求互不兼容的AI治理愿景。合规义务、采购限制和数据存储要求取决于您在哪里部署。',
+            link: 'https://www.promptquorum.com/prompt-engineering/geopolitics-and-ai'
+          },
+          {
+            type: 'list',
+            h2: 'AI三极竞争',
+            items: [
+              '<strong>美国：</strong>领导前沿模型（GPT-4o、Claude、Gemini）和芯片设计。2023年私人AI投资670亿美元。无联邦AI法——快速部署，合规碎片化。',
+              '<strong>中国：</strong>领导AI专利量和人脸识别。DeepSeek R1以约600万美元训练成本（便宜94%）在基准测试上与GPT-4o相当。国家主导基础设施。',
+              '<strong>欧盟：</strong>领导监管——EU AI法案是全球参考框架。Mistral AI引领欧洲模型。布鲁塞尔效应：欧盟规则全球适用。',
+              '<strong>硬件：</strong>TSMC（台湾）制造约90%的先进芯片。Nvidia持有约80%的AI训练GPU市场份额。美国出口管制限制中国获取H100/H200。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'AI的5个地缘政治维度',
+            items: [
+              '<strong>1. 经济：</strong>AI推动生产力、自动化、GDP增长。OECD预测AI到2030年将为全球GDP增加15.7万亿美元。',
+              '<strong>2. 军事：</strong>自主武器系统、战场情报处理、机器速度的网络作战。美国JAIC和中国军民融合战略均优先考虑AI。',
+              '<strong>3. 情报：</strong>NSA、GCHQ和中国MSS使用AI大规模处理卫星图像和信号。AI生成的深度伪造成为新兴影响力工具。',
+              '<strong>4. 基础设施：</strong>TSMC芯片工厂、数据中心、海底电缆、电网——控制这些给予结构性杠杆。',
+              '<strong>5. 全球治理：</strong>哪个监管框架成为全球默认？EU AI法案、美国NIST还是中国CAC？布鲁塞尔效应意味着欧盟已在这一维度获胜。'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '三种AI治理愿景',
+            line1: '美国：竞争力优先 — 创新，无联邦AI法，自愿NIST框架',
+            line2: '中国：国家管控优先 — CAC法规，内容过滤器内置于每个API',
+            tip: '欧盟：基于权利的法律框架 — 布鲁塞尔效应使欧盟规则成为全球默认标准'
+          },
+          {
+            type: 'table',
+            h2: 'AI关键数据：谁在赢得AI竞赛？',
+            columns: ['指标', '美国', '中国', '欧盟'],
+            rows: [
+              {'指标': 'AI投资（2025年）', '美国': '约1000亿美元', '中国': '约500亿美元', '欧盟': '约200亿美元'},
+              {'指标': '基础模型', '美国': 'GPT-4o、Claude、Gemini、Llama', '中国': 'Qwen、ERNIE、DeepSeek R1', '欧盟': 'Mistral AI、Aleph Alpha'},
+              {'指标': 'AI芯片', '美国': '准垄断（NVIDIA）', '中国': '华为Ascend（替代品）', '欧盟': '依赖进口'},
+              {'指标': 'AI人才（博士）', '美国': '约35%全球储备', '中国': '约28%', '欧盟': '约15%'}
+            ]
+          },
+          {
+            type: 'table',
+            h2: '按地区优化提示词',
+            columns: ['地区', '关键约束', '推荐模型'],
+            rows: [
+              {'地区': '欧洲联盟', '关键约束': 'EU AI法案：必须披露AI使用。GDPR：无法律依据不得使用个人数据。高风险AI需要人工监督。', '推荐模型': 'Mistral Large（欧盟总部）或本地Ollama'},
+              {'地区': '美国', '关键约束': '部门化：HIPAA（医疗），CCPA（加州个人数据），FTC法案（禁止欺骗性内容）', '推荐模型': 'GPT-4o或Claude 4.6 Sonnet'},
+              {'地区': '中国', '关键约束': 'CAC：政治内容在API级别被过滤。返回HTTP 200，is_safe: 0（非HTTP 4xx）。PIPL：中国用户个人数据必须留在中国。', '推荐模型': 'Qwen 2.5 72B（自托管）或ERNIE 4.0'}
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'EU AI法案：4个风险级别',
+            items: [
+              '<strong>不可接受风险（2024年8月起禁止）：</strong>社会信用评分、公共场所实时生物特征监控、利用认知漏洞的AI、无差别抓取面部图像',
+              '<strong>高风险：</strong>招聘、信贷、医疗、执法。需要符合性评估、文档化、人工监督、EU数据库注册。',
+              '<strong>有限风险：</strong>聊天机器人和AI生成内容。必须向用户披露正在与AI交互。',
+              '<strong>最小风险：</strong>垃圾邮件过滤器、视频游戏、推荐系统。除现有法律外无特定义务。',
+              '<strong>GPAI模型（GPT-4o、Claude、Gemini）：</strong>必须发布训练数据摘要，遵守EU版权法，报告严重事件。2025年8月起适用。',
+              '<strong>罚款：</strong>禁止行为最高3500万欧元或全球营业额7%；高风险违规最高1500万欧元或3%。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '提示工程师的关键要点',
+            items: [
+              '中国AI API（DeepSeek、ERNIE 4.0、通过Alibaba Cloud的Qwen）在API级别过滤内容 — 政治话题返回HTTP 200，<code>is_safe: 0</code>，而非HTTP 4xx。在应用代码中明确处理。',
+              'Mistral模型和本地Ollama部署满足EU AI法案的数据驻留要求 — 提示和输出永远不会离开您的基础设施。',
+              'GPT-4o和Claude 4.6 Sonnet从2025年8月起在EU AI法案下符合GPAI条件。义务在应用（部署者）级别，而非模型级别。',
+              '布鲁塞尔效应：为欧盟居民使用的产品发送到美国托管模型的提示受EU AI法案要求约束——即使您的公司不以欧盟为基地。',
+              '多管辖区测试：同时向Mistral（欧盟兼容）、GPT-4o（美国/GPAI）和Qwen（中国可访问）分派相同提示，对比监管环境下的输出。PromptQuorum本质上支持这一功能。'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'AI地缘政治：关键数据点',
+            items: [
+              '<strong>美国投资：</strong>CHIPS法案（2022年）520亿美元用于国内半导体制造 + 2000亿美元科学研发，覆盖25个联邦机构。',
+              '<strong>中国投资：</strong>2021–2025年间1万亿元人民币（1400亿美元）政府主导AI和半导体投资。目标：2030年全球AI领导地位。',
+              '<strong>TSMC垄断：</strong>制造约90%的7nm以下先进芯片。ASML（荷兰）是EUV光刻机的唯一制造商——全球关键瓶颈。',
+              '<strong>DeepSeek成本压缩：</strong>94% — GPT-4训练成本约1亿美元（2023年）vs DeepSeek R1约600万美元（2025年1月）。出口管制无法永久遏制中国前沿AI。',
+              '<strong>EU AI法案覆盖：</strong>27个成员国的4.5亿消费者。GPAI系统性风险阈值：训练计算量10²⁵ FLOPs。',
+              '<strong>布莱切利声明（2023年11月）：</strong>由28个国家签署，包括美国、中国和EU成员国——迄今最广泛的国际AI安全共识，但无约束力。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'EU AI法案合规时间表',
+            items: [
+              '2025年2月：EU AI法案生效。禁止行为禁令逐步实施。',
+              '2025年8月：GPAI义务适用——GPT-4o、Claude、Gemini必须发布训练数据摘要并遵守EU版权法。',
+              '2026年8月：高风险AI系统完全执行——招聘、信贷、医疗、执法AI需要符合性评估。',
+              '2027年8月：嵌入受监管产品（医疗器械、车辆）的高风险AI完全执行。',
+              '持续：布鲁塞尔效应——如果您的AI到达任何EU居民，EU AI法案适用，与您的总部位置无关。'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '在中国部署AI：6个步骤',
+            items: [
+              '了解可用模型：GPT-4o和Claude在中国被封锁。可用：Qwen 2.5 72B、ERNIE 4.0（百度千帆API）、Doubao（ByteDance）、DeepSeek R1。',
+              '规划API内容过滤：CPC批评、台湾/西藏/新疆独立、天安门事件被屏蔽。响应为HTTP 200，is_safe: 0（非HTTP 4xx）。在代码中处理。',
+              '在任何面向消费者的服务上线前完成CAC安全评估。提交训练数据来源、内容过滤文档和示例输出。时间表：45–90天。',
+              '部署混合模型：在中国外自有基础设施上部署Qwen 2.5 72B供国际用户；通过Qianfan API使用ERNIE 4.0（CAC注册）处理中国业务。',
+              '遵守PIPL（2021年）：中国用户个人数据必须留在中国。通过阿里云、腾讯云或华为云路由所有中国用户流量。',
+              '与中国大陆实体合作开展面向消费者的产品。外国公司不能直接持有CAC注册资质。'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题解答',
+            faqs: [
+              { q: 'EU AI法案是什么？', a: '世界首个全面AI法律框架，2024年3月以523票赞成通过。将AI分为4个风险级别。完整执法从2026年8月开始。违规罚款最高3500万欧元或全球营业额的7%。' },
+              { q: 'EU AI法案是否适用于欧盟外的公司？', a: '是的——布鲁塞尔效应。任何在欧盟市场上部署AI或其AI输出在欧盟使用的组织必须合规，无论总部在哪里。' },
+              { q: '违反EU AI法案的罚款是多少？', a: '对禁止的AI做法最高3500万欧元或全球年营业额的7%。高风险AI违规：最高1500万欧元或3%。向当局提供不正确信息：最高750万欧元或1%。' },
+              { q: '美国AI监管与欧盟方式有何不同？', a: '美国采用部门化、自愿性方式。无联邦AI法。现有监管机构（FTC、FDA）对其领域内的AI适用现有权限。拜登AI安全行政令于2025年1月被特朗普政府撤销。' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '关键要点',
+            items: [
+              'AI是战略性国家技术——美国、中国和欧盟竞争主导权。',
+              '各国竞争三种资源：计算能力（芯片）、AI人才和训练数据。',
+              'EU AI法案是世界首个具有约束力的AI法——罚款最高3500万欧元或全球营业额的7%。',
+              '布鲁塞尔效应：EU AI法案规则适用于任何到达欧盟用户的AI，全球适用。',
+              '美国没有联邦AI法——部门监管机构对其领域内的AI适用现有任务。',
+              '中国的DeepSeek R1在关键基准上与GPT-4o相当——GPU出口管制并未停止中国AI。',
+              'TSMC在台湾制造为所有前沿AI提供动力的芯片——单一地缘政治依赖。'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '在三种监管体系下测试AI',
+            body: 'PromptQuorum让您同时向Mistral（欧盟合规）、GPT-4o（美国/GPAI）和Qwen（中国可访问）发送相同提示——一键对比不同监管环境下的输出结果。',
+            cta: '免费试用PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+            <h1>${slide.h1}</h1>
+            <p>${slide.subtitle}</p>
+            <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+              <a href="${slide.link}">${slide.link.replace('https://www.', '')}</a>
+            </p>
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p>${slide.intro}</p>`;
+          html += '<ul style="font-size: 1.1em; margin-top: 16px;">';
+          slide.items.forEach(item => { html += `<li>${item}</li>`; });
+          html += '</ul>';
+          break;
+
+        case 'table':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<table><thead><tr>';
+          slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+          html += '</tr></thead><tbody>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            if (Array.isArray(row)) {
+              row.forEach(cell => { html += `<td>${cell}</td>`; });
+            } else {
+              slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+            }
+            html += '</tr>';
+          });
+          html += '</tbody></table>';
+          break;
+
+        case 'comparison':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 40px; font-size: 1.3em; color: #1c1b1f;">${slide.line1}</p>
+            <p style="font-size: 1.3em; color: #1c1b1f;">${slide.line2}</p>
+            <p style="margin-top: 40px; font-size: 1.15em; color: #6750a4; font-weight: 600;">${slide.tip}</p>
+          `;
+          break;
+
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<ol style="font-size: 1.05em; margin-top: 16px; text-align: left; max-width: 640px;">';
+          slide.items.forEach(item => { html += `<li style="margin-bottom: 10px;">${item}</li>`; });
+          html += '</ol>';
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 18px; text-align: left; max-width: 680px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+          });
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="max-width: 600px; margin: 20px auto;">${slide.body}</p>
+            <a href="${slide.href}" style="display: inline-block; margin-top: 24px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: 700;">${slide.cta}</a>
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    // Update header
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href += '?lang=' + lang;
+
+    // Render all slides
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => { container.innerHTML += renderSlide(slide); });
+
+    // Initialize navigation
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      else currentSlide = n;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    // Print handlers — set display:flex on all slides before browser print layout
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    // Print trigger
+    if (isPrint) {
+      window.addEventListener('load', () => { window.print(); });
+    }
+
+    showSlide(0);
+    </script>
+</body>
+</html>
