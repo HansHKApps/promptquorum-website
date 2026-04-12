@@ -234,6 +234,10 @@
             text-align: center;
         }
 
+        .slide-print-url {
+            display: none;
+        }
+
         /* Print styles — A4 landscape with mm dimensions */
         @page {
             size: A4 landscape;
@@ -291,18 +295,18 @@
                 counter-increment: page-counter;
             }
 
-            .slide::before {
-                content: "https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=" attr(data-lang);
+            .slide-print-url {
+                display: block !important;
                 position: absolute;
                 bottom: 15mm;
                 left: 24mm;
                 font-size: 9pt;
-                color: #999;
-                text-decoration: none;
+                color: #999 !important;
+                text-decoration: none !important;
             }
 
             .slide::after {
-                content: counter(page-counter) " / 14";
+                content: counter(page-counter) " / 13";
                 position: absolute;
                 bottom: 15mm;
                 right: 24mm;
@@ -505,10 +509,6 @@
                             {
                                 q: 'Can fine-tuning remove these limits?',
                                 a: 'No. Fine-tuning adjusts style and instruction-following but preserves all eight structural limitations.'
-                            },
-                            {
-                                q: 'Which model handles limitations best?',
-                                a: 'No model eliminates any limitation. Choose by use case: Gemini for context (2M tokens), Claude for uncertainty hedging, GPT-4o for tool use.'
                             }
                         ]
                     },
@@ -651,10 +651,6 @@
                             {
                                 q: 'Kann Fine-Tuning diese Grenzen eliminieren?',
                                 a: 'Nein. Fine-Tuning passt Stil und Befehlsbeachtung an, erhält aber alle acht strukturellen Grenzen.'
-                            },
-                            {
-                                q: 'Welches Modell bewältigt Grenzen am besten?',
-                                a: 'Kein Modell eliminiert Grenzen. Wähle nach Anwendungsfall: Gemini für Kontext (2M Tokens), Claude für Unsicherheitshedging.'
                             }
                         ]
                     },
@@ -798,10 +794,6 @@
                                 q: 'Le fine-tuning peut-il éliminer ces limites ?',
                                 a: 'Non. Le fine-tuning ajuste le style et l\'obéissance aux instructions mais préserve les huit limitations structurelles.'
                             },
-                            {
-                                q: 'Quel modèle gère le mieux les limitations ?',
-                                a: 'Aucun modèle n\'élimine les limitations. Choisir par cas d\'usage : Gemini pour contexte (2M tokens), Claude pour haie d\'incertitude.'
-                            }
                         ]
                     },
                     {
@@ -944,10 +936,6 @@
                                 q: 'ファインチューニングでこれらの制限を削除できますか？',
                                 a: 'いいえ。ファインチューニングはスタイルと命令追従を調整しますが、8つの構造的制限すべてを保持します。'
                             },
-                            {
-                                q: 'どのモデルが制限を最も適切に処理しますか？',
-                                a: 'どのモデルも制限を排除しない。ユースケース別に選択：Geminiはコンテキスト用（2Mトークン）、Claudeは不確実性へッジ用。'
-                            }
                         ]
                     },
                     {
@@ -1090,10 +1078,6 @@
                                 q: '微调可以消除这些限制吗？',
                                 a: '否。微调调整风格和指令遵循，但保留所有 8 个结构性限制。'
                             },
-                            {
-                                q: '哪个模型最能处理限制？',
-                                a: '没有模型消除限制。按用例选择：Gemini 用于上下文（2M 个令牌），Claude 用于不确定性对冲。'
-                            }
                         ]
                     },
                     {
@@ -1121,7 +1105,7 @@
         function renderSlide(slide) {
             let html = '';
             const articleUrl = 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=' + lang;
-            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p><a href="${articleUrl}" class="slide-print-url">${articleUrl}</a>`;
             
             switch (slide.type) {
                 case 'title':
