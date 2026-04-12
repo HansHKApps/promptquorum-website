@@ -1117,13 +1117,13 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
               </a>
             )}
             <div
-              className="relative w-full rounded-xl overflow-hidden border border-primary/20 shadow-sm"
-              style={{ paddingBottom: '56.25%', height: 0 }}
+              className="w-full rounded-xl overflow-hidden border border-primary/20 shadow-sm"
+              style={{ height: 'min(80vh, max(600px, 56.25vw))' }}
             >
               <iframe
                 src={article.gammaEmbedUrl}
                 title="Temperature and Top-P: Control AI Creativity — PromptQuorum"
-                className="absolute top-0 left-0 w-full h-full border-0"
+                className="w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"
               />
