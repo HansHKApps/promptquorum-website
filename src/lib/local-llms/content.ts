@@ -3694,12 +3694,12 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         tldr: { isTldr: true, items: ['**Bestes Gesamtmodell**: Meta Llama 3.3 70B — entspricht GPT-4 (2023) bei MMLU (82%), erfordert 40 GB RAM mit Q4_K_M.', '**Beste Codierung**: Qwen2.5 72B — 87% bei HumanEval, unterstützt 29 Sprachen, 128K Kontextfenster.', '**Beste 7B-Klasse**: Mistral Small 3.1 24B — starke Befehlsausführung, 128K Kontext, läuft auf 16 GB RAM.', '**Beste Mittelklasse (16 GB RAM)**: Google Gemma 3 9B — beste Qualitäts-zu-RAM-Verhältnis in der 9B-Klasse.', '**Bestes kleines Modell**: Microsoft Phi-4 Mini 3.8B — Denkleistung über seiner Parametergröße, läuft auf 4 GB RAM.'] },
         howWeRanked: { title: 'So haben wir diese Modelle bewertet', content: ['Die Bewertungen basieren auf drei Benchmarks: MMLU (57-Fragen-Wissenstest, höher = bessere allgemeine Intelligenz), HumanEval (Python-Code-Generierung, höher = bessere Codierungsfähigkeit) und MATH (Mathematik-Wettkampfaufgaben, höher = stärkeres Denken). Die Ergebnisse stammen aus veröffentlichten Arbeiten und der Open LLM Leaderboard ab Q1 2026.', 'Hardware-Anforderungen werden für Q4_K_M-Quantisierung berechnet — die Standard-Anfängereinstellung, die Qualität und RAM-Nutzung ausgleicht. Eine Einführung in die Quantisierung finden Sie unter [LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de).', 'Alle Modelle sind über Ollama verfügbar. Weitere Informationen zur Installation finden Sie unter [So installieren Sie Ollama](/local-llms/how-to-install-ollama?lang=de).'] },
         llama33: { title: '#1 Meta Llama 3.3 70B — Bestes lokales LLM 2026', content: ['Meta Llama 3.3 70B ist das beste Modell mit offenem Gewicht für lokale Inferenz 2026. Es erreicht 82% bei MMLU, 88% bei HumanEval und 77% bei MATH — entspricht oder übertrifft GPT-4 (2023) bei allen drei Benchmarks. Das 128K-Kontextfenster verarbeitet lange Dokumente und erweiterte Gespräche.', 'Die Hauptbeschränkung ist die Hardware: Q4_K_M-Quantisierung erfordert etwa 40 GB RAM. Dies schließt die meisten Consumer-Laptops aus. Es läuft gut auf einem Mac Studio M2 Ultra (64+ GB), einer hochwertigen Workstation mit 64 GB RAM oder verteilt über GPU und System-RAM mit Ollamas Layer-Offloading.'], rows: [{ 'Spezifikation': 'MMLU-Ergebnis', 'Wert': '82%' }, { 'Spezifikation': 'HumanEval-Ergebnis', 'Wert': '88%' }, { 'Spezifikation': 'Erforderlicher RAM (Q4_K_M)', 'Wert': '~40 GB' }, { 'Spezifikation': 'Kontextfenster', 'Wert': '128K Token' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama run llama3.3:70b' }], columns: ['Spezifikation', 'Wert'] },
-        qwen25_72: { title: '#2 Qwen2.5 72B — Beste Codierung und mehrsprachige Aufgaben', content: ['Qwen2.5 72B von Alibaba entspricht Llama 3.3 70B bei allgemeinen Benchmarks und übertrifft es bei der Codierung: 87% HumanEval vs. 88% für Llama 3.3. Es unterstützt 29 Sprachen nativ (einschließlich Chinesisch, Japanisch, Koreanisch, Arabisch) und verwendet ein 128K-Kontextfenster. JSON-Modus und Funktionsaufrufe sind integriert.', 'Für Teams, die nicht-englische Inhalte verarbeiten oder mehrsprachige Anwendungen erstellen, ist Qwen2.5 72B die empfohlene Wahl gegenüber Llama 3.3 70B. Weitere Informationen zu sprachspezifischen Benchmarks finden Sie unter [Mehrsprachige lokale LLMs](/local-llms/multilingual-local-llms?lang=de).'], rows: [{ 'Spezifikation': 'MMLU-Ergebnis', 'Wert': '84%' }, { 'Spezifikation': 'HumanEval-Ergebnis', 'Wert': '87%' }, { 'Spezifikation': 'Erforderlicher RAM (Q4_K_M)', 'Wert': '~43 GB' }, { 'Spezifikation': 'Sprachen', 'Wert': '29 nativ unterstützt' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama run qwen2.5:72b' }], columns: ['Spezifikation', 'Wert'] },
+        qwen25_72: { title: '#2 Qwen2.5 72B — Beste Codierung und mehrsprachige Aufgaben', content: ['Qwen2.5 72B von Alibaba entspricht Llama 3.3 70B bei allgemeinen Benchmarks und übertrifft es bei der Codierung: 87% HumanEval vs. 88% für Llama 3.3. Es unterstützt 29 Sprachen nativ (einschließlich Chinesisch, Japanisch, Koreanisch, Arabisch) und verwendet ein 128K-Kontextfenster. JSON-Modus und Funktionsaufrufe sind integriert.', 'Für Teams, die nicht-englische Inhalte verarbeiten oder mehrsprachige Anwendungen erstellen, ist Qwen2.5 72B die empfohlene Wahl gegenüber Llama 3.3 70B. Weitere Informationen zu sprachspezifischen Benchmarks finden Sie unter [Qwen vs. Llama vs. Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de).'], rows: [{ 'Spezifikation': 'MMLU-Ergebnis', 'Wert': '84%' }, { 'Spezifikation': 'HumanEval-Ergebnis', 'Wert': '87%' }, { 'Spezifikation': 'Erforderlicher RAM (Q4_K_M)', 'Wert': '~43 GB' }, { 'Spezifikation': 'Sprachen', 'Wert': '29 nativ unterstützt' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama run qwen2.5:72b' }], columns: ['Spezifikation', 'Wert'] },
         mistralSmall: { title: '#3 Mistral Small 3.1 24B — Beste 7B-Klasse für 16 GB RAM', content: ['Mistral Small 3.1 ist ein 24B-Parameter-Modell, das mit Q4_K_M-Quantisierung in 16 GB RAM passt (~14 GB). Es erreicht 79% bei MMLU und 74% bei HumanEval — deutlich über jedem echten 7B-Modell. Das 128K-Kontextfenster ist für Mistrals 2025+-Versionen Standard.', 'Mistral Small 3.1 ist der empfohlene Upgrade-Weg für Benutzer, die 7B-Modelle ausgeführt haben und bessere Qualität ohne die 40 GB RAM eines 70B-Modells möchten.'], rows: [{ 'Spezifikation': 'MMLU-Ergebnis', 'Wert': '79%' }, { 'Spezifikation': 'HumanEval-Ergebnis', 'Wert': '74%' }, { 'Spezifikation': 'Erforderlicher RAM (Q4_K_M)', 'Wert': '~14 GB' }, { 'Spezifikation': 'Kontextfenster', 'Wert': '128K Token' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama run mistral-small3.1' }], columns: ['Spezifikation', 'Wert'] },
         gemma3: { title: '#4 Google Gemma 3 9B — Beste Mittelklasse für 8–16 GB RAM', content: ['Gemma 3 9B ist Googles Modell mit offenem Gewicht in der 9B-Parameterklasse. Es erreicht 73% bei MMLU und 68% bei HumanEval, was es über alle 7B-Modelle stellt und zur besten Option für Benutzer mit 8 GB RAM macht, die eine Stufe über Standard-7B-Qualität möchten.', 'Gemma 3 9B unterstützt Bilderfassung (Bildeingabe) in seiner multimodalen Variante — was es zu einem der wenigen lokal ausführbaren Modelle macht, das Bilder auf Consumer-Hardware verarbeiten kann. Nur-Text-Aufgaben verwenden die Standard-Variante.'], rows: [{ 'Spezifikation': 'MMLU-Ergebnis', 'Wert': '73%' }, { 'Spezifikation': 'HumanEval-Ergebnis', 'Wert': '68%' }, { 'Spezifikation': 'Erforderlicher RAM (Q4_K_M)', 'Wert': '~6 GB' }, { 'Spezifikation': 'Kontextfenster', 'Wert': '128K Token' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama run gemma3:9b' }], columns: ['Spezifikation', 'Wert'] },
         phi4mini: { title: '#5 Microsoft Phi-4 Mini 3.8B — Bestes Modell unter 4 GB RAM', content: ['Microsoft Phi-4 Mini 3.8B erreicht 68% bei MMLU — entspricht Modellen, die doppelt so groß sind — durch Training mit hochwertigen synthetischen Denkdaten. Es benötigt nur ~2,5 GB RAM mit Q4_K_M und läuft mit 30–50 Token/Sekunde auf jeder modernen Laptop-CPU.', 'Phi-4 Mini ist das empfohlene Modell für Maschinen mit 4–8 GB RAM oder jede Situation, in der Antwortgeschwindigkeit wichtiger ist als maximale Qualität. Seine Denkleistung übertrifft Llama 3.2 3B auf der gleichen Hardware-Stufe deutlich.'], rows: [{ 'Spezifikation': 'MMLU-Ergebnis', 'Wert': '68%' }, { 'Spezifikation': 'HumanEval-Ergebnis', 'Wert': '70%' }, { 'Spezifikation': 'Erforderlicher RAM (Q4_K_M)', 'Wert': '~2,5 GB' }, { 'Spezifikation': 'Kontextfenster', 'Wert': '128K Token' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama run phi4-mini' }], columns: ['Spezifikation', 'Wert'] },
         fullBenchmark: { title: 'Vollständiger Benchmark-Vergleich: Top 5 lokale LLMs 2026', rows: [{ 'Modell': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'RAM': '40 GB', 'Beste Für': 'Gesamtqualität' }, { 'Modell': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'RAM': '43 GB', 'Beste Für': 'Codierung, mehrsprachig' }, { 'Modell': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'HumanEval': '74%', 'RAM': '14 GB', 'Beste Für': '16 GB RAM Maschinen' }, { 'Modell': 'Gemma 3 9B', 'MMLU': '73%', 'HumanEval': '68%', 'RAM': '6 GB', 'Beste Für': '8–16 GB Mittelklasse' }, { 'Modell': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2,5 GB', 'Beste Für': 'Niedriges RAM, schnelle Geschwindigkeit' }], columns: ['Modell', 'MMLU', 'HumanEval', 'RAM', 'Beste Für'] },
-        whichModel: { title: 'Welches lokale LLM sollten Sie 2026 verwenden?', items: ['**4–8 GB RAM**: Phi-4 Mini 3.8B (`ollama run phi4-mini`) — beste Denkleistung mit wenig RAM.', '**8 GB RAM**: Gemma 3 9B (`ollama run gemma3:9b`) — beste verfügbare Qualität auf diesem Niveau.', '**16 GB RAM**: Mistral Small 3.1 24B — großer Qualitätssprung gegenüber 7B-Modellen.', '**40+ GB RAM (Workstation)**: Llama 3.3 70B oder Qwen2.5 72B — Frontier-Qualität.', '**Codierungsaufgaben in jeder Größe**: Qwen2.5 in der größten Größe, die Ihre Hardware zulässt — weitere Informationen finden Sie unter [Beste lokale LLMs für Codierung](/local-llms/best-local-llms-for-coding?lang=de).', '**Nicht-englische Sprachen**: Qwen2.5 — weitere Informationen finden Sie unter [Mehrsprachige lokale LLMs](/local-llms/multilingual-local-llms?lang=de).'] },
+        whichModel: { title: 'Welches lokale LLM sollten Sie 2026 verwenden?', items: ['**4–8 GB RAM**: Phi-4 Mini 3.8B (`ollama run phi4-mini`) — beste Denkleistung mit wenig RAM.', '**8 GB RAM**: Gemma 3 9B (`ollama run gemma3:9b`) — beste verfügbare Qualität auf diesem Niveau.', '**16 GB RAM**: Mistral Small 3.1 24B — großer Qualitätssprung gegenüber 7B-Modellen.', '**40+ GB RAM (Workstation)**: Llama 3.3 70B oder Qwen2.5 72B — Frontier-Qualität.', '**Codierungsaufgaben in jeder Größe**: Qwen2.5 in der größten Größe, die Ihre Hardware zulässt — weitere Informationen finden Sie unter [Beste lokale LLMs für Codierung](/local-llms/best-local-llms-for-coding?lang=de).', '**Nicht-englische Sprachen**: Qwen2.5 — weitere Informationen finden Sie unter [Qwen vs. Llama vs. Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de).'] },
         regionalContext: { title: 'Beste lokale LLMs nach Region', content: ['**Europäische Union (DSGVO)**: Die Datenschutz-Grundverordnung (DSGVO) der EU erlaubt lokale Inferenz als rechtmäßige Grundlage für die Datenverarbeitung (Artikel 28). Organisationen, die personenbezogene Daten verarbeiten (Mitarbeiterdaten, Kundeninformationen, Gesundheitsdaten), sollten beachten, dass Llama 3.3 70B und Qwen2.5 72B vollständig auf lokaler Hardware laufen ohne Datenübertragung an Cloud-Services, was die DSGVO-Anforderungen von Artikel 32 (Sicherheitspflichten) erfüllt. Dies steht im Gegensatz zu Cloud-LLM-APIs, die Anfragen möglicherweise speichern oder protokollieren.', '**Deutschland, Österreich und die Schweiz (DACH-Region)**: Das Bundesamt für Sicherheit in der Informationstechnik (BSI) hat Grundschutz-Kataloge veröffentlicht, die lokale Deployment als empfohlen für sensible Unternehmensanwendungen einstufen. Für Organisationen in Deutschland, Österreich und der Schweiz, die mit vertraulichen Daten arbeiten (Finanzinstitute, Versicherungen, Gesundheitswesen), bieten Llama 3.3 70B und Qwen2.5 72B eine BSI-konforme Alternative zu Cloud-basierten Lösungen. Die lokale Deployment-Option erfüllt die Anforderungen des BSI-Grundschutz-Katalogs bezüglich Datenresidenz und Verarbeitungskontrolle.', '**Japan (METI-Richtlinien)**: Japans Ministerium für Wirtschaft, Handel und Industrie (METI) hat 2024 Richtlinien zur KI-Governance veröffentlicht, die lokales Deployment für sensible Unternehmungsanwendungen (Finanzinstitutionen, Gesundheitswesen, Telekommunikation) empfehlen. Qwen2.5 72B mit native Unterstützung für Japanisch ist die empfohlene Wahl für japanische Organisationen, die Kundendaten verarbeiten.', '**China (Datensicherheitsgesetz)**: Chinas Datensicherheitsgesetz von 2021 (DSL) verlangt Datenlokalität und Governance-Kontrollen für sensible Kategorien (Finanzen, Telekommunikation, Bildung). Qwen2.5 72B wird von Alibaba (einem chinesischen Unternehmen) entwickelt und ist für Mandarin-Chinesisch optimiert, was es zur nativen Wahl macht. Llama 3.3 70B ist kompatibel, erfordert aber Mandarin-Feinabstimmung für beste Ergebnisse bei chinesischsprachigen Dokumenten.'] },
         commonMistakes: { title: 'Häufige Fehler bei der Modellauswahl 2026', items: ['Auswahl nur auf Basis von Benchmarks — Leistung in der Praxis bei Ihrer Aufgabe kann erheblich abweichen.', 'Keine Prüfung von Modellausgaben auf Ihren spezifischen Anwendungsfall vor dem Deployment.', 'Vergessung, Lizenzbeschränkungen für kommerzielle Nutzung zu überprüfen.', 'Vergleich von 70B- vs. 7B-Modellen über verschiedene Hardware-Stufen — Llama 3.3 70B mit 82% MMLU konkurriert nicht direkt mit Mistral Small 3.1 mit 79%, wenn sie grundlegend verschiedene RAM-Anforderungen haben (40 GB vs. 14 GB). Wählen Sie das Modell, das in Ihre Hardware-Einschränkung passt.', 'Download eines 70B-Modells ohne vorherige Überprüfung des verfügbaren RAM — ein 40 GB-Download dauert 30–60 Minuten bei typischem Home-Internet. Führen Sie `free -h` (Linux) oder Activity Monitor (macOS) aus, bevor Sie große Modelle herunterladen. Wenn nicht genug RAM verfügbar ist, beginnt Ollama mit CPU-Offloading, was die Geschwindigkeit auf 2–5 Token/Sekunde verschlechtert.'] },
         relatedReading: { title: 'Weiterführende Literatur', items: ['[Beste Anfänger-Modelle für lokale LLMs](/local-llms/best-beginner-local-llm-models?lang=de) — Grundmodelle für neue Benutzer', '[So installieren Sie Ollama](/local-llms/how-to-install-ollama?lang=de) — Installation und Modelleinrichtung', '[Beste lokale LLMs für Codierung](/local-llms/best-local-llms-for-coding?lang=de) — Für Codierung optimierte Modellvergleiche', '[Beschränkungen lokaler LLMs](/local-llms/local-llm-limitations?lang=de) — Modellbeschränkungen verstehen', '[Qwen vs. Llama vs. Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de) — Detaillierter Benchmark-Vergleich aller drei Modellfamilien bei jeder Größe', '[Lokaler LLM Hardware-Leitfaden 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — VRAM und GPU-Anforderungen zum Ausführen von 70B-Modellen einschließlich Dual RTX 4090 und Mac Studio-Konfigurationen'] },
@@ -3775,7 +3775,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: '#2 Qwen2.5 72B — Best for Coding et tâches multilingues',
           content: [
             'Qwen2.5 72B d\'Alibaba correspond à Llama 3.3 70B sur les benchmarks généraux et le surpasse dans le code : 87 % HumanEval contre 88 % pour Llama 3.3. Il supporte 29 langues nativement (y compris le chinois, le japonais, le coréen, l\'arabe) et utilise une fenêtre de contexte 128K. Le mode JSON et l\'appel de fonction sont intégrés.',
-            'Pour les équipes traitant du contenu non-anglais ou construisant des applications multilingues, Qwen2.5 72B est le choix recommandé par rapport à Llama 3.3 70B. Consultez [Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=fr) pour les benchmarks spécifiques aux langues.',
+            'Pour les équipes traitant du contenu non-anglais ou construisant des applications multilingues, Qwen2.5 72B est le choix recommandé par rapport à Llama 3.3 70B. Consultez [Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr) pour les benchmarks spécifiques aux langues.',
           ],
           rows: [
             { 'Spécification': 'Score MMLU', 'Valeur': '84 %' },
@@ -3850,7 +3850,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**16 GB RAM**: Mistral Small 3.1 24B — grand saut de qualité par rapport aux modèles 7B.',
             '**40+ GB RAM (station de travail)**: Llama 3.3 70B ou Qwen2.5 72B — qualité à la limite.',
             '**Tâches de code à n\'importe quelle échelle**: Qwen2.5 de la plus grande taille que votre matériel permet — consultez [Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=fr).',
-            '**Langues non-anglaises**: Qwen2.5 — consultez [Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=fr).',
+            '**Langues non-anglaises**: Qwen2.5 — consultez [Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr).',
           ],
         },
         regionalContext: {
@@ -3896,7 +3896,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=fr) — Comparaisons de modèles optimisés pour le code',
             '[Local LLM Limitations](/local-llms/local-llm-limitations?lang=fr) — Comprendre les contraintes du modèle',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — Exigences en RAM, GPU et quantification',
-            '[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=fr) — Benchmarks de performance en langage non-anglais',
+            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr) — Comparaison multilingue des benchmarks',
           ],
         },
         sources: {
@@ -4007,7 +4007,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: '#2 Qwen2.5 72B — コード・多言語タスク最高',
           content: [
             'Alibabaの Qwen2.5 72Bは、一般的なベンチマークではLlama 3.3 70Bと同等で、コード性能では上回ります：HumanEval 87%対Llama 3.3の88%。29言語をネイティブ対応しています（中国語、日本語、韓国語、アラビア語を含む）。128Kのコンテキストウィンドウを使用します。JSONモードと関数呼び出しが組み込まれています。',
-            '英語以外のコンテンツを処理するチームまたは多言語アプリケーション構築しているチームの場合、Qwen2.5 72BはLlama 3.3 70Bよりも推奨される選択肢です。言語固有のベンチマークについては、[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=ja)を参照してください。',
+            '英語以外のコンテンツを処理するチームまたは多言語アプリケーション構築しているチームの場合、Qwen2.5 72BはLlama 3.3 70Bよりも推奨される選択肢です。言語固有のベンチマークについては、[Qwen vs Llama vs Mistral 多言語比較](/local-llms/qwen-vs-llama-vs-mistral?lang=ja)を参照してください。',
           ],
           rows: [
             { '仕様': 'MMUスコア', '値': '84%' },
@@ -4082,7 +4082,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**16GB RAM**: Mistral Small 3.1 24B — 7Bモデルより大幅な品質向上。',
             '**40GB以上RAM（ワークステーション）**: Llama 3.3 70BまたはQwen2.5 72B — 最先端の品質。',
             '**コード作成タスク（すべてのスケール）**: ハードウェアが許す最大サイズのQwen2.5。詳細は[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=ja)を参照。',
-            '**英語以外の言語**: Qwen2.5。詳細は[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=ja)を参照。',
+            '**英語以外の言語**: Qwen2.5。詳細は[Qwen vs Llama vs Mistral 多言語比較](/local-llms/qwen-vs-llama-vs-mistral?lang=ja)を参照。',
           ],
         },
         regionalContext: {
@@ -4124,7 +4124,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[How to Install Ollama](/local-llms/how-to-install-ollama?lang=ja) — インストールとモデルセットアップ',
             '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=ja) — コード最適化モデルの比較',
             '[Local LLM Limitations](/local-llms/local-llm-limitations?lang=ja) — モデルの制約を理解する',
-            '[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=ja) — 言語別ベンチマークと多言語モデル',
+            '[Qwen vs Llama vs Mistral 多言語比較](/local-llms/qwen-vs-llama-vs-mistral?lang=ja) — 言語別ベンチマーク比較',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — GPUとRAM選択ガイド',
           ],
         },
@@ -4236,7 +4236,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: '#2 Qwen2.5 72B — 代码和多语言任务最佳',
           content: [
             'Alibaba的Qwen2.5 72B在一般基准测试上与Llama 3.3 70B相当，在代码上超越它：HumanEval 87%对Llama 3.3的88%。它原生支持29种语言（包括中文、日文、韩文、阿拉伯文），并使用128K上下文窗口。JSON模式和函数调用内置。',
-            '对于处理非英文内容或构建多语言应用的团队，Qwen2.5 72B是相比Llama 3.3 70B的推荐选择。有关特定语言的基准测试，请参阅[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=zh)。',
+            '对于处理非英文内容或构建多语言应用的团队，Qwen2.5 72B是相比Llama 3.3 70B的推荐选择。有关特定语言的基准测试，请参阅[Qwen vs Llama vs Mistral 多语言比较](/local-llms/qwen-vs-llama-vs-mistral?lang=zh)。',
           ],
           rows: [
             { '规格': 'MMLU得分', '值': '84%' },
@@ -4311,7 +4311,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '**16GB RAM**：Mistral Small 3.1 24B——相比7B模型质量大幅提升。',
             '**40GB以上RAM（工作站）**：Llama 3.3 70B或Qwen2.5 72B——最前沿的质量。',
             '**任何规模的代码任务**：Qwen2.5，选择硬件允许的最大尺寸——详见[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=zh)。',
-            '**非英文语言**：Qwen2.5——详见[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=zh)。',
+            '**非英文语言**：Qwen2.5——详见[Qwen vs Llama vs Mistral 多语言比较](/local-llms/qwen-vs-llama-vs-mistral?lang=zh)。',
           ],
         },
         regionalContext: {
@@ -4353,7 +4353,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             '[How to Install Ollama](/local-llms/how-to-install-ollama?lang=zh) — 安装和模型设置',
             '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding?lang=zh) — 代码优化模型对比',
             '[Local LLM Limitations](/local-llms/local-llm-limitations?lang=zh) — 理解模型约束',
-            '[Multilingual Local LLMs](/local-llms/multilingual-local-llms?lang=zh) — 语言特定基准和多语言模型',
+            '[Qwen vs Llama vs Mistral 多语言比较](/local-llms/qwen-vs-llama-vs-mistral?lang=zh) — 多语言基准比较',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) — GPU和RAM选择指南',
           ],
         },
@@ -5943,7 +5943,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             },
             {
               q: 'Which small model is best for languages other than English?',
-              a: 'Qwen2.5 3B supports 29 languages natively including Chinese, Japanese, Korean, and Arabic. Gemma 2 2B and Phi-4 Mini are primarily English-optimized. For non-English tasks at the small model scale, Qwen2.5 3B is the clear choice. See [Multilingual Local LLMs](/local-llms/multilingual-local-llms) for a full language comparison.',
+              a: 'Qwen2.5 3B supports 29 languages natively including Chinese, Japanese, Korean, and Arabic. Gemma 2 2B and Phi-4 Mini are primarily English-optimized. For non-English tasks at the small model scale, Qwen2.5 3B is the clear choice. See [Qwen vs Llama vs Mistral multilingual comparison](/local-llms/qwen-vs-llama-vs-mistral) for a full language comparison.',
             },
             {
               q: 'What is the difference between Phi-4 Mini and Llama 3.2 3B for everyday tasks?',
@@ -6266,7 +6266,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             },
             {
               q: '英語以外の言語に最適な小規模モデルはどれですか？',
-              a: 'Qwen2.5 3Bは、中国語、日本語、韓国語、アラビア語を含む29言語をネイティブにサポートしています。Gemma 2 2BとPhi-4 Miniは主に英語最適化されています。小規模モデルスケールでの非英語タスクの場合、Qwen2.5 3Bが明確な選択肢です。[多言語ローカルLLM](/local-llms/multilingual-local-llms)で完全な言語比較を参照してください。',
+              a: 'Qwen2.5 3Bは、中国語、日本語、韓国語、アラビア語を含む29言語をネイティブにサポートしています。Gemma 2 2BとPhi-4 Miniは主に英語最適化されています。小規模モデルスケールでの非英語タスクの場合、Qwen2.5 3Bが明確な選択肢です。[Qwen vs Llama vs Mistral 多言語比較](/local-llms/qwen-vs-llama-vs-mistral)で完全な言語比較を参照してください。',
             },
             {
               q: '日常的なタスクでのPhi-4 MiniとLlama 3.2 3Bの違いは何ですか？',
@@ -6487,7 +6487,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             },
             {
               q: '英文以外的语言最好的小型模型是什么？',
-              a: 'Qwen2.5 3B原生支持29种语言，包括中文、日文、韩文和阿拉伯文。Gemma 2 2B和Phi-4 Mini主要是英文优化的。对于小型模型规模的非英文任务，Qwen2.5 3B是明确的选择。有关完整的语言比较，请参阅[多语言本地LLM](/local-llms/multilingual-local-llms)。',
+              a: 'Qwen2.5 3B原生支持29种语言，包括中文、日文、韩文和阿拉伯文。Gemma 2 2B和Phi-4 Mini主要是英文优化的。对于小型模型规模的非英文任务，Qwen2.5 3B是明确的选择。有关完整的语言比较，请参阅[Qwen vs Llama vs Mistral 多语言比较](/local-llms/qwen-vs-llama-vs-mistral)。',
             },
             {
               q: '日常任务中Phi-4 Mini和Llama 3.2 3B之间的区别是什么？',
@@ -11997,7 +11997,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           title: 'Related Reading & Resources',
           items: [
             '[How to Install Ollama: Complete Setup Guide](/local-llms/how-to-install-ollama?lang=en)',
-            '[Best Multilingual Local LLMs 2026: Qwen2.5 vs Llama vs Mistral](/local-llms/multilingual-local-llms?lang=en)',
+            '[Qwen vs Llama vs Mistral multilingual comparison](/local-llms/qwen-vs-llama-vs-mistral?lang=en)',
             '[Local LLM Hardware Guide 2026: GPU, CPU, RAM Requirements](/local-llms/local-llm-hardware-guide-2026?lang=en)',
             '[Open WebUI vs Ollama: Which Should You Use?](/local-llms/open-webui-vs-ollama?lang=en)',
             '[How to Optimize Local LLM Performance: Quantization & Caching](/local-llms/optimize-local-llm-performance?lang=en)',
@@ -18772,7 +18772,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           title: 'Related Reading',
           items: [
             '[Best Local RAG Tools](/local-llms/best-local-rag-tools) — Vector databases and frameworks.',
-            '[Prompt Engineering For Local Models](/local-llms/prompt-engineering-for-local-models) — Optimize prompts for RAG.',
+            '[Prompt Engineering Guide](/prompt-engineering) — Optimize prompts for RAG.',
             '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) — Expose RAG as API.',
             '[Fine-Tuning Local LLMs LoRA](/local-llms/fine-tuning-local-llms-lora) — Combine fine-tuning with RAG.',
           ],
@@ -18927,7 +18927,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           title: 'Related Reading',
           items: [
             '[Local RAG 2026](/local-llms/local-rag-2026) — Combine fine-tuning with RAG.',
-            '[Prompt Engineering For Local Models](/local-llms/prompt-engineering-for-local-models) — Optimize prompts for fine-tuned models.',
+            '[Prompt Engineering Guide](/prompt-engineering) — Optimize prompts for fine-tuned models.',
             '[Create Custom Local Models](/local-llms/create-custom-local-models) — Build models from scratch.',
           ],
         },
@@ -19086,7 +19086,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         relatedReading: {
           title: 'Related Reading',
           items: [
-            '[Prompt Engineering For Local Models](/local-llms/prompt-engineering-for-local-models) — Optimize agent prompts.',
+            '[Prompt Engineering Guide](/prompt-engineering) — Optimize agent prompts.',
             '[Local Vs Cloud Agents](/local-llms/local-vs-cloud-agents) — Direct comparison.',
             '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — UI for agent interaction.',
           ],
@@ -19418,7 +19418,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           title: 'Related Reading',
           items: [
             '[Local LLMs With VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) — Setup guide.',
-            '[Prompt Engineering For Local Models](/local-llms/prompt-engineering-for-local-models) — Optimize coding prompts.',
+            '[Prompt Engineering Guide](/prompt-engineering) — Optimize coding prompts.',
             '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Detailed benchmarks.',
           ],
         },
@@ -19768,7 +19768,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           title: 'Related Reading',
           items: [
             '[Fine-Tuning Local LLMs LoRA](/local-llms/fine-tuning-local-llms-lora) — Detailed fine-tuning guide.',
-            '[Prompt Engineering For Local Models](/local-llms/prompt-engineering-for-local-models) — Alternative to model changes.',
+            '[Prompt Engineering Guide](/prompt-engineering) — Alternative to model changes.',
           ],
         },
         sources: {
@@ -21157,7 +21157,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           items: [
             '[VRAM Calculator Tool](/local-llms/vram-calculator-local-llm)',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained)',
-            '[Best 7B Models for Consumer Hardware](/local-llms/best-7b-models-consumer-hardware)',
+            '[best small local LLM models](/local-llms/small-local-llm-models)',
             '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
           ],
         },
@@ -21893,7 +21893,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '[LM Studio vs Jan AI](/local-llms/lm-studio-vs-jan-ai)',
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio)',
             '[Open WebUI vs SillyTavern](/local-llms/open-webui-vs-sillytavern)',
-            '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm)',
+            '[Ollama installation and setup guide](/local-llms/how-to-install-ollama)',
             '[Local RAG 2026](/local-llms/local-rag-2026)',
           ],
         },
@@ -22036,7 +22036,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           items: [
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio)',
             '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends)',
-            '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm)',
+            '[Ollama installation and setup guide](/local-llms/how-to-install-ollama)',
             '[Best Local LLM Stack by Use Case](/local-llms/best-local-llm-stack-use-case)',
           ],
         },
@@ -22449,7 +22449,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           title: 'Related Reading',
           items: [
             '[Best Local LLM Stack by Use Case](/local-llms/best-local-llm-stack-use-case)',
-            '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm)',
+            '[Ollama installation and setup guide](/local-llms/how-to-install-ollama)',
             '[Local LLMs with VS Code & Cursor](/local-llms/local-llms-with-vscode-cursor)',
             '[Fine-Tuning Local LLMs with LoRA](/local-llms/fine-tuning-local-llms-lora)',
           ],
