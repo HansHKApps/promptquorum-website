@@ -75,31 +75,36 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
 }
 
 // Presentation UI translations
-const PRESENTATION_UI: Record<Language, { heading: string; description: string; savePdf: string }> = {
+const PRESENTATION_UI: Record<Language, { heading: string; description: string; savePdf: string; detailedDescription: string }> = {
   en: {
     heading: 'Visual Summary',
     description: 'Prefer slides over reading? Click through this interactive presentation covering all key concepts, settings, and use cases — then save as PDF for reference.',
     savePdf: '↓ Save as PDF',
+    detailedDescription: 'The slide deck below covers: how tokenization converts text to token IDs, how transformer attention creates the lost-in-the-middle effect, RLHF vs pretraining differences, and inference parameter reference table (temperature, top-p, max tokens). Download the PDF as an LLM architecture reference card.',
   },
   de: {
     heading: 'Visuelle Zusammenfassung',
     description: 'Lieber Slides als lesen? Klick durch diese interaktive Präsentation zu allen Schlüsselkonzepten, Einstellungen und Anwendungsfällen — dann als PDF speichern.',
     savePdf: '↓ Als PDF speichern',
+    detailedDescription: 'Das Foliendeck behandelt: wie Tokenisierung Text in Token-IDs umwandelt, wie Transformer-Attention den „Lost-in-the-Middle"-Effekt erzeugt, RLHF vs. Pretraining-Unterschiede und Inferenzparameter-Referenztabelle (Temperatur, Top-p, max Tokens). Laden Sie das PDF als LLM-Architektur-Referenzkarte herunter.',
   },
   fr: {
     heading: 'Résumé visuel',
     description: 'Préférez les slides à la lecture ? Parcourez cette présentation interactive couvrant tous les concepts clés, paramètres et cas d\'utilisation — puis enregistrez en PDF.',
     savePdf: '↓ Enregistrer en PDF',
+    detailedDescription: 'La présentation couvre : comment la tokenisation convertit le texte en IDs de tokens, comment l\'attention transformer crée l\'effet « lost in the middle », les différences RLHF vs pretraining, et le tableau de référence des paramètres d\'inférence (température, top-p, tokens max). Téléchargez le PDF comme carte de référence d\'architecture LLM.',
   },
   ja: {
     heading: 'ビジュアルサマリー',
     description: '読むよりスライドを好みますか？すべての主要概念、設定、ユースケースをカバーするこのインタラクティブなプレゼンテーションをクリックして — PDFとして保存。',
     savePdf: '↓ PDFとして保存',
+    detailedDescription: 'スライドデッキには以下が含まれています：トークン化がテキストをトークンIDに変換する方法、Transformerの注意機構が「lost-in-the-middle」効果を生成する仕組み、RLHFと事前学習の違い、推論パラメータ参照表（温度、Top-p、最大トークン数）。PDFをLLMアーキテクチャ参照カードとしてダウンロードしてください。',
   },
   zh: {
     heading: '视觉摘要',
     description: '比起阅读，更喜欢幻灯片？点击浏览这个涵盖所有关键概念、设置和用例的交互式演示文稿 — 然后保存为PDF以供参考。',
     savePdf: '↓ 保存为PDF',
+    detailedDescription: '幻灯片涵盖以下内容：令牌化如何将文本转换为令牌ID、Transformer注意力机制如何创建"中间丢失"效应、RLHF与预训练的区别，以及推理参数参考表（温度、Top-p、最大令牌数）。将PDF下载作为LLM架构参考卡。',
   },
 }
 
@@ -1134,6 +1139,9 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             </h2>
             <p className="text-sm text-text-muted mb-4">
               {PRESENTATION_UI[lang]?.description ?? PRESENTATION_UI.en.description}
+            </p>
+            <p className="text-sm text-text-secondary mb-4">
+              {PRESENTATION_UI[lang]?.detailedDescription ?? PRESENTATION_UI.en.detailedDescription}
             </p>
             <a
               href={`${article.gammaEmbedUrl}?lang=${lang}&print=1`}
