@@ -228,29 +228,45 @@
             overflow: hidden;
         }
 
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
         @media print {
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+            }
+
             .header, .controls {
                 display: none !important;
             }
 
             .presentation-container {
-                height: auto;
+                display: block !important;
+                height: auto !important;
             }
 
             .content-area {
-                overflow: visible;
-                height: auto;
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
             }
 
             .slide {
                 display: flex !important;
                 page-break-after: always;
+                break-after: page;
+                width: 100%;
                 height: 100vh;
                 padding: 40px;
+                box-sizing: border-box;
             }
 
-            body {
-                overflow: visible;
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
             }
         }
 
