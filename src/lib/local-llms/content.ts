@@ -16081,7 +16081,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways'],
+          'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Advanced',
       },
