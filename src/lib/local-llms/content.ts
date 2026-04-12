@@ -2161,10 +2161,66 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
             'name': 'Does my laptop need a dedicated GPU to run local LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. Integrated GPUs (Apple Silicon, Intel Iris, AMD Radeon) help but aren\'t required. CPU-only is slower (25–45 tok/sec for 3B) but functional. Dedicated NVIDIA/AMD GPUs (RTX 4060 or better) provide 2–5× speedup.'
-            }
-          }
-        ]
+              'text': 'No. Integrated GPUs (Apple Silicon, Intel Iris, AMD Radeon) help but are not required. CPU-only is slower (25–45 tok/sec for 3B) but functional. Dedicated NVIDIA/AMD GPUs (RTX 4060 or better) provide 2–5× speedup.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the fastest local LLM I can run on an 8 GB MacBook?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'On an 8 GB MacBook with Apple Silicon (M1, M2, M3), the fastest practical model is llama3.2:3b at Q4_K_M — expect 60–100 tok/sec via Metal GPU. For quality at speed, mistral:7b runs at 30–50 tok/sec on an M2 8 GB with the full model in unified memory.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I reduce thermal throttling on a laptop during LLM inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Three steps: (1) Use a laptop stand with 2–3 cm of airflow clearance. (2) Disable Turbo Boost on Intel or AMD Precision Boost — base clock speed eliminates thermal spikes. (3) Use Q4_K_M instead of Q8_0 to reduce per-token compute and heat output.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run a local LLM on a Chromebook?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Only on Chromebooks with Linux (Crostini) enabled. Most Chromebooks have 4–8 GB RAM and weak CPUs — you can run a 2B–3B model at Q4_K_M, but expect 5–15 tok/sec. Chromebooks without Linux support cannot run local LLMs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Apple Silicon better than an NVIDIA laptop GPU for local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'It depends on VRAM. An M3 Pro (18 GB unified memory) outperforms an NVIDIA RTX 4060 laptop (8 GB VRAM) for 13B models because the full model fits in fast memory. For 7B models, both are comparable — 50–80 tok/sec on M3 Pro vs 60–90 tok/sec on RTX 4060. Apple Silicon wins on battery efficiency (12–18 W vs 25–45 W).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What happens if the model is too large for my laptop RAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama and LM Studio will use swap memory (disk-backed RAM). Inference slows to 1–5 tok/sec instead of 10–30 tok/sec, and the laptop fan runs at full speed. Fix: use a smaller model or lower quantization (Q4_K_M instead of Q8_0).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How long does battery last when running local LLMs on a laptop?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'On a typical 60 Wh battery: a 7B model on CPU draws 15–25 W — giving 2–3 hours of active inference. Apple Silicon is more efficient (12–18 W), giving 3–4 hours. A 3B model draws 6–10 W and extends battery to 5–6 hours. For day-long use, plug in.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do I need an internet connection to run a local LLM on a laptop?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. After downloading the model (which requires internet), inference is fully offline. The model runs entirely on the laptop CPU or GPU. This makes local LLMs useful for travel, secure environments, or locations with unreliable connectivity.',
+            },
+          },
+        ],
       },
     },
     // NOTE: When translating sections for de, fr, ja, zh — include the same images from the English sections:
@@ -5122,16 +5178,16 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         '@type': 'FAQPage',
         'inLanguage': 'en',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Can a local LLM replace a writing assistant like Claude or GPT-4o for fiction?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For short-form content (under 500 words), a well-prompted 13B+ local model produces output that is difficult to distinguish from cloud models in blind tests. For long-form fiction (novels, full short stories), Claude 4.6 Sonnet and GPT-4o maintain narrative coherence more reliably. A 70B local model narrows this gap significantly.' } },
-          { '@type': 'Question', 'name': 'Does the model remember earlier parts of my story?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Only within the current context window. If conversation history exceeds the model\'s context limit (typically 4K–128K tokens), earlier details are forgotten. For long projects, periodically provide a story summary at the start of each session to re-establish context.' } },
-          { '@type': 'Question', 'name': 'What temperature setting is best for creative writing?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Set temperature to 0.9–1.1 for narrative prose. Ollama\'s default is 0.8 and LM Studio\'s is 0.7 — both too conservative. In Ollama: ollama run llama3.3:70b --temperature 1.0. In LM Studio, adjust the temperature slider before generating.' } },
-          { '@type': 'Question', 'name': 'Should I use Qwen2.5 or Llama for creative writing?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For English fiction: Llama 3.3 70B produces more natural English narrative style. Qwen2.5 optimizes for accuracy and structure. For non-English creative writing (Chinese, Japanese, Arabic, Spanish), Qwen2.5 is significantly better due to its multilingual training corpus.' } },
-          { '@type': 'Question', 'name': 'How do I load Fimbulvetr or Midnight-Rose in Ollama?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Download the GGUF file from Hugging Face. Create a Modelfile: FROM ./fimbulvetr-11b.gguf. Run: ollama create fimbulvetr -f Modelfile. Then: ollama run fimbulvetr. In LM Studio, use the folder icon in the model browser to navigate to the downloaded GGUF file.' } },
-          { '@type': 'Question', 'name': 'Can I use a local model for a full novel?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes with structured workflow. Generate in 500-word sections. Maintain a story bible document with character descriptions and plot points. Paste a compressed summary at the start of each new session. A 70B model sustains chapter-length quality reliably. A 7B model is suitable for scene-level work only.' } },
-          { '@type': 'Question', 'name': 'Can I fine-tune a local model on my own writing style?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, but it requires technical setup. Tools like Ollama with custom Modelfiles, or local fine-tuning frameworks (like unsloth on a consumer GPU), enable style transfer. Alternatively, use the system prompt: You are writing in the style of [your reference author] is often sufficient without fine-tuning.' } },
-          { '@type': 'Question', 'name': 'Which quantization is best for creative writing?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M is the minimum. Quantization below Q4_K_M (e.g., Q3_K_M) noticeably degrades prose quality — sentence rhythm breaks down and vocabulary becomes repetitive. For the best creative output, use Q5_K_M or higher if your hardware allows. Q6_K and above add minimal quality gain for the extra RAM cost.' } },
-          { '@type': 'Question', 'name': 'Is long context or RAG better for working on large creative projects?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For creative work, long context is preferable to RAG. RAG retrieves fragments and loses narrative flow. Long context (32K–128K tokens) lets you maintain a consistent story bible of character details and plot structure in a single conversation, improving coherence. Use long context for projects over 2,000 words.' } },
-          { '@type': 'Question', 'name': 'How much RAM do I need for Mistral Small 3.1?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mistral Small 3.1 24B requires approximately 14 GB at Q4_K_M quantization, fitting comfortably in a 16 GB system. On an Apple M2 Max or M3 Max with 16+ GB unified memory, it generates at 10–20 tokens per second for creative tasks.' } },
+          { '@type': 'Question', 'name': 'Can a local LLM replace a writing assistant like Claude or GPT-4o for fiction?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For short-form content (under 500 words), a well-prompted 13B+ local model produces output that is difficult to distinguish from cloud models in blind tests. For long-form fiction (novels, full short stories), Claude 4.6 Sonnet and GPT-4o maintain narrative coherence more reliably at any hardware tier. A 70B local model narrows this gap significantly.' } },
+          { '@type': 'Question', 'name': 'Does the model remember earlier parts of my story?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Only within the current context window. If your conversation history exceeds the model\'s context limit (typically 4K–128K tokens), earlier details are forgotten. For long projects, periodically provide a story summary at the start of each session to re-establish context.' } },
+          { '@type': 'Question', 'name': 'Which local model produces the most vivid prose?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B with Q5_K_M quantization produces the most consistently vivid sensory detail and natural dialogue flow. Mistral Small 3.1 24B achieves 80–85% of this quality at 14 GB RAM vs 45 GB for 70B. Fimbulvetr-11B fine-tune on a 13B base model also excels at prose richness within smaller resource budgets.' } },
+          { '@type': 'Question', 'name': 'How do I handle inconsistencies in character voice across chapters?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Provide a detailed character sheet (name, background, speech patterns, motivations) in your system prompt. For each new chapter, begin the session with: "You are writing as [Character]. Maintain the following voice and perspective..." Then paste the character sheet. This keeps coherence for 500–2,000 word sections.' } },
+          { '@type': 'Question', 'name': 'Is quantization (Q4, Q5, Q8) noticeable in creative writing?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, measurably. FP16 (full precision) and Q8 produce near-identical prose. Q5 introduces subtle flattening — fewer unique adjectives, slightly repetitive phrasing (5–10% of users notice). Q4 creates obvious quality loss: generic descriptions, missing sensory details. For fiction, Q5_K_M is minimum recommended; Q8_K_M is ideal.' } },
+          { '@type': 'Question', 'name': 'Can I fine-tune a local LLM on my own writing style?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Collect 500–2,000 examples of your prose in .jsonl format (input/output pairs), then use Unsloth or Axolotl libraries on a 24 GB GPU to fine-tune a 13B model in 4–8 hours. Cost: ~$5–15 on cloud GPU. Result: a model that mimics your voice. LoRA (low-rank adaptation) fine-tuning is faster and cheaper than full fine-tuning.' } },
+          { '@type': 'Question', 'name': 'What\'s the difference between creative writing and creative *dialogue* quality?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Dialogue requires tighter word economy and distinct character voices; prose requires sensory richness and narrative flow. Llama 3.3 70B excels at both. Smaller models (7B, 8B) often produce flat, generic dialogue. If dialogue-heavy fiction is your focus, prioritize models with strong instruction-following over prose quality; Mistral 7B dialogue quality rivals Llama 8B.' } },
+          { '@type': 'Question', 'name': 'How much context (tokens) do I need for a full novel outline?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A detailed outline of a 80,000-word novel (plot, characters, chapters, conflicts) is typically 3,000–6,000 tokens. A 128K-context model (Llama 3.2, Phi-4) lets you load the entire outline + previous chapters in one session. For models with 4K–8K context, provide a rolling summary: previous chapter summary + outline of next 3 chapters.' } },
+          { '@type': 'Question', 'name': 'Do I need a GPU to run a creative-writing-optimized local LLM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No, but it dramatically speeds up generation. A 13B model on CPU (8-core): 10–15 tokens/sec. Same model on a 10GB GPU (RTX 3060): 80–100 tokens/sec. For iterative creative writing (testing variations, rewriting), GPU cuts session time from 2 hours to 15 minutes. CPU is viable for one-shot generation or outlining.' } },
+          { '@type': 'Question', 'name': 'Which local LLM is best for science fiction world-building?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.3 70B for consistency across 50+ page outlines. Qwen2.5 14B–32B for technical accuracy (physics, orbital mechanics, chemistry). Fimbulvetr-11B for rich descriptive world details. For budget-conscious setups, Mistral Small 3.1 24B balances world-coherence and resource use. Test all three on a sample world description before committing.' } },
         ],
       },
       toc: [
