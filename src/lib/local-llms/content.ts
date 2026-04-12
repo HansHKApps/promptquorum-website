@@ -8142,9 +8142,10 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         'proficiencyLevel': 'Intermediate',
         'about': [
           { '@type': 'Thing', 'name': 'LLM quantization' },
-          { '@type': 'Thing', 'name': 'Q4_K_M quantization' },
+          { '@type': 'Thing', 'name': 'Q4_K_M' },
           { '@type': 'Thing', 'name': 'GGUF format' },
-          { '@type': 'Thing', 'name': 'model compression' },
+          { '@type': 'Thing', 'name': 'llama.cpp' },
+          { '@type': 'Thing', 'name': 'K-Quants' },
         ],
         'author': {
           '@type': 'Person',
@@ -8165,44 +8166,15 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'LLM Quantization Levels: RAM vs Quality Tradeoffs',
+        'name': 'LLM Quantization Levels Compared 2026',
+        'numberOfItems': 6,
         'itemListElement': [
-          {
-            '@type': 'ListItem',
-            'position': 1,
-            'name': 'Q2_K',
-            'item': { '@type': 'Thing', 'name': 'Q2_K - 2-bit quantization, highest compression, significant quality loss' },
-          },
-          {
-            '@type': 'ListItem',
-            'position': 2,
-            'name': 'Q3_K_S',
-            'item': { '@type': 'Thing', 'name': 'Q3_K_S - 3-bit quantization, moderate quality loss, 4-5 GB RAM for 7B' },
-          },
-          {
-            '@type': 'ListItem',
-            'position': 3,
-            'name': 'Q4_K_M',
-            'item': { '@type': 'Thing', 'name': 'Q4_K_M - 4-bit quantization (recommended), 1-3% quality loss, 4.5 GB RAM for 7B' },
-          },
-          {
-            '@type': 'ListItem',
-            'position': 4,
-            'name': 'Q5_K_M',
-            'item': { '@type': 'Thing', 'name': 'Q5_K_M - 5-bit quantization, minimal quality loss, 5.7 GB RAM for 7B' },
-          },
-          {
-            '@type': 'ListItem',
-            'position': 5,
-            'name': 'Q8_0',
-            'item': { '@type': 'Thing', 'name': 'Q8_0 - 8-bit quantization, negligible quality loss, 7.7 GB RAM for 7B' },
-          },
-          {
-            '@type': 'ListItem',
-            'position': 6,
-            'name': 'FP16',
-            'item': { '@type': 'Thing', 'name': 'FP16 - 16-bit full precision, no quality loss, 14 GB RAM for 7B' },
-          },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Q2_K', 'description': '2-bit. 7B model = ~2.7 GB RAM. High quality loss. Use only under 4 GB RAM.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Q3_K_S', 'description': '3-bit. 7B model = ~3.3 GB RAM. Moderate quality loss. Use at 4-5 GB RAM.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Q4_K_M', 'description': '4-bit. 7B model = ~4.5 GB RAM. Low quality loss (1-3%). Default recommended for most users.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Q5_K_M', 'description': '5-bit. 7B model = ~5.7 GB RAM. Minimal quality loss under 1%. Use with 16 GB RAM.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Q6_K', 'description': '6-bit. 7B model = ~6.6 GB RAM. Near-lossless. Best for coding and math tasks.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Q8_0', 'description': '8-bit. 7B model = ~7.7 GB RAM. Negligible quality loss. Use with 16+ GB RAM.' },
         ],
       },
       faqSchema: {
