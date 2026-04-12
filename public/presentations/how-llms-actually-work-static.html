@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How LLMs Actually Work | PromptQuorum</title>
+    <meta name="description" content="Interactive 14-slide presentation on large language model architecture. Learn tokens, attention, training, and inference parameters." />
+    <meta property="og:title" content="How LLMs Actually Work — PromptQuorum" />
+    <meta property="og:description" content="Understand LLM architecture: tokens, attention, training phases, and inference parameters." />
+    <meta property="og:type" content="website" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles — A4 landscape with mm dimensions */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+            }
+
+            .slide h1, .slide h2, .slide p {
+                color: #1c1b1f !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">How LLMs Actually Work</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/prompt-engineering/how-llms-actually-work">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'How LLMs Actually Work: Tokens, Attention, and Inference',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'How LLMs Actually Work',
+                        subtitle: 'Understand tokens, attention, training, and inference parameters',
+                        link: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What an LLM Really Is',
+                        items: [
+                            '<strong>LLMs predict tokens</strong> — not facts. They generate statistically probable text sequences, not verified information.',
+                            '<strong>No understanding or retrieval</strong> — they process token sequences and output probability distributions across ~50,000–100,000 tokens.',
+                            '<strong>Why they hallucinate</strong> — they predict likely text, not correct text. Contradictory training data = confident but false answers.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'LLM vs. Traditional Software',
+                        columns: ['Property', 'LLM', 'Traditional Software'],
+                        rows: [
+                            { Property: 'How it works', LLM: 'Predicts next token via probability', 'Traditional Software': 'Executes deterministic instructions' },
+                            { Property: 'Output', LLM: 'Probabilistic — varies per run', 'Traditional Software': 'Deterministic — same output always' },
+                            { Property: 'Knowledge source', LLM: 'Patterns in model weights (trained)', 'Traditional Software': 'Databases or files (runtime)' },
+                            { Property: 'Error type', LLM: 'Confident but wrong (hallucination)', 'Traditional Software': 'Crash or error code' },
+                            { Property: 'Update method', LLM: 'Retrain or fine-tune', 'Traditional Software': 'Code or database change' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Tokenization: Text → Numbers',
+                        columns: ['Input text', 'Tokens', 'Token count'],
+                        rows: [
+                            { 'Input text': '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Token count': '4' },
+                            { 'Input text': '"Tokenization"', Tokens: '"Token", "ization"', 'Token count': '2' },
+                            { 'Input text': '"GPT-4o"', Tokens: '"G", "PT", "-", "4", "o"', 'Token count': '5' },
+                            { 'Input text': '中文 (Chinese)', Tokens: 'subword units', 'Token count': '2–4 per model' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'How Transformer Attention Works',
+                        items: [
+                            '<strong>Q/K/V vectors</strong> — each token computes Query, Key, Value vectors; attention scores measure token-to-token relationships.',
+                            '<strong>Multi-head attention</strong> — runs attention in parallel across 96+ heads, each learning different patterns (syntax, semantics, coreference).',
+                            '<strong>"Lost in the Middle" effect</strong> — transformer attention weighs context beginning/end more than middle. Place critical instructions at start and end.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LLM Training Phases',
+                        items: [
+                            'Pretraining: unsupervised next-token prediction on billions of tokens (web scale)',
+                            'Supervised Fine-Tuning (SFT): trained on curated instruction-response pairs',
+                            'RLHF / DPO: human feedback shapes behavior (refusals, tone, safety guardrails)',
+                            'Constitutional AI: further refinement using principle-based guidelines'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Inference Parameters',
+                        columns: ['Parameter', 'Range', 'Effect', 'Recommended for'],
+                        rows: [
+                            { Parameter: 'Temperature', Range: '0.0–2.0', Effect: 'Sharpens (low) or flattens (high) probability', 'Recommended for': '0 for code/facts; 0.7 for text; 1.0 for creative' },
+                            { Parameter: 'Top-p', Range: '0.0–1.0', Effect: 'Samples only tokens up to cumulative p', 'Recommended for': '0.9–0.95 for most tasks; 0.5 for constrained' },
+                            { Parameter: 'Top-k', Range: '1 to vocab', Effect: 'Limits sampling to k most probable tokens', 'Recommended for': 'Rarely used; top-p preferred' },
+                            { Parameter: 'Max tokens', Range: '1 to limit', Effect: 'Hard stop on output length', 'Recommended for': 'Set to 2× expected length' },
+                            { Parameter: 'Frequency penalty', Range: '-2.0–2.0', Effect: 'Reduces repetition of tokens', 'Recommended for': '0.1–0.3 for long docs; 0 for code' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Context Windows by Model',
+                        columns: ['Model', 'Context window', '~Word equiv.', 'Doc limit'],
+                        rows: [
+                            { Model: 'GPT-4o', 'Context window': '128k tokens', '~Word equiv.': '96k words', 'Doc limit': '~200 pages' },
+                            { Model: 'Claude Sonnet', 'Context window': '200k tokens', '~Word equiv.': '150k words', 'Doc limit': '~300 pages' },
+                            { Model: 'Gemini 2.5 Pro', 'Context window': '2M tokens', '~Word equiv.': '1.5M words', 'Doc limit': '~3000 pages' },
+                            { Model: 'LLaMA 3.1 70B', 'Context window': '128k tokens', '~Word equiv.': '96k words', 'Doc limit': '~200 pages' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What This Means for Prompting',
+                        items: [
+                            '<strong>Token position matters</strong> — place critical instructions at start and end, not middle',
+                            '<strong>Temperature is a dial</strong> — 0 for code, 0.5–0.7 for content, >1.0 increases hallucination',
+                            '<strong>Token count is linear cost</strong> — every token in system prompt costs money across all users',
+                            '<strong>Models hallucinate by design</strong> — always validate facts for high-stakes use',
+                            '<strong>Context window ≠ quality</strong> — 200k tokens doesn't mean equal attention to all 200k'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Common Misconceptions',
+                        columns: ['Misconception', 'What actually happens', 'Prompt implication'],
+                        rows: [
+                            { Misconception: '"Model reads my document"', 'What actually happens': 'Processes token sequences, predicts continuations — no comprehension', 'Prompt implication': 'Be explicit about what to extract; don\'t assume inference' },
+                            { Misconception: '"Model remembers our chat"', 'What actually happens': 'Each API call is stateless; history must be in context window', 'Prompt implication': 'Include prior context in system prompt or history' },
+                            { Misconception: '"Model knows today\'s date"', 'What actually happens': 'Has training cutoff; doesn\'t know current date unless told', 'Prompt implication': 'Inject current date for time-sensitive tasks' },
+                            { Misconception: '"Higher temperature = smarter"', 'What actually happens': 'Temperature controls sampling randomness, not capability', 'Prompt implication': 'Use low T for analysis, high T for variations' },
+                            { Misconception: '"Model counts characters reliably"', 'What actually happens': 'Token boundaries are subword units; not a native skill', 'Prompt implication': 'Don\'t trust model for precise word counts' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'How to Understand LLMs',
+                        items: [
+                            '<strong>Start with tokens</strong> — use an online tokenizer to see how text becomes tokens',
+                            '<strong>Learn transformer architecture</strong> — embeddings, attention, output projection (conceptually)',
+                            '<strong>Understand why hallucination happens</strong> — they predict likely tokens, not correct facts',
+                            '<strong>Experiment with temperature</strong> — try T=0.0, 0.7, 1.5 to see variation firsthand',
+                            '<strong>Know context window limits</strong> — GPT-4o sees 128k tokens; old info gets forgotten'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Frequently Asked Questions',
+                        faqs: [
+                            { q: 'Do LLMs understand text like humans?', a: 'No. They predict statistically probable tokens based on training patterns. No comprehension, intent, or awareness — only weighted probability distributions.' },
+                            { q: 'What is a token?', a: 'The smallest unit an LLM processes. ~0.75 words in English, ~0.5 words in Chinese/Japanese. GPT-4o uses Byte Pair Encoding.' },
+                            { q: 'What does temperature do?', a: 'Controls sampling randomness. Temperature 0 = deterministic. 1.0 = standard. >1.5 = flattened distribution and high hallucination risk.' },
+                            { q: 'Why does position in prompts matter?', a: 'Transformer attention weighs beginning and end tokens more heavily than middle (lost in the middle effect). Place critical instructions at start and end.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Takeaways',
+                        items: [
+                            '<strong>LLMs predict tokens, not answers</strong> — statistically probable sequences, not verified facts',
+                            '<strong>1 token ≈ 0.75 words</strong> in English (50% denser in Chinese/Japanese)',
+                            '<strong>Temperature controls creativity vs. determinism</strong> — 0 for facts, 0.7 for balanced, >1.5 for high hallucination',
+                            '<strong>Context windows aren\'t memory</strong> — GPT-4o: 128k, Claude: 200k, Gemini: 2M tokens',
+                            '<strong>Position is critical</strong> — transformers weight start/end more than middle (lost in the middle)',
+                            '<strong>RLHF shapes behavior, not core capability</strong> — refusals and tone come from fine-tuning'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Start Prompting Smarter Today',
+                        body: 'Apply LLM architecture understanding to your prompts. Use PromptQuorum to test temperature, top-p, and model differences side by side.',
+                        cta: 'Try PromptQuorum Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'Wie LLMs wirklich funktionieren: Tokens, Aufmerksamkeit und Inferenz',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Wie LLMs wirklich funktionieren',
+                        subtitle: 'Tokens, Aufmerksamkeit, Training und Inferenzparameter verstehen',
+                        link: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was ein LLM wirklich ist',
+                        items: [
+                            '<strong>LLMs sagen Tokens voraus</strong> — keine Fakten. Sie generieren statistisch wahrscheinliche Textsequenzen, keine verifizierten Informationen.',
+                            '<strong>Kein Verständnis oder Abruf</strong> — sie verarbeiten Tokensequenzen und geben Wahrscheinlichkeitsverteilungen über ~50.000–100.000 Tokens aus.',
+                            '<strong>Warum sie halluzinieren</strong> — sie sagen wahrscheinliche Texte voraus, nicht korrekte Texte. Widersprüchliche Trainingsdaten = zuversichtlich aber falsch.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'LLM vs. Klassische Software',
+                        columns: ['Eigenschaft', 'LLM', 'Klassische Software'],
+                        rows: [
+                            { Eigenschaft: 'Funktionsweise', LLM: 'Sagt nächsten Token via Wahrscheinlichkeit voraus', 'Klassische Software': 'Führt deterministische Befehle aus' },
+                            { Eigenschaft: 'Ausgabe', LLM: 'Probabilistisch — variiert pro Durchlauf', 'Klassische Software': 'Deterministisch — gleiche Ausgabe immer' },
+                            { Eigenschaft: 'Wissensquelle', LLM: 'Muster in Modellgewichten (trainiert)', 'Klassische Software': 'Datenbanken oder Dateien (Runtime)' },
+                            { Eigenschaft: 'Fehlertyp', LLM: 'Zuversichtlich aber falsch (Halluzination)', 'Klassische Software': 'Absturz oder Fehlercode' },
+                            { Eigenschaft: 'Update-Methode', LLM: 'Nachtraining oder Fine-Tuning', 'Klassische Software': 'Code- oder Datenbankänderung' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Tokenisierung: Text zu Zahlen',
+                        columns: ['Eingabetext', 'Tokens', 'Anzahl Tokens'],
+                        rows: [
+                            { Eingabetext: '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Anzahl Tokens': '4' },
+                            { Eingabetext: '"Tokenization"', Tokens: '"Token", "ization"', 'Anzahl Tokens': '2' },
+                            { Eingabetext: '"GPT-4o"', Tokens: '"G", "PT", "-", "4", "o"', 'Anzahl Tokens': '5' },
+                            { Eingabetext: '中文 (Chinesisch)', Tokens: 'Unterword-Einheiten', 'Anzahl Tokens': '2–4 pro Modell' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wie Transformer-Attention funktioniert',
+                        items: [
+                            '<strong>Q/K/V Vektoren</strong> — jeder Token berechnet Query-, Key-, Value-Vektoren; Aufmerksamkeitswerte messen Token-zu-Token-Beziehungen.',
+                            '<strong>Multi-Head Attention</strong> — läuft parallel über 96+ Köpfe, jeder lernt andere Muster (Syntax, Semantik, Koreferenz).',
+                            '<strong>"Lost in the Middle"-Effekt</strong> — Transformer gewichtet Kontextanfang/Ende stärker als Mitte. Kritische Anweisungen an Anfang und Ende.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LLM-Trainingsphasen',
+                        items: [
+                            'Vortraining: unüberwachte Vorhersage des nächsten Tokens auf Milliarden von Tokens',
+                            'Überwachtes Fine-Tuning: trainiert auf kuratierten Anweisung-Antwort-Paaren',
+                            'RLHF / DPO: menschliches Feedback prägt Verhalten (Verweigerungen, Ton, Sicherheit)',
+                            'Constitutional AI: weitere Verbesserung mit Prinzip-basierten Richtlinien'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Inferenzparameter',
+                        columns: ['Parameter', 'Bereich', 'Wirkung', 'Empfohlen fur'],
+                        rows: [
+                            { Parameter: 'Temperatur', Bereich: '0,0–2,0', Wirkung: 'Schärft (niedrig) oder verflacht (hoch) Wahrscheinlichkeit', 'Empfohlen fur': '0 für Code/Fakten; 0,7 für Text; 1,0 für kreativ' },
+                            { Parameter: 'Top-p', Bereich: '0,0–1,0', Wirkung: 'Sampelt nur Tokens bis kumulatives p', 'Empfohlen fur': '0,9–0,95 für meiste; 0,5 für begrenzt' },
+                            { Parameter: 'Top-k', Bereich: '1 bis Vokabel', Wirkung: 'Begrenzt Sampling auf k wahrscheinlichste', 'Empfohlen fur': 'Selten verwendet; Top-p bevorzugt' },
+                            { Parameter: 'Max Tokens', Bereich: '1 bis Limit', Wirkung: 'Harter Stopp für Ausgangslänge', 'Empfohlen fur': 'Setzen auf 2× erwartete Länge' },
+                            { Parameter: 'Häufigkeitsstrafe', Bereich: '-2,0–2,0', Wirkung: 'Reduziert Wiederholung von Tokens', 'Empfohlen fur': '0,1–0,3 für lange Doku; 0 für Code' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Kontextfenster nach Modell',
+                        columns: ['Modell', 'Kontextfenster', 'Wortäquiv.', 'Doku-Limit'],
+                        rows: [
+                            { Modell: 'GPT-4o', Kontextfenster: '128k Tokens', 'Wortäquiv.': '96k Wörter', 'Doku-Limit': '~200 Seiten' },
+                            { Modell: 'Claude Sonnet', Kontextfenster: '200k Tokens', 'Wortäquiv.': '150k Wörter', 'Doku-Limit': '~300 Seiten' },
+                            { Modell: 'Gemini 2.5 Pro', Kontextfenster: '2M Tokens', 'Wortäquiv.': '1,5M Wörter', 'Doku-Limit': '~3000 Seiten' },
+                            { Modell: 'LLaMA 3.1 70B', Kontextfenster: '128k Tokens', 'Wortäquiv.': '96k Wörter', 'Doku-Limit': '~200 Seiten' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Bedeutung fur das Prompting',
+                        items: [
+                            '<strong>Tokenposition wichtig</strong> — kritische Anweisungen an Anfang und Ende, nicht Mitte',
+                            '<strong>Temperatur ist ein Regler</strong> — 0 für Code, 0,5–0,7 für Inhalt, >1,0 erhöht Halluzination',
+                            '<strong>Tokenanzahl kostet linear</strong> — jeder Token im System-Prompt kostet über alle Nutzer',
+                            '<strong>Modelle halluzinieren konstruktionsbedingt</strong> — validieren Sie Fakten immer für wichtige Anwendungen',
+                            '<strong>Kontextfenster ≠ Qualität</strong> — 200k Tokens bedeutet nicht gleiche Aufmerksamkeit für alle'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Häufige Missverständnisse',
+                        columns: ['Missverständnis', 'Was tatsächlich passiert', 'Bedeutung fur Prompts'],
+                        rows: [
+                            { Missverständnis: '"Modell liest mein Dokument"', 'Was tatsächlich passiert': 'Verarbeitet Tokensequenzen, sagt Fortsetzungen voraus — kein Verständnis', 'Bedeutung fur Prompts': 'Seien Sie explizit; nehmen Sie keine Schlussfolgerungen an' },
+                            { Missverständnis: '"Modell erinnert sich an unser Chat"', 'Was tatsächlich passiert': 'Jeder API-Aufruf ist zustandslos; Verlauf muss im Kontext sein', 'Bedeutung fur Prompts': 'Beziehen Sie vorherigen Kontext ein' },
+                            { Missverständnis: '"Modell kennt heutiges Datum"', 'Was tatsächlich passiert': 'Hat Trainings-Cutoff; kennt Datum nicht, es sei denn gesagt', 'Bedeutung fur Prompts': 'Spritzen Sie aktuelles Datum für zeitabhängige Aufgaben' },
+                            { Missverständnis: '"Höhere Temperatur = klüger"', 'Was tatsächlich passiert': 'Temperatur steuert Sampling-Zufälligkeit, nicht Fähigkeit', 'Bedeutung fur Prompts': 'Nutzen Sie niedrig für Analyse, hoch für Variationen' },
+                            { Missverständnis: '"Modell zählt Zeichen zuverlässig"', 'Was tatsächlich passiert': 'Token-Grenzen sind Unterword-Einheiten; keine native Fähigkeit', 'Bedeutung fur Prompts': 'Vertrauen Sie Modell nicht für genaue Wortanzahl' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'LLMs verstehen',
+                        items: [
+                            '<strong>Beginnen Sie mit Tokens</strong> — nutzen Sie Online-Tokenizer, um zu sehen, wie Text zu Tokens wird',
+                            '<strong>Lernen Sie Transformer-Architektur</strong> — Embeddings, Attention, Output-Projektion (konzeptuell)',
+                            '<strong>Verstehen Sie, warum Halluzinationen passieren</strong> — sie sagen wahrscheinliche Tokens voraus, nicht korrekte Fakten',
+                            '<strong>Experimentieren Sie mit Temperatur</strong> — versuchen Sie T=0,0, 0,7, 1,5, um Variationen zu sehen',
+                            '<strong>Kennen Sie Kontextfenster-Grenzen</strong> — GPT-4o sieht 128k Tokens; alte Info wird vergessen'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Häufig gestellte Fragen',
+                        faqs: [
+                            { q: 'Verstehen LLMs Text wie Menschen?', a: 'Nein. Sie sagen statistisch wahrscheinliche Tokens basierend auf Trainingsmuster voraus. Kein Verständnis, keine Absicht, kein Bewusstsein.' },
+                            { q: 'Was ist ein Token?', a: '~0,75 Wörter Englisch, ~0,5 Wörter Chinesisch/Japanisch. GPT-4o nutzt Byte Pair Encoding.' },
+                            { q: 'Was macht Temperatur?', a: 'Steuert Sampling-Zufälligkeit. 0 = deterministisch. 1,0 = Standard. >1,5 = abgeflacht und hohe Halluzination.' },
+                            { q: 'Warum ist Position in Prompts wichtig?', a: 'Transformer gewichtet Anfang/Ende stärker als Mitte (lost in the middle). Kritische Anweisungen an Anfang und Ende.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wichtige Erkenntnisse',
+                        items: [
+                            '<strong>LLMs sagen Tokens voraus, nicht Antworten</strong> — statistisch wahrscheinliche Sequenzen, nicht überprüfte Fakten',
+                            '<strong>1 Token ≈ 0,75 Wörter</strong> Englisch (50% dichter in Chinesisch/Japanisch)',
+                            '<strong>Temperatur steuert Kreativität vs. Determinismus</strong> — 0 für Fakten, 0,7 für balanciert, >1,5 für hohe Halluzination',
+                            '<strong>Kontextfenster sind keine Erinnerung</strong> — GPT-4o: 128k, Claude: 200k, Gemini: 2M Tokens',
+                            '<strong>Position ist kritisch</strong> — Transformer gewichten Anfang/Ende mehr als Mitte',
+                            '<strong>RLHF formt Verhalten, nicht Kernfähigkeit</strong> — Verweigerungen und Ton kommen aus Fine-Tuning'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Noch heute smarter prompten',
+                        body: 'Wenden Sie LLM-Architektur-Verständnis auf Ihre Prompts an. Nutzen Sie PromptQuorum, um Temperatur und Modelle Seite an Seite zu testen.',
+                        cta: 'PromptQuorum kostenlos testen',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Comment fonctionnent vraiment les LLMs : tokens, attention et inférence',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Comment fonctionnent vraiment les LLMs',
+                        subtitle: 'Comprendre les tokens, l\'attention, l\'entraînement et l\'inférence',
+                        link: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ce qu\'est vraiment un LLM',
+                        items: [
+                            '<strong>Les LLMs prédisent des tokens</strong> — pas des faits. Ils génèrent des séquences de texte statistiquement probables, pas des informations vérifiées.',
+                            '<strong>Pas de compréhension ou récupération</strong> — ils traitent des séquences de tokens et produisent des distributions de probabilité sur ~50 000–100 000 tokens.',
+                            '<strong>Pourquoi ils hallucinent</strong> — ils prédisent du texte probable, pas du texte correct. Données d\'entraînement contradictoires = confident mais faux.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'LLM vs. Logiciel classique',
+                        columns: ['Propriete', 'LLM', 'Logiciel classique'],
+                        rows: [
+                            { Propriete: 'Fonctionnement', LLM: 'Prédit token via probabilité', 'Logiciel classique': 'Exécute instructions déterministes' },
+                            { Propriete: 'Sortie', LLM: 'Probabiliste — varie par exécution', 'Logiciel classique': 'Déterministe — même sortie toujours' },
+                            { Propriete: 'Source de connaissance', LLM: 'Motifs dans poids du modèle (entraîné)', 'Logiciel classique': 'Bases de données ou fichiers (runtime)' },
+                            { Propriete: 'Type d\'erreur', LLM: 'Confiant mais faux (hallucination)', 'Logiciel classique': 'Crash ou code d\'erreur' },
+                            { Propriete: 'Méthode de mise à jour', LLM: 'Réentraîner ou affinage', 'Logiciel classique': 'Changement code ou base de données' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Tokenisation : texte en chiffres',
+                        columns: ['Texte d entree', 'Tokens', 'Nombre de tokens'],
+                        rows: [
+                            { 'Texte d entree': '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Nombre de tokens': '4' },
+                            { 'Texte d entree': '"Tokenization"', Tokens: '"Token", "ization"', 'Nombre de tokens': '2' },
+                            { 'Texte d entree': '"GPT-4o"', Tokens: '"G", "PT", "-", "4", "o"', 'Nombre de tokens': '5' },
+                            { 'Texte d entree': '中文 (Chinois)', Tokens: 'unités de sous-mots', 'Nombre de tokens': '2–4 par modèle' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Comment fonctionne l\'attention',
+                        items: [
+                            '<strong>Vecteurs Q/K/V</strong> — chaque token calcule Query, Key, Value; scores mesurent relations token-à-token.',
+                            '<strong>Attention multi-tête</strong> — exécute en parallèle sur 96+ têtes, chacune apprend des motifs différents (syntaxe, sémantique, coréférence).',
+                            '<strong>Effet « lost in the middle »</strong> — l\'attention pèse début/fin plus que le milieu. Placez instructions critiques en début et fin.'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Phases d\'entrainement des LLMs',
+                        items: [
+                            'Pré-entraînement : prédiction non supervisée du prochain token sur milliards de tokens',
+                            'Affinage supervisé (SFT) : entraîné sur paires instruction-réponse curées',
+                            'RLHF / DPO : rétroaction humaine façonne comportement (refus, ton, sécurité)',
+                            'Constitutional AI : affinement supplémentaire avec directives basées sur principes'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Parametres d\'inference',
+                        columns: ['Parametre', 'Plage', 'Effet', 'Recommande pour'],
+                        rows: [
+                            { Parametre: 'Température', Plage: '0,0–2,0', Effet: 'Aiguise (bas) ou aplatit (haut) probabilité', 'Recommande pour': '0 code/faits; 0,7 texte; 1,0 créatif' },
+                            { Parametre: 'Top-p', Plage: '0,0–1,0', Effet: 'Échantillonne tokens jusqu\'à p cumulatif', 'Recommande pour': '0,9–0,95 plupart; 0,5 contraint' },
+                            { Parametre: 'Top-k', Plage: '1 vocab', Effet: 'Limite à k tokens probables', 'Recommande pour': 'Rarement; top-p préféré' },
+                            { Parametre: 'Max tokens', Plage: '1 limite', Effet: 'Arrêt ferme longueur sortie', 'Recommande pour': 'Réglez 2× longueur attendue' },
+                            { Parametre: 'Penalite fréquence', Plage: '-2,0–2,0', Effet: 'Réduit répétition', 'Recommande pour': '0,1–0,3 docs; 0 code' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Fenetres de contexte par modele',
+                        columns: ['Modele', 'Fenetre contexte', 'Equiv. mots', 'Limite docs'],
+                        rows: [
+                            { Modele: 'GPT-4o', 'Fenetre contexte': '128k tokens', 'Equiv. mots': '96k mots', 'Limite docs': '~200 pages' },
+                            { Modele: 'Claude Sonnet', 'Fenetre contexte': '200k tokens', 'Equiv. mots': '150k mots', 'Limite docs': '~300 pages' },
+                            { Modele: 'Gemini 2.5 Pro', 'Fenetre contexte': '2M tokens', 'Equiv. mots': '1,5M mots', 'Limite docs': '~3000 pages' },
+                            { Modele: 'LLaMA 3.1 70B', 'Fenetre contexte': '128k tokens', 'Equiv. mots': '96k mots', 'Limite docs': '~200 pages' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ce que cela signifie pour les prompts',
+                        items: [
+                            '<strong>Position des tokens importe</strong> — placer instructions critiques début et fin, pas milieu',
+                            '<strong>Température est un curseur</strong> — 0 code, 0,5–0,7 contenu, >1,0 augmente hallucination',
+                            '<strong>Coût tokens linéaire</strong> — chaque token système-prompt coûte sur tous les utilisateurs',
+                            '<strong>Modèles hallucinent par conception</strong> — validez toujours faits pour utilisations critiques',
+                            '<strong>Fenetre contexte ≠ qualité</strong> — 200k tokens ne signifie pas attention égale sur tous 200k'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Idees recues courantes',
+                        columns: ['Idee recue', 'Ce qui se passe', 'Implication pour prompt'],
+                        rows: [
+                            { 'Idee recue': '"Modèle lit mon document"', 'Ce qui se passe': 'Traite séquences tokens, prédit continuations — pas compréhension', 'Implication pour prompt': 'Soyez explicite; n\'assumez pas déduction' },
+                            { 'Idee recue': '"Modèle se souvient chat"', 'Ce qui se passe': 'Chaque appel sans état; historique doit être contexte', 'Implication pour prompt': 'Incluez contexte précédent dans prompt' },
+                            { 'Idee recue': '"Modèle connaît date"', 'Ce qui se passe': 'Cutoff entraînement; ne connaît pas sauf si dit', 'Implication pour prompt': 'Injectez date pour tâches dépendant date' },
+                            { 'Idee recue': '"Température haute = plus intelligent"', 'Ce qui se passe': 'Température contrôle aléatoire, pas capacité', 'Implication pour prompt': 'Utilisez basse analyse, haute variations' },
+                            { 'Idee recue': '"Modèle compte caractères"', 'Ce qui se passe': 'Limites tokens sous-mots; pas skill natif', 'Implication pour prompt': 'Ne faites pas confiance pour compte exact' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Comment comprendre les LLMs',
+                        items: [
+                            '<strong>Commencez tokens</strong> — utilisez tokenizer en ligne pour voir texte → tokens',
+                            '<strong>Apprenez architecture transformer</strong> — embeddings, attention, projection (conceptuel)',
+                            '<strong>Comprenez hallucinations</strong> — ils prédisent tokens probables, pas faits corrects',
+                            '<strong>Expérimentez température</strong> — essayez T=0,0, 0,7, 1,5 pour voir variations',
+                            '<strong>Connaissez limites contexte</strong> — GPT-4o voit 128k; info ancienne oubliée'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Questions frequentes',
+                        faqs: [
+                            { q: 'Les LLMs comprennent-ils comme humains?', a: 'Non. Ils prédisent tokens statistiquement probables basé sur patterns entraînement. Pas compréhension, pas intention, pas conscience.' },
+                            { q: 'Qu\'est-ce qu\'un token?', a: '~0,75 mots anglais, ~0,5 mots chinois/japonais. GPT-4o utilise Byte Pair Encoding.' },
+                            { q: 'Que fait la température?', a: 'Contrôle aléatoire sampling. 0 = déterministe. 1,0 = standard. >1,5 = distribution aplatie et hallucination élevée.' },
+                            { q: 'Pourquoi position importante dans prompts?', a: 'Attention pèse début/fin plus lourd que milieu (lost in middle). Placez instructions critiques début et fin.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Points cles',
+                        items: [
+                            '<strong>LLMs prédisent tokens, pas réponses</strong> — séquences probables, pas faits vérifiés',
+                            '<strong>1 token ≈ 0,75 mots</strong> anglais (50% plus dense chinois/japonais)',
+                            '<strong>Température contrôle créativité vs déterminisme</strong> — 0 faits, 0,7 équilibré, >1,5 hallucination haute',
+                            '<strong>Fenetres contexte ne sont pas mémoire</strong> — GPT-4o: 128k, Claude: 200k, Gemini: 2M tokens',
+                            '<strong>Position critique</strong> — transformers pèsent début/fin plus que milieu',
+                            '<strong>RLHF façonne comportement, pas capacité</strong> — refus et ton viennent fine-tuning'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Commencez a prompter plus intelligemment',
+                        body: 'Appliquez compréhension architecture LLM à vos prompts. Utilisez PromptQuorum tester température, top-p côte à côte.',
+                        cta: 'Essayez PromptQuorum Gratuit',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: 'LLMは実際にどのように機能するか：トークン、注意、推論',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'LLMは実際にどのように機能するか',
+                        subtitle: 'トークン、注意、訓練、推論パラメータを理解する',
+                        link: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LLMが本当に何であるか',
+                        items: [
+                            '<strong>LLMはトークンを予測</strong> — 事実ではなく。統計的に可能性の高いテキストシーケンスを生成し、検証された情報ではない。',
+                            '<strong>理解または取得なし</strong> — トークンシーケンスを処理し、約50,000–100,000トークン上の確率分布を出力。',
+                            '<strong>なぜ幻覚するか</strong> — 可能性の高いテキストを予測し、正しいテキストではない。矛盾するトレーニングデータ = 自信を持ちながら誤り。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'LLM対古典的なソフトウェア',
+                        columns: ['特性', 'LLM', '古典的なソフトウェア'],
+                        rows: [
+                            { '特性': '動作方法', 'LLM': '確率経由で次トークンを予測', '古典的なソフトウェア': '決定的命令を実行' },
+                            { '特性': '出力', 'LLM': '確率的 — 実行ごとに変わる', '古典的なソフトウェア': '決定的 — 常に同じ出力' },
+                            { '特性': '知識源', 'LLM': 'モデルウェイトのパターン（訓練）', '古典的なソフトウェア': 'データベースまたはファイル（実行時）' },
+                            { '特性': 'エラー型', 'LLM': '自信を持ちながら誤り（幻覚）', '古典的なソフトウェア': 'クラッシュまたはエラーコード' },
+                            { '特性': '更新方法', 'LLM': '再訓練またはファインチューニング', '古典的なソフトウェア': 'コードまたはデータベース変更' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'トークン化：テキスト→数字',
+                        columns: ['入力テキスト', 'トークン', 'トークン数'],
+                        rows: [
+                            { '入力テキスト': '"Hello, world!"', 'トークン': '"Hello", ",", " world", "!"', 'トークン数': '4' },
+                            { '入力テキスト': '"Tokenization"', 'トークン': '"Token", "ization"', 'トークン数': '2' },
+                            { '入力テキスト': '"GPT-4o"', 'トークン': '"G", "PT", "-", "4", "o"', 'トークン数': '5' },
+                            { '入力テキスト': '中文 (中国語)', 'トークン': 'サブワード単位', 'トークン数': 'モデルごと2–4' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'トランスフォーマー注意の仕組み',
+                        items: [
+                            '<strong>Q/K/Vベクトル</strong> — 各トークンはQuery、Key、Valueを計算；注意スコアはトークン間関係を測定。',
+                            '<strong>マルチヘッド注意</strong> — 96+ヘッド並列実行、各々異なるパターン学習（構文、意味論、照応）。',
+                            '<strong>「Lost in the Middle」効果</strong> — トランスフォーマー注意は開始/終了をより重くウェイト。重要な指示を最初と最後に。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LLM訓練フェーズ',
+                        items: [
+                            '事前訓練：数十億トークン上の教師なし次トークン予測',
+                            '教師あり微調整（SFT）：キュートされた指示応答ペアで訓練',
+                            'RLHF / DPO：人的フィードバックが動作を形成（拒否、トーン、安全性）',
+                            'Constitutional AI：原則ベースの指針でさらに洗練'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '推論パラメータ',
+                        columns: ['パラメータ', '範囲', '効果', '推奨される用途'],
+                        rows: [
+                            { 'パラメータ': '温度', '範囲': '0.0–2.0', '効果': '確率を鋭く（低）または平坦化（高）', '推奨される用途': 'コード/事実0；テキスト0.7；創造1.0' },
+                            { 'パラメータ': 'Top-p', '範囲': '0.0–1.0', '効果': '累積pまでのトークンサンプル', '推奨される用途': 'ほぼ0.9–0.95；制限0.5' },
+                            { 'パラメータ': 'Top-k', '範囲': '1語彙', '効果': 'k最確トークンへサンプル制限', '推奨される用途': 'まれに使用；top-p推奨' },
+                            { 'パラメータ': '最大トークン', '範囲': '1制限', '効果': '出力長ハードストップ', '推奨される用途': '予想長の2×に設定' },
+                            { 'パラメータ': '頻度ペナルティ', '範囲': '-2.0–2.0', '効果': 'トークン繰り返し削減', '推奨される用途': '長文書0.1–0.3；コード0' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'モデル別コンテキストウィンドウ',
+                        columns: ['モデル', 'コンテキスト', '単語相当', '文書制限'],
+                        rows: [
+                            { 'モデル': 'GPT-4o', 'コンテキスト': '128kトークン', '単語相当': '96k語', '文書制限': '~200ページ' },
+                            { 'モデル': 'Claude Sonnet', 'コンテキスト': '200kトークン', '単語相当': '150k語', '文書制限': '~300ページ' },
+                            { 'モデル': 'Gemini 2.5 Pro', 'コンテキスト': '2Mトークン', '単語相当': '1.5M語', '文書制限': '~3000ページ' },
+                            { 'モデル': 'LLaMA 3.1 70B', 'コンテキスト': '128kトークン', '単語相当': '96k語', '文書制限': '~200ページ' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'プロンプティングへの意味',
+                        items: [
+                            '<strong>トークン位置が重要</strong> — 重要指示を開始と終了に、中間ではなく',
+                            '<strong>温度はダイヤル</strong> — コード0、コンテンツ0.5–0.7、>1.0は幻覚増加',
+                            '<strong>トークンコスト線形</strong> — システムプロンプト各トークンが全ユーザーに費用',
+                            '<strong>モデルは設計上幻覚</strong> — 重要用途に対して常にファクトチェック',
+                            '<strong>コンテキストウィンドウ≠品質</strong> — 200kトークンは全200k均等注意を意味しない'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'よくある誤解',
+                        columns: ['誤解', '実際に何が起こるか', 'プロンプトへの影響'],
+                        rows: [
+                            { '誤解': '"モデルが文書を読む"', '実際に何が起こるか': 'トークンシーケンス処理、継続予測 — 理解なし', 'プロンプトへの影響': '明示的に；推論を仮定しない' },
+                            { '誤解': '"モデルがチャット記憶"', '実際に何が起こるか': '各API呼び出しステートレス；履歴はコンテキスト必要', 'プロンプトへの影響': '先前コンテキスト含める' },
+                            { '誤解': '"モデルが日付知る"', '実際に何が起こるか': 'トレーニング日截断；告げられなければ知らない', 'プロンプトへの影響': '日付敏感用に日付注入' },
+                            { '誤解': '"高温度 = より賢い"', '実際に何が起こるか': '温度サンプリング随意性制御、能力ではなく', 'プロンプトへの影響': '分析低、変動高使用' },
+                            { '誤解': '"モデル文字数信頼できる"', '実際に何が起こるか': 'トークン境界サブワード；ネイティブ技能ではない', 'プロンプトへの影響': '正確単語数を信頼しない' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'LLMを理解する方法',
+                        items: [
+                            '<strong>トークンで開始</strong> — オンライントークナイザーでテキスト→トークン見る',
+                            '<strong>トランスフォーマーアーキテクチャ学習</strong> — 埋め込み、注意、出力（概念的）',
+                            '<strong>幻覚なぜが理解</strong> — 可能性トークン予測、正事実ではなく',
+                            '<strong>温度実験</strong> — T=0.0, 0.7, 1.5試す変動を見る',
+                            '<strong>コンテキストウィンドウ制限知る</strong> — GPT-4o 128kみえる；古情報忘れ'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'よくある質問',
+                        faqs: [
+                            { q: 'LLMは人間のように理解?', a: 'いいえ。訓練パターンに基づき統計上可能性最高トークン予測。理解、意図、意識なし。' },
+                            { q: 'トークンとは?', a: '英語~0.75語、中国語/日本語~0.5語。GPT-4oはByte Pair Encodingを使用。' },
+                            { q: '温度は何をする?', a: 'サンプリング随意性制御。0=決定的。1.0=標準。>1.5=平坦化と高幻覚。' },
+                            { q: 'なぜプロンプト位置重要?', a: '注意は開始/終了をより重くウェイト（lost in middle）。重要指示開始/終了に。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '重要なポイント',
+                        items: [
+                            '<strong>LLMはトークン予測、回答ではなく</strong> — 統計可能シーケンス、検証事実ではなく',
+                            '<strong>1トークン≈0.75語</strong>英語（中国語/日本語50%密）',
+                            '<strong>温度は創造対決定性制御</strong> — 0事実、0.7バランス、>1.5高幻覚',
+                            '<strong>コンテキストウィンドウはメモリではない</strong> — GPT-4o: 128k、Claude: 200k、Gemini: 2M',
+                            '<strong>位置は重要</strong> — トランスフォーマーは開始/終了をより重くウェイト',
+                            '<strong>RLHFは動作形成、能力ではなく</strong> — 拒否とトーンはファインチューニング由来'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '今日からよりスマートにプロンプト',
+                        body: 'LLMアーキテクチャ理解をプロンプトに適用。PromptQuorumで温度、top-pをモデル並べ比較テスト。',
+                        cta: 'PromptQuorum無料試用',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: '大型语言模型实际如何工作：令牌、注意力与推理',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '大型语言模型实际如何工作',
+                        subtitle: '理解令牌、注意力、训练和推理参数',
+                        link: 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LLM究竟是什么',
+                        items: [
+                            '<strong>LLM预测令牌</strong> — 非事实。生成统计上可能的文本序列，非已验证信息。',
+                            '<strong>无理解或检索</strong> — 处理令牌序列，输出约50,000–100,000令牌概率分布。',
+                            '<strong>为什么幻觉</strong> — 预测可能文本，非正确文本。矛盾训练数据 = 自信但错误。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'LLM与传统软件',
+                        columns: ['特性', 'LLM', '传统软件'],
+                        rows: [
+                            { '特性': '工作方式', 'LLM': '通过概率预测下一令牌', '传统软件': '执行确定性指令' },
+                            { '特性': '输出', 'LLM': '概率性 — 每次不同', '传统软件': '确定性 — 总是相同' },
+                            { '特性': '知识来源', 'LLM': '模型权重中的模式（训练）', '传统软件': '数据库或文件（运行时）' },
+                            { '特性': '错误类型', 'LLM': '自信但错（幻觉）', '传统软件': '崩溃或错误码' },
+                            { '特性': '更新方法', 'LLM': '重新训练或微调', '传统软件': '代码或数据库变更' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '令牌化：文本变数字',
+                        columns: ['输入文本', '令牌', '令牌数量'],
+                        rows: [
+                            { '输入文本': '"Hello, world!"', '令牌': '"Hello", ",", " world", "!"', '令牌数量': '4' },
+                            { '输入文本': '"Tokenization"', '令牌': '"Token", "ization"', '令牌数量': '2' },
+                            { '输入文本': '"GPT-4o"', '令牌': '"G", "PT", "-", "4", "o"', '令牌数量': '5' },
+                            { '输入文本': '中文 (汉语)', '令牌': '子词单位', '令牌数量': '每模型2–4' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Transformer注意力机制',
+                        items: [
+                            '<strong>Q/K/V向量</strong> — 每令牌计算查询、键、值；注意力分数测令牌关系。',
+                            '<strong>多头注意力</strong> — 并行运行96+头，各学不同模式（句法、语义、指代）。',
+                            '<strong>"Lost in the Middle"效应</strong> — 注意力权重开始/结束比中间重。关键指令放开始和结尾。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LLM训练阶段',
+                        items: [
+                            '预训练：数十亿令牌上无监督下一令牌预测',
+                            '监督微调（SFT）：在精选指令-响应对上训练',
+                            'RLHF / DPO：人类反馈塑造行为（拒绝、语气、安全）',
+                            'Constitutional AI：用原则引导进一步优化'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '推理参数',
+                        columns: ['参数', '范围', '效果', '推荐用途'],
+                        rows: [
+                            { '参数': '温度', '范围': '0.0–2.0', '效果': '锐化（低）或平坦化（高）概率', '推荐用途': '代码/事实0；文本0.7；创意1.0' },
+                            { '参数': 'Top-p', '范围': '0.0–1.0', '效果': '限制至累积概率p令牌', '推荐用途': '多数0.9–0.95；受限0.5' },
+                            { '参数': 'Top-k', '范围': '1词汇表', '效果': '限制至k最可能令牌', '推荐用途': '很少用；top-p优先' },
+                            { '参数': '最大令牌', '范围': '1限制', '效果': '输出长度硬停', '推荐用途': '设为预期长2倍' },
+                            { '参数': '频率惩罚', '范围': '-2.0–2.0', '效果': '减少令牌重复', '推荐用途': '长文档0.1–0.3；代码0' }
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '各模型上下文窗口',
+                        columns: ['模型', '上下文', '单词约当', '文档限制'],
+                        rows: [
+                            { '模型': 'GPT-4o', '上下文': '128k令牌', '单词约当': '96k词', '文档限制': '~200页' },
+                            { '模型': 'Claude Sonnet', '上下文': '200k令牌', '单词约当': '150k词', '文档限制': '~300页' },
+                            { '模型': 'Gemini 2.5 Pro', '上下文': '2M令牌', '单词约当': '150万词', '文档限制': '~3000页' },
+                            { '模型': 'LLaMA 3.1 70B', '上下文': '128k令牌', '单词约当': '96k词', '文档限制': '~200页' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '对提示工程的意义',
+                        items: [
+                            '<strong>令牌位置重要</strong> — 关键指令放开始和结尾，不是中间',
+                            '<strong>温度是一个拨盘</strong> — 代码0，内容0.5–0.7，>1.0增加幻觉',
+                            '<strong>令牌数成本线性</strong> — 系统提示每令牌跨所有用户计费',
+                            '<strong>模型设计上幻觉</strong> — 关键应用总是验证事实',
+                            '<strong>上下文窗口≠质量</strong> — 200k令牌不等于对所有200k等同注意'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '常见误解',
+                        columns: ['误解', '实际发生的情况', '对提示的影响'],
+                        rows: [
+                            { '误解': '"模型读懂文档"', '实际发生的情况': '处理令牌序列，预测继续 — 无理解', '对提示的影响': '显式说明；不要假设推理' },
+                            { '误解': '"模型记得对话"', '实际发生的情况': '每个API调用无状态；历史需在上下文', '对提示的影响': '包含先前上下文在提示' },
+                            { '误解': '"模型知道今天日期"', '实际发生的情况': '有训练截止日期；除非告知不知', '对提示的影响': '日期敏感任务注入当前日期' },
+                            { '误解': '"高温度 = 更聪明"', '实际发生的情况': '温度控制采样随机性，非能力', '对提示的影响': '分析用低温，变体用高温' },
+                            { '误解': '"模型可靠计数字符"', '实际发生的情况': '令牌边界是子词单位；非原生技能', '对提示的影响': '不信任模型精确单词数' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '如何理解LLM',
+                        items: [
+                            '<strong>从令牌开始</strong> — 用在线令牌化器看文本如何变令牌',
+                            '<strong>学习Transformer架构</strong> — 嵌入、注意、输出投影（概念上）',
+                            '<strong>理解幻觉为何发生</strong> — 预测可能令牌，非正确事实',
+                            '<strong>试验温度</strong> — 尝试T=0.0, 0.7, 1.5看变化',
+                            '<strong>知道上下文窗口限制</strong> — GPT-4o看128k；旧信息被遗忘'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            { q: 'LLM像人类一样理解文本吗?', a: '否。基于训练模式预测统计上最可能的令牌。无理解、意图或意识。' },
+                            { q: '什么是令牌?', a: '英语约0.75个词，中文/日文约0.5个词。GPT-4o使用字节对编码。' },
+                            { q: '温度做什么?', a: '控制采样随机性。0=确定性。1.0=标准。>1.5=平坦化和高幻觉。' },
+                            { q: '为什么提示中位置重要?', a: '注意力权重开始/结尾比中间重（lost in middle）。关键指令放开始/结尾。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '核心要点',
+                        items: [
+                            '<strong>LLM预测令牌，非答案</strong> — 统计上可能的序列，非已验证事实',
+                            '<strong>1令牌≈0.75词</strong>英文（中文/日文密度高50%）',
+                            '<strong>温度控制创意对确定性</strong> — 0事实，0.7平衡，>1.5高幻觉',
+                            '<strong>上下文窗口非记忆</strong> — GPT-4o: 128k, Claude: 200k, Gemini: 2M',
+                            '<strong>位置关键</strong> — Transformer权重开始/结尾比中间',
+                            '<strong>RLHF塑造行为，非能力</strong> — 拒绝和语气来自微调'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '立即开始更智能的提示',
+                        body: '将LLM架构理解应用于提示。使用PromptQuorum并排测试温度、top-p和模型。',
+                        cta: '试用PromptQuorum免费',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            const articleUrl = 'https://www.promptquorum.com/prompt-engineering/how-llms-actually-work?lang=' + lang;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+            let html = '';
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}" style="color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4;">${slide.link.split('/').pop()}</a>
+                        </p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ul style="font-size: 1.1em; margin-top: 20px; max-width: 700px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table style="margin-top: 20px;"><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col] || ''}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    html += footerLink;
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ol style="font-size: 1.05em; margin-top: 20px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ol>';
+                    html += footerLink;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<div style="text-align: left; max-width: 700px; margin: 20px auto;">';
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 16px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+                    });
+                    html += '</div>';
+                    html += footerLink;
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="font-size: 1.1em; margin: 20px 0; max-width: 600px;">${slide.body}</p>
+                        <a href="${slide.href}" style="display: inline-block; margin-top: 20px; padding: 12px 32px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">${slide.cta}</a>
+                        ${footerLink}
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        if (params.get('print') === '1') {
+            window.addEventListener('load', () => {
+                window.print();
+            });
+        }
+
+        showSlide(0);
+    </script>
+</body>
+</html>
