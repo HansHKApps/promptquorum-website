@@ -17359,9 +17359,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': 'Comment quantisation affecte-t-elle qualité?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FP16 = 100% qualité (baseline), Q8 = 99%, Q5 = 95%, Q4 = 90–95%. Pour plupart tâches, Q4 est indiscernable de FP16.' } },
           { '@type': 'Question', 'name': 'Puis-je augmenter GPU plus tard?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Commencez RTX 4070 Ti maintenant, augmentez RTX 5090 en 2 ans si besoin. GPU est composant plus remplaçable.' } },
           { '@type': 'Question', 'name': 'Quelle quantité de RAM faut-il pour un modèle 7B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': '8 Go de RAM minimum pour un modèle 7B. 16 Go recommandés pour usage confortable avec navigateur et OS. 32 Go offrent de la marge pour les contextes longs et le multitâche.' } },
-          { '@type': 'Question', 'name': 'Peut-on utiliser des LLM locaux sur Apple Silicon (M1/M2/M3) ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. L'Apple Silicon utilise une mémoire unifiée partagée CPU/GPU. M3 Max (128 Go) fait tourner les modèles 70B à 20+ tokens/sec. M2 Pro (16 Go) atteint 30–50 tokens/sec pour un 7B.' } },
-          { '@type': 'Question', 'name': 'Quel CPU choisir sans GPU pour des LLM locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CPU multicœurs avec grand cache L3 : AMD Ryzen 9 7950X ou Intel Core i9-14900K. Attendez 5–15 tokens/sec pour un modèle 7B. L'inférence CPU est 3–5× plus lente que sur GPU.' } },
-          { '@type': 'Question', 'name': 'La vitesse du stockage affecte-t-elle les LLM locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, au chargement. Un SSD NVMe (3–7 Go/s) charge un modèle 7B en 2–5 secondes vs 20–60 secondes sur HDD. La vitesse d'inférence après chargement n'est pas affectée.' } },
+          { '@type': 'Question', 'name': 'Peut-on utiliser des LLM locaux sur Apple Silicon (M1/M2/M3) ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. L\'Apple Silicon utilise une memoire unifiee partagee CPU/GPU. M3 Max (128 Go) fait tourner les modeles 70B a 20+ tokens/sec. M2 Pro (16 Go) atteint 30-50 tokens/sec pour un 7B.' } },
+          { '@type': 'Question', 'name': 'Quel CPU choisir sans GPU pour des LLM locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CPU multicoeurs avec grand cache L3 : AMD Ryzen 9 7950X ou Intel Core i9-14900K. Attendez 5-15 tokens/sec pour un modele 7B. L\'inference CPU est 3-5x plus lente que sur GPU.' } },
+          { '@type': 'Question', 'name': 'La vitesse du stockage affecte-t-elle les LLM locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, au chargement. Un SSD NVMe (3-7 Go/s) charge un modele 7B en 2-5 secondes vs 20-60 secondes sur HDD. La vitesse d\'inference apres chargement n\'est pas affectee.' } },
           { '@type': 'Question', 'name': 'Peut-on utiliser plusieurs GPU pour des modèles plus grands ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, via le tensor parallelism. Deux RTX 3090 (24 Go chacune) offrent 48 Go VRAM pour des modèles 70B en FP16. Ollama et llama.cpp supportent le multi-GPU via --n-gpu-layers.' } },
         ],
       },
@@ -21231,6 +21231,116 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
       },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Best Budget GPUs for Local LLM Inference Under $300',
+        'description': 'Best budget GPUs for local LLMs under $300: RTX 3060 12GB, RTX 4060 Ti, RTX A4000. VRAM requirements, performance data, and buying tips. April 2026.',
+        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm?lang=en',
+        'inLanguage': 'en',
+        'datePublished': '2026-04-05',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'budget GPU' },
+          { '@type': 'Thing', 'name': 'RTX 3060' },
+          { '@type': 'Thing', 'name': 'GPU VRAM' },
+          { '@type': 'Thing', 'name': 'local LLM inference' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner',
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'en',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Is RTX 3060 12GB still worth buying in 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. It is 4+ years old, but 12GB VRAM is timeless for 7B–13B models. Runs Llama 3 8B and Mistral 7B smoothly. Ideal if you find one used under $250.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Should I buy RTX 4060 or RTX 4060 Ti for local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4060 Ti. The base RTX 4060 (8GB) and RTX 4070 (12GB) are poor value for LLM work. The Ti is the best-priced RTX 40-series card for local inference.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use an AMD RX 6700 or 6800 XT instead of NVIDIA for local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, but AMD ROCm driver support for ONNX Runtime is weaker than NVIDIA CUDA. Expect more setup friction. NVIDIA is safer for budget builds.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is 12GB VRAM enough for 13B models?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Barely, at Q4 quantization. Q5 or Q8 will cause OOM errors. If you want 13B comfort, aim for 16GB VRAM.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Should I buy a used enterprise GPU like RTX A4000?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, if available. 16GB VRAM, professional-grade cooling, usually $180–230 used. Slightly slower than RTX 3060 per benchmark, but the VRAM cushion is worth it.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What PSU wattage should I buy with a $250 GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '650W, 80+ Gold minimum. A $250 GPU + CPU + motherboard does not exceed 400W draw, but headroom for spikes prevents stability issues.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run Ollama with a $200 budget GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Ollama is lightweight. A 4-year-old RTX 3060 with Ollama will run Mistral 7B at 10–15 tokens/sec — totally usable for personal inference.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the best budget GPU under $200?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Used RTX 2080 (8GB, ~$150) or RTX A2000 (12GB, ~$180–200). Both run 7B models at Q4. The A2000 is preferred for its 12GB VRAM headroom.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I test a used GPU for VRAM defects before buying?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Run VRAM stress tests: gpu-burn (Linux), HWiNFO64 memory stress test (Windows), or load a large model in Ollama and watch for OOM errors. Test before returning the card.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I upgrade my current GPU to run larger models later?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, GPU upgrades are straightforward in desktop PCs. Start with RTX 3060 12GB, then upgrade to RTX 4090 or 5090 later. PCIE slot is backward-compatible across generations.'
+            }
+          }
+        ]
+      },
     },
   },
 
@@ -21469,7 +21579,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       title: 'How Much VRAM Do You Need for Local LLMs?',
       seoTitle: 'VRAM Calculator: How Much GPU Memory for Local LLMs?',
       intro: '**For 7B models, you need 8GB VRAM; for 13B–22B, 12–16GB; for 70B, 24GB minimum.** As of April 2026, these numbers assume Q4 (4-bit) quantization. Full-precision (FP32) models need 2–3× more VRAM and are rarely practical on consumer GPUs. The formula is: Model size (billions) × 2 bytes (FP32) ÷ quantization factor.',
-      metaDescription: 'How much VRAM for local LLMs? 7B (8GB), 13B (12GB), 70B (24GB). VRAM calculator, quantization impact, overhead. Free beta — April 2026.',
+      metaDescription: 'How much VRAM for local LLMs? 7B models need 8GB, 13B need 12–16GB, 70B need 24GB at Q4. Quantization table, batch size overhead, GPU buying guide.',
       publishDate: '2026-04-05',
       readTime: '7 min',
       educationalLevel: 'Beginner',
@@ -21595,108 +21705,109 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Best Budget GPUs for Local LLM Inference Under $300',
-        'description': 'Best budget GPUs for local LLMs under $300: RTX 3060, RTX 4060 Ti, RTX 4070 Super. Full VRAM math, performance comparisons, and buying tips. Free beta — April 2026.',
-        'url': 'https://www.promptquorum.com/local-llms/best-budget-gpus-local-llm?lang=en',
+        'headline': 'VRAM Calculator: How Much GPU Memory for Local LLMs?',
+        'description': 'How much VRAM for local LLMs? 7B models need 8GB, 13B need 12–16GB, 70B need 24GB at Q4. Quantization table, batch size overhead, GPU buying guide.',
+        'url': 'https://www.promptquorum.com/local-llms/how-much-vram-local-llm?lang=en',
         'inLanguage': 'en',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-05',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
-          { '@type': 'Thing', 'name': 'NVIDIA GPU' },
-          { '@type': 'Thing', 'name': 'RTX 3060' },
-          { '@type': 'Thing', 'name': 'RTX 4060 Ti' },
           { '@type': 'Thing', 'name': 'GPU VRAM' },
+          { '@type': 'Thing', 'name': 'LLM memory requirements' },
+          { '@type': 'Thing', 'name': 'quantization' },
+          { '@type': 'Thing', 'name': 'local LLM inference' },
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
-          'cssSelector': ['.article-intro', '.key-takeaways', 'h2']
+          'cssSelector': ['.article-intro', '.key-takeaways'],
         },
         'educationalLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'What is the best budget GPU for local LLMs in 2026?',
+            'name': 'Can I run Mistral 7B on a 6GB GPU?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RTX 3060 12GB ($200–250 used) is the best overall budget pick. It balances VRAM capacity with cost, running 7B and 13B models smoothly at acceptable speeds.'
+              'text': 'Barely, at Q4 with tight overhead. Practically, no. Buy at least 8GB. You will hit OOM errors with 6GB.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'Can I run a 7B model on a 6GB GPU?',
+            'name': 'How much VRAM do I need for fine-tuning a 7B model?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Technically possible at Q4 quantization, but practically no. You will hit out-of-memory (OOM) errors. Buy at least 8GB VRAM for comfortable inference.'
+              'text': 'For LoRA fine-tuning: 12–16GB. Full fine-tuning: 28GB+. Fine-tuning requires optimizer state (2–4× model VRAM), not just inference weights.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'Should I buy a new GPU or used?',
+            'name': 'Is 12GB enough for Llama 3 13B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Used enterprise cards (RTX A2000, A4000) and older consumer cards (RTX 3060, 3080) offer 30–40% better value. New cards guarantee warranty. Budget-conscious buyers should look at used market.'
+              'text': 'At Q4, yes barely. At Q5 or Q8, no. 12GB is cutting it close. 16GB is comfortable for 13B models.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'How much VRAM do I need for a 13B model?',
+            'name': 'Do I need 24GB VRAM for a 70B model?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'For Q4 quantization: 8–10GB is tight but works. Q5 or Q8: 12–16GB recommended. With system overhead, plan for at least 12GB total VRAM.'
+              'text': 'At Q4, yes — 70B models require ~20–24GB VRAM. At Q5+, you need 32GB+. Higher quantization adds VRAM needs proportionally.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'Is DDR5 RAM important for local LLMs?',
+            'name': 'Does increasing batch size reduce VRAM for single inference?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. GPU VRAM matters far more than system RAM speed. DDR5 adds cost without measurable LLM speedup. Save money and use DDR4.'
+              'text': 'No. Single inference always uses batch=1 VRAM. Batch size only helps throughput in multi-user scenarios. It does not reduce VRAM per request.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'Should I buy an RTX 4060 Ti or RTX 3060?',
+            'name': 'What quantization level has the best accuracy?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RTX 4060 Ti is 35% faster per TFLOP but has only 8GB VRAM (vs. 12GB on used RTX 3060). For 7B models, 4060 Ti wins on speed. For 13B models, older 3060 12GB is more practical.'
+              'text': 'Q8 is nearly imperceptible quality loss. Q5 is ~2% degradation. Q4 is ~1% degradation. For most tasks, Q4 is the sweet spot between VRAM savings and quality.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'What CPU should I pair with a budget GPU?',
+            'name': 'Can I offload some VRAM to CPU RAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'An 8-core mid-range CPU (Ryzen 5 5600, i5 13th gen) is sufficient. CPU does not limit LLM inference speed when a GPU is present. Avoid bottleneck: do not buy a $1500 CPU with a $250 GPU.'
+              'text': 'Yes, via layer-splitting. llama.cpp and Ollama support this via --n-gpu-layers. Performance drops 30–50% but models run when VRAM is insufficient.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'Can I use AMD GPUs instead of NVIDIA?',
+            'name': 'What is the VRAM formula for LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'AMD ROCm support is improving but still less reliable than CUDA. For budget buyers, NVIDIA CUDA offers simplicity and tool maturity. AMD is viable only if you find exceptional pricing or already own AMD hardware.'
+              'text': 'VRAM (GB) = model parameters (billions) × bytes per parameter + overhead. At Q4 (4-bit): 7B × 0.5 bytes + 1GB overhead ≈ 4.5GB weights + 2GB KV cache = ~7GB total.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'What is the total system cost for a budget local LLM setup?',
+            'name': 'How much more VRAM does Q8 need vs Q4?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Plan $700–1,000 total: GPU $250–400 (30–40% of budget), CPU $150–250, RAM $100–150, SSD $100, PSU + case $100–200. Balance all components to avoid bottlenecks.'
+              'text': 'Q8 uses 2× the VRAM of Q4. A 7B model at Q4 needs ~4–5GB; at Q8, ~8–9GB. Always check quantization level before buying a GPU.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'Will GPU prices drop in 2026?',
+            'name': 'Can I run a 70B model on two GPUs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Used market prices are volatile. New GPU launches typically drop used prices 10–20%. Budget buyers benefit from waiting 2–3 months after new GPU announcements. Monitor eBay and Proxibid for used listings.'
+              'text': 'Yes. Two RTX 3090s (24GB each) combine for 48GB VRAM — enough for a 70B model at Q4. llama.cpp and Ollama support multi-GPU via tensor parallelism and --n-gpu-layers.'
             }
           }
         ]
