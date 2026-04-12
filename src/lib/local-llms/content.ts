@@ -15644,29 +15644,40 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'url': 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api?lang=en',
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
-        'author': {
-          '@type': 'Organization',
-          'name': 'PromptQuorum'
-        }
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'OpenAI API' },
+          { '@type': 'Thing', 'name': 'local LLM inference' },
+          { '@type': 'Thing', 'name': 'REST API' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Beginner to Advanced',
       },
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        'inLanguage': 'en',
         'mainEntity': [
           {
             '@type': 'Question',
             'name': 'Do I need to modify my OpenAI code to use Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. Set `base_url="http://localhost:11434/v1"` and `api_key="ollama"`. Everything else stays the same. If you have code using the OpenAI library, swap these two lines and it works with your local model.'
+              'text': 'No. Set base_url="http://localhost:11434/v1" and api_key="ollama". Everything else stays the same. If you have existing OpenAI library code, swap these two lines and it works with your local model.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'Can I use the API from a different computer on my network?',
+            'name': 'Can I use the Ollama API from a different computer on my network?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. By default, Ollama listens on localhost only. To allow network access, set the environment variable `OLLAMA_HOST=0.0.0.0:11434` before running Ollama. Then point your code to `http://<machine-ip>:11434/v1`. Be careful with security — use a firewall if this is production.'
+              'text': 'Yes. By default, Ollama listens on localhost only. Set OLLAMA_HOST=0.0.0.0:11434 before running Ollama to allow network access. Point code to http://<machine-ip>:11434/v1. Add a firewall or reverse proxy for security.'
             }
           },
           {
@@ -15674,23 +15685,63 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             'name': 'Does LM Studio have an OpenAI-compatible API?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes, as of April 2026, LM Studio has an OpenAI-compatible API in beta at `http://localhost:1234/v1`. Use the same code as Ollama, just change the port.'
+              'text': 'Yes. LM Studio exposes an OpenAI-compatible API at http://localhost:1234/v1. Enable it under the Local Server tab. Use the same code as Ollama, changing only the port from 11434 to 1234.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'Can I call multiple models simultaneously?',
+            'name': 'Can I call multiple models simultaneously via the Ollama API?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'If you have them loaded in Ollama, yes. But note that running two models simultaneously doubles VRAM usage. You must have enough GPU memory.'
+              'text': 'If both models are loaded in Ollama, yes. Running two models simultaneously roughly doubles VRAM usage. Ensure you have enough GPU memory before loading multiple models at once.'
             }
           },
           {
             '@type': 'Question',
-            'name': 'Is the API authenticated?',
+            'name': 'Is the Ollama API authenticated?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. By default, Ollama\'s API has no authentication. Anyone with access to localhost:11434 can use it. For production with network access, add authentication via a reverse proxy (nginx with Basic Auth, etc.).'
+              'text': 'No. By default, Ollama has no authentication. Anyone with access to localhost:11434 can use it. For network-exposed production use, add authentication via a reverse proxy (nginx with Basic Auth or OAuth2-proxy).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I use streaming with the Ollama OpenAI API?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Set stream=True in your OpenAI library call. Ollama returns server-sent events (SSE) with each token. In Python: for chunk in client.chat.completions.create(stream=True, ...): print(chunk.choices[0].delta.content).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does Ollama support function calling / tool use via the API?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, for models that support it (Llama 3.1, Qwen2.5, Mistral). Pass tools=[] in the API call as you would with OpenAI. Ollama parses tool calls and returns structured JSON. Not all models support this — check model documentation.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between Ollama /api/generate and /v1/chat/completions?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '/api/generate is Ollama\'s native single-turn endpoint. /v1/chat/completions is the OpenAI-compatible multi-turn endpoint. Use /v1/chat/completions for all new projects — it supports conversation history and is compatible with OpenAI libraries.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use vLLM as an OpenAI-compatible API?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. vLLM runs an OpenAI-compatible server at http://localhost:8000/v1 by default. Start it with: python -m vllm.entrypoints.openai.api_server --model mistralai/Mistral-7B-v0.1. Use the same client code as Ollama.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I use the Ollama API with the Node.js openai package?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Import OpenAI from openai. Set baseURL: "http://localhost:11434/v1" and apiKey: "ollama" in the constructor. Then call client.chat.completions.create() exactly as you would with the real OpenAI API — no other changes needed.'
             }
           }
         ]
