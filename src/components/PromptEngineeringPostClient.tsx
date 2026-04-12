@@ -74,6 +74,35 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
   },
 }
 
+// Presentation UI translations
+const PRESENTATION_UI: Record<Language, { heading: string; description: string; savePdf: string }> = {
+  en: {
+    heading: 'Visual Summary',
+    description: 'Prefer slides over reading? Click through this interactive presentation covering all key concepts, settings, and use cases — then save as PDF for reference.',
+    savePdf: '↓ Save as PDF',
+  },
+  de: {
+    heading: 'Visuelle Zusammenfassung',
+    description: 'Lieber Slides als lesen? Klick durch diese interaktive Präsentation zu allen Schlüsselkonzepten, Einstellungen und Anwendungsfällen — dann als PDF speichern.',
+    savePdf: '↓ Als PDF speichern',
+  },
+  fr: {
+    heading: 'Résumé visuel',
+    description: 'Préférez les slides à la lecture ? Parcourez cette présentation interactive couvrant tous les concepts clés, paramètres et cas d\'utilisation — puis enregistrez en PDF.',
+    savePdf: '↓ Enregistrer en PDF',
+  },
+  ja: {
+    heading: 'ビジュアルサマリー',
+    description: '読むよりスライドを好みますか？すべての主要概念、設定、ユースケースをカバーするこのインタラクティブなプレゼンテーションをクリックして — PDFとして保存。',
+    savePdf: '↓ PDFとして保存',
+  },
+  zh: {
+    heading: '视觉摘要',
+    description: '比起阅读，更喜欢幻灯片？点击浏览这个涵盖所有关键概念、设置和用例的交互式演示文稿 — 然后保存为PDF以供参考。',
+    savePdf: '↓ 保存为PDF',
+  },
+}
+
 // Section header translations
 const SECTION_HEADER_LABELS: Record<Language, Record<string, string>> = {
   en: {
@@ -1101,16 +1130,16 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
         {article.gammaEmbedUrl && (
           <section aria-label="Interactive presentation summary" className="my-8">
             <h2 className="text-xl font-semibold text-text-primary mb-2">
-              Visual Summary: Temperature &amp; Top-P (Slide Deck)
+              {PRESENTATION_UI[lang]?.heading ?? PRESENTATION_UI.en.heading}: {article.title} (Slide Deck)
             </h2>
             <p className="text-sm text-text-muted mb-4">
-              Prefer slides over reading? Click through this interactive presentation covering all key concepts, settings, and use cases — then download it for reference.
+              {PRESENTATION_UI[lang]?.description ?? PRESENTATION_UI.en.description}
             </p>
             <a
               href={`${article.gammaEmbedUrl}?lang=${lang}&print=1`}
               className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors"
             >
-              ↓ Save as PDF
+              {PRESENTATION_UI[lang]?.savePdf ?? PRESENTATION_UI.en.savePdf}
             </a>
             <div
               className="w-full rounded-xl overflow-hidden border border-primary/20 shadow-sm"
@@ -1118,7 +1147,7 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
             >
               <iframe
                 src={`${article.gammaEmbedUrl}?lang=${lang}`}
-                title="Temperature and Top-P: Control AI Creativity — PromptQuorum"
+                title={`${article.title} — PromptQuorum`}
                 className="w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"

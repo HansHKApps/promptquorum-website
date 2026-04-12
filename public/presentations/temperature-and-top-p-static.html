@@ -1216,6 +1216,15 @@
             if (e.key === 'ArrowRight') changeSlide(1);
         });
 
+        // Print handlers — show all slides before browser's print layout, restore after
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
         // Print trigger
         if (isPrint) {
             window.addEventListener('load', () => {
