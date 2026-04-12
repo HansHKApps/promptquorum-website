@@ -462,10 +462,27 @@ export default async function PromptEngineeringArticlePage({ params, searchParam
     },
   } : null
 
+  // PresentationDigitalDocument schema for articles with Gamma presentations
+  const presentationSchema = article.gammaEmbedUrl ? {
+    '@context': 'https://schema.org',
+    '@type': 'PresentationDigitalDocument',
+    name: article.title,
+    description: article.intro,
+    url: canonicalUrl,
+    author: { '@type': 'Organization', name: 'PromptQuorum' },
+    inLanguage: 'en',
+    encodingFormat: 'text/html',
+    isPartOf: {
+      '@type': 'WebPage',
+      url: canonicalUrl,
+    },
+  } : null
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {presentationSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(presentationSchema) }} />}
       {definedTermSetSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }} />}
       {learningPathsSchema?.map((s, i) => <script key={`lp-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />)}
       {trendingSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trendingSchema) }} />}

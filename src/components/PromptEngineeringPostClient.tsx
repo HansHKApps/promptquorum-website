@@ -1097,6 +1097,40 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
           return <SectionBlock key={tldrKey} section={tldrSection} colors={colors} id={sectionId} lang={lang} />
         })()}
 
+        {/* Gamma Presentation Embed (SEO/AEO/GEO optimized) */}
+        {article.gammaEmbedUrl && (
+          <section aria-label="Interactive presentation summary" className="my-8">
+            <h2 className="text-xl font-semibold text-text-primary mb-2">
+              Visual Summary: Temperature &amp; Top-P (Slide Deck)
+            </h2>
+            <p className="text-sm text-text-muted mb-4">
+              Prefer slides over reading? Click through this interactive presentation covering all key concepts, settings, and use cases — then download it for reference.
+            </p>
+            {article.gammaDownloadUrl && (
+              <a
+                href={article.gammaDownloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors"
+              >
+                ↓ Download PDF
+              </a>
+            )}
+            <div
+              className="relative w-full rounded-xl overflow-hidden border border-primary/20 shadow-sm"
+              style={{ paddingBottom: '56.25%', height: 0 }}
+            >
+              <iframe
+                src={article.gammaEmbedUrl}
+                title="Temperature and Top-P: Control AI Creativity — PromptQuorum"
+                className="absolute top-0 left-0 w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </section>
+        )}
+
         {/* Table of Contents */}
         {(article as any).toc && (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
