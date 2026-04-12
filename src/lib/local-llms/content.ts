@@ -22858,7 +22858,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       title: 'Best Mini PCs for Running Local LLMs',
       seoTitle: 'Best Mini PCs for Local LLMs: 7B–13B Inference 2026',
       intro: '**Mini PCs with discrete GPUs (RTX 4060 Ti or RTX 4070) run 7B–13B models at full speed in a space-saving form factor.** As of April 2026, mini PCs range from $800–2,000 and eliminate desk clutter without sacrificing performance. Intel NUC, ASUS PN51, and custom mini-ITX builds are all viable; the key is ensuring adequate cooling for sustained inference.',
-      metaDescription: 'Best mini PCs for local LLMs: Intel NUC, ASUS PN51, Giada mini-ITX. Compact 7B–13B inference. Space-saving, silent operation. Free beta — April 2026.',
+      metaDescription: 'Best mini PCs for local LLMs in 2026: Intel NUC, ASUS PN51, and mini-ITX builds with RTX 4060 Ti. Run 7B–13B models in a compact, silent form factor.',
       publishDate: '2026-04-05',
       readTime: '8 min',
       educationalLevel: 'Intermediate',
