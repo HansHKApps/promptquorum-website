@@ -22685,7 +22685,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     de: {
       theme: 'Modelle nach Anwendungsfall',
       title: 'Beste lokale LLMs für Code Review in 2026: Rangiert nach Fehlerdetection, Geschwindigkeit und VRAM',
-      seoTitle: 'Beste lokale LLMs für Code Review 2026: Genauigkeit vs Geschwindigkeit',
+      seoTitle: 'Lokale LLMs für Code Review 2026: Genauigkeit vs Tempo',
       intro: '**Ab April 2026 sind die besten lokalen LLMs für Code Review Qwen2.5-Coder 32B (beste Gesamtgenauigkeit), Llama 3.3 70B (beste Sicherheitsanalyse) und DeepSeek-R1 14B (beste algorithmische Überprüfung).** 7B-Modelle erkennen nur ~45% echter Fehler — zu niedrig für ernsthafte Reviews. 32B+ Modelle erkennen 80–88% und sind die praktische Mindestanforderung für Pre-Merge-Code-Review-Pipelines.',
       metaDescription: 'Qwen2.5-Coder 32B erkennt 88% der Code-Review-Fehler. Llama 3.3 70B beste für Sicherheit. DeepSeek-R1 14B für Algorithmen. Vergleich nach Code-Typ — 2026.',
       publishDate: '2026-04-05',
@@ -22903,7 +22903,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     fr: {
       theme: "Modèles par cas d'utilisation",
       title: "Meilleurs LLMs locaux pour Code Review en 2026 : Classés par détection de bugs, vitesse et VRAM",
-      seoTitle: "Meilleurs LLMs locaux pour Code Review 2026 : Précision vs Vitesse",
+      seoTitle: "LLMs locaux pour Code Review 2026 : Précision vs Vitesse",
       intro: "**À partir d'avril 2026, les meilleurs LLMs locaux pour la revue de code sont Qwen2.5-Coder 32B (meilleure précision globale), Llama 3.3 70B (meilleure analyse de sécurité) et DeepSeek-R1 14B (meilleure analyse algorithmique).** Les modèles 7B détectent seulement ~45% des bugs réels — trop peu pour une revue sérieuse. Les modèles 32B+ détectent 80–88% et constituent le minimum pratique pour les pipelines de revue de code pré-fusion.",
       metaDescription: "Qwen2.5-Coder 32B détecte 88% des bugs de code review. Llama 3.3 70B meilleur pour sécurité. DeepSeek-R1 14B pour algorithmes. Comparaison par type — 2026.",
       publishDate: "2026-04-05",
