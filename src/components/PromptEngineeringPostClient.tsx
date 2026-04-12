@@ -75,36 +75,36 @@ const JUMP_SECTION_LABELS: Record<Language, Record<string, string>> = {
 }
 
 // Presentation UI translations
-const PRESENTATION_UI: Record<Language, { heading: string; description: string; savePdf: string; detailedDescription: string }> = {
+const PRESENTATION_UI: Record<Language, { heading: string; description: string; savePdf: string; fallbackDescription: string }> = {
   en: {
     heading: 'Visual Summary',
     description: 'Prefer slides over reading? Click through this interactive presentation covering all key concepts, settings, and use cases — then save as PDF for reference.',
     savePdf: '↓ Save as PDF',
-    detailedDescription: 'The slide deck below covers: how tokenization converts text to token IDs, how transformer attention creates the lost-in-the-middle effect, RLHF vs pretraining differences, and inference parameter reference table (temperature, top-p, max tokens). Download the PDF as an LLM architecture reference card.',
+    fallbackDescription: 'The slide deck below covers the key concepts, parameter settings, and use cases from this article. Download the PDF as a reference card.',
   },
   de: {
     heading: 'Visuelle Zusammenfassung',
     description: 'Lieber Slides als lesen? Klick durch diese interaktive Präsentation zu allen Schlüsselkonzepten, Einstellungen und Anwendungsfällen — dann als PDF speichern.',
     savePdf: '↓ Als PDF speichern',
-    detailedDescription: 'Das Foliendeck behandelt: wie Tokenisierung Text in Token-IDs umwandelt, wie Transformer-Attention den „Lost-in-the-Middle"-Effekt erzeugt, RLHF vs. Pretraining-Unterschiede und Inferenzparameter-Referenztabelle (Temperatur, Top-p, max Tokens). Laden Sie das PDF als LLM-Architektur-Referenzkarte herunter.',
+    fallbackDescription: 'Das Foliendeck behandelt die Schlüsselkonzepte, Parametereinstellungen und Anwendungsfälle aus diesem Artikel. Laden Sie das PDF als Referenzkarte herunter.',
   },
   fr: {
     heading: 'Résumé visuel',
     description: 'Préférez les slides à la lecture ? Parcourez cette présentation interactive couvrant tous les concepts clés, paramètres et cas d\'utilisation — puis enregistrez en PDF.',
     savePdf: '↓ Enregistrer en PDF',
-    detailedDescription: 'La présentation couvre : comment la tokenisation convertit le texte en IDs de tokens, comment l\'attention transformer crée l\'effet « lost in the middle », les différences RLHF vs pretraining, et le tableau de référence des paramètres d\'inférence (température, top-p, tokens max). Téléchargez le PDF comme carte de référence d\'architecture LLM.',
+    fallbackDescription: 'La présentation couvre les concepts clés, les paramètres d\'ajustement et les cas d\'utilisation de cet article. Téléchargez le PDF comme carte de référence.',
   },
   ja: {
     heading: 'ビジュアルサマリー',
     description: '読むよりスライドを好みますか？すべての主要概念、設定、ユースケースをカバーするこのインタラクティブなプレゼンテーションをクリックして — PDFとして保存。',
     savePdf: '↓ PDFとして保存',
-    detailedDescription: 'スライドデッキには以下が含まれています：トークン化がテキストをトークンIDに変換する方法、Transformerの注意機構が「lost-in-the-middle」効果を生成する仕組み、RLHFと事前学習の違い、推論パラメータ参照表（温度、Top-p、最大トークン数）。PDFをLLMアーキテクチャ参照カードとしてダウンロードしてください。',
+    fallbackDescription: 'スライドデッキはこの記事の主要な概念、パラメータ設定、およびユースケースをカバーしています。PDFを参照カードとしてダウンロードしてください。',
   },
   zh: {
     heading: '视觉摘要',
     description: '比起阅读，更喜欢幻灯片？点击浏览这个涵盖所有关键概念、设置和用例的交互式演示文稿 — 然后保存为PDF以供参考。',
     savePdf: '↓ 保存为PDF',
-    detailedDescription: '幻灯片涵盖以下内容：令牌化如何将文本转换为令牌ID、Transformer注意力机制如何创建"中间丢失"效应、RLHF与预训练的区别，以及推理参数参考表（温度、Top-p、最大令牌数）。将PDF下载作为LLM架构参考卡。',
+    fallbackDescription: '幻灯片涵盖本文的关键概念、参数设置和用例。将PDF下载作为参考卡。',
   },
 }
 
@@ -1141,13 +1141,13 @@ function PromptEngineeringPostContent({ slug, initialLang }: Props) {
               {PRESENTATION_UI[lang]?.description ?? PRESENTATION_UI.en.description}
             </p>
             <p className="text-sm text-text-secondary mb-4">
-              {PRESENTATION_UI[lang]?.detailedDescription ?? PRESENTATION_UI.en.detailedDescription}
+              {article.gammaDescription ?? PRESENTATION_UI[lang]?.fallbackDescription ?? PRESENTATION_UI.en.fallbackDescription}
             </p>
             <a
               href={`${article.gammaEmbedUrl}?lang=${lang}&print=1`}
               className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors"
             >
-              {PRESENTATION_UI[lang]?.savePdf ?? PRESENTATION_UI.en.savePdf}
+              Download {article.title} Reference Card (PDF)
             </a>
             <div
               className="w-full rounded-xl overflow-hidden border border-primary/20 shadow-sm"
