@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Limitations: What LLMs Can't Do | PromptQuorum</title>
+    <meta name="description" content="Interactive 14-slide presentation on LLM limitations. Learn 8 hard limits and practical workarounds." />
+    <meta property="og:title" content="AI Limitations: What LLMs Can't Do — PromptQuorum" />
+    <meta property="og:description" content="Master the 8 structural limitations of large language models and their practical workarounds." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles — A4 landscape with mm dimensions */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">AI Limitations: What LLMs Can't Do</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'AI Limitations — What LLMs Can\'t Do',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'AI Limitations\nWhat LLMs Can\'t Do',
+                        subtitle: 'Understand 8 Hard Limits & Practical Workarounds',
+                        link: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What LLMs Fundamentally Cannot Do',
+                        intro: 'Three core constraints:',
+                        items: [
+                            '<strong>No real-time data access.</strong> Models are frozen at training time.',
+                            '<strong>Cannot verify their own outputs.</strong> No ground-truth lookup, only token prediction.',
+                            '<strong>No multi-step reasoning without scaffolding.</strong> Need explicit chain-of-thought prompting.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'The 8 Limitations at a Glance',
+                        columns: ['#', 'Limitation', 'Quick Workaround'],
+                        rows: [
+                            { '#': '1', Limitation: 'Knowledge Cutoff', 'Quick Workaround': 'Paste current facts into prompt (RAG)' },
+                            { '#': '2', Limitation: 'Hallucination', 'Quick Workaround': 'Ground with source material' },
+                            { '#': '3', Limitation: 'No Multi-Step Reasoning', 'Quick Workaround': 'Use chain-of-thought' },
+                            { '#': '4', Limitation: 'Context Window Caps', 'Quick Workaround': 'Summarize or chunk input' },
+                            { '#': '5', Limitation: 'No Memory', 'Quick Workaround': 'App-layer memory injection' },
+                            { '#': '6', Limitation: 'No Real Actions', 'Quick Workaround': 'Tool use / function calls' },
+                            { '#': '7', Limitation: 'Training Data Bias', 'Quick Workaround': 'Provide domain context' },
+                            { '#': '8', Limitation: 'Cannot Self-Verify', 'Quick Workaround': 'External validation' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Limitations 1 & 2: Knowledge & Hallucination',
+                        intro: '',
+                        items: [
+                            '<strong>Knowledge Cutoff:</strong> Models are trained on a static corpus with an end date. No access to current events.',
+                            '<strong>Hallucination:</strong> Because models predict text (not truth), they confidently generate plausible-sounding false facts when training signal is sparse.'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Hallucination is Structural',
+                        line1: '<strong>Not a bug.</strong> Inherent to token prediction.',
+                        line2: '<strong>Workaround:</strong> Ground prompts with explicit source material.',
+                        tip: '💡 Grounding reduces but does not eliminate hallucination risk.'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Limitations 3–5: Reasoning, Context, Memory',
+                        intro: '',
+                        items: [
+                            '<strong>No Reliable Multi-Step Reasoning:</strong> Models lack working memory between token predictions. Fix: Chain-of-thought.',
+                            '<strong>Context Window Caps:</strong> GPT-4o 128K, Claude 200K, Gemini 2.5M tokens. Fix: Summarize or retrieve.',
+                            '<strong>No Persistent Memory:</strong> Each conversation starts blank. Fix: App-layer memory injection (vector DB, summaries).'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Limitations 6–8: Actions, Bias, Self-Verification',
+                        intro: '',
+                        items: [
+                            '<strong>Cannot Take Real Actions:</strong> Output text only. Fix: Tool use / function calls in GPT-4o, Claude, Gemini.',
+                            '<strong>Training Data Bias:</strong> Mostly English-language, Western, pre-2025 content. Fix: Provide domain context explicitly.',
+                            '<strong>Cannot Self-Verify:</strong> No access to ground truth. Cannot fact-check its own claims. Fix: External human validation.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'LLM Limitations: Root Cause & Workaround',
+                        columns: ['Limitation', 'Root Cause', 'Workaround'],
+                        rows: [
+                            { Limitation: 'Knowledge Cutoff', 'Root Cause': 'Static training data', Workaround: 'RAG / paste facts' },
+                            { Limitation: 'Hallucination', 'Root Cause': 'Token prediction, not lookup', Workaround: 'Ground + validate' },
+                            { Limitation: 'No Reasoning', 'Root Cause': 'Stateless architecture', Workaround: 'Chain-of-thought' },
+                            { Limitation: 'Memory Limits', 'Root Cause': 'Transformer attention cap', Workaround: 'Chunking / RAG' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'When These Limitations Don\'t Matter',
+                        intro: 'Nuanced cases where workarounds are less critical:',
+                        items: [
+                            'Creative writing (hallucination risk is lower)',
+                            'Summarizing provided documents (knowledge cutoff not relevant)',
+                            'Brainstorming (reasoning gaps less critical)',
+                            'Domain-specific tasks where bias is minimal'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Steps to Design Prompts for Limitations',
+                        intro: '',
+                        items: [
+                            '<strong>1. Identify</strong> which limitation applies to your task.',
+                            '<strong>2. Ground</strong> with explicit facts, docs, or context.',
+                            '<strong>3. Use chain-of-thought</strong> for reasoning tasks.',
+                            '<strong>4. Instruct</strong> the model to signal uncertainty.',
+                            '<strong>5. Validate</strong> outputs against primary sources before publishing.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Key Questions About LLM Limits',
+                        faqs: [
+                            {
+                                q: 'Can I fix hallucinations with better prompting?',
+                                a: 'Partially. Grounding reduces hallucination confidence, but cannot eliminate it. Always validate critical claims.'
+                            },
+                            {
+                                q: 'Do all models have these same 8 limitations?',
+                                a: 'Yes. They\'re structural to transformer architecture. Severity varies (Gemini 2.5M context vs. Claude 200K), but all eight apply universally.'
+                            },
+                            {
+                                q: 'Can fine-tuning remove these limits?',
+                                a: 'No. Fine-tuning adjusts style and instruction-following but preserves all eight structural limitations.'
+                            },
+                            {
+                                q: 'Which model handles limitations best?',
+                                a: 'No model eliminates any limitation. Choose by use case: Gemini for context (2M tokens), Claude for uncertainty hedging, GPT-4o for tool use.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regional Context: Limitations Vary by Location',
+                        intro: '',
+                        items: [
+                            '<strong>EU:</strong> GDPR applies — data residency & bias audits required',
+                            '<strong>China:</strong> Content restrictions — models cannot discuss certain topics',
+                            '<strong>Japan:</strong> METI governance — traceability & documentation for regulated uses',
+                            'All regions face identical 8 structural limitations; compliance adds operational constraints.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Prompt Engineering Around Limitations',
+                        body: 'Use PromptQuorum to test prompts, compare models, and optimize workarounds.',
+                        cta: 'Try Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'KI-Einschränkungen — Was LLMs nicht können',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'KI-Einschränkungen\nWas LLMs nicht können',
+                        subtitle: 'Verstehe 8 harte Limits & praktische Lösungen',
+                        link: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was LLMs grundlegend nicht können',
+                        intro: 'Drei zentrale Einschränkungen:',
+                        items: [
+                            '<strong>Kein Echtzeitzugriff.</strong> Modelle sind zum Trainingszeitpunkt eingefroren.',
+                            '<strong>Können Ausgaben nicht selbst verifizieren.</strong> Keine Wahrheitssuche, nur Token-Vorhersage.',
+                            '<strong>Kein Multi-Schritt-Reasoning ohne Gerüstbau.</strong> Erfordert explizites Chain-of-Thought-Prompting.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Die 8 Einschränkungen auf einen Blick',
+                        columns: ['#', 'Einschränkung', 'Schnelle Lösung'],
+                        rows: [
+                            { '#': '1', Einschränkung: 'Wissensstichtag', 'Schnelle Lösung': 'Aktuelle Fakten einfügen (RAG)' },
+                            { '#': '2', Einschränkung: 'Halluzination', 'Schnelle Lösung': 'Mit Quellenmaterial begründen' },
+                            { '#': '3', Einschränkung: 'Kein Multi-Schritt-Reasoning', 'Schnelle Lösung': 'Chain-of-Thought verwenden' },
+                            { '#': '4', Einschränkung: 'Kontextfenster-Limits', 'Schnelle Lösung': 'Eingabe zusammenfassen oder teilen' },
+                            { '#': '5', Einschränkung: 'Kein Gedächtnis', 'Schnelle Lösung': 'App-Schicht-Memory-Injektion' },
+                            { '#': '6', Einschränkung: 'Keine echten Aktionen', 'Schnelle Lösung': 'Tool-Einsatz / Funktionsaufrufe' },
+                            { '#': '7', Einschränkung: 'Trainings-Daten-Bias', 'Schnelle Lösung': 'Kontext bereitstellen' },
+                            { '#': '8', Einschränkung: 'Kann nicht selbst verifizieren', 'Schnelle Lösung': 'Externe Validierung' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Grenzen 1 & 2: Wissen & Halluzination',
+                        intro: '',
+                        items: [
+                            '<strong>Wissensstichtag:</strong> Modelle werden anhand eines statischen Corpus mit Enddatum trainiert. Kein Zugriff auf aktuelle Ereignisse.',
+                            '<strong>Halluzination:</strong> Da Modelle Text vorhersagen (nicht Wahrheit), generieren sie zuverlässig klingende falsche Fakten, wenn das Trainingssignal spärlich ist.'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Halluzination ist strukturell',
+                        line1: '<strong>Kein Fehler.</strong> Inhärent für Token-Vorhersage.',
+                        line2: '<strong>Lösung:</strong> Prompts mit explizitem Quellenmaterial begründen.',
+                        tip: '💡 Begründung reduziert, eliminiert aber nicht das Halluzinationsrisiko.'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Grenzen 3–5: Reasoning, Kontext, Speicher',
+                        intro: '',
+                        items: [
+                            '<strong>Kein zuverlässiges Multi-Schritt-Reasoning:</strong> Modelle ermangeln des Arbeitsspeichers zwischen Token-Vorhersagen. Lösung: Chain-of-Thought.',
+                            '<strong>Kontextfenster-Obergrenze:</strong> GPT-4o 128K, Claude 200K, Gemini 2,5M Tokens. Lösung: Zusammenfassung oder Abruf.',
+                            '<strong>Kein dauerhaftes Gedächtnis:</strong> Jedes Gespräch beginnt von vorne. Lösung: App-Schicht-Speicherinjektion (Vektor-DB, Zusammenfassungen).'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Grenzen 6–8: Aktionen, Bias, Selbstverifizierung',
+                        intro: '',
+                        items: [
+                            '<strong>Kann keine echten Aktionen ausführen:</strong> Nur Textausgabe. Lösung: Tool-Einsatz / Funktionsaufrufe in GPT-4o, Claude, Gemini.',
+                            '<strong>Trainingsdaten-Bias:</strong> Hauptsächlich englischsprachig, westlich, vor 2025. Lösung: Domänenkontext explizit bereitstellen.',
+                            '<strong>Kann nicht selbst verifizieren:</strong> Kein Zugriff auf Grundwahrheit. Kann Behauptungen nicht selbst überprüfen. Lösung: Externe menschliche Validierung.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'KI-Grenzen: Grundursache & Lösung',
+                        columns: ['Grenzwert', 'Grundursache', 'Workaround'],
+                        rows: [
+                            { Grenzwert: 'Wissensstichtag', Grundursache: 'Statische Trainingsdaten', Workaround: 'RAG / Fakten einfügen' },
+                            { Grenzwert: 'Halluzination', Grundursache: 'Token-Vorhersage, nicht Suche', Workaround: 'Begründen + validieren' },
+                            { Grenzwert: 'Kein Reasoning', Grundursache: 'Zustandslose Architektur', Workaround: 'Chain-of-Thought' },
+                            { Grenzwert: 'Speicherlimits', Grundursache: 'Transformer-Aufmerksamkeitsmaximal', Workaround: 'Chunking / RAG' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wenn diese Grenzen nicht relevant sind',
+                        intro: 'Nuancierte Fälle, wo Workarounds weniger kritisch sind:',
+                        items: [
+                            'Kreatives Schreiben (Halluzinationsrisiko ist geringer)',
+                            'Zusammenfassung bereitgestellter Dokumente (Wissensstichtag nicht relevant)',
+                            'Brainstorming (Reasoning-Lücken weniger kritisch)',
+                            'Aufgaben nach Domäne, bei denen Bias minimal ist'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Schritte zur Prompt-Gestaltung für Grenzen',
+                        intro: '',
+                        items: [
+                            '<strong>1. Identifiziere</strong> welche Grenzwerte für deine Aufgabe gelten.',
+                            '<strong>2. Begründe</strong> mit expliziten Fakten, Dokumenten oder Kontext.',
+                            '<strong>3. Verwende Chain-of-Thought</strong> für Reasoning-Aufgaben.',
+                            '<strong>4. Wiese das Modell an,</strong> Unsicherheit zu signalisieren.',
+                            '<strong>5. Validiere</strong> Ausgaben gegen primäre Quellen, bevor du veröffentlichst.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Wichtigste Fragen zu LLM-Grenzen',
+                        faqs: [
+                            {
+                                q: 'Kann ich Halluzinationen durch besseres Prompting beheben?',
+                                a: 'Teilweise. Begründung reduziert Halluzinationssicherheit, kann sie aber nicht eliminieren. Überprüfe kritische Ansprüche immer.'
+                            },
+                            {
+                                q: 'Haben alle Modelle diese 8 Grenzen?',
+                                a: 'Ja. Sie sind strukturelle Merkmale der Transformer-Architektur. Schweregrad variiert, aber alle acht gelten universell.'
+                            },
+                            {
+                                q: 'Kann Fine-Tuning diese Grenzen eliminieren?',
+                                a: 'Nein. Fine-Tuning passt Stil und Befehlsbeachtung an, erhält aber alle acht strukturellen Grenzen.'
+                            },
+                            {
+                                q: 'Welches Modell bewältigt Grenzen am besten?',
+                                a: 'Kein Modell eliminiert Grenzen. Wähle nach Anwendungsfall: Gemini für Kontext (2M Tokens), Claude für Unsicherheitshedging.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regionaler Kontext: Grenzen nach Standort',
+                        intro: '',
+                        items: [
+                            '<strong>EU:</strong> DSGVO trifft zu — Datenschutz & Bias-Audits erforderlich',
+                            '<strong>China:</strong> Inhaltsbeschränkungen — Modelle können bestimmte Themen nicht diskutieren',
+                            '<strong>Japan:</strong> METI-Governance — Rückverfolgung & Dokumentation für regulierte Anwendungen',
+                            'Alle Regionen sehen identische 8 strukturelle Grenzen; Compliance fügt operative Einschränkungen hinzu.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Prompt Engineering um Grenzen',
+                        body: 'Verwende PromptQuorum, um Prompts zu testen, Modelle zu vergleichen und Workarounds zu optimieren.',
+                        cta: 'Kostenlos testen',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Limitations de l\'IA — Ce que les LLMs ne peuvent pas faire',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Limitations de l\'IA\nCe que les LLMs ne peuvent pas faire',
+                        subtitle: 'Maîtrise 8 Limites Essentielles et Solutions',
+                        link: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ce que les LLMs ne peuvent fondamentalement pas faire',
+                        intro: 'Trois contraintes essentielles :',
+                        items: [
+                            '<strong>Pas d\'accès en temps réel.</strong> Les modèles sont figés au moment de l\'entraînement.',
+                            '<strong>Impossible de vérifier leurs propres résultats.</strong> Pas de recherche de vérité, seulement prédiction de tokens.',
+                            '<strong>Pas de raisonnement multi-étapes sans aide.</strong> Nécessite un prompting explicite par chaîne de pensée.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '8 Limitations en Un Coup d\'Œil',
+                        columns: ['#', 'Limitation', 'Solution Rapide'],
+                        rows: [
+                            { '#': '1', Limitation: 'Date Limite de Connaissances', 'Solution Rapide': 'Coller les faits actuels (RAG)' },
+                            { '#': '2', Limitation: 'Hallucination', 'Solution Rapide': 'Baser sur la source' },
+                            { '#': '3', Limitation: 'Pas de Raisonnement Multi-Étapes', 'Solution Rapide': 'Utiliser la chaîne de pensée' },
+                            { '#': '4', Limitation: 'Limites de Fenêtres Contextuelles', 'Solution Rapide': 'Résumer ou diviser' },
+                            { '#': '5', Limitation: 'Pas de Mémoire', 'Solution Rapide': 'Injection de mémoire au niveau app' },
+                            { '#': '6', Limitation: 'Pas d\'Actions Réelles', 'Solution Rapide': 'Utilisation d\'outils / appels de fonction' },
+                            { '#': '7', Limitation: 'Biais des Données d\'Entraînement', 'Solution Rapide': 'Fournir du contexte' },
+                            { '#': '8', Limitation: 'Impossible d\'Auto-Vérification', 'Solution Rapide': 'Validation externe' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Limitations 1 & 2 : Connaissance et Hallucinations',
+                        intro: '',
+                        items: [
+                            '<strong>Limite de Connaissance :</strong> Les modèles sont entraînés sur un corpus statique avec une date d\'arrêt. Aucun accès aux événements actuels.',
+                            '<strong>Hallucination :</strong> Parce que les modèles prédisent du texte (pas la vérité), ils génèrent avec assurance des faits plausibles mais faux lorsque le signal d\'entraînement est maigre.'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'L\'Hallucination est Structurelle',
+                        line1: '<strong>Pas un bug.</strong> Inhérent à la prédiction de tokens.',
+                        line2: '<strong>Solution :</strong> Baser les prompts sur du matériel source explicite.',
+                        tip: '💡 La source réduit mais n\'élimine pas le risque d\'hallucination.'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Limitations 3–5 : Raisonnement, Contexte, Mémoire',
+                        intro: '',
+                        items: [
+                            '<strong>Pas de Raisonnement Multi-Étapes Fiable :</strong> Les modèles manquent de mémoire de travail entre les prédictions de tokens. Solution : Chaîne de pensée.',
+                            '<strong>Limites de Fenêtre Contextuelle :</strong> GPT-4o 128K, Claude 200K, Gemini 2,5M tokens. Solution : Résumer ou récupérer.',
+                            '<strong>Pas de Mémoire Persistante :</strong> Chaque conversation commence vierge. Solution : Injection de mémoire au niveau app (BD vectorielle, résumés).'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Limitations 6–8 : Actions, Biais, Auto-Vérification',
+                        intro: '',
+                        items: [
+                            '<strong>Impossible de Prendre des Actions Réelles :</strong> Sortie texte uniquement. Solution : Utilisation d\'outils / appels de fonction dans GPT-4o, Claude, Gemini.',
+                            '<strong>Biais des Données d\'Entraînement :</strong> Principalement en anglais, occidental, pré-2025. Solution : Fournir du contexte spécifique au domaine.',
+                            '<strong>Impossible d\'Auto-Vérification :</strong> Pas d\'accès à la vérité fondamentale. Impossible de vérifier ses propres affirmations. Solution : Validation humaine externe.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Limitations IA : Cause Racine & Contournement',
+                        columns: ['Limitation', 'Cause Racine', 'Contournement'],
+                        rows: [
+                            { Limitation: 'Limite de Connaissance', 'Cause Racine': 'Données d\'entraînement statiques', Contournement: 'RAG / coller des faits' },
+                            { Limitation: 'Hallucination', 'Cause Racine': 'Prédiction de tokens, non recherche', Contournement: 'Baser + valider' },
+                            { Limitation: 'Pas de Raisonnement', 'Cause Racine': 'Architecture sans état', Contournement: 'Chaîne de pensée' },
+                            { Limitation: 'Limites de Mémoire', 'Cause Racine': 'Limite d\'attention Transformer', Contournement: 'Chunking / RAG' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Quand Ces Limitations Ne Comptent Pas',
+                        intro: 'Cas nuancés où les contournements sont moins critiques :',
+                        items: [
+                            'Écriture créative (risque d\'hallucination moins élevé)',
+                            'Résumé de documents fournis (limite de connaissance non pertinente)',
+                            'Brainstorming (lacunes de raisonnement moins critiques)',
+                            'Tâches spécifiques au domaine où le biais est minimal'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Étapes pour Concevoir des Prompts pour Limitations',
+                        intro: '',
+                        items: [
+                            '<strong>1. Identifier</strong> quelle limitation s\'applique à ta tâche.',
+                            '<strong>2. Baser</strong> sur des faits explicites, des documents ou du contexte.',
+                            '<strong>3. Utiliser la chaîne de pensée</strong> pour les tâches de raisonnement.',
+                            '<strong>4. Instruire</strong> le modèle à signaler l\'incertitude.',
+                            '<strong>5. Valider</strong> les résultats contre les sources primaires avant de publier.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Questions Clés sur les Limites des LLMs',
+                        faqs: [
+                            {
+                                q: 'Puis-je corriger les hallucinations avec un meilleur prompting ?',
+                                a: 'Partiellement. Baser réduit la confiance en hallucination, mais ne peut l\'éliminer. Toujours valider les affirmations critiques.'
+                            },
+                            {
+                                q: 'Tous les modèles ont-ils ces 8 mêmes limitations ?',
+                                a: 'Oui. Ce sont des propriétés structurelles de l\'architecture Transformer. La sévérité varie, mais toutes les huit s\'appliquent universellement.'
+                            },
+                            {
+                                q: 'Le fine-tuning peut-il éliminer ces limites ?',
+                                a: 'Non. Le fine-tuning ajuste le style et l\'obéissance aux instructions mais préserve les huit limitations structurelles.'
+                            },
+                            {
+                                q: 'Quel modèle gère le mieux les limitations ?',
+                                a: 'Aucun modèle n\'élimine les limitations. Choisir par cas d\'usage : Gemini pour contexte (2M tokens), Claude pour haie d\'incertitude.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Contexte Régional : Les Limitations Varient par Zone',
+                        intro: '',
+                        items: [
+                            '<strong>UE :</strong> RGPD s\'applique — résidence de données et audits de biais requis',
+                            '<strong>Chine :</strong> Restrictions de contenu — les modèles ne peuvent pas discuter de certains sujets',
+                            '<strong>Japon :</strong> Gouvernance METI — traçabilité & documentation pour les usages réglementés',
+                            'Toutes les régions font face aux mêmes 8 limitations structurelles ; la conformité ajoute des contraintes opérationnelles.'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Prompt Engineering Autour des Limitations',
+                        body: 'Utilise PromptQuorum pour tester des prompts, comparer des modèles et optimiser les contournements.',
+                        cta: 'Essayer Gratuitement',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: 'AI制限 — LLMができないこと',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'AI制限\nLLMができないこと',
+                        subtitle: '8つのハードリミットと実用的な回避策を理解する',
+                        link: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LLMが基本的にできないこと',
+                        intro: '3つの中核的な制約：',
+                        items: [
+                            '<strong>リアルタイムデータアクセスなし。</strong> モデルはトレーニング時に固定されている。',
+                            '<strong>独自の出力を検証できない。</strong> 真実の参照ではなく、トークンの予測のみ。',
+                            '<strong>スキャフォールディングのない多段階推論なし。</strong> 明示的なチェーンオブソートプロンプティングが必要。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '8つの制限一目で',
+                        columns: ['#', '制限', 'クイック回避策'],
+                        rows: [
+                            { '#': '1', '制限': 'ナレッジカットオフ', 'クイック回避策': 'プロンプトに現在のファクトを貼り付け (RAG)' },
+                            { '#': '2', 制限: 'ハルシネーション', 'クイック回避策': 'ソース資料で根拠付け' },
+                            { '#': '3', 制限: '多段階推論なし', 'クイック回避策': 'チェーンオブソートを使用' },
+                            { '#': '4', 制限: 'コンテキストウィンドウ制限', 'クイック回避策': '入力を要約または分割' },
+                            { '#': '5', 制限: 'メモリなし', 'クイック回避策': 'アプリ層メモリ注入' },
+                            { '#': '6', 制限: '実際のアクション不可', 'クイック回避策': 'ツール使用/関数呼び出し' },
+                            { '#': '7', 制限: 'トレーニングデータバイアス', 'クイック回避策': 'コンテキスト提供' },
+                            { '#': '8', 制限: '自己検証不可', 'クイック回避策': '外部検証' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '制限1と2：知識とハルシネーション',
+                        intro: '',
+                        items: [
+                            '<strong>ナレッジカットオフ：</strong> モデルは終了日を持つ静的コーパスでトレーニングされている。現在のイベントへのアクセスはない。',
+                            '<strong>ハルシネーション：</strong> モデルはテキスト（真実ではなく）を予測するため、トレーニングシグナルが不十分な場合、もっともらしく見える偽の事実を自信を持って生成する。'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'ハルシネーションは構造的',
+                        line1: '<strong>バグではない。</strong> トークン予測に本来的。',
+                        line2: '<strong>回避策：</strong> プロンプトを明示的なソース資料で根拠付け。',
+                        tip: '💡 根拠付けはハルシネーションリスクを軽減するが、排除はしない。'
+                    },
+                    {
+                        type: 'list',
+                        h2: '制限3～5：推論、コンテキスト、メモリ',
+                        intro: '',
+                        items: [
+                            '<strong>信頼できる多段階推論なし：</strong> モデルはトークン予測間の作業メモリを欠いている。回避策：チェーンオブソート。',
+                            '<strong>コンテキストウィンドウキャップ：</strong> GPT-4o 128K、Claude 200K、Gemini 2.5M トークン。回避策：要約または取得。',
+                            '<strong>永続的メモリなし：</strong> 各会話は白紙から始まる。回避策：アプリ層メモリ注入（ベクトルDB、要約）。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '制限6～8：アクション、バイアス、自己検証',
+                        intro: '',
+                        items: [
+                            '<strong>実際のアクションを実行できない：</strong> テキスト出力のみ。回避策：GPT-4o、Claude、Geminiでのツール使用/関数呼び出し。',
+                            '<strong>トレーニングデータバイアス：</strong> 主に英語、西洋、2025年以前のコンテンツ。回避策：ドメイン固有のコンテキストを明示的に提供。',
+                            '<strong>自己検証できない：</strong> 基本的な真実へのアクセスなし。独自の主張を事実確認できない。回避策：外部の人間による検証。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'AI制限：根本原因と回避策',
+                        columns: ['制限', '根本原因', '回避策'],
+                        rows: [
+                            { 制限: 'ナレッジカットオフ', 根本原因: '静的トレーニングデータ', 回避策: 'RAG/ファクト挿入' },
+                            { 制限: 'ハルシネーション', 根本原因: 'トークン予測、検索ではない', 回避策: '根拠付け+検証' },
+                            { 制限: '推論なし', 根本原因: 'ステートレスアーキテクチャ', 回避策: 'チェーンオブソート' },
+                            { 制限: 'メモリ制限', 根本原因: 'Transformerアテンションキャップ', 回避策: 'チャンキング/RAG' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'これらの制限が関係ない場合',
+                        intro: '回避策が不十分な微妙なケース：',
+                        items: [
+                            'クリエイティブライティング（ハルシネーションリスク低い）',
+                            '提供ドキュメントの要約（ナレッジカットオフ関連なし）',
+                            'ブレインストーミング（推論ギャップ不可欠でない）',
+                            'バイアスが最小限のドメイン固有タスク'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '制限用のプロンプト設計への5ステップ',
+                        intro: '',
+                        items: [
+                            '<strong>1. 識別</strong> あなたのタスクにどの制限が適用されるか。',
+                            '<strong>2. 根拠付け</strong> 明示的なファクト、ドキュメント、またはコンテキスト。',
+                            '<strong>3. 推論タスクにチェーンオブソートを使用</strong>。',
+                            '<strong>4. 指示</strong> モデルに不確実性を信号してもらう。',
+                            '<strong>5. 検証</strong> 公開前に一次ソースに対して出力を検証。'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'LLM制限に関する重要な質問',
+                        faqs: [
+                            {
+                                q: 'より良いプロンプティングでハルシネーションを修正できますか？',
+                                a: '部分的に。根拠付けはハルシネーション信頼性を軽減するが、排除はできない。常に重要な主張を検証。'
+                            },
+                            {
+                                q: 'すべてのモデルにこれら8つの制限がありますか？',
+                                a: 'はい。それはTransformerアーキテクチャに構造的です。重大度は異なりますが、8つすべてが普遍的に適用されます。'
+                            },
+                            {
+                                q: 'ファインチューニングでこれらの制限を削除できますか？',
+                                a: 'いいえ。ファインチューニングはスタイルと命令追従を調整しますが、8つの構造的制限すべてを保持します。'
+                            },
+                            {
+                                q: 'どのモデルが制限を最も適切に処理しますか？',
+                                a: 'どのモデルも制限を排除しない。ユースケース別に選択：Geminiはコンテキスト用（2Mトークン）、Claudeは不確実性へッジ用。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地域コンテキスト：場所による制限の違い',
+                        intro: '',
+                        items: [
+                            '<strong>EU：</strong> GDPR適用 — データレジデンス＆バイアス監査必須',
+                            '<strong>中国：</strong> コンテンツ制限 — モデルは特定のトピックを論じることができない',
+                            '<strong>日本：</strong> METI ガバナンス — 規制対象用途の追跡可能性＆ドキュメント必須',
+                            'すべての地域が同じ8つの構造的制限に直面；コンプライアンスは運用上の制約を追加。'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '制限の周りのプロンプトエンジニアリング',
+                        body: 'PromptQuorumを使用してプロンプトをテスト、モデルを比較、回避策を最適化。',
+                        cta: '無料で試す',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: 'AI 局限性 — 大语言模型无法做什么',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'AI 局限性\n大语言模型无法做什么',
+                        subtitle: '理解 8 个硬性限制及实用解决方案',
+                        link: 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'LLM 基本上无法做什么',
+                        intro: '三个核心约束：',
+                        items: [
+                            '<strong>无实时数据访问。</strong> 模型在训练时被冻结。',
+                            '<strong>无法验证自己的输出。</strong> 没有真实查找，只有令牌预测。',
+                            '<strong>没有支架的多步推理。</strong> 需要明确的思维链提示。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '8 个限制一览',
+                        columns: ['#', '限制', '快速解决方案'],
+                        rows: [
+                            { '#': '1', 限制: '知识截止', 快速解决方案: '粘贴当前事实 (RAG)' },
+                            { '#': '2', 限制: '幻觉', 快速解决方案: '用源材料支撑' },
+                            { '#': '3', 限制: '无多步推理', 快速解决方案: '使用思维链' },
+                            { '#': '4', 限制: '上下文窗口限制', 快速解决方案: '总结或分割输入' },
+                            { '#': '5', 限制: '无记忆', 快速解决方案: '应用层记忆注入' },
+                            { '#': '6', 限制: '无实际行动', 快速解决方案: '工具使用/函数调用' },
+                            { '#': '7', 限制: '训练数据偏差', 快速解决方案: '提供领域背景' },
+                            { '#': '8', 限制: '无法自我验证', 快速解决方案: '外部验证' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '限制 1 和 2：知识和幻觉',
+                        intro: '',
+                        items: [
+                            '<strong>知识截止：</strong> 模型在具有结束日期的静态语料库上进行训练。无法访问当前事件。',
+                            '<strong>幻觉：</strong> 因为模型预测文本（而非真实），当训练信号稀疏时，它们自信地生成看似合理的虚假事实。'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: '幻觉是结构性的',
+                        line1: '<strong>不是错误。</strong> 令牌预测的固有特性。',
+                        line2: '<strong>解决方案：</strong> 用明确的源材料支撑提示。',
+                        tip: '💡 支撑减少但不能消除幻觉风险。'
+                    },
+                    {
+                        type: 'list',
+                        h2: '限制 3-5：推理、上下文、记忆',
+                        intro: '',
+                        items: [
+                            '<strong>无可靠的多步推理：</strong> 模型在令牌预测之间缺乏工作记忆。解决方案：思维链。',
+                            '<strong>上下文窗口限制：</strong> GPT-4o 128K、Claude 200K、Gemini 2.5M 个令牌。解决方案：总结或检索。',
+                            '<strong>无持久记忆：</strong> 每次对话从零开始。解决方案：应用层记忆注入（向量数据库、摘要）。'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '限制 6-8：行动、偏差、自我验证',
+                        intro: '',
+                        items: [
+                            '<strong>无法采取实际行动：</strong> 仅文本输出。解决方案：GPT-4o、Claude、Gemini 中的工具使用/函数调用。',
+                            '<strong>训练数据偏差：</strong> 主要是英文、西方、2025 年前的内容。解决方案：明确提供特定领域背景。',
+                            '<strong>无法自我验证：</strong> 无法访问基本真实。无法事实检查自己的陈述。解决方案：外部人工验证。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'AI 限制：根本原因和解决方案',
+                        columns: ['限制', '根本原因', '解决方案'],
+                        rows: [
+                            { 限制: '知识截止', 根本原因: '静态训练数据', 解决方案: 'RAG/粘贴事实' },
+                            { 限制: '幻觉', 根本原因: '令牌预测，不是查找', 解决方案: '支撑+验证' },
+                            { 限制: '无推理', 根本原因: '无状态架构', 解决方案: '思维链' },
+                            { 限制: '记忆限制', 根本原因: 'Transformer 注意力上限', 解决方案: '分块/RAG' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '这些限制何时不重要',
+                        intro: '解决方案不太关键的细微情况：',
+                        items: [
+                            '创意写作（幻觉风险较低）',
+                            '总结提供的文档（知识截止无关）',
+                            '头脑风暴（推理差距不重要）',
+                            '偏差最少的特定领域任务'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '为限制设计提示的 5 个步骤',
+                        intro: '',
+                        items: [
+                            '<strong>1. 识别</strong> 哪些限制适用于你的任务。',
+                            '<strong>2. 支撑</strong> 用明确的事实、文档或背景。',
+                            '<strong>3. 为推理任务使用思维链</strong>。',
+                            '<strong>4. 指示</strong> 模型表示不确定性。',
+                            '<strong>5. 验证</strong> 发布前针对主要来源验证输出。'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'LLM 限制的关键问题',
+                        faqs: [
+                            {
+                                q: '我能通过更好的提示来修复幻觉吗？',
+                                a: '部分可以。支撑减少幻觉信心，但不能消除。始终验证关键陈述。'
+                            },
+                            {
+                                q: '所有模型都有这 8 个限制吗？',
+                                a: '是的。它们是 Transformer 架构的结构特性。严重程度不同，但所有 8 个都普遍适用。'
+                            },
+                            {
+                                q: '微调可以消除这些限制吗？',
+                                a: '否。微调调整风格和指令遵循，但保留所有 8 个结构性限制。'
+                            },
+                            {
+                                q: '哪个模型最能处理限制？',
+                                a: '没有模型消除限制。按用例选择：Gemini 用于上下文（2M 个令牌），Claude 用于不确定性对冲。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地区背景：按位置划分的限制',
+                        intro: '',
+                        items: [
+                            '<strong>欧盟：</strong> GDPR 适用 — 需要数据驻留和偏差审计',
+                            '<strong>中国：</strong> 内容限制 — 模型无法讨论某些话题',
+                            '<strong>日本：</strong> METI 治理 — 受管制用途需要可追溯性和文件',
+                            '所有地区都面临相同的 8 个结构性限制；合规增加运营约束。'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '围绕限制的提示工程',
+                        body: '使用 PromptQuorum 测试提示、比较模型和优化解决方案。',
+                        cta: '免费尝试',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = 'https://www.promptquorum.com/prompt-engineering/ai-limitations-what-llms-cant-do?lang=' + lang;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+            
+            switch (slide.type) {
+                case 'title':
+                    html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" style="width: 56px; height: 56px; margin-bottom: 20px;" />
+                        <h1>${slide.h1}</h1>
+                        <p style="margin-top: 12px; color: #6750a4; font-weight: 500;">${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;"><a href="${slide.link}" style="color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4;">${slide.link.split('/').pop().replace(/-/g, ' ')}</a></p>
+                        ${footerLink}`;
+                    break;
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p>${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1.1em; margin-top: 20px; max-width: 700px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>' + footerLink;
+                    break;
+                case 'table':
+                    html = `<h2>${slide.h2}</h2><table style="margin-top: 20px;"><tr>`;
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col] || ''}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>' + footerLink;
+                    break;
+                case 'comparison':
+                    html = `<h2>${slide.h2}</h2><p style="margin-top: 40px; font-size: 1.4em;">${slide.line1}</p>
+                        <p style="font-size: 1.4em;">${slide.line2}</p>
+                        <p style="margin-top: 40px; font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+                        ${footerLink}`;
+                    break;
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 20px; text-align: left; max-width: 700px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px;">A: ${faq.a}</p></div>`;
+                    });
+                    html += footerLink;
+                    break;
+                case 'cta':
+                    html = `<h2>${slide.h2}</h2><p>${slide.body}</p>
+                        <a href="${slide.href}" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none;">${slide.cta}</a>
+                        ${footerLink}`;
+                    break;
+            }
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        if (params.get('print') === '1') {
+            window.addEventListener('load', () => {
+                window.print();
+            });
+        }
+
+        showSlide(0);
+    </script>
+</body>
+</html>
