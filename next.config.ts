@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/sitemap.xml',
+        source: '/:path*',
         headers: [
           {
             key: 'Access-Control-Allow-Origin',
@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Access-Control-Allow-Methods',
-            value: 'GET, OPTIONS',
+            value: 'GET, HEAD, OPTIONS',
           },
           {
             key: 'Access-Control-Allow-Headers',
@@ -28,7 +28,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Cache-Control',
-            value: 'public, max-age=3600',
+            value: 'public, max-age=0, must-revalidate',
           },
         ],
       },
