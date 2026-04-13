@@ -1611,7 +1611,7 @@
   function label(path) {
     if (path === '/') return 'Home  /';
     return path.split('/').filter(Boolean)
-      .map(s => s.replace(/-/g, ' ').replace(/\w/g, c => c.toUpperCase()))
+      .map(s => s.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()))
       .join('  ›  ');
   }
 
@@ -1726,7 +1726,7 @@
   function checkMarketingLanguage(doc) {
     const text = doc.body.textContent.toLowerCase();
     const badWords = ['best', 'leading', 'revolutionary', 'cutting-edge', 'seamless', 'powerful'];
-    const found = badWords.filter(w => new RegExp(`\b${w}\b`).test(text));
+    const found = badWords.filter(w => new RegExp(`\\b${w}\\b`).test(text));
     return {
       pass: found.length === 0,
       label: 'No marketing language',
@@ -3412,13 +3412,11 @@ Return ONLY JSON: {"proposed": "text", "reasoning": "explanation", "confidence":
 
         if (titleField && !title) {
           const fieldValue = titleField.querySelector('.field-value')?.textContent;
-          if (fieldValue) title = fieldValue.split('
-')[0].trim();
+          if (fieldValue) title = fieldValue.split('\n')[0].trim();
         }
         if (descField && !desc) {
           const fieldValue = descField.querySelector('.field-value')?.textContent;
-          if (fieldValue) desc = fieldValue.split('
-')[0].trim();
+          if (fieldValue) desc = fieldValue.split('\n')[0].trim();
         }
       }
 
@@ -3860,13 +3858,10 @@ Return ONLY JSON: {"proposed": "text", "reasoning": "explanation", "confidence":
       const sha = metaData.sha;
 
       // Commit changes
-      const commitMsg = `SEO: Update metadata for ${label(path)}
-
-${Object.entries(editedFields)
+      const commitMsg = `SEO: Update metadata for ${label(path)}\n\n${Object.entries(editedFields)
         .filter(([,f]) => f.hasChanges)
         .map(([name, f]) => `- ${name}: "${f.edited}"`)
-        .join('
-')}`;
+        .join('\n')}`;
 
       const commitRes = await fetch(fileUrl, {
         method: 'PUT',
@@ -3951,10 +3946,7 @@ ${Object.entries(editedFields)
       return;
     }
 
-    if (!confirm(`Push metadata updates to GitHub?
-
-Title: ${newTitle}
-Description: ${newDescription}`)) {
+    if (!confirm(`Push metadata updates to GitHub?\n\nTitle: ${newTitle}\nDescription: ${newDescription}`)) {
       return;
     }
 
@@ -3989,7 +3981,7 @@ Description: ${newDescription}`)) {
       const descKey = titleKey.replace('MetaTitle', 'MetaDescription').replace('Title', 'Description');
 
       // Escape special regex characters in the new values
-      const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\]/g, '\$&');
+      const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
       // Fetch translations.ts from GitHub
       const fileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/translations.ts`;
@@ -4011,8 +4003,8 @@ Description: ${newDescription}`)) {
 
       // Update metadata in file using regex replacement (TypeScript format)
       // Pattern: titleKey: "old value" (handles TypeScript format with or without trailing comma)
-      const titlePatternStr = `${titleKey}:\s*"[^"]*"`;
-      const descPatternStr = `${descKey}:\s*"[^"]*"`;
+      const titlePatternStr = `${titleKey}:\\s*"[^"]*"`;
+      const descPatternStr = `${descKey}:\\s*"[^"]*"`;
 
       const titlePattern = new RegExp(titlePatternStr);
       const descPattern = new RegExp(descPatternStr);
@@ -4042,10 +4034,7 @@ Description: ${newDescription}`)) {
       const sha = metaData.sha;
 
       // Commit changes
-      const commitMsg = `SEO: Update metadata for ${currentPagePath || 'home'}
-
-- ${titleKey}: "${newTitle}"
-- ${descKey}: "${newDescription}"`;
+      const commitMsg = `SEO: Update metadata for ${currentPagePath || 'home'}\n\n- ${titleKey}: "${newTitle}"\n- ${descKey}: "${newDescription}"`;
 
       const commitRes = await fetch(fileUrl, {
         method: 'PUT',
@@ -4705,6 +4694,165 @@ Optimization Type: \${optionType.toUpperCase()}
     }
   }
 
+  // Generate a copyable format for manual VS Code implementation
+  function generateManualUpdateGuide(pagePath, edits) {
+    const path = pagePath.includes('://') ? new URL(pagePath).pathname : pagePath;
+    const segments = path.split('/').filter(s => s);
+    const hub = segments[0];
+    const slug = segments.slice(1).join('-');
+
+    let guide = `╔════════════════════════════════════════════════════════════════╗
+║  MANUAL UPDATE GUIDE FOR VS CODE                                   ║
+╚════════════════════════════════════════════════════════════════╝
+
+📄 FILE: src/lib/${hub}/content.ts
+🏷️  ARTICLE: '${slug}'
+🌍 LANGUAGE: en
+
+📝 CHANGES TO APPLY:
+─────────────────────────────────────────────────────────────────\n`;
+
+    for (const [fieldName, fieldData] of Object.entries(edits)) {
+      const oldVal = fieldData.original || '(empty)';
+      const newVal = fieldData.edited || '(empty)';
+      guide += `
+${fieldName}:
+  OLD: "${oldVal}"
+  NEW: "${newVal}"
+─────────────────────────────────────────────────────────────────\n`;
+    }
+
+    guide += `
+📌 STEPS:
+1. Open src/lib/${hub}/content.ts in VS Code
+2. Find the article: '${slug}': { en: { ... } }
+3. Update the 'en' object with the new values above
+4. Save the file
+5. Push to GitHub with commit message:
+   "chore: Update ${slug} metadata"
+
+💡 FIELD LOCATIONS IN content.ts:
+The fields are typically in this structure:
+
+'${slug}': {
+  en: {
+    seoTitle: "...",           // Update this
+    metaDescription: "...",    // Update this
+    ogTitle: "...",            // Update this
+    ogDescription: "...",      // Update this
+    twitterTitle: "...",       // Update this
+    twitterDescription: "...", // Update this
+    ...other fields...
+  }
+}
+
+✅ After updating and pushing to GitHub:
+- Changes will auto-deploy to the live website via Vercel
+- Go to "Verify Push" tab to confirm changes appear`;
+
+    return guide;
+  }
+
+  // Show copyable guide in a dialog
+  function showManualUpdateDialog(pagePath, edits) {
+    const guide = generateManualUpdateGuide(pagePath, edits);
+
+    // Create a modal dialog with copy button
+    const dialogDiv = document.createElement('div');
+    dialogDiv.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      font-family: 'Courier New', monospace;
+    `;
+
+    const contentDiv = document.createElement('div');
+    contentDiv.style.cssText = `
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      max-width: 800px;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    `;
+
+    const preDiv = document.createElement('pre');
+    preDiv.style.cssText = `
+      background: var(--bg-alt);
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 12px;
+      line-height: 1.5;
+      margin: 0 0 16px 0;
+    `;
+    preDiv.textContent = guide;
+
+    const buttonsDiv = document.createElement('div');
+    buttonsDiv.style.cssText = `
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+    `;
+
+    const copyBtn = document.createElement('button');
+    copyBtn.textContent = '📋 Copy to Clipboard';
+    copyBtn.style.cssText = `
+      padding: 12px 20px;
+      background: var(--primary, #007bff);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+    `;
+    copyBtn.onclick = () => {
+      navigator.clipboard.writeText(guide).then(() => {
+        copyBtn.textContent = '✅ Copied!';
+        setTimeout(() => {
+          copyBtn.textContent = '📋 Copy to Clipboard';
+        }, 2000);
+      }).catch(() => {
+        alert('Failed to copy. Please try again.');
+      });
+    };
+
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = 'Close';
+    closeBtn.style.cssText = `
+      padding: 12px 20px;
+      background: var(--border);
+      color: var(--text);
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+    `;
+    closeBtn.onclick = () => {
+      dialogDiv.remove();
+    };
+
+    buttonsDiv.appendChild(copyBtn);
+    buttonsDiv.appendChild(closeBtn);
+
+    contentDiv.appendChild(preDiv);
+    contentDiv.appendChild(buttonsDiv);
+    dialogDiv.appendChild(contentDiv);
+    document.body.appendChild(dialogDiv);
+  }
+
   async function pushSelectedChanges() {
     const selectedCheckboxes = Array.from(document.querySelectorAll('.pending-edit-checkbox:checked'));
 
@@ -4763,11 +4911,7 @@ Optimization Type: \${optionType.toUpperCase()}
 
       // Show success dialog
       const pageList = selectedPages.map(p => label(p)).join(', ');
-      alert(`✅ Successfully pushed ${selectedPages.length} page${selectedPages.length !== 1 ? 's' : ''} to GitHub!
-
-${pageList}
-
-📋 Go to "Verify Push" to confirm changes appear on the live website.`);
+      alert(`✅ Successfully pushed ${selectedPages.length} page${selectedPages.length !== 1 ? 's' : ''} to GitHub!\n\n${pageList}\n\n📋 Go to "Verify Push" to confirm changes appear on the live website.`);
 
       setStatus('ok', `✅ Pushed ${selectedPages.length} page${selectedPages.length !== 1 ? 's' : ''} to GitHub`);
       updatePendingChangesIndicator();
@@ -4776,11 +4920,74 @@ ${pageList}
     } catch (err) {
       console.error('❌ Push failed:', err);
       setStatus('err', `Push failed: ${err.message}`);
-      alert(`❌ Push failed!
 
-${err.message}
+      // Show manual update option for failed pushes
+      const firstPagePath = selectedPages[0];
+      const storageKey = `seo_edits_${firstPagePath}`;
+      const storageData = localStorage.getItem(storageKey);
 
-Please check your GitHub credentials and try again.`);
+      if (storageData) {
+        const data = JSON.parse(storageData);
+
+        // Show dialog with copy-to-clipboard option
+        const dialogDiv = document.createElement('div');
+        dialogDiv.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0,0,0,0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10000;
+        `;
+
+        const contentDiv = document.createElement('div');
+        contentDiv.style.cssText = `
+          background: var(--bg);
+          color: var(--text);
+          border: 2px solid #d32f2f;
+          border-radius: 12px;
+          padding: 24px;
+          max-width: 600px;
+          box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        `;
+
+        contentDiv.innerHTML = `
+          <h2 style="margin-top: 0; color: #d32f2f;">❌ Push Failed</h2>
+          <p style="margin: 16px 0; color: var(--text-muted);">${err.message}</p>
+
+          <div style="background: var(--bg-alt); padding: 16px; border-radius: 8px; margin: 16px 0; border-left: 4px solid #d32f2f;">
+            <strong>Alternative: Manual Update in VS Code</strong>
+            <p style="margin: 8px 0 0 0; font-size: 13px;">Copy the changes below and apply them manually in VS Code</p>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 20px; justify-content: flex-end;">
+            <button id="copyGuideBtn" style="padding: 12px 20px; background: var(--primary, #1976d2); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;">
+              📋 Copy Manual Update Guide
+            </button>
+            <button id="closeBtn" style="padding: 12px 20px; background: var(--border); color: var(--text); border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;">
+              Close
+            </button>
+          </div>
+        `;
+
+        dialogDiv.appendChild(contentDiv);
+        document.body.appendChild(dialogDiv);
+
+        document.getElementById('copyGuideBtn').onclick = () => {
+          showManualUpdateDialog(firstPagePath, data.edits);
+          dialogDiv.remove();
+        };
+
+        document.getElementById('closeBtn').onclick = () => {
+          dialogDiv.remove();
+        };
+      } else {
+        alert(`❌ Push failed!\n\n${err.message}\n\nPlease check your GitHub credentials and try again.`);
+      }
     }
   }
 
@@ -4870,8 +5077,8 @@ Please check your GitHub credentials and try again.`);
 
     // Find and update the article entry by slug
     // Look for pattern: 'slug': { en: { ... } }
-    const escapedSlug = slug.replace(/[.*+?^${}()|[\]\]/g, '\$&');
-    const slugPattern = new RegExp(`['"](${escapedSlug})['"]\s*:\s*\{`, 'g');
+    const escapedSlug = slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const slugPattern = new RegExp(`['"](${escapedSlug})['"]\\s*:\\s*\\{`, 'g');
 
     if (!slugPattern.test(fileContent)) {
       throw new Error(`Article slug "${slug}" not found in ${contentFilePath}`);
@@ -4890,7 +5097,7 @@ Please check your GitHub credentials and try again.`);
     for (const [editKey, fieldName] of Object.entries(fieldMap)) {
       if (edits[editKey]) {
         // Find the article block for this slug using improved brace counting with string awareness
-        const slugPattern2 = new RegExp(`['"](${escapedSlug})['"]\s*:\s*\{`);
+        const slugPattern2 = new RegExp(`['"](${escapedSlug})['"]\\s*:\\s*\\{`);
         const match2 = fileContent.match(slugPattern2);
 
         if (!match2) {
@@ -4912,7 +5119,7 @@ Please check your GitHub credentials and try again.`);
           const char = fileContent[articleEnd];
 
           // Handle string boundaries (with escape char awareness)
-          if ((char === '"' || char === "'") && prevChar !== '\') {
+          if ((char === '"' || char === "'") && prevChar !== '\\') {
             if (!inString) {
               inString = true;
               stringChar = char;
@@ -4935,7 +5142,7 @@ Please check your GitHub credentials and try again.`);
         const articleBlock = fileContent.substring(articleStart, articleEnd);
 
         // Find and replace the field within this block
-        const fieldPattern = new RegExp(`(${fieldName}\s*:\s*)['"](.*?)['"]`, 'g');
+        const fieldPattern = new RegExp(`(${fieldName}\\s*:\\s*)['"](.*?)['"]`, 'g');
         const updatedBlock = articleBlock.replace(fieldPattern, `$1"${edits[editKey].edited}"`);
 
         // Replace the block back in the file
@@ -4945,9 +5152,7 @@ Please check your GitHub credentials and try again.`);
 
     // Commit changes
     const changedFields = Object.keys(edits).map(f => `${f}: "${edits[f].edited}"`).join(', ');
-    const commitMsg = `SEO: Update metadata for article: ${slug}
-
-${changedFields}`;
+    const commitMsg = `SEO: Update metadata for article: ${slug}\n\n${changedFields}`;
 
     console.log('🔄 Pushing to GitHub:', githubApiUrl);
     console.log('📦 Commit message:', commitMsg);
@@ -5055,20 +5260,18 @@ ${changedFields}`;
 
     // Update only the fields that were edited
     if (edits.seoTitle) {
-      const titlePattern = new RegExp(`${titleKey}:\s*"[^"]*"`);
+      const titlePattern = new RegExp(`${titleKey}:\\s*"[^"]*"`);
       fileContent = fileContent.replace(titlePattern, `${titleKey}: "${edits.seoTitle.edited}"`);
     }
 
     if (edits.metaDescription) {
-      const descPattern = new RegExp(`${descKey}:\s*"[^"]*"`);
+      const descPattern = new RegExp(`${descKey}:\\s*"[^"]*"`);
       fileContent = fileContent.replace(descPattern, `${descKey}: "${edits.metaDescription.edited}"`);
     }
 
     // Commit changes via GitHub API
     const changedFields = Object.keys(edits).map(f => `${f}: "${edits[f].edited}"`).join(', ');
-    const commitMsg = `SEO: Update metadata for ${pagePath || 'home'}
-
-${changedFields}`;
+    const commitMsg = `SEO: Update metadata for ${pagePath || 'home'}\n\n${changedFields}`;
 
     console.log('🔄 Pushing to GitHub:', githubApiUrl);
     console.log('📦 Commit message:', commitMsg);
@@ -5593,28 +5796,16 @@ ${changedFields}`;
 
     // Show warnings for invalid/duplicate files
     if (invalidFiles.length > 0) {
-      const warning = invalidFiles.join('
-  • ');
-      console.warn(`⚠️ ${invalidFiles.length} file(s) were skipped:
-  • ${warning}`);
+      const warning = invalidFiles.join('\n  • ');
+      console.warn(`⚠️ ${invalidFiles.length} file(s) were skipped:\n  • ${warning}`);
     }
 
     if (csvData.length === 0) {
       let message = '⚠️ Upload failed!';
       if (duplicateFound) {
-        message = `⚠️ Duplicate upload detected!
-
-These files have already been uploaded with identical content:
-  • ${duplicateFiles.join('
-  • ')}
-
-Note: Files with the same name but different dates/content will be accepted.`;
+        message = `⚠️ Duplicate upload detected!\n\nThese files have already been uploaded with identical content:\n  • ${duplicateFiles.join('\n  • ')}\n\nNote: Files with the same name but different dates/content will be accepted.`;
       } else if (invalidFiles.length > 0) {
-        message = `⚠️ No valid CSV files found!
-
-Issues found:
-  • ${invalidFiles.join('
-  • ')}`;
+        message = `⚠️ No valid CSV files found!\n\nIssues found:\n  • ${invalidFiles.join('\n  • ')}`;
       } else {
         message = '⚠️ No CSV files selected. Please select valid Google Search Console CSV exports.';
       }
@@ -5658,32 +5849,19 @@ Issues found:
       const gscCount = gscFiles.length;
       const analyticsCount = analyticsFiles.length;
 
-      let successMsg = `✓ Upload successful!
-
-${csvData.length} CSV file(s) with ${totalRecords} total records
-`;
+      let successMsg = `✓ Upload successful!\n\n${csvData.length} CSV file(s) with ${totalRecords} total records\n`;
 
       // Detailed breakdown
       csvData.forEach(f => {
         const type = f.format === 'gsc' ? '(Google Search)' : '(Analytics)';
-        successMsg += `
-  • ${f.file}
-    ${f.rows.length} records ${type}`;
+        successMsg += `\n  • ${f.file}\n    ${f.rows.length} records ${type}`;
       });
 
       if (duplicateFound) {
-        successMsg += `
-
-⚠️ ${duplicateFiles.length} duplicate file(s) skipped:
-  • ${duplicateFiles.join('
-  • ')}`;
+        successMsg += `\n\n⚠️ ${duplicateFiles.length} duplicate file(s) skipped:\n  • ${duplicateFiles.join('\n  • ')}`;
       }
       if (invalidFiles.length > 0) {
-        successMsg += `
-
-⚠️ ${invalidFiles.length} file(s) had issues:
-  • ${invalidFiles.join('
-  • ')}`;
+        successMsg += `\n\n⚠️ ${invalidFiles.length} file(s) had issues:\n  • ${invalidFiles.join('\n  • ')}`;
       }
 
       alert(successMsg);
@@ -5691,10 +5869,7 @@ ${csvData.length} CSV file(s) with ${totalRecords} total records
     } catch (err) {
       console.error('❌ Database error:', err);
       displayAnalyticsData(csvData);
-      alert(`❌ Database Error
-
-Data was parsed but not saved.
-${err.message}`);
+      alert(`❌ Database Error\n\nData was parsed but not saved.\n${err.message}`);
     }
   }
 
@@ -5722,8 +5897,7 @@ ${err.message}`);
         // End of field
         currentRow.push(currentField.trim());
         currentField = '';
-      } else if ((char === '
-' || char === '') && !insideQuotes) {
+      } else if ((char === '\n' || char === '\r') && !insideQuotes) {
         // End of row
         if (currentField || currentRow.length > 0) {
           currentRow.push(currentField.trim());
@@ -5733,10 +5907,8 @@ ${err.message}`);
           currentRow = [];
           currentField = '';
         }
-        // Skip 
- combinations
-        if (char === '' && nextChar === '
-') i++;
+        // Skip \r\n combinations
+        if (char === '\r' && nextChar === '\n') i++;
       } else {
         currentField += char;
       }
@@ -5845,8 +6017,7 @@ ${err.message}`);
       } else if (char === ',' && !insideQuotes) {
         currentRow.push(currentField.trim());
         currentField = '';
-      } else if ((char === '
-' || char === '') && !insideQuotes) {
+      } else if ((char === '\n' || char === '\r') && !insideQuotes) {
         if (currentField || currentRow.length > 0) {
           currentRow.push(currentField.trim());
           if (currentRow.some(f => f)) {
@@ -5855,8 +6026,7 @@ ${err.message}`);
           currentRow = [];
           currentField = '';
         }
-        if (char === '' && nextChar === '
-') i++;
+        if (char === '\r' && nextChar === '\n') i++;
       } else {
         currentField += char;
       }
@@ -6397,8 +6567,7 @@ ${err.message}`);
   }
 
   function parseCSV(csvText) {
-    const lines = csvText.trim().split('
-');
+    const lines = csvText.trim().split('\n');
     if (lines.length < 2) return [];
 
     const headers = lines[0].split(',').map(h => h.trim());
@@ -7130,17 +7299,7 @@ REQUIREMENTS:
         localStorage.setItem(storageKey, JSON.stringify(storageData));
 
         // Show summary - DO NOT AUTO-PUSH
-        const summary = `✅ Transferred to Push Changes:
-
-${pageAnalysis.pageUrl}
-
-• Page Title: ${editedValues.title}
-• Meta Description: ${editedValues.description}
-• OG Title: ${editedValues.ogTitle}
-• Twitter Title: ${editedValues.twitterTitle}
-
-Click OK to review in Push Changes section.
-Then manually click PUSH when ready.`;
+        const summary = `✅ Transferred to Push Changes:\n\n${pageAnalysis.pageUrl}\n\n• Page Title: ${editedValues.title}\n• Meta Description: ${editedValues.description}\n• OG Title: ${editedValues.ogTitle}\n• Twitter Title: ${editedValues.twitterTitle}\n\nClick OK to review in Push Changes section.\nThen manually click PUSH when ready.`;
 
         alert(summary);
 
@@ -7177,69 +7336,37 @@ Then manually click PUSH when ready.`;
 
   function copyRecommendationToEditMetadata(pageUrl, recommendations) {
     // Find the corresponding page path from the sitemap or pages list
-    alert(`To apply recommendations for: ${pageUrl}
-
-1. Go to Edit Metadata
-2. Select the page
-3. I'll auto-populate with:
-
-Title: ${recommendations.title.proposed}
-
-Description: ${recommendations.description.proposed}`);
+    alert(`To apply recommendations for: ${pageUrl}\n\n1. Go to Edit Metadata\n2. Select the page\n3. I'll auto-populate with:\n\nTitle: ${recommendations.title.proposed}\n\nDescription: ${recommendations.description.proposed}`);
   }
 
   function downloadBatchReport(pageAnalyses) {
-    let report = 'GSC BATCH ANALYSIS REPORT
-';
-    report += '='.repeat(50) + '
-
-';
+    let report = 'GSC BATCH ANALYSIS REPORT\n';
+    report += '='.repeat(50) + '\n\n';
 
     const totalImpressions = pageAnalyses.reduce((sum, p) => sum + p.impressions, 0);
     const totalClicks = pageAnalyses.reduce((sum, p) => sum + p.clicks, 0);
     const avgCTR = totalImpressions > 0 ? ((totalClicks / totalImpressions) * 100).toFixed(2) : 0;
 
-    report += `SUMMARY
-`;
-    report += `Total Pages: ${pageAnalyses.length}
-`;
-    report += `Total Impressions: ${totalImpressions.toLocaleString()}
-`;
-    report += `Total Clicks: ${totalClicks}
-`;
-    report += `Average CTR: ${avgCTR}%
-`;
-    report += `
-${'='.repeat(50)}
-
-`;
+    report += `SUMMARY\n`;
+    report += `Total Pages: ${pageAnalyses.length}\n`;
+    report += `Total Impressions: ${totalImpressions.toLocaleString()}\n`;
+    report += `Total Clicks: ${totalClicks}\n`;
+    report += `Average CTR: ${avgCTR}%\n`;
+    report += `\n${'='.repeat(50)}\n\n`;
 
     pageAnalyses.forEach((p, idx) => {
-      report += `${idx + 1}. ${p.pageUrl}
-`;
-      report += `-`.repeat(50) + '
-';
-      report += `Impressions: ${p.impressions} | Clicks: ${p.clicks} | CTR: ${p.ctr}% | Position: ${p.position}
-`;
-      report += `Status: ${p.ctrStatus.toUpperCase()}
+      report += `${idx + 1}. ${p.pageUrl}\n`;
+      report += `-`.repeat(50) + '\n';
+      report += `Impressions: ${p.impressions} | Clicks: ${p.clicks} | CTR: ${p.ctr}% | Position: ${p.position}\n`;
+      report += `Status: ${p.ctrStatus.toUpperCase()}\n\n`;
 
-`;
+      report += `Recommended Title (${p.recommendations.title.confidence}% confidence):\n`;
+      report += `"${p.recommendations.title.proposed}"\n`;
+      report += `Reason: ${p.recommendations.title.reasoning}\n\n`;
 
-      report += `Recommended Title (${p.recommendations.title.confidence}% confidence):
-`;
-      report += `"${p.recommendations.title.proposed}"
-`;
-      report += `Reason: ${p.recommendations.title.reasoning}
-
-`;
-
-      report += `Recommended Description (${p.recommendations.description.confidence}% confidence):
-`;
-      report += `"${p.recommendations.description.proposed}"
-`;
-      report += `Reason: ${p.recommendations.description.reasoning}
-
-`;
+      report += `Recommended Description (${p.recommendations.description.confidence}% confidence):\n`;
+      report += `"${p.recommendations.description.proposed}"\n`;
+      report += `Reason: ${p.recommendations.description.reasoning}\n\n`;
     });
 
     const blob = new Blob([report], { type: 'text/plain' });
@@ -7413,8 +7540,7 @@ Metrics:
   • Status: ${analysis.ctrStatus.toUpperCase()}
 
 Top 5 Queries:
-${analysis.topQueries.slice(0, 5).map((q, i) => `  ${i + 1}. "${q.query}" (${q.impressions} impressions, position ${q.position})`).join('
-')}
+${analysis.topQueries.slice(0, 5).map((q, i) => `  ${i + 1}. "${q.query}" (${q.impressions} impressions, position ${q.position})`).join('\n')}
 
 Recommendations:
 
