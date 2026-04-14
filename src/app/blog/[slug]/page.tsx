@@ -38,7 +38,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const metaDesc = (post as any).metaDescription ?? post.intro
 
   return {
-    title: `${pageTitle} | PromptQuorum Blog`,
+    title: pageTitle.length <= 43 ? `${pageTitle} | PromptQuorum Blog` : pageTitle,
     description: metaDesc,
     alternates: {
       canonical: canonicalUrl,

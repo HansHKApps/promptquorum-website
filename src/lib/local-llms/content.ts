@@ -22735,6 +22735,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'educationalLevel': 'Intermediate',
       },
+      sections: {},
     },
     fr: {
       theme: 'Guides d\'achat GPU',
@@ -22759,6 +22760,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'educationalLevel': 'Intermediate',
       },
+      sections: {},
     },
     ja: {
       theme: 'GPU購入ガイド',
@@ -22783,6 +22785,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'educationalLevel': 'Intermediate',
       },
+      sections: {},
     },
     zh: {
       theme: 'GPU购买指南',
@@ -22807,6 +22810,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'educationalLevel': 'Intermediate',
       },
+      sections: {},
     },
   },
 

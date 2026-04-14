@@ -93,7 +93,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const ogImageUrl = `https://www.promptquorum.com/api/og/${slug}?lang=${selectedLang}`
 
   // Use seoTitle if available for better SERP display, otherwise use article title
-  const pageTitle = (article as PEArticle & { seoTitle?: string }).seoTitle ?? article.title
+  const pageTitle = (article as PEArticle & { seoTitle?: string }).seoTitle ?? article.title ?? ''
   // Use metaDescription for OG/Twitter when available, otherwise fall back to intro
   const metaDesc = (article as PEArticle & { metaDescription?: string }).metaDescription ?? article.intro
 
@@ -110,7 +110,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     : pageTitle
 
   return {
-    title: `${finalTitle} | PromptQuorum`,
+    title: finalTitle.length <= 45 ? `${finalTitle} | PromptQuorum` : finalTitle,
     description: finalDesc,
     ...(isGlossary && {
       keywords: ['prompt engineering glossary', 'AI terms', 'LLM glossary', 'Chain-of-Thought', 'RAG definition', 'prompt injection', 'function calling', 'few-shot prompting', 'temperature AI', 'context window'],

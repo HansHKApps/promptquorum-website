@@ -6741,10 +6741,11 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
     en: {
       category: 'AI Model Comparison',
       title: 'Frontier AI Models and Prompt Library: GPT-5.x, Claude 4.6, Gemini 3 Pro, and Beyond',
+      seoTitle: 'Frontier AI Models 2026: GPT-5.x vs Claude 4.6 vs Gemini',
       intro: 'As of April 2026, frontier AI models represent the cutting edge of large language model development. This guide compares GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, Llama 4, DeepSeek V4, Mistral Large 3, Qwen3, and Grok 4.1 across reasoning, cost, speed, and real-world task performance — with 170+ evaluation prompts for your own testing.',
       publishDate: 'Published March 24, 2026',
       readTime: '15 min read',
-      metaDescription: 'Compare frontier AI models (GPT-5.x, Claude 4.6, Gemini 3 Pro, DeepSeek V4) across reasoning, cost, speed, multimodal, deployment. Includes 170+ evaluation prompts. Free beta — April 2026.',
+      metaDescription: 'Compare GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, DeepSeek V4 across reasoning, cost, speed, and multimodal tasks. Includes 170+ evaluation prompts.',
       educationalLevel: 'Intermediate',
       sections: {
         whatAreFrontier: {
@@ -6999,10 +7000,10 @@ export const blogContent: Record<string, Record<Language, BlogPost>> = {
         },
       },
     },
-    de: { category: 'KI-Modellvergleich', title: '', intro: '', publishDate: 'Veröffentlicht März 2026', readTime: '', sections: {} },
-    fr: { category: 'Comparaison de modèles IA', title: '', intro: '', publishDate: 'Publié mars 2026', readTime: '', sections: {} },
-    ja: { category: 'AIモデル比較', title: '', intro: '', publishDate: '2026年3月公開', readTime: '', sections: {} },
-    zh: { category: 'AI模型比较', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '', sections: {} },
+    de: { category: 'KI-Modellvergleich', seoTitle: 'Frontier-KI-Modelle 2026: GPT-5.x, Claude 4.6 und Gemini', title: '', intro: '', publishDate: 'Veröffentlicht März 2026', readTime: '', metaDescription: 'GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, DeepSeek V4 im Vergleich: Reasoning, Kosten, Geschwindigkeit, Multimodal. Mit 170+ Evaluierungs-Prompts.', sections: {} },
+    fr: { category: 'Comparaison de modèles IA', seoTitle: 'Modèles IA Frontier 2026: GPT-5.x, Claude 4.6, Gemini', title: '', intro: '', publishDate: 'Publié mars 2026', readTime: '', metaDescription: 'Comparez GPT-5.x, Claude 4.6 Sonnet, Gemini 3 Pro, DeepSeek V4 : raisonnement, coût, vitesse, multimodal. Inclut 170+ prompts d\'évaluation.', sections: {} },
+    ja: { category: 'AIモデル比較', seoTitle: '2026年フロンティアAIモデル比較：GPT-5.x、Claude 4.6、Gemini', title: '', intro: '', publishDate: '2026年3月公開', readTime: '', metaDescription: 'GPT-5.x、Claude 4.6 Sonnet、Gemini 3 Pro、DeepSeek V4を推論・コスト・速度・マルチモーダル能力で徹底比較。170以上の評価プロンプト付き実践ガイド。2026年4月最新版。', sections: {} },
+    zh: { category: 'AI模型比较', seoTitle: '2026年前沿AI模型对比：GPT-5.x、Claude 4.6与Gemini', title: '', intro: '', publishDate: '发布于 2026年3月', readTime: '', metaDescription: '对比GPT-5.x、Claude 4.6 Sonnet、Gemini 3 Pro、DeepSeek V4的推理能力、成本、速度与多模态性能。含170+评测提示词的实用对比指南。2026年4月更新。', sections: {} },
   },
   'geopolitics-and-ai': {
     en: {
