@@ -28384,8 +28384,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       theme: 'Hardware & Performance',
       title: 'Local LLM Hardware Guide 2026: GPU, CPU, and RAM Requirements Explained',
       seoTitle: 'Local LLM Hardware Guide 2026: GPU & VRAM Requirements',
-      intro: 'Running local LLMs requires understanding three components: GPU (optional but recommended), CPU, and RAM. As of April 2026, a 7B-parameter model needs 8 GB RAM minimum, while a 70B model needs 40+ GB. This guide covers real hardware recommendations for RTX 5090, 4090, Apple Silicon, and budget builds, plus VRAM math to calculate requirements for any model size.',
-      metaDescription: '7B models need 8 GB VRAM; 70B models need 35–40 GB at Q4 quantization. GPU, CPU, RAM requirements with benchmarks for every build level.',
+      intro: 'Running local LLMs requires matching your GPU\'s VRAM to the model you want to run. As of April 2026, a 7B model needs 8–9 GB VRAM at Q8, a 14B model needs 15 GB, and most 70B models need 39 GB at Q4_K_M — more than a single RTX 4090 holds. This guide covers specific model recommendations for 12 GB, 16 GB, and 24 GB VRAM tiers, CPU-only inference on 16 GB system RAM, llama.cpp speed settings for RTX 4070 Ti, and full hardware build configurations.',
+      metaDescription: 'Local LLM hardware guide 2026: best models for 12 GB, 16 GB, and 24 GB VRAM, CPU-only inference tables, and llama.cpp speed settings for RTX 4070 Ti.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Intermediate',
@@ -28403,10 +28403,15 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'VRAM Math for Any Model', anchor: '#vram-math' },
-        { label: 'GPU Recommendations', anchor: '#gpu-recommendations' },
+        { label: 'GPU Tier Overview', anchor: '#gpu-recommendations' },
+        { label: 'Best Models for 16 GB VRAM', anchor: '#models-16gb' },
+        { label: 'Best Models for 12 GB VRAM', anchor: '#models-12gb' },
+        { label: '70B Models on RTX 4090 (24 GB)', anchor: '#models-24gb' },
         { label: 'CPU and RAM', anchor: '#cpu-ram' },
+        { label: 'CPU-Only: 16 GB System RAM', anchor: '#cpu-inference' },
         { label: 'Storage Requirements', anchor: '#storage' },
         { label: 'Budget Builds', anchor: '#budget-builds' },
+        { label: 'llama.cpp Speed on RTX 4070 Ti', anchor: '#llamacpp-speed' },
         { label: 'Mac Hardware', anchor: '#mac-hardware' },
         { label: 'Server vs Consumer', anchor: '#server-vs-consumer' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
@@ -28419,21 +28424,22 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         tldr: {
           isTldr: true,
           items: [
-            '**VRAM math**: (Model size in GB) ÷ Quantization = VRAM needed. Example: 70B model at 4-bit = 70 ÷ 8 = 8.75 GB.',
-            '**7B models**: 8 GB VRAM (RTX 4070 Ti, RTX 5080, M3 Max Mac).',
-            '**13B models**: 12–16 GB VRAM (RTX 4080, RTX 5090, M4 Max Mac).',
-            '**70B models**: 40–48 GB VRAM (RTX 6000 Ada, 2× RTX 4090, A100 80GB).',
-            '**Budget**: RTX 4070 is best value ($600, handles 7–13B models). RTX 4090 handles any single-GPU model ($1800).',
-            'As of April 2026, GPU prices have stabilized; CPU/RAM are less critical than GPU VRAM for LLM speed.',
+            '**VRAM math**: (Model size in GB) ÷ Quantization = VRAM needed. Example: 70B at Q4 = 70 ÷ 8 = 8.75 GB × parameters ≈ 39 GB total.',
+            '**12 GB VRAM (RTX 4070 Ti)**: Best model: Llama 3.1 8B Q8 (~9 GB, 80 tok/sec). Ceiling: Qwen2.5 14B Q4_K_M (~8.5 GB).',
+            '**16 GB VRAM (RTX 4080 / RTX 5080)**: Best model: Qwen2.5 14B Q8 (~15 GB, 45 tok/sec). Also runs Mistral Small 3.1 22B Q4_K_M (~13 GB).',
+            '**24 GB VRAM (RTX 4090)**: Most 70B models at Q4_K_M (39 GB) do NOT fit. Best option: DeepSeek-R1 32B Q4_K_M (~19 GB, 60 tok/sec) or Qwen2.5 32B Q5_K_M (~21 GB).',
+            '**CPU-only (16 GB system RAM)**: Llama 3.2 3B Q8 (20 tok/sec) or Phi-4 Mini Q4_K_M (25 tok/sec). A used $200 RTX 3060 12GB is 5–10× faster.',
+            '**llama.cpp speed tip**: Always set `--n-gpu-layers 99`. This alone doubles speed on RTX 4070 Ti from ~40 to ~85 tok/sec.',
+            'As of April 2026, GPU prices are stable. VRAM is the only bottleneck — CPU and system RAM are secondary once a GPU is present.',
           ],
         },
         vramMath: {
           title: 'How Do You Calculate VRAM Requirements?',
           content: [
-            '**VRAM requirements depend on three factors: model size (parameters), quantization (bits per weight), and inference mode.** Use this formula to determine if your GPU has enough memory.',
+            '**VRAM requirements depend on three factors: model size (parameters), quantization (bits per weight), and inference mode.** Use this formula to determine if your GPU has enough memory. For an interactive calculator, see the [VRAM calculator for local LLMs](/local-llms/vram-calculator-local-llm).',
             '**Formula:**',
             '```\nVRAM (GB) = (Model Size × Quantization Bits) ÷ 8\n```',
-            '**Quantization values:** FP16 = 16 bits, Q8 = 8 bits, Q5 = 5 bits, Q4 = 4 bits.',
+            '**Quantization values:** FP16 = 16 bits, Q8 = 8 bits, Q5 = 5 bits, Q4 = 4 bits. The practical sweet spot is Q4_K_M — it uses 4-bit weights with K-quantization, which NVIDIA GPUs accelerate more efficiently than the older Q4_0 format.',
           ],
           rows: [
             { 'Model': 'Llama 3.1 7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4.4 GB', 'Q4': '3.5 GB' },
@@ -28447,7 +28453,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         gpuRecommendations: {
           title: 'Which GPU Tier Matches Your Workload?',
-          content: '**As of April 2026, NVIDIA GPUs deliver the highest tokens/sec for local LLM inference across all price points.** Here are tier recommendations:',
+          content: '**As of April 2026, NVIDIA GPUs deliver the highest tokens/sec for local LLM inference across all price points.** The sections below each tier give specific model recommendations. For a detailed benchmark comparison, see the [best GPUs for local LLM guide](/local-llms/best-gpus-for-local-llms).',
           rows: [
             { 'Tier': 'Budget ($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Best For': '7–13B models', 'Performance': 'Fast (80 tokens/sec)' },
             { 'Tier': 'Mid ($1200)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', 'Best For': '13–30B models', 'Performance': 'Very fast (120 tokens/sec)' },
@@ -28458,13 +28464,94 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           image: '/images/gpu-tier-comparison-en.svg',
           imageCaption: 'GPU tier recommendations: $600 RTX 4070 Ti (12GB, 7–13B models), $1200 RTX 4080 (16GB, 13–30B), $1800 RTX 4090 (24GB, any 70B model), $3000+ server GPUs for production. GPU choice matters 10× more than CPU.',
         },
+        modelsFor16GB: {
+          title: 'Which Local LLMs Run Best on 16 GB VRAM?',
+          content: [
+            '**On a 16 GB VRAM GPU (NVIDIA RTX 4080, RTX 5080, or RTX 4090 laptop), the practical ceiling is 14–22B models.** Qwen2.5 14B at Q8_0 is the best overall choice: it uses 15 GB VRAM, runs at 45 tok/sec, and delivers coding-grade reasoning on par with GPT-3.5 Turbo.',
+            'The table below shows which models fit and which do not. "Does NOT fit" rows are included intentionally — this is the most common mistake 16 GB owners make.',
+          ],
+          rows: [
+            { 'Model': 'Qwen2.5 14B', 'Quantization': 'Q8_0', 'VRAM Used': '~15 GB', 'Speed (RTX 4080)': '45 tok/sec', 'Best For': 'Coding + reasoning', 'Fits 16 GB?': '✅ Yes' },
+            { 'Model': 'Mistral Small 3.1 22B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~13 GB', 'Speed (RTX 4080)': '55 tok/sec', 'Best For': 'General chat', 'Fits 16 GB?': '✅ Yes' },
+            { 'Model': 'DeepSeek-R1 14B', 'Quantization': 'Q8_0', 'VRAM Used': '~15 GB', 'Speed (RTX 4080)': '40 tok/sec', 'Best For': 'Math + analysis', 'Fits 16 GB?': '✅ Yes' },
+            { 'Model': 'Llama 3.1 8B', 'Quantization': 'FP16', 'VRAM Used': '~16 GB', 'Speed (RTX 4080)': '70 tok/sec', 'Best For': 'Fastest responses', 'Fits 16 GB?': '✅ Tight' },
+            { 'Model': 'Llama 3.3 70B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~39 GB', 'Speed (RTX 4080)': '—', 'Best For': '—', 'Fits 16 GB?': '❌ No (needs 39 GB)' },
+            { 'Model': 'Qwen2.5 32B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~18 GB', 'Speed (RTX 4080)': '—', 'Best For': '—', 'Fits 16 GB?': '❌ No (needs 18 GB)' },
+          ],
+          columns: ['Model', 'Quantization', 'VRAM Used', 'Speed (RTX 4080)', 'Best For', 'Fits 16 GB?'],
+          callouts: [
+            { type: 'proTip', text: '🏆 Best overall for 16 GB: Qwen2.5 14B Q8_0 at ~15 GB. Best for reasoning and coding. If you need faster responses, use Mistral Small 3.1 22B Q4_K_M at 55 tok/sec.' },
+            { type: 'warning', text: 'RTX 4090 laptop GPUs have 16 GB VRAM (not 24 GB). They share the same model ceiling as the RTX 4080 desktop.' },
+            { type: 'keyPoint', text: 'When to upgrade to 24 GB (RTX 4090 desktop): only if you need 32B+ models at Q8, or want to run two models simultaneously without reloading.' },
+          ],
+        },
+        modelsFor12GB: {
+          title: 'Which Local LLMs Run Best on 12 GB VRAM?',
+          content: [
+            '**On a 12 GB VRAM GPU (NVIDIA RTX 4070 Ti, RTX 5070, or RTX 3080 Ti), you can run 7–8B models at Q8 or up to 14B at Q4_K_M.** Llama 3.1 8B at Q8_0 is the most reliable choice: 9 GB VRAM, 80 tok/sec, and full instruction-following quality.',
+            'Qwen2.5 14B at Q4_K_M also fits at ~8.5 GB and delivers notably better reasoning than the 8B tier — it is often overlooked by 12 GB owners.',
+          ],
+          rows: [
+            { 'Model': 'Llama 3.1 8B', 'Quantization': 'Q8_0', 'VRAM Used': '~9 GB', 'Speed (RTX 4070 Ti)': '80 tok/sec', 'Best For': 'General chat + coding', 'Fits 12 GB?': '✅ Yes' },
+            { 'Model': 'Qwen2.5 14B', 'Quantization': 'Q4_K_M', 'VRAM Used': '~8.5 GB', 'Speed (RTX 4070 Ti)': '65 tok/sec', 'Best For': 'Better reasoning on budget', 'Fits 12 GB?': '✅ Yes' },
+            { 'Model': 'Llama 3.2 11B Vision', 'Quantization': 'Q5_K_M', 'VRAM Used': '~8 GB', 'Speed (RTX 4070 Ti)': '65 tok/sec', 'Best For': 'Image + text tasks', 'Fits 12 GB?': '✅ Yes' },
+            { 'Model': 'Qwen2.5 7B', 'Quantization': 'Q8_0', 'VRAM Used': '~8 GB', 'Speed (RTX 4070 Ti)': '90 tok/sec', 'Best For': 'Math + fastest responses', 'Fits 12 GB?': '✅ Yes' },
+            { 'Model': 'Mistral 7B v0.3', 'Quantization': 'FP16', 'VRAM Used': '~14 GB', 'Speed (RTX 4070 Ti)': '—', 'Best For': '—', 'Fits 12 GB?': '❌ No (needs 14 GB at FP16)' },
+            { 'Model': 'Qwen2.5 14B', 'Quantization': 'Q8_0', 'VRAM Used': '~15 GB', 'Speed (RTX 4070 Ti)': '—', 'Best For': '—', 'Fits 12 GB?': '❌ No (upgrade to 16 GB)' },
+          ],
+          columns: ['Model', 'Quantization', 'VRAM Used', 'Speed (RTX 4070 Ti)', 'Best For', 'Fits 12 GB?'],
+          callouts: [
+            { type: 'proTip', text: '🏆 Best overall for 12 GB: Llama 3.1 8B Q8_0 at ~9 GB. If you want a step up in quality without buying a new GPU, try Qwen2.5 14B Q4_K_M — it fits and beats 8B on most reasoning tasks.' },
+            { type: 'keyPoint', text: 'RTX 3060 12GB is the budget entry point (~$200 used). It runs all 12 GB models but at ~60–70 tok/sec vs ~80–90 tok/sec on RTX 4070 Ti due to older memory architecture.' },
+          ],
+        },
+        modelsFor24GB: {
+          title: 'Which 70B Models Actually Fit in 24 GB VRAM (RTX 4090)?',
+          content: [
+            '**The RTX 4090 has 24 GB VRAM — not enough for most 70B models at acceptable quality.** Llama 3.3 70B at Q4_K_M requires approximately 39 GB. The common misconception is that "Q4 is small" — at 70B parameters, even Q4 is large.',
+            'On a single RTX 4090, the best strategy is 32B models, which deliver near-70B quality at Q5_K_M and fit comfortably. For true 70B at Q4+, you need 2× RTX 4090 or a 48 GB server GPU. See [how to run 70B models on 24 GB VRAM](/local-llms/run-70b-models-24gb-vram) for advanced techniques.',
+          ],
+          rows: [
+            { 'Model': 'DeepSeek-R1 32B', 'Quantization': 'Q4_K_M', 'VRAM Required': '~19 GB', 'Fits 24 GB?': '✅ Yes', 'Speed (RTX 4090)': '60 tok/sec', 'Notes': 'Best choice — strong reasoning, comfortably fits' },
+            { 'Model': 'Qwen2.5 32B', 'Quantization': 'Q5_K_M', 'VRAM Required': '~21 GB', 'Fits 24 GB?': '✅ Yes', 'Speed (RTX 4090)': '55 tok/sec', 'Notes': 'High quality, excellent coding + instruction' },
+            { 'Model': 'Qwen2.5 32B', 'Quantization': 'Q8_0', 'VRAM Required': '~34 GB', 'Fits 24 GB?': '❌ No', 'Speed (RTX 4090)': '—', 'Notes': 'Requires 48 GB GPU' },
+            { 'Model': 'Llama 3.3 70B', 'Quantization': 'Q2_K', 'VRAM Required': '~24 GB', 'Fits 24 GB?': '⚠️ Barely', 'Speed (RTX 4090)': '30 tok/sec', 'Notes': 'Fits but Q2 quality is noticeably degraded' },
+            { 'Model': 'Llama 3.3 70B', 'Quantization': 'Q4_K_M', 'VRAM Required': '~39 GB', 'Fits 24 GB?': '❌ No', 'Speed (RTX 4090)': '—', 'Notes': 'Needs 2× RTX 4090 or A100 80 GB' },
+            { 'Model': 'DeepSeek-R1 32B', 'Quantization': 'Q8_0', 'VRAM Required': '~34 GB', 'Fits 24 GB?': '❌ No', 'Speed (RTX 4090)': '—', 'Notes': 'Requires 48 GB GPU' },
+          ],
+          columns: ['Model', 'Quantization', 'VRAM Required', 'Fits 24 GB?', 'Speed (RTX 4090)', 'Notes'],
+          callouts: [
+            { type: 'keyPoint', text: '🏆 Best for RTX 4090 (24 GB): DeepSeek-R1 32B Q4_K_M (~19 GB, 60 tok/sec). Stronger reasoning than Llama 3.3 70B Q2_K at a fraction of the VRAM.' },
+            { type: 'warning', text: 'If you specifically need 70B quality at Q4+, the RTX 4090 is not the right GPU. You need 2× RTX 4090 (48 GB combined via tensor parallelism) or an RTX 6000 Ada (48 GB). Running 70B at Q2_K on a single 4090 noticeably hurts output quality.' },
+          ],
+        },
         cpuRam: {
           title: 'What CPU and RAM Do You Need?',
           content: [
-            '**With a dedicated GPU, CPU and RAM are secondary components.** The GPU handles matrix math; CPU/RAM manage context preparation.',
+            '**With a dedicated GPU, CPU and RAM are secondary components.** The GPU handles matrix math; CPU/RAM manage context preparation. For a full comparison of GPU vs CPU vs Apple Silicon inference speeds, see the [GPU vs CPU vs Apple Silicon guide](/local-llms/gpu-vs-cpu-vs-apple-silicon).',
             '**Minimum CPU**: 8-core processor (Intel i7 12th gen, AMD Ryzen 5 5600X, or newer). Older CPUs add 20%+ latency.',
             '**RAM**: 16 GB minimum (with GPU). If running without GPU, 32+ GB recommended. RAM does not directly limit model size when GPU is present.',
             '**Storage**: 500 GB SSD for model files and OS. M.2 NVMe is preferred (faster model loading).',
+          ],
+        },
+        cpuOnlyInference: {
+          title: 'Which Models Run Well on 16 GB System RAM Without a GPU?',
+          content: [
+            '**Without a GPU, a machine with 16 GB system RAM can run 3B–7B models at 8–20 tokens/sec using CPU inference.** The bottleneck is memory bandwidth, not RAM capacity — CPUs have far lower bandwidth than GPUs, which is why inference is 5–10× slower.',
+            'On 16 GB system RAM, the practical rule is: model file size + 4 GB OS overhead ≤ 16 GB. A 7B model at Q4_K_M (4.9 GB) fits, but leaves little headroom for long contexts. The table below shows realistic options as of April 2026.',
+          ],
+          rows: [
+            { 'Model': 'Gemma 2 2B', 'Quantization': 'Q8_0', 'RAM Used': '~2.7 GB', 'Speed (Ryzen 9 7950X)': '28 tok/sec', 'Best For': 'Fastest, minimal RAM', 'Notes': 'Leaves 13 GB free for OS' },
+            { 'Model': 'Phi-4 Mini 3.8B', 'Quantization': 'Q4_K_M', 'RAM Used': '~2.5 GB', 'Speed (Ryzen 9 7950X)': '25 tok/sec', 'Best For': 'Coding on CPU', 'Notes': 'Best quality-per-RAM ratio' },
+            { 'Model': 'Llama 3.2 3B', 'Quantization': 'Q8_0', 'RAM Used': '~3.8 GB', 'Speed (Ryzen 9 7950X)': '20 tok/sec', 'Best For': 'General chat, low RAM', 'Notes': 'Reliable, widely supported' },
+            { 'Model': 'Llama 3.1 8B', 'Quantization': 'Q4_K_M', 'RAM Used': '~4.9 GB', 'Speed (Ryzen 9 7950X)': '12 tok/sec', 'Best For': 'Best CPU quality', 'Notes': '12 tok/sec is slow but usable for batch tasks' },
+            { 'Model': 'Llama 3.1 8B', 'Quantization': 'Q8_0', 'RAM Used': '~9 GB', 'Speed (Ryzen 9 7950X)': '8 tok/sec', 'Best For': 'Max quality on CPU', 'Notes': 'Too slow for interactive use on most CPUs' },
+          ],
+          columns: ['Model', 'Quantization', 'RAM Used', 'Speed (Ryzen 9 7950X)', 'Best For', 'Notes'],
+          callouts: [
+            { type: 'proTip', text: '🏆 Best for 16 GB RAM, no GPU: Phi-4 Mini 3.8B Q4_K_M (2.5 GB, 25 tok/sec). Delivers surprisingly strong coding and reasoning for its size.' },
+            { type: 'keyPoint', text: 'CPU vs GPU speed reality: A used NVIDIA RTX 3060 12 GB (~$200) runs Llama 3.1 8B at 70+ tok/sec — 5–8× faster than the Ryzen 9 7950X at CPU-only inference. If speed matters, buy a GPU before adding RAM.' },
+            { type: 'warning', text: 'Running a 7B model on 16 GB RAM with CPU-only leaves fewer than 7 GB for the OS and browser. With long conversation contexts (32k+ tokens), the model file grows beyond its base size and can cause RAM exhaustion. Keep context size under 4096 on 16 GB CPU-only machines.' },
           ],
         },
         storage: {
@@ -28481,7 +28568,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         budgetBuilds: {
           title: 'What Hardware Build Should You Buy?',
-          content: '**Building a local LLM machine from scratch means prioritizing GPU first, then CPU and RAM.** Here are three realistic configurations:',
+          content: '**Building a local LLM machine from scratch means prioritizing GPU first, then CPU and RAM.** Here are three realistic configurations. For multi-GPU builds, see the [multi-GPU local LLM guide](/local-llms/multi-gpu-local-llms).',
           rows: [
             { 'Budget': '$1500 (entry)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', 'Models': '7–13B', 'Cost': 'Realistic' },
             { 'Budget': '$2500 (solid)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', 'Models': '13–30B', 'Cost': 'Recommended' },
@@ -28490,6 +28577,31 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           columns: ['Budget', 'GPU', 'CPU', 'RAM', 'Models', 'Cost'],
           image: '/images/budget-builds-en.svg',
           imageCaption: 'Three build configurations: $1500 entry-level (RTX 4070 Ti, i7 13700, 16GB) for 7–13B models, $2500 solid build (RTX 4080, i7 14700K, 32GB) for 13–30B, $4000 high-end (2× RTX 4090, Ryzen 9, 128GB) for any model. Mid-level offers best value.',
+        },
+        llamaCppSpeed: {
+          title: 'How Do You Maximize llama.cpp Speed on RTX 4070 Ti?',
+          content: [
+            '**With correct settings, llama.cpp on an RTX 4070 Ti achieves 85–95 tokens/sec on Llama 3.1 8B Q4_K_M — more than double the default out-of-box speed.** The single most impactful flag is `--n-gpu-layers 99`, which offloads all model layers to the GPU. Without it, layers fall back to CPU, creating a severe bottleneck.',
+            'These settings apply to llama.cpp directly and to Ollama (which uses llama.cpp internally). Ollama sets `--n-gpu-layers 99` automatically on NVIDIA hardware if drivers are installed correctly.',
+          ],
+          rows: [
+            { 'Flag': '--n-gpu-layers 99', 'What It Does': 'Offloads all layers to GPU', 'Impact': '+100–150% speed', 'Default': '0 (CPU only)', 'Notes': 'Most important flag — always set this first' },
+            { 'Flag': '--threads [cores]', 'What It Does': 'CPU threads for prompt processing', 'Impact': '+10–15% speed', 'Default': 'All threads (including HT)', 'Notes': 'Set to physical core count only. Hyperthreading hurts inference.' },
+            { 'Flag': '--ctx-size 2048', 'What It Does': 'KV cache / context window size', 'Impact': 'Saves 0.5–8 GB VRAM', 'Default': '4096', 'Notes': '2048 = ~0.5 GB extra VRAM. 32768 = ~8 GB extra. Only increase if needed.' },
+            { 'Flag': '--n-batch 512', 'What It Does': 'Prompt processing batch size', 'Impact': '+5–10% throughput', 'Default': '512', 'Notes': 'Good default. Increase to 1024 for batch workloads if VRAM allows.' },
+            { 'Flag': '--flash-attn', 'What It Does': 'Flash Attention 2 kernel', 'Impact': '-20–30% VRAM at long ctx', 'Default': 'Disabled', 'Notes': 'Available since llama.cpp b2900. Reduces VRAM for contexts > 8k tokens.' },
+          ],
+          columns: ['Flag', 'What It Does', 'Impact', 'Default', 'Notes'],
+          items: [
+            '**Q4_K_M beats Q4_0 by 15–20% on RTX 4070 Ti.** The K_M variant uses mixed quantization that NVIDIA tensor cores accelerate more efficiently. Always choose Q4_K_M over Q4_0 when both are available.',
+            '**IQ4_XS** is the smallest format (~8% smaller than Q4_K_M) with minimal quality loss. Useful for fitting Qwen2.5 14B into 12 GB VRAM when Q4_K_M is borderline.',
+            '**Q5_K_M** runs at nearly the same speed as Q4_K_M on NVIDIA GPUs (< 5% slower) while providing noticeably better output quality. Worth using when you have 20% VRAM headroom.',
+          ],
+          callouts: [
+            { type: 'proTip', text: 'Run `ollama ps` to confirm your model is loaded on GPU. If GPU utilization shows 0% in `nvidia-smi` while generating, drivers are not correctly routing to CUDA. Reinstall NVIDIA CUDA Toolkit and restart Ollama.' },
+            { type: 'keyPoint', text: 'RTX 4070 Ti speed reference: Llama 3.1 8B Q4_K_M = 85–95 tok/sec. Llama 3.1 13B Q4_K_M = 60–70 tok/sec. Qwen2.5 7B Q8_0 = 90–95 tok/sec. These assume --n-gpu-layers 99 and --ctx-size 2048.' },
+            { type: 'warning', text: 'Increasing --ctx-size beyond 8192 on a 12 GB GPU will cause model layer offloading back to CPU if the KV cache exhausts remaining VRAM. If speed drops suddenly on long conversations, reduce context size or use --flash-attn.' },
+          ],
         },
         mac: {
           title: 'Can Mac Hardware Run Local LLMs?',
@@ -28580,6 +28692,18 @@ ollama run -m deepseek-r1:7b "2^10を解く"
               q: 'Can I use multiple GPUs to run larger models?',
               a: 'Yes, via tensor parallelism. Two RTX 4090s (24 GB each) provide 48 GB VRAM for 70B models at FP16. Ollama and llama.cpp support multi-GPU via --n-gpu-layers split across cards.',
             },
+            {
+              q: 'What are the best local LLMs for 16 GB VRAM in 2026?',
+              a: 'Qwen2.5 14B Q8_0 (15 GB, 45 tok/sec) is the best overall for RTX 4080 / RTX 5080 / RTX 4090 laptop. Mistral Small 3.1 22B Q4_K_M (13 GB, 55 tok/sec) is the fastest option. Llama 3.3 70B does not fit — it requires 39 GB at Q4_K_M.',
+            },
+            {
+              q: 'Can a single RTX 4090 run a 70B model at good quality?',
+              a: 'No — not at Q4_K_M quality. Llama 3.3 70B at Q4_K_M requires ~39 GB VRAM. The RTX 4090 has 24 GB. You can run it at Q2_K (~24 GB) but quality drops noticeably. The better choice for a single RTX 4090 is DeepSeek-R1 32B Q4_K_M (~19 GB), which delivers near-70B reasoning quality.',
+            },
+            {
+              q: 'What is the best local LLM for 16 GB system RAM without a GPU?',
+              a: 'Phi-4 Mini 3.8B Q4_K_M (2.5 GB RAM, ~25 tok/sec on Ryzen 9 7950X) is the best option for CPU-only inference on 16 GB system RAM. Gemma 2 2B Q8 is the fastest at ~28 tok/sec. Llama 3.1 8B Q4_K_M (4.9 GB) also fits but runs at ~12 tok/sec — slow for interactive use.',
+            },
           ],
         },
         relatedReading: {
@@ -28616,9 +28740,13 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'NVIDIA GPU' },
-          { '@type': 'Thing', 'name': 'VRAM Calculator' },
+          { '@type': 'Thing', 'name': 'VRAM Requirements' },
           { '@type': 'Thing', 'name': 'RTX 4090' },
+          { '@type': 'Thing', 'name': 'RTX 4080' },
+          { '@type': 'Thing', 'name': 'RTX 4070 Ti' },
           { '@type': 'Thing', 'name': 'Apple Silicon' },
+          { '@type': 'Thing', 'name': 'llama.cpp' },
+          { '@type': 'Thing', 'name': 'LLM Quantization' },
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
@@ -28653,6 +28781,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': 'What CPU is best for local LLMs without a GPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'High-core-count CPUs with large L3 cache: AMD Ryzen 9 7950X or Intel Core i9-14900K. Expect 5–15 tokens/sec for 7B models. CPU inference is 3–5× slower than GPU.' } },
           { '@type': 'Question', 'name': 'Does storage speed affect local LLM performance?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, at model load time. NVMe SSD (3–7 GB/s) loads a 7B model in 2–5 seconds vs. 20–60 seconds on HDD. Inference speed after loading is unaffected by storage.' } },
           { '@type': 'Question', 'name': 'Can I use multiple GPUs to run larger models?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, via tensor parallelism. Two RTX 3090s (24 GB each) provide 48 GB VRAM for 70B models at FP16. Ollama and llama.cpp support multi-GPU via --n-gpu-layers split across cards.' } },
+          { '@type': 'Question', 'name': 'What are the best local LLMs for 16 GB VRAM in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen2.5 14B Q8_0 (~15 GB, 45 tok/sec) is the best overall for RTX 4080, RTX 5080, and RTX 4090 laptop. Mistral Small 3.1 22B Q4_K_M (~13 GB, 55 tok/sec) is the fastest option. Llama 3.3 70B does not fit at any useful quality — it requires 39 GB at Q4_K_M.' } },
+          { '@type': 'Question', 'name': 'Can a single RTX 4090 run a 70B LLM at good quality?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Llama 3.3 70B at Q4_K_M requires ~39 GB VRAM. The RTX 4090 has 24 GB. At Q2_K it barely fits but with noticeably reduced output quality. The best choice for a single RTX 4090 is DeepSeek-R1 32B Q4_K_M (~19 GB, 60 tok/sec), which delivers near-70B reasoning.' } },
+          { '@type': 'Question', 'name': 'What is the best local LLM for 16 GB system RAM without a GPU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Phi-4 Mini 3.8B Q4_K_M (2.5 GB, ~25 tok/sec on Ryzen 9 7950X) is the best option for CPU-only inference on 16 GB system RAM. Gemma 2 2B Q8 is the fastest at ~28 tok/sec. Llama 3.1 8B Q4_K_M (4.9 GB) also fits but runs at ~12 tok/sec — better for batch tasks than interactive chat.' } },
         ],
       },
       itemListSchema: {
