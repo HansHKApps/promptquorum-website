@@ -16927,6 +16927,18 @@ ollama run -m deepseek-r1:7b "2^10を解く"
               q: 'Does Text-Generation-WebUI scale to production?',
               a: 'Not recommended. Text-Generation-WebUI is a research tool, not a production server. It lacks features like load balancing, monitoring, and distributed inference that production services need. Use vLLM for production.',
             },
+            {
+              q: 'What is Paged Attention and why does it matter?',
+              a: 'Paged Attention is vLLM\'s memory management system that borrows virtual memory concepts from operating systems. Instead of allocating a fixed contiguous block of GPU memory per request, it allocates memory in pages that can be shared and reused across requests. This improves GPU memory utilization from ~20% to ~70%, allowing vLLM to serve 3–4× more concurrent users per GPU compared to naive attention implementations. It is the core reason vLLM outperforms llama.cpp in multi-user scenarios.',
+            },
+            {
+              q: 'Which engine should I use if I only have 8GB RAM?',
+              a: 'llama.cpp via Ollama. At 8 GB total RAM, a 7B model at Q4_K_M uses ~4.7 GB. llama.cpp handles this well at ~5 tok/sec on CPU or ~80 tok/sec on a dedicated GPU. vLLM requires significantly more overhead and performs poorly on consumer RAM. Text-Generation-WebUI is also workable but adds more overhead than Ollama.',
+            },
+            {
+              q: 'Can I run vLLM and Ollama on the same machine?',
+              a: 'Yes, if VRAM is sufficient. Run them on different ports (vLLM default: 8000, Ollama default: 11434). A typical configuration: Ollama handles quick single-user chat requests, vLLM handles batch API requests. However, both cannot load the same model simultaneously without doubling VRAM. Manage which service is active based on your workload.',
+            },
           ],
         },
         relatedReading: {
@@ -16943,13 +16955,134 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'sources',
           title: 'Sources',
           items: [
-            'llama.cpp GitHub — github.com/ggerganov/llama.cpp',
-            'vLLM GitHub — github.com/vllm-project/vllm',
-            'vLLM Paper (Paged Attention) — arxiv.org/abs/2309.06180',
-            'Text-Generation-WebUI — github.com/oobabooga/text-generation-webui',
-            'Ollama GitHub — github.com/ollama/ollama',
+            'Gerganov, G. (2024). "llama.cpp GitHub." https://github.com/ggerganov/llama.cpp — C++ inference engine source code and quantization documentation.',
+            'vLLM Team. (2024). "vLLM GitHub." https://github.com/vllm-project/vllm — Production inference engine source code and API server documentation.',
+            'Kwon et al. (2023). "Efficient Memory Management for Large Language Model Serving with PagedAttention." https://arxiv.org/abs/2309.06180 — Original Paged Attention paper explaining vLLM\'s memory management approach.',
+            'oobabooga. (2024). "Text-Generation-WebUI GitHub." https://github.com/oobabooga/text-generation-webui — Source code and installation guide for Text-Generation-WebUI.',
           ],
         },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison',
+        'description': 'vLLM dominates production (highest throughput). llama.cpp powers Ollama (lightest). Text-Generation-WebUI best for research. 2026 inference engine comparison.',
+        'url': 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=en',
+        'inLanguage': 'en',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-15',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'vLLM' },
+          { '@type': 'Thing', 'name': 'llama.cpp' },
+          { '@type': 'Thing', 'name': 'Text-Generation-WebUI' },
+          { '@type': 'Thing', 'name': 'LLM inference engine' },
+          { '@type': 'Thing', 'name': 'Paged Attention' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Advanced',
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
+        'inLanguage': 'en',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'llama.cpp',
+            'description': 'C++ library. CPU excellent, GPU good. 1-100 tok/s. GGUF format. Powers Ollama. Best for consumer devices and CPU inference.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'vLLM',
+            'description': 'Python framework. GPU only (NVIDIA). 100-1000+ tok/s with batching. Full precision and 8/4-bit. Best for production API servers with 50+ concurrent users.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Text-Generation-WebUI',
+            'description': 'Python app with built-in web UI. CPU and GPU. 1-100 tok/s. GGUF, safetensors, fp16. LoRA fine-tuning built-in. Best for research and experimentation.',
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'en',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Can I switch inference engines without changing my model?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mostly yes. Model files in GGUF format work with llama.cpp (Ollama) and Text-Generation-WebUI. vLLM requires full precision or specific quantization formats. HuggingFace safetensors models work with all three.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which engine is best for Mac?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'llama.cpp via Ollama. It has excellent Apple Silicon (M-series) optimization. vLLM does not support Metal (Apple GPU), so CPU performance is poor. Text-Generation-WebUI works on Mac but is slower than Ollama.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is vLLM part of Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Ollama uses llama.cpp internally. vLLM is a separate inference engine by UC Berkeley. They serve different purposes: Ollama is for simplicity; vLLM is for production throughput.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use vLLM without GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Technically yes, but it is unusably slow. vLLM is designed for GPU. For CPU-only deployments, use llama.cpp (Ollama).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does Text-Generation-WebUI scale to production?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Not recommended. Text-Generation-WebUI is a research tool, not a production server. It lacks features like load balancing, monitoring, and distributed inference that production services need. Use vLLM for production.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is Paged Attention and why does it matter?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Paged Attention is vLLM\'s memory management system that borrows virtual memory concepts from operating systems. Instead of allocating a fixed contiguous block of GPU memory per request, it allocates memory in pages that can be shared and reused across requests. This improves GPU memory utilization from ~20% to ~70%, allowing vLLM to serve 3–4× more concurrent users per GPU compared to naive attention implementations.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which engine should I use if I only have 8GB RAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'llama.cpp via Ollama. At 8 GB total RAM, a 7B model at Q4_K_M uses ~4.7 GB. llama.cpp handles this well at ~5 tok/sec on CPU or ~80 tok/sec on a dedicated GPU. vLLM requires significantly more overhead and performs poorly on consumer RAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run vLLM and Ollama on the same machine?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, if VRAM is sufficient. Run them on different ports (vLLM default: 8000, Ollama default: 11434). A typical configuration: Ollama handles quick single-user chat requests, vLLM handles batch API requests. Both cannot load the same model simultaneously without doubling VRAM.',
+            },
+          },
+        ],
       },
     },
   },
