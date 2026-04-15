@@ -22283,6 +22283,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
+      gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
+      gammaDescription: 'The slide deck below covers 8 local LLM frontends — Open WebUI (25,000+ stars, RAG), Enchanted UI (fastest), Jan AI (desktop), Continue.dev (code) — with feature comparison table, setup guide, regional compliance context (EU/GDPR, Japan, China), and 5 common mistakes. Download the PDF as a Local LLM Frontend reference card.',
       sections: {
         tldr: {
           isTldr: true,
@@ -22567,6 +22569,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: 'Weiterführende Literatur', anchor: '#related-reading' },
         { label: 'Quellen', anchor: '#sources' },
       ],
+      gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
+      gammaDescription: 'Die Folien vergleichen 8 lokale LLM-Frontends — Open WebUI (25.000+ Sterne, RAG), Enchanted UI (schnellstes), Jan AI (Desktop), Continue.dev (Code) — mit Funktionsvergleichstabelle, Einrichtungsanleitung, regionalem Compliance-Kontext (DSGVO, BSI, Japan, China) und 5 häufigen Fehlern. Als PDF-Referenzkarte für lokale LLM-Frontends herunterladen.',
       sections: {
         tldr: {
           isTldr: true,
@@ -22870,6 +22874,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: 'Lectures connexes', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
+      gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
+      gammaDescription: 'La présentation compare 8 interfaces LLM locales — Open WebUI (25 000+ étoiles, RAG), Enchanted UI (la plus rapide), Jan AI (bureau), Continue.dev (code) — avec tableau comparatif, guide de configuration, contexte RGPD/CNIL, Japon et Chine, et 5 erreurs courantes. Téléchargez le PDF comme fiche de référence des interfaces LLM locales.',
       sections: {
         tldr: {
           isTldr: true,
@@ -23187,6 +23193,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: '関連文献', anchor: '#related-reading' },
         { label: 'ソース', anchor: '#sources' },
       ],
+      gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
+      gammaDescription: 'このスライドデッキは8つのローカルLLMフロントエンドを比較します — Open WebUI（25,000+スター、RAG）、Enchanted UI（最速）、Jan AI（デスクトップ）、Continue.dev（コード）— 機能比較表、セットアップガイド、地域コンプライアンス（GDPR、METI、中国）、5つのよくある間違いを含みます。ローカルLLMフロントエンドのPDFリファレンスカードとしてダウンロードできます。',
       sections: {
         tldr: {
           isTldr: true,
@@ -23504,6 +23512,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: '相关阅读', anchor: '#related-reading' },
         { label: '来源', anchor: '#sources' },
       ],
+      gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
+      gammaDescription: '幻灯片对比8个本地LLM前端 — Open WebUI（25,000+星、RAG）、Enchanted UI（最速）、Jan AI（桌面）、Continue.dev（代码）— 包含功能对比表、设置指南、区域合规背景（EU/GDPR、日本METI、中国数据安全法）和5个常见错误。下载PDF作为本地LLM前端参考卡。',
       sections: {
         tldr: {
           isTldr: true,
@@ -23805,7 +23815,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
       intro: 'Text-Generation-WebUI, vLLM, and llama.cpp are three popular inference engines for running local LLMs, each optimized for different use cases. llama.cpp is the lightest and powers Ollama; vLLM is the fastest for high-throughput production APIs; Text-Generation-WebUI is the most feature-rich for experimentation. As of April 2026, vLLM dominates production deployments, llama.cpp dominates consumer devices, and Text-Generation-WebUI dominates research and fine-tuning workflows.',
-      metaDescription: 'vLLM dominates production (highest throughput). llama.cpp powers Ollama (lightest). Text-Generation-WebUI best for research. 2026 inference engine comparison.',
+      metaDescription: 'vLLM dominates production (highest throughput). llama.cpp powers Ollama. Text-Generation-WebUI best for research and LoRA fine-tuning. 2026 comparison.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Advanced',
@@ -24144,7 +24154,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026: Vergleich von Inference-Engines',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
       intro: 'Text-Generation-WebUI, vLLM und llama.cpp sind drei beliebte Inference-Engines zum Ausführen lokaler LLMs, jede optimiert für unterschiedliche Anwendungsfälle. llama.cpp ist die leichteste und unterstützt Ollama; vLLM ist die schnellste für High-Throughput-Production-APIs; Text-Generation-WebUI ist die funktionsreichste für Experimente. Im April 2026 dominiert vLLM Production-Deployments, llama.cpp dominiert Consumer-Geräte, und Text-Generation-WebUI dominiert Forschungs- und Fine-Tuning-Workflows.',
-      metaDescription: 'vLLM dominiert Production (höchster Durchsatz). llama.cpp treibt Ollama an (leichteste). Text-Generation-WebUI beste für Forschung. 2026 Inference-Engine Vergleich für Deutschland.',
+      metaDescription: 'vLLM dominiert Production (höchster Durchsatz). llama.cpp treibt Ollama an. Text-Generation-WebUI für Forschung und LoRA. Inference-Engine-Vergleich 2026.',
       publishDate: '2026-04-04',
       readTime: '13 Min. Lesezeit',
       educationalLevel: 'Advanced',

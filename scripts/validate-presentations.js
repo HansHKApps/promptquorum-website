@@ -60,13 +60,13 @@ function validatePresentationFile(filePath) {
   });
 
   // Check 3: Verify renderSlide function exists
-  if (!content.includes('function renderSlide(slide)')) {
+  if (!content.includes('function renderSlide(')) {
     ERRORS.push(`${fileName}: renderSlide function not found`);
   }
 
   // Check 4: Verify critical slide types are handled (title, list, table required)
   const criticalSlideTypes = ['title', 'list'];
-  const renderMatch = content.match(/function renderSlide\(slide\) {([\s\S]*?)return `<div class="slide/);
+  const renderMatch = content.match(/function renderSlide\([^)]*\) {([\s\S]*?)return `<div class="slide/);
 
   if (renderMatch) {
     const renderBody = renderMatch[1];
