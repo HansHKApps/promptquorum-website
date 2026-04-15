@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Local LLM Frontends 2026 | PromptQuorum</title>
+    <meta name="description" content="Compare 8 local LLM frontends: Open WebUI (25k stars, RAG), Enchanted UI (fastest), Jan AI (desktop), Continue.dev (code). Feature comparison slide deck." />
+    <meta property="og:title" content="Best Local LLM Frontends 2026 — PromptQuorum" />
+    <meta property="og:description" content="Compare 8 local LLM frontends across features, setup time, and use cases." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/best-local-llm-frontends" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+            position: relative;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/best-local-llm-frontends";
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Best Local LLM Frontends 2026</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/best-local-llm-frontends">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides injected by JS -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+    const CONTENT = {
+      en: {
+        title: 'Best Local LLM Frontends 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Best Local LLM Frontends 2026',
+            subtitle: 'Compare 8 frontends: Open WebUI, Enchanted UI, Jan AI, Continue.dev &amp; more',
+            link: 'https://www.promptquorum.com/local-llms/best-local-llm-frontends'
+          },
+          {
+            type: 'list',
+            h2: 'Key Takeaways',
+            items: [
+              'A local LLM frontend is the chat UI — Ollama provides the API, the frontend is the interface.',
+              '<strong>Open WebUI:</strong> Most feature-rich (RAG, multimodal, teams). Docker required. 12 GB RAM+.',
+              '<strong>Enchanted UI:</strong> Fastest and minimal. Zero dependencies, runs in your browser.',
+              '<strong>Jan AI:</strong> Desktop app (Windows/macOS) with offline sync. No server setup.',
+              '<strong>Continue.dev:</strong> VS Code extension for inline code suggestions from your local model.',
+              'As of April 2026, all top frontends are open-source and free.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Top 8 Frontends: At a Glance',
+            columns: ['Frontend', 'Type', 'Best For', 'Setup Time'],
+            rows: [
+              { Frontend: 'Open WebUI', Type: 'Web (Docker)', 'Best For': 'RAG, teams', 'Setup Time': '5 min' },
+              { Frontend: 'Enchanted UI', Type: 'Web (no deps)', 'Best For': 'Speed, simplicity', 'Setup Time': '0 min' },
+              { Frontend: 'Jan AI', Type: 'Desktop app', 'Best For': 'Offline, non-technical', 'Setup Time': '3 min' },
+              { Frontend: 'Continue.dev', Type: 'VS Code ext.', 'Best For': 'Code completion', 'Setup Time': '2 min' },
+              { Frontend: 'Lobe Chat', Type: 'Web app', 'Best For': 'Privacy, customization', 'Setup Time': '5 min' },
+              { Frontend: 'Gradio', Type: 'Python lib', 'Best For': 'Custom ML UIs', 'Setup Time': '5 min' },
+              { Frontend: 'Streamlit', Type: 'Python framework', 'Best For': 'Data scientists', 'Setup Time': '5 min' },
+              { Frontend: 'text-gen-webui', Type: 'Web (complex)', 'Best For': 'Advanced users', 'Setup Time': '15 min' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Open WebUI: Best Feature-Rich Frontend',
+            intro: '25,000+ GitHub stars. Docker required. 12 GB RAM+.',
+            items: [
+              '<strong>RAG:</strong> Upload PDFs and ask questions about them',
+              '<strong>Multimodal:</strong> Upload images and analyze them',
+              '<strong>Web search integration</strong> built in',
+              '<strong>Multi-user</strong> with authentication and admin controls',
+              '<strong>Model marketplace:</strong> browse and download models from the UI'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Enchanted UI &amp; Jan AI: Lightweight Options',
+            items: [
+              '<strong>Enchanted UI:</strong> single HTML file, zero installation, runs in browser',
+              '<strong>Enchanted UI:</strong> fastest response, minimal overhead, private by design',
+              '<strong>Jan AI:</strong> Windows/macOS desktop app, no configuration needed',
+              '<strong>Jan AI:</strong> offline-first, GPU+CPU fallback, extension marketplace',
+              'Both require 8 GB+ RAM and are free open source'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Continue.dev: Code Completions in VS Code',
+            items: [
+              'VS Code and JetBrains extension — connects to your local Ollama',
+              'Setup in 2 minutes: install extension → point to localhost:11434',
+              'Press Tab to accept inline completions as you type',
+              'Works with Qwen2.5-Coder 7B and Llama Code models',
+              'Zero code leaves your machine — private by design'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Choose the Right Tool',
+            line1: '<strong>Open WebUI:</strong> RAG + teams + multimodal — Docker required',
+            line2: '<strong>Enchanted UI:</strong> instant launch, minimal, best for everyday chat',
+            tip: 'All frontends share the same Ollama API — switch anytime without re-downloading models'
+          },
+          {
+            type: 'list',
+            h2: 'Self-Hosted vs Cloud Frontends',
+            items: [
+              '<strong>Choose self-hosted:</strong> sensitive data, zero API costs, offline use',
+              '<strong>Choose cloud</strong> (ChatGPT, Claude): best model quality, no infra management',
+              'Multiple frontends can run simultaneously — they share one Ollama instance',
+              'Switch frontends freely without re-downloading models',
+              '<strong>PromptQuorum:</strong> dispatch to both local and cloud APIs side-by-side'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Regional Context &amp; Compliance',
+            items: [
+              '<strong>EU / GDPR:</strong> All 8 frontends run on-premises — no data leaves your infrastructure',
+              '<strong>EU regulated sectors:</strong> Open WebUI with WEBUI_AUTH=true meets audit requirements',
+              '<strong>Japan (METI):</strong> Open WebUI version visible in Settings → About for compliance records',
+              '<strong>Japan:</strong> Qwen2.5 7B provides better Japanese tokenization in RAG',
+              '<strong>China (Data Security Law):</strong> on-premises deployment satisfies local data residency'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5 Common Mistakes to Avoid',
+            items: [
+              'Choosing the most feature-rich frontend when only basic chat is needed — Enchanted UI is faster',
+              'Not knowing you can switch frontends freely — all share the same Ollama instance',
+              'Running Open WebUI on 8 GB RAM without GPU — requires 12+ GB total',
+              'Ignoring model size + frontend overhead — do the math: model + frontend + OS = total RAM',
+              'Not starting Ollama as a background service before adding a frontend'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Common Questions',
+            faqs: [
+              { q: 'Can I run multiple frontends simultaneously?', a: 'Yes — all connect to the same Ollama API (localhost:11434). No extra VRAM used.' },
+              { q: 'Which frontend is best for RAG?', a: 'Open WebUI has the most mature RAG. Upload PDFs for document Q&amp;A.' },
+              { q: 'Do I need a frontend at all?', a: 'No. Ollama provides a REST API at localhost:11434 — use it directly from code.' },
+              { q: 'Which frontend works on Linux?', a: 'Open WebUI, Enchanted UI, Lobe Chat, and Gradio/Streamlit all work natively on Linux.' }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'More Questions',
+            faqs: [
+              { q: 'Can I host a frontend on a remote server?', a: 'Yes — run Ollama + Open WebUI (Docker) on a server; access from browser over HTTP.' },
+              { q: 'Which frontend uses the least RAM?', a: 'Enchanted UI — a single HTML file. Jan AI and Continue.dev add under 200 MB.' },
+              { q: 'Do these frontends work with LM Studio?', a: 'Yes — Open WebUI and Enchanted UI work with any OpenAI-compatible API including LM Studio localhost:1234.' },
+              { q: 'Which is best for a team of 5+ developers?', a: 'Open WebUI — multi-user auth, shared knowledge bases, admin controls. Needs 12+ GB RAM on server.' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'How to Get Started',
+            items: [
+              'Install Ollama: brew install ollama (macOS) or download from ollama.com',
+              'Start a model: ollama run llama3.2:3b (needs 3 GB RAM)',
+              'Instant chat: open enchanted.div.ai in your browser',
+              'Feature-rich: run Docker → docker run -d -p 3000:8080 open-webui',
+              'Code completions: install Continue.dev extension in VS Code',
+              'Desktop app: download Jan AI from jan.ai'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Compare Local + Cloud AI Side-by-Side',
+            body: 'PromptQuorum lets you send the same prompt to your local Ollama model and cloud APIs simultaneously — see which gives better answers.',
+            cta: 'Try PromptQuorum Free',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      de: {
+        title: 'Beste lokale LLM-Frontends 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Beste lokale LLM-Frontends 2026',
+            subtitle: '8 Frontends im Vergleich: Open WebUI, Enchanted UI, Jan AI, Continue.dev &amp; mehr',
+            link: 'https://www.promptquorum.com/local-llms/best-local-llm-frontends'
+          },
+          {
+            type: 'list',
+            h2: 'Zusammenfassung',
+            items: [
+              'Ein lokales LLM-Frontend ist die Chat-Oberfläche — Ollama liefert die API, das Frontend die Benutzeroberfläche.',
+              '<strong>Open WebUI:</strong> Funktionsreichstes (RAG, Multimodal, Teams). Docker erforderlich. 12 GB RAM+.',
+              '<strong>Enchanted UI:</strong> Schnellstes und minimalstes. Null Abhängigkeiten, läuft im Browser.',
+              '<strong>Jan AI:</strong> Desktop-App (Windows/macOS) mit Offline-Synchronisierung. Kein Server-Setup.',
+              '<strong>Continue.dev:</strong> VS Code-Erweiterung für Code-Vorschläge von Ihrem lokalen Modell.',
+              'Ab April 2026 sind alle Top-Frontends Open-Source und kostenlos.'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Top 8 Frontends: Übersicht',
+            columns: ['Frontend', 'Typ', 'Beste für', 'Setup-Zeit'],
+            rows: [
+              { Frontend: 'Open WebUI', Typ: 'Web (Docker)', 'Beste für': 'RAG, Teams', 'Setup-Zeit': '5 Min.' },
+              { Frontend: 'Enchanted UI', Typ: 'Web (keine Abhäng.)', 'Beste für': 'Geschwindigkeit', 'Setup-Zeit': '0 Min.' },
+              { Frontend: 'Jan AI', Typ: 'Desktop-App', 'Beste für': 'Offline, Einsteiger', 'Setup-Zeit': '3 Min.' },
+              { Frontend: 'Continue.dev', Typ: 'VS Code-Erw.', 'Beste für': 'Code-Vervollst.', 'Setup-Zeit': '2 Min.' },
+              { Frontend: 'Lobe Chat', Typ: 'Web-App', 'Beste für': 'Datenschutz', 'Setup-Zeit': '5 Min.' },
+              { Frontend: 'Gradio', Typ: 'Python-Bibliothek', 'Beste für': 'ML-Oberflächen', 'Setup-Zeit': '5 Min.' },
+              { Frontend: 'Streamlit', Typ: 'Python-Framework', 'Beste für': 'Data Scientists', 'Setup-Zeit': '5 Min.' },
+              { Frontend: 'text-gen-webui', Typ: 'Web (komplex)', 'Beste für': 'Fortgeschrittene', 'Setup-Zeit': '15 Min.' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Open WebUI: Bestes Feature-reiches Frontend',
+            intro: '25.000+ GitHub-Sterne. Docker erforderlich. 12 GB RAM+.',
+            items: [
+              '<strong>RAG:</strong> PDFs hochladen und Fragen stellen',
+              '<strong>Multimodal:</strong> Bilder hochladen und analysieren',
+              '<strong>Web-Suchintegration</strong> eingebaut',
+              '<strong>Multi-Benutzer</strong> mit Authentifizierung und Admin-Kontrollen',
+              '<strong>Modell-Marktplatz:</strong> Modelle direkt aus der Oberfläche laden'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Enchanted UI &amp; Jan AI: Leichtgewichtige Optionen',
+            items: [
+              '<strong>Enchanted UI:</strong> Einzelne HTML-Datei, keine Installation, läuft im Browser',
+              '<strong>Enchanted UI:</strong> Schnellste Reaktion, minimaler Overhead, privat',
+              '<strong>Jan AI:</strong> Windows/macOS Desktop-App, kein Setup erforderlich',
+              '<strong>Jan AI:</strong> Offline-First, GPU+CPU-Fallback, Erweiterungs-Marktplatz',
+              'Beide: 8 GB+ RAM, kostenlos und Open-Source'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Continue.dev: Code-Vervollständigung in VS Code',
+            items: [
+              'VS Code und JetBrains Erweiterung — verbindet sich mit Ihrem lokalen Ollama',
+              'Installation in 2 Minuten: Erweiterung installieren → auf localhost:11434 zeigen',
+              'Tab drücken für Inline-Vorschläge beim Tippen',
+              'Funktioniert mit Qwen2.5-Coder 7B und Llama Code Modellen',
+              'Kein Code verlässt Ihren Rechner — standardmäßig privat'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Das richtige Werkzeug wählen',
+            line1: '<strong>Open WebUI:</strong> RAG + Teams + Multimodal — Docker erforderlich',
+            line2: '<strong>Enchanted UI:</strong> Sofortiger Start, minimal, beste Chat-Option',
+            tip: 'Alle Frontends teilen dieselbe Ollama API — jederzeit ohne Re-Download wechselbar'
+          },
+          {
+            type: 'list',
+            h2: 'Selbst-gehostet vs. Cloud',
+            items: [
+              '<strong>Selbst-gehostet wählen:</strong> sensible Daten, keine API-Kosten, Offline-Nutzung',
+              '<strong>Cloud wählen</strong> (ChatGPT, Claude): beste Modellqualität, keine Infrastruktur',
+              'Mehrere Frontends können gleichzeitig laufen — teilen eine Ollama-Instanz',
+              'Frontend wechseln ohne Modelle neu zu laden',
+              '<strong>PromptQuorum:</strong> lokal und Cloud gleichzeitig testen'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Regionales Kontext &amp; Compliance',
+            items: [
+              '<strong>EU / DSGVO:</strong> Alle 8 Frontends laufen On-Premises — keine Daten verlassen die Infrastruktur',
+              '<strong>Regulierte EU-Sektoren:</strong> Open WebUI mit WEBUI_AUTH=true erfüllt Prüfanforderungen',
+              '<strong>BSI-Grundschutz:</strong> Lokal gehostete KI-Tools akzeptiert für risikoreiche Verarbeitung',
+              '<strong>Japan (METI):</strong> Open WebUI-Version in Einstellungen → Info für Compliance-Aufzeichnungen',
+              '<strong>China (Datensicherheitsgesetz):</strong> On-Premises-Bereitstellung erfüllt Datenanforderungen'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5 häufige Fehler vermeiden',
+            items: [
+              'Das funktionsreichste Frontend wählen, obwohl nur Chat benötigt wird — besser Enchanted UI',
+              'Nicht wissen, dass Sie Frontends frei wechseln können — alle teilen dieselbe Ollama-Instanz',
+              'Open WebUI auf 8 GB RAM ohne GPU betreiben — benötigt insgesamt 12+ GB',
+              'Modellgröße + Frontend-Overhead ignorieren — Gesamtrechnung: Modell + Frontend + OS',
+              'Ollama nicht als Hintergrunddienst starten, bevor ein Frontend hinzugefügt wird'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufige Fragen',
+            faqs: [
+              { q: 'Kann ich mehrere Frontends gleichzeitig betreiben?', a: 'Ja — alle verbinden sich mit derselben Ollama API. Kein zusätzlicher VRAM-Verbrauch.' },
+              { q: 'Welches Frontend eignet sich für RAG?', a: 'Open WebUI hat die ausgereifteste RAG-Implementierung. PDFs hochladen für Dokument-Q&amp;A.' },
+              { q: 'Brauche ich überhaupt ein Frontend?', a: 'Nein. Ollama stellt eine REST API unter localhost:11434 bereit — direkt per Code nutzbar.' },
+              { q: 'Welches Frontend funktioniert unter Linux?', a: 'Open WebUI, Enchanted UI, Lobe Chat und Gradio/Streamlit funktionieren nativ unter Linux.' }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Weitere Fragen',
+            faqs: [
+              { q: 'Kann ich ein Frontend auf einem Remote-Server hosten?', a: 'Ja — Ollama + Open WebUI (Docker) auf einem Server betreiben; per Browser über HTTP zugreifen.' },
+              { q: 'Welches Frontend verbraucht am wenigsten RAM?', a: 'Enchanted UI — eine einzelne HTML-Datei. Jan AI und Continue.dev fügen unter 200 MB hinzu.' },
+              { q: 'Funktionieren diese Frontends mit LM Studio?', a: 'Ja — Open WebUI und Enchanted UI funktionieren mit jeder OpenAI-kompatiblen API inkl. LM Studio localhost:1234.' },
+              { q: 'Welches eignet sich für ein Team von 5+ Entwicklern?', a: 'Open WebUI — Multi-Benutzer-Auth, geteilte Knowledge Bases, Admin-Kontrollen. 12+ GB RAM erforderlich.' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'So fangen Sie an',
+            items: [
+              'Ollama installieren: brew install ollama (macOS) oder von ollama.com herunterladen',
+              'Modell starten: ollama run llama3.2:3b (benötigt 3 GB RAM)',
+              'Sofortiger Chat: enchanted.div.ai im Browser öffnen',
+              'Funktionsreich: Docker → docker run -d -p 3000:8080 open-webui',
+              'Code-Vorschläge: Continue.dev Erweiterung in VS Code installieren',
+              'Desktop-App: Jan AI von jan.ai herunterladen'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Lokal + Cloud KI im Vergleich',
+            body: 'Mit PromptQuorum können Sie dieselbe Anfrage gleichzeitig an Ihr lokales Ollama-Modell und Cloud-APIs senden — und die Ergebnisse direkt vergleichen.',
+            cta: 'PromptQuorum kostenlos testen',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      fr: {
+        title: 'Meilleures interfaces LLM locales 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Meilleures interfaces LLM locales 2026',
+            subtitle: 'Comparez 8 interfaces : Open WebUI, Enchanted UI, Jan AI, Continue.dev &amp; autres',
+            link: 'https://www.promptquorum.com/local-llms/best-local-llm-frontends'
+          },
+          {
+            type: 'list',
+            h2: 'Points clés',
+            items: [
+              "Une interface LLM locale est la fenêtre de chat — Ollama fournit l'API, l'interface est l'UI.",
+              "<strong>Open WebUI :</strong> Plus complète (RAG, multimodal, équipes). Docker requis. 12 Go RAM+.",
+              '<strong>Enchanted UI :</strong> La plus rapide et minimale. Aucune dépendance, fonctionne dans le navigateur.',
+              '<strong>Jan AI :</strong> Application bureau (Windows/macOS) avec synchronisation hors ligne. Aucun serveur requis.',
+              '<strong>Continue.dev :</strong> Extension VS Code pour des suggestions de code depuis votre modèle local.',
+              "En avril 2026, toutes les interfaces populaires sont open source et gratuites."
+            ]
+          },
+          {
+            type: 'table',
+            h2: "Top 8 interfaces : Vue d'ensemble",
+            columns: ['Interface', 'Type', 'Meilleur pour', 'Config.'],
+            rows: [
+              { Interface: 'Open WebUI', Type: 'Web (Docker)', 'Meilleur pour': 'RAG, équipes', 'Config.': '5 min' },
+              { Interface: 'Enchanted UI', Type: 'Web (sans dép.)', 'Meilleur pour': 'Rapidité', 'Config.': '0 min' },
+              { Interface: 'Jan AI', Type: 'App bureau', 'Meilleur pour': 'Hors ligne', 'Config.': '3 min' },
+              { Interface: 'Continue.dev', Type: 'Ext. VS Code', 'Meilleur pour': 'Complétion code', 'Config.': '2 min' },
+              { Interface: 'Lobe Chat', Type: 'Web app', 'Meilleur pour': 'Confidentialité', 'Config.': '5 min' },
+              { Interface: 'Gradio', Type: 'Lib. Python', 'Meilleur pour': 'UI ML custom', 'Config.': '5 min' },
+              { Interface: 'Streamlit', Type: 'Framework Python', 'Meilleur pour': 'Data scientists', 'Config.': '5 min' },
+              { Interface: 'text-gen-webui', Type: 'Web (complexe)', 'Meilleur pour': 'Utilisateurs avancés', 'Config.': '15 min' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Open WebUI : Meilleure interface complète',
+            intro: "25 000+ étoiles GitHub. Docker requis. 12 Go de RAM+.",
+            items: [
+              '<strong>RAG :</strong> Importez des PDF et posez des questions à leur sujet',
+              '<strong>Multimodal :</strong> Importez des images et analysez-les',
+              '<strong>Recherche web intégrée</strong> nativement',
+              '<strong>Multi-utilisateurs</strong> avec authentification et contrôles admin',
+              '<strong>Marketplace de modèles :</strong> parcourez et téléchargez depuis l\'UI'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Enchanted UI &amp; Jan AI : Options légères',
+            items: [
+              '<strong>Enchanted UI :</strong> fichier HTML unique, sans installation, fonctionne dans le navigateur',
+              '<strong>Enchanted UI :</strong> réponse la plus rapide, overhead minimal, privé',
+              '<strong>Jan AI :</strong> application bureau Windows/macOS, aucune configuration requise',
+              "<strong>Jan AI :</strong> hors ligne en premier, fallback GPU+CPU, marketplace d'extensions",
+              'Les deux : 8 Go+ de RAM, gratuits et open source'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Continue.dev : Complétion de code dans VS Code',
+            items: [
+              'Extension VS Code et JetBrains — se connecte à votre Ollama local',
+              'Installation en 2 minutes : installer l\'extension → pointer sur localhost:11434',
+              'Appuyez sur Tab pour accepter les suggestions en ligne',
+              'Compatible avec Qwen2.5-Coder 7B et les modèles Llama Code',
+              'Aucun code ne quitte votre machine — privé par conception'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: 'Choisir le bon outil',
+            line1: '<strong>Open WebUI :</strong> RAG + équipes + multimodal — Docker requis',
+            line2: '<strong>Enchanted UI :</strong> lancement instantané, minimal, meilleur pour le chat',
+            tip: "Tous les frontends partagent la même API Ollama — changez quand vous voulez"
+          },
+          {
+            type: 'list',
+            h2: 'Auto-hébergé vs Cloud',
+            items: [
+              "<strong>Choisissez auto-hébergé :</strong> données sensibles, zéro coût API, utilisation hors ligne",
+              '<strong>Choisissez cloud</strong> (ChatGPT, Claude) : meilleure qualité de modèle, sans infra',
+              "Plusieurs interfaces peuvent fonctionner simultanément — elles partagent une instance Ollama",
+              "Changez d'interface sans re-télécharger les modèles",
+              '<strong>PromptQuorum :</strong> testez local et cloud côte à côte'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Contexte régional &amp; conformité',
+            items: [
+              "<strong>UE / RGPD :</strong> Les 8 interfaces s'exécutent sur site — aucune donnée ne quitte votre infrastructure",
+              '<strong>Secteurs réglementés UE :</strong> Open WebUI avec WEBUI_AUTH=true satisfait les exigences d\'audit',
+              '<strong>CNIL :</strong> les outils IA locaux sont recommandés pour les données professionnelles sensibles',
+              '<strong>Japon (METI) :</strong> version Open WebUI visible dans Paramètres → À propos pour conformité',
+              "<strong>Chine (Loi sur la sécurité des données) :</strong> déploiement sur site satisfait les exigences locales"
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '5 erreurs courantes à éviter',
+            items: [
+              "Choisir l'interface la plus complète alors que vous avez besoin d'un simple chat — préférez Enchanted UI",
+              'Ignorer que vous pouvez changer d\'interface librement — toutes partagent la même instance Ollama',
+              'Faire tourner Open WebUI sur 8 Go de RAM sans GPU — nécessite 12+ Go au total',
+              "Négliger taille du modèle + overhead de l'interface — total : modèle + interface + OS",
+              "Ne pas démarrer Ollama comme service en arrière-plan avant d'ajouter une interface"
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions fréquentes',
+            faqs: [
+              { q: 'Puis-je utiliser plusieurs interfaces simultanément ?', a: 'Oui — toutes se connectent à la même API Ollama. Pas de VRAM supplémentaire.' },
+              { q: 'Quelle interface est la meilleure pour le RAG ?', a: "Open WebUI a l'implémentation RAG la plus mature. Importez des PDF pour des Q&amp;A sur documents." },
+              { q: "Ai-je besoin d'une interface ?", a: "Non. Ollama expose une API REST sur localhost:11434 — utilisable directement depuis le code." },
+              { q: 'Quelle interface fonctionne sur Linux ?', a: 'Open WebUI, Enchanted UI, Lobe Chat et Gradio/Streamlit fonctionnent nativement sur Linux.' }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Autres questions',
+            faqs: [
+              { q: 'Puis-je héberger une interface sur un serveur distant ?', a: "Oui — Ollama + Open WebUI (Docker) sur un serveur ; accès depuis le navigateur via HTTP." },
+              { q: 'Quelle interface utilise le moins de RAM ?', a: "Enchanted UI — un fichier HTML unique. Jan AI et Continue.dev ajoutent moins de 200 Mo." },
+              { q: 'Ces interfaces fonctionnent-elles avec LM Studio ?', a: 'Oui — Open WebUI et Enchanted UI fonctionnent avec toute API OpenAI-compatible, y compris LM Studio localhost:1234.' },
+              { q: 'Quelle est la meilleure pour une équipe de 5+ développeurs ?', a: 'Open WebUI — auth multi-utilisateurs, bases de connaissances partagées, contrôles admin. 12+ Go RAM requis.' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: 'Comment démarrer',
+            items: [
+              "Installez d'abord Ollama : brew install ollama (macOS) ou depuis ollama.com",
+              'Lancez un modèle : ollama run llama3.2:3b (nécessite 3 Go de RAM)',
+              'Chat instantané : ouvrez enchanted.div.ai dans votre navigateur',
+              'Interface complète : Docker → docker run -d -p 3000:8080 open-webui',
+              "Complétion de code : installez l'extension Continue.dev dans VS Code",
+              'Application bureau : téléchargez Jan AI depuis jan.ai'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Comparez IA locale + Cloud côte à côte',
+            body: "PromptQuorum vous permet d'envoyer la même question à votre modèle Ollama local et aux API cloud simultanément.",
+            cta: 'Essayer PromptQuorum gratuitement',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      ja: {
+        title: '2026年最高のローカルLLMフロントエンド',
+        slides: [
+          {
+            type: 'title',
+            h1: '2026年最高のローカルLLMフロントエンド',
+            subtitle: '8つのフロントエンド比較：Open WebUI、Enchanted UI、Jan AI、Continue.devほか',
+            link: 'https://www.promptquorum.com/local-llms/best-local-llm-frontends'
+          },
+          {
+            type: 'list',
+            h2: '重要ポイント',
+            items: [
+              'ローカルLLMフロントエンドはモデルとの対話UI — OllamaがAPIを提供し、フロントエンドがUIです。',
+              '<strong>Open WebUI：</strong>最も機能豊富（RAG、マルチモーダル、チーム）。Docker必要。12 GB RAM+。',
+              '<strong>Enchanted UI：</strong>最速・最小。依存関係なし、ブラウザで動作。',
+              '<strong>Jan AI：</strong>Windows/macOSデスクトップアプリ。オフライン同期。サーバー不要。',
+              '<strong>Continue.dev：</strong>VS Codeの拡張機能でローカルOllamaモデルからのインライン補完。',
+              '2026年4月現在、全トップフロントエンドはオープンソースで無料。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'トップ8フロントエンド一覧',
+            columns: ['フロントエンド', 'タイプ', '最適用途', '設定時間'],
+            rows: [
+              { 'フロントエンド': 'Open WebUI', 'タイプ': 'Web (Docker)', '最適用途': 'RAG、チーム', '設定時間': '5分' },
+              { 'フロントエンド': 'Enchanted UI', 'タイプ': 'Web (依存なし)', '最適用途': '高速・シンプル', '設定時間': '0分' },
+              { 'フロントエンド': 'Jan AI', 'タイプ': 'デスクトップ', '最適用途': 'オフライン', '設定時間': '3分' },
+              { 'フロントエンド': 'Continue.dev', 'タイプ': 'VS Code拡張', '最適用途': 'コード補完', '設定時間': '2分' },
+              { 'フロントエンド': 'Lobe Chat', 'タイプ': 'Webアプリ', '最適用途': 'プライバシー', '設定時間': '5分' },
+              { 'フロントエンド': 'Gradio', 'タイプ': 'Pythonライブラリ', '最適用途': 'カスタムML UI', '設定時間': '5分' },
+              { 'フロントエンド': 'Streamlit', 'タイプ': 'Pythonフレームワーク', '最適用途': 'データサイエンス', '設定時間': '5分' },
+              { 'フロントエンド': 'text-gen-webui', 'タイプ': 'Web (複雑)', '最適用途': '上級ユーザー', '設定時間': '15分' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Open WebUI：最高機能フロントエンド',
+            intro: 'GitHub 25,000+スター。Docker必要。12 GB RAM+。',
+            items: [
+              '<strong>RAG：</strong>PDFをアップロードして質問できる',
+              '<strong>マルチモーダル：</strong>画像をアップロードして分析',
+              '<strong>ウェブ検索統合</strong>が内蔵',
+              '<strong>マルチユーザー</strong>対応：認証・管理コントロール付き',
+              '<strong>モデルマーケットプレイス：</strong>UIから直接モデルをダウンロード'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Enchanted UI &amp; Jan AI：軽量オプション',
+            items: [
+              '<strong>Enchanted UI：</strong>単一HTMLファイル、インストール不要、ブラウザで動作',
+              '<strong>Enchanted UI：</strong>最速応答、最小オーバーヘッド、プライバシー設計',
+              '<strong>Jan AI：</strong>Windows/macOSデスクトップアプリ、設定不要',
+              '<strong>Jan AI：</strong>オフラインファースト、GPU+CPUフォールバック、拡張マーケット',
+              '両方：8 GB+ RAM、無料かつオープンソース'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Continue.dev：VS Codeでコード補完',
+            items: [
+              'VS CodeとJetBrains拡張機能 — ローカルOllamaに接続',
+              '2分でセットアップ：拡張機能インストール → localhost:11434を指定',
+              'Tabキーでインライン補完を受け入れ',
+              'Qwen2.5-Coder 7BやLlama Codeモデルに対応',
+              'コードはマシン外に出ない — プライバシー設計'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '適切なツールの選び方',
+            line1: '<strong>Open WebUI：</strong>RAG + チーム + マルチモーダル — Docker必要',
+            line2: '<strong>Enchanted UI：</strong>即時起動、最小構成、日常チャット最適',
+            tip: '全フロントエンドは同じOllama APIを共有 — モデル再ダウンロードなしにいつでも切り替え可能'
+          },
+          {
+            type: 'list',
+            h2: 'セルフホストvs. クラウド',
+            items: [
+              '<strong>セルフホストを選ぶ：</strong>機密データ、APIコストゼロ、オフライン利用',
+              '<strong>クラウドを選ぶ</strong>（ChatGPT、Claude）：最高モデル品質、インフラ管理不要',
+              '複数フロントエンドは同時に動作可能 — 1つのOllamaインスタンスを共有',
+              'フロントエンドはモデルの再ダウンロードなしに切り替え可能',
+              '<strong>PromptQuorum：</strong>ローカルとクラウドを並べて比較'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '地域コンテキスト &amp; コンプライアンス',
+            items: [
+              '<strong>EU / GDPR：</strong>全8フロントエンドはオンプレミスで動作 — データはインフラ外に出ない',
+              '<strong>日本（METI）：</strong>Open WebUIのバージョンは設定 → Aboutで確認できコンプライアンス記録に使用',
+              '<strong>日本企業：</strong>Qwen2.5 7BでRAGの日本語品質が向上',
+              '<strong>中国（データセキュリティ法）：</strong>オンプレミス展開で全フロントエンドが準拠',
+              '<strong>アジア太平洋：</strong>各地域のデータ居住要件に対応'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '避けるべき5つのよくある間違い',
+            items: [
+              'シンプルなチャットにも最多機能のフロントエンドを選ぶ — Enchanted UIで十分',
+              'フロントエンドを自由に切り替えられることを知らない — 全て同じOllamaを共有',
+              'GPUなし8 GB RAMでOpen WebUIを実行 — 合計12+ GB必要',
+              'モデルサイズ + フロントエンドオーバーヘッドを無視 — 合計：モデル + フロントエンド + OS',
+              'フロントエンド追加前にOllamaをバックグラウンドサービスとして起動しない'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'よくある質問',
+            faqs: [
+              { q: '複数のフロントエンドを同時に実行できますか？', a: 'はい — 全て同じOllama APIに接続。追加のVRAMは使用しません。' },
+              { q: 'RAGに最適なフロントエンドは？', a: 'Open WebUIが最も成熟したRAG実装。PDFをアップロードして文書Q&amp;Aが可能。' },
+              { q: 'フロントエンドは必要ですか？', a: '不要です。OllamaはlocalHost:11434にREST APIを提供 — コードから直接利用できます。' },
+              { q: 'Linuxで動作するフロントエンドは？', a: 'Open WebUI、Enchanted UI、Lobe Chat、Gradio/StreamlitがLinuxでネイティブに動作します。' }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'さらに質問',
+            faqs: [
+              { q: 'リモートサーバーでフロントエンドをホストできますか？', a: 'はい — サーバーでOllama + Open WebUI（Docker）を実行；ブラウザからHTTPでアクセス。' },
+              { q: '最もRAMを使わないフロントエンドは？', a: 'Enchanted UI — 単一HTMLファイル。Jan AIとContinue.devは200 MB未満の追加のみ。' },
+              { q: 'LM Studioでも使えますか？', a: 'はい — Open WebUIとEnchanted UIはLM Studio localhost:1234を含む全OpenAI互換APIで動作。' },
+              { q: '5+人の開発チームに最適なのは？', a: 'Open WebUI — マルチユーザー認証、共有ナレッジベース、管理コントロール。サーバーに12+ GB RAM必要。' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '始め方',
+            items: [
+              'まずOllamaをインストール：brew install ollama（macOS）またはollama.comから',
+              'モデルを起動：ollama run llama3.2:3b（3 GB RAM必要）',
+              '即時チャット：ブラウザでenchanted.div.aiを開く',
+              'フル機能：Docker → docker run -d -p 3000:8080 open-webui',
+              'コード補完：VS CodeにContinue.dev拡張機能をインストール',
+              'デスクトップアプリ：jan.aiからJan AIをダウンロード'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'ローカルとクラウドAIを並べて比較',
+            body: 'PromptQuorumを使えば、同じプロンプトをローカルOllamaモデルとクラウドAPIに同時に送信できます。',
+            cta: 'PromptQuorumを無料で試す',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      },
+
+      zh: {
+        title: '2026年最佳本地LLM前端',
+        slides: [
+          {
+            type: 'title',
+            h1: '2026年最佳本地LLM前端',
+            subtitle: '对比8个前端：Open WebUI、Enchanted UI、Jan AI、Continue.dev等',
+            link: 'https://www.promptquorum.com/local-llms/best-local-llm-frontends'
+          },
+          {
+            type: 'list',
+            h2: '核心要点',
+            items: [
+              '本地LLM前端是与模型交互的聊天界面 — Ollama提供API，前端提供UI。',
+              '<strong>Open WebUI：</strong>功能最丰富（RAG、多模态、团队协作）。需要Docker。推荐12 GB RAM+。',
+              '<strong>Enchanted UI：</strong>最快最简洁。零依赖，在浏览器中运行。',
+              '<strong>Jan AI：</strong>Windows/macOS桌面应用，支持离线同步，无需服务器。',
+              '<strong>Continue.dev：</strong>VS Code扩展，提供来自本地Ollama模型的内联代码补全。',
+              '截至2026年4月，所有顶级前端均开源免费。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '8大前端概览',
+            columns: ['前端', '类型', '最适合', '设置时间'],
+            rows: [
+              { '前端': 'Open WebUI', '类型': 'Web (Docker)', '最适合': 'RAG，团队', '设置时间': '5分钟' },
+              { '前端': 'Enchanted UI', '类型': 'Web (无依赖)', '最适合': '速度，简洁', '设置时间': '0分钟' },
+              { '前端': 'Jan AI', '类型': '桌面应用', '最适合': '离线，非技术用户', '设置时间': '3分钟' },
+              { '前端': 'Continue.dev', '类型': 'VS Code扩展', '最适合': '代码补全', '设置时间': '2分钟' },
+              { '前端': 'Lobe Chat', '类型': 'Web应用', '最适合': '隐私，自定义', '设置时间': '5分钟' },
+              { '前端': 'Gradio', '类型': 'Python库', '最适合': '自定义ML界面', '设置时间': '5分钟' },
+              { '前端': 'Streamlit', '类型': 'Python框架', '最适合': '数据科学家', '设置时间': '5分钟' },
+              { '前端': 'text-gen-webui', '类型': 'Web (复杂)', '最适合': '高级用户', '设置时间': '15分钟' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Open WebUI：最佳全功能前端',
+            intro: 'GitHub 25,000+星。需要Docker。12 GB RAM+。',
+            items: [
+              '<strong>RAG：</strong>上传PDF并提问',
+              '<strong>多模态：</strong>上传图片并分析',
+              '<strong>内置网络搜索集成</strong>',
+              '<strong>多用户支持</strong>：带身份验证和管理控制',
+              '<strong>模型市场：</strong>直接从UI浏览并下载模型'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Enchanted UI与Jan AI：轻量级选项',
+            items: [
+              '<strong>Enchanted UI：</strong>单个HTML文件，无需安装，在浏览器中运行',
+              '<strong>Enchanted UI：</strong>响应最快，开销最小，保护隐私',
+              '<strong>Jan AI：</strong>Windows/macOS桌面应用，无需配置',
+              '<strong>Jan AI：</strong>离线优先，GPU+CPU回退，扩展市场',
+              '两者：8 GB+ RAM，免费开源'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Continue.dev：VS Code代码补全',
+            items: [
+              'VS Code和JetBrains扩展 — 连接本地Ollama',
+              '2分钟设置：安装扩展 → 指向localhost:11434',
+              '按Tab接受内联补全',
+              '支持Qwen2.5-Coder 7B和Llama Code模型',
+              '代码不离开本机 — 隐私设计'
+            ]
+          },
+          {
+            type: 'comparison',
+            h2: '选择合适的工具',
+            line1: '<strong>Open WebUI：</strong>RAG + 团队 + 多模态 — 需要Docker',
+            line2: '<strong>Enchanted UI：</strong>即时启动，极简，最佳日常聊天选择',
+            tip: '所有前端共享同一Ollama API — 随时切换，无需重新下载模型'
+          },
+          {
+            type: 'list',
+            h2: '自托管vs云端',
+            items: [
+              '<strong>选择自托管：</strong>敏感数据、零API成本、离线使用',
+              '<strong>选择云端</strong>（ChatGPT、Claude）：最佳模型质量，无需管理基础设施',
+              '多个前端可同时运行 — 共享一个Ollama实例',
+              '切换前端无需重新下载模型',
+              '<strong>PromptQuorum：</strong>同时对比本地与云端'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '区域合规背景',
+            items: [
+              '<strong>EU / GDPR：</strong>全部8个前端在本地运行 — 无数据离开基础设施',
+              '<strong>中国（数据安全法）：</strong>本地部署满足数据本地化要求，Open WebUI配合Qwen2.5 14B优化中文RAG',
+              '<strong>亚太地区：</strong>本地部署满足跨境数据传输合规要求',
+              '<strong>日本（METI）：</strong>Open WebUI版本信息可用于合规记录',
+              '<strong>企业部署：</strong>金融、医疗、法律等行业可通过本地部署满足监管要求'
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '避免5个常见错误',
+            items: [
+              '选择功能最多的前端，即使只需基本聊天 — 用Enchanted UI就够了',
+              '不知道可以自由切换前端 — 所有前端共享同一Ollama实例',
+              '在8 GB无GPU机器上运行Open WebUI — 总计需要12+ GB',
+              '忽略模型大小 + 前端开销 — 总计：模型 + 前端 + 系统',
+              '添加前端前未将Ollama作为后台服务启动'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '常见问题',
+            faqs: [
+              { q: '可以同时运行多个前端吗？', a: '可以 — 所有前端连接同一个Ollama API，不会额外消耗VRAM。' },
+              { q: '哪个前端最适合RAG？', a: 'Open WebUI的RAG实现最成熟。上传PDF即可进行文档问答。' },
+              { q: '我需要前端吗？', a: '不需要。Ollama在localhost:11434提供REST API，可直接从代码调用。' },
+              { q: '哪个前端支持Linux？', a: 'Open WebUI、Enchanted UI、Lobe Chat、Gradio/Streamlit均原生支持Linux。' }
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '更多问题',
+            faqs: [
+              { q: '可以在远程服务器上托管前端吗？', a: '可以 — 在服务器上运行Ollama + Open WebUI（Docker），通过HTTP从浏览器访问。' },
+              { q: '哪个前端RAM占用最少？', a: 'Enchanted UI — 单个HTML文件。Jan AI和Continue.dev额外占用不超过200 MB。' },
+              { q: '这些前端支持LM Studio吗？', a: '支持 — Open WebUI和Enchanted UI兼容所有OpenAI格式API，包括LM Studio localhost:1234。' },
+              { q: '5+人开发团队选哪个？', a: 'Open WebUI — 多用户认证、共享知识库、管理控制。服务器需要12+ GB RAM。' }
+            ]
+          },
+          {
+            type: 'numbered',
+            h2: '如何开始',
+            items: [
+              '首先安装Ollama：brew install ollama（macOS）或从ollama.com下载',
+              '启动模型：ollama run llama3.2:3b（需要3 GB RAM）',
+              '即时聊天：在浏览器中打开enchanted.div.ai',
+              '全功能：Docker → docker run -d -p 3000:8080 open-webui',
+              '代码补全：在VS Code中安装Continue.dev扩展',
+              '桌面应用：从jan.ai下载Jan AI'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '并排对比本地与云端AI',
+            body: 'PromptQuorum让您将同一提示同时发送到本地Ollama模型和云端API，直接比较结果。',
+            cta: '免费试用PromptQuorum',
+            href: 'https://www.promptquorum.com'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      const articleUrl = 'https://www.promptquorum.com/local-llms/best-local-llm-frontends?lang=' + lang;
+      let html = '';
+      const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+            <h1>${slide.h1}</h1>
+            <p>${slide.subtitle}</p>
+            <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+              <a href="${slide.link}">${slide.link.replace('https://www.promptquorum.com/', '')}</a>
+            </p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p>${slide.intro}</p>`;
+          html += '<ul style="font-size: 1.1em; margin-top: 16px;">';
+          slide.items.forEach(item => { html += `<li>${item}</li>`; });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'table':
+          html = `<h2>${slide.h2}</h2><table><tr>`;
+          slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => { html += `<td>${row[col] || ''}</td>`; });
+            html += '</tr>';
+          });
+          html += '</table>';
+          html += footerLink;
+          break;
+
+        case 'comparison':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 36px; font-size: 1.4em;">${slide.line1}</p>
+            <p style="font-size: 1.4em; margin-top: 12px;">${slide.line2}</p>
+            <p style="margin-top: 36px; font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'numbered':
+          html = `<h2>${slide.h2}</h2><ol style="font-size: 1.1em; margin-top: 16px; text-align: left; max-width: 640px;">`;
+          slide.items.forEach(item => { html += `<li style="margin-bottom: 10px;">${item}</li>`; });
+          html += '</ol>';
+          html += footerLink;
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 16px; text-align: left; max-width: 640px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+          });
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 24px; max-width: 600px;">${slide.body}</p>
+            <a href="${slide.href}" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1em;">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
+    const articleUrl = 'https://www.promptquorum.com/local-llms/best-local-llm-frontends?lang=' + lang;
+
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href = 'https://www.promptquorum.com/local-llms/best-local-llm-frontends?lang=' + lang;
+
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      else currentSlide = n;
+      slides.forEach(s => s.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) { showSlide(currentSlide + n); }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(s => { s.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(s => { s.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    if (isPrint) {
+      window.addEventListener('load', () => { window.print(); });
+    }
+
+    showSlide(0);
+    </script>
+</body>
+</html>
