@@ -17975,6 +17975,345 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
       },
     },
+    ja: {
+      theme: 'ツール & インターフェース',
+      title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推論エンジン比較',
+      seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
+      intro: 'Text-Generation-WebUI、vLLM、llama.cpp は、ローカル LLM を実行するための 3 つの人気のある推論エンジンです。各エンジンは異なるユースケースに最適化されています。llama.cpp は最軽量で Ollama を駆動；vLLM は高スループット本番環境 API に最速；Text-Generation-WebUI は実験用に最も機能豊富です。2026 年 4 月時点で、vLLM は本番デプロイメントを主導し、llama.cpp はコンシューマーデバイスを主導し、Text-Generation-WebUI は研究・ファインチューニングワークフローを主導しています。',
+      metaDescription: 'vLLM が本番環境を主導（最高スループット）。llama.cpp が Ollama を駆動（最軽量）。Text-Generation-WebUI は研究に最適。2026年推論エンジン比較。',
+      publishDate: '2026-04-04',
+      readTime: '13分で読める',
+      educationalLevel: 'Advanced',
+      primaryTerm: '推論エンジン',
+      toc: [
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: '推論エンジンとは何か？', anchor: '#what-is-inference-engine' },
+        { label: '機能比較表', anchor: '#feature-comparison' },
+        { label: 'llama.cpp を理解する', anchor: '#understanding-llama-cpp' },
+        { label: 'vLLM を理解する', anchor: '#understanding-vllm' },
+        { label: 'Text-Generation-WebUI を理解する', anchor: '#understanding-text-generation-webui' },
+        { label: 'パフォーマンス：1秒あたりのトークン', anchor: '#performance-tokens-per-second' },
+        { label: '本番環境デプロイメント', anchor: '#production-deployments' },
+        { label: '各エンジンを選ぶべき時', anchor: '#when-to-use-each' },
+        { label: '地域別推論エンジンの選択', anchor: '#inference-engine-choice-by-region' },
+        { label: 'よくある間違い', anchor: '#common-mistakes' },
+        { label: 'よくある質問', anchor: '#common-questions' },
+        { label: '関連リソース', anchor: '#related-reading' },
+        { label: 'ソース', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '推論エンジンは、モデルファイルをロードしてトークンを生成する C/C++/Python ソフトウェアです。UI または API レイヤーとは別です。',
+            '**llama.cpp** = 軽量、CPU 効率、Ollama を駆動。最適な場合：コンシューマーノートパソコン、シングルユーザー、ゼロ依存。',
+            '**vLLM** = 本番環境対応、GPU スループット最大、バッチ処理と分散推論をサポート。最適な場合：API サーバー、マルチユーザー、高スループット。',
+            '**Text-Generation-WebUI** = 機能豊富な実験ツール、Web UI 組込。最適な場合：ファインチューニング、LoRA テスト、高度な設定調整。',
+            '2026 年 4 月時点で、vLLM は本番環境利用を主導、llama.cpp はコンシューマー利用を主導、Text-Generation-WebUI は研究・ファインチューニングを主導。',
+          ],
+        },
+        whatIsInferenceEngine: {
+          title: '推論エンジンとは何か？',
+          content: [
+            '推論エンジンは、事前学習済みモデルファイルをロードし、テキスト生成に必要な数学演算を実行するソフトウェアコンポーネントです。チャットインターフェース（Open WebUI など）や API レイヤー（Ollama の REST API など）とは異なります。',
+            'ローカル LLM デプロイメントは 3 つのレイヤーで構成：',
+            '1. **モデルファイル**（例：llama-3.1-8b.gguf）— ニューラルネットワークの重み。',
+            '2. **推論エンジン**（例：llama.cpp、vLLM）— モデルをロードしてトークンを生成。',
+            '3. **インターフェースまたは API**（例：REST API、Web チャット、VS Code 拡張）— エンジンと相互作用。',
+            'Ollama は本質的に llama.cpp のラッパーで OpenAI 互換 API を提供。vLLM は組込 UI なしの推論エンジン。Text-Generation-WebUI は組込 Web UI 付き推論エンジン。',
+          ],
+        },
+        featureComparison: {
+          title: '機能比較：llama.cpp vs vLLM vs Text-Generation-WebUI',
+          rows: [
+            { '機能': 'タイプ', 'llama.cpp': 'C++ ライブラリ（軽量）', 'vLLM': 'Python フレームワーク（本番環境）', 'Text-Gen-WebUI': 'Python アプリ（実験）' },
+            { '機能': 'GPU サポート', 'llama.cpp': 'NVIDIA、AMD、Apple Metal', 'vLLM': 'NVIDIA のみ（最高サポート）', 'Text-Gen-WebUI': 'NVIDIA、AMD、CPU' },
+            { '機能': 'CPU 推論', 'llama.cpp': '優秀', 'vLLM': '不良', 'Text-Gen-WebUI': '良好' },
+            { '機能': 'スループット（トークン/秒）', 'llama.cpp': '中程度（1–100）', 'vLLM': '非常に高い（100–1000+）', 'Text-Gen-WebUI': '中程度（1–100）' },
+            { '機能': 'バッチサポート', 'llama.cpp': '限定的', 'vLLM': '完全（100+ バッチ）', 'Text-Gen-WebUI': '限定的' },
+            { '機能': '組込 Web UI', 'llama.cpp': 'いいえ', 'vLLM': 'いいえ', 'Text-Gen-WebUI': 'はい' },
+            { '機能': 'LoRA ファインチューニング', 'llama.cpp': '直接ではない', 'vLLM': '限定的', 'Text-Gen-WebUI': '組込' },
+            { '機能': '量子化形式', 'llama.cpp': 'GGUF、GGML', 'vLLM': '完全精度、8 ビット、4 ビット', 'Text-Gen-WebUI': 'GGUF、safetensors、fp16' },
+            { '機能': 'セットアップ難易度', 'llama.cpp': 'Ollama 経由（簡単）', 'vLLM': 'pip install（中程度）', 'Text-Gen-WebUI': 'GitHub クローン（中程度）' },
+            { '機能': '価格', 'llama.cpp': '無料', 'vLLM': '無料', 'Text-Gen-WebUI': '無料' },
+          ],
+          columns: ['機能', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+        },
+        llamacpp: {
+          title: 'llama.cpp を理解する：基盤',
+          content: [
+            'llama.cpp は LLM 推論の C++ 実装で、Meta の Llama モデルを GPU アクセラレーションなしでコンシューマーハードウェアで実行するために元々記述されました。2026 年 4 月時点で、最も軽量でポータブルな推論エンジンです。',
+            '**llama.cpp がコンシューマー利用を支配する理由：**',
+            '- メモリオーバーヘッド最小 — CPU のみで 8GB RAM で実行可能。',
+            '- 複数の GPU バックエンド（NVIDIA、AMD、Apple Metal、Intel）をサポート。',
+            '- GGUF 形式：70B モデルを 20–40GB に圧縮する量子化モデル形式。',
+            '- Ollama を内部的に駆動 — Ollama を実行するたびに llama.cpp を使用。',
+            'llama.cpp は完全なアプリケーションではなく、ライブラリです。Ollama を通じて相互作用（最一般的）するか、それを統合する他のツール経由で相互作用します。',
+          ],
+        },
+        vllm: {
+          title: 'vLLM を理解する：本番環境標準',
+          content: [
+            'vLLM は GPU クラスター上の高スループット推論用に設計された Python フレームワーク。バッチ処理、分散推論、高度なスケジューリングのサポートで API 経由のモデル提供を最適化。',
+            '**vLLM が本番環境を支配する理由：**',
+            '- **ページングアテンション**：vLLM は GPU 使用率を約 20% から 70% に改善する新規メモリレイアウトを使用、スループットを劇的に増加。',
+            '- **バッチ処理**：50–100 プロンプトを同時処理、GPU あたりより多くのユーザーにサービス。',
+            '- **分散推論**：70B モデルを複数 GPU 間で自動的に分割。',
+            '- **広いモデルサポート**：任意の HuggingFace モデルで動作（Llama、Qwen、Mistral、Phi など）。',
+            '2026 年 4 月時点で、企業内の本番環境ローカル LLM デプロイメントの大多数が vLLM を使用。トレードオフは vLLM が NVIDIA GPU を必須とすること；CPU パフォーマンスは不良。',
+          ],
+          codeBlock: '# vLLM をインストール\npip install vllm\n\n# API 経由でモデルを実行\nvllm serve meta-llama/Llama-3.1-8B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# http://localhost:8000/v1/completions でアクセス可能',
+          codeLanguage: 'bash',
+        },
+        textGenerationWebUI: {
+          title: 'Text-Generation-WebUI を理解する：研究者のツール',
+          content: [
+            'Text-Generation-WebUI（oobabooga とも呼ばれる）は、モデル実験用の Web インターフェース付き完全機能の Python アプリケーション。ファインチューニング、LoRA トレーニング、埋め込み生成、高度なプロンプトテストの組込ツールと推論を組み合わせ。',
+            '**研究者が Text-Generation-WebUI を使用する理由：**',
+            '- **LoRA ファインチューニング組込**：外部トレーニングスクリプト不要でベースモデル上にカスタム LoRA アダプタをトレーニング。',
+            '- **複数推論エンジン**：llama.cpp、GPTQ、exllama など他バックエンド間で切り替え可能。',
+            '- **キャラクターロールプレイ**：キャラクターペルソナ作成とテスト用組込システム。',
+            '- **API 露出**：プログラム的利用用に FastAPI インターフェース露出。',
+            '- **拡張機能エコシステム**：カスタムワークフロー用コミュニティ構築拡張機能。',
+            'Text-Generation-WebUI は本番環境サーバーというより研究・実験ツール。セットアップはより複雑（GitHub クローンと Python 依存管理が必要）ですが、実行開始後は開発に極めて強力。',
+          ],
+        },
+        performance: {
+          title: 'パフォーマンス：各エンジンはどの程度高速か？',
+          content: [
+            'スループット（1秒あたりのトークン）はモデルサイズ、ハードウェア、エンジン最適化に依存。2026 年 4 月時点で、コンシューマーハードウェア上の実世界ベンチマーク：',
+          ],
+          rows: [
+            { 'シナリオ': 'Llama 3.1 8B on RTX 4090（GPU）', 'llama.cpp': '150 トークン/秒', 'vLLM': '300 トークン/秒（バッチ処理時）', 'Text-Gen-WebUI': '150 トークン/秒' },
+            { 'シナリオ': 'Llama 3.1 8B on 8 コア CPU', 'llama.cpp': '5 トークン/秒', 'vLLM': '0.5 トークン/秒（使用不可）', 'Text-Gen-WebUI': '4 トークン/秒' },
+            { 'シナリオ': 'Llama 3.1 70B on 2× RTX 4090', 'llama.cpp': '20 トークン/秒（単一 GPU）', 'vLLM': '100 トークン/秒（分散）', 'Text-Gen-WebUI': '20 トークン/秒' },
+            { 'シナリオ': 'Phi-3 3.8B on M4 MacBook Pro', 'llama.cpp': '30 トークン/秒', 'vLLM': 'N/A（Metal サポートなし）', 'Text-Gen-WebUI': '25 トークン/秒' },
+          ],
+          columns: ['シナリオ', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+        },
+        productionDeployments: {
+          title: '本番環境デプロイメント用のエンジン',
+          content: [
+            '**vLLM は 2026 年 4 月時点の本番環境標準。** ローカル LLM API を本番環境で実行する企業のほとんどが、スループット最適化とバッチ処理サポートのため vLLM を使用。単一 vLLM インスタンスは GPU 1 個あたり 50+ 同時ユーザーにサービス可能、llama.cpp の 1–2 に対し。',
+            'ただし、本番環境選択は制約に依存：',
+            '- **GPU 限定で 100+ 要求/日をサービス**：vLLM を使用（最高スループット）。',
+            '- **CPU のみまたは Apple Silicon でサービス**：Ollama 経由 llama.cpp を使用（最高 CPU サポート）。',
+            '- **Llama モデル具体的に使用**：llama.cpp または vLLM が動作；vLLM がより高速。',
+            '- **多様なモデル形式（GPTQ、GGUF、safetensors）を使用**：Text-Generation-WebUI はすべてサポート；vLLM は完全精度または特定量子化形式が必須。',
+          ],
+        },
+        whenToUse: {
+          title: '各エンジンを選ぶべき時',
+          content: 'この決定フレームワークを使用：',
+          items: [
+            '**llama.cpp（Ollama 経由）**：コンシューマー、非開発者、または CPU/Apple Silicon にデプロイ。全体的なユーザビリティ最高。',
+            '**vLLM**：50+ 同時ユーザーで API をサービス、NVIDIA GPU があり、最高スループットが必要。本番環境標準。',
+            '**Text-Generation-WebUI**：モデルをファインチューニング、LoRA アダプタをテスト、または高度な推論設定を実験。研究用途最適。',
+          ],
+        },
+        regionalContext: {
+          title: '地域別推論エンジン選択',
+          content: [
+            '推論エンジンの選択は地域的コンプライアンスと異なる規制管轄区域全体の企業デプロイメントに直接的な含意。',
+          ],
+          items: [
+            '**日本（METI）**：METI AI ガバナンス 2024 は推論インフラストラクチャのドキュメント化を要求。vLLM の構造化 Prometheus メトリクス（/metrics エンドポイント）は llama.cpp の stdout ログより監査証跡要件をより満たしやすい。日本企業デプロイメント用、Qwen2.5 7B via vLLM が推奨スタック — ネイティブ日本語トークン化と本番環境スループット。vLLM コマンド：`vllm serve Qwen/Qwen2.5-7B-Instruct`',
+            '**東アジア（データ越境）**：シンガポール、台湾、韓国、オーストラリア等での ASEAN/APAC データ居住要件により、vLLM 地域ローカルデプロイメントが標準。モデル管理の汎用性のため Qwen2.5 または Llama 3.1 推奨。APAC 規制フレームワーク（PDPC シンガポール、PIPA 台湾）と互換性あり。',
+            '**グローバル展開用**：エンタープライズ多地域デプロイメント時は、Mistral 7B Instruct の vLLM 実装を考慮。EU 基準を満たし、APAC 規制と互換性あり、NVIDIA どのリージョンでも利用可能。',
+          ],
+        },
+        commonMistakes: {
+          title: 'よくある間違い',
+          items: [
+            '**Ollama とこれらエンジン間の選択が必要と思う**。Ollama は内部的に llama.cpp を使用。Ollama vs vLLM を選択ではなく；vLLM は Ollama への代替*バックエンド*、チャットアプリではない。両者は異なる目的あり。',
+            '**vLLM が CPU で高速と想定**。vLLM は CPU パフォーマンスが不良；llama.cpp は CPU で 10 倍高速。vLLM を選ぶ前に GPU 可用性を確認。',
+            '**ノート PC GPU で vLLM を実行**。vLLM はデータセンター GPU（RTX 4090、A100）向けに最適化。コンシューマー GPU では、vLLM のバッチスケジューラーのオーバーヘッドが単一要求パフォーマンスを実際に低下可能。ノート PC では llama.cpp に留まる。',
+            '**推論スループットがユーザー体験レイテンシと同じと忘れる**。vLLM は 100 要求をバッチ処理可能でも、各要求は token 生成に時間要す。高スループットは低レイテンシを意味しない。',
+            '**Text-Generation-WebUI の依存性をインストール間違い**。GitHub 指示は Git、Python 3.10+、pip がインストール済みと仮定。Windows では多くサイレント失敗。クローン前に Python バージョンを常に検証。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: '推論エンジン切り替え時にモデルを変更する必要あるか？',
+              a: 'ほぼはい。GGUF 形式モデルファイルは llama.cpp（Ollama）と Text-Generation-WebUI で動作。vLLM は完全精度または特定量子化形式が必須。HuggingFace safetensors モデルは 3 つすべてで動作。',
+            },
+            {
+              q: 'Mac に最適なエンジンは？',
+              a: 'Ollama 経由 llama.cpp。Apple Silicon（M シリーズ）最適化に優秀。vLLM は Metal（Apple GPU）をサポートしないため CPU パフォーマンスは不良。Text-Generation-WebUI は Mac で動作しますが Ollama より遅い。',
+            },
+            {
+              q: 'vLLM は Ollama の一部か？',
+              a: 'いいえ。Ollama は内部的に llama.cpp を使用。vLLM は UC Berkeley による別の推論エンジン。異なる目的を果たす：Ollama はシンプルさ用；vLLM は本番環境スループット用。',
+            },
+            {
+              q: 'GPU なしで vLLM を使用可能か？',
+              a: '技術的にはい、ですが使用不可能に遅い。vLLM は GPU 用に設計。CPU のみデプロイメント向けには llama.cpp（Ollama）を使用。',
+            },
+            {
+              q: 'Text-Generation-WebUI は本番環境にスケール可能か？',
+              a: '非推奨。Text-Generation-WebUI は研究ツール、本番環境サーバーではない。本番環境サービスが必要とするロードバランシング、監視、分散推論機能を欠く。本番環境用に vLLM を使用。',
+            },
+            {
+              q: 'ページングアテンションとは何か、なぜ重要か？',
+              a: 'ページングアテンションは vLLM の OS 仮想メモリ概念を借用するメモリ管理システム。要求ごとに固定隣接 GPU メモリブロックを割り当てる代わりに、要求間で共有・再利用可能なページ単位でメモリ割り当て。GPU メモリ使用率を約 20% から 70% に改善、単純アテンション実装に対し 3–4 倍多くの同時ユーザーを vLLM でサービス可能。',
+            },
+            {
+              q: '8GB RAM のみの場合、どのエンジンを使用すべきか？',
+              a: 'Ollama 経由 llama.cpp。8GB RAM 合計で、Q4_K_M の 7B モデルは約 4.7GB 使用。llama.cpp は CPU で約 5 tok/秒、または専用 GPU で約 80 tok/秒で良好に処理。vLLM はより大幅なオーバーヘッド要し、コンシューマー RAM では不良パフォーマンス。',
+            },
+            {
+              q: '同じマシンで vLLM と Ollama を実行できるか？',
+              a: 'はい、VRAM が十分な場合。異なるポート（vLLM デフォルト：8000、Ollama デフォルト：11434）で実行。典型的な構成：Ollama が迅速シングルユーザーチャット要求を処理、vLLM がバッチ API 要求を処理。ただし、両者は同じモデルを同時にロードできず、VRAM を倍加させる。',
+            },
+          ],
+        },
+        relatedReading: {
+          title: '関連リソース',
+          items: [
+            '[Ollama をインストール方法](/local-llms/how-to-install-ollama?lang=ja) — 最も人気のある llama.cpp ラッパーをセットアップ。',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=ja) — 両者が推論エンジン使用；UI を比較。',
+            '[ローカル LLM OpenAI 互換 API](/local-llms/local-llm-openai-compatible-api?lang=ja) — vLLM と Ollama は両者が OpenAI 互換 API を露出。',
+            '[VS Code と Cursor のローカル LLM](/local-llms/local-llms-with-vscode-cursor?lang=ja) — 推論エンジンをエディタと統合。',
+            '[最良ローカル LLM フロントエンド](/local-llms/best-local-llm-frontends?lang=ja) — フロントエンドは推論エンジンの UI レイヤー。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'ソース',
+          items: [
+            'Gerganov, G. (2024). "llama.cpp GitHub." https://github.com/ggerganov/llama.cpp — C++ 推論エンジンソースコードと量子化ドキュメント。',
+            'vLLM Team. (2024). "vLLM GitHub." https://github.com/vllm-project/vllm — 本番環境推論エンジンソースコードと API サーバードキュメント。',
+            'Kwon et al. (2023). "Efficient Memory Management for Large Language Model Serving with PagedAttention." https://arxiv.org/abs/2309.06180 — ページングアテンション元の論文。',
+            'oobabooga. (2024). "Text-Generation-WebUI GitHub." https://github.com/oobabooga/text-generation-webui — ソースコードと Text-Generation-WebUI インストールガイド。',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推論エンジン比較',
+        'description': 'vLLM が本番環境を主導（最高スループット）。llama.cpp が Ollama を駆動（最軽量）。Text-Generation-WebUI は研究に最適。2026年推論エンジン比較。',
+        'url': 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=ja',
+        'inLanguage': 'ja',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-15',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'vLLM' },
+          { '@type': 'Thing', 'name': 'llama.cpp' },
+          { '@type': 'Thing', 'name': 'Text-Generation-WebUI' },
+          { '@type': 'Thing', 'name': 'LLM 推論エンジン' },
+          { '@type': 'Thing', 'name': 'ページングアテンション' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Advanced',
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
+        'inLanguage': 'ja',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'llama.cpp',
+            'description': 'C++ ライブラリ。CPU 優秀、GPU 良好。1-100 トークン/秒。GGUF 形式。Ollama を駆動。コンシューマーデバイスと CPU 推論用に最適。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'vLLM',
+            'description': 'Python フレームワーク。GPU のみ（NVIDIA）。バッチ処理時に 100-1000+ トークン/秒。完全精度と 8/4 ビット。50+ 同時ユーザーで本番環境 API サーバー用に最適。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Text-Generation-WebUI',
+            'description': '組込 Web UI 付き Python アプリ。CPU と GPU。1-100 トークン/秒。GGUF、safetensors、fp16。LoRA ファインチューニング組込。研究と実験用に最適。',
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ja',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '推論エンジン切り替え時にモデルを変更する必要あるか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ほぼはい。GGUF 形式モデルファイルは llama.cpp（Ollama）と Text-Generation-WebUI で動作。vLLM は完全精度または特定量子化形式が必須。HuggingFace safetensors モデルは 3 つすべてで動作。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Mac に最適なエンジンは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama 経由 llama.cpp。Apple Silicon（M シリーズ）最適化に優秀。vLLM は Metal（Apple GPU）をサポートしないため CPU パフォーマンスは不良。Text-Generation-WebUI は Mac で動作しますが Ollama より遅い。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'vLLM は Ollama の一部か？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。Ollama は内部的に llama.cpp を使用。vLLM は UC Berkeley による別の推論エンジン。異なる目的を果たす：Ollama はシンプルさ用；vLLM は本番環境スループット用。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GPU なしで vLLM を使用可能か？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '技術的にはい、ですが使用不可能に遅い。vLLM は GPU 用に設計。CPU のみデプロイメント向けには llama.cpp（Ollama）を使用。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Text-Generation-WebUI は本番環境にスケール可能か？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '非推奨。Text-Generation-WebUI は研究ツール、本番環境サーバーではない。本番環境サービスが必要とするロードバランシング、監視、分散推論機能を欠く。本番環境用に vLLM を使用。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ページングアテンションとは何か、なぜ重要か？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ページングアテンションは vLLM の OS 仮想メモリ概念を借用するメモリ管理システム。要求ごとに固定隣接 GPU メモリブロックを割り当てる代わりに、要求間で共有・再利用可能なページ単位でメモリ割り当て。GPU メモリ使用率を約 20% から 70% に改善。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '8GB RAM のみの場合、どのエンジンを使用すべきか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama 経由 llama.cpp。8GB RAM 合計で、Q4_K_M の 7B モデルは約 4.7GB 使用。llama.cpp は CPU で約 5 tok/秒、または専用 GPU で約 80 tok/秒で良好に処理。vLLM はより大幅なオーバーヘッド要し、コンシューマー RAM では不良パフォーマンス。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '同じマシンで vLLM と Ollama を実行できるか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、VRAM が十分な場合。異なるポート（vLLM デフォルト：8000、Ollama デフォルト：11434）で実行。典型的な構成：Ollama が迅速シングルユーザーチャット要求を処理、vLLM がバッチ API 要求を処理。ただし、両者は同じモデルを同時にロードできず、VRAM を倍加させる。',
+            },
+          },
+        ],
+      },
+    },
   },
 
   'local-llm-openai-compatible-api': {
