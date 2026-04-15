@@ -28813,6 +28813,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'ListItem', 'position': 3, 'name': 'Local LLM Hardware Guide 2026', 'item': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026' },
         ],
       },
+      gammaEmbedUrl: '/presentations/local-llm-hardware-guide-2026-static.html',
+      gammaDescription: 'The slide deck below covers: GPU VRAM tiers for 12/16/24 GB, best models per tier with VRAM usage and speed benchmarks, CPU-only inference on 16 GB RAM, and llama.cpp speed flags for RTX 4070 Ti. Download the PDF as a Local LLM Hardware Guide 2026 reference card.',
     },
     de: {
       theme: 'Hardware & Performance',
