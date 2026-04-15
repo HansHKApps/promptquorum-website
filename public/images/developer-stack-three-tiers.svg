@@ -1,0 +1,138 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Three-Tier Developer Stack
+  </text>
+
+  <!-- Tier 1: Ollama -->
+  <g>
+    <!-- Container -->
+    <rect x="50" y="70" width="200" height="240" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+
+    <!-- Header background -->
+    <rect x="50" y="70" width="200" height="50" rx="8" fill="#E8DEF8" stroke="#E8DEF8" stroke-width="0"/>
+
+    <!-- Tier label -->
+    <text x="150" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">
+      Tier 1
+    </text>
+    <text x="150" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F" text-anchor="middle">
+      Ollama + CLI
+    </text>
+
+    <!-- Content -->
+    <text x="65" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • Simple
+    </text>
+    <text x="65" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • 5 min setup
+    </text>
+    <text x="65" y="185" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • Solo dev
+    </text>
+    <text x="65" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • No code
+    </text>
+    <text x="65" y="225" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • Free
+    </text>
+
+    <!-- Footer -->
+    <text x="150" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="middle">
+      For casual chat
+    </text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g>
+    <line x1="250" y1="190" x2="310" y2="190" stroke="#6750A4" stroke-width="2.5"/>
+    <polygon points="310,190 300,185 305,190 300,195" fill="#6750A4"/>
+  </g>
+
+  <!-- Tier 2: vLLM + FastAPI -->
+  <g>
+    <!-- Container -->
+    <rect x="320" y="70" width="200" height="240" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+
+    <!-- Header background -->
+    <rect x="320" y="70" width="200" height="50" rx="8" fill="#E8DEF8" stroke="#E8DEF8" stroke-width="0"/>
+
+    <!-- Tier label -->
+    <text x="420" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">
+      Tier 2
+    </text>
+    <text x="420" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F" text-anchor="middle">
+      vLLM + FastAPI
+    </text>
+
+    <!-- Content -->
+    <text x="335" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • API server
+    </text>
+    <text x="335" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • 30 min setup
+    </text>
+    <text x="335" y="185" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • IDE compatible
+    </text>
+    <text x="335" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • 30–50 tok/s
+    </text>
+    <text x="335" y="225" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • Python 3.10+
+    </text>
+
+    <!-- Footer -->
+    <text x="420" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="middle">
+      For single developer
+    </text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g>
+    <line x1="520" y1="190" x2="580" y2="190" stroke="#6750A4" stroke-width="2.5"/>
+    <polygon points="580,190 570,185 575,190 570,195" fill="#6750A4"/>
+  </g>
+
+  <!-- Tier 3: Production -->
+  <g>
+    <!-- Container -->
+    <rect x="590" y="70" width="200" height="240" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Header background (highlighted) -->
+    <rect x="590" y="70" width="200" height="50" rx="8" fill="#E8DEF8" stroke="#E8DEF8" stroke-width="0"/>
+
+    <!-- Tier label -->
+    <text x="690" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">
+      Tier 3
+    </text>
+    <text x="690" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#49454F" text-anchor="middle">
+      Production Scale
+    </text>
+
+    <!-- Content -->
+    <text x="605" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • Multi-GPU
+    </text>
+    <text x="605" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • 2 hours setup
+    </text>
+    <text x="605" y="185" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • 50+ developers
+    </text>
+    <text x="605" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • 200+ tok/s
+    </text>
+    <text x="605" y="225" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F">
+      • Monitoring
+    </text>
+
+    <!-- Footer -->
+    <text x="690" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="middle">
+      For teams + 24/7
+    </text>
+  </g>
+</svg>

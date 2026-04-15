@@ -1,0 +1,151 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    Performance: Tokens/Second by Tier
+  </text>
+
+  <!-- Grid/Axes -->
+  <line x1="80" y1="280" x2="700" y2="280" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="80" y1="280" x2="80" y2="60" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Y-axis labels -->
+  <text x="70" y="287" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#79747E" text-anchor="end">
+    0
+  </text>
+  <text x="70" y="227" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#79747E" text-anchor="end">
+    50
+  </text>
+  <text x="70" y="167" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#79747E" text-anchor="end">
+    100
+  </text>
+  <text x="70" y="107" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#79747E" text-anchor="end">
+    150
+  </text>
+  <text x="70" y="67" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#79747E" text-anchor="end">
+    200+
+  </text>
+
+  <!-- Y-axis label -->
+  <text x="20" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle" transform="rotate(-90 20 170)">
+    Tokens/Second
+  </text>
+
+  <!-- Tier 1 Bar -->
+  <g>
+    <!-- Bar (Ollama CPU speed ~10 tok/s, let's use 15 for visibility) -->
+    <rect x="150" y="225" width="60" height="55" rx="4" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+
+    <!-- Value label -->
+    <text x="180" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">
+      15
+    </text>
+
+    <!-- Tier label -->
+    <text x="180" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+      Tier 1
+    </text>
+    <text x="180" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="middle">
+      Ollama
+    </text>
+  </g>
+
+  <!-- Tier 2 Bar -->
+  <g>
+    <!-- Bar (vLLM speed ~30-50 tok/s, use 40) -->
+    <rect x="310" y="120" width="60" height="160" rx="4" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+
+    <!-- Value label -->
+    <text x="340" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">
+      40
+    </text>
+
+    <!-- Tier label -->
+    <text x="340" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+      Tier 2
+    </text>
+    <text x="340" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="middle">
+      vLLM Single
+    </text>
+  </g>
+
+  <!-- Tier 3 Bar -->
+  <g>
+    <!-- Bar (Tier 3 with multi-GPU ~200+ tok/s) -->
+    <rect x="470" y="60" width="60" height="220" rx="4" fill="#E8DEF8" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Value label -->
+    <text x="500" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">
+      200+
+    </text>
+
+    <!-- Tier label -->
+    <text x="500" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="middle">
+      Tier 3
+    </text>
+    <text x="500" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#79747E" text-anchor="middle">
+      Multi-GPU
+    </text>
+  </g>
+
+  <!-- Comparison notes -->
+  <g>
+    <!-- Tier 1 specs -->
+    <rect x="120" y="335" width="120" height="12" rx="2" fill="transparent" stroke="none"/>
+    <text x="130" y="343" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#79747E">
+      CPU inference
+    </text>
+
+    <!-- Tier 2 specs -->
+    <rect x="280" y="335" width="120" height="12" rx="2" fill="transparent" stroke="none"/>
+    <text x="290" y="343" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#79747E">
+      Single GPU
+    </text>
+
+    <!-- Tier 3 specs -->
+    <rect x="440" y="335" width="120" height="12" rx="2" fill="transparent" stroke="none"/>
+    <text x="450" y="343" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#79747E">
+      Dual GPU + load balance
+    </text>
+  </g>
+
+  <!-- Right info box -->
+  <g>
+    <rect x="600" y="70" width="180" height="220" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+
+    <text x="615" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F">
+      Key Metrics
+    </text>
+
+    <line x1="615" y1="102" x2="765" y2="102" stroke="#E8DEF8" stroke-width="1"/>
+
+    <!-- Metric 1 -->
+    <circle cx="625" cy="125" r="3" fill="#6750A4"/>
+    <text x="640" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#1C1B1F">
+      Setup time:
+    </text>
+    <text x="640" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#49454F">
+      5 min → 30 min → 2h
+    </text>
+
+    <!-- Metric 2 -->
+    <circle cx="625" cy="175" r="3" fill="#6750A4"/>
+    <text x="640" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#1C1B1F">
+      Users:
+    </text>
+    <text x="640" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#49454F">
+      Solo → Dev team
+    </text>
+
+    <!-- Metric 3 -->
+    <circle cx="625" cy="225" r="3" fill="#6750A4"/>
+    <text x="640" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#1C1B1F">
+      Monitoring:
+    </text>
+    <text x="640" y="245" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#49454F">
+      None → Prometheus
+    </text>
+  </g>
+</svg>
