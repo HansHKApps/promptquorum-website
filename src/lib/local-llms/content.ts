@@ -22299,6 +22299,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         topFrontends: {
           title: 'Top 8 Local LLM Frontends: Feature Comparison',
+          image: '/images/frontend-selection-guide-en.svg',
+          imageCaption: 'Choose your local LLM frontend by use case — all options connect to the same Ollama API.',
           rows: [
             { 'Frontend': 'Open WebUI', 'Type': 'Web app (Docker)', 'Best For': 'Feature-rich, RAG, teams', 'Setup Time': '5 min (with Docker)', 'RAM Required': '12 GB+', 'Open Source': 'Yes' },
             { 'Frontend': 'Enchanted UI', 'Type': 'Web (no deps)', 'Best For': 'Speed, simplicity', 'Setup Time': '0 min (URL)', 'RAM Required': '8 GB+', 'Open Source': 'Yes' },
@@ -22313,6 +22315,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         openWebUI: {
           title: 'What Makes Open WebUI the Most Popular Frontend?',
+          image: '/images/open-webui-architecture-en.svg',
+          imageCaption: 'Open WebUI sits between your browser and Ollama — enabling multi-user access, RAG, and multimodal features via Docker.',
           content: [
             'Open WebUI is an all-in-one interface for local models. It works with Ollama, LM Studio, or any OpenAI-compatible API. As of April 2026, it is the most downloaded local LLM frontend on GitHub (25,000+ stars) because it packs the most features into a single application.',
             '**Key features:**',
@@ -22585,6 +22589,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         topFrontends: {
           title: 'Top 8 lokale LLM-Frontends: Funktionsvergleich',
+          image: '/images/frontend-selection-guide-de.svg',
+          imageCaption: 'Das richtige LLM-Frontend nach Anwendungsfall wählen — alle Optionen nutzen dieselbe Ollama API.',
           rows: [
             { 'Frontend': 'Open WebUI', 'Typ': 'Web-App (Docker)', 'Beste für': 'Funktionsreich, RAG, Teams', 'Setup-Zeit': '5 Min. (mit Docker)', 'RAM erforderlich': '12 GB+', 'Open Source': 'Ja' },
             { 'Frontend': 'Enchanted UI', 'Typ': 'Web (keine Abhängigkeiten)', 'Beste für': 'Geschwindigkeit, Einfachheit', 'Setup-Zeit': '0 Min. (URL)', 'RAM erforderlich': '8 GB+', 'Open Source': 'Ja' },
@@ -22599,6 +22605,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         openWebUI: {
           title: 'Was macht Open WebUI zum beliebtesten Frontend?',
+          image: '/images/open-webui-architecture-de.svg',
+          imageCaption: 'Open WebUI als Docker-Container verbindet Browser über HTTP mit Ollama — Multi-Benutzer, RAG und Multimodal inklusive.',
           content: [
             'Open WebUI ist eine All-in-One-Schnittstelle für lokale Modelle. Sie funktioniert mit Ollama, LM Studio oder einer beliebigen OpenAI-kompatiblen API. Ab April 2026 ist sie das am häufigsten heruntergeladene lokale LLM-Frontend auf GitHub (25.000+ Sterne), da sie die meisten Funktionen in einer einzigen Anwendung vereint.',
             '**Wichtigste Funktionen:**',
@@ -22890,6 +22898,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         topFrontends: {
           title: 'Top 8 interfaces LLM locales : Comparaison de fonctionnalités',
+          image: '/images/frontend-selection-guide-fr.svg',
+          imageCaption: 'Choisissez votre interface LLM locale selon l\'usage — toutes partagent la même API Ollama.',
           rows: [
             { 'Interface': 'Open WebUI', 'Type': 'Application web (Docker)', 'Meilleur pour': 'Riche en fonctionnalités, RAG, équipes', 'Temps de configuration': '5 min (avec Docker)', 'RAM requis': '12 GB+', 'Open Source': 'Oui' },
             { 'Interface': 'Enchanted UI', 'Type': 'Web (zéro dépendance)', 'Meilleur pour': 'Vitesse, simplicité', 'Temps de configuration': '0 min (URL)', 'RAM requis': '8 GB+', 'Open Source': 'Oui' },
@@ -22904,6 +22914,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         openWebUI: {
           title: 'Qu\'est-ce qui rend Open WebUI l\'interface la plus populaire ?',
+          image: '/images/open-webui-architecture-fr.svg',
+          imageCaption: 'Architecture d\'Open WebUI : le conteneur Docker connecte les navigateurs à Ollama via REST API, avec RAG et multi-utilisateurs.',
           content: [
             'Open WebUI est une interface tout-en-un pour les modèles locaux. Elle fonctionne avec Ollama, LM Studio ou n\'importe quelle API compatible OpenAI. En avril 2026, c\'est l\'interface LLM locale la plus téléchargée sur GitHub (25 000+ étoiles) car elle combine la plupart des fonctionnalités en une seule application.',
             '**Fonctionnalités principales :**',
@@ -23209,6 +23221,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         topFrontends: {
           title: 'トップ8ローカルLLMフロントエンド：機能比較',
+          image: '/images/frontend-selection-guide-ja.svg',
+          imageCaption: 'ユースケースでローカルLLMフロントエンドを選択 — 全オプションが同じOllama APIに接続します。',
           rows: [
             { 'インターフェース': 'Open WebUI', 'タイプ': 'Webアプリ（Docker）', 'ベスト用途': '機能豊富、RAG、チーム', 'セットアップ時間': '5分（Docker付き）', 'RAM必須': '12GB以上', 'オープンソース': 'はい' },
             { 'インターフェース': 'Enchanted UI', 'タイプ': 'Web（依存関係なし）', 'ベスト用途': '速度、シンプル', 'セットアップ時間': '0分（URL）', 'RAM必須': '8GB以上', 'オープンソース': 'はい' },
@@ -23223,6 +23237,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         openWebUI: {
           title: 'Open WebUIが最も人気なフロントエンドな理由',
+          image: '/images/open-webui-architecture-ja.svg',
+          imageCaption: 'Open WebUIのアーキテクチャ：DockerコンテナがREST APIでブラウザとOllamaを接続、RAG・マルチユーザー対応。',
           content: [
             'Open WebUIはローカルモデル向けオールインワンインターフェース。Ollama、LM Studio、またはOpenAI互換API動作。2026年4月現在、GitHub最ダウンロードローカルLLMフロントエンド（25,000+スター）。',
             '**主要機能：**',
@@ -23528,6 +23544,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         topFrontends: {
           title: '8大本地LLM前端：功能对比',
+          image: '/images/frontend-selection-guide-zh.svg',
+          imageCaption: '按使用场景选择本地LLM前端 — 所有选项共享同一个Ollama API。',
           rows: [
             { '前端': 'Open WebUI', '类型': 'Web应用（Docker）', '最优用途': '功能丰富、RAG、团队', '设置时间': '5分钟（含Docker）', '所需RAM': '12GB+', '开源': '是' },
             { '前端': 'Enchanted UI', '类型': 'Web（零依赖）', '最优用途': '速度、简洁', '设置时间': '0分钟（URL）', '所需RAM': '8GB+', '开源': '是' },
@@ -23542,6 +23560,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         openWebUI: {
           title: 'Open WebUI为何是最受欢迎的前端',
+          image: '/images/open-webui-architecture-zh.svg',
+          imageCaption: 'Open WebUI架构：Docker容器通过REST API将浏览器连接到Ollama，支持RAG、多模态和多用户。',
           content: [
             'Open WebUI是本地模型的一体化界面。适用于Ollama、LM Studio或任何OpenAI兼容API。截至2026年4月，GitHub上最常下载的本地LLM前端（25,000+星）。',
             '**主要功能：**',

@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 415" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="415" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Das richtige lokale LLM-Frontend wählen</text>
+  <text x="400" y="52" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="500" fill="#79747E" text-anchor="middle">Nach Anwendungsfall wählen — alle Frontends nutzen dieselbe Ollama API</text>
+
+  <!-- Column 1: Einfacher Chat -->
+  <rect x="50" y="68" width="215" height="295" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+  <rect x="50" y="68" width="215" height="48" rx="8" fill="#E8DEF8"/>
+  <rect x="50" y="92" width="215" height="24" fill="#E8DEF8"/>
+  <text x="157" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Einfacher Chat</text>
+  <text x="157" y="108" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="500" fill="#49454F" text-anchor="middle">0–3 Min. Setup · 8 GB RAM</text>
+  <rect x="65" y="130" width="185" height="72" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="80" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Enchanted UI</text>
+  <text x="80" y="167" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="500" fill="#49454F">Web · 0 Min. Setup</text>
+  <text x="80" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Schnellstes, keine Installation</text>
+  <rect x="65" y="216" width="185" height="72" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="80" y="236" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Jan AI</text>
+  <text x="80" y="253" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="500" fill="#49454F">Desktop · 3 Min. Setup</text>
+  <text x="80" y="269" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Offline-First, macOS/Windows</text>
+  <text x="157" y="345" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Beste für Einsteiger</text>
+
+  <!-- Column 2: Entwicklerarbeit -->
+  <rect x="293" y="68" width="215" height="295" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+  <rect x="293" y="68" width="215" height="48" rx="8" fill="#E8DEF8"/>
+  <rect x="293" y="92" width="215" height="24" fill="#E8DEF8"/>
+  <text x="400" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Entwicklerarbeit</text>
+  <text x="400" y="108" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="500" fill="#49454F" text-anchor="middle">2–5 Min. Setup · 8 GB RAM</text>
+  <rect x="308" y="130" width="185" height="72" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="323" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Continue.dev</text>
+  <text x="323" y="167" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="500" fill="#49454F">VS Code Erw. · 2 Min. Setup</text>
+  <text x="323" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Inline-Code-Vorschläge</text>
+  <rect x="308" y="216" width="185" height="72" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="323" y="236" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Gradio / Streamlit</text>
+  <text x="323" y="253" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="500" fill="#49454F">Python · 5 Min. Setup</text>
+  <text x="323" y="269" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Benutzerdefinierte ML-UI</text>
+  <text x="400" y="345" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Beste für Solo-Entwickler</text>
+
+  <!-- Column 3: Team + RAG -->
+  <rect x="536" y="68" width="215" height="295" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="2.5"/>
+  <rect x="536" y="68" width="215" height="48" rx="8" fill="#6750A4"/>
+  <rect x="536" y="92" width="215" height="24" fill="#6750A4"/>
+  <text x="643" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">Team + RAG</text>
+  <text x="643" y="108" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="500" fill="#E8DEF8" text-anchor="middle">5 Min. Setup · 12 GB+ RAM</text>
+  <rect x="551" y="130" width="185" height="110" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="566" y="152" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#1C1B1F">Open WebUI</text>
+  <text x="566" y="169" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="500" fill="#49454F">Docker · 5 Min. Setup</text>
+  <text x="566" y="186" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">RAG + Multimodal + Websuche</text>
+  <text x="566" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">Multi-Benutzer + Admin-Kontrollen</text>
+  <text x="566" y="218" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#6750A4">25.000+ GitHub-Sterne</text>
+  <text x="643" y="345" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">Beste für 5+ Entwickler</text>
+
+  <rect x="50" y="380" width="700" height="26" rx="5" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="400" y="397" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Alle Frontends teilen eine Ollama-Instanz · Jederzeit wechseln · Kein Modell-Re-Download</text>
+</svg>
