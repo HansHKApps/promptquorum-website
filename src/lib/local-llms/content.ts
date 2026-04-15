@@ -23818,6 +23818,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       metaDescription: 'vLLM dominates production (highest throughput). llama.cpp powers Ollama. Text-Generation-WebUI best for research and LoRA fine-tuning. 2026 comparison.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
+      gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
+      gammaDescription: 'The slide deck below covers: vLLM vs llama.cpp vs Text-Generation-WebUI feature comparison, performance benchmarks (up to 1000+ tok/s), production decision framework, LoRA fine-tuning use cases, and regional compliance (EU/Japan/China). Download the PDF as an inference engine reference card.',
       educationalLevel: 'Advanced',
       primaryTerm: 'inference engine',
       toc: [
@@ -24157,6 +24159,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       metaDescription: 'vLLM dominiert Production (höchster Durchsatz). llama.cpp treibt Ollama an. Text-Generation-WebUI für Forschung und LoRA. Inference-Engine-Vergleich 2026.',
       publishDate: '2026-04-04',
       readTime: '13 Min. Lesezeit',
+      gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
+      gammaDescription: 'Das Slide-Deck unten behandelt: vLLM vs. llama.cpp vs. Text-Generation-WebUI Funktionsvergleich, Performance-Benchmarks (bis 1.000+ Tokens/Sek.), Production-Entscheidungsrahmen, LoRA Fine-Tuning und DSGVO-Compliance. PDF als Inference-Engine Referenzkarte herunterladen.',
       educationalLevel: 'Advanced',
       primaryTerm: 'Inference-Engine',
       toc: [
@@ -24405,6 +24409,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       metaDescription: 'vLLM domine la production (débit maximal). llama.cpp alimente Ollama (le plus léger). Text-Generation-WebUI meilleur pour la recherche. Comparaison 2026 des moteurs d\'inférence.',
       publishDate: '2026-04-04',
       readTime: '13 min de lecture',
+      gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
+      gammaDescription: 'Le deck de slides ci-dessous couvre : comparaison des fonctionnalités vLLM vs llama.cpp vs Text-Generation-WebUI, benchmarks de performance (jusqu\'à 1 000+ tokens/s), guide de décision pour la production, cas d\'usage LoRA, et conformité RGPD. Téléchargez le PDF comme carte de référence des moteurs d\'inférence.',
       educationalLevel: 'Advanced',
       primaryTerm: 'moteur d\'inférence',
       toc: [
@@ -24744,6 +24750,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       metaDescription: 'vLLM が本番環境を主導（最高スループット）。llama.cpp が Ollama を駆動（最軽量）。Text-Generation-WebUI は研究に最適。2026年推論エンジン比較。',
       publishDate: '2026-04-04',
       readTime: '13分で読める',
+      gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
+      gammaDescription: '下記のスライドデッキは、vLLM vs llama.cpp vs Text-Generation-WebUI の機能比較、パフォーマンスベンチマーク（最大1,000+ tokens/秒）、本番環境の意思決定フレームワーク、LoRAファインチューニング、日本のMETI AIガバナンス対応を網羅。PDFを推論エンジン参照カードとしてダウンロードできます。',
       educationalLevel: 'Advanced',
       primaryTerm: '推論エンジン',
       toc: [
@@ -25083,6 +25091,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       metaDescription: 'vLLM 主导生产环境（最高吞吐量）。llama.cpp 驱动 Ollama（最轻量）。Text-Generation-WebUI 最适合研究。2026年推理引擎对比。',
       publishDate: '2026-04-04',
       readTime: '阅读约13分钟',
+      gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
+      gammaDescription: '下方幻灯片涵盖：vLLM vs llama.cpp vs Text-Generation-WebUI 功能对比、性能基准测试（最高 1,000+ tokens/秒）、生产环境决策框架、LoRA 微调用例，以及中国《数据安全法》合规要点。下载 PDF 作为推理引擎参考卡。',
       educationalLevel: 'Advanced',
       primaryTerm: '推理引擎',
       toc: [

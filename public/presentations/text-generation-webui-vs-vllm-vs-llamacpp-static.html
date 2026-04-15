@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text-Generation-WebUI vs vLLM vs llama.cpp 2026 | PromptQuorum</title>
+    <meta name="description" content="Compare three local LLM inference engines: llama.cpp (lightest), vLLM (fastest production), Text-Generation-WebUI (most features). 14-slide deck." />
+    <meta property="og:title" content="Text-Generation-WebUI vs vLLM vs llama.cpp 2026 — PromptQuorum" />
+    <meta property="og:description" content="vLLM leads production (1000+ tok/s). llama.cpp powers Ollama. Text-Gen-WebUI for LoRA and research. Inference engine comparison 2026." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Text-Gen-WebUI vs vLLM vs llama.cpp 2026</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'Text-Gen-WebUI vs vLLM vs llama.cpp 2026',
+                slides: [
+                    { type: 'title', h1: 'Text-Gen-WebUI vs\nvLLM vs llama.cpp', subtitle: 'Three inference engines for local LLMs. Which fits your use case?', link: 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp' },
+                    { type: 'list', h2: 'Key Takeaways', items: ['Inference engines load model weights and generate tokens — separate from UI', '<strong>llama.cpp</strong>: lightest C++ library, CPU-efficient, powers Ollama', '<strong>vLLM</strong>: highest GPU throughput, 100–1000+ tok/s with batching', '<strong>Text-Gen-WebUI</strong>: built-in web UI, LoRA fine-tuning, research workflows', 'vLLM leads production; llama.cpp leads consumer; Text-Gen-WebUI leads research'] },
+                    { type: 'list', h2: 'What Is an Inference Engine?', intro: 'Software that loads model weights and runs the math to generate text.', items: ['Layer 1: Model file (e.g., llama-3.1-8b.gguf) — neural network weights', 'Layer 2: Inference engine — loads model, generates tokens', 'Layer 3: Interface/API — REST, web chat, VS Code extension', 'Ollama = llama.cpp wrapper with OpenAI-compatible API', 'vLLM: no built-in UI. Text-Gen-WebUI: UI is built-in.'] },
+                    { type: 'table', h2: 'Feature Comparison', columns: ['Feature', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'], rows: [{ Feature: 'Type', 'llama.cpp': 'C++ library', vLLM: 'Python (production)', 'Text-Gen-WebUI': 'Python app' }, { Feature: 'GPU Support', 'llama.cpp': 'NVIDIA, AMD, Metal', vLLM: 'NVIDIA only', 'Text-Gen-WebUI': 'NVIDIA, AMD, CPU' }, { Feature: 'CPU Inference', 'llama.cpp': 'Excellent', vLLM: 'Poor', 'Text-Gen-WebUI': 'Good' }, { Feature: 'Throughput', 'llama.cpp': '1–100 tok/s', vLLM: '100–1000+ tok/s', 'Text-Gen-WebUI': '1–100 tok/s' }, { Feature: 'Built-in UI', 'llama.cpp': 'No', vLLM: 'No', 'Text-Gen-WebUI': 'Yes' }, { Feature: 'LoRA Fine-tuning', 'llama.cpp': 'No', vLLM: 'Limited', 'Text-Gen-WebUI': 'Built-in' }] },
+                    { type: 'list', h2: 'llama.cpp: The Lightweight Foundation', items: ['C++ library for LLM inference — runs on consumer hardware without GPU', 'Minimal RAM overhead — runs 7B model on 8 GB RAM with CPU alone', 'Supports NVIDIA, AMD, Apple Metal (M-series) GPU backends', 'GGUF format: compresses 70B models to 20–40 GB', 'Ollama wraps llama.cpp — you use llama.cpp every time you run Ollama'] },
+                    { type: 'list', h2: 'vLLM: The Production Standard', items: ['Python framework for high-throughput GPU inference — by UC Berkeley', '<strong>Paged Attention</strong>: improves GPU utilization from ~20% to ~70%', 'Batch 50–100 prompts simultaneously — serves 50+ concurrent users per GPU', 'Distributed inference: splits 70B model across multiple GPUs automatically', 'Trade-off: requires NVIDIA GPU; poor CPU performance'] },
+                    { type: 'list', h2: 'Text-Generation-WebUI: The Research Tool', items: ['Python app with built-in web interface — also called oobabooga', 'LoRA fine-tuning: train custom adapters on base models, no extra scripts', 'Multi-backend: switch between llama.cpp, GPTQ, exllama backends', 'Character roleplay + extension ecosystem for custom workflows', 'Best for: fine-tuning, LoRA testing, advanced inference experiments'] },
+                    { type: 'table', h2: 'Performance: Tokens Per Second', columns: ['Scenario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'], rows: [{ Scenario: 'Llama 3.1 8B — RTX 4090', 'llama.cpp': '150 tok/s', vLLM: '300 tok/s (batched)', 'Text-Gen-WebUI': '150 tok/s' }, { Scenario: 'Llama 3.1 8B — 8-core CPU', 'llama.cpp': '5 tok/s', vLLM: '0.5 tok/s (unusable)', 'Text-Gen-WebUI': '4 tok/s' }, { Scenario: 'Llama 3.1 70B — 2× RTX 4090', 'llama.cpp': '20 tok/s (1 GPU)', vLLM: '100 tok/s (distributed)', 'Text-Gen-WebUI': '20 tok/s' }, { Scenario: 'Phi-3 3.8B — M4 MacBook', 'llama.cpp': '30 tok/s', vLLM: 'N/A (no Metal)', 'Text-Gen-WebUI': '25 tok/s' }] },
+                    { type: 'list', h2: 'Which Engine for Production?', items: ['<strong>vLLM</strong>: 100+ requests/day, NVIDIA GPU, multi-user API server', '<strong>llama.cpp (Ollama)</strong>: CPU-only, Apple Silicon, single-user, simplicity', '<strong>Text-Gen-WebUI</strong>: fine-tuning, LoRA adapters, research experiments', 'Diverse formats (GPTQ, GGUF, safetensors)? Text-Gen-WebUI supports all', 'One vLLM instance serves 50+ concurrent users vs 1–2 for llama.cpp'] },
+                    { type: 'list', h2: 'Regional Compliance Guide', items: ['EU/GDPR: vLLM on-premises — Prometheus metrics satisfy BSI IT-Grundschutz audit logging', 'Recommended EU model: Mistral 7B (France, Apache 2.0 licence, strong performance)', 'Japan/METI: vLLM + Qwen2.5 7B — native Japanese tokenization + production throughput', 'China (Data Security Law): vLLM on Alibaba Cloud A10/A100 + Qwen2.5 14B', 'All three engines support fully on-premises inference — no data leaves your servers'] },
+                    { type: 'list', h2: 'Common Mistakes', items: ['Choosing between Ollama and vLLM — vLLM is a backend, not a chat app', 'Assuming vLLM is faster on CPU — llama.cpp is 10× faster on CPU', 'Running vLLM on a laptop GPU — designed for datacenter GPUs (RTX 4090, A100)', 'Confusing throughput with latency — high batch throughput ≠ low per-request latency', 'Installing Text-Gen-WebUI without Python 3.10+ — always verify Python version first'] },
+                    { type: 'faq', h2: 'Common Questions', faqs: [{ q: 'Which engine is best for Mac?', a: 'llama.cpp via Ollama. vLLM has no Apple Metal support — poor CPU performance on Mac.' }, { q: 'Is vLLM part of Ollama?', a: 'No. Ollama uses llama.cpp internally. vLLM is a separate engine by UC Berkeley.' }, { q: 'Can I use vLLM without a GPU?', a: 'Technically yes, but unusably slow. Use llama.cpp (Ollama) for CPU-only deployments.' }, { q: 'What is Paged Attention?', a: 'vLLM\'s memory system borrowed from OS virtual memory — improves GPU utilization from ~20% to ~70%.' }] },
+                    { type: 'list', h2: 'When to Use Each Engine', items: ['<strong>llama.cpp (Ollama)</strong>: consumer, CPU/Apple Silicon, single-user, ease-of-use', '<strong>vLLM</strong>: 50+ concurrent users, NVIDIA GPU, production API, max throughput', '<strong>Text-Gen-WebUI</strong>: fine-tuning models, testing LoRA, advanced inference settings'] },
+                    { type: 'cta', h2: 'Try PromptQuorum', body: 'Run prompts across multiple inference engines. Compare outputs, debug accuracy, and optimize your local LLM stack.', cta: 'Get Started Free', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            de: {
+                title: 'Text-Gen-WebUI vs vLLM vs llama.cpp 2026',
+                slides: [
+                    { type: 'title', h1: 'Text-Gen-WebUI vs\nvLLM vs llama.cpp', subtitle: 'Drei Inference-Engines für lokale LLMs. Welche passt zu Ihrem Anwendungsfall?', link: 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=de' },
+                    { type: 'list', h2: 'Zusammenfassung', items: ['Inference-Engines laden Modellgewichte und generieren Tokens — getrennt von der UI', '<strong>llama.cpp</strong>: leichteste C++-Bibliothek, CPU-effizient, treibt Ollama an', '<strong>vLLM</strong>: höchster GPU-Durchsatz, 100–1000+ Tokens/Sek. mit Batching', '<strong>Text-Gen-WebUI</strong>: integrierte Web-UI, LoRA Fine-Tuning, Forschungsworkflows', 'vLLM führt Production; llama.cpp führt Consumer; Text-Gen-WebUI führt Forschung'] },
+                    { type: 'list', h2: 'Was ist eine Inference-Engine?', intro: 'Software, die Modellgewichte lädt und Mathematik ausführt, um Text zu generieren.', items: ['Schicht 1: Modelldatei (z. B. llama-3.1-8b.gguf) — neuronale Netzwerkgewichte', 'Schicht 2: Inference-Engine — lädt Modell, generiert Tokens', 'Schicht 3: Schnittstelle/API — REST, Web-Chat, VS Code-Erweiterung', 'Ollama = llama.cpp-Wrapper mit OpenAI-kompatibler API', 'vLLM: keine integrierte UI. Text-Gen-WebUI: UI ist integriert.'] },
+                    { type: 'table', h2: 'Feature-Vergleich', columns: ['Funktion', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'], rows: [{ Funktion: 'Typ', 'llama.cpp': 'C++-Bibliothek', vLLM: 'Python (Production)', 'Text-Gen-WebUI': 'Python-App' }, { Funktion: 'GPU-Unterstützung', 'llama.cpp': 'NVIDIA, AMD, Metal', vLLM: 'Nur NVIDIA', 'Text-Gen-WebUI': 'NVIDIA, AMD, CPU' }, { Funktion: 'CPU-Inferenz', 'llama.cpp': 'Ausgezeichnet', vLLM: 'Schlecht', 'Text-Gen-WebUI': 'Gut' }, { Funktion: 'Durchsatz', 'llama.cpp': '1–100 Tok/Sek.', vLLM: '100–1000+ Tok/Sek.', 'Text-Gen-WebUI': '1–100 Tok/Sek.' }, { Funktion: 'Integrierte UI', 'llama.cpp': 'Nein', vLLM: 'Nein', 'Text-Gen-WebUI': 'Ja' }, { Funktion: 'LoRA Fine-Tuning', 'llama.cpp': 'Nein', vLLM: 'Begrenzt', 'Text-Gen-WebUI': 'Integriert' }] },
+                    { type: 'list', h2: 'llama.cpp: Die leichtgewichtige Grundlage', items: ['C++-Bibliothek für LLM-Inferenz — läuft auf Consumer-Hardware ohne GPU', 'Minimaler RAM-Overhead — führt 7B-Modell auf 8 GB RAM nur mit CPU aus', 'Unterstützt NVIDIA, AMD, Apple Metal (M-Serie) GPU-Backends', 'GGUF-Format: komprimiert 70B-Modelle auf 20–40 GB', 'Ollama umhüllt llama.cpp — Sie nutzen llama.cpp immer, wenn Sie Ollama ausführen'] },
+                    { type: 'list', h2: 'vLLM: Der Production-Standard', items: ['Python-Framework für High-Throughput GPU-Inferenz — von UC Berkeley', '<strong>Paged Attention</strong>: verbessert GPU-Auslastung von ~20 % auf ~70 %', 'Batche 50–100 Prompts gleichzeitig — bedient 50+ gleichzeitige Nutzer pro GPU', 'Verteilte Inferenz: teilt 70B-Modell automatisch auf mehrere GPUs auf', 'Kompromiss: erfordert NVIDIA GPU; schlechte CPU-Performance'] },
+                    { type: 'list', h2: 'Text-Generation-WebUI: Das Forschungs-Tool', items: ['Python-App mit integrierter Web-Schnittstelle — auch oobabooga genannt', 'LoRA Fine-Tuning: trainiert benutzerdefinierte Adapter ohne externe Skripte', 'Multi-Backend: wechselt zwischen llama.cpp, GPTQ, exllama-Backends', 'Character Roleplay + Extension-Ökosystem für benutzerdefinierte Workflows', 'Beste für: Fine-Tuning, LoRA-Tests, erweiterte Inferenz-Experimente'] },
+                    { type: 'table', h2: 'Performance: Tokens pro Sekunde', columns: ['Szenario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'], rows: [{ Szenario: 'Llama 3.1 8B — RTX 4090', 'llama.cpp': '150 Tok/Sek.', vLLM: '300 Tok/Sek. (Batch)', 'Text-Gen-WebUI': '150 Tok/Sek.' }, { Szenario: 'Llama 3.1 8B — 8-Core CPU', 'llama.cpp': '5 Tok/Sek.', vLLM: '0,5 Tok/Sek. (unbenutzbar)', 'Text-Gen-WebUI': '4 Tok/Sek.' }, { Szenario: 'Llama 3.1 70B — 2× RTX 4090', 'llama.cpp': '20 Tok/Sek. (1 GPU)', vLLM: '100 Tok/Sek. (verteilt)', 'Text-Gen-WebUI': '20 Tok/Sek.' }, { Szenario: 'Phi-3 3.8B — M4 MacBook', 'llama.cpp': '30 Tok/Sek.', vLLM: 'N/A (kein Metal)', 'Text-Gen-WebUI': '25 Tok/Sek.' }] },
+                    { type: 'list', h2: 'Welche Engine für Production?', items: ['<strong>vLLM</strong>: 100+ Anfragen/Tag, NVIDIA GPU, Multi-User-API-Server', '<strong>llama.cpp (Ollama)</strong>: nur CPU, Apple Silicon, einzelner Nutzer', '<strong>Text-Gen-WebUI</strong>: Fine-Tuning, LoRA-Adapter, Forschungs-Experimente', 'Diverse Formate (GPTQ, GGUF, safetensors)? Text-Gen-WebUI unterstützt alle', 'Eine vLLM-Instanz bedient 50+ gleichzeitige Nutzer vs. 1–2 für llama.cpp'] },
+                    { type: 'list', h2: 'Regionale Compliance-Übersicht', items: ['EU/DSGVO: vLLM on-premises — Prometheus-Metriken erfüllen BSI IT-Grundschutz Audit-Logging', 'Empfohlenes EU-Modell: Mistral 7B (Frankreich, Apache 2.0, starke Performance)', 'Japan/METI: vLLM + Qwen2.5 7B — native japanische Tokenisierung + Production-Durchsatz', 'China (Datensicherheitsgesetz): vLLM auf Alibaba Cloud A10/A100 + Qwen2.5 14B', 'Alle drei Engines unterstützen vollständige On-Premises-Inferenz — keine Daten verlassen Server'] },
+                    { type: 'list', h2: 'Häufige Fehler', items: ['Wahl zwischen Ollama und vLLM — vLLM ist ein Backend, keine Chat-App', 'Annehmen, vLLM ist auf CPU schneller — llama.cpp ist 10× schneller auf CPU', 'vLLM auf einem Laptop-GPU ausführen — für Datacenter-GPUs konzipiert (RTX 4090, A100)', 'Durchsatz mit Latenz verwechseln — hoher Batch-Durchsatz ≠ niedrige Anfrage-Latenz', 'Text-Gen-WebUI ohne Python 3.10+ installieren — immer zuerst Python-Version prüfen'] },
+                    { type: 'faq', h2: 'Häufig gestellte Fragen', faqs: [{ q: 'Welche Engine ist beste für Mac?', a: 'llama.cpp via Ollama. vLLM unterstützt kein Apple Metal — schlechte CPU-Performance auf Mac.' }, { q: 'Ist vLLM Teil von Ollama?', a: 'Nein. Ollama verwendet llama.cpp intern. vLLM ist eine separate Engine der UC Berkeley.' }, { q: 'Kann ich vLLM ohne GPU verwenden?', a: 'Technisch ja, aber unbrauchbar langsam. Verwenden Sie llama.cpp (Ollama) für CPU-only.' }, { q: 'Was ist Paged Attention?', a: 'vLLMs Speichersystem, von OS Virtual Memory inspiriert — verbessert GPU-Auslastung von ~20 % auf ~70 %.' }] },
+                    { type: 'list', h2: 'Wann welche Engine wählen', items: ['<strong>llama.cpp (Ollama)</strong>: Consumer, CPU/Apple Silicon, einzelner Nutzer', '<strong>vLLM</strong>: 50+ gleichzeitige Nutzer, NVIDIA GPU, Production-API, max. Durchsatz', '<strong>Text-Gen-WebUI</strong>: Modelle fine-tunen, LoRA testen, erweiterte Inferenz-Einstellungen'] },
+                    { type: 'cta', h2: 'PromptQuorum ausprobieren', body: 'Prompts über mehrere Inference-Engines ausführen. Ausgaben vergleichen, Genauigkeit debuggen, lokalen LLM-Stack optimieren.', cta: 'Kostenlos starten', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            fr: {
+                title: 'Text-Gen-WebUI vs vLLM vs llama.cpp 2026',
+                slides: [
+                    { type: 'title', h1: 'Text-Gen-WebUI vs\nvLLM vs llama.cpp', subtitle: "Trois moteurs d'inférence pour LLM locaux. Lequel convient à votre usage ?", link: 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=fr' },
+                    { type: 'list', h2: 'Points clés', items: ["Les moteurs d'inférence chargent les poids du modèle et génèrent des tokens — séparés de l'UI", '<strong>llama.cpp</strong> : bibliothèque C++ légère, efficace CPU, alimente Ollama', '<strong>vLLM</strong> : débit GPU maximal, 100–1000+ tok/s avec batching', '<strong>Text-Gen-WebUI</strong> : UI web intégrée, fine-tuning LoRA, workflows de recherche', 'vLLM domine la production ; llama.cpp domine le grand public ; Text-Gen-WebUI domine la recherche'] },
+                    { type: 'list', h2: "Qu'est-ce qu'un moteur d'inférence ?", intro: 'Logiciel qui charge les poids du modèle et exécute les calculs pour générer du texte.', items: ['Couche 1 : Fichier modèle (ex. llama-3.1-8b.gguf) — poids du réseau neuronal', "Couche 2 : Moteur d'inférence — charge le modèle, génère les tokens", 'Couche 3 : Interface/API — REST, chat web, extension VS Code', 'Ollama = wrapper llama.cpp avec API compatible OpenAI', "vLLM : pas d'UI intégrée. Text-Gen-WebUI : UI intégrée."] },
+                    { type: 'table', h2: 'Comparaison des fonctionnalités', columns: ['Fonctionnalité', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'], rows: [{ Fonctionnalité: 'Type', 'llama.cpp': 'Bibliothèque C++', vLLM: 'Python (production)', 'Text-Gen-WebUI': 'Application Python' }, { Fonctionnalité: 'Support GPU', 'llama.cpp': 'NVIDIA, AMD, Metal', vLLM: 'NVIDIA uniquement', 'Text-Gen-WebUI': 'NVIDIA, AMD, CPU' }, { Fonctionnalité: 'Inférence CPU', 'llama.cpp': 'Excellente', vLLM: 'Mauvaise', 'Text-Gen-WebUI': 'Bonne' }, { Fonctionnalité: 'Débit', 'llama.cpp': '1–100 tok/s', vLLM: '100–1000+ tok/s', 'Text-Gen-WebUI': '1–100 tok/s' }, { Fonctionnalité: 'UI intégrée', 'llama.cpp': 'Non', vLLM: 'Non', 'Text-Gen-WebUI': 'Oui' }, { Fonctionnalité: 'Fine-tuning LoRA', 'llama.cpp': 'Non', vLLM: 'Limité', 'Text-Gen-WebUI': 'Intégré' }] },
+                    { type: 'list', h2: 'llama.cpp : La fondation légère', items: ['Bibliothèque C++ pour inférence LLM — fonctionne sur matériel grand public sans GPU', 'Faible overhead RAM — exécute un modèle 7B sur 8 Go RAM avec CPU seul', 'Supporte NVIDIA, AMD, Apple Metal (M-series) GPU backends', 'Format GGUF : compresse les modèles 70B à 20–40 Go', 'Ollama enveloppe llama.cpp — vous utilisez llama.cpp à chaque fois que vous lancez Ollama'] },
+                    { type: 'list', h2: 'vLLM : Le standard de production', items: ['Framework Python pour inférence GPU haute performance — par UC Berkeley', '<strong>Paged Attention</strong> : améliore utilisation GPU de ~20% à ~70%', 'Traite 50–100 prompts simultanément — sert 50+ utilisateurs concurrents par GPU', "Inférence distribuée : répartit automatiquement un modèle 70B sur plusieurs GPU", 'Compromis : nécessite GPU NVIDIA ; mauvaises performances CPU'] },
+                    { type: 'list', h2: "Text-Generation-WebUI : L'outil de recherche", items: ['Application Python avec interface web intégrée — aussi appelée oobabooga', 'Fine-tuning LoRA : entraîne des adaptateurs personnalisés sans scripts externes', 'Multi-backend : bascule entre llama.cpp, GPTQ, exllama backends', 'Roleplay de personnages + écosystème d\'extensions pour workflows personnalisés', 'Meilleur pour : fine-tuning, tests LoRA, expériences d\'inférence avancées'] },
+                    { type: 'table', h2: 'Performance : Tokens par seconde', columns: ['Scénario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'], rows: [{ Scénario: 'Llama 3.1 8B — RTX 4090', 'llama.cpp': '150 tok/s', vLLM: '300 tok/s (batch)', 'Text-Gen-WebUI': '150 tok/s' }, { Scénario: 'Llama 3.1 8B — CPU 8 cœurs', 'llama.cpp': '5 tok/s', vLLM: '0.5 tok/s (inutilisable)', 'Text-Gen-WebUI': '4 tok/s' }, { Scénario: 'Llama 3.1 70B — 2× RTX 4090', 'llama.cpp': '20 tok/s (1 GPU)', vLLM: '100 tok/s (distribué)', 'Text-Gen-WebUI': '20 tok/s' }, { Scénario: 'Phi-3 3.8B — M4 MacBook', 'llama.cpp': '30 tok/s', vLLM: 'N/A (pas Metal)', 'Text-Gen-WebUI': '25 tok/s' }] },
+                    { type: 'list', h2: 'Quel moteur pour la production ?', items: ['<strong>vLLM</strong> : 100+ requêtes/jour, GPU NVIDIA, serveur API multi-utilisateurs', '<strong>llama.cpp (Ollama)</strong> : CPU uniquement, Apple Silicon, utilisateur unique', '<strong>Text-Gen-WebUI</strong> : fine-tuning, adaptateurs LoRA, recherche avancée', 'Formats divers (GPTQ, GGUF, safetensors) ? Text-Gen-WebUI supporte tout', 'Une instance vLLM sert 50+ utilisateurs vs 1–2 pour llama.cpp'] },
+                    { type: 'list', h2: 'Guide de conformité régionale', items: ['UE/RGPD : vLLM on-premises — métriques Prometheus satisfont audit BSI IT-Grundschutz', 'Modèle UE recommandé : Mistral 7B (France, Apache 2.0, performance solide)', 'Japon/METI : vLLM + Qwen2.5 7B — tokenisation japonaise native + débit production', 'Chine (Loi sécurité données) : vLLM sur Alibaba Cloud A10/A100 + Qwen2.5 14B', 'Les trois moteurs supportent inférence 100% on-premises — aucune donnée ne quitte vos serveurs'] },
+                    { type: 'list', h2: 'Erreurs courantes', items: ["Choisir entre Ollama et vLLM — vLLM est un backend, pas une app chat", 'Supposer vLLM plus rapide sur CPU — llama.cpp est 10× plus rapide sur CPU', 'Faire tourner vLLM sur un GPU laptop — conçu pour GPU datacenter (RTX 4090, A100)', 'Confondre débit et latence — haut débit de batch ≠ faible latence par requête', 'Installer Text-Gen-WebUI sans Python 3.10+ — vérifier version Python avant tout'] },
+                    { type: 'faq', h2: 'Questions fréquentes', faqs: [{ q: 'Quel moteur pour Mac ?', a: 'llama.cpp via Ollama. vLLM ne supporte pas Apple Metal — mauvaises performances CPU sur Mac.' }, { q: 'vLLM fait-il partie de Ollama ?', a: 'Non. Ollama utilise llama.cpp en interne. vLLM est un moteur séparé par UC Berkeley.' }, { q: 'Puis-je utiliser vLLM sans GPU ?', a: 'Techniquement oui, mais inutilisablement lent. Utilisez llama.cpp (Ollama) pour CPU uniquement.' }, { q: "Qu'est-ce que Paged Attention ?", a: "Système mémoire de vLLM inspiré de la mémoire virtuelle OS — améliore utilisation GPU de ~20% à ~70%." }] },
+                    { type: 'list', h2: 'Quand utiliser chaque moteur', items: ['<strong>llama.cpp (Ollama)</strong> : grand public, CPU/Apple Silicon, utilisateur unique', '<strong>vLLM</strong> : 50+ utilisateurs concurrents, GPU NVIDIA, API production', '<strong>Text-Gen-WebUI</strong> : fine-tuning modèles, tests LoRA, paramètres avancés'] },
+                    { type: 'cta', h2: 'Essayer PromptQuorum', body: 'Exécutez des prompts sur plusieurs moteurs d\'inférence. Comparez les sorties, déboguez la précision, optimisez votre stack LLM local.', cta: 'Commencer gratuitement', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            ja: {
+                title: 'Text-Gen-WebUI vs vLLM vs llama.cpp 2026',
+                slides: [
+                    { type: 'title', h1: 'Text-Gen-WebUI vs\nvLLM vs llama.cpp', subtitle: '3つの推論エンジン比較：あなたのユースケースに合うのは？', link: 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=ja' },
+                    { type: 'list', h2: '重要ポイント', items: ['推論エンジンはモデルの重みを読み込みトークンを生成 — UIとは別レイヤー', '<strong>llama.cpp</strong>：最軽量C++ライブラリ、CPU効率良好、Ollamaの基盤', '<strong>vLLM</strong>：最高GPUスループット、バッチで100–1000+tok/秒', '<strong>Text-Gen-WebUI</strong>：組み込みWeb UI、LoRAファインチューニング、研究向け', 'vLLMが本番主流、llama.cppがコンシューマ主流、Text-Gen-WebUIが研究主流'] },
+                    { type: 'list', h2: '推論エンジンとは？', intro: 'モデルの重みを読み込み、テキスト生成の数学的処理を実行するソフトウェア。', items: ['レイヤー1：モデルファイル（例：llama-3.1-8b.gguf）— ニューラルネットワークの重み', 'レイヤー2：推論エンジン — モデルを読み込み、トークンを生成', 'レイヤー3：インターフェース/API — REST、Webチャット、VS Code拡張', 'Ollama = llama.cppラッパー（OpenAI互換API付き）', 'vLLM：組み込みUI無し。Text-Gen-WebUI：UI内蔵。'] },
+                    { type: 'table', h2: '機能比較', columns: ['機能', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'], rows: [{ 機能: '種類', 'llama.cpp': 'C++ライブラリ', vLLM: 'Python（本番）', 'Text-Gen-WebUI': 'Pythonアプリ' }, { 機能: 'GPUサポート', 'llama.cpp': 'NVIDIA/AMD/Metal', vLLM: 'NVIDIAのみ', 'Text-Gen-WebUI': 'NVIDIA/AMD/CPU' }, { 機能: 'CPU推論', 'llama.cpp': '優秀', vLLM: '不良', 'Text-Gen-WebUI': '良好' }, { 機能: 'スループット', 'llama.cpp': '1–100 tok/s', vLLM: '100–1000+ tok/s', 'Text-Gen-WebUI': '1–100 tok/s' }, { 機能: '組み込みUI', 'llama.cpp': 'なし', vLLM: 'なし', 'Text-Gen-WebUI': 'あり' }, { 機能: 'LoRAチューニング', 'llama.cpp': 'なし', vLLM: '限定的', 'Text-Gen-WebUI': '内蔵' }] },
+                    { type: 'list', h2: 'llama.cpp：軽量基盤', items: ['コンシューマ向けLLM推論C++ライブラリ — GPU無しで動作', '最小RAMオーバーヘッド — 8GB RAMのCPUのみで7Bモデル実行可能', 'NVIDIA、AMD、Apple Metal（Mシリーズ）GPUバックエンド対応', 'GGUFフォーマット：70Bモデルを20–40GBに圧縮', 'OllamaはllLama.cppをラップ — Ollama実行時は常にllama.cppを使用'] },
+                    { type: 'list', h2: 'vLLM：本番標準エンジン', items: ['UC Berkeleyによる高スループットGPU推論Pythonフレームワーク', '<strong>Paged Attention</strong>：GPU利用率を約20%から約70%に改善', '同時50–100プロンプト処理 — 1 GPUで50+同時ユーザーをサービス', '分散推論：70BモデルをGPU複数台に自動分散', 'トレードオフ：NVIDIA GPU必須、CPU性能は低い'] },
+                    { type: 'list', h2: 'Text-Generation-WebUI：研究ツール', items: ['組み込みWebインターフェース付きPythonアプリ（oobabooga）', 'LoRAファインチューニング：外部スクリプト不要でカスタムアダプター学習', 'マルチバックエンド：llama.cpp/GPTQ/exllamaバックエンドを切り替え', 'キャラクターロールプレイ＋拡張エコシステム', '最適用途：ファインチューニング、LoRAテスト、高度な推論実験'] },
+                    { type: 'table', h2: 'パフォーマンス：Tokens/秒', columns: ['シナリオ', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'], rows: [{ シナリオ: 'Llama 3.1 8B — RTX 4090', 'llama.cpp': '150 tok/s', vLLM: '300 tok/s（バッチ）', 'Text-Gen-WebUI': '150 tok/s' }, { シナリオ: 'Llama 3.1 8B — 8コアCPU', 'llama.cpp': '5 tok/s', vLLM: '0.5 tok/s（使用不可）', 'Text-Gen-WebUI': '4 tok/s' }, { シナリオ: 'Llama 3.1 70B — 2× RTX 4090', 'llama.cpp': '20 tok/s（1 GPU）', vLLM: '100 tok/s（分散）', 'Text-Gen-WebUI': '20 tok/s' }, { シナリオ: 'Phi-3 3.8B — M4 MacBook', 'llama.cpp': '30 tok/s', vLLM: 'N/A（Metal非対応）', 'Text-Gen-WebUI': '25 tok/s' }] },
+                    { type: 'list', h2: '本番環境での選択指針', items: ['<strong>vLLM</strong>：100+リクエスト/日、NVIDIA GPU、マルチユーザーAPIサーバー', '<strong>llama.cpp（Ollama）</strong>：CPU/Apple Silicon、シングルユーザー向け', '<strong>Text-Gen-WebUI</strong>：ファインチューニング、LoRAアダプター、研究実験', '多様なフォーマット（GPTQ/GGUF/safetensors）対応ならText-Gen-WebUI', '1つのvLLMインスタンスでllama.cppの50倍のユーザーに対応可能'] },
+                    { type: 'list', h2: '地域別コンプライアンス', items: ['EU/GDPR：vLLMオンプレミス — Prometheusメトリクスでのバックアップ監査ログ', '推奨EUモデル：Mistral 7B（フランス、Apache 2.0、高性能）', '日本/METI：vLLM + Qwen2.5 7B — 日本語ネイティブトークナイゼーション＋本番スループット', '中国（データ安全法）：Alibaba Cloud A10/A100でvLLM + Qwen2.5 14B', '3つすべてのエンジンが完全オンプレミス推論対応 — データが外部へ漏れない'] },
+                    { type: 'list', h2: 'よくある間違い', items: ['OllamaとvLLMの選択を混同 — vLLMはバックエンド、チャットアプリではない', 'CPUでvLLMの方が速いと思う — CPUではllama.cppが10倍速い', 'ノートPCのGPUでvLLMを実行 — データセンターGPU（RTX 4090/A100）向けに設計', 'スループットとレイテンシの混同 — 高バッチスループット≠低リクエストレイテンシ', 'Python 3.10+なしでText-Gen-WebUIをインストール — 必ずPythonバージョンを先確認'] },
+                    { type: 'faq', h2: 'よくある質問', faqs: [{ q: 'Macに最適なエンジンは？', a: 'Ollama経由のllama.cpp。vLLMはApple Metalに対応していないため、MacのCPU性能が低い。' }, { q: 'vLLMはOllamaの一部？', a: 'いいえ。OllamaはllLama.cppを使用。vLLMはUC Berkeleyによる別エンジン。' }, { q: 'GPU無しでvLLMは使える？', a: '技術的には可能ですが、速度が実用的でない。CPUのみならllama.cpp（Ollama）を使用。' }, { q: 'Paged Attentionとは？', a: 'OS仮想メモリから着想したvLLMのメモリシステム — GPU利用率を約20%から約70%に改善。' }] },
+                    { type: 'list', h2: 'エンジン選択ガイド', items: ['<strong>llama.cpp（Ollama）</strong>：コンシューマ、CPU/Apple Silicon、シングルユーザー', '<strong>vLLM</strong>：50+同時ユーザー、NVIDIA GPU、本番API、最高スループット', '<strong>Text-Gen-WebUI</strong>：モデルのファインチューニング、LoRAテスト、高度な推論設定'] },
+                    { type: 'cta', h2: 'PromptQuorumを試す', body: '複数の推論エンジンでプロンプトを実行。出力比較、精度デバッグ、ローカルLLMスタックを最適化。', cta: '無料で始める', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            zh: {
+                title: 'Text-Gen-WebUI vs vLLM vs llama.cpp 2026',
+                slides: [
+                    { type: 'title', h1: 'Text-Gen-WebUI vs\nvLLM vs llama.cpp', subtitle: '三种推理引擎对比：哪个适合您的场景？', link: 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=zh' },
+                    { type: 'list', h2: '核心要点', items: ['推理引擎加载模型权重并生成Token — 与UI层相互独立', '<strong>llama.cpp</strong>：最轻量C++库，CPU高效，驱动Ollama', '<strong>vLLM</strong>：GPU吞吐量最高，批处理100–1000+ tok/s', '<strong>Text-Gen-WebUI</strong>：内置Web UI，LoRA微调，研究工作流', 'vLLM主导生产；llama.cpp主导消费端；Text-Gen-WebUI主导研究'] },
+                    { type: 'list', h2: '什么是推理引擎？', intro: '加载模型权重并运行数学计算以生成文本的软件。', items: ['第1层：模型文件（如llama-3.1-8b.gguf）— 神经网络权重', '第2层：推理引擎 — 加载模型、生成Token', '第3层：接口/API — REST、网页聊天、VS Code扩展', 'Ollama = llama.cpp封装（带OpenAI兼容API）', 'vLLM：无内置UI。Text-Gen-WebUI：内置UI。'] },
+                    { type: 'table', h2: '功能对比', columns: ['功能', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'], rows: [{ 功能: '类型', 'llama.cpp': 'C++库', vLLM: 'Python（生产）', 'Text-Gen-WebUI': 'Python应用' }, { 功能: 'GPU支持', 'llama.cpp': 'NVIDIA/AMD/Metal', vLLM: '仅NVIDIA', 'Text-Gen-WebUI': 'NVIDIA/AMD/CPU' }, { 功能: 'CPU推理', 'llama.cpp': '优秀', vLLM: '差', 'Text-Gen-WebUI': '良好' }, { 功能: '吞吐量', 'llama.cpp': '1–100 tok/s', vLLM: '100–1000+ tok/s', 'Text-Gen-WebUI': '1–100 tok/s' }, { 功能: '内置UI', 'llama.cpp': '无', vLLM: '无', 'Text-Gen-WebUI': '有' }, { 功能: 'LoRA微调', 'llama.cpp': '无', vLLM: '有限', 'Text-Gen-WebUI': '内置' }] },
+                    { type: 'list', h2: 'llama.cpp：轻量级基础', items: ['面向消费级硬件的LLM推理C++库 — 无需GPU即可运行', '极低RAM开销 — 仅8GB RAM即可用CPU运行7B模型', '支持NVIDIA、AMD、Apple Metal（M系列）GPU后端', 'GGUF格式：将70B模型压缩至20–40GB', 'Ollama封装llama.cpp — 运行Ollama时始终使用llama.cpp'] },
+                    { type: 'list', h2: 'vLLM：生产标准引擎', items: ['UC Berkeley开发的高吞吐量GPU推理Python框架', '<strong>Paged Attention</strong>：GPU利用率从约20%提升至约70%', '同时批处理50–100个提示 — 单GPU服务50+并发用户', '分布式推理：自动将70B模型分散到多块GPU', '权衡：需要NVIDIA GPU，CPU性能差'] },
+                    { type: 'list', h2: 'Text-Generation-WebUI：研究工具', items: ['内置Web界面的Python应用（又名oobabooga）', 'LoRA微调：无需外部脚本即可训练自定义适配器', '多后端：可在llama.cpp/GPTQ/exllama后端之间切换', '角色扮演+扩展生态系统，支持自定义工作流', '最适合：模型微调、LoRA测试、高级推理实验'] },
+                    { type: 'table', h2: '性能：每秒Token数', columns: ['场景', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'], rows: [{ 场景: 'Llama 3.1 8B — RTX 4090', 'llama.cpp': '150 tok/s', vLLM: '300 tok/s（批处理）', 'Text-Gen-WebUI': '150 tok/s' }, { 场景: 'Llama 3.1 8B — 8核CPU', 'llama.cpp': '5 tok/s', vLLM: '0.5 tok/s（不可用）', 'Text-Gen-WebUI': '4 tok/s' }, { 场景: 'Llama 3.1 70B — 2× RTX 4090', 'llama.cpp': '20 tok/s（单GPU）', vLLM: '100 tok/s（分布式）', 'Text-Gen-WebUI': '20 tok/s' }, { 场景: 'Phi-3 3.8B — M4 MacBook', 'llama.cpp': '30 tok/s', vLLM: 'N/A（无Metal）', 'Text-Gen-WebUI': '25 tok/s' }] },
+                    { type: 'list', h2: '生产环境选择指南', items: ['<strong>vLLM</strong>：100+请求/天，NVIDIA GPU，多用户API服务器', '<strong>llama.cpp（Ollama）</strong>：仅CPU、Apple Silicon、单用户场景', '<strong>Text-Gen-WebUI</strong>：模型微调、LoRA适配器、高级研究实验', '多格式需求（GPTQ/GGUF/safetensors）？Text-Gen-WebUI全部支持', '一个vLLM实例可服务50+并发用户，是llama.cpp的50倍'] },
+                    { type: 'list', h2: '区域合规指南', items: ['EU/GDPR：vLLM本地部署 — Prometheus指标满足BSI IT审计日志要求', '推荐EU模型：Mistral 7B（法国，Apache 2.0许可证，性能优秀）', '日本/METI：vLLM + Qwen2.5 7B — 原生日语分词＋生产级吞吐量', '中国（数据安全法）：阿里云A10/A100上部署vLLM + Qwen2.5 14B', '三种引擎均支持完全本地推理 — 数据不离开服务器'] },
+                    { type: 'list', h2: '常见错误', items: ['混淆选择Ollama还是vLLM — vLLM是后端，不是聊天应用', '以为vLLM在CPU上更快 — CPU上llama.cpp快10倍', '在笔记本GPU上运行vLLM — 专为数据中心GPU（RTX 4090/A100）设计', '混淆吞吐量和延迟 — 高批处理吞吐量≠低单请求延迟', '未安装Python 3.10+就安装Text-Gen-WebUI — 务必先检查Python版本'] },
+                    { type: 'faq', h2: '常见问题', faqs: [{ q: 'Mac最适合哪种引擎？', a: 'llama.cpp（via Ollama）。vLLM不支持Apple Metal — Mac上CPU性能差。' }, { q: 'vLLM是Ollama的一部分吗？', a: '不是。Ollama内部使用llama.cpp。vLLM是UC Berkeley开发的独立引擎。' }, { q: '没有GPU能用vLLM吗？', a: '技术上可以，但速度极慢无法使用。仅CPU部署请使用llama.cpp（Ollama）。' }, { q: '什么是Paged Attention？', a: 'vLLM借鉴OS虚拟内存的内存管理系统 — 将GPU利用率从约20%提升至约70%。' }] },
+                    { type: 'list', h2: '引擎选择总结', items: ['<strong>llama.cpp（Ollama）</strong>：消费端、CPU/Apple Silicon、单用户、易用性优先', '<strong>vLLM</strong>：50+并发用户，NVIDIA GPU，生产API，最高吞吐量', '<strong>Text-Gen-WebUI</strong>：模型微调、LoRA测试、高级推理参数调整'] },
+                    { type: 'cta', h2: '试用PromptQuorum', body: '在多个推理引擎上运行提示词。对比输出、调试准确率、优化本地LLM技术栈。', cta: '免费开始', href: 'https://www.promptquorum.com' }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = `https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=${lang}`;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none;">← Article</a></p>`;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p style="margin-top: 40px; font-size: 18px; color: #79747e;"><a href="${slide.link}" style="color: #6750a4; text-decoration: none;">${slide.link.split('/').pop().replace(/-/g, ' ')}</a></p>${footerLink}`;
+                    break;
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p style="margin-bottom: 12px; font-size: clamp(14px, 1.4vw, 17px);">${slide.intro}</p>`;
+                    html += '<ul style="font-size: clamp(13px, 1.4vw, 17px); margin-top: 8px;">';
+                    slide.items.forEach(item => { html += `<li>${item}</li>`; });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+                case 'table':
+                    html = `<h2>${slide.h2}</h2><table><tr>`;
+                    slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    html += footerLink;
+                    break;
+                case 'comparison':
+                    html = `<h2>${slide.h2}</h2><p style="margin-top: 40px; font-size: clamp(16px, 1.8vw, 22px);">${slide.line1}</p><p style="font-size: clamp(16px, 1.8vw, 22px);">${slide.line2}</p><p style="margin-top: 32px; font-size: clamp(14px, 1.5vw, 18px); color: #6750a4;">${slide.tip}</p>${footerLink}`;
+                    break;
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2><ol style="font-size: clamp(13px, 1.4vw, 17px); margin-top: 12px;">`;
+                    slide.items.forEach(item => { html += `<li>${item}</li>`; });
+                    html += '</ol>';
+                    html += footerLink;
+                    break;
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 16px; text-align: left; max-width: 640px;"><strong style="font-size: clamp(13px, 1.4vw, 16px);">Q: ${faq.q}</strong><p style="margin-top: 4px; font-size: clamp(12px, 1.3vw, 15px); color: #49454f;">A: ${faq.a}</p></div>`;
+                    });
+                    html += footerLink;
+                    break;
+                case 'cta':
+                    html = `<h2>${slide.h2}</h2><p style="margin-top: 20px; max-width: 540px;">${slide.body}</p><a href="${slide.href}" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: 700;">${slide.cta}</a>${footerLink}`;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href = `https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=${lang}`;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+            else currentSlide = n;
+
+            slides.forEach(s => s.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) { showSlide(currentSlide + n); }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        if (isPrint) {
+            window.addEventListener('load', () => { window.print(); });
+        }
+
+        showSlide(0);
+    </script>
+</body>
+</html>
