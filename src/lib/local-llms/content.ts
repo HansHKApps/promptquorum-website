@@ -17636,6 +17636,345 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
     },
   },
+    fr: {
+      theme: 'Outils & Interfaces',
+      title: 'Text-Generation-WebUI vs vLLM vs llama.cpp en 2026 : Comparaison des moteurs d\'inférence',
+      seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
+      intro: 'Text-Generation-WebUI, vLLM et llama.cpp sont trois moteurs d\'inférence populaires pour exécuter des LLM locaux, chacun optimisé pour différents cas d\'usage. llama.cpp est le plus léger et alimente Ollama ; vLLM est le plus rapide pour les APIs de production haute capacité ; Text-Generation-WebUI est le plus riche en fonctionnalités pour l\'expérimentation. En avril 2026, vLLM domine les déploiements de production, llama.cpp domine les appareils consommateurs, et Text-Generation-WebUI domine les workflows de recherche et d\'ajustement fin.',
+      metaDescription: 'vLLM domine la production (débit maximal). llama.cpp alimente Ollama (le plus léger). Text-Generation-WebUI meilleur pour la recherche. Comparaison 2026 des moteurs d\'inférence.',
+      publishDate: '2026-04-04',
+      readTime: '13 min de lecture',
+      educationalLevel: 'Advanced',
+      primaryTerm: 'moteur d\'inférence',
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Qu\'est-ce qu\'un moteur d\'inférence ?', anchor: '#what-is-inference-engine' },
+        { label: 'Tableau de comparaison des fonctionnalités', anchor: '#feature-comparison' },
+        { label: 'Comprendre llama.cpp', anchor: '#understanding-llama-cpp' },
+        { label: 'Comprendre vLLM', anchor: '#understanding-vllm' },
+        { label: 'Comprendre Text-Generation-WebUI', anchor: '#understanding-text-generation-webui' },
+        { label: 'Performance : Tokens par seconde', anchor: '#performance-tokens-per-second' },
+        { label: 'Déploiements de production', anchor: '#production-deployments' },
+        { label: 'Quand choisir chaque moteur ?', anchor: '#when-to-use-each' },
+        { label: 'Choix du moteur d\'inférence par région', anchor: '#inference-engine-choice-by-region' },
+        { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+        { label: 'Questions fréquentes', anchor: '#common-questions' },
+        { label: 'Lectures connexes', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Un moteur d\'inférence est le logiciel C/C++/Python qui charge un fichier modèle et génère des tokens. Il est séparé de la couche UI ou API.',
+            '**llama.cpp** = léger, efficace en CPU, alimente Ollama. Meilleur pour : portables consommateurs, mono-utilisateur, zéro dépendance.',
+            '**vLLM** = production-grade, débit GPU maximal, supporte le batching et l\'inférence distribuée. Meilleur pour : serveurs API, multi-utilisateur, haut débit.',
+            '**Text-Generation-WebUI** = outil d\'expérimentation riche en fonctionnalités avec UI web intégrée. Meilleur pour : ajustement fin, test LoRA, réglages avancés.',
+            'En avril 2026, vLLM mène l\'utilisation en production, llama.cpp mène l\'utilisation consommateur, et Text-Generation-WebUI mène les workflows de recherche/ajustement fin.',
+          ],
+        },
+        whatIsInferenceEngine: {
+          title: 'Qu\'est-ce qu\'un moteur d\'inférence ?',
+          content: [
+            'Un moteur d\'inférence est le composant logiciel qui charge un fichier modèle pré-entraîné et exécute les opérations mathématiques nécessaires pour générer du texte. Il diffère d\'une interface de chat (comme Open WebUI ou Enchanted UI) ou d\'une couche API (comme l\'API REST d\'Ollama).',
+            'Un déploiement typique de LLM local comporte trois couches :',
+            '1. **Fichier modèle** (par exemple, llama-3.1-8b.gguf) — les poids du réseau neuronal.',
+            '2. **Moteur d\'inférence** (par exemple, llama.cpp, vLLM) — charge le modèle et génère les tokens.',
+            '3. **Interface ou API** (par exemple, API REST, chat web, extension VS Code) — vous permet d\'interagir avec le moteur.',
+            'Ollama lui-même est principalement un wrapper autour de llama.cpp avec une API compatible OpenAI. vLLM est un moteur d\'inférence sans UI intégrée. Text-Generation-WebUI est un moteur d\'inférence avec une UI web intégrée.',
+          ],
+        },
+        featureComparison: {
+          title: 'Comparaison des fonctionnalités : llama.cpp vs vLLM vs Text-Generation-WebUI',
+          rows: [
+            { 'Fonctionnalité': 'Type', 'llama.cpp': 'Bibliothèque C++ (léger)', 'vLLM': 'Framework Python (production)', 'Text-Gen-WebUI': 'App Python (expérimentation)' },
+            { 'Fonctionnalité': 'Support GPU', 'llama.cpp': 'NVIDIA, AMD, Apple Metal', 'vLLM': 'NVIDIA uniquement (meilleur support)', 'Text-Gen-WebUI': 'NVIDIA, AMD, CPU' },
+            { 'Fonctionnalité': 'Inférence CPU', 'llama.cpp': 'Excellente', 'vLLM': 'Faible', 'Text-Gen-WebUI': 'Bonne' },
+            { 'Fonctionnalité': 'Débit (tokens/s)', 'llama.cpp': 'Moyen (1–100)', 'vLLM': 'Très élevé (100–1000+)', 'Text-Gen-WebUI': 'Moyen (1–100)' },
+            { 'Fonctionnalité': 'Support batching', 'llama.cpp': 'Limité', 'vLLM': 'Complet (batches de 100+)', 'Text-Gen-WebUI': 'Limité' },
+            { 'Fonctionnalité': 'UI web intégrée', 'llama.cpp': 'Non', 'vLLM': 'Non', 'Text-Gen-WebUI': 'Oui' },
+            { 'Fonctionnalité': 'Ajustement LoRA', 'llama.cpp': 'Pas directement', 'vLLM': 'Limité', 'Text-Gen-WebUI': 'Intégré' },
+            { 'Fonctionnalité': 'Formats de quantification', 'llama.cpp': 'GGUF, GGML', 'vLLM': 'Précision complète, 8-bit, 4-bit', 'Text-Gen-WebUI': 'GGUF, safetensors, fp16' },
+            { 'Fonctionnalité': 'Difficulté de configuration', 'llama.cpp': 'Via Ollama (facile)', 'vLLM': 'pip install (moyen)', 'Text-Gen-WebUI': 'Clone GitHub (moyen)' },
+            { 'Fonctionnalité': 'Prix', 'llama.cpp': 'Gratuit', 'vLLM': 'Gratuit', 'Text-Gen-WebUI': 'Gratuit' },
+          ],
+          columns: ['Fonctionnalité', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+        },
+        llamacpp: {
+          title: 'Comprendre llama.cpp : La fondation',
+          content: [
+            'llama.cpp est une implémentation C++ de l\'inférence LLM, écrite à l\'origine pour exécuter le modèle Llama de Meta sur du matériel grand public sans accélération GPU. En avril 2026, c\'est le moteur d\'inférence le plus léger et portable.',
+            '**Pourquoi llama.cpp domine l\'utilisation consommateur :**',
+            '- Surcharge mémoire minimale — peut s\'exécuter sur 8 Go de RAM uniquement avec CPU.',
+            '- Supporte plusieurs backends GPU (NVIDIA, AMD, Apple Metal, Intel).',
+            '- Format GGUF : un format de modèle quantifié qui compresse les modèles 70B à 20–40 Go.',
+            '- Alimente Ollama en interne — vous utilisez llama.cpp chaque fois que vous lancez Ollama.',
+            'llama.cpp n\'est pas une application complète ; c\'est une bibliothèque. Vous interagissez avec elle via Ollama (le moyen le plus courant) ou via d\'autres outils qui l\'intègrent.',
+          ],
+        },
+        vllm: {
+          title: 'Comprendre vLLM : Le standard de production',
+          content: [
+            'vLLM est un framework Python conçu pour l\'inférence haute capacité sur clusters GPU. Il optimise le service de modèles via API, avec support du batching, de l\'inférence distribuée et de la planification avancée.',
+            '**Pourquoi vLLM domine la production :**',
+            '- **Attention paginée** : vLLM utilise une mise en page mémoire novatrice qui améliore l\'utilisation GPU d\'environ 20% à 70%, augmentant considérablement le débit.',
+            '- **Traitement batch** : peut traiter 50–100 invites simultanément, servant plus d\'utilisateurs par GPU.',
+            '- **Inférence distribuée** : diviser automatiquement un modèle 70B sur plusieurs GPUs.',
+            '- **Large support de modèles** : fonctionne avec n\'importe quel modèle HuggingFace (Llama, Qwen, Mistral, Phi, etc.).',
+            'En avril 2026, la plupart des déploiements LLM locaux en production dans les entreprises utilisent vLLM. Le compromis est que vLLM nécessite des GPUs NVIDIA ; il a une mauvaise performance CPU.',
+          ],
+          codeBlock: '# Installer vLLM\npip install vllm\n\n# Exécuter un modèle via API\nvllm serve meta-llama/Llama-3.1-8B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Accessible maintenant à http://localhost:8000/v1/completions',
+          codeLanguage: 'bash',
+        },
+        textGenerationWebUI: {
+          title: 'Comprendre Text-Generation-WebUI : L\'outil du chercheur',
+          content: [
+            'Text-Generation-WebUI (aussi appelé oobabooga) est une application Python complète avec une interface web pour expérimenter avec les modèles. Elle combine l\'inférence avec des outils intégrés pour l\'ajustement fin, l\'entraînement LoRA, la génération d\'embeddings et les tests d\'invites avancés.',
+            '**Pourquoi les chercheurs utilisent Text-Generation-WebUI :**',
+            '- **Ajustement LoRA intégré** : entraîner des adaptateurs LoRA personnalisés sur des modèles de base sans scripts d\'entraînement externes.',
+            '- **Plusieurs moteurs d\'inférence** : peut basculer entre llama.cpp, GPTQ, exllama et autres backends.',
+            '- **Roleplay de caractère** : système intégré pour créer et tester des personas de caractères.',
+            '- **Exposition API** : expose une interface FastAPI pour une utilisation programmatique.',
+            '- **Écosystème d\'extensions** : extensions construites par la communauté pour des workflows personnalisés.',
+            'Text-Generation-WebUI est plus un outil de recherche et d\'expérimentation qu\'un serveur de production. La configuration est plus impliquée (nécessite le clone GitHub et la gestion des dépendances Python), mais une fois en cours d\'exécution, elle est extrêmement puissante pour le développement.',
+          ],
+        },
+        performance: {
+          title: 'Quelle est la vitesse de chaque moteur ? Comparaison des débits',
+          content: [
+            'Le débit (tokens par seconde) dépend de la taille du modèle, du matériel et de l\'optimisation du moteur. En avril 2026, voici les benchmarks du monde réel sur du matériel grand public :',
+          ],
+          rows: [
+            { 'Scénario': 'Llama 3.1 8B sur RTX 4090 (GPU)', 'llama.cpp': '150 tokens/s', 'vLLM': '300 tokens/s (avec batching)', 'Text-Gen-WebUI': '150 tokens/s' },
+            { 'Scénario': 'Llama 3.1 8B sur CPU 8 cœurs', 'llama.cpp': '5 tokens/s', 'vLLM': '0.5 tokens/s (inutilisable)', 'Text-Gen-WebUI': '4 tokens/s' },
+            { 'Scénario': 'Llama 3.1 70B sur 2× RTX 4090', 'llama.cpp': '20 tokens/s (GPU unique)', 'vLLM': '100 tokens/s (distribué)', 'Text-Gen-WebUI': '20 tokens/s' },
+            { 'Scénario': 'Phi-3 3.8B sur MacBook Pro M4', 'llama.cpp': '30 tokens/s', 'vLLM': 'N/A (pas de support Metal)', 'Text-Gen-WebUI': '25 tokens/s' },
+          ],
+          columns: ['Scénario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+        },
+        productionDeployments: {
+          title: 'Quel moteur pour les déploiements de production ?',
+          content: [
+            '**vLLM est le standard de production en avril 2026.** La plupart des entreprises exécutant des APIs LLM locales en production utilisent vLLM en raison de son optimisation de débit et de son support du batching. Une seule instance vLLM peut servir 50+ utilisateurs simultanés sur un GPU, contre 1–2 pour llama.cpp.',
+            'Cependant, le choix de production dépend de votre contrainte :',
+            '- **Servir 100+ requêtes/jour avec GPU limité** : utiliser vLLM (meilleur débit).',
+            '- **Servir avec CPU uniquement ou Apple Silicon** : utiliser llama.cpp via Ollama (meilleur support CPU).',
+            '- **Utiliser les modèles Llama spécifiquement** : llama.cpp ou vLLM fonctionnent ; vLLM est plus rapide.',
+            '- **Utiliser des formats de modèles divers (GPTQ, GGUF, safetensors)** : Text-Generation-WebUI supporte tous ; vLLM nécessite la précision complète ou des formats de quantification spécifiques.',
+          ],
+        },
+        whenToUse: {
+          title: 'Quand choisir chaque moteur ?',
+          content: 'Utilisez ce cadre de décision :',
+          items: [
+            '**llama.cpp (via Ollama) :** vous êtes un consommateur, non-développeur, ou déployant sur CPU/Apple Silicon. Meilleure facilité d\'utilisation globale.',
+            '**vLLM :** vous servez une API avec 50+ utilisateurs simultanés, vous avez des GPUs NVIDIA, et vous avez besoin du débit maximal. Standard de production.',
+            '**Text-Generation-WebUI :** vous ajustez les modèles, testez les adaptateurs LoRA, ou expérimentez avec des réglages d\'inférence avancés. Meilleur pour la recherche.',
+          ],
+        },
+        regionalContext: {
+          title: 'Choix du moteur d\'inférence par région',
+          content: [
+            'Le choix du moteur d\'inférence a des implications directes pour la conformité régionale et les déploiements en entreprise dans différentes juridictions réglementaires.',
+          ],
+          items: [
+            '**UE / RGPD** : Pour les déploiements en entreprise dans l\'UE, vLLM s\'exécutant sur site maintient toute l\'inférence au sein de l\'infrastructure de l\'UE — aucun token, prompt ou résultat ne quitte vos serveurs. Pour la conformité BSI IT-Grundschutz allemande, vLLM est le moteur de production recommandé car il fournit un enregistrement d\'audit structuré via les métriques Prometheus (point de terminaison /metrics), et toutes les versions de modèles sont épinglables via les IDs de modèles HuggingFace pour la documentation de conformité. Les modèles Mistral (Mistral AI, France, Apache 2.0) sont le choix préféré de l\'UE pour les déploiements de production vLLM — origine de l\'UE, licence propre, performance solide.',
+            '**Japon (METI)** : la gouvernance IA METI exige de documenter l\'infrastructure d\'inférence. Les métriques Prometheus structurées de vLLM satisfont les exigences de piste d\'audit mieux que l\'enregistrement stdout de llama.cpp. Pour les déploiements en entreprise japonais, Qwen2.5 7B via vLLM est la pile recommandée — tokenization native du japonais plus débit de production.',
+            '**Chine** : selon la Loi sur la sécurité des données de Chine (数据安全法), toute l\'inférence doit rester sur site pour les données sensibles. vLLM est compatible avec les instances GPU Alibaba Cloud A10 et A100. Les modèles Qwen2.5 (Alibaba) sont nativement optimisés pour vLLM et fournissent le meilleur débit en langue chinoise.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs courantes avec les moteurs d\'inférence',
+          items: [
+            '**Penser que vous devez choisir entre Ollama et ces moteurs.** Ollama utilise llama.cpp en interne. Vous ne choisissez pas Ollama vs vLLM ; vLLM est un *backend* alternatif à Ollama, pas une app de chat. Les deux ont leur utilité.',
+            '**Supposer que vLLM est plus rapide sur CPU.** vLLM a une mauvaise performance CPU ; llama.cpp est 10× plus rapide sur CPU. Vérifiez votre disponibilité GPU avant de choisir vLLM.',
+            '**Exécuter vLLM sur un GPU portable.** vLLM est optimisé pour les GPUs de centre de données (RTX 4090, A100). Sur les GPUs grand public, la surcharge du planificateur de batching de vLLM peut ralentir la performance de requête unique. Restez avec llama.cpp pour les portables.',
+            '**Oublier que le débit d\'inférence n\'est pas la même chose que la latence d\'expérience utilisateur.** vLLM peut traiter par batch 100 requêtes, mais chaque requête prend du temps pour générer ses tokens. Un débit élevé ne signifie pas une latence faible.',
+            '**Installer mal les dépendances pour Text-Generation-WebUI.** Les instructions GitHub supposent que vous avez Git, Python 3.10+ et pip installés. Sur Windows, cela échoue souvent silencieusement. Vérifiez toujours la version de Python avant de cloner.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Questions fréquentes sur les moteurs d\'inférence',
+          faqs: [
+            {
+              q: 'Puis-je basculer entre les moteurs d\'inférence sans changer mon modèle ?',
+              a: 'Principalement oui. Les fichiers modèles au format GGUF fonctionnent avec llama.cpp (Ollama) et Text-Generation-WebUI. vLLM nécessite la précision complète ou des formats de quantification spécifiques. Les modèles HuggingFace safetensors fonctionnent avec les trois.',
+            },
+            {
+              q: 'Quel moteur est meilleur pour Mac ?',
+              a: 'llama.cpp via Ollama. Il a une excellente optimisation Apple Silicon (M-series). vLLM ne supporte pas Metal (GPU Apple), donc la performance CPU est faible. Text-Generation-WebUI fonctionne sur Mac mais est plus lent qu\'Ollama.',
+            },
+            {
+              q: 'vLLM fait-il partie d\'Ollama ?',
+              a: 'Non. Ollama utilise llama.cpp en interne. vLLM est un moteur d\'inférence séparé par UC Berkeley. Ils servent des buts différents : Ollama pour la simplicité ; vLLM pour le débit de production.',
+            },
+            {
+              q: 'Puis-je utiliser vLLM sans GPU ?',
+              a: 'Techniquement oui, mais c\'est inutilisablement lent. vLLM est conçu pour GPU. Pour les déploiements CPU uniquement, utilisez llama.cpp (Ollama).',
+            },
+            {
+              q: 'Text-Generation-WebUI évolue-t-il vers la production ?',
+              a: 'Non recommandé. Text-Generation-WebUI est un outil de recherche, pas un serveur de production. Il manque des fonctionnalités comme l\'équilibrage de charge, la surveillance et l\'inférence distribuée dont les services de production ont besoin. Utilisez vLLM pour la production.',
+            },
+            {
+              q: 'Qu\'est-ce que l\'Attention paginée et pourquoi c\'est important ?',
+              a: 'L\'Attention paginée est le système de gestion mémoire de vLLM qui emprunte des concepts de mémoire virtuelle aux systèmes d\'exploitation. Au lieu d\'allouer un bloc mémoire GPU contigu fixe par requête, elle alloue la mémoire en pages qui peuvent être partagées et réutilisées entre les requêtes. Cela améliore l\'utilisation de la mémoire GPU d\'environ 20% à 70%, permettant à vLLM de servir 3–4× plus d\'utilisateurs simultanés par GPU.',
+            },
+            {
+              q: 'Quel moteur dois-je utiliser si je n\'ai que 8 Go de RAM ?',
+              a: 'llama.cpp via Ollama. Avec 8 Go de RAM au total, un modèle 7B à Q4_K_M utilise environ 4.7 Go. llama.cpp gère cela bien à environ 5 tok/s sur CPU ou 80 tok/s sur un GPU dédié. vLLM nécessite beaucoup plus de surcharge et fonctionne mal sur la RAM grand public.',
+            },
+            {
+              q: 'Puis-je exécuter vLLM et Ollama sur la même machine ?',
+              a: 'Oui, si le VRAM est suffisant. Exécutez-les sur différents ports (vLLM par défaut : 8000, Ollama par défaut : 11434). Une configuration typique : Ollama gère les requêtes de chat mono-utilisateur rapides, vLLM gère les requêtes API batch. Cependant, les deux ne peuvent pas charger le même modèle simultanément sans doubler le VRAM.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Lectures connexes',
+          items: [
+            '[Comment installer Ollama](/local-llms/how-to-install-ollama?lang=fr) — Configurez le wrapper llama.cpp le plus populaire.',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=fr) — Les deux utilisent des moteurs d\'inférence ; comparez leurs UIs.',
+            '[API locale LLM compatible OpenAI](/local-llms/local-llm-openai-compatible-api?lang=fr) — vLLM et Ollama exposent tous deux des APIs compatibles OpenAI.',
+            '[LLMs locaux avec VS Code et Cursor](/local-llms/local-llms-with-vscode-cursor?lang=fr) — Intégrez votre moteur d\'inférence avec votre éditeur.',
+            '[Meilleures interfaces LLM locales](/local-llms/best-local-llm-frontends?lang=fr) — Les interfaces sont des couches UI au-dessus des moteurs d\'inférence.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Sources',
+          items: [
+            'Gerganov, G. (2024). "llama.cpp GitHub." https://github.com/ggerganov/llama.cpp — Code source du moteur d\'inférence C++ et documentation de quantification.',
+            'vLLM Team. (2024). "vLLM GitHub." https://github.com/vllm-project/vllm — Code source du moteur d\'inférence de production et documentation du serveur API.',
+            'Kwon et al. (2023). "Efficient Memory Management for Large Language Model Serving with PagedAttention." https://arxiv.org/abs/2309.06180 — Article original sur l\'Attention paginée expliquant l\'approche de gestion mémoire de vLLM.',
+            'oobabooga. (2024). "Text-Generation-WebUI GitHub." https://github.com/oobabooga/text-generation-webui — Code source et guide d\'installation pour Text-Generation-WebUI.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Text-Generation-WebUI vs vLLM vs llama.cpp en 2026 : Comparaison des moteurs d\'inférence',
+        'description': 'vLLM domine la production (débit maximal). llama.cpp alimente Ollama (le plus léger). Text-Generation-WebUI meilleur pour la recherche. Comparaison 2026 des moteurs d\'inférence.',
+        'url': 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=fr',
+        'inLanguage': 'fr',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-15',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'vLLM' },
+          { '@type': 'Thing', 'name': 'llama.cpp' },
+          { '@type': 'Thing', 'name': 'Text-Generation-WebUI' },
+          { '@type': 'Thing', 'name': 'moteur d\'inférence LLM' },
+          { '@type': 'Thing', 'name': 'Attention paginée' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Advanced',
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
+        'inLanguage': 'fr',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'llama.cpp',
+            'description': 'Bibliothèque C++. CPU excellent, GPU bon. 1-100 tok/s. Format GGUF. Alimente Ollama. Meilleur pour appareils consommateurs et inférence CPU.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'vLLM',
+            'description': 'Framework Python. GPU uniquement (NVIDIA). 100-1000+ tok/s avec batching. Précision complète et 8/4-bit. Meilleur pour serveurs API de production avec 50+ utilisateurs simultanés.',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Text-Generation-WebUI',
+            'description': 'App Python avec UI web intégrée. CPU et GPU. 1-100 tok/s. GGUF, safetensors, fp16. Ajustement LoRA intégré. Meilleur pour recherche et expérimentation.',
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'fr',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Puis-je basculer entre les moteurs d\'inférence sans changer mon modèle ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Principalement oui. Les fichiers modèles au format GGUF fonctionnent avec llama.cpp (Ollama) et Text-Generation-WebUI. vLLM nécessite la précision complète ou des formats de quantification spécifiques. Les modèles HuggingFace safetensors fonctionnent avec les trois.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel moteur est meilleur pour Mac ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'llama.cpp via Ollama. Il a une excellente optimisation Apple Silicon (M-series). vLLM ne supporte pas Metal (GPU Apple), donc la performance CPU est faible. Text-Generation-WebUI fonctionne sur Mac mais est plus lent qu\'Ollama.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'vLLM fait-il partie d\'Ollama ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Ollama utilise llama.cpp en interne. vLLM est un moteur d\'inférence séparé par UC Berkeley. Ils servent des buts différents : Ollama pour la simplicité ; vLLM pour le débit de production.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser vLLM sans GPU ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Techniquement oui, mais c\'est inutilisablement lent. vLLM est conçu pour GPU. Pour les déploiements CPU uniquement, utilisez llama.cpp (Ollama).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Text-Generation-WebUI évolue-t-il vers la production ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non recommandé. Text-Generation-WebUI est un outil de recherche, pas un serveur de production. Il manque des fonctionnalités comme l\'équilibrage de charge, la surveillance et l\'inférence distribuée dont les services de production ont besoin. Utilisez vLLM pour la production.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que l\'Attention paginée et pourquoi c\'est important ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'Attention paginée est le système de gestion mémoire de vLLM qui emprunte des concepts de mémoire virtuelle aux systèmes d\'exploitation. Au lieu d\'allouer un bloc mémoire GPU contigu fixe par requête, elle alloue la mémoire en pages qui peuvent être partagées et réutilisées entre les requêtes. Cela améliore l\'utilisation de la mémoire GPU d\'environ 20% à 70%, permettant à vLLM de servir 3–4× plus d\'utilisateurs simultanés par GPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel moteur dois-je utiliser si je n\'ai que 8 Go de RAM ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'llama.cpp via Ollama. Avec 8 Go de RAM au total, un modèle 7B à Q4_K_M utilise environ 4.7 Go. llama.cpp gère cela bien à environ 5 tok/s sur CPU ou 80 tok/s sur un GPU dédié. vLLM nécessite beaucoup plus de surcharge et fonctionne mal sur la RAM grand public.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je exécuter vLLM et Ollama sur la même machine ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, si le VRAM est suffisant. Exécutez-les sur différents ports (vLLM par défaut : 8000, Ollama par défaut : 11434). Une configuration typique : Ollama gère les requêtes de chat mono-utilisateur rapides, vLLM gère les requêtes API batch. Cependant, les deux ne peuvent pas charger le même modèle simultanément sans doubler le VRAM.',
+            },
+          },
+        ],
+      },
+    },
   },
 
   'local-llm-openai-compatible-api': {
