@@ -18,7 +18,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: `${t.blogTitle} | PromptQuorum`,
     description: t.blogSubtitle,
-    alternates: generateAlternates('/blog'),
+    alternates: generateAlternates('/blog', selectedLang),
     openGraph: {
       title: `${t.blogTitle} | PromptQuorum`,
       description: t.blogSubtitle,

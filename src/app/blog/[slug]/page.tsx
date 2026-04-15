@@ -41,7 +41,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     title: pageTitle.length <= 43 ? `${pageTitle} | PromptQuorum Blog` : pageTitle,
     description: metaDesc,
     alternates: {
-      canonical: canonicalUrl,
+      canonical: selectedLang === 'en' ? canonicalUrl : `${canonicalUrl}?lang=${selectedLang}`,
       languages: {
         'x-default': canonicalUrl,
         'en': canonicalUrl,

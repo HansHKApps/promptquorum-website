@@ -14,7 +14,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: t.frameworksMetaTitle,
     description: t.frameworksMetaDescription,
-    alternates: generateAlternates('/frameworks'),
+    alternates: generateAlternates('/frameworks', selectedLang),
     openGraph: {
       title: t.frameworksMetaTitle,
       description: t.frameworksMetaDescription,

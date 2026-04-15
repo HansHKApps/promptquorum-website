@@ -13,7 +13,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: t.promptEngineeringHubTitle,
     description: t.promptEngineeringHubDescription,
-    alternates: generateAlternates('/prompt-engineering'),
+    alternates: generateAlternates('/prompt-engineering', selectedLang),
     openGraph: {
       title: t.promptEngineeringHubTitle,
       description: t.promptEngineeringHubDescription,

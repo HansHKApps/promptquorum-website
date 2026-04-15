@@ -16,7 +16,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: t.privacyMetaTitle,
     description: t.privacyMetaDescription,
-    alternates: generateAlternates('/privacy'),
+    alternates: generateAlternates('/privacy', selectedLang),
     robots: 'noindex, follow',
     openGraph: {
       title: t.privacyMetaTitle,

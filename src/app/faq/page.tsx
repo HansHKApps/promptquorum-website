@@ -13,7 +13,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: t.faqMetaTitle,
     description: t.faqMetaDescription,
-    alternates: generateAlternates('/faq'),
+    alternates: generateAlternates('/faq', selectedLang),
     openGraph: {
       title: t.faqMetaTitle,
       description: t.faqMetaDescription,

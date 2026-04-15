@@ -116,7 +116,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       keywords: ['prompt engineering glossary', 'AI terms', 'LLM glossary', 'Chain-of-Thought', 'RAG definition', 'prompt injection', 'function calling', 'few-shot prompting', 'temperature AI', 'context window'],
     }),
     alternates: {
-      canonical: canonicalUrl,
+      canonical: selectedLang === 'en' ? canonicalUrl : `${canonicalUrl}?lang=${selectedLang}`,
       languages: {
         'x-default': canonicalUrl,
         en: canonicalUrl,

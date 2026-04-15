@@ -13,7 +13,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title: t.compareMetaTitle,
     description: t.compareMetaDescription,
-    alternates: generateAlternates('/compare'),
+    alternates: generateAlternates('/compare', selectedLang),
     openGraph: {
       title: t.compareMetaTitle,
       description: t.compareMetaDescription,
