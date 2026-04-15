@@ -1,17 +1,14 @@
 import { ImageResponse } from 'next/og'
 import { peContent } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
+import { llmContent } from '@/lib/local-llms/content'
+import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import type { Language } from '@/lib/blog/blogContent'
 
 export const runtime = 'nodejs'
 
 export async function GET(request: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const key = PE_SLUG_TO_KEY[slug]
-
-  if (!key || !peContent[key]) {
-    return new Response('Not Found', { status: 404 })
-  }
 
   // Extract language from query param, default to 'en'
   const url = new URL(request.url)
@@ -19,7 +16,23 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
   const validLangs: Language[] = ['en', 'de', 'fr', 'ja', 'zh']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
-  const article = peContent[key][selectedLang] || peContent[key]['en']
+  // Try prompt-engineering first, then local-llms
+  const peKey = PE_SLUG_TO_KEY[slug]
+  const llmKey = LLM_SLUG_TO_KEY[slug]
+
+  let article: { title?: string; intro?: string } | undefined
+
+  if (peKey && peContent[peKey]) {
+    const langContent = peContent[peKey]
+    article = langContent[selectedLang] || langContent['en']
+  } else if (llmKey && llmContent[llmKey]) {
+    const langContent = llmContent[llmKey]
+    article = langContent[selectedLang] || langContent['en']
+  }
+
+  if (!article) {
+    return new Response('Not Found', { status: 404 })
+  }
   const title = article.title
   const intro = article.intro
 
