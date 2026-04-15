@@ -18631,6 +18631,345 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
       },
     },
+    zh: {
+      theme: '工具和接口',
+      title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推理引擎对比',
+      seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
+      intro: 'Text-Generation-WebUI、vLLM 和 llama.cpp 是运行本地 LLM 的三种流行推理引擎，每种针对不同用例进行优化。llama.cpp 最轻量且驱动 Ollama；vLLM 对高吞吐量生产 API 最快；Text-Generation-WebUI 对实验最功能丰富。截至 2026 年 4 月，vLLM 主导生产部署，llama.cpp 主导消费设备，Text-Generation-WebUI 主导研究和微调工作流。',
+      metaDescription: 'vLLM 主导生产环境（最高吞吐量）。llama.cpp 驱动 Ollama（最轻量）。Text-Generation-WebUI 最适合研究。2026年推理引擎对比。',
+      publishDate: '2026-04-04',
+      readTime: '阅读约13分钟',
+      educationalLevel: 'Advanced',
+      primaryTerm: '推理引擎',
+      toc: [
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '什么是推理引擎？', anchor: '#what-is-inference-engine' },
+        { label: '功能对比表', anchor: '#feature-comparison' },
+        { label: '了解 llama.cpp', anchor: '#understanding-llama-cpp' },
+        { label: '了解 vLLM', anchor: '#understanding-vllm' },
+        { label: '了解 Text-Generation-WebUI', anchor: '#understanding-text-generation-webui' },
+        { label: '性能：每秒令牌数', anchor: '#performance-tokens-per-second' },
+        { label: '生产部署', anchor: '#production-deployments' },
+        { label: '何时选择各引擎', anchor: '#when-to-use-each' },
+        { label: '按地区选择推理引擎', anchor: '#inference-engine-choice-by-region' },
+        { label: '常见错误', anchor: '#common-mistakes' },
+        { label: '常见问题', anchor: '#common-questions' },
+        { label: '相关阅读', anchor: '#related-reading' },
+        { label: '来源', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '推理引擎是加载模型文件并生成令牌的 C/C++/Python 软件。与 UI 或 API 层分离。',
+            '**llama.cpp** = 轻量级、CPU 高效、驱动 Ollama。最适合：消费类笔记本、单用户、零依赖。',
+            '**vLLM** = 生产级、最大 GPU 吞吐量、支持批处理和分布式推理。最适合：API 服务器、多用户、高吞吐量。',
+            '**Text-Generation-WebUI** = 功能丰富的实验工具，内置 Web UI。最适合：微调、LoRA 测试、高级设置调整。',
+            '截至 2026 年 4 月，vLLM 主导生产使用，llama.cpp 主导消费使用，Text-Generation-WebUI 主导研究/微调工作流。',
+          ],
+        },
+        whatIsInferenceEngine: {
+          title: '什么是推理引擎？',
+          content: [
+            '推理引擎是加载预训练模型文件并执行生成文本所需数学运算的软件组件。不同于聊天界面（如 Open WebUI）或 API 层（如 Ollama 的 REST API）。',
+            '典型的本地 LLM 部署有三层：',
+            '1. **模型文件**（例如 llama-3.1-8b.gguf）— 神经网络权重。',
+            '2. **推理引擎**（例如 llama.cpp、vLLM）— 加载模型并生成令牌。',
+            '3. **界面或 API**（例如 REST API、Web 聊天、VS Code 扩展）— 让您与引擎交互。',
+            'Ollama 本质上是 llama.cpp 的包装器，具有 OpenAI 兼容 API。vLLM 是没有内置 UI 的推理引擎。Text-Generation-WebUI 是具有内置 Web UI 的推理引擎。',
+          ],
+        },
+        featureComparison: {
+          title: '功能对比：llama.cpp vs vLLM vs Text-Generation-WebUI',
+          rows: [
+            { '功能': '类型', 'llama.cpp': 'C++ 库（轻量级）', 'vLLM': 'Python 框架（生产）', 'Text-Gen-WebUI': 'Python 应用（实验）' },
+            { '功能': 'GPU 支持', 'llama.cpp': 'NVIDIA、AMD、Apple Metal', 'vLLM': '仅 NVIDIA（最佳支持）', 'Text-Gen-WebUI': 'NVIDIA、AMD、CPU' },
+            { '功能': 'CPU 推理', 'llama.cpp': '优秀', 'vLLM': '差', 'Text-Gen-WebUI': '良好' },
+            { '功能': '吞吐量（令牌/秒）', 'llama.cpp': '中等（1–100）', 'vLLM': '非常高（100–1000+）', 'Text-Gen-WebUI': '中等（1–100）' },
+            { '功能': '批处理支持', 'llama.cpp': '有限', 'vLLM': '完整（100+ 批）', 'Text-Gen-WebUI': '有限' },
+            { '功能': '内置 Web UI', 'llama.cpp': '否', 'vLLM': '否', 'Text-Gen-WebUI': '是' },
+            { '功能': 'LoRA 微调', 'llama.cpp': '不直接', 'vLLM': '有限', 'Text-Gen-WebUI': '内置' },
+            { '功能': '量化格式', 'llama.cpp': 'GGUF、GGML', 'vLLM': '全精度、8 位、4 位', 'Text-Gen-WebUI': 'GGUF、safetensors、fp16' },
+            { '功能': '设置难度', 'llama.cpp': '通过 Ollama（简单）', 'vLLM': 'pip install（中等）', 'Text-Gen-WebUI': 'GitHub 克隆（中等）' },
+            { '功能': '价格', 'llama.cpp': '免费', 'vLLM': '免费', 'Text-Gen-WebUI': '免费' },
+          ],
+          columns: ['功能', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+        },
+        llamacpp: {
+          title: '了解 llama.cpp：基础',
+          content: [
+            'llama.cpp 是 LLM 推理的 C++ 实现，最初用于在不需要 GPU 加速的消费硬件上运行 Meta 的 Llama 模型。截至 2026 年 4 月，它仍然是最轻量级和可移植的推理引擎。',
+            '**llama.cpp 主导消费使用的原因：**',
+            '- 内存开销最小 — 可在仅 CPU 8GB RAM 上运行。',
+            '- 支持多个 GPU 后端（NVIDIA、AMD、Apple Metal、Intel）。',
+            '- GGUF 格式：将 70B 模型压缩到 20–40GB 的量化模型格式。',
+            '- 在内部驱动 Ollama — 每当您运行 Ollama 时都在使用 llama.cpp。',
+            'llama.cpp 不是完整应用；它是一个库。您通过 Ollama（最常见方式）或集成它的其他工具与其交互。',
+          ],
+        },
+        vllm: {
+          title: '了解 vLLM：生产标准',
+          content: [
+            'vLLM 是为 GPU 集群上的高吞吐量推理设计的 Python 框架。它优化了通过 API 提供模型的方式，支持批处理、分布式推理和高级调度。',
+            '**vLLM 主导生产的原因：**',
+            '- **分页注意力**：vLLM 使用新颖的内存布局，将 GPU 利用率从约 20% 提高到 70%，大幅增加吞吐量。',
+            '- **批处理**：可同时处理 50–100 个提示，在每个 GPU 上为更多用户提供服务。',
+            '- **分布式推理**：自动将 70B 模型分割到多个 GPU 上。',
+            '- **广泛模型支持**：适用于任何 HuggingFace 模型（Llama、Qwen、Mistral、Phi 等）。',
+            '截至 2026 年 4 月，企业中大多数生产本地 LLM 部署都使用 vLLM。权衡是 vLLM 需要 NVIDIA GPU；CPU 性能很差。',
+          ],
+          codeBlock: '# 安装 vLLM\npip install vllm\n\n# 通过 API 运行模型\nvllm serve meta-llama/Llama-3.1-8B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# 现在可在 http://localhost:8000/v1/completions 访问',
+          codeLanguage: 'bash',
+        },
+        textGenerationWebUI: {
+          title: '了解 Text-Generation-WebUI：研究者工具',
+          content: [
+            'Text-Generation-WebUI（也称 oobabooga）是具有用于实验模型的 Web 界面的全功能 Python 应用。它将推理与微调、LoRA 训练、嵌入生成和高级提示测试的内置工具相结合。',
+            '**研究者使用 Text-Generation-WebUI 的原因：**',
+            '- **内置 LoRA 微调**：在基础模型之上训练自定义 LoRA 适配器，无需外部训练脚本。',
+            '- **多个推理引擎**：可在 llama.cpp、GPTQ、exllama 和其他后端之间切换。',
+            '- **角色扮演**：用于创建和测试角色角色的内置系统。',
+            '- **API 暴露**：为程序使用暴露 FastAPI 接口。',
+            '- **扩展生态系统**：社区构建的自定义工作流扩展。',
+            'Text-Generation-WebUI 更多是研究和实验工具而非生产服务器。设置更复杂（需要 GitHub 克隆和 Python 依赖管理），但运行后对开发极其强大。',
+          ],
+        },
+        performance: {
+          title: '性能：各引擎速度如何？',
+          content: [
+            '吞吐量（每秒令牌数）取决于模型大小、硬件和引擎优化。截至 2026 年 4 月，消费硬件上的实际基准：',
+          ],
+          rows: [
+            { '场景': 'Llama 3.1 8B on RTX 4090（GPU）', 'llama.cpp': '150 令牌/秒', 'vLLM': '300 令牌/秒（批处理时）', 'Text-Gen-WebUI': '150 令牌/秒' },
+            { '场景': 'Llama 3.1 8B on 8 核 CPU', 'llama.cpp': '5 令牌/秒', 'vLLM': '0.5 令牌/秒（不可用）', 'Text-Gen-WebUI': '4 令牌/秒' },
+            { '场景': 'Llama 3.1 70B on 2× RTX 4090', 'llama.cpp': '20 令牌/秒（单 GPU）', 'vLLM': '100 令牌/秒（分布式）', 'Text-Gen-WebUI': '20 令牌/秒' },
+            { '场景': 'Phi-3 3.8B on M4 MacBook Pro', 'llama.cpp': '30 令牌/秒', 'vLLM': 'N/A（无 Metal 支持）', 'Text-Gen-WebUI': '25 令牌/秒' },
+          ],
+          columns: ['场景', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+        },
+        productionDeployments: {
+          title: '生产部署选择哪个引擎？',
+          content: [
+            '**vLLM 是 2026 年 4 月的生产标准。** 大多数在生产中运行本地 LLM API 的公司使用 vLLM，因为其吞吐量优化和批处理支持。单个 vLLM 实例可在一个 GPU 上为 50+ 并发用户提供服务，而 llama.cpp 仅为 1–2 用户。',
+            '但是，生产选择取决于您的约束：',
+            '- **每天为 100+ 请求提供服务且 GPU 有限**：使用 vLLM（最高吞吐量）。',
+            '- **仅用 CPU 或 Apple Silicon 提供服务**：通过 Ollama 使用 llama.cpp（最佳 CPU 支持）。',
+            '- **特别使用 Llama 模型**：llama.cpp 或 vLLM 都可以；vLLM 更快。',
+            '- **使用多种模型格式（GPTQ、GGUF、safetensors）**：Text-Generation-WebUI 支持全部；vLLM 需要全精度或特定量化格式。',
+          ],
+        },
+        whenToUse: {
+          title: '何时选择各引擎？',
+          content: '使用此决策框架：',
+          items: [
+            '**llama.cpp（通过 Ollama）**：您是消费者、非开发者或在 CPU/Apple Silicon 上部署。总体易用性最好。',
+            '**vLLM**：您为 50+ 并发用户提供 API 服务，拥有 NVIDIA GPU，需要最大吞吐量。生产标准。',
+            '**Text-Generation-WebUI**：您要微调模型、测试 LoRA 适配器或实验高级推理设置。最适合研究。',
+          ],
+        },
+        regionalContext: {
+          title: '按地区选择推理引擎',
+          content: [
+            '推理引擎的选择对不同地区和监管框架的合规性和企业部署有直接影响。',
+          ],
+          items: [
+            '**中国（数据安全法）**：根据 2021 年《数据安全法》，所有推理必须在本地进行，敏感数据不能跨境传输。vLLM 与阿里云 A10 和 A100 GPU 实例兼容。Qwen2.5（阿里巴巴）模型针对 vLLM 本地优化，提供最佳中文语言吞吐量。对于中国企业生产：**vLLM + Qwen2.5 14B on 阿里云**是 2026 年 4 月的标准栈。数据合规性要求：所有推理日志和模型权重必须在中国大陆境内存储；使用阿里云数据库服务以满足合规审计要求。',
+            '**亚太地区（数据跨境）**：新加坡（PDPC）、澳大利亚（Privacy Act）和东南亚国家的数据跨境规则要求本地部署。vLLM 分布式推理支持跨地区 GPU 集群。对于多地区 APAC 部署：Qwen2.5 或 Llama 3.1 via vLLM 都适合，支持新加坡、悉尼和东京地区数据中心。数据管理：为每个司法管辖区使用单独的部署；不要跨地区复制训练数据或推理日志。',
+            '**企业部署（金融、医疗、法律）**：在高度受管制的行业（银行、保险、医疗保健、律师事务所），vLLM 的 Prometheus 指标暴露（/metrics 端点）提供审计证跟踪满足合规要求。**建议**：部署 vLLM + 本地模型（Qwen2.5 或 Mistral 7B）+ 专业加密存储（HSM 或密钥管理服务），并在企业防火墙后面。对于金融机构，使用 vLLM 的分布式推理跨多个 GPU 进行推理，每个 GPU 隔离在子网络中，并记录所有推理提示/响应到合规日志。',
+          ],
+        },
+        commonMistakes: {
+          title: '常见错误',
+          items: [
+            '**以为需要在 Ollama 和这些引擎之间选择**。Ollama 在内部使用 llama.cpp。您不是在选择 Ollama vs vLLM；vLLM 是 Ollama 的替代*后端*，不是聊天应用。两者有不同用途。',
+            '**假设 vLLM 在 CPU 上更快**。vLLM CPU 性能很差；llama.cpp 在 CPU 上快 10 倍。选择 vLLM 前检查 GPU 可用性。',
+            '**在笔记本 GPU 上运行 vLLM**。vLLM 针对数据中心 GPU（RTX 4090、A100）优化。在消费 GPU 上，vLLM 的批处理调度程序开销可能实际上会降低单请求性能。笔记本上坚持 llama.cpp。',
+            '**忘记推理吞吐量不同于用户体验延迟**。vLLM 可以批处理 100 个请求，但每个请求仍需时间生成其令牌。高吞吐量不意味着低延迟。',
+            '**为 Text-Generation-WebUI 安装依赖项错误**。GitHub 说明假设您已安装 Git、Python 3.10+ 和 pip。在 Windows 上，这经常以静默方式失败。克隆前始终验证 Python 版本。',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: '常见问题',
+          faqs: [
+            {
+              q: '我可以在不更改模型的情况下切换推理引擎吗？',
+              a: '基本可以。GGUF 格式的模型文件适用于 llama.cpp（Ollama）和 Text-Generation-WebUI。vLLM 需要全精度或特定量化格式。HuggingFace safetensors 模型适用于全部三个。',
+            },
+            {
+              q: 'Mac 上最好的引擎是什么？',
+              a: '通过 Ollama 的 llama.cpp。它对 Apple Silicon（M 系列）优化出色。vLLM 不支持 Metal（Apple GPU），所以 CPU 性能差。Text-Generation-WebUI 在 Mac 上可行但比 Ollama 慢。',
+            },
+            {
+              q: 'vLLM 是 Ollama 的一部分吗？',
+              a: '否。Ollama 在内部使用 llama.cpp。vLLM 是加州大学伯克利分校的独立推理引擎。它们服务不同目的：Ollama 简洁；vLLM 生产吞吐量。',
+            },
+            {
+              q: '我可以在没有 GPU 的情况下使用 vLLM 吗？',
+              a: '技术上是的，但慢得无法使用。vLLM 为 GPU 设计。仅 CPU 部署使用 llama.cpp（Ollama）。',
+            },
+            {
+              q: 'Text-Generation-WebUI 能扩展到生产吗？',
+              a: '不推荐。Text-Generation-WebUI 是研究工具，不是生产服务器。它缺少生产服务所需的负载均衡、监控和分布式推理功能。生产使用 vLLM。',
+            },
+            {
+              q: '什么是分页注意力，为什么重要？',
+              a: '分页注意力是 vLLM 的内存管理系统，借用操作系统虚拟内存概念。它按页面单位分配内存，可在请求间共享和重复使用，而非为每个请求分配固定连续 GPU 内存块。这将 GPU 内存利用率从约 20% 提高到 70%，使 vLLM 能为每个 GPU 服务 3–4 倍多的并发用户。',
+            },
+            {
+              q: '如果我只有 8GB RAM，应该使用哪个引擎？',
+              a: '通过 Ollama 的 llama.cpp。8GB 总 RAM 中，Q4_K_M 的 7B 模型使用约 4.7GB。llama.cpp CPU 处理约 5 tok/秒或 GPU 处理约 80 tok/秒表现良好。vLLM 需要显著更多开销，消费 RAM 表现差。',
+            },
+            {
+              q: '我可以在同一机器上运行 vLLM 和 Ollama 吗？',
+              a: '是的，如果 VRAM 足够。在不同端口运行（vLLM 默认：8000，Ollama 默认：11434）。典型配置：Ollama 处理快速单用户聊天请求，vLLM 处理批量 API 请求。但是，两者不能同时加载同一模型而不翻倍 VRAM。',
+            },
+          ],
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[如何安装 Ollama](/local-llms/how-to-install-ollama?lang=zh) — 设置最流行的 llama.cpp 包装器。',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio?lang=zh) — 两者都使用推理引擎；比较其 UI。',
+            '[本地 LLM OpenAI 兼容 API](/local-llms/local-llm-openai-compatible-api?lang=zh) — vLLM 和 Ollama 都暴露 OpenAI 兼容 API。',
+            '[VS Code 和 Cursor 的本地 LLM](/local-llms/local-llms-with-vscode-cursor?lang=zh) — 将推理引擎与编辑器集成。',
+            '[最佳本地 LLM 前端](/local-llms/best-local-llm-frontends?lang=zh) — 前端是推理引擎之上的 UI 层。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '来源',
+          items: [
+            'Gerganov, G. (2024). "llama.cpp GitHub." https://github.com/ggerganov/llama.cpp — C++ 推理引擎源代码和量化文档。',
+            'vLLM Team. (2024). "vLLM GitHub." https://github.com/vllm-project/vllm — 生产推理引擎源代码和 API 服务器文档。',
+            'Kwon et al. (2023). "Efficient Memory Management for Large Language Model Serving with PagedAttention." https://arxiv.org/abs/2309.06180 — 解释 vLLM 内存管理方法的原始分页注意力论文。',
+            'oobabooga. (2024). "Text-Generation-WebUI GitHub." https://github.com/oobabooga/text-generation-webui — Text-Generation-WebUI 源代码和安装指南。',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推理引擎对比',
+        'description': 'vLLM 主导生产环境（最高吞吐量）。llama.cpp 驱动 Ollama（最轻量）。Text-Generation-WebUI 最适合研究。2026年推理引擎对比。',
+        'url': 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=zh',
+        'inLanguage': 'zh',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-15',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'vLLM' },
+          { '@type': 'Thing', 'name': 'llama.cpp' },
+          { '@type': 'Thing', 'name': 'Text-Generation-WebUI' },
+          { '@type': 'Thing', 'name': 'LLM 推理引擎' },
+          { '@type': 'Thing', 'name': '分页注意力' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways'],
+        },
+        'educationalLevel': 'Advanced',
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'llama.cpp vs vLLM vs Text-Generation-WebUI 2026',
+        'inLanguage': 'zh',
+        'numberOfItems': 3,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'llama.cpp',
+            'description': 'C++ 库。CPU 优秀，GPU 良好。1-100 令牌/秒。GGUF 格式。驱动 Ollama。最适合消费设备和 CPU 推理。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'vLLM',
+            'description': 'Python 框架。仅 GPU（NVIDIA）。批处理时 100-1000+ 令牌/秒。全精度和 8/4 位。最适合生产 API 服务器，50+ 并发用户。',
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'Text-Generation-WebUI',
+            'description': '内置 Web UI 的 Python 应用。CPU 和 GPU。1-100 令牌/秒。GGUF、safetensors、fp16。内置 LoRA 微调。最适合研究和实验。',
+          },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '我可以在不更改模型的情况下切换推理引擎吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '基本可以。GGUF 格式的模型文件适用于 llama.cpp（Ollama）和 Text-Generation-WebUI。vLLM 需要全精度或特定量化格式。HuggingFace safetensors 模型适用于全部三个。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Mac 上最好的引擎是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '通过 Ollama 的 llama.cpp。它对 Apple Silicon（M 系列）优化出色。vLLM 不支持 Metal（Apple GPU），所以 CPU 性能差。Text-Generation-WebUI 在 Mac 上可行但比 Ollama 慢。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'vLLM 是 Ollama 的一部分吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '否。Ollama 在内部使用 llama.cpp。vLLM 是加州大学伯克利分校的独立推理引擎。它们服务不同目的：Ollama 简洁；vLLM 生产吞吐量。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以在没有 GPU 的情况下使用 vLLM 吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '技术上是的，但慢得无法使用。vLLM 为 GPU 设计。仅 CPU 部署使用 llama.cpp（Ollama）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Text-Generation-WebUI 能扩展到生产吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不推荐。Text-Generation-WebUI 是研究工具，不是生产服务器。它缺少生产服务所需的负载均衡、监控和分布式推理功能。生产使用 vLLM。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '什么是分页注意力，为什么重要？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '分页注意力是 vLLM 的内存管理系统，借用操作系统虚拟内存概念。它按页面单位分配内存，可在请求间共享和重复使用。这将 GPU 内存利用率从约 20% 提高到 70%，使 vLLM 能为每个 GPU 服务 3–4 倍多的并发用户。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如果我只有 8GB RAM，应该使用哪个引擎？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '通过 Ollama 的 llama.cpp。8GB 总 RAM 中，Q4_K_M 的 7B 模型使用约 4.7GB。llama.cpp CPU 处理约 5 tok/秒或 GPU 处理约 80 tok/秒表现良好。vLLM 需要显著更多开销，消费 RAM 表现差。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以在同一机器上运行 vLLM 和 Ollama 吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的，如果 VRAM 足够。在不同端口运行（vLLM 默认：8000，Ollama 默认：11434）。典型配置：Ollama 处理快速单用户聊天请求，vLLM 处理批量 API 请求。但是，两者不能同时加载同一模型而不翻倍 VRAM。',
+            },
+          },
+        ],
+      },
+    },
   },
 
   'local-llm-openai-compatible-api': {
