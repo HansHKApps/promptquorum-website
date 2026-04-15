@@ -40,8 +40,13 @@ export interface LLMArticle {
   faqSchema?: Record<string, unknown>
   tableSchema?: Record<string, unknown>
   itemListSchema?: Record<string, unknown>
+  breadcrumbSchema?: Record<string, unknown>
   educationalLevel?: string
+  audience?: string
+  targetKeywords?: string[]
   primaryTerm?: string
+  leadAnswerBlock?: string
+  lastUpdated?: string
   toc?: { label: string; anchor: string }[]
   heroComponent?: string
   gammaEmbedUrl?: string
@@ -23994,6 +23999,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**vLLM:** You are serving an API with 50+ concurrent users, you have NVIDIA GPUs, and you need maximum throughput. Production standard.',
             '**Text-Generation-WebUI:** You are fine-tuning models, testing LoRA adapters, or experimenting with advanced inference settings. Best for research.',
           ],
+          image: '/images/inference-engine-when-to-use-en.svg',
+          imageCaption: 'Inference engine decision guide: choose llama.cpp for Mac/CPU or Ollama, vLLM for production with NVIDIA GPU and 50+ concurrent users, Text-Generation-WebUI for LoRA fine-tuning and research.',
         },
         regionalContext: {
           title: 'Inference Engine Choice by Region',
@@ -24263,6 +24270,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { 'Feature': 'Preis', 'llama.cpp': 'Kostenlos', 'vLLM': 'Kostenlos', 'Text-Gen-WebUI': 'Kostenlos' },
         ],
         columns: ['Feature', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+        image: '/images/inference-engine-feature-comparison-de.svg',
+        imageCaption: 'Feature-Vergleich: llama.cpp (C++-Bibliothek, GGUF, CUDA + Metal) vs vLLM (Python-Framework, 100–1000+ Tok/s GPU, nur NVIDIA) vs Text-Generation-WebUI (Python-App, GGUF + safetensors, LoRA integriert).',
       },
       llamacpp: {
         title: 'llama.cpp verstehen: Die Grundlage',
@@ -24315,6 +24324,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { 'Szenario': 'Phi-3 3.8B auf M4 MacBook Pro', 'llama.cpp': '30 Tokens/Sek.', 'vLLM': 'N/A (keine Metal-Unterstützung)', 'Text-Gen-WebUI': '25 Tokens/Sek.' },
         ],
         columns: ['Szenario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+        image: '/images/inference-engine-performance-benchmarks-de.svg',
+        imageCaption: 'Leistungsdiagramm: llama.cpp und Text-Gen-WebUI liefern ~150 Tok/s auf RTX 4090. vLLM erreicht 300 Tok/s mit Request-Batching, aber ~0,5 Tok/s auf CPU — nicht empfohlen für CPU-only-Inferenz.',
       },
       productionDeployments: {
         title: 'Welche Engine für Production-Deployments?',
@@ -24335,6 +24346,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           '**vLLM:** Sie bedienen eine API mit 50+ gleichzeitigen Benutzern, haben NVIDIA-GPUs und benötigen maximalen Durchsatz. Production-Standard.',
           '**Text-Generation-WebUI:** Sie tunen Modelle ab, testen LoRA-Adapter oder experimentieren mit erweiterten Inferenz-Einstellungen. Beste für Forschung.',
         ],
+        image: '/images/inference-engine-when-to-use-de.svg',
+        imageCaption: 'Inference-Engine-Entscheidungsleitfaden: llama.cpp für Mac/CPU oder Ollama, vLLM für Production mit NVIDIA-GPU und 50+ gleichzeitigen Nutzern, Text-Generation-WebUI für LoRA Fine-Tuning und Forschung.',
       },
       regionalContext: {
         title: 'Inference-Engine Auswahl nach Region',
@@ -24513,6 +24526,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             { 'Fonctionnalité': 'Prix', 'llama.cpp': 'Gratuit', 'vLLM': 'Gratuit', 'Text-Gen-WebUI': 'Gratuit' },
           ],
           columns: ['Fonctionnalité', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+          image: '/images/inference-engine-feature-comparison-fr.svg',
+          imageCaption: 'Comparaison des fonctionnalités : llama.cpp (bibliothèque C++, GGUF, CUDA + Metal) vs vLLM (framework Python, 100–1000+ tok/s GPU, NVIDIA uniquement) vs Text-Generation-WebUI (app Python, GGUF + safetensors, LoRA intégré).',
         },
         llamacpp: {
           title: 'Comprendre llama.cpp : La fondation',
@@ -24565,6 +24580,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             { 'Scénario': 'Phi-3 3.8B sur MacBook Pro M4', 'llama.cpp': '30 tokens/s', 'vLLM': 'N/A (pas de support Metal)', 'Text-Gen-WebUI': '25 tokens/s' },
           ],
           columns: ['Scénario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
+          image: '/images/inference-engine-performance-benchmarks-fr.svg',
+          imageCaption: 'Graphique de performance : llama.cpp et Text-Gen-WebUI atteignent ~150 tok/s sur RTX 4090. vLLM atteint 300 tok/s avec le batching, mais ~0.5 tok/s sur CPU — non recommandé pour l\'inférence CPU uniquement.',
         },
         productionDeployments: {
           title: 'Quel moteur pour les déploiements de production ?',
@@ -28367,12 +28384,22 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       theme: 'Hardware & Performance',
       title: 'Local LLM Hardware Guide 2026: GPU, CPU, and RAM Requirements Explained',
       seoTitle: 'Local LLM Hardware Guide 2026: GPU & VRAM Requirements',
-      intro: 'Running local LLMs requires understanding three components: GPU (optional but recommended), CPU, and RAM. As of April 2026, a 7B-parameter model needs 8 GB RAM minimum, while a 70B model needs 40+ GB. This guide covers real hardware recommendations for RTX 5090, 4090, Mac Silicon, and budget builds, plus VRAM math to calculate requirements for any model size.',
-      metaDescription: 'Local LLM hardware guide 2026: GPU, CPU, RAM requirements for 7B–70B models. VRAM calculator with benchmarks and optimization tips.',
+      intro: 'Running local LLMs requires understanding three components: GPU (optional but recommended), CPU, and RAM. As of April 2026, a 7B-parameter model needs 8 GB RAM minimum, while a 70B model needs 40+ GB. This guide covers real hardware recommendations for RTX 5090, 4090, Apple Silicon, and budget builds, plus VRAM math to calculate requirements for any model size.',
+      metaDescription: '7B models need 8 GB VRAM; 70B models need 35–40 GB at Q4 quantization. GPU, CPU, RAM requirements with benchmarks for every build level.',
       publishDate: '2026-04-04',
       readTime: '13 min read',
       educationalLevel: 'Intermediate',
+      audience: 'Developers and enthusiasts building local AI workstations',
+      targetKeywords: [
+        'local LLM hardware requirements',
+        'GPU for local LLM',
+        'VRAM calculator LLM',
+        '7B model VRAM',
+        'RTX 4090 local LLM'
+      ],
       primaryTerm: 'LLM hardware requirements',
+      leadAnswerBlock: '**Local LLM hardware requirements depend primarily on VRAM: 7B models need 8 GB, 13B models need 12–16 GB, and 70B models need 35–48 GB depending on quantization. GPU choice matters 10× more than CPU for inference speed.**',
+      lastUpdated: '2026-04-15',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'VRAM Math for Any Model', anchor: '#vram-math' },
@@ -28383,6 +28410,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: 'Mac Hardware', anchor: '#mac-hardware' },
         { label: 'Server vs Consumer', anchor: '#server-vs-consumer' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Regional Considerations', anchor: '#regional-context' },
         { label: 'Common Questions', anchor: '#common-questions' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
@@ -28402,7 +28430,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         vramMath: {
           title: 'How Do You Calculate VRAM Requirements?',
           content: [
-            'VRAM requirements depend on three factors: model size (parameters), quantization (bits per weight), and inference mode.',
+            '**VRAM requirements depend on three factors: model size (parameters), quantization (bits per weight), and inference mode.** Use this formula to determine if your GPU has enough memory.',
             '**Formula:**',
             '```\nVRAM (GB) = (Model Size × Quantization Bits) ÷ 8\n```',
             '**Quantization values:** FP16 = 16 bits, Q8 = 8 bits, Q5 = 5 bits, Q4 = 4 bits.',
@@ -28418,12 +28446,12 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           imageCaption: 'VRAM calculator showing the formula (Model Size × Bits) ÷ 8, with examples: 7B Q4 = 3.5 GB, 13B Q5 = 8.1 GB, 70B Q4 = 35 GB. Q4 is the recommended sweet spot for most hardware.',
         },
         gpuRecommendations: {
-          title: 'What GPU Should You Buy?',
-          content: 'As of April 2026, NVIDIA dominates local LLM performance. Here are tier recommendations:',
+          title: 'Which GPU Tier Matches Your Workload?',
+          content: '**As of April 2026, NVIDIA GPUs deliver the highest tokens/sec for local LLM inference across all price points.** Here are tier recommendations:',
           rows: [
             { 'Tier': 'Budget ($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12 GB', 'Best For': '7–13B models', 'Performance': 'Fast (80 tokens/sec)' },
             { 'Tier': 'Mid ($1200)', 'GPU': 'RTX 4080 / RTX 5080', 'VRAM': '16 GB', 'Best For': '13–30B models', 'Performance': 'Very fast (120 tokens/sec)' },
-            { 'Tier': 'High ($1800)', 'GPU': 'RTX 4090 / RTX 5090', 'VRAM': '24 GB', 'Best For': 'Any 70B model', 'Performance': 'Extremely fast (150 tokens/sec)' },
+            { 'Tier': 'High ($1800)', 'GPU': 'RTX 4090 / RTX 5090', 'VRAM': '24 GB', 'Best For': 'Any 70B model', 'Performance': 'Fast (measured ~150 tokens/sec, Ollama)' },
             { 'Tier': 'Server ($3000+)', 'GPU': 'RTX 6000 Ada / A100', 'VRAM': '48+ GB', 'Best For': 'Multi-user, 70B+', 'Performance': 'Production-grade' },
           ],
           columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Performance'],
@@ -28433,7 +28461,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cpuRam: {
           title: 'What CPU and RAM Do You Need?',
           content: [
-            'With a GPU, CPU and RAM are secondary. The GPU does the heavy lifting; CPU/RAM handle context preparation.',
+            '**With a dedicated GPU, CPU and RAM are secondary components.** The GPU handles matrix math; CPU/RAM manage context preparation.',
             '**Minimum CPU**: 8-core processor (Intel i7 12th gen, AMD Ryzen 5 5600X, or newer). Older CPUs add 20%+ latency.',
             '**RAM**: 16 GB minimum (with GPU). If running without GPU, 32+ GB recommended. RAM does not directly limit model size when GPU is present.',
             '**Storage**: 500 GB SSD for model files and OS. M.2 NVMe is preferred (faster model loading).',
@@ -28442,7 +28470,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         storage: {
           title: 'How Much Storage Do You Need?',
           content: [
-            'Model files are large. A 7B model at 4-bit quantization is 4–5 GB. Plan accordingly:',
+            '**Model files are large: a 7B model at 4-bit quantization is 4–5 GB.** Plan storage around the number and size of models you want to keep locally.',
           ],
           items: [
             '500 GB SSD: OS + 1–2 small models (3B, 7B)',
@@ -28452,8 +28480,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         budgetBuilds: {
-          title: 'Budget Build Recommendations',
-          content: 'Building a local LLM machine from scratch:',
+          title: 'What Hardware Build Should You Buy?',
+          content: '**Building a local LLM machine from scratch means prioritizing GPU first, then CPU and RAM.** Here are three realistic configurations:',
           rows: [
             { 'Budget': '$1500 (entry)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16 GB', 'Models': '7–13B', 'Cost': 'Realistic' },
             { 'Budget': '$2500 (solid)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32 GB', 'Models': '13–30B', 'Cost': 'Recommended' },
@@ -28464,9 +28492,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           imageCaption: 'Three build configurations: $1500 entry-level (RTX 4070 Ti, i7 13700, 16GB) for 7–13B models, $2500 solid build (RTX 4080, i7 14700K, 32GB) for 13–30B, $4000 high-end (2× RTX 4090, Ryzen 9, 128GB) for any model. Mid-level offers best value.',
         },
         mac: {
-          title: 'Mac Hardware for Local LLMs',
+          title: 'Can Mac Hardware Run Local LLMs?',
           content: [
-            'Apple Silicon (M-series) is surprisingly good for local LLMs. M3/M4 Max and Pro handle 7–13B models well.',
+            '**Apple Silicon (M-series) runs local LLMs efficiently using unified memory shared between CPU and GPU.** M3/M4 Max and Pro handle 7–13B models at competitive tokens/sec.',
           ],
           rows: [
             { 'Mac': 'M3 MacBook Pro 16"', 'GPU Memory': '18 GB unified', 'Best For': '7B models (fast)', 'Limitation': 'Can run 13B slowly' },
@@ -28478,9 +28506,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           imageCaption: 'Mac hardware comparison: M3 MacBook Pro 16" (18GB, 7B fast, 13B slow), M3 Max Studio (36GB, 13B good), M4 Max coming 2026 (40+ GB, 13–30B). Unified memory advantage, but RTX 4090 still better for 70B.',
         },
         serverVsConsumer: {
-          title: 'Server Hardware vs Consumer Hardware',
+          title: 'When Should You Use Server vs Consumer Hardware?',
           content: [
-            'For production deployment, server-grade hardware is recommended:',
+            '**For production deployment (24/7 operation, multiple users), server-grade hardware is recommended over consumer GPUs.** Consumer hardware is optimized for gaming, not sustained inference.',
           ],
           items: [
             '**Consumer (RTX 4090)**: ~$1800, 24 GB VRAM, single-user, prone to thermal throttling under sustained load.',
@@ -28491,13 +28519,21 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           imageCaption: 'Consumer vs server hardware: RTX 4090 ($1800, 24GB, single-user, part-time) vs RTX 6000 Ada ($5000+, 48GB, multi-user, 24/7 duty). Start with consumer hardware; upgrade to server-grade only if running production services.',
         },
         commonMistakes: {
-          title: 'Common Mistakes in Hardware Planning',
+          title: 'What Are the Most Common Hardware Mistakes?',
           items: [
             '**Buying CPU-only when GPU is available.** A $600 RTX 4070 Ti will outperform a $2000 CPU. GPU dominates LLM speed.',
             '**Not accounting for VRAM overhead.** Model file size + system overhead + context = total VRAM used. Always buy 25% more than the model size.',
             '**Assuming all 70B models fit in 40GB VRAM.** They do, barely, in Q4 (4-bit) quantization only. Q5 requires 45+ GB.',
             '**Ignoring power supply and cooling.** RTX 4090 draws 575W. Need a 1200W PSU and good case airflow.',
-            '**Thinking an old GPU will work.** RTX 2080 is 10× slower than RTX 4070 Ti. Modern GPU architecture matters significantly.',
+            '**Thinking an old GPU will work.** RTX 2080 is 10× slower than RTX 4070 Ti. Modern GPU architecture significantly outperforms prior generations.',
+          ],
+        },
+        regionalContext: {
+          title: 'Regional Hardware Considerations',
+          content: [
+            '**EU (GDPR):** Running LLMs locally keeps all inference data within your infrastructure, eliminating cross-border data transfer concerns under GDPR Article 44. As of April 2026, EU enterprises deploying LLMs for customer data processing must ensure models never phone home — local hardware removes this risk entirely.',
+            '**Japan (APPI):** Japan\'s Act on the Protection of Personal Information (APPI) revision (2022) requires data minimization for AI processing. On-premises LLM hardware on a RTX 4090 workstation satisfies this requirement for document processing and customer support automation.',
+            '**China:** China\'s Cyberspace Administration of China (CAC) Generative AI Regulations (2023) require domestically-deployed AI models to undergo registration. Running local hardware with open-weight models avoids API-based compliance exposure for internal enterprise use.',
           ],
         },
         faqSection: {
@@ -28523,6 +28559,26 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             {
               q: 'Can I upgrade GPU later?',
               a: 'Yes. Start with RTX 4070 Ti now, upgrade to RTX 5090 in 2 years if needed. GPU is the most replaceable component.',
+            },
+            {
+              q: 'How much RAM do I need to run a 7B model locally?',
+              a: '8 GB RAM is the absolute minimum for a 7B model. 16 GB is recommended for comfortable use alongside browser and OS. 32 GB gives headroom for larger context windows and multitasking.',
+            },
+            {
+              q: 'Can I run local LLMs on Apple Silicon (M1/M2/M3)?',
+              a: 'Yes. Apple Silicon uses unified memory shared between CPU and GPU. M3 Max (36 GB unified) runs 13B models at good speed. M4 Max coming 2026 will handle 13–30B models.',
+            },
+            {
+              q: 'What CPU is best for local LLMs without a GPU?',
+              a: 'High-core-count CPUs with large L3 cache: AMD Ryzen 9 7950X or Intel Core i9-14900K. Expect 5–15 tokens/sec for 7B models. CPU inference is 3–5× slower than GPU.',
+            },
+            {
+              q: 'Does storage speed affect local LLM performance?',
+              a: 'Yes, at model load time. NVMe SSD (3–7 GB/s) loads a 7B model in 2–5 seconds vs. 20–60 seconds on HDD. Inference speed after loading is unaffected by storage.',
+            },
+            {
+              q: 'Can I use multiple GPUs to run larger models?',
+              a: 'Yes, via tensor parallelism. Two RTX 4090s (24 GB each) provide 48 GB VRAM for 70B models at FP16. Ollama and llama.cpp support multi-GPU via --n-gpu-layers split across cards.',
             },
           ],
         },
@@ -28555,8 +28611,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'url': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026',
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-04',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'dateModified': '2026-04-15',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/about' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'NVIDIA GPU' },
@@ -28589,7 +28645,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I run a 70B model on a laptop?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Only with heavy quantization (Q2, 2-bit) and CPU fallback. Impractical. Laptops are suited for 7B models. For 70B, use a desktop with RTX 4090+.' } },
           { '@type': 'Question', 'name': 'Is RTX 4090 overkill for personal use?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not if you run 70B models or multiple models simultaneously. For just 7B chat, RTX 4070 Ti suffices. RTX 4090 is future-proof if you want flexibility.' } },
-          { '@type': 'Question', 'name': 'Should I buy RTX 5090 or wait for RTX 6090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090 is available (early 2026). RTX 6000 Ada server GPUs are also solid. Unless you have unlimited budget, RTX 5090 or 4090 are excellent.' } },
+          { '@type': 'Question', 'name': 'Should I buy RTX 5090 or wait for next-gen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090 is available (early 2026) with excellent performance-per-dollar. Unless you have unlimited budget for future-proofing, RTX 5090 or RTX 4090 are excellent choices today.' } },
           { '@type': 'Question', 'name': 'How does quantization affect quality?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FP16 = 100% quality (baseline), Q8 = 99%, Q5 = 95%, Q4 = 90–95%. For most tasks, Q4 is indistinguishable from FP16.' } },
           { '@type': 'Question', 'name': 'Can I upgrade GPU later?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Start with RTX 4070 Ti now, upgrade to RTX 5090 in 2 years if needed. GPU is the most replaceable component.' } },
           { '@type': 'Question', 'name': 'How much RAM do I need to run a 7B model locally?', 'acceptedAnswer': { '@type': 'Answer', 'text': '8 GB RAM is the absolute minimum for a 7B model. 16 GB is recommended for comfortable use alongside browser and OS. 32 GB gives headroom for larger context windows and multitasking.' } },
@@ -28612,17 +28668,37 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'ListItem', 'position': 4, 'name': 'Server ($3000+)', 'description': 'RTX 6000 Ada / A100 with 48+ GB VRAM. Multi-user, 24/7 operation. Enterprise-grade.' },
         ],
       },
+      breadcrumbSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'inLanguage': 'en',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'PromptQuorum', 'item': 'https://www.promptquorum.com' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Local LLMs', 'item': 'https://www.promptquorum.com/local-llms' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Local LLM Hardware Guide 2026', 'item': 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026' },
+        ],
+      },
     },
     de: {
       theme: 'Hardware & Performance',
       title: 'Lokale LLM Hardware-Anforderungen 2026: GPU, CPU und RAM erklärt',
       seoTitle: 'Lokale LLM Hardware 2026: GPU VRAM-Rechner & Benchmarks',
-      intro: 'Um lokale LLMs auszuführen, müssen Sie drei Komponenten verstehen: GPU (optional, aber empfohlen), CPU und RAM. Im April 2026 benötigt ein 7B-Parameter-Modell mindestens 8 GB RAM, während ein 70B-Modell 40+ GB benötigt. Dieser Leitfaden behandelt echte Hardware-Empfehlungen für RTX 5090, 4090, Mac Silicon und Budget-Builds sowie VRAM-Mathematik zur Berechnung der Anforderungen für jede Modellgröße.',
-      metaDescription: 'GPU-, CPU- und RAM-Anforderungen für 7B- und 70B-Modelle. VRAM-Rechner, RTX 4070–5090-Benchmarks und Optimierungstipps für lokale LLMs im Jahr 2026.',
+      intro: 'Um lokale LLMs auszuführen, müssen Sie drei Komponenten verstehen: GPU (optional, aber empfohlen), CPU und RAM. Im April 2026 benötigt ein 7B-Parameter-Modell mindestens 8 GB RAM, während ein 70B-Modell 40+ GB benötigt. Dieser Leitfaden behandelt echte Hardware-Empfehlungen für RTX 5090, 4090, Apple Silicon und Budget-Builds sowie VRAM-Mathematik zur Berechnung der Anforderungen für jede Modellgröße.',
+      metaDescription: '7B-Modelle benötigen 8 GB VRAM; 70B-Modelle benötigen 35–40 GB bei Q4-Quantisierung. GPU-, CPU-, RAM-Anforderungen mit Benchmarks für alle Build-Level.',
       publishDate: '2026-04-04',
       readTime: '13 Min. Lesezeit',
       educationalLevel: 'Intermediate',
+      audience: 'Entwickler und Enthusiasten, die lokale KI-Workstations bauen',
+      targetKeywords: [
+        'lokale LLM Hardware-Anforderungen',
+        'GPU für lokale LLM',
+        'VRAM-Rechner LLM',
+        '7B-Modell VRAM',
+        'RTX 4090 lokal'
+      ],
       primaryTerm: 'LLM Hardware-Anforderungen',
+      leadAnswerBlock: '**Die lokalen LLM-Hardware-Anforderungen hängen hauptsächlich vom VRAM ab: 7B-Modelle benötigen 8 GB, 13B-Modelle benötigen 12–16 GB und 70B-Modelle benötigen 35–48 GB je nach Quantisierung. Die GPU-Wahl ist 10-mal wichtiger als CPU für Inferenzgeschwindigkeit.**',
+      lastUpdated: '2026-04-15',
       toc: [
         { label: 'Wichtige Erkenntnisse', anchor: '#key-takeaways' },
         { label: 'VRAM-Mathematik für ein beliebiges Modell', anchor: '#vram-math' },
@@ -28633,6 +28709,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: 'Mac-Hardware', anchor: '#mac-hardware' },
         { label: 'Server vs. Consumer', anchor: '#server-vs-consumer' },
         { label: 'Häufige Fehler', anchor: '#common-mistakes' },
+        { label: 'Regionale Überlegungen', anchor: '#regional-context' },
         { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
         { label: 'Verwandte Themen', anchor: '#related-reading' },
         { label: 'Quellen', anchor: '#sources' },
@@ -28867,7 +28944,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       theme: 'Hardware & Performance',
       title: 'Guide Matériel Local LLM 2026: GPU, CPU et RAM Expliqués',
       seoTitle: 'Guide Matériel LLM 2026 : Prérequis GPU, VRAM et RAM',
-      intro: 'Exécuter des LLM locaux nécessite de comprendre trois composants: GPU (facultatif mais recommandé), CPU et RAM. En avril 2026, un modèle 7B à paramètres a besoin d\'un minimum de 8 GB de RAM, tandis qu\'un modèle 70B a besoin de 40+ GB. Ce guide couvre les recommandations matérielles réelles pour RTX 5090, 4090, Mac Silicon et les builds économiques, ainsi que les mathématiques VRAM pour calculer les exigences pour n\'importe quelle taille de modèle.',
+      intro: 'Exécuter des LLM locaux nécessite de comprendre trois composants: GPU (facultatif mais recommandé), CPU et RAM. En avril 2026, un modèle 7B à paramètres a besoin d\'un minimum de 8 GB de RAM, tandis qu\'un modèle 70B a besoin de 40+ GB. Ce guide couvre les recommandations matérielles réelles pour RTX 5090, 4090, Apple Silicon et les builds économiques, ainsi que les mathématiques VRAM pour calculer les exigences pour n\'importe quelle taille de modèle.',
       metaDescription: 'Guide matériel local LLM: exigences GPU, CPU et RAM pour modèles 7B et 70B. Calculateur VRAM, benchmarks, optimisation. Gratuit en bêta — avril 2026.',
       publishDate: '2026-04-04',
       readTime: '13 min de lecture',
@@ -29117,7 +29194,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       theme: 'Hardware & Performance',
       title: 'ローカルLLMハードウェアガイド2026: GPU、CPU、RAM要件の説明',
       seoTitle: 'ローカルLLMハードウェア2026: GPU VRAM計算機ベンチマーク',
-      intro: 'ローカルLLMを実行するには、GPU（オプションですが推奨）、CPU、RAMの3つのコンポーネントを理解する必要があります。2026年4月現在、7Bパラメータモデルには最小8 GB RAMが必要で、70Bモデルには40+ GB必要です。このガイドでは、RTX 5090、4090、Mac Silicon、予算ビルドの実際のハードウェアレコメンデーション、およびあらゆるモデルサイズの要件を計算するためのVRAM数学をカバーしています。',
+      intro: 'ローカルLLMを実行するには、GPU（オプションですが推奨）、CPU、RAMの3つのコンポーネントを理解する必要があります。2026年4月現在、7Bパラメータモデルには最小8 GB RAMが必要で、70Bモデルには40+ GB必要です。このガイドでは、RTX 5090、4090、Apple Silicon、予算ビルドの実際のハードウェアレコメンデーション、およびあらゆるモデルサイズの要件を計算するためのVRAM数学をカバーしています。',
       metaDescription: 'ローカルLLMハードウェアガイド: 7Bおよび70Bモデルの GPU、CPU、RAM要件。VRAM計算機、ベンチマーク、最適化。無料ベータ版 — 2026年4月。',
       publishDate: '2026-04-04',
       readTime: '13分で読める',
@@ -29367,7 +29444,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       theme: 'Hardware & Performance',
       title: '本地LLM硬件指南2026：GPU、CPU和RAM要求说明',
       seoTitle: '本地LLM硬件2026：GPU VRAM计算器和基准测试',
-      intro: '运行本地LLM需要理解三个组件：GPU（可选但推荐）、CPU和RAM。截至2026年4月，7B参数模型需要最少8 GB RAM，而70B模型需要40+ GB。本指南涵盖RTX 5090、4090、Mac Silicon和预算构建的实际硬件建议，以及用于计算任何模型大小的需求的VRAM数学。',
+      intro: '运行本地LLM需要理解三个组件：GPU（可选但推荐）、CPU和RAM。截至2026年4月，7B参数模型需要最少8 GB RAM，而70B模型需要40+ GB。本指南涵盖RTX 5090、4090、Apple Silicon和预算构建的实际硬件建议，以及用于计算任何模型大小的需求的VRAM数学。',
       metaDescription: '本地LLM硬件指南：7B和70B模型的GPU、CPU、RAM需求。VRAM计算器、基准测试、优化。免费测试版 — 2026年4月。',
       publishDate: '2026-04-04',
       readTime: '阅读约13分钟',
