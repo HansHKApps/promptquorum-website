@@ -15239,6 +15239,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**LM Studio Setup (5 minutes)**: Download LM Studio from lmstudio.ai → run installer → launch app → click "Search models" → find "llama3.2:3b" → click download → wait for model → click "Start server" → open built-in chat tab. Done.',
             'Both are genuinely simple. Ollama is faster if you already use the terminal; LM Studio is faster if you do not want to touch the terminal.',
           ],
+          image: '/images/ollama-vs-lm-studio-interface-comparison-en.svg',
+          imageCaption: 'Ollama runs via CLI commands and exposes a REST API at localhost:11434; LM Studio bundles a visual model browser, chat UI, and GPU sliders in a desktop app.',
         },
         modelManagement: {
           id: 'model-management',
@@ -15283,6 +15285,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             'You need production-ready, stable API support.',
             'You want to automate model downloading and management (e.g., in shell scripts or CI/CD pipelines).',
           ],
+          image: '/images/ollama-vs-lm-studio-when-to-use-en.svg',
+          imageCaption: 'Ollama suits developers needing an API and automation; LM Studio suits beginners wanting a desktop chat interface with visual settings.',
         },
         whenLmStudio: {
           id: 'when-to-use-lm-studio',
@@ -15455,6 +15459,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**GPU-Unterstützung**: Beide Tools erkennen Ihre GPU automatisch (NVIDIA, AMD, Intel, Apple Silicon). Ollama nutzt sie ohne zusätzliche Konfiguration. In LM Studio sehen Sie GPU-Schieberegler in den Einstellungen.',
             '**CPU-only**: Beide Tools funktionieren auf reiner CPU (1–5 Token/Sek). Nicht empfohlen für den produktiven Einsatz, aber zum Testen geeignet.',
           ],
+          image: '/images/ollama-vs-lm-studio-interface-comparison-de.svg',
+          imageCaption: 'Ollama läuft über CLI-Befehle und stellt eine REST-API unter localhost:11434 bereit; LM Studio bietet einen visuellen Modellbrowser, Chat-UI und GPU-Schieberegler in einer Desktop-App.',
         },
         modelManagement: {
           id: 'model-management',
@@ -15494,6 +15500,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**Sie möchten Modelle als Dienst ausführen**: Ollama läuft als Hintergrund-Dienst und kann mehrere Benutzer oder Anwendungen bedienen. Perfekt für Teams.',
             '**Sie verwenden Linux oder serverlose Umgebungen**: Ollama ist für Server-Umgebungen optimiert. LM Studio ist eine Desktop-Anwendung.',
           ],
+          image: '/images/ollama-vs-lm-studio-when-to-use-de.svg',
+          imageCaption: 'Ollama eignet sich für Entwickler, die eine API und Automatisierung benötigen; LM Studio für Anfänger, die ein Desktop-Chat-Interface mit visuellen Einstellungen wünschen.',
         },
         whenLmStudio: {
           id: 'when-to-use-lm-studio',
@@ -15727,6 +15735,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**Support GPU** : Les deux outils détectent automatiquement votre GPU (NVIDIA, AMD, Intel, Apple Silicon). Ollama l\'utilise sans configuration supplémentaire. Dans LM Studio, vous voyez des curseurs GPU dans les paramètres.',
             '**CPU uniquement** : Les deux outils fonctionnent sur CPU seul (1–5 tokens/sec). Non recommandé pour la production, mais adapté aux tests.',
           ],
+          image: '/images/ollama-vs-lm-studio-interface-comparison-fr.svg',
+          imageCaption: 'Ollama s\'exécute via des commandes CLI et expose une API REST à localhost:11434 ; LM Studio regroupe un navigateur de modèles visuel, une interface de chat et des curseurs GPU dans une application de bureau.',
         },
         modelManagement: {
           id: 'model-management',
@@ -15766,6 +15776,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**Vous voulez exécuter les modèles en tant que service** : Ollama s\'exécute comme un service en arrière-plan et peut servir plusieurs utilisateurs ou applications. Parfait pour les équipes.',
             '**Vous utilisez Linux ou des environnements serverless** : Ollama est optimisé pour les environnements serveur. LM Studio est une application de bureau.',
           ],
+          image: '/images/ollama-vs-lm-studio-when-to-use-fr.svg',
+          imageCaption: 'Ollama convient aux développeurs ayant besoin d\'une API et d\'automatisation ; LM Studio aux débutants voulant une interface de chat de bureau avec des paramètres visuels.',
         },
         whenLmStudio: {
           id: 'when-to-use-lm-studio',
@@ -15989,6 +16001,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**GPU サポート**: 両ツール自動検出 (NVIDIA、AMD、Intel、Apple Silicon)。Ollama は追加設定なし。LM Studio 設定でスライダー確認。',
             '**CPU のみ**: 両ツール動作 (1-5 tokens/sec)。本番環境非推奨、テスト目的なら可。',
           ],
+          image: '/images/ollama-vs-lm-studio-interface-comparison-ja.svg',
+          imageCaption: 'Ollama はターミナルコマンドで実行し、localhost:11434 に REST API を提供します。LM Studio はビジュアルなモデルブラウザ、チャット UI、GPU スライダーをデスクトップアプリに統合しています。',
         },
         modelManagement: {
           id: 'model-management',
@@ -16028,6 +16042,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**モデルを Service として実行**: Ollama はバックグラウンドサービス、複数ユーザー/アプリ対応。チーム向け。',
             '**Linux・サーバー環境**: Ollama はサーバー最適化。LM Studio は Desktop アプリ。',
           ],
+          image: '/images/ollama-vs-lm-studio-when-to-use-ja.svg',
+          imageCaption: 'Ollama は API と自動化が必要な開発者向け。LM Studio はデスクトップチャットインターフェースとビジュアル設定を望む初心者向け。',
         },
         whenLmStudio: {
           id: 'when-to-use-lm-studio',
@@ -16251,6 +16267,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**GPU 支持**: 两个工具自动检测 (NVIDIA、AMD、Intel、Apple Silicon)。Ollama 无需额外配置即可使用。在 LM Studio 设置中，您可以看到 GPU 滑块。',
             '**仅 CPU**: 两个工具都可以在仅 CPU 上运行 (1-5 tokens/sec，速度很慢)。不推荐用于生产，但可用于测试。',
           ],
+          image: '/images/ollama-vs-lm-studio-interface-comparison-zh.svg',
+          imageCaption: 'Ollama 通过终端命令运行，在 localhost:11434 提供 REST API；LM Studio 在桌面应用程序中整合了可视化模型浏览器、聊天 UI 和 GPU 滑块。',
         },
         modelManagement: {
           id: 'model-management',
@@ -16290,6 +16308,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**您想将模型作为服务运行**: Ollama 作为后台服务运行，可以服务多个用户或应用程序。非常适合团队。',
             '**您使用 Linux 或无服务器环境**: Ollama 针对服务器环境进行了优化。LM Studio 是桌面应用程序。',
           ],
+          image: '/images/ollama-vs-lm-studio-when-to-use-zh.svg',
+          imageCaption: 'Ollama 适合需要 API 和自动化的开发人员；LM Studio 适合想要带有可视化设置的桌面聊天界面的初学者。',
         },
         whenLmStudio: {
           id: 'when-to-use-lm-studio',

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <style>
+      .header-text { font-family: system-ui, -apple-system, sans-serif; font-size: 18px; font-weight: 700; }
+      .label-text { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 500; }
+      .item-text { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 500; }
+      .footer-text { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; }
+      .shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.08)); }
+    </style>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- White background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Left Column: Choose Ollama -->
+  <g>
+    <!-- Header band -->
+    <rect x="20" y="20" width="360" height="40" fill="#6750A4" rx="8"/>
+    <text x="200" y="48" class="header-text" fill="#FFFFFF" text-anchor="middle">选择 Ollama</text>
+
+    <!-- Card container -->
+    <rect x="20" y="70" width="360" height="310" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+
+    <!-- Checkmark items -->
+    <g>
+      <!-- Item 1 -->
+      <text x="35" y="105" class="item-text" fill="#34A853" font-size="16">✓</text>
+      <text x="60" y="105" class="item-text" fill="#1C1B1F">需要 OpenAI 兼容 API</text>
+
+      <!-- Item 2 -->
+      <text x="35" y="145" class="item-text" fill="#34A853" font-size="16">✓</text>
+      <text x="60" y="140" class="item-text" fill="#1C1B1F">用 Python / Node.js 脚本</text>
+      <text x="60" y="155" class="item-text" fill="#1C1B1F">自动化工作流</text>
+
+      <!-- Item 3 -->
+      <text x="35" y="200" class="item-text" fill="#34A853" font-size="16">✓</text>
+      <text x="60" y="195" class="item-text" fill="#1C1B1F">作为生产背景服务</text>
+      <text x="60" y="210" class="item-text" fill="#1C1B1F">运行</text>
+
+      <!-- Item 4 -->
+      <text x="35" y="255" class="item-text" fill="#34A853" font-size="16">✓</text>
+      <text x="60" y="255" class="item-text" fill="#1C1B1F">与 VS Code / Cursor 集成</text>
+
+      <!-- Item 5 -->
+      <text x="35" y="300" class="item-text" fill="#34A853" font-size="16">✓</text>
+      <text x="60" y="295" class="item-text" fill="#1C1B1F">Docker / systemd / CI/CD</text>
+      <text x="60" y="310" class="item-text" fill="#1C1B1F">部署</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Choose LM Studio -->
+  <g>
+    <!-- Header band -->
+    <rect x="420" y="20" width="360" height="40" fill="#7D5260" rx="8"/>
+    <text x="600" y="48" class="header-text" fill="#FFFFFF" text-anchor="middle">选择 LM Studio</text>
+
+    <!-- Card container -->
+    <rect x="420" y="70" width="360" height="310" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+
+    <!-- Checkmark items -->
+    <g>
+      <!-- Item 1 -->
+      <text x="435" y="105" class="item-text" fill="#34A853" font-size="16">✓</text>
+      <text x="460" y="105" class="item-text" fill="#1C1B1F">没有命令行经验</text>
+
+      <!-- Item 2 -->
+      <text x="435" y="145" class="item-text" fill="#34A853" font-size="16">✓</text>
+      <text x="460" y="140" class="item-text" fill="#1C1B1F">想要内置聊天界面</text>
+      <text x="460" y="155" class="item-text" fill="#1C1B1F">和对话历史</text>
+
+      <!-- Item 3 -->
+      <text x="435" y="200" class="item-text" fill="#34A853" font-size="16">✓</text>
+      <text x="460" y="195" class="item-text" fill="#1C1B1F">可视化 GPU 和模型设置</text>
+      <text x="460" y="210" class="item-text" fill="#1C1B1F"> </text>
+
+      <!-- Item 4 -->
+      <text x="435" y="255" class="item-text" fill="#34A853" font-size="16">✓</text>
+      <text x="460" y="250" class="item-text" fill="#1C1B1F">一键式模型浏览</text>
+      <text x="460" y="265" class="item-text" fill="#1C1B1F">和下载</text>
+
+      <!-- Item 5 -->
+      <text x="435" y="300" class="item-text" fill="#34A853" font-size="16">✓</text>
+      <text x="460" y="295" class="item-text" fill="#1C1B1F">快速桌面实验和</text>
+      <text x="460" y="310" class="item-text" fill="#1C1B1F">测试</text>
+    </g>
+  </g>
+
+  <!-- Footer note -->
+  <text x="400" y="405" class="footer-text" fill="#79747E" text-anchor="middle">两种工具均免费且本地运行。无需 API 密钥。</text>
+</svg>
