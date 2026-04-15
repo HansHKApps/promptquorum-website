@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ollama vs LM Studio 2026 | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation comparing Ollama and LM Studio. Learn when to choose each local LLM tool." />
+    <meta property="og:title" content="Ollama vs LM Studio 2026 — PromptQuorum" />
+    <meta property="og:description" content="Compare Ollama vs LM Studio: CLI-first vs GUI-first, API, setup, compliance, and when to use each." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/ollama-vs-lm-studio">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/ollama-vs-lm-studio?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Ollama vs LM Studio 2026</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/ollama-vs-lm-studio">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'Ollama vs LM Studio 2026',
+                slides: [
+                    { type: 'title', h1: 'Ollama vs\nLM Studio 2026', subtitle: 'Which local LLM tool should you choose?', link: 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio' },
+                    { type: 'list', h2: 'Key Takeaways', items: ['Ollama: CLI-first, API-first, production-ready', 'LM Studio: GUI-first, chat-first, beginner-friendly', 'Both use same engine (llama.cpp). Same speed.', 'Both free, open-source, 100% local (no cloud)', 'Choose by workflow, not by speed'] },
+                    { type: 'table', h2: 'Comparison (1/2)', columns: ['Feature', 'Ollama', 'LM Studio'], rows: [{ Feature: 'UI', Ollama: 'CLI only', 'LM Studio': 'Full GUI' }, { Feature: 'Chat', Ollama: 'No (third-party)', 'LM Studio': 'Yes (built-in)' }, { Feature: 'API', Ollama: 'OpenAI-compatible', 'LM Studio': 'Beta' }, { Feature: 'OS Support', Ollama: 'macOS/Linux/Windows', 'LM Studio': 'macOS/Windows/Linux' }, { Feature: 'Setup Time', Ollama: '2-3 min', 'LM Studio': '5 min' }, { Feature: 'Beginner Ease', Ollama: '2/5', 'LM Studio': '5/5' }] },
+                    { type: 'table', h2: 'Comparison (2/2)', columns: ['Feature', 'Ollama', 'LM Studio'], rows: [{ Feature: 'Developer Ease', Ollama: '5/5', 'LM Studio': '3/5' }, { Feature: 'GPU Settings', Ollama: 'Env vars', 'LM Studio': 'Sliders' }, { Feature: 'Model Browser', Ollama: 'CLI list', 'LM Studio': 'Visual' }, { Feature: 'Price', Ollama: 'Free', 'LM Studio': 'Free' }] },
+                    { type: 'comparison', h2: 'Quick Definition', line1: 'Ollama: CLI-first, API-first, production-ready', line2: 'LM Studio: GUI-first, chat-first, beginner-friendly', tip: 'Same C++ engine (llama.cpp). Same speed.' },
+                    { type: 'list', h2: 'Installation', items: ['Ollama: Download → Run installer → `ollama serve` → Done', 'LM Studio: Download → Install → Open app → Ready', 'Both auto-detect GPU. Both support CPU-only.', 'Both support GGUF, safetensors formats'] },
+                    { type: 'list', h2: 'When to Choose Ollama', items: ['You\'re a developer (CLI, API, integrations)', 'You need production-ready API (not beta)', 'You need logging/audit for compliance', 'You want to run as background service', 'You\'re using Linux/serverless'] },
+                    { type: 'list', h2: 'When to Choose LM Studio', items: ['You\'re a beginner (no CLI required)', 'You like visual sliders and menus', 'You want instant chat UI (no 3rd-party needed)', 'You prefer desktop apps (Windows/macOS)', 'You\'re experimenting with models'] },
+                    { type: 'list', h2: 'Speed & Integration', items: ['Both run 40-100 tokens/sec (7B with GPU)', 'Both auto-detect and use GPU automatically', 'Ollama API stable (production-ready)', 'LM Studio API still in beta (not prod-ready)', 'Both support RAG, LangChain, LlamaIndex'] },
+                    { type: 'list', h2: 'Model Management', items: ['Both use GGUF and safetensors formats', 'Both can share same model files', 'Ollama: `ollama pull mistral` + `ollama list`', 'LM Studio: Visual model browser, easy switching', 'Quantization (4-bit, 5-bit, 8-bit) most important factor'] },
+                    { type: 'list', h2: 'Regional Context', items: ['EU/GDPR: Ollama recommended (logging/audit)', 'Japan/METI: Ollama standard for enterprise', 'China: Both fully local, no data export', 'Both comply with data security regulations by design'] },
+                    { type: 'list', h2: 'Common Mistakes', items: ['Thinking one is faster (they\'re identical speed)', 'Assuming Ollama has no UI (it does — via 3rd-party)', 'Not realizing both can run simultaneously', 'Expecting LM Studio API to be production-ready', 'Not checking model quantization before download'] },
+                    { type: 'faq', h2: 'FAQ', faqs: [{ q: 'Can I use both at the same time?', a: 'Yes. Ollama background service + LM Studio desktop app. Just don\'t serve same model twice.' }, { q: 'Can I use same models in both?', a: 'Yes. Both support GGUF/safetensors. Point LM Studio to Ollama\'s model folder.' }, { q: 'Which is better for RAG?', a: 'Both work. Ollama slightly more common because API is stable.' }, { q: 'Do I need a GPU?', a: 'No, but recommended. GPU makes both 10-50x faster.' }] },
+                    { type: 'cta', h2: 'Try PromptQuorum', body: 'Run multiple AI models in consensus. Compare outputs, debug prompts, optimize for accuracy.', cta: 'Get Started Free', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            de: {
+                title: 'Ollama vs LM Studio 2026',
+                slides: [
+                    { type: 'title', h1: 'Ollama vs\nLM Studio 2026', subtitle: 'Welches lokale LLM-Tool sollten Sie wählen?', link: 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio?lang=de' },
+                    { type: 'list', h2: 'Zusammenfassung', items: ['Ollama: CLI-first, API-first, produktionsreif', 'LM Studio: GUI-first, Chat-first, anfängerfreundlich', 'Beide nutzen dieselbe Engine (llama.cpp). Gleiche Geschwindigkeit.', 'Beide kostenlos, Open-Source, 100% lokal (keine Cloud)', 'Wählen Sie nach Arbeitsablauf, nicht nach Geschwindigkeit'] },
+                    { type: 'table', h2: 'Vergleich (1/2)', columns: ['Funktion', 'Ollama', 'LM Studio'], rows: [{ Funktion: 'UI', Ollama: 'Nur CLI', 'LM Studio': 'Vollständige GUI' }, { Funktion: 'Chat', Ollama: 'Nein (Drittanbieter)', 'LM Studio': 'Ja (integriert)' }, { Funktion: 'API', Ollama: 'OpenAI-kompatibel', 'LM Studio': 'Beta' }, { Funktion: 'OS-Unterstützung', Ollama: 'macOS/Linux/Windows', 'LM Studio': 'macOS/Windows/Linux' }, { Funktion: 'Setup-Zeit', Ollama: '2-3 Min', 'LM Studio': '5 Min' }, { Funktion: 'Anfänger-freundlich', Ollama: '2/5', 'LM Studio': '5/5' }] },
+                    { type: 'table', h2: 'Vergleich (2/2)', columns: ['Funktion', 'Ollama', 'LM Studio'], rows: [{ Funktion: 'Entwickler-freundlich', Ollama: '5/5', 'LM Studio': '3/5' }, { Funktion: 'GPU-Einstellungen', Ollama: 'Umgebungsvariablen', 'LM Studio': 'Schieberegler' }, { Funktion: 'Modell-Browser', Ollama: 'CLI-Liste', 'LM Studio': 'Visuell' }, { Funktion: 'Preis', Ollama: 'Kostenlos', 'LM Studio': 'Kostenlos' }] },
+                    { type: 'comparison', h2: 'Kurzdefinition', line1: 'Ollama: CLI-first, API-first, produktionsreif', line2: 'LM Studio: GUI-first, Chat-first, anfängerfreundlich', tip: 'Gleiche C++-Engine (llama.cpp). Gleiche Geschwindigkeit.' },
+                    { type: 'list', h2: 'Installation', items: ['Ollama: Herunterladen → Installer → `ollama serve` → Fertig', 'LM Studio: Herunterladen → Installieren → App öffnen → Bereit', 'Beide erkennen GPU automatisch. Beide unterstützen nur-CPU.', 'Beide unterstützen GGUF-, safetensors-Formate'] },
+                    { type: 'list', h2: 'Wann Ollama wählen', items: ['Sie sind Entwickler (CLI, API, Integrationen)', 'Sie brauchen produktionsreife API (nicht Beta)', 'Sie brauchen Logging/Audit für Compliance', 'Sie möchten als Hintergrund-Service laufen', 'Sie verwenden Linux/serverlos'] },
+                    { type: 'list', h2: 'Wann LM Studio wählen', items: ['Sie sind Anfänger (keine CLI erforderlich)', 'Sie mögen visuelle Schieberegler und Menüs', 'Sie möchten sofort Chat-UI (keine Drittanbieter-Tool)', 'Sie bevorzugen Desktop-Apps (Windows/macOS)', 'Sie experimentieren mit Modellen'] },
+                    { type: 'list', h2: 'Geschwindigkeit & Integration', items: ['Beide: 40-100 tokens/sec (7B mit GPU)', 'Beide erkennen GPU automatisch und nutzen sie', 'Ollama API stabil (produktionsreif)', 'LM Studio API noch Beta (nicht prod-reif)', 'Beide unterstützen RAG, LangChain, LlamaIndex'] },
+                    { type: 'list', h2: 'Modellverwaltung', items: ['Beide nutzen GGUF- und safetensors-Formate', 'Beide können dieselbe Modell-Datei gemeinsam nutzen', 'Ollama: `ollama pull mistral` + `ollama list`', 'LM Studio: Visueller Modell-Browser, einfaches Wechseln', 'Quantisierung (4-bit, 5-bit, 8-bit) wichtigster Faktor'] },
+                    { type: 'list', h2: 'Regionaler Kontext', items: ['EU/DSGVO: Ollama empfohlen (Logging/Audit)', 'Japan/METI: Ollama Standard für Enterprise', 'China: Beide vollständig lokal, kein Datenexport', 'Beide erfüllen Datenschutzgesetze durch Design'] },
+                    { type: 'list', h2: 'Häufige Fehler', items: ['Denken, eines ist schneller (identische Geschwindigkeit)', 'Annehmen, Ollama hat keine UI (doch — via Drittanbieter)', 'Nicht erkennen, dass beide gleichzeitig laufen können', 'Erwarten, dass LM Studio API produktionsreif ist', 'Model-Quantisierung vor Download nicht prüfen'] },
+                    { type: 'faq', h2: 'FAQ', faqs: [{ q: 'Kann ich beide gleichzeitig nutzen?', a: 'Ja. Ollama Hintergrund-Service + LM Studio Desktop-App. Nur nicht gleichzeitig Modell servieren.' }, { q: 'Kann ich Modelle in beiden nutzen?', a: 'Ja. Beide unterstützen GGUF/safetensors. LM Studio zu Ollama-Modellordner verweisen.' }, { q: 'Welches ist besser für RAG?', a: 'Beide funktionieren. Ollama etwas häufiger, weil API stabil.' }, { q: 'Brauche ich eine GPU?', a: 'Nein, aber empfohlen. GPU macht beide 10-50x schneller.' }] },
+                    { type: 'cta', h2: 'PromptQuorum ausprobieren', body: 'Mehrere AI-Modelle im Konsens ausführen. Ausgaben vergleichen, Prompts debuggen, Genauigkeit optimieren.', cta: 'Kostenlos starten', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            fr: {
+                title: 'Ollama vs LM Studio 2026',
+                slides: [
+                    { type: 'title', h1: 'Ollama vs\nLM Studio 2026', subtitle: 'Quel outil choisir ?', link: 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio?lang=fr' },
+                    { type: 'list', h2: 'Points clés', items: ['Ollama: CLI-first, API-first, prêt pour la production', 'LM Studio: GUI-first, Chat-first, convivial pour débutants', 'Les deux utilisent le même moteur (llama.cpp). Même vitesse.', 'Les deux gratuits, open-source, 100% local (pas de cloud)', 'Choisissez selon le flux de travail, pas la vitesse'] },
+                    { type: 'table', h2: 'Comparaison (1/2)', columns: ['Fonctionnalité', 'Ollama', 'LM Studio'], rows: [{ Fonctionnalité: 'Interface', Ollama: 'CLI uniquement', 'LM Studio': 'GUI complète' }, { Fonctionnalité: 'Chat', Ollama: 'Non (tiers)', 'LM Studio': 'Oui (intégré)' }, { Fonctionnalité: 'API', Ollama: 'Compatible OpenAI', 'LM Studio': 'Bêta' }, { Fonctionnalité: 'Systèmes d\'exploitation', Ollama: 'macOS/Linux/Windows', 'LM Studio': 'macOS/Windows/Linux' }, { Fonctionnalité: 'Temps de configuration', Ollama: '2-3 min', 'LM Studio': '5 min' }, { Fonctionnalité: 'Facilité débutants', Ollama: '2/5', 'LM Studio': '5/5' }] },
+                    { type: 'table', h2: 'Comparaison (2/2)', columns: ['Fonctionnalité', 'Ollama', 'LM Studio'], rows: [{ Fonctionnalité: 'Facilité développeurs', Ollama: '5/5', 'LM Studio': '3/5' }, { Fonctionnalité: 'Paramètres GPU', Ollama: 'Variables env', 'LM Studio': 'Curseurs' }, { Fonctionnalité: 'Navigateur modèles', Ollama: 'Liste CLI', 'LM Studio': 'Visuel' }, { Fonctionnalité: 'Prix', Ollama: 'Gratuit', 'LM Studio': 'Gratuit' }] },
+                    { type: 'comparison', h2: 'Définition rapide', line1: 'Ollama: CLI-first, API-first, prêt pour production', line2: 'LM Studio: GUI-first, Chat-first, débutant-friendly', tip: 'Même moteur C++ (llama.cpp). Même vitesse.' },
+                    { type: 'list', h2: 'Installation', items: ['Ollama: Télécharger → Installer → `ollama serve` → Fini', 'LM Studio: Télécharger → Installer → Ouvrir app → Prêt', 'Les deux détectent GPU auto. Les deux supportent CPU-only.', 'Les deux supportent GGUF, safetensors'] },
+                    { type: 'list', h2: 'Quand choisir Ollama', items: ['Vous êtes développeur (CLI, API, intégrations)', 'Vous avez besoin d\'API production-ready (pas bêta)', 'Vous avez besoin de logging/audit pour conformité', 'Vous voulez service en arrière-plan', 'Vous utilisez Linux/serverless'] },
+                    { type: 'list', h2: 'Quand choisir LM Studio', items: ['Vous êtes débutant (pas de CLI nécessaire)', 'Vous aimez les curseurs et menus visuels', 'Vous voulez chat UI immédiat (pas d\'outil tiers)', 'Vous préférez apps de bureau (Windows/macOS)', 'Vous expérimentez avec des modèles'] },
+                    { type: 'list', h2: 'Vitesse & Intégration', items: ['Les deux: 40-100 tokens/sec (7B avec GPU)', 'Les deux détectent GPU auto et l\'utilisent', 'Ollama API stable (production-ready)', 'LM Studio API encore en bêta (pas prod-ready)', 'Les deux supportent RAG, LangChain, LlamaIndex'] },
+                    { type: 'list', h2: 'Gestion des modèles', items: ['Les deux utilisent GGUF et safetensors', 'Les deux peuvent partager mêmes fichiers modèles', 'Ollama: `ollama pull mistral` + `ollama list`', 'LM Studio: Navigateur visuel, changement facile', 'Quantification (4-bit, 5-bit, 8-bit) plus important'] },
+                    { type: 'list', h2: 'Contexte régional', items: ['UE/RGPD: Ollama recommandé (logging/audit)', 'Japon/METI: Ollama standard pour entreprises', 'Chine: Les deux 100% locaux, pas d\'export données', 'Les deux respectent lois protection données par design'] },
+                    { type: 'list', h2: 'Erreurs courantes', items: ['Penser que l\'un est plus rapide (vitesse identique)', 'Supposer Ollama sans UI (il en a — tiers)', 'Ne pas savoir que les deux peuvent fonctionner ensemble', 'S\'attendre API LM Studio production-ready', 'Ne pas vérifier quantification avant téléchargement'] },
+                    { type: 'faq', h2: 'FAQ', faqs: [{ q: 'Puis-je utiliser les deux à la fois?', a: 'Oui. Ollama service arrière-plan + LM Studio app. Juste pas servir même modèle.' }, { q: 'Puis-je utiliser mêmes modèles?', a: 'Oui. Les deux GGUF/safetensors. Pointer LM Studio vers dossier Ollama.' }, { q: 'Lequel pour RAG?', a: 'Les deux. Ollama plus courant car API stable.' }, { q: 'Ai-je besoin GPU?', a: 'Non, mais recommandé. GPU rend les deux 10-50x plus rapides.' }] },
+                    { type: 'cta', h2: 'Essayer PromptQuorum', body: 'Exécutez plusieurs modèles IA en consensus. Comparez sorties, déboguez prompts, optimisez précision.', cta: 'Commencer gratuitement', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            ja: {
+                title: 'Ollama vs LM Studio 2026',
+                slides: [
+                    { type: 'title', h1: 'Ollama vs\nLM Studio 2026', subtitle: 'どちらのツールを選ぶべき?', link: 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio?lang=ja' },
+                    { type: 'list', h2: '重要ポイント', items: ['Ollama: CLI ファースト、API ファースト、本番対応', 'LM Studio: GUI ファースト、チャットファースト、初心者向け', '両者は同じエンジン (llama.cpp)。速度同等。', '両者無料、オープンソース、100% ローカル (クラウドなし)', 'ワークフロー重視。速度では選ばない'] },
+                    { type: 'table', h2: '比較 (1/2)', columns: ['機能', 'Ollama', 'LM Studio'], rows: [{ 機能: 'UI', Ollama: 'CLI のみ', 'LM Studio': '完全 GUI' }, { 機能: 'チャット', Ollama: 'なし (サードパーティ)', 'LM Studio': 'あり (統合)' }, { 機能: 'API', Ollama: 'OpenAI 互換', 'LM Studio': 'ベータ' }, { 機能: 'OS サポート', Ollama: 'macOS/Linux/Windows', 'LM Studio': 'macOS/Windows/Linux' }, { 機能: 'セットアップ時間', Ollama: '2-3 分', 'LM Studio': '5 分' }, { 機能: '初心者向け', Ollama: '2/5', 'LM Studio': '5/5' }] },
+                    { type: 'table', h2: '比較 (2/2)', columns: ['機能', 'Ollama', 'LM Studio'], rows: [{ 機能: '開発者向け', Ollama: '5/5', 'LM Studio': '3/5' }, { 機能: 'GPU 設定', Ollama: '環境変数', 'LM Studio': 'スライダー' }, { 機能: 'モデルブラウザ', Ollama: 'CLI リスト', 'LM Studio': 'ビジュアル' }, { 機能: '価格', Ollama: '無料', 'LM Studio': '無料' }] },
+                    { type: 'comparison', h2: 'クイック定義', line1: 'Ollama: CLI ファースト、API ファースト、本番対応', line2: 'LM Studio: GUI ファースト、チャット ファースト、初心者向け', tip: '同じ C++ エンジン (llama.cpp)。同じ速度。' },
+                    { type: 'list', h2: 'インストール', items: ['Ollama: ダウンロード → インストール → `ollama serve` → 完了', 'LM Studio: ダウンロード → インストール → アプリ起動 → 準備完了', '両者は GPU 自動検出。CPU のみもサポート。', '両者 GGUF、safetensors サポート'] },
+                    { type: 'list', h2: 'Ollama を選ぶべき時', items: ['開発者である (CLI、API、統合)', '本番対応 API が必要 (ベータでない)', 'ロギング/監査が必要 (コンプライアンス)', 'バックグラウンドサービスとして実行したい', 'Linux/サーバーレスを使用している'] },
+                    { type: 'list', h2: 'LM Studio を選ぶべき時', items: ['初心者である (CLI 不要)', 'ビジュアルスライダーとメニューが好き', 'すぐにチャット UI が欲しい (サードパーティなし)', 'デスクトップアプリが好き (Windows/macOS)', 'モデルを試験中'] },
+                    { type: 'list', h2: '速度と統合', items: ['両者: 40-100 tokens/sec (7B GPU)', '両者は GPU 自動検出・使用', 'Ollama API は安定 (本番対応)', 'LM Studio API はまだベータ (本番非対応)', '両者は RAG、LangChain、LlamaIndex サポート'] },
+                    { type: 'list', h2: 'モデル管理', items: ['両者 GGUF・safetensors 形式', '両者は同じモデルファイル共有可', 'Ollama: `ollama pull mistral` + `ollama list`', 'LM Studio: ビジュアルブラウザ、簡単切り替え', '量子化 (4-bit、5-bit、8-bit) が最重要'] },
+                    { type: 'list', h2: 'アジア太平洋コンテキスト', items: ['日本/METI: Ollama は Enterprise 標準', 'アジア太平洋: 両者完全ローカル、データ外流なし', '両者は地域規制を設計時から満たす', '中国: Qwen2.5 両者対応、データ主権保証'] },
+                    { type: 'list', h2: 'よくある間違い', items: ['一方が大幅に速いと思う (速度同等)', 'Ollama に UI がないと思う (サードパーティであり)', '両者同時実行できないと思う (可能)', 'LM Studio API が本番対応と思う (ベータ)', 'ダウンロード前に量子化を確認しない'] },
+                    { type: 'faq', h2: 'FAQ', faqs: [{ q: '両者同時に実行できる?', a: 'はい。Ollama バックグラウンド + LM Studio アプリ。同一モデルは同時提供不可。' }, { q: '同じモデルを両者で使える?', a: 'はい。両者 GGUF/safetensors。LM Studio を Ollama フォルダに指定。' }, { q: 'RAG に向いているのは?', a: '両方対応。Ollama はやや一般的、API が安定。' }, { q: 'GPU は必須?', a: 'いいえ。ただし推奨。GPU は両者 10-50 倍高速化。' }] },
+                    { type: 'cta', h2: 'PromptQuorum を試す', body: '複数の AI モデルをコンセンサスで実行。出力比較、プロンプトデバッグ、精度最適化。', cta: '無料で始める', href: 'https://www.promptquorum.com' }
+                ]
+            },
+            zh: {
+                title: 'Ollama vs LM Studio 2026',
+                slides: [
+                    { type: 'title', h1: 'Ollama vs\nLM Studio 2026', subtitle: '选择哪个工具?', link: 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio?lang=zh' },
+                    { type: 'list', h2: '核心要点', items: ['Ollama: CLI 优先、API 优先、生产就绪', 'LM Studio: GUI 优先、聊天优先、初学者友好', '两者使用相同引擎 (llama.cpp)。速度相同。', '两者免费、开源、100% 本地 (无云)', '根据工作流选择，不是速度'] },
+                    { type: 'table', h2: '对比 (1/2)', columns: ['功能', 'Ollama', 'LM Studio'], rows: [{ 功能: '用户界面', Ollama: '仅 CLI', 'LM Studio': '完整 GUI' }, { 功能: '聊天', Ollama: '否 (第三方)', 'LM Studio': '是 (集成)' }, { 功能: 'API', Ollama: 'OpenAI 兼容', 'LM Studio': '测试版' }, { 功能: '操作系统', Ollama: 'macOS/Linux/Windows', 'LM Studio': 'macOS/Windows/Linux' }, { 功能: '设置时间', Ollama: '2-3 分钟', 'LM Studio': '5 分钟' }, { 功能: '初学者易用', Ollama: '2/5', 'LM Studio': '5/5' }] },
+                    { type: 'table', h2: '对比 (2/2)', columns: ['功能', 'Ollama', 'LM Studio'], rows: [{ 功能: '开发者易用', Ollama: '5/5', 'LM Studio': '3/5' }, { 功能: 'GPU 设置', Ollama: '环境变量', 'LM Studio': '可视滑块' }, { 功能: '模型浏览器', Ollama: 'CLI 列表', 'LM Studio': '可视' }, { 功能: '价格', Ollama: '免费', 'LM Studio': '免费' }] },
+                    { type: 'comparison', h2: '快速定义', line1: 'Ollama: CLI 优先、API 优先、生产就绪', line2: 'LM Studio: GUI 优先、聊天优先、初学者友好', tip: '相同 C++ 引擎 (llama.cpp)。相同速度。' },
+                    { type: 'list', h2: '安装', items: ['Ollama: 下载 → 安装 → `ollama serve` → 完成', 'LM Studio: 下载 → 安装 → 打开应用 → 就绪', '两者自动检测 GPU。两者都支持仅 CPU。', '两者支持 GGUF、safetensors'] },
+                    { type: 'list', h2: '何时选择 Ollama', items: ['您是开发者 (CLI、API、集成)', '您需要生产就绪 API (非测试版)', '您需要日志/审计 (合规)', '您想作为后台服务运行', '您使用 Linux/无服务器'] },
+                    { type: 'list', h2: '何时选择 LM Studio', items: ['您是初学者 (无需 CLI)', '您喜欢可视滑块和菜单', '您需要即时聊天 UI (无第三方)', '您更喜欢桌面应用 (Windows/macOS)', '您正在试验模型'] },
+                    { type: 'list', h2: '速度和集成', items: ['两者: 40-100 tokens/sec (7B GPU)', '两者自动检测和使用 GPU', 'Ollama API 稳定 (生产就绪)', 'LM Studio API 仍在测试版 (非生产)', '两者支持 RAG、LangChain、LlamaIndex'] },
+                    { type: 'list', h2: '模型管理', items: ['两者使用 GGUF 和 safetensors', '两者可共享相同模型文件', 'Ollama: `ollama pull mistral` + `ollama list`', 'LM Studio: 可视浏览器、轻松切换', '量化 (4-bit、5-bit、8-bit) 最重要'] },
+                    { type: 'list', h2: '企业部署', items: ['中国: 两者完全本地、遵守数据安全法', '亚太地区: 两者满足跨境数据规制', '金融/医疗: Ollama 日志/审计优势', '两者在设计上满足数据主权要求'] },
+                    { type: 'list', h2: '常见错误', items: ['认为一个明显更快 (速度相同)', '假设 Ollama 无 UI (有—第三方)', '不知道两者可同时运行', '期望 LM Studio API 生产就绪 (测试版)', '下载前不检查模型量化'] },
+                    { type: 'faq', h2: '常见问题', faqs: [{ q: '可以同时使用两者?', a: '可以。Ollama 后台服务 + LM Studio 应用。不要同时提供相同模型。' }, { q: '两者用相同模型?', a: '可以。两者 GGUF/safetensors。LM Studio 指向 Ollama 文件夹。' }, { q: '哪个适合 RAG?', a: '两个都可。Ollama 稍常见，API 更稳定。' }, { q: '需要 GPU?', a: '不需要。但推荐。GPU 让两者快 10-50 倍。' }] },
+                    { type: 'cta', h2: '尝试 PromptQuorum', body: '多模型共识运行。对比输出、调试提示、优化精度。', cta: '免费开始', href: 'https://www.promptquorum.com' }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = `https://www.promptquorum.com/local-llms/ollama-vs-lm-studio?lang=${lang}`;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none;">← Article</a></p>`;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p style="margin-top: 40px; font-size: 18px; color: #79747e;"><a href="${slide.link}" style="color: #6750a4; text-decoration: none;">${slide.link.split('/').pop().replace(/-/g, ' ')}</a></p>${footerLink}`;
+                    break;
+                case 'list':
+                    html = `<h2>${slide.h2}</h2><ul style="font-size: 1.2em; margin-top: 20px; max-width: 700px;">`;
+                    slide.items.forEach(item => { html += `<li>${item}</li>`; });
+                    html += `</ul>${footerLink}`;
+                    break;
+                case 'table':
+                    html = `<h2>${slide.h2}</h2><table><tr>`;
+                    slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+                        html += '</tr>';
+                    });
+                    html += `</table>${footerLink}`;
+                    break;
+                case 'comparison':
+                    html = `<h2>${slide.h2}</h2><p style="margin-top: 40px; font-size: 1.5em;">${slide.line1}</p><p style="font-size: 1.5em;">${slide.line2}</p><p style="margin-top: 40px; font-size: 1.1em; color: #6750a4;">${slide.tip}</p>${footerLink}`;
+                    break;
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 16px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+                    });
+                    html += footerLink;
+                    break;
+                case 'cta':
+                    html = `<h2>${slide.h2}</h2><p style="margin-top: 20px; font-size: 1.1em;">${slide.body}</p><a href="${slide.href}" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none;">${slide.cta}</a>${footerLink}`;
+                    break;
+            }
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href = `https://www.promptquorum.com/local-llms/ollama-vs-lm-studio${lang !== 'en' ? `?lang=${lang}` : ''}`;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        if (isPrint) {
+            window.addEventListener('load', () => { window.print(); });
+        }
+
+        showSlide(0);
+    </script>
+</body>
+</html>

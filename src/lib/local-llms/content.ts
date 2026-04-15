@@ -15111,6 +15111,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       readTime: '12 min read',
+      gammaEmbedUrl: '/presentations/ollama-vs-lm-studio-static.html',
+      gammaDescription: 'The slide deck below covers Ollama vs LM Studio in 14 slides: key differences, CLI vs GUI setup, API integration, when to choose each tool, regional compliance, and common mistakes. Download the PDF as a reference card.',
       educationalLevel: 'Beginner to Advanced',
       primaryTerm: 'Ollama vs LM Studio',
       toc: [
@@ -15385,6 +15387,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       publishDate: '2026-04-04',
       dateModified: '2026-04-12',
       readTime: '12 Min. Lesezeit',
+      gammaEmbedUrl: '/presentations/ollama-vs-lm-studio-static.html',
+      gammaDescription: 'Die folgende Präsentation vergleicht Ollama vs LM Studio in 14 Folien: CLI vs. GUI, API-Integration, Auswahl-Entscheidung, regionale Compliance (DSGVO/BSI) und häufige Fehler. Als PDF herunterladen.',
       educationalLevel: 'Beginner',
       primaryTerm: 'lokale LLM-Tools',
       toc: [
@@ -15655,6 +15659,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       publishDate: '2026-04-04',
       dateModified: '2026-04-12',
       readTime: '12 min de lecture',
+      gammaEmbedUrl: '/presentations/ollama-vs-lm-studio-static.html',
+      gammaDescription: 'La présentation ci-dessous compare Ollama vs LM Studio en 14 diapositives: CLI vs GUI, intégration API, quand choisir quel outil, contexte RGPD/CNIL, et erreurs courantes. Télécharger en PDF.',
       educationalLevel: 'Beginner',
       primaryTerm: 'outils LLM locaux',
       toc: [
@@ -15915,6 +15921,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       publishDate: '2026-04-04',
       dateModified: '2026-04-12',
       readTime: '7分で読める',
+      gammaEmbedUrl: '/presentations/ollama-vs-lm-studio-static.html',
+      gammaDescription: '下のスライドデッキは Ollama vs LM Studio を 14 枚で解説: CLI vs GUI、API 統合、ツール選択、METI コンプライアンス、よくある間違い。PDF でダウンロード可。',
       educationalLevel: 'Beginner',
       primaryTerm: 'ローカル LLM ツール',
       toc: [
@@ -16175,6 +16183,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       publishDate: '2026-04-04',
       dateModified: '2026-04-12',
       readTime: '阅读约7分钟',
+      gammaEmbedUrl: '/presentations/ollama-vs-lm-studio-static.html',
+      gammaDescription: '下方幻灯片以 14 张比较 Ollama vs LM Studio：CLI vs GUI、API 集成、何时选择各工具、合规要求（数据安全法）以及常见错误。可下载 PDF 参考卡。',
       educationalLevel: 'Beginner',
       primaryTerm: '本地 LLM 工具',
       toc: [
