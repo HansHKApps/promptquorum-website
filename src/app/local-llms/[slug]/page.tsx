@@ -246,7 +246,7 @@ export default async function LocalLLMsArticlePage({ params, searchParams }: Pag
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home',       item: 'https://www.promptquorum.com' },
       { '@type': 'ListItem', position: 2, name: 'Local LLMs', item: 'https://www.promptquorum.com/local-llms' },
-      { '@type': 'ListItem', position: 3, name: article.title, item: canonicalUrl },
+      { '@type': 'ListItem', position: 3, name: article.title ?? (article as any).seoTitle ?? slug, item: canonicalUrl },
     ],
   }
 
