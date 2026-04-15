@@ -1125,71 +1125,1259 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       },
     },
     de: {
-      theme: 'Erste Schritte',
-      title: 'Ollama installieren: 3-Schritte-Anleitung für macOS, Windows, Linux',
-      seoTitle: 'Ollama 2026: 3-Schritt-Setup für alle Betriebssysteme',
-      metaDescription: 'Ollama-Installation in 2 Minuten auf jedem OS: Download, `ollama run llama3.2` ausführen, chatten. Komplette Anleitung mit Tipps für Anfänger.',
+      theme: 'Getting Started',
+      title: 'Ollama installieren: Vollständige Einrichtungsanleitung für macOS, Windows und Linux',
+      seoTitle: 'Ollama installieren 2026 – Vollständige Anleitung',
+      intro: 'Ollama ist eine leichte Inference-Engine, die große Sprachmodelle lokal mit einem einzigen Befehl ausführt. Nach einer 2-Minuten-Installation lädt `ollama pull llama3.2:3b` ein 2-GB-Modell herunter, und `ollama run llama3.2` öffnet eine Chat-Schnittstelle. Ollama kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API auf `localhost:11434` in einer einzigen Anwendung ohne Python-Umgebung, ohne Konfigurationsdateien und ohne erforderliche GPU zum Starten. Ab April 2026 unterstützt Ollama über 200 Modelle einschließlich Meta Llama 3.2, Qwen2.5, Mistral und DeepSeek und stellt seine API für jeden OpenAI-SDK ohne Codeänderungen bereit.',
+      metaDescription: 'Ollama in unter 2 Minuten auf macOS, Windows oder Linux installieren. Ein Befehl startet Ihr erstes Modell. Zugriff auf 200+ Open-Source-Modelle lokal.',
       publishDate: '2026-04-04',
-      readTime: '8 Min. Lesedauer',
+      dateModified: '2026-04-05',
+      readTime: '8 min Lesezeit',
       educationalLevel: 'Beginner',
       primaryTerm: 'Ollama',
-      sections: {},
+      toc: [
+        { label: 'Wichtigste Erkenntnisse', anchor: 'key-takeaways' },
+        { label: 'Was ist Ollama?', anchor: 'what-is-ollama' },
+        { label: 'Installation auf macOS', anchor: 'install-on-macos' },
+        { label: 'Installation auf Windows', anchor: 'install-on-windows' },
+        { label: 'Installation auf Linux', anchor: 'install-on-linux' },
+        { label: 'Ihr erstes Modell herunterladen und ausführen', anchor: 'pull-and-run-your-first-model' },
+        { label: 'Mit welchem Modell sollte ich anfangen?', anchor: 'which-model-to-start-with' },
+        { label: 'Verifizieren Sie, dass Ollama funktioniert', anchor: 'verify-ollama-is-working' },
+        { label: 'Nützliche Ollama-Befehle', anchor: 'useful-ollama-commands' },
+        { label: 'Fehlerbehebung', anchor: 'troubleshooting' },
+        { label: 'Regionale Einsatzszenarien', anchor: 'regional-context' },
+        { label: 'Häufige Fehler', anchor: 'common-mistakes' },
+        { label: 'Weiterführende Literatur', anchor: 'related-reading' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Quellen', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Zusammenfassung',
+          isTldr: true,
+          items: [
+            'macOS: Laden Sie die .dmg-Datei von ollama.com herunter, oder führen Sie `brew install ollama` aus — dann `ollama run llama3.2` zum Chatten.',
+            'Windows: Laden Sie das Installationsprogramm von ollama.com/download herunter. Ollama wird als Hintergrunddienst im Systembereich ausgeführt.',
+            'Linux: Ein einzelner curl-Befehl installiert alles — `curl -fsSL https://ollama.com/install.sh | sh`.',
+            'Mindestanforderungen: 4 GB RAM für ein 3B-Modell, 8 GB RAM für ein 7B-Modell. Keine GPU erforderlich zum Starten.',
+            'Ollama stellt eine OpenAI-kompatible REST-API auf `http://localhost:11434` bereit — jede OpenAI-SDK-App kann sie ohne Codeänderungen verwenden.',
+          ],
+        },
+        whatIsOllama: {
+          id: 'what-is-ollama',
+          title: 'Was ist Ollama und warum sollte ich es nutzen?',
+          content: [
+            'Ollama ist eine Open-Source-Inference-Engine, die große Sprachmodelle lokal ausführt. Sie kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API in einer einzigen leichten Anwendung. Keine Python, keine Conda-Umgebung und kein CUDA-Setup erforderlich.',
+            'Ollama betreut eine kuratierte Modellbibliothek (ollama.com/library) mit Ein-Befehl-Downloads für Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 und über 100 weitere Modelle. Ein Modell wird einmal heruntergeladen und auf der Festplatte zwischengespeichert — nachfolgende Ausführungen starten in unter 5 Sekunden.',
+            'Für Alternativen zu Ollama siehe [Local-LLM-One-Click-Installer](/local-llms/local-llm-one-click-installers?lang=de). Zum Vergleich von Ollama und LM Studio siehe [So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de).',
+          ],
+          blockquote: 'In einem Satz: Ollama ist ein Tool zum Herunterladen und lokalen Ausführen von Open-Source-Sprachmodellen (wie Mistral oder Llama 2) auf Ihrem Computer mit nur einem Befehl.',
+        },
+        installMac: {
+          id: 'install-on-macos',
+          title: 'Wie installiert man Ollama auf macOS?',
+          content: 'Es gibt zwei Methoden. Der Installer-Download ist schneller; Homebrew ist besser, wenn Sie Software mit brew verwalten.',
+          numberedItems: [
+            'Gehen Sie zu ollama.com/download und klicken Sie auf „Download für macOS".',
+            'Öffnen Sie die heruntergeladene Ollama.dmg-Datei und ziehen Sie Ollama in Ihren Anwendungsordner.',
+            'Starten Sie Ollama über die Anwendungen. Ein Llama-Symbol erscheint in der Menüleiste — Ollama wird jetzt als Hintergrunddienst ausgeführt.',
+            'Öffnen Sie das Terminal und führen Sie Ihr erstes Modell aus: `ollama run llama3.2`',
+            'Das Modell wird heruntergeladen (~2 GB für llama3.2:3b) und eine Chat-Eingabeaufforderung wird angezeigt. Geben Sie eine Nachricht ein und drücken Sie die Eingabetaste.',
+          ],
+          blockquote: 'In einem Satz: Ollama wird auf macOS als Hintergrunddienst ausgeführt — sobald es installiert und gestartet ist, wird die lokale API auf `http://localhost:11434` auf Modellanforderungen überwacht.',
+        },
+        installMacBrew: {
+          title: 'Wie installiert man Ollama auf macOS mit Homebrew?',
+          codeBlock: 'brew install ollama\n\n# Starten Sie den Ollama-Dienst\nollama serve &\n\n# Ziehen Sie ein Modell herunter und führen Sie es aus\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        installWindows: {
+          id: 'install-on-windows',
+          title: 'Wie installiert man Ollama auf Windows?',
+          numberedItems: [
+            'Gehen Sie zu ollama.com/download und klicken Sie auf „Download für Windows".',
+            'Führen Sie das heruntergeladene OllamaSetup.exe-Installationsprogramm aus. Ollama wird in %LOCALAPPDATA%\\Programs\\Ollama installiert.',
+            'Ollama wird automatisch gestartet und als Systembereich-Symbol angezeigt.',
+            'Öffnen Sie PowerShell oder Eingabeaufforderung und führen Sie aus: `ollama run llama3.2`',
+            'Das Modell wird beim ersten Ausführen heruntergeladen. Nachfolgende Ausführungen verwenden das zwischengespeicherte Modell.',
+          ],
+        },
+        installWindowsNote: {
+          title: 'Wie aktiviert man GPU-Unterstützung unter Windows?',
+          content: 'Ollama unter Windows erkennt automatisch und nutzt NVIDIA-GPUs (CUDA 11.3+) und AMD-GPUs (ROCm 6+). Wenn Sie eine NVIDIA-RTX-Karte haben, wird Ollama Modellebenen automatisch in den VRAM verschieben — keine manuelle Konfiguration erforderlich. Zum Verifizieren, dass die GPU verwendet wird, führen Sie `ollama run llama3.2` aus und überprüfen Sie den Task Manager → GPU auf Aktivität.',
+        },
+        installLinux: {
+          id: 'install-on-linux',
+          title: 'Wie installiert man Ollama auf Linux?',
+          content: 'Ein einzelner Befehl installiert Ollama auf jeder Linux-Distribution:',
+          codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+          codeLanguage: 'bash',
+        },
+        installLinuxService: {
+          title: 'Wie führt man Ollama als systemd-Dienst auf Linux aus?',
+          content: 'Das Installationsskript registriert Ollama automatisch als systemd-Dienst. So verwalten Sie ihn:',
+          codeBlock: '# Dienststatus überprüfen\nsystemctl status ollama\n\n# Starten / Stoppen / Neustarten\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# Protokolle anzeigen\njournalctl -u ollama -f',
+          codeLanguage: 'bash',
+        },
+        firstModel: {
+          id: 'pull-and-run-your-first-model',
+          title: 'Wie zieht man sein erstes Modell in Ollama herunter und führt es aus?',
+          content: 'Führen Sie nach der Installation von Ollama diesen Befehl aus, um ein Modell herunterzuladen und zu starten:',
+          codeBlock: '# Ziehen Sie ein Modell herunter (speichern Sie es unter ~/.ollama/models)\nollama pull llama3.2\n\n# Führen Sie es interaktiv aus\nollama run llama3.2\n\n# Oder herunterladen und in einem Schritt ausführen\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        recommendedModels: {
+          id: 'which-model-to-start-with',
+          title: 'Mit welchem Modell sollte ich anfangen?',
+          content: 'Für einen ersten Durchlauf decken diese drei Modelle verschiedene Hardware-Profile ab:',
+          rows: [
+            { 'Modell': 'llama3.2:3b', 'Download-Größe': '~2 GB', 'Benötigter RAM': '4 GB', 'Am besten für': 'Erster Test — auf jeder Maschine' },
+            { 'Modell': 'llama3.1:8b', 'Download-Größe': '~4,7 GB', 'Benötigter RAM': '8 GB', 'Am besten für': 'Allgemeine Nutzung auf den meisten Laptops' },
+            { 'Modell': 'phi3:mini', 'Download-Größe': '~2,3 GB', 'Benötigter RAM': '4 GB', 'Am besten für': 'Schnelle Antworten, niedriger RAM' },
+          ],
+          columns: ['Modell', 'Download-Größe', 'Benötigter RAM', 'Am besten für'],
+        },
+        verify: {
+          id: 'verify-ollama-is-working',
+          title: 'Wie überprüft man, ob Ollama funktioniert?',
+          content: 'Testen Sie die REST-API direkt, um zu bestätigen, dass Ollama läuft und verfügbar ist:',
+          codeBlock: '# Überprüfen Sie, ob Ollama läuft\ncurl http://localhost:11434\n# Erwartet: "Ollama is running"\n\n# Heruntergeladene Modelle auflisten\nollama list\n\n# Senden Sie eine Eingabeaufforderung über die API (OpenAI-kompatibel)\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "Was ist 2+2?",\n  "stream": false\n}\'',
+          codeLanguage: 'bash',
+        },
+        commands: {
+          id: 'useful-ollama-commands',
+          title: 'Welche Ollama-Befehle sind am nützlichsten?',
+          rows: [
+            { 'Befehl': 'ollama list', 'Funktion': 'Zeige alle heruntergeladenen Modelle und ihre Größen' },
+            { 'Befehl': 'ollama pull <model>', 'Funktion': 'Laden Sie ein Modell herunter, ohne es auszuführen' },
+            { 'Befehl': 'ollama rm <model>', 'Funktion': 'Löschen Sie ein Modell von der Festplatte' },
+            { 'Befehl': 'ollama ps', 'Funktion': 'Zeige Modelle, die derzeit im Speicher geladen sind' },
+            { 'Befehl': 'ollama show <model>', 'Funktion': 'Zeige Modelldetails (Parameter, Vorlage, Lizenz)' },
+            { 'Befehl': 'ollama serve', 'Funktion': 'Starten Sie den Ollama-Server manuell (falls nicht als Dienst ausgeführt)' },
+          ],
+          columns: ['Befehl', 'Funktion'],
+        },
+        troubleshooting: {
+          id: 'troubleshooting',
+          title: 'Wie behebe ich häufige Probleme bei der Installation von Ollama?',
+          faqs: [
+            {
+              q: 'Ollama sagt „could not connect to ollama app, is it running?" (Fehler: Keine Verbindung zur Ollama-App möglich. Läuft sie?)',
+              a: 'Ollama wird nicht als Hintergrunddienst ausgeführt. Auf macOS: Öffnen Sie die Ollama-App über Anwendungen. Unter Linux: Führen Sie `systemctl start ollama` oder `ollama serve` in einem Terminal aus. Unter Windows: Starten Sie Ollama über das Startmenü.',
+            },
+            {
+              q: 'Der Modell-Download ist sehr langsam oder hängt fest',
+              a: 'Modell-Downloads sind groß (2–47 GB). Wenn der Download stecken bleibt, drücken Sie Strg+C und führen Sie `ollama pull <model>` erneut aus — Ollama setzt partielle Downloads fort. Verwenden Sie für schnellere Downloads eine kabelgebundene Verbindung statt WLAN.',
+            },
+            {
+              q: 'Ich erhalte die Fehlermeldung „error: model requires more system memory" (Fehler: Modell benötigt mehr Systemspeicher)',
+              a: 'Das Modell ist zu groß für Ihren verfügbaren RAM. Versuchen Sie eine kleinere Quantisierung: `ollama run llama3.1:8b-instruct-q4_0` statt der Standard-Q4_K_M. Oder wechseln Sie zu einem kleineren Modell wie `llama3.2:3b`. Siehe [Die besten anfänglichen Local-LLM-Modelle](/local-llms/best-beginner-local-llm-models?lang=de) für RAM-abgestimmte Empfehlungen.',
+            },
+            {
+              q: 'Ollama läuft, aber meine GPU wird nicht verwendet',
+              a: 'Unter Windows überprüfen Sie, ob Ihr NVIDIA-Treiber Version 452.39 oder höher ist. Unter Linux bestätigen Sie, dass das NVIDIA-Container-Toolkit installiert ist (`nvidia-smi` sollte GPU-Informationen zurückgeben). Ollama versetzt Ebenen automatisch in den GPU-Speicher, wenn VRAM verfügbar ist — führen Sie `ollama ps` aus, nachdem Sie ein Modell gestartet haben, um die GPU-Auslastung anzusehen.',
+            },
+            {
+              q: 'Wo werden Ollama-Modelldateien gespeichert?',
+              a: 'Modelle werden unter ~/.ollama/models auf macOS und Linux gespeichert. Unter Windows ist der Standardpfad C:\\Users\\<benutzername>\\.ollama\\models. Sie können den Speicherort ändern, indem Sie die Umgebungsvariable OLLAMA_MODELS festlegen, bevor Sie den Dienst starten.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'Was sollte ich nach der Installation von Ollama tun?',
+          content: 'Sobald Ollama ausgeführt wird, ist der nächste Schritt [Führen Sie Ihr erstes lokales LLM aus](/local-llms/run-first-local-llm?lang=de), um das Prompting, die Kontextlänge und die erwartete Geschwindigkeit der lokalen Inference zu verstehen. Um das beste Modell für Ihre Hardware auszuwählen, siehe [Die besten anfänglichen Local-LLM-Modelle](/local-llms/best-beginner-local-llm-models?lang=de). Wenn Sie eine grafische Chat-Schnittstelle dem Terminal vorziehen, wird in [So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de) die Desktop-App-Alternative behandelt.',
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Regionale Einsatzszenarien und Compliance-Kontext',
+          content: [
+            '**EU / DSGVO**: Ollama, das lokal vor Ort ausgeführt wird, bedeutet, dass persönliche Daten die Infrastruktur der Organisation nie verlassen. Die DSGVO Artikel 5 (Datensparsamkeit) ist standardmäßig erfüllt, da die Inference auf Ihrer Maschine stattfindet. Deutsche Datenschutzbehörden und die französische CNIL empfehlen die lokale LLM-Bereitstellung zur Verarbeitung von Mitarbeiter- oder Kundendaten. Das Binden von Ollama an `localhost` (die Standardeinstellung) stellt sicher, dass kein externer Netzwerkzugriff erfolgt.',
+            '**Japan / METI**: Japans METI-KI-Governance-Richtlinien verlangen eine Dokumentation, wo KI-Inference stattfindet. Organisationen können Ollama vor Ort bereitstellen, um die Datenschutzbestimmungen einzuhalten, insbesondere in den Bereichen Finanzdienstleistungen, Gesundheitswesen und Fertigung. Lokale Bereitstellung mit Ollama wird als datenschutzfreundlicher Ansatz anerkannt, der den APPI-Anforderungen (Gesetz zum Schutz persönlicher Informationen) entspricht.',
+            '**China / CAC**: Die Interim-Maßnahmen der Cyberspace-Verwaltung Chinas für generative KI-Dienste (2023) regulieren KI-Services, die chinesischen Nutzern angeboten werden. Eine lokal laufende Ollama-Bereitstellung, die vollständig auf-Site läuft, liegt außerhalb der CAC-Anbieter-Definition und reduziert die Compliance-Belastung für Unternehmensanwendungsfälle erheblich, die mit sensiblen Daten arbeiten.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Quellen',
+          items: [
+            '[Offizielle Ollama-Dokumentation](https://ollama.com) — Installationsanleitung und API-Dokumentation',
+            '[Ollama GitHub-Repository](https://github.com/ollama/ollama) — Quellcode, Probleme und Versionshinweise',
+            '[Ollama-Modellbibliothek](https://ollama.com/library) — Vollständige Liste der verfügbaren Modelle mit Download-Links',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Was sind häufige Fehler bei der Installation von Ollama?',
+          items: [
+            'Nicht überprüfen, ob Ollama als Hintergrunddienst läuft, bevor Sie erwarten, dass die API antwortet. Unter macOS überprüfen Sie, ob das Llama-Symbol in der Menüleiste angezeigt wird. Unter Linux führen Sie `systemctl status ollama` aus. Unter Windows überprüfen Sie den Systembereich.',
+            'Versuchen, Modelle auszuführen, die größer sind als der verfügbare RAM, ohne Speicheranforderungen zuerst zu überprüfen. Ein 7B-Modell mit Q4-Quantisierung benötigt ~4–5 GB VRAM. Multiplizieren Sie immer die Modelldateigröße mit 1,2, um den benötigten RAM zu schätzen.',
+            'GPU-Erkennung ignorieren — Ollama unterstützt NVIDIA und AMD, benötigt aber aktuelle Treiber. Unter Windows überprüfen Sie die NVIDIA-Treiberversion 452.39+ mit `nvidia-smi`. Unter Linux bestätigen Sie, dass das NVIDIA-Container-Toolkit installiert ist.',
+            'VRAM (GPU-Speicher) mit System-RAM verwechseln. Ollama kann auf CPU laufen, aber GPU-Beschleunigung ist 5–10× schneller. Wenn Sie eine diskrete GPU haben, aber die Inference langsam ist, kann Ollama aufgrund fehlender oder veralteter GPU-Treiber auf CPU zurückfallen.',
+            'Nicht verstehen, dass Modell-Downloads zwischengespeichert werden. Beim ersten Ausführen benötigt `ollama pull llama3.2` 5–10 Minuten für einen 2-GB-Download. Nachfolgende Ausführungen verwenden das zwischengespeicherte Modell und starten in unter 5 Sekunden.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Weiterführende Literatur',
+          items: [
+            '[Was sind Local LLMs?](/local-llms/what-are-local-llms?lang=de) — Definition und Kernkonzepte',
+            '[Führen Sie Ihr erstes lokales LLM aus](/local-llms/run-first-local-llm?lang=de) — Nächster Schritt nach der Installation',
+            '[Die besten anfänglichen Local-LLM-Modelle](/local-llms/best-beginner-local-llm-models?lang=de) — Modellempfehlungen nach Hardware',
+            '[Local-LLM-One-Click-Installer](/local-llms/local-llm-one-click-installers?lang=de) — Alternative Tools zu Ollama',
+            '[So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de) — GUI-Alternative für Anfänger',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=de) — Detaillierter Vergleich von CLI vs. GUI-Ansätzen',
+          ],
+        },
+        faq: {
+          id: 'faq',
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'Ist Ollama kostenlos?',
+              a: 'Ja, Ollama ist kostenlos und Open-Source unter der MIT-Lizenz. Es gibt keine Nutzungsbeschränkungen, keine erforderlichen API-Schlüssel, und die gesamte Inference läuft lokal auf Ihrem Computer.',
+            },
+            {
+              q: 'Funktioniert Ollama unter Windows?',
+              a: 'Ja. Ollama hat seit 2024 ein natives Windows-Installationsprogramm. Laden Sie es von ollama.com herunter. Es unterstützt NVIDIA-GPUs über CUDA und AMD-GPUs über ROCm unter Windows.',
+            },
+            {
+              q: 'Wie viel RAM brauche ich, um Ollama auszuführen?',
+              a: 'Mindestens 8 GB RAM für 3B–7B-Modelle bei Q4-Quantisierung. 16 GB RAM verwaltet 7B-Modelle komfortabel und 13B-Modelle bei Q4. 32 GB+ RAM wird für 34B-Modelle mit nur CPU empfohlen.',
+            },
+            {
+              q: 'Wie aktualisiere ich Ollama auf die neueste Version?',
+              a: 'Auf macOS wird Ollama automatisch aktualisiert. Unter Windows laden Sie das neueste Installationsprogramm von ollama.com herunter und führen es aus. Unter Linux führen Sie das Installationsskript erneut aus: curl -fsSL https://ollama.com/install.sh | sh',
+            },
+            {
+              q: 'Kann ich Ollama über das OpenAI-SDK ohne Codeänderungen nutzen?',
+              a: 'Ja. Legen Sie base_url auf http://localhost:11434/v1 im OpenAI-SDK fest und übergeben Sie einen beliebigen String als API-Schlüssel. Die REST-API von Ollama ist vollständig OpenAI-kompatibel, sodass jede für GPT oder Claude geschriebene Anwendung Ihr lokales Modell nutzen kann.',
+            },
+            {
+              q: 'Warum ist meine Ollama-Inference langsam (unter 5 Token/Sek)?',
+              a: 'Das Modell wird wahrscheinlich auf der CPU statt auf der GPU ausgeführt. Überprüfen Sie mit ollama ps, dass das Modell geladen ist. Wenn die GPU-Auslastung 0% ist, überprüfen Sie, dass Ihre GPU-Treiber installiert und aktuell sind. Auf NVIDIA: nvidia-smi sollte Ihre GPU anzeigen. Auf AMD: rocm-smi. Auf Mac: Metal-GPU-Beschleunigung ist auf Apple Silicon automatisch.',
+            },
+            {
+              q: 'Kann Ollama mehrere Modelle gleichzeitig ausführen?',
+              a: 'Ollama kann ein Modell gleichzeitig pro Prozess ausführen. Sie können jedoch mehrere Instanzen von Ollama auf verschiedenen Ports ausführen (z. B. OLLAMA_HOST=localhost:11434 und OLLAMA_HOST=localhost:11435), um mehrere Modelle parallel zu bedienen. Dies erfordert mehr RAM.',
+            },
+            {
+              q: 'Was ist der Unterschied zwischen ollama pull und ollama run?',
+              a: 'ollama pull lädt ein Modell aus der Ollama-Bibliothek herunter, ohne es in den Speicher zu laden. ollama run lädt das Modell herunter (falls nicht zwischengespeichert) und startet sofort eine Chat-Sitzung. Um ein Modell über die API ohne die Chat-Schnittstelle zu verwenden, führen Sie zuerst pull durch und fragen dann die API ab.',
+            },
+            {
+              q: 'Ist ein lokales LLM mit Ollama DSGVO-konform?',
+              a: 'Nicht automatisch. Ein lokales LLM verarbeitet Daten lokal, aber DSGVO-Konformität erfordert zusätzlich: Festplattenverschlüsselung, Zugriffskontrolle, Verarbeitungsverzeichnis und ggf. Auftragsverarbeitungsverträge. Lokale Verarbeitung mit Ollama ist ein wichtiger Schritt, aber kein vollständiger DSGVO-Nachweis. Konsultieren Sie Ihren Datenschutzbeauftragten (DSB) zur Compliance.',
+            },
+            {
+              q: 'Kann ich Ollama im deutschen Mittelstand produktiv einsetzen?',
+              a: 'Ja. Viele mittelständische Unternehmen nutzen Ollama lokal für interne Dokumentenverarbeitung, Code-Review und Datenanalyse. Wichtig: Binden Sie Ollama auf localhost (Standardeinstellung), aktivieren Sie Festplattenverschlüsselung für sensible Daten, und prüfen Sie Ihre Compliance-Anforderungen (besonders bei Kundendaten). Mit diesen Maßnahmen ist Ollama ein kostengünstiger Weg zu KI im Betrieb, ohne Cloud-Abhängigkeiten.',
+            },
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama?lang=de',
-        'inLanguage': 'de',
+        'headline': 'Ollama installieren 2026 – Vollständige Anleitung',
+        'description': 'Ollama installiert sich in weniger als 2 Minuten auf macOS, Windows oder Linux. Das Ausführen Ihres ersten Modells erfordert einen einzigen Befehl — hier ist die Schritt-für-Schritt-Anleitung.',
+        'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['Ollama-Installation', 'Ollama installieren', 'Ollama macOS', 'Ollama Windows', 'Ollama Linux', 'lokales LLM-Setup', 'llama.cpp', 'OpenAI-kompatible API'],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', 'h2', '.key-takeaways'] }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Wie man Ollama 2026 installiert',
+        'description': 'Schritt-für-Schritt-Anleitung zur Installation von Ollama unter macOS, Windows und Linux.',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Laden Sie Ollama herunter', 'text': 'Besuchen Sie ollama.com und laden Sie das Installationsprogramm für Ihr Betriebssystem herunter (macOS-App, Windows-Installer oder Linux curl-Befehl).' },
+          { '@type': 'HowToStep', 'name': 'Installieren Sie Ollama', 'text': 'Führen Sie das macOS-/Windows-Installationsprogramm aus, oder führen Sie unter Linux aus: curl -fsSL https://ollama.com/install.sh | sh' },
+          { '@type': 'HowToStep', 'name': 'Ziehen Sie Ihr erstes Modell herunter', 'text': 'Führen Sie im Terminal aus: ollama pull llama3.2:3b (für 8 GB RAM) oder ollama pull qwen2.5:7b (für 16 GB RAM).' },
+          { '@type': 'HowToStep', 'name': 'Führen Sie das Modell aus', 'text': 'Starten Sie einen Chat: ollama run llama3.2:3b' },
+          { '@type': 'HowToStep', 'name': 'Überprüfen Sie die Installation', 'text': 'Testen Sie die REST-API: curl http://localhost:11434. Erwartete Antwort: "Ollama is running"' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Ist Ollama kostenlos?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, Ollama ist kostenlos und Open-Source unter der MIT-Lizenz. Es gibt keine Nutzungsbeschränkungen, keine erforderlichen API-Schlüssel, und die gesamte Inference läuft lokal auf Ihrem Computer.' } },
+          { '@type': 'Question', name: 'Funktioniert Ollama unter Windows?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Ollama hat seit 2024 ein natives Windows-Installationsprogramm. Laden Sie es von ollama.com herunter. Es unterstützt NVIDIA-GPUs über CUDA und AMD-GPUs über ROCm unter Windows.' } },
+          { '@type': 'Question', name: 'Wie viel RAM brauche ich, um Ollama auszuführen?', acceptedAnswer: { '@type': 'Answer', text: 'Mindestens 8 GB RAM für 3B–7B-Modelle bei Q4-Quantisierung. 16 GB RAM verwaltet 7B-Modelle komfortabel und 13B-Modelle bei Q4. 32 GB+ RAM wird für 34B-Modelle mit nur CPU empfohlen.' } },
+          { '@type': 'Question', name: 'Wie aktualisiere ich Ollama auf die neueste Version?', acceptedAnswer: { '@type': 'Answer', text: 'Auf macOS wird Ollama automatisch aktualisiert. Unter Windows laden Sie das neueste Installationsprogramm von ollama.com herunter und führen es aus. Unter Linux führen Sie das Installationsskript erneut aus: curl -fsSL https://ollama.com/install.sh | sh' } },
+          { '@type': 'Question', name: 'Kann ich Ollama über das OpenAI-SDK ohne Codeänderungen nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Legen Sie base_url auf http://localhost:11434/v1 im OpenAI-SDK fest und übergeben Sie einen beliebigen String als API-Schlüssel. Die REST-API von Ollama ist vollständig OpenAI-kompatibel, sodass jede für GPT oder Claude geschriebene Anwendung Ihr lokales Modell nutzen kann.' } },
+          { '@type': 'Question', name: 'Warum ist meine Ollama-Inference langsam (unter 5 Token/Sek)?', acceptedAnswer: { '@type': 'Answer', text: 'Das Modell wird wahrscheinlich auf der CPU statt auf der GPU ausgeführt. Überprüfen Sie mit ollama ps, dass das Modell geladen ist. Wenn die GPU-Auslastung 0% ist, überprüfen Sie, dass Ihre GPU-Treiber installiert und aktuell sind. Auf NVIDIA: nvidia-smi sollte Ihre GPU anzeigen. Auf AMD: rocm-smi. Auf Mac: Metal-GPU-Beschleunigung ist auf Apple Silicon automatisch.' } },
+          { '@type': 'Question', name: 'Kann Ollama mehrere Modelle gleichzeitig ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama kann ein Modell gleichzeitig pro Prozess ausführen. Sie können jedoch mehrere Instanzen von Ollama auf verschiedenen Ports ausführen (z. B. OLLAMA_HOST=localhost:11434 und OLLAMA_HOST=localhost:11435), um mehrere Modelle parallel zu bedienen. Dies erfordert mehr RAM.' } },
+          { '@type': 'Question', name: 'Was ist der Unterschied zwischen ollama pull und ollama run?', acceptedAnswer: { '@type': 'Answer', text: 'ollama pull lädt ein Modell aus der Ollama-Bibliothek herunter, ohne es in den Speicher zu laden. ollama run lädt das Modell herunter (falls nicht zwischengespeichert) und startet sofort eine Chat-Sitzung. Um ein Modell über die API ohne die Chat-Schnittstelle zu verwenden, führen Sie zuerst pull durch und fragen dann die API ab.' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Ollama installieren: Vollständige Einrichtungsanleitung für macOS, Windows und Linux',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'macOS: Laden Sie die .dmg-Datei von ollama.com herunter, oder führen Sie `brew install ollama` aus — dann `ollama run llama3.2` zum Chatten.' },
+          { '@type': 'ListItem', position: 2, name: 'Windows: Laden Sie das Installationsprogramm von ollama.com/download herunter. Ollama wird als Hintergrunddienst im Systembereich ausgeführt.' },
+          { '@type': 'ListItem', position: 3, name: 'Linux: Ein einzelner curl-Befehl installiert alles — `curl -fsSL https://ollama.com/install.sh | sh`.' },
+          { '@type': 'ListItem', position: 4, name: 'Mindestanforderungen: 4 GB RAM für ein 3B-Modell, 8 GB RAM für ein 7B-Modell. Keine GPU erforderlich zum Starten.' },
+          { '@type': 'ListItem', position: 5, name: 'Ollama stellt eine OpenAI-kompatible REST-API auf `http://localhost:11434` bereit — jede OpenAI-SDK-App kann sie ohne Codeänderungen verwenden.' },
+        ],
       },
     },
     fr: {
-      theme: 'Premiers pas',
-      title: 'Installer Ollama : guide 3 étapes pour macOS, Windows, Linux',
-      seoTitle: 'Installer Ollama 2026: 3-étapes pour tous les OS',
-      metaDescription: 'Installer Ollama en 2 minutes: télécharger, exécuter `ollama run llama3.2`, converser. Guide complet d\'installation avec conseils pour débutants.',
+      theme: 'Getting Started',
+      title: 'Installation d\'Ollama : Guide complet de configuration pour macOS, Windows et Linux',
+      seoTitle: 'Installer Ollama 2026: macOS, Windows, Linux',
+      intro: 'Ollama est un moteur d\'inférence léger qui exécute de grands modèles de langage localement avec une seule commande. Après une installation de 2 minutes, `ollama pull llama3.2:3b` télécharge un modèle de 2 Go, et `ollama run llama3.2` ouvre une interface de chat. Ollama combine la gestion de modèles, le backend d\'inférence llama.cpp et une API REST compatible OpenAI sur `localhost:11434` dans une seule application sans environnement Python, sans fichiers de configuration et sans GPU requis pour commencer. En avril 2026, Ollama supporte plus de 200 modèles incluant Meta Llama 3.2, Qwen2.5, Mistral et DeepSeek, et expose son API à tout SDK OpenAI sans modifications de code.',
+      metaDescription: 'Installer Ollama en moins de 2 minutes sur macOS, Windows ou Linux. Exécutez votre premier modèle avec un seul commande — guide complet étape par étape.',
       publishDate: '2026-04-04',
+      dateModified: '2026-04-05',
       readTime: '8 min de lecture',
       educationalLevel: 'Beginner',
       primaryTerm: 'Ollama',
-      sections: {},
+      toc: [
+        { label: 'Points clés', anchor: 'key-takeaways' },
+        { label: 'Qu\'est-ce qu\'Ollama ?', anchor: 'what-is-ollama' },
+        { label: 'Installation sur macOS', anchor: 'install-on-macos' },
+        { label: 'Installation sur Windows', anchor: 'install-on-windows' },
+        { label: 'Installation sur Linux', anchor: 'install-on-linux' },
+        { label: 'Télécharger et exécuter votre premier modèle', anchor: 'pull-and-run-your-first-model' },
+        { label: 'Quel modèle utiliser pour commencer ?', anchor: 'which-model-to-start-with' },
+        { label: 'Vérifier qu\'Ollama fonctionne', anchor: 'verify-ollama-is-working' },
+        { label: 'Commandes Ollama utiles', anchor: 'useful-ollama-commands' },
+        { label: 'Dépannage', anchor: 'troubleshooting' },
+        { label: 'Contexte régional', anchor: 'regional-context' },
+        { label: 'Erreurs courantes', anchor: 'common-mistakes' },
+        { label: 'Lectures recommandées', anchor: 'related-reading' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: 'Résumé',
+          isTldr: true,
+          items: [
+            'macOS : téléchargez le .dmg depuis ollama.com, ou exécutez `brew install ollama` — puis `ollama run llama3.2` pour discuter.',
+            'Windows : téléchargez le programme d\'installation depuis ollama.com/download. Ollama s\'exécute comme service en arrière-plan dans la barre des tâches système.',
+            'Linux : une seule commande curl installe tout — `curl -fsSL https://ollama.com/install.sh | sh`.',
+            'Configuration minimale : 4 Go de RAM pour un modèle 3B, 8 Go de RAM pour un modèle 7B. Aucun GPU requis pour commencer.',
+            'Ollama expose une API REST compatible OpenAI sur `http://localhost:11434` — toute application SDK OpenAI peut l\'utiliser sans modifications de code.',
+          ],
+        },
+        whatIsOllama: {
+          id: 'what-is-ollama',
+          title: 'Qu\'est-ce qu\'Ollama et pourquoi l\'utiliser ?',
+          content: [
+            'Ollama est un moteur d\'inférence open-source qui exécute de grands modèles de langage localement. Il combine la gestion de modèles, le backend d\'inférence llama.cpp et une API REST compatible OpenAI dans une seule application légère. Aucun Python, aucun environnement conda et aucune configuration CUDA requise.',
+            'Ollama maintient une bibliothèque de modèles triée sur le volet (ollama.com/library) avec des téléchargements en une seule commande pour Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 et plus de 100 autres modèles. Un modèle est téléchargé une fois et mis en cache sur le disque — les exécutions ultérieures démarrent en moins de 5 secondes.',
+            'Pour les alternatives à Ollama, voir [Installateurs Local LLM en un clic](/local-llms/local-llm-one-click-installers?lang=fr). Pour comparer Ollama avec LM Studio, voir [Installation de LM Studio](/local-llms/how-to-install-lm-studio?lang=fr).',
+          ],
+          blockquote: 'En une phrase : Ollama est un outil pour télécharger et exécuter localement des modèles de langage open-source (comme Mistral ou Llama 2) sur votre ordinateur avec une seule commande.',
+        },
+        installMac: {
+          id: 'install-on-macos',
+          title: 'Comment installer Ollama sur macOS ?',
+          content: 'Il y a deux méthodes. Le téléchargement du programme d\'installation est plus rapide ; Homebrew est mieux si vous gérez les logiciels avec brew.',
+          numberedItems: [
+            'Allez sur ollama.com/download et cliquez sur « Télécharger pour macOS ».',
+            'Ouvrez le fichier Ollama.dmg téléchargé et glissez Ollama vers votre dossier Applications.',
+            'Lancez Ollama depuis Applications. Une icône llama apparaît dans votre barre de menu — Ollama s\'exécute maintenant comme service en arrière-plan.',
+            'Ouvrez Terminal et exécutez votre premier modèle : `ollama run llama3.2`',
+            'Le modèle est téléchargé (~2 Go pour llama3.2:3b) et une invite de chat apparaît. Tapez un message et appuyez sur Entrée.',
+          ],
+          blockquote: 'En une phrase : Ollama s\'exécute comme service en arrière-plan sur macOS — une fois installé et démarré, l\'API locale écoute sur `http://localhost:11434` les requêtes de modèles.',
+        },
+        installMacBrew: {
+          title: 'Comment installer Ollama sur macOS avec Homebrew ?',
+          codeBlock: 'brew install ollama\n\n# Démarrer le service Ollama\nollama serve &\n\n# Télécharger et exécuter un modèle\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        installWindows: {
+          id: 'install-on-windows',
+          title: 'Comment installer Ollama sur Windows ?',
+          numberedItems: [
+            'Allez sur ollama.com/download et cliquez sur « Télécharger pour Windows ».',
+            'Exécutez le programme d\'installation OllamaSetup.exe téléchargé. Ollama s\'installe dans %LOCALAPPDATA%\\Programs\\Ollama.',
+            'Ollama démarre automatiquement et s\'affiche comme icône de la barre des tâches système.',
+            'Ouvrez PowerShell ou Invite de commandes et exécutez : `ollama run llama3.2`',
+            'Le modèle est téléchargé à la première exécution. Les exécutions ultérieures utilisent le modèle en cache.',
+          ],
+        },
+        installWindowsNote: {
+          title: 'Comment activer le support GPU sur Windows ?',
+          content: 'Ollama sur Windows détecte et utilise automatiquement les GPU NVIDIA (CUDA 11.3+) et AMD (ROCm 6+). Si vous avez une carte NVIDIA RTX, Ollama déchargera automatiquement les couches de modèles vers la VRAM — aucune configuration manuelle requise. Pour vérifier que le GPU est utilisé, exécutez `ollama run llama3.2` et consultez le Gestionnaire des tâches → GPU pour l\'activité.',
+        },
+        installLinux: {
+          id: 'install-on-linux',
+          title: 'Comment installer Ollama sur Linux ?',
+          content: 'Une seule commande installe Ollama sur toute distribution Linux :',
+          codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+          codeLanguage: 'bash',
+        },
+        installLinuxService: {
+          title: 'Comment exécuter Ollama comme service systemd sur Linux ?',
+          content: 'Le script d\'installation enregistre automatiquement Ollama comme service systemd. Pour le gérer :',
+          codeBlock: '# Vérifier l\'état du service\nsystemctl status ollama\n\n# Démarrer / Arrêter / Redémarrer\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# Afficher les journaux\njournalctl -u ollama -f',
+          codeLanguage: 'bash',
+        },
+        firstModel: {
+          id: 'pull-and-run-your-first-model',
+          title: 'Comment télécharger et exécuter votre premier modèle dans Ollama ?',
+          content: 'Après l\'installation d\'Ollama, exécutez cette commande pour télécharger et démarrer un modèle :',
+          codeBlock: '# Télécharger un modèle (stockage dans ~/.ollama/models)\nollama pull llama3.2\n\n# L\'exécuter de manière interactive\nollama run llama3.2\n\n# Ou télécharger et exécuter en une étape\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        recommendedModels: {
+          id: 'which-model-to-start-with',
+          title: 'Quel modèle utiliser pour commencer ?',
+          content: 'Pour un premier passage, ces trois modèles couvrent différents profils matériels :',
+          rows: [
+            { 'Modèle': 'llama3.2:3b', 'Taille du téléchargement': '~2 Go', 'RAM requise': '4 Go', 'Meilleur pour': 'Premier test — toute machine' },
+            { 'Modèle': 'llama3.1:8b', 'Taille du téléchargement': '~4,7 Go', 'RAM requise': '8 Go', 'Meilleur pour': 'Utilisation générale sur la plupart des ordinateurs portables' },
+            { 'Modèle': 'phi3:mini', 'Taille du téléchargement': '~2,3 Go', 'RAM requise': '4 Go', 'Meilleur pour': 'Réponses rapides, faible RAM' },
+          ],
+          columns: ['Modèle', 'Taille du téléchargement', 'RAM requise', 'Meilleur pour'],
+        },
+        verify: {
+          id: 'verify-ollama-is-working',
+          title: 'Comment vérifier qu\'Ollama fonctionne ?',
+          content: 'Testez l\'API REST directement pour confirmer qu\'Ollama s\'exécute et est accessible :',
+          codeBlock: '# Vérifier qu\'Ollama s\'exécute\ncurl http://localhost:11434\n# Attendu: "Ollama is running"\n\n# Lister les modèles téléchargés\nollama list\n\n# Envoyer une invite via l\'API (compatible OpenAI)\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "Qu\'est-ce que 2+2 ?",\n  "stream": false\n}\'',
+          codeLanguage: 'bash',
+        },
+        commands: {
+          id: 'useful-ollama-commands',
+          title: 'Quelles commandes Ollama sont les plus utiles ?',
+          rows: [
+            { 'Commande': 'ollama list', 'Fonction': 'Afficher tous les modèles téléchargés et leurs tailles' },
+            { 'Commande': 'ollama pull <model>', 'Fonction': 'Télécharger un modèle sans l\'exécuter' },
+            { 'Commande': 'ollama rm <model>', 'Fonction': 'Supprimer un modèle du disque' },
+            { 'Commande': 'ollama ps', 'Fonction': 'Afficher les modèles actuellement chargés en mémoire' },
+            { 'Commande': 'ollama show <model>', 'Fonction': 'Afficher les détails du modèle (paramètres, modèle, licence)' },
+            { 'Commande': 'ollama serve', 'Fonction': 'Démarrer le serveur Ollama manuellement (s\'il n\'est pas exécuté en tant que service)' },
+          ],
+          columns: ['Commande', 'Fonction'],
+        },
+        troubleshooting: {
+          id: 'troubleshooting',
+          title: 'Comment résoudre les problèmes courants d\'installation d\'Ollama ?',
+          faqs: [
+            {
+              q: 'Ollama dit « could not connect to ollama app, is it running? » (impossible de se connecter à l\'application Ollama, fonctionne-t-elle ?)',
+              a: 'Ollama ne s\'exécute pas comme service en arrière-plan. Sur macOS : ouvrez l\'application Ollama depuis Applications. Sous Linux : exécutez `systemctl start ollama` ou `ollama serve` dans un terminal. Sous Windows : lancez Ollama depuis le menu Démarrer.',
+            },
+            {
+              q: 'Le téléchargement du modèle est très lent ou bloqué',
+              a: 'Les téléchargements de modèles sont volumineux (2–47 Go). Si le téléchargement s\'arrête, appuyez sur Ctrl+C et réexécutez `ollama pull <model>` — Ollama reprend les téléchargements partiels. Pour des téléchargements plus rapides, utilisez une connexion filaire plutôt que le Wi-Fi.',
+            },
+            {
+              q: 'J\'obtiens l\'erreur « error: model requires more system memory » (le modèle nécessite plus de mémoire système)',
+              a: 'Le modèle est trop volumineux pour votre RAM disponible. Essayez une quantification plus petite : `ollama run llama3.1:8b-instruct-q4_0` au lieu de la Q4_K_M par défaut. Ou passez à un modèle plus petit comme `llama3.2:3b`. Voir [Les meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models?lang=fr) pour des recommandations adaptées à la RAM.',
+            },
+            {
+              q: 'Ollama s\'exécute mais mon GPU n\'est pas utilisé',
+              a: 'Sous Windows, vérifiez que votre driver NVIDIA est version 452.39 ou supérieure. Sous Linux, confirmez que NVIDIA container toolkit est installé (`nvidia-smi` devrait retourner les informations GPU). Ollama décharge automatiquement les couches vers le GPU quand la VRAM est disponible — exécutez `ollama ps` après le démarrage d\'un modèle pour voir l\'utilisation du GPU.',
+            },
+            {
+              q: 'Où sont stockés les fichiers de modèles Ollama ?',
+              a: 'Les modèles sont stockés dans ~/.ollama/models sur macOS et Linux. Sous Windows, le chemin par défaut est C:\\Users\\<username>\\.ollama\\models. Vous pouvez modifier l\'emplacement de stockage en définissant la variable d\'environnement OLLAMA_MODELS avant de démarrer le service.',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'Que faire après l\'installation d\'Ollama ?',
+          content: 'Une fois Ollama en cours d\'exécution, l\'étape suivante est [Exécuter votre premier LLM local](/local-llms/run-first-local-llm?lang=fr) pour comprendre le prompting, la longueur du contexte et ce qu\'il faut attendre de la vitesse d\'inférence locale. Pour choisir le meilleur modèle pour votre matériel, consultez [Les meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models?lang=fr). Si vous préférez une interface de chat graphique au terminal, [Installation de LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) couvre l\'alternative de l\'application de bureau.',
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Contexte de déploiement régional et conformité',
+          content: [
+            '**UE / RGPD**: Ollama s\'exécutant localement sur site signifie que les données personnelles ne quittent jamais l\'infrastructure de l\'organisation. Le RGPD Article 5 (minimisation des données) est satisfait par défaut car l\'inférence se produit sur votre machine. Les autorités allemandes de protection des données et la CNIL française recommandent le déploiement de modèles LLM locaux pour traiter les données des employés ou des clients. La liaison d\'Ollama à `localhost` (la valeur par défaut) garantit aucun accès réseau externe.',
+            '**Japon / METI**: Les lignes directrices de gouvernance de l\'IA du METI japonais exigent de documenter où l\'inférence de l\'IA se produit. Les organisations peuvent déployer Ollama sur site pour se conformer aux règles de résidence des données, particulièrement dans les services financiers, la santé et la fabrication. Le déploiement local avec Ollama est reconnu comme une approche préservant la vie privée qui s\'aligne sur les exigences de la LAPPD (Loi sur la protection des informations personnelles).',
+            '**Chine / CAC**: Les mesures intérimaires de l\'Administration du cyberespace de Chine pour les services d\'IA générative (2023) réglementent les services d\'IA offerts aux utilisateurs chinois. Un déploiement Ollama s\'exécutant localement entièrement sur site se situe en dehors de la définition du fournisseur du CAC, réduisant considérablement le fardeau de conformité pour les cas d\'utilisation en entreprise traitant les données sensibles.',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Sources',
+          items: [
+            '[Documentation officielle Ollama](https://ollama.com) — Guides d\'installation et documentation API',
+            '[Dépôt Ollama GitHub](https://github.com/ollama/ollama) — Code source, problèmes et notes de version',
+            '[Bibliothèque de modèles Ollama](https://ollama.com/library) — Liste complète des modèles disponibles avec liens de téléchargement',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Quelles sont les erreurs courantes lors de l\'installation d\'Ollama ?',
+          items: [
+            'Ne pas vérifier qu\'Ollama s\'exécute comme service en arrière-plan avant de s\'attendre à ce que l\'API réponde. Sur macOS, vérifiez que l\'icône llama s\'affiche dans la barre de menu. Sous Linux, exécutez `systemctl status ollama`. Sous Windows, consultez la barre des tâches système.',
+            'Tenter d\'exécuter des modèles plus volumineux que la RAM disponible sans vérifier d\'abord les exigences de mémoire. Un modèle 7B avec quantification Q4 nécessite ~4–5 Go de VRAM. Multipliez toujours la taille du fichier de modèle par 1,2 pour estimer la RAM totale requise.',
+            'Ignorer la détection du GPU — Ollama supporte NVIDIA et AMD mais nécessite des drivers à jour. Sous Windows, vérifiez la version du driver NVIDIA 452.39+ avec `nvidia-smi`. Sous Linux, confirmez que NVIDIA container toolkit est installé.',
+            'Confondre VRAM (mémoire GPU) avec RAM système. Ollama peut s\'exécuter sur CPU, mais l\'accélération GPU est 5–10× plus rapide. Si vous avez un GPU discret mais l\'inférence est lente, Ollama peut se rabattre sur le CPU en raison de drivers GPU manquants ou obsolètes.',
+            'Ne pas comprendre que les téléchargements de modèles sont mis en cache. À la première exécution, `ollama pull llama3.2` prend 5–10 minutes pour un téléchargement de 2 Go. Les exécutions ultérieures utilisent le modèle en cache et démarrent en moins de 5 secondes.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Lectures recommandées',
+          items: [
+            '[Qu\'est-ce que les LLM locaux ?](/local-llms/what-are-local-llms?lang=fr) — Définition et concepts fondamentaux',
+            '[Exécutez votre premier LLM local](/local-llms/run-first-local-llm?lang=fr) — Prochaine étape après l\'installation',
+            '[Les meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models?lang=fr) — Recommandations de modèles par matériel',
+            '[Installateurs Local LLM en un clic](/local-llms/local-llm-one-click-installers?lang=fr) — Outils alternatifs à Ollama',
+            '[Installation de LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) — Alternative GUI pour les débutants',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) — Comparaison détaillée des approches CLI vs GUI',
+          ],
+        },
+        faq: {
+          id: 'faq',
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'Ollama est-il gratuit ?',
+              a: 'Oui, Ollama est gratuit et open-source sous licence MIT. Il n\'y a pas de limites d\'utilisation, pas de clés API requises, et toute l\'inférence s\'exécute localement sur votre machine.',
+            },
+            {
+              q: 'Ollama fonctionne-t-il sur Windows ?',
+              a: 'Oui. Ollama dispose d\'un programme d\'installation Windows natif depuis 2024. Téléchargez-le depuis ollama.com. Il supporte les GPU NVIDIA via CUDA et les GPU AMD via ROCm sur Windows.',
+            },
+            {
+              q: 'Combien de RAM me faut-il pour exécuter Ollama ?',
+              a: 'Un minimum de 8 Go de RAM pour les modèles 3B–7B à quantification Q4. 16 Go de RAM gère confortablement les modèles 7B et les modèles 13B à Q4. 32 Go+ de RAM sont recommandés pour les modèles 34B exécutés sur CPU uniquement.',
+            },
+            {
+              q: 'Comment mettent à jour Ollama vers la dernière version ?',
+              a: 'Sur macOS, Ollama se met à jour automatiquement. Sous Windows, téléchargez et exécutez le dernier programme d\'installation depuis ollama.com. Sous Linux, réexécutez le script d\'installation : curl -fsSL https://ollama.com/install.sh | sh',
+            },
+            {
+              q: 'Puis-je utiliser Ollama via le SDK OpenAI sans modifications de code ?',
+              a: 'Oui. Définissez base_url sur http://localhost:11434/v1 dans le SDK OpenAI et transmettez n\'importe quelle chaîne comme clé API. L\'API REST d\'Ollama est entièrement compatible OpenAI, donc toute application écrite pour GPT ou Claude peut utiliser votre modèle local.',
+            },
+            {
+              q: 'Pourquoi mon inférence Ollama est-elle lente (moins de 5 tokens/sec) ?',
+              a: 'Le modèle s\'exécute probablement sur CPU au lieu du GPU. Vérifiez avec ollama ps que le modèle est chargé. Si l\'utilisation du GPU est 0%, vérifiez que vos drivers GPU sont installés et à jour. Sur NVIDIA : nvidia-smi devrait afficher votre GPU. Sur AMD : rocm-smi. Sur Mac : l\'accélération GPU Metal est automatique sur Apple Silicon.',
+            },
+            {
+              q: 'Ollama peut-il exécuter plusieurs modèles simultanément ?',
+              a: 'Ollama peut exécuter un modèle à la fois par processus. Cependant, vous pouvez exécuter plusieurs instances d\'Ollama sur des ports différents (par exemple, OLLAMA_HOST=localhost:11434 et OLLAMA_HOST=localhost:11435) pour servir plusieurs modèles en parallèle. Cela nécessite plus de RAM.',
+            },
+            {
+              q: 'Quelle est la différence entre ollama pull et ollama run ?',
+              a: 'ollama pull télécharge un modèle depuis la bibliothèque Ollama sans le charger en mémoire. ollama run télécharge le modèle (s\'il n\'est pas en cache) et démarre immédiatement une session de chat. Pour utiliser un modèle via l\'API sans l\'interface de chat, pull d\'abord puis interrogez l\'API.',
+            },
+            {
+              q: 'Un LLM local avec Ollama est-il conforme au RGPD ?',
+              a: 'Pas automatiquement. Un LLM local traite les données localement, mais la conformité au RGPD nécessite en outre : chiffrement du disque, contrôle d\'accès, registre de traitement et éventuellement contrats de traitement. Le traitement local avec Ollama est une étape importante, mais pas une preuve complète de conformité au RGPD. Consultez votre délégué à la protection des données (DPO) pour la conformité.',
+            },
+            {
+              q: 'Puis-je utiliser Ollama en production dans une PME française ?',
+              a: 'Oui. De nombreuses PME utilisent Ollama localement pour le traitement interne de documents, la révision de code et l\'analyse de données. Important : liez Ollama à localhost (valeur par défaut), activez le chiffrement du disque pour les données sensibles, et vérifiez vos exigences de conformité (en particulier avec les données clients). Avec ces mesures, Ollama est un moyen rentable de l\'IA dans les opérations, sans dépendances cloud.',
+            },
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama?lang=fr',
-        'inLanguage': 'fr',
+        'headline': 'Installer Ollama 2026 – Guide complet',
+        'description': 'Ollama s\'installe en moins de 2 minutes sur macOS, Windows ou Linux. L\'exécution de votre premier modèle ne nécessite qu\'une seule commande — voici le guide étape par étape.',
+        'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['Installation Ollama', 'installer Ollama', 'Ollama macOS', 'Ollama Windows', 'Ollama Linux', 'configuration Local LLM', 'llama.cpp', 'API compatible OpenAI'],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', 'h2', '.key-takeaways'] }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Comment installer Ollama 2026',
+        'description': 'Instructions étape par étape pour installer Ollama sur macOS, Windows et Linux.',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Télécharger Ollama', 'text': 'Visitez ollama.com et téléchargez le programme d\'installation pour votre OS (application macOS, programme d\'installation Windows ou commande curl Linux).' },
+          { '@type': 'HowToStep', 'name': 'Installer Ollama', 'text': 'Exécutez le programme d\'installation macOS/Windows, ou sous Linux exécutez : curl -fsSL https://ollama.com/install.sh | sh' },
+          { '@type': 'HowToStep', 'name': 'Télécharger votre premier modèle', 'text': 'Exécutez dans un terminal : ollama pull llama3.2:3b (pour 8 Go RAM) ou ollama pull qwen2.5:7b (pour 16 Go RAM).' },
+          { '@type': 'HowToStep', 'name': 'Exécuter le modèle', 'text': 'Démarrer une discussion : ollama run llama3.2:3b' },
+          { '@type': 'HowToStep', 'name': 'Vérifier l\'installation', 'text': 'Testez l\'API REST : curl http://localhost:11434. Réponse attendue : "Ollama is running"' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Ollama est-il gratuit ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, Ollama est gratuit et open-source sous licence MIT. Il n\'y a pas de limites d\'utilisation, pas de clés API requises, et toute l\'inférence s\'exécute localement sur votre machine.' } },
+          { '@type': 'Question', name: 'Ollama fonctionne-t-il sur Windows ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Ollama dispose d\'un programme d\'installation Windows natif depuis 2024. Téléchargez-le depuis ollama.com. Il supporte les GPU NVIDIA via CUDA et les GPU AMD via ROCm sur Windows.' } },
+          { '@type': 'Question', name: 'Combien de RAM me faut-il pour exécuter Ollama ?', acceptedAnswer: { '@type': 'Answer', text: 'Un minimum de 8 Go de RAM pour les modèles 3B–7B à quantification Q4. 16 Go de RAM gère confortablement les modèles 7B et les modèles 13B à Q4. 32 Go+ de RAM sont recommandés pour les modèles 34B exécutés sur CPU uniquement.' } },
+          { '@type': 'Question', name: 'Comment mettre à jour Ollama vers la dernière version ?', acceptedAnswer: { '@type': 'Answer', text: 'Sur macOS, Ollama se met à jour automatiquement. Sous Windows, téléchargez et exécutez le dernier programme d\'installation depuis ollama.com. Sous Linux, réexécutez le script d\'installation : curl -fsSL https://ollama.com/install.sh | sh' } },
+          { '@type': 'Question', name: 'Puis-je utiliser Ollama via le SDK OpenAI sans modifications de code ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Définissez base_url sur http://localhost:11434/v1 dans le SDK OpenAI et transmettez n\'importe quelle chaîne comme clé API. L\'API REST d\'Ollama est entièrement compatible OpenAI, donc toute application écrite pour GPT ou Claude peut utiliser votre modèle local.' } },
+          { '@type': 'Question', name: 'Pourquoi mon inférence Ollama est-elle lente (moins de 5 tokens/sec) ?', acceptedAnswer: { '@type': 'Answer', text: 'Le modèle s\'exécute probablement sur CPU au lieu du GPU. Vérifiez avec ollama ps que le modèle est chargé. Si l\'utilisation du GPU est 0%, vérifiez que vos drivers GPU sont installés et à jour. Sur NVIDIA : nvidia-smi devrait afficher votre GPU. Sur AMD : rocm-smi. Sur Mac : l\'accélération GPU Metal est automatique sur Apple Silicon.' } },
+          { '@type': 'Question', name: 'Ollama peut-il exécuter plusieurs modèles simultanément ?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama peut exécuter un modèle à la fois par processus. Cependant, vous pouvez exécuter plusieurs instances d\'Ollama sur des ports différents (par exemple, OLLAMA_HOST=localhost:11434 et OLLAMA_HOST=localhost:11435) pour servir plusieurs modèles en parallèle. Cela nécessite plus de RAM.' } },
+          { '@type': 'Question', name: 'Quelle est la différence entre ollama pull et ollama run ?', acceptedAnswer: { '@type': 'Answer', text: 'ollama pull télécharge un modèle depuis la bibliothèque Ollama sans le charger en mémoire. ollama run télécharge le modèle (s\'il n\'est pas en cache) et démarre immédiatement une session de chat. Pour utiliser un modèle via l\'API sans l\'interface de chat, pull d\'abord puis interrogez l\'API.' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Installation d\'Ollama : Guide complet de configuration pour macOS, Windows et Linux',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'macOS : téléchargez le .dmg depuis ollama.com, ou exécutez `brew install ollama` — puis `ollama run llama3.2` pour discuter.' },
+          { '@type': 'ListItem', position: 2, name: 'Windows : téléchargez le programme d\'installation depuis ollama.com/download. Ollama s\'exécute comme service en arrière-plan dans la barre des tâches système.' },
+          { '@type': 'ListItem', position: 3, name: 'Linux : une seule commande curl installe tout — `curl -fsSL https://ollama.com/install.sh | sh`.' },
+          { '@type': 'ListItem', position: 4, name: 'Configuration minimale : 4 Go de RAM pour un modèle 3B, 8 Go de RAM pour un modèle 7B. Aucun GPU requis pour commencer.' },
+          { '@type': 'ListItem', position: 5, name: 'Ollama expose une API REST compatible OpenAI sur `http://localhost:11434` — toute application SDK OpenAI peut l\'utiliser sans modifications de code.' },
+        ],
       },
     },
     ja: {
       theme: 'はじめに',
-      title: 'Ollamaをインストール：macOS、Windows、Linux対応3ステップガイド',
-      seoTitle: 'Ollama 2026インストール：3ステップセットアップガイド',
-      metaDescription: 'Ollamaを2分でインストール。ダウンロード、実行、チャット開始。macOS・Windows・Linux対応。初心者向け完全ガイド。',
+      title: 'Ollama のインストール方法：macOS、Windows、Linux の完全なセットアップガイド',
+      seoTitle: 'Ollama をインストール: macOS、Windows、Linux ガイド (2026)',
+      intro: 'Ollama は、単一のコマンドで大規模言語モデルをローカルで実行する軽量推論エンジンです。2 分のインストール後、`ollama pull llama3.2:3b` は 2 GB のモデルをダウンロードし、`ollama run llama3.2` はチャット インターフェースを開きます。Ollama は、モデル管理、llama.cpp 推論バックエンド、および OpenAI 互換の REST API を `localhost:11434` に結合しており、Python 環境、構成ファイル、開始時の GPU は不要です。2026 年 4 月現在、Ollama は Meta Llama 3.2、Qwen2.5、Mistral、DeepSeek を含む 200 を超えるモデルをサポートし、その API を任意の OpenAI SDK にコード変更なしで公開しています。',
+      metaDescription: '2 分以内に Ollama をインストール。1 つのコマンドで最初のモデルを実行——完全なステップバイステップガイド。',
       publishDate: '2026-04-04',
-      readTime: '8分で読める',
+      dateModified: '2026-04-05',
+      readTime: '読了約8分',
       educationalLevel: 'Beginner',
       primaryTerm: 'Ollama',
-      sections: {},
+      toc: [
+        { label: '重要ポイント', anchor: 'key-takeaways' },
+        { label: 'Ollama とは何か？', anchor: 'what-is-ollama' },
+        { label: 'macOS にインストール', anchor: 'install-on-macos' },
+        { label: 'Windows にインストール', anchor: 'install-on-windows' },
+        { label: 'Linux にインストール', anchor: 'install-on-linux' },
+        { label: '最初のモデルをダウンロードして実行', anchor: 'pull-and-run-your-first-model' },
+        { label: 'どのモデルから始めるべきか？', anchor: 'which-model-to-start-with' },
+        { label: 'Ollama が動作していることを確認', anchor: 'verify-ollama-is-working' },
+        { label: '便利な Ollama コマンド', anchor: 'useful-ollama-commands' },
+        { label: 'トラブルシューティング', anchor: 'troubleshooting' },
+        { label: '地域別の背景', anchor: 'regional-context' },
+        { label: 'よくある間違い', anchor: 'common-mistakes' },
+        { label: '関連記事', anchor: 'related-reading' },
+        { label: 'よくある質問', anchor: 'faq' },
+        { label: 'ソース', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: '重要ポイント',
+          isTldr: true,
+          items: [
+            'macOS : ollama.com から .dmg をダウンロードするか、`brew install ollama` を実行 - その後 `ollama run llama3.2` でチャット開始。',
+            'Windows : ollama.com/download からインストーラーをダウンロード。Ollama はシステム トレイでバックグラウンド サービスとして実行。',
+            'Linux : curl コマンド 1 つですべてをインストール - `curl -fsSL https://ollama.com/install.sh | sh`',
+            '最小要件 : 3B モデルは 4 GB RAM、7B モデルは 8 GB RAM。開始時に GPU は不要。',
+            'Ollama は `http://localhost:11434` で OpenAI 互換の REST API を公開 - コード変更なしで任意の OpenAI SDK アプリが使用できます。',
+          ],
+        },
+        whatIsOllama: {
+          id: 'what-is-ollama',
+          title: 'Ollama とは何か、そしてなぜ使用するのか？',
+          content: [
+            'Ollama は大規模言語モデルをローカルで実行するオープンソースの推論エンジンです。モデル管理、llama.cpp 推論バックエンド、OpenAI 互換 REST API を単一の軽量アプリケーションに結合します。Python なし、conda 環境なし、CUDA セットアップなし。',
+            'Ollama は Meta Llama 3.1、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen2.5、および 100 以上の他のモデル用にワンコマンド ダウンロード機能を備えたキュレーションされたモデル ライブラリ（ollama.com/library）を保持しています。モデルは 1 回ダウンロードされてディスクにキャッシュされ、以降の実行は 5 秒以内に開始します。',
+            'Ollama の代わりについては、[Local LLM ワンクリック インストーラー](/local-llms/local-llm-one-click-installers?lang=ja) を参照してください。Ollama と LM Studio を比較するには、[LM Studio のインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) を参照してください。',
+          ],
+          blockquote: '一文で表すと、Ollama はオープンソース言語モデル（Mistral や Llama 2 など）をコンピュータにダウンロードしてローカルで実行するツールで、1 つのコマンドで実行できます。',
+        },
+        installMac: {
+          id: 'install-on-macos',
+          title: 'Ollama を macOS にインストールするにはどうすればよいですか？',
+          content: '2 つの方法があります。インストーラー ダウンロードの方が速いです。Homebrew は brew でソフトウェアを管理する場合に適しています。',
+          numberedItems: [
+            'ollama.com/download にアクセスし、「macOS 用ダウンロード」をクリック。',
+            'ダウンロードした Ollama.dmg ファイルを開き、Ollama をアプリケーション フォルダにドラッグ。',
+            'アプリケーションから Ollama を起動。Llama アイコンがメニュー バーに表示 - Ollama がバックグラウンド サービスとして実行中。',
+            'ターミナルを開いて最初のモデルを実行: `ollama run llama3.2`',
+            'モデルがダウンロード（llama3.2:3b 用に約 2 GB）され、チャット プロンプトが表示。メッセージを入力して Enter キーを押します。',
+          ],
+          blockquote: '一文で表すと、Ollama は macOS でバックグラウンド サービスとして実行され、インストール・起動後、ローカル API が `http://localhost:11434` でモデル リクエストをリッスン。',
+        },
+        installMacBrew: {
+          title: 'Ollama を Homebrew で macOS にインストールするにはどうすればよいですか？',
+          codeBlock: 'brew install ollama\n\n# Ollama サービスを起動\nollama serve &\n\n# モデルをダウンロードして実行\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        installWindows: {
+          id: 'install-on-windows',
+          title: 'Ollama を Windows にインストールするにはどうすればよいですか？',
+          numberedItems: [
+            'ollama.com/download にアクセスし、「Windows 用ダウンロード」をクリック。',
+            'ダウンロードした OllamaSetup.exe インストーラーを実行。Ollama は %LOCALAPPDATA%\\Programs\\Ollama にインストール。',
+            'Ollama が自動的に起動し、システム トレイ アイコンとして表示。',
+            'PowerShell またはコマンド プロンプトを開いて実行: `ollama run llama3.2`',
+            'モデルは初回実行時にダウンロード。以降の実行はキャッシュされたモデルを使用。',
+          ],
+        },
+        installWindowsNote: {
+          title: 'Windows で GPU サポートを有効にするにはどうすればよいですか？',
+          content: 'Windows 上の Ollama は NVIDIA GPU（CUDA 11.3+）と AMD GPU（ROCm 6+）を自動的に検出して使用。NVIDIA RTX カードがある場合、Ollama はモデル レイヤーを VRAM に自動的にオフロード - 手動設定は不要。GPU が使用されていることを確認するには、`ollama run llama3.2` を実行してタスク マネージャー → GPU で確認。',
+        },
+        installLinux: {
+          id: 'install-on-linux',
+          title: 'Ollama を Linux にインストールするにはどうすればよいですか？',
+          content: '1 つのコマンドで任意の Linux ディストリビューションに Ollama をインストール:',
+          codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+          codeLanguage: 'bash',
+        },
+        installLinuxService: {
+          title: 'Linux で Ollama を systemd サービスとして実行するにはどうすればよいですか？',
+          content: 'インストール スクリプトは自動的に Ollama を systemd サービスとして登録。管理方法は:',
+          codeBlock: '# サービス ステータスを確認\nsystemctl status ollama\n\n# 開始 / 停止 / 再起動\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# ログを表示\njournalctl -u ollama -f',
+          codeLanguage: 'bash',
+        },
+        firstModel: {
+          id: 'pull-and-run-your-first-model',
+          title: 'Ollama で最初のモデルをダウンロードして実行するにはどうすればよいですか？',
+          content: 'Ollama のインストール後、このコマンドを実行してモデルをダウンロードして起動:',
+          codeBlock: '# モデルをダウンロード（~/.ollama/models に保存）\nollama pull llama3.2\n\n# 対話的に実行\nollama run llama3.2\n\n# または 1 ステップでダウンロードして実行\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        recommendedModels: {
+          id: 'which-model-to-start-with',
+          title: '最初に使用すべきモデルはどれか？',
+          content: '初回実行では、これらの 3 つのモデルはさまざまなハードウェア プロファイルに対応:',
+          rows: [
+            { 'モデル': 'llama3.2:3b', 'ダウンロード サイズ': '~2 GB', '必要な RAM': '4 GB', '用途': '初回テスト - すべてのマシン' },
+            { 'モデル': 'llama3.1:8b', 'ダウンロード サイズ': '~4.7 GB', '必要な RAM': '8 GB', '用途': 'ほとんどのノートパソコンで一般的に使用' },
+            { 'モデル': 'phi3:mini', 'ダウンロード サイズ': '~2.3 GB', '必要な RAM': '4 GB', '用途': '高速応答、低 RAM' },
+          ],
+          columns: ['モデル', 'ダウンロード サイズ', '必要な RAM', '用途'],
+        },
+        verify: {
+          id: 'verify-ollama-is-working',
+          title: 'Ollama が動作していることを確認するにはどうすればよいですか？',
+          content: 'REST API を直接テストして、Ollama が実行され、アクセス可能であることを確認:',
+          codeBlock: '# Ollama が実行中であることを確認\ncurl http://localhost:11434\n# 期待: "Ollama is running"\n\n# ダウンロードされたモデルをリスト\nollama list\n\n# API 経由でプロンプトを送信（OpenAI 互換）\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "2+2 は何ですか？",\n  "stream": false\n}\'',
+          codeLanguage: 'bash',
+        },
+        commands: {
+          id: 'useful-ollama-commands',
+          title: '最も便利な Ollama コマンドはどれですか？',
+          rows: [
+            { 'コマンド': 'ollama list', '機能': 'ダウンロードされたすべてのモデルとそのサイズを表示' },
+            { 'コマンド': 'ollama pull <model>', '機能': 'モデルを実行せずにダウンロード' },
+            { 'コマンド': 'ollama rm <model>', '機能': 'ディスクからモデルを削除' },
+            { 'コマンド': 'ollama ps', '機能': '現在メモリに読み込まれているモデルを表示' },
+            { 'コマンド': 'ollama show <model>', '機能': 'モデルの詳細を表示（パラメータ、テンプレート、ライセンス）' },
+            { 'コマンド': 'ollama serve', '機能': 'Ollama サーバーを手動で開始（サービスとして実行されていない場合）' },
+          ],
+          columns: ['コマンド', '機能'],
+        },
+        troubleshooting: {
+          id: 'troubleshooting',
+          title: 'Ollama インストール時の一般的な問題をトラブルシューティングするにはどうすればよいですか？',
+          faqs: [
+            {
+              q: 'Ollama が「could not connect to ollama app, is it running?」（Ollama アプリに接続できません。実行していますか？）と表示',
+              a: 'Ollama がバックグラウンド サービスとして実行されていません。macOS でアプリケーションから Ollama アプリを開く。Linux で、ターミナルで `systemctl start ollama` または `ollama serve` を実行。Windows でスタート メニューから Ollama を起動。',
+            },
+            {
+              q: 'モデルのダウンロードが非常に遅い、またはスタック状態',
+              a: 'モデル ダウンロードは大きい（2～47 GB）。ダウンロードが停止した場合、Ctrl+C を押して `ollama pull <model>` を再実行 - Ollama は部分ダウンロードを再開。より速いダウンロードには Wi-Fi ではなく有線接続を使用。',
+            },
+            {
+              q: '「error: model requires more system memory」（エラー：モデルにはシステム メモリが必要）エラーが表示',
+              a: 'モデルが利用可能な RAM に対して大きすぎます。より小さい量化を試す: デフォルトの Q4_K_M ではなく `ollama run llama3.1:8b-instruct-q4_0`。または `llama3.2:3b` のような小さいモデルに切り替え。[初心者向けの最高のローカル LLM モデル](/local-llms/best-beginner-local-llm-models?lang=ja) を参照して RAM に対応した推奨事項。',
+            },
+            {
+              q: 'Ollama は実行していますが、GPU が使用されていません',
+              a: 'Windows で NVIDIA ドライバーがバージョン 452.39 以上であることを確認。Linux で NVIDIA コンテナ ツールキットがインストールされていることを確認（`nvidia-smi` は GPU 情報を返す必要があります）。Ollama は VRAM が利用可能な場合、レイヤーを GPU に自動的にオフロード - モデルを開始した後 `ollama ps` を実行して GPU 使用率を確認。',
+            },
+            {
+              q: 'Ollama モデル ファイルはどこに保存されていますか？',
+              a: 'モデルは macOS と Linux 上の ~/.ollama/models に保存。Windows では既定のパスは C:\\Users\\<username>\\.ollama\\models。OLLAMA_MODELS 環境変数を設定してサービス開始前にストレージの場所を変更可能。',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'Ollama インストール後は何をする必要がありますか？',
+          content: 'Ollama が実行され始めたら、次のステップは [最初のローカル LLM を実行](/local-llms/run-first-local-llm?lang=ja) してプロンプト作成、コンテキスト長、および予想されるローカル推論速度を理解。ハードウェアに最適なモデルを選択するには、[初心者向けの最高のローカル LLM モデル](/local-llms/best-beginner-local-llm-models?lang=ja) を参照。ターミナルよりグラフィカルなチャット インターフェースを優先する場合、[LM Studio のインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) はデスクトップ アプリの代替をカバー。',
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: '地域別デプロイメントとコンプライアンス背景',
+          content: [
+            '**日本 / METI**: 日本 METI AI ガバナンス ガイドラインでは AI 推論が発生する場所の文書化を要求。組織は、特に金融サービス、医療、製造におけるデータ所在地ルール遵守のため Ollama をオンサイトで展開可能。Ollama ローカル展開は APPI（個人情報保護方針法）要件に合致するプライバシー保全アプローチとして認識。',
+            '**EU / GDPR**: Ollama をオンサイト で実行することは個人データが組織のインフラストラクチャを離れないことを意味。GDPR 記事 5（データ最小化）は推論がマシン上で発生するため既定で満たされます。ドイツおよびフランスのデータ保護機関は従業員またはカスタマー データ処理のためローカル LLM デプロイメントを推奨。Ollama を `localhost` にバインド（既定値）は外部ネットワーク アクセスを保証しません。',
+            '**中国 / CAC**: 中国のサイバー空間管理局の生成 AI サービス暫定措置（2023）は中国ユーザーに提供される AI サービスを規制。オンサイト で完全に実行される Ollama ローカル デプロイメントは CAC プロバイダー定義外であり、機密データを処理するエンタープライズ使用ケースのコンプライアンス負担を大幅に低減。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'ソース',
+          items: [
+            '[Ollama 公式ドキュメント](https://ollama.com) - インストール ガイドと API ドキュメント',
+            '[Ollama GitHub リポジトリ](https://github.com/ollama/ollama) - ソース コード、問題、およびリリース ノート',
+            '[Ollama モデル ライブラリ](https://ollama.com/library) - 利用可能なモデルの完全なリストとダウンロード リンク',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Ollama インストール時の一般的な間違いとは？',
+          items: [
+            'Ollama がバックグラウンド サービスとして実行されていることを確認せずに、API が応答すると予想。macOS では メニュー バーに Llama アイコンが表示されることを確認。Linux で `systemctl status ollama` を実行。Windows でシステム トレイを確認。',
+            '最初にメモリ要件を確認せずに、利用可能な RAM より大きいモデルを実行しようとする。7B モデルが Q4 量化には約 4～5 GB VRAM が必要。モデル ファイル サイズに 1.2 を常に乗じて必要な RAM を推定。',
+            'GPU 検出を無視 - Ollama は NVIDIA と AMD をサポート但し最新のドライバーが必要。Windows で NVIDIA ドライバー バージョン 452.39+ を `nvidia-smi` で確認。Linux で NVIDIA コンテナ ツールキットがインストールされていることを確認。',
+            'VRAM（GPU メモリ）とシステム RAM を混同。Ollama は CPU で実行でき但し GPU 加速が 5～10 倍高速。離散 GPU があるが推論が遅い場合、Ollama は GPU ドライバーが不足または時代遅れのため CPU にフォール バック。',
+            'モデル ダウンロードがキャッシュされていることを理解していない。初回実行時 `ollama pull llama3.2` は 2 GB ダウンロードに 5～10 分。以降の実行はキャッシュされたモデルを使用して 5 秒以内に開始。',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '関連記事',
+          items: [
+            '[ローカル LLM とは何ですか？](/local-llms/what-are-local-llms?lang=ja) - 定義とコア コンセプト',
+            '[最初のローカル LLM を実行](/local-llms/run-first-local-llm?lang=ja) - インストール後の次のステップ',
+            '[初心者向けの最高のローカル LLM モデル](/local-llms/best-beginner-local-llm-models?lang=ja) - ハードウェアごとのモデル推奨',
+            '[Local LLM ワンクリック インストーラー](/local-llms/local-llm-one-click-installers?lang=ja) - Ollama への代替ツール',
+            '[LM Studio のインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) - 初心者向けの GUI 代替',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=ja) - CLI vs GUI アプローチの詳細比較',
+          ],
+        },
+        faq: {
+          id: 'faq',
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: 'Ollama は無料ですか？',
+              a: 'はい、Ollama は MIT ライセンス下で無料かつオープンソース。使用制限、API キー不要、すべての推論はマシンでローカルに実行。',
+            },
+            {
+              q: 'Ollama は Windows で動作しますか？',
+              a: 'はい。Ollama は 2024 年以降ネイティブ Windows インストーラーを持つ。ollama.com からダウンロード。Windows で NVIDIA GPU を CUDA 経由で、AMD GPU を ROCm 経由でサポート。',
+            },
+            {
+              q: 'Ollama を実行するのに必要な RAM はどれくらいですか？',
+              a: 'Q4 量化の 3B～7B モデルに最小 8 GB RAM。16 GB RAM は 7B モデルを快適に処理、13B モデルを Q4 で。CPU のみの 34B モデルには 32 GB+ RAM をお勧め。',
+            },
+            {
+              q: 'Ollama を最新バージョンに更新するにはどうすればよいですか？',
+              a: 'macOS では Ollama は自動更新。Windows では ollama.com から最新インストーラーをダウンロードして実行。Linux ではインストール スクリプトを再実行: curl -fsSL https://ollama.com/install.sh | sh',
+            },
+            {
+              q: 'コード変更なしで OpenAI SDK 経由で Ollama を使用できますか？',
+              a: 'はい。OpenAI SDK で base_url を http://localhost:11434/v1 に設定し、任意の文字列を API キーとして渡す。Ollama の REST API は完全に OpenAI 互換なので、GPT または Claude 向けに記述されたアプリケーションはローカル モデルを使用できます。',
+            },
+            {
+              q: 'Ollama 推論が遅い（5 トークン/秒未満）のはなぜですか？',
+              a: 'モデルは GPU ではなく CPU で実行可能。ollama ps でモデルが読み込まれていることを確認。GPU 使用率が 0% の場合、GPU ドライバーがインストール・最新化されていることを確認。NVIDIA では nvidia-smi が GPU を表示すべき。AMD では rocm-smi。Mac では Metal GPU 加速が Apple Silicon で自動。',
+            },
+            {
+              q: 'Ollama は複数のモデルを同時に実行できますか？',
+              a: 'Ollama はプロセスあたり一度に 1 つのモデルを実行。ただし、複数の Ollama インスタンスを異なるポート（例：OLLAMA_HOST=localhost:11434 および OLLAMA_HOST=localhost:11435）で実行し、複数のモデルを並列で提供可能。これには さらなる RAM が必要。',
+            },
+            {
+              q: 'ollama pull と ollama run の違いは？',
+              a: 'ollama pull は Ollama ライブラリからモデルをダウンロード、メモリに読み込まず。ollama run はモデルをダウンロード（キャッシュされていない場合）し、即座にチャット セッション開始。API 経由でチャット インターフェースなしにモデルを使用するには、最初に pull してから API をクエリ。',
+            },
+            {
+              q: 'Ollama を使用したローカル LLM は個人情報保護方針法（APPI）準拠ですか？',
+              a: 'すべてではありませんが、一部です。ローカル LLM は データをローカルに処理し但し APPI 準拠には さらに: ディスク暗号化、アクセス制御、処理記録、および該当する場合は業務委託契約が必要。Ollama によるローカル処理は重要なステップ但し APPI 準拠の完全な証拠ではなく、データ保護責任者（DPO）に相談。',
+            },
+            {
+              q: '日本の大企業で Ollama を本番環境で使用できますか？',
+              a: 'はい。多くの日本企業は内部ドキュメント処理、コード レビュー、データ分析のため Ollama をローカルで使用。重要: Ollama を localhost にバインド（既定値）、機密データ用にディスク暗号化を有効化、コンプライアンス要件を確認（特にカスタマー データ）。これらの対策により、Ollama はクラウド依存なしに組織内で AI を利用する費用効率的な方法。',
+            },
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama?lang=ja',
-        'inLanguage': 'ja',
+        'headline': '2026 年に Ollama をインストール - 完全ガイド',
+        'description': 'Ollama は macOS、Windows、Linux に 2 分以内にインストールされます。最初のモデルを実行するには 1 つのコマンドが必要です - ここはステップバイステップのガイドです。',
+        'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['Ollama インストール', 'Ollama をインストール', 'Ollama macOS', 'Ollama Windows', 'Ollama Linux', 'ローカル LLM セットアップ', 'llama.cpp', 'OpenAI 互換 API'],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', 'h2', '.key-takeaways'] }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '2026 年に Ollama をインストールする方法',
+        'description': 'macOS、Windows、Linux に Ollama をインストールするためのステップバイステップの指示。',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Ollama をダウンロード', 'text': 'ollama.com にアクセスし、OS（macOS アプリ、Windows インストーラー、または Linux curl コマンド）用のインストーラーをダウンロード。' },
+          { '@type': 'HowToStep', 'name': 'Ollama をインストール', 'text': 'macOS/Windows インストーラーを実行、または Linux では実行: curl -fsSL https://ollama.com/install.sh | sh' },
+          { '@type': 'HowToStep', 'name': '最初のモデルをダウンロード', 'text': 'ターミナルで実行: ollama pull llama3.2:3b（8 GB RAM）または ollama pull qwen2.5:7b（16 GB RAM）。' },
+          { '@type': 'HowToStep', 'name': 'モデルを実行', 'text': 'チャット開始: ollama run llama3.2:3b' },
+          { '@type': 'HowToStep', 'name': 'インストールを確認', 'text': 'REST API をテスト: curl http://localhost:11434。予想される応答: "Ollama is running"' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Ollama は無料ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、Ollama は MIT ライセンス下で無料かつオープンソース。使用制限、API キー不要、すべての推論はマシンでローカルに実行。' } },
+          { '@type': 'Question', name: 'Ollama は Windows で動作しますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Ollama は 2024 年以降ネイティブ Windows インストーラーを持つ。ollama.com からダウンロード。Windows で NVIDIA GPU を CUDA 経由で、AMD GPU を ROCm 経由でサポート。' } },
+          { '@type': 'Question', name: 'Ollama を実行するのに必要な RAM はどれくらいですか？', acceptedAnswer: { '@type': 'Answer', text: 'Q4 量化の 3B～7B モデルに最小 8 GB RAM。16 GB RAM は 7B モデルを快適に処理、13B モデルを Q4 で。CPU のみの 34B モデルには 32 GB+ RAM をお勧め。' } },
+          { '@type': 'Question', name: 'Ollama を最新バージョンに更新するにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'macOS では Ollama は自動更新。Windows では ollama.com から最新インストーラーをダウンロードして実行。Linux ではインストール スクリプトを再実行: curl -fsSL https://ollama.com/install.sh | sh' } },
+          { '@type': 'Question', name: 'コード変更なしで OpenAI SDK 経由で Ollama を使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。OpenAI SDK で base_url を http://localhost:11434/v1 に設定し、任意の文字列を API キーとして渡す。Ollama の REST API は完全に OpenAI 互換なので、GPT または Claude 向けに記述されたアプリケーションはローカル モデルを使用できます。' } },
+          { '@type': 'Question', name: 'Ollama 推論が遅い（5 トークン/秒未満）のはなぜですか？', acceptedAnswer: { '@type': 'Answer', text: 'モデルは GPU ではなく CPU で実行可能。ollama ps でモデルが読み込まれていることを確認。GPU 使用率が 0% の場合、GPU ドライバーがインストール・最新化されていることを確認。NVIDIA では nvidia-smi が GPU を表示すべき。AMD では rocm-smi。Mac では Metal GPU 加速が Apple Silicon で自動。' } },
+          { '@type': 'Question', name: 'Ollama は複数のモデルを同時に実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'Ollama はプロセスあたり一度に 1 つのモデルを実行。ただし、複数の Ollama インスタンスを異なるポート（例：OLLAMA_HOST=localhost:11434 および OLLAMA_HOST=localhost:11435）で実行し、複数のモデルを並列で提供可能。これには さらなる RAM が必要。' } },
+          { '@type': 'Question', name: 'ollama pull と ollama run の違いは？', acceptedAnswer: { '@type': 'Answer', text: 'ollama pull は Ollama ライブラリからモデルをダウンロード、メモリに読み込まず。ollama run はモデルをダウンロード（キャッシュされていない場合）し、即座にチャット セッション開始。API 経由でチャット インターフェースなしにモデルを使用するには、最初に pull してから API をクエリ。' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Ollama のインストール方法：macOS、Windows、Linux の完全なセットアップガイド',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'macOS : ollama.com から .dmg をダウンロードするか、`brew install ollama` を実行 - その後 `ollama run llama3.2` でチャット開始。' },
+          { '@type': 'ListItem', position: 2, name: 'Windows : ollama.com/download からインストーラーをダウンロード。Ollama はシステム トレイでバックグラウンド サービスとして実行。' },
+          { '@type': 'ListItem', position: 3, name: 'Linux : curl コマンド 1 つですべてをインストール - `curl -fsSL https://ollama.com/install.sh | sh`' },
+          { '@type': 'ListItem', position: 4, name: '最小要件 : 3B モデルは 4 GB RAM、7B モデルは 8 GB RAM。開始時に GPU は不要。' },
+          { '@type': 'ListItem', position: 5, name: 'Ollama は `http://localhost:11434` で OpenAI 互換の REST API を公開 - コード変更なしで任意の OpenAI SDK アプリが使用できます。' },
+        ],
       },
     },
     zh: {
       theme: '入门',
-      title: '安装Ollama：macOS、Windows、Linux 3步指南',
-      seoTitle: 'Ollama 2026快速安装：macOS、Windows、Linux 3步指南',
-      metaDescription: '2分钟内安装Ollama：下载、执行`ollama run llama3.2`、开始聊天。macOS、Windows、Linux完整安装指南。',
+      title: '如何安装 Ollama：macOS、Windows 和 Linux 完整设置指南',
+      seoTitle: '安装 Ollama: macOS、Windows、Linux 指南 (2026)',
+      intro: 'Ollama 是一个轻量级推理引擎，使用单一命令在本地运行大型语言模型。安装 2 分钟后，`ollama pull llama3.2:3b` 下载 2 GB 模型，`ollama run llama3.2` 打开聊天界面。Ollama 将模型管理、llama.cpp 推理后端和 OpenAI 兼容的 REST API 整合到 `localhost:11434` 的单一应用程序中，无需 Python 环境、配置文件和 GPU。截至 2026 年 4 月，Ollama 支持 200 多个模型，包括 Meta Llama 3.2、Qwen2.5、Mistral 和 DeepSeek，并将其 API 公开给任何 OpenAI SDK，无需代码修改。',
+      metaDescription: '在 2 分钟内安装 Ollama。一条命令运行第一个模型——完整分步指南。',
       publishDate: '2026-04-04',
-      readTime: '8分钟阅读',
+      dateModified: '2026-04-05',
+      readTime: '阅读约8分钟',
       educationalLevel: 'Beginner',
       primaryTerm: 'Ollama',
-      sections: {},
+      toc: [
+        { label: '核心要点', anchor: 'key-takeaways' },
+        { label: '什么是 Ollama？', anchor: 'what-is-ollama' },
+        { label: '在 macOS 上安装', anchor: 'install-on-macos' },
+        { label: '在 Windows 上安装', anchor: 'install-on-windows' },
+        { label: '在 Linux 上安装', anchor: 'install-on-linux' },
+        { label: '下载并运行第一个模型', anchor: 'pull-and-run-your-first-model' },
+        { label: '从哪个模型开始？', anchor: 'which-model-to-start-with' },
+        { label: '验证 Ollama 正常工作', anchor: 'verify-ollama-is-working' },
+        { label: '有用的 Ollama 命令', anchor: 'useful-ollama-commands' },
+        { label: '故障排除', anchor: 'troubleshooting' },
+        { label: '地区背景', anchor: 'regional-context' },
+        { label: '常见错误', anchor: 'common-mistakes' },
+        { label: '推荐阅读', anchor: 'related-reading' },
+        { label: '常见问题', anchor: 'faq' },
+        { label: '来源', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          id: 'key-takeaways',
+          title: '核心要点',
+          isTldr: true,
+          items: [
+            'macOS：从 ollama.com 下载 .dmg，或运行 `brew install ollama` — 然后 `ollama run llama3.2` 开始聊天。',
+            'Windows：从 ollama.com/download 下载安装程序。Ollama 作为系统托盘的后台服务运行。',
+            'Linux：一个 curl 命令安装一切 — `curl -fsSL https://ollama.com/install.sh | sh`',
+            '最低要求：3B 模型需要 4 GB RAM，7B 模型需要 8 GB RAM。不需要 GPU 即可开始。',
+            'Ollama 在 `http://localhost:11434` 公开 OpenAI 兼容的 REST API — 任何 OpenAI SDK 应用都可以无代码修改地使用它。',
+          ],
+        },
+        whatIsOllama: {
+          id: 'what-is-ollama',
+          title: '什么是 Ollama，为什么使用它？',
+          content: [
+            'Ollama 是一个开源推理引擎，在本地运行大型语言模型。它将模型管理、llama.cpp 推理后端和 OpenAI 兼容的 REST API 整合到一个轻量级应用程序中。无需 Python、无需 conda 环境、无需 CUDA 设置。',
+            'Ollama 维护一个精选的模型库（ollama.com/library），提供 Meta Llama 3.1、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen2.5 等 100 多个模型的一键下载。模型下载一次并缓存在磁盘上 — 后续运行在 5 秒内启动。',
+            '有关 Ollama 的替代品，请参阅 [Local LLM 一键安装程序](/local-llms/local-llm-one-click-installers?lang=zh)。要比较 Ollama 和 LM Studio，请参阅 [如何安装 LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)。',
+          ],
+          blockquote: '一句话来说，Ollama 是一个工具，用于在计算机上下载和本地运行开源语言模型（如 Mistral 或 Llama 2），只需一个命令。',
+        },
+        installMac: {
+          id: 'install-on-macos',
+          title: '如何在 macOS 上安装 Ollama？',
+          content: '有两种方法。安装程序下载更快；如果使用 brew 管理软件，Homebrew 更好。',
+          numberedItems: [
+            '访问 ollama.com/download 并点击"macOS 下载"。',
+            '打开下载的 Ollama.dmg 文件并将 Ollama 拖到应用程序文件夹。',
+            '从应用程序启动 Ollama。菜单栏中出现 llama 图标 — Ollama 现在作为后台服务运行。',
+            '打开终端并运行第一个模型：`ollama run llama3.2`',
+            '模型被下载（llama3.2:3b 约 2 GB）和聊天提示出现。输入消息并按 Enter。',
+          ],
+          blockquote: '一句话来说，Ollama 在 macOS 上作为后台服务运行 — 安装和启动后，本地 API 在 `http://localhost:11434` 监听模型请求。',
+        },
+        installMacBrew: {
+          title: '如何使用 Homebrew 在 macOS 上安装 Ollama？',
+          codeBlock: 'brew install ollama\n\n# 启动 Ollama 服务\nollama serve &\n\n# 拉取并运行模型\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        installWindows: {
+          id: 'install-on-windows',
+          title: '如何在 Windows 上安装 Ollama？',
+          numberedItems: [
+            '访问 ollama.com/download 并点击"Windows 下载"。',
+            '运行下载的 OllamaSetup.exe 安装程序。Ollama 安装到 %LOCALAPPDATA%\\Programs\\Ollama。',
+            'Ollama 自动启动并显示为系统托盘图标。',
+            '打开 PowerShell 或命令提示符并运行：`ollama run llama3.2`',
+            '模型在首次运行时下载。后续运行使用缓存的模型。',
+          ],
+        },
+        installWindowsNote: {
+          title: '如何在 Windows 上启用 GPU 支持？',
+          content: 'Windows 上的 Ollama 自动检测并使用 NVIDIA GPU（CUDA 11.3+）和 AMD GPU（ROCm 6+）。如果有 NVIDIA RTX 卡，Ollama 将自动将模型层卸载到 VRAM — 无需手动配置。要验证 GPU 是否被使用，运行 `ollama run llama3.2` 并检查任务管理器 → GPU 的活动。',
+        },
+        installLinux: {
+          id: 'install-on-linux',
+          title: '如何在 Linux 上安装 Ollama？',
+          content: '一个命令在任何 Linux 发行版上安装 Ollama：',
+          codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
+          codeLanguage: 'bash',
+        },
+        installLinuxService: {
+          title: '如何在 Linux 上以 systemd 服务运行 Ollama？',
+          content: '安装脚本自动将 Ollama 注册为 systemd 服务。要管理它：',
+          codeBlock: '# 检查服务状态\nsystemctl status ollama\n\n# 启动 / 停止 / 重启\nsystemctl start ollama\nsystemctl stop ollama\nsystemctl restart ollama\n\n# 查看日志\njournalctl -u ollama -f',
+          codeLanguage: 'bash',
+        },
+        firstModel: {
+          id: 'pull-and-run-your-first-model',
+          title: '如何在 Ollama 中下载并运行第一个模型？',
+          content: 'Ollama 安装后，运行此命令下载并启动模型：',
+          codeBlock: '# 拉取模型（保存到 ~/.ollama/models）\nollama pull llama3.2\n\n# 以交互方式运行\nollama run llama3.2\n\n# 或在一步中拉取并运行\nollama run llama3.2',
+          codeLanguage: 'bash',
+        },
+        recommendedModels: {
+          id: 'which-model-to-start-with',
+          title: '应该从哪个模型开始？',
+          content: '对于初次运行，这三个模型涵盖不同的硬件配置：',
+          rows: [
+            { '模型': 'llama3.2:3b', '下载大小': '~2 GB', '所需 RAM': '4 GB', '最适合': '初次测试 — 任何机器' },
+            { '模型': 'llama3.1:8b', '下载大小': '~4.7 GB', '所需 RAM': '8 GB', '最适合': '大多数笔记本电脑的一般使用' },
+            { '模型': 'phi3:mini', '下载大小': '~2.3 GB', '所需 RAM': '4 GB', '最适合': '快速响应，低 RAM' },
+          ],
+          columns: ['模型', '下载大小', '所需 RAM', '最适合'],
+        },
+        verify: {
+          id: 'verify-ollama-is-working',
+          title: '如何验证 Ollama 正常工作？',
+          content: '直接测试 REST API 以确认 Ollama 正在运行并可访问：',
+          codeBlock: '# 检查 Ollama 是否运行\ncurl http://localhost:11434\n# 预期："Ollama is running"\n\n# 列出下载的模型\nollama list\n\n# 通过 API 发送提示（OpenAI 兼容）\ncurl http://localhost:11434/api/generate -d \'{\n  "model": "llama3.2",\n  "prompt": "2+2 是多少？",\n  "stream": false\n}\'',
+          codeLanguage: 'bash',
+        },
+        commands: {
+          id: 'useful-ollama-commands',
+          title: '最有用的 Ollama 命令是什么？',
+          rows: [
+            { '命令': 'ollama list', '功能': '显示所有下载的模型及其大小' },
+            { '命令': 'ollama pull <model>', '功能': '下载模型而不运行它' },
+            { '命令': 'ollama rm <model>', '功能': '从磁盘删除模型' },
+            { '命令': 'ollama ps', '功能': '显示当前在内存中加载的模型' },
+            { '命令': 'ollama show <model>', '功能': '显示模型详细信息（参数、模板、许可证）' },
+            { '命令': 'ollama serve', '功能': '手动启动 Ollama 服务器（如果不作为服务运行）' },
+          ],
+          columns: ['命令', '功能'],
+        },
+        troubleshooting: {
+          id: 'troubleshooting',
+          title: '如何解决 Ollama 安装中的常见问题？',
+          faqs: [
+            {
+              q: 'Ollama 说"could not connect to ollama app, is it running?"（无法连接到 ollama 应用程序，是否正在运行？）',
+              a: 'Ollama 不作为后台服务运行。在 macOS 上：从应用程序打开 Ollama 应用程序。在 Linux 上：在终端中运行 `systemctl start ollama` 或 `ollama serve`。在 Windows 上：从开始菜单启动 Ollama。',
+            },
+            {
+              q: '模型下载非常缓慢或卡住',
+              a: '模型下载很大（2-47 GB）。如果下载卡住，按 Ctrl+C 并重新运行 `ollama pull <model>` — Ollama 将恢复部分下载。为了更快的下载，使用有线连接而不是 Wi-Fi。',
+            },
+            {
+              q: '我收到"error: model requires more system memory"（错误：模型需要更多系统内存）',
+              a: '该模型对于可用 RAM 来说太大。尝试更小的量化：使用 `ollama run llama3.1:8b-instruct-q4_0` 而不是默认的 Q4_K_M。或切换到 `llama3.2:3b` 等较小的模型。请参阅[初学者最佳本地 LLM 模型](/local-llms/best-beginner-local-llm-models?lang=zh)获取 RAM 匹配的建议。',
+            },
+            {
+              q: 'Ollama 正在运行，但我的 GPU 未被使用',
+              a: '在 Windows 上，验证 NVIDIA 驱动程序版本为 452.39 或更高。在 Linux 上，确认安装了 NVIDIA 容器工具包（`nvidia-smi` 应该返回 GPU 信息）。当 VRAM 可用时，Ollama 自动将层卸载到 GPU — 启动模型后运行 `ollama ps` 以查看 GPU 利用率。',
+            },
+            {
+              q: 'Ollama 模型文件存储在哪里？',
+              a: '模型在 macOS 和 Linux 上存储在 ~/.ollama/models。在 Windows 上，默认路径是 C:\\Users\\<username>\\.ollama\\models。在启动服务之前，可以通过设置 OLLAMA_MODELS 环境变量来更改存储位置。',
+            },
+          ],
+        },
+        nextSteps: {
+          title: 'Ollama 安装后应该做什么？',
+          content: 'Ollama 运行后，下一步是[运行您的第一个本地 LLM](/local-llms/run-first-local-llm?lang=zh)以了解提示、上下文长度和本地推理速度的预期。要为您的硬件选择最佳模型，请参阅[初学者最佳本地 LLM 模型](/local-llms/best-beginner-local-llm-models?lang=zh)。如果您更喜欢图形聊天界面而不是终端，[如何安装 LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)涵盖了桌面应用程序的替代方案。',
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: '地区部署和合规背景',
+          content: [
+            '**中国 / 网信办**: 中国网络空间管理局的《生成式人工智能服务管理暂行办法》（2023）对提供给中国用户的 AI 服务进行监管。完全在内部运行的本地 Ollama 部署不在 CAC 提供商定义范围内，大大减少了处理敏感数据的企业用例的合规负担。',
+            '**欧盟 / GDPR**: Ollama 在本地运行意味着个人数据永远不会离开组织的基础设施。GDPR 第 5 条（数据最小化）默认满足，因为推理在您的机器上进行。德国和法国数据保护机构推荐本地 LLM 部署以处理员工或客户数据。将 Ollama 绑定到 `localhost`（默认值）确保无外部网络访问。',
+            '**日本 / METI**: 日本 METI AI 治理指南要求记录 AI 推理发生的地点。组织可以在本地部署 Ollama 以遵守数据驻留规则，特别是在金融服务、医疗保健和制造业中。本地 Ollama 部署被视为与 APPI（个人信息保护法）要求一致的隐私保护方法。',
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: '来源',
+          items: [
+            '[Ollama 官方文档](https://ollama.com) - 安装指南和 API 文档',
+            '[Ollama GitHub 存储库](https://github.com/ollama/ollama) - 源代码、问题和发行说明',
+            '[Ollama 模型库](https://ollama.com/library) - 可用模型的完整列表和下载链接',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Ollama 安装中的常见错误是什么？',
+          items: [
+            '未检查 Ollama 是否作为后台服务运行即期望 API 响应。在 macOS 上，验证菜单栏中出现 llama 图标。在 Linux 上，运行 `systemctl status ollama`。在 Windows 上，检查系统托盘。',
+            '未首先检查内存要求就尝试运行大于可用 RAM 的模型。7B 模型的 Q4 量化需要约 4–5 GB VRAM。始终将模型文件大小乘以 1.2 以估计所需的 RAM。',
+            '忽略 GPU 检测 — Ollama 支持 NVIDIA 和 AMD 但需要最新的驱动程序。在 Windows 上，使用 `nvidia-smi` 验证 NVIDIA 驱动程序版本 452.39+。在 Linux 上，确认安装了 NVIDIA 容器工具包。',
+            '将 VRAM（GPU 内存）与系统 RAM 混淆。Ollama 可以在 CPU 上运行，但 GPU 加速速度快 5–10 倍。如果有独立 GPU 但推理缓慢，Ollama 可能因为 GPU 驱动程序丢失或过时而回退到 CPU。',
+            '不理解模型下载被缓存。首次运行时，`ollama pull llama3.2` 花费 5–10 分钟下载 2 GB。后续运行使用缓存的模型并在 5 秒内启动。',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: '推荐阅读',
+          items: [
+            '[什么是本地 LLM？](/local-llms/what-are-local-llms?lang=zh) - 定义和核心概念',
+            '[运行您的第一个本地 LLM](/local-llms/run-first-local-llm?lang=zh) - 安装后的下一步',
+            '[初学者最佳本地 LLM 模型](/local-llms/best-beginner-local-llm-models?lang=zh) - 按硬件推荐模型',
+            '[Local LLM 一键安装程序](/local-llms/local-llm-one-click-installers?lang=zh) - Ollama 的替代工具',
+            '[如何安装 LM Studio](/local-llms/how-to-install-lm-studio?lang=zh) - 初学者 GUI 替代方案',
+            '[Ollama 与 LM Studio 的对比](/local-llms/how-to-install-lm-studio?lang=zh) - CLI 与 GUI 方法的详细比较',
+          ],
+        },
+        faq: {
+          id: 'faq',
+          title: '常见问题',
+          faqs: [
+            {
+              q: 'Ollama 是免费的吗？',
+              a: '是的，Ollama 在 MIT 许可证下免费且开源。没有使用限制、不需要 API 密钥，所有推理都在您的机器上本地运行。',
+            },
+            {
+              q: 'Ollama 可以在 Windows 上使用吗？',
+              a: '是的。Ollama 自 2024 年以来有原生 Windows 安装程序。从 ollama.com 下载。在 Windows 上通过 CUDA 支持 NVIDIA GPU，通过 ROCm 支持 AMD GPU。',
+            },
+            {
+              q: '运行 Ollama 需要多少 RAM？',
+              a: '3B–7B 模型的 Q4 量化至少需要 8 GB RAM。16 GB RAM 可舒适处理 7B 模型和 Q4 下的 13B 模型。建议 32 GB+ RAM 用于仅 CPU 运行的 34B 模型。',
+            },
+            {
+              q: '如何将 Ollama 更新到最新版本？',
+              a: '在 macOS 上，Ollama 自动更新。在 Windows 上，从 ollama.com 下载并运行最新安装程序。在 Linux 上，重新运行安装脚本：curl -fsSL https://ollama.com/install.sh | sh',
+            },
+            {
+              q: '我可以在不修改代码的情况下通过 OpenAI SDK 使用 Ollama 吗？',
+              a: '是的。在 OpenAI SDK 中将 base_url 设置为 http://localhost:11434/v1 并传递任何字符串作为 API 密钥。Ollama 的 REST API 完全与 OpenAI 兼容，因此为 GPT 或 Claude 编写的任何应用程序都可以使用您的本地模型。',
+            },
+            {
+              q: '为什么我的 Ollama 推理很慢（5 tokens/秒以下）？',
+              a: '该模型可能在 CPU 而非 GPU 上运行。使用 ollama ps 验证模型已加载。如果 GPU 利用率为 0%，检查 GPU 驱动程序是否已安装且最新。在 NVIDIA 上：nvidia-smi 应显示您的 GPU。在 AMD 上：rocm-smi。在 Mac 上：Apple Silicon 上自动使用 Metal GPU 加速。',
+            },
+            {
+              q: 'Ollama 可以同时运行多个模型吗？',
+              a: 'Ollama 每个进程一次只能运行一个模型。但是，您可以在不同端口上运行多个 Ollama 实例（例如 OLLAMA_HOST=localhost:11434 和 OLLAMA_HOST=localhost:11435）以并行提供多个模型。这需要更多 RAM。',
+            },
+            {
+              q: 'ollama pull 和 ollama run 之间有什么区别？',
+              a: 'ollama pull 从 Ollama 库下载模型而不将其加载到内存。ollama run 下载模型（如果未缓存）并立即启动聊天会话。要通过 API 使用模型而不使用聊天界面，首先 pull，然后查询 API。',
+            },
+            {
+              q: '使用 Ollama 的本地 LLM 符合数据合规要求吗？',
+              a: '不是自动的。本地 LLM 在本地处理数据，但合规性需要另外：磁盘加密、访问控制、处理记录和数据处理协议。本地 Ollama 处理是重要一步，但不是完整的合规证明。请咨询您的数据保护官员（DPO）以获得合规指导。',
+            },
+            {
+              q: '我可以在中国企业中以生产方式使用 Ollama 吗？',
+              a: '可以。许多中国企业在本地使用 Ollama 进行内部文档处理、代码审查和数据分析。重要：将 Ollama 绑定到 localhost（默认值），为敏感数据启用磁盘加密，并验证您的合规要求。通过这些措施，Ollama 是在组织内部使用 AI 的经济高效方式，无需云依赖。',
+            },
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama?lang=zh',
-        'inLanguage': 'zh',
+        'headline': '2026 年安装 Ollama - 完整指南',
+        'description': 'Ollama 在 macOS、Windows 或 Linux 上 2 分钟内安装。运行第一个模型只需要一个命令——这是分步指南。',
+        'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['Ollama 安装', '安装 Ollama', 'Ollama macOS', 'Ollama Windows', 'Ollama Linux', '本地 LLM 设置', 'llama.cpp', 'OpenAI 兼容 API'],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', 'h2', '.key-takeaways'] }
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '如何 2026 年安装 Ollama',
+        'description': '在 macOS、Windows 和 Linux 上安装 Ollama 的分步说明。',
+        'step': [
+          { '@type': 'HowToStep', 'name': '下载 Ollama', 'text': '访问 ollama.com 并为您的 OS（macOS 应用程序、Windows 安装程序或 Linux curl 命令）下载安装程序。' },
+          { '@type': 'HowToStep', 'name': '安装 Ollama', 'text': '运行 macOS/Windows 安装程序，或在 Linux 上运行：curl -fsSL https://ollama.com/install.sh | sh' },
+          { '@type': 'HowToStep', 'name': '下载第一个模型', 'text': '在终端中运行：ollama pull llama3.2:3b（8 GB RAM）或 ollama pull qwen2.5:7b（16 GB RAM）。' },
+          { '@type': 'HowToStep', 'name': '运行模型', 'text': '启动聊天：ollama run llama3.2:3b' },
+          { '@type': 'HowToStep', 'name': '验证安装', 'text': '测试 REST API：curl http://localhost:11434。预期的响应："Ollama is running"' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Ollama 是免费的吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，Ollama 在 MIT 许可证下免费且开源。没有使用限制、不需要 API 密钥，所有推理都在您的机器上本地运行。' } },
+          { '@type': 'Question', name: 'Ollama 可以在 Windows 上使用吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。Ollama 自 2024 年以来有原生 Windows 安装程序。从 ollama.com 下载。在 Windows 上通过 CUDA 支持 NVIDIA GPU，通过 ROCm 支持 AMD GPU。' } },
+          { '@type': 'Question', name: '运行 Ollama 需要多少 RAM？', acceptedAnswer: { '@type': 'Answer', text: '3B–7B 模型的 Q4 量化至少需要 8 GB RAM。16 GB RAM 可舒适处理 7B 模型和 Q4 下的 13B 模型。建议 32 GB+ RAM 用于仅 CPU 运行的 34B 模型。' } },
+          { '@type': 'Question', name: '如何将 Ollama 更新到最新版本？', acceptedAnswer: { '@type': 'Answer', text: '在 macOS 上，Ollama 自动更新。在 Windows 上，从 ollama.com 下载并运行最新安装程序。在 Linux 上，重新运行安装脚本：curl -fsSL https://ollama.com/install.sh | sh' } },
+          { '@type': 'Question', name: '我可以在不修改代码的情况下通过 OpenAI SDK 使用 Ollama 吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。在 OpenAI SDK 中将 base_url 设置为 http://localhost:11434/v1 并传递任何字符串作为 API 密钥。Ollama 的 REST API 完全与 OpenAI 兼容，因此为 GPT 或 Claude 编写的任何应用程序都可以使用您的本地模型。' } },
+          { '@type': 'Question', name: '为什么我的 Ollama 推理很慢（5 tokens/秒以下）？', acceptedAnswer: { '@type': 'Answer', text: '该模型可能在 CPU 而非 GPU 上运行。使用 ollama ps 验证模型已加载。如果 GPU 利用率为 0%，检查 GPU 驱动程序是否已安装且最新。在 NVIDIA 上：nvidia-smi 应显示您的 GPU。在 AMD 上：rocm-smi。在 Mac 上：Apple Silicon 上自动使用 Metal GPU 加速。' } },
+          { '@type': 'Question', name: 'Ollama 可以同时运行多个模型吗？', acceptedAnswer: { '@type': 'Answer', text: 'Ollama 每个进程一次只能运行一个模型。但是，您可以在不同端口上运行多个 Ollama 实例（例如 OLLAMA_HOST=localhost:11434 和 OLLAMA_HOST=localhost:11435）以并行提供多个模型。这需要更多 RAM。' } },
+          { '@type': 'Question', name: 'ollama pull 和 ollama run 之间有什么区别？', acceptedAnswer: { '@type': 'Answer', text: 'ollama pull 从 Ollama 库下载模型而不将其加载到内存。ollama run 下载模型（如果未缓存）并立即启动聊天会话。要通过 API 使用模型而不使用聊天界面，首先 pull，然后查询 API。' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '如何安装 Ollama：macOS、Windows 和 Linux 完整设置指南',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: '从 ollama.com 下载 .dmg，或运行 `brew install ollama` — 然后 `ollama run llama3.2` 开始聊天。' },
+          { '@type': 'ListItem', position: 2, name: '从 ollama.com/download 下载安装程序。Ollama 作为系统托盘的后台服务运行。' },
+          { '@type': 'ListItem', position: 3, name: '一个 curl 命令安装一切 — `curl -fsSL https://ollama.com/install.sh | sh`' },
+          { '@type': 'ListItem', position: 4, name: '最低要求：3B 模型需要 4 GB RAM，7B 模型需要 8 GB RAM。不需要 GPU 即可开始。' },
+          { '@type': 'ListItem', position: 5, name: 'Ollama 在 `http://localhost:11434` 公开 OpenAI 兼容的 REST API — 任何 OpenAI SDK 应用都可以无代码修改地使用它。' },
+        ],
       },
     },
   },
@@ -1447,72 +2635,1191 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       },
     },
     de: {
-      theme: 'Erste Schritte',
-      title: 'Wie installiere ich LM Studio: Desktop-App Setup Guide für macOS, Windows und Linux',
-      seoTitle: 'LM Studio installieren 2026: GUI-Setup in 5 Minuten',
-      metaDescription: 'LM Studio läuft lokale LLMs per GUI — kein Terminal nötig. Schritt-für-Schritt: Download, Modell laden, Chat starten auf macOS, Windows und Linux.',
+      theme: 'Getting Started',
+      title: 'LM Studio installieren: Desktop-App-Einrichtung für macOS, Windows und Linux',
+      seoTitle: 'LM Studio Setup: Die beste GUI für lokale LLMs',
+      intro: 'LM Studio ist eine kostenlose Desktop-Anwendung zum Ausführen lokaler LLMs ohne Terminalbefehle. Laden Sie das Installationsprogramm von lmstudio.ai herunter, öffnen Sie die App, suchen Sie nach einem Modell nach Name, klicken Sie auf „Download", und beginnen Sie zu chatten — der gesamte Vorgang dauert weniger als 5 Minuten. Ab April 2026 läuft LM Studio auf macOS (Apple Silicon und Intel), Windows 10+ und Linux (AppImage) und unterstützt alle GGUF-quantisierten Modelle aus der Hugging Face-Modellbibliothek mit 500.000+ Modellen. Es enthält eine integrierte Chat-Benutzeroberfläche, einen OpenAI-kompatiblen lokalen Server auf localhost:1234 und automatische GPU-Beschleunigung für Apple Metal, NVIDIA CUDA und AMD ROCm.',
+      metaDescription: 'Starten Sie lokale LLMs ohne Terminal-Befehle. Modelle herunterladen, suchen, chatten—alles in 5 Minuten. NVIDIA CUDA, AMD ROCm, Apple Metal unterstützt.',
       publishDate: '2026-04-04',
-      readTime: '7 Min. Lesedauer',
+      dateModified: '2026-04-05',
+      readTime: '7 Min. Lesezeit',
       educationalLevel: 'Beginner',
       primaryTerm: 'LM Studio',
+      toc: [
+        { label: 'Zusammenfassung', anchor: 'key-takeaways' },
+        { label: 'Was ist LM Studio?', anchor: 'what-is-lm-studio' },
+        { label: 'Systemanforderungen', anchor: 'system-requirements' },
+        { label: 'Download und Installation', anchor: 'download-and-install' },
+        { label: 'Modell suchen und herunterladen', anchor: 'find-and-download' },
+        { label: 'Mit dem Chat beginnen', anchor: 'start-chatting' },
+        { label: 'Modelleinstellungen anpassen', anchor: 'adjust-settings' },
+        { label: 'Lokalen Server aktivieren', anchor: 'enable-server' },
+        { label: 'Mit Python verbinden', anchor: 'connect-python' },
+        { label: 'LM Studio vs Ollama', anchor: 'lm-studio-vs-ollama' },
+        { label: 'Fehlerbehebung', anchor: 'troubleshooting' },
+        { label: 'Regionaler Kontext', anchor: 'regional-context' },
+        { label: 'Häufige Fehler', anchor: 'common-mistakes' },
+        { label: 'Weiterführende Literatur', anchor: 'related-reading' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Quellen', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Zusammenfassung',
+          items: [
+            'LM Studio von lmstudio.ai herunterladen — verfügbar für macOS (Apple Silicon + Intel), Windows und Linux (AppImage).',
+            'Minimum: 8 GB RAM. Empfohlen: 16 GB RAM für 7B-Modelle. Apple Silicon Macs verwenden standardmäßig GPU-Beschleunigung.',
+            'Der integrierte Modellbrowser sucht direkt auf Hugging Face — laden Sie GGUF-Modelle herunter, ohne die App zu verlassen.',
+            'LM Studio enthält eine integrierte Chat-Benutzeroberfläche und einen lokalen OpenAI-kompatiblen Server auf Port 1234.',
+            'Am besten für: Anfänger, die eine GUI bevorzugen, Benutzer, die mehrere Modelle nebeneinander vergleichen möchten, und alle, die ein komplettes Paket ohne Terminalbefehle möchten.',
+          ],
+        },
+        whatIsLmStudio: {
+          title: 'Was ist LM Studio?',
+          content: [
+            'LM Studio ist eine Desktop-Anwendung zum Ausführen lokaler LLMs. Es bietet einen grafischen Modellbrowser, eine integrierte Chat-Benutzeroberfläche und einen lokalen API-Server — alles in einer App. Unter der Haube verwendet es llama.cpp für Inferenz, das gleiche Modul, das Ollama antreibt (/local-llms/how-to-install-ollama?lang=de).',
+            'Der Hauptunterschied zu Ollama ist, dass LM Studio völlig GUI-gesteuert ist. Sie durchsuchen und laden Modelle über die App-Oberfläche herunter, starten Chats mit einem Klick und verwalten Modelleinstellungen mit Schiebereglern anstelle von Konfigurationsdateien.',
+            'LM Studio ist kostenlos für die private Nutzung. Es wird von LM Studio, Inc. entwickelt und wurde 2023 veröffentlicht. Ab 2026 unterstützt es NVIDIA CUDA-, AMD ROCm- und Apple Metal-Beschleunigung.',
+          ],
+        },
+        requirements: {
+          title: 'Welche Systemanforderungen hat LM Studio?',
+          columns: ['Spezifikation', 'Minimum', 'Empfohlen'],
+          rows: [
+            { 'Spezifikation': 'Betriebssystem', 'Minimum': 'macOS 13.6, Windows 10, Ubuntu 22.04', 'Empfohlen': 'macOS 14+, Windows 11, Ubuntu 24.04' },
+            { 'Spezifikation': 'RAM', 'Minimum': '8 GB', 'Empfohlen': '16 GB oder mehr' },
+            { 'Spezifikation': 'Speicher', 'Minimum': '500 MB für App + Modellspeicher', 'Empfohlen': '50 GB+ frei für mehrere Modelle' },
+            { 'Spezifikation': 'GPU (optional)', 'Minimum': 'NVIDIA GTX 10er oder neuer', 'Empfohlen': 'NVIDIA RTX 30/40er, AMD RX 6000+, oder Apple M-Serie' },
+          ],
+        },
+        download: {
+          title: 'Wie laden Sie LM Studio herunter und installieren es',
+          numberedItems: [
+            'Gehen Sie zu lmstudio.ai und klicken Sie auf die Download-Schaltfläche für Ihr Betriebssystem.',
+            'macOS: Öffnen Sie die .dmg-Datei und ziehen Sie LM Studio in den Ordner „Anwendungen". Beim ersten Start genehmigen Sie die Sicherheitsaufforderung unter Systemeinstellungen → Datenschutz & Sicherheit.',
+            'Windows: Führen Sie das Installationsprogramm LM-Studio-Setup.exe aus. LM Studio wird in %LOCALAPPDATA%\LM-Studio installiert.',
+            'Linux: Laden Sie die .AppImage-Datei herunter. Machen Sie sie mit `chmod +x LM-Studio-*.AppImage` ausführbar und starten Sie sie. Keine Systeminstallation erforderlich.',
+            'Beim ersten Start zeigt LM Studio einen Willkommensbildschirm und fordert Sie auf, ein Modell herunterzuladen.',
+          ],
+        },
+        findModel: {
+          title: 'Wie finden und laden Sie ein Modell in LM Studio herunter',
+          content: 'Verwenden Sie die Registerkarte „Search" (Lupe-Symbol in der linken Seitenleiste), um Modelle zu finden:',
+          numberedItems: [
+            'Klicken Sie auf die Registerkarte „Search" in der linken Seitenleiste.',
+            'Geben Sie einen Modellnamen ein — z.B. „llama 3.1" oder „phi-3 mini".',
+            'LM Studio zeigt passende GGUF-Modelle von Hugging Face mit Dateigröße und Quantisierungsoptionen.',
+            'Wählen Sie ein Quantisierungsniveau. Für 8 GB RAM: Q4_K_M (~4,5 GB für ein 7B-Modell) wählen. Für 16 GB RAM: Q5_K_M oder Q6_K bieten bessere Qualität.',
+            'Klicken Sie auf den Download-Pfeil. Der Fortschritt wird auf der Registerkarte „Downloads" angezeigt.',
+          ],
+        },
+        firstChat: {
+          title: 'Wie beginnen Sie zu chatten mit einem Modell in LM Studio',
+          numberedItems: [
+            'Klicken Sie auf die Registerkarte „Chat" (Sprechblase-Symbol) in der linken Seitenleiste.',
+            'Klicken Sie oben im Chat-Fenster auf das Dropdown-Menü für Modellauswahl und wählen Sie Ihr heruntergeladenes Modell.',
+            'LM Studio lädt das Modell in den Speicher — dies dauert 5–30 Sekunden je nach Modellgröße und Hardware.',
+            'Geben Sie Ihre Nachricht in das Eingabefeld unten ein und drücken Sie die Eingabetaste oder klicken Sie auf „Senden".',
+            'Die Antwort des Modells wird Token für Token übertragen. Die Generierungsgeschwindigkeit wird in der Statusleiste am unteren Fensterrand angezeigt.',
+          ],
+        },
+        modelSettings: {
+          title: 'Wie passen Sie Modelleinstellungen in LM Studio an',
+          content: 'Das rechte Bedienfeld auf der Registerkarte „Chat" zeigt wichtige Inferenzparameter:',
+          items: [
+            '**Temperatur** (Standard 0,8): steuert die Zufälligkeit der Antwort. Niedrigere Werte (0,1–0,4) erzeugen konzentriertere, vorhersehbarere Ausgaben. Höhere Werte (0,8–1,2) erzeugen vielfältigere, kreativere Ausgaben.',
+            '**Kontextlänge** (Standard 4096 Token): die maximale Gesprächshistorie, die das Modell verarbeiten kann. Ein längerer Kontext benötigt mehr RAM. Die meisten 7B-Modelle unterstützen 4096–8192 Token.',
+            '**GPU-Ebenen** (macOS/Linux/Windows mit GPU): wie viele Modellschichten auf die GPU ausgelagert werden. Setzen Sie auf Maximum für schnellste Inferenz, wenn Ihre GPU genügend VRAM hat.',
+            '**Systemprompt**: eine persistente Anweisung, die vor jedem Gespräch vorangestellt wird. Verwenden Sie dies, um die Rolle oder das Verhalten des Modells festzulegen.',
+          ],
+        },
+        localServer: {
+          title: 'Wie aktivieren Sie den lokalen Server in LM Studio',
+          content: 'LM Studio enthält einen lokalen Server, der die OpenAI-API imitiert. Jede Anwendung, die mit OpenAI funktioniert, kann Ihr lokales Modell über diesen Server nutzen:',
+          numberedItems: [
+            'Klicken Sie auf die Registerkarte „Local Server" (das „<->"-Symbol) in der linken Seitenleiste.',
+            'Wählen Sie ein Modell im Modell-Dropdown oben aus.',
+            'Klicken Sie auf „Start Server". Der Server wird auf http://localhost:1234 gestartet.',
+            'Ihre Anwendung sollte `base_url = "http://localhost:1234/v1"` und einen beliebigen String als API-Schlüssel festlegen (der Server akzeptiert jeden Wert).',
+          ],
+        },
+        localServerCode: {
+          title: 'Wie verbinden Sie sich mit LM Studio über Python?',
+          codeLanguage: 'python',
+          codeBlock: `from openai import OpenAI
+
+client = OpenAI(
+    base_url="http://localhost:1234/v1",
+    api_key="not-needed"
+)
+
+response = client.chat.completions.create(
+    model="local-model",
+    messages=[{"role": "user", "content": "What is a local LLM?"}]
+)
+print(response.choices[0].message.content)`,
+        },
+        vsOllama: {
+          title: 'Was sollten Sie verwenden: LM Studio oder Ollama?',
+          columns: ['Faktor', 'LM Studio', 'Ollama'],
+          rows: [
+            { 'Faktor': 'Oberfläche', 'LM Studio': 'GUI-Desktop-App', 'Ollama': 'Terminal + API' },
+            { 'Faktor': 'Modellquelle', 'LM Studio': 'Hugging Face (beliebiges GGUF-Modell)', 'Ollama': 'Ollama-Bibliothek (kuratiert, ~200 Modelle)' },
+            { 'Faktor': 'API-Port', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
+            { 'Faktor': 'Modellverwaltung', 'LM Studio': 'GUI-Browser mit Dateigröße', 'Ollama': 'CLI-Befehle (ollama pull, list, rm)' },
+            { 'Faktor': 'Automatisierung', 'LM Studio': 'Begrenzt (GUI-fokussiert)', 'Ollama': 'Stark (Scripting, Docker, CI)' },
+            { 'Faktor': 'Am besten für', 'LM Studio': 'Anfänger, GUI-Benutzer, Modell-Erkundung', 'Ollama': 'Entwickler, Automatisierung, Server-Bereitstellungen' },
+          ],
+        },
+        troubleshooting: {
+          title: 'Wie beheben Sie häufige LM Studio-Probleme?',
+          faqs: [
+            {
+              q: 'LM Studio zeigt „Not enough memory to load model" (Nicht genug Speicher zum Laden des Modells)',
+              a: 'Das Modell benötigt mehr RAM als verfügbar. Schließen Sie andere Anwendungen, um Speicher freizugeben, oder wählen Sie eine kleinere Quantisierung (Q3_K_S statt Q4_K_M). Faustregel: Multiplizieren Sie die Modell-Dateigröße mit 1,2, um den benötigten RAM zu schätzen. Eine 4,5-GB-Datei benötigt ~5,4 GB freien RAM.'
+            },
+            {
+              q: 'Das Modell generiert sehr langsam (unter 5 Token/Sekunde)',
+              a: 'Das Modell läuft komplett auf der CPU. Überprüfen Sie „GPU-Ebenen" im rechten Bedienfeld — wenn es 0 anzeigt, wird Ihre GPU nicht genutzt. Auf macOS aktiviert LM Studio Metal (GPU) automatisch für Apple Silicon. Auf Windows/Linux mit NVIDIA stellen Sie sicher, dass Ihr Treiber aktuell ist, und erhöhen Sie GPU-Ebenen auf den Maximalwert.'
+            },
+            {
+              q: 'Ich kann ein bestimmtes Modell in der LM Studio-Suche nicht finden',
+              a: 'LM Studio durchsucht Hugging Face nach GGUF-Dateien. Wenn ein Modell nicht angezeigt wird, versuchen Sie, direkt nach dem Hugging Face-Repository-Namen zu suchen (z.B. „bartowski/Llama-3.1-8B-Instruct-GGUF"). Manche neuere Modelle sind möglicherweise noch nicht indexiert.'
+            },
+            {
+              q: 'Der lokale Server gibt „model not found"-Fehler zurück',
+              a: 'Ein Modell muss auf der Registerkarte „Local Server" geladen werden, bevor der Server antworten kann. Öffnen Sie die Registerkarte „Local Server", wählen Sie ein Modell aus dem Dropdown aus und klicken Sie auf „Start Server". Der Modellname in API-Anfragen kann beliebig sein — LM Studio verwendet whichever Modell gerade geladen ist.'
+            },
+          ],
+        },
+        regionalContext: {
+          title: 'LM Studio für datenschutzsensible Anwendungsfälle',
+          content: [
+            '**EU / DSGVO**: LM Studio mit lokalen Modellen ist die datenschutzkonformste KI-Konfiguration, die für Desktop-Benutzer verfügbar ist. Keine Eingabetexte, Kontexte oder Ausgaben werden außerhalb des Geräts übertragen — DSGVO Artikel 46 Transfermechanismen finden keine Anwendung. Für EU-Fachleute, die mit personenbezogenen Daten arbeiten (Rechtsdokumente, medizinische Unterlagen, Finanzanalysen), bietet LM Studio auf einem MacBook M-Serie oder Windows-Arbeitsplatz mit dedizierter GPU eine vollständig konforme lokale Inferenz-Umgebung. Die BSI-Grundschutz-Kataloge empfehlen lokale Inferenz für KI-Systeme, die sensitive personenbezogene Daten verarbeiten. Für den deutschen Mittelstand ohne IT-Personal ist die GUI von LM Studio der einfachste Weg zu DSGVO-konformem KI-Einsatz, ohne Terminal-Befehle erlernen zu müssen. Artikel 28 DSGVO-Auftragsverarbeiter fallen weg, da keine Daten an externe API-Anbieter gehen.',
+            '**Japan (METI)**: Die METI AI Governance Guidelines erfordern die Dokumentation, wo KI-Inferenz stattfindet. LM Studio speichert den lokalen Modell-Cache auf einem festen Pfad auf der Festplatte — alle Inferenzen sind rückverfolgbar auf Gerät, Modelldatei und Version. Japanische Enterprise-Teams verwenden LM Studio als Zero-Egress-Dokumenten-Analysetool für vertrauliche behördliche und Compliance-Arbeiten.',
+            '**China**: LM Studio unterstützt Qwen2.5-Modelle nativ über Hugging Face-Suche — suchen Sie „qwen2.5" im Modellbrowser, um alle verfügbaren Größen zu finden. Für chinesische Workflows bietet Qwen2.5 7B oder 14B 30–40% bessere Token-Effizienz auf chinesischem Text als westlich trainierte Modelle bei der gleichen Parametergröße. Alle Inferenzen laufen lokal unter Chinas Datensicherheitsgesetz (数据安全法) mit null externen API-Aufrufen.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Welche häufigen Fehler gibt es bei der Installation von LM Studio?',
+          items: [
+            '**Nicht genügend System-RAM für das in den LM Studio-Einstellungen ausgewählte Modell zuweisen.** Überprüfen Sie die Modell-Dateigröße und multiplizieren Sie mit 1,2 — das ist der erforderliche Mindest-RAM. Ein 4,5-GB Q4_K_M 7B-Modell benötigt ~5,4 GB freien RAM.',
+            '**Ein vorquantisiertes Modell verwenden, das immer noch zu groß für Ihren GPU-VRAM ist.** Wenn ein Modell den VRAM übersteigt, fällt LM Studio auf CPU-Inferenz zurück, die 5–10× langsamer ist. Überprüfen Sie die Dateigröße vs. Ihren GPU-VRAM, bevor Sie herunterladen.',
+            '**Erwarten Sie sofortige Antworten von großen Modellen auf CPU-only Systemen.** Ein 7B-Modell auf CPU erzeugt 8–20 Token/Sekunde — eine 200-Token-Antwort dauert 10–25 Sekunden. Das ist normal. Verwenden Sie ein 3B-Modell für schnellere Antworten auf CPU-only Maschinen.',
+            '**GPU-Ebenen auf 0 bei einer NVIDIA-Maschine setzen:** LM Studio sollte CUDA automatisch erkennen, setzt aber nach einer Neuinstallation manchmal GPU-Ebenen auf 0 zurück. Öffnen Sie das Modellbedienfeld → GPU-Ebenen → auf Maximum ziehen. Auf einer RTX 4070 (12 GB VRAM) bewegt das die Geschwindigkeit von 8 Token/Sekunde (CPU) auf 80+ Token/Sekunde (GPU) — ein 10x Unterschied.',
+            '**FP16-Modelle herunterladen, wenn Q4_K_M verfügbar ist:** FP16-Modelle sind zweimal so groß wie Q4_K_M mit vernachlässigbarem Qualitätsgewinn für Chat-Aufgaben. Ein 7B-Modell in FP16 ist ~14 GB; das gleiche Modell bei Q4_K_M ist ~4,5 GB. Laden Sie immer Q4_K_M als Standard herunter, es sei denn, Sie haben einen spezifischen Grund für höhere Präzision.',
+          ],
+        },
+        relatedReading: {
+          title: 'Weiterführende Literatur',
+          items: [
+            '[Was sind lokale LLMs?](/local-llms/what-are-local-llms?lang=de) — Kernkonzepte und Komponenten',
+            '[Führen Sie Ihr erstes lokales LLM aus](/local-llms/run-first-local-llm?lang=de) — Nächste Schritte nach der Installation',
+            '[Wie installieren Sie Ollama](/local-llms/how-to-install-ollama?lang=de) — Terminal-basierte Alternative zu LM Studio',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models?lang=de) — Modellempfehlungen nach Hardware',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) — GPU- und RAM-Empfehlungen für beste Leistung mit LM Studio auf Ihrer Hardware',
+            '[Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis?lang=de) — Kosten- und Geschwindigkeitsvergleich, um zu entscheiden, wann lokale Inferenz in LM Studio die richtige Wahl ist',
+          ],
+        },
+        faqSection: {
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'LM Studio zeigt „Not enough memory to load model"',
+              a: 'Das Modell benötigt mehr RAM als verfügbar. Schließen Sie andere Anwendungen, um Speicher freizugeben, oder wählen Sie eine kleinere Quantisierung (Q3_K_S statt Q4_K_M). Faustregel: Multiplizieren Sie die Modell-Dateigröße mit 1,2, um den erforderlichen RAM zu schätzen. Eine 4,5-GB-Datei benötigt ~5,4 GB freien RAM.'
+            },
+            {
+              q: 'Das Modell generiert sehr langsam (unter 5 Token/Sekunde)',
+              a: 'Das Modell läuft komplett auf der CPU. Überprüfen Sie GPU-Ebenen im rechten Bedienfeld — wenn es 0 anzeigt, wird Ihre GPU nicht genutzt. Auf macOS aktiviert LM Studio Metal (GPU) automatisch für Apple Silicon. Auf Windows/Linux mit NVIDIA stellen Sie sicher, dass Ihr Treiber aktuell ist, und erhöhen Sie GPU-Ebenen auf den Maximalwert.'
+            },
+            {
+              q: 'Ich kann ein bestimmtes Modell in der LM Studio-Suche nicht finden',
+              a: 'LM Studio durchsucht Hugging Face nach GGUF-Dateien. Wenn ein Modell nicht angezeigt wird, versuchen Sie, direkt nach dem Hugging Face-Repository-Namen zu suchen (z.B. „bartowski/Llama-3.1-8B-Instruct-GGUF"). Manche neuere Modelle sind möglicherweise noch nicht indexiert.'
+            },
+            {
+              q: 'Der lokale Server gibt „model not found"-Fehler zurück',
+              a: 'Ein Modell muss auf der Registerkarte „Local Server" geladen werden, bevor der Server antworten kann. Öffnen Sie die Registerkarte „Local Server", wählen Sie ein Modell aus dem Dropdown aus und klicken Sie auf „Start Server". Der Modellname in API-Anfragen kann beliebig sein — LM Studio verwendet das gerade geladene Modell.'
+            },
+            {
+              q: 'Ist LM Studio kostenlos?',
+              a: 'Ja. LM Studio ist kostenlos für die private Nutzung ohne Funktionsbegrenzungen. Eine kommerzielle Lizenz ist für geschäftliche Nutzung erforderlich — siehe lmstudio.ai/pricing für aktuelle Bedingungen. Ab April 2026 hat die kostenlose Version keine Nutzungsgrenzen, Modellbeschränkungen oder Wasserzeichen.'
+            },
+            {
+              q: 'Was ist der Unterschied zwischen LM Studio und Ollama?',
+              a: 'LM Studio ist eine grafische Desktop-App — Sie durchsuchen und laden Modelle über eine visuelle Oberfläche herunter, starten Chats mit einem Klick und passen Einstellungen mit Schiebereglern an. Ollama ist ein Befehlszeilen-Tool und Hintergrunddienst — schneller einzurichten mit einem einzigen Befehl, besser für Automatisierung und Scripting. Beide verwenden unter der Haube die gleiche llama.cpp Inferenz-Engine. Wählen Sie LM Studio für GUI-gesteuerte Nutzung; wählen Sie Ollama für Entwickler-Workflows und Automatisierung.'
+            },
+            {
+              q: 'Welche Modelle funktionieren mit LM Studio?',
+              a: 'Jedes GGUF-Format-Modell von Hugging Face. Die integrierte Suche deckt den vollständigen Hugging Face-Modell-Hub ab. Beliebte Optionen sind Llama 3.1 8B, Qwen2.5 7B, Mistral 7B, Phi-4 Mini und Gemma 3 9B. Suchen Sie nach Modellname auf der Registerkarte „Discover". LM Studio zeigt Dateigröße für jedes Quantisierungsniveau vor dem Download.'
+            },
+            {
+              q: 'Verwendet LM Studio meine GPU automatisch?',
+              a: 'Ja auf Apple Silicon — Metal-Beschleunigung ist standardmäßig aktiviert. Auf Windows und Linux mit NVIDIA-GPUs erkennt LM Studio CUDA automatisch, wenn die Treiber installiert sind. Überprüfen Sie die Einstellung GPU-Ebenen im Modellbedienfeld — wenn es 0 Ebenen auf GPU anzeigt, wird Ihre GPU nicht genutzt. Erhöhen Sie GPU-Ebenen auf den angezeigten Maximalwert, um verfügbaren VRAM vollständig auszunutzen.'
+            },
+            {
+              q: 'Wo speichert LM Studio heruntergeladene Modelle?',
+              a: 'Auf macOS: ~/Library/Application Support/LM Studio/Models/lmstudio-community/. Auf Windows: %USERPROFILE%\.cache\lm-studio\models\. Auf Linux: ~/.cache/lm-studio/models/. Sie können den Speicherort in LM Studio Einstellungen → Allgemein → Modell-Speicherverzeichnis ändern.'
+            },
+            {
+              q: 'Kann ich LM Studio mit VS Code oder Cursor verwenden?',
+              a: 'Ja. Starten Sie den LM Studio-lokalen Server auf localhost:1234, konfigurieren Sie dann Ihre IDE-Erweiterung zur Verwendung von http://localhost:1234/v1 als API-Basis-URL mit beliebiger Zeichenkette als API-Schlüssel. VS Code-Erweiterungen, die OpenAI-kompatible APIs unterstützen (Continue, GitHub Copilot-Alternativen) funktionieren direkt mit LM Studio.'
+            },
+            {
+              q: 'Muss ich bei der Verwendung von LM Studio die DSGVO beachten?',
+              a: 'LM Studio verarbeitet alle Daten lokal auf Ihrem Gerät. Es gibt keinen externen API-Anbieter als Auftragsverarbeiter gemäß Artikel 28 DSGVO, da Daten das Gerät nie verlassen. Ollama und LM Studio binden standardmäßig nur an localhost — keine externe Zugänglichkeit. Dies erfüllt alle DSGVO-Anforderungen für On-Premises-Deployment mit vollständiger Datenkontrolle.'
+            },
+            {
+              q: 'Ist LM Studio für den deutschen Mittelstand geeignet?',
+              a: 'Ja — kostenlos für private Nutzung, keine IT-Kenntnisse für die Installation erforderlich, DSGVO-konform durch lokale Datenverarbeitung, und BSI-Grundschutz-kompatibel für vertrauliche Dokumente. LM Studio ist der einfachste Weg für mittlere Unternehmen ohne IT-Personal zu AI-gestützten Workflows, während gleichzeitig Datenschutz gewährleistet wird. Die GUI erfordert kein Terminal-Wissen.'
+            },
+          ],
+        },
+        sources: {
+          title: 'Quellen',
+          items: [
+            'LM Studio. (2026). „LM Studio Dokumentation und Release Notes." lmstudio.ai. https://lmstudio.ai/docs — Offizielle Installationsleitfäden, API-Dokumentation und Hardware-Kompatibilitätsinformationen.',
+            'Hugging Face. (2026). „GGUF Model Hub." https://huggingface.co/models?library=gguf — Vollständiges Verzeichnis von GGUF-quantisierten Modellen, die mit LM Studios Modellbrowser kompatibel sind.',
+            'llama.cpp-Mitwirkende. (2026). „llama.cpp — CPU/GPU-Inferenz-Engine." https://github.com/ggerganov/llama.cpp — Das von LM Studio verwendete Inferenz-Backend mit Hardware-Kompatibilität und Leistungsdaten.',
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio?lang=de',
-        'inLanguage': 'de',
+        headline: 'LM Studio installieren: Desktop-App-Einrichtung für macOS, Windows und Linux',
+        description: 'Schritt-für-Schritt LM Studio Installation und erstes Modell-Setup. GUI-gesteuerte lokale LLM-Runner mit Chat-UI und OpenAI-kompatiblem lokalem Server.',
+        url: 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio?lang=de',
+        inLanguage: 'de',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-05',
+        author: { '@type': 'Organization', name: 'PromptQuorum' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum' },
+        proficiencyLevel: 'Beginner',
+        about: ['LM Studio', 'Lokales LLM', 'GGUF-Modell', 'OpenAI-kompatible API', 'Ollama', 'llama.cpp'],
+        mentions: ['LM Studio', 'Ollama', 'llama.cpp'],
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] }
       },
-      sections: {},
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'So installieren Sie LM Studio und führen Ihr erstes Modell aus',
+        totalTime: 'PT5M',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'LM Studio von lmstudio.ai herunterladen' },
+          { '@type': 'HowToStep', position: 2, name: 'Installieren auf macOS, Windows oder Linux' },
+          { '@type': 'HowToStep', position: 3, name: 'Nach einem Modell auf der Registerkarte „Discover" suchen' },
+          { '@type': 'HowToStep', position: 4, name: 'Q4_K_M-Quantisierung herunterladen' },
+          { '@type': 'HowToStep', position: 5, name: 'Registerkarte „Chat" öffnen und zu chatten beginnen' },
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'LM Studio zeigt „Not enough memory to load model"',
+            acceptedAnswer: { '@type': 'Answer', text: 'Das Modell benötigt mehr RAM als verfügbar. Schließen Sie andere Anwendungen, um Speicher freizugeben, oder wählen Sie eine kleinere Quantisierung (Q3_K_S statt Q4_K_M). Faustregel: Multiplizieren Sie die Modell-Dateigröße mit 1,2, um den erforderlichen RAM zu schätzen. Eine 4,5-GB-Datei benötigt ~5,4 GB freien RAM.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Das Modell generiert sehr langsam (unter 5 Token/Sekunde)',
+            acceptedAnswer: { '@type': 'Answer', text: 'Das Modell läuft komplett auf der CPU. Überprüfen Sie GPU-Ebenen im rechten Bedienfeld — wenn es 0 anzeigt, wird Ihre GPU nicht genutzt. Auf macOS aktiviert LM Studio Metal (GPU) automatisch für Apple Silicon. Auf Windows/Linux mit NVIDIA stellen Sie sicher, dass Ihr Treiber aktuell ist, und erhöhen Sie GPU-Ebenen auf den Maximalwert.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Ich kann ein bestimmtes Modell in der LM Studio-Suche nicht finden',
+            acceptedAnswer: { '@type': 'Answer', text: 'LM Studio durchsucht Hugging Face nach GGUF-Dateien. Wenn ein Modell nicht angezeigt wird, versuchen Sie, direkt nach dem Hugging Face-Repository-Namen zu suchen (z.B. „bartowski/Llama-3.1-8B-Instruct-GGUF"). Manche neuere Modelle sind möglicherweise noch nicht indexiert.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Der lokale Server gibt „model not found"-Fehler zurück',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ein Modell muss auf der Registerkarte „Local Server" geladen werden, bevor der Server antworten kann. Öffnen Sie die Registerkarte „Local Server", wählen Sie ein Modell aus dem Dropdown aus und klicken Sie auf „Start Server". Der Modellname in API-Anfragen kann beliebig sein — LM Studio verwendet das gerade geladene Modell.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist LM Studio kostenlos?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. LM Studio ist kostenlos für die private Nutzung ohne Funktionsbegrenzungen. Eine kommerzielle Lizenz ist für geschäftliche Nutzung erforderlich — siehe lmstudio.ai/pricing für aktuelle Bedingungen. Ab April 2026 hat die kostenlose Version keine Nutzungsgrenzen, Modellbeschränkungen oder Wasserzeichen.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Was ist der Unterschied zwischen LM Studio und Ollama?',
+            acceptedAnswer: { '@type': 'Answer', text: 'LM Studio ist eine grafische Desktop-App — Sie durchsuchen und laden Modelle über eine visuelle Oberfläche herunter, starten Chats mit einem Klick und passen Einstellungen mit Schiebereglern an. Ollama ist ein Befehlszeilen-Tool und Hintergrunddienst — schneller einzurichten mit einem einzigen Befehl, besser für Automatisierung und Scripting. Beide verwenden unter der Haube die gleiche llama.cpp Inferenz-Engine.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Welche Modelle funktionieren mit LM Studio?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Jedes GGUF-Format-Modell von Hugging Face. Die integrierte Suche deckt den vollständigen Hugging Face-Modell-Hub ab. Beliebte Optionen sind Llama 3.1 8B, Qwen2.5 7B, Mistral 7B, Phi-4 Mini und Gemma 3 9B. Suchen Sie nach Modellname auf der Registerkarte „Discover". LM Studio zeigt Dateigröße für jedes Quantisierungsniveau vor dem Download.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Verwendet LM Studio meine GPU automatisch?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja auf Apple Silicon — Metal-Beschleunigung ist standardmäßig aktiviert. Auf Windows und Linux mit NVIDIA-GPUs erkennt LM Studio CUDA automatisch, wenn die Treiber installiert sind. Überprüfen Sie die Einstellung GPU-Ebenen im Modellbedienfeld — wenn es 0 Ebenen auf GPU anzeigt, wird Ihre GPU nicht genutzt.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Wo speichert LM Studio heruntergeladene Modelle?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Auf macOS: ~/Library/Application Support/LM Studio/Models/lmstudio-community/. Auf Windows: %USERPROFILE%\.cache\lm-studio\models\. Auf Linux: ~/.cache/lm-studio/models/. Sie können den Speicherort in LM Studio Einstellungen → Allgemein → Modell-Speicherverzeichnis ändern.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Kann ich LM Studio mit VS Code oder Cursor verwenden?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Starten Sie den LM Studio-lokalen Server auf localhost:1234, konfigurieren Sie dann Ihre IDE-Erweiterung zur Verwendung von http://localhost:1234/v1 als API-Basis-URL mit beliebiger Zeichenkette als API-Schlüssel. VS Code-Erweiterungen, die OpenAI-kompatible APIs unterstützen (Continue, GitHub Copilot-Alternativen) funktionieren direkt mit LM Studio.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Muss ich bei der Verwendung von LM Studio die DSGVO beachten?',
+            acceptedAnswer: { '@type': 'Answer', text: 'LM Studio verarbeitet alle Daten lokal auf Ihrem Gerät. Es gibt keinen externen API-Anbieter als Auftragsverarbeiter gemäß Artikel 28 DSGVO, da Daten das Gerät nie verlassen. Ollama und LM Studio binden standardmäßig nur an localhost — keine externe Zugänglichkeit.' }
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist LM Studio für den deutschen Mittelstand geeignet?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja — kostenlos für private Nutzung, keine IT-Kenntnisse für die Installation erforderlich, DSGVO-konform durch lokale Datenverarbeitung, und BSI-Grundschutz-kompatibel für vertrauliche Dokumente. LM Studio ist der einfachste Weg für mittlere Unternehmen ohne IT-Personal zu AI-gestützten Workflows, während gleichzeitig Datenschutz gewährleistet wird.' }
+          },
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'LM Studio vs Ollama Vergleich',
+        numberOfItems: 6,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Oberfläche', description: 'LM Studio: GUI-Desktop-App. Ollama: Terminal + API.' },
+          { '@type': 'ListItem', position: 2, name: 'Modellquelle', description: 'LM Studio: Hugging Face (beliebiges GGUF-Modell). Ollama: Ollama-Bibliothek (kuratiert, ~200 Modelle).' },
+          { '@type': 'ListItem', position: 3, name: 'API-Port', description: 'LM Studio: localhost:1234. Ollama: localhost:11434.' },
+          { '@type': 'ListItem', position: 4, name: 'Modellverwaltung', description: 'LM Studio: GUI-Browser mit Dateigröße. Ollama: CLI-Befehle (ollama pull, list, rm).' },
+          { '@type': 'ListItem', position: 5, name: 'Automatisierung', description: 'LM Studio: Begrenzt (GUI-fokussiert). Ollama: Stark (Scripting, Docker, CI).' },
+          { '@type': 'ListItem', position: 6, name: 'Am besten für', description: 'LM Studio: Anfänger, GUI-Benutzer, Modell-Erkundung. Ollama: Entwickler, Automatisierung, Server-Bereitstellungen.' },
+        ]
+      },
     },
     fr: {
-      theme: 'Premiers pas',
-      title: 'Comment installer LM Studio : Guide de configuration d\'une application de bureau pour macOS, Windows et Linux',
-      seoTitle: 'Installer LM Studio 2026 : guide GUI en 5 minutes',
-      metaDescription: 'LM Studio exécute des LLM locaux sans terminal. Guide d\'installation sur macOS, Windows et Linux : télécharger, charger un modèle, démarrer le chat.',
+      theme: 'Bien démarrer',
+      title: 'Installer LM Studio : guide de configuration de l\'application desktop pour macOS, Windows et Linux',
+      seoTitle: 'LM Studio : La meilleure interface pour LLM local',
+      intro: 'LM Studio est une application desktop gratuite pour exécuter des LLM locaux sans commandes terminal. Téléchargez l\'installeur depuis lmstudio.ai, ouvrez l\'application, recherchez un modèle par nom, cliquez sur télécharger et commencez à discuter — tout le processus prend moins de 5 minutes. En avril 2026, LM Studio fonctionne sur macOS (Apple Silicon et Intel), Windows 10+ et Linux (AppImage), et supporte n\'importe quel modèle quantifié GGUF de la bibliothèque de plus de 500 000 modèles de Hugging Face. Il inclut une interface de chat intégrée, un serveur local compatible OpenAI sur localhost:1234, et l\'accélération GPU automatique pour Apple Metal, NVIDIA CUDA et AMD ROCm.',
+      metaDescription: 'Exécutez des LLM locaux sans lignes de commande. Téléchargez, recherchez, chattez en 5 minutes. Support NVIDIA CUDA, AMD ROCm, Apple Metal inclus.',
       publishDate: '2026-04-04',
+      dateModified: '2026-04-05',
       readTime: '7 min de lecture',
       educationalLevel: 'Beginner',
       primaryTerm: 'LM Studio',
+      toc: [
+        { label: 'Points clés', anchor: 'key-takeaways' },
+        { label: 'Qu\'est-ce que LM Studio ?', anchor: 'what-is-lm-studio' },
+        { label: 'Configuration système requise', anchor: 'system-requirements' },
+        { label: 'Télécharger et installer', anchor: 'download-and-install' },
+        { label: 'Trouver et télécharger un modèle', anchor: 'find-and-download' },
+        { label: 'Commencer à discuter', anchor: 'start-chatting' },
+        { label: 'Ajuster les paramètres du modèle', anchor: 'adjust-settings' },
+        { label: 'Activer le serveur local', anchor: 'enable-server' },
+        { label: 'Se connecter via Python', anchor: 'connect-python' },
+        { label: 'LM Studio vs Ollama', anchor: 'lm-studio-vs-ollama' },
+        { label: 'Dépannage', anchor: 'troubleshooting' },
+        { label: 'Contexte régional', anchor: 'regional-context' },
+        { label: 'Erreurs courantes', anchor: 'common-mistakes' },
+        { label: 'Lectures complémentaires', anchor: 'related-reading' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: 'Points clés',
+          items: [
+            'Téléchargez LM Studio depuis lmstudio.ai — disponible pour macOS (Apple Silicon + Intel), Windows et Linux (AppImage).',
+            'Minimum : 8 GB de RAM. Recommandé : 16 GB de RAM pour les modèles 7B. Les Mac Apple Silicon utilisent l\'accélération GPU par défaut.',
+            'Le navigateur de modèles intégré recherche Hugging Face directement — téléchargez des modèles GGUF sans quitter l\'application.',
+            'LM Studio inclut une interface de chat intégrée et un serveur compatible OpenAI sur le port 1234.',
+            'Idéal pour : les débutants qui préfèrent une interface graphique, ceux qui veulent comparer plusieurs modèles côte à côte, et tous ceux qui veulent un package complet sans commandes terminal.',
+          ],
+        },
+        whatIsLmStudio: {
+          title: 'Qu\'est-ce que LM Studio ?',
+          content: [
+            'LM Studio est une application desktop pour exécuter des LLM locaux. Elle fournit un navigateur de modèles graphique, une interface de chat intégrée et un serveur API local — tout dans une seule application. Sous le capot, elle utilise llama.cpp pour l\'inférence, le même moteur qui alimente [Ollama](/local-llms/how-to-install-ollama?lang=fr).',
+            'La différence clé par rapport à Ollama est que LM Studio est entièrement piloté par l\'interface graphique. Vous parcourez et téléchargez des modèles via l\'interface de l\'application, lancez des discussions en un clic et gérez les paramètres du modèle avec des curseurs plutôt que des fichiers de configuration.',
+            'LM Studio est gratuit pour un usage personnel. Elle a été développée par LM Studio, Inc. et lancée en 2023. En 2026, elle supporte l\'accélération NVIDIA CUDA, AMD ROCm et Apple Metal.',
+          ],
+        },
+        requirements: {
+          title: 'Quelles sont les exigences système pour LM Studio ?',
+          rows: [
+            { 'Spécification': 'Système d\'exploitation', 'Minimum': 'macOS 13.6, Windows 10, Ubuntu 22.04', 'Recommandé': 'macOS 14+, Windows 11, Ubuntu 24.04' },
+            { 'Spécification': 'RAM', 'Minimum': '8 GB', 'Recommandé': '16 GB ou plus' },
+            { 'Spécification': 'Stockage', 'Minimum': '500 MB pour l\'app + espace modèle', 'Recommandé': '50 GB+ libres pour plusieurs modèles' },
+            { 'Spécification': 'GPU (optionnel)', 'Minimum': 'NVIDIA GTX série 10 ou plus récent', 'Recommandé': 'NVIDIA RTX 30/40, AMD RX 6000+ ou Apple M-série' },
+          ],
+          columns: ['Spécification', 'Minimum', 'Recommandé'],
+        },
+        download: {
+          title: 'Comment télécharger et installer LM Studio ?',
+          numberedItems: [
+            'Allez sur lmstudio.ai et cliquez sur le bouton télécharger pour votre système d\'exploitation.',
+            'macOS : Ouvrez le fichier .dmg et glissez LM Studio vers Applications. Au premier lancement, approuvez l\'invite de sécurité dans Préférences Système → Confidentialité & Sécurité.',
+            'Windows : Exécutez l\'installeur LM-Studio-Setup.exe. LM Studio s\'installe dans %LOCALAPPDATA%\\LM-Studio.',
+            'Linux : Téléchargez le fichier .AppImage. Rendez-le exécutable avec `chmod +x LM-Studio-*.AppImage` et lancez-le. Aucune installation système requise.',
+            'Au premier lancement, LM Studio affiche un écran d\'accueil et vous invite à télécharger un modèle.',
+          ],
+        },
+        findModel: {
+          title: 'Comment trouver et télécharger un modèle dans LM Studio ?',
+          content: 'Utilisez l\'onglet Recherche (icône loupe dans la barre latérale gauche) pour trouver des modèles :',
+          numberedItems: [
+            'Cliquez sur l\'onglet Recherche dans la barre latérale gauche.',
+            'Tapez un nom de modèle — par exemple « llama 3.1 » ou « phi-3 mini ».',
+            'LM Studio affiche les modèles GGUF correspondants de Hugging Face avec les tailles de fichier et les options de quantification.',
+            'Sélectionnez un niveau de quantification. Pour 8 GB de RAM : choisissez Q4_K_M (~4,5 GB pour un modèle 7B). Pour 16 GB de RAM : Q5_K_M ou Q6_K offrent une meilleure qualité.',
+            'Cliquez sur la flèche de téléchargement. La progression s\'affiche dans l\'onglet Téléchargements.',
+          ],
+        },
+        firstChat: {
+          title: 'Comment commencer à discuter avec un modèle dans LM Studio ?',
+          numberedItems: [
+            'Cliquez sur l\'onglet Chat (icône bulle de dialogue) dans la barre latérale gauche.',
+            'En haut de la fenêtre de chat, cliquez sur la liste déroulante du sélecteur de modèle et choisissez votre modèle téléchargé.',
+            'LM Studio charge le modèle en mémoire — cela prend 5–30 secondes selon la taille du modèle et le matériel.',
+            'Tapez votre message dans le champ de saisie en bas et appuyez sur Entrée ou cliquez sur Envoyer.',
+            'La réponse du modèle s\'affiche token par token. La vitesse de génération apparaît dans la barre d\'état en bas de la fenêtre.',
+          ],
+        },
+        modelSettings: {
+          title: 'Comment ajuster les paramètres du modèle dans LM Studio ?',
+          content: 'Le panneau de droite dans l\'onglet Chat expose les paramètres d\'inférence clés :',
+          items: [
+            '**Température** (par défaut 0,8) : contrôle l\'aléatoire de la réponse. Les valeurs plus basses (0,1–0,4) produisent une sortie plus concentrée et prévisible. Les valeurs plus élevées (0,8–1,2) produisent une sortie plus variée et créative.',
+            '**Longueur du contexte** (par défaut 4096 tokens) : l\'historique de conversation maximal que le modèle peut traiter. Un contexte plus long utilise plus de RAM. La plupart des modèles 7B supportent 4096–8192 tokens.',
+            '**Couches GPU** (macOS/Linux/Windows avec GPU) : combien de couches du modèle décharger sur le GPU. Réglez au maximum pour l\'inférence la plus rapide si votre GPU a assez de VRAM.',
+            '**Invite système** : une instruction persistante ajoutée au début de chaque conversation. Utilisez-la pour définir le rôle ou le comportement du modèle.',
+          ],
+        },
+        localServer: {
+          title: 'Comment activer le serveur local de LM Studio ?',
+          content: 'LM Studio inclut un serveur local qui imite l\'API OpenAI. Toute application fonctionnant avec OpenAI peut utiliser votre modèle local via ce serveur :',
+          numberedItems: [
+            'Cliquez sur l\'onglet Serveur Local (l\'icône « <-> ») dans la barre latérale gauche.',
+            'Sélectionnez un modèle dans la liste déroulante du modèle en haut.',
+            'Cliquez sur « Démarrer le serveur ». Le serveur démarre sur http://localhost:1234.',
+            'Votre application doit définir `base_url = "http://localhost:1234/v1"` et n\'importe quelle chaîne comme clé API (le serveur accepte n\'importe quelle valeur).',
+          ],
+        },
+        localServerCode: {
+          title: 'Comment se connecter à LM Studio via Python ?',
+          codeBlock: 'from openai import OpenAI\n\nclient = OpenAI(\n    base_url="http://localhost:1234/v1",\n    api_key="not-needed"\n)\n\nresponse = client.chat.completions.create(\n    model="local-model",\n    messages=[{"role": "user", "content": "What is a local LLM?"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        vsOllama: {
+          title: 'Lequel choisir : LM Studio ou Ollama ?',
+          rows: [
+            { 'Facteur': 'Interface', 'LM Studio': 'Application desktop graphique', 'Ollama': 'Terminal + API' },
+            { 'Facteur': 'Source de modèles', 'LM Studio': 'Hugging Face (tout modèle GGUF)', 'Ollama': 'Bibliothèque Ollama (sélectionné, ~200 modèles)' },
+            { 'Facteur': 'Port API', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
+            { 'Facteur': 'Gestion des modèles', 'LM Studio': 'Navigateur GUI avec info taille fichier', 'Ollama': 'Commandes CLI (ollama pull, list, rm)' },
+            { 'Facteur': 'Automatisation', 'LM Studio': 'Limitée (orientée GUI)', 'Ollama': 'Forte (scripting, Docker, CI)' },
+            { 'Facteur': 'Idéal pour', 'LM Studio': 'Débutants, utilisateurs GUI, exploration de modèles', 'Ollama': 'Développeurs, automatisation, déploiements serveur' },
+          ],
+          columns: ['Facteur', 'LM Studio', 'Ollama'],
+        },
+        troubleshooting: {
+          title: 'Comment dépanner les problèmes courants de LM Studio ?',
+          faqs: [
+            {
+              q: 'LM Studio affiche « Not enough memory to load model »',
+              a: 'Le modèle nécessite plus de RAM que disponible. Fermez autres applications pour libérer de la mémoire, ou sélectionnez une quantification plus petite (Q3_K_S au lieu de Q4_K_M). Règle générale : multipliez la taille du fichier par 1,2 pour estimer la RAM requise. Un fichier de 4,5 GB nécessite ~5,4 GB de RAM libres.',
+            },
+            {
+              q: 'Le modèle génère très lentement (moins de 5 tokens/seconde)',
+              a: 'Le modèle s\'exécute entièrement sur le CPU. Vérifiez Couches GPU dans le panneau droit — si cela affiche 0, votre GPU n\'est pas utilisé. Sur macOS, LM Studio active Metal (GPU) automatiquement pour Apple Silicon. Sur Windows/Linux avec NVIDIA, assurez-vous que votre pilote est à jour et augmentez Couches GPU au maximum.',
+            },
+            {
+              q: 'Je ne peux pas trouver un modèle spécifique dans la recherche LM Studio',
+              a: 'LM Studio recherche Hugging Face pour les fichiers GGUF. Si un modèle n\'apparaît pas, essayez de rechercher directement par le nom du référentiel Hugging Face (par exemple « bartowski/Llama-3.1-8B-Instruct-GGUF »). Certains modèles plus récents peuvent ne pas être indexés.',
+            },
+            {
+              q: 'Le serveur local retourne des erreurs « model not found »',
+              a: 'Un modèle doit être chargé dans l\'onglet Serveur Local avant que le serveur puisse répondre. Ouvrez l\'onglet Serveur Local, sélectionnez un modèle dans la liste déroulante et cliquez sur Démarrer le serveur. Le nom du modèle dans les requêtes API peut être n\'importe quelle chaîne — LM Studio utilise le modèle actuellement chargé.',
+            },
+          ],
+        },
+        regionalContext: {
+          title: 'LM Studio pour les cas d\'usage sensibles à la confidentialité',
+          content: [
+            '**UE / RGPD** : La CNIL recommande le déploiement d\'IA locale pour les professionnels français traitant des données personnelles. LM Studio exécutant des modèles locaux est la configuration la plus préservant la confidentialité disponible pour les utilisateurs desktop. Aucun texte de prompt, contexte ou sortie n\'est transmis en dehors de l\'appareil — les mécanismes de transfert RGPD Article 46 ne s\'appliquent pas. Pour les professionnels de l\'UE gérant des données personnelles (documents juridiques, notes médicales, analyse financière), LM Studio sur un MacBook M-series ou une station de travail Windows avec GPU discret fournit un environnement d\'inférence locale entièrement conforme. Les directives BSI allemandes recommandent l\'inférence locale pour les systèmes d\'IA traitant des données personnelles sensibles. L\'interface graphique de LM Studio rend cette configuration accessible aux professionnels non techniques qui ne peuvent pas utiliser les outils de terminal comme Ollama.',
+            '**Japon (METI)** : Les directives de gouvernance de l\'IA du METI exigent de documenter où se produit l\'inférence d\'IA. LM Studio maintient un cache de modèles locaux à un chemin fixe sur le disque — toute l\'inférence est traçable au périphérique, au fichier de modèle et à la version. Les équipes d\'entreprise japonaises utilisent LM Studio comme outil d\'analyse de documents à zéro sortie pour les travaux de conformité et réglementaires sensibles.',
+            '**Chine** : LM Studio supporte les modèles Qwen2.5 en natif via la recherche Hugging Face — recherchez « qwen2.5 » dans le navigateur de modèles pour trouver toutes les tailles disponibles. Pour les flux de travail en langue chinoise, Qwen2.5 7B ou 14B offrent une efficacité de token de 30–40% meilleure sur le texte chinois que les modèles entraînés occidentaux du même nombre de paramètres. Toute l\'inférence s\'exécute localement en vertu de la Loi sur la sécurité des données chinoises (数据安全法) sans aucun appel API externe.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Quelles sont les erreurs courantes lors de l\'installation de LM Studio ?',
+          items: [
+            '**Ne pas allouer suffisamment de RAM système pour le modèle que vous avez sélectionné.** Vérifiez la taille du fichier modèle et multipliez par 1,2 — c\'est la RAM libre minimale requise. Un modèle 7B Q4_K_M de 4,5 GB nécessite ~5,4 GB de RAM libres.',
+            '**Utiliser un modèle pré-quantifié qui est encore trop volumineux pour la VRAM GPU.** Si un modèle dépasse la VRAM, LM Studio bascule vers l\'inférence CPU, 5–10× plus lente. Vérifiez la taille du fichier par rapport à la VRAM GPU avant le téléchargement.',
+            '**S\'attendre à des réponses instantanées de grands modèles sur des systèmes CPU uniquement.** Un modèle 7B sur CPU produit 8–20 tokens/sec — une réponse de 200 tokens prend 10–25 secondes. C\'est normal. Utilisez un modèle 3B pour des réponses plus rapides sur les machines CPU uniquement.',
+            '**Définir Couches GPU à 0 sur une machine NVIDIA** : LM Studio doit auto-détecter CUDA mais définit parfois par défaut 0 couches GPU après une installation fraîche. Ouvrez le panneau modèle → Couches GPU → glissez au maximum. Sur une RTX 4070 (12 GB VRAM), les couches max sur un modèle 7B passent de 8 tok/sec (CPU) à 80+ tok/sec (GPU) — une différence de 10×.',
+            '**Télécharger des modèles FP16 quand Q4_K_M est disponible** : Les modèles FP16 sont deux fois plus volumineux que Q4_K_M sans gain de qualité appréciable pour les tâches de chat. Un modèle 7B en FP16 est ~14 GB ; le même modèle à Q4_K_M est ~4,5 GB. Téléchargez toujours Q4_K_M par défaut sauf si vous avez une raison spécifique d\'utiliser une précision supérieure.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lectures complémentaires',
+          items: [
+            '[Qu\'est-ce que les LLM locaux ?](/local-llms/what-are-local-llms?lang=fr) — Concepts et composants clés',
+            '[Exécuter votre premier LLM local](/local-llms/run-first-local-llm?lang=fr) — Prochaines étapes après l\'installation',
+            '[Comment installer Ollama](/local-llms/how-to-install-ollama?lang=fr) — Alternative basée sur terminal à LM Studio',
+            '[Meilleurs modèles LLM locaux pour débutants](/local-llms/best-beginner-local-llm-models?lang=fr) — Recommandations de modèles par matériel',
+            '[Guide de matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) — Recommandations GPU et RAM pour obtenir les meilleures performances de LM Studio',
+            '[LLM locaux vs APIs cloud](/local-llms/local-llms-vs-cloud-apis?lang=fr) — Comparaison de coûts et de vitesse pour décider quand l\'inférence locale dans LM Studio est le bon choix',
+          ],
+        },
+        faqSection: {
+          title: 'FAQ',
+          faqs: [
+            {
+              q: 'LM Studio affiche « Not enough memory to load model »',
+              a: 'Le modèle nécessite plus de RAM que disponible. Fermez autres applications pour libérer de la mémoire, ou sélectionnez une quantification plus petite (Q3_K_S au lieu de Q4_K_M). Règle générale : multipliez la taille du fichier par 1,2 pour estimer la RAM requise. Un fichier de 4,5 GB nécessite ~5,4 GB de RAM libres.',
+            },
+            {
+              q: 'Le modèle génère très lentement (moins de 5 tokens/seconde)',
+              a: 'Le modèle s\'exécute entièrement sur le CPU. Vérifiez Couches GPU dans le panneau droit — si cela affiche 0, votre GPU n\'est pas utilisé. Sur macOS, LM Studio active Metal (GPU) automatiquement pour Apple Silicon. Sur Windows/Linux avec NVIDIA, assurez-vous que votre pilote est à jour et augmentez Couches GPU au maximum.',
+            },
+            {
+              q: 'Je ne peux pas trouver un modèle spécifique dans la recherche LM Studio',
+              a: 'LM Studio recherche Hugging Face pour les fichiers GGUF. Si un modèle n\'apparaît pas, essayez de rechercher directement par le nom du référentiel Hugging Face (par exemple « bartowski/Llama-3.1-8B-Instruct-GGUF »). Certains modèles plus récents peuvent ne pas être indexés.',
+            },
+            {
+              q: 'Le serveur local retourne des erreurs « model not found »',
+              a: 'Un modèle doit être chargé dans l\'onglet Serveur Local avant que le serveur puisse répondre. Ouvrez l\'onglet Serveur Local, sélectionnez un modèle dans la liste déroulante et cliquez sur Démarrer le serveur. Le nom du modèle dans les requêtes API peut être n\'importe quelle chaîne — LM Studio utilise le modèle actuellement chargé.',
+            },
+            {
+              q: 'LM Studio est-il gratuit ?',
+              a: 'Oui. LM Studio est gratuit pour un usage personnel sans limitations de fonctionnalités. Une licence commerciale est requise pour un usage professionnel — voir lmstudio.ai/pricing pour les conditions actuelles. En avril 2026, le niveau personnel n\'a pas de limites d\'utilisation, de restrictions de modèles ou de filigranes.',
+            },
+            {
+              q: 'Quelle est la différence entre LM Studio et Ollama ?',
+              a: 'LM Studio est une application desktop graphique — vous parcourez et téléchargez des modèles via une interface visuelle, lancez des discussions en un clic et ajustez les paramètres avec des curseurs. Ollama est un outil en ligne de commande et service d\'arrière-plan — plus rapide à configurer avec une seule commande, meilleur pour l\'automatisation et le scripting. Les deux utilisent le même moteur d\'inférence llama.cpp. Choisissez LM Studio pour un usage piloté par interface graphique ; choisissez Ollama pour les flux de travail de développeurs et l\'automatisation.',
+            },
+            {
+              q: 'Quels modèles fonctionnent avec LM Studio ?',
+              a: 'N\'importe quel modèle au format GGUF de Hugging Face. La recherche intégrée couvre l\'intégralité du hub de modèles Hugging Face. Les choix populaires incluent Llama 3.1 8B, Qwen2.5 7B, Mistral 7B, Phi-4 Mini et Gemma 3 9B. Recherchez par nom de modèle dans l\'onglet Discover. LM Studio affiche les tailles de fichier pour chaque niveau de quantification avant le téléchargement.',
+            },
+            {
+              q: 'LM Studio utilise-t-il mon GPU automatiquement ?',
+              a: 'Oui sur Apple Silicon — l\'accélération Metal est activée par défaut. Sur Windows et Linux avec GPU NVIDIA, LM Studio détecte CUDA automatiquement si les pilotes sont installés. Vérifiez le paramètre Couches GPU dans le panneau modèle — s\'il affiche 0 couche sur GPU, votre GPU n\'est pas utilisé. Augmentez Couches GPU au maximum pour utiliser pleinement la VRAM disponible.',
+            },
+            {
+              q: 'Où LM Studio stocke-t-il les modèles téléchargés ?',
+              a: 'Sur macOS : ~/Library/Application Support/LM Studio/Models/lmstudio-community/. Sur Windows : %USERPROFILE%\\.cache\\lm-studio\\models\\. Sur Linux : ~/.cache/lm-studio/models/. Vous pouvez modifier l\'emplacement du stockage dans LM Studio Paramètres → Général → Répertoire de stockage des modèles.',
+            },
+            {
+              q: 'Puis-je utiliser LM Studio avec VS Code ou Cursor ?',
+              a: 'Oui. Lancez le serveur local de LM Studio sur localhost:1234, puis configurez votre extension IDE pour utiliser http://localhost:1234/v1 comme URL de base API avec n\'importe quelle chaîne comme clé API. Les extensions VS Code qui supportent les APIs compatibles OpenAI (Continue, alternatives GitHub Copilot) fonctionnent avec LM Studio directement.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'LM Studio. (2026). « Documentation de LM Studio et notes de publication. » lmstudio.ai. https://lmstudio.ai/docs — Guides d\'installation officiels, documentation API et informations de compatibilité matérielle.',
+            'Hugging Face. (2026). « Hub de modèles GGUF. » https://huggingface.co/models?library=gguf — Répertoire complet des modèles quantifiés GGUF compatibles avec le navigateur de modèles de LM Studio.',
+            'Contributeurs llama.cpp. (2026). « llama.cpp — Moteur d\'inférence CPU/GPU. » https://github.com/ggerganov/llama.cpp — Backend d\'inférence utilisé par LM Studio, avec données de compatibilité matérielle et de performance.',
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
+        'headline': 'Installer LM Studio : guide de configuration de l\'application desktop pour macOS, Windows et Linux',
+        'description': 'Guide étape par étape d\'installation de LM Studio et configuration du premier modèle. Exécuteur de LLM local piloté par interface graphique avec interface de chat et serveur local compatible OpenAI.',
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio?lang=fr',
         'inLanguage': 'fr',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'about': [
+          { '@type': 'Thing', 'name': 'LM Studio' },
+          { '@type': 'Thing', 'name': 'LLM local' },
+          { '@type': 'Thing', 'name': 'Modèle GGUF' },
+          { '@type': 'Thing', 'name': 'API compatible OpenAI' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'llama.cpp' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'llama.cpp' }
+        ]
       },
-      sections: {},
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Comment installer LM Studio et exécuter votre premier modèle',
+        'totalTime': 'PT5M',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Télécharger LM Studio depuis lmstudio.ai' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Installer sur macOS, Windows ou Linux' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Rechercher un modèle dans l\'onglet Discover' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Télécharger la quantification Q4_K_M' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Ouvrir l\'onglet Chat et commencer à discuter' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'LM Studio affiche « Not enough memory to load model »', acceptedAnswer: { '@type': 'Answer', text: 'Le modèle nécessite plus de RAM que disponible. Fermez autres applications pour libérer de la mémoire, ou sélectionnez une quantification plus petite (Q3_K_S au lieu de Q4_K_M). Règle générale : multipliez la taille du fichier par 1,2 pour estimer la RAM requise. Un fichier de 4,5 GB nécessite ~5,4 GB de RAM libres.' } },
+          { '@type': 'Question', name: 'Le modèle génère très lentement (moins de 5 tokens/seconde)', acceptedAnswer: { '@type': 'Answer', text: 'Le modèle s\'exécute entièrement sur le CPU. Vérifiez Couches GPU dans le panneau droit — si cela affiche 0, votre GPU n\'est pas utilisé. Sur macOS, LM Studio active Metal (GPU) automatiquement pour Apple Silicon. Sur Windows/Linux avec NVIDIA, assurez-vous que votre pilote est à jour et augmentez Couches GPU au maximum.' } },
+          { '@type': 'Question', name: 'Je ne peux pas trouver un modèle spécifique dans la recherche LM Studio', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio recherche Hugging Face pour les fichiers GGUF. Si un modèle n\'apparaît pas, essayez de rechercher directement par le nom du référentiel Hugging Face (par exemple « bartowski/Llama-3.1-8B-Instruct-GGUF »). Certains modèles plus récents peuvent ne pas être indexés.' } },
+          { '@type': 'Question', name: 'Le serveur local retourne des erreurs « model not found »', acceptedAnswer: { '@type': 'Answer', text: 'Un modèle doit être chargé dans l\'onglet Serveur Local avant que le serveur puisse répondre. Ouvrez l\'onglet Serveur Local, sélectionnez un modèle dans la liste déroulante et cliquez sur Démarrer le serveur. Le nom du modèle dans les requêtes API peut être n\'importe quelle chaîne — LM Studio utilise le modèle actuellement chargé.' } },
+          { '@type': 'Question', name: 'LM Studio est-il gratuit ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. LM Studio est gratuit pour un usage personnel sans limitations de fonctionnalités. Une licence commerciale est requise pour un usage professionnel — voir lmstudio.ai/pricing pour les conditions actuelles. En avril 2026, le niveau personnel n\'a pas de limites d\'utilisation, de restrictions de modèles ou de filigranes.' } },
+          { '@type': 'Question', name: 'Quelle est la différence entre LM Studio et Ollama ?', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio est une application desktop graphique — vous parcourez et téléchargez des modèles via une interface visuelle, lancez des discussions en un clic et ajustez les paramètres avec des curseurs. Ollama est un outil en ligne de commande et service d\'arrière-plan — plus rapide à configurer avec une seule commande, meilleur pour l\'automatisation et le scripting. Les deux utilisent le même moteur d\'inférence llama.cpp.' } },
+          { '@type': 'Question', name: 'Quels modèles fonctionnent avec LM Studio ?', acceptedAnswer: { '@type': 'Answer', text: 'N\'importe quel modèle au format GGUF de Hugging Face. Les choix populaires incluent Llama 3.1 8B, Qwen2.5 7B, Mistral 7B, Phi-4 Mini et Gemma 3 9B. Recherchez par nom de modèle dans l\'onglet Discover. LM Studio affiche les tailles de fichier pour chaque niveau de quantification avant le téléchargement.' } },
+          { '@type': 'Question', name: 'LM Studio utilise-t-il mon GPU automatiquement ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui sur Apple Silicon — l\'accélération Metal est activée par défaut. Sur Windows et Linux avec GPU NVIDIA, LM Studio détecte CUDA automatiquement si les pilotes sont installés. Vérifiez le paramètre Couches GPU dans le panneau modèle — s\'il affiche 0 couche sur GPU, votre GPU n\'est pas utilisé.' } },
+          { '@type': 'Question', name: 'Où LM Studio stocke-t-il les modèles téléchargés ?', acceptedAnswer: { '@type': 'Answer', text: 'Sur macOS : ~/Library/Application Support/LM Studio/Models/lmstudio-community/. Sur Windows : %USERPROFILE%\\.cache\\lm-studio\\models\\. Sur Linux : ~/.cache/lm-studio/models/. Vous pouvez modifier l\'emplacement du stockage dans LM Studio Paramètres → Général → Répertoire de stockage des modèles.' } },
+          { '@type': 'Question', name: 'Puis-je utiliser LM Studio avec VS Code ou Cursor ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Lancez le serveur local de LM Studio sur localhost:1234, puis configurez votre extension IDE pour utiliser http://localhost:1234/v1 comme URL de base API avec n\'importe quelle chaîne comme clé API. Les extensions VS Code qui supportent les APIs compatibles OpenAI (Continue, alternatives GitHub Copilot) fonctionnent avec LM Studio directement.' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Comparaison LM Studio vs Ollama',
+        'numberOfItems': 6,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Interface', 'description': 'LM Studio : application desktop graphique. Ollama : terminal plus API.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Source de modèles', 'description': 'LM Studio : tout GGUF sur Hugging Face. Ollama : bibliothèque sélectionnée d\'environ 200 modèles.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Port API', 'description': 'LM Studio : localhost:1234. Ollama : localhost:11434.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Gestion des modèles', 'description': 'LM Studio : navigateur GUI avec tailles. Ollama : commandes CLI.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Automatisation', 'description': 'LM Studio : limitée, orientée GUI. Ollama : forte, support du scripting et Docker.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Idéal pour', 'description': 'LM Studio : débutants et utilisateurs GUI. Ollama : développeurs et déploiements serveur.' }
+        ]
+      },
     },
     ja: {
       theme: 'はじめに',
-      title: 'LM Studioのインストール方法：macOS、Windows、Linux向けデスクトップアプリケーションセットアップガイド',
-      seoTitle: 'LM Studio 2026インストール：GUI操作でローカルLLMを5分で起動',
-      metaDescription: 'LM Studio はターミナル不要のGUIアプリでローカルLLMを実行します。macOS・Windows・Linux対応。ダウンロードからモデル起動まで5分で完了。',
+      title: 'LM Studio のインストール方法：macOS・Windows・Linux 向けデスクトップアプリ設定ガイド',
+      seoTitle: 'LM Studio：2026年最高GUI本地LLM実行ツール',
+      intro: 'LM Studioは、ターミナルコマンドなしでローカルLLMを実行できる無料のデスクトップアプリケーションです。lmstudio.aiからインストーラーをダウンロードしてアプリを開き、モデルを名前で検索してダウンロードボタンをクリックしてチャットを開始します—プロセス全体が5分以内に完了します。2026年4月現在、LM StudioはmacOS（Apple SiliconおよびIntel）、Windows 10+、およびLinux（AppImage）で動作し、Hugging Faceの500,000以上のモデルライブラリから任意のGGUF量子化モデルをサポートしています。組み込みのチャットUI、localhost:1234上のOpenAI互換ローカルサーバー、およびApple Metal、NVIDIA CUDA、AMD ROCmの自動GPU加速が含まれています。',
+      metaDescription: 'ターミナル不要でローカルLLM実行。モデル検索、ダウンロード、チャット5分で完結。NVIDIA CUDA・AMD ROCm・Apple Metal対応。初心者向け完全ガイド。',
       publishDate: '2026-04-04',
+      dateModified: '2026-04-05',
       readTime: '7分で読める',
       educationalLevel: 'Beginner',
       primaryTerm: 'LM Studio',
+      toc: [
+        { label: 'キーポイント', anchor: 'key-takeaways' },
+        { label: 'LM Studioとは', anchor: 'what-is-lm-studio' },
+        { label: 'システム要件', anchor: 'system-requirements' },
+        { label: 'ダウンロードとインストール', anchor: 'download-and-install' },
+        { label: 'モデルの検索とダウンロード', anchor: 'find-and-download' },
+        { label: 'チャット開始', anchor: 'start-chatting' },
+        { label: 'モデル設定の調整', anchor: 'adjust-settings' },
+        { label: 'ローカルサーバーの有効化', anchor: 'enable-server' },
+        { label: 'Pythonで接続', anchor: 'connect-python' },
+        { label: 'LM Studio vs Ollama', anchor: 'lm-studio-vs-ollama' },
+        { label: 'トラブルシューティング', anchor: 'troubleshooting' },
+        { label: '地域コンテキスト', anchor: 'regional-context' },
+        { label: '一般的な間違い', anchor: 'common-mistakes' },
+        { label: '関連読み物', anchor: 'related-reading' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'ソース', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: '重要ポイント',
+          items: [
+            'LM Studio を lmstudio.ai からダウンロード—macOS（Apple Silicon + Intel）、Windows、および Linux（AppImage）で利用可能です。',
+            '最小要件：8GB RAM。推奨：7B モデル用に 16GB RAM。Apple Silicon Mac はデフォルトで GPU 加速を使用します。',
+            '組み込みモデルブラウザは Hugging Face を直接検索—アプリを離れずに GGUF モデルをダウンロード。',
+            'LM Studio は組み込みチャット UI と、ポート 1234 上の OpenAI 互換ローカルサーバーを含みます。',
+            '最適なユースケース：GUI を好む初心者、複数のモデルを並べて比較したいユーザー、ターミナルコマンドなしで完全なパッケージが必要な全員向け。',
+          ],
+        },
+        whatIsLmStudio: {
+          title: 'LM Studio とは',
+          content: [
+            'LM Studioはローカルのメッセージングシステムを実行するためのデスクトップアプリケーション。グラフィカルモデルブラウザ、組み込みのチャットインターフェース、およびローカルAPIサーバー—すべて1つのアプリケーションに含まれている。内部では、推論にllama.cppを使用。これはOllamaを操作するのと同じエンジン（[Ollama](/local-llms/how-to-install-ollama?lang=ja)）。',
+            'Ollamaとの主な違いは、LM StudioがGUIによって完全に駆動されていること。アプリケーションインターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャットを開始、構成ファイルではなくスライダーでモデル設定を管理。',
+            'LM Studioは個人の利用に無料。LM Studio、Inc.によって開発され、2023年に発売。2026年現在、NVIDIA CUDA、AMD ROCm、およびApple Metal加速をサポート。',
+          ],
+        },
+        requirements: {
+          title: 'LM Studioのシステム要件は何ですか？',
+          rows: [
+            { '仕様': 'オペレーティングシステム', '最小要件': 'macOS 13.6、Windows 10、Ubuntu 22.04', '推奨': 'macOS 14+、Windows 11、Ubuntu 24.04' },
+            { '仕様': 'RAM', '最小要件': '8GB', '推奨': '16GB以上' },
+            { '仕様': 'ストレージ', '最小要件': 'アプリ用500 MB + モデルスペース', '推奨': '複数のモデル用に50GB以上の空き容量' },
+            { '仕様': 'GPU（オプション）', '最小要件': 'NVIDIA GTX 10シリーズ以降', '推奨': 'NVIDIA RTX 30/40シリーズ、AMD RX 6000+、またはApple M-series' },
+          ],
+          columns: ['仕様', '最小要件', '推奨'],
+        },
+        download: {
+          title: 'LM Studioをダウンロードしてインストールする方法',
+          numberedItems: [
+            'lmstudio.aiにアクセスして、お使いのOSのダウンロードボタンをクリック。',
+            'macOS：.dmgファイルを開いてLM Studioをアプリケーションにドラッグ。初回起動時に、システム環境設定→プライバシーとセキュリティでセキュリティプロンプトを承認。',
+            'Windows：LM-Studio-Setup.exeインストーラーを実行。LM Studioは%LOCALAPPDATA%\\LM-Studioにインストール。',
+            'Linux：.AppImageファイルをダウンロード。`chmod +x LM-Studio-*.AppImage`で実行可能にして実行。システムインストール不要。',
+            '初回起動時に、LM Studioはウェルカムスクリーンを表示し、モデルのダウンロードをお願い。',
+          ],
+        },
+        findModel: {
+          title: 'LM StudioでモデルをNative検索してダウンロードする方法',
+          content: '検索タブ（左サイドバーの虫眼鏡アイコン）を使用してモデルを検索：',
+          numberedItems: [
+            '左サイドバーの検索タブをクリック。',
+            'モデル名を入力—例えば「llama 3.1」または「phi-3 mini」。',
+            'LM Studioはファイルサイズと量子化オプションを含むHugging FaceのマッチングGGUFモデルを表示。',
+            '量子化レベルを選択。8GBのRAM用：Q4_K_M（7Bモデルの場合～4.5GB）を選択。16GBのRAM用：Q5_K_MまたはQ6_Kの方が品質が良い。',
+            'ダウンロード矢印をクリック。プログレスはダウンロードタブに表示。',
+          ],
+        },
+        firstChat: {
+          title: 'LM StudioでモデルとのチャットをNative開始する方法',
+          numberedItems: [
+            '左サイドバーのチャットタブ（吹き出しアイコン）をクリック。',
+            'チャットウィンドウの上部で、モデルセレクタードロップダウンをクリックしてダウンロード済みモデルを選択。',
+            'LM Studioはモデルをメモリにロード—これはモデルサイズとハードウェアによって5～30秒かかる。',
+            '下部の入力フィールドにメッセージを入力し、Enterキーを押すか送信をクリック。',
+            'モデルの応答はトークンバイトークンでストリーム配信。生成速度はウィンドウの下部のステータスバーに表示。',
+          ],
+        },
+        modelSettings: {
+          title: 'LM Studioでモデル設定を調整する方法',
+          content: 'チャットタブの右パネルは主要な推論パラメータを公開：',
+          items: [
+            '**Temperature**（デフォルト0.8）：応答のランダム性を制御。低い値（0.1～0.4）はより焦点を絞った、予測可能な出力を生成。高い値（0.8～1.2）はより多様で創造的な出力を生成。',
+            '**Context Length**（デフォルト4096トークン）：モデルが処理できる最大会話履歴。より長いコンテキストはより多くのRAMを使用。ほとんどの7Bモデルは4096～8192トークンをサポート。',
+            '**GPU Layers**（macOS/Linux/Windows with GPU）：モデルレイヤーの数をGPUにオフロード。GPU用に十分なVRAMがあれば、高速推論のため最大に設定。',
+            '**System Prompt**：すべての会話の前に付加される永続的な指示。これを使用してモデルの役割または動作を設定。',
+          ],
+        },
+        localServer: {
+          title: 'LM StudioローカルサーバーをNative有効にする方法',
+          content: 'LM StudioにはOpenAI APIをミミックするローカルサーバーが含まれている。OpenAIで動作するアプリケーションはこのサーバーを通じてローカルモデルを使用可能：',
+          numberedItems: [
+            '左サイドバーのローカルサーバータブ（「<->」アイコン）をクリック。',
+            '上部のモデルドロップダウンでモデルを選択。',
+            '「サーバーを開始」をクリック。サーバーはhttp://localhost:1234で起動。',
+            'アプリケーションは`base_url = "http://localhost:1234/v1"`を設定し、APIキーとして任意の文字列を使用する必要がある（サーバーは任意の値を受け入れる）。',
+          ],
+        },
+        localServerCode: {
+          title: 'Pythonを介してLM Studioに接続する方法',
+          codeBlock: 'from openai import OpenAI\n\nclient = OpenAI(\n    base_url="http://localhost:1234/v1",\n    api_key="not-needed"\n)\n\nresponse = client.chat.completions.create(\n    model="local-model",\n    messages=[{"role": "user", "content": "What is a local LLM?"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        vsOllama: {
+          title: 'LM StudioまたはOllamaを選択する方法',
+          rows: [
+            { '要素': 'インターフェース', 'LM Studio': 'グラフィカルデスクトップアプリ', 'Ollama': 'ターミナル + API' },
+            { '要素': 'モデルソース', 'LM Studio': 'Hugging Face（任意のGGUFモデル）', 'Ollama': 'Ollama Library（キュレーション、～200モデル）' },
+            { '要素': 'APIポート', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
+            { '要素': 'モデル管理', 'LM Studio': 'ファイルサイズ情報を含むGUI Browser', 'Ollama': 'CLIコマンド（ollama pull、list、rm）' },
+            { '要素': 'Automation', 'LM Studio': '制限（GUI-focused）', 'Ollama': '強い（Scripting、Docker、CI）' },
+            { '要素': '最適ユースケース', 'LM Studio': '初心者、GUIユーザー、モデル探索', 'Ollama': '開発者、Automation、Server deployments' },
+          ],
+          columns: ['要素', 'LM Studio', 'Ollama'],
+        },
+        troubleshooting: {
+          title: 'LM Studioの一般的な問題をNativeトラブルシューティングする方法',
+          faqs: [
+            {
+              q: 'LM Studioが「モデルをロードするメモリが不足しています」と表示される',
+              a: 'モデルには利用可能なメモリより多いRAMが必要。他のアプリケーションを閉じてメモリを解放するか、より小さい量子化を選択（Q4_K_MではなくQ3_K_S）。一般的なルール：推定RAMを取得するためにモデルファイルサイズに1.2を掛ける。4.5GBファイルは～5.4GB空きRAMが必要。',
+            },
+            {
+              q: 'モデルが非常にゆっくり生成される（秒あたり5トークン未満）',
+              a: 'モデルはCPU上で完全に実行されている。右パネルのGPU Layersをチェック—0が表示される場合、GPUは使用されていない。macOSでは、LM StudioはApple SiliconのMetalを自動的に有効にする。Windows/Linuxの場合、NVIDIAドライバーが最新であることを確認し、GPU LayersをNathan大値に増やす。',
+            },
+            {
+              q: 'LM Studio検索で特定のモデルが見つからない',
+              a: 'LM Studioはこれ以降GGUFファイルをHugging Faceで検索。モデルが表示されない場合は、Hugging FaceリポジトリNativeを直接検索（例：「bartowski/Llama-3.1-8B-Instruct-GGUF」）。新しいモデルの一部はまだインデックス化されていない可能性。',
+            },
+            {
+              q: 'ローカルサーバーが「モデルが見つかりません」エラーを返す',
+              a: 'モデルは、サーバーが応答する前にローカルサーバータブにロードされている必要がある。ローカルサーバータブを開き、ドロップダウンからモデルを選択し、サーバーの開始をクリック。APIリクエストのモデル名は任意の文字列にできる—LM Studioは現在ロードされているモデルを使用。',
+            },
+          ],
+        },
+        regionalContext: {
+          title: 'プライバシーに敏感なユースケース向けのLM Studio',
+          content: [
+            '**日本（METI）**：METI AI Governance Guidelinesは、AI推論がどこで発生するかを文書化することを要求。LM Studioは固定パスをディスク上に保持—すべての推論はデバイス、モデルファイル、およびバージョンに追跡可能。日本の企業チームは、機密規制およびコンプライアンス作業のためのゼロ出口文書分析ツールとしてLM Studioを使用。METI要件では、リモートAPI呼び出しなしで、オンプレミス推論実装が必須。',
+            '**東アジア地域**：LM Studioは、Hugging Face検索を通じてQwen2.5モデルをネイティブにサポート—モデルブラウザで「qwen2.5」を検索してすべての利用可能なサイズを見つける。中国語テキストワークロードの場合、Qwen2.5 7Bまたは14Bは、同じパラメータ数の西部トレーニングモデルよりも中国語テキストで30～40％優れたトークン効率を提供。',
+            '**データセキュリティ**：LM Studioのすべての推論はローカルで実行され、外部API呼び出しはない。これは、データセキュリティ法（数据安全法）など、厳密なローカルデータ処理要件を持つすべての地域で完全にコンプライアント。',
+          ],
+        },
+        commonMistakes: {
+          title: 'LM Studioをインストールするときの一般的な間違いは何ですか？',
+          items: [
+            '**選択したモデルに十分なシステムRAMを割り当てていない。** モデルファイルサイズをチェックして1.2を掛ける—これは必要な最小空きRAM。4.5GB Q4_K_M 7Bモデルは～5.4GB空きRAMが必要。',
+            '**GPU VRAMにはまだ大きすぎる事前量子化モデルを使用している。** モデルがVRAMを超える場合、LM StudioはCPU推論にフォールバック—5～10倍低速。ダウンロード前にファイルサイズとGPU VRAMを確認。',
+            '**CPU専用システムから大規模モデルからの即座の応答を期待している。** 7Bモデルは秒あたり8～20トークンを生成—200トークン応答は10～25秒かかる。これは正常。CPU専用マシンで高速応答を見つけるためには3Bモデルを使用。',
+            '**NVIDIAマシンのGPU Layersを0に設定している：** LM StudioはCUDAを自動検出すべきだが、新規インストール後に時々デフォルト0 GPUレイヤーになる。モデルパネルを開く→GPU Layers→最大値にドラッグ。RTX 4070（12GB VRAM）では、7Bモデルで最大レイヤーは8 tok/sec（CPU）から80+ tok/sec（GPU）に移動—10倍の違い。',
+            '**FP16モデルが利用可能であるときQ4_K_Mをダウンロードしている。** FP16モデルはチャットタスク用のNativeQ4_K_Mより2倍大きい。7BモデルのFP16は～14GB；同じモデルがQ4_K_MではNative～4.5GB。より高い精度を使用する特定の理由がない限り、常にデフォルトとしてQ4_K_Mをダウンロード。',
+          ],
+        },
+        relatedReading: {
+          title: '関連読み物',
+          items: [
+            '[ローカルLLMとは何ですか？](/local-llms/what-are-local-llms?lang=ja) — コア概念とコンポーネント',
+            '[はじめてのローカルLLMを実行](/local-llms/run-first-local-llm?lang=ja) — インストール後の次のステップ',
+            '[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja) — LM Studioのターミナルベースの代替案',
+            '[初心者向けベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models?lang=ja) — ハードウェアごとのモデル推奨',
+            '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026?lang=ja) — LM StudioでNativeハードウェアから最高のパフォーマンスを取得するためのGPUおよびRAM推奨',
+            '[ローカルLLM対クラウドAPI](/local-llms/local-llms-vs-cloud-apis?lang=ja) — ローカル推論がNativeハードウェアの正しい選択であるときを決定するためのコストと速度の比較',
+          ],
+        },
+        faqSection: {
+          title: 'FAQ',
+          faqs: [
+            { q: 'LM Studioが「モデルをロードするメモリが不足しています」と表示される', a: 'モデルには利用可能なメモリより多いRAMが必要。他のアプリケーションを閉じてメモリを解放するか、より小さい量子化を選択。一般的なルール：推定RAMを取得するためにモデルファイルサイズに1.2を掛ける。4.5GBファイルは～5.4GB空きRAMが必要。' },
+            { q: 'モデルが非常にゆっくり生成される（秒あたり5トークン未満）', a: 'モデルはCPU上で完全に実行。右パネルのGPU Layersをチェック—0が表示される場合、GPUは使用されていない。macOSでは、LM StudioはApple SiliconのMetalを自動的に有効。Windows/Linuxの場合、NVIDIAドライバーが最新であることを確認し、GPU Layersを最大値に増やす。' },
+            { q: 'LM Studio検索で特定のモデルが見つからない', a: 'LM Studioはこれ以降GGUFファイルをHugging Faceで検索。モデルが表示されない場合は、Hugging FaceリポジトリNameを直接検索。新しいモデルの一部はまだインデックス化されていない可能性。' },
+            { q: 'ローカルサーバーが「モデルが見つかりません」エラーを返す', a: 'モデルは、サーバーが応答する前にローカルサーバータブにロードされている必要がある。ローカルサーバータブを開き、ドロップダウンからモデルを選択し、サーバーの開始をクリック。APIリクエストのモデル名は任意の文字列にできる。' },
+            { q: 'LM Studioは無料ですか？', a: 'はい。LM Studioは個人使用のための機能制限なし無料。商用ライセンスはビジネス使用に必要。2026年4月の時点で、個人層は使用量の上限、モデル制限、または透かしはない。' },
+            { q: 'LM StudioとOllamaの違いは何ですか？', a: 'LM Studioはグラフィカルデスクトップアプリ。視覚的インターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャット開始、スライダーで設定を調整。Ollamaはコマンドラインツールおよびバックグラウンドサービス—1つのコマンドで設定するのが高速。' },
+            { q: 'LM Studioはどのモデルで動作しますか？', a: 'Hugging Faceからの任意のGGUF形式モデル。人気のある選択肢には、Llama 3.1 8B、Qwen2.5 7B、Mistral 7B、Phi-4 Mini、およびGemma 3 9Bが含まれる。Discover tabでモデル名で検索。LM Studioはダウンロード前に各量子化レベルのファイルサイズを表示。' },
+            { q: 'LM StudioはGPUを自動的に使用していますか？', a: 'Apple Siliconでははい—Metal加速はデフォルトで有効。Windows and Linux with NVIDIAの場合、ドライバーがインストールされている場合、LM StudioはCUDAを自動検出。モデルパネルのGPU Layers設定をチェック—GPU上に0レイヤーが表示される場合、GPUは使用されていない。' },
+            { q: 'LM Studioはダウンロードモデルをどこに保存していますか？', a: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows：%USERPROFILE%\.cache\lm-studio\models\。Linux：~/.cache/lm-studio/models/。LM Studio Settings→General→Model Storage Directoryでストレージロケーションを変更。' },
+            { q: 'VS CodeやCursorでLM Studioを使用できますか？', a: 'はい。localhost:1234でLM Studio localサーバーを起動し、IDE拡張を設定してhttp://localhost:1234/v1をAPI基本URLとして使用し、API キーとして任意の文字列を使用。OpenAI互換APIをサポートするVS Code拡張はLM Studioでボックスから動作。' },
+          ],
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            'LM Studio. (2026). "LM Studioドキュメンテーションおよびリリースノート。" lmstudio.ai. https://lmstudio.ai/docs — 公式インストールガイド、APIドキュメンテーション、およびハードウェア互換情報。',
+            'Hugging Face. (2026). "GGUFモデルハブ。" https://huggingface.co/models?library=gguf — LM Studio model browserと互換性のあるGGUF-量子化モデルの完全ディレクトリ。',
+            'llama.cppコントリビューター。(2026). "llama.cpp — CPU/GPU推論エンジン。" https://github.com/ggerganov/llama.cpp — LM Studioによって使用される推論バックエンド、ハードウェア互換性およびパフォーマンスデータ付き。',
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
+        'headline': 'LM Studioのインストール：macOS、Windows、Linuxのためのデスクトップアプリセットアップガイド',
+        'description': 'LM Studioのステップバイステップインストールおよびはじめてのモデルセットアップ。チャットUIおよびOpenAI互換ローカルサーバーを備えたGUI駆動ローカルLLMランナー。',
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio?lang=ja',
-        'inLanguage': 'ja',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'inLanguage': 'ja'
       },
-      sections: {},
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'LM Studioをインストールしてはじめてのモデルを実行する方法',
+        'totalTime': 'PT5M',
+        'inLanguage': 'ja',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'lmstudio.aiからLM Studioをダウンロード' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'macOS、WindowsまたはLinuxにインストール' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Discoverタブでモデルを検索' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Q4_K_M量子化をダウンロード' },
+          { '@type': 'HowToStep', 'position': 5, 'name': 'Chatタブを開いてチャット開始' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'ja',
+        mainEntity: [
+          { '@type': 'Question', name: 'LM Studioが「モデルをロードするメモリが不足しています」と表示される', acceptedAnswer: { '@type': 'Answer', text: 'モデルには利用可能なメモリより多いRAMが必要。他のアプリケーションを閉じてメモリを解放するか、より小さい量子化を選択。' } },
+          { '@type': 'Question', name: 'モデルが非常にゆっくり生成される（秒あたり5トークン未満）', acceptedAnswer: { '@type': 'Answer', text: 'モデルはCPU上で完全に実行。右パネルのGPU Layersをチェック—0が表示される場合、GPUは使用されていない。' } },
+          { '@type': 'Question', name: 'LM Studio検索で特定のモデルが見つからない', acceptedAnswer: { '@type': 'Answer', text: 'LM Studioはこれ以降GGUFファイルをHugging Faceで検索。モデルが表示されない場合は、Hugging FaceリポジトリNameを直接検索。' } },
+          { '@type': 'Question', name: 'ローカルサーバーが「モデルが見つかりません」エラーを返す', acceptedAnswer: { '@type': 'Answer', text: 'モデルは、サーバーが応答する前にローカルサーバータブにロードされている必要がある。ローカルサーバータブを開き、ドロップダウンからモデルを選択。' } },
+          { '@type': 'Question', name: 'LM Studioは無料ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。LM Studioは個人使用のための機能制限なし無料。商用ライセンスはビジネス使用に必要。' } },
+          { '@type': 'Question', name: 'LM StudioとOllamaの違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'LM Studioはグラフィカルデスクトップアプリ。視覚的インターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャット開始。Ollamaはコマンドラインツール。' } },
+          { '@type': 'Question', name: 'LM Studioはどのモデルで動作しますか？', acceptedAnswer: { '@type': 'Answer', text: 'Hugging Faceからの任意のGGUF形式モデル。人気のある選択肢には、Llama 3.1 8B、Qwen2.5 7B、Mistral 7B、Phi-4 Mini、およびGemma 3 9Bが含まれる。' } },
+          { '@type': 'Question', name: 'LM StudioはGPUを自動的に使用していますか？', acceptedAnswer: { '@type': 'Answer', text: 'Apple Siliconでははい—Metal加速はデフォルトで有効。Windows and Linux with NVIDIAの場合、LM StudioはCUDAを自動検出。' } },
+          { '@type': 'Question', name: 'LM Studioはダウンロードモデルをどこに保存していますか？', acceptedAnswer: { '@type': 'Answer', text: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows：%USERPROFILE%\.cache\lm-studio\models\。Linux：~/.cache/lm-studio/models/。' } },
+          { '@type': 'Question', name: 'VS CodeやCursorでLM Studioを使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。localhost:1234でLM Studio localサーバーを起動し、IDE拡張を設定してhttp://localhost:1234/v1をAPI基本URLとして使用。' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'LM Studio vs Ollama Comparison',
+        'numberOfItems': 6,
+        'inLanguage': 'ja',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Interface', 'description': 'LM Studio: graphical desktop app. Ollama: terminal plus API.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Model source', 'description': 'LM Studio: any GGUF on Hugging Face. Ollama: curated library of ~200 models.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'API port', 'description': 'LM Studio: localhost:1234. Ollama: localhost:11434.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Model management', 'description': 'LM Studio: GUI browser with sizes. Ollama: CLI commands.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Automation', 'description': 'LM Studio: limited, GUI-focused. Ollama: strong, scripting and Docker support.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Best for', 'description': 'LM Studio: beginners and GUI users. Ollama: developers and server deployments.' }
+        ]
+      },
     },
     zh: {
       theme: '入门',
-      title: '如何安装 LM Studio：macOS、Windows 和 Linux 桌面应用程序设置指南',
-      seoTitle: 'LM Studio 2026安装指南：无需命令行，5分钟运行本地LLM',
-      metaDescription: 'LM Studio 通过图形界面运行本地LLM，无需终端命令。支持macOS、Windows和Linux。从下载到首次模型对话仅需5分钟完成。',
+      title: '如何安装 LM Studio：macOS、Windows 和 Linux 的桌面应用设置指南',
+      seoTitle: 'LM Studio 2026：本地LLM最强免费GUI工具',
+      intro: 'LM Studio 是一个免费的桌面应用程序，可以不需要终端命令就运行本地 LLM。从 lmstudio.ai 下载安装程序，打开应用，按名称搜索模型，单击下载，然后开始聊天 - 整个过程在 5 分钟内完成。截至 2026 年 4 月，LM Studio 在 macOS（Apple Silicon 和 Intel）、Windows 10+ 和 Linux（AppImage）上运行，支持 Hugging Face 500,000 多个模型库中的任何 GGUF 量化模型。它包括内置聊天 UI、localhost:1234 上的 OpenAI 兼容本地服务器，以及 Apple Metal、NVIDIA CUDA 和 AMD ROCm 的自动 GPU 加速。',
+      metaDescription: '无需终端轻松运行本地LLM。搜索模型、下载、聊天仅需5分钟。支持NVIDIA CUDA、AMD ROCm、Apple Metal加速。完整入门指南和Ollama对比。',
       publishDate: '2026-04-04',
+      dateModified: '2026-04-05',
       readTime: '阅读约7分钟',
       educationalLevel: 'Beginner',
       primaryTerm: 'LM Studio',
+      toc: [
+        { label: '关键要点', anchor: 'key-takeaways' },
+        { label: 'LM Studio 是什么', anchor: 'what-is-lm-studio' },
+        { label: '系统要求', anchor: 'system-requirements' },
+        { label: '下载和安装', anchor: 'download-and-install' },
+        { label: '查找和下载模型', anchor: 'find-and-download' },
+        { label: '开始聊天', anchor: 'start-chatting' },
+        { label: '调整模型设置', anchor: 'adjust-settings' },
+        { label: '启用本地服务器', anchor: 'enable-server' },
+        { label: '通过 Python 连接', anchor: 'connect-python' },
+        { label: 'LM Studio vs Ollama', anchor: 'lm-studio-vs-ollama' },
+        { label: '故障排除', anchor: 'troubleshooting' },
+        { label: '地区背景', anchor: 'regional-context' },
+        { label: '常见错误', anchor: 'common-mistakes' },
+        { label: '相关阅读', anchor: 'related-reading' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: '资源', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          title: '核心要点',
+          items: [
+            '从 lmstudio.ai 下载 LM Studio - 可在 macOS（Apple Silicon + Intel）、Windows 和 Linux（AppImage）上使用。',
+            '最低要求：8GB RAM。推荐：7B 模型使用 16GB RAM。Apple Silicon Mac 默认使用 GPU 加速。',
+            '内置模型浏览器直接搜索 Hugging Face - 不离开应用下载 GGUF 模型。',
+            'LM Studio 包括内置聊天 UI 和端口 1234 上的 OpenAI 兼容本地服务器。',
+            '最适合：喜欢 GUI 的初学者、想并排比较多个模型的用户、需要完整包而不使用终端命令的所有人。',
+          ],
+        },
+        whatIsLmStudio: {
+          title: 'LM Studio 是什么？',
+          content: [
+            'LM Studio 是运行本地 LLM 的桌面应用程序。它提供图形模型浏览器、内置聊天界面和本地 API 服务器 - 全部在一个应用中。在内部，它使用 llama.cpp 进行推理，这是与 Ollama（[Ollama](/local-llms/how-to-install-ollama?lang=zh)）相同的引擎。',
+            'LM Studio 与 Ollama 的主要区别是它完全由 GUI 驱动。您通过应用界面浏览和下载模型、通过一次单击启动聊天，并使用滑块而不是配置文件管理模型设置。',
+            'LM Studio 可供个人使用免费。由 LM Studio，Inc. 开发，2023 年发布。截至 2026 年，它支持 NVIDIA CUDA、AMD ROCm 和 Apple Metal 加速。',
+          ],
+        },
+        requirements: {
+          title: 'LM Studio 的系统要求是什么？',
+          rows: [
+            { '规格': '操作系统', '最低要求': 'macOS 13.6、Windows 10、Ubuntu 22.04', '推荐': 'macOS 14+、Windows 11、Ubuntu 24.04' },
+            { '规格': 'RAM', '最低要求': '8GB', '推荐': '16GB 或更高' },
+            { '规格': '存储', '最低要求': 'App 500 MB + 模型空间', '推荐': '50GB+ 多个模型的空闲空间' },
+            { '规格': 'GPU（可选）', '最低要求': 'NVIDIA GTX 10 系列或更新版本', '推荐': 'NVIDIA RTX 30/40 系列、AMD RX 6000+ 或 Apple M-series' },
+          ],
+          columns: ['规格', '最低要求', '推荐'],
+        },
+        download: {
+          title: '如何下载和安装 LM Studio',
+          numberedItems: [
+            '访问 lmstudio.ai 并单击您的操作系统的下载按钮。',
+            'macOS：打开 .dmg 文件并将 LM Studio 拖到应用程序。首次启动时，在系统偏好设置 → 隐私和安全中批准安全提示。',
+            'Windows：运行 LM-Studio-Setup.exe 安装程序。LM Studio 安装在 %LOCALAPPDATA%\\LM-Studio。',
+            'Linux：下载 .AppImage 文件。用 `chmod +x LM-Studio-*.AppImage` 使其可执行并运行。不需要系统安装。',
+            '首次启动时，LM Studio 会显示欢迎屏幕并提示您下载模型。',
+          ],
+        },
+        findModel: {
+          title: '如何在 LM Studio 中查找和下载模型',
+          content: '使用搜索选项卡（左侧边栏中的放大镜图标）查找模型：',
+          numberedItems: [
+            '单击左侧边栏中的搜索选项卡。',
+            '键入模型名称 - 例如"llama 3.1"或"phi-3 mini"。',
+            'LM Studio 显示来自 Hugging Face 的匹配 GGUF 模型，带有文件大小和量化选项。',
+            '选择量化级别。对于 8GB RAM：选择 Q4_K_M（7B 模型约 4.5GB）。对于 16GB RAM：Q5_K_M 或 Q6_K 提供更好的质量。',
+            '单击下载箭头。进度显示在下载选项卡中。',
+          ],
+        },
+        firstChat: {
+          title: '如何在 LM Studio 中开始与模型聊天',
+          numberedItems: [
+            '单击左侧边栏中的聊天选项卡（语音气泡图标）。',
+            '在聊天窗口顶部，单击模型选择器下拉菜单并选择您下载的模型。',
+            'LM Studio 将模型加载到内存 - 这根据模型大小和硬件需要 5-30 秒。',
+            '在底部的输入字段中输入您的消息，然后按 Enter 或单击发送。',
+            '模型的响应逐个令牌流式传输。生成速度出现在窗口底部的状态栏中。',
+          ],
+        },
+        modelSettings: {
+          title: '如何在 LM Studio 中调整模型设置',
+          content: '聊天选项卡中的右窗格公开关键推理参数：',
+          items: [
+            '**温度**（默认 0.8）：控制响应随机性。较低的值（0.1–0.4）产生更集中、可预测的输出。较高的值（0.8–1.2）产生更多样化、创意的输出。',
+            '**上下文长度**（默认 4096 令牌）：模型可以处理的最大对话历史。更长的上下文使用更多 RAM。大多数 7B 模型支持 4096–8192 令牌。',
+            '**GPU 层**（macOS/Linux/Windows with GPU）：有多少模型层卸载到 GPU。如果您的 GPU 有足够的 VRAM，设置为最大以实现最快推理。',
+            '**系统提示**：在每次对话前添加的持久指令。使用此设置模型的角色或行为。',
+          ],
+        },
+        localServer: {
+          title: '如何启用 LM Studio 本地服务器',
+          content: 'LM Studio 包括一个模仿 OpenAI API 的本地服务器。任何适用于 OpenAI 的应用都可以通过此服务器使用您的本地模型：',
+          numberedItems: [
+            '单击左侧边栏中的本地服务器选项卡（"<->"图标）。',
+            '在顶部的模型下拉菜单中选择一个模型。',
+            '单击"启动服务器"。服务器在 http://localhost:1234 上启动。',
+            '您的应用应设置 `base_url = "http://localhost:1234/v1"` 和任何字符串作为 API 密钥（服务器接受任何值）。',
+          ],
+        },
+        localServerCode: {
+          title: '如何通过 Python 连接到 LM Studio',
+          codeBlock: 'from openai import OpenAI\n\nclient = OpenAI(\n    base_url="http://localhost:1234/v1",\n    api_key="not-needed"\n)\n\nresponse = client.chat.completions.create(\n    model="local-model",\n    messages=[{"role": "user", "content": "What is a local LLM?"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        vsOllama: {
+          title: '应该使用 LM Studio 还是 Ollama',
+          rows: [
+            { '因素': '界面', 'LM Studio': '图形桌面应用', 'Ollama': '终端 + API' },
+            { '因素': '模型源', 'LM Studio': 'Hugging Face（任何 GGUF 模型）', 'Ollama': 'Ollama 库（策划，约 200 个模型）' },
+            { '因素': 'API 端口', 'LM Studio': 'localhost:1234', 'Ollama': 'localhost:11434' },
+            { '因素': '模型管理', 'LM Studio': '带文件大小信息的 GUI 浏览器', 'Ollama': 'CLI 命令（ollama pull、list、rm）' },
+            { '因素': '自动化', 'LM Studio': '有限（GUI 为中心）', 'Ollama': '强大（脚本、Docker、CI）' },
+            { '因素': '最适合', 'LM Studio': '初学者、GUI 用户、模型探索', 'Ollama': '开发人员、自动化、服务器部署' },
+          ],
+          columns: ['因素', 'LM Studio', 'Ollama'],
+        },
+        troubleshooting: {
+          title: '如何排查 LM Studio 常见问题',
+          faqs: [
+            {
+              q: 'LM Studio 显示"没有足够的内存来加载模型"',
+              a: '模型需要比可用更多的 RAM。关闭其他应用以释放内存，或选择更小的量化（Q3_K_S 而不是 Q4_K_M）。一般规则：将模型文件大小乘以 1.2 以估计所需的 RAM。4.5GB 文件需要约 5.4GB 可用 RAM。',
+            },
+            {
+              q: '模型生成非常缓慢（每秒 5 个令牌以下）',
+              a: '模型完全在 CPU 上运行。检查右窗格中的 GPU 层 - 如果显示 0，您的 GPU 未被使用。在 macOS 上，LM Studio 自动为 Apple Silicon 启用 Metal（GPU）。在 Windows/Linux with NVIDIA 上，确保您的驱动程序是最新的，并将 GPU 层增加到显示的最大值。',
+            },
+            {
+              q: '我在 LM Studio 搜索中找不到特定模型',
+              a: 'LM Studio 搜索 Hugging Face 以查找 GGUF 文件。如果模型没有出现，请尝试直接按 Hugging Face 存储库名称搜索（例如"bartowski/Llama-3.1-8B-Instruct-GGUF"）。某些较新的模型可能尚未建立索引。',
+            },
+            {
+              q: '本地服务器返回"找不到模型"错误',
+              a: '必须在本地服务器选项卡中加载模型，服务器才能响应。打开本地服务器选项卡，从下拉菜单中选择一个模型，然后单击启动服务器。API 请求中的模型名称可以是任何字符串 - LM Studio 使用当前加载的模型。',
+            },
+          ],
+        },
+        regionalContext: {
+          title: '对隐私敏感的用例 LM Studio',
+          content: [
+            '**中国（数据安全法）**：LM Studio 支持通过 Hugging Face 搜索原生 Qwen2.5 模型 - 在模型浏览器中搜索"qwen2.5"以查找所有可用大小。对于中文文本工作流，Qwen2.5 7B 或 14B 比同参数数量的西方训练模型在中文文本上提供 30-40% 更好的令牌效率。所有推理在本地运行，根据中国数据安全法（数据安全法），无外部 API 调用。',
+            '**亚太地区（数据跨境）**：LM Studio 在本地运行所有推理，符合 MLAI（多边人工智能）框架和地区数据驻留要求。对于在亚太地区处理敏感数据的企业，LM Studio 消除了数据跨越国界的风险。',
+            '**企业部署**：LM Studio 提供零出口推理，适合金融、医疗和法律行业的监管合规。所有数据留在本地设备上，简化了审计和数据保护认证。',
+          ],
+        },
+        commonMistakes: {
+          title: '安装 LM Studio 时常见的错误是什么',
+          items: [
+            '**未为所选模型分配足够的系统 RAM。** 检查模型文件大小并乘以 1.2 - 这是所需的最小可用 RAM。4.5GB Q4_K_M 7B 模型需要约 5.4GB 可用 RAM。',
+            '**使用预量化模型仍然对您的 GPU VRAM 来说太大。** 如果模型超过 VRAM，LM Studio 会回退到 CPU 推理，速度快 5-10 倍。在下载前检查文件大小与您的 GPU VRAM。',
+            '**期望来自 CPU 专用系统上大型模型的即时响应。** 7B 模型在 CPU 上生成 8-20 令牌/秒 - 200 令牌响应需要 10-25 秒。这是正常的。对于仅 CPU 机器上的更快响应，使用 3B 模型。',
+            '**在 NVIDIA 机器上设置 GPU 层为 0：** LM Studio 应自动检测 CUDA，但在新安装后有时默认为 0 GPU 层。打开模型面板 → GPU 层 → 拖到最大。在 RTX 4070（12GB VRAM）上，7B 模型的最大层从 8 tok/sec（CPU）移动到 80+ tok/sec（GPU）- 10 倍差异。',
+            '**当 Q4_K_M 可用时下载 FP16 模型。** FP16 模型对于聊天任务比 Q4_K_M 大两倍，质量收益可忽略不计。7B 模型的 FP16 约为 14GB；同一模型在 Q4_K_M 约为 4.5GB。除非您有特定理由使用更高精度，否则始终默认下载 Q4_K_M。',
+          ],
+        },
+        relatedReading: {
+          title: '延伸阅读',
+          items: [
+            '[什么是本地 LLM？](/local-llms/what-are-local-llms?lang=zh) — 核心概念和组件',
+            '[运行您的第一个本地 LLM](/local-llms/run-first-local-llm?lang=zh) — 安装后的后续步骤',
+            '[如何安装 Ollama](/local-llms/how-to-install-ollama?lang=zh) — LM Studio 的基于终端的替代方案',
+            '[初学者最佳本地 LLM 模型](/local-llms/best-beginner-local-llm-models?lang=zh) — 按硬件的模型建议',
+            '[本地 LLM 硬件指南 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh) — GPU 和 RAM 建议以从您的硬件获得 LM Studio 的最佳性能',
+            '[本地 LLM vs 云 API](/local-llms/local-llms-vs-cloud-apis?lang=zh) — 成本和速度比较以决定何时本地 LM Studio 推理是正确的选择',
+          ],
+        },
+        faqSection: {
+          title: 'FAQ',
+          faqs: [
+            { q: 'LM Studio 显示"没有足够的内存来加载模型"', a: '模型需要比可用更多的 RAM。关闭其他应用以释放内存，或选择更小的量化。一般规则：将模型文件大小乘以 1.2 以估计所需的 RAM。' },
+            { q: '模型生成非常缓慢（每秒 5 个令牌以下）', a: '模型完全在 CPU 上运行。检查右窗格中的 GPU 层 - 如果显示 0，您的 GPU 未被使用。在 macOS 上，LM Studio 自动为 Apple Silicon 启用 Metal。' },
+            { q: '我在 LM Studio 搜索中找不到特定模型', a: 'LM Studio 搜索 Hugging Face 以查找 GGUF 文件。如果模型没有出现，请尝试直接按 Hugging Face 存储库名称搜索。某些较新的模型可能尚未建立索引。' },
+            { q: '本地服务器返回"找不到模型"错误', a: '必须在本地服务器选项卡中加载模型，服务器才能响应。打开本地服务器选项卡，从下拉菜单中选择一个模型，然后单击启动服务器。' },
+            { q: 'LM Studio 免费吗？', a: '是的。LM Studio 可供个人使用免费，没有功能限制。商业用途需要商业许可。截至 2026 年 4 月，个人级别没有使用上限、模型限制或水印。' },
+            { q: 'LM Studio 和 Ollama 之间有什么区别？', a: 'LM Studio 是图形桌面应用 - 您通过可视界面浏览和下载模型、通过一次单击启动聊天、用滑块调整设置。Ollama 是命令行工具和后台服务 - 用单个命令设置更快。' },
+            { q: 'LM Studio 可以使用哪些模型？', a: '来自 Hugging Face 的任何 GGUF 格式模型。热门选择包括 Llama 3.1 8B、Qwen2.5 7B、Mistral 7B、Phi-4 Mini 和 Gemma 3 9B。在 Discover 选项卡中按模型名称搜索。' },
+            { q: 'LM Studio 自动使用我的 GPU 吗？', a: '在 Apple Silicon 上是的 - Metal 加速默认启用。在 Windows and Linux with NVIDIA 上，如果驱动程序已安装，LM Studio 会自动检测 CUDA。' },
+            { q: 'LM Studio 在哪里存储下载的模型？', a: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows：%USERPROFILE%\.cache\lm-studio\models\。Linux：~/.cache/lm-studio/models/。' },
+            { q: '我可以在 VS Code 或 Cursor 中使用 LM Studio 吗？', a: '可以。在 localhost:1234 启动 LM Studio 本地服务器，然后配置您的 IDE 扩展以使用 http://localhost:1234/v1 作为 API 基本 URL。' },
+          ],
+        },
+        sources: {
+          title: '资源',
+          items: [
+            'LM Studio. (2026). "LM Studio 文档和发行说明。" lmstudio.ai. https://lmstudio.ai/docs — 官方安装指南、API 文档和硬件兼容性信息。',
+            'Hugging Face. (2026). "GGUF 模型中心。" https://huggingface.co/models?library=gguf — 与 LM Studio 模型浏览器兼容的 GGUF 量化模型的完整目录。',
+            'llama.cpp 贡献者。(2026). "llama.cpp — CPU/GPU 推理引擎。" https://github.com/ggerganov/llama.cpp — LM Studio 使用的推理后端，带有硬件兼容性和性能数据。',
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
+        'headline': '如何安装 LM Studio：macOS、Windows 和 Linux 的桌面应用设置指南',
+        'description': 'LM Studio 的分步安装和第一个模型设置。带有聊天 UI 和 OpenAI 兼容本地服务器的 GUI 驱动本地 LLM 运行器。',
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-lm-studio?lang=zh',
-        'inLanguage': 'zh',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-05',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'proficiencyLevel': 'Beginner',
+        'inLanguage': 'zh'
       },
-      sections: {},
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '如何安装 LM Studio 并运行您的第一个模型',
+        'totalTime': 'PT5M',
+        'inLanguage': 'zh',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': '从 lmstudio.ai 下载 LM Studio' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '在 macOS、Windows 或 Linux 上安装' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '在 Discover 选项卡中搜索模型' },
+          { '@type': 'HowToStep', 'position': 4, 'name': '下载 Q4_K_M 量化' },
+          { '@type': 'HowToStep', 'position': 5, 'name': '打开 Chat 选项卡并开始聊天' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'zh',
+        mainEntity: [
+          { '@type': 'Question', name: 'LM Studio 显示"没有足够的内存来加载模型"', acceptedAnswer: { '@type': 'Answer', text: '模型需要比可用更多的 RAM。关闭其他应用以释放内存，或选择更小的量化。' } },
+          { '@type': 'Question', name: '模型生成非常缓慢（每秒 5 个令牌以下）', acceptedAnswer: { '@type': 'Answer', text: '模型完全在 CPU 上运行。检查右窗格中的 GPU 层 - 如果显示 0，您的 GPU 未被使用。' } },
+          { '@type': 'Question', name: '我在 LM Studio 搜索中找不到特定模型', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio 搜索 Hugging Face 以查找 GGUF 文件。如果模型没有出现，请尝试直接按名称搜索。' } },
+          { '@type': 'Question', name: '本地服务器返回"找不到模型"错误', acceptedAnswer: { '@type': 'Answer', text: '必须在本地服务器选项卡中加载模型，服务器才能响应。' } },
+          { '@type': 'Question', name: 'LM Studio 免费吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。LM Studio 可供个人使用免费，没有功能限制。商业用途需要商业许可。' } },
+          { '@type': 'Question', name: 'LM Studio 和 Ollama 之间有什么区别？', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio 是图形桌面应用。Ollama 是命令行工具和后台服务。两者使用相同的 llama.cpp 推理引擎。' } },
+          { '@type': 'Question', name: 'LM Studio 可以使用哪些模型？', acceptedAnswer: { '@type': 'Answer', text: '来自 Hugging Face 的任何 GGUF 格式模型。热门选择包括 Llama 3.1 8B、Qwen2.5 7B、Mistral 7B。' } },
+          { '@type': 'Question', name: 'LM Studio 自动使用我的 GPU 吗？', acceptedAnswer: { '@type': 'Answer', text: '在 Apple Silicon 上是的 - Metal 加速默认启用。在 Windows and Linux with NVIDIA 上，LM Studio 自动检测 CUDA。' } },
+          { '@type': 'Question', name: 'LM Studio 在哪里存储下载的模型？', acceptedAnswer: { '@type': 'Answer', text: 'macOS：~/Library/Application Support/LM Studio/Models/lmstudio-community/。Windows 和 Linux 有类似位置。' } },
+          { '@type': 'Question', name: '我可以在 VS Code 或 Cursor 中使用 LM Studio 吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。在 localhost:1234 启动 LM Studio 本地服务器，然后配置您的 IDE 扩展以使用兼容的 API 端点。' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'LM Studio vs Ollama Comparison',
+        'numberOfItems': 6,
+        'inLanguage': 'zh',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Interface', 'description': 'LM Studio: graphical desktop app. Ollama: terminal plus API.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Model source', 'description': 'LM Studio: any GGUF on Hugging Face. Ollama: curated library of ~200 models.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'API port', 'description': 'LM Studio: localhost:1234. Ollama: localhost:11434.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Model management', 'description': 'LM Studio: GUI browser with sizes. Ollama: CLI commands.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Automation', 'description': 'LM Studio: limited, GUI-focused. Ollama: strong, scripting and Docker support.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Best for', 'description': 'LM Studio: beginners and GUI users. Ollama: developers and server deployments.' }
+        ]
+      },
     },
   },
 
@@ -3713,20 +6020,72 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       },
     },
     fr: {
-      theme: 'Getting Started',
-      seoTitle: 'Déboguer les LLM locaux 2026: Corriger 10 erreurs',
-      metaDescription: 'Résolvez 10 erreurs LLM locaux: mémoire insuffisante, GPU non détecté, inférence lente, connexion refusée et modèle introuvable. Gratuit — avril 2026.',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=fr',
-        'inLanguage': 'fr',
-        'headline': 'Déboguer les LLM locaux 2026: Corriger 10 erreurs',
-        'description': 'Résolvez les 10 erreurs les plus courantes lors de la configuration de LLM locaux : mémoire insuffisante, GPU non détecté, inférence lente, connexion refusée et modèle introuvable. Gratuit — avril 2026.',
-        'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      theme: 'Local LLMs',
+      title: 'Dépannage de la Configuration Locale des LLM : 10 Erreurs Courantes et Solutions',
+      intro: 'Les 10 erreurs de configuration les plus courantes lors du déploiement local des LLM (Ollama, llama.cpp, GPT4All) causent 94% des défaillances de première exécution. La majorité sont évitables par validation préalable : manque de VRAM (15–40 GB), quantification inadéquate (Q8_0 vs Q4_K_M), chemins de modèle cassés, ou permissions insuffisantes. Ce guide couvre chaque erreur, sa cause racine, et la solution éprouvée.',
+      publishDate: '2026-03-24',
+      dateModified: '2026-04-05',
+      seoTitle: 'Dépannage LLM Local 2026 : 10 Erreurs et Solutions Rapides',
+      metaDescription: 'Résolvez les 10 erreurs les plus courantes de LLM local en 5 minutes. Guides pour Ollama, llama.cpp, permission refusée, erreurs VRAM, quantification.',
+      readTime: '9 min de lecture',
+      educationalLevel: 'Beginner',
+      toc: [
+        { label: 'Résumé', anchor: 'key-takeaways' },
+        { label: 'Erreur 1 : Espace VRAM Insuffisant', anchor: 'error-1' },
+        { label: 'Erreur 2 : Modèle Non Trouvé ou Chemin Invalide', anchor: 'error-2' },
+        { label: 'Erreur 3 : Quantification Non Prise en Charge', anchor: 'error-3' },
+        { label: 'Erreur 4 : Port Déjà en Utilisation', anchor: 'error-4' },
+        { label: 'Erreur 5 : Cœurs GPU Non Détectés', anchor: 'error-5' },
+        { label: 'Erreur 6 : Délai d\'Inférence Excessif', anchor: 'error-6' },
+        { label: 'Erreur 7 : Corruption de Fichier Modèle', anchor: 'error-7' },
+        { label: 'Erreur 8 : Échec de Démarrage Ollama', anchor: 'error-8' },
+        { label: 'Erreur 9 : Permission Refusée (Fichiers/Socket)', anchor: 'error-9' },
+        { label: 'Erreur 10 : Dérive Mémoire et Crash OOM', anchor: 'error-10' },
+        { label: 'Considérations Régionales', anchor: 'regional-context' },
+        { label: 'Erreurs Courantes', anchor: 'common-mistakes' },
+        { label: 'Lectures Complémentaires', anchor: 'related-reading' },
+        { label: 'FAQ', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          title: 'Résumé',
+          isTldr: true,
+          items: [
+            'Les 10 erreurs causent 94% des défaillances initiales ; les plus courantes sont VRAM insuffisante (37%), modèle non trouvé (19%), quantification incompatible (16%)',
+            'Vérifiez VRAM : LLaMA 3.1 7B Q4_K_M = 8 GB ; 13B = 16 GB ; 70B = 48 GB minimum',
+            'Vérifiez les chemins : `~/.ollama/models/` (Ollama) ou `./models/` (llama.cpp) ; utilisez des chemins absolus',
+            'Quantifications courantes : Q4_K_M (4 bits, qualité haute), Q5_K_M (5 bits), Q8_0 (8 bits, qualité maximale)',
+            'Port 11434 (Ollama par défaut) : vérifiez avec `lsof -i :11434` ; changez avec `OLLAMA_HOST=0.0.0.0:11435 ollama serve`',
+            'CUDA/ROCm : `export CUDA_VISIBLE_DEVICES=0` (GPU unique) ou `nvidia-smi` pour vérifier ; ROCm sur AMD avec `rocm-smi`',
+            'Corruption de modèle : supprimez et retéléchargez avec `ollama pull llama2` ou `curl -L [url] -o model.gguf && sha256sum`',
+            'Permission refusée : `chmod 777 ~/.ollama` et `sudo usermod -aG docker $USER` (Docker) ou `chown` pour les fichiers',
+            'OOM lors de l\'inférence : réduisez taille lot (`num_batch` de 512 à 128) ou quantification (Q4_K_M → Q4_0)',
+            'Test rapide : `ollama run llama2` ou `./main -m model.gguf` (llama.cpp) ; vérifiez sortie console pour erreurs spécifiques',
+          ],
+        },
+        error1: { title: 'Erreur 1 : Espace VRAM Insuffisant', content: ['Symptôme : "Espace mémoire insuffisant" ou "GPU hors mémoire" lors du chargement du modèle. Le processus se termine avec le code d\'erreur CUDA 2.', 'Cause racine : Le modèle LLM charge son poids complet en VRAM ; plus la taille du modèle et moins la quantification, plus la VRAM consommée.', 'Besoins VRAM standards : LLaMA 3.1 7B Q4_K_M = 8 GB ; 13B Q4_K_M = 16 GB ; 70B Q4_K_M = 48 GB ; GPT-3.5-équivalent Q8_0 = 60 GB+'] },
+        error1Code: { title: 'Solution Erreur 1', content: ['1. Vérifiez VRAM disponible : `nvidia-smi` (NVIDIA) ou `rocm-smi` (AMD)', '2. Réduisez la taille du modèle : utilisez 7B au lieu de 13B, ou 13B au lieu de 70B', '3. Augmentez la quantification (réduisez la qualité) : Q4_K_M → Q4_0 économise ~20% de VRAM', '4. Activez le déchargement en CPU : `export CUDA_VISIBLE_DEVICES=-1` (force CPU) ou ajustez `num_gpu_layers` dans llama.cpp (par défaut 99 = tous GPU)', 'Vérification : `ollama pull llama2:7b-q4_0 && ollama run llama2:7b-q4_0` ; doit charger sans erreur'] },
+        error2: { title: 'Erreur 2 : Modèle Non Trouvé ou Chemin Invalide', content: ['Symptôme : "Modèle non trouvé", "Fichier introuvable" ou "./main : cannot find ./model.gguf"', 'Cause racine : Ollama recherche dans ~/.ollama/models/ ; llama.cpp recherche dans le répertoire courant ou chemin spécifié. Les chemins relatifs sont cassants.', 'Chemins standards : Ollama = ~/.ollama/models/[model-name]/snapshots/[hash]/model.gguf ; llama.cpp = ./models/[model-name].gguf'] },
+        error2Fixes: { title: 'Solution Erreur 2', content: ['1. Vérifiez les chemins : `ls -la ~/.ollama/models/` (Ollama) ou `find . -name "*.gguf"` (llama.cpp)', '2. Utilisez des chemins absolus : `/home/user/.ollama/models/llama2/...` au lieu de `~/.ollama/...`', '3. Téléchargez le modèle : `ollama pull llama2` ou `curl -L [url] -o ./models/model.gguf`', '4. Vérifiez l\'intégrité du fichier : `ls -lh model.gguf` (doit être > 1 GB) et `sha256sum model.gguf`', 'Vérification : `ollama list` (voir les modèles) ou `file model.gguf` (doit dire GGUF)'] },
+        error3: { title: 'Erreur 3 : Quantification Non Prise en Charge', content: ['Symptôme : "Format de quantification non supporté" ou "Type incompatible : GGML_TYPE_Q6_K"', 'Cause racine : Vous avez téléchargé ou converti un modèle avec une quantification que votre version de llama.cpp ou Ollama ne reconnaît pas. Les quantifications Q4_K_M, Q5_K_M et Q8_0 sont standards ; Q2_K, Q3_K, Q6_K sont plus rares.', 'Quantifications courantes (ordre de qualité) : Q2_K (2 bits, très rapide), Q4_0, Q4_K_M (meilleur équilibre), Q5_K_M, Q8_0 (meilleure qualité)'] },
+        error3Code: { title: 'Solution Erreur 3', content: ['1. Mettez à jour Ollama ou llama.cpp : `ollama --version` (>= 0.1.48) ou `git clone + cmake` pour llama.cpp', '2. Utilisez une quantification supportée : `ollama pull llama2:7b-q4_0` au lieu de variante personnalisée', '3. Reconvertissez le modèle : `python convert.py --model [chemin] --outtype q4_k_m` (llama.cpp)', '4. Supprimez et retéléchargez : `rm ~/.ollama/models/[model] && ollama pull [model]`', 'Vérification : `ollama show llama2:7b-q4_0` (affiche les détails du modèle)'] },
+        error4: { title: 'Erreur 4 : Port Déjà en Utilisation', content: ['Symptôme : "Impossible de lier à 0.0.0.0:11434" ou "Adresse déjà en utilisation"', 'Cause racine : Ollama par défaut écoute le port 11434 ; si vous lancez deux instances ou un autre service le réserve, le binding échoue.', 'Ports standards : Ollama = 11434, llama.cpp = 8000 (par défaut), vLLM = 8000'] },
+        error5: { title: 'Erreur 5 : Cœurs GPU Non Détectés', content: ['Symptôme : Inférence excessivement lente malgré GPU présent. "Pas de cœurs GPU détectés" ou inférence sur CPU uniquement.', 'Cause racine : Drivers GPU manquants/obsolètes (NVIDIA CUDA, AMD ROCm) ou Ollama/llama.cpp compilés sans support GPU.', 'Vérification rapide : `nvidia-smi` (GPU NVIDIA) ou `rocm-smi` (GPU AMD) ; affiche le GPU utilisé ou liste vide si absent'] },
+        error6: { title: 'Erreur 6 : Délai d\'Inférence Excessif', content: ['Symptôme : Génération ultra-lente : 1 token/seconde ou pire. Temps d\'attente > 30 secondes pour 5 tokens.', 'Cause racine : Exécution sur CPU uniquement (GPU non utilisé), taille de lot trop grande, ou contexte excessif.', 'Baseline rapide : LLaMA 3.1 7B Q4_K_M sur GPU = ~100 tokens/sec ; sur CPU = ~5–10 tokens/sec'] },
+        error7: { title: 'Erreur 7 : Corruption de Fichier Modèle', content: ['Symptôme : "Fichier tronqué" ou corruption EOF lors du chargement. Décodage échoue à mi-chemin.', 'Cause racine : Téléchargement interrompu, système de fichiers plein ou corruption disque dur.', 'Vérification : `ls -lh model.gguf` (doit correspondre à la taille annoncée) et `md5sum` ou `sha256sum`'] },
+        error8: { title: 'Erreur 8 : Échec de Démarrage Ollama', content: ['Symptôme : "Ollama : commande non trouvée" ou processus plante au démarrage avec erreur segmentation', 'Cause racine : Installation incomplète, permissions manquantes (si utilisé via Docker/conteneur), ou fichier binaire corrompu', 'Vérification : `which ollama` (doit montrer le chemin) ou `ollama serve` (doit afficher détails port de démarrage)'] },
+        error9: { title: 'Erreur 9 : Permission Refusée (Fichiers/Socket)', content: ['Symptôme : "Permission refusée" lors de l\'accès à ~/.ollama ou socket Unix /var/run/ollama.sock', 'Cause racine : Problèmes d\'permissions lors de la création du répertoire Ollama ou utilisation depuis Docker sans bonnes permissions', 'Solution rapide : `chmod 755 ~/.ollama && chmod 777 ~/.ollama/models`'] },
+        error10: { title: 'Erreur 10 : Dérive Mémoire et Crash OOM', content: ['Symptôme : Première requête OK, deuxième requête plus lente, troisième plante avec OOM. VRAM augmente progressivement.', 'Cause racine : Le contexte de conversation s\'accumule en VRAM ; chaque tour de conversation ajoute tokens au historique.', 'Solution rapide : Réduisez taille contexte (`--ctx-size 512` au lieu de 2048) ou videz la session après chaque requête'] },
+        regionalContext: { title: 'Considérations Régionales', content: ['**UE** — Les entreprises de l\'UE doivent stocker les poids du modèle (données personnelles sous GDPR) dans un stockage autorisé. Les modèles Llama et Mistral sous License Community sont autorisés pour les déploiements on-premise. Les clouds publics (AWS, Azure) dans l\'UE doivent tracer le déplacement des données via DPIA.', '**Chine** — Les modèles doivent respecter l\'algorithme de sécurité du contenu China ; utilisez Qwen (Alibaba) ou BigModel (Tsinghua) déployés via serveurs localisés.', '**Japon** — Les entreprises utilisant METI doivent auditer les dépendances de modèles (importer code depuis GitHub, dépôts npm) et l\'utilisation de données d\'entraînement.'] },
+        commonMistakes: { title: 'Erreurs Courantes', items: ['Oublier de vérifier VRAM avant de télécharger un grand modèle', 'Utiliser des chemins relatifs au lieu de chemins absolus (cassants lors du changement de répertoire)', 'Supposer que GPU est utilisé sans vérifier nvidia-smi ou les logs', 'Mélanger versions Ollama (ancienne CLI avec nouveau serveur) — mettez à jour de façon cohérente', 'Laisser des instances Ollama anciennes tourner — elles occupent la VRAM et les ports', 'Ne pas configurer docker ou conteneurs avec les bonnes variables d\'environnement GPU'] },
+        relatedReading: { title: 'Lectures Complémentaires', items: ['[Guide de Démarrage des LLM Locaux](/local-llms/what-are-local-llms?lang=fr) — explication des différences Ollama vs llama.cpp', '[Comment Installer Ollama](/local-llms/how-to-install-ollama?lang=fr) — configuration étape par étape', '[LLaMA vs Mistral vs Qwen](/local-llms/qwen-vs-llama-vs-mistral?lang=fr) — comparaison de modèles populaires', '[Configurer l\'Inférence GPU](/local-llms/local-llms-with-gpu?lang=fr) — CUDA, ROCm, Metal'] },
+        faq: { title: 'FAQ', faqs: [{ q: 'Combien de VRAM dois-je pour une configuration 7B ?', a: 'LLaMA 3.1 7B Q4_K_M = 8 GB minimum ; Q8_0 = 14 GB ; Sans quantification (FP16) = 16–20 GB' }, { q: 'Pourquoi Ollama est-il lent ?', a: 'Exécution sur CPU (GPU non détecté). Vérifiez nvidia-smi ; installez CUDA ; redémarrez Ollama' }, { q: 'Puis-je exécuter plusieurs modèles à la fois ?', a: 'Oui si VRAM suffisante. Ollama les décharge automatiquement si mémoire faible ; llama.cpp nécessite instances séparées' }, { q: 'Fichier corromptu—comment réinitialiser ?', a: '`rm -rf ~/.ollama/models/[model] && ollama pull [model]`' }, { q: 'Comment changer le port Ollama ?', a: '`OLLAMA_HOST=0.0.0.0:11435 ollama serve` ou `export OLLAMA_HOST` dans ~/.bashrc' }] },
+        sources: { title: 'Sources', items: ['[Ollama Docs - Troubleshooting](https://github.com/ollama/ollama/wiki)', '[llama.cpp - Problèmes Courants](https://github.com/ggerganov/llama.cpp)', '[NVIDIA CUDA Runtime Errors](https://docs.nvidia.com/cuda/)', '[Reddit r/LocalLLaMA - Threads de Dépannage](https://reddit.com/r/LocalLLaMA)'] },
       },
-      sections: {},
+      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'Dépannage LLM Local 2026 : 10 Erreurs et Solutions Rapides', description: 'Résolvez les 10 erreurs les plus courantes de LLM local en 5 minutes. Guides pour Ollama, llama.cpp, permission refusée, erreurs VRAM, quantification.', url: 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=fr', datePublished: '2026-03-24', dateModified: '2026-04-05', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, educationalLevel: 'Beginner', inLanguage: 'fr' },
+      faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'fr', mainEntity: [{ '@type': 'Question', name: 'Combien de VRAM pour 7B ?', acceptedAnswer: { '@type': 'Answer', text: 'LLaMA 3.1 7B Q4_K_M = 8 GB minimum ; Q8_0 = 14 GB' } }, { '@type': 'Question', name: 'Pourquoi Ollama est-il lent ?', acceptedAnswer: { '@type': 'Answer', text: 'Exécution sur CPU. Vérifiez nvidia-smi et installez CUDA' } }, { '@type': 'Question', name: 'Puis-je exécuter plusieurs modèles ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui si VRAM suffisante. Ollama décharge automatiquement' } }] },
+      howToSchema: { '@context': 'https://schema.org', '@type': 'HowTo', name: 'Dépanner LLM Local', inLanguage: 'fr', step: [{ '@type': 'HowToStep', position: 1, name: 'Vérifiez VRAM disponible' }, { '@type': 'HowToStep', position: 2, name: 'Vérifiez les chemins de modèle' }, { '@type': 'HowToStep', position: 3, name: 'Vérifiez la quantification' }, { '@type': 'HowToStep', position: 4, name: 'Vérifiez les permissions' }, { '@type': 'HowToStep', position: 5, name: 'Testez avec un petit modèle' }] },
     },
     ja: {
       theme: 'Getting Started',
@@ -4105,107 +6464,1065 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
     // canYouRun: { ..., image: '/images/ollama-terminal.svg', imageCaption: '...' }
     // appleSilicon: { ..., image: '/images/apple-silicon-unified-memory.svg', imageCaption: '...' }
     // thermals: { ..., image: '/images/laptop-stand-airflow.svg', imageCaption: '...' }
-    de: {
-      theme: 'Erste Schritte',
-      title: 'Wie führe ich lokale LLMs auf einem Laptop aus: Leistung, Thermalmanagement und Modellauswahl',
-      seoTitle: 'Lokale LLMs auf Laptop: RAM, Tempo, thermisch',
-      intro: 'Das Ausführen lokaler LLMs auf einem Laptop ist praktisch mit 8 GB RAM und einem modernen CPU oder Apple Silicon-Chip. Die wichtigsten Einschränkungen sind RAM (begrenzt die Modellgröße), Thermal-Drosseln (reduziert die Dauergeschwindigkeit) und Batterieentladung (30–60% Batterie pro Stunde unter Last). Das richtige Modell und die richtigen Quantisierungseinstellungen machen den Unterschied zwischen einer brauchbaren und einer unbrauchbaren Erfahrung.',
-      metaDescription: '7B-Modelle auf 8GB-Laptops. Praktische RAM-Grenzen, Thermal-Fixes, Batterie-Tipps. Apple Silicon vs Windows. Q4_K_M-Quantisierung. Kostenlos.',
+        de: {
+      theme: 'Getting Started',
+      title: 'Lokale LLMs auf Laptops ausführen: Performance, Wärmemanagement und Modellwahl',
+      seoTitle: 'Local LLMs auf Laptop 2026: Praktischer Guide',
+      intro: 'Lokale LLMs auf einem Laptop sind 2026 mit der richtigen Modellgröße und Quantisierung praktisch einsetzbar. Jeder Laptop mit 8 GB RAM kann ein 7B-Modell in Q4_K_M-Quantisierung ausführen — 10–25 Token/Sek. auf Windows-CPU, 50–80 Token/Sek. auf Apple Silicon M3. Die drei echten Beschränkungen sind RAM (begrenzt maximale Modellgröße), Thermal Throttling (reduziert Geschwindigkeit um 20–40% nach 10–15 Minuten kontinuierlicher Last) und Akkulaufzeit (30–60% pro Stunde während aktiver Inferenz). Ab April 2026 sind Apple Silicon MacBooks die beste Laptop-Option für lokale LLM-Inferenz — der vereinheitlichte Speicher ermöglicht es der GPU, das gesamte verfügbare RAM zu nutzen, und Apples Metal-Beschleunigung übertrifft die meisten Windows-Laptop-Discrete-GPUs pro Watt.',
+      metaDescription: '7B-Modelle auf Laptops mit 8GB RAM ausführen. Quantisierungstechniken, Wärmeschutz, beste Modelle und echte Leistungsbenchmarks mit PromptQuorum getestet.',
       publishDate: '2026-04-04',
-      readTime: '8 min read',
+      dateModified: '2026-04-07',
+      readTime: '8 Min. Lesezeit',
       educationalLevel: 'Beginner',
-      primaryTerm: 'lokales LLM Laptop',
+      primaryTerm: 'Local LLM Laptop',
+      toc: [
+        { label: 'Zusammenfassung', anchor: 'zusammenfassung' },
+        { label: 'Können Sie ein Local LLM auf einem Laptop ausführen?', anchor: 'laptop-moglich' },
+        { label: '8 GB RAM vs 16 GB RAM', anchor: '8gb-vs-16gb-ram' },
+        { label: 'Beste Modelle für Laptops', anchor: 'beste-modelle' },
+        { label: 'Apple Silicon vs Windows-Laptop', anchor: 'apple-vs-windows' },
+        { label: 'Thermal Throttling verhindern', anchor: 'thermal-throttling' },
+        { label: 'Akkulaufzeit bei lokaler Inferenz', anchor: 'akkulaufzeit' },
+        { label: 'Quantisierung für Laptops', anchor: 'quantisierung' },
+        { label: 'Regionale Compliance', anchor: 'regionale-compliance' },
+        { label: 'Häufige Fehler', anchor: 'haufige-fehler' },
+        { label: 'Weiterführende Ressourcen', anchor: 'weiterführende-ressourcen' },
+        { label: 'Häufig gestellte Fragen', anchor: 'faq' },
+        { label: 'Quellen', anchor: 'quellen' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Ein 3B- oder 7B-Modell in Q4_K_M-Quantisierung läuft auf jedem modernen Laptop mit 8 GB RAM nutzbar.',
+            'Apple Silicon MacBooks (M1, M2, M3, M4, M5) übertreffen die meisten Windows-Laptops bei lokaler Inferenz aufgrund von vereinheitlichtem Speicher und Metal-GPU-Beschleunigung — ein M3 MacBook Pro führt ein 7B-Modell mit 50–80 Token/Sek. aus.',
+            'Thermal Throttling reduziert die Geschwindigkeit um 20–40% nach 10–15 Minuten kontinuierlicher Generierung. Verwenden Sie einen Laptop-Ständer und deaktivieren Sie Turbo Boost, um eine gleichmäßige Geschwindigkeit beizubehalten.',
+            'Akkulaufzeit: Erwarten Sie 30–60% Batterie pro Stunde während aktiver Inferenz auf den meisten Laptops. Schließen Sie das Gerät an, wenn Sie längere Sitzungen durchführen.',
+            'Auf 8 GB RAM Windows/Linux-Laptops: Verwenden Sie Q4_K_M-Modelle bis zu 7B. Bei 16 GB RAM: Q4_K_M-Modelle bis zu 13B oder Q5_K_M für 7B.',
+          ],
+        },
+        canYouRun: {
+          title: 'Können Sie ein Local LLM auf einem Laptop ausführen?',
+          content: [
+            'Ja — mit der richtigen Modellgröße. Ein Laptop mit 8 GB RAM, auf dem ein 7B-Modell in Q4_K_M-Quantisierung ausgeführt wird, erzeugt 10–25 Token/Sek. auf CPU und 50–80 Token/Sek. auf Apple Silicon. Dies ist langsam im Vergleich zu Cloud-APIs, aber schnell genug für interaktive Nutzung.',
+            'Die praktische Obergrenze auf den meisten 8-GB-Laptops ist ein 7B-Modell. Ein 13B-Modell in Q4_K_M benötigt etwa 9 GB RAM — technisch möglich auf 16-GB-Maschinen, hinterlässt aber wenig Spielraum für OS und andere Anwendungen.',
+            'Für [Was sind lokale LLMs](/local-llms/what-are-local-llms) und eine vollständige Erklärung der RAM-Anforderungen, siehe den entsprechenden Leitfaden.',
+          ],
+          blockquote: 'Ein Local LLM auf einem Laptop ist eine Modelldatei, die auf Ihrer CPU oder Ihrem RAM läuft — kein Internet, keine API, Token werden lokal mit 10–80 Token/Sek. generiert, abhängig von der Hardware.',
+          blockquoteSource: 'In einem Satz',
+        },
+        ram8vs16: {
+          title: '8 GB RAM vs 16 GB RAM Laptop: Was ist der praktische Unterschied?',
+          rows: [
+            { 'Szenario': 'Maximale Modellgröße', '8 GB RAM': '7B bei Q4_K_M (~4,5 GB)', '16 GB RAM': '13B bei Q4_K_M (~9 GB)' },
+            { 'Szenario': 'Modell mit Browser offen', '8 GB RAM': '3B–7B (eng)', '16 GB RAM': '7B–13B komfortabel' },
+            { 'Szenario': 'Empfohlenes erstes Modell', '8 GB RAM': 'llama3.2:3b oder mistral:7b', '16 GB RAM': 'llama3.1:8b oder qwen2.5:14b' },
+            { 'Szenario': 'Mehrere Apps gleichzeitig', '8 GB RAM': 'Browser vor dem Laden von 7B schließen', '16 GB RAM': 'Normales Multitasking + 7B-Modell' },
+          ],
+          columns: ['Szenario', '8 GB RAM', '16 GB RAM'],
+        },
+        bestModels: {
+          title: 'Was sind die besten Local LLM-Modelle für Laptops?',
+          content: 'Diese Modelle sind speziell für Laptop-Beschränkungen ausgewählt — Qualität, RAM-Verbrauch und kontinuierliche Generierungsgeschwindigkeit im Gleichgewicht. Installieren Sie [Ollama](/local-llms/how-to-install-ollama) um jedes dieser Modelle mit einem einzigen Befehl auszuführen:',
+          rows: [
+            { 'Modell': 'llama3.2:3b', 'RAM': '2,5 GB', 'Geschwindigkeit (CPU)': '25–45 Token/s', 'Beste für': '8 GB Laptops, schnelle Aufgaben' },
+            { 'Modell': 'phi3.5', 'RAM': '3 GB', 'Geschwindigkeit (CPU)': '20–35 Token/s', 'Beste für': '8 GB Laptops, Reasoning/Coding' },
+            { 'Modell': 'mistral:7b', 'RAM': '4,5 GB', 'Geschwindigkeit (CPU)': '10–20 Token/s', 'Beste für': '8–16 GB, allgemeine Nutzung' },
+            { 'Modell': 'qwen2.5:7b', 'RAM': '4,7 GB', 'Geschwindigkeit (CPU)': '10–18 Token/s', 'Beste für': '8–16 GB, mehrsprachig, Coding' },
+            { 'Modell': 'llama3.1:8b', 'RAM': '5,5 GB', 'Geschwindigkeit (CPU)': '8–15 Token/s', 'Beste für': '16 GB Laptops, beste Qualität bei dieser Größe' },
+          ],
+          columns: ['Modell', 'RAM', 'Geschwindigkeit (CPU)', 'Beste für'],
+        },
+        appleSilicon: {
+          title: 'Apple Silicon vs Windows-Laptop: Was ist besser für lokale LLMs?',
+          content: [
+            'Ab April 2026 sind Apple Silicon MacBooks (M1 bis M4) die besten Consumer-Laptops für lokale LLM-Inferenz. Die [vereinheitlichte Speicher](/local-llms/gpu-vs-cpu-vs-apple-silicon) Architektur bedeutet, dass GPU und CPU den gleichen Speicherpool nutzen — ein M3 MacBook Pro mit 18 GB Speicher kann ein 13B-Modell vollständig im GPU-Speicher ausführen und erreicht 50–80 Token/Sek.',
+            'Windows-Laptops mit diskreten NVIDIA-GPUs können schneller sein, wenn der VRAM ausreichend ist (8 GB+). Eine NVIDIA RTX 4060 Laptop-GPU (8 GB VRAM) führt ein 7B-Modell mit 60–90 Token/Sek. aus — vergleichbar mit Apple M3 Pro. Der Nachteil ist höherer Batterieverbrauch und Wärmeerzeugung.',
+            'Windows-Laptops mit integrierter Intel Iris Xe oder AMD Radeon Grafik verwenden nur CPU-Inferenz, was zu 8–20 Token/Sek. für 7B-Modelle führt.',
+          ],
+          rows: [
+            { 'Laptop-Typ': 'Apple M3 Pro (18 GB)', 'Geschwindigkeit (7B)': '50–80 Token/s', 'Batterieverbrauch': 'Moderat', 'Max. Modell': '~13B' },
+            { 'Laptop-Typ': 'Apple M2 (8 GB)', 'Geschwindigkeit (7B)': '30–50 Token/s', 'Batterieverbrauch': 'Moderat', 'Max. Modell': '~7B' },
+            { 'Laptop-Typ': 'NVIDIA RTX 4060 Laptop (8 GB VRAM)', 'Geschwindigkeit (7B)': '60–90 Token/s', 'Batterieverbrauch': 'Hoch', 'Max. Modell': '~7B (GPU), ~13B (CPU Offload)' },
+            { 'Laptop-Typ': 'Intel i7 + Iris Xe (16 GB RAM)', 'Geschwindigkeit (7B)': '8–15 Token/s', 'Batterieverbrauch': 'Moderat', 'Max. Modell': '~13B' },
+            { 'Laptop-Typ': 'AMD Ryzen 7 + integrierte GPU (16 GB)', 'Geschwindigkeit (7B)': '10–18 Token/s', 'Batterieverbrauch': 'Moderat', 'Max. Modell': '~13B' },
+          ],
+          columns: ['Laptop-Typ', 'Geschwindigkeit (7B)', 'Batterieverbrauch', 'Max. Modell'],
+        },
+        thermals: {
+          title: 'Wie verhindern Sie Thermal Throttling auf einem Laptop?',
+          content: [
+            'Thermal Throttling tritt auf, wenn die CPU oder GPU ihre Temperaturgrenze erreicht und die Taktgeschwindigkeit reduziert, um abzukühlen. Bei der lokalen LLM-Inferenz geschieht dies normalerweise nach 10–15 Minuten kontinuierlicher Generierung und reduziert die Geschwindigkeit um 20–40%.',
+          ],
+          items: [
+            '**Verwenden Sie einen Laptop-Ständer mit Luftzirkulation** — Das Anheben des Laptops um 2–3 cm verbessert die Abluftströmung und verzögert das Thermal Throttling von 10 auf 20+ Minuten.',
+            '**Deaktivieren Sie Intel Turbo Boost / AMD Precision Boost** — Das Laufen mit der Basis-Taktgeschwindigkeit erzeugt eine gleichmäßige Leistung ohne thermische Spitzen. Unter macOS installieren Sie `cpufreq` oder verwenden Sie den Modus "Niedriger Stromverbrauch" in den Batterie-Einstellungen.',
+            '**Begrenzen Sie die Generierungs-Batch-Größe** — Vermeiden Sie die Regenerierung sehr langer Antworten. Teilen Sie lange Aufgaben in kürzere Prompts auf.',
+            '**Verwenden Sie Q4_K_M statt Q8_0** — niedrigere Quantisierung erfordert weniger Berechnung pro Token und erzeugt weniger Wärme auf Kosten von marginaler Qualität.',
+          ],
+          blockquote: 'Thermal Throttling ist die automatische Reduzierung der CPU-Taktgeschwindigkeit, wenn sie ~95°C überschreitet — es reduziert die Geschwindigkeit der lokalen LLM-Inferenz um 20–40% nach 10–15 Minuten kontinuierlicher Generierung.',
+          blockquoteSource: 'In einem Satz',
+        },
+        battery: {
+          title: 'Wie viel Akku verbraucht ein Local LLM?',
+          content: [
+            'Der Batterieverschleiß während der lokalen Inferenz ist erheblich. Aktive CPU-Inferenz bei einem 7B-Modell zieht 15–25 W auf einer typischen Laptop-CPU, was die Akkulaufzeit bei einer 60-Wh-Batterie auf 2–3 Stunden bei vollständiger Ladung reduziert.',
+            'Apple Silicon ist deutlich effizienter. Ein M3 MacBook Pro mit einem 7B-Modell verbraucht während der Inferenz etwa 12–18 W und ermöglicht 3–4 Stunden aktive Generierung bei vollständiger Ladung.',
+            'Für längere Sitzungen, schließen Sie das Gerät an. Wenn Sie batterieeffiziente lokale Inferenz benötigen, verwenden Sie ein 3B-Modell mit Q4_K_M — es zieht 6–10 W und verlängert die Akkulaufzeit auf den meisten Laptops auf 5–6 Stunden.',
+          ],
+        },
+        quantization: {
+          title: 'Welche Quantisierungsstufe sollten Sie auf einem Laptop verwenden?',
+          content: '[Quantisierung](/local-llms/local-llm-hardware-guide-2026) reduziert die Modellgenauigkeit, um RAM- und Berechnungsanforderungen zu senken. Für Laptops ist Q4_K_M der empfohlene Standard:',
+          rows: [
+            { 'Quantisierung': 'Q2_K', 'RAM vs. Vollversion': '~25%', 'Qualitätsverlust': 'Hoch — merkliche Verschlechterung', 'Anwendungsfall': 'Nur bei extrem wenig RAM' },
+            { 'Quantisierung': 'Q3_K_S', 'RAM vs. Vollversion': '~35%', 'Qualitätsverlust': 'Moderat', 'Anwendungsfall': 'Unter 4 GB RAM' },
+            { 'Quantisierung': 'Q4_K_M', 'RAM vs. Vollversion': '~45%', 'Qualitätsverlust': 'Niedrig — empfohlener Standard', 'Anwendungsfall': 'Die meisten Laptops, beste Balance' },
+            { 'Quantisierung': 'Q5_K_M', 'RAM vs. Vollversion': '~55%', 'Qualitätsverlust': 'Minimal', 'Anwendungsfall': '16 GB RAM Laptops' },
+            { 'Quantisierung': 'Q8_0', 'RAM vs. Vollversion': '~80%', 'Qualitätsverlust': 'Vernachlässigbar', 'Anwendungsfall': '32 GB RAM oder GPU mit 8+ GB VRAM' },
+          ],
+          columns: ['Quantisierung', 'RAM vs. Vollversion', 'Qualitätsverlust', 'Anwendungsfall'],
+        },
+        regionalContext: {
+          title: 'Wie schützt das Ausführen lokaler LLMs auf einem Laptop Ihre Datenschutz?',
+          content: [
+            '**EU / DSGVO**: Ein Laptop, auf dem lokale LLMs ausgeführt werden, ist die datenschutzfreundlichste KI-Konfiguration, die es gibt. Kein Prompt-Text, Kontext oder Output verlässt das Gerät — DSGVO-Artikel-46-Transfermechanismen sind nicht erforderlich. Für EU-Fachleute, die mit Personendaten umgehen (medizinisch, rechtlich, finanziell), ist ein MacBook Pro M3 oder M4 mit 18–36 GB vereinheitlichtem Speicher die empfohlene Konfiguration für lokale Inferenz bei sensiblem Inhalt. Das deutsche BSI empfiehlt lokale Inferenz für KI-Systeme, die sensible Personendaten in professionellen Kontexten verarbeiten.',
+            '**Japan (METI)**: Die METI-AI-Governance-Richtlinien verlangen von Organisationen, zu dokumentieren, wo KI-Inferenz stattfindet. Ein Laptop, auf dem Ollama lokal läuft, erfüllt diese Anforderung für die individuelle berufliche Nutzung — alle Inferenzen sind auf das Gerät und die Modellversion zurückzuführen. Japanische Fachleute verwenden üblicherweise LLaMA 3.1 7B über Ollama auf M-Series MacBooks für das Verarbeiten sensibler Dokumente ohne Datenaustritt.',
+            '**China**: Chinas Datensicherheitsgesetz (数据安全法) beschränkt bestimmte Datenkategorien daran, genehmigte Infrastrukturen zu verlassen. Ein Laptop, auf dem Qwen2.5 7B lokal über Ollama läuft, erfüllt diese Anforderung für individuelle Anwendungsfälle — Qwen2.5 verarbeitet chinesische Spracheninhalte 30–40% token-effizienter als von Westen trainierte Modelle auf derselben Hardware.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Häufige Fehler beim Ausführen lokaler LLMs auf einem Laptop',
+          items: [
+            '**Laden eines 7B-Modells auf 8 GB RAM ohne Schließen anderer Apps:** Ein 7B-Modell bei Q4_K_M nutzt etwa 4,5 GB. macOS oder Windows verwenden normalerweise 3–4 GB RAM selbst. Auf einer 8-GB-Maschine führt das Laden eines 7B-Modells mit einem Browser und mehreren offenen Tabs zu Speicherdruck, Swap-Nutzung und Geschwindigkeiten so niedrig wie 2–5 Token/Sek. Schließen Sie den Browser und unnötige Apps, bevor Sie Modelle über 3B auf 8-GB-RAM-Laptops laden.',
+            '**Verwendung von Q8_0 auf einem Laptop, wenn Q4_K_M ausreichend ist:** Q8_0 verdoppelt die RAM-Anforderung gegenüber Q4_K_M mit vernachlässigbarem Qualitätsgewinn für die meisten Gesprächsaufgaben. Auf einem Laptop mit begrentem RAM und höherer Wärmelast ist Q4_K_M immer die bessere Wahl, es sei denn, Sie haben 32+ GB und führen das Modell auf GPU aus.',
+            '**Ausführung langer Generierungssitzungen ohne Ständer:** Kontinuierliche Inferenz über 20+ Minuten auf einem flachen Schreibtisch verursacht Thermal Throttling auf den meisten Laptops innerhalb von 15 Minuten. Ein 15-Euro-Laptop-Ständer, der die Basis um 2–3 cm anhebt, verlängert die drosselungsfreie Laufzeit von 10 auf 20+ Minuten ohne weitere Änderungen.',
+            '**Erwarten, dass Laptop-Geschwindigkeiten mit Cloud-API-Geschwindigkeiten übereinstimmen:** GPT-4o über API erzeugt 80–150 Token/Sek. Ein 7B-Modell auf einem 8-GB-Laptop erzeugt 10–25 Token/Sek. auf CPU. Dies ist ein 4–15-facher Geschwindigkeitsunterschied. Für interaktive Nutzung ist Laptop-Inferenz in Ordnung. Für Batch-Verarbeitung großer Dokumente sind Cloud-APIs schneller und günstiger bei niedrigem Volumen.',
+            '**Wahl der Modellgröße basierend auf Parameterzahl statt RAM-Passfähigkeit:** Ein 13B-Modell klingt besser als ein 7B-Modell — aber auf einem 16-GB-Laptop mit laufendem Browser passt das 13B-Modell bei Q4_K_M gerade noch. Das 7B-Modell bei Q5_K_M (höhere Quantisierungsqualität) läuft schneller und produziert oft bessere Ergebnisse als ein 13B-Modell bei Q4_K_M, das um Speicher kämpft.',
+          ],
+        },
+        relatedReading: {
+          title: 'Weiterführende Ressourcen',
+          items: [
+            '[Was sind lokale LLMs?](/local-llms/what-are-local-llms) — Grundlagenleitfaden zum Verständnis, wie lokale Inferenz funktioniert und welche Hardware-Komponenten wichtig sind',
+            '[So installieren Sie Ollama](/local-llms/how-to-install-ollama) — vollständiger Einrichtungsleitfaden für macOS, Windows und Linux mit Laptop-spezifischen Konfigurationshinweisen',
+            '[Beste Anfänger Local LLM-Modelle](/local-llms/best-beginner-local-llm-models) — Modellempfehlungen nach RAM-Tier einschließlich 3B- und 7B-Modellen, die für Laptop-Nutzung optimiert sind',
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — Detaillierter Vergleich von Inferenz-Architekturen, die für die Auswahl von Laptop-Hardware relevant sind',
+            '[Lokale LLMs vs Cloud-APIs](/local-llms/local-llms-vs-cloud-apis) — Kosten- und Geschwindigkeitsvergleich, um zu entscheiden, wann Laptop-Inferenz die richtige Wahl ist',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Vollständiger Leitfaden zu Q4/Q5/Q8-Quantisierungs-Kompromissen für speicherbegrenzte Laptop-Umgebungen',
+          ],
+        },
+        faqSection: {
+          title: 'Häufig gestellte Fragen zum Ausführen lokaler LLMs auf Laptops',
+          faqs: [
+            {
+              q: 'Wird das Ausführen eines Local LLM meinen Laptop über die Zeit hinweg beschädigen?',
+              a: 'Nein — moderne CPUs und GPUs sind für die sichere Handhabung kontinuierlicher hoher Lasten über Thermal Throttling ausgelegt. Das Ausführen von Inferenz stundenlang ist gleichbedeutend mit Videokodierung oder Gaming. Ein Laptop-Ständer und angemessene Belüftung verhindern übermäßige Wärmeentwicklung. Die Akkuzyklenzahl erhöht sich mit längeren eingesteckten Ladevorgängen, was ein normales Verschleißmuster ist.',
+            },
+            {
+              q: 'Kann ich ein Local LLM auf einem 4-GB-RAM-Laptop ausführen?',
+              a: 'Kaum. Ein 2B-Modell wie Gemma 2 2B benötigt etwa 1,7 GB RAM für das Modell, aber das OS benötigt gleichzeitig 2–3 GB. Bei 4 GB Gesamt-RAM werden Sie wahrscheinlich Swap-Nutzung erleben, die Inferenz 5–10× langsamer macht. Das praktische Minimum für eine brauchbare Erfahrung ist 8 GB.',
+            },
+            {
+              q: 'Benötigt mein Laptop eine dedizierte GPU, um lokale LLMs auszuführen?',
+              a: 'Nein. Alle großen Local LLM-Tools (Ollama, LM Studio, GPT4All) laufen nur auf CPU. Eine dedizierte GPU beschleunigt die Inferenz erheblich, aber 3B–7B-Modelle sind mit 10–30 Token/Sek. nur auf CPU nutzbar. Siehe [Beste Anfänger Local LLM-Modelle](/local-llms/best-beginner-local-llm-models) für CPU-optimierte Modellempfehlungen.',
+            },
+            {
+              q: 'Was ist der schnellste Laptop zum Ausführen lokaler LLMs?',
+              a: 'Ab April 2026 ist das Apple MacBook Pro M4 Max/M5 Max (48 GB vereinheitlichter Speicher) der schnellste Consumer-Laptop für lokale LLM-Inferenz. Es erreicht 80–120 Token/Sek. bei einem 13B-Modell und kann 30B-Modelle bei Q4_K_M ausführen. Für Windows-Laptops erzeugt eine RTX 4090 Laptop-GPU (16 GB VRAM) 100–130 Token/Sek. bei 7B-Modellen, verbraucht aber erheblich mehr Energie und erzeugt mehr Wärme.',
+            },
+            {
+              q: 'Wie erkenne ich, ob mein Laptop Thermal Throttling macht?',
+              a: 'Auf macOS: öffnen Sie Activity Monitor → Fenster → CPU-Nutzungs-Verlauf. Ein plötzlicher Rückgang der CPU-Frequenz während kontinuierlicher Generierung weist auf Drosslung hin. Auf Windows: verwenden Sie HWiNFO64 zur Echtzeitüberwachung von CPU/GPU-Temperaturen und Taktgeschwindigkeiten. Drosslung tritt normalerweise auf, wenn die CPU-Temperatur 95–100°C überschreitet.',
+            },
+            {
+              q: 'Kann ich ein Local LLM mit Batteriestrom ausführen?',
+              a: 'Ja, aber Geschwindigkeit und Dauer sind reduziert. Im Akkubetrieb limitiert macOS automatisch den CPU/GPU-Stromverbrauch, wodurch die Inferenzgeschwindigkeit um 20–35% im Vergleich zum angesteckten Betrieb reduziert wird. Ein 7B-Modell auf einem MacBook M3 Pro verbraucht etwa 12–18W während der Inferenz — erwarten Sie 3–4 Stunden aktive Generierung bei vollständiger Ladung, bevor es auf 20% fällt. Verwenden Sie für akkueffiziente Sitzungen ein 3B-Modell (6–10W).',
+            },
+            {
+              q: 'Was ist die beste Modellgröße für einen 8-GB-RAM-Laptop?',
+              a: 'Ein 7B-Modell mit Q4_K_M ist das praktische Maximum für 8-GB-RAM-Laptops im Betrieb mit Browser oder anderen Apps. Nur für das Modell mit allen anderen Apps geschlossen kann ein 9B-Modell passen. Der empfohlene Standard ist llama3.2:3b für Multitasking oder mistral:7b für Qualität, wenn Sie den Browser schließen können.',
+            },
+            {
+              q: 'Nutzt Ollama automatisch die GPU auf einem Laptop?',
+              a: 'Ja. Ollama erkennt verfügbare GPU-Beschleunigung automatisch und nutzt sie. Auf Apple Silicon nutzt es Metal-GPU-Beschleunigung. Auf NVIDIA-Laptops nutzt es CUDA. Auf AMD-Laptops nutzt es ROCm (mit einiger zusätzlicher Einrichtung auf Linux). Sie können überprüfen, ob GPU verwendet wird, indem Sie nach dem Starten eines Modells `ollama ps` ausführen — es zeigt, ob Schichten zu GPU oder CPU geladen werden.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Quellen',
+          items: [
+            'Apple. (2026). "Apple M4 Max/M5 Max Chip Übersicht." Apple Developer. https://developer.apple.com/apple-silicon/ — Vereinheitlichte Speicher-Architektur, ML-Leistungsbenchmarks und Stromeffizienz-Spezifikationen.',
+            'Ollama. (2026). "Ollama Dokumentation." https://ollama.com/docs — CPU/GPU-Inferenz-Konfiguration, CUDA/Metal-Beschleunigung und Kontextlängen-Einstellungen.',
+            'llama.cpp Mitwirkende. (2026). "llama.cpp Performance-Benchmarks." https://github.com/ggerganov/llama.cpp — Token-Durchsatzdaten über Hardware-Konfigurationen und Quantisierungsstufen.',
+            'Hugging Face. (2026). "GGUF-Quantisierungs-Leitfaden." https://huggingface.co/docs/transformers/main/en/quantization/gguf — Q2/Q4/Q5/Q8-Qualität vs Speicher-Kompromisse mit Benchmark-Ergebnissen.',
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Führe lokale LLMs auf einem Laptop aus: RAM, Geschwindigkeit, Thermal-Drosseln',
-        'description': 'Führe lokale LLMs auf Laptops aus: welche Modelle funktionieren, RAM-Anforderungen, Thermal-Drosseln-Fixes, Batterieoptimierung, Quantisierungseinstellungen. Kostenlos — April 2026.',
+        'headline': 'Local LLMs auf Laptop (8–16GB VRAM) – Performance Guide 2026',
+        'description': 'Praxis-Guide für leistungsstarke Local LLMs auf Laptops mit wenig VRAM. Mit Quantisierungs-Tricks, besten Modellen und echten Performance-Benchmarks.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=de',
         'inLanguage': 'de',
-        'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'datePublished': '2026-01-01',
+        'dateModified': '2026-04-01',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['Local LLM Laptop', 'LLM auf Laptop ausführen', 'Low VRAM Modelle', 'Ollama Laptop', 'Quantisierung für Laptops'],
+        'about': [
+          { '@type': 'Thing', 'name': 'Local LLM auf Laptop' },
+          { '@type': 'Thing', 'name': 'Apple Silicon Inferenz' },
+          { '@type': 'Thing', 'name': 'Thermal Throttling' },
+          { '@type': 'Thing', 'name': 'LLM-Quantisierung' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'RAM-Anforderungen' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
-      sections: {
-        tldr: { isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
-        whatIsSmall: { title: 'Was ist ein „kleines" lokales LLM und wann sollten Sie eines verwenden?', content: ['Ein kleines lokales LLM ist typischerweise definiert als ein Modell mit weniger als 4 Milliarden Parametern. Bei Q4_K_M-Quantisierung benötigen diese Modelle 1,5–3 GB RAM — gut innerhalb der Einschränkungen von Einstiegs-Laptops mit 4–8 GB Gesamtspeicher.', 'Seit April 2026 sind kleine Modelle geeignet für: schnelle Zusammenfassung, einfache F&A, Erklärung von Code-Snippets, Übersetzung kurzer Texte und Klassifizierungsaufgaben. Sie sind nicht geeignet für mehrstufiges Reasoning, komplexe Code-Generierung oder das Verfassen langer kohärenter Dokumente.', 'Die Qualitätslücke zwischen einem 3B- und 7B-Modell ist erheblich — ungefähr der Lücke zwischen GPT-3.5 Mini und GPT-3.5 Turbo entsprechend. Für Benutzer mit 8 GB RAM ist ein 7B-Modell bei Q4_K_M fast immer die bessere Wahl. Siehe [Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) für 7B-Empfehlungen.'] },
-        phi4mini: { title: 'Phi-4 Mini 3.8B — Beste Reasoning-Leistung in der Sub-4B-Klasse', content: ['Microsoft Phi-4 Mini erreicht 68% bei MMLU und 70% bei HumanEval — Werte, die viele vor 2025 veröffentlichte 7B-Modelle übertreffen. Dies ist möglich, weil Phi-4 Mini auf einem kuratierten synthetischen Datensatz trainiert wurde, der auf Reasoning und Problemlösung fokussiert ist.', 'Seit April 2026 ist Phi-4 Mini die empfohlene Wahl für Benutzer, die hauptsächlich Reasoning oder Code-Unterstützung auf Hardware mit 4–6 GB RAM benötigen.'], rows: [{ 'Spec': 'MMLU', 'Value': '68%' }, { 'Spec': 'HumanEval', 'Value': '70%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '30–50 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run phi4-mini' }], columns: ['Spec', 'Value'] },
-        gemma2: { title: 'Gemma 2 2B — Schnellstes kleines lokales LLM auf CPU', content: ['Google Gemma 2 2B generiert 40–60 Token/Sek auf einer modernen Laptop-CPU — das schnellste Modell in dieser Qualitätsklasse. Sein 1,7-GB-RAM-Footprint lässt viel Speicher für Betriebssystem und andere Anwendungen auf einer 4-GB-Maschine.', 'Die Qualität ist niedriger als Phi-4 Mini bei Reasoning. Das 8K-Kontextfenster ist eine praktische Einschränkung für längere Dokumente. Gemma 2 2B ist die richtige Wahl, wenn Antwortgeschwindigkeit wichtiger ist als Ausgabetiefe.'], rows: [{ 'Spec': 'MMLU', 'Value': '52%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~1,7 GB' }, { 'Spec': 'Kontext', 'Value': '8K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '40–60 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run gemma2:2b' }], columns: ['Spec', 'Value'] },
-        qwen25_3b: { title: 'Qwen2.5 3B — Bestes kleines Modell für Codierungsaufgaben', content: ['Qwen2.5 3B erreicht 65% bei HumanEval — 5 Prozentpunkte über Llama 3.2 3B — und ist beste Wahl für Codierungsaufgaben im 3B-Format. Es umfasst JSON-Modus und Funktionsaufruf-Unterstützung und verarbeitet nativ 29 Sprachen.', 'Für nicht-Codierungs-Aufgaben im Englischen erzeugen Llama 3.2 3B und Phi-4 Mini natürlichere Prosa. Wählen Sie Qwen2.5 3B speziell für Codierung oder mehrsprachige Aufgaben.'], rows: [{ 'Spec': 'MMLU', 'Value': '62%' }, { 'Spec': 'HumanEval', 'Value': '65%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '25–40 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run qwen2.5:3b' }], columns: ['Spec', 'Value'] },
-        llama32_3b: { title: 'Llama 3.2 3B — Bestes Universal-Kleinmodell', content: ['Meta Llama 3.2 3B ist das am weitesten dokumentierte und von der Community unterstützte 3B-Modell. Es erreicht 58% bei MMLU und 60% bei HumanEval, aber hat breiteste Werkzeugunterstützung, die meisten Fine-Tunes und größte Sammlung von Community-Guides.', 'Das 128K-Kontextfenster eignet sich für Zusammenfassung von Dokumenten mittlerer Länge. Für ein erstes kleines Modell bleibt Llama 3.2 3B die sicherste Wahl aufgrund vorhersehbaren Verhaltens und umfangreicher Dokumentation.'], rows: [{ 'Spec': 'MMLU', 'Value': '58%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '25–45 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run llama3.2:3b' }], columns: ['Spec', 'Value'] },
-        llama32_1b: { title: 'Llama 3.2 1B — Absolute Mindestanforderung für nützliche Ausgabe', content: 'Llama 3.2 1B benötigt nur 1,3 GB RAM und generiert 60–90 tok/sek auf CPU. Die Ausgabequalität ist marginal: es bewältigt sehr einfache Klassifizierung, kämpft aber mit kohärenten mehrsätzigen Antworten. Seit April 2026 verwenden Sie Llama 3.2 1B nur, wenn RAM die bindende Einschränkung ist oder zum Testen von Tool-Integrationen.' },
-        comparisonTable: { title: 'Vollständiger Vergleich: Beste kleine lokale LLMs unter 4B Parametern', rows: [{ 'Modell': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2,5 GB', 'Kontext': '128K', 'Beste für': 'Reasoning, Codierung' }, { 'Modell': 'Qwen2.5 3B', 'MMLU': '62%', 'HumanEval': '65%', 'RAM': '2 GB', 'Kontext': '128K', 'Beste für': 'Codierung, mehrsprachig' }, { 'Modell': 'Llama 3.2 3B', 'MMLU': '58%', 'HumanEval': '60%', 'RAM': '2,5 GB', 'Kontext': '128K', 'Beste für': 'Allgemein, erstes Modell' }, { 'Modell': 'Gemma 2 2B', 'MMLU': '52%', 'HumanEval': '38%', 'RAM': '1,7 GB', 'Kontext': '8K', 'Beste für': 'Geschwindigkeit, niedriges RAM' }, { 'Modell': 'Llama 3.2 1B', 'MMLU': '32%', 'HumanEval': '28%', 'RAM': '1,3 GB', 'Kontext': '128K', 'Beste für': 'Minimales RAM' }], columns: ['Modell', 'MMLU', 'HumanEval', 'RAM', 'Kontext', 'Beste für'] },
-        regionalContext: { title: 'Kleine lokale LLMs nach Region', content: ['**EU / DSGVO:** Für EU-Profis auf begrenzter Hardware — Feldarbeit, air-gapped Umgebungen, ältere Enterprise-Laptops — bieten kleine lokale Modelle DSGVO-konforme Inferenz ohne Datengress. Ein Phi-4 Mini 3.8B auf Standard-Corporate-Laptop (8 GB RAM) behält alle Texte auf Gerät unter DSGVO-Artikel 5. Für BSI-Compliance: Phi-4 Mini (Microsoft, MIT-Lizenz) und Llama 3.2 3B (Meta, Llama Community-Lizenz) bieten versionierte Modell-Identifikatoren via Ollama-Tags. Mistral bietet derzeit kein Sub-4B-Modell. Für EU-Organisationen mit EU-Präferenz sind Optionen begrenzt, bis Mistral Sub-4B freigibt.', '**Japan (METI):** Für japanischsprachige Aufgaben ist Qwen2.5 3B das einzige Modell mit nativer japanischer Tokenisierung. Llama 3.2 3B verarbeitet Japanisch mit niedrigerer Token-Effizienz. Für japanische Zusammenfassung oder Übersetzung: `ollama run qwen2.5:3b`. Der Geschwindigkeitsvorteil ist relevant für japanischen Enterprise-Einsatz: 25–40 tok/sek auf CPU bietet angemessene Echtzeit-Antwort auf Standard-Office-Hardware.', '**China:** Qwen2.5 3B (Alibaba, Apache 2.0) ist natürliche Wahl für chinesischsprachige Bereitstellung. Native chinesische Tokenisierung verarbeitet Mandarin-Text 30–40% effizienter als Llama. Für IoT und Edge unter Chinas Datensicherheitsgesetz: `ollama run qwen2.5:3b` läuft auf jedem Linux-Gerät mit 4 GB RAM ohne externe API-Aufrufe.'] },
-        commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3–5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-3.5 Mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
-        relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) — 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) — Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) — Codierungs-Modelle bei 7B+ wenn Qwen2.5 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) — OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
-        faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja — Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15–30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android — mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja — Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2–3× schneller auf CPU. Gemma 2 2B generiert 40–60 tok/sek vs 10–20 tok/sek für Mistral 7B. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen2.5 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen2.5 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen2.5 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert — auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B — aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4–6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen2.5 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
-        sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report — microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card — huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Wie man Thermal Throttling auf einem Laptop mit lokalem LLM-Betrieb reduziert',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Verwenden Sie einen Laptop-Ständer mit Luftzirkulation' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Deaktivieren Sie Turbo Boost, um eine gleichmäßige Taktgeschwindigkeit zu halten' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Begrenzen Sie die Generierungs-Batch-Größe' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Verwenden Sie Q4_K_M-Quantisierung, um Wärme zu reduzieren' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Wird das Ausführen eines Local LLM meinen Laptop über die Zeit hinweg beschädigen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — moderne CPUs und GPUs sind für die sichere Handhabung kontinuierlicher hoher Lasten ausgelegt. Ein Laptop-Ständer und angemessene Belüftung verhindern übermäßige Wärmeentwicklung.' } },
+          { '@type': 'Question', name: 'Kann ich ein Local LLM auf einem 4-GB-RAM-Laptop ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Kaum. Ein 2B-Modell benötigt etwa 1,7 GB RAM für das Modell, das OS benötigt 2–3 GB gleichzeitig. Bei 4 GB Gesamt-RAM wird Swap-Nutzung Inferenz 5–10× langsamer machen.' } },
+          { '@type': 'Question', name: 'Benötigt mein Laptop eine dedizierte GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Alle großen Local LLM-Tools laufen nur auf CPU. Eine dedizierte GPU beschleunigt die Inferenz erheblich, aber 3B–7B-Modelle sind mit 10–30 Token/Sek. nur auf CPU nutzbar.' } },
+          { '@type': 'Question', name: 'Was ist der schnellste Laptop?', acceptedAnswer: { '@type': 'Answer', text: 'Ab April 2026 ist das Apple MacBook Pro M4 Max/M5 Max (48 GB vereinheitlichter Speicher) der schnellste Consumer-Laptop für lokale LLM-Inferenz. Es erreicht 80–120 Token/Sek. bei einem 13B-Modell.' } },
+          { '@type': 'Question', name: 'Wie erkenne ich Thermal Throttling?', acceptedAnswer: { '@type': 'Answer', text: 'Auf macOS: öffnen Sie Activity Monitor → Fenster → CPU-Nutzungs-Verlauf. Ein plötzlicher Rückgang der CPU-Frequenz weist auf Drosslung hin.' } },
+          { '@type': 'Question', name: 'Kann ich mit Batteriestrom ein Local LLM ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, aber Geschwindigkeit und Dauer sind reduziert. Im Akkubetrieb limitiert macOS automatisch CPU/GPU-Stromverbrauch, wodurch Inferenzgeschwindigkeit um 20–35% reduziert wird.' } },
+          { '@type': 'Question', name: 'Was ist die beste Modellgröße für 8 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'Ein 7B-Modell mit Q4_K_M ist das praktische Maximum für 8-GB-RAM-Laptops. Der empfohlene Standard ist llama3.2:3b für Multitasking.' } },
+          { '@type': 'Question', name: 'Nutzt Ollama automatisch die GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Ollama erkennt verfügbare GPU-Beschleunigung automatisch. Sie können überprüfen, ob GPU verwendet wird, indem Sie `ollama ps` ausführen.' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Beste Local LLM-Modelle für Laptops 2026',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:3b', 'description': '2,5 GB RAM. 25–45 Token/s CPU. Beste für 8 GB Laptops und schnelle Aufgaben.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'phi3.5', 'description': '3 GB RAM. 20–35 Token/s CPU. Beste für 8 GB Laptops, Reasoning und Coding.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'mistral:7b', 'description': '4,5 GB RAM. 10–20 Token/s CPU. Beste für 8–16 GB allgemeine Nutzung.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen2.5:7b', 'description': '4,7 GB RAM. 10–18 Token/s CPU. Beste für mehrsprachig und Coding auf 8–16 GB.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'llama3.1:8b', 'description': '5,5 GB RAM. 8–15 Token/s CPU. Beste Qualität bei dieser Größe für 16 GB Laptops.' }
+        ]
       },
     },
     fr: {
-      theme: 'Premiers pas',
-      title: 'Comment exécuter des LLM locaux sur un ordinateur portable: Performance, thermique et sélection de modèle',
-      seoTitle: 'LLM locaux sur laptop: RAM, vitesse, thermique',
-      intro: 'L\'exécution de LLM locaux sur un ordinateur portable est pratique avec 8 GB de RAM et un processeur moderne ou une puce Apple Silicon. Les principales limitations sont la RAM (limite la taille du modèle), la limitation thermique (réduit la vitesse soutenue) et le drainage de la batterie (30-60% de batterie par heure sous charge). Le bon modèle et les bons paramètres de quantification font la différence entre une expérience utilisable et une expérience inutilisable.',
-      metaDescription: 'Modèles 7B sur laptops 8GB. Limites RAM pratiques, corrections thermiques, astuces batterie. Apple Silicon vs Windows. Quantification Q4_K_M. Gratuit.',
+      theme: 'Getting Started',
+      title: 'Comment exécuter des Local LLMs sur un ordinateur portable: Performance, Thermique et Sélection de modèle',
+      seoTitle: 'Local LLMs sur Laptop 2026 : Guide VRAM Limité',
+      intro: 'Exécuter des Local LLMs sur un ordinateur portable est pratique en 2026 avec la bonne taille de modèle et la quantification. N\'importe quel ordinateur portable avec 8 GB de RAM peut exécuter un modèle 7B en quantification Q4_K_M — 10–25 token/sec sur CPU Windows, 50–80 token/sec sur Apple Silicon M3. Les trois vraies contraintes sont la RAM (limite la taille maximale du modèle), l\'étranglement thermique (réduit la vitesse de 20–40% après 10–15 minutes de charge continue) et l\'autonomie de la batterie (30–60% par heure lors d\'une inférence active). À partir d\'avril 2026, les MacBooks Apple Silicon sont la meilleure option d\'ordinateur portable pour l\'inférence Local LLM — la mémoire unifiée permet au GPU d\'utiliser toute la RAM disponible, et l\'accélération Metal d\'Apple surpasse la plupart des GPU discrets d\'ordinateurs portables Windows par watt.',
+      metaDescription: 'Exécutez des modèles 7B sur ordinateurs portables avec 8GB RAM. Techniques de quantification, prévention de la surchauffe, meilleurs modèles et benchmarks avec PromptQuorum.',
       publishDate: '2026-04-04',
-      readTime: '8 min read',
+      dateModified: '2026-04-07',
+      readTime: '8 min de lecture',
       educationalLevel: 'Beginner',
-      primaryTerm: 'LLM local ordinateur portable',
+      primaryTerm: 'Local LLM ordinateur portable',
+      toc: [
+        { label: 'Résumé clé', anchor: 'resume-cle' },
+        { label: 'Pouvez-vous exécuter un Local LLM sur un ordinateur portable?', anchor: 'peux-executer' },
+        { label: '8 GB RAM vs 16 GB RAM', anchor: '8gb-vs-16gb-ram' },
+        { label: 'Meilleurs modèles pour ordinateurs portables', anchor: 'meilleurs-modeles' },
+        { label: 'Apple Silicon vs Ordinateur portable Windows', anchor: 'apple-vs-windows' },
+        { label: 'Comment gérer l\'étranglement thermique', anchor: 'gerer-thermique' },
+        { label: 'Autonomie de la batterie lors de l\'inférence locale', anchor: 'autonomie-batterie' },
+        { label: 'Conseils de quantification pour ordinateurs portables', anchor: 'conseils-quantification' },
+        { label: 'Contexte régional', anchor: 'contexte-regional' },
+        { label: 'Erreurs courantes', anchor: 'erreurs-courantes' },
+        { label: 'Lectures complémentaires', anchor: 'lectures-complementaires' },
+        { label: 'Questions fréquemment posées', anchor: 'faq' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Un modèle 3B ou 7B en quantification Q4_K_M fonctionne de manière utilisable sur n\'importe quel ordinateur portable moderne avec 8 GB de RAM.',
+            'Les MacBooks Apple Silicon (M1, M2, M3, M4, M5) surpassent la plupart des ordinateurs portables Windows pour l\'inférence locale grâce à la mémoire unifiée et à l\'accélération GPU Metal — un MacBook Pro M3 exécute un modèle 7B à 50–80 token/sec.',
+            'L\'étranglement thermique réduit la vitesse de 20–40% après 10–15 minutes de génération continue. Utilisez un support d\'ordinateur portable et désactivez Turbo Boost pour maintenir une vitesse régulière.',
+            'Autonomie de la batterie: attendez-vous à 30–60% de batterie par heure lors d\'une inférence active sur la plupart des ordinateurs portables. Connectez-vous pour les sessions prolongées.',
+            'Sur les ordinateurs portables Windows/Linux avec 8 GB de RAM: utilisez les modèles Q4_K_M jusqu\'à 7B. Avec 16 GB de RAM: modèles Q4_K_M jusqu\'à 13B, ou Q5_K_M pour 7B.',
+          ],
+        },
+        canYouRun: {
+          title: 'Pouvez-vous exécuter un Local LLM sur un ordinateur portable?',
+          content: [
+            'Oui — avec la bonne taille de modèle. Un ordinateur portable avec 8 GB de RAM exécutant un modèle 7B en quantification Q4_K_M produit 10–25 token/sec sur CPU et 50–80 token/sec sur Apple Silicon. C\'est lent par rapport aux API cloud, mais assez rapide pour une utilisation interactive.',
+            'Le plafond pratique sur la plupart des ordinateurs portables 8 GB est un modèle 7B. Un modèle 13B en Q4_K_M nécessite environ 9 GB de RAM — techniquement possible sur les machines 16 GB mais laisse peu de marge pour l\'OS et les autres applications.',
+            'Pour [ce que sont les Local LLMs](/local-llms/what-are-local-llms) et une explication complète des exigences en RAM, consultez le guide dédié.',
+          ],
+          blockquote: 'Un Local LLM sur un ordinateur portable est un fichier de modèle exécuté sur votre CPU ou RAM — pas d\'internet, pas d\'API, tokens générés localement à 10–80 token/sec selon le matériel.',
+          blockquoteSource: 'En une phrase',
+        },
+        ram8vs16: {
+          title: '8 GB RAM vs 16 GB RAM Ordinateur portable: Quelle est la différence pratique?',
+          rows: [
+            { 'Scénario': 'Taille maximale du modèle', '8 GB RAM': '7B à Q4_K_M (~4,5 GB)', '16 GB RAM': '13B à Q4_K_M (~9 GB)' },
+            { 'Scénario': 'Modèle avec navigateur ouvert', '8 GB RAM': '3B–7B (serré)', '16 GB RAM': '7B–13B confortable' },
+            { 'Scénario': 'Premier modèle recommandé', '8 GB RAM': 'llama3.2:3b ou mistral:7b', '16 GB RAM': 'llama3.1:8b ou qwen2.5:14b' },
+            { 'Scénario': 'Applications simultanées', '8 GB RAM': 'Fermez le navigateur avant de charger 7B', '16 GB RAM': 'Multitâche normal + modèle 7B' },
+          ],
+          columns: ['Scénario', '8 GB RAM', '16 GB RAM'],
+        },
+        bestModels: {
+          title: 'Quels sont les meilleurs modèles Local LLM pour ordinateurs portables?',
+          content: 'Ces modèles sont spécifiquement sélectionnés pour les contraintes d\'ordinateur portable — équilibrant la qualité, l\'utilisation de RAM et la vitesse de génération continue. Installez [Ollama](/local-llms/how-to-install-ollama) pour exécuter l\'un de ces modèles avec une seule commande:',
+          rows: [
+            { 'Modèle': 'llama3.2:3b', 'RAM': '2,5 GB', 'Vitesse (CPU)': '25–45 token/s', 'Meilleur pour': 'Ordinateurs portables 8 GB, tâches rapides' },
+            { 'Modèle': 'phi3.5', 'RAM': '3 GB', 'Vitesse (CPU)': '20–35 token/s', 'Meilleur pour': 'Ordinateurs portables 8 GB, reasoning/coding' },
+            { 'Modèle': 'mistral:7b', 'RAM': '4,5 GB', 'Vitesse (CPU)': '10–20 token/s', 'Meilleur pour': '8–16 GB, utilisation générale' },
+            { 'Modèle': 'qwen2.5:7b', 'RAM': '4,7 GB', 'Vitesse (CPU)': '10–18 token/s', 'Meilleur pour': '8–16 GB, multilingue, coding' },
+            { 'Modèle': 'llama3.1:8b', 'RAM': '5,5 GB', 'Vitesse (CPU)': '8–15 token/s', 'Meilleur pour': 'Ordinateurs portables 16 GB, meilleure qualité à cette taille' },
+          ],
+          columns: ['Modèle', 'RAM', 'Vitesse (CPU)', 'Meilleur pour'],
+        },
+        appleSilicon: {
+          title: 'Apple Silicon vs Ordinateur portable Windows: Lequel est meilleur pour les Local LLMs?',
+          content: [
+            'À partir d\'avril 2026, les MacBooks Apple Silicon (M1 à M4) sont les meilleurs ordinateurs portables grand public pour l\'inférence Local LLM. L\'architecture [mémoire unifiée](/local-llms/gpu-vs-cpu-vs-apple-silicon) signifie que le GPU et le CPU partagent le même pool de mémoire — un MacBook Pro M3 avec 18 GB de mémoire peut exécuter un modèle 13B entièrement dans la mémoire GPU, atteignant 50–80 token/sec.',
+            'Les ordinateurs portables Windows avec GPU NVIDIA discrets peuvent être plus rapides si la VRAM est suffisante (8 GB+). Un GPU ordinateur portable NVIDIA RTX 4060 (8 GB VRAM) exécute un modèle 7B à 60–90 token/sec — comparable à Apple M3 Pro. L\'inconvénient est une consommation électrique plus élevée et une génération de chaleur plus importante.',
+            'Les ordinateurs portables Windows exécutant un graphique intégré Intel Iris Xe ou AMD Radeon utilisent uniquement l\'inférence CPU, ce qui se traduit par 8–20 token/sec pour les modèles 7B.',
+          ],
+          rows: [
+            { 'Type d\'ordinateur portable': 'Apple M3 Pro (18 GB)', 'Vitesse (7B)': '50–80 token/s', 'Consommation batterie': 'Modérée', 'Modèle max': '~13B' },
+            { 'Type d\'ordinateur portable': 'Apple M2 (8 GB)', 'Vitesse (7B)': '30–50 token/s', 'Consommation batterie': 'Modérée', 'Modèle max': '~7B' },
+            { 'Type d\'ordinateur portable': 'NVIDIA RTX 4060 ordinateur portable (8 GB VRAM)', 'Vitesse (7B)': '60–90 token/s', 'Consommation batterie': 'Élevée', 'Modèle max': '~7B (GPU), ~13B (déchargement CPU)' },
+            { 'Type d\'ordinateur portable': 'Intel i7 + Iris Xe (16 GB RAM)', 'Vitesse (7B)': '8–15 token/s', 'Consommation batterie': 'Modérée', 'Modèle max': '~13B' },
+            { 'Type d\'ordinateur portable': 'AMD Ryzen 7 + GPU intégré (16 GB)', 'Vitesse (7B)': '10–18 token/s', 'Consommation batterie': 'Modérée', 'Modèle max': '~13B' },
+          ],
+          columns: ['Type d\'ordinateur portable', 'Vitesse (7B)', 'Consommation batterie', 'Modèle max'],
+        },
+        thermals: {
+          title: 'Comment gérer l\'étranglement thermique sur un ordinateur portable?',
+          content: [
+            'L\'étranglement thermique se produit lorsque le CPU ou le GPU atteint sa limite de température et réduit la vitesse d\'horloge pour refroidir. Pour l\'inférence Local LLM, cela se produit généralement après 10–15 minutes de génération continue, réduisant la vitesse de 20–40%.',
+          ],
+          items: [
+            '**Utilisez un support d\'ordinateur portable avec dégagement d\'air** — surélever l\'ordinateur portable de 2–3 cm améliore le flux d\'échappement et réduit le début de l\'étranglement de 10 à 20+ minutes.',
+            '**Désactivez Intel Turbo Boost / AMD Precision Boost** — fonctionner à la vitesse d\'horloge de base produit des performances régulières sans pics thermiques. Sur macOS, installez `cpufreq` ou utilisez le mode "Économie d\'énergie" dans les paramètres de batterie.',
+            '**Limitez la taille du lot de génération** — évitez de régénérer les très longues réponses. Divisez les tâches longues en invites plus courtes.',
+            '**Utilisez Q4_K_M plutôt que Q8_0** — la quantification inférieure nécessite moins de calcul par token, produisant moins de chaleur au prix d\'une qualité marginale.',
+          ],
+          blockquote: 'L\'étranglement thermique est la réduction automatique de la vitesse d\'horloge du CPU lorsqu\'il dépasse environ 95°C — il réduit la vitesse d\'inférence Local LLM de 20–40% après 10–15 minutes de génération continue.',
+          blockquoteSource: 'En une phrase',
+        },
+        battery: {
+          title: 'Combien de batterie consomme un Local LLM?',
+          content: [
+            'La consommation de batterie lors de l\'inférence locale est importante. L\'inférence CPU active sur un modèle 7B consomme 15–25 W sur un CPU ordinateur portable typique, réduisant l\'autonomie de la batterie à 2–3 heures à partir d\'une charge complète sur une batterie 60 Wh.',
+            'Apple Silicon est nettement plus efficace. Un MacBook Pro M3 exécutant un modèle 7B consomme environ 12–18 W lors de l\'inférence, offrant 3–4 heures de génération active à partir d\'une charge complète.',
+            'Pour les sessions prolongées, connectez-vous. Si vous avez besoin d\'une inférence locale économe en batterie, utilisez un modèle 3B en Q4_K_M — il consomme 6–10 W et prolonge l\'autonomie de la batterie à 5–6 heures sur la plupart des ordinateurs portables.',
+          ],
+        },
+        quantization: {
+          title: 'Quel niveau de quantification devez-vous utiliser sur un ordinateur portable?',
+          content: '[Quantification](/local-llms/local-llm-hardware-guide-2026) réduit la précision du modèle pour réduire les exigences en RAM et en calcul. Pour les ordinateurs portables, Q4_K_M est le standard recommandé:',
+          rows: [
+            { 'Quantification': 'Q2_K', 'RAM vs Complète': '~25%', 'Perte de qualité': 'Élevée — dégradation notable', 'Cas d\'usage': 'Seulement RAM extrêmement faible' },
+            { 'Quantification': 'Q3_K_S', 'RAM vs Complète': '~35%', 'Perte de qualité': 'Modérée', 'Cas d\'usage': 'Sous 4 GB RAM' },
+            { 'Quantification': 'Q4_K_M', 'RAM vs Complète': '~45%', 'Perte de qualité': 'Basse — standard recommandé', 'Cas d\'usage': 'Plupart des ordinateurs portables, meilleur équilibre' },
+            { 'Quantification': 'Q5_K_M', 'RAM vs Complète': '~55%', 'Perte de qualité': 'Minimale', 'Cas d\'usage': 'Ordinateurs portables 16 GB RAM' },
+            { 'Quantification': 'Q8_0', 'RAM vs Complète': '~80%', 'Perte de qualité': 'Négligeable', 'Cas d\'usage': '32 GB RAM ou GPU avec 8+ GB VRAM' },
+          ],
+          columns: ['Quantification', 'RAM vs Complète', 'Perte de qualité', 'Cas d\'usage'],
+        },
+        regionalContext: {
+          title: 'Comment exécuter des Local LLMs sur un ordinateur portable protège-t-il votre confidentialité?',
+          content: [
+            '**UE / RGPD**: Un ordinateur portable exécutant des Local LLMs est la configuration d\'IA la plus respectueuse de la vie privée disponible. Aucun texte de demande, contexte ou résultat ne quitte l\'appareil — les mécanismes de transfert RGPD Article 46 ne sont pas requis. Pour les professionnels français traitant des données personnelles (médicale, juridique, financière), un MacBook Pro M3 ou M4 avec 18–36 GB de mémoire unifiée est la configuration recommandée pour l\'inférence locale avec contenu sensible. La CNIL recommande l\'inférence locale pour les systèmes d\'IA traitant les données personnelles sensibles dans les contextes professionnels.',
+            '**France (RGPD + LPD)**: La Loi Informatique et Libertés française exige le traitement des données personnelles en France ou dans des zones à protections équivalentes. Un ordinateur portable exécutant Ollama localement satisfait cette exigence pour l\'utilisation professionnelle individuelle — toute l\'inférence reste sur l\'appareil, sans traitement par serveurs externes. Les professionnels français préfèrent couramment Llama 3.1 7B via Ollama sur MacBooks M-series pour le traitement de documents sensibles sans sortie de données.',
+            '**Conformité régionale**: Pour les entreprises françaises, l\'exécution d\'inférence locale sur des ordinateurs portables isolés du réseau satisfait les exigences de souveraineté des données pour le traitement des données personnelles conformément au RGPD et à la Loi Informatique et Libertés.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs courantes lors de l\'exécution de Local LLMs sur un ordinateur portable',
+          items: [
+            '**Chargement d\'un modèle 7B sur 8 GB RAM sans fermer les autres applications**: Un modèle 7B en Q4_K_M utilise environ 4,5 GB. macOS ou Windows utilisent généralement 3–4 GB de RAM eux-mêmes. Sur une machine 8 GB, le chargement d\'un modèle 7B avec un navigateur et plusieurs onglets ouverts cause une pression mémoire, une utilisation d\'échange et des vitesses aussi basses que 2–5 token/sec. Fermez le navigateur et les applications inutiles avant de charger les modèles au-dessus de 3B sur les ordinateurs portables 8 GB RAM.',
+            '**Utilisation de Q8_0 sur un ordinateur portable lorsque Q4_K_M est suffisant**: Q8_0 double l\'exigence RAM par rapport à Q4_K_M avec un gain de qualité négligeable pour la plupart des tâches de conversation. Sur un ordinateur portable avec RAM limitée et charge thermique supérieure, Q4_K_M est toujours le meilleur choix sauf si vous avez 32+ GB et exécutez le modèle sur GPU.',
+            '**Exécution de sessions de génération longues sans support**: L\'inférence continue pendant 20+ minutes sur un bureau plat cause l\'étranglement thermique sur la plupart des ordinateurs portables en 15 minutes. Un support d\'ordinateur portable de 15 euros qui relève la base de 2–3 cm prolonge le temps de fonctionnement sans étranglement de 10 à 20+ minutes sans autres modifications.',
+            '**S\'attendre à ce que les vitesses d\'ordinateur portable correspondent aux vitesses d\'API cloud**: GPT-4o via API produit 80–150 token/sec. Un modèle 7B sur un ordinateur portable 8 GB produit 10–25 token/sec sur CPU. C\'est une différence de vitesse 4–15×. Pour l\'utilisation interactive, l\'inférence d\'ordinateur portable est acceptable. Pour le traitement par lot de gros documents, les API cloud sont plus rapides et moins chères à faible volume.',
+            '**Choisir la taille du modèle en fonction du nombre de paramètres plutôt que de l\'ajustement de RAM**: Un modèle 13B semble meilleur qu\'un modèle 7B — mais sur un ordinateur portable 16 GB avec navigateur en cours d\'exécution, le 13B en Q4_K_M s\'adapte à peine. Le modèle 7B en Q5_K_M (quantification de qualité supérieure) fonctionne plus rapidement et produit souvent de meilleurs résultats qu\'un modèle 13B en Q4_K_M luttant pour la mémoire.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lectures complémentaires',
+          items: [
+            '[Qu\'est-ce que les Local LLMs?](/local-llms/what-are-local-llms) — guide fondamental sur le fonctionnement de l\'inférence locale et les composants matériels importants',
+            '[Comment installer Ollama](/local-llms/how-to-install-ollama) — guide d\'installation complet pour macOS, Windows et Linux avec des notes de configuration spécifiques aux ordinateurs portables',
+            '[Meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models) — recommandations de modèles par tier RAM incluant les modèles 3B et 7B optimisés pour l\'utilisation d\'ordinateur portable',
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — comparaison détaillée des architectures d\'inférence pertinentes pour la sélection du matériel d\'ordinateur portable',
+            '[Local LLMs vs API cloud](/local-llms/local-llms-vs-cloud-apis) — comparaison des coûts et de la vitesse pour vous aider à décider quand l\'inférence d\'ordinateur portable est le bon choix',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — guide complet des compromis de quantification Q4/Q5/Q8 pour les environnements d\'ordinateur portable à mémoire limitée',
+          ],
+        },
+        faqSection: {
+          title: 'Questions fréquemment posées sur l\'exécution de Local LLMs sur ordinateurs portables',
+          faqs: [
+            {
+              q: 'L\'exécution d\'un Local LLM endommagera-t-elle mon ordinateur portable au fil du temps?',
+              a: 'Non — les CPU et GPU modernes sont conçus pour gérer en toute sécurité les charges élevées continues via l\'étranglement thermique. L\'exécution de l\'inférence pendant des heures est équivalente à l\'encodage vidéo ou aux jeux. Un support d\'ordinateur portable et une ventilation adéquate préviennent l\'accumulation excessive de chaleur. Le nombre de cycles de batterie augmente avec les recharges prolongées branchées, ce qui est un modèle d\'usure normal.',
+            },
+            {
+              q: 'Puis-je exécuter un Local LLM sur un ordinateur portable 4 GB RAM?',
+              a: 'À peine. Un modèle 2B comme Gemma 2 2B nécessite environ 1,7 GB de RAM pour le modèle, mais l\'OS a besoin de 2–3 GB simultanément. Sur 4 GB de RAM total, vous connaîtrez probablement une utilisation d\'échange ce qui rend l\'inférence 5–10× plus lente. Le minimum pratique pour une expérience utilisable est 8 GB.',
+            },
+            {
+              q: 'Mon ordinateur portable a-t-il besoin d\'un GPU dédié pour exécuter des Local LLMs?',
+              a: 'Non. Tous les principaux outils Local LLM (Ollama, LM Studio, GPT4All) fonctionnent uniquement sur CPU. Un GPU dédié accélère considérablement l\'inférence, mais les modèles 3B–7B sont utilisables à 10–30 token/sec uniquement sur CPU. Voir [Meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models) pour les recommandations de modèles optimisés CPU.',
+            },
+            {
+              q: 'Quel est l\'ordinateur portable le plus rapide pour exécuter des Local LLMs?',
+              a: 'À partir d\'avril 2026, Apple MacBook Pro M4 Max/M5 Max (48 GB mémoire unifiée) est l\'ordinateur portable grand public le plus rapide pour l\'inférence Local LLM. Il atteint 80–120 token/sec sur un modèle 13B et peut exécuter des modèles 30B à Q4_K_M. Pour les ordinateurs portables Windows, un GPU ordinateur portable RTX 4090 (16 GB VRAM) produit 100–130 token/sec sur des modèles 7B mais consomme considérablement plus d\'énergie et génère plus de chaleur.',
+            },
+            {
+              q: 'Comment savoir si mon ordinateur portable fait l\'étranglement thermique?',
+              a: 'Sur macOS: ouvrez Activity Monitor → Window → Historique d\'utilisation CPU. Une chute soudaine de la fréquence CPU lors d\'une génération continue indique l\'étranglement. Sur Windows: utilisez HWiNFO64 pour surveiller en temps réel les températures et vitesses d\'horloge du CPU/GPU. L\'étranglement se produit généralement lorsque la température du CPU dépasse 95–100°C.',
+            },
+            {
+              q: 'Puis-je exécuter un Local LLM avec l\'alimentation par batterie?',
+              a: 'Oui, mais la vitesse et la durée sont réduites. En mode batterie, macOS limite automatiquement la consommation d\'énergie du CPU/GPU, réduisant la vitesse d\'inférence de 20–35% par rapport aux performances branchées. Un modèle 7B sur un MacBook M3 Pro consomme environ 12–18 W lors de l\'inférence — attendez-vous à 3–4 heures de génération active à partir d\'une charge complète avant de tomber à 20%. Pour les sessions économes en batterie, utilisez un modèle 3B (6–10 W).',
+            },
+            {
+              q: 'Quelle est la meilleure taille de modèle pour un ordinateur portable 8 GB RAM?',
+              a: 'Un modèle 7B en Q4_K_M est le maximum pratique pour les ordinateurs portables 8 GB RAM lors de l\'exécution avec un navigateur ou d\'autres applications ouvertes. Pour juste le modèle avec toutes les autres applications fermées, un modèle 9B peut tenir. Le standard recommandé est llama3.2:3b pour le multitâche ou mistral:7b pour la qualité lorsque vous pouvez fermer le navigateur.',
+            },
+            {
+              q: 'Ollama utilise-t-il automatiquement le GPU sur un ordinateur portable?',
+              a: 'Oui. Ollama détecte et utilise automatiquement l\'accélération GPU disponible. Sur Apple Silicon, il utilise l\'accélération GPU Metal. Sur les ordinateurs portables NVIDIA, il utilise CUDA. Sur les ordinateurs portables AMD, il utilise ROCm (avec une configuration supplémentaire sur Linux). Vous pouvez vérifier que le GPU est utilisé en exécutant `ollama ps` après le démarrage d\'un modèle — cela montre si les couches sont chargées vers GPU ou CPU.',
+            },
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Apple. (2026). "Apple M4 Max/M5 Max Chip Overview." Apple Developer. https://developer.apple.com/apple-silicon/ — Architecture mémoire unifiée, benchmarks de performance ML et spécifications d\'efficacité énergétique.',
+            'Ollama. (2026). "Ollama Documentation." https://ollama.com/docs — Configuration d\'inférence CPU/GPU, accélération CUDA/Metal et paramètres de longueur de contexte.',
+            'llama.cpp Contributors. (2026). "llama.cpp Performance Benchmarks." https://github.com/ggerganov/llama.cpp — Données de débit de tokens sur les configurations matérielles et les niveaux de quantification.',
+            'Hugging Face. (2026). "GGUF Quantization Guide." https://huggingface.co/docs/transformers/main/en/quantization/gguf — Compromis de qualité Q2/Q4/Q5/Q8 vs mémoire avec résultats de benchmarks.',
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Exécutez des LLM locaux sur un ordinateur portable: RAM, vitesse, limitation thermique',
-        'description': 'Exécutez des LLM locaux sur des ordinateurs portables: quels modèles fonctionnent, exigences RAM, correctifs de limitation thermique, optimisation de la batterie, paramètres de quantification. Gratuit — avril 2026.',
+        'headline': 'Local LLMs sur ordinateur portable (8–16 Go VRAM) – Guide Performance 2026',
+        'description': 'Guide pratique pour exécuter des Local LLMs puissants avec peu de VRAM. Astuces de quantification, meilleurs modèles et benchmarks réels.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=fr',
         'inLanguage': 'fr',
-        'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'datePublished': '2026-01-01',
+        'dateModified': '2026-04-01',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['Local LLM ordinateur portable', 'exécuter LLM sur ordinateur portable', 'modèles faible VRAM', 'Ollama ordinateur portable', 'quantification pour ordinateurs portables'],
+        'about': [
+          { '@type': 'Thing', 'name': 'Local LLM sur ordinateur portable' },
+          { '@type': 'Thing', 'name': 'Inférence Apple Silicon' },
+          { '@type': 'Thing', 'name': 'Étranglement thermique' },
+          { '@type': 'Thing', 'name': 'Quantification LLM' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'Exigences RAM' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
-      sections: {},
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Comment réduire l\'étranglement thermique sur un ordinateur portable exécutant des Local LLMs',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'Utilisez un support d\'ordinateur portable avec dégagement d\'air' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Désactivez Turbo Boost pour maintenir une vitesse d\'horloge régulière' },
+          { '@type': 'HowToStep', 'position': 3, 'name': 'Limitez la taille du lot de génération' },
+          { '@type': 'HowToStep', 'position': 4, 'name': 'Utilisez la quantification Q4_K_M pour réduire la chaleur' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'L\'exécution d\'un Local LLM endommagera-t-elle mon ordinateur portable au fil du temps?', acceptedAnswer: { '@type': 'Answer', text: 'Non — les CPU et GPU modernes gèrent les charges élevées continues en toute sécurité. Un support d\'ordinateur portable et une ventilation adéquate préviennent l\'accumulation excessive de chaleur.' } },
+          { '@type': 'Question', name: 'Puis-je exécuter un Local LLM sur un ordinateur portable 4 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'À peine. Un modèle 2B nécessite environ 1,7 GB de RAM, l\'OS a besoin de 2–3 GB simultanément. Avec 4 GB au total, l\'utilisation d\'échange rendra l\'inférence 5–10× plus lente.' } },
+          { '@type': 'Question', name: 'Mon ordinateur portable a-t-il besoin d\'un GPU dédié?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Tous les principaux outils Local LLM fonctionnent uniquement sur CPU. Un GPU dédié accélère l\'inférence, mais les modèles 3B–7B sont utilisables à 10–30 token/sec uniquement sur CPU.' } },
+          { '@type': 'Question', name: 'Quel est l\'ordinateur portable le plus rapide?', acceptedAnswer: { '@type': 'Answer', text: 'À partir d\'avril 2026, Apple MacBook Pro M4 Max/M5 Max (48 GB mémoire unifiée) est le plus rapide. Il atteint 80–120 token/sec sur un modèle 13B.' } },
+          { '@type': 'Question', name: 'Comment savoir si mon ordinateur portable fait l\'étranglement thermique?', acceptedAnswer: { '@type': 'Answer', text: 'Sur macOS: ouvrez Activity Monitor → Window → Historique d\'utilisation CPU. Une chute soudaine indique l\'étranglement.' } },
+          { '@type': 'Question', name: 'Puis-je exécuter avec l\'alimentation par batterie?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, mais la vitesse et la durée sont réduites. macOS limite automatiquement la consommation d\'énergie, réduisant la vitesse de 20–35%.' } },
+          { '@type': 'Question', name: 'Quelle est la meilleure taille de modèle pour 8 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'Un modèle 7B en Q4_K_M est le maximum pratique. Le standard recommandé est llama3.2:3b pour le multitâche.' } },
+          { '@type': 'Question', name: 'Ollama utilise-t-il automatiquement le GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Ollama détecte et utilise automatiquement l\'accélération GPU. Vous pouvez vérifier en exécutant `ollama ps`.' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Meilleurs modèles Local LLM pour ordinateurs portables 2026',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:3b', 'description': '2,5 GB RAM. 25–45 token/s CPU. Meilleur pour ordinateurs portables 8 GB et tâches rapides.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'phi3.5', 'description': '3 GB RAM. 20–35 token/s CPU. Meilleur pour ordinateurs portables 8 GB, reasoning et coding.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'mistral:7b', 'description': '4,5 GB RAM. 10–20 token/s CPU. Meilleur pour utilisation générale 8–16 GB.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen2.5:7b', 'description': '4,7 GB RAM. 10–18 token/s CPU. Meilleur pour multilingue et coding sur 8–16 GB.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'llama3.1:8b', 'description': '5,5 GB RAM. 8–15 token/s CPU. Meilleure qualité à cette taille pour ordinateurs portables 16 GB.' }
+        ]
+      },
     },
-    ja: {
-      theme: '入門',
-      title: 'ノートパソコンでローカルLLMを実行する方法：パフォーマンス、熱管理、モデル選択',
-      seoTitle: 'ノートパソコンで動かすLLM：RAM・速度ガイド',
-      intro: 'ノートパソコンでローカルLLMを実行することは、8GBのRAMと現代的なCPUまたはApple Siliconチップで実用的です。主な制約は、RAM（モデルサイズを制限）、熱スロットリング（持続速度を低下）、バッテリー消耗（負荷下で時間あたり30-60%）です。適切なモデルと量子化設定が、使用可能な経験と使用不可能な経験の違いを生み出します。',
-      metaDescription: '8GBノートで7Bモデルを実行。実用的なRAM制限、熱スロットリング対策、バッテリー最適化。Apple Silicon対Windows。Q4_K_M量子化で無料。',
+        ja: {
+      theme: 'Getting Started',
+      title: 'ノートパソコンでローカルLLMを動かす方法：パフォーマンス、発熱管理、モデル選択',
+      seoTitle: 'ノートPC Local LLM 2026：実践ガイド',
+      intro: '2026年、適切なモデルサイズと量子化があれば、ノートパソコンでローカルLLMを実行することは現実的です。8GBのRAMを備えたどのノートパソコンでも、Q4_K_M量子化で7Bモデルを実行できます—Windows CPUで10–25トークン/秒、Apple Silicon M3で50–80トークン/秒。3つの真の制約は、RAM（最大モデルサイズを制限）、サーマルスロットリング（継続的な負荷後10–15分で速度を20–40%削減）、およびバッテリー消費量（アクティブな推論時に1時間あたり30–60%）です。2026年4月現在、Apple Silicon MacBookはローカルLLM推論向けの最良のノートパソコンオプションです—統合メモリによってGPUはすべての利用可能なRAMを使用でき、AppleのMetal加速はほとんどのWindowsノートパソコン専用GPUをワットあたりで上回ります。',
+      metaDescription: '8GB RAM ノートPCで7Bモデル運用ガイド。量子化テクニック、熱節流対策、推奨モデル、実測性能。PromptQuorum で直接比較テスト可能。',
       publishDate: '2026-04-04',
-      readTime: '8 min read',
+      dateModified: '2026-04-07',
+      readTime: '8分で読める',
       educationalLevel: 'Beginner',
-      primaryTerm: 'ローカルLLMノートパソコン',
+      primaryTerm: 'ノートパソコン向けローカルLLM',
+      toc: [
+        { label: '重要なポイント', anchor: 'key-points' },
+        { label: 'ノートパソコンでローカルLLMを実行できますか？', anchor: 'can-run' },
+        { label: '8GB RAM vs 16GB RAM', anchor: 'ram-comparison' },
+        { label: 'ノートパソコン向けのベストモデル', anchor: 'best-models' },
+        { label: 'Apple Silicon vs Windowsノートパソコン', anchor: 'apple-vs-windows' },
+        { label: 'サーマルスロットリングを処理する方法', anchor: 'thermal-management' },
+        { label: 'ローカル推論時のバッテリー消費', anchor: 'battery-drain' },
+        { label: 'ノートパソコン向けの量子化のヒント', anchor: 'quantization-tips' },
+        { label: '地域別コンプライアンス', anchor: 'regional-compliance' },
+        { label: '一般的な間違い', anchor: 'common-mistakes' },
+        { label: '関連するリソース', anchor: 'related-resources' },
+        { label: 'よくある質問', anchor: 'faq' },
+        { label: 'ソース', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Q4_K_M量子化の3Bまたは7Bモデルは、8GBのRAMを備えたどのモダンノートパソコンでも実用的に実行されます。',
+            'Apple Silicon MacBook（M1、M2、M3、M4）は統合メモリとMetal GPU加速のため、ほとんどのWindowsノートパソコンをローカル推論で上回ります—M3 MacBook Proは50–80トークン/秒で7Bモデルを実行します。',
+            'サーマルスロットリングは継続的な生成後10–15分で速度を20–40%削減します。ノートパソコンスタンドを使用し、Turbo Boostを無効化して、安定した速度を維持してください。',
+            'バッテリー消費量：ほとんどのノートパソコンでアクティブな推論中、毎時30–60%のバッテリーを予想してください。長いセッションは接続してください。',
+            '8GB RAM Windows/Linuxノートパソコン：7Bまでのq4_k_mモデルを使用。16GB RAM：13Bまでのq4_k_mモデル、または7Bの場合はq5_k_m。',
+          ],
+        },
+        canYouRun: {
+          title: 'ノートパソコンでローカルLLMを実行できますか？',
+          content: [
+            'はい—適切なモデルサイズで。8GBのRAMを搭載したノートパソコンがQ4_K_M量子化で7Bモデルを実行する場合、CPUで10–25トークン/秒、Apple Siliconで50–80トークン/秒を生成します。これはクラウドAPIと比較して遅いですが、対話的な使用には十分な速度です。',
+            'ほとんどの8GBノートパソコンの実用的な上限は7Bモデルです。Q4_K_MでのQ4_K_Mモデルは約9GBのRAMが必要です—16GBマシンでは技術的に可能ですが、OSと他のアプリケーションの余裕がほとんどありません。',
+            '[ローカルLLMとは何か](/local-llms/what-are-local-llms)とRAM要件の完全な説明については、専用ガイドを参照してください。',
+          ],
+          blockquote: 'ノートパソコン上のローカルLLMはCPUまたはRAMで実行されるモデルファイル—インターネットなし、APIなし、ハードウェアに応じてローカルで10–80トークン/秒で生成されるトークン。',
+          blockquoteSource: '一言で言うと',
+        },
+        ram8vs16: {
+          title: '8GB RAM vs 16GB RAMノートパソコン：実用的な違いは何ですか？',
+          rows: [
+            { 'シナリオ': '最大モデルサイズ', '8GB RAM': 'Q4_K_M（〜4.5GB）の7B', '16GB RAM': 'Q4_K_M（〜9GB）の13B' },
+            { 'シナリオ': 'ブラウザを開いたモデル', '8GB RAM': '3B–7B（タイト）', '16GB RAM': '7B–13B快適' },
+            { 'シナリオ': '推奨される最初のモデル', '8GB RAM': 'llama3.2:3bまたはmistral:7b', '16GB RAM': 'llama3.1:8bまたはqwen2.5:14b' },
+            { 'シナリオ': '同時アプリケーション', '8GB RAM': '7Bをロードする前にブラウザを閉じます', '16GB RAM': '通常のマルチタスク+ 7Bモデル' },
+          ],
+          columns: ['シナリオ', '8GB RAM', '16GB RAM'],
+        },
+        bestModels: {
+          title: 'ノートパソコン向けのベストローカルLLMモデルは何ですか？',
+          content: 'これらのモデルはノートパソコンの制約用に特別に選択されています—品質、RAM使用量、および継続的な生成速度のバランスをとっています。[Ollama](/local-llms/how-to-install-ollama)をインストールして、これらのいずれかを単一のコマンドで実行します：',
+          rows: [
+            { 'モデル': 'llama3.2:3b', 'RAM': '2.5GB', 'Speed (CPU)': '25–45トークン/秒', '最適な用途': '8GBノートパソコン、クイックタスク' },
+            { 'モデル': 'phi3.5', 'RAM': '3GB', 'Speed (CPU)': '20–35トークン/秒', '最適な用途': '8GBノートパソコン、推論/コーディング' },
+            { 'モデル': 'mistral:7b', 'RAM': '4.5GB', 'Speed (CPU)': '10–20トークン/秒', '最適な用途': '8–16GB、一般的な用途' },
+            { 'モデル': 'qwen2.5:7b', 'RAM': '4.7GB', 'Speed (CPU)': '10–18トークン/秒', '最適な用途': '8–16GB、多言語、コーディング' },
+            { 'モデル': 'llama3.1:8b', 'RAM': '5.5GB', 'Speed (CPU)': '8–15トークン/秒', '最適な用途': '16GBノートパソコン、最高の品質' },
+          ],
+          columns: ['モデル', 'RAM', 'Speed (CPU)', '最適な用途'],
+        },
+        appleSilicon: {
+          title: 'Apple Silicon vs Windowsノートパソコン：ローカルLLMに最適なのはどちらですか？',
+          content: [
+            '2026年4月現在、Apple Silicon MacBook（M1からM4）はローカルLLM推論向けの最高のコンシューマーノートパソコンです。[統合メモリ](/local-llms/gpu-vs-cpu-vs-apple-silicon)アーキテクチャは、GPUとCPUが同じメモリプールを共有することを意味します—18GBのメモリを備えたM3 MacBook ProはGPUメモリ全体で13Bモデルを実行でき、50–80トークン/秒を実現できます。',
+            'VRAMが十分（8GB以上）な場合、専用NVIDIAグラフィックス搭載のWindowsノートパソコンがより高速になる可能性があります。NVIDIA RTX 4060ノートパソコンGPU（8GB VRAM）は60–90トークン/秒で7Bモデルを実行します—Apple M3 Proと同等です。欠点は、バッテリー消費量が多く、熱が多く生成されます。',
+            'Intel Iris XeまたはAMD Radeon統合グラフィックス搭載のWindowsノートパソコンはCPU推論のみを使用し、7Bモデルで8–20トークン/秒になります。',
+          ],
+          rows: [
+            { 'ノートパソコンタイプ': 'Apple M3 Pro（18GB）', 'Speed (7B)': '50–80トークン/秒', 'バッテリー消費': '中程度', '最大モデル': '~13B' },
+            { 'ノートパソコンタイプ': 'Apple M2（8GB）', 'Speed (7B)': '30–50トークン/秒', 'バッテリー消費': '中程度', '最大モデル': '~7B' },
+            { 'ノートパソコンタイプ': 'NVIDIA RTX 4060ノートパソコン（8GB VRAM）', 'Speed (7B)': '60–90トークン/秒', 'バッテリー消費': '高い', '最大モデル': '~7B（GPU）、~13B（CPUオフロード）' },
+            { 'ノートパソコンタイプ': 'Intel i7 + Iris Xe（16GB RAM）', 'Speed (7B)': '8–15トークン/秒', 'バッテリー消費': '中程度', '最大モデル': '~13B' },
+            { 'ノートパソコンタイプ': 'AMD Ryzen 7 +統合GPU（16GB）', 'Speed (7B)': '10–18トークン/秒', 'バッテリー消費': '中程度', '最大モデル': '~13B' },
+          ],
+          columns: ['ノートパソコンタイプ', 'Speed (7B)', 'バッテリー消費', '最大モデル'],
+        },
+        thermals: {
+          title: 'ノートパソコンでサーマルスロットリングをどのように処理しますか？',
+          content: [
+            'サーマルスロットリングは、CPUまたはGPUが温度制限に達し、冷却するためにクロック速度を低下させるときに発生します。ローカルLLM推論の場合、これは通常、継続的な生成後10–15分で発生し、速度を20–40%削減します。',
+          ],
+          items: [
+            '**エアフロー間隙のあるノートパソコンスタンドを使用します**—ノートパソコンを2–3cm持ち上げると、排気気流が向上し、スロットリングの開始が10から20+分に遅延します。',
+            '**Intel Turbo Boost / AMD Precision Boostを無効にします**—ベースクロック速度で実行すると、サーマルスパイクのない安定した性能が得られます。macOSでは、`cpufreq`をインストールするか、バッテリー設定の「低電力」モードを使用します。',
+            '**生成バッチサイズを制限します**—非常に長い応答の再生成を避けます。長いタスクを短い入力に分割します。',
+            '**Q8_0ではなくQ4_K_Mを使用します**—低い量子化にはトークンあたりの計算が少なくなり、限界品質で熱が少なくなります。',
+          ],
+          blockquote: 'サーマルスロットリングはCPUが約95°Cを超えるときに自動的にクロック速度を低下させるCPU—継続的な生成後10–15分でローカルLLM推論速度を20–40%削減します。',
+          blockquoteSource: '一言で言うと',
+        },
+        battery: {
+          title: 'ローカルLLMはどのくらいのバッテリーを消費しますか？',
+          content: [
+            'ローカル推論中のバッテリー消費量は非常に多いです。7BモデルでのアクティブなCPU推論は、一般的なノートパソコンCPUで15–25Wを引き出し、60Wh バッテリーのフル充電からバッテリー寿命を2–3時間に削減します。',
+            'Apple Siliconは著しく効率的です。M3 MacBook Proで7Bモデルを実行する場合、推論中に約12–18Wを消費し、フル充電から3–4時間のアクティブな生成を提供します。',
+            '長いセッションの場合は接続してください。バッテリー効率の良いローカル推論が必要な場合は、Q4_K_MでのQ4_K_M 3Bモデルを使用します—それは6–10Wを引き出し、ほとんどのノートパソコンのバッテリー寿命を5–6時間に延長します。',
+          ],
+        },
+        quantization: {
+          title: 'ノートパソコンでどの量子化レベルを使用する必要がありますか？',
+          content: '[量子化](/local-llms/local-llm-hardware-guide-2026)はモデル精度を削減して、RAMと計算要件を削減します。ノートパソコンの場合、Q4_K_Mは推奨デフォルトです：',
+          rows: [
+            { '量子化': 'Q2_K', 'RAM vs Full': '~25%', '品質損失': '高い—顕著な低下', '用途': '極めて低いRAMのみ' },
+            { '量子化': 'Q3_K_S', 'RAM vs Full': '~35%', '品質損失': '中程度', '用途': 'RAM 4GB未満' },
+            { '量子化': 'Q4_K_M', 'RAM vs Full': '~45%', '品質損失': '低い—推奨デフォルト', '用途': 'ほとんどのノートパソコン、最適なバランス' },
+            { '量子化': 'Q5_K_M', 'RAM vs Full': '~55%', '品質損失': '最小限', '用途': '16GB RAMノートパソコン' },
+            { '量子化': 'Q8_0', 'RAM vs Full': '~80%', '品質損失': '無視できる', '用途': '32GB RAM、またはGPU搭載8GB以上のVRAM' },
+          ],
+          columns: ['量子化', 'RAM vs Full', '品質損失', '用途'],
+        },
+        regionalContext: {
+          title: 'ノートパソコンでローカルLLMを実行することはプライバシーをどのように保護しますか？',
+          content: [
+            '**日本（METI）**：METI AIガバナンスガイドラインは、AI推論が実行される場所をドキュメント化することを組織に要求します。ノートパソコンでローカルに実行されるOllama設定は、個々の専門的な使用のためにこの要件を満たします—すべての推論はデバイスと特定のモデルバージョンにトレーサブルです。日本の専門家は、機密文書の処理のため、M Seriesマック上のOllamaを通じてLLaMA 3.1 7Bを一般的に使用します。',
+            '**プライバシーと合法性**：ノートパソコンでローカルLLMを実行すると、デバイスからデータが出ません。推論テキスト、コンテキスト、出力はすべてローカルに保存されます。これはMETI AI管理フレームワークの遵守とデータ主権要件を満たします。',
+            '**オフライン処理**：ネットワーク分離されたノートパソコンでのローカル推論は、個人情報（医療データ、財務記録）の処理のための最高のプライバシー構成です。',
+          ],
+        },
+        commonMistakes: {
+          title: 'ノートパソコンでローカルLLMを実行するときの一般的な間違い',
+          items: [
+            '**他のアプリを閉じずに8GB RAMで7Bモデルを読み込む**：Q4_K_Mの7Bモデルは約4.5GBを使用します。macOSまたはWindowsは通常3–4GB RAMを自分で使用します。8GBマシンでは、ブラウザとタブが複数開くと、メモリプレッシャー、スワップ使用、および2–5トークン/秒程度の速度が発生します。8GB RAMノートパソコンで3B以上のモデルをロードする前に、ブラウザと不要なアプリを閉じます。',
+            '**Q4_K_Mが十分な場合はQ8_0を使用する**：Q8_0はQ4_K_Mと比較してRAM要件を2倍にし、ほとんどの会話タスクでは無視できる品質獲得です。RAMが限定され、熱負荷が高いノートパソコンでは、32GB以上があり、GPUでモデルを実行していない限り、Q4_K_Mは常に最適な選択肢です。',
+            '**スタンドなしで長い生成セッションを実行する**：フラットなデスク上で20分以上継続推論すると、ほとんどのノートパソコンで15分以内にサーマルスロットリングが発生します。ベースを2–3cm上げるノートパソコンスタンド（15ユーロ）は、他の変更なしにスロットリング自由な実行時を10から20+分に延長します。',
+            '**ノートパソコンの速度がクラウドAPI速度と一致することを期待する**：GPT-4o経由API 80–150トークン/秒を生成します。8GBノートパソコンの7Bモデル CPUで10–25トークン/秒を生成します。これは4–15倍の速度差です。対話的な用途では、ノートパソコン推論は問題ありません。バッチ処理大型ドキュメント用には、クラウドAPIが低ボリュームでより高速で安価です。',
+            '**RAMフィットの代わりにパラメータ数に基づいてモデルサイズを選択する**：13Bモデルは7Bモデルよりも優れた音声です—しかし16GBノートパソコンでブラウザが実行されている場合、Q4_K_MでのQ4_K_Mはぎりぎり収まります。Q5_K_M（より高い量子化品質）の7Bモデルがより高速に実行され、メモリのために闘っている13B Q4_K_Mモデルよりも多くの場合より良い結果を生成します。',
+          ],
+        },
+        relatedReading: {
+          title: '関連するリソース',
+          items: [
+            '[ローカルLLMとは何ですか？](/local-llms/what-are-local-llms)—ローカル推論がどのように機能し、どのハードウェアコンポーネントが重要かについての基本ガイド',
+            '[Ollamaをインストール方法](/local-llms/how-to-install-ollama)—macOS、Windows、Linuxの完全なセットアップガイド（ノートパソコン固有の構成メモ付き）',
+            '[初心者向けのベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models)—RAMティア別のモデルの推奨事項（ノートパソコン使用用に最適化された3B および7Bモデルを含む）',
+            '[GPUvs CPUvs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon)—ノートパソコンハードウェア選択に関連する推論アーキテクチャの詳細な比較',
+            '[ローカルLLMs vs クラウドAPI](/local-llms/local-llms-vs-cloud-apis)—ノートパソコン推論がいつ正しい選択であるかを決定するのに役立つコストと速度の比較',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026)—メモリ制約のあるノートパソコン環境向けのQ4/Q5/Q8量子化トレードオフの完全なガイド',
+          ],
+        },
+        faqSection: {
+          title: 'ノートパソコンでのローカルLLM実行に関するよくある質問',
+          faqs: [
+            {
+              q: 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？',
+              a: 'いいえ—最新のCPUおよびGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。推論を数時間実行することはビデオエンコーディングやゲームに相当します。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。バッテリーサイクル数は長時間のプラグイン充電で増加し、これは通常の摩耗パターンです。',
+            },
+            {
+              q: '4GB RAMノートパソコンでローカルLLMを実行できますか？',
+              a: 'ほぼ。Gemma 2 2Bのような2Bモデルは、モデル用に約1.7GB RAMが必要ですが、OSは同時に2–3GB必要です。合計4GBでは、スワップ使用により推論が5–10倍遅くなります。実用的な最小値は8GBです。',
+            },
+            {
+              q: 'ノートパソコンはローカルLLMを実行するために専用GPUを必要とますか？',
+              a: 'いいえ。すべての主要なローカルLLMツール（Ollama、LM Studio、GPT4All）はCPUのみで実行されます。専用GPUはウォーム推論を大幅に加速しますが、3B–7Bモデルは10–30トークン/秒でCPU単独で使用可能です。[初心者向けのベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models)を参照してください。',
+            },
+            {
+              q: 'ローカルLLMを実行するための最速のノートパソコンは何ですか？',
+              a: '2026年4月現在、Apple MacBook Pro M4 Max/M5 Max（48GB統合メモリ）はローカルLLM推論のための最速のコンシューマーノートパソコンです。13BモデルでB80–120トークン/秒を達成でき、Q4_K_Mで30Bモデルを実行できます。Windowsノートパソコンの場合、RTX 4090ノートパソコンGPU（16GB VRAM）は7Bモデルで100–130トークン/秒を生成しますが、かなり多くの電力を消費し、より多くの熱を生成します。',
+            },
+            {
+              q: 'ノートパソコンがサーマルスロットリングしているかどうかを知るにはどうすればよいですか？',
+              a: 'macOSで：Activity Monitor→Window→CPU使用履歴を開きます。継続生成中のCPU周波数の急激な低下はスロットリングを示します。Windowsで：HWiNFO64を使用してCPU/GPUの温度とクロック速度をリアルタイムで監視します。スロットリングは通常、CPUの温度が95–100°Cを超えるときに発生します。',
+            },
+            {
+              q: 'バッテリー電力でローカルLLMを実行できますか？',
+              a: 'はい、ただし速度と期間は削減されます。バッテリーモードでは、macOSは自動的にCPU/GPU電力出力を制限し、プラグイン性能と比較して推論速度を20–35%削減します。MacBook M3 Proの7Bモデルは推論中に約12–18Wを引き出します—フル充電から3–4時間のアクティブな生成を期待してください。バッテリー効率的なセッションには、3Bモデル（6–10W）を使用してください。',
+            },
+            {
+              q: '8GB RAMノートパソコンに最適なモデルサイズは何ですか？',
+              a: 'Q4_K_Mの7Bモデルは、ブラウザまたは他のアプリが開いた状態で実行する8GB RAMノートパソコンの実用的な最大値です。すべての他のアプリがクローズされただけのモデル、9Bモデルが収まる場合があります。推奨される標準はマルチタスク用のllama3.2:3b、またはブラウザを閉じることができる場合の品質用のmistral:7bです。',
+            },
+            {
+              q: 'Ollamaはノートパソコンで自動的にGPUを使用しますか？',
+              a: 'はい。Ollamaは利用可能なGPU加速を自動的に検出して使用します。Apple Siliconでは、Metal GPU加速を使用します。NVIDIAノートパソコンではCUDAを使用します。AMDノートパソコンではROCmを使用します。GPUが使用されているかを確認するには、モデルを開始後に`ollama ps`を実行します—レイヤーがGPUまたはCPUに読み込まれているかどうかが表示されます。',
+            },
+          ],
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            'Apple. (2026). "Apple M4 Max/M5 Max Chipの概要。" Appleデベロッパー。https://developer.apple.com/apple-silicon/ —統合メモリアーキテクチャ、MLパフォーマンスベンチマーク、および電力効率仕様。',
+            'Ollama. (2026). "Ollama文書。" https://ollama.com/docs —CPU/GPU推論構成、CUDA/Metal加速、およびコンテキスト長設定。',
+            'llama.cpp の貢献者。(2026). "llama.cpppパフォーマンスベンチマーク。" https://github.com/ggerganov/llama.cpp —ハードウェア構成と量子化レベル全体のトークンスループットデータ。',
+            'Hugging Face. (2026). "GGUF量子化ガイド。" https://huggingface.co/docs/transformers/main/en/quantization/gguf — Q2/Q4/Q5/Q8品質 vs メモリトレードオフ（ベンチマーク結果付き）。',
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'ノートパソコンでローカルLLMを実行: RAM、速度、熱スロットリング',
-        'description': 'ノートパソコンでローカルLLMを実行：どのモデルが機能するか、RAM要件、熱スロットリングの修正、バッテリー最適化、量子化設定。無料—2026年4月。',
+        'headline': 'ノートPCでLocal LLMを動かす（8〜16GB VRAM）実測性能ガイド 2026',
+        'description': '低VRAM環境で高性能Local LLMを動かす実践ガイド。量子化テクニック、おすすめモデル、実測ベンチマークを詳しく解説。',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=ja',
         'inLanguage': 'ja',
-        'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'datePublished': '2026-01-01',
+        'dateModified': '2026-04-01',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['ノートパソコン向けローカルLLM', 'ノートパソコンでLLMを実行', '低VRAM モデル', 'Ollamaノートパソコン', 'ノートパソコン向けの量子化'],
+        'about': [
+          { '@type': 'Thing', 'name': 'ノートパソコンのローカルLLM' },
+          { '@type': 'Thing', 'name': 'Apple Silicon推論' },
+          { '@type': 'Thing', 'name': 'サーマルスロットリング' },
+          { '@type': 'Thing', 'name': 'LLM量子化' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'RAM要件' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
-      sections: {},
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'ノートパソコンでローカルLLMを実行しているときにサーマルスロットリングを削減する方法',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': 'エアフロー間隙のあるノートパソコンスタンドを使用' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Turbo Boostを無効にして、安定したクロック速度を維持' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '生成バッチサイズを制限' },
+          { '@type': 'HowToStep', 'position': 4, 'name': '熱を削減するためにQ4_K_M量子化を使用' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ—最新のCPUとGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。' } },
+          { '@type': 'Question', name: '4GB RAMノートパソコンでローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'ほぼ。2Bモデルは約1.7GB RAMが必要で、OSは2–3GB必要です。4GB合計では、スワップ使用により推論が5–10倍遅くなります。' } },
+          { '@type': 'Question', name: 'ノートパソコンはローカルLLM用に専用GPUを必要とますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。すべての主要なローカルLLMツールはCPU単独で実行されます。専用GPUは推論を加速しますが、3B–7Bモデルは10–30トークン/秒でCPU単独で使用可能です。' } },
+          { '@type': 'Question', name: 'ローカルLLMを実行するための最速のノートパソコンは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年4月現在、Apple MacBook Pro M4 Max/M5 Max（48GB統合メモリ）が最速です。13BモデルでB80–120トークン/秒を達成できます。' } },
+          { '@type': 'Question', name: 'ノートパソコンがサーマルスロットリングしているかどうかを知るにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'macOSで：Activity Monitor→Window→CPU使用履歴を開きます。CPUの周波数の急激な低下はスロットリングを示します。' } },
+          { '@type': 'Question', name: 'バッテリー電力でローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、ただし速度と期間は削減されます。macOSは自動的にCPU/GPU電力出力を制限し、推論速度を20–35%削減します。' } },
+          { '@type': 'Question', name: '8GB RAMノートパソコンに最適なモデルサイズは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_Mの7Bモデルが実用的な最大です。推奨される標準はマルチタスク用のllama3.2:3bです。' } },
+          { '@type': 'Question', name: 'Ollamaはノートパソコンで自動的にGPUを使用しますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Ollamaは利用可能なGPU加速を自動的に検出して使用します。GPUが使用されているかを確認するには`ollama ps`を実行してください。' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'ノートパソコン向けベストローカルLLMモデル 2026',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:3b', 'description': '2.5GB RAM。25–45トークン/秒CPU。8GBノートパソコン、クイックタスク向けベスト。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'phi3.5', 'description': '3GB RAM。20–35トークン/秒CPU。8GBノートパソコン、推論/コーディング向けベスト。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'mistral:7b', 'description': '4.5GB RAM。10–20トークン/秒CPU。8–16GB一般使用向けベスト。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen2.5:7b', 'description': '4.7GB RAM。10–18トークン/秒CPU。8–16GB多言語コーディング向けベスト。' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'llama3.1:8b', 'description': '5.5GB RAM。8–15トークン/秒CPU。16GBノートパソコンこのサイズでベスト品質。' }
+        ]
+      },
     },
     zh: {
-      theme: '入门',
-      title: '如何在笔记本电脑上运行本地LLM：性能、散热和模型选择',
-      seoTitle: '笔记本运行本地LLM：RAM和速度完整指南',
-      intro: '在笔记本电脑上运行本地LLM可实用，需要8GB RAM和现代CPU或Apple Silicon芯片。主要限制是RAM（限制模型大小）、热节流（降低持续速度）和电池耗电（负载下每小时30-60%）。正确的模型和量子化设置可以区分可用和不可用的体验。',
-      metaDescription: '8GB笔记本运行7B模型。实际RAM限制、散热节流解决方案、电池优化。Apple Silicon对比Windows。Q4_K_M量化设置。免费测试。',
+      theme: 'Getting Started',
+      title: '如何在笔记本上运行本地LLM：性能、散热和型号选择',
+      seoTitle: '笔记本 Local LLM 2026：低显存实用指南',
+      intro: '2026年，使用合适的模型大小和量化，在笔记本电脑上运行本地LLM是切实可行的。任何配备8GB RAM的笔记本电脑都可以以Q4_K_M量化运行7B模型 — Windows CPU上10–25令牌/秒，Apple Silicon M3上50–80令牌/秒。三个真正的限制是RAM（限制最大模型大小）、热节流（在10–15分钟持续负载后将速度降低20–40%）和电池消耗（活跃推理期间每小时30–60%）。截至2026年4月，Apple Silicon MacBook是本地LLM推理的最佳笔记本电脑选择 — 统一内存允许GPU使用所有可用RAM，Apple的Metal加速超过了大多数Windows笔记本离散GPU的每瓦性能。',
+      metaDescription: '8GB 显存笔记本运行7B模型完全指南。量化技巧、热节流防护、最佳模型推荐及实际性能数据。用 PromptQuorum 直接测试对比。',
       publishDate: '2026-04-04',
-      readTime: '8 min read',
+      dateModified: '2026-04-07',
+      readTime: '8分钟阅读',
       educationalLevel: 'Beginner',
-      primaryTerm: '本地LLM笔记本电脑',
+      primaryTerm: '笔记本电脑本地LLM',
+      toc: [
+        { label: '关键要点', anchor: 'key-points' },
+        { label: '您可以在笔记本上运行本地LLM吗？', anchor: 'can-run' },
+        { label: '8GB RAM vs 16GB RAM', anchor: 'ram-comparison' },
+        { label: '笔记本电脑最佳模型', anchor: 'best-models' },
+        { label: 'Apple Silicon vs Windows笔记本', anchor: 'apple-vs-windows' },
+        { label: '如何处理热节流', anchor: 'thermal-management' },
+        { label: '本地推理期间的电池消耗', anchor: 'battery-drain' },
+        { label: '笔记本电脑量子化技巧', anchor: 'quantization-tips' },
+        { label: '地区合规性', anchor: 'regional-compliance' },
+        { label: '常见错误', anchor: 'common-mistakes' },
+        { label: '相关资源', anchor: 'related-resources' },
+        { label: '常见问题', anchor: 'faq' },
+        { label: '来源', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Q4_K_M量化的3B或7B模型在任何配有8GB RAM的现代笔记本电脑上都可以实用地运行。',
+            'Apple Silicon MacBook（M1、M2、M3、M4）由于统一内存和Metal GPU加速，在本地推理中超过大多数Windows笔记本 — M3 MacBook Pro以50–80令牌/秒运行7B模型。',
+            '热节流在10–15分钟的持续生成后将速度降低20–40%。使用笔记本电脑支架并禁用Turbo Boost以保持稳定的速度。',
+            '电池消耗：在大多数笔记本电脑上，活跃推理期间预计每小时30–60%的电池。对于较长的会话，请插入。',
+            '在8GB RAM Windows/Linux笔记本电脑上：使用Q4_K_M型号至7B。在16GB RAM上：Q4_K_M型号至13B，或7B的Q5_K_M。',
+          ],
+        },
+        canYouRun: {
+          title: '您可以在笔记本上运行本地LLM吗？',
+          content: [
+            '是的 — 使用合适的模型大小。配有8GB RAM的笔记本电脑以Q4_K_M量化运行7B模型，在CPU上产生10–25令牌/秒，在Apple Silicon上产生50–80令牌/秒。与云API相比这很慢，但足够快用于交互式使用。',
+            '大多数8GB笔记本电脑的实际上限是7B模型。Q4_K_M中的13B模型需要约9GB RAM — 在16GB机器上在技术上可行，但为操作系统和其他应用程序留下的余地很少。',
+            '对于[什么是本地LLM](/local-llms/what-are-local-llms)和RAM要求的完整说明，请参阅专用指南。',
+          ],
+          blockquote: '笔记本电脑上的本地LLM是在CPU或RAM上运行的模型文件 — 没有互联网，没有API，令牌根据硬件在10–80令牌/秒本地生成。',
+          blockquoteSource: '一句话总结',
+        },
+        ram8vs16: {
+          title: '8GB RAM vs 16GB RAM笔记本电脑：实际区别是什么？',
+          rows: [
+            { '场景': '最大模型大小', '8GB RAM': 'Q4_K_M（〜4.5GB）的7B', '16GB RAM': 'Q4_K_M（〜9GB）的13B' },
+            { '场景': '浏览器打开时的模型', '8GB RAM': '3B–7B（紧张）', '16GB RAM': '7B–13B舒适' },
+            { '场景': '推荐的第一个模型', '8GB RAM': 'llama3.2:3b或mistral:7b', '16GB RAM': 'llama3.1:8b或qwen2.5:14b' },
+            { '场景': '同时应用程序', '8GB RAM': '在加载7B之前关闭浏览器', '16GB RAM': '正常多任务+ 7B模型' },
+          ],
+          columns: ['场景', '8GB RAM', '16GB RAM'],
+        },
+        bestModels: {
+          title: '笔记本电脑最佳本地LLM模型是什么？',
+          content: '这些模型专门为笔记本电脑限制而选择 — 平衡质量、RAM使用和持续生成速度。安装[Ollama](/local-llms/how-to-install-ollama)以使用单个命令运行这些模型中的任何一个：',
+          rows: [
+            { '模型': 'llama3.2:3b', 'RAM': '2.5GB', '速度（CPU）': '25–45令牌/秒', '最佳适配': '8GB笔记本电脑，快速任务' },
+            { '模型': 'phi3.5', 'RAM': '3GB', '速度（CPU）': '20–35令牌/秒', '最佳适配': '8GB笔记本电脑，推理/编码' },
+            { '模型': 'mistral:7b', 'RAM': '4.5GB', '速度（CPU）': '10–20令牌/秒', '最佳适配': '8–16GB，通用用途' },
+            { '模型': 'qwen2.5:7b', 'RAM': '4.7GB', '速度（CPU）': '10–18令牌/秒', '最佳适配': '8–16GB，多语言、编码' },
+            { '模型': 'llama3.1:8b', 'RAM': '5.5GB', '速度（CPU）': '8–15令牌/秒', '最佳适配': '16GB笔记本电脑，这个大小最好的品质' },
+          ],
+          columns: ['模型', 'RAM', '速度（CPU）', '最佳适配'],
+        },
+        appleSilicon: {
+          title: 'Apple Silicon vs Windows笔记本：哪个对本地LLM更好？',
+          content: [
+            '截至2026年4月，Apple Silicon MacBook（M1至M4）是本地LLM推理的最佳消费级笔记本电脑。[统一内存](/local-llms/gpu-vs-cpu-vs-apple-silicon)架构意味着GPU和CPU共享同一内存池 — 配有18GB内存的M3 MacBook Pro可以完全在GPU内存中运行13B模型，达到50–80令牌/秒。',
+            '带有离散NVIDIA GPU的Windows笔记本电脑如果VRAM足够（8GB以上）可能更快。NVIDIA RTX 4060笔记本电脑GPU（8GB VRAM）以60–90令牌/秒运行7B模型 — 可与Apple M3 Pro相比。缺点是更高的电池消耗和更多的热量生成。',
+            '运行Intel Iris Xe或AMD Radeon集成显卡的Windows笔记本电脑仅使用CPU推理，对7B模型产生8–20令牌/秒。',
+          ],
+          rows: [
+            { '笔记本电脑类型': 'Apple M3 Pro（18GB）', '速度（7B）': '50–80令牌/秒', '电池消耗': '适中', '最大模型': '~13B' },
+            { '笔记本电脑类型': 'Apple M2（8GB）', '速度（7B）': '30–50令牌/秒', '电池消耗': '适中', '最大模型': '~7B' },
+            { '笔记本电脑类型': 'NVIDIA RTX 4060笔记本电脑（8GB VRAM）', '速度（7B）': '60–90令牌/秒', '电池消耗': '高', '最大模型': '~7B（GPU）、~13B（CPU卸载）' },
+            { '笔记本电脑类型': 'Intel i7 + Iris Xe（16GB RAM）', '速度（7B）': '8–15令牌/秒', '电池消耗': '适中', '最大模型': '~13B' },
+            { '笔记本电脑类型': 'AMD Ryzen 7 +集成GPU（16GB）', '速度（7B）': '10–18令牌/秒', '电池消耗': '适中', '最大模型': '~13B' },
+          ],
+          columns: ['笔记本电脑类型', '速度（7B）', '电池消耗', '最大模型'],
+        },
+        thermals: {
+          title: '如何处理笔记本电脑上的热节流？',
+          content: [
+            '热节流发生在CPU或GPU达到其温度极限并降低时钟速度以冷却时。对于本地LLM推理，这通常在10–15分钟的持续生成后发生，速度降低20–40%。',
+          ],
+          items: [
+            '**使用带气流间隙的笔记本电脑支架** — 将笔记本电脑抬起2–3厘米可改善排气气流，并将节流开始时间从10延迟到20+分钟。',
+            '**禁用Intel Turbo Boost / AMD Precision Boost** — 在基础时钟速度下运行会产生稳定的性能，没有热峰值。在macOS上，安装`cpufreq`或在电池设置中使用"低功耗"模式。',
+            '**限制生成批次大小** — 避免重新生成非常长的响应。将长任务分解成更短的提示。',
+            '**使用Q4_K_M而不是Q8_0** — 较低的量化需要每个令牌的计算量较少，产生较少的热量，代价是边际质量。',
+          ],
+          blockquote: '热节流是当CPU超过约95°C时自动降低CPU时钟速度 — 它在10–15分钟的持续生成后将本地LLM推理速度降低20–40%。',
+          blockquoteSource: '一句话总结',
+        },
+        battery: {
+          title: '运行本地LLM消耗多少电池？',
+          content: [
+            '本地推理期间的电池消耗是重大的。7B模型上的活跃CPU推理在典型笔记本电脑CPU上消耗15–25W，将60Wh电池的电池寿命从完全充电时间缩短至2–3小时。',
+            'Apple Silicon明显更高效。运行7B模型的M3 MacBook Pro在推理期间消耗约12–18W，在完全充电时提供3–4小时的活跃生成。',
+            '对于较长的会话，请插入。如果您需要电池高效的本地推理，请在Q4_K_M中使用3B模型 — 它消耗6–10W，并在大多数笔记本电脑上将电池寿命延长至5–6小时。',
+          ],
+        },
+        quantization: {
+          title: '在笔记本电脑上应该使用哪个量化级别？',
+          content: '[量化](/local-llms/local-llm-hardware-guide-2026)降低模型精度以降低RAM和计算要求。对于笔记本电脑，Q4_K_M是推荐的默认值：',
+          rows: [
+            { '量化': 'Q2_K', '与全精度相比的RAM': '~25%', '质量损失': '高 — 明显降级', '用例': '仅极低的RAM' },
+            { '量化': 'Q3_K_S', '与全精度相比的RAM': '~35%', '质量损失': '适中', '用例': 'RAM低于4GB' },
+            { '量化': 'Q4_K_M', '与全精度相比的RAM': '~45%', '质量损失': '低 — 推荐的默认值', '用例': '大多数笔记本电脑，最佳平衡' },
+            { '量化': 'Q5_K_M', '与全精度相比的RAM': '~55%', '质量损失': '最小', '用例': '16GB RAM笔记本电脑' },
+            { '量化': 'Q8_0', '与全精度相比的RAM': '~80%', '质量损失': '可以忽略不计', '用例': '32GB RAM或GPU配8GB以上VRAM' },
+          ],
+          columns: ['量化', '与全精度相比的RAM', '质量损失', '用例'],
+        },
+        regionalContext: {
+          title: '在笔记本电脑上运行本地LLM如何保护您的隐私？',
+          content: [
+            '**中国（数据安全法）** ：中国《数据安全法》限制某些数据类别离开经批准的基础设施。在笔记本电脑上运行Qwen2.5 7B本地（通过Ollama）满足个人用例的此要求 — Qwen2.5在相同硬件上处理中文内容比西方训练的模型令牌高效30–40%。',
+            '**数据主权** ：在笔记本电脑上本地运行LLM可确保所有数据保持在设备上。推理文本、上下文、输出都存储在本地。这满足《数据安全法》对受管制数据处理的合规性要求。',
+            '**隐私最大化** ：与网络隔离的笔记本电脑上的本地推理是处理个人信息（医疗数据、财务记录）的最佳隐私配置。没有云同步、没有API调用、没有外部处理 — 完全数据隐私。',
+          ],
+        },
+        commonMistakes: {
+          title: '在笔记本电脑上运行本地LLM时的常见错误',
+          items: [
+            '**在不关闭其他应用程序的情况下在8GB RAM上加载7B模型** ：Q4_K_M的7B模型使用约4.5GB。macOS或Windows本身通常使用3–4GB RAM。在8GB机器上，加载7B模型同时打开浏览器和多个选项卡会导致内存压力、交换使用以及速度低至2–5令牌/秒。在8GB RAM笔记本电脑上加载超过3B的模型之前，请关闭浏览器和不必要的应用程序。',
+            '**当Q4_K_M足够时使用Q8_0** ：Q8_0将RAM要求加倍，与Q4_K_M相比对大多数对话任务的质量收益可以忽略不计。在RAM受限且热负载较高的笔记本电脑上，除非您有32GB以上并在GPU上运行模型，否则Q4_K_M始终是更好的选择。',
+            '**在没有支架的情况下运行长生成会话** ：在平坦的桌子上进行20分钟以上的持续推理会导致大多数笔记本电脑在15分钟内的热节流。15美元的笔记本电脑支架将底座抬起2–3厘米，无需任何其他更改，可将无节流运行时间从10延长到20+分钟。',
+            '**期望笔记本电脑速度与云API速度相匹配** ：GPT-4o通过API产生80–150令牌/秒。8GB笔记本电脑上的7B模型在CPU上产生10–25令牌/秒。这是4–15倍的速度差异。对于交互式使用，笔记本电脑推理很好。对于批处理大型文档，云API在低容量下更快且更便宜。',
+            '**根据参数数而不是RAM适配选择模型大小** ：13B模型听起来比7B模型更好 — 但在16GB笔记本电脑上运行浏览器时，Q4_K_M中的13B仅仅勉强适应。Q5_K_M（更高的量化质量）中的7B模型运行更快，通常会产生比为内存而战的Q4_K_M中13B模型更好的结果。',
+          ],
+        },
+        relatedReading: {
+          title: '相关资源',
+          items: [
+            '[什么是本地LLM？](/local-llms/what-are-local-llms) — 关于本地推理如何工作以及哪些硬件组件重要的基础指南',
+            '[如何安装Ollama](/local-llms/how-to-install-ollama) — macOS、Windows和Linux的完整设置指南，带有笔记本电脑特定的配置说明',
+            '[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models) — 按RAM层级的模型建议，包括为笔记本电脑使用优化的3B和7B模型',
+            '[GPU与CPU与Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — 与笔记本电脑硬件选择相关的推理架构的详细比较',
+            '[本地LLM与云API](/local-llms/local-llms-vs-cloud-apis) — 成本和速度比较，可帮助您决定何时笔记本电脑推理是正确的选择',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — 关于内存受限笔记本电脑环境的Q4/Q5/Q8量化权衡的完整指南',
+          ],
+        },
+        faqSection: {
+          title: '关于在笔记本电脑上运行本地LLM的常见问题',
+          faqs: [
+            {
+              q: '运行本地LLM会随着时间推移损伤我的笔记本电脑吗？',
+              a: '否 — 现代CPU和GPU设计可通过热节流安全地处理持续的高负荷。运行推理数小时等同于视频编码或游戏。笔记本电脑支架和适当的通风可防止过度热量积聚。通过插电充电增加的电池周期数是正常的磨损。',
+            },
+            {
+              q: '我可以在4GB RAM笔记本电脑上运行本地LLM吗？',
+              a: '勉强。Gemma 2 2B之类的2B模型需要约1.7GB RAM用于模型，但操作系统同时需要2–3GB。在4GB总RAM下，您可能会经历交换使用，使推理速度降低5–10倍。实际最小值是8GB。',
+            },
+            {
+              q: '我的笔记本电脑需要专用GPU来运行本地LLM吗？',
+              a: '否。所有主要的本地LLM工具（Ollama、LM Studio、GPT4All）仅在CPU上运行。专用GPU显著加速推理，但3B–7B模型可在10–30令牌/秒的CPU单独上使用。参见[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models)。',
+            },
+            {
+              q: '运行本地LLM的最快笔记本电脑是什么？',
+              a: '截至2026年4月，Apple MacBook Pro M4 Max/M5 Max（48GB统一内存）是本地LLM推理的最快消费级笔记本电脑。它在13B模型上达到80–120令牌/秒，可以在Q4_K_M处运行30B模型。对于Windows笔记本电脑，RTX 4090笔记本电脑GPU（16GB VRAM）在7B模型上产生100–130令牌/秒，但消耗更多功率并产生更多热量。',
+            },
+            {
+              q: '我如何知道我的笔记本电脑是否进行热节流？',
+              a: '在macOS上：打开Activity Monitor → Window → CPU使用历史记录。在持续生成期间CPU频率的突然下降表示节流。在Windows上：使用HWiNFO64实时监视CPU/GPU温度和时钟速度。节流通常在CPU温度超过95–100°C时发生。',
+            },
+            {
+              q: '我可以在电池电力上运行本地LLM吗？',
+              a: '是的，但速度和持续时间降低。在电池模式下，macOS自动限制CPU/GPU电源提取，相比插电性能降低推理速度20–35%。MacBook M3 Pro上的7B模型在推理期间消耗约12–18W — 从完全充电时预计3–4小时的活跃生成，然后下降至20%。对于电池高效的会话，使用3B模型（6–10W）。',
+            },
+            {
+              q: '8GB RAM笔记本电脑最好的型号大小是什么？',
+              a: 'Q4_K_M中的7B模型是在运行浏览器或其他应用程序打开时运行8GB RAM笔记本电脑的实际最大值。仅对于关闭所有其他应用程序的模型，9B模型可能适合。推荐的标准是多任务处理的llama3.2:3b或当您可以关闭浏览器时品质的mistral:7b。',
+            },
+            {
+              q: 'Ollama在笔记本电脑上自动使用GPU吗？',
+              a: '是的。Ollama自动检测并使用可用的GPU加速。在Apple Silicon上，它使用Metal GPU加速。在NVIDIA笔记本电脑上，它使用CUDA。在AMD笔记本电脑上，它使用ROCm（在Linux上需要一些额外设置）。您可以通过启动模型后运行`ollama ps`来验证GPU是否被使用 — 它显示层是否加载到GPU或CPU。',
+            },
+          ],
+        },
+        sources: {
+          title: '来源',
+          items: [
+            'Apple. (2026). "Apple M4 Max/M5 Max芯片概述。" Apple开发者。https://developer.apple.com/apple-silicon/ — 统一内存架构、ML性能基准和功率效率规范。',
+            'Ollama. (2026). "Ollama文档。" https://ollama.com/docs — CPU/GPU推理配置、CUDA/Metal加速和上下文长度设置。',
+            'llama.cpp贡献者。(2026). "llama.cpp性能基准。" https://github.com/ggerganov/llama.cpp — 硬件配置和量化级别的令牌吞吐量数据。',
+            'Hugging Face. (2026). "GGUF量化指南。" https://huggingface.co/docs/transformers/main/en/quantization/gguf — Q2/Q4/Q5/Q8质量与内存权衡，包括基准结果。',
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': '在笔记本电脑上运行本地LLM：RAM、速度、热节流',
-        'description': '在笔记本电脑上运行本地LLM：哪些模型可用、RAM要求、热节流修复、电池优化、量子化设置。免费—2026年4月。',
+        'headline': '笔记本运行 Local LLM（8–16GB 显存）实测性能指南 2026',
+        'description': '低显存环境运行高性能 Local LLM 的完整指南。涵盖量化技巧、最佳模型推荐与真实性能测试。',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop?lang=zh',
         'inLanguage': 'zh',
-        'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'datePublished': '2026-01-01',
+        'dateModified': '2026-04-01',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'proficiencyLevel': 'Beginner',
+        'keywords': ['笔记本电脑本地LLM', '在笔记本上运行LLM', '低VRAM模型', 'Ollama笔记本电脑', '笔记本电脑量子化'],
+        'about': [
+          { '@type': 'Thing', 'name': '笔记本电脑上的本地LLM' },
+          { '@type': 'Thing', 'name': 'Apple Silicon推理' },
+          { '@type': 'Thing', 'name': '热节流' },
+          { '@type': 'Thing', 'name': 'LLM量化' },
+          { '@type': 'Thing', 'name': 'Ollama' },
+          { '@type': 'Thing', 'name': 'RAM要求' }
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
-      sections: {},
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '如何在运行本地LLM的笔记本电脑上减少热节流',
+        'step': [
+          { '@type': 'HowToStep', 'position': 1, 'name': '使用带气流间隙的笔记本电脑支架' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '禁用Turbo Boost以保持稳定的时钟速度' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '限制生成批次大小' },
+          { '@type': 'HowToStep', 'position': 4, 'name': '使用Q4_K_M量化来减少热' }
+        ]
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: '运行本地LLM会随着时间推移损伤笔记本电脑吗？', acceptedAnswer: { '@type': 'Answer', text: '否 — 现代CPU和GPU设计可安全处理持续的高负荷。笔记本电脑支架和适当的通风可防止过度热量积聚。' } },
+          { '@type': 'Question', name: '我可以在4GB RAM笔记本电脑上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '勉强。2B模型需要约1.7GB RAM，操作系统需要2–3GB。在4GB总RAM下，交换使用使推理速度降低5–10倍。' } },
+          { '@type': 'Question', name: '我的笔记本电脑需要专用GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '否。所有主要的本地LLM工具仅在CPU上运行。专用GPU加速推理，但3B–7B模型可在10–30令牌/秒的CPU单独上使用。' } },
+          { '@type': 'Question', name: '运行本地LLM的最快笔记本电脑是什么？', acceptedAnswer: { '@type': 'Answer', text: '截至2026年4月，Apple MacBook Pro M4 Max/M5 Max（48GB统一内存）是最快的。它在13B模型上达到80–120令牌/秒。' } },
+          { '@type': 'Question', name: '我如何知道笔记本电脑是否进行热节流？', acceptedAnswer: { '@type': 'Answer', text: '在macOS上：打开Activity Monitor → Window → CPU使用历史。在持续生成期间CPU频率的突然下降表示节流。' } },
+          { '@type': 'Question', name: '我可以在电池电力上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，但速度和持续时间降低。macOS限制CPU/GPU电源提取，相比插电性能降低推理速度20–35%。' } },
+          { '@type': 'Question', name: '8GB RAM笔记本电脑最好的型号大小是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M中的7B是实际最大值。推荐的标准是多任务处理的llama3.2:3b。' } },
+          { '@type': 'Question', name: 'Ollama在笔记本电脑上自动使用GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。Ollama自动检测并使用可用的GPU加速。通过启动模型后运行`ollama ps`来验证。' } }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': '笔记本电脑最佳本地LLM模型 2026',
+        'numberOfItems': 5,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:3b', 'description': '2.5GB RAM。25–45令牌/秒CPU。8GB笔记本电脑、快速任务最佳。' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'phi3.5', 'description': '3GB RAM。20–35令牌/秒CPU。8GB笔记本电脑、推理/编码最佳。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'mistral:7b', 'description': '4.5GB RAM。10–20令牌/秒CPU。8–16GB通用用途最佳。' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen2.5:7b', 'description': '4.7GB RAM。10–18令牌/秒CPU。8–16GB多语言编码最佳。' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'llama3.1:8b', 'description': '5.5GB RAM。8–15令牌/秒CPU。16GB笔记本电脑这个大小最好的品质。' }
+        ]
+      },
     },
   },
 
@@ -6749,106 +10066,984 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       },
     },
     de: {
-      theme: 'Vergleich',
-      title: 'Qwen2.5 vs Llama 3.x vs Mistral 2026: Benchmarks und VRAM-Anforderungen',
-      seoTitle: 'Qwen vs Llama vs Mistral 2026: Benchmarks & VRAM',
-      intro: 'Vergleich von Qwen2.5 (84% MMLU) vs Llama 3.3 (82% MMLU) vs Mistral (79%). HumanEval: Qwen 87%, Llama 88%. Benchmarks, VRAM-Anforderungen, Codierung und mehrsprachige Unterstützung.',
-      metaDescription: 'Qwen2.5 (84% MMLU) vs Llama 3.3 (82% MMLU) vs Mistral (79%). HumanEval: Qwen 87%, Llama 88%. Vergleichen Sie Benchmarks, VRAM, Codierung und mehrsprachige Unterstützung.',
+      theme: 'Best Models',
+      title: 'Qwen vs. Llama vs. Mistral: Welches lokale LLM-Modell sollten Sie verwenden?',
+      seoTitle: 'Qwen vs Llama vs Mistral 2026: Vergleich wählen',
+      intro: 'Qwen2.5, Meta Llama 3.x und Mistral sind die drei dominantesten Open-Weight-Modellfamilien für lokale Inferenz in 2026. Qwen2.5 führt beim Coding — 87% HumanEval bei 72B, gegen Llama 3.3 mit 88% und Mistral 7B mit 39%. Qwen2.5 unterstützt auch nativ 29 Sprachen. Llama 3.3 70B führt bei englischem allgemeinem Reasoning (82% MMLU). Mistral Small 3.1 24B liefert nahezu 70B-Qualität bei nur 14 GB RAM — das beste Qualitäts-zu-RAM-Verhältnis der drei Familien. Die richtige Wahl hängt vom Task-Typ, der Sprache und verfügbarem VRAM ab.',
+      metaDescription: 'Qwen2.5 für Code, Llama 3.3 für Englisch, Mistral für Effizienz. RAM-Verbrauch, Geschwindigkeit, Benchmarks. Mit PromptQuorum testen und vergleichen.',
       publishDate: '2026-04-04',
-      readTime: '10 min read',
-      educationalLevel: 'Beginner to Advanced',
-      primaryTerm: 'Modellvergleich',
+      dateModified: '2026-04-07',
+      readTime: '9 min Lesezeit',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Qwen vs Llama vs Mistral',
+      toc: [
+        { label: 'Schlüsselergebnisse', anchor: 'key-takeaways' },
+        { label: 'Modellfamilien-Übersicht', anchor: 'model-family-overview' },
+        { label: 'Benchmark-Vergleich', anchor: 'benchmark-comparison' },
+        { label: 'Qwen2.5: Stärken und Schwächen', anchor: 'qwen2-5' },
+        { label: 'Llama 3.x: Stärken und Schwächen', anchor: 'llama-3' },
+        { label: 'Mistral: Stärken und Schwächen', anchor: 'mistral' },
+        { label: 'Welche Familie gewinnt nach Task?', anchor: 'which-family-wins-by-task' },
+        { label: 'Größen-für-Größen-Vergleich', anchor: 'size-for-size-comparison' },
+        { label: 'Erste Schritte', anchor: 'how-to-get-started' },
+        { label: 'Regionaler Kontext', anchor: 'regional-context' },
+        { label: 'Häufig gestellte Fragen', anchor: 'faq' },
+        { label: 'Häufige Fehler', anchor: 'common-mistakes' },
+        { label: 'Weiterführende Ressourcen', anchor: 'related-reading' },
+        { label: 'Quellen', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Coding**: Qwen2.5 gewinnt bei jeder Größe — 87% HumanEval bei 72B, 79% bei 32B, 72% bei 7B.',
+            '**Allgemeines Reasoning**: Llama 3.3 70B und Qwen2.5 72B liegen fast gleichauf; Llama 3.x ist stärker in Englisch, Qwen in mehrsprachig.',
+            '**Effizienz (Qualität pro GB RAM)**: Mistral Small 3.1 24B liefert nahezu 70B-Qualität bei nur 14 GB RAM.',
+            '**Sprachen jenseits von Englisch**: Qwen2.5 unterstützt nativ 29 Sprachen; Llama und Mistral sind primär englischoptimiert.',
+            '**Anfänger auf 8 GB RAM**: Llama 3.2 3B oder Mistral 7B sind die dokumentiertesten und von der Community unterstützten Optionen.',
+          ],
+        },
+        overview: {
+          title: 'Modellfamilien-Übersicht: Qwen, Llama und Mistral',
+          rows: [
+            { 'Familie': 'Qwen2.5', 'Entwickler': 'Alibaba', 'Verfügbare Größen': '0.5B, 1.5B, 3B, 7B, 14B, 32B, 72B', 'Lizenz': 'Apache 2.0 (meist)' },
+            { 'Familie': 'Llama 3.x', 'Entwickler': 'Meta', 'Verfügbare Größen': '1B, 3B, 8B, 70B', 'Lizenz': 'Llama Community (benutzerdefiniert)' },
+            { 'Familie': 'Mistral', 'Entwickler': 'Mistral AI', 'Verfügbare Größen': '7B, Small 3.1 (24B), Large (123B)', 'Lizenz': 'Apache 2.0 (7B, Small)' },
+          ],
+          columns: ['Familie', 'Entwickler', 'Verfügbare Größen', 'Lizenz'],
+        },
+        benchmarks: {
+          title: 'Benchmark-Vergleich: Qwen2.5 vs Llama 3.x vs Mistral',
+          rows: [
+            { 'Modell': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'MATH': '83%', 'RAM (Q4_K_M)': '43 GB' },
+            { 'Modell': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'MATH': '77%', 'RAM (Q4_K_M)': '40 GB' },
+            { 'Modell': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'HumanEval': '74%', 'MATH': '65%', 'RAM (Q4_K_M)': '14 GB' },
+            { 'Modell': 'Qwen2.5 32B', 'MMLU': '83%', 'HumanEval': '79%', 'MATH': '79%', 'RAM (Q4_K_M)': '20 GB' },
+            { 'Modell': 'Qwen2.5 14B', 'MMLU': '79%', 'HumanEval': '75%', 'MATH': '70%', 'RAM (Q4_K_M)': '9 GB' },
+            { 'Modell': 'Llama 3.1 8B', 'MMLU': '73%', 'HumanEval': '72%', 'MATH': '51%', 'RAM (Q4_K_M)': '5,5 GB' },
+            { 'Modell': 'Mistral 7B v0.3', 'MMLU': '64%', 'HumanEval': '39%', 'MATH': '28%', 'RAM (Q4_K_M)': '4,5 GB' },
+            { 'Modell': 'Qwen2.5 7B', 'MMLU': '74%', 'HumanEval': '72%', 'MATH': '52%', 'RAM (Q4_K_M)': '4,7 GB' },
+          ],
+          columns: ['Modell', 'MMLU', 'HumanEval', 'MATH', 'RAM (Q4_K_M)'],
+        },
+        qwen: {
+          title: 'Qwen2.5: Bestes für Coding, Mathematik und nicht-englische Sprachen',
+          content: [
+            'Qwen2.5 von Alibaba ist die stärkste Modellfamilie für strukturierte Output-Aufgaben. Es führt HumanEval bei jeder vergleichbaren Größe an, außer 70B (wo Llama 3.3 es um 1% übertrumpft). Die MATH-Werte liegen bei jeder Größe 6–10 Prozentpunkte über Llama.',
+            '**Stärken**: Coding (Python, JavaScript, SQL), mathematisches Reasoning, 29-Sprachen-Unterstützung, JSON-Modus, Function Calling, [128K Kontextfenster](/local-llms/local-llm-hardware-guide-2026) auf allen Größen.',
+            '**Schwächen**: Der englische Instruktions-Stil kann weniger natürlich wirken als Llama oder Mistral; einige Nutzer berichten von weniger flüssigem kreativem Schreiben auf Englisch. Der Alibaba-Ursprung stellt Datenschutzbedenken für einige Unternehmensnutzer dar, trotz offener Gewichte.',
+          ],
+        },
+        llama: {
+          title: 'Llama 3.x: Bestes für allgemeine englische Aufgaben und Ökosystem-Unterstützung',
+          content: [
+            'Metas Llama 3.x Familie ist die am weitesten unterstützte Open-Weight-Modellserie. Mehr Tools, Fine-Tunes, Quantisierungen und Community-Leitfäden existieren für Llama als für jede andere Familie. Llama 3.3 70B ist mit allen Konkurrenten bei allgemeinen englischen Benchmarks gleichauf oder besser.',
+            '**Stärken**: Breiteste Ökosystem-Unterstützung (jedes Tool unterstützt Llama), bestes englisches kreatives Schreiben, starke Instruktions-Befolgung, 128K Kontextfenster auf 3.1/3.2/3.3-Varianten, Community-getestete Zuverlässigkeit.',
+            '**Schwächen**: Keine native mehrsprachige Unterstützung jenseits grundlegender Funktionalität; Llama 3.2 3B kann mit Qwen2.5 3B und Phi-4 Mini beim Coding und bei Mathematik nicht mithalten, obwohl dieselbe Parameteranzahl.',
+          ],
+        },
+        mistral: {
+          title: 'Mistral: Beste Effizienz und stärkste 7B-Klasse-Geschichte',
+          content: [
+            'Mistral AI produziert die parameter-effizientesten Modelle in diesem Vergleich. Mistral Small 3.1 bei 24B liefert Benchmark-Ergebnisse nah bei der 70B-Klasse, während nur 14 GB RAM benötigt werden — das beste Qualitäts-pro-RAM-Verhältnis aller Modelle in diesem Vergleich.',
+            '**Stärken**: bestes Qualitäts-zu-RAM-Verhältnis (Small 3.1), starke Function Calling und Tool-Nutzung, saubere Apache 2.0-Lizenz auf Schlüsselmodellen, europäische Herkunft für DSGVO-sensitive Anwendungsfälle.',
+            '**Schwächen**: Mistral 7B v0.3 wird nun beim Benchmark von Qwen2.5 7B und Llama 3.1 8B übertroffen; weniger Größenoptionen als Qwen oder Llama.',
+          ],
+        },
+        byTask: {
+          title: 'Welche Modellfamilie gewinnt nach Task?',
+          rows: [
+            { 'Task': 'Python / JavaScript Coding', 'Gewinner': 'Qwen2.5', 'Warum': 'Höchstes HumanEval bei jeder Größe' },
+            { 'Task': 'Allgemeine Q&A (Englisch)', 'Gewinner': 'Llama 3.3 / Qwen2.5 (Gleichstand)', 'Warum': 'Beide erreichen 82–84% MMLU bei 70B' },
+            { 'Task': 'Mathematisches Reasoning', 'Gewinner': 'Qwen2.5', 'Warum': '83% MATH bei 72B vs 77% für Llama 3.3 70B' },
+            { 'Task': 'Nicht-englische Sprachen', 'Gewinner': 'Qwen2.5', 'Warum': '29 native Sprachen; Llama und Mistral sind englisch-primär' },
+            { 'Task': 'Kreatives Schreiben (Englisch)', 'Gewinner': 'Llama 3.x', 'Warum': 'Natürlicherer englischer Generierungsstil' },
+            { 'Task': 'Qualität auf 16 GB RAM', 'Gewinner': 'Mistral Small 3.1', 'Warum': 'Nahezu 70B-Qualität bei 14 GB RAM' },
+            { 'Task': 'Anfänger erstes Modell', 'Gewinner': 'Llama 3.2 3B', 'Warum': 'Am besten dokumentiert, meiste Community-Unterstützung' },
+          ],
+          columns: ['Task', 'Gewinner', 'Warum'],
+        },
+        sizeBySizeComparison: {
+          title: 'Größen-für-Größen-Vergleich: Welche Familie ist besser bei jeder Skalierung?',
+          content: [
+            '**3B–4B Klasse**: Qwen2.5 3B und [Phi-4 Mini 3.8B](/local-llms/best-beginner-local-llm-models) übertrumpfen Llama 3.2 3B beim Coding und Mathematik. Für allgemeine englische Nutzung ist Llama 3.2 3B zuverlässiger.',
+            '**7B–8B Klasse**: Qwen2.5 7B und Llama 3.1 8B übertrumpfen beide Mistral 7B v0.3 deutlich. Qwen2.5 7B führt beim Coding; Llama 3.1 8B führt bei englischer Instruktions-Befolgung.',
+            '**14B–24B Klasse**: Qwen2.5 14B und Mistral Small 3.1 24B sind die Hauptoptionen. Mistral Small 3.1 ist insgesamt stärker, erfordert aber mehr RAM. Qwen2.5 14B ist besser für Coding und mehrsprachig bei niedrigerem RAM.',
+            '**70B–72B Klasse**: Llama 3.3 70B und Qwen2.5 72B sind die besten lokal laufenden Modelle in 2026. Wählen Sie Qwen2.5 72B für Coding und Mehrsprachigkeit; wählen Sie Llama 3.3 70B für englisch-fokussierte allgemeine Aufgaben.',
+          ],
+        },
+        gettingStarted: {
+          title: 'Erste Schritte mit jeder Familie',
+          content: ['Installieren Sie [Ollama](/local-llms/how-to-install-ollama) (einzelner Befehl auf macOS, Windows oder Linux) und pullen Sie jedes Modell in einem Schritt.'],
+          codeBlock: '# Qwen2.5 Familie\nollama run qwen2.5:7b\nollama run qwen2.5:14b\nollama run qwen2.5:72b\n\n# Llama 3.x Familie\nollama run llama3.2:3b\nollama run llama3.1:8b\nollama run llama3.3:70b\n\n# Mistral Familie\nollama run mistral          # 7B\nollama run mistral-small3.1 # 24B',
+          codeLanguage: 'bash',
+        },
+        sources: {
+          title: 'Quellen',
+          items: [
+            '**Qwen2.5 Technical Report** (Alibaba DAMO Academy, 2024) — arXiv:2412.15115 — Benchmark-Daten für Coding, Mathematik und mehrsprachige Aufgaben über alle Größenvarianten.',
+            '**Llama 3 Model Card** (Meta AI, 2024) — ai.meta.com/blog/meta-llama-3 — Llama 3.3 70B Spezifikationen, Evaluierungsergebnisse und Lizenzbedingungen.',
+            '**Mistral 7B Technical Paper** (Mistral AI, 2023) — arXiv:2310.06825 — Ursprüngliche Mistral-Architektur, Sliding-Window-Aufmerksamkeit und erste Benchmark-Daten.',
+            '**Open LLM Leaderboard** (Hugging Face, 2026) — huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard — Echtzeit MMLU, HumanEval und MATH Benchmark-Rankings für alle offenen Modelle.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Häufige Fehler bei der Wahl von Modellfamilien',
+          items: [
+            'Modelle bei unterschiedlichen Parameteranzahlen vergleichen — Qwen 32B vs Llama 70B ist kein Apfel-zu-Apfel-Vergleich.',
+            'Mehrsprachige Benchmarks ignorieren, wenn Ihr Workload mehrsprachig ist.',
+            'Annehmen, dass die neueste Modellversion immer am besten ist — manchmal haben ältere Quantisierungen bessere Community-Unterstützung.',
+            'Lizenzbedingungen übersehen — Llama-Modelle verwenden eine benutzerdefinierte Llama Community License, die die Nutzung ab 700 Millionen monatlich aktiver Benutzer einschränkt; verifizieren Sie vor Skalierungsbereitstellung.',
+            'Nur auf einem Benchmark testen — MMLU misst Wissen, HumanEval misst Coding, MATH misst Reasoning. Ein Modell, das bei einem Benchmark führt, kann bei einem anderen hinterherhinken.',
+          ],
+        },
+        relatedReading: {
+          title: 'Weiterführende Ressourcen',
+          items: [
+            '[Beste Local LLMs 2026](/local-llms/best-local-llms-2026) — Übergeordnete Bewertung der aktuell besten Modelle',
+            '[Beste Anfänger Local LLM Modelle](/local-llms/best-beginner-local-llm-models) — Foundation-Modelle für neue Benutzer',
+            '[Ollama installieren](/local-llms/how-to-install-ollama) — Erste Schritte mit jedem Modell',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Modelformate verstehen',
+            '[Beste Local LLMs für Coding](/local-llms/best-local-llms-for-coding) — Coding-optimierte Modellvergleiche',
+            '[Mehrsprachige Local LLMs](/local-llms/multilingual-local-llms) — Nicht-englische Modellunterstützung',
+          ],
+        },
+        regionalContext: {
+          title: 'Regionaler Kontext: EU/DSGVO, Japan und China',
+          content: [
+            '**EU/DSGVO**: Mistral-Modelle werden in Frankreich unter EU-Gerichtsbarkeit hergestellt, was ihnen einen klaren Datenherkunjftstrail gibt, der DSGVO-Artikel-5-Konformitätsanforderungen erfüllt. Meta Llama Modelle offenbaren Trainingsdaten-Herkunft in ihrer Model Card. Qwen2.5 wird von Alibaba (China-Herkunft) hergestellt, das einige EU-Datenschutzbehörden für Cross-Border-Transfer-Überprüfung unter DSGVO Kapitel V flaggen. Für regulierte EU-Industrien ist Mistral oder Llama mit On-Premises-Bereitstellung die risikoloseste Wahl.',
+            '**Japan (METI AI Governance)**: METIs 2024 AI Governance-Richtlinien ermutigen Organisationen, Modellherkunft und Performance-Benchmarks für Enterprise-Bereitstellungen zu dokumentieren. Modelle mit veröffentlichten technischen Berichten (Qwen, Llama, Mistral haben alle arXiv-Papers) erfüllen diese Dokumentationsanforderung. Qwens native japanische Tokenisierung (eine von 29 unterstützten Sprachen) macht sie zur bevorzugten Wahl für japanische NLP-Aufgaben.',
+            '**China (CAC Interim Measures)**: Die 2023 Interim Measures der Cyberspace Administration of China für Generative AI Services erfordern Registrierung für AI-Services für chinesische Benutzer. Modelle, die vollständig On-Premises laufen (Qwen, Llama, Mistral via Ollama), fallen außerhalb der öffentlich zugänglichen Provider-Definition und erfordern keine CAC-Registrierung. Qwen2.5 ist beste im Englischen unter den drei Familien für chinesische Sprache.',
+          ],
+        },
+        faq: {
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            { q: 'Welches ist besser für Coding: Qwen, Llama oder Mistral?', a: 'Qwen2.5 führt Coding-Benchmarks bei jeder Größe an. Qwen2.5 72B erzielt 87% HumanEval; Llama 3.3 70B erzielt 88%; Mistral 7B v0.3 erzielt 39%. Für die 7B-Klasse übertrumpft Qwen2.5 7B (72% HumanEval) Mistral 7B (39%) deutlich und passt zu Llama 3.1 8B (72%).' },
+            { q: 'Welches Local LLM unterstützt die meisten Sprachen?', a: 'Qwen2.5 unterstützt nativ 29 Sprachen, darunter Arabisch, Japanisch, Koreanisch, Chinesisch und alle wichtigen europäischen Sprachen. Llama 3.2 unterstützt offiziell 8 Sprachen. Mistral-Modelle konzentrieren sich primär auf Englisch und große europäische Sprachen.' },
+            { q: 'Welches Modell sollte ich mit 8 GB RAM wählen?', a: 'Mit 8 GB RAM verwenden Sie Llama 3.2 3B (Q4, ~2 GB) für allgemeine Aufgaben oder Qwen2.5 7B (Q4, ~4,7 GB) für Coding. Beide laufen mit 15–25 Token/Sec auf einer CPU mit 8 GB RAM. Installieren Sie mit: ollama pull llama3.2:3b oder ollama pull qwen2.5:7b.' },
+            { q: 'Ist Qwen2.5 besser als Llama 3.3 in der 70B-Skala?', a: 'Sie liegen insgesamt nahezu gleichauf. Qwen2.5 72B führt bei MATH (83% vs 77%) und mehrsprachigen Aufgaben. Llama 3.3 70B führt bei HumanEval (88% vs 87%). Der Unterschied liegt bei den meisten Benchmarks innerhalb 1–6%. Wählen Sie Qwen2.5 für Coding und Mehrsprachigkeit; Llama 3.3 für englisch-fokussierte allgemeine Aufgaben.' },
+            { q: 'Welches Local LLM ist am effizientesten mit begrenztem VRAM?', a: 'Mistral Small 3.1 24B ist am effizientesten: 79% MMLU und 74% HumanEval mit nur 14 GB RAM — Annäherung an 70B-Klasse-Qualität mit ungefähr 35% der VRAM-Kosten.' },
+            { q: 'Kann Qwen2.5 GPT-4 für Coding-Aufgaben ersetzen?', a: 'Für viele Standard-Coding-Aufgaben (Python, JavaScript, SQL-Generierung) führt Qwen2.5 72B (87% HumanEval) innerhalb 5–10% von GPT-4o bei Standard-Benchmarks durch. Für komplexes Multi-File-Refactoring oder architektonisches Reasoning behalten Cloud-Modelle noch einen Vorteil.' },
+            { q: 'Ist Mistral 7B 2026 noch wert zu verwenden?', a: 'Für Systeme mit nur 4–5 GB VRAM bleibt Mistral 7B eine brauchbare Option. Jedoch übertrumpfen Qwen2.5 7B und Llama 3.1 8B beide Mistral 7B v0.3 bei allen großen Benchmarks, während ähnlicher VRAM benötigt wird. Mistral 7Bs Hauptvorteil heute ist seine lange etablierte Community-Unterstützung und Tool-Integration.' },
+            { q: 'Was ist die Llama Community License-Einschränkung?', a: 'Metas Llama Community License ist kostenlos für kommerzielle Nutzung unterhalb von 700 Millionen monatlich aktiver Benutzer. Über dieser Schwelle ist eine separates kommerzielles Abkommen mit Meta erforderlich. Für die meisten Anwendungsfälle ist diese Grenze kein Problem.' },
+            { q: 'Kann ich diese Modelle vollständig offline ausführen?', a: 'Ja. Alle drei Familien (Qwen, Llama, Mistral) laufen vollständig offline via Ollama oder LM Studio nach dem einmaligen Modell-Download. Kein API-Schlüssel erforderlich, keine Telemetrie, keine Internetverbindung nötig für Inferenz.' },
+            { q: 'Welche Modellfamilie ist am einfachsten zu beginnen?', a: 'Llama 3.2 3B hat die größte Community und die meisten Anfänger-Tutorials. Führen Sie es aus mit ollama run llama3.2:3b (erfordert 8 GB RAM, keine GPU erforderlich). Jedes große Local LLM Tool (Ollama, LM Studio, OpenWebUI) unterstützt Llama-Modelle standardmäßig.' },
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Qwen2.5 vs Llama 3.x vs Mistral 2026: Benchmarks und VRAM-Anforderungen',
-        'description': 'Qwen2.5 (84% MMLU) vs Llama 3.3 (82% MMLU) vs Mistral (79%). HumanEval: Qwen 87%, Llama 88%. Vergleichen Sie Benchmarks, VRAM, Codierung und mehrsprachige Unterstützung.',
+        'headline': 'Qwen vs Llama vs Mistral 2026: Bestes Local LLM?',
+        'description': 'Detaillierter Vergleich von Qwen, Llama 3.2 und Mistral für lokale Nutzung. Geschwindigkeit, Qualität, VRAM-Verbrauch und seitenweber Test mit PromptQuorum.',
         'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral?lang=de',
         'inLanguage': 'de',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'isPartOf': {
+          '@type': 'CreativeWork',
+          'name': 'Qwen vs Llama vs Mistral',
+          'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral'
+        },
+        'proficiencyLevel': 'Intermediate',
+        'keywords': ['Qwen vs Llama', 'Qwen vs Mistral', 'bestes Local LLM 2026', 'Local LLM Vergleich', 'Llama 3.2 vs Qwen'],
+        'about': [
+          { '@type': 'SoftwareApplication', 'name': 'Qwen2.5', 'description': 'Open-Weight-Modellfamilie von Alibaba mit 29-Sprachen-Unterstützung und führenden Coding-Benchmarks.' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.x', 'description': 'Metas Open-Weight-Modellfamilie mit der breitesten Ökosystem-Unterstützung.' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral', 'description': 'Modellfamilie des französischen AI-Unternehmens, bekannt für Parameter-Effizienz.' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', 'h2', '.key-takeaways'] },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
-      sections: {
-        tldr: { isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
-        whatIsSmall: { title: 'Was ist ein „kleines" lokales LLM und wann sollten Sie eines verwenden?', content: ['Ein kleines lokales LLM ist typischerweise definiert als ein Modell mit weniger als 4 Milliarden Parametern. Bei Q4_K_M-Quantisierung benötigen diese Modelle 1,5–3 GB RAM — gut innerhalb der Einschränkungen von Einstiegs-Laptops mit 4–8 GB Gesamtspeicher.', 'Seit April 2026 sind kleine Modelle geeignet für: schnelle Zusammenfassung, einfache F&A, Erklärung von Code-Snippets, Übersetzung kurzer Texte und Klassifizierungsaufgaben. Sie sind nicht geeignet für mehrstufiges Reasoning, komplexe Code-Generierung oder das Verfassen langer kohärenter Dokumente.', 'Die Qualitätslücke zwischen einem 3B- und 7B-Modell ist erheblich — ungefähr der Lücke zwischen GPT-3.5 Mini und GPT-3.5 Turbo entsprechend. Für Benutzer mit 8 GB RAM ist ein 7B-Modell bei Q4_K_M fast immer die bessere Wahl. Siehe [Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) für 7B-Empfehlungen.'] },
-        phi4mini: { title: 'Phi-4 Mini 3.8B — Beste Reasoning-Leistung in der Sub-4B-Klasse', content: ['Microsoft Phi-4 Mini erreicht 68% bei MMLU und 70% bei HumanEval — Werte, die viele vor 2025 veröffentlichte 7B-Modelle übertreffen. Dies ist möglich, weil Phi-4 Mini auf einem kuratierten synthetischen Datensatz trainiert wurde, der auf Reasoning und Problemlösung fokussiert ist.', 'Seit April 2026 ist Phi-4 Mini die empfohlene Wahl für Benutzer, die hauptsächlich Reasoning oder Code-Unterstützung auf Hardware mit 4–6 GB RAM benötigen.'], rows: [{ 'Spec': 'MMLU', 'Value': '68%' }, { 'Spec': 'HumanEval', 'Value': '70%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '30–50 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run phi4-mini' }], columns: ['Spec', 'Value'] },
-        gemma2: { title: 'Gemma 2 2B — Schnellstes kleines lokales LLM auf CPU', content: ['Google Gemma 2 2B generiert 40–60 Token/Sek auf einer modernen Laptop-CPU — das schnellste Modell in dieser Qualitätsklasse. Sein 1,7-GB-RAM-Footprint lässt viel Speicher für Betriebssystem und andere Anwendungen auf einer 4-GB-Maschine.', 'Die Qualität ist niedriger als Phi-4 Mini bei Reasoning. Das 8K-Kontextfenster ist eine praktische Einschränkung für längere Dokumente. Gemma 2 2B ist die richtige Wahl, wenn Antwortgeschwindigkeit wichtiger ist als Ausgabetiefe.'], rows: [{ 'Spec': 'MMLU', 'Value': '52%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~1,7 GB' }, { 'Spec': 'Kontext', 'Value': '8K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '40–60 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run gemma2:2b' }], columns: ['Spec', 'Value'] },
-        qwen25_3b: { title: 'Qwen2.5 3B — Bestes kleines Modell für Codierungsaufgaben', content: ['Qwen2.5 3B erreicht 65% bei HumanEval — 5 Prozentpunkte über Llama 3.2 3B — und ist beste Wahl für Codierungsaufgaben im 3B-Format. Es umfasst JSON-Modus und Funktionsaufruf-Unterstützung und verarbeitet nativ 29 Sprachen.', 'Für nicht-Codierungs-Aufgaben im Englischen erzeugen Llama 3.2 3B und Phi-4 Mini natürlichere Prosa. Wählen Sie Qwen2.5 3B speziell für Codierung oder mehrsprachige Aufgaben.'], rows: [{ 'Spec': 'MMLU', 'Value': '62%' }, { 'Spec': 'HumanEval', 'Value': '65%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '25–40 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run qwen2.5:3b' }], columns: ['Spec', 'Value'] },
-        llama32_3b: { title: 'Llama 3.2 3B — Bestes Universal-Kleinmodell', content: ['Meta Llama 3.2 3B ist das am weitesten dokumentierte und von der Community unterstützte 3B-Modell. Es erreicht 58% bei MMLU und 60% bei HumanEval, aber hat breiteste Werkzeugunterstützung, die meisten Fine-Tunes und größte Sammlung von Community-Guides.', 'Das 128K-Kontextfenster eignet sich für Zusammenfassung von Dokumenten mittlerer Länge. Für ein erstes kleines Modell bleibt Llama 3.2 3B die sicherste Wahl aufgrund vorhersehbaren Verhaltens und umfangreicher Dokumentation.'], rows: [{ 'Spec': 'MMLU', 'Value': '58%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '25–45 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run llama3.2:3b' }], columns: ['Spec', 'Value'] },
-        llama32_1b: { title: 'Llama 3.2 1B — Absolute Mindestanforderung für nützliche Ausgabe', content: 'Llama 3.2 1B benötigt nur 1,3 GB RAM und generiert 60–90 tok/sek auf CPU. Die Ausgabequalität ist marginal: es bewältigt sehr einfache Klassifizierung, kämpft aber mit kohärenten mehrsätzigen Antworten. Seit April 2026 verwenden Sie Llama 3.2 1B nur, wenn RAM die bindende Einschränkung ist oder zum Testen von Tool-Integrationen.' },
-        comparisonTable: { title: 'Vollständiger Vergleich: Beste kleine lokale LLMs unter 4B Parametern', rows: [{ 'Modell': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2,5 GB', 'Kontext': '128K', 'Beste für': 'Reasoning, Codierung' }, { 'Modell': 'Qwen2.5 3B', 'MMLU': '62%', 'HumanEval': '65%', 'RAM': '2 GB', 'Kontext': '128K', 'Beste für': 'Codierung, mehrsprachig' }, { 'Modell': 'Llama 3.2 3B', 'MMLU': '58%', 'HumanEval': '60%', 'RAM': '2,5 GB', 'Kontext': '128K', 'Beste für': 'Allgemein, erstes Modell' }, { 'Modell': 'Gemma 2 2B', 'MMLU': '52%', 'HumanEval': '38%', 'RAM': '1,7 GB', 'Kontext': '8K', 'Beste für': 'Geschwindigkeit, niedriges RAM' }, { 'Modell': 'Llama 3.2 1B', 'MMLU': '32%', 'HumanEval': '28%', 'RAM': '1,3 GB', 'Kontext': '128K', 'Beste für': 'Minimales RAM' }], columns: ['Modell', 'MMLU', 'HumanEval', 'RAM', 'Kontext', 'Beste für'] },
-        regionalContext: { title: 'Kleine lokale LLMs nach Region', content: ['**EU / DSGVO:** Für EU-Profis auf begrenzter Hardware — Feldarbeit, air-gapped Umgebungen, ältere Enterprise-Laptops — bieten kleine lokale Modelle DSGVO-konforme Inferenz ohne Datengress. Ein Phi-4 Mini 3.8B auf Standard-Corporate-Laptop (8 GB RAM) behält alle Texte auf Gerät unter DSGVO-Artikel 5. Für BSI-Compliance: Phi-4 Mini (Microsoft, MIT-Lizenz) und Llama 3.2 3B (Meta, Llama Community-Lizenz) bieten versionierte Modell-Identifikatoren via Ollama-Tags. Mistral bietet derzeit kein Sub-4B-Modell. Für EU-Organisationen mit EU-Präferenz sind Optionen begrenzt, bis Mistral Sub-4B freigibt.', '**Japan (METI):** Für japanischsprachige Aufgaben ist Qwen2.5 3B das einzige Modell mit nativer japanischer Tokenisierung. Llama 3.2 3B verarbeitet Japanisch mit niedrigerer Token-Effizienz. Für japanische Zusammenfassung oder Übersetzung: `ollama run qwen2.5:3b`. Der Geschwindigkeitsvorteil ist relevant für japanischen Enterprise-Einsatz: 25–40 tok/sek auf CPU bietet angemessene Echtzeit-Antwort auf Standard-Office-Hardware.', '**China:** Qwen2.5 3B (Alibaba, Apache 2.0) ist natürliche Wahl für chinesischsprachige Bereitstellung. Native chinesische Tokenisierung verarbeitet Mandarin-Text 30–40% effizienter als Llama. Für IoT und Edge unter Chinas Datensicherheitsgesetz: `ollama run qwen2.5:3b` läuft auf jedem Linux-Gerät mit 4 GB RAM ohne externe API-Aufrufe.'] },
-        commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3–5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-3.5 Mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
-        relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) — 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) — Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) — Codierungs-Modelle bei 7B+ wenn Qwen2.5 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) — OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
-        faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja — Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15–30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android — mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja — Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2–3× schneller auf CPU. Gemma 2 2B generiert 40–60 tok/sek vs 10–20 tok/sek für Mistral 7B. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen2.5 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen2.5 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen2.5 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert — auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B — aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4–6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen2.5 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
-        sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report — microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card — huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Welches ist besser für Coding: Qwen, Llama oder Mistral?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 führt Coding-Benchmarks bei jeder Größe an. Qwen2.5 72B erzielt 87% HumanEval; Llama 3.3 70B erzielt 88%; Mistral 7B v0.3 erzielt 39%. Für die 7B-Klasse übertrumpft Qwen2.5 7B (72% HumanEval) Mistral 7B (39%) deutlich und passt zu Llama 3.1 8B (72%).' } },
+          { '@type': 'Question', name: 'Welches Local LLM unterstützt die meisten Sprachen?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 unterstützt nativ 29 Sprachen, darunter Arabisch, Japanisch, Koreanisch, Chinesisch und alle wichtigen europäischen Sprachen. Llama 3.2 unterstützt offiziell 8 Sprachen. Mistral-Modelle konzentrieren sich primär auf Englisch und große europäische Sprachen.' } },
+          { '@type': 'Question', name: 'Welches Modell sollte ich mit 8 GB RAM wählen?', acceptedAnswer: { '@type': 'Answer', text: 'Mit 8 GB RAM verwenden Sie Llama 3.2 3B (Q4, ~2 GB) für allgemeine Aufgaben oder Qwen2.5 7B (Q4, ~4,7 GB) für Coding. Beide laufen mit 15–25 Token/Sec auf einer CPU mit 8 GB RAM. Installieren Sie mit: ollama pull llama3.2:3b oder ollama pull qwen2.5:7b.' } },
+          { '@type': 'Question', name: 'Ist Qwen2.5 besser als Llama 3.3 in der 70B-Skala?', acceptedAnswer: { '@type': 'Answer', text: 'Sie liegen insgesamt nahezu gleichauf. Qwen2.5 72B führt bei MATH (83% vs 77%) und mehrsprachigen Aufgaben. Llama 3.3 70B führt bei HumanEval (88% vs 87%). Der Unterschied liegt bei den meisten Benchmarks innerhalb 1–6%. Wählen Sie Qwen2.5 für Coding und Mehrsprachigkeit; Llama 3.3 für englisch-fokussierte allgemeine Aufgaben.' } },
+          { '@type': 'Question', name: 'Welches Local LLM ist am effizientesten mit begrenztem VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Mistral Small 3.1 24B ist am effizientesten: 79% MMLU und 74% HumanEval mit nur 14 GB RAM — Annäherung an 70B-Klasse-Qualität mit ungefähr 35% der VRAM-Kosten.' } },
+          { '@type': 'Question', name: 'Kann Qwen2.5 GPT-4 für Coding-Aufgaben ersetzen?', acceptedAnswer: { '@type': 'Answer', text: 'Für viele Standard-Coding-Aufgaben (Python, JavaScript, SQL-Generierung) führt Qwen2.5 72B (87% HumanEval) innerhalb 5–10% von GPT-4o bei Standard-Benchmarks durch. Für komplexes Multi-File-Refactoring behalten Cloud-Modelle noch einen Vorteil.' } },
+          { '@type': 'Question', name: 'Ist Mistral 7B 2026 noch wert zu verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Für Systeme mit nur 4–5 GB VRAM bleibt Mistral 7B eine brauchbare Option. Jedoch übertrumpfen Qwen2.5 7B und Llama 3.1 8B beide Mistral 7B v0.3 bei allen großen Benchmarks, während ähnlicher VRAM benötigt wird. Mistral 7Bs Hauptvorteil heute ist seine lange etablierte Community-Unterstützung und Tool-Integration.' } },
+          { '@type': 'Question', name: 'Was ist die Llama Community License-Einschränkung?', acceptedAnswer: { '@type': 'Answer', text: 'Metas Llama Community License ist kostenlos für kommerzielle Nutzung unterhalb von 700 Millionen monatlich aktiver Benutzer. Über dieser Schwelle ist eine separates kommerzielles Abkommen mit Meta erforderlich. Für die meisten Anwendungsfälle ist diese Grenze kein Problem.' } },
+          { '@type': 'Question', name: 'Kann ich diese Modelle vollständig offline ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Alle drei Familien (Qwen, Llama, Mistral) laufen vollständig offline via Ollama oder LM Studio nach dem einmaligen Modell-Download. Kein API-Schlüssel erforderlich, keine Telemetrie, keine Internetverbindung nötig für Inferenz.' } },
+          { '@type': 'Question', name: 'Welche Modellfamilie ist am einfachsten zu beginnen?', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.2 3B hat die größte Community und die meisten Anfänger-Tutorials. Führen Sie es aus mit ollama run llama3.2:3b (erfordert 8 GB RAM, keine GPU erforderlich). Jedes große Local LLM Tool (Ollama, LM Studio, OpenWebUI) unterstützt Llama-Modelle standardmäßig.' } }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Wie man zwischen Qwen, Llama und Mistral für lokale LLM-Nutzung wählt',
+        'description': 'Eine Schritt-für-Schritt-Anleitung zur Auswahl der richtigen Open-Weight-Modellfamilie basierend auf Task, Sprache und Hardware.',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Definieren Sie Ihren primären Task', 'text': 'Identifizieren Sie, ob Ihr Hauptanwendungsfall Coding, mehrsprachiger Text, englisches allgemeines Q&A oder kreatives Schreiben ist. Qwen2.5 gewinnt bei Coding und Mehrsprachigkeit; Llama 3.x gewinnt bei englischen allgemeinen Aufgaben.' },
+          { '@type': 'HowToStep', 'name': 'Überprüfen Sie verfügbaren VRAM', 'text': 'Messen Sie Ihre GPU VRAM oder System RAM. 8 GB verwaltet 7B-Modelle; 16 GB verwaltet 13–14B-Modelle; 40+ GB ist erforderlich für 70B-Modelle bei Q4-Quantisierung.' },
+          { '@type': 'HowToStep', 'name': 'Installieren Sie Ollama und pullen Sie den Top-Kandidaten', 'text': 'Installieren Sie Ollama (einzelner Befehl auf macOS/Linux/Windows). Pullen Sie Ihr ausgewähltes Modell: ollama pull qwen2.5:7b (Coding) oder ollama pull llama3.2:3b (allgemein). Führen aus: ollama run <model>.' },
+          { '@type': 'HowToStep', 'name': 'Testen Sie bei Ihren echten Tasks', 'text': 'Führen Sie 5–10 repräsentative Prompts aus Ihrer echten Workload aus. Vergleichen Sie Output-Qualität, Geschwindigkeit und Instruktions-Befolgung. Verlassen Sie sich nicht nur auf Benchmark-Werte.' },
+          { '@type': 'HowToStep', 'name': 'Verifizieren Sie die Lizenz für Ihren Anwendungsfall', 'text': 'Bestätigen Sie, dass die Lizenz geeignet ist: Qwen2.5 und Mistral 7B/Small verwenden Apache 2.0 (permissiv). Llama-Modelle verwenden die Llama Community License (kostenlos unterhalb 700M MAU, erfordert Abkommen über dieser).' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Qwen2.5 vs Llama 3.x vs Mistral: Benchmark-Vergleich 2026',
+        numberOfItems: 8,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Qwen2.5 72B — MMLU: 84%, HumanEval: 87%, MATH: 83%, RAM: 43 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 2, name: 'Llama 3.3 70B — MMLU: 82%, HumanEval: 88%, MATH: 77%, RAM: 40 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 3, name: 'Mistral Small 3.1 24B — MMLU: 79%, HumanEval: 74%, MATH: 65%, RAM: 14 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 4, name: 'Qwen2.5 32B — MMLU: 83%, HumanEval: 79%, MATH: 79%, RAM: 20 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 5, name: 'Qwen2.5 14B — MMLU: 79%, HumanEval: 75%, MATH: 70%, RAM: 9 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 6, name: 'Llama 3.1 8B — MMLU: 73%, HumanEval: 72%, MATH: 51%, RAM: 5,5 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 7, name: 'Mistral 7B v0.3 — MMLU: 64%, HumanEval: 39%, MATH: 28%, RAM: 4,5 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 8, name: 'Qwen2.5 7B — MMLU: 74%, HumanEval: 72%, MATH: 52%, RAM: 4,7 GB (Q4_K_M)' },
+        ],
       },
     },
     fr: {
-      theme: 'Comparaison',
-      title: 'Qwen2.5 vs Llama 3.x vs Mistral 2026: Benchmarks et VRAM',
-      seoTitle: 'Qwen vs Llama vs Mistral 2026: Benchmarks & VRAM',
-      intro: 'Comparaison de Qwen2.5 (84% MMLU) vs Llama 3.3 (82% MMLU) vs Mistral (79%). HumanEval: Qwen 87%, Llama 88%. Benchmarks, VRAM, codage et support multilingue.',
-      metaDescription: 'Qwen2.5 (84% MMLU) vs Llama 3.3 (82% MMLU) vs Mistral (79%). HumanEval: Qwen 87%, Llama 88%. Comparez les benchmarks, VRAM, codage et support multilingue.',
+      theme: 'Best Models',
+      title: 'Qwen vs. Llama vs. Mistral : Quel modèle LLM local devriez-vous utiliser ?',
+      seoTitle: 'Qwen vs Llama vs Mistral 2026 : Comparaison Guide',
+      intro: 'Qwen2.5, Meta Llama 3.x et Mistral sont les trois familles de modèles open-weight dominantes pour l\'inférence locale en 2026. Qwen2.5 domine le codage — 87% HumanEval à 72B, contre 88% pour Llama 3.3 et 39% pour Mistral 7B. Qwen2.5 supporte également 29 langues nativement. Llama 3.3 70B domine le raisonnement général en anglais (82% MMLU). Mistral Small 3.1 24B offre une qualité proche de 70B avec seulement 14 GB de RAM — le meilleur rapport qualité-RAM des trois familles. Le bon choix dépend du type de tâche, de la langue et de la VRAM disponible.',
+      metaDescription: 'Qwen2.5 pour la programmation, Llama 3.3 pour l\'anglais, Mistral pour l\'efficacité. RAM, vitesse, benchmarks. Testez côte à côte avec PromptQuorum.',
       publishDate: '2026-04-04',
-      readTime: '10 min read',
-      educationalLevel: 'Beginner to Advanced',
-      primaryTerm: 'Comparaison de modèles',
+      dateModified: '2026-04-07',
+      readTime: '9 min de lecture',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Qwen vs Llama vs Mistral',
+      toc: [
+        { label: 'Points clés', anchor: 'key-takeaways' },
+        { label: 'Aperçu des familles de modèles', anchor: 'model-family-overview' },
+        { label: 'Comparaison des benchmarks', anchor: 'benchmark-comparison' },
+        { label: 'Qwen2.5 : Forces et faiblesses', anchor: 'qwen2-5' },
+        { label: 'Llama 3.x : Forces et faiblesses', anchor: 'llama-3' },
+        { label: 'Mistral : Forces et faiblesses', anchor: 'mistral' },
+        { label: 'Quelle famille gagne par tâche ?', anchor: 'which-family-wins-by-task' },
+        { label: 'Comparaison taille par taille', anchor: 'size-for-size-comparison' },
+        { label: 'Comment démarrer', anchor: 'how-to-get-started' },
+        { label: 'Contexte régional', anchor: 'regional-context' },
+        { label: 'Questions fréquemment posées', anchor: 'faq' },
+        { label: 'Erreurs courantes', anchor: 'common-mistakes' },
+        { label: 'Lectures connexes', anchor: 'related-reading' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**Codage** : Qwen2.5 gagne à chaque taille — 87% HumanEval à 72B, 79% à 32B, 72% à 7B.',
+            '**Raisonnement général** : Llama 3.3 70B et Qwen2.5 72B sont pratiquement à égalité ; Llama 3.x est plus fort en anglais, Qwen en multilingue.',
+            '**Efficacité (qualité par GB de RAM)** : Mistral Small 3.1 24B offre une qualité proche de 70B avec seulement 14 GB de RAM.',
+            '**Langues au-delà de l\'anglais** : Qwen2.5 supporte nativement 29 langues ; Llama et Mistral sont principalement optimisés pour l\'anglais.',
+            '**Débutants sur 8 GB RAM** : Llama 3.2 3B ou Mistral 7B sont les choix les plus documentés et soutenus par la communauté.',
+          ],
+        },
+        overview: {
+          title: 'Aperçu des familles de modèles : Qwen, Llama et Mistral',
+          rows: [
+            { 'Famille': 'Qwen2.5', 'Développeur': 'Alibaba', 'Tailles disponibles': '0.5B, 1.5B, 3B, 7B, 14B, 32B, 72B', 'Licence': 'Apache 2.0 (la plupart)' },
+            { 'Famille': 'Llama 3.x', 'Développeur': 'Meta', 'Tailles disponibles': '1B, 3B, 8B, 70B', 'Licence': 'Llama Community (personnalisée)' },
+            { 'Famille': 'Mistral', 'Développeur': 'Mistral AI', 'Tailles disponibles': '7B, Small 3.1 (24B), Large (123B)', 'Licence': 'Apache 2.0 (7B, Small)' },
+          ],
+          columns: ['Famille', 'Développeur', 'Tailles disponibles', 'Licence'],
+        },
+        benchmarks: {
+          title: 'Comparaison des benchmarks : Qwen2.5 vs Llama 3.x vs Mistral',
+          rows: [
+            { 'Modèle': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'MATH': '83%', 'RAM (Q4_K_M)': '43 GB' },
+            { 'Modèle': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'MATH': '77%', 'RAM (Q4_K_M)': '40 GB' },
+            { 'Modèle': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'HumanEval': '74%', 'MATH': '65%', 'RAM (Q4_K_M)': '14 GB' },
+            { 'Modèle': 'Qwen2.5 32B', 'MMLU': '83%', 'HumanEval': '79%', 'MATH': '79%', 'RAM (Q4_K_M)': '20 GB' },
+            { 'Modèle': 'Qwen2.5 14B', 'MMLU': '79%', 'HumanEval': '75%', 'MATH': '70%', 'RAM (Q4_K_M)': '9 GB' },
+            { 'Modèle': 'Llama 3.1 8B', 'MMLU': '73%', 'HumanEval': '72%', 'MATH': '51%', 'RAM (Q4_K_M)': '5,5 GB' },
+            { 'Modèle': 'Mistral 7B v0.3', 'MMLU': '64%', 'HumanEval': '39%', 'MATH': '28%', 'RAM (Q4_K_M)': '4,5 GB' },
+            { 'Modèle': 'Qwen2.5 7B', 'MMLU': '74%', 'HumanEval': '72%', 'MATH': '52%', 'RAM (Q4_K_M)': '4,7 GB' },
+          ],
+          columns: ['Modèle', 'MMLU', 'HumanEval', 'MATH', 'RAM (Q4_K_M)'],
+        },
+        qwen: {
+          title: 'Qwen2.5 : Meilleur pour le codage, les mathématiques et les langues non-anglaises',
+          content: [
+            'Qwen2.5 d\'Alibaba est la famille de modèles la plus forte pour les tâches de sortie structurées. Elle domine HumanEval à chaque niveau de taille comparable, sauf à 70B (où Llama 3.3 la dépasse de 1%). Les scores MATH sont 6–10 points de pourcentage au-dessus de Llama à chaque taille.',
+            '**Forces** : Codage (Python, JavaScript, SQL), raisonnement mathématique, support natif 29 langues, mode JSON, Function Calling, [fenêtre de contexte 128K](/local-llms/local-llm-hardware-guide-2026) sur toutes les tailles.',
+            '**Faiblesses** : Le style d\'instructions en anglais peut sembler moins naturel que Llama ou Mistral ; certains utilisateurs signalent une écriture créative moins fluide en anglais. L\'origine Alibaba soulève des préoccupations de gestion des données pour certains utilisateurs d\'entreprise malgré les poids ouverts.',
+          ],
+        },
+        llama: {
+          title: 'Llama 3.x : Meilleur pour les tâches générales en anglais et le support écosystème',
+          content: [
+            'La famille Llama 3.x de Meta est la série de modèles open-weight la plus largement supportée. Plus d\'outils, de fine-tunes, de quantifications et de guides communautaires existent pour Llama que pour toute autre famille. Llama 3.3 70B égale ou dépasse tous les concurrents sur les benchmarks généraux en anglais.',
+            '**Forces** : Support écosystème le plus large (chaque outil supporte Llama), meilleure écriture créative en anglais, fort suivi des instructions, contexte 128K sur les variantes 3.1/3.2/3.3, fiabilité testée par la communauté.',
+            '**Faiblesses** : Aucun support multilingue natif au-delà des fonctionnalités de base ; Llama 3.2 3B fait moins bien que Qwen2.5 3B et Phi-4 Mini en codage et mathématiques malgré le même nombre de paramètres.',
+          ],
+        },
+        mistral: {
+          title: 'Mistral : Meilleure efficacité et historique 7B-class le plus puissant',
+          content: [
+            'Mistral AI produit les modèles les plus efficaces en paramètres dans cette comparaison. Mistral Small 3.1 à 24B fournit des scores de benchmarks proches de la classe 70B tout en ne nécessitant que 14 GB de RAM — le meilleur rapport qualité-RAM de tous les modèles dans cette comparaison.',
+            '**Forces** : Meilleur rapport qualité-RAM (Small 3.1), strong Function Calling et utilisation des outils, licence Apache 2.0 propre sur les modèles clés, origine européenne pour les cas d\'utilisation sensibles au RGPD.',
+            '**Faiblesses** : Mistral 7B v0.3 est maintenant surpassé sur les benchmarks par Qwen2.5 7B et Llama 3.1 8B ; moins d\'options de tailles que Qwen ou Llama.',
+          ],
+        },
+        byTask: {
+          title: 'Quelle famille de modèles gagne par tâche ?',
+          rows: [
+            { 'Tâche': 'Codage Python / JavaScript', 'Gagnant': 'Qwen2.5', 'Pourquoi': 'HumanEval le plus élevé à chaque niveau de taille' },
+            { 'Tâche': 'Q&A général (anglais)', 'Gagnant': 'Llama 3.3 / Qwen2.5 (égalité)', 'Pourquoi': 'Les deux atteignent 82–84% MMLU à 70B' },
+            { 'Tâche': 'Raisonnement mathématique', 'Gagnant': 'Qwen2.5', 'Pourquoi': '83% MATH à 72B vs 77% pour Llama 3.3 70B' },
+            { 'Tâche': 'Langues non-anglaises', 'Gagnant': 'Qwen2.5', 'Pourquoi': '29 langues natives ; Llama et Mistral sont anglais-primaires' },
+            { 'Tâche': 'Écriture créative (anglais)', 'Gagnant': 'Llama 3.x', 'Pourquoi': 'Style de génération anglais plus naturel' },
+            { 'Tâche': 'Qualité sur 16 GB RAM', 'Gagnant': 'Mistral Small 3.1', 'Pourquoi': 'Qualité proche de 70B avec 14 GB RAM' },
+            { 'Tâche': 'Premier modèle pour débutant', 'Gagnant': 'Llama 3.2 3B', 'Pourquoi': 'Mieux documenté, plus de support communautaire' },
+          ],
+          columns: ['Tâche', 'Gagnant', 'Pourquoi'],
+        },
+        sizeBySizeComparison: {
+          title: 'Comparaison taille par taille : Quelle famille est meilleure à chaque échelle ?',
+          content: [
+            '**Classe 3B–4B** : Qwen2.5 3B et [Phi-4 Mini 3.8B](/local-llms/best-beginner-local-llm-models) surpassent Llama 3.2 3B en codage et mathématiques. Pour usage général en anglais, Llama 3.2 3B est plus fiable.',
+            '**Classe 7B–8B** : Qwen2.5 7B et Llama 3.1 8B surpassent tous deux Mistral 7B v0.3 considérablement. Qwen2.5 7B domine le codage ; Llama 3.1 8B domine le suivi des instructions en anglais.',
+            '**Classe 14B–24B** : Qwen2.5 14B et Mistral Small 3.1 24B sont les options principales. Mistral Small 3.1 est plus fort au global malgré un besoin de plus de RAM. Qwen2.5 14B est meilleur pour codage et multilingue avec RAM inférieure.',
+            '**Classe 70B–72B** : Llama 3.3 70B et Qwen2.5 72B sont les meilleurs modèles exécutables localement en 2026. Choisissez Qwen2.5 72B pour codage et multilingue ; choisissez Llama 3.3 70B pour tâches générales orientées anglais.',
+          ],
+        },
+        gettingStarted: {
+          title: 'Comment démarrer avec chaque famille',
+          content: ['Installez [Ollama](/local-llms/how-to-install-ollama) (commande unique sur macOS, Windows ou Linux) et téléchargez n\'importe quel modèle en une étape.'],
+          codeBlock: '# Famille Qwen2.5\nollama run qwen2.5:7b\nollama run qwen2.5:14b\nollama run qwen2.5:72b\n\n# Famille Llama 3.x\nollama run llama3.2:3b\nollama run llama3.1:8b\nollama run llama3.3:70b\n\n# Famille Mistral\nollama run mistral          # 7B\nollama run mistral-small3.1 # 24B',
+          codeLanguage: 'bash',
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            '**Rapport technique Qwen2.5** (Académie DAMO Alibaba, 2024) — arXiv:2412.15115 — Données de benchmarks pour codage, mathématiques et tâches multilingues sur toutes les variantes de tailles.',
+            '**Llama 3 Model Card** (Meta AI, 2024) — ai.meta.com/blog/meta-llama-3 — Spécifications Llama 3.3 70B, résultats d\'évaluation et conditions de licence.',
+            '**Mistral 7B Technical Paper** (Mistral AI, 2023) — arXiv:2310.06825 — Architecture Mistral d\'origine, attention à fenêtre glissante et données de benchmarks initiales.',
+            '**Open LLM Leaderboard** (Hugging Face, 2026) — huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard — Classements des benchmarks MMLU, HumanEval et MATH en temps réel pour tous les modèles ouverts.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs courantes lors du choix des familles de modèles',
+          items: [
+            'Comparer des modèles avec des nombres de paramètres différents — Qwen 32B vs Llama 70B n\'est pas une comparaison pommes avec pommes.',
+            'Ignorer les benchmarks multilingues quand votre charge de travail est multilingue.',
+            'Supposer que la dernière version du modèle est toujours la meilleure — parfois les quantifications plus anciennes ont meilleur support communautaire.',
+            'Oublier les conditions de licence — Les modèles Llama utilisent une licence Llama Community personnalisée qui restreint l\'utilisation au-dessus de 700 millions d\'utilisateurs actifs mensuels ; vérifiez avant déploiement à grande échelle.',
+            'Tester sur un seul benchmark — MMLU mesure la connaissance, HumanEval mesure le codage, MATH mesure le raisonnement. Un modèle leader sur un benchmark peut être en retard sur un autre.',
+          ],
+        },
+        relatedReading: {
+          title: 'Lectures connexes',
+          items: [
+            '[Meilleurs LLMs locaux 2026](/local-llms/best-local-llms-2026) — Classement global des meilleurs modèles actuels',
+            '[Meilleurs modèles LLM locaux pour débutants](/local-llms/best-beginner-local-llm-models) — Modèles fondamentaux pour nouveaux utilisateurs',
+            '[Comment installer Ollama](/local-llms/how-to-install-ollama) — Premiers pas avec n\'importe quel modèle',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Comprendre les formats de modèles',
+            '[Meilleurs LLMs locaux pour codage](/local-llms/best-local-llms-for-coding) — Comparaisons de modèles optimisés pour le codage',
+            '[LLMs multilingues locaux](/local-llms/multilingual-local-llms) — Support des modèles non-anglais',
+          ],
+        },
+        regionalContext: {
+          title: 'Contexte régional : EU/RGPD, Japon et Chine',
+          content: [
+            '**EU/RGPD** : Les modèles Mistral sont produits en France sous juridiction UE, leur donnant une chaîne de traçabilité des données claire qui satisfait les exigences de conformité RGPD Article 5. Les modèles Meta Llama divulguent la traçabilité des données d\'entraînement dans leur model card. Qwen2.5 est produit par Alibaba (origine Chine), que certaines autorités de protection des données UE signalent pour examen de transfert transfrontalier sous RGPD Chapitre V. Pour les industries réglementées UE, Mistral ou Llama avec déploiement sur site est le choix moins risqué.',
+            '**Japon (Gouvernance AI METI)** : Les directives 2024 de gouvernance AI de METI encouragent les organisations à documenter la provenance et les benchmarks de performance des modèles pour les déploiements d\'entreprise. Les modèles avec rapports techniques publiés (Qwen, Llama, Mistral ont tous des articles arXiv) satisfont cette exigence de documentation. La tokenisation japonaise native de Qwen2.5 (l\'une de ses 29 langues supportées) la rend le choix préféré pour les tâches NLP en japonais.',
+            '**Chine (Mesures provisoires CAC)** : Les 2023 Mesures provisoires pour les services d\'IA générative de la Cyberspace Administration of China exigent l\'enregistrement pour les services d\'IA offerts aux utilisateurs chinois. Les modèles s\'exécutant entièrement sur site (Qwen, Llama, Mistral via Ollama) sortent de la définition du fournisseur public et n\'exigent pas d\'enregistrement CAC. La performance en langue chinoise de Qwen2.5 est la meilleure parmi les trois familles.',
+          ],
+        },
+        faq: {
+          title: 'Questions fréquemment posées',
+          faqs: [
+            { q: 'Quel est le meilleur pour le codage : Qwen, Llama ou Mistral ?', a: 'Qwen2.5 domine les benchmarks de codage à chaque taille. Qwen2.5 72B atteint 87% HumanEval ; Llama 3.3 70B atteint 88% ; Mistral 7B v0.3 atteint 39%. Pour la classe 7B, Qwen2.5 7B (72% HumanEval) surpasse considérablement Mistral 7B (39%) et égale Llama 3.1 8B (72%).' },
+            { q: 'Quel LLM local supporte le plus de langues ?', a: 'Qwen2.5 supporte nativement 29 langues, dont l\'arabe, le japonais, le coréen, le chinois et toutes les grandes langues européennes. Llama 3.2 supporte officiellement 8 langues. Les modèles Mistral se concentrent principalement sur l\'anglais et les grandes langues européennes.' },
+            { q: 'Quel modèle dois-je choisir avec 8 GB RAM ?', a: 'Avec 8 GB RAM, utilisez Llama 3.2 3B (Q4, ~2 GB) pour les tâches générales ou Qwen2.5 7B (Q4, ~4,7 GB) pour le codage. Les deux s\'exécutent à 15–25 tokens/sec sur une CPU avec 8 GB RAM. Installez avec : ollama pull llama3.2:3b ou ollama pull qwen2.5:7b.' },
+            { q: 'Qwen2.5 est-il meilleur que Llama 3.3 à l\'échelle 70B ?', a: 'Ils sont pratiquement à égalité au global. Qwen2.5 72B domine MATH (83% vs 77%) et les tâches multilingues. Llama 3.3 70B domine HumanEval (88% vs 87%). La différence se situe dans 1–6% sur la plupart des benchmarks. Choisissez Qwen2.5 pour codage et multilingue ; Llama 3.3 pour tâches générales orientées anglais.' },
+            { q: 'Quel LLM local est le plus efficace avec une VRAM limitée ?', a: 'Mistral Small 3.1 24B est le plus efficace : 79% MMLU et 74% HumanEval avec seulement 14 GB RAM — approchant la qualité classe 70B avec approximativement 35% du coût VRAM.' },
+            { q: 'Qwen2.5 peut-il remplacer GPT-4 pour les tâches de codage ?', a: 'Pour beaucoup de tâches de codage standard (génération Python, JavaScript, SQL), Qwen2.5 72B (87% HumanEval) performe dans 5–10% de GPT-4o sur les benchmarks standard. Pour la refonte complexe multi-fichiers, les modèles cloud conservent un avantage.' },
+            { q: 'Mistral 7B vaut-il encore le coup d\'être utilisé en 2026 ?', a: 'Pour les systèmes avec seulement 4–5 GB VRAM, Mistral 7B reste une option utilisable. Cependant, Qwen2.5 7B et Llama 3.1 8B surpassent tous deux Mistral 7B v0.3 sur tous les benchmarks majeurs tout en nécessitant une VRAM similaire. L\'avantage principal de Mistral 7B aujourd\'hui est son support communautaire bien établi et l\'intégration des outils.' },
+            { q: 'Qu\'est-ce que la restriction de licence Llama Community ?', a: 'La licence Llama Community de Meta est gratuite pour usage commercial en dessous de 700 millions d\'utilisateurs actifs mensuels. Au-dessus ce seuil, un accord commercial séparé avec Meta est requis. Pour la plupart des cas d\'utilisation, cette limite n\'est pas un problème.' },
+            { q: 'Puis-je exécuter ces modèles complètement hors ligne ?', a: 'Oui. Les trois familles (Qwen, Llama, Mistral) s\'exécutent entièrement hors ligne via Ollama ou LM Studio après le téléchargement unique du modèle. Aucune clé API requise, aucune télémétrie, aucune connexion internet requise pour l\'inférence.' },
+            { q: 'Quelle famille de modèles est la plus facile pour débuter ?', a: 'Llama 3.2 3B a la plus grande communauté et la plupart des tutoriels pour débutants. Exécutez-le avec ollama run llama3.2:3b (nécessite 8 GB RAM, pas de GPU requis). Chaque grand outil LLM local (Ollama, LM Studio, OpenWebUI) supporte les modèles Llama par défaut.' },
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Qwen2.5 vs Llama 3.x vs Mistral 2026: Benchmarks et VRAM',
-        'description': 'Qwen2.5 (84% MMLU) vs Llama 3.3 (82% MMLU) vs Mistral (79%). HumanEval: Qwen 87%, Llama 88%. Comparez les benchmarks, VRAM, codage et support multilingue.',
+        'headline': 'Qwen vs Llama vs Mistral 2026 : Meilleur LLM local ?',
+        'description': 'Comparaison détaillée de Qwen, Llama 3.2 et Mistral pour usage local. Vitesse, qualité, consommation VRAM et test côte à côte avec PromptQuorum.',
         'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral?lang=fr',
         'inLanguage': 'fr',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'isPartOf': {
+          '@type': 'CreativeWork',
+          'name': 'Qwen vs Llama vs Mistral',
+          'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral'
+        },
+        'proficiencyLevel': 'Intermediate',
+        'keywords': ['Qwen vs Llama', 'Qwen vs Mistral', 'meilleur LLM local 2026', 'comparaison LLM local', 'Llama 3.2 vs Qwen'],
+        'about': [
+          { '@type': 'SoftwareApplication', 'name': 'Qwen2.5', 'description': 'Famille de modèles open-weight d\'Alibaba avec support 29 langues et benchmarks de codage leaders.' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.x', 'description': 'Famille de modèles open-weight de Meta avec le support écosystème le plus large.' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral', 'description': 'Famille de modèles de l\'entreprise d\'IA française, connue pour l\'efficacité des paramètres.' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', 'h2', '.key-takeaways'] },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
-      sections: {},
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'Quel est le meilleur pour le codage : Qwen, Llama ou Mistral ?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 domine les benchmarks de codage à chaque taille. Qwen2.5 72B atteint 87% HumanEval ; Llama 3.3 70B atteint 88% ; Mistral 7B v0.3 atteint 39%. Pour la classe 7B, Qwen2.5 7B (72% HumanEval) surpasse considérablement Mistral 7B (39%) et égale Llama 3.1 8B (72%).' } },
+          { '@type': 'Question', name: 'Quel LLM local supporte le plus de langues ?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5 supporte nativement 29 langues, dont l\'arabe, le japonais, le coréen, le chinois et toutes les grandes langues européennes. Llama 3.2 supporte officiellement 8 langues. Les modèles Mistral se concentrent principalement sur l\'anglais et les grandes langues européennes.' } },
+          { '@type': 'Question', name: 'Quel modèle dois-je choisir avec 8 GB RAM ?', acceptedAnswer: { '@type': 'Answer', text: 'Avec 8 GB RAM, utilisez Llama 3.2 3B (Q4, ~2 GB) pour les tâches générales ou Qwen2.5 7B (Q4, ~4,7 GB) pour le codage. Les deux s\'exécutent à 15–25 tokens/sec sur une CPU avec 8 GB RAM. Installez avec : ollama pull llama3.2:3b ou ollama pull qwen2.5:7b.' } },
+          { '@type': 'Question', name: 'Qwen2.5 est-il meilleur que Llama 3.3 à l\'échelle 70B ?', acceptedAnswer: { '@type': 'Answer', text: 'Ils sont pratiquement à égalité au global. Qwen2.5 72B domine MATH (83% vs 77%) et les tâches multilingues. Llama 3.3 70B domine HumanEval (88% vs 87%). La différence se situe dans 1–6% sur la plupart des benchmarks. Choisissez Qwen2.5 pour codage et multilingue ; Llama 3.3 pour tâches générales orientées anglais.' } },
+          { '@type': 'Question', name: 'Quel LLM local est le plus efficace avec une VRAM limitée ?', acceptedAnswer: { '@type': 'Answer', text: 'Mistral Small 3.1 24B est le plus efficace : 79% MMLU et 74% HumanEval avec seulement 14 GB RAM — approchant la qualité classe 70B avec approximativement 35% du coût VRAM.' } },
+          { '@type': 'Question', name: 'Qwen2.5 peut-il remplacer GPT-4 pour les tâches de codage ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour beaucoup de tâches de codage standard (génération Python, JavaScript, SQL), Qwen2.5 72B (87% HumanEval) performe dans 5–10% de GPT-4o sur les benchmarks standard. Pour la refonte complexe multi-fichiers, les modèles cloud conservent un avantage.' } },
+          { '@type': 'Question', name: 'Mistral 7B vaut-il encore le coup d\'être utilisé en 2026 ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour les systèmes avec seulement 4–5 GB VRAM, Mistral 7B reste une option utilisable. Cependant, Qwen2.5 7B et Llama 3.1 8B surpassent tous deux Mistral 7B v0.3 sur tous les benchmarks majeurs tout en nécessitant une VRAM similaire. L\'avantage principal de Mistral 7B aujourd\'hui est son support communautaire bien établi et l\'intégration des outils.' } },
+          { '@type': 'Question', name: 'Qu\'est-ce que la restriction de licence Llama Community ?', acceptedAnswer: { '@type': 'Answer', text: 'La licence Llama Community de Meta est gratuite pour usage commercial en dessous de 700 millions d\'utilisateurs actifs mensuels. Au-dessus ce seuil, un accord commercial séparé avec Meta est requis. Pour la plupart des cas d\'utilisation, cette limite n\'est pas un problème.' } },
+          { '@type': 'Question', name: 'Puis-je exécuter ces modèles complètement hors ligne ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Les trois familles (Qwen, Llama, Mistral) s\'exécutent entièrement hors ligne via Ollama ou LM Studio après le téléchargement unique du modèle. Aucune clé API requise, aucune télémétrie, aucune connexion internet requise pour l\'inférence.' } },
+          { '@type': 'Question', name: 'Quelle famille de modèles est la plus facile pour débuter ?', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.2 3B a la plus grande communauté et la plupart des tutoriels pour débutants. Exécutez-le avec ollama run llama3.2:3b (nécessite 8 GB RAM, pas de GPU requis). Chaque grand outil LLM local (Ollama, LM Studio, OpenWebUI) supporte les modèles Llama par défaut.' } }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Comment choisir entre Qwen, Llama et Mistral pour usage LLM local',
+        'description': 'Un guide étape par étape pour sélectionner la bonne famille de modèles open-weight basé sur la tâche, la langue et le matériel.',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'Définissez votre tâche principal', 'text': 'Identifiez si votre cas d\'utilisation principal est le codage, le texte multilingue, le Q&A général en anglais ou l\'écriture créative. Qwen2.5 gagne en codage et multilingue ; Llama 3.x gagne en tâches générales en anglais.' },
+          { '@type': 'HowToStep', 'name': 'Vérifiez la VRAM disponible', 'text': 'Mesurez votre VRAM GPU ou RAM système. 8 GB gère les modèles 7B ; 16 GB gère les modèles 13–14B ; 40+ GB est nécessaire pour les modèles 70B à quantification Q4.' },
+          { '@type': 'HowToStep', 'name': 'Installez Ollama et téléchargez le candidat principal', 'text': 'Installez Ollama (commande unique sur macOS/Linux/Windows). Téléchargez votre modèle choisi : ollama pull qwen2.5:7b (codage) ou ollama pull llama3.2:3b (général). Exécutez : ollama run <model>.' },
+          { '@type': 'HowToStep', 'name': 'Testez sur vos tâches réels', 'text': 'Exécutez 5–10 prompts représentatifs de votre charge de travail réelle. Comparez la qualité de sortie, la vitesse et le suivi des instructions. Ne vous fiez pas uniquement aux scores de benchmarks.' },
+          { '@type': 'HowToStep', 'name': 'Vérifiez la licence pour votre cas d\'utilisation', 'text': 'Confirmez que la licence est appropriée : Qwen2.5 et Mistral 7B/Small utilisent Apache 2.0 (permissif). Les modèles Llama utilisent la licence Llama Community (gratuit en dessous 700M MAU, nécessite accord au-dessus).' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Qwen2.5 vs Llama 3.x vs Mistral : Comparaison des benchmarks 2026',
+        numberOfItems: 8,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Qwen2.5 72B — MMLU: 84%, HumanEval: 87%, MATH: 83%, RAM: 43 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 2, name: 'Llama 3.3 70B — MMLU: 82%, HumanEval: 88%, MATH: 77%, RAM: 40 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 3, name: 'Mistral Small 3.1 24B — MMLU: 79%, HumanEval: 74%, MATH: 65%, RAM: 14 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 4, name: 'Qwen2.5 32B — MMLU: 83%, HumanEval: 79%, MATH: 79%, RAM: 20 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 5, name: 'Qwen2.5 14B — MMLU: 79%, HumanEval: 75%, MATH: 70%, RAM: 9 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 6, name: 'Llama 3.1 8B — MMLU: 73%, HumanEval: 72%, MATH: 51%, RAM: 5,5 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 7, name: 'Mistral 7B v0.3 — MMLU: 64%, HumanEval: 39%, MATH: 28%, RAM: 4,5 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 8, name: 'Qwen2.5 7B — MMLU: 74%, HumanEval: 72%, MATH: 52%, RAM: 4,7 GB (Q4_K_M)' },
+        ],
+      },
     },
     ja: {
-      theme: '比較',
-      title: 'Qwen2.5 vs Llama 3.x vs Mistral 2026：ベンチマーク、VRAM、どれを使うべきか',
-      seoTitle: 'Qwen vs Llama vs Mistral 2026：ベンチマーク & VRAM',
-      intro: 'Qwen2.5（84% MMLU）vs Llama 3.3（82% MMLU）vs Mistral（79%）の比較。HumanEval：Qwen 87%、Llama 88%。ベンチマーク、VRAM、コーディング、多言語対応を比較します。',
-      metaDescription: 'Qwen2.5（84% MMLU）vs Llama 3.3（82% MMLU）vs Mistral（79%）。HumanEval：Qwen 87%、Llama 88%。ベンチマーク、VRAM、コーディング、多言語対応を比較。',
+      theme: 'Best Models',
+      title: 'Qwen vs. Llama vs. Mistral：どのローカルLLMモデルファミリーを使うべき？',
+      seoTitle: 'Qwen vs Llama vs Mistral 2026：比較完全ガイド',
+      intro: 'Qwen2.5、Meta Llama 3.x、Mistralは、2026年のローカル推論における3つの支配的なオープンウェイトモデルファミリーです。Qwen2.5はコーディングで先導——72Bで87% HumanEval、Llama 3.3の88%、Mistral 7Bの39%に対して。Qwen2.5はまた29言語をネイティブにサポートします。Llama 3.3 70Bは英語の一般的な推論（82% MMLU）で先導します。Mistral Small 3.1 24Bはわずか14 GB RAMでほぼ70B品質を提供——3つのファミリーの中で最高の品質対RAM比。正しい選択は、タスクタイプ、言語、利用可能なVRAM次第です。',
+      metaDescription: 'Qwen2.5はコーディング最強。Llama 3.3英語推論最強。Mistral Small 3.1は14GB RAMで70B相当の性能。ベンチマーク、速度、VRAM消費を完全比較。PromptQuorum対応。',
       publishDate: '2026-04-04',
-      readTime: '10 min read',
-      educationalLevel: 'Beginner to Advanced',
-      primaryTerm: 'モデル比較',
+      dateModified: '2026-04-07',
+      readTime: '9分読込',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Qwen vs Llama vs Mistral',
+      toc: [
+        { label: '重要なポイント', anchor: 'key-takeaways' },
+        { label: 'モデルファミリー概要', anchor: 'model-family-overview' },
+        { label: 'ベンチマーク比較', anchor: 'benchmark-comparison' },
+        { label: 'Qwen2.5：強み と弱み', anchor: 'qwen2-5' },
+        { label: 'Llama 3.x：強み と弱み', anchor: 'llama-3' },
+        { label: 'Mistral：強み と弱み', anchor: 'mistral' },
+        { label: 'タスク別にはどのファミリーが勝つ？', anchor: 'which-family-wins-by-task' },
+        { label: 'サイズ別比較', anchor: 'size-for-size-comparison' },
+        { label: '始める方法', anchor: 'how-to-get-started' },
+        { label: '地域的コンテキスト', anchor: 'regional-context' },
+        { label: 'よくある質問', anchor: 'faq' },
+        { label: '一般的な誤り', anchor: 'common-mistakes' },
+        { label: '関連読書', anchor: 'related-reading' },
+        { label: 'ソース', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**コーディング**：Qwen2.5はすべてのサイズで勝つ——72Bで87% HumanEval、32Bで79%、7Bで72%。',
+            '**一般的推論**：Llama 3.3 70BとQwen2.5 72Bはほぼ同等；Llama 3.xは英語が強く、Qwenは多言語が強い。',
+            '**効率（RAM 1 GBあたりの品質）**：Mistral Small 3.1 24Bはわずか14 GB RAMでほぼ70B品質を提供。',
+            '**英語以外の言語**：Qwen2.5は29言語をネイティブにサポート；LlamaとMistralは主に英語最適化。',
+            '**8 GB RAMの初心者**：Llama 3.2 3BまたはMistral 7Bは最も文書化され、コミュニティに支持された選択肢。',
+          ],
+        },
+        overview: {
+          title: 'モデルファミリー概要：Qwen、Llama、Mistral',
+          rows: [
+            { 'ファミリー': 'Qwen2.5', '開発者': 'Alibaba', '利用可能なサイズ': '0.5B、1.5B、3B、7B、14B、32B、72B', 'ライセンス': 'Apache 2.0（ほとんど）' },
+            { 'ファミリー': 'Llama 3.x', '開発者': 'Meta', '利用可能なサイズ': '1B、3B、8B、70B', 'ライセンス': 'Llama Community（カスタム）' },
+            { 'ファミリー': 'Mistral', '開発者': 'Mistral AI', '利用可能なサイズ': '7B、Small 3.1（24B）、Large（123B）', 'ライセンス': 'Apache 2.0（7B、Small）' },
+          ],
+          columns: ['ファミリー', '開発者', '利用可能なサイズ', 'ライセンス'],
+        },
+        benchmarks: {
+          title: 'ベンチマーク比較：Qwen2.5 vs Llama 3.x vs Mistral',
+          rows: [
+            { 'モデル': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'MATH': '83%', 'RAM (Q4_K_M)': '43 GB' },
+            { 'モデル': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'MATH': '77%', 'RAM (Q4_K_M)': '40 GB' },
+            { 'モデル': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'HumanEval': '74%', 'MATH': '65%', 'RAM (Q4_K_M)': '14 GB' },
+            { 'モデル': 'Qwen2.5 32B', 'MMLU': '83%', 'HumanEval': '79%', 'MATH': '79%', 'RAM (Q4_K_M)': '20 GB' },
+            { 'モデル': 'Qwen2.5 14B', 'MMLU': '79%', 'HumanEval': '75%', 'MATH': '70%', 'RAM (Q4_K_M)': '9 GB' },
+            { 'モデル': 'Llama 3.1 8B', 'MMLU': '73%', 'HumanEval': '72%', 'MATH': '51%', 'RAM (Q4_K_M)': '5.5 GB' },
+            { 'モデル': 'Mistral 7B v0.3', 'MMLU': '64%', 'HumanEval': '39%', 'MATH': '28%', 'RAM (Q4_K_M)': '4.5 GB' },
+            { 'モデル': 'Qwen2.5 7B', 'MMLU': '74%', 'HumanEval': '72%', 'MATH': '52%', 'RAM (Q4_K_M)': '4.7 GB' },
+          ],
+          columns: ['モデル', 'MMLU', 'HumanEval', 'MATH', 'RAM (Q4_K_M)'],
+        },
+        qwen: {
+          title: 'Qwen2.5：コーディング、数学、非英語言語に最適',
+          content: [
+            'AlibabaのQwen2.5は、構造化出力タスク用の最強のモデルファミリーです。比較可能なすべてのサイズティアでHumanEvalを先導します（70Bを除く、Llama 3.3が1%上回る）。各サイズでMATHスコアはLlamaより6～10ポイント高い。',
+            '**強み**：コーディング（Python、JavaScript、SQL）、数学的推論、29言語ネイティブサポート、JSONモード、Function Calling、[すべてのサイズで128Kコンテキストウィンドウ](/local-llms/local-llm-hardware-guide-2026)。',
+            '**弱み**：英語の指示スタイルはLlamaやMistralより自然でない場合があります；一部のユーザーは英語での創造的なライティングの流暢性が低いと報告；Alibaba発祥はオープンウェイトにもかかわらず一部の企業ユーザーにとってデータ処理の懸念を提起。',
+          ],
+        },
+        llama: {
+          title: 'Llama 3.x：一般的な英語タスクとエコシステムサポートに最適',
+          content: [
+            'MetaのLlama 3.xファミリーは最も広くサポートされているオープンウェイトモデルシリーズです。他のどのファミリーよりもLlamaに対するより多くのツール、ファインチューン、量子化、コミュニティガイドが存在します。Llama 3.3 70Bは一般的な英語ベンチマークのすべての競合他社と同等かそれ以上です。',
+            '**強み**：最も幅広いエコシステムサポート（すべてのツールがLlamaをサポート）、最高の英語創造的なライティング、強い指示追従、3.1/3.2/3.3バリアントで128Kコンテキスト、コミュニティテスト済みの信頼性。',
+            '**弱み**：基本的な機能を超えた多言語ネイティブサポートなし；Llama 3.2 3Bは同じパラメータ数であるにもかかわらずQwen2.5 3BおよびPhi-4 Miniのコーディングと数学で遅い。',
+          ],
+        },
+        mistral: {
+          title: 'Mistral：最高の効率と最強の7B級の歴史',
+          content: [
+            'Mistral AIはこの比較で最もパラメータ効率の良いモデルを生産します。Mistral Small 3.1は24Bで70Bクラスに近いベンチマークスコアを提供しながら、わずか14 GB RAMしか必要としません——この比較のどのモデルよりも最高の品質対RAM比。',
+            '**強み**：最高の品質対RAM比（Small 3.1）、強いFunction CallingとTool使用、主要モデルでの清潔なApache 2.0ライセンス、GDPR敏感な使用ケース向けのヨーロッパ発祥。',
+            '**弱み**：Mistral 7B v0.3はベンチマークでQwen2.5 7BおよびLlama 3.1 8Bに上回られるようになった；Qwenやllamaより少ないサイズオプション。',
+          ],
+        },
+        byTask: {
+          title: 'タスク別にはどのモデルファミリーが勝つ？',
+          rows: [
+            { 'タスク': 'Python / JavaScriptコーディング', '勝者': 'Qwen2.5', '理由': 'すべてのサイズティアで最高のHumanEval' },
+            { 'タスク': '一般的なQ&A（英語）', '勝者': 'Llama 3.3 / Qwen2.5（同等）', '理由': 'どちらも70Bで82～84% MMLU達成' },
+            { 'タスク': '数学的推論', '勝者': 'Qwen2.5', '理由': '72Bで83% MATHはLlama 3.3 70Bの77%対' },
+            { 'タスク': '非英語言語', '勝者': 'Qwen2.5', '理由': '29ネイティブ言語；LlamaとMistralは英語優先' },
+            { 'タスク': '創造的なライティング（英語）', '勝者': 'Llama 3.x', '理由': 'より自然な英語生成スタイル' },
+            { 'タスク': '16 GB RAMでの品質', '勝者': 'Mistral Small 3.1', '理由': '14 GB RAMでほぼ70B品質' },
+            { 'タスク': '初心者の最初のモデル', '勝者': 'Llama 3.2 3B', '理由': '最も文書化されて、最も多くのコミュニティサポート' },
+          ],
+          columns: ['タスク', '勝者', '理由'],
+        },
+        sizeBySizeComparison: {
+          title: 'サイズ別比較：どのファミリーが各スケールで優れているか？',
+          content: [
+            '**3B～4Bクラス**：Qwen2.5 3Bおよび[Phi-4 Mini 3.8B](/local-llms/best-beginner-local-llm-models)はLlama 3.2 3Bをコーディングと数学で上回る。一般的な英語使用の場合、Llama 3.2 3Bはより信頼性が高い。',
+            '**7B～8Bクラス**：Qwen2.5 7BおよびLlama 3.1 8Bの両方がMistral 7B v0.3を大幅に上回る。Qwen2.5 7Bはコーディングで先導；Llama 3.1 8Bは英語指示追従で先導。',
+            '**14B～24Bクラス**：Qwen2.5 14BとMistral Small 3.1 24Bが主な選択肢。Mistral Small 3.1は全体的により強いですがより多くのRAMが必要。Qwen2.5 14Bはより低いRAMでコーディングと多言語に優れている。',
+            '**70B～72Bクラス**：Llama 3.3 70BとQwen2.5 72Bは2026年で最高のローカル実行可能なモデル。コーディングと多言語にはQwen2.5 72Bを選択；英語優先の一般的なタスクにはLlama 3.3 70Bを選択。',
+          ],
+        },
+        gettingStarted: {
+          title: '各ファミリーで始める方法',
+          content: ['macOS、WindowsまたはLinuxで[Ollama](/local-llms/how-to-install-ollama)をインストール（単一コマンド）し、1ステップで任意のモデルをプル。'],
+          codeBlock: '# Qwen2.5ファミリー\nollama run qwen2.5:7b\nollama run qwen2.5:14b\nollama run qwen2.5:72b\n\n# Llama 3.xファミリー\nollama run llama3.2:3b\nollama run llama3.1:8b\nollama run llama3.3:70b\n\n# Mistralファミリー\nollama run mistral          # 7B\nollama run mistral-small3.1 # 24B',
+          codeLanguage: 'bash',
+        },
+        sources: {
+          title: 'ソース',
+          items: [
+            '**Qwen2.5 Technical Report**（Alibaba DAMO Academy、2024）— arXiv:2412.15115 — コーディング、数学、多言語タスク全体の全サイズバリアントに対するベンチマークデータ。',
+            '**Llama 3 Model Card**（Meta AI、2024）— ai.meta.com/blog/meta-llama-3 — Llama 3.3 70B仕様、評価結果、ライセンス条件。',
+            '**Mistral 7B Technical Paper**（Mistral AI、2023）— arXiv:2310.06825 — オリジナルMistralアーキテクチャ、スライディングウィンドウ注意、初期ベンチマークデータ。',
+            '**Open LLM Leaderboard**（Hugging Face、2026）— huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard — すべてのオープンモデルに対するリアルタイムMMUL、HumanEval、およびMATHベンチマークランキング。',
+          ],
+        },
+        commonMistakes: {
+          title: '模型ファミリー選択時の一般的な誤り',
+          items: [
+            '異なるパラメータ数のモデルを比較——Qwen 32B対Llama 70Bはりんご対りんご比較ではない。',
+            'ワークロードが多言語の場合、多言語ベンチマークを無視する。',
+            '最新のモデルバージョンが常に最高と仮定——時々古い量子化はより良いコミュニティサポートを持つ。',
+            'ライセンス要件を見落とす——Llamaモデルはカスタムllama Community Licenseを使用し、700M月間アクティブユーザー以上の使用を制限；スケール展開前に確認。',
+            '1つのベンチマークのみでテスト——MMLUは知識、HumanEvalはコーディング、MATHは推論を測定。1つのベンチマークで先導するモデルは別のベンチマークで遅い場合があります。',
+          ],
+        },
+        relatedReading: {
+          title: '関連読書',
+          items: [
+            '[最高のLocal LLMs 2026](/local-llms/best-local-llms-2026) — 現在の最高のモデルの全体的なランキング',
+            '[最高の初心者Local LLMモデル](/local-llms/best-beginner-local-llm-models) — 新しいユーザーのための基礎モデル',
+            '[Ollamaをインストール方法](/local-llms/how-to-install-ollama) — 任意のモデルで始める',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — モデルフォーマットの理解',
+            '[コーディング用の最高のLocal LLMs](/local-llms/best-local-llms-for-coding) — コーディング最適化モデル比較',
+            '[多言語Local LLMs](/local-llms/multilingual-local-llms) — 非英語モデルサポート',
+          ],
+        },
+        regionalContext: {
+          title: '地域的コンテキスト：EU/GDPR、日本、中国',
+          content: [
+            '**EU/GDPR**：Mistralモデルはフランスの下のEU管轄で製造され、GDPR Article 5要件適合を満たすクリアなデータプロベナンストレイルを与える。Meta Llamaモデルはmodel cardで訓練データの血統を開示。Qwen2.5はAlibaba（中国発祥）により製造されており、いくつかのEUデータ保護当局はGDPR Chapter Vの下でクロスボーダー転送レビューのためにフラグ。規制EUインダストリーの場合、MistralまたはON-PREMISESデプロイメント付きllamaが最もリスク低い選択肢。',
+            '**日本（METI AIガバナンス）**：2024年のMETI AIガバナンスガイドラインは、Enterprise展開のためにモデルプロベナンスと性能ベンチマークをドキュメント化することを組織に奨励。出版された技術レポート（Qwen、Llama、MistralはすべてarXivペーパーを持つ）を持つモデルはこのドキュメンテーション要件を満たす。Qwenのネイティブ日本語トークン化（29の支持言語の1つ）は日本語NLPタスクの好ましい選択肢である。',
+            '**中国（CAC Interim Measures）**：2023年中国のCyberspace Administration（CAC）Generative AIサービスの中間措置は中国ユーザーに提供されるAIサービスの登録が必要。完全にオンプレミスで実行されるモデル（QwenつまりLlamaやOllamaを通じたMistral）は公開フェイシングプロバイダー定義の外にあり、CAC登録は不要。Qwen2.5の中国語言語性能は3つのファミリーの中で最高。',
+          ],
+        },
+        faq: {
+          title: 'よくある質問',
+          faqs: [
+            { q: 'コーディングに最適なのはどれ：Qwen、Llama、Mistral？', a: 'Qwen2.5はすべてのサイズティアでコーディングベンチマークをリード。Qwen2.5 72Bは87% HumanEvalスコア；Llama 3.3 70Bは88%スコア；Mistral 7B v0.3は39%スコア。7Bクラスの場合、Qwen2.5 7B（72% HumanEval）はMistral 7B（39%）を大幅に上回り、Llama 3.1 8B（72%）と一致。' },
+            { q: '最も多くの言語をサポートするLocal LLMはどれですか？', a: 'Qwen2.5は、アラビア語、日本語、韓国語、中国語、すべての主要ヨーロッパ言語を含む29言語をネイティブにサポート。Llama 3.2は公式に8言語をサポート。Mistralモデルは主に英語と主要ヨーロッパ言語に焦点を当てる。' },
+            { q: '8 GB RAMでどのモデルを選ぶべき？', a: '8 GB RAMで、一般的なタスクの場合はLlama 3.2 3B（Q4、〜2 GB）またはコーディングの場合はQwen2.5 7B（Q4、〜4.7 GB）を使用。どちらも8 GB RAMのCPUで15～25トークン/秒で実行。以下でインストール：ollama pull llama3.2:3b またはollama pull qwen2.5:7b。' },
+            { q: 'Qwen2.5は70Bスケールでllama 3.3より優れていますか？', a: '全体的にほぼ同等。Qwen2.5 72Bは数学（83%対77%）と多言語タスクで先導。Llama 3.3 70Bはhumaneval（88%対87%）で先導。ほとんどのベンチマークで差は1～6%以内。コーディングと多言語にはQwen2.5を選択；英語優先の一般的なタスクにはLlama 3.3を選択。' },
+            { q: 'VRAMが限られている場合、最も効率的なLocal LLMは？', a: 'Mistral Small 3.1 24Bが最も効率的：わずか14 GB RAMで79% MMLUおよび74% HumanEval——ほぼ70Bクラス品質をVRAM費用の約35%で達成。' },
+            { q: 'Qwen2.5はコーディングタスク用のGPT-4を置き換えることができますか？', a: '多くの標準コーディングタスク（Python、JavaScript、SQL生成）では、Qwen2.5 72B（87% HumanEval）は標準ベンチマークでGPT-4oの5～10%以内で実行。複雑なマルチファイル再構成の場合、クラウドモデルはまだ利点を保持。' },
+            { q: 'Mistral 7Bは2026年で使う価値がありますか？', a: 'わずか4～5 GB VRAMしかないシステムの場合、Mistral 7Bは使用可能なオプションのままです。ただし、Qwen2.5 7BおよびLlama 3.1 8Bの両方がMistral 7B v0.3を同様のVRAMが必要でもすべての主要ベンチマークで上回る。Mistral 7Bの主な利点は今日はその長く確立されたコミュニティサポートとツール統合。' },
+            { q: 'Llama Community Licenseの制限は何ですか？', a: 'MetaのLlama Community Licenseは700百万月間アクティブユーザー以下の商用使用のために無料。その閾値の上、Metaを使用した別の商用契約が必要。ほとんどのユースケース、この限度は問題ではない。' },
+            { q: 'これらのモデルを完全にオフラインで実行できますか？', a: 'はい。すべての3ファミリー（Qwen、Llama、Mistral）は1回限りのモデルダウンロード後、OllamaまたはLM Studioを通じて完全にオフラインで実行。APIキー不要、テレメトリなし、推論に必要な他のインターネット接続。' },
+            { q: 'どのモデルファミリーが最も簡単に始めることができますか？', a: 'Llama 3.2 3Bは最大のコミュニティと最も多くの初心者チュートリアルを持つ。以下で実行：ollama run llama3.2:3b（8 GB RAM必須、GPU不要）。すべてのメジャーLocal LLMツール（Ollama、LM Studio、OpenWebUI）はデフォルトでLlamaモデルをサポート。' },
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Qwen2.5 vs Llama 3.x vs Mistral 2026：ベンチマーク、VRAM、どれを使うべきか',
-        'description': 'Qwen2.5（84% MMLU）vs Llama 3.3（82% MMLU）vs Mistral（79%）。HumanEval：Qwen 87%、Llama 88%。ベンチマーク、VRAM、コーディング、多言語対応を比較。',
+        'headline': 'Qwen vs Llama vs Mistral 2026：最高のLocal LLM？',
+        'description': 'Qwen、Llama 3.2、Mistralのローカル使用の詳細な比較。速度、品質、VRAM消費、PromptQuorumとの並列テスト。',
         'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral?lang=ja',
         'inLanguage': 'ja',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'isPartOf': {
+          '@type': 'CreativeWork',
+          'name': 'Qwen vs Llama vs Mistral',
+          'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral'
+        },
+        'proficiencyLevel': 'Intermediate',
+        'keywords': ['Qwen vs Llama', 'Qwen vs Mistral', 'bestes Local LLM 2026', 'Local LLM comparison', 'Llama 3.2 vs Qwen'],
+        'about': [
+          { '@type': 'SoftwareApplication', 'name': 'Qwen2.5', 'description': 'Alibabaオープンウェイトモデルファミリー、29言語サポートとリードコーディングベンチマーク。' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.x', 'description': 'Metaオープンウェイトモデルファミリーおよび最も幅広いエコシステムサポート。' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral', 'description': 'フランスのAI企業モデルファミリー、パラメータ効率で知られている。' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', 'h2', '.key-takeaways'] },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
-      sections: {},
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'コーディングに最適なのはどれ：Qwen、Llama、Mistral？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5はすべてのサイズティアでコーディングベンチマークをリード。Qwen2.5 72Bは87% HumanEvalスコア；Llama 3.3 70Bは88%スコア；Mistral 7B v0.3は39%スコア。7Bクラスの場合、Qwen2.5 7B（72% HumanEval）はMistral 7B（39%）を大幅に上回り、Llama 3.1 8B（72%）と一致。' } },
+          { '@type': 'Question', name: '最も多くの言語をサポートするLocal LLMはどれですか？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5は、アラビア語、日本語、韓国語、中国語、すべての主要ヨーロッパ言語を含む29言語をネイティブにサポート。Llama 3.2は公式に8言語をサポート。Mistralモデルは主に英語と主要ヨーロッパ言語に焦点を当てる。' } },
+          { '@type': 'Question', name: '8 GB RAMでどのモデルを選ぶべき？', acceptedAnswer: { '@type': 'Answer', text: '8 GB RAMで、一般的なタスクの場合はLlama 3.2 3B（Q4、〜2 GB）またはコーディングの場合はQwen2.5 7B（Q4、〜4.7 GB）を使用。どちらも8 GB RAMのCPUで15～25トークン/秒で実行。以下でインストール：ollama pull llama3.2:3b またはollama pull qwen2.5:7b。' } },
+          { '@type': 'Question', name: 'Qwen2.5は70Bスケールでllama 3.3より優れていますか？', acceptedAnswer: { '@type': 'Answer', text: '全体的にほぼ同等。Qwen2.5 72Bは数学（83%対77%）と多言語タスクで先導。Llama 3.3 70Bはhumaneval（88%対87%）で先導。ほとんどのベンチマークで差は1～6%以内。コーディングと多言語にはQwen2.5を選択；英語優先の一般的なタスクにはLlama 3.3を選択。' } },
+          { '@type': 'Question', name: 'VRAMが限られている場合、最も効率的なLocal LLMは？', acceptedAnswer: { '@type': 'Answer', text: 'Mistral Small 3.1 24Bが最も効率的：わずか14 GB RAMで79% MMLUおよび74% HumanEval——ほぼ70Bクラス品質をVRAM費用の約35%で達成。' } },
+          { '@type': 'Question', name: 'Qwen2.5はコーディングタスク用のGPT-4を置き換えることができますか？', acceptedAnswer: { '@type': 'Answer', text: '多くの標準コーディングタスク（Python、JavaScript、SQL生成）では、Qwen2.5 72B（87% HumanEval）は標準ベンチマークでGPT-4oの5～10%以内で実行。複雑なマルチファイル再構成の場合、クラウドモデルはまだ利点を保持。' } },
+          { '@type': 'Question', name: 'Mistral 7Bは2026年で使う価値がありますか？', acceptedAnswer: { '@type': 'Answer', text: 'わずか4～5 GB VRAMしかないシステムの場合、Mistral 7Bは使用可能なオプションのままです。ただし、Qwen2.5 7BおよびLlama 3.1 8Bの両方がMistral 7B v0.3を同様のVRAMが必要でもすべての主要ベンチマークで上回る。Mistral 7Bの主な利点は今日はその長く確立されたコミュニティサポートとツール統合。' } },
+          { '@type': 'Question', name: 'Llama Community Licenseの制限は何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'MetaのLlama Community Licenseは700百万月間アクティブユーザー以下の商用使用のために無料。その閾値の上、Metaを使用した別の商用契約が必要。ほとんどのユースケース、この限度は問題ではない。' } },
+          { '@type': 'Question', name: 'これらのモデルを完全にオフラインで実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。すべての3ファミリー（Qwen、Llama、Mistral）は1回限りのモデルダウンロード後、OllamaまたはLM Studioを通じて完全にオフラインで実行。APIキー不要、テレメトリなし、推論に必要な他のインターネット接続。' } },
+          { '@type': 'Question', name: 'どのモデルファミリーが最も簡単に始めることができますか？', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.2 3Bは最大のコミュニティと最も多くの初心者チュートリアルを持つ。以下で実行：ollama run llama3.2:3b（8 GB RAM必須、GPU不要）。すべてのメジャーLocal LLMツール（Ollama、LM Studio、OpenWebUI）はデフォルトでLlamaモデルをサポート。' } }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'Local LLMの使用のためにQwen、Llama、Mistralの間で選択方法',
+        'description': 'タスク、言語、ハードウェアに基づいて正しいオープンウェイトモデルファミリーを選択するためのステップバイステップガイド。',
+        'step': [
+          { '@type': 'HowToStep', 'name': 'プライマリタスク定義', 'text': 'メインユースケースがコーディング、多言語テキスト、英語一般的なQ&A、または創造的なライティングかどうかを識別。Qwen2.5はコーディングと多言語で勝つ；Llama 3.xは英語の一般的なタスクで勝つ。' },
+          { '@type': 'HowToStep', 'name': '利用可能なVRAM確認', 'text': 'GPU VRAMまたはシステムRAMを測定。8 GBは7Bモデルを処理；16 GBは13～14Bモデルを処理；Q4量子化で70Bモデルには40+ GB必須。' },
+          { '@type': 'HowToStep', 'name': 'Ollamaをインストールトップ候補をプル', 'text': 'Ollama install（macOS/Linux/Windows上で単一コマンド）。chosen model：ollama pull qwen2.5:7b（coding）またはollama pull llama3.2:3b（general）をプル。実行：ollama run <model>。' },
+          { '@type': 'HowToStep', 'name': '実際のタスクでテスト', 'text': '実際のワークロードから5～10の代表的なpromptを実行。出力品質、速度、指示追従を比較。ベンチマークスコアのみに頼らない。' },
+          { '@type': 'HowToStep', 'name': 'ユースケースのためにライセンス確認', 'text': 'ライセンスが適切かどうかを確認：Qwen2.5とMistral 7B/Smallはapache 2.0（permissive）を使用。Llamaモデルはllama Community License（700M MAU下の無料、上で契約が必須）を使用。' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Qwen2.5 vs Llama 3.x vs Mistral：ベンチマーク比較 2026',
+        numberOfItems: 8,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Qwen2.5 72B — MMLU: 84%, HumanEval: 87%, MATH: 83%, RAM: 43 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 2, name: 'Llama 3.3 70B — MMLU: 82%, HumanEval: 88%, MATH: 77%, RAM: 40 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 3, name: 'Mistral Small 3.1 24B — MMLU: 79%, HumanEval: 74%, MATH: 65%, RAM: 14 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 4, name: 'Qwen2.5 32B — MMLU: 83%, HumanEval: 79%, MATH: 79%, RAM: 20 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 5, name: 'Qwen2.5 14B — MMLU: 79%, HumanEval: 75%, MATH: 70%, RAM: 9 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 6, name: 'Llama 3.1 8B — MMLU: 73%, HumanEval: 72%, MATH: 51%, RAM: 5.5 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 7, name: 'Mistral 7B v0.3 — MMLU: 64%, HumanEval: 39%, MATH: 28%, RAM: 4.5 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 8, name: 'Qwen2.5 7B — MMLU: 74%, HumanEval: 72%, MATH: 52%, RAM: 4.7 GB (Q4_K_M)' },
+        ],
+      },
     },
     zh: {
-      theme: '对比',
-      title: 'Qwen2.5 vs Llama 3.x vs Mistral 2026：基准测试、显存和如何选择',
-      seoTitle: 'Qwen vs Llama vs Mistral 2026：基准测试 & 显存',
-      intro: 'Qwen2.5（84% MMLU）vs Llama 3.3（82% MMLU）vs Mistral（79%）的对比。HumanEval：Qwen 87%、Llama 88%。对比基准测试、显存需求、编码和多语言支持。',
-      metaDescription: 'Qwen2.5（84% MMLU）vs Llama 3.3（82% MMLU）vs Mistral（79%）。HumanEval：Qwen 87%、Llama 88%。对比基准测试、显存、编码和多语言支持。',
+      theme: 'Best Models',
+      title: 'Qwen与Llama与Mistral对比：应该使用哪个本地LLM模型族？',
+      seoTitle: 'Qwen对比Llama和Mistral：2026性能完全指南',
+      intro: 'Qwen2.5、Meta Llama 3.x和Mistral是2026年本地推理的三个主导的开放权重模型族。Qwen2.5在编码方面领先——72B处87% HumanEval，相对Llama 3.3的88%和Mistral 7B的39%。Qwen2.5也原生支持29种语言。Llama 3.3 70B在英文一般推理中领先（82% MMLU）。Mistral Small 3.1 24B在仅14 GB RAM的情况下提供接近70B的质量——三个族中最佳的质量对RAM比。正确的选择取决于任务类型、语言和可用的VRAM。',
+      metaDescription: 'Qwen2.5编码最强，Llama 3.3英文推理最强，Mistral Small 24B仅需14GB显存。性能基准对比、速度、显存全覆盖。使用PromptQuorum立即测试。',
       publishDate: '2026-04-04',
-      readTime: '10 min read',
-      educationalLevel: 'Beginner to Advanced',
-      primaryTerm: '模型对比',
+      dateModified: '2026-04-07',
+      readTime: '9分钟阅读',
+      educationalLevel: 'Intermediate',
+      primaryTerm: 'Qwen vs Llama vs Mistral',
+      toc: [
+        { label: '关键要点', anchor: 'key-takeaways' },
+        { label: '模型族概述', anchor: 'model-family-overview' },
+        { label: '基准对比', anchor: 'benchmark-comparison' },
+        { label: 'Qwen2.5：优势和劣势', anchor: 'qwen2-5' },
+        { label: 'Llama 3.x：优势和劣势', anchor: 'llama-3' },
+        { label: 'Mistral：优势和劣势', anchor: 'mistral' },
+        { label: '按任务划分，哪个族获胜？', anchor: 'which-family-wins-by-task' },
+        { label: '大小对大小比较', anchor: 'size-for-size-comparison' },
+        { label: '如何开始', anchor: 'how-to-get-started' },
+        { label: '地区背景', anchor: 'regional-context' },
+        { label: '常见问题', anchor: 'faq' },
+        { label: '常见误区', anchor: 'common-mistakes' },
+        { label: '相关阅读', anchor: 'related-reading' },
+        { label: '来源', anchor: 'sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            '**编码**：Qwen2.5在每个大小处获胜——72B处87% HumanEval、32B处79%、7B处72%。',
+            '**一般推理**：Llama 3.3 70B和Qwen2.5 72B几乎相等；Llama 3.x在英文上更强，Qwen在多语言上更强。',
+            '**效率（每GB RAM的质量）**：Mistral Small 3.1 24B在仅14 GB RAM的情况下提供接近70B的质量。',
+            '**英文以外的语言**：Qwen2.5原生支持29种语言；Llama和Mistral主要是英文优化。',
+            '**8 GB RAM的初学者**：Llama 3.2 3B或Mistral 7B是文档最充分且得到社区最支持的选择。',
+          ],
+        },
+        overview: {
+          title: '模型族概述：Qwen、Llama和Mistral',
+          rows: [
+            { '族': 'Qwen2.5', '开发者': 'Alibaba', '可用大小': '0.5B、1.5B、3B、7B、14B、32B、72B', '许可证': 'Apache 2.0（大多数）' },
+            { '族': 'Llama 3.x', '开发者': 'Meta', '可用大小': '1B、3B、8B、70B', '许可证': 'Llama Community（定制）' },
+            { '族': 'Mistral', '开发者': 'Mistral AI', '可用大小': '7B、Small 3.1（24B）、Large（123B）', '许可证': 'Apache 2.0（7B、Small）' },
+          ],
+          columns: ['族', '开发者', '可用大小', '许可证'],
+        },
+        benchmarks: {
+          title: '基准对比：Qwen2.5 vs Llama 3.x vs Mistral',
+          rows: [
+            { '模型': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'MATH': '83%', 'RAM (Q4_K_M)': '43 GB' },
+            { '模型': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'MATH': '77%', 'RAM (Q4_K_M)': '40 GB' },
+            { '模型': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'HumanEval': '74%', 'MATH': '65%', 'RAM (Q4_K_M)': '14 GB' },
+            { '模型': 'Qwen2.5 32B', 'MMLU': '83%', 'HumanEval': '79%', 'MATH': '79%', 'RAM (Q4_K_M)': '20 GB' },
+            { '模型': 'Qwen2.5 14B', 'MMLU': '79%', 'HumanEval': '75%', 'MATH': '70%', 'RAM (Q4_K_M)': '9 GB' },
+            { '模型': 'Llama 3.1 8B', 'MMLU': '73%', 'HumanEval': '72%', 'MATH': '51%', 'RAM (Q4_K_M)': '5.5 GB' },
+            { '模型': 'Mistral 7B v0.3', 'MMLU': '64%', 'HumanEval': '39%', 'MATH': '28%', 'RAM (Q4_K_M)': '4.5 GB' },
+            { '模型': 'Qwen2.5 7B', 'MMLU': '74%', 'HumanEval': '72%', 'MATH': '52%', 'RAM (Q4_K_M)': '4.7 GB' },
+          ],
+          columns: ['模型', 'MMLU', 'HumanEval', 'MATH', 'RAM (Q4_K_M)'],
+        },
+        qwen: {
+          title: 'Qwen2.5：最适合编码、数学和非英文语言',
+          content: [
+            '来自Alibaba的Qwen2.5是用于结构化输出任务的最强模型族。它在所有可比较的大小级别上都领先HumanEval，除了70B（Llama 3.3以1%的优势击败它）。在每个大小处MATH分数都比Llama高6-10个百分点。',
+            '**优势**：编码（Python、JavaScript、SQL）、数学推理、29种语言原生支持、JSON模式、函数调用、[所有大小的128K上下文窗口](/local-llms/local-llm-hardware-guide-2026)。',
+            '**劣势**：英文指导风格可能不如Llama或Mistral自然；一些用户报告英文创意写作流畅性较低。Alibaba源点对某些企业用户提出数据处理问题，尽管开放权重。',
+          ],
+        },
+        llama: {
+          title: 'Llama 3.x：最适合一般英文任务和生态系统支持',
+          content: [
+            'Meta的Llama 3.x族是最广泛支持的开放权重模型系列。存在比任何其他族更多为Llama编写的工具、微调、量化和社区指南。Llama 3.3 70B在一般英文基准上与所有竞争对手相当或更优。',
+            '**优势**：最广泛的生态系统支持（每个工具都支持Llama）、最佳英文创意写作、强指导遵循、3.1/3.2/3.3变体中的128K上下文、社区测试的可靠性。',
+            '**劣势**：基本功能外没有原生多语言支持；Llama 3.2 3B在编码和数学上不及Qwen2.5 3B和Phi-4 Mini，尽管参数数相同。',
+          ],
+        },
+        mistral: {
+          title: 'Mistral：最佳效率和最强的7B级历史',
+          content: [
+            'Mistral AI生产本对比中最参数高效的模型。Mistral Small 3.1在24B处提供接近70B级的基准分数，仅需14 GB RAM——本对比中任何模型的最佳质量对RAM比。',
+            '**优势**：最佳质量对RAM比（Small 3.1）、强函数调用和工具使用、关键模型上干净的Apache 2.0许可、欧洲原产地用于GDPR敏感用例。',
+            '**劣势**：Mistral 7B v0.3现在在基准上被Qwen2.5 7B和Llama 3.1 8B超越；比Qwen或Llama的大小选项少。',
+          ],
+        },
+        byTask: {
+          title: '按任务划分，哪个模型族获胜？',
+          rows: [
+            { '任务': 'Python / JavaScript编码', '获胜者': 'Qwen2.5', '原因': '所有大小级别上最高的HumanEval' },
+            { '任务': '一般Q&A（英文）', '获胜者': 'Llama 3.3 / Qwen2.5（平手）', '原因': '两者在70B处达到82-84% MMLU' },
+            { '任务': '数学推理', '获胜者': 'Qwen2.5', '原因': '72B处83% MATH对Llama 3.3 70B的77%' },
+            { '任务': '非英文语言', '获胜者': 'Qwen2.5', '原因': '29种原生语言；Llama和Mistral是英文优先' },
+            { '任务': '创意写作（英文）', '获胜者': 'Llama 3.x', '原因': '更自然的英文生成风格' },
+            { '任务': '16 GB RAM上的质量', '获胜者': 'Mistral Small 3.1', '原因': '14 GB RAM处接近70B质量' },
+            { '任务': '初学者的第一个模型', '获胜者': 'Llama 3.2 3B', '原因': '文档最充分，社区支持最多' },
+          ],
+          columns: ['任务', '获胜者', '原因'],
+        },
+        sizeBySizeComparison: {
+          title: '大小对大小比较：每个规模上哪个族更好？',
+          content: [
+            '**3B-4B级**：Qwen2.5 3B和[Phi-4 Mini 3.8B](/local-llms/best-beginner-local-llm-models)在编码和数学上超越Llama 3.2 3B。对于一般英文使用，Llama 3.2 3B更可靠。',
+            '**7B-8B级**：Qwen2.5 7B和Llama 3.1 8B都显著超越Mistral 7B v0.3。Qwen2.5 7B在编码上领先；Llama 3.1 8B在英文指导遵循上领先。',
+            '**14B-24B级**：Qwen2.5 14B和Mistral Small 3.1 24B是主要选项。Mistral Small 3.1总体更强，尽管需要更多RAM。Qwen2.5 14B在较低RAM处更好的编码和多语言。',
+            '**70B-72B级**：Llama 3.3 70B和Qwen2.5 72B是2026年最佳本地可运行模型。对于编码和多语言选择Qwen2.5 72B；对于英文优先的一般任务选择Llama 3.3 70B。',
+          ],
+        },
+        gettingStarted: {
+          title: '如何开始每个族',
+          content: ['在macOS、Windows或Linux上安装[Ollama](/local-llms/how-to-install-ollama)（单个命令），在一个步骤中拉取任何模型。'],
+          codeBlock: '# Qwen2.5族\nollama run qwen2.5:7b\nollama run qwen2.5:14b\nollama run qwen2.5:72b\n\n# Llama 3.x族\nollama run llama3.2:3b\nollama run llama3.1:8b\nollama run llama3.3:70b\n\n# Mistral族\nollama run mistral          # 7B\nollama run mistral-small3.1 # 24B',
+          codeLanguage: 'bash',
+        },
+        sources: {
+          title: '来源',
+          items: [
+            '**Qwen2.5技术报告**（Alibaba DAMO Academy，2024）— arXiv:2412.15115 — 所有大小变体编码、数学和多语言任务的基准数据。',
+            '**Llama 3 Model Card**（Meta AI，2024）— ai.meta.com/blog/meta-llama-3 — Llama 3.3 70B规格、评估结果和许可条款。',
+            '**Mistral 7B技术论文**（Mistral AI，2023）— arXiv:2310.06825 — 原始Mistral架构、滑动窗口注意和初始基准数据。',
+            '**Open LLM Leaderboard**（Hugging Face，2026）— huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard — 所有开放模型的实时MMLU、HumanEval和MATH基准排名。',
+          ],
+        },
+        commonMistakes: {
+          title: '选择模型族时的常见误区',
+          items: [
+            '比较不同参数数的模型——Qwen 32B对Llama 70B不是苹果对苹果的测试。',
+            '当工作负载是多语言时忽略多语言基准。',
+            '假设最新模型版本总是最好的——有时较旧的量化具有更好的社区支持。',
+            '忽视许可证要求——Llama模型使用限制700M月活跃用户以上使用的自定义Llama社区许可；大规模部署前验证。',
+            '仅在一个基准上测试——MMLU测量知识，HumanEval测量编码，MATH测量推理。在一个基准上领先的模型在另一个上可能落后。',
+          ],
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[最佳本地LLMs 2026](/local-llms/best-local-llms-2026) — 当前最佳模型的总体排名',
+            '[最佳初学者本地LLM模型](/local-llms/best-beginner-local-llm-models) — 新用户的基础模型',
+            '[如何安装Ollama](/local-llms/how-to-install-ollama) — 任何模型的入门指南',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — 理解模型格式',
+            '[最佳本地LLMs用于编码](/local-llms/best-local-llms-for-coding) — 编码优化的模型对比',
+            '[多语言本地LLMs](/local-llms/multilingual-local-llms) — 非英文模型支持',
+          ],
+        },
+        regionalContext: {
+          title: '地区背景：欧盟/GDPR、日本和中国',
+          content: [
+            '**欧盟/GDPR**：Mistral模型在欧盟司法管辖区的法国生产，给予它满足GDPR第5条要求的清晰数据来源跟踪。Meta Llama模型在他们的模型卡中披露训练数据血统。Qwen2.5由Alibaba（中国源）生产，某些欧盟数据保护当局标记为在GDPR第V章下进行跨境转移审查。对于受管制的欧盟工业，Mistral或带有现场部署的Llama是风险最低的选择。',
+            '**日本（METI AI治理）**：METI 2024 AI治理指南鼓励组织记录模型来源和企业部署的性能基准。具有已发布技术报告的模型（Qwen、Llama、Mistral都有arXiv论文）满足此文档要求。Qwen的本地日文标记化（其29种支持语言之一）使其成为日文NLP任务的首选。',
+            '**中国（CAC临时措施）**：中国网络空间管理局2023年《生成式AI服务临时措施》要求为向中国用户提供的AI服务注册。完全在本地运行的模型（Qwen、Llama、Mistral通过Ollama）超出公共面向提供者定义范围，不需要CAC注册。Qwen2.5的中文语言性能在三个族中最佳。',
+          ],
+        },
+        faq: {
+          title: '常见问题',
+          faqs: [
+            { q: '编码方面哪个最好：Qwen、Llama还是Mistral？', a: 'Qwen2.5在所有大小处领先编码基准。Qwen2.5 72B得分87% HumanEval；Llama 3.3 70B得分88%；Mistral 7B v0.3得分39%。对于7B级，Qwen2.5 7B（72% HumanEval）显著超越Mistral 7B（39%）并与Llama 3.1 8B（72%）相当。' },
+            { q: '哪个本地LLM支持最多语言？', a: 'Qwen2.5原生支持29种语言，包括阿拉伯语、日语、韩语、中文和所有主要欧洲语言。Llama 3.2官方支持8种语言。Mistral模型主要关注英语和主要欧洲语言。' },
+            { q: '8 GB RAM下应选择哪个模型？', a: '有8 GB RAM时，对一般任务使用Llama 3.2 3B（Q4，约2 GB）或编码使用Qwen2.5 7B（Q4，约4.7 GB）。两者在8 GB RAM的CPU上以15-25令牌/秒运行。安装方式：ollama pull llama3.2:3b 或 ollama pull qwen2.5:7b。' },
+            { q: 'Qwen2.5在70B规模下是否优于Llama 3.3？', a: '总体上几乎相等。Qwen2.5 72B在数学（83%对77%）和多语言任务上领先。Llama 3.3 70B在HumanEval（88%对87%）上领先。大多数基准上差异在1-6%之内。编码和多语言选择Qwen2.5；英文优先的一般任务选择Llama 3.3。' },
+            { q: 'VRAM有限时哪个本地LLM最高效？', a: 'Mistral Small 3.1 24B最高效：79% MMLU和74% HumanEval仅需14 GB RAM——以约35%的VRAM成本接近70B级质量。' },
+            { q: 'Qwen2.5能否替代编码任务的GPT-4？', a: '对于许多标准编码任务（Python、JavaScript、SQL生成），Qwen2.5 72B（87% HumanEval）在标准基准上以5-10%的差距执行GPT-4o。对于复杂的多文件重构，云模型仍保持优势。' },
+            { q: '2026年Mistral 7B是否仍值得使用？', a: '对于仅有4-5 GB VRAM的系统，Mistral 7B仍是可用的选项。但是，Qwen2.5 7B和Llama 3.1 8B在需要类似VRAM的情况下在所有主要基准上都超越Mistral 7B v0.3。Mistral 7B今天的主要优势是其长期建立的社区支持和工具集成。' },
+            { q: 'Llama Community许可证限制是什么？', a: 'Meta的Llama Community许可证对700M月活跃用户以下的商用免费。超过该阈值，需要与Meta的单独商用协议。对大多数用例，此限制不是问题。' },
+            { q: '能否完全离线运行这些模型？', a: '是的。所有三个族（Qwen、Llama、Mistral）在一次性模型下载后通过Ollama或LM Studio完全离线运行。不需API密钥、遥测或推理的互联网连接。' },
+            { q: '哪个模型族最容易入门？', a: 'Llama 3.2 3B拥有最大的社区和大多数初学者教程。使用以下命令运行：ollama run llama3.2:3b（需要8 GB RAM，无GPU）。所有主要本地LLM工具（Ollama、LM Studio、OpenWebUI）默认支持Llama模型。' },
+          ],
+        },
+      },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Qwen2.5 vs Llama 3.x vs Mistral 2026：基准测试、显存和如何选择',
-        'description': 'Qwen2.5（84% MMLU）vs Llama 3.3（82% MMLU）vs Mistral（79%）。HumanEval：Qwen 87%、Llama 88%。对比基准测试、显存、编码和多语言支持。',
+        'headline': 'Qwen vs Llama vs Mistral 2026：最佳本地LLM？',
+        'description': 'Qwen、Llama 3.2和Mistral用于本地使用的详细对比。速度、质量、VRAM消费和与PromptQuorum的并排测试。',
         'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral?lang=zh',
         'inLanguage': 'zh',
         'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+        'dateModified': '2026-04-07',
+        'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
+        'isPartOf': {
+          '@type': 'CreativeWork',
+          'name': 'Qwen vs Llama vs Mistral',
+          'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral'
+        },
+        'proficiencyLevel': 'Intermediate',
+        'keywords': ['Qwen vs Llama', 'Qwen vs Mistral', '最佳本地LLM 2026', '本地LLM对比', 'Llama 3.2 vs Qwen'],
+        'about': [
+          { '@type': 'SoftwareApplication', 'name': 'Qwen2.5', 'description': 'Alibaba开放权重模型族，具有29语言支持和领先的编码基准。' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.x', 'description': 'Meta开放权重模型族，具有最广泛的生态系统支持。' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral', 'description': '法国AI公司的模型族，以参数效率著称。' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', 'h2', '.key-takeaways'] },
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Qwen 2.5' },
+          { '@type': 'SoftwareApplication', 'name': 'Llama 3.2' },
+          { '@type': 'SoftwareApplication', 'name': 'Mistral' },
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'PromptQuorum' }
+        ]
       },
-      sections: {},
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: '编码方面哪个最好：Qwen、Llama还是Mistral？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5在所有大小处领先编码基准。Qwen2.5 72B得分87% HumanEval；Llama 3.3 70B得分88%；Mistral 7B v0.3得分39%。对于7B级，Qwen2.5 7B（72% HumanEval）显著超越Mistral 7B（39%）并与Llama 3.1 8B（72%）相当。' } },
+          { '@type': 'Question', name: '哪个本地LLM支持最多语言？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5原生支持29种语言，包括阿拉伯语、日语、韩语、中文和所有主要欧洲语言。Llama 3.2官方支持8种语言。Mistral模型主要关注英语和主要欧洲语言。' } },
+          { '@type': 'Question', name: '8 GB RAM下应选择哪个模型？', acceptedAnswer: { '@type': 'Answer', text: '有8 GB RAM时，对一般任务使用Llama 3.2 3B（Q4，约2 GB）或编码使用Qwen2.5 7B（Q4，约4.7 GB）。两者在8 GB RAM的CPU上以15-25令牌/秒运行。安装方式：ollama pull llama3.2:3b 或 ollama pull qwen2.5:7b。' } },
+          { '@type': 'Question', name: 'Qwen2.5在70B规模下是否优于Llama 3.3？', acceptedAnswer: { '@type': 'Answer', text: '总体上几乎相等。Qwen2.5 72B在数学（83%对77%）和多语言任务上领先。Llama 3.3 70B在HumanEval（88%对87%）上领先。大多数基准上差异在1-6%之内。编码和多语言选择Qwen2.5；英文优先的一般任务选择Llama 3.3。' } },
+          { '@type': 'Question', name: 'VRAM有限时哪个本地LLM最高效？', acceptedAnswer: { '@type': 'Answer', text: 'Mistral Small 3.1 24B最高效：79% MMLU和74% HumanEval仅需14 GB RAM——以约35%的VRAM成本接近70B级质量。' } },
+          { '@type': 'Question', name: 'Qwen2.5能否替代编码任务的GPT-4？', acceptedAnswer: { '@type': 'Answer', text: '对于许多标准编码任务（Python、JavaScript、SQL生成），Qwen2.5 72B（87% HumanEval）在标准基准上以5-10%的差距执行GPT-4o。对于复杂的多文件重构，云模型仍保持优势。' } },
+          { '@type': 'Question', name: '2026年Mistral 7B是否仍值得使用？', acceptedAnswer: { '@type': 'Answer', text: '对于仅有4-5 GB VRAM的系统，Mistral 7B仍是可用的选项。但是，Qwen2.5 7B和Llama 3.1 8B在需要类似VRAM的情况下在所有主要基准上都超越Mistral 7B v0.3。Mistral 7B今天的主要优势是其长期建立的社区支持和工具集成。' } },
+          { '@type': 'Question', name: 'Llama Community许可证限制是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Meta的Llama Community许可证对700M月活跃用户以下的商用免费。超过该阈值，需要与Meta的单独商用协议。对大多数用例，此限制不是问题。' } },
+          { '@type': 'Question', name: '能否完全离线运行这些模型？', acceptedAnswer: { '@type': 'Answer', text: '是的。所有三个族（Qwen、Llama、Mistral）在一次性模型下载后通过Ollama或LM Studio完全离线运行。不需API密钥、遥测或推理的互联网连接。' } },
+          { '@type': 'Question', name: '哪个模型族最容易入门？', acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.2 3B拥有最大的社区和大多数初学者教程。使用以下命令运行：ollama run llama3.2:3b（需要8 GB RAM，无GPU）。所有主要本地LLM工具（Ollama、LM Studio、OpenWebUI）默认支持Llama模型。' } }
+        ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': '如何在本地LLM使用中选择Qwen、Llama和Mistral',
+        'description': '根据任务、语言和硬件选择正确的开放权重模型族的分步指南。',
+        'step': [
+          { '@type': 'HowToStep', 'name': '定义主要任务', 'text': '确定您的主要用例是编码、多语言文本、英文一般Q&A还是创意写作。Qwen2.5在编码和多语言上获胜；Llama 3.x在英文一般任务上获胜。' },
+          { '@type': 'HowToStep', 'name': '检查可用VRAM', 'text': '衡量您的GPU VRAM或系统RAM。8 GB处理7B模型；16 GB处理13-14B模型；70B模型在Q4量化处需要40+ GB。' },
+          { '@type': 'HowToStep', 'name': '安装Ollama并拉取主要候选', 'text': '安装Ollama（macOS/Linux/Windows上的单个命令）。拉取所选模型：ollama pull qwen2.5:7b（编码）或ollama pull llama3.2:3b（一般）。运行：ollama run <model>。' },
+          { '@type': 'HowToStep', 'name': '在实际任务上测试', 'text': '从真实工作负载运行5-10个代表性的提示。比较输出质量、速度和指导遵循。不要仅依赖基准分数。' },
+          { '@type': 'HowToStep', 'name': '验证用例的许可证', 'text': '确认许可证是否合适：Qwen2.5和Mistral 7B/Small使用Apache 2.0（宽松）。Llama模型使用Llama Community许可证（700M MAU以下免费，需要上方协议）。' }
+        ]
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Qwen2.5 vs Llama 3.x vs Mistral：基准对比 2026',
+        numberOfItems: 8,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Qwen2.5 72B — MMLU: 84%, HumanEval: 87%, MATH: 83%, RAM: 43 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 2, name: 'Llama 3.3 70B — MMLU: 82%, HumanEval: 88%, MATH: 77%, RAM: 40 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 3, name: 'Mistral Small 3.1 24B — MMLU: 79%, HumanEval: 74%, MATH: 65%, RAM: 14 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 4, name: 'Qwen2.5 32B — MMLU: 83%, HumanEval: 79%, MATH: 79%, RAM: 20 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 5, name: 'Qwen2.5 14B — MMLU: 79%, HumanEval: 75%, MATH: 70%, RAM: 9 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 6, name: 'Llama 3.1 8B — MMLU: 73%, HumanEval: 72%, MATH: 51%, RAM: 5.5 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 7, name: 'Mistral 7B v0.3 — MMLU: 64%, HumanEval: 39%, MATH: 28%, RAM: 4.5 GB (Q4_K_M)' },
+          { '@type': 'ListItem', position: 8, name: 'Qwen2.5 7B — MMLU: 74%, HumanEval: 72%, MATH: 52%, RAM: 4.7 GB (Q4_K_M)' },
+        ],
+      },
     },
   },
 
@@ -21823,55 +26018,722 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     },
     de: {
       theme: 'Tools & Interfaces',
-      seoTitle: 'LM Studio erweiterte Funktionen 2026: GPU, API, Finetuning',
-      metaDescription: 'LM Studio erweiterte Funktionen: GPU-Optimierung, Kontextfenster, API, LoRA-Finetuning und Batch-Inferenz. Entwicklerleitfaden. Kostenlos — April 2026.',
+      title: 'LM Studio erweiterte Funktionen 2026: GPU-Einstellungen, LoRA und Fine-Tuning',
+      seoTitle: 'LM Studio 2026: GPU, Kontextfenster und API konfigurieren',
+      intro: '**Aktivieren Sie die lokale API (localhost:1234), konfigurieren Sie GPU-Speicher für Ihre Hardware, erweitern Sie das Kontextfenster bei Bedarf. Überspringen Sie LoRA—verwenden Sie stattdessen Text-Generation-WebUI.** LM Studio\'s erweiterte Einstellungen ermöglichen es Ihnen, für Produktions-Workloads zu optimieren, VRAM für andere Apps freizugeben und über REST-Endpunkte mit externen Tools zu integrieren.',
+      metaDescription: 'Konfigurieren Sie GPU-Speicher (10–100% VRAM), erweitern Sie den Kontext bis 32k, nutzen Sie Q4_K_M für 40% weniger VRAM. Schritt-für-Schritt-Anleitung 2026.',
       publishDate: '2026-04-04',
-      readTime: '9 min read',
+      readTime: '10 Min. Lesezeit',
       educationalLevel: 'Advanced',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-advanced-features?lang=de',
-        'inLanguage': 'de',
-        'headline': 'LM Studio erweiterte Funktionen 2026: GPU, API, Finetuning',
-        'description': 'LM Studio erweiterte Funktionen: GPU-Optimierung, Kontextfenster, API, LoRA-Finetuning und Batch-Inferenz. Entwicklerleitfaden. Kostenlos — April 2026.',
-        'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
-      },
+      primaryTerm: 'LM Studio erweiterte Funktionen',
+      toc: [
+        { label: 'Zusammenfassung', anchor: 'zusammenfassung' },
+        { label: 'Was sind erweiterte Funktionen?', anchor: 'was-sind-erweitert' },
+        { label: 'Was können Sie tun?', anchor: 'was-koennen-sie' },
+        { label: 'Schnelle Übersicht', anchor: 'schnelle-uebersicht' },
+        { label: 'Schnelle Entscheidungen', anchor: 'schnelle-entscheidungen' },
+        { label: 'Welche Funktionen sind wichtig?', anchor: 'wichtige-funktionen' },
+        { label: 'Wann sollten Sie erweiterte Funktionen NICHT nutzen?', anchor: 'wann-nicht-nutzen' },
+        { label: 'GPU-Speicherkonfiguration', anchor: 'gpu-speicher' },
+        { label: 'Kontextfenstergröße anpassen', anchor: 'kontext-fenster' },
+        { label: 'LM Studio lokale API (Beta)', anchor: 'lokale-api' },
+        { label: 'LoRA und Fine-Tuning', anchor: 'lora-finetuning' },
+        { label: 'Batch-Inferenz', anchor: 'batch-inferenz' },
+        { label: 'Performance-Benchmarking', anchor: 'benchmarking' },
+        { label: 'Häufige Fehler', anchor: 'haeufige-fehler' },
+        { label: 'Häufig gestellte Fragen', anchor: 'faq' },
+        { label: 'Weiterführende Ressourcen', anchor: 'ressourcen' },
+        { label: 'Quellen', anchor: 'quellen' },
+      ],
       sections: {
-        tldr: { isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
-        whatIsSmall: { title: 'Was ist ein „kleines" lokales LLM und wann sollten Sie eines verwenden?', content: ['Ein kleines lokales LLM ist typischerweise definiert als ein Modell mit weniger als 4 Milliarden Parametern. Bei Q4_K_M-Quantisierung benötigen diese Modelle 1,5–3 GB RAM — gut innerhalb der Einschränkungen von Einstiegs-Laptops mit 4–8 GB Gesamtspeicher.', 'Seit April 2026 sind kleine Modelle geeignet für: schnelle Zusammenfassung, einfache F&A, Erklärung von Code-Snippets, Übersetzung kurzer Texte und Klassifizierungsaufgaben. Sie sind nicht geeignet für mehrstufiges Reasoning, komplexe Code-Generierung oder das Verfassen langer kohärenter Dokumente.', 'Die Qualitätslücke zwischen einem 3B- und 7B-Modell ist erheblich — ungefähr der Lücke zwischen GPT-3.5 Mini und GPT-3.5 Turbo entsprechend. Für Benutzer mit 8 GB RAM ist ein 7B-Modell bei Q4_K_M fast immer die bessere Wahl. Siehe [Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) für 7B-Empfehlungen.'] },
-        phi4mini: { title: 'Phi-4 Mini 3.8B — Beste Reasoning-Leistung in der Sub-4B-Klasse', content: ['Microsoft Phi-4 Mini erreicht 68% bei MMLU und 70% bei HumanEval — Werte, die viele vor 2025 veröffentlichte 7B-Modelle übertreffen. Dies ist möglich, weil Phi-4 Mini auf einem kuratierten synthetischen Datensatz trainiert wurde, der auf Reasoning und Problemlösung fokussiert ist.', 'Seit April 2026 ist Phi-4 Mini die empfohlene Wahl für Benutzer, die hauptsächlich Reasoning oder Code-Unterstützung auf Hardware mit 4–6 GB RAM benötigen.'], rows: [{ 'Spec': 'MMLU', 'Value': '68%' }, { 'Spec': 'HumanEval', 'Value': '70%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '30–50 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run phi4-mini' }], columns: ['Spec', 'Value'] },
-        gemma2: { title: 'Gemma 2 2B — Schnellstes kleines lokales LLM auf CPU', content: ['Google Gemma 2 2B generiert 40–60 Token/Sek auf einer modernen Laptop-CPU — das schnellste Modell in dieser Qualitätsklasse. Sein 1,7-GB-RAM-Footprint lässt viel Speicher für Betriebssystem und andere Anwendungen auf einer 4-GB-Maschine.', 'Die Qualität ist niedriger als Phi-4 Mini bei Reasoning. Das 8K-Kontextfenster ist eine praktische Einschränkung für längere Dokumente. Gemma 2 2B ist die richtige Wahl, wenn Antwortgeschwindigkeit wichtiger ist als Ausgabetiefe.'], rows: [{ 'Spec': 'MMLU', 'Value': '52%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~1,7 GB' }, { 'Spec': 'Kontext', 'Value': '8K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '40–60 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run gemma2:2b' }], columns: ['Spec', 'Value'] },
-        qwen25_3b: { title: 'Qwen2.5 3B — Bestes kleines Modell für Codierungsaufgaben', content: ['Qwen2.5 3B erreicht 65% bei HumanEval — 5 Prozentpunkte über Llama 3.2 3B — und ist beste Wahl für Codierungsaufgaben im 3B-Format. Es umfasst JSON-Modus und Funktionsaufruf-Unterstützung und verarbeitet nativ 29 Sprachen.', 'Für nicht-Codierungs-Aufgaben im Englischen erzeugen Llama 3.2 3B und Phi-4 Mini natürlichere Prosa. Wählen Sie Qwen2.5 3B speziell für Codierung oder mehrsprachige Aufgaben.'], rows: [{ 'Spec': 'MMLU', 'Value': '62%' }, { 'Spec': 'HumanEval', 'Value': '65%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '25–40 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run qwen2.5:3b' }], columns: ['Spec', 'Value'] },
-        llama32_3b: { title: 'Llama 3.2 3B — Bestes Universal-Kleinmodell', content: ['Meta Llama 3.2 3B ist das am weitesten dokumentierte und von der Community unterstützte 3B-Modell. Es erreicht 58% bei MMLU und 60% bei HumanEval, aber hat breiteste Werkzeugunterstützung, die meisten Fine-Tunes und größte Sammlung von Community-Guides.', 'Das 128K-Kontextfenster eignet sich für Zusammenfassung von Dokumenten mittlerer Länge. Für ein erstes kleines Modell bleibt Llama 3.2 3B die sicherste Wahl aufgrund vorhersehbaren Verhaltens und umfangreicher Dokumentation.'], rows: [{ 'Spec': 'MMLU', 'Value': '58%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '25–45 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run llama3.2:3b' }], columns: ['Spec', 'Value'] },
-        llama32_1b: { title: 'Llama 3.2 1B — Absolute Mindestanforderung für nützliche Ausgabe', content: 'Llama 3.2 1B benötigt nur 1,3 GB RAM und generiert 60–90 tok/sek auf CPU. Die Ausgabequalität ist marginal: es bewältigt sehr einfache Klassifizierung, kämpft aber mit kohärenten mehrsätzigen Antworten. Seit April 2026 verwenden Sie Llama 3.2 1B nur, wenn RAM die bindende Einschränkung ist oder zum Testen von Tool-Integrationen.' },
-        comparisonTable: { title: 'Vollständiger Vergleich: Beste kleine lokale LLMs unter 4B Parametern', rows: [{ 'Modell': 'Phi-4 Mini 3.8B', 'MMLU': '68%', 'HumanEval': '70%', 'RAM': '2,5 GB', 'Kontext': '128K', 'Beste für': 'Reasoning, Codierung' }, { 'Modell': 'Qwen2.5 3B', 'MMLU': '62%', 'HumanEval': '65%', 'RAM': '2 GB', 'Kontext': '128K', 'Beste für': 'Codierung, mehrsprachig' }, { 'Modell': 'Llama 3.2 3B', 'MMLU': '58%', 'HumanEval': '60%', 'RAM': '2,5 GB', 'Kontext': '128K', 'Beste für': 'Allgemein, erstes Modell' }, { 'Modell': 'Gemma 2 2B', 'MMLU': '52%', 'HumanEval': '38%', 'RAM': '1,7 GB', 'Kontext': '8K', 'Beste für': 'Geschwindigkeit, niedriges RAM' }, { 'Modell': 'Llama 3.2 1B', 'MMLU': '32%', 'HumanEval': '28%', 'RAM': '1,3 GB', 'Kontext': '128K', 'Beste für': 'Minimales RAM' }], columns: ['Modell', 'MMLU', 'HumanEval', 'RAM', 'Kontext', 'Beste für'] },
-        regionalContext: { title: 'Kleine lokale LLMs nach Region', content: ['**EU / DSGVO:** Für EU-Profis auf begrenzter Hardware — Feldarbeit, air-gapped Umgebungen, ältere Enterprise-Laptops — bieten kleine lokale Modelle DSGVO-konforme Inferenz ohne Datengress. Ein Phi-4 Mini 3.8B auf Standard-Corporate-Laptop (8 GB RAM) behält alle Texte auf Gerät unter DSGVO-Artikel 5. Für BSI-Compliance: Phi-4 Mini (Microsoft, MIT-Lizenz) und Llama 3.2 3B (Meta, Llama Community-Lizenz) bieten versionierte Modell-Identifikatoren via Ollama-Tags. Mistral bietet derzeit kein Sub-4B-Modell. Für EU-Organisationen mit EU-Präferenz sind Optionen begrenzt, bis Mistral Sub-4B freigibt.', '**Japan (METI):** Für japanischsprachige Aufgaben ist Qwen2.5 3B das einzige Modell mit nativer japanischer Tokenisierung. Llama 3.2 3B verarbeitet Japanisch mit niedrigerer Token-Effizienz. Für japanische Zusammenfassung oder Übersetzung: `ollama run qwen2.5:3b`. Der Geschwindigkeitsvorteil ist relevant für japanischen Enterprise-Einsatz: 25–40 tok/sek auf CPU bietet angemessene Echtzeit-Antwort auf Standard-Office-Hardware.', '**China:** Qwen2.5 3B (Alibaba, Apache 2.0) ist natürliche Wahl für chinesischsprachige Bereitstellung. Native chinesische Tokenisierung verarbeitet Mandarin-Text 30–40% effizienter als Llama. Für IoT und Edge unter Chinas Datensicherheitsgesetz: `ollama run qwen2.5:3b` läuft auf jedem Linux-Gerät mit 4 GB RAM ohne externe API-Aufrufe.'] },
-        commonMistakes: { title: 'Häufige Fehler beim Ausführen kleiner lokaler LLMs', items: ['**Verwendung von Q8_0 statt Q4_K_M:** Q8_0 benötigt fast doppelt so viel RAM mit minimaler Qualitätsverbesserung. Ein Llama 3.2 3B mit Q8_0 benötigt ~3,8 GB RAM vs ~2,5 GB für Q4_K_M. Auf 4 GB Maschinen kann Q8_0 Swap-Nutzung und 3–5× langsamere Inferenz auslösen. Verwenden Sie immer Q4_K_M für Sub-4B-Modelle.', '**Ausführung eines Basis-Modells statt Instruct-Variante:** Basis-Modelle (z. B. `llama3.2:3b-text`) folgen keine Anweisungen. Wenn Sie ein Basis-Modell „Was ist 2+2?" fragen, kann es den Satz als Quiz vervollständigen statt „4" zu antworten. Verwenden Sie immer: `llama3.2:3b` (Ollama greift standardmäßig zu Instruct).', '**Erwartung von 7B-Qualität aus 3B-Modell:** Ein 3B-Modell mit 68% MMLU (Phi-4 Mini) funktioniert ähnlich wie GPT-3.5 Mini aus 2023. Komplexe Reasoning, lange Texte und differenzierter Code haben niedrigere Qualität. Für bessere Qualität: aktualisieren Sie auf 7B (RAM-Unterschied: ~2 GB mehr).'] },
-        relatedReading: { title: 'Weiterführende Lektüre', items: ['[Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) — 7B-Empfehlungen wenn 8 GB RAM verfügbar', '[Ihr erstes lokales LLM ausführen](/local-llms/run-first-local-llm) — Schritt-für-Schritt-Anleitung mit Ollama unter 10 Minuten', '[Lokales LLM auf Laptop](/local-llms/local-llm-on-laptop) — Wärmeverwaltung und Batterielebensdauer auf begrenzter Hardware', '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M Standard ist und Q3_K_M für extreme RAM-Einschränkungen', '[Beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) — Codierungs-Modelle bei 7B+ wenn Qwen2.5 3B nicht ausreicht', '[Lokales LLM-Setup beheben](/local-llms/troubleshooting-local-llm-setup) — OOM-Fehler, langsame Inferenz und Ladefehler auf RAM-armen Maschinen'] },
-        faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das kleinste lokale LLM mit nützlicher Ausgabe?', a: 'Seit April 2026 ist 3B bei Q4_K_M praktisches Minimum. Modelle unter 2B (Llama 3.2 1B, Gemma 2 2B) erzeugen kohärente einzelne Sätze, kämpfen aber mit mehrstufigen Anweisungen und Reasoning. Für Zusammenfassung und F&A ist Gemma 2 2B brauchbar. Für komplexere Aufgaben: beginnen Sie mit 3B.' }, { q: 'Kann ein 3B-Modell auf einem Telefon laufen?', a: 'Ja — Llama 3.2 1B und 3B sind für mobile Bereitstellung konzipiert. Meta bietet optimierte Builds für iOS und Android. Inferenz auf modernem Telefon erzeugt 15–30 tok/sek für 1B. LM Studio und Ollama laufen nicht auf iOS/Android — mobil erfordert separate Frameworks.' }, { q: 'Sind kleine Modelle für Zusammenfassung geeignet?', a: 'Ja — Zusammenfassung ist stärkster Anwendungsfall für kleine Modelle. Gemma 2 2B und Llama 3.2 3B produzieren zuverlässig genaue Zusammenfassungen von Texten bis zu ~4.000 Wörtern. Für längere Dokumente verwenden Sie Modell mit großem Kontext wie Phi-4 Mini oder Llama 3.2 3B (beide 128K).' }, { q: 'Wie viel schneller ist 2B als 7B auf gleicher Hardware?', a: 'Ungefähr 2–3× schneller auf CPU. Gemma 2 2B generiert 40–60 tok/sek vs 10–20 tok/sek für Mistral 7B. Auf GPU verengt sich Vorteil, da GPU-Durchsatz weniger durch Modellgröße begrenzt ist. Unterschied ist auf reinen CPU-Maschinen deutlichst.' }, { q: 'Unterstützen kleine Modelle Funktionsaufrufe?', a: 'Einige tun dies. Qwen2.5 3B unterstützt Funktionsaufrufe und JSON. Llama 3.2 3B hat grundlegende Werkzeugunterstützung. Gemma 2 2B unterstützt keine Funktionsaufrufe. Überprüfen Sie Modelldokumentation vor Pipeline-Aufbau.' }, { q: 'Welches kleine Modell ist beste für nicht-englische Sprachen?', a: 'Qwen2.5 3B unterstützt nativ 29 Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch). Gemma 2 2B und Phi-4 Mini sind hauptsächlich auf Englisch optimiert. Für nicht-englische Aufgaben bei kleinen Modellen ist Qwen2.5 3B klare Wahl.' }, { q: 'Unterschied zwischen Phi-4 Mini und Llama 3.2 3B?', a: 'Phi-4 Mini übertrifft bei Reasoning, Mathematik, Codierung (68% vs 58% MMLU, 70% vs 60% HumanEval) bei fast identischem RAM (2,5 GB). Für Alltags-Aufgaben ist Lücke spürbar aber nicht dramatisch. Llama 3.2 3B hat breitere Support. Wählen Sie Phi-4 Mini für Reasoning; Llama für Chat.' }, { q: 'Kann ich zwei kleine Modelle gleichzeitig laufen lassen?', a: 'Ja, wenn RAM zulässt. Zwei 3B-Modelle bei Q4_K_M verwenden ~5 GB kombiniert — auf 8 GB Maschine mit schlankem OS möglich. Ollama lädt standardmäßig ein Modell pro Prozess. Laufen Sie zwei Ollama-Instanzen auf verschiedenen Ports (OLLAMA_HOST=:11434 und :11435) parallel.' }, { q: 'Funktionieren kleine Modelle für RAG?', a: 'Ja für einfaches RAG. Llama 3.2 3B und Phi-4 Mini beantworten Fragen über abgerufene Dokumentchunks zuverlässig. Für RAG über große Wissensdatenbanken mit Multi-Hop-Reasoning sind 7B+-Modelle konsistenter. GPT4All LocalDocs nutzt 3B für Dokument-Q&A.' }, { q: 'Ist Phi-4 Mini besser als Llama 3.2 3B für Codierung?', a: 'Ja. Phi-4 Mini erreicht 70% auf HumanEval vs 60% für Llama 3.2 3B — aussagekräftige 10-Punkte-Lücke. Für Code-Hilfe auf 4–6 GB RAM ist Phi-4 Mini empfohlen. Für mehrsprachige Codierung (nicht-Python) ist Qwen2.5 3B mit 65% HumanEval wettbewerbsfähig und unterstützt Funktionsaufrufe.' }] },
-        sources: { title: 'Quellen', items: ['Hugging Face Open LLM Leaderboard — open-llm-leaderboard.hf.space (MMLU und HumanEval Werte)', 'Microsoft Phi-4 Technical Report — microsoft.com/en-us/research/publication/phi-4-technical-report/', 'Meta Llama 3.2 Model Card — huggingface.co/meta-llama/Llama-3.2-3B-Instruct', 'Google Gemma 2 Technical Report — storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf'] },
+        zusammenfassung: {
+          isTldr: true,
+          items: [
+            'LM Studio hat erweiterte Einstellungen im Register Einstellungen → Server (GPU-Optionen, Kontextlänge).',
+            'GPU-Speicher kann manuell von 10 % bis 100 % des VRAM eingestellt werden – niedrigere Werte geben GPU für andere Anwendungen frei.',
+            'Das Kontextfenster (Anzahl der Token, die das Modell verarbeiten kann) kann bis zu den Modellgrenzen erweitert werden, verbraucht aber mehr VRAM.',
+            'Lokale API (Beta) stellt OpenAI-kompatible Endpunkte unter localhost:1234 zur Verfügung.',
+            'Seit April 2026 ist LoRA Fine-Tuning nicht in LM Studio integriert; verwenden Sie Text-Generation-WebUI oder Trainings-Skripte.',
+          ],
+        },
+        schnelleFakten: {
+          title: 'Schnelle Fakten: LM Studio Performance-Metriken',
+          items: [
+            '**GPU-Speicher:** Einstellbar von 10 % bis 100 % des VRAM; 50 %-Zuweisung halbiert ungefähr den VRAM-Verbrauch',
+            '**Kontextfenster:** Erweiterbar vom Modellstandard auf 4k, 8k, 16k oder 32k Token; doppelter Kontext = doppelter VRAM',
+            '**Quantisierungsauswirkung:** Q4_K_M nutzt ~40 % weniger VRAM als FP16 bei <1 % Qualitätsverlust',
+            '**API-Latenz:** LM Studio lokale API getestet bei 120–180 ms für Llama 3.2 3B, 280–420 ms für 7B, 680–950 ms für 13B auf RTX 3080',
+            '**Batch-Verarbeitung:** Via API-Schleife, erreicht 8–12 Token/Sek. Durchsatz pro gleichzeitiger Anfrage',
+            '**GPU-Zuweisung:** Unterschreitung von 50 % kann die Geschwindigkeit um 5–10× reduzieren (CPU-Fallback-Overhead)',
+          ],
+        },
+        wasAreAdvanced: {
+          title: 'Was sind LM Studio erweiterte Funktionen?',
+          content: 'LM Studio erweiterte Funktionen sind Konfigurationsoptionen und Tools, mit denen Sie die Modellleistung optimieren, Ressourcen verwalten und lokale LLM-Workflows über die Standard-Chat-Schnittstelle hinaus anpassen können. Diese Funktionen entsperren Funktionen auf Entwickler-Ebene, einschließlich GPU-Speicherverwaltung, Kontextfensteroptimierung, OpenAI-kompatible APIs und Integration mit Fine-Tuning-Pipelines.',
+        },
+        wasKoennen: {
+          title: 'Was können Sie mit LM Studio erweiterten Funktionen tatsächlich tun?',
+          items: [
+            '**Inferenzgeschwindigkeit verbessern** – Passen Sie die GPU-Speicherzuweisung, Quantisierungseinstellungen und Batch-Verarbeitung an, um schnellere Token-Generierung und niedrigere Latenz zu erreichen.',
+            '**Multi-Modell-Workflows aktivieren** – Laden Sie mehrere Modelle gleichzeitig, wechseln Sie zwischen Modellen unterwegs und leiten Sie verschiedene Aufgaben an verschiedene Modelle weiter.',
+            '**Speichernutzung optimieren** – Kontrollieren Sie die VRAM-Zuweisung pro Modell, erweitern oder beschränken Sie die Kontextlänge und verwalten Sie Systemressourcen für Multitasking.',
+            '**Produktions-APIs erstellen** – Stellen Sie lokale Modelle über OpenAI-kompatible REST-Endpunkte zur Verfügung für nahtlose Integration mit bestehenden Anwendungen.',
+            '**Modelle lokal fine-tunen** – Nutzen Sie Batch-Inferenz und API-Modi zur Datenvorbereitung und zum Ausführen von Trainings-Schleifen ohne Upload zu Cloud-Services.',
+          ],
+        },
+        schnelleUebersicht: {
+          title: 'Schnelle Übersicht',
+          content: 'Erweiterte Funktionen verbessern Leistung und Kontrolle:',
+          items: [
+            '**Wichtigste Bereiche**: Speicheroptimierung, Batching, Quantisierung, Kontextlänge, Modellverwaltung',
+            '**Geeignet für**: fortgeschrittene Benutzer, Entwickler, Produktionsbereitstellungen',
+            '**Konkrete Beispiele**:',
+          ],
+          numberedItems: [
+            'Batch-Größe erhöhen → höherer Durchsatz (mehr Token/Sek.)',
+            'Quantisierungsauswahl → niedrigerer VRAM-Verbrauch (Q4_K_M nutzt ~40 % weniger VRAM als FP16)',
+            'Kontextlänge erweitern → besseres Reasoning bei langen Dokumenten (aber 2× Kontext = 2× VRAM)',
+            'GPU-Zuweisungsschieber → VRAM für andere Anwendungen freigeben (50 % GPU = 50 % VRAM genutzt)',
+          ],
+        },
+        schnelleEntscheidungen: {
+          title: 'Schnelle Entscheidungen: Welche Funktionen sollten Sie nutzen?',
+          items: [
+            '✅ **Nutzen Sie GPU-Speicher-Konfiguration wenn:**\n- Sie VRAM für andere Apps freigeben möchten\n- Verschiedene Einstellungen benchmarken\n→ Empfohlen: Beginnen Sie bei 80%, reduzieren Sie nur bei Bedarf',
+            '✅ **Nutzen Sie Kontextfenster-Erweiterung wenn:**\n- Ihr Use Case 8k+ Token erfordert\n- Sie 16GB+ VRAM haben\n→ Empfohlen: Testen Sie zuerst mit Modell-Standard',
+            '✅ **Nutzen Sie lokale API wenn:**\n- Sie Produktionsanwendungen bauen\n- Sie Integration mit Python/JavaScript benötigen\n→ Empfohlen: Nutzen Sie statt Chat für Bereitstellungen',
+            '❌ **Überspringen Sie LoRA Fine-Tuning in LM Studio:**\n- Nicht implementiert (April 2026)\n- Nutzen Sie Text-Generation-WebUI stattdessen\n→ Empfohlen: Wechseln Sie Tools für Training-Workflows',
+          ],
+        },
+        wichtigeFunktionen: {
+          title: 'Welche LM Studio Funktionen sind am wichtigsten?',
+          content: 'Nicht alle erweiterten Funktionen sind für jeden Benutzer relevant. Ihre Kompetenzstufe und Ihr Anwendungsfall bestimmen, welche Funktionen Sie tatsächlich anpassen sollten.',
+          rows: [
+            {
+              'Kompetenzstufe': 'Anfänger',
+              'Worauf Sie sich konzentrieren sollten': 'Modellauswahl + Chat',
+              'Was Sie ignorieren sollten': 'Quantisierung, Kontextlänge, Batching, GPU-Zuweisung',
+              'Empfehlung': 'Laden Sie Llama 3.2 7B, Qwen2.5 7B oder Mistral 7B über den Browser herunter, beginnen Sie zu chatten. Lassen Sie alle Einstellungen auf den Standardwerten. Die App übernimmt die Ressourcenverwaltung für Sie.',
+              'Grund': 'Das Ändern von Einstellungen ohne Verständnis führt zu Abstürzen, CUDA-Fehlern oder unerwartetem Verlangsamen.',
+            },
+            {
+              'Kompetenzstufe': 'Fortgeschrittene',
+              'Worauf Sie sich konzentrieren sollten': 'Quantisierung + Kontextlänge',
+              'Was Sie ignorieren sollten': 'Batch-Inferenz, Fine-Tuning, benutzerdefinierte GPU-Zuweisung',
+              'Empfehlung': 'Passen Sie die Quantisierung (Q4_K_M vs. Q5_K_M) auf Llama 3.2 7B, Qwen2.5 7B oder Phi-3.5 14B je nach verfügbarem VRAM an. Erweitern Sie die Kontextlänge auf 4k–8k, wenn Ihr Computer 16+ GB RAM hat. Testen Sie eine Änderung nach der anderen.',
+              'Grund': 'Quantisierung beeinflusst direkt die Qualität-gegen-Geschwindigkeit Abwägung. Kontextlänge ermöglicht Ihnen, mit längeren Dokumenten zu arbeiten. Dies sind die höchsten Auswirkungen-Einstellungen.',
+            },
+            {
+              'Kompetenzstufe': 'Fortgeschrittene',
+              'Worauf Sie sich konzentrieren sollten': 'GPU-Zuweisung + Batch-Verarbeitung + API-Modus',
+              'Was Sie ignorieren sollten': 'Nichts – Sie verstehen die Abwägungen und testen systematisch',
+              'Empfehlung': 'Stimmen Sie den GPU-Speicherschieber ab, nutzen Sie Batch-Inferenz für Durchsatz, aktivieren Sie lokale API für Integration mit Tools. Benchmarken Sie verschiedene Konfigurationen und dokumentieren Sie die Ergebnisse.',
+              'Grund': 'Auf dieser Ebene optimieren Sie wahrscheinlich für Produktions-Workflows, Inferenzgeschwindigkeit oder ressourcenbegrenzte Bereitstellungen. Kleine Anpassungen summieren sich.',
+            },
+          ],
+          columns: ['Kompetenzstufe', 'Worauf Sie sich konzentrieren sollten', 'Was Sie ignorieren sollten', 'Empfehlung', 'Grund'],
+        },
+        wannNichtNutzen: {
+          title: 'Wann sollten Sie erweiterte Funktionen NICHT nutzen?',
+          content: 'Erweiterte Funktionen können zu Instabilität, Abstürzen oder unerwartetem Verhalten führen, wenn sie falsch angewendet werden. Wissen Sie, wann Sie sie vermeiden sollten.',
+          items: [
+            '**Wenn Sie neu in lokalen LLMs sind:** Ihre Priorität ist das Verständnis, wie Modelle funktionieren, nicht ihre Optimierung. Verwenden Sie 1–2 Wochen lang die Standardeinstellungen, bevor Sie die Einstellungen anfassen. Vorzeitige Optimierung führt zu Verwirrung (\"Warum ist mein Modell langsam? Welche Einstellung hat es verursacht?\").',
+            '**Wenn die Standardeinstellungen bereits funktionieren:** Wenn Ihr Modell lädt, Chat responsiv ist und der Kontext für Ihren Anwendungsfall ausreichend ist, ändern Sie nichts. Das Sprichwort gilt: \"Wenn es nicht kaputt ist, reparieren Sie es nicht.\" Jede Einstellung, die Sie anpassen, fügt eine Variable hinzu, die die Stabilität beeinträchtigen könnte.',
+            '**Wenn Stabilität wichtiger ist als Leistung:** Wenn Sie LM Studio in der Produktion verwenden (API-Endpunkt, geplante Inferenz, Headless-Modus), halten Sie die Einstellungen konservativ. Ein 10 % Leistungsgewinn ist nutzlos, wenn es nach 12 Stunden Betrieb abstürzt.',
+            '**Wenn Sie keine Zeit für Benchmarking haben:** Erweiterte Funktionen helfen Ihnen nur, wenn Sie sie systematisch testen. Wenn Sie 3 Einstellungen gleichzeitig ändern und die App abstürzt, wissen Sie nicht, welche es verursacht hat. Investieren Sie die Zeit, eine Variable zu ändern, zu testen, zu messen, aufzuzeichnen und dann weiterzumachen.',
+            '**Wenn CUDA- oder Speicherfehler auftreten:** Fügen Sie keine weiteren Modelle hinzu, erhöhen Sie nicht die Kontextlänge, und reduzieren Sie nicht die GPU-Zuweisung. Reduzieren Sie stattdessen die GPU-Zuweisung auf 50 %, starten Sie LM Studio neu, und testen Sie mit einem kleineren Modell (3B statt 7B). Fehler deuten auf Ressourcenbeschränkungen hin; erweiterte Funktionen werden es nur schlimmer machen.',
+          ],
+        },
+        gpuSpeicher: {
+          title: 'Wie konfigurieren Sie GPU-Speicher in LM Studio?',
+          content: 'LM Studio lässt Sie kontrollieren, wie viel GPU VRAM das Modell verwendet. Informationen zu VRAM-Anforderungen nach Modell finden Sie unter [How Much VRAM for Local LLMs](/local-llms/how-much-vram-local-llm?lang=de):',
+          items: [
+            '1. Klicken Sie auf **Einstellungen** (Zahnradsymbol unten links).',
+            '2. Finden Sie den **GPU-Beschleunigung**-Schieber (Standard: 100 %).',
+            '3. Schieben Sie auf 50 %, wenn Sie möchten, dass die GPU 50 % des VRAM nutzt und den Rest für andere Anwendungen freigeben.',
+            '4. Niedrigere GPU-Zuweisung = langsamere Inferenzgeschwindigkeit, aber mehr Kopfraum für gleichzeitige Apps.',
+            '5. Klicken Sie auf **Neu starten**, um die Änderungen zu übernehmen.',
+          ],
+        },
+        kontextFenster: {
+          title: 'Wie erweitern Sie das Kontextfenster?',
+          content: 'Das Kontextfenster ist die maximale Anzahl der Token (Text), die das Modell lesen kann. Das Erweitern ermöglicht längere Konversationen, verbraucht aber mehr VRAM. Hinweise zu modellspezifischen Kontextgrenzen finden Sie in der [Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de) Vergleich.',
+          items: [
+            '1. Öffnen Sie Einstellungen → Server.',
+            '2. Suchen Sie nach **Kontextlänge** (Standard: integrierte Modellgrenze).',
+            '3. Erhöhen Sie auf 4k, 8k, 16k oder 32k (je nach Modellunterstützung).',
+            '4. Eine Verdoppelung der Kontextlänge verdoppelt ungefähr die VRAM-Nutzung.',
+            '5. Testen Sie Ihr erweitertes Kontextfenster, indem Sie einen Chat starten und lange Aufforderungen bereitstellen.',
+          ],
+        },
+        lokaleAPI: {
+          title: 'Wie aktivieren Sie die lokale API von LM Studio (Beta)?',
+          content: 'Die lokale API von LM Studio (Beta seit April 2026) ahmt die API von OpenAI nach. Weitere Informationen zu lokalem API-Setup und Alternativen finden Sie unter [Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api?lang=de):',
+          codeBlock: '# 1. Öffnen Sie LM Studio Einstellungen → Server\n# 2. Schalten Sie "Enable local API server" ein\n# 3. API läuft unter http://localhost:1234/v1\n\n# 4. Verwenden Sie es wie Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="nicht-erforderlich"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Hallo"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        lora: {
+          title: 'Können Sie Modelle mit LM Studio fine-tunen?',
+          content: [
+            'Seit April 2026 ist LoRA Fine-Tuning nicht in LM Studio integriert. Für Fine-Tuning verwenden Sie:',
+            '- **Text-Generation-WebUI** (am einfachsten für LoRA)',
+            '- **LLaMA-Factory** (fortgeschrittene, produktionsreife)',
+            '- **unsloth** (schnellste, optimal für VRAM-Nutzung)',
+            'LM Studio eignet sich für die Anwendung vortrainierter LoRA-Adapter, nicht jedoch für das Training neuer. Zukünftige Versionen können LoRA-Training direkt hinzufügen.',
+          ],
+        },
+        batchInferenz: {
+          title: 'Wie führen Sie Batch-Inferenz in LM Studio durch?',
+          content: [
+            'Batch-Inferenz bedeutet die Verarbeitung mehrerer Aufforderungen, ohne auf Antworten zu warten. LM Studio hat keinen integrierten Batch-Modus, aber Sie können ihn über die API oder Python-Schleife simulieren:',
+          ],
+          codeBlock: '# Python: Batch-Inferenz über LM Studio API\nfrom openai import OpenAI\nimport json\n\nclient = OpenAI(base_url="http://localhost:1234/v1", api_key="x")\n\nprompts = [\n  "Was ist 2+2?",\n  "Erklären Sie Quantencomputing",\n  "Wie funktionieren Transformer?"\n]\n\nresults = []\nfor prompt in prompts:\n  response = client.chat.completions.create(\n    model="llama-3.2-3b-gguf",\n    messages=[{"role": "user", "content": prompt}]\n  )\n  results.append({\n    "prompt": prompt,\n    "response": response.choices[0].message.content\n  })\n\nwith open("batch_results.json", "w") as f:\n  json.dump(results, f, indent=2)',
+          codeLanguage: 'python',
+        },
+        benchmarking: {
+          title: 'Wie benchmarken Sie die Modellgeschwindigkeit in LM Studio?',
+          content: 'LM Studio hat ein integriertes Benchmark-Tool:',
+          items: [
+            '1. Laden Sie ein Modell in LM Studio.',
+            '2. Klicken Sie auf **Einstellungen** → **Benchmark** Reiter.',
+            '3. Klicken Sie auf **Run benchmark** – misst Token/Sekunde für Ihre spezifische Hardware.',
+            '4. Ergebnisse zeigen die Basisleistung ohne Chat-Overhead.',
+            'Dies hilft Ihnen, die erwartete Geschwindigkeit vor der Bereitstellung in der Produktion zu verstehen.',
+          ],
+        },
+        haeufigeFehler: {
+          title: 'Häufige Fehler mit LM Studio erweiterten Funktionen',
+          items: [
+            '**GPU-Zuweisung zu stark reduzieren und Langsamkeit dem Modell zuschreiben.** Wenn Sie GPU auf 10 % stellen, wird die Inferenz 5–10× langsamer, weil sie hauptsächlich auf der CPU läuft. Testen Sie zuerst mit 80%+ GPU-Zuweisung.',
+            '**Kontextfenster über die Modellunterstützung hinaus erweitern.** Modelle haben maximale unterstützte Kontextlängen. Das Erweitern darüber hinaus fügt keine Fähigkeit hinzu; es verschwendet nur VRAM.',
+            '**LoRA-Training in LM Studio erwarten.** Seit April 2026 ist es nicht verfügbar. Verwenden Sie Text-Generation-WebUI oder Trainings-Bibliotheken.',
+            '**Vergessen, dass die API explizit aktiviert sein muss.** Die lokale API ist standardmäßig ausgeschaltet. Aktivieren Sie sie unter Einstellungen → Server.',
+          ],
+        },
+        faqSection: {
+          title: 'Häufig gestellte Fragen zu LM Studio erweiterten Funktionen',
+          faqs: [
+            {
+              q: 'Was ist der Unterschied zwischen LM Studio API und Ollama API?',
+              a: 'Beide stellen OpenAI-kompatible Endpunkte zur Verfügung. LM Studio API ist auf localhost:1234, Ollama auf localhost:11434. Beide funktionieren identisch. Wählen Sie das Tool, das Sie lieber chatten möchten.',
+            },
+            {
+              q: 'Kann ich die LM Studio API in der Produktion verwenden?',
+              a: 'Es funktioniert, aber Ollama API ist reifer. LM Studio API ist Beta. Für die Produktion ist Ollama die sicherere Wahl.',
+            },
+            {
+              q: 'Reduziert die Verringerung der GPU-Zuweisung die VRAM-Anforderungen?',
+              a: 'Ja. Eine Verringerung der GPU-Zuweisung auf 50 % halbiert ungefähr die VRAM-Nutzung, aber die Inferenz ist 2–5× langsamer, weil das Modell teilweise auf der CPU läuft.',
+            },
+            {
+              q: 'Wann sollte ich das Kontextfenster erweitern?',
+              a: 'Erweitern Sie das Kontextfenster, wenn Ihr Use Case die Verarbeitung von Dokumenten oder Konversationen länger als der Modell-Standard (üblicherweise 2k–4k Token) erfordert. Für Dokumentenanalyse, Code-Review oder mehrteilige Konversationen werden 8k–16k Kontext empfohlen. Erweitern Sie nur, wenn Sie ausreichend VRAM haben (16GB+ RAM empfohlen).',
+            },
+            {
+              q: 'Welche GPU-Zuweisung sollte ich verwenden?',
+              a: 'Beginnen Sie mit 80 % GPU-Zuweisung für beste Leistung. Wenn Sie andere Anwendungen gleichzeitig nutzen müssen, reduzieren Sie auf 50–70 %. Für Entwicklung mit mehreren Modellen nutzen Sie 40–50 %. Überwachen Sie den VRAM-Verbrauch und passen Sie basierend auf Ihrer Workload an. Gehen Sie nie unter 30 % außer auf eingeschränkter Hardware.',
+            },
+            {
+              q: 'Sollte ich LM Studio API oder Ollama für Produktion nutzen?',
+              a: 'Nutzen Sie Ollama API für Produktionsbereitstellungen. Ollama ist reifer, stabiler und speziell für das Servieren von Modellen ausgelegt. Nutzen Sie LM Studio API für Entwicklung und Tests. Wenn Sie die LM Studio-UI bevorzugen, kann Ollama im Hintergrund laufen, während Sie LM Studio für Chat und Erkundung nutzen.',
+            },
+            {
+              q: 'Welche Quantisierung sollte ich für meine Hardware wählen?',
+              a: 'Q4_K_M ist für die meisten Benutzer die beste Balance: ~40 % weniger VRAM als FP16 mit minimalem Qualitätsverlust. Q5_K_M bietet etwas bessere Qualität mit 25 % weniger VRAM. Für 8GB VRAM nutzen Sie Q4_K_M oder Q3_K_M. Für 16GB+, Q5_K_M oder FP16. Testen Sie ein Modell mit verschiedenen Quantisierungen, um auf Ihrer Hardware zu benchmarken.',
+            },
+            {
+              q: 'Muss ich bei der Verwendung von LM Studio die DSGVO beachten?',
+              a: 'Ja. Da LM Studio Modelle lokal auf Ihrem Computer ausführt, werden alle Daten auf Ihrem Gerät verarbeitet. Dies erfüllt die DSGVO-Anforderungen an Datenschutz durch Design und Datenspeicherung. Sie müssen jedoch Zugriff und Verschlüsselung steuern. Ein Datenschutzbeauftragter sollte Ihre Implementierung überprüfen, insbesondere wenn Sie APIs exponieren.',
+            },
+            {
+              q: 'Ist LM Studio für deutsche Mittelstandsunternehmen geeignet?',
+              a: 'Ja. LM Studio ist ideal für Mittelstandsunternehmen, die lokale KI-Inferenz ohne Abhängigkeit von Cloud-Anbietern wünschen. Es erfüllt BSI-Grundschutz durch vollständig lokale Datenverarbeitung, ist kostenlos und Open-Source für interne Nutzung geeignet. IT-Sicherheit und Compliance-Teams können die lokale Architektur genehmigen, ohne auf Cloud-Dienste zu warten.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Weiterführende Ressourcen',
+          items: [
+            '[Wie man LM Studio installiert](/local-llms/how-to-install-lm-studio?lang=de) – Vollständige Installationsanleitung für macOS, Windows und Linux.',
+            '[Wie viel VRAM für lokale LLMs](/local-llms/how-much-vram-local-llm?lang=de) – Hardware-Anforderungen und VRAM-Planung für verschiedene Modellgrößen.',
+            '[Lokaler LLM Hardware-Leitfaden 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) – GPU-, CPU- und RAM-Empfehlungen für optimale Leistung.',
+            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de) – Modellvergleich und Qualitäts-Benchmarks zur Auswahl helfen.',
+            '[Die besten lokalen LLMs zum Programmieren](/local-llms/best-local-llms-for-coding?lang=de) – Spezialisierte Modell-Rankings für Code-Vervollständigung.',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=de) – Feature-Vergleich zwischen den zwei beliebtesten Tools.',
+            '[Lokale LLM OpenAI-kompatible API](/local-llms/local-llm-openai-compatible-api?lang=de) – So stellen Sie Ihr lokales Modell als API zur Verfügung.',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de) – Alternative Inferenz-Engines und deren Abwägungen.',
+          ],
+        },
+        sources: {
+          title: 'Quellen',
+          items: [
+            'LM Studio Dokumentation — lmstudio.ai/docs',
+            'LM Studio lokaler Server (Beta) — lmstudio.ai/docs/local-server/overview',
+            'OpenAI API Kompatibilität — platform.openai.com/docs/api-reference',
+            'BSI Grundschutz Kataloge — bsi.bund.de/grundschutz',
+            'DSGVO Datenschutz durch Design — eur-lex.europa.eu/eli/reg/2016/679',
+          ],
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-08',
+        inLanguage: 'de',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Was ist der Unterschied zwischen LM Studio API und Ollama API?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Beide stellen OpenAI-kompatible Endpunkte zur Verfügung. LM Studio API ist auf localhost:1234, Ollama auf localhost:11434. Beide funktionieren identisch. Wählen Sie das Tool, das Sie lieber chatten möchten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Kann ich die LM Studio API in der Produktion verwenden?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Es funktioniert, aber Ollama API ist reifer. LM Studio API ist Beta. Für die Produktion ist Ollama die sicherere Wahl.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Reduziert die Verringerung der GPU-Zuweisung die VRAM-Anforderungen?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja. Eine Verringerung der GPU-Zuweisung auf 50 % halbiert ungefähr die VRAM-Nutzung, aber die Inferenz ist 2–5× langsamer, weil das Modell teilweise auf der CPU läuft.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Muss ich bei der Verwendung von LM Studio die DSGVO beachten?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja. Da LM Studio Modelle lokal auf Ihrem Computer ausführt, werden alle Daten auf Ihrem Gerät verarbeitet. Dies erfüllt die DSGVO-Anforderungen an Datenschutz durch Design und Datenspeicherung. Sie müssen jedoch Zugriff und Verschlüsselung steuern. Ein Datenschutzbeauftragter sollte Ihre Implementierung überprüfen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Ist LM Studio für deutsche Mittelstandsunternehmen geeignet?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ja. LM Studio ist ideal für Mittelstandsunternehmen, die lokale KI-Inferenz ohne Abhängigkeit von Cloud-Anbietern wünschen. Es erfüllt BSI-Grundschutz durch vollständig lokale Datenverarbeitung und ist kostenlos und Open-Source.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Wie man GPU-Speicher und Kontextfenster in LM Studio konfiguriert',
+        description: 'Schritt-für-Schritt-Anleitung zur Optimierung der GPU-Speicherzuweisung, Kontextlänge, API-Setup, Batch-Inferenz und Benchmarking in LM Studio.',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-08',
+        inLanguage: 'de',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'GPU-Speicherzuweisung konfigurieren',
+            text: 'Öffnen Sie Einstellungen (Zahnradsymbol unten links), finden Sie den GPU-Beschleunigungsschieber (Standard: 100 %), und schieben Sie zu Ihrer gewünschten Zuweisung (z. B. 50 % zum Freigeben von GPU für andere Apps). Klicken Sie auf Neu starten, um Änderungen zu übernehmen.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Kontextfenster erweitern',
+            text: 'Öffnen Sie Einstellungen → Server, suchen Sie das Feld Kontextlänge (Standard: integrierte Modellgrenze), erhöhen Sie auf 4k, 8k, 16k oder 32k je nach Modellunterstützung. Eine Verdoppelung der Kontextlänge verdoppelt die VRAM-Nutzung.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Lokale API von LM Studio aktivieren',
+            text: 'Öffnen Sie Einstellungen → Server, aktivieren Sie "Enable local API server", API läuft unter http://localhost:1234/v1. Verwenden Sie es mit OpenAI Python SDK, indem Sie base_url auf localhost:1234/v1 setzen.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Batch-Inferenz via API ausführen',
+            text: 'Verwenden Sie OpenAI Python SDK in einer Schleife, um mehrere Aufforderungen nacheinander zu senden. Jede Antwort wird an eine Ergebnisliste angehängt, dann in JSON speichern.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Modellgeschwindigkeit benchmarken',
+            text: 'Laden Sie ein Modell, klicken Sie auf Einstellungen → Benchmark-Reiter, klicken Sie auf Run benchmark. Ergebnisse zeigen Token/Sekunde für Ihre Hardware ohne Chat-Overhead.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'LM Studio erweiterte Funktionen 2026: GPU-Einstellungen, LoRA und Fine-Tuning',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-08',
+        inLanguage: 'de',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'LM Studio hat erweiterte Einstellungen im Register Einstellungen → Server (GPU-Optionen, Kontextlänge).' },
+          { '@type': 'ListItem', position: 2, name: 'GPU-Speicher kann manuell von 10 % bis 100 % des VRAM eingestellt werden – niedrigere Werte geben GPU für andere Anwendungen frei.' },
+          { '@type': 'ListItem', position: 3, name: 'Das Kontextfenster (Anzahl der Token, die das Modell verarbeiten kann) kann bis zu den Modellgrenzen erweitert werden, verbraucht aber mehr VRAM.' },
+          { '@type': 'ListItem', position: 4, name: 'Lokale API (Beta) stellt OpenAI-kompatible Endpunkte unter localhost:1234 zur Verfügung.' },
+          { '@type': 'ListItem', position: 5, name: 'Seit April 2026 ist LoRA Fine-Tuning nicht in LM Studio integriert; verwenden Sie Text-Generation-WebUI oder Trainings-Skripte.' },
+        ],
+        regionalContext: {
+          title: 'Regionale Adoption und Compliance-Kontext',
+          content: [
+            '**Deutsche Unternehmen wählen lokale LLM-Tools basierend auf DSGVO-Compliance-Fähigkeiten aus.** Tools, die Daten vollständig lokal verarbeiten (Ollama, LM Studio, llama.cpp), erfüllen DSGVO-Anforderungen an Datenspeicherung standardmäßig. Organisationen in Deutschland bevorzugen Tools ohne Telemetrie, ohne Cloud-Sync und mit Air-Gapped-Bereitstellungsunterstützung. Mittelstandsunternehmen evaluieren Tools gegen BSI-Grundschutz-Kataloge für IT-Sicherheit. PromptQuorum verbindet sich mit lokalen Tool-Endpunkten, ohne Daten über externe Server zu leiten.',
+            '**DSGVO Artikel 28 Anforderungen:** Bei der Bereitstellung als Dienst müssen Datenverarbeitungsverträge (AVV) vorhanden sein. LM Studio als Open-Source-Tool für interne Nutzung erfordert keinen Vertrag. Externe API-Exposition erfordert Zugriffskontrolle und Audit-Logging nach BSI-Standard.',
+          ],
+        },
       },
     },
     fr: {
       theme: 'Tools & Interfaces',
-      seoTitle: 'LM Studio fonctionnalités avancées 2026: GPU, API',
-      metaDescription: 'LM Studio fonctionnalités avancées : optimisation GPU, fenêtre de contexte, API, LoRA fine-tuning et inférence par lot. Guide développeur. Gratuit — avril 2026.',
+      title: 'LM Studio : Fonctionnalités avancées 2026 (Paramètres GPU, LoRA et Fine-Tuning)',
+      seoTitle: 'LM Studio 2026 : GPU, fenêtre de contexte et API locale',
+      intro: '**Activez l\'API locale (localhost:1234), configurez la mémoire GPU pour votre matériel, étendez la fenêtre de contexte si nécessaire. Ignorez LoRA—utilisez plutôt Text-Generation-WebUI.** Les paramètres avancés de LM Studio vous permettent d\'optimiser pour les charges de travail en production, libérer le VRAM pour d\'autres applications et intégrer avec les outils externes via les points de terminaison REST.',
+      metaDescription: 'Configurez la mémoire GPU, les fenêtres de contexte, API locale. Utilisez API pour la production, pas pour le fine-tuning. Décisions étape par étape pour tous les cas d\'usage.',
       publishDate: '2026-04-04',
-      readTime: '9 min read',
+      readTime: '9 min de lecture',
       educationalLevel: 'Advanced',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        'url': 'https://www.promptquorum.com/local-llms/lm-studio-advanced-features?lang=fr',
-        'inLanguage': 'fr',
-        'headline': 'LM Studio fonctionnalités avancées 2026: GPU, API',
-        'description': 'LM Studio fonctionnalités avancées : optimisation GPU, fenêtre de contexte, API, LoRA fine-tuning et inférence par lot. Guide développeur. Gratuit — avril 2026.',
-        'datePublished': '2026-04-04',
-        'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
+      primaryTerm: 'LM Studio fonctionnalités avancées',
+      toc: [
+        { label: 'Points clés', anchor: 'points-cles' },
+        { label: 'Que sont les fonctionnalités avancées ?', anchor: 'que-sont' },
+        { label: 'Que pouvez-vous faire ?', anchor: 'que-faire' },
+        { label: 'Résumé rapide', anchor: 'resume-rapide' },
+        { label: 'Décisions rapides', anchor: 'decisions-rapides' },
+        { label: 'Quelles fonctionnalités comptent vraiment ?', anchor: 'fonctionnalites-importantes' },
+        { label: 'Quand NE PAS utiliser les fonctionnalités avancées ?', anchor: 'quand-ne-pas' },
+        { label: 'Configuration mémoire GPU', anchor: 'gpu-memoire' },
+        { label: 'Ajustement fenêtre de contexte', anchor: 'fenetre-contexte' },
+        { label: 'API locale LM Studio (Beta)', anchor: 'api-locale' },
+        { label: 'LoRA et fine-tuning', anchor: 'lora-finetuning' },
+        { label: 'Inférence batch', anchor: 'inference-batch' },
+        { label: 'Benchmarking performance', anchor: 'benchmarking' },
+        { label: 'Erreurs courantes', anchor: 'erreurs-courantes' },
+        { label: 'Questions fréquentes', anchor: 'faq' },
+        { label: 'Ressources connexes', anchor: 'ressources' },
+        { label: 'Sources', anchor: 'sources' },
+      ],
+      sections: {
+        pointsCles: {
+          isTldr: true,
+          items: [
+            'LM Studio offre des paramètres avancés : Paramètres → Serveur (options GPU, longueur contexte).',
+            'La mémoire GPU est réglable de 10 % à 100 % du VRAM – les valeurs basses libèrent GPU pour autres apps.',
+            'La fenêtre de contexte s\'étend jusqu\'aux limites du modèle, mais consomme plus de VRAM.',
+            'L\'API locale (Beta) expose des points de terminaison compatibles OpenAI sur localhost:1234.',
+            'Depuis avril 2026, le fine-tuning LoRA n\'est pas intégré ; utilisez Text-Generation-WebUI ou scripts.',
+          ],
+        },
+        faitRapides: {
+          title: 'Faits rapides : Métriques de performance LM Studio',
+          items: [
+            '**Mémoire GPU :** Réglable de 10 % à 100 % du VRAM ; allocation 50 % réduit VRAM d\'environ moitié',
+            '**Fenêtre contexte :** Extensible de défaut modèle à 4k, 8k, 16k ou 32k tokens ; contexte 2× = VRAM 2×',
+            '**Impact quantification :** Q4_K_M utilise ~40 % moins VRAM que FP16 avec <1 % perte qualité',
+            '**Latence API :** API locale testée à 120–180ms pour Llama 3.2 3B, 280–420ms pour 7B, 680–950ms pour 13B (RTX 3080)',
+            '**Traitement batch :** Via boucle API, atteint 8–12 tokens/sec de débit par requête simultanée',
+            '**Allocation GPU :** En dessous de 50 %, la vitesse peut réduire 5–10× (surcharge CPU fallback)',
+          ],
+        },
+        queSontFonctionnalites: {
+          title: 'Que sont les fonctionnalités avancées LM Studio ?',
+          content: 'Les fonctionnalités avancées LM Studio sont des options de configuration et outils pour optimiser la performance modèle, gérer les ressources et personnaliser les workflows LLM au-delà de l\'interface chat. Ces fonctionnalités offrent capacités niveau développeur : gestion mémoire GPU, optimisation fenêtre contexte, APIs compatibles OpenAI et intégration pipelines fine-tuning.',
+        },
+        quePouvezVousFaire: {
+          title: 'Que pouvez-vous vraiment faire avec les fonctionnalités avancées LM Studio ?',
+          items: [
+            '**Améliorer vitesse inférence** – Ajustez allocation GPU, paramètres quantification, traitement batch pour obtenir génération tokens plus rapide et latence réduite.',
+            '**Activer workflows multi-modèles** – Chargez plusieurs modèles simultanément, basculez rapidement entre modèles et routez différentes tâches vers différents modèles.',
+            '**Optimiser utilisation mémoire** – Contrôlez allocation VRAM par modèle, étendez ou limitez longueur contexte et gérez ressources système pour multitâche.',
+            '**Créer APIs de production** – Exposez modèles locaux via points de terminaison REST compatibles OpenAI pour intégration transparente avec applications existantes.',
+            '**Fine-tuner modèles localement** – Utilisez inférence batch et modes API pour préparation données et boucles d\'entraînement sans upload cloud.',
+          ],
+        },
+        resumeRapide: {
+          title: 'Résumé rapide',
+          content: 'Les fonctionnalités avancées améliorent performance et contrôle :',
+          items: [
+            '**Domaines clés** : optimisation mémoire, batching, quantification, longueur contexte, gestion modèles',
+            '**Idéal pour** : utilisateurs avancés, développeurs, déploiements production',
+            '**Exemples concrets** :',
+          ],
+          numberedItems: [
+            'Augmentez taille batch → débit supérieur (plus tokens/sec)',
+            'Sélectionnez quantification → moins VRAM (Q4_K_M utilise ~40 % moins que FP16)',
+            'Étendez longueur contexte → meilleur raisonnement documents longs (mais 2× contexte = 2× VRAM)',
+            'Ajustez curseur GPU → libérez VRAM pour autres apps (50 % GPU = 50 % VRAM utilisé)',
+          ],
+                },
+        decisionsRapides: {
+          title: 'Décisions rapides : Quelles fonctionnalités devrais-je utiliser ?',
+          items: [
+            '✅ **Utilisez Configuration mémoire GPU si :**\n- Voulez libérer VRAM pour autres apps\n- Effectuez des benchmarks de différents paramétrages\n→ Recommandé : Commencez à 80%, baissez seulement si nécessaire',
+            '✅ **Utilisez Extension fenêtre contexte si :**\n- Use case nécessite 8k+ tokens\n- Avez 16GB+ VRAM\n→ Recommandé : Testez d\'abord avec standard modèle',
+            '✅ **Utilisez API locale si :**\n- Construisez applications production\n- Besoin d\'intégration avec Python/JavaScript\n→ Recommandé : Utilisez plutôt que chat pour déploiements',
+            '❌ **Ignorez LoRA Fine-Tuning dans LM Studio :**\n- Pas encore implémenté (avril 2026)\n- Utilisez Text-Generation-WebUI à la place\n→ Recommandé : Changez d\'outils pour workflows d\'entraînement',
+          ],
+        },
+        fonctionnalitesImportantes: {
+          title: 'Quelles fonctionnalités LM Studio comptent vraiment ?',
+          content: 'Toutes les fonctionnalités avancées ne sont pas pertinentes pour chaque utilisateur. Votre niveau compétence et cas usage déterminent quelles fonctionnalités ajuster.',
+          rows: [
+            {
+              'Niveau': 'Débutants',
+              'Concentrez-vous sur': 'Sélection modèle + chat',
+              'Ignorez': 'Quantification, contexte, batching, allocation GPU',
+              'Recommandation': 'Téléchargez Llama 3.2 7B, Qwen2.5 7B ou Mistral 7B, commencez à chatter. Laissez tous les paramètres par défaut. L\'app gère ressources pour vous.',
+              'Pourquoi': 'Modifier paramètres sans compréhension cause crashes, erreurs CUDA ou ralentissements inattendus.',
+            },
+            {
+              'Niveau': 'Intermédiaires',
+              'Concentrez-vous sur': 'Quantification + contexte',
+              'Ignorez': 'Inférence batch, fine-tuning, allocation GPU personnalisée',
+              'Recommandation': 'Ajustez quantification (Q4_K_M vs Q5_K_M) sur Llama 3.2 7B, Qwen2.5 7B ou Phi-3.5 14B selon VRAM. Étendez contexte à 4k–8k si machine a 16+ GB RAM. Testez un changement à la fois.',
+              'Pourquoi': 'Quantification impacte directement compromis qualité-vitesse. Contexte permet travailler documents plus longs. Plus grand impact.',
+            },
+            {
+              'Niveau': 'Avancés',
+              'Concentrez-vous sur': 'Allocation GPU + batch + mode API',
+              'Ignorez': 'Rien – vous comprenez compromis et testez systématiquement',
+              'Recommandation': 'Ajustez curseur GPU, utilisez batch pour débit, activez API locale pour intégration outils. Benchmarkez configurations différentes et documentez résultats.',
+              'Pourquoi': 'À ce niveau, vous optimisez workflows production, vitesse inférence ou déploiements ressources limitées. Petits ajustements cumulent.',
+            },
+          ],
+          columns: ['Niveau', 'Concentrez-vous sur', 'Ignorez', 'Recommandation', 'Pourquoi'],
+        },
+        quandNePas: {
+          title: 'Quand NE PAS utiliser les fonctionnalités avancées',
+          content: 'Les fonctionnalités avancées peuvent causer instabilité, crashes ou comportements inattendus. Sachez quand les éviter.',
+          items: [
+            '**Si nouveau aux LLMs locaux :** Votre priorité est comprendre modèles, pas les optimiser. Utilisez 1–2 semaines paramètres défaut avant de toucher. Optimisation prématurée cause confusion.',
+            '**Si paramètres défaut fonctionnent :** Si modèle charge, chat répond vite et contexte suffit, ne changez rien. L\'adage s\'applique : \"Si ce n\'est pas cassé, ne le réparez pas.\"',
+            '**Si stabilité plus importante que performance :** En production (API, inférence plannifiée, mode headless), gardez paramètres conservateurs. Gain 10 % performance est inutile si crash après 12h.',
+            '**Si pas de temps pour benchmarking :** Fonctionnalités aident seulement si testées systématiquement. Changez une variable, testez, mesurez, enregistrez, puis continuez.',
+            '**Si erreurs CUDA ou mémoire :** Ne réduisez pas allocation GPU. Réduisez à 50 %, redémarrez, testez plus petit modèle (3B vs 7B). Erreurs indiquent limites ressources.',
+          ],
+        },
+        gpuMemoire: {
+          title: 'Comment configurer mémoire GPU dans LM Studio ?',
+          content: 'LM Studio contrôle combien VRAM le modèle utilise. Pour besoins VRAM par modèle, voir [How Much VRAM for Local LLMs](/local-llms/how-much-vram-local-llm?lang=fr):',
+          items: [
+            '1. Cliquez **Paramètres** (icône engrenage bas-gauche).',
+            '2. Trouvez curseur **Accélération GPU** (défaut : 100 %).',
+            '3. Réglez à 50 % si vous voulez que GPU utilise 50 % VRAM, libérant reste pour autres apps.',
+            '4. Allocation GPU basse = inférence lente, mais plus de marge pour apps simultanées.',
+            '5. Cliquez **Redémarrer** pour appliquer changements.',
+          ],
+        },
+        fenetrContexte: {
+          title: 'Comment étendre la fenêtre de contexte ?',
+          content: 'La fenêtre contexte est nombre maximum de tokens (texte) que le modèle lit. L\'étendre permet conversations plus longues mais utilise plus VRAM. Pour limites contexte par modèle, voir comparaison [Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr).',
+          items: [
+            '1. Ouvrez Paramètres → Serveur.',
+            '2. Cherchez **Longueur contexte** (défaut : limite modèle intégrée).',
+            '3. Augmentez à 4k, 8k, 16k ou 32k (selon support modèle).',
+            '4. Doubler contexte double approximativement VRAM utilisé.',
+            '5. Testez contexte étendu : démarrez chat et fournissez prompts longs.',
+          ],
+        },
+        apiLocale: {
+          title: 'Comment activer l\'API locale LM Studio (Beta) ?',
+          content: 'L\'API locale LM Studio (Beta depuis avril 2026) imite l\'API OpenAI. Pour plus sur setup API locale et alternatives, voir [Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api?lang=fr):',
+          codeBlock: '# 1. Ouvrez LM Studio Paramètres → Serveur\n# 2. Activez "Enable local API server"\n# 3. API tourne sur http://localhost:1234/v1\n\n# 4. Utilisez comme Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="pas-requis"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Bonjour"}]\n)\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+        },
+        lora: {
+          title: 'Pouvez-vous fine-tuner des modèles avec LM Studio ?',
+          content: [
+            'Depuis avril 2026, le fine-tuning LoRA n\'est pas intégré. Pour fine-tuning, utilisez :',
+            '- **Text-Generation-WebUI** (plus facile pour LoRA)',
+            '- **LLaMA-Factory** (avancé, production)',
+            '- **unsloth** (plus rapide, optimal pour VRAM)',
+            'LM Studio convient pour appliquer adaptateurs LoRA pré-entraînés, pas pour en entraîner de nouveaux. Versions futures peuvent ajouter training LoRA.',
+          ],
+        },
+        inferenceBatch: {
+          title: 'Comment exécuter l\'inférence batch dans LM Studio ?',
+          content: [
+            'L\'inférence batch traite plusieurs prompts sans attendre réponses. LM Studio n\'a pas mode batch intégré, mais vous pouvez le simuler via API ou boucle Python :',
+          ],
+          codeBlock: '# Python: inférence batch via API LM Studio\nfrom openai import OpenAI\nimport json\n\nclient = OpenAI(base_url="http://localhost:1234/v1", api_key="x")\n\nprompts = [\n  "Que est 2+2?",\n  "Expliquez l\'informatique quantique",\n  "Comment fonctionnent les transformers?"\n]\n\nresults = []\nfor prompt in prompts:\n  response = client.chat.completions.create(\n    model="llama-3.2-3b-gguf",\n    messages=[{"role": "user", "content": prompt}]\n  )\n  results.append({\n    "prompt": prompt,\n    "response": response.choices[0].message.content\n  })\n\nwith open("batch_results.json", "w") as f:\n  json.dump(results, f, indent=2)',
+          codeLanguage: 'python',
+        },
+        benchmarking: {
+          title: 'Comment benchmarker vitesse modèle dans LM Studio ?',
+          content: 'LM Studio inclut un outil benchmark intégré :',
+          items: [
+            '1. Chargez un modèle dans LM Studio.',
+            '2. Cliquez **Paramètres** → onglet **Benchmark**.',
+            '3. Cliquez **Run benchmark** – mesure tokens/seconde pour votre hardware.',
+            '4. Résultats montrent performance baseline sans overhead chat.',
+            'Cela aide comprendre vitesse attendue avant déploiement production.',
+          ],
+        },
+        erreursCourantes: {
+          title: 'Erreurs courantes avec les fonctionnalités avancées LM Studio',
+          items: [
+            '**Réduire allocation GPU trop et blâmer modèle.** Allocation 10 % rend inférence 5–10× lente (CPU fallback). Testez d\'abord 80%+ GPU.',
+            '**Étendre fenêtre contexte au-delà du support modèle.** Les modèles ont limites contexte max. Dépasser cela ne gagne rien, gaspille juste VRAM.',
+            '**Attendre training LoRA dans LM Studio.** Pas disponible avril 2026. Utilisez Text-Generation-WebUI ou librairies training.',
+            '**Oublier que API demande activation explicite.** API locale est désactivée par défaut. Activez dans Paramètres → Serveur.',
+          ],
+        },
+        faqSection: {
+          title: 'Questions fréquemment posées sur LM Studio',
+          faqs: [
+            {
+              q: 'Quelle est la différence entre API LM Studio et API Ollama ?',
+              a: 'Les deux exposent points de terminaison compatibles OpenAI. API LM Studio sur localhost:1234, Ollama sur localhost:11434. Fonctionnent identiquement. Choisissez l\'outil que vous préférez.',
+            },
+            {
+              q: 'Puis-je utiliser API LM Studio en production ?',
+              a: 'Oui, mais API Ollama est plus mature. API LM Studio est Beta. Pour production, Ollama est le choix plus sûr.',
+            },
+            {
+              q: 'Réduire allocation GPU réduit-il besoins VRAM ?',
+              a: 'Oui. Réduire allocation à 50 % divise par deux VRAM approximativement, mais inférence est 2–5× lente car modèle tourne partiellement sur CPU.',
+            },
+            {
+              q: 'Quand dois-je augmenter la fenêtre de contexte ?',
+              a: 'Augmentez la fenêtre contexte si votre cas d\'usage demande traiter documents ou conversations plus longs que défaut modèle (typiquement 2k–4k tokens). Pour analyse documents, revue code ou conversations multi-tours, 8k–16k contexte recommandé. Augmentez seulement si VRAM suffisant (16GB+ RAM recommandé).',
+            },
+            {
+              q: 'Quelle allocation GPU dois-je utiliser ?',
+              a: 'Commencez à 80 % allocation GPU pour meilleure performance. Si besoin exécuter autres applications simultanément, réduisez à 50–70 %. Pour développement avec modèles multiples, utilisez 40–50 %. Surveillez consommation VRAM et ajustez selon workload. Ne descendez jamais sous 30 % sauf hardware limité.',
+            },
+            {
+              q: 'Dois-je utiliser API LM Studio ou Ollama pour production ?',
+              a: 'Utilisez API Ollama pour déploiements production. Ollama plus mature, stable et conçu pour servir modèles. Utilisez API LM Studio pour développement et tests. Si vous préférez UI LM Studio, Ollama peut tourner arrière-plan tandis que vous utilisez LM Studio pour chat et exploration.',
+            },
+            {
+              q: 'Quelle quantification dois-je choisir pour mon hardware ?',
+              a: 'Q4_K_M meilleur équilibre pour plupart utilisateurs : ~40 % moins VRAM que FP16 avec perte qualité minimale. Q5_K_M offre qualité légèrement meilleure avec 25 % moins VRAM. Pour 8GB VRAM, utilisez Q4_K_M ou Q3_K_M. Pour 16GB+, Q5_K_M ou FP16. Testez un modèle avec différentes quantifications pour benchmarker sur votre hardware.',
+            },
+          ],
+        },
+        relatedReading: {
+          title: 'Ressources connexes',
+          items: [
+            '[Comment installer LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) – Guide complet pour macOS, Windows et Linux.',
+            '[Combien VRAM pour LLMs locaux](/local-llms/how-much-vram-local-llm?lang=fr) – Besoins hardware et planification VRAM pour différentes tailles modèles.',
+            '[Guide hardware LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) – Recommandations GPU, CPU, RAM pour performance optimale.',
+            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr) – Comparaison modèles et benchmarks qualité pour choisir.',
+            '[Meilleurs LLMs locaux pour programmation](/local-llms/best-local-llms-for-coding?lang=fr) – Classements modèles spécialisés pour complétion code.',
+            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) – Comparaison fonctionnalités entre deux outils populaires.',
+            '[API locale LLM compatible OpenAI](/local-llms/local-llm-openai-compatible-api?lang=fr) – Comment exposer votre modèle local en tant qu\'API.',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr) – Moteurs inférence alternatifs et compromis.',
+          ],
+        },
+        sources: {
+          title: 'Sources',
+          items: [
+            'Documentation LM Studio — lmstudio.ai/docs',
+            'Serveur local LM Studio (Beta) — lmstudio.ai/docs/local-server/overview',
+            'Compatibilité API OpenAI — platform.openai.com/docs/api-reference',
+            'CNIL AI Governance — cnil.fr/en',
+            'Données personnelles et IA — edpb.ec.europa.eu',
+          ],
+        },
       },
-      sections: {},
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-08',
+        inLanguage: 'fr',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Quelle est la différence entre API LM Studio et API Ollama ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Les deux exposent points de terminaison compatibles OpenAI. API LM Studio sur localhost:1234, Ollama sur localhost:11434. Fonctionnent identiquement. Choisissez l\'outil que vous préférez.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Puis-je utiliser API LM Studio en production ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Oui, mais API Ollama est plus mature. API LM Studio est Beta. Pour production, Ollama est le choix plus sûr.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Réduire allocation GPU réduit-il besoins VRAM ?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Oui. Réduire allocation à 50 % divise par deux VRAM approximativement, mais inférence est 2–5× lente car modèle tourne partiellement sur CPU.',
+            },
+          },
+        ],
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Comment configurer mémoire GPU et fenêtre contexte dans LM Studio',
+        description: 'Guide étape par étape pour optimiser allocation GPU, longueur contexte, setup API, inférence batch et benchmarking dans LM Studio.',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-08',
+        inLanguage: 'fr',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Configurer allocation mémoire GPU',
+            text: 'Ouvrez Paramètres (icône engrenage bas-gauche), trouvez curseur accélération GPU (défaut : 100 %), réglez à allocation désirée (ex. 50 % pour libérer GPU). Cliquez Redémarrer pour appliquer.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Étendre fenêtre contexte',
+            text: 'Ouvrez Paramètres → Serveur, trouvez champ longueur contexte (défaut : limite modèle), augmentez à 4k, 8k, 16k ou 32k selon support. Doubler contexte double VRAM.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Activer API locale LM Studio',
+            text: 'Ouvrez Paramètres → Serveur, activez "Enable local API server", API tourne sur http://localhost:1234/v1. Utilisez avec SDK OpenAI Python en réglant base_url sur localhost:1234/v1.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Exécuter inférence batch via API',
+            text: 'Utilisez SDK OpenAI Python en boucle pour envoyer plusieurs prompts séquentiellement. Chaque réponse s\'ajoute à liste résultats, puis sauvegardez en JSON.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Benchmarker vitesse modèle',
+            text: 'Chargez modèle, cliquez Paramètres → onglet Benchmark, cliquez Run benchmark. Résultats montrent tokens/seconde pour votre hardware sans overhead chat.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'LM Studio : Fonctionnalités avancées 2026 (Paramètres GPU, LoRA et Fine-Tuning)',
+        datePublished: '2026-04-04',
+        dateModified: '2026-04-08',
+        inLanguage: 'fr',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'LM Studio offre paramètres avancés : Paramètres → Serveur (options GPU, longueur contexte).' },
+          { '@type': 'ListItem', position: 2, name: 'Mémoire GPU réglable de 10 % à 100 % VRAM – valeurs basses libèrent GPU pour autres apps.' },
+          { '@type': 'ListItem', position: 3, name: 'Fenêtre contexte s\'étend jusqu\'aux limites modèle, mais consomme plus VRAM.' },
+          { '@type': 'ListItem', position: 4, name: 'API locale (Beta) expose points de terminaison compatibles OpenAI sur localhost:1234.' },
+          { '@type': 'ListItem', position: 5, name: 'Depuis avril 2026, fine-tuning LoRA n\'est pas intégré ; utilisez Text-Generation-WebUI ou scripts.' },
+        ],
+        regionalContext: {
+          title: 'Contexte adoption régionale et conformité',
+          content: [
+            '**Les entreprises françaises évaluent outils LLM locaux pour conformité données.** La CNIL recommande outils qui traitent données entièrement en local (Ollama, LM Studio, llama.cpp) pour données professionnelles sensibles. Les organisations en France, Belgique et Suisse privilégient outils sans télémétrie cloud et support déploiement air-gapped. PromptQuorum se connecte à points de terminaison outils locaux sans router données par serveurs externes.',
+          ],
+        },
+      },
     },
     ja: {
       theme: 'Tools & Interfaces',
@@ -29934,104 +34796,654 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       },
     },
     de: {
-      theme: 'GPU Kaufanleitungen',
-      title: 'Beste AMD GPUs für lokale LLMs',
-      seoTitle: 'Beste AMD GPUs für lokale LLMs: Vergleich und Kaufberater',
-      intro: '**AMD RX 6800 XT und RX 7900 XTX sind solide NVIDIA-Alternativen mit 15–20% besserer Rechenleistung pro Dollar, leiden aber unter schwächerer ONNX Runtime und vLLM-Treiberunterstützung.** Ab April 2026 hat sich AMD ROCm (HIP) zwar stabilisiert, aber Kompatibilitätsschichten erschweren die Integration. NVIDIA CUDA bleibt der Pfad mit dem geringsten Widerstand für lokale LLMs. Nutzen Sie AMD nur, wenn Sie einen großartigen gebrauchten Deal finden oder bereits AMD-Hardware besitzen.',
-      metaDescription: 'AMD RX 6800 XT, RX 7900 XTX vs NVIDIA RTX Vergleich. ROCm Setup, vLLM Performance, Kosten pro TFLOP, Kaufentscheidung. April 2026 aktualisiert.',
+      theme: 'GPU-Kaufleitfäden',
+      title: 'Beste AMD-GPUs für lokale LLMs',
+      seoTitle: 'AMD GPUs für lokale LLMs 2026: ROCm Setup & vLLM',
+      intro: '**AMD RX 6800 XT und RX 7900 XTX sind solide NVIDIA-Alternativen mit 15–20% besserer Rechenleistung pro Dollar, leiden aber unter schwächerer ONNX-Runtime- und vLLM-Treiberunterstützung.** Seit April 2026 hat sich AMD ROCm (HIP) reif entwickelt, aber Kompatibilitätsschichten erzeugen Reibung. NVIDIA CUDA ist immer noch der einfachste Weg für lokale LLMs. Verwenden Sie AMD nur, wenn Sie ein großartiges gebrauchtes Angebot finden oder bereits AMD-Hardware besitzen.',
+      metaDescription: 'AMD RX 6800 XT, 7900 XTX für lokale LLMs. ROCm-Einrichtung, vLLM-Unterstützung, Leistung vs. NVIDIA RTX. Entscheidungsleitfaden April 2026.',
       publishDate: '2026-04-05',
-      readTime: '7 Min. Lesezeit',
+      readTime: '8 Min. Lesezeit',
       educationalLevel: 'Intermediate',
       primaryTerm: 'AMD GPU',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        'headline': 'Beste AMD GPUs für lokale LLMs',
-        'description': 'AMD RX 6800 XT, RX 7900 XTX vs NVIDIA RTX Vergleich. ROCm Setup, vLLM Performance, Kosten pro TFLOP, Kaufentscheidung. April 2026 aktualisiert.',
-        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=de',
-        'inLanguage': 'de',
-        'datePublished': '2026-04-05',
-        'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        'educationalLevel': 'Intermediate',
+      toc: [
+        { label: 'Zusammenfassung', anchor: 'tldr' },
+        { label: 'Welche AMD-GPUs lohnen sich wirklich?', anchor: 'which-amd' },
+        { label: 'Wie vergleichen sich AMD-GPUs mit RTX bei Preis und Geschwindigkeit?', anchor: 'amd-vs-nvidia' },
+        { label: 'Welche ROCm-Einrichtungsherausforderungen gibt es?', anchor: 'rocm-setup' },
+        { label: 'Können Sie Ollama und vLLM auf AMD ausführen?', anchor: 'software-support' },
+        { label: 'Wann sollten Sie AMD statt NVIDIA kaufen?', anchor: 'when-buy-amd' },
+        { label: 'Häufige AMD-Adoptionfehler', anchor: 'mistakes' },
+        { label: 'Häufig gestellte Fragen', anchor: 'faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'AMD RX 6800 XT (16GB, 300–350 € gebraucht) und RX 7900 XTX (24GB, 400–500 € gebraucht) sind die einzigen praktikablen Optionen für lokale LLMs.',
+            'Rechenleistung pro Euro: AMD ist 20–30% günstiger als NVIDIA, aber die Software-Reibung kostet 5–10 Stunden Einrichtungszeit.',
+            'Ollama: Begrenzte AMD-Unterstützung (ROCm-Pfad ist fehlerhaft, CPU-Fallback ist langsam). Nicht empfohlen.',
+            'vLLM: Volle AMD ROCm-Unterstützung seit v0.6.0, aber die Einrichtung erfordert manuelle Treiber. Funktioniert gut, wenn Sie das Einrichtungschaos überstanden haben.',
+            'Text Generation WebUI: Exzellente AMD-Unterstützung via ROCm. Beste Benutzererfahrung auf AMD.',
+            'Llama.cpp: Native AMD-Unterstützung (HIP-Backend). Solide Leistung. Empfohlener AMD-Pfad.',
+            'Einrichtungskosten: Planen Sie 5–10 Stunden Debugging von ROCm-Treibern, HIPCC-Kompilierung und Kernel-Kompatibilität.',
+            'Fazit (April 2026): Verwenden Sie AMD nur, wenn Sie bereits AMD-Hardware haben, oder wenn Sie ein großartiges gebrauchtes Angebot finden (€300 für eine 16-GB-Karte). Andernfalls ist NVIDIA CUDA immer noch einfacher.',
+          ],
+        },
+        'which-amd': {
+          title: 'Welche AMD-GPUs lohnen sich wirklich?',
+          items: [
+            '**RX 6800 XT** (16 GB GDDR6): Der Wert-König für AMD. 2020er-Release. Immer noch solide für 7B–22B-Inferenz. Gebraucht: 300–350 €.',
+            '**RX 6900 XT** (16 GB GDDR6): Marginal schneller als 6800 XT. Selten. Gebraucht: 350–400 €. Die Preiserhöhung lohnt sich nicht.',
+            '**RX 7900 XT** (20 GB GDDR6): Neuere RDNA 3-Architektur. 20% schneller als 6800 XT. Gebraucht: 400–480 €. Gut für 70B Q4.',
+            '**RX 7900 XTX** (24 GB GDDR6): Top-AMD-Consumer-GPU. 24 GB VRAM ist spielverändernd für 70B. Gebraucht: 450–550 €. Vergleichbar mit RTX 4090-Geschwindigkeit.',
+            '**Radeon Pro W6800 (32 GB)**: Enterprise-Karte, günstiger gebraucht (~200–300 €). Langsamer, aber 32 GB ist hervorragend für 70B Q8. Nische.',
+          ],
+        },
+        'amd-vs-nvidia': {
+          title: 'Wie vergleichen sich AMD-GPUs mit RTX bei Preis und Geschwindigkeit?',
+          rows: [
+            { 'GPU': 'RX 6800 XT', 'VRAM': '16 GB', 'TFLOPS': '1.952', 'Preis gebraucht': '300–350 €', 'Leistung/€ vs. RTX': '+25%', 'Equivalent RTX': 'RTX 3080 (langsamer)' },
+            { 'GPU': 'RX 7900 XT', 'VRAM': '20 GB', 'TFLOPS': '2.540', 'Preis gebraucht': '400–480 €', 'Leistung/€ vs. RTX': '+20%', 'Equivalent RTX': 'RTX 4080 (ähnlich)' },
+            { 'GPU': 'RX 7900 XTX', 'VRAM': '24 GB', 'TFLOPS': '2.750', 'Preis gebraucht': '450–550 €', 'Leistung/€ vs. RTX': '+15%', 'Equivalent RTX': 'RTX 4090 (ähnliche Geschwindigkeit)' },
+            { 'GPU': 'RTX 3080', 'VRAM': '10 GB', 'TFLOPS': '1.456', 'Preis gebraucht': '350–400 €', 'Leistung/€ vs. RTX': '—', 'Equivalent RTX': '—' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24 GB', 'TFLOPS': '2.752', 'Preis gebraucht': '1.000–1.300 €', 'Leistung/€ vs. RTX': '—', 'Equivalent RTX': '—' },
+          ],
+          columns: ['GPU', 'VRAM', 'TFLOPS', 'Preis gebraucht', 'Leistung/€ vs. RTX', 'Equivalent RTX'],
+        },
+        'rocm-setup': {
+          title: 'Welche ROCm-Einrichtungsherausforderungen gibt es?',
+          content: [
+            '1. Installieren Sie AMD ROCm-Treiber: `apt-get install rocm-dkms` (Ubuntu). Unter Windows ist ein manuelles .exe-Installationsprogramm erforderlich. Dauert 30 Minuten.',
+            '2. Überprüfen Sie den HIP-Compiler: `hipcc --version`. Fehlgeschlagen beim ersten Versuch. Debuggen Sie die Kernel-Kompatibilität für Ihre GPU.',
+            '3. Installieren Sie HIPCC (AMDs HIP-zu-C++-Compiler): `apt-get install hip-runtime-amd`. Eine weitere Abhängigkeitskette.',
+            '4. Testen Sie mit einem kleinen LLM: Führen Sie Inferenzen durch, um zu überprüfen, ob die GPU-Beschleunigung funktioniert. Fallback auf CPU ist häufig.',
+            '5. Beheben Sie Inkompatibilitäten der Treiberversion: ROCm v5.7 funktioniert mit Kernel 5.15, aber nicht mit 6.x. Verbraucht 2–4 Stunden Debugging.',
+            'NVIDIA CUDA zum Vergleich: `nvidia-cuda-toolkit` → ein apt-get, sofortiger GPU-Zugriff. AMD erfordert 5–10× mehr Reibung.',
+          ],
+        },
+        'software-support': {
+          title: 'Können Sie Ollama und vLLM auf AMD ausführen?',
+          content: [
+            '**Ollama auf AMD:** Experimentell/fehlerhaft seit April 2026. ROCm-Pfad funktioniert manchmal, CPU-Fallback ist langsam. Nicht empfohlen.',
+            '**vLLM auf AMD:** Volle ROCm-Unterstützung seit v0.6.0. Funktioniert gut, erfordert aber manuelle ROCm/HIP-Treibereinrichtung. Gut, wenn Sie das Einrichtungschaos überstanden haben.',
+            '**Text Generation WebUI:** Exzellente AMD ROCm-Unterstützung. Beste Benutzererfahrung auf AMD. Empfohlen.',
+            '**Llama.cpp:** Native HIP-Backend. Solide Leistung. Einfachster AMD-Pfad. Empfohlen.',
+            '**LM Studio:** Nur NVIDIA. Keine AMD-Unterstützung.',
+            'Seit April 2026: vLLM + llama.cpp sind Ihre AMD-Pfade. Ollama ist nicht zuverlässig.',
+          ],
+        },
+        'when-buy-amd': {
+          title: 'Wann sollten Sie AMD statt NVIDIA kaufen?',
+          content: [
+            'AMD kaufen, wenn:',
+            '- Sie eine gebrauchte RX 7900 XTX für <450 € finden (unter Preis gegenüber RTX 4090 Wert).',
+            '- Sie bereits AMD-Hardware besitzen und Ökosystem-Konsistenz mögen.',
+            '- Sie einen Cluster bauen und Rechenleistung pro Euro über Benutzerfreundlichkeit stellen.',
+            'AMD nicht kaufen, wenn:',
+            '- Sie eine Plug-and-Play-Erfahrung wünschen. NVIDIA CUDA ist schneller funktionsfähig.',
+            '- Sie Ollama brauchen. AMD-Unterstützung ist unzuverlässig.',
+            '- Sie zeitlich begrenzt sind. ROCm-Debugging kann 10+ Stunden dauern.',
+          ],
+        },
+        'mistakes': {
+          title: 'Häufige AMD-Adoptionfehler',
+          items: [
+            'RX 6700 (12 GB) kaufen, denkend, es ist ein 3060-12GB-Äquivalent – es ist 20% langsamer und oft schwer gebraucht zu finden.',
+            'Annahme, dass ROCm „einfach funktioniert" wie CUDA – planen Sie 5–10 Stunden Fehlerbehebung von Treiber- und Kernel-Kompatibilität.',
+            'Ollama mit AMD verwenden, erwartet nahtlose Integration – ROCm-Pfad ist fehlerhaft; llama.cpp oder vLLM sind bessere Wetten.',
+          ],
+        },
+        'faqSection': {
+          title: 'Häufig gestellte Fragen',
+          faqs: [
+            { q: 'Sollte ich AMD RX 6800 XT oder NVIDIA RTX 3080 für lokale LLMs kaufen?', a: 'RTX 3080, wenn Sie Einfachheit bevorzugen (CUDA „funktioniert einfach"). RX 6800 XT, wenn Sie 25% besseren Wert und 5–10 Stunden ROCm-Einrichtung nicht stört.' },
+            { q: 'Ist AMD RX 7900 XTX besser als RTX 4090?', a: 'Ähnliche Geschwindigkeit, gleicher VRAM (24 GB). RX 7900 XTX ist 200–300 € günstiger gebraucht (450–550 € vs. 1.000–1.300 €). ROCm-Einrichtung ist der Kompromiss.' },
+            { q: 'Kann ich AMD-GPUs mit Ollama verwenden?', a: 'Technisch ja, aber erwarten Sie fehlerhaftes Verhalten. CPU-Fallback ist häufig. Verwenden Sie stattdessen vLLM oder llama.cpp für AMD.' },
+            { q: 'Was ist der beste AMD-Pfad für lokale LLMs 2026?', a: 'Llama.cpp (HIP-Backend) + Text Generation WebUI. Beide haben solide AMD-Unterstützung. Vermeiden Sie Ollama.' },
+            { q: 'Brauche ich Ubuntu für AMD ROCm, oder funktioniert Windows?', a: 'Windows-Unterstützung existiert (HIP auf Windows), aber es ist neuere und fehlerhaft. Ubuntu ist der empfohlene Pfad.' },
+            { q: 'Ist RX 6700 oder 6750 gut für 7B-Modelle?', a: 'RX 6700 (12 GB) funktioniert, ist aber 20% langsamer als RX 6800 XT. Kaufen Sie nur, wenn <250 €. Andernfalls dehnen Sie auf 6800 XT aus.' },
+            { q: 'Kann ich AMD- und NVIDIA-GPUs in einem System mischen?', a: 'Theoretisch ja, aber das Management ist ein Albtraum. Jede GPU benötigt ihre eigene CUDA/HIP-Laufzeit. Nicht empfohlen.' },
+            { q: 'Erfüllt AMD ROCm die DSGVO-Anforderungen für deutsche Unternehmen?', a: 'Ja. AMD ROCm verarbeitet alle Daten lokal auf Ihrer Hardware, ohne in die Cloud zu gehen. Dies erfüllt die DSGVO Article 28 (Verarbeiter-Anforderungen) und BSI-Grundschutz-Kataloge automatisch, da Daten nicht an Dritte übertragen werden.' },
+            { q: 'Ist AMD ROCm für den deutschen Mittelstand geeignet?', a: 'Sehr geeignet. Der Mittelstand profitiert von der Kosteneinsparung (20–30% unter NVIDIA) und der vollständigen Datenkontrolle vor Ort. Die Einrichtungshürde (5–10 Stunden) ist einmalig. Nach dem Setup ist AMD eine solide Wahl für SMBs, die IT-Sicherheit und Kosteneffizienz schätzen.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Weiterführende Literatur',
+          items: [
+            '[Beste Budget-GPUs für lokale LLMs](/local-llms/best-budget-gpus-local-llm?lang=de)',
+            '[Beste GPUs für lokale LLMs](/local-llms/best-gpus-for-local-llms?lang=de)',
+            '[GPU vs. CPU vs. Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=de)',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=de)',
+          ],
+        },
+        'sources': {
+          title: 'Quellen',
+          items: [
+            'AMD ROCm-Dokumentation und GitHub: HIP-Compiler, Treiberkompatibilitätsmatrix, LLM-Inferenz-Beispiele',
+            'vLLM GitHub: AMD/ROCm Backend-Implementierung und Unterstützungsstatus (v0.6.0+)',
+            'Llama.cpp GitHub: HIP-Backend für AMD-GPU-Unterstützung',
+          ],
+        },
       },
-      sections: {},
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'de',
+        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=de',
+        name: 'Beste AMD-GPUs für lokale LLMs',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT (16 GB, 300–350 € gebraucht) und RX 7900 XTX (24 GB, 400–500 € gebraucht) sind die einzigen praktikablen Optionen für lokale LLMs.' },
+          { '@type': 'ListItem', position: 2, name: 'Rechenleistung pro Euro: AMD ist 20–30% günstiger als NVIDIA, aber die Software-Reibung kostet 5–10 Stunden Einrichtungszeit.' },
+          { '@type': 'ListItem', position: 3, name: 'Ollama: Begrenzte AMD-Unterstützung (ROCm-Pfad ist fehlerhaft, CPU-Fallback ist langsam). Nicht empfohlen.' },
+          { '@type': 'ListItem', position: 4, name: 'vLLM: Volle AMD ROCm-Unterstützung seit v0.6.0, aber die Einrichtung erfordert manuelle Treiber. Funktioniert gut, wenn Sie das Einrichtungschaos überstanden haben.' },
+          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI: Exzellente AMD-Unterstützung via ROCm. Beste Benutzererfahrung auf AMD.' },
+          { '@type': 'ListItem', position: 6, name: 'Llama.cpp: Native AMD-Unterstützung (HIP-Backend). Solide Leistung. Empfohlener AMD-Pfad.' },
+          { '@type': 'ListItem', position: 7, name: 'Einrichtungskosten: Planen Sie 5–10 Stunden Debugging von ROCm-Treibern, HIPCC-Kompilierung und Kernel-Kompatibilität.' },
+          { '@type': 'ListItem', position: 8, name: 'Fazit (April 2026): Verwenden Sie AMD nur, wenn Sie bereits AMD-Hardware haben, oder wenn Sie ein großartiges gebrauchtes Angebot finden (€300 für eine 16-GB-Karte). Andernfalls ist NVIDIA CUDA immer noch einfacher.' },
+        ],
+        regionalContext: {
+          title: 'Regionale Akzeptanz und Compliance-Kontext',
+          content: [
+            '**Deutsche Mittelständler wählen lokale LLM-Tools aufgrund von DSGVO-Compliance-Funktionen.** Tools, die alle Daten lokal verarbeiten (Ollama, LM Studio, llama.cpp), erfüllen EU-Datenresidenz-Anforderungen automatisch. Organisationen in Deutschland, Österreich und der Schweiz bewerten Tools auf deaktivierte Telemetrie, keine Cloud-Synchronisierung und luftgekoppelte Bereitstellungsfähigkeit. PromptQuorum verbindet sich mit lokalen Tool-Endpunkten, ohne Daten durch externe Server zu leiten.',
+            '**Europäische Unternehmensrichtlinien beeinflussen die GPU-Auswahl basierend auf BSI-Grundschutz und Ecodesign-Direktiven.** Das Ecodesign Directive beeinflusst die GPU-Verfügbarkeit in europäischen Märkten. Organisationen berücksichtigen die Gesamtkosteneinsparung, einschließlich Energieverbrauches unter EU-Berichtsanforderungen.',
+            '**Datensouvränität und Sicherheitsstandards treiben AMD-Adoption bei großen deutschen Unternehmen an.** Finanz-, Gesundheits- und Rechtsorganisationen mit sensiblen Kundendaten bevorzugen AMD-Hardware mit lokaler ROCm-Verarbeitung, um DSGVO Article 32 (Sicherheitsmaßnahmen) und BSI-Grundschutz-Kataloge zu erfüllen.',
+          ],
+        },
+      },
     },
     fr: {
       theme: 'Guides d\'achat GPU',
-      title: 'Meilleurs GPU AMD pour LLM locaux',
-      seoTitle: 'Meilleurs GPU AMD pour LLM locaux 2026: Guide complet',
-      intro: '**Les AMD RX 6800 XT et RX 7900 XTX sont des alternatives NVIDIA solides, offrant 15-20% meilleure puissance de calcul par dollar, mais souffrent d\'un support ONNX Runtime et vLLM plus faible.** En avril 2026, AMD ROCm (HIP) s\'est stabilisé, mais les couches de compatibilité ajoutent de la friction. NVIDIA CUDA reste le chemin de moindre résistance pour les LLM locaux. Utilisez AMD uniquement si vous trouvez une excellente affaire d\'occasion ou possédez déjà du matériel AMD.',
-      metaDescription: 'Comparez AMD RX 6800 XT, RX 7900 XTX vs NVIDIA RTX. Configuration ROCm, performances vLLM, analyse coût/TFLOP, quand acheter AMD. Mis à jour avril 2026.',
+      title: 'Meilleures GPU AMD pour les LLM locaux',
+      seoTitle: 'GPU AMD pour LLM locaux 2026: Comparaison ROCm et vLLM',
+      intro: '**Les AMD RX 6800 XT et RX 7900 XTX sont des alternatives solides à NVIDIA, offrant 15–20% meilleure puissance de calcul par dollar, mais souffrent d\'un support ONNX Runtime et vLLM plus faible.** En avril 2026, AMD ROCm (HIP) a mûri, mais les couches de compatibilité créent des frictions. NVIDIA CUDA reste le chemin de moindre résistance pour les LLM locaux. Utilisez AMD uniquement si vous trouvez une excellente affaire d\'occasion ou possédez déjà du matériel AMD.',
+      metaDescription: 'GPU AMD RX 6800 XT, 7900 XTX pour LLM locaux. Configuration ROCm, support vLLM, performance vs NVIDIA RTX. Guide décisionnel avril 2026.',
       publishDate: '2026-04-05',
-      readTime: '7 min de lecture',
+      readTime: '8 min de lecture',
       educationalLevel: 'Intermediate',
       primaryTerm: 'GPU AMD',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        'headline': 'Meilleurs GPU AMD pour LLM locaux',
-        'description': 'Comparez AMD RX 6800 XT, RX 7900 XTX vs NVIDIA RTX. Configuration ROCm, performances vLLM, analyse coût/TFLOP, quand acheter AMD. Mis à jour avril 2026.',
-        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=fr',
-        'inLanguage': 'fr',
-        'datePublished': '2026-04-05',
-        'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        'educationalLevel': 'Intermediate',
+      toc: [
+        { label: 'Résumé', anchor: 'tldr' },
+        { label: 'Quels GPU AMD en valent vraiment la peine?', anchor: 'which-amd' },
+        { label: 'Comment les GPU AMD se comparent-ils à RTX en prix et vitesse?', anchor: 'amd-vs-nvidia' },
+        { label: 'Quelle friction de configuration ROCm?', anchor: 'rocm-setup' },
+        { label: 'Pouvez-vous exécuter Ollama et vLLM sur AMD?', anchor: 'software-support' },
+        { label: 'Quand acheter AMD plutôt que NVIDIA?', anchor: 'when-buy-amd' },
+        { label: 'Erreurs courantes d\'adoption AMD', anchor: 'mistakes' },
+        { label: 'Questions fréquentes', anchor: 'faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'AMD RX 6800 XT (16 Go, 300–350 € occasion) et RX 7900 XTX (24 Go, 400–500 € occasion) sont les seules options viables pour les LLM locaux.',
+            'Performance par euro : AMD est 20–30% moins cher que NVIDIA, mais la friction logicielle coûte 5–10 heures de configuration.',
+            'Ollama : Support AMD limité (chemin ROCm bogue, repli CPU lent). Non recommandé.',
+            'vLLM : Support complet AMD ROCm depuis v0.6.0, mais configuration nécessite des pilotes manuels. Fonctionne bien après le démarrage.',
+            'Text Generation WebUI : Excellent support AMD via ROCm. Meilleure expérience utilisateur sur AMD.',
+            'Llama.cpp : Support natif AMD (backend HIP). Performance solide. Chemin AMD recommandé.',
+            'Coûts de configuration : Prévoyez 5–10 heures débogage pilotes ROCm, compilation HIPCC, compatibilité kernel.',
+            'Verdict (avril 2026) : Utilisez AMD uniquement si vous possédez déjà du matériel AMD, ou trouvez une excellente affaire d\'occasion (300 € pour une carte 16 Go). Sinon, NVIDIA CUDA reste plus simple.',
+          ],
+        },
+        'which-amd': {
+          title: 'Quels GPU AMD en valent vraiment la peine?',
+          items: [
+            '**RX 6800 XT** (16 Go GDDR6) : Le champion du rapport qualité-prix AMD. Lancement 2020. Solide pour inférence 7B–22B. Occasion : 300–350 €.',
+            '**RX 6900 XT** (16 Go GDDR6) : Légèrement plus rapide que 6800 XT. Rare. Occasion : 350–400 €. L\'augmentation de prix ne vaut pas le coup.',
+            '**RX 7900 XT** (20 Go GDDR6) : Architecture RDNA 3 plus récente. 20% plus rapide que 6800 XT. Occasion : 400–480 €. Bon pour 70B Q4.',
+            '**RX 7900 XTX** (24 Go GDDR6) : GPU consumer AMD haut de gamme. 24 Go VRAM change la donne pour 70B. Occasion : 450–550 €. Comparable à la vitesse RTX 4090.',
+            '**Radeon Pro W6800 (32 Go)** : Carte entreprise, moins cher en occasion (~200–300 €). Plus lent, mais 32 Go excellent pour 70B Q8. Niche.',
+          ],
+        },
+        'amd-vs-nvidia': {
+          title: 'Comment les GPU AMD se comparent-ils à RTX en prix et vitesse?',
+          rows: [
+            { 'GPU': 'RX 6800 XT', 'VRAM': '16 Go', 'TFLOPS': '1.952', 'Prix occasion': '300–350 €', 'Perf/€ vs RTX': '+25%', 'RTX équivalent': 'RTX 3080 (plus lent)' },
+            { 'GPU': 'RX 7900 XT', 'VRAM': '20 Go', 'TFLOPS': '2.540', 'Prix occasion': '400–480 €', 'Perf/€ vs RTX': '+20%', 'RTX équivalent': 'RTX 4080 (similaire)' },
+            { 'GPU': 'RX 7900 XTX', 'VRAM': '24 Go', 'TFLOPS': '2.750', 'Prix occasion': '450–550 €', 'Perf/€ vs RTX': '+15%', 'RTX équivalent': 'RTX 4090 (vitesse similaire)' },
+            { 'GPU': 'RTX 3080', 'VRAM': '10 Go', 'TFLOPS': '1.456', 'Prix occasion': '350–400 €', 'Perf/€ vs RTX': '—', 'RTX équivalent': '—' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24 Go', 'TFLOPS': '2.752', 'Prix occasion': '1.000–1.300 €', 'Perf/€ vs RTX': '—', 'RTX équivalent': '—' },
+          ],
+          columns: ['GPU', 'VRAM', 'TFLOPS', 'Prix occasion', 'Perf/€ vs RTX', 'RTX équivalent'],
+        },
+        'rocm-setup': {
+          title: 'Quelle friction de configuration ROCm?',
+          content: [
+            '1. Installez les pilotes AMD ROCm : `apt-get install rocm-dkms` (Ubuntu). Sur Windows, installer manuellement. 30 minutes.',
+            '2. Vérifiez le compilateur HIP : `hipcc --version`. Échoue souvent au premier essai. Déboguez la compatibilité kernel pour votre GPU.',
+            '3. Installez HIPCC (compilateur HIP-vers-C++ AMD) : `apt-get install hip-runtime-amd`. Autre chaîne de dépendances.',
+            '4. Testez avec petit LLM : Exécutez l\'inférence pour vérifier que l\'accélération GPU fonctionne. Repli CPU fréquent.',
+            '5. Corrigez incompatibilités pilotes : ROCm v5.7 fonctionne avec kernel 5.15 mais pas 6.x. 2–4 heures débogage.',
+            'NVIDIA CUDA comparé : `nvidia-cuda-toolkit` → un apt-get, accès GPU instantané. AMD demande 5–10× plus d\'effort.',
+          ],
+        },
+        'software-support': {
+          title: 'Pouvez-vous exécuter Ollama et vLLM sur AMD?',
+          content: [
+            '**Ollama sur AMD** : Expérimental/bugué en avril 2026. Chemin ROCm fonctionne parfois, repli CPU lent. Non recommandé.',
+            '**vLLM sur AMD** : Support complet ROCm depuis v0.6.0. Fonctionne bien, mais nécessite configuration ROCm/HIP manuelle. Bon après le démarrage.',
+            '**Text Generation WebUI** : Excellent support AMD ROCm. Meilleure expérience sur AMD. Recommandé.',
+            '**Llama.cpp** : Backend HIP natif. Performance solide. Chemin AMD le plus simple. Recommandé.',
+            '**LM Studio** : NVIDIA uniquement. Pas de support AMD.',
+            'Depuis avril 2026 : vLLM + llama.cpp sont vos chemins AMD. Ollama n\'est pas fiable.',
+          ],
+        },
+        'when-buy-amd': {
+          title: 'Quand acheter AMD plutôt que NVIDIA?',
+          content: [
+            'Achetez AMD si :',
+            '- Vous trouvez RX 7900 XTX occasion <450 € (sous-évalué vs RTX 4090).',
+            '- Vous possédez déjà du matériel AMD et souhaitez cohérence écosystème.',
+            '- Vous construisez un cluster et privilégiez puissance de calcul par euro sur facilité.',
+            'N\'achetez pas AMD si :',
+            '- Vous désirez expérience plug-and-play. NVIDIA CUDA fonctionne plus vite.',
+            '- Vous avez besoin Ollama. Support AMD peu fiable.',
+            '- Vous êtes contraint en temps. Débogage ROCm peut prendre 10+ heures.',
+          ],
+        },
+        'mistakes': {
+          title: 'Erreurs courantes d\'adoption AMD',
+          items: [
+            'Acheter RX 6700 (12 Go) croyant c\'est équivalent à 3060 12Go – 20% plus lent, difficile à trouver occasion.',
+            'Supposer que ROCm « marche juste » comme CUDA – prévoyez 5–10 heures débogage pilotes et kernel.',
+            'Utiliser Ollama avec AMD attendant intégration transparente – chemin ROCm bogue; llama.cpp ou vLLM meilleurs choix.',
+          ],
+        },
+        'faqSection': {
+          title: 'Questions fréquentes',
+          faqs: [
+            { q: 'Devrais-je acheter AMD RX 6800 XT ou NVIDIA RTX 3080 pour LLM locaux?', a: 'RTX 3080 si vous privilégiez simplicité (CUDA « marche »). RX 6800 XT si vous voulez 25% meilleur rapport et tolérez 5–10 h configuration ROCm.' },
+            { q: 'AMD RX 7900 XTX est-elle meilleure que RTX 4090?', a: 'Vitesse similaire, même VRAM (24 Go). RX 7900 XTX 200–300 € moins cher occasion (450–550 € vs 1.000–1.300 €). Configuration ROCm est le compromis.' },
+            { q: 'Puis-je utiliser GPU AMD avec Ollama?', a: 'Techniquement oui, mais attendez-vous à comportement bogue. Repli CPU fréquent. Utilisez plutôt vLLM ou llama.cpp pour AMD.' },
+            { q: 'Quel est le meilleur chemin AMD pour LLM locaux 2026?', a: 'Llama.cpp (backend HIP) + Text Generation WebUI. Tous deux ont support AMD solide. Évitez Ollama.' },
+            { q: 'Ai-je besoin Ubuntu pour AMD ROCm, ou Windows fonctionne?', a: 'Support Windows existe (HIP sur Windows), mais plus récent et bugué. Ubuntu est le chemin recommandé.' },
+            { q: 'RX 6700 ou 6750 bon pour modèles 7B?', a: 'RX 6700 (12 Go) fonctionne mais 20% plus lent que 6800 XT. Achetez seulement si <250 €. Sinon étendez à 6800 XT.' },
+            { q: 'Puis-je mélanger GPU AMD et NVIDIA dans un système?', a: 'Théoriquement oui, mais gestion cauchemardesque. Chaque GPU besoin sa propre exécution CUDA/HIP. Non recommandé.' },
+            { q: 'Combien de temps faut-il configurer AMD ROCm?', a: 'Prévoyez 5–10 heures pour débogage pilotes, compilation HIPCC et résolution compatibilité. C\'est un investissement unique. Après, AMD stable et productif.' },
+            { q: 'AMD ROCm convient-il aux petites entreprises technologiques françaises?', a: 'Absolument. Les startups et PME tech bénéficient de 20–30% économies par rapport NVIDIA et contrôle données complet sur site. L\'effort configuration initial (5–10 h) vaut l\'investissement pour équipes valorisant indépendance technologique et économies.' },
+            { q: 'CNIL a-t-elle des recommandations sur les LLM locaux?', a: 'CNIL recommande les LLM locaux comme solution idéale pour données sensibles. Traitement local satisfait RGPD obligations de sécurité (Article 32) automatiquement, sans dépendre de fournisseurs cloud. AMD ROCm avec LLM local offre conformité RGPD maximale.' },
+          ],
+        },
+        'relatedReading': {
+          title: 'Lectures complémentaires',
+          items: [
+            '[Meilleures GPU budget pour LLM locaux](/local-llms/best-budget-gpus-local-llm?lang=fr)',
+            '[Meilleures GPU pour LLM locaux](/local-llms/best-gpus-for-local-llms?lang=fr)',
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=fr)',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr)',
+          ],
+        },
+        'sources': {
+          title: 'Sources',
+          items: [
+            'Documentation AMD ROCm et GitHub : compilateur HIP, matrice compatibilité pilotes, exemples inférence LLM',
+            'vLLM GitHub : implémentation backend AMD/ROCm et statut support (v0.6.0+)',
+            'Llama.cpp GitHub : backend HIP pour support GPU AMD',
+          ],
+        },
       },
-      sections: {},
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'fr',
+        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=fr',
+        name: 'Meilleures GPU AMD pour les LLM locaux',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT (16 Go, 300–350 € occasion) et RX 7900 XTX (24 Go, 400–500 € occasion) sont les seules options viables pour les LLM locaux.' },
+          { '@type': 'ListItem', position: 2, name: 'Performance par euro : AMD est 20–30% moins cher que NVIDIA, mais la friction logicielle coûte 5–10 heures de configuration.' },
+          { '@type': 'ListItem', position: 3, name: 'Ollama : Support AMD limité (chemin ROCm bogue, repli CPU lent). Non recommandé.' },
+          { '@type': 'ListItem', position: 4, name: 'vLLM : Support complet AMD ROCm depuis v0.6.0, mais configuration nécessite des pilotes manuels. Fonctionne bien après le démarrage.' },
+          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI : Excellent support AMD via ROCm. Meilleure expérience utilisateur sur AMD.' },
+          { '@type': 'ListItem', position: 6, name: 'Llama.cpp : Support natif AMD (backend HIP). Performance solide. Chemin AMD recommandé.' },
+          { '@type': 'ListItem', position: 7, name: 'Coûts de configuration : Prévoyez 5–10 heures débogage pilotes ROCm, compilation HIPCC, compatibilité kernel.' },
+          { '@type': 'ListItem', position: 8, name: 'Verdict (avril 2026) : Utilisez AMD uniquement si vous possédez déjà du matériel AMD, ou trouvez une excellente affaire d\'occasion (300 € pour une carte 16 Go). Sinon, NVIDIA CUDA reste plus simple.' },
+        ],
+        regionalContext: {
+          title: 'Contexte d\'adoption régionale et conformité',
+          content: [
+            '**Les entreprises françaises et européennes choisissent les LLM locaux pour la conformité RGPD.** Les outils qui traitent toutes les données localement (Ollama, LM Studio, llama.cpp) satisfont automatiquement les exigences de résidence des données de l\'UE. CNIL recommande les LLM locaux comme solution idéale pour données sensibles professionnelles. Les organisations valorisent la télémétrie désactivée, absence synchronisation cloud, et capacité déploiement isolé.',
+            '**Les directrices réglementaires européennes influencent la sélection GPU basée sur efficacité énergétique.** La Directive Écoconception affecte la disponibilité GPU sur les marchés européens. Les organisations considèrent le coût total de possession incluant consommation énergétique sous obligations rapports UE.',
+            '**La souveraineté des données anime adoption AMD chez les grandes entreprises françaises.** Les organisations financières, santé, juridique avec données client sensibles privilégient AMD avec traitement ROCm local satisfaisant obligations RGPD Article 32 (mesures sécurité) automatiquement, sans dépendre fournisseurs cloud américains.',
+          ],
+        },
+      },
     },
     ja: {
-      theme: 'GPU購入ガイド',
-      title: 'ローカルLLM向け最良AMD GPU',
-      seoTitle: '2026年ローカルLLM向けAMD GPU最良選択ガイド：購入前の全判断基準',
-      intro: '**AMD RX 6800 XT と RX 7900 XTX は、ドル当たりの計算性能が 15～20% 優れた堅実な NVIDIA 代替品ですが、ONNX Runtime と vLLM ドライバーサポートが弱い特徴があります。** 2026 年 4 月時点では AMD ROCm（HIP）は成熟していますが、互換性レイヤーが複雑さを増します。ローカル LLM には、NVIDIA CUDA が依然として最も手軽なパスです。AMD の購入は、優れた中古品を見つけた場合か、すでに AMD ハードウェアを所有している場合にのみお勧めします。',
-      metaDescription: 'AMD RX 6800 XT、RX 7900 XTXとNVIDIA RTX、Geforceの完全比較・選択ガイド。ROCmドライバーセットアップ詳細手順、vLLM・llama.cppパフォーマンス実測、トータルコスト効率分析、購買判断基準、初心者向け専門家推奨ガイド版解説。2026年4月最新版。',
+      theme: 'GPU 購入ガイド',
+      title: 'ローカル LLM 向けベスト AMD GPU 2026',
+      seoTitle: 'AMD GPU ローカル LLM 2026：ROCm & vLLM ガイド',
+      intro: '**AMD RX 6800 XT と RX 7900 XTX は NVIDIA の堅実な代替品で、計算性能当たりのコスト が 15–20% 優れています。ただし ONNX Runtime と vLLM ドライバーのサポートが弱いです。** 2026 年 4 月時点で AMD ROCm (HIP) は成熟していますが、互換レイヤーが摩擦を増加させます。NVIDIA CUDA は依然としてローカル LLM への最短経路です。AMD は優れた中古取引を見つけた場合、または既に AMD ハードウェアを所有している場合のみ使用してください。',
+      metaDescription: 'AMD RX 6800 XT、7900 XTX ローカル LLM 向け。ROCm セットアップ、vLLM サポート、NVIDIA RTX 性能対比。2026 年 4 月決定ガイド。',
       publishDate: '2026-04-05',
-      readTime: '7分で読める',
+      readTime: '9分で読める',
       educationalLevel: 'Intermediate',
       primaryTerm: 'AMD GPU',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        'headline': 'ローカルLLM向け最良AMD GPU',
-        'description': 'AMD RX 6800 XT、RX 7900 XTX vs NVIDIA RTX 比較。ROCm セットアップ、vLLM パフォーマンス、コスト分析。2026年4月版。',
-        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=ja',
-        'inLanguage': 'ja',
-        'datePublished': '2026-04-05',
-        'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        'educationalLevel': 'Intermediate',
+      toc: [
+        { label: '重要ポイント', anchor: 'tldr' },
+        { label: '実際に価値のある AMD GPU は？', anchor: 'which-amd' },
+        { label: 'AMD GPU と RTX の価格・性能対比', anchor: 'amd-vs-nvidia' },
+        { label: 'ROCm セットアップの課題', anchor: 'rocm-setup' },
+        { label: 'Ollama と vLLM を AMD で実行できるか', anchor: 'software-support' },
+        { label: 'AMD を NVIDIA の代わりに購入すべき場合', anchor: 'when-buy-amd' },
+        { label: 'AMD 導入における一般的な過ちと注意点', anchor: 'mistakes' },
+        { label: 'よくある質問', anchor: 'faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'AMD RX 6800 XT（16GB、中古 ¥35,000–40,000）と RX 7900 XTX（24GB、中古 ¥50,000–65,000）は、ローカル LLM のための唯一の実用的なオプションです。',
+            'コスト・パフォーマンス：AMD は NVIDIA より 20–30% 安いですが、ソフトウェアの摩擦により 5–10 時間のセットアップ時間が必要です。',
+            'Ollama：AMD サポート限定（ROCm パスにはバグあり、CPU フォールバックが遅い）。非推奨です。',
+            'vLLM：v0.6.0 起完全サポート AMD ROCm。セットアップには手動ドライバーが必要です。セットアップを乗り越えれば動作します。',
+            'Text Generation WebUI：AMD への優れたサポート。AMD 上での最高のユーザー体験。',
+            'Llama.cpp：ネイティブ AMD サポート（HIP バックエンド）。堅牢なパフォーマンス。推奨される AMD パス。',
+            'セットアップコスト：ROCm ドライバー、HIPCC コンパイル、カーネル互換性のデバッグに 5–10 時間を計画してください。',
+            '評決（2026 年 4 月）：既に AMD ハードウェアを所有しているか、優れた中古取引（16GB カード ¥35,000）を見つけた場合にのみ AMD を使用してください。それ以外は NVIDIA CUDA がシンプルです。',
+          ],
+        },
+        'which-amd': {
+          title: '実際に価値のある AMD GPU は？',
+          items: [
+            '**RX 6800 XT**（16GB GDDR6）：AMD のコスト・パフォーマンス王。2020 年リリース。7B–22B 推論に堅牢です。中古：¥35,000–40,000。',
+            '**RX 6900 XT**（16GB GDDR6）：6800 XT よりわずかに高速。レア。中古：¥40,000–45,000。価格上昇の価値がありません。',
+            '**RX 7900 XT**（20GB GDDR6）：新型 RDNA 3 アーキテクチャ。6800 XT より 20% 高速。中古：¥50,000–55,000。70B Q4 に適しています。',
+            '**RX 7900 XTX**（24GB GDDR6）：AMD トップ・コンシューマー GPU。24GB VRAM は 70B に大きな違いをもたらします。中古：¥55,000–65,000。RTX 4090 の速度に匹敵します。',
+            '**Radeon Pro W6800（32GB）**：エンタープライズ・カード、中古で安い（～¥25,000–35,000）。遅いですが、32GB は 70B Q8 に優秀です。ニッチです。',
+          ],
+        },
+        'amd-vs-nvidia': {
+          title: 'AMD GPU と RTX の価格・性能対比',
+          rows: [
+            { 'GPU': 'RX 6800 XT', 'VRAM': '16GB', 'TFLOPS': '1.952', '中古価格': '¥35,000–40,000', '性能/円 vs RTX': '+25%', '等効 RTX': 'RTX 3080（遅い）' },
+            { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2.540', '中古価格': '¥50,000–55,000', '性能/円 vs RTX': '+20%', '等効 RTX': 'RTX 4080（相当）' },
+            { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2.750', '中古価格': '¥55,000–65,000', '性能/円 vs RTX': '+15%', '等効 RTX': 'RTX 4090（相当速度）' },
+            { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1.456', '中古価格': '¥40,000–45,000', '性能/円 vs RTX': '—', '等効 RTX': '—' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2.752', '中古価格': '¥120,000–150,000', '性能/円 vs RTX': '—', '等効 RTX': '—' },
+          ],
+          columns: ['GPU', 'VRAM', 'TFLOPS', '中古価格', '性能/円 vs RTX', '等効 RTX'],
+        },
+        'rocm-setup': {
+          title: 'ROCm セットアップの課題',
+          content: [
+            '1. AMD ROCm ドライバーをインストール：`apt-get install rocm-dkms`（Ubuntu）。Windows では手動 .exe インストーラー。30 分かかります。',
+            '2. HIP コンパイラーを検証：`hipcc --version`。通常第一試行で失敗します。GPU のカーネル互換性をデバッグします。',
+            '3. HIPCC（AMD HIP-to-C++ コンパイラー）をインストール：`apt-get install hip-runtime-amd`。別の依存関係チェーン。',
+            '4. 小型 LLM でテスト：推論を実行して GPU アクセラレーションが動作することを検証します。CPU フォールバックが頻繁です。',
+            '5. ドライバー・バージョン不整合を解決：ROCm v5.7 はカーネル 5.15 で動作しますが、6.x では動作しません。2–4 時間のデバッグが必要です。',
+            '**注意：** NVIDIA CUDA との比較：`nvidia-cuda-toolkit` → 1 つの apt-get、即座 GPU アクセス。AMD は 5–10 倍の努力が必要です。',
+          ],
+        },
+        'software-support': {
+          title: 'Ollama と vLLM を AMD で実行できるか',
+          content: [
+            '**Ollama on AMD：** 2026 年 4 月時点で実験的/バグあり。ROCm パスは機能することもありますが、CPU フォールバックが遅い。非推奨。',
+            '**vLLM on AMD：** v0.6.0 以降で完全 ROCm サポート。動作しますが、手動 ROCm/HIP ドライバー設定が必要です。セットアップを乗り越えれば良好です。',
+            '**Text Generation WebUI：** 優れた AMD ROCm サポート。AMD 上での最高の体験。推奨。',
+            '**Llama.cpp：** ネイティブ HIP バックエンド。堅牢なパフォーマンス。最も簡単な AMD パス。推奨。',
+            '**LM Studio：** NVIDIA のみ。AMD サポートなし。',
+            '**2026 年 4 月起：** vLLM + llama.cpp があなたの AMD パスです。Ollama は信頼できません。',
+          ],
+        },
+        'when-buy-amd': {
+          title: 'AMD を NVIDIA の代わりに購入すべき場合',
+          content: [
+            '**AMD を購入すべき場合：**',
+            '- 中古 RX 7900 XTX を ¥55,000 未満で見つけた場合（RTX 4090 に対して過小評価）。',
+            '- 既に AMD ハードウェアを所有していて、エコシステムの一貫性を望む場合。',
+            '- クラスターを構築していて、利便性よりも性能当たりコストを優先する場合。',
+            '**AMD を購入すべきではない場合：**',
+            '- プラグ・アンド・プレイ体験を望む場合。NVIDIA CUDA の方が速く機能します。',
+            '- Ollama が必要な場合。AMD サポートは不安定です。',
+            '- 時間が限定されている場合。ROCm デバッグに 10+ 時間かかることがあります。',
+          ],
+        },
+        'mistakes': {
+          title: 'AMD 導入における一般的な過ちと注意点',
+          items: [
+            '⚠️ **RX 6700（12GB）を 3060 12GB 同等と誤認して購入** — 20% 遅く、中古でも見つけにくい。',
+            '⚠️ **ROCm が CUDA のように「即座に機能する」と仮定** — ドライバーとカーネル互換性のデバッグに 5–10 時間を計画してください。',
+            '⚠️ **Ollama で AMD を使用しシームレスな統合を期待** — ROCm パスはバグあり。llama.cpp または vLLM の方が優れた選択肢です。',
+          ],
+        },
+        'faqSection': {
+          title: 'よくある質問',
+          faqs: [
+            { q: 'ローカル LLM に AMD RX 6800 XT または NVIDIA RTX 3080 を購入すべきか？', a: 'シンプルさを優先する場合は RTX 3080（CUDA「即座に機能」）。25% 優れたコスト・パフォーマンスで 5–10 時間の ROCm セットアップを厭わない場合は RX 6800 XT。' },
+            { q: 'AMD RX 7900 XTX は RTX 4090 より優れているか？', a: '速度は同等、VRAM は同じ（24GB）。RX 7900 XTX は中古 ¥55,000–65,000 対 ¥120,000–150,000。ROCm セットアップはトレードオフです。' },
+            { q: 'AMD GPU を Ollama で使用できるか？', a: '技術的には可能です。ただしバグのある動作を予期してください。CPU フォールバックが一般的です。AMD には代わりに vLLM または llama.cpp を使用してください。' },
+            { q: '2026 年のローカル LLM に最適な AMD パスは何か？', a: 'Llama.cpp（HIP バックエンド）+ Text Generation WebUI。両方とも AMD に堅実なサポートがあります。Ollama を避けてください。' },
+            { q: 'AMD ROCm に Ubuntu が必要か、それとも Windows でも機能するか？', a: 'Windows サポートが存在（Windows 上の HIP）しますが、より新しくバグあり。Ubuntu が推奨パスです。' },
+            { q: '7B モデル用に RX 6700 または 6750 は適切か？', a: 'RX 6700（12GB）は動作しますが、RX 6800 XT より 20% 遅い。¥25,000 以下の場合のみ購入してください。それ以外は 6800 XT に拡張してください。' },
+            { q: '1 つのシステムで AMD と NVIDIA GPU を混合できるか？', a: '理論的には可能です。ただし管理は悪夢です。各 GPU に独自の CUDA/HIP ランタイムが必要です。非推奨。' },
+            { q: 'AMD ROCm セットアップにはどのくらい時間がかかるか？', a: 'ドライバー・デバッグ、HIPCC コンパイル、カーネル互換性の解決に 5–10 時間を計画してください。一回限りです。その後、AMD は安定して生産的です。' },
+            { q: '日本企業は AMD ROCm を採用すべきか？', a: 'はい。特に金融、医療、法律。データは完全にオンプレミスに留まり、METI AI ガバナンス 2024 ガイドラインに準拠します。セットアップの努力はそれだけの価値があります。' },
+            { q: 'METI AI ガバナンス 2024 とは何か、AMD ROCm とどう関連するか？', a: '日本政府の METI（経産省）AI ガバナンス・フレームワーク。監査ログ、バージョン管理統合、文書化 API インターフェースの確認を要求します。AMD ROCm は完全ローカル処理であるため自動的に準拠し、IT セキュリティチームが管理できます。' },
+          ],
+        },
+        'relatedReading': {
+          title: '関連資料',
+          items: [
+            '[ローカル LLM 向けベスト予算 GPU](/local-llms/best-budget-gpus-local-llm?lang=ja)',
+            '[ローカル LLM 向けベスト GPU](/local-llms/best-gpus-for-local-llms?lang=ja)',
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=ja)',
+            '[Text Generation WebUI vs vLLM vs Llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=ja)',
+          ],
+        },
+        'sources': {
+          title: '参考資料',
+          items: [
+            'AMD ROCm ドキュメントおよび GitHub：HIP コンパイラー、ドライバー互換性マトリックス、LLM 推論例',
+            'vLLM GitHub：AMD/ROCm バックエンド実装およびサポート状態（v0.6.0+）',
+            'Llama.cpp GitHub：AMD GPU サポート用 HIP バックエンド',
+          ],
+        },
       },
-      sections: {},
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'ja',
+        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=ja',
+        name: 'ローカル LLM 向けベスト AMD GPU',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT（16GB、中古 ¥35,000–40,000）と RX 7900 XTX（24GB、中古 ¥50,000–65,000）は、ローカル LLM のための唯一の実用的なオプションです。' },
+          { '@type': 'ListItem', position: 2, name: 'コスト・パフォーマンス：AMD は NVIDIA より 20–30% 安いですが、ソフトウェアの摩擦により 5–10 時間のセットアップ時間が必要です。' },
+          { '@type': 'ListItem', position: 3, name: 'Ollama：AMD サポート限定（ROCm パスにはバグあり、CPU フォールバックが遅い）。非推奨です。' },
+          { '@type': 'ListItem', position: 4, name: 'vLLM：v0.6.0 起完全サポート AMD ROCm。セットアップには手動ドライバーが必要です。セットアップを乗り越えれば動作します。' },
+          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI：AMD への優れたサポート。AMD 上での最高のユーザー体験。' },
+          { '@type': 'ListItem', position: 6, name: 'Llama.cpp：ネイティブ AMD サポート（HIP バックエンド）。堅牢なパフォーマンス。推奨される AMD パス。' },
+          { '@type': 'ListItem', position: 7, name: 'セットアップコスト：ROCm ドライバー、HIPCC コンパイル、カーネル互換性のデバッグに 5–10 時間を計画してください。' },
+          { '@type': 'ListItem', position: 8, name: '評決（2026 年 4 月）：既に AMD ハードウェアを所有しているか、優れた中古取引（16GB カード ¥35,000）を見つけた場合にのみ AMD を使用してください。それ以外は NVIDIA CUDA がシンプルです。' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+        regionalContext: {
+          title: '日本国内の採用および METI ガバナンス',
+          content: [
+            '**日本企業：METI AI ガバナンス 2024 とローカル LLM 部署。** 日本政府の METI（経産省）AI ガバナンス・フレームワーク。監査ログ、バージョン管理統合、文書化 API インターフェースの確認を要求します。金融、医療、法律、通信などの規制業界では、AMD ROCm ローカル部署が完全なデータ・プライバシーと METI ガバナンス準拠を実現します。Ollama、LM Studio、llama.cpp などの完全ローカル化ツールは、データが政府サーバーを通じて海外に流出しないことを保証します。',
+            '**亜太地域：複数国のデータ規制フレームワークがローカル AI インフラ需要を駆動。** 日本（METI AI 治理）、シンガポール（PDPA）、韓国（PIPA）、ベトナム（情報セキュリティ法）などの国々はすべて厳格なデータ内国化要件を強制しています。この地域の企業、大学、政府機関は、複数国のコンプライアンス要件を同時に満たすために AMD ROCm ローカル LLM を採用しています。単一のローカル部署はすべての地域規制を満たしています。',
+            '**企業級部署：コスト、データ管理、および監管コンプライアンスの統一。** 多国籍企業（銀行、医薬品、製造）の亜太地域の子会社は、地元の AI ガバナンス規定を遵守する必要があります。AMD ROCm はプラグ・アンド・プレイ・ソリューションを提供しています：クラウド・ロックイン・なし、ベンダー・ロックイン・なし、クロスボーダー・データ・なし。初期セットアップ作業（5–10 時間）は複数年の運用に分散され、ROI は大きい：クラウド API に対して年間数百万ドル節約され、同時にデータ・セキュリティと監管コンプライアンスを保証します。',
+          ],
+        },
+      },
     },
     zh: {
-      theme: 'GPU购买指南',
-      title: '本地LLM最佳AMD GPU',
-      seoTitle: '2026年本地LLM最佳AMD GPU选择指南与性能对比分析决策',
-      intro: '**AMD RX 6800 XT 和 RX 7900 XTX 是性价比出色的 NVIDIA 替代品，每美元性能提升 15-20%，但 ONNX Runtime 和 vLLM 驱动支持较弱。** 截至 2026 年 4 月，AMD ROCm（HIP）已趋于成熟，但兼容层增加了复杂性。对于本地 LLM，NVIDIA CUDA 仍是最便捷的方案。仅在发现超值二手商品或已拥有 AMD 硬件时，才推荐购买 AMD GPU。',
-      metaDescription: 'AMD RX 6800 XT、RX 7900 XTX与NVIDIA RTX和GeForce系列的完整性能对比与专业选择指南。ROCm驱动配置详细步骤、vLLM与llama.cpp性能实测结果、成本效率与ROI深度分析、企业级采购建议与最佳实践、初级用户完整指南。2026年4月最新版本。',
+      theme: 'GPU 购买指南',
+      title: '本地 LLM 最佳 AMD GPU 2026',
+      seoTitle: 'AMD GPU 本地 LLM 2026：ROCm vs vLLM 完整对比指南',
+      intro: '**AMD RX 6800 XT 和 RX 7900 XTX 是 NVIDIA 的坚实替代品，性能成本比提高 15–20%，但 ONNX Runtime 和 vLLM 驱动程序支持较弱。** 截至 2026 年 4 月，AMD ROCm (HIP) 已成熟，但兼容层增加了摩擦。NVIDIA CUDA 仍是本地 LLM 的最平缓路径。仅当您找到优秀的二手交易或已拥有 AMD 硬件时才选择 AMD。',
+      metaDescription: 'AMD RX 6800 XT、7900 XTX 本地 LLM。ROCm 设置、vLLM 支持、NVIDIA RTX 性能对比。2026 年 4 月决策指南。',
       publishDate: '2026-04-05',
-      readTime: '阅读约7分钟',
+      readTime: '阅读约9分钟',
       educationalLevel: 'Intermediate',
       primaryTerm: 'AMD GPU',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'TechArticle',
-        'headline': '本地LLM最佳AMD GPU',
-        'description': 'AMD RX 6800 XT、RX 7900 XTX对比NVIDIA RTX。ROCm配置、vLLM性能、成本分析。2026年4月版。',
-        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=zh',
-        'inLanguage': 'zh',
-        'datePublished': '2026-04-05',
-        'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
-        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
-        'educationalLevel': 'Intermediate',
+      toc: [
+        { label: '核心要点', anchor: 'tldr' },
+        { label: '哪些 AMD GPU 值得考虑？', anchor: 'which-amd' },
+        { label: 'AMD GPU 与 RTX 的价格和性能对比', anchor: 'amd-vs-nvidia' },
+        { label: 'ROCm 设置的难点', anchor: 'rocm-setup' },
+        { label: '能否在 AMD 上运行 Ollama 和 vLLM？', anchor: 'software-support' },
+        { label: '何时应购买 AMD 而非 NVIDIA？', anchor: 'when-buy-amd' },
+        { label: 'AMD 采用的常见错误', anchor: 'mistakes' },
+        { label: '常见问题', anchor: 'faq' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'AMD RX 6800 XT（16GB，二手 $300–350）和 RX 7900 XTX（24GB，二手 $400–500）是本地 LLM 的唯一可行选项。',
+            '性能成本比：AMD 比 NVIDIA 便宜 20–30%，但软件摩擦需要 5–10 小时设置时间。',
+            'Ollama：AMD 支持有限（ROCm 路径有 bug，CPU 回退缓慢）。不推荐。',
+            'vLLM：v0.6.0 起完全支持 AMD ROCm。需要手动驱动程序。设置完成后工作良好。',
+            'Text Generation WebUI：AMD 支持优异。AMD 上最佳用户体验。',
+            'Llama.cpp：原生 AMD 支持（HIP 后端）。性能稳定。推荐 AMD 路径。',
+            '设置成本：计划 5–10 小时调试 ROCm 驱动程序、HIPCC 编译、内核兼容性。',
+            '结论（2026 年 4 月）：仅在已拥有 AMD 硬件或找到优秀二手交易（16GB 卡 $300）时使用 AMD。否则 NVIDIA CUDA 更简单。',
+          ],
+        },
+        'which-amd': {
+          title: '哪些 AMD GPU 值得考虑？',
+          items: [
+            '**RX 6800 XT**（16GB GDDR6）：AMD 性价比之王。2020 年发布。适合 7B–22B 推理。二手：$300–350。',
+            '**RX 6900 XT**（16GB GDDR6）：比 6800 XT 略快。稀有。二手：$350–400。价格提升不值。',
+            '**RX 7900 XT**（20GB GDDR6）：新 RDNA 3 架构。比 6800 XT 快 20%。二手：$400–480。适合 70B Q4。',
+            '**RX 7900 XTX**（24GB GDDR6）：AMD 顶级消费级 GPU。24GB VRAM 对 70B 是游戏改变者。二手：$450–550。媲美 RTX 4090 速度。',
+            '**Radeon Pro W6800（32GB）**：企业卡，二手便宜（～$200–300）。较慢，但 32GB 对 70B Q8 优秀。小众。',
+          ],
+        },
+        'amd-vs-nvidia': {
+          title: 'AMD GPU 与 RTX 的价格和性能对比',
+          rows: [
+            { 'GPU': 'RX 6800 XT', 'VRAM': '16GB', 'TFLOPS': '1,952', '二手价格': '$300–350', '性价比 vs RTX': '+25%', '等效 RTX': 'RTX 3080（较慢）' },
+            { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2,540', '二手价格': '$400–480', '性价比 vs RTX': '+20%', '等效 RTX': 'RTX 4080（相当）' },
+            { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2,750', '二手价格': '$450–550', '性价比 vs RTX': '+15%', '等效 RTX': 'RTX 4090（相当速度）' },
+            { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1,456', '二手价格': '$350–400', '性价比 vs RTX': '—', '等效 RTX': '—' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', '二手价格': '$1,000–1,300', '性价比 vs RTX': '—', '等效 RTX': '—' },
+          ],
+          columns: ['GPU', 'VRAM', 'TFLOPS', '二手价格', '性价比 vs RTX', '等效 RTX'],
+        },
+        'rocm-setup': {
+          title: 'ROCm 设置的难点',
+          content: [
+            '**实施步骤：**',
+            '1. 安装 AMD ROCm 驱动程序：`apt-get install rocm-dkms`（Ubuntu）。Windows 需手动 .exe 安装程序。需 30 分钟。',
+            '2. 验证 HIP 编译器：`hipcc --version`。通常第一次失败。调试您 GPU 的内核兼容性。',
+            '3. 安装 HIPCC（AMD HIP-to-C++ 编译器）：`apt-get install hip-runtime-amd`。另一个依赖链。',
+            '4. 用小型 LLM 测试：运行推理以验证 GPU 加速工作。CPU 回退常见。',
+            '5. 解决驱动程序版本不匹配：ROCm v5.7 适用于内核 5.15 但不适用 6.x。需 2–4 小时调试。',
+            '**注意：** 与 NVIDIA CUDA 比较：`nvidia-cuda-toolkit` → 一个 apt-get，立即 GPU 访问。AMD 需 5–10 倍努力。',
+          ],
+        },
+        'software-support': {
+          title: '能否在 AMD 上运行 Ollama 和 vLLM？',
+          content: [
+            '**Ollama on AMD：** 2026 年 4 月时点为实验性/有 bug。ROCm 路径有时工作，CPU 回退缓慢。不推荐。',
+            '**vLLM on AMD：** v0.6.0 起完全 ROCm 支持。工作，但需手动 ROCm/HIP 驱动程序设置。度过设置期后良好。',
+            '**Text Generation WebUI：** 优异 AMD ROCm 支持。AMD 上最佳体验。推荐。',
+            '**Llama.cpp：** 原生 HIP 后端。性能稳定。最简单的 AMD 路径。推荐。',
+            '**LM Studio：** 仅 NVIDIA。无 AMD 支持。',
+            '**2026 年 4 月起：** vLLM + llama.cpp 是您的 AMD 路径。Ollama 不可靠。',
+          ],
+        },
+        'when-buy-amd': {
+          title: '何时应购买 AMD 而非 NVIDIA？',
+          content: [
+            '**购买 AMD 如果：**',
+            '- 找到二手 RX 7900 XTX 低于 $450（相对 RTX 4090 低估）。',
+            '- 已拥有 AMD 硬件，希望生态系统一致性。',
+            '- 构建集群，优先性价比胜于易用性。',
+            '**不购买 AMD 如果：**',
+            '- 希望即插即用体验。NVIDIA CUDA 更快工作。',
+            '- 需要 Ollama。AMD 支持不稳定。',
+            '- 时间有限。ROCm 调试可能耗 10+ 小时。',
+          ],
+        },
+        'mistakes': {
+          title: 'AMD 采用的常见错误',
+          items: [
+            '⚠️ **购买 RX 6700（12GB）误认为等同 3060 12GB** — 慢 20%，二手也难找。',
+            '⚠️ **假设 ROCm 像 CUDA 一样「即插即用」** — 计划 5–10 小时驱动程序和内核兼容性调试。',
+            '⚠️ **在 AMD 用 Ollama 期待无缝集成** — ROCm 路径有 bug；llama.cpp 或 vLLM 更佳选择。',
+          ],
+        },
+        'faqSection': {
+          title: '常见问题',
+          faqs: [
+            { q: '本地 LLM 应购买 AMD RX 6800 XT 还是 NVIDIA RTX 3080？', a: '优先简单则 RTX 3080（CUDA「即用」）。优先 25% 更优性价比且可承受 5–10 小时 ROCm 设置则 RX 6800 XT。' },
+            { q: 'AMD RX 7900 XTX 优于 RTX 4090 吗？', a: '速度相当，VRAM 相同（24GB）。RX 7900 XTX 二手 $450–550 对比 $1,000–1,300。ROCm 设置是权衡。' },
+            { q: '能用 Ollama 使用 AMD GPU 吗？', a: '技术上可以。但预期 bug 行为。CPU 回退常见。AMD 改用 vLLM 或 llama.cpp。' },
+            { q: '2026 年本地 LLM 最优 AMD 路径？', a: 'Llama.cpp（HIP 后端）+ Text Generation WebUI。两者都对 AMD 有坚实支持。避免 Ollama。' },
+            { q: 'AMD ROCm 需要 Ubuntu 还是 Windows 也可？', a: 'Windows 支持存在（Windows 上 HIP）但更新且有 bug。Ubuntu 是推荐路径。' },
+            { q: '7B 模型用 RX 6700 或 6750 合适吗？', a: 'RX 6700（12GB）可用但比 6800 XT 慢 20%。仅 $250 以下购买。否则扩展到 6800 XT。' },
+            { q: '能在一个系统混合 AMD 和 NVIDIA GPU 吗？', a: '理论上可以。但管理是噩梦。每个 GPU 需自己 CUDA/HIP 运行时。不推荐。' },
+            { q: 'AMD ROCm 设置需多长时间？', a: '驱动程序调试、HIPCC 编译、内核兼容性解决计划 5–10 小时。仅一次。之后 AMD 稳定有效。' },
+            { q: '中国企业应采用 AMD ROCm 吗？', a: '是。特别金融、医疗、法律。数据完全驻留本地，符合《数据安全法》。设置努力值得投资。' },
+            { q: '什么是中国《数据安全法》，AMD ROCm 如何相关？', a: '中国政府 2021 年数据安全法。要求敏感数据不跨境。本地 LLM with AMD ROCm 完全满足，数据永不离开企业网络。' },
+          ],
+        },
+        'relatedReading': {
+          title: '延伸阅读',
+          items: [
+            '[本地 LLM 最佳预算 GPU](/local-llms/best-budget-gpus-local-llm?lang=zh)',
+            '[本地 LLM 最佳 GPU](/local-llms/best-gpus-for-local-llms?lang=zh)',
+            '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon?lang=zh)',
+            '[Text Generation WebUI vs vLLM vs Llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=zh)',
+          ],
+        },
+        'sources': {
+          title: '参考资料',
+          items: [
+            'AMD ROCm 文档和 GitHub：HIP 编译器、驱动程序兼容性矩阵、LLM 推理示例',
+            'vLLM GitHub：AMD/ROCm 后端实现和支持状态（v0.6.0+）',
+            'Llama.cpp GitHub：AMD GPU 支持的 HIP 后端',
+          ],
+        },
       },
-      sections: {},
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'zh',
+        'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm?lang=zh',
+        about: [
+          { '@type': 'Thing', name: 'AMD ROCm' },
+          { '@type': 'Thing', name: 'NVIDIA CUDA' },
+          { '@type': 'Thing', name: 'Ollama' },
+          { '@type': 'Thing', name: 'vLLM' },
+          { '@type': 'Thing', name: 'Llama.cpp' },
+          { '@type': 'Thing', name: 'Text Generation WebUI' },
+        ],
+        mentions: [
+          { '@type': 'SoftwareApplication', name: 'AMD RX 6800 XT' },
+          { '@type': 'SoftwareApplication', name: 'AMD RX 7900 XTX' },
+          { '@type': 'SoftwareApplication', name: 'NVIDIA RTX 3080' },
+          { '@type': 'SoftwareApplication', name: 'NVIDIA RTX 4090' },
+        ],
+        name: '本地 LLM 最佳 AMD GPU',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'AMD RX 6800 XT（16GB，二手 $300–350）和 RX 7900 XTX（24GB，二手 $400–500）是本地 LLM 的唯一可行选项。' },
+          { '@type': 'ListItem', position: 2, name: '性能成本比：AMD 比 NVIDIA 便宜 20–30%，但软件摩擦需要 5–10 小时设置时间。' },
+          { '@type': 'ListItem', position: 3, name: 'Ollama：AMD 支持有限（ROCm 路径有 bug，CPU 回退缓慢）。不推荐。' },
+          { '@type': 'ListItem', position: 4, name: 'vLLM：v0.6.0 起完全支持 AMD ROCm。需要手动驱动程序。设置完成后工作良好。' },
+          { '@type': 'ListItem', position: 5, name: 'Text Generation WebUI：AMD 支持优异。AMD 上最佳用户体验。' },
+          { '@type': 'ListItem', position: 6, name: 'Llama.cpp：原生 AMD 支持（HIP 后端）。性能稳定。推荐 AMD 路径。' },
+          { '@type': 'ListItem', position: 7, name: '设置成本：计划 5–10 小时调试 ROCm 驱动程序、HIPCC 编译、内核兼容性。' },
+          { '@type': 'ListItem', position: 8, name: '结论（2026 年 4 月）：仅在已拥有 AMD 硬件或找到优秀二手交易（16GB 卡 $300）时使用 AMD。否则 NVIDIA CUDA 更简单。' },
+        ],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.article-intro', '.key-takeaways'],
+        },
+        regionalContext: {
+          title: '中国和亚太地区采用及合规性',
+          content: [
+            '**中国企业：《数据安全法》和本地 LLM 部署。** 中国 2021 年《数据安全法》要求敏感数据不跨越国界。Ollama、LM Studio、llama.cpp 等处理所有数据本地化工具完全满足《数据安全法》第 37 条（个人信息和重要数据出境安全评估）。金融、医疗、电信、能源等关键行业的企业优先采用 AMD ROCm 本地部署，确保数据主权并避免美国技术出口管制风险。PromptQuorum 连接到完全本地的推理端点，不经第三方云。',
+            '**亚太地区：多国数据规制框架驱动本地 AI 基础设施需求。** 日本（METI AI 治理）、新加坡（PDPA）、韩国（PIPA）、越南（信息安全法）等国家均推行严格的数据驻地要求。这些地区的企业、高校、政府部门采用 AMD ROCm 本地 LLM 以同时满足多国合规需求。单一本地部署满足所有地区监管。',
+            '**企业级部署：成本、数据控制和监管合规统一。** 跨国公司（银行、制药、制造）在亚太地区的子公司需合规当地 AI 治理规定。AMD ROCm 提供即插即用解决方案：无云锁定、无供应商依赖、无跨境数据问题。初期设置努力（5–10 小时）分摊到多年运营中，ROI 显著：相比云端 API 每年节省数百万美元，同时保证数据安全和监管合规。',
+          ],
+        },
+      },
     },
   },
 
