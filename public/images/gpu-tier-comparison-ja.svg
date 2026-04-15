@@ -1,0 +1,121 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    GPU 階層別推奨 (2026年4月)
+  </text>
+
+  <!-- Budget Tier -->
+  <g id="budget-tier">
+    <rect x="40" y="70" width="170" height="350" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="125" y="105" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      バジェット
+    </text>
+    <text x="125" y="130" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      $600
+    </text>
+
+    <line x1="50" y1="140" x2="200" y2="140" stroke="#E8DEF8" stroke-width="1.5"/>
+
+    <text x="60" y="165" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">GPU:</text>
+    <text x="60" y="185" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">RTX 4070 Ti</text>
+
+    <text x="60" y="210" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">VRAM:</text>
+    <text x="60" y="230" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">12 GB</text>
+
+    <text x="60" y="255" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">最適用途:</text>
+    <text x="60" y="275" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">7–13B モデル</text>
+
+    <text x="60" y="300" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">速度:</text>
+    <text x="60" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">80 tok/sec</text>
+
+    <text x="125" y="365" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">最高コスパ</text>
+  </g>
+
+  <!-- Mid Tier -->
+  <g id="mid-tier">
+    <rect x="240" y="55" width="170" height="365" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="3"/>
+    <text x="325" y="100" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      ミドルレンジ
+    </text>
+    <text x="325" y="125" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      $1200
+    </text>
+
+    <line x1="250" y1="135" x2="400" y2="135" stroke="#6750A4" stroke-width="1.5"/>
+
+    <text x="260" y="160" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">GPU:</text>
+    <text x="260" y="180" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">RTX 4080 / 5080</text>
+
+    <text x="260" y="205" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">VRAM:</text>
+    <text x="260" y="225" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">16 GB</text>
+
+    <text x="260" y="250" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">最適用途:</text>
+    <text x="260" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">13–30B モデル</text>
+
+    <text x="260" y="295" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">速度:</text>
+    <text x="260" y="315" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">120 tok/sec</text>
+
+    <text x="325" y="360" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">最人気</text>
+  </g>
+
+  <!-- High Tier -->
+  <g id="high-tier">
+    <rect x="440" y="70" width="170" height="350" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="2.5"/>
+    <text x="525" y="105" font-family="system-ui, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle" font-weight="700">
+      ハイエンド
+    </text>
+    <text x="525" y="130" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      $1800
+    </text>
+
+    <line x1="450" y1="140" x2="600" y2="140" stroke="#E8DEF8" stroke-width="1.5"/>
+
+    <text x="460" y="165" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">GPU:</text>
+    <text x="460" y="185" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">RTX 4090 / 5090</text>
+
+    <text x="460" y="210" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">VRAM:</text>
+    <text x="460" y="230" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">24 GB</text>
+
+    <text x="460" y="255" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">最適用途:</text>
+    <text x="460" y="275" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">すべての70Bモデル</text>
+
+    <text x="460" y="300" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" font-weight="700">速度:</text>
+    <text x="460" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">150 tok/sec</text>
+
+    <text x="525" y="365" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">将来対応</text>
+  </g>
+
+  <!-- Server Tier -->
+  <g id="server-tier">
+    <rect x="640" y="70" width="120" height="350" rx="8" fill="#F7F2FA" stroke="#7D5260" stroke-width="2.5"/>
+    <text x="700" y="105" font-family="system-ui, sans-serif" font-size="16" fill="#7D5260" text-anchor="middle" font-weight="700">
+      サーバー
+    </text>
+    <text x="700" y="128" font-family="system-ui, sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      $3000+
+    </text>
+
+    <line x1="650" y1="138" x2="750" y2="138" stroke="#E8DEF8" stroke-width="1.5"/>
+
+    <text x="660" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">A100 /</text>
+    <text x="660" y="178" font-family="system-ui, sans-serif" font-size="11" fill="#1C1B1F" font-weight="700">RTX 6000</text>
+
+    <text x="660" y="205" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">48+ GB</text>
+
+    <text x="660" y="230" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">プロダクション</text>
+
+    <text x="660" y="255" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">マルチユーザー</text>
+
+    <text x="660" y="280" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" font-weight="600">24/7 稼働</text>
+
+    <text x="700" y="365" font-family="system-ui, sans-serif" font-size="11" fill="#7D5260" text-anchor="middle" font-weight="700" style="font-style: italic;">生産級</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="440" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
+    GPU選択はCPUの10倍重要。必要に応じてCPU/RAMをアップグレード。
+  </text>
+</svg>

@@ -1,0 +1,62 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    llama.cpp Speed: Default vs Optimized
+  </text>
+  <text x="400" y="52" font-family="system-ui, sans-serif" font-size="14" fill="#79747E" text-anchor="middle">
+    (RTX 4070 Ti, Llama 3.1 8B Q4_K_M)
+  </text>
+
+  <!-- Default config -->
+  <g>
+    <text x="180" y="85" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" text-anchor="middle" font-weight="700">Default</text>
+    <rect x="80" y="100" width="200" height="30" rx="4" fill="#E8DEF8" stroke="#9C9CA0" stroke-width="2"/>
+    <text x="90" y="120" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">████████ 40 tok/sec</text>
+  </g>
+
+  <!-- Arrow + percentage -->
+  <text x="400" y="128" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">→</text>
+  <text x="400" y="100" font-family="system-ui, sans-serif" font-size="16" fill="#28A745" text-anchor="middle" font-weight="700">+125%</text>
+
+  <!-- Optimized config -->
+  <g>
+    <text x="620" y="85" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" text-anchor="middle" font-weight="700">Optimized</text>
+    <rect x="520" y="100" width="200" height="30" rx="4" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="530" y="120" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">████████████████████ 90 tok/sec</text>
+  </g>
+
+  <!-- Key Flags Section -->
+  <text x="40" y="160" font-family="system-ui, sans-serif" font-size="14" fill="#1C1B1F" font-weight="700">Key Speed Flags:</text>
+
+  <!-- Flag 1 -->
+  <g>
+    <text x="50" y="185" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">--n-gpu-layers 99</text>
+    <text x="50" y="203" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">Offload all layers to GPU</text>
+    <text x="50" y="218" font-family="system-ui, sans-serif" font-size="11" fill="#28A745" font-weight="600">→ +100–150% speed (most important)</text>
+  </g>
+
+  <!-- Flag 2 -->
+  <g>
+    <text x="50" y="245" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">--ctx-size 2048</text>
+    <text x="50" y="263" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">KV-cache context window</text>
+    <text x="50" y="278" font-family="system-ui, sans-serif" font-size="11" fill="#79747E">→ Saves 0.5–8 GB VRAM</text>
+  </g>
+
+  <!-- Flag 3 -->
+  <g>
+    <text x="50" y="305" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">--flash-attn</text>
+    <text x="50" y="323" font-family="system-ui, sans-serif" font-size="11" fill="#49454F">Flash Attention 2 kernel</text>
+    <text x="50" y="338" font-family="system-ui, sans-serif" font-size="11" fill="#79747E">→ -20–30% VRAM (long context)</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="380" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
+    Key: Always set --n-gpu-layers 99 first. Combine with --ctx-size 2048 to save VRAM on long conversations.
+  </text>
+  <text x="400" y="398" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle" font-weight="400">
+    Ollama automatically enables --n-gpu-layers 99 when CUDA drivers are installed correctly.
+  </text>
+</svg>

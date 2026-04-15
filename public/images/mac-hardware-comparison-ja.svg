@@ -1,0 +1,86 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    ローカルLLM向けMacハードウェア
+  </text>
+
+  <!-- M3 MacBook Pro -->
+  <g id="m3-macbook">
+    <rect x="40" y="70" width="220" height="300" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Mac icon/representation -->
+    <rect x="75" y="85" width="150" height="90" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="150" y="135" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">🖥</text>
+
+    <text x="150" y="195" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      M3 MacBook Pro
+    </text>
+    <text x="150" y="216" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+      16インチモデル
+    </text>
+
+    <line x1="50" y1="226" x2="250" y2="226" stroke="#E8DEF8" stroke-width="1.5"/>
+
+    <text x="60" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">メモリ: 18 GB</text>
+    <text x="60" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">最適: 7B 高速</text>
+    <text x="60" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">13B: 低速</text>
+
+    <text x="150" y="350" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">携帯性</text>
+  </g>
+
+  <!-- M3 Mac Studio -->
+  <g id="m3-studio">
+    <rect x="290" y="55" width="220" height="315" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="3"/>
+
+    <!-- Mac icon -->
+    <rect x="325" y="70" width="150" height="90" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2"/>
+    <text x="400" y="120" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">🖥</text>
+
+    <text x="400" y="190" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      M3 Mac Studio
+    </text>
+    <text x="400" y="211" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+      デスクトップ ⭐
+    </text>
+
+    <line x1="300" y1="221" x2="500" y2="221" stroke="#6750A4" stroke-width="1.5"/>
+
+    <text x="310" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">メモリ: 36 GB</text>
+    <text x="310" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">最適: 13B 良好</text>
+    <text x="310" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">CPU/GPU共有メモリ</text>
+
+    <text x="400" y="350" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;"></text>
+  </g>
+
+  <!-- M4 Mac Studio -->
+  <g id="m4-studio">
+    <rect x="540" y="70" width="220" height="300" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
+
+    <!-- Mac icon -->
+    <rect x="575" y="85" width="150" height="90" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+    <text x="650" y="135" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">🖥</text>
+
+    <text x="650" y="195" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
+      M4 Mac Studio
+    </text>
+    <text x="650" y="216" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
+      2026年発売予定
+    </text>
+
+    <line x1="550" y1="226" x2="750" y2="226" stroke="#E8DEF8" stroke-width="1.5"/>
+
+    <text x="560" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">メモリ: 40+ GB</text>
+    <text x="560" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">最適: 13–30B</text>
+    <text x="560" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">70B: 非推奨</text>
+
+    <text x="650" y="350" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">将来性</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="395" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
+    Mac = 統合メモリの利点。RTX 4090はM3の70Bを上回りますが、M4が追いつきます。
+  </text>
+</svg>
