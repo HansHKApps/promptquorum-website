@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Local LLM Stack for Developers | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation on building a production-grade local LLM developer stack with vLLM, FastAPI, and IDE integration." />
+    <meta property="og:title" content="Best Local LLM Stack for Developers — PromptQuorum" />
+    <meta property="og:description" content="Master the three-tier local LLM stack: Ollama, vLLM, and production deployment. Complete setup guide." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llm-developer-stack" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/local-llm-developer-stack?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Best Local LLM Stack for Developers</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/local-llm-developer-stack">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'Best Local LLM Stack for Developers',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Best Local LLM Stack\nfor Developers',
+                        subtitle: 'vLLM + FastAPI + IDE Integration Guide',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-developer-stack'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'TLDR — Quick Summary',
+                        items: [
+                            '<strong>Tier 1:</strong> Ollama + CLI. Simplest. 5 min setup.',
+                            '<strong>Tier 2:</strong> vLLM + FastAPI. Single dev. 30 min.',
+                            '<strong>Tier 3:</strong> vLLM + nginx + monitoring. Team deployment. 2 hours.',
+                            '<strong>IDE:</strong> Continue extension or Cursor native support.',
+                            '<strong>Cost:</strong> Zero (open source) vs. $20–200/month cloud.',
+                            '<strong>Speed:</strong> 30–50 tok/s (Tier 2), 200+ tok/s (Tier 3).',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'The Three Tiers',
+                        intro: 'Choose based on your needs:',
+                        items: [
+                            '<strong>Tier 1:</strong> Solo developer, casual use, no API. Ollama + chat UI.',
+                            '<strong>Tier 2:</strong> Single developer, IDE integration, custom scripts. vLLM + FastAPI.',
+                            '<strong>Tier 3:</strong> Team of 5+ developers, 24/7 service. vLLM + nginx + Prometheus.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Tier 1: CLI Quick Start',
+                        intro: '5 minutes. No code.',
+                        items: [
+                            '<strong>1.</strong> brew install ollama (or download Windows installer)',
+                            '<strong>2.</strong> ollama run llama3.1:8b (downloads & runs model)',
+                            '<strong>3.</strong> Open localhost:11434 in browser',
+                            '<strong>4.</strong> Start chatting. Done.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Tier 2: API Server with vLLM',
+                        intro: '30 minutes. Python 3.10+',
+                        items: [
+                            '<strong>1.</strong> pip install vllm torch',
+                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --port 8000',
+                            '<strong>3.</strong> Test: curl http://localhost:8000/v1/chat/completions',
+                            '<strong>4.</strong> Integrate into IDE or scripts. Batch requests in parallel.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Tier 3: Production Multi-User',
+                        intro: '2 hours. For teams.',
+                        items: [
+                            '<strong>1.</strong> Deploy 2 vLLM instances on separate GPUs',
+                            '<strong>2.</strong> Configure nginx load balancer across both',
+                            '<strong>3.</strong> Set up Prometheus for metrics (latency, throughput)',
+                            '<strong>4.</strong> Add rate limiting per user (token bucket)',
+                            '<strong>5.</strong> Deploy on cloud VM or on-prem. Scale to 50+ concurrent devs.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'IDE Integration',
+                        intro: 'Real-time code completions:',
+                        items: [
+                            '<strong>Option 1:</strong> Install Continue extension (continue.dev)',
+                            '<strong>Option 2:</strong> Use Cursor editor (native local LLM support)',
+                            '<strong>Setup:</strong> Point to vLLM endpoint (http://localhost:8000/v1)',
+                            '<strong>Speed:</strong> 10–20 tokens/second in-editor completions',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Debugging & Monitoring',
+                        items: [
+                            '<strong>vLLM logs:</strong> Check stdout for OOM, CUDA errors, model loading issues',
+                            '<strong>Prometheus:</strong> Export /metrics endpoint for latency histogram & token throughput',
+                            '<strong>Token counting:</strong> Use tiktoken library to avoid surprise OOM',
+                            '<strong>Profiling:</strong> Timestamp logs to identify bottlenecks',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regional Compliance',
+                        items: [
+                            '<strong>EU/GDPR:</strong> Local inference = no data leaves infrastructure. No DPA needed.',
+                            '<strong>Japan/METI:</strong> METI AI Governance recommends on-premise for sensitive data.',
+                            '<strong>China/PIPL:</strong> Data residency mandated. vLLM keeps inference in-country.',
+                            '<strong>US:</strong> No federal mandate. HIPAA requires controlled infrastructure (Tier 2/3).',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Common Mistakes',
+                        items: [
+                            '<strong>1.</strong> Running vLLM on same GPU as other processes → OOM',
+                            '<strong>2.</strong> No timeout on requests → client hangs forever',
+                            '<strong>3.</strong> Forgetting --tensor-parallel-size for multi-GPU',
+                            '<strong>4.</strong> Not setting CUDA_VISIBLE_DEVICES → vLLM uses all GPUs',
+                            '<strong>5.</strong> Using Llama 2 in 2026. Deprecated. Use Llama 3.1.',
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ — Part 1',
+                        faqs: [
+                            { q: 'Which tier should I use?', a: 'Tier 1 for casual solo use. Tier 2 for single dev with IDE. Tier 3 for team + 24/7.' },
+                            { q: 'Can I use vLLM instead of Ollama?', a: 'Yes. vLLM is faster (batching) and more flexible. Ollama is simpler for beginners.' },
+                            { q: 'How do I serve across multiple GPUs?', a: 'vLLM: --tensor-parallel-size 2. Splits model across 2 GPUs for 2× throughput.' },
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ — Part 2',
+                        faqs: [
+                            { q: 'What if vLLM OOMs?', a: 'Use smaller quantization (Q4 vs Q8), lower batch size, or allocate less VRAM. Check nvidia-smi.' },
+                            { q: 'Is Tier 3 production-ready?', a: 'Yes. Add Prometheus, Grafana, Alertmanager. Standard infrastructure patterns.' },
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Related Resources',
+                        items: [
+                            '<strong>OpenAI-Compatible API:</strong> Drop-in replacement for real OpenAI',
+                            '<strong>Ollama Setup Guide:</strong> Installation & model selection',
+                            '<strong>VS Code & Cursor:</strong> IDE integration deep dive',
+                            '<strong>LoRA Fine-Tuning:</strong> Train custom models on your own hardware',
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Ready to Build Your Stack?',
+                        body: 'Compare local vs cloud models. Test performance across 25+ models in one place.',
+                        cta: 'Start Free with PromptQuorum',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'Best Local LLM Stack für Entwickler',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Best Local LLM Stack\nfür Entwickler',
+                        subtitle: 'vLLM + FastAPI + IDE-Integration Anleitung',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-developer-stack?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Zusammenfassung — Überblick',
+                        items: [
+                            '<strong>Stufe 1:</strong> Ollama + CLI. Am einfachsten. 5 Min.',
+                            '<strong>Stufe 2:</strong> vLLM + FastAPI. Single Dev. 30 Min.',
+                            '<strong>Stufe 3:</strong> vLLM + nginx + Monitoring. Team. 2 Stunden.',
+                            '<strong>IDE:</strong> Continue-Erweiterung oder Cursor nativ.',
+                            '<strong>Kosten:</strong> Null (Open Source) vs. 20–200 $/Monat Cloud.',
+                            '<strong>Geschwindigkeit:</strong> 30–50 Token/s (Stufe 2), 200+ Token/s (Stufe 3).',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Die drei Stufen',
+                        intro: 'Wählen Sie basierend auf Ihren Anforderungen:',
+                        items: [
+                            '<strong>Stufe 1:</strong> Einzelentwickler, gelegentliche Nutzung. Ollama + Chat-UI.',
+                            '<strong>Stufe 2:</strong> Ein Entwickler, IDE-Integration, eigene Skripte. vLLM + FastAPI.',
+                            '<strong>Stufe 3:</strong> Team mit 5+ Entwicklern, 24/7-Betrieb. vLLM + nginx + Prometheus.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Stufe 1: CLI-Schnellstart',
+                        intro: '5 Minuten. Kein Code erforderlich.',
+                        items: [
+                            '<strong>1.</strong> brew install ollama (oder Windows-Installer)',
+                            '<strong>2.</strong> ollama run llama3.1:8b (lädt Modell und startet es)',
+                            '<strong>3.</strong> Öffnen Sie localhost:11434 im Browser',
+                            '<strong>4.</strong> Beginnen Sie zu chatten. Fertig.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Stufe 2: API-Server mit vLLM',
+                        intro: '30 Minuten. Python 3.10+',
+                        items: [
+                            '<strong>1.</strong> pip install vllm torch',
+                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --port 8000',
+                            '<strong>3.</strong> Test: curl http://localhost:8000/v1/chat/completions',
+                            '<strong>4.</strong> Integration in IDE oder Skripte. Batch-Anfragen parallel.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Stufe 3: Produktivbetrieb',
+                        intro: '2 Stunden. Für Teams.',
+                        items: [
+                            '<strong>1.</strong> Stellen Sie 2 vLLM-Instanzen auf separaten GPUs bereit',
+                            '<strong>2.</strong> Konfigurieren Sie nginx Load Balancer',
+                            '<strong>3.</strong> Richten Sie Prometheus für Metriken ein',
+                            '<strong>4.</strong> Rate-Limiting pro Nutzer hinzufügen',
+                            '<strong>5.</strong> Cloud oder On-Premise. Skalierung auf 50+ Entwickler.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'IDE-Integration',
+                        intro: 'Echtzeit-Code-Vervollständigungen:',
+                        items: [
+                            '<strong>Option 1:</strong> Continue-Erweiterung installieren',
+                            '<strong>Option 2:</strong> Cursor Editor (natives Local-LLM-Support)',
+                            '<strong>Setup:</strong> Zeigen Sie auf vLLM-Endpunkt (localhost:8000/v1)',
+                            '<strong>Geschwindigkeit:</strong> 10–20 Token/s In-Editor-Vervollständigungen',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Fehlersuche & Monitoring',
+                        items: [
+                            '<strong>vLLM-Logs:</strong> Stdout auf OOM, CUDA-Fehler prüfen',
+                            '<strong>Prometheus:</strong> /metrics-Endpunkt für Latenz & Durchsatz',
+                            '<strong>Token-Zählung:</strong> tiktoken verwenden, um OOM zu vermeiden',
+                            '<strong>Profiling:</strong> Timestamp-Logs zur Identifikation von Engpässen',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regionale Compliance',
+                        items: [
+                            '<strong>EU/DSGVO:</strong> Lokale Verarbeitung = Daten verlassen nicht Infrastruktur.',
+                            '<strong>Japan/METI:</strong> METI empfiehlt On-Premise für sensitive Daten.',
+                            '<strong>China/PIPL:</strong> Datenresidenz erforderlich. vLLM bleibt im Land.',
+                            '<strong>USA:</strong> Kein Bundesmandat. HIPAA = kontrollierte Infrastruktur.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Häufige Fehler',
+                        items: [
+                            '<strong>1.</strong> vLLM auf gleicher GPU wie andere Prozesse → OOM',
+                            '<strong>2.</strong> Keine Timeout auf Anfragen → Client hängt',
+                            '<strong>3.</strong> --tensor-parallel-size vergessen → Multi-GPU funktioniert nicht',
+                            '<strong>4.</strong> CUDA_VISIBLE_DEVICES nicht setzen → alle GPUs verwendet',
+                            '<strong>5.</strong> Llama 2 in 2026 verwenden. Veraltet. Llama 3.1 nutzen.',
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ — Teil 1',
+                        faqs: [
+                            { q: 'Welche Stufe soll ich verwenden?', a: 'Stufe 1 für gelegentliche Solo-Nutzung. Stufe 2 für einzelnen Entwickler mit IDE. Stufe 3 für Team + 24/7.' },
+                            { q: 'Kann ich vLLM statt Ollama verwenden?', a: 'Ja. vLLM ist schneller (Batching) und flexibler. Ollama ist einfacher für Anfänger.' },
+                            { q: 'Wie serve ich über mehrere GPUs?', a: 'vLLM: --tensor-parallel-size 2. Teilt Modell auf 2 GPUs. Verdoppelt Durchsatz.' },
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ — Teil 2',
+                        faqs: [
+                            { q: 'Was tun, wenn vLLM OOM auslöst?', a: 'Kleinere Quantisierung (Q4 vs Q8), Batch-Größe reduzieren oder weniger VRAM. nvidia-smi prüfen.' },
+                            { q: 'Ist Stufe 3 produktionsreif?', a: 'Ja. Prometheus, Grafana, Alertmanager hinzufügen. Standard-Infrastrukturbild.' },
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Weiterführende Ressourcen',
+                        items: [
+                            '<strong>OpenAI-API:</strong> Drop-in-Ersatz für echte OpenAI',
+                            '<strong>Ollama-Anleitung:</strong> Installation & Modellauswahl',
+                            '<strong>VS Code & Cursor:</strong> IDE-Integration Tiefgang',
+                            '<strong>LoRA Fine-Tuning:</strong> Trainieren Sie benutzerdefinierte Modelle',
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Bereit, Ihren Stack zu bauen?',
+                        body: 'Vergleichen Sie local vs cloud Modelle. Testen Sie Leistung über 25+ Modelle.',
+                        cta: 'Kostenlos mit PromptQuorum starten',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Meilleur Stack Local LLM pour Développeurs',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Meilleur Stack Local LLM\npour Développeurs',
+                        subtitle: 'Guide vLLM + FastAPI + Intégration IDE',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-developer-stack?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Résumé Rapide',
+                        items: [
+                            '<strong>Niveau 1:</strong> Ollama + CLI. Plus simple. 5 min.',
+                            '<strong>Niveau 2:</strong> vLLM + FastAPI. Un développeur. 30 min.',
+                            '<strong>Niveau 3:</strong> vLLM + nginx + monitoring. Équipe. 2h.',
+                            '<strong>IDE:</strong> Extension Continue ou Cursor natif.',
+                            '<strong>Coûts:</strong> Gratuit (open source) vs 20–200 $/mois cloud.',
+                            '<strong>Vitesse:</strong> 30–50 tok/s (Niveau 2), 200+ tok/s (Niveau 3).',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Les Trois Niveaux',
+                        intro: 'Choisissez selon vos besoins:',
+                        items: [
+                            '<strong>Niveau 1:</strong> Développeur seul, usage occasionnel. Ollama + UI chat.',
+                            '<strong>Niveau 2:</strong> Un développeur, intégration IDE, scripts custom. vLLM + FastAPI.',
+                            '<strong>Niveau 3:</strong> Équipe 5+ développeurs, service 24/7. vLLM + nginx + Prometheus.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Niveau 1: Démarrage Rapide',
+                        intro: '5 minutes. Pas de code.',
+                        items: [
+                            '<strong>1.</strong> brew install ollama (ou installer Windows)',
+                            '<strong>2.</strong> ollama run llama3.1:8b (télécharge & lance)',
+                            '<strong>3.</strong> Ouvrez localhost:11434 dans navigateur',
+                            '<strong>4.</strong> Commencez à chatter. Terminé.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Niveau 2: Serveur API avec vLLM',
+                        intro: '30 minutes. Python 3.10+',
+                        items: [
+                            '<strong>1.</strong> pip install vllm torch',
+                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --port 8000',
+                            '<strong>3.</strong> Test: curl http://localhost:8000/v1/chat/completions',
+                            '<strong>4.</strong> Intégrez dans IDE ou scripts. Requêtes batch en parallèle.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Niveau 3: Production Multi-Utilisateurs',
+                        intro: '2 heures. Pour équipes.',
+                        items: [
+                            '<strong>1.</strong> Déployez 2 instances vLLM sur GPUs séparées',
+                            '<strong>2.</strong> Configurez nginx load balancer',
+                            '<strong>3.</strong> Installez Prometheus pour métriques',
+                            '<strong>4.</strong> Ajoutez rate limiting par utilisateur',
+                            '<strong>5.</strong> Cloud ou on-prem. Jusqu\'à 50+ développeurs.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Intégration IDE',
+                        intro: 'Complétions de code en temps réel:',
+                        items: [
+                            '<strong>Option 1:</strong> Installer extension Continue',
+                            '<strong>Option 2:</strong> Cursor editor (support natif LLM local)',
+                            '<strong>Setup:</strong> Pointez vers endpoint vLLM (localhost:8000/v1)',
+                            '<strong>Vitesse:</strong> 10–20 tokens/s complétions in-editor',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Débogage & Monitoring',
+                        items: [
+                            '<strong>Logs vLLM:</strong> Vérifiez stdout pour OOM, erreurs CUDA',
+                            '<strong>Prometheus:</strong> Endpoint /metrics pour latence & débit',
+                            '<strong>Comptage tokens:</strong> Utilisez tiktoken pour éviter OOM',
+                            '<strong>Profiling:</strong> Logs avec timestamp pour goulots',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Conformité Régionale',
+                        items: [
+                            '<strong>EU/RGPD:</strong> Inférence locale = données restent en infrastructure.',
+                            '<strong>Japon/METI:</strong> METI recommande on-premise pour données sensibles.',
+                            '<strong>Chine/PIPL:</strong> Résidence données obligatoire. vLLM reste en pays.',
+                            '<strong>USA:</strong> Pas de mandat fédéral. HIPAA = infrastructure contrôlée.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Erreurs Courantes',
+                        items: [
+                            '<strong>1.</strong> vLLM sur même GPU que autres processus → OOM',
+                            '<strong>2.</strong> Pas de timeout sur requêtes → client se bloque',
+                            '<strong>3.</strong> Oublier --tensor-parallel-size pour multi-GPU',
+                            '<strong>4.</strong> CUDA_VISIBLE_DEVICES non défini → toutes les GPUs utilisées',
+                            '<strong>5.</strong> Utiliser Llama 2 en 2026. Dépréciée. Utilisez Llama 3.1.',
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ — Partie 1',
+                        faqs: [
+                            { q: 'Quel niveau choisir?', a: 'Niveau 1 pour solo occasionnel. Niveau 2 pour dev seul + IDE. Niveau 3 pour équipe 24/7.' },
+                            { q: 'Peux-je utiliser vLLM au lieu d\'Ollama?', a: 'Oui. vLLM plus rapide (batch) et flexible. Ollama plus simple pour débutants.' },
+                            { q: 'Comment servir sur plusieurs GPUs?', a: 'vLLM: --tensor-parallel-size 2. Divise modèle sur 2 GPUs. Double débit.' },
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ — Partie 2',
+                        faqs: [
+                            { q: 'Si vLLM OOM?', a: 'Quantisation plus petite (Q4 vs Q8), batch taille réduite, ou moins VRAM. Vérifiez nvidia-smi.' },
+                            { q: 'Niveau 3 prêt pour production?', a: 'Oui. Ajoutez Prometheus, Grafana, Alertmanager. Patterns infrastructure standard.' },
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ressources Connexes',
+                        items: [
+                            '<strong>API OpenAI:</strong> Remplacement drop-in pour vrai OpenAI',
+                            '<strong>Guide Ollama:</strong> Installation & sélection modèles',
+                            '<strong>VS Code & Cursor:</strong> Intégration IDE approfondie',
+                            '<strong>Fine-tuning LoRA:</strong> Entraînez modèles custom',
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Prêt à Construire Votre Stack?',
+                        body: 'Comparez local vs cloud. Testez performance sur 25+ modèles.',
+                        cta: 'Démarrer Gratuitement',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: '開発者向けベストローカルLLMスタック',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '開発者向けベスト\nローカルLLMスタック',
+                        subtitle: 'vLLM + FastAPI + IDE統合ガイド',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-developer-stack?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'TL;DR — 要約',
+                        items: [
+                            '<strong>段階1:</strong> Ollama + CLI。最も簡単。5分。',
+                            '<strong>段階2:</strong> vLLM + FastAPI。単一開発者。30分。',
+                            '<strong>段階3:</strong> vLLM + nginx + 監視。チーム展開。2時間。',
+                            '<strong>IDE:</strong> Continue拡張またはCursorネイティブ。',
+                            '<strong>コスト:</strong> 無料（オープンソース）vs 20–200$/月クラウド。',
+                            '<strong>速度:</strong> 30–50トークン/秒（段階2）、200+トークン/秒（段階3）。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '3つの段階',
+                        intro: 'ニーズに応じて選択:',
+                        items: [
+                            '<strong>段階1:</strong> ソロ開発者、カジュアル使用。Ollama + チャットUI。',
+                            '<strong>段階2:</strong> 単一開発者、IDE統合、カスタムスクリプト。vLLM + FastAPI。',
+                            '<strong>段階3:</strong> 5+開発者チーム、24/7サービス。vLLM + nginx + Prometheus。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '段階1: CLIクイックスタート',
+                        intro: '5分。コード不要。',
+                        items: [
+                            '<strong>1.</strong> brew install ollama（またはWindowsインストーラ）',
+                            '<strong>2.</strong> ollama run llama3.1:8b（ダウンロード＆実行）',
+                            '<strong>3.</strong> localhost:11434をブラウザで開く',
+                            '<strong>4.</strong> チャット開始。完了。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '段階2: vLLMを使用したAPIサーバー',
+                        intro: '30分。Python 3.10+',
+                        items: [
+                            '<strong>1.</strong> pip install vllm torch',
+                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --port 8000',
+                            '<strong>3.</strong> テスト: curl http://localhost:8000/v1/chat/completions',
+                            '<strong>4.</strong> IDEまたはスクリプトに統合。バッチリクエストを並列処理。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '段階3: 本番マルチユーザー',
+                        intro: '2時間。チーム向け。',
+                        items: [
+                            '<strong>1.</strong> 別々のGPU上に2つのvLLMインスタンスをデプロイ',
+                            '<strong>2.</strong> nginxロードバランサーを構成',
+                            '<strong>3.</strong> メトリクス収集用にPrometheusをセットアップ',
+                            '<strong>4.</strong> ユーザーごとのレート制限を追加',
+                            '<strong>5.</strong> クラウドまたはオンプレ。50+同時開発者にスケール。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'IDE統合',
+                        intro: 'リアルタイムコード補完:',
+                        items: [
+                            '<strong>オプション1:</strong> Continue拡張をインストール',
+                            '<strong>オプション2:</strong> Cursorエディタ（ネイティブローカルLLMサポート）',
+                            '<strong>セットアップ:</strong> vLLMエンドポイント（localhost:8000/v1）を指定',
+                            '<strong>速度:</strong> エディタ内10–20トークン/秒補完',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'デバッグ＆監視',
+                        items: [
+                            '<strong>vLLMログ:</strong> OOM、CUDAエラーについてstdoutをチェック',
+                            '<strong>Prometheus:</strong> レイテンシーとスループット用の/metricsエンドポイント',
+                            '<strong>トークンカウント:</strong> OOMを避けるためにtiktokenライブラリを使用',
+                            '<strong>プロファイリング:</strong> ボトルネック特定用のタイムスタンプログ',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地域別コンプライアンス',
+                        items: [
+                            '<strong>EU/GDPR:</strong> ローカル推論=データがインフラを離れない。',
+                            '<strong>日本/METI:</strong> METI機密データ向けオンプレ推奨。',
+                            '<strong>中国/PIPL:</strong> データレジデンス必須。vLLM国内維持。',
+                            '<strong>米国:</strong> 連邦マンデートなし。HIPAA=制御インフラ。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '一般的な間違い',
+                        items: [
+                            '<strong>1.</strong> vLLMを他のプロセスと同じGPUで実行 → OOM',
+                            '<strong>2.</strong> リクエストにタイムアウトなし → クライアント停止',
+                            '<strong>3.</strong> マルチGPUに--tensor-parallel-size忘れ',
+                            '<strong>4.</strong> CUDA_VISIBLE_DEVICES未設定 → すべてのGPU使用',
+                            '<strong>5.</strong> 2026年にLlama 2使用。廃止予定。Llama 3.1使用。',
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ — パート1',
+                        faqs: [
+                            { q: 'どの段階を選ぶべき?', a: 'カジュアルソロ用は段階1。IDE付き単一開発者は段階2。24/7チームは段階3。' },
+                            { q: 'OllamaではなくvLLMを使えますか?', a: 'はい。vLLMはより速く（バッチ）柔軟。Ollamaは初心者向けシンプル。' },
+                            { q: '複数GPUで提供する方法?', a: 'vLLM: --tensor-parallel-size 2。2つのGPU間でモデルを分割。2倍スループット。' },
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ — パート2',
+                        faqs: [
+                            { q: 'vLLM OOMの場合?', a: '小さい量子化（Q4 vs Q8）、バッチサイズ削減、またはVRAM削減。nvidia-smiチェック。' },
+                            { q: '段階3は本番対応?', a: 'はい。Prometheus、Grafana、Alertmanager追加。標準インフラパターン。' },
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '関連リソース',
+                        items: [
+                            '<strong>OpenAI API:</strong> 本物のOpenAI代替品',
+                            '<strong>Ollama設定ガイド:</strong> インストール＆モデル選択',
+                            '<strong>VS Code & Cursor:</strong> IDE統合深掘り',
+                            '<strong>LoRA微調整:</strong> カスタムモデル訓練',
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'スタック構築の準備はできていますか?',
+                        body: 'ローカルvs クラウドを比較。25+モデル間でパフォーマンステスト。',
+                        cta: '無料で開始',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: '开发者最佳本地LLM堆栈',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '开发者最佳\n本地LLM堆栈',
+                        subtitle: 'vLLM + FastAPI + IDE集成指南',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-developer-stack?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '快速总结',
+                        items: [
+                            '<strong>阶段1:</strong> Ollama + CLI。最简单。5分钟。',
+                            '<strong>阶段2:</strong> vLLM + FastAPI。单个开发者。30分钟。',
+                            '<strong>阶段3:</strong> vLLM + nginx + 监控。团队部署。2小时。',
+                            '<strong>IDE:</strong> Continue扩展或Cursor本地。',
+                            '<strong>成本:</strong> 免费（开源）vs 20–200$/月云。',
+                            '<strong>速度:</strong> 30–50 token/s（阶段2），200+ token/s（阶段3）。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '三个阶段',
+                        intro: '根据您的需求选择:',
+                        items: [
+                            '<strong>阶段1:</strong> 单个开发者，随意使用。Ollama + 聊天UI。',
+                            '<strong>阶段2:</strong> 单个开发者，IDE集成，自定义脚本。vLLM + FastAPI。',
+                            '<strong>阶段3:</strong> 5+开发者团队，24/7服务。vLLM + nginx + Prometheus。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '阶段1: CLI快速开始',
+                        intro: '5分钟。无需代码。',
+                        items: [
+                            '<strong>1.</strong> brew install ollama（或下载Windows安装程序）',
+                            '<strong>2.</strong> ollama run llama3.1:8b（下载并运行）',
+                            '<strong>3.</strong> 在浏览器中打开localhost:11434',
+                            '<strong>4.</strong> 开始聊天。完成。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '阶段2: vLLM API服务器',
+                        intro: '30分钟。Python 3.10+',
+                        items: [
+                            '<strong>1.</strong> pip install vllm torch',
+                            '<strong>2.</strong> python -m vllm.entrypoints.openai.api_server --model meta-llama/Llama-3.1-8B-Instruct --port 8000',
+                            '<strong>3.</strong> 测试：curl http://localhost:8000/v1/chat/completions',
+                            '<strong>4.</strong> 集成到IDE或脚本。并行批量请求。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '阶段3: 生产多用户',
+                        intro: '2小时。适合团队。',
+                        items: [
+                            '<strong>1.</strong> 在单独的GPU上部署2个vLLM实例',
+                            '<strong>2.</strong> 配置nginx负载均衡器',
+                            '<strong>3.</strong> 设置Prometheus指标收集',
+                            '<strong>4.</strong> 添加每用户限速（token bucket）',
+                            '<strong>5.</strong> 部署云端或本地。扩展至50+并发开发者。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'IDE集成',
+                        intro: '实时代码补全:',
+                        items: [
+                            '<strong>选项1:</strong> 安装Continue扩展',
+                            '<strong>选项2:</strong> Cursor编辑器（本地LLM原生支持）',
+                            '<strong>设置:</strong> 指向vLLM端点（localhost:8000/v1）',
+                            '<strong>速度:</strong> 编辑器内10–20 token/s补全',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '调试和监控',
+                        items: [
+                            '<strong>vLLM日志:</strong> 检查stdout是否有OOM、CUDA错误',
+                            '<strong>Prometheus:</strong> /metrics端点用于延迟和吞吐量',
+                            '<strong>Token计数:</strong> 使用tiktoken库避免OOM',
+                            '<strong>分析:</strong> 时间戳日志识别瓶颈',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '区域合规性',
+                        items: [
+                            '<strong>欧盟/GDPR:</strong> 本地推理=数据不离开基础设施。',
+                            '<strong>日本/METI:</strong> METI建议敏感数据采用本地推理。',
+                            '<strong>中国/PIPL:</strong> 数据驻留强制。vLLM保持国内。',
+                            '<strong>美国:</strong> 无联邦要求。HIPAA=受控基础设施。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '常见错误',
+                        items: [
+                            '<strong>1.</strong> vLLM与其他进程在同一GPU上运行 → OOM',
+                            '<strong>2.</strong> 请求无超时 → 客户端永久挂起',
+                            '<strong>3.</strong> 遗漏--tensor-parallel-size多GPU标志',
+                            '<strong>4.</strong> 未设置CUDA_VISIBLE_DEVICES → 使用所有GPU',
+                            '<strong>5.</strong> 在2026年使用Llama 2。已废弃。改用Llama 3.1。',
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ — 第1部分',
+                        faqs: [
+                            { q: '我应该选择哪个阶段?', a: '随意单人用阶段1。IDE单个开发者用阶段2。24/7团队用阶段3。' },
+                            { q: '我可以用vLLM代替Ollama吗?', a: '是的。vLLM更快（批处理）且灵活。Ollama对初学者更简单。' },
+                            { q: '如何跨多个GPU服务?', a: 'vLLM: --tensor-parallel-size 2。在2个GPU间分割模型。吞吐量翻倍。' },
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'FAQ — 第2部分',
+                        faqs: [
+                            { q: 'vLLM OOM怎么办?', a: '使用较小量化（Q4 vs Q8）、降低批大小或减少VRAM。检查nvidia-smi。' },
+                            { q: '阶段3是否适合生产?', a: '是的。添加Prometheus、Grafana、Alertmanager。标准基础设施模式。' },
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '相关资源',
+                        items: [
+                            '<strong>OpenAI API:</strong> 真实OpenAI的直接替代品',
+                            '<strong>Ollama设置指南:</strong> 安装和模型选择',
+                            '<strong>VS Code & Cursor:</strong> IDE集成深度指南',
+                            '<strong>LoRA微调:</strong> 训练自定义模型',
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '准备好构建您的堆栈了吗?',
+                        body: '比较本地vs云。在25+模型上测试性能。',
+                        cta: '免费开始',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = 'https://www.promptquorum.com/local-llms/local-llm-developer-stack?lang=' + lang;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}">${slide.link.split('/').pop().replace(/-/g, ' ')}</a>
+                        </p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p>${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1.2em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 20px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px; font-size: 1em;">A: ${faq.a}</p></div>`;
+                    });
+                    html += footerLink;
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 20px; font-size: 1.1em;">${slide.body}</p>
+                        <a href="${slide.href}" style="display: inline-block; margin-top: 30px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">${slide.cta}</a>
+                        ${footerLink}
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>

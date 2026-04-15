@@ -93,6 +93,39 @@ const THEME_COLORS: Record<string, { dot: string; badge: string }> = {
   'Enterprise':            { dot: 'bg-amber-400',     badge: 'bg-amber-50 text-amber-700 border border-amber-200' },
 }
 
+const PRESENTATION_UI: Record<Language, { heading: string; description: string; savePdf: string; fallbackDescription: string }> = {
+  en: {
+    heading: 'Slide Deck',
+    description: 'Browse the slides below or download as PDF for offline reference.',
+    savePdf: 'Download Reference Card (PDF)',
+    fallbackDescription: 'Interactive slide deck for this article.',
+  },
+  de: {
+    heading: 'Präsentation',
+    description: 'Folien unten ansehen oder als PDF herunterladen.',
+    savePdf: 'Referenzkarte herunterladen (PDF)',
+    fallbackDescription: 'Interaktive Folien für diesen Artikel.',
+  },
+  fr: {
+    heading: 'Présentation',
+    description: 'Parcourez les diapositives ci-dessous ou téléchargez en PDF.',
+    savePdf: 'Télécharger la fiche de référence (PDF)',
+    fallbackDescription: 'Diaporama interactif pour cet article.',
+  },
+  ja: {
+    heading: 'スライドデッキ',
+    description: '以下のスライドを閲覧するか、PDFとしてダウンロードしてください。',
+    savePdf: 'リファレンスカードをダウンロード（PDF）',
+    fallbackDescription: 'この記事のインタラクティブスライド。',
+  },
+  zh: {
+    heading: '演示文稿',
+    description: '浏览以下幻灯片或下载PDF以供离线参考。',
+    savePdf: '下载参考卡（PDF）',
+    fallbackDescription: '本文的交互式幻灯片。',
+  },
+}
+
 // Render inline link placeholders and markdown links [text](url)
 // Injects ?lang= query parameter for internal links when lang is not 'en'
 function renderInlineLinks(text: string, lang: Language = 'en') {
@@ -399,6 +432,36 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
             )
           })}
         </article>
+
+        {/* Presentation / Gamma slide deck */}
+        {(article as any).gammaEmbedUrl && (
+          <div className="mt-12 pt-8 border-t border-primary/20">
+            <h2 className="text-2xl font-bold text-text-primary mb-2">
+              {PRESENTATION_UI[lang]?.heading}: {article.title} (Slide Deck)
+            </h2>
+            <p className="text-text-secondary mb-4 text-sm">
+              {(article as any).gammaDescription ?? PRESENTATION_UI[lang]?.fallbackDescription}
+            </p>
+            <p className="text-sm mb-4">
+              {PRESENTATION_UI[lang]?.description}{' '}
+              <a
+                href={`${(article as any).gammaEmbedUrl}?lang=${lang}&print=1`}
+                className="text-primary underline font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {PRESENTATION_UI[lang]?.savePdf}
+              </a>
+            </p>
+            <iframe
+              src={`${(article as any).gammaEmbedUrl}?lang=${lang}`}
+              title={`${article.title} — PromptQuorum`}
+              className="w-full rounded-xl border border-primary/20 shadow-sm"
+              style={{ height: 'min(80vh, max(600px, 56.25vw))' }}
+              loading="lazy"
+            />
+          </div>
+        )}
 
         {/* Footer CTA */}
         <div className="mt-16 pt-8 border-t border-primary/20 text-center">

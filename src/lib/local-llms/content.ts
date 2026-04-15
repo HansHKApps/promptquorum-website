@@ -43,6 +43,8 @@ export interface LLMArticle {
   primaryTerm?: string
   toc?: { label: string; anchor: string }[]
   heroComponent?: string
+  gammaEmbedUrl?: string
+  gammaDescription?: string
 }
 
 // ─── Content registry ────────────────────────────────────────────────────────
@@ -25057,6 +25059,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': 'Is Tier 3 production-ready?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, with monitoring. Add Prometheus, Grafana, alerting (Alertmanager). Standard infrastructure patterns.' } },
         ],
       },
+      gammaEmbedUrl: '/presentations/local-llm-developer-stack-static.html',
+      gammaDescription: 'The slide deck below covers the three-tier local LLM developer stack (Ollama → vLLM API → production multi-user), IDE integration with VS Code and Cursor, debugging and monitoring with Prometheus, and regional compliance context. Download the PDF as a Local LLM Developer Stack reference card.',
       sections: {
         tldr: {
           isTldr: true,
@@ -25258,6 +25262,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': 'Ist der lokale LLM-Stack für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. KMU profitieren von vollständiger Datensouveränität gemäß BSI-Grundschutz und IT-Sicherheitsgesetz 2.0, keinen laufenden API-Kosten und einer OpenAI-kompatiblen API für ERP- und CRM-Integration. Stufe 2 ist für die meisten Mittelstandsanwendungen ausreichend und in unter 30 Minuten einsatzbereit.' } },
         ],
       },
+      gammaEmbedUrl: '/presentations/local-llm-developer-stack-static.html',
+      gammaDescription: 'Das Foliendeck unten behandelt den dreistufigen lokalen LLM-Developer-Stack (Ollama → vLLM API → Multi-User-Produktion), IDE-Integration mit VS Code und Cursor, Debugging und Monitoring mit Prometheus sowie regionale Compliance-Anforderungen. Laden Sie die PDF als Local LLM Developer Stack Referenzkarte herunter.',
       sections: {
         tldr: {
           isTldr: true,
@@ -25459,6 +25465,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': 'Le Niveau 3 est-il prêt pour la production ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, avec monitoring. Ajouter Prometheus, Grafana et les alertes (Alertmanager). Schémas d\'infrastructure standard.' } },
         ],
       },
+      gammaEmbedUrl: '/presentations/local-llm-developer-stack-static.html',
+      gammaDescription: 'Le diaporama ci-dessous couvre la pile locale LLM à trois niveaux (Ollama → vLLM API → multi-utilisateurs en production), l\'intégration IDE avec VS Code et Cursor, le débogage et le monitoring avec Prometheus, ainsi que le contexte régional de conformité. Téléchargez le PDF comme fiche de référence Local LLM Developer Stack.',
       sections: {
         tldr: {
           isTldr: true,
@@ -25658,6 +25666,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': '階層3は本番環境に対応していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、モニタリングがあれば対応しています。Prometheus、Grafana、アラート（Alertmanager）を追加してください。標準的なインフラパターンです。' } },
         ],
       },
+      gammaEmbedUrl: '/presentations/local-llm-developer-stack-static.html',
+      gammaDescription: '以下のスライドデッキは、3層のローカルLLM開発者スタック（Ollama → vLLM API → 本番マルチユーザー）、VS CodeとCursorを使用したIDE統合、Prometheusによるデバッグとモニタリング、および地域別コンプライアンスコンテキストをカバーしています。PDFをLocal LLM Developer Stackリファレンスカードとしてダウンロードしてください。',
       sections: {
         tldr: {
           isTldr: true,
@@ -25856,6 +25866,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Question', 'name': '层级三适合生产环境吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的，配合监控可以。添加Prometheus、Grafana和告警（Alertmanager）。标准基础设施模式。' } },
         ],
       },
+      gammaEmbedUrl: '/presentations/local-llm-developer-stack-static.html',
+      gammaDescription: '下面的幻灯片演示涵盖三层本地LLM开发者堆栈（Ollama → vLLM API → 多用户生产），VS Code和Cursor的IDE集成，Prometheus调试和监控，以及区域合规性背景。将PDF下载为本地LLM开发者堆栈参考卡。',
       sections: {
         tldr: {
           isTldr: true,
