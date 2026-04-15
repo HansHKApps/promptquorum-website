@@ -17046,6 +17046,323 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
       },
     },
+    fr: {
+      theme: 'Outils et Interfaces',
+      title: 'Meilleures interfaces locales LLM en 2026 : Open WebUI, Enchanted UI et autres',
+      seoTitle: 'Meilleures interfaces LLM locales 2026 : Comparaison 8 outils',
+      intro: 'Une interface (ou chat UI) est l\'interface avec laquelle vous interagissez avec votre LLM local. Ollama et LM Studio peuvent exécuter des modèles, mais pour une expérience de chat soignée, la plupart des développeurs utilisent une interface tierce. En avril 2026, Open WebUI est l\'option la plus riche en fonctionnalités (25 000+ étoiles GitHub), Enchanted UI offre l\'expérience la plus rapide et allégée, et Jan AI fournit une alternative d\'application hors ligne. Ce guide compare 8 interfaces selon les fonctionnalités, la facilité de configuration et les meilleurs cas d\'utilisation.',
+      metaDescription: 'Comparez 8 interfaces LLM locales : Open WebUI (25k étoiles, RAG), Enchanted UI (plus rapide), Jan AI (bureau), Continue.dev (code) et plus. Comparaison et guide de configuration.',
+      publishDate: '2026-04-04',
+      readTime: '11 min de lecture',
+      educationalLevel: 'Beginner to Advanced',
+      primaryTerm: 'interface LLM locale',
+      toc: [
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Comparaison des 8 meilleures interfaces', anchor: '#top-8-frontends' },
+        { label: 'Meilleure global : Open WebUI', anchor: '#best-overall-open-webui' },
+        { label: 'Meilleure vitesse : Enchanted UI', anchor: '#best-for-speed-enchanted' },
+        { label: 'Meilleure app bureau : Jan AI', anchor: '#best-desktop-jan' },
+        { label: 'Meilleure pour code : Continue.dev', anchor: '#best-for-code-continue' },
+        { label: 'Meilleure interface web : Gradio/Streamlit', anchor: '#best-web-gradio' },
+        { label: 'Auto-hébergé vs Cloud', anchor: '#self-hosted-vs-cloud' },
+        { label: 'Contexte régional', anchor: '#regional-context' },
+        { label: 'Erreurs courantes', anchor: '#common-mistakes' },
+        { label: 'Questions courantes', anchor: '#common-questions' },
+        { label: 'Lectures connexes', anchor: '#related-reading' },
+        { label: 'Sources', anchor: '#sources' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Une interface LLM locale est le chat avec lequel vous parlez à votre modèle. Ollama fournit l\'API ; l\'interface est l\'IU.',
+            '**Open WebUI** est le plus riche en fonctionnalités (RAG, multimodal, knowledge bases, appels fonction). Nécessite Docker. 12 GB RAM+ recommandé.',
+            '**Enchanted UI** est le plus rapide et minimaliste. Zéro dépendance, fonctionne dans votre navigateur. Meilleur pour utilisation légère.',
+            '**Jan AI** est une application bureau (Windows, macOS) avec synchronisation hors ligne. Aucune configuration de serveur. Populaire avec utilisateurs non-techniques.',
+            '**Continue.dev** est une extension VS Code pour suggestions de code en ligne depuis votre modèle Ollama local.',
+            'En avril 2026, toutes les interfaces principales sont open-source et gratuites.',
+          ],
+        },
+        topFrontends: {
+          title: 'Top 8 interfaces LLM locales : Comparaison de fonctionnalités',
+          rows: [
+            { 'Interface': 'Open WebUI', 'Type': 'Application web (Docker)', 'Meilleur pour': 'Riche en fonctionnalités, RAG, équipes', 'Temps de configuration': '5 min (avec Docker)', 'RAM requis': '12 GB+', 'Open Source': 'Oui' },
+            { 'Interface': 'Enchanted UI', 'Type': 'Web (zéro dépendance)', 'Meilleur pour': 'Vitesse, simplicité', 'Temps de configuration': '0 min (URL)', 'RAM requis': '8 GB+', 'Open Source': 'Oui' },
+            { 'Interface': 'Jan AI', 'Type': 'Application bureau', 'Meilleur pour': 'Utilisateurs non-techniques, hors ligne', 'Temps de configuration': '3 min (installation)', 'RAM requis': '8 GB+', 'Open Source': 'Oui' },
+            { 'Interface': 'Continue.dev', 'Type': 'Extension VS Code', 'Meilleur pour': 'Complétion de code', 'Temps de configuration': '2 min (installer extension)', 'RAM requis': '8 GB+', 'Open Source': 'Oui' },
+            { 'Interface': 'Lobe Chat', 'Type': 'Application web', 'Meilleur pour': 'Confidentialité, personnalisation', 'Temps de configuration': '5 min', 'RAM requis': '8 GB+', 'Open Source': 'Oui' },
+            { 'Interface': 'Gradio', 'Type': 'Bibliothèque Python', 'Meilleur pour': 'Interfaces personnalisées, équipes ML', 'Temps de configuration': '5 min (Python)', 'RAM requis': '8 GB+', 'Open Source': 'Oui' },
+            { 'Interface': 'Streamlit', 'Type': 'Framework Python', 'Meilleur pour': 'Data scientists, tableaux de bord', 'Temps de configuration': '5 min (Python)', 'RAM requis': '8 GB+', 'Open Source': 'Oui' },
+            { 'Interface': 'Text-generation-webui', 'Type': 'Web (complexe)', 'Meilleur pour': 'Expérimentation, utilisateurs avancés', 'Temps de configuration': '15 min', 'RAM requis': '12 GB+', 'Open Source': 'Oui' },
+          ],
+          columns: ['Interface', 'Type', 'Meilleur pour', 'Temps de configuration', 'RAM requis', 'Open Source'],
+        },
+        openWebUI: {
+          title: 'Qu\'est-ce qui rend Open WebUI l\'interface la plus populaire ?',
+          content: [
+            'Open WebUI est une interface tout-en-un pour les modèles locaux. Elle fonctionne avec Ollama, LM Studio ou n\'importe quelle API compatible OpenAI. En avril 2026, c\'est l\'interface LLM locale la plus téléchargée sur GitHub (25 000+ étoiles) car elle combine la plupart des fonctionnalités en une seule application.',
+            '**Fonctionnalités principales :**',
+            '- **RAG (Génération augmentée par récupération)** : téléchargez des documents (PDFs, fichiers texte) et laissez le modèle répondre aux questions à leur sujet.',
+            '- **Support multimodal** : téléchargez des images et posez des questions à leur sujet.',
+            '- **Intégration recherche web** : le modèle peut rechercher le web pour des informations actuelles.',
+            '- **Knowledge bases** : créez des collections persistantes de documents auxquelles le modèle se réfère.',
+            '- **Appels fonction** : intégrez des outils externes (API, bases de données).',
+            'Inconvénient : nécessite Docker. Si vous n\'avez pas Docker installé, cela nécessite ~20 minutes de configuration supplémentaire.',
+          ],
+        },
+        enchantedUI: {
+          title: 'Interface la plus rapide : Enchanted UI (approche minimaliste)',
+          content: [
+            'Enchanted UI est un client chat web pur pour Ollama. Aucune dépendance ; exécutez-le directement dans votre navigateur sans installation.',
+            '**Avantages :**',
+            '- Zéro dépendance. Tapez l\'URL de votre Ollama (ex: http://localhost:11434) et commencez à discuter.',
+            '- Interface élégante et rapide. Focalisé sur chat uniquement.',
+            '- Perfect pour développeurs qui comprennent déjà Ollama.',
+            '**Inconvénients :**',
+            '- Pas de RAG ou intégration de documents.',
+            '- Interface minimaliste peut sembler basique pour utilisateurs moins techniques.',
+            '- Pas de gestion des sessions ou historique persistant.',
+          ],
+        },
+        janAI: {
+          title: 'Meilleure app bureau : Jan AI (alternative hors ligne)',
+          content: [
+            'Jan AI est une application bureau native (Windows, macOS) qui empaqueté Ollama + une interface web. Téléchargez, installez, exécutez. Aucun terminal requis.',
+            '**Avantages :**',
+            '- Installation simple pour utilisateurs non-techniques. Pas de Docker ou terminal.',
+            '- Synchronisation hors ligne : continue à fonctionner si votre internet tombe.',
+            '- Intégration modèle automatique ; sélectionnez modèle depuis le menu.',
+            '- Supporte téléchargement PDF et document.',
+            '**Inconvénients :**',
+            '- Moins de fonctionnalités que Open WebUI.',
+            '- Binaires plus grands (~1 GB sur disque).',
+          ],
+        },
+        continueDev: {
+          title: 'Meilleure pour code : Continue.dev (extension VS Code)',
+          content: [
+            'Continue.dev est une extension VS Code qui apporte complétion et suggestions de code inline depuis votre Ollama local.',
+            '**Comment utiliser :**',
+            '1. Installez extension Continue depuis VS Code Marketplace.',
+            '2. Connectez-vous à votre Ollama local (Settings > Continue > Ollama, default: http://localhost:11434).',
+            '3. Commencez à taper code ; suggestions apparaissent en gris.',
+            '4. Appuyez Tab pour accepter suggestion.',
+            '**Meilleur pour :**',
+            '- Développeurs qui vivent dans VS Code.',
+            '- Suggestions de code en temps réel sans quitter votre IDE.',
+            '- Modèles 7B-13B (réponse rapide < 2s).',
+            'Économise 5–10 heures/mois comparé à saisie manuelle pour patterns répétitifs.',
+          ],
+        },
+        selfHostedVsCloud: {
+          title: 'Interfaces auto-hébergés vs. cloud (propriétaires)',
+          content: [
+            'Toutes les interfaces listées ci-dessus sont auto-hébergées (vous les exécutez localement). Voici comment elles se comparent à des services cloud propriétaires :',
+            '**Auto-hébergé (local) :**',
+            '- Coût : zéro après achat GPU initial (~$300–$3000).',
+            '- Latence : <500ms (réseau local).',
+            '- Confidentialité : données ne quittent jamais votre machine.',
+            '- Uptime : dépend votre équipe IT.',
+            '**Cloud propriétaire (ChatGPT, Claude, Copilot) :**',
+            '- Coût : $0.002–$0.03 par 1k tokens.',
+            '- Latence : 2–5 sec (API internet).',
+            '- Confidentialité : moins de contrôle, données tiers.',
+            '- Uptime : géré par provider (99.9%+ SLA).',
+            'Pour équipes qui gèrent données sensibles (santé, finances, droit), auto-hébergé est obligatoire pour conformité.',
+          ],
+        },
+        regionalContext: {
+          title: 'Contexte régional : conformité et recommandations',
+          content: [
+            '**Europe (RGPD/CNIL)**',
+            'L\'Autorité française de la protection des données (CNIL) note que l\'inférence locale est préférée pour traitement données personnelles sous RGPD. Si votre frontend traite données EU (noms clients, adresses email, contrats), auto-héberger Open WebUI ou Enchanted UI respecte RGPD Article 32 (mesures sécurité technique). CNIL conseil : "Les organisations qui utilisent des LLM pour traitement données personnelles doivent évaluer si transmission cloud APIs est compatible avec obligations RGPD de minimisation données et transferts tiers."',
+            '**Japon (METI)**',
+            'Directives METI Cybersecurity 2024 recommandent pour gouvernements + entreprises critiques infrastructure : documentation IA tools utilisés + version modèle + infrastructure (local vs. cloud). Open WebUI auto-hébergé satisfait cette exigence.',
+            '**Chine (Loi Sécurité Données)**',
+            'Loi Sécurité Données 2021 : données sensibles infrastructure critique doivent rester in-country. Qwen2.5 Chat (Alibaba, Apache 2.0) exécuté localement + Open WebUI satisfait conformité.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs courantes lors sélection interface',
+          numberedItems: [
+            'Choisir Open WebUI pour modèle 7B sur 16 GB RAM. Open WebUI + Docker + modèle 13B = 18–20 GB RAM utilisée. Utilisez Enchanted UI ou Continue.dev pour setup basique. Réservez Open WebUI pour équipes + production.',
+            'Essayer Jan AI avec modèle 70B. Jan AI empaqueté pour 8–30B. Pour 70B, configurez vLLM manuellement ou utilisez instance cloud.',
+            'Oublier synchronisation temps réel. Enchanted UI ne se synchronise pas entre onglets. Si vous ouvrez deux onglets + discutez dans chacun, historique diverge. Utilisez Open WebUI pour équipes multi-utilisateurs.',
+            'Ne pas allouer GPU continuation. Continue.dev par défaut = CPU. Spécifiez GPU : Settings > Continue > Model Parameters > GPU = 1 ou 2. Sinon complétion = 2–5 sec/suggestion.',
+            'Installer incompatible versions. Enchanted UI sur Ollama 0.3.x mais vous avez 0.2.x. Mettre à jour Ollama d\'abord : ollama version && ollama pull <model>.',
+          ],
+        },
+        faqSection: {
+          title: 'Questions courantes',
+          faqs: [
+            {
+              q: 'Laquelle interface LLM je dois choisir si je débute ?',
+              a: 'Jan AI. Installation unique, une interface. Pas de terminal ou Docker. Si vous êtes développeur confortable avec terminal, Enchanted UI + Ollama est plus léger.'
+            },
+            {
+              q: 'Open WebUI a-t-elle besoin Docker ?',
+              a: 'Oui. `docker run -d --name open-webui --network host ghcr.io/open-webui/open-webui:latest`. Si Docker absent, installez-le d\'abord (~5 min) ou utilisez Jan AI / Enchanted UI à la place.'
+            },
+            {
+              q: 'Puis-je utiliser Continue.dev sans Ollama ?',
+              a: 'Non. Continue.dev requiert Ollama ou LM Studio pour modèle local. Continue ne fourni pas backend ; c\'est juste client VS Code.'
+            },
+            {
+              q: 'Quelle interface est plus rapide : Enchanted UI ou Open WebUI ?',
+              a: 'Enchanted UI. Zéro overhead Docker ou base données. Open WebUI = 500–1000ms latence supplémentaire pour RAG + features.'
+            },
+            {
+              q: 'Mes documents PDF sont-ils en sécurité avec Open WebUI RAG ?',
+              a: 'Oui. PDFs restent sur votre machine. Jamais envoyé cloud. Stocké localement dans base données Open WebUI.'
+            },
+            {
+              q: 'Continue.dev fonctionne-t-elle avec autres éditeurs (Vim, Neovim, Sublime) ?',
+              a: 'Non actuellement. Continue.dev = VS Code + JetBrains IDEs uniquement. Pour Vim, configurez vLLM API + copilot.vim.'
+            },
+            {
+              q: 'Dois-je avoir OpenAI API key pour interfaces LLM locales ?',
+              a: 'Non. Toutes interfaces listées (Open WebUI, Enchanted, Jan, Continue.dev) utilisent modèles locaux uniquement. Zéro dépendance API propriétaires.'
+            },
+            {
+              q: 'Mon Ollama modèle change entre sessions (différentes réponses même question). Pourquoi ?',
+              a: 'Paramètre temperature=0.7 défaut. Chaque exécution = légères variations. Pour reproductibilité, définir temperature=0 dans interface Ollama.'
+            },
+            {
+              q: 'Quelle interface dois-je utiliser pour équipes (3–10 personnes) ?',
+              a: 'Open WebUI + serveur partagé. Configurez serveur vLLM central + Open WebUI exposé HTTP sécurisé (nginx proxy, auth).'
+            },
+            {
+              q: 'Continue.dev m\'affiche aucune suggestion. Qu\'est-ce qui se passe ?',
+              a: 'Vérifiez : (1) Ollama exécution : `ollama serve`. (2) Settings > Continue > Model = votre modèle local (ex: llama2). (3) RAM libre. (4) Redémarrer VS Code.'
+            },
+          ],
+        },
+        relatedReading: {
+          items: [
+            '[Ollama vs LM Studio vs GPT4All : comparaison 2026](/local-llms/ollama-vs-lm-studio-vs-gpt4all?lang=fr) — serveurs backend pour interfaces.',
+            '[Comment installer Ollama : guide complet](/local-llms/how-to-install-ollama?lang=fr) — démarrage Ollama avant toute interface.',
+            '[Open WebUI RAG guide :](/local-llms/open-webui-rag-setup?lang=fr) — configurer document upload + recherche.',
+            '[Modèles locaux meilleurs 2026 :](/local-llms/best-local-llm-models-2026?lang=fr) — sélectionner bon modèle pour votre matériel.',
+            '[Continue.dev profond dive :](/local-llms/continue-dev-setup-guide?lang=fr) — optimiser complétion code avec VS Code.',
+          ],
+        },
+        sources: {
+          items: [
+            '[Open WebUI GitHub](https://github.com/open-webui/open-webui) — 25,000+ étoiles, code source.',
+            '[Jan AI Desktop Application](https://jan.ai/) — applications bureau Windows/macOS.',
+            '[Continue.dev VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Continue.continue) — marketplace.',
+            '[Enchanted UI](https://github.com/harmonicwave/enchanted-ui) — client web Ollama minimaliste.',
+            '[CNIL recommandations IA](https://www.cnil.fr/fr) — données personnelles + LLMs EU.',
+            '[METI AI Governance 2024](https://www.meti.go.jp) — directives japonaises infrastructure critique.',
+            '[China Data Security Law (数据安全法)](http://www.npc.gov.cn) — loi chinoise infrastructure données.',
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'url': 'https://www.promptquorum.com/local-llms/best-local-llm-frontends?lang=fr',
+        'inLanguage': 'fr',
+        'headline': 'Meilleures interfaces locales LLM en 2026 : Open WebUI, Enchanted UI et autres',
+        'description': 'Comparez 8 interfaces LLM locales : Open WebUI (25k étoiles, RAG), Enchanted UI (plus rapide), Jan AI (bureau), Continue.dev (code) et plus. Comparaison et guide de configuration.',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-15',
+        'image': 'https://www.promptquorum.com/og-image.png',
+        'about': [
+          { '@type': 'Thing', 'name': 'Open WebUI' },
+          { '@type': 'Thing', 'name': 'Enchanted UI' },
+          { '@type': 'Thing', 'name': 'Jan AI' },
+          { '@type': 'Thing', 'name': 'Continue.dev' },
+          { '@type': 'Thing', 'name': 'Lobe Chat' },
+        ],
+        'mentions': [
+          { '@type': 'SoftwareApplication', 'name': 'Ollama' },
+          { '@type': 'SoftwareApplication', 'name': 'LM Studio' },
+          { '@type': 'SoftwareApplication', 'name': 'Gradio' },
+          { '@type': 'SoftwareApplication', 'name': 'Streamlit' },
+        ],
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro', '.key-takeaways']
+        },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'fr',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Laquelle interface LLM je dois choisir si je débute ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Jan AI. Installation unique, une interface. Pas de terminal ou Docker. Si vous êtes développeur confortable avec terminal, Enchanted UI + Ollama est plus léger.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Open WebUI a-t-elle besoin Docker ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. `docker run -d --name open-webui --network host ghcr.io/open-webui/open-webui:latest`. Si Docker absent, installez-le d\'abord (~5 min) ou utilisez Jan AI / Enchanted UI à la place.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser Continue.dev sans Ollama ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Continue.dev requiert Ollama ou LM Studio pour modèle local. Continue ne fourni pas backend ; c\'est juste client VS Code.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle interface est plus rapide : Enchanted UI ou Open WebUI ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Enchanted UI. Zéro overhead Docker ou base données. Open WebUI = 500–1000ms latence supplémentaire pour RAG + features.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Mes documents PDF sont-ils en sécurité avec Open WebUI RAG ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. PDFs restent sur votre machine. Jamais envoyé cloud. Stocké localement dans base données Open WebUI.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Continue.dev fonctionne-t-elle avec autres éditeurs (Vim, Neovim, Sublime) ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Non actuellement. Continue.dev = VS Code + JetBrains IDEs uniquement. Pour Vim, configurez vLLM API + copilot.vim.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je avoir OpenAI API key pour interfaces LLM locales ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Toutes interfaces listées (Open WebUI, Enchanted, Jan, Continue.dev) utilisent modèles locaux uniquement. Zéro dépendance API propriétaires.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Mon Ollama modèle change entre sessions (différentes réponses même question). Pourquoi ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Paramètre temperature=0.7 défaut. Chaque exécution = légères variations. Pour reproductibilité, définir temperature=0 dans interface Ollama.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle interface dois-je utiliser pour équipes (3–10 personnes) ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI + serveur partagé. Configurez serveur vLLM central + Open WebUI exposé HTTP sécurisé (nginx proxy, auth).' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Continue.dev m\'affiche aucune suggestion. Qu\'est-ce qui se passe ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Vérifiez : (1) Ollama exécution : `ollama serve`. (2) Settings > Continue > Model = votre modèle local (ex: llama2). (3) RAM libre. (4) Redémarrer VS Code.' }
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Top 8 interfaces LLM locales en 2026',
+        'inLanguage': 'fr',
+        'numberOfItems': 8,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Interface web tout-en-un avec RAG, multimodal, knowledge bases. Docker requis. 12 GB RAM+.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Enchanted UI', 'description': 'Client web minimaliste, zéro dépendance, fonctionne directement dans le navigateur.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Jan AI', 'description': 'Application bureau native (Windows, macOS) pour utilisateurs non-techniques. Synchronisation hors ligne.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Continue.dev', 'description': 'Extension VS Code pour complétion code en ligne depuis Ollama local.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Lobe Chat', 'description': 'Application web avec focus confidentialité et personnalisation.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Gradio', 'description': 'Bibliothèque Python pour créer interfaces personnalisées pour équipes ML.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Streamlit', 'description': 'Framework Python pour data scientists et tableaux de bord.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Text-generation-webui', 'description': 'Interface web complexe pour expérimentation et utilisateurs avancés.' },
+        ],
+      },
+    },
   },
 
   'text-generation-webui-vs-vllm-vs-llamacpp': {
