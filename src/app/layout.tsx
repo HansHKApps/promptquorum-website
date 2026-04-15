@@ -95,7 +95,7 @@ export default async function RootLayout({
 
         {/* hreflang alternate links for all 5 language variants */}
         <link rel="alternate" hrefLang="x-default" href={baseUrlWithoutLang} />
-        <link rel="alternate" hrefLang="en" href={`${baseUrlWithoutLang}${baseUrlWithoutLang.includes('?') ? '&' : '?'}lang=en`} />
+        <link rel="alternate" hrefLang="en" href={baseUrlWithoutLang} />
         <link rel="alternate" hrefLang="de" href={`${baseUrlWithoutLang}${baseUrlWithoutLang.includes('?') ? '&' : '?'}lang=de`} />
         <link rel="alternate" hrefLang="fr" href={`${baseUrlWithoutLang}${baseUrlWithoutLang.includes('?') ? '&' : '?'}lang=fr`} />
         <link rel="alternate" hrefLang="ja" href={`${baseUrlWithoutLang}${baseUrlWithoutLang.includes('?') ? '&' : '?'}lang=ja`} />
