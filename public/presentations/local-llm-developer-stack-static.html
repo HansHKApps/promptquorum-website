@@ -43,8 +43,21 @@
             align-items: center;
             padding: 32px 48px;
             text-align: center;
-            overflow: hidden;
+            overflow: auto;
             animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.image {
+            overflow: visible;
+            justify-content: flex-start;
+            padding-top: 48px;
+        }
+
+        .slide img {
+            max-width: 90%;
+            max-height: 60vh;
+            object-fit: contain;
+            margin: 0 auto;
         }
 
         .slide.active {
