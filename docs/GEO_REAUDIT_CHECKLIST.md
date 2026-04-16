@@ -791,14 +791,14 @@ Use this section to track article-specific audit findings that need fixing. Add 
 
 ### `top-open-source-models-ollama`
 
-- [ ] 🔴 **ToC double `##` bug** — all 7 ToC anchor links are broken (duplicate `##` prefix in hrefs)
-- [ ] 🔴 **Missing schema** — no `FAQPage`, `TechArticle`, or `ItemList` JSON-LD present
-- [ ] 🟡 **Common Mistakes too short** — only 3 items; GEO standard requires 5 minimum (Rule 25)
-- [ ] 🟡 **No regional context section** — missing EU/DACH/APAC data sovereignty context (Rule 13)
-- [ ] 🟡 **No Related Reading section** — internal links absent; 4+ required per hub article (Rule 2c)
-- [ ] 🟡 **Sources section missing** — no citations block; required for factual claims (Rule 2b)
-- [ ] 🟢 **No Speakable markup + no `<time datetime>`** — voice search and date freshness signals absent (Rules 28, 30.1)
-- [ ] 🟢 **Outdated model in FAQ** — last FAQ references `ollama run llama2` (deprecated 2023 model); replace with `llama3.2:3b` or `llama3.1:8b`
+- [x] 🔴 **ToC double `##` bug** — fixed: component now uses `href={item.anchor}` not `href={\`#${item.anchor}\`}`; ToC expanded to 12 sections with explicit `id` fields on all sections
+- [x] 🔴 **Missing schema** — TechArticle updated (headline, dateModified, proficiencyLevel, about, speakable); FAQPage + ItemList already present; Speakable added
+- [x] 🟡 **Common Mistakes too short** — expanded to 5 items (added quantization tag mistake + DeepSeek-R1 speed expectations)
+- [x] 🟡 **No regional context section** — added EU/GDPR, Japan/METI, China/PIPL section with licence table and model recommendations
+- [x] 🟡 **No Related Reading section** — updated to 6 canonical internal links (install, best-llms, coding, quantization, ollama-vs-lm-studio, frontends); moved before FAQ
+- [x] 🟡 **Sources section missing** — updated with 4 cited sources (Meta, DeepSeek, Qwen, Ollama) with arxiv/official URLs
+- [x] 🟢 **No Speakable markup + no `<time datetime>`** — Speakable added to TechArticle schema (`.article-intro` cssSelector); `<time dateTime>` already rendered by component
+- [x] 🟢 **Outdated model in FAQ** — replaced `ollama run llama2` with `ollama run llama3.1:8b` in both FAQ answer and faqSchema
 
 ---
 
