@@ -26981,6 +26981,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: 'Ollama API Endpoint', anchor: '#ollama-api-endpoint' },
         { label: 'Python: Using the Official OpenAI Library', anchor: '#python-openai-library' },
         { label: 'Node.js: OpenAI SDK', anchor: '#nodejs-openai' },
+        { label: 'LM Studio: OpenAI-Compatible Server', anchor: '#lm-studio-api' },
         { label: 'JavaScript: Browser Usage', anchor: '#javascript-browser' },
         { label: 'Advanced: Streaming Responses', anchor: '#streaming-responses' },
         { label: 'Advanced: Function Calling', anchor: '#function-calling' },
@@ -27043,6 +27044,22 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           content: '**Install the OpenAI SDK and connect it to your local Ollama instance.**',
           codeBlock: '// 1. Install\nnpm install openai\n\n// 2. Connect to Ollama\nconst OpenAI = require("openai").default;\n\nconst client = new OpenAI({\n  baseURL: "http://localhost:11434/v1",\n  apiKey: "ollama"\n});\n\n// 3. Make a request\nconst response = await client.chat.completions.create({\n  model: "llama3.2:3b",\n  messages: [{\n    role: "user",\n    content: "What is 2+2?"\n  }]\n});\n\nconsole.log(response.choices[0].message.content);',
           codeLanguage: 'javascript',
+        },
+        lmStudio: {
+          id: 'lm-studio-api',
+          title: 'How to Use LM Studio OpenAI-Compatible Server (localhost:1234)',
+          content: [
+            '**LM Studio exposes an OpenAI-compatible API at `http://localhost:1234/v1`.** Enable it under the Local Server tab — load a model, then click Start Server. The same Python and Node.js code works with LM Studio — change only the port from 11434 to 1234.',
+            'LM Studio is suited for GUI users who want visual model browsing and easy switching between models. Ollama is preferred for scripting, automation, and CI pipelines.',
+          ],
+          codeBlock: '# Python: Connect to LM Studio (localhost:1234)\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="lm-studio"  # any string; LM Studio ignores it\n)\n\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-instruct",  # exact model name shown in LM Studio\n  messages=[\n    {"role": "user", "content": "What is 2+2?"}\n  ]\n)\n\nprint(response.choices[0].message.content)',
+          codeLanguage: 'python',
+          rows: [
+            { 'Platform': 'LM Studio', 'Port': 'localhost:1234', 'Best For': 'GUI users, visual model management', 'GPU Required': 'No (CPU works)' },
+            { 'Platform': 'Ollama', 'Port': 'localhost:11434', 'Best For': 'Scripting, automation, production', 'GPU Required': 'No (CPU works)' },
+            { 'Platform': 'vLLM', 'Port': 'localhost:8000', 'Best For': 'Multi-GPU, high-throughput servers', 'GPU Required': 'Recommended' },
+          ],
+          columns: ['Platform', 'Port', 'Best For', 'GPU Required'],
         },
         javascript: {
           id: 'javascript-browser',
@@ -27111,7 +27128,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             },
             {
               q: 'Does LM Studio have an OpenAI-compatible API?',
-              a: 'Yes, as of April 2026, LM Studio has an OpenAI-compatible API in beta at `http://localhost:1234/v1`. Use the same code as Ollama, just change the port.',
+              a: 'Yes. LM Studio exposes an OpenAI-compatible API at `http://localhost:1234/v1`. Enable it under the Local Server tab, load a model, then click Start Server. Use the same Python or Node.js code as Ollama — only the port changes (1234 instead of 11434).',
             },
             {
               q: 'Can I call multiple models simultaneously?',
@@ -27167,7 +27184,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           title: 'Sources',
           items: [
             'Ollama. (2026). "Ollama OpenAI Compatibility." https://github.com/ollama/ollama/blob/main/docs/openai.md — Official documentation for Ollama\'s OpenAI-compatible REST API endpoints.',
-            'OpenAI. (2024). "OpenAI Python Library." https://github.com/openai/openai-python — Official Python SDK used to connect to both OpenAI and Ollama via base_url override.',
+            'LM Studio. (2026). "LM Studio Local Server." https://lmstudio.ai/docs/local-server — Documentation for LM Studio\'s OpenAI-compatible Local Server at localhost:1234.',
+            'OpenAI. (2024). "OpenAI Python Library." https://github.com/openai/openai-python — Official Python SDK used to connect to both OpenAI and local LLMs via base_url override.',
             'vLLM Team. (2024). "vLLM OpenAI-Compatible Server." https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html — vLLM\'s OpenAI-compatible API server docs (port 8000, production use).',
           ],
         },
@@ -27175,7 +27193,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Local LLM OpenAI-Compatible API: Connect Python, Node.js, and JavaScript to Ollama',
+        'headline': 'LM Studio and Ollama OpenAI-Compatible API: Python and Node.js Setup Guide (localhost:1234 and 11434)',
         'description': 'Change one line — base_url to localhost — to run Ollama as a drop-in OpenAI API. Python, Node.js, streaming, and function calling all work unchanged.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api',
         'inLanguage': 'en',
@@ -27298,41 +27316,62 @@ ollama run -m deepseek-r1:7b "2^10を解く"
               '@type': 'Answer',
               'text': 'Yes. Use ChatOpenAI with base_url="http://localhost:11434/v1" and api_key="ollama". LangChain also has a dedicated ChatOllama class for Ollama-specific features.',
             }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What port does LM Studio use for its OpenAI-compatible API?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio uses port 1234. The API base URL is http://localhost:1234/v1. Enable it under the Local Server tab in LM Studio, load a model, then use the OpenAI SDK with base_url="http://localhost:1234/v1" and api_key="lm-studio" (any string).',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I set up LM Studio as a local OpenAI API server?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Open LM Studio, load a model, go to the Local Server tab, and click Start Server. LM Studio starts an OpenAI-compatible API at http://localhost:1234/v1. Install the OpenAI SDK (pip install openai), then: client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio"). Call client.chat.completions.create() exactly as with OpenAI.',
+            }
           }
         ]
       },
       howToSchema: {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        'name': 'How to Use the Ollama OpenAI-Compatible API',
-        'description': 'Connect Python or Node.js to Ollama\'s OpenAI-compatible REST API at http://localhost:11434/v1.',
+        'name': 'How to Use LM Studio or Ollama With the OpenAI-Compatible API',
+        'description': 'Connect Python or Node.js to LM Studio (localhost:1234) or Ollama (localhost:11434) using the OpenAI SDK.',
         'step': [
           {
             '@type': 'HowToStep',
             'name': 'Install the OpenAI SDK',
-            'text': 'Run pip install openai (Python) or npm install openai (Node.js). No Ollama-specific package is needed.',
+            'text': 'Run pip install openai (Python) or npm install openai (Node.js). No platform-specific package needed.',
+          },
+          {
+            '@type': 'HowToStep',
+            'name': 'Start LM Studio or Ollama',
+            'text': 'For LM Studio: load a model and enable Local Server (port 1234). For Ollama: run ollama serve (port 11434). Both start automatically on their respective ports.',
           },
           {
             '@type': 'HowToStep',
             'name': 'Set base_url and api_key',
-            'text': 'Create the client with base_url="http://localhost:11434/v1" and api_key="ollama". The api_key value is ignored by Ollama but required by the SDK.',
+            'text': 'LM Studio: base_url="http://localhost:1234/v1", api_key="lm-studio". Ollama: base_url="http://localhost:11434/v1", api_key="ollama". The api_key is ignored locally but required by the SDK.',
           },
           {
             '@type': 'HowToStep',
             'name': 'Call chat.completions.create',
-            'text': 'Use client.chat.completions.create(model="llama3.2:3b", messages=[...]) — identical to the OpenAI API call.',
+            'text': 'Use client.chat.completions.create(model="model-name", messages=[...]) — identical to the OpenAI API call. The model name must match what is loaded in LM Studio or installed in Ollama.',
           },
         ],
       },
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Ollama OpenAI-Compatible API Endpoints',
+        'name': 'Local LLM OpenAI-Compatible API Ports: LM Studio, Ollama, and vLLM',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Chat Completions', 'description': 'POST /v1/chat/completions — matches OpenAI\'s /chat/completions endpoint' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Text Completions', 'description': 'POST /v1/completions — matches OpenAI\'s /completions endpoint' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Embeddings', 'description': 'POST /v1/embeddings — convert text to vectors' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'List Models', 'description': 'GET /v1/models — list all available Ollama models' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'LM Studio', 'description': 'localhost:1234/v1 — Enable under Local Server tab; GUI-based model management; no GPU required; OpenAI-compatible API' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Ollama', 'description': 'localhost:11434/v1 — Start with ollama serve; best for scripting and automation; no GPU required; OpenAI-compatible API' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'vLLM', 'description': 'localhost:8000/v1 — Start with python -m vllm.entrypoints.openai.api_server; GPU recommended; high-throughput production use' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Chat Completions endpoint', 'description': 'POST /v1/chat/completions — identical endpoint path across LM Studio, Ollama, and vLLM; same client code works with all three' },
         ],
       },
       gammaEmbedUrl: '/presentations/local-llm-openai-compatible-api-static.html',
