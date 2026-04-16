@@ -402,6 +402,36 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
           </p>
         )}
 
+        {/* Presentation / Gamma slide deck */}
+        {(article as any).gammaEmbedUrl && (
+          <div className="mt-6 pt-8 border-t border-primary/20">
+            <h2 className="text-2xl font-bold text-text-primary mb-2">
+              {PRESENTATION_UI[lang]?.heading}: {article.title} (Slide Deck)
+            </h2>
+            <p className="text-text-secondary mb-4 text-sm">
+              {(article as any).gammaDescription ?? PRESENTATION_UI[lang]?.fallbackDescription}
+            </p>
+            <p className="text-sm mb-4">
+              {PRESENTATION_UI[lang]?.description}{' '}
+              <a
+                href={`${(article as any).gammaEmbedUrl}?lang=${lang}&print=1`}
+                className="text-primary underline font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {PRESENTATION_UI[lang]?.savePdf}
+              </a>
+            </p>
+            <iframe
+              src={`${(article as any).gammaEmbedUrl}?lang=${lang}`}
+              title={`${article.title} — PromptQuorum`}
+              className="w-full rounded-xl border border-primary/20 shadow-sm"
+              style={{ height: 'min(80vh, max(600px, 56.25vw))' }}
+              loading="lazy"
+            />
+          </div>
+        )}
+
         {/* Hero Component or Image */}
         {(article as any).heroComponent === 'LLMImageSelector' && (
           <LLMImageSelector />
@@ -432,36 +462,6 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
             )
           })}
         </article>
-
-        {/* Presentation / Gamma slide deck */}
-        {(article as any).gammaEmbedUrl && (
-          <div className="mt-12 pt-8 border-t border-primary/20">
-            <h2 className="text-2xl font-bold text-text-primary mb-2">
-              {PRESENTATION_UI[lang]?.heading}: {article.title} (Slide Deck)
-            </h2>
-            <p className="text-text-secondary mb-4 text-sm">
-              {(article as any).gammaDescription ?? PRESENTATION_UI[lang]?.fallbackDescription}
-            </p>
-            <p className="text-sm mb-4">
-              {PRESENTATION_UI[lang]?.description}{' '}
-              <a
-                href={`${(article as any).gammaEmbedUrl}?lang=${lang}&print=1`}
-                className="text-primary underline font-medium"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {PRESENTATION_UI[lang]?.savePdf}
-              </a>
-            </p>
-            <iframe
-              src={`${(article as any).gammaEmbedUrl}?lang=${lang}`}
-              title={`${article.title} — PromptQuorum`}
-              className="w-full rounded-xl border border-primary/20 shadow-sm"
-              style={{ height: 'min(80vh, max(600px, 56.25vw))' }}
-              loading="lazy"
-            />
-          </div>
-        )}
 
         {/* Footer CTA */}
         <div className="mt-16 pt-8 border-t border-primary/20 text-center">
