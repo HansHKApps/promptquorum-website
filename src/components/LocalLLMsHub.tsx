@@ -13,19 +13,19 @@ function navHref(path: string, lang: string) {
 }
 
 const HUB_HERO_TITLE: Record<string, string> = {
-  en: 'Local LLMs in 2026: Run AI Models Locally with Ollama, LM Studio, and Open-Weight Models',
-  de: 'Der vollständige Leitfaden zum lokalen Betrieb von KI-Modellen im Jahr 2026.',
-  fr: 'Le guide complet pour exécuter des modèles IA localement en 2026.',
-  ja: '2026年にAIモデルをローカルで実行するための完全ガイド。',
-  zh: '2026年本地运行AI模型的完整指南。',
+  en: 'Best Local LLMs April 2026: Ollama, LM Studio, Hardware & VRAM Guide',
+  de: 'Beste Lokale LLMs April 2026: Ollama, LM Studio, Hardware & VRAM Guide',
+  fr: 'Meilleurs LLMs Locaux Avril 2026 : Ollama, LM Studio & Guide VRAM',
+  ja: '2026年4月最高のローカルLLM：Ollama・LM Studio・VRAMガイド',
+  zh: '2026年4月最佳本地LLM：Ollama、LM Studio与VRAM硬件指南',
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
-  en: 'Local LLMs run entirely on your own hardware — no API costs, no data sent to external servers, full offline access. As of April 2026, a 7B model runs in under 5 minutes on any laptop using Ollama, costs $0 per query, and produces output comparable to GPT-4o Mini on most tasks. These guides cover everything from first install to 70B production deployment — with exact commands, VRAM requirements, and benchmark data for Llama, Qwen, Mistral, and 200+ models.',
-  de: 'Lokale LLMs bieten vollständige Privatsphäre, keine API-Kosten und Offline-Fähigkeit. Diese Leitfäden decken alles ab — von der ersten Installation bis zum Fine-Tuning von 70B-Modellen, Hardware-Auswahl und Enterprise-Deployment.',
-  fr: 'Les LLMs locaux offrent une confidentialité totale, zéro coût API et une capacité hors ligne. Ces guides couvrent tout, de la première installation au fine-tuning de modèles 70B, la sélection matérielle et le déploiement entreprise.',
-  ja: 'ローカルLLMは完全なプライバシー、APIコストゼロ、オフライン機能を提供します。これらのガイドは、最初のインストールから70BモデルのファインチューニングW、ハードウェア選択、エンタープライズデプロイまでをカバーします。',
-  zh: '本地LLM提供完整隐私、零API成本和离线能力。这些指南涵盖从首次安装到70B模型微调、硬件选择和企业部署的一切内容。',
+  en: 'Best local LLMs for April 2026 — covering the latest Ollama models (Llama 4, Qwen3, Gemma 3), LM Studio vs Jan.ai comparison, VRAM and GPU requirements for RTX 3060 12 GB and other hardware, pull commands, and beginner hardware recommendations. $0/token, full privacy, offline.',
+  de: 'Beste lokale LLMs für April 2026 — aktuelle Ollama-Modelle, LM Studio vs Jan.ai Vergleich, VRAM- & GPU-Anforderungen (RTX 3060 etc.), Pull-Befehle und Hardware-Empfehlungen für Einsteiger.',
+  fr: 'Meilleurs LLMs locaux pour avril 2026 — modèles Ollama récents (Llama 4, Qwen3, Gemma 3), comparaison LM Studio vs Jan.ai, exigences VRAM/GPU (RTX 3060 inclus), commandes pull et recommandations matérielles débutants.',
+  ja: '2026年4月最新ローカルLLM：Ollamaおすすめモデル（Llama 4・Qwen3・Gemma 3）、LM Studio vs Jan.ai比較、RTX 3060などVRAM/GPU必要スペック、pullコマンド付き完全ガイド。',
+  zh: '2026年4月最佳本地LLM：最新Ollama模型（Llama 4、Qwen3、Gemma 3）、LM Studio vs Jan.ai对比、RTX 3060等VRAM/GPU需求、pull命令及新手硬件指南。',
 }
 
 const HUB_CTA_TEXT: Record<string, string> = {
