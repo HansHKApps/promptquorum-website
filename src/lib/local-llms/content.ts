@@ -203,6 +203,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Step-by-step setup and first model walkthrough',
@@ -1051,6 +1052,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[What Are Local LLMs?](/local-llms/what-are-local-llms) — Definition and core concepts',
@@ -2568,6 +2570,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[What Are Local LLMs?](/local-llms/what-are-local-llms) — Core concepts and components',
@@ -4033,6 +4036,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and setup',
@@ -4473,6 +4477,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and first model download',
@@ -4742,6 +4747,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Terminal-based installer guide',
@@ -6019,6 +6025,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and setup',
@@ -7689,6 +7696,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[What Are Local LLMs?](/local-llms/what-are-local-llms) — Core concepts and components',
@@ -8830,6 +8838,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[What Are Local LLMs?](/local-llms/what-are-local-llms) — Core concepts and how they work',
@@ -9014,6 +9023,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Foundation models for new users',
@@ -11397,6 +11407,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) — full model rankings including all coding models at every size tier',
@@ -12621,6 +12632,7 @@ print(response.choices[0].message.content)`,
           imageCaption: 'Quantization trade-off: Q4_K_M (2.5 GB, -0.5% quality) is the recommended default. Q8_0 uses 3.8 GB with no quality gain. Q3_K_M (1.8 GB, -1.8% loss) for extreme RAM constraints.',
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — 7B model recommendations when 8 GB RAM is available and quality needs to step up from 3B',
@@ -13387,6 +13399,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — full GPU and RAM tier table for every model size including 70B hardware requirements',
@@ -14777,6 +14790,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-setup) — GPU, CPU, and RAM requirements for running quantized models.',
@@ -23868,6 +23882,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Setup guide for the underlying model engine.',
@@ -25464,6 +25479,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Setup the most popular llama.cpp wrapper.',
@@ -27082,6 +27098,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Setup Ollama to expose the API.',
@@ -27605,6 +27622,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — Setup guide.',
@@ -28518,6 +28536,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation guide.',
@@ -28673,6 +28692,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — Open WebUI has built-in RAG.',
@@ -28823,6 +28843,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — Complete list of interfaces.',
@@ -28955,6 +28976,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Setup Ollama for code completions.',
@@ -29881,6 +29903,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[How to Install Ollama](/local-llms/how-to-install-ollama) — Ollama setup.',
@@ -29960,6 +29983,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         vramMath: {
+          id: 'vram-math',
           title: 'How Do You Calculate VRAM Requirements?',
           content: [
             '**VRAM requirements depend on three factors: model size (parameters), quantization (bits per weight), and inference mode.** Use this formula to determine if your GPU has enough memory. For an interactive calculator, see the [VRAM calculator for local LLMs](/local-llms/vram-calculator-local-llm).',
@@ -30004,6 +30028,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         gpuRecommendations: {
+          id: 'gpu-recommendations',
           title: 'Which GPU Tier Matches Your Workload?',
           content: '**As of April 2026, NVIDIA GPUs deliver the highest tokens/sec for local LLM inference across all price points.** The sections below each tier give specific model recommendations. For a detailed benchmark comparison, see the [best GPUs for local LLM guide](/local-llms/best-gpus-for-local-llms).',
           columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Speed'],
@@ -30036,6 +30061,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         modelsFor16GB: {
+          id: 'models-16gb',
           title: 'Which Local LLMs Run Best on 16 GB VRAM?',
           content: [
             '**On a 16 GB VRAM GPU (NVIDIA RTX 4080, RTX 5080, or RTX 4090 laptop), the practical ceiling is 14–22B models.** Qwen2.5 14B at Q8_0 is the best overall choice: it uses 15 GB VRAM, runs at 45 tok/sec, and delivers coding-grade reasoning on par with GPT-3.5 Turbo.',
@@ -30059,6 +30085,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           imageCaption: 'Bar chart showing which models fit in 16 GB VRAM: Qwen2.5 14B Q8_0 (15 GB ✅), Mistral Small 3.1 24B Q4_K_M (13 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌ — does not fit). Best choice: Qwen2.5 14B Q8_0 for 45 tok/sec.',
         },
         modelsFor12GB: {
+          id: 'models-12gb',
           title: 'Which Local LLMs Run Best on 12 GB VRAM?',
           content: [
             '**On a 12 GB VRAM GPU (NVIDIA RTX 4070 Ti, RTX 5070, or RTX 3080 Ti), you can run 7–8B models at Q8 or up to 14B at Q4_K_M.** Llama 3.1 8B at Q8_0 is the most reliable choice: 9 GB VRAM, 80 tok/sec, and full instruction-following quality.',
@@ -30079,6 +30106,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         modelsFor24GB: {
+          id: 'models-24gb',
           title: 'Which 70B Models Actually Fit in 24 GB VRAM (RTX 4090)?',
           content: [
             '**The RTX 4090 has 24 GB VRAM — not enough for most 70B models at acceptable quality.** Llama 3.3 70B at Q4_K_M requires approximately 39 GB. The common misconception is that "Q4 is small" — at 70B parameters, even Q4 is large.',
@@ -30101,6 +30129,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           imageCaption: 'VRAM requirements vs RTX 4090 24 GB limit: DeepSeek-R1 32B Q4_K_M (19 GB ✅), Qwen2.5 32B Q5_K_M (21 GB ✅), Llama 3.3 70B Q4_K_M (39 GB ❌ — exceeds 24 GB by 63%). The sweet spot is 32B models at Q4–Q5.',
         },
         cpuRam: {
+          id: 'cpu-ram',
           title: 'What CPU and RAM Do You Need?',
           content: [
             '**With a dedicated GPU, CPU and RAM are secondary components.** The GPU handles matrix math; CPU/RAM manage context preparation. For a full comparison of GPU vs CPU vs Apple Silicon inference speeds, see the [GPU vs CPU vs Apple Silicon guide](/local-llms/gpu-vs-cpu-vs-apple-silicon).',
@@ -30110,6 +30139,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         cpuOnlyInference: {
+          id: 'cpu-inference',
           title: 'Which Models Run Well on 16 GB System RAM Without a GPU?',
           content: [
             '**Without a GPU, a machine with 16 GB system RAM can run 3B–7B models at 8–20 tokens/sec using CPU inference.** The bottleneck is memory bandwidth, not RAM capacity — CPUs have far lower bandwidth than GPUs, which is why inference is 5–10× slower.',
@@ -30132,6 +30162,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           imageCaption: 'CPU-only inference speeds on Ryzen 9 7950X: Gemma 2 2B Q8_0 (28 tok/sec fastest), Phi-4 Mini Q4_K_M (25 tok/sec best choice), Llama 3.1 8B Q8_0 (8 tok/sec). A used RTX 3060 ($200) achieves 5–8× faster.',
         },
         storage: {
+          id: 'storage',
           title: 'How Much Storage Do You Need?',
           content: [
             '**Model files are large: a 7B model at 4-bit quantization is 4–5 GB.** Plan storage around the number and size of models you want to keep locally.',
@@ -30144,6 +30175,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         budgetBuilds: {
+          id: 'budget-builds',
           title: 'What Hardware Build Should You Buy?',
           content: '**Building a local LLM machine from scratch means prioritizing GPU first, then CPU and RAM.** Here are three realistic configurations. For multi-GPU builds, see the [multi-GPU local LLM guide](/local-llms/multi-gpu-local-llms).',
           rows: [
@@ -30183,6 +30215,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           imageCaption: 'Default llama.cpp config: ~40 tok/sec. Optimized (--n-gpu-layers 99 + --ctx-size 2048 + --flash-attn): ~90 tok/sec — a 125% speed improvement on RTX 4070 Ti running Llama 3.1 8B Q4_K_M.',
         },
         mac: {
+          id: 'mac-hardware',
           title: 'Can Mac Hardware Run Local LLMs?',
           content: [
             '**Apple Silicon (M-series) runs local LLMs efficiently using unified memory shared between CPU and GPU.** M3/M4 Max and Pro handle 7–13B models at competitive tokens/sec.',
@@ -30197,6 +30230,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           imageCaption: 'Mac hardware comparison: M3 MacBook Pro 16" (18GB, 7B fast, 13B slow), M3 Max Studio (36GB, 13B good), M4 Max (40+ GB, 13–30B). Unified memory advantage, but RTX 4090 still better for 70B.',
         },
         serverVsConsumer: {
+          id: 'server-vs-consumer',
           title: 'When Should You Use Server vs Consumer Hardware?',
           content: [
             '**For production deployment (24/7 operation, multiple users), server-grade hardware is recommended over consumer GPUs.** Consumer hardware is optimized for gaming, not sustained inference.',
@@ -30231,6 +30265,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'What Are the Most Common Hardware Mistakes?',
           items: [
             '**Buying CPU-only when GPU is available.** A $600 RTX 4070 Ti will outperform a $2000 CPU. GPU dominates LLM speed.',
@@ -30242,6 +30277,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'What Regional Compliance Rules Apply to Local LLM Hardware?',
           content: [
             '**EU (GDPR):** Running LLMs locally keeps all inference data within your infrastructure, eliminating cross-border data transfer concerns under GDPR Article 44. As of April 2026, EU enterprises deploying LLMs for customer data processing must ensure models never phone home — local hardware removes this risk entirely.',
@@ -30250,7 +30286,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         faqSection: {
-          id: 'faq',
+          id: 'common-questions',
           title: 'Common Questions About Local LLM Hardware',
           faqs: [
             {
@@ -30308,6 +30344,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Q4_K_M vs Q8_0 VRAM tables and quality trade-offs',
@@ -31541,6 +31578,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Full hardware recommendations.',
@@ -31670,6 +31708,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Full hardware recommendations.',
@@ -31792,6 +31831,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Detailed quantization methods.',
@@ -31911,6 +31951,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) — Engine comparison.',
@@ -32030,6 +32071,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Complete hardware setup guide.',
@@ -32157,6 +32199,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Buy better hardware instead.',
@@ -32267,6 +32310,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Complete hardware recommendations.',
@@ -32375,6 +32419,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) — Inference engines with multi-GPU support.',
@@ -32472,6 +32517,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Full hardware recommendations.',
@@ -32573,6 +32619,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Hardware overview.',
@@ -32746,6 +32793,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Best Local RAG Tools](/local-llms/best-local-rag-tools) — Vector databases and frameworks.',
@@ -32901,6 +32949,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local RAG 2026](/local-llms/local-rag-2026) — Combine fine-tuning with RAG.',
@@ -33169,6 +33218,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Prompt Engineering Guide](/prompt-engineering) — Optimize agent prompts.',
@@ -33282,6 +33332,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Fine-Tuning Local LLMs LoRA](/local-llms/fine-tuning-local-llms-lora) — Adapt models instead of prompt engineering.',
@@ -33393,6 +33444,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — Scaling inference.',
@@ -33500,6 +33552,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local LLMs With VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) — Setup guide.',
@@ -33609,6 +33662,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Vision can help code understanding.',
@@ -33730,6 +33784,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local AI Agents LangGraph](/local-llms/local-ai-agents-langgraph-ollama) — Build local agents.',
@@ -33850,6 +33905,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Fine-Tuning Local LLMs LoRA](/local-llms/fine-tuning-local-llms-lora) — Detailed fine-tuning guide.',
@@ -33952,6 +34008,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Current state of hardware.',
@@ -34118,6 +34175,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[On-Prem Air-Gapped Local LLM](/local-llms/on-prem-air-gapped-local-llm) — Isolated deployment without internet.',
@@ -34289,6 +34347,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — Business case for on-prem AI.',
@@ -34450,6 +34509,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — Business case.',
@@ -34609,6 +34669,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — Single-machine multi-GPU setup.',
@@ -34769,6 +34830,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Related Reading',
           items: [
             '[Local RAG 2026](/local-llms/local-rag-2026) — Complete RAG implementation guide.',
