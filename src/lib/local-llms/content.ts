@@ -26839,6 +26839,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       intro: 'Ollama, vLLM, and LM Studio all expose REST APIs that mimic the OpenAI API structure. This means you can use the official OpenAI Python library, Node.js client, or any OpenAI-compatible tool by simply changing the base URL to localhost. As of April 2026, this is the standard way to integrate local models into applications without vendor lock-in to OpenAI.',
       metaDescription: 'Change one line — base_url to localhost — to run Ollama as a drop-in OpenAI API. Python, Node.js, streaming, and function calling all work unchanged. Free.',
       publishDate: '2026-04-04',
+      dateModified: '2026-04-16',
       readTime: '10 min read',
       educationalLevel: 'Beginner to Advanced',
       primaryTerm: 'OpenAI-compatible API',
@@ -26999,6 +27000,14 @@ ollama run -m deepseek-r1:7b "2^10を解く"
               q: 'How do I use the Ollama API with the Node.js openai package?',
               a: 'Import OpenAI from openai. Set baseURL: "http://localhost:11434/v1" and apiKey: "ollama" in the constructor. Then call client.chat.completions.create() exactly as you would with the real OpenAI API — no other changes needed.',
             },
+            {
+              q: 'How do I switch between Ollama and OpenAI in the same codebase?',
+              a: 'Use an environment variable: set USE_LOCAL=true for Ollama (base_url http://localhost:11434/v1, api_key "ollama") and USE_LOCAL=false for OpenAI. The OpenAI Python library accepts base_url as a constructor argument. Set USE_LOCAL=false in production to switch to OpenAI without changing any other code.',
+            },
+            {
+              q: 'Can I use the OpenAI-compatible API with LangChain?',
+              a: 'Yes. Use ChatOpenAI with base_url="http://localhost:11434/v1" and api_key="ollama". This makes Ollama a drop-in replacement for OpenAI in any LangChain pipeline — RAG chains, agents, and tools all work without modification. LangChain also has a dedicated ChatOllama class for Ollama-specific features.',
+            },
           ],
         },
         relatedReading: {
@@ -27015,17 +27024,16 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'sources',
           title: 'Sources',
           items: [
-            '[Ollama API Documentation](https://github.com/ollama/ollama/blob/main/docs/api.md)',
-            '[OpenAI Python Library](https://github.com/openai/openai-python)',
-            '[OpenAI API Reference](https://platform.openai.com/docs/api-reference)',
-            '[LM Studio Local API (Beta)](https://lmstudio.ai/docs/local-server/overview)',
+            'Ollama. (2026). "Ollama OpenAI Compatibility." https://github.com/ollama/ollama/blob/main/docs/openai.md — Official documentation for Ollama\'s OpenAI-compatible REST API endpoints.',
+            'OpenAI. (2024). "OpenAI Python Library." https://github.com/openai/openai-python — Official Python SDK used to connect to both OpenAI and Ollama via base_url override.',
+            'vLLM Team. (2024). "vLLM OpenAI-Compatible Server." https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html — vLLM\'s OpenAI-compatible API server docs (port 8000, production use).',
           ],
         },
       },
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Ollama OpenAI API Drop-In: Python & Node.js Guide 2026',
+        'headline': 'Local LLM OpenAI-Compatible API: Connect Python, Node.js, and JavaScript to Ollama',
         'description': 'Change one line — base_url to localhost — to run Ollama as a drop-in OpenAI API. Python, Node.js, streaming, and function calling all work unchanged.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api',
         'inLanguage': 'en',
@@ -27039,13 +27047,14 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           { '@type': 'Thing', 'name': 'OpenAI API' },
           { '@type': 'Thing', 'name': 'local LLM inference' },
           { '@type': 'Thing', 'name': 'REST API' },
+          { '@type': 'Thing', 'name': 'OpenAI Python Library' },
         ],
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner to Advanced',
-        'proficiencyLevel': 'Beginner',
+        'proficiencyLevel': 'Intermediate',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -27131,8 +27140,58 @@ ollama run -m deepseek-r1:7b "2^10を解く"
               '@type': 'Answer',
               'text': 'Import OpenAI from openai. Set baseURL: "http://localhost:11434/v1" and apiKey: "ollama" in the constructor. Then call client.chat.completions.create() exactly as you would with the real OpenAI API — no other changes needed.'
             }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I switch between Ollama and OpenAI in the same codebase?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use an environment variable: set USE_LOCAL=true for Ollama (base_url http://localhost:11434/v1, api_key "ollama") and USE_LOCAL=false for OpenAI. The OpenAI Python library accepts base_url as a constructor argument.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use the OpenAI-compatible API with LangChain?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Use ChatOpenAI with base_url="http://localhost:11434/v1" and api_key="ollama". LangChain also has a dedicated ChatOllama class for Ollama-specific features.',
+            }
           }
         ]
+      },
+      howToSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        'name': 'How to Use the Ollama OpenAI-Compatible API',
+        'description': 'Connect Python or Node.js to Ollama\'s OpenAI-compatible REST API at http://localhost:11434/v1.',
+        'step': [
+          {
+            '@type': 'HowToStep',
+            'name': 'Install the OpenAI SDK',
+            'text': 'Run pip install openai (Python) or npm install openai (Node.js). No Ollama-specific package is needed.',
+          },
+          {
+            '@type': 'HowToStep',
+            'name': 'Set base_url and api_key',
+            'text': 'Create the client with base_url="http://localhost:11434/v1" and api_key="ollama". The api_key value is ignored by Ollama but required by the SDK.',
+          },
+          {
+            '@type': 'HowToStep',
+            'name': 'Call chat.completions.create',
+            'text': 'Use client.chat.completions.create(model="llama3.2:3b", messages=[...]) — identical to the OpenAI API call.',
+          },
+        ],
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'name': 'Ollama OpenAI-Compatible API Endpoints',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Chat Completions', 'description': 'POST /v1/chat/completions — matches OpenAI\'s /chat/completions endpoint' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Text Completions', 'description': 'POST /v1/completions — matches OpenAI\'s /completions endpoint' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Embeddings', 'description': 'POST /v1/embeddings — convert text to vectors' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'List Models', 'description': 'GET /v1/models — list all available Ollama models' },
+        ],
       },
       gammaEmbedUrl: '/presentations/local-llm-openai-compatible-api-static.html',
       gammaDescription: 'The slide deck below covers: the OpenAI-compatible API standard, Ollama endpoint setup, Python and Node.js integration in 3 steps, streaming, function calling, and regional compliance (EU GDPR, Japan APPI, China CAC). Download the PDF as a Local LLM API integration reference card.',
