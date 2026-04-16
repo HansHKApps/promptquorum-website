@@ -27116,6 +27116,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           }
         ]
       },
+      gammaEmbedUrl: '/presentations/local-llm-openai-compatible-api-static.html',
+      gammaDescription: 'The slide deck below covers: the OpenAI-compatible API standard, Ollama endpoint setup, Python and Node.js integration in 3 steps, streaming, function calling, and regional compliance (EU GDPR, Japan APPI, China CAC). Download the PDF as a Local LLM API integration reference card.',
     },
     de: {
       theme: 'Tools & Interfaces',
@@ -27140,6 +27142,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           'name': 'PromptQuorum'
         }
       },
+      gammaEmbedUrl: '/presentations/local-llm-openai-compatible-api-static.html',
+      gammaDescription: 'Die Präsentation unten behandelt: den OpenAI-kompatiblen API-Standard, Ollama-Endpoint-Setup, Python- und Node.js-Integration in 3 Schritten, Streaming, Function Calling und regionale Compliance. PDF als lokale LLM-API-Referenzkarte herunterladen.',
       sections: {
         tldr: { isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
         whatIsSmall: { title: 'Was ist ein „kleines" lokales LLM und wann sollten Sie eines verwenden?', content: ['Ein kleines lokales LLM ist typischerweise definiert als ein Modell mit weniger als 4 Milliarden Parametern. Bei Q4_K_M-Quantisierung benötigen diese Modelle 1,5–3 GB RAM — gut innerhalb der Einschränkungen von Einstiegs-Laptops mit 4–8 GB Gesamtspeicher.', 'Seit April 2026 sind kleine Modelle geeignet für: schnelle Zusammenfassung, einfache F&A, Erklärung von Code-Snippets, Übersetzung kurzer Texte und Klassifizierungsaufgaben. Sie sind nicht geeignet für mehrstufiges Reasoning, komplexe Code-Generierung oder das Verfassen langer kohärenter Dokumente.', 'Die Qualitätslücke zwischen einem 3B- und 7B-Modell ist erheblich — ungefähr der Lücke zwischen GPT-3.5 Mini und GPT-3.5 Turbo entsprechend. Für Benutzer mit 8 GB RAM ist ein 7B-Modell bei Q4_K_M fast immer die bessere Wahl. Siehe [Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) für 7B-Empfehlungen.'] },
@@ -27179,6 +27183,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           'name': 'PromptQuorum'
         }
       },
+      gammaEmbedUrl: '/presentations/local-llm-openai-compatible-api-static.html',
+      gammaDescription: 'La présentation ci-dessous couvre : le standard API compatible OpenAI, la configuration de l\'endpoint Ollama, l\'intégration Python et Node.js en 3 étapes, le streaming, les appels de fonction et la conformité régionale. Téléchargez le PDF comme référence d\'intégration API LLM locale.',
       sections: {},
     },
     ja: {
@@ -27204,6 +27210,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           'name': 'PromptQuorum'
         }
       },
+      gammaEmbedUrl: '/presentations/local-llm-openai-compatible-api-static.html',
+      gammaDescription: '以下のスライドは、OpenAI互換APIの標準、Ollamaエンドポイントのセットアップ、3ステップのPythonおよびNode.js統合、ストリーミング、ファンクションコール、地域のコンプライアンス（EU GDPR、日本APPI、中国CAC）を解説します。ローカルLLM API統合リファレンスカードとしてPDFをダウンロード。',
       sections: {},
     },
     zh: {
@@ -27229,6 +27237,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           'name': 'PromptQuorum'
         }
       },
+      gammaEmbedUrl: '/presentations/local-llm-openai-compatible-api-static.html',
+      gammaDescription: '以下幻灯片涵盖：OpenAI兼容API标准、Ollama端点设置、3步完成Python和Node.js集成、流式传输、函数调用以及地区合规性（欧盟GDPR、日本APPI、中国CAC）。将PDF下载为本地LLM API集成参考卡。',
       sections: {},
     },
   },

@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local LLM OpenAI-Compatible API | PromptQuorum</title>
+    <meta name="description" content="Use any OpenAI SDK with Ollama by changing one line. 14-slide guide covering Python, Node.js, streaming, function calling, and regional compliance." />
+    <meta property="og:title" content="Local LLM OpenAI-Compatible API — PromptQuorum" />
+    <meta property="og:description" content="Master local LLM integration with OpenAI SDKs. Python, Node.js, streaming, and function calling guides." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        code {
+            background: #f3e5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles — A4 landscape */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api?lang=" attr(data-lang);
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Local LLM OpenAI-Compatible API</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        // Content in 5 languages
+        const CONTENT = {
+            en: {
+                title: 'Local LLM OpenAI-Compatible API',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Local LLM OpenAI-Compatible API',
+                        subtitle: 'Use any OpenAI SDK with Ollama, vLLM, or LM Studio — change one line.',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Takeaways',
+                        items: [
+                            'Ollama runs a REST API at <strong>http://localhost:11434/v1</strong> — identical to OpenAI\'s format',
+                            'Python: change <code>base_url</code> to localhost — nothing else changes',
+                            'Node.js: same approach with OpenAI SDK, point to localhost:11434',
+                            'Works with Ollama, vLLM, and LM Studio — no code changes to switch providers',
+                            'Streaming and function calling both work via this API as of April 2026'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Does OpenAI-Compatible Mean?',
+                        intro: 'The API returns responses in the exact same format as OpenAI\'s API.',
+                        items: [
+                            'Same request format: POST /chat/completions with model, messages, temperature',
+                            'Same response format: choices[], message.content, usage.prompt_tokens',
+                            'Works with any OpenAI library or tool — just change the URL',
+                            'Supported by Ollama, vLLM, and LM Studio'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'One Line Change',
+                        line1: 'OpenAI: <code>base_url = \'https://api.openai.com/v1\'</code>',
+                        line2: 'Ollama: <code>base_url = \'http://localhost:11434/v1\'</code>',
+                        tip: 'api_key can be any string — Ollama ignores authentication.'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Ollama OpenAI-Compatible Endpoints',
+                        columns: ['Endpoint', 'URL', 'Description'],
+                        rows: [
+                            { 'Endpoint': 'Chat Completions', 'URL': 'POST /v1/chat/completions', 'Description': 'Matches /chat/completions from OpenAI' },
+                            { 'Endpoint': 'Text Completions', 'URL': 'POST /v1/completions', 'Description': 'Matches /completions from OpenAI' },
+                            { 'Endpoint': 'Embeddings', 'URL': 'POST /v1/embeddings', 'Description': 'Convert text to vectors' },
+                            { 'Endpoint': 'List Models', 'URL': 'GET /v1/models', 'Description': 'List available models' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Python: 3-Step Setup',
+                        items: [
+                            'Install: <code>pip install openai</code>',
+                            'Connect: set <code>base_url=\'http://localhost:11434/v1\'</code> and <code>api_key=\'ollama\'</code>',
+                            'Call: <code>client.chat.completions.create(model=\'llama3.2:3b\', messages=[...])</code>'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Node.js: 3-Step Setup',
+                        items: [
+                            'Install: <code>npm install openai</code>',
+                            'Connect: set <code>baseURL: \'http://localhost:11434/v1\'</code> and <code>apiKey: \'ollama\'</code>',
+                            'Call: <code>client.chat.completions.create({model: \'llama3.2:3b\', messages: [...]})</code>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Streaming Responses Token-by-Token',
+                        intro: 'Works with all local models as of April 2026.',
+                        items: [
+                            'Set <code>stream=True</code> (Python) or <code>stream: true</code> (Node.js)',
+                            'Iterate over chunks: <code>for chunk in stream: print(chunk.choices[0].delta.content)</code>',
+                            'Use <code>end=\'\', flush=True</code> in Python for real-time display',
+                            'Token-by-token output reduces perceived latency significantly'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Function Calling with Local Models',
+                        intro: 'Supported as of April 2026 for models that include tool-use training.',
+                        items: [
+                            'Pass <code>tools=[]</code> in the API call — same format as OpenAI',
+                            '<strong>Supported models:</strong> Llama 3.1 8B, Qwen2.5 7B, Mistral',
+                            'Model responds with structured JSON arguments for your function',
+                            'Smaller models (3B) may not reliably support function calling'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Local LLM APIs by Region',
+                        items: [
+                            '<strong>EU / GDPR:</strong> all inference on-device — no data egress to cloud APIs',
+                            '<strong>Japan / APPI:</strong> on-premises processing bypasses cloud transfer requirements',
+                            '<strong>China / CAC:</strong> data stays local — satisfies data localization mandates',
+                            'Qwen2.5 7B adds 30–40% efficiency for Chinese/Japanese tokenization'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Common Mistakes to Avoid',
+                        items: [
+                            '<strong>Forgetting api_key is ignored</strong> — any string works; Ollama does not authenticate',
+                            '<strong>Wrong model name</strong> — use exact names from <code>ollama list</code>, not \'gpt-4\'',
+                            '<strong>Not setting base_url</strong> — without it, code reaches OpenAI\'s servers and fails',
+                            '<strong>CORS errors from browser</strong> — browser scripts need CORS proxy or same-host setup',
+                            '<strong>No stream=True for streaming</strong> — must be set explicitly; default waits for full response'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Common Questions',
+                        faqs: [
+                            { q: 'Do I need to modify my OpenAI code?', a: 'No. Set base_url and api_key — everything else stays the same.' },
+                            { q: 'Does LM Studio have an OpenAI-compatible API?', a: 'Yes, at localhost:1234/v1 as of April 2026 (beta).' },
+                            { q: 'What\'s the difference between /api/generate and /v1/chat/completions?', a: 'Use /v1/chat/completions for all new projects — it supports conversation history.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Supported Local LLM Platforms',
+                        intro: 'All three use identical client code — just change the port.',
+                        items: [
+                            '<strong>Ollama:</strong> http://localhost:11434/v1 (default, free, open source)',
+                            '<strong>vLLM:</strong> http://localhost:8000/v1 (best for production/multi-GPU)',
+                            '<strong>LM Studio:</strong> http://localhost:1234/v1 (beta, GUI-based)'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Compare Multiple Local Models at Once',
+                        body: 'PromptQuorum dispatches one prompt to multiple local models simultaneously. Compare outputs to identify which model performs best for your use case.',
+                        cta: 'Join the Waitlist',
+                        href: 'https://www.promptquorum.com/waitlist'
+                    }
+                ]
+            },
+            de: {
+                title: 'Lokale LLM OpenAI-kompatible API',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Lokale LLM OpenAI-kompatible API',
+                        subtitle: 'Jeden OpenAI-SDK mit Ollama, vLLM oder LM Studio nutzen — nur eine Zeile ändern.',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Kernpunkte',
+                        items: [
+                            'Ollama läuft eine REST-API unter <strong>http://localhost:11434/v1</strong> — identisch mit OpenAIs Format',
+                            'Python: ändere <code>base_url</code> auf localhost — sonst ändert sich nichts',
+                            'Node.js: gleicher Ansatz mit OpenAI SDK, zeige auf localhost:11434',
+                            'Funktioniert mit Ollama, vLLM und LM Studio — keine Codeänderungen nötig zum Wechsel',
+                            'Streaming und Function Calling funktionieren ab April 2026 über diese API'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was bedeutet OpenAI-kompatibel?',
+                        intro: 'Die API gibt Antworten im exakt gleichen Format zurück wie OpenAIs API.',
+                        items: [
+                            'Gleiches Anforderungsformat: POST /chat/completions mit model, messages, temperature',
+                            'Gleiches Antwortformat: choices[], message.content, usage.prompt_tokens',
+                            'Funktioniert mit jeder OpenAI-Bibliothek oder jedem Tool — ändern Sie einfach die URL',
+                            'Unterstützt durch Ollama, vLLM und LM Studio'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Eine Zeile Änderung',
+                        line1: 'OpenAI: <code>base_url = \'https://api.openai.com/v1\'</code>',
+                        line2: 'Ollama: <code>base_url = \'http://localhost:11434/v1\'</code>',
+                        tip: 'api_key kann ein beliebiger String sein — Ollama ignoriert die Authentifizierung.'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Ollama OpenAI-kompatible Endpoints',
+                        columns: ['Endpoint', 'URL', 'Beschreibung'],
+                        rows: [
+                            { 'Endpoint': 'Chat Completions', 'URL': 'POST /v1/chat/completions', 'Beschreibung': 'Gleich wie /chat/completions von OpenAI' },
+                            { 'Endpoint': 'Text Completions', 'URL': 'POST /v1/completions', 'Beschreibung': 'Gleich wie /completions von OpenAI' },
+                            { 'Endpoint': 'Embeddings', 'URL': 'POST /v1/embeddings', 'Beschreibung': 'Text in Vektoren konvertieren' },
+                            { 'Endpoint': 'List Models', 'URL': 'GET /v1/models', 'Beschreibung': 'Verfügbare Modelle auflisten' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Python: 3-Schritt-Setup',
+                        items: [
+                            'Installation: <code>pip install openai</code>',
+                            'Verbindung: setze <code>base_url=\'http://localhost:11434/v1\'</code> und <code>api_key=\'ollama\'</code>',
+                            'Aufruf: <code>client.chat.completions.create(model=\'llama3.2:3b\', messages=[...])</code>'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Node.js: 3-Schritt-Setup',
+                        items: [
+                            'Installation: <code>npm install openai</code>',
+                            'Verbindung: setze <code>baseURL: \'http://localhost:11434/v1\'</code> und <code>apiKey: \'ollama\'</code>',
+                            'Aufruf: <code>client.chat.completions.create({model: \'llama3.2:3b\', messages: [...]})</code>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Antworten Token-für-Token streamen',
+                        intro: 'Funktioniert seit April 2026 mit allen lokalen Modellen.',
+                        items: [
+                            'Setze <code>stream=True</code> (Python) oder <code>stream: true</code> (Node.js)',
+                            'Iteriere über Chunks: <code>for chunk in stream: print(chunk.choices[0].delta.content)</code>',
+                            'Nutze <code>end=\'\', flush=True</code> in Python für Echtzeit-Anzeige',
+                            'Token-für-Token-Ausgabe reduziert wahrgenommene Latenz erheblich'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Function Calling mit lokalen Modellen',
+                        intro: 'Unterstützt seit April 2026 für Modelle mit Tool-Use-Training.',
+                        items: [
+                            'Übergebe <code>tools=[]</code> im API-Aufruf — gleiches Format wie OpenAI',
+                            '<strong>Unterstützte Modelle:</strong> Llama 3.1 8B, Qwen2.5 7B, Mistral',
+                            'Modell antwortet mit strukturiertem JSON für Deine Funktionsargumente',
+                            'Kleinere Modelle (3B) unterstützen Function Calling möglicherweise nicht zuverlässig'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Lokale LLM-APIs nach Region',
+                        items: [
+                            '<strong>EU / DSGVO:</strong> alle Berechnungen lokal — kein Datenaustausch mit Cloud APIs',
+                            '<strong>Japan / APPI:</strong> lokale Verarbeitung umgeht Cloud-Transferanforderungen',
+                            '<strong>China / CAC:</strong> Daten bleiben lokal — erfüllt Datenlokalisierungsvorgaben',
+                            'Qwen2.5 7B bietet 30–40 % Effizienz für chinesische/japanische Tokenisierung'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Häufige Fehler vermeiden',
+                        items: [
+                            '<strong>Vergessen, dass api_key ignoriert wird</strong> — jeder String funktioniert; Ollama authentifiziert nicht',
+                            '<strong>Falscher Modellname</strong> — nutze exakte Namen aus <code>ollama list</code>, nicht \'gpt-4\'',
+                            '<strong>base_url nicht gesetzt</strong> — ohne es versucht Dein Code, OpenAIs Server zu erreichen und schlägt fehl',
+                            '<strong>CORS-Fehler vom Browser</strong> — Browser-Skripte benötigen CORS-Proxy oder Same-Host-Setup',
+                            '<strong>Kein stream=True für Streaming</strong> — muss explizit gesetzt sein; Standard wartet auf vollständige Antwort'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Häufige Fragen',
+                        faqs: [
+                            { q: 'Muss ich meinen OpenAI-Code ändern?', a: 'Nein. Setze base_url und api_key — alles andere bleibt gleich.' },
+                            { q: 'Hat LM Studio eine OpenAI-kompatible API?', a: 'Ja, unter localhost:1234/v1 seit April 2026 (Beta).' },
+                            { q: 'Was ist der Unterschied zwischen /api/generate und /v1/chat/completions?', a: 'Nutze /v1/chat/completions für alle neuen Projekte — es unterstützt Gesprächsverlauf.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Unterstützte lokale LLM-Plattformen',
+                        intro: 'Alle drei verwenden identischen Client-Code — ändere nur den Port.',
+                        items: [
+                            '<strong>Ollama:</strong> http://localhost:11434/v1 (Standard, kostenlos, Open Source)',
+                            '<strong>vLLM:</strong> http://localhost:8000/v1 (beste für Produktion/Multi-GPU)',
+                            '<strong>LM Studio:</strong> http://localhost:1234/v1 (Beta, GUI-basiert)'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Mehrere lokale Modelle gleichzeitig vergleichen',
+                        body: 'PromptQuorum sendet einen Prompt gleichzeitig an mehrere lokale Modelle. Vergleiche die Ausgaben, um zu sehen, welches Modell für Deinen Use Case am besten ist.',
+                        cta: 'Zur Warteliste',
+                        href: 'https://www.promptquorum.com/waitlist'
+                    }
+                ]
+            },
+            fr: {
+                title: 'API locale compatible OpenAI',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'API locale compatible OpenAI',
+                        subtitle: 'Utilisez tout SDK OpenAI avec Ollama, vLLM ou LM Studio — changez une seule ligne.',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Points clés',
+                        items: [
+                            'Ollama exécute une API REST à <strong>http://localhost:11434/v1</strong> — identique au format d\'OpenAI',
+                            'Python : modifiez <code>base_url</code> en localhost — rien d\'autre ne change',
+                            'Node.js : même approche avec OpenAI SDK, pointez vers localhost:11434',
+                            'Fonctionne avec Ollama, vLLM et LM Studio — aucune modification de code pour basculer',
+                            'Le streaming et les appels de fonction fonctionnent via cette API depuis avril 2026'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Que signifie compatible OpenAI ?',
+                        intro: 'L\'API retourne les réponses dans le même format exact que l\'API d\'OpenAI.',
+                        items: [
+                            'Même format de requête : POST /chat/completions avec model, messages, temperature',
+                            'Même format de réponse : choices[], message.content, usage.prompt_tokens',
+                            'Fonctionne avec n\'importe quelle bibliothèque OpenAI ou outil — changez simplement l\'URL',
+                            'Supporté par Ollama, vLLM et LM Studio'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Un seul changement de ligne',
+                        line1: 'OpenAI : <code>base_url = \'https://api.openai.com/v1\'</code>',
+                        line2: 'Ollama : <code>base_url = \'http://localhost:11434/v1\'</code>',
+                        tip: 'api_key peut être n\'importe quelle chaîne — Ollama ignore l\'authentification.'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Endpoints compatibles OpenAI d\'Ollama',
+                        columns: ['Endpoint', 'URL', 'Description'],
+                        rows: [
+                            { 'Endpoint': 'Chat Completions', 'URL': 'POST /v1/chat/completions', 'Description': 'Correspond à /chat/completions d\'OpenAI' },
+                            { 'Endpoint': 'Text Completions', 'URL': 'POST /v1/completions', 'Description': 'Correspond à /completions d\'OpenAI' },
+                            { 'Endpoint': 'Embeddings', 'URL': 'POST /v1/embeddings', 'Description': 'Convertir le texte en vecteurs' },
+                            { 'Endpoint': 'List Models', 'URL': 'GET /v1/models', 'Description': 'Lister les modèles disponibles' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Python : Installation en 3 étapes',
+                        items: [
+                            'Installer : <code>pip install openai</code>',
+                            'Connecter : définissez <code>base_url=\'http://localhost:11434/v1\'</code> et <code>api_key=\'ollama\'</code>',
+                            'Appeler : <code>client.chat.completions.create(model=\'llama3.2:3b\', messages=[...])</code>'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Node.js : Installation en 3 étapes',
+                        items: [
+                            'Installer : <code>npm install openai</code>',
+                            'Connecter : définissez <code>baseURL: \'http://localhost:11434/v1\'</code> et <code>apiKey: \'ollama\'</code>',
+                            'Appeler : <code>client.chat.completions.create({model: \'llama3.2:3b\', messages: [...]})</code>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Réponses en streaming token par token',
+                        intro: 'Fonctionne avec tous les modèles locaux depuis avril 2026.',
+                        items: [
+                            'Définissez <code>stream=True</code> (Python) ou <code>stream: true</code> (Node.js)',
+                            'Itérez sur les chunks : <code>for chunk in stream: print(chunk.choices[0].delta.content)</code>',
+                            'Utilisez <code>end=\'\', flush=True</code> en Python pour l\'affichage en temps réel',
+                            'La sortie token par token réduit considérablement la latence perçue'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Appels de fonction avec les modèles locaux',
+                        intro: 'Supporté depuis avril 2026 pour les modèles avec entraînement à l\'utilisation d\'outils.',
+                        items: [
+                            'Passez <code>tools=[]</code> dans l\'appel API — même format qu\'OpenAI',
+                            '<strong>Modèles supportés :</strong> Llama 3.1 8B, Qwen2.5 7B, Mistral',
+                            'Le modèle répond avec les arguments JSON structurés pour votre fonction',
+                            'Les modèles plus petits (3B) peuvent ne pas supporter les appels de fonction de manière fiable'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'APIs LLM locales par région',
+                        items: [
+                            '<strong>EU / RGPD :</strong> toute l\'inférence sur l\'appareil — aucune fuite de données vers les APIs cloud',
+                            '<strong>Japon / APPI :</strong> le traitement sur site contourne les exigences de transfert cloud',
+                            '<strong>Chine / CAC :</strong> les données restent locales — satisfait les mandats de localisation des données',
+                            'Qwen2.5 7B ajoute 30–40 % d\'efficacité pour la tokenisation chinoise/japonaise'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Erreurs courantes à éviter',
+                        items: [
+                            '<strong>Oublier que api_key est ignorée</strong> — n\'importe quelle chaîne fonctionne ; Ollama n\'authentifie pas',
+                            '<strong>Mauvais nom de modèle</strong> — utilisez les noms exacts de <code>ollama list</code>, pas \'gpt-4\'',
+                            '<strong>Ne pas définir base_url</strong> — sans cela, votre code tente d\'atteindre les serveurs d\'OpenAI et échoue',
+                            '<strong>Erreurs CORS du navigateur</strong> — les scripts du navigateur ont besoin d\'un proxy CORS ou d\'une configuration same-host',
+                            '<strong>Pas de stream=True pour le streaming</strong> — doit être défini explicitement ; le défaut attend la réponse complète'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Questions fréquentes',
+                        faqs: [
+                            { q: 'Dois-je modifier mon code OpenAI ?', a: 'Non. Définissez base_url et api_key — tout le reste reste identique.' },
+                            { q: 'LM Studio a-t-il une API compatible OpenAI ?', a: 'Oui, à localhost:1234/v1 depuis avril 2026 (bêta).' },
+                            { q: 'Quelle est la différence entre /api/generate et /v1/chat/completions ?', a: 'Utilisez /v1/chat/completions pour tous les nouveaux projets — il prend en charge l\'historique de conversation.' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Plateformes LLM locales supportées',
+                        intro: 'Tous les trois utilisent le même code client — changez simplement le port.',
+                        items: [
+                            '<strong>Ollama :</strong> http://localhost:11434/v1 (défaut, gratuit, open source)',
+                            '<strong>vLLM :</strong> http://localhost:8000/v1 (meilleur pour la production/multi-GPU)',
+                            '<strong>LM Studio :</strong> http://localhost:1234/v1 (bêta, basé sur GUI)'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Comparer plusieurs modèles locaux simultanément',
+                        body: 'PromptQuorum envoie un message à plusieurs modèles locaux simultanément. Comparez les résultats pour identifier le modèle qui convient le mieux à votre cas.',
+                        cta: 'Rejoindre la liste d\'attente',
+                        href: 'https://www.promptquorum.com/waitlist'
+                    }
+                ]
+            },
+            ja: {
+                title: 'ローカルLLM OpenAI互換API',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'ローカルLLM OpenAI互換API',
+                        subtitle: 'OllamaやvLLM、LM StudioでOpenAI SDKを使用 — 1行変更するだけ。',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api'
+                    },
+                    {
+                        type: 'list',
+                        h2: '重要ポイント',
+                        items: [
+                            'OllamaはREST APIを<strong>http://localhost:11434/v1</strong>で実行 — OpenAIのフォーマットと同一',
+                            'Python：<code>base_url</code>をlocalhostに変更 — その他は何も変わりません',
+                            'Node.js：OpenAI SDKで同じアプローチ、localhost:11434をポイント',
+                            'Ollama、vLLM、LM Studioで動作 — プロバイダー切り替え時にコード変更は不要',
+                            'ストリーミングとFunction Callingは2026年4月以降、このAPIで動作'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'OpenAI互換とは何か？',
+                        intro: 'APIはOpenAI APIと全く同じ形式でレスポンスを返します。',
+                        items: [
+                            '同じリクエスト形式：POST /chat/completions with model, messages, temperature',
+                            '同じレスポンス形式：choices[]、message.content、usage.prompt_tokens',
+                            'あらゆるOpenAIライブラリまたはツールで動作 — URLを変更するだけ',
+                            'Ollama、vLLM、LM Studioでサポート'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: '1行の変更',
+                        line1: 'OpenAI：<code>base_url = \'https://api.openai.com/v1\'</code>',
+                        line2: 'Ollama：<code>base_url = \'http://localhost:11434/v1\'</code>',
+                        tip: 'api_keyは任意の文字列で可 — Ollamaは認証を無視します。'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'OllamaのOpenAI互換エンドポイント',
+                        columns: ['エンドポイント', 'URL', '説明'],
+                        rows: [
+                            { 'エンドポイント': 'Chat Completions', 'URL': 'POST /v1/chat/completions', '説明': 'OpenAIの/chat/completionsに対応' },
+                            { 'エンドポイント': 'Text Completions', 'URL': 'POST /v1/completions', '説明': 'OpenAIの/completionsに対応' },
+                            { 'エンドポイント': 'Embeddings', 'URL': 'POST /v1/embeddings', '説明': 'テキストをベクトルに変換' },
+                            { 'エンドポイント': 'List Models', 'URL': 'GET /v1/models', '説明': '利用可能なモデルをリスト' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Python：3ステップセットアップ',
+                        items: [
+                            'インストール：<code>pip install openai</code>',
+                            '接続：<code>base_url=\'http://localhost:11434/v1\'</code>と<code>api_key=\'ollama\'</code>を設定',
+                            'コール：<code>client.chat.completions.create(model=\'llama3.2:3b\', messages=[...])</code>'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Node.js：3ステップセットアップ',
+                        items: [
+                            'インストール：<code>npm install openai</code>',
+                            '接続：<code>baseURL: \'http://localhost:11434/v1\'</code>と<code>apiKey: \'ollama\'</code>を設定',
+                            'コール：<code>client.chat.completions.create({model: \'llama3.2:3b\', messages: [...]})</code>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'トークン単位のストリーミング',
+                        intro: '2026年4月現在、全てのローカルモデルで動作します。',
+                        items: [
+                            'セット：<code>stream=True</code>（Python）または<code>stream: true</code>（Node.js）',
+                            'チャンクを反復：<code>for chunk in stream: print(chunk.choices[0].delta.content)</code>',
+                            'Pythonでリアルタイム表示に<code>end=\'\', flush=True</code>を使用',
+                            'トークン単位の出力は認識される遅延を大幅に削減'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'ローカルモデルでのFunction Calling',
+                        intro: 'ツール使用トレーニングを含むモデルの場合、2026年4月以降でサポート。',
+                        items: [
+                            'APIコールで<code>tools=[]</code>を渡す — OpenAIと同じ形式',
+                            '<strong>サポートモデル：</strong> Llama 3.1 8B、Qwen2.5 7B、Mistral',
+                            'モデルは関数の構造化JSON引数で応答',
+                            '小さいモデル（3B）はFunction Callingを確実にサポートしない場合あり'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地域別ローカルLLM API',
+                        items: [
+                            '<strong>EU / GDPR：</strong>全ての推論はデバイス上で実行 — クラウドAPIへのデータ流出なし',
+                            '<strong>日本 / APPI：</strong>オンプレミス処理はクラウド転送要件をバイパス',
+                            '<strong>中国 / CAC：</strong>データはローカル — データローカライゼーション要件を満たす',
+                            'Qwen2.5 7Bは中国語/日本語トークン化で30～40%の効率アップ'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'よくある間違い',
+                        items: [
+                            '<strong>api_keyが無視されることを忘れる</strong> — 任意の文字列が機能；Ollamaは認証しません',
+                            '<strong>間違ったモデル名</strong> — <code>ollama list</code>から正確な名前を使用、\'gpt-4\'ではなく',
+                            '<strong>base_urlを設定しない</strong> — これがないと、コードはOpenAIのサーバーに到達して失敗',
+                            '<strong>ブラウザからのCORSエラー</strong> — ブラウザスクリプトはCORSプロキシまたはsame-hostセットアップが必要',
+                            '<strong>ストリーミング用stream=Trueなし</strong> — 明示的に設定が必要；デフォルトはフルレスポンス待機'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'よくある質問',
+                        faqs: [
+                            { q: 'OpenAIコードを修正する必要がありますか？', a: 'いいえ。base_urlとapi_keyを設定 — その他は変わりません。' },
+                            { q: 'LM StudioはOpenAI互換APIを持っていますか？', a: 'はい、2026年4月以降localhost:1234/v1（ベータ）で。' },
+                            { q: '/api/generateと/v1/chat/completionsの違いは？', a: '全ての新規プロジェクトで/v1/chat/completionsを使用 — 会話履歴をサポート。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '対応ローカルLLMプラットフォーム',
+                        intro: '3つ全てが同じクライアントコードを使用 — ポートを変更するだけ。',
+                        items: [
+                            '<strong>Ollama：</strong> http://localhost:11434/v1（デフォルト、無料、オープンソース）',
+                            '<strong>vLLM：</strong> http://localhost:8000/v1（本番/マルチGPUに最適）',
+                            '<strong>LM Studio：</strong> http://localhost:1234/v1（ベータ、GUIベース）'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '複数のローカルモデルを同時に比較',
+                        body: 'PromptQuorumは1つのプロンプトを複数のローカルモデルに同時にディスパッチします。出力を比較して、ユースケースに最適なモデルを特定します。',
+                        cta: 'ウェイティングリストに参加',
+                        href: 'https://www.promptquorum.com/waitlist'
+                    }
+                ]
+            },
+            zh: {
+                title: '本地LLM OpenAI兼容API',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '本地LLM OpenAI兼容API',
+                        subtitle: '用任意OpenAI SDK连接Ollama、vLLM或LM Studio — 只需修改一行。',
+                        link: 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api'
+                    },
+                    {
+                        type: 'list',
+                        h2: '核心要点',
+                        items: [
+                            'Ollama在<strong>http://localhost:11434/v1</strong>运行REST API — 与OpenAI格式相同',
+                            'Python：将<code>base_url</code>改为localhost — 其他都不变',
+                            'Node.js：用OpenAI SDK同样方法，指向localhost:11434',
+                            '支持Ollama、vLLM和LM Studio — 切换提供商无需改代码',
+                            '自2026年4月，此API支持流式传输和函数调用'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'OpenAI兼容意味着什么？',
+                        intro: '该API以与OpenAI API完全相同的格式返回响应。',
+                        items: [
+                            '相同的请求格式：POST /chat/completions，带model、messages、temperature',
+                            '相同的响应格式：choices[]、message.content、usage.prompt_tokens',
+                            '适用于任何OpenAI库或工具 — 仅改URL',
+                            '由Ollama、vLLM和LM Studio支持'
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: '一行代码的变化',
+                        line1: 'OpenAI：<code>base_url = \'https://api.openai.com/v1\'</code>',
+                        line2: 'Ollama：<code>base_url = \'http://localhost:11434/v1\'</code>',
+                        tip: 'api_key可以是任意字符串 — Ollama忽略身份验证。'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Ollama OpenAI兼容端点',
+                        columns: ['端点', 'URL', '说明'],
+                        rows: [
+                            { '端点': 'Chat Completions', 'URL': 'POST /v1/chat/completions', '说明': '匹配OpenAI的/chat/completions' },
+                            { '端点': 'Text Completions', 'URL': 'POST /v1/completions', '说明': '匹配OpenAI的/completions' },
+                            { '端点': 'Embeddings', 'URL': 'POST /v1/embeddings', '说明': '将文本转换为向量' },
+                            { '端点': 'List Models', 'URL': 'GET /v1/models', '说明': '列出可用模型' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Python：3步设置',
+                        items: [
+                            '安装：<code>pip install openai</code>',
+                            '连接：设置<code>base_url=\'http://localhost:11434/v1\'</code>和<code>api_key=\'ollama\'</code>',
+                            '调用：<code>client.chat.completions.create(model=\'llama3.2:3b\', messages=[...])</code>'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Node.js：3步设置',
+                        items: [
+                            '安装：<code>npm install openai</code>',
+                            '连接：设置<code>baseURL: \'http://localhost:11434/v1\'</code>和<code>apiKey: \'ollama\'</code>',
+                            '调用：<code>client.chat.completions.create({model: \'llama3.2:3b\', messages: [...]})</code>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '逐令牌流式传输响应',
+                        intro: '自2026年4月起适用于所有本地模型。',
+                        items: [
+                            '设置<code>stream=True</code>（Python）或<code>stream: true</code>（Node.js）',
+                            '迭代块：<code>for chunk in stream: print(chunk.choices[0].delta.content)</code>',
+                            'Python中使用<code>end=\'\', flush=True</code>进行实时显示',
+                            '逐令牌输出显著降低感知延迟'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '本地模型的函数调用',
+                        intro: '对于包含工具使用培训的模型，自2026年4月起支持。',
+                        items: [
+                            '在API调用中传递<code>tools=[]</code> — 与OpenAI相同格式',
+                            '<strong>支持的模型：</strong> Llama 3.1 8B、Qwen2.5 7B、Mistral',
+                            '模型用函数的结构化JSON参数响应',
+                            '较小的模型（3B）可能无法可靠支持函数调用'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '各地区本地LLM API',
+                        items: [
+                            '<strong>欧盟 / GDPR：</strong>所有推理在设备上 — 无云API数据流出',
+                            '<strong>日本 / APPI：</strong>本地处理绕过云传输要求',
+                            '<strong>中国 / CAC：</strong>数据保持本地 — 满足数据本地化要求',
+                            'Qwen2.5 7B中文/日文符号化效率提高30～40%'
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '常见错误',
+                        items: [
+                            '<strong>忘记api_key被忽略</strong> — 任何字符串有效；Ollama不认证',
+                            '<strong>错误的模型名</strong> — 使用<code>ollama list</code>中的确切名称，而非\'gpt-4\'',
+                            '<strong>未设置base_url</strong> — 不设置则代码尝试到达OpenAI服务器会失败',
+                            '<strong>浏览器CORS错误</strong> — 浏览器脚本需要CORS代理或同主机设置',
+                            '<strong>流式传输时未设stream=True</strong> — 必须明确设置；默认等待完整响应'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            { q: '我需要修改OpenAI代码吗？', a: '不需要。设置base_url和api_key — 其他都不变。' },
+                            { q: 'LM Studio有OpenAI兼容API吗？', a: '有，自2026年4月在localhost:1234/v1（测试版）。' },
+                            { q: '/api/generate和/v1/chat/completions有什么区别？', a: '所有新项目都用/v1/chat/completions — 它支持对话历史。' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '支持的本地LLM平台',
+                        intro: '三个都使用相同的客户端代码 — 只需改端口。',
+                        items: [
+                            '<strong>Ollama：</strong> http://localhost:11434/v1（默认，免费，开源）',
+                            '<strong>vLLM：</strong> http://localhost:8000/v1（最适合生产/多GPU）',
+                            '<strong>LM Studio：</strong> http://localhost:1234/v1（测试版，GUI驱动）'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '同时比较多个本地模型',
+                        body: 'PromptQuorum同时将一个提示词发送到多个本地模型。比较输出以确定哪个模型最适合您的用例。',
+                        cta: '加入等待名单',
+                        href: 'https://www.promptquorum.com/waitlist'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide) {
+            let html = '';
+            const articleUrl = 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api?lang=' + lang;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 40px; font-size: 18px; color: #79747e;">
+                            <a href="${slide.link}">${slide.link.split('/').pop().replace(/-/g, ' ')}</a>
+                        </p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p>${slide.intro}</p>`;
+                    html += '<ul style="font-size: 1.1em; margin-top: 20px;">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table><tr>';
+                    slide.columns.forEach(col => {
+                        html += `<th>${col}</th>`;
+                    });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => {
+                            html += `<td>${row[col]}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    html += footerLink;
+                    break;
+
+                case 'comparison':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top: 40px; font-size: 1.3em;">${slide.line1}</p>
+                        <p style="font-size: 1.3em;">${slide.line2}</p>
+                        <p style="margin-top: 40px; font-size: 1.1em; color: #6750a4;">${slide.tip}</p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ol style="font-size: 1.1em; margin-top: 20px;">';
+                    slide.items.forEach((item, i) => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ol>';
+                    html += footerLink;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 20px; text-align: left;"><strong>Q: ${faq.q}</strong><p style="margin-top: 8px;">A: ${faq.a}</p></div>`;
+                    });
+                    html += footerLink;
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p>${slide.body}</p>
+                        <a href="${slide.href}" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background: #6750a4; color: white; border-radius: 6px; text-decoration: none;">${slide.cta}</a>
+                        ${footerLink}
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        // Update header
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href += `?lang=${lang}`;
+
+        // Render all slides
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide);
+        });
+
+        // Initialize navigation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Print handlers
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
