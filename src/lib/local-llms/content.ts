@@ -8922,6 +8922,7 @@ print(response.choices[0].message.content)`,
           columns: ['Spec', 'Value'],
         },
         mistralSmall: {
+          id: 'mistral-small-3-1',
           title: '#3 Mistral Small 3.1 24B — Best 7B-Class Model for 16 GB RAM',
           content: [
             'Mistral Small 3.1 is a 24B-parameter model that fits in 16 GB RAM at Q4_K_M quantization (~14 GB). It scores 79% on MMLU and 74% on HumanEval — significantly above any true 7B model. The 128K context window is standard for Mistral\'s 2025+ releases.',
@@ -8937,6 +8938,7 @@ print(response.choices[0].message.content)`,
           columns: ['Spec', 'Value'],
         },
         gemma3: {
+          id: 'gemma-3-9b',
           title: '#4 Google Gemma 3 9B — Best Mid-Range Model for 8–16 GB RAM',
           content: [
             'Gemma 3 9B is Google\'s open-weight model in the 9B parameter class. It scores 73% on MMLU and 68% on HumanEval, placing it above all 7B models and making it the best option for users with 8 GB RAM who want a step above standard 7B quality.',
@@ -8952,6 +8954,7 @@ print(response.choices[0].message.content)`,
           columns: ['Spec', 'Value'],
         },
         phi4mini: {
+          id: 'phi-4-mini',
           title: '#5 Microsoft Phi-4 Mini 3.8B — Best Model Under 4 GB RAM',
           content: [
             'Microsoft Phi-4 Mini 3.8B achieves 68% on MMLU — matching models twice its size — through training on high-quality synthetic reasoning data. It requires only ~2.5 GB of RAM at Q4_K_M and runs at 30–50 tok/sec on any modern laptop CPU.',
@@ -8967,6 +8970,7 @@ print(response.choices[0].message.content)`,
           columns: ['Spec', 'Value'],
         },
         fullBenchmark: {
+          id: 'full-benchmark-comparison',
           title: 'Full Benchmark Comparison: Top 5 Local LLMs 2026',
           rows: [
             { 'Model': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'RAM': '40 GB', 'Best For': 'Overall quality' },
@@ -8978,6 +8982,7 @@ print(response.choices[0].message.content)`,
           columns: ['Model', 'MMLU', 'HumanEval', 'RAM', 'Best For'],
         },
         whichModel: {
+          id: 'which-model-should-you-use',
           title: 'Which Local LLM Should You Use in 2026?',
           items: [
             '**4–8 GB RAM**: Phi-4 Mini 3.8B (`ollama run phi4-mini`) — best reasoning at low RAM.',
@@ -8989,6 +8994,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Best Local LLMs by Region',
           content: [
             '**European Union (GDPR)**: The EU\'s General Data Protection Regulation permits local inference as a lawful basis for data processing (Article 28). Organizations processing personal data (employee records, customer information, healthcare) should note that Llama 3.3 70B and Qwen2.5 72B run entirely on local hardware with zero data transmission to cloud services, satisfying GDPR Article 32 (security obligations). This contrasts with cloud LLM APIs, which may store or log requests for an unspecified duration. For GDPR-compliant sentiment analysis, NLP classification, and document processing, local models eliminate data residency concerns.',
@@ -8997,6 +9003,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes When Choosing Models in 2026',
           items: [
             'Choosing based on benchmarks alone — real-world performance on your task may differ significantly.',
@@ -9018,7 +9025,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         faqSection: {
-          id: 'faq',
+          id: 'common-questions',
           title: 'Frequently Asked Questions',
           faqs: [
             {
@@ -21134,6 +21141,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         coreDifference: {
+          id: 'what-is-the-core-difference',
           title: 'What Is the Core Difference Between Local LLMs and Cloud APIs?',
           content: [
             '**Local LLMs run all inference on your own hardware; cloud APIs send your prompt to a remote server and return the response.** A local LLM means the model file is stored on your disk and all computation happens on your CPU or GPU. Nothing leaves your machine. You pay nothing per inference, but you need hardware capable of running the model.',
@@ -21142,6 +21150,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         fullComparison: {
+          id: 'full-comparison',
           title: 'How Do Local LLMs and Cloud APIs Compare Across 8 Factors?',
           rows: [
             { 'Factor': 'Data privacy', 'Local LLM': 'Complete — data never leaves your device', 'Cloud API': 'Data processed on provider servers; subject to their privacy policy' },
@@ -21156,6 +21165,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           columns: ['Factor', 'Local LLM', 'Cloud API'],
         },
         costComparison: {
+          id: 'how-do-costs-compare',
           title: 'How Do the Costs of Local LLMs and Cloud APIs Compare?',
           content: [
             '**Cloud APIs cost $0.15–$60 per 1M tokens; local LLMs cost $0 per token after the hardware investment.** Cloud API pricing varies by model tier. In 2026, representative prices per 1M tokens: GPT-4o at $2.50 input / $10 output, Claude 4.6 Sonnet at $3.00 / $15, Gemini 2.5 Pro at $1.25 / $5, and GPT-4o Mini at $0.15 / $0.60.',
@@ -21164,6 +21174,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         privacy: {
+          id: 'which-is-more-private',
           title: 'Which Is More Private: a Local LLM or a Cloud API?',
           content: [
             '**Local LLMs are categorically more private.** No prompt text, no context, and no response data is transmitted to any external server. This makes local inference the only viable option for regulated industries (healthcare HIPAA, finance PCI-DSS, legal privilege) and for personal data that must stay on-device.',
@@ -21175,6 +21186,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         speed: {
+          id: 'how-does-speed-compare',
           title: 'How Does Speed Compare Between Local and Cloud Models?',
           content: 'Speed depends heavily on hardware. On CPU only, a 7B model produces 10–30 tokens/sec — noticeably slower than cloud APIs. With a modern GPU, the gap closes significantly:',
           rows: [
@@ -21187,6 +21199,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           columns: ['Hardware', 'Model', 'Speed'],
         },
         quality: {
+          id: 'which-has-better-model-quality',
           title: 'Which Has Better Model Quality: Local or Cloud?',
           content: [
             '**Cloud frontier models (GPT-4o, Claude 4.6 Opus, Gemini 2.5 Pro) lead on complex reasoning; local 13B models match on summarization, translation, and simple Q&A.** On MMLU (knowledge breadth) and HumanEval (coding) benchmarks, frontier cloud models score 85–90% vs. 65–80% for the best local 70B models.',
@@ -21195,6 +21208,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         whichToChoose: {
+          id: 'which-should-you-choose',
           title: 'Which Should You Choose: Local LLM or Cloud API?',
           content: 'Use this decision framework:',
           items: [
