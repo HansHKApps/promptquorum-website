@@ -1,0 +1,66 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="qualityGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#34A853" stop-opacity="1"/>
+      <stop offset="22%"  stop-color="#F4B400" stop-opacity="1"/>
+      <stop offset="40%"  stop-color="#E67C73" stop-opacity="1"/>
+      <stop offset="60%"  stop-color="#E67C73" stop-opacity="1"/>
+      <stop offset="78%"  stop-color="#F4B400" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#34A853" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <rect x="24" y="16" width="752" height="368" rx="12" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">L'effet « Lost in the Middle » — fenêtre 128K tokens</text>
+  <text x="400" y="72" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Les LLMs rappellent le début et la fin fiablement — mais ratent les détails au milieu</text>
+
+  <rect x="60" y="100" width="680" height="80" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="60" y="100" width="680" height="80" rx="8" fill="url(#qualityGradient)" opacity="0.25"/>
+
+  <rect x="68" y="108" width="124" height="64" rx="6" fill="#34A853" opacity="0.18"/>
+  <text x="130" y="135" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">ÉLEVÉ</text>
+  <text x="130" y="153" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853" text-anchor="middle">Qualité de rappel</text>
+
+  <rect x="276" y="108" width="248" height="64" rx="6" fill="#E67C73" opacity="0.18"/>
+  <text x="400" y="132" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#E67C73" text-anchor="middle">FAIBLE — Souvent ignoré</text>
+  <text x="400" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#E67C73" text-anchor="middle">Plage 40K–80K tokens</text>
+
+  <rect x="548" y="108" width="184" height="64" rx="6" fill="#34A853" opacity="0.18"/>
+  <text x="640" y="135" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#34A853" text-anchor="middle">ÉLEVÉ</text>
+  <text x="640" y="153" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#34A853" text-anchor="middle">Qualité de rappel</text>
+
+  <text x="60"  y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">0</text>
+  <text x="196" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">25K</text>
+  <text x="332" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">50K</text>
+  <text x="468" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">75K</text>
+  <text x="604" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">100K</text>
+  <text x="740" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">128K</text>
+  <text x="400" y="212" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">← Position des tokens dans la fenêtre de contexte →</text>
+
+  <text x="400" y="244" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Comment l'éviter</text>
+
+  <rect x="48" y="258" width="210" height="90" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="153" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">① Mettre en tête</text>
+  <text x="153" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Placer les infos critiques</text>
+  <text x="153" y="314" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">au début du prompt</text>
+  <text x="153" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Zone la plus fiable</text>
+
+  <rect x="295" y="258" width="210" height="90" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">② Utiliser RAG</text>
+  <text x="400" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Récupérer 3–5 passages</text>
+  <text x="400" y="314" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">pertinents (4K–8K tokens)</text>
+  <text x="400" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Évite le milieu entièrement</text>
+
+  <rect x="542" y="258" width="210" height="90" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="647" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">③ Découper les docs</text>
+  <text x="647" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Traiter en sections</text>
+  <text x="647" y="314" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F" text-anchor="middle">chevauchantes 16K–32K</text>
+  <text x="647" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Reste en zone sûre</text>
+
+  <text x="400" y="376" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Source : « Lost in the Middle: How Language Models Use Long Contexts » — Liu et al., 2023 (arxiv.org/abs/2307.03172)</text>
+</svg>
