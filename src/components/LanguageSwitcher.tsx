@@ -24,7 +24,11 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
 
   const handleLanguageChange = (lang: Language) => {
     const url = new URL(window.location.href)
-    url.searchParams.set('lang', lang)
+    if (lang === 'en') {
+      url.searchParams.delete('lang')
+    } else {
+      url.searchParams.set('lang', lang)
+    }
     window.history.pushState({}, '', url.toString())
     window.dispatchEvent(new PopStateEvent('popstate'))
     setIsOpen(false)
