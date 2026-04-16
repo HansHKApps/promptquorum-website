@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Long Context Local LLMs 2026: 128K Models & RAM Guide | PromptQuorum</title>
+    <meta name="description" content="Which local LLMs support 128K tokens? Practical reliable limit: 32K for 7B models. RAM at 32K: ~9 GB. Ollama Modelfile config included." />
+    <meta property="og:title" content="Long Context Local LLMs 2026: 128K Models & RAM Guide — PromptQuorum" />
+    <meta property="og:description" content="Llama 3.1, Qwen2.5, Mistral Small 3.1 compared on context windows, RAM usage, and practical limits for local inference." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/long-context-local-llms" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+            position: relative;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(16px, 1.8vw, 20px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 640px;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(14px, 1.5vw, 18px);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(12px, 1.3vw, 15px);
+            text-align: left;
+            max-width: 90%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 8px 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Print styles — A4 landscape */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/long-context-local-llms";
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 12";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Long Context Local LLMs 2026</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/long-context-local-llms">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides injected by JS -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">12</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'Long Context Local LLMs 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Long Context Local LLMs 2026',
+                        subtitle: 'Which Models Support 128K Tokens? RAM Guide & Practical Limits',
+                        link: 'https://www.promptquorum.com/local-llms/long-context-local-llms'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Takeaways',
+                        items: [
+                            'Llama 3.x, Qwen2.5, and Mistral Small 3.1 all support <strong>128K token context windows</strong> as of April 2026.',
+                            '128K tokens ≈ 96,000 words ≈ a 300-page book — but requires 2–4× more RAM.',
+                            '<strong>Practical quality limit:</strong> 7B–8B models stay reliable up to 16K–32K tokens.',
+                            'Beyond 32K, the "lost in the middle" effect causes quality to drop.',
+                            '<strong>Ollama defaults to 2048 tokens</strong> — always set num_ctx explicitly in a Modelfile.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'What Is Context Length?',
+                        items: [
+                            '<strong>Definition:</strong> Max tokens a model can process in one inference call — input + output combined.',
+                            '1 token ≈ 0.75 English words. 128K tokens ≈ 96,000 words.',
+                            '<strong>Key distinction:</strong> Advertised context (architecture max) vs. practical context (where quality stays reliable).',
+                            'Long context enables: summarizing full books, analyzing codebases, processing meeting transcripts.',
+                            'A model may support 128K but degrade on content at the 100K token mark.',
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Theoretical vs. Practical Context',
+                        line1: '📋 Advertised: 128K tokens (architecture maximum)',
+                        line2: '✅ Reliable: ~32K tokens for 7B–8B models',
+                        tip: 'Tip: For 70B models, reliable quality extends to ~64K tokens. Always size your context to your model.'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Which Models Support 128K Context?',
+                        columns: ['Model', 'Context', 'Practical Limit', 'Ollama Command'],
+                        rows: [
+                            { 'Model': 'Llama 3.1 8B', 'Context': '128K', 'Practical Limit': '~32K', 'Ollama Command': 'ollama run llama3.1:8b' },
+                            { 'Model': 'Llama 3.3 70B', 'Context': '128K', 'Practical Limit': '~64K', 'Ollama Command': 'ollama run llama3.3:70b' },
+                            { 'Model': 'Qwen2.5 7B', 'Context': '128K', 'Practical Limit': '~32K', 'Ollama Command': 'ollama run qwen2.5:7b' },
+                            { 'Model': 'Qwen2.5 72B', 'Context': '128K', 'Practical Limit': '~64K', 'Ollama Command': 'ollama run qwen2.5:72b' },
+                            { 'Model': 'Mistral Small 3.1 24B', 'Context': '128K', 'Practical Limit': '~32K', 'Ollama Command': 'ollama run mistral-small3.1' },
+                            { 'Model': 'Mistral 7B v0.3', 'Context': '32K', 'Practical Limit': '~16K', 'Ollama Command': 'ollama run mistral' },
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'RAM Usage by Context Length',
+                        columns: ['Model', '4K Context', '32K Context', '128K Context'],
+                        rows: [
+                            { 'Model': 'Llama 3.1 8B Q4_K_M', '4K Context': '~6 GB', '32K Context': '~9 GB', '128K Context': '~14 GB' },
+                            { 'Model': 'Qwen2.5 14B Q4_K_M', '4K Context': '~9 GB', '32K Context': '~12 GB', '128K Context': '~18 GB' },
+                            { 'Model': 'Mistral 24B Q4_K_M', '4K Context': '~14 GB', '32K Context': '~17 GB', '128K Context': '~24 GB' },
+                            { 'Model': 'Llama 3.3 70B Q4_K_M', '4K Context': '~40 GB', '32K Context': '~45 GB', '128K Context': '~55 GB' },
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'The "Lost in the Middle" Effect',
+                        intro: 'LLMs reliably recall content at the start and end of the context window — but miss the middle.',
+                        items: [
+                            'For a 128K context, content at the <strong>40K–80K token mark</strong> is most likely to be ignored.',
+                            'Research source: "Lost in the Middle" (Liu et al., 2023, arxiv.org/abs/2307.03172).',
+                            '<strong>Mitigation 1:</strong> Place critical information at the start of the prompt.',
+                            '<strong>Mitigation 2:</strong> Use RAG — retrieve only 3–5 relevant chunks (4K–8K tokens total).',
+                            '<strong>Mitigation 3:</strong> Process long documents in overlapping 16K–32K sections.',
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'How to Set Context Length in Ollama',
+                        items: [
+                            'Check current context: run <code>ollama show &lt;model&gt;</code> — look for num_ctx in output.',
+                            'Create a Modelfile: <code>FROM llama3.1:8b</code> + <code>PARAMETER num_ctx 32768</code>',
+                            'Register the custom model: <code>ollama create llama3.1-32k -f Modelfile</code>',
+                            'Verify it\'s active: run <code>ollama ps</code> — check the context column.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regional Context: Compliance & Privacy',
+                        items: [
+                            '<strong>EU / GDPR:</strong> Long-context local inference eliminates GDPR Article 28 third-party data processor risk.',
+                            '<strong>Germany BSI:</strong> 7B Q4_K_M + 32K context (~9–10 GB) is the recommended config for document processing.',
+                            '<strong>France CNIL:</strong> Local Ollama inference satisfies requirement that personal data not be sent to third-party AI providers.',
+                            '<strong>Japan:</strong> Japanese docs use 1.5–2× more tokens than English. Qwen2.5\'s native tokenizer saves 30–40% RAM.',
+                            '<strong>China:</strong> Qwen2.5 (Alibaba) keeps sensitive documents fully on-premises — complies with Data Security Law.',
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Common Mistakes',
+                        items: [
+                            '<strong>Assuming 128K = reliable:</strong> Quality degrades beyond 32K for 7B models — chunk long docs into 16K–32K sections.',
+                            '<strong>Not setting num_ctx:</strong> Ollama defaults to 2048 tokens. Add PARAMETER num_ctx 32768 to your Modelfile.',
+                            '<strong>Insufficient RAM for 128K:</strong> 7B model at 128K needs 14+ GB. On 8 GB total RAM, reduce to 32K context.',
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Frequently Asked Questions',
+                        faqs: [
+                            {
+                                q: 'Can I summarize an entire book with a local LLM?',
+                                a: 'A 300-page book is ~120K–160K tokens — exceeds reliable range for 7B models. Use a 70B model (64K reliable) or chunk into 20K-word sections.'
+                            },
+                            {
+                                q: 'What is the KV cache and why does RAM grow?',
+                                a: 'KV cache stores attention states for all processed tokens. 32K context needs 8× more KV cache memory than 4K context — model weights stay the same.'
+                            },
+                            {
+                                q: 'Long context or RAG for document Q&A?',
+                                a: 'RAG is usually better: retrieves 3–5 chunks (4K–8K tokens), avoids "lost in the middle." Use long context only when document structure matters end-to-end.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Try PromptQuorum Free',
+                        body: 'Compare local LLM outputs vs cloud APIs side-by-side. Test long-context tasks on Llama, Qwen, and Mistral — all in one tool.',
+                        cta: 'Get Started Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'Lokale LLMs mit langem Kontext 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Lokale LLMs mit langem Kontext 2026',
+                        subtitle: 'Welche Modelle bewältigen 128K Token? RAM-Leitfaden & praktische Grenzen',
+                        link: 'https://www.promptquorum.com/local-llms/long-context-local-llms'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Wichtigste Erkenntnisse',
+                        items: [
+                            'Llama 3.x, Qwen2.5 und Mistral Small 3.1 unterstützen alle <strong>128K Token Kontextfenster</strong> (Stand April 2026).',
+                            '128K Token ≈ 96.000 Wörter ≈ ein 300-seitiges Buch — benötigt aber 2–4× mehr RAM.',
+                            '<strong>Praktische Qualitätsgrenze:</strong> 7B–8B-Modelle bleiben bis 16K–32K Token zuverlässig.',
+                            'Jenseits von 32K tritt der „Lost in the Middle"-Effekt auf — Qualität sinkt.',
+                            '<strong>Ollama Standard: 2048 Token</strong> — immer num_ctx explizit im Modelfile setzen.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Was ist Kontextlänge?',
+                        items: [
+                            '<strong>Definition:</strong> Max. Token, die ein Modell in einem Inferenz-Aufruf verarbeiten kann — Eingabe + Ausgabe zusammen.',
+                            '1 Token ≈ 0,75 englische Wörter. 128K Token ≈ 96.000 Wörter.',
+                            '<strong>Wichtige Unterscheidung:</strong> Beworbener Kontext (Architektur-Maximum) vs. praktischer Kontext (zuverlässige Qualität).',
+                            'Langer Kontext ermöglicht: Zusammenfassungen ganzer Bücher, Codebase-Analyse, Protokollverarbeitung.',
+                            'Für 70B-Modelle bleibt die Qualität bis ~64K Token zuverlässig.',
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Theoretisch vs. Praktisch',
+                        line1: '📋 Angegeben: 128K Token (Architektur-Maximum)',
+                        line2: '✅ Zuverlässig: ~32K Token für 7B–8B Modelle',
+                        tip: 'Tipp: Bei 70B-Modellen erstreckt sich die zuverlässige Qualität auf ~64K Token. Kontext immer an das Modell anpassen.'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Welche Modelle unterstützen 128K?',
+                        columns: ['Modell', 'Kontext', 'Prakt. Grenze', 'Ollama Befehl'],
+                        rows: [
+                            { 'Modell': 'Llama 3.1 8B', 'Kontext': '128K', 'Prakt. Grenze': '~32K', 'Ollama Befehl': 'ollama run llama3.1:8b' },
+                            { 'Modell': 'Llama 3.3 70B', 'Kontext': '128K', 'Prakt. Grenze': '~64K', 'Ollama Befehl': 'ollama run llama3.3:70b' },
+                            { 'Modell': 'Qwen2.5 7B', 'Kontext': '128K', 'Prakt. Grenze': '~32K', 'Ollama Befehl': 'ollama run qwen2.5:7b' },
+                            { 'Modell': 'Qwen2.5 72B', 'Kontext': '128K', 'Prakt. Grenze': '~64K', 'Ollama Befehl': 'ollama run qwen2.5:72b' },
+                            { 'Modell': 'Mistral Small 3.1 24B', 'Kontext': '128K', 'Prakt. Grenze': '~32K', 'Ollama Befehl': 'ollama run mistral-small3.1' },
+                            { 'Modell': 'Mistral 7B v0.3', 'Kontext': '32K', 'Prakt. Grenze': '~16K', 'Ollama Befehl': 'ollama run mistral' },
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'RAM-Bedarf nach Kontextlänge',
+                        columns: ['Modell', '4K Kontext', '32K Kontext', '128K Kontext'],
+                        rows: [
+                            { 'Modell': 'Llama 3.1 8B Q4_K_M', '4K Kontext': '~6 GB', '32K Kontext': '~9 GB', '128K Kontext': '~14 GB' },
+                            { 'Modell': 'Qwen2.5 14B Q4_K_M', '4K Kontext': '~9 GB', '32K Kontext': '~12 GB', '128K Kontext': '~18 GB' },
+                            { 'Modell': 'Mistral 24B Q4_K_M', '4K Kontext': '~14 GB', '32K Kontext': '~17 GB', '128K Kontext': '~24 GB' },
+                            { 'Modell': 'Llama 3.3 70B Q4_K_M', '4K Kontext': '~40 GB', '32K Kontext': '~45 GB', '128K Kontext': '~55 GB' },
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Der „Lost in the Middle"-Effekt',
+                        intro: 'LLMs rufen Inhalte am Anfang und Ende des Kontextfensters zuverlässig ab — aber vermissen die Mitte.',
+                        items: [
+                            'Bei 128K Kontext werden Inhalte im <strong>40K–80K Token-Bereich</strong> am häufigsten ignoriert.',
+                            '<strong>Gegenmaßnahme 1:</strong> Wichtige Informationen an den Anfang des Prompts stellen.',
+                            '<strong>Gegenmaßnahme 2:</strong> RAG verwenden — nur 3–5 relevante Chunks (4K–8K Token) übergeben.',
+                            '<strong>Gegenmaßnahme 3:</strong> Lange Dokumente in überlappenden 16K–32K-Abschnitten verarbeiten.',
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Kontextlänge in Ollama setzen',
+                        items: [
+                            'Aktuellen Kontext prüfen: <code>ollama show &lt;model&gt;</code> — num_ctx in der Ausgabe suchen.',
+                            'Modelfile erstellen: <code>FROM llama3.1:8b</code> + <code>PARAMETER num_ctx 32768</code>',
+                            'Benutzerdefiniertes Modell registrieren: <code>ollama create llama3.1-32k -f Modelfile</code>',
+                            'Aktivierung prüfen: <code>ollama ps</code> — Kontext-Spalte kontrollieren.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Regionaler Kontext: Datenschutz & Compliance',
+                        items: [
+                            '<strong>EU / DSGVO:</strong> Lokale Inferenz eliminiert das Drittanbieter-Risiko nach DSGVO Art. 28.',
+                            '<strong>BSI (Deutschland):</strong> 7B Q4_K_M + 32K Kontext (~9–10 GB) — empfohlene Konfiguration für Dokumentenverarbeitung.',
+                            '<strong>CNIL (Frankreich):</strong> Lokale Ollama-Inferenz erfüllt die Anforderung, persönliche Daten nicht an Drittanbieter zu senden.',
+                            '<strong>China:</strong> Qwen2.5 (Alibaba) hält sensible Dokumente vollständig lokal — konform mit dem Datensicherheitsgesetz.',
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Häufige Fehler',
+                        items: [
+                            '<strong>128K = zuverlässig annehmen:</strong> Qualität sinkt bei 7B-Modellen jenseits von 32K — lange Dokumente in 16K–32K-Abschnitte aufteilen.',
+                            '<strong>num_ctx nicht setzen:</strong> Ollama-Standard ist 2048 Token. PARAMETER num_ctx 32768 ins Modelfile eintragen.',
+                            '<strong>Unzureichender RAM für 128K:</strong> 7B-Modell bei 128K benötigt 14+ GB. Bei 8 GB Gesamt-RAM auf 32K Kontext reduzieren.',
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Häufig gestellte Fragen',
+                        faqs: [
+                            {
+                                q: 'Kann ich ein ganzes Buch mit einem lokalen LLM zusammenfassen?',
+                                a: 'Ein 300-seitiges Buch hat ~120K–160K Token — übersteigt den zuverlässigen Bereich für 7B-Modelle. 70B-Modell (64K) oder Chunk-Verarbeitung nutzen.'
+                            },
+                            {
+                                q: 'Was ist der KV-Cache und warum wächst der RAM?',
+                                a: 'Der KV-Cache speichert Attention-Zustände für alle verarbeiteten Token. 32K Kontext benötigt 8× mehr KV-Cache-Speicher als 4K — Modellgewichte bleiben gleich.'
+                            },
+                            {
+                                q: 'Langer Kontext oder RAG für Dokument-QA?',
+                                a: 'RAG ist meistens besser: ruft 3–5 Chunks ab (4K–8K Token), vermeidet „Lost in the Middle". Langen Kontext nur nutzen, wenn die Dokumentstruktur insgesamt wichtig ist.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'PromptQuorum kostenlos testen',
+                        body: 'Lokale LLM-Ausgaben mit Cloud-APIs vergleichen. Lange Kontext-Aufgaben auf Llama, Qwen und Mistral testen — alles in einem Tool.',
+                        cta: 'Kostenlos starten',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'LLMs locaux à long contexte 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'LLMs locaux à long contexte 2026',
+                        subtitle: 'Quels modèles gèrent 128K tokens ? Guide RAM & limites pratiques',
+                        link: 'https://www.promptquorum.com/local-llms/long-context-local-llms'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Points clés',
+                        items: [
+                            'Llama 3.x, Qwen2.5 et Mistral Small 3.1 supportent tous les <strong>fenêtres de 128K tokens</strong> (avril 2026).',
+                            '128K tokens ≈ 96 000 mots ≈ un livre de 300 pages — mais nécessite 2–4× plus de RAM.',
+                            '<strong>Limite de qualité pratique :</strong> les modèles 7B–8B restent fiables jusqu\'à 16K–32K tokens.',
+                            'Au-delà de 32K, l\'effet « perdu au milieu » dégrade la qualité.',
+                            '<strong>Ollama par défaut : 2048 tokens</strong> — toujours définir num_ctx explicitement dans un Modelfile.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Qu\'est-ce que la longueur de contexte ?',
+                        items: [
+                            '<strong>Définition :</strong> Nombre max. de tokens qu\'un modèle peut traiter en un seul appel d\'inférence — entrée + sortie.',
+                            '1 token ≈ 0,75 mot anglais. 128K tokens ≈ 96 000 mots.',
+                            '<strong>Distinction clé :</strong> Contexte annoncé (maximum architectural) vs. contexte pratique (qualité fiable).',
+                            'Long contexte permet : résumer des livres entiers, analyser des bases de code, traiter des transcriptions.',
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: 'Théorique vs. Pratique',
+                        line1: '📋 Annoncé : 128K tokens (maximum architectural)',
+                        line2: '✅ Fiable : ~32K tokens pour les modèles 7B–8B',
+                        tip: 'Conseil : Pour les modèles 70B, la qualité fiable s\'étend jusqu\'à ~64K tokens. Adaptez toujours le contexte à votre modèle.'
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Modèles supportant 128K tokens',
+                        columns: ['Modèle', 'Contexte', 'Limite pratique', 'Commande Ollama'],
+                        rows: [
+                            { 'Modèle': 'Llama 3.1 8B', 'Contexte': '128K', 'Limite pratique': '~32K', 'Commande Ollama': 'ollama run llama3.1:8b' },
+                            { 'Modèle': 'Llama 3.3 70B', 'Contexte': '128K', 'Limite pratique': '~64K', 'Commande Ollama': 'ollama run llama3.3:70b' },
+                            { 'Modèle': 'Qwen2.5 7B', 'Contexte': '128K', 'Limite pratique': '~32K', 'Commande Ollama': 'ollama run qwen2.5:7b' },
+                            { 'Modèle': 'Qwen2.5 72B', 'Contexte': '128K', 'Limite pratique': '~64K', 'Commande Ollama': 'ollama run qwen2.5:72b' },
+                            { 'Modèle': 'Mistral Small 3.1 24B', 'Contexte': '128K', 'Limite pratique': '~32K', 'Commande Ollama': 'ollama run mistral-small3.1' },
+                            { 'Modèle': 'Mistral 7B v0.3', 'Contexte': '32K', 'Limite pratique': '~16K', 'Commande Ollama': 'ollama run mistral' },
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'RAM selon la longueur de contexte',
+                        columns: ['Modèle', 'Contexte 4K', 'Contexte 32K', 'Contexte 128K'],
+                        rows: [
+                            { 'Modèle': 'Llama 3.1 8B Q4_K_M', 'Contexte 4K': '~6 Go', 'Contexte 32K': '~9 Go', 'Contexte 128K': '~14 Go' },
+                            { 'Modèle': 'Qwen2.5 14B Q4_K_M', 'Contexte 4K': '~9 Go', 'Contexte 32K': '~12 Go', 'Contexte 128K': '~18 Go' },
+                            { 'Modèle': 'Mistral 24B Q4_K_M', 'Contexte 4K': '~14 Go', 'Contexte 32K': '~17 Go', 'Contexte 128K': '~24 Go' },
+                            { 'Modèle': 'Llama 3.3 70B Q4_K_M', 'Contexte 4K': '~40 Go', 'Contexte 32K': '~45 Go', 'Contexte 128K': '~55 Go' },
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'L\'effet « Perdu au milieu »',
+                        intro: 'Les LLMs récupèrent fiablement les informations au début et à la fin — mais ratent le milieu.',
+                        items: [
+                            'Pour 128K tokens, le contenu à <strong>40K–80K tokens</strong> est le plus susceptible d\'être ignoré.',
+                            '<strong>Solution 1 :</strong> Placer les informations importantes au début du prompt.',
+                            '<strong>Solution 2 :</strong> Utiliser RAG — récupérer 3–5 chunks (4K–8K tokens au total).',
+                            '<strong>Solution 3 :</strong> Traiter les longs documents en sections de 16K–32K avec chevauchement.',
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Configurer la longueur de contexte dans Ollama',
+                        items: [
+                            'Vérifier le contexte actuel : <code>ollama show &lt;model&gt;</code> — chercher num_ctx dans la sortie.',
+                            'Créer un Modelfile : <code>FROM llama3.1:8b</code> + <code>PARAMETER num_ctx 32768</code>',
+                            'Enregistrer le modèle personnalisé : <code>ollama create llama3.1-32k -f Modelfile</code>',
+                            'Vérifier l\'activation : <code>ollama ps</code> — contrôler la colonne contexte.',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Contexte régional : Conformité & confidentialité',
+                        items: [
+                            '<strong>UE / RGPD :</strong> L\'inférence locale élimine le risque de sous-traitant tiers (Art. 28 RGPD).',
+                            '<strong>CNIL (France) :</strong> Ollama local satisfait l\'exigence de ne pas envoyer de données à des prestataires IA tiers.',
+                            '<strong>Allemagne BSI :</strong> 7B Q4_K_M + 32K contexte (~9–10 Go) — config recommandée pour le traitement documentaire.',
+                            '<strong>Chine :</strong> Qwen2.5 (Alibaba) garde les documents sensibles entièrement en local — conforme à la loi sur la sécurité des données.',
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Erreurs courantes',
+                        items: [
+                            '<strong>Supposer que 128K = fiable :</strong> Qualité dégradée au-delà de 32K pour les 7B. Découper les longs docs en sections de 16K–32K.',
+                            '<strong>Ne pas définir num_ctx :</strong> Ollama utilise 2048 tokens par défaut. Ajouter PARAMETER num_ctx 32768 au Modelfile.',
+                            '<strong>RAM insuffisante pour 128K :</strong> 7B à 128K nécessite 14+ Go. Avec 8 Go total, réduire à 32K.',
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Questions fréquentes',
+                        faqs: [
+                            {
+                                q: 'Puis-je résumer un livre entier avec un LLM local ?',
+                                a: 'Un livre de 300 pages représente ~120K–160K tokens — dépasse la plage fiable des modèles 7B. Utiliser un modèle 70B (64K fiable) ou traiter par chunks de 20K mots.'
+                            },
+                            {
+                                q: 'Qu\'est-ce que le cache KV et pourquoi la RAM augmente ?',
+                                a: 'Le cache KV stocke les états d\'attention pour tous les tokens traités. 32K nécessite 8× plus de mémoire cache KV que 4K — les poids du modèle restent identiques.'
+                            },
+                            {
+                                q: 'Long contexte ou RAG pour les questions-réponses sur documents ?',
+                                a: 'RAG est généralement meilleur : récupère 3–5 chunks (4K–8K tokens), évite « perdu au milieu ». Utiliser le long contexte uniquement si la structure complète du document compte.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Essayez PromptQuorum gratuitement',
+                        body: 'Comparez les sorties LLM locaux vs APIs cloud côte à côte. Testez des tâches longues sur Llama, Qwen et Mistral — dans un seul outil.',
+                        cta: 'Commencer gratuitement',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: '長コンテキスト対応ローカルLLM 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '長コンテキスト対応ローカルLLM 2026',
+                        subtitle: '128Kトークンを処理できるモデルは？ RAM要件と実用的な制限',
+                        link: 'https://www.promptquorum.com/local-llms/long-context-local-llms'
+                    },
+                    {
+                        type: 'list',
+                        h2: '重要なポイント',
+                        items: [
+                            'Llama 3.x、Qwen2.5、Mistral Small 3.1はすべて<strong>128Kトークンのコンテキストウィンドウ</strong>をサポート（2026年4月時点）。',
+                            '128Kトークン ≈ 96,000語 ≈ 300ページの本 — ただし2〜4倍のRAMが必要。',
+                            '<strong>実用的な品質上限：</strong>7B〜8Bモデルは16K〜32Kトークンまで品質を維持。',
+                            '32Kを超えると「中間迷子（Lost in the Middle）」効果で品質が低下。',
+                            '<strong>Ollamaのデフォルトは2048トークン</strong> — Modelfileでnum_ctxを明示的に設定すること。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'コンテキスト長とは？',
+                        items: [
+                            '<strong>定義：</strong>1回の推論呼び出しでモデルが処理できる最大トークン数（入力＋出力の合計）。',
+                            '1トークン ≈ 英語0.75語。128Kトークン ≈ 96,000語。',
+                            '<strong>重要な区別：</strong>標榜コンテキスト（アーキテクチャの最大値）vs 実用コンテキスト（品質が安定する範囲）。',
+                            'ロングコンテキストが可能にするもの：書籍全体の要約、コードベース分析、会議録処理。',
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: '理論値 vs 実用値',
+                        line1: '📋 標榜値：128Kトークン（アーキテクチャ最大値）',
+                        line2: '✅ 安定品質：7B〜8Bモデルで約32Kトークン',
+                        tip: 'ヒント：70Bモデルでは品質が約64Kトークンまで安定。コンテキストは常にモデルに合わせて設定すること。'
+                    },
+                    {
+                        type: 'table',
+                        h2: '128Kコンテキストをサポートするモデル',
+                        columns: ['モデル', 'コンテキスト', '実用上限', 'Ollamaコマンド'],
+                        rows: [
+                            { 'モデル': 'Llama 3.1 8B', 'コンテキスト': '128K', '実用上限': '~32K', 'Ollamaコマンド': 'ollama run llama3.1:8b' },
+                            { 'モデル': 'Llama 3.3 70B', 'コンテキスト': '128K', '実用上限': '~64K', 'Ollamaコマンド': 'ollama run llama3.3:70b' },
+                            { 'モデル': 'Qwen2.5 7B', 'コンテキスト': '128K', '実用上限': '~32K', 'Ollamaコマンド': 'ollama run qwen2.5:7b' },
+                            { 'モデル': 'Qwen2.5 72B', 'コンテキスト': '128K', '実用上限': '~64K', 'Ollamaコマンド': 'ollama run qwen2.5:72b' },
+                            { 'モデル': 'Mistral Small 3.1 24B', 'コンテキスト': '128K', '実用上限': '~32K', 'Ollamaコマンド': 'ollama run mistral-small3.1' },
+                            { 'モデル': 'Mistral 7B v0.3', 'コンテキスト': '32K', '実用上限': '~16K', 'Ollamaコマンド': 'ollama run mistral' },
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'コンテキスト長別のRAM使用量',
+                        columns: ['モデル', '4Kコンテキスト', '32Kコンテキスト', '128Kコンテキスト'],
+                        rows: [
+                            { 'モデル': 'Llama 3.1 8B Q4_K_M', '4Kコンテキスト': '~6 GB', '32Kコンテキスト': '~9 GB', '128Kコンテキスト': '~14 GB' },
+                            { 'モデル': 'Qwen2.5 14B Q4_K_M', '4Kコンテキスト': '~9 GB', '32Kコンテキスト': '~12 GB', '128Kコンテキスト': '~18 GB' },
+                            { 'モデル': 'Mistral 24B Q4_K_M', '4Kコンテキスト': '~14 GB', '32Kコンテキスト': '~17 GB', '128Kコンテキスト': '~24 GB' },
+                            { 'モデル': 'Llama 3.3 70B Q4_K_M', '4Kコンテキスト': '~40 GB', '32Kコンテキスト': '~45 GB', '128Kコンテキスト': '~55 GB' },
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '「中間迷子」効果',
+                        intro: 'LLMはコンテキストウィンドウの先頭と末尾の情報は確実に取り出せるが、中間部分は見落とす。',
+                        items: [
+                            '128Kコンテキストでは<strong>40K〜80Kトークン付近</strong>の内容が最も見落とされやすい。',
+                            '<strong>対策1：</strong>重要な情報をプロンプトの先頭に配置する。',
+                            '<strong>対策2：</strong>RAGを使用 — 関連チャンク3〜5件（4K〜8K合計）のみを渡す。',
+                            '<strong>対策3：</strong>長文書を16K〜32Kのオーバーラップセクションで処理する。',
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Ollamaでコンテキスト長を設定する方法',
+                        items: [
+                            '現在のコンテキストを確認：<code>ollama show &lt;model&gt;</code> — num_ctxを出力で確認。',
+                            'Modelfileを作成：<code>FROM llama3.1:8b</code> + <code>PARAMETER num_ctx 32768</code>',
+                            'カスタムモデルを登録：<code>ollama create llama3.1-32k -f Modelfile</code>',
+                            '有効化を確認：<code>ollama ps</code> — コンテキスト列を確認。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地域コンテキスト：コンプライアンスとプライバシー',
+                        items: [
+                            '<strong>EU / GDPR：</strong>ローカル推論によりGDPR第28条の第三者データ処理リスクを排除。',
+                            '<strong>日本（METI）：</strong>日本語文書は英語の1.5〜2倍のトークンを消費。Qwen2.5のネイティブ日本語トークナイザーで30〜40%節約。',
+                            '<strong>中国：</strong>Qwen2.5（Alibaba）は機密文書を完全にローカルで処理 — データセキュリティ法に準拠。',
+                            '50ページの日本語レポートは25K〜35Kトークン消費 — Qwen2.5 7Bの32K実用上限内。',
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'よくある間違い',
+                        items: [
+                            '<strong>128K = 安定と思い込む：</strong>7Bモデルは32K超で品質低下 — 長文書を16K〜32Kに分割して処理。',
+                            '<strong>num_ctxを設定しない：</strong>Ollamaのデフォルトは2048トークン。ModelfileにPARAMETER num_ctx 32768を追加。',
+                            '<strong>128KにRAM不足：</strong>7Bモデルの128Kには14+ GB必要。8GB合計では32Kに制限。',
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'よくある質問',
+                        faqs: [
+                            {
+                                q: 'ローカルLLMで本全体を要約できますか？',
+                                a: '300ページの本は約120K〜160Kトークン — 7Bモデルの信頼できる範囲を超える。70Bモデル（64K信頼範囲）か20K語のチャンク処理を使用。'
+                            },
+                            {
+                                q: 'KVキャッシュとは何ですか？なぜRAMが増えますか？',
+                                a: 'KVキャッシュは処理した全トークンのアテンション状態を保存する。32Kコンテキストは4Kの8倍のキャッシュメモリが必要 — モデルの重みは変わらない。'
+                            },
+                            {
+                                q: 'ドキュメントQ&AにはロングコンテキストとRAGどちらが良いですか？',
+                                a: 'RAGが通常より効果的でRAM効率が良い：3〜5チャンク（4K〜8K合計）を取得し「中間迷子」を回避。ドキュメント構造全体が重要な場合のみロングコンテキストを使用。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'PromptQuorumを無料で試す',
+                        body: 'ローカルLLMの出力とクラウドAPIを並べて比較。Llama、Qwen、Mistralでロングコンテキストタスクをテスト。',
+                        cta: '無料で始める',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: '长上下文本地LLM 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '长上下文本地LLM 2026',
+                        subtitle: '哪些模型支持128K标记？RAM需求与实际限制',
+                        link: 'https://www.promptquorum.com/local-llms/long-context-local-llms'
+                    },
+                    {
+                        type: 'list',
+                        h2: '核心要点',
+                        items: [
+                            'Llama 3.x、Qwen2.5和Mistral Small 3.1均支持<strong>128K标记上下文窗口</strong>（截至2026年4月）。',
+                            '128K标记 ≈ 96,000词 ≈ 300页书 — 但需要2–4倍的RAM。',
+                            '<strong>实际质量上限：</strong>7B–8B模型在16K–32K标记内保持可靠质量。',
+                            '超过32K，"中间迷失"效应导致质量下降。',
+                            '<strong>Ollama默认2048标记</strong> — 务必在Modelfile中显式设置num_ctx。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '什么是上下文长度？',
+                        items: [
+                            '<strong>定义：</strong>模型在单次推理调用中可处理的最大标记数（输入+输出的合计）。',
+                            '1标记 ≈ 0.75个英文词。128K标记 ≈ 96,000词。',
+                            '<strong>关键区别：</strong>标注上下文（架构最大值）vs 实际上下文（质量保持可靠的范围）。',
+                            '长上下文支持：总结整本书、分析代码库、处理会议记录。',
+                        ]
+                    },
+                    {
+                        type: 'comparison',
+                        h2: '理论值 vs 实际值',
+                        line1: '📋 标注值：128K标记（架构最大值）',
+                        line2: '✅ 可靠范围：7B–8B模型约32K标记',
+                        tip: '提示：70B模型可靠质量可延伸至约64K标记。始终根据模型大小配置上下文。'
+                    },
+                    {
+                        type: 'table',
+                        h2: '支持128K上下文的模型',
+                        columns: ['模型', '上下文', '实际上限', 'Ollama命令'],
+                        rows: [
+                            { '模型': 'Llama 3.1 8B', '上下文': '128K', '实际上限': '~32K', 'Ollama命令': 'ollama run llama3.1:8b' },
+                            { '模型': 'Llama 3.3 70B', '上下文': '128K', '实际上限': '~64K', 'Ollama命令': 'ollama run llama3.3:70b' },
+                            { '模型': 'Qwen2.5 7B', '上下文': '128K', '实际上限': '~32K', 'Ollama命令': 'ollama run qwen2.5:7b' },
+                            { '模型': 'Qwen2.5 72B', '上下文': '128K', '实际上限': '~64K', 'Ollama命令': 'ollama run qwen2.5:72b' },
+                            { '模型': 'Mistral Small 3.1 24B', '上下文': '128K', '实际上限': '~32K', 'Ollama命令': 'ollama run mistral-small3.1' },
+                            { '模型': 'Mistral 7B v0.3', '上下文': '32K', '实际上限': '~16K', 'Ollama命令': 'ollama run mistral' },
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '不同上下文长度的RAM需求',
+                        columns: ['模型', '4K上下文', '32K上下文', '128K上下文'],
+                        rows: [
+                            { '模型': 'Llama 3.1 8B Q4_K_M', '4K上下文': '~6 GB', '32K上下文': '~9 GB', '128K上下文': '~14 GB' },
+                            { '模型': 'Qwen2.5 14B Q4_K_M', '4K上下文': '~9 GB', '32K上下文': '~12 GB', '128K上下文': '~18 GB' },
+                            { '模型': 'Mistral 24B Q4_K_M', '4K上下文': '~14 GB', '32K上下文': '~17 GB', '128K上下文': '~24 GB' },
+                            { '模型': 'Llama 3.3 70B Q4_K_M', '4K上下文': '~40 GB', '32K上下文': '~45 GB', '128K上下文': '~55 GB' },
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '"中间迷失"效应',
+                        intro: 'LLM可靠地检索上下文窗口开头和结尾的信息——但会错过中间部分。',
+                        items: [
+                            '对于128K上下文，<strong>40K–80K标记处</strong>的内容最容易被忽略。',
+                            '<strong>对策1：</strong>将重要信息放在提示开头。',
+                            '<strong>对策2：</strong>使用RAG——仅传入3–5个相关块（4K–8K合计）。',
+                            '<strong>对策3：</strong>以重叠的16K–32K节段处理长文档。',
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '如何在Ollama中设置上下文长度',
+                        items: [
+                            '检查当前上下文：<code>ollama show &lt;model&gt;</code> — 在输出中查找num_ctx。',
+                            '创建Modelfile：<code>FROM llama3.1:8b</code> + <code>PARAMETER num_ctx 32768</code>',
+                            '注册自定义模型：<code>ollama create llama3.1-32k -f Modelfile</code>',
+                            '验证激活：<code>ollama ps</code> — 检查上下文列。',
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '地区背景：合规与隐私',
+                        items: [
+                            '<strong>欧盟/GDPR：</strong>本地推理消除GDPR第28条第三方数据处理器风险。',
+                            '<strong>中国：</strong>Qwen2.5（阿里巴巴）将敏感文档完全保留在本地——符合《数据安全法》。',
+                            '<strong>日本：</strong>日文文档消耗英文的1.5–2倍标记。Qwen2.5原生分词器节省30–40% RAM。',
+                            '德国BSI推荐配置：7B Q4_K_M + 32K上下文（约9–10 GB）用于文档处理。',
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '常见错误',
+                        items: [
+                            '<strong>假设128K = 可靠：</strong>7B模型在32K以上质量下降——将长文档分成16K–32K节段处理。',
+                            '<strong>未设置num_ctx：</strong>Ollama默认2048标记。在Modelfile中添加PARAMETER num_ctx 32768。',
+                            '<strong>128K时RAM不足：</strong>7B模型128K需要14+ GB。总计8 GB时，上下文限制为32K。',
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            {
+                                q: '我可以用本地LLM总结整本书吗？',
+                                a: '300页书约120K–160K标记——超出7B模型可靠范围。使用70B模型（64K可靠）或分成20K词章节处理。'
+                            },
+                            {
+                                q: '什么是KV缓存，为什么RAM会增长？',
+                                a: 'KV缓存存储所有已处理标记的注意力状态。32K上下文需要4K的8倍KV缓存内存——模型权重保持不变。'
+                            },
+                            {
+                                q: '文档问答用长上下文还是RAG？',
+                                a: 'RAG通常更高效：检索3–5个块（4K–8K合计），避免"中间迷失"问题。仅当需要理解整个文档结构时才使用长上下文。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '免费试用PromptQuorum',
+                        body: '并排比较本地LLM与云端API输出。在Llama、Qwen和Mistral上测试长上下文任务——一个工具搞定。',
+                        cta: '免费开始',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide, lang) {
+            let html = '';
+            const articleUrl = 'https://www.promptquorum.com/local-llms/long-context-local-llms?lang=' + lang;
+            const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" />
+                        <h1>${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top: 32px; font-size: 16px; color: #79747e;">
+                            <a href="${slide.link}" style="color:#6750a4; text-decoration:none; border-bottom: 1px solid #6750a4;">${slide.link.replace('https://www.promptquorum.com/', '')}</a>
+                        </p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p style="margin-top:8px; margin-bottom:4px; font-size:clamp(14px,1.5vw,17px);">${slide.intro}</p>`;
+                    html += '<ul style="margin-top: 16px;">';
+                    slide.items.forEach(item => { html += `<li>${item}</li>`; });
+                    html += '</ul>';
+                    html += footerLink;
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table style="margin-top:16px;"><tr>';
+                    slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    html += footerLink;
+                    break;
+
+                case 'comparison':
+                    html = `
+                        <h2 style="font-size:clamp(28px,3.2vw,40px);">${slide.h2}</h2>
+                        <p style="margin-top: 36px; font-size: clamp(18px,2.2vw,26px); color: #49454f;">${slide.line1}</p>
+                        <p style="font-size: clamp(18px,2.2vw,26px); color: #49454f; margin-top:12px;">${slide.line2}</p>
+                        <p style="margin-top: 36px; font-size: clamp(14px,1.6vw,18px); color: #6750a4; max-width:580px;">${slide.tip}</p>
+                        ${footerLink}
+                    `;
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ol style="margin-top: 16px;">';
+                    slide.items.forEach(item => { html += `<li>${item}</li>`; });
+                    html += '</ol>';
+                    html += footerLink;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom: 16px; text-align: left; max-width: 640px;">
+                            <strong style="font-size:clamp(13px,1.4vw,16px);">Q: ${faq.q}</strong>
+                            <p style="margin-top: 6px; font-size:clamp(12px,1.3vw,15px); color:#49454f;">A: ${faq.a}</p>
+                        </div>`;
+                    });
+                    html += footerLink;
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2 style="font-size:clamp(30px,3.5vw,44px);">${slide.h2}</h2>
+                        <p style="margin-top: 20px; max-width: 560px;">${slide.body}</p>
+                        <a href="${slide.href}" style="display: inline-block; margin-top: 28px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 18px;">${slide.cta}</a>
+                        ${footerLink}
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        // Update header
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href = 'https://www.promptquorum.com/local-llms/long-context-local-llms?lang=' + lang;
+
+        // Render all slides
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide, lang);
+        });
+
+        // Navigation
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Print handlers — show all slides for PDF
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        if (isPrint) {
+            window.addEventListener('load', () => { window.print(); });
+        }
+
+        showSlide(0);
+    </script>
+</body>
+</html>

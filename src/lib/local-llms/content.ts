@@ -18205,6 +18205,8 @@ print(response.choices[0].message.content)`,
           ],
         },
       },
+      gammaEmbedUrl: '/presentations/long-context-local-llms-static.html',
+      gammaDescription: 'The slide deck below covers: 128K context window models compared (Llama 3.1, Qwen2.5, Mistral Small 3.1), RAM usage at 4K/32K/128K context lengths, the "lost in the middle" effect and practical reliable limits (~32K for 7B models), and how to set num_ctx in Ollama. Download the PDF as a long context local LLM reference card.',
     },
     zh: {
       theme: '最佳模型',
@@ -18505,6 +18507,8 @@ print(response.choices[0].message.content)`,
           { '@type': 'ListItem', 'position': 8, 'name': 'Mistral 7B v0.3',       'description': '32K上下文。实际上限16K。ollama run mistral' },
         ],
       },
+      gammaEmbedUrl: '/presentations/long-context-local-llms-static.html',
+      gammaDescription: '以下幻灯片涵盖：128K上下文窗口模型对比（Llama 3.1、Qwen2.5、Mistral Small 3.1）、4K/32K/128K上下文长度下的RAM需求、"中间迷失"效应与实际可靠限制（7B模型约32K），以及如何在Ollama中设置num_ctx。将PDF下载为长上下文本地LLM参考卡。',
     },
     de: {
       theme: 'Best Models',
@@ -18517,6 +18521,8 @@ print(response.choices[0].message.content)`,
       educationalLevel: 'Intermediate',
       primaryTerm: 'lange Kontextfenster lokale LLM',
       sections: {},
+      gammaEmbedUrl: '/presentations/long-context-local-llms-static.html',
+      gammaDescription: 'Die Präsentation umfasst: 128K-Kontextfenster-Modellvergleich (Llama 3.1, Qwen2.5, Mistral Small 3.1), RAM-Verbrauch bei 4K/32K/128K-Kontext, den „Lost in the Middle"-Effekt mit praktischen Grenzen (~32K für 7B-Modelle) und wie man num_ctx in Ollama setzt. Als PDF für lange Kontexte bei lokalen LLMs herunterladen.',
     },
     fr: {
       theme: 'Best Models',
@@ -18529,6 +18535,8 @@ print(response.choices[0].message.content)`,
       educationalLevel: 'Intermediate',
       primaryTerm: 'long contexte LLM local',
       sections: {},
+      gammaEmbedUrl: '/presentations/long-context-local-llms-static.html',
+      gammaDescription: 'La présentation couvre : comparaison des modèles à fenêtre 128K tokens (Llama 3.1, Qwen2.5, Mistral Small 3.1), RAM selon la longueur de contexte 4K/32K/128K, l\'effet « perdu au milieu » avec limites pratiques (~32K pour les 7B) et comment configurer num_ctx dans Ollama. Téléchargez le PDF comme carte de référence LLM local long contexte.',
     },
     ja: {
       theme: 'Best Models',
@@ -18541,6 +18549,8 @@ print(response.choices[0].message.content)`,
       educationalLevel: 'Intermediate',
       primaryTerm: '長コンテキストローカルLLM',
       sections: {},
+      gammaEmbedUrl: '/presentations/long-context-local-llms-static.html',
+      gammaDescription: '以下のスライドデッキは：128Kトークンコンテキストモデル比較（Llama 3.1、Qwen2.5、Mistral Small 3.1）、4K/32K/128Kコンテキスト長でのRAM使用量、「中間迷子」効果と実用的な制限（7Bモデルで約32K）、Ollamaでnum_ctxを設定する方法をカバーしています。長コンテキストローカルLLMリファレンスカードとしてPDFをダウンロードしてください。',
     },
   },
 
@@ -26819,7 +26829,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       title: 'Local LLM OpenAI-Compatible API: Connect Python, Node.js, and JavaScript to Ollama',
       seoTitle: 'Ollama OpenAI API Drop-In: Python & Node.js Guide 2026',
       intro: 'Ollama, vLLM, and LM Studio all expose REST APIs that mimic the OpenAI API structure. This means you can use the official OpenAI Python library, Node.js client, or any OpenAI-compatible tool by simply changing the base URL to localhost. As of April 2026, this is the standard way to integrate local models into applications without vendor lock-in to OpenAI.',
-      metaDescription: 'Change one line — base_url to localhost — to run Ollama as a drop-in OpenAI API. Python, Node.js, streaming, and function calling all work unchanged.',
+      metaDescription: 'Change one line — base_url to localhost — to run Ollama as a drop-in OpenAI API. Python, Node.js, streaming, and function calling all work unchanged. Free.',
       publishDate: '2026-04-04',
       readTime: '10 min read',
       educationalLevel: 'Beginner to Advanced',
@@ -26833,6 +26843,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: 'JavaScript: Browser Usage', anchor: '#javascript-browser' },
         { label: 'Advanced: Streaming Responses', anchor: '#streaming-responses' },
         { label: 'Advanced: Function Calling', anchor: '#function-calling' },
+        { label: 'Local LLM OpenAI APIs by Region', anchor: '#regional-context' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
         { label: 'Common Questions', anchor: '#common-questions' },
         { label: 'Related Reading', anchor: '#related-reading' },
@@ -26852,7 +26863,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         whatIsOpenAI: {
           title: 'What Does OpenAI-Compatible Mean?',
           content: [
-            'OpenAI-compatible means the API endpoint returns responses in the same format as OpenAI\'s API. This allows any library or tool built for OpenAI to work with local models by pointing to a different URL.',
+            '**OpenAI-compatible means the API endpoint returns responses in the same format as OpenAI\'s API.** This allows any library or tool built for OpenAI to work with local models by pointing to a different URL. Learn how [Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) compare in their implementation of this standard.',
             'Example: The OpenAI Python library sends requests like this:',
             '```\nPOST /chat/completions\n{\n  "model": "gpt-4o",\n  "messages": [...],\n  "temperature": 0.7\n}\n```',
             'Ollama\'s API accepts the exact same request at `localhost:11434/v1/chat/completions` and returns the response in OpenAI\'s format:',
@@ -26862,30 +26873,31 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         ollamaEndpoint: {
           title: 'What Is Ollama\'s API Endpoint?',
-          content: 'When you run `ollama serve`, Ollama starts a REST API at `http://localhost:11434`. The OpenAI-compatible endpoints are:',
-          items: [
-            '**Chat completions:** `POST http://localhost:11434/v1/chat/completions` — matches `/chat/completions` from OpenAI.',
-            '**Text completions:** `POST http://localhost:11434/v1/completions` — matches `/completions` from OpenAI.',
-            '**Embeddings:** `POST http://localhost:11434/v1/embeddings` — convert text to vectors.',
-            '**List models:** `GET http://localhost:11434/v1/models` — list available models.',
+          content: '**When you run `ollama serve`, Ollama starts a REST API at `http://localhost:11434`.** The OpenAI-compatible endpoints are:',
+          rows: [
+            { 'Endpoint': 'Chat Completions', 'URL': 'POST http://localhost:11434/v1/chat/completions', 'Description': 'Matches `/chat/completions` from OpenAI' },
+            { 'Endpoint': 'Text Completions', 'URL': 'POST http://localhost:11434/v1/completions', 'Description': 'Matches `/completions` from OpenAI' },
+            { 'Endpoint': 'Embeddings', 'URL': 'POST http://localhost:11434/v1/embeddings', 'Description': 'Convert text to vectors' },
+            { 'Endpoint': 'List Models', 'URL': 'GET http://localhost:11434/v1/models', 'Description': 'List available models' },
           ],
+          columns: ['Endpoint', 'URL', 'Description'],
         },
         pythonOpenAI: {
           title: 'How to Use Ollama API With Python (OpenAI Library)',
-          content: 'Install the OpenAI library and point it to localhost:',
+          content: '**Install the OpenAI library and point it to localhost.**',
           codeBlock: '# 1. Install the OpenAI library\npip install openai\n\n# 2. Connect to Ollama\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"  # dummy key; Ollama ignores it\n)\n\n# 3. Make a request\nresponse = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[\n    {"role": "user", "content": "What is 2+2?"}\n  ]\n)\n\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',
         },
         nodejs: {
           title: 'How to Use Ollama API With Node.js',
-          content: 'Install the OpenAI SDK and connect:',
+          content: '**Install the OpenAI SDK and connect it to your local Ollama instance.**',
           codeBlock: '// 1. Install\nnpm install openai\n\n// 2. Connect to Ollama\nconst OpenAI = require("openai").default;\n\nconst client = new OpenAI({\n  baseURL: "http://localhost:11434/v1",\n  apiKey: "ollama"\n});\n\n// 3. Make a request\nconst response = await client.chat.completions.create({\n  model: "llama3.2:3b",\n  messages: [{\n    role: "user",\n    content: "What is 2+2?"\n  }]\n});\n\nconsole.log(response.choices[0].message.content);',
           codeLanguage: 'javascript',
         },
         javascript: {
           title: 'How to Use Ollama API From JavaScript in the Browser',
           content: [
-            'Calling Ollama from browser-side JavaScript requires the browser and server to be on the same machine (or allow CORS). For security, browser requests to localhost work only if the JavaScript is served from localhost.',
+            '**Calling Ollama from browser-side JavaScript requires the browser and server to be on the same machine (or allow CORS).** For security, browser requests to localhost work only if the JavaScript is served from localhost. Check [Best Local LLM Frontends](/local-llms/best-local-llm-frontends) for browser-ready UIs that handle this seamlessly.',
             'If you need to call Ollama from a browser on a different IP, set up a CORS proxy or use a server-side middleware.',
           ],
           codeBlock: '// Browser-side JavaScript (if server is localhost:3000, Ollama is localhost:11434)\nfetch("http://localhost:11434/v1/chat/completions", {\n  method: "POST",\n  headers: { "Content-Type": "application/json" },\n  body: JSON.stringify({\n    model: "llama3.2:3b",\n    messages: [{ role: "user", content: "What is 2+2?" }]\n  })\n})\n  .then(res => res.json())\n  .then(data => console.log(data.choices[0].message.content))',
@@ -26893,26 +26905,35 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         streaming: {
           title: 'How Do You Stream Responses Token-by-Token?',
-          content: 'Streaming lets you display responses as they are generated, token by token, instead of waiting for the entire response.',
+          content: '**Streaming lets you display responses as they are generated, token by token, instead of waiting for the entire response.** As of April 2026, streaming works with all local models via the OpenAI-compatible API.',
           codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
           codeLanguage: 'python',
         },
         functionCalling: {
           title: 'Can Your Local Model Call Functions?',
           content: [
-            'Yes, as of April 2026, function calling works with local models via the OpenAI API. You define a function schema, and the model can respond with arguments to pass to your function.',
-            'Function calling support depends on the model. Llama 3.2 8B, Qwen2.5, and most recent models support it. Smaller models (3B) may not reliably use it.',
+            '**Yes, as of April 2026, function calling works with local models via the OpenAI API.** You define a function schema, and the model can respond with arguments to pass to your function. This enables [Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) to integrate with your tool ecosystem.',
+            'Function calling support depends on the model. Llama 3.1 8B, Qwen2.5 7B, and most recent models support it. Smaller models (3B) may not reliably use it.',
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
         },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Local LLM OpenAI APIs by Region',
+          content: [
+            '**EU / GDPR:** For EU developers, running Ollama locally ensures GDPR Article 5 compliance (data minimization) — all inference stays on-device with no data egress to cloud APIs. Ollama downloads from GitHub under MIT license, meeting EU compliance requirements. For enterprises, this eliminates vendor lock-in and guarantees data residency.',
+            '**Japan / APPI:** Under Japan\'s Act on Protection of Personal Information (APPI), on-premises model inference bypasses cloud data transfer requirements. Ollama + Qwen2.5 7B runs on standard corporate laptops (8GB RAM) with 30–50 tok/sec latency, meeting real-time response expectations for Japanese language processing.',
+            '**China / CAC:** For deployment under China\'s Cybersecurity Law (CAC Article 37), local inference satisfies data localization mandates—Ollama + Qwen2.5 runs on any Linux device without external API calls. Qwen2.5\'s native Chinese tokenization adds 30–40% efficiency over Llama, reducing local inference overhead.',
+          ],
+        },
         commonMistakes: {
-          title: 'Common Mistakes With Local LLM APIs',
+          title: 'What Are Common Mistakes With Local LLM OpenAI APIs?',
           items: [
-            '**Forgetting that the API key is ignored.** Ollama requires `api_key="ollama"` (any string works) because it is not authenticating. The real key is that the request comes from localhost or your local network.',
+            '**Forgetting that the API key is ignored.** Ollama requires `api_key="ollama"` (any string works) because it is not authenticating. The real authentication is that the request comes from localhost or your local network, not the internet.',
             '**Not realizing the model name matters.** If you call `/chat/completions` with `model="gpt-4"` but have only pulled `llama3.2:3b` in Ollama, the request will fail. Use the exact model names from `ollama list`.',
             '**Assuming Ollama needs internet.** It does not. The API is entirely local. But if your Python code tries to reach OpenAI\'s servers first (by default), it will fail. Always set `base_url` explicitly.',
-            '**CORS errors from browser.** If you call Ollama from a browser-side script and get a CORS error, it means the browser blocked the request for security. Workaround: make the call from a server-side proxy, or ensure your app is served from localhost.',
+            '**CORS errors from browser.** If you call Ollama from a browser-side script and get a CORS error, it means the browser blocked the request for security. See [Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) for editor-based solutions that bypass CORS.',
             '**Not setting stream=True when expecting streaming.** If you want token-by-token responses, you must explicitly set `stream=True` in the request. By default, it waits for the full response.',
           ],
         },
@@ -26940,6 +26961,26 @@ ollama run -m deepseek-r1:7b "2^10を解く"
               q: 'Is the API authenticated?',
               a: 'No. By default, Ollama\'s API has no authentication. Anyone with access to localhost:11434 can use it. For production with network access, add authentication via a reverse proxy (nginx with Basic Auth, etc.).',
             },
+            {
+              q: 'How do I use streaming with the Ollama OpenAI API?',
+              a: 'Set stream=True in your OpenAI library call. Ollama returns server-sent events (SSE) with each token. In Python: for chunk in client.chat.completions.create(stream=True, ...): print(chunk.choices[0].delta.content).',
+            },
+            {
+              q: 'Does Ollama support function calling / tool use via the API?',
+              a: 'Yes, for models that support it (Llama 3.1 8B, Qwen2.5 7B, Mistral). Pass tools=[] in the API call as you would with OpenAI. Ollama parses tool calls and returns structured JSON. Not all models support this — check model documentation.',
+            },
+            {
+              q: 'What is the difference between Ollama /api/generate and /v1/chat/completions?',
+              a: '/api/generate is Ollama\'s native single-turn endpoint. /v1/chat/completions is the OpenAI-compatible multi-turn endpoint. Use /v1/chat/completions for all new projects — it supports conversation history and is compatible with OpenAI libraries.',
+            },
+            {
+              q: 'Can I use vLLM as an OpenAI-compatible API?',
+              a: 'Yes. vLLM runs an OpenAI-compatible server at http://localhost:8000/v1 by default. Start it with: python -m vllm.entrypoints.openai.api_server --model mistralai/Mistral-7B-v0.1. Use the same client code as Ollama.',
+            },
+            {
+              q: 'How do I use the Ollama API with the Node.js openai package?',
+              a: 'Import OpenAI from openai. Set baseURL: "http://localhost:11434/v1" and apiKey: "ollama" in the constructor. Then call client.chat.completions.create() exactly as you would with the real OpenAI API — no other changes needed.',
+            },
           ],
         },
         relatedReading: {
@@ -26956,10 +26997,10 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'sources',
           title: 'Sources',
           items: [
-            'Ollama API Documentation — github.com/ollama/ollama/blob/main/docs/api.md',
-            'OpenAI Python Library — github.com/openai/openai-python',
-            'OpenAI API Reference — platform.openai.com/docs/api-reference',
-            'LM Studio Local API (Beta) — lmstudio.ai/docs/local-server/overview',
+            '[Ollama API Documentation](https://github.com/ollama/ollama/blob/main/docs/api.md)',
+            '[OpenAI Python Library](https://github.com/openai/openai-python)',
+            '[OpenAI API Reference](https://platform.openai.com/docs/api-reference)',
+            '[LM Studio Local API (Beta)](https://lmstudio.ai/docs/local-server/overview)',
           ],
         },
       },
@@ -26971,9 +27012,10 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'url': 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api',
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'dateModified': '2026-04-16',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'audience': { '@type': 'Audience', 'audienceType': 'Developers integrating local LLMs into Python, Node.js, or JavaScript applications' },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
           { '@type': 'Thing', 'name': 'OpenAI API' },
@@ -26985,6 +27027,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           'cssSelector': ['.article-intro', '.key-takeaways', 'h2'],
         },
         'educationalLevel': 'Beginner to Advanced',
+        'proficiencyLevel': 'Beginner',
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -27044,7 +27087,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             'name': 'Does Ollama support function calling / tool use via the API?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes, for models that support it (Llama 3.1, Qwen2.5, Mistral). Pass tools=[] in the API call as you would with OpenAI. Ollama parses tool calls and returns structured JSON. Not all models support this — check model documentation.'
+              'text': 'Yes, for models that support it (Llama 3.1 8B, Qwen2.5 7B, Mistral). Pass tools=[] in the API call as you would with OpenAI. Ollama parses tool calls and returns structured JSON. Not all models support this — check model documentation.'
             }
           },
           {
