@@ -18425,14 +18425,20 @@ print(response.choices[0].message.content)`,
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'Most Popular Models on Ollama', anchor: '#most-popular-models-on-ollama' },
-        { label: 'Top Models by Category', anchor: '#top-models-by-category' },
+        { label: 'Top Models by Use Case', anchor: '#top-models-by-category' },
+        { label: 'What Is DeepSeek-R1?', anchor: '#deepseek-r1' },
+        { label: 'Vision Models on Ollama', anchor: '#vision-models' },
         { label: 'Full Top 10 Comparison Table', anchor: '#full-top-10-comparison' },
         { label: 'How to Browse the Ollama Library', anchor: '#how-to-browse-ollama-library' },
-        { label: 'Common Mistakes Choosing Ollama Models', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Regional Context', anchor: '#regional-context' },
+        { label: 'Common Mistakes', anchor: '#common-mistakes' },
+        { label: 'Related Reading', anchor: '#related-reading' },
+        { label: 'FAQ', anchor: '#common-questions' },
+        { label: 'Sources', anchor: '#sources' },
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
           isTldr: true,
           items: [
             '**Most downloaded**: Llama 3.2 3B and Llama 3.1 8B — most tutorials, widest tool support.',
@@ -18443,6 +18449,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         mostPopular: {
+          id: 'most-popular-models-on-ollama',
           title: 'Which Models Are Most Popular on Ollama in 2026?',
           content: [
             'Popularity on Ollama is measured by download counts visible on each model\'s library page. As of April 2026, the top downloaded models are dominated by Meta\'s Llama family — Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model.',
@@ -20839,6 +20846,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       readTime: '8 min read',
+      gammaEmbedUrl: '/presentations/local-llms-vs-cloud-apis-static.html',
+      gammaDescription: 'The slide deck below covers local LLMs vs cloud APIs across 8 factors: $0/token cost, privacy, speed benchmarks (10–160 tok/s), and model quality. Download the PDF as a local LLM decision reference card.',
       educationalLevel: 'Beginner',
       primaryTerm: 'local LLM',
       toc: [
@@ -21053,6 +21062,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       readTime: '8 Min. Lesezeit',
+      gammaEmbedUrl: '/presentations/local-llms-vs-cloud-apis-static.html',
+      gammaDescription: 'Die Folien vergleichen lokale LLMs vs. Cloud-APIs in 14 Folien: Datenschutz, Token-Kosten ($0 vs. $0,15–$60/Mio.), Geschwindigkeit (10–160 tok/s) und Modellqualität. Als PDF-Entscheidungsreferenzkarte für lokale LLMs herunterladen.',
       educationalLevel: 'Beginner',
       primaryTerm: 'lokales LLM',
       toc: [
@@ -21295,6 +21306,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       readTime: '8 min de lecture',
+      gammaEmbedUrl: '/presentations/local-llms-vs-cloud-apis-static.html',
+      gammaDescription: 'La présentation couvre les LLMs locaux vs APIs cloud sur 8 facteurs : coût $0/token, confidentialité, vitesse (10–160 tok/s) et qualité de modèle. Téléchargez le PDF comme fiche de décision LLM local.',
       educationalLevel: 'Beginner',
       primaryTerm: 'LLM local',
       toc: [
@@ -21538,6 +21551,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       readTime: '8分で読める',
+      gammaEmbedUrl: '/presentations/local-llms-vs-cloud-apis-static.html',
+      gammaDescription: 'スライドデッキは8つの要素でローカルLLM vs クラウドAPIを比較：$0/トークンコスト、プライバシー、速度ベンチマーク（10～160 tok/s）、モデル品質。ローカルLLM意思決定リファレンスカードとしてPDFをダウンロード。',
       educationalLevel: 'Beginner',
       primaryTerm: 'ローカルLLM',
       toc: [
@@ -21781,6 +21796,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       dateModified: '2026-04-12',
       publishDate: '2026-04-04',
       readTime: '阅读约8分钟',
+      gammaEmbedUrl: '/presentations/local-llms-vs-cloud-apis-static.html',
+      gammaDescription: '幻灯片涵盖本地LLM vs 云端API的8大因素：$0/token成本、隐私保护、速度基准测试（10–160 tok/s）和模型质量。下载PDF作为本地LLM决策参考卡。',
       educationalLevel: 'Beginner',
       primaryTerm: '本地LLM',
       toc: [

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local LLMs vs Cloud APIs 2026 | PromptQuorum</title>
+    <meta name="description" content="Interactive presentation: Local LLMs vs Cloud APIs — privacy, cost, speed, quality across 8 factors. 2026 decision guide." />
+    <meta property="og:title" content="Local LLMs vs Cloud APIs 2026 — PromptQuorum" />
+    <meta property="og:description" content="Compare local LLMs and cloud APIs across 8 factors: $0/token vs $0.15–$60/1M, full privacy vs managed compliance, 10–120 tok/s vs 50–200 tok/s." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f6f4f4; color: #1c1b1f; overflow: hidden; }
+        .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: white; }
+        .slide { width: 100%; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 32px 48px; text-align: center; overflow: hidden; animation: fadeIn 0.5s ease-in; position: relative; }
+        .slide.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .slide h1 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
+        .slide h2 { font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; margin-bottom: 14px; color: #1c1b1f; }
+        .slide p { font-size: clamp(15px, 1.7vw, 19px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
+        .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+        .slide.title .logo { width: 56px; height: 56px; margin-bottom: 20px; }
+        .slide.title p { font-size: clamp(15px, 1.7vw, 21px); color: #6750a4; font-weight: 500; margin-top: 12px; }
+        .slide.title a { color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4; }
+        .slide ul, .slide ol { text-align: left; margin: 10px auto; max-width: 680px; width: 100%; }
+        .slide ul li, .slide ol li { font-size: clamp(13px, 1.4vw, 17px); margin-bottom: 9px; line-height: 1.45; }
+        .slide strong { color: #1c1b1f; font-weight: 700; }
+        table { margin: 10px auto; border-collapse: collapse; font-size: clamp(11px, 1.2vw, 14px); text-align: left; max-width: 92%; width: 100%; }
+        th { background: #6750a4; color: white; padding: 8px 12px; font-weight: 700; }
+        td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; }
+        tr:hover td { background: #f7f2fa; }
+        .header { padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; background: white; flex-shrink: 0; }
+        .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1c1b1f; }
+        .header-left img { width: 28px; height: 28px; }
+        .header-links { display: flex; gap: 16px; }
+        .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; }
+        .header-links a:hover { color: #7d5260; }
+        .content-area { flex: 1; overflow: hidden; }
+        .controls { display: flex; gap: 12px; align-items: center; justify-content: center; padding: 12px 20px; background: white; border-top: 1px solid #e8e0f0; flex-shrink: 0; }
+        button { background: #6750a4; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+        button:hover { background: #7d5260; }
+        button:disabled { background: #ccc; cursor: not-allowed; }
+        .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; min-width: 50px; text-align: center; }
+        .slide-footer { position: absolute; bottom: 12px; right: 16px; font-size: 10px; color: #bbb; }
+        .slide-footer a { color: #bbb; text-decoration: none; border-bottom: 1px solid #e0e0e0; }
+        .slide-footer a:hover { color: #6750a4; }
+        .callout { background: #fff8e1; border-left: 4px solid #f9a825; padding: 10px 16px; margin: 10px auto; max-width: 640px; text-align: left; font-size: clamp(12px, 1.3vw, 15px); border-radius: 0 6px 6px 0; }
+        @page { size: A4 landscape; margin: 0; }
+        @media print {
+            * { margin: 0; padding: 0; }
+            html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: white !important; color: black !important; }
+            .header, .controls { display: none !important; }
+            .presentation-container { display: block !important; height: auto !important; width: 100%; counter-reset: page-counter; }
+            .content-area { display: block !important; overflow: visible !important; height: auto !important; width: 100%; }
+            .slide { display: flex !important; flex-direction: column; justify-content: center; align-items: center; page-break-after: always; break-after: page; width: 100%; height: 210mm; padding: 20mm 24mm; box-sizing: border-box; overflow: visible !important; margin: 0; background: white; color: #1c1b1f; position: relative; counter-increment: page-counter; }
+            .slide::before { content: "https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis?lang=" attr(data-lang); position: absolute; bottom: 12mm; left: 24mm; font-size: 9pt; color: #999; }
+            .slide::after { content: counter(page-counter) " / 14"; position: absolute; bottom: 12mm; right: 24mm; font-size: 9pt; color: #999; font-weight: 600; }
+            .slide h1, .slide h2, .slide p, .slide li { color: #000 !important; }
+            .slide strong { color: #000 !important; font-weight: 700; }
+            table th { background: #6750a4 !important; color: #fff !important; }
+            table td { color: #000 !important; border-color: #ccc !important; }
+            .slide:last-child { page-break-after: avoid; break-after: avoid; }
+            .slide-footer { display: none; }
+        }
+        @media (max-width: 768px) {
+            .slide { padding: 20px 24px; }
+            .header { padding: 8px 14px; }
+            .header-left span { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="presentation-container">
+    <div class="header">
+        <div class="header-left">
+            <img src="/logo.svg" alt="PromptQuorum" />
+            <span id="header-title">Local LLMs vs Cloud APIs 2026</span>
+        </div>
+        <div class="header-links">
+            <a id="back-link" href="https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis">← Back to Article</a>
+            <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+        </div>
+    </div>
+
+    <div class="content-area" id="slides-container"></div>
+
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+        <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+        <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+</div>
+
+<script>
+const CONTENT = {
+  en: {
+    title: "Local LLMs vs Cloud APIs: Which Should You Use in 2026?",
+    slides: [
+      { type: "title", h1: "Local LLMs vs Cloud APIs", subtitle: "The complete 2026 decision guide — 8 factors: privacy, cost, speed, and quality", link: "https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis" },
+      { type: "list", h2: "Key Takeaways", items: ["<strong>$0/token</strong> (local, after hardware) vs <strong>$0.15–$60/1M tokens</strong> (cloud APIs)", "Cloud APIs (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) outperform all locally-runnable models on complex reasoning", "Local 7B–13B models match cloud quality for summarization, translation, and simple Q&A", "Local inference: 2–10× slower on consumer hardware; RTX 4070 Ti closes the gap for 7B models", "Choose local for privacy/cost; choose cloud for maximum quality; use both in parallel"] },
+      { type: "comparison", h2: "Core Difference at a Glance", line1: "🖥️ Local LLM: model runs on your hardware — $0/token, full privacy, works offline", line2: "☁️ Cloud API: prompt sent to provider server — pay per token, highest quality, zero setup", tip: "Both use the same Transformer architecture. The difference is where compute happens and who controls the data." },
+      { type: "table", h2: "8-Factor Comparison — Part 1", columns: ["Factor", "Local LLM", "Cloud API"], rows: [{"Factor":"Data privacy","Local LLM":"Complete — data never leaves device","Cloud API":"Processed on provider servers"},{"Factor":"Cost per token","Local LLM":"$0 after hardware","Cloud API":"$0.15–$60 per 1M tokens"},{"Factor":"Output quality","Local LLM":"Good at 13B–70B scale","Cloud API":"Best available (GPT-4o, Claude 4.6 Opus)"},{"Factor":"Response speed","Local LLM":"10–120 tok/s (hardware dependent)","Cloud API":"50–200 tok/s (provider dependent)"}] },
+      { type: "table", h2: "8-Factor Comparison — Part 2", columns: ["Factor", "Local LLM", "Cloud API"], rows: [{"Factor":"Setup time","Local LLM":"5–15 min with Ollama/LM Studio","Cloud API":"2–5 min (account + API key)"},{"Factor":"Offline access","Local LLM":"Yes — works without internet","Cloud API":"No — requires connection"},{"Factor":"Model updates","Local LLM":"Manual — you choose when","Cloud API":"Automatic — provider decides"},{"Factor":"Customization","Local LLM":"Full: fine-tuning, quantization","Cloud API":"Limited: system prompts only"}] },
+      { type: "list", h2: "Cost Breakdown: When Local Wins", items: ["GPT-4o: $2.50/$10 · Claude 4.6 Sonnet: $3.00/$15 · GPT-4o Mini: $0.15/$0.60 (per 1M tokens)", "10M output tokens/month on GPT-4o ≈ <strong>$100/month</strong>", "Same workload on local 8B model: <strong>$0/token</strong> + ~$0.10–0.30/hr electricity", "High-volume use cases: local LLMs become cost-effective within weeks", "Low-volume use: cloud APIs are often cheaper when factoring in setup time"] },
+      { type: "list", h2: "Privacy & Compliance", items: ["<strong>Local LLMs:</strong> no data leaves your device — no DPA, no GDPR Art. 28 obligation", "<strong>Cloud APIs:</strong> data transits provider infrastructure, subject to legal process", "Regulated sectors (healthcare HIPAA, finance PCI-DSS, legal): local is the only safe option", "Enterprise cloud tiers (OpenAI Enterprise, Google Workspace) offer GDPR compliance — require DPA", "<strong>⚠️ Warning:</strong> cloud API terms can change without notice — always check current policy"] },
+      { type: "table", h2: "Speed Benchmarks: Local vs Cloud", columns: ["Hardware", "Model", "Tokens/sec"], rows: [{"Hardware":"CPU only (laptop)","Model":"Llama 3.1 8B Q4","Tokens/sec":"10–25"},{"Hardware":"Apple M3 Pro (18 GB)","Model":"Llama 3.1 8B Q4","Tokens/sec":"55–75"},{"Hardware":"RTX 4060 (8 GB VRAM)","Model":"Llama 3.1 8B Q4","Tokens/sec":"70–100"},{"Hardware":"RTX 4090 (24 GB VRAM)","Model":"Llama 3.1 8B Q4","Tokens/sec":"130–160"},{"Hardware":"Cloud API","Model":"GPT-4o Mini","Tokens/sec":"80–150 (varies)"}] },
+      { type: "list", h2: "Model Quality: What to Expect", items: ["<strong>Cloud frontier (GPT-4o, Claude 4.6 Opus, Gemini 2.5 Pro):</strong> 85–90% MMLU, 85%+ HumanEval", "<strong>Best local 70B models:</strong> 65–80% — competitive but below cloud frontier", "Local 13B: matches cloud for summarization, translation, classification, simple Q&A", "Quality gap is most visible on deep world-knowledge and multi-step reasoning tasks", "Meta Llama 3.3 70B (2025) now matches GPT-4 (2023) on most benchmarks"] },
+      { type: "numbered", h2: "Decision Framework: Which Should You Choose?", items: ["<strong>Privacy/regulated data</strong> → Local LLM (HIPAA, GDPR, PIPL)", "<strong>High-volume workloads</strong> (10M+ tokens/month) → Local (zero per-token cost)", "<strong>Need offline access</strong> → Local LLM", "<strong>Maximum quality</strong> (complex reasoning, code) → Cloud API", "<strong>Prototyping, low volume</strong> → Cloud API (no infrastructure to manage)", "<strong>Best of both</strong> → Run local + cloud in parallel, compare results"] },
+      { type: "list", h2: "Regional Compliance Context", items: ["🇪🇺 <strong>EU / GDPR + AI Act:</strong> Local LLMs eliminate Art. 28 DPA requirement; AI Act classifies healthcare/HR/legal/finance AI as high-risk", "🇩🇪 <strong>DACH:</strong> BSI-Grundschutz recommends on-premises processing for KRITIS organizations", "🇯🇵 <strong>Japan (METI):</strong> METI AI Governance recommends on-premises for sensitive data; APPI compliance required for cloud", "🇨🇳 <strong>China (PIPL 2021):</strong> cross-border personal data transfer requires regulatory approval — local is legally necessary"] },
+      { type: "faq", h2: "Common Questions", faqs: [{ q: "Can I switch between local and cloud in the same app?", a: "Yes — Ollama and LM Studio expose OpenAI-compatible REST APIs. Change base URL to localhost:11434 (Ollama) or localhost:1234 (LM Studio). No code changes needed." }, { q: "Do cloud providers train on my prompts?", a: "Paid API tiers: most providers (OpenAI, Anthropic, Google) opt API customers out by default. Free tiers: typically yes. Always verify your tier's policy." }, { q: "What hardware for a 7B model?", a: "RTX 4070 Ti (12 GB, ~80 tok/s) · RTX 4090 (24 GB, ~130 tok/s) · Apple M3 Pro (18 GB, ~60 tok/s). Q4 quantization drops VRAM to ~4.7 GB." }, { q: "Best local model for beginners?", a: "Llama 3.2 3B or 8B — small (3–8 GB VRAM), fast (~50–80 tok/s on GPU), good quality. Run: ollama run llama3.2:3b" }] },
+      { type: "numbered", h2: "Getting Started: Local LLM in 5 Steps", items: ["Install Ollama: <code style='background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:0.9em'>curl -fsSL https://ollama.com/install.sh | sh</code>", "Download a starter model: <code style='background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:0.9em'>ollama run llama3.2:3b</code>", "Test with a prompt — check quality and speed on your hardware", "Compare with GPT-4o Mini — use PromptQuorum to dispatch to both simultaneously", "Decide: route privacy-sensitive tasks local, quality-critical tasks to cloud"] },
+      { type: "cta", h2: "Compare Local LLMs and Cloud APIs Side by Side", body: "PromptQuorum dispatches one prompt to your local Ollama model and 25+ cloud models simultaneously. Compare results, route by task.", cta: "Try PromptQuorum Free", href: "https://www.promptquorum.com" }
+    ]
+  },
+  de: {
+    title: "Lokale LLMs vs. Cloud-APIs: Was sollten Sie 2026 verwenden?",
+    slides: [
+      { type: "title", h1: "Lokale LLMs vs. Cloud-APIs", subtitle: "Der vollständige 2026-Entscheidungsleitfaden — 8 Faktoren: Datenschutz, Kosten, Geschwindigkeit und Qualität", link: "https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis?lang=de" },
+      { type: "list", h2: "Zusammenfassung", items: ["<strong>$0/Token</strong> (lokal, nach Hardware) vs. <strong>$0,15–$60/1 Mio. Tokens</strong> (Cloud-APIs)", "Cloud-APIs (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) übertreffen lokale Modelle bei komplexen Aufgaben", "Lokale 7B–13B-Modelle erreichen Cloud-Qualität bei Zusammenfassungen, Übersetzungen und einfachen Fragen", "Lokale Inferenz: 2–10× langsamer auf Consumer-Hardware; RTX 4070 Ti schließt den Abstand", "Lokal für Datenschutz/Kosten; Cloud für maximale Qualität; beides parallel nutzen"] },
+      { type: "comparison", h2: "Kernunterschied auf einen Blick", line1: "🖥️ Lokales LLM: Modell läuft auf Ihrer Hardware — $0/Token, vollständiger Datenschutz, offline", line2: "☁️ Cloud-API: Prompt wird an Anbieterserver gesendet — pro Token bezahlen, höchste Qualität, kein Setup", tip: "Beide nutzen dieselbe Transformer-Architektur. Der Unterschied liegt darin, wo die Berechnung stattfindet und wer die Daten kontrolliert." },
+      { type: "table", h2: "8-Faktoren-Vergleich — Teil 1", columns: ["Faktor", "Lokales LLM", "Cloud-API"], rows: [{"Faktor":"Datenschutz","Lokales LLM":"Vollständig — Daten verlassen Gerät nie","Cloud-API":"Verarbeitung auf Anbieterservern"},{"Faktor":"Kosten pro Token","Lokales LLM":"$0 nach Hardware","Cloud-API":"$0,15–$60 pro 1 Mio. Tokens"},{"Faktor":"Ausgabequalität","Lokales LLM":"Gut bei 13B–70B","Cloud-API":"Beste verfügbar (GPT-4o, Claude 4.6 Opus)"},{"Faktor":"Antwortgeschwindigkeit","Lokales LLM":"10–120 Tokens/Sek. (hardwareabhängig)","Cloud-API":"50–200 Tokens/Sek. (anbieterabhängig)"}] },
+      { type: "table", h2: "8-Faktoren-Vergleich — Teil 2", columns: ["Faktor", "Lokales LLM", "Cloud-API"], rows: [{"Faktor":"Einrichtungszeit","Lokales LLM":"5–15 Min. mit Ollama/LM Studio","Cloud-API":"2–5 Min. (Konto + API-Schlüssel)"},{"Faktor":"Offline-Zugriff","Lokales LLM":"Ja — ohne Internet","Cloud-API":"Nein — Verbindung erforderlich"},{"Faktor":"Modell-Updates","Lokales LLM":"Manuell — Sie entscheiden wann","Cloud-API":"Automatisch — Anbieter entscheidet"},{"Faktor":"Anpassbarkeit","Lokales LLM":"Vollständig: Fine-Tuning, Quantisierung","Cloud-API":"Begrenzt: nur System-Prompts"}] },
+      { type: "list", h2: "Kostenaufschlüsselung: Wann lokal gewinnt", items: ["GPT-4o: $2,50/$10 · Claude 4.6 Sonnet: $3,00/$15 · GPT-4o Mini: $0,15/$0,60 (pro 1 Mio. Tokens)", "10 Mio. Ausgabe-Tokens/Monat auf GPT-4o ≈ <strong>$100/Monat</strong>", "Gleiche Last auf lokalem 8B-Modell: <strong>$0/Token</strong> + ca. $0,10–0,30/Std. Strom", "Hochvolumige Anwendungen: lokale LLMs werden innerhalb von Wochen kostengünstiger", "Gelegentliche Nutzung: Cloud-APIs oft günstiger unter Berücksichtigung des Einrichtungsaufwands"] },
+      { type: "list", h2: "Datenschutz & Compliance", items: ["<strong>Lokale LLMs:</strong> kein Datentransfer — kein DPA, keine DSGVO-Artikel-28-Pflicht", "<strong>Cloud-APIs:</strong> Daten passieren Anbieterinfrastruktur, unterliegen rechtlichen Verfahren", "Regulierte Bereiche (Gesundheit HIPAA, Finanzen PCI-DSS, Recht): lokal ist die einzige sichere Option", "Enterprise-Cloud-Tiers (OpenAI Enterprise) bieten DSGVO-Konformität — erfordern DPA-Unterzeichnung", "<strong>BSI-Grundschutz:</strong> empfiehlt On-Premises-Verarbeitung für KRITIS-Unternehmen und öffentlichen Sektor"] },
+      { type: "table", h2: "Geschwindigkeits-Benchmarks: Lokal vs. Cloud", columns: ["Hardware", "Modell", "Tokens/Sek."], rows: [{"Hardware":"Nur CPU (Laptop)","Modell":"Llama 3.1 8B Q4","Tokens/Sek.":"10–25"},{"Hardware":"Apple M3 Pro (18 GB)","Modell":"Llama 3.1 8B Q4","Tokens/Sek.":"55–75"},{"Hardware":"RTX 4060 (8 GB VRAM)","Modell":"Llama 3.1 8B Q4","Tokens/Sek.":"70–100"},{"Hardware":"RTX 4090 (24 GB VRAM)","Modell":"Llama 3.1 8B Q4","Tokens/Sek.":"130–160"},{"Hardware":"Cloud-API","Modell":"GPT-4o Mini","Tokens/Sek.":"80–150 (variiert)"}] },
+      { type: "list", h2: "Modellqualität: Was Sie erwarten können", items: ["<strong>Cloud-Frontier (GPT-4o, Claude 4.6 Opus, Gemini 2.5 Pro):</strong> 85–90 % MMLU, 85 %+ HumanEval", "<strong>Beste lokale 70B-Modelle:</strong> 65–80 % — wettbewerbsfähig, aber unter Cloud-Frontier", "Lokale 13B-Modelle: gleiche Qualität bei Zusammenfassungen, Übersetzungen, einfachen Fragen", "Qualitätslücke am stärksten bei tiefem Weltwissen und mehrstufigen Denkketten", "Meta Llama 3.3 70B (2025) erreicht GPT-4 (2023) bei den meisten Benchmarks"] },
+      { type: "numbered", h2: "Entscheidungsrahmen: Was sollten Sie wählen?", items: ["<strong>Datenschutz/regulierte Daten</strong> → Lokales LLM (HIPAA, DSGVO, PIPL)", "<strong>Hochvolumige Workloads</strong> (10 Mio.+ Tokens/Monat) → Lokal (kein Token-Preis)", "<strong>Offline-Zugriff benötigt</strong> → Lokales LLM", "<strong>Maximale Qualität</strong> (komplexes Denken, Code) → Cloud-API", "<strong>Prototyping, geringes Volumen</strong> → Cloud-API (keine Infrastruktur nötig)", "<strong>Beides</strong> → Lokal + Cloud parallel nutzen, Ergebnisse vergleichen"] },
+      { type: "list", h2: "Regionaler Compliance-Kontext", items: ["🇪🇺 <strong>EU / DSGVO + KI-Gesetz:</strong> Lokale LLMs eliminieren DPA-Pflicht nach Art. 28; KI-Gesetz klassifiziert KI in Gesundheit/HR/Recht als hochriskant", "🇩🇪 <strong>DACH:</strong> BSI-Grundschutz-Kompendium empfiehlt On-Premises für KRITIS und öffentlichen Sektor", "🇯🇵 <strong>Japan (METI):</strong> METI empfiehlt On-Premises für sensible Daten; APPI-Konformität bei Cloud erforderlich", "🇨🇳 <strong>China (PIPL 2021):</strong> Grenzüberschreitende Datenweitergabe an ausländische Cloud erfordert behördliche Genehmigung"] },
+      { type: "faq", h2: "Häufige Fragen", faqs: [{ q: "Kann ich in derselben App zwischen lokal und Cloud wechseln?", a: "Ja — Ollama und LM Studio bieten OpenAI-kompatible REST-APIs. Basis-URL auf localhost:11434 (Ollama) oder localhost:1234 (LM Studio) ändern. Kein Code-Änderung nötig." }, { q: "Trainieren Cloud-Anbieter mit meinen Prompts?", a: "Bezahlte API-Tiers: die meisten Anbieter schließen API-Kunden standardmäßig aus. Kostenlose Tiers: in der Regel ja. Immer die aktuelle Richtlinie prüfen." }, { q: "Welche Hardware für ein 7B-Modell?", a: "RTX 4070 Ti (12 GB, ~80 Tokens/Sek.) · RTX 4090 (24 GB, ~130 Tokens/Sek.) · Apple M3 Pro (18 GB, ~60 Tokens/Sek.). Q4-Quantisierung reduziert VRAM auf ~4,7 GB." }, { q: "Bestes lokales Modell für Einsteiger?", a: "Llama 3.2 3B oder 8B — klein (3–8 GB VRAM), schnell (~50–80 Tokens/Sek. auf GPU). Starten mit: ollama run llama3.2:3b" }] },
+      { type: "numbered", h2: "Einstieg: Lokales LLM in 5 Schritten", items: ["Ollama installieren: <code style='background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:0.9em'>curl -fsSL https://ollama.com/install.sh | sh</code>", "Starter-Modell herunterladen: <code style='background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:0.9em'>ollama run llama3.2:3b</code>", "Mit einem Prompt testen — Qualität und Geschwindigkeit auf Ihrer Hardware prüfen", "Mit GPT-4o Mini vergleichen — beide gleichzeitig mit PromptQuorum aufrufen", "Entscheiden: datenschutzsensible Aufgaben lokal, qualitätskritische in der Cloud"] },
+      { type: "cta", h2: "Lokale LLMs und Cloud-APIs direkt vergleichen", body: "PromptQuorum sendet einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle. Ergebnisse vergleichen, Aufgaben weiterleiten.", cta: "PromptQuorum kostenlos testen", href: "https://www.promptquorum.com/?lang=de" }
+    ]
+  },
+  fr: {
+    title: "LLMs locaux vs APIs cloud : Que choisir en 2026 ?",
+    slides: [
+      { type: "title", h1: "LLMs locaux vs APIs cloud", subtitle: "Le guide de décision complet 2026 — 8 facteurs : confidentialité, coûts, vitesse et qualité", link: "https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis?lang=fr" },
+      { type: "list", h2: "Points clés", items: ["<strong>$0/token</strong> (local, après matériel) vs <strong>$0,15–$60/million tokens</strong> (APIs cloud)", "Les APIs cloud (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) surpassent les modèles locaux sur le raisonnement complexe", "Les modèles locaux 7B–13B atteignent la qualité cloud pour la synthèse, la traduction et les Q&R simples", "Inférence locale : 2–10× plus lente sur matériel grand public ; RTX 4070 Ti réduit l'écart", "Choisir local pour confidentialité/coûts ; cloud pour qualité maximale ; utiliser les deux en parallèle"] },
+      { type: "comparison", h2: "Différence fondamentale en un coup d'œil", line1: "🖥️ LLM local : modèle sur votre matériel — $0/token, confidentialité totale, hors ligne", line2: "☁️ API cloud : prompt envoyé au serveur du fournisseur — payer par token, qualité maximale, sans configuration", tip: "Les deux utilisent la même architecture Transformer. La différence est l'endroit où le calcul se produit et qui contrôle les données." },
+      { type: "table", h2: "Comparaison 8 facteurs — Partie 1", columns: ["Facteur", "LLM local", "API cloud"], rows: [{"Facteur":"Confidentialité","LLM local":"Totale — données ne quittent pas l'appareil","API cloud":"Traitement sur serveurs fournisseur"},{"Facteur":"Coût par token","LLM local":"$0 après matériel","API cloud":"$0,15–$60 par million tokens"},{"Facteur":"Qualité de sortie","LLM local":"Bonne à 13B–70B","API cloud":"Meilleure disponible (GPT-4o, Claude 4.6 Opus)"},{"Facteur":"Vitesse","LLM local":"10–120 tokens/s (matériel)","API cloud":"50–200 tokens/s (fournisseur)"}] },
+      { type: "table", h2: "Comparaison 8 facteurs — Partie 2", columns: ["Facteur", "LLM local", "API cloud"], rows: [{"Facteur":"Configuration","LLM local":"5–15 min avec Ollama/LM Studio","API cloud":"2–5 min (compte + clé API)"},{"Facteur":"Accès hors ligne","LLM local":"Oui — sans internet","API cloud":"Non — connexion requise"},{"Facteur":"Mises à jour","LLM local":"Manuelles — vous choisissez quand","API cloud":"Automatiques — fournisseur décide"},{"Facteur":"Personnalisation","LLM local":"Complète : fine-tuning, quantification","API cloud":"Limitée : prompts système uniquement"}] },
+      { type: "list", h2: "Répartition des coûts : quand le local gagne", items: ["GPT-4o : $2,50/$10 · Claude 4.6 Sonnet : $3,00/$15 · GPT-4o Mini : $0,15/$0,60 (par million tokens)", "10M tokens de sortie/mois sur GPT-4o ≈ <strong>$100/mois</strong>", "Même charge sur modèle local 8B : <strong>$0/token</strong> + ~$0,10–0,30/heure d'électricité", "Usage à volume élevé : LLMs locaux rentables en quelques semaines", "Usage occasionnel : APIs cloud souvent moins chères en comptant le temps de configuration"] },
+      { type: "list", h2: "Confidentialité & Conformité", items: ["<strong>LLMs locaux :</strong> aucun transfert de données — pas de DPA, pas d'obligation Art. 28 RGPD", "<strong>APIs cloud :</strong> données transitent par l'infrastructure du fournisseur, soumises aux procédures légales", "Secteurs réglementés (santé HIPAA, finance PCI-DSS, droit) : le local est la seule option sûre", "La CNIL recommande l'inférence locale pour les données professionnelles sensibles (financières, médicales, juridiques)", "<strong>⚠️ Avertissement :</strong> les conditions des APIs cloud peuvent changer sans préavis"] },
+      { type: "table", h2: "Benchmarks de vitesse : Local vs Cloud", columns: ["Matériel", "Modèle", "Tokens/s"], rows: [{"Matériel":"CPU seul (laptop)","Modèle":"Llama 3.1 8B Q4","Tokens/s":"10–25"},{"Matériel":"Apple M3 Pro (18 Go)","Modèle":"Llama 3.1 8B Q4","Tokens/s":"55–75"},{"Matériel":"RTX 4060 (8 Go VRAM)","Modèle":"Llama 3.1 8B Q4","Tokens/s":"70–100"},{"Matériel":"RTX 4090 (24 Go VRAM)","Modèle":"Llama 3.1 8B Q4","Tokens/s":"130–160"},{"Matériel":"API cloud","Modèle":"GPT-4o Mini","Tokens/s":"80–150 (variable)"}] },
+      { type: "list", h2: "Qualité des modèles : à quoi s'attendre", items: ["<strong>Cloud de pointe (GPT-4o, Claude 4.6 Opus, Gemini 2.5 Pro) :</strong> 85–90 % MMLU, 85 %+ HumanEval", "<strong>Meilleurs modèles locaux 70B :</strong> 65–80 % — compétitifs mais en dessous du cloud de pointe", "Local 13B : correspond au cloud pour la synthèse, traduction, classification, Q&R simples", "Écart le plus visible sur le raisonnement complexe et les tâches multi-étapes", "Meta Llama 3.3 70B (2025) rivalise avec GPT-4 (2023) sur la plupart des benchmarks"] },
+      { type: "numbered", h2: "Cadre de décision : que choisir ?", items: ["<strong>Confidentialité/données réglementées</strong> → LLM local (HIPAA, RGPD, PIPL)", "<strong>Charges à volume élevé</strong> (10M+ tokens/mois) → Local (coût par token nul)", "<strong>Accès hors ligne nécessaire</strong> → LLM local", "<strong>Qualité maximale</strong> (raisonnement complexe, code) → API cloud", "<strong>Prototypage, faible volume</strong> → API cloud (pas d'infrastructure à gérer)", "<strong>Le meilleur des deux</strong> → Utiliser local + cloud en parallèle, comparer les résultats"] },
+      { type: "list", h2: "Contexte de conformité régionale", items: ["🇪🇺 <strong>UE / RGPD + Loi IA :</strong> LLMs locaux éliminent l'obligation DPA Art. 28 ; Loi IA classe santé/RH/droit/finance comme haut risque", "🇫🇷 <strong>France (CNIL) :</strong> recommande l'inférence locale pour les données professionnelles sensibles", "🇯🇵 <strong>Japon (METI) :</strong> recommande l'inférence sur site pour les données sensibles ; APPI requis pour le cloud", "🇨🇳 <strong>Chine (PIPL 2021) :</strong> transfert transfrontalier de données personnelles nécessite une approbation réglementaire"] },
+      { type: "faq", h2: "Questions fréquentes", faqs: [{ q: "Puis-je basculer entre local et cloud dans la même app ?", a: "Oui — Ollama et LM Studio exposent des APIs REST compatibles OpenAI. Changer l'URL de base vers localhost:11434 (Ollama) ou localhost:1234 (LM Studio). Aucune modification de code." }, { q: "Les fournisseurs d'APIs cloud s'entraînent-ils sur mes prompts ?", a: "Niveaux payants : la plupart excluent les clients API par défaut. Niveaux gratuits : généralement oui. Toujours vérifier la politique actuelle." }, { q: "Quel matériel pour un modèle 7B ?", a: "RTX 4070 Ti (12 Go, ~80 tokens/s) · RTX 4090 (24 Go, ~130 tokens/s) · Apple M3 Pro (18 Go, ~60 tokens/s). Q4 réduit le VRAM à ~4,7 Go." }, { q: "Meilleur modèle local pour débutants ?", a: "Llama 3.2 3B ou 8B — léger (3–8 Go VRAM), rapide (~50–80 tokens/s sur GPU). Lancer : ollama run llama3.2:3b" }] },
+      { type: "numbered", h2: "Pour commencer : LLM local en 5 étapes", items: ["Installer Ollama : <code style='background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:0.9em'>curl -fsSL https://ollama.com/install.sh | sh</code>", "Télécharger un modèle de départ : <code style='background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:0.9em'>ollama run llama3.2:3b</code>", "Tester avec un prompt — vérifier qualité et vitesse sur votre matériel", "Comparer avec GPT-4o Mini — utiliser PromptQuorum pour envoyer aux deux simultanément", "Décider : tâches sensibles en local, tâches critique en qualité vers le cloud"] },
+      { type: "cta", h2: "Comparez LLMs locaux et APIs cloud côte à côte", body: "PromptQuorum envoie un prompt à votre modèle Ollama local et à plus de 25 modèles cloud simultanément. Comparez, routez par tâche.", cta: "Essayer PromptQuorum gratuitement", href: "https://www.promptquorum.com/?lang=fr" }
+    ]
+  },
+  ja: {
+    title: "ローカルLLM vs クラウドAPI：2026年はどちらを選ぶべきか？",
+    slides: [
+      { type: "title", h1: "ローカルLLM vs クラウドAPI", subtitle: "2026年完全決断ガイド — 8つの要素：プライバシー、コスト、速度、品質", link: "https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis?lang=ja" },
+      { type: "list", h2: "重要ポイント", items: ["<strong>$0/トークン</strong>（ローカル、ハードウェア投資後）vs <strong>$0.15〜$60/100万トークン</strong>（クラウドAPI）", "クラウドAPI（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）は複雑な推論でローカルモデルを上回る", "ローカル7B〜13Bモデルは要約・翻訳・シンプルなQ&Aでクラウド品質に匹敵", "ローカル推論：コンシューマーハードウェアで2〜10倍遅い；RTX 4070 Tiでギャップが縮まる", "プライバシー/コストにはローカル；最高品質にはクラウド；両方を並行して使用"] },
+      { type: "comparison", h2: "核心的な違いを一目で", line1: "🖥️ ローカルLLM：モデルが自社ハードウェアで動作 — $0/トークン、完全なプライバシー、オフライン対応", line2: "☁️ クラウドAPI：プロンプトがプロバイダーサーバーへ送信 — トークンごとに料金、最高品質、セットアップ不要", tip: "両方とも同じTransformerアーキテクチャを使用。違いは計算の場所とデータを誰が管理するかです。" },
+      { type: "table", h2: "8要素比較 — 前半", columns: ["要素", "ローカルLLM", "クラウドAPI"], rows: [{"要素":"データプライバシー","ローカルLLM":"完全 — データはデバイスから出ない","クラウドAPI":"プロバイダーサーバーで処理"},{"要素":"トークンあたりコスト","ローカルLLM":"$0（ハードウェア後）","クラウドAPI":"$0.15〜$60/100万トークン"},{"要素":"出力品質","ローカルLLM":"13B〜70Bで良好","クラウドAPI":"最高水準（GPT-4o、Claude 4.6 Opus）"},{"要素":"応答速度","ローカルLLM":"10〜120トークン/秒","クラウドAPI":"50〜200トークン/秒"}] },
+      { type: "table", h2: "8要素比較 — 後半", columns: ["要素", "ローカルLLM", "クラウドAPI"], rows: [{"要素":"セットアップ時間","ローカルLLM":"Ollamaで5〜15分","クラウドAPI":"2〜5分（アカウント+APIキー）"},{"要素":"オフラインアクセス","ローカルLLM":"あり — インターネット不要","クラウドAPI":"なし — 接続が必要"},{"要素":"モデル更新","ローカルLLM":"手動 — いつ更新するか自分で決定","クラウドAPI":"自動 — プロバイダーが決定"},{"要素":"カスタマイズ","ローカルLLM":"完全：ファインチューニング、量子化","クラウドAPI":"限定的：システムプロンプトのみ"}] },
+      { type: "list", h2: "コスト分析：ローカルが有利になる時", items: ["GPT-4o: $2.50/$10 · Claude 4.6 Sonnet: $3.00/$15 · GPT-4o Mini: $0.15/$0.60（100万トークンあたり）", "GPT-4oで月1,000万出力トークン ≈ <strong>$100/月</strong>", "同じ作業をローカル8Bモデルで：<strong>$0/トークン</strong> + 電気代約$0.10〜0.30/時間", "大量使用ケース：ローカルLLMは数週間以内にコスト効率が高まる", "断続的な使用：セットアップコストを考慮するとクラウドAPIが安価なことも"] },
+      { type: "list", h2: "プライバシーとコンプライアンス", items: ["<strong>ローカルLLM：</strong>データ転送なし — DPA不要、GDPR第28条義務なし", "<strong>クラウドAPI：</strong>データがプロバイダーインフラを経由、法的手続きの対象", "規制産業（医療HIPAA、金融PCI-DSS、法的特権）：ローカルが唯一の安全な選択肢", "<strong>METI AIガバナンス：</strong>機密企業データにはオンプレミス推論を推奨", "<strong>⚠️ 注意：</strong>クラウドAPI規約は予告なく変更される場合があります"] },
+      { type: "table", h2: "速度ベンチマーク：ローカル vs クラウド", columns: ["ハードウェア", "モデル", "トークン/秒"], rows: [{"ハードウェア":"CPUのみ（ラップトップ）","モデル":"Llama 3.1 8B Q4","トークン/秒":"10〜25"},{"ハードウェア":"Apple M3 Pro（18 GB）","モデル":"Llama 3.1 8B Q4","トークン/秒":"55〜75"},{"ハードウェア":"RTX 4060（8 GB VRAM）","モデル":"Llama 3.1 8B Q4","トークン/秒":"70〜100"},{"ハードウェア":"RTX 4090（24 GB VRAM）","モデル":"Llama 3.1 8B Q4","トークン/秒":"130〜160"},{"ハードウェア":"クラウドAPI","モデル":"GPT-4o Mini","トークン/秒":"80〜150（変動）"}] },
+      { type: "list", h2: "モデル品質：期待できること", items: ["<strong>クラウドフロンティア（GPT-4o、Claude 4.6 Opus、Gemini 2.5 Pro）：</strong>MMLU 85〜90%、HumanEval 85%+", "<strong>最良のローカル70Bモデル：</strong>65〜80% — 競争力はあるがクラウドフロンティアより低い", "ローカル13B：要約・翻訳・分類・シンプルなQ&Aでクラウドと同等品質", "品質差が最も顕著：深い世界知識と多段階推論タスク", "Meta Llama 3.3 70B（2025年）はほとんどのベンチマークでGPT-4（2023年）に匹敵"] },
+      { type: "numbered", h2: "意思決定フレームワーク：どちらを選ぶ？", items: ["<strong>プライバシー/規制データ</strong> → ローカルLLM（HIPAA、GDPR、PIPL）", "<strong>大量ワークロード</strong>（月1,000万+トークン）→ ローカル（トークンコストゼロ）", "<strong>オフラインアクセスが必要</strong> → ローカルLLM", "<strong>最高品質</strong>（複雑な推論、コード）→ クラウドAPI", "<strong>プロトタイピング、少量</strong> → クラウドAPI（インフラ管理不要）", "<strong>両方のメリット</strong> → ローカル＋クラウドを並行して実行し結果を比較"] },
+      { type: "list", h2: "地域別コンプライアンス", items: ["🇪🇺 <strong>EU / GDPR + AI法：</strong>ローカルLLMはArt.28 DPA義務を完全に排除；AI法は医療/HR/法務をハイリスクに分類", "🇯🇵 <strong>日本（METI）：</strong>METI AIガバナンスは機密データにオンプレミス推論を推奨；クラウドにはAPPI準拠確認が必要", "🇨🇳 <strong>中国（PIPL 2021）：</strong>境外クラウドへの個人データ越境転送には規制当局の承認が必要", "🇩🇪 <strong>DACH：</strong>BSI-GrundschutzはKRITIS組織に対してオンプレミス処理を推奨"] },
+      { type: "faq", h2: "よくある質問", faqs: [{ q: "同じアプリでローカルとクラウドを切り替えられますか？", a: "はい — OllamaとLM StudioはOpenAI互換REST APIを公開。ベースURLをlocalhost:11434（Ollama）またはlocalhost:1234（LM Studio）に変更するだけ。コード変更不要。" }, { q: "クラウドAPIプロバイダーはプロンプトでトレーニングしますか？", a: "有料APIティア：ほとんどのプロバイダーがデフォルトで除外。無料ティア：通常は利用される。常に現在のポリシーを確認してください。" }, { q: "7Bモデルに必要なハードウェアは？", a: "RTX 4070 Ti（12 GB、~80トークン/秒）· RTX 4090（24 GB、~130トークン/秒）· Apple M3 Pro（18 GB、~60トークン/秒）。Q4量子化でVRAMが~4.7 GBに削減。" }, { q: "初心者に最適なローカルモデルは？", a: "Llama 3.2 3BまたはLlama 3.1 8B — 小さい（3〜8 GB VRAM）、高速（~50〜80トークン/秒）。実行：ollama run llama3.2:3b" }] },
+      { type: "numbered", h2: "スタートガイド：ローカルLLMを5ステップで", items: ["Ollamaをインストール：<code style='background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:0.9em'>curl -fsSL https://ollama.com/install.sh | sh</code>", "スターターモデルをダウンロード：<code style='background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:0.9em'>ollama run llama3.2:3b</code>", "プロンプトでテスト — ハードウェアでの品質と速度を確認", "GPT-4o Miniと比較 — PromptQuorumで両方に同時送信", "決断：プライバシー重要タスクはローカル、品質重視タスクはクラウドへ"] },
+      { type: "cta", h2: "ローカルLLMとクラウドAPIを並べて比較", body: "PromptQuorumはローカルOllamaモデルと25以上のクラウドモデルに同時にプロンプトを送信。結果を比較し、タスクに最適なモデルへルーティング。", cta: "PromptQuorumを無料で試す", href: "https://www.promptquorum.com/?lang=ja" }
+    ]
+  },
+  zh: {
+    title: "本地LLM vs 云端API：2026年该如何选择？",
+    slides: [
+      { type: "title", h1: "本地LLM vs 云端API", subtitle: "2026年完整决策指南 — 8大因素：隐私、成本、速度和质量", link: "https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis?lang=zh" },
+      { type: "list", h2: "核心要点", items: ["<strong>$0/token</strong>（本地，硬件投资后）vs <strong>$0.15-$60/百万token</strong>（云端API）", "云端API（GPT-4o、Claude 4.6 Sonnet、Gemini 2.5 Pro）在复杂推理上优于所有本地可运行模型", "本地7B-13B模型在摘要、翻译和简单Q&A上达到云端质量", "本地推理：消费级硬件上慢2-10倍；RTX 4070 Ti可缩小7B模型的差距", "隐私/成本选本地；最高质量选云端；两者并行使用效果最佳"] },
+      { type: "comparison", h2: "核心区别一览", line1: "🖥️ 本地LLM：模型在您的硬件上运行 — $0/token，完全隐私，离线工作", line2: "☁️ 云端API：提示词发送到提供商服务器 — 按token计费，最高质量，零配置", tip: "两者都使用相同的Transformer架构。区别在于计算发生的位置以及谁控制数据。" },
+      { type: "table", h2: "8大因素对比 — 第一部分", columns: ["因素", "本地LLM", "云端API"], rows: [{"因素":"数据隐私","本地LLM":"完全 — 数据永不离开设备","云端API":"在提供商服务器上处理"},{"因素":"每token成本","本地LLM":"$0（硬件投资后）","云端API":"$0.15-$60/百万token"},{"因素":"输出质量","本地LLM":"13B-70B表现良好","云端API":"最佳水平（GPT-4o、Claude 4.6 Opus）"},{"因素":"响应速度","本地LLM":"10-120 token/秒","云端API":"50-200 token/秒"}] },
+      { type: "table", h2: "8大因素对比 — 第二部分", columns: ["因素", "本地LLM", "云端API"], rows: [{"因素":"设置时间","本地LLM":"Ollama 5-15分钟","云端API":"2-5分钟（账户+API密钥）"},{"因素":"离线访问","本地LLM":"支持 — 无需互联网","云端API":"不支持 — 需要连接"},{"因素":"模型更新","本地LLM":"手动 — 您决定何时更新","云端API":"自动 — 提供商决定"},{"因素":"自定义","本地LLM":"完全：微调、量化","云端API":"有限：仅系统提示"}] },
+      { type: "list", h2: "成本分析：何时本地更划算", items: ["GPT-4o: $2.50/$10 · Claude 4.6 Sonnet: $3.00/$15 · GPT-4o Mini: $0.15/$0.60（每百万token）", "GPT-4o每月处理1000万输出token ≈ <strong>$100/月</strong>", "同等工作量在本地8B模型：<strong>$0/token</strong> + 约$0.10-0.30/小时电费", "高频使用场景：本地LLM在几周内实现成本效益", "低频使用：考虑设置成本时云端API往往更经济"] },
+      { type: "list", h2: "隐私与合规", items: ["<strong>本地LLM：</strong>无数据传输 — 无需DPA，无GDPR第28条义务", "<strong>云端API：</strong>数据经过提供商基础设施，受法律程序约束", "受监管行业（医疗HIPAA、金融PCI-DSS、法律）：本地是唯一安全选项", "<strong>中国PIPL（2021）：</strong>将个人数据传输给境外云端需要监管审批 — 本地是合规最简方案", "<strong>⚠️ 警告：</strong>云端API条款可能随时更改，不会提前通知"] },
+      { type: "table", h2: "速度基准测试：本地 vs 云端", columns: ["硬件", "模型", "token/秒"], rows: [{"硬件":"仅CPU（笔记本）","模型":"Llama 3.1 8B Q4","token/秒":"10-25"},{"硬件":"Apple M3 Pro（18 GB）","模型":"Llama 3.1 8B Q4","token/秒":"55-75"},{"硬件":"RTX 4060（8 GB VRAM）","模型":"Llama 3.1 8B Q4","token/秒":"70-100"},{"硬件":"RTX 4090（24 GB VRAM）","模型":"Llama 3.1 8B Q4","token/秒":"130-160"},{"硬件":"云端API","模型":"GPT-4o Mini","token/秒":"80-150（可变）"}] },
+      { type: "list", h2: "模型质量：期望值", items: ["<strong>云端前沿（GPT-4o、Claude 4.6 Opus、Gemini 2.5 Pro）：</strong>MMLU 85-90%，HumanEval 85%+", "<strong>最佳本地70B模型：</strong>65-80% — 具有竞争力但低于云端前沿", "本地13B：摘要、翻译、分类、简单Q&A上与云端相当", "质量差距在深度世界知识和多步推理任务上最为明显", "Meta Llama 3.3 70B（2025年）在大多数基准测试上与GPT-4（2023年）相当"] },
+      { type: "numbered", h2: "决策框架：该选哪个？", items: ["<strong>隐私/受监管数据</strong> → 本地LLM（HIPAA、GDPR、PIPL）", "<strong>高频工作负载</strong>（月1000万+token）→ 本地（每token成本为零）", "<strong>需要离线访问</strong> → 本地LLM", "<strong>最高质量</strong>（复杂推理、代码）→ 云端API", "<strong>原型开发、低频使用</strong> → 云端API（无需管理基础设施）", "<strong>两全其美</strong> → 本地+云端并行运行，对比结果"] },
+      { type: "list", h2: "地区合规背景", items: ["🇨🇳 <strong>中国（数据安全法+PIPL）：</strong>将个人数据传输给境外云端需要监管审批；本地Qwen2.5部署完全合规", "🇨🇳 <strong>企业部署：</strong>银行、医院、律所 — 本地LLM满足行业数据安全合规要求", "🇪🇺 <strong>EU / GDPR + AI法：</strong>本地LLM消除第28条DPA义务；AI法将医疗/人力/法律列为高风险", "🌏 <strong>亚太地区：</strong>新加坡PDPA、韩国PIPA、澳大利亚隐私法均优先考虑数据本地化"] },
+      { type: "faq", h2: "常见问题", faqs: [{ q: "可以在同一个应用中切换本地和云端吗？", a: "可以 — Ollama和LM Studio公开OpenAI兼容REST API。将base URL改为localhost:11434（Ollama）或localhost:1234（LM Studio）。无需修改代码。" }, { q: "云端API提供商会用我的提示词训练吗？", a: "付费API级别：大多数提供商默认将API客户排除在外。免费级别：通常会。始终验证当前的数据政策。" }, { q: "运行7B模型需要什么硬件？", a: "RTX 4070 Ti（12 GB，~80 token/秒）· RTX 4090（24 GB，~130 token/秒）· Apple M3 Pro（18 GB，~60 token/秒）。Q4量化后VRAM降至~4.7 GB。" }, { q: "初学者最适合什么本地模型？", a: "Llama 3.2 3B或8B — 体积小（3-8 GB VRAM），速度快（~50-80 token/秒）。运行：ollama run llama3.2:3b" }] },
+      { type: "numbered", h2: "快速开始：5步运行本地LLM", items: ["安装Ollama：<code style='background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:0.9em'>curl -fsSL https://ollama.com/install.sh | sh</code>", "下载入门模型：<code style='background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:0.9em'>ollama run llama3.2:3b</code>", "用提示词测试 — 检查硬件上的质量和速度", "与GPT-4o Mini对比 — 用PromptQuorum同时向两者发送请求", "决策：隐私敏感任务走本地，质量关键任务走云端"] },
+      { type: "cta", h2: "并排比较本地LLM和云端API", body: "PromptQuorum同时向您的本地Ollama模型和25+云端模型发送提示词。比较结果，按任务路由。", cta: "免费试用PromptQuorum", href: "https://www.promptquorum.com/?lang=zh" }
+    ]
+  }
+};
+
+function renderFooter(lang, slideType) {
+  if (slideType === 'title') return '';
+  const articleUrl = 'https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis?lang=' + lang;
+  return '<div class="slide-footer"><a href="' + articleUrl + '">← Article</a></div>';
+}
+
+function renderSlide(slide, lang) {
+  let html = '';
+  switch (slide.type) {
+    case 'title':
+      html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>' + slide.h1 + '</h1><p>' + slide.subtitle + '</p><p style="margin-top:32px;font-size:16px;"><a href="' + slide.link + '">' + slide.link + '</a></p>';
+      break;
+    case 'list':
+      html = '<h2>' + slide.h2 + '</h2>';
+      if (slide.intro) html += '<p>' + slide.intro + '</p>';
+      html += '<ul style="margin-top:14px;">';
+      slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+      html += '</ul>';
+      html += renderFooter(lang, slide.type);
+      break;
+    case 'table':
+      html = '<h2>' + slide.h2 + '</h2><table style="margin-top:12px;">';
+      html += '<tr>' + slide.columns.map(function(c){return '<th>'+c+'</th>';}).join('') + '</tr>';
+      slide.rows.forEach(function(row) {
+        html += '<tr>' + slide.columns.map(function(c){return '<td>'+row[c]+'</td>';}).join('') + '</tr>';
+      });
+      html += '</table>' + renderFooter(lang, slide.type);
+      break;
+    case 'comparison':
+      html = '<h2>' + slide.h2 + '</h2>' +
+        '<p style="margin-top:32px;font-size:clamp(16px,1.7vw,20px);color:#1c1b1f;">' + slide.line1 + '</p>' +
+        '<p style="margin-top:16px;font-size:clamp(16px,1.7vw,20px);color:#1c1b1f;">' + slide.line2 + '</p>' +
+        '<p style="margin-top:28px;font-size:clamp(13px,1.4vw,16px);color:#6750a4;">' + slide.tip + '</p>' +
+        renderFooter(lang, slide.type);
+      break;
+    case 'numbered':
+      html = '<h2>' + slide.h2 + '</h2><ol style="margin-top:14px;">';
+      slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+      html += '</ol>' + renderFooter(lang, slide.type);
+      break;
+    case 'faq':
+      html = '<h2>' + slide.h2 + '</h2>';
+      slide.faqs.forEach(function(faq) {
+        html += '<div style="margin-bottom:14px;text-align:left;max-width:680px;"><strong>Q: ' + faq.q + '</strong><p style="margin-top:4px;font-size:clamp(13px,1.3vw,16px);">A: ' + faq.a + '</p></div>';
+      });
+      html += renderFooter(lang, slide.type);
+      break;
+    case 'cta':
+      html = '<h2>' + slide.h2 + '</h2><p style="max-width:580px;margin-top:16px;">' + slide.body + '</p>' +
+        '<a href="' + slide.href + '" style="display:inline-block;margin-top:28px;padding:14px 28px;background:#6750a4;color:white;border-radius:8px;text-decoration:none;font-weight:700;font-size:clamp(14px,1.5vw,18px);">' + slide.cta + '</a>';
+      break;
+  }
+  return '<div class="slide ' + slide.type + '" data-lang="' + lang + '">' + html + '</div>';
+}
+
+const params = new URLSearchParams(window.location.search);
+const lang = params.get('lang') || 'en';
+const content = CONTENT[lang] || CONTENT.en;
+
+document.getElementById('header-title').textContent = content.title;
+const backLink = document.getElementById('back-link');
+backLink.href = 'https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis?lang=' + lang;
+
+const container = document.getElementById('slides-container');
+content.slides.forEach(function(slide) {
+  container.innerHTML += renderSlide(slide, lang);
+});
+
+document.getElementById('totalSlides').textContent = content.slides.length;
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(n) {
+  if (n >= slides.length) currentSlide = slides.length - 1;
+  else if (n < 0) currentSlide = 0;
+  else currentSlide = n;
+  slides.forEach(function(s) { s.classList.remove('active'); });
+  slides[currentSlide].classList.add('active');
+  document.getElementById('currentSlide').textContent = currentSlide + 1;
+  document.getElementById('prevBtn').disabled = currentSlide === 0;
+  document.getElementById('nextBtn').disabled = currentSlide === slides.length - 1;
+}
+
+function changeSlide(n) { showSlide(currentSlide + n); }
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowLeft') changeSlide(-1);
+  if (e.key === 'ArrowRight') changeSlide(1);
+});
+
+window.addEventListener('beforeprint', function() {
+  slides.forEach(function(s) { s.style.display = 'flex'; });
+});
+window.addEventListener('afterprint', function() {
+  slides.forEach(function(s) { s.style.removeProperty('display'); });
+  showSlide(currentSlide);
+});
+
+showSlide(0);
+</script>
+</body>
+</html>
