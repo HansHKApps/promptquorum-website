@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Troubleshooting Local LLM Setup: Fix 10 Errors | PromptQuorum</title>
+    <meta name="description" content="Fix the 10 most common local LLM setup errors: out-of-memory, GPU not detected, slow inference, connection refused, model not found. Covers Ollama and llama.cpp." />
+    <meta property="og:title" content="Troubleshooting Local LLM Setup: Fix 10 Errors — PromptQuorum" />
+    <meta property="og:description" content="Fix out-of-memory, GPU not detected, slow inference, connection refused, and model not found errors." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f6f4f4;
+            color: #1c1b1f;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 48px;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
+            position: relative;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide h1 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1b1f;
+            line-height: 1.2;
+        }
+
+        .slide h2 {
+            font-size: clamp(24px, 2.8vw, 36px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1c1b1f;
+        }
+
+        .slide p {
+            font-size: clamp(15px, 1.7vw, 19px);
+            margin-bottom: 10px;
+            color: #49454f;
+            line-height: 1.5;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
+        }
+
+        .slide.title .logo {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+        }
+
+        .slide.title p {
+            font-size: clamp(16px, 1.8vw, 22px);
+            color: #6750a4;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        .slide.title a {
+            color: #6750a4;
+            text-decoration: none;
+            border-bottom: 2px solid #6750a4;
+            transition: all 0.2s;
+        }
+
+        .slide.title a:hover {
+            color: #7d5260;
+            border-bottom-color: #7d5260;
+        }
+
+        .slide ul, .slide ol {
+            text-align: left;
+            margin: 12px auto;
+            max-width: 680px;
+            width: 100%;
+        }
+
+        .slide ul li, .slide ol li {
+            font-size: clamp(13px, 1.4vw, 16px);
+            margin-bottom: 9px;
+            line-height: 1.5;
+        }
+
+        .slide strong {
+            color: #1c1b1f;
+            font-weight: 700;
+        }
+
+        table {
+            margin: 12px auto;
+            border-collapse: collapse;
+            font-size: clamp(11px, 1.2vw, 14px);
+            text-align: left;
+            max-width: 92%;
+            width: 92%;
+        }
+
+        th {
+            background: #6750a4;
+            color: white;
+            padding: 8px 12px;
+            font-weight: 700;
+            border: none;
+        }
+
+        td {
+            padding: 7px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover td {
+            background: #f7f2fa;
+        }
+
+        .header {
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1c1b1f;
+        }
+
+        .header-left img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header-links a {
+            font-size: 12px;
+            color: #6750a4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #7d5260;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: white;
+            border-top: 1px solid #e8e0f0;
+            flex-shrink: 0;
+        }
+
+        button {
+            background: #6750a4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7d5260;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            font-size: 14px;
+            color: #49454f;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .slide-footer {
+            position: absolute;
+            bottom: 14px;
+            right: 20px;
+            font-size: 11px;
+            color: #aaa;
+        }
+
+        .slide-footer a {
+            color: #aaa;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .slide-footer a:hover {
+            color: #6750a4;
+            border-bottom-color: #6750a4;
+        }
+
+        /* Print styles */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                overflow: visible !important;
+                height: auto !important;
+                width: 100% !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            .header, .controls {
+                display: none !important;
+            }
+
+            .presentation-container {
+                display: block !important;
+                height: auto !important;
+                width: 100%;
+                counter-reset: page-counter;
+            }
+
+            .content-area {
+                display: block !important;
+                overflow: visible !important;
+                height: auto !important;
+                width: 100%;
+            }
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                page-break-after: always;
+                break-after: page;
+                width: 100%;
+                height: 210mm;
+                padding: 20mm 24mm;
+                box-sizing: border-box;
+                overflow: visible !important;
+                margin: 0;
+                background: white;
+                color: #1c1b1f;
+                position: relative;
+                counter-increment: page-counter;
+            }
+
+            .slide::before {
+                content: "https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup";
+                position: absolute;
+                bottom: 15mm;
+                left: 24mm;
+                font-size: 9pt;
+                color: #999;
+                text-decoration: none;
+            }
+
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute;
+                bottom: 15mm;
+                right: 24mm;
+                font-size: 9pt;
+                color: #999;
+                font-weight: 600;
+            }
+
+            .slide h1, .slide h2, .slide p, .slide li {
+                color: #000 !important;
+            }
+
+            .slide strong {
+                color: #000 !important;
+                font-weight: 700;
+            }
+
+            .slide li {
+                color: #000 !important;
+            }
+
+            table th {
+                background: #6750a4 !important;
+                color: #fff !important;
+            }
+
+            table td {
+                color: #000 !important;
+                border-color: #ccc !important;
+            }
+
+            .slide-footer {
+                display: none !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 24px;
+            }
+
+            .slide h1 {
+                font-size: 28px;
+            }
+
+            .slide h2 {
+                font-size: 22px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Troubleshooting Local LLM Setup</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup">← Back to Article</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
+        </div>
+
+        <div class="content-area" id="slides-container">
+            <!-- Slides injected by JS -->
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const CONTENT = {
+            en: {
+                title: 'Troubleshooting Local LLM Setup',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Troubleshooting\nLocal LLM Setup',
+                        subtitle: 'Fix the 10 Most Common Errors — April 2026',
+                        link: 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Key Takeaways',
+                        items: [
+                            '<strong>Out of memory:</strong> Switch to Q4_K_M quantization or a 3B model.',
+                            '<strong>GPU not detected:</strong> Update NVIDIA drivers to 525+ (Linux) or 452+ (Windows). Run <code>nvidia-smi</code>.',
+                            '<strong>Very slow inference:</strong> You are on CPU only — set <code>OLLAMA_GPU_LAYERS=999</code>.',
+                            '<strong>Connection refused:</strong> Ollama is not running. Start with <code>ollama serve</code>.',
+                            '<strong>Garbled output:</strong> Wrong model variant. Use the instruct version, not the base model.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Errors 1–5: Quick Reference',
+                        columns: ['Error', 'Symptom', 'Fix'],
+                        rows: [
+                            { Error: '1. Out of Memory', Symptom: 'Process crashes on load', Fix: 'Use Q4_K_M or smaller model' },
+                            { Error: '2. GPU Not Detected', Symptom: '5–10× slower than expected', Fix: 'Update drivers, restart Ollama' },
+                            { Error: '3. Slow Inference', Symptom: '<5 tok/sec on 7B model', Fix: 'Set OLLAMA_GPU_LAYERS=999' },
+                            { Error: '4. Connection Refused', Symptom: 'API call fails instantly', Fix: 'Run: ollama serve' },
+                            { Error: '5. Model Not Found', Symptom: '"model not found" error', Fix: 'Run: ollama pull [model]' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Error 1: Out-of-Memory (OOM)',
+                        intro: 'OOM errors mean the model needs more RAM than available — not a hardware failure.',
+                        items: [
+                            '<strong>Check RAM:</strong> <code>free -h</code> (Linux) or Task Manager → Performance (Windows)',
+                            '<strong>Downgrade quantization:</strong> Q8_0 → Q4_K_M saves ~40% RAM',
+                            '<strong>Try a smaller model:</strong> 7B failing on 8 GB? Switch to llama3.2:3b (~2.5 GB)',
+                            '<strong>Close other apps:</strong> Browsers and IDEs consume RAM that reduces model headroom'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Error 2: GPU Not Being Used',
+                        intro: 'Running on CPU means 5–10× slower inference. Verify GPU detection first.',
+                        items: [
+                            '<strong>Check GPU:</strong> Run <code>nvidia-smi</code> — should show GPU name and driver version',
+                            '<strong>NVIDIA Linux:</strong> Install driver 525+ and CUDA toolkit 11.3+',
+                            '<strong>NVIDIA Windows:</strong> Driver 452.39 or higher required',
+                            '<strong>AMD Linux:</strong> Install ROCm 5.7+. Set <code>HSA_OVERRIDE_GFX_VERSION=11.0.0</code> for RX 7000',
+                            '<strong>Apple Silicon:</strong> Metal is used automatically — confirm with <code>ollama ps</code>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Error 3: Very Slow Inference',
+                        intro: 'Under 5 tok/sec on a 7B model means CPU-only inference.',
+                        items: [
+                            '<strong>Confirm GPU status:</strong> Run <code>ollama ps</code> while model is loaded — shows GPU vs CPU layers',
+                            '<strong>Enable GPU layers:</strong> Set <code>OLLAMA_GPU_LAYERS=999</code> (Ollama caps at VRAM limit)',
+                            '<strong>Use faster quantization:</strong> Q4_K_M is the fastest that maintains quality; Q8_0 is ~30% slower',
+                            '<strong>Reduce model size:</strong> 7B on CPU → 3–10 tok/sec; 3B on CPU → 20–40 tok/sec'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Errors 4–6: Server & Model Issues',
+                        items: [
+                            '<strong>Error 4 — Connection Refused:</strong> Ollama not running. Start with <code>ollama serve</code> or restart systemd service',
+                            '<strong>Verify server is up:</strong> <code>curl http://localhost:11434</code> → "Ollama is running"',
+                            '<strong>Error 5 — Model Not Found:</strong> Name is case-sensitive. Use <code>ollama list</code> to see exact names',
+                            '<strong>Pull missing models:</strong> <code>ollama pull llama3.2</code> — tags matter: llama3.2 ≠ llama3.2:3b',
+                            '<strong>Error 6 — Corrupted File:</strong> Re-download: <code>ollama rm modelname && ollama pull modelname</code>'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Errors 7–10: Advanced Issues',
+                        columns: ['Error', 'Cause', 'Fix'],
+                        rows: [
+                            { Error: '7. CUDA/ROCm Error', Cause: 'Driver version mismatch', Fix: 'Update to CUDA 11.3+ / ROCm 5.7+' },
+                            { Error: '8. Garbled Output', Cause: 'Using base model, not instruct', Fix: 'Switch to llama3.1:8b-instruct' },
+                            { Error: '9. Port In Use', Cause: 'Another process on port 11434', Fix: 'lsof -i :11434, kill PID' },
+                            { Error: '10. Stops Mid-Response', Cause: 'Context limit or num_predict too low', Fix: 'Set OLLAMA_NUM_CTX=4096' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5-Step Debug Process',
+                        items: [
+                            '<strong>Check RAM first.</strong> Run <code>free -h</code> — is the model too large for available memory?',
+                            '<strong>Verify GPU detection.</strong> Run <code>nvidia-smi</code> or <code>ollama ps</code> while a model is loaded.',
+                            '<strong>Confirm Ollama is running.</strong> <code>curl http://localhost:11434</code> should return "Ollama is running".',
+                            '<strong>Check the exact model name.</strong> <code>ollama list</code> shows all downloaded models with correct tags.',
+                            '<strong>Resolve model not found.</strong> <code>ollama pull [model]</code> re-downloads and verifies the sha256 hash.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'RAM Requirements by Model Size',
+                        columns: ['Model', 'Quantization', 'RAM Required', 'Speed (CPU)'],
+                        rows: [
+                            { Model: 'llama3.2:3b', Quantization: 'Q4_K_M', 'RAM Required': '~2.5 GB', 'Speed (CPU)': '25–45 tok/s' },
+                            { Model: 'mistral:7b', Quantization: 'Q4_K_M', 'RAM Required': '~4.5 GB', 'Speed (CPU)': '10–20 tok/s' },
+                            { Model: 'llama3.1:8b', Quantization: 'Q4_K_M', 'RAM Required': '~5.5 GB', 'Speed (CPU)': '8–15 tok/s' },
+                            { Model: 'llama3.1:8b', Quantization: 'Q8_0', 'RAM Required': '~9 GB', 'Speed (CPU)': '5–10 tok/s' },
+                            { Model: 'qwen2.5:14b', Quantization: 'Q4_K_M', 'RAM Required': '~9 GB', 'Speed (CPU)': '4–8 tok/s' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Common Debugging Mistakes',
+                        items: [
+                            '<strong>Assuming OOM = hardware failure.</strong> It just means the model is too large for available RAM.',
+                            '<strong>Not checking system load.</strong> Close browsers and IDEs before benchmarking inference speed.',
+                            '<strong>Ignoring driver versions.</strong> CUDA requires driver ≥450.80 for CUDA 11.x — run <code>nvidia-smi</code>.',
+                            '<strong>Wrong model name in Ollama.</strong> <code>llama3.2</code> and <code>llama3.2:3b</code> are different tags.',
+                            '<strong>Not restarting Ollama after driver update.</strong> Ollama detects GPU only at startup — always restart.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Common Questions',
+                        faqs: [
+                            {
+                                q: 'What is the most common local LLM error?',
+                                a: 'Out-of-memory (OOM). Switch to Q4_K_M quantization or a smaller model (3B instead of 7B).'
+                            },
+                            {
+                                q: 'Why is my inference slow even with GPU?',
+                                a: 'Run ollama ps — if layers show "0 GPU", OLLAMA_GPU_LAYERS is not set. Set OLLAMA_GPU_LAYERS=999 and restart Ollama.'
+                            },
+                            {
+                                q: 'What causes garbled output?',
+                                a: 'Base model instead of instruct variant. Switch to llama3.1:8b-instruct. Base models produce raw text completions, not answers.'
+                            },
+                            {
+                                q: 'Why does the model stop mid-response?',
+                                a: 'Context window limit or num_predict set too low (default 128 tokens). Set OLLAMA_NUM_CTX=4096 in Ollama.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Related Resources',
+                        items: [
+                            '<strong>How to Install Ollama</strong> — Step-by-step installation guide',
+                            '<strong>LLM Quantization Explained</strong> — Why Q4_K_M is the default and how it affects RAM',
+                            '<strong>Best Beginner Local LLM Models</strong> — Model recommendations for 8 GB RAM systems',
+                            '<strong>How to Run Local LLMs on a Laptop</strong> — Thermal throttling and battery optimization',
+                            '<strong>Ollama GitHub Issues</strong> — Active community support for model-specific bugs'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Compare Models Without Setup Issues',
+                        body: 'PromptQuorum sends one prompt to 25+ models and ranks responses — no local setup required.',
+                        cta: 'Try PromptQuorum Free',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            de: {
+                title: 'Lokale LLMs debuggen: 10 Fehler und Lösungen',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Lokale LLMs debuggen\n10 Fehler und Lösungen',
+                        subtitle: 'Die häufigsten Setup-Fehler beheben — April 2026',
+                        link: 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=de'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Kurzübersicht',
+                        items: [
+                            '<strong>Speichermangel (OOM):</strong> Zu Q4_K_M wechseln oder kleineres Modell nutzen.',
+                            '<strong>GPU nicht erkannt:</strong> NVIDIA-Treiber auf 525+ (Linux) oder 452+ (Windows) aktualisieren.',
+                            '<strong>Sehr langsame Inferenz:</strong> Nur CPU-Modus — <code>OLLAMA_GPU_LAYERS=999</code> setzen.',
+                            '<strong>Verbindung verweigert:</strong> Ollama läuft nicht. Mit <code>ollama serve</code> starten.',
+                            '<strong>Kauderwelsch-Ausgabe:</strong> Falsches Modell. Instruct-Variante statt Base-Modell verwenden.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Fehler 1–5: Schnellübersicht',
+                        columns: ['Fehler', 'Symptom', 'Lösung'],
+                        rows: [
+                            { Fehler: '1. Speichermangel', Symptom: 'Prozess stürzt beim Laden ab', Lösung: 'Q4_K_M oder kleineres Modell' },
+                            { Fehler: '2. GPU nicht erkannt', Symptom: '5–10× langsamer als erwartet', Lösung: 'Treiber aktualisieren, Ollama neu starten' },
+                            { Fehler: '3. Langsame Inferenz', Symptom: '<5 Tok/Sek bei 7B-Modell', Lösung: 'OLLAMA_GPU_LAYERS=999 setzen' },
+                            { Fehler: '4. Verbindung verweigert', Symptom: 'API-Aufruf schlägt sofort fehl', Lösung: 'ollama serve ausführen' },
+                            { Fehler: '5. Modell nicht gefunden', Symptom: '"model not found" Fehler', Lösung: 'ollama pull [modell]' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Fehler 1: Speichermangel (OOM)',
+                        intro: 'OOM-Fehler bedeuten, dass das Modell mehr RAM benötigt als verfügbar — kein Hardwaredefekt.',
+                        items: [
+                            '<strong>RAM prüfen:</strong> <code>free -h</code> (Linux) oder Task-Manager → Leistung (Windows)',
+                            '<strong>Quantisierung reduzieren:</strong> Q8_0 → Q4_K_M spart ~40% RAM',
+                            '<strong>Kleineres Modell nutzen:</strong> 7B schlägt auf 8 GB fehl? Zu llama3.2:3b wechseln (~2,5 GB)',
+                            '<strong>Andere Apps schließen:</strong> Browser und IDEs verbrauchen RAM, der dem Modell fehlt'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Fehler 2: GPU wird nicht verwendet',
+                        intro: 'CPU-Inferenz ist 5–10× langsamer. GPU-Erkennung zuerst überprüfen.',
+                        items: [
+                            '<strong>GPU prüfen:</strong> <code>nvidia-smi</code> ausführen — GPU-Name und Treiber sollten erscheinen',
+                            '<strong>NVIDIA Linux:</strong> Treiber 525+ und CUDA 11.3+ installieren',
+                            '<strong>NVIDIA Windows:</strong> Treiber 452.39 oder höher erforderlich',
+                            '<strong>Apple Silicon:</strong> Metal wird automatisch genutzt — mit <code>ollama ps</code> bestätigen'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Fehler 3: Sehr langsame Inferenz',
+                        intro: 'Unter 5 Tok/Sek bei einem 7B-Modell bedeutet CPU-only-Inferenz.',
+                        items: [
+                            '<strong>GPU-Status prüfen:</strong> <code>ollama ps</code> während Modell geladen — zeigt GPU/CPU-Schichten',
+                            '<strong>GPU-Schichten aktivieren:</strong> <code>OLLAMA_GPU_LAYERS=999</code> setzen',
+                            '<strong>Schnellere Quantisierung:</strong> Q4_K_M ist ~30% schneller als Q8_0',
+                            '<strong>Modellgröße reduzieren:</strong> 7B auf CPU → 3–10 Tok/Sek; 3B auf CPU → 20–40 Tok/Sek'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Fehler 4–6: Server & Modell-Probleme',
+                        items: [
+                            '<strong>Fehler 4 — Verbindung verweigert:</strong> Ollama läuft nicht. Mit <code>ollama serve</code> starten',
+                            '<strong>Server prüfen:</strong> <code>curl http://localhost:11434</code> → "Ollama is running"',
+                            '<strong>Fehler 5 — Modell nicht gefunden:</strong> Name ist case-sensitiv. <code>ollama list</code> für exakte Namen',
+                            '<strong>Fehlendes Modell laden:</strong> <code>ollama pull llama3.2</code> — Tags wichtig: llama3.2 ≠ llama3.2:3b',
+                            '<strong>Fehler 6 — Beschädigte Datei:</strong> Neu laden: <code>ollama rm modell && ollama pull modell</code>'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Fehler 7–10: Fortgeschrittene Probleme',
+                        columns: ['Fehler', 'Ursache', 'Lösung'],
+                        rows: [
+                            { Fehler: '7. CUDA/ROCm Fehler', Ursache: 'Inkompatible Treiberversion', Lösung: 'Update auf CUDA 11.3+ / ROCm 5.7+' },
+                            { Fehler: '8. Kauderwelsch-Ausgabe', Ursache: 'Base-Modell statt Instruct', Lösung: 'llama3.1:8b-instruct verwenden' },
+                            { Fehler: '9. Port belegt', Ursache: 'Anderer Prozess auf Port 11434', Lösung: 'lsof -i :11434, PID beenden' },
+                            { Fehler: '10. Abbruch mid-Response', Ursache: 'Kontextlimit oder num_predict zu niedrig', Lösung: 'OLLAMA_NUM_CTX=4096 setzen' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5-Schritte-Debug-Prozess',
+                        items: [
+                            '<strong>RAM zuerst prüfen.</strong> <code>free -h</code> — ist das Modell zu groß?',
+                            '<strong>GPU-Erkennung prüfen.</strong> <code>nvidia-smi</code> oder <code>ollama ps</code> während Modell läuft.',
+                            '<strong>Ollama-Status prüfen.</strong> <code>curl http://localhost:11434</code> → "Ollama is running".',
+                            '<strong>Exakten Modellnamen prüfen.</strong> <code>ollama list</code> zeigt alle geladenen Modelle.',
+                            '<strong>Modell erneut laden.</strong> <code>ollama pull [modell]</code> prüft sha256-Hash.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'RAM-Anforderungen nach Modellgröße',
+                        columns: ['Modell', 'Quantisierung', 'RAM nötig', 'Geschw. (CPU)'],
+                        rows: [
+                            { Modell: 'llama3.2:3b', Quantisierung: 'Q4_K_M', 'RAM nötig': '~2,5 GB', 'Geschw. (CPU)': '25–45 Tok/Sek' },
+                            { Modell: 'mistral:7b', Quantisierung: 'Q4_K_M', 'RAM nötig': '~4,5 GB', 'Geschw. (CPU)': '10–20 Tok/Sek' },
+                            { Modell: 'llama3.1:8b', Quantisierung: 'Q4_K_M', 'RAM nötig': '~5,5 GB', 'Geschw. (CPU)': '8–15 Tok/Sek' },
+                            { Modell: 'llama3.1:8b', Quantisierung: 'Q8_0', 'RAM nötig': '~9 GB', 'Geschw. (CPU)': '5–10 Tok/Sek' },
+                            { Modell: 'qwen2.5:14b', Quantisierung: 'Q4_K_M', 'RAM nötig': '~9 GB', 'Geschw. (CPU)': '4–8 Tok/Sek' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Häufige Debugging-Fehler',
+                        items: [
+                            '<strong>OOM = Hardwaredefekt annehmen.</strong> OOM bedeutet nur: Modell zu groß für verfügbaren RAM.',
+                            '<strong>Systemlast ignorieren.</strong> Browser und IDEs vor dem Benchmarking schließen.',
+                            '<strong>Treiberversionskonflikte ignorieren.</strong> CUDA benötigt Treiber ≥450.80 für CUDA 11.x.',
+                            '<strong>Falschen Modellnamen verwenden.</strong> llama3.2 und llama3.2:3b sind verschiedene Tags.',
+                            '<strong>Ollama nach Treiber-Update nicht neu starten.</strong> GPU wird nur beim Start erkannt.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Häufige Fragen',
+                        faqs: [
+                            {
+                                q: 'Was ist der häufigste lokale LLM-Fehler?',
+                                a: 'Speichermangel (OOM). Zu Q4_K_M-Quantisierung oder kleinerem Modell (3B statt 7B) wechseln.'
+                            },
+                            {
+                                q: 'Warum ist die Inferenz langsam trotz GPU?',
+                                a: 'ollama ps ausführen — wenn "0 GPU Layers", OLLAMA_GPU_LAYERS=999 setzen und Ollama neu starten.'
+                            },
+                            {
+                                q: 'Was verursacht Kauderwelsch-Ausgaben?',
+                                a: 'Base-Modell statt Instruct-Variante. Zu llama3.1:8b-instruct wechseln.'
+                            },
+                            {
+                                q: 'Warum bricht das Modell mid-Response ab?',
+                                a: 'Kontextlimit oder num_predict zu niedrig (Standard: 128 Tokens). OLLAMA_NUM_CTX=4096 setzen.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Weiterführende Ressourcen',
+                        items: [
+                            '<strong>Ollama installieren</strong> — Schritt-für-Schritt-Installationsanleitung',
+                            '<strong>LLM-Quantisierung erklärt</strong> — Warum Q4_K_M Standard ist',
+                            '<strong>Beste Anfänger-Modelle</strong> — Empfehlungen für 8 GB RAM',
+                            '<strong>Lokale LLMs auf dem Laptop</strong> — Thermik und Akkuoptimierung',
+                            '<strong>Ollama GitHub Issues</strong> — Community-Support für modellspezifische Fehler'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Modelle ohne Setup-Probleme vergleichen',
+                        body: 'PromptQuorum sendet einen Prompt an 25+ Modelle und bewertet die Antworten — kein lokales Setup nötig.',
+                        cta: 'PromptQuorum kostenlos testen',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            fr: {
+                title: 'Dépannage LLM Local : 10 Erreurs et Solutions',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Dépannage LLM Local\n10 Erreurs et Solutions',
+                        subtitle: 'Résoudre les erreurs de configuration les plus courantes — Avril 2026',
+                        link: 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=fr'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Résumé',
+                        items: [
+                            '<strong>VRAM insuffisante :</strong> Utiliser Q4_K_M ou un modèle plus petit.',
+                            '<strong>GPU non détecté :</strong> Mettre à jour les pilotes NVIDIA (525+ Linux, 452+ Windows).',
+                            '<strong>Inférence lente :</strong> Mode CPU uniquement — définir <code>OLLAMA_GPU_LAYERS=999</code>.',
+                            '<strong>Connexion refusée :</strong> Ollama ne tourne pas. Lancer <code>ollama serve</code>.',
+                            '<strong>Sortie incohérente :</strong> Mauvais modèle. Utiliser la variante instruct, pas la base.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Erreurs 1–5 : Référence Rapide',
+                        columns: ['Erreur', 'Symptôme', 'Solution'],
+                        rows: [
+                            { Erreur: '1. VRAM insuffisante', Symptôme: 'Crash au chargement', Solution: 'Q4_K_M ou modèle plus petit' },
+                            { Erreur: '2. GPU non détecté', Symptôme: '5–10× plus lent', Solution: 'Mettre à jour pilotes, redémarrer Ollama' },
+                            { Erreur: '3. Inférence lente', Symptôme: '<5 tok/s sur 7B', Solution: 'OLLAMA_GPU_LAYERS=999' },
+                            { Erreur: '4. Connexion refusée', Symptôme: 'Appel API échoue', Solution: 'Lancer : ollama serve' },
+                            { Erreur: '5. Modèle non trouvé', Symptôme: '"model not found"', Solution: 'ollama pull [modèle]' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Erreur 1 : VRAM Insuffisante (OOM)',
+                        intro: 'OOM signifie que le modèle nécessite plus de RAM que disponible — pas une panne matérielle.',
+                        items: [
+                            '<strong>Vérifier la RAM :</strong> <code>free -h</code> (Linux) ou Gestionnaire des tâches (Windows)',
+                            '<strong>Réduire la quantification :</strong> Q8_0 → Q4_K_M économise ~40% de RAM',
+                            '<strong>Modèle plus petit :</strong> 7B échoue sur 8 Go ? Passer à llama3.2:3b (~2,5 Go)',
+                            '<strong>Fermer autres apps :</strong> Les navigateurs et IDE consomment la RAM du modèle'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Erreur 2 : GPU Non Utilisé',
+                        intro: 'Inférence CPU = 5–10× plus lent. Vérifier la détection GPU en premier.',
+                        items: [
+                            '<strong>Vérifier GPU :</strong> <code>nvidia-smi</code> — doit afficher le nom GPU et la version du pilote',
+                            '<strong>NVIDIA Linux :</strong> Installer pilote 525+ et CUDA toolkit 11.3+',
+                            '<strong>NVIDIA Windows :</strong> Pilote 452.39 ou supérieur requis',
+                            '<strong>Apple Silicon :</strong> Metal utilisé automatiquement — confirmer avec <code>ollama ps</code>'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Erreur 3 : Inférence Très Lente',
+                        intro: 'Moins de 5 tok/s sur un modèle 7B = inférence CPU uniquement.',
+                        items: [
+                            '<strong>Statut GPU :</strong> <code>ollama ps</code> pendant chargement — affiche couches GPU/CPU',
+                            '<strong>Activer couches GPU :</strong> <code>OLLAMA_GPU_LAYERS=999</code>',
+                            '<strong>Quantification plus rapide :</strong> Q4_K_M est ~30% plus rapide que Q8_0',
+                            '<strong>Réduire taille modèle :</strong> 7B sur CPU → 3–10 tok/s ; 3B sur CPU → 20–40 tok/s'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Erreurs 4–6 : Serveur & Modèle',
+                        items: [
+                            '<strong>Erreur 4 — Connexion refusée :</strong> Ollama ne tourne pas. Lancer <code>ollama serve</code>',
+                            '<strong>Vérifier le serveur :</strong> <code>curl http://localhost:11434</code> → "Ollama is running"',
+                            '<strong>Erreur 5 — Modèle non trouvé :</strong> Nom sensible à la casse. <code>ollama list</code>',
+                            '<strong>Télécharger modèle :</strong> <code>ollama pull llama3.2</code> — les tags comptent',
+                            '<strong>Erreur 6 — Fichier corrompu :</strong> <code>ollama rm modele && ollama pull modele</code>'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Erreurs 7–10 : Problèmes Avancés',
+                        columns: ['Erreur', 'Cause', 'Solution'],
+                        rows: [
+                            { Erreur: '7. Erreur CUDA/ROCm', Cause: 'Incompatibilité pilote', Solution: 'Mise à jour CUDA 11.3+ / ROCm 5.7+' },
+                            { Erreur: '8. Sortie incohérente', Cause: 'Modèle base au lieu instruct', Solution: 'Passer à llama3.1:8b-instruct' },
+                            { Erreur: '9. Port occupé', Cause: 'Processus sur port 11434', Solution: 'lsof -i :11434, tuer PID' },
+                            { Erreur: '10. Arrêt mi-réponse', Cause: 'Limite contexte ou num_predict bas', Solution: 'OLLAMA_NUM_CTX=4096' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: 'Processus de Débogage en 5 Étapes',
+                        items: [
+                            '<strong>Vérifier la RAM.</strong> <code>free -h</code> — le modèle est-il trop grand ?',
+                            '<strong>Vérifier la détection GPU.</strong> <code>nvidia-smi</code> ou <code>ollama ps</code>.',
+                            '<strong>Confirmer qu\'Ollama tourne.</strong> <code>curl http://localhost:11434</code>.',
+                            '<strong>Vérifier le nom exact du modèle.</strong> <code>ollama list</code>.',
+                            '<strong>Retélécharger le modèle.</strong> <code>ollama pull [modèle]</code> vérifie le hash sha256.'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'RAM Requise par Taille de Modèle',
+                        columns: ['Modèle', 'Quantification', 'RAM Requise', 'Vitesse (CPU)'],
+                        rows: [
+                            { Modèle: 'llama3.2:3b', Quantification: 'Q4_K_M', 'RAM Requise': '~2,5 Go', 'Vitesse (CPU)': '25–45 tok/s' },
+                            { Modèle: 'mistral:7b', Quantification: 'Q4_K_M', 'RAM Requise': '~4,5 Go', 'Vitesse (CPU)': '10–20 tok/s' },
+                            { Modèle: 'llama3.1:8b', Quantification: 'Q4_K_M', 'RAM Requise': '~5,5 Go', 'Vitesse (CPU)': '8–15 tok/s' },
+                            { Modèle: 'llama3.1:8b', Quantification: 'Q8_0', 'RAM Requise': '~9 Go', 'Vitesse (CPU)': '5–10 tok/s' },
+                            { Modèle: 'qwen2.5:14b', Quantification: 'Q4_K_M', 'RAM Requise': '~9 Go', 'Vitesse (CPU)': '4–8 tok/s' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 Erreurs de Débogage Courantes',
+                        items: [
+                            '<strong>OOM = panne matérielle.</strong> OOM signifie seulement : modèle trop grand pour la RAM disponible.',
+                            '<strong>Ignorer la charge système.</strong> Fermer navigateurs et IDEs avant les benchmarks.',
+                            '<strong>Ignorer les versions de pilotes.</strong> CUDA nécessite pilote ≥450.80 pour CUDA 11.x.',
+                            '<strong>Mauvais nom de modèle.</strong> llama3.2 et llama3.2:3b sont des tags différents.',
+                            '<strong>Ne pas redémarrer Ollama après mise à jour pilote.</strong> La GPU est détectée seulement au démarrage.'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Questions Fréquentes',
+                        faqs: [
+                            {
+                                q: 'Quelle est l\'erreur LLM locale la plus courante ?',
+                                a: 'Manque de mémoire (OOM). Passer à Q4_K_M ou un modèle plus petit (3B au lieu de 7B).'
+                            },
+                            {
+                                q: 'Pourquoi l\'inférence est lente avec GPU ?',
+                                a: 'Lancer ollama ps — si "0 GPU Layers", définir OLLAMA_GPU_LAYERS=999 et redémarrer Ollama.'
+                            },
+                            {
+                                q: 'Qu\'est-ce qui cause une sortie incohérente ?',
+                                a: 'Modèle base au lieu de la variante instruct. Passer à llama3.1:8b-instruct.'
+                            },
+                            {
+                                q: 'Pourquoi le modèle s\'arrête mi-réponse ?',
+                                a: 'Limite de contexte ou num_predict trop bas (défaut : 128 tokens). Définir OLLAMA_NUM_CTX=4096.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ressources Complémentaires',
+                        items: [
+                            '<strong>Installer Ollama</strong> — Guide d\'installation étape par étape',
+                            '<strong>Quantification LLM expliquée</strong> — Pourquoi Q4_K_M est le standard',
+                            '<strong>Meilleurs modèles débutants</strong> — Recommandations pour 8 Go de RAM',
+                            '<strong>LLM locaux sur ordinateur portable</strong> — Gestion thermique et batterie',
+                            '<strong>GitHub Issues Ollama</strong> — Support communautaire'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Comparer des Modèles Sans Problèmes de Configuration',
+                        body: 'PromptQuorum envoie un prompt à 25+ modèles et classe les réponses — aucune configuration locale requise.',
+                        cta: 'Essayer PromptQuorum Gratuitement',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ja: {
+                title: 'ローカルLLMセットアップのトラブルシューティング',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'ローカルLLM\nエラー修正ガイド',
+                        subtitle: '最も一般的な10種類のエラーを修正 — 2026年4月',
+                        link: 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=ja'
+                    },
+                    {
+                        type: 'list',
+                        h2: '重要ポイント',
+                        items: [
+                            '<strong>メモリ不足（OOM）：</strong>Q4_K_M量子化または小さいモデルに切り替える。',
+                            '<strong>GPU未検出：</strong>NVIDIAドライバーを525+（Linux）または452+（Windows）に更新。',
+                            '<strong>推論が非常に遅い：</strong>CPUのみのモード — <code>OLLAMA_GPU_LAYERS=999</code>を設定。',
+                            '<strong>接続拒否：</strong>Ollamaが起動していない。<code>ollama serve</code>で起動。',
+                            '<strong>出力が文字化け：</strong>間違ったモデル。ベースモデルではなくinstructバリアントを使用。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'エラー1–5：クイックリファレンス',
+                        columns: ['エラー', '症状', '修正方法'],
+                        rows: [
+                            { エラー: '1. メモリ不足', 症状: 'ロード時にクラッシュ', '修正方法': 'Q4_K_Mまたは小さいモデル' },
+                            { エラー: '2. GPU未検出', 症状: '期待より5–10倍遅い', '修正方法': 'ドライバー更新、Ollama再起動' },
+                            { エラー: '3. 推論が遅い', 症状: '7Bで<5トークン/秒', '修正方法': 'OLLAMA_GPU_LAYERS=999設定' },
+                            { エラー: '4. 接続拒否', 症状: 'APIコールが即失敗', '修正方法': 'ollama serve実行' },
+                            { エラー: '5. モデル未検出', 症状: '"model not found"エラー', '修正方法': 'ollama pull [モデル]' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'エラー1：メモリ不足（OOM）',
+                        intro: 'OOMエラーはモデルが利用可能なRAMより多くを必要とすることを意味します — ハードウェア故障ではありません。',
+                        items: [
+                            '<strong>RAMを確認：</strong><code>free -h</code>（Linux）またはタスクマネージャー→パフォーマンス（Windows）',
+                            '<strong>量子化を下げる：</strong>Q8_0→Q4_K_MでRAMを約40%節約',
+                            '<strong>小さいモデルに切替：</strong>8GBで7Bが失敗？llama3.2:3b（~2.5GB）に変更',
+                            '<strong>他のアプリを閉じる：</strong>ブラウザとIDEがモデルに必要なRAMを消費'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'エラー2：GPUが使われていない',
+                        intro: 'CPU推論は5–10倍遅い。まずGPU検出を確認。',
+                        items: [
+                            '<strong>GPUを確認：</strong><code>nvidia-smi</code>を実行 — GPU名とドライバーバージョンが表示されるはず',
+                            '<strong>NVIDIA Linux：</strong>ドライバー525+とCUDAツールキット11.3+をインストール',
+                            '<strong>NVIDIA Windows：</strong>ドライバー452.39以上が必要',
+                            '<strong>Apple Silicon：</strong>Metalが自動で使用 — <code>ollama ps</code>で確認'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'エラー3：推論が非常に遅い',
+                        intro: '7Bモデルで5トークン/秒未満はCPUのみの推論を意味します。',
+                        items: [
+                            '<strong>GPUステータス確認：</strong><code>ollama ps</code>（モデル読み込み中）— GPU/CPUレイヤー数を表示',
+                            '<strong>GPUレイヤーを有効化：</strong><code>OLLAMA_GPU_LAYERS=999</code>を設定',
+                            '<strong>高速な量子化：</strong>Q4_K_MはQ8_0より約30%高速',
+                            '<strong>モデルサイズを削減：</strong>CPU上7B→3–10トークン/秒；3B→20–40トークン/秒'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'エラー4–6：サーバーとモデルの問題',
+                        items: [
+                            '<strong>エラー4 — 接続拒否：</strong>Ollamaが起動していない。<code>ollama serve</code>で起動',
+                            '<strong>サーバー確認：</strong><code>curl http://localhost:11434</code> → "Ollama is running"',
+                            '<strong>エラー5 — モデル未検出：</strong>大文字小文字を区別。<code>ollama list</code>で正確な名前を確認',
+                            '<strong>モデルをダウンロード：</strong><code>ollama pull llama3.2</code> — タグが重要: llama3.2 ≠ llama3.2:3b',
+                            '<strong>エラー6 — 破損ファイル：</strong><code>ollama rm モデル && ollama pull モデル</code>'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'エラー7–10：高度な問題',
+                        columns: ['エラー', '原因', '修正方法'],
+                        rows: [
+                            { エラー: '7. CUDA/ROCmエラー', 原因: 'ドライバーバージョン不一致', '修正方法': 'CUDA 11.3+ / ROCm 5.7+に更新' },
+                            { エラー: '8. 文字化け出力', 原因: 'instructでなくbaseモデル使用', '修正方法': 'llama3.1:8b-instructに切替' },
+                            { エラー: '9. ポート使用中', 原因: '11434ポートに別プロセス', '修正方法': 'lsof -i :11434、PIDをkill' },
+                            { エラー: '10. 途中で停止', 原因: 'コンテキスト制限またはnum_predict低い', '修正方法': 'OLLAMA_NUM_CTX=4096設定' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5ステップのデバッグプロセス',
+                        items: [
+                            '<strong>まずRAMを確認。</strong><code>free -h</code> — モデルが大きすぎる？',
+                            '<strong>GPU検出を確認。</strong><code>nvidia-smi</code>または<code>ollama ps</code>（モデル実行中）。',
+                            '<strong>Ollamaが起動していることを確認。</strong><code>curl http://localhost:11434</code>。',
+                            '<strong>正確なモデル名を確認。</strong><code>ollama list</code>でダウンロード済みモデルを確認。',
+                            '<strong>モデルを再ダウンロード。</strong><code>ollama pull [モデル]</code>でsha256ハッシュを検証。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'モデルサイズ別のRAM要件',
+                        columns: ['モデル', '量子化', 'RAM', '速度（CPU）'],
+                        rows: [
+                            { モデル: 'llama3.2:3b', 量子化: 'Q4_K_M', RAM: '~2.5 GB', '速度（CPU）': '25–45 トークン/秒' },
+                            { モデル: 'mistral:7b', 量子化: 'Q4_K_M', RAM: '~4.5 GB', '速度（CPU）': '10–20 トークン/秒' },
+                            { モデル: 'llama3.1:8b', 量子化: 'Q4_K_M', RAM: '~5.5 GB', '速度（CPU）': '8–15 トークン/秒' },
+                            { モデル: 'llama3.1:8b', 量子化: 'Q8_0', RAM: '~9 GB', '速度（CPU）': '5–10 トークン/秒' },
+                            { モデル: 'qwen2.5:14b', 量子化: 'Q4_K_M', RAM: '~9 GB', '速度（CPU）': '4–8 トークン/秒' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5つの一般的なデバッグミス',
+                        items: [
+                            '<strong>OOM=ハードウェア故障と思い込む。</strong>OOMは単にモデルがRAMに収まらないことを意味。',
+                            '<strong>システム負荷を無視する。</strong>ベンチマーク前にブラウザとIDEを閉じる。',
+                            '<strong>ドライバーバージョン不一致を無視する。</strong>CUDA 11.xにはドライバー≥450.80が必要。',
+                            '<strong>Ollamaで間違ったモデル名を使う。</strong>llama3.2とllama3.2:3bは異なるタグ。',
+                            '<strong>ドライバー更新後にOllamaを再起動しない。</strong>GPUは起動時にのみ検出される。'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'よくある質問',
+                        faqs: [
+                            {
+                                q: 'ローカルLLMで最も一般的なエラーは何ですか？',
+                                a: 'メモリ不足（OOM）。Q4_K_M量子化または小さいモデル（7Bの代わりに3B）に切り替えてください。'
+                            },
+                            {
+                                q: 'GPUがあるのに推論が遅いのはなぜ？',
+                                a: 'ollama psを実行 — "0 GPU Layers"の場合、OLLAMA_GPU_LAYERS=999を設定してOllamaを再起動。'
+                            },
+                            {
+                                q: '出力が文字化けする原因は？',
+                                a: 'instructバリアントではなくベースモデルを使用しているため。llama3.1:8b-instructに切り替えてください。'
+                            },
+                            {
+                                q: 'モデルが途中で停止するのはなぜ？',
+                                a: 'コンテキスト制限またはnum_predictが低すぎる（デフォルト128トークン）。OLLAMA_NUM_CTX=4096を設定。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '関連リソース',
+                        items: [
+                            '<strong>Ollamaのインストール方法</strong> — ステップバイステップインストールガイド',
+                            '<strong>LLM量子化の説明</strong> — Q4_K_MがデフォルトでありRAMに与える影響',
+                            '<strong>初心者向けおすすめモデル</strong> — 8GB RAM向けモデル推奨',
+                            '<strong>ノートパソコンでのローカルLLM実行</strong> — 熱管理とバッテリー最適化',
+                            '<strong>Ollama GitHubイシュー</strong> — モデル固有のバグのコミュニティサポート'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'セットアップ問題なしでモデルを比較',
+                        body: 'PromptQuorumは1つのプロンプトを25以上のモデルに送信して回答を評価 — ローカル設定不要。',
+                        cta: 'PromptQuorumを無料で試す',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            zh: {
+                title: '本地LLM排错指南：10种错误修复',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: '本地LLM排错指南\n修复10种常见错误',
+                        subtitle: '解决最常见的安装错误 — 2026年4月',
+                        link: 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=zh'
+                    },
+                    {
+                        type: 'list',
+                        h2: '核心要点',
+                        items: [
+                            '<strong>内存溢出（OOM）：</strong>切换到Q4_K_M量化或更小的模型。',
+                            '<strong>GPU未检测：</strong>更新NVIDIA驱动至525+（Linux）或452+（Windows）。',
+                            '<strong>推理非常慢：</strong>仅CPU模式 — 设置<code>OLLAMA_GPU_LAYERS=999</code>。',
+                            '<strong>连接拒绝：</strong>Ollama未运行。使用<code>ollama serve</code>启动。',
+                            '<strong>输出乱码：</strong>模型错误。使用instruct变体，而非base模型。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '错误1–5：快速参考',
+                        columns: ['错误', '症状', '修复方法'],
+                        rows: [
+                            { 错误: '1. 内存溢出', 症状: '加载时崩溃', '修复方法': 'Q4_K_M或更小模型' },
+                            { 错误: '2. GPU未检测', 症状: '比预期慢5–10倍', '修复方法': '更新驱动，重启Ollama' },
+                            { 错误: '3. 推理缓慢', 症状: '7B模型<5令牌/秒', '修复方法': '设置OLLAMA_GPU_LAYERS=999' },
+                            { 错误: '4. 连接拒绝', 症状: 'API调用立即失败', '修复方法': '运行：ollama serve' },
+                            { 错误: '5. 模型未找到', 症状: '"model not found"错误', '修复方法': 'ollama pull [模型名]' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '错误1：内存溢出（OOM）',
+                        intro: 'OOM错误意味着模型需要比可用RAM更多的内存 — 不是硬件故障。',
+                        items: [
+                            '<strong>检查RAM：</strong><code>free -h</code>（Linux）或任务管理器→性能（Windows）',
+                            '<strong>降低量化等级：</strong>Q8_0→Q4_K_M可节省约40%内存',
+                            '<strong>使用更小模型：</strong>8GB上7B失败？切换到llama3.2:3b（约2.5GB）',
+                            '<strong>关闭其他应用：</strong>浏览器和IDE会消耗模型所需的内存'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '错误2：GPU未被使用',
+                        intro: 'CPU推理慢5–10倍。首先验证GPU检测。',
+                        items: [
+                            '<strong>检查GPU：</strong>运行<code>nvidia-smi</code> — 应显示GPU名称和驱动版本',
+                            '<strong>NVIDIA Linux：</strong>安装驱动525+和CUDA工具包11.3+',
+                            '<strong>NVIDIA Windows：</strong>需要驱动452.39或更高版本',
+                            '<strong>Apple Silicon：</strong>Metal自动使用 — 用<code>ollama ps</code>确认'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '错误3：推理非常缓慢',
+                        intro: '7B模型低于5令牌/秒意味着仅CPU推理。',
+                        items: [
+                            '<strong>确认GPU状态：</strong>模型加载时运行<code>ollama ps</code> — 显示GPU/CPU层数',
+                            '<strong>启用GPU层：</strong>设置<code>OLLAMA_GPU_LAYERS=999</code>',
+                            '<strong>更快的量化：</strong>Q4_K_M比Q8_0快约30%',
+                            '<strong>减小模型规模：</strong>CPU上7B→3–10令牌/秒；3B→20–40令牌/秒'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '错误4–6：服务器与模型问题',
+                        items: [
+                            '<strong>错误4 — 连接拒绝：</strong>Ollama未运行。使用<code>ollama serve</code>启动',
+                            '<strong>验证服务器：</strong><code>curl http://localhost:11434</code> → "Ollama is running"',
+                            '<strong>错误5 — 模型未找到：</strong>名称区分大小写。使用<code>ollama list</code>查看确切名称',
+                            '<strong>拉取缺失模型：</strong><code>ollama pull llama3.2</code> — 标签很重要：llama3.2 ≠ llama3.2:3b',
+                            '<strong>错误6 — 文件损坏：</strong><code>ollama rm 模型 && ollama pull 模型</code>'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '错误7–10：高级问题',
+                        columns: ['错误', '原因', '修复方法'],
+                        rows: [
+                            { 错误: '7. CUDA/ROCm错误', 原因: '驱动版本不匹配', '修复方法': '更新至CUDA 11.3+ / ROCm 5.7+' },
+                            { 错误: '8. 输出乱码', 原因: '使用base而非instruct模型', '修复方法': '切换到llama3.1:8b-instruct' },
+                            { 错误: '9. 端口被占用', 原因: '其他进程使用11434端口', '修复方法': 'lsof -i :11434，kill PID' },
+                            { 错误: '10. 中途停止', 原因: '上下文限制或num_predict过低', '修复方法': '设置OLLAMA_NUM_CTX=4096' }
+                        ]
+                    },
+                    {
+                        type: 'numbered',
+                        h2: '5步调试流程',
+                        items: [
+                            '<strong>首先检查RAM。</strong><code>free -h</code> — 模型是否太大？',
+                            '<strong>验证GPU检测。</strong>运行<code>nvidia-smi</code>或<code>ollama ps</code>（模型运行中）。',
+                            '<strong>确认Ollama正在运行。</strong><code>curl http://localhost:11434</code>。',
+                            '<strong>检查确切的模型名称。</strong><code>ollama list</code>显示所有已下载模型。',
+                            '<strong>重新下载模型。</strong><code>ollama pull [模型]</code>验证sha256哈希值。'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '按模型大小分类的RAM需求',
+                        columns: ['模型', '量化等级', '所需RAM', '速度（CPU）'],
+                        rows: [
+                            { 模型: 'llama3.2:3b', '量化等级': 'Q4_K_M', '所需RAM': '约2.5 GB', '速度（CPU）': '25–45 令牌/秒' },
+                            { 模型: 'mistral:7b', '量化等级': 'Q4_K_M', '所需RAM': '约4.5 GB', '速度（CPU）': '10–20 令牌/秒' },
+                            { 模型: 'llama3.1:8b', '量化等级': 'Q4_K_M', '所需RAM': '约5.5 GB', '速度（CPU）': '8–15 令牌/秒' },
+                            { 模型: 'llama3.1:8b', '量化等级': 'Q8_0', '所需RAM': '约9 GB', '速度（CPU）': '5–10 令牌/秒' },
+                            { 模型: 'qwen2.5:14b', '量化等级': 'Q4_K_M', '所需RAM': '约9 GB', '速度（CPU）': '4–8 令牌/秒' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5个常见的调试错误',
+                        items: [
+                            '<strong>将OOM误认为硬件故障。</strong>OOM只是表示模型太大，无法放入可用内存。',
+                            '<strong>忽略系统负载。</strong>基准测试前关闭浏览器和IDE。',
+                            '<strong>忽略驱动版本不匹配。</strong>CUDA 11.x需要驱动≥450.80。',
+                            '<strong>使用错误的模型名称。</strong>llama3.2和llama3.2:3b是不同的标签。',
+                            '<strong>更新驱动后不重启Ollama。</strong>Ollama仅在启动时检测GPU。'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '常见问题',
+                        faqs: [
+                            {
+                                q: '本地LLM最常见的错误是什么？',
+                                a: '内存溢出（OOM）。切换到Q4_K_M量化或更小的模型（3B而不是7B）。'
+                            },
+                            {
+                                q: '有GPU但推理仍然缓慢，为什么？',
+                                a: '运行ollama ps — 如果显示"0 GPU Layers"，设置OLLAMA_GPU_LAYERS=999并重启Ollama。'
+                            },
+                            {
+                                q: '什么原因导致输出乱码？',
+                                a: '使用了base模型而非instruct变体。切换到llama3.1:8b-instruct。'
+                            },
+                            {
+                                q: '模型为什么在回答中途停止？',
+                                a: '上下文窗口限制或num_predict过低（默认128个令牌）。设置OLLAMA_NUM_CTX=4096。'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '相关资源',
+                        items: [
+                            '<strong>安装Ollama</strong> — 分步安装指南',
+                            '<strong>LLM量化详解</strong> — 为什么Q4_K_M是默认值及其对RAM的影响',
+                            '<strong>初学者最佳模型</strong> — 适合8GB内存系统的模型推荐',
+                            '<strong>在笔记本上运行本地LLM</strong> — 散热和电池优化',
+                            '<strong>Ollama GitHub Issues</strong> — 特定模型问题的社区支持'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: '无需安装问题即可比较模型',
+                        body: 'PromptQuorum将一个提示发送给25+个模型并对回答进行排名 — 无需本地配置。',
+                        cta: '免费试用PromptQuorum',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            }
+        };
+
+        function renderSlide(slide, lang) {
+            const articleUrl = 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=' + lang;
+            const footerHtml = `<div class="slide-footer"><a href="${articleUrl}">← Article</a></div>`;
+            let html = '';
+
+            switch (slide.type) {
+                case 'title':
+                    html = `
+                        <img src="/logo.svg" alt="PromptQuorum" class="logo" style="width:56px;height:56px;margin-bottom:20px;" />
+                        <h1 style="white-space:pre-line;">${slide.h1}</h1>
+                        <p>${slide.subtitle}</p>
+                        <p style="margin-top:32px;font-size:16px;">
+                            <a href="${slide.link}">${slide.link}</a>
+                        </p>
+                    `;
+                    break;
+
+                case 'list':
+                    html = `<h2>${slide.h2}</h2>`;
+                    if (slide.intro) html += `<p style="margin-bottom:8px;">${slide.intro}</p>`;
+                    html += '<ul style="font-size:clamp(13px,1.4vw,16px);">';
+                    slide.items.forEach(item => {
+                        html += `<li>${item}</li>`;
+                    });
+                    html += '</ul>';
+                    html += footerHtml;
+                    break;
+
+                case 'table':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<table><tr>';
+                    slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+                    html += '</tr>';
+                    slide.rows.forEach(row => {
+                        html += '<tr>';
+                        slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                    html += footerHtml;
+                    break;
+
+                case 'comparison':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top:40px;font-size:1.5em;">${slide.line1}</p>
+                        <p style="font-size:1.5em;">${slide.line2}</p>
+                        <p style="margin-top:40px;font-size:1.1em;color:#6750a4;">${slide.tip}</p>
+                        ${footerHtml}
+                    `;
+                    break;
+
+                case 'numbered':
+                    html = `<h2>${slide.h2}</h2>`;
+                    html += '<ol style="font-size:clamp(13px,1.4vw,16px);max-width:680px;width:100%;text-align:left;margin:12px auto;">';
+                    slide.items.forEach(item => { html += `<li style="margin-bottom:10px;">${item}</li>`; });
+                    html += '</ol>';
+                    html += footerHtml;
+                    break;
+
+                case 'faq':
+                    html = `<h2>${slide.h2}</h2>`;
+                    slide.faqs.forEach(faq => {
+                        html += `<div style="margin-bottom:16px;text-align:left;max-width:680px;width:100%;margin-left:auto;margin-right:auto;">
+                            <strong style="font-size:clamp(13px,1.3vw,15px);">Q: ${faq.q}</strong>
+                            <p style="margin-top:4px;font-size:clamp(12px,1.2vw,14px);color:#49454f;">A: ${faq.a}</p>
+                        </div>`;
+                    });
+                    html += footerHtml;
+                    break;
+
+                case 'cta':
+                    html = `
+                        <h2>${slide.h2}</h2>
+                        <p style="margin-top:20px;max-width:560px;">${slide.body}</p>
+                        <a href="${slide.href}" style="display:inline-block;margin-top:28px;padding:14px 28px;background:#6750a4;color:white;border-radius:8px;text-decoration:none;font-weight:700;font-size:18px;">${slide.cta}</a>
+                        ${footerHtml}
+                    `;
+                    break;
+            }
+
+            return `<div class="slide ${slide.type}">${html}</div>`;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en';
+        const isPrint = params.get('print') === '1';
+        const content = CONTENT[lang] || CONTENT.en;
+
+        document.getElementById('header-title').textContent = content.title;
+        const backLink = document.getElementById('back-link');
+        backLink.href = 'https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup?lang=' + lang;
+
+        const container = document.getElementById('slides-container');
+        content.slides.forEach(slide => {
+            container.innerHTML += renderSlide(slide, lang);
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function showSlide(n) {
+            if (n >= totalSlides) currentSlide = totalSlides - 1;
+            else if (n < 0) currentSlide = 0;
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        window.addEventListener('beforeprint', () => {
+            slides.forEach(slide => { slide.style.display = 'flex'; });
+        });
+        window.addEventListener('afterprint', () => {
+            slides.forEach(slide => { slide.style.removeProperty('display'); });
+            showSlide(currentSlide);
+        });
+
+        if (isPrint) {
+            window.addEventListener('load', () => { window.print(); });
+        }
+
+        showSlide(0);
+    </script>
+</body>
+</html>
