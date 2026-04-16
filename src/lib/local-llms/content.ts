@@ -18510,7 +18510,7 @@ print(response.choices[0].message.content)`,
         },
         howToBrowse: {
           title: 'How Do You Browse the Ollama Model Library?',
-          content: 'The Ollama Mac app includes a built-in chat interface. A model dropdown button at the bottom of the chat window shows your currently active model — click it to switch between installed models. To discover and download new models, visit ollama.com/library where each model page lists available tags, RAM requirements, and benchmark scores.',
+          content: 'There are two ways to work with Ollama models. **Switch installed models:** In the Ollama Mac app, click the model dropdown button at the bottom of the chat input (shows the current model name, e.g. "gemma3:1b") to switch between any locally installed model. **Find and download new models:** Visit ollama.com/library to browse 4500+ models by category, then use the CLI commands below to pull and manage them.',
           codeBlock: '# List all locally downloaded models\nollama list\n\n# Search for a model and pull it\nollama pull qwen2.5-coder:32b\n\n# See all available tags for a model\nollama show qwen2.5\n\n# Remove a model to free disk space\nollama rm llama3.2:3b',
           codeLanguage: 'bash',
         },
@@ -18829,7 +18829,7 @@ print(response.choices[0].message.content)`,
         },
         howToBrowse: {
           title: 'Wie durchsuchen Sie die Ollama-Bibliothek?',
-          content: 'Die Ollama Mac-App enthält eine integrierte Chat-Oberfläche. Ein Modell-Dropdown-Button am unteren Rand des Chat-Fensters zeigt das aktuell aktive Modell — klicken Sie darauf, um zwischen installierten Modellen zu wechseln. Neue Modelle entdecken und herunterladen können Sie auf ollama.com/library.',
+          content: 'Es gibt zwei Möglichkeiten, mit Ollama-Modellen zu arbeiten. **Installierte Modelle wechseln:** In der Ollama Mac-App klicken Sie auf den Modell-Dropdown-Button am unteren Rand des Chat-Eingabefeldes (zeigt den aktuellen Modellnamen, z. B. "gemma3:1b"), um zwischen lokal installierten Modellen zu wechseln. **Neue Modelle finden und herunterladen:** Besuchen Sie ollama.com/library, um 4500+ Modelle nach Kategorie zu durchsuchen, und nutzen Sie dann die CLI-Befehle unten zum Herunterladen.',
           codeBlock: `ollama list
 # Zeigt alle installierten Modelle an
 
@@ -19178,7 +19178,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
         },
         howToBrowse: {
           title: 'Comment parcourir la bibliothèque Ollama ?',
-          content: 'L\'application Ollama pour Mac inclut une interface de chat intégrée. Un bouton déroulant de sélection de modèle en bas de la fenêtre de chat affiche le modèle actif — cliquez dessus pour passer d\'un modèle installé à un autre. Pour découvrir et télécharger de nouveaux modèles, visitez ollama.com/library.',
+          content: 'Il existe deux façons de travailler avec les modèles Ollama. **Changer de modèle installé :** Dans l\'application Ollama pour Mac, cliquez sur le bouton déroulant de modèle en bas du champ de saisie du chat (affiche le nom du modèle actuel, ex. "gemma3:1b") pour basculer entre les modèles installés localement. **Trouver et télécharger de nouveaux modèles :** Visitez ollama.com/library pour parcourir plus de 4500 modèles par catégorie, puis utilisez les commandes CLI ci-dessous pour les télécharger.',
           codeBlock: `ollama list
 # Affiche tous les modèles installés
 
@@ -19527,7 +19527,7 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
         },
         howToBrowse: {
           title: 'Ollama ライブラリの探索方法',
-          content: 'Ollama Macアプリには組み込みチャットインターフェースがあります。チャットウィンドウ下部のモデルドロップダウンボタンで現在のモデルが表示され、クリックするとインストール済みモデルを切り替えられます。新しいモデルの発見・ダウンロードはollama.com/libraryで行えます。',
+          content: 'Ollamaモデルの操作には2つの方法があります。**インストール済みモデルの切り替え：** Ollama Macアプリのチャット入力欄下部にあるモデルドロップダウンボタン（例："gemma3:1b"と表示）をクリックして、ローカルにインストールされたモデルを切り替えます。**新しいモデルの検索・ダウンロード：** ollama.com/libraryで4500以上のモデルをカテゴリ別に検索し、以下のCLIコマンドでインストールします。',
           codeBlock: `ollama list
 # インストール済みモデル表示
 
@@ -19875,7 +19875,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         howToBrowse: {
           title: '如何浏览和选择Ollama模型',
-          content: 'Ollama Mac应用内置聊天界面。聊天窗口底部的模型下拉按钮显示当前活跃模型 — 点击可切换已安装的模型。访问ollama.com/library可发现并下载新模型，每个模型页面显示可用标签、RAM需求和基准测试分数。',
+          content: '使用Ollama模型有两种方式。**切换已安装模型：** 在Ollama Mac应用中，点击聊天输入框底部的模型下拉按钮（显示当前模型名，如"gemma3:1b"）切换本地已安装的模型。**查找并下载新模型：** 访问ollama.com/library按类别浏览4500+模型，然后使用下方CLI命令下载安装。',
           codeBlock: 'ollama pull llama3.1:8b\nollama run llama3.1:8b',
           codeLanguage: 'bash',
         },
