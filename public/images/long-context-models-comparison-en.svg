@@ -1,0 +1,78 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- White background -->
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <!-- Card -->
+  <rect x="24" y="16" width="752" height="368" rx="12" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Title -->
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Local LLMs Supporting 128K Context Window (April 2026)</text>
+
+  <!-- Column headers -->
+  <rect x="40" y="68" width="720" height="32" rx="6" fill="#6750A4"/>
+  <text x="160" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Model</text>
+  <text x="350" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Context Window</text>
+  <text x="510" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Practical Limit</text>
+  <text x="680" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Ollama Command</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="100" width="720" height="36" fill="#F7F2FA"/>
+  <text x="160" y="123" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">Llama 3.1 8B</text>
+  <rect x="300" y="109" width="96" height="18" rx="9" fill="#E8DEF8"/>
+  <text x="348" y="122" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">128K</text>
+  <text x="510" y="123" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F" text-anchor="middle">~32K reliable</text>
+  <text x="680" y="123" font-family="'SF Mono','Monaco',monospace" font-size="12" fill="#49454F" text-anchor="middle">ollama run llama3.1:8b</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="136" width="720" height="36" fill="#FFFFFF"/>
+  <text x="160" y="159" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">Llama 3.3 70B</text>
+  <rect x="300" y="145" width="96" height="18" rx="9" fill="#E8DEF8"/>
+  <text x="348" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">128K</text>
+  <text x="510" y="159" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F" text-anchor="middle">~64K reliable</text>
+  <text x="680" y="159" font-family="'SF Mono','Monaco',monospace" font-size="12" fill="#49454F" text-anchor="middle">ollama run llama3.3:70b</text>
+
+  <!-- Row 3 -->
+  <rect x="40" y="172" width="720" height="36" fill="#F7F2FA"/>
+  <text x="160" y="195" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">Qwen2.5 7B</text>
+  <rect x="300" y="181" width="96" height="18" rx="9" fill="#E8DEF8"/>
+  <text x="348" y="194" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">128K</text>
+  <text x="510" y="195" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F" text-anchor="middle">~32K reliable</text>
+  <text x="680" y="195" font-family="'SF Mono','Monaco',monospace" font-size="12" fill="#49454F" text-anchor="middle">ollama run qwen2.5:7b</text>
+
+  <!-- Row 4 -->
+  <rect x="40" y="208" width="720" height="36" fill="#FFFFFF"/>
+  <text x="160" y="231" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">Qwen2.5 72B</text>
+  <rect x="300" y="217" width="96" height="18" rx="9" fill="#E8DEF8"/>
+  <text x="348" y="230" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">128K</text>
+  <text x="510" y="231" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F" text-anchor="middle">~64K reliable</text>
+  <text x="680" y="231" font-family="'SF Mono','Monaco',monospace" font-size="12" fill="#49454F" text-anchor="middle">ollama run qwen2.5:72b</text>
+
+  <!-- Row 5 -->
+  <rect x="40" y="244" width="720" height="36" fill="#F7F2FA"/>
+  <text x="160" y="267" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#1C1B1F" text-anchor="middle">Mistral Small 3.1 24B</text>
+  <rect x="300" y="253" width="96" height="18" rx="9" fill="#E8DEF8"/>
+  <text x="348" y="266" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">128K</text>
+  <text x="510" y="267" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F" text-anchor="middle">~32K reliable</text>
+  <text x="680" y="267" font-family="'SF Mono','Monaco',monospace" font-size="12" fill="#49454F" text-anchor="middle">ollama run mistral-small3.1</text>
+
+  <!-- Row 6 — Mistral 7B (32K only, dimmed) -->
+  <rect x="40" y="280" width="720" height="36" fill="#FFFFFF"/>
+  <text x="160" y="303" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#79747E" text-anchor="middle">Mistral 7B v0.3</text>
+  <rect x="300" y="289" width="96" height="18" rx="9" fill="#F7F2FA"/>
+  <text x="348" y="302" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#79747E" text-anchor="middle">32K only</text>
+  <text x="510" y="303" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#79747E" text-anchor="middle">~16K reliable</text>
+  <text x="680" y="303" font-family="'SF Mono','Monaco',monospace" font-size="12" fill="#79747E" text-anchor="middle">ollama run mistral</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="328" x2="760" y2="328" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Caption -->
+  <text x="400" y="354" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="500" fill="#49454F" text-anchor="middle">Practical reliable limit is 2–4× lower than the advertised 128K maximum — quality degrades at long ranges.</text>
+  <text x="400" y="374" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Ollama defaults to 2048 tokens — always set num_ctx explicitly to access long context.</text>
+</svg>
