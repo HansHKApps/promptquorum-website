@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Open Source Models on Ollama in 2026 | PromptQuorum</title>
+  <meta name="description" content="Top open source models on Ollama: Llama, Qwen, DeepSeek ranked by use case. Download commands, performance data, model comparison table updated April 2026." />
+  <meta property="og:title" content="Top Open Source Models on Ollama in 2026 — PromptQuorum" />
+  <meta property="og:description" content="The most downloaded Ollama models: Llama 3.x, Qwen2.5, DeepSeek-R1, Mistral, Gemma 3. Compare by use case with exact pull commands." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.promptquorum.com/local-llms/top-open-source-models-ollama" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f5f5f5;
+      color: #1C1B1F;
+    }
+
+    .presentation-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .header {
+      padding: 16px 24px;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E8E7EB;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-left img {
+      height: 32px;
+      width: auto;
+    }
+
+    .header-left span {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1C1B1F;
+    }
+
+    .header-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-links a {
+      color: #6750A4;
+      text-decoration: none;
+      font-size: 13px;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .header-links a:hover {
+      border-bottom-color: #6750A4;
+    }
+
+    .content-area {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      padding: 48px 56px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: white;
+      overflow: hidden;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    .slide.title {
+      text-align: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .slide.title .logo {
+      height: 48px;
+      width: auto;
+      margin-bottom: 10px;
+    }
+
+    .slide h1 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 20px 0;
+      color: #1C1B1F;
+    }
+
+    .slide h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: #1C1B1F;
+    }
+
+    .slide p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      color: #49454F;
+    }
+
+    .slide ul, .slide ol {
+      margin-left: 24px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #49454F;
+    }
+
+    .slide li {
+      margin-bottom: 12px;
+    }
+
+    .slide table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+    .slide table th {
+      background: #F5F1FA;
+      padding: 12px 8px;
+      text-align: left;
+      font-weight: 600;
+      color: #1C1B1F;
+      border-bottom: 2px solid #E8DEF8;
+    }
+
+    .slide table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid #E8E7EB;
+      color: #49454F;
+    }
+
+    .slide table tr:nth-child(even) {
+      background: #FEFCFF;
+    }
+
+    .slide strong {
+      color: #6750A4;
+      font-weight: 600;
+    }
+
+    .controls {
+      padding: 16px 24px;
+      background: #FFFFFF;
+      border-top: 1px solid #E8E7EB;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .controls button {
+      padding: 8px 16px;
+      background: #6750A4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .controls button:hover:not(:disabled) {
+      background: #5a4390;
+    }
+
+    .controls button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .slide-counter {
+      font-size: 13px;
+      color: #79747E;
+      font-weight: 500;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+      .presentation-container {
+        height: auto;
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+      }
+      .header, .controls {
+        display: none;
+      }
+      .slide {
+        position: static;
+        page-break-after: always;
+        height: 100vh;
+        display: flex !important;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation-container">
+    <div class="header">
+      <div class="header-left">
+        <img src="/logo.svg" alt="PromptQuorum" />
+        <span id="header-title">Top Open Source Models on Ollama in 2026</span>
+      </div>
+      <div class="header-links">
+        <a id="back-link" href="https://www.promptquorum.com/local-llms/top-open-source-models-ollama">← Back to Article</a>
+        <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+      </div>
+    </div>
+
+    <div class="content-area" id="slides-container">
+      <!-- Slides will be injected here -->
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+      <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const CONTENT = {
+      en: {
+        title: 'Top Open Source Models on Ollama in 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Top Open Source Models on Ollama in 2026',
+            subtitle: 'Most Downloaded & Highest Rated by Use Case',
+            link: 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama'
+          },
+          {
+            type: 'list',
+            h2: 'Key Facts About Ollama Models',
+            items: [
+              '<strong>Most downloaded:</strong> Llama 3.2 3B and Llama 3.1 8B',
+              '<strong>Fastest growing:</strong> Qwen2.5 (coding and multilingual)',
+              '<strong>Best reasoning:</strong> DeepSeek-R1 7B (52% on MATH benchmarks)',
+              '<strong>Vision support:</strong> Llama 3.2 Vision, Gemma 3, Qwen-VL',
+              '<strong>200+ models</strong> available in the Ollama library as of April 2026'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Most Popular Models in 2026',
+            items: [
+              '<strong>Llama 3.2 3B:</strong> Most pulled model overall. Best for first-time users.',
+              '<strong>Llama 3.1 8B:</strong> Best balance of quality and RAM (5.5 GB). Works on 8 GB machines.',
+              '<strong>Qwen2.5 7B:</strong> Fastest-growing. 72% HumanEval, strong coding and 29 native languages.',
+              '<strong>DeepSeek-R1 7B:</strong> Chain-of-thought reasoning. Best local math performance at 7B size.',
+              '<strong>Mistral 7B:</strong> Efficient and EU-friendly (developed by Mistral AI, Paris).'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Top 5 Models by Use Case',
+            columns: ['Use Case', 'Best Model', 'RAM', 'Benchmark'],
+            rows: [
+              { 'Use Case': 'General Chat (Beginner)', 'Best Model': 'llama3.2:3b', 'RAM': '2.5 GB', 'Benchmark': '60% HumanEval' },
+              { 'Use Case': 'Quality Chat', 'Best Model': 'llama3.1:8b', 'RAM': '5.5 GB', 'Benchmark': '72% HumanEval' },
+              { 'Use Case': 'Coding', 'Best Model': 'qwen2.5-coder:7b', 'RAM': '4.7 GB', 'Benchmark': '72% HumanEval' },
+              { 'Use Case': 'Reasoning & Math', 'Best Model': 'deepseek-r1:7b', 'RAM': '5 GB', 'Benchmark': '52% MATH' },
+              { 'Use Case': 'Image Understanding', 'Best Model': 'llama3.2-vision:11b', 'RAM': '8 GB', 'Benchmark': 'Vision support' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'More Use Case Recommendations',
+            items: [
+              '<strong>Multilingual:</strong> `ollama run qwen2.5:7b` — 29 native languages',
+              '<strong>Fast & lightweight:</strong> `ollama run gemma2:2b` — 1.7 GB RAM, 40–60 tok/s',
+              '<strong>High quality (16 GB):</strong> `ollama run mistral-small3.1` — Near-70B quality',
+              '<strong>Embeddings:</strong> `ollama run nomic-embed-text` — RAG pipelines',
+              '<strong>Document Q&A:</strong> `ollama run llama3.1:8b` + Open WebUI RAG'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Top 10 Models Complete Ranking',
+            columns: ['Rank', 'Model', 'Best For', 'RAM', 'Benchmark'],
+            rows: [
+              { 'Rank': '1', 'Model': 'llama3.2:3b', 'Best For': 'First model, general chat', 'RAM': '2.5 GB', 'Benchmark': '60%' },
+              { 'Rank': '2', 'Model': 'llama3.1:8b', 'Best For': 'Quality general chat', 'RAM': '5.5 GB', 'Benchmark': '72%' },
+              { 'Rank': '3', 'Model': 'qwen2.5:7b', 'Best For': 'Multilingual, coding', 'RAM': '4.7 GB', 'Benchmark': '72%' },
+              { 'Rank': '4', 'Model': 'qwen2.5-coder:7b', 'Best For': 'Coding focus', 'RAM': '4.7 GB', 'Benchmark': '72%' },
+              { 'Rank': '5', 'Model': 'deepseek-r1:7b', 'Best For': 'Reasoning, math', 'RAM': '5 GB', 'Benchmark': '52% MATH' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'What Is DeepSeek-R1?',
+            items: [
+              '<strong>Reasoning model:</strong> Generates explicit chain-of-thought before final answer',
+              '<strong>Performance:</strong> 52% on MATH (competition math) vs 28% for Mistral 7B',
+              '<strong>Trade-off:</strong> Slower (more tokens per response) but significantly more accurate',
+              '<strong>Best for:</strong> Math, logic puzzles, step-by-step problem solving',
+              '<strong>Command:</strong> `ollama run deepseek-r1:7b`'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Vision Models: Image Input Support',
+            columns: ['Model', 'RAM', 'Resolution', 'Ollama Command'],
+            rows: [
+              { 'Model': 'llama3.2-vision:11b', 'RAM': '~8 GB', 'Resolution': 'Yes', 'Ollama Command': 'ollama run llama3.2-vision:11b' },
+              { 'Model': 'gemma3:9b (vision)', 'RAM': '~6 GB', 'Resolution': 'Yes', 'Ollama Command': 'ollama run gemma3:9b' },
+              { 'Model': 'minicpm-v:8b', 'RAM': '~5.5 GB', 'Resolution': 'Yes', 'Ollama Command': 'ollama run minicpm-v' },
+              { 'Model': 'qwen-vl:7b', 'RAM': '~5 GB', 'Resolution': 'Yes', 'Ollama Command': 'ollama pull qwen-vl' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'How to Pull & Run Ollama Models',
+            items: [
+              '<strong>List local models:</strong> `ollama list`',
+              '<strong>Pull a model:</strong> `ollama pull qwen2.5-coder:32b`',
+              '<strong>Run a model:</strong> `ollama run llama3.1:8b`',
+              '<strong>See all tags:</strong> `ollama show qwen2.5` (size variants)',
+              '<strong>Remove model:</strong> `ollama rm llama3.2:3b` (free disk space)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'How to Choose Your Model',
+            items: [
+              '<strong>Check RAM first:</strong> 3B models = 2–3 GB, 7B = 5 GB, 13B = 10 GB, 70B = 40+ GB',
+              '<strong>Consider speed:</strong> Smaller = faster. Larger = better quality.',
+              '<strong>Match use case:</strong> Coding vs chat vs reasoning vs vision',
+              '<strong>Test locally:</strong> Try models before downloading large variants',
+              '<strong>Use ollama show:</strong> Verify exact RAM requirements before pulling'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Common Questions About Ollama Models',
+            faqs: [
+              { q: 'How much RAM do I need?', a: '7B models: 5–6 GB. 13B: 10–14 GB. 70B: 42–48 GB with quantization. Use `ollama show [model]` to verify.' },
+              { q: 'Can I run offline?', a: 'Yes. After initial download, all inference runs locally without internet.' },
+              { q: 'Which is best for coding?', a: 'Qwen2.5-Coder 7B (72% HumanEval) or Llama 3.1 8B (72%). Both excellent.' },
+              { q: 'Is Ollama free?', a: 'Yes. All models are open-source with free licenses. No API fees, no subscriptions.' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Quick Reference: Model Names & Commands',
+            intro: 'Copy & paste these commands into your terminal:',
+            items: [
+              '`ollama run llama3.2:3b` — Best starting point',
+              '`ollama run qwen2.5-coder:7b` — For coding tasks',
+              '`ollama run deepseek-r1:7b` — For reasoning & math',
+              '`ollama run llama3.2-vision:11b` — For image analysis',
+              '`ollama pull qwen2.5:7b` — Multilingual, fastest-growing'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Explore More About Local LLMs',
+            body: 'Ready to run these models locally? PromptQuorum helps you compare models, understand quantization, and optimize for your hardware.',
+            cta: 'Read Full Article',
+            href: 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama'
+          }
+        ]
+      },
+      de: {
+        title: 'Top Open-Source-Modelle auf Ollama 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Top Open-Source-Modelle auf Ollama 2026',
+            subtitle: 'Meistgeladen & Höchste Bewertung nach Anwendungsfall',
+            link: 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=de'
+          },
+          {
+            type: 'list',
+            h2: 'Wichtige Fakten über Ollama-Modelle',
+            items: [
+              '<strong>Meistgeladen:</strong> Llama 3.2 3B und Llama 3.1 8B',
+              '<strong>Am schnellsten wachsend:</strong> Qwen2.5 (Codierung und mehrsprachig)',
+              '<strong>Bestes Reasoning:</strong> DeepSeek-R1 7B (52% MATH-Benchmarks)',
+              '<strong>Vision-Unterstützung:</strong> Llama 3.2 Vision, Gemma 3, Qwen-VL',
+              '<strong>200+ Modelle</strong> in der Ollama-Bibliothek verfügbar (April 2026)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Beliebteste Modelle 2026',
+            items: [
+              '<strong>Llama 3.2 3B:</strong> Meistgezogenes Modell insgesamt. Beste für Anfänger.',
+              '<strong>Llama 3.1 8B:</strong> Beste Balance zwischen Qualität und RAM (5,5 GB). 8-GB-Maschinen.',
+              '<strong>Qwen2.5 7B:</strong> Am schnellsten wachsend. 72% HumanEval, starke Codierung.',
+              '<strong>DeepSeek-R1 7B:</strong> Chain-of-Thought-Reasoning. Beste lokale Mathe-Leistung.',
+              '<strong>Mistral 7B:</strong> Effizient und EU-freundlich (Mistral AI, Paris).'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Top 5 Modelle nach Anwendungsfall',
+            columns: ['Anwendungsfall', 'Bestes Modell', 'RAM', 'Benchmark'],
+            rows: [
+              { 'Anwendungsfall': 'Allgemeines Chat', 'Bestes Modell': 'llama3.2:3b', 'RAM': '2,5 GB', 'Benchmark': '60%' },
+              { 'Anwendungsfall': 'Qualitäts-Chat', 'Bestes Modell': 'llama3.1:8b', 'RAM': '5,5 GB', 'Benchmark': '72%' },
+              { 'Anwendungsfall': 'Codierung', 'Bestes Modell': 'qwen2.5-coder:7b', 'RAM': '4,7 GB', 'Benchmark': '72%' },
+              { 'Anwendungsfall': 'Reasoning & Mathe', 'Bestes Modell': 'deepseek-r1:7b', 'RAM': '5 GB', 'Benchmark': '52% MATH' },
+              { 'Anwendungsfall': 'Bildverstehen', 'Bestes Modell': 'llama3.2-vision:11b', 'RAM': '8 GB', 'Benchmark': 'Vision' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Weitere Anwendungsfälle',
+            items: [
+              '<strong>Mehrsprachig:</strong> `ollama run qwen2.5:7b` — 29 Sprachen',
+              '<strong>Schnell & leicht:</strong> `ollama run gemma2:2b` — 1,7 GB RAM',
+              '<strong>Hohe Qualität (16 GB):</strong> `ollama run mistral-small3.1`',
+              '<strong>Embeddings:</strong> `ollama run nomic-embed-text` — RAG-Pipelines',
+              '<strong>Dokument Q&A:</strong> `ollama run llama3.1:8b` + Open WebUI'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Top 10 Modelle Ranking',
+            columns: ['Rang', 'Modell', 'Beste für', 'RAM', 'Benchmark'],
+            rows: [
+              { 'Rang': '1', 'Modell': 'llama3.2:3b', 'Beste für': 'Anfänger-Chat', 'RAM': '2,5 GB', 'Benchmark': '60%' },
+              { 'Rang': '2', 'Modell': 'llama3.1:8b', 'Beste für': 'Qualitäts-Chat', 'RAM': '5,5 GB', 'Benchmark': '72%' },
+              { 'Rang': '3', 'Modell': 'qwen2.5:7b', 'Beste für': 'Mehrsprachig', 'RAM': '4,7 GB', 'Benchmark': '72%' },
+              { 'Rang': '4', 'Modell': 'qwen2.5-coder:7b', 'Beste für': 'Codierung', 'RAM': '4,7 GB', 'Benchmark': '72%' },
+              { 'Rang': '5', 'Modell': 'deepseek-r1:7b', 'Beste für': 'Reasoning, Mathe', 'RAM': '5 GB', 'Benchmark': '52%' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Was ist DeepSeek-R1?',
+            items: [
+              '<strong>Reasoning-Modell:</strong> Erzeugt explizite Chain-of-Thought-Gedanken',
+              '<strong>Leistung:</strong> 52% auf MATH (Wettbewerbsmathe) vs 28% Mistral 7B',
+              '<strong>Kompromiss:</strong> Langsamer, aber signifikant genauer',
+              '<strong>Beste für:</strong> Mathe, Logikrätsel, Schritt-für-Schritt-Problemlösung',
+              '<strong>Befehl:</strong> `ollama run deepseek-r1:7b`'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Vision-Modelle: Bildunterstützung',
+            columns: ['Modell', 'RAM', 'Bildverarbeitung', 'Ollama-Befehl'],
+            rows: [
+              { 'Modell': 'llama3.2-vision:11b', 'RAM': '~8 GB', 'Bildverarbeitung': 'Ja', 'Ollama-Befehl': 'ollama run llama3.2-vision:11b' },
+              { 'Modell': 'gemma3:9b (vision)', 'RAM': '~6 GB', 'Bildverarbeitung': 'Ja', 'Ollama-Befehl': 'ollama run gemma3:9b' },
+              { 'Modell': 'minicpm-v:8b', 'RAM': '~5,5 GB', 'Bildverarbeitung': 'Ja', 'Ollama-Befehl': 'ollama run minicpm-v' },
+              { 'Modell': 'qwen-vl:7b', 'RAM': '~5 GB', 'Bildverarbeitung': 'Ja', 'Ollama-Befehl': 'ollama pull qwen-vl' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Modelle ziehen & ausführen',
+            items: [
+              '<strong>Lokale Modelle auflisten:</strong> `ollama list`',
+              '<strong>Modell ziehen:</strong> `ollama pull qwen2.5-coder:32b`',
+              '<strong>Modell ausführen:</strong> `ollama run llama3.1:8b`',
+              '<strong>Alle Tags anzeigen:</strong> `ollama show qwen2.5` (Größenvarianten)',
+              '<strong>Modell entfernen:</strong> `ollama rm llama3.2:3b` (Speicher freigeben)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Wie wählt man sein Modell',
+            items: [
+              '<strong>RAM-Anforderungen überprüfen:</strong> 3B = 2–3 GB, 7B = 5 GB, 13B = 10 GB',
+              '<strong>Geschwindigkeit berücksichtigen:</strong> Kleiner = schneller. Größer = besser.',
+              '<strong>Anwendungsfall abgleichen:</strong> Codierung vs Chat vs Reasoning',
+              '<strong>Lokal testen:</strong> Vor großen Varianten ausprobieren',
+              '<strong>ollama show nutzen:</strong> RAM-Anforderungen vor dem Download verifizieren'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Häufige Fragen zu Ollama-Modellen',
+            faqs: [
+              { q: 'Wie viel RAM brauche ich?', a: '7B: 5–6 GB. 13B: 10–14 GB. 70B: 42–48 GB mit Quantisierung. `ollama show [modell]` nutzen.' },
+              { q: 'Kann ich offline arbeiten?', a: 'Ja. Nach dem Download läuft alles lokal ohne Internet.' },
+              { q: 'Welches ist am besten für Codierung?', a: 'Qwen2.5-Coder 7B (72%) oder Llama 3.1 8B (72%). Beide ausgezeichnet.' },
+              { q: 'Ist Ollama kostenlos?', a: 'Ja. Alle Modelle sind quelloffen mit freien Lizenzen. Keine API-Gebühren.' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Schnellreferenz: Modellnamen & Befehle',
+            intro: 'Kopieren Sie diese Befehle in Ihr Terminal:',
+            items: [
+              '`ollama run llama3.2:3b` — Beste Startpunkt',
+              '`ollama run qwen2.5-coder:7b` — Für Codierungsaufgaben',
+              '`ollama run deepseek-r1:7b` — Für Reasoning & Mathe',
+              '`ollama run llama3.2-vision:11b` — Für Bildanalyse',
+              '`ollama pull qwen2.5:7b` — Mehrsprachig, am schnellsten wachsend'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Mehr über lokale LLMs',
+            body: 'Bereit, diese Modelle lokal auszuführen? PromptQuorum hilft Ihnen, Modelle zu vergleichen, Quantisierung zu verstehen und Ihre Hardware zu optimieren.',
+            cta: 'Vollständigen Artikel lesen',
+            href: 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=de'
+          }
+        ]
+      },
+      fr: {
+        title: 'Top modèles open source sur Ollama 2026',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Top modèles open source sur Ollama 2026',
+            subtitle: 'Plus téléchargés et mieux évalués par cas d\'utilisation',
+            link: 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=fr'
+          },
+          {
+            type: 'list',
+            h2: 'Faits clés sur les modèles Ollama',
+            items: [
+              '<strong>Plus téléchargés :</strong> Llama 3.2 3B et Llama 3.1 8B',
+              '<strong>La plus rapide croissance :</strong> Qwen2.5 (codage et multilingue)',
+              '<strong>Meilleur raisonnement :</strong> DeepSeek-R1 7B (52 % benchmarks MATH)',
+              '<strong>Support vision :</strong> Llama 3.2 Vision, Gemma 3, Qwen-VL',
+              '<strong>200+ modèles</strong> disponibles dans la bibliothèque Ollama (avril 2026)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Modèles les plus populaires 2026',
+            items: [
+              '<strong>Llama 3.2 3B :</strong> Modèle le plus populaire. Meilleur pour les débutants.',
+              '<strong>Llama 3.1 8B :</strong> Meilleur équilibre qualité/RAM (5,5 GB). Machines 8 GB.',
+              '<strong>Qwen2.5 7B :</strong> La plus rapide croissance. 72% HumanEval, fort en codage.',
+              '<strong>DeepSeek-R1 7B :</strong> Raisonnement chain-of-thought. Meilleure perf math local.',
+              '<strong>Mistral 7B :</strong> Efficace et EU-friendly (Mistral AI, Paris).'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Top 5 modèles par cas d\'utilisation',
+            columns: ['Cas d\'utilisation', 'Meilleur modèle', 'RAM', 'Benchmark'],
+            rows: [
+              { 'Cas d\'utilisation': 'Chat général', 'Meilleur modèle': 'llama3.2:3b', 'RAM': '2,5 GB', 'Benchmark': '60%' },
+              { 'Cas d\'utilisation': 'Chat qualité', 'Meilleur modèle': 'llama3.1:8b', 'RAM': '5,5 GB', 'Benchmark': '72%' },
+              { 'Cas d\'utilisation': 'Codage', 'Meilleur modèle': 'qwen2.5-coder:7b', 'RAM': '4,7 GB', 'Benchmark': '72%' },
+              { 'Cas d\'utilisation': 'Raisonnement', 'Meilleur modèle': 'deepseek-r1:7b', 'RAM': '5 GB', 'Benchmark': '52% MATH' },
+              { 'Cas d\'utilisation': 'Vision', 'Meilleur modèle': 'llama3.2-vision:11b', 'RAM': '8 GB', 'Benchmark': 'Vision' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Autres cas d\'utilisation recommandés',
+            items: [
+              '<strong>Multilingue :</strong> `ollama run qwen2.5:7b` — 29 langues natives',
+              '<strong>Rapide & léger :</strong> `ollama run gemma2:2b` — 1,7 GB RAM',
+              '<strong>Haute qualité (16 GB) :</strong> `ollama run mistral-small3.1`',
+              '<strong>Embeddings :</strong> `ollama run nomic-embed-text` — Pipelines RAG',
+              '<strong>Q&A documents :</strong> `ollama run llama3.1:8b` + Open WebUI'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Top 10 modèles classement complet',
+            columns: ['Rang', 'Modèle', 'Meilleur pour', 'RAM', 'Benchmark'],
+            rows: [
+              { 'Rang': '1', 'Modèle': 'llama3.2:3b', 'Meilleur pour': 'Chat débutant', 'RAM': '2,5 GB', 'Benchmark': '60%' },
+              { 'Rang': '2', 'Modèle': 'llama3.1:8b', 'Meilleur pour': 'Chat qualité', 'RAM': '5,5 GB', 'Benchmark': '72%' },
+              { 'Rang': '3', 'Modèle': 'qwen2.5:7b', 'Meilleur pour': 'Multilingue', 'RAM': '4,7 GB', 'Benchmark': '72%' },
+              { 'Rang': '4', 'Modèle': 'qwen2.5-coder:7b', 'Meilleur pour': 'Codage', 'RAM': '4,7 GB', 'Benchmark': '72%' },
+              { 'Rang': '5', 'Modèle': 'deepseek-r1:7b', 'Meilleur pour': 'Raisonnement', 'RAM': '5 GB', 'Benchmark': '52%' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Qu\'est-ce que DeepSeek-R1?',
+            items: [
+              '<strong>Modèle de raisonnement :</strong> Génère chain-of-thought explicite avant réponse',
+              '<strong>Perf :</strong> 52% MATH vs 28% Mistral 7B, même taille',
+              '<strong>Compromis :</strong> Plus lent, mais significativement plus précis',
+              '<strong>Meilleur pour :</strong> Maths, énigmes, résolution étape-par-étape',
+              '<strong>Commande :</strong> `ollama run deepseek-r1:7b`'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'Modèles Vision : Support images',
+            columns: ['Modèle', 'RAM', 'Traitement images', 'Commande Ollama'],
+            rows: [
+              { 'Modèle': 'llama3.2-vision:11b', 'RAM': '~8 GB', 'Traitement images': 'Oui', 'Commande Ollama': 'ollama run llama3.2-vision:11b' },
+              { 'Modèle': 'gemma3:9b (vision)', 'RAM': '~6 GB', 'Traitement images': 'Oui', 'Commande Ollama': 'ollama run gemma3:9b' },
+              { 'Modèle': 'minicpm-v:8b', 'RAM': '~5,5 GB', 'Traitement images': 'Oui', 'Commande Ollama': 'ollama run minicpm-v' },
+              { 'Modèle': 'qwen-vl:7b', 'RAM': '~5 GB', 'Traitement images': 'Oui', 'Commande Ollama': 'ollama pull qwen-vl' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Télécharger & exécuter les modèles',
+            items: [
+              '<strong>Lister modèles locaux :</strong> `ollama list`',
+              '<strong>Télécharger un modèle :</strong> `ollama pull qwen2.5-coder:32b`',
+              '<strong>Exécuter un modèle :</strong> `ollama run llama3.1:8b`',
+              '<strong>Voir tous les tags :</strong> `ollama show qwen2.5` (variantes)',
+              '<strong>Supprimer un modèle :</strong> `ollama rm llama3.2:3b` (libérer disque)'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Comment choisir votre modèle',
+            items: [
+              '<strong>Vérifier RAM :</strong> 3B = 2–3 GB, 7B = 5 GB, 13B = 10 GB, 70B = 40+ GB',
+              '<strong>Considérer vitesse :</strong> Petit = plus rapide. Grand = meilleure qualité.',
+              '<strong>Correspondre cas d\'usage :</strong> Codage vs chat vs raisonnement vs vision',
+              '<strong>Tester localement :</strong> Essayer avant grosses variantes',
+              '<strong>Utiliser ollama show :</strong> Vérifier RAM avant téléchargement'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Questions communes sur les modèles Ollama',
+            faqs: [
+              { q: 'Combien de RAM faut-il?', a: '7B: 5–6 GB. 13B: 10–14 GB. 70B: 42–48 GB quantifié. Utiliser `ollama show [modèle]`.' },
+              { q: 'Puis-je exécuter hors ligne?', a: 'Oui. Après le téléchargement initial, tout s\'exécute localement sans internet.' },
+              { q: 'Quel est le meilleur pour le codage?', a: 'Qwen2.5-Coder 7B (72%) ou Llama 3.1 8B (72%). Les deux excellents.' },
+              { q: 'Ollama est-il gratuit?', a: 'Oui. Tous les modèles open-source avec licences libres. Pas de frais API.' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Référence rapide : Noms & commandes',
+            intro: 'Copiez-collez ces commandes dans votre terminal:',
+            items: [
+              '`ollama run llama3.2:3b` — Meilleur démarrage',
+              '`ollama run qwen2.5-coder:7b` — Pour codage',
+              '`ollama run deepseek-r1:7b` — Pour raisonnement',
+              '`ollama run llama3.2-vision:11b` — Pour images',
+              '`ollama pull qwen2.5:7b` — Multilingue, plus rapide'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: 'Explorez plus sur les LLMs locaux',
+            body: 'Prêt à exécuter ces modèles localement? PromptQuorum vous aide à comparer, comprendre la quantification et optimiser votre hardware.',
+            cta: 'Lire l\'article complet',
+            href: 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=fr'
+          }
+        ]
+      },
+      ja: {
+        title: 'Ollama 2026年トップオープンソースモデル',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Ollama 2026年トップオープンソースモデル',
+            subtitle: 'ダウンロード数最多・評価最高のモデルをユースケース別に比較',
+            link: 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=ja'
+          },
+          {
+            type: 'list',
+            h2: 'Ollamaモデルの重要事実',
+            items: [
+              '<strong>最多ダウンロード:</strong> Llama 3.2 3B と Llama 3.1 8B',
+              '<strong>最速成長中:</strong> Qwen2.5（コーディングと多言語対応）',
+              '<strong>最高推論性能:</strong> DeepSeek-R1 7B（52% MATH ベンチマーク）',
+              '<strong>ビジョン対応:</strong> Llama 3.2 Vision、Gemma 3、Qwen-VL',
+              '<strong>200+ モデル</strong>がOllama ライブラリで利用可能（2026年4月）'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '2026年最も人気のあるモデル',
+            items: [
+              '<strong>Llama 3.2 3B:</strong> 最多ダウンロードモデル。初心者向け最適。',
+              '<strong>Llama 3.1 8B:</strong> 品質と RAM の最高バランス（5.5 GB）。8GB マシン対応。',
+              '<strong>Qwen2.5 7B:</strong> 最速成長中。72% HumanEval、強力なコーディング。',
+              '<strong>DeepSeek-R1 7B:</strong> Chain-of-thought 推論。ローカル数学最高性能。',
+              '<strong>Mistral 7B:</strong> 効率的でEU重視（Mistral AI、パリ）。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'ユースケース別トップ5モデル',
+            columns: ['ユースケース', '最高モデル', 'RAM', 'ベンチマーク'],
+            rows: [
+              { 'ユースケース': '一般チャット', '最高モデル': 'llama3.2:3b', 'RAM': '2.5 GB', 'ベンチマーク': '60%' },
+              { 'ユースケース': '高品質チャット', '最高モデル': 'llama3.1:8b', 'RAM': '5.5 GB', 'ベンチマーク': '72%' },
+              { 'ユースケース': 'コーディング', '最高モデル': 'qwen2.5-coder:7b', 'RAM': '4.7 GB', 'ベンチマーク': '72%' },
+              { 'ユースケース': '推論・数学', '最高モデル': 'deepseek-r1:7b', 'RAM': '5 GB', 'ベンチマーク': '52% MATH' },
+              { 'ユースケース': '画像理解', '最高モデル': 'llama3.2-vision:11b', 'RAM': '8 GB', 'ベンチマーク': 'Vision' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'その他のユースケース推奨',
+            items: [
+              '<strong>多言語対応:</strong> `ollama run qwen2.5:7b` — 29ネイティブ言語',
+              '<strong>高速・軽量:</strong> `ollama run gemma2:2b` — 1.7 GB RAM',
+              '<strong>高品質（16GB）:</strong> `ollama run mistral-small3.1`',
+              '<strong>埋め込み生成:</strong> `ollama run nomic-embed-text` — RAG パイプライン',
+              '<strong>ドキュメントQ&A:</strong> `ollama run llama3.1:8b` + Open WebUI'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'トップ10モデル完全ランキング',
+            columns: ['順位', 'モデル', '最適用途', 'RAM', 'ベンチマーク'],
+            rows: [
+              { '順位': '1', 'モデル': 'llama3.2:3b', '最適用途': '初心者チャット', 'RAM': '2.5 GB', 'ベンチマーク': '60%' },
+              { '順位': '2', 'モデル': 'llama3.1:8b', '最適用途': '高品質チャット', 'RAM': '5.5 GB', 'ベンチマーク': '72%' },
+              { '順位': '3', 'モデル': 'qwen2.5:7b', '最適用途': '多言語対応', 'RAM': '4.7 GB', 'ベンチマーク': '72%' },
+              { '順位': '4', 'モデル': 'qwen2.5-coder:7b', '最適用途': 'コーディング', 'RAM': '4.7 GB', 'ベンチマーク': '72%' },
+              { '順位': '5', 'モデル': 'deepseek-r1:7b', '最適用途': '推論・数学', 'RAM': '5 GB', 'ベンチマーク': '52%' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'DeepSeek-R1とは何か?',
+            items: [
+              '<strong>推論モデル:</strong> 最終回答前に Chain-of-thought を明示的に生成',
+              '<strong>性能:</strong> 競技数学 52% vs Mistral 7B 28%',
+              '<strong>トレードオフ:</strong> やや遅いが、大幅に精度向上',
+              '<strong>最適用途:</strong> 数学、論理パズル、段階的問題解決',
+              '<strong>コマンド:</strong> `ollama run deepseek-r1:7b`'
+            ]
+          },
+          {
+            type: 'table',
+            h2: 'ビジョンモデル：画像入力対応',
+            columns: ['モデル', 'RAM', '画像対応', 'Ollama コマンド'],
+            rows: [
+              { 'モデル': 'llama3.2-vision:11b', 'RAM': '~8 GB', '画像対応': 'あり', 'Ollama コマンド': 'ollama run llama3.2-vision:11b' },
+              { 'モデル': 'gemma3:9b (vision)', 'RAM': '~6 GB', '画像対応': 'あり', 'Ollama コマンド': 'ollama run gemma3:9b' },
+              { 'モデル': 'minicpm-v:8b', 'RAM': '~5.5 GB', '画像対応': 'あり', 'Ollama コマンド': 'ollama run minicpm-v' },
+              { 'モデル': 'qwen-vl:7b', 'RAM': '~5 GB', '画像対応': 'あり', 'Ollama コマンド': 'ollama pull qwen-vl' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'モデルをプルして実行',
+            items: [
+              '<strong>ローカルモデルをリスト:</strong> `ollama list`',
+              '<strong>モデルをプル:</strong> `ollama pull qwen2.5-coder:32b`',
+              '<strong>モデルを実行:</strong> `ollama run llama3.1:8b`',
+              '<strong>すべてのタグ表示:</strong> `ollama show qwen2.5`（サイズ別)',
+              '<strong>モデル削除:</strong> `ollama rm llama3.2:3b`（容量解放）'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'モデルの選び方',
+            items: [
+              '<strong>RAM 確認:</strong> 3B = 2–3 GB、7B = 5 GB、13B = 10 GB、70B = 40+ GB',
+              '<strong>速度を考慮:</strong> 小さい = 高速。大きい = 高品質。',
+              '<strong>ユースケース適合:</strong> コーディング vs チャット vs 推論 vs ビジョン',
+              '<strong>ローカルテスト:</strong> 大規模版の前に試す',
+              '<strong>ollama show 利用:</strong> ダウンロード前にRAM確認'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: 'Ollama モデルのよくある質問',
+            faqs: [
+              { q: 'どのくらい RAM が必要?', a: '7B: 5–6 GB。13B: 10–14 GB。70B: 量子化で 42–48 GB。`ollama show [model]` で確認。' },
+              { q: 'オフラインで実行できる?', a: 'はい。初回ダウンロード後、すべてがローカル実行。インターネット不要。' },
+              { q: 'コーディングに最適は?', a: 'Qwen2.5-Coder 7B（72%）または Llama 3.1 8B（72%）。両者とも優秀。' },
+              { q: 'Ollama は無料?', a: 'はい。すべてオープンソース・自由ライセンス。API 料金なし。' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'クイックレファレンス：モデルと コマンド',
+            intro: 'ターミナルにコピペ:',
+            items: [
+              '`ollama run llama3.2:3b` — ベストスタート',
+              '`ollama run qwen2.5-coder:7b` — コーディング用',
+              '`ollama run deepseek-r1:7b` — 推論・数学用',
+              '`ollama run llama3.2-vision:11b` — 画像解析用',
+              '`ollama pull qwen2.5:7b` — 多言語・最速成長'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '局所 LLM についてもっと詳しく',
+            body: 'これらのモデルをローカルで実行する準備はできましたか？ PromptQuorum は、モデル比較、量子化理解、ハードウェア最適化をサポートします。',
+            cta: 'フル記事を読む',
+            href: 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=ja'
+          }
+        ]
+      },
+      zh: {
+        title: 'Ollama 2026年顶级开源模型',
+        slides: [
+          {
+            type: 'title',
+            h1: 'Ollama 2026年顶级开源模型',
+            subtitle: '按用途分类的最常下载和最高评分模型',
+            link: 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=zh'
+          },
+          {
+            type: 'list',
+            h2: 'Ollama 模型的关键事实',
+            items: [
+              '<strong>最常下载:</strong> Llama 3.2 3B 和 Llama 3.1 8B',
+              '<strong>增长最快:</strong> Qwen2.5（编码和多语言）',
+              '<strong>最佳推理:</strong> DeepSeek-R1 7B（52% MATH 基准）',
+              '<strong>视觉支持:</strong> Llama 3.2 Vision、Gemma 3、Qwen-VL',
+              '<strong>200+ 个模型</strong>在 Ollama 库中可用（2026 年 4 月）'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '2026 年最受欢迎的模型',
+            items: [
+              '<strong>Llama 3.2 3B:</strong> 最常下载的模型。最适合初学者。',
+              '<strong>Llama 3.1 8B:</strong> 质量与 RAM 的最佳平衡（5.5 GB）。适用于 8GB 机器。',
+              '<strong>Qwen2.5 7B:</strong> 增长最快。72% HumanEval，强大的编码能力。',
+              '<strong>DeepSeek-R1 7B:</strong> Chain-of-thought 推理。本地数学性能最佳。',
+              '<strong>Mistral 7B:</strong> 高效且 EU 友好（Mistral AI，巴黎）。'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '按用途划分的前 5 个模型',
+            columns: ['用途', '最佳模型', 'RAM', '基准'],
+            rows: [
+              { '用途': '一般聊天', '最佳模型': 'llama3.2:3b', 'RAM': '2.5 GB', '基准': '60%' },
+              { '用途': '高质量聊天', '最佳模型': 'llama3.1:8b', 'RAM': '5.5 GB', '基准': '72%' },
+              { '用途': '编码', '最佳模型': 'qwen2.5-coder:7b', 'RAM': '4.7 GB', '基准': '72%' },
+              { '用途': '推理和数学', '最佳模型': 'deepseek-r1:7b', 'RAM': '5 GB', '基准': '52% MATH' },
+              { '用途': '图像理解', '最佳模型': 'llama3.2-vision:11b', 'RAM': '8 GB', '基准': '视觉' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '更多用途推荐',
+            items: [
+              '<strong>多语言:</strong> `ollama run qwen2.5:7b` — 29 种原生语言',
+              '<strong>快速和轻量:</strong> `ollama run gemma2:2b` — 1.7 GB RAM',
+              '<strong>高质量（16GB）:</strong> `ollama run mistral-small3.1`',
+              '<strong>嵌入生成:</strong> `ollama run nomic-embed-text` — RAG 管道',
+              '<strong>文档 Q&A:</strong> `ollama run llama3.1:8b` + Open WebUI'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '前 10 个模型完整排名',
+            columns: ['排名', '模型', '最适合', 'RAM', '基准'],
+            rows: [
+              { '排名': '1', '模型': 'llama3.2:3b', '最适合': '初学者聊天', 'RAM': '2.5 GB', '基准': '60%' },
+              { '排名': '2', '模型': 'llama3.1:8b', '最适合': '高质量聊天', 'RAM': '5.5 GB', '基准': '72%' },
+              { '排名': '3', '模型': 'qwen2.5:7b', '最适合': '多语言', 'RAM': '4.7 GB', '基准': '72%' },
+              { '排名': '4', '模型': 'qwen2.5-coder:7b', '最适合': '编码', 'RAM': '4.7 GB', '基准': '72%' },
+              { '排名': '5', '模型': 'deepseek-r1:7b', '最适合': '推理、数学', 'RAM': '5 GB', '基准': '52%' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'DeepSeek-R1 是什么?',
+            items: [
+              '<strong>推理模型:</strong> 在最终答案前生成显式的思维链',
+              '<strong>性能:</strong> 竞赛数学 52% vs Mistral 7B 28%',
+              '<strong>权衡:</strong> 较慢，但精度明显更高',
+              '<strong>最适合:</strong> 数学、逻辑谜题、逐步解决问题',
+              '<strong>命令:</strong> `ollama run deepseek-r1:7b`'
+            ]
+          },
+          {
+            type: 'table',
+            h2: '视觉模型：图像输入支持',
+            columns: ['模型', 'RAM', '图像支持', 'Ollama 命令'],
+            rows: [
+              { '模型': 'llama3.2-vision:11b', 'RAM': '~8 GB', '图像支持': '是', 'Ollama 命令': 'ollama run llama3.2-vision:11b' },
+              { '模型': 'gemma3:9b (vision)', 'RAM': '~6 GB', '图像支持': '是', 'Ollama 命令': 'ollama run gemma3:9b' },
+              { '模型': 'minicpm-v:8b', 'RAM': '~5.5 GB', '图像支持': '是', 'Ollama 命令': 'ollama run minicpm-v' },
+              { '模型': 'qwen-vl:7b', 'RAM': '~5 GB', '图像支持': '是', 'Ollama 命令': 'ollama pull qwen-vl' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '拉取和运行模型',
+            items: [
+              '<strong>列出本地模型:</strong> `ollama list`',
+              '<strong>拉取模型:</strong> `ollama pull qwen2.5-coder:32b`',
+              '<strong>运行模型:</strong> `ollama run llama3.1:8b`',
+              '<strong>查看所有标签:</strong> `ollama show qwen2.5`（大小变体）',
+              '<strong>删除模型:</strong> `ollama rm llama3.2:3b`（释放磁盘）'
+            ]
+          },
+          {
+            type: 'list',
+            h2: '如何选择模型',
+            items: [
+              '<strong>检查 RAM:</strong> 3B = 2–3 GB、7B = 5 GB、13B = 10 GB、70B = 40+ GB',
+              '<strong>考虑速度:</strong> 较小 = 更快。较大 = 更好的质量。',
+              '<strong>匹配用途:</strong> 编码 vs 聊天 vs 推理 vs 视觉',
+              '<strong>本地测试:</strong> 下载大型变体前尝试',
+              '<strong>使用 ollama show:</strong> 下载前验证 RAM 要求'
+            ]
+          },
+          {
+            type: 'faq',
+            h2: '关于 Ollama 模型的常见问题',
+            faqs: [
+              { q: '需要多少内存？', a: '7B：5–6 GB。13B：10–14 GB。70B：量子化后 42–48 GB。使用 `ollama show [model]` 验证。' },
+              { q: '可以离线运行吗？', a: '是的。初始下载后，所有推理在本地运行，无需互联网。' },
+              { q: '哪个最适合编码？', a: 'Qwen2.5-Coder 7B（72%）或 Llama 3.1 8B（72%）。两者都很出色。' },
+              { q: 'Ollama 是免费的吗？', a: '是的。所有模型都是开源的，采用自由许可证。无 API 费用。' }
+            ]
+          },
+          {
+            type: 'list',
+            h2: '快速参考：模型名称和命令',
+            intro: '复制粘贴到终端:',
+            items: [
+              '`ollama run llama3.2:3b` — 最佳起点',
+              '`ollama run qwen2.5-coder:7b` — 用于编码',
+              '`ollama run deepseek-r1:7b` — 用于推理和数学',
+              '`ollama run llama3.2-vision:11b` — 用于图像分析',
+              '`ollama pull qwen2.5:7b` — 多语言、增长最快'
+            ]
+          },
+          {
+            type: 'cta',
+            h2: '了解更多关于本地 LLM',
+            body: '准备好本地运行这些模型了吗？PromptQuorum 帮您比较模型、理解量子化并优化硬件。',
+            cta: '阅读完整文章',
+            href: 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=zh'
+          }
+        ]
+      }
+    };
+
+    function renderSlide(slide) {
+      let html = '';
+      const articleUrl = 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama?lang=' + lang;
+      const footerLink = `<p style="position: absolute; bottom: 16px; right: 16px; font-size: 11px; color: #999;"><a href="${articleUrl}" style="color: #999; text-decoration: none; border-bottom: 1px solid #ddd;">← Article</a></p>`;
+
+      switch (slide.type) {
+        case 'title':
+          html = `
+            <img src="/logo.svg" alt="PromptQuorum" class="logo" style="height: 48px; width: auto;" />
+            <h1>${slide.h1}</h1>
+            <p style="font-size: 20px; color: #6750A4; margin-top: 10px;">${slide.subtitle}</p>
+            <p style="margin-top: 40px; font-size: 16px; color: #79747E;">
+              <a href="${slide.link}" style="color: #79747E; text-decoration: none; border-bottom: 1px solid #ddd;">→ Read full article</a>
+            </p>
+            ${footerLink}
+          `;
+          break;
+
+        case 'list':
+          html = `<h2>${slide.h2}</h2>`;
+          if (slide.intro) html += `<p style="margin-bottom: 16px; font-size: 16px; color: #49454F;">${slide.intro}</p>`;
+          html += '<ul style="font-size: 15px; margin-top: 16px;">';
+          slide.items.forEach(item => {
+            html += `<li>${item}</li>`;
+          });
+          html += '</ul>';
+          html += footerLink;
+          break;
+
+        case 'table':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<table style="margin-top: 16px; font-size: 13px;"><tr>';
+          slide.columns.forEach(col => {
+            html += `<th>${col}</th>`;
+          });
+          html += '</tr>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => {
+              html += `<td>${row[col]}</td>`;
+            });
+            html += '</tr>';
+          });
+          html += '</table>';
+          html += footerLink;
+          break;
+
+        case 'faq':
+          html = `<h2>${slide.h2}</h2>`;
+          html += '<div style="margin-top: 16px;">';
+          slide.faqs.forEach(faq => {
+            html += `<div style="margin-bottom: 16px;"><strong style="color: #6750A4;">Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 14px; color: #49454F;">A: ${faq.a}</p></div>`;
+          });
+          html += '</div>';
+          html += footerLink;
+          break;
+
+        case 'cta':
+          html = `
+            <h2>${slide.h2}</h2>
+            <p style="margin-top: 20px; font-size: 16px; color: #49454F;">${slide.body}</p>
+            <a href="${slide.href}" style="display: inline-block; margin-top: 24px; padding: 12px 24px; background: #6750A4; color: white; border-radius: 4px; text-decoration: none; font-weight: 600;">${slide.cta}</a>
+            ${footerLink}
+          `;
+          break;
+      }
+
+      return `<div class="slide ${slide.type}">${html}</div>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const content = CONTENT[lang] || CONTENT.en;
+
+    // Update header
+    document.getElementById('header-title').textContent = content.title;
+    const backLink = document.getElementById('back-link');
+    backLink.href = backLink.href.split('?')[0] + `?lang=${lang}`;
+
+    // Render all slides
+    const container = document.getElementById('slides-container');
+    content.slides.forEach(slide => {
+      container.innerHTML += renderSlide(slide);
+    });
+
+    // Initialize navigation
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    // Print handlers
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>

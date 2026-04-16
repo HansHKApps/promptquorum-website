@@ -18708,6 +18708,8 @@ print(response.choices[0].message.content)`,
           },
         ]
       },
+      gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
+      gammaDescription: 'The slide deck below covers: top 10 Ollama models by download count, performance comparison (60–74% HumanEval), best models by use case (chat, coding, reasoning, vision), DeepSeek-R1 chain-of-thought reasoning, and exact pull commands. Download the PDF as your Ollama model selection reference card.',
     },
     de: {
       theme: 'Beste Modelle',
@@ -19047,6 +19049,8 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
           },
         ]
       },
+      gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
+      gammaDescription: 'Die Präsentation behandelt: Top 10 Ollama-Modelle nach Download-Häufigkeit, Leistungsvergleich (60–74% HumanEval), beste Modelle nach Anwendungsfall (Chat, Codierung, Reasoning, Vision), DeepSeek-R1 Chain-of-Thought-Reasoning und exakte Pull-Befehle. Laden Sie die PDF als Ihre Ollama-Modellauswahl-Referenzkarte herunter.',
     },
     fr: {
       theme: 'Meilleurs modèles',
@@ -19386,6 +19390,8 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
           },
         ]
       },
+      gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
+      gammaDescription: 'La présentation ci-dessous couvre : top 10 modèles Ollama par nombre de téléchargements, comparaison de performance (60–74% HumanEval), meilleurs modèles par cas d\'utilisation (chat, codage, raisonnement, vision), DeepSeek-R1 chain-of-thought reasoning et commandes pull exactes. Téléchargez le PDF comme votre carte de référence de sélection de modèles Ollama.',
     },
     ja: {
       theme: 'ベストモデル',
@@ -19729,6 +19735,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           },
         ]
       },
+      gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
+      gammaDescription: '下記のスライドデッキは以下をカバーしています：ダウンロード数別の Top 10 Ollama モデル、パフォーマンス比較（60–74% HumanEval）、ユースケース別の最高モデル（チャット、コーディング、推論、ビジョン）、DeepSeek-R1 chain-of-thought 推論、および正確なプルコマンド。Ollama モデル選択リファレンスカードとして PDF をダウンロードしてください。',
     },
     zh: {
       theme: '最佳模型',
@@ -20055,6 +20063,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           },
         ]
       },
+      gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
+      gammaDescription: '下面的幻灯片涵盖：按下载次数排名的 Top 10 Ollama 模型、性能对比（60–74% HumanEval）、按用途分类的最佳模型（聊天、编码、推理、视觉）、DeepSeek-R1 链式思维推理及确切的拉取命令。将 PDF 下载为您的 Ollama 模型选择参考卡。',
     },
   },
 
