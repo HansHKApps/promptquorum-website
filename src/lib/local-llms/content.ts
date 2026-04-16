@@ -18463,6 +18463,8 @@ print(response.choices[0].message.content)`,
             '**Embedding generation**: `ollama run nomic-embed-text` — 137M parameter embedding model for RAG pipelines.',
             '**Document Q&A (RAG)**: `ollama run llama3.1:8b` with Open WebUI\'s RAG feature — best-supported combination.',
           ],
+          image: '/images/ollama-model-by-use-case-en.svg',
+          imageCaption: 'Ollama model selection by use case: 3 categories with 10 models. Pick llama3.1:8b for chat, qwen2.5-coder:7b for coding, deepseek-r1:7b for math.',
         },
         deepseekR1: {
           title: 'What Is DeepSeek-R1 and Why Is It Different?',
@@ -18472,6 +18474,8 @@ print(response.choices[0].message.content)`,
           ],
           codeBlock: '# Pull and run DeepSeek-R1\nollama run deepseek-r1:7b\n\n# Larger variants for better quality\nollama run deepseek-r1:14b   # 10 GB RAM\nollama run deepseek-r1:32b   # 20 GB RAM',
           codeLanguage: 'bash',
+          image: '/images/ollama-deepseek-r1-reasoning-comparison-en.svg',
+          imageCaption: 'DeepSeek-R1 7B vs Mistral 7B: 52% vs 28% on MATH. Chain-of-thought reasoning model — slower, significantly better accuracy.',
         },
         visionModels: {
           title: 'Which Ollama Models Support Image Input?',
@@ -18483,6 +18487,8 @@ print(response.choices[0].message.content)`,
             { 'Model': 'minicpm-v:8b', 'RAM': '~5.5 GB', 'Image Support': 'Yes', 'Ollama Command': 'ollama run minicpm-v' },
           ],
           columns: ['Model', 'RAM', 'Image Support', 'Ollama Command'],
+          image: '/images/ollama-vision-models-comparison-en.svg',
+          imageCaption: '4 Ollama vision models for image input: llama3.2-vision:11b (8 GB), gemma3:9b (6 GB), minicpm-v (5.5 GB). All run locally.',
         },
         fullTop10: {
           title: 'What Are the Top 10 Open Source Models on Ollama?',
@@ -18499,10 +18505,12 @@ print(response.choices[0].message.content)`,
             { '#': '10', 'Model': 'phi4-mini', 'Best For': 'Reasoning, 4 GB RAM', 'RAM': '2.5 GB', 'HumanEval': '70%' },
           ],
           columns: ['#', 'Model', 'Best For', 'RAM', 'HumanEval'],
+          image: '/images/ollama-top10-models-comparison-en.svg',
+          imageCaption: 'Top 10 Ollama models by download count: RAM from 1.7 GB (gemma2:2b) to 14 GB (mistral-small3.1). HumanEval 39–74%.',
         },
         howToBrowse: {
           title: 'How Do You Browse the Ollama Model Library?',
-          content: 'The Ollama library is at ollama.com/library. Each model page shows available tags (size variants and quantizations), download counts, and supported capabilities.',
+          content: 'The Ollama Mac app includes a built-in chat interface. A model dropdown button at the bottom of the chat window shows your currently active model — click it to switch between installed models. To discover and download new models, visit ollama.com/library where each model page lists available tags, RAM requirements, and benchmark scores.',
           codeBlock: '# List all locally downloaded models\nollama list\n\n# Search for a model and pull it\nollama pull qwen2.5-coder:32b\n\n# See all available tags for a model\nollama show qwen2.5\n\n# Remove a model to free disk space\nollama rm llama3.2:3b',
           codeLanguage: 'bash',
         },
@@ -18763,6 +18771,8 @@ print(response.choices[0].message.content)`,
             '**Eingebettungen und semantische Suche**: nomic-embed-text (686 MB, am schnellsten) oder all-minilm (40 MB für Mobilgeräte). Verwenden Sie diese in RAG-Pipelines vor Llama oder Qwen.',
             '**Spezialisierte Aufgaben (wissenschaftliche Paper, Medizin)**: Llama 3.1 70B (wenn Speicher verfügbar); aktuell keine 7B–13B-Spezialisten für Medizin/Rechtswissenschaften wie auf Hugging Face verfügbar.',
           ],
+          image: '/images/ollama-model-by-use-case-de.svg',
+          imageCaption: 'Ollama-Modellauswahl nach Anwendungsfall: 3 Kategorien, 10 Modelle. llama3.1:8b für Chat, qwen2.5-coder:7b für Codierung, deepseek-r1:7b für Mathe.',
         },
         deepseekR1: {
           title: 'DeepSeek-R1: Reasoning-Durchbruch',
@@ -18775,6 +18785,8 @@ print(response.choices[0].message.content)`,
 # </Gedanken>
 # Antwort: Sie treffen sich ...`,
           codeLanguage: 'bash',
+          image: '/images/ollama-deepseek-r1-reasoning-comparison-de.svg',
+          imageCaption: 'DeepSeek-R1 7B vs Mistral 7B: 52% vs 28% MATH. Chain-of-Thought-Reasoning — langsamer, deutlich genauer.',
           items: [
             '**Größen verfügbar**: 1,5B (mobil), 7B, 70B. 1,5B ist für Bildungsgeräte ausreichend; 7B übertrifft Llama 3.1 13B bei Mathematik.',
             '**Leistung auf Benchmarks**: 52 % bei MATH (gegenüber 23 % Llama 3.1 8B), verbesserte Logik und mehrschrittige Problemlösung.',
@@ -18787,6 +18799,8 @@ print(response.choices[0].message.content)`,
           title: 'Vision-Modelle auf Ollama',
           content: 'Vier herausragende Vision-Modelle sind jetzt nativ auf Ollama verfügbar:',
           columns: ['Modell', 'RAM', 'Bildunterstützung', 'Ollama Befehl'],
+          image: '/images/ollama-vision-models-comparison-de.svg',
+          imageCaption: '4 Ollama-Vision-Modelle: llama3.2-vision:11b (8 GB), gemma3:9b (6 GB), minicpm-v (5,5 GB). Alle lokal ausführbar.',
           rows: [
             { 'Modell': 'Llama 3.2 Vision 11B', 'RAM': '11 GB', 'Bildunterstützung': 'JPEG, PNG, GIF; Multi-Image-Eingabe', 'Ollama Befehl': 'ollama run llama3.2-vision:11b' },
             { 'Modell': 'Qwen2-VL 7B', 'RAM': '8 GB', 'Bildunterstützung': 'JPEG, PNG; besser bei OCR und Diagrammen', 'Ollama Befehl': 'ollama run qwen2-vl:7b' },
@@ -18798,6 +18812,8 @@ print(response.choices[0].message.content)`,
           title: 'Vollständiger Top-10-Vergleich',
           content: 'Die 10 am häufigsten heruntergeladenen Modelle auf Ollama im April 2026 nach monatlichen Downloads:',
           columns: ['#', 'Modell', 'Beste für', 'RAM', 'HumanEval'],
+          image: '/images/ollama-top10-models-comparison-de.svg',
+          imageCaption: 'Top 10 Ollama-Modelle nach Downloads: RAM 1,7 GB (gemma2:2b) bis 14 GB (mistral-small3.1). HumanEval 39–74 %.',
           rows: [
             { '#': '1', 'Modell': 'Llama 3.1 8B', 'Beste für': 'Anfänger, Allzweck', 'RAM': '6,5 GB', 'HumanEval': '68,2 %' },
             { '#': '2', 'Modell': 'Qwen2.5 7B', 'Beste für': 'Codierung, Mathematik', 'RAM': '6,5 GB', 'HumanEval': '75,4 %' },
@@ -18813,7 +18829,7 @@ print(response.choices[0].message.content)`,
         },
         howToBrowse: {
           title: 'Wie durchsuchen Sie die Ollama-Bibliothek?',
-          content: 'Ollamá wird mit einem integrierten Modellbrowser ausgeliefert:',
+          content: 'Die Ollama Mac-App enthält eine integrierte Chat-Oberfläche. Ein Modell-Dropdown-Button am unteren Rand des Chat-Fensters zeigt das aktuell aktive Modell — klicken Sie darauf, um zwischen installierten Modellen zu wechseln. Neue Modelle entdecken und herunterladen können Sie auf ollama.com/library.',
           codeBlock: `ollama list
 # Zeigt alle installierten Modelle an
 
@@ -19104,6 +19120,8 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
             '**Embeddings et recherche sémantique** : nomic-embed-text (686 MB, plus rapide) ou all-minilm (40 MB pour mobiles). Utilisez-les dans les pipelines RAG avant Llama ou Qwen.',
             '**Tâches spécialisées (articles scientifiques, médecine)** : Llama 3.1 70B (si mémoire disponible) ; actuellement pas de spécialistes 7B–13B pour médecine/droit comme sur Hugging Face.',
           ],
+          image: '/images/ollama-model-by-use-case-fr.svg',
+          imageCaption: 'Sélection de modèles Ollama par cas d\'utilisation: 3 catégories, 10 modèles. llama3.1:8b pour chat, qwen2.5-coder:7b pour codage, deepseek-r1:7b pour maths.',
         },
         deepseekR1: {
           title: 'DeepSeek-R1 : Percée en raisonnement',
@@ -19116,6 +19134,8 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
 # </pensée>
 # Réponse : Ils se rencontrent ...`,
           codeLanguage: 'bash',
+          image: '/images/ollama-deepseek-r1-reasoning-comparison-fr.svg',
+          imageCaption: 'DeepSeek-R1 7B vs Mistral 7B: 52% vs 28% MATH. Raisonnement chain-of-thought — plus lent, nettement plus précis.',
           items: [
             '**Tailles disponibles** : 1.5B (mobile), 7B, 70B. 1.5B suffisant pour appareils éducatifs ; 7B surpasse Llama 3.1 13B en mathématiques.',
             '**Performance sur benchmarks** : 52 % MATH (vs 23 % Llama 3.1 8B), logique améliorée et résolution multiétapes.',
@@ -19128,6 +19148,8 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
           title: 'Modèles de vision sur Ollama',
           content: 'Quatre modèles de vision remarquables sont maintenant nativement disponibles sur Ollama :',
           columns: ['Modèle', 'RAM', 'Support image', 'Commande Ollama'],
+          image: '/images/ollama-vision-models-comparison-fr.svg',
+          imageCaption: '4 modèles Ollama vision : llama3.2-vision:11b (8 Go), gemma3:9b (6 Go), minicpm-v (5,5 Go). Tous en local.',
           rows: [
             { 'Modèle': 'Llama 3.2 Vision 11B', 'RAM': '11 GB', 'Support image': 'JPEG, PNG, GIF; entrée multi-images', 'Commande Ollama': 'ollama run llama3.2-vision:11b' },
             { 'Modèle': 'Qwen2-VL 7B', 'RAM': '8 GB', 'Support image': 'JPEG, PNG; meilleur en OCR et diagrammes', 'Commande Ollama': 'ollama run qwen2-vl:7b' },
@@ -19139,6 +19161,8 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
           title: 'Comparaison complète du Top 10',
           content: 'Les 10 modèles les plus téléchargés sur Ollama en avril 2026 selon les téléchargements mensuels :',
           columns: ['#', 'Modèle', 'Meilleur pour', 'RAM', 'HumanEval'],
+          image: '/images/ollama-top10-models-comparison-fr.svg',
+          imageCaption: 'Top 10 modèles Ollama par téléchargements : RAM 1,7 Go (gemma2:2b) à 14 Go (mistral-small3.1). HumanEval 39–74 %.',
           rows: [
             { '#': '1', 'Modèle': 'Llama 3.1 8B', 'Meilleur pour': 'Débutants, polyvalent', 'RAM': '6.5 GB', 'HumanEval': '68.2 %' },
             { '#': '2', 'Modèle': 'Qwen2.5 7B', 'Meilleur pour': 'Codage, mathématiques', 'RAM': '6.5 GB', 'HumanEval': '75.4 %' },
@@ -19154,7 +19178,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
         },
         howToBrowse: {
           title: 'Comment parcourir la bibliothèque Ollama ?',
-          content: 'Ollama est livré avec un navigateur de modèles intégré :',
+          content: 'L\'application Ollama pour Mac inclut une interface de chat intégrée. Un bouton déroulant de sélection de modèle en bas de la fenêtre de chat affiche le modèle actif — cliquez dessus pour passer d\'un modèle installé à un autre. Pour découvrir et télécharger de nouveaux modèles, visitez ollama.com/library.',
           codeBlock: `ollama list
 # Affiche tous les modèles installés
 
@@ -19445,6 +19469,8 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
             '**埋め込み・語義検索**：nomic-embed-text（686MB、最速）またはall-minilm（40MB、モバイル向け）。RAGパイプラインで活用。',
             '**専門分野（科学論文・医学）**：Llama 3.1 70B（メモリあれば）。医学・法律7B–13B専門家はHugging Faceで探すべし。',
           ],
+          image: '/images/ollama-model-by-use-case-ja.svg',
+          imageCaption: '用途別Ollamaモデル選択: 3カテゴリ10モデル。チャットはllama3.1:8b、コーディングはqwen2.5-coder:7b、数学はdeepseek-r1:7b。',
         },
         deepseekR1: {
           title: 'DeepSeek-R1：推論ブレークスルー',
@@ -19457,6 +19483,8 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
 # </思考>
 # 答え：彼らは出会う...`,
           codeLanguage: 'bash',
+          image: '/images/ollama-deepseek-r1-reasoning-comparison-ja.svg',
+          imageCaption: 'DeepSeek-R1 7B vs Mistral 7B: MATH 52% vs 28%。思考連鎖推論モデル — やや遅いが精度が大幅に向上。',
           items: [
             '**サイズ展開**：1.5B（モバイル）、7B、70B。1.5Bは教育端末で十分。7Bはllama 3.1 13Bを数学で上回る。',
             '**ベンチマーク**：52% MATH（Llama 3.1 8B比23%）。ロジック・多段階問題解決向上。',
@@ -19469,6 +19497,8 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
           title: 'ビジョンモデル',
           content: '4つの優秀ビジョンモデルがOllamaネイティブ対応：',
           columns: ['モデル', 'RAM', '画像対応', 'Ollamaコマンド'],
+          image: '/images/ollama-vision-models-comparison-ja.svg',
+          imageCaption: '4つのOllamaビジョンモデル: llama3.2-vision:11b (8 GB)、gemma3:9b (6 GB)、minicpm-v (5.5 GB)。全てローカル実行。',
           rows: [
             { 'モデル': 'Llama 3.2 Vision 11B', 'RAM': '11 GB', '画像対応': 'JPEG、PNG、GIF・複数画像入力', 'Ollamaコマンド': 'ollama run llama3.2-vision:11b' },
             { 'モデル': 'Qwen2-VL 7B', 'RAM': '8 GB', '画像対応': 'JPEG、PNG・OCR精密', 'Ollamaコマンド': 'ollama run qwen2-vl:7b' },
@@ -19480,6 +19510,8 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
           title: 'トップ10完全比較',
           content: '2026年4月Ollama月間DL数トップ10：',
           columns: ['#', 'モデル', '最適用途', 'RAM', 'HumanEval'],
+          image: '/images/ollama-top10-models-comparison-ja.svg',
+          imageCaption: 'ダウンロード数Top 10 Ollamaモデル: RAM 1.7 GB (gemma2:2b)から14 GB (mistral-small3.1)。HumanEval 39–74%。',
           rows: [
             { '#': '1', 'モデル': 'Llama 3.1 8B', '最適用途': '初心者・汎用', 'RAM': '6.5 GB', 'HumanEval': '68.2%' },
             { '#': '2', 'モデル': 'Qwen2.5 7B', '最適用途': 'コード・数学', 'RAM': '6.5 GB', 'HumanEval': '75.4%' },
@@ -19495,7 +19527,7 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
         },
         howToBrowse: {
           title: 'Ollama ライブラリの探索方法',
-          content: 'Ollamaはモデルブラウザ統合：',
+          content: 'Ollama Macアプリには組み込みチャットインターフェースがあります。チャットウィンドウ下部のモデルドロップダウンボタンで現在のモデルが表示され、クリックするとインストール済みモデルを切り替えられます。新しいモデルの発見・ダウンロードはollama.com/libraryで行えます。',
           codeBlock: `ollama list
 # インストール済みモデル表示
 
@@ -19793,6 +19825,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**金融和医疗领域**：Llama 3.1 8B/70B（标准金融基准）、Qwen2.5 7B（中文医疗文档）',
             '**纯开源许可**：全部（Llama Community License、Qwen、DeepSeek都是商业友好）',
           ],
+          image: '/images/ollama-model-by-use-case-zh.svg',
+          imageCaption: '按用途选择Ollama模型：3类10个模型。聊天选llama3.1:8b，编码选qwen2.5-coder:7b，数学选deepseek-r1:7b。',
         },
         deepseekR1: {
           title: 'DeepSeek-R1：2026年推理最强的模型',
@@ -19804,11 +19838,15 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
           codeBlock: 'ollama run deepseek-r1:7b',
           codeLanguage: 'bash',
+          image: '/images/ollama-deepseek-r1-reasoning-comparison-zh.svg',
+          imageCaption: 'DeepSeek-R1 7B vs Mistral 7B: MATH 52% vs 28%。链式思维推理模型 — 较慢，精度显著提升。',
         },
         visionModels: {
           title: '视觉和多模态模型对比',
           content: '2026年4月，以下开源视觉模型可在Ollama中本地运行：',
           columns: ['模型', 'RAM要求', '图像支持', 'Ollama命令'],
+          image: '/images/ollama-vision-models-comparison-zh.svg',
+          imageCaption: '4个Ollama视觉模型: llama3.2-vision:11b (8 GB)、gemma3:9b (6 GB)、minicpm-v (5.5 GB)。全部本地运行。',
           rows: [
             { '模型': 'Llama 3.2 Vision 11B', 'RAM要求': '11 GB', '图像支持': '是（JPEG、PNG、GIF）', 'Ollama命令': 'ollama run llama3.2-vision:11b' },
             { '模型': 'Gemma 3 9B', 'RAM要求': '9.5 GB', '图像支持': '是（Gemma 3全系多模态）', 'Ollama命令': 'ollama run gemma3:9b' },
@@ -19820,6 +19858,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           title: 'Ollama完整Top 10模型排行（2026年4月）',
           content: '根据Ollama官方下载统计和HumanEval、MMLU基准：',
           columns: ['排名', '模型', '最适用于', 'RAM要求', 'HumanEval'],
+          image: '/images/ollama-top10-models-comparison-zh.svg',
+          imageCaption: '按下载量排名前10的Ollama模型：RAM从1.7 GB (gemma2:2b)到14 GB (mistral-small3.1)。HumanEval 39–74%。',
           rows: [
             { '排名': '1', '模型': 'Llama 3.1 8B', '最适用于': '通用、初学者入门', 'RAM要求': '6.5 GB', 'HumanEval': '76%' },
             { '排名': '2', '模型': 'Qwen2.5 7B', '最适用于': '代码和中文', 'RAM要求': '6.5 GB', 'HumanEval': '90%' },
@@ -21004,6 +21044,248 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       supplementalSchema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['.article-intro'],
+        },
+      },
+    },
+    de: {
+      theme: 'Erste Schritte',
+      title: 'Lokale LLMs vs. Cloud-APIs: Was sollten Sie 2026 verwenden?',
+      seoTitle: 'Lokale LLMs vs. Cloud-APIs 2026: Datenschutz und Kosten',
+      intro: 'Lokale LLMs laufen auf Ihrer eigenen Hardware ohne API-Kosten und mit vollständigem Datenschutz. Cloud-APIs wie OpenAI GPT-4o und Anthropic Claude 4.6 liefern höhere Ausgabequalität und erfordern keine Hardware-Einrichtung. Die richtige Wahl hängt von Ihrer Datensensibilität, Ihrem Budget, der erforderlichen Modellqualität und der Frage ab, ob Sie Offline-Zugriff benötigen.',
+      metaDescription: 'Lokale LLMs kosten $0 pro Token nach Hardware; Cloud-APIs $0,15\u2013$60/1\u00a0Mio. Tokens. Vollständiger 2026-Vergleich: Datenschutz, Kosten, Qualität über 8 Faktoren.',
+      leadAnswerBlock: '**Lokale LLMs führen alle Berechnungen auf Ihrer eigenen Hardware durch \u2013 ohne Token-Kosten und mit vollständigem Datenschutz.** Cloud-APIs (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) liefern höhere Qualität mit minimalem Einrichtungsaufwand.',
+      dateModified: '2026-04-12',
+      publishDate: '2026-04-04',
+      readTime: '8 Min. Lesezeit',
+      educationalLevel: 'Beginner',
+      primaryTerm: 'lokales LLM',
+      toc: [
+        { label: 'Zusammenfassung', anchor: 'key-takeaways' },
+        { label: 'Kernunterschied', anchor: 'what-is-the-core-difference' },
+        { label: 'Vollständiger Vergleich: 8 Faktoren', anchor: 'full-comparison' },
+        { label: 'Kostenvergleich', anchor: 'how-do-costs-compare' },
+        { label: 'Datenschutzvergleich', anchor: 'which-is-more-private' },
+        { label: 'Geschwindigkeitsvergleich', anchor: 'how-does-speed-compare' },
+        { label: 'Modellqualität', anchor: 'which-has-better-model-quality' },
+        { label: 'Was sollten Sie wählen?', anchor: 'which-should-you-choose' },
+        { label: 'Regionaler Kontext', anchor: 'regional-context' },
+        { label: 'Weiterführende Lektüre', anchor: 'related-reading' },
+        { label: 'Häufige Fragen', anchor: 'common-questions' },
+      ],
+      sections: {
+        tldr: {
+          isTldr: true,
+          items: [
+            'Lokale LLMs kosten $0 pro Token nach der Hardware-Investition. Cloud-APIs kosten $0,15\u2013$60 pro 1\u00a0Mio. Tokens je nach Modell.',
+            'Cloud-APIs (GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro) übertreffen alle lokal ausführbaren Modelle bei komplexen Denkaufgaben und Code-Aufgaben.',
+            'Lokale Modelle erreichen Cloud-Qualität bei Zusammenfassungen, Übersetzungen und einfachen Fragen auf 7B\u201313B-Ebene.',
+            'Lokale Inferenz ist auf Consumer-Hardware 2\u201310× langsamer als Cloud-APIs. Eine RTX 4070 Ti schließt diesen Abstand für 7B-Modelle auf annähernd gleiche Geschwindigkeit.',
+            'Wählen Sie lokale LLMs, wenn: Datenschutz unverzichtbar ist, Kosten hoch sind oder Offline-Zugriff erforderlich ist. Wählen Sie Cloud-APIs, wenn: maximale Qualität entscheidend ist und die Kosten akzeptabel sind.',
+          ],
+        },
+        coreDifference: {
+          title: 'Was ist der Kernunterschied zwischen lokalen LLMs und Cloud-APIs?',
+          content: [
+            '**Lokale LLMs führen alle Berechnungen auf Ihrer eigenen Hardware durch; Cloud-APIs senden Ihren Prompt an einen Remote-Server und geben die Antwort zurück.** Ein lokales LLM bedeutet, dass die Modelldatei auf Ihrer Festplatte gespeichert ist und alle Berechnungen auf Ihrer CPU oder GPU stattfinden. Nichts verlässt Ihren Computer. Sie zahlen nichts pro Inferenz, benötigen aber Hardware, die das Modell ausführen kann.',
+            'Eine **Cloud-API** bedeutet, dass Ihr Prompt über das Internet an den Server eines Anbieters (OpenAI, Anthropic, Google) gesendet, von dessen Modell verarbeitet und die Antwort an Sie zurückgegeben wird. Sie zahlen pro Token und haben keinen Zugriff auf die Modellgewichte.',
+            'Beide Ansätze verwenden dieselbe zugrunde liegende Transformer-Architektur. Die praktischen Unterschiede liegen darin, wo die Berechnung stattfindet, wer die Daten kontrolliert und welchen Qualitäts-/Geschwindigkeitskompromiss Sie erhalten.',
+          ],
+        },
+        fullComparison: {
+          title: 'Wie schneiden lokale LLMs und Cloud-APIs in 8 Faktoren ab?',
+          rows: [
+            { 'Faktor': 'Datenschutz', 'Lokales LLM': 'Vollständig \u2014 Daten verlassen Ihr Gerät nie', 'Cloud-API': 'Daten werden auf Anbieterservern verarbeitet; unterliegt deren Datenschutzrichtlinie' },
+            { 'Faktor': 'Kosten pro Token', 'Lokales LLM': '$0 (nach Hardware-Investition)', 'Cloud-API': '$0,15\u2013$60 pro 1\u00a0Mio. Tokens (je nach Modell)' },
+            { 'Faktor': 'Ausgabequalität', 'Lokales LLM': 'Gut bei 13B\u201370B; bei vielen Aufgaben wettbewerbsfähig', 'Cloud-API': 'Beste verfügbar \u2014 GPT-4o, Claude 4.6 Opus führen Benchmarks an' },
+            { 'Faktor': 'Antwortgeschwindigkeit', 'Lokales LLM': '10\u2013120 Tokens/Sek. (hardwareabhängig)', 'Cloud-API': '50\u2013200 Tokens/Sek. (anbieterabhängig)' },
+            { 'Faktor': 'Einrichtungszeit', 'Lokales LLM': '5\u201315 Minuten mit Ollama oder LM Studio', 'Cloud-API': '2\u20135 Minuten für Konto und API-Schlüssel' },
+            { 'Faktor': 'Offline-Zugriff', 'Lokales LLM': 'Ja \u2014 funktioniert ohne Internet', 'Cloud-API': 'Nein \u2014 erfordert aktive Verbindung' },
+            { 'Faktor': 'Modell-Updates', 'Lokales LLM': 'Manuell \u2014 Sie entscheiden, wann Sie aktualisieren', 'Cloud-API': 'Automatisch \u2014 Anbieter aktualisiert ohne Vorankündigung' },
+            { 'Faktor': 'Anpassbarkeit', 'Lokales LLM': 'Vollständig \u2014 Fine-Tuning, System-Prompts, Quantisierung', 'Cloud-API': 'Begrenzt \u2014 nur System-Prompts; kein Gewichtszugriff' },
+          ],
+          columns: ['Faktor', 'Lokales LLM', 'Cloud-API'],
+        },
+        costComparison: {
+          title: 'Wie unterscheiden sich die Kosten von lokalen LLMs und Cloud-APIs?',
+          content: [
+            '**Cloud-APIs kosten $0,15\u2013$60 pro 1\u00a0Mio. Tokens; lokale LLMs kosten $0 pro Token nach der Hardware-Investition.** Die Cloud-API-Preise variieren je nach Modell-Tier. Im Jahr 2026 betragen repräsentative Preise pro 1\u00a0Mio. Tokens: GPT-4o bei $2,50 Eingabe / $10 Ausgabe, Claude 4.6 Sonnet bei $3,00 / $15, Gemini 2.5 Pro bei $1,25 / $5 und GPT-4o Mini bei $0,15 / $0,60.',
+            'Ein Entwickler, der 10\u00a0Mio. Ausgabe-Tokens pro Monat mit GPT-4o verarbeitet, zahlt ca. $100/Monat. Die gleiche Arbeitslast auf einem lokalen 8B-Modell kostet $0 pro Token \u2014 der einzige Kostenfaktor ist Strom (ca. $0,10\u20130,30/Stunde für GPU-Inferenz) und die anfängliche Hardware-Investition.',
+            'Lokale LLMs werden bei hohem Volumen innerhalb von Wochen kostengünstiger. Bei gelegentlicher Nutzung (wenige Tausend Tokens pro Tag) sind Cloud-APIs günstiger, wenn man den Zeitaufwand für Einrichtung und Wartung berücksichtigt.',
+          ],
+        },
+        privacy: {
+          title: 'Was ist datenschutzfreundlicher: ein lokales LLM oder eine Cloud-API?',
+          content: [
+            '**Lokale LLMs bieten kategorisch stärkeren Datenschutz.** Kein Prompt-Text, kein Kontext und keine Antwortdaten werden an externe Server übermittelt. Dies macht lokale Inferenz zur einzigen praktikablen Option für regulierte Branchen (Gesundheitswesen HIPAA, Finanzwesen PCI-DSS, rechtliche Vertraulichkeit) und für personenbezogene Daten, die auf dem Gerät verbleiben müssen.',
+            'Cloud-API-Anbieter veröffentlichen Datennutzungsrichtlinien, die das Training mit API-Eingaben in der Regel ausschließen, aber die Daten passieren dennoch deren Infrastruktur und unterliegen rechtlichen Verfahren. Enterprise-Tiers (OpenAI Enterprise, Google Workspace) bieten strengere Datenisolierung, jedoch zu erheblichen Mehrkosten.',
+            'Die vollständige Sicherheitsprüfungscheckliste für lokale Modelle finden Sie unter [Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist?lang=de).',
+          ],
+          callouts: [
+            { type: '\u26a0\ufe0f Warnung', text: 'Cloud-API-Bedingungen können sich ohne Vorankündigung ändern. Überprüfen Sie immer die aktuelle Datennutzungsrichtlinie für Ihren spezifischen Tier, bevor Sie sensible Daten verarbeiten.' },
+          ],
+        },
+        speed: {
+          title: 'Wie unterscheidet sich die Geschwindigkeit zwischen lokalen und Cloud-Modellen?',
+          content: 'Die Geschwindigkeit hängt stark von der Hardware ab. Nur mit CPU erzeugt ein 7B-Modell 10\u201330 Tokens/Sek. \u2014 deutlich langsamer als Cloud-APIs. Mit einer modernen GPU schließt sich dieser Abstand erheblich:',
+          rows: [
+            { 'Hardware': 'Nur CPU (modernes Laptop)', 'Modell': 'Llama 3.1 8B Q4', 'Geschwindigkeit': '10\u201325 Tokens/Sek.' },
+            { 'Hardware': 'Apple M3 Pro (18 GB unified)', 'Modell': 'Llama 3.1 8B Q4', 'Geschwindigkeit': '55\u201375 Tokens/Sek.' },
+            { 'Hardware': 'NVIDIA RTX 4060 (8 GB VRAM)', 'Modell': 'Llama 3.1 8B Q4', 'Geschwindigkeit': '70\u2013100 Tokens/Sek.' },
+            { 'Hardware': 'NVIDIA RTX 4090 (24 GB VRAM)', 'Modell': 'Llama 3.1 8B Q4', 'Geschwindigkeit': '130\u2013160 Tokens/Sek.' },
+            { 'Hardware': 'Cloud-API (GPT-4o Mini)', 'Modell': 'GPT-4o Mini', 'Geschwindigkeit': '80\u2013150 Tokens/Sek. (variiert)' },
+          ],
+          columns: ['Hardware', 'Modell', 'Geschwindigkeit'],
+        },
+        quality: {
+          title: 'Welches hat die bessere Modellqualität: lokal oder Cloud?',
+          content: [
+            '**Cloud-Frontier-Modelle (GPT-4o, Claude 4.6 Opus, Gemini 2.5 Pro) führen bei komplexem Denken; lokale 13B-Modelle erreichen die gleiche Qualität bei Zusammenfassungen, Übersetzungen und einfachen Fragen.** Bei MMLU (Wissensbreite) und HumanEval (Programmierung)-Benchmarks erzielen Frontier-Cloud-Modelle 85\u201390\u00a0% gegenüber 65\u201380\u00a0% für die besten lokalen 70B-Modelle.',
+            'Für alltägliche Aufgaben \u2014 Zusammenfassung, Übersetzung, Klassifizierung, einfache Fragen und Dokumentenerstellung \u2014 liefert ein gut strukturiertes 13B-Modell Ergebnisse, die in blinden Auswertungen kaum von GPT-4o Mini zu unterscheiden sind. Die Qualitätslücke zeigt sich am deutlichsten bei Aufgaben, die tiefes Weltwissen oder mehrstufige Denkketten erfordern.',
+            'Der Abstand verringert sich. Meta Llama 3.3 70B (2025) erreicht GPT-4 (2023) bei den meisten Benchmarks. Die Qualität lokaler Modelle auf 7B-Ebene verbessert sich jährlich um etwa eine Generation.',
+          ],
+        },
+        whichToChoose: {
+          title: 'Was sollten Sie wählen: lokales LLM oder Cloud-API?',
+          content: 'Verwenden Sie dieses Entscheidungsrahmenwerk:',
+          items: [
+            '**Wählen Sie ein lokales LLM, wenn:** Sie sensible oder regulierte Daten verarbeiten, Sie hohe Arbeitslasten mit akkumulierenden Token-Kosten haben, Sie Offline-Fähigkeit benötigen oder Sie verstehen möchten, wie LLMs intern funktionieren.',
+            '**Wählen Sie eine Cloud-API, wenn:** Sie die höchste verfügbare Ausgabequalität benötigen, Sie keinen Einrichtungsaufwand möchten, Sie prototypisieren und keine Infrastruktur verwalten möchten oder Ihre Nutzung geringvolumig ist.',
+            '**Verwenden Sie beides parallel:** Tools wie [PromptQuorum](/?lang=de) ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle zu senden, lokale vs. Cloud-Ergebnisse in einer Ansicht zu vergleichen und Aufgaben an das richtige Modell weiterzuleiten.',
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Lokale LLMs vs. Cloud-APIs: Regionaler Kontext',
+          content: [
+            'Die Wahl zwischen lokaler und Cloud-Inferenz hat direkte Compliance-Implikationen in verschiedenen regulatorischen Zuständigkeiten.',
+          ],
+          items: [
+            '**EU / DSGVO + KI-Gesetz:** DSGVO Artikel 28 erfordert einen Datenverarbeitungsvertrag (DPA) mit jedem Dritten, der personenbezogene Daten in Ihrem Auftrag verarbeitet \u2014 einschließlich Cloud-KI-API-Anbietern. Lokale LLMs eliminieren diese Anforderung vollständig: kein DPA, kein Mechanismus nach Artikel 46, kein grenzüberschreitender Datenfluss. Das EU-KI-Gesetz (in Kraft seit Februar 2025) klassifiziert KI-Systeme, die personenbezogene Daten in regulierten Bereichen (Gesundheitswesen, Personalwesen, Recht, Finanzen) verarbeiten, als hochriskant. Das BSI-Grundschutz-Kompendium empfiehlt für KRITIS-Unternehmen und den öffentlichen Sektor ausdrücklich die Datensouveränität durch On-Premises-Verarbeitung. Für den DACH-Raum (Deutschland, Österreich, Schweiz) bieten Mistral (Frankreich, Apache 2.0) und Llama 3.x die stärksten Compliance-Narrative für lokale Deployments. Enterprise-Tier von Cloud-Anbietern (OpenAI Enterprise, Anthropic for Teams) bieten DSGVO-konforme Datenverarbeitung, erfordern jedoch Procurement, DPA-Unterzeichnung und laufendes Compliance-Monitoring.',
+            '**Japan (METI):** Die METI-KI-Governance-Richtlinien empfehlen die On-Premises-Inferenz für Unternehmensdaten, die als sensibel eingestuft sind. Für japanische Unternehmen, die Kundendaten verarbeiten, stimmen lokale LLMs mit METIs Grundsatz des "angemessenen Managements von KI-Systemen" überein. Cloud-APIs erfordern die Überprüfung, ob der Datenverarbeitungsstandort des Anbieters mit Japans Gesetz zum Schutz personenbezogener Informationen (APPI) übereinstimmt. Qwen2.5 7B über Ollama ist das empfohlene lokale Modell für japanischsprachige Geschäftsabläufe.',
+            '**China:** Unter Chinas Gesetz zum Schutz personenbezogener Informationen (PIPL, 2021) und dem Datensicherheitsgesetz (数据安全法, 2021) erfordert die grenzüberschreitende Übermittlung personenbezogener Daten an ausländische Cloud-Anbieter eine behördliche Genehmigung. Für die meisten chinesischen Unternehmen sind lokale LLMs bei der Verarbeitung sensibler Daten nicht nur vorzuziehen \u2014 sie sind rechtlich notwendig.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Weiterführende Lektüre',
+          items: [
+            '[Ollama installieren](/local-llms/how-to-install-ollama?lang=de) \u2014 in 5 Minuten ein lokales LLM zum Vergleich mit Ihrem Cloud-API-Workflow zum Laufen bringen',
+            '[Beste lokale LLMs 2026](/local-llms/best-local-llms-2026?lang=de) \u2014 welche lokalen Modelle für welche Aufgaben Cloud-Qualität erreichen \u2014 Benchmarks und RAM-Anforderungen',
+            '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de) \u2014 wie Quantisierung den Hardwarebedarf für lokale Modelle ohne großen Qualitätsverlust reduziert',
+            '[Local LLM Sicherheits- und Datenschutzchecklist](/local-llms/local-llm-security-privacy-checklist?lang=de) \u2014 12-Schritte-Audit für den sicheren Betrieb lokaler LLMs in regulierten und datenschutzsensiblen Umgebungen',
+            '[Tokens, Kosten und Limits](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting?lang=de) \u2014 detaillierte Aufschlüsselung der Cloud-API-Preise und wann lokale Modelle kostengünstiger werden',
+            '[Beste lokale LLM-Modelle für Einsteiger](/local-llms/best-beginner-local-llm-models?lang=de) \u2014 wo Sie anfangen, wenn Sie von Cloud-APIs zur lokalen Inferenz wechseln',
+          ],
+        },
+        faqSection: {
+          id: 'common-questions',
+          title: 'Häufige Fragen zu lokalen LLMs vs. Cloud-APIs',
+          faqs: [
+            {
+              q: 'Kann ich in derselben Anwendung zwischen lokalen und Cloud-Modellen wechseln?',
+              a: 'Ja. Ollama und LM Studio bieten beide eine OpenAI-kompatible REST-API auf localhost an. Jede mit dem OpenAI-SDK erstellte Anwendung kann ihre Basis-URL auf localhost:11434 (Ollama) oder localhost:1234 (LM Studio) zeigen, um ein lokales Modell ohne Codeänderungen zu verwenden. Der Wechsel zurück zur Cloud erfordert nur das Ändern der Basis-URL und des API-Schlüssels.',
+            },
+            {
+              q: 'Trainieren Cloud-API-Anbieter mit meinen Prompts?',
+              a: 'Für kostenpflichtige API-Tiers schließen die meisten großen Anbieter (OpenAI, Anthropic, Google) API-Kunden standardmäßig von der Trainingsdatensammlung aus. Kostenlose Tiers und Consumer-Produkte verwenden Eingaben in der Regel zur Verbesserung. Überprüfen Sie immer die aktuelle Datenschutzrichtlinie für den spezifischen Tier und das Produkt, das Sie verwenden.',
+            },
+            {
+              q: 'Ist ein lokales 70B-Modell besser als GPT-4o Mini?',
+              a: 'Bei den meisten Benchmarks 2026 ja \u2014 Meta Llama 3.3 70B und Qwen2.5 72B erzielen bessere Ergebnisse als GPT-4o Mini bei Standard-Denk- und Codieraufgaben. Allerdings benötigen 70B-Modelle 40\u201348 GB RAM, was für die meisten Consumer-Hardware unerreichbar ist. Für die praktische lokale Nutzung ist der 7B\u201313B-Bereich üblicher.',
+            },
+            {
+              q: 'Welche Hardware benötige ich, um ein 7B-Modell lokal auszuführen?',
+              a: 'Eine moderne Laptop-CPU kann Llama 3.2 3B mit 10\u201320 Tokens/Sek. ausführen, aber eine GPU ist für die praktische Nutzung unerlässlich. Für 7B-Modelle: RTX 4070 Ti (12 GB, ~80 Tokens/Sek.), RTX 4090 (24 GB, ~130 Tokens/Sek.) oder Apple M3 Pro (18 GB, ~60 Tokens/Sek.). Mit Q4-Quantisierung sinken die VRAM-Anforderungen erheblich.',
+            },
+            {
+              q: 'Sind Cloud-APIs DSGVO-konform?',
+              a: 'Die meisten Anbieter (OpenAI, Anthropic, Google) bieten DSGVO-konforme Tiers an, aber Sie müssen sich anmelden und Ihren Tier überprüfen. Enterprise-Pläne bieten strengere Datenisolierung. Für regulierte Gesundheits-, Finanz- oder Rechtsdaten bieten lokale LLMs die stärkste Garantie, indem sie Daten vollständig auf dem Gerät halten.',
+            },
+            {
+              q: 'Was ist das beste lokale Modell für Einsteiger?',
+              a: 'Llama 3.2 3B oder 8B ist der beste Einstiegspunkt: klein (3\u20138 GB VRAM), schnell (~50\u201380 Tokens/Sek. auf GPU) und gute Qualität für Zusammenfassungen und Fragen. Download über Ollama oder LM Studio. Beide haben integrierte Chat-Oberflächen.',
+            },
+            {
+              q: 'Wie reduziere ich Cloud-API-Kosten?',
+              a: 'Verwenden Sie günstigere Modelle für einfache Aufgaben (GPT-4o Mini: $0,15 pro 1\u00a0Mio. Tokens vs. GPT-4o: $2,50). Bündeln Sie Anfragen. Nutzen Sie Prompt-Caching, wo unterstützt. Für hochvolumige Nutzung bieten Batch-Processing-APIs 50\u00a0% Rabatt. Oder wechseln Sie für häufige Workloads zu lokalen Modellen.',
+            },
+            {
+              q: 'Kann ich lokale und Cloud-Modelle parallel nutzen?',
+              a: 'Ja. Tools wie PromptQuorum ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle zu senden, Ergebnisse nebeneinander zu vergleichen und Aufgaben an das beste Modell für jede Aufgabe weiterzuleiten. Dies kombiniert lokalen Datenschutz mit Cloud-Qualität nach Bedarf.',
+            },
+            {
+              q: 'Muss ich bei der Verwendung von Cloud-APIs die DSGVO beachten?',
+              a: 'Ja. Wenn Sie personenbezogene Daten von EU-Bürgern an einen Cloud-KI-Anbieter senden, sind Sie nach DSGVO Artikel 28 verpflichtet, einen Datenverarbeitungsvertrag (DPA) abzuschließen. Der Anbieter wird zum Auftragsverarbeiter. Für OpenAI, Anthropic oder Google Cloud AI müssen Sie deren DPA unterzeichnen und sicherstellen, dass der Verarbeitungsstandort den Anforderungen von DSGVO Artikel 46 entspricht. Lokale LLMs eliminieren diese Anforderung vollständig, da keine Daten das Gerät verlassen.',
+            },
+            {
+              q: 'Sind lokale LLMs für den deutschen Mittelstand geeignet?',
+              a: 'Ja. Lokale LLMs bieten vollständige Datensouveränität gemäß BSI-Grundschutz-Kompendium-Empfehlungen, keine laufenden API-Kosten und keine Abhängigkeit von US-amerikanischen Cloud-Anbietern. Das BSI-Grundschutz-Kompendium empfiehlt für Unternehmen mit sensiblen Daten die On-Premises-Verarbeitung. Für den Einstieg empfiehlt sich Ollama mit Llama 3.1 8B oder Mistral 7B \u2014 beide laufen auf einem handelsüblichen Büro-PC mit NVIDIA RTX-GPU.',
+            },
+          ],
+        },
+      },
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': 'Lokale LLMs vs. Cloud-APIs: Was sollten Sie 2026 verwenden?',
+        'datePublished': '2026-04-04',
+        'dateModified': '2026-04-12',
+        'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis?lang=de',
+        'inLanguage': 'de',
+        'proficiencyLevel': 'Beginner',
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper' },
+        'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        'about': [
+          { '@type': 'Thing', 'name': 'Lokales LLM vs. Cloud-API' },
+          { '@type': 'Thing', 'name': 'KI-Datenschutz' },
+          { '@type': 'Thing', 'name': 'LLM-Kostenvergleich' },
+          { '@type': 'Thing', 'name': 'Ollama vs. OpenAI' },
+          { '@type': 'Thing', 'name': 'DSGVO KI-Compliance' },
+        ],
+        'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+        'isPartOf': { '@type': 'WebPage', 'name': 'Lokale LLMs Guide', 'url': 'https://www.promptquorum.com/local-llms' },
+      },
+      itemListSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        'inLanguage': 'de',
+        'name': 'Lokale LLMs vs. Cloud-APIs: 8-Faktoren-Vergleich 2026',
+        'numberOfItems': 8,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Datenschutz', 'description': 'Lokales LLM: vollständig, Daten verlassen das Gerät nie. Cloud-API: auf Anbieterservern verarbeitet, unterliegt der Datenschutzrichtlinie.' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Kosten pro Token', 'description': 'Lokales LLM: $0 nach Hardware. Cloud-API: $0,15\u2013$60 pro 1\u00a0Mio. Tokens.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Ausgabequalität', 'description': 'Lokales LLM: gut bei 13B\u201370B. Cloud-API: beste verfügbar \u2014 GPT-4o, Claude 4.6 Opus führen Benchmarks an.' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Antwortgeschwindigkeit', 'description': 'Lokales LLM: 10\u2013120 Tokens/Sek. hardwareabhängig. Cloud-API: 50\u2013200 Tokens/Sek. anbieterabhängig.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Einrichtungszeit', 'description': 'Lokales LLM: 5\u201315 Minuten mit Ollama. Cloud-API: 2\u20135 Minuten für Konto und API-Schlüssel.' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Offline-Zugriff', 'description': 'Lokales LLM: ja, funktioniert ohne Internet. Cloud-API: nein, erfordert aktive Verbindung.' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Modell-Updates', 'description': 'Lokales LLM: manuell, Sie entscheiden wann. Cloud-API: automatisch, Anbieter aktualisiert ohne Vorankündigung.' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Anpassbarkeit', 'description': 'Lokales LLM: vollständig \u2014 Fine-Tuning, Quantisierung, System-Prompts. Cloud-API: begrenzt auf System-Prompts.' },
+        ],
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'inLanguage': 'de',
+        'mainEntity': [
+          { '@type': 'Question', 'name': 'Kann ich in derselben Anwendung zwischen lokalen und Cloud-Modellen wechseln?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Ollama und LM Studio bieten beide eine OpenAI-kompatible REST-API auf localhost an. Jede mit dem OpenAI-SDK erstellte Anwendung kann ihre Basis-URL auf localhost:11434 (Ollama) oder localhost:1234 (LM Studio) zeigen, um ein lokales Modell ohne Codeänderungen zu verwenden.' } },
+          { '@type': 'Question', 'name': 'Trainieren Cloud-API-Anbieter mit meinen Prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für kostenpflichtige API-Tiers schließen die meisten großen Anbieter API-Kunden standardmäßig von der Trainingsdatensammlung aus. Kostenlose Tiers verwenden Eingaben in der Regel zur Verbesserung.' } },
+          { '@type': 'Question', 'name': 'Ist ein lokales 70B-Modell besser als GPT-4o Mini?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei den meisten Benchmarks 2026 ja \u2014 Meta Llama 3.3 70B und Qwen2.5 72B erzielen bessere Ergebnisse. 70B-Modelle benötigen jedoch 40\u201348 GB RAM, was für Consumer-Hardware meist unerreichbar ist.' } },
+          { '@type': 'Question', 'name': 'Welche Hardware benötige ich für ein 7B-Modell?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für 7B-Modelle: RTX 4070 Ti (12 GB, ~80 Tokens/Sek.), RTX 4090 (24 GB, ~130 Tokens/Sek.) oder Apple M3 Pro (18 GB, ~60 Tokens/Sek.). Mit Q4-Quantisierung sinken VRAM-Anforderungen auf ca. 4,7 GB.' } },
+          { '@type': 'Question', 'name': 'Sind Cloud-APIs DSGVO-konform?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Die meisten Anbieter bieten DSGVO-konforme Tiers an, erfordern aber Opt-in. Für regulierte Daten bieten lokale LLMs die stärkste Garantie \u2014 kein Drittanbieter-Datenverarbeitungsverhältnis nach DSGVO Artikel 28.' } },
+          { '@type': 'Question', 'name': 'Was ist das beste lokale Modell für Einsteiger?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3B oder 8B: klein (3\u20138 GB VRAM), schnell (50\u201380 Tokens/Sek. auf GPU), gute Qualität. Download über Ollama: ollama run llama3.2:3b.' } },
+          { '@type': 'Question', 'name': 'Wie reduziere ich Cloud-API-Kosten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Verwenden Sie günstigere Modelle (GPT-4o Mini: $0,15/1\u00a0Mio. Tokens vs. GPT-4o: $2,50). Nutzen Sie Prompt-Caching. Oder wechseln Sie zu lokalen Modellen für häufige Workloads.' } },
+          { '@type': 'Question', 'name': 'Kann ich lokale und Cloud-Modelle parallel nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Tools wie PromptQuorum ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle zu senden und Ergebnisse nebeneinander zu vergleichen.' } },
+          { '@type': 'Question', 'name': 'Muss ich bei Cloud-APIs die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Das Senden personenbezogener Daten an einen Cloud-KI-Anbieter erfordert einen Datenverarbeitungsvertrag (DPA) nach DSGVO Artikel 28. Lokale LLMs eliminieren diese Anforderung vollständig.' } },
+          { '@type': 'Question', 'name': 'Sind lokale LLMs für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Lokale LLMs bieten vollständige Datensouveränität gemäß BSI-Grundschutz-Kompendium, keine laufenden API-Kosten und keine Abhängigkeit von US-amerikanischen Cloud-Anbietern.' } },
+        ],
+      },
+      supplementalSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'inLanguage': 'de',
         'speakable': {
           '@type': 'SpeakableSpecification',
           'cssSelector': ['.article-intro'],
