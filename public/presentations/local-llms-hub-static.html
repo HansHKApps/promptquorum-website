@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local LLMs: Complete Guide 2026 | PromptQuorum</title>
+    <meta name="description" content="Local LLMs 2026: 14-slide guide covering hardware requirements (8 GB VRAM for 7B models), top models, Ollama setup, quantization, compliance, and key takeaways." />
+    <meta property="og:title" content="Local LLMs: Complete Guide 2026 — PromptQuorum" />
+    <meta property="og:description" content="Run AI models on your own hardware. 8 GB VRAM minimum. Full privacy. Zero token cost." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.promptquorum.com/local-llms">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f6f4f4; color: #1c1b1f; overflow: hidden; }
+        .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: white; }
+        .slide { width: 100%; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 32px 48px; text-align: center; overflow: hidden; animation: fadeIn 0.5s ease-in; position: relative; }
+        .slide.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .slide h1 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
+        .slide h2 { font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; margin-bottom: 14px; color: #1c1b1f; }
+        .slide p { font-size: clamp(15px, 1.7vw, 19px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
+        .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
+        .slide.title .logo { width: 56px; height: 56px; margin-bottom: 20px; }
+        .slide.title p { font-size: clamp(15px, 1.7vw, 21px); color: #6750a4; font-weight: 500; margin-top: 12px; }
+        .slide.title a { color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4; }
+        .slide ul, .slide ol { text-align: left; margin: 10px auto; max-width: 680px; width: 100%; }
+        .slide ul li, .slide ol li { font-size: clamp(13px, 1.4vw, 17px); margin-bottom: 9px; line-height: 1.45; }
+        .slide strong { color: #1c1b1f; font-weight: 700; }
+        table { margin: 10px auto; border-collapse: collapse; font-size: clamp(11px, 1.2vw, 14px); text-align: left; max-width: 92%; width: 100%; }
+        th { background: #6750a4; color: white; padding: 8px 12px; font-weight: 700; }
+        td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; }
+        tr:hover td { background: #f7f2fa; }
+        .header { padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; background: white; flex-shrink: 0; }
+        .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1c1b1f; }
+        .header-left img { width: 28px; height: 28px; }
+        .header-links { display: flex; gap: 16px; }
+        .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; }
+        .header-links a:hover { color: #7d5260; }
+        .content-area { flex: 1; overflow: hidden; }
+        .controls { display: flex; gap: 12px; align-items: center; justify-content: center; padding: 12px 20px; background: white; border-top: 1px solid #e8e0f0; flex-shrink: 0; }
+        button { background: #6750a4; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+        button:hover { background: #7d5260; }
+        button:disabled { background: #ccc; cursor: not-allowed; }
+        .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; min-width: 50px; text-align: center; }
+        .slide-footer { position: absolute; bottom: 12px; right: 16px; font-size: 10px; color: #bbb; }
+        .slide-footer a { color: #bbb; text-decoration: none; border-bottom: 1px solid #e0e0e0; }
+        .slide-footer a:hover { color: #6750a4; }
+        @page { size: A4 landscape; margin: 0; }
+        @media print {
+            * { margin: 0; padding: 0; }
+            html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: white !important; color: black !important; }
+            .header, .controls { display: none !important; }
+            .presentation-container { display: block !important; height: auto !important; width: 100%; counter-reset: page-counter; }
+            .content-area { display: block !important; overflow: visible !important; height: auto !important; width: 100%; }
+            .slide { display: flex !important; flex-direction: column; justify-content: center; align-items: center; page-break-after: always; break-after: page; width: 100%; height: 210mm; padding: 20mm 24mm; box-sizing: border-box; overflow: visible !important; margin: 0; background: white; color: #1c1b1f; position: relative; counter-increment: page-counter; }
+            .slide::before { content: "https://www.promptquorum.com/local-llms"; position: absolute; bottom: 12mm; left: 24mm; font-size: 9pt; color: #999; }
+            .slide::after { content: counter(page-counter) " / 14"; position: absolute; bottom: 12mm; right: 24mm; font-size: 9pt; color: #999; font-weight: 600; }
+            .slide h1, .slide h2, .slide p, .slide li { color: #000 !important; }
+            .slide strong { color: #000 !important; font-weight: 700; }
+            table th { background: #6750a4 !important; color: #fff !important; }
+            table td { color: #000 !important; border-color: #ccc !important; }
+            .slide:last-child { page-break-after: avoid; break-after: avoid; }
+            .slide-footer { display: none; }
+        }
+        @media (max-width: 768px) {
+            .slide { padding: 20px 24px; }
+            .header { padding: 8px 14px; }
+            .header-left span { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="presentation-container">
+    <div class="header">
+        <div class="header-left">
+            <img src="/logo.svg" alt="PromptQuorum" />
+            <span id="header-title">Local LLMs: Complete Guide 2026</span>
+        </div>
+        <div class="header-links">
+            <a id="back-link" href="https://www.promptquorum.com/local-llms">← Back to Hub</a>
+            <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+        </div>
+    </div>
+    <div class="content-area" id="slides-container"></div>
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+        <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+        <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        <button onclick="window.print()" style="background:#49454f;margin-left:8px;">Save as PDF</button>
+    </div>
+</div>
+<script>
+const CONTENT = {
+  en: {
+    title: 'Local LLMs: Complete Guide 2026',
+    slides: [
+      { type: 'title', h1: 'Local LLMs: Complete Guide 2026', subtitle: 'Run AI models on your own hardware. Full privacy. Zero token cost. Works offline. 88 guides from setup to enterprise.', link: 'https://www.promptquorum.com/local-llms' },
+      { type: 'list', h2: 'What Is a Local LLM?', items: ['<strong>A large language model that runs entirely on your own hardware</strong> — no data leaves your device', 'Models: Llama 4, Qwen3.5, DeepSeek V3, Mistral 7B, Phi-3.5 Mini (all free, open-source)', 'Tools: <strong>Ollama</strong> (CLI) and <strong>LM Studio</strong> (GUI) — both free, install in under 10 minutes', 'Zero token cost after hardware purchase — unlimited inference, no subscription', 'Works fully offline — no internet required once model is downloaded'] },
+      { type: 'comparison', h2: 'Local vs Cloud: The Key Numbers', line1: '<strong>Local LLMs:</strong> $0/token after hardware · 8 GB VRAM minimum · Full data privacy', line2: '<strong>Cloud APIs (GPT-4o, Claude, Gemini):</strong> $0.15–$60 per 1M tokens · No hardware required', tip: '13B–70B local models reach GPT-4o parity on coding and reasoning benchmarks.' },
+      { type: 'table', h2: 'Hardware Requirements', columns: ['Model Size', 'VRAM', 'Speed (GPU)', 'Tool'], rows: [{'Model Size':'3B (Phi-3.5 Mini)','VRAM':'4 GB','Speed (GPU)':'~120 tok/s','Tool':'Ollama, LM Studio'},{'Model Size':'7B (Llama 3.2)','VRAM':'8 GB','Speed (GPU)':'~80 tok/s','Tool':'Ollama, LM Studio'},{'Model Size':'13B (Mistral)','VRAM':'16 GB','Speed (GPU)':'~45 tok/s','Tool':'Ollama, LM Studio'},{'Model Size':'70B (Llama 4)','VRAM':'40 GB+','Speed (GPU)':'~20 tok/s','Tool':'Ollama (server)'}] },
+      { type: 'table', h2: 'Top Open-Source Models 2026', columns: ['Model', 'Best For', 'Min VRAM'], rows: [{'Model':'Llama 4 8B','Best For':'General tasks','Min VRAM':'8 GB'},{'Model':'Qwen3.5 7B','Best For':'Coding + reasoning','Min VRAM':'8 GB'},{'Model':'DeepSeek V3','Best For':'Code + math (large)','Min VRAM':'40 GB'},{'Model':'Mistral 7B v0.3','Best For':'Text + RAG','Min VRAM':'8 GB'},{'Model':'Phi-3.5 Mini (3.8B)','Best For':'CPU-only setups','Min VRAM':'4 GB RAM'}] },
+      { type: 'numbered', h2: 'Get Started with Ollama (5 min)', items: ['Go to <strong>ollama.com</strong> → Download for macOS, Windows, or Linux', 'Install the app (double-click installer or run the package manager command)', 'Open Terminal: run <code>ollama pull llama3.2:3b</code> (downloads ~2 GB)', 'Run <code>ollama run llama3.2:3b</code> — start chatting immediately in your terminal', 'API access: point any OpenAI SDK to <code>localhost:11434</code> with no API key'] },
+      { type: 'comparison', h2: 'Ollama vs LM Studio: Which to Choose?', line1: '<strong>Ollama:</strong> CLI tool — terminal commands, OpenAI-compatible API, automation-friendly', line2: '<strong>LM Studio:</strong> Desktop GUI — model browser, visual chat, built-in server interface', tip: 'Both support the same models (GGUF format). Use Ollama for scripting, LM Studio for exploring.' },
+      { type: 'list', h2: 'What Is Quantization? (Q4_K_M)', items: ['<strong>Quantization compresses model weights from 16-bit to 4-bit</strong> — cuts VRAM by ~75%', 'Q4_K_M is the standard format: best quality-to-size ratio for consumer hardware', '7B model: 28 GB (full precision) → 4.1 GB (Q4_K_M) — fits in 8 GB VRAM', 'Quality loss: minimal for summarization, Q&A, and coding tasks', 'GGUF format: universal — works in both Ollama and LM Studio without conversion'] },
+      { type: 'list', h2: 'When to Use a Local LLM', items: ['<strong>Privacy-sensitive data:</strong> medical records, legal documents, financial data', '<strong>High-volume inference:</strong> code completion, batch summarization (zero token cost)', '<strong>Offline environments:</strong> air-gapped systems, travel, unstable connections', '<strong>Developer tooling:</strong> wire Ollama\'s localhost API to VS Code, Cursor, or custom apps', '<strong>Enterprise compliance:</strong> GDPR, APPI, and data sovereignty requirements'] },
+      { type: 'list', h2: 'Compliance: EU, Japan & China', items: ['<strong>EU / GDPR:</strong> local inference satisfies Article 28 — no data processor agreement needed', '<strong>Japan / APPI:</strong> eliminates cross-border data transfer; aligned with METI AI guidelines', '<strong>China / Data Security Law:</strong> on-premises deployment meets data localization requirements', 'Ollama binds to <code>localhost</code> by default — no external network exposure', 'Add full-disk encryption + access logging for complete enterprise compliance'] },
+      { type: 'list', h2: 'Key Takeaways', items: ['8 GB VRAM runs 7B models at Q4 quantization — sufficient for most tasks', '40 GB VRAM (dual RTX 4090 or A100) handles 70B models at production quality', 'Q4 quantization cuts VRAM by ~75% with minimal quality loss', '13B–70B local models reach GPT-4 parity on coding and reasoning benchmarks', 'Zero API cost after hardware: unlimited inference, no subscription ever', 'Full data privacy: nothing leaves your device — satisfies GDPR, APPI, PIPL'] },
+      { type: 'faq', h2: 'Frequently Asked Questions', faqs: [{ q: 'How much VRAM do I need?', a: '8 GB VRAM runs 7B models at Q4 quantization. 16 GB handles 13B models. 40 GB+ required for 70B models. Apple Silicon unified memory counts as VRAM.' }, { q: 'Can local LLMs match GPT-4o?', a: 'Llama 4, DeepSeek V3, and Qwen3.5 score within 5–10% of GPT-4o on MMLU and HumanEval. Claude Opus 4.6 maintains an edge on complex multi-step tasks.' }, { q: 'Can I run a local LLM without a GPU?', a: 'Yes. CPU mode in Ollama runs 3B–7B models at 2–8 tok/s. Phi-3.5 Mini (3.8B) gives the best CPU quality-speed ratio.' }] },
+      { type: 'list', h2: 'PromptQuorum + Your Local LLM', items: ['Connect PromptQuorum to your local Ollama instance at <code>localhost:11434</code>', 'Send one prompt to your local model <strong>and</strong> 25+ cloud models simultaneously', 'Compare local vs cloud results side-by-side in one view', 'No API key needed for the local model; cloud models use your own keys', 'Measure when cloud quality is worth the cost vs local is sufficient'] },
+      { type: 'cta', h2: 'Run Local + Cloud Models Together', body: 'PromptQuorum connects your Ollama or LM Studio instance to 25+ cloud models. Compare results side-by-side — for free.', cta: 'Try PromptQuorum Free →', href: 'https://www.promptquorum.com' }
+    ]
+  },
+  de: {
+    title: 'Lokale LLMs: Vollständiger Leitfaden 2026',
+    slides: [
+      { type: 'title', h1: 'Lokale LLMs: Vollständiger Leitfaden 2026', subtitle: 'KI-Modelle auf Ihrer eigenen Hardware ausführen. Vollständige Privatsphäre. Keine Token-Kosten. Offline. 88 Leitfäden von Setup bis Enterprise.', link: 'https://www.promptquorum.com/local-llms' },
+      { type: 'list', h2: 'Was ist ein lokales LLM?', items: ['<strong>Ein Large Language Model, das vollständig auf Ihrer eigenen Hardware läuft</strong> — keine Daten verlassen Ihr Gerät', 'Modelle: Llama 4, Qwen3.5, DeepSeek V3, Mistral 7B, Phi-3.5 Mini (kostenlos, Open-Source)', 'Tools: <strong>Ollama</strong> (CLI) und <strong>LM Studio</strong> (GUI) — beide kostenlos, in unter 10 Minuten installiert', 'Null Token-Kosten nach dem Hardware-Kauf — unbegrenzte Inferenz, kein Abonnement', 'Funktioniert vollständig offline — kein Internet erforderlich nach dem Download'] },
+      { type: 'comparison', h2: 'Lokal vs. Cloud: Die wichtigsten Zahlen', line1: '<strong>Lokale LLMs:</strong> $0/Token nach Hardware · 8 GB VRAM Minimum · Vollständige Privatsphäre', line2: '<strong>Cloud-APIs (GPT-4o, Claude, Gemini):</strong> $0,15–$60 pro 1M Tokens · Keine Hardware nötig', tip: 'Lokale 13B–70B-Modelle erreichen GPT-4o-Parität bei Coding- und Reasoning-Benchmarks.' },
+      { type: 'table', h2: 'Hardware-Anforderungen', columns: ['Modellgröße', 'VRAM', 'Geschwindigkeit', 'Tool'], rows: [{'Modellgröße':'3B (Phi-3.5 Mini)','VRAM':'4 GB','Geschwindigkeit':'~120 Tok/s','Tool':'Ollama, LM Studio'},{'Modellgröße':'7B (Llama 3.2)','VRAM':'8 GB','Geschwindigkeit':'~80 Tok/s','Tool':'Ollama, LM Studio'},{'Modellgröße':'13B (Mistral)','VRAM':'16 GB','Geschwindigkeit':'~45 Tok/s','Tool':'Ollama, LM Studio'},{'Modellgröße':'70B (Llama 4)','VRAM':'40 GB+','Geschwindigkeit':'~20 Tok/s','Tool':'Ollama (Server)'}] },
+      { type: 'table', h2: 'Top Open-Source-Modelle 2026', columns: ['Modell', 'Am besten für', 'VRAM mind.'], rows: [{'Modell':'Llama 4 8B','Am besten für':'Allgemeine Aufgaben','VRAM mind.':'8 GB'},{'Modell':'Qwen3.5 7B','Am besten für':'Coding + Reasoning','VRAM mind.':'8 GB'},{'Modell':'DeepSeek V3','Am besten für':'Code + Mathematik','VRAM mind.':'40 GB'},{'Modell':'Mistral 7B v0.3','Am besten für':'Text + RAG','VRAM mind.':'8 GB'},{'Modell':'Phi-3.5 Mini (3.8B)','Am besten für':'Nur CPU','VRAM mind.':'4 GB RAM'}] },
+      { type: 'numbered', h2: 'Mit Ollama starten (5 Min.)', items: ['<strong>ollama.com</strong> aufrufen → Für macOS, Windows oder Linux herunterladen', 'App installieren (Installer doppelklicken oder Paketmanager-Befehl ausführen)', 'Terminal öffnen: <code>ollama pull llama3.2:3b</code> ausführen (~2 GB Download)', '<code>ollama run llama3.2:3b</code> ausführen — sofort im Terminal chatten', 'API: Jedes OpenAI SDK auf <code>localhost:11434</code> zeigen, kein API-Key nötig'] },
+      { type: 'comparison', h2: 'Ollama vs. LM Studio: Was wählen?', line1: '<strong>Ollama:</strong> CLI-Tool — Terminal-Befehle, OpenAI-kompatible API, automatisierungsfreundlich', line2: '<strong>LM Studio:</strong> Desktop-GUI — Modell-Browser, visueller Chat, eingebaute Serveroberfläche', tip: 'Beide unterstützen dieselben Modelle (GGUF). Ollama für Scripting, LM Studio zum Erkunden.' },
+      { type: 'list', h2: 'Was ist Quantisierung? (Q4_K_M)', items: ['<strong>Quantisierung komprimiert Modellgewichte von 16-Bit auf 4-Bit</strong> — reduziert VRAM um ~75%', 'Q4_K_M: bestes Qualitäts-zu-Größe-Verhältnis für Consumer-Hardware', '7B-Modell: 28 GB (volle Präzision) → 4,1 GB (Q4_K_M) — passt in 8 GB VRAM', 'Qualitätsverlust: minimal für Zusammenfassungen, Q&A und Coding', 'GGUF-Format: universell — funktioniert in Ollama und LM Studio ohne Konvertierung'] },
+      { type: 'list', h2: 'Wann lokale LLMs verwenden', items: ['<strong>Datenschutzsensible Daten:</strong> Patientenakten, Rechtsdokumente, Finanzdaten', '<strong>Hochvolumige Inferenz:</strong> Code-Completion, Batch-Zusammenfassungen (null Token-Kosten)', '<strong>Offline-Umgebungen:</strong> Air-gapped-Systeme, Reisen, instabile Verbindungen', '<strong>Entwickler-Tools:</strong> Ollama\'s localhost-API mit VS Code, Cursor verbinden', '<strong>DSGVO-Compliance:</strong> On-Premises hält alle Daten lokal und erfüllt Art. 28'] },
+      { type: 'list', h2: 'Compliance: EU, Japan & China', items: ['<strong>EU / DSGVO:</strong> lokale Inferenz erfüllt Art. 28 — keine Auftragsverarbeitung nötig', '<strong>Japan / APPI:</strong> eliminiert grenzüberschreitende Datenübertragung; METI-konform', '<strong>China / Datensicherheitsgesetz:</strong> On-Premises erfüllt Datenlokalisierungsanforderungen', 'Ollama bindet standardmäßig an <code>localhost</code> — keine externe Netzwerkexposition', 'Festplattenverschlüsselung + Zugriffsprotokollierung für vollständige Enterprise-Compliance'] },
+      { type: 'list', h2: 'Wichtigste Erkenntnisse', items: ['8 GB VRAM führt 7B-Modelle mit Q4-Quantisierung aus — für die meisten Aufgaben ausreichend', '40 GB VRAM (dual RTX 4090 oder A100) verarbeitet 70B-Modelle in Produktionsqualität', 'Q4-Quantisierung reduziert VRAM um ~75% bei minimalem Qualitätsverlust', 'Lokale 13B–70B-Modelle erreichen GPT-4-Parität bei Coding- und Reasoning-Benchmarks', 'Null API-Kosten nach Hardware: unbegrenzte Inferenz, kein Abonnement je nötig', 'Vollständige Datenprivatsphäre: keine Daten verlassen Ihr Gerät'] },
+      { type: 'faq', h2: 'Häufig gestellte Fragen', faqs: [{ q: 'Wie viel VRAM benötige ich?', a: '8 GB VRAM für 7B-Modelle bei Q4-Quantisierung. 16 GB für 13B-Modelle. 40 GB+ für 70B. Apple Silicon Unified Memory zählt als VRAM.' }, { q: 'Können lokale LLMs mit GPT-4o mithalten?', a: 'Llama 4, DeepSeek V3 und Qwen3.5 liegen innerhalb 5–10% von GPT-4o auf MMLU und HumanEval. Claude Opus 4.6 behält den Vorteil bei komplexen Aufgaben.' }, { q: 'Kann ich ohne GPU ein lokales LLM ausführen?', a: 'Ja. Der CPU-Modus in Ollama führt 3B–7B-Modelle mit 2–8 Tok/s aus. Phi-3.5 Mini bietet das beste CPU-Verhältnis.' }] },
+      { type: 'list', h2: 'PromptQuorum + Ihr lokales LLM', items: ['PromptQuorum mit lokaler Ollama-Instanz unter <code>localhost:11434</code> verbinden', 'Einen Prompt an Ihr lokales Modell <strong>und</strong> 25+ Cloud-Modelle gleichzeitig senden', 'Lokale vs. Cloud-Ergebnisse nebeneinander vergleichen — in einer Ansicht', 'Kein API-Key für das lokale Modell nötig; Cloud-Modelle verwenden Ihre Keys', 'Genau messen, wann Cloud-Qualität die Kosten rechtfertigt'] },
+      { type: 'cta', h2: 'Lokal + Cloud-Modelle gemeinsam nutzen', body: 'PromptQuorum verbindet Ihre Ollama- oder LM Studio-Instanz mit 25+ Cloud-Modellen. Ergebnisse nebeneinander vergleichen — kostenlos.', cta: 'PromptQuorum kostenlos testen →', href: 'https://www.promptquorum.com' }
+    ]
+  },
+  fr: {
+    title: 'LLMs locaux : Guide complet 2026',
+    slides: [
+      { type: 'title', h1: 'LLMs locaux : Guide complet 2026', subtitle: 'Exécutez des modèles IA sur votre propre matériel. Confidentialité totale. Zéro coût de token. Hors ligne. 88 guides du démarrage à l\'entreprise.', link: 'https://www.promptquorum.com/local-llms' },
+      { type: 'list', h2: 'Qu\'est-ce qu\'un LLM local ?', items: ['<strong>Un grand modèle de langage qui s\'exécute entièrement sur votre propre matériel</strong> — aucune donnée ne quitte votre appareil', 'Modèles : Llama 4, Qwen3.5, DeepSeek V3, Mistral 7B, Phi-3.5 Mini (gratuits, open source)', 'Outils : <strong>Ollama</strong> (CLI) et <strong>LM Studio</strong> (GUI) — gratuits, installation en moins de 10 minutes', 'Zéro coût de token après achat du matériel — inférence illimitée, sans abonnement', 'Fonctionne entièrement hors ligne — aucune connexion requise après téléchargement'] },
+      { type: 'comparison', h2: 'Local vs Cloud : Les chiffres clés', line1: '<strong>LLMs locaux :</strong> $0/token après matériel · 8 Go VRAM minimum · Confidentialité totale', line2: '<strong>APIs cloud (GPT-4o, Claude, Gemini) :</strong> $0,15–$60 par 1M tokens · Aucun matériel requis', tip: 'Les modèles locaux 13B–70B atteignent la parité GPT-4o sur les benchmarks de coding et raisonnement.' },
+      { type: 'table', h2: 'Exigences matérielles', columns: ['Taille du modèle', 'VRAM', 'Vitesse (GPU)', 'Outil'], rows: [{'Taille du modèle':'3B (Phi-3.5 Mini)','VRAM':'4 Go','Vitesse (GPU)':'~120 tok/s','Outil':'Ollama, LM Studio'},{'Taille du modèle':'7B (Llama 3.2)','VRAM':'8 Go','Vitesse (GPU)':'~80 tok/s','Outil':'Ollama, LM Studio'},{'Taille du modèle':'13B (Mistral)','VRAM':'16 Go','Vitesse (GPU)':'~45 tok/s','Outil':'Ollama, LM Studio'},{'Taille du modèle':'70B (Llama 4)','VRAM':'40 Go+','Vitesse (GPU)':'~20 tok/s','Outil':'Ollama (serveur)'}] },
+      { type: 'table', h2: 'Meilleurs modèles open source 2026', columns: ['Modèle', 'Meilleur usage', 'VRAM min.'], rows: [{'Modèle':'Llama 4 8B','Meilleur usage':'Tâches générales','VRAM min.':'8 Go'},{'Modèle':'Qwen3.5 7B','Meilleur usage':'Coding + raisonnement','VRAM min.':'8 Go'},{'Modèle':'DeepSeek V3','Meilleur usage':'Code + mathématiques','VRAM min.':'40 Go'},{'Modèle':'Mistral 7B v0.3','Meilleur usage':'Texte + RAG','VRAM min.':'8 Go'},{'Modèle':'Phi-3.5 Mini (3.8B)','Meilleur usage':'Sans GPU','VRAM min.':'4 Go RAM'}] },
+      { type: 'numbered', h2: 'Démarrer avec Ollama (5 min)', items: ['Aller sur <strong>ollama.com</strong> → Télécharger pour macOS, Windows ou Linux', 'Installer l\'application (double-cliquer sur l\'installateur ou exécuter la commande)', 'Ouvrir le Terminal : <code>ollama pull llama3.2:3b</code> (~2 Go téléchargés)', 'Exécuter <code>ollama run llama3.2:3b</code> — commencer à chatter immédiatement', 'API : pointer tout SDK OpenAI vers <code>localhost:11434</code> sans clé API'] },
+      { type: 'comparison', h2: 'Ollama vs LM Studio : Lequel choisir ?', line1: '<strong>Ollama :</strong> outil CLI — commandes terminal, API compatible OpenAI, adapté à l\'automatisation', line2: '<strong>LM Studio :</strong> GUI bureau — navigateur de modèles, chat visuel, interface serveur intégrée', tip: 'Les deux supportent les mêmes modèles (GGUF). Ollama pour les scripts, LM Studio pour explorer.' },
+      { type: 'list', h2: 'Qu\'est-ce que la quantification ? (Q4_K_M)', items: ['<strong>La quantification compresse les poids de 16 bits à 4 bits</strong> — réduit la VRAM de ~75%', 'Q4_K_M : meilleur rapport qualité/taille pour le matériel grand public', 'Modèle 7B : 28 Go (pleine précision) → 4,1 Go (Q4_K_M) — tient dans 8 Go VRAM', 'Perte de qualité : minimale pour la synthèse, Q&R et les tâches de coding', 'Format GGUF : universel — fonctionne dans Ollama et LM Studio sans conversion'] },
+      { type: 'list', h2: 'Quand utiliser un LLM local ?', items: ['<strong>Données sensibles :</strong> dossiers médicaux, documents juridiques, données financières', '<strong>Inférence à grand volume :</strong> complétion de code, résumés par lots (zéro coût de token)', '<strong>Environnements hors ligne :</strong> systèmes isolés, voyages, connexions instables', '<strong>Outils développeur :</strong> connecter l\'API localhost d\'Ollama à VS Code, Cursor', '<strong>Conformité RGPD :</strong> le déploiement sur site satisfait l\'article 28 — aucun accord requis'] },
+      { type: 'list', h2: 'Conformité : UE, Japon & Chine', items: ['<strong>UE / RGPD :</strong> l\'inférence locale satisfait l\'article 28 — aucun accord de traitement requis', '<strong>Japon / APPI :</strong> élimine les transferts transfrontaliers ; aligné sur les directives METI AI', '<strong>Chine / Loi sur la sécurité des données :</strong> répond aux exigences de localisation des données', 'Ollama se lie à <code>localhost</code> par défaut — aucune exposition réseau externe', 'Chiffrement disque complet + journalisation pour la conformité entreprise complète'] },
+      { type: 'list', h2: 'Points clés à retenir', items: ['8 Go VRAM exécute des modèles 7B en Q4 — suffisant pour la plupart des tâches', '40 Go VRAM (double RTX 4090 ou A100) gère des modèles 70B en qualité de production', 'La quantification Q4 réduit la VRAM de ~75% avec une perte de qualité minimale', 'Les modèles locaux 13B–70B atteignent la parité GPT-4 sur les benchmarks', 'Zéro coût API après le matériel : inférence illimitée, aucun abonnement jamais', 'Confidentialité totale : rien ne quitte votre appareil — RGPD, APPI, PIPL'] },
+      { type: 'faq', h2: 'Questions fréquentes', faqs: [{ q: 'De combien de VRAM ai-je besoin ?', a: '8 Go VRAM pour les modèles 7B en Q4. 16 Go pour les modèles 13B. 40 Go+ pour les modèles 70B. La mémoire unifiée Apple Silicon compte comme VRAM.' }, { q: 'Les LLMs locaux peuvent-ils rivaliser avec GPT-4o ?', a: 'Llama 4, DeepSeek V3 et Qwen3.5 se situent à 5–10% de GPT-4o sur MMLU et HumanEval. Claude Opus 4.6 conserve un avantage sur les tâches complexes.' }, { q: 'Puis-je utiliser un LLM local sans GPU ?', a: 'Oui. Le mode CPU d\'Ollama exécute des modèles 3B–7B à 2–8 tok/s. Phi-3.5 Mini offre le meilleur rapport qualité-vitesse sur CPU.' }] },
+      { type: 'list', h2: 'PromptQuorum + votre LLM local', items: ['Connecter PromptQuorum à votre instance Ollama locale sur <code>localhost:11434</code>', 'Envoyer un prompt à votre modèle local <strong>et</strong> à 25+ modèles cloud simultanément', 'Comparer les résultats locaux vs cloud côte à côte — en une seule vue', 'Aucune clé API nécessaire pour le modèle local ; les modèles cloud utilisent vos propres clés', 'Mesurer précisément quand la qualité cloud vaut le coût vs quand le local suffit'] },
+      { type: 'cta', h2: 'Exécuter LLMs locaux + cloud ensemble', body: 'PromptQuorum connecte votre instance Ollama ou LM Studio à 25+ modèles cloud. Comparez les résultats côte à côte — gratuitement.', cta: 'Essayer PromptQuorum gratuitement →', href: 'https://www.promptquorum.com' }
+    ]
+  },
+  ja: {
+    title: 'ローカルLLM：完全ガイド2026',
+    slides: [
+      { type: 'title', h1: 'ローカルLLM：完全ガイド2026', subtitle: '自分のハードウェアでAIモデルを実行。完全プライバシー。トークンコストゼロ。オフライン動作。セットアップから企業導入まで88本のガイド。', link: 'https://www.promptquorum.com/local-llms' },
+      { type: 'list', h2: 'ローカルLLMとは？', items: ['<strong>自分のハードウェアで完全に動作する大規模言語モデル</strong> — データはデバイスから外に出ない', 'モデル：Llama 4、Qwen3.5、DeepSeek V3、Mistral 7B、Phi-3.5 Mini（すべて無料・オープンソース）', 'ツール：<strong>Ollama</strong>（CLI）と<strong>LM Studio</strong>（GUI）— 両方無料、10分以内にインストール可能', 'ハードウェア購入後のトークンコストはゼロ — 無制限の推論、サブスクリプション不要', 'モデルダウンロード後はインターネット不要で完全オフライン動作'] },
+      { type: 'comparison', h2: 'ローカル vs クラウド：主要な数値', line1: '<strong>ローカルLLM：</strong> ハードウェア後$0/トークン · VRAM 8 GB最小 · 完全なデータプライバシー', line2: '<strong>クラウドAPI（GPT-4o、Claude、Gemini）：</strong> $0.15〜$60/1Mトークン · ハードウェア不要', tip: 'ローカル13B〜70BモデルはコーディングとReasoningベンチマークでGPT-4o水準に到達。' },
+      { type: 'table', h2: 'ハードウェア要件', columns: ['モデルサイズ', 'VRAM', '速度（GPU）', 'ツール'], rows: [{'モデルサイズ':'3B (Phi-3.5 Mini)','VRAM':'4 GB','速度（GPU）':'~120 tok/s','ツール':'Ollama, LM Studio'},{'モデルサイズ':'7B (Llama 3.2)','VRAM':'8 GB','速度（GPU）':'~80 tok/s','ツール':'Ollama, LM Studio'},{'モデルサイズ':'13B (Mistral)','VRAM':'16 GB','速度（GPU）':'~45 tok/s','ツール':'Ollama, LM Studio'},{'モデルサイズ':'70B (Llama 4)','VRAM':'40 GB+','速度（GPU）':'~20 tok/s','ツール':'Ollama（サーバー）'}] },
+      { type: 'table', h2: '2026年トップオープンソースモデル', columns: ['モデル', '最適用途', '最低VRAM'], rows: [{'モデル':'Llama 4 8B','最適用途':'汎用タスク','最低VRAM':'8 GB'},{'モデル':'Qwen3.5 7B','最適用途':'コーディング + 推論','最低VRAM':'8 GB'},{'モデル':'DeepSeek V3','最適用途':'コード + 数学','最低VRAM':'40 GB'},{'モデル':'Mistral 7B v0.3','最適用途':'テキスト + RAG','最低VRAM':'8 GB'},{'モデル':'Phi-3.5 Mini (3.8B)','最適用途':'CPUのみ','最低VRAM':'4 GB RAM'}] },
+      { type: 'numbered', h2: 'Ollamaで5分で始める', items: ['<strong>ollama.com</strong>にアクセス → macOS、Windows、またはLinux用をダウンロード', 'アプリをインストール（インストーラーをダブルクリックまたはコマンド実行）', 'ターミナルを開く：<code>ollama pull llama3.2:3b</code>を実行（~2 GBダウンロード）', '<code>ollama run llama3.2:3b</code>を実行 — ターミナルですぐにチャット開始', 'API：任意のOpenAI SDKを<code>localhost:11434</code>に向ける（APIキー不要）'] },
+      { type: 'comparison', h2: 'Ollama vs LM Studio：どちらを選ぶ？', line1: '<strong>Ollama：</strong> CLIツール — ターミナルコマンド、OpenAI互換API、自動化に最適', line2: '<strong>LM Studio：</strong> デスクトップGUI — モデルブラウザ、ビジュアルチャット、内蔵サーバー', tip: '両方とも同じモデル（GGUF形式）をサポート。スクリプト用はOllama、探索用はLM Studio。' },
+      { type: 'list', h2: '量子化とは？（Q4_K_M）', items: ['<strong>量子化はモデルの重みを16ビットから4ビットに圧縮</strong> — VRAMを~75%削減', 'Q4_K_M：コンシューマーハードウェアで最良の品質対サイズ比', '7Bモデル：28 GB（フル精度）→ 4.1 GB（Q4_K_M）— 8 GB VRAMに収まる', '品質の損失：要約、Q&A、コーディングでは最小限', 'GGUF形式：OllamaとLM Studio両方で変換なしに動作'] },
+      { type: 'list', h2: 'ローカルLLMを使うべき場面', items: ['<strong>プライバシーに敏感なデータ：</strong>医療記録、法的文書、財務データ', '<strong>大量推論：</strong>コード補完、バッチ要約（トークンコストゼロ）', '<strong>オフライン環境：</strong>エアギャップシステム、出張、不安定な接続', '<strong>開発者ツール：</strong>Ollamaのlocalhost APIをVS Code、Cursorに接続', '<strong>コンプライアンス：</strong>GDPR、APPI — オンプレミスはデータをローカルに保持'] },
+      { type: 'list', h2: 'コンプライアンス：EU、日本、中国', items: ['<strong>EU / GDPR：</strong>ローカル推論は第28条を満たす — データ処理契約不要', '<strong>日本 / APPI：</strong>国境を越えたデータ転送を排除；METI AIガイドラインと整合', '<strong>中国 / データセキュリティ法：</strong>オンプレミス展開がデータローカライゼーション要件を満たす', 'Ollamaはデフォルトで<code>localhost</code>にバインド — 外部ネットワーク露出なし', 'フルディスク暗号化 + アクセスログでエンタープライズコンプライアンスを達成'] },
+      { type: 'list', h2: '重要ポイント', items: ['8 GB VRAMでQ4量子化の7Bモデルを実行 — ほとんどのタスクに十分', '40 GB VRAM（RTX 4090×2またはA100）で本番品質の70Bモデルを処理', 'Q4量子化でVRAMを~75%削減、品質損失は最小限', 'ローカル13B〜70BモデルはGPT-4に匹敵（コーディングとReasoningベンチマーク）', 'ハードウェア後APIコストゼロ：無制限の推論、サブスクリプション不要', '完全なデータプライバシー：何もデバイスを離れない — GDPR、APPI対応'] },
+      { type: 'faq', h2: 'よくある質問', faqs: [{ q: 'どのくらいのVRAMが必要ですか？', a: 'Q4量子化で7Bモデルには8 GB VRAM。13Bモデルには16 GB。70Bモデルには40 GB+。Apple Silicon Unifiedメモリはまとめてカウント。' }, { q: 'ローカルLLMはGPT-4oに匹敵できますか？', a: 'Llama 4、DeepSeek V3、Qwen3.5はMMLUとHumanEvalでGPT-4oの5〜10%以内のスコア。Claude Opus 4.6は複雑なマルチステップタスクで優位を維持。' }, { q: 'GPUなしでローカルLLMを実行できますか？', a: 'はい。OllamaのCPUモードで3B〜7Bモデルを2〜8 tok/sで実行。Phi-3.5 Mini（3.8B）が最良のCPU品質速度比。' }] },
+      { type: 'list', h2: 'PromptQuorum + ローカルLLM', items: ['PromptQuorumをローカルOllamaインスタンス（<code>localhost:11434</code>）に接続', '一つのプロンプトをローカルモデル<strong>と</strong>25以上のクラウドモデルに同時送信', 'ローカルとクラウドの結果を一画面で並列比較', 'ローカルモデルにAPIキー不要；クラウドモデルは自分のキーを使用', 'クラウドの品質がコストに見合うか、ローカルで十分かを正確に測定'] },
+      { type: 'cta', h2: 'ローカル + クラウドモデルを一緒に活用', body: 'PromptQuorumがあなたのOllamaまたはLM Studioインスタンスを25以上のクラウドモデルに接続。結果を並べて比較 — 無料。', cta: 'PromptQuorumを無料で試す →', href: 'https://www.promptquorum.com' }
+    ]
+  },
+  zh: {
+    title: '本地LLM：2026年完整指南',
+    slides: [
+      { type: 'title', h1: '本地LLM：2026年完整指南', subtitle: '在自己的硬件上运行AI模型。完整隐私。零Token费用。离线工作。从入门到企业部署的88篇指南。', link: 'https://www.promptquorum.com/local-llms' },
+      { type: 'list', h2: '什么是本地LLM？', items: ['<strong>完全在您自己的硬件上运行的大型语言模型</strong> — 数据不离开您的设备', '模型：Llama 4、Qwen3.5、DeepSeek V3、Mistral 7B、Phi-3.5 Mini（全部免费、开源）', '工具：<strong>Ollama</strong>（CLI）和<strong>LM Studio</strong>（GUI）— 均免费，10分钟内安装', '购买硬件后Token费用为零 — 无限推断，无需订阅', '模型下载后完全离线运行 — 无需互联网'] },
+      { type: 'comparison', h2: '本地 vs 云端：核心数字', line1: '<strong>本地LLM：</strong> 硬件后$0/Token · 最低8 GB显存 · 完整数据隐私', line2: '<strong>云端API（GPT-4o、Claude、Gemini）：</strong> $0.15–$60/每1M Token · 无需硬件', tip: '本地13B–70B模型在编码和推理基准测试中达到GPT-4o水平。' },
+      { type: 'table', h2: '硬件要求', columns: ['模型大小', '显存', '速度（GPU）', '工具'], rows: [{'模型大小':'3B (Phi-3.5 Mini)','显存':'4 GB','速度（GPU）':'~120 tok/s','工具':'Ollama, LM Studio'},{'模型大小':'7B (Llama 3.2)','显存':'8 GB','速度（GPU）':'~80 tok/s','工具':'Ollama, LM Studio'},{'模型大小':'13B (Mistral)','显存':'16 GB','速度（GPU）':'~45 tok/s','工具':'Ollama, LM Studio'},{'模型大小':'70B (Llama 4)','显存':'40 GB+','速度（GPU）':'~20 tok/s','工具':'Ollama（服务器）'}] },
+      { type: 'table', h2: '2026年顶级开源模型', columns: ['模型', '最佳用途', '最低显存'], rows: [{'模型':'Llama 4 8B','最佳用途':'通用任务','最低显存':'8 GB'},{'模型':'Qwen3.5 7B','最佳用途':'编码 + 推理','最低显存':'8 GB'},{'模型':'DeepSeek V3','最佳用途':'代码 + 数学','最低显存':'40 GB'},{'模型':'Mistral 7B v0.3','最佳用途':'文本 + RAG','最低显存':'8 GB'},{'模型':'Phi-3.5 Mini (3.8B)','最佳用途':'仅CPU','最低显存':'4 GB RAM'}] },
+      { type: 'numbered', h2: '5分钟上手Ollama', items: ['访问<strong>ollama.com</strong> → 下载macOS、Windows或Linux版本', '安装应用（双击安装包或运行包管理器命令）', '打开终端：运行<code>ollama pull llama3.2:3b</code>（下载约2 GB）', '运行<code>ollama run llama3.2:3b</code> — 立即在终端开始对话', 'API访问：将任意OpenAI SDK指向<code>localhost:11434</code>，无需API密钥'] },
+      { type: 'comparison', h2: 'Ollama vs LM Studio：如何选择？', line1: '<strong>Ollama：</strong> CLI工具 — 终端命令、OpenAI兼容API、适合自动化', line2: '<strong>LM Studio：</strong> 桌面GUI — 模型浏览器、可视化对话、内置服务器界面', tip: '两者都支持相同模型（GGUF格式）。自动化用Ollama，探索用LM Studio。' },
+      { type: 'list', h2: '什么是量化？（Q4_K_M）', items: ['<strong>量化将模型权重从16位压缩至4位</strong> — 显存减少约75%', 'Q4_K_M是标准格式：消费级硬件最佳质量与大小比', '7B模型：28 GB（完整精度）→ 4.1 GB（Q4_K_M）— 适合8 GB显存', '质量损失：摘要、问答和编码任务中最小', 'GGUF格式：通用 — 无需转换即可在Ollama和LM Studio中使用'] },
+      { type: 'list', h2: '何时使用本地LLM', items: ['<strong>隐私敏感数据：</strong>医疗记录、法律文件、金融数据', '<strong>高频推断：</strong>代码补全、批量摘要（零Token费用）', '<strong>离线环境：</strong>气隙系统、出行、连接不稳定', '<strong>开发工具：</strong>将Ollama的localhost API接入VS Code、Cursor', '<strong>企业合规：</strong>GDPR、PIPL — 本地部署确保数据留在设备内'] },
+      { type: 'list', h2: '合规：欧盟、日本与中国', items: ['<strong>欧盟 / GDPR：</strong>本地推断满足第28条 — 无需数据处理协议', '<strong>日本 / APPI：</strong>完全消除跨境数据传输；符合METI AI指南', '<strong>中国 / 数据安全法：</strong>本地LLM满足数据本地化要求，降低合规负担', 'Ollama默认绑定到<code>localhost</code> — 无外部网络暴露', '添加全磁盘加密 + 访问日志以实现完整企业合规'] },
+      { type: 'list', h2: '核心要点', items: ['8 GB显存以Q4量化运行7B模型 — 满足大多数任务', '40 GB显存（双RTX 4090或A100）以生产质量处理70B模型', 'Q4量化将显存减少约75%，质量损失极小', '本地13B–70B模型在编码和推理基准测试中达到GPT-4水平', '硬件后零API费用：无限推断，永不需要订阅', '完整数据隐私：没有任何数据离开设备 — 满足GDPR、PIPL'] },
+      { type: 'faq', h2: '常见问题', faqs: [{ q: '需要多少显存？', a: 'Q4量化下7B模型需要8 GB显存。13B模型需要16 GB。70B模型需要40 GB+。Apple Silicon统一内存计为显存。' }, { q: '本地LLM能与GPT-4o媲美吗？', a: 'Llama 4、DeepSeek V3和Qwen3.5在MMLU和HumanEval上的得分在GPT-4o的5–10%以内。Claude Opus 4.6在复杂多步任务上保持优势。' }, { q: '没有GPU能运行本地LLM吗？', a: '可以。Ollama的CPU模式以2–8 tok/s运行3B–7B模型。Phi-3.5 Mini（3.8B）提供最佳的CPU质量速度比。' }] },
+      { type: 'list', h2: 'PromptQuorum + 本地LLM', items: ['将PromptQuorum连接到您的本地Ollama实例（<code>localhost:11434</code>）', '同时向本地模型<strong>和</strong>25+个云模型发送一个提示词', '在一个视图中并排比较本地与云端结果', '本地模型无需API密钥；云模型使用您自己的密钥', '精确衡量云端质量何时值得付费，何时本地足够'] },
+      { type: 'cta', h2: '本地 + 云端模型协同运行', body: 'PromptQuorum将您的Ollama或LM Studio实例连接到25+个云模型。并排比较结果 — 免费。', cta: '免费试用PromptQuorum →', href: 'https://www.promptquorum.com' }
+    ]
+  }
+};
+
+function renderSlide(slide) {
+  const articleUrl = 'https://www.promptquorum.com/local-llms?lang=' + lang;
+  const footerLink = '<p class="slide-footer"><a href="' + articleUrl + '">← Hub</a></p>';
+  let html = '';
+  switch (slide.type) {
+    case 'title':
+      html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>' + slide.h1 + '</h1><p>' + slide.subtitle + '</p><p style="margin-top:32px;font-size:16px;color:#79747e;"><a href="' + slide.link + '">promptquorum.com/local-llms</a></p>';
+      break;
+    case 'list':
+      html = '<h2>' + slide.h2 + '</h2>';
+      if (slide.intro) html += '<p>' + slide.intro + '</p>';
+      html += '<ul style="margin-top:16px;">';
+      slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+      html += '</ul>' + footerLink;
+      break;
+    case 'table':
+      html = '<h2>' + slide.h2 + '</h2><table><tr>';
+      slide.columns.forEach(function(col) { html += '<th>' + col + '</th>'; });
+      html += '</tr>';
+      slide.rows.forEach(function(row) {
+        html += '<tr>';
+        slide.columns.forEach(function(col) { html += '<td>' + row[col] + '</td>'; });
+        html += '</tr>';
+      });
+      html += '</table>' + footerLink;
+      break;
+    case 'comparison':
+      html = '<h2>' + slide.h2 + '</h2><p style="margin-top:32px;font-size:clamp(14px,1.6vw,19px);">' + slide.line1 + '</p><p style="font-size:clamp(14px,1.6vw,19px);margin-top:16px;">' + slide.line2 + '</p><p style="margin-top:32px;font-size:clamp(13px,1.4vw,16px);color:#6750a4;font-style:italic;">' + slide.tip + '</p>' + footerLink;
+      break;
+    case 'numbered':
+      html = '<h2>' + slide.h2 + '</h2><ol style="margin-top:16px;">';
+      slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
+      html += '</ol>' + footerLink;
+      break;
+    case 'faq':
+      html = '<h2>' + slide.h2 + '</h2>';
+      slide.faqs.forEach(function(faq) {
+        html += '<div style="margin-bottom:18px;text-align:left;max-width:680px;margin-left:auto;margin-right:auto;"><strong style="font-size:clamp(13px,1.4vw,16px);">Q: ' + faq.q + '</strong><p style="margin-top:6px;font-size:clamp(12px,1.3vw,15px);">A: ' + faq.a + '</p></div>';
+      });
+      html += footerLink;
+      break;
+    case 'cta':
+      html = '<h2>' + slide.h2 + '</h2><p style="margin-top:20px;max-width:540px;">' + slide.body + '</p><a href="' + slide.href + '" style="display:inline-block;margin-top:32px;padding:14px 28px;background:#6750a4;color:white;border-radius:8px;text-decoration:none;font-size:16px;font-weight:700;">' + slide.cta + '</a>' + footerLink;
+      break;
+  }
+  return '<div class="slide ' + slide.type + '">' + html + '</div>';
+}
+
+var params = new URLSearchParams(window.location.search);
+var lang = params.get('lang') || 'en';
+var isPrint = params.get('print') === '1';
+var content = CONTENT[lang] || CONTENT.en;
+
+document.getElementById('header-title').textContent = content.title;
+document.getElementById('back-link').href = 'https://www.promptquorum.com/local-llms?lang=' + lang;
+
+var container = document.getElementById('slides-container');
+content.slides.forEach(function(slide) { container.innerHTML += renderSlide(slide); });
+
+var currentSlide = 0;
+var slides = document.querySelectorAll('.slide');
+var totalSlides = slides.length;
+document.getElementById('totalSlides').textContent = totalSlides;
+
+function showSlide(n) {
+  if (n >= totalSlides) n = totalSlides - 1;
+  if (n < 0) n = 0;
+  currentSlide = n;
+  slides.forEach(function(s) { s.classList.remove('active'); });
+  slides[currentSlide].classList.add('active');
+  document.getElementById('currentSlide').textContent = currentSlide + 1;
+  document.getElementById('prevBtn').disabled = currentSlide === 0;
+  document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+}
+
+function changeSlide(n) { showSlide(currentSlide + n); }
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowLeft') changeSlide(-1);
+  if (e.key === 'ArrowRight') changeSlide(1);
+});
+
+window.addEventListener('beforeprint', function() { slides.forEach(function(s) { s.style.display = 'flex'; }); });
+window.addEventListener('afterprint', function() { slides.forEach(function(s) { s.style.removeProperty('display'); }); showSlide(currentSlide); });
+
+if (isPrint) { window.addEventListener('load', function() { window.print(); }); }
+
+showSlide(0);
+</script>
+</body>
+</html>

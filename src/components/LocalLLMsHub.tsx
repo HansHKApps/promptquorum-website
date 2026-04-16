@@ -604,6 +604,30 @@ const HUB_REGIONAL_ITEMS: Record<string, {region:string, text:string}[]> = {
   ],
 }
 
+const HUB_PRESENTATION_HEADING: Record<string, string> = {
+  en: 'Visual Summary: Local LLMs 2026',
+  de: 'Visuelle Zusammenfassung: Lokale LLMs 2026',
+  fr: 'Résumé visuel : LLMs locaux 2026',
+  ja: 'ビジュアルサマリー：ローカルLLM 2026',
+  zh: '视觉摘要：本地LLM 2026',
+}
+
+const HUB_PRESENTATION_DESC: Record<string, string> = {
+  en: 'The slide deck below covers hardware requirements (8 GB VRAM for 7B models, 40 GB+ for 70B), top open-source models 2026, Ollama setup in 5 minutes, Q4_K_M quantization, regional compliance (GDPR, APPI), and key takeaways. Download the PDF as a Local LLMs quick-reference card.',
+  de: 'Die Folien unten zeigen Hardwareanforderungen (8 GB VRAM für 7B-Modelle, 40 GB+ für 70B), Top-Open-Source-Modelle 2026, Ollama-Setup in 5 Minuten, Q4_K_M-Quantisierung, regionale Compliance (DSGVO, APPI) und wichtige Erkenntnisse. PDF als lokales LLM-Referenzkarte herunterladen.',
+  fr: 'Les diapositives ci-dessous couvrent les exigences matérielles (8 Go de VRAM pour les modèles 7B, 40 Go+ pour les 70B), les meilleurs modèles open source 2026, la configuration Ollama en 5 minutes, la quantification Q4_K_M, la conformité régionale (RGPD, APPI) et les points clés. Téléchargez le PDF comme carte de référence LLM locale.',
+  ja: '以下のスライドは、ハードウェア要件（7Bモデルに8 GB VRAM、70Bに40 GB以上）、2026年トップオープンソースモデル、5分でのOllamaセットアップ、Q4_K_M量子化、地域コンプライアンス（GDPR、APPI）、重要なポイントをカバーしています。PDFをローカルLLMクイックリファレンスカードとしてダウンロードしてください。',
+  zh: '以下幻灯片涵盖硬件需求（7B模型需要8 GB显存，70B需要40 GB+）、2026年顶级开源模型、5分钟内完成Ollama设置、Q4_K_M量化、地区合规性（GDPR、APPI）和关键要点。将PDF下载为本地LLM快速参考卡。',
+}
+
+const HUB_PRESENTATION_PDF: Record<string, string> = {
+  en: 'Download Local LLMs Reference Card (PDF)',
+  de: 'Lokales LLM-Referenzblatt herunterladen (PDF)',
+  fr: 'Télécharger la carte de référence LLMs locaux (PDF)',
+  ja: 'ローカルLLMリファレンスカードをダウンロード（PDF）',
+  zh: '下载本地LLM参考卡（PDF）',
+}
+
 function slugToTitle(slug: string): string {
   return slug
     .split('-')
@@ -791,6 +815,31 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Presentation Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-text-primary mb-4">
+            {HUB_PRESENTATION_HEADING[lang] ?? HUB_PRESENTATION_HEADING['en']}
+          </h2>
+          <p className="text-sm text-text-secondary mb-4 max-w-2xl">
+            {HUB_PRESENTATION_DESC[lang] ?? HUB_PRESENTATION_DESC['en']}
+          </p>
+          <a
+            href={`/presentations/local-llms-hub-static.html?lang=${lang}&print=1`}
+            className="inline-block mb-6 text-sm text-primary hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {HUB_PRESENTATION_PDF[lang] ?? HUB_PRESENTATION_PDF['en']}
+          </a>
+          <iframe
+            src={`/presentations/local-llms-hub-static.html?lang=${lang}`}
+            title={HUB_PRESENTATION_HEADING[lang] ?? HUB_PRESENTATION_HEADING['en']}
+            className="w-full rounded-xl border border-primary/15"
+            style={{ height: '560px' }}
+            loading="lazy"
+          />
         </section>
 
         {/* Back nav */}
