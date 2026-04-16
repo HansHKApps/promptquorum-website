@@ -1,72 +1,58 @@
-<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="450" fill="#FFFFFF"/>
-  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#1C1B1F" text-anchor="middle">
-    Structure du format GGUF : Fichier modèle autonome
-  </text>
-  <rect x="80" y="60" width="640" height="350" fill="none" stroke="#6750A4" stroke-width="3" rx="8"/>
-  <text x="100" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#6750A4">
-    Fichier GGUF : Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf
-  </text>
-  <rect x="100" y="110" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
-  <text x="240" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">
-    Poids quantifiés
-  </text>
-  <text x="240" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">
-    8 milliards de paramètres
-  </text>
-  <text x="240" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">
-    Précision 4 bits (Q4_K_M)
-  </text>
-  <text x="240" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">
-    ~4.5 GB
-  </text>
-  <rect x="420" y="110" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
-  <text x="560" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">
-    Métadonnées du modèle
-  </text>
-  <text x="560" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    Architecture : Transformer
-  </text>
-  <text x="560" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    Longueur contexte : 8192 tokens
-  </text>
-  <text x="560" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    Taille cachée : 4096
-  </text>
-  <rect x="100" y="220" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
-  <text x="240" y="245" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">
-    Tokeniseur
-  </text>
-  <text x="240" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    Vocabulaire (128K tokens)
-  </text>
-  <text x="240" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    Mappages de tokens
-  </text>
-  <text x="240" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    Règles d'encodage
-  </text>
-  <rect x="420" y="220" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
-  <text x="560" y="245" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">
-    Informations de format
-  </text>
-  <text x="560" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    Version format : 3
-  </text>
-  <text x="560" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    Sommes de contrôle
-  </text>
-  <text x="560" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    Compatible CPU/GPU
-  </text>
-  <text x="400" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle">
-    ✓ Tout en UN seul fichier — Aucun téléchargement supplémentaire
-  </text>
-  <text x="400" y="410" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#49454F" text-anchor="middle">
-    ✓ Fonctionne avec Ollama, LM Studio, Jan AI, llama.cpp
-  </text>
-  <rect x="300" y="420" width="200" height="20" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="4"/>
-  <text x="400" y="434" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#6750A4" text-anchor="middle">
-    Taille du fichier : ~4.5 GB
-  </text>
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="440" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Format GGUF : Fichier modèle quantifié autonome</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Un fichier .gguf contient tout — aucun téléchargement supplémentaire requis</text>
+
+  <!-- Main GGUF File Box -->
+  <rect x="50" y="65" width="700" height="310" fill="none" stroke="#6750A4" stroke-width="2.5" rx="10" filter="url(#shadow)"/>
+
+  <!-- File label banner -->
+  <rect x="50" y="65" width="700" height="34" rx="10" fill="#6750A4"/>
+  <rect x="50" y="85" width="700" height="14" fill="#6750A4"/>
+  <text x="400" y="87" font-family="'SF Mono','Monaco',monospace" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf  (~4,5 Go)</text>
+
+  <!-- Component 1: Poids quantifiés (top-left) -->
+  <rect x="70" y="110" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="217" y="133" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Poids quantifiés</text>
+  <text x="217" y="155" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">8 milliards de paramètres</text>
+  <text x="217" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Précision 4 bits (Q4_K_M)</text>
+  <rect x="160" y="183" width="115" height="22" rx="4" fill="#6750A4"/>
+  <text x="217" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">~4,5 Go sur disque</text>
+
+  <!-- Component 2: Métadonnées (top-right) -->
+  <rect x="385" y="110" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="532" y="133" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Métadonnées du modèle</text>
+  <text x="532" y="155" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Architecture : Transformer</text>
+  <text x="532" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Longueur contexte : 128K tokens</text>
+  <text x="532" y="191" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Taille cachée : 4096</text>
+
+  <!-- Component 3: Tokeniseur (bottom-left) -->
+  <rect x="70" y="235" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="217" y="258" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Tokeniseur</text>
+  <text x="217" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Vocabulaire (128K tokens)</text>
+  <text x="217" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Mappages token → ID</text>
+  <text x="217" y="316" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Règles d'encodage (BPE)</text>
+
+  <!-- Component 4: Informations format (bottom-right) -->
+  <rect x="385" y="235" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="532" y="258" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Informations format</text>
+  <text x="532" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Version GGUF : 3</text>
+  <text x="532" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Sommes de contrôle</text>
+  <text x="532" y="316" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Compatible CPU + GPU</text>
+
+  <!-- Bottom callout inside box -->
+  <rect x="70" y="355" width="660" height="14" rx="4" fill="#F7F2FA"/>
+  <text x="400" y="366" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#6750A4" text-anchor="middle">✓ Fonctionne avec Ollama · LM Studio · Jan AI · llama.cpp — aucun fichier de config séparé</text>
+
+  <!-- Footer note -->
+  <text x="400" y="408" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Remplace l'ancien format GGML. Le niveau de quantification est encodé dans le nom du fichier (Q4_K_M).</text>
+  <text x="400" y="426" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#79747E" text-anchor="middle">Ollama télécharge les fichiers GGUF automatiquement : ollama pull llama3.1:8b</text>
 </svg>

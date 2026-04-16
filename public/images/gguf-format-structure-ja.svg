@@ -1,72 +1,58 @@
-<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="450" fill="#FFFFFF"/>
-  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">
-    GGUFフォーマット構造：スタンドアロンモデルファイル
-  </text>
-  <rect x="80" y="60" width="640" height="350" fill="none" stroke="#6750A4" stroke-width="3" rx="8"/>
-  <text x="100" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#6750A4">
-    GGUFファイル：Meta-Llama-3.1-8B-Q4_K_M.gguf
-  </text>
-  <rect x="100" y="110" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
-  <text x="240" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">
-    量子化されたウェイト
-  </text>
-  <text x="240" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    80億パラメータ
-  </text>
-  <text x="240" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    4ビット精度（Q4_K_M）
-  </text>
-  <text x="240" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#34A853" text-anchor="middle">
-    ~4.5GB
-  </text>
-  <rect x="420" y="110" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
-  <text x="560" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">
-    モデルメタデータ
-  </text>
-  <text x="560" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    アーキテクチャ：Transformer
-  </text>
-  <text x="560" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    コンテキスト長：8192トークン
-  </text>
-  <text x="560" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    隠れ層サイズ：4096
-  </text>
-  <rect x="100" y="220" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
-  <text x="240" y="245" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">
-    トークナイザー
-  </text>
-  <text x="240" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    語彙（128Kトークン）
-  </text>
-  <text x="240" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    トークンマッピング
-  </text>
-  <text x="240" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    エンコーディング規則
-  </text>
-  <rect x="420" y="220" width="280" height="90" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" rx="6"/>
-  <text x="560" y="245" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">
-    フォーマット情報
-  </text>
-  <text x="560" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    フォーマット版：3
-  </text>
-  <text x="560" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    チェックサム
-  </text>
-  <text x="560" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">
-    CPU/GPU対応
-  </text>
-  <text x="400" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">
-    ✓ 1つのファイルにすべて含まれる — 追加ダウンロード不要
-  </text>
-  <text x="400" y="410" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">
-    ✓ Ollama、LM Studio、Jan AI、llama.cpp に対応
-  </text>
-  <rect x="300" y="420" width="200" height="20" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="4"/>
-  <text x="400" y="434" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#6750A4" text-anchor="middle">
-    ファイルサイズ：~4.5GB
-  </text>
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="440" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">GGUFフォーマット：自己完結型量子化モデルファイル</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">1つの.ggufファイルにすべてが含まれる — 追加ダウンロード不要</text>
+
+  <!-- Main GGUF File Box -->
+  <rect x="50" y="65" width="700" height="310" fill="none" stroke="#6750A4" stroke-width="2.5" rx="10" filter="url(#shadow)"/>
+
+  <!-- File label banner -->
+  <rect x="50" y="65" width="700" height="34" rx="10" fill="#6750A4"/>
+  <rect x="50" y="85" width="700" height="14" fill="#6750A4"/>
+  <text x="400" y="87" font-family="'SF Mono','Monaco',monospace" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf  (~4.5 GB)</text>
+
+  <!-- Component 1: Quantized Weights (top-left) -->
+  <rect x="70" y="110" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="217" y="133" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">量子化されたウェイト</text>
+  <text x="217" y="155" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">80億パラメータ</text>
+  <text x="217" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">4ビット精度（Q4_K_M）</text>
+  <rect x="160" y="183" width="115" height="22" rx="4" fill="#6750A4"/>
+  <text x="217" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">ディスク上で~4.5 GB</text>
+
+  <!-- Component 2: Model Metadata (top-right) -->
+  <rect x="385" y="110" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="532" y="133" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">モデルメタデータ</text>
+  <text x="532" y="155" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">アーキテクチャ：Transformer</text>
+  <text x="532" y="173" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">コンテキスト長：128Kトークン</text>
+  <text x="532" y="191" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">隠れ層サイズ：4096</text>
+
+  <!-- Component 3: Tokenizer (bottom-left) -->
+  <rect x="70" y="235" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="217" y="258" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">トークナイザー</text>
+  <text x="217" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">語彙（128Kトークン）</text>
+  <text x="217" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">トークン→IDマッピング</text>
+  <text x="217" y="316" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">エンコーディング規則（BPE）</text>
+
+  <!-- Component 4: Format Info (bottom-right) -->
+  <rect x="385" y="235" width="295" height="110" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="532" y="258" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">フォーマット情報</text>
+  <text x="532" y="280" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">GGUFバージョン：3</text>
+  <text x="532" y="298" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">整合性チェックサム</text>
+  <text x="532" y="316" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">CPU + GPU対応</text>
+
+  <!-- Bottom callout inside box -->
+  <rect x="70" y="355" width="660" height="14" rx="4" fill="#F7F2FA"/>
+  <text x="400" y="366" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#6750A4" text-anchor="middle">✓ Ollama · LM Studio · Jan AI · llama.cpp に対応 — 設定ファイル不要</text>
+
+  <!-- Footer note -->
+  <text x="400" y="408" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">旧GGMLフォーマットの後継。量子化レベルはファイル名に含まれます（上記のQ4_K_M）。</text>
+  <text x="400" y="426" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#79747E" text-anchor="middle">OllamaはGGUFファイルを自動ダウンロード：ollama pull llama3.1:8b</text>
 </svg>

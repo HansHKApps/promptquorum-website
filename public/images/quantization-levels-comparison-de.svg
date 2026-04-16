@@ -1,67 +1,72 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <!-- White background -->
-  <rect width="800" height="400" fill="#FFFFFF"/>
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="420" fill="#FFFFFF"/>
 
   <!-- Title -->
-  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
-    Quantisierungsstufen: RAM vs. Qualitätsverlust (7B Modell)
-  </text>
+  <text x="400" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">Quantisierungsstufen: RAM vs. Qualität (7B-Modell)</text>
+  <text x="400" y="50" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Q4_K_M (★) ist die Standardempfehlung — bestes Verhältnis aus RAM und Qualität</text>
 
-  <!-- Column headers -->
-  <text x="80" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#49454F">Stufe</text>
-  <text x="160" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#49454F">Bits</text>
-  <text x="240" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#49454F">RAM</text>
-  <text x="340" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#49454F">Qualitätsverlust</text>
-  <text x="520" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#49454F">Empfohlen für</text>
-
-  <!-- Divider -->
-  <line x1="40" y1="75" x2="760" y2="75" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Header row -->
+  <rect x="40" y="64" width="720" height="32" rx="6" fill="#6750A4"/>
+  <text x="90" y="84" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Stufe</text>
+  <text x="175" y="84" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Bits</text>
+  <text x="255" y="84" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">RAM (7B)</text>
+  <text x="365" y="84" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Qualitätsverlust</text>
+  <text x="530" y="84" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Wann verwenden</text>
 
   <!-- Row 1: Q2_K -->
-  <rect x="40" y="85" width="700" height="45" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="6"/>
-  <text x="80" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F">Q2_K</text>
-  <text x="160" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">2-Bit</text>
-  <text x="240" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">~2,7 GB</text>
-  <text x="340" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#E67C73" font-weight="600">15–25%</text>
-  <text x="520" y="115" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">Extremer RAM-Mangel</text>
+  <rect x="40" y="100" width="720" height="42" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="90" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#1C1B1F">Q2_K</text>
+  <text x="175" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#49454F">2-Bit</text>
+  <text x="255" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#49454F">~2,7 GB</text>
+  <text x="365" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#E67C73">15–25%</text>
+  <text x="530" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F">RAM &lt; 4 GB (Qualitätsverlust)</text>
 
   <!-- Row 2: Q3_K_S -->
-  <rect x="40" y="135" width="700" height="45" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5" rx="6"/>
-  <text x="80" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F">Q3_K_S</text>
-  <text x="160" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">3-Bit</text>
-  <text x="240" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">~3,3 GB</text>
-  <text x="340" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#F4B400" font-weight="600">5–10%</text>
-  <text x="520" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">Edge-Geräte (4–5 GB)</text>
+  <rect x="40" y="146" width="720" height="42" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="90" y="172" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#1C1B1F">Q3_K_S</text>
+  <text x="175" y="172" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#49454F">3-Bit</text>
+  <text x="255" y="172" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#49454F">~3,3 GB</text>
+  <text x="365" y="172" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#F4B400">5–10%</text>
+  <text x="530" y="172" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F">RAM 4–5 GB</text>
 
-  <!-- Row 3: Q4_K_M -->
-  <rect x="40" y="185" width="700" height="45" fill="#E8DEF8" stroke="#6750A4" stroke-width="2.5" rx="6"/>
-  <text x="80" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#6750A4">Q4_K_M ★</text>
-  <text x="160" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#6750A4">4-Bit</text>
-  <text x="240" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#6750A4">~4,5 GB</text>
-  <text x="340" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#34A853" font-weight="600">1–3%</text>
-  <text x="520" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#6750A4">Standard (meiste Nutzer)</text>
+  <!-- Row 3: Q4_K_M (Recommended) -->
+  <rect x="40" y="192" width="720" height="42" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="90" y="218" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#6750A4">Q4_K_M ★</text>
+  <text x="175" y="218" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#6750A4">4-Bit</text>
+  <text x="255" y="218" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#6750A4">~4,5 GB</text>
+  <text x="365" y="218" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#34A853">1–3%</text>
+  <text x="530" y="218" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#6750A4">Standard für die meisten</text>
 
   <!-- Row 4: Q5_K_M -->
-  <rect x="40" y="235" width="700" height="45" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5" rx="6"/>
-  <text x="80" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F">Q5_K_M</text>
-  <text x="160" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">5-Bit</text>
-  <text x="240" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">~5,7 GB</text>
-  <text x="340" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#34A853" font-weight="600">&lt;1%</text>
-  <text x="520" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">Bessere Qualität (16 GB)</text>
+  <rect x="40" y="238" width="720" height="42" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="90" y="264" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#1C1B1F">Q5_K_M</text>
+  <text x="175" y="264" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#49454F">5-Bit</text>
+  <text x="255" y="264" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#49454F">~5,7 GB</text>
+  <text x="365" y="264" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#34A853">&lt;1%</text>
+  <text x="530" y="264" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F">16 GB RAM, höhere Qualität</text>
 
-  <!-- Row 5: Q8_0 -->
-  <rect x="40" y="285" width="700" height="45" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="6"/>
-  <text x="80" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F">Q8_0</text>
-  <text x="160" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">8-Bit</text>
-  <text x="240" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">~7,7 GB</text>
-  <text x="340" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#34A853" font-weight="600">~0%</text>
-  <text x="520" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">Max. Qualität (16+ GB)</text>
+  <!-- Row 5: Q6_K -->
+  <rect x="40" y="284" width="720" height="42" rx="6" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="90" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#1C1B1F">Q6_K</text>
+  <text x="175" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#49454F">6-Bit</text>
+  <text x="255" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#49454F">~6,6 GB</text>
+  <text x="365" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#34A853">Quasi verlustfrei</text>
+  <text x="530" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F">16 GB RAM, Coding/Mathe</text>
 
-  <!-- Row 6: FP16 -->
-  <rect x="40" y="335" width="700" height="45" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5" rx="6"/>
-  <text x="80" y="365" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#49454F">FP16</text>
-  <text x="160" y="365" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">16-Bit</text>
-  <text x="240" y="365" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">~14 GB</text>
-  <text x="340" y="365" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#79747E">Baseline</text>
-  <text x="520" y="365" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#49454F">Volle Präzision (GPU)</text>
+  <!-- Row 6: Q8_0 -->
+  <rect x="40" y="330" width="720" height="42" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="90" y="356" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#1C1B1F">Q8_0</text>
+  <text x="175" y="356" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#49454F">8-Bit</text>
+  <text x="255" y="356" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#49454F">~7,7 GB</text>
+  <text x="365" y="356" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#34A853">Kaum messbar (~0%)</text>
+  <text x="530" y="356" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F">16+ GB RAM, max. Qualität</text>
+
+  <!-- Footer note -->
+  <text x="400" y="400" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#79747E" text-anchor="middle">★ Q4_K_M empfohlen — 97–99 % der FP16-Qualität bei 32 % des RAM. Immer Q4_K_M statt Q4_0 bevorzugen.</text>
 </svg>
