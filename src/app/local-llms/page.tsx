@@ -24,7 +24,9 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
     twitter: {
       card: 'summary_large_image',
       title: t.localLlmsHubTitle,
-      description: t.localLlmsHubDescription,
+      description: selectedLang === 'en'
+        ? 'Run AI locally in 5 min with Ollama. $0/token, offline, private. Hardware guides, model rankings, LM Studio — April 2026.'
+        : t.localLlmsHubDescription,
     },
   }
 }
@@ -47,8 +49,8 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
     {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'Local LLMs in 2026: Complete Guide',
-      description: 'Complete guide to running AI models locally. Covers setup, hardware, model selection, tools, and enterprise deployment.',
+      name: 'Local LLMs 2026: Ollama, LM Studio, Models & Hardware Guide',
+      description: 'Run a 7B model locally in 5 minutes with Ollama — $0/token, full privacy, offline. Guides for hardware (8–48 GB VRAM), model selection, LM Studio, and April 2026 benchmarks.',
       url: canonicalUrl,
       publisher: {
         '@type': 'Organization',

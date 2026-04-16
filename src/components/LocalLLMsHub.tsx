@@ -13,7 +13,7 @@ function navHref(path: string, lang: string) {
 }
 
 const HUB_HERO_TITLE: Record<string, string> = {
-  en: 'Local LLMs in 2026: Complete Guide to Running AI Models on Your Own Hardware',
+  en: 'Local LLMs in 2026: Run AI Models Locally with Ollama, LM Studio, and Open-Weight Models',
   de: 'Der vollständige Leitfaden zum lokalen Betrieb von KI-Modellen im Jahr 2026.',
   fr: 'Le guide complet pour exécuter des modèles IA localement en 2026.',
   ja: '2026年にAIモデルをローカルで実行するための完全ガイド。',
@@ -21,7 +21,7 @@ const HUB_HERO_TITLE: Record<string, string> = {
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
-  en: 'Local LLMs run entirely on your own hardware — no API costs, no data sent to external servers, and full offline capability. As of April 2026, a 7B model runs in under 5 minutes on any laptop using Ollama, costs $0 per query, and produces output comparable to GPT-4o Mini on most tasks. These guides cover everything from first install to 70B model deployment — with exact commands, VRAM requirements, and benchmark data for every major model.',
+  en: 'Local LLMs run entirely on your own hardware — no API costs, no data sent to external servers, full offline access. As of April 2026, a 7B model runs in under 5 minutes on any laptop using Ollama, costs $0 per query, and produces output comparable to GPT-4o Mini on most tasks. These guides cover everything from first install to 70B production deployment — with exact commands, VRAM requirements, and benchmark data for Llama, Qwen, Mistral, and 200+ models.',
   de: 'Lokale LLMs bieten vollständige Privatsphäre, keine API-Kosten und Offline-Fähigkeit. Diese Leitfäden decken alles ab — von der ersten Installation bis zum Fine-Tuning von 70B-Modellen, Hardware-Auswahl und Enterprise-Deployment.',
   fr: 'Les LLMs locaux offrent une confidentialité totale, zéro coût API et une capacité hors ligne. Ces guides couvrent tout, de la première installation au fine-tuning de modèles 70B, la sélection matérielle et le déploiement entreprise.',
   ja: 'ローカルLLMは完全なプライバシー、APIコストゼロ、オフライン機能を提供します。これらのガイドは、最初のインストールから70BモデルのファインチューニングW、ハードウェア選択、エンタープライズデプロイまでをカバーします。',
