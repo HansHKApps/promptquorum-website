@@ -781,4 +781,25 @@ An article is publication-ready when:
 
 ---
 
+## Open Issues by Article
+
+Use this section to track article-specific audit findings that need fixing. Add a new subsection per article as issues are discovered.
+
+**Priority legend:** 🔴 High (broken UX or missing critical schema) · 🟡 Medium (missing GEO signals) · 🟢 Low (outdated content, minor gaps)
+
+---
+
+### `top-open-source-models-ollama`
+
+- [ ] 🔴 **ToC double `##` bug** — all 7 ToC anchor links are broken (duplicate `##` prefix in hrefs)
+- [ ] 🔴 **Missing schema** — no `FAQPage`, `TechArticle`, or `ItemList` JSON-LD present
+- [ ] 🟡 **Common Mistakes too short** — only 3 items; GEO standard requires 5 minimum (Rule 25)
+- [ ] 🟡 **No regional context section** — missing EU/DACH/APAC data sovereignty context (Rule 13)
+- [ ] 🟡 **No Related Reading section** — internal links absent; 4+ required per hub article (Rule 2c)
+- [ ] 🟡 **Sources section missing** — no citations block; required for factual claims (Rule 2b)
+- [ ] 🟢 **No Speakable markup + no `<time datetime>`** — voice search and date freshness signals absent (Rules 28, 30.1)
+- [ ] 🟢 **Outdated model in FAQ** — last FAQ references `ollama run llama2` (deprecated 2023 model); replace with `llama3.2:3b` or `llama3.1:8b`
+
+---
+
 **Last updated:** April 7, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)
