@@ -481,16 +481,6 @@ When creating or updating images for multi-language support:
 - Limit number of nested groups
 - Test zoom/scale responsiveness in browser
 
-## Localization Considerations
-
-### For Multi-Language Support
-- **Text in SVGs:** Currently **not translated** — use English only, or plan for separate SVG versions per language
-- **Numbers & units:** Use universal conventions (not locale-specific)
-- **Icons & symbols:** Avoid culture-specific imagery that won't translate
-- **Future note:** If SVGs are translated, content.ts will need language-specific image paths
-
-Current approach: Images are language-agnostic and reused across all language versions of articles.
-
 ## Creation & Tools
 
 ### Recommended Tools

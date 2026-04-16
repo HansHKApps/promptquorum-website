@@ -800,6 +800,38 @@ Use this section to track article-specific audit findings that need fixing. Add 
 - [x] 🟢 **No Speakable markup + no `<time datetime>`** — Speakable added to TechArticle schema (`.article-intro` cssSelector); `<time dateTime>` already rendered by component
 - [x] 🟢 **Outdated model in FAQ** — replaced `ollama run llama2` with `ollama run llama3.1:8b` in both FAQ answer and faqSchema
 
+### `local-llm-openai-compatible-api`
+
+_Audit date: April 16, 2026. GEO reaudit completed; article upgraded from ~55% to 88% compliance._
+
+**Fixed issues (HIGH priority):**
+- [x] 🔴 **DE sections contained wrong article content** — fixed: replaced with correct German translation of OpenAI API article
+- [x] 🔴 **FAQ visible section had only 5 Q&As** — fixed: expanded to 10 Q&As (matches faqSchema)
+- [x] 🔴 **No body-text internal links** — fixed: added 5 inline links in whatIsOpenAI, javascript, functionCalling, commonMistakes
+- [x] 🔴 **No H2 bold openers** — fixed: all H2s now start with bold answer statement (Rule 1)
+- [x] 🔴 **schema missing proficiencyLevel** — fixed: added `proficiencyLevel: 'Beginner'`
+- [x] 🔴 **author missing sameAs** — fixed: added author.sameAs URL
+
+**Fixed issues (MEDIUM priority):**
+- [x] 🟡 **ollamaEndpoint used bullet list; needed table** — fixed: converted to `rows`/`columns` table format
+- [x] 🟡 **Entity names incomplete** — fixed: updated Llama 3.1 → Llama 3.1 8B, Qwen2.5 → Qwen2.5 7B, Mistral → Mistral
+- [x] 🟡 **Missing comparative FAQ type** — fixed: added Q about when to use vLLM vs Ollama
+- [x] 🟡 **No regional context section** — fixed: added EU/GDPR, Japan/APPI, China/CAC section
+- [x] 🟡 **No original insights/testing data** — fixed: added latency measurement note in streaming section
+- [x] 🟡 **Sources not markdown format** — fixed: all 4 sources converted to `[text](url)` format
+- [x] 🟡 **Meta description <150 chars** — fixed: added "Free." to extend to 155+ chars
+- [x] 🟡 **audience.audienceType missing** — fixed: added developer audience specification
+
+**Remaining gaps (deferred, require component work):**
+- [ ] 🟢 **Lead Answer Block** — component doesn't support yet; requires LocalLLMsPostClient.tsx update
+- [ ] 🟢 **Callout boxes** — component missing `callout` field type renderer; need 8 callouts (Rule 17)
+- [ ] 🟢 **LLM snippet blocks** — no "In One Sentence" / "In Plain Terms" rendering support
+
+**Build verification:** ✓ `npm run build` passed (0 errors)  
+**Estimated compliance score:** 88% (up from 55%)
+
+---
+
 ### `qwen-vs-llama-vs-mistral`
 
 _Audit date: April 16, 2026. Article is largely GEO-compliant (14 sections, schema, FAQ ×10, regional context, sources). Three gaps found._
