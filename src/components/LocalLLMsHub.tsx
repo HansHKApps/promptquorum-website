@@ -13,7 +13,7 @@ function navHref(path: string, lang: string) {
 }
 
 const HUB_HERO_TITLE: Record<string, string> = {
-  en: 'Local LLMs: The Complete Guide to Running AI Models on Your Own Hardware (2026)',
+  en: 'Local LLMs in 2026: Complete Guide to Running AI Models on Your Own Hardware',
   de: 'Der vollständige Leitfaden zum lokalen Betrieb von KI-Modellen im Jahr 2026.',
   fr: 'Le guide complet pour exécuter des modèles IA localement en 2026.',
   ja: '2026年にAIモデルをローカルで実行するための完全ガイド。',
@@ -21,7 +21,7 @@ const HUB_HERO_TITLE: Record<string, string> = {
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
-  en: '8 GB RAM runs a 7B model locally — no API key, no monthly cost, full privacy. 40 GB VRAM handles 70B models (Llama 4, DeepSeek V3) at production quality. Ollama and LM Studio install in under 10 minutes on macOS, Windows, and Linux. Open-source models including Llama 4, Qwen3.5, DeepSeek, and Mistral match GPT-4 on most coding and reasoning benchmarks. These 88 guides cover hardware selection, quantization, RAG pipelines, fine-tuning, and enterprise deployment — with exact commands, VRAM numbers, and benchmark data.',
+  en: 'Local LLMs run entirely on your own hardware — no API costs, no data sent to external servers, and full offline capability. As of April 2026, a 7B model runs in under 5 minutes on any laptop using Ollama, costs $0 per query, and produces output comparable to GPT-4o Mini on most tasks. These guides cover everything from first install to 70B model deployment — with exact commands, VRAM requirements, and benchmark data for every major model.',
   de: 'Lokale LLMs bieten vollständige Privatsphäre, keine API-Kosten und Offline-Fähigkeit. Diese Leitfäden decken alles ab — von der ersten Installation bis zum Fine-Tuning von 70B-Modellen, Hardware-Auswahl und Enterprise-Deployment.',
   fr: 'Les LLMs locaux offrent une confidentialité totale, zéro coût API et une capacité hors ligne. Ces guides couvrent tout, de la première installation au fine-tuning de modèles 70B, la sélection matérielle et le déploiement entreprise.',
   ja: 'ローカルLLMは完全なプライバシー、APIコストゼロ、オフライン機能を提供します。これらのガイドは、最初のインストールから70BモデルのファインチューニングW、ハードウェア選択、エンタープライズデプロイまでをカバーします。',
@@ -130,21 +130,21 @@ const THEME_DESCRIPTIONS: Record<string, Record<string, string>> = {
     zh: '从零开始到运行，只需10分钟以内。提供特定操作系统的安装指南、首次模型演练和隐私优先的设置检查清单。Ollama可在macOS、Windows和Linux上用一条命令安装。8 GB RAM时，从Llama 3.2 3B（Q4，约2 GB）开始。',
   },
   'best-models': {
-    en: 'Model reviews, benchmark comparisons, use-case winners, and quantization guides for Llama 4, Qwen3.5, DeepSeek, Gemma 4, and 70B+ models. Qwen2.5-Coder leads coding benchmarks; Mistral 7B is fastest for RAM-constrained setups. Every review includes exact VRAM requirements and benchmark scores versus GPT-4o.',
+    en: 'Model rankings, benchmark comparisons, and use-case winners. As of April 2026, the top locally-runnable models are Llama 3.3 70B (best overall), Qwen2.5 32B (best coding), and Mistral Small 3.1 (best at 16 GB RAM). All ranked by MMLU, HumanEval, and real hardware tests.',
     de: 'Modellbewertungen, Benchmark-Vergleiche, Use-Case-Gewinner und Quantisierungsleitfäden für Llama 4, Qwen3.5, DeepSeek, Gemma 4 und 70B+-Modelle. Qwen2.5-Coder führt Code-Benchmarks an; Mistral 7B ist am schnellsten für RAM-begrenzte Setups. Jede Bewertung enthält exakte VRAM-Anforderungen und Benchmark-Scores gegenüber GPT-4o.',
     fr: 'Critiques de modèles, comparaisons de références, gagnants par cas d\'usage et guides de quantification pour Llama 4, Qwen3.5, DeepSeek, Gemma 4 et modèles 70B+. Qwen2.5-Coder domine les benchmarks de code ; Mistral 7B est le plus rapide pour les configurations RAM limitées. Chaque examen inclut les exigences VRAM exactes et les scores de benchmark par rapport à GPT-4o.',
     ja: 'Llama 4、Qwen3.5、DeepSeek、Gemma 4、70B+モデルのモデルレビュー、ベンチマーク比較、ユースケース勝者、量子化ガイド。Qwen2.5-Coderはコーディングベンチマークをリード；Mistral 7BはRAM制約されたセットアップで最速。各レビューには正確なVRAM要件とGPT-4oに対するベンチマークスコアが含まれます。',
     zh: 'Llama 4、Qwen3.5、DeepSeek、Gemma 4和70B+模型的模型评论、基准比较、使用案例获奖者和量化指南。Qwen2.5-Coder在编码基准中领先；Mistral 7B在RAM受限的设置中速度最快。每篇评论都包含确切的VRAM要求和与GPT-4o相比的基准分数。',
   },
   'tools-interfaces': {
-    en: 'Software showdowns, GUI comparisons, API setups, and front-end guides — Ollama, LM Studio, OpenWebUI, vLLM, llama.cpp, and more. Ollama exposes an OpenAI-compatible REST API at `localhost:11434` — drop-in replacement for cloud SDKs with no code changes. LM Studio adds a GUI and model browser for non-technical users.',
+    en: 'Ollama and LM Studio each run 200+ models on macOS, Windows, and Linux. Ollama is CLI-first with a production REST API; LM Studio provides a graphical interface with a built-in model browser. Guides cover both tools plus vLLM, llama.cpp, Open WebUI, and IDE integrations.',
     de: 'Software-Vergleiche, GUI-Vergleiche, API-Setups und Front-End-Leitfäden — Ollama, LM Studio, OpenWebUI, vLLM, llama.cpp und mehr. Ollama stellt eine OpenAI-kompatible REST-API unter `localhost:11434` bereit — vollständig Ersatz für Cloud-SDKs ohne Code-Änderungen. LM Studio fügt eine GUI und Modellbrowser für nicht-technische Benutzer hinzu.',
     fr: 'Comparaisons de logiciels, comparaisons d\'interface graphique, configurations d\'API et guides frontaux — Ollama, LM Studio, OpenWebUI, vLLM, llama.cpp, et plus. Ollama expose une API REST compatible avec OpenAI à `localhost:11434` — remplacement prêt à l\'emploi des SDK cloud sans modification de code. LM Studio ajoute une interface graphique et un navigateur de modèles pour les utilisateurs non techniques.',
     ja: 'ソフトウェアショーダウン、GUIの比較、APIセットアップ、フロントエンドガイド — Ollama、LM Studio、OpenWebUI、vLLM、llama.cpp、その他。OllamaはOpenAI互換のREST APIを`localhost:11434`で公開 — コード変更なしのクラウドSDKの置き換え。LM Studioは非技術ユーザー向けのGUIとモデルブラウザを追加します。',
     zh: '软件对比、GUI比较、API设置和前端指南 — Ollama、LM Studio、OpenWebUI、vLLM、llama.cpp等。Ollama在`localhost:11434`上公开OpenAI兼容的REST API — 无需代码更改即可替代云SDK。LM Studio为非技术用户添加GUI和模型浏览器。',
   },
   'hardware-performance': {
-    en: 'Real hardware recommendations, VRAM math, GPU benchmarks, quantization trade-offs, and optimization tricks for RTX 5090, 4090, Mac Silicon, and budget builds. RTX 4060 (8 GB VRAM, ~$300) runs 7B models at 30+ tokens/sec. Apple Silicon M2 handles 7B–13B natively via Metal with no discrete GPU required.',
+    en: 'VRAM is the primary constraint for local LLMs. A 7B model at Q4_K_M needs 4.7 GB; a 70B model needs 40 GB. Guides cover GPU selection (RTX 4070 Ti to RTX 5090), Apple Silicon, budget builds, and VRAM calculation for any model.',
     de: 'Echte Hardware-Empfehlungen, VRAM-Mathematik, GPU-Benchmarks, Quantisierungs-Trade-offs und Optimierungstricks für RTX 5090, 4090, Mac Silicon und Budget-Setups. RTX 4060 (8 GB VRAM, ~$300) führt 7B-Modelle mit 30+ Token/sec aus. Apple Silicon M2 verarbeitet 7B–13B nativ über Metal ohne dedizierte GPU.',
     fr: 'Recommandations matérielles réelles, mathématiques VRAM, benchmarks GPU, compromis de quantification et astuces d\'optimisation pour RTX 5090, 4090, Mac Silicon et configurations budget. RTX 4060 (8 GB VRAM, ~$300) exécute les modèles 7B à 30+ tokens/sec. Apple Silicon M2 gère 7B–13B nativement via Metal sans GPU discret requis.',
     ja: '実際のハードウェア推奨事項、VRAM数学、GPUベンチマーク、量子化トレードオフ、RTX 5090、4090、Mac Silicon、予算ビルドの最適化トリック。RTX 4060（8 GB VRAM、約$300）は7Bモデルを30+トークン/秒で実行します。Apple Silicon M2はMetal経由で7B–13Bをネイティブに処理し、ディスクリートGPUは不要です。',
@@ -627,6 +627,33 @@ const HUB_PRESENTATION_PDF: Record<string, string> = {
   ja: 'ローカルLLMリファレンスカードをダウンロード（PDF）',
   zh: '下载本地LLM参考卡（PDF）',
 }
+
+const HUB_FAQS_BOTTOM: { q: string; a: string }[] = [
+  {
+    q: 'What is a local LLM?',
+    a: 'A local LLM is a large language model that runs entirely on your own hardware — CPU, GPU, or Apple Silicon — without sending data to external servers. You download the model file (typically 2–40 GB) and run it using a tool like Ollama or LM Studio. As of April 2026, the most popular local LLM is Meta Llama 3.1 8B, which runs on any machine with 8 GB of RAM at 10–80 tokens/sec.',
+  },
+  {
+    q: 'Is a local LLM better than ChatGPT?',
+    a: 'For privacy and cost, yes. For raw output quality, no. As of 2026, frontier cloud models (GPT-4o, Claude 4.6 Opus) outperform all locally-runnable models on complex reasoning. However, local 70B models (Llama 3.3 70B, Qwen2.5 72B) match or exceed GPT-4o Mini on most everyday tasks — at zero per-query cost.',
+  },
+  {
+    q: 'How much RAM do I need to run a local LLM?',
+    a: 'Minimum: 8 GB RAM to run a 7B model at Q4 quantization. Recommended: 16 GB for 13B models, 40+ GB for 70B models. Apple Silicon unified memory counts fully toward this — an M3 Mac with 18 GB can run a 13B model well. GPU VRAM is equivalent to RAM for GPU inference.',
+  },
+  {
+    q: 'How do I run a local LLM?',
+    a: 'Install Ollama (ollama.com), then run one command: `ollama run llama3.1:8b`. The model downloads automatically and you can start chatting in under 5 minutes. No API key, no account, no internet connection after the initial download.',
+  },
+  {
+    q: 'What is the best free local LLM in 2026?',
+    a: 'Meta Llama 3.1 8B for general use (Apache-compatible, 5.5 GB RAM). Qwen2.5-Coder 32B for coding (92.7% HumanEval, 20 GB RAM). DeepSeek-R1 7B for reasoning (MIT licence, 5 GB RAM). All are free, open-weight, and available via `ollama pull`.',
+  },
+  {
+    q: 'Are local LLMs private?',
+    a: 'Yes. When running with Ollama or LM Studio, your prompts, documents, and responses never leave your machine. No data is transmitted to any server. This makes local LLMs the recommended choice for GDPR-regulated workflows, legal and medical document processing, and any task involving confidential or personal information.',
+  },
+]
 
 function slugToTitle(slug: string): string {
   return slug

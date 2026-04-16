@@ -36,7 +36,6 @@ export const llmThemes: LLMTheme[] = [
       'small-local-llm-models',
       '70b-models-consumer-hardware',
       'llm-quantization-explained',
-      'multilingual-local-llms',
       'long-context-local-llms',
       'top-open-source-models-ollama',
       'local-llm-model-updates-2026',
