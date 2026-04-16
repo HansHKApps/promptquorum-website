@@ -1,0 +1,78 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .t { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="450" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    按用途选择您的模型
+  </text>
+
+  <!-- Column 1: 聊天和对话 -->
+  <rect x="20" y="50" width="260" height="28" rx="8" fill="#6750A4"/>
+  <text x="150" y="69" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">聊天和对话</text>
+
+  <rect x="20" y="78" width="260" height="330" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+
+  <text x="30" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#34A853" font-weight="600">✓</text>
+  <text x="50" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">General chat</text>
+  <text x="50" y="113" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">llama3.2:3b</text>
+
+  <text x="30" y="138" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#34A853" font-weight="600">✓</text>
+  <text x="50" y="138" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Quality chat</text>
+  <text x="50" y="153" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">llama3.1:8b</text>
+
+  <text x="30" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#34A853" font-weight="600">✓</text>
+  <text x="50" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Fast & lightweight</text>
+  <text x="50" y="193" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">gemma2:2b</text>
+
+  <text x="30" y="218" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#34A853" font-weight="600">✓</text>
+  <text x="50" y="218" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">High quality 16GB</text>
+  <text x="50" y="233" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">mistral-small3.1</text>
+
+  <!-- Column 2: 编码和推理 -->
+  <rect x="320" y="50" width="260" height="28" rx="8" fill="#7D5260"/>
+  <text x="450" y="69" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">编码和推理</text>
+
+  <rect x="320" y="78" width="260" height="330" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+
+  <text x="330" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#34A853" font-weight="600">✓</text>
+  <text x="350" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Coding</text>
+  <text x="350" y="113" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">qwen2.5-coder:7b</text>
+
+  <text x="330" y="138" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#34A853" font-weight="600">✓</text>
+  <text x="350" y="138" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Reasoning & math</text>
+  <text x="350" y="153" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">deepseek-r1:7b</text>
+
+  <text x="330" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#34A853" font-weight="600">✓</text>
+  <text x="350" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Multilingual coding</text>
+  <text x="350" y="193" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">qwen2.5:7b</text>
+
+  <!-- Column 3: 专业应用 -->
+  <rect x="620" y="50" width="260" height="28" rx="8" fill="#49454F"/>
+  <text x="750" y="69" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">专业应用</text>
+
+  <rect x="620" y="78" width="260" height="330" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1"/>
+
+  <text x="630" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#34A853" font-weight="600">✓</text>
+  <text x="650" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Image understanding</text>
+  <text x="650" y="113" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">llama3.2-vision:11b</text>
+
+  <text x="630" y="138" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#34A853" font-weight="600">✓</text>
+  <text x="650" y="138" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Embeddings/RAG</text>
+  <text x="650" y="153" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">nomic-embed-text</text>
+
+  <text x="630" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#34A853" font-weight="600">✓</text>
+  <text x="650" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1C1B1F">Document Q&A</text>
+  <text x="650" y="193" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E">llama3.1:8b + UI</text>
+
+  <!-- Footer -->
+  <text x="450" y="455" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">
+    从左侧模型开始，根据需要探索专业模型
+  </text>
+</svg>

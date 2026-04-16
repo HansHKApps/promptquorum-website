@@ -19875,14 +19875,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         },
         howToBrowse: {
           title: '如何浏览和选择Ollama模型',
-          content: [
-            '1. **访问Ollama官方库**：打开 [ollama.ai/library](https://ollama.ai/library)。搜索框搜索模型名称（例如"llama"）。',
-            '2. **查看模型信息页**：每个模型的Ollama页面显示RAM要求、参数数量和Ollama运行命令。',
-            '3. **检查本机能力**：运行 `ollama list` 查看已安装模型；`ollama ps` 查看运行中的模型。',
-            '4. **拉取（下载）新模型**：使用 `ollama pull llama3.1:8b` 下载。首次下载取决于网络速度（通常10分钟–1小时）。',
-            '5. **运行模型**：`ollama run llama3.1:8b` 启动对话。键入 `exit` 退出。',
-            '6. **参数调整**：高级用户可用 `ollama run llama3.1:8b --temperature 0.7 --top-p 0.9` 调整行为。',
-          ],
+          content: 'Ollama Mac应用内置聊天界面。聊天窗口底部的模型下拉按钮显示当前活跃模型 — 点击可切换已安装的模型。访问ollama.com/library可发现并下载新模型，每个模型页面显示可用标签、RAM需求和基准测试分数。',
           codeBlock: 'ollama pull llama3.1:8b\nollama run llama3.1:8b',
           codeLanguage: 'bash',
         },

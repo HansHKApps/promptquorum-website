@@ -1,0 +1,63 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .t { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">
+    DeepSeek-R1 : Performance du raisonnement
+  </text>
+
+  <!-- Section 1: MATH Score -->
+  <text x="30" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F">Score MATH (Mathématiques de compétition)</text>
+
+  <!-- Baseline -->
+  <line x1="230" y1="80" x2="230" y2="140" stroke="#E8DEF8" stroke-width="2"/>
+
+  <!-- DeepSeek-R1 7B bar -->
+  <rect x="230" y="85" width="182" height="20" rx="2" fill="#6750A4"/>
+  <text x="240" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">DeepSeek-R1 7B</text>
+  <text x="420" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4">52%</text>
+
+  <!-- Mistral 7B bar -->
+  <rect x="230" y="110" width="98" height="20" rx="2" fill="#E8DEF8" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="240" y="123" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">Mistral 7B</text>
+  <text x="340" y="123" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">28%</text>
+
+  <!-- Section 2: HumanEval Score -->
+  <text x="30" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1B1F">Score HumanEval (Codage)</text>
+
+  <!-- Baseline -->
+  <line x1="230" y1="190" x2="230" y2="250" stroke="#E8DEF8" stroke-width="2"/>
+
+  <!-- DeepSeek-R1 7B bar -->
+  <rect x="230" y="195" width="168" height="20" rx="2" fill="#6750A4"/>
+  <text x="240" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">DeepSeek-R1 7B</text>
+  <text x="410" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#6750A4">60%</text>
+
+  <!-- Mistral 7B bar -->
+  <rect x="230" y="220" width="112" height="20" rx="2" fill="#E8DEF8" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="240" y="233" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#49454F">Mistral 7B</text>
+  <text x="350" y="233" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">39%</text>
+
+  <!-- Llama 3.1 8B bar -->
+  <rect x="230" y="245" width="200" height="20" rx="2" fill="#7D5260"/>
+  <text x="240" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">Llama 3.1 8B</text>
+  <text x="440" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#7D5260">72%</text>
+
+  <!-- Key insight -->
+  <text x="30" y="305" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6750A4" font-weight="600">
+    Raisonnement chain-of-thought:
+  </text>
+  <text x="30" y="325" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">
+    DeepSeek-R1 génère des étapes de raisonnement explicites avant sa réponse finale.
+  </text>
+  <text x="30" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">
+    Plus lent par réponse, mais nettement plus précis sur les tâches mathématiques et logiques.
+  </text>
+</svg>
