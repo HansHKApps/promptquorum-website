@@ -842,4 +842,38 @@ _Audit date: April 16, 2026. Article is largely GEO-compliant (14 sections, sche
 
 ---
 
+### `troubleshooting-local-llm-setup`
+
+_Audit date: April 16, 2026. Article upgraded from ~62% to 91% compliance._
+
+**Fixed issues (HIGH priority):**
+- [x] 🔴 **`tldr` missing `id: 'key-takeaways'`** — fixed: `#key-takeaways` TOC anchor now works
+- [x] 🔴 **All 10 error sections missing `id:` fields** — fixed: explicit ids added matching all TOC anchors
+- [x] 🔴 **`schema.headline` didn't match H1** — fixed: matches title exactly
+- [x] 🔴 **`schema.author.sameAs` missing** — fixed: added author.sameAs URL
+- [x] 🔴 **No visible `faqSection`** — fixed: added `faqSection` with 10 Q&As using existing faqSchema content
+- [x] 🔴 **Sources lacked URLs** — fixed: all 3 sources now have full URLs
+- [x] 🔴 **DE sections had wrong article content** — fixed: cleared to `sections: {}` (was showing best-small-models article in German)
+
+**Fixed issues (MEDIUM priority):**
+- [x] 🟡 **`seoTitle` 49 chars** — fixed: updated to 54 chars
+- [x] 🟡 **`metaDescription` 145 chars, no ending tension** — fixed: 162 chars with "Fixes take under 5 minutes."
+- [x] 🟡 **No top-level `dateModified`** — fixed: added `dateModified: '2026-04-16'`
+- [x] 🟡 **`schema.dateModified` outdated** — fixed: updated to `2026-04-16`
+- [x] 🟡 **`schema.proficiencyLevel` missing** — fixed: `'Beginner'` added
+- [x] 🟡 **`schema.audience.audienceType` missing** — fixed: added developer audience
+- [x] 🟡 **No regional context in EN** — fixed: added EU/GDPR, Japan/APPI, China/CAC section
+- [x] 🟡 **Only 2 body-text links** — fixed: 5 body links now embedded in error sections
+- [x] 🟡 **H2 sections missing bold answer openers** — fixed: all 10 error sections start with bold answer
+
+**Remaining gaps (deferred, require component work):**
+- [ ] 🟢 **Lead Answer Block** — component doesn't support yet
+- [ ] 🟢 **Callout boxes** — component missing `callout` field type renderer
+- [ ] 🟢 **LLM snippet blocks** — no "In One Sentence" / "In Plain Terms" rendering support
+
+**Build verification:** ✓ `npm run build` passed (0 errors)
+**Estimated compliance score:** 91% (up from ~62%)
+
+---
+
 **Last updated:** April 16, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)
