@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 395">
+  <defs>
+    <style>.t { font-family: system-ui, -apple-system, sans-serif; }</style>
+  </defs>
+  <rect width="880" height="395" fill="#FFFFFF"/>
+  <text x="440" y="30" class="t" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">推理引擎功能对比 — 2026年</text>
+  <rect x="20" y="45" width="140" height="38" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="90" y="69" class="t" font-size="13" font-weight="700" fill="#49454F" text-anchor="middle">功能</text>
+  <rect x="160" y="45" width="238" height="38" fill="#6750A4"/>
+  <text x="279" y="69" class="t" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">llama.cpp</text>
+  <rect x="398" y="45" width="240" height="38" fill="#7D5260"/>
+  <text x="518" y="69" class="t" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">vLLM</text>
+  <rect x="638" y="45" width="222" height="38" fill="#49454F"/>
+  <text x="749" y="69" class="t" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Text-Generation-WebUI</text>
+
+  <!-- Row 1: 核心 -->
+  <rect x="20" y="83" width="140" height="42" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="30" y="109" class="t" font-size="13" font-weight="600" fill="#1C1B1F">核心</text>
+  <rect x="160" y="83" width="238" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="109" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">C++ 库</text>
+  <rect x="398" y="83" width="240" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="109" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">Python 框架</text>
+  <rect x="638" y="83" width="222" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="109" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">Python Web 应用</text>
+
+  <!-- Row 2: CPU支持 -->
+  <rect x="20" y="125" width="140" height="42" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="30" y="151" class="t" font-size="13" font-weight="600" fill="#1C1B1F">CPU 支持</text>
+  <rect x="160" y="125" width="238" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="151" class="t" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle">✓ 优秀</text>
+  <rect x="398" y="125" width="240" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="151" class="t" font-size="13" font-weight="600" fill="#E67C73" text-anchor="middle">✗ 较差（需要 GPU）</text>
+  <rect x="638" y="125" width="222" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="151" class="t" font-size="13" fill="#49454F" text-anchor="middle">△ 可用（较慢）</text>
+
+  <!-- Row 3: GPU类型 -->
+  <rect x="20" y="167" width="140" height="42" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="30" y="193" class="t" font-size="13" font-weight="600" fill="#1C1B1F">GPU 类型</text>
+  <rect x="160" y="167" width="238" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="185" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">CUDA（NVIDIA）</text>
+  <text x="279" y="201" class="t" font-size="12" fill="#49454F" text-anchor="middle">+ Metal（Apple Silicon）</text>
+  <rect x="398" y="167" width="240" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="185" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">仅 CUDA</text>
+  <text x="518" y="201" class="t" font-size="12" fill="#E67C73" text-anchor="middle">需要 NVIDIA</text>
+  <rect x="638" y="167" width="222" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="185" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">CUDA（NVIDIA）</text>
+  <text x="749" y="201" class="t" font-size="12" fill="#49454F" text-anchor="middle">+ CPU 备用</text>
+
+  <!-- Row 4: 速度 -->
+  <rect x="20" y="209" width="140" height="42" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="30" y="226" class="t" font-size="13" font-weight="600" fill="#1C1B1F">速度</text>
+  <text x="30" y="242" class="t" font-size="11" fill="#49454F">（GPU/8B 模型）</text>
+  <rect x="160" y="209" width="238" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="235" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">50–150 tokens/秒</text>
+  <rect x="398" y="209" width="240" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="224" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">100–1000+ tokens/秒</text>
+  <text x="518" y="241" class="t" font-size="11" fill="#49454F" text-anchor="middle">批量请求模式</text>
+  <rect x="638" y="209" width="222" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="235" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">50–150 tokens/秒</text>
+
+  <!-- Row 5: 支持格式 -->
+  <rect x="20" y="251" width="140" height="42" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="30" y="277" class="t" font-size="13" font-weight="600" fill="#1C1B1F">支持格式</text>
+  <rect x="160" y="251" width="238" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="277" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">GGUF</text>
+  <rect x="398" y="251" width="240" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="277" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">safetensors, AWQ, fp16</text>
+  <rect x="638" y="251" width="222" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="277" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">GGUF + safetensors</text>
+
+  <!-- Row 6: 最适合 -->
+  <rect x="20" y="293" width="140" height="50" fill="#6750A4"/>
+  <text x="90" y="323" class="t" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">最适合</text>
+  <rect x="160" y="293" width="238" height="50" fill="#EDE7F6" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="313" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">消费级设备</text>
+  <text x="279" y="330" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">&amp; CLI 自动化</text>
+  <rect x="398" y="293" width="240" height="50" fill="#EDE7F6" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="323" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">生产级 API 服务器</text>
+  <rect x="638" y="293" width="222" height="50" fill="#EDE7F6" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="313" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">研究 &amp;</text>
+  <text x="749" y="330" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">LoRA 微调训练</text>
+
+  <text x="440" y="378" class="t" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=zh · 2026年4月</text>
+</svg>

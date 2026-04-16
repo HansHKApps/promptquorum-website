@@ -508,6 +508,11 @@ All 4 JSON-LD blocks MUST be present in `<head>` before `npm run build`. Missing
 - [ ] **URLs markdown format:** (Rule 21)
   - ✓ `[text](url)`
   - ✗ Raw URLs
+- [ ] **External URLs are clickable links:** (Rule 21)
+  - ✓ All external URLs render as `<a>` tags (clickable in blue, `target="_blank"`)
+  - ✗ Raw bare URLs (e.g., "https://nvidia.com/...")
+  - Exception: Direct app competitors may be left unlinked per editorial decision
+  - Note: The `renderInlineLinks()` function in post components auto-linkifies bare `https://` URLs
 - [ ] **Code formatting:** (Rule 2)
   - ✓ Inline: backticks ` ` ` `
   - ✓ Block: fenced with language identifier
@@ -696,6 +701,7 @@ All 4 JSON-LD blocks MUST be present in `<head>` before `npm run build`. Missing
 | **No original insights/testing** | Rule 14 | Add at least 1 data point from your own testing | 🟡 Medium |
 | **Callout box count too low** | Rule 17 | Add callouts (5 for 500–1500 words, 8 for 1500–3000) | 🟡 Medium |
 | **No "In One Sentence" or "In Plain Terms" blocks** | Rule 12 | Add min 2 snippet blocks (1 per 800 words) | 🟢 Low |
+| **Bare external URLs (not clickable links)** | Rule 21 | Convert to markdown: `[url](https://...)` OR leave as plain text (renderer auto-linkifies) | 🟡 Medium |
 
 ---
 

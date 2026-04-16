@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 475">
+  <defs>
+    <style>
+      .header-text { font-family: system-ui, -apple-system, sans-serif; font-size: 16px; font-weight: 700; }
+      .item-text { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 500; }
+      .footer-text { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; }
+    </style>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- White background -->
+  <rect width="900" height="475" fill="#FFFFFF"/>
+
+  <!-- Left Column: Choose llama.cpp -->
+  <g>
+    <rect x="15" y="20" width="283" height="40" fill="#6750A4" rx="8"/>
+    <text x="156" y="46" class="header-text" fill="#FFFFFF" text-anchor="middle">Choose llama.cpp</text>
+    <rect x="15" y="70" width="283" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+
+    <!-- Item 1 -->
+    <text x="30" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="106" class="item-text" fill="#1C1B1F">Mac or CPU-only device</text>
+
+    <!-- Item 2 -->
+    <text x="30" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="151" class="item-text" fill="#1C1B1F">Running via Ollama</text>
+    <text x="55" y="167" class="item-text" fill="#1C1B1F">(same C++ backend)</text>
+
+    <!-- Item 3 -->
+    <text x="30" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="206" class="item-text" fill="#1C1B1F">Single-user or developer setup</text>
+
+    <!-- Item 4 -->
+    <text x="30" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="251" class="item-text" fill="#1C1B1F">Docker / systemd</text>
+    <text x="55" y="267" class="item-text" fill="#1C1B1F">or CI/CD deployment</text>
+
+    <!-- Item 5 -->
+    <text x="30" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="301" class="item-text" fill="#1C1B1F">Limited VRAM or</text>
+    <text x="55" y="317" class="item-text" fill="#1C1B1F">no NVIDIA GPU</text>
+  </g>
+
+  <!-- Middle Column: Choose vLLM -->
+  <g>
+    <rect x="308" y="20" width="284" height="40" fill="#7D5260" rx="8"/>
+    <text x="450" y="46" class="header-text" fill="#FFFFFF" text-anchor="middle">Choose vLLM</text>
+    <rect x="308" y="70" width="284" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+
+    <!-- Item 1 -->
+    <text x="323" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="106" class="item-text" fill="#1C1B1F">Have NVIDIA GPU (CUDA)</text>
+
+    <!-- Item 2 -->
+    <text x="323" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="151" class="item-text" fill="#1C1B1F">Need 50+ concurrent</text>
+    <text x="348" y="167" class="item-text" fill="#1C1B1F">API users</text>
+
+    <!-- Item 3 -->
+    <text x="323" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="201" class="item-text" fill="#1C1B1F">Building production</text>
+    <text x="348" y="217" class="item-text" fill="#1C1B1F">API service</text>
+
+    <!-- Item 4 -->
+    <text x="323" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="256" class="item-text" fill="#1C1B1F">Maximum throughput priority</text>
+
+    <!-- Item 5 -->
+    <text x="323" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="301" class="item-text" fill="#1C1B1F">Linux server or</text>
+    <text x="348" y="317" class="item-text" fill="#1C1B1F">cloud GPU deployment</text>
+  </g>
+
+  <!-- Right Column: Choose Text-Generation-WebUI -->
+  <g>
+    <rect x="602" y="20" width="283" height="40" fill="#49454F" rx="8"/>
+    <text x="743" y="38" class="header-text" fill="#FFFFFF" text-anchor="middle">Choose</text>
+    <text x="743" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Text-Generation-WebUI</text>
+    <rect x="602" y="70" width="283" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+
+    <!-- Item 1 -->
+    <text x="617" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="106" class="item-text" fill="#1C1B1F">No CLI experience needed</text>
+
+    <!-- Item 2 -->
+    <text x="617" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="151" class="item-text" fill="#1C1B1F">LoRA fine-tuning</text>
+    <text x="642" y="167" class="item-text" fill="#1C1B1F">in the browser</text>
+
+    <!-- Item 3 -->
+    <text x="617" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="201" class="item-text" fill="#1C1B1F">Comparing multiple</text>
+    <text x="642" y="217" class="item-text" fill="#1C1B1F">model backends</text>
+
+    <!-- Item 4 -->
+    <text x="617" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="256" class="item-text" fill="#1C1B1F">Research &amp; experimentation</text>
+
+    <!-- Item 5 -->
+    <text x="617" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="301" class="item-text" fill="#1C1B1F">Want built-in</text>
+    <text x="642" y="317" class="item-text" fill="#1C1B1F">chat interface</text>
+  </g>
+
+  <!-- Footer note -->
+  <text x="450" y="458" class="footer-text" fill="#79747E" text-anchor="middle">All three tools are open-source and self-hosted. No API key required.</text>
+</svg>

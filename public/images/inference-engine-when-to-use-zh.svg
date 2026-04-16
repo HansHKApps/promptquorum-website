@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 475">
+  <defs>
+    <style>
+      .header-text { font-family: system-ui, -apple-system, sans-serif; font-size: 15px; font-weight: 700; }
+      .item-text { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 500; }
+      .footer-text { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; }
+    </style>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="900" height="475" fill="#FFFFFF"/>
+
+  <!-- llama.cpp -->
+  <g>
+    <rect x="15" y="20" width="283" height="40" fill="#6750A4" rx="8"/>
+    <text x="156" y="46" class="header-text" fill="#FFFFFF" text-anchor="middle">选择 llama.cpp</text>
+    <rect x="15" y="70" width="283" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+    <text x="30" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="106" class="item-text" fill="#1C1B1F">Mac 或仅 CPU 设备</text>
+    <text x="30" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="151" class="item-text" fill="#1C1B1F">通过 Ollama 运行</text>
+    <text x="55" y="167" class="item-text" fill="#1C1B1F">（相同 C++ 后端）</text>
+    <text x="30" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="201" class="item-text" fill="#1C1B1F">单用户或</text>
+    <text x="55" y="217" class="item-text" fill="#1C1B1F">开发者配置</text>
+    <text x="30" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="251" class="item-text" fill="#1C1B1F">Docker / systemd</text>
+    <text x="55" y="267" class="item-text" fill="#1C1B1F">或 CI/CD 部署</text>
+    <text x="30" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="301" class="item-text" fill="#1C1B1F">VRAM 有限或</text>
+    <text x="55" y="317" class="item-text" fill="#1C1B1F">无 NVIDIA GPU</text>
+  </g>
+
+  <!-- vLLM -->
+  <g>
+    <rect x="308" y="20" width="284" height="40" fill="#7D5260" rx="8"/>
+    <text x="450" y="46" class="header-text" fill="#FFFFFF" text-anchor="middle">选择 vLLM</text>
+    <rect x="308" y="70" width="284" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+    <text x="323" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="106" class="item-text" fill="#1C1B1F">拥有 NVIDIA GPU（需要 CUDA）</text>
+    <text x="323" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="151" class="item-text" fill="#1C1B1F">需要 50+ 并发</text>
+    <text x="348" y="167" class="item-text" fill="#1C1B1F">API 用户</text>
+    <text x="323" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="201" class="item-text" fill="#1C1B1F">构建生产级</text>
+    <text x="348" y="217" class="item-text" fill="#1C1B1F">API 服务</text>
+    <text x="323" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="256" class="item-text" fill="#1C1B1F">最大吞吐量优先</text>
+    <text x="323" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="301" class="item-text" fill="#1C1B1F">Linux 服务器或</text>
+    <text x="348" y="317" class="item-text" fill="#1C1B1F">云 GPU 部署</text>
+  </g>
+
+  <!-- Text-Generation-WebUI -->
+  <g>
+    <rect x="602" y="20" width="283" height="40" fill="#49454F" rx="8"/>
+    <text x="743" y="38" class="header-text" fill="#FFFFFF" text-anchor="middle">选择</text>
+    <text x="743" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Text-Generation-WebUI</text>
+    <rect x="602" y="70" width="283" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+    <text x="617" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="106" class="item-text" fill="#1C1B1F">无需命令行经验</text>
+    <text x="617" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="151" class="item-text" fill="#1C1B1F">在浏览器中进行</text>
+    <text x="642" y="167" class="item-text" fill="#1C1B1F">LoRA 微调训练</text>
+    <text x="617" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="201" class="item-text" fill="#1C1B1F">比较多个</text>
+    <text x="642" y="217" class="item-text" fill="#1C1B1F">模型后端</text>
+    <text x="617" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="256" class="item-text" fill="#1C1B1F">研究与实验用途</text>
+    <text x="617" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="301" class="item-text" fill="#1C1B1F">需要内置</text>
+    <text x="642" y="317" class="item-text" fill="#1C1B1F">聊天界面</text>
+  </g>
+
+  <text x="450" y="458" class="footer-text" fill="#79747E" text-anchor="middle">三款工具均开源、本地运行。无需 API 密钥。</text>
+</svg>

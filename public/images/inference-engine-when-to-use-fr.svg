@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 475">
+  <defs>
+    <style>
+      .header-text { font-family: system-ui, -apple-system, sans-serif; font-size: 15px; font-weight: 700; }
+      .item-text { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 500; }
+      .footer-text { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; }
+    </style>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="900" height="475" fill="#FFFFFF"/>
+
+  <!-- llama.cpp -->
+  <g>
+    <rect x="15" y="20" width="283" height="40" fill="#6750A4" rx="8"/>
+    <text x="156" y="46" class="header-text" fill="#FFFFFF" text-anchor="middle">Choisir llama.cpp</text>
+    <rect x="15" y="70" width="283" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+    <text x="30" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="106" class="item-text" fill="#1C1B1F">Mac ou appareil CPU uniquement</text>
+    <text x="30" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="151" class="item-text" fill="#1C1B1F">Via Ollama</text>
+    <text x="55" y="167" class="item-text" fill="#1C1B1F">(même backend C++)</text>
+    <text x="30" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="201" class="item-text" fill="#1C1B1F">Configuration développeur</text>
+    <text x="55" y="217" class="item-text" fill="#1C1B1F">mono-utilisateur</text>
+    <text x="30" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="251" class="item-text" fill="#1C1B1F">Docker / systemd</text>
+    <text x="55" y="267" class="item-text" fill="#1C1B1F">ou CI/CD</text>
+    <text x="30" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="301" class="item-text" fill="#1C1B1F">VRAM limité ou</text>
+    <text x="55" y="317" class="item-text" fill="#1C1B1F">pas de GPU NVIDIA</text>
+  </g>
+
+  <!-- vLLM -->
+  <g>
+    <rect x="308" y="20" width="284" height="40" fill="#7D5260" rx="8"/>
+    <text x="450" y="46" class="header-text" fill="#FFFFFF" text-anchor="middle">Choisir vLLM</text>
+    <rect x="308" y="70" width="284" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+    <text x="323" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="106" class="item-text" fill="#1C1B1F">GPU NVIDIA disponible (CUDA)</text>
+    <text x="323" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="151" class="item-text" fill="#1C1B1F">50+ utilisateurs API</text>
+    <text x="348" y="167" class="item-text" fill="#1C1B1F">simultanés requis</text>
+    <text x="323" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="201" class="item-text" fill="#1C1B1F">Construction d'un service</text>
+    <text x="348" y="217" class="item-text" fill="#1C1B1F">API de production</text>
+    <text x="323" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="256" class="item-text" fill="#1C1B1F">Débit maximal prioritaire</text>
+    <text x="323" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="301" class="item-text" fill="#1C1B1F">Serveur Linux ou</text>
+    <text x="348" y="317" class="item-text" fill="#1C1B1F">GPU cloud</text>
+  </g>
+
+  <!-- Text-Generation-WebUI -->
+  <g>
+    <rect x="602" y="20" width="283" height="40" fill="#49454F" rx="8"/>
+    <text x="743" y="38" class="header-text" fill="#FFFFFF" text-anchor="middle">Choisir</text>
+    <text x="743" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Text-Generation-WebUI</text>
+    <rect x="602" y="70" width="283" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+    <text x="617" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="106" class="item-text" fill="#1C1B1F">Aucune expérience CLI requise</text>
+    <text x="617" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="151" class="item-text" fill="#1C1B1F">Ajustement fin LoRA</text>
+    <text x="642" y="167" class="item-text" fill="#1C1B1F">dans le navigateur</text>
+    <text x="617" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="201" class="item-text" fill="#1C1B1F">Comparer plusieurs</text>
+    <text x="642" y="217" class="item-text" fill="#1C1B1F">backends de modèles</text>
+    <text x="617" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="256" class="item-text" fill="#1C1B1F">Recherche &amp; expérimentation</text>
+    <text x="617" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="301" class="item-text" fill="#1C1B1F">Interface de chat</text>
+    <text x="642" y="317" class="item-text" fill="#1C1B1F">intégrée souhaitée</text>
+  </g>
+
+  <text x="450" y="458" class="footer-text" fill="#79747E" text-anchor="middle">Les trois outils sont open source et auto-hébergés. Aucune clé API requise.</text>
+</svg>

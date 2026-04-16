@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 415">
+  <defs>
+    <style>.t { font-family: system-ui, -apple-system, sans-serif; }</style>
+  </defs>
+  <rect width="800" height="415" fill="#FFFFFF"/>
+  <text x="400" y="30" class="t" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Performance : Tokens par seconde — Avril 2026</text>
+  <text x="400" y="50" class="t" font-size="13" fill="#49454F" text-anchor="middle">Modèle : Llama 3.1 8B · Q4_K_M pour llama.cpp &amp; Text-Gen-WebUI · fp16 pour vLLM</text>
+
+  <rect x="20" y="65" width="760" height="26" fill="#F7F2FA" rx="4"/>
+  <text x="30" y="82" class="t" font-size="13" font-weight="700" fill="#6750A4">Scénario 1 — RTX 4090 (NVIDIA, GPU unique)</text>
+  <line x1="195" y1="93" x2="195" y2="207" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="185" y="116" class="t" font-size="12" fill="#1C1B1F" text-anchor="end">llama.cpp</text>
+  <rect x="195" y="100" width="250" height="28" fill="#6750A4" rx="2"/>
+  <text x="454" y="119" class="t" font-size="13" font-weight="600" fill="#1C1B1F">150 tok/s</text>
+
+  <text x="185" y="154" class="t" font-size="12" fill="#1C1B1F" text-anchor="end">vLLM</text>
+  <rect x="195" y="138" width="500" height="28" fill="#7D5260" rx="2"/>
+  <text x="704" y="157" class="t" font-size="13" font-weight="600" fill="#1C1B1F">300 tok/s *</text>
+
+  <text x="185" y="192" class="t" font-size="12" fill="#1C1B1F" text-anchor="end">Text-Gen-WebUI</text>
+  <rect x="195" y="176" width="250" height="28" fill="#49454F" rx="2"/>
+  <text x="454" y="195" class="t" font-size="13" font-weight="600" fill="#1C1B1F">150 tok/s</text>
+
+  <text x="20" y="218" class="t" font-size="11" fill="#79747E">* vLLM 300 tok/s avec traitement par lots concurrent (PagedAttention). Requête unique : ~150 tok/s.</text>
+
+  <rect x="20" y="233" width="760" height="26" fill="#F7F2FA" rx="4"/>
+  <text x="30" y="250" class="t" font-size="13" font-weight="700" fill="#7D5260">Scénario 2 — CPU 8 cœurs (sans GPU, inférence CPU uniquement)</text>
+  <line x1="195" y1="261" x2="195" y2="375" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="185" y="284" class="t" font-size="12" fill="#1C1B1F" text-anchor="end">llama.cpp</text>
+  <rect x="195" y="268" width="500" height="28" fill="#6750A4" rx="2"/>
+  <text x="704" y="287" class="t" font-size="13" font-weight="600" fill="#1C1B1F">5 tok/s</text>
+
+  <text x="185" y="322" class="t" font-size="12" fill="#1C1B1F" text-anchor="end">vLLM</text>
+  <rect x="195" y="306" width="50" height="28" fill="#7D5260" rx="2"/>
+  <text x="254" y="325" class="t" font-size="13" font-weight="600" fill="#E67C73">0,5 tok/s — non recommandé</text>
+
+  <text x="185" y="360" class="t" font-size="12" fill="#1C1B1F" text-anchor="end">Text-Gen-WebUI</text>
+  <rect x="195" y="344" width="400" height="28" fill="#49454F" rx="2"/>
+  <text x="604" y="363" class="t" font-size="13" font-weight="600" fill="#1C1B1F">4 tok/s</text>
+
+  <text x="400" y="400" class="t" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=fr · Avril 2026</text>
+</svg>

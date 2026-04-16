@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 475">
+  <defs>
+    <style>
+      .header-text { font-family: system-ui, -apple-system, sans-serif; font-size: 15px; font-weight: 700; }
+      .item-text { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 500; }
+      .footer-text { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; }
+    </style>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="900" height="475" fill="#FFFFFF"/>
+
+  <!-- llama.cpp -->
+  <g>
+    <rect x="15" y="20" width="283" height="40" fill="#6750A4" rx="8"/>
+    <text x="156" y="46" class="header-text" fill="#FFFFFF" text-anchor="middle">llama.cpp を選ぶ場合</text>
+    <rect x="15" y="70" width="283" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+    <text x="30" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="106" class="item-text" fill="#1C1B1F">Mac または CPU のみの環境</text>
+    <text x="30" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="151" class="item-text" fill="#1C1B1F">Ollama で実行</text>
+    <text x="55" y="167" class="item-text" fill="#1C1B1F">（同じ C++ バックエンド）</text>
+    <text x="30" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="201" class="item-text" fill="#1C1B1F">個人開発や</text>
+    <text x="55" y="217" class="item-text" fill="#1C1B1F">少人数の開発</text>
+    <text x="30" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="251" class="item-text" fill="#1C1B1F">Docker / systemd</text>
+    <text x="55" y="267" class="item-text" fill="#1C1B1F">/ CI/CD デプロイ</text>
+    <text x="30" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="55" y="301" class="item-text" fill="#1C1B1F">NVIDIA なし</text>
+    <text x="55" y="317" class="item-text" fill="#1C1B1F">または VRAM が少ない</text>
+  </g>
+
+  <!-- vLLM -->
+  <g>
+    <rect x="308" y="20" width="284" height="40" fill="#7D5260" rx="8"/>
+    <text x="450" y="46" class="header-text" fill="#FFFFFF" text-anchor="middle">vLLM を選ぶ場合</text>
+    <rect x="308" y="70" width="284" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+    <text x="323" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="106" class="item-text" fill="#1C1B1F">NVIDIA GPU 保有（CUDA 必須）</text>
+    <text x="323" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="151" class="item-text" fill="#1C1B1F">50 + の同時</text>
+    <text x="348" y="167" class="item-text" fill="#1C1B1F">API ユーザーが必要</text>
+    <text x="323" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="201" class="item-text" fill="#1C1B1F">本番 API サービスの</text>
+    <text x="348" y="217" class="item-text" fill="#1C1B1F">構築</text>
+    <text x="323" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="256" class="item-text" fill="#1C1B1F">最高スループットが優先</text>
+    <text x="323" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="348" y="301" class="item-text" fill="#1C1B1F">Linux サーバーや</text>
+    <text x="348" y="317" class="item-text" fill="#1C1B1F">クラウド GPU</text>
+  </g>
+
+  <!-- Text-Generation-WebUI -->
+  <g>
+    <rect x="602" y="20" width="283" height="40" fill="#49454F" rx="8"/>
+    <text x="743" y="38" class="header-text" fill="#FFFFFF" text-anchor="middle">Text-Gen-WebUI</text>
+    <text x="743" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">を選ぶ場合</text>
+    <rect x="602" y="70" width="283" height="355" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+    <text x="617" y="106" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="106" class="item-text" fill="#1C1B1F">CLI の知識が不要</text>
+    <text x="617" y="156" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="151" class="item-text" fill="#1C1B1F">ブラウザで LoRA</text>
+    <text x="642" y="167" class="item-text" fill="#1C1B1F">ファインチューニング</text>
+    <text x="617" y="206" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="201" class="item-text" fill="#1C1B1F">複数のバックエンドを</text>
+    <text x="642" y="217" class="item-text" fill="#1C1B1F">比較したい</text>
+    <text x="617" y="256" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="256" class="item-text" fill="#1C1B1F">研究・実験に使用</text>
+    <text x="617" y="306" class="item-text" fill="#34A853" font-size="16">✓</text>
+    <text x="642" y="301" class="item-text" fill="#1C1B1F">組み込みチャット</text>
+    <text x="642" y="317" class="item-text" fill="#1C1B1F">インターフェースが欲しい</text>
+  </g>
+
+  <text x="450" y="458" class="footer-text" fill="#79747E" text-anchor="middle">3つのツールはすべて無料・ローカル実行。API キー不要。</text>
+</svg>

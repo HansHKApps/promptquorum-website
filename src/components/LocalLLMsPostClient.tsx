@@ -166,15 +166,38 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
       )
     }
 
-    // Handle **bold** markers
-    const boldParts = part.split(/(\*\*[^*]+\*\*)/g)
+    // Handle bare URLs and **bold** markers
+    const URL_PATTERN = /(https?:\/\/[^\s,;)\]"]+)/g
+    const segments = part.split(URL_PATTERN)
     return (
       <span key={i}>
-        {boldParts.map((bp, j) =>
-          bp.startsWith('**') && bp.endsWith('**')
-            ? <strong key={j} className="text-text-primary font-semibold">{bp.slice(2, -2)}</strong>
-            : bp
-        )}
+        {segments.map((seg, j) => {
+          // Check if this segment is a URL by testing with a fresh regex
+          if (/(https?:\/\/[^\s,;)\]"]+)/.test(seg)) {
+            return (
+              <a
+                key={j}
+                href={seg}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium hover:underline break-all"
+              >
+                {seg}
+              </a>
+            )
+          }
+          // Handle **bold** markers within non-URL text
+          const boldParts = seg.split(/(\*\*[^*]+\*\*)/g)
+          return (
+            <span key={j}>
+              {boldParts.map((bp, k) =>
+                bp.startsWith('**') && bp.endsWith('**')
+                  ? <strong key={k} className="text-text-primary font-semibold">{bp.slice(2, -2)}</strong>
+                  : bp
+              )}
+            </span>
+          )
+        })}
       </span>
     )
   })

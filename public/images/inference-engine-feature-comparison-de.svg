@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 395">
+  <defs>
+    <style>
+      .t { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="880" height="395" fill="#FFFFFF"/>
+
+  <text x="440" y="30" class="t" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">Inference-Engine Funktionsvergleich — 2026</text>
+
+  <rect x="20" y="45" width="140" height="38" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="90" y="69" class="t" font-size="13" font-weight="700" fill="#49454F" text-anchor="middle">Merkmal</text>
+
+  <rect x="160" y="45" width="238" height="38" fill="#6750A4"/>
+  <text x="279" y="69" class="t" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">llama.cpp</text>
+
+  <rect x="398" y="45" width="240" height="38" fill="#7D5260"/>
+  <text x="518" y="69" class="t" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">vLLM</text>
+
+  <rect x="638" y="45" width="222" height="38" fill="#49454F"/>
+  <text x="749" y="69" class="t" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Text-Generation-WebUI</text>
+
+  <!-- Row 1: Kern -->
+  <rect x="20" y="83" width="140" height="42" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="30" y="109" class="t" font-size="13" font-weight="600" fill="#1C1B1F">Kern</text>
+  <rect x="160" y="83" width="238" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="109" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">C++-Bibliothek</text>
+  <rect x="398" y="83" width="240" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="109" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">Python-Framework</text>
+  <rect x="638" y="83" width="222" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="109" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">Python-Web-App</text>
+
+  <!-- Row 2: CPU-Support -->
+  <rect x="20" y="125" width="140" height="42" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="30" y="151" class="t" font-size="13" font-weight="600" fill="#1C1B1F">CPU-Support</text>
+  <rect x="160" y="125" width="238" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="151" class="t" font-size="13" font-weight="600" fill="#34A853" text-anchor="middle">✓ Ausgezeichnet</text>
+  <rect x="398" y="125" width="240" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="151" class="t" font-size="13" font-weight="600" fill="#E67C73" text-anchor="middle">✗ Schlecht (GPU nötig)</text>
+  <rect x="638" y="125" width="222" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="151" class="t" font-size="13" fill="#49454F" text-anchor="middle">△ Nutzbar (langsam)</text>
+
+  <!-- Row 3: GPU-Typen -->
+  <rect x="20" y="167" width="140" height="42" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="30" y="193" class="t" font-size="13" font-weight="600" fill="#1C1B1F">GPU-Typen</text>
+  <rect x="160" y="167" width="238" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="185" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">CUDA (NVIDIA)</text>
+  <text x="279" y="201" class="t" font-size="12" fill="#49454F" text-anchor="middle">+ Metal (Apple Silicon)</text>
+  <rect x="398" y="167" width="240" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="185" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">Nur CUDA</text>
+  <text x="518" y="201" class="t" font-size="12" fill="#E67C73" text-anchor="middle">NVIDIA erforderlich</text>
+  <rect x="638" y="167" width="222" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="185" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">CUDA (NVIDIA)</text>
+  <text x="749" y="201" class="t" font-size="12" fill="#49454F" text-anchor="middle">+ CPU-Fallback</text>
+
+  <!-- Row 4: Geschwindigkeit -->
+  <rect x="20" y="209" width="140" height="42" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="30" y="226" class="t" font-size="12" font-weight="600" fill="#1C1B1F">Geschwindigkeit</text>
+  <text x="30" y="242" class="t" font-size="11" fill="#49454F">(GPU, 8B Modell)</text>
+  <rect x="160" y="209" width="238" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="235" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">50–150 tok/s</text>
+  <rect x="398" y="209" width="240" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="224" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">100–1000+ tok/s</text>
+  <text x="518" y="241" class="t" font-size="11" fill="#49454F" text-anchor="middle">mit Request-Batching</text>
+  <rect x="638" y="209" width="222" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="235" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">50–150 tok/s</text>
+
+  <!-- Row 5: Formate -->
+  <rect x="20" y="251" width="140" height="42" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="30" y="277" class="t" font-size="13" font-weight="600" fill="#1C1B1F">Formate</text>
+  <rect x="160" y="251" width="238" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="277" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">GGUF</text>
+  <rect x="398" y="251" width="240" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="277" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">safetensors, AWQ, fp16</text>
+  <rect x="638" y="251" width="222" height="42" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="277" class="t" font-size="13" fill="#1C1B1F" text-anchor="middle">GGUF + safetensors</text>
+
+  <!-- Row 6: Geeignet für -->
+  <rect x="20" y="293" width="140" height="50" fill="#6750A4"/>
+  <text x="90" y="323" class="t" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Geeignet für</text>
+  <rect x="160" y="293" width="238" height="50" fill="#EDE7F6" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="279" y="313" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">Consumer-Geräte</text>
+  <text x="279" y="330" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">&amp; CLI-Automatisierung</text>
+  <rect x="398" y="293" width="240" height="50" fill="#EDE7F6" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="518" y="323" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">Production-API-Server</text>
+  <rect x="638" y="293" width="222" height="50" fill="#EDE7F6" stroke="#E8DEF8" stroke-width="0.5"/>
+  <text x="749" y="313" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">Forschung &amp;</text>
+  <text x="749" y="330" class="t" font-size="12" fill="#1C1B1F" text-anchor="middle">LoRA Fine-Tuning</text>
+
+  <text x="440" y="378" class="t" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp?lang=de · April 2026</text>
+</svg>
