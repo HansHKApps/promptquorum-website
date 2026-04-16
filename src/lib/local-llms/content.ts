@@ -856,6 +856,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           content: 'Der schnellste Weg zum Ausführen Ihres ersten lokalen LLM ist [Ollama installieren](/local-llms/how-to-install-ollama?lang=de) — ein einzelner Befehl installiert die Engine und lädt ein Modell in unter 5 Minuten auf macOS, Windows oder Linux. Wenn Sie eine grafische Schnittstelle bevorzugen, führt Sie [LM Studio installieren](/local-llms/how-to-install-lm-studio?lang=de) durch das Desktop-App-Setup. Um auszuwählen, mit welchem ​​Modell Sie beginnen, siehe [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models?lang=de).',
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             '**llama.cpp — GitHub** — Die grundlegende C++-Bibliothek zum Ausführen quantisierter Modelle lokal',
@@ -2903,6 +2904,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             'LM Studio. (2026). „LM Studio Dokumentation und Release Notes." lmstudio.ai. https://lmstudio.ai/docs — Offizielle Installationsleitfäden, API-Dokumentation und Hardware-Kompatibilitätsinformationen.',
@@ -6649,6 +6651,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Weiterführende Ressourcen',
           items: [
             '[Was sind lokale LLMs?](/local-llms/what-are-local-llms) — Grundlagenleitfaden zum Verständnis, wie lokale Inferenz funktioniert und welche Hardware-Komponenten wichtig sind',
@@ -6697,6 +6700,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             'Apple. (2026). "Apple M4 Max/M5 Max Chip Übersicht." Apple Developer. https://developer.apple.com/apple-silicon/ — Vereinheitlichte Speicher-Architektur, ML-Leistungsbenchmarks und Stromeffizienz-Spezifikationen.',
@@ -10213,6 +10217,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         overview: {
+          id: 'model-family-overview',
           title: 'Modellfamilien-Übersicht: Qwen, Llama und Mistral',
           rows: [
             { 'Familie': 'Qwen2.5', 'Entwickler': 'Alibaba', 'Verfügbare Größen': '0.5B, 1.5B, 3B, 7B, 14B, 32B, 72B', 'Lizenz': 'Apache 2.0 (meist)' },
@@ -10222,6 +10227,7 @@ print(response.choices[0].message.content)`,
           columns: ['Familie', 'Entwickler', 'Verfügbare Größen', 'Lizenz'],
         },
         benchmarks: {
+          id: 'benchmark-comparison',
           title: 'Benchmark-Vergleich: Qwen2.5 vs Llama 3.x vs Mistral',
           rows: [
             { 'Modell': 'Qwen2.5 72B', 'MMLU': '84%', 'HumanEval': '87%', 'MATH': '83%', 'RAM (Q4_K_M)': '43 GB' },
@@ -10238,6 +10244,7 @@ print(response.choices[0].message.content)`,
           imageCaption: 'Benchmark-Vergleich: Qwen2.5 72B (84% MMLU, 87% HumanEval, 83% MATH) vs. Llama 3.3 70B (82%, 88%, 77%) vs. Mistral Small 3.1 (79%, 74%, 65%) bei Q4_K_M-Quantisierung.',
         },
         qwen: {
+          id: 'qwen2-5',
           title: 'Qwen2.5: Bestes für Coding, Mathematik und nicht-englische Sprachen',
           content: [
             'Qwen2.5 von Alibaba ist die stärkste Modellfamilie für strukturierte Output-Aufgaben. Es führt HumanEval bei jeder vergleichbaren Größe an, außer 70B (wo Llama 3.3 es um 1% übertrumpft). Die MATH-Werte liegen bei jeder Größe 6–10 Prozentpunkte über Llama.',
@@ -10248,6 +10255,7 @@ print(response.choices[0].message.content)`,
           imageCaption: 'Qwen2.5 Mehrsprachigkeits-Vergleich: 29 native Sprachen (Chinesisch, Japanisch, Koreanisch, Arabisch, Deutsch, Französisch + weitere) vs. Llama 3.x und Mistral als englischzentrierte lokale LLMs.',
         },
         llama: {
+          id: 'llama-3',
           title: 'Llama 3.x: Bestes für allgemeine englische Aufgaben und Ökosystem-Unterstützung',
           content: [
             'Metas Llama 3.x Familie ist die am weitesten unterstützte Open-Weight-Modellserie. Mehr Tools, Fine-Tunes, Quantisierungen und Community-Leitfäden existieren für Llama als für jede andere Familie. Llama 3.3 70B ist mit allen Konkurrenten bei allgemeinen englischen Benchmarks gleichauf oder besser.',
@@ -10256,6 +10264,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         mistral: {
+          id: 'mistral',
           title: 'Mistral: Beste Effizienz und stärkste 7B-Klasse-Geschichte',
           content: [
             'Mistral AI produziert die parameter-effizientesten Modelle in diesem Vergleich. Mistral Small 3.1 bei 24B liefert Benchmark-Ergebnisse nah bei der 70B-Klasse, während nur 14 GB RAM benötigt werden — das beste Qualitäts-pro-RAM-Verhältnis aller Modelle in diesem Vergleich.',
@@ -10281,6 +10290,7 @@ print(response.choices[0].message.content)`,
           note: 'Für Reasoning-intensive Tasks (Mathe, Logik, Code-Review): DeepSeek-R1 (MIT-Lizenz, 7B–32B) übertrifft alle drei Familien bei MATH-Benchmarks.',
         },
         byTask: {
+          id: 'which-family-wins-by-task',
           title: 'Welche Modellfamilie gewinnt nach Task?',
           rows: [
             { 'Task': 'Python / JavaScript Coding', 'Gewinner': 'Qwen2.5', 'Warum': 'Höchstes HumanEval bei jeder Größe' },
@@ -10296,6 +10306,7 @@ print(response.choices[0].message.content)`,
           imageCaption: 'Aufgaben-Gewinner-Tabelle: Qwen2.5 gewinnt beim Coding (87% HumanEval) und mehrsprachigen Aufgaben; Llama 3.x gewinnt bei englischem kreativem Schreiben; Mistral Small 3.1 führt bei Qualität pro GB RAM.',
         },
         sizeBySizeComparison: {
+          id: 'size-for-size-comparison',
           title: 'Größen-für-Größen-Vergleich: Welche Familie ist besser bei jeder Skalierung?',
           content: [
             '**3B–4B Klasse**: Qwen2.5 3B und [Phi-4 Mini 3.8B](/local-llms/best-beginner-local-llm-models) übertrumpfen Llama 3.2 3B beim Coding und Mathematik. Für allgemeine englische Nutzung ist Llama 3.2 3B zuverlässiger.',
@@ -10313,6 +10324,7 @@ print(response.choices[0].message.content)`,
           codeLanguage: 'bash',
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             '**Qwen2.5 Technical Report** (Alibaba DAMO Academy, 2024) — arXiv:2412.15115 — Benchmark-Daten für Coding, Mathematik und mehrsprachige Aufgaben über alle Größenvarianten.',
@@ -10322,6 +10334,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler bei der Wahl von Modellfamilien',
           items: [
             'Modelle bei unterschiedlichen Parameteranzahlen vergleichen — Qwen 32B vs Llama 70B ist kein Apfel-zu-Apfel-Vergleich.',
@@ -10332,6 +10345,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Weiterführende Ressourcen',
           items: [
             '[Beste Local LLMs 2026](/local-llms/best-local-llms-2026) — Übergeordnete Bewertung der aktuell besten Modelle',
@@ -10343,6 +10357,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Regionaler Kontext: EU/DSGVO, Japan und China',
           content: [
             '**EU/DSGVO**: Mistral-Modelle werden in Frankreich unter EU-Gerichtsbarkeit hergestellt, was ihnen einen klaren Datenherkunjftstrail gibt, der DSGVO-Artikel-5-Konformitätsanforderungen erfüllt. Meta Llama Modelle offenbaren Trainingsdaten-Herkunft in ihrer Model Card. Qwen2.5 wird von Alibaba (China-Herkunft) hergestellt, das einige EU-Datenschutzbehörden für Cross-Border-Transfer-Überprüfung unter DSGVO Kapitel V flaggen. Für regulierte EU-Industrien ist Mistral oder Llama mit On-Premises-Bereitstellung die risikoloseste Wahl.',
@@ -10351,6 +10366,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         faq: {
+          id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Welches ist besser für Coding: Qwen, Llama oder Mistral?', a: 'Qwen2.5 führt Coding-Benchmarks bei jeder Größe an. Qwen2.5 72B erzielt 87% HumanEval; Llama 3.3 70B erzielt 88%; Mistral 7B v0.3 erzielt 39%. Für die 7B-Klasse übertrumpft Qwen2.5 7B (72% HumanEval) Mistral 7B (39%) deutlich und passt zu Llama 3.1 8B (72%).' },
@@ -11913,6 +11929,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             '**Neural Story Generation Papers** — Akademische Forschung zu narrativer Kohärenz',
@@ -15152,6 +15169,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             'llama.cpp Quantisierungs-Dokumentation — github.com/ggerganov/llama.cpp/blob/master/examples/quantize/README.md',
@@ -16701,6 +16719,7 @@ print(response.choices[0].message.content)`,
           ]
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Weiterführende Ressourcen',
           items: [
             '[Ollama installieren: Schritt-für-Schritt-Anleitung](/local-llms/how-to-install-ollama?lang=de) — Aktualisierte Anleitung für alle Plattformen (macOS, Linux, Windows).',
@@ -16711,6 +16730,7 @@ print(response.choices[0].message.content)`,
           ]
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             '[Qwen2.5-Dokumentation](https://huggingface.co/Qwen) — Offizielle Modellkarte, Benchmarks, Multilingual-Training-Details.',
@@ -19037,6 +19057,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         mostPopular: {
+          id: 'most-popular',
           title: 'Die beliebtesten Modelle auf Ollama',
           content: [
             'Ollama verfügt über eine vollständig öffentlich zugängliche Download-Statistik. Nach Daten aus Février 2026:',
@@ -19045,6 +19066,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         byCategory: {
+          id: 'by-category',
           title: 'Top-Modelle nach Kategorie',
           items: [
             '**Anfänger (unter 15 min Einrichtungszeit)**: Llama 3.1 8B. Einmal mit `ollama run llama3.1:8b` starten, kopieren Sie Code-Schnipsel in Ihr Systemprompt, und Sie erhalten einen lokalen ChatGPT-Ersatz.',
@@ -19062,6 +19084,7 @@ print(response.choices[0].message.content)`,
           imageCaption: 'Ollama-Modellauswahl nach Anwendungsfall: 3 Kategorien, 10 Modelle. llama3.1:8b für Chat, qwen2.5-coder:7b für Codierung, deepseek-r1:7b für Mathe.',
         },
         deepseekR1: {
+          id: 'deepseek-r1',
           title: 'DeepSeek-R1: Reasoning-Durchbruch',
           content: 'DeepSeek-R1 wurde im Januar 2025 veröffentlicht und verkörpert einen signifikanten Fortschritt im Reasoning auf lokalen Größen. Das Modell führt explizite Chain-of-Thought (CoT) Reasoning durch: Sie sehen die internen Gedankenketten des Modells, bevor die endgültige Antwort gegeben wird.',
           codeBlock: `ollama run deepseek-r1:7b
@@ -19083,6 +19106,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         visionModels: {
+          id: 'vision-models',
           title: 'Vision-Modelle auf Ollama',
           content: 'Vier herausragende Vision-Modelle sind jetzt nativ auf Ollama verfügbar:',
           columns: ['Modell', 'RAM', 'Bildunterstützung', 'Ollama Befehl'],
@@ -19096,6 +19120,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         fullTop10: {
+          id: 'full-top-10',
           title: 'Vollständiger Top-10-Vergleich',
           content: 'Die 10 am häufigsten heruntergeladenen Modelle auf Ollama im April 2026 nach monatlichen Downloads:',
           columns: ['#', 'Modell', 'Beste für', 'RAM', 'HumanEval'],
@@ -19115,6 +19140,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         howToBrowse: {
+          id: 'how-to-browse',
           title: 'Wie durchsuchen Sie die Ollama-Bibliothek?',
           content: 'Es gibt zwei Möglichkeiten, mit Ollama-Modellen zu arbeiten. **Installierte Modelle wechseln:** In der Ollama Mac-App klicken Sie auf den Modell-Dropdown-Button am unteren Rand des Chat-Eingabefeldes (zeigt den aktuellen Modellnamen, z. B. "gemma3:1b"), um zwischen lokal installierten Modellen zu wechseln. **Neue Modelle finden und herunterladen:** Besuchen Sie ollama.com/library, um 4500+ Modelle nach Kategorie zu durchsuchen, und nutzen Sie dann die CLI-Befehle unten zum Herunterladen.',
           codeBlock: `ollama list
@@ -19213,6 +19239,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             '[Ollama-Modellbibliothek](https://ollama.ai/library) — Alle 4.500+ Modelle mit Live-Download-Statistiken.',
@@ -21378,6 +21405,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         coreDifference: {
+          id: 'what-is-the-core-difference',
           title: 'Was ist der Kernunterschied zwischen lokalen LLMs und Cloud-APIs?',
           content: [
             '**Lokale LLMs führen alle Berechnungen auf Ihrer eigenen Hardware durch; Cloud-APIs senden Ihren Prompt an einen Remote-Server und geben die Antwort zurück.** Ein lokales LLM bedeutet, dass die Modelldatei auf Ihrer Festplatte gespeichert ist und alle Berechnungen auf Ihrer CPU oder GPU stattfinden. Nichts verlässt Ihren Computer. Sie zahlen nichts pro Inferenz, benötigen aber Hardware, die das Modell ausführen kann.',
@@ -21386,6 +21414,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         fullComparison: {
+          id: 'full-comparison',
           title: 'Wie schneiden lokale LLMs und Cloud-APIs in 8 Faktoren ab?',
           rows: [
             { 'Faktor': 'Datenschutz', 'Lokales LLM': 'Vollständig \u2014 Daten verlassen Ihr Gerät nie', 'Cloud-API': 'Daten werden auf Anbieterservern verarbeitet; unterliegt deren Datenschutzrichtlinie' },
@@ -21400,6 +21429,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           columns: ['Faktor', 'Lokales LLM', 'Cloud-API'],
         },
         costComparison: {
+          id: 'how-do-costs-compare',
           title: 'Wie unterscheiden sich die Kosten von lokalen LLMs und Cloud-APIs?',
           content: [
             '**Cloud-APIs kosten $0,15\u2013$60 pro 1\u00a0Mio. Tokens; lokale LLMs kosten $0 pro Token nach der Hardware-Investition.** Die Cloud-API-Preise variieren je nach Modell-Tier. Im Jahr 2026 betragen repräsentative Preise pro 1\u00a0Mio. Tokens: GPT-4o bei $2,50 Eingabe / $10 Ausgabe, Claude 4.6 Sonnet bei $3,00 / $15, Gemini 2.5 Pro bei $1,25 / $5 und GPT-4o Mini bei $0,15 / $0,60.',
@@ -21408,6 +21438,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         privacy: {
+          id: 'which-is-more-private',
           title: 'Was ist datenschutzfreundlicher: ein lokales LLM oder eine Cloud-API?',
           content: [
             '**Lokale LLMs bieten kategorisch stärkeren Datenschutz.** Kein Prompt-Text, kein Kontext und keine Antwortdaten werden an externe Server übermittelt. Dies macht lokale Inferenz zur einzigen praktikablen Option für regulierte Branchen (Gesundheitswesen HIPAA, Finanzwesen PCI-DSS, rechtliche Vertraulichkeit) und für personenbezogene Daten, die auf dem Gerät verbleiben müssen.',
@@ -21419,6 +21450,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         speed: {
+          id: 'how-does-speed-compare',
           title: 'Wie unterscheidet sich die Geschwindigkeit zwischen lokalen und Cloud-Modellen?',
           content: 'Die Geschwindigkeit hängt stark von der Hardware ab. Nur mit CPU erzeugt ein 7B-Modell 10\u201330 Tokens/Sek. \u2014 deutlich langsamer als Cloud-APIs. Mit einer modernen GPU schließt sich dieser Abstand erheblich:',
           rows: [
@@ -21431,6 +21463,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           columns: ['Hardware', 'Modell', 'Geschwindigkeit'],
         },
         quality: {
+          id: 'which-has-better-model-quality',
           title: 'Welches hat die bessere Modellqualität: lokal oder Cloud?',
           content: [
             '**Cloud-Frontier-Modelle (GPT-4o, Claude 4.6 Opus, Gemini 2.5 Pro) führen bei komplexem Denken; lokale 13B-Modelle erreichen die gleiche Qualität bei Zusammenfassungen, Übersetzungen und einfachen Fragen.** Bei MMLU (Wissensbreite) und HumanEval (Programmierung)-Benchmarks erzielen Frontier-Cloud-Modelle 85\u201390\u00a0% gegenüber 65\u201380\u00a0% für die besten lokalen 70B-Modelle.',
@@ -21439,6 +21472,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         whichToChoose: {
+          id: 'which-should-you-choose',
           title: 'Was sollten Sie wählen: lokales LLM oder Cloud-API?',
           content: 'Verwenden Sie dieses Entscheidungsrahmenwerk:',
           items: [
@@ -25315,6 +25349,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         whatIsInferenceEngine: {
+          id: 'what-is-inference-engine',
           title: 'What Is an Inference Engine?',
           content: [
             'An inference engine is the software component that loads a pre-trained model file and executes the mathematical operations needed to generate text. It is different from a chat interface (like Open WebUI or Enchanted UI) or an API layer (like Ollama\'s REST API).',
@@ -25326,6 +25361,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         featureComparison: {
+          id: 'feature-comparison',
           title: 'Feature Comparison: llama.cpp vs vLLM vs Text-Generation-WebUI',
           rows: [
             { 'Feature': 'Type', 'llama.cpp': 'C++ library (lightweight)', 'vLLM': 'Python framework (production)', 'Text-Gen-WebUI': 'Python app (experimentation)' },
@@ -25344,6 +25380,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           imageCaption: 'Feature comparison: llama.cpp (C++ library, GGUF, CUDA + Metal) vs vLLM (Python framework, 100–1000+ tok/s GPU, NVIDIA only) vs Text-Generation-WebUI (Python app, GGUF + safetensors, LoRA built-in).',
         },
         llamacpp: {
+          id: 'understanding-llama-cpp',
           title: 'Understanding llama.cpp: The Foundation',
           content: [
             'llama.cpp is a C++ implementation of LLM inference, originally written to run Meta\'s Llama model on consumer hardware without GPU acceleration. As of April 2026, it remains the most lightweight and portable inference engine.',
@@ -25356,6 +25393,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         vllm: {
+          id: 'understanding-vllm',
           title: 'Understanding vLLM: The Production Standard',
           content: [
             'vLLM is a Python framework designed for high-throughput inference on GPU clusters. It optimizes for serving models via API, with support for batching, distributed inference, and advanced scheduling.',
@@ -25370,6 +25408,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           codeLanguage: 'bash',
         },
         textGenerationWebUI: {
+          id: 'understanding-text-generation-webui',
           title: 'Understanding Text-Generation-WebUI: The Researcher\'s Tool',
           content: [
             'Text-Generation-WebUI (also called oobabooga) is a full-featured Python application with a web interface for experimenting with models. It combines inference with built-in tools for fine-tuning, LoRA training, embedding generation, and advanced prompt testing.',
@@ -25383,6 +25422,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         performance: {
+          id: 'performance-tokens-per-second',
           title: 'How Fast Is Each Engine? Throughput Comparison',
           content: [
             'Throughput (tokens per second) depends on the model size, hardware, and engine optimization. As of April 2026, here are real-world benchmarks on consumer hardware:',
@@ -25398,6 +25438,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           imageCaption: 'Performance chart: llama.cpp and Text-Gen-WebUI deliver ~150 tok/s on RTX 4090. vLLM achieves 300 tok/s with request batching but ~0.5 tok/s on CPU — not recommended for CPU-only inference.',
         },
         productionDeployments: {
+          id: 'production-deployments',
           title: 'Which Engine for Production Deployments?',
           content: [
             '**vLLM is the production standard as of April 2026.** Most companies running local LLM APIs in production use vLLM because of its throughput optimization and batching support. A single vLLM instance can serve 50+ concurrent users on one GPU, vs. 1–2 for llama.cpp.',
@@ -25409,6 +25450,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         whenToUse: {
+          id: 'when-to-use-each',
           title: 'When Should You Choose Each Engine?',
           content: 'Use this decision framework:',
           items: [
@@ -25431,6 +25473,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes With Inference Engines',
           items: [
             '**Thinking you need to choose between Ollama and these engines.** Ollama uses llama.cpp internally. You are not choosing Ollama vs vLLM; vLLM is an alternative *backend* to Ollama, not a chat app. Both have their purpose.',
@@ -25441,7 +25484,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         faqSection: {
-          id: 'faq',
+          id: 'common-questions',
           title: 'Common Questions About Inference Engines',
           faqs: [
             {
@@ -25664,6 +25707,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
       },
       whatIsInferenceEngine: {
+        id: 'what-is-inference-engine',
         title: 'Was ist eine Inference-Engine?',
         content: [
           'Eine Inference-Engine ist die Softwarekomponente, die eine vortrainierte Modelldatei lädt und die mathematischen Operationen ausführt, die zur Generierung von Text erforderlich sind. Sie unterscheidet sich von einer Chat-Schnittstelle (wie Open WebUI oder Enchanted UI) oder einem API-Layer (wie Ollamas REST-API).',
@@ -25675,6 +25719,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
       },
       featureComparison: {
+        id: 'feature-comparison',
         title: 'Feature-Vergleich: llama.cpp vs vLLM vs Text-Generation-WebUI',
         rows: [
           { 'Feature': 'Typ', 'llama.cpp': 'C++-Bibliothek (leichtgewichtig)', 'vLLM': 'Python-Framework (Production)', 'Text-Gen-WebUI': 'Python-App (Experimente)' },
@@ -25693,6 +25738,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         imageCaption: 'Feature-Vergleich: llama.cpp (C++-Bibliothek, GGUF, CUDA + Metal) vs vLLM (Python-Framework, 100–1000+ Tok/s GPU, nur NVIDIA) vs Text-Generation-WebUI (Python-App, GGUF + safetensors, LoRA integriert).',
       },
       llamacpp: {
+        id: 'understanding-llama-cpp',
         title: 'llama.cpp verstehen: Die Grundlage',
         content: [
           'llama.cpp ist eine C++-Implementierung der LLM-Inferenz, ursprünglich geschrieben, um Metas Llama-Modell auf Consumer-Hardware ohne GPU-Beschleunigung auszuführen. Im April 2026 bleibt es die leichteste und tragbarste Inference-Engine.',
@@ -25705,6 +25751,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
       },
       vllm: {
+        id: 'understanding-vllm',
         title: 'vLLM verstehen: Der Production-Standard',
         content: [
           'vLLM ist ein Python-Framework für High-Throughput-Inferenz auf GPU-Clustern. Es optimiert für das Bereitstellen von Modellen über API mit Unterstützung für Batching, verteilte Inferenz und erweiterte Planung.',
@@ -25719,6 +25766,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         codeLanguage: 'bash',
       },
       textGenerationWebUI: {
+        id: 'understanding-text-generation-webui',
         title: 'Text-Generation-WebUI verstehen: Das Forschungs-Tool',
         content: [
           'Text-Generation-WebUI (auch oobabooga genannt) ist eine vollständig ausgestattete Python-Anwendung mit einer Web-Schnittstelle zum Experimentieren mit Modellen. Sie kombiniert Inferenz mit integrierten Tools für Fine-Tuning, LoRA-Training, Embedding-Generierung und erweiterte Prompt-Tests.',
@@ -25732,6 +25780,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
       },
       performance: {
+        id: 'performance-tokens-per-second',
         title: 'Wie schnell ist jede Engine? Durchsatz-Vergleich',
         content: [
           'Der Durchsatz (Tokens pro Sekunde) hängt von der Modellgröße, Hardware und Engine-Optimierung ab. Im April 2026 finden Sie hier Real-World-Benchmarks auf Consumer-Hardware:',
@@ -25747,6 +25796,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         imageCaption: 'Leistungsdiagramm: llama.cpp und Text-Gen-WebUI liefern ~150 Tok/s auf RTX 4090. vLLM erreicht 300 Tok/s mit Request-Batching, aber ~0,5 Tok/s auf CPU — nicht empfohlen für CPU-only-Inferenz.',
       },
       productionDeployments: {
+        id: 'production-deployments',
         title: 'Welche Engine für Production-Deployments?',
         content: [
           '**vLLM ist der Production-Standard im April 2026.** Die meisten Unternehmen, die lokale LLM-APIs in Production betreiben, verwenden vLLM aufgrund seiner Durchsatz-Optimierung und Batching-Unterstützung. Eine einzelne vLLM-Instanz kann 50+ gleichzeitige Benutzer auf einer GPU bedienen, gegenüber 1–2 für llama.cpp.',
@@ -25758,6 +25808,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
       },
       whenToUse: {
+        id: 'when-to-use-each',
         title: 'Wann sollte man welche Engine wählen?',
         content: 'Verwenden Sie dieses Entscheidungs-Framework:',
         items: [
@@ -25769,6 +25820,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         imageCaption: 'Inference-Engine-Entscheidungsleitfaden: llama.cpp für Mac/CPU oder Ollama, vLLM für Production mit NVIDIA-GPU und 50+ gleichzeitigen Nutzern, Text-Generation-WebUI für LoRA Fine-Tuning und Forschung.',
       },
       regionalContext: {
+        id: 'inference-engine-choice-by-region',
         title: 'Inference-Engine Auswahl nach Region',
         content: [
           'Die Wahl der Inference-Engine hat direkte Auswirkungen auf regionale Compliance und Enterprise-Deployments in verschiedenen regulatorischen Gerichtsbarkeiten. Für deutsche und europäische Deployments gelten besondere Anforderungen.',
@@ -25780,6 +25832,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
       },
       commonMistakes: {
+        id: 'common-mistakes',
         title: 'Häufige Fehler mit Inference-Engines',
         items: [
           '**Zu denken, Sie müssen zwischen Ollama und diesen Engines wählen.** Ollama verwendet llama.cpp intern. Sie wählen nicht zwischen Ollama und vLLM; vLLM ist ein alternatives *Backend* zu Ollama, keine Chat-App. Beide haben ihren Zweck.',
@@ -25790,7 +25843,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
       },
       faqSection: {
-        id: 'faq',
+        id: 'common-questions',
         title: 'Häufig gestellte Fragen zu Inference-Engines',
         faqs: [
           { q: 'Kann ich Inference-Engines wechseln, ohne mein Modell zu ändern?', a: 'Größtenteils ja. Modelldateien im GGUF-Format funktionieren mit llama.cpp (Ollama) und Text-Generation-WebUI. vLLM erfordert vollständige Präzision oder spezifische Quantisierungsformate. HuggingFace safetensors-Modelle funktionieren mit allen drei.' },
@@ -25806,6 +25859,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Weiterführendes Material',
         items: [
           '[Ollama installieren](/local-llms/how-to-install-ollama?lang=de) — Setup des beliebtesten llama.cpp-Wrappers.',
@@ -26912,10 +26966,10 @@ ollama run -m deepseek-r1:7b "2^10を解く"
   'local-llm-openai-compatible-api': {
     en: {
       theme: 'Tools & Interfaces',
-      title: 'Local LLM OpenAI-Compatible API: Connect Python, Node.js, and JavaScript to Ollama',
-      seoTitle: 'Ollama OpenAI API Drop-In: Python & Node.js Guide 2026',
-      intro: 'Ollama, vLLM, and LM Studio all expose REST APIs that mimic the OpenAI API structure. This means you can use the official OpenAI Python library, Node.js client, or any OpenAI-compatible tool by simply changing the base URL to localhost. As of April 2026, this is the standard way to integrate local models into applications without vendor lock-in to OpenAI.',
-      metaDescription: 'Change one line — base_url to localhost — to run Ollama as a drop-in OpenAI API. Python, Node.js, streaming, and function calling all work unchanged. Free.',
+      title: 'LM Studio and Ollama OpenAI-Compatible API: Python, Node.js Setup Guide (localhost:1234 and 11434)',
+      seoTitle: 'LM Studio & Ollama OpenAI API: localhost:1234 and 11434 Guide',
+      intro: 'LM Studio (localhost:1234), Ollama (localhost:11434), and vLLM (localhost:8000) all expose REST APIs in the OpenAI format. Use the official OpenAI Python or Node.js SDK with any local model by changing two lines: set base_url to your local endpoint and api_key to any string. As of April 2026, this is the standard way to run local LLMs in production Python and Node.js applications without cloud costs or vendor lock-in.',
+      metaDescription: 'Use OpenAI SDK with LM Studio (localhost:1234) or Ollama (localhost:11434) — change base_url, keep all other code. Python, Node.js, streaming, and function calling with any local model.',
       publishDate: '2026-04-04',
       dateModified: '2026-04-16',
       readTime: '10 min read',
@@ -27287,9 +27341,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     de: {
       theme: 'Tools & Interfaces',
       title: 'Lokale LLM OpenAI-kompatible API: Python, Node.js und JavaScript mit Ollama verbinden',
-      seoTitle: 'Ollama als OpenAI-API nutzen: Python und Node.js 2026',
+      seoTitle: 'LM Studio & Ollama: OpenAI-kompatible API localhost:1234/11434',
       intro: 'Ollama, vLLM und LM Studio stellen REST-APIs bereit, die die OpenAI-API-Struktur nachahmen. Dies bedeutet, dass Sie die offizielle OpenAI-Python-Bibliothek, den Node.js-Client oder jedes OpenAI-kompatible Tool nutzen können, indem Sie die Basis-URL auf localhost ändern. Ab April 2026 ist dies der Standard für die Integration lokaler Modelle in Anwendungen ohne Abhängigkeit von OpenAI.',
-      metaDescription: 'Nutze bestehenden OpenAI-Code mit Ollama — ändere nur base_url auf localhost. Python, Node.js, Streaming und Function Calling ohne Änderungen.',
+      metaDescription: 'OpenAI SDK mit LM Studio (localhost:1234) oder Ollama (localhost:11434) nutzen — base_url ändern, Rest bleibt gleich. Python, Node.js, Streaming und Function Calling mit lokalem Modell.',
       publishDate: '2026-04-04',
       readTime: '10 min read',
       educationalLevel: 'Beginner to Advanced',
@@ -27328,9 +27382,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     fr: {
       theme: 'Tools & Interfaces',
       title: 'API OpenAI locale avec Ollama : Connecter Python, Node.js et JavaScript',
-      seoTitle: 'API OpenAI locale avec Ollama : Python et Node.js 2026',
+      seoTitle: 'LM Studio & Ollama : API OpenAI locale localhost:1234 et 11434',
       intro: 'Ollama, vLLM et LM Studio exposent des API REST qui imitent la structure de l\'API OpenAI. Cela signifie que vous pouvez utiliser la bibliothèque Python OpenAI officielle, le client Node.js ou tout outil compatible OpenAI en changeant simplement l\'URL de base en localhost. Depuis avril 2026, c\'est le moyen standard d\'intégrer des modèles locaux dans les applications sans dépendre d\'OpenAI.',
-      metaDescription: 'Réutilisez votre code OpenAI avec Ollama en changeant base_url. Python, Node.js, streaming et function calling fonctionnent sans modification.',
+      metaDescription: 'OpenAI SDK avec LM Studio (localhost:1234) ou Ollama (localhost:11434) — changez base_url, tout le reste reste identique. Python, Node.js, streaming et function calling locaux.',
       publishDate: '2026-04-04',
       readTime: '10 min read',
       educationalLevel: 'Beginner to Advanced',
@@ -27355,9 +27409,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     ja: {
       theme: 'Tools & Interfaces',
       title: 'ローカルLLM OpenAI互換API：Python、Node.js、JavaScriptでOllamaを接続',
-      seoTitle: 'OllamaのOpenAI互換API：PythonとNode.jsで動かす 2026',
-      intro: 'OllamaやvLLM、LM Studioはすべて、OpenAI APIの構造を模倣するREST APIを公開しています。つまり、公式のOpenAI Pythonライブラリ、Node.jsクライアント、またはOpenAI互換のツールを、ベースURLをlocalhostに変更するだけで使用できます。2026年4月現在、これはベンダーロックインなしにローカルモデルをアプリケーションに統合する標準的な方法です。',
-      metaDescription: 'OllamaのOpenAI互換APIを使い、base_urlをlocalhostに変更するだけで既存のPythonやNode.jsコードをローカルLLMで動作させられます。コード修正は不要。ストリーミングとFunction Callingにも対応。',
+      seoTitle: 'LM Studio & Ollama OpenAI互換API：localhost:1234と11434設定ガイド',
+      intro: 'LM Studio（localhost:1234）、Ollama（localhost:11434）、vLLM（localhost:8000）はすべてOpenAI形式のREST APIを公開しています。公式OpenAI PythonまたはNode.js SDKをどのローカルモデルとでも使用できます。変更するのはbase_urlとapi_keyの2行のみです。2026年4月現在、これはクラウドコストやベンダーロックインなしにローカルLLMを本番アプリで動かす標準的な方法です。',
+      metaDescription: 'OpenAI SDKをLM Studio（localhost:1234）またはOllama（localhost:11434）で使用。base_urlを変更するだけ—他のコードは変更不要。Python・Node.js・ストリーミング・Function Callingに対応。',
       publishDate: '2026-04-04',
       readTime: '10 min read',
       educationalLevel: 'Beginner to Advanced',
@@ -27382,9 +27436,9 @@ ollama run -m deepseek-r1:7b "2^10を解く"
     zh: {
       theme: 'Tools & Interfaces',
       title: '本地LLM OpenAI兼容接口：用Python、Node.js和JavaScript连接Ollama',
-      seoTitle: '本地LLM的OpenAI兼容接口：Python与Node.js实战 2026',
-      intro: 'Ollama、vLLM和LM Studio都公开了模仿OpenAI API结构的REST API。这意味着您可以通过简单地将基础URL更改为localhost来使用官方OpenAI Python库、Node.js客户端或任何OpenAI兼容工具。截至2026年4月，这是将本地模型集成到应用程序中而不依赖OpenAI的标准方法。',
-      metaDescription: '只需修改base_url至localhost，即可用Ollama替换OpenAI的Python和Node.js客户端库，无需改动现有代码。完全兼容OpenAI API，支持流式输出、函数调用。',
+      seoTitle: 'LM Studio和Ollama OpenAI兼容API：localhost:1234与11434配置',
+      intro: 'LM Studio（localhost:1234）、Ollama（localhost:11434）和vLLM（localhost:8000）均提供OpenAI格式的REST API。使用官方OpenAI Python或Node.js SDK连接任意本地模型，只需修改两行代码：将base_url设为本地端点，api_key设为任意字符串。截至2026年4月，这是在Python和Node.js生产应用中运行本地LLM的标准方式，无需云端费用或供应商绑定。',
+      metaDescription: '使用OpenAI SDK连接LM Studio（localhost:1234）或Ollama（localhost:11434）——仅修改base_url，其余代码不变。支持Python、Node.js、流式响应和函数调用。',
       publishDate: '2026-04-04',
       readTime: '10 min read',
       educationalLevel: 'Beginner to Advanced',
@@ -27878,6 +27932,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Weiterführende Ressourcen',
           items: [
             '[Wie man LM Studio installiert](/local-llms/how-to-install-lm-studio?lang=de) – Vollständige Installationsanleitung für macOS, Windows und Linux.',
@@ -27891,6 +27946,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             'LM Studio Dokumentation — lmstudio.ai/docs',
@@ -29229,6 +29285,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ — Official setup guide, config.json reference, and local model integration instructions.',
