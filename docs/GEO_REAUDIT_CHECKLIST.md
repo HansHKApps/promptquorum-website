@@ -800,6 +800,14 @@ Use this section to track article-specific audit findings that need fixing. Add 
 - [x] 🟢 **No Speakable markup + no `<time datetime>`** — Speakable added to TechArticle schema (`.article-intro` cssSelector); `<time dateTime>` already rendered by component
 - [x] 🟢 **Outdated model in FAQ** — replaced `ollama run llama2` with `ollama run llama3.1:8b` in both FAQ answer and faqSchema
 
+### `qwen-vs-llama-vs-mistral`
+
+_Audit date: April 16, 2026. Article is largely GEO-compliant (14 sections, schema, FAQ ×10, regional context, sources). Three gaps found._
+
+- [ ] 🟡 **seoTitle too short (48 chars)** — target 55–62 chars. Current: `Qwen vs Llama vs Mistral 2026: Benchmarks & VRAM`. Add use case signal, e.g. `Qwen vs Llama vs Mistral 2026: Benchmarks, VRAM & Use Cases` (59 chars).
+- [ ] 🟢 **itemListSchema undercovers content** — only 4 items but the `byTask` section has 7 use-case winners. Expand to 7 items matching the task comparison table.
+- [ ] 🟢 **No top-level `dateModified` in EN block** — only present inside the `schema` object (`2026-04-09`). DE block has it at top level. Add `dateModified: '2026-04-09'` alongside `publishDate` in EN.
+
 ---
 
-**Last updated:** April 7, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)
+**Last updated:** April 16, 2026 | **Version:** 2.0 | **Related:** `docs/GEO_WRITING_GUIDELINES.md` (restructured, commit e02879fb)
