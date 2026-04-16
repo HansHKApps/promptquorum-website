@@ -1,0 +1,90 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter>
+  </defs>
+
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">5-Step Debug Process</text>
+
+  <line x1="18" y1="40" x2="782" y2="40" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Step 1 -->
+  <circle cx="80" cy="100" r="22" fill="#6750A4"/>
+  <text x="80" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+
+  <text x="80" y="145" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Check RAM</text>
+  <text x="80" y="165" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">free -h</text>
+  <text x="80" y="178" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Activity Monitor</text>
+
+  <!-- Arrow 1 -->
+  <text x="140" y="108" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 2 -->
+  <circle cx="220" cy="100" r="22" fill="#6750A4"/>
+  <text x="220" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+
+  <text x="220" y="145" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Check GPU</text>
+  <text x="220" y="165" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">ollama ps</text>
+  <text x="220" y="178" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">nvidia-smi</text>
+
+  <!-- Arrow 2 -->
+  <text x="280" y="108" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 3 -->
+  <circle cx="360" cy="100" r="22" fill="#6750A4"/>
+  <text x="360" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+
+  <text x="360" y="145" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Check Server</text>
+  <text x="360" y="165" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">curl localhost:</text>
+  <text x="360" y="178" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">11434</text>
+
+  <!-- Arrow 3 -->
+  <text x="420" y="108" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 4 -->
+  <circle cx="500" cy="100" r="22" fill="#6750A4"/>
+  <text x="500" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+
+  <text x="500" y="145" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Check Model</text>
+  <text x="500" y="165" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">ollama list</text>
+  <text x="500" y="178" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">verify pull</text>
+
+  <!-- Arrow 4 -->
+  <text x="560" y="108" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4">→</text>
+
+  <!-- Step 5 -->
+  <circle cx="640" cy="100" r="22" fill="#6750A4"/>
+  <text x="640" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+
+  <text x="640" y="145" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Check Output</text>
+  <text x="640" y="165" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Reduce quant</text>
+  <text x="640" y="178" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">Q4_K_M</text>
+
+  <!-- Arrow end -->
+  <text x="700" y="108" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4">→</text>
+
+  <text x="730" y="108" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853">✓</text>
+
+  <line x1="18" y1="200" x2="782" y2="200" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Key point -->
+  <text x="400" y="235" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Stop at the first step that reveals the problem.</text>
+
+  <!-- Example outcomes -->
+  <text x="60" y="270" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1C1B1F">Step 1 fails:</text>
+  <text x="60" y="285" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">Close other apps,</text>
+  <text x="60" y="298" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">reduce model size</text>
+
+  <text x="280" y="270" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1C1B1F">Step 2 fails:</text>
+  <text x="280" y="285" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">Check driver,</text>
+  <text x="280" y="298" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">set GPU_LAYERS</text>
+
+  <text x="500" y="270" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1C1B1F">Step 3 fails:</text>
+  <text x="500" y="285" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">Restart ollama</text>
+  <text x="500" y="298" font-family="system-ui, sans-serif" font-size="10" fill="#49454F">check port 11434</text>
+
+  <!-- Footer -->
+  <line x1="18" y1="320" x2="782" y2="320" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="400" y="345" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Systematic debug order. Each step isolates one possible cause. Use output from each step to decide the next action.</text>
+</svg>

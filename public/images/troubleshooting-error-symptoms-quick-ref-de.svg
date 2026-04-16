@@ -1,0 +1,98 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter>
+  </defs>
+
+  <text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">10 Häufigste Fehler bei lokalen LLMs – Schnellreferenz</text>
+
+  <line x1="18" y1="40" x2="782" y2="40" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Header row -->
+  <text x="40" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">#</text>
+  <text x="90" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Fehler</text>
+  <text x="280" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Symptom</text>
+  <text x="550" y="65" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Lösung</text>
+
+  <line x1="18" y1="72" x2="782" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <circle cx="40" cy="95" r="12" fill="#6750A4"/>
+  <text x="40" y="99" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="90" y="99" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Speicher voll</text>
+  <text x="280" y="99" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">"GGML_ASSERT"-Fehler</text>
+  <text x="550" y="99" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">Kleineres Modell oder Q4_K_M</text>
+  <line x1="18" y1="108" x2="782" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <circle cx="40" cy="131" r="12" fill="#6750A4"/>
+  <text x="40" y="135" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="90" y="135" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">GPU nicht aktiv</text>
+  <text x="280" y="135" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">&lt;5 tok/s, 100% CPU</text>
+  <text x="550" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">OLLAMA_GPU_LAYERS=35</text>
+  <line x1="18" y1="144" x2="782" y2="144" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <circle cx="40" cy="167" r="12" fill="#6750A4"/>
+  <text x="40" y="171" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="90" y="171" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Langsame Inferenz</text>
+  <text x="280" y="171" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">&lt;10 tok/s auf GPU</text>
+  <text x="550" y="171" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">num_ctx reduzieren, VRAM freigeben</text>
+  <line x1="18" y1="180" x2="782" y2="180" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <circle cx="40" cy="203" r="12" fill="#6750A4"/>
+  <text x="40" y="207" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="90" y="207" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Verbindung verweigert</text>
+  <text x="280" y="207" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">curl: (7) Fehler</text>
+  <text x="550" y="207" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">ollama serve starten</text>
+  <line x1="18" y1="216" x2="782" y2="216" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5 -->
+  <circle cx="40" cy="239" r="12" fill="#6750A4"/>
+  <text x="40" y="243" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="90" y="243" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Modell nicht gefunden</text>
+  <text x="280" y="243" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">"error: model not found"</text>
+  <text x="550" y="243" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">ollama pull llama3.2:3b</text>
+  <line x1="18" y1="252" x2="782" y2="252" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6 -->
+  <circle cx="40" cy="275" r="12" fill="#6750A4"/>
+  <text x="40" y="279" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="90" y="279" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Beschädigte Modelldatei</text>
+  <text x="280" y="279" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">JSON-Dekodierfehler</text>
+  <text x="550" y="279" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">ollama rm + neu ziehen</text>
+  <line x1="18" y1="288" x2="782" y2="288" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 7 -->
+  <circle cx="40" cy="311" r="12" fill="#6750A4"/>
+  <text x="40" y="315" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
+  <text x="90" y="315" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">CUDA-Fehler</text>
+  <text x="280" y="315" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">"device-side assert triggered"</text>
+  <text x="550" y="315" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">CUDA- u. Treiberversion</text>
+  <line x1="18" y1="324" x2="782" y2="324" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 8 -->
+  <circle cx="40" cy="347" r="12" fill="#6750A4"/>
+  <text x="40" y="351" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">8</text>
+  <text x="90" y="351" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Kauderwelsch-Output</text>
+  <text x="280" y="351" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">Wiederholung/Unsinn</text>
+  <text x="550" y="351" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">Quantisierungslevel senken</text>
+  <line x1="18" y1="360" x2="782" y2="360" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 9 -->
+  <circle cx="40" cy="383" r="12" fill="#6750A4"/>
+  <text x="40" y="387" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">9</text>
+  <text x="90" y="387" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1C1B1F">Port-Konflikt</text>
+  <text x="280" y="387" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F">"Address already in use"</text>
+  <text x="550" y="387" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">Prozess auf Port 11434</text>
+
+  <line x1="18" y1="396" x2="782" y2="396" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 10 -->
+  <circle cx="40" cy="410" r="12" fill="#6750A4"/>
+  <text x="40" y="414" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">10</text>
+  <text x="95" y="414" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1C1B1F">Unterbricht mitten</text>
+  <text x="330" y="414" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F">Bricht beim Limit ab</text>
+  <text x="550" y="414" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4">num_ctx erhöhen</text>
+</svg>
