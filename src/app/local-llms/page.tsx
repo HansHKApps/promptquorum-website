@@ -46,17 +46,36 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
   const jsonLd = [
     {
       '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Local LLMs in 2026: Complete Guide',
+      description: 'Complete guide to running AI models locally. Covers setup, hardware, model selection, tools, and enterprise deployment.',
+      url: canonicalUrl,
+      publisher: {
+        '@type': 'Organization',
+        name: 'PromptQuorum',
+        url: 'https://www.promptquorum.com',
+      },
+      hasPart: [
+        { '@type': 'WebPage', name: 'How to Install Ollama', url: 'https://www.promptquorum.com/local-llms/how-to-install-ollama' },
+        { '@type': 'WebPage', name: 'Best Local LLMs 2026', url: 'https://www.promptquorum.com/local-llms/best-local-llms-2026' },
+        { '@type': 'WebPage', name: 'Local LLM Hardware Guide 2026', url: 'https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026' },
+        { '@type': 'WebPage', name: 'LLM Quantization Explained', url: 'https://www.promptquorum.com/local-llms/llm-quantization-explained' },
+        { '@type': 'WebPage', name: 'Ollama vs LM Studio', url: 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio' },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: t.localLlmsHubTitle,
       url: canonicalUrl,
       'inLanguage': selectedLang,
       datePublished: '2026-04-01',
-      dateModified: '2026-04-07',
+      dateModified: '2026-04-16',
       description: 'As of April 2026: 88 guides on local LLMs covering Ollama, LM Studio, hardware requirements, model benchmarks, fine-tuning, local RAG, and enterprise deployment.',
       isPartOf: { '@type': 'WebSite', url: 'https://www.promptquorum.com' },
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['h1', 'h2', '.key-takeaways']
+        cssSelector: ['h1', 'h2', '.key-takeaways', '.article-intro']
       }
     },
     {
@@ -122,6 +141,36 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
           '@type': 'Question',
           name: 'How do I update local LLM models when new versions are released?',
           acceptedAnswer: { '@type': 'Answer', text: 'Ollama: run `ollama pull <model-name>` again — it downloads only changed layers. LM Studio: open the model browser, find the updated version, and download it. Old GGUF files are not automatically removed — delete them manually from ~/.ollama/models (Ollama) or ~/Library/Application Support/LM Studio/models (macOS) to free disk space. Model updates from Meta, Alibaba, and Mistral typically arrive within 24–48 hours of official release.' }
+        },
+        {
+          '@type': 'Question',
+          name: 'Is a local LLM better than ChatGPT?',
+          acceptedAnswer: { '@type': 'Answer', text: 'For privacy and cost, yes. For raw output quality, no. As of 2026, frontier cloud models (GPT-4o, Claude 4.6 Opus) outperform all locally-runnable models on complex reasoning. However, local 70B models (Llama 3.3 70B, Qwen2.5 72B) match or exceed GPT-4o Mini on most everyday tasks — at zero per-query cost.' }
+        },
+        {
+          '@type': 'Question',
+          name: 'How much RAM do I need to run a local LLM?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Minimum: 8 GB RAM to run a 7B model at Q4 quantization. Recommended: 16 GB for 13B models, 40+ GB for 70B models. Apple Silicon unified memory counts fully toward this — an M3 Mac with 18 GB can run a 13B model well.' }
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I run a local LLM?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Install Ollama (ollama.com), then run: ollama run llama3.1:8b. The model downloads automatically. No API key, no account, no internet after the initial download.' }
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the best free local LLM in 2026?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Meta Llama 3.1 8B for general use (Apache-compatible, 5.5 GB RAM). Qwen2.5-Coder 32B for coding (92.7% HumanEval, 20 GB RAM). DeepSeek-R1 7B for reasoning (MIT licence, 5 GB RAM).' }
+        },
+        {
+          '@type': 'Question',
+          name: 'Are local LLMs private?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. When running with Ollama or LM Studio, prompts and responses never leave your machine. No data is transmitted. Recommended for GDPR-regulated workflows, legal and medical document processing, and any task involving confidential information.' }
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the best local LLM for coding in 2026?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B scores 92.7% on HumanEval and is the top choice for coding on hardware with 20 GB RAM. For 8 GB VRAM, Qwen2.5-Coder 7B is the best option. DeepSeek-Coder V2 Lite is a strong alternative.' }
         }
       ]
     },

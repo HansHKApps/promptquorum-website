@@ -760,7 +760,7 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
             {HUB_HERO_TITLE[lang] ?? HUB_HERO_TITLE['en']}
           </h1>
-          <p className="text-lg text-text-secondary max-w-2xl leading-relaxed mb-10">
+          <p className="article-intro text-lg text-text-secondary max-w-2xl leading-relaxed mb-10">
             {HUB_HERO_DESC[lang] ?? HUB_HERO_DESC['en']}
           </p>
 
@@ -932,6 +932,21 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
             style={{ height: '560px' }}
             loading="lazy"
           />
+        </section>
+
+        {/* Bottom FAQ */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-text-primary mb-8">
+            Frequently Asked Questions About Local LLMs
+          </h2>
+          <div className="space-y-6">
+            {HUB_FAQS_BOTTOM.map((faq, i) => (
+              <div key={i} className="border-b border-primary/15 pb-4 last:border-0">
+                <h3 className="text-sm font-semibold text-text-primary mb-2">{faq.q}</h3>
+                <p className="text-sm text-text-secondary">{faq.a}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* Back nav */}
