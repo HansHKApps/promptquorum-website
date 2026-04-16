@@ -1,0 +1,76 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <rect x="20" y="12" width="760" height="396" rx="12" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="400" y="46" font-family="system-ui,-apple-system,sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Run Your First Local LLM with Ollama</text>
+  <text x="400" y="68" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Two commands — under 10 minutes from install to running</text>
+
+  <!-- Terminal window -->
+  <rect x="40" y="84" width="720" height="296" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Terminal title bar -->
+  <rect x="40" y="84" width="720" height="36" rx="10" fill="#E8DEF8"/>
+  <rect x="40" y="100" width="720" height="20" fill="#E8DEF8"/>
+
+  <!-- Window dots -->
+  <circle cx="68" cy="102" r="6" fill="#E67C73"/>
+  <circle cx="88" cy="102" r="6" fill="#F4B400"/>
+  <circle cx="108" cy="102" r="6" fill="#34A853"/>
+
+  <!-- Title bar text -->
+  <text x="400" y="107" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Terminal — ollama</text>
+
+  <!-- Terminal content area -->
+  <rect x="40" y="120" width="720" height="260" rx="0" fill="#FFFFFF"/>
+  <rect x="40" y="350" width="720" height="30" rx="10" fill="#FFFFFF"/>
+  <rect x="40" y="120" width="720" height="30" fill="#FFFFFF"/>
+
+  <!-- Step 1: Step label -->
+  <rect x="56" y="136" width="56" height="18" rx="4" fill="#E8DEF8"/>
+  <text x="84" y="149" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#6750A4" text-anchor="middle">STEP 1</text>
+
+  <!-- Step 1: Command -->
+  <text x="124" y="149" font-family="'SF Mono','Monaco',monospace" font-size="14" font-weight="600" fill="#79747E">$</text>
+  <text x="140" y="149" font-family="'SF Mono','Monaco',monospace" font-size="14" font-weight="600" fill="#1C1B1F">ollama pull llama3.2</text>
+
+  <!-- Step 1: Output -->
+  <text x="56" y="172" font-family="'SF Mono','Monaco',monospace" font-size="13" fill="#49454F">pulling manifest...</text>
+  <text x="56" y="190" font-family="'SF Mono','Monaco',monospace" font-size="13" fill="#49454F">pulling f4b32017...</text>
+
+  <!-- Progress bar -->
+  <rect x="248" y="179" width="240" height="14" rx="4" fill="#E8DEF8"/>
+  <rect x="248" y="179" width="240" height="14" rx="4" fill="#6750A4"/>
+  <text x="498" y="191" font-family="'SF Mono','Monaco',monospace" font-size="12" font-weight="600" fill="#6750A4">100%</text>
+
+  <text x="56" y="210" font-family="'SF Mono','Monaco',monospace" font-size="13" fill="#34A853">✓ llama3.2:latest — Q4_K_M · 4.7 GB</text>
+
+  <!-- Divider -->
+  <line x1="56" y1="226" x2="744" y2="226" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Step 2: Step label -->
+  <rect x="56" y="236" width="56" height="18" rx="4" fill="#E8DEF8"/>
+  <text x="84" y="249" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#6750A4" text-anchor="middle">STEP 2</text>
+
+  <!-- Step 2: Command -->
+  <text x="124" y="249" font-family="'SF Mono','Monaco',monospace" font-size="14" font-weight="600" fill="#79747E">$</text>
+  <text x="140" y="249" font-family="'SF Mono','Monaco',monospace" font-size="14" font-weight="600" fill="#1C1B1F">ollama run llama3.2</text>
+
+  <!-- Step 2: Output -->
+  <text x="56" y="274" font-family="'SF Mono','Monaco',monospace" font-size="13" fill="#79747E">&gt;&gt;&gt;</text>
+  <text x="80" y="274" font-family="'SF Mono','Monaco',monospace" font-size="13" fill="#6750A4">_</text>
+  <text x="94" y="274" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E">(prompt appears here — type any question)</text>
+
+  <text x="56" y="296" font-family="'SF Mono','Monaco',monospace" font-size="13" fill="#1C1B1F">I can help with writing, coding, analysis, and more.</text>
+
+  <!-- Speed annotation box -->
+  <rect x="530" y="266" width="206" height="52" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1"/>
+  <text x="633" y="284" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">Performance</text>
+  <text x="633" y="300" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">GPU: ~60 tok/sec</text>
+  <text x="633" y="314" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">CPU: ~12 tok/sec</text>
+
+  <!-- Time annotation -->
+  <rect x="56" y="316" width="460" height="28" rx="6" fill="#F7F2FA"/>
+  <text x="286" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">Total setup time: &lt; 10 minutes (download speed dependent)</text>
+
+  <text x="400" y="397" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Works on macOS · Windows · Linux · Requires 8 GB RAM minimum for 7B models</text>
+</svg>

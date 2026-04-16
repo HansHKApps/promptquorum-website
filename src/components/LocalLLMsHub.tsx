@@ -752,6 +752,19 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
             </ul>
           </div>
 
+          {/* Image 1: VRAM Requirements */}
+          <figure className="mb-10">
+            <img
+              src="/images/local-llm-vram-requirements.svg"
+              alt="VRAM requirements for local LLMs: 3B models need 4 GB, 7B needs 8 GB (RTX 4060 / Apple M3 limit), 13B needs 16 GB, 70B models like Llama 4 Scout need 40 GB+ at Q4_K_M quantization"
+              className="w-full rounded-xl border border-primary/15"
+              loading="lazy"
+            />
+            <figcaption className="mt-2 text-xs text-text-secondary text-center">
+              VRAM requirements at Q4_K_M quantization — 8 GB runs 7B models at 50–80 tok/s; 40 GB+ required for 70B models like Llama 4 Scout.
+            </figcaption>
+          </figure>
+
           {/* Quick-nav pills */}
           <div className="flex flex-wrap gap-2">
             {llmThemes.map(theme => {
@@ -782,10 +795,36 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           </Link>
         </div>
 
+        {/* Image 2: Local vs Cloud Comparison */}
+        <figure className="mb-16">
+          <img
+            src="/images/local-vs-cloud-llm-comparison.svg"
+            alt="Local LLMs vs Cloud APIs comparison table: local costs $0 per token after hardware with full privacy; cloud APIs charge $0.15–$60 per 1M tokens with excellent quality and instant setup"
+            className="w-full rounded-xl border border-primary/15"
+            loading="lazy"
+          />
+          <figcaption className="mt-2 text-xs text-text-secondary text-center">
+            Local LLMs cost $0/token after hardware purchase; cloud APIs charge $0.15–$60 per 1M tokens with better average quality and zero setup.
+          </figcaption>
+        </figure>
+
         {/* Theme sections */}
         {llmThemes.map(theme => (
           <ThemeSection key={theme.id} theme={theme} lang={lang} />
         ))}
+
+        {/* Image 3: Top Models 2026 */}
+        <figure className="mb-16">
+          <img
+            src="/images/top-open-source-models-2026.svg"
+            alt="Top open-source local models 2026: Llama 4 Scout 109B MoE for reasoning, Qwen3.5 72B for coding, DeepSeek V3 671B MoE for math, Mistral 7B for speed at 8 GB VRAM, Phi-3.5 Mini 3.8B for low-power devices at 4 GB VRAM"
+            className="w-full rounded-xl border border-primary/15"
+            loading="lazy"
+          />
+          <figcaption className="mt-2 text-xs text-text-secondary text-center">
+            Top open-source local models 2026: Llama 4 Scout, Qwen3.5 72B, DeepSeek V3 (workstation) and Mistral 7B, Phi-3.5 Mini (consumer hardware).
+          </figcaption>
+        </figure>
 
         {/* FAQ Section */}
         <section className="mb-16">
@@ -802,6 +841,19 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
           </div>
         </section>
 
+        {/* Image 4: Ollama Quick Start */}
+        <figure className="mb-16">
+          <img
+            src="/images/ollama-quick-start-commands.svg"
+            alt="Ollama terminal showing two commands: ollama pull llama3.2 downloads the 4.7 GB Q4_K_M model, ollama run llama3.2 starts an interactive session at 60 tokens per second on GPU or 12 tokens per second on CPU"
+            className="w-full rounded-xl border border-primary/15"
+            loading="lazy"
+          />
+          <figcaption className="mt-2 text-xs text-text-secondary text-center">
+            Ollama terminal: two commands install and run Llama 3.2 locally — from zero to 60 tokens/sec in under 10 minutes.
+          </figcaption>
+        </figure>
+
         {/* Regional Context Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold text-text-primary mb-8">
@@ -816,6 +868,19 @@ function LocalLLMsHubContent({ initialLang }: { initialLang?: import("@/hooks/us
             ))}
           </div>
         </section>
+
+        {/* Image 5: PromptQuorum Dispatch */}
+        <figure className="mb-16">
+          <img
+            src="/images/promptquorum-local-cloud-dispatch.svg"
+            alt="PromptQuorum architecture diagram: one prompt dispatched to local Ollama LLM and 25+ cloud APIs including GPT-4o, Claude 4.6, and Gemini 2.5 simultaneously, with side-by-side results comparison view"
+            className="w-full rounded-xl border border-primary/15"
+            loading="lazy"
+          />
+          <figcaption className="mt-2 text-xs text-text-secondary text-center">
+            PromptQuorum dispatches one prompt simultaneously to your local Ollama model and 25+ cloud APIs — compare results side-by-side in one view.
+          </figcaption>
+        </figure>
 
         {/* Presentation Section */}
         <section className="mb-16">

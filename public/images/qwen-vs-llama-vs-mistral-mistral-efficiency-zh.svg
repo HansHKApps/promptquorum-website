@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320">
+  <!-- Background -->
+  <rect width="800" height="320" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Mistral Small 3.1：14GB内存实现近70B水平</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="50" font-size="13" fill="#49454F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">比较MMLU分数（上条）与RAM成本（下条）</text>
+
+  <!-- Row 1: Mistral Small 3.1 (y_start=68) -->
+  <!-- Model label -->
+  <text x="195" y="86" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="end" font-family="system-ui, -apple-system, sans-serif">Mistral Small 3.1</text>
+  <!-- MMLU sub-label -->
+  <text x="195" y="103" font-size="11" fill="#79747E" text-anchor="end" font-family="system-ui, -apple-system, sans-serif">MMLU分数</text>
+  <!-- Quality bar -->
+  <rect x="200" y="76" width="229" height="18" rx="3" fill="#79747E"/>
+  <!-- Quality score text -->
+  <text x="435" y="89" font-size="13" font-weight="700" fill="#79747E" font-family="system-ui, -apple-system, sans-serif">79%</text>
+  <!-- RAM sub-label -->
+  <text x="195" y="124" font-size="11" fill="#79747E" text-anchor="end" font-family="system-ui, -apple-system, sans-serif">所需RAM</text>
+  <!-- RAM bar -->
+  <rect x="200" y="110" width="94" height="18" rx="3" fill="#F4F4F4" stroke="#79747E" stroke-width="1"/>
+  <!-- RAM text -->
+  <text x="300" y="123" font-size="13" font-weight="700" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">14 GB</text>
+
+  <!-- Row separator -->
+  <line x1="20" x2="780" y1="140" y2="140" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Row 2: Llama 3.3 70B (y_start=144) -->
+  <!-- Model label -->
+  <text x="195" y="162" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="end" font-family="system-ui, -apple-system, sans-serif">Llama 3.3 70B</text>
+  <!-- MMLU sub-label -->
+  <text x="195" y="179" font-size="11" fill="#79747E" text-anchor="end" font-family="system-ui, -apple-system, sans-serif">MMLU分数</text>
+  <!-- Quality bar -->
+  <rect x="200" y="152" width="238" height="18" rx="3" fill="#7D5260"/>
+  <!-- Quality score text -->
+  <text x="444" y="165" font-size="13" font-weight="700" fill="#7D5260" font-family="system-ui, -apple-system, sans-serif">82%</text>
+  <!-- RAM sub-label -->
+  <text x="195" y="200" font-size="11" fill="#79747E" text-anchor="end" font-family="system-ui, -apple-system, sans-serif">所需RAM</text>
+  <!-- RAM bar -->
+  <rect x="200" y="186" width="270" height="18" rx="3" fill="#F7EDEF" stroke="#7D5260" stroke-width="1"/>
+  <!-- RAM text -->
+  <text x="476" y="199" font-size="13" font-weight="700" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">40 GB</text>
+
+  <!-- Row separator -->
+  <line x1="20" x2="780" y1="216" y2="216" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Row 3: Qwen2.5 72B (y_start=220) -->
+  <!-- Model label -->
+  <text x="195" y="238" font-size="13" font-weight="600" fill="#1C1B1F" text-anchor="end" font-family="system-ui, -apple-system, sans-serif">Qwen2.5 72B</text>
+  <!-- MMLU sub-label -->
+  <text x="195" y="255" font-size="11" fill="#79747E" text-anchor="end" font-family="system-ui, -apple-system, sans-serif">MMLU分数</text>
+  <!-- Quality bar -->
+  <rect x="200" y="228" width="244" height="18" rx="3" fill="#6750A4"/>
+  <!-- Quality score text -->
+  <text x="450" y="241" font-size="13" font-weight="700" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">84%</text>
+  <!-- RAM sub-label -->
+  <text x="195" y="276" font-size="11" fill="#79747E" text-anchor="end" font-family="system-ui, -apple-system, sans-serif">所需RAM</text>
+  <!-- RAM bar -->
+  <rect x="200" y="262" width="290" height="18" rx="3" fill="#E8DEF8" stroke="#6750A4" stroke-width="1"/>
+  <!-- RAM text -->
+  <text x="496" y="275" font-size="13" font-weight="700" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">43 GB</text>
+
+  <!-- Callout box -->
+  <rect x="20" y="288" width="760" height="22" rx="6" fill="#E8DEF8"/>
+  <text x="400" y="303" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">Mistral Small 3.1以33%的RAM成本实现Qwen2.5 72B 96%的质量</text>
+
+  <!-- Footer -->
+  <text x="400" y="318" font-size="11" fill="#79747E" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">MMLU分数来自官方模型卡片 | Q4_K_M量化时RAM | 2026年4月</text>
+</svg>

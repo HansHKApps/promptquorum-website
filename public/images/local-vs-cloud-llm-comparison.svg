@@ -1,0 +1,68 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <rect x="20" y="12" width="760" height="396" rx="12" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="400" y="46" font-family="system-ui,-apple-system,sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Local LLMs vs Cloud APIs</text>
+  <text x="400" y="68" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">How to choose based on your priorities</text>
+
+  <!-- Header row -->
+  <rect x="36" y="82" width="352" height="40" rx="8" fill="#E8DEF8"/>
+  <rect x="412" y="82" width="352" height="40" rx="8" fill="#F3EEF7"/>
+  <text x="212" y="107" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Local LLM</text>
+  <text x="588" y="107" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">Cloud API</text>
+
+  <!-- Divider line -->
+  <line x1="400" y1="82" x2="400" y2="390" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row backgrounds (alternating) -->
+  <rect x="36" y="130" width="728" height="48" rx="0" fill="#F7F2FA" opacity="0.5"/>
+  <rect x="36" y="226" width="728" height="48" rx="0" fill="#F7F2FA" opacity="0.5"/>
+  <rect x="36" y="322" width="728" height="48" rx="0" fill="#F7F2FA" opacity="0.5"/>
+
+  <!-- Row dividers -->
+  <line x1="36" y1="130" x2="764" y2="130" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="36" y1="178" x2="764" y2="178" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="36" y1="226" x2="764" y2="226" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="36" y1="274" x2="764" y2="274" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="36" y1="322" x2="764" y2="322" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="36" y1="370" x2="764" y2="370" stroke="#E8DEF8" stroke-width="1"/>
+
+  <!-- Row labels (left edge) -->
+  <text x="52" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#79747E" letter-spacing="0.5">COST</text>
+  <text x="52" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#79747E" letter-spacing="0.5">PRIVACY</text>
+  <text x="52" y="246" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#79747E" letter-spacing="0.5">SETUP</text>
+  <text x="52" y="294" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#79747E" letter-spacing="0.5">QUALITY</text>
+  <text x="52" y="342" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#79747E" letter-spacing="0.5">BEST FOR</text>
+
+  <!-- Row 1: Cost -->
+  <text x="108" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">$0/token after hardware</text>
+  <text x="108" y="166" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Runs on GPU you already own</text>
+  <text x="416" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">$0.15–$60 per 1M tokens</text>
+  <text x="416" y="166" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Varies by model and provider</text>
+
+  <!-- Row 2: Privacy -->
+  <text x="108" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">Full — data never leaves device</text>
+  <text x="108" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">GDPR / HIPAA compliant by default</text>
+  <text x="416" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">Sent to provider servers</text>
+  <text x="416" y="214" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Verify data retention policy per tier</text>
+
+  <!-- Row 3: Setup -->
+  <text x="108" y="246" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">10 min — Ollama install + pull</text>
+  <text x="108" y="262" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Requires compatible hardware</text>
+  <text x="416" y="246" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">Instant — API key only</text>
+  <text x="416" y="262" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">No hardware requirements</text>
+
+  <!-- Row 4: Quality -->
+  <text x="108" y="294" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#49454F">Good — 7B to 70B open models</text>
+  <text x="108" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">70B matches GPT-4o Mini benchmarks</text>
+  <text x="416" y="294" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#34A853">Excellent — GPT-4o, Claude 4.6</text>
+  <text x="416" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Frontier models, updated continuously</text>
+
+  <!-- Row 5: Best for -->
+  <text x="108" y="342" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#6750A4">Privacy-sensitive &amp; high-volume tasks</text>
+  <text x="108" y="358" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Regulated industries, offline use</text>
+  <text x="416" y="342" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#7D5260">Best quality &amp; fast prototyping</text>
+  <text x="416" y="358" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E">Latest capabilities, minimal setup</text>
+
+  <text x="400" y="398" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">PromptQuorum dispatches one prompt to local + cloud simultaneously — compare results side-by-side</text>
+</svg>

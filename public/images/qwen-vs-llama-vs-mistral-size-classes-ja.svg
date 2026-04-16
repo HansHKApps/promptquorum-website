@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340">
+  <!-- Background -->
+  <rect width="800" height="340" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif">サイズクラス別モデル比較</text>
+  <text x="400" y="50" font-size="13" fill="#49454F" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif">利用可能なRAMに基づいて適切なモデルファミリーを選択</text>
+
+  <!-- Card 1: 3-4B (x=20, y=65) -->
+  <rect x="20" y="65" width="375" height="120" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Size badge -->
+  <rect x="30" y="75" width="68" height="22" rx="11" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="64" y="90" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">3–4B</text>
+  <!-- RAM badge -->
+  <rect x="104" y="75" width="84" height="22" rx="11" fill="#34A853"/>
+  <text x="146" y="90" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">2–2.5 GB</text>
+  <!-- Best choice -->
+  <text x="30" y="119" font-size="12" font-weight="700" fill="#1C1B1F" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif">Llama 3.2 3B（汎用） / Qwen2.5 3B（コーディング）</text>
+  <!-- Use case -->
+  <text x="30" y="139" font-size="12" fill="#49454F" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif">CPU専用、8GB RAM、初心者向け</text>
+  <!-- Command -->
+  <text x="30" y="163" font-size="11" fill="#6750A4" font-family="monospace, 'Courier New', Courier">ollama run llama3.2:3b</text>
+
+  <!-- Card 2: 7-8B (x=405, y=65) -->
+  <rect x="405" y="65" width="375" height="120" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Size badge -->
+  <rect x="415" y="75" width="68" height="22" rx="11" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="449" y="90" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">7–8B</text>
+  <!-- RAM badge -->
+  <rect x="489" y="75" width="84" height="22" rx="11" fill="#34A853"/>
+  <text x="531" y="90" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">4.7–5.5 GB</text>
+  <!-- Best choice -->
+  <text x="415" y="119" font-size="12" font-weight="700" fill="#1C1B1F" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif">Qwen2.5 7B（コーディング） / Llama 3.1 8B（汎用）</text>
+  <!-- Use case -->
+  <text x="415" y="139" font-size="12" fill="#49454F" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif">大多数のユーザー—GPU1枚または16GB RAM</text>
+  <!-- Command -->
+  <text x="415" y="163" font-size="11" fill="#6750A4" font-family="monospace, 'Courier New', Courier">ollama run qwen2.5:7b</text>
+
+  <!-- Card 3: 14-24B (x=20, y=195) -->
+  <rect x="20" y="195" width="375" height="120" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Size badge (rose variant) -->
+  <rect x="30" y="205" width="68" height="22" rx="11" fill="#F7EDEF" stroke="#7D5260" stroke-width="1.5"/>
+  <text x="64" y="220" font-size="12" font-weight="700" fill="#7D5260" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">14–24B</text>
+  <!-- RAM badge -->
+  <rect x="104" y="205" width="84" height="22" rx="11" fill="#34A853"/>
+  <text x="146" y="220" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">9–14 GB</text>
+  <!-- Best choice -->
+  <text x="30" y="249" font-size="12" font-weight="700" fill="#1C1B1F" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif">Mistral Small 3.1 24B（最良バランス）</text>
+  <!-- Use case -->
+  <text x="30" y="269" font-size="12" fill="#49454F" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif">16GB VRAM—70Bに近い品質、低コスト</text>
+  <!-- Command -->
+  <text x="30" y="293" font-size="11" fill="#6750A4" font-family="monospace, 'Courier New', Courier">ollama run mistral-small3.1</text>
+
+  <!-- Card 4: 70-72B (x=405, y=195) -->
+  <rect x="405" y="195" width="375" height="120" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <!-- Size badge -->
+  <rect x="415" y="205" width="68" height="22" rx="11" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="449" y="220" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">70–72B</text>
+  <!-- RAM badge -->
+  <rect x="489" y="205" width="84" height="22" rx="11" fill="#34A853"/>
+  <text x="531" y="220" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">40–43 GB</text>
+  <!-- Best choice -->
+  <text x="415" y="249" font-size="12" font-weight="700" fill="#1C1B1F" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif">Qwen2.5 72B（コード） / Llama 3.3 70B（英語汎用）</text>
+  <!-- Use case -->
+  <text x="415" y="269" font-size="12" fill="#49454F" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif">ワークステーション：デュアルGPUまたは64GB+</text>
+  <!-- Command -->
+  <text x="415" y="293" font-size="11" fill="#6750A4" font-family="monospace, 'Courier New', Courier">ollama run qwen2.5:72b</text>
+
+  <!-- Footer -->
+  <text x="400" y="330" font-size="11" fill="#79747E" text-anchor="middle" font-family="'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif">Q4_K_M量子化時のRAM | 実行：ollama run &lt;model&gt;</text>
+</svg>

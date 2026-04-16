@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <rect x="20" y="12" width="760" height="396" rx="12" fill="#FFFFFF" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="400" y="46" font-family="system-ui,-apple-system,sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">VRAM Requirements for Local LLMs</text>
+  <text x="400" y="68" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#79747E" text-anchor="middle">Minimum GPU memory at Q4_K_M quantization · Scale: 0–48 GB</text>
+
+  <!-- Chart background -->
+  <rect x="200" y="86" width="540" height="272" fill="#F7F2FA"/>
+
+  <!-- Gridlines (scale: 540px / 48 GB = 11.25 px/GB) -->
+  <line x1="200" y1="86" x2="200" y2="358" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="290" y1="86" x2="290" y2="358" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="380" y1="86" x2="380" y2="358" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="470" y1="86" x2="470" y2="358" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="650" y1="86" x2="650" y2="358" stroke="#E8DEF8" stroke-width="1"/>
+  <line x1="740" y1="86" x2="740" y2="358" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Scale labels -->
+  <text x="200" y="82" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">0</text>
+  <text x="290" y="82" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">8 GB</text>
+  <text x="380" y="82" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">16 GB</text>
+  <text x="470" y="82" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">24 GB</text>
+  <text x="650" y="82" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">40 GB</text>
+
+  <!-- Row 1: 3B — 4 GB (width=45) -->
+  <text x="192" y="124" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="end">3B</text>
+  <text x="192" y="140" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="end">Phi-3.5 Mini</text>
+  <rect x="200" y="106" width="45" height="28" rx="5" fill="#6750A4" opacity="0.30"/>
+  <text x="252" y="124" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#6750A4">4 GB min</text>
+
+  <!-- Consumer GPU annotation at 8 GB line -->
+  <line x1="290" y1="136" x2="290" y2="174" stroke="#F4B400" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="294" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#F4B400">← RTX 4060 / Apple M3</text>
+
+  <!-- Row 2: 7B — 8 GB (width=90) -->
+  <text x="192" y="194" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="end">7B</text>
+  <text x="192" y="210" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="end">Llama 3.2 8B</text>
+  <rect x="200" y="176" width="90" height="28" rx="5" fill="#6750A4" opacity="0.55"/>
+  <text x="298" y="194" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#6750A4">8 GB min</text>
+
+  <!-- Row 3: 13B — 16 GB (width=180) -->
+  <text x="192" y="262" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="end">13B</text>
+  <text x="192" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="end">Qwen2.5 14B</text>
+  <rect x="200" y="244" width="180" height="28" rx="5" fill="#6750A4" opacity="0.70"/>
+  <text x="290" y="262" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">16 GB min</text>
+
+  <!-- Row 4: 70B — 40 GB (width=450) -->
+  <text x="192" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="end">70B</text>
+  <text x="192" y="346" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="end">Llama 4 Scout</text>
+  <rect x="200" y="312" width="450" height="28" rx="5" fill="#6750A4"/>
+  <text x="425" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">40 GB+ min</text>
+
+  <!-- Note -->
+  <text x="400" y="395" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">Q4_K_M quantization halves VRAM vs FP16 · CPU-only inference is 5–10× slower</text>
+</svg>

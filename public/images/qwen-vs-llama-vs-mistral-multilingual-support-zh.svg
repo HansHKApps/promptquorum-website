@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 310" width="800" height="310">
+  <rect width="800" height="310" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">多语言支持：Qwen2.5 vs Llama vs Mistral</text>
+  <!-- Subtitle -->
+  <text x="400" y="50" font-size="13" fill="#49454F" text-anchor="middle" font-family="system-ui, sans-serif">非英语任务选Qwen2.5；英语优先选Llama或Mistral</text>
+
+  <!-- Left box -->
+  <rect x="20" y="65" width="370" height="215" rx="10" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+
+  <!-- Left header badge -->
+  <rect x="30" y="75" width="200" height="26" rx="13" fill="#6750A4"/>
+  <text x="130" y="93" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700" font-family="system-ui, sans-serif">Qwen2.5</text>
+
+  <!-- Big number -->
+  <text x="110" y="160" font-size="52" font-weight="700" fill="#6750A4" text-anchor="middle" font-family="system-ui, sans-serif">29</text>
+  <!-- Label -->
+  <text x="110" y="182" font-size="13" fill="#49454F" text-anchor="middle" font-family="system-ui, sans-serif">种原生语言</text>
+
+  <!-- Language examples -->
+  <text x="30" y="205" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">中文、日语、韩语、阿拉伯语、</text>
+  <text x="30" y="222" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">德语、法语、西班牙语、俄语、</text>
+  <text x="30" y="239" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">印地语、葡萄牙语 + 19种更多</text>
+
+  <!-- Left bottom note -->
+  <text x="30" y="265" font-size="11" fill="#79747E" font-family="system-ui, sans-serif">Apache 2.0许可 · 128K上下文 · JSON模式</text>
+
+  <!-- Right box -->
+  <rect x="410" y="65" width="370" height="215" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="2"/>
+
+  <!-- Right header badge -->
+  <rect x="420" y="75" width="200" height="26" rx="13" fill="#E8DEF8" stroke="#79747E" stroke-width="1"/>
+  <text x="520" y="93" text-anchor="middle" fill="#49454F" font-size="13" font-weight="700" font-family="system-ui, sans-serif">Llama 3.x + Mistral</text>
+
+  <!-- 英语优先 label -->
+  <text x="595" y="135" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, sans-serif">英语优先</text>
+
+  <!-- Description lines -->
+  <text x="420" y="162" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">Llama 3.x：英语推理强，创意写作、</text>
+  <text x="420" y="182" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">指令遵循优秀</text>
+  <text x="420" y="208" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">Mistral：最佳质量/内存比，GDPR合规</text>
+  <text x="420" y="228" font-size="12" fill="#49454F" font-family="system-ui, sans-serif">（欧洲公司）</text>
+
+  <!-- Right bottom note -->
+  <text x="420" y="265" font-size="11" fill="#79747E" font-family="system-ui, sans-serif">非英语：仅基本支持，非原生语言</text>
+
+  <!-- Footer -->
+  <text x="400" y="296" font-size="11" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">Qwen2.5语言列表：阿里巴巴模型卡片（2026年4月）</text>
+</svg>
