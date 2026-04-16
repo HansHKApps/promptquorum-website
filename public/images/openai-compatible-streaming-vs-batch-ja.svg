@@ -1,0 +1,55 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter>
+  </defs>
+
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">ストリーミング vs 完全なレスポンス — トークン配信タイムライン</text>
+
+  <text x="30" y="62" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#7D5260">stream=False（デフォルト）</text>
+
+  <rect x="30" y="72" width="740" height="34" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="30" y="72" width="630" height="34" rx="6" fill="#E8DEF8" opacity="0.6"/>
+  <text x="345" y="94" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#7D5260" text-anchor="middle">⏳  モデルが内部で完全なレスポンスを生成中… 約3〜8秒待機</text>
+  <rect x="662" y="72" width="108" height="34" rx="0" fill="#7D5260" opacity="0.2"/>
+  <rect x="762" y="72" width="8" height="34" rx="0" fill="#7D5260"/>
+  <text x="714" y="94" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#7D5260" text-anchor="middle">全テキスト</text>
+
+  <text x="30" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">0s</text>
+  <text x="770" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">~5s</text>
+  <text x="400" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">ユーザーには何も表示されない</text>
+
+  <text x="30" y="148" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6750A4">stream=True</text>
+
+  <rect x="30" y="158" width="740" height="34" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <rect x="30" y="158" width="50" height="34" rx="4" fill="#6750A4" opacity="0.85"/>
+  <text x="55" y="180" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">答え</text>
+  <rect x="84" y="158" width="36" height="34" rx="4" fill="#6750A4" opacity="0.75"/>
+  <text x="102" y="180" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">は</text>
+  <rect x="124" y="158" width="28" height="34" rx="4" fill="#6750A4" opacity="0.65"/>
+  <text x="138" y="180" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <rect x="156" y="158" width="28" height="34" rx="4" fill="#6750A4" opacity="0.55"/>
+  <text x="170" y="180" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">です</text>
+  <rect x="188" y="158" width="582" height="34" rx="4" fill="#E8DEF8" opacity="0.4"/>
+  <text x="479" y="180" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="600">← さらにトークンが届く…</text>
+
+  <text x="30" y="207" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">0s</text>
+  <text x="80" y="207" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" font-weight="700" text-anchor="middle">~0.1s</text>
+  <text x="140" y="207" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" font-weight="700" text-anchor="middle">~0.3s</text>
+  <text x="770" y="207" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">完了</text>
+
+  <rect x="30" y="226" width="355" height="86" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="46" y="244" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#7D5260">バッチ（デフォルト — stream=False）</text>
+  <text x="46" y="264" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">resp = client.chat.completions.create(</text>
+  <text x="46" y="282" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">  model="llama3.2:3b", messages=[...]</text>
+  <text x="46" y="300" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">)</text>
+
+  <rect x="415" y="226" width="355" height="86" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="431" y="244" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">ストリーミング（stream=True）</text>
+  <text x="431" y="264" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">for chunk in client.chat.completions.create(</text>
+  <text x="431" y="282" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">  stream=<tspan fill="#6750A4" font-weight="700">True</tspan>, ...):</text>
+  <text x="431" y="300" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">  print(chunk.choices[0].delta.content)</text>
+
+  <rect x="30" y="322" width="740" height="28" rx="8" fill="#E8DEF8"/>
+  <text x="400" y="340" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">ストリーミングは約0.1秒で開始 — 完全なレスポンスを待たずにユーザーはすぐに出力を確認できます</text>
+</svg>

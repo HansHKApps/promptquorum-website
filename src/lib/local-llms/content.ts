@@ -26870,6 +26870,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '```\n{\n  "choices": [{\"message\": {\"content\": \"...\"}}],\n  "usage\": {\"prompt_tokens\": 10, \"completion_tokens\": 20}\n}\n```',
             'Because the format is identical, you do not need to learn a new API or rewrite your code.',
           ],
+          image: '/images/openai-compatible-one-line-change-en.svg',
+          imageCaption: 'Switching from OpenAI to Ollama requires changing 2 lines — base_url and api_key — all other code stays identical.',
         },
         ollamaEndpoint: {
           title: 'What Is Ollama\'s API Endpoint?',
@@ -26881,6 +26883,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             { 'Endpoint': 'List Models', 'URL': 'GET http://localhost:11434/v1/models', 'Description': 'List available models' },
           ],
           columns: ['Endpoint', 'URL', 'Description'],
+          image: '/images/openai-compatible-api-request-flow-en.svg',
+          imageCaption: 'Ollama intercepts the OpenAI-formatted request and runs inference locally — the response returns in identical OpenAI format, no internet required.',
         },
         pythonOpenAI: {
           title: 'How to Use Ollama API With Python (OpenAI Library)',
@@ -26908,6 +26912,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           content: '**Streaming lets you display responses as they are generated, token by token, instead of waiting for the entire response.** As of April 2026, streaming works with all local models via the OpenAI-compatible API.',
           codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
           codeLanguage: 'python',
+          image: '/images/openai-compatible-streaming-vs-batch-en.svg',
+          imageCaption: 'With stream=True, Ollama delivers the first token in ~0.1s — users see output immediately instead of waiting for the full response.',
         },
         functionCalling: {
           title: 'Can Your Local Model Call Functions?',
@@ -26917,6 +26923,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
+          image: '/images/openai-compatible-function-calling-en.svg',
+          imageCaption: 'Function calling flow with Ollama: the local model returns tool_call JSON, and your app executes the function — supported by Llama 3.1 8B, Qwen2.5 7B, and Mistral.',
         },
         regionalContext: {
           id: 'regional-context',
@@ -26936,6 +26944,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             '**CORS errors from browser.** If you call Ollama from a browser-side script and get a CORS error, it means the browser blocked the request for security. See [Local LLMs with VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) for editor-based solutions that bypass CORS.',
             '**Not setting stream=True when expecting streaming.** If you want token-by-token responses, you must explicitly set `stream=True` in the request. By default, it waits for the full response.',
           ],
+          image: '/images/openai-compatible-platform-comparison-en.svg',
+          imageCaption: 'Ollama (port 11434), vLLM (port 8000), and LM Studio (port 1234) all expose OpenAI-compatible endpoints — identical client code, different ports and use cases.',
         },
         faqSection: {
           id: 'faq',

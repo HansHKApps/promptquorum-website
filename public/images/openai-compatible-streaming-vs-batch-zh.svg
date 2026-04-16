@@ -1,0 +1,53 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter>
+  </defs>
+
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">流式传输 vs 完整响应 — 令牌传递时间轴</text>
+
+  <text x="30" y="62" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#7D5260">stream=False（默认）</text>
+
+  <rect x="30" y="72" width="740" height="34" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <rect x="30" y="72" width="630" height="34" rx="6" fill="#E8DEF8" opacity="0.6"/>
+  <text x="345" y="94" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#7D5260" text-anchor="middle">⏳  模型在内部生成完整响应… 等待约3–8秒</text>
+  <rect x="662" y="72" width="108" height="34" rx="0" fill="#7D5260" opacity="0.2"/>
+  <rect x="762" y="72" width="8" height="34" rx="0" fill="#7D5260"/>
+  <text x="714" y="94" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#7D5260" text-anchor="middle">完整文本</text>
+
+  <text x="30" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">0s</text>
+  <text x="770" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">~5s</text>
+  <text x="400" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">用户什么都看不到</text>
+
+  <text x="30" y="148" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6750A4">stream=True</text>
+
+  <rect x="30" y="158" width="740" height="34" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="1.5"/>
+  <rect x="30" y="158" width="50" height="34" rx="4" fill="#6750A4" opacity="0.85"/>
+  <text x="55" y="180" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">答案</text>
+  <rect x="84" y="158" width="36" height="34" rx="4" fill="#6750A4" opacity="0.75"/>
+  <text x="102" y="180" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">是</text>
+  <rect x="124" y="158" width="28" height="34" rx="4" fill="#6750A4" opacity="0.55"/>
+  <text x="138" y="180" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">4。</text>
+  <rect x="156" y="158" width="614" height="34" rx="4" fill="#E8DEF8" opacity="0.4"/>
+  <text x="463" y="180" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" text-anchor="middle" font-weight="600">← 更多令牌陆续到来…</text>
+
+  <text x="30" y="207" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">0s</text>
+  <text x="80" y="207" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" font-weight="700" text-anchor="middle">~0.1s</text>
+  <text x="140" y="207" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" font-weight="700" text-anchor="middle">~0.3s</text>
+  <text x="770" y="207" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">完成</text>
+
+  <rect x="30" y="226" width="355" height="86" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="46" y="244" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#7D5260">批处理（默认 — stream=False）</text>
+  <text x="46" y="264" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">resp = client.chat.completions.create(</text>
+  <text x="46" y="282" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">  model="llama3.2:3b", messages=[...]</text>
+  <text x="46" y="300" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">)</text>
+
+  <rect x="415" y="226" width="355" height="86" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="431" y="244" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">流式传输（stream=True）</text>
+  <text x="431" y="264" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">for chunk in client.chat.completions.create(</text>
+  <text x="431" y="282" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">  stream=<tspan fill="#6750A4" font-weight="700">True</tspan>, ...):</text>
+  <text x="431" y="300" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">  print(chunk.choices[0].delta.content)</text>
+
+  <rect x="30" y="322" width="740" height="28" rx="8" fill="#E8DEF8"/>
+  <text x="400" y="340" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">流式传输在约0.1秒开始 — 用户立即看到输出，无需等待完整响应</text>
+</svg>

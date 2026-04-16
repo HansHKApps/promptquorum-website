@@ -1,0 +1,60 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="350" fill="#FFFFFF"/>
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter>
+  </defs>
+
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Plateformes LLM locales compatibles OpenAI (avril 2026)</text>
+
+  <text x="138" y="60" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">Ollama</text>
+  <text x="400" y="60" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#1C1B1F" text-anchor="middle">vLLM</text>
+  <text x="662" y="60" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#7D5260" text-anchor="middle">LM Studio</text>
+
+  <line x1="269" y1="42" x2="269" y2="340" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="531" y1="42" x2="531" y2="340" stroke="#E8DEF8" stroke-width="1.5"/>
+  <line x1="18" y1="68" x2="782" y2="68" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <text x="18" y="100" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Endpoint API</text>
+  <line x1="18" y1="108" x2="782" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="138" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Commande de démarrage</text>
+  <line x1="18" y1="148" x2="782" y2="148" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="178" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Idéal pour</text>
+  <line x1="18" y1="188" x2="782" y2="188" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="218" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">GPU requis ?</text>
+  <line x1="18" y1="228" x2="782" y2="228" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="258" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Streaming</text>
+  <line x1="18" y1="268" x2="782" y2="268" stroke="#F7F2FA" stroke-width="1"/>
+  <text x="18" y="298" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E">Appels de fonction</text>
+
+  <rect x="88" y="68" width="180" height="278" rx="6" fill="#E8DEF8" opacity="0.3"/>
+  <rect x="88" y="68" width="180" height="4" rx="0" fill="#6750A4"/>
+  <text x="138" y="45" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">★ recommandé pour le dev</text>
+
+  <text x="178" y="100" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">localhost:11434/v1</text>
+  <text x="178" y="138" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F" text-anchor="middle">ollama serve</text>
+  <text x="178" y="172" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Développement, personnel,</text>
+  <text x="178" y="188" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">MacBook, scripts locaux</text>
+  <text x="178" y="218" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">Non — le CPU suffit</text>
+  <text x="178" y="258" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">✓ Oui</text>
+  <text x="178" y="298" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">✓ Oui (Llama 3.1+)</text>
+
+  <text x="400" y="100" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">localhost:8000/v1</text>
+  <text x="400" y="130" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">python -m vllm.entrypoints.</text>
+  <text x="400" y="146" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#49454F" text-anchor="middle">openai.api_server</text>
+  <text x="400" y="172" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Production, multi-GPU,</text>
+  <text x="400" y="188" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">haute performance</text>
+  <text x="400" y="218" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#F4B400" text-anchor="middle">Oui — GPU fortement recommandé</text>
+  <text x="400" y="258" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">✓ Oui</text>
+  <text x="400" y="298" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">✓ Oui</text>
+
+  <text x="662" y="100" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="700" fill="#7D5260" text-anchor="middle">localhost:1234/v1</text>
+  <text x="662" y="138" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F" text-anchor="middle">Activer dans l'interface GUI</text>
+  <text x="662" y="172" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">Utilisateurs GUI, non-technique,</text>
+  <text x="662" y="188" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">gestion visuelle des modèles</text>
+  <text x="662" y="218" font-family="system-ui, sans-serif" font-size="13" fill="#49454F" text-anchor="middle">Non — fonctionne sur CPU aussi</text>
+  <text x="662" y="258" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">✓ Oui (bêta)</text>
+  <text x="662" y="298" font-family="system-ui, sans-serif" font-size="13" fill="#79747E" text-anchor="middle">Limité (bêta)</text>
+
+  <line x1="18" y1="308" x2="782" y2="308" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="400" y="328" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Les trois utilisent un code client identique — seul le numéro de port change. Testé en avril 2026.</text>
+</svg>

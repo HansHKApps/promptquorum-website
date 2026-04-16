@@ -1,0 +1,78 @@
+<svg viewBox="0 0 800 370" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="370" fill="#FFFFFF"/>
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">One Line Change: Connect Python to Ollama Instead of OpenAI</text>
+
+  <!-- LEFT panel: OpenAI -->
+  <rect x="36" y="54" width="340" height="280" rx="10" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="36" y="54" width="340" height="36" rx="10" fill="#E8DEF8"/>
+  <rect x="36" y="78" width="340" height="12" rx="0" fill="#E8DEF8"/>
+  <text x="206" y="78" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">OpenAI API</text>
+  <text x="206" y="97" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#79747E" text-anchor="middle">api.openai.com</text>
+
+  <!-- Code lines LEFT -->
+  <text x="56" y="126" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">from openai import OpenAI</text>
+  <text x="56" y="148" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500"> </text>
+  <text x="56" y="170" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">client = OpenAI(</text>
+
+  <!-- Highlighted base_url line LEFT (openai default — muted) -->
+  <rect x="48" y="178" width="316" height="24" rx="4" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="56" y="195" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#79747E" font-weight="500">  base_url=</text>
+  <text x="165" y="195" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#7D5260" font-weight="700">"https://api.openai.com/v1"</text>
+
+  <!-- api_key line LEFT -->
+  <rect x="48" y="206" width="316" height="24" rx="4" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="56" y="223" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#79747E" font-weight="500">  api_key=</text>
+  <text x="145" y="223" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#7D5260" font-weight="700">"sk-proj-..."</text>
+
+  <text x="56" y="250" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">)</text>
+  <text x="56" y="272" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">client.chat.completions.create(</text>
+  <text x="56" y="293" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">  model="gpt-4o", ...</text>
+  <text x="56" y="315" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">)</text>
+
+  <!-- Cost badge -->
+  <rect x="56" y="324" width="110" height="22" rx="6" fill="#F4B400" opacity="0.18"/>
+  <text x="111" y="339" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#7D5260" text-anchor="middle">Paid API · Cloud</text>
+
+  <!-- Arrow -->
+  <text x="400" y="210" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#6750A4" text-anchor="middle">→</text>
+
+  <!-- RIGHT panel: Ollama -->
+  <rect x="424" y="54" width="340" height="280" rx="10" fill="#F7F2FA" stroke="#6750A4" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="424" y="54" width="340" height="36" rx="10" fill="#6750A4"/>
+  <rect x="424" y="78" width="340" height="12" rx="0" fill="#6750A4"/>
+  <text x="594" y="78" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Ollama Local API</text>
+  <text x="594" y="97" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#E8DEF8" text-anchor="middle">localhost:11434</text>
+
+  <!-- Code lines RIGHT -->
+  <text x="444" y="126" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">from openai import OpenAI</text>
+  <text x="444" y="148" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500"> </text>
+  <text x="444" y="170" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">client = OpenAI(</text>
+
+  <!-- Highlighted base_url line RIGHT (changed!) -->
+  <rect x="436" y="178" width="316" height="24" rx="4" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="444" y="195" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">  base_url=</text>
+  <text x="553" y="195" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#6750A4" font-weight="700">"http://localhost:11434/v1"</text>
+
+  <!-- api_key line RIGHT -->
+  <rect x="436" y="206" width="316" height="24" rx="4" fill="#E8DEF8" stroke="#6750A4" stroke-width="2"/>
+  <text x="444" y="223" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">  api_key=</text>
+  <text x="533" y="223" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#6750A4" font-weight="700">"ollama"</text>
+  <text x="612" y="223" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" font-weight="500">  ← any string</text>
+
+  <text x="444" y="250" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">)</text>
+  <text x="444" y="272" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">client.chat.completions.create(</text>
+  <text x="444" y="293" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">  model="llama3.2:3b", ...</text>
+  <text x="444" y="315" font-family="'SF Mono', Monaco, monospace" font-size="13" fill="#49454F" font-weight="500">)</text>
+
+  <!-- Free badge -->
+  <rect x="444" y="324" width="90" height="22" rx="6" fill="#34A853" opacity="0.15"/>
+  <text x="489" y="339" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Free · Local</text>
+
+  <!-- Change label -->
+  <text x="594" y="356" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">2 lines changed — everything else is identical</text>
+</svg>

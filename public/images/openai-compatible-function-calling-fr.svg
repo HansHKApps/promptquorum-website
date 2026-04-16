@@ -1,0 +1,81 @@
+<svg viewBox="0 0 800 370" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="370" fill="#FFFFFF"/>
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter>
+    <marker id="arr" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#6750A4"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Flux d'appel de fonction avec un modèle local (Ollama)</text>
+
+  <text x="72" y="58" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">① Définir les outils</text>
+  <text x="252" y="58" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">② Envoyer la requête</text>
+  <text x="430" y="58" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">③ Le modèle décide</text>
+  <text x="607" y="58" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">④ L'app exécute</text>
+  <text x="744" y="58" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">⑤ Réponse finale</text>
+
+  <rect x="18" y="66" width="108" height="130" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="72" y="88" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">tools = [{</text>
+  <text x="72" y="106" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">"name":</text>
+  <text x="72" y="122" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#6750A4" text-anchor="middle">"get_weather"</text>
+  <text x="72" y="138" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">"parameters":</text>
+  <text x="72" y="154" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">{"location":</text>
+  <text x="72" y="168" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">"string"}</text>
+  <text x="72" y="186" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">}]</text>
+
+  <line x1="126" y1="131" x2="156" y2="131" stroke="#6750A4" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="158" y="66" width="186" height="130" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="251" y="88" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">POST /v1/chat/completions</text>
+  <text x="251" y="108" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">model: "llama3.1:8b"</text>
+  <text x="251" y="124" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">messages: [{"role":"user",</text>
+  <text x="251" y="140" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">"content": "Météo à SF ?"}]</text>
+  <text x="251" y="158" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#6750A4" text-anchor="middle">tools: [get_weather def]</text>
+  <text x="251" y="174" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">tool_choice: "auto"</text>
+
+  <line x1="344" y1="131" x2="362" y2="131" stroke="#6750A4" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="364" y="66" width="130" height="130" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" filter="url(#shadow)"/>
+  <text x="429" y="90" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Ollama</text>
+  <text x="429" y="108" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">llama3.1:8b</text>
+  <text x="429" y="130" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">le modèle décide :</text>
+  <text x="429" y="146" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" font-weight="700" text-anchor="middle">"appeler get_weather</text>
+  <text x="429" y="162" font-family="system-ui, sans-serif" font-size="11" fill="#6750A4" font-weight="700" text-anchor="middle">avec SF"</text>
+  <text x="429" y="182" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">tool_calls JSON ↓</text>
+
+  <line x1="494" y1="131" x2="522" y2="131" stroke="#6750A4" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="524" y="66" width="166" height="130" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="607" y="88" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Votre App Exécute</text>
+  <text x="607" y="106" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">call.function.name</text>
+  <text x="607" y="122" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#6750A4" text-anchor="middle">→ "get_weather"</text>
+  <text x="607" y="138" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#49454F" text-anchor="middle">call.function.arguments</text>
+  <text x="607" y="154" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#6750A4" text-anchor="middle">→ {"location": "SF"}</text>
+  <text x="607" y="174" font-family="system-ui, sans-serif" font-size="11" fill="#34A853" font-weight="700" text-anchor="middle">résultat : "22°C, ensoleillé"</text>
+
+  <line x1="690" y1="131" x2="706" y2="131" stroke="#6750A4" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="708" y="66" width="74" height="130" rx="8" fill="#34A853" opacity="0.1" stroke="#34A853" stroke-width="1.5"/>
+  <text x="745" y="100" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">Réponse</text>
+  <text x="745" y="118" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">finale</text>
+  <text x="745" y="148" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">"Il fait</text>
+  <text x="745" y="164" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">22°C et</text>
+  <text x="745" y="180" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">ensoleillé."</text>
+
+  <rect x="18" y="214" width="764" height="60" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="30" y="232" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F">Modèles supportant les appels de fonction via Ollama (avril 2026) :</text>
+  <rect x="30" y="240" width="130" height="24" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="95" y="256" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">✓  Llama 3.1 8B</text>
+  <rect x="174" y="240" width="120" height="24" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="234" y="256" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">✓  Qwen2.5 7B</text>
+  <rect x="308" y="240" width="86" height="24" rx="6" fill="#E8DEF8" stroke="#6750A4" stroke-width="1.5"/>
+  <text x="351" y="256" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">✓  Mistral</text>
+  <rect x="408" y="240" width="160" height="24" rx="6" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="488" y="256" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle">⚠  Modèles 3B (peu fiables)</text>
+
+  <rect x="18" y="286" width="764" height="72" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="30" y="304" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">response = client.chat.completions.create(model="llama3.1:8b", messages=[...], <tspan fill="#6750A4" font-weight="700">tools=tools</tspan>)</text>
+  <text x="30" y="322" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">if response.choices[0].message.<tspan fill="#6750A4" font-weight="700">tool_calls</tspan>:</text>
+  <text x="30" y="340" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">    call = response.choices[0].message.tool_calls[0]  <tspan fill="#79747E"># → call.function.name, .arguments</tspan></text>
+</svg>

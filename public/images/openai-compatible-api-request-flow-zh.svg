@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#6750A4"/></marker>
+    <marker id="arrowhead-back" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto"><polygon points="10 0, 0 3.5, 10 7" fill="#7D5260"/></marker>
+  </defs>
+  <text x="400" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama OpenAI兼容API的工作原理</text>
+  <rect x="28" y="60" width="150" height="80" rx="10" fill="#E8DEF8" stroke="#6750A4" stroke-width="2" filter="url(#shadow)"/>
+  <text x="103" y="94" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">您的应用</text>
+  <text x="103" y="114" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">Python / Node.js</text>
+  <text x="103" y="130" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#79747E" text-anchor="middle">OpenAI SDK</text>
+  <line x1="178" y1="96" x2="248" y2="96" stroke="#6750A4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="213" y="88" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">POST</text>
+  <text x="213" y="111" font-family="'SF Mono', Monaco, monospace" font-size="10" fill="#79747E" text-anchor="middle">/v1/chat/completions</text>
+  <rect x="250" y="50" width="170" height="100" rx="10" fill="#F7F2FA" stroke="#6750A4" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="85" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Ollama REST API</text>
+  <text x="335" y="105" font-family="'SF Mono', Monaco, monospace" font-size="12" font-weight="600" fill="#6750A4" text-anchor="middle">localhost:11434/v1</text>
+  <text x="335" y="123" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">OpenAI兼容</text>
+  <text x="335" y="138" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">端点路由器</text>
+  <line x1="420" y1="96" x2="488" y2="96" stroke="#6750A4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="454" y="88" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">加载</text>
+  <text x="454" y="111" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">模型</text>
+  <rect x="490" y="50" width="170" height="100" rx="10" fill="#E8DEF8" stroke="#7D5260" stroke-width="2" filter="url(#shadow)"/>
+  <text x="575" y="85" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">本地LLM</text>
+  <text x="575" y="105" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">llama3.2:3b</text>
+  <text x="575" y="123" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">本地CPU/GPU</text>
+  <text x="575" y="138" font-family="system-ui, sans-serif" font-size="11" fill="#79747E" text-anchor="middle">无需互联网</text>
+  <line x1="660" y1="96" x2="728" y2="96" stroke="#6750A4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="694" y="88" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">推理</text>
+  <rect x="730" y="60" width="50" height="80" rx="10" fill="#34A853" opacity="0.12" stroke="#34A853" stroke-width="1.5"/>
+  <text x="755" y="100" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">令牌</text>
+  <line x1="490" y1="175" x2="420" y2="175" stroke="#7D5260" stroke-width="1.5" marker-end="url(#arrowhead-back)"/>
+  <line x1="250" y1="175" x2="178" y2="175" stroke="#7D5260" stroke-width="1.5" marker-end="url(#arrowhead-back)"/>
+  <line x1="730" y1="165" x2="665" y2="165" stroke="#7D5260" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="660" y1="165" x2="490" y2="165" stroke="#7D5260" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="454" y="168" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#7D5260" text-anchor="middle">OpenAI响应格式</text>
+  <text x="213" y="168" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#7D5260" text-anchor="middle">choices[0].message</text>
+  <rect x="28" y="200" width="358" height="90" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="44" y="218" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4">请求 (与OpenAI相同)</text>
+  <text x="44" y="238" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">{"model": "llama3.2:3b",</text>
+  <text x="44" y="256" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F"> "messages": [{"role": "user",</text>
+  <text x="44" y="274" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">   "content": "2+2等于几？"}]}</text>
+  <rect x="414" y="200" width="358" height="90" rx="8" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1.5"/>
+  <text x="430" y="218" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#7D5260">响应 (OpenAI格式)</text>
+  <text x="430" y="238" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">{"choices": [{"message":</text>
+  <text x="430" y="256" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">  {"role": "assistant",</text>
+  <text x="430" y="274" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">   "content": "答案是4。"}}]}</text>
+  <text x="400" y="314" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#49454F" text-anchor="middle">Ollama将OpenAI格式请求转换为本地推理 — 应用代码无需修改。</text>
+  <rect x="270" y="326" width="260" height="24" rx="8" fill="#E8DEF8"/>
+  <text x="400" y="342" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6750A4" text-anchor="middle">🔒  所有数据保留在您的设备上</text>
+</svg>
