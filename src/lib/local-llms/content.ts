@@ -5882,6 +5882,21 @@ print(response.choices[0].message.content)`,
             '@type': 'Question',
             'name': 'Why does my local LLM stop responding mid-response?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Context window limit reached. The model hit max_tokens. Increase num_ctx in Ollama (e.g., OLLAMA_NUM_CTX=4096) or set a higher max_tokens in LM Studio. Also check for RAM pressure — swap usage kills inference mid-stream.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I check if Ollama is using GPU or CPU?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Run ollama ps while a model is loaded. The output shows processor type (CPU or GPU) and how many layers are on each. If it shows 100% CPU, enable GPU with OLLAMA_GPU_LAYERS=999 or update your NVIDIA/AMD drivers. On Apple Silicon, Ollama uses Metal by default.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Why does my model stop generating after a few sentences?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'The default num_predict setting is 128 tokens — enough for only 1–2 sentences. Fix: add PARAMETER num_predict 2048 to a Modelfile, or increase Max Tokens in LM Studio model settings.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I fix CUDA errors with ROCm on AMD GPUs?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'For RX 6000-series (RDNA 2): set HSA_OVERRIDE_GFX_VERSION=10.3.0. For RX 7000-series (RDNA 3): use HSA_OVERRIDE_GFX_VERSION=11.0.0. Add to ~/.bashrc for persistence. Verify with rocm-smi.' }
           }
         ]
       },
@@ -6035,6 +6050,18 @@ print(response.choices[0].message.content)`,
             '**China / CAC:** For deployment under China\'s Cybersecurity Law, Ollama running Qwen2.5 7B satisfies data localization requirements. CUDA driver installation on Chinese enterprise hardware (Huawei MateBook, Lenovo ThinkPad) follows the same procedure as Linux; ROCm support for Chinese-manufactured GPU cards (Biren BR100) requires custom ROCm builds.',
           ],
         },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Related Reading',
+          items: [
+            '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Why Q4_K_M is the default and how quantization affects RAM',
+            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Hardware requirements for running 7B–70B models locally',
+            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and setup guide',
+            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — Comparison of the two most popular local LLM tools',
+            '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) — Laptop-specific thermal and battery optimization',
+            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations for 8 GB RAM',
+          ],
+        },
         faqSection: {
           id: 'common-questions',
           title: 'Common Questions About Local LLM Errors',
@@ -6079,6 +6106,18 @@ print(response.choices[0].message.content)`,
               q: 'Why does my local LLM stop responding mid-response?',
               a: 'Context window limit reached. The model hit `max_tokens`. Increase `num_ctx` in Ollama (e.g., `OLLAMA_NUM_CTX=4096`) or set a higher `max_tokens` in LM Studio. Also check for RAM pressure — swap usage kills inference mid-stream.',
             },
+            {
+              q: 'How do I check if Ollama is using GPU or CPU?',
+              a: 'Run `ollama ps` while a model is loaded. The output shows processor type (CPU or GPU) and how many layers are on each. If it shows 100% CPU, enable GPU with `OLLAMA_GPU_LAYERS=999` or update your NVIDIA/AMD drivers. On Apple Silicon, Ollama uses Metal by default — confirm via `ollama ps` showing GPU usage.',
+            },
+            {
+              q: 'Why does my model stop generating after a few sentences?',
+              a: 'The default `num_predict` setting is 128 tokens in many configurations — enough for only 1–2 sentences. Fix: add `PARAMETER num_predict 2048` to a Modelfile, or check for stop sequences in the system prompt. In LM Studio, increase the "Max Tokens" slider in the model settings panel before generating.',
+            },
+            {
+              q: 'How do I fix CUDA errors with ROCm on AMD GPUs?',
+              a: 'For RX 6000-series (RDNA 2): set `HSA_OVERRIDE_GFX_VERSION=10.3.0` before starting Ollama. For RX 7000-series (RDNA 3): use `HSA_OVERRIDE_GFX_VERSION=11.0.0`. Add these to `~/.bashrc` or `~/.zshrc` for persistence. Verify ROCm is installed: `rocm-smi` should list your GPU.',
+            },
           ],
         },
         moreTroubleshooting: {
@@ -6103,18 +6142,7 @@ print(response.choices[0].message.content)`,
           items: [
             'NVIDIA. (2024). "CUDA Toolkit Release Notes." https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/ — Official CUDA driver version requirements by release.',
             'Ollama. (2026). "Ollama Troubleshooting." https://github.com/ollama/ollama/blob/main/docs/troubleshooting.md — Official Ollama documentation for common errors.',
-            'llama.cpp Contributors. (2024). "llama.cpp README." https://github.com/ggerganov/llama.cpp — Source documentation for llama.cpp build requirements and GPU support.',
-          ],
-        },
-        relatedReading: {
-          id: 'related-reading',
-          title: 'Related Reading',
-          items: [
-            '[How to Install Ollama](/local-llms/how-to-install-ollama) — Installation and setup guide',
-            '[How to Install LM Studio](/local-llms/how-to-install-lm-studio) — GUI-based alternative to Ollama',
-            '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Why Q4_K_M is the default and how quantization affects RAM',
-            '[Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) — Model recommendations for 8 GB RAM',
-            '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) — Laptop-specific thermal and battery optimization',
+            'AMD. (2024). "ROCm Installation Guide." https://rocm.docs.amd.com/projects/install-on-linux/en/latest/ — Official AMD ROCm installation and GPU support for Linux.',
           ],
         },
       },
