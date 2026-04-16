@@ -479,7 +479,7 @@ function LocalLLMsPostContent({ slug, initialLang }: Props) {
         {/* Sections */}
         <article className="key-takeaways-container">
           {Object.entries(article.sections).map(([key, section]) => {
-            const sectionId = section.id ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined)
+            const sectionId = section.isTldr ? (section.id ?? 'key-takeaways') : (section.id ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined))
             return (
               <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} />
             )
