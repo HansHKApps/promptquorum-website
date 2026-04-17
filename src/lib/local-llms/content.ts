@@ -12595,7 +12595,7 @@ print(response.choices[0].message.content)`,
         llama33: {
           title: '#1 Meta Llama 3.3 70B - ローカルで最高の散文品質',
           content: [
-            'Llama 3.3 70Bはローカル実行可能な任意のモデルの中で最も自然で多様な英語散文を生成します。多様な英語テキストコーパスのトレーニングにより、最広範な文体レンジが得られます。',
+            '**Llama 3.3 70Bはローカル実行可能な任意のモデルの中で最も自然で多様な英語散文を生成します。**多様な英語テキストコーパスのトレーニングにより、最広範な文体レンジが得られます。',
             '実用的なコツ: 40GBのメモリが必要ですが、M2 Ultraマシンを使用すれば、1秒間に20–35トークンの速度を達成できます。これにより、実時間での創作セッションに最適です。',
           ],
           rows: [
@@ -12760,7 +12760,7 @@ print(response.choices[0].message.content)`,
         llama33: {
           title: '#1 Meta Llama 3.3 70B - 本地最佳散文质量',
           content: [
-            'Llama 3.3 70B生成任何本地可运行模型中最自然、最多样的英文散文。其在多样化英文文本语料库上的训练赋予了它最广泛的文体范围——从极简主义文学小说到类型化惊悚小说的节奏。长篇连贯性（1000–3000字）明显优于任何7B或13B模型。',
+            '**Llama 3.3 70B生成任何本地可运行模型中最自然、最多样的英文散文。**其在多样化英文文本语料库上的训练赋予了它最广泛的文体范围——从极简主义文学小说到类型化惊悚小说的节奏。长篇连贯性（1000–3000字）明显优于任何7B或13B模型。',
             '实用建议：虽然需要40GB内存，但在Apple M2 Ultra或M3 Max上运行时，您可以获得每秒20–35令牌的速度，使实时创意会话成为可能。这为长篇小说创作者提供了最佳权衡。',
           ],
           rows: [
@@ -13351,7 +13351,7 @@ print(response.choices[0].message.content)`,
         qwen25_3b: {
           title: 'Qwen2.5 3B — コーディングタスク向けの最高の小規模モデル',
           content: [
-            'Qwen2.5 3BはHumanEvalで65%のスコアを獲得し、Llama 3.2 3Bより5ポイント高く、3Bスケールでのコーディングタスクに最適です。JSONモードと関数呼び出しサポートを含み、29言語をネイティブに処理します。',
+            '**Qwen2.5 3BはHumanEvalで65%のスコアを獲得し、Llama 3.2 3Bより5ポイント高く、3Bスケールでのコーディングタスクに最適です。**JSONモードと関数呼び出しサポートを含み、29言語をネイティブに処理します。',
             '英語での非コーディングタスクについては、Llama 3.2 3BとPhi-4 Miniはより自然なプロスを生成します。コーディングまたは多言語出力が主なユースケースの場合、特にQwen2.5 3Bを選択してください。',
           ],
           rows: [
@@ -13575,7 +13575,7 @@ print(response.choices[0].message.content)`,
         qwen25_3b: {
           title: 'Qwen2.5 3B — 编码任务的最佳小型模型',
           content: [
-            'Qwen2.5 3B在HumanEval上得分65%，比Llama 3.2 3B高5个百分点，使其成为3B规模编码任务的最佳选择。它支持JSON模式和函数调用，并原生处理29种语言。',
+            '**Qwen2.5 3B在HumanEval上得分65%，比Llama 3.2 3B高5个百分点，使其成为3B规模编码任务的最佳选择。**它支持JSON模式和函数调用，并原生处理29种语言。',
             '对于英文的非编码任务，Llama 3.2 3B和Phi-4 Mini会产生更自然的散文。特别是在编码或多语言输出是主要用例时，选择Qwen2.5 3B。',
           ],
           rows: [
@@ -25354,7 +25354,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         continueDev: {
           title: 'コード用：Continue.dev（VS Code拡張機能）',
           content: [
-            'Continue.devはVS Code拡張機能。ローカルOllamaからのインラインコード補完＆提案。',
+            '**Continue.devはVS Code拡張機能。**ローカルOllamaからのインラインコード補完＆提案。',
             '**使用方法：**',
             '1. VS Code Marketplaceからontinue拡張機能インストール。',
             '2. ローカルOllamaに接続（Settings > Continue > Ollama、デフォルト：http://localhost:11434）。',
@@ -25679,7 +25679,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         continueDev: {
           title: '代码最优：Continue.dev（VS Code扩展）',
           content: [
-            'Continue.dev是VS Code扩展，从本地Ollama提供行内代码补全和建议。',
+            '**Continue.dev是VS Code扩展，从本地Ollama提供行内代码补全和建议。**',
             '**使用方法：**',
             '1. 从VS Code Marketplace安装Continue扩展。',
             '2. 连接到本地Ollama（Settings > Continue > Ollama，默认：http://localhost:11434）。',
@@ -26955,7 +26955,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         llamacpp: {
           title: 'llama.cpp を理解する：基盤',
           content: [
-            'llama.cpp は LLM 推論の C++ 実装で、Meta の Llama モデルを GPU アクセラレーションなしでコンシューマーハードウェアで実行するために元々記述されました。2026 年 4 月時点で、最も軽量でポータブルな推論エンジンです。',
+            '**llama.cpp は LLM 推論の C++ 実装で、Meta の Llama モデルを GPU アクセラレーションなしでコンシューマーハードウェアで実行するために元々記述されました。**2026 年 4 月時点で、最も軽量でポータブルな推論エンジンです。',
             '**llama.cpp がコンシューマー利用を支配する理由：**',
             '- メモリオーバーヘッド最小 — CPU のみで 8GB RAM で実行可能。',
             '- 複数の GPU バックエンド（NVIDIA、AMD、Apple Metal、Intel）をサポート。',
@@ -27298,7 +27298,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         llamacpp: {
           title: '了解 llama.cpp：基础',
           content: [
-            'llama.cpp 是 LLM 推理的 C++ 实现，最初用于在不需要 GPU 加速的消费硬件上运行 Meta 的 Llama 模型。截至 2026 年 4 月，它仍然是最轻量级和可移植的推理引擎。',
+            '**llama.cpp 是 LLM 推理的 C++ 实现，最初用于在不需要 GPU 加速的消费硬件上运行 Meta 的 Llama 模型。**截至 2026 年 4 月，它仍然是最轻量级和可移植的推理引擎。',
             '**llama.cpp 主导消费使用的原因：**',
             '- 内存开销最小 — 可在仅 CPU 8GB RAM 上运行。',
             '- 支持多个 GPU 后端（NVIDIA、AMD、Apple Metal、Intel）。',
