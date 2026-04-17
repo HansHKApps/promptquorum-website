@@ -97,7 +97,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         whatIsLocalLlm: {
           title: 'What Is a Local LLM?',
           content: [
-            'A local LLM (large language model) is an AI model that runs on hardware you control — your laptop, desktop, or on-premise server. The model weights are stored as a file on your disk, and all processing happens on your own CPU or GPU. No prompt text or response data is transmitted to any external server.',
+            '**A local LLM (large language model) is an AI model that runs on hardware you control — your laptop, desktop, or on-premise server.** The model weights are stored as a file on your disk, and all processing happens on your own CPU or GPU. No prompt text or response data is transmitted to any external server.',
             'The term "local" distinguishes these models from cloud-hosted services like OpenAI GPT-4o, Anthropic Claude 4.6, or Google Gemini 2.5 Pro, which process your prompts on remote servers and return results over the internet.',
             'Local LLMs range from small 1B-parameter models that run on a phone to 70B-parameter models that require a workstation with 48 GB of VRAM. The most commonly used beginner models — Meta Llama 3.2 3B, Microsoft Phi-3 Mini, and Google Gemma 2 2B — run on any laptop with 8 GB of RAM.',
           ],
@@ -105,7 +105,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         howItWorks: {
           title: 'How Does a Local LLM Work?',
           content: [
-            'Running a local LLM involves three layers working together: the model file, the inference engine, and the interface.',
+            '**Running a local LLM involves three layers working together: the model file, the inference engine, and the interface.**',
             '**The model file** contains the neural network weights — the learned numerical values that define how the model processes and generates text. For local use, these weights are almost always stored in GGUF format (a compressed format developed by the llama.cpp project) or safetensors format. A 7B-parameter model quantized to 4-bit precision is approximately 4.5 GB on disk.',
             '**The inference engine** reads the model file and performs the matrix calculations needed to generate tokens. The most popular engines are [Ollama](/local-llms/how-to-install-ollama) (runs as a background service with an OpenAI-compatible API), [LM Studio](/local-llms/how-to-install-lm-studio) (a desktop app with a built-in chat UI), and llama.cpp (the underlying C++ library that most other tools build on).',
             '**The interface** is where you interact with the model — a terminal, a web UI, or an API endpoint. Many tools like Ollama expose a REST API at `http://localhost:11434` so you can connect any OpenAI-compatible application to your local model.',
@@ -333,7 +333,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         whatIsLocalLlm: {
           title: 'Qu\'est-ce qu\'un LLM local ?',
           content: [
-            'Un LLM local est un modèle IA fonctionnant sur votre propre matériel — laptop, desktop, serveur local. Les poids sont stockés comme fichier, tous les calculs se font sur votre CPU ou GPU. Aucune donnée ne quitte votre machine.',
+            '**Un LLM local est un modèle IA fonctionnant sur votre propre matériel — laptop, desktop, serveur local.** Les poids sont stockés comme fichier, tous les calculs se font sur votre CPU ou GPU. Aucune donnée ne quitte votre machine.',
             'Ce terme les distingue des services cloud comme GPT-4o, Claude 4.6 ou Gemini 2.5 Pro, qui traitent vos prompts sur des serveurs distants.',
             'Les LLMs locaux vont de modèles 1B sur téléphone à 70B nécessitant 48 GB VRAM. Les plus accessibles : Llama 3.2 3B, Phi-3 Mini, Gemma 2 2B (tous sur un laptop 8 GB).',
           ],
@@ -341,7 +341,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         howItWorks: {
           title: 'Comment fonctionne un LLM local ?',
           content: [
-            'Trois couches : fichier modèle, moteur d\'inférence, interface.',
+            '**Trois couches : fichier modèle, moteur d\'inférence, interface.**',
             '**Fichier modèle** : contient les poids du réseau neuronal. Stockés en GGUF (format du projet llama.cpp, compressé) ou safetensors. Un modèle 7B quantifié 4-bit ≈ 4.5 GB.',
             '**Moteur d\'inférence** : lit le fichier et effectue calculs matriciels. Principaux : [Ollama](/local-llms/how-to-install-ollama?lang=fr) (service API compatible OpenAI), [LM Studio](/local-llms/how-to-install-lm-studio?lang=fr) (interface desktop), llama.cpp (librairie C++ sous-jacente).',
             '**Interface** : terminal, web UI, ou API. Ollama expose une API REST sur `http://localhost:11434` compatible OpenAI.',
@@ -482,7 +482,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         whatIsLocalLlm: {
           title: 'ローカルLLMとは何か',
           content: [
-            'ローカルLLM（大規模言語モデル）は、あなたが制御するハードウェア上で実行されるAIモデルです。ノートパソコン、デスクトップ、またはオンプレミスサーバーでも構いません。モデルの重みはファイルとしてディスク上に保存され、すべての処理はあなた自身のCPUまたはGPU上で行われます。プロンプトテキストもレスポンスデータも外部サーバーに送信されません。',
+            '**ローカルLLM（大規模言語モデル）は、あなたが制御するハードウェア上で実行されるAIモデルです。** ノートパソコン、デスクトップ、またはオンプレミスサーバーでも構いません。モデルの重みはファイルとしてディスク上に保存され、すべての処理はあなた自身のCPUまたはGPU上で行われます。プロンプトテキストもレスポンスデータも外部サーバーに送信されません。',
             'こうしたモデルを「ローカル」と呼ぶのは、GPT-4o、Claude 4.6、Gemini 2.5 Proなどのクラウドサービスとの違いを強調するためです。これらクラウドサービスはプロンプトをリモートサーバーで処理してインターネット経由で結果を返します。',
             'ローカルLLMは多様です。電話で動作する1Bパラメータモデルから、48GB VRAM を要する70Bパラメータモデルまで。初心者向けの一般的なモデル—Meta Llama 3.2 3B、Microsoft Phi-3 Mini、Google Gemma 2 2B—はいずれも8GB RAMのノートパソコンで動作します。',
           ],
@@ -490,7 +490,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         howItWorks: {
           title: 'ローカルLLMはどう動くか',
           content: [
-            'ローカルLLM実行には3層が協働します：モデルファイル、推論エンジン、インターフェース。',
+            '**ローカルLLM実行には3層が協働します：モデルファイル、推論エンジン、インターフェース。**',
             '**モデルファイル**：ニューラルネットワークの重み（学習された数値）を含みます。ローカル用途ではほぼ常にGGUF形式（llama.cpp プロジェクト開発、圧縮）またはsafetensors形式で保存されます。4ビット精度に量子化した7Bパラメータモデルはディスク上でおよそ4.5GB。',
             '**推論エンジン**：モデルファイルを読み込み、トークン生成に必要な行列計算を実行します。最も人気のあるエンジン：[Ollama](/local-llms/how-to-install-ollama?lang=ja)（バックグラウンドサービス、OpenAI互換API）、[LM Studio](/local-llms/how-to-install-lm-studio?lang=ja)（デスクトップアプリ、統合チャットUI）、llama.cpp（多くのツールの基礎となるC++ライブラリ）。',
             '**インターフェース**：モデルとやり取りする場所です。ターミナル、ウェブUI、APIエンドポイント。Ollama などは `http://localhost:11434` に REST API を公開するため、OpenAI互換のアプリケーションをローカルモデルに接続できます。',
@@ -631,7 +631,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         whatIsLocalLlm: {
           title: '什么是本地LLM',
           content: [
-            '本地LLM（大型语言模型）是在您控制的硬件上运行的AI模型。可以是笔记本、台式机或本地服务器。模型权重存储为磁盘文件，所有处理在您自己的CPU或GPU上进行。无数据发送到外部服务器。',
+            '**本地LLM（大型语言模型）是在您控制的硬件上运行的AI模型。** 可以是笔记本、台式机或本地服务器。模型权重存储为磁盘文件，所有处理在您自己的CPU或GPU上进行。无数据发送到外部服务器。',
             '"本地"一词区分这些模型与OpenAI GPT-4o、Anthropic Claude 4.6、Google Gemini 2.5 Pro等云服务，云服务在远程服务器处理您的提示并通过互联网返回结果。',
             '本地LLM种类丰富：从运行在手机上的1B参数模型到需要48GB VRAM的70B参数模型。初学者常用：Meta Llama 3.2 3B、Microsoft Phi-3 Mini、Google Gemma 2 2B（全部可在8GB RAM笔记本上运行）。',
           ],
@@ -780,7 +780,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         whatIsLocalLlm: {
           title: 'Was ist ein lokales LLM?',
           content: [
-            'Ein lokales LLM (großes Sprachmodell) ist ein KI-Modell, das auf Hardware unter Ihrer Kontrolle ausgeführt wird — Ihrem Laptop, Desktop oder lokalen Server. Die Modellgewichte werden als Datei auf Ihrem Datenträger gespeichert, und alle Verarbeitungsvorgänge erfolgen auf Ihrer eigenen CPU oder GPU. Keine Prompt-Texte oder Antwortdaten werden an externe Server übertragen.',
+            '**Ein lokales LLM (großes Sprachmodell) ist ein KI-Modell, das auf Hardware unter Ihrer Kontrolle ausgeführt wird — Ihrem Laptop, Desktop oder lokalen Server.** Die Modellgewichte werden als Datei auf Ihrem Datenträger gespeichert, und alle Verarbeitungsvorgänge erfolgen auf Ihrer eigenen CPU oder GPU. Keine Prompt-Texte oder Antwortdaten werden an externe Server übertragen.',
             'Der Begriff \"lokal\" unterscheidet diese Modelle von Cloud-Diensten wie OpenAI GPT-4o, Anthropic Claude 4.6 oder Google Gemini 2.5 Pro, die Ihre Prompts auf entfernten Servern verarbeiten und Ergebnisse über das Internet zurückgeben.',
             'Lokale LLMs reichen von kleinen 1B-Parametern-Modellen, die auf einem Telefon laufen, bis zu 70B-Parametern-Modellen, die eine Workstation mit 48 GB VRAM benötigen. Die am häufigsten verwendeten Anfänger-Modelle — Meta Llama 3.2 3B, Microsoft Phi-3 Mini und Google Gemma 2 2B — laufen auf jedem Laptop mit 8 GB RAM.',
           ],
@@ -788,7 +788,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         howItWorks: {
           title: 'Wie funktioniert ein lokales LLM?',
           content: [
-            'Das Ausführen eines lokalen LLM umfasst drei zusammenwirkende Schichten: die Modelldatei, die Inferenz-Engine und die Schnittstelle.',
+            '**Das Ausführen eines lokalen LLM umfasst drei zusammenwirkende Schichten: die Modelldatei, die Inferenz-Engine und die Schnittstelle.**',
             '**Die Modelldatei** enthält die Gewichte des neuronalen Netzes — die gelernten numerischen Werte, die definieren, wie das Modell Text verarbeitet und generiert. Für die lokale Verwendung werden diese Gewichte fast immer im GGUF-Format (ein vom llama.cpp-Projekt entwickeltes komprimiertes Format) oder im safetensors-Format gespeichert. Ein auf 4-Bit-Präzision quantisiertes 7B-Parametern-Modell ist auf der Festplatte etwa 4,5 GB groß.',
             '**Die Inferenz-Engine** liest die Modelldatei und führt die erforderlichen Matrixberechnungen durch, um Tokens zu generieren. Die beliebtesten Engines sind [Ollama](/local-llms/how-to-install-ollama?lang=de) (wird als Hintergrunddienst mit OpenAI-kompatibler API ausgeführt), [LM Studio](/local-llms/how-to-install-lm-studio?lang=de) (eine Desktop-Anwendung mit integrierter Chat-UI) und llama.cpp (die zugrunde liegende C++-Bibliothek, auf der die meisten anderen Tools aufgebaut sind).',
             '**Die Schnittstelle** ist der Ort, an dem Sie mit dem Modell interagieren — ein Terminal, eine Web-UI oder ein API-Endpunkt. Viele Tools wie Ollama stellen eine REST-API auf `http://localhost:11434` bereit, damit Sie jede OpenAI-kompatible Anwendung mit Ihrem lokalen Modell verbinden können.',
@@ -934,7 +934,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         whatIsOllama: {
           title: 'What Is Ollama and Why Use It?',
           content: [
-            'Ollama is an open-source inference engine that runs large language models locally. It packages model management, the llama.cpp inference backend, and an OpenAI-compatible REST API into a single lightweight application. No Python, no conda environment, and no CUDA setup is required.',
+            '**Ollama is an open-source inference engine that runs large language models locally.** It packages model management, the llama.cpp inference backend, and an OpenAI-compatible REST API into a single lightweight application. No Python, no conda environment, and no CUDA setup is required.',
             'Ollama maintains a curated model library (ollama.com/library) with one-command downloads for Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5, and 100+ other models. A model is downloaded once and cached on disk — subsequent runs start in under 5 seconds.',
             'For alternatives to Ollama, see [Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers). To compare Ollama with LM Studio, see [How to Install LM Studio](/local-llms/how-to-install-lm-studio).',
           ],
@@ -1204,7 +1204,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           id: 'what-is-ollama',
           title: 'Was ist Ollama und warum sollte ich es nutzen?',
           content: [
-            'Ollama ist eine Open-Source-Inference-Engine, die große Sprachmodelle lokal ausführt. Sie kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API in einer einzigen leichten Anwendung. Keine Python, keine Conda-Umgebung und kein CUDA-Setup erforderlich.',
+            '**Ollama ist eine Open-Source-Inference-Engine, die große Sprachmodelle lokal ausführt.** Sie kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API in einer einzigen leichten Anwendung. Keine Python, keine Conda-Umgebung und kein CUDA-Setup erforderlich.',
             'Ollama betreut eine kuratierte Modellbibliothek (ollama.com/library) mit Ein-Befehl-Downloads für Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 und über 100 weitere Modelle. Ein Modell wird einmal heruntergeladen und auf der Festplatte zwischengespeichert — nachfolgende Ausführungen starten in unter 5 Sekunden.',
             'Für Alternativen zu Ollama siehe [Local-LLM-One-Click-Installer](/local-llms/local-llm-one-click-installers?lang=de). Zum Vergleich von Ollama und LM Studio siehe [So installieren Sie LM Studio](/local-llms/how-to-install-lm-studio?lang=de).',
           ],
@@ -1518,7 +1518,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           id: 'what-is-ollama',
           title: 'Qu\'est-ce qu\'Ollama et pourquoi l\'utiliser ?',
           content: [
-            'Ollama est un moteur d\'inférence open-source qui exécute de grands modèles de langage localement. Il combine la gestion de modèles, le backend d\'inférence llama.cpp et une API REST compatible OpenAI dans une seule application légère. Aucun Python, aucun environnement conda et aucune configuration CUDA requise.',
+            '**Ollama est un moteur d\'inférence open-source qui exécute de grands modèles de langage localement.** Il combine la gestion de modèles, le backend d\'inférence llama.cpp et une API REST compatible OpenAI dans une seule application légère. Aucun Python, aucun environnement conda et aucune configuration CUDA requise.',
             'Ollama maintient une bibliothèque de modèles triée sur le volet (ollama.com/library) avec des téléchargements en une seule commande pour Meta Llama 3.1, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen2.5 et plus de 100 autres modèles. Un modèle est téléchargé une fois et mis en cache sur le disque — les exécutions ultérieures démarrent en moins de 5 secondes.',
             'Pour les alternatives à Ollama, voir [Installateurs Local LLM en un clic](/local-llms/local-llm-one-click-installers?lang=fr). Pour comparer Ollama avec LM Studio, voir [Installation de LM Studio](/local-llms/how-to-install-lm-studio?lang=fr).',
           ],
@@ -1832,7 +1832,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           id: 'what-is-ollama',
           title: 'Ollama とは何か、そしてなぜ使用するのか？',
           content: [
-            'Ollama は大規模言語モデルをローカルで実行するオープンソースの推論エンジンです。モデル管理、llama.cpp 推論バックエンド、OpenAI 互換 REST API を単一の軽量アプリケーションに結合します。Python なし、conda 環境なし、CUDA セットアップなし。',
+            '**Ollama は大規模言語モデルをローカルで実行するオープンソースの推論エンジンです。** モデル管理、llama.cpp 推論バックエンド、OpenAI 互換 REST API を単一の軽量アプリケーションに結合します。Python なし、conda 環境なし、CUDA セットアップなし。',
             'Ollama は Meta Llama 3.1、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen2.5、および 100 以上の他のモデル用にワンコマンド ダウンロード機能を備えたキュレーションされたモデル ライブラリ（ollama.com/library）を保持しています。モデルは 1 回ダウンロードされてディスクにキャッシュされ、以降の実行は 5 秒以内に開始します。',
             'Ollama の代わりについては、[Local LLM ワンクリック インストーラー](/local-llms/local-llm-one-click-installers?lang=ja) を参照してください。Ollama と LM Studio を比較するには、[LM Studio のインストール方法](/local-llms/how-to-install-lm-studio?lang=ja) を参照してください。',
           ],
@@ -2146,7 +2146,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
           id: 'what-is-ollama',
           title: '什么是 Ollama，为什么使用它？',
           content: [
-            'Ollama 是一个开源推理引擎，在本地运行大型语言模型。它将模型管理、llama.cpp 推理后端和 OpenAI 兼容的 REST API 整合到一个轻量级应用程序中。无需 Python、无需 conda 环境、无需 CUDA 设置。',
+            '**Ollama 是一个开源推理引擎，在本地运行大型语言模型。** 它将模型管理、llama.cpp 推理后端和 OpenAI 兼容的 REST API 整合到一个轻量级应用程序中。无需 Python、无需 conda 环境、无需 CUDA 设置。',
             'Ollama 维护一个精选的模型库（ollama.com/library），提供 Meta Llama 3.1、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen2.5 等 100 多个模型的一键下载。模型下载一次并缓存在磁盘上 — 后续运行在 5 秒内启动。',
             '有关 Ollama 的替代品，请参阅 [Local LLM 一键安装程序](/local-llms/local-llm-one-click-installers?lang=zh)。要比较 Ollama 和 LM Studio，请参阅 [如何安装 LM Studio](/local-llms/how-to-install-lm-studio?lang=zh)。',
           ],
@@ -2457,7 +2457,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         whatIsLmStudio: {
           title: 'What Is LM Studio?',
           content: [
-            'LM Studio is a desktop application for running local LLMs. It provides a graphical model browser, a built-in chat interface, and a local API server — all in one app. Under the hood, it uses llama.cpp for inference, the same engine that powers [Ollama](/local-llms/how-to-install-ollama).',
+            '**LM Studio is a desktop application for running local LLMs.** It provides a graphical model browser, a built-in chat interface, and a local API server — all in one app. Under the hood, it uses llama.cpp for inference, the same engine that powers [Ollama](/local-llms/how-to-install-ollama).',
             'The key difference from Ollama is that LM Studio is entirely GUI-driven. You browse and download models through the app interface, start chats with a click, and manage model settings with sliders rather than configuration files.',
             'LM Studio is free for personal use. It is developed by LM Studio, Inc. and was released in 2023. As of 2026, it supports NVIDIA CUDA, AMD ROCm, and Apple Metal acceleration.',
           ],
@@ -2727,7 +2727,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         whatIsLmStudio: {
           title: 'Was ist LM Studio?',
           content: [
-            'LM Studio ist eine Desktop-Anwendung zum Ausführen lokaler LLMs. Es bietet einen grafischen Modellbrowser, eine integrierte Chat-Benutzeroberfläche und einen lokalen API-Server — alles in einer App. Unter der Haube verwendet es llama.cpp für Inferenz, das gleiche Modul, das Ollama antreibt (/local-llms/how-to-install-ollama?lang=de).',
+            '**LM Studio ist eine Desktop-Anwendung zum Ausführen lokaler LLMs.** Es bietet einen grafischen Modellbrowser, eine integrierte Chat-Benutzeroberfläche und einen lokalen API-Server — alles in einer App. Unter der Haube verwendet es llama.cpp für Inferenz, das gleiche Modul, das Ollama antreibt (/local-llms/how-to-install-ollama?lang=de).',
             'Der Hauptunterschied zu Ollama ist, dass LM Studio völlig GUI-gesteuert ist. Sie durchsuchen und laden Modelle über die App-Oberfläche herunter, starten Chats mit einem Klick und verwalten Modelleinstellungen mit Schiebereglern anstelle von Konfigurationsdateien.',
             'LM Studio ist kostenlos für die private Nutzung. Es wird von LM Studio, Inc. entwickelt und wurde 2023 veröffentlicht. Ab 2026 unterstützt es NVIDIA CUDA-, AMD ROCm- und Apple Metal-Beschleunigung.',
           ],
@@ -3090,7 +3090,7 @@ print(response.choices[0].message.content)`,
         whatIsLmStudio: {
           title: 'Qu\'est-ce que LM Studio ?',
           content: [
-            'LM Studio est une application desktop pour exécuter des LLM locaux. Elle fournit un navigateur de modèles graphique, une interface de chat intégrée et un serveur API local — tout dans une seule application. Sous le capot, elle utilise llama.cpp pour l\'inférence, le même moteur qui alimente [Ollama](/local-llms/how-to-install-ollama?lang=fr).',
+            '**LM Studio est une application desktop pour exécuter des LLM locaux.** Elle fournit un navigateur de modèles graphique, une interface de chat intégrée et un serveur API local — tout dans une seule application. Sous le capot, elle utilise llama.cpp pour l\'inférence, le même moteur qui alimente [Ollama](/local-llms/how-to-install-ollama?lang=fr).',
             'La différence clé par rapport à Ollama est que LM Studio est entièrement piloté par l\'interface graphique. Vous parcourez et téléchargez des modèles via l\'interface de l\'application, lancez des discussions en un clic et gérez les paramètres du modèle avec des curseurs plutôt que des fichiers de configuration.',
             'LM Studio est gratuit pour un usage personnel. Elle a été développée par LM Studio, Inc. et lancée en 2023. En 2026, elle supporte l\'accélération NVIDIA CUDA, AMD ROCm et Apple Metal.',
           ],
@@ -3397,7 +3397,7 @@ print(response.choices[0].message.content)`,
         whatIsLmStudio: {
           title: 'LM Studio とは',
           content: [
-            'LM Studioはローカルのメッセージングシステムを実行するためのデスクトップアプリケーション。グラフィカルモデルブラウザ、組み込みのチャットインターフェース、およびローカルAPIサーバー—すべて1つのアプリケーションに含まれている。内部では、推論にllama.cppを使用。これはOllamaを操作するのと同じエンジン（[Ollama](/local-llms/how-to-install-ollama?lang=ja)）。',
+            '**LM Studioはローカルのメッセージングシステムを実行するためのデスクトップアプリケーション。** グラフィカルモデルブラウザ、組み込みのチャットインターフェース、およびローカルAPIサーバー—すべて1つのアプリケーションに含まれている。内部では、推論にllama.cppを使用。これはOllamaを操作するのと同じエンジン（[Ollama](/local-llms/how-to-install-ollama?lang=ja)）。',
             'Ollamaとの主な違いは、LM StudioがGUIによって完全に駆動されていること。アプリケーションインターフェースを通じてモデルを閲覧およびダウンロード、ワンクリックでチャットを開始、構成ファイルではなくスライダーでモデル設定を管理。',
             'LM Studioは個人の利用に無料。LM Studio、Inc.によって開発され、2023年に発売。2026年現在、NVIDIA CUDA、AMD ROCm、およびApple Metal加速をサポート。',
           ],
@@ -3660,7 +3660,7 @@ print(response.choices[0].message.content)`,
         whatIsLmStudio: {
           title: 'LM Studio 是什么？',
           content: [
-            'LM Studio 是运行本地 LLM 的桌面应用程序。它提供图形模型浏览器、内置聊天界面和本地 API 服务器 - 全部在一个应用中。在内部，它使用 llama.cpp 进行推理，这是与 Ollama（[Ollama](/local-llms/how-to-install-ollama?lang=zh)）相同的引擎。',
+            '**LM Studio 是运行本地 LLM 的桌面应用程序。** 它提供图形模型浏览器、内置聊天界面和本地 API 服务器 - 全部在一个应用中。在内部，它使用 llama.cpp 进行推理，这是与 Ollama（[Ollama](/local-llms/how-to-install-ollama?lang=zh)）相同的引擎。',
             'LM Studio 与 Ollama 的主要区别是它完全由 GUI 驱动。您通过应用界面浏览和下载模型、通过一次单击启动聊天，并使用滑块而不是配置文件管理模型设置。',
             'LM Studio 可供个人使用免费。由 LM Studio，Inc. 开发，2023 年发布。截至 2026 年，它支持 NVIDIA CUDA、AMD ROCm 和 Apple Metal 加速。',
           ],
@@ -4942,7 +4942,7 @@ print(response.choices[0].message.content)`,
           id: 'what-makes-one-click',
           title: 'Was macht ein lokales LLM-Tool „One-Click"?',
           content: [
-            'Ein One-Click-Installer für lokale LLMs bündelt drei Dinge in einem einzelnen Download: die Inference-Engine (typischerweise llama.cpp), einen Model-Manager, der Downloads und Speicherung verwaltet, und eine Benutzeroberfläche (Chat-UI, API-Server oder beides).',
+            '**Ein One-Click-Installer für lokale LLMs bündelt drei Dinge in einem einzelnen Download: die Inference-Engine (typischerweise llama.cpp), einen Model-Manager, der Downloads und Speicherung verwaltet, und eine Benutzeroberfläche (Chat-UI, API-Server oder beides).**',
             'Ohne diese Tools erfordert das Ausführen eines lokalen LLM manuelle Kompilierung von llama.cpp, Konvertierung von Modellgewichten, Konfiguration von Speichereinstellungen und Verwaltung von Modelldateien. One-Click-Installer eliminieren all das.',
             'Stand April 2026 verwenden alle vier hier behandelten Tools — Ollama, LM Studio, Jan AI und GPT4All — llama.cpp als gemeinsames Inference-Backend und das GGUF-Format für Modelldateien. Das bedeutet, ein Model, das Sie für ein Tool herunterladen, kann von einem anderen verwendet werden — Sie müssen nie doppelte Kopien herunterladen.',
           ],
@@ -4953,7 +4953,7 @@ print(response.choices[0].message.content)`,
           imageCaption: 'Ollama in 3 Schritten installieren: ollama.com/download besuchen, .pkg oder .exe ausführen, dann ollama run llama3.2 im Terminal eingeben. Nach Installation API auf localhost:11434.',
           title: 'Wofür ist Ollama am besten geeignet?',
           content: [
-            'Ollama läuft als Hintergrunddienst und stellt eine OpenAI-kompatible REST-API auf `http://localhost:11434` bereit. Es hat keine eigene grafische Benutzeroberfläche — Sie interagieren damit über das Terminal oder über externe UIs wie Open WebUI.',
+            '**Ollama läuft als Hintergrunddienst und stellt eine OpenAI-kompatible REST-API auf `http://localhost:11434` bereit.** Es hat keine eigene grafische Benutzeroberfläche — Sie interagieren damit über das Terminal oder über externe UIs wie Open WebUI.',
             'Ollama verwaltet eine kuratierte Model-Bibliothek auf ollama.com/library mit ungefähr 200 Models. Jedes Model wird mit einem einzelnen Befehl gezogen: `ollama pull llama3.1:8b`. Models werden in `~/.ollama/models` gespeichert.',
           ],
           rows: [
@@ -4975,7 +4975,7 @@ print(response.choices[0].message.content)`,
           id: 'lm-studio',
           title: 'Warum ist LM Studio am besten für Anfänger?',
           content: [
-            'LM Studio ist eine Desktop-Anwendung mit integrierter Chat-Schnittstelle, einem Model-Browser, der Hugging Face direkt durchsucht, und einer lokalen Server-Modus. Es ist die am besten polierte GUI-Option und die beste Wahl für Benutzer, die kein Terminal nutzen möchten.',
+            '**LM Studio ist eine Desktop-Anwendung mit integrierter Chat-Schnittstelle, einem Model-Browser, der Hugging Face direkt durchsucht, und einer lokalen Server-Modus.** Es ist die am besten polierte GUI-Option und die beste Wahl für Benutzer, die kein Terminal nutzen möchten.',
             'Im Gegensatz zu Ollamai kuratierter Bibliothek kann LM Studio jedes GGUF-Model von Hugging Face herunterladen — mit Zugang zu Tausenden von Models, einschließlich Fine-Tunes und Quantisierungsvarianten, die nicht in der Ollama-Bibliothek verfügbar sind.',
           ],
           rows: [
@@ -4992,7 +4992,7 @@ print(response.choices[0].message.content)`,
           id: 'jan-ai',
           title: 'Warum ist Jan AI am besten für Datenschutz?',
           content: [
-            'Jan AI ist eine vollständig Open-Source-Desktop-Anwendung (MIT-Lizenz), speziell für Benutzer entwickelt, die vollständige Kontrolle über ihre Daten wünschen. Der gesamte Chat-Verlauf wird lokal in einfachen JSON-Dateien gespeichert. Es wird keine Telemetrie erfasst. Die App funktioniert vollständig offline nach dem initialen Model-Download.',
+            '**Jan AI ist eine vollständig Open-Source-Desktop-Anwendung (MIT-Lizenz), speziell für Benutzer entwickelt, die vollständige Kontrolle über ihre Daten wünschen.** Der gesamte Chat-Verlauf wird lokal in einfachen JSON-Dateien gespeichert. Es wird keine Telemetrie erfasst. Die App funktioniert vollständig offline nach dem initialen Model-Download.',
             'Jan AI beinhaltet eine integrierte Chat-Schnittstelle, ein Erweiterungssystem und einen OpenAI-kompatiblen Server. Sein Model-Hub deckt die wichtigsten Open Models ab (Llama, Mistral, Gemma) mit direkten Hugging-Face-Download-Links.',
           ],
           rows: [
@@ -5009,7 +5009,7 @@ print(response.choices[0].message.content)`,
           id: 'gpt4all',
           title: 'Warum ist GPT4All das einfachste Setup?',
           content: [
-            'GPT4All, entwickelt von Nomic AI, ist für die breiteste mögliche Zielgruppe konzipiert. Das Installationsprogramm ist eine einzelne ausführbare Datei ohne Abhängigkeiten. Nach der Installation können Sie mit einem Model-Browser Models mit einem einzigen Klick herunterladen und ausführen — kein Terminal erforderlich.',
+            '**GPT4All, entwickelt von Nomic AI, ist für die breiteste mögliche Zielgruppe konzipiert.** Das Installationsprogramm ist eine einzelne ausführbare Datei ohne Abhängigkeiten. Nach der Installation können Sie mit einem Model-Browser Models mit einem einzigen Klick herunterladen und ausführen — kein Terminal erforderlich.',
             'GPT4All unterstützt eine „LocalDocs"-Funktion, mit der Sie mit eigenen Dokumenten (PDFs, Textdateien) chatten können, indem Sie RAG (Retrieval-augmented Generation) nutzen, ohne zusätzliche Einrichtung. Dies macht es besonders nützlich für Knowledge-Base-Abfragen über private Dokumentsammlungen.',
           ],
           rows: [
@@ -5207,7 +5207,7 @@ print(response.choices[0].message.content)`,
           id: 'what-makes-one-click',
           title: 'Qu\'est-ce qui rend un outil LLM local « One-Click » ?',
           content: [
-            'Un installateur LLM local one-click regroupe trois choses dans un seul téléchargement : le moteur d\'inférence (généralement llama.cpp), un gestionnaire de modèles qui gère les téléchargements et le stockage, et une interface utilisateur (interface de chat, serveur API ou les deux).',
+            '**Un installateur LLM local one-click regroupe trois choses dans un seul téléchargement : le moteur d\'inférence (généralement llama.cpp), un gestionnaire de modèles qui gère les téléchargements et le stockage, et une interface utilisateur (interface de chat, serveur API ou les deux).**',
             'Sans ces outils, exécuter un LLM local nécessite une compilation manuelle de llama.cpp, une conversion de poids de modèle, une configuration des paramètres de mémoire et une gestion des fichiers de modèle. Les installateurs one-click éliminent tout cela.',
             'En avril 2026, les quatre outils couverts ici — Ollama, LM Studio, Jan AI et GPT4All — utilisent llama.cpp comme backend d\'inférence partagé et le format GGUF pour les fichiers de modèle. Cela signifie qu\'un modèle que vous téléchargez pour un outil peut être utilisé par un autre — vous n\'avez jamais besoin de télécharger des copies dupliquées.',
           ],
@@ -5218,7 +5218,7 @@ print(response.choices[0].message.content)`,
           imageCaption: 'Installation Ollama en 3 étapes : visiter ollama.com/download, lancer le .pkg ou .exe, puis ollama run llama3.2 dans le terminal pour télécharger et exécuter un modèle.',
           title: 'À quoi Ollama convient-il le mieux ?',
           content: [
-            'Ollama s\'exécute comme un service de fond et expose une API REST compatible OpenAI sur `http://localhost:11434`. Il n\'a pas sa propre interface graphique — vous interagissez avec lui via le terminal ou via des interfaces tierces comme Open WebUI.',
+            '**Ollama s\'exécute comme un service de fond et expose une API REST compatible OpenAI sur `http://localhost:11434`.** Il n\'a pas sa propre interface graphique — vous interagissez avec lui via le terminal ou via des interfaces tierces comme Open WebUI.',
             'Ollama maintient une bibliothèque de modèles curée sur ollama.com/library avec environ 200 modèles. Chaque modèle est extrait avec une seule commande : `ollama pull llama3.1:8b`. Les modèles sont stockés dans `~/.ollama/models`.',
           ],
           rows: [
@@ -5240,7 +5240,7 @@ print(response.choices[0].message.content)`,
           id: 'lm-studio',
           title: 'Pourquoi LM Studio est-il meilleur pour les débutants ?',
           content: [
-            'LM Studio est une application de bureau avec une interface de chat intégrée, un navigateur de modèles qui recherche Hugging Face directement, et un mode serveur local. C\'est l\'option GUI la plus soignée et le meilleur choix pour les utilisateurs qui ne veulent pas utiliser un terminal.',
+            '**LM Studio est une application de bureau avec une interface de chat intégrée, un navigateur de modèles qui recherche Hugging Face directement, et un mode serveur local.** C\'est l\'option GUI la plus soignée et le meilleur choix pour les utilisateurs qui ne veulent pas utiliser un terminal.',
             'Contrairement à la bibliothèque curée d\'Ollama, LM Studio peut télécharger n\'importe quel modèle GGUF depuis Hugging Face — donnant accès à des milliers de modèles, y compris des fine-tunes et des variantes de quantification non disponibles dans la bibliothèque Ollama.',
           ],
           rows: [
@@ -5257,7 +5257,7 @@ print(response.choices[0].message.content)`,
           id: 'jan-ai',
           title: 'Pourquoi Jan AI est-il meilleur pour la confidentialité ?',
           content: [
-            'Jan AI est une application de bureau entièrement open source (licence MIT) construite spécifiquement pour les utilisateurs qui veulent un contrôle total sur leurs données. Tout l\'historique de chat est stocké localement dans des fichiers JSON simples. Aucune télémétrie n\'est collectée. L\'application fonctionne entièrement hors ligne après le téléchargement initial du modèle.',
+            '**Jan AI est une application de bureau entièrement open source (licence MIT) construite spécifiquement pour les utilisateurs qui veulent un contrôle total sur leurs données.** Tout l\'historique de chat est stocké localement dans des fichiers JSON simples. Aucune télémétrie n\'est collectée. L\'application fonctionne entièrement hors ligne après le téléchargement initial du modèle.',
             'Jan AI inclut une interface de chat intégrée, un système d\'extension et un serveur compatible OpenAI. Son hub de modèles couvre les principaux modèles ouverts (Llama, Mistral, Gemma) avec des liens de téléchargement directs Hugging Face.',
           ],
           rows: [
@@ -5274,7 +5274,7 @@ print(response.choices[0].message.content)`,
           id: 'gpt4all',
           title: 'Pourquoi GPT4All est-il la configuration la plus simple ?',
           content: [
-            'GPT4All, développé par Nomic AI, est conçu pour le public le plus large possible. Le programme d\'installation est un seul exécutable sans dépendances. Après l\'installation, un navigateur de modèles vous permet de télécharger et exécuter des modèles en un seul clic — aucun terminal requis à aucun moment.',
+            '**GPT4All, développé par Nomic AI, est conçu pour le public le plus large possible.** Le programme d\'installation est un seul exécutable sans dépendances. Après l\'installation, un navigateur de modèles vous permet de télécharger et exécuter des modèles en un seul clic — aucun terminal requis à aucun moment.',
             'GPT4All supporte une fonctionnalité « LocalDocs » qui vous permet de chatter avec vos propres documents (PDFs, fichiers texte) en utilisant RAG (retrieval-augmented generation) sans aucune configuration supplémentaire. Cela le rend particulièrement utile pour les requêtes de base de connaissances sur les collections de documents privés.',
           ],
           rows: [
@@ -5470,7 +5470,7 @@ print(response.choices[0].message.content)`,
           id: 'what-makes-one-click',
           title: 'ローカルLLMツール「One-Click」の定義は？',
           content: [
-            'One-Clickローカルなモデルインストーラーは、1つのダウンロードに3つの要素を統合します：推論エンジン（通常はllama.cpp）、ダウンロードとストレージを管理するモデルマネージャー、ユーザーインターフェイス（チャットUI、APIサーバー、または両方）。',
+            '**One-Clickローカルなモデルインストーラーは、1つのダウンロードに3つの要素を統合します：推論エンジン（通常はllama** .cpp）、ダウンロードとストレージを管理するモデルマネージャー、ユーザーインターフェイス（チャットUI、APIサーバー、または両方）。',
             'これらのツールがなければ、ローカルLLMを実行するにはllama.cppの手動コンパイル、モデルの重み変換、メモリ設定の構成、モデルファイルの管理が必要です。One-Clickインストーラーはこのすべてを排除します。',
             '2026年4月現在、ここで説明する4つのツール — Ollama、LM Studio、Jan AI、GPT4All — はすべてllama.cppを共有推論バックエンドとして使用し、モデルファイルにGGUF形式を使用します。つまり、1つのツール用にダウンロードしたモデルは別のツールで使用でき、重複したコピーをダウンロードする必要はありません。',
           ],
@@ -5481,7 +5481,7 @@ print(response.choices[0].message.content)`,
           imageCaption: 'Ollamaインストール3ステップ：ollama.com/downloadにアクセス、.pkg/.exeインストーラーを実行、ターミナルでollama run llama3.2を実行してモデルを取得・起動。',
           title: 'Ollamaは何に最適ですか？',
           content: [
-            'Ollamaはバックグラウンドサービスとして動作し、`http://localhost:11434`でOpenAI互換REST APIを公開します。独自のグラフィカルインターフェイスはありません — ターミナルまたはOpen WebUIなどのサードパーティUI経由で操作します。',
+            '**Ollamaはバックグラウンドサービスとして動作し、`http://localhost:11434`でOpenAI互換REST APIを公開します。** 独自のグラフィカルインターフェイスはありません — ターミナルまたはOpen WebUIなどのサードパーティUI経由で操作します。',
             'Ollamaはollama.com/libraryで約200のモデルを含む厳選されたモデルライブラリを管理しています。各モデルは1つのコマンドでプルします：`ollama pull llama3.1:8b`。モデルは`~/.ollama/models`に保存されます。',
           ],
           rows: [
@@ -5503,7 +5503,7 @@ print(response.choices[0].message.content)`,
           id: 'lm-studio',
           title: 'LM Studioが初心者に最適な理由は？',
           content: [
-            'LM Studioは組み込みチャットインターフェイス、Hugging Faceを直接検索するモデルブラウザ、ローカルサーバーモードを備えたデスクトップアプリケーションです。最も洗練されたGUIオプションであり、ターミナルを使用したくないユーザーに最適な選択肢です。',
+            '**LM Studioは組み込みチャットインターフェイス、Hugging Faceを直接検索するモデルブラウザ、ローカルサーバーモードを備えたデスクトップアプリケーションです。** 最も洗練されたGUIオプションであり、ターミナルを使用したくないユーザーに最適な選択肢です。',
             'Ollamaの厳選ライブラリと異なり、LM StudioはHugging Faceから任意のGGUFモデルをダウンロード可能 — Ollamaライブラリにはない微調整やQuantization亜種を含む数千のモデルへのアクセスを提供。',
           ],
           rows: [
@@ -5520,7 +5520,7 @@ print(response.choices[0].message.content)`,
           id: 'jan-ai',
           title: 'Jan AIがプライバシーに最適な理由は？',
           content: [
-            'Jan AIはデータを完全にコントロールしたいユーザー向けに構築された、完全オープンソースのデスクトップアプリケーション（MIT ライセンス）です。すべてのチャット履歴は簡潔なJSONファイルでローカルに保存されます。テレメトリは収集されません。アプリは初期モデルダウンロード後、完全にオフラインで動作します。',
+            '**Jan AIはデータを完全にコントロールしたいユーザー向けに構築された、完全オープンソースのデスクトップアプリケーション（MIT ライセンス）です。** すべてのチャット履歴は簡潔なJSONファイルでローカルに保存されます。テレメトリは収集されません。アプリは初期モデルダウンロード後、完全にオフラインで動作します。',
             'Jan AIには組み込みチャットインターフェイス、エクステンションシステム、OpenAI互換サーバーが含まれます。そのモデルハブは主要なオープンモデル（Llama、Mistral、Gemma）をカバーし、Hugging Face直接ダウンロードリンクを提供します。',
           ],
           rows: [
@@ -5537,7 +5537,7 @@ print(response.choices[0].message.content)`,
           id: 'gpt4all',
           title: 'GPT4Allが最もシンプルなセットアップな理由は？',
           content: [
-            'Nomic AIが開発したGPT4Allは、可能な限り広い対象者向けに設計されています。インストーラーは依存関係のない単一実行ファイルです。インストール後、モデルブラウザを使用して1回のクリックでモデルをダウンロードして実行 — 任意の段階でターミナルは不要です。',
+            '**Nomic AIが開発したGPT4Allは、可能な限り広い対象者向けに設計されています。** インストーラーは依存関係のない単一実行ファイルです。インストール後、モデルブラウザを使用して1回のクリックでモデルをダウンロードして実行 — 任意の段階でターミナルは不要です。',
             'GPT4AllはLocalDocs機能をサポートしており、RAG（検索強化生成）を使用して自分のドキュメント（PDF、テキストファイル）とチャット可能 — 追加セットアップなし。プライベートドキュメント収集に対するナレッジベースクエリに特に有用。',
           ],
           rows: [
@@ -5733,7 +5733,7 @@ print(response.choices[0].message.content)`,
           id: 'what-makes-one-click',
           title: '什么是本地LLM"一键"工具？',
           content: [
-            '一键本地LLM安装器在单个下载中将三件事进行整合：推理引擎（通常是llama.cpp）、处理下载和存储的模型管理器，以及用户界面（聊天UI、API服务器或两者）。',
+            '**一键本地LLM安装器在单个下载中将三件事进行整合：推理引擎（通常是llama** .cpp）、处理下载和存储的模型管理器，以及用户界面（聊天UI、API服务器或两者）。',
             '没有这些工具，运行本地LLM需要手动编译llama.cpp、转换模型权重、配置内存设置以及管理模型文件。一键安装器消除了所有这些麻烦。',
             '截至 2026 年 4 月，本文涉及的 4 个工具 — Ollama、LM Studio、Jan AI 和 GPT4All — 都使用 llama.cpp 作为共享推理后端，并使用 GGUF 格式存储模型文件。这意味着为一个工具下载的模型可以被另一个工具使用 — 无需下载重复副本。',
           ],
@@ -5744,7 +5744,7 @@ print(response.choices[0].message.content)`,
           imageCaption: 'Ollama安装3步：访问ollama.com/download，运行.pkg或.exe安装器，在终端执行ollama run llama3.2拉取并运行模型。安装后在localhost:11434提供OpenAI兼容API。',
           title: 'Ollama最适合什么？',
           content: [
-            'Ollama 作为后台服务运行，并在 `http://localhost:11434` 暴露 OpenAI 兼容的 REST API。它没有自己的图形界面 — 通过终端或第三方 UI（如 Open WebUI）与之交互。',
+            '**Ollama 作为后台服务运行，并在 `http://localhost:11434` 暴露 OpenAI 兼容的 REST API。** 它没有自己的图形界面 — 通过终端或第三方 UI（如 Open WebUI）与之交互。',
             'Ollama 在 ollama.com/library 维护一个精选模型库，包含约200个模型。每个模型通过单个命令拉取：`ollama pull llama3.1:8b`。模型存储在 `~/.ollama/models`。',
           ],
           rows: [
@@ -5766,7 +5766,7 @@ print(response.choices[0].message.content)`,
           id: 'lm-studio',
           title: '为什么LM Studio最适合初学者？',
           content: [
-            'LM Studio是一个桌面应用程序，具有内置的聊天界面、直接搜索Hugging Face的模型浏览器以及本地服务器模式。这是最精致的GUI选项，是不想使用终端的用户的最佳选择。',
+            '**LM Studio是一个桌面应用程序，具有内置的聊天界面、直接搜索Hugging Face的模型浏览器以及本地服务器模式。** 这是最精致的GUI选项，是不想使用终端的用户的最佳选择。',
             '与Ollama的精选库不同，LM Studio可以从Hugging Face下载任何GGUF模型 — 提供对数千个模型的访问，包括Ollama库中不可用的微调和量化变体。',
           ],
           rows: [
@@ -5783,7 +5783,7 @@ print(response.choices[0].message.content)`,
           id: 'jan-ai',
           title: '为什么Jan AI最适合隐私保护？',
           content: [
-            'Jan AI是一个完全开源的桌面应用程序（MIT许可），专门为想要完全控制数据的用户而构建。所有聊天历史都存储在简单的JSON文件中。不收集任何遥测数据。初始模型下载后，应用完全离线工作。',
+            '**Jan AI是一个完全开源的桌面应用程序（MIT许可），专门为想要完全控制数据的用户而构建。** 所有聊天历史都存储在简单的JSON文件中。不收集任何遥测数据。初始模型下载后，应用完全离线工作。',
             'Jan AI包括内置的聊天界面、扩展系统和OpenAI兼容的服务器。其模型中心涵盖主要的开源模型（Llama、Mistral、Gemma），并提供Hugging Face直接下载链接。',
           ],
           rows: [
@@ -5800,7 +5800,7 @@ print(response.choices[0].message.content)`,
           id: 'gpt4all',
           title: '为什么GPT4All是最简单的设置？',
           content: [
-            '由Nomic AI开发的GPT4All为尽可能广的受众而设计。安装程序是单个可执行文件，无需依赖。安装后，模型浏览器让你只需点击一下即可下载并运行模型 — 任何阶段都不需要终端。',
+            '**由Nomic AI开发的GPT4All为尽可能广的受众而设计。** 安装程序是单个可执行文件，无需依赖。安装后，模型浏览器让你只需点击一下即可下载并运行模型 — 任何阶段都不需要终端。',
             'GPT4All支持"LocalDocs"功能，让你使用RAG（检索增强生成）与自己的文档（PDF、文本文件）聊天，无需任何额外设置。这使其特别适合对私有文档集合进行知识库查询。',
           ],
           rows: [
@@ -6539,7 +6539,7 @@ print(response.choices[0].message.content)`,
           id: 'can-you-run',
           title: 'Can You Run a Local LLM on a Laptop?',
           content: [
-            'Yes — with the right model size. A laptop with 8 GB RAM running a 7B model at Q4_K_M quantization produces 10–25 tokens/sec on CPU and 50–80 tokens/sec on Apple Silicon. This is slow compared to cloud APIs, but fast enough for interactive use.',
+            '**Yes — with the right model size.** A laptop with 8 GB RAM running a 7B model at Q4_K_M quantization produces 10–25 tokens/sec on CPU and 50–80 tokens/sec on Apple Silicon. This is slow compared to cloud APIs, but fast enough for interactive use.',
             'The practical ceiling on most 8 GB laptops is a 7B model. A 13B model at Q4_K_M requires ~9 GB of RAM — technically possible on 16 GB machines but leaves little headroom for the OS and other applications.',
             'For [what are local LLMs](/local-llms/what-are-local-llms) and a full explanation of RAM requirements, see the dedicated guide.',
           ],
@@ -6574,7 +6574,7 @@ print(response.choices[0].message.content)`,
           id: 'apple-vs-windows',
           title: 'Apple Silicon vs Windows Laptop: Which Is Better for Local LLMs?',
           content: [
-            'Apple Silicon MacBooks (M1 through M4) are the best consumer laptops for local LLM inference. The unified memory architecture means GPU and CPU share the same memory pool — an M3 MacBook Pro with 18 GB of memory can run a 13B model entirely in GPU memory, achieving 50–80 tok/sec.',
+            '**Apple Silicon MacBooks (M1 through M4) are the best consumer laptops for local LLM inference.** The unified memory architecture means GPU and CPU share the same memory pool — an M3 MacBook Pro with 18 GB of memory can run a 13B model entirely in GPU memory, achieving 50–80 tok/sec.',
             'Windows laptops with discrete NVIDIA GPUs can be faster if VRAM is sufficient (8 GB+). An NVIDIA RTX 4060 laptop GPU (8 GB VRAM) runs a 7B model at 60–90 tok/sec — comparable to Apple M3 Pro. The downside is higher battery drain and heat generation.',
             'Windows laptops running on integrated Intel Iris Xe or AMD Radeon integrated graphics use CPU inference only, resulting in 8–20 tok/sec for 7B models.',
           ],
@@ -6593,7 +6593,7 @@ print(response.choices[0].message.content)`,
           id: 'thermals',
           title: 'How Do You Handle Thermal Throttling on a Laptop',
           content: [
-            'Thermal throttling occurs when the CPU or GPU reaches its temperature limit and reduces clock speed to cool down. For local LLM inference, this typically kicks in after 10–15 minutes of sustained generation, reducing speed by 20–40%.',
+            '**Thermal throttling occurs when the CPU or GPU reaches its temperature limit and reduces clock speed to cool down.** For local LLM inference, this typically kicks in after 10–15 minutes of sustained generation, reducing speed by 20–40%.',
           ],
           items: [
             '**Use a laptop stand with airflow clearance** — raising the laptop 2–3 cm improves exhaust airflow and reduces throttling onset from 10 to 20+ minutes.',
@@ -6608,7 +6608,7 @@ print(response.choices[0].message.content)`,
           id: 'battery-drain',
           title: 'How Much Battery Does Running a Local LLM Use?',
           content: [
-            'Battery drain during local inference is significant. Active CPU inference on a 7B model draws 15–25 W on a typical laptop CPU, reducing battery life to 2–3 hours from a full charge on a 60 Wh battery.',
+            '**Battery drain during local inference is significant.** Active CPU inference on a 7B model draws 15–25 W on a typical laptop CPU, reducing battery life to 2–3 hours from a full charge on a 60 Wh battery.',
             'Apple Silicon is notably more efficient. An M3 MacBook Pro running a 7B model consumes approximately 12–18 W during inference, giving 3–4 hours of active generation from a full charge.',
             'For extended sessions, plug in. If you need battery-efficient local inference, use a 3B model at Q4_K_M — it draws 6–10 W and extends battery life to 5–6 hours on most laptops.',
           ],
@@ -6882,7 +6882,7 @@ print(response.choices[0].message.content)`,
         canYouRun: {
           title: 'Können Sie ein Local LLM auf einem Laptop ausführen?',
           content: [
-            'Ja — mit der richtigen Modellgröße. Ein Laptop mit 8 GB RAM, auf dem ein 7B-Modell in Q4_K_M-Quantisierung ausgeführt wird, erzeugt 10–25 Token/Sek. auf CPU und 50–80 Token/Sek. auf Apple Silicon. Dies ist langsam im Vergleich zu Cloud-APIs, aber schnell genug für interaktive Nutzung.',
+            '**Ja — mit der richtigen Modellgröße.** Ein Laptop mit 8 GB RAM, auf dem ein 7B-Modell in Q4_K_M-Quantisierung ausgeführt wird, erzeugt 10–25 Token/Sek. auf CPU und 50–80 Token/Sek. auf Apple Silicon. Dies ist langsam im Vergleich zu Cloud-APIs, aber schnell genug für interaktive Nutzung.',
             'Die praktische Obergrenze auf den meisten 8-GB-Laptops ist ein 7B-Modell. Ein 13B-Modell in Q4_K_M benötigt etwa 9 GB RAM — technisch möglich auf 16-GB-Maschinen, hinterlässt aber wenig Spielraum für OS und andere Anwendungen.',
             'Für [Was sind lokale LLMs](/local-llms/what-are-local-llms) und eine vollständige Erklärung der RAM-Anforderungen, siehe den entsprechenden Leitfaden.',
           ],
@@ -6914,7 +6914,7 @@ print(response.choices[0].message.content)`,
         appleSilicon: {
           title: 'Apple Silicon vs Windows-Laptop: Was ist besser für lokale LLMs?',
           content: [
-            'Ab April 2026 sind Apple Silicon MacBooks (M1 bis M4) die besten Consumer-Laptops für lokale LLM-Inferenz. Die [vereinheitlichte Speicher](/local-llms/gpu-vs-cpu-vs-apple-silicon) Architektur bedeutet, dass GPU und CPU den gleichen Speicherpool nutzen — ein M3 MacBook Pro mit 18 GB Speicher kann ein 13B-Modell vollständig im GPU-Speicher ausführen und erreicht 50–80 Token/Sek.',
+            '**Ab April 2026 sind Apple Silicon MacBooks (M1 bis M4) die besten Consumer-Laptops für lokale LLM-Inferenz.** Die [vereinheitlichte Speicher](/local-llms/gpu-vs-cpu-vs-apple-silicon) Architektur bedeutet, dass GPU und CPU den gleichen Speicherpool nutzen — ein M3 MacBook Pro mit 18 GB Speicher kann ein 13B-Modell vollständig im GPU-Speicher ausführen und erreicht 50–80 Token/Sek.',
             'Windows-Laptops mit diskreten NVIDIA-GPUs können schneller sein, wenn der VRAM ausreichend ist (8 GB+). Eine NVIDIA RTX 4060 Laptop-GPU (8 GB VRAM) führt ein 7B-Modell mit 60–90 Token/Sek. aus — vergleichbar mit Apple M3 Pro. Der Nachteil ist höherer Batterieverbrauch und Wärmeerzeugung.',
             'Windows-Laptops mit integrierter Intel Iris Xe oder AMD Radeon Grafik verwenden nur CPU-Inferenz, was zu 8–20 Token/Sek. für 7B-Modelle führt.',
           ],
@@ -6930,7 +6930,7 @@ print(response.choices[0].message.content)`,
         thermals: {
           title: 'Wie verhindern Sie Thermal Throttling auf einem Laptop?',
           content: [
-            'Thermal Throttling tritt auf, wenn die CPU oder GPU ihre Temperaturgrenze erreicht und die Taktgeschwindigkeit reduziert, um abzukühlen. Bei der lokalen LLM-Inferenz geschieht dies normalerweise nach 10–15 Minuten kontinuierlicher Generierung und reduziert die Geschwindigkeit um 20–40%.',
+            '**Thermal Throttling tritt auf, wenn die CPU oder GPU ihre Temperaturgrenze erreicht und die Taktgeschwindigkeit reduziert, um abzukühlen.** Bei der lokalen LLM-Inferenz geschieht dies normalerweise nach 10–15 Minuten kontinuierlicher Generierung und reduziert die Geschwindigkeit um 20–40%.',
           ],
           items: [
             '**Verwenden Sie einen Laptop-Ständer mit Luftzirkulation** — Das Anheben des Laptops um 2–3 cm verbessert die Abluftströmung und verzögert das Thermal Throttling von 10 auf 20+ Minuten.',
@@ -6944,7 +6944,7 @@ print(response.choices[0].message.content)`,
         battery: {
           title: 'Wie viel Akku verbraucht ein Local LLM?',
           content: [
-            'Der Batterieverschleiß während der lokalen Inferenz ist erheblich. Aktive CPU-Inferenz bei einem 7B-Modell zieht 15–25 W auf einer typischen Laptop-CPU, was die Akkulaufzeit bei einer 60-Wh-Batterie auf 2–3 Stunden bei vollständiger Ladung reduziert.',
+            '**Der Batterieverschleiß während der lokalen Inferenz ist erheblich.** Aktive CPU-Inferenz bei einem 7B-Modell zieht 15–25 W auf einer typischen Laptop-CPU, was die Akkulaufzeit bei einer 60-Wh-Batterie auf 2–3 Stunden bei vollständiger Ladung reduziert.',
             'Apple Silicon ist deutlich effizienter. Ein M3 MacBook Pro mit einem 7B-Modell verbraucht während der Inferenz etwa 12–18 W und ermöglicht 3–4 Stunden aktive Generierung bei vollständiger Ladung.',
             'Für längere Sitzungen, schließen Sie das Gerät an. Wenn Sie batterieeffiziente lokale Inferenz benötigen, verwenden Sie ein 3B-Modell mit Q4_K_M — es zieht 6–10 W und verlängert die Akkulaufzeit auf den meisten Laptops auf 5–6 Stunden.',
           ],
@@ -7151,7 +7151,7 @@ print(response.choices[0].message.content)`,
         canYouRun: {
           title: 'Pouvez-vous exécuter un Local LLM sur un ordinateur portable?',
           content: [
-            'Oui — avec la bonne taille de modèle. Un ordinateur portable avec 8 GB de RAM exécutant un modèle 7B en quantification Q4_K_M produit 10–25 token/sec sur CPU et 50–80 token/sec sur Apple Silicon. C\'est lent par rapport aux API cloud, mais assez rapide pour une utilisation interactive.',
+            '**Oui — avec la bonne taille de modèle.** Un ordinateur portable avec 8 GB de RAM exécutant un modèle 7B en quantification Q4_K_M produit 10–25 token/sec sur CPU et 50–80 token/sec sur Apple Silicon. C\'est lent par rapport aux API cloud, mais assez rapide pour une utilisation interactive.',
             'Le plafond pratique sur la plupart des ordinateurs portables 8 GB est un modèle 7B. Un modèle 13B en Q4_K_M nécessite environ 9 GB de RAM — techniquement possible sur les machines 16 GB mais laisse peu de marge pour l\'OS et les autres applications.',
             'Pour [ce que sont les Local LLMs](/local-llms/what-are-local-llms) et une explication complète des exigences en RAM, consultez le guide dédié.',
           ],
@@ -7183,7 +7183,7 @@ print(response.choices[0].message.content)`,
         appleSilicon: {
           title: 'Apple Silicon vs Ordinateur portable Windows: Lequel est meilleur pour les Local LLMs?',
           content: [
-            'À partir d\'avril 2026, les MacBooks Apple Silicon (M1 à M4) sont les meilleurs ordinateurs portables grand public pour l\'inférence Local LLM. L\'architecture [mémoire unifiée](/local-llms/gpu-vs-cpu-vs-apple-silicon) signifie que le GPU et le CPU partagent le même pool de mémoire — un MacBook Pro M3 avec 18 GB de mémoire peut exécuter un modèle 13B entièrement dans la mémoire GPU, atteignant 50–80 token/sec.',
+            '**À partir d\'avril 2026, les MacBooks Apple Silicon (M1 à M4) sont les meilleurs ordinateurs portables grand public pour l\'inférence Local LLM.** L\'architecture [mémoire unifiée](/local-llms/gpu-vs-cpu-vs-apple-silicon) signifie que le GPU et le CPU partagent le même pool de mémoire — un MacBook Pro M3 avec 18 GB de mémoire peut exécuter un modèle 13B entièrement dans la mémoire GPU, atteignant 50–80 token/sec.',
             'Les ordinateurs portables Windows avec GPU NVIDIA discrets peuvent être plus rapides si la VRAM est suffisante (8 GB+). Un GPU ordinateur portable NVIDIA RTX 4060 (8 GB VRAM) exécute un modèle 7B à 60–90 token/sec — comparable à Apple M3 Pro. L\'inconvénient est une consommation électrique plus élevée et une génération de chaleur plus importante.',
             'Les ordinateurs portables Windows exécutant un graphique intégré Intel Iris Xe ou AMD Radeon utilisent uniquement l\'inférence CPU, ce qui se traduit par 8–20 token/sec pour les modèles 7B.',
           ],
@@ -7199,7 +7199,7 @@ print(response.choices[0].message.content)`,
         thermals: {
           title: 'Comment gérer l\'étranglement thermique sur un ordinateur portable?',
           content: [
-            'L\'étranglement thermique se produit lorsque le CPU ou le GPU atteint sa limite de température et réduit la vitesse d\'horloge pour refroidir. Pour l\'inférence Local LLM, cela se produit généralement après 10–15 minutes de génération continue, réduisant la vitesse de 20–40%.',
+            '**L\'étranglement thermique se produit lorsque le CPU ou le GPU atteint sa limite de température et réduit la vitesse d\'horloge pour refroidir.** Pour l\'inférence Local LLM, cela se produit généralement après 10–15 minutes de génération continue, réduisant la vitesse de 20–40%.',
           ],
           items: [
             '**Utilisez un support d\'ordinateur portable avec dégagement d\'air** — surélever l\'ordinateur portable de 2–3 cm améliore le flux d\'échappement et réduit le début de l\'étranglement de 10 à 20+ minutes.',
@@ -7213,7 +7213,7 @@ print(response.choices[0].message.content)`,
         battery: {
           title: 'Combien de batterie consomme un Local LLM?',
           content: [
-            'La consommation de batterie lors de l\'inférence locale est importante. L\'inférence CPU active sur un modèle 7B consomme 15–25 W sur un CPU ordinateur portable typique, réduisant l\'autonomie de la batterie à 2–3 heures à partir d\'une charge complète sur une batterie 60 Wh.',
+            '**La consommation de batterie lors de l\'inférence locale est importante.** L\'inférence CPU active sur un modèle 7B consomme 15–25 W sur un CPU ordinateur portable typique, réduisant l\'autonomie de la batterie à 2–3 heures à partir d\'une charge complète sur une batterie 60 Wh.',
             'Apple Silicon est nettement plus efficace. Un MacBook Pro M3 exécutant un modèle 7B consomme environ 12–18 W lors de l\'inférence, offrant 3–4 heures de génération active à partir d\'une charge complète.',
             'Pour les sessions prolongées, connectez-vous. Si vous avez besoin d\'une inférence locale économe en batterie, utilisez un modèle 3B en Q4_K_M — il consomme 6–10 W et prolonge l\'autonomie de la batterie à 5–6 heures sur la plupart des ordinateurs portables.',
           ],
@@ -7418,7 +7418,7 @@ print(response.choices[0].message.content)`,
         canYouRun: {
           title: 'ノートパソコンでローカルLLMを実行できますか？',
           content: [
-            'はい—適切なモデルサイズで。8GBのRAMを搭載したノートパソコンがQ4_K_M量子化で7Bモデルを実行する場合、CPUで10–25トークン/秒、Apple Siliconで50–80トークン/秒を生成します。これはクラウドAPIと比較して遅いですが、対話的な使用には十分な速度です。',
+            '**はい—適切なモデルサイズで。** 8GBのRAMを搭載したノートパソコンがQ4_K_M量子化で7Bモデルを実行する場合、CPUで10–25トークン/秒、Apple Siliconで50–80トークン/秒を生成します。これはクラウドAPIと比較して遅いですが、対話的な使用には十分な速度です。',
             'ほとんどの8GBノートパソコンの実用的な上限は7Bモデルです。Q4_K_MでのQ4_K_Mモデルは約9GBのRAMが必要です—16GBマシンでは技術的に可能ですが、OSと他のアプリケーションの余裕がほとんどありません。',
             '[ローカルLLMとは何か](/local-llms/what-are-local-llms)とRAM要件の完全な説明については、専用ガイドを参照してください。',
           ],
@@ -7450,7 +7450,7 @@ print(response.choices[0].message.content)`,
         appleSilicon: {
           title: 'Apple Silicon vs Windowsノートパソコン：ローカルLLMに最適なのはどちらですか？',
           content: [
-            '2026年4月現在、Apple Silicon MacBook（M1からM4）はローカルLLM推論向けの最高のコンシューマーノートパソコンです。[統合メモリ](/local-llms/gpu-vs-cpu-vs-apple-silicon)アーキテクチャは、GPUとCPUが同じメモリプールを共有することを意味します—18GBのメモリを備えたM3 MacBook ProはGPUメモリ全体で13Bモデルを実行でき、50–80トークン/秒を実現できます。',
+            '**2026年4月現在、Apple Silicon MacBook（M1からM4）はローカルLLM推論向けの最高のコンシューマーノートパソコンです。** [統合メモリ](/local-llms/gpu-vs-cpu-vs-apple-silicon)アーキテクチャは、GPUとCPUが同じメモリプールを共有することを意味します—18GBのメモリを備えたM3 MacBook ProはGPUメモリ全体で13Bモデルを実行でき、50–80トークン/秒を実現できます。',
             'VRAMが十分（8GB以上）な場合、専用NVIDIAグラフィックス搭載のWindowsノートパソコンがより高速になる可能性があります。NVIDIA RTX 4060ノートパソコンGPU（8GB VRAM）は60–90トークン/秒で7Bモデルを実行します—Apple M3 Proと同等です。欠点は、バッテリー消費量が多く、熱が多く生成されます。',
             'Intel Iris XeまたはAMD Radeon統合グラフィックス搭載のWindowsノートパソコンはCPU推論のみを使用し、7Bモデルで8–20トークン/秒になります。',
           ],
@@ -7466,7 +7466,7 @@ print(response.choices[0].message.content)`,
         thermals: {
           title: 'ノートパソコンでサーマルスロットリングをどのように処理しますか？',
           content: [
-            'サーマルスロットリングは、CPUまたはGPUが温度制限に達し、冷却するためにクロック速度を低下させるときに発生します。ローカルLLM推論の場合、これは通常、継続的な生成後10–15分で発生し、速度を20–40%削減します。',
+            '**サーマルスロットリングは、CPUまたはGPUが温度制限に達し、冷却するためにクロック速度を低下させるときに発生します。** ローカルLLM推論の場合、これは通常、継続的な生成後10–15分で発生し、速度を20–40%削減します。',
           ],
           items: [
             '**エアフロー間隙のあるノートパソコンスタンドを使用します**—ノートパソコンを2–3cm持ち上げると、排気気流が向上し、スロットリングの開始が10から20+分に遅延します。',
@@ -7480,7 +7480,7 @@ print(response.choices[0].message.content)`,
         battery: {
           title: 'ローカルLLMはどのくらいのバッテリーを消費しますか？',
           content: [
-            'ローカル推論中のバッテリー消費量は非常に多いです。7BモデルでのアクティブなCPU推論は、一般的なノートパソコンCPUで15–25Wを引き出し、60Wh バッテリーのフル充電からバッテリー寿命を2–3時間に削減します。',
+            '**ローカル推論中のバッテリー消費量は非常に多いです。** 7BモデルでのアクティブなCPU推論は、一般的なノートパソコンCPUで15–25Wを引き出し、60Wh バッテリーのフル充電からバッテリー寿命を2–3時間に削減します。',
             'Apple Siliconは著しく効率的です。M3 MacBook Proで7Bモデルを実行する場合、推論中に約12–18Wを消費し、フル充電から3–4時間のアクティブな生成を提供します。',
             '長いセッションの場合は接続してください。バッテリー効率の良いローカル推論が必要な場合は、Q4_K_MでのQ4_K_M 3Bモデルを使用します—それは6–10Wを引き出し、ほとんどのノートパソコンのバッテリー寿命を5–6時間に延長します。',
           ],
@@ -7685,7 +7685,7 @@ print(response.choices[0].message.content)`,
         canYouRun: {
           title: '您可以在笔记本上运行本地LLM吗？',
           content: [
-            '是的 — 使用合适的模型大小。配有8GB RAM的笔记本电脑以Q4_K_M量化运行7B模型，在CPU上产生10–25令牌/秒，在Apple Silicon上产生50–80令牌/秒。与云API相比这很慢，但足够快用于交互式使用。',
+            '**是的 — 使用合适的模型大小。** 配有8GB RAM的笔记本电脑以Q4_K_M量化运行7B模型，在CPU上产生10–25令牌/秒，在Apple Silicon上产生50–80令牌/秒。与云API相比这很慢，但足够快用于交互式使用。',
             '大多数8GB笔记本电脑的实际上限是7B模型。Q4_K_M中的13B模型需要约9GB RAM — 在16GB机器上在技术上可行，但为操作系统和其他应用程序留下的余地很少。',
             '对于[什么是本地LLM](/local-llms/what-are-local-llms)和RAM要求的完整说明，请参阅专用指南。',
           ],
@@ -7717,7 +7717,7 @@ print(response.choices[0].message.content)`,
         appleSilicon: {
           title: 'Apple Silicon vs Windows笔记本：哪个对本地LLM更好？',
           content: [
-            '截至2026年4月，Apple Silicon MacBook（M1至M4）是本地LLM推理的最佳消费级笔记本电脑。[统一内存](/local-llms/gpu-vs-cpu-vs-apple-silicon)架构意味着GPU和CPU共享同一内存池 — 配有18GB内存的M3 MacBook Pro可以完全在GPU内存中运行13B模型，达到50–80令牌/秒。',
+            '**截至2026年4月，Apple Silicon MacBook（M1至M4）是本地LLM推理的最佳消费级笔记本电脑。** [统一内存](/local-llms/gpu-vs-cpu-vs-apple-silicon)架构意味着GPU和CPU共享同一内存池 — 配有18GB内存的M3 MacBook Pro可以完全在GPU内存中运行13B模型，达到50–80令牌/秒。',
             '带有离散NVIDIA GPU的Windows笔记本电脑如果VRAM足够（8GB以上）可能更快。NVIDIA RTX 4060笔记本电脑GPU（8GB VRAM）以60–90令牌/秒运行7B模型 — 可与Apple M3 Pro相比。缺点是更高的电池消耗和更多的热量生成。',
             '运行Intel Iris Xe或AMD Radeon集成显卡的Windows笔记本电脑仅使用CPU推理，对7B模型产生8–20令牌/秒。',
           ],
@@ -7733,7 +7733,7 @@ print(response.choices[0].message.content)`,
         thermals: {
           title: '如何处理笔记本电脑上的热节流？',
           content: [
-            '热节流发生在CPU或GPU达到其温度极限并降低时钟速度以冷却时。对于本地LLM推理，这通常在10–15分钟的持续生成后发生，速度降低20–40%。',
+            '**热节流发生在CPU或GPU达到其温度极限并降低时钟速度以冷却时。** 对于本地LLM推理，这通常在10–15分钟的持续生成后发生，速度降低20–40%。',
           ],
           items: [
             '**使用带气流间隙的笔记本电脑支架** — 将笔记本电脑抬起2–3厘米可改善排气气流，并将节流开始时间从10延迟到20+分钟。',
@@ -7747,7 +7747,7 @@ print(response.choices[0].message.content)`,
         battery: {
           title: '运行本地LLM消耗多少电池？',
           content: [
-            '本地推理期间的电池消耗是重大的。7B模型上的活跃CPU推理在典型笔记本电脑CPU上消耗15–25W，将60Wh电池的电池寿命从完全充电时间缩短至2–3小时。',
+            '**本地推理期间的电池消耗是重大的。** 7B模型上的活跃CPU推理在典型笔记本电脑CPU上消耗15–25W，将60Wh电池的电池寿命从完全充电时间缩短至2–3小时。',
             'Apple Silicon明显更高效。运行7B模型的M3 MacBook Pro在推理期间消耗约12–18W，在完全充电时提供3–4小时的活跃生成。',
             '对于较长的会话，请插入。如果您需要电池高效的本地推理，请在Q4_K_M中使用3B模型 — 它消耗6–10W，并在大多数笔记本电脑上将电池寿命延长至5–6小时。',
           ],
@@ -7950,7 +7950,7 @@ print(response.choices[0].message.content)`,
         whyNotAutoPrivate: {
           title: 'Why Are Local LLMs Not Automatically Private?',
           content: [
-            'The model inference itself is private — your prompts are never sent to the model provider\'s servers. But three other data flows can leak information:',
+            '**The model inference itself is private — your prompts are never sent to the model provider\'s servers.** But three other data flows can leak information:',
           ],
           items: [
             '**Application telemetry**: LM Studio, GPT4All, and some other tools collect anonymous usage analytics by default. These may include session counts, model names used, and performance metrics.',
@@ -7978,7 +7978,7 @@ print(response.choices[0].message.content)`,
         modelProvenance: {
           title: 'Where to Download Local LLM Model Weights Safely',
           content: [
-            'Model weights are large binary files. A malicious GGUF file could exploit vulnerabilities in the parser used by llama.cpp. As of 2026, no widespread GGUF-based malware has been confirmed, but the attack surface exists.',
+            '**Model weights are large binary files.** A malicious GGUF file could exploit vulnerabilities in the parser used by llama.cpp. As of 2026, no widespread GGUF-based malware has been confirmed, but the attack surface exists.',
           ],
           items: [
             '**Hugging Face** (huggingface.co): the primary source for open models. Each file has a verified SHA256 hash. Stick to models from well-known publishers (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
@@ -8194,7 +8194,7 @@ print(response.choices[0].message.content)`,
       whyNotAutoPrivate: {
         title: 'Warum sind lokale LLMs nicht automatisch privat?',
         content: [
-          'Die Modell-Inferenz selbst ist privat — Ihre Prompts werden niemals an die Server des Modellanbieters gesendet. Aber drei weitere Datenflüsse können zu Informationslecks führen:',
+          '**Die Modell-Inferenz selbst ist privat — Ihre Prompts werden niemals an die Server des Modellanbieters gesendet.** Aber drei weitere Datenflüsse können zu Informationslecks führen:',
         ],
         items: [
           '**Anwendungs-Telemetrie**: LM Studio, GPT4All und einige andere Tools erfassen standardmäßig anonyme Nutzungsanalysen. Diese können Sitzungszahlen, verwendete Modellnamen und Leistungsmetriken enthalten.',
@@ -8230,7 +8230,7 @@ print(response.choices[0].message.content)`,
       modelProvenance: {
         title: 'Wo Sie lokale LLM-Modellgewichte sicher herunterladen',
         content: [
-          'Modellgewichte sind große Binärdateien. Eine bösartige GGUF-Datei könnte Schwachstellen im von llama.cpp verwendeten Parser ausnutzen. Ab 2026 wurde keine weit verbreitete GGUF-basierte Malware bestätigt, aber die Angriffsfläche existiert.',
+          '**Modellgewichte sind große Binärdateien.** Eine bösartige GGUF-Datei könnte Schwachstellen im von llama.cpp verwendeten Parser ausnutzen. Ab 2026 wurde keine weit verbreitete GGUF-basierte Malware bestätigt, aber die Angriffsfläche existiert.',
         ],
         items: [
           '**Hugging Face** (huggingface.co): die primäre Quelle für offene Modelle. Jede Datei hat einen verifizierten SHA256-Hash. Halten Sie sich an Modelle von bekannten Verlegern (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
@@ -8444,7 +8444,7 @@ print(response.choices[0].message.content)`,
       whyNotAutoPrivate: {
         title: 'Pourquoi les LLM Locaux Ne Sont Pas Automatiquement Privés ?',
         content: [
-          'L\'inférence du modèle est privée — vos invites ne partent jamais aux serveurs du fournisseur. Trois autres flux de données risquent des fuites :',
+          '**L\'inférence du modèle est privée — vos invites ne partent jamais aux serveurs du fournisseur.** Trois autres flux de données risquent des fuites :',
         ],
         items: [
           '**Télémétrie applicative** : LM Studio, GPT4All collectent par défaut des analyses d\'utilisation anonymes, incluant comptages de sessions et métriques de performance.',
@@ -8472,7 +8472,7 @@ print(response.choices[0].message.content)`,
       modelProvenance: {
         title: 'Sources Fiables pour Télécharger les Poids de Modèles',
         content: [
-          'Poids de modèles : fichiers binaires volumineux. GGUF malveillant exploite failles llama.cpp. 2026 : pas de malware GGUF confirmé, mais surface d\'attaque existe.',
+          '**Poids de modèles : fichiers binaires volumineux.** GGUF malveillant exploite failles llama.cpp. 2026 : pas de malware GGUF confirmé, mais surface d\'attaque existe.',
         ],
         items: [
           '**Hugging Face** (huggingface.co) : source primaire. Hash SHA256 vérifié. Préférez éditeurs établis (Meta, Google, Microsoft, Mistral AI, Qwen/Alibaba).',
@@ -8650,7 +8650,7 @@ print(response.choices[0].message.content)`,
       whyNotAutoPrivate: {
         title: 'ローカルLLMが自動的にプライベートでない理由',
         content: [
-          'モデル推論自体はプライベートです。プロンプトはモデルプロバイダーのサーバーに送信されません。しかし、他の3つのデータフローが情報漏洩を引き起こす可能性があります：',
+          '**モデル推論自体はプライベートです。** プロンプトはモデルプロバイダーのサーバーに送信されません。しかし、他の3つのデータフローが情報漏洩を引き起こす可能性があります：',
         ],
         items: [
           '**アプリケーションテレメトリ**：LM Studio、GPT4Allおよびその他のツールはデフォルトで匿名の使用分析を収集します。セッション数、使用されたモデル名、パフォーマンスメトリクスが含まれる場合があります。',
@@ -8865,7 +8865,7 @@ print(response.choices[0].message.content)`,
       whyNotAutoPrivate: {
         title: '为什么本地LLM不自动保护隐私？',
         content: [
-          '模型推理本身是私密的——您的提示永远不会发送到模型提供商的服务器。但是，其他三个数据流可能导致信息泄露：',
+          '**模型推理本身是私密的——您的提示永远不会发送到模型提供商的服务器。** 但是，其他三个数据流可能导致信息泄露：',
         ],
         items: [
           '**应用程序遥测**：LM Studio、GPT4All和其他一些工具默认收集匿名使用分析。这可能包括会话计数、使用的模型名称和性能指标。',
@@ -9086,7 +9086,7 @@ print(response.choices[0].message.content)`,
         qualityGap: {
           title: 'Limitation 1: Output Quality Gap vs Frontier Cloud Models',
           content: [
-            'The most significant limitation of local LLMs is output quality on complex tasks. Frontier cloud models — OpenAI GPT-4o, Anthropic Claude 4.6 Opus, Google Gemini 2.5 Pro — are trained on more data, with more compute, and with more sophisticated RLHF fine-tuning than any publicly available local model.',
+            '**The most significant limitation of local LLMs is output quality on complex tasks.** Frontier cloud models — OpenAI GPT-4o, Anthropic Claude 4.6 Opus, Google Gemini 2.5 Pro — are trained on more data, with more compute, and with more sophisticated RLHF fine-tuning than any publicly available local model.',
             'On MMLU (general knowledge), HumanEval (Python coding), and MATH benchmarks, frontier models score 85–92%. The best locally-runnable 70B models score 75–85%. Consumer-friendly 7B models score 55–70%.',
             'The quality gap is task-dependent. For summarization, simple Q&A, translation, and code explanation, a 7B model produces results that are difficult to distinguish from GPT-4o in blind evaluations. The gap is widest on: complex multi-step reasoning, advanced mathematics, nuanced long-form writing, and tasks requiring current world knowledge.',
           ],
@@ -9103,7 +9103,7 @@ print(response.choices[0].message.content)`,
         speed: {
           title: 'Limitation 2: Inference Speed on Consumer Hardware',
           content: [
-            'Cloud APIs process tokens on dedicated server hardware with NVIDIA H100 or A100 GPUs. Consumer hardware — even high-end laptops and desktop GPUs — cannot match this throughput.',
+            '**Cloud APIs process tokens on dedicated server hardware with NVIDIA H100 or A100 GPUs.** Consumer hardware — even high-end laptops and desktop GPUs — cannot match this throughput.',
             'GPT-4o generates approximately 80–150 tokens/sec under typical load. A local 7B model on a modern laptop CPU generates 10–25 tokens/sec — 4–10× slower. On an NVIDIA RTX 4090 (the fastest consumer GPU), the same 7B model reaches 130–160 tokens/sec — comparable to cloud speed, but the hardware costs $1,600+.',
             'For interactive chat use, the speed difference is noticeable but tolerable at 20+ tok/sec. For batch processing (summarizing hundreds of documents), the speed gap becomes a significant constraint.',
           ],
@@ -9111,7 +9111,7 @@ print(response.choices[0].message.content)`,
         hardware: {
           title: 'Limitation 3: Hardware Requirements and Cost',
           content: [
-            'Running a capable local model (13B+) requires hardware that not every user has. The minimum for a genuinely useful local LLM experience — matching GPT-3.5 quality — is 16 GB RAM and a modern CPU or Apple Silicon chip. This rules out roughly half of consumer laptops currently in use.',
+            '**Running a capable local model (13B+) requires hardware that not every user has.** The minimum for a genuinely useful local LLM experience — matching GPT-3.5 quality — is 16 GB RAM and a modern CPU or Apple Silicon chip. This rules out roughly half of consumer laptops currently in use.',
             'Matching frontier model quality locally requires a 70B model, which demands 40–48 GB of RAM — only available on high-end workstations or Mac Studio / Mac Pro with 64+ GB unified memory.',
           ],
           rows: [
@@ -9126,7 +9126,7 @@ print(response.choices[0].message.content)`,
         noInternet: {
           title: 'Limitation 4: No Real-Time Information',
           content: [
-            'Local LLMs have a training data cutoff. They cannot access the internet, cannot retrieve current news, cannot check live prices or stock data, and cannot visit URLs. A model trained with a cutoff of early 2024 will not know about events after that date.',
+            '**Local LLMs have a training data cutoff.** They cannot access the internet, cannot retrieve current news, cannot check live prices or stock data, and cannot visit URLs. A model trained with a cutoff of early 2024 will not know about events after that date.',
             'Cloud models with browsing capabilities (GPT-4o with web search, Gemini with Google Search integration) can retrieve and cite current information. No consumer-grade local inference tool replicates this capability without significant additional infrastructure (RAG with a live web crawler).',
             'For tasks that require current information — news summaries, recent product comparisons, live data analysis — cloud APIs are the practical choice. See [Local LLMs vs Cloud APIs](/local-llms/local-llms-vs-cloud-apis) for a full comparison.',
           ],
@@ -9134,7 +9134,7 @@ print(response.choices[0].message.content)`,
         setup: {
           title: 'Limitation 5: Setup and Maintenance Complexity',
           content: [
-            'A cloud API requires creating an account, generating an API key, and making an HTTP call — typically 5–10 minutes total. A local LLM requires installing an inference engine, downloading a model file (2–50 GB), configuring GPU offloading, and troubleshooting driver issues.',
+            '**A cloud API requires creating an account, generating an API key, and making an HTTP call — typically 5–10 minutes total.** A local LLM requires installing an inference engine, downloading a model file (2–50 GB), configuring GPU offloading, and troubleshooting driver issues.',
             'Maintenance adds ongoing complexity: new model releases must be manually downloaded, inference tools require updates, and hardware compatibility issues arise with OS updates. For a user who wants to focus on using AI rather than managing infrastructure, cloud APIs have a dramatically lower operational burden.',
             'See [Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) for fixes to the most common setup errors.',
           ],
@@ -9142,7 +9142,7 @@ print(response.choices[0].message.content)`,
         contextWindow: {
           title: 'Limitation 6: Context Window Constraints',
           content: [
-            'Most practical local models support 4K–128K token context windows. Google Gemini 2.5 Pro supports 1M tokens; OpenAI GPT-4o supports 128K tokens. While 128K is available locally (Llama 3.1, Qwen2.5), the inference speed for very long contexts degrades significantly — processing a 100K token context on a 7B model may take several minutes on consumer hardware.',
+            '**Most practical local models support 4K–128K token context windows.** Google Gemini 2.5 Pro supports 1M tokens; OpenAI GPT-4o supports 128K tokens. While 128K is available locally (Llama 3.1, Qwen2.5), the inference speed for very long contexts degrades significantly — processing a 100K token context on a 7B model may take several minutes on consumer hardware.',
             'For tasks involving very long documents (entire books, large codebases, hours of transcripts), cloud APIs with large context windows are more practical than local inference.',
           ],
         },
@@ -9252,7 +9252,7 @@ print(response.choices[0].message.content)`,
           id: 'how-we-ranked',
           title: 'How These Models Were Ranked',
           content: [
-            'Rankings are based on three benchmarks: MMLU (57-subject knowledge test, higher = better general intelligence), HumanEval (Python code generation, higher = better coding ability), and MATH (competition math problems, higher = stronger reasoning). Scores are from published papers and the Open LLM Leaderboard as of Q1 2026.',
+            '**Rankings are based on three benchmarks: MMLU (57-subject knowledge test, higher = better general intelligence), HumanEval (Python code generation, higher = better coding ability), and MATH (competition math problems, higher = stronger reasoning).** Scores are from published papers and the Open LLM Leaderboard as of Q1 2026.',
             'Hardware requirements are calculated for Q4_K_M quantization — the standard beginner setting that balances quality and RAM use. For a primer on quantization, see [LLM Quantization Explained](/local-llms/llm-quantization-explained).',
             'All models are available via Ollama. For installation, see [How to Install Ollama](/local-llms/how-to-install-ollama).',
           ],
@@ -9261,7 +9261,7 @@ print(response.choices[0].message.content)`,
           id: 'llama-3-3-70b',
           title: '#1 Meta Llama 3.3 70B — Best Overall Local LLM in 2026',
           content: [
-            'Meta Llama 3.3 70B is the best open-weight model available for local inference in 2026. It scores 82% on MMLU, 88% on HumanEval, and 77% on MATH — matching or exceeding GPT-4 (2023) on all three benchmarks. The 128K context window handles long documents and extended conversations.',
+            '**Meta Llama 3.3 70B is the best open-weight model available for local inference in 2026.** It scores 82% on MMLU, 88% on HumanEval, and 77% on MATH — matching or exceeding GPT-4 (2023) on all three benchmarks. The 128K context window handles long documents and extended conversations.',
             'The main constraint is hardware: Q4_K_M quantization requires approximately 40 GB of RAM. This rules out most consumer laptops. It runs well on a Mac Studio M2 Ultra (64+ GB), a high-end workstation with 64 GB RAM, or split across a GPU and system RAM using Ollama\'s layer offloading.',
           ],
           rows: [
@@ -9277,7 +9277,7 @@ print(response.choices[0].message.content)`,
           id: 'qwen2-5-72b',
           title: '#2 Qwen2.5 72B — Best for Coding and Multilingual Tasks',
           content: [
-            'Qwen2.5 72B from Alibaba matches Llama 3.3 70B on general benchmarks and surpasses it on coding: 87% HumanEval vs. 88% for Llama 3.3. It supports 29 languages natively (including Chinese, Japanese, Korean, Arabic) and uses a 128K context window. JSON mode and function calling are built in.',
+            '**Qwen2.5 72B from Alibaba matches Llama 3.3 70B on general benchmarks and surpasses it on coding: 87% HumanEval vs.** 88% for Llama 3.3. It supports 29 languages natively (including Chinese, Japanese, Korean, Arabic) and uses a 128K context window. JSON mode and function calling are built in.',
             'For teams processing non-English content or building multilingual applications, Qwen2.5 72B is the recommended choice over Llama 3.3 70B. See [Qwen vs Llama vs Mistral comparison](/local-llms/qwen-vs-llama-vs-mistral) for language-specific benchmarks.',
           ],
           rows: [
@@ -9293,7 +9293,7 @@ print(response.choices[0].message.content)`,
           id: 'mistral-small-3-1',
           title: '#3 Mistral Small 3.1 24B — Best 7B-Class Model for 16 GB RAM',
           content: [
-            'Mistral Small 3.1 is a 24B-parameter model that fits in 16 GB RAM at Q4_K_M quantization (~14 GB). It scores 79% on MMLU and 74% on HumanEval — significantly above any true 7B model. The 128K context window is standard for Mistral\'s 2025+ releases.',
+            '**Mistral Small 3.1 is a 24B-parameter model that fits in 16 GB RAM at Q4_K_M quantization (~14 GB).** It scores 79% on MMLU and 74% on HumanEval — significantly above any true 7B model. The 128K context window is standard for Mistral\'s 2025+ releases.',
             'Mistral Small 3.1 is the recommended upgrade path for users who have been running 7B models and want better quality without requiring the 40 GB RAM of a 70B model.',
           ],
           rows: [
@@ -9309,7 +9309,7 @@ print(response.choices[0].message.content)`,
           id: 'gemma-3-9b',
           title: '#4 Google Gemma 3 9B — Best Mid-Range Model for 8–16 GB RAM',
           content: [
-            'Gemma 3 9B is Google\'s open-weight model in the 9B parameter class. It scores 73% on MMLU and 68% on HumanEval, placing it above all 7B models and making it the best option for users with 8 GB RAM who want a step above standard 7B quality.',
+            '**Gemma 3 9B is Google\'s open-weight model in the 9B parameter class.** It scores 73% on MMLU and 68% on HumanEval, placing it above all 7B models and making it the best option for users with 8 GB RAM who want a step above standard 7B quality.',
             'Gemma 3 9B supports vision (image input) in its multimodal variant — making it one of the few locally-runnable models that can process images on consumer hardware. Text-only tasks use the standard variant.',
           ],
           rows: [
@@ -9325,7 +9325,7 @@ print(response.choices[0].message.content)`,
           id: 'phi-4-mini',
           title: '#5 Microsoft Phi-4 Mini 3.8B — Best Model Under 4 GB RAM',
           content: [
-            'Microsoft Phi-4 Mini 3.8B achieves 68% on MMLU — matching models twice its size — through training on high-quality synthetic reasoning data. It requires only ~2.5 GB of RAM at Q4_K_M and runs at 30–50 tok/sec on any modern laptop CPU.',
+            '**Microsoft Phi-4 Mini 3.8B achieves 68% on MMLU — matching models twice its size — through training on high-quality synthetic reasoning data.** It requires only ~2.5 GB of RAM at Q4_K_M and runs at 30–50 tok/sec on any modern laptop CPU.',
             'Phi-4 Mini is the recommended model for machines with 4–8 GB RAM or any situation where response speed matters more than maximum quality. Its reasoning performance significantly outpaces Llama 3.2 3B at the same hardware tier.',
           ],
           rows: [
@@ -9576,7 +9576,7 @@ print(response.choices[0].message.content)`,
         howWeRanked: {
           title: 'Comment ces modèles ont été classés',
           content: [
-            'Les classements sont basés sur trois références : MMLU (test de connaissances sur 57 sujets, plus élevé = meilleure intelligence générale), HumanEval (génération de code Python, plus élevé = meilleure capacité de codage) et MATH (problèmes de mathématiques compétitives, plus élevé = raisonnement plus fort). Les scores proviennent de documents publiés et du Leaderboard Open LLM à partir de Q1 2026.',
+            '**Les classements sont basés sur trois références : MMLU (test de connaissances sur 57 sujets, plus élevé = meilleure intelligence générale), HumanEval (génération de code Python, plus élevé = meilleure capacité de codage) et MATH (problèmes de mathématiques compétitives, plus élevé = raisonnement plus fort).** Les scores proviennent de documents publiés et du Leaderboard Open LLM à partir de Q1 2026.',
             'Les exigences matérielles sont calculées pour la quantification Q4_K_M — le paramètre standard pour débuter qui équilibre la qualité et l\'utilisation de RAM. Pour une introduction à la quantification, consultez [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr).',
             'Tous les modèles sont disponibles via Ollama. Pour l\'installation, consultez [How to Install Ollama](/local-llms/how-to-install-ollama?lang=fr).',
           ],
@@ -9584,7 +9584,7 @@ print(response.choices[0].message.content)`,
         llama33: {
           title: '#1 Meta Llama 3.3 70B — Best Overall LLM local 2026',
           content: [
-            'Meta Llama 3.3 70B est le meilleur modèle de poids ouvert disponible pour l\'inférence locale en 2026. Il marque 82 % sur MMLU, 88 % sur HumanEval et 77 % sur MATH — égalant ou surpassant GPT-4 (2023) sur les trois benchmarks. La fenêtre de contexte 128K traite les longs documents et les conversations étendues.',
+            '**Meta Llama 3.3 70B est le meilleur modèle de poids ouvert disponible pour l\'inférence locale en 2026.** Il marque 82 % sur MMLU, 88 % sur HumanEval et 77 % sur MATH — égalant ou surpassant GPT-4 (2023) sur les trois benchmarks. La fenêtre de contexte 128K traite les longs documents et les conversations étendues.',
             'La principale contrainte est le matériel : la quantification Q4_K_M nécessite environ 40 GB de RAM. Cela exclut la plupart des ordinateurs portables grand public. Il fonctionne bien sur un Mac Studio M2 Ultra (64+ GB), une station de travail haut de gamme avec 64 GB RAM, ou réparti sur une GPU et RAM système à l\'aide du décalage de couche d\'Ollama.',
           ],
           rows: [
@@ -9599,7 +9599,7 @@ print(response.choices[0].message.content)`,
         qwen25_72: {
           title: '#2 Qwen2.5 72B — Best for Coding et tâches multilingues',
           content: [
-            'Qwen2.5 72B d\'Alibaba correspond à Llama 3.3 70B sur les benchmarks généraux et le surpasse dans le code : 87 % HumanEval contre 88 % pour Llama 3.3. Il supporte 29 langues nativement (y compris le chinois, le japonais, le coréen, l\'arabe) et utilise une fenêtre de contexte 128K. Le mode JSON et l\'appel de fonction sont intégrés.',
+            '**Qwen2.5 72B d\'Alibaba correspond à Llama 3.3 70B sur les benchmarks généraux et le surpasse dans le code : 87 % HumanEval contre 88 % pour Llama 3.3.** Il supporte 29 langues nativement (y compris le chinois, le japonais, le coréen, l\'arabe) et utilise une fenêtre de contexte 128K. Le mode JSON et l\'appel de fonction sont intégrés.',
             'Pour les équipes traitant du contenu non-anglais ou construisant des applications multilingues, Qwen2.5 72B est le choix recommandé par rapport à Llama 3.3 70B. Consultez [Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=fr) pour les benchmarks spécifiques aux langues.',
           ],
           rows: [
@@ -9614,7 +9614,7 @@ print(response.choices[0].message.content)`,
         mistralSmall: {
           title: '#3 Mistral Small 3.1 24B — Best 7B-classe pour 16 GB RAM',
           content: [
-            'Mistral Small 3.1 est un modèle de 24B paramètres qui rentre dans 16 GB RAM avec quantification Q4_K_M (~14 GB). Il marque 79 % sur MMLU et 74 % sur HumanEval — nettement au-dessus de tout vrai modèle 7B. La fenêtre de contexte 128K est standard pour les versions Mistral 2025+.',
+            '**Mistral Small 3.1 est un modèle de 24B paramètres qui rentre dans 16 GB RAM avec quantification Q4_K_M (~14 GB).** Il marque 79 % sur MMLU et 74 % sur HumanEval — nettement au-dessus de tout vrai modèle 7B. La fenêtre de contexte 128K est standard pour les versions Mistral 2025+.',
             'Mistral Small 3.1 est le chemin de mise à niveau recommandé pour les utilisateurs qui ont exécuté des modèles 7B et veulent une meilleure qualité sans les 40 GB RAM d\'un modèle 70B.',
           ],
           rows: [
@@ -9629,7 +9629,7 @@ print(response.choices[0].message.content)`,
         gemma3: {
           title: '#4 Google Gemma 3 9B — Best gamme intermédiaire pour 8–16 GB RAM',
           content: [
-            'Gemma 3 9B est le modèle de poids ouvert de Google dans la classe de paramètres 9B. Il marque 73 % sur MMLU et 68 % sur HumanEval, le plaçant au-dessus de tous les modèles 7B et en faisant la meilleure option pour les utilisateurs avec 8 GB RAM qui veulent un cran au-dessus de la qualité 7B standard.',
+            '**Gemma 3 9B est le modèle de poids ouvert de Google dans la classe de paramètres 9B.** Il marque 73 % sur MMLU et 68 % sur HumanEval, le plaçant au-dessus de tous les modèles 7B et en faisant la meilleure option pour les utilisateurs avec 8 GB RAM qui veulent un cran au-dessus de la qualité 7B standard.',
             'Gemma 3 9B supporte la vision (entrée d\'image) dans sa variante multimodale — ce qui en fait l\'un des rares modèles exécutables localement qui peuvent traiter les images sur du matériel grand public. Les tâches texte uniquement utilisent la variante standard.',
           ],
           rows: [
@@ -9644,7 +9644,7 @@ print(response.choices[0].message.content)`,
         phi4mini: {
           title: '#5 Microsoft Phi-4 Mini 3.8B — Best sous 4 GB RAM',
           content: [
-            'Microsoft Phi-4 Mini 3.8B atteint 68 % sur MMLU — ce qui correspond aux modèles deux fois plus grands — par l\'entraînement sur des données de raisonnement synthétique de haute qualité. Il nécessite seulement ~2.5 GB RAM avec Q4_K_M et s\'exécute à 30–50 tokens/seconde sur n\'importe quelle CPU moderne.',
+            '**Microsoft Phi-4 Mini 3.8B atteint 68 % sur MMLU — ce qui correspond aux modèles deux fois plus grands — par l\'entraînement sur des données de raisonnement synthétique de haute qualité.** Il nécessite seulement ~2.5 GB RAM avec Q4_K_M et s\'exécute à 30–50 tokens/seconde sur n\'importe quelle CPU moderne.',
             'Phi-4 Mini est le modèle recommandé pour les machines avec 4–8 GB RAM ou toute situation où la vitesse de réponse importe plus que la qualité maximale. Sa performance de raisonnement surpasse nettement Llama 3.2 3B au même niveau matériel.',
           ],
           rows: [
@@ -9811,7 +9811,7 @@ print(response.choices[0].message.content)`,
         howWeRanked: {
           title: 'これらのモデルがどのように評価されたか',
           content: [
-            'ランキングは3つのベンチマークに基づいています：MMLU（57分野の知識テスト。スコアが高いほど一般知能が優秀）、HumanEval（Pythonコード生成。スコアが高いほどコード能力が優秀）、MATH（競技数学の問題。スコアが高いほど推論力が強い）。スコアは公開論文とOpen LLM Leaderboardから2026年Q1時点で取得しました。',
+            '**ランキングは3つのベンチマークに基づいています：MMLU（57分野の知識テスト。** スコアが高いほど一般知能が優秀）、HumanEval（Pythonコード生成。スコアが高いほどコード能力が優秀）、MATH（競技数学の問題。スコアが高いほど推論力が強い）。スコアは公開論文とOpen LLM Leaderboardから2026年Q1時点で取得しました。',
             'ハードウェア要件はQ4_K_M量子化で計算しています。これは品質とRAM使用量のバランスをとる標準的な初心者向け設定です。量子化の入門については、[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=ja)を参照してください。',
             'すべてのモデルはOllamaで利用可能です。インストール方法については、[How to Install Ollama](/local-llms/how-to-install-ollama?lang=ja)を参照してください。',
           ],
@@ -9819,7 +9819,7 @@ print(response.choices[0].message.content)`,
         llama33: {
           title: '#1 Meta Llama 3.3 70B — 2026年の総合性能最高のローカルLLM',
           content: [
-            'Meta Llama 3.3 70Bは、2026年にローカル推論で利用可能な最高のオープンウェイトモデルです。MMLU 82%、HumanEval 88%、MATH 77%を達成しており、3つのベンチマークすべてでGPT-4（2023）に相当するか上回ります。128Kのコンテキストウィンドウで長文書や拡張会話に対応します。',
+            '**Meta Llama 3** .3 70Bは、2026年にローカル推論で利用可能な最高のオープンウェイトモデルです。MMLU 82%、HumanEval 88%、MATH 77%を達成しており、3つのベンチマークすべてでGPT-4（2023）に相当するか上回ります。128Kのコンテキストウィンドウで長文書や拡張会話に対応します。',
             'メインの制約はハードウェアです。Q4_K_M量子化には約40GBのRAMが必要です。これはほとんどのコンシューマー向けノートパソコンを除外します。Mac Studio M2 Ultra（64GB以上）、高性能ワークステーション（64GB RAM）、またはOllamaのレイヤーオフロード機能を使ってGPUとシステムRAMに分散させて実行するのに適しています。',
           ],
           rows: [
@@ -9834,7 +9834,7 @@ print(response.choices[0].message.content)`,
         qwen25_72: {
           title: '#2 Qwen2.5 72B — コード・多言語タスク最高',
           content: [
-            'Alibabaの Qwen2.5 72Bは、一般的なベンチマークではLlama 3.3 70Bと同等で、コード性能では上回ります：HumanEval 87%対Llama 3.3の88%。29言語をネイティブ対応しています（中国語、日本語、韓国語、アラビア語を含む）。128Kのコンテキストウィンドウを使用します。JSONモードと関数呼び出しが組み込まれています。',
+            '**Alibabaの Qwen2** .5 72Bは、一般的なベンチマークではLlama 3.3 70Bと同等で、コード性能では上回ります：HumanEval 87%対Llama 3.3の88%。29言語をネイティブ対応しています（中国語、日本語、韓国語、アラビア語を含む）。128Kのコンテキストウィンドウを使用します。JSONモードと関数呼び出しが組み込まれています。',
             '英語以外のコンテンツを処理するチームまたは多言語アプリケーション構築しているチームの場合、Qwen2.5 72BはLlama 3.3 70Bよりも推奨される選択肢です。言語固有のベンチマークについては、[Qwen vs Llama vs Mistral 多言語比較](/local-llms/qwen-vs-llama-vs-mistral?lang=ja)を参照してください。',
           ],
           rows: [
@@ -9849,7 +9849,7 @@ print(response.choices[0].message.content)`,
         mistralSmall: {
           title: '#3 Mistral Small 3.1 24B — 16GB RAM向け7Bクラス最高',
           content: [
-            'Mistral Small 3.1は、Q4_K_M量子化で16GB RAMに収まる24Bパラメータモデルです（約14GB）。MMLU 79%、HumanEval 74%を達成しており、本物の7Bモデルよりも大幅に優秀です。128KコンテキストウィンドウはMistral 2025以降のリリースで標準です。',
+            '**Mistral Small 3** .1は、Q4_K_M量子化で16GB RAMに収まる24Bパラメータモデルです（約14GB）。MMLU 79%、HumanEval 74%を達成しており、本物の7Bモデルよりも大幅に優秀です。128KコンテキストウィンドウはMistral 2025以降のリリースで標準です。',
             'Mistral Small 3.1は、7Bモデルを実行してきたユーザーで、40GB RAM の70Bモデルを必要としない品質向上を求めるユーザー向けの推奨アップグレードパスです。',
           ],
           rows: [
@@ -9864,7 +9864,7 @@ print(response.choices[0].message.content)`,
         gemma3: {
           title: '#4 Google Gemma 3 9B — 8～16GB RAM向け中級性能最高',
           content: [
-            'Gemma 3 9BはGoogleの9Bパラメータクラスのオープンウェイトモデルです。MMLU 73%、HumanEval 68%を達成しており、すべての7Bモデルを上回り、8GB RAMで標準的な7Bより上の品質を望むユーザーにとって最適なオプションです。',
+            '**Gemma 3 9BはGoogleの9Bパラメータクラスのオープンウェイトモデルです。** MMLU 73%、HumanEval 68%を達成しており、すべての7Bモデルを上回り、8GB RAMで標準的な7Bより上の品質を望むユーザーにとって最適なオプションです。',
             'Gemma 3 9Bはマルチモーダルバリアントでビジョン（画像入力）をサポートしています。コンシューマーハードウェアで画像を処理できるローカル実行可能モデルの数少ない一つです。テキストのみのタスクでは標準バリアントを使用します。',
           ],
           rows: [
@@ -9879,7 +9879,7 @@ print(response.choices[0].message.content)`,
         phi4mini: {
           title: '#5 Microsoft Phi-4 Mini 3.8B — 4GB RAM以下最高',
           content: [
-            'Microsoft Phi-4 Mini 3.8BはMMLA 68%を達成しており、これはサイズの2倍のモデルに相当します。高品質な合成推論データで訓練しました。Q4_K_M量子化で約2.5GBのRAMのみ必要で、最新のノートパソコンCPUで毎秒30～50トークンの速度で動作します。',
+            '**Microsoft Phi-4 Mini 3** .8BはMMLA 68%を達成しており、これはサイズの2倍のモデルに相当します。高品質な合成推論データで訓練しました。Q4_K_M量子化で約2.5GBのRAMのみ必要で、最新のノートパソコンCPUで毎秒30～50トークンの速度で動作します。',
             'Phi-4 Miniは、4～8GB RAMのマシンや、最大品質より応答速度が重要なあらゆる状況向けの推奨モデルです。その推論性能は同じハードウェアティアのLlama 3.2 3Bを大幅に上回ります。',
           ],
           rows: [
@@ -10043,7 +10043,7 @@ print(response.choices[0].message.content)`,
         howWeRanked: {
           title: '这些模型如何被评估',
           content: [
-            '排名基于三个基准测试：MMLU（57个领域的知识测试，得分越高代表一般智能越强）、HumanEval（Python代码生成，得分越高代表编码能力越强）和MATH（竞技数学问题，得分越高代表推理能力越强）。分数来自已发布的论文和截至2026年Q1的Open LLM排行榜。',
+            '**排名基于三个基准测试：MMLU（57个领域的知识测试，得分越高代表一般智能越强）、HumanEval（Python代码生成，得分越高代表编码能力越强）和MATH（竞技数学问题，得分越高代表推理能力越强）。** 分数来自已发布的论文和截至2026年Q1的Open LLM排行榜。',
             '硬件要求按Q4_K_M量化计算——这是平衡质量和RAM使用的标准初学者设置。有关量化的入门知识，请参阅[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026?lang=zh)。',
             '所有模型都可通过Ollama获得。有关安装说明，请参阅[How to Install Ollama](/local-llms/how-to-install-ollama?lang=zh)。',
           ],
@@ -10051,7 +10051,7 @@ print(response.choices[0].message.content)`,
         llama33: {
           title: '#1 Meta Llama 3.3 70B — 2026年综合性能最佳的本地大模型',
           content: [
-            'Meta Llama 3.3 70B是2026年可用于本地推理的最佳开源权重模型。它在MMLU上得分82%、HumanEval上得分88%、MATH上得分77%——与GPT-4（2023）在三个基准测试上相当或超越。128K的上下文窗口可处理长文档和扩展对话。',
+            '**Meta Llama 3** .3 70B是2026年可用于本地推理的最佳开源权重模型。它在MMLU上得分82%、HumanEval上得分88%、MATH上得分77%——与GPT-4（2023）在三个基准测试上相当或超越。128K的上下文窗口可处理长文档和扩展对话。',
             '主要限制是硬件：Q4_K_M量化需要约40GB的RAM。这排除了大多数消费级笔记本电脑。它在Mac Studio M2 Ultra（64GB以上）、高端工作站（64GB RAM）或使用Ollama的图层卸载功能分散在GPU和系统RAM上时运行良好。',
           ],
           rows: [
@@ -10066,7 +10066,7 @@ print(response.choices[0].message.content)`,
         qwen25_72: {
           title: '#2 Qwen2.5 72B — 代码和多语言任务最佳',
           content: [
-            'Alibaba的Qwen2.5 72B在一般基准测试上与Llama 3.3 70B相当，在代码上超越它：HumanEval 87%对Llama 3.3的88%。它原生支持29种语言（包括中文、日文、韩文、阿拉伯文），并使用128K上下文窗口。JSON模式和函数调用内置。',
+            '**Alibaba的Qwen2** .5 72B在一般基准测试上与Llama 3.3 70B相当，在代码上超越它：HumanEval 87%对Llama 3.3的88%。它原生支持29种语言（包括中文、日文、韩文、阿拉伯文），并使用128K上下文窗口。JSON模式和函数调用内置。',
             '对于处理非英文内容或构建多语言应用的团队，Qwen2.5 72B是相比Llama 3.3 70B的推荐选择。有关特定语言的基准测试，请参阅[Qwen vs Llama vs Mistral 多语言比较](/local-llms/qwen-vs-llama-vs-mistral?lang=zh)。',
           ],
           rows: [
@@ -10081,7 +10081,7 @@ print(response.choices[0].message.content)`,
         mistralSmall: {
           title: '#3 Mistral Small 3.1 24B — 16GB RAM的7B级最佳',
           content: [
-            'Mistral Small 3.1是一个24B参数模型，在Q4_K_M量化下可容纳16GB RAM（约14GB）。它在MMLU上得分79%，HumanEval上得分74%——明显优于任何真正的7B模型。128K上下文窗口是Mistral 2025+版本的标准配置。',
+            '**Mistral Small 3** .1是一个24B参数模型，在Q4_K_M量化下可容纳16GB RAM（约14GB）。它在MMLU上得分79%，HumanEval上得分74%——明显优于任何真正的7B模型。128K上下文窗口是Mistral 2025+版本的标准配置。',
             'Mistral Small 3.1是为运行过7B模型的用户推荐的升级路径，他们希望提高质量但不需要70B模型的40GB RAM。',
           ],
           rows: [
@@ -10096,7 +10096,7 @@ print(response.choices[0].message.content)`,
         gemma3: {
           title: '#4 Google Gemma 3 9B — 8～16GB RAM中档性能最佳',
           content: [
-            'Gemma 3 9B是Google的9B参数级开源权重模型。它在MMLU上得分73%，HumanEval上得分68%，超过所有7B模型，是拥有8GB RAM且需要超越标准7B质量的用户的最佳选择。',
+            '**Gemma 3 9B是Google的9B参数级开源权重模型。** 它在MMLU上得分73%，HumanEval上得分68%，超过所有7B模型，是拥有8GB RAM且需要超越标准7B质量的用户的最佳选择。',
             'Gemma 3 9B在多模态变体中支持视觉（图像输入）——使其成为可在消费级硬件上处理图像的少数可本地运行的模型之一。仅文本任务使用标准变体。',
           ],
           rows: [
@@ -10111,7 +10111,7 @@ print(response.choices[0].message.content)`,
         phi4mini: {
           title: '#5 Microsoft Phi-4 Mini 3.8B — 4GB RAM以下最佳',
           content: [
-            'Microsoft Phi-4 Mini 3.8B在MMLU上得分68%——相当于参数数量两倍的模型——通过在高质量合成推理数据上训练实现。Q4_K_M量化下仅需约2.5GB RAM，在任何现代笔记本CPU上以每秒30-50个标记的速度运行。',
+            '**Microsoft Phi-4 Mini 3** .8B在MMLU上得分68%——相当于参数数量两倍的模型——通过在高质量合成推理数据上训练实现。Q4_K_M量化下仅需约2.5GB RAM，在任何现代笔记本CPU上以每秒30-50个标记的速度运行。',
             'Phi-4 Mini是拥有4-8GB RAM的机器或响应速度比最大质量更重要的任何情况下的推荐模型。其推理性能明显超过同等硬件级别的Llama 3.2 3B。',
           ],
           rows: [
@@ -10617,7 +10617,7 @@ print(response.choices[0].message.content)`,
           id: 'qwen2-5',
           title: 'Qwen2.5: Bestes für Coding, Mathematik und nicht-englische Sprachen',
           content: [
-            'Qwen2.5 von Alibaba ist die stärkste Modellfamilie für strukturierte Output-Aufgaben. Es führt HumanEval bei jeder vergleichbaren Größe an, außer 70B (wo Llama 3.3 es um 1% übertrumpft). Die MATH-Werte liegen bei jeder Größe 6–10 Prozentpunkte über Llama.',
+            '**Qwen2.5 von Alibaba ist die stärkste Modellfamilie für strukturierte Output-Aufgaben.** Es führt HumanEval bei jeder vergleichbaren Größe an, außer 70B (wo Llama 3.3 es um 1% übertrumpft). Die MATH-Werte liegen bei jeder Größe 6–10 Prozentpunkte über Llama.',
             '**Stärken**: Coding (Python, JavaScript, SQL), mathematisches Reasoning, 29-Sprachen-Unterstützung, JSON-Modus, Function Calling, [128K Kontextfenster](/local-llms/local-llm-hardware-guide-2026) auf allen Größen.',
             '**Schwächen**: Der englische Instruktions-Stil kann weniger natürlich wirken als Llama oder Mistral; einige Nutzer berichten von weniger flüssigem kreativem Schreiben auf Englisch. Der Alibaba-Ursprung stellt Datenschutzbedenken für einige Unternehmensnutzer dar, trotz offener Gewichte.',
           ],
@@ -10628,7 +10628,7 @@ print(response.choices[0].message.content)`,
           id: 'llama-3',
           title: 'Llama 3.x: Bestes für allgemeine englische Aufgaben und Ökosystem-Unterstützung',
           content: [
-            'Metas Llama 3.x Familie ist die am weitesten unterstützte Open-Weight-Modellserie. Mehr Tools, Fine-Tunes, Quantisierungen und Community-Leitfäden existieren für Llama als für jede andere Familie. Llama 3.3 70B ist mit allen Konkurrenten bei allgemeinen englischen Benchmarks gleichauf oder besser.',
+            '**Metas Llama 3.x Familie ist die am weitesten unterstützte Open-Weight-Modellserie.** Mehr Tools, Fine-Tunes, Quantisierungen und Community-Leitfäden existieren für Llama als für jede andere Familie. Llama 3.3 70B ist mit allen Konkurrenten bei allgemeinen englischen Benchmarks gleichauf oder besser.',
             '**Stärken**: Breiteste Ökosystem-Unterstützung (jedes Tool unterstützt Llama), bestes englisches kreatives Schreiben, starke Instruktions-Befolgung, 128K Kontextfenster auf 3.1/3.2/3.3-Varianten, Community-getestete Zuverlässigkeit.',
             '**Schwächen**: Keine native mehrsprachige Unterstützung jenseits grundlegender Funktionalität; Llama 3.2 3B kann mit Qwen2.5 3B und Phi-4 Mini beim Coding und bei Mathematik nicht mithalten, obwohl dieselbe Parameteranzahl.',
           ],
@@ -10637,7 +10637,7 @@ print(response.choices[0].message.content)`,
           id: 'mistral',
           title: 'Mistral: Beste Effizienz und stärkste 7B-Klasse-Geschichte',
           content: [
-            'Mistral AI produziert die parameter-effizientesten Modelle in diesem Vergleich. Mistral Small 3.1 bei 24B liefert Benchmark-Ergebnisse nah bei der 70B-Klasse, während nur 14 GB RAM benötigt werden — das beste Qualitäts-pro-RAM-Verhältnis aller Modelle in diesem Vergleich.',
+            '**Mistral AI produziert die parameter-effizientesten Modelle in diesem Vergleich.** Mistral Small 3.1 bei 24B liefert Benchmark-Ergebnisse nah bei der 70B-Klasse, während nur 14 GB RAM benötigt werden — das beste Qualitäts-pro-RAM-Verhältnis aller Modelle in diesem Vergleich.',
             '**Stärken**: bestes Qualitäts-zu-RAM-Verhältnis (Small 3.1), starke Function Calling und Tool-Nutzung, saubere Apache 2.0-Lizenz auf Schlüsselmodellen, europäische Herkunft für DSGVO-sensitive Anwendungsfälle.',
             '**Schwächen**: Mistral 7B v0.3 wird nun beim Benchmark von Qwen2.5 7B und Llama 3.1 8B übertroffen; weniger Größenoptionen als Qwen oder Llama.',
           ],
@@ -10897,7 +10897,7 @@ print(response.choices[0].message.content)`,
         qwen: {
           title: 'Qwen2.5 : Meilleur pour le codage, les mathématiques et les langues non-anglaises',
           content: [
-            'Qwen2.5 d\'Alibaba est la famille de modèles la plus forte pour les tâches de sortie structurées. Elle domine HumanEval à chaque niveau de taille comparable, sauf à 70B (où Llama 3.3 la dépasse de 1%). Les scores MATH sont 6–10 points de pourcentage au-dessus de Llama à chaque taille.',
+            '**Qwen2.5 d\'Alibaba est la famille de modèles la plus forte pour les tâches de sortie structurées.** Elle domine HumanEval à chaque niveau de taille comparable, sauf à 70B (où Llama 3.3 la dépasse de 1%). Les scores MATH sont 6–10 points de pourcentage au-dessus de Llama à chaque taille.',
             '**Forces** : Codage (Python, JavaScript, SQL), raisonnement mathématique, support natif 29 langues, mode JSON, Function Calling, [fenêtre de contexte 128K](/local-llms/local-llm-hardware-guide-2026) sur toutes les tailles.',
             '**Faiblesses** : Le style d\'instructions en anglais peut sembler moins naturel que Llama ou Mistral ; certains utilisateurs signalent une écriture créative moins fluide en anglais. L\'origine Alibaba soulève des préoccupations de gestion des données pour certains utilisateurs d\'entreprise malgré les poids ouverts.',
           ],
@@ -10907,7 +10907,7 @@ print(response.choices[0].message.content)`,
         llama: {
           title: 'Llama 3.x : Meilleur pour les tâches générales en anglais et le support écosystème',
           content: [
-            'La famille Llama 3.x de Meta est la série de modèles open-weight la plus largement supportée. Plus d\'outils, de fine-tunes, de quantifications et de guides communautaires existent pour Llama que pour toute autre famille. Llama 3.3 70B égale ou dépasse tous les concurrents sur les benchmarks généraux en anglais.',
+            '**La famille Llama 3.x de Meta est la série de modèles open-weight la plus largement supportée.** Plus d\'outils, de fine-tunes, de quantifications et de guides communautaires existent pour Llama que pour toute autre famille. Llama 3.3 70B égale ou dépasse tous les concurrents sur les benchmarks généraux en anglais.',
             '**Forces** : Support écosystème le plus large (chaque outil supporte Llama), meilleure écriture créative en anglais, fort suivi des instructions, contexte 128K sur les variantes 3.1/3.2/3.3, fiabilité testée par la communauté.',
             '**Faiblesses** : Aucun support multilingue natif au-delà des fonctionnalités de base ; Llama 3.2 3B fait moins bien que Qwen2.5 3B et Phi-4 Mini en codage et mathématiques malgré le même nombre de paramètres.',
           ],
@@ -10915,7 +10915,7 @@ print(response.choices[0].message.content)`,
         mistral: {
           title: 'Mistral : Meilleure efficacité et historique 7B-class le plus puissant',
           content: [
-            'Mistral AI produit les modèles les plus efficaces en paramètres dans cette comparaison. Mistral Small 3.1 à 24B fournit des scores de benchmarks proches de la classe 70B tout en ne nécessitant que 14 GB de RAM — le meilleur rapport qualité-RAM de tous les modèles dans cette comparaison.',
+            '**Mistral AI produit les modèles les plus efficaces en paramètres dans cette comparaison.** Mistral Small 3.1 à 24B fournit des scores de benchmarks proches de la classe 70B tout en ne nécessitant que 14 GB de RAM — le meilleur rapport qualité-RAM de tous les modèles dans cette comparaison.',
             '**Forces** : Meilleur rapport qualité-RAM (Small 3.1), strong Function Calling et utilisation des outils, licence Apache 2.0 propre sur les modèles clés, origine européenne pour les cas d\'utilisation sensibles au RGPD.',
             '**Faiblesses** : Mistral 7B v0.3 est maintenant surpassé sur les benchmarks par Qwen2.5 7B et Llama 3.1 8B ; moins d\'options de tailles que Qwen ou Llama.',
           ],
@@ -11168,7 +11168,7 @@ print(response.choices[0].message.content)`,
         qwen: {
           title: 'Qwen2.5：コーディング、数学、非英語言語に最適',
           content: [
-            'AlibabaのQwen2.5は、構造化出力タスク用の最強のモデルファミリーです。比較可能なすべてのサイズティアでHumanEvalを先導します（70Bを除く、Llama 3.3が1%上回る）。各サイズでMATHスコアはLlamaより6～10ポイント高い。',
+            '**AlibabaのQwen2** .5は、構造化出力タスク用の最強のモデルファミリーです。比較可能なすべてのサイズティアでHumanEvalを先導します（70Bを除く、Llama 3.3が1%上回る）。各サイズでMATHスコアはLlamaより6～10ポイント高い。',
             '**強み**：コーディング（Python、JavaScript、SQL）、数学的推論、29言語ネイティブサポート、JSONモード、Function Calling、[すべてのサイズで128Kコンテキストウィンドウ](/local-llms/local-llm-hardware-guide-2026)。',
             '**弱み**：英語の指示スタイルはLlamaやMistralより自然でない場合があります；一部のユーザーは英語での創造的なライティングの流暢性が低いと報告；Alibaba発祥はオープンウェイトにもかかわらず一部の企業ユーザーにとってデータ処理の懸念を提起。',
           ],
@@ -11178,7 +11178,7 @@ print(response.choices[0].message.content)`,
         llama: {
           title: 'Llama 3.x：一般的な英語タスクとエコシステムサポートに最適',
           content: [
-            'MetaのLlama 3.xファミリーは最も広くサポートされているオープンウェイトモデルシリーズです。他のどのファミリーよりもLlamaに対するより多くのツール、ファインチューン、量子化、コミュニティガイドが存在します。Llama 3.3 70Bは一般的な英語ベンチマークのすべての競合他社と同等かそれ以上です。',
+            '**MetaのLlama 3** .xファミリーは最も広くサポートされているオープンウェイトモデルシリーズです。他のどのファミリーよりもLlamaに対するより多くのツール、ファインチューン、量子化、コミュニティガイドが存在します。Llama 3.3 70Bは一般的な英語ベンチマークのすべての競合他社と同等かそれ以上です。',
             '**強み**：最も幅広いエコシステムサポート（すべてのツールがLlamaをサポート）、最高の英語創造的なライティング、強い指示追従、3.1/3.2/3.3バリアントで128Kコンテキスト、コミュニティテスト済みの信頼性。',
             '**弱み**：基本的な機能を超えた多言語ネイティブサポートなし；Llama 3.2 3Bは同じパラメータ数であるにもかかわらずQwen2.5 3BおよびPhi-4 Miniのコーディングと数学で遅い。',
           ],
@@ -11186,7 +11186,7 @@ print(response.choices[0].message.content)`,
         mistral: {
           title: 'Mistral：最高の効率と最強の7B級の歴史',
           content: [
-            'Mistral AIはこの比較で最もパラメータ効率の良いモデルを生産します。Mistral Small 3.1は24Bで70Bクラスに近いベンチマークスコアを提供しながら、わずか14 GB RAMしか必要としません——この比較のどのモデルよりも最高の品質対RAM比。',
+            '**Mistral AIはこの比較で最もパラメータ効率の良いモデルを生産します。** Mistral Small 3.1は24Bで70Bクラスに近いベンチマークスコアを提供しながら、わずか14 GB RAMしか必要としません——この比較のどのモデルよりも最高の品質対RAM比。',
             '**強み**：最高の品質対RAM比（Small 3.1）、強いFunction CallingとTool使用、主要モデルでの清潔なApache 2.0ライセンス、GDPR敏感な使用ケース向けのヨーロッパ発祥。',
             '**弱み**：Mistral 7B v0.3はベンチマークでQwen2.5 7BおよびLlama 3.1 8Bに上回られるようになった；Qwenやllamaより少ないサイズオプション。',
           ],
@@ -11439,7 +11439,7 @@ print(response.choices[0].message.content)`,
         qwen: {
           title: 'Qwen2.5：最适合编码、数学和非英文语言',
           content: [
-            '来自Alibaba的Qwen2.5是用于结构化输出任务的最强模型族。它在所有可比较的大小级别上都领先HumanEval，除了70B（Llama 3.3以1%的优势击败它）。在每个大小处MATH分数都比Llama高6-10个百分点。',
+            '**来自Alibaba的Qwen2** .5是用于结构化输出任务的最强模型族。它在所有可比较的大小级别上都领先HumanEval，除了70B（Llama 3.3以1%的优势击败它）。在每个大小处MATH分数都比Llama高6-10个百分点。',
             '**优势**：编码（Python、JavaScript、SQL）、数学推理、29种语言原生支持、JSON模式、函数调用、[所有大小的128K上下文窗口](/local-llms/local-llm-hardware-guide-2026)。',
             '**劣势**：英文指导风格可能不如Llama或Mistral自然；一些用户报告英文创意写作流畅性较低。Alibaba源点对某些企业用户提出数据处理问题，尽管开放权重。',
           ],
@@ -11449,7 +11449,7 @@ print(response.choices[0].message.content)`,
         llama: {
           title: 'Llama 3.x：最适合一般英文任务和生态系统支持',
           content: [
-            'Meta的Llama 3.x族是最广泛支持的开放权重模型系列。存在比任何其他族更多为Llama编写的工具、微调、量化和社区指南。Llama 3.3 70B在一般英文基准上与所有竞争对手相当或更优。',
+            '**Meta的Llama 3** .x族是最广泛支持的开放权重模型系列。存在比任何其他族更多为Llama编写的工具、微调、量化和社区指南。Llama 3.3 70B在一般英文基准上与所有竞争对手相当或更优。',
             '**优势**：最广泛的生态系统支持（每个工具都支持Llama）、最佳英文创意写作、强指导遵循、3.1/3.2/3.3变体中的128K上下文、社区测试的可靠性。',
             '**劣势**：基本功能外没有原生多语言支持；Llama 3.2 3B在编码和数学上不及Qwen2.5 3B和Phi-4 Mini，尽管参数数相同。',
           ],
@@ -11457,7 +11457,7 @@ print(response.choices[0].message.content)`,
         mistral: {
           title: 'Mistral：最佳效率和最强的7B级历史',
           content: [
-            'Mistral AI生产本对比中最参数高效的模型。Mistral Small 3.1在24B处提供接近70B级的基准分数，仅需14 GB RAM——本对比中任何模型的最佳质量对RAM比。',
+            '**Mistral AI生产本对比中最参数高效的模型。** Mistral Small 3.1在24B处提供接近70B级的基准分数，仅需14 GB RAM——本对比中任何模型的最佳质量对RAM比。',
             '**优势**：最佳质量对RAM比（Small 3.1）、强函数调用和工具使用、关键模型上干净的Apache 2.0许可、欧洲原产地用于GDPR敏感用例。',
             '**劣势**：Mistral 7B v0.3现在在基准上被Qwen2.5 7B和Llama 3.1 8B超越；比Qwen或Llama的大小选项少。',
           ],
@@ -11689,7 +11689,7 @@ print(response.choices[0].message.content)`,
         whatMakesGood: {
           title: 'What Makes a Local LLM Good for Coding?',
           content: [
-            'Coding performance in local LLMs is measured primarily by HumanEval — a benchmark of 164 Python programming problems where the model must generate a correct function body. HumanEval pass@1 scores (percentage of problems solved on the first attempt) are the standard comparison metric.',
+            '**Coding performance in local LLMs is measured primarily by HumanEval — a benchmark of 164 Python programming problems where the model must generate a correct function body.** HumanEval pass@1 scores (percentage of problems solved on the first attempt) are the standard comparison metric.',
             'Code-specific models are fine-tuned on large code corpora (GitHub, Stack Overflow, documentation) and often include fill-in-the-middle (FIM) training — the ability to complete code given both the preceding and following context, which is required for IDE autocomplete.',
             'General-purpose models like Llama 3.1 8B score 72% on HumanEval, which is competitive. But dedicated coding models at the same size score 5–15% higher because their training data and fine-tuning prioritize code generation accuracy over general language tasks.',
           ],
@@ -11697,7 +11697,7 @@ print(response.choices[0].message.content)`,
         qwen25coder32: {
           title: '#1 Qwen2.5-Coder 32B — Best Overall Local Coding LLM',
           content: [
-            'Qwen2.5-Coder 32B is the highest-performing locally-runnable coding model in 2026. It scores 87% on HumanEval and 79% on MBPP (another Python coding benchmark). It supports 40+ programming languages including Python, JavaScript, TypeScript, Java, C++, SQL, Rust, and Go.',
+            '**Qwen2.5-Coder 32B is the highest-performing locally-runnable coding model in 2026.** It scores 87% on HumanEval and 79% on MBPP (another Python coding benchmark). It supports 40+ programming languages including Python, JavaScript, TypeScript, Java, C++, SQL, Rust, and Go.',
             'At Q4_K_M quantization, it requires ~20 GB RAM — manageable on workstations and MacBooks with 24+ GB of unified memory. Response quality on complex multi-file refactoring and algorithm design tasks is competitive with GPT-4o Mini.',
           ],
           rows: [
@@ -11713,7 +11713,7 @@ print(response.choices[0].message.content)`,
         deepseek: {
           title: '#2 DeepSeek-Coder V2 Lite 16B — Best for 16 GB RAM',
           content: [
-            'DeepSeek-Coder V2 Lite is a 16B mixture-of-experts coding model from DeepSeek. Despite 16B active parameters, it achieves 81% HumanEval through its MoE architecture and requires ~10 GB RAM at Q4_K_M. It is the best coding model for machines with 16 GB RAM.',
+            '**DeepSeek-Coder V2 Lite is a 16B mixture-of-experts coding model from DeepSeek.** Despite 16B active parameters, it achieves 81% HumanEval through its MoE architecture and requires ~10 GB RAM at Q4_K_M. It is the best coding model for machines with 16 GB RAM.',
             'It supports fill-in-the-middle completion and handles multi-language codebases well. The Lite variant uses 2.4B active parameters per forward pass, making inference faster than a comparable dense 16B model.',
           ],
           rows: [
@@ -11728,7 +11728,7 @@ print(response.choices[0].message.content)`,
         qwen25coder7: {
           title: '#3 Qwen2.5-Coder 7B — Best Coding Model for 8 GB RAM',
           content: [
-            'Qwen2.5-Coder 7B scores 72% on HumanEval — matching the general-purpose Llama 3.1 8B while using ~4.7 GB RAM. For users with 8 GB RAM who want the best coding performance without sacrificing headroom for other applications, this is the recommended choice.',
+            '**Qwen2.5-Coder 7B scores 72% on HumanEval — matching the general-purpose Llama 3.1 8B while using ~4.7 GB RAM.** For users with 8 GB RAM who want the best coding performance without sacrificing headroom for other applications, this is the recommended choice.',
             'It includes FIM support for code completion tasks and is compatible with the Continue.dev VS Code extension for local AI coding assistance.',
           ],
           rows: [
@@ -11743,7 +11743,7 @@ print(response.choices[0].message.content)`,
         starcoder2: {
           title: '#4 Starcoder2 15B — Best for IDE Autocomplete',
           content: [
-            'Starcoder2 15B from Hugging Face BigCode is purpose-built for fill-in-the-middle code completion — the pattern used by IDE autocomplete tools. It scores 67% on HumanEval but excels specifically on FIM tasks where context comes from both before and after the cursor position.',
+            '**Starcoder2 15B from Hugging Face BigCode is purpose-built for fill-in-the-middle code completion — the pattern used by IDE autocomplete tools.** It scores 67% on HumanEval but excels specifically on FIM tasks where context comes from both before and after the cursor position.',
             'Starcoder2 is the recommended model when integrating a local LLM into a VS Code or JetBrains IDE via Continue.dev or Tabby. For chat-style code generation, Qwen2.5-Coder performs better.',
           ],
           rows: [
@@ -12010,7 +12010,7 @@ print(response.choices[0].message.content)`,
           id: 'how-to-evaluate',
           title: 'How Do You Evaluate Local LLM Quality for Creative Writing',
           content: [
-            'As of April 2026, creative writing performance is not well captured by standard benchmarks (MMLU, HumanEval). To evaluate a model for creative writing, test it directly with the types of prompts you plan to use:',
+            '**As of April 2026, creative writing performance is not well captured by standard benchmarks (MMLU, HumanEval).** To evaluate a model for creative writing, test it directly with the types of prompts you plan to use:',
           ],
           items: [
             '**Prose continuity test**: give the model the first two paragraphs of a scene and ask it to continue for 500 words. Does it maintain consistent tone, character voice, and narrative logic?',
@@ -12025,7 +12025,7 @@ print(response.choices[0].message.content)`,
           id: 'llama-3-3-70b',
           title: '#1 Meta Llama 3.3 70B — Best Prose Quality Locally',
           content: [
-            'Llama 3.3 70B produces the most natural, varied English prose of any locally-runnable model. Its training on a diverse English text corpus gives it the widest stylistic range — from minimalist literary fiction to genre thriller pacing. Long-form coherence (1,000–3,000 words) is noticeably better than any 7B or 13B model.',
+            '**Llama 3.3 70B produces the most natural, varied English prose of any locally-runnable model.** Its training on a diverse English text corpus gives it the widest stylistic range — from minimalist literary fiction to genre thriller pacing. Long-form coherence (1,000–3,000 words) is noticeably better than any 7B or 13B model.',
             'The constraint is hardware: 40 GB RAM at Q4_K_M. For creative writing sessions (rather than batch generation), the slower generation speed (8–15 tok/sec on CPU) is tolerable. On Apple M2 Ultra or M3 Max with 64+ GB unified memory, generation reaches 20–35 tok/sec.',
           ],
           rows: [
@@ -12043,7 +12043,7 @@ print(response.choices[0].message.content)`,
           id: 'mistral-small',
           title: '#2 Mistral Small 3.1 24B — Best Creative Writing for 16 GB RAM',
           content: [
-            'Mistral Small 3.1 24B delivers creative writing quality noticeably above any 7B model while fitting in 14 GB RAM. Its instruction-following is precise enough to handle detailed style specifications ("write in second person, present tense, with short punchy sentences") without drifting after a few paragraphs.',
+            '**Mistral Small 3.1 24B delivers creative writing quality noticeably above any 7B model while fitting in 14 GB RAM.** Its instruction-following is precise enough to handle detailed style specifications ("write in second person, present tense, with short punchy sentences") without drifting after a few paragraphs.',
             'For users who want genuine long-form narrative capability without a workstation-class machine, Mistral Small 3.1 is the practical choice.',
           ],
           rows: [
@@ -12059,7 +12059,7 @@ print(response.choices[0].message.content)`,
           id: 'llama-3-1-8b',
           title: '#3 Llama 3.1 8B — Best Creative Writing for 8 GB RAM',
           content: [
-            'At the 8 GB RAM tier, Llama 3.1 8B outperforms Qwen2.5 7B and Mistral 7B for English creative writing. Qwen2.5 is stronger at coding and structured tasks, but its English prose generation is less fluid for narrative purposes.',
+            '**At the 8 GB RAM tier, Llama 3.1 8B outperforms Qwen2.5 7B and Mistral 7B for English creative writing.** Qwen2.5 is stronger at coding and structured tasks, but its English prose generation is less fluid for narrative purposes.',
             'Llama 3.1 8B handles short fiction (up to 500 words) reliably. For stories over 1,000 words, quality consistency degrades — the model tends to drift from established narrative details. This is a fundamental limitation of 8B-scale models for long-form creative work.',
           ],
         },
@@ -12067,7 +12067,7 @@ print(response.choices[0].message.content)`,
           id: 'fine-tuned-models',
           title: '#4 Community Fine-Tunes for Fiction and Roleplay',
           content: [
-            'The local LLM community maintains specialized fine-tunes trained on fiction corpora, which outperform base models on sustained narrative tasks. These are available on Hugging Face and can be loaded in LM Studio or Ollama (via custom Modelfiles):',
+            '**The local LLM community maintains specialized fine-tunes trained on fiction corpora, which outperform base models on sustained narrative tasks.** These are available on Hugging Face and can be loaded in LM Studio or Ollama (via custom Modelfiles):',
           ],
           items: [
             '**Fimbulvetr-11B** — fine-tuned on high-quality fantasy and science fiction prose. Produces more vivid sensory detail and consistent character voice than base Llama 3.1 8B.',
@@ -12223,7 +12223,7 @@ print(response.choices[0].message.content)`,
         howToEvaluate: {
           title: 'Wie bewerten Sie die Qualität lokaler LLMs für kreatives Schreiben?',
           content: [
-            'Objektive Benchmarks messen Wissen und Reasoning, nicht kreative Qualität. Um ein Modell für kreatives Schreiben zu bewerten, testen Sie es direkt mit den Prompts, die Sie verwenden möchten:',
+            '**Objektive Benchmarks messen Wissen und Reasoning, nicht kreative Qualität.** Um ein Modell für kreatives Schreiben zu bewerten, testen Sie es direkt mit den Prompts, die Sie verwenden möchten:',
           ],
           items: [
             '**Prosa-Kontinuitäts-Test**: Geben Sie dem Modell die ersten zwei Absätze einer Szene und bitten Sie es, 500 Wörter fortzusetzen. Behält es konsistente Ton, Charakterstimme und narrative Logik bei?',
@@ -12237,7 +12237,7 @@ print(response.choices[0].message.content)`,
         llama33: {
           title: '#1 Meta Llama 3.3 70B — beste Prosaqualität im lokalen Bereich',
           content: [
-            'Llama 3.3 70B produziert die natürlichste und vielfältigste englische Prosa aller lokal ausführbaren Modelle. Das Training auf einem vielfältigen englischsprachigen Textkorpus gibt ihm die breiteste stilistische Spanne — von minimalistischer literarischer Fiktion bis zu Thriller-Pacing. Long-Form-Kohärenz (1.000–3.000 Wörter) ist deutlich besser als jedes 7B- oder 13B-Modell.',
+            '**Llama 3.3 70B produziert die natürlichste und vielfältigste englische Prosa aller lokal ausführbaren Modelle.** Das Training auf einem vielfältigen englischsprachigen Textkorpus gibt ihm die breiteste stilistische Spanne — von minimalistischer literarischer Fiktion bis zu Thriller-Pacing. Long-Form-Kohärenz (1.000–3.000 Wörter) ist deutlich besser als jedes 7B- oder 13B-Modell.',
             'Die Einschränkung ist Hardware: 40 GB RAM bei Q4_K_M. Für kreative Schreib-Sitzungen (nicht Batch-Generierung) ist die langsamere Generierungsgeschwindigkeit (8–15 Tokens/Sek. auf CPU) tolerierbar. Auf Apple M2 Ultra oder M3 Max mit 64+ GB Unified Memory erreicht die Generierung 20–35 Tokens/Sek.',
           ],
           rows: [
@@ -12254,21 +12254,21 @@ print(response.choices[0].message.content)`,
         mistralSmall: {
           title: '#2 Mistral Small 3.1 24B — beste kreative Schreibqualität für 16 GB RAM',
           content: [
-            'Mistral Small 3.1 24B liefert kreative Schreibqualität, die deutlich über jedem 7B-Modell liegt, während es in 14 GB RAM passt. Die Instruktionsbefolge ist präzise genug, um detaillierte Spezifikationen zu handhaben ("schreiben Sie in zweiter Person, Präsens, mit kurzen, prägnanten Sätzen"), ohne nach wenigen Absätzen abzudriften.',
+            '**Mistral Small 3.1 24B liefert kreative Schreibqualität, die deutlich über jedem 7B-Modell liegt, während es in 14 GB RAM passt.** Die Instruktionsbefolge ist präzise genug, um detaillierte Spezifikationen zu handhaben ("schreiben Sie in zweiter Person, Präsens, mit kurzen, prägnanten Sätzen"), ohne nach wenigen Absätzen abzudriften.',
             'Für Benutzer, die echte Long-Form-Narrative-Fähigkeit ohne Workstation-Klasse-Hardware wünschen, ist Mistral Small 3.1 die praktische Wahl.',
           ],
         },
         llama318: {
           title: '#3 Llama 3.1 8B — beste kreative Schreibqualität für 8 GB RAM',
           content: [
-            'Im 8-GB-RAM-Bereich übertrifft Llama 3.1 8B Qwen2.5 7B und Mistral 7B für englisches kreatives Schreiben. Qwen2.5 ist stärker bei Coding und strukturierten Aufgaben, aber seine englische Prosa-Generierung ist weniger fließend für Erzählzwecke.',
+            '**Im 8-GB-RAM-Bereich übertrifft Llama 3.1 8B Qwen2.5 7B und Mistral 7B für englisches kreatives Schreiben.** Qwen2.5 ist stärker bei Coding und strukturierten Aufgaben, aber seine englische Prosa-Generierung ist weniger fließend für Erzählzwecke.',
             'Llama 3.1 8B verarbeitet kurze Fiktion (bis zu 500 Wörter) zuverlässig. Bei Geschichten über 1.000 Wörter sinkt die Qualitätskonsistenz — das Modell neigt dazu, von etablierten narrativen Details abzuweichen. Dies ist eine grundlegende Einschränkung von 8B-Modellen für längere kreative Werke.',
           ],
         },
         fineTuned: {
           title: '#4 Community Fine-Tunes für Fiktion und Roleplay',
           content: [
-            'Die lokale LLM-Community verwaltet spezialisierte Fine-Tunes, die auf Fiktionskorpora trainiert sind und Basis-Modelle bei längeren Erzählaufgaben übertreffen. Diese sind auf Hugging Face verfügbar und können in LM Studio oder Ollama (über benutzerdefinierte Modelfiles) geladen werden:',
+            '**Die lokale LLM-Community verwaltet spezialisierte Fine-Tunes, die auf Fiktionskorpora trainiert sind und Basis-Modelle bei längeren Erzählaufgaben übertreffen.** Diese sind auf Hugging Face verfügbar und können in LM Studio oder Ollama (über benutzerdefinierte Modelfiles) geladen werden:',
           ],
           items: [
             '**Fimbulvetr-11B** — Fine-tuned auf hochwertige Fantasy- und Science-Fiction-Prosa. Erzeugt mehr vivide sensorische Details und konsistente Charakterstimme als Basis-Llama 3.1 8B.',
@@ -12392,7 +12392,7 @@ print(response.choices[0].message.content)`,
         howToEvaluate: {
           title: 'Comment évaluer la qualité des LLMs locaux',
           content: [
-            'Les benchmarks objectifs mesurent les connaissances, pas la créativité. Testez directement avec vos prompts :',
+            '**Les benchmarks objectifs mesurent les connaissances, pas la créativité.** Testez directement avec vos prompts :',
           ],
           items: [
             '**Test continuité**: donnez les deux premiers paragraphes d\'une scène, demandez 500 mots. Ton cohérent?',
@@ -12406,7 +12406,7 @@ print(response.choices[0].message.content)`,
         llama33: {
           title: '#1 Llama 3.3 70B — meilleure prose localement',
           content: [
-            'Llama 3.3 70B produit la prose anglaise la plus naturelle. Entraîné sur corpus textuels divers, range stylistique très large. Cohérence long format (1K–3K mots) supérieure aux modèles 7B/13B.',
+            '**Llama 3.3 70B produit la prose anglaise la plus naturelle.** Entraîné sur corpus textuels divers, range stylistique très large. Cohérence long format (1K–3K mots) supérieure aux modèles 7B/13B.',
             'Contrainte hardware : 40 GB RAM (Q4_K_M). Pour sessions créatives, vitesse génération lente (8–15 tok/sec CPU) acceptable. Apple M2 Ultra/M3 Max : 20–35 tok/sec.',
           ],
           rows: [
@@ -12423,21 +12423,21 @@ print(response.choices[0].message.content)`,
         mistralSmall: {
           title: '#2 Mistral Small 3.1 24B — meilleur 16 GB RAM',
           content: [
-            'Mistral Small 3.1 24B qualité créative notable, entre dans 14 GB RAM. Suivi instructions précis, gère spécifications détaillées sans dérives.',
+            '**Mistral Small 3.1 24B qualité créative notable, entre dans 14 GB RAM.** Suivi instructions précis, gère spécifications détaillées sans dérives.',
             'Pour narratif long format sans workstation, c\'est le choix pratique.',
           ],
         },
         llama318: {
           title: '#3 Llama 3.1 8B — meilleur 8 GB RAM',
           content: [
-            'À 8 GB RAM, Llama 3.1 8B surpasse Qwen2.5 7B et Mistral 7B. Qwen2.5 plus fort coding, mais prose moins fluide narratif.',
+            '**À 8 GB RAM, Llama 3.1 8B surpasse Qwen2.5 7B et Mistral 7B.** Qwen2.5 plus fort coding, mais prose moins fluide narratif.',
             'Fiable jusqu\'à 500 mots. Au-delà 1K mots, cohérence dégrade. Limitation fondamentale 8B pour long format.',
           ],
         },
         fineTuned: {
           title: '#4 Fine-tunes spécialisés fiction/roleplay',
           content: [
-            'Communauté maintient fine-tunes entraînés corpus fiction, surpassent modèles base. Disponibles Hugging Face, chargeable LM Studio/Ollama :',
+            '**Communauté maintient fine-tunes entraînés corpus fiction, surpassent modèles base.** Disponibles Hugging Face, chargeable LM Studio/Ollama :',
           ],
           items: [
             '**Fimbulvetr-11B** — fantasy/SF haute qualité. Détails sensoriels, voix personnage cohérente.',
@@ -12553,7 +12553,7 @@ print(response.choices[0].message.content)`,
         howToEvaluate: {
           title: 'ローカルLLMの創作文章品質をどう評価するか',
           content: [
-            '客観的ベンチマークは知識と推論を測定しますが、創作品質は測定しません。創作文章用のモデルを評価するには、使用予定のプロンプトで直接テストしてください。',
+            '**客観的ベンチマークは知識と推論を測定しますが、創作品質は測定しません。** 創作文章用のモデルを評価するには、使用予定のプロンプトで直接テストしてください。',
             '注意点: 標準ベンチマークではスコアが高くても、実際の創作文章の品質とは無関係な場合があります。必ず実際のテストを行ってください。',
           ],
           items: [
@@ -12585,21 +12585,21 @@ print(response.choices[0].message.content)`,
         mistralSmall: {
           title: '#2 Mistral Small 3.1 24B - 16GB RAM向け最高の創作文章',
           content: [
-            'Mistral Small 3.1 24Bは、7Bモデルより明らかに優れた創作文章品質を提供しながら、14GB RAMに収まります。詳細なスタイル仕様を処理するのに十分な精度があります。',
+            '**Mistral Small 3** .1 24Bは、7Bモデルより明らかに優れた創作文章品質を提供しながら、14GB RAMに収まります。詳細なスタイル仕様を処理するのに十分な精度があります。',
             '実用的なコツ: ワークステーションクラスのハードウェアなしで本物の長編ナレーティング機能を望むユーザーにとって、これが最良の選択肢です。',
           ],
         },
         llama318: {
           title: '#3 Llama 3.1 8B - 8GB RAM向け最高の創作文章',
           content: [
-            '8GB RAMレベルでは、Llama 3.1 8BはQwen2.5 7BおよびMistral 7Bを英語創作文章で上回ります。Qwen2.5はコーディングと構造化タスクで強力ですが、英語散文生成はナレーティブ目的で流動性が低くなります。',
+            '**8GB RAMレベルでは、Llama 3** .1 8BはQwen2.5 7BおよびMistral 7Bを英語創作文章で上回ります。Qwen2.5はコーディングと構造化タスクで強力ですが、英語散文生成はナレーティブ目的で流動性が低くなります。',
             '注意点: 500語以下の短編に適しています。1000語を超えるストーリーでは品質が低下する傾向があります。これは8Bスケールモデルの基本的な制限です。',
           ],
         },
         fineTuned: {
           title: '#4 フィクション・ロールプレイ用コミュニティファインチューン',
           content: [
-            'ローカルLLMコミュニティは、フィクションコーパスでトレーニングされた専門のファインチューンを保持しており、長編ナレーティブタスクでベースモデルを上回ります。これらはHugging Faceで利用でき、LM StudioまたはOllama（カスタムModelfilesを使用）で読み込むことができます。',
+            '**ローカルLLMコミュニティは、フィクションコーパスでトレーニングされた専門のファインチューンを保持しており、長編ナレーティブタスクでベースモデルを上回ります。** これらはHugging Faceで利用でき、LM StudioまたはOllama（カスタムModelfilesを使用）で読み込むことができます。',
             '実践Tips: Hugging Faceから「creative writing GGUF」を検索して、LM Studioのモデルブラウザに読み込むか、カスタムModelfileで`ollama create`経由で読み込みます。',
           ],
           items: [
@@ -12611,7 +12611,7 @@ print(response.choices[0].message.content)`,
         promptingTips: {
           title: 'ローカルLLMの創作文章を改善するプロンプティングコツ',
           content: [
-            '実践的なテクニック：創作出力の質を大幅に向上させるプロンプティング手法です。',
+            '**実践的なテクニック：創作出力の質を大幅に向上させるプロンプティング手法です。**',
           ],
           items: [
             '**スタイルを具体的に指定**: 「Cormac McCarthyのスタイルで書く - スパースな対話、長い説明文、引用符なし」は「文学フィクションを書く」を上回ります。',
@@ -12717,7 +12717,7 @@ print(response.choices[0].message.content)`,
         howToEvaluate: {
           title: '如何评估本地LLM的创意写作质量',
           content: [
-            '客观基准测试衡量的是知识和推理，而非创意质量。要评估一个模型的创意写作能力，需要直接用你计划使用的提示进行测试。',
+            '**客观基准测试衡量的是知识和推理，而非创意质量。** 要评估一个模型的创意写作能力，需要直接用你计划使用的提示进行测试。',
             '实用建议：不要依赖基准分数。您需要自己运行这四个测试，才能找到适合您创意写作风格的模型。',
           ],
           items: [
@@ -12749,21 +12749,21 @@ print(response.choices[0].message.content)`,
         mistralSmall: {
           title: '#2 Mistral Small 3.1 24B - 16GB RAM最佳创意写作',
           content: [
-            'Mistral Small 3.1 24B提供的创意写作质量明显优于任何7B模型，同时适配14GB内存。其指令遵循足够精确，可以处理详细的风格规范（"用第二人称、现在时、短而有力的句子写作"）而不会在几段后偏离。',
+            '**Mistral Small 3** .1 24B提供的创意写作质量明显优于任何7B模型，同时适配14GB内存。其指令遵循足够精确，可以处理详细的风格规范（"用第二人称、现在时、短而有力的句子写作"）而不会在几段后偏离。',
             '实用建议：对于希望获得真正长篇叙事能力但没有工作站级硬件的用户，这是最佳实际选择。您可以在标准笔记本电脑上运行此模型。',
           ],
         },
         llama318: {
           title: '#3 Llama 3.1 8B - 8GB RAM最佳创意写作',
           content: [
-            '在8GB内存级别，Llama 3.1 8B在英文创意写作中优于Qwen2.5 7B和Mistral 7B。Qwen2.5在编码和结构化任务中更强，但其英文散文生成对叙事目的来说流畅性较低。',
+            '**在8GB内存级别，Llama 3** .1 8B在英文创意写作中优于Qwen2.5 7B和Mistral 7B。Qwen2.5在编码和结构化任务中更强，但其英文散文生成对叙事目的来说流畅性较低。',
             '实用建议：Llama 3.1 8B能可靠处理短篇小说（最多500字）。对于超过1000字的故事，质量开始下降。如果您需要长篇小说，请升级到16GB RAM的Mistral Small或40GB的Llama 3.3。',
           ],
         },
         fineTuned: {
           title: '#4 小说和角色扮演社区微调模型',
           content: [
-            '本地LLM社区维护在小说语料库上训练的专门微调模型，在长篇叙事任务中优于基础模型。这些在Hugging Face上可用，可在LM Studio或Ollama中加载。',
+            '**本地LLM社区维护在小说语料库上训练的专门微调模型，在长篇叙事任务中优于基础模型。** 这些在Hugging Face上可用，可在LM Studio或Ollama中加载。',
             '实用建议：使用这些微调模型，您可以获得更好的创意输出，同时保持完全本地化。对于特定的创意写作风格（例如幻想小说或网络文学），这些微调提供了优越的性能。',
           ],
           items: [
@@ -12940,7 +12940,7 @@ print(response.choices[0].message.content)`,
         whatIsSmall: {
           title: 'What Is a "Small" Local LLM and When Should You Use One?',
           content: [
-            'A small local LLM is typically defined as a model with fewer than 4 billion parameters. At Q4_K_M quantization, these models require 1.5–3 GB of RAM — well within the constraints of entry-level laptops with 4–8 GB total memory.',
+            '**A small local LLM is typically defined as a model with fewer than 4 billion parameters.** At Q4_K_M quantization, these models require 1.5–3 GB of RAM — well within the constraints of entry-level laptops with 4–8 GB total memory.',
             'As of April 2026, small models are appropriate for: quick summarization, simple Q&A, code snippet explanation, translation of short texts, and classification tasks. They are not suitable for multi-step reasoning, complex code generation, or writing long-form coherent documents.',
             'The quality gap between a 3B and 7B model is significant — roughly equivalent to the gap between GPT-3.5 Mini and GPT-3.5 Turbo. For users with 8 GB RAM, a 7B model at Q4_K_M is almost always the better choice if the machine has headroom. See [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) for 7B recommendations.',
           ],
@@ -12953,7 +12953,7 @@ print(response.choices[0].message.content)`,
         phi4mini: {
           title: 'Phi-4 Mini 3.8B — Best Reasoning Performance in the Sub-4B Class',
           content: [
-            'Microsoft Phi-4 Mini achieves 68% on MMLU and 70% on HumanEval — scores that exceed many 7B models released before 2025. This is possible because Phi-4 Mini was trained on a curated synthetic dataset focused on reasoning and problem-solving, rather than broad web text.',
+            '**Microsoft Phi-4 Mini achieves 68% on MMLU and 70% on HumanEval — scores that exceed many 7B models released before 2025.** This is possible because Phi-4 Mini was trained on a curated synthetic dataset focused on reasoning and problem-solving, rather than broad web text.',
             'As of April 2026, Phi-4 Mini is the recommended choice for users who primarily need reasoning (math, logic, step-by-step explanations) or coding assistance on hardware with 4–6 GB RAM.',
           ],
           rows: [
@@ -12969,7 +12969,7 @@ print(response.choices[0].message.content)`,
         gemma2: {
           title: 'Gemma 2 2B — Fastest Small Local LLM on CPU',
           content: [
-            'Google Gemma 2 2B generates 40–60 tokens/sec on a modern laptop CPU — the fastest of any model at this quality tier. Its 1.7 GB RAM footprint leaves ample memory for the OS and other applications on a 4 GB machine.',
+            '**Google Gemma 2 2B generates 40–60 tokens/sec on a modern laptop CPU — the fastest of any model at this quality tier.** Its 1.7 GB RAM footprint leaves ample memory for the OS and other applications on a 4 GB machine.',
             'Quality is lower than Phi-4 Mini or Llama 3.2 3B on reasoning tasks. The 8K context window (vs. 128K on Phi-4 Mini and Llama 3.2) is a practical limitation for longer documents. Gemma 2 2B is the right choice when response speed matters more than output depth.',
           ],
           rows: [
@@ -12984,7 +12984,7 @@ print(response.choices[0].message.content)`,
         qwen25_3b: {
           title: 'Qwen2.5 3B — Best Small Model for Coding Tasks',
           content: [
-            'Qwen2.5 3B scores 65% on HumanEval — 5 percentage points above Llama 3.2 3B — making it the best choice for coding tasks at the 3B scale. It includes JSON mode and function calling support, and natively handles 29 languages.',
+            '**Qwen2.5 3B scores 65% on HumanEval — 5 percentage points above Llama 3.2 3B — making it the best choice for coding tasks at the 3B scale.** It includes JSON mode and function calling support, and natively handles 29 languages.',
             'For non-coding tasks in English, Llama 3.2 3B and Phi-4 Mini produce more natural prose. Choose Qwen2.5 3B specifically when coding or multilingual output is the primary use case.',
           ],
           rows: [
@@ -13000,7 +13000,7 @@ print(response.choices[0].message.content)`,
         llama32_3b: {
           title: 'Llama 3.2 3B — Best General-Purpose Small Model',
           content: [
-            'Meta Llama 3.2 3B is the most widely documented and community-supported 3B model. It scores 58% on MMLU and 60% on HumanEval — slightly below Phi-4 Mini on both — but has the widest tool support, the most fine-tunes available, and the largest collection of community guides.',
+            '**Meta Llama 3.2 3B is the most widely documented and community-supported 3B model.** It scores 58% on MMLU and 60% on HumanEval — slightly below Phi-4 Mini on both — but has the widest tool support, the most fine-tunes available, and the largest collection of community guides.',
             'The 128K context window is the same as larger Llama 3.x models, making it suitable for summarizing medium-length documents. For a first small model, Llama 3.2 3B remains the safest choice due to predictable behavior and extensive documentation.',
           ],
           rows: [
@@ -13279,7 +13279,7 @@ print(response.choices[0].message.content)`,
         whatIsSmall: {
           title: '「小規模」ローカルLLMとは何か、そしていつ使うべきか？',
           content: [
-            '小規模ローカルLLMは、通常、40億未満のパラメータを持つモデルとして定義されます。Q4_K_M量子化では、これらのモデルは1.5～3 GBのRAMを必要とします。これは、4～8 GBの総メモリを持つエントリーレベルノートパソコンの制約内です。',
+            '**小規模ローカルLLMは、通常、40億未満のパラメータを持つモデルとして定義されます。** Q4_K_M量子化では、これらのモデルは1.5～3 GBのRAMを必要とします。これは、4～8 GBの総メモリを持つエントリーレベルノートパソコンの制約内です。',
             '2026年4月現在、小規模モデルは以下に適しています：クイック要約、シンプルなQ&A、コードスニペット説明、短いテキストの翻訳、分類タスク。複数ステップの推論、複雑なコード生成、長い一貫した文書の作成には適していません。',
             '3Bモデルと7Bモデル間の品質ギャップは重大です。GPT-3.5 MiniとGPT-3.5 Turbo間のギャップとほぼ同等です。8 GB RAMを持つユーザーの場合、マシンに余裕があれば、Q4_K_Mの7Bモデルがほぼ常に良い選択です。7B推奨については、[最高の初心者向けローカルLLMモデル](/local-llms/best-beginner-local-llm-models)を参照してください。',
           ],
@@ -13287,7 +13287,7 @@ print(response.choices[0].message.content)`,
         phi4mini: {
           title: 'Phi-4 Mini 3.8B — Sub-4Bクラスで最高の推論パフォーマンス',
           content: [
-            'Microsoft Phi-4 MiniはMMLA68%、HumanEval70%を達成します。これらのスコアは2025年より前にリリースされた多くの7Bモデルを上回っています。これが可能な理由は、Phi-4 Miniが広いウェブテキストではなく、推論と問題解決に焦点を当てた管理されたシンセティックデータセットで訓練されたためです。',
+            '**Microsoft Phi-4 MiniはMMLA68%、HumanEval70%を達成します。** これらのスコアは2025年より前にリリースされた多くの7Bモデルを上回っています。これが可能な理由は、Phi-4 Miniが広いウェブテキストではなく、推論と問題解決に焦点を当てた管理されたシンセティックデータセットで訓練されたためです。',
             '2026年4月現在、Phi-4 Miniは、主に推論（数学、論理、段階的説明）またはコード支援が必要で、4～6 GB RAMのハードウェアを持つユーザーに推奨される選択肢です。',
           ],
           rows: [
@@ -13303,7 +13303,7 @@ print(response.choices[0].message.content)`,
         gemma2: {
           title: 'Gemma 2 2B — CPUで最速の小規模ローカルLLM',
           content: [
-            'Google Gemma 2 2Bは、モダンノートパソコンのCPUで40～60トークン/秒を生成します。この品質帯域内のモデルの中で最速です。1.7 GB RAMのフットプリントにより、4 GBマシン上のOSと他のアプリケーション用に十分なメモリが残ります。',
+            '**Google Gemma 2 2Bは、モダンノートパソコンのCPUで40～60トークン/秒を生成します。** この品質帯域内のモデルの中で最速です。1.7 GB RAMのフットプリントにより、4 GBマシン上のOSと他のアプリケーション用に十分なメモリが残ります。',
             '推論タスクではPhi-4 MiniまたはLlama 3.2 3Bより品質が低いです。8Kコンテキストウィンドウ（Phi-4 MiniとLlama 3.2の128Kに対して）は、より長い文書の実用的な制限です。応答速度が出力の深さより重要な場合、Gemma 2 2Bが正しい選択です。',
           ],
           rows: [
@@ -13334,7 +13334,7 @@ print(response.choices[0].message.content)`,
         llama32_3b: {
           title: 'Llama 3.2 3B — 最高の汎用小規模モデル',
           content: [
-            'Meta Llama 3.2 3Bは、最も広くドキュメント化され、コミュニティがサポートする3Bモデルです。MMLU58%、HumanEval60%のスコアは、両方でPhi-4 Miniを若干下回りますが、最も広いツールサポート、最も利用可能なファインチューン、最大のコミュニティガイドコレクションを備えています。',
+            '**Meta Llama 3** .2 3Bは、最も広くドキュメント化され、コミュニティがサポートする3Bモデルです。MMLU58%、HumanEval60%のスコアは、両方でPhi-4 Miniを若干下回りますが、最も広いツールサポート、最も利用可能なファインチューン、最大のコミュニティガイドコレクションを備えています。',
             '128Kコンテキストウィンドウは、より大きなLlama 3.xモデルと同じで、中程度の長さの文書の要約に適しています。最初の小規模モデルとして、Llama 3.2 3Bは予測可能な動作と広範なドキュメンテーションのため、最も安全な選択のままです。',
           ],
           rows: [
@@ -13502,7 +13502,7 @@ print(response.choices[0].message.content)`,
         whatIsSmall: {
           title: '什么是"小型"本地LLM，何时应该使用它？',
           content: [
-            '小型本地LLM通常定义为参数少于40亿的模型。在Q4_K_M量化下，这些模型需要1.5–3 GB的RAM，完全在具有4–8 GB总内存的入门级笔记本电脑的约束范围内。',
+            '**小型本地LLM通常定义为参数少于40亿的模型。** 在Q4_K_M量化下，这些模型需要1.5–3 GB的RAM，完全在具有4–8 GB总内存的入门级笔记本电脑的约束范围内。',
             '截至2026年4月，小型模型适合：快速摘要、简单问答、代码片段解释、短文本翻译和分类任务。不适合多步推理、复杂代码生成或长篇一致的文档编写。',
             '3B模型和7B模型之间的质量差距很大，大致相当于GPT-3.5 Mini和GPT-3.5 Turbo之间的差距。对于拥有8 GB RAM的用户，如果机器有余量，Q4_K_M的7B模型几乎总是更好的选择。有关7B建议，请参阅[最佳初学者本地LLM模型](/local-llms/best-beginner-local-llm-models)。',
           ],
@@ -13510,7 +13510,7 @@ print(response.choices[0].message.content)`,
         phi4mini: {
           title: 'Phi-4 Mini 3.8B — Sub-4B类中最佳推理性能',
           content: [
-            'Microsoft Phi-4 Mini在MMLU上达到68%，在HumanEval上达到70%，这些得分超过了许多2025年之前发布的7B模型。之所以可能，是因为Phi-4 Mini在专注于推理和问题解决的精选合成数据集上进行了训练，而不是广泛的网络文本。',
+            '**Microsoft Phi-4 Mini在MMLU上达到68%，在HumanEval上达到70%，这些得分超过了许多2025年之前发布的7B模型。** 之所以可能，是因为Phi-4 Mini在专注于推理和问题解决的精选合成数据集上进行了训练，而不是广泛的网络文本。',
             '截至2026年4月，Phi-4 Mini是需要推理（数学、逻辑、分步解释）或在4–6 GB RAM硬件上进行编码协助的用户的推荐选择。',
           ],
           rows: [
@@ -13526,7 +13526,7 @@ print(response.choices[0].message.content)`,
         gemma2: {
           title: 'Gemma 2 2B — CPU上最快的小型本地LLM',
           content: [
-            'Google Gemma 2 2B在现代笔记本电脑CPU上生成40–60令牌/秒，是该质量层级内最快的模型。其1.7 GB RAM占用空间在4 GB机器上为OS和其他应用程序留下充足的内存。',
+            '**Google Gemma 2 2B在现代笔记本电脑CPU上生成40–60令牌/秒，是该质量层级内最快的模型。** 其1.7 GB RAM占用空间在4 GB机器上为OS和其他应用程序留下充足的内存。',
             '在推理任务上的质量低于Phi-4 Mini或Llama 3.2 3B。8K上下文窗口（相对于Phi-4 Mini和Llama 3.2的128K）对于较长的文档是实际限制。当响应速度比输出深度更重要时，Gemma 2 2B是正确的选择。',
           ],
           rows: [
@@ -13557,7 +13557,7 @@ print(response.choices[0].message.content)`,
         llama32_3b: {
           title: 'Llama 3.2 3B — 最好的通用小型模型',
           content: [
-            'Meta Llama 3.2 3B是最广泛记录的、社区支持最多的3B模型。它在MMLU上得分58%，在HumanEval上得分60%，在两者上都略低于Phi-4 Mini，但拥有最广泛的工具支持、最多可用的微调和最大的社区指南集合。',
+            '**Meta Llama 3** .2 3B是最广泛记录的、社区支持最多的3B模型。它在MMLU上得分58%，在HumanEval上得分60%，在两者上都略低于Phi-4 Mini，但拥有最广泛的工具支持、最多可用的微调和最大的社区指南集合。',
             '128K上下文窗口与更大的Llama 3.x模型相同，适合总结中等长度的文档。作为第一个小型模型，Llama 3.2 3B因其可预测的行为和广泛的文档记录而仍然是最安全的选择。',
           ],
           rows: [
@@ -13714,7 +13714,7 @@ print(response.choices[0].message.content)`,
         whatHardware: {
           title: 'What Hardware Can Actually Run a 70B Local LLM?',
           content: [
-            'A 70B model at Q4_K_M quantization requires approximately 40–43 GB of memory that is accessible to the inference engine. This can come from GPU VRAM, unified system memory (Apple Silicon), system RAM, or a combination via layer offloading.',
+            '**A 70B model at Q4_K_M quantization requires approximately 40–43 GB of memory that is accessible to the inference engine.** This can come from GPU VRAM, unified system memory (Apple Silicon), system RAM, or a combination via layer offloading.',
           ],
           image: '/images/70b-hardware-comparison.svg',
           imageCaption: 'Hardware comparison: Apple Silicon M3 Max achieves 25–35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10–18 tok/sec, and CPU-only 70B inference produces just 1–3 tok/sec.',
@@ -13746,7 +13746,7 @@ print(response.choices[0].message.content)`,
         appleSilicon: {
           title: 'Why Is Apple Silicon the Best Consumer Option for 70B Models?',
           content: [
-            'Apple Silicon uses unified memory — the CPU and GPU share the same physical memory pool. An M3 Max MacBook Pro with 64 GB of unified memory can run a 70B model at Q4_K_M entirely on GPU, achieving 20–30 tok/sec with no layer offloading overhead.',
+            '**Apple Silicon uses unified memory — the CPU and GPU share the same physical memory pool.** An M3 Max MacBook Pro with 64 GB of unified memory can run a 70B model at Q4_K_M entirely on GPU, achieving 20–30 tok/sec with no layer offloading overhead.',
             'On NVIDIA hardware, the GPU and system RAM are separate. A 24 GB VRAM GPU can only hold ~60% of a Q4_K_M 70B model; the remaining layers run on CPU, creating a memory bandwidth bottleneck that reduces speed to 10–18 tok/sec.',
             'As of April 2026, the Mac Studio M2 Ultra (64 GB, ~$2,000 refurbished) is the most cost-effective path to 70B local inference at usable speed. A new M3 Max MacBook Pro 64 GB costs approximately $3,500.',
           ],
@@ -13754,7 +13754,7 @@ print(response.choices[0].message.content)`,
         dgxSpark: {
           title: 'NVIDIA DGX Spark: 128GB Unified Memory for 70B Models',
           content: [
-            'The NVIDIA DGX Spark ($3,999) is a compact desktop AI computer launched in October 2025, built on the GB10 Grace Blackwell Superchip with 128GB of unified LPDDR5x memory. Its unified memory architecture means GPU and CPU share the same 128GB pool — similar to Apple Silicon but with CUDA acceleration.',
+            '**The NVIDIA DGX Spark ($3,999) is a compact desktop AI computer launched in October 2025, built on the GB10 Grace Blackwell Superchip with 128GB of unified LPDDR5x memory.** Its unified memory architecture means GPU and CPU share the same 128GB pool — similar to Apple Silicon but with CUDA acceleration.',
             'At 128GB unified memory, the DGX Spark runs Llama 3.3 70B and Qwen2.5 72B at Q8_0 (70GB — near-lossless quality). Inference speed for 70B at Q8_0 is approximately 18–28 tok/sec.',
           ],
           rows: [
@@ -13778,7 +13778,7 @@ print(response.choices[0].message.content)`,
         cpuOnly: {
           title: 'Is CPU-Only 70B Inference Practical?',
           content: [
-            'A 70B model at Q4_K_M on a high-core-count CPU (AMD Threadripper, Intel Xeon) with 64 GB RAM produces 1–3 tokens/sec. At 2 tok/sec, a 200-word response takes approximately 75 seconds.',
+            '**A 70B model at Q4_K_M on a high-core-count CPU (AMD Threadripper, Intel Xeon) with 64 GB RAM produces 1–3 tokens/sec.** At 2 tok/sec, a 200-word response takes approximately 75 seconds.',
             'This is impractical for interactive chat but usable for batch processing — summarizing documents, generating reports, or processing files overnight. For interactive use, the minimum practical hardware is a machine that can achieve 8+ tok/sec, which requires either Apple Silicon or NVIDIA GPU offloading.',
           ],
         },
@@ -14143,7 +14143,7 @@ print(response.choices[0].message.content)`,
     whatHardware: {
       title: 'Welche Hardware kann ein 70B Local LLM tatsächlich ausführen?',
       content: [
-        'Ein 70B Modell bei Q4_K_M Quantisierung benötigt etwa 40–43 GB Speicher, der für die Inferenz-Engine zugänglich ist. Dies kann von GPU VRAM, unified System Memory (Apple Silicon), System RAM oder einer Kombination über Layer Offloading stammen.',
+        '**Ein 70B Modell bei Q4_K_M Quantisierung benötigt etwa 40–43 GB Speicher, der für die Inferenz-Engine zugänglich ist.** Dies kann von GPU VRAM, unified System Memory (Apple Silicon), System RAM oder einer Kombination über Layer Offloading stammen.',
       ],
       image: '/images/70b-hardware-comparison.svg',
       imageCaption: 'Hardware comparison: Apple Silicon M3 Max achieves 25–35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10–18 tok/sec, and CPU-only 70B inference produces just 1–3 tok/sec.',
@@ -14174,7 +14174,7 @@ print(response.choices[0].message.content)`,
     appleSilicon: {
       title: 'Warum ist Apple Silicon die beste Consumer Option für 70B Modelle?',
       content: [
-        'Apple Silicon nutzt unified memory — die CPU und GPU teilen denselben physikalischen Speicherpool. Ein M3 Max MacBook Pro mit 64 GB unified memory kann ein 70B Modell bei Q4_K_M vollständig auf der GPU ausführen, erreicht 20–30 tok/sec ohne Layer Offloading Overhead.',
+        '**Apple Silicon nutzt unified memory — die CPU und GPU teilen denselben physikalischen Speicherpool.** Ein M3 Max MacBook Pro mit 64 GB unified memory kann ein 70B Modell bei Q4_K_M vollständig auf der GPU ausführen, erreicht 20–30 tok/sec ohne Layer Offloading Overhead.',
         'Bei NVIDIA Hardware sind GPU und System RAM getrennt. Eine 24 GB VRAM GPU kann nur etwa 60% eines Q4_K_M 70B Modells halten; die verbleibenden Layers laufen auf der CPU, schaffen einen Memory Bandwidth Engpass, der die Geschwindigkeit auf 10–18 tok/sec reduziert.',
         'Ab April 2026 ist der Mac Studio M2 Ultra (64 GB, etwa 2.000 € gebraucht) der kostengünstigste Weg zu 70B lokaler Inferenz mit praktischer Geschwindigkeit. Ein neuer M3 Max MacBook Pro 64 GB kostet etwa 3.500 €.',
       ],
@@ -14190,7 +14190,7 @@ print(response.choices[0].message.content)`,
     cpuOnly: {
       title: 'Ist CPU-Only 70B Inferenz praktisch?',
       content: [
-        'Ein 70B Modell bei Q4_K_M auf einer hochkern-CPU (AMD Threadripper, Intel Xeon) mit 64 GB RAM erzeugt 1–3 tokens/sec. Bei 2 tok/sec dauert eine 200-Wort-Antwort etwa 75 Sekunden.',
+        '**Ein 70B Modell bei Q4_K_M auf einer hochkern-CPU (AMD Threadripper, Intel Xeon) mit 64 GB RAM erzeugt 1–3 tokens/sec.** Bei 2 tok/sec dauert eine 200-Wort-Antwort etwa 75 Sekunden.',
         'Dies ist unpraktisch für interaktiven Chat, aber brauchbar für Batch-Verarbeitung — Zusammenfassung von Dokumenten, Generierung von Berichten oder Verarbeitung von Dateien über Nacht. Für interaktive Verwendung ist die Minimum praktische Hardware eine Maschine, die 8+ tok/sec erreichen kann, was entweder Apple Silicon oder NVIDIA GPU Offloading benötigt.',
       ],
     },
@@ -14305,7 +14305,7 @@ print(response.choices[0].message.content)`,
     whatHardware: {
       title: 'Quel matériel peut réellement exécuter un modèle 70B ?',
       content: [
-        'Un modèle 70B en quantification Q4_K_M nécessite environ 40-43 Go de mémoire accessible au moteur d\'inférence. Cela peut provenir de VRAM GPU, de mémoire système unifiée (Apple Silicon), de RAM système, ou d\'une combinaison via déchargement de couches.',
+        '**Un modèle 70B en quantification Q4_K_M nécessite environ 40-43 Go de mémoire accessible au moteur d\'inférence.** Cela peut provenir de VRAM GPU, de mémoire système unifiée (Apple Silicon), de RAM système, ou d\'une combinaison via déchargement de couches.',
       ],
       image: '/images/70b-hardware-comparison.svg',
       imageCaption: 'Hardware comparison: Apple Silicon M3 Max achieves 25–35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10–18 tok/sec, and CPU-only 70B inference produces just 1–3 tok/sec.',
@@ -14336,7 +14336,7 @@ print(response.choices[0].message.content)`,
     appleSilicon: {
       title: 'Pourquoi Apple Silicon est-il la meilleure option grand public pour les modèles 70B ?',
       content: [
-        'Apple Silicon utilise la mémoire unifiée — le CPU et le GPU partagent le même pool mémoire physique. Un MacBook Pro M3 Max avec 64 Go de mémoire unifiée peut exécuter un modèle 70B en Q4_K_M entièrement sur GPU, atteignant 20-30 tok/sec sans surcharge de déchargement de couches.',
+        '**Apple Silicon utilise la mémoire unifiée — le CPU et le GPU partagent le même pool mémoire physique.** Un MacBook Pro M3 Max avec 64 Go de mémoire unifiée peut exécuter un modèle 70B en Q4_K_M entièrement sur GPU, atteignant 20-30 tok/sec sans surcharge de déchargement de couches.',
         'Sur le matériel NVIDIA, le GPU et la RAM système sont séparés. Un GPU VRAM 24 Go ne peut contenir que ~60 % d\'un modèle 70B Q4_K_M ; les couches restantes s\'exécutent sur CPU, créant un goulot d\'étranglement de bande passante mémoire qui réduit la vitesse à 10-18 tok/sec.',
         'En avril 2026, le Mac Studio M2 Ultra (64 Go, ~2 000 euros d\'occasion) est le chemin le plus rentable vers une inférence 70B locale à vitesse utilisable. Un nouveau MacBook Pro M3 Max 64 Go coûte environ 3 500 euros.',
       ],
@@ -14352,7 +14352,7 @@ print(response.choices[0].message.content)`,
     cpuOnly: {
       title: 'L\'inférence 70B sur CPU uniquement est-elle pratique ?',
       content: [
-        'Un modèle 70B en Q4_K_M sur un CPU multi-cœur (AMD Threadripper, Intel Xeon) avec 64 Go RAM produit 1-3 tokens/sec. À 2 tok/sec, une réponse de 200 mots prend environ 75 secondes.',
+        '**Un modèle 70B en Q4_K_M sur un CPU multi-cœur (AMD Threadripper, Intel Xeon) avec 64 Go RAM produit 1-3 tokens/sec.** À 2 tok/sec, une réponse de 200 mots prend environ 75 secondes.',
         'C\'est impratique pour le chat interactif mais utilisable pour le traitement batch — résumé de documents, génération de rapports, ou traitement de fichiers de nuit. Pour un usage interactif, le matériel minimum pratique est une machine capable de 8+ tok/sec, ce qui nécessite soit Apple Silicon soit un déchargement GPU NVIDIA.',
       ],
     },
@@ -14607,7 +14607,7 @@ print(response.choices[0].message.content)`,
     whatHardware: {
       title: '70B ローカルLLM を実際に実行できるハードウェアとは',
       content: [
-        'Q4_K_M 量化の70Bモデルは、推論エンジンがアクセス可能なメモリ約40～43GBが必要です。これはGPU VRAM、統合システムメモリ（Apple Silicon）、システムRAM、またはレイヤーオフロード経由の組み合わせから提供できます。',
+        '**Q4_K_M 量化の70Bモデルは、推論エンジンがアクセス可能なメモリ約40～43GBが必要です。** これはGPU VRAM、統合システムメモリ（Apple Silicon）、システムRAM、またはレイヤーオフロード経由の組み合わせから提供できます。',
       ],
       rows: [
         { 'ハードウェア': 'Apple M3 Max（64GB統合）', '70B実行可能？': 'はい — フルGPU', '速度（70B Q4）': '20～30 tok/sec', '注釈': '最高のコンシューマーノートパック オプション' },
@@ -14622,7 +14622,7 @@ print(response.choices[0].message.content)`,
     注意点_量化: {
       title: '注意点：量化レベルを理解する',
       content: [
-        'Q4_K_M 量化を使用してください — これはほとんどのコンシューマーハードウェアで最適です。FP16 や Q8_0 のような高い精度が必要な場合、より多くの RAM が必要になります。',
+        '**Q4_K_M 量化を使用してください — これはほとんどのコンシューマーハードウェアで最適です。** FP16 や Q8_0 のような高い精度が必要な場合、より多くの RAM が必要になります。',
         '量化レベル：FP16（140GB）> Q8_0（70GB）> Q5_K_M（50GB）> Q4_K_M（40GB）> Q3_K_S（30GB）',
         'より低い量化（Q3_K_S、Q2_K）は品質の喪失が大きくなります。特に数学的推論とコード生成では著しい低下が見られます。',
       ],
@@ -14642,7 +14642,7 @@ print(response.choices[0].message.content)`,
     appleSilicon: {
       title: 'Apple Silicon が70Bモデルのための最高のコンシューマーオプションである理由',
       content: [
-        'Apple Silicon は統合メモリを使用します — CPU と GPU は同じ物理メモリプールを共有します。64GB の統合メモリを持つ M3 Max MacBook Pro は、70Bモデルを Q4_K_M で完全にGPU上で実行し、20～30 tok/sec を達成でき、レイヤーオフロードのオーバーヘッドがありません。',
+        '**Apple Silicon は統合メモリを使用します — CPU と GPU は同じ物理メモリプールを共有します。** 64GB の統合メモリを持つ M3 Max MacBook Pro は、70Bモデルを Q4_K_M で完全にGPU上で実行し、20～30 tok/sec を達成でき、レイヤーオフロードのオーバーヘッドがありません。',
         'NVIDIA ハードウェアでは、GPU とシステムRAMは分離しています。24GB VRAM の GPU は Q4_K_M 70B モデルの約60％しか保持できません。残りのレイヤーはCPU上で実行され、メモリ帯域幅のボトルネックが生じ、速度が 10～18 tok/sec に低下します。',
         '2026年4月時点では、Mac Studio M2 Ultra（64GB、約2,000ドル・中古）が、使用可能な速度での70Bローカル推論への最も費用対効果の高いパスです。新しい M3 Max MacBook Pro 64GB は約3,500ドルです。',
       ],
@@ -14675,7 +14675,7 @@ print(response.choices[0].message.content)`,
     cpuOnly: {
       title: 'CPU 専用70B推論は実用的ですか？',
       content: [
-        'ハイコアカウント CPU（AMD Threadripper、Intel Xeon）を備えた 64GB RAM 上の 70B モデルは 1～3 トークン/秒 を生成します。2 tok/sec では、200語の応答は約75秒かかります。',
+        '**ハイコアカウント CPU（AMD Threadripper、Intel Xeon）を備えた 64GB RAM 上の 70B モデルは 1～3 トークン/秒 を生成します。** 2 tok/sec では、200語の応答は約75秒かかります。',
         'これは対話的チャットには不実用的ですが、バッチ処理（文書の要約、レポート生成、ファイルの一晩処理）には使用可能です。対話的な使用には、8+ tok/sec を実現できるマシン、つまり Apple Silicon または NVIDIA GPU オフロードが最小限の実用的なハードウェアが必要です。',
       ],
     },
@@ -14806,7 +14806,7 @@ print(response.choices[0].message.content)`,
     whatHardware: {
       title: '哪些硬件实际上可以运行 70B 本地大模型？',
       content: [
-        'Q4_K_M 量化的 70B 模型需要约 40-43 GB 的内存可供推理引擎访问。这些内存可以来自 GPU VRAM、统一系统内存 (Apple Silicon)、系统 RAM，或通过层卸载技术的组合。',
+        '**Q4_K_M 量化的 70B 模型需要约 40-43 GB 的内存可供推理引擎访问。** 这些内存可以来自 GPU VRAM、统一系统内存 (Apple Silicon)、系统 RAM，或通过层卸载技术的组合。',
       ],
       image: '/images/70b-hardware-comparison.svg',
       imageCaption: 'Hardware comparison: Apple Silicon M3 Max achieves 25–35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10–18 tok/sec, and CPU-only 70B inference produces just 1–3 tok/sec.',
@@ -14837,7 +14837,7 @@ print(response.choices[0].message.content)`,
     appleSilicon: {
       title: '为什么 Apple Silicon 是 70B 模型的最佳消费级选择？',
       content: [
-        'Apple Silicon 采用统一内存架构 — CPU 和 GPU 共享同一物理内存池。配置 64 GB 统一内存的 M3 Max MacBook Pro 可以完整在 GPU 上运行 Q4_K_M 的 70B 模型，实现 20-30 tok/秒，无需层卸载开销。',
+        '**Apple Silicon 采用统一内存架构 — CPU 和 GPU 共享同一物理内存池。** 配置 64 GB 统一内存的 M3 Max MacBook Pro 可以完整在 GPU 上运行 Q4_K_M 的 70B 模型，实现 20-30 tok/秒，无需层卸载开销。',
         '在 NVIDIA 硬件上，GPU 和系统内存是分离的。24 GB VRAM 的 GPU 仅能容纳 Q4_K_M 70B 模型的约 60%；其余层在 CPU 上运行，造成内存带宽瓶颈，降低速度至 10-18 tok/秒。',
         '截至 2026 年 4 月，Mac Studio M2 Ultra (64 GB，二手约 $2,000) 是以实用速度进行 70B 本地推理最具成本效益的路径。新款 M3 Max MacBook Pro 64 GB 售价约 $3,500。',
       ],
@@ -14853,7 +14853,7 @@ print(response.choices[0].message.content)`,
     cpuOnly: {
       title: '纯 CPU 运行 70B 推理实用吗？',
       content: [
-        'Q4_K_M 70B 模型在高核心数 CPU (AMD Threadripper、Intel Xeon) 配合 64 GB 内存上产生 1-3 token/秒。在 2 tok/秒速度下，一个 200 字的响应需要约 75 秒。',
+        '**Q4_K_M 70B 模型在高核心数 CPU (AMD Threadripper、Intel Xeon) 配合 64 GB 内存上产生 1-3 token/秒。** 在 2 tok/秒速度下，一个 200 字的响应需要约 75 秒。',
         '这对交互式聊天不实用，但对批处理可用 — 如文档摘要、报告生成或文件离线处理。对于交互式使用，最低实用硬件是能实现 8+ tok/秒的机器，这需要 Apple Silicon 或 NVIDIA GPU 卸载。',
       ],
     },
@@ -14933,7 +14933,7 @@ print(response.choices[0].message.content)`,
     regionalContext: {
       title: '中国特定背景与合规性',
       content: [
-        '在中国部署 70B 本地大模型需理解三个关键法律框架：',
+        '**在中国部署 70B 本地大模型需理解三个关键法律框架：**',
       ],
       numberedItems: [
         '《数据安全法》(2021)：强制所有包含用户或业务敏感信息的 AI 推理在本地执行或国内服务器上进行。本地 70B 部署完全符合此要求，因处理不离开企业网络。',
@@ -15455,7 +15455,7 @@ print(response.choices[0].message.content)`,
           id: 'what-is-quantization',
           title: 'Was ist LLM-Quantisierung und warum ist sie wichtig?',
           content: [
-            'Ein großes Sprachmodell speichert sein Wissen als Milliarden numerischer Gewichte. Standardmäßig werden diese als 16-Bit-Fließkommazahlen (FP16) gespeichert — zwei Bytes pro Gewicht. Ein 7B-Modell hat 7 Milliarden Gewichte, daher ist die FP16-Dateigröße ungefähr 14 GB.',
+            '**Ein großes Sprachmodell speichert sein Wissen als Milliarden numerischer Gewichte.** Standardmäßig werden diese als 16-Bit-Fließkommazahlen (FP16) gespeichert — zwei Bytes pro Gewicht. Ein 7B-Modell hat 7 Milliarden Gewichte, daher ist die FP16-Dateigröße ungefähr 14 GB.',
             'Quantisierung ersetzt diese 16-Bit-Floats durch Ganzzahlen mit niedrigerer Präzision. Bei 4-Bit-Quantisierung verwendet jedes Gewicht 0,5 Bytes statt 2 — wodurch der Speicher auf ~3,5 GB für die Gewichte allein reduziert wird. Mit Metadaten-Overhead beträgt ein quantisiertes 7B-Modell bei Q4_K_M ungefähr 4,5 GB.',
             'Dies ist wichtig für lokale Inference, weil Consumer-Hardware begrenzte RAM hat. Ohne Quantisierung benötigt ein 7B-Modell 16 GB RAM. Mit Q4_K_M-Quantisierung läuft das gleiche Modell auf 6 GB RAM und ist damit auf [den meisten modernen Laptops](/local-llms/local-llm-on-laptop?lang=de) zugänglich.',
           ],
@@ -15480,7 +15480,7 @@ print(response.choices[0].message.content)`,
           id: 'gguf-format',
           title: 'Was ist GGUF-Format und wie hängt es mit Quantisierung zusammen?',
           content: [
-            'GGUF (GPT-Generated Unified Format) ist das Dateiformat zum Speichern von quantisierten LLM-Gewichten für lokale Inference. Es wurde vom llama.cpp-Projekt erstellt und ersetzt das ältere GGML-Format.',
+            '**GGUF (GPT-Generated Unified Format) ist das Dateiformat zum Speichern von quantisierten LLM-Gewichten für lokale Inference.** Es wurde vom llama.cpp-Projekt erstellt und ersetzt das ältere GGML-Format.',
             'Eine GGUF-Datei enthält: die quantisierten Modellgewichte, alle Modellmetadaten (Architektur, Tokenizer, Kontextlänge) und eine Formatversionsnummer. Dieses eigenständige Design bedeutet, dass eine einzelne `.gguf`-Datei alles ist, was zum Ausführen des Modells benötigt wird — keine separaten Tokenizer-Dateien, kein JSON-Konfigurationscode.',
             'Ab April 2026 ist GGUF das Standard-Format für Ollama, LM Studio, Jan AI und GPT4All. Wenn Sie [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama?lang=de) ausführen, lädt Ollama intern eine GGUF-Datei herunter. Wenn LM Studio Modellgrößen anzeigt, sind das GGUF-Dateigr öße.',
             'Die Quantisierungsstufe ist Teil des Dateinamens: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` ist eine Q4_K_M-quantisierte GGUF von Llama 3.1 8B.',
@@ -15506,7 +15506,7 @@ print(response.choices[0].message.content)`,
           id: 'quality-loss',
           title: 'Wie viel Qualität verlieren Sie tatsächlich durch Quantisierung?',
           content: [
-            'Qualitätsverlust durch Quantisierung wird gemessen, indem man die gleichen Benchmarks auf dem vollständig präzisierten Modell und der quantisierten Version ausführt und die Scores vergleicht. Ab April 2026 sind die etablierten Erkenntnisse:',
+            '**Qualitätsverlust durch Quantisierung wird gemessen, indem man die gleichen Benchmarks auf dem vollständig präzisierten Modell und der quantisierten Version ausführt und die Scores vergleicht.** Ab April 2026 sind die etablierten Erkenntnisse:',
           ],
           items: [
             '**Q4_K_M vs. FP16**: 1–3% Abbau bei MMLU. Bei einem 7B-Modell, das bei FP16 73% erreicht, erreicht Q4_K_M 71–72%. Bei praktischen Aufgaben ist dieser Unterschied kaum wahrnehmbar.',
@@ -15812,7 +15812,7 @@ print(response.choices[0].message.content)`,
           id: 'what-is-quantization',
           title: 'Qu\'est-ce que la quantification LLM et pourquoi est-elle importante ?',
           content: [
-            'Un grand modèle de langage stocke ses connaissances sous forme de milliards de poids numériques. Par défaut, ils sont stockés sous forme de nombres flottants 16 bits (FP16) — deux octets par poids. Un modèle 7B a 7 milliards de poids, donc la taille du fichier FP16 est d\'environ 14 GB.',
+            '**Un grand modèle de langage stocke ses connaissances sous forme de milliards de poids numériques.** Par défaut, ils sont stockés sous forme de nombres flottants 16 bits (FP16) — deux octets par poids. Un modèle 7B a 7 milliards de poids, donc la taille du fichier FP16 est d\'environ 14 GB.',
             'La quantification remplace ces flottants 16 bits par des entiers de précision inférieure. Avec la quantification 4 bits, chaque poids utilise 0.5 octet au lieu de 2 — réduisant la mémoire à ~3.5 GB pour les poids seuls. Avec la surcharge des métadonnées, un modèle 7B quantifié en Q4_K_M est d\'environ 4.5 GB.',
             'C\'est important pour l\'inférence locale car le matériel grand public a une RAM limitée. Sans quantification, un modèle 7B nécessite 16 GB de RAM. Avec la quantification Q4_K_M, le même modèle s\'exécute sur 6 GB de RAM, le rendant accessible sur [la plupart des ordinateurs portables modernes](/local-llms/local-llm-on-laptop?lang=fr).',
           ],
@@ -15837,7 +15837,7 @@ print(response.choices[0].message.content)`,
           id: 'gguf-format',
           title: 'Qu\'est-ce que le format GGUF et comment se rapporte-t-il à la quantification ?',
           content: [
-            'GGUF (GPT-Generated Unified Format) est le format de fichier utilisé pour stocker les poids LLM quantifiés pour l\'inférence locale. Il a été créé par le projet llama.cpp et remplace le format GGML plus ancien.',
+            '**GGUF (GPT-Generated Unified Format) est le format de fichier utilisé pour stocker les poids LLM quantifiés pour l\'inférence locale.** Il a été créé par le projet llama.cpp et remplace le format GGML plus ancien.',
             'Un fichier GGUF contient : les poids du modèle quantifiés, toutes les métadonnées du modèle (architecture, tokenizer, longueur du contexte) et un numéro de version du format. Cette conception autonome signifie qu\'un seul fichier `.gguf` est tout ce qui est nécessaire pour exécuter le modèle — pas de fichiers tokenizer séparés, pas de JSON de configuration.',
             'En avril 2026, GGUF est le format standard pour Ollama, LM Studio, Jan AI et GPT4All. Lorsque vous exécutez [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama?lang=fr), Ollama télécharge en interne un fichier GGUF. Lorsque LM Studio affiche les tailles de modèle, ce sont les tailles de fichier GGUF.',
             'Le niveau de quantification fait partie du nom de fichier : `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` est une GGUF quantifiée en Q4_K_M de Llama 3.1 8B.',
@@ -15863,7 +15863,7 @@ print(response.choices[0].message.content)`,
           id: 'quality-loss',
           title: 'Quelle qualité perdez-vous vraiment avec la quantification ?',
           content: [
-            'La perte de qualité de la quantification est mesurée en exécutant les mêmes benchmarks sur le modèle en précision complète et la version quantifiée, puis en comparant les scores. En avril 2026, les conclusions établies sont :',
+            '**La perte de qualité de la quantification est mesurée en exécutant les mêmes benchmarks sur le modèle en précision complète et la version quantifiée, puis en comparant les scores.** En avril 2026, les conclusions établies sont :',
           ],
           items: [
             '**Q4_K_M vs FP16** : dégradation de 1–3% sur MMLU. Sur un modèle 7B marquant 73% en FP16, Q4_K_M marque 71–72%. Dans les tâches pratiques, cette différence est imperceptible.',
@@ -16151,7 +16151,7 @@ print(response.choices[0].message.content)`,
           id: 'what-is-quantization',
           title: 'LLM量子化とは何で、なぜ重要なのか',
           content: [
-            '大規模言語モデルは数十億のニューラルネットワーク重みを学習済みの知識として保存しています。デフォルトではこれらは16ビット浮動小数点数（FP16）で格納されます — 重みあたり2バイトです。7Bモデルは70億の重みを持つため、FP16ファイルサイズは約14GBになります。',
+            '**大規模言語モデルは数十億のニューラルネットワーク重みを学習済みの知識として保存しています。** デフォルトではこれらは16ビット浮動小数点数（FP16）で格納されます — 重みあたり2バイトです。7Bモデルは70億の重みを持つため、FP16ファイルサイズは約14GBになります。',
             '量子化はこれらの16ビット浮動小数点数をより低精度の整数に置き換えます。4ビット量子化では、各重みが2バイトではなく0.5バイトを使用します — メモリを約3.5GBまで削減します。メタデータオーバーヘッドを含めると、Q4_K_M量子化された7Bモデルは約4.5GBになります。',
             'これはローカル推論に重要です。なぜなら、コンシューマーハードウェアのRAMは限定的だからです。量子化なしでは、7Bモデルを実行するのに16GBのRAMが必要です。Q4_K_M量子化を使用すると、同じモデルが6GBのRAMで実行でき、[ほとんどの現代的なラップトップで実行可能](/local-llms/local-llm-on-laptop?lang=ja)になります。',
           ],
@@ -16176,7 +16176,7 @@ print(response.choices[0].message.content)`,
           id: 'gguf-format',
           title: 'GGUF形式とは何で、量子化とどう関連するのか',
           content: [
-            'GGUF（GPT-Generated Unified Format）は、ローカル推論用の量子化LLM重みを保存するためのファイル形式です。llama.cpプロジェクトによって作成され、古いGGML形式の置き換えです。',
+            '**GGUF（GPT-Generated Unified Format）は、ローカル推論用の量子化LLM重みを保存するためのファイル形式です。** llama.cpプロジェクトによって作成され、古いGGML形式の置き換えです。',
             'GGUFファイルには以下が含まれます：量子化されたモデルの重み、すべてのモデルメタデータ（アーキテクチャ、トークナイザー、コンテキスト長）、およびフォーマットバージョン番号。このスタンドアロン設計により、単一の`.gguf`ファイルがモデルを実行するために必要なすべてです — 別のトークナイザーファイルや設定JSONは不要です。',
             '2026年4月の時点で、GGUFはOllama、LM Studio、Jan AI、GPT4Allの標準形式です。`ollama pull llama3.1:8b`を実行すると、Ollamaは内部的にGGUFファイルをダウンロードします。LM Studioがモデルファイルサイズを表示する場合、それはGGUFファイルサイズです。',
             '量子化レベルはファイル名の一部です：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`はLlama 3.1 8BのQ4_K_M量子化GGUFです。',
@@ -16202,7 +16202,7 @@ print(response.choices[0].message.content)`,
           id: 'quality-loss',
           title: '実際にどの程度の品質が低下するのか',
           content: [
-            '量子化による品質低下は、完全精度モデルと量子化バージョンで同じベンチマークを実行し、スコアを比較することで測定されます。2026年4月の時点で、確立された知見は以下の通りです：',
+            '**量子化による品質低下は、完全精度モデルと量子化バージョンで同じベンチマークを実行し、スコアを比較することで測定されます。** 2026年4月の時点で、確立された知見は以下の通りです：',
           ],
           items: [
             '**Q4_K_M対FP16**：MMULで1～3%の低下。FP16で73%のスコアを達成する7Bモデルは、Q4_K_Mで71～72%を達成します。実際のタスクでは、この差はほぼ無視できます。',
@@ -16489,7 +16489,7 @@ print(response.choices[0].message.content)`,
           id: 'what-is-quantization',
           title: '什么是大语言模型量化及其为何重要',
           content: [
-            '大型语言模型将学习到的知识存储为数十亿个数值权重。默认情况下，这些以16位浮点数（FP16）的形式存储——每个权重两个字节。一个7B模型有70亿个权重，因此FP16文件大小约为14GB。',
+            '**大型语言模型将学习到的知识存储为数十亿个数值权重。** 默认情况下，这些以16位浮点数（FP16）的形式存储——每个权重两个字节。一个7B模型有70亿个权重，因此FP16文件大小约为14GB。',
             '量化用低精度整数替换这些16位浮点数。在4位量化中，每个权重使用0.5字节而不是2字节——将内存仅对权重本身减少到约3.5GB。加上元数据开销，Q4_K_M量化的7B模型大约为4.5GB。',
             '这对本地推理很重要，因为消费级硬件的RAM有限。不使用量化，7B模型需要16GB RAM来运行。使用Q4_K_M量化，同一模型在6GB RAM上运行，使其可在[大多数现代笔记本电脑](/local-llms/local-llm-on-laptop?lang=zh)上使用。',
           ],
@@ -16514,7 +16514,7 @@ print(response.choices[0].message.content)`,
           id: 'gguf-format',
           title: 'GGUF格式是什么及其与量化的关系',
           content: [
-            'GGUF（GPT生成统一格式）是用于本地推理存储量化LLM权重的文件格式。由llama.cpp项目创建，取代了较旧的GGML格式。',
+            '**GGUF（GPT生成统一格式）是用于本地推理存储量化LLM权重的文件格式。** 由llama.cpp项目创建，取代了较旧的GGML格式。',
             'GGUF文件包含：量化的模型权重、所有模型元数据（架构、分词器、上下文长度）和格式版本号。这种自包含设计意味着单个`.gguf`文件是运行模型所需的全部内容——无需单独的分词器文件，无需配置JSON。',
             '截至2026年4月，GGUF是Ollama、LM Studio、Jan AI和GPT4All的标准格式。运行`ollama pull llama3.1:8b`时，Ollama内部下载GGUF文件。LM Studio显示模型文件大小时，这些就是GGUF文件大小。',
             '量化级别是文件名的一部分：`Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`是Llama 3.1 8B的Q4_K_M量化GGUF。',
@@ -16540,7 +16540,7 @@ print(response.choices[0].message.content)`,
           id: 'quality-loss',
           title: '实际会损失多少质量',
           content: [
-            '量化导致的质量损失通过在完全精度模型和量化版本上运行相同基准并比较分数来衡量。截至2026年4月，既定的发现是：',
+            '**量化导致的质量损失通过在完全精度模型和量化版本上运行相同基准并比较分数来衡量。** 截至2026年4月，既定的发现是：',
           ],
           items: [
             '**Q4_K_M对FP16**：MMLU上1～3%的性能下降。在FP16上得分73%的7B模型，在Q4_K_M上得分71～72%。在实际任务中，此差异难以察觉。',
@@ -16818,7 +16818,7 @@ print(response.choices[0].message.content)`,
         whichSupport: {
           title: 'Which Local LLMs Actually Support Multiple Languages?',
           content: [
-            '"Supporting" a language means more than generating text in that language. True multilingual support requires: training data in the language (not just translation), tokenization optimized for the language\'s script, and fine-tuning on instruction-following in the language.',
+            '**"Supporting" a language means more than generating text in that language.** True multilingual support requires: training data in the language (not just translation), tokenization optimized for the language\'s script, and fine-tuning on instruction-following in the language.',
             'Models that claim multilingual support but were primarily trained on English produce lower-quality output in other languages — grammatical errors, cultural mismatches, and reduced instruction-following accuracy. As of April 2026, only Qwen2.5 provides genuine native-quality support for Asian languages locally.',
           ],
           rows: [
@@ -16833,7 +16833,7 @@ print(response.choices[0].message.content)`,
         european: {
           title: 'Which Local LLMs Perform Best for European Languages?',
           content: [
-            'For German, French, Spanish, Italian, Portuguese, Dutch, and Polish — Qwen2.5, Mistral, and Llama 3.x all produce acceptable quality. Mistral has a particular strength in French due to Mistral AI being a French company with French-language training data emphasis. As of April 2026, German-language benchmarks show Qwen2.5 7B leading Mistral 7B by 8–12% on instruction-following tasks in German.',
+            '**For German, French, Spanish, Italian, Portuguese, Dutch, and Polish — Qwen2.5, Mistral, and Llama 3.x all produce acceptable quality.** Mistral has a particular strength in French due to Mistral AI being a French company with French-language training data emphasis. As of April 2026, German-language benchmarks show Qwen2.5 7B leading Mistral 7B by 8–12% on instruction-following tasks in German.',
             'For GDPR-sensitive use cases in the EU, running a local model (any family) is preferable to cloud APIs for data residency reasons. German businesses using AI under the EU AI Act (effective February 2025) benefit from local inference for high-risk AI applications. Mistral AI, being a EU company, is preferred by some European organizations on governance grounds regardless of benchmark score.',
           ],
           items: [
@@ -16846,7 +16846,7 @@ print(response.choices[0].message.content)`,
         asian: {
           title: 'Which Local LLMs Perform Best for Japanese, Korean, and Chinese?',
           content: [
-            'Qwen2.5 dominates Asian language performance. The model family was developed by Alibaba with massive Chinese-language training data and explicit multilingual fine-tuning for Japanese and Korean.',
+            '**Qwen2.5 dominates Asian language performance.** The model family was developed by Alibaba with massive Chinese-language training data and explicit multilingual fine-tuning for Japanese and Korean.',
             'For Japanese: Qwen2.5 7B scores 15–20% higher than Llama 3.1 8B on JMT-bench (Japanese instruction-following benchmark). For Korean: Qwen2.5 outperforms alternatives by similar margins. For Chinese (Simplified): Qwen2.5 is in a class of its own among locally-runnable models.',
             'As of April 2026, Japan\'s METI (Ministry of Economy, Trade and Industry) has been promoting domestic AI development, and some Japanese enterprises prefer locally-deployed models for data sovereignty. Qwen2.5 is the practical choice for Japanese-language local inference.',
           ],
@@ -16861,7 +16861,7 @@ print(response.choices[0].message.content)`,
         arabic: {
           title: 'Which Local LLMs Perform Best for Arabic?',
           content: [
-            'Arabic presents a unique challenge due to its right-to-left script, morphological complexity, and the large number of dialects (Modern Standard Arabic vs. Egyptian, Gulf, Levantine). As of April 2026, Qwen2.5 and Gemma 3 are the strongest locally-runnable Arabic models.',
+            '**Arabic presents a unique challenge due to its right-to-left script, morphological complexity, and the large number of dialects (Modern Standard Arabic vs.** Egyptian, Gulf, Levantine). As of April 2026, Qwen2.5 and Gemma 3 are the strongest locally-runnable Arabic models.',
             'For MSA (Modern Standard Arabic) instruction-following, Qwen2.5 14B and larger produce acceptable quality. For dialect Arabic, all local models perform significantly worse than cloud models like GPT-4o, which has broader Arabic dialect coverage.',
           ],
         },
@@ -18654,7 +18654,7 @@ print(response.choices[0].message.content)`,
           id: 'what-is-context-length',
           title: 'What Is Context Length and Why Does It Matter for Local LLMs?',
           content: [
-            'Context length is the maximum number of tokens a model can process in a single inference call — the combined size of the input (your document, conversation history, system prompt) and the output (the model\'s response). One token ≈ 0.75 words in English; 128K tokens ≈ 96,000 words.',
+            '**Context length is the maximum number of tokens a model can process in a single inference call — the combined size of the input (your document, conversation history, system prompt) and the output (the model\'s response).** One token ≈ 0.75 words in English; 128K tokens ≈ 96,000 words.',
             'For local LLM use cases, long context enables: summarizing entire books or long reports, analyzing full codebases in one prompt, processing hours of meeting transcripts, and maintaining long conversation histories without losing earlier context.',
             'The key distinction is between the advertised context length (what the model architecture supports) and the practical context length (where quality stays reliable). A model may technically support 128K tokens but show degraded quality on information presented at the 100K token mark.',
           ],
@@ -18680,7 +18680,7 @@ print(response.choices[0].message.content)`,
           id: 'ram-long-context',
           title: 'How Much RAM Does Long Context Processing Require?',
           content: [
-            'RAM usage scales with both model size and context length. The KV cache (key-value cache) stores attention states for all processed tokens — this grows linearly with context length.',
+            '**RAM usage scales with both model size and context length.** The KV cache (key-value cache) stores attention states for all processed tokens — this grows linearly with context length.',
             'As of April 2026, a 7B model at Q4_K_M with 4K context uses ~6 GB RAM. The same model with 32K context uses ~8–9 GB RAM. With 128K context: ~12–16 GB RAM.',
           ],
           rows: [
@@ -18697,7 +18697,7 @@ print(response.choices[0].message.content)`,
           id: 'practical-context',
           title: 'Why Is Practical Context Length Shorter Than the Advertised Maximum?',
           content: [
-            'LLMs trained with RoPE positional encodings (used by Llama, Qwen, Mistral) can technically process tokens up to their maximum context length, but quality degrades in a known pattern called the "lost in the middle" effect.',
+            '**LLMs trained with RoPE positional encodings (used by Llama, Qwen, Mistral) can technically process tokens up to their maximum context length, but quality degrades in a known pattern called the "lost in the middle" effect.**',
             'Research shows that language models are best at using information at the beginning and end of the context window. Information placed in the middle of a very long context is retrieved less reliably. In practice, this means a model with a 128K context window may reliably answer questions about content in the first 32K tokens and last 16K tokens, but miss details from the 40K–80K token range.',
             'For local models specifically, the practical reliable limit scales with model size: 3B models ≈ 8K–16K reliable; 7B–8B models ≈ 16K–32K reliable; 70B models ≈ 64K reliable. These are approximate — the actual limit depends on the specific task and how "important" the retrieved information is.',
           ],
@@ -18843,7 +18843,7 @@ print(response.choices[0].message.content)`,
           id: 'what-is-context-length',
           title: '什么是上下文长度，为什么它对本地LLM很重要？',
           content: [
-            '上下文长度是模型在单次推理调用中可处理的最大标记数——输入（你的文档、对话历史、系统提示）和输出（模型响应）的合计大小。1个标记 ≈ 0.75个英文词；128K标记 ≈ 96,000个词。',
+            '**上下文长度是模型在单次推理调用中可处理的最大标记数——输入（你的文档、对话历史、系统提示）和输出（模型响应）的合计大小。** 1个标记 ≈ 0.75个英文词；128K标记 ≈ 96,000个词。',
             '对于本地LLM使用场景，长上下文支持：总结整本书或长报告、在单个提示中分析完整代码库、处理数小时的会议记录，以及维护长对话历史而不丢失早期内容。',
             '关键区别在于标注的上下文长度（模型架构支持的）和实际上下文长度（质量保持可靠的范围）。模型技术上可能支持128K标记，但在100K标记处呈现的信息质量可能会下降。',
           ],
@@ -18867,7 +18867,7 @@ print(response.choices[0].message.content)`,
           id: 'ram-long-context',
           title: '长上下文处理需要多少RAM？',
           content: [
-            'RAM使用量随模型大小和上下文长度双重扩展。KV缓存（键值缓存）存储所有已处理标记的注意力状态——这随上下文长度线性增长。',
+            '**RAM使用量随模型大小和上下文长度双重扩展。** KV缓存（键值缓存）存储所有已处理标记的注意力状态——这随上下文长度线性增长。',
             '截至2026年4月，Q4_K_M量化的7B模型在4K上下文下使用约6 GB RAM。同一模型在32K上下文下使用约8-9 GB RAM；128K上下文：约12-16 GB RAM。',
           ],
           rows: [
@@ -18882,7 +18882,7 @@ print(response.choices[0].message.content)`,
           id: 'practical-context',
           title: '为什么实际上下文长度比标注最大值更短？',
           content: [
-            '使用RoPE位置编码（Llama、Qwen、Mistral使用）训练的LLM在技术上可以处理到最大上下文长度的标记，但质量会以一种称为"中间迷失"效应的已知模式下降。',
+            '**使用RoPE位置编码（Llama、Qwen、Mistral使用）训练的LLM在技术上可以处理到最大上下文长度的标记，但质量会以一种称为"中间迷失"效应的已知模式下降。**',
             '研究表明，语言模型最善于利用上下文窗口开头和结尾的信息。放置在很长上下文中间的信息检索可靠性较低。实际上，这意味着拥有128K上下文窗口的模型可能可靠地回答前32K标记和后16K标记内容的问题，但会错过40K-80K标记范围内的细节。',
             '对于本地模型，实际可靠上限随模型大小扩展：3B模型约8K-16K可靠；7B-8B模型约16K-32K可靠；70B模型约64K可靠。这些是近似值——实际上限取决于具体任务和检索信息的"重要性"。',
           ],
@@ -19193,7 +19193,7 @@ print(response.choices[0].message.content)`,
           id: 'most-popular-models-on-ollama',
           title: 'Which Models Are Most Popular on Ollama in 2026?',
           content: [
-            'Popularity on Ollama is measured by download counts visible on each model\'s library page. As of April 2026, the top downloaded models are dominated by Meta\'s Llama family — Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model.',
+            '**Popularity on Ollama is measured by download counts visible on each model\'s library page.** As of April 2026, the top downloaded models are dominated by Meta\'s Llama family — Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model.',
             'Qwen2.5 is the fastest-growing model family in the Ollama library, with Qwen2.5:7b overtaking Mistral 7B in monthly downloads in late 2025. DeepSeek-R1 saw a major spike in early 2025 following its release and remains highly downloaded for reasoning tasks.',
             'Meta released **Llama 4** in March 2026 with a Scout 8B variant (`ollama run llama4:8b`) featuring a 10M token context window. As of April 2026, Llama 4 Scout 8B is in preview in the Ollama library. For stable production use, Llama 3.1 8B remains the recommended default.',
           ],
@@ -19234,7 +19234,7 @@ print(response.choices[0].message.content)`,
           id: 'deepseek-r1',
           title: 'What Is DeepSeek-R1 and Why Is It Different?',
           content: [
-            'DeepSeek-R1 is a reasoning model — unlike standard chat models that generate answers directly, DeepSeek-R1 generates explicit chain-of-thought reasoning before its final answer. This significantly improves performance on math, logic puzzles, and step-by-step problem solving.',
+            '**DeepSeek-R1 is a reasoning model — unlike standard chat models that generate answers directly, DeepSeek-R1 generates explicit chain-of-thought reasoning before its final answer.** This significantly improves performance on math, logic puzzles, and step-by-step problem solving.',
             'DeepSeek-R1 7B scores 52% on MATH (competition math) vs 28% for Mistral 7B at the same size. It is slower than standard models (more tokens per response) but significantly more accurate on tasks where reasoning matters.',
           ],
           codeBlock: '# Pull and run DeepSeek-R1\nollama run deepseek-r1:7b\n\n# Larger variants for better quality\nollama run deepseek-r1:14b   # 10 GB RAM\nollama run deepseek-r1:32b   # 20 GB RAM',
@@ -19562,7 +19562,7 @@ print(response.choices[0].message.content)`,
           id: 'most-popular',
           title: 'Die beliebtesten Modelle auf Ollama',
           content: [
-            'Ollama verfügt über eine vollständig öffentlich zugängliche Download-Statistik. Nach Daten aus Février 2026:',
+            '**Ollama verfügt über eine vollständig öffentlich zugängliche Download-Statistik.** Nach Daten aus Février 2026:',
             '**Llama 3.1 8B** ist das insgesamt am meisten heruntergeladene Modell mit über 14 Millionen Downloads. Es bietet eine ausgezeichnete Balance zwischen Geschwindigkeit und Qualität für lokale Einrichtungen und ist für jeden Anfänger unbedingt zu empfehlen. Es läuft mit ~4 GB RAM und ist in einer Minute einsatzbereit.',
             '**Qwen2.5 7B** ist das schnellest wachsende Modell und nähert sich 12 Millionen Downloads mit ~15 % Monatswachstum. Es bietet überlegene Mathematik- und Codierungsleistung gegenüber Llama 3.1 8B und wird für technische Benutzer zunehmend zur ersten Wahl.',
           ],
@@ -19919,7 +19919,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
         mostPopular: {
           title: 'Les modèles les plus populaires sur Ollama',
           content: [
-            'Ollama dispose de statistiques de téléchargement entièrement publiques. Selon les données de février 2026 :',
+            '**Ollama dispose de statistiques de téléchargement entièrement publiques.** Selon les données de février 2026 :',
             '**Llama 3.1 8B** est le modèle le plus téléchargé au total avec plus de 14 millions de téléchargements. Il offre un excellent équilibre entre vitesse et qualité pour les déploiements locaux et est absolument recommandé pour tout débutant. Il fonctionne avec ~4 GB de RAM et est prêt en une minute.',
             '**Qwen2.5 7B** est le modèle en plus forte croissance et approche 12 millions de téléchargements avec ~15 % de croissance mensuelle. Il offre des performances supérieures en mathématiques et codage par rapport à Llama 3.1 8B et devient de plus en plus le premier choix des utilisateurs techniques.',
           ],
@@ -20270,7 +20270,7 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
         mostPopular: {
           title: 'Ollama最人気モデル',
           content: [
-            'Ollamaは完全公開ダウンロード統計を提供。2026年2月データより：',
+            '**Ollamaは完全公開ダウンロード統計を提供。** 2026年2月データより：',
             '**Llama 3.1 8B**は全体で最多ダウンロード。1400万以上のダウンロード。ローカルデプロイで速度と品質の両立。初心者向けで推奨。4GB RAM程度で実行。1分でセットアップ完了。',
             '**Qwen2.5 7B**は最速成長モデル。1200万ダウンロード接近で月15%成長。Llama 3.1 8Bより数学コード性能が優。技術ユーザーの第一選択肢化。',
           ],
@@ -20653,7 +20653,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         deepseekR1: {
           title: 'DeepSeek-R1：2026年推理最强的模型',
           content: [
-            'DeepSeek-R1 7B在推理任务中表现最强。采用Chain-of-Thought（思维链）架构，让模型在生成答案前进行"思考"。',
+            '**DeepSeek-R1 7B在推理任务中表现最强。** 采用Chain-of-Thought（思维链）架构，让模型在生成答案前进行"思考"。',
             '**关键数据**：MATH 52%（7B模型中最高）、AIME 19.5%、AlphaCode 65%。适合数学推导、代码审查、复杂逻辑。',
             '**生成速度**：M1 Pro上15–25 tokens/秒（与Llama 3.1相同）。但总延迟较高（思考过程生成需要额外时间）。中等查询约8–12秒。',
             '**安装命令**：',
@@ -20990,7 +20990,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         q32025: {
           title: 'Which Q3 2025 Models Are Still Widely Used?',
           content: [
-            'Several 2025 releases remain widely deployed in 2026 due to tool compatibility and community documentation:',
+            '**Several 2025 releases remain widely deployed in 2026 due to tool compatibility and community documentation:**',
           ],
           items: [
             '**Llama 3.1 8B** (July 2025) — still the most documented 8B model, preferred by beginners for its extensive guides and tool integrations.',
@@ -21002,7 +21002,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'quality-improvement',
           title: 'How Much Has Local LLM Quality Improved from 2024 to 2026?',
           content: [
-            'The two-year improvement in locally-runnable model quality is substantial. As of April 2026, a 7B model (Qwen2.5 7B, 74% MMLU) matches the benchmark performance of a 13B model from early 2024. A 70B model (Llama 3.3 70B, 82% MMLU) matches GPT-4 (2023) performance — a model that required billion-dollar server infrastructure 3 years ago now runs on a Mac Studio. For hardware recommendations matching each model class, see [local LLM hardware guide 2026](/local-llms/local-llm-hardware-guide-2026).',
+            '**The two-year improvement in locally-runnable model quality is substantial.** As of April 2026, a 7B model (Qwen2.5 7B, 74% MMLU) matches the benchmark performance of a 13B model from early 2024. A 70B model (Llama 3.3 70B, 82% MMLU) matches GPT-4 (2023) performance — a model that required billion-dollar server infrastructure 3 years ago now runs on a Mac Studio. For hardware recommendations matching each model class, see [local LLM hardware guide 2026](/local-llms/local-llm-hardware-guide-2026).',
           ],
           image: '/images/llm-quality-improvement-2024-2026-en.svg',
           imageCaption: 'Local LLM quality improvement 2024–2026: 7B-class models improved from 64% MMLU (Mistral 7B, early 2024) to 74% (Qwen2.5 7B, April 2026). 70B-class improved from 75% (Llama 2 70B) to 82–84% (Llama 3.3 70B and Qwen2.5 72B). Every 18–24 months, local model quality advances by one model generation.',
@@ -21306,7 +21306,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         q32025: {
           title: 'Welche Q3 2025 Modelle werden noch weit verbreitet genutzt?',
           content: [
-            'Mehrere 2025 Releases bleiben 2026 weit verbreitet eingesetzt, aufgrund von Tool-Kompatibilität und Community-Dokumentation:',
+            '**Mehrere 2025 Releases bleiben 2026 weit verbreitet eingesetzt, aufgrund von Tool-Kompatibilität und Community-Dokumentation:**',
           ],
           items: [
             '**Llama 3.1 8B** (Juli 2025) — immer noch das am besten dokumentierte 8B-Modell, bevorzugt von Anfängern für umfangreiche Leitfäden und Tool-Integrationen.',
@@ -21318,7 +21318,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'quality-improvement',
           title: 'Um wie viel hat sich die Qualität lokaler LLMs von 2024 bis 2026 verbessert?',
           content: [
-            'Die zweijährige Verbesserung der Qualität lokal lauffähiger Modelle ist erheblich. Stand April 2026 entspricht ein 7B-Modell (Qwen2.5 7B, 74 % MMLU) der Benchmark-Leistung eines 13B-Modells von Anfang 2024. Ein 70B-Modell (Llama 3.3 70B, 82 % MMLU) entspricht GPT-4 (2023) Leistung — ein Modell, das vor 3 Jahren eine Milliarden-Dollar-Server-Infrastruktur benötigte, läuft jetzt auf einem Mac Studio. Für Hardware-Empfehlungen, die jeder Modellklasse entsprechen, siehe [lokaler LLM Hardware-Leitfaden 2026](/local-llms/local-llm-hardware-guide-2026?lang=de).',
+            '**Die zweijährige Verbesserung der Qualität lokal lauffähiger Modelle ist erheblich.** Stand April 2026 entspricht ein 7B-Modell (Qwen2.5 7B, 74 % MMLU) der Benchmark-Leistung eines 13B-Modells von Anfang 2024. Ein 70B-Modell (Llama 3.3 70B, 82 % MMLU) entspricht GPT-4 (2023) Leistung — ein Modell, das vor 3 Jahren eine Milliarden-Dollar-Server-Infrastruktur benötigte, läuft jetzt auf einem Mac Studio. Für Hardware-Empfehlungen, die jeder Modellklasse entsprechen, siehe [lokaler LLM Hardware-Leitfaden 2026](/local-llms/local-llm-hardware-guide-2026?lang=de).',
           ],
           image: '/images/llm-quality-improvement-2024-2026-de.svg',
           imageCaption: 'Lokale LLM-Qualitätsverbesserung 2024–2026: 7B-Klasse-Modelle verbessert sich von 64 % MMLU (Mistral 7B, Anfang 2024) auf 74 % (Qwen2.5 7B, April 2026). 70B-Klasse verbessert sich von 75 % (Llama 2 70B) auf 82–84 % (Llama 3.3 70B und Qwen2.5 72B). Alle 18–24 Monate rückt die lokale Modellqualität eine Generation vor.',
@@ -21523,7 +21523,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         q32025: {
           title: 'Quels modèles Q3 2025 sont toujours largement utilisés ?',
           content: [
-            'Plusieurs releases 2025 restent largement déployées en 2026 en raison de la compatibilité des outils et de la documentation communautaire :',
+            '**Plusieurs releases 2025 restent largement déployées en 2026 en raison de la compatibilité des outils et de la documentation communautaire :**',
           ],
           items: [
             '**Llama 3.1 8B** (juillet 2025) — toujours le modèle 8B le mieux documenté, préféré des débutants pour ses guides complets et intégrations d\'outils.',
@@ -21535,7 +21535,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'quality-improvement',
           title: 'De combien la qualité des LLM locaux a-t-elle progressé de 2024 à 2026 ?',
           content: [
-            'L\'amélioration de la qualité des modèles exécutables localement sur deux ans est substantielle. En avril 2026, un modèle 7B (Qwen2.5 7B, 74% MMLU) correspond à la performance de benchmark d\'un modèle 13B du début 2024. Un modèle 70B (Llama 3.3 70B, 82% MMLU) correspond à la performance de GPT-4 (2023) — un modèle qui nécessitait une infrastructure serveur d\'un milliard de dollars il y a 3 ans fonctionne maintenant sur un Mac Studio. Pour les recommandations matérielles correspondant à chaque classe de modèle, voir [guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr).',
+            '**L\'amélioration de la qualité des modèles exécutables localement sur deux ans est substantielle.** En avril 2026, un modèle 7B (Qwen2.5 7B, 74% MMLU) correspond à la performance de benchmark d\'un modèle 13B du début 2024. Un modèle 70B (Llama 3.3 70B, 82% MMLU) correspond à la performance de GPT-4 (2023) — un modèle qui nécessitait une infrastructure serveur d\'un milliard de dollars il y a 3 ans fonctionne maintenant sur un Mac Studio. Pour les recommandations matérielles correspondant à chaque classe de modèle, voir [guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026?lang=fr).',
           ],
           image: '/images/llm-quality-improvement-2024-2026-fr.svg',
           imageCaption: 'Amélioration de la qualité des LLM locaux 2024–2026 : les modèles de classe 7B se sont améliorés de 64% MMLU (Mistral 7B, début 2024) à 74% (Qwen2.5 7B, avril 2026). La classe 70B s\'est améliorée de 75% (Llama 2 70B) à 82–84% (Llama 3.3 70B et Qwen2.5 72B). Tous les 18–24 mois, la qualité des modèles locaux progresse d\'une génération.',
@@ -21784,7 +21784,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'regional-context',
           title: 'Local LLMs vs Cloud APIs: Regional Context',
           content: [
-            'The choice between local and cloud inference carries direct compliance implications across regulatory jurisdictions.',
+            '**The choice between local and cloud inference carries direct compliance implications across regulatory jurisdictions.**',
           ],
           items: [
             '**EU / GDPR + AI Act:** GDPR Article 28 requires a Data Processing Agreement with any third-party that processes personal data on your behalf — including cloud AI API providers. Local LLMs eliminate this requirement entirely: no DPA, no Article 46 transfer mechanism, no cross-border data flow. The EU AI Act (effective February 2025) classifies AI systems processing personal data in regulated sectors (healthcare, HR, legal, financial) as high-risk. For these sectors, local inference is the lowest-risk deployment path. Cloud API enterprise tiers (OpenAI Enterprise, Anthropic for Teams) offer GDPR-compliant data processing, but require procurement, DPA signing, and ongoing compliance monitoring. Model preference for EU: Mistral (France, Apache 2.0) provides the strongest EU compliance narrative for local deployments. Llama 3.x and Qwen2.5 are also usable under GDPR for local inference.',
@@ -22009,7 +22009,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'regional-context',
           title: 'Lokale LLMs vs. Cloud-APIs: Regionaler Kontext',
           content: [
-            'Die Wahl zwischen lokaler und Cloud-Inferenz hat direkte Compliance-Implikationen in verschiedenen regulatorischen Zuständigkeiten.',
+            '**Die Wahl zwischen lokaler und Cloud-Inferenz hat direkte Compliance-Implikationen in verschiedenen regulatorischen Zuständigkeiten.**',
           ],
           items: [
             '**EU / DSGVO + KI-Gesetz:** DSGVO Artikel 28 erfordert einen Datenverarbeitungsvertrag (DPA) mit jedem Dritten, der personenbezogene Daten in Ihrem Auftrag verarbeitet \u2014 einschließlich Cloud-KI-API-Anbietern. Lokale LLMs eliminieren diese Anforderung vollständig: kein DPA, kein Mechanismus nach Artikel 46, kein grenzüberschreitender Datenfluss. Das EU-KI-Gesetz (in Kraft seit Februar 2025) klassifiziert KI-Systeme, die personenbezogene Daten in regulierten Bereichen (Gesundheitswesen, Personalwesen, Recht, Finanzen) verarbeiten, als hochriskant. Das BSI-Grundschutz-Kompendium empfiehlt für KRITIS-Unternehmen und den öffentlichen Sektor ausdrücklich die Datensouveränität durch On-Premises-Verarbeitung. Für den DACH-Raum (Deutschland, Österreich, Schweiz) bieten Mistral (Frankreich, Apache 2.0) und Llama 3.x die stärksten Compliance-Narrative für lokale Deployments. Enterprise-Tier von Cloud-Anbietern (OpenAI Enterprise, Anthropic for Teams) bieten DSGVO-konforme Datenverarbeitung, erfordern jedoch Procurement, DPA-Unterzeichnung und laufendes Compliance-Monitoring.',
@@ -22256,7 +22256,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'regional-context',
           title: 'LLMs locaux vs APIs cloud : Contexte régional',
           content: [
-            'Le choix entre l\'inférence locale et cloud comporte des implications directes en matière de conformité selon les juridictions réglementaires.',
+            '**Le choix entre l\'inférence locale et cloud comporte des implications directes en matière de conformité selon les juridictions réglementaires.**',
           ],
           items: [
             '**UE / RGPD + Loi IA :** L\'article 28 du RGPD exige un accord de traitement des données (DPA) avec tout tiers traitant des données personnelles en votre nom — y compris les fournisseurs d\'APIs IA cloud. Les LLMs locaux éliminent entièrement cette exigence : pas de DPA, pas de mécanisme selon l\'article 46, pas de transfert de données transfrontalier. La Loi IA de l\'UE (en vigueur depuis février 2025) classe les systèmes IA traitant des données personnelles dans les secteurs réglementés (santé, RH, droit, finance) comme à haut risque. Pour ces secteurs, l\'inférence locale est la voie de déploiement la moins risquée. La CNIL recommande l\'inférence locale pour le traitement de données professionnelles sensibles afin de garantir la conformité au RGPD sans transfert vers des sous-traitants tiers. Les offres Enterprise des fournisseurs cloud (OpenAI Enterprise, Anthropic for Teams) proposent un traitement des données conforme au RGPD, mais nécessitent un processus d\'achat, la signature d\'un DPA et un suivi continu de la conformité.',
@@ -22503,7 +22503,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'regional-context',
           title: 'ローカルLLM vs クラウドAPI：地域別コンテキスト',
           content: [
-            'ローカル推論とクラウド推論の選択は、地域の規制管轄区域によって直接的なコンプライアンスへの影響があります。',
+            '**ローカル推論とクラウド推論の選択は、地域の規制管轄区域によって直接的なコンプライアンスへの影響があります。**',
           ],
           items: [
             '**日本（METI）：** 経済産業省（METI）のAIガバナンスガイドラインは、機密に分類された企業データに対してオンプレミス推論を推奨しています。顧客データを取り扱う日本企業にとって、ローカルLLMはMETIの「AIシステムの適切な管理」という原則に沿っています。クラウドAPIを使用する場合は、プロバイダーのデータ処理場所が個人情報保護法（APPI）に準拠していることを確認する必要があります。日本語業務ワークフローには、OllamaでのQwen2.5 7Bが推奨ローカルモデルです — ネイティブな日本語トークナイゼーションにより、日本語文書の処理速度がLlamaより30〜40%向上します。',
@@ -22750,7 +22750,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'regional-context',
           title: '本地LLM vs 云端API：地区合规背景',
           content: [
-            '在AI推理的选择中，不同国家和地区的数据法规直接影响企业的合规要求。',
+            '**在AI推理的选择中，不同国家和地区的数据法规直接影响企业的合规要求。**',
           ],
           items: [
             '**中国（数据安全法）：** 根据中国《个人信息保护法》（PIPL，2021年）和《数据安全法》（2021年），将个人数据跨境传输给境外云端提供商需要监管审批。对于大多数中国企业，本地LLM不仅是优选 — 处理敏感数据时在法律上是必要的。境外云端API（OpenAI、Anthropic）需要进行PIPL影响评估。部署本地Qwen2.5可完全避免上述要求。国产模型（通义千问/Qwen2.5、文心等）专为中文优化，本地部署可同时满足数据主权和推理效率的双重需求。',
@@ -23004,7 +23004,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'what-is-ollama',
           title: 'What Is Ollama?',
           content: [
-            'Ollama is a command-line tool that downloads and runs open-source language models locally. It is built on llama.cpp, a C++ inference engine optimized for CPU and GPU performance. As of April 2026, Ollama supports 200+ models across its library.',
+            '**Ollama is a command-line tool that downloads and runs open-source language models locally.** It is built on llama.cpp, a C++ inference engine optimized for CPU and GPU performance. As of April 2026, Ollama supports 200+ models across its library.',
             'Ollama works by: (1) you run `ollama pull <model>` to download model weights, (2) you run `ollama run <model>` to start the model as a service, (3) the model becomes accessible via a REST API at `http://localhost:11434`, and (4) you connect any application (Python, Node.js, web app) to this API.',
             'Ollama is lightweight — it adds minimal overhead and uses minimal disk space for temporary files. It is designed for developers and production use, not for users who want a graphical interface.',
           ],
@@ -23013,7 +23013,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'what-is-lm-studio',
           title: 'What Is LM Studio?',
           content: [
-            'LM Studio is a desktop application that bundles a model downloader, a chat interface, and inference settings into one window. It is built on llama.cpp (the same underlying engine as Ollama), but wraps it in a user-friendly graphical interface.',
+            '**LM Studio is a desktop application that bundles a model downloader, a chat interface, and inference settings into one window.** It is built on llama.cpp (the same underlying engine as Ollama), but wraps it in a user-friendly graphical interface.',
             'LM Studio was designed for non-technical users and beginners. You launch the app, browse a visual library of models, download with one click, and start chatting. No command-line knowledge required.',
             'As of April 2026, LM Studio supports macOS and Windows natively. Linux support is in beta. LM Studio also exposes an OpenAI-compatible API (in beta), allowing developers to integrate it into applications, though this feature is less mature than Ollama\'s.',
           ],
@@ -23033,7 +23033,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'model-management',
           title: 'How Do You Manage Models in Each Tool?',
           content: [
-            'Model management means downloading models, checking disk usage, deleting old models, and switching between different models.',
+            '**Model management means downloading models, checking disk usage, deleting old models, and switching between different models.**',
             '**In Ollama**: All commands are CLI-based. `ollama list` shows downloaded models, `ollama pull <name>` downloads a new model, `ollama rm <name>` deletes a model, `ollama run <name>` launches a model. Model files are stored in `~/.ollama/models` on your machine. It is straightforward but requires terminal familiarity.',
             '**In LM Studio**: Click "Search models" in the app, browse the visual library, click a model to see its details (size, quantization, description), click "Download" (shows progress bar), and models are stored in a settings-configurable folder. You can see all downloaded models in a sidebar and swap between them with one click. It is significantly more visual and beginner-friendly.',
           ],
@@ -23044,7 +23044,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'performance-and-speed',
           title: 'Which Is Faster: Ollama or LM Studio?',
           content: [
-            'Both tools use the same underlying C++ inference engine (llama.cpp). On identical hardware running identical models, they produce **identical token generation speed**. As of April 2026, there is no performance difference between them.',
+            '**Both tools use the same underlying C++ inference engine (llama.cpp).** On identical hardware running identical models, they produce **identical token generation speed**. As of April 2026, there is no performance difference between them.',
             'Speed depends entirely on your hardware (GPU VRAM, GPU type, CPU cores) and the model you run. A Llama 3.2 3B model on an RTX 4090 generates about 150 tokens/second in both tools. The same model on a laptop CPU generates about 10 tokens/second in both tools.',
             'LM Studio includes a visual benchmark tool (Settings → Benchmark) that lets you test token generation speed without using the terminal. Ollama does not have a built-in benchmark, but you can benchmark via the API.',
           ],
@@ -23053,7 +23053,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'api-and-integration',
           title: 'Which Has Better API Support for Developers?',
           content: [
-            'Ollama exposes a fully OpenAI-compatible REST API at `http://localhost:11434`. This means you can use any OpenAI SDK (Python, Node.js, Go, etc.) by simply changing the base URL and running a local model. This is production-ready and widely used in enterprise deployments.',
+            '**Ollama exposes a fully OpenAI-compatible REST API at `http://localhost:11434`.** This means you can use any OpenAI SDK (Python, Node.js, Go, etc.) by simply changing the base URL and running a local model. This is production-ready and widely used in enterprise deployments.',
             '**Example: using Ollama API from Python:**',
             'LM Studio also exposes an OpenAI-compatible API (in beta as of April 2026), accessible at `http://localhost:1234`. However, it is less documented and less widely tested in production than Ollama. If you need API reliability for a production application, Ollama is the safer choice.',
           ],
@@ -24634,7 +24634,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           image: '/images/open-webui-architecture-de.svg',
           imageCaption: 'Open WebUI als Docker-Container verbindet Browser über HTTP mit Ollama — Multi-Benutzer, RAG und Multimodal inklusive.',
           content: [
-            'Open WebUI ist eine All-in-One-Schnittstelle für lokale Modelle. Sie funktioniert mit Ollama, LM Studio oder einer beliebigen OpenAI-kompatiblen API. Ab April 2026 ist sie das am häufigsten heruntergeladene lokale LLM-Frontend auf GitHub (25.000+ Sterne), da sie die meisten Funktionen in einer einzigen Anwendung vereint.',
+            '**Open WebUI ist eine All-in-One-Schnittstelle für lokale Modelle.** Sie funktioniert mit Ollama, LM Studio oder einer beliebigen OpenAI-kompatiblen API. Ab April 2026 ist sie das am häufigsten heruntergeladene lokale LLM-Frontend auf GitHub (25.000+ Sterne), da sie die meisten Funktionen in einer einzigen Anwendung vereint.',
             '**Wichtigste Funktionen:**',
             '- **RAG (Retrieval-Augmented Generation)**: Laden Sie Dokumente (PDFs, Textdateien) hoch und lassen Sie das Modell Fragen dazu beantworten.',
             '- **Multimodal-Unterstützung**: Laden Sie Bilder hoch und stellen Sie Fragen dazu.',
@@ -24651,7 +24651,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         enchanted: {
           title: 'Warum Enchanted UI für leichte Geschwindigkeit wählen?',
           content: [
-            'Enchanted UI ist eine minimale, abhängigkeitsfreie Web-Oberfläche für Ollama. Es ist keine herunterladbare App — es ist eine einzelne HTML-Datei, die in Ihrem Browser läuft. Ab April 2026 ist sie das schnellste und reaktivste Frontend für einfaches Chat.',
+            '**Enchanted UI ist eine minimale, abhängigkeitsfreie Web-Oberfläche für Ollama.** Es ist keine herunterladbare App — es ist eine einzelne HTML-Datei, die in Ihrem Browser läuft. Ab April 2026 ist sie das schnellste und reaktivste Frontend für einfaches Chat.',
             '**Wichtigste Funktionen:**',
             '- **Sofort starten**: Keine Installation, keine Abhängigkeiten. Öffnen Sie einfach eine URL.',
             '- **Schnell**: Minimales JavaScript, keine schweren Frameworks.',
@@ -24665,7 +24665,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         janAI: {
           title: 'Warum ist Jan AI am besten für Desktop-Benutzer?',
           content: [
-            'Jan AI ist eine Desktop-Anwendung (Windows, macOS), die Modellverwaltung, Inferenz und eine Chat-Oberfläche in einer App zusammenfasst. Es ist ähnlich wie LM Studio, aber mit stärkerer Offline-Unterstützung und einem Community-getriebenen Ansatz.',
+            '**Jan AI ist eine Desktop-Anwendung (Windows, macOS), die Modellverwaltung, Inferenz und eine Chat-Oberfläche in einer App zusammenfasst.** Es ist ähnlich wie LM Studio, aber mit stärkerer Offline-Unterstützung und einem Community-getriebenen Ansatz.',
             '**Wichtigste Funktionen:**',
             '- **Offline-first**: Modelle werden mit Ihrem Gerät synchronisiert; kein Internet erforderlich zum Chatten.',
             '- **GPU und CPU Fallback**: Nutzt automatisch GPU wenn verfügbar, fällt auf CPU zurück.',
@@ -24677,7 +24677,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         continueDev: {
           title: 'Wie verwenden Sie Continue.dev für Code-Vervollständigungen?',
           content: [
-            'Continue.dev ist eine VS Code und JetBrains IDE-Erweiterung, die Ihr lokales Ollama-Modell mit Ihrem Code-Editor verbindet. Wenn Sie anfangen zu tippen, schlägt Continue Vervollständigungen basierend auf Ihrem lokalen Modell vor.',
+            '**Continue.dev ist eine VS Code und JetBrains IDE-Erweiterung, die Ihr lokales Ollama-Modell mit Ihrem Code-Editor verbindet.** Wenn Sie anfangen zu tippen, schlägt Continue Vervollständigungen basierend auf Ihrem lokalen Modell vor.',
             '**Setup (2 Minuten):**',
             '1. Installieren Sie Continue aus dem VS Code Marketplace.',
             '2. Zeigen Sie es auf Ihre Ollama-Instanz (Config → Configure Continue → Add localhost:11434).',
@@ -24945,7 +24945,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           image: '/images/open-webui-architecture-fr.svg',
           imageCaption: 'Architecture d\'Open WebUI : le conteneur Docker connecte les navigateurs à Ollama via REST API, avec RAG et multi-utilisateurs.',
           content: [
-            'Open WebUI est une interface tout-en-un pour les modèles locaux. Elle fonctionne avec Ollama, LM Studio ou n\'importe quelle API compatible OpenAI. En avril 2026, c\'est l\'interface LLM locale la plus téléchargée sur GitHub (25 000+ étoiles) car elle combine la plupart des fonctionnalités en une seule application.',
+            '**Open WebUI est une interface tout-en-un pour les modèles locaux.** Elle fonctionne avec Ollama, LM Studio ou n\'importe quelle API compatible OpenAI. En avril 2026, c\'est l\'interface LLM locale la plus téléchargée sur GitHub (25 000+ étoiles) car elle combine la plupart des fonctionnalités en une seule application.',
             '**Fonctionnalités principales :**',
             '- **RAG (Génération augmentée par récupération)** : téléchargez des documents (PDFs, fichiers texte) et laissez le modèle répondre aux questions à leur sujet.',
             '- **Support multimodal** : téléchargez des images et posez des questions à leur sujet.',
@@ -24958,7 +24958,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         enchantedUI: {
           title: 'Interface la plus rapide : Enchanted UI (approche minimaliste)',
           content: [
-            'Enchanted UI est un client chat web pur pour Ollama. Aucune dépendance ; exécutez-le directement dans votre navigateur sans installation.',
+            '**Enchanted UI est un client chat web pur pour Ollama.** Aucune dépendance ; exécutez-le directement dans votre navigateur sans installation.',
             '**Avantages :**',
             '- Zéro dépendance. Tapez l\'URL de votre Ollama (ex: http://localhost:11434) et commencez à discuter.',
             '- Interface élégante et rapide. Focalisé sur chat uniquement.',
@@ -24972,7 +24972,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         janAI: {
           title: 'Meilleure app bureau : Jan AI (alternative hors ligne)',
           content: [
-            'Jan AI est une application bureau native (Windows, macOS) qui empaqueté Ollama + une interface web. Téléchargez, installez, exécutez. Aucun terminal requis.',
+            '**Jan AI est une application bureau native (Windows, macOS) qui empaqueté Ollama + une interface web.** Téléchargez, installez, exécutez. Aucun terminal requis.',
             '**Avantages :**',
             '- Installation simple pour utilisateurs non-techniques. Pas de Docker ou terminal.',
             '- Synchronisation hors ligne : continue à fonctionner si votre internet tombe.',
@@ -24986,7 +24986,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         continueDev: {
           title: 'Meilleure pour code : Continue.dev (extension VS Code)',
           content: [
-            'Continue.dev est une extension VS Code qui apporte complétion et suggestions de code inline depuis votre Ollama local.',
+            '**Continue.dev est une extension VS Code qui apporte complétion et suggestions de code inline depuis votre Ollama local.**',
             '**Comment utiliser :**',
             '1. Installez extension Continue depuis VS Code Marketplace.',
             '2. Connectez-vous à votre Ollama local (Settings > Continue > Ollama, default: http://localhost:11434).',
@@ -25002,7 +25002,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         selfHostedVsCloud: {
           title: 'Interfaces auto-hébergés vs. cloud (propriétaires)',
           content: [
-            'Toutes les interfaces listées ci-dessus sont auto-hébergées (vous les exécutez localement). Voici comment elles se comparent à des services cloud propriétaires :',
+            '**Toutes les interfaces listées ci-dessus sont auto-hébergées (vous les exécutez localement).** Voici comment elles se comparent à des services cloud propriétaires :',
             '**Auto-hébergé (local) :**',
             '- Coût : zéro après achat GPU initial (~$300–$3000).',
             '- Latence : <500ms (réseau local).',
@@ -25270,7 +25270,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           image: '/images/open-webui-architecture-ja.svg',
           imageCaption: 'Open WebUIのアーキテクチャ：DockerコンテナがREST APIでブラウザとOllamaを接続、RAG・マルチユーザー対応。',
           content: [
-            'Open WebUIはローカルモデル向けオールインワンインターフェース。Ollama、LM Studio、またはOpenAI互換API動作。2026年4月現在、GitHub最ダウンロードローカルLLMフロントエンド（25,000+スター）。',
+            '**Open WebUIはローカルモデル向けオールインワンインターフェース。** Ollama、LM Studio、またはOpenAI互換API動作。2026年4月現在、GitHub最ダウンロードローカルLLMフロントエンド（25,000+スター）。',
             '**主要機能：**',
             '- **RAG（検索拡張生成）**：ドキュメント（PDF、テキストファイル）アップロード。モデルが質問に回答。',
             '- **マルチモーダル対応**：画像アップロード、質問可能。',
@@ -25283,7 +25283,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         enchantedUI: {
           title: '最速UI：Enchanted UI（ミニマル手法）',
           content: [
-            'Enchanted UIはOllama用シンプルWebクライアント。依存関係なし、ブラウザで直接実行。インストール不要。',
+            '**Enchanted UIはOllama用シンプルWebクライアント。** 依存関係なし、ブラウザで直接実行。インストール不要。',
             '**利点：**',
             '- 依存関係なし。Ollama URL入力（例：http://localhost:11434）でチャット開始。',
             '- エレガント・高速UI。チャット専用。',
@@ -25297,7 +25297,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         janAI: {
           title: '最高デスクトップアプリ：Jan AI（オフライン代替案）',
           content: [
-            'Jan AIはネイティブデスクトップアプリ（Windows、macOS）。Ollama＋Webインターフェース包含。ダウンロード、インストール、実行。ターミナル不要。',
+            '**Jan AIはネイティブデスクトップアプリ（Windows、macOS）。** Ollama＋Webインターフェース包含。ダウンロード、インストール、実行。ターミナル不要。',
             '**利点：**',
             '- 非技術ユーザー向けシンプルインストール。DockerまたはターミナルなしCancel。',
             '- オフライン同期：インターネット断時も動作。',
@@ -25327,7 +25327,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         selfHostedVsCloud: {
           title: 'セルフホストUIとクラウド（プロプライエタリ）',
           content: [
-            '上記全UIはセルフホスト（ローカル実行）。クラウドプロプライエタリサービスとの比較：',
+            '**上記全UIはセルフホスト（ローカル実行）。** クラウドプロプライエタリサービスとの比較：',
             '**セルフホスト（ローカル）：**',
             '- コスト：初期GPU購入後はゼロ（～$300–$3000）。',
             '- レイテンシ：<500ms（ローカルネットワーク）。',
@@ -25595,7 +25595,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           image: '/images/open-webui-architecture-zh.svg',
           imageCaption: 'Open WebUI架构：Docker容器通过REST API将浏览器连接到Ollama，支持RAG、多模态和多用户。',
           content: [
-            'Open WebUI是本地模型的一体化界面。适用于Ollama、LM Studio或任何OpenAI兼容API。截至2026年4月，GitHub上最常下载的本地LLM前端（25,000+星）。',
+            '**Open WebUI是本地模型的一体化界面。** 适用于Ollama、LM Studio或任何OpenAI兼容API。截至2026年4月，GitHub上最常下载的本地LLM前端（25,000+星）。',
             '**主要功能：**',
             '- **RAG（检索增强生成）**：上传文档（PDF、文本文件），让模型回答相关问题。',
             '- **多模态支持**：上传图像，提问。',
@@ -25608,7 +25608,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         enchantedUI: {
           title: '最速前端：Enchanted UI（极简方法）',
           content: [
-            'Enchanted UI是Ollama的纯Web客户端。零依赖；直接在浏览器运行，无需安装。',
+            '**Enchanted UI是Ollama的纯Web客户端。** 零依赖；直接在浏览器运行，无需安装。',
             '**优点：**',
             '- 零依赖。输入Ollama URL（如http://localhost:11434）即可开始聊天。',
             '- 优雅、高速UI。仅专注聊天。',
@@ -25622,7 +25622,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         janAI: {
           title: '最佳桌面应用：Jan AI（离线替代方案）',
           content: [
-            'Jan AI是原生桌面应用（Windows、macOS），包含Ollama+Web界面。下载、安装、运行。无需终端。',
+            '**Jan AI是原生桌面应用（Windows、macOS），包含Ollama+Web界面。** 下载、安装、运行。无需终端。',
             '**优点：**',
             '- 非技术用户友好的简单安装。无Docker或终端。',
             '- 离线同步：互联网断开时仍可工作。',
@@ -25652,7 +25652,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         selfHostedVsCloud: {
           title: '自托管前端 vs 云端（专有）',
           content: [
-            '上述所有前端都是自托管（在本地运行）。对比专有云服务：',
+            '**上述所有前端都是自托管（在本地运行）。** 对比专有云服务：',
             '**自托管（本地）：**',
             '- 成本：初始GPU购买后为零（～$300–$3000）。',
             '- 延迟：<500ms（本地网络）。',
@@ -25910,7 +25910,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'what-is-inference-engine',
           title: 'What Is an Inference Engine?',
           content: [
-            'An inference engine is the software component that loads a pre-trained model file and executes the mathematical operations needed to generate text. It is different from a chat interface (like Open WebUI or Enchanted UI) or an API layer (like Ollama\'s REST API).',
+            '**An inference engine is the software component that loads a pre-trained model file and executes the mathematical operations needed to generate text.** It is different from a chat interface (like Open WebUI or Enchanted UI) or an API layer (like Ollama\'s REST API).',
             'A typical local LLM deployment has three layers:',
             '1. **Model file** (e.g., llama-3.1-8b.gguf) — the neural network weights.',
             '2. **Inference engine** (e.g., llama.cpp, vLLM) — loads the model and generates tokens.',
@@ -25941,7 +25941,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'understanding-llama-cpp',
           title: 'Understanding llama.cpp: The Foundation',
           content: [
-            'llama.cpp is a C++ implementation of LLM inference, originally written to run Meta\'s Llama model on consumer hardware without GPU acceleration. As of April 2026, it remains the most lightweight and portable inference engine.',
+            '**llama.cpp is a C++ implementation of LLM inference, originally written to run Meta\'s Llama model on consumer hardware without GPU acceleration.** As of April 2026, it remains the most lightweight and portable inference engine.',
             '**Why llama.cpp dominates consumer use:**',
             '- Minimal memory overhead — can run on 8 GB RAM with CPU alone.',
             '- Supports multiple GPU backends (NVIDIA, AMD, Apple Metal, Intel).',
@@ -25954,7 +25954,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'understanding-vllm',
           title: 'Understanding vLLM: The Production Standard',
           content: [
-            'vLLM is a Python framework designed for high-throughput inference on GPU clusters. It optimizes for serving models via API, with support for batching, distributed inference, and advanced scheduling.',
+            '**vLLM is a Python framework designed for high-throughput inference on GPU clusters.** It optimizes for serving models via API, with support for batching, distributed inference, and advanced scheduling.',
             '**Why vLLM dominates production:**',
             '- **Paged Attention**: vLLM uses a novel memory layout that improves GPU utilization from ~20% to ~70%, dramatically increasing throughput.',
             '- **Batch processing**: Can process 50–100 prompts simultaneously, serving more users per GPU.',
@@ -25969,7 +25969,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'understanding-text-generation-webui',
           title: 'Understanding Text-Generation-WebUI: The Researcher\'s Tool',
           content: [
-            'Text-Generation-WebUI (also called oobabooga) is a full-featured Python application with a web interface for experimenting with models. It combines inference with built-in tools for fine-tuning, LoRA training, embedding generation, and advanced prompt testing.',
+            '**Text-Generation-WebUI (also called oobabooga) is a full-featured Python application with a web interface for experimenting with models.** It combines inference with built-in tools for fine-tuning, LoRA training, embedding generation, and advanced prompt testing.',
             '**Why researchers use Text-Generation-WebUI:**',
             '- **LoRA fine-tuning built-in**: Train custom LoRA adapters on top of base models without needing external training scripts.',
             '- **Multiple inference engines**: Can switch between llama.cpp, GPTQ, exllama, and other backends.',
@@ -25983,7 +25983,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'performance-tokens-per-second',
           title: 'How Fast Is Each Engine? Throughput Comparison',
           content: [
-            'Throughput (tokens per second) depends on the model size, hardware, and engine optimization. As of April 2026, here are real-world benchmarks on consumer hardware:',
+            '**Throughput (tokens per second) depends on the model size, hardware, and engine optimization.** As of April 2026, here are real-world benchmarks on consumer hardware:',
           ],
           rows: [
             { 'Scenario': 'Llama 3.1 8B on RTX 4090 (GPU)', 'llama.cpp': '150 tokens/sec', 'vLLM': '300 tokens/sec (with batching)', 'Text-Gen-WebUI': '150 tokens/sec' },
@@ -26022,7 +26022,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         regionalContext: {
           title: 'Inference Engine Choice by Region',
           content: [
-            'The choice of inference engine has direct implications for regional compliance and enterprise deployments across different regulatory jurisdictions.',
+            '**The choice of inference engine has direct implications for regional compliance and enterprise deployments across different regulatory jurisdictions.**',
           ],
           items: [
             '**EU / GDPR:** For EU enterprise deployments, vLLM running on-premises keeps all inference within EU infrastructure — no tokens, prompts, or outputs leave your servers. For German BSI IT-Grundschutz compliance, vLLM is the recommended production engine because it provides structured audit logging via Prometheus metrics (/metrics endpoint), and all model versions are pinnable via HuggingFace model IDs for compliance documentation. Mistral models (Mistral AI, France, Apache 2.0) are the EU-preferred choice for vLLM production deployments — EU origin, clean licence, strong performance. vLLM command: `vllm serve mistralai/Mistral-7B-Instruct-v0.3`',
@@ -26270,7 +26270,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         id: 'what-is-inference-engine',
         title: 'Was ist eine Inference-Engine?',
         content: [
-          'Eine Inference-Engine ist die Softwarekomponente, die eine vortrainierte Modelldatei lädt und die mathematischen Operationen ausführt, die zur Generierung von Text erforderlich sind. Sie unterscheidet sich von einer Chat-Schnittstelle (wie Open WebUI oder Enchanted UI) oder einem API-Layer (wie Ollamas REST-API).',
+          '**Eine Inference-Engine ist die Softwarekomponente, die eine vortrainierte Modelldatei lädt und die mathematischen Operationen ausführt, die zur Generierung von Text erforderlich sind.** Sie unterscheidet sich von einer Chat-Schnittstelle (wie Open WebUI oder Enchanted UI) oder einem API-Layer (wie Ollamas REST-API).',
           'Eine typische lokale LLM-Bereitstellung hat drei Schichten:',
           '1. **Modelldatei** (z. B. llama-3.1-8b.gguf) — die neuronalen Netzwerk-Gewichte.',
           '2. **Inference-Engine** (z. B. llama.cpp, vLLM) — lädt das Modell und generiert Tokens.',
@@ -26301,7 +26301,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         id: 'understanding-llama-cpp',
         title: 'llama.cpp verstehen: Die Grundlage',
         content: [
-          'llama.cpp ist eine C++-Implementierung der LLM-Inferenz, ursprünglich geschrieben, um Metas Llama-Modell auf Consumer-Hardware ohne GPU-Beschleunigung auszuführen. Im April 2026 bleibt es die leichteste und tragbarste Inference-Engine.',
+          '**llama.cpp ist eine C++-Implementierung der LLM-Inferenz, ursprünglich geschrieben, um Metas Llama-Modell auf Consumer-Hardware ohne GPU-Beschleunigung auszuführen.** Im April 2026 bleibt es die leichteste und tragbarste Inference-Engine.',
           '**Warum llama.cpp die Consumer-Nutzung dominiert:**',
           '- Minimaler Speicher-Overhead — kann auf 8 GB RAM nur mit CPU ausgeführt werden.',
           '- Unterstützt mehrere GPU-Backends (NVIDIA, AMD, Apple Metal, Intel).',
@@ -26314,7 +26314,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         id: 'understanding-vllm',
         title: 'vLLM verstehen: Der Production-Standard',
         content: [
-          'vLLM ist ein Python-Framework für High-Throughput-Inferenz auf GPU-Clustern. Es optimiert für das Bereitstellen von Modellen über API mit Unterstützung für Batching, verteilte Inferenz und erweiterte Planung.',
+          '**vLLM ist ein Python-Framework für High-Throughput-Inferenz auf GPU-Clustern.** Es optimiert für das Bereitstellen von Modellen über API mit Unterstützung für Batching, verteilte Inferenz und erweiterte Planung.',
           '**Warum vLLM die Production dominiert:**',
           '- **Paged Attention**: vLLM nutzt ein neuartiges Speicherlayout, das die GPU-Auslastung von ~20 % auf ~70 % verbessert und den Durchsatz dramatisch erhöht.',
           '- **Batch-Verarbeitung**: Kann 50–100 Prompts gleichzeitig verarbeiten, mehr Benutzer pro GPU bedienen.',
@@ -26329,7 +26329,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         id: 'understanding-text-generation-webui',
         title: 'Text-Generation-WebUI verstehen: Das Forschungs-Tool',
         content: [
-          'Text-Generation-WebUI (auch oobabooga genannt) ist eine vollständig ausgestattete Python-Anwendung mit einer Web-Schnittstelle zum Experimentieren mit Modellen. Sie kombiniert Inferenz mit integrierten Tools für Fine-Tuning, LoRA-Training, Embedding-Generierung und erweiterte Prompt-Tests.',
+          '**Text-Generation-WebUI (auch oobabooga genannt) ist eine vollständig ausgestattete Python-Anwendung mit einer Web-Schnittstelle zum Experimentieren mit Modellen.** Sie kombiniert Inferenz mit integrierten Tools für Fine-Tuning, LoRA-Training, Embedding-Generierung und erweiterte Prompt-Tests.',
           '**Warum Forscher Text-Generation-WebUI verwenden:**',
           '- **LoRA Fine-Tuning integriert**: Trainieren Sie benutzerdefinierte LoRA-Adapter auf Basis-Modellen ohne externe Trainings-Skripte.',
           '- **Mehrere Inference-Engines**: Können zwischen llama.cpp, GPTQ, exllama und anderen Backends wechseln.',
@@ -26343,7 +26343,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         id: 'performance-tokens-per-second',
         title: 'Wie schnell ist jede Engine? Durchsatz-Vergleich',
         content: [
-          'Der Durchsatz (Tokens pro Sekunde) hängt von der Modellgröße, Hardware und Engine-Optimierung ab. Im April 2026 finden Sie hier Real-World-Benchmarks auf Consumer-Hardware:',
+          '**Der Durchsatz (Tokens pro Sekunde) hängt von der Modellgröße, Hardware und Engine-Optimierung ab.** Im April 2026 finden Sie hier Real-World-Benchmarks auf Consumer-Hardware:',
         ],
         rows: [
           { 'Szenario': 'Llama 3.1 8B auf RTX 4090 (GPU)', 'llama.cpp': '150 Tokens/Sek.', 'vLLM': '300 Tokens/Sek. (mit Batching)', 'Text-Gen-WebUI': '150 Tokens/Sek.' },
@@ -26383,7 +26383,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         id: 'inference-engine-choice-by-region',
         title: 'Inference-Engine Auswahl nach Region',
         content: [
-          'Die Wahl der Inference-Engine hat direkte Auswirkungen auf regionale Compliance und Enterprise-Deployments in verschiedenen regulatorischen Gerichtsbarkeiten. Für deutsche und europäische Deployments gelten besondere Anforderungen.',
+          '**Die Wahl der Inference-Engine hat direkte Auswirkungen auf regionale Compliance und Enterprise-Deployments in verschiedenen regulatorischen Gerichtsbarkeiten.** Für deutsche und europäische Deployments gelten besondere Anforderungen.',
         ],
         items: [
           '**Deutschland / EU / DSGVO:** Für deutsche Unternehmens-Deployments muss vLLM auf lokalen deutschen Servern laufen, um DSGVO-Compliance zu gewährleisten — keine Tokens, Prompts oder Outputs verlassen Ihre Infrastruktur. Für BSI IT-Grundschutz-Kataloge Compliance ist vLLM die empfohlene Production-Engine, da sie strukturiertes Audit-Logging über Prometheus-Metriken (/metrics Endpunkt) bietet, und alle Modellversionen über HuggingFace-Modell-IDs für Compliance-Dokumentation fixierbar sind. Mistral-Modelle (Mistral AI, Frankreich, Apache 2.0) sind die EU-bevorzugte Wahl für vLLM Production-Deployments — EU-Ursprung, saubere Lizenz, starke Performance. vLLM-Befehl: `vllm serve mistralai/Mistral-7B-Instruct-v0.3`. Für DACH-Mittelstand-Unternehmen bietet vLLM die notwendige Skalierbarkeit für 50–500 Concurrent-User-Szenarien.',
@@ -26538,7 +26538,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         whatIsInferenceEngine: {
           title: 'Qu\'est-ce qu\'un moteur d\'inférence ?',
           content: [
-            'Un moteur d\'inférence est le composant logiciel qui charge un fichier modèle pré-entraîné et exécute les opérations mathématiques nécessaires pour générer du texte. Il diffère d\'une interface de chat (comme Open WebUI ou Enchanted UI) ou d\'une couche API (comme l\'API REST d\'Ollama).',
+            '**Un moteur d\'inférence est le composant logiciel qui charge un fichier modèle pré-entraîné et exécute les opérations mathématiques nécessaires pour générer du texte.** Il diffère d\'une interface de chat (comme Open WebUI ou Enchanted UI) ou d\'une couche API (comme l\'API REST d\'Ollama).',
             'Un déploiement typique de LLM local comporte trois couches :',
             '1. **Fichier modèle** (par exemple, llama-3.1-8b.gguf) — les poids du réseau neuronal.',
             '2. **Moteur d\'inférence** (par exemple, llama.cpp, vLLM) — charge le modèle et génère les tokens.',
@@ -26567,7 +26567,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         llamacpp: {
           title: 'Comprendre llama.cpp : La fondation',
           content: [
-            'llama.cpp est une implémentation C++ de l\'inférence LLM, écrite à l\'origine pour exécuter le modèle Llama de Meta sur du matériel grand public sans accélération GPU. En avril 2026, c\'est le moteur d\'inférence le plus léger et portable.',
+            '**llama.cpp est une implémentation C++ de l\'inférence LLM, écrite à l\'origine pour exécuter le modèle Llama de Meta sur du matériel grand public sans accélération GPU.** En avril 2026, c\'est le moteur d\'inférence le plus léger et portable.',
             '**Pourquoi llama.cpp domine l\'utilisation consommateur :**',
             '- Surcharge mémoire minimale — peut s\'exécuter sur 8 Go de RAM uniquement avec CPU.',
             '- Supporte plusieurs backends GPU (NVIDIA, AMD, Apple Metal, Intel).',
@@ -26579,7 +26579,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         vllm: {
           title: 'Comprendre vLLM : Le standard de production',
           content: [
-            'vLLM est un framework Python conçu pour l\'inférence haute capacité sur clusters GPU. Il optimise le service de modèles via API, avec support du batching, de l\'inférence distribuée et de la planification avancée.',
+            '**vLLM est un framework Python conçu pour l\'inférence haute capacité sur clusters GPU.** Il optimise le service de modèles via API, avec support du batching, de l\'inférence distribuée et de la planification avancée.',
             '**Pourquoi vLLM domine la production :**',
             '- **Attention paginée** : vLLM utilise une mise en page mémoire novatrice qui améliore l\'utilisation GPU d\'environ 20% à 70%, augmentant considérablement le débit.',
             '- **Traitement batch** : peut traiter 50–100 invites simultanément, servant plus d\'utilisateurs par GPU.',
@@ -26593,7 +26593,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         textGenerationWebUI: {
           title: 'Comprendre Text-Generation-WebUI : L\'outil du chercheur',
           content: [
-            'Text-Generation-WebUI (aussi appelé oobabooga) est une application Python complète avec une interface web pour expérimenter avec les modèles. Elle combine l\'inférence avec des outils intégrés pour l\'ajustement fin, l\'entraînement LoRA, la génération d\'embeddings et les tests d\'invites avancés.',
+            '**Text-Generation-WebUI (aussi appelé oobabooga) est une application Python complète avec une interface web pour expérimenter avec les modèles.** Elle combine l\'inférence avec des outils intégrés pour l\'ajustement fin, l\'entraînement LoRA, la génération d\'embeddings et les tests d\'invites avancés.',
             '**Pourquoi les chercheurs utilisent Text-Generation-WebUI :**',
             '- **Ajustement LoRA intégré** : entraîner des adaptateurs LoRA personnalisés sur des modèles de base sans scripts d\'entraînement externes.',
             '- **Plusieurs moteurs d\'inférence** : peut basculer entre llama.cpp, GPTQ, exllama et autres backends.',
@@ -26606,7 +26606,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         performance: {
           title: 'Quelle est la vitesse de chaque moteur ? Comparaison des débits',
           content: [
-            'Le débit (tokens par seconde) dépend de la taille du modèle, du matériel et de l\'optimisation du moteur. En avril 2026, voici les benchmarks du monde réel sur du matériel grand public :',
+            '**Le débit (tokens par seconde) dépend de la taille du modèle, du matériel et de l\'optimisation du moteur.** En avril 2026, voici les benchmarks du monde réel sur du matériel grand public :',
           ],
           rows: [
             { 'Scénario': 'Llama 3.1 8B sur RTX 4090 (GPU)', 'llama.cpp': '150 tokens/s', 'vLLM': '300 tokens/s (avec batching)', 'Text-Gen-WebUI': '150 tokens/s' },
@@ -26641,7 +26641,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         regionalContext: {
           title: 'Choix du moteur d\'inférence par région',
           content: [
-            'Le choix du moteur d\'inférence a des implications directes pour la conformité régionale et les déploiements en entreprise dans différentes juridictions réglementaires.',
+            '**Le choix du moteur d\'inférence a des implications directes pour la conformité régionale et les déploiements en entreprise dans différentes juridictions réglementaires.**',
           ],
           items: [
             '**UE / RGPD** : Pour les déploiements en entreprise dans l\'UE, vLLM s\'exécutant sur site maintient toute l\'inférence au sein de l\'infrastructure de l\'UE — aucun token, prompt ou résultat ne quitte vos serveurs. Pour la conformité BSI IT-Grundschutz allemande, vLLM est le moteur de production recommandé car il fournit un enregistrement d\'audit structuré via les métriques Prometheus (point de terminaison /metrics), et toutes les versions de modèles sont épinglables via les IDs de modèles HuggingFace pour la documentation de conformité. Les modèles Mistral (Mistral AI, France, Apache 2.0) sont le choix préféré de l\'UE pour les déploiements de production vLLM — origine de l\'UE, licence propre, performance solide.',
@@ -26885,7 +26885,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         whatIsInferenceEngine: {
           title: '推論エンジンとは何か？',
           content: [
-            '推論エンジンは、事前学習済みモデルファイルをロードし、テキスト生成に必要な数学演算を実行するソフトウェアコンポーネントです。チャットインターフェース（Open WebUI など）や API レイヤー（Ollama の REST API など）とは異なります。',
+            '**推論エンジンは、事前学習済みモデルファイルをロードし、テキスト生成に必要な数学演算を実行するソフトウェアコンポーネントです。** チャットインターフェース（Open WebUI など）や API レイヤー（Ollama の REST API など）とは異なります。',
             'ローカル LLM デプロイメントは 3 つのレイヤーで構成：',
             '1. **モデルファイル**（例：llama-3.1-8b.gguf）— ニューラルネットワークの重み。',
             '2. **推論エンジン**（例：llama.cpp、vLLM）— モデルをロードしてトークンを生成。',
@@ -26924,7 +26924,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         vllm: {
           title: 'vLLM を理解する：本番環境標準',
           content: [
-            'vLLM は GPU クラスター上の高スループット推論用に設計された Python フレームワーク。バッチ処理、分散推論、高度なスケジューリングのサポートで API 経由のモデル提供を最適化。',
+            '**vLLM は GPU クラスター上の高スループット推論用に設計された Python フレームワーク。** バッチ処理、分散推論、高度なスケジューリングのサポートで API 経由のモデル提供を最適化。',
             '**vLLM が本番環境を支配する理由：**',
             '- **ページングアテンション**：vLLM は GPU 使用率を約 20% から 70% に改善する新規メモリレイアウトを使用、スループットを劇的に増加。',
             '- **バッチ処理**：50–100 プロンプトを同時処理、GPU あたりより多くのユーザーにサービス。',
@@ -26938,7 +26938,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         textGenerationWebUI: {
           title: 'Text-Generation-WebUI を理解する：研究者のツール',
           content: [
-            'Text-Generation-WebUI（oobabooga とも呼ばれる）は、モデル実験用の Web インターフェース付き完全機能の Python アプリケーション。ファインチューニング、LoRA トレーニング、埋め込み生成、高度なプロンプトテストの組込ツールと推論を組み合わせ。',
+            '**Text-Generation-WebUI（oobabooga とも呼ばれる）は、モデル実験用の Web インターフェース付き完全機能の Python アプリケーション。** ファインチューニング、LoRA トレーニング、埋め込み生成、高度なプロンプトテストの組込ツールと推論を組み合わせ。',
             '**研究者が Text-Generation-WebUI を使用する理由：**',
             '- **LoRA ファインチューニング組込**：外部トレーニングスクリプト不要でベースモデル上にカスタム LoRA アダプタをトレーニング。',
             '- **複数推論エンジン**：llama.cpp、GPTQ、exllama など他バックエンド間で切り替え可能。',
@@ -26951,7 +26951,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         performance: {
           title: 'パフォーマンス：各エンジンはどの程度高速か？',
           content: [
-            'スループット（1秒あたりのトークン）はモデルサイズ、ハードウェア、エンジン最適化に依存。2026 年 4 月時点で、コンシューマーハードウェア上の実世界ベンチマーク：',
+            '**スループット（1秒あたりのトークン）はモデルサイズ、ハードウェア、エンジン最適化に依存。** 2026 年 4 月時点で、コンシューマーハードウェア上の実世界ベンチマーク：',
           ],
           rows: [
             { 'シナリオ': 'Llama 3.1 8B on RTX 4090（GPU）', 'llama.cpp': '150 トークン/秒', 'vLLM': '300 トークン/秒（バッチ処理時）', 'Text-Gen-WebUI': '150 トークン/秒' },
@@ -26984,7 +26984,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         regionalContext: {
           title: '地域別推論エンジン選択',
           content: [
-            '推論エンジンの選択は地域的コンプライアンスと異なる規制管轄区域全体の企業デプロイメントに直接的な含意。',
+            '**推論エンジンの選択は地域的コンプライアンスと異なる規制管轄区域全体の企業デプロイメントに直接的な含意。**',
           ],
           items: [
             '**日本（METI）**：METI AI ガバナンス 2024 は推論インフラストラクチャのドキュメント化を要求。vLLM の構造化 Prometheus メトリクス（/metrics エンドポイント）は llama.cpp の stdout ログより監査証跡要件をより満たしやすい。日本企業デプロイメント用、Qwen2.5 7B via vLLM が推奨スタック — ネイティブ日本語トークン化と本番環境スループット。vLLM コマンド：`vllm serve Qwen/Qwen2.5-7B-Instruct`',
@@ -27228,7 +27228,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         whatIsInferenceEngine: {
           title: '什么是推理引擎？',
           content: [
-            '推理引擎是加载预训练模型文件并执行生成文本所需数学运算的软件组件。不同于聊天界面（如 Open WebUI）或 API 层（如 Ollama 的 REST API）。',
+            '**推理引擎是加载预训练模型文件并执行生成文本所需数学运算的软件组件。** 不同于聊天界面（如 Open WebUI）或 API 层（如 Ollama 的 REST API）。',
             '典型的本地 LLM 部署有三层：',
             '1. **模型文件**（例如 llama-3.1-8b.gguf）— 神经网络权重。',
             '2. **推理引擎**（例如 llama.cpp、vLLM）— 加载模型并生成令牌。',
@@ -27267,7 +27267,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         vllm: {
           title: '了解 vLLM：生产标准',
           content: [
-            'vLLM 是为 GPU 集群上的高吞吐量推理设计的 Python 框架。它优化了通过 API 提供模型的方式，支持批处理、分布式推理和高级调度。',
+            '**vLLM 是为 GPU 集群上的高吞吐量推理设计的 Python 框架。** 它优化了通过 API 提供模型的方式，支持批处理、分布式推理和高级调度。',
             '**vLLM 主导生产的原因：**',
             '- **分页注意力**：vLLM 使用新颖的内存布局，将 GPU 利用率从约 20% 提高到 70%，大幅增加吞吐量。',
             '- **批处理**：可同时处理 50–100 个提示，在每个 GPU 上为更多用户提供服务。',
@@ -27281,7 +27281,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         textGenerationWebUI: {
           title: '了解 Text-Generation-WebUI：研究者工具',
           content: [
-            'Text-Generation-WebUI（也称 oobabooga）是具有用于实验模型的 Web 界面的全功能 Python 应用。它将推理与微调、LoRA 训练、嵌入生成和高级提示测试的内置工具相结合。',
+            '**Text-Generation-WebUI（也称 oobabooga）是具有用于实验模型的 Web 界面的全功能 Python 应用。** 它将推理与微调、LoRA 训练、嵌入生成和高级提示测试的内置工具相结合。',
             '**研究者使用 Text-Generation-WebUI 的原因：**',
             '- **内置 LoRA 微调**：在基础模型之上训练自定义 LoRA 适配器，无需外部训练脚本。',
             '- **多个推理引擎**：可在 llama.cpp、GPTQ、exllama 和其他后端之间切换。',
@@ -27294,7 +27294,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         performance: {
           title: '性能：各引擎速度如何？',
           content: [
-            '吞吐量（每秒令牌数）取决于模型大小、硬件和引擎优化。截至 2026 年 4 月，消费硬件上的实际基准：',
+            '**吞吐量（每秒令牌数）取决于模型大小、硬件和引擎优化。** 截至 2026 年 4 月，消费硬件上的实际基准：',
           ],
           rows: [
             { '场景': 'Llama 3.1 8B on RTX 4090（GPU）', 'llama.cpp': '150 令牌/秒', 'vLLM': '300 令牌/秒（批处理时）', 'Text-Gen-WebUI': '150 令牌/秒' },
@@ -27327,7 +27327,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         regionalContext: {
           title: '按地区选择推理引擎',
           content: [
-            '推理引擎的选择对不同地区和监管框架的合规性和企业部署有直接影响。',
+            '**推理引擎的选择对不同地区和监管框架的合规性和企业部署有直接影响。**',
           ],
           items: [
             '**中国（数据安全法）**：根据 2021 年《数据安全法》，所有推理必须在本地进行，敏感数据不能跨境传输。vLLM 与阿里云 A10 和 A100 GPU 实例兼容。Qwen2.5（阿里巴巴）模型针对 vLLM 本地优化，提供最佳中文语言吞吐量。对于中国企业生产：**vLLM + Qwen2.5 14B on 阿里云**是 2026 年 4 月的标准栈。数据合规性要求：所有推理日志和模型权重必须在中国大陆境内存储；使用阿里云数据库服务以满足合规审计要求。',
@@ -28234,7 +28234,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         lora: {
           title: 'Can You Fine-Tune Models With LM Studio?',
           content: [
-            'As of April 2026, LM Studio does not have built-in LoRA fine-tuning. For fine-tuning, use:',
+            '**As of April 2026, LM Studio does not have built-in LoRA fine-tuning.** For fine-tuning, use:',
             '- **Text-Generation-WebUI** (easiest for LoRA)',
             '- **LLaMA-Factory** (advanced, production-grade)',
             '- **unsloth** (fastest, optimal for VRAM usage)',
@@ -28244,7 +28244,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         batch: {
           title: 'How Do You Run Batch Inference in LM Studio?',
           content: [
-            'Batch inference means processing multiple prompts without waiting for responses between them. LM Studio does not have a built-in batch mode, but you can simulate it via the API or Python loop:',
+            '**Batch inference means processing multiple prompts without waiting for responses between them.** LM Studio does not have a built-in batch mode, but you can simulate it via the API or Python loop:',
           ],
           codeBlock: '# Python: batch inference via LM Studio API\nfrom openai import OpenAI\nimport json\n\nclient = OpenAI(base_url="http://localhost:1234/v1", api_key="x")\n\nprompts = [\n  "What is 2+2?",\n  "Explain quantum computing",\n  "How do transformers work?"\n]\n\nresults = []\nfor prompt in prompts:\n  response = client.chat.completions.create(\n    model="llama-3.2-3b-gguf",\n    messages=[{"role": "user", "content": prompt}]\n  )\n  results.append({\n    "prompt": prompt,\n    "response": response.choices[0].message.content\n  })\n\nwith open("batch_results.json", "w") as f:\n  json.dump(results, f, indent=2)',
           codeLanguage: 'python',
@@ -28467,7 +28467,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         lora: {
           title: 'Können Sie Modelle mit LM Studio fine-tunen?',
           content: [
-            'Seit April 2026 ist LoRA Fine-Tuning nicht in LM Studio integriert. Für Fine-Tuning verwenden Sie:',
+            '**Seit April 2026 ist LoRA Fine-Tuning nicht in LM Studio integriert.** Für Fine-Tuning verwenden Sie:',
             '- **Text-Generation-WebUI** (am einfachsten für LoRA)',
             '- **LLaMA-Factory** (fortgeschrittene, produktionsreife)',
             '- **unsloth** (schnellste, optimal für VRAM-Nutzung)',
@@ -28477,7 +28477,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         batchInferenz: {
           title: 'Wie führen Sie Batch-Inferenz in LM Studio durch?',
           content: [
-            'Batch-Inferenz bedeutet die Verarbeitung mehrerer Aufforderungen, ohne auf Antworten zu warten. LM Studio hat keinen integrierten Batch-Modus, aber Sie können ihn über die API oder Python-Schleife simulieren:',
+            '**Batch-Inferenz bedeutet die Verarbeitung mehrerer Aufforderungen, ohne auf Antworten zu warten.** LM Studio hat keinen integrierten Batch-Modus, aber Sie können ihn über die API oder Python-Schleife simulieren:',
           ],
           codeBlock: '# Python: Batch-Inferenz über LM Studio API\nfrom openai import OpenAI\nimport json\n\nclient = OpenAI(base_url="http://localhost:1234/v1", api_key="x")\n\nprompts = [\n  "Was ist 2+2?",\n  "Erklären Sie Quantencomputing",\n  "Wie funktionieren Transformer?"\n]\n\nresults = []\nfor prompt in prompts:\n  response = client.chat.completions.create(\n    model="llama-3.2-3b-gguf",\n    messages=[{"role": "user", "content": prompt}]\n  )\n  results.append({\n    "prompt": prompt,\n    "response": response.choices[0].message.content\n  })\n\nwith open("batch_results.json", "w") as f:\n  json.dump(results, f, indent=2)',
           codeLanguage: 'python',
@@ -28841,7 +28841,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         lora: {
           title: 'Pouvez-vous fine-tuner des modèles avec LM Studio ?',
           content: [
-            'Depuis avril 2026, le fine-tuning LoRA n\'est pas intégré. Pour fine-tuning, utilisez :',
+            '**Depuis avril 2026, le fine-tuning LoRA n\'est pas intégré.** Pour fine-tuning, utilisez :',
             '- **Text-Generation-WebUI** (plus facile pour LoRA)',
             '- **LLaMA-Factory** (avancé, production)',
             '- **unsloth** (plus rapide, optimal pour VRAM)',
@@ -28851,7 +28851,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         inferenceBatch: {
           title: 'Comment exécuter l\'inférence batch dans LM Studio ?',
           content: [
-            'L\'inférence batch traite plusieurs prompts sans attendre réponses. LM Studio n\'a pas mode batch intégré, mais vous pouvez le simuler via API ou boucle Python :',
+            '**L\'inférence batch traite plusieurs prompts sans attendre réponses.** LM Studio n\'a pas mode batch intégré, mais vous pouvez le simuler via API ou boucle Python :',
           ],
           codeBlock: '# Python: inférence batch via API LM Studio\nfrom openai import OpenAI\nimport json\n\nclient = OpenAI(base_url="http://localhost:1234/v1", api_key="x")\n\nprompts = [\n  "Que est 2+2?",\n  "Expliquez l\'informatique quantique",\n  "Comment fonctionnent les transformers?"\n]\n\nresults = []\nfor prompt in prompts:\n  response = client.chat.completions.create(\n    model="llama-3.2-3b-gguf",\n    messages=[{"role": "user", "content": prompt}]\n  )\n  results.append({\n    "prompt": prompt,\n    "response": response.choices[0].message.content\n  })\n\nwith open("batch_results.json", "w") as f:\n  json.dump(results, f, indent=2)',
           codeLanguage: 'python',
@@ -29137,7 +29137,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         modelfiles: {
           title: 'How Do You Create Custom Models With Modelfiles?',
           content: [
-            'A Modelfile is a configuration file (like a Dockerfile) that defines a custom model by starting from a base model and adding system prompts, parameters, and weights.',
+            '**A Modelfile is a configuration file (like a Dockerfile) that defines a custom model by starting from a base model and adding system prompts, parameters, and weights.**',
           ],
           codeBlock: '# Create a file named Modelfile\nFROM llama3.2:3b\n\n# Add a system prompt\nSYSTEM """\nYou are a helpful expert in machine learning.\nAlways explain complex concepts in simple terms.\n"""\n\n# Adjust parameters\nPARAMETER temperature 0.7\nPARAMETER top_p 0.9\n\n# Build the custom model\nollama create ml-expert -f Modelfile\n\n# Use it\nollama run ml-expert',
           codeLanguage: 'bash',
@@ -29145,7 +29145,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         quantization: {
           title: 'What Quantization Options Does Ollama Support?',
           content: [
-            'Quantization reduces model size and VRAM by using lower-precision numbers. Ollama supports GGUF format with multiple quantizations:',
+            '**Quantization reduces model size and VRAM by using lower-precision numbers.** Ollama supports GGUF format with multiple quantizations:',
           ],
           rows: [
             { 'Quantization': 'FP16 (full precision)', 'Size (7B)': '14 GB', 'VRAM': '16 GB', 'Quality': 'Best', 'Speed': 'Slowest' },
@@ -29160,7 +29160,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         embeddings: {
           title: 'How Do You Generate Embeddings With Ollama?',
           content: [
-            'Embeddings are numerical representations of text, useful for RAG (Retrieval-Augmented Generation) and semantic search.',
+            '**Embeddings are numerical representations of text, useful for RAG (Retrieval-Augmented Generation) and semantic search.**',
           ],
           codeBlock: '# Pull an embedding model\nollama pull nomic-embed-text  # Best for English, 137M params\n\n# Generate embeddings\ncurl http://localhost:11434/v1/embeddings \\\n  -H "Content-Type: application/json" \\\n  -d \'{\n    "model": "nomic-embed-text",\n    "input": "The quick brown fox jumps"\n  }\'\n\n# Response includes embeddings as a vector of 768 dimensions',
           codeLanguage: 'bash',
@@ -29274,7 +29274,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         whatIsRAG: {
           title: 'What Is RAG (Retrieval-Augmented Generation)?',
           content: [
-            'RAG is a technique that lets your LLM answer questions about your own documents without needing to fine-tune the model.',
+            '**RAG is a technique that lets your LLM answer questions about your own documents without needing to fine-tune the model.**',
             'The process: (1) Upload your documents (PDFs, text files), (2) split them into chunks, (3) convert chunks to embeddings (numerical vectors), (4) store embeddings in a vector database, (5) when you ask a question, retrieve relevant chunks from the database, (6) pass the chunks + question to the LLM, (7) the LLM answers based on the chunks.',
             'RAG is preferred over fine-tuning when your documents change frequently (fine-tuning is one-time training), and you need source attribution (RAG shows which documents were used).',
           ],
@@ -29296,7 +29296,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         openWebUIRAG: {
           title: 'How Do You Use Open WebUI RAG (Easiest)?',
           content: [
-            'Open WebUI has built-in RAG. No setup beyond Docker. Just upload documents and ask questions.',
+            '**Open WebUI has built-in RAG.** No setup beyond Docker. Just upload documents and ask questions.',
           ],
           codeBlock: '# 1. Run Open WebUI with Docker\ndocker run -d -p 3000:8080 \\\n  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \\\n  ghcr.io/open-webui/open-webui:latest\n\n# 2. Open http://localhost:3000\n# 3. Click "+" next to message input → "Upload files"\n# 4. Select PDFs or text files\n# 5. Ask questions — Open WebUI retrieves relevant chunks\n# 6. Model answers based on documents, with citations',
           codeLanguage: 'bash',
@@ -29304,7 +29304,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         llamaindex: {
           title: 'How Do You Build RAG With LlamaIndex?',
           content: [
-            'LlamaIndex is a framework that handles document loading, chunking, embedding, and retrieval. Flexible, supports any vector database.',
+            '**LlamaIndex is a framework that handles document loading, chunking, embedding, and retrieval.** Flexible, supports any vector database.',
           ],
           codeBlock: '# 1. Install\npip install llama-index\npip install llama-index-embeddings-ollama  # use local Ollama embeddings\npip install llama-index-vector-stores-chroma  # use Chroma for storage\n\n# 2. Simple RAG pipeline\nfrom llama_index.core import SimpleDirectoryReader, VectorStoreIndex\nfrom llama_index.embeddings.ollama import OllamaEmbedding\n\n# Load documents\ndocuments = SimpleDirectoryReader("./documents").load_data()\n\n# Create index with local embeddings\nembedding_model = OllamaEmbedding(model_name="nomic-embed-text")\nindex = VectorStoreIndex.from_documents(\n  documents,\n  embed_model=embedding_model\n)\n\n# Query\nquery_engine = index.as_query_engine()\nresponse = query_engine.query("What does the document say about X?")\nprint(response)',
           codeLanguage: 'python',
@@ -29312,7 +29312,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         langchain: {
           title: 'How Do You Build RAG With LangChain?',
           content: [
-            'LangChain is the most widely-used framework for production RAG systems. Supports all vector databases and LLM providers.',
+            '**LangChain is the most widely-used framework for production RAG systems.** Supports all vector databases and LLM providers.',
           ],
           codeBlock: '# pip install langchain langchain-community langchain-chroma\n\nfrom langchain.document_loaders import DirectoryLoader\nfrom langchain.text_splitter import RecursiveCharacterTextSplitter\nfrom langchain.embeddings import OllamaEmbeddings\nfrom langchain.vectorstores import Chroma\nfrom langchain.chat_models import ChatOllama\nfrom langchain.chains import RetrievalQA\n\n# Load documents\nloader = DirectoryLoader("./documents")\ndocs = loader.load()\n\n# Split into chunks\nsplitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)\nchunks = splitter.split_documents(docs)\n\n# Create embeddings and vector store\nembeddings = OllamaEmbeddings(model="nomic-embed-text")\nvectorstore = Chroma.from_documents(chunks, embeddings)\n\n# Create QA chain\nllm = ChatOllama(model="llama3.2:8b")\nqa = RetrievalQA.from_chain_type(\n  llm=llm,\n  chain_type="stuff",\n  retriever=vectorstore.as_retriever()\n)\n\n# Answer questions\nresult = qa.run("What does the document say about X?")\nprint(result)',
           codeLanguage: 'python',
@@ -29433,7 +29433,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         desktopApps: {
           title: 'What Are Desktop Applications?',
           content: [
-            'Desktop apps are native applications that run directly on your operating system. Examples: LM Studio, Jan AI.',
+            '**Desktop apps are native applications that run directly on your operating system.** Examples: LM Studio, Jan AI.',
             '**Advantages:** Simple setup, no server knowledge required, single-user, runs as a standalone application, GPU settings in GUI.',
             '**Disadvantages:** Windows/macOS only (mostly), single machine only, no multi-user access, no easy sharing.',
           ],
@@ -29441,7 +29441,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         webUIs: {
           title: 'What Are Web UIs?',
           content: [
-            'Web UIs are interfaces accessed through your browser. They run a web server (usually in Docker) and serve a browser-based interface. Examples: Open WebUI, Enchanted UI.',
+            '**Web UIs are interfaces accessed through your browser.** They run a web server (usually in Docker) and serve a browser-based interface. Examples: Open WebUI, Enchanted UI.',
             '**Advantages:** Browser-based (work on any OS), shareable via URL, multi-user capable, access from other devices on network, more powerful features.',
             '**Disadvantages:** Requires understanding of Docker or ports, slightly more setup, requires a running web server.',
           ],
@@ -29487,7 +29487,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         useBoth: {
           title: 'Can You Run Both Desktop and Web UI Simultaneously?',
           content: [
-            'Yes, but with caveats. Both will try to use the same GPU and models. You can run them both using the same Ollama backend (they share the model), but inference performance will be split.',
+            '**Yes, but with caveats.** Both will try to use the same GPU and models. You can run them both using the same Ollama backend (they share the model), but inference performance will be split.',
             'Better approach: Run Ollama in the background, then use either LM Studio OR Open WebUI as your interface. Switching between them is instant.',
           ],
         },
@@ -29593,7 +29593,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cursor: {
           title: 'How to Use Local Models in Cursor',
           content: [
-            'Cursor is a VS Code fork optimized for AI-assisted coding. It has built-in support for local models via Ollama.',
+            '**Cursor is a VS Code fork optimized for AI-assisted coding.** It has built-in support for local models via Ollama.',
           ],
           codeBlock: '# 1. Download Cursor from cursor.sh\n# 2. Make sure Ollama is running\nollama serve\n\n# 3. Open Cursor Settings (Cmd/Ctrl + ,)\n# 4. Search "Model" and set:\n#    - Model Provider: "Ollama"\n#    - Model: "qwen2.5-coder:7b" (or your choice)\n#    - API Base: "http://localhost:11434"\n\n# 5. Type code and press Tab for inline completions\n# 6. Ctrl+K for multi-line completions',
           codeLanguage: 'bash',
@@ -29612,7 +29612,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         performance: {
           title: 'What Latency and VRAM Should You Expect?',
           content: [
-            'Completion latency (time to first token) is critical for IDE experience. As of April 2026, here are typical numbers:',
+            '**Completion latency (time to first token) is critical for IDE experience.** As of April 2026, here are typical numbers:',
           ],
           rows: [
             { 'Hardware': 'RTX 4090 GPU', 'Model': 'Qwen2.5-Coder 7B', 'Latency': '0.3–0.5 seconds', 'Throughput': '150 tokens/sec' },
@@ -29830,7 +29830,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cursor: {
           title: 'Wie verwenden Sie lokale Modelle in Cursor?',
           content: [
-            'Cursor ist ein VS Code-Fork, optimiert für KI-gestützte Programmierung. Es hat eingebaute Unterstützung für lokale Modelle über Ollama.',
+            '**Cursor ist ein VS Code-Fork, optimiert für KI-gestützte Programmierung.** Es hat eingebaute Unterstützung für lokale Modelle über Ollama.',
           ],
           codeBlock: '# 1. Laden Sie Cursor von cursor.sh herunter\n# 2. Stellen Sie sicher, dass Ollama läuft\nollama serve\n\n# 3. Öffnen Sie Cursor-Einstellungen (Cmd/Strg + ,)\n# 4. Suchen Sie nach "Model" und stellen Sie ein:\n#    - Model Provider: "Ollama"\n#    - Model: "qwen2.5-coder:7b" (oder Ihre Wahl)\n#    - API Base: "http://localhost:11434"\n\n# 5. Tippen Sie Code und drücken Sie Tab für Inline-Vervollständigung\n# 6. Strg+K für mehrzeilige Vervollständigung',
           codeLanguage: 'bash',
@@ -29852,7 +29852,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         performance: {
           title: 'Welche Latenz und welchen VRAM sollten Sie erwarten?',
           content: [
-            'Vervollständigungslatenz (Zeit bis zum ersten Token) ist kritisch für die IDE-Erfahrung. Stand April 2026 sind hier typische Zahlen:',
+            '**Vervollständigungslatenz (Zeit bis zum ersten Token) ist kritisch für die IDE-Erfahrung.** Stand April 2026 sind hier typische Zahlen:',
             '⚠️ **Latenz-Realitätsprüfung**: Lokale Vervollständigungen sind 2–10× langsamer als Cloud. Verwenden Sie lokal für private Arbeiten; verwenden Sie Cloud (Copilot, Claude) für zeitkritische Programmierung.',
             '💡 **Performance-Tuning**: Reduzieren Sie `contextLength` von 2048 auf 1024 Tokens, um die Latenz zu halbieren. Kompromiss: weniger Codezeilen im Kontext für Vorschläge.',
           ],
@@ -29868,7 +29868,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         advanced: {
           title: 'Wie konfigurieren Sie Code-Vervollständigungen für Performance?',
           content: [
-            'Feinabstimmung der Erfahrung mit diesen Einstellungen:',
+            '**Feinabstimmung der Erfahrung mit diesen Einstellungen:**',
             '⚠️ **Warnung**: Bei 8GB-Maschinen mit 13B-Modellen können Vervollständigungen 5–10 Sekunden dauern, wodurch die IDE träge wirkt. Bleiben Sie mit 7B-Modellen für flüssige Performance.',
             '💡 **Pro-Tipp**: Erhöhen Sie `debounceWaitMs` auf 400–500 ms, um Flimmern zu reduzieren und unvollständige Vorschläge zu vermeiden.',
           ],
@@ -30005,7 +30005,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cursor: {
           title: 'Comment utiliser des modèles locaux dans Cursor ?',
           content: [
-            'Cursor est un fork VS Code optimisé pour le codage assisté par IA. Il dispose du support intégré des modèles locaux via Ollama.',
+            '**Cursor est un fork VS Code optimisé pour le codage assisté par IA.** Il dispose du support intégré des modèles locaux via Ollama.',
           ],
           codeBlock: '# 1. Téléchargez Cursor depuis cursor.sh\n# 2. Assurez-vous qu\'Ollama fonctionne\nollama serve\n\n# 3. Ouvrez les paramètres de Cursor (Cmd/Ctrl + ,)\n# 4. Recherchez "Model" et définissez :\n#    - Model Provider: "Ollama"\n#    - Model: "qwen2.5-coder:7b" (ou votre choix)\n#    - API Base: "http://localhost:11434"\n\n# 5. Tapez du code et appuyez sur Tab pour les complétions inline\n# 6. Ctrl+K pour les complétions multiligne',
           codeLanguage: 'bash',
@@ -30027,7 +30027,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         performance: {
           title: 'Quelle latence et quelle RAM devez-vous attendre ?',
           content: [
-            'La latence de complétude (temps jusqu\'au premier jeton) est critique pour l\'expérience de l\'IDE. À partir d\'avril 2026, voici les chiffres typiques :',
+            '**La latence de complétude (temps jusqu\'au premier jeton) est critique pour l\'expérience de l\'IDE.** À partir d\'avril 2026, voici les chiffres typiques :',
             '⚠️ **Vérification de la réalité de la latence** : Les complétions locales sont 2–10× plus lentes que le cloud. Utilisez le local pour le travail privé ; utilisez le cloud (Copilot, Claude) pour le codage sensible au temps.',
             '💡 **Optimisation des performances** : Réduisez `contextLength` de 2048 à 1024 jetons pour réduire la latence de moitié. Compromis : moins de lignes de code dans le contexte pour les suggestions.',
           ],
@@ -30043,7 +30043,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         advanced: {
           title: 'Comment configurez-vous les complétions de code pour les performances ?',
           content: [
-            'Affinez l\'expérience avec ces paramètres :',
+            '**Affinez l\'expérience avec ces paramètres :**',
             '⚠️ **Avertissement** : Sur les machines 8Go avec des modèles 13B, les complétions peuvent prendre 5–10 secondes, ce qui rend l\'IDE peu réactif. Restez avec les modèles 7B pour une performance fluide.',
             '💡 **Conseil pro** : Augmentez `debounceWaitMs` à 400–500 ms pour réduire le scintillement et éviter d\'afficher des suggestions incomplètes.',
           ],
@@ -30179,7 +30179,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cursor: {
           title: 'Cursorでローカルモデルを使用するにはどうすればよいですか？',
           content: [
-            'CursorはAIアシスト型コーディング向けに最適化されたVS Codeフォークです。Ollamaを介したローカルモデルのビルトインサポートを備えています。',
+            '**CursorはAIアシスト型コーディング向けに最適化されたVS Codeフォークです。** Ollamaを介したローカルモデルのビルトインサポートを備えています。',
           ],
           codeBlock: '# 1. cursor.shからCursorダウンロード\n# 2. Ollamaが実行されていることを確認\nollama serve\n\n# 3. Cursor設定を開く（Cmd/Ctrl + ,）\n# 4. 「Model」を検索して設定：\n#    - Model Provider: \"Ollama\"\n#    - Model: \"qwen2.5-coder:7b\" （または選択）\n#    - API Base: \"http://localhost:11434\"\n\n# 5. コード入力し、インライン補完にTab\n# 6. 複数行補完にCtrl+K',
           codeLanguage: 'bash',
@@ -30201,7 +30201,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         performance: {
           title: 'どのレイテンシとVRAMを期待すべきですか？',
           content: [
-            '補完レイテンシ（最初のトークンまでの時間）はIDE体験に不可欠です。2026年4月現在、ここに典型的な数値があります：',
+            '**補完レイテンシ（最初のトークンまでの時間）はIDE体験に不可欠です。** 2026年4月現在、ここに典型的な数値があります：',
             '⚠️ **レイテンシ現実チェック**：ローカル補完はクラウドより2〜10倍遅い。プライベート作業にはローカルを使用し、時間に敏感なコーディングにはクラウド（Copilot、Claude）を使用。',
             '💡 **パフォーマンスチューニング**：`contextLength`を2048から1024トークンに減らしてレイテンシを半分にします。トレード：提案のコンテキストコード行が少なくなる。',
           ],
@@ -30353,7 +30353,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cursor: {
           title: '如何在Cursor中使用本地模型？',
           content: [
-            'Cursor是针对AI辅助编程优化的VS Code分支。它具有通过Ollama的本地模型的内置支持。',
+            '**Cursor是针对AI辅助编程优化的VS Code分支。** 它具有通过Ollama的本地模型的内置支持。',
           ],
           codeBlock: '# 1. 从cursor.sh下载Cursor\n# 2. 确保Ollama正在运行\nollama serve\n\n# 3. 打开Cursor设置（Cmd/Ctrl + ,）\n# 4. 搜索"Model"并设置：\n#    - Model Provider: "Ollama"\n#    - Model: "qwen2.5-coder:7b" （或您的选择）\n#    - API Base: "http://localhost:11434"\n\n# 5. 键入代码并按Tab进行内联补全\n# 6. Ctrl+K进行多行补全',
           codeLanguage: 'bash',
@@ -30375,7 +30375,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         performance: {
           title: '您应该期望什么样的延迟和显存？',
           content: [
-            '补全延迟（到第一个token的时间）对IDE体验至关重要。截至2026年4月，以下是典型数字：',
+            '**补全延迟（到第一个token的时间）对IDE体验至关重要。** 截至2026年4月，以下是典型数字：',
             '⚠️ **延迟现实检查**：本地补全比云慢2-10倍。将本地用于私人工作；将云（Copilot、Claude）用于时间敏感编码。',
             '💡 **性能调优**：将`contextLength`从2048减少到1024个token以将延迟减半。权衡：建议的代码上下文行更少。',
           ],
@@ -30529,7 +30529,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         whatIsHeadless: {
           title: 'What Does Headless Mean?',
           content: [
-            'Headless means the software runs as a service without a graphical user interface. You interact via API calls (REST, gRPC) instead of clicking buttons.',
+            '**Headless means the software runs as a service without a graphical user interface.** You interact via API calls (REST, gRPC) instead of clicking buttons.',
             'Advantages: lighter resource usage (no UI overhead), easier to automate, suitable for servers, easier to scale.',
             'Disadvantages: no visual feedback, requires API knowledge, harder to debug without logs.',
           ],
@@ -30549,7 +30549,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         production: {
           title: 'How to Deploy for Production',
           content: [
-            '1. **Use vLLM** for high throughput (50+ concurrent users).',
+            '**1. **Use vLLM** for high throughput (50+ concurrent users).**',
             '2. **Use Ollama** for simplicity (single-user or small teams).',
             '3. **Add nginx reverse proxy** for load balancing and authentication.',
             '4. **Monitor GPU memory** — models should not exceed 80% VRAM.',
@@ -30562,7 +30562,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         monitoring: {
           title: 'How to Monitor Headless Deployments',
           content: [
-            'Monitor GPU memory, request latency, and error rates:',
+            '**Monitor GPU memory, request latency, and error rates:**',
           ],
           codeBlock: '# Monitor GPU usage (nvidia-smi)\nwatch nvidia-smi  # Updates every 2 seconds\n\n# Monitor request latency\n# Add logging to your client code\nimport time\nstart = time.time()\nresponse = client.chat.completions.create(...)\nlatency = time.time() - start\nprint(f"Request took {latency:.2f} seconds")\n\n# Monitor vLLM logs\ndocker logs -f <container_id>\n\n# Check error rates\n# Parse logs for errors or use a monitoring tool (Prometheus + Grafana)',
           codeLanguage: 'python',
@@ -31203,7 +31203,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         vramMath: {
           title: 'Wie berechnen Sie VRAM-Anforderungen?',
           content: [
-            'VRAM-Anforderungen hängen von drei Faktoren ab: Modellgröße (Parameter), Quantisierung (Bits pro Gewicht) und Inferenzmodus.',
+            '**VRAM-Anforderungen hängen von drei Faktoren ab: Modellgröße (Parameter), Quantisierung (Bits pro Gewicht) und Inferenzmodus.**',
             '**Formel:**',
             '```\nVRAM (GB) = (Modellgröße × Quantisierungsbits) ÷ 8\n```',
             '**Quantisierungswerte:** FP16 = 16 bits, Q8 = 8 bits, Q5 = 5 bits, Q4 = 4 bits.',
@@ -31234,7 +31234,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cpuRam: {
           title: 'Welche CPU und RAM benötigen Sie?',
           content: [
-            'Mit einer GPU sind CPU und RAM sekundär. Die GPU führt die schwere Arbeit durch; CPU/RAM verarbeiten Kontextvorbereitung.',
+            '**Mit einer GPU sind CPU und RAM sekundär.** Die GPU führt die schwere Arbeit durch; CPU/RAM verarbeiten Kontextvorbereitung.',
             '**Mindest-CPU**: 8-Core-Prozessor (Intel i7 12. Gen, AMD Ryzen 5 5600X oder neuer). Ältere CPUs addieren 20%+ Latenz.',
             '**RAM**: Mindestens 16 GB (mit GPU). Ohne GPU sollten 32+ GB empfohlen werden. RAM begrenzt nicht direkt die Modellgröße, wenn GPU vorhanden ist.',
             '**Speicher**: 500 GB SSD für Modelldateien und Betriebssystem. M.2 NVMe wird bevorzugt (schnelleres Laden von Modellen).',
@@ -31243,7 +31243,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         storage: {
           title: 'Wie viel Speicher benötigen Sie?',
           content: [
-            'Modelldateien sind groß. Ein 7B-Modell bei 4-Bit-Quantisierung ist 4–5 GB. Planen Sie entsprechend:',
+            '**Modelldateien sind groß.** Ein 7B-Modell bei 4-Bit-Quantisierung ist 4–5 GB. Planen Sie entsprechend:',
           ],
           items: [
             '500 GB SSD: Betriebssystem + 1–2 kleine Modelle (3B, 7B)',
@@ -31267,7 +31267,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         mac: {
           title: 'Mac-Hardware für lokale LLMs',
           content: [
-            'Apple Silicon (M-Serie) ist überraschend gut für lokale LLMs. M3/M4 Max und Pro handhaben 7–13B Modelle gut.',
+            '**Apple Silicon (M-Serie) ist überraschend gut für lokale LLMs.** M3/M4 Max und Pro handhaben 7–13B Modelle gut.',
           ],
           rows: [
             { 'Mac': 'M3 MacBook Pro 16"', 'GPU-Speicher': '18 GB unified', 'Best für': '7B Modelle (schnell)', 'Beschränkung': 'Kann 13B langsam ausführen' },
@@ -31281,7 +31281,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         serverVsConsumer: {
           title: 'Server-Hardware vs. Consumer-Hardware',
           content: [
-            'Für die Produktionsbereitstellung wird Server-Hardware empfohlen:',
+            '**Für die Produktionsbereitstellung wird Server-Hardware empfohlen:**',
           ],
           items: [
             '**Consumer (RTX 4090)**: ~1800 €, 24 GB VRAM, Einzelbenutzer, anfällig für Drosselung bei anhaltender Last.',
@@ -31457,7 +31457,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         vramMath: {
           title: 'Comment calculer les exigences VRAM?',
           content: [
-            'Les exigences VRAM dépendent de trois facteurs: taille du modèle (paramètres), quantisation (bits par poids) et mode d\'inférence.',
+            '**Les exigences VRAM dépendent de trois facteurs: taille du modèle (paramètres), quantisation (bits par poids) et mode d\'inférence.**',
             '**Formule:**',
             '```\nVRAM (GB) = (Taille modèle × Bits quantisation) ÷ 8\n```',
             '**Valeurs quantisation:** FP16 = 16 bits, Q8 = 8 bits, Q5 = 5 bits, Q4 = 4 bits.',
@@ -31488,7 +31488,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cpuRam: {
           title: 'Quel CPU et RAM faut-il?',
           content: [
-            'Avec GPU, CPU et RAM sont secondaires. Le GPU fait le gros du travail; CPU/RAM gèrent la préparation du contexte.',
+            '**Avec GPU, CPU et RAM sont secondaires.** Le GPU fait le gros du travail; CPU/RAM gèrent la préparation du contexte.',
             '**CPU minimum**: processeur 8-core (Intel i7 12ème gén, AMD Ryzen 5 5600X ou plus récent). Les anciens CPU ajoutent 20%+ de latence.',
             '**RAM**: 16 GB minimum (avec GPU). Sans GPU, 32+ GB sont recommandés. La RAM ne limite pas directement la taille du modèle si GPU est présent.',
             '**Stockage**: 500 GB SSD pour fichiers modèles et système d\'exploitation. M.2 NVMe est préféré (chargement modèles plus rapide).',
@@ -31497,7 +31497,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         storage: {
           title: 'Quel stockage faut-il?',
           content: [
-            'Les fichiers modèles sont volumineux. Un modèle 7B à 4 bits quantisation est 4–5 GB. Planifiez en conséquence:',
+            '**Les fichiers modèles sont volumineux.** Un modèle 7B à 4 bits quantisation est 4–5 GB. Planifiez en conséquence:',
           ],
           items: [
             '500 GB SSD: OS + 1–2 petits modèles (3B, 7B)',
@@ -31521,7 +31521,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         mac: {
           title: 'Matériel Mac pour local LLMs',
           content: [
-            'Apple Silicon (M-série) est surprenamment bon pour local LLMs. M3/M4 Max et Pro gèrent bien les modèles 7–13B.',
+            '**Apple Silicon (M-série) est surprenamment bon pour local LLMs.** M3/M4 Max et Pro gèrent bien les modèles 7–13B.',
           ],
           rows: [
             { 'Mac': 'M3 MacBook Pro 16"', 'Mémoire GPU': '18 GB unified', 'Meilleur pour': 'Modèles 7B (rapide)', 'Limitation': 'Peut exécuter 13B lentement' },
@@ -31535,7 +31535,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         serverVsConsumer: {
           title: 'Matériel serveur vs. matériel consommateur',
           content: [
-            'Pour déploiement production, matériel serveur recommandé:',
+            '**Pour déploiement production, matériel serveur recommandé:**',
           ],
           items: [
             '**Consommateur (RTX 4090)**: ~1800 €, 24 GB VRAM, mono-utilisateur, prone à l\'étranglement thermique sous charge soutenue.',
@@ -31711,7 +31711,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         vramMath: {
           title: 'VRAM要件をどのように計算しますか?',
           content: [
-            'VRAM要件は3つの要因に依存します: モデルサイズ (パラメータ)、量子化 (ウェイトごとのビット数)、推論モード。',
+            '**VRAM要件は3つの要因に依存します: モデルサイズ (パラメータ)、量子化 (ウェイトごとのビット数)、推論モード。**',
             '**公式:**',
             '```\nVRAM (GB) = (モデルサイズ × 量子化ビット) ÷ 8\n```',
             '**量子化値:** FP16 = 16 ビット、Q8 = 8 ビット、Q5 = 5 ビット、Q4 = 4 ビット。',
@@ -31742,7 +31742,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cpuRam: {
           title: 'どのCPUとRAMが必要ですか?',
           content: [
-            'GPUがあれば、CPUとRAMは二次的です。GPUが主要な計算を行い、CPU/RAMがコンテキスト準備を処理します。',
+            '**GPUがあれば、CPUとRAMは二次的です。** GPUが主要な計算を行い、CPU/RAMがコンテキスト準備を処理します。',
             '**最小CPU**: 8コアプロセッサ (Intel i7 12世代、AMD Ryzen 5 5600X、またはそれ以降)。古いCPUは20%+のレイテンシを追加します。',
             '**RAM**: 16 GB最小 (GPUを使用する場合)。GPUなしで実行する場合、32+ GB が推奨されます。RAMはGPUが存在する場合、モデルサイズを直接制限しません。',
             '**ストレージ**: モデルファイルとOSの場合は500 GB SSD。M.2 NVMe が推奨されます (モデル読み込みが高速)。',
@@ -31751,7 +31751,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         storage: {
           title: 'どの程度のストレージが必要ですか?',
           content: [
-            'モデルファイルは大きいです。4ビット量子化での7Bモデルは4–5 GBです。それに応じて計画してください:',
+            '**モデルファイルは大きいです。** 4ビット量子化での7Bモデルは4–5 GBです。それに応じて計画してください:',
           ],
           items: [
             '500 GB SSD: OS + 1–2個の小さいモデル (3B、7B)',
@@ -31775,7 +31775,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         mac: {
           title: 'ローカルLLM用Macハードウェア',
           content: [
-            'Apple Silicon (M シリーズ) はローカルLLMに驚くほど適しています。M3/M4 MaxとProは7–13Bモデルをよく処理します。',
+            '**Apple Silicon (M シリーズ) はローカルLLMに驚くほど適しています。** M3/M4 MaxとProは7–13Bモデルをよく処理します。',
           ],
           rows: [
             { 'Mac': 'M3 MacBook Pro 16"', 'GPU メモリ': '18 GB ユニファイド', '最適用途': '7B モデル (高速)', '制限': '13B を低速で実行可能' },
@@ -31789,7 +31789,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         serverVsConsumer: {
           title: 'サーバーハードウェア対コンシューマーハードウェア',
           content: [
-            'プロダクション展開には、サーバーグレードのハードウェアが推奨されます:',
+            '**プロダクション展開には、サーバーグレードのハードウェアが推奨されます:**',
           ],
           items: [
             '**コンシューマー (RTX 4090)**: ~$1800、24 GB VRAM、シングルユーザー、継続的負荷下ではサーマルスロットリングの傾向。',
@@ -31965,7 +31965,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         vramMath: {
           title: '如何计算VRAM要求？',
           content: [
-            'VRAM要求取决于三个因素：模型大小（参数）、量化（每个权重的位数）和推理模式。',
+            '**VRAM要求取决于三个因素：模型大小（参数）、量化（每个权重的位数）和推理模式。**',
             '**公式：**',
             '```\nVRAM (GB) = (模型大小 × 量化位数) ÷ 8\n```',
             '**量化值：** FP16 = 16位、Q8 = 8位、Q5 = 5位、Q4 = 4位。',
@@ -31996,7 +31996,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cpuRam: {
           title: '需要什么CPU和RAM？',
           content: [
-            '使用GPU时，CPU和RAM是次要的。GPU进行繁重计算；CPU/RAM处理上下文准备。',
+            '**使用GPU时，CPU和RAM是次要的。** GPU进行繁重计算；CPU/RAM处理上下文准备。',
             '**最低CPU**：8核处理器 (Intel i7 12代、AMD Ryzen 5 5600X或更新版)。较旧的CPU会增加20%+延迟。',
             '**RAM**：16 GB最低 (使用GPU)。不使用GPU时，建议32+ GB。使用GPU时，RAM不直接限制模型大小。',
             '**存储**：用于模型文件和OS的500 GB SSD。优选M.2 NVMe (更快的模型加载)。',
@@ -32029,7 +32029,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         mac: {
           title: '本地LLM的Mac硬件',
           content: [
-            'Apple Silicon (M系列) 对本地LLM来说令人惊讶地出色。M3/M4 Max和Pro处理7–13B模型效果良好。',
+            '**Apple Silicon (M系列) 对本地LLM来说令人惊讶地出色。** M3/M4 Max和Pro处理7–13B模型效果良好。',
           ],
           rows: [
             { 'Mac': 'M3 MacBook Pro 16"', 'GPU内存': '18 GB unified', '最佳适用': '7B模型 (快速)', '限制': '可缓慢运行13B' },
@@ -32259,7 +32259,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         overhead: {
           title: 'What Hidden VRAM Overhead Should You Account For?',
           content: [
-            'The formula calculates model weights only. Additional VRAM is used by:',
+            '**The formula calculates model weights only.** Additional VRAM is used by:',
           ],
           items: [
             '**Context** (key-value cache): Stores conversation history. A 4k-token context uses ~2–3 GB for 7B models.',
@@ -32272,7 +32272,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         accuracy: {
           title: 'How Accurate Is the Formula?',
           content: [
-            'The formula is accurate within ±10% for most cases. Variations occur from:',
+            '**The formula is accurate within ±10% for most cases.** Variations occur from:',
             '- Different quantization implementations (GGUF vs. safetensors vs. AWQ)',
             '- Model architecture (Transformer vs. non-Transformer)',
             '- Inference engine optimizations (vLLM, llama.cpp, etc.)',
@@ -32362,7 +32362,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         nvidia: {
           title: 'NVIDIA GPU: The Performance King',
           content: [
-            'NVIDIA GPUs (RTX 40/50 series) are the current best for local LLMs. Dominance is due to:',
+            '**NVIDIA GPUs (RTX 40/50 series) are the current best for local LLMs.** Dominance is due to:',
             '- **CUDA ecosystem**: 20+ years of AI-specific optimization.',
             '- **Tensor cores**: Specialized hardware for matrix operations (the core of LLM inference).',
             '- **Memory bandwidth**: 2000+ GB/sec (critical for large models).',
@@ -32373,7 +32373,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cpu: {
           title: 'CPU-Only: When and Why to Avoid',
           content: [
-            'CPUs can run LLMs but are impractical for real-time inference:',
+            '**CPUs can run LLMs but are impractical for real-time inference:**',
             '- **Latency**: 5–10 seconds per response for 7B models. Unusable for chat.',
             '- **Power**: CPUs under full load can draw 200W+ (inefficient for inference).',
             '- **Context**: CPUs scale poorly with long contexts (key-value cache).',
@@ -32383,7 +32383,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         appleSilicon: {
           title: 'Apple Silicon: Good for Mac, but GPU Wins Overall',
           content: [
-            'Apple M-series (M3, M4) are surprisingly capable for a CPU:',
+            '**Apple M-series (M3, M4) are surprisingly capable for a CPU:**',
             '- **Unified memory**: CPU and GPU share memory, eliminating transfers.',
             '- **Per-watt efficiency**: M3 Max handles 7B models decently (~25 tok/sec) at low power (25W for model inference).',
             '- **Integration**: Native to macOS, no driver issues.',
@@ -32394,7 +32394,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         costPerToken: {
           title: 'Cost Per Token: True Cost Analysis',
           content: [
-            'Consider the total cost of inference (hardware amortized over time):',
+            '**Consider the total cost of inference (hardware amortized over time):**',
           ],
           rows: [
             { 'Hardware': 'RTX 4090 (3-year life)', 'Cost': '$1800', 'Tokens/Sec': '150', 'Tokens/Year': '4.7B', 'Cost/Token': '$0.38 ÷ B tokens' },
@@ -32482,7 +32482,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         quantization: {
           title: 'Quantization: The Primary VRAM Reducer',
           content: [
-            'Quantization reduces the precision of model weights from floating-point 16-bit (FP16) to lower bits (Q8, Q5, Q4, Q3).',
+            '**Quantization reduces the precision of model weights from floating-point 16-bit (FP16) to lower bits (Q8, Q5, Q4, Q3).**',
           ],
           rows: [
             { 'Method': 'No quantization (FP16)', 'File Size': '14 GB (7B)', 'VRAM': '14 GB', 'Quality': '100%', 'Speed': 'Baseline' },
@@ -32496,7 +32496,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         offloading: {
           title: 'Offloading: CPU RAM as Spillover',
           content: [
-            'When VRAM is full, models can offload (move) layers to system RAM. Offloading trades speed for capacity.',
+            '**When VRAM is full, models can offload (move) layers to system RAM.** Offloading trades speed for capacity.',
             'Scenario: Running 70B Q4 model on RTX 4090 (24 GB). Model needs 35 GB. With offloading, run at ~5–10 tokens/sec (80% to RAM).',
             'Offloading is a last resort — it makes inference impractical. Use only for offline batch processing or experimentation.',
           ],
@@ -32506,7 +32506,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         layerSplitting: {
           title: 'Layer Splitting: Distribute Across Multiple GPUs',
           content: [
-            'Modern inference engines (vLLM, llama.cpp) can split a model across multiple GPUs automatically.',
+            '**Modern inference engines (vLLM, llama.cpp) can split a model across multiple GPUs automatically.**',
             'Example: 70B model with 2× RTX 4090:',
             '- Without splitting: Impossible (needs 40+ GB VRAM in one GPU).',
             '- With splitting: Half the model weights on each GPU. Inference speed: ~100 tokens/sec (communication overhead is minimal).',
@@ -32518,7 +32518,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         hybrid: {
           title: 'Hybrid Approach: Combining Techniques',
           content: [
-            'Best results come from combining all three:',
+            '**Best results come from combining all three:**',
             '**Scenario 1: 70B on single RTX 4090 (24 GB)**',
             '- Quantize to Q4 (35 GB → 18 GB)',
             '- Use offloading for remaining 6 GB (to system RAM)',
@@ -32611,7 +32611,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         gpuMemory: {
           title: 'GPU Memory Utilization: The Hidden Speed Dial',
           content: [
-            'By default, most tools use 70–80% of GPU VRAM. Increasing to 90%+ improves speed by 15–20%:',
+            '**By default, most tools use 70–80% of GPU VRAM.** Increasing to 90%+ improves speed by 15–20%:',
           ],
           codeBlock: '# vLLM: increase GPU memory utilization\nvllm serve meta-llama/Llama-2-7b-hf \\\n  --gpu-memory-utilization 0.95\n\n# Ollama: environment variable\nexport OLLAMA_GPU_THRESHOLD=0.95  # Use 95% of GPU\nollama run llama3.2:3b\n\n# LM Studio: Settings → GPU acceleration slider (move to 100%)',
           codeLanguage: 'bash',
@@ -32619,7 +32619,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         batchSize: {
           title: 'Batch Size: The Multiplier for Throughput',
           content: [
-            'For batch processing (multiple prompts), increasing batch size dramatically improves throughput.',
+            '**For batch processing (multiple prompts), increasing batch size dramatically improves throughput.**',
             'Single request = limited pipeline utilization. Batch 32 requests = 2–4× throughput.',
             'Trade-off: Higher latency per individual request (they wait for batch to complete).',
           ],
@@ -32643,7 +32643,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         quantizationSpeed: {
           title: 'Quantization Impact on Speed',
           content: [
-            'Q4 and Q5 are approximately the same speed as FP16 on modern GPUs. Older GPUs may benefit from quantization speed-ups.',
+            '**Q4 and Q5 are approximately the same speed as FP16 on modern GPUs.** Older GPUs may benefit from quantization speed-ups.',
             'Benefits of quantization for speed:',
             '- Smaller model file = faster loading',
             '- Reduced memory bandwidth = slightly faster (10–15%) on some hardware',
@@ -32653,7 +32653,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         practicalGains: {
           title: 'Realistic Speed Improvements With Tuning',
           content: [
-            'Example: Optimizing a 7B model on RTX 4090:',
+            '**Example: Optimizing a 7B model on RTX 4090:**',
           ],
           rows: [
             { 'Baseline': 'Default Ollama', 'Speed': '120 tokens/sec', 'Optimization': 'N/A' },
@@ -32777,7 +32777,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         historical: {
           title: 'Historical Comparison: How GPU Power Has Grown',
           content: [
-            'Context: How fast GPU performance has advanced:',
+            '**Context: How fast GPU performance has advanced:**',
           ],
           rows: [
             { 'GPU': 'RTX 2080 (2019)', 'VRAM': '8 GB', 'Speed (7B)': '10 tok/sec', 'Price': '$700' },
@@ -32859,7 +32859,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         limits: {
           title: 'The Theoretical VRAM Math',
           content: [
-            'Llama 3.1 70B at various quantizations:',
+            '**Llama 3.1 70B at various quantizations:**',
           ],
           rows: [
             { 'Quantization': 'FP16 (baseline)', 'Size': '140 GB', 'Fits 24GB?': 'No' },
@@ -32874,7 +32874,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         quantization: {
           title: 'Aggressive Quantization: The Primary Tool',
           content: [
-            'To fit 70B in 24GB, you must use Q2 or Q3 quantization.',
+            '**To fit 70B in 24GB, you must use Q2 or Q3 quantization.**',
             '- **Q3**: 26 GB (still 2 GB over). Can offload 2 GB to RAM. Slightly better quality than Q2.',
             '- **Q2**: 17.5 GB (fits!). 70% quality vs FP16. Noticeable degradation but usable.',
             'Download the quantized model: `ollama pull llama3.1:70b-q2` (if available) or use conversion tools like llama.cpp.',
@@ -32883,7 +32883,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         offloading: {
           title: 'Offloading to System RAM',
           content: [
-            'If using Q4 (35 GB) on 24GB GPU, you can offload the remaining 11 GB to system RAM. Speed penalty is severe (10× slower).',
+            '**If using Q4 (35 GB) on 24GB GPU, you can offload the remaining 11 GB to system RAM.** Speed penalty is severe (10× slower).',
             'Only practical for batch processing where you can wait hours for results.',
           ],
         },
@@ -32901,7 +32901,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         performance: {
           title: 'Realistic Performance Expectations',
           content: [
-            'Running 70B on 24GB VRAM is slow:',
+            '**Running 70B on 24GB VRAM is slow:**',
           ],
           rows: [
             { 'Quantization': 'Q2 (24GB VRAM)', 'Speed': '5–8 tok/sec', 'Latency': '2–4 sec per token', 'Use Case': 'Batch processing only' },
@@ -33001,7 +33001,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         systemPower: {
           title: 'Total System Power Requirements',
           content: [
-            'The GPU is not the only power consumer. Factor in CPU, RAM, storage, and motherboard:',
+            '**The GPU is not the only power consumer.** Factor in CPU, RAM, storage, and motherboard:',
           ],
           rows: [
             { 'Component': 'GPU (RTX 4090)', 'Power': '575W', 'Notes': 'Peaks at 100% utilization' },
@@ -33015,7 +33015,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         electricityCost: {
           title: 'Cost of Electricity to Run 24/7',
           content: [
-            'Assuming $0.12/kWh (US average):',
+            '**Assuming $0.12/kWh (US average):**',
           ],
           rows: [
             { 'GPU': 'RTX 4090 (600W avg)', 'Daily Cost': '$1.73', 'Monthly': '$52', 'Annual': '$625' },
@@ -33028,7 +33028,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         cooling: {
           title: 'Cooling Requirements',
           content: [
-            'Proper cooling is critical for GPU lifespan (5+ years) and preventing thermal throttling.',
+            '**Proper cooling is critical for GPU lifespan (5+ years) and preventing thermal throttling.**',
             '**Adequate case airflow:** Front fans pull cool air in, rear/top fans exhaust hot air. RTX 4090 needs large case with 3+ fans.',
             '**Ambient temperature:** Ideally 18–24°C. In hot climates (30°C+), cooling becomes critical.',
             '**Thermal paste:** Replace every 2–3 years for optimal heat transfer (if applicable).',
@@ -33105,7 +33105,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         splitting: {
           title: 'How Layer Splitting and Tensor Parallelism Work',
           content: [
-            'A 70B Transformer model has 80 layers. With layer splitting, Ollama might place:',
+            '**A 70B Transformer model has 80 layers.** With layer splitting, Ollama might place:',
             '- GPU 1: Layers 1–40',
             '- GPU 2: Layers 41–80',
             'When a token is generated, it flows through GPU 1, then GPU 2, then back for next token. Minimal communication overhead.',
@@ -33120,7 +33120,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ollamaSetup: {
           title: 'Multi-GPU Setup With Ollama',
           content: [
-            'Ollama auto-detects multiple GPUs and splits automatically:',
+            '**Ollama auto-detects multiple GPUs and splits automatically:**',
             '1. Run Ollama normally: `ollama serve`',
             '2. Ollama detects 2+ GPUs and automatically splits models',
             '3. No configuration needed — it just works.',
@@ -33224,7 +33224,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         thermals: {
           title: 'Thermal Constraints on Laptops',
           content: [
-            'Laptops have limited cooling. CPU + GPU at full load = high temperature, throttling.',
+            '**Laptops have limited cooling.** CPU + GPU at full load = high temperature, throttling.',
             'MacBook Pro M3 Max: Thermal throttles after 15–20 minutes of sustained inference.',
             'Gaming laptops: Better cooling, but still throttle after 30–45 minutes.',
             'Solution: Use laptop for short bursts (chat, experimentation), not 24/7 services.',
@@ -33346,7 +33346,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         performance: {
           title: 'Realistic Mobile Performance',
           content: [
-            'Mobile is slow compared to desktop:',
+            '**Mobile is slow compared to desktop:**',
           ],
           rows: [
             { 'Device': 'Desktop RTX 4090', 'Model': 'Llama 7B', 'Speed': '150 tok/sec' },
@@ -33444,7 +33444,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         chunking: {
           title: 'What Is the Optimal Chunking Strategy?',
           content: [
-            'Chunking strategy determines retrieval quality. Bad chunking = relevant information split across chunks, retrieval fails.',
+            '**Chunking strategy determines retrieval quality.** Bad chunking = relevant information split across chunks, retrieval fails.',
             '**Semantic chunking (recommended):** Split by sentences or paragraphs, preserving meaning. Example: each paragraph = 1 chunk.',
             '**Fixed-size chunking:** 500 tokens per chunk, 20% overlap. Simple but may split sentences.',
             '**Recursive chunking:** Split by paragraphs first, then by sentences if too large. Preserves hierarchy.',
@@ -33490,7 +33490,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         evaluation: {
           title: 'How Do You Evaluate RAG Quality?',
           content: [
-            'RAG quality has two dimensions: (1) retrieval quality (did we get relevant chunks?), and (2) generation quality (did the LLM answer well?).',
+            '**RAG quality has two dimensions: (1) retrieval quality (did we get relevant chunks?), and (2) generation quality (did the LLM answer well?).**',
             '**Retrieval evaluation:** Create test queries with known correct documents. Measure precision (how many retrieved are relevant?) and recall (did we get all relevant documents?).',
             '**Generation evaluation:** Run LLM on retrieved chunks, manually score answers (0–5 scale) for accuracy and completeness.',
             'As of April 2026, automated evaluation tools (like Ragas) can measure retrieval and generation metrics automatically.',
@@ -33610,7 +33610,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         whatIsLora: {
           title: 'How Does LoRA Work?',
           content: [
-            'LoRA adds small "adapter" matrices alongside the original model weights. During training, only the adapters are updated. Original weights freeze.',
+            '**LoRA adds small "adapter" matrices alongside the original model weights.** During training, only the adapters are updated. Original weights freeze.',
             'Example: A 13B model has 13 billion weights. LoRA adds only 50 million trainable parameters (~0.4% of original). Training is 100× faster.',
             'At inference, the adapter output is merged with the main model output via matrix multiplication. Minimal speed penalty (~5%).',
             'Result: A domain-specific model that performs better on your tasks, using only 8 GB VRAM instead of 26 GB.',
@@ -33632,7 +33632,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         trainingData: {
           title: 'How Do You Prepare Training Data?',
           content: [
-            'Quality training data determines fine-tuning success. Poor data = poor model.',
+            '**Quality training data determines fine-tuning success.** Poor data = poor model.',
             '**Minimum:** 500 examples. Each example = input + expected output.',
             '**Optimal:** 1000–5000 examples. More data = better accuracy.',
             '**Format:** JSON or JSONL. Each line = one training example.',
@@ -33876,7 +33876,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         whatIsAgent: {
           title: 'How Does an AI Agent Work?',
           content: [
-            'An agent follows this loop: (1) observe state/context, (2) LLM reasons about best action, (3) execute action (tool call), (4) observe result, (5) repeat until done.',
+            '**An agent follows this loop: (1) observe state/context, (2) LLM reasons about best action, (3) execute action (tool call), (4) observe result, (5) repeat until done.**',
             'Example: Research agent given task "Compare Llama 3.2 vs Qwen 2.5 on coding tasks".',
             '- Observation: Task received.',
             '- Reasoning: Need to find benchmarks, search for HumanEval scores.',
@@ -33901,7 +33901,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         langgraphArch: {
           title: 'LangGraph Architecture',
           content: [
-            'LangGraph defines agents as directed acyclic graphs (DAGs) with nodes (states) and edges (transitions).',
+            '**LangGraph defines agents as directed acyclic graphs (DAGs) with nodes (states) and edges (transitions).**',
             '- **State:** Information agent holds (context, observations, decisions).',
             '- **Nodes:** Functions that process state (LLM reasoning, tool execution).',
             '- **Edges:** Transitions between nodes (conditional based on LLM output).',
@@ -33925,7 +33925,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         reasoning: {
           title: 'How Do Agents Reason and Plan?',
           content: [
-            'Agent reasoning depends on the LLM model size and prompt quality.',
+            '**Agent reasoning depends on the LLM model size and prompt quality.**',
             '- **Small models (3–7B):** Limited reasoning. Work best with deterministic tasks (tool lookup, classification).',
             '- **Medium models (13–30B):** Decent reasoning. Can handle 2–3 step reasoning chains.',
             '- **Large models (70B+):** Strong reasoning. Can solve complex problems with multi-step planning.',
@@ -34048,7 +34048,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         chainOfThought: {
           title: 'Chain-of-Thought: Make Models Reason',
           content: [
-            'Chain-of-thought (CoT) prompting asks the LLM to show its reasoning step-by-step before answering.',
+            '**Chain-of-thought (CoT) prompting asks the LLM to show its reasoning step-by-step before answering.**',
             '**Without CoT:** "What is 17 × 24?" → Model answers directly, often wrong.',
             '**With CoT:** "Solve this step-by-step: 17 × 24" → Model shows: 17 × 20 = 340, 17 × 4 = 68, total = 408. More accurate.',
           ],
@@ -34058,7 +34058,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         structuredOutput: {
           title: 'Specifying Structured Output Formats',
           content: [
-            'Local models produce unpredictable outputs unless you specify format explicitly.',
+            '**Local models produce unpredictable outputs unless you specify format explicitly.**',
             '**Example:** "Extract entities from the text" might return narrative text instead of a list.',
             '**Better:** "Extract entities as JSON with keys: person, location, organization".',
           ],
@@ -34068,7 +34068,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         roles: {
           title: 'Role Definition and Persona Prompting',
           content: [
-            'Telling the model to adopt a role improves domain-specific responses.',
+            '**Telling the model to adopt a role improves domain-specific responses.**',
             'Examples:',
             '- "You are a Python expert" → better code explanations',
             '- "You are a medical researcher" → more detailed biomedical responses',
@@ -34078,7 +34078,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         fewShot: {
           title: 'Few-Shot Learning for Consistency',
           content: [
-            'Provide examples (few-shot) to guide the model\'s output style and format.',
+            '**Provide examples (few-shot) to guide the model\'s output style and format.**',
             'Local models benefit from 3–5 examples. Cloud models work with 1–2.',
           ],
           codeBlock: '# Few-shot prompt\nprompt = """\nClassify sentiment. Examples:\n\n"I love this product!" → positive\n"Worst experience ever" → negative\n"It\'s okay, nothing special" → neutral\n\nNow classify: "This is amazing!"\nAnswer: """\n\n# Model learns format and style from examples',
@@ -34174,7 +34174,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         architecture: {
           title: 'On-Premises AI Architecture',
           content: [
-            'Typical deployment: Kubernetes cluster running vLLM inference pods, with Qdrant vector DB for RAG.',
+            '**Typical deployment: Kubernetes cluster running vLLM inference pods, with Qdrant vector DB for RAG.**',
           ],
           codeBlock: '# Example: Kubernetes deployment\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: local-llm-inference\nspec:\n  replicas: 3\n  template:\n    spec:\n      containers:\n      - name: vllm\n        image: vllm/vllm-openai:latest\n        args:\n        - --model meta-llama/Llama-2-13b-hf\n        - --tensor-parallel-size 2\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            nvidia.com/gpu: "2"  # 2 GPUs per pod',
           codeLanguage: 'yaml',
@@ -34281,7 +34281,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         codeGeneration: {
           title: 'Code Generation Workflow',
           content: [
-            'Prompt the model with function signature + docstring, let it generate implementation.',
+            '**Prompt the model with function signature + docstring, let it generate implementation.**',
           ],
           codeBlock: '# Prompt design for code generation\nprompt = """\nImplement the following function:\n\ndef merge_sorted_arrays(arr1: List[int], arr2: List[int]) -> List[int]:\n    \\"\\"\"\n    Merge two sorted arrays into a single sorted array.\n    Args:\n        arr1: First sorted array\n        arr2: Second sorted array\n    Returns:\n        Merged sorted array\n    \\"\\"\"\n    # Implementation:\n"""\n\n# Model outputs implementation\n# Expected: Two-pointer merge algorithm',
           codeLanguage: 'python',
@@ -34289,7 +34289,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         codeReview: {
           title: 'Code Review With Local LLMs',
           content: [
-            'Use local LLMs to review code for bugs, style, performance.',
+            '**Use local LLMs to review code for bugs, style, performance.**',
           ],
           items: [
             'Prompt: "Review this code for bugs, security issues, and performance." + code snippet.',
@@ -34300,7 +34300,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         testGeneration: {
           title: 'Test Generation',
           content: [
-            'Generate unit tests from function implementations.',
+            '**Generate unit tests from function implementations.**',
           ],
           codeBlock: '# Prompt for test generation\nprompt = """\nWrite comprehensive unit tests for this function:\n\n[function code]\n\nGenerate tests covering:\n- Normal cases\n- Edge cases\n- Error cases\n\nUse pytest format:\n\"\"\"\n\n# Model generates test_* functions with assertions',
           codeLanguage: 'python',
@@ -34308,7 +34308,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ideIntegration: {
           title: 'IDE Integration',
           content: [
-            'Integrate via VS Code (Continue.dev extension) or Cursor editor.',
+            '**Integrate via VS Code (Continue.dev extension) or Cursor editor.**',
             'Inline completions: Ctrl+Shift+\\\\ triggers local LLM suggestion.',
             'Context: Editor sends surrounding code for better suggestions.',
           ],
@@ -34557,7 +34557,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         hybrid: {
           title: 'Hybrid Approach',
           content: [
-            'Best practice: Use cloud for complex tasks, local for routine automation.',
+            '**Best practice: Use cloud for complex tasks, local for routine automation.**',
             'Example workflow: Route simple queries to local agent (fast, cheap), complex queries to GPT-4 (accurate, slow).',
             'Tools like PromptQuorum dispatch to both and compare results.',
           ],
@@ -34645,7 +34645,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         pretraining: {
           title: 'Pre-Training: When and Why',
           content: [
-            'Pre-training means learning from raw data (books, documents, code). Only justified if:',
+            '**Pre-training means learning from raw data (books, documents, code).** Only justified if:',
             '1. You have >10 billion tokens of unique, valuable data.',
             '2. Pre-trained models consistently fail on your domain.',
             '3. Budget is >$50k (realistic cost).',
@@ -34656,7 +34656,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         domainAdaptation: {
           title: 'Domain Adaptation Strategies',
           content: [
-            'Without full pre-training, improve model performance on your domain:',
+            '**Without full pre-training, improve model performance on your domain:**',
           ],
           items: [
             '**Continued pre-training:** Take base model, train on your domain data (10B+ tokens). Cheaper than full pre-training.',
@@ -34746,7 +34746,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         smallerModels: {
           title: 'Trend: Smaller Models with Larger Quality',
           content: [
-            'Model quality per parameter is improving. 2B models in 2026 rival 7B models from 2023.',
+            '**Model quality per parameter is improving.** 2B models in 2026 rival 7B models from 2023.',
             'Drivers: better architecture (attention mechanisms), more efficient training (DistilBERT-style), parameter sharing.',
             'Implication: Local LLMs become practical on edge devices and mobile.',
           ],
@@ -34754,7 +34754,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         onDevice: {
           title: 'Trend: On-Device Inference',
           content: [
-            'iPhones (A18) and Android phones (Snapdragon X) can run 1–3B models. By 2027, smartphones will handle 7B models.',
+            '**iPhones (A18) and Android phones (Snapdragon X) can run 1–3B models.** By 2027, smartphones will handle 7B models.',
             'Benefit: Zero latency, full privacy, no internet required.',
             'Challenge: Limited VRAM and battery life.',
           ],
@@ -34762,7 +34762,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         finetuningTools: {
           title: 'Trend: Better Fine-Tuning Tools',
           content: [
-            'Expect: No-code fine-tuning platforms (similar to Hugging Face Hub but easier).',
+            '**Expect: No-code fine-tuning platforms (similar to Hugging Face Hub but easier).**',
             'Expect: Multi-GPU training made trivial (auto-sharding, distributed training out-of-the-box).',
             'Current state (2026): Unsloth and Axolotl require command-line skills. Next generation will be GUI-based.',
           ],
@@ -34770,7 +34770,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         reasoning: {
           title: 'Trend: Reasoning Models',
           content: [
-            'DeepSeek-R1 and OpenAI o1 showed that explicit reasoning improves accuracy. Expect more reasoning-focused models.',
+            '**DeepSeek-R1 and OpenAI o1 showed that explicit reasoning improves accuracy.** Expect more reasoning-focused models.',
             'Challenge: Reasoning models are slower (more tokens for thinking).',
             'Opportunity: Local reasoning models for complex analysis without cloud.',
           ],
@@ -34778,7 +34778,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         adoption: {
           title: 'Enterprise Adoption Outlook',
           content: [
-            'Current (2026): Large enterprises running local LLMs for sensitive data.',
+            '**Current (2026): Large enterprises running local LLMs for sensitive data.**',
             'By 2027: Mid-market adopting local models (cost + privacy).',
             'By 2028: SMBs have affordable on-premises AI (cheaper than API subscriptions).',
             'Long-term: Hybrid approach standard (local for routine, cloud for peak capacity).',
@@ -34859,7 +34859,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         costSavings: {
           title: 'How Much Do Enterprises Save With Local LLMs?',
           content: [
-            'Per-token pricing for cloud APIs accumulates quickly. Local LLMs have one-time hardware investment and ongoing operational costs.',
+            '**Per-token pricing for cloud APIs accumulates quickly.** Local LLMs have one-time hardware investment and ongoing operational costs.',
           ],
           rows: [
             { 'Annual Volume': '100M tokens', 'Cloud (GPT-4)': '$2,000', 'Local (amortized)': '$500', 'Savings': '$1,500' },
@@ -34882,7 +34882,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         dataSovereignty: {
           title: 'Why Do Enterprises Need Data Sovereignty?',
           content: [
-            'Data sovereignty means data stays under the organization\'s physical and legal control. No third-party access, no government subpoena risk.',
+            '**Data sovereignty means data stays under the organization\'s physical and legal control.** No third-party access, no government subpoena risk.',
             '**Sensitive use cases:** Financial models, drug formulations, trade secrets, customer personal information.',
             '**Competitive risk:** If data goes to cloud, competitors (or cloud provider employees) could access it.',
             '**Historical incidents:** Multiple cloud provider breaches (AWS, Azure, Google Cloud) have exposed enterprise data. Local storage eliminates that risk.',
@@ -34891,7 +34891,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         vendorIndependence: {
           title: 'How Do Local LLMs Avoid Vendor Lock-In?',
           content: [
-            'Cloud APIs lock you into vendor pricing and availability. If OpenAI increases prices 10×, you cannot switch without rewriting integrations.',
+            '**Cloud APIs lock you into vendor pricing and availability.** If OpenAI increases prices 10×, you cannot switch without rewriting integrations.',
             'Open-source local LLMs (Meta Llama, Qwen, Mistral) let you:',
           ],
           items: [
@@ -35033,7 +35033,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         whatIsAirGapped: {
           title: 'What Does Air-Gapped Mean?',
           content: [
-            'Air-gapped infrastructure has no network connection to the internet or any external system. All data and computation stays on isolated hardware.',
+            '**Air-gapped infrastructure has no network connection to the internet or any external system.** All data and computation stays on isolated hardware.',
             '**Absolute isolation:** No WiFi, no Ethernet to external networks, no USB connections to internet-connected devices.',
             '**Data never leaves:** Inference happens locally, results stay locally.',
             '**Updates are manual:** Cannot auto-download model updates. Updates require physical media (USB drive, SD card) or internal network transfer.',
@@ -35042,7 +35042,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         architecture: {
           title: 'What Does Typical Air-Gapped Architecture Look Like?',
           content: [
-            'A single machine or small cluster, completely isolated, with restricted physical access.',
+            '**A single machine or small cluster, completely isolated, with restricted physical access.**',
           ],
           numberedItems: [
             '**Dedicated hardware:** Servers used only for LLM inference, nothing else.',
@@ -35057,7 +35057,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         networkIsolation: {
           title: 'How Do You Isolate Networks From External Connections?',
           content: [
-            'Isolation is enforced at multiple levels:',
+            '**Isolation is enforced at multiple levels:**',
           ],
           items: [
             '**Physical:** Separate network hardware (switch, router) for air-gapped infrastructure.',
@@ -35069,7 +35069,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         modelManagement: {
           title: 'How Do You Manage Models in Air-Gapped Environments?',
           content: [
-            'Model updates are manual, requiring physical media transfer or internal secure processes.',
+            '**Model updates are manual, requiring physical media transfer or internal secure processes.**',
           ],
           numberedItems: [
             'Download model on internet-connected machine (separate, non-classified environment).',
@@ -35083,7 +35083,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         updates: {
           title: 'How Do You Handle Updates and Patching?',
           content: [
-            'Security updates and model updates are manual:',
+            '**Security updates and model updates are manual:**',
           ],
           items: [
             '**Model updates:** Follow process above. Schedule updates quarterly or annually.',
@@ -35095,7 +35095,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         security: {
           title: 'How Do You Ensure Security in Air-Gapped Systems?',
           content: [
-            'Air-gapped inherently more secure (no external attacks), but new risks emerge:',
+            '**Air-gapped inherently more secure (no external attacks), but new risks emerge:**',
           ],
           items: [
             '**Insider threats:** Employees with access could copy data via USB. Require two-person integrity.',
@@ -35206,7 +35206,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         gdpr: {
           title: 'GDPR: What Does Compliance Mean for AI?',
           content: [
-            'GDPR (General Data Protection Regulation) applies to any processing of EU residents\' personal data, regardless of where your company is located.',
+            '**GDPR (General Data Protection Regulation) applies to any processing of EU residents\' personal data, regardless of where your company is located.**',
             '**Article 44 (Data Transfers):** Personal data cannot be transferred outside the EU unless specific safeguards apply. Cloud APIs to US servers violate this.',
             '**Article 12-22 (Data Subject Rights):** Individuals can request access, deletion ("right to be forgotten"), or portability of their data. You must respond within 30 days.',
             '**Article 5 (Principles):** Data must be minimized, accurate, and processed lawfully. Purpose limitation: data cannot be used for new purpose without consent.',
@@ -35216,7 +35216,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         hipaa: {
           title: 'How Does HIPAA Protect Patient Privacy?',
           content: [
-            'HIPAA (Health Insurance Portability and Accountability Act) applies to healthcare providers, insurers, and anyone handling Protected Health Information (PHI).',
+            '**HIPAA (Health Insurance Portability and Accountability Act) applies to healthcare providers, insurers, and anyone handling Protected Health Information (PHI).**',
             '**164.306 (Security Rule):** Requires administrative, physical, and technical safeguards.',
             '**Physical:** Facilities must be secure (locked, surveillance).',
             '**Technical:** Encryption, access controls, audit logs.',
@@ -35228,7 +35228,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         soc2: {
           title: 'What Does SOC2 Type II Require?',
           content: [
-            'SOC2 (Service Organization Control) is a compliance certification for organizations processing enterprise data. Type II requires 6+ months of audit evidence.',
+            '**SOC2 (Service Organization Control) is a compliance certification for organizations processing enterprise data.** Type II requires 6+ months of audit evidence.',
             '**Certification auditor reviews:**',
             '- Access controls (who can access systems)',
             '- Encryption (data at rest and in transit)',
@@ -35241,7 +35241,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         euAiAct: {
           title: 'What Does the EU AI Act Require?',
           content: [
-            'The EU AI Act (2024) imposes new requirements on AI systems deployed in the EU, regardless of vendor location.',
+            '**The EU AI Act (2024) imposes new requirements on AI systems deployed in the EU, regardless of vendor location.**',
             '**Prohibited AI:** Facial recognition (in public), predictive policing, certain emotion detection.',
             '**High-risk AI:** Requires risk assessments, documentation, human oversight.',
             '**Documentation required:**',
@@ -35255,7 +35255,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         documentation: {
           title: 'What Documentation and Audit Trails Are Required?',
           content: [
-            'Compliance requires comprehensive documentation and logging:',
+            '**Compliance requires comprehensive documentation and logging:**',
           ],
           items: [
             '**Data inventory:** What personal/sensitive data is processed, where, by whom.',
@@ -35372,7 +35372,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         architecture: {
           title: 'How Do You Scale From Single Machine to Distributed System?',
           content: [
-            'Progression from single machine to production:',
+            '**Progression from single machine to production:**',
           ],
           rows: [
             { 'Stage': 'Prototype', 'GPUs': '1', 'Users': '1–10', 'Uptime': 'Not required', 'Setup': 'Ollama on laptop' },
@@ -35385,7 +35385,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         loadBalancing: {
           title: 'How Do You Implement Load Balancing?',
           content: [
-            'Load balancer routes requests to least-busy inference pod.',
+            '**Load balancer routes requests to least-busy inference pod.**',
             '**Round-robin:** Distribute equally across pods (simplest).',
             '**Least-loaded:** Send to pod with shortest queue (better latency).',
             '**Sticky sessions:** Same user always uses same pod (for context, but risky if pod fails).',
@@ -35396,7 +35396,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         redundancy: {
           title: 'How Do You Implement Redundancy and Failover?',
           content: [
-            'High availability requires redundant components:',
+            '**High availability requires redundant components:**',
             '**Pod replicas:** Multiple inference pods. If one dies, others handle requests.',
             '**Health checks:** Kubernetes automatically removes unhealthy pods.',
             '**Storage redundancy:** Model files replicated across nodes.',
@@ -35406,7 +35406,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         monitoring: {
           title: 'What Should You Monitor?',
           content: [
-            'Enterprise deployments must monitor:',
+            '**Enterprise deployments must monitor:**',
           ],
           items: [
             '**Latency:** Per-request time (p50, p95, p99 percentiles).',
@@ -35546,7 +35546,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         ingestion: {
           title: 'How Do You Ingest Documents at Scale?',
           content: [
-            'Ingestion pipeline converts documents to embeddings and stores in vector DB.',
+            '**Ingestion pipeline converts documents to embeddings and stores in vector DB.**',
           ],
           numberedItems: [
             '**Extract documents:** From file servers, SharePoint, Jira, Confluence, etc.',
@@ -35573,7 +35573,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         retrievalQuality: {
           title: 'How Do You Ensure Retrieval Quality?',
           content: [
-            'Poor retrieval = poor answers. Quality depends on:',
+            '**Poor retrieval = poor answers.** Quality depends on:',
           ],
           items: [
             '**Chunking strategy:** Semantic chunks (by topic) outperform fixed-size chunks.',
@@ -35586,7 +35586,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         governance: {
           title: 'How Do You Implement Governance and Access Control?',
           content: [
-            'Corporate RAG must track access for compliance:',
+            '**Corporate RAG must track access for compliance:**',
           ],
           items: [
             '**Access logs:** Who queried what documents, when, from where.',
@@ -35698,7 +35698,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'what-gpu-budget': {
           title: 'What GPU Budget Should You Allocate?',
           content: [
-            'For a functional local LLM rig, plan for **$700–1,000 total system cost**, with **GPU = 30–40% of that budget** (~$250–400).',
+            '**For a functional local LLM rig, plan for $700–1,000 total system cost, with GPU = 30–40% of that budget (~$250–400).**',
             'A $250 GPU paired with a $100 CPU creates bottlenecks. A $2,000 GPU with a $30 motherboard wastes money.',
             'As of April 2026, the performance-per-dollar peak is in the $250–350 range (RTX 3060–4070 Super used).',
           ],
@@ -35715,7 +35715,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'vram-7b': {
           title: 'How Much VRAM Do You Need for 7B Models?',
           content: [
-            '7B models quantized at Q4 (4-bit) require **6–8GB VRAM**; Q5 (5-bit) requires **8–10GB**; Q8 (8-bit) requires **14–16GB**.',
+            '**7B models quantized at Q4 (4-bit) require 6–8GB VRAM; Q5 (5-bit) requires 8–10GB; Q8 (8-bit) requires 14–16GB.**',
             'In practice: **8GB is the bare minimum** for comfortable inference on 7B models at Q4 with room for batch processing.',
             '6GB cards (RTX 2060) technically work but require aggressive optimization and leave no headroom for higher batches.',
           ],
@@ -35920,7 +35920,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'what-gpu-budget': {
           title: 'Welches GPU-Budget sollten Sie einplanen?',
           content: [
-            'Für ein funktionsfähiges lokales LLM-System planen Sie **€500–750 Gesamtsystemkosten**, mit **GPU = 30–40% dieses Budgets** (~€150–300).',
+            '**Für ein funktionsfähiges lokales LLM-System planen Sie €500–750 Gesamtsystemkosten, mit GPU = 30–40% dieses Budgets (~€150–300).**',
             'Eine €150-GPU mit einer €30-CPU erzeugt Engpässe. Eine €1.500-GPU mit €20-Mainboard verschwendet Geld.',
             'Ab April 2026 liegt der Performance-pro-Euro-Spitzenwert im €150–250-Bereich (RTX 3060–4070 Super gebraucht).',
           ],
@@ -35964,7 +35964,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'vram-7b': {
           title: 'Wie viel VRAM benötigen Sie für 7B-Modelle?',
           content: [
-            '7B-Modelle, quantisiert bei Q4 (4-bit), benötigen **6–8GB VRAM**; Q5 (5-bit) benötigt **8–10GB**; Q8 (8-bit) benötigt **14–16GB**.',
+            '**7B-Modelle, quantisiert bei Q4 (4-bit), benötigen 6–8GB VRAM; Q5 (5-bit) benötigt 8–10GB; Q8 (8-bit) benötigt 14–16GB.**',
             'In der Praxis: **8GB ist das Minimum** für komfortable Inferenz auf 7B-Modellen bei Q4 mit Platz für Batch-Verarbeitung.',
             '6GB-Karten (RTX 2060) funktionieren technisch, erfordern aber aggressive Optimierung und lassen keinen Spielraum für höhere Batches.',
           ],
@@ -36230,7 +36230,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'what-gpu-budget': {
           title: '应该分配多少GPU预算？',
           content: [
-            '对于一个功能性的本地LLM系统，计划**700-1000美元的系统总成本**，**GPU = 预算的30-40%**（约250-400美元）。',
+            '**对于一个功能性的本地LLM系统，计划**700-1000美元的系统总成本**，**GPU = 预算的30-40%**（约250-400美元）。**',
             '250美元的GPU配置100美元的CPU会造成瓶颈。2000美元的GPU配置30美元的主板浪费金钱。',
             '截至2026年4月，性能/美元的峰值在250-350美元范围内（二手RTX 3060-4070 Super）。',
           ],
@@ -36274,7 +36274,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'vram-7b': {
           title: '7B模型需要多少VRAM？',
           content: [
-            '7B模型在Q4（4位）量化时需要**6-8GB VRAM**；Q5（5位）需要**8-10GB**；Q8（8位）需要**14-16GB**。',
+            '**7B模型在Q4（4位）量化时需要**6-8GB VRAM**；Q5（5位）需要**8-10GB**；Q8（8位）需要**14-16GB**。**',
             '实际上：**8GB是最低限度**，在Q4的7B模型上舒适推理，有批处理空间。',
             '6GB显卡（RTX 2060）在技术上可行但需要积极优化，无法支持更高的批大小。',
           ],
@@ -36433,7 +36433,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'speed-diff': {
           title: 'What Are the Raw Speed Differences?',
           content: [
-            'RTX 5090: 14,080 CUDA cores, 568 TFLOPS, ~1,500 GB/sec memory bandwidth.',
+            '**RTX 5090: 14,080 CUDA cores, 568 TFLOPS, ~1,500 GB/sec memory bandwidth.**',
             'RTX 4090: 16,384 CUDA cores, 410 TFLOPS, ~936 GB/sec memory bandwidth.',
             'Real-world LLM inference (Llama 3 70B, Q4, batch=1): RTX 5090 scores ~45 tokens/sec, RTX 4090 scores ~36 tokens/sec. **25% faster.**',
             'For 7B models (memory-bound, not compute-bound): RTX 5090 scores ~80 tokens/sec, RTX 4090 scores ~75 tokens/sec. **Only 6.5% faster.** The benefit nearly disappears.',
@@ -36442,7 +36442,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'vram-diff': {
           title: 'Does VRAM Matter Between 4090 and 5090?',
           content: [
-            'Both have **24GB GDDR7 (5090) / GDDR6X (4090)**. Identical VRAM capacity. No advantage.',
+            '**Both have 24GB GDDR7 (5090) / GDDR6X (4090).** Identical VRAM capacity. No advantage.',
             'GDDR7 on 5090 is faster per-byte. This is part of why 5090 pulls 20–25% speed. But for the LLM workloads we run, GDDR6X (4090) is sufficient.',
           ],
         },
@@ -36610,7 +36610,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'pricing': {
           title: 'How Much Should You Pay for Used GPUs?',
           content: [
-            'Benchmark: Retail MSRP vs. used market (April 2026).',
+            '**Benchmark: Retail MSRP vs.** used market (April 2026).',
           ],
           items: [
             'RTX 3060 12GB: MSRP $329 → Used $200–250 (39–62% discount)',
@@ -36639,7 +36639,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'testing': {
           title: 'How Do You Test a Used GPU Before Committing?',
           content: [
-            '1. Visual inspection: Check for physical damage, burnt components, leaking capacitors.',
+            '**1. Visual inspection: Check for physical damage, burnt components, leaking capacitors.**',
             '2. Install in test system: Boot into OS, run GPU-Z. Check clock speeds (should match spec), temperature readings.',
             '3. Run MemtestG80 (free): Allocate 90% of VRAM, run 1–2 hours. Bad memory shows up as errors.',
             '4. Run FurMark (stress test): 30 minutes at full load. Card should not crash or throttle severely.',
@@ -36765,7 +36765,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'batch-size': {
           title: 'What About Batch Size and Multi-User Inference?',
           content: [
-            'Batch size affects **throughput** (tokens per second), not single-inference **latency**.',
+            '**Batch size affects throughput (tokens per second), not single-inference latency.**',
             'A single user prompting "What is 2+2?" uses the same VRAM whether batch size is 1 or 32.',
             'Batch size = 32 means processing 32 prompts in parallel. This uses ~32× more VRAM, but generates 32 responses faster.',
             'For single-user (typical local LLM usage): Batch size = 1. VRAM is model size + 1–2GB overhead.',
@@ -36775,7 +36775,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'overhead': {
           title: 'Do You Need More VRAM Than the Model Size?',
           content: [
-            'Yes. Beyond the model weights, add:',
+            '**Yes. Beyond the model weights, add:**',
             '- **KV cache** (key-value cache for context): ~5–10% extra VRAM.',
             '- **Optimizer state** (if fine-tuning): 2–4× model size (only relevant for training, not inference).',
             '- **System overhead** (OS, drivers, Ollama/LM Studio runtime): ~1–2GB.',
@@ -37032,7 +37032,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         batchSize: {
           title: 'Et la taille de lot et l\'inférence multi-utilisateurs?',
           content: [
-            'La taille de lot affecte le **débit** (tokens par seconde), pas la **latence** d\'une seule inférence.',
+            '**La taille de lot affecte le débit (tokens par seconde), pas la latence d\'une seule inférence.**',
             'Un utilisateur unique demandant "Qu\'est-ce que 2+2?" utilise le même VRAM que la taille du lot soit 1 ou 32.',
             'Taille de lot = 32 signifie traiter 32 prompts en parallèle. Cela utilise ~32× plus VRAM, mais génère 32 réponses plus rapidement.',
             'Pour un utilisateur unique (utilisation typique des LLM locaux): Taille de lot = 1. VRAM est taille du modèle + 1–2 GB surcharge.',
@@ -37044,7 +37044,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         overhead: {
           title: 'Avez-vous besoin de plus de VRAM que la taille du modèle?',
           content: [
-            'Oui. Au-delà des poids du modèle, ajoutez:',
+            '**Oui. Au-delà des poids du modèle, ajoutez:**',
             '- **KV cache** (cache clé-valeur pour le contexte): ~5–10% VRAM supplémentaire.',
             '- **État optimiseur** (si fine-tuning): 2–4× taille du modèle (pertinent uniquement pour l\'entraînement, pas l\'inférence).',
             '- **Surcharge système** (OS, drivers, Ollama/LM Studio runtime): ~1–2 GB.',
@@ -37516,7 +37516,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'rocm-setup': {
           title: 'What\'s the ROCm Setup Friction for AMD?',
           content: [
-            '1. Install AMD ROCm drivers: `apt-get install rocm-dkms` (Ubuntu). On Windows, manual .exe installer. Takes 30 min.',
+            '**1. Install AMD ROCm drivers: `apt-get install rocm-dkms` (Ubuntu). On Windows, manual .exe installer. Takes 30 min.**',
             '2. Verify HIP compiler: `hipcc --version`. Often fails on first try. Debug kernel compatibility for your GPU.',
             '3. Install HIPCC (AMD\'s HIP-to-C++ compiler): `apt-get install hip-runtime-amd`. Another dependency chain.',
             '4. Test with small LLM: Run inference to verify GPU acceleration is working. Often defaults to CPU fallback.',
@@ -37805,7 +37805,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'rocm-setup': {
           title: 'Quelle friction de configuration ROCm?',
           content: [
-            '1. Installez les pilotes AMD ROCm : `apt-get install rocm-dkms` (Ubuntu). Sur Windows, installer manuellement. 30 minutes.',
+            '**1. Installez les pilotes AMD ROCm : `apt-get install rocm-dkms` (Ubuntu). Sur Windows, installer manuellement. 30 minutes.**',
             '2. Vérifiez le compilateur HIP : `hipcc --version`. Échoue souvent au premier essai. Déboguez la compatibilité kernel pour votre GPU.',
             '3. Installez HIPCC (compilateur HIP-vers-C++ AMD) : `apt-get install hip-runtime-amd`. Autre chaîne de dépendances.',
             '4. Testez avec petit LLM : Exécutez l\'inférence pour vérifier que l\'accélération GPU fonctionne. Repli CPU fréquent.',
@@ -38888,7 +38888,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'speed': {
           title: 'Speed & Performance',
           content: [
-            'Both apps use the same llama.cpp backend. No inherent speed difference.',
+            '**Both apps use the same llama.cpp backend.** No inherent speed difference.',
             '**LM Studio:** Slightly lower overhead (minimal UI, fewer features = lighter memory footprint).',
             '**Jan AI:** Heavier UI (Electron-based), uses more RAM. Inference speed identical.',
             'Real difference: If you need 50+ tok/s, neither app is optimal. Use vLLM or Ollama for performance.',
@@ -39125,7 +39125,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'speed': {
           title: 'Gibt es einen Geschwindigkeitsunterschied zwischen LM Studio und Jan AI?',
           content: [
-            'Beide Apps verwenden das gleiche llama.cpp-Backend. Es gibt keinen inhärenten Geschwindigkeitsunterschied.',
+            '**Beide Apps verwenden das gleiche llama.cpp-Backend.** Es gibt keinen inhärenten Geschwindigkeitsunterschied.',
             '**LM Studio:** Etwas geringerer Overhead (minimales UI, weniger Funktionen = leichterer Speicher-Footprint).',
             '**Jan AI:** Schwerere UI (Electron-basiert), nutzt mehr RAM. Inferenz-Geschwindigkeit identisch.',
             'Realer Unterschied: Wenn Sie über 50 Token/s benötigen, ist keine dieser Apps optimal. Verwenden Sie [Ollama oder vLLM](/local-llms/ollama-vs-lm-studio?lang=de) für Leistung.',
@@ -39374,7 +39374,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'speed': {
           title: 'Y a-t-il une différence de vitesse ?',
           content: [
-            'Tous deux utilisent le backend llama.cpp. Aucune différence intrinsèque.',
+            '**Tous deux utilisent le backend llama.cpp.** Aucune différence intrinsèque.',
             '**LM Studio :** Overhead minimal (UI légère, moins de features).',
             '**Jan AI :** Interface plus lourde (Electron), plus de RAM. Vitesse d\'inférence identique.',
             'Besoin de 50+ tokens/s ? Ni l\'un ni l\'autre ne convient. Préférez [Ollama ou vLLM](/local-llms/ollama-vs-lm-studio?lang=fr).',
@@ -39620,7 +39620,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'speed': {
           title: 'LM StudioとJan AIの間に速度の違いはありますか？',
           content: [
-            'どちらのアプリも同じllama.cpp バックエンドを使用しています。本来的な速度の違いはありません。',
+            '**どちらのアプリも同じllama** .cpp バックエンドを使用しています。本来的な速度の違いはありません。',
             '**LM Studio：** オーバーヘッドが若干低い（ミニマルなUI、機能が少ない = メモリフットプリントが軽い）。',
             '**Jan AI：** より重いUI（Electron ベース）、より多くのRAMを使用。推論速度は同一。',
             '本当の違い：50トークン/秒以上が必要な場合、どちらのアプリも最適ではありません。パフォーマンスには [OllamaまたはvLLM](/local-llms/ollama-vs-lm-studio?lang=ja) を使用してください。',
@@ -39875,7 +39875,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'speed': {
           title: '速度有区别吗？',
           content: [
-            '两者都用同样的llama.cpp后端。没有本质速度差异。',
+            '**两者都用同样的llama** .cpp后端。没有本质速度差异。',
             '**LM Studio：** 开销稍小（最小UI、功能少=内存占用轻）。',
             '**Jan AI：** UI较重（Electron框架），占用更多RAM。推论速度相同。',
             '需要50+tokens/秒？两个都不是最优选择。选[Ollama或vLLM](/local-llms/ollama-vs-lm-studio?lang=zh)。',
@@ -40463,7 +40463,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'ide': {
           title: 'IDE Integration (VS Code, Cursor)',
           content: [
-            'Setup for real-time code completions:',
+            '**Setup for real-time code completions:**',
             'Alternative (native IDE support): Cursor Editor has built-in local LLM support (no extension needed).',
           ],
           numberedItems: [
@@ -40668,7 +40668,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'ide': {
           title: 'IDE-Integration (VS Code, Cursor)',
           content: [
-            'Einrichtung für Echtzeit-Code-Vervollständigungen:',
+            '**Einrichtung für Echtzeit-Code-Vervollständigungen:**',
             'Alternative (nativer IDE-Support): Der Cursor Editor bietet integrierte Unterstützung für lokale LLMs (keine Erweiterung erforderlich).',
           ],
           numberedItems: [
@@ -40873,7 +40873,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'ide': {
           title: 'Intégration IDE (VS Code, Cursor)',
           content: [
-            'Configuration pour les complétions de code en temps réel :',
+            '**Configuration pour les complétions de code en temps réel :**',
             'Alternative (support IDE natif) : Cursor Editor intègre nativement le support LLM local (aucune extension requise).',
           ],
           numberedItems: [
@@ -43128,7 +43128,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'reasoning': {
           title: 'Reasoning & Math Performance',
           content: [
-            'All three 7B models struggle with multi-step reasoning vs. 13B+.',
+            '**All three 7B models struggle with multi-step reasoning vs.** 13B+.',
             'Llama 3 7B is surprisingly good (82% on MATH benchmark).',
             'Mistral 7B is weaker on math (75%) but excellent at following complex instructions.',
             'Qwen 7B balances both (~79% math, 84% instruction-following).',
@@ -43511,7 +43511,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'why': {
           title: 'Why Local LLMs for Compliance',
           content: [
-            'Cloud APIs (ChatGPT, Claude, Gemini) cannot be used with regulated data:',
+            '**Cloud APIs (ChatGPT, Claude, Gemini) cannot be used with regulated data:**',
             '- Data transmission to cloud = breach of confidentiality (HIPAA, legal privilege).',
             '- No "private mode" option. Data trains models eventually.',
             '- Vendor lock-in: if vendor breaches or shuts down, you lose data + compliance.',
@@ -44203,7 +44203,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'split': {
           title: 'Split Tunneling (Access Only LLM, Not Internet)',
           content: [
-            'By default, VPN routes ALL traffic (internet + LLM) through corporate tunnel.',
+            '**By default, VPN routes ALL traffic (internet + LLM) through corporate tunnel.**',
             'This can be slow if users want to browse the internet while using LLM.',
             '**Split tunneling** = only LLM traffic goes through VPN, internet traffic goes directly.',
             'WireGuard split tunneling example: `AllowedIPs = 10.0.0.0/24` (only LLM network).',
@@ -44438,21 +44438,21 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'chatgpt-pricing': {
           title: 'What Is the ChatGPT Plus Pricing Model?',
           content: [
-            'ChatGPT Plus costs $20 USD per month (regional variants: €20 EU, £17 UK) and includes unlimited access to GPT-4o, GPT-4 Turbo, and retrieval-augmented generation (RAG) over the web interface. As of April 2026, there is no per-token billing; all conversations and file uploads (100MB limit) are included.',
+            '**ChatGPT Plus costs $20 USD per month (regional variants: €20 EU, £17 UK) and includes unlimited access to GPT-4o, GPT-4 Turbo, and retrieval-augmented generation (RAG) over the web interface.** As of April 2026, there is no per-token billing; all conversations and file uploads (100MB limit) are included.',
             'OpenAI separately offers the ChatGPT API at $0.015 per 1K input tokens and $0.06 per 1K output tokens for GPT-4o. A 500-word query costs ~$0.08, so a ChatGPT Plus subscriber using the API would pay $120–200/month (1,500–2,500 queries/month) to break even, making the subscription worthwhile only for web-UI users or very light API usage.',
           ],
         },
         'local-upfront': {
           title: 'What Are the Upfront Costs for a Local Setup?',
           content: [
-            'A local Llama 3.1 8B setup requires: GPU ($150–800), host machine ($0 if using existing laptop/desktop), inference engine ($0, Ollama is free), and local interface ($0, OpenWebUI is free).',
+            '**A local Llama 3.1 8B setup requires: GPU ($150–800), host machine ($0 if using existing laptop/desktop), inference engine ($0, Ollama is free), and local interface ($0, OpenWebUI is free).**',
             'Recommended configuration (total: $250–400): RTX 4060 Super ($250) or RTX 4070 ($350), existing PC/Mac with 8GB+ RAM. Llama 3.1 70B (better quality) requires RTX 4090 ($1,600) or two RTX 4070s ($700). As of April 2026, used GPU market prices are 20–30% lower than new.',
           ],
         },
         'breakeven': {
           title: 'When Does a Local Setup Break Even with ChatGPT Plus?',
           content: [
-            'Breakeven depends on weekly usage hours and model quality requirements. At 5 hours/week (260 hrs/year), ChatGPT Plus costs $20 × 12 = $240/year. An RTX 4060 ($250) + 1 year electricity ($30) = $280 year 1. Breakeven: year 1 (slightly more expensive in year 1, but year 2 costs only $30 vs $240).',
+            '**Breakeven depends on weekly usage hours and model quality requirements.** At 5 hours/week (260 hrs/year), ChatGPT Plus costs $20 × 12 = $240/year. An RTX 4060 ($250) + 1 year electricity ($30) = $280 year 1. Breakeven: year 1 (slightly more expensive in year 1, but year 2 costs only $30 vs $240).',
             'At 10 hours/week: ChatGPT Plus remains $240/year; local remains $280 year 1 / $30 year 2+. Breakeven month 14.',
             'At 2 hours/week: ChatGPT Plus is cheaper for first 2 years ($480 total vs $250 GPU + $60 power = $310 total).',
           ],
@@ -44460,7 +44460,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'three-year': {
           title: 'What Is the 3-Year Total Cost of Ownership?',
           content: [
-            'ChatGPT Plus over 3 years: $20 × 36 months = $720, plus API costs if applicable.',
+            '**ChatGPT Plus over 3 years: $20 × 36 months = $720, plus API costs if applicable.**',
             'Local Llama 3.1 over 3 years: RTX 4060 ($250, 5-year lifespan) + electricity 36 months ($90) = $340 total. If buying used GPU, ~$180 + $90 power = $270.',
             'Local Llama 3.1 70B (better quality): RTX 4090 ($1,600 new, $1,000 used) + electricity ($180 over 3 years) = $1,600–1,780 total. Breakeven: 6–7 years vs ChatGPT Plus.',
           ],
@@ -44468,7 +44468,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'quality': {
           title: 'How Do GPT-4o and Llama 3.1 Compare in Quality?',
           content: [
-            'GPT-4o (OpenAI, March 2024): Best-in-class reasoning, math, coding, creative writing. ~86% accuracy on MATH benchmark. Real-time multimodal (image, audio, video input).',
+            '**GPT-4o (OpenAI, March 2024): Best-in-class reasoning, math, coding, creative writing.** ~86% accuracy on MATH benchmark. Real-time multimodal (image, audio, video input).',
             'Llama 3.1 70B (Meta, April 2024): 94% of GPT-4o quality on most benchmarks. Excellent coding, reasoning, long-context (128K tokens). No multimodal.',
             'Llama 3.1 8B: 85% of GPT-4o quality. Adequate for summarization, brainstorming, general Q&A. Struggles with complex math, creative writing.',
             'As of April 2026: GPT-4o remains marginally better for novel-problem reasoning; Llama 3.1 70B is 95%+ equivalent. For 80% of business use cases (email drafting, code review, summarization), Llama 3.1 8B is sufficient.',
@@ -44573,7 +44573,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'pricing': {
           title: 'What Is the Price Difference Between Claude Pro and Local LLMs?',
           content: [
-            'Claude Pro: $20 USD/month worldwide (€20 EU equivalent). As of April 2026, includes GPT-4 Turbo-competitive model (Claude 3.5 Sonnet), 200K context window, and image/PDF understanding. No per-token charges.',
+            '**Claude Pro: $20 USD/month worldwide (€20 EU equivalent).** As of April 2026, includes GPT-4 Turbo-competitive model (Claude 3.5 Sonnet), 200K context window, and image/PDF understanding. No per-token charges.',
             'Local Llama 3.1 70B: RTX 4090 ($1,600 new, $1,000 used) or dual RTX 4070s ($700 used) + electricity ($60/year) = $1,000–1,660 upfront, $60/year ongoing. Open-source, zero licensing fees.',
             'Year 1 cost: Claude Pro $240 vs Local $1,060–1,700. Year 5 cost: Claude Pro $1,200 vs Local $1,300–1,900. Breakeven at 4–5 years.',
           ],
@@ -44581,14 +44581,14 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'privacy': {
           title: 'How Do Privacy Models Differ Between Claude Pro and Local LLMs?',
           content: [
-            'Claude Pro (Anthropic): Your conversations are not used to train future Claude models (Anthropic explicit privacy policy as of 2026). However, queries are logged on Anthropic servers for safety monitoring and debugging. Anthropic is US-based, subject to US law.',
+            '**Claude Pro (Anthropic): Your conversations are not used to train future Claude models (Anthropic explicit privacy policy as of 2026).** However, queries are logged on Anthropic servers for safety monitoring and debugging. Anthropic is US-based, subject to US law.',
             'Local LLMs: All data remains on your machine. Zero cloud logging, zero third-party visibility. Suitable for healthcare (HIPAA), finance (PCI-DSS), and legal (attorney-client privilege) workflows. As of April 2026, Llama 3.1 is fully open-source (no Anthropic data collection).',
           ],
         },
         'quality': {
           title: 'How Do Claude 3.5 Sonnet and Llama 3.1 70B Compare in Quality?',
           content: [
-            'Claude 3.5 Sonnet (Anthropic, June 2024): Best-in-class reasoning, nuance, instruction-following. 97% MMLU (language understanding) score. Excels at complex analysis, copywriting, coding reviews.',
+            '**Claude 3.5 Sonnet (Anthropic, June 2024): Best-in-class reasoning, nuance, instruction-following.** 97% MMLU (language understanding) score. Excels at complex analysis, copywriting, coding reviews.',
             'Llama 3.1 70B (Meta, April 2024): 96% MMLU score. Excellent reasoning, near-parity with Claude on benchmarks. Stronger coding performance (+2% on HumanEval). Slightly weaker on creative/narrative tasks.',
             'On 80% of real-world tasks (summarization, Q&A, data extraction, coding), Llama 3.1 70B and Claude 3.5 Sonnet produce equivalent output. On edge cases (subtle narrative analysis, domain-specific creative writing), Claude is marginally better.',
           ],
@@ -44596,7 +44596,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'context': {
           title: 'How Much Can Each Handle Long Documents?',
           content: [
-            'Claude Pro 200K tokens: ~150,000 words (equivalent to 3 books). Can process an entire codebase, legal contracts, or research papers in one query.',
+            '**Claude Pro 200K tokens: ~150,000 words (equivalent to 3 books).** Can process an entire codebase, legal contracts, or research papers in one query.',
             'Llama 3.1 70B 128K tokens: ~96,000 words. Still excellent for most documents; some very large codebases or 500+ page contracts exceed this limit.',
             'As of April 2026: For document processing workflows (RAG, bulk summarization, contract review), Claude Pro\'s 200K window is a tangible advantage. Llama 3.1 128K is adequate for ~95% of business documents.',
           ],
@@ -44604,7 +44604,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'five-year': {
           title: 'What Is the 5-Year Total Cost of Ownership Comparison?',
           content: [
-            'Claude Pro: $20 × 60 months = $1,200 total.',
+            '**Claude Pro: $20 × 60 months = $1,200 total.**',
             'Local Llama 3.1 70B (new GPU): RTX 4090 $1,600 + electricity 5 years $300 = $1,900 total.',
             'Local Llama 3.1 70B (used GPU): $1,000 + $300 electricity = $1,300 total.',
             'Break-even point: ~50 months (4.2 years) when using a used GPU. New GPU becomes cost-competitive only after 6+ years.',
@@ -44708,7 +44708,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'hourly': {
           title: 'What Is the Hourly Cost: Local vs Cloud?',
           content: [
-            'Local RTX 4070 (used $350): 250W TDP, US electricity $0.14/kWh = $0.035/hour compute cost + $0.008/hour depreciation (5-year lifespan) = $0.043/hour total.',
+            '**Local RTX 4070 (used $350): 250W TDP, US electricity $0.14/kWh = $0.035/hour compute cost + $0.008/hour depreciation (5-year lifespan) = $0.043/hour total.**',
             'Local RTX 4090 (used $1,000): 450W TDP = $0.063/hour compute + $0.023/hour depreciation = $0.086/hour.',
             'Cloud Lambda Labs RTX 4090: $2.50/hour (no depreciation, but includes storage and support). 10–50x more expensive than local.',
             'Cloud Paperspace A100 (80GB): $0.60/hour; reasonable for fine-tuning, still 10–15x more than local RTX 4070.',
@@ -44718,7 +44718,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'breakeven': {
           title: 'When Does a Local GPU Break Even with Cloud Compute?',
           content: [
-            'Local RTX 4070 ($350) vs Cloud Lambda Labs RTX 4090 ($2.50/hr): Breakeven = $350 / ($2.50 − $0.04) = 143 compute hours = 29 weeks at 5 hrs/week.',
+            '**Local RTX 4070 ($350) vs Cloud Lambda Labs RTX 4090 ($2.50/hr): Breakeven = $350 / ($2.50 − $0.04) = 143 compute hours = 29 weeks at 5 hrs/week.**',
             'Local RTX 4090 ($1,000) vs Cloud Lambda Labs ($2.50/hr): Breakeven = 417 compute hours = 80 weeks at 5 hrs/week.',
             'Local RTX 4070 vs Cloud Paperspace A100 ($0.60/hr): Breakeven = $350 / ($0.60 − $0.04) = 625 hours = 150 weeks at 5 hrs/week (almost 3 years).',
             'For burst users (5–10 hours/month): Cloud is cheaper. For consistent users (5+ hours/week): Local is cheaper.',
@@ -44727,7 +44727,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'providers': {
           title: 'How Do Cloud GPU Providers Compare?',
           content: [
-            'Lambda Labs (April 2026): RTX 4090 $2.50/hr, RTX 6000 Ada $3.50/hr, H100 $4.50/hr. No hourly reservation; pay-as-you-go. Excellent for bursts.',
+            '**Lambda Labs (April 2026): RTX 4090 $2.50/hr, RTX 6000 Ada $3.50/hr, H100 $4.50/hr.** No hourly reservation; pay-as-you-go. Excellent for bursts.',
             'Paperspace (April 2026): A100 40GB $0.51/hr, RTX A6000 $0.73/hr. Cheaper than Lambda Labs but older hardware. Good for training.',
             'AWS (April 2026): g4dn.2xlarge V100 $0.98/hr on-demand, ~$0.40/hr reserved (1-year commitment). ec2 g4dn.xlarge cheaper ($0.526/hr) but single V100.',
             'Google Colab Pro: $10/month unlimited (L4 GPU), $50/month with A100. Best value for light users.',
@@ -44737,7 +44737,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'one-year': {
           title: 'What Is the 1-Year Cost of Ownership?',
           content: [
-            'Local RTX 4070 at 20 hrs/week (1,040 hours/year): $350 GPU + (1,040 × $0.03) electricity = $381 total.',
+            '**Local RTX 4070 at 20 hrs/week (1,040 hours/year): $350 GPU + (1,040 × $0.03) electricity = $381 total.**',
             'Cloud Lambda Labs RTX 4090 at 20 hrs/week: 1,040 × $2.50 = $2,600 total.',
             'Cost ratio: Cloud is 6.8x more expensive than local for this workload.',
             'Local RTX 4090 at 20 hrs/week: $1,000 + (1,040 × $0.06) = $1,062 total.',
@@ -44843,7 +44843,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'hardware-cost': {
           title: 'What Is the Hardware Cost by Operating System?',
           content: [
-            'macOS (Apple Silicon M1–M4): Already have it (MacBook $1,200–2,500, Mac mini $600–800). No separate GPU needed for Llama 3.1 8B (Apple Neural Engine is built-in). Total additional cost: $0.',
+            '**macOS (Apple Silicon M1–M4): Already have it (MacBook $1,200–2,500, Mac mini $600–800).** No separate GPU needed for Llama 3.1 8B (Apple Neural Engine is built-in). Total additional cost: $0.',
             'Windows (NVIDIA GPU required): Existing Windows PC ($500–2,000) + RTX 4070 ($350–500 used) to RTX 4090 ($1,000–1,600 used). Additional cost: $350–1,600.',
             'Linux (AMD or NVIDIA GPU): Bare-metal server ($300–1,000) or reuse old machine + GPU ($150–1,600). Additional cost: $150–2,600.',
             'Used market advantage: RTX 4070 used ($350) vs new ($550), 36% cheaper. RTX 4090 used ($1,000) vs new ($1,600), 37% cheaper.',
@@ -44852,7 +44852,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'setup': {
           title: 'What Is the Setup and Complexity?',
           content: [
-            'macOS: Download Ollama (1 minute), run Ollama app, select Llama 3.1 8B model (5 minutes). Total: 6 minutes, zero terminal commands. Best for non-technical users.',
+            '**macOS: Download Ollama (1 minute), run Ollama app, select Llama 3.1 8B model (5 minutes).** Total: 6 minutes, zero terminal commands. Best for non-technical users.',
             'Windows: Install NVIDIA drivers (5–10 minutes), download Ollama or LM Studio (5 minutes), select model (5 minutes). Total: 15–20 minutes, zero terminal commands if using GUI.',
             'Linux (Ubuntu server): SSH access, install CUDA/cuDNN (20–40 minutes), install Ollama or vLLM (10 minutes), configure systemd service (10–20 minutes). Total: 40–70 minutes, requires terminal comfort.',
             'Long-term complexity: macOS = lowest maintenance (OS updates automatic). Windows = moderate (GPU driver updates quarterly, occasional conflicts). Linux = moderate to high (system-level tuning, dependency hell possible).',
@@ -44861,7 +44861,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'performance': {
           title: 'How Do Inference Speeds Compare?',
           content: [
-            'Same GPU, same OS: RTX 4090 produces identical tokens/second on Windows, Linux, or macOS. OS does not affect compute speed.',
+            '**Same GPU, same OS: RTX 4090 produces identical tokens/second on Windows, Linux, or macOS.** OS does not affect compute speed.',
             'macOS (Apple Silicon M4): Llama 3.1 8B = 8–12 tokens/second (CPU-only, no GPU). Adequate for most tasks.',
             'macOS (M4 Max): Llama 3.1 70B = too slow (CPU-bound). Recommended: stick to 8B–13B models.',
             'Windows + RTX 4090: Llama 3.1 70B = 120–150 tokens/second. Llama 3.1 8B = 200–250 tokens/second.',
@@ -44872,7 +44872,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'tools': {
           title: 'What Tools and Frameworks Are Supported by OS?',
           content: [
-            'Ollama (inference engine): macOS ✓, Windows ✓, Linux ✓. Identical features across all three.',
+            '**Ollama (inference engine): macOS ✓, Windows ✓, Linux ✓.** Identical features across all three.',
             'LM Studio (GUI): macOS ✓, Windows ✓. Linux only via Docker (no native GUI).',
             'vLLM (API server): macOS (limited, Apple Metal only), Windows ✓ (CUDA), Linux ✓ (CUDA/ROCm). Best on Linux.',
             'NVIDIA CUDA toolkit: Windows ✓, Linux ✓. macOS ✗ (not supported as of April 2026, only Apple Metal).',
@@ -44883,7 +44883,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'tco': {
           title: 'What Is the Total Cost of Ownership Over 3 Years?',
           content: [
-            'macOS (M4 Max MacBook): Existing hardware $2,500 + electricity 3 years ($200) = $2,700 (amortized). Limited to 8B–13B models.',
+            '**macOS (M4 Max MacBook): Existing hardware $2,500 + electricity 3 years ($200) = $2,700 (amortized).** Limited to 8B–13B models.',
             'Windows (RTX 4070): Existing PC $1,200 + GPU $350 + electricity ($150) = $1,700 total. Runs 70B models.',
             'Linux (RTX 4070): Existing server $400 + GPU $350 + electricity ($120) = $870 total (cheapest option for production).',
             'Cost-per-token: macOS ≈ Linux ≈ Windows (same when normalized for model size and throughput).',
@@ -44988,7 +44988,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'cost-structure': {
           title: 'What Is the Cost Structure of Each Model?',
           content: [
-            'Subscription (ChatGPT Plus / Claude Pro): $20 USD/month = $240/year. No upfront cost. Includes unlimited queries, model updates, rate-limited usage.',
+            '**Subscription (ChatGPT Plus / Claude Pro): $20 USD/month = $240/year.** No upfront cost. Includes unlimited queries, model updates, rate-limited usage.',
             'GPU Purchase (RTX 4070 used): $350 upfront + $30/year electricity (at US rates) = $350 year 1, $30 year 2–7, then $0 if sold for salvage.',
             'GPU Purchase (RTX 4090 used): $1,000 upfront + $60/year electricity = $1,000 year 1, $60 year 2–7.',
             'Hybrid (subscription + local): $240/year subscriptions (for edge cases where local can\'t handle) + $350 GPU upfront = optimized for mixed workloads.',
@@ -44997,7 +44997,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'breakeven': {
           title: 'When Does a GPU Break Even with Subscriptions?',
           content: [
-            'RTX 4070 ($350) vs ChatGPT Plus ($240/year): Breakeven = $350 / $240 = 1.46 years (approximately 17–18 months).',
+            '**RTX 4070 ($350) vs ChatGPT Plus ($240/year): Breakeven = $350 / $240 = 1.46 years (approximately 17–18 months).**',
             'RTX 4090 ($1,000) vs ChatGPT Plus: Breakeven = $1,000 / $240 = 4.17 years.',
             'At 2 hours/week (104 hours/year): If treating as "cost per hour" ($240 / 104 = $2.30/hour), then RTX 4070 ($0.05/hour) breaks even in year 1.',
             'At 5 hours/week (260 hours/year): Breakeven at 1.5 years.',
@@ -45008,7 +45008,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'five-year-roi': {
           title: 'What Is the 5-Year ROI Comparison?',
           content: [
-            'Light user (2 hrs/week): GPU $350 + $150 power = $500 total. Subscriptions $240 × 5 = $1,200. GPU loses by $700.',
+            '**Light user (2 hrs/week): GPU $350 + $150 power = $500 total.** Subscriptions $240 × 5 = $1,200. GPU loses by $700.',
             'Casual user (5 hrs/week): GPU $350 + $150 power = $500. Subscriptions $1,200. GPU wins by $700.',
             'Regular user (10 hrs/week): GPU $350 + $300 power = $650. Subscriptions $1,200. GPU wins by $550.',
             'Power user (20 hrs/week): GPU $350 + $600 power = $950. Subscriptions $1,200. GPU wins by $250.',
@@ -45018,7 +45018,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'hidden-costs': {
           title: 'What Are the Hidden Costs in Both Models?',
           content: [
-            'Subscription hidden costs: Rate limits (ChatGPT Plus: 20 messages per 3 hours in peak times), API costs if building applications ($0.015–0.06 per 1K tokens), data ownership (your conversations belong to OpenAI/Anthropic).',
+            '**Subscription hidden costs: Rate limits (ChatGPT Plus: 20 messages per 3 hours in peak times), API costs if building applications ($0.015–0.06 per 1K tokens), data ownership (your conversations belong to OpenAI/Anthropic).**',
             'GPU hidden costs: Infrastructure (learning curve, troubleshooting, occasional crashes), electricity (24/7 idle draw if not managed), GPU replacement after 5–7 years ($350–1,600), cooling (may need better AC, +$100–500/year).',
             'Subscription non-monetary cost: Vendor lock-in (can\'t export your trained models), dependency on internet and company stability.',
             'GPU non-monetary cost: Technical debt (model fine-tuning becomes outdated, requires retraining).',
