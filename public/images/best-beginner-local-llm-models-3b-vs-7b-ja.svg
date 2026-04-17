@@ -1,0 +1,43 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">3B vs 7B：基本的なトレードオフ</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">3B:4〜6 GB用 · 7B:8 GB用 · 7Bで品質が大幅に向上</text>
+
+  <rect x="18" y="58" width="370" height="272" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="18" y="58" width="370" height="5"   rx="0" fill="#6750A4"/>
+  <text x="203" y="88"  font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">3Bモデル</text>
+  <text x="203" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F"  text-anchor="middle">4〜6 GB RAMのマシン向け</text>
+  <text x="45"  y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">RAM:</text>
+  <text x="82"  y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">2–3 GB</text>
+  <text x="170" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">速度:</text>
+  <text x="205" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">25〜60トークン/秒</text>
+  <line x1="32" y1="140" x2="375" y2="140" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="203" y="162" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">向いているタスク：</text>
+  <text x="203" y="184" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ チャット・Q&amp;A</text>
+  <text x="203" y="204" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ 要約</text>
+  <text x="203" y="224" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ シンプルなコーディング</text>
+  <line x1="32" y1="236" x2="375" y2="236" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="203" y="256" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">このグループのモデル</text>
+  <text x="203" y="276" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Llama 3.2 3B · Phi-3.5 Mini 3.8B · Gemma 2 2B</text>
+
+  <rect x="412" y="58" width="370" height="272" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="412" y="58" width="370" height="5"   rx="0" fill="#34A853"/>
+  <text x="597" y="88"  font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">7Bモデル</text>
+  <text x="597" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F"  text-anchor="middle">8 GB RAMのマシン向け</text>
+  <text x="435" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">RAM:</text>
+  <text x="472" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#F4B400">4.5–5 GB</text>
+  <text x="560" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">速度:</text>
+  <text x="595" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#F4B400">10〜20トークン/秒</text>
+  <line x1="426" y1="140" x2="769" y2="140" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="597" y="162" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">向いているタスク：</text>
+  <text x="597" y="184" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ 複雑な推論</text>
+  <text x="597" y="204" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ コーディング（HumanEval）</text>
+  <text x="597" y="224" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ 長文書処理</text>
+  <line x1="426" y1="236" x2="769" y2="236" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="597" y="256" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">このグループのモデル</text>
+  <text x="597" y="276" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Mistral 7B v0.3 · Qwen2.5 7B</text>
+
+  <text x="400" y="200" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" fill="#79747E" text-anchor="middle">vs</text>
+  <text x="400" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/best-beginner-local-llm-models</text>
+</svg>

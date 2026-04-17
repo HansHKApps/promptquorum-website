@@ -1,0 +1,43 @@
+<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="360" fill="#FFFFFF"/>
+
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">3B vs 7B : Le compromis fondamental</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">3B pour 4–6 Go · 7B pour 8 Go · Qualité nettement meilleure à 7B</text>
+
+  <rect x="18" y="58" width="370" height="272" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
+  <rect x="18" y="58" width="370" height="5"   rx="0" fill="#6750A4"/>
+  <text x="203" y="88"  font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#6750A4" text-anchor="middle">Modèles 3B</text>
+  <text x="203" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F"  text-anchor="middle">Pour machines avec 4–6 Go RAM</text>
+  <text x="45"  y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">RAM :</text>
+  <text x="86"  y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">2–3 Go</text>
+  <text x="185" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Vitesse :</text>
+  <text x="238" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853">25–60 tok/s</text>
+  <line x1="32" y1="140" x2="375" y2="140" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="203" y="162" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">Idéal pour :</text>
+  <text x="203" y="184" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ Chat &amp; Q&amp;R</text>
+  <text x="203" y="204" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ Résumés</text>
+  <text x="203" y="224" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ Code simple</text>
+  <line x1="32" y1="236" x2="375" y2="236" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="203" y="256" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">Modèles du groupe</text>
+  <text x="203" y="276" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Llama 3.2 3B · Phi-3.5 Mini 3.8B · Gemma 2 2B</text>
+
+  <rect x="412" y="58" width="370" height="272" rx="6" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="412" y="58" width="370" height="5"   rx="0" fill="#34A853"/>
+  <text x="597" y="88"  font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="#34A853" text-anchor="middle">Modèles 7B</text>
+  <text x="597" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F"  text-anchor="middle">Pour machines avec 8 Go RAM</text>
+  <text x="435" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">RAM :</text>
+  <text x="476" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#F4B400">4,5–5 Go</text>
+  <text x="570" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E">Vitesse :</text>
+  <text x="622" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#F4B400">10–20 tok/s</text>
+  <line x1="426" y1="140" x2="769" y2="140" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="597" y="162" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#34A853" text-anchor="middle">Idéal pour :</text>
+  <text x="597" y="184" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ Raisonnement complexe</text>
+  <text x="597" y="204" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ Code (HumanEval)</text>
+  <text x="597" y="224" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">✓ Documents longs</text>
+  <line x1="426" y1="236" x2="769" y2="236" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="597" y="256" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="middle">Modèles du groupe</text>
+  <text x="597" y="276" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Mistral 7B v0.3 · Qwen2.5 7B</text>
+
+  <text x="400" y="200" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" fill="#79747E" text-anchor="middle">vs</text>
+  <text x="400" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/best-beginner-local-llm-models</text>
+</svg>

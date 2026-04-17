@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 358" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="358" fill="#FFFFFF"/>
+
+  <text x="400" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle">应该从哪个模型开始？</text>
+  <text x="400" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#49454F" text-anchor="middle">根据可用内存选择 — 下载前先决定</text>
+
+  <rect x="20" y="58" width="238" height="255" rx="8" fill="#FFFFFF" stroke="#F4B400" stroke-width="2"/>
+  <rect x="20" y="58" width="238" height="5"   rx="0" fill="#F4B400"/>
+  <circle cx="139" cy="106" r="26" fill="#F4B400"/>
+  <text x="139" y="110" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">≤ 4 GB</text>
+  <text x="139" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Gemma 2 2B</text>
+  <text x="139" y="170" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">ollama run gemma2:2b</text>
+  <line x1="38" y1="184" x2="240" y2="184" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="139" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#34A853" text-anchor="middle">1.7 GB内存·40–60词/秒</text>
+  <text x="139" y="220" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">CPU上最快的模型</text>
+  <text x="139" y="238" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">最适合测试配置</text>
+
+  <rect x="281" y="58" width="238" height="255" rx="8" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
+  <rect x="281" y="58" width="238" height="5"   rx="0" fill="#6750A4"/>
+  <circle cx="400" cy="106" r="26" fill="#6750A4"/>
+  <text x="400" y="110" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">8 GB</text>
+  <text x="400" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Llama 3.2 3B ★</text>
+  <text x="400" y="170" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">ollama run llama3.2:3b</text>
+  <line x1="299" y1="184" x2="501" y2="184" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="400" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">2.5 GB内存·128K上下文</text>
+  <text x="400" y="220" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">最佳质量/内存平衡</text>
+  <text x="400" y="238" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">★ 最适合初学者</text>
+
+  <rect x="542" y="58" width="238" height="255" rx="8" fill="#FFFFFF" stroke="#34A853" stroke-width="2"/>
+  <rect x="542" y="58" width="238" height="5"   rx="0" fill="#34A853"/>
+  <circle cx="661" cy="106" r="26" fill="#34A853"/>
+  <text x="661" y="110" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">8 GB+</text>
+  <text x="661" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qwen2.5 7B</text>
+  <text x="661" y="170" font-family="'SF Mono',Monaco,monospace" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">ollama run qwen2.5:7b</text>
+  <line x1="560" y1="184" x2="762" y2="184" stroke="#E8DEF8" stroke-width="1"/>
+  <text x="661" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1C1B1F" text-anchor="middle">4.7 GB内存·29种语言</text>
+  <text x="661" y="220" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#49454F" text-anchor="middle">最佳编程和多语言</text>
+  <text x="661" y="238" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#34A853" text-anchor="middle">正式使用的最佳升级</text>
+
+  <text x="400" y="333" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#49454F" text-anchor="middle">4–6 GB内存可选：Phi-3.5 Mini 3.8B，适合推理和编程</text>
+  <text x="400" y="349" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#79747E" text-anchor="middle">promptquorum.com/local-llms/best-beginner-local-llm-models</text>
+</svg>
