@@ -82,6 +82,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'A local LLM runs on your own CPU or GPU — no internet, no API costs, no data sent to third-party servers.',
@@ -316,6 +318,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'LLM local = exécution sur votre CPU/GPU, zéro coût API, zéro partage de données.',
@@ -463,6 +467,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'ローカルLLM＝自分のCPU/GPUで実行、API費用ゼロ、データ外部送信なし。',
@@ -610,6 +616,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '1. 本地LLM = 在您的CPU/GPU上运行，无API成本，无数据分享。',
@@ -757,6 +765,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Ein lokales LLM wird auf Ihrer eigenen CPU oder GPU ausgeführt — keine Internetverbindung, keine API-Kosten, keine Daten an Dritte.',
@@ -907,6 +917,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'macOS: download the .dmg from ollama.com or run `brew install ollama` — then `ollama run llama3.2` to start chatting.',
@@ -1405,7 +1417,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'proficiencyLevel': 'Beginner',
         'keywords': ['Ollama-Installation', 'Ollama installieren', 'Ollama macOS', 'Ollama Windows', 'Ollama Linux', 'lokales LLM-Setup', 'llama.cpp', 'OpenAI-kompatible API'],
@@ -1719,7 +1731,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'proficiencyLevel': 'Beginner',
         'keywords': ['Installation Ollama', 'installer Ollama', 'Ollama macOS', 'Ollama Windows', 'Ollama Linux', 'configuration Local LLM', 'llama.cpp', 'API compatible OpenAI'],
@@ -2033,7 +2045,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'proficiencyLevel': 'Beginner',
         'keywords': ['Ollama インストール', 'Ollama をインストール', 'Ollama macOS', 'Ollama Windows', 'Ollama Linux', 'ローカル LLM セットアップ', 'llama.cpp', 'OpenAI 互換 API'],
@@ -2347,7 +2359,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'proficiencyLevel': 'Beginner',
         'keywords': ['Ollama 安装', '安装 Ollama', 'Ollama macOS', 'Ollama Windows', 'Ollama Linux', '本地 LLM 设置', 'llama.cpp', 'OpenAI 兼容 API'],
@@ -2426,6 +2438,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Download LM Studio from lmstudio.ai — available for macOS (Apple Silicon + Intel), Windows, and Linux (AppImage).',
@@ -2693,6 +2707,8 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           title: 'Zusammenfassung',
           items: [
@@ -3054,6 +3070,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           title: 'Points clés',
           items: [
@@ -3359,6 +3377,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           title: '重要ポイント',
           items: [
@@ -3620,6 +3640,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           title: '核心要点',
           items: [
@@ -3880,6 +3902,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'The fastest path: install Ollama → run `ollama run llama3.2` → chat in your terminal. Total time: under 5 minutes on a fast connection.',
@@ -4059,7 +4083,7 @@ print(response.choices[0].message.content)`,
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -4211,7 +4235,8 @@ print(response.choices[0].message.content)`,
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
       sections: {
-        tldr: { isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
         whatIsSmall: { title: 'Was ist ein „kleines" lokales LLM und wann sollten Sie eines verwenden?', content: ['Ein kleines lokales LLM ist typischerweise definiert als ein Modell mit weniger als 4 Milliarden Parametern. Bei Q4_K_M-Quantisierung benötigen diese Modelle 1,5–3 GB RAM — gut innerhalb der Einschränkungen von Einstiegs-Laptops mit 4–8 GB Gesamtspeicher.', 'Seit April 2026 sind kleine Modelle geeignet für: schnelle Zusammenfassung, einfache F&A, Erklärung von Code-Snippets, Übersetzung kurzer Texte und Klassifizierungsaufgaben. Sie sind nicht geeignet für mehrstufiges Reasoning, komplexe Code-Generierung oder das Verfassen langer kohärenter Dokumente.', 'Die Qualitätslücke zwischen einem 3B- und 7B-Modell ist erheblich — ungefähr der Lücke zwischen GPT-3.5 Mini und GPT-3.5 Turbo entsprechend. Für Benutzer mit 8 GB RAM ist ein 7B-Modell bei Q4_K_M fast immer die bessere Wahl. Siehe [Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) für 7B-Empfehlungen.'] },
         phi4mini: { title: 'Phi-4 Mini 3.8B — Beste Reasoning-Leistung in der Sub-4B-Klasse', content: ['Microsoft Phi-4 Mini erreicht 68% bei MMLU und 70% bei HumanEval — Werte, die viele vor 2025 veröffentlichte 7B-Modelle übertreffen. Dies ist möglich, weil Phi-4 Mini auf einem kuratierten synthetischen Datensatz trainiert wurde, der auf Reasoning und Problemlösung fokussiert ist.', 'Seit April 2026 ist Phi-4 Mini die empfohlene Wahl für Benutzer, die hauptsächlich Reasoning oder Code-Unterstützung auf Hardware mit 4–6 GB RAM benötigen.'], rows: [{ 'Spec': 'MMLU', 'Value': '68%' }, { 'Spec': 'HumanEval', 'Value': '70%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '30–50 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run phi4-mini' }], columns: ['Spec', 'Value'] },
         gemma2: { title: 'Gemma 2 2B — Schnellstes kleines lokales LLM auf CPU', content: ['Google Gemma 2 2B generiert 40–60 Token/Sek auf einer modernen Laptop-CPU — das schnellste Modell in dieser Qualitätsklasse. Sein 1,7-GB-RAM-Footprint lässt viel Speicher für Betriebssystem und andere Anwendungen auf einer 4-GB-Maschine.', 'Die Qualität ist niedriger als Phi-4 Mini bei Reasoning. Das 8K-Kontextfenster ist eine praktische Einschränkung für längere Dokumente. Gemma 2 2B ist die richtige Wahl, wenn Antwortgeschwindigkeit wichtiger ist als Ausgabetiefe.'], rows: [{ 'Spec': 'MMLU', 'Value': '52%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~1,7 GB' }, { 'Spec': 'Kontext', 'Value': '8K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '40–60 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run gemma2:2b' }], columns: ['Spec', 'Value'] },
@@ -4632,6 +4657,8 @@ print(response.choices[0].message.content)`,
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          image: '/images/local-llm-one-click-installers-tool-overview-en.svg',
+          imageCaption: '4 one-click local LLM installers at a glance: Ollama (port 11434, developers), LM Studio (port 1234, beginners), Jan AI (port 1337, privacy users), GPT4All (port 4891, non-technical). All use llama.cpp and GGUF format.',
           items: [
             '**Ollama**: best for developers — terminal-first, OpenAI-compatible API, 200+ models, runs as a background service.',
             '**LM Studio**: best for beginners who prefer a GUI — built-in chat, model browser, local server on port 1234.',
@@ -4651,6 +4678,8 @@ print(response.choices[0].message.content)`,
         },
         ollama: {
           id: 'ollama',
+          image: '/images/local-llm-one-click-installers-ollama-install-steps-en.svg',
+          imageCaption: 'Ollama installation in 3 steps: visit ollama.com/download, run the .pkg or .exe installer, then run ollama run llama3.2 in the terminal. Ollama installs as a background service and exposes an OpenAI-compatible API at localhost:11434.',
           title: 'What Is Ollama Best For?',
           content: [
             '**Ollama is best for developers who need a terminal-first tool with an OpenAI-compatible API at localhost:11434 and a curated library of 200+ models.** Ollama runs as a background service and exposes an OpenAI-compatible REST API at `http://localhost:11434`. It has no graphical interface of its own — you interact with it through the terminal or via third-party UIs like Open WebUI.',
@@ -4725,6 +4754,8 @@ print(response.choices[0].message.content)`,
         },
         fullComparison: {
           id: 'full-comparison-table',
+          image: '/images/local-llm-one-click-installers-comparison-table-en.svg',
+          imageCaption: 'Full comparison of Ollama vs LM Studio vs Jan AI vs GPT4All: best use case, interface type, model count, API ports (11434/1234/1337/4891), telemetry status, and open source licence for all four tools.',
           title: 'How Do These Four Installers Compare?',
           rows: [
             { 'Factor': 'Best for', 'Ollama': 'Developers, API use', 'LM Studio': 'Beginners, GUI users', 'Jan AI': 'Privacy-first users', 'GPT4All': 'Non-technical users' },
@@ -4738,6 +4769,8 @@ print(response.choices[0].message.content)`,
         },
         whichToChoose: {
           id: 'which-should-you-choose',
+          image: '/images/local-llm-one-click-installers-privacy-ranking-en.svg',
+          imageCaption: 'Local LLM privacy ranking: Jan AI and Ollama collect no telemetry (MIT open source), GPT4All telemetry is opt-in only, LM Studio anonymous analytics are on by default (disable: Settings → Privacy → off).',
           title: 'Which One-Click Installer Should You Choose?',
           items: [
             '**Choose Ollama** if you are a developer who wants to script, automate, or integrate local models into applications. See [How to Install Ollama](/local-llms/how-to-install-ollama) for setup.',
@@ -4890,6 +4923,8 @@ print(response.choices[0].message.content)`,
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          image: '/images/local-llm-one-click-installers-tool-overview-de.svg',
+          imageCaption: '4 One-Click Lokale LLM-Installer verglichen — Ollama (Port 11434), LM Studio (Port 1234), Jan AI (Port 1337), GPT4All (Port 4891): Einsatzbereich, Oberfläche, Open Source, Telemetrie.',
           items: [
             '**Ollama**: am besten für Entwickler — Terminal-first, OpenAI-kompatible API, 200+ Models, läuft als Hintergrunddienst.',
             '**LM Studio**: am besten für Anfänger mit GUI — integrierter Chat, Model-Browser, lokaler Server auf Port 1234.',
@@ -4909,6 +4944,8 @@ print(response.choices[0].message.content)`,
         },
         ollama: {
           id: 'ollama',
+          image: '/images/local-llm-one-click-installers-ollama-install-steps-de.svg',
+          imageCaption: 'Ollama in 3 Schritten installieren: ollama.com/download besuchen, .pkg oder .exe ausführen, dann ollama run llama3.2 im Terminal eingeben. Nach Installation API auf localhost:11434.',
           title: 'Wofür ist Ollama am besten geeignet?',
           content: [
             'Ollama läuft als Hintergrunddienst und stellt eine OpenAI-kompatible REST-API auf `http://localhost:11434` bereit. Es hat keine eigene grafische Benutzeroberfläche — Sie interagieren damit über das Terminal oder über externe UIs wie Open WebUI.',
@@ -4982,6 +5019,8 @@ print(response.choices[0].message.content)`,
         },
         fullComparison: {
           id: 'comparison-table',
+          image: '/images/local-llm-one-click-installers-comparison-table-de.svg',
+          imageCaption: 'Vollständiger Vergleich: Ollama vs LM Studio vs Jan AI vs GPT4All — Anwendungsfall, Oberfläche, Model-Anzahl, API-Ports (11434/1234/1337/4891), Telemetrie, Open Source.',
           title: 'Wie vergleichen sich diese vier Installer?',
           rows: [
             { 'Merkmal': 'Am besten für', 'Ollama': 'Entwickler, API-Nutzung', 'LM Studio': 'Anfänger, GUI-Benutzer', 'Jan AI': 'Datenschutzorientierte Benutzer', 'GPT4All': 'Nicht-technische Benutzer' },
@@ -4995,6 +5034,8 @@ print(response.choices[0].message.content)`,
         },
         whichToChoose: {
           id: 'which-to-choose',
+          image: '/images/local-llm-one-click-installers-privacy-ranking-de.svg',
+          imageCaption: 'Lokale LLM Datenschutz-Ranking: Jan AI und Ollama erfassen keine Telemetrie (MIT Open Source), GPT4All nur per Opt-in, LM Studio anonyme Analysen standardmäßig aktiv (deaktivieren: Einstellungen → Datenschutz).',
           title: 'Welchen One-Click-Installer sollten Sie wählen?',
           items: [
             '**Wählen Sie Ollama**, wenn Sie ein Entwickler sind, der lokale Models in Anwendungen skripten, automatisieren oder integrieren möchte. Siehe [Wie installieren Sie Ollama](/local-llms/how-to-install-ollama?lang=de) für die Einrichtung.',
@@ -5075,7 +5116,7 @@ print(response.choices[0].message.content)`,
         datePublished: '2026-04-04',
         dateModified: '2026-04-09',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         about: [
           { '@type': 'Thing', name: 'Ollama' },
@@ -5147,6 +5188,8 @@ print(response.choices[0].message.content)`,
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          image: '/images/local-llm-one-click-installers-tool-overview-fr.svg',
+          imageCaption: '4 installateurs LLM locaux one-click comparés — Ollama (port 11434), LM Studio (port 1234), Jan AI (port 1337), GPT4All (port 4891) : cas d\'usage, interface, open source, télémétrie.',
           items: [
             '**Ollama**: meilleur pour développeurs — terminal-first, API compatible OpenAI, 200+ modèles, s\'exécute comme service de fond.',
             '**LM Studio**: meilleur pour débutants avec GUI — chat intégré, navigateur de modèles, serveur local sur port 1234.',
@@ -5166,6 +5209,8 @@ print(response.choices[0].message.content)`,
         },
         ollama: {
           id: 'ollama',
+          image: '/images/local-llm-one-click-installers-ollama-install-steps-fr.svg',
+          imageCaption: 'Installation Ollama en 3 étapes : visiter ollama.com/download, lancer le .pkg ou .exe, puis ollama run llama3.2 dans le terminal pour télécharger et exécuter un modèle.',
           title: 'À quoi Ollama convient-il le mieux ?',
           content: [
             'Ollama s\'exécute comme un service de fond et expose une API REST compatible OpenAI sur `http://localhost:11434`. Il n\'a pas sa propre interface graphique — vous interagissez avec lui via le terminal ou via des interfaces tierces comme Open WebUI.',
@@ -5239,6 +5284,8 @@ print(response.choices[0].message.content)`,
         },
         fullComparison: {
           id: 'comparison-table',
+          image: '/images/local-llm-one-click-installers-comparison-table-fr.svg',
+          imageCaption: 'Comparaison complète : Ollama vs LM Studio vs Jan AI vs GPT4All — cas d\'usage, interface, nombre de modèles, ports API (11434/1234/1337/4891), télémétrie, open source.',
           title: 'Comment ces quatre installateurs se comparent-ils ?',
           rows: [
             { 'Critère': 'Meilleur pour', 'Ollama': 'Développeurs, usage API', 'LM Studio': 'Débutants, utilisateurs GUI', 'Jan AI': 'Utilisateurs soucieux de confidentialité', 'GPT4All': 'Utilisateurs non-techniques' },
@@ -5252,6 +5299,8 @@ print(response.choices[0].message.content)`,
         },
         whichToChoose: {
           id: 'which-to-choose',
+          image: '/images/local-llm-one-click-installers-privacy-ranking-fr.svg',
+          imageCaption: 'Classement confidentialité LLM local : Jan AI et Ollama ne collectent aucune télémétrie (MIT open source), GPT4All en opt-in uniquement, LM Studio analytiques anonymes activées par défaut (désactiver dans Paramètres → Confidentialité).',
           title: 'Quel installateur one-click devriez-vous choisir ?',
           items: [
             '**Choisissez Ollama** si vous êtes un développeur qui veut scripter, automatiser ou intégrer les modèles locaux dans les applications. Voir [Comment installer Ollama](/local-llms/how-to-install-ollama?lang=fr) pour la configuration.',
@@ -5330,7 +5379,7 @@ print(response.choices[0].message.content)`,
         datePublished: '2026-04-04',
         dateModified: '2026-04-09',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         about: [
           { '@type': 'Thing', name: 'Ollama' },
@@ -5402,6 +5451,8 @@ print(response.choices[0].message.content)`,
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          image: '/images/local-llm-one-click-installers-tool-overview-ja.svg',
+          imageCaption: '4つのワンクリックローカルLLMインストーラー比較 — Ollama（ポート11434）、LM Studio（ポート1234）、Jan AI（ポート1337）、GPT4All（ポート4891）：用途、インターフェース、OSS、テレメトリ。',
           items: [
             '**Ollama**：開発者向けが最適 — ターミナルファースト、OpenAI互換API、200以上のモデル、バックグラウンドサービスとして動作。',
             '**LM Studio**：GUIを好む初心者向けが最適 — 組み込みチャット、モデルブラウザ、ローカルサーバーはポート1234。',
@@ -5421,6 +5472,8 @@ print(response.choices[0].message.content)`,
         },
         ollama: {
           id: 'ollama',
+          image: '/images/local-llm-one-click-installers-ollama-install-steps-ja.svg',
+          imageCaption: 'Ollamaインストール3ステップ：ollama.com/downloadにアクセス、.pkg/.exeインストーラーを実行、ターミナルでollama run llama3.2を実行してモデルを取得・起動。',
           title: 'Ollamaは何に最適ですか？',
           content: [
             'Ollamaはバックグラウンドサービスとして動作し、`http://localhost:11434`でOpenAI互換REST APIを公開します。独自のグラフィカルインターフェイスはありません — ターミナルまたはOpen WebUIなどのサードパーティUI経由で操作します。',
@@ -5494,6 +5547,8 @@ print(response.choices[0].message.content)`,
         },
         fullComparison: {
           id: 'comparison-table',
+          image: '/images/local-llm-one-click-installers-comparison-table-ja.svg',
+          imageCaption: '詳細比較：Ollama vs LM Studio vs Jan AI vs GPT4All — 最適用途、インターフェース、モデル数、APIポート（11434/1234/1337/4891）、テレメトリ、オープンソース。',
           title: '4つのインストーラーはどのように比較されますか？',
           rows: [
             { '比較項目': '最適な用途', 'Ollama': '開発者、API利用', 'LM Studio': '初心者、GUIユーザー', 'Jan AI': 'プライバシー重視ユーザー', 'GPT4All': '非技術ユーザー' },
@@ -5507,6 +5562,8 @@ print(response.choices[0].message.content)`,
         },
         whichToChoose: {
           id: 'which-to-choose',
+          image: '/images/local-llm-one-click-installers-privacy-ranking-ja.svg',
+          imageCaption: 'ローカルLLMプライバシーランキング：Jan AIとOllamaはテレメトリ収集なし（MIT OSS）、GPT4Allはオプトインのみ、LM Studioは匿名分析がデフォルトON（設定 → プライバシーで無効化）。',
           title: 'どのOne-Clickインストーラーを選ぶべき？',
           items: [
             '**Ollamaを選択** スクリプト作成、自動化、またはアプリケーションへのローカルモデル統合が必要な開発者の場合。セットアップは[Ollamaのインストール方法](/local-llms/how-to-install-ollama?lang=ja)を参照。',
@@ -5585,7 +5642,7 @@ print(response.choices[0].message.content)`,
         datePublished: '2026-04-04',
         dateModified: '2026-04-09',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         about: [
           { '@type': 'Thing', name: 'Ollama' },
@@ -5657,6 +5714,8 @@ print(response.choices[0].message.content)`,
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          image: '/images/local-llm-one-click-installers-tool-overview-zh.svg',
+          imageCaption: '4款一键本地LLM安装器对比 — Ollama（端口11434）、LM Studio（端口1234）、Jan AI（端口1337）、GPT4All（端口4891）：各工具的最适用场景、界面类型、开源状态和遥测情况。',
           items: [
             '**Ollama**：最适合开发者 — 终端优先、OpenAI兼容API、200+模型、作为后台服务运行。',
             '**LM Studio**：最适合喜欢GUI的初学者 — 内置聊天、模型浏览器、本地服务器运行在端口1234。',
@@ -5676,6 +5735,8 @@ print(response.choices[0].message.content)`,
         },
         ollama: {
           id: 'ollama',
+          image: '/images/local-llm-one-click-installers-ollama-install-steps-zh.svg',
+          imageCaption: 'Ollama安装3步：访问ollama.com/download，运行.pkg或.exe安装器，在终端执行ollama run llama3.2拉取并运行模型。安装后在localhost:11434提供OpenAI兼容API。',
           title: 'Ollama最适合什么？',
           content: [
             'Ollama 作为后台服务运行，并在 `http://localhost:11434` 暴露 OpenAI 兼容的 REST API。它没有自己的图形界面 — 通过终端或第三方 UI（如 Open WebUI）与之交互。',
@@ -5749,6 +5810,8 @@ print(response.choices[0].message.content)`,
         },
         fullComparison: {
           id: 'comparison-table',
+          image: '/images/local-llm-one-click-installers-comparison-table-zh.svg',
+          imageCaption: '完整对比：Ollama vs LM Studio vs Jan AI vs GPT4All — 最适用场景、界面类型、模型数、API端口（11434/1234/1337/4891）、遥测状态和开源许可。',
           title: '这4个安装器如何对比？',
           rows: [
             { '对比项': '最适合', 'Ollama': '开发者、API使用', 'LM Studio': '初学者、GUI用户', 'Jan AI': '隐私重视用户', 'GPT4All': '非技术用户' },
@@ -5762,6 +5825,8 @@ print(response.choices[0].message.content)`,
         },
         whichToChoose: {
           id: 'which-to-choose',
+          image: '/images/local-llm-one-click-installers-privacy-ranking-zh.svg',
+          imageCaption: '本地LLM隐私排名：Jan AI和Ollama无遥测（MIT开源），GPT4All遥测为可选，LM Studio匿名分析默认开启（在设置 → 隐私中关闭）。2026年4月。',
           title: '应该选择哪个一键安装器？',
           items: [
             '**选择Ollama**，如果你是开发者，想要脚本化、自动化或将本地模型集成到应用程序中。查看[如何安装Ollama](/local-llms/how-to-install-ollama?lang=zh)获取设置说明。',
@@ -5842,7 +5907,7 @@ print(response.choices[0].message.content)`,
         datePublished: '2026-04-04',
         dateModified: '2026-04-09',
         proficiencyLevel: 'Beginner',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         about: [
           { '@type': 'Thing', name: 'Ollama' },
@@ -6332,6 +6397,8 @@ print(response.choices[0].message.content)`,
       sections: {
         tldr: {
           title: 'Résumé',
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Les 10 erreurs causent 94% des défaillances initiales ; les plus courantes sont VRAM insuffisante (37%), modèle non trouvé (19%), quantification incompatible (16%)',
@@ -6792,6 +6859,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Ein 3B- oder 7B-Modell in Q4_K_M-Quantisierung läuft auf jedem modernen Laptop mit 8 GB RAM nutzbar.',
@@ -7059,6 +7128,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Un modèle 3B ou 7B en quantification Q4_K_M fonctionne de manière utilisable sur n\'importe quel ordinateur portable moderne avec 8 GB de RAM.',
@@ -7324,6 +7395,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Q4_K_M量子化の3Bまたは7Bモデルは、8GBのRAMを備えたどのモダンノートパソコンでも実用的に実行されます。',
@@ -7589,6 +7662,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Q4_K_M量化的3B或7B模型在任何配有8GB RAM的现代笔记本电脑上都可以实用地运行。',
@@ -7850,6 +7925,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Local inference keeps prompt data off third-party servers. The remaining risks are: telemetry from the inference tool, model files from untrusted sources, and the Ollama API being exposed on the network.',
@@ -8092,6 +8169,8 @@ print(response.choices[0].message.content)`,
     ],
     sections: {
       tldr: {
+        id: 'key-takeaways',
+
         isTldr: true,
         items: [
           'Lokale Inferenz hält Prompt-Daten von den Servern Dritter fern. Die verbleibenden Risiken sind: Telemetrie des Inferenz-Tools, Modelldateien aus nicht vertrauenswürdigen Quellen und die Ollama-API, die im Netzwerk verfügbar gemacht wird.',
@@ -8340,6 +8419,8 @@ print(response.choices[0].message.content)`,
     ],
     sections: {
       tldr: {
+        id: 'key-takeaways',
+
         isTldr: true,
         items: [
           'L\'inférence locale garde les données d\'invites hors des serveurs tiers. Les risques subsistants : télémétrie de l\'outil, fichiers de modèles non fiables, API Ollama exposée au réseau.',
@@ -8544,6 +8625,8 @@ print(response.choices[0].message.content)`,
     ],
     sections: {
       tldr: {
+        id: 'key-takeaways',
+
         isTldr: true,
         items: [
           'ローカル推論はプロンプトデータをサードパーティサーバーから遠ざけます。残りのリスク：推論ツールのテレメトリ、信頼できないモデルファイル、ネットワークに公開されたOllama API。',
@@ -8757,6 +8840,8 @@ print(response.choices[0].message.content)`,
     ],
     sections: {
       tldr: {
+        id: 'key-takeaways',
+
         isTldr: true,
         items: [
           '本地推理将提示数据保留在您的机器上，远离第三方服务器。剩余风险：推理工具的遥测、来自不可信来源的模型文件、Ollama API暴露在网络上。',
@@ -8974,6 +9059,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Quality gap: local 7B models score 10–20 percentage points below GPT-4o on reasoning and coding benchmarks. The gap narrows significantly at 70B scale but requires 40–48 GB of RAM.',
@@ -9135,6 +9222,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Best overall**: Meta Llama 3.3 70B — matches GPT-4 (2023) on MMLU (82%), requires 40 GB RAM at Q4_K_M.',
@@ -9353,7 +9442,8 @@ print(response.choices[0].message.content)`,
         headline: 'Best Local LLMs in 2026: Top Models Ranked by Task, Hardware, and Quality',
         description: 'Best local LLMs in 2026 ranked: Llama 3.3 70B, Qwen2.5 72B, Mistral Small 3.1, Gemma 3 9B, and Phi-4 Mini — with VRAM requirements and benchmark scores.',
         dateModified: '2026-04-05',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        'datePublished': '2026-04-04',
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
         about: [
@@ -9408,7 +9498,8 @@ print(response.choices[0].message.content)`,
         { label: 'Quellen', anchor: '#sources' },
       ],
       sections: {
-        tldr: { isTldr: true, items: ['**Bestes Gesamtmodell**: Meta Llama 3.3 70B — entspricht GPT-4 (2023) bei MMLU (82%), erfordert 40 GB RAM mit Q4_K_M.', '**Beste Codierung**: Qwen2.5 72B — 87% bei HumanEval, unterstützt 29 Sprachen, 128K Kontextfenster.', '**Beste 7B-Klasse**: Mistral Small 3.1 24B — starke Befehlsausführung, 128K Kontext, läuft auf 16 GB RAM.', '**Beste Mittelklasse (16 GB RAM)**: Google Gemma 3 9B — beste Qualitäts-zu-RAM-Verhältnis in der 9B-Klasse.', '**Bestes kleines Modell**: Microsoft Phi-4 Mini 3.8B — Denkleistung über seiner Parametergröße, läuft auf 4 GB RAM.'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, items: ['**Bestes Gesamtmodell**: Meta Llama 3.3 70B — entspricht GPT-4 (2023) bei MMLU (82%), erfordert 40 GB RAM mit Q4_K_M.', '**Beste Codierung**: Qwen2.5 72B — 87% bei HumanEval, unterstützt 29 Sprachen, 128K Kontextfenster.', '**Beste 7B-Klasse**: Mistral Small 3.1 24B — starke Befehlsausführung, 128K Kontext, läuft auf 16 GB RAM.', '**Beste Mittelklasse (16 GB RAM)**: Google Gemma 3 9B — beste Qualitäts-zu-RAM-Verhältnis in der 9B-Klasse.', '**Bestes kleines Modell**: Microsoft Phi-4 Mini 3.8B — Denkleistung über seiner Parametergröße, läuft auf 4 GB RAM.'] },
         howWeRanked: { title: 'So haben wir diese Modelle bewertet', content: ['Die Bewertungen basieren auf drei Benchmarks: MMLU (57-Fragen-Wissenstest, höher = bessere allgemeine Intelligenz), HumanEval (Python-Code-Generierung, höher = bessere Codierungsfähigkeit) und MATH (Mathematik-Wettkampfaufgaben, höher = stärkeres Denken). Die Ergebnisse stammen aus veröffentlichten Arbeiten und der Open LLM Leaderboard ab Q1 2026.', 'Hardware-Anforderungen werden für Q4_K_M-Quantisierung berechnet — die Standard-Anfängereinstellung, die Qualität und RAM-Nutzung ausgleicht. Eine Einführung in die Quantisierung finden Sie unter [LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained?lang=de).', 'Alle Modelle sind über Ollama verfügbar. Weitere Informationen zur Installation finden Sie unter [So installieren Sie Ollama](/local-llms/how-to-install-ollama?lang=de).'] },
         llama33: { title: '#1 Meta Llama 3.3 70B — Bestes lokales LLM 2026', content: ['Meta Llama 3.3 70B ist das beste Modell mit offenem Gewicht für lokale Inferenz 2026. Es erreicht 82% bei MMLU, 88% bei HumanEval und 77% bei MATH — entspricht oder übertrifft GPT-4 (2023) bei allen drei Benchmarks. Das 128K-Kontextfenster verarbeitet lange Dokumente und erweiterte Gespräche.', 'Die Hauptbeschränkung ist die Hardware: Q4_K_M-Quantisierung erfordert etwa 40 GB RAM. Dies schließt die meisten Consumer-Laptops aus. Es läuft gut auf einem Mac Studio M2 Ultra (64+ GB), einer hochwertigen Workstation mit 64 GB RAM oder verteilt über GPU und System-RAM mit Ollamas Layer-Offloading.'], rows: [{ 'Spezifikation': 'MMLU-Ergebnis', 'Wert': '82%' }, { 'Spezifikation': 'HumanEval-Ergebnis', 'Wert': '88%' }, { 'Spezifikation': 'Erforderlicher RAM (Q4_K_M)', 'Wert': '~40 GB' }, { 'Spezifikation': 'Kontextfenster', 'Wert': '128K Token' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama run llama3.3:70b' }], columns: ['Spezifikation', 'Wert'] },
         qwen25_72: { title: '#2 Qwen2.5 72B — Beste Codierung und mehrsprachige Aufgaben', content: ['Qwen2.5 72B von Alibaba entspricht Llama 3.3 70B bei allgemeinen Benchmarks und übertrifft es bei der Codierung: 87% HumanEval vs. 88% für Llama 3.3. Es unterstützt 29 Sprachen nativ (einschließlich Chinesisch, Japanisch, Koreanisch, Arabisch) und verwendet ein 128K-Kontextfenster. JSON-Modus und Funktionsaufrufe sind integriert.', 'Für Teams, die nicht-englische Inhalte verarbeiten oder mehrsprachige Anwendungen erstellen, ist Qwen2.5 72B die empfohlene Wahl gegenüber Llama 3.3 70B. Weitere Informationen zu sprachspezifischen Benchmarks finden Sie unter [Qwen vs. Llama vs. Mistral](/local-llms/qwen-vs-llama-vs-mistral?lang=de).'], rows: [{ 'Spezifikation': 'MMLU-Ergebnis', 'Wert': '84%' }, { 'Spezifikation': 'HumanEval-Ergebnis', 'Wert': '87%' }, { 'Spezifikation': 'Erforderlicher RAM (Q4_K_M)', 'Wert': '~43 GB' }, { 'Spezifikation': 'Sprachen', 'Wert': '29 nativ unterstützt' }, { 'Spezifikation': 'Ollama-Befehl', 'Wert': 'ollama run qwen2.5:72b' }], columns: ['Spezifikation', 'Wert'] },
@@ -9423,7 +9514,7 @@ print(response.choices[0].message.content)`,
         faqSection: { title: 'Häufig gestellte Fragen', faqs: [{ q: 'Was ist das beste lokale LLM 2026?', a: 'Meta Llama 3.3 70B ist das beste lokale LLM ab April 2026, entspricht GPT-4 (2023) bei MMLU (82%), HumanEval (88%) und MATH. Es erfordert 40 GB RAM bei Q4_K_M-Quantisierung. Für spezifische Anwendungsfälle: Qwen2.5 72B für Codierung und mehrsprachige Aufgaben, Mistral Small 3.1 für 16 GB-Maschinen, Gemma 3 9B für 8 GB RAM und Phi-4 Mini für unter 4 GB RAM.' }, { q: 'Wie viel RAM brauche ich für Llama 3.3 70B?', a: 'Llama 3.3 70B erfordert etwa 40 GB RAM bei Q4_K_M-Quantisierung, der Standard-Anfängereinstellung. Dies kann über System-RAM und VRAM verteilt werden (z.B. 32 GB VRAM auf einer RTX 4090 + 8 GB System-RAM mit Ollamas Layer-Offloading). Überprüfen Sie verfügbaren RAM mit `free -h` (Linux) oder Activity Monitor (macOS), bevor Sie herunterladen.' }, { q: 'Ist Qwen2.5 72B besser als Llama 3.3 70B?', a: 'Nicht universell. Qwen2.5 72B zeichnet sich bei Codierung (87% HumanEval) aus und hat native Unterstützung für 29 Sprachen, was es besser für mehrsprachige und Code-fokussierte Aufgaben macht. Llama 3.3 70B hat leicht höhere Ergebnisse bei MMLU (82% vs 84% — beachten Sie, dass Qwen höher ist) und Denkaufgaben und hat bessere Community-Unterstützung. Beide erfordern 40+ GB RAM.' }, { q: 'Was ist das beste lokale LLM für 8 GB RAM?', a: 'Google Gemma 3 9B ist die beste Option für 8 GB RAM mit 73% bei MMLU und 68% bei HumanEval. Es benötigt nur ~6 GB mit Q4_K_M-Quantisierung und lässt Platz für Systemprozesse. Gemma 3 9B unterstützt auch Vision (Bildeingabe) in seiner multimodalen Variante. Für extreme Ressourcenengpässe (≤4 GB) verwenden Sie Microsoft Phi-4 Mini 3.8B.' }, { q: 'Was ist das beste lokale LLM für Codierung 2026?', a: 'Qwen2.5 72B ist das beste für Codierung mit 87% bei HumanEval. Es enthält auch JSON-Modus und Funktionsaufrufe, was es für KI-gestützte Code-Generierung und Tool-Nutzung geeignet macht. Wenn Ihre Hardware 72B nicht unterstützt (40+ GB RAM), verwenden Sie Mistral Small 3.1 (74% HumanEval, 14 GB RAM).' }, { q: 'Sind diese Modelle kostenlos zur kommerziellen Nutzung?', a: 'Ja, alle fünf Modelle sind Open-Weight und für kommerzielle Nutzung genehmigt: Llama 3.3 70B und Qwen2.5 72B unterliegen der Llama Community License und Qwen License (beide erlauben kommerzielle Nutzung), Mistral Small 3.1 ist Apache 2.0, Gemma 3 9B ist Gemma 2.0 Lizenz und Phi-4 Mini ist Microsoft Research License (erlaubt kommerzielle Forschung). Überprüfen Sie immer die Lizenzbedingungen für Ihre Gerichtsbarkeit vor dem Deployment.' }, { q: 'Wie führe ich Llama 3.3 70B auf Consumer-Hardware aus?', a: 'Verwenden Sie Ollama zum Herunterladen und Ausführen: `ollama run llama3.3:70b`. Ollama handhabt automatisch Quantisierung, Layer-Offloading und Speicherverwaltung. Für Consumer-Maschinen mit <40 GB Gesamt-RAM aktivieren Sie Layer-Offloading durch Setzen von `OLLAMA_NUM_GPU=1` (oder Ihre GPU-Anzahl), damit Ollama die Berechnung über GPU-VRAM und System-RAM verteilt. Auf einem Mac Studio M2 Ultra (64+ GB) läuft Llama 3.3 mit voller Qualität.' }, { q: 'Kann ich diese Modelle vollständig offline ausführen?', a: 'Ja. Alle fünf Modelle laufen vollständig offline, sobald sie auf Ihre Maschine heruntergeladen sind. Laden Sie über Ollama (oder GGUF-Quantisierungen von Hugging Face) herunter, laden Sie lokal und Inferenz findet zu 100% auf Ihrer Hardware ohne Netzwerkaufrufe statt. Dies ist ein Schlüsselvorteil gegenüber Cloud-APIs: perfekt für vertrauliche Dokumente, isolierte Netzwerke und DSGVO/Datensouveränität-Einhaltung.' }, { q: 'Wie vergleichen sich diese Modelle mit GPT-4o?', a: 'Llama 3.3 70B und Qwen2.5 72B entsprechen oder übertreffen GPT-4 (2023) bei MMLU, HumanEval und MATH Benchmarks, aber GPT-4o (die 2024 multimodale Version) bleibt komplexen Denkaufgaben und Vision-Aufgaben voraus. Für Nur-Text-Arbeit (Analyse, Codierung, Schreiben) sind Llama 3.3 70B und Qwen2.5 72B wettbewerbsfähig. GPT-4o hat überlegenes Bildverständnis und längeren Kontext.' }, { q: 'Was bedeutet Q4_K_M-Quantisierung?', a: 'Q4_K_M ist ein 4-Bit-Quantisierungsschema (eine Methode, um Modellgewichte zu komprimieren), das von llama.cpp und Ollama angeboten wird. Es reduziert Llama 3.3 70B von 140 GB (volle Präzision) auf 40 GB (quantisiert) mit minimalem Qualitätsverlust. "Q4" = 4-Bit-Präzision pro Gewicht; "K_M" = ein spezifisches Quantisierungsvariante, das wichtige Gewichtsmuster bewahrt (K-Quants). Für Anfänger ist Q4_K_M die empfohlene Standard: Es bildet Geschwindigkeit, RAM-Nutzung und Ausgabequalität ab.' }, { q: 'Muss ich bei der Verwendung von lokalen LLMs die DSGVO beachten?', a: 'Ja. Die Datenschutz-Grundverordnung (DSGVO) der EU erlaubt lokale Inferenz als Datenverarbeitungsgrundlage (Artikel 28), schreibt jedoch Datenschutzmaßnahmen vor (Artikel 32). Lokale LLMs wie Llama 3.3 70B und Qwen2.5 72B laufen vollständig auf lokaler Hardware ohne externe Datenübertragung, was DSGVO-Anforderungen erfüllt. Allerdings müssen Sie: 1) Modellherkunft dokumentieren, 2) lokale Hardware-Sicherheit gewährleisten, 3) Zugriffskontrolle implementieren, 4) den Datenschutzer (falls erforderlich) informieren. Lokale LLMs reduzieren Datenrisiken, erfordern aber dennoch DSGVO-Compliance-Dokumentation.' }, { q: 'Sind diese Modelle für den deutschen Mittelstand geeignet?', a: 'Ja, besonders. Llama 3.3 70B und Qwen2.5 72B erfüllen IT-Sicherheitsstandards für den Mittelstand: 1) BSI-Grundschutz: Lokale Deployment erfüllt BSI-Anforderungen für Datenschutz und Systemzugang, 2) DACH-Kompatibilität: Modelle laufen auf Standard-Unternehmens-Infrastruktur, 3) Kosteneffizienz: Nach Initial-Hardware-Investment keine Cloud-Gebühren, 4) Datensouveränität: Alle Daten bleiben on-premise. Für Mittelstands-Anwendungen in Deutschland, Österreich oder der Schweiz bieten diese Modelle eine sichere, konforme, kostengünstige Alternative zu Cloud-APIs.' }] },
         sources: { title: 'Quellen', items: ['**Hugging Face.** (2026). "Open LLM Leaderboard." [huggingface.co/spaces/open-llm-leaderboard](https://huggingface.co/spaces/open-llm-leaderboard) — Echtzeit MMLU-, HumanEval- und MATH-Benchmark-Platzierungen über alle Open-Weight-Modelle.', '**Ollama.** (2026). "Ollama Model Library." [ollama.com/library](https://ollama.com/library) — Verfügbare Modelle mit Download-Größen, Quantisierungsoptionen und Ollama-Befehlen.', '**Alibaba Qwen Team.** (2025). "Qwen2.5 Technical Report." arXiv:2412.15115. [arxiv.org/abs/2412.15115](https://arxiv.org/abs/2412.15115) — Benchmark-Ergebnisse und Mehrsprachigkeit-Daten für die Qwen2.5-Modellfamilie.'] },
       },
-      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'https://www.promptquorum.com/local-llms/best-local-llms-2026?lang=de', 'inLanguage': 'de', headline: 'Beste lokale LLMs 2026: Top-Modelle nach Task, Hardware und Qualität', description: 'Beste lokale LLMs 2026: Llama 3.3 70B, Qwen2.5 72B, Mistral Small 3.1, Gemma 3 9B und Phi-4 Mini — mit VRAM-Anforderungen und Benchmark-Ergebnissen.', dateModified: '2026-04-09', author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, proficiencyLevel: 'Beginner', about: [{ '@type': 'Thing', name: 'Llama 3.3 70B' }, { '@type': 'Thing', name: 'Qwen2.5 72B' }, { '@type': 'Thing', name: 'Mistral Small 3.1' }, { '@type': 'Thing', name: 'Lokaler LLM-Benchmark' }, { '@type': 'Thing', name: 'MMLU-Benchmark' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+      schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'url': 'https://www.promptquorum.com/local-llms/best-local-llms-2026?lang=de', 'inLanguage': 'de', headline: 'Beste lokale LLMs 2026: Top-Modelle nach Task, Hardware und Qualität', description: 'Beste lokale LLMs 2026: Llama 3.3 70B, Qwen2.5 72B, Mistral Small 3.1, Gemma 3 9B und Phi-4 Mini — mit VRAM-Anforderungen und Benchmark-Ergebnissen.', dateModified: '2026-04-09', author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, proficiencyLevel: 'Beginner', about: [{ '@type': 'Thing', name: 'Llama 3.3 70B' }, { '@type': 'Thing', name: 'Qwen2.5 72B' }, { '@type': 'Thing', name: 'Mistral Small 3.1' }, { '@type': 'Thing', name: 'Lokaler LLM-Benchmark' }, { '@type': 'Thing', name: 'MMLU-Benchmark' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
       itemListSchema: { '@context': 'https://schema.org', '@type': 'ItemList', 'inLanguage': 'de', name: 'Beste lokale LLMs 2026 — Benchmark-Vergleich', numberOfItems: 5, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Meta Llama 3.3 70B', description: 'MMLU 82%, HumanEval 88%. Erfordert 40 GB RAM bei Q4_K_M. Bestes lokales LLM insgesamt 2026.' }, { '@type': 'ListItem', position: 2, name: 'Qwen2.5 72B', description: 'MMLU 84%, HumanEval 87%. Erfordert 43 GB RAM. 29 native Sprachen. Beste für Codierung und mehrsprachige Aufgaben.' }, { '@type': 'ListItem', position: 3, name: 'Mistral Small 3.1 24B', description: 'MMLU 79%, HumanEval 74%. Erfordert 14 GB RAM. Apache 2.0 Lizenz. Beste für 16 GB RAM-Maschinen.' }, { '@type': 'ListItem', position: 4, name: 'Gemma 3 9B', description: 'MMLU 73%, HumanEval 68%. Erfordert 6 GB RAM. Vision-Unterstützung verfügbar. Bestes Mittelklasse-Modell für 8–16 GB RAM.' }, { '@type': 'ListItem', position: 5, name: 'Phi-4 Mini 3.8B', description: 'MMLU 68%, HumanEval 70%. Erfordert 2,5 GB RAM. 30–50 Token/Sekunde CPU. Bestes Modell unter 4 GB RAM.' }] },
     },
 
@@ -9456,6 +9547,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Best Overall**: Meta Llama 3.3 70B — correspond à GPT-4 (2023) sur MMLU (82 %), nécessite 40 GB RAM avec Q4_K_M.',
@@ -9648,7 +9741,8 @@ print(response.choices[0].message.content)`,
         headline: 'Meilleurs LLMs locaux 2026 : Llama 3.3, Qwen2.5, Mistral',
         description: 'Meilleurs LLMs locaux 2026 : Llama 3.3 70B (global), Qwen2.5 72B (code), Mistral Small 3.1 (16 GB), Gemma 3 9B (gamme intermédiaire). Benchmarks et exigences VRAM.',
         dateModified: '2026-04-04',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        'datePublished': '2026-04-04',
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
         about: [
@@ -9688,6 +9782,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**総合性能最高**: Meta Llama 3.3 70B — MMLU 82%でGPT-4（2023）に相当。Q4_K_Mで40GB RAM必要。',
@@ -9862,6 +9958,7 @@ print(response.choices[0].message.content)`,
         headline: '2026年 最高のローカルLLM：タスク・ハードウェア・品質で評価したトップモデル',
         description: '2026年の最高のローカルLLM：Llama 3.3 70B（総合性能）、Qwen2.5 72B（コード・多言語）、Mistral Small 3.1（7Bクラス）。ベンチマークとVRAM要件。',
         dateModified: '2026-04-04',
+        'datePublished': '2026-04-04',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
@@ -9917,6 +10014,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**综合性能最佳**：Meta Llama 3.3 70B — MMLU 82%相当于GPT-4（2023）。Q4_K_M量化需要40GB RAM。',
@@ -10091,6 +10190,7 @@ print(response.choices[0].message.content)`,
         headline: '2026年最佳本地大语言模型：按任务、硬件和质量排名的顶级模型',
         description: '2026年最佳本地大语言模型：Llama 3.3 70B（综合性能）、Qwen2.5 72B（代码和多语言）、Mistral Small 3.1（7B级）。基准测试和VRAM要求。',
         dateModified: '2026-04-04',
+        'datePublished': '2026-04-04',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
@@ -10323,7 +10423,7 @@ print(response.choices[0].message.content)`,
         'description': 'Qwen2.5 (84% MMLU) vs Llama 3.3 (82% MMLU) vs Mistral (79%). HumanEval: Qwen 87%, Llama 88%. Compare on benchmarks, VRAM, coding, multilingual support.',
         'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral',
         'inLanguage': 'en',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-16',
         'proficiencyLevel': 'Beginner',
@@ -10458,6 +10558,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Coding**: Qwen2.5 gewinnt bei jeder Größe — 87% HumanEval bei 72B, 79% bei 32B, 72% bei 7B.',
@@ -10739,6 +10841,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Codage** : Qwen2.5 gagne à chaque taille — 87% HumanEval à 72B, 79% à 32B, 72% à 7B.',
@@ -11008,6 +11112,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**コーディング**：Qwen2.5はすべてのサイズで勝つ——72Bで87% HumanEval、32Bで79%、7Bで72%。',
@@ -11277,6 +11383,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**编码**：Qwen2.5在每个大小处获胜——72B处87% HumanEval、32B处79%、7B处72%。',
@@ -11548,6 +11656,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Best overall coding model**: Qwen2.5-Coder 32B — 87% HumanEval, requires 20 GB RAM at Q4_K_M.',
@@ -11719,7 +11829,7 @@ print(response.choices[0].message.content)`,
         'description': 'The best local LLMs for coding in 2026 are Qwen2.5-Coder 32B (87% HumanEval), DeepSeek-Coder V2 Lite (81%), and Qwen2.5-Coder 7B (72%). All three run locally via Ollama.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         'about': [
@@ -11793,7 +11903,7 @@ print(response.choices[0].message.content)`,
           { '@type': 'Thing', 'name': 'AI fiction writing' },
           { '@type': 'Thing', 'name': 'Fine-tuned LLM' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -12078,6 +12188,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Standard-Benchmarks (MMLU, HumanEval) messen nicht die Qualität des kreativen Schreibens — testen Sie Modelle direkt mit Ihren Prompts.',
@@ -12243,6 +12355,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Les benchmarks standard ne mesurent pas la qualité créative — testez directement avec vos propres prompts.',
@@ -12400,6 +12514,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '標準ベンチマーク（MMLU、HumanEval）は創作文章の品質を測定しません。自分のサンプルプロンプトで直接評価してください。',
@@ -12560,6 +12676,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '标准基准（MMLU、HumanEval）无法测量创意写作质量——直接用自己的示例提示测试模型。',
@@ -12735,7 +12853,7 @@ print(response.choices[0].message.content)`,
         dateModified: '2026-04-05',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models',
         'inLanguage': 'en',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
         about: [
@@ -12777,6 +12895,8 @@ print(response.choices[0].message.content)`,
       },
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Best reasoning at small scale**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, runs on 4 GB RAM.',
@@ -12987,7 +13107,7 @@ print(response.choices[0].message.content)`,
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models?lang=de',
         'inLanguage': 'de',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Phi-4 Mini 3.8B' },
@@ -13011,7 +13131,8 @@ print(response.choices[0].message.content)`,
         ],
       },
       sections: {
-        tldr: { isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
         whatIsSmall: { title: 'Was ist ein „kleines" lokales LLM und wann sollten Sie eines verwenden?', content: ['Ein kleines lokales LLM ist typischerweise definiert als ein Modell mit weniger als 4 Milliarden Parametern. Bei Q4_K_M-Quantisierung benötigen diese Modelle 1,5–3 GB RAM — gut innerhalb der Einschränkungen von Einstiegs-Laptops mit 4–8 GB Gesamtspeicher.', 'Seit April 2026 sind kleine Modelle geeignet für: schnelle Zusammenfassung, einfache F&A, Erklärung von Code-Snippets, Übersetzung kurzer Texte und Klassifizierungsaufgaben. Sie sind nicht geeignet für mehrstufiges Reasoning, komplexe Code-Generierung oder das Verfassen langer kohärenter Dokumente.', 'Die Qualitätslücke zwischen einem 3B- und 7B-Modell ist erheblich — ungefähr der Lücke zwischen GPT-3.5 Mini und GPT-3.5 Turbo entsprechend. Für Benutzer mit 8 GB RAM ist ein 7B-Modell bei Q4_K_M fast immer die bessere Wahl. Siehe [Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) für 7B-Empfehlungen.'] },
         phi4mini: { title: 'Phi-4 Mini 3.8B — Beste Reasoning-Leistung in der Sub-4B-Klasse', content: ['Microsoft Phi-4 Mini erreicht 68% bei MMLU und 70% bei HumanEval — Werte, die viele vor 2025 veröffentlichte 7B-Modelle übertreffen. Dies ist möglich, weil Phi-4 Mini auf einem kuratierten synthetischen Datensatz trainiert wurde, der auf Reasoning und Problemlösung fokussiert ist.', 'Seit April 2026 ist Phi-4 Mini die empfohlene Wahl für Benutzer, die hauptsächlich Reasoning oder Code-Unterstützung auf Hardware mit 4–6 GB RAM benötigen.'], rows: [{ 'Spec': 'MMLU', 'Value': '68%' }, { 'Spec': 'HumanEval', 'Value': '70%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '30–50 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run phi4-mini' }], columns: ['Spec', 'Value'] },
         gemma2: { title: 'Gemma 2 2B — Schnellstes kleines lokales LLM auf CPU', content: ['Google Gemma 2 2B generiert 40–60 Token/Sek auf einer modernen Laptop-CPU — das schnellste Modell in dieser Qualitätsklasse. Sein 1,7-GB-RAM-Footprint lässt viel Speicher für Betriebssystem und andere Anwendungen auf einer 4-GB-Maschine.', 'Die Qualität ist niedriger als Phi-4 Mini bei Reasoning. Das 8K-Kontextfenster ist eine praktische Einschränkung für längere Dokumente. Gemma 2 2B ist die richtige Wahl, wenn Antwortgeschwindigkeit wichtiger ist als Ausgabetiefe.'], rows: [{ 'Spec': 'MMLU', 'Value': '52%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~1,7 GB' }, { 'Spec': 'Kontext', 'Value': '8K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '40–60 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run gemma2:2b' }], columns: ['Spec', 'Value'] },
@@ -13044,7 +13165,7 @@ print(response.choices[0].message.content)`,
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models?lang=fr',
         'inLanguage': 'fr',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Phi-4 Mini 3.8B' },
@@ -13088,7 +13209,7 @@ print(response.choices[0].message.content)`,
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models?lang=ja',
         'inLanguage': 'ja',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Phi-4 Mini 3.8B' },
@@ -13113,6 +13234,8 @@ print(response.choices[0].message.content)`,
       },
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**小規模スケールでの最高の推論**: Phi-4 Mini 3.8B — 68% MMLU、70% HumanEval、4 GB RAMで動作。',
@@ -13309,7 +13432,7 @@ print(response.choices[0].message.content)`,
         dateModified: '2026-04-04',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models?lang=zh',
         'inLanguage': 'zh',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
           { '@type': 'Thing', name: 'Phi-4 Mini 3.8B' },
@@ -13334,6 +13457,8 @@ print(response.choices[0].message.content)`,
       },
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**小规模规模的最佳推理**: Phi-4 Mini 3.8B — 68% MMLU，70% HumanEval，运行于4 GB RAM。',
@@ -13542,6 +13667,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Q4_K_M quantization: Llama 3.3 70B requires ~40 GB RAM; Qwen2.5 72B requires ~43 GB RAM.',
@@ -13969,6 +14096,8 @@ print(response.choices[0].message.content)`,
   },
   sections: {
     tldr: {
+      id: 'key-takeaways',
+
       isTldr: true,
       items: [
         'Q4_K_M Quantisierung: Llama 3.3 70B benötigt etwa 40 GB RAM; Qwen2.5 72B benötigt etwa 43 GB RAM.',
@@ -14129,6 +14258,8 @@ print(response.choices[0].message.content)`,
   ],
   sections: {
     tldr: {
+      id: 'key-takeaways',
+
       isTldr: true,
       items: [
         'Quantification Q4_K_M : Llama 3.3 70B nécessite ~40 Go RAM ; Qwen2.5 72B nécessite ~43 Go RAM.',
@@ -14401,7 +14532,7 @@ print(response.choices[0].message.content)`,
     dateModified: '2026-04-04',
     url: 'https://www.promptquorum.com/local-llms/70b-models-consumer-hardware?lang=ja',
     inLanguage: 'ja',
-    author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+    author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
       { '@type': 'Thing', name: 'Llama 3.3 70B' },
@@ -14429,6 +14560,8 @@ print(response.choices[0].message.content)`,
   },
   sections: {
     tldr: {
+      id: 'key-takeaways',
+
       isTldr: true,
       items: [
         'Q4_K_M 量化：Llama 3.3 70B は ~40GB RAM が必要。Qwen2.5 72B は ~43GB RAM が必要です。',
@@ -14626,6 +14759,8 @@ print(response.choices[0].message.content)`,
   ],
   sections: {
     tldr: {
+      id: 'key-takeaways',
+
       isTldr: true,
       numberedItems: [
         'Q4_K_M 量化：Llama 3.3 70B 需要约 40 GB 内存；Qwen2.5 72B 需要约 43 GB 内存。',
@@ -14960,6 +15095,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Quantization converts 16-bit model weights to 4-bit or 8-bit, reducing RAM by 50–75%.',
@@ -15268,6 +15405,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Quantisierung konvertiert 16-Bit-Modellgewichte zu 4-Bit oder 8-Bit und reduziert RAM um 50–75%.',
@@ -15623,6 +15762,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'La quantification convertit les poids 16 bits en 4 bits ou 8 bits, réduisant la RAM de 50–75%.',
@@ -15960,6 +16101,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '量子化はモデルの重みを32ビットから4～8ビットに圧縮し、VRAM使用量を50～75%削減する技術です。',
@@ -16296,6 +16439,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '量化将模型权重从32位压缩到4～8位，RAM使用量减少50～75%。',
@@ -16622,6 +16767,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Best multilingual family**: Qwen2.5 — 29 native languages, highest non-English benchmark scores at every model size.',
@@ -16785,6 +16932,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Qwen2.5 7B** ist das beste lokale Modell für Chinesisch, Japanisch und Koreanisch (5 Sterne für Chinesisch, 4 Sterne für Japanisch/Koreanisch).',
@@ -17296,6 +17445,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Qwen2.5 7B** est le meilleur modèle local pour le chinois, le japonais et le coréen (5 étoiles pour le chinois, 4 étoiles pour le japonais/coréen).',
@@ -17782,6 +17933,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Qwen2.5 7B** は中国語、日本語、韓国語の最適なローカルモデル（中国語5つ星、日本語/韓国語4つ星）。',
@@ -18299,7 +18452,7 @@ print(response.choices[0].message.content)`,
           { '@type': 'Thing', 'name': 'Lost in the middle LLM' },
           { '@type': 'Thing', 'name': 'Ollama num_ctx' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -18794,7 +18947,7 @@ print(response.choices[0].message.content)`,
         'inLanguage': 'zh',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -19210,7 +19363,7 @@ print(response.choices[0].message.content)`,
           { '@type': 'Thing', 'name': 'Gemma 4 Ollama' },
           { '@type': 'Thing', 'name': 'Qwen2.5-Coder Ollama' },
         ],
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro'] },
       },
@@ -19353,6 +19506,8 @@ print(response.choices[0].message.content)`,
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Llama am meisten heruntergeladen**: Meta Llama 3.1/3.2/3.3 sind bei Weitem die am häufigsten heruntergeladenen Modelle auf Ollama (42 % aller Downloads im Q1 2026).',
@@ -19709,6 +19864,8 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Llama le plus téléchargé** : Meta Llama 3.1/3.2/3.3 sont de loin les modèles les plus téléchargés sur Ollama (42 % de tous les téléchargements au T1 2026).',
@@ -20058,6 +20215,8 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Llamaが最多DL**：Meta Llama 3.1/3.2/3.3は圧倒的にOllamaでダウンロード数が多いモデル（Q1 2026全体の42%）。',
@@ -20415,6 +20574,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**最多下载的模型**：Llama 3.1 8B（通用、初学者首选、6.5GB RAM）',
@@ -20747,6 +20908,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Biggest Q1 2026 release**: Google Gemma 3 (February 2026) — 1B, 4B, 9B, and 27B variants, vision support on all sizes, Apache 2.0 licence.',
@@ -21060,6 +21223,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Größter Q1 2026 Release**: Google Gemma 3 (Februar 2026) — 1B, 4B, 9B und 27B Varianten, Vision-Support auf allen Größen, Apache 2.0 Lizenz.',
@@ -21274,6 +21439,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Plus grande release Q1 2026** : Google Gemma 3 (février 2026) — variantes 1B, 4B, 9B et 27B, support vision sur toutes les tailles, licence Apache 2.0.',
@@ -21478,6 +21645,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Local LLMs cost $0 per token after hardware. Cloud APIs cost $0.15–$60 per 1M tokens depending on the model.',
@@ -21621,7 +21790,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'url': 'https://www.promptquorum.com/local-llms/local-llms-vs-cloud-apis',
         'inLanguage': 'en',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Local LLM vs cloud API' },
@@ -21701,6 +21870,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Lokale LLMs kosten $0 pro Token nach der Hardware-Investition. Cloud-APIs kosten $0,15\u2013$60 pro 1\u00a0Mio. Tokens je nach Modell.',
@@ -21952,6 +22123,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           title: 'Points clés',
           items: [
@@ -22197,6 +22370,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           title: '重要ポイント',
           items: [
@@ -22442,6 +22617,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           title: '核心要点',
           items: [
@@ -22700,7 +22877,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'url': 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio',
         'inLanguage': 'en',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -22746,6 +22923,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       },
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'As of April 2026, Ollama and LM Studio are the two dominant local LLM tools. Both run the same models and produce identical inference speed.',
@@ -22973,6 +23152,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Ollama ist kommandozeilengesteuert und läuft als Dienst. LM Studio ist eine eigenständige GUI-Anwendung.',
@@ -23170,7 +23351,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'url': 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio?lang=de',
         'inLanguage': 'de',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -23249,6 +23430,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Ollama est commandé par ligne de commande et s\'exécute en tant que service. LM Studio est une application GUI autonome.',
@@ -23438,7 +23621,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'url': 'https://www.promptquorum.com/local-llms/ollama-vs-lm-studio?lang=fr',
         'inLanguage': 'fr',
         'proficiencyLevel': 'Beginner',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Ollama' },
@@ -23515,6 +23698,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Ollama はコマンドラインベースでサービスとして動作。LM Studio はスタンドアロン GUI アプリケーション。',
@@ -23781,6 +23966,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Ollama 是命令行驱动，作为服务运行。LM Studio 是独立的 GUI 应用程序。',
@@ -24047,6 +24234,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       gammaDescription: 'The slide deck below covers 8 local LLM frontends — Open WebUI (25,000+ stars, RAG), Enchanted UI (fastest), Jan AI (desktop), Continue.dev (code) — with feature comparison table, setup guide, regional compliance context (EU/GDPR, Japan, China), and 5 common mistakes. Download the PDF as a Local LLM Frontend reference card.',
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'A local LLM frontend is the chat interface you use to talk to your model. Ollama provides the API; the frontend is the UI.',
@@ -24361,6 +24550,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       gammaDescription: 'Die Folien vergleichen 8 lokale LLM-Frontends — Open WebUI (25.000+ Sterne, RAG), Enchanted UI (schnellstes), Jan AI (Desktop), Continue.dev (Code) — mit Funktionsvergleichstabelle, Einrichtungsanleitung, regionalem Compliance-Kontext (DSGVO, BSI, Japan, China) und 5 häufigen Fehlern. Als PDF-Referenzkarte für lokale LLM-Frontends herunterladen.',
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Ein lokales LLM-Frontend ist die Chat-Oberfläche, die Sie zum Sprechen mit Ihrem Modell verwenden. Ollama bietet die API; das Frontend ist die Benutzeroberfläche.',
@@ -24670,6 +24861,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       gammaDescription: 'La présentation compare 8 interfaces LLM locales — Open WebUI (25 000+ étoiles, RAG), Enchanted UI (la plus rapide), Jan AI (bureau), Continue.dev (code) — avec tableau comparatif, guide de configuration, contexte RGPD/CNIL, Japon et Chine, et 5 erreurs courantes. Téléchargez le PDF comme fiche de référence des interfaces LLM locales.',
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Une interface LLM locale est le chat avec lequel vous parlez à votre modèle. Ollama fournit l\'API ; l\'interface est l\'IU.',
@@ -24993,6 +25186,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       gammaDescription: 'このスライドデッキは8つのローカルLLMフロントエンドを比較します — Open WebUI（25,000+スター、RAG）、Enchanted UI（最速）、Jan AI（デスクトップ）、Continue.dev（コード）— 機能比較表、セットアップガイド、地域コンプライアンス（GDPR、METI、中国）、5つのよくある間違いを含みます。ローカルLLMフロントエンドのPDFリファレンスカードとしてダウンロードできます。',
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'ローカルLLMフロントエンドはモデルとチャットするUIです。OllamaがAPI提供；フロントエンドはUI。',
@@ -25316,6 +25511,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       gammaDescription: '幻灯片对比8个本地LLM前端 — Open WebUI（25,000+星、RAG）、Enchanted UI（最速）、Jan AI（桌面）、Continue.dev（代码）— 包含功能对比表、设置指南、区域合规背景（EU/GDPR、日本METI、中国数据安全法）和5个常见错误。下载PDF作为本地LLM前端参考卡。',
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '本地LLM前端是与模型聊天的UI。Ollama提供API；前端是UI。',
@@ -25645,6 +25842,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'An inference engine is the C/C++/Python software that loads a model file and generates tokens. It is separate from the UI or API layer.',
@@ -25858,7 +26057,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'inLanguage': 'en',
         'datePublished': '2026-04-04',
         'dateModified': '2026-04-12',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
           { '@type': 'Thing', 'name': 'vLLM' },
@@ -26003,6 +26202,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
     sections: {
       tldr: {
+        id: 'key-takeaways',
+
         isTldr: true,
         items: [
           'Eine Inference-Engine ist die C/C++/Python-Software, die eine Modelldatei lädt und Tokens generiert. Sie ist vom UI oder API-Layer getrennt.',
@@ -26270,6 +26471,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Un moteur d\'inférence est le logiciel C/C++/Python qui charge un fichier modèle et génère des tokens. Il est séparé de la couche UI ou API.',
@@ -26615,6 +26818,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '推論エンジンは、モデルファイルをロードしてトークンを生成する C/C++/Python ソフトウェアです。UI または API レイヤーとは別です。',
@@ -26956,6 +27161,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '推理引擎是加载模型文件并生成令牌的 C/C++/Python 软件。与 UI 或 API 层分离。',
@@ -27709,7 +27916,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       gammaEmbedUrl: '/presentations/local-llm-openai-compatible-api-static.html',
       gammaDescription: 'Die Präsentation unten behandelt: den OpenAI-kompatiblen API-Standard, Ollama-Endpoint-Setup, Python- und Node.js-Integration in 3 Schritten, Streaming, Function Calling und regionale Compliance. PDF als lokale LLM-API-Referenzkarte herunterladen.',
       sections: {
-        tldr: { isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
         whatIsSmall: { title: 'Was ist ein „kleines" lokales LLM und wann sollten Sie eines verwenden?', content: ['Ein kleines lokales LLM ist typischerweise definiert als ein Modell mit weniger als 4 Milliarden Parametern. Bei Q4_K_M-Quantisierung benötigen diese Modelle 1,5–3 GB RAM — gut innerhalb der Einschränkungen von Einstiegs-Laptops mit 4–8 GB Gesamtspeicher.', 'Seit April 2026 sind kleine Modelle geeignet für: schnelle Zusammenfassung, einfache F&A, Erklärung von Code-Snippets, Übersetzung kurzer Texte und Klassifizierungsaufgaben. Sie sind nicht geeignet für mehrstufiges Reasoning, komplexe Code-Generierung oder das Verfassen langer kohärenter Dokumente.', 'Die Qualitätslücke zwischen einem 3B- und 7B-Modell ist erheblich — ungefähr der Lücke zwischen GPT-3.5 Mini und GPT-3.5 Turbo entsprechend. Für Benutzer mit 8 GB RAM ist ein 7B-Modell bei Q4_K_M fast immer die bessere Wahl. Siehe [Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) für 7B-Empfehlungen.'] },
         phi4mini: { title: 'Phi-4 Mini 3.8B — Beste Reasoning-Leistung in der Sub-4B-Klasse', content: ['Microsoft Phi-4 Mini erreicht 68% bei MMLU und 70% bei HumanEval — Werte, die viele vor 2025 veröffentlichte 7B-Modelle übertreffen. Dies ist möglich, weil Phi-4 Mini auf einem kuratierten synthetischen Datensatz trainiert wurde, der auf Reasoning und Problemlösung fokussiert ist.', 'Seit April 2026 ist Phi-4 Mini die empfohlene Wahl für Benutzer, die hauptsächlich Reasoning oder Code-Unterstützung auf Hardware mit 4–6 GB RAM benötigen.'], rows: [{ 'Spec': 'MMLU', 'Value': '68%' }, { 'Spec': 'HumanEval', 'Value': '70%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '30–50 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run phi4-mini' }], columns: ['Spec', 'Value'] },
         gemma2: { title: 'Gemma 2 2B — Schnellstes kleines lokales LLM auf CPU', content: ['Google Gemma 2 2B generiert 40–60 Token/Sek auf einer modernen Laptop-CPU — das schnellste Modell in dieser Qualitätsklasse. Sein 1,7-GB-RAM-Footprint lässt viel Speicher für Betriebssystem und andere Anwendungen auf einer 4-GB-Maschine.', 'Die Qualität ist niedriger als Phi-4 Mini bei Reasoning. Das 8K-Kontextfenster ist eine praktische Einschränkung für längere Dokumente. Gemma 2 2B ist die richtige Wahl, wenn Antwortgeschwindigkeit wichtiger ist als Ausgabetiefe.'], rows: [{ 'Spec': 'MMLU', 'Value': '52%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~1,7 GB' }, { 'Spec': 'Kontext', 'Value': '8K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '40–60 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run gemma2:2b' }], columns: ['Spec', 'Value'] },
@@ -27927,6 +28135,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'LM Studio has advanced settings in the Settings → Server tab (GPU options, context length).',
@@ -28829,6 +29039,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '`ollama pull <model>` — Download a model (e.g., `ollama pull llama3.2:3b`).',
@@ -28986,6 +29198,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'RAG = upload documents + let the model answer questions about them, citing sources.',
@@ -29142,6 +29356,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Desktop apps** (LM Studio, Jan AI): Simple, single-user, no server setup. Best for consumers.',
@@ -29292,6 +29508,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'VS Code uses Continue.dev extension to connect to local models (Ollama, LM Studio, vLLM).',
@@ -29527,6 +29745,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'VS Code nutzt die Continue.dev-Erweiterung, um sich mit lokalen Modellen zu verbinden (Ollama, LM Studio, vLLM).',
@@ -29700,6 +29920,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'VS Code utilise l\'extension Continue.dev pour se connecter aux modèles locaux (Ollama, LM Studio, vLLM).',
@@ -29872,6 +30094,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'VS CodeはContinue.dev拡張機能を使用してローカルモデル（Ollama、LM Studio、vLLM）に接続します。',
@@ -30044,6 +30268,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'VS Code使用Continue.dev扩展连接到本地模型（Ollama、LM Studio、vLLM）。',
@@ -30222,6 +30448,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Headless = no chat UI, just API. Ollama, vLLM, and LM Studio all can run headless.',
@@ -30373,6 +30601,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**VRAM math**: (Model size in GB) ÷ Quantization = VRAM needed. Example: 70B at Q4 = 70 ÷ 8 = 8.75 GB × parameters ≈ 39 GB total.',
@@ -30891,6 +31121,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**VRAM-Mathematik**: (Modellgröße in GB) ÷ Quantisierung = erforderlicher VRAM. Beispiel: 70B-Modell bei 4-Bit = 70 ÷ 8 = 8,75 GB.',
@@ -31143,6 +31375,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Mathématiques VRAM**: (Taille modèle en GB) ÷ Quantisation = VRAM nécessaire. Exemple: modèle 70B à 4 bits = 70 ÷ 8 = 8,75 GB.',
@@ -31395,6 +31629,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**VRAM数学**: (GB単位のモデルサイズ) ÷ 量子化 = 必要なVRAM。例: 4ビットの70Bモデル = 70 ÷ 8 = 8.75 GB。',
@@ -31647,6 +31883,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**VRAM数学**：(GB单位的模型大小) ÷ 量化 = 所需VRAM。示例：4位70B模型 = 70 ÷ 8 = 8.75 GB。',
@@ -31899,6 +32137,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'VRAM = (Model Size × Quantization Bits) ÷ 8',
@@ -32025,6 +32265,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**GPU (NVIDIA RTX 4090)**: 150 tokens/sec for 7B models. Best performance, highest cost ($1800).',
@@ -32154,6 +32396,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Quantization**: FP16 → Q8 → Q5 → Q4. Each step halves file size, reduces VRAM by 25–50%. Quality impact: negligible at Q5, minor at Q4.',
@@ -32277,6 +32521,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Disable logging/debugging** (easy): ~10% speed gain.',
@@ -32397,6 +32643,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Best overall value (2026):** RTX 4070 Ti ($600, handles 7–13B models).',
@@ -32518,6 +32766,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Llama 3.1 70B at Q4 = 35 GB (too large for 24GB). At Q3 = 26 GB (still too large). At Q2 = 17 GB (fits!).',
@@ -32643,6 +32893,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'RTX 4090: 575W. Needs 1200W PSU, excellent case airflow.',
@@ -32756,6 +33008,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Multi-GPU: Split a large model across 2+ GPUs. Example: 70B model split evenly across 2× RTX 4090 = 48 GB total VRAM.',
@@ -32862,6 +33116,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Laptop**: 7–13B models, ~15–25 tok/sec, $1500–3000, portable.',
@@ -32961,6 +33217,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**iPhone (A18)**: 1–3B models, ~3 tok/sec. Llama 3.2 1B is practical.',
@@ -33070,6 +33328,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'RAG = upload documents + retrieval + local LLM answering. No training required.',
@@ -33245,6 +33505,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'LoRA = add small trainable layers to a pre-trained model. Only 1–5% of model weights are trainable, dramatically reducing VRAM and time.',
@@ -33507,6 +33769,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'AI agent = LLM + tools + loop. LLM decides which tool to use, executes, observes result, decides next action.',
@@ -33664,6 +33928,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Local 7B models need more explicit guidance than GPT-4o. Longer prompts, clearer instructions.',
@@ -33777,6 +34043,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Privacy:** Data never leaves your infrastructure. Critical for HIPAA, GDPR, financial services.',
@@ -33890,6 +34158,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Best coding models (2026):** Qwen2.5-Coder 7B (72% HumanEval), Llama Code 13B (74%), Mistral 7B (61%).',
@@ -33997,6 +34267,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Multimodal = text + images (+ audio).** Process images natively without OCR preprocessing.',
@@ -34106,6 +34378,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Cloud agents (GPT-4, Claude 4.6):** Fastest (50–200ms/step), most capable, most expensive, no privacy.',
@@ -34228,6 +34502,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Fine-tuning (recommended):** 8 GB VRAM, 500+ training examples, 1–4 hours. Cost: $100–500.',
@@ -34349,6 +34625,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Trend 1:** Smaller, more efficient models (1–3B) approaching 7B quality.',
@@ -34455,6 +34733,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Cost:** Enterprises processing 1B+ tokens/month save $100k–500k annually by eliminating per-token API fees.',
@@ -34625,6 +34905,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Air-gapped = completely isolated from internet. Zero network connectivity to external systems.',
@@ -34795,6 +35077,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**GDPR (Article 44):** Personal data must stay in EU, data subjects have rights (access, deletion, portability). Cloud APIs violate this.',
@@ -34958,6 +35242,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Single machine:** 1 GPU, 10–50 concurrent users, simple setup.',
@@ -35117,6 +35403,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Corporate RAG = internal knowledge base.** Upload all corporate documents, let employees ask questions.',
@@ -35276,6 +35564,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'RTX 3060 12GB ($200–250 used) is the best overall budget pick for 7B–13B models.',
@@ -35496,6 +35786,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'RTX 3060 12GB (€150–190 gebraucht) ist die beste Budget-Wahl für 7B–13B-Modelle.',
@@ -35689,7 +35981,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
-        tldr: { isTldr: true, items: ['RTX 3060 12GB (200–250 € d\'occasion) est le meilleur choix global pour les modèles 7B–13B.', 'RTX 4060 Ti 8GB (280–320 €) offre une technologie plus récente et une meilleure efficacité mais moins de VRAM.', 'N\'achetez jamais une carte 2GB ou 4GB pour les LLM locaux—le VRAM minimum viable est 8GB pour une inférence confortable.', 'Les cartes enterprise d\'occasion (RTX A2000, RTX A4000) offrent un excellent VRAM 12GB–16GB pour 150–250 €.', 'Budgétisez 300–400 € pour le GPU, 400–500 € pour le reste du système (CPU, RAM, SSD) pour éviter les goulots.', 'Évitez la RAM DDR5 et les CPU haut de gamme avec les GPU budget—ils n\'améliorent pas la vitesse des LLM.'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, items: ['RTX 3060 12GB (200–250 € d\'occasion) est le meilleur choix global pour les modèles 7B–13B.', 'RTX 4060 Ti 8GB (280–320 €) offre une technologie plus récente et une meilleure efficacité mais moins de VRAM.', 'N\'achetez jamais une carte 2GB ou 4GB pour les LLM locaux—le VRAM minimum viable est 8GB pour une inférence confortable.', 'Les cartes enterprise d\'occasion (RTX A2000, RTX A4000) offrent un excellent VRAM 12GB–16GB pour 150–250 €.', 'Budgétisez 300–400 € pour le GPU, 400–500 € pour le reste du système (CPU, RAM, SSD) pour éviter les goulots.', 'Évitez la RAM DDR5 et les CPU haut de gamme avec les GPU budget—ils n\'améliorent pas la vitesse des LLM.'] },
         'what-gpu-budget': { title: 'Quel budget GPU devriez-vous allouer?', content: ['Pour un système LLM local fonctionnel, prévoyez **800–1 200 € de coût total du système**, avec **GPU = 30–40% de ce budget** (~300–400 €).', 'Un GPU à 300 € associé à un CPU à 30 € crée des goulots. Un GPU à 1 500 € avec une carte mère à 30 € gaspille de l\'argent.', 'En avril 2026, le pic performance-par-euro se situe dans la gamme 300–400 € (RTX 3060–4070 Super d\'occasion).'] },
         'which-budget-gpus': { title: 'Quels GPU budget offrent la meilleure valeur en 2026?', items: ['**RTX 3060 12GB** (200–250 € d\'occasion): Toujours le roi du budget. Exécute Llama 3.3 7B, Mistral 7B et Qwen 2.5 7B sans à-coups. Architecture plus ancienne, mais 12GB VRAM est précieux.', '**RTX 4060 Ti 8GB** (280–320 € neuf, 200–250 € d\'occasion): Plus récent, 35% plus rapide par TFLOP que 3060. Inconvénient: seulement 8GB. Bon pour 7B, serré pour 13B.', '**RTX 4070 Super** (400–450 €): Déjà dans le territoire "milieu de gamme", mais 100–150 € de plus que 4060 Ti. Exécute les modèles 13B et certains 22B. Excessif si vous ne voulez que 7B.', '**RTX A4000 (Enterprise, d\'occasion)** (180–230 €): 16GB VRAM, professionnel, légèrement plus lent que RTX 3060 par image mais excellent rapport VRAM-prix.'] },
         'best-for-each-use': { title: 'Quel modèle est le meilleur pour chaque cas d\'usage?', content: ['**Codage (Qwen 2.5 7B)**: Qwen 2.5 7B excelle à la génération de code et au raisonnement. Nécessite RTX 3060 12GB ou RTX 4060 Ti 8GB. Idéal sur les cartes enterprise RTX A6000 si disponibles pour les modèles 32B+.', '**Raisonnement Anglais (Llama 3.3)**: Llama 3.3 est le meilleur modèle polyvalent pour le raisonnement factuel. Llama 3.3 70B nécessite 48GB VRAM (RTX 6000 ou A100). La version 7B tient sur n\'importe quel GPU 8GB+.', '**Utilisation locale légère (Mistral 7B)**: Mistral 7B est le modèle haut de gamme le plus léger. S\'exécute confortablement sur RTX 3060 12GB ou RTX 4060 Ti 8GB. Parfait pour l\'inférence portative.'] },
@@ -35745,7 +36038,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: 'よくある質問', anchor: '#faq' },
       ],
       sections: {
-        tldr: { isTldr: true, items: ['RTX 3060 12GB（中古200～250ドル）は7B～13Bモデルの最高の全体的なバジェット選択肢です。', 'RTX 4060 Ti 8GB（280～320ドル）は新しいテクノロジーと優れた効率を提供しますがVRAMは少なくなります。', 'ローカルLLM用に2GBまたは4GBカードを決して購入しないでください。快適な推論のための最小限のVRAMは8GBです。', '中古企業GPU（RTX A2000、RTX A4000）は150～250ドルで優れた12GB～16GBVRAMを提供します。', 'ボトルネック回避のためGPUに300～400ドル、残りのシステム（CPU、RAM、SSD）に400～500ドルを予算化します。', 'バジェットGPUではDDR5 RAMとハイエンドCPUを避けてください。これらはLLM速度を向上させません。'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, items: ['RTX 3060 12GB（中古200～250ドル）は7B～13Bモデルの最高の全体的なバジェット選択肢です。', 'RTX 4060 Ti 8GB（280～320ドル）は新しいテクノロジーと優れた効率を提供しますがVRAMは少なくなります。', 'ローカルLLM用に2GBまたは4GBカードを決して購入しないでください。快適な推論のための最小限のVRAMは8GBです。', '中古企業GPU（RTX A2000、RTX A4000）は150～250ドルで優れた12GB～16GBVRAMを提供します。', 'ボトルネック回避のためGPUに300～400ドル、残りのシステム（CPU、RAM、SSD）に400～500ドルを予算化します。', 'バジェットGPUではDDR5 RAMとハイエンドCPUを避けてください。これらはLLM速度を向上させません。'] },
         'what-gpu-budget': { title: 'GPUバジェットはいくら割り当てるべきか？', content: ['機能的なローカルLLMリグの場合、**合計システムコスト700～1,000ドル**を計画し、**GPU = 予算の30～40%**（約250～400ドル）にしてください。', '250ドルのGPUと100ドルのCPUはボトルネックを生じます。2,000ドルのGPUと30ドルのマザーボードは金を浪費します。', '2026年4月の時点で、パフォーマンス対ドルのピークは250～350ドル範囲（中古RTX 3060～4070 Super）にあります。'] },
         'which-budget-gpus': { title: '2026年にどのバジェットGPUが最良の価値を提供するか？', items: ['**RTX 3060 12GB**（中古200～250ドル）：相変わらずバジェットの王。Llama 3.3 7B、Mistral 7B、Qwen 2.5 7Bをスムーズに実行します。古いアーキテクチャですが12GB VRAMは貴重です。', '**RTX 4060 Ti 8GB**（新品280～320ドル、中古200～250ドル）：より新しく、3060より1フロップあたり35%高速。欠点：わずか8GB。7Bに最適、13Bではきつい。', '**RTX 4070 Super**（400～450ドル）：既に「ミッドレンジ」領域ですが、4060 Tiより100～150ドル多い。13Bと一部の22Bモデルを実行します。7Bのみを希望する場合は過剰です。', '**RTX A4000（エンタープライズ、中古）**（180～230ドル）：16GB VRAM、プロフェッショナルグレード、フレームあたりRTX 3060より若干遅いが優れたVRAM対費用比。'] },
         'best-for-each-use': { title: 'ユースケース別にどのモデルが最適か？', content: ['**コーディング（Qwen 2.5 7B）**：Qwen 2.5 7Bはコード生成と推論に優れています。RTX 3060 12GBまたはRTX 4060 Ti 8GBが必要です。32B+モデル用に利用可能な場合はRTX A6000エンタープライズカードに最適。', '**英語推論（Llama 3.3）**：Llama 3.3は事実ベースの推論に最適な汎用モデルです。Llama 3.3 70Bは48GB VRAM（RTX 6000またはA100）が必要です。7Bバージョンはあらゆる8GB+ GPUに適合します。', '**軽量ローカル使用（Mistral 7B）**：Mistral 7Bは最も軽量の高品質モデルです。RTX 3060 12GBまたはRTX 4060 Ti 8GBで快適に実行されます。ノートブック推論に最適。'] },
@@ -35802,6 +36096,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'RTX 3060 12GB（二手200-250美元）是7B-13B模型的最佳整体预算选择。',
@@ -36001,6 +36297,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'RTX 5090 is ~20–25% faster than RTX 4090 for local LLM inference (measured tokens/sec).',
@@ -36094,7 +36392,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       primaryTerm: 'GPU Budget',
       toc: [],
       sections: {
-        tldr: { isTldr: true, items: ['RTX 3060 12GB (150–190€) meilleur choix budget pour 7B–13B.', 'RTX 4060 Ti 8GB (220–250€) technologie plus récente, moins VRAM.', 'Évitez cartes 2GB/4GB pour LLMs—minimum 8GB VRAM.', 'Cartes enterprise occasion: 12GB–16GB VRAM pour 100–200€.', 'Budget: 200–300€ GPU, 300–400€ reste système (CPU, RAM, SSD).', 'Évitez DDR5 RAM et CPU haut-gamme avec GPU budget.'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, items: ['RTX 3060 12GB (150–190€) meilleur choix budget pour 7B–13B.', 'RTX 4060 Ti 8GB (220–250€) technologie plus récente, moins VRAM.', 'Évitez cartes 2GB/4GB pour LLMs—minimum 8GB VRAM.', 'Cartes enterprise occasion: 12GB–16GB VRAM pour 100–200€.', 'Budget: 200–300€ GPU, 300–400€ reste système (CPU, RAM, SSD).', 'Évitez DDR5 RAM et CPU haut-gamme avec GPU budget.'] },
         'quick-answer': { title: 'Quels modèles gagnent?', content: ['✅ **Meilleur:** Llama 3.3 (ouvert, capable, largement optimisé)', '✅ **Codage:** Qwen 2.5 (compréhension code spécialisée)', '✅ **Léger:** Mistral 7B (VRAM minimal, inférence rapide)', '✅ **Budget GPU:** RTX 3060 12GB (150–190€ occasion)'] },
         'faqSection': { title: 'Questions Fréquentes', faqs: [{ q: 'RTX 3060 12GB vaut peine 2026?', a: '4+ ans ancienneté, mais 12GB VRAM intemporel. Llama 3.3 8B et Mistral 7B fluides.' }, { q: 'RTX 4060 ou RTX 4060 Ti pour LLMs?', a: 'RTX 4060 Ti. Ti meilleur prix RTX 40-série pour LLMs.' }, { q: 'GPU pour PME française?', a: 'RTX 3060 12GB ou A4000 équipes 1–50 personnes. Conformité données France/EU importante.' }] },
       },
@@ -36112,7 +36411,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       primaryTerm: 'バジェットGPU',
       toc: [],
       sections: {
-        tldr: { isTldr: true, items: ['RTX 3060 12GB（€150–190中古）が7B–13B向けベスト選択です。', 'RTX 4060 Ti 8GB（€220–250新品）は最新技術ですが、VRAMが限定的です。', 'ローカルLLM向けに2GB/4GBカードは絶対購入しないでください。', '中古企業カード（RTX A2000、A4000）は12GB–16GB VRAM €100–200で利用可能です。', 'GPU予算€200–300、システム残部€300–400でボトルネック回避。', 'バジェットGPUではDDR5 RAMと高端CPUを避けてください。'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, items: ['RTX 3060 12GB（€150–190中古）が7B–13B向けベスト選択です。', 'RTX 4060 Ti 8GB（€220–250新品）は最新技術ですが、VRAMが限定的です。', 'ローカルLLM向けに2GB/4GBカードは絶対購入しないでください。', '中古企業カード（RTX A2000、A4000）は12GB–16GB VRAM €100–200で利用可能です。', 'GPU予算€200–300、システム残部€300–400でボトルネック回避。', 'バジェットGPUではDDR5 RAMと高端CPUを避けてください。'] },
         'quick-answer': { title: 'ユースケース別最適モデル', content: ['✅ **全体最適：** Llama 3.3（オープン、capable、広く最適化）', '✅ **コーディング：** Qwen 2.5（専門コード理解）', '✅ **軽量：** Mistral 7B（最小VRAM、高速推論）', '✅ **バジェットGPU：** RTX 3060 12GB（€150–190中古）'] },
         'faqSection': { title: 'よくある質問', faqs: [{ q: 'RTX 3060 12GBは2026年も価値がありますか？', a: '4年以上ですが12GB VRAMは時代を超えています。Llama 3.3 8BとMistral 7Bはスムーズに動作。' }, { q: '日本企業向けGPU選択は？', a: 'RTX 3060 12GBまたはA4000は1–50従業員向け。データセキュリティが重要です。' }] },
       },
@@ -36130,7 +36430,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       primaryTerm: '预算GPU',
       toc: [],
       sections: {
-        tldr: { isTldr: true, items: ['RTX 3060 12GB（€150–190二手）是7B–13B型号的最佳预算选择。', 'RTX 4060 Ti 8GB（€220–250新品）提供更新技术，但VRAM有限。', '永远不要为本地LLM购买2GB/4GB卡——最小VRAM是8GB。', '二手企业卡（RTX A2000、A4000）提供12GB–16GB VRAM €100–200。', 'GPU预算€200–300，系统其他部分€300–400避免瓶颈。', '对于预算GPU，避免DDR5 RAM和高端CPU。'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, items: ['RTX 3060 12GB（€150–190二手）是7B–13B型号的最佳预算选择。', 'RTX 4060 Ti 8GB（€220–250新品）提供更新技术，但VRAM有限。', '永远不要为本地LLM购买2GB/4GB卡——最小VRAM是8GB。', '二手企业卡（RTX A2000、A4000）提供12GB–16GB VRAM €100–200。', 'GPU预算€200–300，系统其他部分€300–400避免瓶颈。', '对于预算GPU，避免DDR5 RAM和高端CPU。'] },
         'quick-answer': { title: '按用例最佳模型', content: ['✅ **整体最佳：** Llama 3.3（开源、capable、广泛优化）', '✅ **代码编写：** Qwen 2.5（专业代码理解）', '✅ **轻量级：** Mistral 7B（最小VRAM、快速推理）', '✅ **预算GPU：** RTX 3060 12GB（€150–190二手）'] },
         'faqSection': { title: '常见问题解答', faqs: [{ q: 'RTX 3060 12GB在2026年还值得吗？', a: '4岁以上，但12GB VRAM永不过时。流畅运行Llama 3.3 8B和Mistral 7B。' }, { q: '中国企业GPU选择？', a: 'RTX 3060 12GB或A4000适合1–50员工。数据安全和合规性很重要。' }] },
       },
@@ -36161,6 +36462,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'RTX 3060 12GB used ($200–250) and RTX 3080 10GB used ($350–400) are the safest bets—high volume, stable pricing, proven VRAM health.',
@@ -36285,6 +36588,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '7B models: 8GB minimum (Q4), 10GB comfortable (Q5), 14GB for Q8 full precision.',
@@ -36528,6 +36833,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Modèles 7B: minimum 8 GB (Q4), 10 GB confortable (Q5), 14 GB pour Q8 précision complète.',
@@ -36685,7 +36992,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         headline: 'Combien de VRAM avez-vous besoin pour exécuter un Local LLM en 2026?',
         description: 'VRAM exact pour Local LLMs: 7B nécessite 4–5 GB (Q4), 13B nécessite 8–10 GB, 70B nécessite 35–40 GB. Formule, sélection GPU et compromis de quantification. Guide 2026.',
         dateModified: '2026-04-07',
-        author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about' },
+        'datePublished': '2026-04-04',
+        author: { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.points-cles']
@@ -36758,7 +37066,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: 'Quellen', anchor: '#sources' },
       ],
       sections: {
-        tldr: { isTldr: true, title: 'Zusammenfassung', items: ['7B-Modelle: Minimum 8 GB (Q4), komfortabel 10 GB (Q5), vollständig 14 GB.', '13B-Modelle: Minimum 12 GB (Q4), komfortabel 16 GB (Q5).', '70B-Modelle: Minimum 35–40 GB (Q4) — erfordert 2× RTX 4090 oder A100.', 'Q4-Quantisierung: Reduziert VRAM um 87% gegenüber vollständiger Präzision, unter 1% Qualitätsverlust.', 'Apple Silicon: Einheitlicher Speicher ist vollständig für LLM-Inferenz verfügbar — MacBook Pro M3 18 GB kann Llama3 13B Q4 ausführen.', 'RTX 4060 Ti 8 GB: 7B Q4 ist machbar, aber der Cache ist eng. RTX 4070 12 GB ist sicherer.', 'CPU-Inferenz: Möglich, aber GPU ist 20–40× schneller — praktisch wird ein GPU mit mindestens 8 GB empfohlen.'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, title: 'Zusammenfassung', items: ['7B-Modelle: Minimum 8 GB (Q4), komfortabel 10 GB (Q5), vollständig 14 GB.', '13B-Modelle: Minimum 12 GB (Q4), komfortabel 16 GB (Q5).', '70B-Modelle: Minimum 35–40 GB (Q4) — erfordert 2× RTX 4090 oder A100.', 'Q4-Quantisierung: Reduziert VRAM um 87% gegenüber vollständiger Präzision, unter 1% Qualitätsverlust.', 'Apple Silicon: Einheitlicher Speicher ist vollständig für LLM-Inferenz verfügbar — MacBook Pro M3 18 GB kann Llama3 13B Q4 ausführen.', 'RTX 4060 Ti 8 GB: 7B Q4 ist machbar, aber der Cache ist eng. RTX 4070 12 GB ist sicherer.', 'CPU-Inferenz: Möglich, aber GPU ist 20–40× schneller — praktisch wird ein GPU mit mindestens 8 GB empfohlen.'] },
         formula: { title: 'VRAM-Berechnungsformel für lokale LLMs', content: ['VRAM erforderlich = (Modellparameter in Milliarden × Bits pro Gewicht) ÷ 8 + (KV-Cache + Laufzeit-Overhead)', 'Beispiel: Llama3 7B Q4 = (7 × 4) ÷ 8 + 1,5 GB = 3,5 + 1,5 = 5 GB', 'Q4: 32-Bit-Werte werden auf 4 Bits komprimiert (8× Reduktion).', 'Q8: 32-Bit → 8-Bit (4× Reduktion), nahezu vollständige Präzision.', 'FP32: Keine Kompression, vollständige Präzision, VRAM-intensiv.', 'KV-Cache: Proportional zur Sequenzlänge — 128-Token-Ausgabe +1–2 GB, 2048-Token +5 GB.'] },
         'by-model-size': { title: 'VRAM nach Modellgröße', columns: ['Modellgröße', 'FP32', 'Q8', 'Q5', 'Q4', 'Empfohlene GPU'], rows: [{ 'Modellgröße': '3B', 'FP32': '12 GB', 'Q8': '3 GB', 'Q5': '2 GB', 'Q4': '1,5 GB', 'Empfohlene GPU': 'CPU oder RTX 3060 (3GB)' }, { 'Modellgröße': '7B', 'FP32': '28 GB', 'Q8': '7 GB', 'Q5': '4,5 GB', 'Q4': '3,5 GB', 'Empfohlene GPU': 'RTX 4060 Ti (8GB), RTX 4070 (12GB)' }, { 'Modellgröße': '13B', 'FP32': '52 GB', 'Q8': '13 GB', 'Q5': '8 GB', 'Q4': '7 GB', 'Empfohlene GPU': 'RTX 4080 (16GB), RTX 6800 XT (16GB)' }, { 'Modellgröße': '70B', 'FP32': '280 GB', 'Q8': '70 GB', 'Q5': '44 GB', 'Q4': '35–40 GB', 'Empfohlene GPU': 'Zwei RTX 4090 (24GB×2) oder A100 (80GB)' }, { 'Modellgröße': 'Kontext (KV-Cache)', 'FP32': '+40 GB @ 2048 Token', 'Q8': '+10 GB @ 2048 Token', 'Q5': '+6 GB @ 2048 Token', 'Q4': '+3–5 GB @ 2048 Token', 'Empfohlene GPU': 'Durch Ollama-Kontextlänge und top_k verwaltet' }] },
         quantization: { title: 'Wie reduziert Quantisierung VRAM-Anforderungen?', content: ['Quantisierung komprimiert Modellgewichte zu niedriger Präzision. Die Umwandlung von FP32 (32-Bit) auf Q4 (4-Bit) reduziert Werte um 87%.', '', '**Q4 (4-Bit)**: Standard für Consumer-GPUs. VRAM: 3,5× Reduktion. Qualität: Unter 1% Verlust. Für fast alle Aufgaben empfohlen.', '**Q5 (5-Bit)**: Ähnlich wie Q4, aber 2% bessere Genauigkeit. VRAM: 25% mehr, minimale Qualitätsverbesserung. Nur für fortgeschrittene Anwendungsfälle.', '**Q8 (8-Bit)**: Nahezu vollständige Präzision (<0,5% Verlust). VRAM-Reduktion: 4×. RTX 4080+ empfohlen.', '**FP32 (Vollständige Präzision)**: Alle Gewichte werden mit 32 Bit gespeichert. Auf Consumer-GPUs nicht praktikabel — 70B FP32 benötigt 280 GB VRAM.'] },
@@ -36800,7 +37109,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: '参考資料', anchor: '#sources' },
       ],
       sections: {
-        tldr: { isTldr: true, title: 'ポイント', items: ['7Bモデル: 最小8 GB (Q4)、快適な10 GB (Q5)。', '13Bモデル: 最小12 GB (Q4)、快適な16 GB (Q5)。', '70Bモデル: 最小35–40 GB (Q4)。', 'Q4量子化: 完全精度比87%削減。'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, title: 'ポイント', items: ['7Bモデル: 最小8 GB (Q4)、快適な10 GB (Q5)。', '13Bモデル: 最小12 GB (Q4)、快適な16 GB (Q5)。', '70Bモデル: 最小35–40 GB (Q4)。', 'Q4量子化: 完全精度比87%削減。'] },
         formula: { title: 'VRAM計算式', content: ['VRAM = (十億パラメータ × 重みあたりビット) ÷ 8 + KVキャッシュ + オーバーヘッド', 'Q4: 32ビット→4ビット (8倍削減)。', 'Q8: 32ビット→8ビット (4倍削減)、ほぼ完全精度。'] },
         'by-model-size': { title: 'モデルサイズ別VRAM', columns: ['モデルサイズ', 'FP32', 'Q8', 'Q5', 'Q4', '推奨GPU'], rows: [{ 'モデルサイズ': '7B', 'FP32': '28 GB', 'Q8': '7 GB', 'Q5': '4.5 GB', 'Q4': '3.5 GB', '推奨GPU': 'RTX 4070 (12GB)' }, { 'モデルサイズ': '13B', 'FP32': '52 GB', 'Q8': '13 GB', 'Q5': '8 GB', 'Q4': '7 GB', '推奨GPU': 'RTX 4080 (16GB)' }, { 'モデルサイズ': '70B', 'FP32': '280 GB', 'Q8': '70 GB', 'Q5': '44 GB', 'Q4': '35–40 GB', '推奨GPU': 'デュアルRTX 4090' }] },
         quantization: { title: '量子化', content: ['量子化はモデル重みを低精度に圧縮します。Q4が標準。'] },
@@ -36880,7 +37190,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         { label: '参考资源', anchor: '#sources' },
       ],
       sections: {
-        tldr: { isTldr: true, title: '关键要点', items: ['7B模型: 最少8 GB (Q4)、舒适10 GB (Q5)。', '13B模型: 最少12 GB (Q4)、舒适16 GB (Q5)。', '70B模型: 最少35–40 GB (Q4)。', 'Q4量子化: 减少显存需求87%。'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, title: '关键要点', items: ['7B模型: 最少8 GB (Q4)、舒适10 GB (Q5)。', '13B模型: 最少12 GB (Q4)、舒适16 GB (Q5)。', '70B模型: 最少35–40 GB (Q4)。', 'Q4量子化: 减少显存需求87%。'] },
         formula: { title: '显存计算公式', content: ['显存 = (十亿参数 × 每权重位数) ÷ 8 + KV缓存 + 开销', 'Q4: 32位→4位 (8倍减少)。', 'Q8: 32位→8位 (4倍减少),几乎完全精度。'] },
         'by-model-size': { title: '按模型大小的显存', columns: ['模型大小', 'FP32', 'Q8', 'Q5', 'Q4', '推荐GPU'], rows: [{ '模型大小': '7B', 'FP32': '28 GB', 'Q8': '7 GB', 'Q5': '4.5 GB', 'Q4': '3.5 GB', '推荐GPU': 'RTX 4070 (12GB)' }, { '模型大小': '13B', 'FP32': '52 GB', 'Q8': '13 GB', 'Q5': '8 GB', 'Q4': '7 GB', '推荐GPU': 'RTX 4080 (16GB)' }, { '模型大小': '70B', 'FP32': '280 GB', 'Q8': '70 GB', 'Q5': '44 GB', 'Q4': '35–40 GB', '推荐GPU': '双RTX 4090' }] },
         quantization: { title: '量子化', content: ['量子化将权重压缩至低精度。Q4为消费级GPU标准。'] },
@@ -37040,6 +37351,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'AMD RX 6800 XT (16GB, $300–350 used) and RX 7900 XTX (24GB, $400–500 used) are the only viable options for local LLMs.',
@@ -37169,6 +37482,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'AMD RX 6800 XT (16GB, 300–350 € gebraucht) und RX 7900 XTX (24GB, 400–500 € gebraucht) sind die einzigen praktikablen Optionen für lokale LLMs.',
@@ -37325,6 +37640,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'AMD RX 6800 XT (16 Go, 300–350 € occasion) et RX 7900 XTX (24 Go, 400–500 € occasion) sont les seules options viables pour les LLM locaux.',
@@ -37482,6 +37799,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'AMD RX 6800 XT（16GB、中古 ¥35,000–40,000）と RX 7900 XTX（24GB、中古 ¥50,000–65,000）は、ローカル LLM のための唯一の実用的なオプションです。',
@@ -37643,6 +37962,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'AMD RX 6800 XT（16GB，二手 $300–350）和 RX 7900 XTX（24GB，二手 $400–500）是本地 LLM 的唯一可行选项。',
@@ -37823,6 +38144,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'CPU: Threadripper 7980X (64-core, $3,000) or Intel Xeon W9 ($5,000+). Enables parallel fine-tuning while serving inference.',
@@ -37960,6 +38283,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Mini PCs are compact desktops (5–10L volume) that fit under monitors or in media centers.',
@@ -38085,6 +38410,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'GPU: RTX 4060 (8GB) minimum for 7B models. RTX 4070 (12GB) for comfortable 13B.',
@@ -38210,6 +38537,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Writing/content creation:** Ollama + OpenWebUI. Zero config, beautiful chat UI, context window adjustable.',
@@ -38377,6 +38706,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'LM Studio: Simpler, more stable, 3-year track record. Best for beginners.',
@@ -38599,6 +38930,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'LM Studio: Einfacher, stabiler, 3 Jahre Erfolgsbilanz. Ideal für Anfänger.',
@@ -38846,6 +39179,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'LM Studio : simple, stable, 3 ans de suivi. Idéal pour débutants.',
@@ -39090,6 +39425,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'LM Studio：シンプル、安定、3年の信頼実績。初心者向け。',
@@ -39343,6 +39680,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'LM Studio：简洁、稳定、3年历史。最适合初学者。',
@@ -39594,6 +39933,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             'Open WebUI: Professional, clean, multi-user, fast inference integration.',
@@ -39725,6 +40066,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**llama.cpp:** Fastest single-token latency (lowest ms/token). Best for interactive chat. Minimal dependencies.',
@@ -39917,6 +40260,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       gammaDescription: 'The slide deck below covers the three-tier local LLM developer stack (Ollama → vLLM API → production multi-user), IDE integration with VS Code and Cursor, debugging and monitoring with Prometheus, and regional compliance context. Download the PDF as a Local LLM Developer Stack reference card.',
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Tier 1 (simple):** `ollama run llama3.1:8b` + OpenWebUI. No code required.',
@@ -40120,6 +40465,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       gammaDescription: 'Das Foliendeck unten behandelt den dreistufigen lokalen LLM-Developer-Stack (Ollama → vLLM API → Multi-User-Produktion), IDE-Integration mit VS Code und Cursor, Debugging und Monitoring mit Prometheus sowie regionale Compliance-Anforderungen. Laden Sie die PDF als Local LLM Developer Stack Referenzkarte herunter.',
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Stufe 1 (einfach):** `ollama run llama3.1:8b` + OpenWebUI. Kein Code erforderlich.',
@@ -40323,6 +40670,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       gammaDescription: 'Le diaporama ci-dessous couvre la pile locale LLM à trois niveaux (Ollama → vLLM API → multi-utilisateurs en production), l\'intégration IDE avec VS Code et Cursor, le débogage et le monitoring avec Prometheus, ainsi que le contexte régional de conformité. Téléchargez le PDF comme fiche de référence Local LLM Developer Stack.',
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Niveau 1 (simple) :** `ollama run llama3.1:8b` + OpenWebUI. Aucun code requis.',
@@ -40524,6 +40873,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       gammaDescription: '以下のスライドデッキは、3層のローカルLLM開発者スタック（Ollama → vLLM API → 本番マルチユーザー）、VS CodeとCursorを使用したIDE統合、Prometheusによるデバッグとモニタリング、および地域別コンプライアンスコンテキストをカバーしています。PDFをLocal LLM Developer Stackリファレンスカードとしてダウンロードしてください。',
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**階層1（シンプル）：** `ollama run llama3.1:8b` + OpenWebUI。コード不要。',
@@ -40724,6 +41075,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       gammaDescription: '下面的幻灯片演示涵盖三层本地LLM开发者堆栈（Ollama → vLLM API → 多用户生产），VS Code和Cursor的IDE集成，Prometheus调试和监控，以及区域合规性背景。将PDF下载为本地LLM开发者堆栈参考卡。',
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**层级一（简单）：** `ollama run llama3.1:8b` + OpenWebUI。无需编写代码。',
@@ -40877,6 +41230,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**7B models:** Too weak. Catch ~45% of bugs — surface-level feedback only.',
@@ -41090,6 +41445,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**7B-Modelle:** Zu schwach. Erkennen ~45% der Fehler — nur oberflächliches Feedback.',
@@ -41307,6 +41664,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             "**Modèles 7B :** Trop faibles. Détectent ~45% des bugs — feedback superficiel uniquement.",
@@ -41553,7 +41912,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'description': 'Mistral Small 3.1 24B leads for emails and memos. Qwen2.5 7B excels at non-English writing. 7B–24B models outperform 70B. Ollama setup in 10 minutes.',
         'datePublished': '2026-04-05',
         'dateModified': '2026-04-05',
-        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'url': 'https://www.promptquorum.com/about' },
+        'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.promptquorum.com/author/hans-kuepper' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com', 'logo': { '@type': 'ImageObject', 'url': 'https://www.promptquorum.com/logo.svg' } },
         'about': [
           { '@type': 'Thing', 'name': 'Business writing AI' },
@@ -42574,6 +42933,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Llama 3 7B:** Best reasoning. Strongest code understanding. Official Meta model, widely supported.',
@@ -42708,6 +43069,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**GPU (RTX 3060 8GB):** Mistral 7B Q4 at 15 tok/sec. Best speed/quality.',
@@ -42836,6 +43199,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Q4 (4-bit):** 87.5% VRAM savings, ~1% quality loss. Use this for everything.',
@@ -42974,6 +43339,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**HIPAA (healthcare):** Patient data cannot touch cloud APIs. Local LLM on isolated network, encrypted storage, access logs.',
@@ -43156,6 +43523,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Small team (5–10):** Single server (vLLM) + nginx + auth = $3K hardware, $50/mo electricity.',
@@ -43277,7 +43646,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
       sections: {
-        tldr: { isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
         whatIsSmall: { title: 'Was ist ein „kleines" lokales LLM und wann sollten Sie eines verwenden?', content: ['Ein kleines lokales LLM ist typischerweise definiert als ein Modell mit weniger als 4 Milliarden Parametern. Bei Q4_K_M-Quantisierung benötigen diese Modelle 1,5–3 GB RAM — gut innerhalb der Einschränkungen von Einstiegs-Laptops mit 4–8 GB Gesamtspeicher.', 'Seit April 2026 sind kleine Modelle geeignet für: schnelle Zusammenfassung, einfache F&A, Erklärung von Code-Snippets, Übersetzung kurzer Texte und Klassifizierungsaufgaben. Sie sind nicht geeignet für mehrstufiges Reasoning, komplexe Code-Generierung oder das Verfassen langer kohärenter Dokumente.', 'Die Qualitätslücke zwischen einem 3B- und 7B-Modell ist erheblich — ungefähr der Lücke zwischen GPT-3.5 Mini und GPT-3.5 Turbo entsprechend. Für Benutzer mit 8 GB RAM ist ein 7B-Modell bei Q4_K_M fast immer die bessere Wahl. Siehe [Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) für 7B-Empfehlungen.'] },
         phi4mini: { title: 'Phi-4 Mini 3.8B — Beste Reasoning-Leistung in der Sub-4B-Klasse', content: ['Microsoft Phi-4 Mini erreicht 68% bei MMLU und 70% bei HumanEval — Werte, die viele vor 2025 veröffentlichte 7B-Modelle übertreffen. Dies ist möglich, weil Phi-4 Mini auf einem kuratierten synthetischen Datensatz trainiert wurde, der auf Reasoning und Problemlösung fokussiert ist.', 'Seit April 2026 ist Phi-4 Mini die empfohlene Wahl für Benutzer, die hauptsächlich Reasoning oder Code-Unterstützung auf Hardware mit 4–6 GB RAM benötigen.'], rows: [{ 'Spec': 'MMLU', 'Value': '68%' }, { 'Spec': 'HumanEval', 'Value': '70%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '30–50 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run phi4-mini' }], columns: ['Spec', 'Value'] },
         gemma2: { title: 'Gemma 2 2B — Schnellstes kleines lokales LLM auf CPU', content: ['Google Gemma 2 2B generiert 40–60 Token/Sek auf einer modernen Laptop-CPU — das schnellste Modell in dieser Qualitätsklasse. Sein 1,7-GB-RAM-Footprint lässt viel Speicher für Betriebssystem und andere Anwendungen auf einer 4-GB-Maschine.', 'Die Qualität ist niedriger als Phi-4 Mini bei Reasoning. Das 8K-Kontextfenster ist eine praktische Einschränkung für längere Dokumente. Gemma 2 2B ist die richtige Wahl, wenn Antwortgeschwindigkeit wichtiger ist als Ausgabetiefe.'], rows: [{ 'Spec': 'MMLU', 'Value': '52%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~1,7 GB' }, { 'Spec': 'Kontext', 'Value': '8K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '40–60 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run gemma2:2b' }], columns: ['Spec', 'Value'] },
@@ -43408,6 +43778,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**NAS (Network-Attached Storage):** Centralized storage accessible via network. RAID 6 (2 drives can fail simultaneously).',
@@ -43530,7 +43902,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' }
       },
       sections: {
-        tldr: { isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
+        tldr: { id: 'key-takeaways',
+ isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B — 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Schnellste auf CPU**: Gemma 2 2B — 40–60 tok/sek auf jedem modernen Laptop, 1,7 GB RAM.', '**Bestes kleines Codierungsmodell**: Qwen2.5 3B — 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B — beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
         whatIsSmall: { title: 'Was ist ein „kleines" lokales LLM und wann sollten Sie eines verwenden?', content: ['Ein kleines lokales LLM ist typischerweise definiert als ein Modell mit weniger als 4 Milliarden Parametern. Bei Q4_K_M-Quantisierung benötigen diese Modelle 1,5–3 GB RAM — gut innerhalb der Einschränkungen von Einstiegs-Laptops mit 4–8 GB Gesamtspeicher.', 'Seit April 2026 sind kleine Modelle geeignet für: schnelle Zusammenfassung, einfache F&A, Erklärung von Code-Snippets, Übersetzung kurzer Texte und Klassifizierungsaufgaben. Sie sind nicht geeignet für mehrstufiges Reasoning, komplexe Code-Generierung oder das Verfassen langer kohärenter Dokumente.', 'Die Qualitätslücke zwischen einem 3B- und 7B-Modell ist erheblich — ungefähr der Lücke zwischen GPT-3.5 Mini und GPT-3.5 Turbo entsprechend. Für Benutzer mit 8 GB RAM ist ein 7B-Modell bei Q4_K_M fast immer die bessere Wahl. Siehe [Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) für 7B-Empfehlungen.'] },
         phi4mini: { title: 'Phi-4 Mini 3.8B — Beste Reasoning-Leistung in der Sub-4B-Klasse', content: ['Microsoft Phi-4 Mini erreicht 68% bei MMLU und 70% bei HumanEval — Werte, die viele vor 2025 veröffentlichte 7B-Modelle übertreffen. Dies ist möglich, weil Phi-4 Mini auf einem kuratierten synthetischen Datensatz trainiert wurde, der auf Reasoning und Problemlösung fokussiert ist.', 'Seit April 2026 ist Phi-4 Mini die empfohlene Wahl für Benutzer, die hauptsächlich Reasoning oder Code-Unterstützung auf Hardware mit 4–6 GB RAM benötigen.'], rows: [{ 'Spec': 'MMLU', 'Value': '68%' }, { 'Spec': 'HumanEval', 'Value': '70%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '30–50 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run phi4-mini' }], columns: ['Spec', 'Value'] },
         gemma2: { title: 'Gemma 2 2B — Schnellstes kleines lokales LLM auf CPU', content: ['Google Gemma 2 2B generiert 40–60 Token/Sek auf einer modernen Laptop-CPU — das schnellste Modell in dieser Qualitätsklasse. Sein 1,7-GB-RAM-Footprint lässt viel Speicher für Betriebssystem und andere Anwendungen auf einer 4-GB-Maschine.', 'Die Qualität ist niedriger als Phi-4 Mini bei Reasoning. Das 8K-Kontextfenster ist eine praktische Einschränkung für längere Dokumente. Gemma 2 2B ist die richtige Wahl, wenn Antwortgeschwindigkeit wichtiger ist als Ausgabetiefe.'], rows: [{ 'Spec': 'MMLU', 'Value': '52%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~1,7 GB' }, { 'Spec': 'Kontext', 'Value': '8K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '40–60 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run gemma2:2b' }], columns: ['Spec', 'Value'] },
@@ -43618,6 +43991,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**VPN protocol:** WireGuard (fast, modern) recommended. OpenVPN (slower, wider compatibility) fallback.',
@@ -43748,6 +44123,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
       ],
       sections: {
         tldr: {
+          id: 'key-takeaways',
+
           isTldr: true,
           items: [
             '**Air-gapped = no network.** Ethernet unplugged, WiFi disabled in BIOS, cellular disabled.',

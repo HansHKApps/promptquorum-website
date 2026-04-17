@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 310" xmlns="http://www.w3.org/2000/svg">
+<rect width="800" height="310" fill="#FFFFFF"/>
+<text x="400" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1C1B1F" text-anchor="middle">4 Installateurs LLM locaux one-click — Référence rapide</text>
+<line x1="18" y1="40" x2="782" y2="40" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="160" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#6750A4" text-anchor="middle">Ollama</text>
+<text x="330" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">LM Studio</text>
+<text x="500" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">Jan AI</text>
+<text x="670" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1C1B1F" text-anchor="middle">GPT4All</text>
+<line x1="18" y1="72" x2="782" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+<text x="18" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start"></text>
+<text x="18" y="97" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Idéal pour</text>
+<text x="160" y="97" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Développeurs</text>
+<text x="330" y="97" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Débutants</text>
+<text x="500" y="97" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Confidentialité</text>
+<text x="670" y="97" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Non-technique</text>
+<line x1="18" y1="110" x2="782" y2="110" stroke="#F7F2FA" stroke-width="1"/>
+<text x="18" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Interface</text>
+<text x="160" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Terminal + API</text>
+<text x="330" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Interface GUI</text>
+<text x="500" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Interface GUI</text>
+<text x="670" y="132" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#1C1B1F" text-anchor="middle">Interface GUI</text>
+<line x1="18" y1="145" x2="782" y2="145" stroke="#F7F2FA" stroke-width="1"/>
+<text x="18" y="167" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Port API</text>
+<text x="160" y="167" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#6750A4" text-anchor="middle">11434</text>
+<text x="330" y="167" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">1234</text>
+<text x="500" y="167" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">1337</text>
+<text x="670" y="167" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">4891*</text>
+<line x1="18" y1="180" x2="782" y2="180" stroke="#F7F2FA" stroke-width="1"/>
+<text x="18" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Open Source</text>
+<circle cx="160" cy="196" r="13" fill="#34A853"/>
+<text x="160" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">MIT</text>
+<circle cx="330" cy="196" r="13" fill="#EA4335"/>
+<text x="330" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">Non</text>
+<circle cx="500" cy="196" r="13" fill="#34A853"/>
+<text x="500" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">MIT</text>
+<circle cx="670" cy="196" r="13" fill="#34A853"/>
+<text x="670" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">MIT</text>
+<line x1="18" y1="215" x2="782" y2="215" stroke="#F7F2FA" stroke-width="1"/>
+<text x="18" y="237" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#79747E" text-anchor="start">Télémétrie</text>
+<circle cx="160" cy="231" r="13" fill="#34A853"/>
+<text x="160" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">Aucune</text>
+<circle cx="330" cy="231" r="13" fill="#EA4335"/>
+<text x="330" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" fill="#FFFFFF" text-anchor="middle">Déf: on</text>
+<circle cx="500" cy="231" r="13" fill="#34A853"/>
+<text x="500" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">Aucune</text>
+<circle cx="670" cy="231" r="13" fill="#F4B400"/>
+<text x="670" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">Opt-in</text>
+<text x="18" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#79747E" text-anchor="start">* Serveur API GPT4All optionnel (désactivé par défaut). Source : GitHub, avril 2026.</text>
+</svg>
